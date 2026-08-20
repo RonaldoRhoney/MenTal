@@ -84,6 +84,13 @@ def register_daily_usage(db: Session, user_id: str, today: date) -> None:
 
 
 def is_territory_unlocked(db: Session, user_id: str, territory: models.Territory) -> bool:
+    # MONETIZATION_UPDATE_FREE_LAUNCH.md §2: ponto único de verificação da
+    # flag de lançamento gratuito — nenhuma outra função do backend decide
+    # acesso a território. Ativar cobrança no futuro é só mudar a env var
+    # MONETIZATION_ENABLED, sem caçar checagem espalhada pelo código.
+    if not config.MONETIZATION_ENABLED:
+        return True
+
     if not territory.requires_subscription:
         return True
 

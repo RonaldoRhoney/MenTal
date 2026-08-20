@@ -65,10 +65,17 @@ def test_correct_answer_awards_xp_and_updates_territory_progress(client):
     assert territory["xp_in_territory"] == result["xp_awarded"]
 
 
-def test_paid_territory_allows_free_sample_then_locks(client):
+def test_paid_territory_allows_free_sample_then_locks(client, monkeypatch):
     # TERRITORIES.md §2 / MONETIZATION.md §2: territórios pagos têm amostra
     # grátis (free_sample_count=2 para 'logica' no seed). As 2 primeiras
     # tentativas respondidas passam; a 3ª exige assinatura.
+    # MONETIZATION_UPDATE_FREE_LAUNCH.md: este comportamento só vale com
+    # MONETIZATION_ENABLED=true — o default de lançamento (false) libera
+    # tudo, testado separadamente em test_monetization_flag.py.
+    import app.services as services_module
+
+    monkeypatch.setattr(services_module.config, "MONETIZATION_ENABLED", True)
+
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)

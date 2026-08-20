@@ -3,6 +3,14 @@
 Status: aprovado por Rhoney (dono). Parte oficial da Foundation.
 Modelo: **Freemium com paywall de progressão** — não é "app pago desde o início".
 
+> **Nota de vigência (2026-08-20)**: o lançamento do MENTAL é **100%
+> gratuito** — este documento descreve o modelo freemium completo, mas ele
+> fica desativado por trás da flag `MONETIZATION_ENABLED=false` até Rhoney
+> decidir ativá-lo com base em dado real de uso. Ver
+> `MONETIZATION_UPDATE_FREE_LAUNCH.md` para a decisão vigente e o que muda
+> tecnicamente. Nada neste documento foi descartado — toda a estrutura
+> abaixo continua implementada, só não aplicada por enquanto.
+
 ## 1. Princípio
 
 O MENTAL nasce gratuito e joga bem. Ninguém paga por algo que nunca

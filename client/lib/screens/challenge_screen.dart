@@ -62,7 +62,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         setState(() {
           _errorCode = e.code;
           if (e.code == 'DAILY_LIMIT_REACHED') {
-            _error = 'Você usou seus desafios grátis de hoje. Volte amanhã!';
+            // Tom celebratório, não de bloqueio — MONETIZATION_UPDATE_FREE_LAUNCH.md
+            // §3, coerente com o Princípio de Não-Humilhação (PRODUCT_PRINCIPLES.md).
+            _error = 'Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.';
           } else if (e.code == 'TERRITORY_LOCKED') {
             _error = 'Este território exige assinatura.';
           } else {

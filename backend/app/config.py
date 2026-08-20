@@ -14,16 +14,23 @@ DATABASE_URL = os.environ.get("MENTAL_DATABASE_URL", "sqlite:///./mental_dev.db"
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET")
 
-# Decisão de Rhoney (2026-08-20): subido de 8 (piso original de
-# MONETIZATION.md, sugestão 8-10/dia) para 20. Raciocínio: mais tempo de
-# jogo grátis por dia cria hábito de "quero tentar de novo" antes de
-# qualquer barreira de pagamento aparecer, priorizando retenção sobre
-# pressão de conversão precoce (`MONETIZATION.md` §1, gratuito-primeiro).
-# Ressalva registrada quando a mudança foi pedida: um limite mais alto
-# reduz a diferença percebida entre "free" e "assinatura ilimitada",
-# podendo enfraquecer o motivo de assinar cedo — sem dado real de uso
-# ainda para confirmar o efeito. Reversível, é só este número.
-DAILY_FREE_CHALLENGE_LIMIT = 20
+# MONETIZATION_UPDATE_FREE_LAUNCH.md: MENTAL lança 100% gratuito. Quando
+# false (default), toda checagem de "território exige assinatura" é
+# ignorada em services.is_territory_unlocked — ponto único de verificação,
+# nunca espalhado por múltiplos arquivos, para que ativar cobrança no
+# futuro seja só mudar esta env var. Nenhuma tabela/endpoint de assinatura
+# é removida — a estrutura inteira continua existindo, só não é aplicada.
+MONETIZATION_ENABLED = os.environ.get("MONETIZATION_ENABLED", "false").lower() == "true"
+
+# Limite diário: 8 (original) → 20 (decisão de Rhoney, 2026-08-19) → 24
+# (MONETIZATION_UPDATE_FREE_LAUNCH.md §3, 2026-08-20). Com o lançamento
+# 100% gratuito, a única função deste limite deixou de ser "incentivo a
+# assinar" e passou a ser puramente hábito/retenção via streak — por isso
+# o valor final é mais alto que os dois anteriores, calibrados quando o
+# limite ainda carregava pressão de conversão. Continua ativo mesmo com
+# MONETIZATION_ENABLED=false (não tem relação com dinheiro, é ritmo de
+# uso). Centralizado aqui — nunca hardcoded em mais de um lugar.
+DAILY_FREE_CHALLENGE_LIMIT = 24
 HINT_PENALTY_FACTOR = 0.25
 STREAK_FREEZE_PER_WEEK = 1
 
