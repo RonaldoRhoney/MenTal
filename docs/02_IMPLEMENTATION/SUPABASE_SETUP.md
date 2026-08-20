@@ -11,11 +11,14 @@ autenticação real do Supabase em 2026-08-19. Itens §3 e §4 (antes
 2. Migration `backend/migrations/001_initial_schema.sql` rodada com
    sucesso — schema `mental` com as 11 tabelas + seed dos 4 territórios,
    confirmado visualmente no Schema Visualizer.
-2A. **Pendente de execução**: `backend/migrations/002_admin_role.sql`
+2A. Migration `backend/migrations/002_admin_role.sql` rodada com sucesso
     (padrão admin RhoneyInc — `rhoneyinc@gmail.com` promovido
     automaticamente a `role = 'admin'` em `profiles`, ver `DATA_MODEL.md`
-    §1 e `SECURITY.md` §9A). Rodar no SQL Editor do projeto, mesmo
-    processo da migration 001 — ainda não executado nesta sessão.
+    §1 e `SECURITY.md` §9A). **Verificado via query de conferência**
+    (não só "rodou sem erro"): coluna `role` existe em `mental.profiles`,
+    trigger `on_auth_user_created_mental` existe em `auth.users`, função
+    `mental.handle_new_mental_user()` existe — os 3 confirmados no SQL
+    Editor em 2026-08-20.
 3. **Descoberta importante**: o projeto usa assinatura de token
    **assimétrica ES256 (ECC P-256)** como chave atual (Settings → API →
    JWT Keys), não o modelo legado de segredo compartilhado HS256 — esse

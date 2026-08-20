@@ -282,3 +282,20 @@ client Flutter, que depende de alguém rodar com Flutter SDK — sem isso,
 o Vertical Slice 01 não pode ser considerado fechado do lado do cliente,
 mesmo com o backend inteiro validado contra infraestrutura real (Postgres,
 Auth, OAuth).
+
+## 15. Admin padrão RhoneyInc — aplicado e verificado (2026-08-20)
+
+Rhoney confirmou que `rhoneyinc@gmail.com` terá controle total do painel
+admin e das métricas do MENTAL — padrão já usado nos demais produtos
+RhoneyInc (skill `admin-padrao`). Aplicado como arquitetura, não como
+feature (mesmo raciocínio de `child_safe_mode`): campo `profiles.role`
+(`user`/`admin`) e trigger `mental.handle_new_mental_user()` em
+`auth.users` que promove `rhoneyinc@gmail.com` a admin automaticamente no
+cadastro, com fallback retroativo caso a conta já exista.
+
+Migration `002_admin_role.sql` rodada por Rhoney e **verificada de
+verdade** via query de conferência no SQL Editor (não só "rodou sem
+erro"): coluna `role`, trigger e função confirmados existentes no banco
+real. Nenhum painel admin ou endpoint usa `role` ainda — fora do escopo
+do V1 — mas a base de dados já está pronta para quando isso for
+implementado.
