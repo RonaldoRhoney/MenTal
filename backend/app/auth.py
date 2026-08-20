@@ -15,6 +15,8 @@ Três modos, em ordem de prioridade:
    para desenvolvimento local/testes sem depender de um projeto Supabase.
 """
 
+import uuid
+
 import jwt
 from fastapi import Header, HTTPException
 
@@ -60,5 +62,16 @@ def get_current_user_id(authorization: str | None = Header(default=None)) -> str
             raise HTTPException(status_code=401, detail={"error": {"code": "INVALID_TOKEN", "message": "Token missing sub"}})
         return user_id
 
-    # DEV_INSECURE: token é o próprio user_id.
+    # DEV_INSECURE: token é o próprio user_id. Precisa ser um UUID válido
+    # — desde que user_id virou coluna Uuid real (models.py, corrigido
+    # testando contra Postgres), um token não-UUID quebrava com 500 lá na
+    # frente (no INSERT/refresh do SQLAlchemy) em vez de um 401 limpo.
+    # Achado testando manualmente com um Bearer token de teste malformado
+    # — o app real sempre manda um UUID de verdade (session_store.dart),
+    # isso nunca acontece em uso normal, mas a API não devia responder
+    # com stack trace pra token malformado de qualquer jeito.
+    try:
+        uuid.UUID(token)
+    except ValueError as exc:
+        raise HTTPException(status_code=401, detail={"error": {"code": "INVALID_TOKEN", "message": "Token must be a valid UUID in DEV_INSECURE mode"}}) from exc
     return token

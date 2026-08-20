@@ -14,7 +14,16 @@ DATABASE_URL = os.environ.get("MENTAL_DATABASE_URL", "sqlite:///./mental_dev.db"
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET")
 
-DAILY_FREE_CHALLENGE_LIMIT = 8
+# Decisão de Rhoney (2026-08-20): subido de 8 (piso original de
+# MONETIZATION.md, sugestão 8-10/dia) para 20. Raciocínio: mais tempo de
+# jogo grátis por dia cria hábito de "quero tentar de novo" antes de
+# qualquer barreira de pagamento aparecer, priorizando retenção sobre
+# pressão de conversão precoce (`MONETIZATION.md` §1, gratuito-primeiro).
+# Ressalva registrada quando a mudança foi pedida: um limite mais alto
+# reduz a diferença percebida entre "free" e "assinatura ilimitada",
+# podendo enfraquecer o motivo de assinar cedo — sem dado real de uso
+# ainda para confirmar o efeito. Reversível, é só este número.
+DAILY_FREE_CHALLENGE_LIMIT = 20
 HINT_PENALTY_FACTOR = 0.25
 STREAK_FREEZE_PER_WEEK = 1
 

@@ -1,6 +1,3 @@
-import 'dart:io' show Platform;
-
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 
 import 'api/api_client.dart';
@@ -9,16 +6,19 @@ import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
 
 /// Ajustar para a URL real do backend Render antes de build de release.
-/// Em desenvolvimento local, cada plataforma alcança "localhost" do host
-/// de um jeito diferente: emulador Android usa o alias especial 10.0.2.2
-/// (não é um IP real, só funciona dentro do emulador); Web e desktop
-/// (Linux/macOS/Windows) usam 127.0.0.1 normalmente, porque rodam no
-/// mesmo host da máquina de desenvolvimento. Detectado em runtime para o
-/// mesmo código funcionar em qualquer alvo sem precisar editar na mão.
-String get kApiBaseUrl {
-  if (!kIsWeb && Platform.isAndroid) return 'http://10.0.2.2:8000';
-  return 'http://127.0.0.1:8000';
-}
+///
+/// Em desenvolvimento local, 127.0.0.1 funciona para Web e desktop
+/// (mesmo host da máquina de desenvolvimento) e para **dispositivo Android
+/// físico conectado via USB com `adb reverse tcp:8000 tcp:8000`** rodado
+/// antes de abrir o app (o reverse faz o 127.0.0.1 do celular apontar de
+/// volta para o 127.0.0.1 do notebook via USB).
+///
+/// Only emulador Android usa o alias especial `10.0.2.2` em vez de
+/// 127.0.0.1 (não é um IP real, só existe dentro do emulador, sem precisar
+/// de adb reverse) — não é o caso coberto aqui porque a validação deste
+/// slice foi feita em dispositivo físico, não emulador. Se um dia alguém
+/// rodar em emulador, trocar manualmente ou usar --dart-define.
+const String kApiBaseUrl = 'http://127.0.0.1:8000';
 
 void main() {
   runApp(const MentalApp());

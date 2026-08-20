@@ -28,10 +28,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
 
   bool _loading = true;
   String? _error;
+  String? _errorCode;
   Map<String, dynamic>? _challenge;
   String? _attemptId;
   String? _selectedOption;
   List<String> _hintsShown = [];
+  bool _hintsExhausted = false;
   Map<String, dynamic>? _result;
 
   @override
@@ -44,10 +46,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     setState(() {
       _loading = true;
       _error = null;
+      _errorCode = null;
       _challenge = null;
       _result = null;
       _selectedOption = null;
       _hintsShown = [];
+      _hintsExhausted = false;
       _attemptId = _uuid.v4();
     });
     try {
@@ -56,6 +60,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     } on ApiException catch (e) {
       if (mounted) {
         setState(() {
+          _errorCode = e.code;
           if (e.code == 'DAILY_LIMIT_REACHED') {
             _error = 'Você usou seus desafios grátis de hoje. Volte amanhã!';
           } else if (e.code == 'TERRITORY_LOCKED') {
@@ -78,7 +83,15 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       final hint = await widget.client.requestHint(challenge['challenge_id'], attemptId);
       setState(() => _hintsShown = [..._hintsShown, hint['content'] as String]);
     } on ApiException catch (e) {
-      setState(() => _error = e.message);
+      // NO_MORE_HINTS não é um erro que trava a tela — o jogador só não
+      // tem mais dica pra pedir nesse desafio. Achado testando no
+      // celular real: sem esse tratamento, o botão "Pedir uma dica"
+      // ficava clicável sem nenhum feedback visual do que aconteceu.
+      if (e.code == 'NO_MORE_HINTS') {
+        setState(() => _hintsExhausted = true);
+      } else {
+        setState(() => _error = e.message);
+      }
     }
   }
 
@@ -129,13 +142,27 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     }
 
     if (_error != null && _challenge == null) {
+      // DAILY_LIMIT_REACHED e TERRITORY_LOCKED não são erros transitórios
+      // — reenviar a mesma requisição nunca vai funcionar (limite só
+      // libera no dia seguinte, ou é fora do escopo deste slice destravar
+      // via assinatura). "Tentar de novo" nesses casos é uma promessa
+      // falsa; achado testando no celular real. Só oferece retry de
+      // verdade para erros que podem mesmo ter sido transitórios (rede,
+      // backend acordando de cold start).
+      final isPermanentForToday = _errorCode == 'DAILY_LIMIT_REACHED' || _errorCode == 'TERRITORY_LOCKED';
       return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(_error!, textAlign: TextAlign.center),
             const SizedBox(height: 16),
-            FilledButton(onPressed: _loadNextChallenge, child: const Text('Tentar de novo')),
+            if (isPermanentForToday)
+              OutlinedButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('Voltar para o início'),
+              )
+            else
+              FilledButton(onPressed: _loadNextChallenge, child: const Text('Tentar de novo')),
           ],
         ),
       );
@@ -171,7 +198,11 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         else
           TextField(
             decoration: const InputDecoration(labelText: 'Sua resposta'),
-            onChanged: (value) => _selectedOption = value,
+            // Bug achado testando no celular real: sem setState aqui, o
+            // botão "Confirmar resposta" (que depende de
+            // _selectedOption != null) não reavaliava ao digitar — só
+            // reabilitava quando algum outro evento forçava rebuild.
+            onChanged: (value) => setState(() => _selectedOption = value.trim().isEmpty ? null : value),
           ),
         const SizedBox(height: 16),
         ..._hintsShown.map(
@@ -180,7 +211,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             child: Text('Dica: $hint', style: const TextStyle(fontStyle: FontStyle.italic)),
           ),
         ),
-        TextButton(onPressed: _requestHint, child: const Text('Pedir uma dica')),
+        if (_hintsExhausted)
+          const Padding(
+            padding: EdgeInsets.only(bottom: 8),
+            child: Text('Sem mais dicas para este desafio.', style: TextStyle(fontStyle: FontStyle.italic)),
+          )
+        else
+          TextButton(onPressed: _requestHint, child: const Text('Pedir uma dica')),
         const Spacer(),
         FilledButton(
           onPressed: _selectedOption == null ? null : _submitAnswer,

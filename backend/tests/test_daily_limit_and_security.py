@@ -1,17 +1,19 @@
 import uuid
 from datetime import datetime, timedelta
 
+from app.config import DAILY_FREE_CHALLENGE_LIMIT
+
 from .conftest import auth_header
 
 
-def test_daily_free_limit_blocks_after_8(client):
+def test_daily_free_limit_blocks_after_limit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 
-    for i in range(8):
+    for i in range(DAILY_FREE_CHALLENGE_LIMIT):
         resp = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)
-        assert resp.status_code == 200, f"deveria permitir a tentativa {i + 1}/8"
+        assert resp.status_code == 200, f"deveria permitir a tentativa {i + 1}/{DAILY_FREE_CHALLENGE_LIMIT}"
         challenge = resp.json()
         client.post(
             f"/challenges/{challenge['challenge_id']}/answer",
@@ -19,9 +21,9 @@ def test_daily_free_limit_blocks_after_8(client):
             headers=headers,
         )
 
-    ninth = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)
-    assert ninth.status_code == 429
-    assert ninth.json()["error"]["code"] == "DAILY_LIMIT_REACHED"
+    over_limit = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)
+    assert over_limit.status_code == 429
+    assert over_limit.json()["error"]["code"] == "DAILY_LIMIT_REACHED"
 
 
 def test_active_subscription_bypasses_daily_limit(client):
@@ -31,7 +33,7 @@ def test_active_subscription_bypasses_daily_limit(client):
     client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 
-    for _ in range(9):
+    for _ in range(DAILY_FREE_CHALLENGE_LIMIT + 1):
         resp = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)
         assert resp.status_code == 200
         challenge = resp.json()
