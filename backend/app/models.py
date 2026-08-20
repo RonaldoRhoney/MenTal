@@ -60,9 +60,6 @@ class UserTerritoryProgress(Base):
     conquered_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 
-CONQUEST_XP_THRESHOLD = 200  # limiar de conquista de território, ver TERRITORIES.md §3
-
-
 class Challenge(Base):
     __tablename__ = "challenges"
 

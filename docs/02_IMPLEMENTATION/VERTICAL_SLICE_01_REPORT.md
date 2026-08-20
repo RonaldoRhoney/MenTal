@@ -165,3 +165,22 @@ rodar antes de considerar o lado do cliente pronto.
 Conforme combinado: parei aqui. Não avancei para Testes formais
 (`docs/.../03_TESTES` ou equivalente), Auditoria, nem qualquer etapa
 seguinte do processo (`MENTAL_KICKOFF.md` §8). Devolvendo para revisão.
+
+## 10. Correção pós-revisão (2026-08-19)
+
+Rhoney pediu confirmação de que os valores decididos durante a
+implementação (§5.4, §5.5, §5.6) estavam centralizados, não espalhados
+pelo código. Verificação real (`grep`) mostrou que não estavam:
+`CONQUEST_XP_THRESHOLD` vivia em `models.py`, "100" (XP/nível) estava
+inline em `scoring.py`, e os limiares de dificuldade adaptativa
+(0.8/0.4/janela 5) estavam soltos em `routers/challenges.py`.
+
+Movido tudo para `backend/app/config.py`: `CONQUEST_XP_THRESHOLD`,
+`XP_PER_LEVEL`, `XP_BASE_BY_DIFFICULTY`, `XP_BASE_DEFAULT`,
+`ADAPTIVE_DIFFICULTY_WINDOW`, `ADAPTIVE_DIFFICULTY_MIN_SAMPLE`,
+`ADAPTIVE_DIFFICULTY_UP_THRESHOLD`, `ADAPTIVE_DIFFICULTY_DOWN_THRESHOLD`,
+`ADAPTIVE_DIFFICULTY_MIN_LEVEL`, `ADAPTIVE_DIFFICULTY_MAX_LEVEL` — junto
+com `DAILY_FREE_CHALLENGE_LIMIT` e `HINT_PENALTY_FACTOR`, que já estavam
+lá desde o início. Os 16 testes foram re-executados após a mudança e
+continuam passando — a refatoração não alterou comportamento, só
+centralizou onde o valor mora.

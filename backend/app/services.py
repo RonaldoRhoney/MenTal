@@ -3,7 +3,6 @@ from datetime import date, timedelta
 from sqlalchemy.orm import Session
 
 from . import config, models
-from .models import CONQUEST_XP_THRESHOLD
 from .nickname import generate_anonymous_nickname
 
 
@@ -116,7 +115,7 @@ def apply_xp_to_territory(db: Session, user_id: str, territory_id: str, xp: int)
         db.add(progress)
 
     progress.xp_in_territory += xp
-    if progress.conquered_at is None and progress.xp_in_territory >= CONQUEST_XP_THRESHOLD:
+    if progress.conquered_at is None and progress.xp_in_territory >= config.CONQUEST_XP_THRESHOLD:
         from datetime import datetime
 
         progress.conquered_at = datetime.utcnow()

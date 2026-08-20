@@ -16,15 +16,13 @@ def xp_awarded(xp_base: int, hints_used: int) -> int:
     return round(xp_base * hint_penalty_factor(hints_used))
 
 
-XP_BASE_BY_DIFFICULTY = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50}
-
-
 def xp_base_for(difficulty_level: int) -> int:
-    return XP_BASE_BY_DIFFICULTY.get(difficulty_level, 20)
+    return config.XP_BASE_BY_DIFFICULTY.get(difficulty_level, config.XP_BASE_DEFAULT)
 
 
 def level_from_xp(xp_total: int) -> int:
-    # Nível sobe a cada 100 XP acumulado — decisão tomada no Vertical Slice
-    # 01 (GAMIFICATION.md deixava a fórmula em aberto), simples e linear de
-    # propósito para o V1; pode ser revisada com dado real de uso.
-    return 1 + xp_total // 100
+    # Nível sobe a cada config.XP_PER_LEVEL de XP acumulado — decisão
+    # tomada no Vertical Slice 01 (GAMIFICATION.md deixava a fórmula em
+    # aberto), simples e linear de propósito para o V1; pode ser revisada
+    # com dado real de uso. Valor centralizado em config.py, não aqui.
+    return 1 + xp_total // config.XP_PER_LEVEL

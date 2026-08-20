@@ -5,7 +5,7 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from .. import models, schemas, scoring, services
+from .. import config, models, schemas, scoring, services
 from ..auth import get_current_user_id
 from ..db import get_db
 
@@ -15,11 +15,12 @@ router = APIRouter()
 def _pick_difficulty_for(db: Session, user_id: str, territory_id: str) -> int:
     """
     Dificuldade adaptativa (ADAPTIVE_DIFFICULTY.md): olha a taxa de acerto
-    dos últimos 5 desafios respondidos pelo jogador naquele território.
-    Sobe 1 nível após >=80% de acerto na janela, desce 1 nível após <40%,
-    mantém caso contrário. Janela e limiares são decisão do Vertical Slice
-    01 (ADAPTIVE_DIFFICULTY.md §6 deixava a fórmula em aberto) — simples de
-    propósito, revisável com dado real de uso.
+    da janela recente de desafios respondidos pelo jogador naquele
+    território. Sobe 1 nível após acerto >= limiar de subida, desce 1
+    nível após acerto < limiar de descida, mantém caso contrário. Janela e
+    limiares são decisão do Vertical Slice 01 (ADAPTIVE_DIFFICULTY.md §6
+    deixava a fórmula em aberto) — centralizados em config.py para ajuste
+    num único lugar quando houver dado real de uso.
     """
     recent = (
         db.execute(
@@ -29,25 +30,25 @@ def _pick_difficulty_for(db: Session, user_id: str, territory_id: str) -> int:
             .where(models.Challenge.territory_id == territory_id)
             .where(models.Attempt.is_correct.is_not(None))
             .order_by(models.Attempt.created_at.desc())
-            .limit(5)
+            .limit(config.ADAPTIVE_DIFFICULTY_WINDOW)
         )
         .scalars()
         .all()
     )
 
-    current_level = 1
+    current_level = config.ADAPTIVE_DIFFICULTY_MIN_LEVEL
     if recent:
         last_challenge = db.get(models.Challenge, recent[0].challenge_id)
-        current_level = last_challenge.difficulty_level if last_challenge else 1
+        current_level = last_challenge.difficulty_level if last_challenge else current_level
 
-    if len(recent) >= 3:
+    if len(recent) >= config.ADAPTIVE_DIFFICULTY_MIN_SAMPLE:
         accuracy = sum(1 for a in recent if a.is_correct) / len(recent)
-        if accuracy >= 0.8:
+        if accuracy >= config.ADAPTIVE_DIFFICULTY_UP_THRESHOLD:
             current_level += 1
-        elif accuracy < 0.4:
+        elif accuracy < config.ADAPTIVE_DIFFICULTY_DOWN_THRESHOLD:
             current_level -= 1
 
-    return max(1, min(5, current_level))
+    return max(config.ADAPTIVE_DIFFICULTY_MIN_LEVEL, min(config.ADAPTIVE_DIFFICULTY_MAX_LEVEL, current_level))
 
 
 @router.get("/challenges/next", response_model=schemas.ChallengeOut)
