@@ -1,0 +1,9 @@
+import os
+
+DATABASE_URL = os.environ.get("MENTAL_DATABASE_URL", "sqlite:///./mental_dev.db")
+
+SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET")
+
+DAILY_FREE_CHALLENGE_LIMIT = 8
+HINT_PENALTY_FACTOR = 0.25
+STREAK_FREEZE_PER_WEEK = 1

@@ -1,0 +1,12 @@
+# Backend
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.db
+backend/mental_dev.db
+
+# Flutter
+client/.dart_tool/
+client/.packages
+client/build/
+client/pubspec.lock
