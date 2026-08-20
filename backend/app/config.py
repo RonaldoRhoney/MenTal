@@ -2,6 +2,12 @@ import os
 
 DATABASE_URL = os.environ.get("MENTAL_DATABASE_URL", "sqlite:///./mental_dev.db")
 
+# ARCHITECTURE_UPDATE_I18N_READY.md: 100% do conteúdo é pt-BR no
+# lançamento, mas o parâmetro de idioma já existe no endpoint de desafio
+# (default aqui, nunca hardcoded no router) — popular um 2º idioma no
+# futuro não deve exigir mudança de código, só novos registros de conteúdo.
+DEFAULT_LANGUAGE_CODE = "pt-BR"
+
 # SUPABASE_URL (ex.: "https://xxxx.supabase.co") ativa a validação real de
 # token via JWKS (chave pública do projeto, buscada em
 # {SUPABASE_URL}/auth/v1/.well-known/jwks.json — não é segredo, pode ficar

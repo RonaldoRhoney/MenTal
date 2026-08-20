@@ -19,6 +19,10 @@ autenticação real do Supabase em 2026-08-19. Itens §3 e §4 (antes
     trigger `on_auth_user_created_mental` existe em `auth.users`, função
     `mental.handle_new_mental_user()` existe — os 3 confirmados no SQL
     Editor em 2026-08-20.
+2B. **Pendente de execução**: `backend/migrations/003_i18n_language_code.sql`
+    (`ARCHITECTURE_UPDATE_I18N_READY.md` — adiciona `language_code` a
+    `mental.challenges`, default `'pt-BR'`). Mesmo processo das anteriores,
+    ainda não rodada nesta sessão.
 3. **Descoberta importante**: o projeto usa assinatura de token
    **assimétrica ES256 (ECC P-256)** como chave atual (Settings → API →
    JWT Keys), não o modelo legado de segredo compartilhado HS256 — esse

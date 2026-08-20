@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
+import '../l10n/generated/app_localizations.dart';
 
 /// Tela de idade neutra — obrigatória antes de qualquer coleta de dado não
 /// essencial (FAMILY_SAFETY.md §3). Linguagem neutra, sem gamificação, sem
@@ -36,6 +37,7 @@ class _AgeGateScreenState extends State<AgeGateScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -44,14 +46,14 @@ class _AgeGateScreenState extends State<AgeGateScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Text(
-                'Antes de começar, qual é a sua idade?',
-                style: TextStyle(fontSize: 20),
+              Text(
+                l10n.ageGateTitle,
+                style: const TextStyle(fontSize: 20),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
-              const Text(
-                'Isso ajuda a manter a experiência adequada para você.',
+              Text(
+                l10n.ageGateSubtitle,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 32),
@@ -59,12 +61,12 @@ class _AgeGateScreenState extends State<AgeGateScreen> {
               if (!_loading) ...[
                 FilledButton(
                   onPressed: () => _submit('child'),
-                  child: const Text('Tenho menos de 18 anos'),
+                  child: Text(l10n.ageGateChildOption),
                 ),
                 const SizedBox(height: 12),
                 OutlinedButton(
                   onPressed: () => _submit('adult'),
-                  child: const Text('Tenho 18 anos ou mais'),
+                  child: Text(l10n.ageGateAdultOption),
                 ),
               ],
               if (_error != null) ...[

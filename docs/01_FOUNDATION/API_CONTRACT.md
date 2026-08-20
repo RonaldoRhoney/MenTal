@@ -35,9 +35,14 @@ retornar `adult`.
 
 ## 3. Challenge Engine
 
-### `GET /challenges/next?territory_id={id}`
+### `GET /challenges/next?territory_id={id}&language_code={code}`
 Retorna o próximo desafio, com dificuldade decidida pelo backend
 (`ADAPTIVE_DIFFICULTY.md`). Nunca inclui `correct_answer`.
+
+`language_code` é opcional, default `pt-BR` (`config.DEFAULT_LANGUAGE_CODE`,
+`ARCHITECTURE_UPDATE_I18N_READY.md`) — filtra desafios por idioma; hoje só
+existe `pt-BR` no banco, mas o parâmetro já existe para que um 2º idioma
+não exija mudança de endpoint.
 
 Response:
 ```json

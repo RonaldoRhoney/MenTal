@@ -82,6 +82,7 @@ Banco de desafios pré-produzidos (curados manualmente, `RISKS_AND_OPEN_DECISION
 | `correct_answer` | text | **Nunca enviado ao cliente antes da confirmação da resposta** |
 | `explanation` | text | Exibida após resposta, certa ou errada |
 | `age_reviewed` | boolean | Marca que passou pelo processo de revisão por faixa etária (mitigação de conteúdo de "Conhecimentos gerais") |
+| `language_code` | text, default `pt-BR` | Adicionado por `ARCHITECTURE_UPDATE_I18N_READY.md` §3 (migration `003_i18n_language_code.sql`) — 100% dos registros são `pt-BR` no lançamento; o campo existe desde já para que adicionar um 2º idioma seja só popular novos registros, sem migração de schema |
 
 ## 5. `challenge_hints`
 

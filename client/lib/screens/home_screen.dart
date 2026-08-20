@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
+import '../l10n/generated/app_localizations.dart';
 import 'challenge_screen.dart';
 
-const List<Map<String, String>> _kTerritories = [
-  {'id': 'palavras', 'label': 'Palavras'},
-  {'id': 'numeros', 'label': 'Números'},
-  {'id': 'logica', 'label': 'Lógica'},
-  {'id': 'conhecimento', 'label': 'Conhecimento'},
-];
+const List<String> _kTerritoryIds = ['palavras', 'numeros', 'logica', 'conhecimento'];
+
+String _territoryLabel(AppLocalizations l10n, String territoryId) {
+  switch (territoryId) {
+    case 'palavras':
+      return l10n.territoryPalavras;
+    case 'numeros':
+      return l10n.territoryNumeros;
+    case 'logica':
+      return l10n.territoryLogica;
+    case 'conhecimento':
+      return l10n.territoryConhecimento;
+    default:
+      return territoryId;
+  }
+}
 
 /// Home: um CTA primário claro por território, conforme Princípio de
 /// Clareza Imediata (PRODUCT_PRINCIPLES.md §1) — nada compete visualmente
@@ -44,9 +55,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final progress = _progress;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('MENTAL')),
+      appBar: AppBar(title: Text(l10n.homeTitle)),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -55,8 +67,11 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               if (progress != null)
                 Text(
-                  'XP: ${progress['xp_total']} · Nível ${progress['level']} · '
-                  'Streak: ${progress['streak']['current_streak']} dias',
+                  l10n.progressSummary(
+                    progress['xp_total'] as int,
+                    progress['level'] as int,
+                    progress['streak']['current_streak'] as int,
+                  ),
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               if (_error != null)
@@ -64,10 +79,11 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 24),
               Expanded(
                 child: ListView.separated(
-                  itemCount: _kTerritories.length,
+                  itemCount: _kTerritoryIds.length,
                   separatorBuilder: (_, __) => const SizedBox(height: 12),
                   itemBuilder: (context, index) {
-                    final territory = _kTerritories[index];
+                    final territoryId = _kTerritoryIds[index];
+                    final territoryLabel = _territoryLabel(l10n, territoryId);
                     return FilledButton(
                       style: FilledButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 20),
@@ -77,14 +93,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           MaterialPageRoute(
                             builder: (_) => ChallengeScreen(
                               client: widget.client,
-                              territoryId: territory['id']!,
-                              territoryLabel: territory['label']!,
+                              territoryId: territoryId,
+                              territoryLabel: territoryLabel,
                             ),
                           ),
                         );
                         _loadProgress();
                       },
-                      child: Text('Novo desafio — ${territory['label']}'),
+                      child: Text(l10n.newChallengeButton(territoryLabel)),
                     );
                   },
                 ),

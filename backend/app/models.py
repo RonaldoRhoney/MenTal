@@ -92,6 +92,11 @@ class Challenge(Base):
     correct_answer: Mapped[str] = mapped_column(Text)
     explanation: Mapped[str] = mapped_column(Text)
     age_reviewed: Mapped[bool] = mapped_column(Boolean, default=False)
+    # ARCHITECTURE_UPDATE_I18N_READY.md §3: nasce desde já, mesmo com 100%
+    # dos registros em 'pt-BR' hoje — evita migração de schema dolorosa
+    # quando o 2º idioma for adicionado (só inserir novos registros com
+    # language_code diferente, sem alteração estrutural).
+    language_code: Mapped[str] = mapped_column(String, default="pt-BR")
 
 
 class ChallengeHint(Base):

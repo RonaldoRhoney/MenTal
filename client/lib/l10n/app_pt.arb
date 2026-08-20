@@ -1,0 +1,107 @@
+{
+  "@@locale": "pt",
+
+  "preparingChallenge": "Preparando seu desafio...",
+  "@preparingChallenge": {"description": "Loading state shown during cold start / initial bootstrap"},
+
+  "ageGateTitle": "Antes de começar, qual é a sua idade?",
+  "@ageGateTitle": {"description": "Neutral age gate question, FAMILY_SAFETY.md §3"},
+
+  "ageGateSubtitle": "Isso ajuda a manter a experiência adequada para você.",
+  "@ageGateSubtitle": {"description": "Age gate supporting text"},
+
+  "ageGateChildOption": "Tenho menos de 18 anos",
+  "@ageGateChildOption": {"description": "Age gate child option button"},
+
+  "ageGateAdultOption": "Tenho 18 anos ou mais",
+  "@ageGateAdultOption": {"description": "Age gate adult option button"},
+
+  "homeTitle": "MENTAL",
+  "@homeTitle": {"description": "Home app bar title (brand wordmark)"},
+
+  "progressSummary": "XP: {xp} · Nível {level} · Streak: {streak} dias",
+  "@progressSummary": {
+    "description": "Home progress summary line",
+    "placeholders": {
+      "xp": {"type": "int"},
+      "level": {"type": "int"},
+      "streak": {"type": "int"}
+    }
+  },
+
+  "newChallengeButton": "Novo desafio — {territory}",
+  "@newChallengeButton": {
+    "description": "Primary CTA per territory on Home",
+    "placeholders": {
+      "territory": {"type": "String"}
+    }
+  },
+
+  "territoryPalavras": "Palavras",
+  "@territoryPalavras": {"description": "Territory display name"},
+  "territoryNumeros": "Números",
+  "@territoryNumeros": {"description": "Territory display name"},
+  "territoryLogica": "Lógica",
+  "@territoryLogica": {"description": "Territory display name"},
+  "territoryConhecimento": "Conhecimento",
+  "@territoryConhecimento": {"description": "Territory display name"},
+
+  "dailyLimitReachedMessage": "Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.",
+  "@dailyLimitReachedMessage": {"description": "Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3"},
+
+  "territoryLockedMessage": "Este território exige assinatura.",
+  "@territoryLockedMessage": {"description": "Territory locked message"},
+
+  "backToHomeButton": "Voltar para o início",
+  "@backToHomeButton": {"description": "Button for permanent-for-today errors (daily limit / locked)"},
+
+  "tryAgainButton": "Tentar de novo",
+  "@tryAgainButton": {"description": "Button for transient/retryable errors"},
+
+  "yourAnswerLabel": "Sua resposta",
+  "@yourAnswerLabel": {"description": "Free-text answer field label"},
+
+  "hintPrefix": "Dica: {hint}",
+  "@hintPrefix": {
+    "description": "Shown hint content, prefixed",
+    "placeholders": {
+      "hint": {"type": "String"}
+    }
+  },
+
+  "noMoreHintsMessage": "Sem mais dicas para este desafio.",
+  "@noMoreHintsMessage": {"description": "Shown once hints_available is exhausted"},
+
+  "requestHintButton": "Pedir uma dica",
+  "@requestHintButton": {"description": "Hint request button"},
+
+  "confirmAnswerButton": "Confirmar resposta",
+  "@confirmAnswerButton": {"description": "Primary CTA to submit an answer"},
+
+  "correctAnswerFeedback": "Você acertou!",
+  "@correctAnswerFeedback": {"description": "Result screen headline when correct"},
+
+  "incorrectAnswerFeedback": "Não foi dessa vez.",
+  "@incorrectAnswerFeedback": {"description": "Result screen headline when incorrect, non-punitive tone"},
+
+  "correctAnswerLabel": "Resposta correta: {answer}",
+  "@correctAnswerLabel": {
+    "description": "Shows the correct answer after submission",
+    "placeholders": {
+      "answer": {"type": "String"}
+    }
+  },
+
+  "xpEarnedLabel": "XP ganho: {xp} (base: {base}, dicas usadas: {hints})",
+  "@xpEarnedLabel": {
+    "description": "XP breakdown after answering",
+    "placeholders": {
+      "xp": {"type": "int"},
+      "base": {"type": "int"},
+      "hints": {"type": "int"}
+    }
+  },
+
+  "nextChallengeButton": "Próximo desafio",
+  "@nextChallengeButton": {"description": "Button to load the next challenge"}
+}

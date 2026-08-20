@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:mental/api/api_client.dart';
+import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/challenge_screen.dart';
 
 /// Regressão para BUGS_TEST_REPORT_01.md — Bug 1.
@@ -34,6 +36,13 @@ void main() {
     (tester) async {
       await tester.pumpWidget(
         MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
           home: ChallengeScreen(
             client: _FakeApiClient(),
             territoryId: 'palavras',

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
 import '../api/api_client.dart';
+import '../l10n/generated/app_localizations.dart';
 
 /// Ciclo completo de um desafio: busca → responde → resultado → próximo.
 /// Uma ação primária por vez (Clareza Imediata, PRODUCT_PRINCIPLES.md §1):
@@ -64,9 +65,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           if (e.code == 'DAILY_LIMIT_REACHED') {
             // Tom celebratório, não de bloqueio — MONETIZATION_UPDATE_FREE_LAUNCH.md
             // §3, coerente com o Princípio de Não-Humilhação (PRODUCT_PRINCIPLES.md).
-            _error = 'Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.';
+            _error = AppLocalizations.of(context)!.dailyLimitReachedMessage;
           } else if (e.code == 'TERRITORY_LOCKED') {
-            _error = 'Este território exige assinatura.';
+            _error = AppLocalizations.of(context)!.territoryLockedMessage;
           } else {
             _error = e.message;
           }
@@ -128,16 +129,18 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   }
 
   Widget _buildBody() {
+    final l10n = AppLocalizations.of(context)!;
+
     if (_loading) {
       // Feedback explícito durante possível cold start do backend
       // (ARCHITECTURE.md §3) — nunca tela em branco.
-      return const Center(
+      return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            CircularProgressIndicator(),
-            SizedBox(height: 16),
-            Text('Preparando seu desafio...'),
+            const CircularProgressIndicator(),
+            const SizedBox(height: 16),
+            Text(l10n.preparingChallenge),
           ],
         ),
       );
@@ -161,10 +164,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             if (isPermanentForToday)
               OutlinedButton(
                 onPressed: () => Navigator.of(context).pop(),
-                child: const Text('Voltar para o início'),
+                child: Text(l10n.backToHomeButton),
               )
             else
-              FilledButton(onPressed: _loadNextChallenge, child: const Text('Tentar de novo')),
+              FilledButton(onPressed: _loadNextChallenge, child: Text(l10n.tryAgainButton)),
           ],
         ),
       );
@@ -179,6 +182,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   }
 
   Widget _buildChallenge() {
+    final l10n = AppLocalizations.of(context)!;
     final challenge = _challenge!;
     final options = (challenge['options'] as List?)?.cast<String>();
 
@@ -199,7 +203,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           )
         else
           TextField(
-            decoration: const InputDecoration(labelText: 'Sua resposta'),
+            decoration: InputDecoration(labelText: l10n.yourAnswerLabel),
             // Bug achado testando no celular real: sem setState aqui, o
             // botão "Confirmar resposta" (que depende de
             // _selectedOption != null) não reavaliava ao digitar — só
@@ -210,42 +214,47 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         ..._hintsShown.map(
           (hint) => Padding(
             padding: const EdgeInsets.only(bottom: 8),
-            child: Text('Dica: $hint', style: const TextStyle(fontStyle: FontStyle.italic)),
+            child: Text(l10n.hintPrefix(hint), style: const TextStyle(fontStyle: FontStyle.italic)),
           ),
         ),
         if (_hintsExhausted)
-          const Padding(
-            padding: EdgeInsets.only(bottom: 8),
-            child: Text('Sem mais dicas para este desafio.', style: TextStyle(fontStyle: FontStyle.italic)),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: Text(l10n.noMoreHintsMessage, style: const TextStyle(fontStyle: FontStyle.italic)),
           )
         else
-          TextButton(onPressed: _requestHint, child: const Text('Pedir uma dica')),
+          TextButton(onPressed: _requestHint, child: Text(l10n.requestHintButton)),
         const Spacer(),
         FilledButton(
           onPressed: _selectedOption == null ? null : _submitAnswer,
-          child: const Text('Confirmar resposta'),
+          child: Text(l10n.confirmAnswerButton),
         ),
       ],
     );
   }
 
   Widget _buildResult(Map<String, dynamic> result) {
+    final l10n = AppLocalizations.of(context)!;
     final isCorrect = result['is_correct'] as bool;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
-          isCorrect ? 'Você acertou!' : 'Não foi dessa vez.',
+          isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         const SizedBox(height: 8),
-        Text('Resposta correta: ${result['correct_answer']}'),
+        Text(l10n.correctAnswerLabel(result['correct_answer'] as String)),
         const SizedBox(height: 12),
         Text(result['explanation'] as String),
         const SizedBox(height: 12),
-        Text('XP ganho: ${result['xp_awarded']} (base: ${result['xp_base']}, dicas usadas: ${result['hints_used']})'),
+        Text(l10n.xpEarnedLabel(
+          result['xp_awarded'] as int,
+          result['xp_base'] as int,
+          result['hints_used'] as int,
+        )),
         const Spacer(),
-        FilledButton(onPressed: _loadNextChallenge, child: const Text('Próximo desafio')),
+        FilledButton(onPressed: _loadNextChallenge, child: Text(l10n.nextChallengeButton)),
       ],
     );
   }

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'api/api_client.dart';
 import 'api/session_store.dart';
+import 'l10n/generated/app_localizations.dart';
 import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
 
@@ -32,6 +34,16 @@ class MentalApp extends StatelessWidget {
     return MaterialApp(
       title: 'MENTAL',
       debugShowCheckedModeBanner: false,
+      // ARCHITECTURE_UPDATE_I18N_READY.md: arquitetura i18n-ready desde já
+      // (delegates + supportedLocales), mas lançamento é 100% pt-BR — sem
+      // seletor de idioma na UI, sem conteúdo em outro idioma ainda.
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         colorSchemeSeed: const Color(0xFF1B1B3A),
         useMaterial3: true,
@@ -77,14 +89,14 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     if (client == null) {
       // Loading com feedback explícito (ARCHITECTURE.md §3, mitigação de
       // cold start) — nunca tela branca/travada.
-      return const Scaffold(
+      return Scaffold(
         body: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              CircularProgressIndicator(),
-              SizedBox(height: 16),
-              Text('Preparando seu desafio...'),
+              const CircularProgressIndicator(),
+              const SizedBox(height: 16),
+              Text(AppLocalizations.of(context)!.preparingChallenge),
             ],
           ),
         ),

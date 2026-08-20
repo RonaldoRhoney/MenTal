@@ -54,6 +54,7 @@ def _pick_difficulty_for(db: Session, user_id: str, territory_id: str) -> int:
 @router.get("/challenges/next", response_model=schemas.ChallengeOut)
 def next_challenge(
     territory_id: str,
+    language_code: str = config.DEFAULT_LANGUAGE_CODE,
     user_id: str = Depends(get_current_user_id),
     db: Session = Depends(get_db),
 ):
@@ -76,16 +77,27 @@ def next_challenge(
 
     difficulty = _pick_difficulty_for(db, user_id, territory_id)
 
+    # ARCHITECTURE_UPDATE_I18N_READY.md §3: endpoint já aceita/filtra por
+    # idioma, mesmo com um único valor possível hoje (pt-BR) — critério de
+    # aceite é que popular language_code diferente no futuro não exija
+    # mudança de código aqui.
     candidates = (
         db.execute(
             select(models.Challenge)
             .where(models.Challenge.territory_id == territory_id)
+            .where(models.Challenge.language_code == language_code)
             .where(models.Challenge.difficulty_level == difficulty)
         )
         .scalars()
         .all()
     ) or (
-        db.execute(select(models.Challenge).where(models.Challenge.territory_id == territory_id)).scalars().all()
+        db.execute(
+            select(models.Challenge)
+            .where(models.Challenge.territory_id == territory_id)
+            .where(models.Challenge.language_code == language_code)
+        )
+        .scalars()
+        .all()
     )
 
     if not candidates:
