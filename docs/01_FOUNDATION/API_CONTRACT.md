@@ -158,11 +158,35 @@ Proteção obrigatória contra replay do mesmo `purchase_token`
 novamente nem gera efeito duplicado. Detalhado em `SECURITY.md`.
 
 ### Parental gate
+
 `POST /subscription/validate-receipt` e qualquer endpoint que abra o fluxo
 de compra exigem que o cliente já tenha passado pelo desafio de parental
-gate (`MONETIZATION.md` §5) — o backend registra
-`parental_gate_passed_at` na sessão antes de aceitar a chamada; sem isso,
-`403 PARENTAL_GATE_REQUIRED`.
+gate (`MONETIZATION.md` §5).
+
+### `POST /subscription/parental-gate`
+Registra que o desafio de parental gate foi resolvido, gravando
+`profiles.parental_gate_passed_at = now()` no backend — nunca um campo
+enviado pelo cliente afirmando que o gate passou (isso reabriria a mesma
+falha que a regra de "backend como única autoridade" já existe para
+prevenir em score/XP/desbloqueio, `PRODUCT_PRINCIPLES.md` §2).
+
+**Expiração obrigatória — corrigida na revisão do Vertical Slice 01**
+(ressalva de segurança de Rhoney, 2026-08-19): `parental_gate_passed_at`
+**não é válido indefinidamente**. `POST /subscription/validate-receipt`
+só aceita o registro se `now() - parental_gate_passed_at <=
+PARENTAL_GATE_VALIDITY_MINUTES` (10 minutos, `config.py`); do contrário,
+`403 PARENTAL_GATE_EXPIRED` — o cliente precisa chamar
+`POST /subscription/parental-gate` de novo antes de tentar a compra.
+
+Razão: sem expiração, um adulto que passou o gate uma vez deixaria a
+conta "destravada para compra" para sempre — incluindo para uma criança
+que pegasse o celular já logado meses depois, sem o gate nunca ter
+aparecido para ela naquele momento específico. A janela curta é
+suficiente para completar um fluxo de checkout em andamento e insuficiente
+para servir de autorização permanente.
+
+Sem registro válido (nunca passado, ou expirado): `403
+PARENTAL_GATE_REQUIRED`.
 
 ## 7. Ranking
 

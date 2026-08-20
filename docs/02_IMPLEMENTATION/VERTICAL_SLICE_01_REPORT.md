@@ -184,3 +184,34 @@ com `DAILY_FREE_CHALLENGE_LIMIT` e `HINT_PENALTY_FACTOR`, que já estavam
 lá desde o início. Os 16 testes foram re-executados após a mudança e
 continuam passando — a refatoração não alterou comportamento, só
 centralizou onde o valor mora.
+
+## 11. Correção de segurança — expiração do Parental Gate (2026-08-19)
+
+Na revisão do item 2 da Seção 5 (endpoint de parental gate), Rhoney pediu
+o raciocínio de segurança linha a linha. Ao escrever essa explicação,
+identifiquei uma lacuna real: `parental_gate_passed_at` não expirava —
+uma vez passado, o registro autorizava compra para sempre. Rhoney validou
+o raciocínio da escolha original (backend registra, nunca confia em campo
+enviado pelo cliente) mas apontou o cenário de risco concreto: adulto
+passa o gate uma vez; meses depois, uma criança usa o celular já logado e
+tenta comprar — sem expiração, o backend aceitaria achando "já validado".
+
+Corrigido: `config.PARENTAL_GATE_VALIDITY_MINUTES = 10`.
+`POST /subscription/validate-receipt` agora rejeita com `403
+PARENTAL_GATE_EXPIRED` se `parental_gate_passed_at` tiver mais de 10
+minutos — o cliente precisa revalidar o gate a cada nova tentativa de
+compra, nunca reaproveitar um registro antigo. Documentado em
+`API_CONTRACT.md` (seção Parental Gate) e `SECURITY.md` §3 e no checklist
+§11. Teste novo
+(`test_parental_gate_expires_and_requires_revalidation_per_purchase_attempt`)
+cobre tanto a rejeição por expiração quanto a revalidação bem-sucedida.
+**17/17 testes passando** após a correção.
+
+## 12. Próxima etapa autorizada
+
+Rhoney autorizou, em paralelo: (a) corrigir a expiração do parental gate
+acima — feito nesta seção; (b) iniciar o provisionamento do Supabase real
+e a troca do modo `DEV_INSECURE` para autenticação de produção, como
+etapa isolada antes de qualquer feature nova. Item (b) ainda não
+iniciado — ver observação sobre o que está dentro/fora da minha
+capacidade de execução na próxima mensagem para Rhoney.

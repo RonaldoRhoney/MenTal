@@ -42,6 +42,14 @@ tentar enviar `xp_awarded` ou `unlocked` no request) é ignorado.
   (`parental_gate_passed_at`) — o cliente não pode simplesmente pular a
   tela e chamar o endpoint de validação de recibo direto, porque o backend
   rejeita sem esse registro.
+- **Expira em 10 minutos** (`config.PARENTAL_GATE_VALIDITY_MINUTES`,
+  corrigido na revisão do Vertical Slice 01). Sem expiração, um registro
+  antigo destravaria compra indefinidamente para qualquer pessoa com
+  acesso ao aparelho já logado — inclusive uma criança, meses depois do
+  adulto ter passado o gate uma única vez. `validate-receipt` rejeita com
+  `403 PARENTAL_GATE_EXPIRED` fora da janela; o cliente precisa revalidar
+  o gate a cada nova tentativa de compra, nunca reaproveitar um registro
+  antigo.
 
 ## 4. Validação de recibo Google Play Billing
 
@@ -121,7 +129,8 @@ V1, é decisão de Rhoney, não assunção técnica.)
 - [ ] `child_safe_mode` nasce `true` por padrão, confirmado por teste.
 - [ ] `AAID`/telefone nunca transmitidos antes de `age_mode = adult`.
 - [ ] Nickname system-generated obrigatório para `child_safe_mode = true`.
-- [ ] Parental gate bloqueia `validate-receipt` sem confirmação registrada.
+- [ ] Parental gate bloqueia `validate-receipt` sem confirmação registrada,
+      e confirmação expirada (>10 min) é tratada como ausente.
 - [ ] Validação de recibo é fail-closed e protegida contra replay.
 - [ ] `attempt_id` idempotente testado (reenvio não duplica XP).
 - [ ] `correct_answer` nunca aparece em payload antes da resposta.

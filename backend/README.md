@@ -36,9 +36,10 @@ substituição por Supabase Auth real.
 python -m pytest -q
 ```
 
-16 testes cobrindo: age gate / child_safe_mode, core loop completo
+17 testes cobrindo: age gate / child_safe_mode, core loop completo
 (desafio → resposta → XP → progresso), idempotência de `attempt_id`
 (incluindo reenvio e tentativa de adulteração), fórmula de penalidade de
 dica, amostra grátis em território pago, limite diário gratuito,
-bypass por assinatura ativa, parental gate, e ranking sem exposição de
-dado pessoal.
+bypass por assinatura ativa, parental gate (incluindo expiração de 10 min
+e revalidação por tentativa de compra), e ranking sem exposição de dado
+pessoal.

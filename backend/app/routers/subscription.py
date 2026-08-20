@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from .. import models, schemas, services
+from .. import config, models, schemas, services
 from ..auth import get_current_user_id
 from ..db import get_db
 
@@ -43,8 +43,22 @@ def validate_receipt(
     do Google Play (SECURITY.md §4).
     """
     profile = db.get(models.Profile, user_id)
-    if profile is None or profile.parental_gate_passed_at is None:
+    passed_at = profile.parental_gate_passed_at if profile else None
+
+    if passed_at is None:
         raise HTTPException(status_code=403, detail={"error": {"code": "PARENTAL_GATE_REQUIRED", "message": "Call /subscription/parental-gate first"}})
+
+    # Correção de segurança (ver config.PARENTAL_GATE_VALIDITY_MINUTES):
+    # o gate precisa ter sido passado dentro da mesma janela de checkout,
+    # nunca em qualquer momento no passado — sem isso, um adulto que
+    # validou o gate uma vez deixaria a conta "destravada para compra"
+    # indefinidamente para qualquer pessoa com acesso ao celular logado.
+    age = datetime.utcnow() - passed_at
+    if age > timedelta(minutes=config.PARENTAL_GATE_VALIDITY_MINUTES):
+        raise HTTPException(
+            status_code=403,
+            detail={"error": {"code": "PARENTAL_GATE_EXPIRED", "message": "Parental gate must be re-passed for this purchase attempt"}},
+        )
 
     if body.purchase_token != "TEST_TOKEN_VALID":
         raise HTTPException(status_code=422, detail={"error": {"code": "INVALID_RECEIPT", "message": "Stub only accepts TEST_TOKEN_VALID in V1"}})
