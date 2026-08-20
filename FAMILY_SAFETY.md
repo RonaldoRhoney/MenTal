@@ -32,6 +32,31 @@ para não virar retrabalho estrutural quando a monetização for implementada.
 - Linguagem neutra, sem gamificação, sem emoji, sem personagem falando.
 - Resultado da resposta define o "modo de dados" da sessão (ver seção 4).
 
+### 3.1 Ordem dos métodos de login e público infantil
+
+Decisão de Rhoney (2026-08-20): a ordem de apresentação dos métodos de
+login no onboarding é **1) Google, 2) email/senha, 3) Facebook**.
+
+Ressalva registrada na mesma decisão, não bloqueante mas vinculante para
+o design da tela: criança tipicamente não tem conta Google própria sem
+supervisão via Family Link, o que pode deixar o método #1 inacessível
+justamente para parte do público-alvo do MENTAL (`FAMILY_SAFETY.md` §1).
+Implicação prática para a tela de login (Foundation de UX, a formalizar
+antes do onboarding ser implementado):
+
+- A ordem de exibição (Google primeiro) não pode significar fricção
+  extra para quem não tem conta Google — o caminho para email/senha
+  precisa ser igualmente visível e rápido, não enterrado como alternativa
+  secundária na prática.
+- Login social (Google, Facebook) só deve solicitar o escopo mínimo de
+  dado necessário (idealmente só identificador + email) — nunca perfil
+  estendido, lista de contatos, ou dado adicional não essencial, reforça
+  a regra de ouro da Seção 2.
+- Cada provedor OAuth usado pelo MENTAL precisa de credencial (Client ID)
+  **própria do MENTAL**, nunca reaproveitada de outro produto RhoneyInc —
+  decisão registrada em `docs/02_IMPLEMENTATION/SUPABASE_SETUP.md` após
+  identificar acoplamento acidental com o Client ID Google do MeuPet.
+
 ## 4. Regras de dados por faixa
 
 | Situação | Advertising ID | Nº de telefone | Anúncio personalizado |
