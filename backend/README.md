@@ -21,14 +21,22 @@ apontar para Postgres/Supabase real:
 export MENTAL_DATABASE_URL="postgresql://..."
 ```
 
-## Autenticação (gap conhecido do V1)
+## Autenticação
 
-Não existe ainda projeto Supabase provisionado para o MENTAL. Sem a
-variável `SUPABASE_JWT_SECRET` definida, o backend roda em modo
-`DEV_INSECURE` (`app/auth.py`): o token Bearer enviado é tratado
-diretamente como `user_id`. **Nunca rodar assim em produção** — ver
-`docs/02_IMPLEMENTATION/VERTICAL_SLICE_01_REPORT.md` para o plano de
-substituição por Supabase Auth real.
+Projeto Supabase real já provisionado (`daogwiqwqplcvehdhksf`), testado
+de ponta a ponta em 2026-08-19 — ver
+`docs/02_IMPLEMENTATION/SUPABASE_SETUP.md`. Três modos, em ordem:
+
+1. `SUPABASE_URL` definido → valida o JWT via JWKS (ES256/ECC, chave
+   pública do projeto). **Modo real, usado em produção.**
+2. `SUPABASE_JWT_SECRET` definido (sem `SUPABASE_URL`) → HS256 legado.
+3. Nenhum dos dois → `DEV_INSECURE`: token Bearer tratado como o próprio
+   `user_id`. Só para desenvolvimento local — **nunca em produção**.
+
+```bash
+export SUPABASE_URL="https://daogwiqwqplcvehdhksf.supabase.co"
+export MENTAL_DATABASE_URL="postgresql+psycopg://postgres:<senha>@db.daogwiqwqplcvehdhksf.supabase.co:5432/postgres?options=-csearch_path%3Dmental,public"
+```
 
 ## Testes
 

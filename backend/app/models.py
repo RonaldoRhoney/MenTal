@@ -11,6 +11,7 @@ from sqlalchemy import (
     Date,
     ForeignKey,
     UniqueConstraint,
+    Uuid,
 )
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -21,10 +22,22 @@ def new_uuid() -> str:
     return str(uuid.uuid4())
 
 
+# Gap identificado testando contra o Postgres real do projeto MENTAL
+# (2026-08-19, ver docs/02_IMPLEMENTATION/SUPABASE_SETUP.md §3): colunas
+# de UUID declaradas como String genérico geram erro real no Postgres
+# ("operator does not exist: uuid = character varying") porque a migration
+# (backend/migrations/001_initial_schema.sql) usa o tipo uuid nativo.
+# sqlalchemy.Uuid é agnóstico de banco — native uuid no Postgres,
+# CHAR(32) no SQLite — e mantém o valor Python como str (as_uuid=False),
+# sem exigir mudança em nenhum outro ponto do código que já trata esses
+# campos como string.
+UUIDType = Uuid(as_uuid=False)
+
+
 class Profile(Base):
     __tablename__ = "profiles"
 
-    user_id: Mapped[str] = mapped_column(String, primary_key=True)
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     nickname: Mapped[str] = mapped_column(String, nullable=False)
     nickname_is_system_generated: Mapped[bool] = mapped_column(Boolean, default=True)
     age_mode: Mapped[str] = mapped_column(String, default="unknown")  # unknown|child|adult
@@ -54,7 +67,7 @@ class Territory(Base):
 class UserTerritoryProgress(Base):
     __tablename__ = "user_territory_progress"
 
-    user_id: Mapped[str] = mapped_column(String, primary_key=True)
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     territory_id: Mapped[str] = mapped_column(String, primary_key=True)
     xp_in_territory: Mapped[int] = mapped_column(Integer, default=0)
     conquered_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
@@ -63,7 +76,7 @@ class UserTerritoryProgress(Base):
 class Challenge(Base):
     __tablename__ = "challenges"
 
-    id: Mapped[str] = mapped_column(String, primary_key=True, default=new_uuid)
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
     territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"))
     difficulty_level: Mapped[int] = mapped_column(Integer, default=1)
     prompt: Mapped[str] = mapped_column(Text)
@@ -76,8 +89,8 @@ class Challenge(Base):
 class ChallengeHint(Base):
     __tablename__ = "challenge_hints"
 
-    id: Mapped[str] = mapped_column(String, primary_key=True, default=new_uuid)
-    challenge_id: Mapped[str] = mapped_column(String, ForeignKey("challenges.id"))
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
     hint_level: Mapped[int] = mapped_column(Integer)
     content: Mapped[str] = mapped_column(Text)
 
@@ -85,9 +98,9 @@ class ChallengeHint(Base):
 class Attempt(Base):
     __tablename__ = "attempts"
 
-    attempt_id: Mapped[str] = mapped_column(String, primary_key=True)
-    user_id: Mapped[str] = mapped_column(String)
-    challenge_id: Mapped[str] = mapped_column(String, ForeignKey("challenges.id"))
+    attempt_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    user_id: Mapped[str] = mapped_column(UUIDType)
+    challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
     submitted_answer: Mapped[str | None] = mapped_column(Text, nullable=True)
     is_correct: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
     hints_used: Mapped[int] = mapped_column(Integer, default=0)
@@ -99,7 +112,7 @@ class Attempt(Base):
 class Streak(Base):
     __tablename__ = "streaks"
 
-    user_id: Mapped[str] = mapped_column(String, primary_key=True)
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     current_streak: Mapped[int] = mapped_column(Integer, default=0)
     last_played_date: Mapped[date | None] = mapped_column(Date, nullable=True)
     freeze_available: Mapped[bool] = mapped_column(Boolean, default=True)
@@ -110,7 +123,7 @@ class Streak(Base):
 class Subscription(Base):
     __tablename__ = "subscriptions"
 
-    user_id: Mapped[str] = mapped_column(String, primary_key=True)
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     status: Mapped[str] = mapped_column(String, default="none")  # none|active|expired|cancelled
     google_play_purchase_token: Mapped[str | None] = mapped_column(String, nullable=True)
     validated_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
@@ -120,7 +133,7 @@ class Subscription(Base):
 class DailyChallengeUsage(Base):
     __tablename__ = "daily_challenge_usage"
 
-    user_id: Mapped[str] = mapped_column(String, primary_key=True)
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     usage_date: Mapped[date] = mapped_column(Date, primary_key=True)
     challenges_consumed: Mapped[int] = mapped_column(Integer, default=0)
 
@@ -128,8 +141,8 @@ class DailyChallengeUsage(Base):
 class Invite(Base):
     __tablename__ = "invites"
 
-    id: Mapped[str] = mapped_column(String, primary_key=True, default=new_uuid)
-    inviter_user_id: Mapped[str] = mapped_column(String)
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    inviter_user_id: Mapped[str] = mapped_column(UUIDType)
     invite_code: Mapped[str] = mapped_column(String, unique=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
@@ -137,9 +150,9 @@ class Invite(Base):
 class InviteConversion(Base):
     __tablename__ = "invite_conversions"
 
-    id: Mapped[str] = mapped_column(String, primary_key=True, default=new_uuid)
-    invite_id: Mapped[str] = mapped_column(String, ForeignKey("invites.id"))
-    invited_user_id: Mapped[str] = mapped_column(String)
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    invite_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("invites.id"))
+    invited_user_id: Mapped[str] = mapped_column(UUIDType)
     converted_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
     __table_args__ = (UniqueConstraint("invited_user_id", name="uq_invite_conversion_user"),)

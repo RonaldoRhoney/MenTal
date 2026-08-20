@@ -1,24 +1,34 @@
 """
 Resolução de user_id a partir do token de autenticação.
 
-Decisão registrada no Vertical Slice 01 (não estava no API_CONTRACT.md):
-não existe ainda projeto Supabase real configurado para o MENTAL, então a
-validação de token real (Supabase JWT, HS256 com SUPABASE_JWT_SECRET) só
-roda quando a variável de ambiente SUPABASE_JWT_SECRET está definida.
+Três modos, em ordem de prioridade:
 
-Sem essa variável (ambiente de desenvolvimento local e testes automatizados
-deste Vertical Slice), o token é tratado como o próprio user_id em texto
-puro — modo DEV_INSECURE, nunca deve rodar assim em produção. Isso é um gap
-de infraestrutura (falta de projeto Supabase provisionado), não uma
-decisão de arquitetura: ARCHITECTURE.md já definiu Supabase Auth como
-fonte de identidade; este stub só existe para o Vertical Slice 01 poder
-ser demonstrado e testado sem depender de um projeto Supabase já criado.
+1. SUPABASE_URL configurado → valida o JWT via JWKS (chave pública do
+   projeto, buscada em {SUPABASE_URL}/auth/v1/.well-known/jwks.json).
+   Modo real, usado pelo projeto MENTAL (assinatura ES256/ECC P-256,
+   confirmado no painel em 2026-08-19 — não é o modelo legado HS256).
+2. SUPABASE_JWT_SECRET configurado (sem SUPABASE_URL) → valida via HS256
+   com segredo compartilhado. Fallback só para projeto Supabase ainda no
+   modelo legado de assinatura.
+3. Nenhum dos dois → modo DEV_INSECURE: o token é tratado como o próprio
+   user_id em texto puro. Nunca deve rodar assim em produção — existe só
+   para desenvolvimento local/testes sem depender de um projeto Supabase.
 """
 
 import jwt
 from fastapi import Header, HTTPException
 
 from . import config
+
+_jwks_client: jwt.PyJWKClient | None = None
+
+
+def _get_jwks_client() -> jwt.PyJWKClient:
+    global _jwks_client
+    if _jwks_client is None:
+        jwks_url = f"{config.SUPABASE_URL}/auth/v1/.well-known/jwks.json"
+        _jwks_client = jwt.PyJWKClient(jwks_url, cache_keys=True)
+    return _jwks_client
 
 
 def get_current_user_id(authorization: str | None = Header(default=None)) -> str:
@@ -28,6 +38,17 @@ def get_current_user_id(authorization: str | None = Header(default=None)) -> str
     token = authorization.removeprefix("Bearer ").strip()
     if not token:
         raise HTTPException(status_code=401, detail={"error": {"code": "UNAUTHENTICATED", "message": "Empty token"}})
+
+    if config.SUPABASE_URL:
+        try:
+            signing_key = _get_jwks_client().get_signing_key_from_jwt(token)
+            payload = jwt.decode(token, signing_key.key, algorithms=["ES256"], audience="authenticated")
+        except jwt.PyJWTError as exc:
+            raise HTTPException(status_code=401, detail={"error": {"code": "INVALID_TOKEN", "message": str(exc)}}) from exc
+        user_id = payload.get("sub")
+        if not user_id:
+            raise HTTPException(status_code=401, detail={"error": {"code": "INVALID_TOKEN", "message": "Token missing sub"}})
+        return user_id
 
     if config.SUPABASE_JWT_SECRET:
         try:

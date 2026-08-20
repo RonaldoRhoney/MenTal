@@ -2,6 +2,16 @@ import os
 
 DATABASE_URL = os.environ.get("MENTAL_DATABASE_URL", "sqlite:///./mental_dev.db")
 
+# SUPABASE_URL (ex.: "https://xxxx.supabase.co") ativa a validação real de
+# token via JWKS (chave pública do projeto, buscada em
+# {SUPABASE_URL}/auth/v1/.well-known/jwks.json — não é segredo, pode ficar
+# em variável de ambiente comum). Projeto MENTAL usa assinatura assimétrica
+# ES256 (ECC P-256) como chave atual, não o modelo legado de segredo
+# compartilhado HS256 — confirmado no painel do projeto em 2026-08-19
+# (Settings → API → JWT Keys mostra "Legacy HS256" como PREVIOUS KEY, não
+# CURRENT KEY). SUPABASE_JWT_SECRET fica como fallback só para projeto que
+# ainda esteja no modelo legado.
+SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET")
 
 DAILY_FREE_CHALLENGE_LIMIT = 8

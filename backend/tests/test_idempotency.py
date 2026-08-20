@@ -4,7 +4,7 @@ from .conftest import auth_header
 
 
 def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
-    user = f"user-idem-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 
@@ -41,7 +41,7 @@ def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
 
 
 def test_hint_penalty_applied_and_persisted_via_attempt_id(client):
-    user = f"user-hint-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 
@@ -72,7 +72,7 @@ def test_hint_penalty_applied_and_persisted_via_attempt_id(client):
 
 
 def test_cannot_request_hint_after_answering(client):
-    user = f"user-hint-after-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 

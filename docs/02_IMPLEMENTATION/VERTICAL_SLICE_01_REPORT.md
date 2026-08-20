@@ -212,6 +212,45 @@ cobre tanto a rejeição por expiração quanto a revalidação bem-sucedida.
 Rhoney autorizou, em paralelo: (a) corrigir a expiração do parental gate
 acima — feito nesta seção; (b) iniciar o provisionamento do Supabase real
 e a troca do modo `DEV_INSECURE` para autenticação de produção, como
-etapa isolada antes de qualquer feature nova. Item (b) ainda não
-iniciado — ver observação sobre o que está dentro/fora da minha
-capacidade de execução na próxima mensagem para Rhoney.
+etapa isolada antes de qualquer feature nova.
+
+## 13. Provisionamento do Supabase real — concluído e testado (2026-08-19)
+
+Rhoney criou o projeto (`daogwiqwqplcvehdhksf`) e rodou
+`backend/migrations/001_initial_schema.sql`. A partir daí, testado de
+ponta a ponta contra infraestrutura real, não simulada:
+
+- **Conexão Postgres real**: confirmada via SQLAlchemy, 11 tabelas do
+  schema `mental` encontradas.
+- **Descoberta**: o projeto assina tokens com **ES256/ECC (JWKS)**, não o
+  modelo legado HS256 que `auth.py` esperava originalmente. `auth.py`
+  reescrito para validar via JWKS (chave pública, buscada em
+  `{SUPABASE_URL}/auth/v1/.well-known/jwks.json`), com fallback para
+  HS256 legado e depois para `DEV_INSECURE`.
+- **Token real obtido** criando um usuário de teste via API do Supabase
+  Auth (`mental.vs01.teste2@gmail.com`) e validado com sucesso pelo
+  `get_current_user_id`.
+- **Gap de tipo confirmado e corrigido**: rodar contra o Postgres real
+  reproduziu exatamente o erro previsto em `SUPABASE_SETUP.md` §3
+  (`operator does not exist: uuid = character varying`). Corrigido
+  trocando os campos de UUID em `models.py` de `String` para
+  `sqlalchemy.Uuid(as_uuid=False)`. Efeito colateral: os testes usavam
+  ids como `"user-loop-<uuid>"`, inválidos como UUID — corrigidos para
+  `str(uuid.uuid4())` puro.
+- **`create_all()` condicionado**: só roda contra SQLite local agora;
+  contra qualquer outro banco, o schema vem exclusivamente da migration.
+- **Fluxo completo testado contra o Postgres real**: age-gate → desafio
+  servido → resposta validada → XP calculado e persistido → progresso
+  atualizado → reenvio do mesmo `attempt_id` confirmado idempotente (não
+  duplicou XP). Dados de teste apagados do banco ao final.
+- **17/17 testes automatizados continuam passando** (SQLite) após as
+  mudanças de tipo.
+
+**Pendências reais que sobraram, documentadas em `SUPABASE_SETUP.md` §7**:
+(1) o toggle "Confirm email" do projeto foi desligado temporariamente
+para conseguir testar — Rhoney precisa decidir se liga de volta antes de
+qualquer usuário real; (2) método de login ainda não decidido (notei que
+o provider Google já tem um Client ID "MeuPet" configurado, reaproveitado
+de outro produto — só registrado, não ativado); (3) integração real no
+cliente Flutter continua não implementada, mesma limitação de SDK já
+registrada nas seções anteriores.

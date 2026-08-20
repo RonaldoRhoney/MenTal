@@ -2,15 +2,22 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import HTTPException
 from fastapi.responses import JSONResponse
 
-from . import models
+from . import config, models
 from .db import Base, engine, SessionLocal
 from .seed import seed_if_empty
 from .routers import age_gate, challenges, progress, subscription, ranking, social
 
-Base.metadata.create_all(bind=engine)
-
-with SessionLocal() as db:
-    seed_if_empty(db)
+# create_all() e o seed de desenvolvimento só rodam contra o SQLite local.
+# Correção feita testando contra o Postgres real do MENTAL (2026-08-19,
+# ver docs/02_IMPLEMENTATION/SUPABASE_SETUP.md §4): contra um banco real, o
+# schema é controlado pela migration versionada
+# (backend/migrations/001_initial_schema.sql), nunca pelo create_all do
+# SQLAlchemy — e o seed de desafios de exemplo nunca deve rodar em
+# produção (RISKS_AND_OPEN_DECISIONS.md §2: conteúdo curado manualmente).
+if config.DATABASE_URL.startswith("sqlite"):
+    Base.metadata.create_all(bind=engine)
+    with SessionLocal() as db:
+        seed_if_empty(db)
 
 app = FastAPI(title="MENTAL API", version="0.1.0")
 

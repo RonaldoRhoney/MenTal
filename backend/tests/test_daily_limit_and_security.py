@@ -5,7 +5,7 @@ from .conftest import auth_header
 
 
 def test_daily_free_limit_blocks_after_8(client):
-    user = f"user-limit-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 
@@ -25,7 +25,7 @@ def test_daily_free_limit_blocks_after_8(client):
 
 
 def test_active_subscription_bypasses_daily_limit(client):
-    user = f"user-sub-limit-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
     client.post("/subscription/parental-gate", headers=headers)
@@ -43,7 +43,7 @@ def test_active_subscription_bypasses_daily_limit(client):
 
 
 def test_validate_receipt_requires_parental_gate(client):
-    user = f"user-noparental-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 
@@ -56,7 +56,7 @@ def test_parental_gate_expires_and_requires_revalidation_per_purchase_attempt(cl
     # Cenário de risco identificado na revisão de Rhoney: adulto passa o
     # gate uma vez; meses depois, uma criança usa o celular já logado e
     # tenta comprar. O gate antigo NÃO pode autorizar essa nova tentativa.
-    user = f"user-parental-expired-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
     client.post("/subscription/parental-gate", headers=headers)
@@ -88,7 +88,7 @@ def test_parental_gate_expires_and_requires_revalidation_per_purchase_attempt(cl
 
 
 def test_ranking_never_exposes_user_id_or_email(client):
-    user = f"user-rank-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "child"}, headers=headers)
 

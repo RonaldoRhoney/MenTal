@@ -4,7 +4,7 @@ from .conftest import auth_header
 
 
 def test_full_core_loop_correct_answer(client):
-    user = f"user-loop-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
 
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
@@ -36,7 +36,7 @@ def test_full_core_loop_correct_answer(client):
 
 
 def test_correct_answer_awards_xp_and_updates_territory_progress(client):
-    user = f"user-loop-correct-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 
@@ -69,7 +69,7 @@ def test_paid_territory_allows_free_sample_then_locks(client):
     # TERRITORIES.md §2 / MONETIZATION.md §2: territórios pagos têm amostra
     # grátis (free_sample_count=2 para 'logica' no seed). As 2 primeiras
     # tentativas respondidas passam; a 3ª exige assinatura.
-    user = f"user-locked-{uuid.uuid4()}"
+    user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 
