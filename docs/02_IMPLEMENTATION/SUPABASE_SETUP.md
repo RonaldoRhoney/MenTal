@@ -11,6 +11,11 @@ autenticação real do Supabase em 2026-08-19. Itens §3 e §4 (antes
 2. Migration `backend/migrations/001_initial_schema.sql` rodada com
    sucesso — schema `mental` com as 11 tabelas + seed dos 4 territórios,
    confirmado visualmente no Schema Visualizer.
+2A. **Pendente de execução**: `backend/migrations/002_admin_role.sql`
+    (padrão admin RhoneyInc — `rhoneyinc@gmail.com` promovido
+    automaticamente a `role = 'admin'` em `profiles`, ver `DATA_MODEL.md`
+    §1 e `SECURITY.md` §9A). Rodar no SQL Editor do projeto, mesmo
+    processo da migration 001 — ainda não executado nesta sessão.
 3. **Descoberta importante**: o projeto usa assinatura de token
    **assimétrica ES256 (ECC P-256)** como chave atual (Settings → API →
    JWT Keys), não o modelo legado de segredo compartilhado HS256 — esse

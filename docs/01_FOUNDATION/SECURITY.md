@@ -112,6 +112,23 @@ diferente).
   por Rhoney antes de popular o banco, mas o campo/trava técnica já existe
   desde a Foundation.
 
+## 9A. Admin padrão RhoneyInc
+
+`rhoneyinc@gmail.com` tem controle total do painel admin e de todas as
+métricas do MENTAL (decisão de Rhoney, 2026-08-20) — padrão transversal
+já aplicado nos demais produtos RhoneyInc. Implementado como `role =
+'admin'` em `profiles`, promovido automaticamente por trigger no Postgres
+(`migrations/002_admin_role.sql`), nunca por passo manual em produção —
+fallback manual só existe para o caso da conta já ter se cadastrado antes
+da migration rodar.
+
+**Ainda não existe painel admin nem endpoint que leia `role`** — o
+Vertical Slice 01 não inclui isso. Quando o painel/endpoints
+administrativos forem implementados, a regra de autoridade única do
+backend (§1) se aplica igual: nenhum endpoint sensível pode decidir
+"é admin" a partir de dado enviado pelo cliente — sempre a partir de
+`profiles.role`, lido no banco a cada requisição.
+
 ## 10. Superfícies de ataque explicitamente fora de escopo do V1
 
 (Registradas para não serem esquecidas, não porque sejam ignoradas

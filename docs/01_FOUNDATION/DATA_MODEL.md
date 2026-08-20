@@ -18,6 +18,7 @@ Perfil de jogo do usuário — 1:1 com `user_id` do Supabase Auth.
 | `child_safe_mode` | boolean | Deriva de `age_mode != 'adult'`; flag de sessão persistida |
 | `xp_total` | integer | Soma de XP entre territórios |
 | `level` | integer | Derivado de `xp_total` (fórmula em `progress` module, não neste schema) |
+| `role` | enum(`user`, `admin`) | Ver regra de admin padrão abaixo. Default `user` |
 | `created_at` | timestamptz | |
 
 **Regra de nickname para menor** (mitigação aceita em
@@ -26,6 +27,19 @@ backend gera `nickname` automaticamente (ex.: adjetivo+substantivo
 aleatório, sem input livre de texto) e marca
 `nickname_is_system_generated = true`. Nickname livre só é permitido para
 `age_mode = 'adult'`.
+
+**Regra de admin padrão RhoneyInc** (`role`, adicionada em 2026-08-20):
+`rhoneyinc@gmail.com` é sempre promovido a `role = 'admin'` — automaticamente,
+nunca por passo manual. Implementado via trigger Postgres em `auth.users`
+(`migrations/002_admin_role.sql`, função `mental.handle_new_mental_user()`),
+que cria a linha em `profiles` no momento do cadastro (antes mesmo do
+onboarding/age-gate) e já define `role` com base no e-mail da conta. Se a
+conta já existir antes da migration rodar, a mesma migration promove
+retroativamente. Nenhum endpoint do V1 usa `role` ainda — não existe
+painel administrativo no Vertical Slice 01 — mas o campo e o trigger
+nascem agora, mesmo raciocínio já aplicado a `child_safe_mode` (nasce na
+arquitetura antes da feature existir, para não virar retrabalho
+estrutural depois).
 
 ## 2. `territories`
 

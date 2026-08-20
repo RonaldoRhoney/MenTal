@@ -41,6 +41,14 @@ class Profile(Base):
     nickname: Mapped[str] = mapped_column(String, nullable=False)
     nickname_is_system_generated: Mapped[bool] = mapped_column(Boolean, default=True)
     age_mode: Mapped[str] = mapped_column(String, default="unknown")  # unknown|child|adult
+    # Padrão RhoneyInc (skill admin-padrao, aplicado 2026-08-20):
+    # rhoneyinc@gmail.com é sempre admin, promovido automaticamente por
+    # trigger no Postgres (migrations/002_admin_role.sql), não por passo
+    # manual. Nenhum endpoint usa este campo ainda no V1 — não existe
+    # painel admin no Vertical Slice 01 — mas a coluna/trigger nasce agora
+    # para não virar retrabalho estrutural depois (mesmo raciocínio já
+    # aplicado a child_safe_mode em FAMILY_SAFETY.md).
+    role: Mapped[str] = mapped_column(String, default="user")  # user|admin
     child_safe_mode: Mapped[bool] = mapped_column(Boolean, default=True)
     xp_total: Mapped[int] = mapped_column(Integer, default=0)
     level: Mapped[int] = mapped_column(Integer, default=1)
