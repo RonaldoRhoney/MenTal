@@ -254,3 +254,31 @@ o provider Google já tem um Client ID "MeuPet" configurado, reaproveitado
 de outro produto — só registrado, não ativado); (3) integração real no
 cliente Flutter continua não implementada, mesma limitação de SDK já
 registrada nas seções anteriores.
+
+## 14. Pendências fechadas na revisão de Rhoney (2026-08-20)
+
+Das 3 pendências abertas na Seção 13, 2 foram resolvidas nesta sessão:
+
+- **"Confirm email"**: religado e verificado — confirmação visual do
+  toggle mais evidência funcional (novo signup de teste retornou `429
+  email_send_rate_limit`, que só ocorre quando o Supabase tenta mandar
+  e-mail de confirmação).
+- **Client ID Google reaproveitado do MeuPet**: Rhoney apontou o
+  acoplamento como inaceitável (correto — se o MeuPet revogar/alterar
+  aquele Client ID, o login do MENTAL quebraria junto). Criado um Client
+  ID OAuth dedicado ao MENTAL no Google Cloud Console e configurado no
+  Supabase. **Verificado de verdade**, não só configurado: o endpoint
+  `GET /auth/v1/authorize?provider=google` foi chamado e o redirect real
+  para `accounts.google.com` confirma `client_id=900389713407-...` (o
+  novo) com `scope=email+profile` (mínimo).
+- **Ordem de login decidida**: Google → email/senha → Facebook. Registrada
+  em `FAMILY_SAFETY.md` §3.1 junto com a ressalva de que criança
+  tipicamente não tem conta Google própria — não bloqueia a decisão, mas
+  vira requisito de design para a tela de login (caminho de email/senha
+  não pode ficar enterrado como alternativa secundária na prática).
+
+**Único item que permanece genuinamente em aberto**: integração real do
+client Flutter, que depende de alguém rodar com Flutter SDK — sem isso,
+o Vertical Slice 01 não pode ser considerado fechado do lado do cliente,
+mesmo com o backend inteiro validado contra infraestrutura real (Postgres,
+Auth, OAuth).

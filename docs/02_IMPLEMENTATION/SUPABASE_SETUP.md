@@ -16,19 +16,26 @@ autenticação real do Supabase em 2026-08-19. Itens §3 e §4 (antes
    JWT Keys), não o modelo legado de segredo compartilhado HS256 — esse
    aparece só como "Legacy key", já superado. Isso muda a forma de
    validação do lado do backend (ver §2).
-4. Método de login: **ainda em aberto**, não travado em nenhum documento
-   de Foundation. Notei, ao mexer em Sign In / Providers, que o provider
-   Google já tem um Client ID chamado "MeuPet" configurado (reaproveitando
-   OAuth de outro produto RhoneyInc) — registrado aqui como observação,
-   não decisão. Continua pendente de orientação de Rhoney antes de
-   qualquer provider ser ativado de fato para o MENTAL.
-5. **Pendência operacional deixada pelo teste**: para conseguir um token
-   real e testar a validação, precisei de um usuário com e-mail
-   confirmado. O toggle **"Confirm email"** (Authentication → Sign In /
-   Providers → Email) foi desligado temporariamente para permitir isso.
-   **Rhoney precisa decidir se liga de volta** antes de considerar o
-   projeto pronto para qualquer usuário real — hoje, com o toggle
-   desligado, qualquer cadastro de e-mail entra sem confirmação.
+4. **Método de login — decidido em 2026-08-20**: ordem de apresentação
+   1) Google, 2) email/senha, 3) Facebook (registrado em
+   `FAMILY_SAFETY.md` §3.1, com a ressalva de acessibilidade para
+   criança sem conta Google própria). O provider Google inicialmente
+   reaproveitava o Client ID OAuth do MeuPet — **corrigido**: criado um
+   Client ID dedicado ao MENTAL no Google Cloud Console (mesmo projeto
+   GCP compartilhado da RhoneyInc, credencial própria), configurado no
+   provider Google do Supabase, e **verificado de verdade**: o endpoint
+   `GET /auth/v1/authorize?provider=google` redireciona para
+   `accounts.google.com` com `client_id=900389713407-...` (o novo, não
+   mais o "MeuPet") e `scope=email+profile` (mínimo, sem dado estendido).
+   Facebook OAuth ainda não configurado — mesma regra de credencial
+   própria por produto se aplica quando for a vez dele.
+5. **"Confirm email" — religado**: foi desligado temporariamente durante
+   o teste de autenticação (§ anterior desta sessão) para conseguir um
+   usuário confirmado sem acesso a caixa de entrada; religado e
+   verificado depois (toggle visualmente confirmado ligado, e um novo
+   signup de teste retornou `429 email_send_rate_limit` — evidência de
+   que o fluxo de confirmação está ativo, já que esse erro só ocorre
+   quando o Supabase tenta enviar o e-mail de confirmação).
 
 ## 2. Autenticação real — como ficou (JWKS, não HS256)
 
@@ -114,9 +121,14 @@ quiser o projeto "limpo" antes de qualquer usuário real.
 
 ## 7. Pendências reais restantes
 
-1. **Religar "Confirm email"** (§1.5) — decisão de Rhoney, antes de
-   qualquer usuário real se cadastrar.
-2. **Método de login** (§1.4) — decisão de Rhoney (email/senha, magic
-   link, OAuth — e o que fazer com o Client ID "MeuPet" já presente).
+1. ~~Religar "Confirm email"~~ — **resolvido** (§1.5).
+2. ~~Método de login / Client ID reaproveitado~~ — **resolvido** (§1.4):
+   ordem decidida, Client ID dedicado do Google criado e verificado.
+   Facebook OAuth (3º método) ainda não configurado — próxima vez que for
+   priorizado, mesma regra de credencial própria.
 3. **Integração Flutter real** (§5) — não iniciada, depende de Flutter SDK
-   disponível em algum ambiente para validar.
+   disponível em algum ambiente para validar. Único item realmente em
+   aberto deste guia.
+4. **Usuários de teste no Supabase Auth** (§6) — `mental.vs01.teste@gmail.com`
+   e `mental.vs01.teste2@gmail.com` continuam cadastrados, sem dado
+   associado no schema `mental`. Baixo risco, remover quando conveniente.
