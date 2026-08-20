@@ -1,3 +1,6 @@
+import 'dart:io' show Platform;
+
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 
 import 'api/api_client.dart';
@@ -6,8 +9,16 @@ import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
 
 /// Ajustar para a URL real do backend Render antes de build de release.
-/// Em desenvolvimento local, aponta para o FastAPI rodando em localhost.
-const String kApiBaseUrl = 'http://10.0.2.2:8000';
+/// Em desenvolvimento local, cada plataforma alcança "localhost" do host
+/// de um jeito diferente: emulador Android usa o alias especial 10.0.2.2
+/// (não é um IP real, só funciona dentro do emulador); Web e desktop
+/// (Linux/macOS/Windows) usam 127.0.0.1 normalmente, porque rodam no
+/// mesmo host da máquina de desenvolvimento. Detectado em runtime para o
+/// mesmo código funcionar em qualquer alvo sem precisar editar na mão.
+String get kApiBaseUrl {
+  if (!kIsWeb && Platform.isAndroid) return 'http://10.0.2.2:8000';
+  return 'http://127.0.0.1:8000';
+}
 
 void main() {
   runApp(const MentalApp());

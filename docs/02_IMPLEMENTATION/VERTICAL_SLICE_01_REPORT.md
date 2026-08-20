@@ -299,3 +299,56 @@ erro"): coluna `role`, trigger e função confirmados existentes no banco
 real. Nenhum painel admin ou endpoint usa `role` ainda — fora do escopo
 do V1 — mas a base de dados já está pronta para quando isso for
 implementado.
+
+## 16. Validação do client Flutter — FECHADA (2026-08-20)
+
+Último item genuinamente em aberto do Vertical Slice 01, resolvido nesta
+sessão sem depender de Android Studio/emulador — o notebook de Rhoney não
+conseguia instalar essas ferramentas. Alternativa: Flutter SDK instalado
+via clone do repositório oficial (`stable`, 3.47.1), compilando para
+**Linux desktop e Web** em vez de Android — mesmo código Dart, alvo
+diferente, sem precisar de emulador Android nem de KVM.
+
+Sequência real de validação, cada etapa executada e conferida, não
+assumida:
+1. `flutter pub get` — 49 dependências resolvidas.
+2. `flutter analyze` — encontrou 2 avisos reais (API depreciada
+   `RadioListTile.groupValue/onChanged`), corrigidos para `RadioGroup`;
+   re-rodado, 0 problemas.
+3. `flutter create . --platforms web,android,linux` — gerou o
+   boilerplate de plataforma que faltava (o slice anterior só tinha
+   `lib/`); pacote Android confirmado como `com.rhoneyinc.mental`,
+   conforme `MENTAL_KICKOFF.md` §3.
+4. Teste padrão gerado (`test/widget_test.dart`) referenciava um app de
+   contador genérico, não o `MentalApp` real — substituído por um teste
+   real que verifica o estado de loading explícito no boot (mitigação de
+   cold start, `ARCHITECTURE.md` §3). `flutter test` passou.
+5. `flutter build web` — compilação completa sem erro.
+6. Gap encontrado e corrigido: `kApiBaseUrl` era uma constante fixa em
+   `10.0.2.2:8000` (endereço especial só do emulador Android) — quebraria
+   em Web/desktop. Trocado por detecção de plataforma em runtime
+   (`Platform.isAndroid` → `10.0.2.2`, resto → `127.0.0.1`).
+7. `sudo apt install clang cmake ninja-build pkg-config libgtk-3-dev`
+   (rodado por Rhoney, eu não tenho acesso a terminal interativo pra
+   senha de sudo) — habilitou o toolchain Linux desktop.
+8. `flutter build linux` — binário nativo compilado com sucesso.
+9. Backend local (`uvicorn`, SQLite de dev — não o Postgres de produção,
+   para não misturar dado de teste de UI com dado real) subido, binário
+   executado na sessão gráfica real do notebook (`DISPLAY=:0`, Wayland).
+10. **Rhoney usou o app de verdade**, clicando pela interface real: age
+    gate, e depois os 4 territórios (Palavras, Números, Lógica,
+    Conhecimento) — incluindo pedido de dica em pelo menos 2 desafios.
+    Confirmado pelo log de acesso do backend: 26 requisições, todas
+    `200 OK`, zero erro, zero exceção.
+
+**O que fica de fora, escopo genuinamente diferente**: build de APK/AAB
+Android, permissões do `AndroidManifest.xml`, comportamento em tela
+touch real — nenhum SDK Android foi instalado neste ambiente. Antes de
+qualquer submissão à Play Store, alguém com Android Studio (ou Android
+SDK cmdline-tools) precisa confirmar o app rodando de fato em Android —
+mas a lógica de negócio, UI, navegação e integração com API já estão
+validadas de ponta a ponta, não é mais código "nunca executado".
+
+**Vertical Slice 01 considerado fechado** — backend e client validados
+contra infraestrutura e interação reais. Aguardando aprovação final de
+Rhoney antes de qualquer etapa seguinte (`MENTAL_KICKOFF.md` §8).

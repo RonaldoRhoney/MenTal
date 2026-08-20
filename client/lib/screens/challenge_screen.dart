@@ -159,12 +159,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
         const SizedBox(height: 24),
         if (options != null)
-          ...options.map(
-            (option) => RadioListTile<String>(
-              title: Text(option),
-              value: option,
-              groupValue: _selectedOption,
-              onChanged: (value) => setState(() => _selectedOption = value),
+          RadioGroup<String>(
+            groupValue: _selectedOption,
+            onChanged: (value) => setState(() => _selectedOption = value),
+            child: Column(
+              children: options
+                  .map((option) => RadioListTile<String>(title: Text(option), value: option))
+                  .toList(),
             ),
           )
         else
