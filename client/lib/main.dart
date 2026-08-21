@@ -6,6 +6,7 @@ import 'api/session_store.dart';
 import 'l10n/generated/app_localizations.dart';
 import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
+import 'theme/app_theme.dart';
 
 /// Ajustar para a URL real do backend Render antes de build de release.
 ///
@@ -44,11 +45,9 @@ class MentalApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      theme: ThemeData(
-        colorSchemeSeed: const Color(0xFF1B1B3A),
-        useMaterial3: true,
-        brightness: Brightness.dark,
-      ),
+      // DESIGN_SYSTEM.md: tema único e centralizado — nenhuma tela define
+      // cor ou fonte própria (lib/theme/app_theme.dart é a fonte única).
+      theme: AppTheme.themeData,
       home: const AppEntryPoint(),
     );
   }

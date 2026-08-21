@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../theme/app_theme.dart';
 
 /// Tela de idade neutra — obrigatória antes de qualquer coleta de dado não
 /// essencial (FAMILY_SAFETY.md §3). Linguagem neutra, sem gamificação, sem
@@ -48,12 +49,13 @@ class _AgeGateScreenState extends State<AgeGateScreen> {
             children: [
               Text(
                 l10n.ageGateTitle,
-                style: const TextStyle(fontSize: 20),
+                style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
               Text(
                 l10n.ageGateSubtitle,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppColors.muted),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 32),
@@ -71,7 +73,7 @@ class _AgeGateScreenState extends State<AgeGateScreen> {
               ],
               if (_error != null) ...[
                 const SizedBox(height: 16),
-                Text(_error!, style: const TextStyle(color: Colors.redAccent)),
+                Text(_error!, style: const TextStyle(color: AppColors.error)),
               ],
             ],
           ),

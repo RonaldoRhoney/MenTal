@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../theme/app_theme.dart';
+import '../widgets/xp_bar.dart';
 import 'challenge_screen.dart';
 
 const List<String> _kTerritoryIds = ['palavras', 'numeros', 'logica', 'conhecimento'];
@@ -65,17 +67,20 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              if (progress != null)
+              if (progress != null) ...[
+                XpBar(xpTotal: progress['xp_total'] as int, level: progress['level'] as int),
+                const SizedBox(height: 12),
                 Text(
                   l10n.progressSummary(
                     progress['xp_total'] as int,
                     progress['level'] as int,
                     progress['streak']['current_streak'] as int,
                   ),
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 14),
                 ),
+              ],
               if (_error != null)
-                Text(_error!, style: const TextStyle(color: Colors.redAccent)),
+                Text(_error!, style: const TextStyle(color: AppColors.error)),
               const SizedBox(height: 24),
               Expanded(
                 child: ListView.separated(

@@ -3,6 +3,7 @@ import 'package:uuid/uuid.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../theme/app_theme.dart';
 
 /// Ciclo completo de um desafio: busca → responde → resultado → próximo.
 /// Uma ação primária por vez (Clareza Imediata, PRODUCT_PRINCIPLES.md §1):
@@ -159,7 +160,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(_error!, textAlign: TextAlign.center),
+            Text(
+              _error!,
+              textAlign: TextAlign.center,
+              // Erro/limite em terracota suave, nunca vermelho vivo —
+              // DESIGN_SYSTEM.md §1/§4, coerente com não-humilhação.
+              style: const TextStyle(color: AppColors.error),
+            ),
             const SizedBox(height: 16),
             if (isPermanentForToday)
               OutlinedButton(
@@ -214,13 +221,19 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         ..._hintsShown.map(
           (hint) => Padding(
             padding: const EdgeInsets.only(bottom: 8),
-            child: Text(l10n.hintPrefix(hint), style: const TextStyle(fontStyle: FontStyle.italic)),
+            child: Text(
+              l10n.hintPrefix(hint),
+              style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+            ),
           ),
         ),
         if (_hintsExhausted)
           Padding(
             padding: const EdgeInsets.only(bottom: 8),
-            child: Text(l10n.noMoreHintsMessage, style: const TextStyle(fontStyle: FontStyle.italic)),
+            child: Text(
+              l10n.noMoreHintsMessage,
+              style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+            ),
           )
         else
           TextButton(onPressed: _requestHint, child: Text(l10n.requestHintButton)),
@@ -241,18 +254,25 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       children: [
         Text(
           isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback,
-          style: Theme.of(context).textTheme.headlineSmall,
+          // Celebração em teal (acerto) vs. terracota suave (erro, nunca
+          // vermelho vivo) — DESIGN_SYSTEM.md §4.
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: isCorrect ? AppColors.success : AppColors.error,
+              ),
         ),
         const SizedBox(height: 8),
         Text(l10n.correctAnswerLabel(result['correct_answer'] as String)),
         const SizedBox(height: 12),
         Text(result['explanation'] as String),
         const SizedBox(height: 12),
-        Text(l10n.xpEarnedLabel(
-          result['xp_awarded'] as int,
-          result['xp_base'] as int,
-          result['hints_used'] as int,
-        )),
+        Text(
+          l10n.xpEarnedLabel(
+            result['xp_awarded'] as int,
+            result['xp_base'] as int,
+            result['hints_used'] as int,
+          ),
+          style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 14),
+        ),
         const Spacer(),
         FilledButton(onPressed: _loadNextChallenge, child: Text(l10n.nextChallengeButton)),
       ],

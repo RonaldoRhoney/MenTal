@@ -105,6 +105,29 @@ def next_challenge(
 
     import random
 
+    # Achado testando no celular real: com poucos candidatos por nível de
+    # dificuldade (2-3 no seed atual), random.choice puro repete o mesmo
+    # desafio imediatamente com chance alta (~50% com 2 candidatos) —
+    # rodou 20x seguidas em teste manual e saiu sequência de 5 iguais.
+    # Não é falta de embaralhamento no cliente, é ausência de "não repetir
+    # o último" no sorteio do backend. Exclui o último desafio já servido
+    # pra esse usuário+território (via Attempt mais recente), mas só
+    # quando sobra pelo menos 1 outro candidato — nunca bloqueia o único
+    # desafio existente.
+    last_challenge_id = db.execute(
+        select(models.Attempt.challenge_id)
+        .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
+        .where(models.Attempt.user_id == user_id)
+        .where(models.Challenge.territory_id == territory_id)
+        .order_by(models.Attempt.created_at.desc())
+        .limit(1)
+    ).scalar_one_or_none()
+
+    if last_challenge_id is not None and len(candidates) > 1:
+        narrowed = [c for c in candidates if c.id != last_challenge_id]
+        if narrowed:
+            candidates = narrowed
+
     challenge = random.choice(candidates)
     hints_available = len(
         db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
