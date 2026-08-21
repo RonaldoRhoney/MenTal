@@ -1,3 +1,4 @@
+import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -129,7 +130,12 @@ Future<void> _pumpChallengeScreen(
 }) async {
   await tester.pumpWidget(
     MediaQuery(
-      data: MediaQueryData(disableAnimations: disableAnimations),
+      // MediaQueryData(disableAnimations: ...) sozinho zera "size" (usa o
+      // construtor default) — quebrava o cálculo de posição dos balões,
+      // que depende de um tamanho de tela real. fromView() preserva o
+      // tamanho real do ambiente de teste, só sobrescrevendo o campo que
+      // este teste de fato quer controlar.
+      data: MediaQueryData.fromView(tester.view).copyWith(disableAnimations: disableAnimations),
       child: MaterialApp(
         localizationsDelegates: const [
           AppLocalizations.delegate,
@@ -146,7 +152,16 @@ Future<void> _pumpChallengeScreen(
   await tester.tap(find.widgetWithText(RadioListTile<String>, '4'));
   await tester.pump();
   await tester.tap(find.widgetWithText(FilledButton, 'Confirmar resposta'));
-  await tester.pumpAndSettle();
+  // Não usar pumpAndSettle() aqui: com uma celebração forte ativa,
+  // ConfettiWidget mantém partículas vivas por um tempo e o balão sobe por
+  // 2.8s — pumpAndSettle() esperaria tudo isso "assentar" e estourava por
+  // timeout (achado real rodando os testes). O texto do resultado (e dos
+  // banners de celebração) já está presente no primeiro frame após o
+  // Future de submitAnswer() resolver, independente da animação ainda
+  // estar rodando — não precisamos esperar a celebração terminar pra
+  // verificar o texto.
+  await tester.pump();
+  await tester.pump(const Duration(milliseconds: 100));
 }
 
 void main() {
@@ -310,6 +325,9 @@ void main() {
       await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
 
       expect(find.text('Nível 3 alcançado!'), findsOneWidget);
+      // Celebração forte pedida: confete caindo + 2 "fogos" (explosão
+      // radial) — 3 ConfettiWidget no total, não só 1.
+      expect(find.byType(ConfettiWidget), findsNWidgets(3));
     });
 
     testWidgets('territory_just_conquered mostra "Território conquistado!"', (tester) async {

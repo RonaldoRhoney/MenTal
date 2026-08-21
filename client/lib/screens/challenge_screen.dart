@@ -1,4 +1,3 @@
-import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
@@ -44,27 +43,29 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   Map<String, dynamic>? _result;
 
   // MICROINTERACTIONS.md §3 — celebração forte (território/badge/level
-  // up) usa confete; sons e o pulso sutil/moderado não precisam de
-  // controller próprio.
-  late final ConfettiController _confettiController;
+  // up) usa confete + fogos + balões (pedido explícito: algo que remeta a
+  // comemoração de verdade, não só confete); sons e o pulso sutil/
+  // moderado não precisam de controller próprio.
+  late final CelebrationController _celebration;
 
   @override
   void initState() {
     super.initState();
-    _confettiController = ConfettiController(duration: const Duration(milliseconds: 800));
+    _celebration = CelebrationController();
     _loadNextChallenge();
   }
 
   @override
   void dispose() {
-    _confettiController.dispose();
+    _celebration.dispose();
     super.dispose();
   }
 
-  /// Decide som + confete a partir dos sinais que o backend calculou
-  /// (única autoridade sobre "isso é um evento raro" — client nunca
-  /// deriva isso sozinho). Calibração por evento, MICROINTERACTIONS.md §3:
-  /// forte (level up/conquista/badge) > moderado (streak) > sutil (acerto).
+  /// Decide som + celebração visual a partir dos sinais que o backend
+  /// calculou (única autoridade sobre "isso é um evento raro" — client
+  /// nunca deriva isso sozinho). Calibração por evento,
+  /// MICROINTERACTIONS.md §3: forte (level up/conquista/badge) > moderado
+  /// (streak) > sutil (acerto).
   void _triggerFeedback(Map<String, dynamic> result) {
     final isCorrect = result['is_correct'] as bool;
     final levelUp = result['level_up'] as bool? ?? false;
@@ -77,7 +78,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     if (isStrongEvent) {
       FeedbackService.instance.play(FeedbackSound.celebration);
       if (!MediaQuery.of(context).disableAnimations) {
-        _confettiController.play();
+        _celebration.celebrate();
       }
     } else if (streakJustExtended) {
       FeedbackService.instance.play(FeedbackSound.streak);
@@ -169,7 +170,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       appBar: AppBar(title: Text(widget.territoryLabel)),
       body: SafeArea(
         child: CelebrationOverlay(
-          controller: _confettiController,
+          controller: _celebration,
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: _buildBody(),
