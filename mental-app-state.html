@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENTAL — Estado Atual do App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#111013;
+    --bg-2:#17161A;
+    --ink:#3A3560;
+    --gold:#E2BE6E;
+    --teal:#3FA796;
+    --bone:#EDE7DA;
+    --muted:#8A8578;
+    --error:#C96A5A;
+    --line:rgba(237,231,218,0.10);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#0A0A0B;
+    color:var(--bone);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:48px 24px;
+  }
+  .page-title{
+    max-width:1400px;
+    margin:0 auto 8px;
+    font-family:'Fraunces';
+    font-weight:600;
+    font-size:28px;
+    color:var(--bone);
+  }
+  .page-sub{
+    max-width:1400px;
+    margin:0 auto 40px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.04em;
+  }
+  .screens{
+    max-width:1400px;
+    margin:0 auto;
+    display:flex;
+    gap:32px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .screen-block{ display:flex; flex-direction:column; align-items:center; gap:14px; }
+  .screen-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--teal);
+  }
+
+  .phone{
+    width:300px;
+    height:620px;
+    background:linear-gradient(180deg, #1C1B20, #17161A);
+    border-radius:38px;
+    border:1px solid rgba(237,231,218,0.14);
+    padding:10px;
+    box-shadow:0 40px 70px -20px rgba(0,0,0,0.6);
+    position:relative;
+  }
+  .screen{
+    width:100%; height:100%;
+    background:var(--bg);
+    border-radius:28px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+  }
+  .notch{
+    position:absolute; top:10px; left:50%; transform:translateX(-50%);
+    width:70px; height:16px; background:#000; border-radius:10px; z-index:5;
+  }
+  .status{
+    display:flex; justify-content:space-between; padding:18px 18px 0;
+    font-family:'JetBrains Mono', monospace; font-size:10px; color:var(--muted);
+  }
+  .content{ padding:14px 18px 16px; display:flex; flex-direction:column; flex:1; }
+
+  /* ---- Header with back ---- */
+  .header{ display:flex; align-items:center; gap:12px; margin-top:6px; }
+  .back{ color:var(--bone); font-size:16px; }
+  .header-title{ font-family:'Fraunces'; font-weight:600; font-size:18px; }
+
+  /* ---- HOME SCREEN ---- */
+  .home-top{ display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
+  .streak-pill{
+    font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--gold);
+    display:flex; align-items:center; gap:5px;
+  }
+  .bell{
+    width:26px; height:26px; border-radius:50%; border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--muted);
+  }
+  .profile-row{ display:flex; align-items:center; gap:11px; margin-top:18px; }
+  .avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:linear-gradient(135deg, var(--gold), var(--teal));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces'; font-weight:600; font-size:14px; color:#111013;
+  }
+  .p-name{ font-size:13.5px; font-weight:600; }
+  .p-level{ font-family:'JetBrains Mono', monospace; font-size:10px; color:var(--muted); margin-top:2px; }
+  .xp-wrap{ margin-top:12px; height:4px; background:rgba(237,231,218,0.08); border-radius:4px; overflow:hidden; }
+  .xp-fill{ width:58%; height:100%; background:linear-gradient(90deg, var(--gold), var(--teal)); }
+  .xp-caption{ font-family:'JetBrains Mono', monospace; font-size:9px; color:var(--muted); margin-top:6px; }
+
+  .territory-card{
+    margin-top:18px; background:var(--bg-2); border:1px solid var(--line);
+    border-radius:16px; padding:16px; min-height:110px; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; justify-content:flex-end;
+  }
+  .territory-card::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(60% 60% at 25% 15%, rgba(63,167,150,0.14), transparent),
+               radial-gradient(50% 50% at 85% 85%, rgba(226,190,110,0.10), transparent);
+  }
+  .t-eyebrow{ font-family:'JetBrains Mono', monospace; font-size:9px; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); position:relative; }
+  .t-name{ font-family:'Fraunces'; font-weight:600; font-size:17px; margin-top:3px; position:relative; }
+  .t-badge{
+    position:absolute; top:12px; right:12px; z-index:2;
+    background:rgba(63,167,150,0.16); color:var(--teal);
+    font-family:'JetBrains Mono', monospace; font-size:9px; padding:4px 8px; border-radius:20px;
+    border:1px solid rgba(63,167,150,0.35);
+  }
+
+  .cats-grid{ margin-top:16px; display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+  .cat{ background:var(--bg-2); border:1px solid var(--line); border-radius:11px; padding:9px 4px; text-align:center; position:relative; }
+  .cat.locked{ opacity:0.45; }
+  .cat-ico{ font-size:14px; }
+  .cat-label{ font-size:8.5px; color:var(--muted); margin-top:3px; }
+
+  .cta{
+    margin-top:16px; background:var(--gold); color:#111013; text-align:center;
+    padding:13px; border-radius:13px; font-weight:600; font-size:13px;
+  }
+
+  .tabbar{ display:flex; justify-content:space-around; padding:14px 0 2px; border-top:1px solid var(--line); margin-top:12px; }
+  .tab{ display:flex; flex-direction:column; align-items:center; gap:3px; }
+  .tab-ico{ width:14px; height:14px; border-radius:4px; background:rgba(237,231,218,0.10); }
+  .tab-ico.on{ background:var(--gold); }
+  .tab-txt{ font-size:7px; color:var(--muted); font-family:'JetBrains Mono', monospace; }
+
+  /* ---- RESULT SCREEN (celebration) ---- */
+  .result-hero{ margin-top:14px; text-align:center; }
+  .confetti-layer{ position:relative; height:90px; margin-bottom:-30px; }
+  .confetti-dot{ position:absolute; border-radius:2px; }
+  .firework{ position:absolute; width:6px; height:6px; border-radius:50%; }
+  .balloon{ position:absolute; width:16px; height:20px; border-radius:50% 50% 50% 50% / 60% 60% 40% 40%; }
+  .balloon::after{ content:""; position:absolute; bottom:-10px; left:50%; width:1px; height:10px; background:rgba(237,231,218,0.3); }
+
+  .level-badge{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:64px; height:64px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #F3E3BC, var(--gold) 60%);
+    font-family:'Fraunces'; font-weight:700; font-size:22px; color:#111013;
+    box-shadow:0 0 0 6px rgba(226,190,110,0.12);
+  }
+  .result-title{ font-family:'Fraunces'; font-weight:600; font-size:20px; color:var(--gold); margin-top:14px; }
+  .result-sub{ font-family:'Inter'; font-size:12.5px; color:var(--bone); margin-top:6px; }
+
+  .result-card{
+    margin-top:18px; background:var(--bg-2); border:1px solid var(--line);
+    border-radius:14px; padding:14px;
+  }
+  .r-label{ font-family:'JetBrains Mono', monospace; font-size:9px; text-transform:uppercase; color:var(--teal); letter-spacing:0.06em; }
+  .r-answer{ font-family:'Fraunces'; font-weight:600; font-size:15px; margin-top:4px; }
+  .r-explain{ font-size:11.5px; color:var(--muted); margin-top:8px; line-height:1.5; }
+  .r-xp{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--gold); margin-top:10px; }
+
+  .badge-row{ margin-top:14px; display:flex; gap:8px; }
+  .badge-chip{
+    flex:1; background:var(--bg-2); border:1px solid rgba(226,190,110,0.3);
+    border-radius:12px; padding:10px 6px; text-align:center;
+  }
+  .badge-chip .ico{ font-size:18px; }
+  .badge-chip .lbl{ font-family:'JetBrains Mono', monospace; font-size:8px; color:var(--gold); margin-top:4px; }
+
+  /* ---- SETTINGS / SOUND SCREEN ---- */
+  .settings-section{ margin-top:18px; }
+  .settings-title{ font-family:'JetBrains Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin-bottom:10px; }
+  .setting-row{
+    display:flex; align-items:center; justify-content:space-between;
+    background:var(--bg-2); border:1px solid var(--line); border-radius:14px;
+    padding:14px 16px; margin-bottom:10px;
+  }
+  .setting-label{ font-size:13px; font-weight:500; }
+  .setting-desc{ font-size:10px; color:var(--muted); margin-top:3px; }
+  .toggle{
+    width:38px; height:22px; border-radius:20px; background:var(--gold);
+    position:relative; flex:none;
+  }
+  .toggle::after{ content:""; position:absolute; top:2px; right:2px; width:18px; height:18px; border-radius:50%; background:#111013; }
+  .toggle.off{ background:rgba(237,231,218,0.12); }
+  .toggle.off::after{ left:2px; right:auto; background:var(--muted); }
+  .volume-track{ height:3px; background:rgba(237,231,218,0.1); border-radius:4px; margin-top:10px; position:relative; }
+  .volume-fill{ width:65%; height:100%; background:var(--gold); border-radius:4px; position:relative; }
+  .volume-fill::after{ content:""; position:absolute; right:-6px; top:50%; transform:translateY(-50%); width:12px; height:12px; border-radius:50%; background:var(--gold); }
+
+  .badges-grid{ margin-top:14px; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .badge-cell{
+    background:var(--bg-2); border-radius:14px; padding:14px 8px; text-align:center;
+    border:1px solid var(--line);
+  }
+  .badge-cell.unlocked{ border-color:rgba(226,190,110,0.35); }
+  .badge-cell .ico{ font-size:22px; }
+  .badge-cell .name{ font-family:'Fraunces'; font-weight:600; font-size:10.5px; margin-top:6px; }
+  .badge-cell .status{ font-family:'JetBrains Mono', monospace; font-size:8px; margin-top:3px; padding:0; display:block; }
+  .badge-cell.unlocked .status{ color:var(--teal); }
+  .badge-cell.locked{ opacity:0.5; }
+  .badge-cell.locked .status{ color:var(--muted); }
+
+  .footer-note{
+    max-width:1400px; margin:48px auto 0; text-align:center;
+    font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); letter-spacing:0.03em;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-title">MENTAL — Estado atual do app (mockup de referência)</div>
+<div class="page-sub">V2 em andamento · reflete: territórios, conquista real, badges, streak, celebração multissensorial, controle de som — conforme documentado e validado em dispositivo real</div>
+
+<div class="screens">
+
+  <!-- HOME -->
+  <div class="screen-block">
+    <div class="screen-label">Home</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="notch"></div>
+        <div class="status"><span>9:41</span><span>●●●●</span></div>
+        <div class="content">
+          <div class="home-top">
+            <div class="streak-pill">🔥 7 dias</div>
+            <div class="bell">🔔</div>
+          </div>
+          <div class="profile-row">
+            <div class="avatar">R</div>
+            <div>
+              <div class="p-name">Rhoney</div>
+              <div class="p-level">Nível 6 · 1.740 / 3.000 XP</div>
+            </div>
+          </div>
+          <div class="xp-wrap"><div class="xp-fill"></div></div>
+          <div class="xp-caption">Progresso de nível — não afeta desbloqueios</div>
+
+          <div class="territory-card">
+            <div class="t-badge">✓ Conquistado</div>
+            <div class="t-eyebrow">Seu território</div>
+            <div class="t-name">Mente Brilhante</div>
+          </div>
+
+          <div class="cats-grid">
+            <div class="cat"><div class="cat-ico">🔤</div><div class="cat-label">Palavras</div></div>
+            <div class="cat"><div class="cat-ico">🔢</div><div class="cat-label">Números</div></div>
+            <div class="cat"><div class="cat-ico">🧩</div><div class="cat-label">Enigmas</div></div>
+            <div class="cat locked"><div class="cat-ico">👁️</div><div class="cat-label">Visual</div></div>
+          </div>
+
+          <div class="cta">Novo desafio</div>
+
+          <div class="tabbar">
+            <div class="tab"><div class="tab-ico on"></div><div class="tab-txt">Início</div></div>
+            <div class="tab"><div class="tab-ico"></div><div class="tab-txt">Progresso</div></div>
+            <div class="tab"><div class="tab-ico"></div><div class="tab-txt">Ranking</div></div>
+            <div class="tab"><div class="tab-ico"></div><div class="tab-txt">Perfil</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELEBRATION / LEVEL UP -->
+  <div class="screen-block">
+    <div class="screen-label">Resultado — Level Up</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="notch"></div>
+        <div class="status"><span>9:42</span><span>●●●●</span></div>
+        <div class="content">
+          <div class="header"><span class="back">←</span><span class="header-title">Palavras</span></div>
+
+          <div class="confetti-layer" id="confettiLayer"></div>
+
+          <div class="result-hero">
+            <div class="level-badge">6</div>
+            <div class="result-title">Nível 6 alcançado!</div>
+            <div class="result-sub">Você acertou e subiu de nível 🎉</div>
+          </div>
+
+          <div class="result-card">
+            <div class="r-label">Resposta correta</div>
+            <div class="r-answer">Alegre</div>
+            <div class="r-explain">Sinônimo é a palavra de sentido parecido — "alegre" tem o mesmo sentido de "feliz".</div>
+            <div class="r-xp">XP ganho: 30 (base: 10, bônus de nível: +20)</div>
+          </div>
+
+          <div class="cta" style="margin-top:16px;">Próximo desafio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BADGES / CONQUISTAS -->
+  <div class="screen-block">
+    <div class="screen-label">Conquistas</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="notch"></div>
+        <div class="status"><span>9:43</span><span>●●●●</span></div>
+        <div class="content">
+          <div class="header"><span class="back">←</span><span class="header-title">Conquistas</span></div>
+
+          <div class="settings-section">
+            <div class="settings-title">Desbloqueadas</div>
+          </div>
+          <div class="badges-grid">
+            <div class="badge-cell unlocked"><div class="ico">🏆</div><div class="name">Primeira Conquista</div><span class="status">Conquistado</span></div>
+            <div class="badge-cell unlocked"><div class="ico">🎯</div><div class="name">Sem Ajuda</div><span class="status">Conquistado</span></div>
+            <div class="badge-cell locked"><div class="ico">🔒</div><div class="name">Maratonista</div><span class="status">Bloqueado</span></div>
+            <div class="badge-cell locked"><div class="ico">🔒</div><div class="name">Poliglota</div><span class="status">Bloqueado</span></div>
+            <div class="badge-cell locked"><div class="ico">🔒</div><div class="name">Mente 360°</div><span class="status">Bloqueado</span></div>
+            <div class="badge-cell locked"><div class="ico">🔒</div><div class="name">Sequência de Ouro</div><span class="status">Bloqueado</span></div>
+          </div>
+
+          <div class="settings-section" style="margin-top:20px;">
+            <div class="settings-title">Progresso de território</div>
+          </div>
+          <div class="result-card">
+            <div class="r-label">Enigmas</div>
+            <div class="xp-wrap" style="margin-top:8px;"><div class="xp-fill" style="width:40%; background:linear-gradient(90deg, var(--teal), var(--gold));"></div></div>
+            <div class="xp-caption">80 / 200 XP para conquistar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIGURAÇÕES / SOM -->
+  <div class="screen-block">
+    <div class="screen-label">Configurações</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="notch"></div>
+        <div class="status"><span>9:44</span><span>●●●●</span></div>
+        <div class="content">
+          <div class="header"><span class="back">←</span><span class="header-title">Configurações</span></div>
+
+          <div class="settings-section">
+            <div class="settings-title">Som</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Efeitos sonoros</div>
+              <div class="setting-desc">Sons de acerto, erro e conquista</div>
+            </div>
+            <div class="toggle"></div>
+          </div>
+          <div class="setting-row" style="flex-direction:column; align-items:stretch;">
+            <div style="display:flex; justify-content:space-between;">
+              <div class="setting-label">Volume</div>
+              <div class="setting-desc">65%</div>
+            </div>
+            <div class="volume-track"><div class="volume-fill"></div></div>
+          </div>
+
+          <div class="settings-section" style="margin-top:18px;">
+            <div class="settings-title">Notificações</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Lembretes diários</div>
+              <div class="setting-desc">Após 24h e 48h sem abrir o app</div>
+            </div>
+            <div class="toggle"></div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Ranking</div>
+              <div class="setting-desc">Quando alguém avança no seu território</div>
+            </div>
+            <div class="toggle off"></div>
+          </div>
+
+          <div class="settings-section" style="margin-top:18px;">
+            <div class="settings-title">Idioma</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Português (Brasil)</div>
+              <div class="setting-desc">Único idioma disponível no momento</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-note">Copyright @RhoneyInc — MENTAL v2 (mockup de referência gerado a partir do estado documentado do projeto)</div>
+
+<script>
+  // Confete simples gerado via JS para representar a celebração real (fogos + balões + confete)
+  const colors = ['#E2BE6E', '#3FA796', '#EDE7DA', '#F3E3BC'];
+  const layer = document.getElementById('confettiLayer');
+  for (let i = 0; i < 18; i++) {
+    const d = document.createElement('div');
+    d.className = 'confetti-dot';
+    d.style.left = (Math.random() * 90) + '%';
+    d.style.top = (Math.random() * 40) + 'px';
+    d.style.width = (3 + Math.random() * 4) + 'px';
+    d.style.height = d.style.width;
+    d.style.background = colors[Math.floor(Math.random() * colors.length)];
+    d.style.transform = `rotate(${Math.random()*360}deg)`;
+    d.style.opacity = 0.85;
+    layer.appendChild(d);
+  }
+  // fireworks
+  [[20,20],[75,35]].forEach(([x,y]) => {
+    for (let i=0;i<10;i++){
+      const f = document.createElement('div');
+      f.className='firework';
+      const angle = (i/10)*2*Math.PI;
+      const r = 18;
+      f.style.left = (x + Math.cos(angle)*r*0.3) + '%';
+      f.style.top = (y + Math.sin(angle)*r*0.3) + 'px';
+      f.style.background = colors[i % colors.length];
+      layer.appendChild(f);
+    }
+  });
+  // balloons
+  [[10,60,'#E2BE6E'],[50,60,'#3FA796'],[85,60,'#F3E3BC']].forEach(([x,y,c])=>{
+    const b = document.createElement('div');
+    b.className='balloon';
+    b.style.left = x+'%';
+    b.style.top = y+'px';
+    b.style.background = c;
+    layer.appendChild(b);
+  });
+</script>
+
+</body>
+</html>
