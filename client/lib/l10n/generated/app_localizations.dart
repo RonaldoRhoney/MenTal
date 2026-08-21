@@ -178,6 +178,12 @@ abstract class AppLocalizations {
   /// **'Textos'**
   String get territoryTextos;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Visual'**
+  String get territoryVisual;
+
   /// Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3
   ///
   /// In pt, this message translates to:

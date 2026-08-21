@@ -19,6 +19,17 @@ TERRITORIES = [
     # fica no campo "prompt" (sem campo novo no modelo). Mesmo tier
     # avançado de logica/conhecimento/enigmas.
     {"id": "textos", "challenge_type": "textos", "requires_subscription": True, "free_sample_count": 2, "display_order": 6},
+    # V2 item 4 — Desafios visuais (V2_KICKOFF.md §6A). Decisão de
+    # armazenamento (confirmada com Rhoney antes de codar, régua
+    # Free-First): NENHUMA imagem real é usada — as opções são ícones
+    # vetoriais do próprio Flutter (forma+preenchimento+cor), codificados
+    # como string no campo "options" já existente (formato
+    # "forma_preenchimento_cor_índice", decodificado em
+    # client/lib/visual_options.dart). Custo zero com certeza absoluta —
+    # sem Supabase Storage, sem rede, funciona offline, sem migration além
+    # da linha de território. Mesmo tier avançado dos demais territórios
+    # novos da V2.
+    {"id": "visual", "challenge_type": "visual", "requires_subscription": True, "free_sample_count": 2, "display_order": 7},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -50,6 +61,15 @@ BADGES = [
         "criteria_type": "hint_free_correct_answers", "criteria_value": 10, "display_order": 5,
     },
 ]
+
+
+def _visual_option(shape: str, fill: str, color: str, index: int) -> str:
+    # Formato "forma_preenchimento_cor_índice" — o índice existe só para
+    # garantir strings únicas por desafio (cada RadioListTile precisa de
+    # um value distinto), nunca é exibido nem interpretado visualmente.
+    # Espelhado em client/lib/visual_options.dart (parseVisualOption).
+    return f"{shape}_{fill}_{color}_{index}"
+
 
 CHALLENGES = [
     # Palavras
@@ -854,6 +874,223 @@ CHALLENGES = [
         "explanation": "Céu escurecendo rapidamente, mesmo contra a previsão de sol, é um sinal comum de chuva se aproximando — o que colocaria a roupa no varal em risco.",
         "age_reviewed": True,
         "hints": ["Céu escurecendo rápido geralmente indica mudança de tempo.", "Pense no que normalmente acontece com roupa no varal quando começa a chover."],
+    },
+
+    # Visual — mecânica única "ache a figura diferente" (nenhuma imagem
+    # real, só ícones vetoriais forma+preenchimento+cor — decisão de
+    # armazenamento registrada em TERRITORIES acima). 15 itens, 5 por
+    # nível: nível 1 varia a FORMA (diferença óbvia), nível 2 varia a COR
+    # (mesma forma/preenchimento), nível 3 varia o PREENCHIMENTO (mesma
+    # forma/cor, só preenchida vs. contorno — a diferença mais sutil).
+    {
+        "territory_id": "visual", "difficulty_level": 1,
+        "prompt": "Qual figura é diferente das outras?",
+        "options": [
+            _visual_option("circle", "filled", "gold", 1),
+            _visual_option("circle", "filled", "gold", 2),
+            _visual_option("square", "filled", "gold", 3),
+            _visual_option("circle", "filled", "gold", 4),
+        ],
+        "correct_answer": _visual_option("square", "filled", "gold", 3),
+        "explanation": "As outras três são círculos dourados preenchidos — o quadrado dourado preenchido é a forma diferente.",
+        "age_reviewed": True,
+        "hints": ["Compare a forma de cada figura, não a cor.", "Três delas são redondas."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 1,
+        "prompt": "Encontre a figura que não é igual às outras.",
+        "options": [
+            _visual_option("heart", "filled", "teal", 1),
+            _visual_option("star", "filled", "teal", 2),
+            _visual_option("star", "filled", "teal", 3),
+            _visual_option("star", "filled", "teal", 4),
+        ],
+        "correct_answer": _visual_option("heart", "filled", "teal", 1),
+        "explanation": "As outras três são estrelas verde-azuladas preenchidas — o coração é a forma diferente.",
+        "age_reviewed": True,
+        "hints": ["Todas têm a mesma cor — olhe só para o contorno da forma.", "Três delas têm pontas; uma não tem."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 1,
+        "prompt": "Qual das quatro figuras não pertence ao grupo?",
+        "options": [
+            _visual_option("square", "filled", "error", 1),
+            _visual_option("circle", "filled", "error", 2),
+            _visual_option("square", "filled", "error", 3),
+            _visual_option("square", "filled", "error", 4),
+        ],
+        "correct_answer": _visual_option("circle", "filled", "error", 2),
+        "explanation": "As outras três são quadrados terracota preenchidos — o círculo é a forma diferente.",
+        "age_reviewed": True,
+        "hints": ["Três figuras têm cantos retos; uma não tem.", "Procure a única forma redonda."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 1,
+        "prompt": "Qual figura é diferente das outras?",
+        "options": [
+            _visual_option("heart", "filled", "bone", 1),
+            _visual_option("heart", "filled", "bone", 2),
+            _visual_option("heart", "filled", "bone", 3),
+            _visual_option("star", "filled", "bone", 4),
+        ],
+        "correct_answer": _visual_option("star", "filled", "bone", 4),
+        "explanation": "As outras três são corações claros preenchidos — a estrela é a forma diferente.",
+        "age_reviewed": True,
+        "hints": ["Três figuras têm o mesmo formato de coração.", "Procure a única forma com pontas."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 1,
+        "prompt": "Encontre a figura que não é igual às outras.",
+        "options": [
+            _visual_option("heart", "filled", "teal", 1),
+            _visual_option("circle", "filled", "teal", 2),
+            _visual_option("circle", "filled", "teal", 3),
+            _visual_option("circle", "filled", "teal", 4),
+        ],
+        "correct_answer": _visual_option("heart", "filled", "teal", 1),
+        "explanation": "As outras três são círculos verde-azulados preenchidos — o coração é a forma diferente.",
+        "age_reviewed": True,
+        "hints": ["Três figuras são perfeitamente redondas.", "Procure a única forma com uma reentrância no topo."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 2,
+        "prompt": "Qual figura tem uma cor diferente das outras?",
+        "options": [
+            _visual_option("circle", "filled", "teal", 1),
+            _visual_option("circle", "filled", "gold", 2),
+            _visual_option("circle", "filled", "teal", 3),
+            _visual_option("circle", "filled", "teal", 4),
+        ],
+        "correct_answer": _visual_option("circle", "filled", "gold", 2),
+        "explanation": "Todos os círculos têm a mesma forma preenchida — só um deles é dourado, os outros três são verde-azulados.",
+        "age_reviewed": True,
+        "hints": ["A forma é a mesma em todas — a diferença está só na cor.", "Três círculos têm a mesma cor esverdeada."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 2,
+        "prompt": "Qual das quatro figuras não pertence ao grupo?",
+        "options": [
+            _visual_option("square", "filled", "error", 1),
+            _visual_option("square", "filled", "teal", 2),
+            _visual_option("square", "filled", "teal", 3),
+            _visual_option("square", "filled", "teal", 4),
+        ],
+        "correct_answer": _visual_option("square", "filled", "error", 1),
+        "explanation": "Todos os quadrados são preenchidos e do mesmo tamanho — só um deles é terracota, os outros três são verde-azulados.",
+        "age_reviewed": True,
+        "hints": ["A forma é a mesma em todas — a diferença está só na cor.", "Três quadrados têm a mesma cor esverdeada."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 2,
+        "prompt": "Encontre a figura que não é igual às outras.",
+        "options": [
+            _visual_option("star", "filled", "bone", 1),
+            _visual_option("star", "filled", "bone", 2),
+            _visual_option("star", "filled", "gold", 3),
+            _visual_option("star", "filled", "bone", 4),
+        ],
+        "correct_answer": _visual_option("star", "filled", "gold", 3),
+        "explanation": "Todas as estrelas são preenchidas com o mesmo formato — só uma delas é dourada, as outras três são claras.",
+        "age_reviewed": True,
+        "hints": ["A forma é a mesma em todas — a diferença está só na cor.", "Três estrelas têm a mesma cor clara."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 2,
+        "prompt": "Qual figura tem uma cor diferente das outras?",
+        "options": [
+            _visual_option("heart", "filled", "error", 1),
+            _visual_option("heart", "filled", "error", 2),
+            _visual_option("heart", "filled", "error", 3),
+            _visual_option("heart", "filled", "bone", 4),
+        ],
+        "correct_answer": _visual_option("heart", "filled", "bone", 4),
+        "explanation": "Todos os corações são preenchidos com o mesmo formato — só um deles é claro, os outros três são terracota.",
+        "age_reviewed": True,
+        "hints": ["A forma é a mesma em todas — a diferença está só na cor.", "Três corações têm a mesma cor avermelhada."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 2,
+        "prompt": "Qual das quatro figuras não pertence ao grupo?",
+        "options": [
+            _visual_option("circle", "filled", "error", 1),
+            _visual_option("circle", "filled", "bone", 2),
+            _visual_option("circle", "filled", "bone", 3),
+            _visual_option("circle", "filled", "bone", 4),
+        ],
+        "correct_answer": _visual_option("circle", "filled", "error", 1),
+        "explanation": "Todos os círculos são preenchidos do mesmo tamanho — só um deles é terracota, os outros três são claros.",
+        "age_reviewed": True,
+        "hints": ["A forma é a mesma em todas — a diferença está só na cor.", "Três círculos têm a mesma cor clara."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 3,
+        "prompt": "Qual figura é diferente das outras — repare bem no detalhe.",
+        "options": [
+            _visual_option("circle", "filled", "gold", 1),
+            _visual_option("circle", "outline", "gold", 2),
+            _visual_option("circle", "filled", "gold", 3),
+            _visual_option("circle", "filled", "gold", 4),
+        ],
+        "correct_answer": _visual_option("circle", "outline", "gold", 2),
+        "explanation": "Todos os círculos são dourados e do mesmo tamanho — só um deles é apenas o contorno, sem preenchimento.",
+        "age_reviewed": True,
+        "hints": ["A forma e a cor são iguais em todas — olhe se a figura está totalmente pintada.", "Uma delas é só a borda, vazia por dentro."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 3,
+        "prompt": "Encontre a figura que não é igual às outras — repare bem no detalhe.",
+        "options": [
+            _visual_option("square", "outline", "teal", 1),
+            _visual_option("square", "outline", "teal", 2),
+            _visual_option("square", "filled", "teal", 3),
+            _visual_option("square", "outline", "teal", 4),
+        ],
+        "correct_answer": _visual_option("square", "filled", "teal", 3),
+        "explanation": "Todos os quadrados são verde-azulados e do mesmo tamanho — só um deles está totalmente preenchido, os outros três são só contorno.",
+        "age_reviewed": True,
+        "hints": ["A forma e a cor são iguais em todas — olhe se a figura está totalmente pintada.", "Três delas são só a borda, vazias por dentro."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 3,
+        "prompt": "Qual das quatro figuras não pertence ao grupo — repare bem no detalhe.",
+        "options": [
+            _visual_option("star", "filled", "error", 1),
+            _visual_option("star", "filled", "error", 2),
+            _visual_option("star", "outline", "error", 3),
+            _visual_option("star", "filled", "error", 4),
+        ],
+        "correct_answer": _visual_option("star", "outline", "error", 3),
+        "explanation": "Todas as estrelas são terracota e do mesmo tamanho — só uma delas é apenas o contorno, sem preenchimento.",
+        "age_reviewed": True,
+        "hints": ["A forma e a cor são iguais em todas — olhe se a figura está totalmente pintada.", "Uma delas é só a borda, vazia por dentro."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 3,
+        "prompt": "Qual figura é diferente das outras — repare bem no detalhe.",
+        "options": [
+            _visual_option("heart", "outline", "bone", 1),
+            _visual_option("heart", "filled", "bone", 2),
+            _visual_option("heart", "outline", "bone", 3),
+            _visual_option("heart", "outline", "bone", 4),
+        ],
+        "correct_answer": _visual_option("heart", "filled", "bone", 2),
+        "explanation": "Todos os corações são claros e do mesmo tamanho — só um deles está totalmente preenchido, os outros três são só contorno.",
+        "age_reviewed": True,
+        "hints": ["A forma e a cor são iguais em todas — olhe se a figura está totalmente pintada.", "Três delas são só a borda, vazias por dentro."],
+    },
+    {
+        "territory_id": "visual", "difficulty_level": 3,
+        "prompt": "Encontre a figura que não é igual às outras — repare bem no detalhe.",
+        "options": [
+            _visual_option("circle", "outline", "teal", 1),
+            _visual_option("circle", "outline", "teal", 2),
+            _visual_option("circle", "outline", "teal", 3),
+            _visual_option("circle", "filled", "teal", 4),
+        ],
+        "correct_answer": _visual_option("circle", "filled", "teal", 4),
+        "explanation": "Todos os círculos são verde-azulados e do mesmo tamanho — só um deles está totalmente preenchido, os outros três são só contorno.",
+        "age_reviewed": True,
+        "hints": ["A forma e a cor são iguais em todas — olhe se a figura está totalmente pintada.", "Três delas são só a borda, vazias por dentro."],
     },
 ]
 

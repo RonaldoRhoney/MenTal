@@ -4,6 +4,7 @@ import 'package:uuid/uuid.dart';
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
+import '../visual_options.dart';
 
 /// Ciclo completo de um desafio: busca → responde → resultado → próximo.
 /// Uma ação primária por vez (Clareza Imediata, PRODUCT_PRINCIPLES.md §1):
@@ -208,7 +209,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               children: [
                 Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
-                if (options != null)
+                if (widget.territoryId == 'visual' && options != null)
+                  _buildVisualOptions(options)
+                else if (options != null)
                   RadioGroup<String>(
                     groupValue: _selectedOption,
                     onChanged: (value) => setState(() => _selectedOption = value),
@@ -260,6 +263,56 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     );
   }
 
+  /// Território "visual" (V2 item 4): opções são ícones vetoriais, não
+  /// texto — grade de tiles selecionáveis em vez de RadioListTile. Sem
+  /// imagem real (decisão Free-First registrada em backend/app/seed.py e
+  /// client/lib/visual_options.dart): custo zero com certeza absoluta.
+  Widget _buildVisualOptions(List<String> options) {
+    return Wrap(
+      spacing: 16,
+      runSpacing: 16,
+      alignment: WrapAlignment.center,
+      children: options.map((option) {
+        final spec = parseVisualOption(option);
+        final selected = _selectedOption == option;
+        return Semantics(
+          label: spec?.description ?? option,
+          selected: selected,
+          button: true,
+          child: GestureDetector(
+            onTap: () => setState(() => _selectedOption = option),
+            child: Container(
+              width: 96,
+              height: 96,
+              decoration: BoxDecoration(
+                color: AppColors.bg2,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: selected ? AppColors.gold : AppColors.muted,
+                  width: selected ? 3 : 1,
+                ),
+              ),
+              child: Icon(
+                spec?.icon ?? Icons.help_outline,
+                color: spec?.color ?? AppColors.muted,
+                size: 48,
+              ),
+            ),
+          ),
+        );
+      }).toList(),
+    );
+  }
+
+  /// Achado testando no celular real: a tela de resultado exibia o id
+  /// bruto da opção visual (ex.: "square_filled_gold_3") em vez de uma
+  /// descrição legível — vaza detalhe interno e quebra a Clareza Imediata
+  /// (DESIGN_SYSTEM.md §1) para o território "visual" (V2 item 4).
+  String _displayAnswer(String rawAnswer) {
+    if (widget.territoryId != 'visual') return rawAnswer;
+    return parseVisualOption(rawAnswer)?.description ?? rawAnswer;
+  }
+
   Widget _buildResult(Map<String, dynamic> result) {
     final l10n = AppLocalizations.of(context)!;
     final isCorrect = result['is_correct'] as bool;
@@ -280,7 +333,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       ),
                 ),
                 const SizedBox(height: 8),
-                Text(l10n.correctAnswerLabel(result['correct_answer'] as String)),
+                Text(l10n.correctAnswerLabel(_displayAnswer(result['correct_answer'] as String))),
                 const SizedBox(height: 12),
                 Text(result['explanation'] as String),
                 const SizedBox(height: 12),

@@ -56,6 +56,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryTextos => 'Textos';
 
   @override
+  String get territoryVisual => 'Visual';
+
+  @override
   String get dailyLimitReachedMessage =>
       'Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.';
 

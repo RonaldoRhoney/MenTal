@@ -2,7 +2,7 @@ import 'l10n/generated/app_localizations.dart';
 
 /// Ids dos 4 territórios do V1 — compartilhado entre Home, Progress e
 /// Challenge para não duplicar a lista nem o mapeamento id→label.
-const List<String> kTerritoryIds = ['palavras', 'numeros', 'logica', 'conhecimento', 'enigmas', 'textos'];
+const List<String> kTerritoryIds = ['palavras', 'numeros', 'logica', 'conhecimento', 'enigmas', 'textos', 'visual'];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
   switch (territoryId) {
@@ -18,6 +18,8 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryEnigmas;
     case 'textos':
       return l10n.territoryTextos;
+    case 'visual':
+      return l10n.territoryVisual;
     default:
       return territoryId;
   }
