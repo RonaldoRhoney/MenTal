@@ -1,0 +1,152 @@
+# MENTAL — V2: KICKOFF
+
+Status: aprovado por Rhoney (dono). Autoriza o início da V2 após fechamento
+completo e validado da V1.1 (core loop, território, progresso, ranking,
+streak, design system, i18n-ready, monetização desligada por decisão).
+
+## 1. Contexto — por que V2 agora
+
+Rhoney decidiu avançar direto para V2 em vez de pausar para publicação
+imediata do V1.1. Registro de ressalva técnica (não bloqueante): o V1.1
+ainda não foi validado com usuário real fora do próprio Rhoney — construir
+profundidade adicional (V2) sobre uma base ainda não testada em campo é um
+risco assumido conscientemente, não uma recomendação técnica. Seguimos com
+o mesmo rigor de sempre: nada implementado sem documentação prévia, nada
+avançado sem apresentação e aprovação.
+
+## 2. Escopo da V2 (conforme `docs/02_ROADMAP/V2.md` original)
+
+Do pacote de Discovery original, a V2 cobre:
+
+- 🌎 Mundos completos (agrupamento de territórios em unidades maiores)
+- 🏰 Conquista territorial (a mecânica já existe na V1.1 — V2 aprofunda
+  com progressão entre territórios dentro de um "mundo")
+- ⚔️ Disputa territorial (interação entre jogadores por território —
+  **precisa de ADR antes de implementar**, ver Seção 4)
+- 🧠 Dificuldade adaptativa (já existe versão simplificada desde o
+  Vertical Slice 01 — `ADAPTIVE_DIFFICULTY.md` §6 — V2 evolui a fórmula
+  com mais sinal de comportamento real, não reescreve do zero)
+- 👁️ Desafios visuais (novo tipo de desafio, além dos 4 atuais)
+- 📖 Textos (interpretação/inferência, novo tipo de desafio)
+- 🧩 Enigmas/charadas (novo tipo de desafio)
+- 🎓 Conteúdo educacional avançado (aprofundamento de curadoria, não muda
+  a regra já fixada de curadoria manual, sem geração automática por IA)
+- ⚔️ Batalha assíncrona (mencionada no `IMPLEMENTATION_PLAN.md` original
+  como V1.2 — reavaliar se entra nesta V2 ou fica para depois, ver Seção 4)
+- 👥 Amigos (necessário para "ranking de amigos", já registrado como gap
+  aberto desde o Vertical Slice 01)
+- 🏅 Conquistas/badges (sistema de conquista além do território)
+- 📊 Estatísticas (visão mais detalhada de desempenho por categoria)
+- 🔔 Notificações (streak, convite, marco de progresso)
+
+## 3. Regras que continuam valendo, sem exceção
+
+Mesmas regras estruturais de todo o projeto até aqui — a V2 não abre
+exceção para nenhuma delas:
+
+1. O backend continua sendo a única autoridade sobre XP, score, desbloqueio,
+   assinatura, e agora também sobre qualquer resultado de disputa
+   territorial ou batalha — o cliente nunca decide vencedor, nunca calcula
+   pontuação de confronto.
+2. `MONETIZATION_ENABLED` continua `false` por padrão — nenhuma feature de
+   V2 pode assumir monetização ativa nem introduzir cobrança nova sem
+   passar antes por decisão explícita de Rhoney.
+3. `FAMILY_SAFETY.md` se aplica a toda feature nova, principalmente:
+   - Disputa territorial e batalha assíncrona envolvem interação entre
+     jogadores — qualquer troca de mensagem, nome exibido, ou visibilidade
+     de outro jogador deve respeitar a mesma regra de anonimização para
+     menor já aplicada ao ranking.
+   - Notificações não podem usar linguagem de urgência agressiva
+     (`PRODUCT_PRINCIPLES.md` — não-manipulação), mesmo sendo mecanismo de
+     retenção.
+4. `DESIGN_SYSTEM.md` se aplica a toda tela nova desde a criação — sem
+   retrofit, mesma disciplina do V1.1.
+5. Novos tipos de desafio (visual, texto, enigma) seguem a mesma exigência
+   de curadoria de conteúdo real e suficiente antes de considerar a feature
+   fechada — não repetir o padrão de "poucos itens" que já foi risco uma
+   vez.
+6. `ARCHITECTURE_UPDATE_I18N_READY.md` continua valendo — novo conteúdo
+   (mesmo em português) deve nascer com `language_code` corretamente
+   atribuído, sem regressão da estrutura i18n-ready já implementada.
+7. Nenhuma funcionalidade fora do escopo desta lista deve ser implementada
+   sem ADR (ver `MENTAL_KICKOFF.md`, regra 12 original) — se o Claude Code
+   identificar necessidade de algo não previsto, documenta e pergunta, não
+   assume.
+
+## 4. Decisões que precisam de Rhoney antes de começar a implementação
+
+Não iniciar código de nenhum destes três itens sem resposta:
+
+1. **Disputa territorial** — qual é a mecânica real? (ex.: jogador com mais
+   XP naquele território "toma" o território de outro jogador — como isso
+   é comunicado sem soar hostil, dado o princípio de não-humilhação?)
+   Precisa de um `TERRITORY_DISPUTE.md` dedicado antes de codar, com o
+   mesmo rigor de revisão que os documentos anteriores tiveram.
+2. **Batalha assíncrona** — entra nesta V2 ou fica para depois? Se entrar,
+   qual é o formato (mesmo desafio para dois jogadores, comparando tempo/
+   acerto)? Também precisa de documento dedicado antes de codar.
+3. **Amigos** — como se adiciona um amigo no MENTAL? Por nickname/código de
+   convite (reaproveitando a infraestrutura de deep link de convite já
+   existente), ou outro mecanismo? Isso desbloqueia o ranking de amigos que
+   ficou pendente desde o Vertical Slice 01.
+
+## 5. Ordem sugerida de implementação (a validar com Claude — arquitetura)
+
+Antes de escrever código, Claude Code deve propor uma sequência (qual das
+12 features do Escopo, Seção 2, vem primeiro) com justificativa técnica —
+não implementar todas em paralelo. Sugestão inicial a discutir: começar por
+itens que não dependem de decisão pendente (Seção 4) — ex.: badges/
+conquistas, estatísticas, notificações, novos tipos de desafio — e deixar
+disputa territorial, batalha e amigos para depois que os 3 documentos
+dedicados da Seção 4 estiverem aprovados.
+
+## 6. Processo — mesma disciplina de sempre
+
+```
+Este kickoff → documentos dedicados (Seção 4) → Foundation da V2
+→ implementação por feature, uma de cada vez → apresentação e validação
+→ próxima feature
+```
+
+Não implementar a V2 inteira de uma vez. Cada feature listada na Seção 2
+deve ser tratada como um Vertical Slice próprio: implementada, testada
+contra infraestrutura real, apresentada, aprovada — só então a próxima.
+
+## 6A. Ordem de implementação aprovada (2026-08-21)
+
+Ajustada por Rhoney a partir da proposta inicial de Claude Code:
+
+1. 🏅 Badges/Conquistas
+2. 🧩 Enigmas/charadas
+3. 📖 Textos (interpretação)
+4. 👁️ Desafios visuais
+5. 📊 Estatísticas — **movida pra depois dos 3 tipos de desafio novos**
+   (item 4), para a tela nascer completa cobrindo todos os tipos de uma
+   vez, em vez de precisar revisão a cada tipo novo adicionado.
+6. 🧠 Dificuldade adaptativa evoluída
+7. 🎓 Conteúdo educacional avançado — **critério de fechamento definido
+   antecipadamente, não é mais tarefa contínua sem fim**: cada território
+   ativo (os 4 originais + os novos criados pelos itens 2-4) precisa ter
+   **no mínimo 15 desafios, com pelo menos 4 por nível de dificuldade
+   (1-3)** antes deste item ser considerado fechado. Mesmo piso já
+   atingido pelos 4 territórios originais no V1.1 (12-13 cada — ajustar
+   para 15 quando este item for executado).
+8. 🔔 Notificações (avaliar serviço contra Zero-Cost API antes de integrar)
+9. 🌎 Mundos completos
+10. 🏰 Conquista territorial aprofundada (depende do item 9)
+
+Grupo 2, só após os documentos dedicados da Seção 4:
+11. 👥 Amigos
+12. ⚔️ Disputa territorial
+13. ⚔️ Batalha assíncrona (se entrar nesta V2)
+
+## 7. Papel de cada parte
+
+- **Rhoney**: decide as 3 pendências da Seção 4 antes de qualquer código
+  relacionado a elas; aprova a ordem de implementação proposta.
+- **Claude (arquitetura)**: revisa os documentos dedicados de disputa
+  territorial e batalha antes de virarem instrução; garante que nenhuma
+  regra da Seção 3 é violada por feature nova.
+- **Claude Code**: propõe ordem de implementação, implementa uma feature
+  por vez, apresenta e aguarda aprovação antes de avançar para a próxima —
+  não avança sozinho pela lista da Seção 2.
