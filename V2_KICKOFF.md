@@ -132,13 +132,20 @@ Ajustada por Rhoney a partir da proposta inicial de Claude Code:
    atingido pelos 4 territórios originais no V1.1 (12-13 cada — ajustar
    para 15 quando este item for executado).
 8. 🔔 Notificações (avaliar serviço contra Zero-Cost API antes de integrar)
-9. 🌎 Mundos completos
-10. 🏰 Conquista territorial aprofundada (depende do item 9)
+9. 🚶 Contador de passos & movimento — spec completa em
+   `STEP_COUNTER_MOVIMENTO.md` (aprovado 2026-08-21). Ciclo de 24h
+   âncorado no horário do usuário, sensor nativo `TYPE_STEP_COUNTER`,
+   conversão de passos em XP bônus escalonado por faixa (parâmetro no
+   backend, nunca hardcoded no cliente), sem ranking de passos (evita
+   comparação humilhante), copy final a validar com Rhoney antes de
+   produção.
+10. 🌎 Mundos completos
+11. 🏰 Conquista territorial aprofundada (depende do item 10)
 
 Grupo 2, só após os documentos dedicados da Seção 4:
-11. 👥 Amigos
-12. ⚔️ Disputa territorial
-13. ⚔️ Batalha assíncrona (se entrar nesta V2)
+12. 👥 Amigos
+13. ⚔️ Disputa territorial
+14. ⚔️ Batalha assíncrona (se entrar nesta V2)
 
 ## 7. Papel de cada parte
 

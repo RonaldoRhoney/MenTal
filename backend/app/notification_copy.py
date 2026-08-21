@@ -1,13 +1,8 @@
 """
-Copy das notificações (NOTIFICATIONS.md §5-6): "Claude Code propõe
-variações, Rhoney aprova o texto final antes de produção." Os textos
-abaixo são a OPÇÃO 1 de cada categoria — usada como default funcional
-até aprovação explícita, para não bloquear a implementação. Variações
-alternativas propostas no relatório desta etapa; trocar aqui é a única
-mudança necessária se outra opção for escolhida.
-
-Nenhum texto usa linguagem de perda/culpa/urgência artificial (proibido
-por NOTIFICATIONS.md §2 — "você vai perder seu progresso" e afins).
+Copy das notificações (NOTIFICATIONS.md §5-6). Aprovada por Rhoney em
+2026-08-21 — reengajamento 24h/48h e social/ranking (incluindo a
+variante anonimizada para child_safe_mode) validadas contra a regra de
+não usar linguagem de culpa/perda/urgência artificial.
 """
 
 REENGAGEMENT_24H = {
