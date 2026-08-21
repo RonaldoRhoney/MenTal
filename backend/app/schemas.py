@@ -136,3 +136,17 @@ class StatsResponse(BaseModel):
     badges_earned: int
     badges_total: int
     by_territory: list[TerritoryStatsOut]
+
+
+class PushTokenRequest(BaseModel):
+    push_token: str
+
+
+class NotificationPreferencesRequest(BaseModel):
+    reengagement_enabled: bool
+    social_enabled: bool
+
+
+class NotificationPreferencesResponse(BaseModel):
+    reengagement_enabled: bool
+    social_enabled: bool

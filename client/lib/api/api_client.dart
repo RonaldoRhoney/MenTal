@@ -87,6 +87,32 @@ class ApiClient {
     return _decode(resp);
   }
 
+  Future<Map<String, dynamic>> registerPushToken(String pushToken) async {
+    final resp = await http.post(
+      _uri('/notifications/register-token'),
+      headers: _headers,
+      body: jsonEncode({'push_token': pushToken}),
+    );
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> getNotificationPreferences() async {
+    final resp = await http.get(_uri('/notifications/preferences'), headers: _headers);
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> updateNotificationPreferences({
+    required bool reengagementEnabled,
+    required bool socialEnabled,
+  }) async {
+    final resp = await http.put(
+      _uri('/notifications/preferences'),
+      headers: _headers,
+      body: jsonEncode({'reengagement_enabled': reengagementEnabled, 'social_enabled': socialEnabled}),
+    );
+    return _decode(resp);
+  }
+
   Map<String, dynamic> _decode(http.Response resp) {
     final body = jsonDecode(resp.body) as Map<String, dynamic>;
     if (resp.statusCode >= 400) {

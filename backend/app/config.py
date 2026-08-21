@@ -73,3 +73,25 @@ ADAPTIVE_DIFFICULTY_MAX_LEVEL = 5
 # curta o suficiente para completar o fluxo de checkout em andamento,
 # curta demais para servir de autorização permanente.
 PARENTAL_GATE_VALIDITY_MINUTES = 10
+
+# V2 item 8 — Notificações (NOTIFICATIONS.md). Provedor: Firebase Cloud
+# Messaging — verificado contra a régua Zero-Cost antes de integrar
+# (skill zero-cost-api, 2026-08-21): FCM é ZERO_COST com certeza, não só
+# "gratuito com limite" — funciona inteiro no plano Spark (sem cartão
+# cadastrado), sem taxa por mensagem, sem limite de volume, em qualquer
+# plano (Spark ou Blaze). Credencial fica só em variável de ambiente,
+# nunca commitada — conteúdo é o JSON completo da conta de serviço do
+# Firebase (Project Settings → Service Accounts → Generate new private
+# key), não um caminho de arquivo (mais simples de configurar no Render).
+FIREBASE_SERVICE_ACCOUNT_JSON = os.environ.get("FIREBASE_SERVICE_ACCOUNT_JSON")
+
+# Liga o agendador em background (verifica inatividade 24h/48h e
+# ultrapassagem de ranking a cada NOTIFICATION_CHECK_INTERVAL_MINUTES).
+# Default false — nunca roda durante os testes (pytest) nem durante
+# desenvolvimento local casual, só quando explicitamente ligado (mesmo
+# padrão de MONETIZATION_ENABLED: ponto único de verificação, nunca
+# espalhado). O processo do backend já fica acordado 24/7 via UptimeRobot
+# (ARCHITECTURE.md) — nenhum serviço novo de agendamento externo precisa
+# existir só para isso.
+NOTIFICATION_SCHEDULER_ENABLED = os.environ.get("NOTIFICATION_SCHEDULER_ENABLED", "false").lower() == "true"
+NOTIFICATION_CHECK_INTERVAL_MINUTES = 30

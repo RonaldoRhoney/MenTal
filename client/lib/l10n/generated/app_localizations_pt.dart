@@ -277,4 +277,19 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get statsNoAttemptsYet =>
       'Ainda sem desafios respondidos neste território.';
+
+  @override
+  String get notificationsSectionTitle => 'Notificações';
+
+  @override
+  String get notifReengagementLabel => 'Lembretes diários';
+
+  @override
+  String get notifReengagementDescription => 'Após 24h e 48h sem abrir o app';
+
+  @override
+  String get notifSocialLabel => 'Ranking';
+
+  @override
+  String get notifSocialDescription => 'Quando alguém avança no seu ranking';
 }

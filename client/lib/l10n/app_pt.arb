@@ -312,5 +312,20 @@
   },
 
   "statsNoAttemptsYet": "Ainda sem desafios respondidos neste território.",
-  "@statsNoAttemptsYet": {"description": "Empty state for a territory with zero attempts"}
+  "@statsNoAttemptsYet": {"description": "Empty state for a territory with zero attempts"},
+
+  "notificationsSectionTitle": "Notificações",
+  "@notificationsSectionTitle": {"description": "Notifications settings section title"},
+
+  "notifReengagementLabel": "Lembretes diários",
+  "@notifReengagementLabel": {"description": "Reengagement notification toggle label"},
+
+  "notifReengagementDescription": "Após 24h e 48h sem abrir o app",
+  "@notifReengagementDescription": {"description": "Reengagement notification toggle description"},
+
+  "notifSocialLabel": "Ranking",
+  "@notifSocialLabel": {"description": "Social/ranking notification toggle label"},
+
+  "notifSocialDescription": "Quando alguém avança no seu ranking",
+  "@notifSocialDescription": {"description": "Social/ranking notification toggle description"}
 }

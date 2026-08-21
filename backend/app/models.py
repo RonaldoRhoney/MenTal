@@ -61,6 +61,30 @@ class Profile(Base):
     parental_gate_passed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
+    # V2 item 8 — Notificações (NOTIFICATIONS.md). Preferência é por
+    # categoria (§4: "toggle para desativar cada categoria separadamente")
+    # e vive no backend, não só localmente no aparelho como o toggle de
+    # som (MICROINTERACTIONS.md) — quem decide SE notifica é o job
+    # agendado no backend (services.run_notification_checks), então ele
+    # precisa conhecer a preferência, não só o client.
+    push_token: Mapped[str | None] = mapped_column(String, nullable=True)
+    notif_reengagement_enabled: Mapped[bool] = mapped_column(Boolean, default=True)
+    notif_social_enabled: Mapped[bool] = mapped_column(Boolean, default=True)
+    # Atualizado a cada GET /progress (Home carrega isso sempre que abre)
+    # — é o sinal de "o jogador de fato usou o app", não só "fez uma
+    # requisição qualquer".
+    last_seen_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    # Evita notificar de novo dentro da MESMA janela de inatividade
+    # (NOTIFICATIONS.md §2: "no máximo uma notificação de reengajamento
+    # por janela de inatividade") — guarda em qual das duas janelas (24h
+    # ou 48h) a última notificação de reengajamento já foi enviada.
+    last_reengagement_notified_window: Mapped[str | None] = mapped_column(String, nullable=True)  # "24h" | "48h"
+    # Última posição conhecida no ranking semanal — permite detectar a
+    # TRANSIÇÃO exata de "ultrapassado agora" (mesmo princípio já usado
+    # em level_up/territory_just_conquered: nunca notificar de novo pela
+    # mesma posição já notificada).
+    last_known_weekly_rank: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
 
 class Territory(Base):
     __tablename__ = "territories"

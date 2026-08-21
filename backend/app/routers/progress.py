@@ -12,6 +12,11 @@ router = APIRouter()
 @router.get("/progress", response_model=schemas.ProgressResponse)
 def get_progress(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
     profile = services.get_or_create_profile(db, user_id)
+    # V2 item 8 — Notificações: GET /progress é chamado toda vez que a
+    # Home carrega, então é o sinal mais confiável de "o jogador de fato
+    # abriu o app agora" — usado pelo job de reengajamento pra saber há
+    # quanto tempo o jogador está inativo.
+    services.update_last_seen(db, user_id)
     streak = services.get_or_create_streak(db, user_id)
     territories = db.execute(select(models.Territory).order_by(models.Territory.display_order)).scalars().all()
 

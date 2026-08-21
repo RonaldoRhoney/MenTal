@@ -555,6 +555,36 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Ainda sem desafios respondidos neste território.'**
   String get statsNoAttemptsYet;
+
+  /// Notifications settings section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Notificações'**
+  String get notificationsSectionTitle;
+
+  /// Reengagement notification toggle label
+  ///
+  /// In pt, this message translates to:
+  /// **'Lembretes diários'**
+  String get notifReengagementLabel;
+
+  /// Reengagement notification toggle description
+  ///
+  /// In pt, this message translates to:
+  /// **'Após 24h e 48h sem abrir o app'**
+  String get notifReengagementDescription;
+
+  /// Social/ranking notification toggle label
+  ///
+  /// In pt, this message translates to:
+  /// **'Ranking'**
+  String get notifSocialLabel;
+
+  /// Social/ranking notification toggle description
+  ///
+  /// In pt, this message translates to:
+  /// **'Quando alguém avança no seu ranking'**
+  String get notifSocialDescription;
 }
 
 class _AppLocalizationsDelegate

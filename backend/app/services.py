@@ -378,3 +378,25 @@ def compute_stats(db: Session, user_id: str) -> dict:
         "badges_total": badges_total,
         "by_territory": by_territory,
     }
+
+
+# V2 item 8 — Notificações (NOTIFICATIONS.md).
+def update_last_seen(db: Session, user_id: str) -> None:
+    profile = get_or_create_profile(db, user_id)
+    profile.last_seen_at = datetime.utcnow()
+    db.commit()
+
+
+def set_push_token(db: Session, user_id: str, push_token: str) -> None:
+    profile = get_or_create_profile(db, user_id)
+    profile.push_token = push_token
+    db.commit()
+
+
+def set_notification_preferences(db: Session, user_id: str, reengagement_enabled: bool, social_enabled: bool) -> models.Profile:
+    profile = get_or_create_profile(db, user_id)
+    profile.notif_reengagement_enabled = reengagement_enabled
+    profile.notif_social_enabled = social_enabled
+    db.commit()
+    db.refresh(profile)
+    return profile
