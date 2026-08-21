@@ -89,3 +89,15 @@ class RankingResponse(BaseModel):
     window: str
     entries: list[RankingEntry]
     me: RankingEntry | None
+
+
+class BadgeOut(BaseModel):
+    code: str
+    name: str
+    description: str
+    earned: bool
+    earned_at: str | None
+
+
+class BadgesResponse(BaseModel):
+    badges: list[BadgeOut]

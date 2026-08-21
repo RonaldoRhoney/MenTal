@@ -1,5 +1,6 @@
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from . import config, models
@@ -102,8 +103,6 @@ def is_territory_unlocked(db: Session, user_id: str, territory: models.Territory
     # MONETIZATION.md §2: "com amostra free"). Conta tentativas já
     # respondidas (is_correct preenchido) em desafios daquele território —
     # pedir uma dica ou abrir o desafio sem responder não consome amostra.
-    from sqlalchemy import select, func
-
     answered_count = db.execute(
         select(func.count(models.Attempt.attempt_id))
         .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
@@ -123,10 +122,84 @@ def apply_xp_to_territory(db: Session, user_id: str, territory_id: str, xp: int)
 
     progress.xp_in_territory += xp
     if progress.conquered_at is None and progress.xp_in_territory >= config.CONQUEST_XP_THRESHOLD:
-        from datetime import datetime
-
         progress.conquered_at = datetime.utcnow()
 
     db.commit()
     db.refresh(progress)
     return progress
+
+
+# V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Cada avaliador lê
+# dado que já existe (Attempt, UserTerritoryProgress, Streak) — nenhuma
+# contagem nova é mantida só para badge, evitando duas fontes de verdade
+# para o mesmo número.
+def _count_conquered_territories(db: Session, user_id: str) -> int:
+    return db.execute(
+        select(func.count(models.UserTerritoryProgress.territory_id))
+        .where(models.UserTerritoryProgress.user_id == user_id)
+        .where(models.UserTerritoryProgress.conquered_at.is_not(None))
+    ).scalar_one()
+
+
+def _all_territories_conquered(db: Session, user_id: str) -> bool:
+    total_territories = db.execute(select(func.count(models.Territory.id))).scalar_one()
+    if total_territories == 0:
+        return False
+    return _count_conquered_territories(db, user_id) >= total_territories
+
+
+def _count_total_correct_answers(db: Session, user_id: str) -> int:
+    return db.execute(
+        select(func.count(models.Attempt.attempt_id))
+        .where(models.Attempt.user_id == user_id)
+        .where(models.Attempt.is_correct.is_(True))
+    ).scalar_one()
+
+
+def _count_hint_free_correct_answers(db: Session, user_id: str) -> int:
+    return db.execute(
+        select(func.count(models.Attempt.attempt_id))
+        .where(models.Attempt.user_id == user_id)
+        .where(models.Attempt.is_correct.is_(True))
+        .where(models.Attempt.hints_used == 0)
+    ).scalar_one()
+
+
+_BADGE_EVALUATORS = {
+    "territory_conquered_count": lambda db, user_id, value: _count_conquered_territories(db, user_id) >= value,
+    "all_territories_conquered": lambda db, user_id, value: _all_territories_conquered(db, user_id),
+    "streak_days": lambda db, user_id, value: (
+        (streak := db.get(models.Streak, user_id)) is not None and streak.current_streak >= value
+    ),
+    "total_correct_answers": lambda db, user_id, value: _count_total_correct_answers(db, user_id) >= value,
+    "hint_free_correct_answers": lambda db, user_id, value: _count_hint_free_correct_answers(db, user_id) >= value,
+}
+
+
+def check_and_award_badges(db: Session, user_id: str) -> list[models.Badge]:
+    """
+    Chamado após eventos que podem destravar um badge (hoje: toda resposta
+    de desafio, correta ou não — os avaliadores conferem a condição real).
+    Idempotente: nunca concede o mesmo badge duas vezes. Retorna a lista de
+    badges recém-concedidos nesta chamada (para o client poder celebrar o
+    momento, se quiser — não usado ainda no V2 item 1, mas já disponível).
+    """
+    already_earned_ids = set(
+        db.execute(select(models.UserBadge.badge_id).where(models.UserBadge.user_id == user_id)).scalars().all()
+    )
+    all_badges = db.execute(select(models.Badge)).scalars().all()
+
+    newly_awarded = []
+    for badge in all_badges:
+        if badge.id in already_earned_ids:
+            continue
+        evaluator = _BADGE_EVALUATORS.get(badge.criteria_type)
+        if evaluator is None:
+            continue
+        if evaluator(db, user_id, badge.criteria_value):
+            db.add(models.UserBadge(user_id=user_id, badge_id=badge.id))
+            newly_awarded.append(badge)
+
+    if newly_awarded:
+        db.commit()
+    return newly_awarded

@@ -172,5 +172,17 @@
   "@rankingMePrefix": {"description": "Marks the current user's row in the ranking list"},
 
   "rankingEmptyMessage": "Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!",
-  "@rankingEmptyMessage": {"description": "Empty ranking state"}
+  "@rankingEmptyMessage": {"description": "Empty ranking state"},
+
+  "badgesScreenTitle": "Conquistas",
+  "@badgesScreenTitle": {"description": "Badges screen app bar title"},
+
+  "viewBadgesButton": "Ver conquistas",
+  "@viewBadgesButton": {"description": "Button on Progress screen linking to Badges screen"},
+
+  "badgeEarnedLabel": "Conquistado",
+  "@badgeEarnedLabel": {"description": "Badge earned status"},
+
+  "badgeLockedLabel": "Bloqueado",
+  "@badgeLockedLabel": {"description": "Badge not-yet-earned status"}
 }

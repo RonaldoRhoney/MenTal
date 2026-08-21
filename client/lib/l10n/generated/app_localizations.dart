@@ -345,6 +345,30 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!'**
   String get rankingEmptyMessage;
+
+  /// Badges screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Conquistas'**
+  String get badgesScreenTitle;
+
+  /// Button on Progress screen linking to Badges screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Ver conquistas'**
+  String get viewBadgesButton;
+
+  /// Badge earned status
+  ///
+  /// In pt, this message translates to:
+  /// **'Conquistado'**
+  String get badgeEarnedLabel;
+
+  /// Badge not-yet-earned status
+  ///
+  /// In pt, this message translates to:
+  /// **'Bloqueado'**
+  String get badgeLockedLabel;
 }
 
 class _AppLocalizationsDelegate

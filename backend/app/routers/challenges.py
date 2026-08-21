@@ -250,6 +250,11 @@ def submit_answer(
 
     services.register_daily_usage(db, user_id, date.today())
     streak = services.register_play_for_streak(db, user_id, date.today())
+    # V2 item 1 — Badges/Conquistas: avalia depois que XP/território/streak
+    # já estão commitados, para os avaliadores lerem o estado final desta
+    # tentativa. Resultado (badges recém-concedidos) não é retornado ainda
+    # nesta resposta — client consulta via GET /badges.
+    services.check_and_award_badges(db, user_id)
 
     return schemas.AnswerResponse(
         is_correct=is_correct,

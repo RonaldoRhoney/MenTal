@@ -5,6 +5,7 @@ import '../l10n/generated/app_localizations.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/xp_bar.dart';
+import 'badges_screen.dart';
 
 /// Tela de Progresso — V1.1. Nível/XP total (reaproveita XpBar), lista de
 /// territórios com conquista real via XP (não um limiar silencioso: o
@@ -72,6 +73,15 @@ class _ProgressScreenState extends State<ProgressScreen> {
                   const SizedBox(height: 32),
                   ...(progress['territories'] as List).map(
                     (t) => _TerritoryProgressTile(territory: t as Map<String, dynamic>),
+                  ),
+                  const SizedBox(height: 16),
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => BadgesScreen(client: widget.client)),
+                      );
+                    },
+                    child: Text(l10n.viewBadgesButton),
                   ),
                 ],
               ),

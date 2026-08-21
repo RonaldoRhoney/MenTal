@@ -169,3 +169,33 @@ class InviteConversion(Base):
     converted_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
     __table_args__ = (UniqueConstraint("invited_user_id", name="uq_invite_conversion_user"),)
+
+
+class Badge(Base):
+    """
+    Catálogo de badges/conquistas — V2 item 1 (V2_KICKOFF.md §6A).
+    `criteria_type` é avaliado por services.check_and_award_badges contra
+    dado que já existe (Attempt, UserTerritoryProgress, Streak) — nenhuma
+    contagem nova precisa ser mantida só para badges. `criteria_value` é
+    o limiar numérico; para critérios sem limiar (ex.: "conquistar todos
+    os territórios", que deve reagir a quantos territórios existirem no
+    momento, não a um número fixo hoje) o valor fica 0 e é ignorado.
+    """
+
+    __tablename__ = "badges"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    code: Mapped[str] = mapped_column(String, unique=True)
+    name: Mapped[str] = mapped_column(String)
+    description: Mapped[str] = mapped_column(Text)
+    criteria_type: Mapped[str] = mapped_column(String)
+    criteria_value: Mapped[int] = mapped_column(Integer, default=0)
+    display_order: Mapped[int] = mapped_column(Integer, default=0)
+
+
+class UserBadge(Base):
+    __tablename__ = "user_badges"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    badge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("badges.id"), primary_key=True)
+    earned_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)

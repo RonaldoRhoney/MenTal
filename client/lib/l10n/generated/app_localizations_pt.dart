@@ -156,4 +156,16 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get rankingEmptyMessage =>
       'Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!';
+
+  @override
+  String get badgesScreenTitle => 'Conquistas';
+
+  @override
+  String get viewBadgesButton => 'Ver conquistas';
+
+  @override
+  String get badgeEarnedLabel => 'Conquistado';
+
+  @override
+  String get badgeLockedLabel => 'Bloqueado';
 }

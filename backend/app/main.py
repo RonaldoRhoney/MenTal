@@ -5,7 +5,7 @@ from fastapi.responses import JSONResponse
 from . import config, models
 from .db import Base, engine, SessionLocal
 from .seed import seed_if_empty
-from .routers import age_gate, challenges, progress, subscription, ranking, social
+from .routers import age_gate, badges, challenges, progress, subscription, ranking, social
 
 # create_all() e o seed de desenvolvimento só rodam contra o SQLite local.
 # Correção feita testando contra o Postgres real do MENTAL (2026-08-19,
@@ -37,6 +37,7 @@ app.include_router(progress.router, tags=["progress"])
 app.include_router(subscription.router, tags=["subscription"])
 app.include_router(ranking.router, tags=["ranking"])
 app.include_router(social.router, tags=["social"])
+app.include_router(badges.router, tags=["badges"])
 
 
 @app.get("/health")

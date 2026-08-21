@@ -9,6 +9,36 @@ TERRITORIES = [
     {"id": "conhecimento", "challenge_type": "conhecimento", "requires_subscription": True, "free_sample_count": 2, "display_order": 4},
 ]
 
+# V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
+# mão, mesmo conteúdo espelhado em migrations/004_badges.sql.
+BADGES = [
+    {
+        "code": "first_conquest", "name": "Primeira Conquista",
+        "description": "Conquiste seu primeiro território.",
+        "criteria_type": "territory_conquered_count", "criteria_value": 1, "display_order": 1,
+    },
+    {
+        "code": "collector", "name": "Colecionador",
+        "description": "Conquiste todos os territórios disponíveis.",
+        "criteria_type": "all_territories_conquered", "criteria_value": 0, "display_order": 2,
+    },
+    {
+        "code": "iron_streak", "name": "Sequência de Ferro",
+        "description": "Mantenha uma sequência de 7 dias seguidos.",
+        "criteria_type": "streak_days", "criteria_value": 7, "display_order": 3,
+    },
+    {
+        "code": "sharp_mind", "name": "Mente Afiada",
+        "description": "Responda corretamente 50 desafios no total.",
+        "criteria_type": "total_correct_answers", "criteria_value": 50, "display_order": 4,
+    },
+    {
+        "code": "no_help_needed", "name": "Sem Ajuda",
+        "description": "Responda corretamente 10 desafios sem usar nenhuma dica.",
+        "criteria_type": "hint_free_correct_answers", "criteria_value": 10, "display_order": 5,
+    },
+]
+
 CHALLENGES = [
     # Palavras
     {
@@ -475,3 +505,7 @@ def seed_if_empty(db: Session) -> None:
         for level, content in enumerate(hints, start=1):
             db.add(models.ChallengeHint(challenge_id=challenge.id, hint_level=level, content=content))
         db.commit()
+
+    for b in BADGES:
+        db.add(models.Badge(**b))
+    db.commit()
