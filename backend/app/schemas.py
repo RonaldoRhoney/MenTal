@@ -111,3 +111,28 @@ class RankingResponse(BaseModel):
     window: str
     entries: list[RankingEntry]
     me: RankingEntry | None
+
+
+class TerritoryStatsOut(BaseModel):
+    territory_id: str
+    total_attempts: int
+    total_correct: int
+    accuracy: float
+    current_difficulty_level: int
+    xp_in_territory: int
+    conquered: bool
+
+
+class StatsResponse(BaseModel):
+    xp_total: int
+    level: int
+    total_attempts: int
+    total_correct: int
+    accuracy: float
+    total_hints_used: int
+    hint_free_correct: int
+    current_streak: int
+    longest_streak: int
+    badges_earned: int
+    badges_total: int
+    by_territory: list[TerritoryStatsOut]

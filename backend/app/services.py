@@ -7,6 +7,60 @@ from . import config, models
 from .nickname import generate_anonymous_nickname
 
 
+def pick_difficulty_for(db: Session, user_id: str, territory_id: str) -> int:
+    """
+    Dificuldade adaptativa (ADAPTIVE_DIFFICULTY.md): olha a taxa de acerto
+    da janela recente de desafios respondidos pelo jogador naquele
+    território. Sobe 1 nível após acerto >= limiar de subida, desce 1
+    nível após acerto < limiar de descida, mantém caso contrário. Janela e
+    limiares são decisão do Vertical Slice 01 (ADAPTIVE_DIFFICULTY.md §6
+    deixava a fórmula em aberto) — centralizados em config.py para ajuste
+    num único lugar quando houver dado real de uso.
+
+    Movida de routers/challenges.py para cá no item 5 da V2
+    (Estatísticas) — o endpoint de estatísticas precisa do mesmo cálculo
+    ("nível de dificuldade atual por território") e duplicá-lo ali criaria
+    duas fontes de verdade para a mesma regra.
+    """
+    recent = (
+        db.execute(
+            select(models.Attempt)
+            .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
+            .where(models.Attempt.user_id == user_id)
+            .where(models.Challenge.territory_id == territory_id)
+            .where(models.Attempt.is_correct.is_not(None))
+            # Desempate por attempt_id além de created_at: achado real
+            # rodando o item 5 (Estatísticas) — respostas seguidas rápido
+            # o bastante (sem round-trip de rede real, ex.: TestClient em
+            # processo) podem colidir no timestamp, e sem uma chave de
+            # desempate estável o ORDER BY dava resultado diferente a cada
+            # chamada para o EXATO MESMO estado do banco — /stats e
+            # /challenges/next calculavam dificuldades diferentes a partir
+            # do mesmo histórico. attempt_id não reflete ordem real de
+            # criação (é UUID aleatório), mas garante que a mesma consulta
+            # sempre devolve o mesmo resultado, o que é o que importa aqui.
+            .order_by(models.Attempt.created_at.desc(), models.Attempt.attempt_id.desc())
+            .limit(config.ADAPTIVE_DIFFICULTY_WINDOW)
+        )
+        .scalars()
+        .all()
+    )
+
+    current_level = config.ADAPTIVE_DIFFICULTY_MIN_LEVEL
+    if recent:
+        last_challenge = db.get(models.Challenge, recent[0].challenge_id)
+        current_level = last_challenge.difficulty_level if last_challenge else current_level
+
+    if len(recent) >= config.ADAPTIVE_DIFFICULTY_MIN_SAMPLE:
+        accuracy = sum(1 for a in recent if a.is_correct) / len(recent)
+        if accuracy >= config.ADAPTIVE_DIFFICULTY_UP_THRESHOLD:
+            current_level += 1
+        elif accuracy < config.ADAPTIVE_DIFFICULTY_DOWN_THRESHOLD:
+            current_level -= 1
+
+    return max(config.ADAPTIVE_DIFFICULTY_MIN_LEVEL, min(config.ADAPTIVE_DIFFICULTY_MAX_LEVEL, current_level))
+
+
 def get_or_create_profile(db: Session, user_id: str) -> models.Profile:
     profile = db.get(models.Profile, user_id)
     if profile is None:
@@ -203,3 +257,101 @@ def check_and_award_badges(db: Session, user_id: str) -> list[models.Badge]:
     if newly_awarded:
         db.commit()
     return newly_awarded
+
+
+# V2 item 5 — Estatísticas (V2_KICKOFF.md §6A). Todo número aqui vem de
+# Attempt/UserTerritoryProgress/Streak/Badge já existentes — nenhuma
+# contagem nova é persistida só para esta tela, mesmo princípio já usado
+# em badges (evita duas fontes de verdade para o mesmo dado).
+def _longest_streak_ever(db: Session, user_id: str) -> int:
+    """
+    "Sequência mais longa" não tem coluna própria — é derivada dos dias
+    distintos em que o jogador tem pelo menos uma tentativa registrada
+    (mesmo critério de "jogou hoje" usado em register_play_for_streak,
+    que não exige acerto). Reconstrói a maior sequência de dias
+    consecutivos já vivida, não só a atual (Streak.current_streak já
+    cobre a atual).
+    """
+    timestamps = db.execute(
+        select(models.Attempt.created_at).where(models.Attempt.user_id == user_id)
+    ).scalars().all()
+    if not timestamps:
+        return 0
+
+    days = sorted({ts.date() for ts in timestamps})
+    longest = 1
+    current = 1
+    for i in range(1, len(days)):
+        gap = (days[i] - days[i - 1]).days
+        if gap == 1:
+            current += 1
+            longest = max(longest, current)
+        elif gap > 1:
+            current = 1
+    return longest
+
+
+def compute_stats(db: Session, user_id: str) -> dict:
+    profile = get_or_create_profile(db, user_id)
+    streak = get_or_create_streak(db, user_id)
+
+    total_attempts = db.execute(
+        select(func.count(models.Attempt.attempt_id))
+        .where(models.Attempt.user_id == user_id)
+        .where(models.Attempt.is_correct.is_not(None))
+    ).scalar_one()
+    total_correct = _count_total_correct_answers(db, user_id)
+    total_hints_used = db.execute(
+        select(func.coalesce(func.sum(models.Attempt.hints_used), 0)).where(models.Attempt.user_id == user_id)
+    ).scalar_one()
+    hint_free_correct = _count_hint_free_correct_answers(db, user_id)
+
+    badges_earned = db.execute(
+        select(func.count(models.UserBadge.badge_id)).where(models.UserBadge.user_id == user_id)
+    ).scalar_one()
+    badges_total = db.execute(select(func.count(models.Badge.id))).scalar_one()
+
+    territories = db.execute(select(models.Territory).order_by(models.Territory.display_order)).scalars().all()
+    by_territory = []
+    for territory in territories:
+        territory_attempts = (
+            db.execute(
+                select(models.Attempt)
+                .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
+                .where(models.Attempt.user_id == user_id)
+                .where(models.Challenge.territory_id == territory.id)
+                .where(models.Attempt.is_correct.is_not(None))
+            )
+            .scalars()
+            .all()
+        )
+        t_total = len(territory_attempts)
+        t_correct = sum(1 for a in territory_attempts if a.is_correct)
+        progress = db.get(models.UserTerritoryProgress, (user_id, territory.id))
+
+        by_territory.append(
+            {
+                "territory_id": territory.id,
+                "total_attempts": t_total,
+                "total_correct": t_correct,
+                "accuracy": (t_correct / t_total) if t_total else 0.0,
+                "current_difficulty_level": pick_difficulty_for(db, user_id, territory.id),
+                "xp_in_territory": progress.xp_in_territory if progress else 0,
+                "conquered": bool(progress and progress.conquered_at),
+            }
+        )
+
+    return {
+        "xp_total": profile.xp_total,
+        "level": profile.level,
+        "total_attempts": total_attempts,
+        "total_correct": total_correct,
+        "accuracy": (total_correct / total_attempts) if total_attempts else 0.0,
+        "total_hints_used": int(total_hints_used),
+        "hint_free_correct": hint_free_correct,
+        "current_streak": streak.current_streak,
+        "longest_streak": _longest_streak_ever(db, user_id),
+        "badges_earned": badges_earned,
+        "badges_total": badges_total,
+        "by_territory": by_territory,
+    }

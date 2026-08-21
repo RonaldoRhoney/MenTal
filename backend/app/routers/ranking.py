@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import datetime, timedelta
 
 from fastapi import APIRouter, Depends
 from sqlalchemy import select, func
@@ -24,7 +24,14 @@ def get_ranking(
     # fica fora de escopo do Vertical Slice 01 (não há modelo de conexão de
     # amigo definido ainda) — tratado igual a "global" por ora.
     if window == "weekly":
-        since = date.today() - timedelta(days=7)
+        # datetime.utcnow(), não date.today(): Attempt.created_at é gravado
+        # em UTC (datetime.utcnow() em toda a base) — usar a data LOCAL do
+        # servidor aqui criava uma janela "semana" que não batia com o
+        # fuso em que os timestamps foram gravados, um descompasso real
+        # achado implementando Estatísticas (item 5), onde o mesmo
+        # problema em register_play_for_streak produzia "sequência mais
+        # longa" menor que "sequência atual" — logicamente impossível.
+        since = datetime.utcnow() - timedelta(days=7)
         rows = (
             db.execute(
                 select(models.Attempt.user_id, func.sum(models.Attempt.xp_awarded).label("xp"))

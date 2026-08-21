@@ -19,6 +19,7 @@ dependencies:
   audioplayers: ^6.8.1
   confetti: ^0.8.0
   sound_mode_advanced: ^4.0.0
+  fl_chart: ^1.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

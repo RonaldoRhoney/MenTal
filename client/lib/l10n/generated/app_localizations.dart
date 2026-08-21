@@ -447,6 +447,114 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Sequência de {days} dias mantida!'**
   String streakExtendedCelebrationMessage(int days);
+
+  /// Home app bar icon tooltip, opens Stats screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Estatísticas'**
+  String get statsTooltip;
+
+  /// Stats screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Estatísticas'**
+  String get statsScreenTitle;
+
+  /// Button on Progress screen linking to Stats screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Ver estatísticas'**
+  String get viewStatsButton;
+
+  /// Stats screen overview section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Visão geral'**
+  String get statsOverviewSectionTitle;
+
+  /// Total attempts stat label
+  ///
+  /// In pt, this message translates to:
+  /// **'Desafios respondidos'**
+  String get statsTotalAttemptsLabel;
+
+  /// Overall accuracy stat label
+  ///
+  /// In pt, this message translates to:
+  /// **'Acerto geral'**
+  String get statsAccuracyLabel;
+
+  /// Hint-free correct answers stat label
+  ///
+  /// In pt, this message translates to:
+  /// **'Acertos sem dica'**
+  String get statsHintFreeCorrectLabel;
+
+  /// Total hints used stat label
+  ///
+  /// In pt, this message translates to:
+  /// **'Dicas usadas'**
+  String get statsHintsUsedLabel;
+
+  /// Answer breakdown donut legend: correct answers that used a hint
+  ///
+  /// In pt, this message translates to:
+  /// **'Acertos com dica'**
+  String get statsCorrectWithHintLegend;
+
+  /// Answer breakdown donut legend: incorrect answers
+  ///
+  /// In pt, this message translates to:
+  /// **'Erros'**
+  String get statsIncorrectLegend;
+
+  /// Current / longest streak stat label
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência atual / mais longa'**
+  String get statsStreakLabel;
+
+  /// Current / longest streak value
+  ///
+  /// In pt, this message translates to:
+  /// **'{current} / {longest} dias'**
+  String statsStreakValue(int current, int longest);
+
+  /// Badges earned stat label
+  ///
+  /// In pt, this message translates to:
+  /// **'Conquistas desbloqueadas'**
+  String get statsBadgesLabel;
+
+  /// Badges earned / total value
+  ///
+  /// In pt, this message translates to:
+  /// **'{earned} / {total}'**
+  String statsBadgesValue(int earned, int total);
+
+  /// Stats screen per-territory section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Desempenho por território'**
+  String get statsByTerritorySectionTitle;
+
+  /// Per-territory attempts and accuracy caption
+  ///
+  /// In pt, this message translates to:
+  /// **'{attempts} respondidos · {accuracy} de acerto'**
+  String statsTerritoryAttemptsAndAccuracy(int attempts, String accuracy);
+
+  /// Per-territory current adaptive difficulty level
+  ///
+  /// In pt, this message translates to:
+  /// **'Nível de dificuldade atual: {level}'**
+  String statsTerritoryDifficultyLabel(int level);
+
+  /// Empty state for a territory with zero attempts
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda sem desafios respondidos neste território.'**
+  String get statsNoAttemptsYet;
 }
 
 class _AppLocalizationsDelegate

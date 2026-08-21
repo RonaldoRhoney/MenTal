@@ -6,6 +6,7 @@ import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/xp_bar.dart';
 import 'badges_screen.dart';
+import 'stats_screen.dart';
 
 /// Tela de Progresso — V1.1. Nível/XP total (reaproveita XpBar), lista de
 /// territórios com conquista real via XP (não um limiar silencioso: o
@@ -82,6 +83,15 @@ class _ProgressScreenState extends State<ProgressScreen> {
                       );
                     },
                     child: Text(l10n.viewBadgesButton),
+                  ),
+                  const SizedBox(height: 12),
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => StatsScreen(client: widget.client)),
+                      );
+                    },
+                    child: Text(l10n.viewStatsButton),
                   ),
                 ],
               ),

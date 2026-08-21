@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import datetime
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
@@ -10,45 +10,6 @@ from ..auth import get_current_user_id
 from ..db import get_db
 
 router = APIRouter()
-
-
-def _pick_difficulty_for(db: Session, user_id: str, territory_id: str) -> int:
-    """
-    Dificuldade adaptativa (ADAPTIVE_DIFFICULTY.md): olha a taxa de acerto
-    da janela recente de desafios respondidos pelo jogador naquele
-    território. Sobe 1 nível após acerto >= limiar de subida, desce 1
-    nível após acerto < limiar de descida, mantém caso contrário. Janela e
-    limiares são decisão do Vertical Slice 01 (ADAPTIVE_DIFFICULTY.md §6
-    deixava a fórmula em aberto) — centralizados em config.py para ajuste
-    num único lugar quando houver dado real de uso.
-    """
-    recent = (
-        db.execute(
-            select(models.Attempt)
-            .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
-            .where(models.Attempt.user_id == user_id)
-            .where(models.Challenge.territory_id == territory_id)
-            .where(models.Attempt.is_correct.is_not(None))
-            .order_by(models.Attempt.created_at.desc())
-            .limit(config.ADAPTIVE_DIFFICULTY_WINDOW)
-        )
-        .scalars()
-        .all()
-    )
-
-    current_level = config.ADAPTIVE_DIFFICULTY_MIN_LEVEL
-    if recent:
-        last_challenge = db.get(models.Challenge, recent[0].challenge_id)
-        current_level = last_challenge.difficulty_level if last_challenge else current_level
-
-    if len(recent) >= config.ADAPTIVE_DIFFICULTY_MIN_SAMPLE:
-        accuracy = sum(1 for a in recent if a.is_correct) / len(recent)
-        if accuracy >= config.ADAPTIVE_DIFFICULTY_UP_THRESHOLD:
-            current_level += 1
-        elif accuracy < config.ADAPTIVE_DIFFICULTY_DOWN_THRESHOLD:
-            current_level -= 1
-
-    return max(config.ADAPTIVE_DIFFICULTY_MIN_LEVEL, min(config.ADAPTIVE_DIFFICULTY_MAX_LEVEL, current_level))
 
 
 @router.get("/challenges/next", response_model=schemas.ChallengeOut)
@@ -67,7 +28,15 @@ def next_challenge(
     if not services.is_territory_unlocked(db, user_id, territory):
         raise HTTPException(status_code=403, detail={"error": {"code": "TERRITORY_LOCKED", "message": "Requires active subscription"}})
 
-    today = date.today()
+    # datetime.utcnow().date(), não date.today(): Attempt.created_at é
+    # gravado em UTC (datetime.utcnow() em toda a base) — usar a data
+    # LOCAL do servidor aqui desalinha o "dia" do limite diário/streak do
+    # "dia" em que as tentativas foram de fato registradas. Achado real
+    # implementando Estatísticas (item 5): a "sequência mais longa"
+    # (derivada de Attempt.created_at) aparecia MENOR que a "sequência
+    # atual" (Streak.current_streak, calculada com date.today() local) —
+    # logicamente impossível, já que a atual é sempre parte da mais longa.
+    today = datetime.utcnow().date()
     allowed, consumed = services.check_daily_limit(db, user_id, today)
     if not allowed:
         raise HTTPException(
@@ -75,7 +44,7 @@ def next_challenge(
             detail={"error": {"code": "DAILY_LIMIT_REACHED", "message": "Daily free challenge limit reached", "resets_at": str(today.isoformat())}},
         )
 
-    difficulty = _pick_difficulty_for(db, user_id, territory_id)
+    difficulty = services.pick_difficulty_for(db, user_id, territory_id)
 
     # ARCHITECTURE_UPDATE_I18N_READY.md §3: endpoint já aceita/filtra por
     # idioma, mesmo com um único valor possível hoje (pt-BR) — critério de
@@ -259,9 +228,10 @@ def submit_answer(
     level_up = profile.level > level_before
     territory_just_conquered = bool(territory_progress and territory_progress.conquered_at and not was_conquered_before)
 
-    services.register_daily_usage(db, user_id, date.today())
+    today = datetime.utcnow().date()
+    services.register_daily_usage(db, user_id, today)
     streak_count_before = services.get_or_create_streak(db, user_id).current_streak
-    streak = services.register_play_for_streak(db, user_id, date.today())
+    streak = services.register_play_for_streak(db, user_id, today)
     streak_just_extended = streak.current_streak > streak_count_before
 
     # V2 item 1 — Badges/Conquistas: avalia depois que XP/território/streak

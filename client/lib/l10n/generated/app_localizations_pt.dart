@@ -214,4 +214,67 @@ class AppLocalizationsPt extends AppLocalizations {
   String streakExtendedCelebrationMessage(int days) {
     return 'Sequência de $days dias mantida!';
   }
+
+  @override
+  String get statsTooltip => 'Estatísticas';
+
+  @override
+  String get statsScreenTitle => 'Estatísticas';
+
+  @override
+  String get viewStatsButton => 'Ver estatísticas';
+
+  @override
+  String get statsOverviewSectionTitle => 'Visão geral';
+
+  @override
+  String get statsTotalAttemptsLabel => 'Desafios respondidos';
+
+  @override
+  String get statsAccuracyLabel => 'Acerto geral';
+
+  @override
+  String get statsHintFreeCorrectLabel => 'Acertos sem dica';
+
+  @override
+  String get statsHintsUsedLabel => 'Dicas usadas';
+
+  @override
+  String get statsCorrectWithHintLegend => 'Acertos com dica';
+
+  @override
+  String get statsIncorrectLegend => 'Erros';
+
+  @override
+  String get statsStreakLabel => 'Sequência atual / mais longa';
+
+  @override
+  String statsStreakValue(int current, int longest) {
+    return '$current / $longest dias';
+  }
+
+  @override
+  String get statsBadgesLabel => 'Conquistas desbloqueadas';
+
+  @override
+  String statsBadgesValue(int earned, int total) {
+    return '$earned / $total';
+  }
+
+  @override
+  String get statsByTerritorySectionTitle => 'Desempenho por território';
+
+  @override
+  String statsTerritoryAttemptsAndAccuracy(int attempts, String accuracy) {
+    return '$attempts respondidos · $accuracy de acerto';
+  }
+
+  @override
+  String statsTerritoryDifficultyLabel(int level) {
+    return 'Nível de dificuldade atual: $level';
+  }
+
+  @override
+  String get statsNoAttemptsYet =>
+      'Ainda sem desafios respondidos neste território.';
 }

@@ -82,6 +82,11 @@ class ApiClient {
     return _decode(resp);
   }
 
+  Future<Map<String, dynamic>> stats() async {
+    final resp = await http.get(_uri('/stats'), headers: _headers);
+    return _decode(resp);
+  }
+
   Map<String, dynamic> _decode(http.Response resp) {
     final body = jsonDecode(resp.body) as Map<String, dynamic>;
     if (resp.statusCode >= 400) {

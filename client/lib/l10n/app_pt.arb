@@ -235,5 +235,82 @@
     "placeholders": {
       "days": {"type": "int"}
     }
-  }
+  },
+
+  "statsTooltip": "Estatísticas",
+  "@statsTooltip": {"description": "Home app bar icon tooltip, opens Stats screen"},
+
+  "statsScreenTitle": "Estatísticas",
+  "@statsScreenTitle": {"description": "Stats screen app bar title"},
+
+  "viewStatsButton": "Ver estatísticas",
+  "@viewStatsButton": {"description": "Button on Progress screen linking to Stats screen"},
+
+  "statsOverviewSectionTitle": "Visão geral",
+  "@statsOverviewSectionTitle": {"description": "Stats screen overview section title"},
+
+  "statsTotalAttemptsLabel": "Desafios respondidos",
+  "@statsTotalAttemptsLabel": {"description": "Total attempts stat label"},
+
+  "statsAccuracyLabel": "Acerto geral",
+  "@statsAccuracyLabel": {"description": "Overall accuracy stat label"},
+
+  "statsHintFreeCorrectLabel": "Acertos sem dica",
+  "@statsHintFreeCorrectLabel": {"description": "Hint-free correct answers stat label"},
+
+  "statsHintsUsedLabel": "Dicas usadas",
+  "@statsHintsUsedLabel": {"description": "Total hints used stat label"},
+
+  "statsCorrectWithHintLegend": "Acertos com dica",
+  "@statsCorrectWithHintLegend": {"description": "Answer breakdown donut legend: correct answers that used a hint"},
+
+  "statsIncorrectLegend": "Erros",
+  "@statsIncorrectLegend": {"description": "Answer breakdown donut legend: incorrect answers"},
+
+  "statsStreakLabel": "Sequência atual / mais longa",
+  "@statsStreakLabel": {"description": "Current / longest streak stat label"},
+
+  "statsStreakValue": "{current} / {longest} dias",
+  "@statsStreakValue": {
+    "description": "Current / longest streak value",
+    "placeholders": {
+      "current": {"type": "int"},
+      "longest": {"type": "int"}
+    }
+  },
+
+  "statsBadgesLabel": "Conquistas desbloqueadas",
+  "@statsBadgesLabel": {"description": "Badges earned stat label"},
+
+  "statsBadgesValue": "{earned} / {total}",
+  "@statsBadgesValue": {
+    "description": "Badges earned / total value",
+    "placeholders": {
+      "earned": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "statsByTerritorySectionTitle": "Desempenho por território",
+  "@statsByTerritorySectionTitle": {"description": "Stats screen per-territory section title"},
+
+  "statsTerritoryAttemptsAndAccuracy": "{attempts} respondidos · {accuracy} de acerto",
+  "@statsTerritoryAttemptsAndAccuracy": {
+    "description": "Per-territory attempts and accuracy caption",
+    "placeholders": {
+      "attempts": {"type": "int"},
+      "accuracy": {"type": "String"}
+    }
+  },
+
+  "statsTerritoryDifficultyLabel": "Nível de dificuldade atual: {level}",
+  "@statsTerritoryDifficultyLabel": {
+    "description": "Per-territory current adaptive difficulty level",
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+
+  "statsNoAttemptsYet": "Ainda sem desafios respondidos neste território.",
+  "@statsNoAttemptsYet": {"description": "Empty state for a territory with zero attempts"}
 }
