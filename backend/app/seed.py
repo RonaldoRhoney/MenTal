@@ -181,6 +181,37 @@ CHALLENGES = [
         "age_reviewed": True,
         "hints": ["É quem não gosta de dar ou compartilhar.", "Começa com 'M'."],
     },
+    # V2 item 7 — Conteúdo educacional avançado (V2_KICKOFF.md §6A):
+    # critério de fechamento é mínimo 15 desafios por território, 4+ por
+    # nível 1-3. "Palavras" tinha 12 (5/4/3) — 3 itens novos abaixo levam
+    # a 15 (5/5/5).
+    {
+        "territory_id": "palavras", "difficulty_level": 2,
+        "prompt": "Reordene as letras 'OMDNU' para formar uma palavra.",
+        "options": None,
+        "correct_answer": "MUNDO",
+        "explanation": "As letras O-M-D-N-U formam 'MUNDO'.",
+        "age_reviewed": True,
+        "hints": ["É o planeta em que vivemos, em outra palavra.", "Tem 5 letras e começa com M."],
+    },
+    {
+        "territory_id": "palavras", "difficulty_level": 3,
+        "prompt": "Qual destas palavras é sinônimo de 'árduo'?",
+        "options": ["Difícil", "Fácil", "Leve", "Rápido"],
+        "correct_answer": "Difícil",
+        "explanation": "'Árduo' descreve algo que exige muito esforço — o mesmo sentido de 'difícil'.",
+        "age_reviewed": True,
+        "hints": ["É o oposto de 'fácil'.", "Descreve uma tarefa que exige muito esforço."],
+    },
+    {
+        "territory_id": "palavras", "difficulty_level": 3,
+        "prompt": "Qual destas palavras é antônimo de 'humilde'?",
+        "options": ["Arrogante", "Modesto", "Simples", "Gentil"],
+        "correct_answer": "Arrogante",
+        "explanation": "'Arrogante' é o oposto de 'humilde' — quem se acha superior aos outros.",
+        "age_reviewed": True,
+        "hints": ["É quem se acha melhor que os outros.", "Começa com 'A'."],
+    },
     # Números
     {
         "territory_id": "numeros", "difficulty_level": 1,
@@ -290,6 +321,35 @@ CHALLENGES = [
         "age_reviewed": True,
         "hints": ["É um número par.", "É maior que 10."],
     },
+    # V2 item 7 — "Números" tinha 12 (5/4/3) — 3 itens novos abaixo levam
+    # a 15 (5/5/5).
+    {
+        "territory_id": "numeros", "difficulty_level": 2,
+        "prompt": "Complete a sequência: 1, 3, 6, 10, ?",
+        "options": ["13", "14", "15", "16"],
+        "correct_answer": "15",
+        "explanation": "Cada número soma um valor que cresce em 1 a cada passo (+2, +3, +4, +5): 10 + 5 = 15.",
+        "age_reviewed": True,
+        "hints": ["A diferença entre os números aumenta a cada passo.", "De 6 para 10 somou 4; e agora?"],
+    },
+    {
+        "territory_id": "numeros", "difficulty_level": 3,
+        "prompt": "Quanto é 8 × 7?",
+        "options": ["54", "56", "58", "64"],
+        "correct_answer": "56",
+        "explanation": "8 × 7 = 56.",
+        "age_reviewed": True,
+        "hints": ["É um número par.", "É maior que 50 e menor que 60."],
+    },
+    {
+        "territory_id": "numeros", "difficulty_level": 3,
+        "prompt": "Quanto é 13 × 4?",
+        "options": ["48", "50", "52", "56"],
+        "correct_answer": "52",
+        "explanation": "13 × 4 = 52.",
+        "age_reviewed": True,
+        "hints": ["É um número par.", "Some 13 quatro vezes."],
+    },
     # Lógica
     {
         "territory_id": "logica", "difficulty_level": 1,
@@ -398,6 +458,35 @@ CHALLENGES = [
         "explanation": "3, 5, 7 e 11 são números primos; 8 é o único que não é primo.",
         "age_reviewed": True,
         "hints": ["Quatro deles só podem ser divididos por 1 e por si mesmos.", "Um deles é par e tem outros divisores."],
+    },
+    # V2 item 7 — "Lógica" tinha 12 (5/4/3) — 3 itens novos abaixo levam
+    # a 15 (5/5/5).
+    {
+        "territory_id": "logica", "difficulty_level": 2,
+        "prompt": "Se depois de amanhã é quarta-feira, que dia é hoje?",
+        "options": ["Domingo", "Segunda", "Terça", "Quarta"],
+        "correct_answer": "Segunda",
+        "explanation": "Se depois de amanhã é quarta, amanhã é terça — e hoje é segunda.",
+        "age_reviewed": True,
+        "hints": ["Conte dois dias para trás a partir de quarta-feira.", "É o primeiro dia da semana de trabalho."],
+    },
+    {
+        "territory_id": "logica", "difficulty_level": 3,
+        "prompt": "Todos os gatos são mamíferos. Nenhum mamífero é réptil. Podemos afirmar que nenhum gato é réptil?",
+        "options": ["Sim", "Não", "Só às vezes", "Impossível saber"],
+        "correct_answer": "Sim",
+        "explanation": "Se todo gato é mamífero e nenhum mamífero é réptil, então nenhum gato pode ser réptil — a conclusão é válida.",
+        "age_reviewed": True,
+        "hints": ["Junte as duas frases: gato → mamífero, mamífero → não-réptil.", "Isso encadeia numa conclusão válida sobre gatos."],
+    },
+    {
+        "territory_id": "logica", "difficulty_level": 3,
+        "prompt": "Numa corrida com 4 amigos, Marina chegou antes de Pedro, e Pedro chegou antes de Júlia, mas depois de Renato. Quem chegou em último lugar?",
+        "options": ["Marina", "Pedro", "Júlia", "Renato"],
+        "correct_answer": "Júlia",
+        "explanation": "Marina e Renato chegaram antes de Pedro, e Pedro chegou antes de Júlia — então Júlia é a única que não chegou antes de mais ninguém, ficando em último.",
+        "age_reviewed": True,
+        "hints": ["Três pessoas chegaram antes de alguém nessa história — só uma não chegou antes de ninguém.", "Monte a ordem: Renato e Marina antes de Pedro, Pedro antes dela."],
     },
     # Conhecimento
     {
@@ -516,6 +605,34 @@ CHALLENGES = [
         "explanation": "O Iene é a moeda oficial do Japão.",
         "age_reviewed": True,
         "hints": ["Não é a moeda da China nem da Coreia.", "Começa com 'I'."],
+    },
+    # V2 item 7 — "Conhecimento" tinha 13 (5/5/3) — 2 itens novos abaixo
+    # levam a 15 (5/5/5). Território de maior risco de erro/desatualização
+    # já registrado desde RISKS_AND_OPEN_DECISIONS.md original — os dois
+    # fatos abaixo foram escolhidos de propósito por serem extremamente
+    # estáveis (anatomia humana e geografia física não mudam com o tempo,
+    # ao contrário de recordes/populações/rankings "atuais"), e o segundo
+    # usa o mesmo modelo de 4 oceanos já implícito na pergunta "maior
+    # oceano" acima — evita a ambiguidade real de contar ou não o Oceano
+    # Antártico/Austral como um 5º oceano (classificação que varia por
+    # fonte/currículo, não um fato fechado).
+    {
+        "territory_id": "conhecimento", "difficulty_level": 3,
+        "prompt": "Qual é o menor osso do corpo humano?",
+        "options": ["Estribo", "Fêmur", "Rádio", "Fíbula"],
+        "correct_answer": "Estribo",
+        "explanation": "O estribo fica no ouvido médio e é o menor osso do corpo humano, com cerca de 3 milímetros.",
+        "age_reviewed": True,
+        "hints": ["Fica dentro do ouvido.", "Tem esse nome porque lembra o objeto que apoia o pé de quem monta a cavalo."],
+    },
+    {
+        "territory_id": "conhecimento", "difficulty_level": 3,
+        "prompt": "Qual destes é o oceano mais frio?",
+        "options": ["Ártico", "Atlântico", "Pacífico", "Índico"],
+        "correct_answer": "Ártico",
+        "explanation": "O Oceano Ártico fica coberto de gelo boa parte do ano e tem a temperatura média mais baixa entre os quatro.",
+        "age_reviewed": True,
+        "hints": ["Fica na região do Polo Norte.", "Está sempre coberto de gelo, pelo menos em parte."],
     },
 
     # Enigmas — charadas clássicas "o que é, o que é", curadoria manual
@@ -1104,8 +1221,17 @@ def seed_if_empty(db: Session) -> None:
     db.commit()
 
     for c in CHALLENGES:
-        hints = c.pop("hints")
-        challenge = models.Challenge(**c)
+        # Nunca mutar os dicts de CHALLENGES (ex.: c.pop("hints")) — é uma
+        # lista de dados declarativos, importada e inspecionada em outros
+        # lugares (ex.: tests/test_content_volume.py, tests conferindo
+        # correct_answer contra o seed). Um .pop() aqui reescreveria o
+        # módulo compartilhado pra sempre no processo, quebrando qualquer
+        # código que leia CHALLENGES depois do primeiro seed — achado real
+        # implementando o item 7 (o teste de volume de conteúdo via
+        # asserção em challenge["hints"] falhava com KeyError sempre que
+        # rodava depois de algum teste que já tivesse acionado o seed).
+        hints = c["hints"]
+        challenge = models.Challenge(**{k: v for k, v in c.items() if k != "hints"})
         db.add(challenge)
         db.commit()
         db.refresh(challenge)
