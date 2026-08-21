@@ -172,6 +172,12 @@ abstract class AppLocalizations {
   /// **'Enigmas'**
   String get territoryEnigmas;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Textos'**
+  String get territoryTextos;
+
   /// Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3
   ///
   /// In pt, this message translates to:

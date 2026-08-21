@@ -14,6 +14,11 @@ TERRITORIES = [
     # mais raciocínio que os territórios gratuitos (palavras/números
     # diretos), revisável quando houver dado real de uso.
     {"id": "enigmas", "challenge_type": "enigmas", "requires_subscription": True, "free_sample_count": 2, "display_order": 5},
+    # V2 item 3 — Textos (interpretação/inferência, V2_KICKOFF.md §6A).
+    # Mesmo reaproveitamento de fluxo dos itens 1-2 — só o parágrafo-base
+    # fica no campo "prompt" (sem campo novo no modelo). Mesmo tier
+    # avançado de logica/conhecimento/enigmas.
+    {"id": "textos", "challenge_type": "textos", "requires_subscription": True, "free_sample_count": 2, "display_order": 6},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -632,6 +637,223 @@ CHALLENGES = [
         "explanation": "As estrelas ficam mais visíveis quanto mais escuro está o céu — por isso se veem melhor longe das luzes da cidade.",
         "age_reviewed": True,
         "hints": ["Você as vê à noite, longe das luzes da cidade.", "O Sol também é uma, mas não conta para esta charada."],
+    },
+
+    # Textos — interpretação/inferência, curadoria manual. 15 parágrafos
+    # originais e distintos (nenhum reaproveitado ou "quase igual" a outro),
+    # 5 por nível de dificuldade: nível 1 (compreensão literal, resposta
+    # está explícita no texto), nível 2 (inferência leve — sentimento/
+    # situação sugerida por pistas, nunca dita diretamente), nível 3
+    # (propósito/tom/contradição — exige ler nas entrelinhas).
+    {
+        "territory_id": "textos", "difficulty_level": 1,
+        "prompt": (
+            "Marcos esqueceu o guarda-chuva em casa. Quando saiu do trabalho, "
+            "a chuva já caía forte. Ele caminhou até o ponto de ônibus e "
+            "chegou em casa completamente encharcado.\n\n"
+            "Por que Marcos chegou em casa molhado?"
+        ),
+        "options": ["Porque esqueceu o guarda-chuva", "Porque caiu no rio", "Porque foi nadar", "Porque tomou banho na rua"],
+        "correct_answer": "Porque esqueceu o guarda-chuva",
+        "explanation": "O texto diz diretamente, na primeira frase, que Marcos esqueceu o guarda-chuva em casa.",
+        "age_reviewed": True,
+        "hints": ["A resposta está na primeira frase do texto.", "Pense no que ele esqueceu antes de sair."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 1,
+        "prompt": (
+            "A gata Mimosa dorme quase o dia inteiro, enrolada no sofá da "
+            "sala. À noite, porém, ela fica bem ativa: corre pela casa e "
+            "caça insetos perto da janela.\n\n"
+            "Quando a gata Mimosa fica mais ativa?"
+        ),
+        "options": ["De manhã", "À tarde", "À noite", "Durante o almoço"],
+        "correct_answer": "À noite",
+        "explanation": "O texto contrasta o dia (dormindo) com a noite, quando ela 'fica bem ativa'.",
+        "age_reviewed": True,
+        "hints": ["O texto contrasta dois momentos do dia.", "Procure a palavra 'porém' no texto."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 1,
+        "prompt": (
+            "Dona Alice vende frutas na feira todo sábado de manhã. Ela "
+            "chega bem cedo para escolher o melhor lugar e organizar as "
+            "bananas, laranjas e mamões na barraca.\n\n"
+            "O que Dona Alice vende na feira?"
+        ),
+        "options": ["Roupas", "Frutas", "Peixes", "Flores"],
+        "correct_answer": "Frutas",
+        "explanation": "O texto diz diretamente que Dona Alice vende frutas, citando bananas, laranjas e mamões.",
+        "age_reviewed": True,
+        "hints": ["A resposta está na primeira frase.", "Bananas, laranjas e mamões são exemplos dessa resposta."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 1,
+        "prompt": (
+            "Pedro tem uma prova de matemática amanhã. Depois do jantar, "
+            "ele separou o caderno, os exercícios e uma caneta, e foi para "
+            "o quarto estudar antes de dormir.\n\n"
+            "O que Pedro fez depois do jantar?"
+        ),
+        "options": ["Foi estudar", "Foi dormir direto", "Assistiu televisão", "Saiu para brincar"],
+        "correct_answer": "Foi estudar",
+        "explanation": "O texto diz que ele separou o material e 'foi para o quarto estudar'.",
+        "age_reviewed": True,
+        "hints": ["Veja o que ele separou antes de ir para o quarto.", "A prova de amanhã é o motivo da ação dele."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 1,
+        "prompt": (
+            "A previsão do tempo anunciou chuva forte para a tarde. Antes "
+            "de sair de casa, Joana pegou o casaco impermeável e colocou "
+            "na mochila, por precaução.\n\n"
+            "Por que Joana levou o casaco impermeável?"
+        ),
+        "options": ["Porque estava frio", "Porque a previsão era de chuva", "Porque ia nadar", "Porque tinha esquecido em casa"],
+        "correct_answer": "Porque a previsão era de chuva",
+        "explanation": "O texto liga diretamente a ação de Joana à previsão de chuva forte anunciada.",
+        "age_reviewed": True,
+        "hints": ["Pense no que a previsão do tempo anunciou.", "'Por precaução' se refere a essa previsão."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 2,
+        "prompt": (
+            "Antes da entrevista, Rafael não parava de olhar para o "
+            "relógio. Suas mãos estavam suando e ele repetia baixinho as "
+            "respostas que havia treinado em casa.\n\n"
+            "Como Rafael provavelmente estava se sentindo?"
+        ),
+        "options": ["Nervoso", "Entediado", "Com sono", "Com raiva"],
+        "correct_answer": "Nervoso",
+        "explanation": "Nenhuma palavra do texto diz 'nervoso' diretamente — mãos suando, olhar o relógio o tempo todo e repetir respostas são pistas comuns de ansiedade antes de um evento importante.",
+        "age_reviewed": True,
+        "hints": ["Nenhuma palavra do texto diz diretamente o sentimento — observe as ações dele.", "Mãos suando e repetir respostas são sinais comuns de ansiedade."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 2,
+        "prompt": (
+            "Camila arrumou a mala na noite anterior, imprimiu as "
+            "passagens e, na manhã seguinte, se despediu da família com "
+            "um abraço apertado no portão de embarque.\n\n"
+            "O que está acontecendo com Camila?"
+        ),
+        "options": ["Ela está indo viajar", "Ela está indo ao mercado", "Ela está mudando de quarto", "Ela está indo ao médico"],
+        "correct_answer": "Ela está indo viajar",
+        "explanation": "Mala, passagens e 'portão de embarque' são pistas que, juntas, indicam uma viagem — o texto nunca usa a palavra 'viagem'.",
+        "age_reviewed": True,
+        "hints": ["Mala, passagens e portão de embarque são pistas do mesmo tipo de evento.", "Pense em onde fica um 'portão de embarque'."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 2,
+        "prompt": (
+            "Apesar de ter estudado a semana inteira, Bruno saiu da prova "
+            "preocupado, sem conseguir responder duas questões que "
+            "considerava simples.\n\n"
+            "O que o texto sugere sobre como Bruno se sente em relação à prova?"
+        ),
+        "options": ["Ele está inseguro sobre o próprio desempenho", "Ele tem certeza de que foi muito bem", "Ele nem fez a prova", "Ele já sabe a nota"],
+        "correct_answer": "Ele está inseguro sobre o próprio desempenho",
+        "explanation": "'Apesar de' marca um contraste com o esperado, e sair preocupado sem responder questões 'simples' aponta insegurança, não confiança.",
+        "age_reviewed": True,
+        "hints": ["'Apesar de' indica um contraste com o que se esperava.", "Preocupação depois da prova aponta insegurança, não confiança."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 2,
+        "prompt": (
+            "Suas mãos estavam sempre manchadas de graxa, e o macacão azul "
+            "pendurado na oficina já não tinha mais a cor original. O "
+            "barulho de parafusos e motores era constante ao redor dele.\n\n"
+            "Qual é a profissão mais provável dessa pessoa?"
+        ),
+        "options": ["Mecânico", "Professor", "Cozinheiro", "Médico"],
+        "correct_answer": "Mecânico",
+        "explanation": "Graxa, macacão, oficina, parafusos e motores são pistas do ambiente de trabalho de um mecânico, mesmo sem o texto dizer a profissão diretamente.",
+        "age_reviewed": True,
+        "hints": ["Graxa, macacão e oficina são pistas do ambiente de trabalho.", "Pense em quem trabalha com motores e parafusos."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 2,
+        "prompt": (
+            "Quando os colegas elogiaram sua apresentação, Tiago abaixou a "
+            "cabeça, ficou com o rosto vermelho e só conseguiu agradecer "
+            "em um sussurro.\n\n"
+            "O que as reações de Tiago sugerem?"
+        ),
+        "options": ["Timidez", "Raiva", "Indiferença", "Tédio"],
+        "correct_answer": "Timidez",
+        "explanation": "Rosto vermelho, cabeça baixa e responder em sussurro diante de um elogio são reações físicas típicas de timidez.",
+        "age_reviewed": True,
+        "hints": ["Rosto vermelho e cabeça baixa são reações físicas comuns diante de elogios inesperados.", "Pense em como alguém tímido reage a ser o centro das atenções."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 3,
+        "prompt": (
+            "Experimente o novo suco SaborMax: mais vitaminas, mais sabor, "
+            "e agora com 20% de desconto só esta semana. Corra antes que "
+            "acabe!\n\n"
+            "Qual é o principal objetivo desse texto?"
+        ),
+        "options": ["Convencer o leitor a comprar o produto", "Explicar como fazer suco em casa", "Avisar sobre um problema no produto", "Contar uma história sobre frutas"],
+        "correct_answer": "Convencer o leitor a comprar o produto",
+        "explanation": "Desconto por tempo limitado e a urgência de 'corra antes que acabe' são marcas típicas de um texto publicitário, cujo objetivo é persuadir o leitor a comprar.",
+        "age_reviewed": True,
+        "hints": ["Preço, desconto e urgência ('corra antes que acabe') são típicos de um tipo específico de texto.", "Pense no objetivo comum de um anúncio publicitário."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 3,
+        "prompt": (
+            "Que ótimo, mais uma reunião marcada para as sete da manhã de "
+            "segunda-feira — exatamente o jeito perfeito de começar a "
+            "semana.\n\n"
+            "O que a pessoa realmente quer dizer com esse comentário?"
+        ),
+        "options": ["Ela está insatisfeita com o horário da reunião", "Ela adora reuniões cedo", "Ela está muito animada com a semana", "Ela não sabia da reunião"],
+        "correct_answer": "Ela está insatisfeita com o horário da reunião",
+        "explanation": "O tom é irônico — 'que ótimo' e 'jeito perfeito' querem dizer o oposto do que as palavras dizem literalmente.",
+        "age_reviewed": True,
+        "hints": ["Preste atenção no tom — às vezes 'ótimo' quer dizer o oposto.", "Pense em como as pessoas costumam reagir a reuniões muito cedo."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 3,
+        "prompt": (
+            "Não fiz por querer, professora — o cachorro derrubou minha "
+            "mochila na poça d'água bem na hora que eu ia sair de casa, "
+            "juro.\n\n"
+            "Qual é a intenção mais provável dessa fala?"
+        ),
+        "options": ["Justificar a lição de casa molhada ou perdida", "Pedir para trocar de escola", "Elogiar o cachorro", "Contar uma piada"],
+        "correct_answer": "Justificar a lição de casa molhada ou perdida",
+        "explanation": "A fala é dirigida a uma professora, logo antes de algo escolar — o tom de desculpa apressada ('juro') sugere uma justificativa para a lição.",
+        "age_reviewed": True,
+        "hints": ["A fala é dirigida a uma professora, logo antes de algo relacionado à escola.", "Pense no que normalmente motiva esse tipo de explicação apressada."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 3,
+        "prompt": (
+            "Marina afirmou que não corria havia anos, mas cruzou a linha "
+            "de chegada da maratona sem parecer nem um pouco cansada, "
+            "sorrindo e ajeitando o cabelo para as fotos.\n\n"
+            "O que esse trecho sugere sobre a afirmação de Marina?"
+        ),
+        "options": ["A afirmação parece contradizer o que aconteceu na corrida", "A afirmação foi totalmente confirmada pelos fatos", "O texto não dá nenhuma pista sobre isso", "Marina desistiu da corrida"],
+        "correct_answer": "A afirmação parece contradizer o que aconteceu na corrida",
+        "explanation": "Quem realmente não treina há anos dificilmente terminaria uma maratona sorrindo e sem sinais de cansaço — o desempenho descrito contradiz a afirmação inicial.",
+        "age_reviewed": True,
+        "hints": ["Compare o que Marina disse com o que o texto descreve sobre a chegada dela.", "Alguém que realmente não treina dificilmente terminaria uma maratona sem sinais de cansaço."],
+    },
+    {
+        "territory_id": "textos", "difficulty_level": 3,
+        "prompt": (
+            "A previsão indicava sol firme o dia todo, mas o céu foi "
+            "escurecendo rapidamente enquanto as pessoas ainda estendiam "
+            "roupa nos varais dos quintais.\n\n"
+            "O que é mais provável que aconteça a seguir?"
+        ),
+        "options": ["Vai chover, e as roupas correm risco de molhar", "As roupas vão secar mais rápido", "O sol vai voltar imediatamente", "Nada vai mudar no tempo"],
+        "correct_answer": "Vai chover, e as roupas correm risco de molhar",
+        "explanation": "Céu escurecendo rapidamente, mesmo contra a previsão de sol, é um sinal comum de chuva se aproximando — o que colocaria a roupa no varal em risco.",
+        "age_reviewed": True,
+        "hints": ["Céu escurecendo rápido geralmente indica mudança de tempo.", "Pense no que normalmente acontece com roupa no varal quando começa a chover."],
     },
 ]
 

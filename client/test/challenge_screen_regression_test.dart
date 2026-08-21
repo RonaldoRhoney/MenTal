@@ -30,6 +30,26 @@ class _FakeApiClient extends ApiClient {
   }
 }
 
+/// Simula um desafio do território "textos" (V2 item 3) — parágrafo-base
+/// bem mais longo que qualquer enunciado dos territórios anteriores, com
+/// múltipla escolha, para provar que a tela não estoura (RenderFlex
+/// overflow) num viewport pequeno.
+class _LongPromptFakeApiClient extends ApiClient {
+  _LongPromptFakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId) async {
+    return {
+      'challenge_id': 'fake-challenge-id-textos',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': List.filled(20, 'Um parágrafo bem longo para testar o scroll da tela de desafio.').join(' '),
+      'options': ['Opção A', 'Opção B', 'Opção C', 'Opção D'],
+      'hints_available': 2,
+    };
+  }
+}
+
 void main() {
   testWidgets(
     'botão "Confirmar resposta" habilita ao digitar, sem precisar de outra interação (regressão Bug 1)',
@@ -64,6 +84,47 @@ void main() {
         confirmButton().onPressed,
         isNotNull,
         reason: 'ao digitar, o botão deve habilitar imediatamente — sem precisar de outra ação (ex.: pedir dica)',
+      );
+    },
+  );
+
+  testWidgets(
+    'parágrafo-base longo (território "textos") não estoura a tela (regressão overflow)',
+    (tester) async {
+      // Viewport pequeno de propósito — telas de aparelho de entrada
+      // (ex.: Moto G22) têm menos altura útil que o padrão de teste.
+      tester.view.physicalSize = const Size(360, 640);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
+
+      final errors = <FlutterErrorDetails>[];
+      final originalOnError = FlutterError.onError;
+      FlutterError.onError = (details) => errors.add(details);
+      addTearDown(() => FlutterError.onError = originalOnError);
+
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: ChallengeScreen(
+            client: _LongPromptFakeApiClient(),
+            territoryId: 'textos',
+            territoryLabel: 'Textos',
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(
+        errors.where((e) => e.exception.toString().contains('RenderFlex overflowed')),
+        isEmpty,
+        reason: 'parágrafo-base longo não pode causar overflow — a área de conteúdo precisa ser rolável',
       );
     },
   );

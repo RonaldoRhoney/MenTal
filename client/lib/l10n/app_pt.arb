@@ -47,6 +47,8 @@
   "@territoryConhecimento": {"description": "Territory display name"},
   "territoryEnigmas": "Enigmas",
   "@territoryEnigmas": {"description": "Territory display name"},
+  "territoryTextos": "Textos",
+  "@territoryTextos": {"description": "Territory display name"},
 
   "dailyLimitReachedMessage": "Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.",
   "@dailyLimitReachedMessage": {"description": "Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3"},

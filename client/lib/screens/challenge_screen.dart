@@ -196,48 +196,62 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
-        const SizedBox(height: 24),
-        if (options != null)
-          RadioGroup<String>(
-            groupValue: _selectedOption,
-            onChanged: (value) => setState(() => _selectedOption = value),
+        // Expanded + SingleChildScrollView (em vez de Column solta com
+        // Spacer): os parágrafos-base do território "textos" (V2 item 3)
+        // são bem mais longos que um enunciado de charada/pergunta direta
+        // e estouravam a tela em telas menores — achado antes de gerar o
+        // conteúdo, corrigido aqui para qualquer território, não só esse.
+        Expanded(
+          child: SingleChildScrollView(
             child: Column(
-              children: options
-                  .map((option) => RadioListTile<String>(title: Text(option), value: option))
-                  .toList(),
-            ),
-          )
-        else
-          TextField(
-            decoration: InputDecoration(labelText: l10n.yourAnswerLabel),
-            // Bug achado testando no celular real: sem setState aqui, o
-            // botão "Confirmar resposta" (que depende de
-            // _selectedOption != null) não reavaliava ao digitar — só
-            // reabilitava quando algum outro evento forçava rebuild.
-            onChanged: (value) => setState(() => _selectedOption = value.trim().isEmpty ? null : value),
-          ),
-        const SizedBox(height: 16),
-        ..._hintsShown.map(
-          (hint) => Padding(
-            padding: const EdgeInsets.only(bottom: 8),
-            child: Text(
-              l10n.hintPrefix(hint),
-              style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
+                const SizedBox(height: 24),
+                if (options != null)
+                  RadioGroup<String>(
+                    groupValue: _selectedOption,
+                    onChanged: (value) => setState(() => _selectedOption = value),
+                    child: Column(
+                      children: options
+                          .map((option) => RadioListTile<String>(title: Text(option), value: option))
+                          .toList(),
+                    ),
+                  )
+                else
+                  TextField(
+                    decoration: InputDecoration(labelText: l10n.yourAnswerLabel),
+                    // Bug achado testando no celular real: sem setState aqui, o
+                    // botão "Confirmar resposta" (que depende de
+                    // _selectedOption != null) não reavaliava ao digitar — só
+                    // reabilitava quando algum outro evento forçava rebuild.
+                    onChanged: (value) => setState(() => _selectedOption = value.trim().isEmpty ? null : value),
+                  ),
+                const SizedBox(height: 16),
+                ..._hintsShown.map(
+                  (hint) => Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Text(
+                      l10n.hintPrefix(hint),
+                      style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+                    ),
+                  ),
+                ),
+                if (_hintsExhausted)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Text(
+                      l10n.noMoreHintsMessage,
+                      style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+                    ),
+                  )
+                else
+                  TextButton(onPressed: _requestHint, child: Text(l10n.requestHintButton)),
+              ],
             ),
           ),
         ),
-        if (_hintsExhausted)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8),
-            child: Text(
-              l10n.noMoreHintsMessage,
-              style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
-            ),
-          )
-        else
-          TextButton(onPressed: _requestHint, child: Text(l10n.requestHintButton)),
-        const Spacer(),
+        const SizedBox(height: 16),
         FilledButton(
           onPressed: _selectedOption == null ? null : _submitAnswer,
           child: Text(l10n.confirmAnswerButton),
@@ -252,28 +266,37 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(
-          isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback,
-          // Celebração em teal (acerto) vs. terracota suave (erro, nunca
-          // vermelho vivo) — DESIGN_SYSTEM.md §4.
-          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                color: isCorrect ? AppColors.success : AppColors.error,
-              ),
-        ),
-        const SizedBox(height: 8),
-        Text(l10n.correctAnswerLabel(result['correct_answer'] as String)),
-        const SizedBox(height: 12),
-        Text(result['explanation'] as String),
-        const SizedBox(height: 12),
-        Text(
-          l10n.xpEarnedLabel(
-            result['xp_awarded'] as int,
-            result['xp_base'] as int,
-            result['hints_used'] as int,
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback,
+                  // Celebração em teal (acerto) vs. terracota suave (erro, nunca
+                  // vermelho vivo) — DESIGN_SYSTEM.md §4.
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        color: isCorrect ? AppColors.success : AppColors.error,
+                      ),
+                ),
+                const SizedBox(height: 8),
+                Text(l10n.correctAnswerLabel(result['correct_answer'] as String)),
+                const SizedBox(height: 12),
+                Text(result['explanation'] as String),
+                const SizedBox(height: 12),
+                Text(
+                  l10n.xpEarnedLabel(
+                    result['xp_awarded'] as int,
+                    result['xp_base'] as int,
+                    result['hints_used'] as int,
+                  ),
+                  style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 14),
+                ),
+              ],
+            ),
           ),
-          style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 14),
         ),
-        const Spacer(),
+        const SizedBox(height: 16),
         FilledButton(onPressed: _loadNextChallenge, child: Text(l10n.nextChallengeButton)),
       ],
     );
