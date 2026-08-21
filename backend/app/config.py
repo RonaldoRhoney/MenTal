@@ -51,7 +51,13 @@ XP_BASE_DEFAULT = 20
 
 # Dificuldade adaptativa (ADAPTIVE_DIFFICULTY.md §6, fórmula em aberto na
 # Foundation): janela de tentativas recentes observada e limiares de
-# acerto que sobem/descem 1 nível de dificuldade.
+# domínio médio que sobem/descem 1 nível de dificuldade. Estes 5 números
+# não mudaram no item 6 da V2 (evolução da fórmula, V2_KICKOFF.md §2) —
+# só o que "domínio" significa evoluiu, em services.pick_difficulty_for:
+# de taxa de acerto binária para acerto ponderado por uso de dica
+# (scoring.hint_penalty_factor). Sinal já previsto desde o Discovery
+# original (ADAPTIVE_DIFFICULTY.md §2 já citava "uso de dica" como sinal
+# de entrada), só não estava implementado na versão simplificada do V1.
 ADAPTIVE_DIFFICULTY_WINDOW = 5
 ADAPTIVE_DIFFICULTY_MIN_SAMPLE = 3
 ADAPTIVE_DIFFICULTY_UP_THRESHOLD = 0.8

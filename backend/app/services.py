@@ -3,21 +3,44 @@ from datetime import date, datetime, timedelta
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from . import config, models
+from . import config, models, scoring
 from .nickname import generate_anonymous_nickname
+
+
+def _mastery_score(attempt: "models.Attempt") -> float:
+    """
+    V2 item 6 — Dificuldade adaptativa evoluída (V2_KICKOFF.md §2: evoluir
+    a fórmula com mais variedade de sinal disponível, não reescrever do
+    zero). Antes desta evolução, cada tentativa da janela contava 1.0 se
+    correta e 0.0 se errada — um acerto que só saiu depois de 2 dicas
+    pesava exatamente igual a um acerto de primeira, o que não reflete
+    domínio real do território.
+
+    Reaproveita scoring.hint_penalty_factor (a MESMA fórmula já travada
+    para XP, não um peso novo inventado): acerto sem dica = 1.0, acerto
+    com 1 dica = 0.75, com 2 dicas = 0.5 e assim por diante, erro = 0.0.
+    Isso já existia como dado (Attempt.hints_used sempre foi gravado),
+    só não era usado aqui — "mais variedade de sinal disponível" é
+    literalmente isto: sinal que já estava sendo coletado.
+    """
+    if not attempt.is_correct:
+        return 0.0
+    return scoring.hint_penalty_factor(attempt.hints_used)
 
 
 def pick_difficulty_for(db: Session, user_id: str, territory_id: str) -> int:
     """
-    Dificuldade adaptativa (ADAPTIVE_DIFFICULTY.md): olha a taxa de acerto
-    da janela recente de desafios respondidos pelo jogador naquele
-    território. Sobe 1 nível após acerto >= limiar de subida, desce 1
-    nível após acerto < limiar de descida, mantém caso contrário. Janela e
-    limiares são decisão do Vertical Slice 01 (ADAPTIVE_DIFFICULTY.md §6
-    deixava a fórmula em aberto) — centralizados em config.py para ajuste
-    num único lugar quando houver dado real de uso.
+    Dificuldade adaptativa (ADAPTIVE_DIFFICULTY.md, evoluída no item 6 da
+    V2): olha o domínio médio (não mais a taxa de acerto bruta — ver
+    _mastery_score) da janela recente de desafios respondidos pelo
+    jogador naquele território. Sobe 1 nível quando esse domínio médio
+    é >= limiar de subida, desce 1 nível quando é < limiar de descida,
+    mantém caso contrário. Janela, amostra mínima e limiares continuam os
+    mesmos do Vertical Slice 01 (só o significado de "acerto" mudou, não
+    os números de config.py) — centralizados em config.py para ajuste num
+    único lugar quando houver dado real de uso.
 
-    Movida de routers/challenges.py para cá no item 5 da V2
+    Movida de routers/challenges.py para services.py no item 5 da V2
     (Estatísticas) — o endpoint de estatísticas precisa do mesmo cálculo
     ("nível de dificuldade atual por território") e duplicá-lo ali criaria
     duas fontes de verdade para a mesma regra.
@@ -52,10 +75,10 @@ def pick_difficulty_for(db: Session, user_id: str, territory_id: str) -> int:
         current_level = last_challenge.difficulty_level if last_challenge else current_level
 
     if len(recent) >= config.ADAPTIVE_DIFFICULTY_MIN_SAMPLE:
-        accuracy = sum(1 for a in recent if a.is_correct) / len(recent)
-        if accuracy >= config.ADAPTIVE_DIFFICULTY_UP_THRESHOLD:
+        avg_mastery = sum(_mastery_score(a) for a in recent) / len(recent)
+        if avg_mastery >= config.ADAPTIVE_DIFFICULTY_UP_THRESHOLD:
             current_level += 1
-        elif accuracy < config.ADAPTIVE_DIFFICULTY_DOWN_THRESHOLD:
+        elif avg_mastery < config.ADAPTIVE_DIFFICULTY_DOWN_THRESHOLD:
             current_level -= 1
 
     return max(config.ADAPTIVE_DIFFICULTY_MIN_LEVEL, min(config.ADAPTIVE_DIFFICULTY_MAX_LEVEL, current_level))
