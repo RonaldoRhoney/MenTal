@@ -16,7 +16,9 @@ dependencies:
   uuid: ^4.4.0
   shared_preferences: ^2.2.0
   google_fonts: ^6.2.1
-
+  audioplayers: ^6.8.1
+  confetti: ^0.8.0
+  sound_mode_advanced: ^4.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -25,3 +27,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/audio/

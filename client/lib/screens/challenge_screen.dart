@@ -1,10 +1,14 @@
+import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../services/feedback_service.dart';
 import '../theme/app_theme.dart';
 import '../visual_options.dart';
+import '../widgets/celebration_overlay.dart';
+import '../widgets/pulse_in.dart';
 
 /// Ciclo completo de um desafio: busca → responde → resultado → próximo.
 /// Uma ação primária por vez (Clareza Imediata, PRODUCT_PRINCIPLES.md §1):
@@ -39,10 +43,49 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   bool _hintsExhausted = false;
   Map<String, dynamic>? _result;
 
+  // MICROINTERACTIONS.md §3 — celebração forte (território/badge/level
+  // up) usa confete; sons e o pulso sutil/moderado não precisam de
+  // controller próprio.
+  late final ConfettiController _confettiController;
+
   @override
   void initState() {
     super.initState();
+    _confettiController = ConfettiController(duration: const Duration(milliseconds: 800));
     _loadNextChallenge();
+  }
+
+  @override
+  void dispose() {
+    _confettiController.dispose();
+    super.dispose();
+  }
+
+  /// Decide som + confete a partir dos sinais que o backend calculou
+  /// (única autoridade sobre "isso é um evento raro" — client nunca
+  /// deriva isso sozinho). Calibração por evento, MICROINTERACTIONS.md §3:
+  /// forte (level up/conquista/badge) > moderado (streak) > sutil (acerto).
+  void _triggerFeedback(Map<String, dynamic> result) {
+    final isCorrect = result['is_correct'] as bool;
+    final levelUp = result['level_up'] as bool? ?? false;
+    final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
+    final newlyAwardedBadges = (result['newly_awarded_badges'] as List?) ?? const [];
+    final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
+
+    final isStrongEvent = levelUp || territoryJustConquered || newlyAwardedBadges.isNotEmpty;
+
+    if (isStrongEvent) {
+      FeedbackService.instance.play(FeedbackSound.celebration);
+      if (!MediaQuery.of(context).disableAnimations) {
+        _confettiController.play();
+      }
+    } else if (streakJustExtended) {
+      FeedbackService.instance.play(FeedbackSound.streak);
+    } else if (isCorrect) {
+      FeedbackService.instance.play(FeedbackSound.correct);
+    } else {
+      FeedbackService.instance.play(FeedbackSound.incorrect);
+    }
   }
 
   Future<void> _loadNextChallenge() async {
@@ -109,7 +152,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     setState(() => _loading = true);
     try {
       final result = await widget.client.submitAnswer(challenge['challenge_id'], attemptId, answer);
-      if (mounted) setState(() => _result = result);
+      if (mounted) {
+        setState(() => _result = result);
+        _triggerFeedback(result);
+      }
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
     } finally {
@@ -122,9 +168,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.territoryLabel)),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: _buildBody(),
+        child: CelebrationOverlay(
+          controller: _confettiController,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: _buildBody(),
+          ),
         ),
       ),
     );
@@ -316,6 +365,23 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   Widget _buildResult(Map<String, dynamic> result) {
     final l10n = AppLocalizations.of(context)!;
     final isCorrect = result['is_correct'] as bool;
+    final levelUp = result['level_up'] as bool? ?? false;
+    final newLevel = result['new_level'] as int?;
+    final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
+    final newlyAwardedBadges = ((result['newly_awarded_badges'] as List?) ?? const [])
+        .cast<Map<String, dynamic>>();
+    final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
+    final currentStreak = (result['streak'] as Map<String, dynamic>)['current_streak'] as int;
+
+    final feedbackText = Text(
+      isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback,
+      // Celebração em teal (acerto) vs. terracota suave (erro, nunca
+      // vermelho vivo) — DESIGN_SYSTEM.md §4.
+      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+            color: isCorrect ? AppColors.success : AppColors.error,
+          ),
+    );
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -324,14 +390,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
-                  isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback,
-                  // Celebração em teal (acerto) vs. terracota suave (erro, nunca
-                  // vermelho vivo) — DESIGN_SYSTEM.md §4.
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: isCorrect ? AppColors.success : AppColors.error,
-                      ),
-                ),
+                // Pulso sutil só no acerto (MICROINTERACTIONS.md §3, "Erro:
+                // nenhuma celebração" — texto de erro fica estático).
+                isCorrect ? PulseIn(child: feedbackText) : feedbackText,
                 const SizedBox(height: 8),
                 Text(l10n.correctAnswerLabel(_displayAnswer(result['correct_answer'] as String))),
                 const SizedBox(height: 12),
@@ -345,6 +406,49 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   ),
                   style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 14),
                 ),
+                // Sinais de evento raro calculados pelo backend (nunca
+                // derivados aqui) — texto sempre presente, nunca só
+                // som/animação (acessibilidade, AUDIO_FEEDBACK.md §4).
+                if (streakJustExtended) ...[
+                  const SizedBox(height: 16),
+                  PulseIn(
+                    intensity: 0.3,
+                    child: Text(
+                      l10n.streakExtendedCelebrationMessage(currentStreak),
+                      style: const TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
+                if (levelUp && newLevel != null) ...[
+                  const SizedBox(height: 16),
+                  PulseIn(
+                    intensity: 0.3,
+                    child: Text(
+                      l10n.levelUpMessage(newLevel),
+                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
+                if (territoryJustConquered) ...[
+                  const SizedBox(height: 16),
+                  PulseIn(
+                    intensity: 0.3,
+                    child: Text(
+                      l10n.territoryConqueredCelebrationMessage,
+                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
+                for (final badge in newlyAwardedBadges) ...[
+                  const SizedBox(height: 16),
+                  PulseIn(
+                    intensity: 0.3,
+                    child: Text(
+                      l10n.badgeUnlockedCelebrationMessage(badge['name'] as String),
+                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
               ],
             ),
           ),

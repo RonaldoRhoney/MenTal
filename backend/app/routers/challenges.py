@@ -239,8 +239,16 @@ def submit_answer(
     db.commit()
 
     profile = services.get_or_create_profile(db, user_id)
+    # MICROINTERACTIONS.md: captura o "antes" pra detectar a TRANSIÇÃO
+    # exata (nível subiu / território acabou de ser conquistado agora),
+    # nunca o estado absoluto — senão o client celebraria de novo a cada
+    # resposta seguinte num território já conquistado.
+    level_before = profile.level
     territory_progress = None
+    was_conquered_before = False
     if is_correct and xp_final > 0:
+        existing_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
+        was_conquered_before = bool(existing_progress and existing_progress.conquered_at)
         profile.xp_total += xp_final
         profile.level = scoring.level_from_xp(profile.xp_total)
         db.commit()
@@ -248,13 +256,30 @@ def submit_answer(
     else:
         territory_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
 
+    level_up = profile.level > level_before
+    territory_just_conquered = bool(territory_progress and territory_progress.conquered_at and not was_conquered_before)
+
     services.register_daily_usage(db, user_id, date.today())
+    streak_count_before = services.get_or_create_streak(db, user_id).current_streak
     streak = services.register_play_for_streak(db, user_id, date.today())
+    streak_just_extended = streak.current_streak > streak_count_before
+
     # V2 item 1 — Badges/Conquistas: avalia depois que XP/território/streak
     # já estão commitados, para os avaliadores lerem o estado final desta
-    # tentativa. Resultado (badges recém-concedidos) não é retornado ainda
-    # nesta resposta — client consulta via GET /badges.
-    services.check_and_award_badges(db, user_id)
+    # tentativa. Badges recém-concedidos AGORA voltam na própria resposta
+    # (MICROINTERACTIONS.md) — GET /badges continua sendo a fonte de
+    # verdade do catálogo completo, isto aqui é só o "flash" do momento.
+    newly_awarded = services.check_and_award_badges(db, user_id)
+    newly_awarded_out = [
+        schemas.BadgeOut(
+            code=b.code,
+            name=b.name,
+            description=b.description,
+            earned=True,
+            earned_at=datetime.utcnow().isoformat(),
+        )
+        for b in newly_awarded
+    ]
 
     return schemas.AnswerResponse(
         is_correct=is_correct,
@@ -268,4 +293,9 @@ def submit_answer(
             xp_in_territory=territory_progress.xp_in_territory if territory_progress else 0,
             conquered=bool(territory_progress and territory_progress.conquered_at),
         ),
+        level_up=level_up,
+        new_level=profile.level if level_up else None,
+        territory_just_conquered=territory_just_conquered,
+        streak_just_extended=streak_just_extended,
+        newly_awarded_badges=newly_awarded_out,
     )

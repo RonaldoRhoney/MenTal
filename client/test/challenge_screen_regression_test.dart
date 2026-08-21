@@ -76,8 +76,77 @@ class _VisualFakeApiClient extends ApiClient {
       'xp_awarded': 10,
       'xp_base': 10,
       'hints_used': 0,
+      'streak': {'current_streak': 1, 'freeze_available': true},
     };
   }
+}
+
+/// Simula um desafio simples cuja resposta carrega sinais de celebração
+/// configuráveis (MICROINTERACTIONS.md) — o backend é a única autoridade
+/// sobre esses sinais, então o client só precisa saber renderizá-los.
+class _CelebrationFakeApiClient extends ApiClient {
+  _CelebrationFakeApiClient({required this.answerPayload}) : super(baseUrl: 'http://fake', userId: 'fake-user');
+
+  final Map<String, dynamic> answerPayload;
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId) async {
+    return {
+      'challenge_id': 'fake-challenge-id',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': 'Quanto é 2 + 2?',
+      'options': ['3', '4', '5', '6'],
+      'hints_available': 2,
+    };
+  }
+
+  @override
+  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer) async {
+    return answerPayload;
+  }
+}
+
+Map<String, dynamic> _baseAnswerPayload() => {
+      'is_correct': true,
+      'correct_answer': '4',
+      'explanation': '2 + 2 = 4.',
+      'xp_awarded': 10,
+      'xp_base': 10,
+      'hints_used': 0,
+      'streak': {'current_streak': 1, 'freeze_available': true},
+      'level_up': false,
+      'new_level': null,
+      'territory_just_conquered': false,
+      'streak_just_extended': false,
+      'newly_awarded_badges': <Map<String, dynamic>>[],
+    };
+
+Future<void> _pumpChallengeScreen(
+  WidgetTester tester,
+  ApiClient client, {
+  bool disableAnimations = false,
+}) async {
+  await tester.pumpWidget(
+    MediaQuery(
+      data: MediaQueryData(disableAnimations: disableAnimations),
+      child: MaterialApp(
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: ChallengeScreen(client: client, territoryId: 'numeros', territoryLabel: 'Números'),
+      ),
+    ),
+  );
+  await tester.pumpAndSettle();
+  await tester.tap(find.widgetWithText(RadioListTile<String>, '4'));
+  await tester.pump();
+  await tester.tap(find.widgetWithText(FilledButton, 'Confirmar resposta'));
+  await tester.pumpAndSettle();
 }
 
 void main() {
@@ -232,4 +301,72 @@ void main() {
       expect(find.textContaining('quadrado dourado'), findsOneWidget);
     },
   );
+
+  group('sinais de celebração (MICROINTERACTIONS.md)', () {
+    testWidgets('level_up mostra "Nível X alcançado!"', (tester) async {
+      final payload = _baseAnswerPayload()
+        ..['level_up'] = true
+        ..['new_level'] = 3;
+      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+
+      expect(find.text('Nível 3 alcançado!'), findsOneWidget);
+    });
+
+    testWidgets('territory_just_conquered mostra "Território conquistado!"', (tester) async {
+      final payload = _baseAnswerPayload()..['territory_just_conquered'] = true;
+      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+
+      expect(find.text('Território conquistado!'), findsOneWidget);
+    });
+
+    testWidgets('newly_awarded_badges mostra "Nova conquista: {nome}!"', (tester) async {
+      final payload = _baseAnswerPayload()
+        ..['newly_awarded_badges'] = [
+          {'code': 'first_conquest', 'name': 'Primeira Conquista', 'description': '...', 'earned': true, 'earned_at': '2026-01-01'},
+        ];
+      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+
+      expect(find.text('Nova conquista: Primeira Conquista!'), findsOneWidget);
+    });
+
+    testWidgets('streak_just_extended mostra "Sequência de X dias mantida!"', (tester) async {
+      final payload = _baseAnswerPayload()
+        ..['streak_just_extended'] = true
+        ..['streak'] = {'current_streak': 5, 'freeze_available': true};
+      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+
+      expect(find.text('Sequência de 5 dias mantida!'), findsOneWidget);
+    });
+
+    testWidgets('nenhum sinal ativo não mostra nenhum banner de celebração', (tester) async {
+      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: _baseAnswerPayload()));
+
+      expect(find.textContaining('alcançado!'), findsNothing);
+      expect(find.textContaining('conquistado!'), findsNothing);
+      expect(find.textContaining('Nova conquista'), findsNothing);
+      expect(find.textContaining('mantida!'), findsNothing);
+    });
+
+    testWidgets('"reduzir movimento" ativado não quebra a tela de celebração forte', (tester) async {
+      // Regressão: MediaQuery.of() dentro de PulseIn.initState() lançava
+      // "dependOnInheritedWidgetOfExactType called before initState()
+      // completed" — corrigido movendo a leitura para didChangeDependencies.
+      final payload = _baseAnswerPayload()
+        ..['level_up'] = true
+        ..['new_level'] = 2;
+      final errors = <FlutterErrorDetails>[];
+      final originalOnError = FlutterError.onError;
+      FlutterError.onError = (details) => errors.add(details);
+      addTearDown(() => FlutterError.onError = originalOnError);
+
+      await _pumpChallengeScreen(
+        tester,
+        _CelebrationFakeApiClient(answerPayload: payload),
+        disableAnimations: true,
+      );
+
+      expect(errors, isEmpty, reason: '"reduzir movimento" não pode causar exceção ao celebrar um evento forte');
+      expect(find.text('Nível 2 alcançado!'), findsOneWidget);
+    });
+  });
 }

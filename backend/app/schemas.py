@@ -43,6 +43,18 @@ class TerritoryProgressOut(BaseModel):
     conquered: bool
 
 
+class BadgeOut(BaseModel):
+    code: str
+    name: str
+    description: str
+    earned: bool
+    earned_at: str | None
+
+
+class BadgesResponse(BaseModel):
+    badges: list[BadgeOut]
+
+
 class AnswerResponse(BaseModel):
     is_correct: bool
     correct_answer: str
@@ -52,6 +64,16 @@ class AnswerResponse(BaseModel):
     xp_awarded: int
     streak: StreakOut
     territory_progress: TerritoryProgressOut
+    # MICROINTERACTIONS.md — sinais de evento raro/significativo para o
+    # client decidir celebração (som+animação), calculados aqui porque o
+    # backend é a única autoridade sobre "isso realmente aconteceu agora"
+    # (mesma regra de XP/score/desbloqueio). Nunca True numa resposta
+    # idempotente reenviada — só na primeira vez que a resposta é computada.
+    level_up: bool = False
+    new_level: int | None = None
+    territory_just_conquered: bool = False
+    streak_just_extended: bool = False
+    newly_awarded_badges: list[BadgeOut] = []
 
 
 class ProgressTerritoryOut(BaseModel):
@@ -89,15 +111,3 @@ class RankingResponse(BaseModel):
     window: str
     entries: list[RankingEntry]
     me: RankingEntry | None
-
-
-class BadgeOut(BaseModel):
-    code: str
-    name: str
-    description: str
-    earned: bool
-    earned_at: str | None
-
-
-class BadgesResponse(BaseModel):
-    badges: list[BadgeOut]

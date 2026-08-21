@@ -8,6 +8,7 @@ import '../widgets/xp_bar.dart';
 import 'challenge_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
+import 'settings_screen.dart';
 
 /// Home: um CTA primário claro por território, conforme Princípio de
 /// Clareza Imediata (PRODUCT_PRINCIPLES.md §1) — nada compete visualmente
@@ -75,6 +76,15 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) => RankingScreen(client: widget.client)),
+              );
+            },
+          ),
+          IconButton(
+            tooltip: l10n.settingsTooltip,
+            icon: const Icon(Icons.settings_outlined),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const SettingsScreen()),
               );
             },
           ),

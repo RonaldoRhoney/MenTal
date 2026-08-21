@@ -177,4 +177,41 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get badgeLockedLabel => 'Bloqueado';
+
+  @override
+  String get settingsTooltip => 'Configurações';
+
+  @override
+  String get settingsScreenTitle => 'Configurações';
+
+  @override
+  String get soundSectionTitle => 'Som';
+
+  @override
+  String get soundToggleLabel => 'Efeitos sonoros';
+
+  @override
+  String get soundVolumeLabel => 'Volume dos efeitos';
+
+  @override
+  String get soundSilencedNote =>
+      'O som não toca enquanto o aparelho estiver no modo silencioso ou vibrar.';
+
+  @override
+  String levelUpMessage(int level) {
+    return 'Nível $level alcançado!';
+  }
+
+  @override
+  String get territoryConqueredCelebrationMessage => 'Território conquistado!';
+
+  @override
+  String badgeUnlockedCelebrationMessage(String badgeName) {
+    return 'Nova conquista: $badgeName!';
+  }
+
+  @override
+  String streakExtendedCelebrationMessage(int days) {
+    return 'Sequência de $days dias mantida!';
+  }
 }

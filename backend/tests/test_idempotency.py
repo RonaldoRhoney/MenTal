@@ -22,9 +22,20 @@ def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
     xp_after_first = client.get("/progress", headers=headers).json()["xp_total"]
     assert xp_after_first == first["xp_awarded"]
 
-    # Reenvio exato do mesmo attempt_id (simulando retry de rede).
+    # Reenvio exato do mesmo attempt_id (simulando retry de rede). O
+    # resultado do jogo (XP, acerto, progresso) é idêntico — mas os sinais
+    # de celebração (MICROINTERACTIONS.md) nunca retriggam num reenvio,
+    # mesmo que a primeira resposta genuinamente tenha sido um evento raro
+    # (aqui, streak_just_extended=True no primeiro play do dia).
     second = client.post(f"/challenges/{challenge['challenge_id']}/answer", json=payload, headers=headers).json()
-    assert second == first
+    celebration_fields = {"level_up", "territory_just_conquered", "streak_just_extended", "newly_awarded_badges"}
+    assert {k: v for k, v in second.items() if k not in celebration_fields} == {
+        k: v for k, v in first.items() if k not in celebration_fields
+    }
+    assert second["level_up"] is False
+    assert second["territory_just_conquered"] is False
+    assert second["streak_just_extended"] is False
+    assert second["newly_awarded_badges"] == []
 
     xp_after_second = client.get("/progress", headers=headers).json()["xp_total"]
     assert xp_after_second == xp_after_first, "XP não pode dobrar por reenvio do mesmo attempt_id"

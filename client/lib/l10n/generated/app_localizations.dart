@@ -387,6 +387,66 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Bloqueado'**
   String get badgeLockedLabel;
+
+  /// Home app bar icon tooltip, opens Settings screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Configurações'**
+  String get settingsTooltip;
+
+  /// Settings screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Configurações'**
+  String get settingsScreenTitle;
+
+  /// Sound settings section title, MICROINTERACTIONS.md/AUDIO_FEEDBACK.md
+  ///
+  /// In pt, this message translates to:
+  /// **'Som'**
+  String get soundSectionTitle;
+
+  /// Sound effects on/off toggle label
+  ///
+  /// In pt, this message translates to:
+  /// **'Efeitos sonoros'**
+  String get soundToggleLabel;
+
+  /// Sound effects volume slider label
+  ///
+  /// In pt, this message translates to:
+  /// **'Volume dos efeitos'**
+  String get soundVolumeLabel;
+
+  /// Explains that device silent/vibrate mode is respected, AUDIO_FEEDBACK.md §3
+  ///
+  /// In pt, this message translates to:
+  /// **'O som não toca enquanto o aparelho estiver no modo silencioso ou vibrar.'**
+  String get soundSilencedNote;
+
+  /// Level up celebration message
+  ///
+  /// In pt, this message translates to:
+  /// **'Nível {level} alcançado!'**
+  String levelUpMessage(int level);
+
+  /// Territory just conquered celebration message
+  ///
+  /// In pt, this message translates to:
+  /// **'Território conquistado!'**
+  String get territoryConqueredCelebrationMessage;
+
+  /// Badge just unlocked celebration message
+  ///
+  /// In pt, this message translates to:
+  /// **'Nova conquista: {badgeName}!'**
+  String badgeUnlockedCelebrationMessage(String badgeName);
+
+  /// Streak extended/protected celebration message
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência de {days} dias mantida!'**
+  String streakExtendedCelebrationMessage(int days);
 }
 
 class _AppLocalizationsDelegate

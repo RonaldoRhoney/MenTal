@@ -190,5 +190,50 @@
   "@badgeEarnedLabel": {"description": "Badge earned status"},
 
   "badgeLockedLabel": "Bloqueado",
-  "@badgeLockedLabel": {"description": "Badge not-yet-earned status"}
+  "@badgeLockedLabel": {"description": "Badge not-yet-earned status"},
+
+  "settingsTooltip": "Configurações",
+  "@settingsTooltip": {"description": "Home app bar icon tooltip, opens Settings screen"},
+
+  "settingsScreenTitle": "Configurações",
+  "@settingsScreenTitle": {"description": "Settings screen app bar title"},
+
+  "soundSectionTitle": "Som",
+  "@soundSectionTitle": {"description": "Sound settings section title, MICROINTERACTIONS.md/AUDIO_FEEDBACK.md"},
+
+  "soundToggleLabel": "Efeitos sonoros",
+  "@soundToggleLabel": {"description": "Sound effects on/off toggle label"},
+
+  "soundVolumeLabel": "Volume dos efeitos",
+  "@soundVolumeLabel": {"description": "Sound effects volume slider label"},
+
+  "soundSilencedNote": "O som não toca enquanto o aparelho estiver no modo silencioso ou vibrar.",
+  "@soundSilencedNote": {"description": "Explains that device silent/vibrate mode is respected, AUDIO_FEEDBACK.md §3"},
+
+  "levelUpMessage": "Nível {level} alcançado!",
+  "@levelUpMessage": {
+    "description": "Level up celebration message",
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+
+  "territoryConqueredCelebrationMessage": "Território conquistado!",
+  "@territoryConqueredCelebrationMessage": {"description": "Territory just conquered celebration message"},
+
+  "badgeUnlockedCelebrationMessage": "Nova conquista: {badgeName}!",
+  "@badgeUnlockedCelebrationMessage": {
+    "description": "Badge just unlocked celebration message",
+    "placeholders": {
+      "badgeName": {"type": "String"}
+    }
+  },
+
+  "streakExtendedCelebrationMessage": "Sequência de {days} dias mantida!",
+  "@streakExtendedCelebrationMessage": {
+    "description": "Streak extended/protected celebration message",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  }
 }
