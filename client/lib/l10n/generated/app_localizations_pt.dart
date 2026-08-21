@@ -50,6 +50,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryConhecimento => 'Conhecimento';
 
   @override
+  String get territoryEnigmas => 'Enigmas';
+
+  @override
   String get dailyLimitReachedMessage =>
       'Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.';
 

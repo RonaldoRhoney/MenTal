@@ -7,6 +7,13 @@ TERRITORIES = [
     {"id": "numeros", "challenge_type": "numeros", "requires_subscription": False, "free_sample_count": 0, "display_order": 2},
     {"id": "logica", "challenge_type": "logica", "requires_subscription": True, "free_sample_count": 2, "display_order": 3},
     {"id": "conhecimento", "challenge_type": "conhecimento", "requires_subscription": True, "free_sample_count": 2, "display_order": 4},
+    # V2 item 2 — Enigmas/charadas (V2_KICKOFF.md §6A). Reaproveita 100% do
+    # fluxo de desafio existente — nenhum campo/modelo novo. Tratado como
+    # território "avançado" (mesmo tier de logica/conhecimento), decisão
+    # de produto tomada aqui por não ter sido especificada: charadas pedem
+    # mais raciocínio que os territórios gratuitos (palavras/números
+    # diretos), revisável quando houver dado real de uso.
+    {"id": "enigmas", "challenge_type": "enigmas", "requires_subscription": True, "free_sample_count": 2, "display_order": 5},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -484,6 +491,147 @@ CHALLENGES = [
         "explanation": "O Iene é a moeda oficial do Japão.",
         "age_reviewed": True,
         "hints": ["Não é a moeda da China nem da Coreia.", "Começa com 'I'."],
+    },
+
+    # Enigmas — charadas clássicas "o que é, o que é", curadoria manual
+    # (formato múltipla escolha em todas, para evitar falso-negativo de
+    # variação de resposta livre que um enigma de resposta aberta causaria
+    # — ex.: "relógio" vs "o relógio"). 15 itens, 5 por nível 1-3, mesmo
+    # padrão de volume dos outros territórios.
+    {
+        "territory_id": "enigmas", "difficulty_level": 1,
+        "prompt": "O que é, o que é: tem cidade, tem campo, tem estrada, mas não tem casa?",
+        "options": ["Mapa", "Globo", "Bússola", "Carro"],
+        "correct_answer": "Mapa",
+        "explanation": "Um mapa representa cidades, campos e estradas em papel ou tela, mas nenhuma casa de verdade.",
+        "age_reviewed": True,
+        "hints": ["Você usa para se localizar numa viagem.", "Pode ser de papel ou digital, no celular."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 1,
+        "prompt": "O que é, o que é: quanto mais se tira, maior fica?",
+        "options": ["Buraco", "Bolo", "Dívida", "Sombra"],
+        "correct_answer": "Buraco",
+        "explanation": "Cavar um buraco significa tirar terra — quanto mais terra você tira, maior o buraco fica.",
+        "age_reviewed": True,
+        "hints": ["Pense em alguém cavando a terra.", "É o oposto de um monte."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 1,
+        "prompt": "O que é, o que é: tem boca mas não fala, tem leito mas não dorme?",
+        "options": ["Rio", "Vulcão", "Vale", "Poço"],
+        "correct_answer": "Rio",
+        "explanation": "Um rio tem 'boca' (onde deságua) e 'leito' (o caminho por onde a água passa), mas não fala nem dorme.",
+        "age_reviewed": True,
+        "hints": ["A água corre dentro dele.", "Pode desaguar no mar."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 1,
+        "prompt": "O que é, o que é: você o quebra só de falar o nome dele?",
+        "options": ["Silêncio", "Vidro", "Segredo", "Recorde"],
+        "correct_answer": "Silêncio",
+        "explanation": "No instante em que você diz a palavra 'silêncio' em voz alta, o silêncio deixa de existir.",
+        "age_reviewed": True,
+        "hints": ["É a ausência de som.", "Uma biblioteca costuma pedir isso."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 1,
+        "prompt": "O que é, o que é: tem dentes mas não morde?",
+        "options": ["Pente", "Serrote", "Tubarão", "Zíper"],
+        "correct_answer": "Pente",
+        "explanation": "Um pente tem 'dentes' (as pontas finas), mas serve para arrumar o cabelo, não para morder.",
+        "age_reviewed": True,
+        "hints": ["Você usa para pentear o cabelo.", "Fica no banheiro ou na bolsa."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 2,
+        "prompt": "O que é, o que é: quanto mais você seca, mais molhado fica?",
+        "options": ["Toalha", "Guarda-chuva", "Esponja", "Sabonete"],
+        "correct_answer": "Toalha",
+        "explanation": "A toalha absorve a água de quem ela seca, e por isso ela mesma fica cada vez mais molhada.",
+        "age_reviewed": True,
+        "hints": ["Você usa depois do banho.", "Fica pendurada perto do chuveiro."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 2,
+        "prompt": "O que é, o que é: todo mundo tem, ninguém pode perder de vez — se perder, morre?",
+        "options": ["Vida", "Dinheiro", "Memória", "Paciência"],
+        "correct_answer": "Vida",
+        "explanation": "Todo ser vivo tem vida, e perdê-la significa morrer — não há como 'recuperar' depois.",
+        "age_reviewed": True,
+        "hints": ["É o oposto de morte.", "Médicos trabalham para preservar isso."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 2,
+        "prompt": "O que é, o que é: sobe e desce o tempo todo, mas nunca sai do lugar?",
+        "options": ["Escada", "Elevador", "Termômetro", "Balanço"],
+        "correct_answer": "Escada",
+        "explanation": "As pessoas sobem e descem por uma escada várias vezes, mas a escada em si fica sempre fixa no mesmo lugar.",
+        "age_reviewed": True,
+        "hints": ["Tem degraus.", "Pode ser rolante ou fixa."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 2,
+        "prompt": "O que é, o que é: tem coroa mas não é rei, tem folhas mas não é livro?",
+        "options": ["Árvore", "Coroa de flores", "Abacaxi", "Calendário"],
+        "correct_answer": "Árvore",
+        "explanation": "A parte de cima de uma árvore é chamada de 'copa' ou 'coroa', e ela tem folhas — mas não é realeza nem um livro.",
+        "age_reviewed": True,
+        "hints": ["Tem tronco, galhos e raízes.", "Dá sombra num dia de sol."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 2,
+        "prompt": "O que é, o que é: quanto mais você me usa, mais fino eu fico, até desaparecer?",
+        "options": ["Sabonete", "Lápis", "Vela", "Pilha"],
+        "correct_answer": "Sabonete",
+        "explanation": "A cada banho, o sabonete perde um pouco de massa e vai ficando cada vez mais fino.",
+        "age_reviewed": True,
+        "hints": ["Você usa no banho.", "Faz espuma com água."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 3,
+        "prompt": "O que é, o que é: nasce com a luz do sol, mas o próprio sol o apaga ao meio-dia?",
+        "options": ["Sombra", "Nuvem", "Reflexo", "Orvalho"],
+        "correct_answer": "Sombra",
+        "explanation": "A sombra é criada pela luz do sol bloqueada por um objeto — mas fica quase invisível quando o sol está bem a pino, ao meio-dia.",
+        "age_reviewed": True,
+        "hints": ["Aparece atrás de você quando há luz forte.", "É escura, mas não é um objeto de verdade."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 3,
+        "prompt": "O que é, o que é: quanto mais eu recebo comida, mais eu cresço — mas se me derem água, eu morro?",
+        "options": ["Fogo", "Planta", "Fungo", "Formigueiro"],
+        "correct_answer": "Fogo",
+        "explanation": "O fogo 'se alimenta' de material combustível e cresce, mas é apagado pela água.",
+        "age_reviewed": True,
+        "hints": ["Pode ser apagado com um extintor.", "É quente e dá luz."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 3,
+        "prompt": "O que é, o que é: só sobe e nunca desce, mesmo contra a sua vontade?",
+        "options": ["Idade", "Elevador", "Pipa", "Maré"],
+        "correct_answer": "Idade",
+        "explanation": "A idade de uma pessoa aumenta a cada ano que passa e nunca volta atrás.",
+        "age_reviewed": True,
+        "hints": ["Você ganha um número novo dela todo aniversário.", "Não existe cirurgia que a diminua de verdade."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 3,
+        "prompt": "O que é, o que é: tem uma cabeça e uma cauda, mas não tem corpo nem vida?",
+        "options": ["Moeda", "Cometa", "Cobra", "Pipa"],
+        "correct_answer": "Moeda",
+        "explanation": "Toda moeda tem um lado chamado 'cara' (cabeça) e outro chamado 'coroa', às vezes descrito como 'cauda' em outros idiomas — mas é só um objeto de metal.",
+        "age_reviewed": True,
+        "hints": ["Você joga para o alto para decidir algo no 'cara ou coroa'.", "É feita de metal e usada para pagar coisas."],
+    },
+    {
+        "territory_id": "enigmas", "difficulty_level": 3,
+        "prompt": "O que é, o que é: quanto mais escuro está ao redor, mais fácil é enxergá-lo no céu?",
+        "options": ["Estrela", "Nuvem", "Avião", "Arco-íris"],
+        "correct_answer": "Estrela",
+        "explanation": "As estrelas ficam mais visíveis quanto mais escuro está o céu — por isso se veem melhor longe das luzes da cidade.",
+        "age_reviewed": True,
+        "hints": ["Você as vê à noite, longe das luzes da cidade.", "O Sol também é uma, mas não conta para esta charada."],
     },
 ]
 
