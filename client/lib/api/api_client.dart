@@ -69,6 +69,14 @@ class ApiClient {
     return _decode(resp);
   }
 
+  Future<Map<String, dynamic>> ranking({String scope = 'global', String window = 'weekly'}) async {
+    final resp = await http.get(
+      _uri('/ranking', {'scope': scope, 'window': window}),
+      headers: _headers,
+    );
+    return _decode(resp);
+  }
+
   Map<String, dynamic> _decode(http.Response resp) {
     final body = jsonDecode(resp.body) as Map<String, dynamic>;
     if (resp.statusCode >= 400) {

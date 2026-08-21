@@ -97,4 +97,63 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get nextChallengeButton => 'Próximo desafio';
+
+  @override
+  String get progressTooltip => 'Progresso';
+
+  @override
+  String get rankingTooltip => 'Ranking';
+
+  @override
+  String get progressScreenTitle => 'Progresso';
+
+  @override
+  String levelLabel(int level) {
+    return 'Nível $level';
+  }
+
+  @override
+  String territoryXpLabel(int xp, int threshold) {
+    return '$xp / $threshold XP';
+  }
+
+  @override
+  String get conqueredBadge => 'Conquistado';
+
+  @override
+  String get inProgressBadge => 'Em progresso';
+
+  @override
+  String get streakSectionTitle => 'Sequência';
+
+  @override
+  String streakDaysLabel(int days) {
+    return '$days dias seguidos';
+  }
+
+  @override
+  String get streakFreezeAvailableMessage =>
+      'Proteção de sequência disponível esta semana — uma falha não quebra sua sequência.';
+
+  @override
+  String get streakFreezeUsedMessage =>
+      'Proteção de sequência já usada esta semana.';
+
+  @override
+  String get rankingScreenTitle => 'Ranking';
+
+  @override
+  String get rankingWindowLabel => 'Ranking da semana';
+
+  @override
+  String rankingPositionLabel(int rank) {
+    return '#$rank';
+  }
+
+  @override
+  String get rankingMePrefix => 'Você';
+
+  @override
+  String get rankingEmptyMessage =>
+      'Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!';
 }

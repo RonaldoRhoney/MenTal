@@ -59,11 +59,13 @@ class ProgressTerritoryOut(BaseModel):
     xp_in_territory: int
     unlocked: bool
     conquered: bool
+    conquest_threshold: int
 
 
 class ProgressResponse(BaseModel):
     xp_total: int
     level: int
+    xp_per_level: int
     territories: list[ProgressTerritoryOut]
     streak: StreakOut
 

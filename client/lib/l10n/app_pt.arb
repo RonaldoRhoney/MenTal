@@ -103,5 +103,74 @@
   },
 
   "nextChallengeButton": "Próximo desafio",
-  "@nextChallengeButton": {"description": "Button to load the next challenge"}
+  "@nextChallengeButton": {"description": "Button to load the next challenge"},
+
+  "progressTooltip": "Progresso",
+  "@progressTooltip": {"description": "Home app bar icon tooltip, opens Progress screen"},
+
+  "rankingTooltip": "Ranking",
+  "@rankingTooltip": {"description": "Home app bar icon tooltip, opens Ranking screen"},
+
+  "progressScreenTitle": "Progresso",
+  "@progressScreenTitle": {"description": "Progress screen app bar title"},
+
+  "levelLabel": "Nível {level}",
+  "@levelLabel": {
+    "description": "Level headline",
+    "placeholders": {
+      "level": {"type": "int"}
+    }
+  },
+
+  "territoryXpLabel": "{xp} / {threshold} XP",
+  "@territoryXpLabel": {
+    "description": "Per-territory XP progress caption",
+    "placeholders": {
+      "xp": {"type": "int"},
+      "threshold": {"type": "int"}
+    }
+  },
+
+  "conqueredBadge": "Conquistado",
+  "@conqueredBadge": {"description": "Badge shown on a conquered territory"},
+
+  "inProgressBadge": "Em progresso",
+  "@inProgressBadge": {"description": "Badge shown on a territory not yet conquered"},
+
+  "streakSectionTitle": "Sequência",
+  "@streakSectionTitle": {"description": "Streak section title on Progress screen"},
+
+  "streakDaysLabel": "{days} dias seguidos",
+  "@streakDaysLabel": {
+    "description": "Current streak count",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "streakFreezeAvailableMessage": "Proteção de sequência disponível esta semana — uma falha não quebra sua sequência.",
+  "@streakFreezeAvailableMessage": {"description": "Streak freeze available explanation"},
+
+  "streakFreezeUsedMessage": "Proteção de sequência já usada esta semana.",
+  "@streakFreezeUsedMessage": {"description": "Streak freeze already used explanation"},
+
+  "rankingScreenTitle": "Ranking",
+  "@rankingScreenTitle": {"description": "Ranking screen app bar title"},
+
+  "rankingWindowLabel": "Ranking da semana",
+  "@rankingWindowLabel": {"description": "Ranking window caption (weekly)"},
+
+  "rankingPositionLabel": "#{rank}",
+  "@rankingPositionLabel": {
+    "description": "Rank position prefix",
+    "placeholders": {
+      "rank": {"type": "int"}
+    }
+  },
+
+  "rankingMePrefix": "Você",
+  "@rankingMePrefix": {"description": "Marks the current user's row in the ranking list"},
+
+  "rankingEmptyMessage": "Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!",
+  "@rankingEmptyMessage": {"description": "Empty ranking state"}
 }

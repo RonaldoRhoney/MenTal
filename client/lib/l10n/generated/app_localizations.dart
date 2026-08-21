@@ -249,6 +249,102 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Próximo desafio'**
   String get nextChallengeButton;
+
+  /// Home app bar icon tooltip, opens Progress screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Progresso'**
+  String get progressTooltip;
+
+  /// Home app bar icon tooltip, opens Ranking screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Ranking'**
+  String get rankingTooltip;
+
+  /// Progress screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Progresso'**
+  String get progressScreenTitle;
+
+  /// Level headline
+  ///
+  /// In pt, this message translates to:
+  /// **'Nível {level}'**
+  String levelLabel(int level);
+
+  /// Per-territory XP progress caption
+  ///
+  /// In pt, this message translates to:
+  /// **'{xp} / {threshold} XP'**
+  String territoryXpLabel(int xp, int threshold);
+
+  /// Badge shown on a conquered territory
+  ///
+  /// In pt, this message translates to:
+  /// **'Conquistado'**
+  String get conqueredBadge;
+
+  /// Badge shown on a territory not yet conquered
+  ///
+  /// In pt, this message translates to:
+  /// **'Em progresso'**
+  String get inProgressBadge;
+
+  /// Streak section title on Progress screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência'**
+  String get streakSectionTitle;
+
+  /// Current streak count
+  ///
+  /// In pt, this message translates to:
+  /// **'{days} dias seguidos'**
+  String streakDaysLabel(int days);
+
+  /// Streak freeze available explanation
+  ///
+  /// In pt, this message translates to:
+  /// **'Proteção de sequência disponível esta semana — uma falha não quebra sua sequência.'**
+  String get streakFreezeAvailableMessage;
+
+  /// Streak freeze already used explanation
+  ///
+  /// In pt, this message translates to:
+  /// **'Proteção de sequência já usada esta semana.'**
+  String get streakFreezeUsedMessage;
+
+  /// Ranking screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Ranking'**
+  String get rankingScreenTitle;
+
+  /// Ranking window caption (weekly)
+  ///
+  /// In pt, this message translates to:
+  /// **'Ranking da semana'**
+  String get rankingWindowLabel;
+
+  /// Rank position prefix
+  ///
+  /// In pt, this message translates to:
+  /// **'#{rank}'**
+  String rankingPositionLabel(int rank);
+
+  /// Marks the current user's row in the ranking list
+  ///
+  /// In pt, this message translates to:
+  /// **'Você'**
+  String get rankingMePrefix;
+
+  /// Empty ranking state
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!'**
+  String get rankingEmptyMessage;
 }
 
 class _AppLocalizationsDelegate
