@@ -10,6 +10,7 @@ texto, sem repetir) independente da integração externa de verdade.
 import sqlite3
 import uuid
 from datetime import datetime, timedelta
+from app.timeutil import utcnow
 
 from app import config, notifications
 from app.db import SessionLocal
@@ -71,7 +72,7 @@ def test_progress_call_updates_last_seen(client):
 
         profile = db.get(models.Profile, user.replace("-", ""))
         assert profile.last_seen_at is not None
-        assert (datetime.utcnow() - profile.last_seen_at) < timedelta(minutes=1)
+        assert (utcnow() - profile.last_seen_at) < timedelta(minutes=1)
 
 
 def test_reengagement_fires_once_per_window_24h_then_48h(client, monkeypatch):
@@ -83,7 +84,7 @@ def test_reengagement_fires_once_per_window_24h_then_48h(client, monkeypatch):
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
     _register_token(client, headers)
 
-    now = datetime.utcnow()
+    now = utcnow()
     _set_last_seen(user, now - timedelta(hours=25))
 
     with SessionLocal() as db:
@@ -119,7 +120,7 @@ def test_reengagement_respects_disabled_preference(client, monkeypatch):
     _register_token(client, headers)
     client.put("/notifications/preferences", json={"reengagement_enabled": False, "social_enabled": True}, headers=headers)
 
-    now = datetime.utcnow()
+    now = utcnow()
     _set_last_seen(user, now - timedelta(hours=30))
 
     with SessionLocal() as db:
@@ -155,7 +156,7 @@ def test_social_overtake_fires_with_nickname_for_adult(client, monkeypatch):
     # Loser joga uma vez (fica na frente por enquanto).
     _answer(loser_headers)
 
-    now = datetime.utcnow()
+    now = utcnow()
     with SessionLocal() as db:
         notifications.run_notification_checks(db, now=now)
     assert sent_log == []  # primeira checagem só grava a posição, nunca notifica
@@ -205,7 +206,7 @@ def test_social_overtake_is_anonymized_for_child_safe_mode(client, monkeypatch):
         )
 
     _answer(loser_headers)
-    now = datetime.utcnow()
+    now = utcnow()
     with SessionLocal() as db:
         notifications.run_notification_checks(db, now=now)
 

@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from fastapi import APIRouter, Depends
 from sqlalchemy import select, func
@@ -8,6 +8,7 @@ from .. import models, services
 from ..schemas import RankingResponse, RankingEntry
 from ..auth import get_current_user_id
 from ..db import get_db
+from ..timeutil import utcnow
 
 router = APIRouter()
 
@@ -28,14 +29,14 @@ def get_ranking(
         allowed_user_ids = set(services.get_friend_user_ids(db, user_id)) | {user_id}
 
     if window == "weekly":
-        # datetime.utcnow(), não date.today(): Attempt.created_at é gravado
-        # em UTC (datetime.utcnow() em toda a base) — usar a data LOCAL do
+        # utcnow(), não date.today(): Attempt.created_at é gravado
+        # em UTC (utcnow() em toda a base) — usar a data LOCAL do
         # servidor aqui criava uma janela "semana" que não batia com o
         # fuso em que os timestamps foram gravados, um descompasso real
         # achado implementando Estatísticas (item 5), onde o mesmo
         # problema em register_play_for_streak produzia "sequência mais
         # longa" menor que "sequência atual" — logicamente impossível.
-        since = datetime.utcnow() - timedelta(days=7)
+        since = utcnow() - timedelta(days=7)
         query = (
             select(models.Attempt.user_id, func.sum(models.Attempt.xp_awarded).label("xp"))
             .where(models.Attempt.created_at >= since)

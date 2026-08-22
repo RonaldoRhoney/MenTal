@@ -237,9 +237,11 @@ aparelho físico reconectar (validação por API real já feita).
 
 ## 8. Pendências de manutenção registradas (não bloqueiam o V2)
 
-- **`datetime.utcnow()` depreciado** — usado em todo o backend
-  (models.py, services.py, routers). Python vai remover essa API numa
-  versão futura (substituto: `datetime.now(datetime.UTC)`). Não quebra
-  nada hoje, mas precisa ser resolvido **antes da submissão à Play
-  Store** — registrar como item de manutenção pré-lançamento, não
-  durante a V2.
+- **`datetime.utcnow()` depreciado** — **✅ resolvido (2026-08-22)**,
+  agora que a V2 inteira fechou. Novo `app/timeutil.py` com uma única
+  função `utcnow()` (retorna naive, mesmo valor de sempre — nenhuma
+  mudança de comportamento, só silencia a depreciação), substituído em
+  todo o backend (`models.py`, `services.py`, `movement.py`,
+  `notifications.py`, todos os routers, e os testes que chamavam
+  `datetime.utcnow()` diretamente). 124/124 testes passando, 0
+  ocorrências restantes fora dos comentários de `timeutil.py`.

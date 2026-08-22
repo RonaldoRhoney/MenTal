@@ -9,6 +9,7 @@ test_notifications.py para simular janelas de inatividade.
 import sqlite3
 import uuid
 from datetime import datetime, timedelta
+from app.timeutil import utcnow
 
 from app import config, models, movement, notifications
 from app.db import SessionLocal
@@ -151,7 +152,7 @@ def test_previous_cycle_collectible_within_grace_then_expires(client):
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
-    anchor = datetime.utcnow() - timedelta(hours=30)
+    anchor = utcnow() - timedelta(hours=30)
     _set_anchor(user, anchor)
 
     # Coleta parcial DURANTE o 1º ciclo (é isso que cria o registro do
@@ -213,9 +214,9 @@ def test_movement_cycle_report_fires_once_per_cycle(client, monkeypatch):
     client.post("/movement/enable", headers=headers)
     client.post("/notifications/register-token", json={"push_token": "movement-token"}, headers=headers)
 
-    anchor = datetime.utcnow() - timedelta(hours=25)
+    anchor = utcnow() - timedelta(hours=25)
     _set_anchor(user, anchor)
-    now = datetime.utcnow()
+    now = utcnow()
 
     with SessionLocal() as db:
         result = notifications.run_notification_checks(db, now=now)

@@ -7,6 +7,7 @@ números batem com ações reais do jogador, não só que o endpoint responde.
 
 import uuid
 from datetime import datetime, timedelta
+from app.timeutil import utcnow
 
 from .conftest import auth_header
 
@@ -111,7 +112,7 @@ def test_current_streak_never_exceeds_longest_streak(client):
     # Invariante lógica: a sequência atual é sempre parte da sequência
     # mais longa já vivida, então current_streak > longest_streak é
     # sempre um bug. Achado real implementando este item: Attempt.created_at
-    # é gravado em UTC (datetime.utcnow()) mas o limite diário/streak
+    # é gravado em UTC (utcnow()) mas o limite diário/streak
     # usava date.today() (fuso LOCAL do servidor) — perto da virada do
     # dia, os dois discordavam sobre "qual dia é hoje" e produziam esse
     # exato cenário impossível. Corrigido padronizando os dois em UTC.

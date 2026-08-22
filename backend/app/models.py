@@ -1,5 +1,6 @@
 import uuid
 from datetime import datetime, date
+from .timeutil import utcnow
 
 from sqlalchemy import (
     String,
@@ -59,7 +60,7 @@ class Profile(Base):
     # profile é a forma mais simples de persistir esse estado sem
     # introduzir um sistema de sessão só para isso. Ver relatório do VS01.
     parental_gate_passed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
     # V2 item 8 — Notificações (NOTIFICATIONS.md). Preferência é por
     # categoria (§4: "toggle para desativar cada categoria separadamente")
@@ -220,7 +221,7 @@ class Attempt(Base):
     hints_used: Mapped[int] = mapped_column(Integer, default=0)
     xp_base: Mapped[int | None] = mapped_column(Integer, nullable=True)
     xp_awarded: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md, aprovado
     # 2026-08-22). Só preenchido em tentativas do modo relâmpago; null em
     # todo o resto do app. speed_bonus_xp guardado à parte (não só somado
@@ -266,7 +267,7 @@ class Invite(Base):
     id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
     inviter_user_id: Mapped[str] = mapped_column(UUIDType)
     invite_code: Mapped[str] = mapped_column(String, unique=True)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
 class InviteConversion(Base):
@@ -275,7 +276,7 @@ class InviteConversion(Base):
     id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
     invite_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("invites.id"))
     invited_user_id: Mapped[str] = mapped_column(UUIDType)
-    converted_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    converted_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
     __table_args__ = (UniqueConstraint("invited_user_id", name="uq_invite_conversion_user"),)
 
@@ -298,7 +299,7 @@ class Friendship(Base):
     id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
     user_id_a: Mapped[str] = mapped_column(UUIDType, index=True)
     user_id_b: Mapped[str] = mapped_column(UUIDType, index=True)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
     __table_args__ = (UniqueConstraint("user_id_a", "user_id_b", name="uq_friendship_pair"),)
 
@@ -330,7 +331,7 @@ class UserBadge(Base):
 
     user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     badge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("badges.id"), primary_key=True)
-    earned_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    earned_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
 class Battle(Base):
@@ -363,7 +364,7 @@ class Battle(Base):
     challenger_challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
     opponent_challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
     status: Mapped[str] = mapped_column(String, default="pending")  # pending|resolved
-    challenger_served_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    challenger_served_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     opponent_served_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     challenger_is_correct: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
     opponent_is_correct: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
@@ -373,5 +374,5 @@ class Battle(Base):
     # (ambos erraram) — status é quem diferencia "ainda não resolvida"
     # de "resolvida sem vencedor".
     winner_user_id: Mapped[str | None] = mapped_column(UUIDType, nullable=True)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     resolved_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)

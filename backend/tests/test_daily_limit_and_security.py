@@ -1,5 +1,6 @@
 import uuid
 from datetime import datetime, timedelta
+from app.timeutil import utcnow
 
 from app.config import DAILY_FREE_CHALLENGE_LIMIT
 
@@ -69,7 +70,7 @@ def test_parental_gate_expires_and_requires_revalidation_per_purchase_attempt(cl
 
     with SessionLocal() as db:
         profile = db.get(models.Profile, user)
-        profile.parental_gate_passed_at = datetime.utcnow() - timedelta(
+        profile.parental_gate_passed_at = utcnow() - timedelta(
             minutes=PARENTAL_GATE_VALIDITY_MINUTES + 1
         )
         db.commit()

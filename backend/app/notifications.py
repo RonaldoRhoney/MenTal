@@ -14,6 +14,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from . import config, models, movement, notification_copy, push
+from .timeutil import utcnow
 
 
 def _check_reengagement(db: Session, now: datetime) -> int:
@@ -155,7 +156,7 @@ def _check_movement_reports(db: Session, now: datetime) -> int:
 
 
 def run_notification_checks(db: Session, now: datetime | None = None) -> dict:
-    now = now or datetime.utcnow()
+    now = now or utcnow()
     reengagement_sent = _check_reengagement(db, now)
     social_sent = _check_social_overtakes(db, now)
     movement_sent = _check_movement_reports(db, now)

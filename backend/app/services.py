@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 
 from . import config, models, notification_copy, push, scoring
 from .nickname import generate_anonymous_nickname
+from .timeutil import utcnow
 
 
 def _mastery_score(attempt: "models.Attempt") -> float:
@@ -200,7 +201,7 @@ def apply_xp_to_territory(db: Session, user_id: str, territory_id: str, xp: int)
 
     progress.xp_in_territory += xp
     if progress.conquered_at is None and progress.xp_in_territory >= config.CONQUEST_XP_THRESHOLD:
-        progress.conquered_at = datetime.utcnow()
+        progress.conquered_at = utcnow()
 
     db.commit()
     db.refresh(progress)
@@ -462,7 +463,7 @@ def compute_stats(db: Session, user_id: str) -> dict:
 # V2 item 8 — Notificações (NOTIFICATIONS.md).
 def update_last_seen(db: Session, user_id: str) -> None:
     profile = get_or_create_profile(db, user_id)
-    profile.last_seen_at = datetime.utcnow()
+    profile.last_seen_at = utcnow()
     db.commit()
 
 
@@ -603,7 +604,7 @@ def create_battle(
         difficulty_level=difficulty_level,
         challenger_challenge_id=challenger_challenge.id,
         opponent_challenge_id=opponent_challenge.id,
-        challenger_served_at=datetime.utcnow(),
+        challenger_served_at=utcnow(),
     )
     db.add(battle)
     db.commit()
@@ -626,7 +627,7 @@ def create_battle(
 def get_or_serve_opponent_challenge(db: Session, battle: "models.Battle") -> None:
     """Marca opponent_served_at na PRIMEIRA vez que o desafiado abre o próprio desafio (nunca reescreve depois)."""
     if battle.opponent_served_at is None:
-        battle.opponent_served_at = datetime.utcnow()
+        battle.opponent_served_at = utcnow()
         db.commit()
 
 
@@ -662,7 +663,7 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
     if battle is None:
         return
 
-    now = datetime.utcnow()
+    now = utcnow()
     if battle.challenger_user_id == user_id and battle.challenger_is_correct is None:
         battle.challenger_is_correct = is_correct
         battle.challenger_response_ms = int((now - battle.challenger_served_at).total_seconds() * 1000)

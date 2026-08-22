@@ -7,8 +7,6 @@ maybe_resolve_battle_side, chamado de dentro do endpoint de resposta,
 cuida disso).
 """
 
-from datetime import datetime
-
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -16,6 +14,7 @@ from sqlalchemy.orm import Session
 from .. import config, models, schemas, services
 from ..auth import get_current_user_id
 from ..db import get_db
+from ..timeutil import utcnow
 
 router = APIRouter()
 
@@ -39,7 +38,7 @@ def create_battle(
     if not (config.ADAPTIVE_DIFFICULTY_MIN_LEVEL <= body.difficulty_level <= config.ADAPTIVE_DIFFICULTY_MAX_LEVEL):
         raise HTTPException(status_code=400, detail={"error": {"code": "INVALID_DIFFICULTY_LEVEL", "message": str(body.difficulty_level)}})
 
-    today = datetime.utcnow().date()
+    today = utcnow().date()
     if services.count_battles_sent_today(db, user_id, today) >= config.BATTLE_DAILY_SEND_LIMIT:
         raise HTTPException(
             status_code=429,

@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
@@ -8,6 +6,7 @@ from sqlalchemy.orm import Session
 from .. import config, models, schemas, scoring, services
 from ..auth import get_current_user_id
 from ..db import get_db
+from ..timeutil import utcnow
 
 router = APIRouter()
 
@@ -34,15 +33,15 @@ def next_challenge(
     if not services.is_territory_unlocked(db, user_id, territory):
         raise HTTPException(status_code=403, detail={"error": {"code": "TERRITORY_LOCKED", "message": "Requires active subscription"}})
 
-    # datetime.utcnow().date(), não date.today(): Attempt.created_at é
-    # gravado em UTC (datetime.utcnow() em toda a base) — usar a data
+    # utcnow().date(), não date.today(): Attempt.created_at é
+    # gravado em UTC (utcnow() em toda a base) — usar a data
     # LOCAL do servidor aqui desalinha o "dia" do limite diário/streak do
     # "dia" em que as tentativas foram de fato registradas. Achado real
     # implementando Estatísticas (item 5): a "sequência mais longa"
     # (derivada de Attempt.created_at) aparecia MENOR que a "sequência
     # atual" (Streak.current_streak, calculada com date.today() local) —
     # logicamente impossível, já que a atual é sempre parte da mais longa.
-    today = datetime.utcnow().date()
+    today = utcnow().date()
     allowed, consumed = services.check_daily_limit(db, user_id, today)
     if not allowed:
         raise HTTPException(
@@ -303,7 +302,7 @@ def submit_answer(
 
     level_up = profile.level > level_before
 
-    today = datetime.utcnow().date()
+    today = utcnow().date()
     services.register_daily_usage(db, user_id, today)
     streak_count_before = services.get_or_create_streak(db, user_id).current_streak
     streak = services.register_play_for_streak(db, user_id, today)
@@ -326,7 +325,7 @@ def submit_answer(
             name=b.name,
             description=b.description,
             earned=True,
-            earned_at=datetime.utcnow().isoformat(),
+            earned_at=utcnow().isoformat(),
         )
         for b in newly_awarded
     ]

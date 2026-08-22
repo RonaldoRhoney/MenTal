@@ -18,6 +18,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from . import config, models, scoring, services
+from .timeutil import utcnow
 
 
 class MovementError(Exception):
@@ -71,7 +72,7 @@ def enable_movement(db: Session, user_id: str, now: datetime | None = None) -> m
     profile = services.get_or_create_profile(db, user_id)
     profile.movement_enabled = True
     if profile.movement_cycle_anchor_at is None:
-        profile.movement_cycle_anchor_at = now or datetime.utcnow()
+        profile.movement_cycle_anchor_at = now or utcnow()
     db.commit()
     db.refresh(profile)
     return profile
@@ -119,7 +120,7 @@ def _get_or_create_cycle_for_window(
 
 
 def get_current_cycle(db: Session, profile: models.Profile, now: datetime | None = None) -> models.MovementCycle:
-    now = now or datetime.utcnow()
+    now = now or utcnow()
     cycle_start, cycle_end = _cycle_window_for(profile.movement_cycle_anchor_at, now)
     return _get_or_create_cycle_for_window(db, profile.user_id, cycle_start, cycle_end)
 
@@ -134,7 +135,7 @@ def get_pending_report_cycle(
     reagir ao relatório). Fora da graça, retorna None — os passos
     daquele ciclo estão perdidos, mesmo que nunca coletados.
     """
-    now = now or datetime.utcnow()
+    now = now or utcnow()
     if profile.movement_cycle_anchor_at is None:
         return None
     current_start, _ = _cycle_window_for(profile.movement_cycle_anchor_at, now)
@@ -161,7 +162,7 @@ def collect_steps(
     now: datetime | None = None,
 ) -> tuple[models.MovementCycle, int, bool, int | None, bool, int]:
     """Retorna (ciclo, xp ganho nesta chamada, level_up, new_level, goal_reached, checkpoints_reached)."""
-    now = now or datetime.utcnow()
+    now = now or utcnow()
     profile = services.get_or_create_profile(db, user_id)
     if not profile.movement_enabled or profile.movement_cycle_anchor_at is None:
         raise MovementError("MOVEMENT_DISABLED", "Contador de passos não está ativado.")

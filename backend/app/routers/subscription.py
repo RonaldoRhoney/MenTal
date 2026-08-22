@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from .. import config, models, schemas, services
 from ..auth import get_current_user_id
 from ..db import get_db
+from ..timeutil import utcnow
 
 router = APIRouter()
 
@@ -21,7 +22,7 @@ def get_status(user_id: str = Depends(get_current_user_id), db: Session = Depend
 @router.post("/subscription/parental-gate")
 def pass_parental_gate(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
     profile = services.get_or_create_profile(db, user_id)
-    profile.parental_gate_passed_at = datetime.utcnow()
+    profile.parental_gate_passed_at = utcnow()
     db.commit()
     return {"parental_gate_passed": True}
 
@@ -53,7 +54,7 @@ def validate_receipt(
     # nunca em qualquer momento no passado — sem isso, um adulto que
     # validou o gate uma vez deixaria a conta "destravada para compra"
     # indefinidamente para qualquer pessoa com acesso ao celular logado.
-    age = datetime.utcnow() - passed_at
+    age = utcnow() - passed_at
     if age > timedelta(minutes=config.PARENTAL_GATE_VALIDITY_MINUTES):
         raise HTTPException(
             status_code=403,
@@ -75,8 +76,8 @@ def validate_receipt(
 
     sub.google_play_purchase_token = body.purchase_token
     sub.status = "active"
-    sub.validated_at = datetime.utcnow()
-    sub.expires_at = datetime.utcnow() + timedelta(days=30)
+    sub.validated_at = utcnow()
+    sub.expires_at = utcnow() + timedelta(days=30)
     db.commit()
     db.refresh(sub)
 
