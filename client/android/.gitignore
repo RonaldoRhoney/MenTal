@@ -12,3 +12,7 @@ GeneratedPluginRegistrant.java
 key.properties
 **/*.keystore
 **/*.jks
+
+# V2 item 8 — específico do ambiente/projeto Firebase de cada dev/CI,
+# nunca commitado (mesmo padrão de key.properties acima).
+app/google-services.json

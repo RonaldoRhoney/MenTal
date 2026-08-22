@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -6,6 +7,7 @@ import 'api/session_store.dart';
 import 'l10n/generated/app_localizations.dart';
 import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
+import 'services/push_service.dart';
 import 'theme/app_theme.dart';
 
 /// Ajustar para a URL real do backend Render antes de build de release.
@@ -23,7 +25,16 @@ import 'theme/app_theme.dart';
 /// rodar em emulador, trocar manualmente ou usar --dart-define.
 const String kApiBaseUrl = 'http://127.0.0.1:8000';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await Firebase.initializeApp();
+  } catch (_) {
+    // Sem google-services.json (ex.: build local sem o arquivo do
+    // Firebase) o app continua funcionando normalmente — notificações
+    // push são reforço, nunca requisito (mesmo princípio de
+    // PushService).
+  }
   runApp(const MentalApp());
 }
 
@@ -77,9 +88,13 @@ class _AppEntryPointState extends State<AppEntryPoint> {
 
   Future<void> _bootstrap() async {
     final userId = await SessionStore().getOrCreateUserId();
+    final client = ApiClient(baseUrl: kApiBaseUrl, userId: userId);
     setState(() {
-      _client = ApiClient(baseUrl: kApiBaseUrl, userId: userId);
+      _client = client;
     });
+    // Fire-and-forget: registro de push nunca deve atrasar a navegação
+    // pro Age Gate/Home (PushService já é resiliente a qualquer falha).
+    PushService.instance.initializeAndRegister(client);
   }
 
   @override

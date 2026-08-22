@@ -2,6 +2,10 @@ plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+    // V2 item 8 — Notificações (NOTIFICATIONS.md, FCM confirmado ZERO_COST
+    // via skill zero-cost-api antes de integrar). Lê android/app/google-
+    // services.json (não commitado — ver .gitignore).
+    id("com.google.gms.google-services")
 }
 
 android {

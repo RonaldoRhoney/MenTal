@@ -5,6 +5,11 @@
          usuário abre a tela de Movimento pela primeira vez, nunca no
          onboarding genérico. -->
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <!-- V2 item 8 — Notificações (NOTIFICATIONS.md). Exigida em runtime
+         pelo Android 13+ (API 33+) para exibir notificações — o próprio
+         FirebaseMessaging.requestPermission() já cuida de pedir essa
+         permissão em runtime, mas ela precisa estar declarada aqui. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
         android:label="mental"
         android:name="${applicationName}"
