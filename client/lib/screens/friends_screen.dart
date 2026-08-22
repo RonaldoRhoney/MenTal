@@ -129,9 +129,20 @@ class _FriendsScreenState extends State<FriendsScreen> {
                           ),
                         ),
                         const SizedBox(width: 8),
-                        FilledButton(
-                          onPressed: _adding ? null : _addFriend,
-                          child: Text(l10n.friendsAddButton),
+                        // Achado real (2026-08-22): AppTheme define
+                        // minimumSize: Size.fromHeight(48) pro FilledButton
+                        // (largura infinita mínima, pensado pros CTAs de
+                        // largura cheia em Column — "Novo desafio", "Ativar
+                        // contador" etc.). Isso quebra com "BoxConstraints
+                        // forces an infinite width" sempre que o botão vai
+                        // direto num Row sem Flexible/Expanded — Flexible dá
+                        // a constraint limitada que falta, sem esticar o
+                        // botão como o TextField ao lado.
+                        Flexible(
+                          child: FilledButton(
+                            onPressed: _adding ? null : _addFriend,
+                            child: Text(l10n.friendsAddButton),
+                          ),
                         ),
                       ],
                     ),

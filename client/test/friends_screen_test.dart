@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/friends_screen.dart';
+import 'package:mental/theme/app_theme.dart';
 
 /// V2 item 12 — Amigos. O backend é a autoridade sobre a amizade e
 /// sobre a anonimização de nickname para child_safe_mode — esta tela só
@@ -37,6 +38,12 @@ class _FakeApiClient extends ApiClient {
 Future<void> _pumpFriendsScreen(WidgetTester tester, ApiClient client) async {
   await tester.pumpWidget(
     MaterialApp(
+      // Tema real do app, não o default do Material — achado real
+      // (2026-08-22): o bug de "BoxConstraints forces an infinite width"
+      // só existe por causa do minimumSize: Size.fromHeight(48) definido
+      // em AppTheme pro FilledButton; sem o tema real, o teste passava
+      // mesmo com o bug presente.
+      theme: AppTheme.themeData,
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
