@@ -245,3 +245,36 @@ aparelho físico reconectar (validação por API real já feita).
   `notifications.py`, todos os routers, e os testes que chamavam
   `datetime.utcnow()` diretamente). 124/124 testes passando, 0
   ocorrências restantes fora dos comentários de `timeutil.py`.
+
+## 9. Extensão pós-V2: Conhecimento — conteúdo geral (2026-08-22)
+
+Spec completa em `CONHECIMENTO_EXPANSAO_GERAL.md` (aprovada por Rhoney).
+Expande o território Conhecimento com conteúdo geral (português,
+geografia, história, ciências, artes — exceto cálculo, já coberto por
+Números), usando o mesmo mecanismo do Palavras Relâmpago (item 15),
+agora generalizado como formato **obrigatório e único** ali (nunca
+digitado), diferente de Palavras onde continua opcional.
+
+**Decisão de Rhoney (2026-08-22)**: implementar só a arquitetura agora
+— generalizar o mecanismo pra Conhecimento usar o formato com tempo
+sempre. Expansão de CONTEÚDO (mais perguntas curadas) fica pendente
+até haver uma fonte definida — eu (Claude) nunca invento conteúdo
+factual (`RISKS_AND_OPEN_DECISIONS.md`).
+
+**✅ Arquitetura fechada (2026-08-22)**. `config.PALAVRAS_RELAMPAGO_*`
+renomeado para `config.TIMED_MULTIPLE_CHOICE_*` (tempo/bônus de
+velocidade, agora genéricos — usados por Palavras opcional E
+Conhecimento obrigatório); nova `config.TIMED_MULTIPLE_CHOICE_TERRITORIES
+= {"palavras", "conhecimento"}`. Diferente de Palavras (que sintetiza
+distratores de outros desafios), Conhecimento já nasce com `options`
+curadas de verdade por pergunta — reaproveitadas direto, sem síntese.
+Nível fácil É cronometrado em Conhecimento (sem o piso "nunca fácil"
+que só vale pro modo opcional de Palavras). Cliente: `ChallengeScreen`
+generalizado pra decidir o formato cronometrado a partir do que o
+SERVIDOR manda (`time_limit_seconds`), não mais de um flag local —
+funciona em Conhecimento sem nenhum botão dedicado. Validado no
+aparelho real (formato com tempo renderizado ao abrir Conhecimento
+pelo botão normal, timeout suave confirmado) e via API real (acerto
+rápido = bônus de velocidade máximo, disputa territorial também já
+funciona em Conhecimento de graça, sem código extra). 129/129 testes
+de backend e 30/30 de cliente passando.

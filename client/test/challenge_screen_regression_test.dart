@@ -31,6 +31,30 @@ class _FakeApiClient extends ApiClient {
   }
 }
 
+/// CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): em Conhecimento
+/// o formato com tempo é OBRIGATÓRIO, então o servidor manda
+/// time_limit_seconds mesmo com mode="normal" (nenhum botão dedicado
+/// pede isso, diferente de Palavras Relâmpago). A tela precisa renderizar
+/// o formato cronometrado a partir desse sinal do servidor, não de um
+/// flag local — prova a generalização de widget.relampago para
+/// _timeLimitMs != null em _buildChallenge.
+class _ConhecimentoFakeApiClient extends ApiClient {
+  _ConhecimentoFakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+    return {
+      'challenge_id': 'fake-challenge-id-conhecimento',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': 'Qual é a capital do Brasil?',
+      'options': ['Rio de Janeiro', 'São Paulo', 'Brasília', 'Salvador'],
+      'hints_available': 0,
+      'time_limit_seconds': 12,
+    };
+  }
+}
+
 /// Simula um desafio do território "textos" (V2 item 3) — parágrafo-base
 /// bem mais longo que qualquer enunciado dos territórios anteriores, com
 /// múltipla escolha, para provar que a tela não estoura (RenderFlex
@@ -317,6 +341,37 @@ void main() {
         reason: 'o id interno da opção nunca deve aparecer cru na tela de resultado',
       );
       expect(find.textContaining('quadrado dourado'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    'Conhecimento renderiza o formato com tempo sem precisar de relampago:true (CONHECIMENTO_EXPANSAO_GERAL.md)',
+    (tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: ChallengeScreen(
+            client: _ConhecimentoFakeApiClient(),
+            territoryId: 'conhecimento',
+            territoryLabel: 'Conhecimento',
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('Qual é a capital do Brasil?'), findsOneWidget);
+      expect(find.text('Brasília'), findsOneWidget);
+      expect(find.textContaining('12s'), findsOneWidget, reason: 'contagem regressiva do servidor deve aparecer mesmo sem relampago:true');
+      // Formato cronometrado usa OutlinedButton por opção, nunca o
+      // TextField digitado nem o botão "Confirmar resposta" separado.
+      expect(find.byType(TextField), findsNothing);
+      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'), findsNothing);
     },
   );
 

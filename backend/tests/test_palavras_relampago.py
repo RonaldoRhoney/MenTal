@@ -27,7 +27,7 @@ def test_relampago_mode_returns_three_options_and_time_limit(client):
     assert len(body["options"]) == 3
     assert "correct_answer" not in body  # API_CONTRACT.md §3 continua valendo no modo relâmpago
     assert body["difficulty_level"] in (2, 3)  # nunca fácil, mesmo começando do nível 1
-    assert body["time_limit_seconds"] == config.PALAVRAS_RELAMPAGO_TIME_LIMIT_SECONDS[body["difficulty_level"]]
+    assert body["time_limit_seconds"] == config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS[body["difficulty_level"]]
 
 
 def test_relampago_never_serves_easy_level_even_for_brand_new_user(client):

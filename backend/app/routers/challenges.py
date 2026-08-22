@@ -19,11 +19,16 @@ def next_challenge(
     user_id: str = Depends(get_current_user_id),
     db: Session = Depends(get_db),
 ):
-    # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Só se
-    # aplica a Palavras — qualquer outro território ignora "mode" e
-    # segue o fluxo normal, nunca erro (evita quebrar territórios que
+    # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Modo
+    # OPCIONAL, só em Palavras — qualquer outro território ignora "mode"
+    # e segue o fluxo normal, nunca erro (evita quebrar territórios que
     # nunca deveriam ter pedido esse modo).
     relampago = mode == "relampago" and territory_id == "palavras"
+    # CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): em
+    # Conhecimento o formato com tempo é OBRIGATÓRIO e único — nunca
+    # formato digitado, independente de "mode". Generaliza o mesmo
+    # mecanismo do Palavras Relâmpago (mesmo componente, dois territórios).
+    timed = relampago or territory_id == "conhecimento"
     territory = db.get(models.Territory, territory_id)
     if territory is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "TERRITORY_NOT_FOUND", "message": territory_id}})
@@ -113,11 +118,18 @@ def next_challenge(
     )
 
     if relampago:
+        # Palavras não tem múltipla escolha curada nos desafios digitados
+        # normais — as alternativas são sintetizadas a partir de
+        # correct_answer REAL de outros desafios (nunca inventadas).
         options = services.generate_relampago_options(db, challenge)
-        time_limit_seconds = config.PALAVRAS_RELAMPAGO_TIME_LIMIT_SECONDS.get(challenge.difficulty_level)
     else:
+        # Conhecimento (timed=True aqui) já nasce com options curadas de
+        # verdade (4 alternativas reais por pergunta) — nunca precisa
+        # sintetizar nada, só reaproveitar o que já existe. Territórios
+        # normais (timed=False) também já usam challenge.options como
+        # sempre usaram.
         options = challenge.options
-        time_limit_seconds = None
+    time_limit_seconds = config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS.get(challenge.difficulty_level) if timed else None
 
     return schemas.ChallengeOut(
         challenge_id=challenge.id,
@@ -230,8 +242,17 @@ def submit_answer(
     xp_from_hints = scoring.xp_awarded(xp_base, attempt.hints_used) if is_correct else 0
 
     speed_bonus_xp = 0
-    time_limit_seconds = config.PALAVRAS_RELAMPAGO_TIME_LIMIT_SECONDS.get(challenge.difficulty_level)
-    if is_correct and challenge.territory_id == "palavras" and time_limit_seconds and body.response_time_ms is not None:
+    time_limit_seconds = config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS.get(challenge.difficulty_level)
+    # CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): generaliza o
+    # bônus de velocidade além de Palavras — mesma regra, agora vale pra
+    # qualquer território do formato com tempo (config.
+    # TIMED_MULTIPLE_CHOICE_TERRITORIES).
+    if (
+        is_correct
+        and challenge.territory_id in config.TIMED_MULTIPLE_CHOICE_TERRITORIES
+        and time_limit_seconds
+        and body.response_time_ms is not None
+    ):
         speed_bonus_xp = services.compute_speed_bonus_xp(xp_base, body.response_time_ms, time_limit_seconds)
 
     xp_final = xp_from_hints + speed_bonus_xp

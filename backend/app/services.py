@@ -513,9 +513,9 @@ def compute_speed_bonus_xp(xp_base: int, response_time_ms: int, time_limit_secon
     if time_limit_seconds <= 0:
         return 0
     fraction_used = min(1.0, max(0.0, response_time_ms / (time_limit_seconds * 1000)))
-    fast = config.PALAVRAS_RELAMPAGO_SPEED_BONUS_FAST_FRACTION
-    slow = config.PALAVRAS_RELAMPAGO_SPEED_BONUS_SLOW_FRACTION
-    max_multiplier = config.PALAVRAS_RELAMPAGO_SPEED_BONUS_MAX_MULTIPLIER
+    fast = config.TIMED_MULTIPLE_CHOICE_SPEED_BONUS_FAST_FRACTION
+    slow = config.TIMED_MULTIPLE_CHOICE_SPEED_BONUS_SLOW_FRACTION
+    max_multiplier = config.TIMED_MULTIPLE_CHOICE_SPEED_BONUS_MAX_MULTIPLIER
 
     if fraction_used <= fast:
         multiplier = max_multiplier

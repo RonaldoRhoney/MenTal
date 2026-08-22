@@ -138,22 +138,36 @@ MOVEMENT_COLLECTION_GRACE_HOURS = 24
 MOVEMENT_MAX_STEPS_PER_COLLECTION = 2_500_000
 
 # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md, aprovado
-# 2026-08-22). Múltipla escolha com tempo regressivo, só nos níveis
-# médio (2) e difícil (3) — nível fácil (1) nunca entra neste modo,
-# decisão já fechada na spec. Tempo cai conforme o nível: mais difícil,
-# menos tempo, mais pressão (§2 da spec).
-PALAVRAS_RELAMPAGO_TIME_LIMIT_SECONDS = {2: 10, 3: 7}
+# 2026-08-22). Múltipla escolha com tempo regressivo — nível 1 tem mais
+# tempo, e cai conforme o nível: mais difícil, menos tempo, mais pressão
+# (§2 da spec). Generalizado em 2026-08-22 (CONHECIMENTO_EXPANSAO_GERAL.md
+# §2) pra deixar de ser exclusivo de Palavras: mesmo mecanismo agora
+# também usado pelo conteúdo geral de Conhecimento (nesse caso, formato
+# único e obrigatório, nunca opcional como em Palavras). Nome genérico de
+# propósito — não é mais um recurso de um território só.
+TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 12, 2: 10, 3: 7}
+# Territórios onde o formato com tempo existe. Em "palavras" é opcional
+# (mode=relampago); em "conhecimento" é obrigatório e único, desde
+# CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22) — nunca formato
+# digitado ali. Usado tanto para decidir o formato de next_challenge
+# quanto para decidir se o bônus de velocidade se aplica em answer.
+TIMED_MULTIPLE_CHOICE_TERRITORIES = {"palavras", "conhecimento"}
+# Só se aplica ao modo OPCIONAL de Palavras (mode=relampago) — nível
+# fácil nunca entra nesse modo lá, decisão fechada na spec original.
+# Conhecimento não tem esse piso: todo nível já usa o formato com tempo,
+# incluindo fácil, porque ali o formato é obrigatório, não opcional.
 PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL = 2
 
-# Bônus de velocidade (§4 da spec): responder nos primeiros 30% do tempo
-# disponível vale o bônus máximo (até +100% do xp_base do desafio);
-# responder depois de 70% do tempo consumido não perde o acerto, só não
-# ganha bônus. Entre os dois, o bônus decai linearmente — nunca penaliza
-# quem responde mais devagar dentro do tempo, só premia quem for mais
-# rápido (mesma filosofia do bônus de passos do item 9).
-PALAVRAS_RELAMPAGO_SPEED_BONUS_MAX_MULTIPLIER = 1.0
-PALAVRAS_RELAMPAGO_SPEED_BONUS_FAST_FRACTION = 0.3
-PALAVRAS_RELAMPAGO_SPEED_BONUS_SLOW_FRACTION = 0.7
+# Bônus de velocidade (PALAVRAS_RELAMPAGO.md §4): responder nos primeiros
+# 30% do tempo disponível vale o bônus máximo (até +100% do xp_base do
+# desafio); responder depois de 70% do tempo consumido não perde o
+# acerto, só não ganha bônus. Entre os dois, o bônus decai linearmente —
+# nunca penaliza quem responde mais devagar dentro do tempo, só premia
+# quem for mais rápido (mesma filosofia do bônus de passos do item 9).
+# Generalizado junto com TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS acima.
+TIMED_MULTIPLE_CHOICE_SPEED_BONUS_MAX_MULTIPLIER = 1.0
+TIMED_MULTIPLE_CHOICE_SPEED_BONUS_FAST_FRACTION = 0.3
+TIMED_MULTIPLE_CHOICE_SPEED_BONUS_SLOW_FRACTION = 0.7
 
 # Meta diária opcional definida pelo usuário (STEP_COUNTER_MOVIMENTO.md
 # §4, extensão pedida por Rhoney em 2026-08-21): ultrapassar a PRÓPRIA

@@ -383,7 +383,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final challenge = _challenge!;
     final options = (challenge['options'] as List?)?.cast<String>();
 
-    if (widget.relampago && options != null) {
+    // CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): quem decide
+    // "este desafio tem tempo" é o SERVIDOR (time_limit_seconds na
+    // resposta), nunca um flag local — generaliza pra além de Palavras
+    // (widget.relampago só controla se PEDIMOS o modo opcional; o
+    // backend pode mandar tempo mesmo sem isso, caso de Conhecimento,
+    // onde o formato é obrigatório).
+    if (_timeLimitMs != null && options != null) {
       return _buildRelampagoChallenge(challenge, options);
     }
 
