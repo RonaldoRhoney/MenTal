@@ -113,6 +113,39 @@ class ApiClient {
     return _decode(resp);
   }
 
+  Future<Map<String, dynamic>> enableMovement() async {
+    final resp = await http.post(_uri('/movement/enable'), headers: _headers);
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> disableMovement() async {
+    final resp = await http.post(_uri('/movement/disable'), headers: _headers);
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> movementStatus() async {
+    final resp = await http.get(_uri('/movement/status'), headers: _headers);
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> setMovementGoal(int? dailyGoalSteps) async {
+    final resp = await http.put(
+      _uri('/movement/goal'),
+      headers: _headers,
+      body: jsonEncode({'daily_goal_steps': dailyGoalSteps}),
+    );
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> collectMovementSteps({required int steps, String? cycleId}) async {
+    final resp = await http.post(
+      _uri('/movement/collect'),
+      headers: _headers,
+      body: jsonEncode({'steps': steps, 'cycle_id': cycleId}),
+    );
+    return _decode(resp);
+  }
+
   Map<String, dynamic> _decode(http.Response resp) {
     final body = jsonDecode(resp.body) as Map<String, dynamic>;
     if (resp.statusCode >= 400) {

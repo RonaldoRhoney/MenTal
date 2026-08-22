@@ -95,3 +95,56 @@ FIREBASE_SERVICE_ACCOUNT_JSON = os.environ.get("FIREBASE_SERVICE_ACCOUNT_JSON")
 # existir só para isso.
 NOTIFICATION_SCHEDULER_ENABLED = os.environ.get("NOTIFICATION_SCHEDULER_ENABLED", "false").lower() == "true"
 NOTIFICATION_CHECK_INTERVAL_MINUTES = 30
+
+# V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md §4). Bônus de
+# XP escalonado por faixa de passos no ciclo de 24h — "quanto mais andou,
+# proporcionalmente mais ganha, sem teto rígido". MOVEMENT_XP_BASE é
+# parâmetro único de configuração (nunca hardcoded no cliente, mesma
+# autoridade central de XP_BASE_BY_DIFFICULTY); os múltiplos por faixa são
+# fixos por definição do documento, não precisam de ajuste futuro como o
+# valor base precisa. Faixas em ordem decrescente de piso — a primeira
+# cujo piso for atingido decide o multiplicador (15000+ não tem teto:
+# 999999 passos ainda cai na mesma faixa x4).
+MOVEMENT_XP_BASE = 20
+MOVEMENT_STEP_TIERS = [
+    (15000, 4),
+    (10000, 3),
+    (5000, 2),
+    (2000, 1),
+    (0, 0),
+]
+# Ciclo de 24h (§2). Uma coleta final feita durante o ciclo seguinte ainda
+# vale para o ciclo que acabou de fechar — janela de graça de mais 24h
+# para reagir ao relatório antes dos passos serem perdidos de vez (§2:
+# "antes do próximo ciclo avançar" — interpretado como "antes do ciclo
+# seguinte TAMBÉM fechar", não no instante exato da virada, senão o
+# relatório de fim de ciclo nunca teria tempo real de ser útil).
+MOVEMENT_CYCLE_HOURS = 24
+MOVEMENT_COLLECTION_GRACE_HOURS = 24
+# Sanidade contra bug de cliente (não é anti-cheat rígido — o próprio
+# desenho de faixas sem teto já limita o ganho de qualquer valor
+# absurdo à mesma faixa máxima): nenhuma coleta única aceita mais que
+# isso em um só request. ~28 passos/segundo sustentado por 24h — não é
+# um limite realista de caminhada, só um teto contra valor claramente
+# corrompido (ex.: overflow, campo em branco). Passos negativos entram
+# a partir do schema Pydantic (Field(ge=0)), não daqui.
+MOVEMENT_MAX_STEPS_PER_COLLECTION = 2_500_000
+
+# Meta diária opcional definida pelo usuário (STEP_COUNTER_MOVIMENTO.md
+# §4, extensão pedida por Rhoney em 2026-08-21): ultrapassar a PRÓPRIA
+# meta paga este bônus extra, uma vez por ciclo, além do bônus por faixa
+# de MOVEMENT_STEP_TIERS — recompensa superar o que a pessoa se propôs,
+# não o volume absoluto (que a faixa já cobre). Sem teto mínimo/máximo de
+# meta imposto aqui — só validação de "maior que zero" no schema.
+MOVEMENT_GOAL_BONUS_XP = 50
+
+# Checkpoints intradiários (STEP_COUNTER_MOVIMENTO.md §4, extensão pedida
+# por Rhoney em 2026-08-21): divide as 24h do ciclo em partes iguais.
+# Cada uma das PARTS-1 primeiras janelas fechadas (a última coincide com
+# o fim do próprio ciclo — já coberto pelo bônus por faixa de
+# MOVEMENT_STEP_TIERS, pagar de novo ali seria bônus duplicado pelo
+# mesmo feito) paga um bônus extra usando a MESMA fórmula/faixas de
+# MOVEMENT_STEP_TIERS, só com os limiares escalados pela fração de tempo
+# decorrida (ex.: em 4 partes, no checkpoint de 6h — 1/4 do dia — os
+# limiares valem 1/4 do normal: 500/1.250/2.500/3.750).
+MOVEMENT_CHECKPOINT_PARTS = 4

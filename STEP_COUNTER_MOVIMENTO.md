@@ -22,6 +22,16 @@ O MENTAL treina a mente, mas jogar não deveria significar ficar parado e grudad
 - **Fechamento do ciclo (relatório final):** ao completar as 24h, o app entrega um **relatório enxuto** (ver seção 3-A) resumindo o ciclo que terminou. É esse relatório que convida o usuário a fazer a **coleta final** dos passos restantes daquele ciclo — a notificação/relatório é o gatilho da ação, não um horário fixo do sistema.
 - **Passos não coletados:** se o usuário não coletar (nem parcialmente, nem via relatório final) antes do próximo ciclo avançar, os passos daquele ciclo são perdidos (não acumulam). Isso incentiva o hábito diário sem punir com culpa — ver tom de comunicação na seção 5.
 
+### 2.1 Arquitetura de contagem: "catch-up ao reabrir", não serviço em segundo plano (decisão de Rhoney, 2026-08-21)
+
+Achado real testando em dispositivo físico (Moto G22): `TYPE_STEP_COUNTER` só entrega uma leitura ao app quando o app está com um listener registrado e um passo de verdade acontece — não existe "consultar o valor atual" sob demanda. Isso levantou a pergunta de como garantir que os passos dados com o app fechado sejam contabilizados.
+
+Duas opções foram avaliadas:
+1. **Serviço em segundo plano (foreground service) com notificação fixa** — mantém um listener nativo sempre registrado, permite exibir contagem quase em tempo real, mas exige notificação persistente obrigatória (exigência do próprio Android para esse tipo de serviço) e mais consumo de bateria.
+2. **Catch-up ao reabrir o app** (escolhida) — o sensor de hardware é cumulativo desde o último boot do aparelho e continua contando sozinho independente de haver um app ouvindo ou não. O app só precisa guardar localmente qual era a leitura do sensor no início do ciclo (baseline) e, toda vez que reabrir, calcular a diferença — os passos dados com o celular no bolso e o app fechado aparecem corretos assim que o app volta a rodar. Sem notificação fixa, sem serviço nativo adicional, sem custo extra de bateria.
+
+**Limitação aceita:** não existe um número "ao vivo" atualizando na tela enquanto o app está minimizado/fechado — só ao reabrir. Único caso não coberto: reboot do aparelho no meio do ciclo zera o contador de hardware (perde o que não foi coletado antes do reboot) — aceitável para uma feature de bônus, não faz parte da autoridade de XP/score do jogo.
+
 ---
 
 ## 3. Relatório de fim de ciclo (gatilho da coleta final)
@@ -53,6 +63,16 @@ Conforme decidido: a recompensa cresce de acordo com o "potencial de caminhada" 
 
 - **Importante:** o valor exato do "bônus base" em XP é parâmetro de configuração no backend (não hardcoded no cliente), seguindo o mesmo padrão de autoridade central já usado em todo o MENTAL (FastAPI decide, Flutter exibe).
 - Esse XP é **bônus separado**, distribuído dentro da grade de ganhos diários do jogo (XP total do dia = XP dos desafios + XP dos passos). **Não altera o limite de 24 desafios gratuitos por dia** — são fontes de pontuação diferentes que se somam na mesma grade de progresso (nível, conquistas, etc.).
+
+### 4.1 Meta diária pessoal (extensão aprovada, 2026-08-21)
+
+O usuário pode opcionalmente definir sua própria meta diária de passos (ex.: 20.000). Ultrapassar a PRÓPRIA meta paga um bônus fixo extra (`MOVEMENT_GOAL_BONUS_XP`, config de backend), somado — não em substituição — ao bônus por faixa da tabela acima, uma única vez por ciclo. Sem meta definida, esse bônus simplesmente não se aplica. Nunca é uma meta imposta pelo sistema, nem comparada entre usuários (mesma regra de não-humilhação da seção 5).
+
+### 4.2 Checkpoints intradiários (extensão aprovada, 2026-08-21)
+
+As 24h do ciclo são divididas em `MOVEMENT_CHECKPOINT_PARTS` (4) partes iguais de 6h. Cada um dos 3 primeiros fechamentos (o 4º coincide com o fim do próprio ciclo, já coberto pelo bônus de faixa cheio) paga um bônus extra, reaproveitando a MESMA tabela de faixas da seção 4 — só com os limiares escalados pela fração de tempo já decorrida (ex.: no checkpoint das 6h, 1/4 do dia, os limiares valem 1/4 do normal: 500/1.250/2.500/3.750 passos). Isso incentiva manter o ritmo ao longo do dia, não só "virar tudo de uma vez à noite".
+
+**Limitação real conhecida e aceita** (arquitetura "catch-up", ver seção 6.1): como o backend só sabe quantos passos existem quando o app efetivamente envia uma coleta, os checkpoints são avaliados de forma preguiçosa — na próxima coleta depois que a janela de 6h/12h/18h já fechou no relógio, não exatamente no instante em que ela fecha. Se o usuário só abre o app à noite, uma única coleta tardia acerta as contas de todos os checkpoints pendentes de uma vez.
 
 ---
 

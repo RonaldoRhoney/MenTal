@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from . import models, notification_copy, push
+from . import config, models, movement, notification_copy, push
 
 
 def _check_reengagement(db: Session, now: datetime) -> int:
@@ -112,8 +112,51 @@ def _check_social_overtakes(db: Session, now: datetime) -> int:
     return sent
 
 
+def _check_movement_reports(db: Session, now: datetime) -> int:
+    """
+    V2 item 9 (STEP_COUNTER_MOVIMENTO.md §3) — dispara o relatório de fim
+    de ciclo assim que as 24h do usuário se completam, mesmo que ele
+    nunca tenha aberto o app durante o ciclo (o registro do ciclo é
+    criado aqui pela primeira vez se ainda não existir). report_sent
+    evita reenviar o mesmo relatório mais de uma vez, mesmo padrão de
+    last_reengagement_notified_window.
+    """
+    sent = 0
+    profiles = (
+        db.execute(
+            select(models.Profile)
+            .where(models.Profile.movement_enabled.is_(True))
+            .where(models.Profile.push_token.is_not(None))
+            .where(models.Profile.movement_cycle_anchor_at.is_not(None))
+        )
+        .scalars()
+        .all()
+    )
+
+    for profile in profiles:
+        current_start, _ = movement._cycle_window_for(profile.movement_cycle_anchor_at, now)
+        previous_start = current_start - timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
+        if previous_start < profile.movement_cycle_anchor_at:
+            continue  # ainda não completou nenhum ciclo desde a ativação
+
+        previous_end = previous_start + timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
+        cycle = movement._get_or_create_cycle_for_window(db, profile.user_id, previous_start, previous_end)
+        if cycle.report_sent:
+            continue
+
+        title = notification_copy.MOVEMENT_CYCLE_REPORT_TITLE
+        body = notification_copy.MOVEMENT_CYCLE_REPORT_BODY_TEMPLATE.format(steps=cycle.steps_collected)
+        if push.send_push_notification(profile.push_token, title, body):
+            cycle.report_sent = True
+            sent += 1
+
+    db.commit()
+    return sent
+
+
 def run_notification_checks(db: Session, now: datetime | None = None) -> dict:
     now = now or datetime.utcnow()
     reengagement_sent = _check_reengagement(db, now)
     social_sent = _check_social_overtakes(db, now)
-    return {"reengagement_sent": reengagement_sent, "social_sent": social_sent}
+    movement_sent = _check_movement_reports(db, now)
+    return {"reengagement_sent": reengagement_sent, "social_sent": social_sent, "movement_sent": movement_sent}

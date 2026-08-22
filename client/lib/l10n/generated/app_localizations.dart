@@ -585,6 +585,156 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Quando alguém avança no seu ranking'**
   String get notifSocialDescription;
+
+  /// Home app bar icon tooltip, opens Movement screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Movimento'**
+  String get movementTooltip;
+
+  /// Movement screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Movimento'**
+  String get movementScreenTitle;
+
+  /// Movement screen intro explaining the feature
+  ///
+  /// In pt, this message translates to:
+  /// **'Jogar não precisa ser só ficar parado. Ative o contador de passos e transforme sua caminhada em pontos — sem esforço extra.'**
+  String get movementIntro;
+
+  /// Button to enable step counting
+  ///
+  /// In pt, this message translates to:
+  /// **'Ativar contador de passos'**
+  String get movementEnableButton;
+
+  /// Button to disable step counting
+  ///
+  /// In pt, this message translates to:
+  /// **'Desativar'**
+  String get movementDisableButton;
+
+  /// Shown when the user denies the activity recognition permission
+  ///
+  /// In pt, this message translates to:
+  /// **'Sem permissão de atividade física, o contador de passos fica indisponível. Você pode conceder depois, nas configurações do aparelho.'**
+  String get movementPermissionDeniedMessage;
+
+  /// Shown when the step sensor is unavailable
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível ler o sensor de passos agora.'**
+  String get movementSensorUnavailableMessage;
+
+  /// Steps collected so far in the current cycle
+  ///
+  /// In pt, this message translates to:
+  /// **'Passos coletados neste ciclo: {steps}'**
+  String movementCurrentCycleLabel(int steps);
+
+  /// Steps detected locally but not yet submitted to the backend
+  ///
+  /// In pt, this message translates to:
+  /// **'{steps} passos detectados agora, ainda não coletados'**
+  String movementDetectedStepsLabel(int steps);
+
+  /// Button to submit detected steps to the backend
+  ///
+  /// In pt, this message translates to:
+  /// **'Coletar passos'**
+  String get movementCollectButton;
+
+  /// Shown when there are no new steps to collect
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum passo novo pra coletar agora.'**
+  String get movementNoStepsToCollect;
+
+  /// Previous cycle still within the grace window, pending final collection
+  ///
+  /// In pt, this message translates to:
+  /// **'Você ainda tem um ciclo anterior com {steps} passos pra coletar!'**
+  String movementPendingReportLabel(int steps);
+
+  /// Button to do the final collection of the previous cycle
+  ///
+  /// In pt, this message translates to:
+  /// **'Coletar ciclo anterior'**
+  String get movementCollectPreviousButton;
+
+  /// Feedback after collecting movement XP
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP dos seus passos!'**
+  String movementXpCollectedFeedback(int xp);
+
+  /// Shows the user's configured daily step goal
+  ///
+  /// In pt, this message translates to:
+  /// **'Meta diária: {goal} passos'**
+  String movementGoalLabel(int goal);
+
+  /// Shown when the user has not set a daily goal
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhuma meta diária definida'**
+  String get movementNoGoalLabel;
+
+  /// Button to open the goal-setting dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Definir meta diária'**
+  String get movementSetGoalButton;
+
+  /// Button to edit the existing daily goal
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar meta'**
+  String get movementEditGoalButton;
+
+  /// Title of the goal-setting dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua meta diária de passos'**
+  String get movementGoalDialogTitle;
+
+  /// Input hint for the goal text field
+  ///
+  /// In pt, this message translates to:
+  /// **'Ex.: 20000'**
+  String get movementGoalDialogHint;
+
+  /// Save button in the goal dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Salvar'**
+  String get movementGoalSaveButton;
+
+  /// Cancel button in the goal dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Cancelar'**
+  String get movementGoalCancelButton;
+
+  /// Celebration message shown when the user's daily goal is exceeded
+  ///
+  /// In pt, this message translates to:
+  /// **'Meta batida! +{xp} XP extra por superar seu próprio objetivo 🎉'**
+  String movementGoalReachedMessage(int xp);
+
+  /// Percentage of the daily goal reached, shown inside the progress chart
+  ///
+  /// In pt, this message translates to:
+  /// **'{percent}% da meta'**
+  String movementGoalProgressLabel(int percent);
+
+  /// Celebration message for one or more intraday checkpoints reached in a single collection
+  ///
+  /// In pt, this message translates to:
+  /// **'{count, plural, =1{Checkpoint do dia batido! +{xp} XP extra 🚶} other{{count} checkpoints do dia batidos! +{xp} XP extra 🚶}}'**
+  String movementCheckpointReachedMessage(int count, int xp);
 }
 
 class _AppLocalizationsDelegate

@@ -6,7 +6,7 @@ from . import config, models
 from .db import Base, engine, SessionLocal
 from .scheduler import start_scheduler
 from .seed import seed_if_empty
-from .routers import age_gate, badges, challenges, notifications, progress, stats, subscription, ranking, social
+from .routers import age_gate, badges, challenges, movement, notifications, progress, stats, subscription, ranking, social
 
 # create_all() e o seed de desenvolvimento só rodam contra o SQLite local.
 # Correção feita testando contra o Postgres real do MENTAL (2026-08-19,
@@ -41,6 +41,7 @@ app.include_router(social.router, tags=["social"])
 app.include_router(badges.router, tags=["badges"])
 app.include_router(stats.router, tags=["stats"])
 app.include_router(notifications.router, tags=["notifications"])
+app.include_router(movement.router, tags=["movement"])
 
 # V2 item 8 — só liga de verdade com NOTIFICATION_SCHEDULER_ENABLED=true
 # (default false, nunca roda em teste/dev casual — ver app/scheduler.py).

@@ -1,4 +1,6 @@
-from pydantic import BaseModel
+from datetime import datetime
+
+from pydantic import BaseModel, Field
 
 
 class AgeGateRequest(BaseModel):
@@ -150,3 +152,40 @@ class NotificationPreferencesRequest(BaseModel):
 class NotificationPreferencesResponse(BaseModel):
     reengagement_enabled: bool
     social_enabled: bool
+
+
+class MovementCycleOut(BaseModel):
+    id: str
+    cycle_start_at: datetime
+    cycle_end_at: datetime
+    steps_collected: int
+    xp_awarded: int
+
+
+class MovementStatusResponse(BaseModel):
+    movement_enabled: bool
+    daily_goal_steps: int | None
+    current_cycle: MovementCycleOut | None
+    pending_report_cycle: MovementCycleOut | None
+
+
+class MovementCollectRequest(BaseModel):
+    steps: int = Field(ge=0)
+    cycle_id: str | None = None
+
+
+class MovementCollectResponse(BaseModel):
+    cycle: MovementCycleOut
+    xp_awarded: int
+    level_up: bool = False
+    new_level: int | None = None
+    goal_reached: bool = False
+    checkpoints_reached: int = 0
+
+
+class MovementGoalRequest(BaseModel):
+    daily_goal_steps: int | None = Field(default=None, gt=0)
+
+
+class MovementGoalResponse(BaseModel):
+    daily_goal_steps: int | None

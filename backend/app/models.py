@@ -85,6 +85,55 @@ class Profile(Base):
     # mesma posição já notificada).
     last_known_weekly_rank: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
+    # V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md §2). O
+    # ciclo de 24h é âncorado no momento da PRIMEIRA ativação, não num
+    # horário fixo do sistema — este campo nunca muda depois de setado
+    # (desativar/reativar preserva o horário original, mesmo raciocínio
+    # de não recomeçar streak à toa).
+    movement_enabled: Mapped[bool] = mapped_column(Boolean, default=False)
+    movement_cycle_anchor_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    # Meta diária OPCIONAL definida pelo próprio usuário (pedido de
+    # Rhoney, 2026-08-21) — nunca imposta pelo sistema. Null = sem meta
+    # (comportamento padrão, só o bônus escalonado por faixa se aplica).
+    # Ultrapassar a própria meta paga um bônus extra (config.
+    # MOVEMENT_GOAL_BONUS_XP), separado do bônus de faixa — recompensa
+    # especificamente superar o que a PESSOA se propôs, não o volume
+    # absoluto de passos (que já é recompensado pela faixa).
+    movement_daily_goal_steps: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+
+class MovementCycle(Base):
+    """
+    Um registro por janela de 24h do contador de passos de um usuário
+    (STEP_COUNTER_MOVIMENTO.md §2/§4). `steps_collected` e `xp_awarded`
+    acumulam a cada coleta parcial dentro da MESMA janela — nunca
+    recalculados do zero, para permitir múltiplas coletas parciais sem
+    perder o que já foi convertido. `report_sent` evita reenviar o
+    relatório de fim de ciclo mais de uma vez (mesmo padrão de
+    last_reengagement_notified_window em Profile). `goal_bonus_awarded`
+    evita pagar o bônus de meta mais de uma vez por ciclo mesmo com
+    várias coletas parciais depois de já ter cruzado a meta.
+    """
+
+    __tablename__ = "movement_cycles"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    cycle_start_at: Mapped[datetime] = mapped_column(DateTime)
+    cycle_end_at: Mapped[datetime] = mapped_column(DateTime)
+    steps_collected: Mapped[int] = mapped_column(Integer, default=0)
+    xp_awarded: Mapped[int] = mapped_column(Integer, default=0)
+    report_sent: Mapped[bool] = mapped_column(Boolean, default=False)
+    goal_bonus_awarded: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Checkpoints intradiários (pedido de Rhoney, 2026-08-21): as 24h são
+    # divididas em config.MOVEMENT_CHECKPOINT_PARTS partes iguais; os
+    # primeiros PARTS-1 fechamentos (a última coincide com o fim do
+    # próprio ciclo, já coberto por xp_awarded/goal_bonus_awarded) pagam
+    # um bônus extra se o total acumulado até aquele ponto já bate a
+    # faixa de MOVEMENT_STEP_TIERS proporcional ao tempo decorrido.
+    # Bitmask (bit i = checkpoint i já pago) evita pagar de novo.
+    checkpoint_bonus_mask: Mapped[int] = mapped_column(Integer, default=0)
+
 
 class Territory(Base):
     __tablename__ = "territories"

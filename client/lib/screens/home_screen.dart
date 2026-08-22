@@ -1,11 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../services/movement_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/xp_bar.dart';
 import 'challenge_screen.dart';
+import 'movement_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
@@ -27,10 +31,26 @@ class _HomeScreenState extends State<HomeScreen> {
   Map<String, dynamic>? _progress;
   String? _error;
 
+  // V2 item 9 — badge de passos ainda não coletados junto ao ícone de
+  // Movimento (decisão de Rhoney, 2026-08-21: "catch-up ao reabrir o
+  // app", nunca serviço em segundo plano com notificação fixa). Mostra
+  // o valor certo assim que a Home carrega, usando a última leitura
+  // conhecida do sensor de QUALQUER sessão — não espera um evento novo.
+  int? _movementPendingSteps;
+  String? _movementCycleId;
+  StreamSubscription<int>? _movementStepSub;
+
   @override
   void initState() {
     super.initState();
     _loadProgress();
+    _loadMovementBadge();
+  }
+
+  @override
+  void dispose() {
+    _movementStepSub?.cancel();
+    super.dispose();
   }
 
   Future<void> _loadProgress() async {
@@ -39,6 +59,40 @@ class _HomeScreenState extends State<HomeScreen> {
       if (mounted) setState(() => _progress = progress);
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
+    }
+  }
+
+  Future<void> _loadMovementBadge() async {
+    try {
+      final status = await widget.client.movementStatus();
+      final enabled = status['movement_enabled'] as bool;
+      final cycle = status['current_cycle'] as Map<String, dynamic>?;
+      if (!enabled || cycle == null) {
+        _movementStepSub?.cancel();
+        _movementCycleId = null;
+        if (mounted) setState(() => _movementPendingSteps = null);
+        return;
+      }
+
+      final cycleId = cycle['id'] as String;
+      await MovementService.instance.ensureBaselineFor(cycleId);
+      final cachedLast = await MovementService.instance.lastKnownRawSteps();
+      if (cachedLast != null) {
+        final delta = await MovementService.instance.pendingDeltaFor(cycleId, cachedLast);
+        if (mounted) setState(() => _movementPendingSteps = delta.uncollectedSteps);
+      }
+
+      if (_movementCycleId != cycleId) {
+        _movementCycleId = cycleId;
+        _movementStepSub?.cancel();
+        _movementStepSub = MovementService.instance.stepCountStream().listen((steps) async {
+          final delta = await MovementService.instance.pendingDeltaFor(cycleId, steps);
+          if (mounted) setState(() => _movementPendingSteps = delta.uncollectedSteps);
+        });
+      }
+    } on ApiException catch (_) {
+      // Badge é reforço visual (mesmo princípio de AUDIO_FEEDBACK.md §4
+      // aplicado aqui) — nunca bloqueia ou quebra a Home por causa disso.
     }
   }
 
@@ -77,6 +131,20 @@ class _HomeScreenState extends State<HomeScreen> {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) => RankingScreen(client: widget.client)),
               );
+            },
+          ),
+          IconButton(
+            tooltip: l10n.movementTooltip,
+            icon: Badge(
+              isLabelVisible: (_movementPendingSteps ?? 0) > 0,
+              label: Text('${_movementPendingSteps ?? 0}'),
+              child: const Icon(Icons.directions_walk_rounded),
+            ),
+            onPressed: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => MovementScreen(client: widget.client)),
+              );
+              _loadMovementBadge();
             },
           ),
           IconButton(

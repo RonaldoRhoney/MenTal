@@ -1,4 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md §6).
+         Exigida em runtime pelo Android 10+ (API 29+) para acessar o
+         sensor TYPE_STEP_COUNTER; pedida de forma contextual quando o
+         usuário abre a tela de Movimento pela primeira vez, nunca no
+         onboarding genérico. -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <application
         android:label="mental"
         android:name="${applicationName}"

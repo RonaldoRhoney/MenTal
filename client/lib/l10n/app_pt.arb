@@ -327,5 +327,107 @@
   "@notifSocialLabel": {"description": "Social/ranking notification toggle label"},
 
   "notifSocialDescription": "Quando alguém avança no seu ranking",
-  "@notifSocialDescription": {"description": "Social/ranking notification toggle description"}
+  "@notifSocialDescription": {"description": "Social/ranking notification toggle description"},
+
+  "movementTooltip": "Movimento",
+  "@movementTooltip": {"description": "Home app bar icon tooltip, opens Movement screen"},
+
+  "movementScreenTitle": "Movimento",
+  "@movementScreenTitle": {"description": "Movement screen app bar title"},
+
+  "movementIntro": "Jogar não precisa ser só ficar parado. Ative o contador de passos e transforme sua caminhada em pontos — sem esforço extra.",
+  "@movementIntro": {"description": "Movement screen intro explaining the feature"},
+
+  "movementEnableButton": "Ativar contador de passos",
+  "@movementEnableButton": {"description": "Button to enable step counting"},
+
+  "movementDisableButton": "Desativar",
+  "@movementDisableButton": {"description": "Button to disable step counting"},
+
+  "movementPermissionDeniedMessage": "Sem permissão de atividade física, o contador de passos fica indisponível. Você pode conceder depois, nas configurações do aparelho.",
+  "@movementPermissionDeniedMessage": {"description": "Shown when the user denies the activity recognition permission"},
+
+  "movementSensorUnavailableMessage": "Não foi possível ler o sensor de passos agora.",
+  "@movementSensorUnavailableMessage": {"description": "Shown when the step sensor is unavailable"},
+
+  "movementCurrentCycleLabel": "Passos coletados neste ciclo: {steps}",
+  "@movementCurrentCycleLabel": {
+    "description": "Steps collected so far in the current cycle",
+    "placeholders": {"steps": {"type": "int"}}
+  },
+
+  "movementDetectedStepsLabel": "{steps} passos detectados agora, ainda não coletados",
+  "@movementDetectedStepsLabel": {
+    "description": "Steps detected locally but not yet submitted to the backend",
+    "placeholders": {"steps": {"type": "int"}}
+  },
+
+  "movementCollectButton": "Coletar passos",
+  "@movementCollectButton": {"description": "Button to submit detected steps to the backend"},
+
+  "movementNoStepsToCollect": "Nenhum passo novo pra coletar agora.",
+  "@movementNoStepsToCollect": {"description": "Shown when there are no new steps to collect"},
+
+  "movementPendingReportLabel": "Você ainda tem um ciclo anterior com {steps} passos pra coletar!",
+  "@movementPendingReportLabel": {
+    "description": "Previous cycle still within the grace window, pending final collection",
+    "placeholders": {"steps": {"type": "int"}}
+  },
+
+  "movementCollectPreviousButton": "Coletar ciclo anterior",
+  "@movementCollectPreviousButton": {"description": "Button to do the final collection of the previous cycle"},
+
+  "movementXpCollectedFeedback": "+{xp} XP dos seus passos!",
+  "@movementXpCollectedFeedback": {
+    "description": "Feedback after collecting movement XP",
+    "placeholders": {"xp": {"type": "int"}}
+  },
+
+  "movementGoalLabel": "Meta diária: {goal} passos",
+  "@movementGoalLabel": {
+    "description": "Shows the user's configured daily step goal",
+    "placeholders": {"goal": {"type": "int"}}
+  },
+
+  "movementNoGoalLabel": "Nenhuma meta diária definida",
+  "@movementNoGoalLabel": {"description": "Shown when the user has not set a daily goal"},
+
+  "movementSetGoalButton": "Definir meta diária",
+  "@movementSetGoalButton": {"description": "Button to open the goal-setting dialog"},
+
+  "movementEditGoalButton": "Editar meta",
+  "@movementEditGoalButton": {"description": "Button to edit the existing daily goal"},
+
+  "movementGoalDialogTitle": "Sua meta diária de passos",
+  "@movementGoalDialogTitle": {"description": "Title of the goal-setting dialog"},
+
+  "movementGoalDialogHint": "Ex.: 20000",
+  "@movementGoalDialogHint": {"description": "Input hint for the goal text field"},
+
+  "movementGoalSaveButton": "Salvar",
+  "@movementGoalSaveButton": {"description": "Save button in the goal dialog"},
+
+  "movementGoalCancelButton": "Cancelar",
+  "@movementGoalCancelButton": {"description": "Cancel button in the goal dialog"},
+
+  "movementGoalReachedMessage": "Meta batida! +{xp} XP extra por superar seu próprio objetivo 🎉",
+  "@movementGoalReachedMessage": {
+    "description": "Celebration message shown when the user's daily goal is exceeded",
+    "placeholders": {"xp": {"type": "int"}}
+  },
+
+  "movementGoalProgressLabel": "{percent}% da meta",
+  "@movementGoalProgressLabel": {
+    "description": "Percentage of the daily goal reached, shown inside the progress chart",
+    "placeholders": {"percent": {"type": "int"}}
+  },
+
+  "movementCheckpointReachedMessage": "{count, plural, =1{Checkpoint do dia batido! +{xp} XP extra 🚶} other{{count} checkpoints do dia batidos! +{xp} XP extra 🚶}}",
+  "@movementCheckpointReachedMessage": {
+    "description": "Celebration message for one or more intraday checkpoints reached in a single collection",
+    "placeholders": {
+      "count": {"type": "int"},
+      "xp": {"type": "int"}
+    }
+  }
 }

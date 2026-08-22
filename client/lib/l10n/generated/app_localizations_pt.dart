@@ -292,4 +292,104 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get notifSocialDescription => 'Quando alguém avança no seu ranking';
+
+  @override
+  String get movementTooltip => 'Movimento';
+
+  @override
+  String get movementScreenTitle => 'Movimento';
+
+  @override
+  String get movementIntro =>
+      'Jogar não precisa ser só ficar parado. Ative o contador de passos e transforme sua caminhada em pontos — sem esforço extra.';
+
+  @override
+  String get movementEnableButton => 'Ativar contador de passos';
+
+  @override
+  String get movementDisableButton => 'Desativar';
+
+  @override
+  String get movementPermissionDeniedMessage =>
+      'Sem permissão de atividade física, o contador de passos fica indisponível. Você pode conceder depois, nas configurações do aparelho.';
+
+  @override
+  String get movementSensorUnavailableMessage =>
+      'Não foi possível ler o sensor de passos agora.';
+
+  @override
+  String movementCurrentCycleLabel(int steps) {
+    return 'Passos coletados neste ciclo: $steps';
+  }
+
+  @override
+  String movementDetectedStepsLabel(int steps) {
+    return '$steps passos detectados agora, ainda não coletados';
+  }
+
+  @override
+  String get movementCollectButton => 'Coletar passos';
+
+  @override
+  String get movementNoStepsToCollect => 'Nenhum passo novo pra coletar agora.';
+
+  @override
+  String movementPendingReportLabel(int steps) {
+    return 'Você ainda tem um ciclo anterior com $steps passos pra coletar!';
+  }
+
+  @override
+  String get movementCollectPreviousButton => 'Coletar ciclo anterior';
+
+  @override
+  String movementXpCollectedFeedback(int xp) {
+    return '+$xp XP dos seus passos!';
+  }
+
+  @override
+  String movementGoalLabel(int goal) {
+    return 'Meta diária: $goal passos';
+  }
+
+  @override
+  String get movementNoGoalLabel => 'Nenhuma meta diária definida';
+
+  @override
+  String get movementSetGoalButton => 'Definir meta diária';
+
+  @override
+  String get movementEditGoalButton => 'Editar meta';
+
+  @override
+  String get movementGoalDialogTitle => 'Sua meta diária de passos';
+
+  @override
+  String get movementGoalDialogHint => 'Ex.: 20000';
+
+  @override
+  String get movementGoalSaveButton => 'Salvar';
+
+  @override
+  String get movementGoalCancelButton => 'Cancelar';
+
+  @override
+  String movementGoalReachedMessage(int xp) {
+    return 'Meta batida! +$xp XP extra por superar seu próprio objetivo 🎉';
+  }
+
+  @override
+  String movementGoalProgressLabel(int percent) {
+    return '$percent% da meta';
+  }
+
+  @override
+  String movementCheckpointReachedMessage(int count, int xp) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count checkpoints do dia batidos! +$xp XP extra 🚶',
+      one: 'Checkpoint do dia batido! +$xp XP extra 🚶',
+    );
+    return '$_temp0';
+  }
 }
