@@ -91,4 +91,16 @@ void main() {
 
     expect(find.text('Código de convite não encontrado.'), findsOneWidget);
   });
+
+  testWidgets('mostra o botão Indicar e não quebra ao tocar', (tester) async {
+    final client = _FakeApiClient();
+    await _pumpFriendsScreen(tester, client);
+
+    expect(find.text('Indicar'), findsOneWidget);
+    // ShareService.share nunca deixa a falha escapar (sem app de
+    // compartilhamento no ambiente de teste), mesmo princípio de
+    // FeedbackService/PushService.
+    await tester.tap(find.text('Indicar'));
+    await tester.pump();
+  });
 }

@@ -8,6 +8,7 @@ import '../theme/app_theme.dart';
 import '../visual_options.dart';
 import '../widgets/celebration_overlay.dart';
 import '../widgets/pulse_in.dart';
+import '../widgets/share_achievement_button.dart';
 
 /// Ciclo completo de um desafio: busca → responde → resultado → próximo.
 /// Uma ação primária por vez (Clareza Imediata, PRODUCT_PRINCIPLES.md §1):
@@ -433,6 +434,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
+                  ShareAchievementButton(message: l10n.shareLevelUpMessage(newLevel)),
                 ],
                 if (territoryJustConquered) ...[
                   const SizedBox(height: 16),
@@ -443,6 +445,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
+                  ShareAchievementButton(message: l10n.shareTerritoryConqueredMessage(widget.territoryLabel)),
                 ],
                 if (worldJustCompleted && completedWorldName != null) ...[
                   const SizedBox(height: 16),
@@ -453,6 +456,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
+                  ShareAchievementButton(message: l10n.shareWorldCompletedMessage(completedWorldName)),
                 ],
                 for (final badge in newlyAwardedBadges) ...[
                   const SizedBox(height: 16),
@@ -463,6 +467,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
+                  ShareAchievementButton(message: l10n.shareBadgeUnlockedMessage(badge['name'] as String)),
                 ],
               ],
             ),

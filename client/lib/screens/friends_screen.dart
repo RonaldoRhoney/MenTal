@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../services/share_service.dart';
 import '../theme/app_theme.dart';
 
 /// V2 item 12 — Amigos (V2_KICKOFF.md §6A). Reaproveita o MESMO
@@ -71,6 +72,12 @@ class _FriendsScreenState extends State<FriendsScreen> {
     }
   }
 
+  Future<void> _shareInvite() async {
+    final code = _inviteCode;
+    if (code == null) return;
+    await ShareService.share(AppLocalizations.of(context)!.friendsInviteShareMessage(code));
+  }
+
   Future<void> _addFriend() async {
     final code = _codeController.text.trim();
     if (code.isEmpty) return;
@@ -114,9 +121,29 @@ class _FriendsScreenState extends State<FriendsScreen> {
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       const SizedBox(height: 8),
-                      OutlinedButton(
-                        onPressed: _copyCode,
-                        child: Text(l10n.friendsCopyCodeButton),
+                      // Dois botões lado a lado: Expanded nos dois evita o
+                      // bug real já achado nesta tela (minimumSize:
+                      // Size.fromHeight(48) do tema força largura infinita
+                      // em OutlinedButton/FilledButton dentro de um Row sem
+                      // constraint — Expanded distribui a largura igual
+                      // pros dois, sem esse risco).
+                      Row(
+                        children: [
+                          Expanded(
+                            child: OutlinedButton(
+                              onPressed: _copyCode,
+                              child: Text(l10n.friendsCopyCodeButton),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: FilledButton.icon(
+                              onPressed: _shareInvite,
+                              icon: const Icon(Icons.share_outlined, size: 18),
+                              label: Text(l10n.friendsInviteShareButton),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                     const SizedBox(height: 24),

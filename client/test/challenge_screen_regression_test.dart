@@ -333,6 +333,20 @@ void main() {
       expect(find.byType(ConfettiWidget), findsNWidgets(3));
     });
 
+    testWidgets('level_up mostra botão de compartilhar a conquista', (tester) async {
+      final payload = _baseAnswerPayload()
+        ..['level_up'] = true
+        ..['new_level'] = 3;
+      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+
+      expect(find.text('Compartilhar'), findsOneWidget);
+      // Tocar não pode lançar exceção mesmo sem app de compartilhamento
+      // disponível no ambiente de teste (ShareService.share nunca deixa
+      // a falha escapar, mesmo princípio de FeedbackService/PushService).
+      await tester.tap(find.text('Compartilhar'));
+      await tester.pump();
+    });
+
     testWidgets('territory_just_conquered mostra "Território conquistado!"', (tester) async {
       final payload = _baseAnswerPayload()..['territory_just_conquered'] = true;
       await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));

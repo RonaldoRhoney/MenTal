@@ -10,6 +10,7 @@ import '../services/movement_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/celebration_overlay.dart';
 import '../widgets/pulse_in.dart';
+import '../widgets/share_achievement_button.dart';
 
 /// V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md). O backend
 /// é sempre a autoridade sobre o estado do ciclo e o XP convertido —
@@ -351,6 +352,7 @@ class _MovementScreenState extends State<MovementScreen> {
                   textAlign: TextAlign.center,
                 ),
               ),
+              ShareAchievementButton(message: l10n.shareMovementGoalMessage),
             ],
             if (_checkpointReachedMessage != null) ...[
               const SizedBox(height: 8),

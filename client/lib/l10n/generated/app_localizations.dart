@@ -819,6 +819,54 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Amigos'**
   String get rankingScopeFriends;
+
+  /// Generic share button label
+  ///
+  /// In pt, this message translates to:
+  /// **'Compartilhar'**
+  String get shareButtonLabel;
+
+  /// Share text for territory conquered achievement
+  ///
+  /// In pt, this message translates to:
+  /// **'Conquistei o território {territory} no MENTAL! 🏆'**
+  String shareTerritoryConqueredMessage(String territory);
+
+  /// Share text for world completed achievement
+  ///
+  /// In pt, this message translates to:
+  /// **'Completei o {world} no MENTAL! 🎉'**
+  String shareWorldCompletedMessage(String world);
+
+  /// Share text for level up achievement
+  ///
+  /// In pt, this message translates to:
+  /// **'Alcancei o Nível {level} no MENTAL! 🚀'**
+  String shareLevelUpMessage(int level);
+
+  /// Share text for badge unlocked achievement
+  ///
+  /// In pt, this message translates to:
+  /// **'Desbloqueei a conquista \"{badge}\" no MENTAL! 🏅'**
+  String shareBadgeUnlockedMessage(String badge);
+
+  /// Share text for movement daily goal achievement
+  ///
+  /// In pt, this message translates to:
+  /// **'Bati minha meta de passos no MENTAL e ganhei XP de bônus! 🚶💪'**
+  String get shareMovementGoalMessage;
+
+  /// Button to share the invite code via WhatsApp/social apps
+  ///
+  /// In pt, this message translates to:
+  /// **'Indicar'**
+  String get friendsInviteShareButton;
+
+  /// Share text for inviting a friend with the invite code
+  ///
+  /// In pt, this message translates to:
+  /// **'Bora treinar a mente comigo? Baixe o MENTAL e use meu código de convite: {code}'**
+  String friendsInviteShareMessage(String code);
 }
 
 class _AppLocalizationsDelegate

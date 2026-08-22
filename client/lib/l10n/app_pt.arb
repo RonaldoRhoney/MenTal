@@ -480,5 +480,44 @@
   "@rankingScopeGlobal": {"description": "Ranking scope toggle: global"},
 
   "rankingScopeFriends": "Amigos",
-  "@rankingScopeFriends": {"description": "Ranking scope toggle: friends"}
+  "@rankingScopeFriends": {"description": "Ranking scope toggle: friends"},
+
+  "shareButtonLabel": "Compartilhar",
+  "@shareButtonLabel": {"description": "Generic share button label"},
+
+  "shareTerritoryConqueredMessage": "Conquistei o território {territory} no MENTAL! 🏆",
+  "@shareTerritoryConqueredMessage": {
+    "description": "Share text for territory conquered achievement",
+    "placeholders": {"territory": {"type": "String"}}
+  },
+
+  "shareWorldCompletedMessage": "Completei o {world} no MENTAL! 🎉",
+  "@shareWorldCompletedMessage": {
+    "description": "Share text for world completed achievement",
+    "placeholders": {"world": {"type": "String"}}
+  },
+
+  "shareLevelUpMessage": "Alcancei o Nível {level} no MENTAL! 🚀",
+  "@shareLevelUpMessage": {
+    "description": "Share text for level up achievement",
+    "placeholders": {"level": {"type": "int"}}
+  },
+
+  "shareBadgeUnlockedMessage": "Desbloqueei a conquista \"{badge}\" no MENTAL! 🏅",
+  "@shareBadgeUnlockedMessage": {
+    "description": "Share text for badge unlocked achievement",
+    "placeholders": {"badge": {"type": "String"}}
+  },
+
+  "shareMovementGoalMessage": "Bati minha meta de passos no MENTAL e ganhei XP de bônus! 🚶💪",
+  "@shareMovementGoalMessage": {"description": "Share text for movement daily goal achievement"},
+
+  "friendsInviteShareButton": "Indicar",
+  "@friendsInviteShareButton": {"description": "Button to share the invite code via WhatsApp/social apps"},
+
+  "friendsInviteShareMessage": "Bora treinar a mente comigo? Baixe o MENTAL e use meu código de convite: {code}",
+  "@friendsInviteShareMessage": {
+    "description": "Share text for inviting a friend with the invite code",
+    "placeholders": {"code": {"type": "String"}}
+  }
 }

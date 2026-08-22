@@ -440,4 +440,39 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get rankingScopeFriends => 'Amigos';
+
+  @override
+  String get shareButtonLabel => 'Compartilhar';
+
+  @override
+  String shareTerritoryConqueredMessage(String territory) {
+    return 'Conquistei o território $territory no MENTAL! 🏆';
+  }
+
+  @override
+  String shareWorldCompletedMessage(String world) {
+    return 'Completei o $world no MENTAL! 🎉';
+  }
+
+  @override
+  String shareLevelUpMessage(int level) {
+    return 'Alcancei o Nível $level no MENTAL! 🚀';
+  }
+
+  @override
+  String shareBadgeUnlockedMessage(String badge) {
+    return 'Desbloqueei a conquista \"$badge\" no MENTAL! 🏅';
+  }
+
+  @override
+  String get shareMovementGoalMessage =>
+      'Bati minha meta de passos no MENTAL e ganhei XP de bônus! 🚶💪';
+
+  @override
+  String get friendsInviteShareButton => 'Indicar';
+
+  @override
+  String friendsInviteShareMessage(String code) {
+    return 'Bora treinar a mente comigo? Baixe o MENTAL e use meu código de convite: $code';
+  }
 }
