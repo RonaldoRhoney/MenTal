@@ -8,6 +8,7 @@ import 'l10n/generated/app_localizations.dart';
 import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
+import 'screens/splash_screen.dart';
 import 'services/push_service.dart';
 import 'theme/app_theme.dart';
 
@@ -83,6 +84,7 @@ class AppEntryPoint extends StatefulWidget {
 class _AppEntryPointState extends State<AppEntryPoint> {
   ApiClient? _client;
   bool _ageGateDone = false;
+  bool _splashDone = false;
   late final Stream<AuthState> _authStateStream;
 
   @override
@@ -111,6 +113,12 @@ class _AppEntryPointState extends State<AppEntryPoint> {
 
   @override
   Widget build(BuildContext context) {
+    // BRAND.md §3: sequência de splash (wordmark → slogan) sempre roda
+    // primeiro, uma única vez por abertura do app — antes de qualquer
+    // decisão de Login/Age Gate/Home.
+    if (!_splashDone) {
+      return SplashScreen(onDone: () => setState(() => _splashDone = true));
+    }
     return StreamBuilder<AuthState>(
       stream: _authStateStream,
       builder: (context, snapshot) {

@@ -11,7 +11,7 @@
          permissão em runtime, mas ela precisa estar declarada aqui. -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
-        android:label="mental"
+        android:label="MENTAL"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -20,6 +20,11 @@ void main() {
     await tester.pumpWidget(const MentalApp());
     await tester.pump();
 
+    // BRAND.md §3: splash (wordmark → slogan) roda primeiro — avança o
+    // tempo pra passar da sequência antes de checar a tela de login.
+    await tester.pump(const Duration(milliseconds: 2300));
+    await tester.pump();
+
     // MENTAL (BRAND.md §1: nome nunca aparece sozinho, sem o slogan por
     // perto, em nenhum primeiro contato) e o formulário de e-mail/senha.
     expect(find.text('MENTAL'), findsOneWidget);
