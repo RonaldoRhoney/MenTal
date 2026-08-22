@@ -132,20 +132,58 @@ Ajustada por Rhoney a partir da proposta inicial de Claude Code:
    atingido pelos 4 territórios originais no V1.1 (12-13 cada — ajustar
    para 15 quando este item for executado).
 8. 🔔 Notificações (avaliar serviço contra Zero-Cost API antes de integrar)
+   — **✅ fechado e em produção (2026-08-22)**. FCM confirmado ZERO_COST,
+   SDK real integrado no client, push validado ponta a ponta em
+   dispositivo real (Moto G22) e contra o Supabase/Render de produção.
 9. 🚶 Contador de passos & movimento — spec completa em
    `STEP_COUNTER_MOVIMENTO.md` (aprovado 2026-08-21). Ciclo de 24h
    âncorado no horário do usuário, sensor nativo `TYPE_STEP_COUNTER`,
    conversão de passos em XP bônus escalonado por faixa (parâmetro no
    backend, nunca hardcoded no cliente), sem ranking de passos (evita
    comparação humilhante), copy final a validar com Rhoney antes de
-   produção.
-10. 🌎 Mundos completos
-11. 🏰 Conquista territorial aprofundada (depende do item 10)
+   produção. — **✅ fechado e em produção (2026-08-22)**. Extensões
+   aprovadas durante a implementação: meta diária pessoal opcional
+   (bônus extra ao superar) e checkpoints intradiários (4 partes de 6h,
+   bônus proporcional). Arquitetura de contagem: "catch-up ao reabrir o
+   app" (decisão de Rhoney) em vez de serviço em segundo plano com
+   notificação fixa.
+10. 🌎 Mundos completos — **✅ fechado e em produção (2026-08-22)**. 2
+    mundos aprovados: Mundo da Linguagem (palavras/textos/enigmas) e
+    Mundo da Mente Lógica (números/lógica/visual/conhecimento). "Mundo
+    completo" sempre derivado em tempo real, nunca armazenado.
+11. 🏰 Conquista territorial aprofundada (depende do item 10) — **✅
+    fechado e em produção (2026-08-22)**. Bônus fixo de 100 XP + 2
+    badges por mundo, 100% reaproveitando a infra de badges do item 1 —
+    nenhum badge extra para "todos os mundos" (já coberto pelo
+    "Colecionador").
 
 Grupo 2, só após os documentos dedicados da Seção 4:
-12. 👥 Amigos
-13. ⚔️ Disputa territorial
-14. ⚔️ Batalha assíncrona (se entrar nesta V2)
+12. 👥 Amigos — decisão dada (2026-08-22): reaproveita o deep link de
+    convite já existente. Falta arquitetura (modelo de dados, ranking de
+    amigos pendente desde o Vertical Slice 01, privacidade pra menor).
+13. ⚔️ Disputa territorial — **ainda sem decisão de mecânica**, o mais
+    delicado dos três (evitar que "tomar território de outro jogador"
+    soe humilhante). Pendência registrada: Rhoney propôs XP acumulado
+    por território como critério de "detentor" (em vez de taxa de
+    acerto ou tempo) — **não confirmado ainda**, decidir junto quando
+    este item for atacado.
+14. ⚔️ Batalha assíncrona — decisão dada (2026-08-22): entra nesta V2.
+    Documento dedicado (`ASYNC_BATTLE.md`) ainda não existe — falta
+    decidir o formato exato (mesmo desafio pra dois jogadores,
+    comparando tempo/acerto?) antes de codar.
+
+Ordem de ataque combinada (2026-08-22): 12 → 14 → 13 — os dois primeiros
+já têm decisão de escopo fechada, só falta arquitetura; o 13 fica por
+último de propósito, por exigir a conversa mais cuidadosa.
+
+## 8. Pendências de manutenção registradas (não bloqueiam o V2)
+
+- **`datetime.utcnow()` depreciado** — usado em todo o backend
+  (models.py, services.py, routers). Python vai remover essa API numa
+  versão futura (substituto: `datetime.now(datetime.UTC)`). Não quebra
+  nada hoje, mas precisa ser resolvido **antes da submissão à Play
+  Store** — registrar como item de manutenção pré-lançamento, não
+  durante a V2.
 
 ## 7. Papel de cada parte
 
