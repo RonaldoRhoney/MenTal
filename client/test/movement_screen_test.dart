@@ -16,7 +16,7 @@ import 'package:mental/screens/movement_screen.dart';
 /// fatal. Isso é o que permite testar o layout sem mockar hardware.
 class _FakeApiClient extends ApiClient {
   _FakeApiClient({required this.movementEnabled, this.currentCycle, this.pendingCycle, this.dailyGoalSteps})
-      : super(baseUrl: 'http://fake', userId: 'fake-user');
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   bool movementEnabled;
   Map<String, dynamic>? currentCycle;

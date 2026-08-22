@@ -12,7 +12,7 @@ import 'package:mental/screens/home_screen.dart';
 /// se está completo) — estes testes provam que a Home só organiza
 /// visualmente o que o backend manda, nunca decide sozinha.
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
   Future<Map<String, dynamic>> progress() async => {

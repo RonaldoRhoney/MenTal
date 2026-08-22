@@ -46,3 +46,11 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Keystore de release — NUNCA versionado. Perder isso = nunca mais poder
+# publicar atualização sob o mesmo app na Play Store.
+/android/key.properties
+/android/*.jks
+/android/*.keystore
+*.jks
+*.keystore

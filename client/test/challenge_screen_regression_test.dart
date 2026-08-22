@@ -16,7 +16,7 @@ import 'package:mental/screens/challenge_screen.dart';
 /// pedir dica) forçar um rebuild. Este teste prova que digitar sozinho,
 /// sem nenhuma outra interação, já habilita o botão.
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
   Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
@@ -39,7 +39,7 @@ class _FakeApiClient extends ApiClient {
 /// flag local — prova a generalização de widget.relampago para
 /// _timeLimitMs != null em _buildChallenge.
 class _ConhecimentoFakeApiClient extends ApiClient {
-  _ConhecimentoFakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _ConhecimentoFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
   Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
@@ -61,7 +61,7 @@ class _ConhecimentoFakeApiClient extends ApiClient {
 /// múltipla escolha, para provar que a tela não estoura (RenderFlex
 /// overflow) num viewport pequeno.
 class _LongPromptFakeApiClient extends ApiClient {
-  _LongPromptFakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _LongPromptFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
   Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
@@ -79,7 +79,7 @@ class _LongPromptFakeApiClient extends ApiClient {
 /// Simula um desafio do território "visual" (V2 item 4) — opções em
 /// formato "forma_preenchimento_cor_índice", sem nenhuma imagem real.
 class _VisualFakeApiClient extends ApiClient {
-  _VisualFakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _VisualFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
   Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
@@ -111,7 +111,7 @@ class _VisualFakeApiClient extends ApiClient {
 /// configuráveis (MICROINTERACTIONS.md) — o backend é a única autoridade
 /// sobre esses sinais, então o client só precisa saber renderizá-los.
 class _CelebrationFakeApiClient extends ApiClient {
-  _CelebrationFakeApiClient({required this.answerPayload}) : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _CelebrationFakeApiClient({required this.answerPayload}) : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   final Map<String, dynamic> answerPayload;
 

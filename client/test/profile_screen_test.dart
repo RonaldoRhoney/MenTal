@@ -11,7 +11,7 @@ import 'package:mental/theme/app_theme.dart';
 /// salvo (GET/PUT /profile); esta tela só carrega/edita o que já vem
 /// pronto.
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   Map<String, dynamic> profile = {
     'nickname': 'Lontra-Sabida',

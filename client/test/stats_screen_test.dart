@@ -10,7 +10,7 @@ import 'package:mental/screens/stats_screen.dart';
 /// backend calculou (GET /stats), incluindo a formatação de percentual e
 /// fração — nenhum cálculo próprio no client.
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
   Future<Map<String, dynamic>> stats() async {

@@ -10,7 +10,7 @@ import 'package:mental/theme/app_theme.dart';
 /// V2 item 14 — Batalha assíncrona. O backend é a autoridade sobre
 /// status/vencedor (GET /battles) — esta tela só exibe.
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient({required this.battles}) : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _FakeApiClient({required this.battles}) : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   final List<Map<String, dynamic>> battles;
 

@@ -657,5 +657,47 @@
   "@profileSaveButton": {"description": "Save profile button"},
 
   "profileSavedMessage": "Perfil salvo!",
-  "@profileSavedMessage": {"description": "Snackbar shown after saving the profile"}
+  "@profileSavedMessage": {"description": "Snackbar shown after saving the profile"},
+
+  "loginTitle": "MENTAL",
+  "@loginTitle": {"description": "Login screen title (brand wordmark)"},
+
+  "loginSlogan": "Mental é quem conquista com a mente.",
+  "@loginSlogan": {"description": "Brand slogan, BRAND.md §2 — always near the name on first contact"},
+
+  "loginEmailLabel": "E-mail",
+  "@loginEmailLabel": {"description": "Email field label"},
+
+  "loginPasswordLabel": "Senha",
+  "@loginPasswordLabel": {"description": "Password field label"},
+
+  "loginSignInButton": "Entrar",
+  "@loginSignInButton": {"description": "Sign in button"},
+
+  "loginSignUpButton": "Criar conta",
+  "@loginSignUpButton": {"description": "Sign up button"},
+
+  "loginToggleToSignUp": "Ainda não tem conta? Criar uma",
+  "@loginToggleToSignUp": {"description": "Link to switch to sign-up mode"},
+
+  "loginToggleToSignIn": "Já tem conta? Entrar",
+  "@loginToggleToSignIn": {"description": "Link to switch to sign-in mode"},
+
+  "loginCheckEmailMessage": "Conta criada! Confira seu e-mail para confirmar antes de entrar.",
+  "@loginCheckEmailMessage": {"description": "Shown after sign-up when email confirmation is required"},
+
+  "loginMissingFieldsError": "Preencha e-mail e senha.",
+  "@loginMissingFieldsError": {"description": "Validation error when email or password is empty"},
+
+  "settingsSignOutButton": "Sair",
+  "@settingsSignOutButton": {"description": "Sign out button in settings screen"},
+
+  "loginGoogleButton": "Continuar com Google",
+  "@loginGoogleButton": {"description": "Google OAuth sign-in button"},
+
+  "loginFacebookButton": "Continuar com Facebook",
+  "@loginFacebookButton": {"description": "Facebook OAuth sign-in button"},
+
+  "loginOrDivider": "ou",
+  "@loginOrDivider": {"description": "Divider text between OAuth buttons and email/password form"}
 }

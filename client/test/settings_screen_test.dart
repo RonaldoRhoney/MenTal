@@ -13,7 +13,7 @@ import 'package:mental/screens/settings_screen.dart';
 /// mudar o toggle chama PUT /notifications/preferences, não só muda
 /// estado local.
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   Map<String, dynamic> preferences = {'reengagement_enabled': true, 'social_enabled': false};
   final List<Map<String, dynamic>> updateCalls = [];

@@ -25,6 +25,7 @@ dependencies:
   firebase_core: ^4.13.0
   firebase_messaging: ^16.5.0
   share_plus: ^13.3.0
+  supabase_flutter: ^2.8.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

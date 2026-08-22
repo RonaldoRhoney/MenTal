@@ -1,24 +1,22 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-/// Cliente HTTP para a API MENTAL (Vertical Slice 01).
+/// Cliente HTTP para a API MENTAL.
 ///
-/// GAP CONHECIDO, documentado no relatório do Vertical Slice 01: não existe
-/// ainda um projeto Supabase real configurado para o MENTAL, então este
-/// cliente usa o mesmo modo DEV_INSECURE do backend (backend/app/auth.py)
-/// — o "token" enviado é o próprio user_id em texto puro, gerado uma vez
-/// e persistido localmente (ver SessionStore). Antes de qualquer build de
-/// release, isso precisa ser substituído por login real via Supabase Auth
-/// (ARCHITECTURE.md §4) — não é uma decisão de arquitetura, é ausência de
-/// infraestrutura ainda não provisionada.
+/// Login real via Supabase Auth (docs/02_IMPLEMENTATION/SUPABASE_SETUP.md
+/// §5, implementado 2026-08-22): accessToken é o JWT real da sessão
+/// (`Supabase.instance.client.auth.currentSession?.accessToken`), validado
+/// no backend via JWKS (backend/app/auth.py) — nunca mais o modo
+/// DEV_INSECURE (user_id em texto puro), que só o backend local sem
+/// SUPABASE_URL configurado ainda aceita, pra desenvolvimento.
 class ApiClient {
-  ApiClient({required this.baseUrl, required this.userId});
+  ApiClient({required this.baseUrl, required this.accessToken});
 
   final String baseUrl;
-  final String userId;
+  final String accessToken;
 
   Map<String, String> get _headers => {
-        'Authorization': 'Bearer $userId',
+        'Authorization': 'Bearer $accessToken',
         'Content-Type': 'application/json',
       };
 

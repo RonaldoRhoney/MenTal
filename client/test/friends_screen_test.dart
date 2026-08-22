@@ -12,7 +12,7 @@ import 'package:mental/theme/app_theme.dart';
 /// exibe o que já vem pronto (GET /social/invite-code, GET/POST
 /// /social/friends).
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient({this.addFriendError}) : super(baseUrl: 'http://fake', userId: 'fake-user');
+  _FakeApiClient({this.addFriendError}) : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   ApiException? addFriendError;
   List<Map<String, dynamic>> friends = [];

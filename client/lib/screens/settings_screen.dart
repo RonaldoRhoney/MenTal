@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
@@ -138,6 +139,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     const SizedBox(height: 8),
                     Text(_notificationsError!, style: const TextStyle(color: AppColors.error)),
                   ],
+                  const SizedBox(height: 28),
+                  // Login real via Supabase Auth — sair aqui só encerra a
+                  // sessão local; main.dart (authStateChanges) volta
+                  // sozinho pra tela de login.
+                  OutlinedButton(
+                    onPressed: () => Supabase.instance.client.auth.signOut(),
+                    child: Text(l10n.settingsSignOutButton),
+                  ),
                 ],
               ),
       ),

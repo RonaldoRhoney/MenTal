@@ -1083,6 +1083,90 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Perfil salvo!'**
   String get profileSavedMessage;
+
+  /// Login screen title (brand wordmark)
+  ///
+  /// In pt, this message translates to:
+  /// **'MENTAL'**
+  String get loginTitle;
+
+  /// Brand slogan, BRAND.md §2 — always near the name on first contact
+  ///
+  /// In pt, this message translates to:
+  /// **'Mental é quem conquista com a mente.'**
+  String get loginSlogan;
+
+  /// Email field label
+  ///
+  /// In pt, this message translates to:
+  /// **'E-mail'**
+  String get loginEmailLabel;
+
+  /// Password field label
+  ///
+  /// In pt, this message translates to:
+  /// **'Senha'**
+  String get loginPasswordLabel;
+
+  /// Sign in button
+  ///
+  /// In pt, this message translates to:
+  /// **'Entrar'**
+  String get loginSignInButton;
+
+  /// Sign up button
+  ///
+  /// In pt, this message translates to:
+  /// **'Criar conta'**
+  String get loginSignUpButton;
+
+  /// Link to switch to sign-up mode
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda não tem conta? Criar uma'**
+  String get loginToggleToSignUp;
+
+  /// Link to switch to sign-in mode
+  ///
+  /// In pt, this message translates to:
+  /// **'Já tem conta? Entrar'**
+  String get loginToggleToSignIn;
+
+  /// Shown after sign-up when email confirmation is required
+  ///
+  /// In pt, this message translates to:
+  /// **'Conta criada! Confira seu e-mail para confirmar antes de entrar.'**
+  String get loginCheckEmailMessage;
+
+  /// Validation error when email or password is empty
+  ///
+  /// In pt, this message translates to:
+  /// **'Preencha e-mail e senha.'**
+  String get loginMissingFieldsError;
+
+  /// Sign out button in settings screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Sair'**
+  String get settingsSignOutButton;
+
+  /// Google OAuth sign-in button
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar com Google'**
+  String get loginGoogleButton;
+
+  /// Facebook OAuth sign-in button
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar com Facebook'**
+  String get loginFacebookButton;
+
+  /// Divider text between OAuth buttons and email/password form
+  ///
+  /// In pt, this message translates to:
+  /// **'ou'**
+  String get loginOrDivider;
 }
 
 class _AppLocalizationsDelegate

@@ -606,4 +606,47 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get profileSavedMessage => 'Perfil salvo!';
+
+  @override
+  String get loginTitle => 'MENTAL';
+
+  @override
+  String get loginSlogan => 'Mental é quem conquista com a mente.';
+
+  @override
+  String get loginEmailLabel => 'E-mail';
+
+  @override
+  String get loginPasswordLabel => 'Senha';
+
+  @override
+  String get loginSignInButton => 'Entrar';
+
+  @override
+  String get loginSignUpButton => 'Criar conta';
+
+  @override
+  String get loginToggleToSignUp => 'Ainda não tem conta? Criar uma';
+
+  @override
+  String get loginToggleToSignIn => 'Já tem conta? Entrar';
+
+  @override
+  String get loginCheckEmailMessage =>
+      'Conta criada! Confira seu e-mail para confirmar antes de entrar.';
+
+  @override
+  String get loginMissingFieldsError => 'Preencha e-mail e senha.';
+
+  @override
+  String get settingsSignOutButton => 'Sair';
+
+  @override
+  String get loginGoogleButton => 'Continuar com Google';
+
+  @override
+  String get loginFacebookButton => 'Continuar com Facebook';
+
+  @override
+  String get loginOrDivider => 'ou';
 }
