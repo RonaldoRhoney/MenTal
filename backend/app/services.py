@@ -279,6 +279,11 @@ def _count_hint_free_correct_answers(db: Session, user_id: str) -> int:
     ).scalar_one()
 
 
+def _world_completed_by_display_order(db: Session, user_id: str, display_order: int) -> bool:
+    world = db.execute(select(models.World).where(models.World.display_order == display_order)).scalar_one_or_none()
+    return bool(world) and is_world_completed(db, user_id, world.id)
+
+
 _BADGE_EVALUATORS = {
     "territory_conquered_count": lambda db, user_id, value: _count_conquered_territories(db, user_id) >= value,
     "all_territories_conquered": lambda db, user_id, value: _all_territories_conquered(db, user_id),
@@ -287,6 +292,11 @@ _BADGE_EVALUATORS = {
     ),
     "total_correct_answers": lambda db, user_id, value: _count_total_correct_answers(db, user_id) >= value,
     "hint_free_correct_answers": lambda db, user_id, value: _count_hint_free_correct_answers(db, user_id) >= value,
+    # V2 item 11 — usa display_order do mundo como "value" em vez de um
+    # world_id novo no schema de Badge (reaproveita o campo numérico já
+    # existente, mesmo padrão de streak_days/total_correct_answers —
+    # nenhuma coluna nova só pra isto).
+    "world_completed_by_display_order": _world_completed_by_display_order,
 }
 
 

@@ -45,6 +45,13 @@ STREAK_FREEZE_PER_WEEK = 1
 # aberto) — centralizadas aqui de propósito, a pedido de Rhoney, para
 # serem achadas e ajustadas num único lugar quando houver telemetria real.
 CONQUEST_XP_THRESHOLD = 200
+
+# V2 item 11 — Conquista territorial aprofundada (V2_KICKOFF.md §6A,
+# aprovado por Rhoney em 2026-08-22). Bônus fixo pago uma vez, na
+# resposta exata que fecha o último território de um mundo (mesmo
+# padrão de world_just_completed) — reconhece que fechar um mundo
+# inteiro é um feito maior que fechar um território isolado.
+WORLD_COMPLETION_BONUS_XP = 100
 XP_PER_LEVEL = 100
 XP_BASE_BY_DIFFICULTY = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50}
 XP_BASE_DEFAULT = 20

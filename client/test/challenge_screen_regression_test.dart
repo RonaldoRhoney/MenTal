@@ -121,6 +121,7 @@ Map<String, dynamic> _baseAnswerPayload() => {
       'territory_just_conquered': false,
       'world_just_completed': false,
       'completed_world_name': null,
+      'world_completion_bonus_xp': 0,
       'streak_just_extended': false,
       'newly_awarded_badges': <Map<String, dynamic>>[],
     };
@@ -339,13 +340,14 @@ void main() {
       expect(find.text('Território conquistado!'), findsOneWidget);
     });
 
-    testWidgets('world_just_completed mostra "{mundo} completo!"', (tester) async {
+    testWidgets('world_just_completed mostra "{mundo} completo! +{xp} XP de bônus"', (tester) async {
       final payload = _baseAnswerPayload()
         ..['world_just_completed'] = true
-        ..['completed_world_name'] = 'Mundo da Linguagem';
+        ..['completed_world_name'] = 'Mundo da Linguagem'
+        ..['world_completion_bonus_xp'] = 100;
       await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
 
-      expect(find.text('Mundo da Linguagem completo!'), findsOneWidget);
+      expect(find.text('Mundo da Linguagem completo! +100 XP de bônus'), findsOneWidget);
     });
 
     testWidgets('newly_awarded_badges mostra "Nova conquista: {nome}!"', (tester) async {

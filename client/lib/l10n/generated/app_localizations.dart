@@ -436,11 +436,11 @@ abstract class AppLocalizations {
   /// **'Território conquistado!'**
   String get territoryConqueredCelebrationMessage;
 
-  /// World just completed celebration message
+  /// World just completed celebration message, including the completion bonus XP
   ///
   /// In pt, this message translates to:
-  /// **'{world} completo!'**
-  String worldCompletedCelebrationMessage(String world);
+  /// **'{world} completo! +{xp} XP de bônus'**
+  String worldCompletedCelebrationMessage(String world, int xp);
 
   /// Badge just unlocked celebration message
   ///

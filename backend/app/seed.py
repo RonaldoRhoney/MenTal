@@ -67,6 +67,20 @@ BADGES = [
         "description": "Responda corretamente 10 desafios sem usar nenhuma dica.",
         "criteria_type": "hint_free_correct_answers", "criteria_value": 10, "display_order": 5,
     },
+    # V2 item 11 — Conquista territorial aprofundada (V2_KICKOFF.md §6A).
+    # criteria_value guarda o display_order do mundo (ver models.World),
+    # não um world_id novo — mesmo padrão de streak_days/total_correct_
+    # answers acima, campo numérico já existente.
+    {
+        "code": "world_master_linguagem", "name": "Mestre da Linguagem",
+        "description": "Complete todos os territórios do Mundo da Linguagem.",
+        "criteria_type": "world_completed_by_display_order", "criteria_value": 1, "display_order": 6,
+    },
+    {
+        "code": "world_master_mente_logica", "name": "Mestre da Mente Lógica",
+        "description": "Complete todos os territórios do Mundo da Mente Lógica.",
+        "criteria_type": "world_completed_by_display_order", "criteria_value": 2, "display_order": 7,
+    },
 ]
 
 

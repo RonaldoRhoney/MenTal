@@ -372,6 +372,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
     final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
     final completedWorldName = result['completed_world_name'] as String?;
+    final worldCompletionBonusXp = result['world_completion_bonus_xp'] as int? ?? 0;
     final newlyAwardedBadges = ((result['newly_awarded_badges'] as List?) ?? const [])
         .cast<Map<String, dynamic>>();
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
@@ -448,7 +449,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   PulseIn(
                     intensity: 0.3,
                     child: Text(
-                      l10n.worldCompletedCelebrationMessage(completedWorldName),
+                      l10n.worldCompletedCelebrationMessage(completedWorldName, worldCompletionBonusXp),
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),

@@ -32,7 +32,11 @@ def test_badges_catalog_starts_unearned(client):
 
     badges = client.get("/badges", headers=headers).json()["badges"]
     codes = {b["code"] for b in badges}
-    assert codes == {"first_conquest", "collector", "iron_streak", "sharp_mind", "no_help_needed"}
+    assert codes == {
+        "first_conquest", "collector", "iron_streak", "sharp_mind", "no_help_needed",
+        # V2 item 11 — badges por mundo (V2_KICKOFF.md §6A).
+        "world_master_linguagem", "world_master_mente_logica",
+    }
     assert all(b["earned"] is False and b["earned_at"] is None for b in badges)
 
 

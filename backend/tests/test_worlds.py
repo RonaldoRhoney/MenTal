@@ -8,6 +8,8 @@ exata do sinal world_just_completed (dispara uma vez, nunca de novo).
 
 import uuid
 
+from app import config
+
 from .conftest import auth_header
 
 
@@ -73,10 +75,13 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client):
     progress = client.get("/progress", headers=headers).json()
     assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is False
 
+    xp_before_completion = client.get("/progress", headers=headers).json()["xp_total"]
+
     # Última resposta correta em "enigmas" fecha os 3 territórios do
     # Mundo da Linguagem — world_just_completed deve disparar EXATAMENTE
     # nessa resposta, nunca antes.
     world_completed_events = []
+    completing_result = None
     for _ in range(30):
         progress = client.get("/progress", headers=headers).json()
         enigmas = next(t for t in progress["territories"] if t["territory_id"] == "enigmas")
@@ -86,8 +91,17 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client):
         world_completed_events.append(result["world_just_completed"])
         if result["world_just_completed"]:
             assert result["completed_world_name"] == "Mundo da Linguagem"
+            completing_result = result
 
     assert world_completed_events.count(True) == 1
+
+    # V2 item 11 — bônus fixo de XP e badge de mundo, na MESMA resposta
+    # que fecha o mundo (reaproveita o sistema de badges do item 1).
+    assert completing_result["world_completion_bonus_xp"] == config.WORLD_COMPLETION_BONUS_XP
+    xp_after_completion = client.get("/progress", headers=headers).json()["xp_total"]
+    assert xp_after_completion - xp_before_completion >= config.WORLD_COMPLETION_BONUS_XP
+    badge_codes_awarded = {b["code"] for b in completing_result["newly_awarded_badges"]}
+    assert "world_master_linguagem" in badge_codes_awarded
 
     progress = client.get("/progress", headers=headers).json()
     assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is True

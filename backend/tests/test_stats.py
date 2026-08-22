@@ -42,7 +42,7 @@ def test_stats_starts_zeroed_for_new_user(client):
     assert stats["current_streak"] == 0
     assert stats["longest_streak"] == 0
     assert stats["badges_earned"] == 0
-    assert stats["badges_total"] == 5
+    assert stats["badges_total"] == 7  # V2 item 11 acrescentou os 2 badges por mundo
     territory_ids = {t["territory_id"] for t in stats["by_territory"]}
     assert "numeros" in territory_ids and "visual" in territory_ids
 

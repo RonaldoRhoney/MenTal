@@ -231,13 +231,19 @@ def submit_answer(
     else:
         territory_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
 
-    level_up = profile.level > level_before
     territory_just_conquered = bool(territory_progress and territory_progress.conquered_at and not was_conquered_before)
     world_just_completed = False
     completed_world_name = None
+    world_completion_bonus_xp = 0
     if world_id and services.is_world_completed(db, user_id, world_id) and not was_world_completed_before:
         world_just_completed = True
         completed_world_name = db.get(models.World, world_id).name
+        world_completion_bonus_xp = config.WORLD_COMPLETION_BONUS_XP
+        profile.xp_total += world_completion_bonus_xp
+        profile.level = scoring.level_from_xp(profile.xp_total)
+        db.commit()
+
+    level_up = profile.level > level_before
 
     today = datetime.utcnow().date()
     services.register_daily_usage(db, user_id, today)
@@ -281,4 +287,5 @@ def submit_answer(
         newly_awarded_badges=newly_awarded_out,
         world_just_completed=world_just_completed,
         completed_world_name=completed_world_name,
+        world_completion_bonus_xp=world_completion_bonus_xp,
     )

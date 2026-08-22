@@ -81,6 +81,7 @@ class AnswerResponse(BaseModel):
     # do mundo, nunca de novo depois.
     world_just_completed: bool = False
     completed_world_name: str | None = None
+    world_completion_bonus_xp: int = 0
 
 
 class ProgressTerritoryOut(BaseModel):
