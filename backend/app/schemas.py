@@ -229,6 +229,7 @@ class AddFriendRequest(BaseModel):
 
 
 class FriendOut(BaseModel):
+    user_id: str
     nickname: str
     xp_total: int
     level: int
@@ -243,3 +244,31 @@ class ShareRewardResponse(BaseModel):
     already_rewarded_today: bool
     xp_total: int
     level: int
+
+
+class CreateBattleRequest(BaseModel):
+    opponent_user_id: str
+    territory_id: str
+    difficulty_level: int
+
+
+class CreateBattleResponse(BaseModel):
+    battle_id: str
+    challenge: ChallengeOut
+
+
+class BattleOut(BaseModel):
+    battle_id: str
+    opponent_nickname: str
+    territory_id: str
+    difficulty_level: int
+    role: str  # "challenger" | "opponent"
+    status: str  # "pending" | "resolved"
+    i_answered: bool
+    opponent_answered: bool
+    winner: str | None = None  # "me" | "opponent" | "tie" | None (ainda pending)
+    win_bonus_xp: int = 0
+
+
+class BattlesResponse(BaseModel):
+    battles: list[BattleOut]

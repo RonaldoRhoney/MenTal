@@ -33,3 +33,35 @@ SOCIAL_OVERTAKE_CHILD_SAFE_BODY = "A disputa está acirrada no seu território �
 # convite pra coleta final, nunca de cobrança.
 MOVEMENT_CYCLE_REPORT_TITLE = "Seu ciclo fechou!"
 MOVEMENT_CYCLE_REPORT_BODY_TEMPLATE = "{steps} passos hoje — toque pra coletar seus pontos. 🚶"
+
+# V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md §5, aprovado
+# 2026-08-22). Batalha só existe entre amigos JÁ confirmados (item 12)
+# — decisão de Rhoney (2026-08-22): nome aparece normalmente mesmo em
+# child_safe_mode aqui, mesmo raciocínio já aplicado às telas de Amigos
+# (diferente do ranking geral, que expõe estranhos). Tom de convite/
+# comemoração, nunca de provocação — perdedor nunca lê "você perdeu"
+# com ênfase na derrota.
+BATTLE_CHALLENGE_RECEIVED_TITLE = "Você foi desafiado!"
+BATTLE_CHALLENGE_RECEIVED_BODY_TEMPLATE = "{nickname} te desafiou em {territory}! Bora responder? 🎯"
+
+BATTLE_RESULT_WIN_TITLE = "Você venceu a batalha! 🏆"
+BATTLE_RESULT_WIN_BODY_TEMPLATE = "Você venceu a batalha contra {nickname}! 🏆"
+
+BATTLE_RESULT_LOSS_TITLE = "Batalha encerrada"
+BATTLE_RESULT_LOSS_BODY_TEMPLATE = "Batalha encerrada — {nickname} levou essa. Bora tentar outra? 💪"
+
+BATTLE_RESULT_TIE_TITLE = "Batalha encerrada"
+BATTLE_RESULT_TIE_BODY_TEMPLATE = "Empate na batalha contra {nickname} — os dois erraram dessa vez. Bora tentar outra? 💪"
+
+# Só usado nesta notificação — os territórios ainda não têm uma tabela
+# de nomes server-side (o client resolve isso via l10n). 7 territórios
+# fixos, mesmo texto exibido no client (client/lib/territories.dart).
+BATTLE_TERRITORY_NAMES = {
+    "palavras": "Palavras",
+    "numeros": "Números",
+    "logica": "Lógica",
+    "conhecimento": "Conhecimento",
+    "enigmas": "Enigmas",
+    "textos": "Textos",
+    "visual": "Visual",
+}

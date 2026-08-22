@@ -183,3 +183,11 @@ MOVEMENT_CHECKPOINT_PARTS = 4
 # 10 XP (scoring.xp_base_for) — este bônus fica na mesma ordem de
 # grandeza de UM acerto, nunca de vários, e só uma vez por dia.
 SHARE_XP_REWARD = 15
+
+# V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md §3/§4, aprovado
+# 2026-08-22). Limite é sobre desafios ENVIADOS por dia (não recebidos),
+# mesmo padrão de reset de DAILY_FREE_CHALLENGE_LIMIT. Bônus de vitória
+# modesto de propósito — perto de um acerto de nível médio (20 XP),
+# nunca um múltiplo alto, pra não virar a forma dominante de ganhar XP.
+BATTLE_DAILY_SEND_LIMIT = 3
+BATTLE_WIN_BONUS_XP = 30

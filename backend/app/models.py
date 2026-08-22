@@ -331,3 +331,47 @@ class UserBadge(Base):
     user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     badge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("badges.id"), primary_key=True)
     earned_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class Battle(Base):
+    """
+    V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md, aprovado
+    2026-08-22). Só entre amigos já confirmados (item 12). Cada lado
+    responde um desafio DIFERENTE (mesmo território/nível) — nunca o
+    mesmo, pra evitar cola. A resposta em si é dada pelo já existente
+    POST /challenges/{id}/answer (nenhuma lógica de score duplicada
+    aqui) — este registro só correlaciona os dois lados e guarda o
+    resultado/tempo de cada um pra decidir o vencedor quando ambos já
+    tiverem respondido.
+
+    *_served_at existe pra medir "tempo de resposta" de forma justa
+    apesar do fluxo ser assíncrono: o desafiante responde na hora
+    (challenger_served_at = created_at), mas o desafiado pode abrir dias
+    depois — comparar desde created_at penalizaria sempre o desafiado.
+    opponent_served_at só é preenchido no momento em que ele de fato
+    abre o próprio desafio (GET /battles/{id}/my-challenge), não na
+    criação da batalha.
+    """
+
+    __tablename__ = "battles"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    challenger_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    opponent_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"))
+    difficulty_level: Mapped[int] = mapped_column(Integer)
+    challenger_challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
+    opponent_challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
+    status: Mapped[str] = mapped_column(String, default="pending")  # pending|resolved
+    challenger_served_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    opponent_served_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    challenger_is_correct: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
+    opponent_is_correct: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
+    challenger_response_ms: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    opponent_response_ms: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    # null enquanto pending; também null quando resolved e foi empate
+    # (ambos erraram) — status é quem diferencia "ainda não resolvida"
+    # de "resolvida sem vencedor".
+    winner_user_id: Mapped[str | None] = mapped_column(UUIDType, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    resolved_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)

@@ -87,7 +87,7 @@ def list_friends(user_id: str = Depends(get_current_user_id), db: Session = Depe
         profile = db.get(models.Profile, friend_id)
         if profile is None:
             continue
-        friends.append(schemas.FriendOut(nickname=profile.nickname, xp_total=profile.xp_total, level=profile.level))
+        friends.append(schemas.FriendOut(user_id=friend_id, nickname=profile.nickname, xp_total=profile.xp_total, level=profile.level))
     return schemas.FriendsResponse(friends=friends)
 
 

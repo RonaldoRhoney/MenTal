@@ -496,4 +496,62 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get relampagoModeLabel => '⚡ Relâmpago';
+
+  @override
+  String get backButton => 'Voltar';
+
+  @override
+  String get battlesTooltip => 'Batalhas';
+
+  @override
+  String get battlesScreenTitle => 'Batalhas';
+
+  @override
+  String get battleChallengeButton => 'Desafiar';
+
+  @override
+  String battleDialogTitle(String nickname) {
+    return 'Desafiar $nickname';
+  }
+
+  @override
+  String get battleDialogTerritoryLabel => 'Território';
+
+  @override
+  String get battleDialogDifficultyLabel => 'Nível de dificuldade';
+
+  @override
+  String get battleDialogSendButton => 'Enviar desafio';
+
+  @override
+  String get battleDailyLimitReachedMessage =>
+      'Você já enviou o máximo de desafios hoje. Volte amanhã!';
+
+  @override
+  String get battlesEmptyMessage =>
+      'Nenhuma batalha ainda. Desafie um amigo na tela de Amigos!';
+
+  @override
+  String get battleStatusPendingWaitingMe => 'Sua vez de responder';
+
+  @override
+  String battleStatusPendingWaitingOpponent(String nickname) {
+    return 'Aguardando $nickname responder';
+  }
+
+  @override
+  String battleStatusWon(int xp) {
+    return 'Você venceu! +$xp XP';
+  }
+
+  @override
+  String battleStatusLost(String nickname) {
+    return '$nickname levou essa';
+  }
+
+  @override
+  String get battleStatusTie => 'Empate — os dois erraram';
+
+  @override
+  String get battleAnswerButton => 'Responder';
 }

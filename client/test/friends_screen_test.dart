@@ -29,7 +29,7 @@ class _FakeApiClient extends ApiClient {
     addedCodes.add(inviteCode);
     if (addFriendError != null) throw addFriendError!;
     friends = [
-      {'nickname': 'Amigo Novo', 'xp_total': 50, 'level': 1},
+      {'user_id': 'friend-user-id', 'nickname': 'Amigo Novo', 'xp_total': 50, 'level': 1},
     ];
     return {'status': 'ok'};
   }

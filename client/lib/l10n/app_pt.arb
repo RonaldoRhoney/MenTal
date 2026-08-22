@@ -543,5 +543,65 @@
   },
 
   "relampagoModeLabel": "⚡ Relâmpago",
-  "@relampagoModeLabel": {"description": "Button/toggle label to start Palavras in lightning (multiple choice with timer) mode"}
+  "@relampagoModeLabel": {"description": "Button/toggle label to start Palavras in lightning (multiple choice with timer) mode"},
+
+  "backButton": "Voltar",
+  "@backButton": {"description": "Generic back button label"},
+
+  "battlesTooltip": "Batalhas",
+  "@battlesTooltip": {"description": "Home app bar icon tooltip for the battles screen"},
+
+  "battlesScreenTitle": "Batalhas",
+  "@battlesScreenTitle": {"description": "Battles screen app bar title"},
+
+  "battleChallengeButton": "Desafiar",
+  "@battleChallengeButton": {"description": "Button on a friend row to challenge them to a battle"},
+
+  "battleDialogTitle": "Desafiar {nickname}",
+  "@battleDialogTitle": {
+    "description": "Battle creation dialog title",
+    "placeholders": {"nickname": {"type": "String"}}
+  },
+
+  "battleDialogTerritoryLabel": "Território",
+  "@battleDialogTerritoryLabel": {"description": "Territory picker label in battle creation dialog"},
+
+  "battleDialogDifficultyLabel": "Nível de dificuldade",
+  "@battleDialogDifficultyLabel": {"description": "Difficulty picker label in battle creation dialog"},
+
+  "battleDialogSendButton": "Enviar desafio",
+  "@battleDialogSendButton": {"description": "Send button in battle creation dialog"},
+
+  "battleDailyLimitReachedMessage": "Você já enviou o máximo de desafios hoje. Volte amanhã!",
+  "@battleDailyLimitReachedMessage": {"description": "Shown when the daily battle send limit is reached"},
+
+  "battlesEmptyMessage": "Nenhuma batalha ainda. Desafie um amigo na tela de Amigos!",
+  "@battlesEmptyMessage": {"description": "Empty state for the battles list"},
+
+  "battleStatusPendingWaitingMe": "Sua vez de responder",
+  "@battleStatusPendingWaitingMe": {"description": "Battle row status when it's the current user's turn to answer"},
+
+  "battleStatusPendingWaitingOpponent": "Aguardando {nickname} responder",
+  "@battleStatusPendingWaitingOpponent": {
+    "description": "Battle row status when waiting for the opponent to answer",
+    "placeholders": {"nickname": {"type": "String"}}
+  },
+
+  "battleStatusWon": "Você venceu! +{xp} XP",
+  "@battleStatusWon": {
+    "description": "Battle row status when the current user won",
+    "placeholders": {"xp": {"type": "int"}}
+  },
+
+  "battleStatusLost": "{nickname} levou essa",
+  "@battleStatusLost": {
+    "description": "Battle row status when the current user lost",
+    "placeholders": {"nickname": {"type": "String"}}
+  },
+
+  "battleStatusTie": "Empate — os dois erraram",
+  "@battleStatusTie": {"description": "Battle row status on a tie"},
+
+  "battleAnswerButton": "Responder",
+  "@battleAnswerButton": {"description": "Button to answer a pending battle challenge"}
 }

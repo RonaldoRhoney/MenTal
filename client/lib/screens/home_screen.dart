@@ -8,6 +8,7 @@ import '../services/movement_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/xp_bar.dart';
+import 'battles_screen.dart';
 import 'challenge_screen.dart';
 import 'friends_screen.dart';
 import 'movement_screen.dart';
@@ -238,6 +239,15 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) => FriendsScreen(client: widget.client)),
+              );
+            },
+          ),
+          IconButton(
+            tooltip: l10n.battlesTooltip,
+            icon: const Icon(Icons.sports_martial_arts_outlined),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => BattlesScreen(client: widget.client)),
               );
             },
           ),

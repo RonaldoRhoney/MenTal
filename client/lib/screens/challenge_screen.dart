@@ -23,6 +23,8 @@ class ChallengeScreen extends StatefulWidget {
     required this.territoryId,
     required this.territoryLabel,
     this.relampago = false,
+    this.battleId,
+    this.prefetchedChallenge,
   });
 
   final ApiClient client;
@@ -33,6 +35,13 @@ class ChallengeScreen extends StatefulWidget {
   // ignora o modo pra qualquer outro território (defesa em profundidade,
   // nunca confia só no client pra isso).
   final bool relampago;
+  // V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md). Quando não-nulo,
+  // esta tela serve o desafio de UMA batalha específica (nunca "próximo
+  // desafio" em sequência — é um evento único por lado). prefetchedChallenge
+  // evita uma chamada de rede redundante pro desafiante, que já recebeu o
+  // próprio desafio na resposta de POST /battles.
+  final String? battleId;
+  final Map<String, dynamic>? prefetchedChallenge;
 
   @override
   State<ChallengeScreen> createState() => _ChallengeScreenState();
@@ -135,10 +144,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _submitted = false;
     });
     try {
-      final challenge = await widget.client.nextChallenge(
-        widget.territoryId,
-        mode: widget.relampago ? 'relampago' : 'normal',
-      );
+      final challenge = widget.battleId != null
+          ? (widget.prefetchedChallenge ?? await widget.client.getMyBattleChallenge(widget.battleId!))
+          : await widget.client.nextChallenge(
+              widget.territoryId,
+              mode: widget.relampago ? 'relampago' : 'normal',
+            );
       if (mounted) {
         setState(() => _challenge = challenge);
         final timeLimitSeconds = challenge['time_limit_seconds'] as int?;
@@ -684,7 +695,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           ),
         ),
         const SizedBox(height: 16),
-        FilledButton(onPressed: _loadNextChallenge, child: Text(l10n.nextChallengeButton)),
+        // V2 item 14 — batalha é um evento único por lado: depois de
+        // responder, não há "próximo desafio" da mesma batalha, então o
+        // botão volta pra tela anterior em vez de tentar buscar de novo.
+        FilledButton(
+          onPressed: widget.battleId != null ? () => Navigator.of(context).pop() : _loadNextChallenge,
+          child: Text(widget.battleId != null ? l10n.backButton : l10n.nextChallengeButton),
+        ),
       ],
     );
   }

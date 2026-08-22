@@ -897,6 +897,102 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'⚡ Relâmpago'**
   String get relampagoModeLabel;
+
+  /// Generic back button label
+  ///
+  /// In pt, this message translates to:
+  /// **'Voltar'**
+  String get backButton;
+
+  /// Home app bar icon tooltip for the battles screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Batalhas'**
+  String get battlesTooltip;
+
+  /// Battles screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Batalhas'**
+  String get battlesScreenTitle;
+
+  /// Button on a friend row to challenge them to a battle
+  ///
+  /// In pt, this message translates to:
+  /// **'Desafiar'**
+  String get battleChallengeButton;
+
+  /// Battle creation dialog title
+  ///
+  /// In pt, this message translates to:
+  /// **'Desafiar {nickname}'**
+  String battleDialogTitle(String nickname);
+
+  /// Territory picker label in battle creation dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Território'**
+  String get battleDialogTerritoryLabel;
+
+  /// Difficulty picker label in battle creation dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Nível de dificuldade'**
+  String get battleDialogDifficultyLabel;
+
+  /// Send button in battle creation dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Enviar desafio'**
+  String get battleDialogSendButton;
+
+  /// Shown when the daily battle send limit is reached
+  ///
+  /// In pt, this message translates to:
+  /// **'Você já enviou o máximo de desafios hoje. Volte amanhã!'**
+  String get battleDailyLimitReachedMessage;
+
+  /// Empty state for the battles list
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhuma batalha ainda. Desafie um amigo na tela de Amigos!'**
+  String get battlesEmptyMessage;
+
+  /// Battle row status when it's the current user's turn to answer
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua vez de responder'**
+  String get battleStatusPendingWaitingMe;
+
+  /// Battle row status when waiting for the opponent to answer
+  ///
+  /// In pt, this message translates to:
+  /// **'Aguardando {nickname} responder'**
+  String battleStatusPendingWaitingOpponent(String nickname);
+
+  /// Battle row status when the current user won
+  ///
+  /// In pt, this message translates to:
+  /// **'Você venceu! +{xp} XP'**
+  String battleStatusWon(int xp);
+
+  /// Battle row status when the current user lost
+  ///
+  /// In pt, this message translates to:
+  /// **'{nickname} levou essa'**
+  String battleStatusLost(String nickname);
+
+  /// Battle row status on a tie
+  ///
+  /// In pt, this message translates to:
+  /// **'Empate — os dois erraram'**
+  String get battleStatusTie;
+
+  /// Button to answer a pending battle challenge
+  ///
+  /// In pt, this message translates to:
+  /// **'Responder'**
+  String get battleAnswerButton;
 }
 
 class _AppLocalizationsDelegate

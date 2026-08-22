@@ -4,7 +4,9 @@ import 'package:flutter/services.dart';
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/share_service.dart';
+import '../territories.dart';
 import '../theme/app_theme.dart';
+import 'challenge_screen.dart';
 
 /// V2 item 12 — Amigos (V2_KICKOFF.md §6A). Reaproveita o MESMO
 /// invite_code de sempre (GET /social/invite-code, já existente desde o
@@ -102,6 +104,89 @@ class _FriendsScreenState extends State<FriendsScreen> {
     }
   }
 
+  // V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md §2.1): desafiante
+  // escolhe território e nível livremente (não é a dificuldade adaptativa
+  // do modo normal). Diálogo simples — backend valida amizade/limite
+  // diário/território de qualquer forma, esta UI só evita o óbvio (ex.:
+  // não deixa enviar sem escolher território).
+  Future<void> _challengeFriend(Map<String, dynamic> friend) async {
+    final l10n = AppLocalizations.of(context)!;
+    String territoryId = kTerritoryIds.first;
+    int difficultyLevel = 2;
+
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) {
+        return StatefulBuilder(
+          builder: (dialogContext, setDialogState) {
+            return AlertDialog(
+              title: Text(l10n.battleDialogTitle(friend['nickname'] as String)),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  DropdownButtonFormField<String>(
+                    initialValue: territoryId,
+                    decoration: InputDecoration(labelText: l10n.battleDialogTerritoryLabel),
+                    items: [
+                      for (final id in kTerritoryIds)
+                        DropdownMenuItem(value: id, child: Text(territoryLabel(l10n, id))),
+                    ],
+                    onChanged: (value) => setDialogState(() => territoryId = value ?? territoryId),
+                  ),
+                  const SizedBox(height: 12),
+                  DropdownButtonFormField<int>(
+                    initialValue: difficultyLevel,
+                    decoration: InputDecoration(labelText: l10n.battleDialogDifficultyLabel),
+                    items: const [
+                      DropdownMenuItem(value: 1, child: Text('1')),
+                      DropdownMenuItem(value: 2, child: Text('2')),
+                      DropdownMenuItem(value: 3, child: Text('3')),
+                      DropdownMenuItem(value: 4, child: Text('4')),
+                      DropdownMenuItem(value: 5, child: Text('5')),
+                    ],
+                    onChanged: (value) => setDialogState(() => difficultyLevel = value ?? difficultyLevel),
+                  ),
+                ],
+              ),
+              actions: [
+                FilledButton(
+                  onPressed: () => Navigator.of(dialogContext).pop(true),
+                  child: Text(l10n.battleDialogSendButton),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+    if (confirmed != true || !mounted) return;
+
+    try {
+      final created = await widget.client.createBattle(
+        opponentUserId: friend['user_id'] as String,
+        territoryId: territoryId,
+        difficultyLevel: difficultyLevel,
+      );
+      if (!mounted) return;
+      await Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (_) => ChallengeScreen(
+            client: widget.client,
+            territoryId: territoryId,
+            territoryLabel: territoryLabel(l10n, territoryId),
+            battleId: created['battle_id'] as String,
+            prefetchedChallenge: created['challenge'] as Map<String, dynamic>,
+          ),
+        ),
+      );
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      final message = e.code == 'BATTLE_DAILY_LIMIT_REACHED' ? l10n.battleDailyLimitReachedMessage : e.message;
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -194,9 +279,22 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                 final friend = _friends[index];
                                 return ListTile(
                                   title: Text(friend['nickname'] as String),
-                                  trailing: Text(
+                                  subtitle: Text(
                                     '${friend['xp_total']} XP',
                                     style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 14),
+                                  ),
+                                  trailing: OutlinedButton(
+                                    // Mesmo achado do bug de largura infinita
+                                    // já documentado nesta tela (AppTheme
+                                    // define minimumSize: Size.fromHeight(48),
+                                    // largura infinita) — aqui o problema é
+                                    // outro sintoma do mesmo bug: dentro de
+                                    // ListTile.trailing (não um Row solto),
+                                    // então a correção é reduzir o mínimo,
+                                    // não usar Flexible/Expanded.
+                                    style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                                    onPressed: () => _challengeFriend(friend),
+                                    child: Text(l10n.battleChallengeButton),
                                   ),
                                 );
                               },

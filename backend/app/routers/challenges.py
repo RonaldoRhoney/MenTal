@@ -295,6 +295,11 @@ def submit_answer(
     # tentativa. Badges recém-concedidos AGORA voltam na própria resposta
     # (MICROINTERACTIONS.md) — GET /badges continua sendo a fonte de
     # verdade do catálogo completo, isto aqui é só o "flash" do momento.
+    # V2 item 14 — Batalha assíncrona: hook aditivo, não muda nada do
+    # cálculo acima. Só age se este challenge_id+user_id for de fato um
+    # lado de uma batalha pendente (Attempt normal não é afetado).
+    services.maybe_resolve_battle_side(db, user_id, challenge_id, is_correct)
+
     newly_awarded = services.check_and_award_badges(db, user_id)
     newly_awarded_out = [
         schemas.BadgeOut(

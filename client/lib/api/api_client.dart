@@ -108,6 +108,33 @@ class ApiClient {
     return _decode(resp);
   }
 
+  Future<Map<String, dynamic>> createBattle({
+    required String opponentUserId,
+    required String territoryId,
+    required int difficultyLevel,
+  }) async {
+    final resp = await http.post(
+      _uri('/battles'),
+      headers: _headers,
+      body: jsonEncode({
+        'opponent_user_id': opponentUserId,
+        'territory_id': territoryId,
+        'difficulty_level': difficultyLevel,
+      }),
+    );
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> getMyBattleChallenge(String battleId) async {
+    final resp = await http.get(_uri('/battles/$battleId/my-challenge'), headers: _headers);
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> listBattles() async {
+    final resp = await http.get(_uri('/battles'), headers: _headers);
+    return _decode(resp);
+  }
+
   Future<Map<String, dynamic>> badges() async {
     final resp = await http.get(_uri('/badges'), headers: _headers);
     return _decode(resp);

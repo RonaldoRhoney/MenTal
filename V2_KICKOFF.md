@@ -175,23 +175,41 @@ Grupo 2, só após os documentos dedicados da Seção 4:
     por território como critério de "detentor" (em vez de taxa de
     acerto ou tempo) — **não confirmado ainda**, decidir junto quando
     este item for atacado.
-14. ⚔️ Batalha assíncrona — decisão dada (2026-08-22): entra nesta V2.
-    Documento dedicado (`ASYNC_BATTLE.md`) ainda não existe — falta
-    decidir o formato exato (mesmo desafio pra dois jogadores,
-    comparando tempo/acerto?) antes de codar.
-15. ⚡ Palavras Relâmpago — spec completa em `PALAVRAS_RELAMPAGO.md`
-    (aprovado 2026-08-22, todas as decisões fechadas: múltipla escolha
-    com tempo regressivo escalonado por nível, disponível só em
-    médio/difícil, convive com o formato digitado atual, bônus de
-    velocidade, tratamento suave pra timeout). Entra na fila **depois**
-    do Grupo 2 (13/14), não antes.
+14. ⚔️ Batalha assíncrona — **✅ fechado e em produção (2026-08-22)**.
+    Spec completa em `ASYNC_BATTLE.md`. Tabela `battles` nova; cada lado
+    responde um desafio DIFERENTE do mesmo território/nível (nunca o
+    mesmo, evita cola). A resposta em si reaproveita 100% o já existente
+    POST /challenges/{id}/answer (nenhum cálculo de XP duplicado) — um
+    hook aditivo (`services.maybe_resolve_battle_side`) correlaciona os
+    dois lados e decide o vencedor quando ambos já responderam. Tempo de
+    resposta medido a partir do momento em que CADA lado abre o próprio
+    desafio (`*_served_at`), não da criação da batalha — evita penalizar
+    sempre o desafiado só por responder depois (fluxo é assíncrono de
+    propósito). Limite de 3 desafios enviados/dia por usuário; bônus de
+    30 XP pro vencedor. Decisão de Rhoney (2026-08-22): nickname aparece
+    normalmente nas notificações de batalha mesmo em child_safe_mode
+    (os dois já são amigos confirmados via item 12, diferente do ranking
+    geral). Validado no aparelho real com dois usuários reais (fluxo
+    completo: criar batalha → responder na hora → oponente responde
+    depois → resultado exibido pros dois lados).
+15. ⚡ Palavras Relâmpago — **✅ fechado e em produção (2026-08-22)**.
+    Spec completa em `PALAVRAS_RELAMPAGO.md`: múltipla escolha com tempo
+    regressivo escalonado por nível, disponível só em médio/difícil,
+    convive com o formato digitado atual, bônus de velocidade calculado
+    100% no servidor, tratamento suave pra timeout (nunca conta como
+    erro comum). Implementado fora da ordem original (14→13→15) a
+    pedido de Rhoney, que autorizou adiantá-lo enquanto decidia o
+    formato da Batalha assíncrona.
 
-Ordem de ataque combinada (atualizada 2026-08-22, após fechar o item
-12): 14 → 13 → 15 — Batalha assíncrona primeiro (decisão de escopo já
-fechada, só falta o documento dedicado e a arquitetura); Disputa
-territorial por último dentro do Grupo 2, de propósito, por exigir a
-conversa mais cuidadosa; Palavras Relâmpago só depois que o Grupo 2
-inteiro fechar.
+Extensão registrada no mesmo dia (2026-08-22), fora da lista original:
+recompensa de XP por compartilhar uma conquista (POST
+/social/share-reward) — XP fixo, teto de 1x por dia civil, já que o app
+não confirma se o compartilhamento via OS share sheet foi de fato
+concluído.
+
+Ordem de ataque combinada (atualizada 2026-08-22, após fechar os itens
+14 e 15): resta só o item 13 (Disputa territorial) pra fechar o Grupo 2
+inteiro.
 
 ## 7. Papel de cada parte
 

@@ -4,7 +4,7 @@ from datetime import date, datetime, timedelta
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from . import config, models, scoring
+from . import config, models, notification_copy, push, scoring
 from .nickname import generate_anonymous_nickname
 
 
@@ -548,3 +548,159 @@ def award_share_reward(db: Session, profile: "models.Profile") -> tuple[int, boo
     profile.level = scoring.level_from_xp(profile.xp_total)
     db.commit()
     return config.SHARE_XP_REWARD, False
+
+
+def count_battles_sent_today(db: Session, user_id: str, today: date) -> int:
+    day_start = datetime(today.year, today.month, today.day)
+    day_end = day_start + timedelta(days=1)
+    return db.execute(
+        select(func.count())
+        .select_from(models.Battle)
+        .where(models.Battle.challenger_user_id == user_id)
+        .where(models.Battle.created_at >= day_start)
+        .where(models.Battle.created_at < day_end)
+    ).scalar_one()
+
+
+def pick_two_distinct_challenges(db: Session, territory_id: str, difficulty_level: int) -> tuple["models.Challenge", "models.Challenge"] | None:
+    """
+    V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md §2.2/§2.3): os dois
+    lados respondem desafios DIFERENTES do mesmo território/nível, nunca
+    o mesmo (evita cola entre amigos combinando resposta). Retorna None
+    se não houver pelo menos 2 desafios distintos disponíveis.
+    """
+    candidates = (
+        db.execute(
+            select(models.Challenge)
+            .where(models.Challenge.territory_id == territory_id)
+            .where(models.Challenge.difficulty_level == difficulty_level)
+        )
+        .scalars()
+        .all()
+    )
+    if len(candidates) < 2:
+        return None
+    a, b = random.sample(candidates, k=2)
+    return a, b
+
+
+def create_battle(
+    db: Session,
+    challenger_user_id: str,
+    opponent_user_id: str,
+    territory_id: str,
+    difficulty_level: int,
+) -> "models.Battle | None":
+    pair = pick_two_distinct_challenges(db, territory_id, difficulty_level)
+    if pair is None:
+        return None
+    challenger_challenge, opponent_challenge = pair
+
+    battle = models.Battle(
+        challenger_user_id=challenger_user_id,
+        opponent_user_id=opponent_user_id,
+        territory_id=territory_id,
+        difficulty_level=difficulty_level,
+        challenger_challenge_id=challenger_challenge.id,
+        opponent_challenge_id=opponent_challenge.id,
+        challenger_served_at=datetime.utcnow(),
+    )
+    db.add(battle)
+    db.commit()
+    db.refresh(battle)
+
+    challenger_profile = db.get(models.Profile, challenger_user_id)
+    opponent_profile = db.get(models.Profile, opponent_user_id)
+    if opponent_profile and opponent_profile.notif_social_enabled and opponent_profile.push_token:
+        territory_label = notification_copy.BATTLE_TERRITORY_NAMES.get(territory_id, territory_id)
+        title = notification_copy.BATTLE_CHALLENGE_RECEIVED_TITLE
+        body = notification_copy.BATTLE_CHALLENGE_RECEIVED_BODY_TEMPLATE.format(
+            nickname=challenger_profile.nickname if challenger_profile else "Um amigo",
+            territory=territory_label,
+        )
+        push.send_push_notification(opponent_profile.push_token, title, body)
+
+    return battle
+
+
+def get_or_serve_opponent_challenge(db: Session, battle: "models.Battle") -> None:
+    """Marca opponent_served_at na PRIMEIRA vez que o desafiado abre o próprio desafio (nunca reescreve depois)."""
+    if battle.opponent_served_at is None:
+        battle.opponent_served_at = datetime.utcnow()
+        db.commit()
+
+
+def _resolve_battle_winner(battle: "models.Battle") -> str | None:
+    """ASYNC_BATTLE.md §2.5: acerto > erro; entre dois acertos, vence quem respondeu mais rápido; entre dois erros, empate."""
+    if battle.challenger_is_correct and not battle.opponent_is_correct:
+        return battle.challenger_user_id
+    if battle.opponent_is_correct and not battle.challenger_is_correct:
+        return battle.opponent_user_id
+    if battle.challenger_is_correct and battle.opponent_is_correct:
+        challenger_ms = battle.challenger_response_ms or 0
+        opponent_ms = battle.opponent_response_ms or 0
+        return battle.challenger_user_id if challenger_ms <= opponent_ms else battle.opponent_user_id
+    return None  # os dois erraram — empate
+
+
+def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_correct: bool) -> None:
+    """
+    Hook aditivo chamado no final de POST /challenges/{id}/answer — não
+    muda em nada o cálculo de XP/streak/badges já existente ali, só
+    verifica se este challenge_id+user_id corresponde a um lado de uma
+    batalha pendente e, se sim, registra o resultado. Nunca dispara em
+    respostas normais (fora de batalha), que são a grande maioria.
+    """
+    battle = db.execute(
+        select(models.Battle)
+        .where(models.Battle.status == "pending")
+        .where(
+            ((models.Battle.challenger_user_id == user_id) & (models.Battle.challenger_challenge_id == challenge_id))
+            | ((models.Battle.opponent_user_id == user_id) & (models.Battle.opponent_challenge_id == challenge_id))
+        )
+    ).scalars().first()
+    if battle is None:
+        return
+
+    now = datetime.utcnow()
+    if battle.challenger_user_id == user_id and battle.challenger_is_correct is None:
+        battle.challenger_is_correct = is_correct
+        battle.challenger_response_ms = int((now - battle.challenger_served_at).total_seconds() * 1000)
+    elif battle.opponent_user_id == user_id and battle.opponent_is_correct is None:
+        get_or_serve_opponent_challenge(db, battle)
+        battle.opponent_is_correct = is_correct
+        served_at = battle.opponent_served_at or now
+        battle.opponent_response_ms = int((now - served_at).total_seconds() * 1000)
+    else:
+        return  # este lado já tinha respondido (reenvio idempotente do attempt) — não reprocessa
+
+    if battle.challenger_is_correct is not None and battle.opponent_is_correct is not None:
+        battle.status = "resolved"
+        battle.resolved_at = now
+        winner_user_id = _resolve_battle_winner(battle)
+        battle.winner_user_id = winner_user_id
+
+        if winner_user_id:
+            winner_profile = db.get(models.Profile, winner_user_id)
+            winner_profile.xp_total += config.BATTLE_WIN_BONUS_XP
+            winner_profile.level = scoring.level_from_xp(winner_profile.xp_total)
+
+        challenger_profile = db.get(models.Profile, battle.challenger_user_id)
+        opponent_profile = db.get(models.Profile, battle.opponent_user_id)
+        _notify_battle_result(challenger_profile, opponent_profile, winner_user_id)
+
+    db.commit()
+
+
+def _notify_battle_result(challenger_profile: "models.Profile", opponent_profile: "models.Profile", winner_user_id: str | None) -> None:
+    for me, other in ((challenger_profile, opponent_profile), (opponent_profile, challenger_profile)):
+        if not (me and me.notif_social_enabled and me.push_token):
+            continue
+        other_nickname = other.nickname if other else "seu amigo"
+        if winner_user_id is None:
+            title, body = notification_copy.BATTLE_RESULT_TIE_TITLE, notification_copy.BATTLE_RESULT_TIE_BODY_TEMPLATE.format(nickname=other_nickname)
+        elif winner_user_id == me.user_id:
+            title, body = notification_copy.BATTLE_RESULT_WIN_TITLE, notification_copy.BATTLE_RESULT_WIN_BODY_TEMPLATE.format(nickname=other_nickname)
+        else:
+            title, body = notification_copy.BATTLE_RESULT_LOSS_TITLE, notification_copy.BATTLE_RESULT_LOSS_BODY_TEMPLATE.format(nickname=other_nickname)
+        push.send_push_notification(me.push_token, title, body)
