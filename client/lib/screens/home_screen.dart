@@ -105,6 +105,79 @@ class _HomeScreenState extends State<HomeScreen> {
     return null;
   }
 
+  // V2 item 10 — Mundos completos. O backend é a autoridade sobre o
+  // agrupamento (GET /progress já devolve os territórios de cada mundo
+  // e se está completo) — a Home só organiza visualmente, nunca decide
+  // sozinha quais territórios pertencem a qual mundo.
+  List<Widget> _buildTerritoryItems(AppLocalizations l10n) {
+    final worlds = (_progress?['worlds'] as List?)?.cast<Map<String, dynamic>>();
+    if (worlds == null || worlds.isEmpty) {
+      return _territoryButtons(l10n, kTerritoryIds);
+    }
+
+    final items = <Widget>[];
+    for (final world in worlds) {
+      final territoryIds = (world['territory_ids'] as List).cast<String>();
+      final completed = world['completed'] as bool;
+      if (items.isNotEmpty) items.add(const SizedBox(height: 24));
+      items.add(
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                world['name'] as String,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ),
+            if (completed) const Icon(Icons.check_circle, color: AppColors.gold, size: 20),
+          ],
+        ),
+      );
+      items.add(const SizedBox(height: 12));
+      items.addAll(_territoryButtons(l10n, territoryIds));
+    }
+    return items;
+  }
+
+  List<Widget> _territoryButtons(AppLocalizations l10n, List<String> territoryIds) {
+    final items = <Widget>[];
+    for (final territoryId in territoryIds) {
+      if (items.isNotEmpty) items.add(const SizedBox(height: 12));
+      final label = territoryLabel(l10n, territoryId);
+      final territoryProgress = _territoryProgress(territoryId);
+      final conquered = territoryProgress?['conquered'] as bool? ?? false;
+
+      items.add(
+        FilledButton(
+          style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 20)),
+          onPressed: () async {
+            await Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ChallengeScreen(
+                  client: widget.client,
+                  territoryId: territoryId,
+                  territoryLabel: label,
+                ),
+              ),
+            );
+            _loadProgress();
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Flexible(child: Text(l10n.newChallengeButton(label))),
+              if (conquered) ...[
+                const SizedBox(width: 8),
+                const Icon(Icons.check_circle, size: 18),
+              ],
+            ],
+          ),
+        ),
+      );
+    }
+    return items;
+  }
+
   @override
   Widget build(BuildContext context) {
     final progress = _progress;
@@ -180,49 +253,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(_error!, style: const TextStyle(color: AppColors.error)),
               const SizedBox(height: 24),
               Expanded(
-                child: ListView.separated(
-                  itemCount: kTerritoryIds.length,
-                  separatorBuilder: (_, __) => const SizedBox(height: 12),
-                  itemBuilder: (context, index) {
-                    final territoryId = kTerritoryIds[index];
-                    final label = territoryLabel(l10n, territoryId);
-                    final territoryProgress = _territoryProgress(territoryId);
-                    final conquered = territoryProgress?['conquered'] as bool? ?? false;
-
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        FilledButton(
-                          style: FilledButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(vertical: 20),
-                          ),
-                          onPressed: () async {
-                            await Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (_) => ChallengeScreen(
-                                  client: widget.client,
-                                  territoryId: territoryId,
-                                  territoryLabel: label,
-                                ),
-                              ),
-                            );
-                            _loadProgress();
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Flexible(child: Text(l10n.newChallengeButton(label))),
-                              if (conquered) ...[
-                                const SizedBox(width: 8),
-                                const Icon(Icons.check_circle, size: 18),
-                              ],
-                            ],
-                          ),
-                        ),
-                      ],
-                    );
-                  },
-                ),
+                child: ListView(children: _buildTerritoryItems(l10n)),
               ),
             ],
           ),

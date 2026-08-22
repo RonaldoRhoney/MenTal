@@ -76,6 +76,11 @@ class AnswerResponse(BaseModel):
     territory_just_conquered: bool = False
     streak_just_extended: bool = False
     newly_awarded_badges: list[BadgeOut] = []
+    # V2 item 10 — Mundos completos (V2_KICKOFF.md §2/§6A). Mesma regra dos
+    # sinais acima: True só na resposta exata que fecha o último território
+    # do mundo, nunca de novo depois.
+    world_just_completed: bool = False
+    completed_world_name: str | None = None
 
 
 class ProgressTerritoryOut(BaseModel):
@@ -86,11 +91,19 @@ class ProgressTerritoryOut(BaseModel):
     conquest_threshold: int
 
 
+class WorldProgressOut(BaseModel):
+    world_id: str
+    name: str
+    territory_ids: list[str]
+    completed: bool
+
+
 class ProgressResponse(BaseModel):
     xp_total: int
     level: int
     xp_per_level: int
     territories: list[ProgressTerritoryOut]
+    worlds: list[WorldProgressOut]
     streak: StreakOut
 
 

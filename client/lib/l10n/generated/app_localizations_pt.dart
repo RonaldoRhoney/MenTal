@@ -206,6 +206,11 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryConqueredCelebrationMessage => 'Território conquistado!';
 
   @override
+  String worldCompletedCelebrationMessage(String world) {
+    return '$world completo!';
+  }
+
+  @override
   String badgeUnlockedCelebrationMessage(String badgeName) {
     return 'Nova conquista: $badgeName!';
   }

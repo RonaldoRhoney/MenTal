@@ -215,6 +215,12 @@ def submit_answer(
     level_before = profile.level
     territory_progress = None
     was_conquered_before = False
+    # V2 item 10 — captura o "antes" do mundo, mesmo raciocínio de
+    # level_before/was_conquered_before acima: precisa saber se o mundo
+    # JÁ estava completo antes desta resposta pra detectar a transição
+    # exata, nunca celebrar de novo num mundo já fechado.
+    world_id = db.get(models.Territory, challenge.territory_id).world_id
+    was_world_completed_before = services.is_world_completed(db, user_id, world_id) if world_id else False
     if is_correct and xp_final > 0:
         existing_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
         was_conquered_before = bool(existing_progress and existing_progress.conquered_at)
@@ -227,6 +233,11 @@ def submit_answer(
 
     level_up = profile.level > level_before
     territory_just_conquered = bool(territory_progress and territory_progress.conquered_at and not was_conquered_before)
+    world_just_completed = False
+    completed_world_name = None
+    if world_id and services.is_world_completed(db, user_id, world_id) and not was_world_completed_before:
+        world_just_completed = True
+        completed_world_name = db.get(models.World, world_id).name
 
     today = datetime.utcnow().date()
     services.register_daily_usage(db, user_id, today)
@@ -268,4 +279,6 @@ def submit_answer(
         territory_just_conquered=territory_just_conquered,
         streak_just_extended=streak_just_extended,
         newly_awarded_badges=newly_awarded_out,
+        world_just_completed=world_just_completed,
+        completed_world_name=completed_world_name,
     )

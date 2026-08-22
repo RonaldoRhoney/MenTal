@@ -436,6 +436,12 @@ abstract class AppLocalizations {
   /// **'Território conquistado!'**
   String get territoryConqueredCelebrationMessage;
 
+  /// World just completed celebration message
+  ///
+  /// In pt, this message translates to:
+  /// **'{world} completo!'**
+  String worldCompletedCelebrationMessage(String world);
+
   /// Badge just unlocked celebration message
   ///
   /// In pt, this message translates to:

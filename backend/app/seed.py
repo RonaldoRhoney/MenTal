@@ -2,23 +2,30 @@ from sqlalchemy.orm import Session
 
 from . import models
 
+# V2 item 10 — Mundos completos (V2_KICKOFF.md §2/§6A). Agrupamento
+# aprovado por Rhoney em 2026-08-22 — ver comentário em models.World.
+WORLDS = [
+    {"id": "linguagem", "name": "Mundo da Linguagem", "display_order": 1},
+    {"id": "mente_logica", "name": "Mundo da Mente Lógica", "display_order": 2},
+]
+
 TERRITORIES = [
-    {"id": "palavras", "challenge_type": "palavras", "requires_subscription": False, "free_sample_count": 0, "display_order": 1},
-    {"id": "numeros", "challenge_type": "numeros", "requires_subscription": False, "free_sample_count": 0, "display_order": 2},
-    {"id": "logica", "challenge_type": "logica", "requires_subscription": True, "free_sample_count": 2, "display_order": 3},
-    {"id": "conhecimento", "challenge_type": "conhecimento", "requires_subscription": True, "free_sample_count": 2, "display_order": 4},
+    {"id": "palavras", "challenge_type": "palavras", "requires_subscription": False, "free_sample_count": 0, "display_order": 1, "world_id": "linguagem"},
+    {"id": "numeros", "challenge_type": "numeros", "requires_subscription": False, "free_sample_count": 0, "display_order": 2, "world_id": "mente_logica"},
+    {"id": "logica", "challenge_type": "logica", "requires_subscription": True, "free_sample_count": 2, "display_order": 3, "world_id": "mente_logica"},
+    {"id": "conhecimento", "challenge_type": "conhecimento", "requires_subscription": True, "free_sample_count": 2, "display_order": 4, "world_id": "mente_logica"},
     # V2 item 2 — Enigmas/charadas (V2_KICKOFF.md §6A). Reaproveita 100% do
     # fluxo de desafio existente — nenhum campo/modelo novo. Tratado como
     # território "avançado" (mesmo tier de logica/conhecimento), decisão
     # de produto tomada aqui por não ter sido especificada: charadas pedem
     # mais raciocínio que os territórios gratuitos (palavras/números
     # diretos), revisável quando houver dado real de uso.
-    {"id": "enigmas", "challenge_type": "enigmas", "requires_subscription": True, "free_sample_count": 2, "display_order": 5},
+    {"id": "enigmas", "challenge_type": "enigmas", "requires_subscription": True, "free_sample_count": 2, "display_order": 5, "world_id": "linguagem"},
     # V2 item 3 — Textos (interpretação/inferência, V2_KICKOFF.md §6A).
     # Mesmo reaproveitamento de fluxo dos itens 1-2 — só o parágrafo-base
     # fica no campo "prompt" (sem campo novo no modelo). Mesmo tier
     # avançado de logica/conhecimento/enigmas.
-    {"id": "textos", "challenge_type": "textos", "requires_subscription": True, "free_sample_count": 2, "display_order": 6},
+    {"id": "textos", "challenge_type": "textos", "requires_subscription": True, "free_sample_count": 2, "display_order": 6, "world_id": "linguagem"},
     # V2 item 4 — Desafios visuais (V2_KICKOFF.md §6A). Decisão de
     # armazenamento (confirmada com Rhoney antes de codar, régua
     # Free-First): NENHUMA imagem real é usada — as opções são ícones
@@ -29,7 +36,7 @@ TERRITORIES = [
     # sem Supabase Storage, sem rede, funciona offline, sem migration além
     # da linha de território. Mesmo tier avançado dos demais territórios
     # novos da V2.
-    {"id": "visual", "challenge_type": "visual", "requires_subscription": True, "free_sample_count": 2, "display_order": 7},
+    {"id": "visual", "challenge_type": "visual", "requires_subscription": True, "free_sample_count": 2, "display_order": 7, "world_id": "mente_logica"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -1215,6 +1222,10 @@ CHALLENGES = [
 def seed_if_empty(db: Session) -> None:
     if db.query(models.Territory).count() > 0:
         return
+
+    for w in WORLDS:
+        db.add(models.World(**w))
+    db.commit()
 
     for t in TERRITORIES:
         db.add(models.Territory(**t))

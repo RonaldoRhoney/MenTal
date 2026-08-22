@@ -135,6 +135,24 @@ class MovementCycle(Base):
     checkpoint_bonus_mask: Mapped[int] = mapped_column(Integer, default=0)
 
 
+class World(Base):
+    """
+    V2 item 10 — Mundos completos (V2_KICKOFF.md §2/§6A). Agrupa
+    territórios tematicamente relacionados (aprovado por Rhoney,
+    2026-08-22): Mundo da Linguagem (palavras/textos/enigmas) e Mundo da
+    Mente Lógica (números/lógica/visual/conhecimento). "Mundo completo"
+    nunca é armazenado — é sempre derivado em tempo real a partir de
+    UserTerritoryProgress.conquered_at (mesma disciplina de nunca ter
+    duas fontes de verdade pro mesmo fato, já usada em badges).
+    """
+
+    __tablename__ = "worlds"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    name: Mapped[str] = mapped_column(String, nullable=False)
+    display_order: Mapped[int] = mapped_column(Integer, default=0)
+
+
 class Territory(Base):
     __tablename__ = "territories"
 
@@ -143,6 +161,7 @@ class Territory(Base):
     requires_subscription: Mapped[bool] = mapped_column(Boolean, default=False)
     free_sample_count: Mapped[int] = mapped_column(Integer, default=0)
     display_order: Mapped[int] = mapped_column(Integer, default=0)
+    world_id: Mapped[str | None] = mapped_column(String, ForeignKey("worlds.id"), nullable=True)
 
 
 class UserTerritoryProgress(Base):

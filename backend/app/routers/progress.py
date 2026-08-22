@@ -33,10 +33,18 @@ def get_progress(user_id: str = Depends(get_current_user_id), db: Session = Depe
             )
         )
 
+    worlds = [
+        schemas.WorldProgressOut(
+            world_id=w["world_id"], name=w["name"], territory_ids=w["territory_ids"], completed=w["completed"]
+        )
+        for w in services.get_worlds_progress(db, user_id)
+    ]
+
     return schemas.ProgressResponse(
         xp_total=profile.xp_total,
         level=profile.level,
         xp_per_level=config.XP_PER_LEVEL,
         territories=out,
+        worlds=worlds,
         streak=schemas.StreakOut(current_streak=streak.current_streak, freeze_available=streak.freeze_available),
     )

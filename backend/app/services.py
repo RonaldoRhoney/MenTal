@@ -225,6 +225,43 @@ def _all_territories_conquered(db: Session, user_id: str) -> bool:
     return _count_conquered_territories(db, user_id) >= total_territories
 
 
+# V2 item 10 — Mundos completos (V2_KICKOFF.md §2/§6A). "Mundo completo"
+# nunca é armazenado — sempre derivado de UserTerritoryProgress.
+# conquered_at, mesmo raciocínio de _all_territories_conquered acima,
+# só que por world_id em vez de global.
+def is_world_completed(db: Session, user_id: str, world_id: str) -> bool:
+    territory_ids = db.execute(
+        select(models.Territory.id).where(models.Territory.world_id == world_id)
+    ).scalars().all()
+    if not territory_ids:
+        return False
+    conquered_count = db.execute(
+        select(func.count(models.UserTerritoryProgress.territory_id))
+        .where(models.UserTerritoryProgress.user_id == user_id)
+        .where(models.UserTerritoryProgress.territory_id.in_(territory_ids))
+        .where(models.UserTerritoryProgress.conquered_at.is_not(None))
+    ).scalar_one()
+    return conquered_count >= len(territory_ids)
+
+
+def get_worlds_progress(db: Session, user_id: str) -> list[dict]:
+    worlds = db.execute(select(models.World).order_by(models.World.display_order)).scalars().all()
+    out = []
+    for world in worlds:
+        territory_ids = db.execute(
+            select(models.Territory.id).where(models.Territory.world_id == world.id)
+        ).scalars().all()
+        out.append(
+            {
+                "world_id": world.id,
+                "name": world.name,
+                "territory_ids": territory_ids,
+                "completed": is_world_completed(db, user_id, world.id),
+            }
+        )
+    return out
+
+
 def _count_total_correct_answers(db: Session, user_id: str) -> int:
     return db.execute(
         select(func.count(models.Attempt.attempt_id))

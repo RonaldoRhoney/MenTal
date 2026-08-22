@@ -70,10 +70,11 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final isCorrect = result['is_correct'] as bool;
     final levelUp = result['level_up'] as bool? ?? false;
     final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
+    final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
     final newlyAwardedBadges = (result['newly_awarded_badges'] as List?) ?? const [];
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
 
-    final isStrongEvent = levelUp || territoryJustConquered || newlyAwardedBadges.isNotEmpty;
+    final isStrongEvent = levelUp || territoryJustConquered || worldJustCompleted || newlyAwardedBadges.isNotEmpty;
 
     if (isStrongEvent) {
       FeedbackService.instance.play(FeedbackSound.celebration);
@@ -369,6 +370,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final levelUp = result['level_up'] as bool? ?? false;
     final newLevel = result['new_level'] as int?;
     final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
+    final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
+    final completedWorldName = result['completed_world_name'] as String?;
     final newlyAwardedBadges = ((result['newly_awarded_badges'] as List?) ?? const [])
         .cast<Map<String, dynamic>>();
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
@@ -436,6 +439,16 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.territoryConqueredCelebrationMessage,
+                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
+                if (worldJustCompleted && completedWorldName != null) ...[
+                  const SizedBox(height: 16),
+                  PulseIn(
+                    intensity: 0.3,
+                    child: Text(
+                      l10n.worldCompletedCelebrationMessage(completedWorldName),
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),

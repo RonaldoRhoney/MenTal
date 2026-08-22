@@ -221,6 +221,12 @@
   "territoryConqueredCelebrationMessage": "Território conquistado!",
   "@territoryConqueredCelebrationMessage": {"description": "Territory just conquered celebration message"},
 
+  "worldCompletedCelebrationMessage": "{world} completo!",
+  "@worldCompletedCelebrationMessage": {
+    "description": "World just completed celebration message",
+    "placeholders": {"world": {"type": "String"}}
+  },
+
   "badgeUnlockedCelebrationMessage": "Nova conquista: {badgeName}!",
   "@badgeUnlockedCelebrationMessage": {
     "description": "Badge just unlocked celebration message",
