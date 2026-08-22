@@ -315,3 +315,36 @@ Validado no aparelho real (avatar escolhido, nome real e
 localização preenchidos, toggle de exibição ativado, "Perfil salvo!"
 confirmado, persistência checada direto no banco) e por 133 testes de
 backend + 33 de cliente passando.
+
+## 11. Arquitetura de curadoria de conteúdo (2026-08-22)
+
+Pendência aberta na Seção 9 (expansão de Conhecimento): "eu (Claude)
+nunca invento conteúdo factual, precisa de fonte definida". Esta etapa
+entrega o PROCESSO — não conteúdo novo, que continua pendente até
+Rhoney (ou outra pessoa autorizada) curar as perguntas/respostas.
+
+`backend/content/README.md` documenta o formato (JSON estruturado:
+`territory_id`, `difficulty_level`, `prompt`, `options` — 4
+alternativas —, `correct_answer`, `explanation`, `hints` — 2 dicas —,
+`age_reviewed`) e o fluxo em 4 passos: curar → validar → testar em dev
+→ carregar em produção.
+
+`app/content_validation.py` (lógica pura, 13 testes) + CLI
+`scripts/validate_content.py`: valida só ESTRUTURA (campos presentes,
+`correct_answer` está em `options`, sem duplicata de `options`, exatamente
+2 `hints`, `age_reviewed=true` explícito, sem `prompt` duplicado nem
+dentro do arquivo nem contra o que já existe) — nunca julga se o
+conteúdo em si está factualmente correto, isso é sempre responsabilidade
+de quem curou.
+
+`scripts/append_production_content.py`: diferente de
+`seed_production_content.py` (carga ÚNICA inicial, já usada, aborta se
+`mental.challenges` já tiver qualquer linha), este é INCREMENTAL —
+idempotente por `(territory_id, prompt)`, pode ser rodado várias vezes
+conforme novo conteúdo for curado ao longo do tempo, sem duplicar o que
+já existe. Testado de ponta a ponta contra um SQLite temporário isolado
+(inserção + reexecução idempotente confirmadas).
+
+**Próximo passo real**: quando Rhoney tiver conteúdo curado no formato
+de `backend/content/README.md`, entra direto nesse fluxo — arquitetura
+já pronta e testada, só falta o conteúdo em si.

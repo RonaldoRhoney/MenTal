@@ -1,0 +1,13 @@
+[
+  {
+    "territory_id": "conhecimento",
+    "subject": "geografia",
+    "difficulty_level": 1,
+    "prompt": "EXEMPLO — copie este formato pra curar conteúdo novo, depois apague este arquivo",
+    "options": ["Alternativa A", "Alternativa B", "Alternativa C", "Alternativa D"],
+    "correct_answer": "Alternativa A",
+    "explanation": "Explicação curta de por que a resposta certa é essa.",
+    "hints": ["Primeira dica, mais sutil.", "Segunda dica, mais reveladora."],
+    "age_reviewed": true
+  }
+]
