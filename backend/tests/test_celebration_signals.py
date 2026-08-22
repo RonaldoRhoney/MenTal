@@ -60,6 +60,41 @@ def test_territory_just_conquered_fires_once_at_the_exact_threshold(client):
     assert conquered_events.count(True) == 1
 
 
+def _answer_wrong(client, headers, territory_id):
+    challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
+    attempt_id = str(uuid.uuid4())
+    return client.post(
+        f"/challenges/{challenge['challenge_id']}/answer",
+        json={"attempt_id": attempt_id, "submitted_answer": "resposta errada de propósito"},
+        headers=headers,
+    ).json()
+
+
+def test_wrong_answer_after_conquest_never_shows_false_positive_conquered(client):
+    """
+    Achado real testando no aparelho (2026-08-22): was_conquered_before só
+    era recalculado dentro do bloco `if is_correct`, então uma resposta
+    ERRADA a um território JÁ conquistado antes ficava com
+    was_conquered_before preso em False — territory_just_conquered dava
+    um falso positivo, mostrando "Território conquistado!" numa resposta
+    errada, num território conquistado há muito tempo.
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+
+    for _ in range(20):
+        progress = client.get("/progress", headers=headers).json()
+        palavras = next(t for t in progress["territories"] if t["territory_id"] == "palavras")
+        if palavras["conquered"]:
+            break
+        _answer_correctly(client, headers, "palavras")
+
+    wrong = _answer_wrong(client, headers, "palavras")
+    assert wrong["is_correct"] is False
+    assert wrong["territory_just_conquered"] is False
+
+
 def test_newly_awarded_badges_included_once_in_answer_response(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)

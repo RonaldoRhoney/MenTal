@@ -252,8 +252,17 @@ def submit_answer(
     # nunca o estado absoluto — senão o client celebraria de novo a cada
     # resposta seguinte num território já conquistado.
     level_before = profile.level
-    territory_progress = None
-    was_conquered_before = False
+    # Achado real testando no aparelho (2026-08-22): estava dentro do
+    # bloco `if is_correct`, então numa resposta ERRADA a um território
+    # JÁ conquistado antes, was_conquered_before ficava preso em False
+    # (nunca recalculado) e territory_just_conquered abaixo dava um falso
+    # positivo — "Território conquistado!" aparecendo numa resposta
+    # errada. Precisa ser capturado ANTES e incondicionalmente, mesmo
+    # raciocínio já usado (corretamente) em was_world_completed_before/
+    # detentor_before logo abaixo.
+    existing_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
+    was_conquered_before = bool(existing_progress and existing_progress.conquered_at)
+    territory_progress = existing_progress
     # V2 item 10 — captura o "antes" do mundo, mesmo raciocínio de
     # level_before/was_conquered_before acima: precisa saber se o mundo
     # JÁ estava completo antes desta resposta pra detectar a transição
@@ -266,14 +275,10 @@ def submit_answer(
     # was_world_completed_before acima).
     detentor_before = services.get_territory_detentor(db, user_id, challenge.territory_id)
     if is_correct and xp_final > 0:
-        existing_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
-        was_conquered_before = bool(existing_progress and existing_progress.conquered_at)
         profile.xp_total += xp_final
         profile.level = scoring.level_from_xp(profile.xp_total)
         db.commit()
         territory_progress = services.apply_xp_to_territory(db, user_id, challenge.territory_id, xp_final)
-    else:
-        territory_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
 
     territory_detentor_gained = False
     dethroned_nickname = None
