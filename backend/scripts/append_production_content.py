@@ -69,6 +69,7 @@ def main() -> None:
                 correct_answer=item["correct_answer"],
                 explanation=item["explanation"],
                 age_reviewed=item["age_reviewed"],
+                prompt_image=item.get("prompt_image"),
             )
             db.add(challenge)
             db.commit()

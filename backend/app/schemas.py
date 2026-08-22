@@ -23,6 +23,10 @@ class ChallengeOut(BaseModel):
     # "relampago" foi pedido em GET /challenges/next; None em todo o
     # resto do app (inclusive o formato digitado normal de Palavras).
     time_limit_seconds: int | None = None
+    # CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md §3 — enriquecimento visual
+    # opcional (emoji), nunca obrigatório. None na grande maioria dos
+    # desafios, sempre foi assim e continua assim.
+    prompt_image: str | None = None
 
 
 class HintRequest(BaseModel):

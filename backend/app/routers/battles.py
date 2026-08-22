@@ -64,6 +64,7 @@ def create_battle(
             options=challenger_challenge.options,
             hints_available=hints_available,
             time_limit_seconds=None,
+            prompt_image=challenger_challenge.prompt_image,
         ),
     )
 
@@ -98,6 +99,7 @@ def get_my_battle_challenge(
         options=challenge.options,
         hints_available=hints_available,
         time_limit_seconds=None,
+        prompt_image=challenge.prompt_image,
     )
 
 

@@ -220,6 +220,17 @@ class Challenge(Base):
     # quando o 2º idioma for adicionado (só inserir novos registros com
     # language_code diferente, sem alteração estrutural).
     language_code: Mapped[str] = mapped_column(String, default="pt-BR")
+    # CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md §3 (aprovado): enriquecimento
+    # visual OPCIONAL, nunca obrigatório. Decisão de arquitetura
+    # (2026-08-22): V1 só cobre "imagem complementando a pergunta" e
+    # "fórmula/notação técnica" — um emoji Unicode, mesmo catálogo
+    # zero-custo/zero-risco-autoral já usado nos avatares (client/lib/
+    # avatars.dart), nunca upload de imagem binária. "Imagem nas próprias
+    # alternativas" (§3, casos 2-3 do documento) fica fora desta etapa —
+    # mudaria a estrutura de `options` (hoje texto puro, usado em todo o
+    # app: Palavras Relâmpago, Batalha, etc.), uma mudança maior que
+    # merece desenho dedicado, não encaixe apressado aqui.
+    prompt_image: Mapped[str | None] = mapped_column(String, nullable=True)
 
 
 class ChallengeHint(Base):

@@ -51,6 +51,13 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
         if not item["prompt"].strip():
             errors.append(f"{prefix}: prompt não pode ser vazio")
 
+        # CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md §3 — opcional, nunca
+        # obrigatório. Só valida quando presente (chave pode nem existir
+        # no item, diferente dos campos de REQUIRED_FIELDS).
+        prompt_image = item.get("prompt_image")
+        if prompt_image is not None and not (isinstance(prompt_image, str) and prompt_image.strip()):
+            errors.append(f"{prefix}: prompt_image, quando presente, precisa ser uma string não vazia")
+
         key = (territory_id, item["prompt"])
         if key in existing_prompts:
             errors.append(f"{prefix}: já existe um desafio com esse prompt nesse território (em app/seed.py ou já carregado no banco)")

@@ -51,6 +51,7 @@ class _ConhecimentoFakeApiClient extends ApiClient {
       'options': ['Rio de Janeiro', 'São Paulo', 'Brasília', 'Salvador'],
       'hints_available': 0,
       'time_limit_seconds': 12,
+      'prompt_image': '🏛️',
     };
   }
 }
@@ -368,6 +369,9 @@ void main() {
       expect(find.text('Qual é a capital do Brasil?'), findsOneWidget);
       expect(find.text('Brasília'), findsOneWidget);
       expect(find.textContaining('12s'), findsOneWidget, reason: 'contagem regressiva do servidor deve aparecer mesmo sem relampago:true');
+      // CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md §3 — prompt_image opcional
+      // do servidor aparece junto com a pergunta, quando presente.
+      expect(find.text('🏛️'), findsOneWidget);
       // Formato cronometrado usa OutlinedButton por opção, nunca o
       // TextField digitado nem o botão "Confirmar resposta" separado.
       expect(find.byType(TextField), findsNothing);

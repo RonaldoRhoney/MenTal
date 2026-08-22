@@ -90,3 +90,20 @@ def test_same_prompt_different_territory_is_not_a_duplicate():
     items = [_valid_item(territory_id="conhecimento"), _valid_item(territory_id="numeros")]
     errors = validate_content(items, KNOWN_TERRITORIES, set())
     assert errors == []
+
+
+def test_prompt_image_is_optional_absent_is_fine():
+    item = _valid_item()
+    assert "prompt_image" not in item
+    errors = validate_content([item], KNOWN_TERRITORIES, set())
+    assert errors == []
+
+
+def test_prompt_image_valid_emoji_is_fine():
+    errors = validate_content([_valid_item(prompt_image="🏛️")], KNOWN_TERRITORIES, set())
+    assert errors == []
+
+
+def test_prompt_image_empty_string_is_reported():
+    errors = validate_content([_valid_item(prompt_image="   ")], KNOWN_TERRITORIES, set())
+    assert any("prompt_image" in e for e in errors)

@@ -406,6 +406,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                if (challenge['prompt_image'] != null) ...[
+                  Text(challenge['prompt_image'] as String, style: const TextStyle(fontSize: 56)),
+                  const SizedBox(height: 12),
+                ],
                 Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'visual' && options != null)
@@ -508,6 +512,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                if (challenge['prompt_image'] != null) ...[
+                  Text(challenge['prompt_image'] as String, style: const TextStyle(fontSize: 56)),
+                  const SizedBox(height: 12),
+                ],
                 Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
                 for (final option in options) ...[

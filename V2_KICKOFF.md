@@ -348,3 +348,45 @@ já existe. Testado de ponta a ponta contra um SQLite temporário isolado
 **Próximo passo real**: quando Rhoney tiver conteúdo curado no formato
 de `backend/content/README.md`, entra direto nesse fluxo — arquitetura
 já pronta e testada, só falta o conteúdo em si.
+
+## 12. Enriquecimento visual — Conhecimento (2026-08-22)
+
+`CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md` (aprovado) supera a Seção 9 —
+mesmo mecanismo de tempo (já implementado), mais suporte visual
+opcional por desafio, com política de curadoria foto-real-vs-ilustração
+por época histórica. Pedia proposta de arquitetura do pipeline de
+imagem.
+
+**Investigação prévia**: o território Visual nunca usou imagem
+binária — as opções são strings estruturadas
+(`"circle_filled_gold_1"`) que o CLIENTE desenha como vetor. O MENTAL
+nunca lidou com asset de imagem de verdade em lugar nenhum (áudio é
+sintético, avatares são emoji). Introduzir foto/ilustração real seria
+a primeira vez — envolve hospedagem, direito autoral e um limite real
+meu: não consigo verificar a licença de uma imagem histórica específica
+sem pesquisa dedicada por imagem.
+
+**Decisões de Rhoney (2026-08-22)**: (1) hospedagem — assets embutidos
+no app, mesmo padrão dos 4 sons sintéticos, zero custo com certeza
+absoluta; (2) escopo V1 — só ícone/ilustração vetorial, nunca foto real
+de pessoa/evento histórico ainda (fica pra fase 2, quando houver fonte
+de imagem com licença já verificada e aprovada).
+
+**✅ Fechado (2026-08-22)**. Dado o escopo V1 (só ícone), a decisão de
+hospedagem "assets embutidos" acabou não sendo necessária ainda — a
+implementação usa **emoji Unicode** (mesmo catálogo zero-custo/zero-
+risco-autoral já usado nos avatares), sem nenhum arquivo de imagem
+novo. Novo campo opcional `Challenge.prompt_image`, exibido acima da
+pergunta quando presente (None na maioria dos desafios). Escopo
+deliberadamente reduzido: só cobre "imagem complementando a pergunta" e
+"fórmula/notação" (§3, casos 1 e 4 do documento) — "imagem nas próprias
+alternativas" (casos 2-3) fica fora, mudaria a estrutura de `options`
+(texto puro, usada em todo o app: Palavras Relâmpago, Batalha, etc.),
+uma mudança maior que merece desenho dedicado, registrada aqui como
+extensão futura documentada, não esquecida.
+
+`backend/content/README.md` e os scripts de curadoria (Seção 11) já
+suportam `prompt_image` desde já. Validado no aparelho real (emoji 🗼
+apareceu acima de "Este monumento fica em Paris..." exatamente como
+especificado, bônus de velocidade também funcionando junto) e por
+151 testes de backend + 33 de cliente passando.
