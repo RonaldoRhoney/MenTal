@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
+import '../avatars.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
@@ -106,6 +107,7 @@ class _BattlesScreenState extends State<BattlesScreen> {
                           final battle = _battles[index];
                           final canAnswer = battle['status'] == 'pending' && battle['i_answered'] == false;
                           return ListTile(
+                            leading: AvatarCircle(avatarId: battle['opponent_avatar_id'] as String?),
                             title: Text(
                               '${territoryLabel(l10n, battle['territory_id'] as String)} · ${battle['opponent_nickname']}',
                             ),

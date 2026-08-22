@@ -135,6 +135,32 @@ class ApiClient {
     return _decode(resp);
   }
 
+  Future<Map<String, dynamic>> getProfile() async {
+    final resp = await http.get(_uri('/profile'), headers: _headers);
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> updateProfile({
+    String? avatarId,
+    String? realName,
+    String? locationState,
+    String? locationCountry,
+    required bool locationPublic,
+  }) async {
+    final resp = await http.put(
+      _uri('/profile'),
+      headers: _headers,
+      body: jsonEncode({
+        'avatar_id': avatarId,
+        'real_name': realName,
+        'location_state': locationState,
+        'location_country': locationCountry,
+        'location_public': locationPublic,
+      }),
+    );
+    return _decode(resp);
+  }
+
   Future<Map<String, dynamic>> badges() async {
     final resp = await http.get(_uri('/badges'), headers: _headers);
     return _decode(resp);

@@ -132,6 +132,7 @@ def list_battles(user_id: str = Depends(get_current_user_id), db: Session = Depe
             schemas.BattleOut(
                 battle_id=battle.id,
                 opponent_nickname=opponent_profile.nickname if opponent_profile else "?",
+                opponent_avatar_id=opponent_profile.avatar_id if opponent_profile else None,
                 territory_id=battle.territory_id,
                 difficulty_level=battle.difficulty_level,
                 role="challenger" if is_challenger else "opponent",

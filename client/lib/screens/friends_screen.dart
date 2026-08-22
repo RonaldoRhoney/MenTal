@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../api/api_client.dart';
+import '../avatars.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/share_service.dart';
 import '../territories.dart';
@@ -278,6 +279,7 @@ class _FriendsScreenState extends State<FriendsScreen> {
                               itemBuilder: (context, index) {
                                 final friend = _friends[index];
                                 return ListTile(
+                                  leading: AvatarCircle(avatarId: friend['avatar_id'] as String?),
                                   title: Text(friend['nickname'] as String),
                                   subtitle: Text(
                                     '${friend['xp_total']} XP',

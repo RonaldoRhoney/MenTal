@@ -1017,6 +1017,72 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Assumi {territory} entre meus amigos no MENTAL! 🏰'**
   String shareTerritoryDetentorMessage(String territory);
+
+  /// Home app bar icon tooltip for the profile screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Perfil'**
+  String get profileTooltip;
+
+  /// Profile screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Meu Perfil'**
+  String get profileScreenTitle;
+
+  /// Avatar picker section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Avatar'**
+  String get profileAvatarSectionTitle;
+
+  /// Real name field label
+  ///
+  /// In pt, this message translates to:
+  /// **'Nome real (opcional)'**
+  String get profileRealNameLabel;
+
+  /// Helper text explaining real name is never public
+  ///
+  /// In pt, this message translates to:
+  /// **'Nunca aparece publicamente — só uso interno, ex.: suporte. Seu apelido já te identifica no jogo.'**
+  String get profileRealNameHelperText;
+
+  /// Location section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Localização (opcional)'**
+  String get profileLocationSectionTitle;
+
+  /// State field label
+  ///
+  /// In pt, this message translates to:
+  /// **'Estado'**
+  String get profileLocationStateLabel;
+
+  /// Country field label
+  ///
+  /// In pt, this message translates to:
+  /// **'País'**
+  String get profileLocationCountryLabel;
+
+  /// Toggle to make location public
+  ///
+  /// In pt, this message translates to:
+  /// **'Mostrar meu estado/país no perfil'**
+  String get profileLocationPublicLabel;
+
+  /// Save profile button
+  ///
+  /// In pt, this message translates to:
+  /// **'Salvar'**
+  String get profileSaveButton;
+
+  /// Snackbar shown after saving the profile
+  ///
+  /// In pt, this message translates to:
+  /// **'Perfil salvo!'**
+  String get profileSavedMessage;
 }
 
 class _AppLocalizationsDelegate

@@ -58,7 +58,8 @@ def get_ranking(
     for idx, (row_user_id, xp) in enumerate(rows, start=1):
         profile = db.get(models.Profile, row_user_id)
         nickname = profile.nickname if profile else "???"
-        entry = RankingEntry(rank=idx, nickname=nickname, xp=int(xp or 0))
+        avatar_id = profile.avatar_id if profile else None
+        entry = RankingEntry(rank=idx, nickname=nickname, avatar_id=avatar_id, xp=int(xp or 0))
         if idx <= 50:
             entries.append(entry)
         if row_user_id == user_id:

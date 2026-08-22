@@ -572,4 +572,38 @@ class AppLocalizationsPt extends AppLocalizations {
   String shareTerritoryDetentorMessage(String territory) {
     return 'Assumi $territory entre meus amigos no MENTAL! 🏰';
   }
+
+  @override
+  String get profileTooltip => 'Perfil';
+
+  @override
+  String get profileScreenTitle => 'Meu Perfil';
+
+  @override
+  String get profileAvatarSectionTitle => 'Avatar';
+
+  @override
+  String get profileRealNameLabel => 'Nome real (opcional)';
+
+  @override
+  String get profileRealNameHelperText =>
+      'Nunca aparece publicamente — só uso interno, ex.: suporte. Seu apelido já te identifica no jogo.';
+
+  @override
+  String get profileLocationSectionTitle => 'Localização (opcional)';
+
+  @override
+  String get profileLocationStateLabel => 'Estado';
+
+  @override
+  String get profileLocationCountryLabel => 'País';
+
+  @override
+  String get profileLocationPublicLabel => 'Mostrar meu estado/país no perfil';
+
+  @override
+  String get profileSaveButton => 'Salvar';
+
+  @override
+  String get profileSavedMessage => 'Perfil salvo!';
 }

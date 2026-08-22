@@ -278,3 +278,40 @@ pelo botão normal, timeout suave confirmado) e via API real (acerto
 rápido = bônus de velocidade máximo, disputa territorial também já
 funciona em Conhecimento de graça, sem código extra). 129/129 testes
 de backend e 30/30 de cliente passando.
+
+## 10. Perfil do usuário (2026-08-22)
+
+Spec completa em `USER_PROFILE.md` (aprovada por Rhoney), implementada
+por completo. Campos obrigatórios (nickname, e-mail, gate de idade) já
+existiam; esta etapa entrega os opcionais: avatar, nome real (interno),
+localização estado/país.
+
+**✅ Fechado (2026-08-22)**. `Profile` ganha `avatar_id`, `real_name`,
+`location_state`, `location_country`, `location_public` — todos
+opcionais, nenhum bloqueia uso do app. Novo `GET/PUT /profile`
+(`real_name` só aparece aqui — nunca em `FriendOut`/`RankingEntry`/
+`BattleOut`, que só ganham `avatar_id`, mesma visibilidade que
+`nickname` já tinha). `location_public` separa preencher de exibir
+(§4 do documento).
+
+Decisão de implementação registrada: avatar é um catálogo fixo de 8
+emoji Unicode padrão (🦉🦊🦦🐢🦜🐬🦋🐝) — nunca upload de foto real
+(mesmo risco de moderação/identificação de menor já usado pra bloquear
+UGC de imagem), e nunca arte customizada gerada por IA. Tema
+natureza/animais coerente com o gerador de apelidos já existente, sem
+forçar correspondência exata 1:1. Localização usa campos de texto
+livre (não dropdown de estados/países) — simplificação deliberada de
+escopo, evita construir um seletor completo de UF/país só para um
+campo totalmente opcional.
+
+Nova `ProfileScreen` (acessível pelo menu ⋮ da Home, junto com
+Configurações — ver achado de UI abaixo). Achado real testando no
+aparelho: o 7º ícone de ação (Perfil) estourava a largura da AppBar e
+cortava o título "MENTAL" — corrigido consolidando Perfil e
+Configurações num `PopupMenuButton` (⋮), voltando a 6 ícones
+top-level + 1 menu, sem esconder nenhuma função.
+
+Validado no aparelho real (avatar escolhido, nome real e
+localização preenchidos, toggle de exibição ativado, "Perfil salvo!"
+confirmado, persistência checada direto no banco) e por 133 testes de
+backend + 33 de cliente passando.

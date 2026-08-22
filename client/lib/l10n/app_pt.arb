@@ -624,5 +624,38 @@
   "@shareTerritoryDetentorMessage": {
     "description": "Share text for territory detentor achievement",
     "placeholders": {"territory": {"type": "String"}}
-  }
+  },
+
+  "profileTooltip": "Perfil",
+  "@profileTooltip": {"description": "Home app bar icon tooltip for the profile screen"},
+
+  "profileScreenTitle": "Meu Perfil",
+  "@profileScreenTitle": {"description": "Profile screen app bar title"},
+
+  "profileAvatarSectionTitle": "Avatar",
+  "@profileAvatarSectionTitle": {"description": "Avatar picker section title"},
+
+  "profileRealNameLabel": "Nome real (opcional)",
+  "@profileRealNameLabel": {"description": "Real name field label"},
+
+  "profileRealNameHelperText": "Nunca aparece publicamente — só uso interno, ex.: suporte. Seu apelido já te identifica no jogo.",
+  "@profileRealNameHelperText": {"description": "Helper text explaining real name is never public"},
+
+  "profileLocationSectionTitle": "Localização (opcional)",
+  "@profileLocationSectionTitle": {"description": "Location section title"},
+
+  "profileLocationStateLabel": "Estado",
+  "@profileLocationStateLabel": {"description": "State field label"},
+
+  "profileLocationCountryLabel": "País",
+  "@profileLocationCountryLabel": {"description": "Country field label"},
+
+  "profileLocationPublicLabel": "Mostrar meu estado/país no perfil",
+  "@profileLocationPublicLabel": {"description": "Toggle to make location public"},
+
+  "profileSaveButton": "Salvar",
+  "@profileSaveButton": {"description": "Save profile button"},
+
+  "profileSavedMessage": "Perfil salvo!",
+  "@profileSavedMessage": {"description": "Snackbar shown after saving the profile"}
 }

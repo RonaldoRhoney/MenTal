@@ -111,6 +111,27 @@ class Profile(Base):
     # backend que trata data como referência UTC única.
     last_share_reward_date: Mapped[date | None] = mapped_column(Date, nullable=True)
 
+    # V2 — Perfil do usuário (USER_PROFILE.md, aprovado). Todos opcionais,
+    # nenhum bloqueia ou degrada o uso do app se não preenchidos (mesmo
+    # princípio de Clareza Imediata/não-humilhação já aplicado a tudo).
+    # avatar_id referencia um dos 8 avatares pré-definidos (ilustrados via
+    # emoji, nunca upload de foto real — risco de moderação/identificação
+    # de menor num público misto, mesmo raciocínio já usado pra bloquear
+    # UGC de imagem). Catálogo fixo vive no client (nada pra validar aqui
+    # além de "é uma string ou é nulo").
+    avatar_id: Mapped[str | None] = mapped_column(String, nullable=True)
+    # Campo interno — NUNCA exposto em nenhuma resposta pública (friends,
+    # ranking, battles). Existe só pra uso interno futuro (ex.: suporte),
+    # nickname já cumpre o papel de identidade pública.
+    real_name: Mapped[str | None] = mapped_column(String, nullable=True)
+    # Só estado/país, nunca cidade exata — risco real de localização fina
+    # de menor combinado com "usa este app" (mesmo cuidado já aplicado no
+    # MeuPet com GPS/IP/manual). location_public controla exibição:
+    # preencher não é o mesmo que exibir (opcional dentro do opcional).
+    location_state: Mapped[str | None] = mapped_column(String, nullable=True)
+    location_country: Mapped[str | None] = mapped_column(String, nullable=True)
+    location_public: Mapped[bool] = mapped_column(Boolean, default=False)
+
 
 class MovementCycle(Base):
     """

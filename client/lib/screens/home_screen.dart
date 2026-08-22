@@ -9,12 +9,15 @@ import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/xp_bar.dart';
 import 'battles_screen.dart';
+import 'profile_screen.dart';
 import 'challenge_screen.dart';
 import 'friends_screen.dart';
 import 'movement_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
+
+enum _HomeMenuAction { profile, settings }
 
 /// Home: um CTA primário claro por território, conforme Princípio de
 /// Clareza Imediata (PRODUCT_PRINCIPLES.md §1) — nada compete visualmente
@@ -284,14 +287,43 @@ class _HomeScreenState extends State<HomeScreen> {
               _loadMovementBadge();
             },
           ),
-          IconButton(
-            tooltip: l10n.settingsTooltip,
-            icon: const Icon(Icons.settings_outlined),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => SettingsScreen(client: widget.client)),
-              );
+          // Perfil + Configurações consolidados num menu de overflow — com
+          // Perfil (novo, USER_PROFILE.md) o 7º ícone estourava a largura
+          // da AppBar e cortava o título "MENTAL" (achado real testando no
+          // aparelho). Agrupar os dois itens menos usados no dia a dia
+          // devolve o espaço sem esconder nenhuma função.
+          PopupMenuButton<_HomeMenuAction>(
+            icon: const Icon(Icons.more_vert),
+            onSelected: (action) {
+              switch (action) {
+                case _HomeMenuAction.profile:
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => ProfileScreen(client: widget.client)),
+                  );
+                case _HomeMenuAction.settings:
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => SettingsScreen(client: widget.client)),
+                  );
+              }
             },
+            itemBuilder: (context) => [
+              PopupMenuItem(
+                value: _HomeMenuAction.profile,
+                child: ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.person_outline),
+                  title: Text(l10n.profileTooltip),
+                ),
+              ),
+              PopupMenuItem(
+                value: _HomeMenuAction.settings,
+                child: ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.settings_outlined),
+                  title: Text(l10n.settingsTooltip),
+                ),
+              ),
+            ],
           ),
         ],
       ),

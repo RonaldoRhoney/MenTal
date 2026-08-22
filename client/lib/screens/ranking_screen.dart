@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
+import '../avatars.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
 
@@ -124,12 +125,22 @@ class _RankingScreenState extends State<RankingScreen> {
               final entry = entries[index];
               final isMe = me != null && entry['rank'] == me['rank'] && entry['nickname'] == me['nickname'];
               return ListTile(
-                leading: Text(
-                  l10n.rankingPositionLabel(entry['rank'] as int),
-                  style: AppTheme.technicalStyle(
-                    color: isMe ? AppColors.gold : AppColors.muted,
-                    fontSize: 16,
-                  ),
+                leading: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SizedBox(
+                      width: 32,
+                      child: Text(
+                        l10n.rankingPositionLabel(entry['rank'] as int),
+                        style: AppTheme.technicalStyle(
+                          color: isMe ? AppColors.gold : AppColors.muted,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    AvatarCircle(avatarId: entry['avatar_id'] as String?, size: 32),
+                  ],
                 ),
                 title: Text(
                   isMe ? '${entry['nickname']} (${l10n.rankingMePrefix})' : entry['nickname'] as String,

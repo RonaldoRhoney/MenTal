@@ -153,6 +153,7 @@ class ValidateReceiptRequest(BaseModel):
 class RankingEntry(BaseModel):
     rank: int
     nickname: str
+    avatar_id: str | None = None
     xp: int
 
 
@@ -245,6 +246,7 @@ class AddFriendRequest(BaseModel):
 class FriendOut(BaseModel):
     user_id: str
     nickname: str
+    avatar_id: str | None = None
     xp_total: int
     level: int
 
@@ -274,6 +276,7 @@ class CreateBattleResponse(BaseModel):
 class BattleOut(BaseModel):
     battle_id: str
     opponent_nickname: str
+    opponent_avatar_id: str | None = None
     territory_id: str
     difficulty_level: int
     role: str  # "challenger" | "opponent"
@@ -286,3 +289,23 @@ class BattleOut(BaseModel):
 
 class BattlesResponse(BaseModel):
     battles: list[BattleOut]
+
+
+class ProfileOut(BaseModel):
+    nickname: str
+    avatar_id: str | None
+    # real_name só aparece aqui porque é o PRÓPRIO usuário vendo o
+    # próprio perfil (GET /profile) — nunca em FriendOut/RankingEntry/
+    # BattleOut, que são visões de OUTRO usuário.
+    real_name: str | None
+    location_state: str | None
+    location_country: str | None
+    location_public: bool
+
+
+class UpdateProfileRequest(BaseModel):
+    avatar_id: str | None = None
+    real_name: str | None = None
+    location_state: str | None = None
+    location_country: str | None = None
+    location_public: bool = False
