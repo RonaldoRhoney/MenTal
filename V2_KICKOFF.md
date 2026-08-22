@@ -158,9 +158,17 @@ Ajustada por Rhoney a partir da proposta inicial de Claude Code:
     "Colecionador").
 
 Grupo 2, só após os documentos dedicados da Seção 4:
-12. 👥 Amigos — decisão dada (2026-08-22): reaproveita o deep link de
-    convite já existente. Falta arquitetura (modelo de dados, ranking de
-    amigos pendente desde o Vertical Slice 01, privacidade pra menor).
+12. 👥 Amigos — **✅ fechado e em produção (2026-08-22)**. Tabela
+    `friendships` N:N (deliberadamente separada de invite_conversions,
+    que é 1:1 pra métrica de crescimento), reaproveitando o MESMO
+    invite_code/deep link já existente. Ranking de amigos fechado
+    (gap deixado desde o Vertical Slice 01 — `scope=friends` agora
+    filtra de verdade). Privacidade pra menor: feature disponível igual
+    pra todo mundo, só anonimiza identidade (mesmo padrão do ranking
+    geral), nunca bloqueada por child_safe_mode. Extensão pedida por
+    Rhoney no mesmo dia: botão "Compartilhar" em toda celebração
+    (território/mundo/nível/badge/meta de passos) e botão "Indicar" na
+    tela de Amigos, via `share_plus` (ZERO_COST, Intent nativo do SO).
 13. ⚔️ Disputa territorial — **ainda sem decisão de mecânica**, o mais
     delicado dos três (evitar que "tomar território de outro jogador"
     soe humilhante). Pendência registrada: Rhoney propôs XP acumulado
@@ -171,10 +179,30 @@ Grupo 2, só após os documentos dedicados da Seção 4:
     Documento dedicado (`ASYNC_BATTLE.md`) ainda não existe — falta
     decidir o formato exato (mesmo desafio pra dois jogadores,
     comparando tempo/acerto?) antes de codar.
+15. ⚡ Palavras Relâmpago — spec completa em `PALAVRAS_RELAMPAGO.md`
+    (aprovado 2026-08-22, todas as decisões fechadas: múltipla escolha
+    com tempo regressivo escalonado por nível, disponível só em
+    médio/difícil, convive com o formato digitado atual, bônus de
+    velocidade, tratamento suave pra timeout). Entra na fila **depois**
+    do Grupo 2 (13/14), não antes.
 
-Ordem de ataque combinada (2026-08-22): 12 → 14 → 13 — os dois primeiros
-já têm decisão de escopo fechada, só falta arquitetura; o 13 fica por
-último de propósito, por exigir a conversa mais cuidadosa.
+Ordem de ataque combinada (atualizada 2026-08-22, após fechar o item
+12): 14 → 13 → 15 — Batalha assíncrona primeiro (decisão de escopo já
+fechada, só falta o documento dedicado e a arquitetura); Disputa
+territorial por último dentro do Grupo 2, de propósito, por exigir a
+conversa mais cuidadosa; Palavras Relâmpago só depois que o Grupo 2
+inteiro fechar.
+
+## 7. Papel de cada parte
+
+- **Rhoney**: decide as pendências da Seção 4 antes de qualquer código
+  relacionado a elas; aprova a ordem de implementação proposta.
+- **Claude (arquitetura)**: revisa os documentos dedicados de disputa
+  territorial e batalha antes de virarem instrução; garante que nenhuma
+  regra da Seção 3 é violada por feature nova.
+- **Claude Code**: propõe ordem de implementação, implementa uma feature
+  por vez, apresenta e aguarda aprovação antes de avançar para a próxima —
+  não avança sozinho pela lista da Seção 2.
 
 ## 8. Pendências de manutenção registradas (não bloqueiam o V2)
 
@@ -184,14 +212,3 @@ já têm decisão de escopo fechada, só falta arquitetura; o 13 fica por
   nada hoje, mas precisa ser resolvido **antes da submissão à Play
   Store** — registrar como item de manutenção pré-lançamento, não
   durante a V2.
-
-## 7. Papel de cada parte
-
-- **Rhoney**: decide as 3 pendências da Seção 4 antes de qualquer código
-  relacionado a elas; aprova a ordem de implementação proposta.
-- **Claude (arquitetura)**: revisa os documentos dedicados de disputa
-  territorial e batalha antes de virarem instrução; garante que nenhuma
-  regra da Seção 3 é violada por feature nova.
-- **Claude Code**: propõe ordem de implementação, implementa uma feature
-  por vez, apresenta e aguarda aprovação antes de avançar para a próxima —
-  não avança sozinho pela lista da Seção 2.
