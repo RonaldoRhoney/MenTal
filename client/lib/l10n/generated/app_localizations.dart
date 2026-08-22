@@ -741,6 +741,84 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'{count, plural, =1{Checkpoint do dia batido! +{xp} XP extra 🚶} other{{count} checkpoints do dia batidos! +{xp} XP extra 🚶}}'**
   String movementCheckpointReachedMessage(int count, int xp);
+
+  /// Home app bar icon tooltip, opens Friends screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Amigos'**
+  String get friendsTooltip;
+
+  /// Friends screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Amigos'**
+  String get friendsScreenTitle;
+
+  /// Shows the user's own invite code to share with friends
+  ///
+  /// In pt, this message translates to:
+  /// **'Seu código: {code}'**
+  String friendsInviteCodeLabel(String code);
+
+  /// Button to copy the invite code to clipboard
+  ///
+  /// In pt, this message translates to:
+  /// **'Copiar código'**
+  String get friendsCopyCodeButton;
+
+  /// Snackbar shown after copying the invite code
+  ///
+  /// In pt, this message translates to:
+  /// **'Código copiado!'**
+  String get friendsCodeCopiedMessage;
+
+  /// Input hint for adding a friend by code
+  ///
+  /// In pt, this message translates to:
+  /// **'Cole o código de um amigo'**
+  String get friendsAddFieldHint;
+
+  /// Button to add a friend by code
+  ///
+  /// In pt, this message translates to:
+  /// **'Adicionar'**
+  String get friendsAddButton;
+
+  /// Section title for the friends list
+  ///
+  /// In pt, this message translates to:
+  /// **'Seus amigos'**
+  String get friendsListTitle;
+
+  /// Empty state for the friends list
+  ///
+  /// In pt, this message translates to:
+  /// **'Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.'**
+  String get friendsEmptyMessage;
+
+  /// Error shown when the invite code does not exist
+  ///
+  /// In pt, this message translates to:
+  /// **'Código de convite não encontrado.'**
+  String get friendsInviteNotFoundError;
+
+  /// Error shown when trying to add own invite code
+  ///
+  /// In pt, this message translates to:
+  /// **'Você não pode adicionar a si mesmo como amigo.'**
+  String get friendsCannotAddSelfError;
+
+  /// Ranking scope toggle: global
+  ///
+  /// In pt, this message translates to:
+  /// **'Global'**
+  String get rankingScopeGlobal;
+
+  /// Ranking scope toggle: friends
+  ///
+  /// In pt, this message translates to:
+  /// **'Amigos'**
+  String get rankingScopeFriends;
 }
 
 class _AppLocalizationsDelegate

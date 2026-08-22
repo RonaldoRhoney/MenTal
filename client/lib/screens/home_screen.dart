@@ -9,6 +9,7 @@ import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/xp_bar.dart';
 import 'challenge_screen.dart';
+import 'friends_screen.dart';
 import 'movement_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
@@ -203,6 +204,15 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) => RankingScreen(client: widget.client)),
+              );
+            },
+          ),
+          IconButton(
+            tooltip: l10n.friendsTooltip,
+            icon: const Icon(Icons.people_outline_rounded),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => FriendsScreen(client: widget.client)),
               );
             },
           ),

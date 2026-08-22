@@ -22,6 +22,7 @@ class RankingScreen extends StatefulWidget {
 class _RankingScreenState extends State<RankingScreen> {
   Map<String, dynamic>? _ranking;
   String? _error;
+  String _scope = 'global';
 
   @override
   void initState() {
@@ -30,12 +31,22 @@ class _RankingScreenState extends State<RankingScreen> {
   }
 
   Future<void> _load() async {
+    setState(() {
+      _ranking = null;
+      _error = null;
+    });
     try {
-      final ranking = await widget.client.ranking(scope: 'global', window: 'weekly');
+      final ranking = await widget.client.ranking(scope: _scope, window: 'weekly');
       if (mounted) setState(() => _ranking = ranking);
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
     }
+  }
+
+  void _setScope(String scope) {
+    if (scope == _scope) return;
+    setState(() => _scope = scope);
+    _load();
   }
 
   @override
@@ -46,20 +57,39 @@ class _RankingScreenState extends State<RankingScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(l10n.rankingScreenTitle)),
       body: SafeArea(
-        child: ranking == null
-            ? Center(
-                child: _error != null
-                    ? Text(_error!, style: const TextStyle(color: AppColors.error))
-                    : Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const CircularProgressIndicator(),
-                          const SizedBox(height: 16),
-                          Text(l10n.preparingChallenge),
-                        ],
-                      ),
-              )
-            : _buildList(context, l10n, ranking),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16),
+              // V2 item 12 — scope "friends" agora filtra de verdade no
+              // backend (era um parâmetro sem efeito desde o V1.1).
+              child: SegmentedButton<String>(
+                segments: [
+                  ButtonSegment(value: 'global', label: Text(l10n.rankingScopeGlobal)),
+                  ButtonSegment(value: 'friends', label: Text(l10n.rankingScopeFriends)),
+                ],
+                selected: {_scope},
+                onSelectionChanged: (selection) => _setScope(selection.first),
+              ),
+            ),
+            Expanded(
+              child: ranking == null
+                  ? Center(
+                      child: _error != null
+                          ? Text(_error!, style: const TextStyle(color: AppColors.error))
+                          : Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const CircularProgressIndicator(),
+                                const SizedBox(height: 16),
+                                Text(l10n.preparingChallenge),
+                              ],
+                            ),
+                    )
+                  : _buildList(context, l10n, ranking),
+            ),
+          ],
+        ),
       ),
     );
   }

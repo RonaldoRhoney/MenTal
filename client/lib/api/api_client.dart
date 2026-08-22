@@ -77,6 +77,25 @@ class ApiClient {
     return _decode(resp);
   }
 
+  Future<Map<String, dynamic>> getInviteCode() async {
+    final resp = await http.get(_uri('/social/invite-code'), headers: _headers);
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> addFriend(String inviteCode) async {
+    final resp = await http.post(
+      _uri('/social/friends'),
+      headers: _headers,
+      body: jsonEncode({'invite_code': inviteCode}),
+    );
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> getFriends() async {
+    final resp = await http.get(_uri('/social/friends'), headers: _headers);
+    return _decode(resp);
+  }
+
   Future<Map<String, dynamic>> badges() async {
     final resp = await http.get(_uri('/badges'), headers: _headers);
     return _decode(resp);

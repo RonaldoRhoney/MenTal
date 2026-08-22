@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy import select, func
 from sqlalchemy.orm import Session
 
-from .. import models
+from .. import models, services
 from ..schemas import RankingResponse, RankingEntry
 from ..auth import get_current_user_id
 from ..db import get_db
@@ -19,10 +19,14 @@ def get_ranking(
     user_id: str = Depends(get_current_user_id),
     db: Session = Depends(get_db),
 ):
-    # V1: ranking "semanal" soma XP ganho em attempts corretas dos últimos 7
-    # dias (RANKING.md §2 recomendava janela semanal como padrão). "friends"
-    # fica fora de escopo do Vertical Slice 01 (não há modelo de conexão de
-    # amigo definido ainda) — tratado igual a "global" por ora.
+    # V2 item 12 (V2_KICKOFF.md §6A) — "friends" agora filtra de verdade
+    # (mesma query de sempre, restrita a amigos + eu mesmo), fechando o
+    # gap deixado desde o Vertical Slice 01 (scope existia na assinatura
+    # mas nunca era aplicado).
+    allowed_user_ids = None
+    if scope == "friends":
+        allowed_user_ids = set(services.get_friend_user_ids(db, user_id)) | {user_id}
+
     if window == "weekly":
         # datetime.utcnow(), não date.today(): Attempt.created_at é gravado
         # em UTC (datetime.utcnow() em toda a base) — usar a data LOCAL do
@@ -32,19 +36,21 @@ def get_ranking(
         # problema em register_play_for_streak produzia "sequência mais
         # longa" menor que "sequência atual" — logicamente impossível.
         since = datetime.utcnow() - timedelta(days=7)
-        rows = (
-            db.execute(
-                select(models.Attempt.user_id, func.sum(models.Attempt.xp_awarded).label("xp"))
-                .where(models.Attempt.created_at >= since)
-                .where(models.Attempt.is_correct.is_(True))
-                .group_by(models.Attempt.user_id)
-                .order_by(func.sum(models.Attempt.xp_awarded).desc())
-            ).all()
+        query = (
+            select(models.Attempt.user_id, func.sum(models.Attempt.xp_awarded).label("xp"))
+            .where(models.Attempt.created_at >= since)
+            .where(models.Attempt.is_correct.is_(True))
         )
+        if allowed_user_ids is not None:
+            query = query.where(models.Attempt.user_id.in_(allowed_user_ids))
+        query = query.group_by(models.Attempt.user_id).order_by(func.sum(models.Attempt.xp_awarded).desc())
+        rows = db.execute(query).all()
     else:
-        rows = (
-            db.execute(select(models.Profile.user_id, models.Profile.xp_total.label("xp")).order_by(models.Profile.xp_total.desc())).all()
-        )
+        query = select(models.Profile.user_id, models.Profile.xp_total.label("xp"))
+        if allowed_user_ids is not None:
+            query = query.where(models.Profile.user_id.in_(allowed_user_ids))
+        query = query.order_by(models.Profile.xp_total.desc())
+        rows = db.execute(query).all()
 
     entries = []
     me = None

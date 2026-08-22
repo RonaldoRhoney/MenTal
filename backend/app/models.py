@@ -263,6 +263,29 @@ class InviteConversion(Base):
     __table_args__ = (UniqueConstraint("invited_user_id", name="uq_invite_conversion_user"),)
 
 
+class Friendship(Base):
+    """
+    V2 item 12 — Amigos (V2_KICKOFF.md §6A, aprovado 2026-08-22). N:N de
+    verdade — deliberadamente NÃO reaproveita InviteConversion, que tem
+    UniqueConstraint("invited_user_id") pensado pra atribuição de
+    crescimento (1 resposta só pra "quem trouxe esse usuário"), o que
+    limitaria cada jogador a um único amigo pra sempre. Usa o MESMO
+    invite_code/deep link já existente como ponto de entrada (nenhuma
+    tela nova de convite), só grava o resultado numa tabela separada.
+    Par sempre canônico (user_id_a < user_id_b como string) — evita
+    duas linhas pra mesma amizade dependendo de quem adicionou quem.
+    """
+
+    __tablename__ = "friendships"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id_a: Mapped[str] = mapped_column(UUIDType, index=True)
+    user_id_b: Mapped[str] = mapped_column(UUIDType, index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+    __table_args__ = (UniqueConstraint("user_id_a", "user_id_b", name="uq_friendship_pair"),)
+
+
 class Badge(Base):
     """
     Catálogo de badges/conquistas — V2 item 1 (V2_KICKOFF.md §6A).

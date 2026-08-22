@@ -397,4 +397,47 @@ class AppLocalizationsPt extends AppLocalizations {
     );
     return '$_temp0';
   }
+
+  @override
+  String get friendsTooltip => 'Amigos';
+
+  @override
+  String get friendsScreenTitle => 'Amigos';
+
+  @override
+  String friendsInviteCodeLabel(String code) {
+    return 'Seu código: $code';
+  }
+
+  @override
+  String get friendsCopyCodeButton => 'Copiar código';
+
+  @override
+  String get friendsCodeCopiedMessage => 'Código copiado!';
+
+  @override
+  String get friendsAddFieldHint => 'Cole o código de um amigo';
+
+  @override
+  String get friendsAddButton => 'Adicionar';
+
+  @override
+  String get friendsListTitle => 'Seus amigos';
+
+  @override
+  String get friendsEmptyMessage =>
+      'Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.';
+
+  @override
+  String get friendsInviteNotFoundError => 'Código de convite não encontrado.';
+
+  @override
+  String get friendsCannotAddSelfError =>
+      'Você não pode adicionar a si mesmo como amigo.';
+
+  @override
+  String get rankingScopeGlobal => 'Global';
+
+  @override
+  String get rankingScopeFriends => 'Amigos';
 }

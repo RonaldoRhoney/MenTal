@@ -1,10 +1,10 @@
 import secrets
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import models
+from .. import models, schemas, services
 from ..auth import get_current_user_id
 from ..db import get_db
 
@@ -56,3 +56,36 @@ def generate_achievement_card(user_id: str = Depends(get_current_user_id), db: S
         "image_url": None,
         "note": "geração de imagem não implementada no Vertical Slice 01",
     }
+
+
+# V2 item 12 — Amigos (V2_KICKOFF.md §6A, aprovado 2026-08-22). Usa o
+# MESMO invite_code de /social/invite-code como ponto de entrada —
+# nenhuma tela nova de convite. Deliberadamente NÃO reaproveita
+# InviteConversion (1 atribuição por usuário, pensado pra métrica de
+# crescimento) — grava em mental.friendships, N:N de verdade.
+@router.post("/social/friends")
+def add_friend(
+    body: schemas.AddFriendRequest,
+    user_id: str = Depends(get_current_user_id),
+    db: Session = Depends(get_db),
+):
+    invite = db.execute(select(models.Invite).where(models.Invite.invite_code == body.invite_code)).scalars().first()
+    if invite is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "INVITE_NOT_FOUND", "message": "Código de convite não encontrado."}})
+    if invite.inviter_user_id == user_id:
+        raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_FRIEND_SELF", "message": "Não é possível adicionar a si mesmo como amigo."}})
+
+    services.add_friendship(db, user_id, invite.inviter_user_id)
+    return {"status": "ok"}
+
+
+@router.get("/social/friends", response_model=schemas.FriendsResponse)
+def list_friends(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+    friend_ids = services.get_friend_user_ids(db, user_id)
+    friends = []
+    for friend_id in friend_ids:
+        profile = db.get(models.Profile, friend_id)
+        if profile is None:
+            continue
+        friends.append(schemas.FriendOut(nickname=profile.nickname, xp_total=profile.xp_total, level=profile.level))
+    return schemas.FriendsResponse(friends=friends)

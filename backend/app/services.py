@@ -262,6 +262,37 @@ def get_worlds_progress(db: Session, user_id: str) -> list[dict]:
     return out
 
 
+# V2 item 12 — Amigos (V2_KICKOFF.md §6A). Par sempre canônico
+# (user_id_a < user_id_b como string) — quem chama nunca precisa saber
+# de que lado da linha o próprio user_id está.
+def _canonical_pair(user_id_1: str, user_id_2: str) -> tuple[str, str]:
+    return (user_id_1, user_id_2) if user_id_1 < user_id_2 else (user_id_2, user_id_1)
+
+
+def add_friendship(db: Session, user_id_1: str, user_id_2: str) -> models.Friendship | None:
+    """Idempotente: retorna None se já eram amigos, sem duplicar linha."""
+    a, b = _canonical_pair(user_id_1, user_id_2)
+    existing = db.execute(
+        select(models.Friendship).where(models.Friendship.user_id_a == a, models.Friendship.user_id_b == b)
+    ).scalar_one_or_none()
+    if existing is not None:
+        return None
+    friendship = models.Friendship(user_id_a=a, user_id_b=b)
+    db.add(friendship)
+    db.commit()
+    db.refresh(friendship)
+    return friendship
+
+
+def get_friend_user_ids(db: Session, user_id: str) -> list[str]:
+    rows = db.execute(
+        select(models.Friendship).where(
+            (models.Friendship.user_id_a == user_id) | (models.Friendship.user_id_b == user_id)
+        )
+    ).scalars().all()
+    return [f.user_id_b if f.user_id_a == user_id else f.user_id_a for f in rows]
+
+
 def _count_total_correct_answers(db: Session, user_id: str) -> int:
     return db.execute(
         select(func.count(models.Attempt.attempt_id))

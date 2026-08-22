@@ -203,3 +203,17 @@ class MovementGoalRequest(BaseModel):
 
 class MovementGoalResponse(BaseModel):
     daily_goal_steps: int | None
+
+
+class AddFriendRequest(BaseModel):
+    invite_code: str
+
+
+class FriendOut(BaseModel):
+    nickname: str
+    xp_total: int
+    level: int
+
+
+class FriendsResponse(BaseModel):
+    friends: list[FriendOut]

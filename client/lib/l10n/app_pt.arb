@@ -438,5 +438,47 @@
       "count": {"type": "int"},
       "xp": {"type": "int"}
     }
-  }
+  },
+
+  "friendsTooltip": "Amigos",
+  "@friendsTooltip": {"description": "Home app bar icon tooltip, opens Friends screen"},
+
+  "friendsScreenTitle": "Amigos",
+  "@friendsScreenTitle": {"description": "Friends screen app bar title"},
+
+  "friendsInviteCodeLabel": "Seu código: {code}",
+  "@friendsInviteCodeLabel": {
+    "description": "Shows the user's own invite code to share with friends",
+    "placeholders": {"code": {"type": "String"}}
+  },
+
+  "friendsCopyCodeButton": "Copiar código",
+  "@friendsCopyCodeButton": {"description": "Button to copy the invite code to clipboard"},
+
+  "friendsCodeCopiedMessage": "Código copiado!",
+  "@friendsCodeCopiedMessage": {"description": "Snackbar shown after copying the invite code"},
+
+  "friendsAddFieldHint": "Cole o código de um amigo",
+  "@friendsAddFieldHint": {"description": "Input hint for adding a friend by code"},
+
+  "friendsAddButton": "Adicionar",
+  "@friendsAddButton": {"description": "Button to add a friend by code"},
+
+  "friendsListTitle": "Seus amigos",
+  "@friendsListTitle": {"description": "Section title for the friends list"},
+
+  "friendsEmptyMessage": "Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.",
+  "@friendsEmptyMessage": {"description": "Empty state for the friends list"},
+
+  "friendsInviteNotFoundError": "Código de convite não encontrado.",
+  "@friendsInviteNotFoundError": {"description": "Error shown when the invite code does not exist"},
+
+  "friendsCannotAddSelfError": "Você não pode adicionar a si mesmo como amigo.",
+  "@friendsCannotAddSelfError": {"description": "Error shown when trying to add own invite code"},
+
+  "rankingScopeGlobal": "Global",
+  "@rankingScopeGlobal": {"description": "Ranking scope toggle: global"},
+
+  "rankingScopeFriends": "Amigos",
+  "@rankingScopeFriends": {"description": "Ranking scope toggle: friends"}
 }
