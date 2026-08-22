@@ -101,6 +101,15 @@ class Profile(Base):
     # absoluto de passos (que já é recompensado pela faixa).
     movement_daily_goal_steps: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
+    # Recompensa por compartilhar conquista (pedido de Rhoney, 2026-08-22:
+    # "compartilhando seus desempenhos... o usuário ganha xp"). O app não
+    # tem como confirmar que o compartilhamento via OS share sheet foi de
+    # fato concluído (share_plus só confirma que o sheet foi aberto) —
+    # por isso a defesa contra farm não é "verificar o compartilhamento",
+    # é um teto de 1 recompensa por dia civil (UTC), igual ao resto do
+    # backend que trata data como referência UTC única.
+    last_share_reward_date: Mapped[date | None] = mapped_column(Date, nullable=True)
+
 
 class MovementCycle(Base):
     """
@@ -212,6 +221,14 @@ class Attempt(Base):
     xp_base: Mapped[int | None] = mapped_column(Integer, nullable=True)
     xp_awarded: Mapped[int | None] = mapped_column(Integer, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md, aprovado
+    # 2026-08-22). Só preenchido em tentativas do modo relâmpago; null em
+    # todo o resto do app. speed_bonus_xp guardado à parte (não só somado
+    # em xp_awarded) pra reenvio idempotente do mesmo attempt_id devolver
+    # o mesmo detalhamento, sem precisar recalcular.
+    response_time_ms: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    timed_out: Mapped[bool] = mapped_column(Boolean, default=False)
+    speed_bonus_xp: Mapped[int] = mapped_column(Integer, default=0)
 
 
 class Streak(Base):

@@ -19,6 +19,10 @@ class ChallengeOut(BaseModel):
     prompt: str
     options: list[str] | None
     hints_available: int
+    # V2 item 15 — Palavras Relâmpago. Só preenchido quando mode=
+    # "relampago" foi pedido em GET /challenges/next; None em todo o
+    # resto do app (inclusive o formato digitado normal de Palavras).
+    time_limit_seconds: int | None = None
 
 
 class HintRequest(BaseModel):
@@ -33,6 +37,13 @@ class HintResponse(BaseModel):
 class AnswerRequest(BaseModel):
     attempt_id: str
     submitted_answer: str
+    # V2 item 15 — Palavras Relâmpago. response_time_ms só é enviado no
+    # modo relâmpago; ausente em toda resposta digitada normal.
+    # timed_out=True força is_correct=False independente de
+    # submitted_answer — o backend nunca confia em "acertei mesmo sem
+    # escolher a tempo" vindo do cliente.
+    response_time_ms: int | None = None
+    timed_out: bool = False
 
 
 class StreakOut(BaseModel):
@@ -82,6 +93,14 @@ class AnswerResponse(BaseModel):
     world_just_completed: bool = False
     completed_world_name: str | None = None
     world_completion_bonus_xp: int = 0
+    # V2 item 15 — Palavras Relâmpago. timed_out=True sinaliza pro
+    # client mostrar a copy suave ("Quase lá! Tenta de novo"), nunca o
+    # feedback padrão de erro (PALAVRAS_RELAMPAGO.md §3, Princípio de
+    # Não-Humilhação). speed_bonus_xp já vem somado em xp_awarded — este
+    # campo é só o detalhamento pra exibição ("+X XP de bônus de
+    # velocidade!").
+    timed_out: bool = False
+    speed_bonus_xp: int = 0
 
 
 class ProgressTerritoryOut(BaseModel):
@@ -217,3 +236,10 @@ class FriendOut(BaseModel):
 
 class FriendsResponse(BaseModel):
     friends: list[FriendOut]
+
+
+class ShareRewardResponse(BaseModel):
+    xp_awarded: int
+    already_rewarded_today: bool
+    xp_total: int
+    level: int

@@ -16,9 +16,15 @@ router = APIRouter()
 def next_challenge(
     territory_id: str,
     language_code: str = config.DEFAULT_LANGUAGE_CODE,
+    mode: str = "normal",
     user_id: str = Depends(get_current_user_id),
     db: Session = Depends(get_db),
 ):
+    # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Só se
+    # aplica a Palavras — qualquer outro território ignora "mode" e
+    # segue o fluxo normal, nunca erro (evita quebrar territórios que
+    # nunca deveriam ter pedido esse modo).
+    relampago = mode == "relampago" and territory_id == "palavras"
     territory = db.get(models.Territory, territory_id)
     if territory is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "TERRITORY_NOT_FOUND", "message": territory_id}})
@@ -45,6 +51,11 @@ def next_challenge(
         )
 
     difficulty = services.pick_difficulty_for(db, user_id, territory_id)
+    if relampago:
+        # Nível fácil nunca entra no modo relâmpago (decisão fechada na
+        # spec) — a dificuldade adaptativa continua valendo, só com piso
+        # em "médio" quando o modo relâmpago está ativo.
+        difficulty = max(difficulty, config.PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL)
 
     # ARCHITECTURE_UPDATE_I18N_READY.md §3: endpoint já aceita/filtra por
     # idioma, mesmo com um único valor possível hoje (pt-BR) — critério de
@@ -102,13 +113,21 @@ def next_challenge(
         db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
     )
 
+    if relampago:
+        options = services.generate_relampago_options(db, challenge)
+        time_limit_seconds = config.PALAVRAS_RELAMPAGO_TIME_LIMIT_SECONDS.get(challenge.difficulty_level)
+    else:
+        options = challenge.options
+        time_limit_seconds = None
+
     return schemas.ChallengeOut(
         challenge_id=challenge.id,
         territory_id=challenge.territory_id,
         difficulty_level=challenge.difficulty_level,
         prompt=challenge.prompt,
-        options=challenge.options,
+        options=options,
         hints_available=hints_available,
+        time_limit_seconds=time_limit_seconds,
     )
 
 
@@ -195,16 +214,36 @@ def submit_answer(
                 xp_in_territory=territory_progress.xp_in_territory if territory_progress else 0,
                 conquered=bool(territory_progress and territory_progress.conquered_at),
             ),
+            timed_out=attempt.timed_out,
+            speed_bonus_xp=attempt.speed_bonus_xp,
         )
 
-    is_correct = body.submitted_answer.strip().lower() == challenge.correct_answer.strip().lower()
+    # V2 item 15 — Palavras Relâmpago: timed_out=True nunca confia em
+    # submitted_answer vindo do cliente pra decidir acerto — tempo
+    # esgotado é sempre tratado como resposta não dada, mesmo que o
+    # corpo da requisição contenha algo (defesa contra cliente malicioso
+    # tentando reportar acerto depois do prazo).
+    is_correct = (
+        not body.timed_out
+        and body.submitted_answer.strip().lower() == challenge.correct_answer.strip().lower()
+    )
     xp_base = scoring.xp_base_for(challenge.difficulty_level) if is_correct else 0
-    xp_final = scoring.xp_awarded(xp_base, attempt.hints_used) if is_correct else 0
+    xp_from_hints = scoring.xp_awarded(xp_base, attempt.hints_used) if is_correct else 0
+
+    speed_bonus_xp = 0
+    time_limit_seconds = config.PALAVRAS_RELAMPAGO_TIME_LIMIT_SECONDS.get(challenge.difficulty_level)
+    if is_correct and challenge.territory_id == "palavras" and time_limit_seconds and body.response_time_ms is not None:
+        speed_bonus_xp = services.compute_speed_bonus_xp(xp_base, body.response_time_ms, time_limit_seconds)
+
+    xp_final = xp_from_hints + speed_bonus_xp
 
     attempt.submitted_answer = body.submitted_answer
     attempt.is_correct = is_correct
     attempt.xp_base = xp_base
     attempt.xp_awarded = xp_final
+    attempt.response_time_ms = body.response_time_ms
+    attempt.timed_out = body.timed_out
+    attempt.speed_bonus_xp = speed_bonus_xp
     db.commit()
 
     profile = services.get_or_create_profile(db, user_id)
@@ -288,4 +327,6 @@ def submit_answer(
         world_just_completed=world_just_completed,
         completed_world_name=completed_world_name,
         world_completion_bonus_xp=world_completion_bonus_xp,
+        timed_out=body.timed_out,
+        speed_bonus_xp=speed_bonus_xp,
     )

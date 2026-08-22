@@ -352,7 +352,7 @@ class _MovementScreenState extends State<MovementScreen> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              ShareAchievementButton(message: l10n.shareMovementGoalMessage),
+              ShareAchievementButton(message: l10n.shareMovementGoalMessage, client: widget.client),
             ],
             if (_checkpointReachedMessage != null) ...[
               const SizedBox(height: 8),

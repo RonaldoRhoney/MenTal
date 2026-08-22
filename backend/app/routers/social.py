@@ -89,3 +89,24 @@ def list_friends(user_id: str = Depends(get_current_user_id), db: Session = Depe
             continue
         friends.append(schemas.FriendOut(nickname=profile.nickname, xp_total=profile.xp_total, level=profile.level))
     return schemas.FriendsResponse(friends=friends)
+
+
+# Pedido de Rhoney (2026-08-22): compartilhar uma conquista (nível,
+# território, mundo, badge, meta de passos) rende XP. Backend é a única
+# autoridade — client nunca calcula nem decide o valor, só avisa "um
+# compartilhamento aconteceu". Teto de 1 recompensa/dia (services.
+# award_share_reward) é a defesa contra farm, já que o app não confirma
+# conclusão real do compartilhamento no SO.
+@router.post("/social/share-reward", response_model=schemas.ShareRewardResponse)
+def reward_share(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+    profile = db.get(models.Profile, user_id)
+    if profile is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "PROFILE_NOT_FOUND", "message": "Perfil não encontrado."}})
+
+    xp_awarded, already_rewarded_today = services.award_share_reward(db, profile)
+    return schemas.ShareRewardResponse(
+        xp_awarded=xp_awarded,
+        already_rewarded_today=already_rewarded_today,
+        xp_total=profile.xp_total,
+        level=profile.level,
+    )

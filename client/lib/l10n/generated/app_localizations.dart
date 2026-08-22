@@ -856,6 +856,12 @@ abstract class AppLocalizations {
   /// **'Bati minha meta de passos no MENTAL e ganhei XP de bônus! 🚶💪'**
   String get shareMovementGoalMessage;
 
+  /// Snackbar shown after sharing when the daily share-XP reward is granted
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP por compartilhar!'**
+  String shareXpRewardedMessage(int xp);
+
   /// Button to share the invite code via WhatsApp/social apps
   ///
   /// In pt, this message translates to:
@@ -867,6 +873,30 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Bora treinar a mente comigo? Baixe o MENTAL e use meu código de convite: {code}'**
   String friendsInviteShareMessage(String code);
+
+  /// Countdown timer label in Palavras Relâmpago mode
+  ///
+  /// In pt, this message translates to:
+  /// **'{seconds}s'**
+  String relampagoSecondsRemainingLabel(int seconds);
+
+  /// Soft feedback shown when the countdown runs out without an answer
+  ///
+  /// In pt, this message translates to:
+  /// **'Quase lá! Tenta de novo'**
+  String get relampagoTimedOutFeedback;
+
+  /// Shown when a fast correct answer earns a speed bonus
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP de bônus de velocidade! ⚡'**
+  String relampagoSpeedBonusMessage(int xp);
+
+  /// Button/toggle label to start Palavras in lightning (multiple choice with timer) mode
+  ///
+  /// In pt, this message translates to:
+  /// **'⚡ Relâmpago'**
+  String get relampagoModeLabel;
 }
 
 class _AppLocalizationsDelegate

@@ -512,6 +512,12 @@
   "shareMovementGoalMessage": "Bati minha meta de passos no MENTAL e ganhei XP de bônus! 🚶💪",
   "@shareMovementGoalMessage": {"description": "Share text for movement daily goal achievement"},
 
+  "shareXpRewardedMessage": "+{xp} XP por compartilhar!",
+  "@shareXpRewardedMessage": {
+    "description": "Snackbar shown after sharing when the daily share-XP reward is granted",
+    "placeholders": {"xp": {"type": "int"}}
+  },
+
   "friendsInviteShareButton": "Indicar",
   "@friendsInviteShareButton": {"description": "Button to share the invite code via WhatsApp/social apps"},
 
@@ -519,5 +525,23 @@
   "@friendsInviteShareMessage": {
     "description": "Share text for inviting a friend with the invite code",
     "placeholders": {"code": {"type": "String"}}
-  }
+  },
+
+  "relampagoSecondsRemainingLabel": "{seconds}s",
+  "@relampagoSecondsRemainingLabel": {
+    "description": "Countdown timer label in Palavras Relâmpago mode",
+    "placeholders": {"seconds": {"type": "int"}}
+  },
+
+  "relampagoTimedOutFeedback": "Quase lá! Tenta de novo",
+  "@relampagoTimedOutFeedback": {"description": "Soft feedback shown when the countdown runs out without an answer"},
+
+  "relampagoSpeedBonusMessage": "+{xp} XP de bônus de velocidade! ⚡",
+  "@relampagoSpeedBonusMessage": {
+    "description": "Shown when a fast correct answer earns a speed bonus",
+    "placeholders": {"xp": {"type": "int"}}
+  },
+
+  "relampagoModeLabel": "⚡ Relâmpago",
+  "@relampagoModeLabel": {"description": "Button/toggle label to start Palavras in lightning (multiple choice with timer) mode"}
 }

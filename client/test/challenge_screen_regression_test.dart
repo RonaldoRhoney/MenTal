@@ -19,7 +19,7 @@ class _FakeApiClient extends ApiClient {
   _FakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id',
       'territory_id': territoryId,
@@ -39,7 +39,7 @@ class _LongPromptFakeApiClient extends ApiClient {
   _LongPromptFakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id-textos',
       'territory_id': territoryId,
@@ -57,7 +57,7 @@ class _VisualFakeApiClient extends ApiClient {
   _VisualFakeApiClient() : super(baseUrl: 'http://fake', userId: 'fake-user');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id-visual',
       'territory_id': territoryId,
@@ -69,7 +69,7 @@ class _VisualFakeApiClient extends ApiClient {
   }
 
   @override
-  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer) async {
+  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
     return {
       'is_correct': true,
       'correct_answer': 'square_filled_gold_3',
@@ -91,7 +91,7 @@ class _CelebrationFakeApiClient extends ApiClient {
   final Map<String, dynamic> answerPayload;
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id',
       'territory_id': territoryId,
@@ -103,7 +103,7 @@ class _CelebrationFakeApiClient extends ApiClient {
   }
 
   @override
-  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer) async {
+  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
     return answerPayload;
   }
 }

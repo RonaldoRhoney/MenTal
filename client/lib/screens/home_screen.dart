@@ -175,6 +175,31 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       );
+
+      // V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Modo
+      // extra só pra "palavras", nunca substitui o modo normal — entrada
+      // separada, mesmo território/progresso.
+      if (territoryId == 'palavras') {
+        items.add(const SizedBox(height: 8));
+        items.add(
+          OutlinedButton(
+            onPressed: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => ChallengeScreen(
+                    client: widget.client,
+                    territoryId: territoryId,
+                    territoryLabel: label,
+                    relampago: true,
+                  ),
+                ),
+              );
+              _loadProgress();
+            },
+            child: Text(l10n.relampagoModeLabel),
+          ),
+        );
+      }
     }
     return items;
   }

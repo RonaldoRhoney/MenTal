@@ -1,3 +1,4 @@
+import random
 from datetime import date, datetime, timedelta
 
 from sqlalchemy import func, select
@@ -478,3 +479,72 @@ def set_notification_preferences(db: Session, user_id: str, reengagement_enabled
     db.commit()
     db.refresh(profile)
     return profile
+
+
+# V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md, aprovado
+# 2026-08-22). Reaproveita 100% o banco de desafios já curado — as
+# alternativas erradas nunca são geradas por IA nem inventadas, são
+# correct_answer REAIS de outros desafios do mesmo território/nível
+# (RISKS_AND_OPEN_DECISIONS.md §2: curadoria manual, sem geração
+# automática de conteúdo). Sem duplicar dado: as opções são calculadas
+# em tempo real a cada chamada, nunca persistidas no Challenge.
+def generate_relampago_options(db: Session, challenge: models.Challenge) -> list[str]:
+    other_answers = db.execute(
+        select(models.Challenge.correct_answer)
+        .where(models.Challenge.territory_id == challenge.territory_id)
+        .where(models.Challenge.difficulty_level == challenge.difficulty_level)
+        .where(models.Challenge.id != challenge.id)
+    ).scalars().all()
+    distractors = random.sample(other_answers, k=min(2, len(other_answers)))
+    options = [challenge.correct_answer, *distractors]
+    random.shuffle(options)
+    return options
+
+
+def compute_speed_bonus_xp(xp_base: int, response_time_ms: int, time_limit_seconds: int) -> int:
+    """
+    Bônus decrescente conforme o tempo consumido (PALAVRAS_RELAMPAGO.md
+    §4): platô de bônus máximo até FAST_FRACTION do tempo, decaimento
+    linear até zero em SLOW_FRACTION, platô zero depois disso. Nunca
+    negativo — responder devagar dentro do tempo só deixa de ganhar
+    bônus, nunca perde o XP base do acerto.
+    """
+    if time_limit_seconds <= 0:
+        return 0
+    fraction_used = min(1.0, max(0.0, response_time_ms / (time_limit_seconds * 1000)))
+    fast = config.PALAVRAS_RELAMPAGO_SPEED_BONUS_FAST_FRACTION
+    slow = config.PALAVRAS_RELAMPAGO_SPEED_BONUS_SLOW_FRACTION
+    max_multiplier = config.PALAVRAS_RELAMPAGO_SPEED_BONUS_MAX_MULTIPLIER
+
+    if fraction_used <= fast:
+        multiplier = max_multiplier
+    elif fraction_used >= slow:
+        multiplier = 0.0
+    else:
+        progress = (fraction_used - fast) / (slow - fast)
+        multiplier = max_multiplier * (1 - progress)
+
+    return round(xp_base * multiplier)
+
+
+def award_share_reward(db: Session, profile: "models.Profile") -> tuple[int, bool]:
+    """
+    Pedido de Rhoney (2026-08-22): compartilhar uma conquista (nível,
+    território, mundo, badge, meta de passos) rende XP. O app não tem
+    como confirmar que o compartilhamento via OS share sheet foi
+    concluído de fato (share_plus só garante que o sheet abriu sem
+    erro) — a defesa contra farm não é "verificar o compartilhamento em
+    si", é um teto de 1 recompensa por dia civil (UTC), independente de
+    quantas vezes o botão de compartilhar for tocado no mesmo dia.
+
+    Retorna (xp_awarded, already_rewarded_today).
+    """
+    today = date.today()
+    if profile.last_share_reward_date == today:
+        return 0, True
+
+    profile.last_share_reward_date = today
+    profile.xp_total += config.SHARE_XP_REWARD
+    profile.level = scoring.level_from_xp(profile.xp_total)
+    db.commit()
+    return config.SHARE_XP_REWARD, False

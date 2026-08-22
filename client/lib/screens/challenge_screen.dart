@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
@@ -20,11 +22,17 @@ class ChallengeScreen extends StatefulWidget {
     required this.client,
     required this.territoryId,
     required this.territoryLabel,
+    this.relampago = false,
   });
 
   final ApiClient client;
   final String territoryId;
   final String territoryLabel;
+  // V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Só tem
+  // efeito real quando territoryId == 'palavras'; o backend também
+  // ignora o modo pra qualquer outro território (defesa em profundidade,
+  // nunca confia só no client pra isso).
+  final bool relampago;
 
   @override
   State<ChallengeScreen> createState() => _ChallengeScreenState();
@@ -43,6 +51,18 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   bool _hintsExhausted = false;
   Map<String, dynamic>? _result;
 
+  // V2 item 15 — Palavras Relâmpago. Contagem regressiva controlada
+  // aqui (não no backend) — o backend só recebe o tempo de resposta em
+  // milissegundos ao submeter, é a única autoridade sobre XP/bônus. O
+  // client decide QUANDO estourou o tempo (pra dar feedback visual
+  // imediato), mas quem CALCULA o bônus de velocidade é sempre o
+  // backend, com o mesmo response_time_ms enviado aqui.
+  Timer? _countdownTimer;
+  int? _remainingMs;
+  int? _timeLimitMs;
+  DateTime? _challengeShownAt;
+  bool _submitted = false;
+
   // MICROINTERACTIONS.md §3 — celebração forte (território/badge/level
   // up) usa confete + fogos + balões (pedido explícito: algo que remeta a
   // comemoração de verdade, não só confete); sons e o pulso sutil/
@@ -58,6 +78,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
 
   @override
   void dispose() {
+    _countdownTimer?.cancel();
     _celebration.dispose();
     super.dispose();
   }
@@ -69,6 +90,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   /// (streak) > sutil (acerto).
   void _triggerFeedback(Map<String, dynamic> result) {
     final isCorrect = result['is_correct'] as bool;
+    final timedOut = result['timed_out'] as bool? ?? false;
     final levelUp = result['level_up'] as bool? ?? false;
     final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
     final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
@@ -86,12 +108,17 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       FeedbackService.instance.play(FeedbackSound.streak);
     } else if (isCorrect) {
       FeedbackService.instance.play(FeedbackSound.correct);
+    } else if (timedOut) {
+      // V2 item 15 — Princípio de Não-Humilhação (PALAVRAS_RELAMPAGO.md
+      // §3): tempo esgotado não é "saber errado", nunca toca o som de
+      // erro padrão.
     } else {
       FeedbackService.instance.play(FeedbackSound.incorrect);
     }
   }
 
   Future<void> _loadNextChallenge() async {
+    _countdownTimer?.cancel();
     setState(() {
       _loading = true;
       _error = null;
@@ -102,10 +129,21 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _hintsShown = [];
       _hintsExhausted = false;
       _attemptId = _uuid.v4();
+      _remainingMs = null;
+      _timeLimitMs = null;
+      _challengeShownAt = null;
+      _submitted = false;
     });
     try {
-      final challenge = await widget.client.nextChallenge(widget.territoryId);
-      if (mounted) setState(() => _challenge = challenge);
+      final challenge = await widget.client.nextChallenge(
+        widget.territoryId,
+        mode: widget.relampago ? 'relampago' : 'normal',
+      );
+      if (mounted) {
+        setState(() => _challenge = challenge);
+        final timeLimitSeconds = challenge['time_limit_seconds'] as int?;
+        if (timeLimitSeconds != null) _startCountdown(timeLimitSeconds);
+      }
     } on ApiException catch (e) {
       if (mounted) {
         setState(() {
@@ -121,6 +159,93 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           }
         });
       }
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  void _startCountdown(int timeLimitSeconds) {
+    _timeLimitMs = timeLimitSeconds * 1000;
+    _remainingMs = _timeLimitMs;
+    _challengeShownAt = DateTime.now();
+    _countdownTimer?.cancel();
+    _countdownTimer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
+      if (!mounted || _submitted) {
+        timer.cancel();
+        return;
+      }
+      final elapsed = DateTime.now().difference(_challengeShownAt!).inMilliseconds;
+      final remaining = _timeLimitMs! - elapsed;
+      if (remaining <= 0) {
+        timer.cancel();
+        setState(() => _remainingMs = 0);
+        _submitTimedOut();
+      } else {
+        setState(() => _remainingMs = remaining);
+      }
+    });
+  }
+
+  /// V2 item 15 — no modo relâmpago, tocar numa opção já submete na
+  /// hora (sem o passo separado de "Confirmar resposta" do formato
+  /// digitado) — é uma reação rápida, não uma escolha deliberada.
+  Future<void> _submitOption(String option) async {
+    if (_submitted) return;
+    final challenge = _challenge;
+    final attemptId = _attemptId;
+    if (challenge == null || attemptId == null) return;
+
+    _countdownTimer?.cancel();
+    final responseTimeMs = _challengeShownAt != null
+        ? DateTime.now().difference(_challengeShownAt!).inMilliseconds
+        : null;
+
+    setState(() {
+      _submitted = true;
+      _selectedOption = option;
+      _loading = true;
+    });
+    try {
+      final result = await widget.client.submitAnswer(
+        challenge['challenge_id'],
+        attemptId,
+        option,
+        responseTimeMs: responseTimeMs,
+      );
+      if (mounted) {
+        setState(() => _result = result);
+        _triggerFeedback(result);
+      }
+    } on ApiException catch (e) {
+      if (mounted) setState(() => _error = e.message);
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  Future<void> _submitTimedOut() async {
+    if (_submitted) return;
+    final challenge = _challenge;
+    final attemptId = _attemptId;
+    if (challenge == null || attemptId == null) return;
+
+    setState(() {
+      _submitted = true;
+      _loading = true;
+    });
+    try {
+      final result = await widget.client.submitAnswer(
+        challenge['challenge_id'],
+        attemptId,
+        '',
+        timedOut: true,
+      );
+      if (mounted) {
+        setState(() => _result = result);
+        _triggerFeedback(result);
+      }
+    } on ApiException catch (e) {
+      if (mounted) setState(() => _error = e.message);
     } finally {
       if (mounted) setState(() => _loading = false);
     }
@@ -246,6 +371,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final challenge = _challenge!;
     final options = (challenge['options'] as List?)?.cast<String>();
 
+    if (widget.relampago && options != null) {
+      return _buildRelampagoChallenge(challenge, options);
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -315,6 +444,69 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     );
   }
 
+  /// V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Tocar numa
+  /// opção submete na hora (_submitOption), sem passo de "Confirmar
+  /// resposta" — é reação rápida, não escolha deliberada. Sem UI de
+  /// dica (não faz sentido dentro de uma contagem regressiva curta).
+  Widget _buildRelampagoChallenge(Map<String, dynamic> challenge, List<String> options) {
+    final l10n = AppLocalizations.of(context)!;
+    final timeLimitMs = _timeLimitMs ?? 1;
+    final remainingMs = _remainingMs ?? timeLimitMs;
+    final remainingSeconds = (remainingMs / 1000).ceil();
+    final progress = (remainingMs / timeLimitMs).clamp(0.0, 1.0);
+    // Verde/teal com tempo sobrando, terracota suave nos últimos 30% —
+    // reforço visual da pressão sem soar de alarme (DESIGN_SYSTEM.md).
+    final urgent = progress <= 0.3;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 8,
+                  backgroundColor: AppColors.bg2,
+                  color: urgent ? AppColors.error : AppColors.teal,
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Text(
+              l10n.relampagoSecondsRemainingLabel(remainingSeconds),
+              style: AppTheme.technicalStyle(
+                color: urgent ? AppColors.error : AppColors.teal,
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 24),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
+                const SizedBox(height: 24),
+                for (final option in options) ...[
+                  OutlinedButton(
+                    onPressed: _submitted ? null : () => _submitOption(option),
+                    child: Text(option),
+                  ),
+                  const SizedBox(height: 12),
+                ],
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
   /// Território "visual" (V2 item 4): opções são ícones vetoriais, não
   /// texto — grade de tiles selecionáveis em vez de RadioListTile. Sem
   /// imagem real (decisão Free-First registrada em backend/app/seed.py e
@@ -368,6 +560,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   Widget _buildResult(Map<String, dynamic> result) {
     final l10n = AppLocalizations.of(context)!;
     final isCorrect = result['is_correct'] as bool;
+    final timedOut = result['timed_out'] as bool? ?? false;
+    final speedBonusXp = result['speed_bonus_xp'] as int? ?? 0;
     final levelUp = result['level_up'] as bool? ?? false;
     final newLevel = result['new_level'] as int?;
     final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
@@ -379,12 +573,18 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
     final currentStreak = (result['streak'] as Map<String, dynamic>)['current_streak'] as int;
 
+    // V2 item 15 — tempo esgotado nunca mostra a copy padrão de erro
+    // (Princípio de Não-Humilhação, PALAVRAS_RELAMPAGO.md §3) — texto e
+    // cor mais suaves, nem tão neutros quanto acerto nem tão duros
+    // quanto erro de verdade.
     final feedbackText = Text(
-      isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback,
+      timedOut
+          ? l10n.relampagoTimedOutFeedback
+          : (isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback),
       // Celebração em teal (acerto) vs. terracota suave (erro, nunca
       // vermelho vivo) — DESIGN_SYSTEM.md §4.
       style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-            color: isCorrect ? AppColors.success : AppColors.error,
+            color: timedOut ? AppColors.muted : (isCorrect ? AppColors.success : AppColors.error),
           ),
     );
 
@@ -412,6 +612,16 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   ),
                   style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 14),
                 ),
+                if (speedBonusXp > 0) ...[
+                  const SizedBox(height: 8),
+                  PulseIn(
+                    intensity: 0.3,
+                    child: Text(
+                      l10n.relampagoSpeedBonusMessage(speedBonusXp),
+                      style: const TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
                 // Sinais de evento raro calculados pelo backend (nunca
                 // derivados aqui) — texto sempre presente, nunca só
                 // som/animação (acessibilidade, AUDIO_FEEDBACK.md §4).
@@ -434,7 +644,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareLevelUpMessage(newLevel)),
+                  ShareAchievementButton(message: l10n.shareLevelUpMessage(newLevel), client: widget.client),
                 ],
                 if (territoryJustConquered) ...[
                   const SizedBox(height: 16),
@@ -445,7 +655,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareTerritoryConqueredMessage(widget.territoryLabel)),
+                  ShareAchievementButton(message: l10n.shareTerritoryConqueredMessage(widget.territoryLabel), client: widget.client),
                 ],
                 if (worldJustCompleted && completedWorldName != null) ...[
                   const SizedBox(height: 16),
@@ -456,7 +666,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareWorldCompletedMessage(completedWorldName)),
+                  ShareAchievementButton(message: l10n.shareWorldCompletedMessage(completedWorldName), client: widget.client),
                 ],
                 for (final badge in newlyAwardedBadges) ...[
                   const SizedBox(height: 16),
@@ -467,7 +677,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareBadgeUnlockedMessage(badge['name'] as String)),
+                  ShareAchievementButton(message: l10n.shareBadgeUnlockedMessage(badge['name'] as String), client: widget.client),
                 ],
               ],
             ),

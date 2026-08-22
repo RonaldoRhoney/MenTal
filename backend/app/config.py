@@ -137,6 +137,24 @@ MOVEMENT_COLLECTION_GRACE_HOURS = 24
 # a partir do schema Pydantic (Field(ge=0)), não daqui.
 MOVEMENT_MAX_STEPS_PER_COLLECTION = 2_500_000
 
+# V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md, aprovado
+# 2026-08-22). Múltipla escolha com tempo regressivo, só nos níveis
+# médio (2) e difícil (3) — nível fácil (1) nunca entra neste modo,
+# decisão já fechada na spec. Tempo cai conforme o nível: mais difícil,
+# menos tempo, mais pressão (§2 da spec).
+PALAVRAS_RELAMPAGO_TIME_LIMIT_SECONDS = {2: 10, 3: 7}
+PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL = 2
+
+# Bônus de velocidade (§4 da spec): responder nos primeiros 30% do tempo
+# disponível vale o bônus máximo (até +100% do xp_base do desafio);
+# responder depois de 70% do tempo consumido não perde o acerto, só não
+# ganha bônus. Entre os dois, o bônus decai linearmente — nunca penaliza
+# quem responde mais devagar dentro do tempo, só premia quem for mais
+# rápido (mesma filosofia do bônus de passos do item 9).
+PALAVRAS_RELAMPAGO_SPEED_BONUS_MAX_MULTIPLIER = 1.0
+PALAVRAS_RELAMPAGO_SPEED_BONUS_FAST_FRACTION = 0.3
+PALAVRAS_RELAMPAGO_SPEED_BONUS_SLOW_FRACTION = 0.7
+
 # Meta diária opcional definida pelo usuário (STEP_COUNTER_MOVIMENTO.md
 # §4, extensão pedida por Rhoney em 2026-08-21): ultrapassar a PRÓPRIA
 # meta paga este bônus extra, uma vez por ciclo, além do bônus por faixa
@@ -155,3 +173,13 @@ MOVEMENT_GOAL_BONUS_XP = 50
 # decorrida (ex.: em 4 partes, no checkpoint de 6h — 1/4 do dia — os
 # limiares valem 1/4 do normal: 500/1.250/2.500/3.750).
 MOVEMENT_CHECKPOINT_PARTS = 4
+
+# Recompensa por compartilhar desempenho (pedido de Rhoney, 2026-08-22).
+# Valor fixo e modesto de propósito — o app NÃO tem como confirmar que o
+# compartilhamento via OS share sheet foi concluído (share_plus só
+# confirma que o sheet foi aberto sem erro), então o valor precisa ser
+# pequeno o bastante para não valer a pena "farmar" mesmo num cenário de
+# falso positivo. Comparação: um acerto simples de nível fácil já paga
+# 10 XP (scoring.xp_base_for) — este bônus fica na mesma ordem de
+# grandeza de UM acerto, nunca de vários, e só uma vez por dia.
+SHARE_XP_REWARD = 15

@@ -469,10 +469,31 @@ class AppLocalizationsPt extends AppLocalizations {
       'Bati minha meta de passos no MENTAL e ganhei XP de bônus! 🚶💪';
 
   @override
+  String shareXpRewardedMessage(int xp) {
+    return '+$xp XP por compartilhar!';
+  }
+
+  @override
   String get friendsInviteShareButton => 'Indicar';
 
   @override
   String friendsInviteShareMessage(String code) {
     return 'Bora treinar a mente comigo? Baixe o MENTAL e use meu código de convite: $code';
   }
+
+  @override
+  String relampagoSecondsRemainingLabel(int seconds) {
+    return '${seconds}s';
+  }
+
+  @override
+  String get relampagoTimedOutFeedback => 'Quase lá! Tenta de novo';
+
+  @override
+  String relampagoSpeedBonusMessage(int xp) {
+    return '+$xp XP de bônus de velocidade! ⚡';
+  }
+
+  @override
+  String get relampagoModeLabel => '⚡ Relâmpago';
 }

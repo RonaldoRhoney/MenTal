@@ -13,13 +13,21 @@ import 'package:share_plus/share_plus.dart';
 class ShareService {
   ShareService._();
 
-  static Future<void> share(String text) async {
+  /// Retorna true se o OS share sheet foi aberto sem erro. Usado pelo
+  /// chamador (ShareAchievementButton) como sinal de "compartilhamento
+  /// tentado" para então pedir a recompensa de XP ao backend — o app
+  /// nunca confirma que o compartilhamento foi de fato concluído, só que
+  /// o sheet abriu (mesma limitação documentada em services.
+  /// award_share_reward no backend, coberta lá pelo teto diário).
+  static Future<bool> share(String text) async {
     try {
       await SharePlus.instance.share(ShareParams(text: text));
+      return true;
     } catch (_) {
       // Compartilhar é reforço opcional, nunca requisito — falha (ex.:
       // nenhum app de compartilhamento disponível) não pode quebrar o
       // app, mesmo princípio de FeedbackService/PushService.
+      return false;
     }
   }
 }

@@ -34,9 +34,9 @@ class ApiClient {
     return _decode(resp);
   }
 
-  Future<Map<String, dynamic>> nextChallenge(String territoryId) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
     final resp = await http.get(
-      _uri('/challenges/next', {'territory_id': territoryId}),
+      _uri('/challenges/next', {'territory_id': territoryId, 'mode': mode}),
       headers: _headers,
     );
     return _decode(resp);
@@ -54,12 +54,19 @@ class ApiClient {
   Future<Map<String, dynamic>> submitAnswer(
     String challengeId,
     String attemptId,
-    String submittedAnswer,
-  ) async {
+    String submittedAnswer, {
+    int? responseTimeMs,
+    bool timedOut = false,
+  }) async {
     final resp = await http.post(
       _uri('/challenges/$challengeId/answer'),
       headers: _headers,
-      body: jsonEncode({'attempt_id': attemptId, 'submitted_answer': submittedAnswer}),
+      body: jsonEncode({
+        'attempt_id': attemptId,
+        'submitted_answer': submittedAnswer,
+        'response_time_ms': responseTimeMs,
+        'timed_out': timedOut,
+      }),
     );
     return _decode(resp);
   }
@@ -93,6 +100,11 @@ class ApiClient {
 
   Future<Map<String, dynamic>> getFriends() async {
     final resp = await http.get(_uri('/social/friends'), headers: _headers);
+    return _decode(resp);
+  }
+
+  Future<Map<String, dynamic>> rewardShare() async {
+    final resp = await http.post(_uri('/social/share-reward'), headers: _headers);
     return _decode(resp);
   }
 
