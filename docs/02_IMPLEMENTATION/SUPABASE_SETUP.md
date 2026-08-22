@@ -43,8 +43,17 @@ autenticação real do Supabase em 2026-08-19. Itens §3 e §4 (antes
    `GET /auth/v1/authorize?provider=google` redireciona para
    `accounts.google.com` com `client_id=900389713407-...` (o novo, não
    mais o "MeuPet") e `scope=email+profile` (mínimo, sem dado estendido).
-   Facebook OAuth ainda não configurado — mesma regra de credencial
-   própria por produto se aplica quando for a vez dele.
+   Facebook OAuth **configurado em 2026-08-22**: app dedicado "MENTAL"
+   criado no Meta for Developers (App ID `1584939430043711`, mesma
+   regra de credencial própria por produto), caso de uso "Autenticar e
+   solicitar dados de usuários com Login do Facebook", permissões
+   `email` e `public_profile`, Redirect URI válida cadastrada
+   (`https://daogwiqwqplcvehdhksf.supabase.co/auth/v1/callback`).
+   Provider Facebook do Supabase habilitado com essas credenciais
+   (antes reaproveitava por engano o Client ID do MeuPet — corrigido).
+   **Verificado de verdade** em dispositivo físico: login completo com
+   Facebook, sessão recebida via deep link, navegação automática até o
+   Age Gate.
 5. **"Confirm email" — religado**: foi desligado temporariamente durante
    o teste de autenticação (§ anterior desta sessão) para conseguir um
    usuário confirmado sem acesso a caixa de entrada; religado e
