@@ -148,6 +148,11 @@ class _HomeScreenState extends State<HomeScreen> {
       final label = territoryLabel(l10n, territoryId);
       final territoryProgress = _territoryProgress(territoryId);
       final conquered = territoryProgress?['conquered'] as bool? ?? false;
+      // V2 item 13 — Disputa territorial (TERRITORY_DISPUTE.md). Sempre
+      // relativo a você + amigos confirmados (nunca global) — o backend
+      // já filtra isso, a Home só exibe o que vem pronto.
+      final detentorNickname = territoryProgress?['detentor_nickname'] as String?;
+      final isDetentor = territoryProgress?['is_detentor'] as bool? ?? false;
 
       items.add(
         FilledButton(
@@ -176,6 +181,20 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       );
+
+      if (detentorNickname != null) {
+        items.add(const SizedBox(height: 4));
+        items.add(
+          Text(
+            isDetentor ? l10n.territoryDetentorIsMeLabel : l10n.territoryDetentorLabel(detentorNickname),
+            textAlign: TextAlign.center,
+            style: AppTheme.technicalStyle(
+              color: isDetentor ? AppColors.gold : AppColors.muted,
+              fontSize: 12,
+            ),
+          ),
+        );
+      }
 
       // V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Modo
       // extra só pra "palavras", nunca substitui o modo normal — entrada

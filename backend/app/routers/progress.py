@@ -23,6 +23,10 @@ def get_progress(user_id: str = Depends(get_current_user_id), db: Session = Depe
     out = []
     for territory in territories:
         progress = db.get(models.UserTerritoryProgress, (user_id, territory.id))
+        # V2 item 13 — Disputa territorial: sempre relativo a você + seus
+        # amigos confirmados (services.get_territory_detentor), nunca
+        # global.
+        detentor = services.get_territory_detentor(db, user_id, territory.id)
         out.append(
             schemas.ProgressTerritoryOut(
                 territory_id=territory.id,
@@ -30,6 +34,8 @@ def get_progress(user_id: str = Depends(get_current_user_id), db: Session = Depe
                 unlocked=services.is_territory_unlocked(db, user_id, territory),
                 conquered=bool(progress and progress.conquered_at),
                 conquest_threshold=config.CONQUEST_XP_THRESHOLD,
+                detentor_nickname=detentor.nickname if detentor else None,
+                is_detentor=bool(detentor and detentor.user_id == user_id),
             )
         )
 

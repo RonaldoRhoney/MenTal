@@ -101,6 +101,15 @@ class AnswerResponse(BaseModel):
     # velocidade!").
     timed_out: bool = False
     speed_bonus_xp: int = 0
+    # V2 item 13 — Disputa territorial (TERRITORY_DISPUTE.md, aprovado
+    # 2026-08-22). True só na resposta exata em que você assume a
+    # liderança de XP no território entre seus amigos (mesma regra de
+    # transição dos sinais acima, nunca True de novo enquanto continuar
+    # líder). dethroned_nickname vem preenchido só quando havia um
+    # detentor anterior real (nunca na primeira vez que alguém pontua
+    # nesse território sem rival ainda).
+    territory_detentor_gained: bool = False
+    dethroned_nickname: str | None = None
 
 
 class ProgressTerritoryOut(BaseModel):
@@ -109,6 +118,11 @@ class ProgressTerritoryOut(BaseModel):
     unlocked: bool
     conquered: bool
     conquest_threshold: int
+    # V2 item 13 — Disputa territorial. Sempre relativo a você + seus
+    # amigos confirmados (nunca global) — null quando ninguém no grupo
+    # tem XP nesse território ainda.
+    detentor_nickname: str | None = None
+    is_detentor: bool = False
 
 
 class WorldProgressOut(BaseModel):

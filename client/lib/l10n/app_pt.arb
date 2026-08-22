@@ -603,5 +603,26 @@
   "@battleStatusTie": {"description": "Battle row status on a tie"},
 
   "battleAnswerButton": "Responder",
-  "@battleAnswerButton": {"description": "Button to answer a pending battle challenge"}
+  "@battleAnswerButton": {"description": "Button to answer a pending battle challenge"},
+
+  "territoryDetentorGainedMessage": "Você assumiu {territory} entre seus amigos! 🏰",
+  "@territoryDetentorGainedMessage": {
+    "description": "Celebration message when the user becomes the territory detentor among friends",
+    "placeholders": {"territory": {"type": "String"}}
+  },
+
+  "territoryDetentorLabel": "Detentor: {nickname}",
+  "@territoryDetentorLabel": {
+    "description": "Caption under a territory button showing the current detentor among friends",
+    "placeholders": {"nickname": {"type": "String"}}
+  },
+
+  "territoryDetentorIsMeLabel": "Você é o detentor",
+  "@territoryDetentorIsMeLabel": {"description": "Caption under a territory button when the current user is the detentor"},
+
+  "shareTerritoryDetentorMessage": "Assumi {territory} entre meus amigos no MENTAL! 🏰",
+  "@shareTerritoryDetentorMessage": {
+    "description": "Share text for territory detentor achievement",
+    "placeholders": {"territory": {"type": "String"}}
+  }
 }

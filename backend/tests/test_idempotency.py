@@ -28,7 +28,14 @@ def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
     # mesmo que a primeira resposta genuinamente tenha sido um evento raro
     # (aqui, streak_just_extended=True no primeiro play do dia).
     second = client.post(f"/challenges/{challenge['challenge_id']}/answer", json=payload, headers=headers).json()
-    celebration_fields = {"level_up", "territory_just_conquered", "streak_just_extended", "newly_awarded_badges"}
+    celebration_fields = {
+        "level_up",
+        "territory_just_conquered",
+        "streak_just_extended",
+        "newly_awarded_badges",
+        "territory_detentor_gained",
+        "dethroned_nickname",
+    }
     assert {k: v for k, v in second.items() if k not in celebration_fields} == {
         k: v for k, v in first.items() if k not in celebration_fields
     }
@@ -36,6 +43,7 @@ def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
     assert second["territory_just_conquered"] is False
     assert second["streak_just_extended"] is False
     assert second["newly_awarded_badges"] == []
+    assert second["territory_detentor_gained"] is False
 
     xp_after_second = client.get("/progress", headers=headers).json()["xp_total"]
     assert xp_after_second == xp_after_first, "XP não pode dobrar por reenvio do mesmo attempt_id"

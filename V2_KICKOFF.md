@@ -169,12 +169,25 @@ Grupo 2, só após os documentos dedicados da Seção 4:
     Rhoney no mesmo dia: botão "Compartilhar" em toda celebração
     (território/mundo/nível/badge/meta de passos) e botão "Indicar" na
     tela de Amigos, via `share_plus` (ZERO_COST, Intent nativo do SO).
-13. ⚔️ Disputa territorial — **ainda sem decisão de mecânica**, o mais
-    delicado dos três (evitar que "tomar território de outro jogador"
-    soe humilhante). Pendência registrada: Rhoney propôs XP acumulado
-    por território como critério de "detentor" (em vez de taxa de
-    acerto ou tempo) — **não confirmado ainda**, decidir junto quando
-    este item for atacado.
+13. ⚔️ Disputa territorial — **✅ fechado e validado por API real
+    (2026-08-22)**, aparelho físico temporariamente desconectado no
+    momento do fechamento — confirmação visual em tela pendente na
+    próxima sessão com o dispositivo. Spec completa em
+    `TERRITORY_DISPUTE.md`. Critério de "detentor" confirmado: XP
+    acumulado por território (`UserTerritoryProgress.xp_in_territory`,
+    já existente — nunca um dado novo, sempre derivado, nunca
+    armazenado, mesmo princípio de "mundo completo"). Duas decisões
+    fechadas nesta implementação: (1) escopo é só entre amigos
+    confirmados, NUNCA global — mesma razão do item 14, evita a
+    dinâmica de "perder território pra um estranho"; (2) assumir um
+    território não paga bônus de XP extra (seria "rico fica mais rico",
+    já que o próprio XP é o critério de disputa). Detentor anterior
+    recebe notificação com tom de convite, nunca de derrota ("Fulano
+    assumiu X. Bora reconquistar? 💪"). Validado via API real com dois
+    usuários reais e amigos confirmados: B ultrapassou o XP de A em
+    Palavras, `territory_detentor_gained`/`dethroned_nickname` corretos
+    dos dois lados, `GET /progress` simétrico (os dois veem o mesmo
+    detentor). 123/123 testes de backend e 29/29 de cliente passando.
 14. ⚔️ Batalha assíncrona — **✅ fechado e em produção (2026-08-22)**.
     Spec completa em `ASYNC_BATTLE.md`. Tabela `battles` nova; cada lado
     responde um desafio DIFERENTE do mesmo território/nível (nunca o
@@ -207,9 +220,9 @@ recompensa de XP por compartilhar uma conquista (POST
 não confirma se o compartilhamento via OS share sheet foi de fato
 concluído.
 
-Ordem de ataque combinada (atualizada 2026-08-22, após fechar os itens
-14 e 15): resta só o item 13 (Disputa territorial) pra fechar o Grupo 2
-inteiro.
+Grupo 2 fechado por completo em 2026-08-22 (itens 12, 13, 14, 15 todos
+✅). Falta só a confirmação visual em tela do item 13 quando o
+aparelho físico reconectar (validação por API real já feita).
 
 ## 7. Papel de cada parte
 

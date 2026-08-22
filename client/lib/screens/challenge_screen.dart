@@ -102,11 +102,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final timedOut = result['timed_out'] as bool? ?? false;
     final levelUp = result['level_up'] as bool? ?? false;
     final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
+    final territoryDetentorGained = result['territory_detentor_gained'] as bool? ?? false;
     final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
     final newlyAwardedBadges = (result['newly_awarded_badges'] as List?) ?? const [];
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
 
-    final isStrongEvent = levelUp || territoryJustConquered || worldJustCompleted || newlyAwardedBadges.isNotEmpty;
+    final isStrongEvent = levelUp || territoryJustConquered || territoryDetentorGained || worldJustCompleted || newlyAwardedBadges.isNotEmpty;
 
     if (isStrongEvent) {
       FeedbackService.instance.play(FeedbackSound.celebration);
@@ -576,6 +577,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final levelUp = result['level_up'] as bool? ?? false;
     final newLevel = result['new_level'] as int?;
     final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
+    final territoryDetentorGained = result['territory_detentor_gained'] as bool? ?? false;
     final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
     final completedWorldName = result['completed_world_name'] as String?;
     final worldCompletionBonusXp = result['world_completion_bonus_xp'] as int? ?? 0;
@@ -667,6 +669,17 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     ),
                   ),
                   ShareAchievementButton(message: l10n.shareTerritoryConqueredMessage(widget.territoryLabel), client: widget.client),
+                ],
+                if (territoryDetentorGained) ...[
+                  const SizedBox(height: 16),
+                  PulseIn(
+                    intensity: 0.3,
+                    child: Text(
+                      l10n.territoryDetentorGainedMessage(widget.territoryLabel),
+                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  ShareAchievementButton(message: l10n.shareTerritoryDetentorMessage(widget.territoryLabel), client: widget.client),
                 ],
                 if (worldJustCompleted && completedWorldName != null) ...[
                   const SizedBox(height: 16),

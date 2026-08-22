@@ -612,7 +612,7 @@ def create_battle(
     challenger_profile = db.get(models.Profile, challenger_user_id)
     opponent_profile = db.get(models.Profile, opponent_user_id)
     if opponent_profile and opponent_profile.notif_social_enabled and opponent_profile.push_token:
-        territory_label = notification_copy.BATTLE_TERRITORY_NAMES.get(territory_id, territory_id)
+        territory_label = notification_copy.TERRITORY_NAMES.get(territory_id, territory_id)
         title = notification_copy.BATTLE_CHALLENGE_RECEIVED_TITLE
         body = notification_copy.BATTLE_CHALLENGE_RECEIVED_BODY_TEMPLATE.format(
             nickname=challenger_profile.nickname if challenger_profile else "Um amigo",
@@ -690,6 +690,47 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
         _notify_battle_result(challenger_profile, opponent_profile, winner_user_id)
 
     db.commit()
+
+
+def get_territory_detentor(db: Session, user_id: str, territory_id: str) -> "models.Profile | None":
+    """
+    V2 item 13 — Disputa territorial (TERRITORY_DISPUTE.md, aprovado
+    2026-08-22). "Detentor" é SEMPRE relativo a quem pergunta: quem tem
+    mais XP acumulado naquele território (UserTerritoryProgress.
+    xp_in_territory, já existente — nunca um dado novo) entre você e seus
+    amigos confirmados (item 12). Escopo deliberadamente restrito a
+    amigos, nunca global — mesma razão já aplicada à Batalha assíncrona
+    e ao ranking de amigos: evita a dinâmica de "perder território pra um
+    estranho", incompatível com o Princípio de Não-Humilhação num público
+    que inclui crianças. Sempre derivado, nunca armazenado — mesmo
+    princípio já usado em "mundo completo". Retorna None se ninguém no
+    grupo (incluindo você) tem XP nesse território ainda.
+    """
+    candidate_ids = [user_id] + get_friend_user_ids(db, user_id)
+    rows = db.execute(
+        select(models.UserTerritoryProgress)
+        .where(models.UserTerritoryProgress.territory_id == territory_id)
+        .where(models.UserTerritoryProgress.user_id.in_(candidate_ids))
+        .where(models.UserTerritoryProgress.xp_in_territory > 0)
+    ).scalars().all()
+    if not rows:
+        return None
+    # Empate exato: desempate determinístico por user_id, nunca
+    # aleatório — evita notificação de "assumiu" oscilando a cada
+    # resposta sem mudança real de liderança.
+    leader = max(rows, key=lambda r: (r.xp_in_territory, r.user_id))
+    return db.get(models.Profile, leader.user_id)
+
+
+def notify_territory_dethroned(db: Session, new_detentor_profile: "models.Profile", previous_detentor_profile: "models.Profile", territory_id: str) -> None:
+    if not (previous_detentor_profile.notif_social_enabled and previous_detentor_profile.push_token):
+        return
+    territory_label = notification_copy.TERRITORY_NAMES.get(territory_id, territory_id)
+    push.send_push_notification(
+        previous_detentor_profile.push_token,
+        notification_copy.TERRITORY_DETENTOR_LOST_TITLE,
+        notification_copy.TERRITORY_DETENTOR_LOST_BODY_TEMPLATE.format(nickname=new_detentor_profile.nickname, territory=territory_label),
+    )
 
 
 def _notify_battle_result(challenger_profile: "models.Profile", opponent_profile: "models.Profile", winner_user_id: str | None) -> None:

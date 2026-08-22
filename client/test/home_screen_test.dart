@@ -20,8 +20,24 @@ class _FakeApiClient extends ApiClient {
         'level': 2,
         'streak': {'current_streak': 3, 'freeze_available': true},
         'territories': [
-          {'territory_id': 'palavras', 'xp_in_territory': 200, 'unlocked': true, 'conquered': true, 'conquest_threshold': 200},
-          {'territory_id': 'textos', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
+          {
+            'territory_id': 'palavras',
+            'xp_in_territory': 200,
+            'unlocked': true,
+            'conquered': true,
+            'conquest_threshold': 200,
+            'detentor_nickname': 'Fulano',
+            'is_detentor': false,
+          },
+          {
+            'territory_id': 'textos',
+            'xp_in_territory': 0,
+            'unlocked': true,
+            'conquered': false,
+            'conquest_threshold': 200,
+            'detentor_nickname': 'Eu-Mesmo',
+            'is_detentor': true,
+          },
           {'territory_id': 'enigmas', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
           {'territory_id': 'numeros', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
           {'territory_id': 'logica', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
@@ -77,5 +93,26 @@ void main() {
     // Selo de completo (ícone) aparece uma vez, só no mundo com
     // completed=true — o backend decide isso, não a Home.
     expect(find.byIcon(Icons.check_circle), findsWidgets);
+  });
+
+  testWidgets('mostra o detentor do território entre amigos (V2 item 13)', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: HomeScreen(client: _FakeApiClient()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('Detentor: Fulano'), findsOneWidget);
+    expect(find.text('Você é o detentor'), findsOneWidget);
   });
 }

@@ -554,4 +554,22 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get battleAnswerButton => 'Responder';
+
+  @override
+  String territoryDetentorGainedMessage(String territory) {
+    return 'Você assumiu $territory entre seus amigos! 🏰';
+  }
+
+  @override
+  String territoryDetentorLabel(String nickname) {
+    return 'Detentor: $nickname';
+  }
+
+  @override
+  String get territoryDetentorIsMeLabel => 'Você é o detentor';
+
+  @override
+  String shareTerritoryDetentorMessage(String territory) {
+    return 'Assumi $territory entre meus amigos no MENTAL! 🏰';
+  }
 }

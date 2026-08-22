@@ -53,10 +53,23 @@ BATTLE_RESULT_LOSS_BODY_TEMPLATE = "Batalha encerrada — {nickname} levou essa.
 BATTLE_RESULT_TIE_TITLE = "Batalha encerrada"
 BATTLE_RESULT_TIE_BODY_TEMPLATE = "Empate na batalha contra {nickname} — os dois erraram dessa vez. Bora tentar outra? 💪"
 
-# Só usado nesta notificação — os territórios ainda não têm uma tabela
-# de nomes server-side (o client resolve isso via l10n). 7 territórios
-# fixos, mesmo texto exibido no client (client/lib/territories.dart).
-BATTLE_TERRITORY_NAMES = {
+# V2 item 13 — Disputa territorial (TERRITORY_DISPUTE.md, aprovado
+# 2026-08-22). Escopo só entre amigos confirmados (mesma razão do item
+# 14) — nome aparece normalmente mesmo em child_safe_mode, mesmo
+# raciocínio já aplicado à Batalha assíncrona. Quem foi ultrapassado
+# nunca lê "você perdeu" — tom de convite pra reconquistar, igual ao
+# resultado de batalha perdida.
+TERRITORY_DETENTOR_GAINED_TITLE = "Você assumiu um território! 🏰"
+TERRITORY_DETENTOR_GAINED_BODY_TEMPLATE = "Você assumiu {territory} entre seus amigos! 🏰"
+
+TERRITORY_DETENTOR_LOST_TITLE = "Seu território mudou de mãos"
+TERRITORY_DETENTOR_LOST_BODY_TEMPLATE = "{nickname} assumiu {territory}. Bora reconquistar? 💪"
+
+# Usado nas notificações de batalha e de disputa territorial — os
+# territórios ainda não têm uma tabela de nomes server-side (o client
+# resolve isso via l10n). 7 territórios fixos, mesmo texto exibido no
+# client (client/lib/territories.dart).
+TERRITORY_NAMES = {
     "palavras": "Palavras",
     "numeros": "Números",
     "logica": "Lógica",

@@ -260,6 +260,11 @@ def submit_answer(
     # exata, nunca celebrar de novo num mundo já fechado.
     world_id = db.get(models.Territory, challenge.territory_id).world_id
     was_world_completed_before = services.is_world_completed(db, user_id, world_id) if world_id else False
+    # V2 item 13 — Disputa territorial: captura o detentor ANTES de
+    # aplicar o XP desta resposta, pra detectar a transição exata de
+    # "acabei de assumir" (mesmo raciocínio de was_conquered_before/
+    # was_world_completed_before acima).
+    detentor_before = services.get_territory_detentor(db, user_id, challenge.territory_id)
     if is_correct and xp_final > 0:
         existing_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
         was_conquered_before = bool(existing_progress and existing_progress.conquered_at)
@@ -269,6 +274,15 @@ def submit_answer(
         territory_progress = services.apply_xp_to_territory(db, user_id, challenge.territory_id, xp_final)
     else:
         territory_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
+
+    territory_detentor_gained = False
+    dethroned_nickname = None
+    detentor_after = services.get_territory_detentor(db, user_id, challenge.territory_id)
+    if detentor_after and detentor_after.user_id == user_id and (detentor_before is None or detentor_before.user_id != user_id):
+        territory_detentor_gained = True
+        if detentor_before is not None:
+            dethroned_nickname = detentor_before.nickname
+            services.notify_territory_dethroned(db, profile, detentor_before, challenge.territory_id)
 
     territory_just_conquered = bool(territory_progress and territory_progress.conquered_at and not was_conquered_before)
     world_just_completed = False
@@ -334,4 +348,6 @@ def submit_answer(
         world_completion_bonus_xp=world_completion_bonus_xp,
         timed_out=body.timed_out,
         speed_bonus_xp=speed_bonus_xp,
+        territory_detentor_gained=territory_detentor_gained,
+        dethroned_nickname=dethroned_nickname,
     )

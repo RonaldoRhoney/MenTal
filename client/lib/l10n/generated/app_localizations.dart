@@ -993,6 +993,30 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Responder'**
   String get battleAnswerButton;
+
+  /// Celebration message when the user becomes the territory detentor among friends
+  ///
+  /// In pt, this message translates to:
+  /// **'Você assumiu {territory} entre seus amigos! 🏰'**
+  String territoryDetentorGainedMessage(String territory);
+
+  /// Caption under a territory button showing the current detentor among friends
+  ///
+  /// In pt, this message translates to:
+  /// **'Detentor: {nickname}'**
+  String territoryDetentorLabel(String nickname);
+
+  /// Caption under a territory button when the current user is the detentor
+  ///
+  /// In pt, this message translates to:
+  /// **'Você é o detentor'**
+  String get territoryDetentorIsMeLabel;
+
+  /// Share text for territory detentor achievement
+  ///
+  /// In pt, this message translates to:
+  /// **'Assumi {territory} entre meus amigos no MENTAL! 🏰'**
+  String shareTerritoryDetentorMessage(String territory);
 }
 
 class _AppLocalizationsDelegate
