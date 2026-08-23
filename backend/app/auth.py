@@ -29,7 +29,14 @@ def _get_jwks_client() -> jwt.PyJWKClient:
     global _jwks_client
     if _jwks_client is None:
         jwks_url = f"{config.SUPABASE_URL}/auth/v1/.well-known/jwks.json"
-        _jwks_client = jwt.PyJWKClient(jwks_url, cache_keys=True)
+        # timeout explícito — Achado real (2026-08-22, teste informal): o
+        # padrão da lib é 30s, e get_signing_key() tenta de novo (outro
+        # fetch) se o kid não bater na primeira vez, dobrando o pior caso
+        # pra ~60s numa falha de rede de saída do provedor. O endpoint em
+        # si responde em <1s quando alcançável (testado direto), então
+        # 8s já é folga generosa — trava a requisição bem menos tempo
+        # numa falha real, sem risco de cortar uma resposta legítima.
+        _jwks_client = jwt.PyJWKClient(jwks_url, cache_keys=True, timeout=8)
     return _jwks_client
 
 

@@ -32,26 +32,30 @@ class ApiClient {
   Uri _uri(String path, [Map<String, String>? query]) =>
       Uri.parse('$baseUrl$path').replace(queryParameters: query);
 
-  // Todo request passa por aqui — Achado real (2026-08-22, teste
-  // informal): sem timeout, uma falha de rede (backend do Render
-  // "dormindo", cold start, conexão perdida) nunca lança ApiException,
-  // então as telas (que só capturam `on ApiException catch`) ficam com
-  // o spinner girando pra sempre, sem erro nenhum. Centralizar aqui
-  // garante que toda tela que já trata ApiException passa a tratar
-  // timeout/erro de rede automaticamente, sem precisar tocar em cada
-  // uma delas.
-  Future<http.Response> _get(Uri uri, {Map<String, String>? headers}) =>
+  // Todo request passa por aqui — Achados reais (2026-08-22, teste
+  // informal): (1) sem timeout, uma falha de rede (backend do Render
+  // "dormindo", cold start, conexão perdida) nunca lançava ApiException,
+  // deixando o spinner girando pra sempre; (2) mesmo com timeout, um
+  // proxy/erro do provedor pode devolver uma resposta HTTP "bem-sucedida"
+  // com corpo não-JSON (página HTML de erro) durante o cold start —
+  // `jsonDecode` lançava `FormatException`, que também escapava do único
+  // catch que as telas têm (`on ApiException catch`), resetando a tela
+  // pros botões iniciais sem nenhum erro visível. Por isso o decode
+  // acontece AQUI DENTRO do mesmo try/catch, não depois — toda falha do
+  // pipeline completo (rede, timeout, decode) vira ApiException.
+  Future<Map<String, dynamic>> _get(Uri uri, {Map<String, String>? headers}) =>
       _wrap(() => _client.get(uri, headers: headers));
 
-  Future<http.Response> _post(Uri uri, {Map<String, String>? headers, Object? body}) =>
+  Future<Map<String, dynamic>> _post(Uri uri, {Map<String, String>? headers, Object? body}) =>
       _wrap(() => _client.post(uri, headers: headers, body: body));
 
-  Future<http.Response> _put(Uri uri, {Map<String, String>? headers, Object? body}) =>
+  Future<Map<String, dynamic>> _put(Uri uri, {Map<String, String>? headers, Object? body}) =>
       _wrap(() => _client.put(uri, headers: headers, body: body));
 
-  Future<http.Response> _wrap(Future<http.Response> Function() request) async {
+  Future<Map<String, dynamic>> _wrap(Future<http.Response> Function() request) async {
     try {
-      return await request().timeout(_timeout);
+      final resp = await request().timeout(_timeout);
+      return _decode(resp);
     } on TimeoutException {
       throw ApiException(
         statusCode: 0,
@@ -70,29 +74,26 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> ageGate(String ageMode) async {
-    final resp = await _post(
+    return _post(
       _uri('/age-gate'),
       headers: _headers,
       body: jsonEncode({'age_mode': ageMode}),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
-    final resp = await _get(
+    return _get(
       _uri('/challenges/next', {'territory_id': territoryId, 'mode': mode}),
       headers: _headers,
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> requestHint(String challengeId, String attemptId) async {
-    final resp = await _post(
+    return _post(
       _uri('/challenges/$challengeId/hint'),
       headers: _headers,
       body: jsonEncode({'attempt_id': attemptId}),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> submitAnswer(
@@ -102,7 +103,7 @@ class ApiClient {
     int? responseTimeMs,
     bool timedOut = false,
   }) async {
-    final resp = await _post(
+    return _post(
       _uri('/challenges/$challengeId/answer'),
       headers: _headers,
       body: jsonEncode({
@@ -112,44 +113,37 @@ class ApiClient {
         'timed_out': timedOut,
       }),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> progress() async {
-    final resp = await _get(_uri('/progress'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/progress'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> ranking({String scope = 'global', String window = 'weekly'}) async {
-    final resp = await _get(
+    return _get(
       _uri('/ranking', {'scope': scope, 'window': window}),
       headers: _headers,
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> getInviteCode() async {
-    final resp = await _get(_uri('/social/invite-code'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/social/invite-code'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> addFriend(String inviteCode) async {
-    final resp = await _post(
+    return _post(
       _uri('/social/friends'),
       headers: _headers,
       body: jsonEncode({'invite_code': inviteCode}),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> getFriends() async {
-    final resp = await _get(_uri('/social/friends'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/social/friends'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> rewardShare() async {
-    final resp = await _post(_uri('/social/share-reward'), headers: _headers);
-    return _decode(resp);
+    return _post(_uri('/social/share-reward'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> createBattle({
@@ -157,7 +151,7 @@ class ApiClient {
     required String territoryId,
     required int difficultyLevel,
   }) async {
-    final resp = await _post(
+    return _post(
       _uri('/battles'),
       headers: _headers,
       body: jsonEncode({
@@ -166,22 +160,18 @@ class ApiClient {
         'difficulty_level': difficultyLevel,
       }),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> getMyBattleChallenge(String battleId) async {
-    final resp = await _get(_uri('/battles/$battleId/my-challenge'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/battles/$battleId/my-challenge'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> listBattles() async {
-    final resp = await _get(_uri('/battles'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/battles'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> getProfile() async {
-    final resp = await _get(_uri('/profile'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/profile'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> updateProfile({
@@ -191,7 +181,7 @@ class ApiClient {
     String? locationCountry,
     required bool locationPublic,
   }) async {
-    final resp = await _put(
+    return _put(
       _uri('/profile'),
       headers: _headers,
       body: jsonEncode({
@@ -202,76 +192,65 @@ class ApiClient {
         'location_public': locationPublic,
       }),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> badges() async {
-    final resp = await _get(_uri('/badges'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/badges'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> stats() async {
-    final resp = await _get(_uri('/stats'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/stats'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> registerPushToken(String pushToken) async {
-    final resp = await _post(
+    return _post(
       _uri('/notifications/register-token'),
       headers: _headers,
       body: jsonEncode({'push_token': pushToken}),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> getNotificationPreferences() async {
-    final resp = await _get(_uri('/notifications/preferences'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/notifications/preferences'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> updateNotificationPreferences({
     required bool reengagementEnabled,
     required bool socialEnabled,
   }) async {
-    final resp = await _put(
+    return _put(
       _uri('/notifications/preferences'),
       headers: _headers,
       body: jsonEncode({'reengagement_enabled': reengagementEnabled, 'social_enabled': socialEnabled}),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> enableMovement() async {
-    final resp = await _post(_uri('/movement/enable'), headers: _headers);
-    return _decode(resp);
+    return _post(_uri('/movement/enable'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> disableMovement() async {
-    final resp = await _post(_uri('/movement/disable'), headers: _headers);
-    return _decode(resp);
+    return _post(_uri('/movement/disable'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> movementStatus() async {
-    final resp = await _get(_uri('/movement/status'), headers: _headers);
-    return _decode(resp);
+    return _get(_uri('/movement/status'), headers: _headers);
   }
 
   Future<Map<String, dynamic>> setMovementGoal(int? dailyGoalSteps) async {
-    final resp = await _put(
+    return _put(
       _uri('/movement/goal'),
       headers: _headers,
       body: jsonEncode({'daily_goal_steps': dailyGoalSteps}),
     );
-    return _decode(resp);
   }
 
   Future<Map<String, dynamic>> collectMovementSteps({required int steps, String? cycleId}) async {
-    final resp = await _post(
+    return _post(
       _uri('/movement/collect'),
       headers: _headers,
       body: jsonEncode({'steps': steps, 'cycle_id': cycleId}),
     );
-    return _decode(resp);
   }
 
   Map<String, dynamic> _decode(http.Response resp) {

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 
 import 'package:mental/api/api_client.dart';
@@ -43,4 +44,23 @@ void main() {
       throwsA(isA<ApiException>().having((e) => e.code, 'code', 'TIMEOUT')),
     );
   });
+
+  test(
+    'resposta HTTP 200 com corpo não-JSON (proxy/erro do provedor) vira ApiException, não FormatException crua',
+    () async {
+      // Achado real: durante cold start do Render, o proxy às vezes
+      // devolve uma página de erro HTML mesmo em respostas que o cliente
+      // HTTP considera "completas" — jsonDecode lançava FormatException,
+      // que não é ApiException e escapava sem tratamento nas telas.
+      final mockClient = MockClient((request) async {
+        return http.Response('<html><body>502 Bad Gateway</body></html>', 200);
+      });
+      final client = ApiClient(baseUrl: 'https://example.com', accessToken: 'fake-token', httpClient: mockClient);
+
+      await expectLater(
+        client.ageGate('adult'),
+        throwsA(isA<ApiException>().having((e) => e.code, 'code', 'NETWORK_ERROR')),
+      );
+    },
+  );
 }
