@@ -8,6 +8,10 @@ from ..auth import get_current_user_id
 from ..db import get_db
 from ..timeutil import utcnow
 
+import logging
+
+_debug_logger = logging.getLogger("mental.debug_xp")
+
 router = APIRouter()
 
 
@@ -211,6 +215,10 @@ def submit_answer(
         raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})
 
     attempt = _get_or_create_pending_attempt(db, body.attempt_id, user_id, challenge_id)
+    _debug_logger.warning(
+        "XP_DEBUG request_start user_id=%s attempt_id=%s challenge_id=%s is_correct_already=%s",
+        user_id, body.attempt_id, challenge_id, attempt.is_correct,
+    )
 
     if attempt.is_correct is not None:
         # Idempotência: reenvio do mesmo attempt_id retorna o resultado já
@@ -299,9 +307,22 @@ def submit_answer(
     # was_world_completed_before acima).
     detentor_before = services.get_territory_detentor(db, user_id, challenge.territory_id)
     if is_correct and xp_final > 0:
+        _debug_logger.warning(
+            "XP_DEBUG before user_id=%s xp_before=%s xp_final=%s profile_obj_id=%s",
+            user_id, profile.xp_total, xp_final, id(profile),
+        )
         profile.xp_total += xp_final
         profile.level = scoring.level_from_xp(profile.xp_total)
         db.commit()
+        _debug_logger.warning(
+            "XP_DEBUG after_commit user_id=%s xp_after_commit=%s", user_id, profile.xp_total,
+        )
+        reread = db.get(models.Profile, user_id)
+        db.expire(reread)
+        reread = db.get(models.Profile, user_id)
+        _debug_logger.warning(
+            "XP_DEBUG reread_from_db user_id=%s xp_reread=%s", user_id, reread.xp_total,
+        )
         territory_progress = services.apply_xp_to_territory(db, user_id, challenge.territory_id, xp_final)
 
     territory_detentor_gained = False
