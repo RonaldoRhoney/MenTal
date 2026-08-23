@@ -92,7 +92,7 @@ def test_ranking_scope_friends_filters_to_friends_and_self(client):
 
     def _answer(headers):
         ch = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
-        correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == ch["prompt"] and c["options"] == ch["options"])
+        correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == ch["prompt"] and sorted(c["options"]) == sorted(ch["options"]))
         client.post(
             f"/challenges/{ch['challenge_id']}/answer",
             json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct},

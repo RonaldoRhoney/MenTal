@@ -16,7 +16,7 @@ def _answer_correctly(client, headers, territory_id):
     from app.seed import CHALLENGES
 
     challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
-    correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and c["options"] == challenge["options"])
+    correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and (challenge["options"] is None or sorted(c["options"] or []) == sorted(challenge["options"])))
     attempt_id = str(uuid.uuid4())
     return client.post(
         f"/challenges/{challenge['challenge_id']}/answer",

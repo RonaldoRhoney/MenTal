@@ -23,7 +23,7 @@ def _answer(client, headers, territory_id, use_hints=0):
     correct = next(
         c["correct_answer"]
         for c in CHALLENGES
-        if c["prompt"] == challenge["prompt"] and c["options"] == challenge["options"]
+        if c["prompt"] == challenge["prompt"] and sorted(c["options"]) == sorted(challenge["options"])
     )
     return client.post(
         f"/challenges/{challenge['challenge_id']}/answer",

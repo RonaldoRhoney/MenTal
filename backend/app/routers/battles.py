@@ -96,7 +96,7 @@ def get_my_battle_challenge(
         territory_id=challenge.territory_id,
         difficulty_level=challenge.difficulty_level,
         prompt=challenge.prompt,
-        options=challenge.options,
+        options=services.shuffled_options(challenge.options) if challenge.options else challenge.options,
         hints_available=hints_available,
         time_limit_seconds=None,
         prompt_image=challenge.prompt_image,

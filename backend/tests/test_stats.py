@@ -20,7 +20,7 @@ def _answer(client, headers, territory_id, correct=True, use_hint=False):
     if use_hint:
         client.post(f"/challenges/{challenge['challenge_id']}/hint", json={"attempt_id": attempt_id}, headers=headers)
     if correct:
-        answer = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and c["options"] == challenge["options"])
+        answer = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and sorted(c["options"]) == sorted(challenge["options"]))
     else:
         answer = "resposta-errada-de-propósito"
     return client.post(

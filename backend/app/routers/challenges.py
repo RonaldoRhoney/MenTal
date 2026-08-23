@@ -127,8 +127,11 @@ def next_challenge(
         # verdade (4 alternativas reais por pergunta) — nunca precisa
         # sintetizar nada, só reaproveitar o que já existe. Territórios
         # normais (timed=False) também já usam challenge.options como
-        # sempre usaram.
-        options = challenge.options
+        # sempre usaram. Embaralhado a cada chamada (achado real,
+        # 2026-08-23): sem isso, a posição da resposta certa era sempre
+        # a mesma no conteúdo curado, dando pra decorar a posição em vez
+        # de saber a resposta.
+        options = services.shuffled_options(challenge.options) if challenge.options else challenge.options
     time_limit_seconds = config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS.get(challenge.difficulty_level) if timed else None
 
     return schemas.ChallengeOut(

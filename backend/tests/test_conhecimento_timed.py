@@ -40,6 +40,9 @@ def test_conhecimento_easy_level_is_also_timed_unlike_palavras_relampago(client)
 
 
 def test_conhecimento_options_are_the_real_curated_ones_not_synthesized(client):
+    """As opções são as curadas de verdade (mesmo conjunto) — a ORDEM não
+    precisa bater: é embaralhada a cada chamada (ver teste de shuffle
+    abaixo), então comparar como conjunto é o correto aqui."""
     from app.seed import CHALLENGES
 
     user = str(uuid.uuid4())
@@ -51,7 +54,24 @@ def test_conhecimento_options_are_the_real_curated_ones_not_synthesized(client):
         c for c in CHALLENGES
         if c["territory_id"] == "conhecimento" and c["prompt"] == body["prompt"]
     )
-    assert body["options"] == matching["options"]
+    assert sorted(body["options"]) == sorted(matching["options"])
+
+
+def test_shuffled_options_produces_different_orders_and_never_mutates_input():
+    """Achado real (2026-08-23, teste informal): opções curadas vinham
+    sempre na mesma ordem do conteúdo — dava pra decorar a posição da
+    resposta certa em vez de saber o conteúdo. Testa a função pura
+    diretamente (determinístico) em vez de depender do sorteio aleatório
+    de desafio via HTTP."""
+    from app import services
+
+    original = ["Frio", "Morno", "Ardente", "Quieto"]
+    orders_seen = {tuple(services.shuffled_options(original)) for _ in range(30)}
+
+    assert len(orders_seen) > 1, "esperava ver mais de uma ordem em 30 chamadas (shuffle ausente?)"
+    assert original == ["Frio", "Morno", "Ardente", "Quieto"], "shuffled_options não deve mutar a lista original"
+    for order in orders_seen:
+        assert sorted(order) == sorted(original)
 
 
 def test_conhecimento_speed_bonus_applies_like_palavras(client):

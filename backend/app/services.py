@@ -502,6 +502,23 @@ def generate_relampago_options(db: Session, challenge: models.Challenge) -> list
     return options
 
 
+def shuffled_options(options: list[str]) -> list[str]:
+    """Embaralha uma cópia das opções curadas antes de servir ao cliente.
+
+    Achado real (2026-08-23, teste informal): challenge.options vem do
+    conteúdo curado sempre na mesma ordem de cadastro — um usuário que
+    responde o mesmo desafio mais de uma vez (ou decora a posição)
+    acerta sabendo "a posição 1 é sempre a certa", não o conteúdo.
+    Comparação de resposta é por texto (submitted_answer == correct_
+    answer, ver routers/challenges.py), nunca por índice — reordenar é
+    seguro. Retorna cópia nova pra nunca mutar a lista rastreada pelo
+    ORM (challenge.options).
+    """
+    shuffled = list(options)
+    random.shuffle(shuffled)
+    return shuffled
+
+
 def compute_speed_bonus_xp(xp_base: int, response_time_ms: int, time_limit_seconds: int) -> int:
     """
     Bônus decrescente conforme o tempo consumido (PALAVRAS_RELAMPAGO.md

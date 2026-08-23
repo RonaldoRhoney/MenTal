@@ -146,7 +146,7 @@ def test_social_overtake_fires_with_nickname_for_adult(client, monkeypatch):
 
     def _answer(headers):
         ch = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
-        correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == ch["prompt"] and c["options"] == ch["options"])
+        correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == ch["prompt"] and sorted(c["options"]) == sorted(ch["options"]))
         client.post(
             f"/challenges/{ch['challenge_id']}/answer",
             json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct},
@@ -198,7 +198,7 @@ def test_social_overtake_is_anonymized_for_child_safe_mode(client, monkeypatch):
 
     def _answer(headers):
         ch = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
-        correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == ch["prompt"] and c["options"] == ch["options"])
+        correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == ch["prompt"] and sorted(c["options"]) == sorted(ch["options"]))
         client.post(
             f"/challenges/{ch['challenge_id']}/answer",
             json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct},

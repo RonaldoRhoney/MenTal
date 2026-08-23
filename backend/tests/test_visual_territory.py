@@ -75,7 +75,7 @@ def test_visual_full_answer_and_hint_flow(client):
     client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
 
     challenge = client.get("/challenges/next", params={"territory_id": "visual"}, headers=headers).json()
-    correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and c["options"] == challenge["options"])
+    correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and sorted(c["options"]) == sorted(challenge["options"]))
     attempt_id = str(uuid.uuid4())
 
     hint_resp = client.post(
