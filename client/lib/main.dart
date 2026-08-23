@@ -86,6 +86,7 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   bool _ageGateDone = false;
   bool _splashDone = false;
   late final Stream<AuthState> _authStateStream;
+  String? _lastAccessToken;
 
   @override
   void initState() {
@@ -94,12 +95,24 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     _updateClientFromSession(Supabase.instance.client.auth.currentSession);
   }
 
-  // Reconstrói o ApiClient sempre que a sessão muda — login, logout, e
-  // também AuthChangeEvent.tokenRefreshed (o SDK renova o JWT sozinho
-  // antes de expirar; sem isso o client ficaria preso ao token antigo
-  // numa sessão longa).
+  // Reconstrói o ApiClient quando a sessão muda de verdade — login,
+  // logout, e também AuthChangeEvent.tokenRefreshed (o SDK renova o JWT
+  // sozinho antes de expirar; sem isso o client ficaria preso ao token
+  // antigo numa sessão longa).
+  //
+  // Achado real em teste informal (2026-08-23): o StreamBuilder chama
+  // este método a cada evento do onAuthStateChange, e alguns desses
+  // eventos repetem o MESMO accessToken (não é sempre um token novo).
+  // Sem a checagem abaixo, cada repetição registrava o push de novo
+  // (PushService.initializeAndRegister, que também reassina
+  // onTokenRefresh.listen sem cancelar o anterior) — visto em produção
+  // como um loop de POST /notifications/register-token quase 1x/segundo,
+  // saturando o pool de conexões do banco e travando outras requisições
+  // (ex.: /challenges/next) por falta de conexão livre.
   void _updateClientFromSession(Session? session) {
     final accessToken = session?.accessToken;
+    if (accessToken == _lastAccessToken) return;
+    _lastAccessToken = accessToken;
     setState(() {
       _client = accessToken == null ? null : ApiClient(baseUrl: kApiBaseUrl, accessToken: accessToken);
       if (accessToken == null) _ageGateDone = false;

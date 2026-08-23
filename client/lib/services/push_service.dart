@@ -18,10 +18,18 @@ class PushService {
   PushService._();
   static final PushService instance = PushService._();
 
+  bool _tokenRefreshListenerAttached = false;
+
   /// Pede permissão, obtém o token do FCM e registra no backend. Também
   /// escuta `onTokenRefresh` (o token pode mudar depois da instalação,
   /// ex.: restauração de backup) para manter o backend sempre com o
   /// token válido mais recente.
+  ///
+  /// Idempotente por design: se o chamador invocar isso mais de uma vez
+  /// na mesma sessão do app (ex.: main.dart reagindo a outro evento de
+  /// auth), não deve empilhar um novo listener de onTokenRefresh a cada
+  /// chamada — visto em produção causando um loop de registro de token
+  /// quase 1x/segundo, saturando conexões do backend.
   Future<void> initializeAndRegister(ApiClient client) async {
     try {
       final messaging = FirebaseMessaging.instance;
@@ -35,14 +43,17 @@ class PushService {
         await client.registerPushToken(token);
       }
 
-      messaging.onTokenRefresh.listen((newToken) async {
-        try {
-          await client.registerPushToken(newToken);
-        } catch (_) {
-          // Falha ao reenviar token não pode derrubar o app — a próxima
-          // abertura tenta de novo.
-        }
-      });
+      if (!_tokenRefreshListenerAttached) {
+        _tokenRefreshListenerAttached = true;
+        messaging.onTokenRefresh.listen((newToken) async {
+          try {
+            await client.registerPushToken(newToken);
+          } catch (_) {
+            // Falha ao reenviar token não pode derrubar o app — a próxima
+            // abertura tenta de novo.
+          }
+        });
+      }
     } catch (_) {
       // Firebase pode não estar configurado em todo ambiente (ex.: build
       // de desenvolvimento sem google-services.json) — notificações são
