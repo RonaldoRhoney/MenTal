@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -10,10 +11,18 @@ import 'package:http/http.dart' as http;
 /// DEV_INSECURE (user_id em texto puro), que só o backend local sem
 /// SUPABASE_URL configurado ainda aceita, pra desenvolvimento.
 class ApiClient {
-  ApiClient({required this.baseUrl, required this.accessToken});
+  ApiClient({
+    required this.baseUrl,
+    required this.accessToken,
+    http.Client? httpClient,
+    Duration timeout = const Duration(seconds: 30),
+  })  : _client = httpClient ?? http.Client(),
+        _timeout = timeout;
 
   final String baseUrl;
   final String accessToken;
+  final http.Client _client;
+  final Duration _timeout;
 
   Map<String, String> get _headers => {
         'Authorization': 'Bearer $accessToken',
@@ -23,8 +32,45 @@ class ApiClient {
   Uri _uri(String path, [Map<String, String>? query]) =>
       Uri.parse('$baseUrl$path').replace(queryParameters: query);
 
+  // Todo request passa por aqui — Achado real (2026-08-22, teste
+  // informal): sem timeout, uma falha de rede (backend do Render
+  // "dormindo", cold start, conexão perdida) nunca lança ApiException,
+  // então as telas (que só capturam `on ApiException catch`) ficam com
+  // o spinner girando pra sempre, sem erro nenhum. Centralizar aqui
+  // garante que toda tela que já trata ApiException passa a tratar
+  // timeout/erro de rede automaticamente, sem precisar tocar em cada
+  // uma delas.
+  Future<http.Response> _get(Uri uri, {Map<String, String>? headers}) =>
+      _wrap(() => _client.get(uri, headers: headers));
+
+  Future<http.Response> _post(Uri uri, {Map<String, String>? headers, Object? body}) =>
+      _wrap(() => _client.post(uri, headers: headers, body: body));
+
+  Future<http.Response> _put(Uri uri, {Map<String, String>? headers, Object? body}) =>
+      _wrap(() => _client.put(uri, headers: headers, body: body));
+
+  Future<http.Response> _wrap(Future<http.Response> Function() request) async {
+    try {
+      return await request().timeout(_timeout);
+    } on TimeoutException {
+      throw ApiException(
+        statusCode: 0,
+        code: 'TIMEOUT',
+        message: 'O servidor demorou demais para responder. Tente novamente.',
+      );
+    } on ApiException {
+      rethrow;
+    } catch (_) {
+      throw ApiException(
+        statusCode: 0,
+        code: 'NETWORK_ERROR',
+        message: 'Sem conexão com o servidor. Tente novamente.',
+      );
+    }
+  }
+
   Future<Map<String, dynamic>> ageGate(String ageMode) async {
-    final resp = await http.post(
+    final resp = await _post(
       _uri('/age-gate'),
       headers: _headers,
       body: jsonEncode({'age_mode': ageMode}),
@@ -33,7 +79,7 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
-    final resp = await http.get(
+    final resp = await _get(
       _uri('/challenges/next', {'territory_id': territoryId, 'mode': mode}),
       headers: _headers,
     );
@@ -41,7 +87,7 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> requestHint(String challengeId, String attemptId) async {
-    final resp = await http.post(
+    final resp = await _post(
       _uri('/challenges/$challengeId/hint'),
       headers: _headers,
       body: jsonEncode({'attempt_id': attemptId}),
@@ -56,7 +102,7 @@ class ApiClient {
     int? responseTimeMs,
     bool timedOut = false,
   }) async {
-    final resp = await http.post(
+    final resp = await _post(
       _uri('/challenges/$challengeId/answer'),
       headers: _headers,
       body: jsonEncode({
@@ -70,12 +116,12 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> progress() async {
-    final resp = await http.get(_uri('/progress'), headers: _headers);
+    final resp = await _get(_uri('/progress'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> ranking({String scope = 'global', String window = 'weekly'}) async {
-    final resp = await http.get(
+    final resp = await _get(
       _uri('/ranking', {'scope': scope, 'window': window}),
       headers: _headers,
     );
@@ -83,12 +129,12 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> getInviteCode() async {
-    final resp = await http.get(_uri('/social/invite-code'), headers: _headers);
+    final resp = await _get(_uri('/social/invite-code'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> addFriend(String inviteCode) async {
-    final resp = await http.post(
+    final resp = await _post(
       _uri('/social/friends'),
       headers: _headers,
       body: jsonEncode({'invite_code': inviteCode}),
@@ -97,12 +143,12 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> getFriends() async {
-    final resp = await http.get(_uri('/social/friends'), headers: _headers);
+    final resp = await _get(_uri('/social/friends'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> rewardShare() async {
-    final resp = await http.post(_uri('/social/share-reward'), headers: _headers);
+    final resp = await _post(_uri('/social/share-reward'), headers: _headers);
     return _decode(resp);
   }
 
@@ -111,7 +157,7 @@ class ApiClient {
     required String territoryId,
     required int difficultyLevel,
   }) async {
-    final resp = await http.post(
+    final resp = await _post(
       _uri('/battles'),
       headers: _headers,
       body: jsonEncode({
@@ -124,17 +170,17 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> getMyBattleChallenge(String battleId) async {
-    final resp = await http.get(_uri('/battles/$battleId/my-challenge'), headers: _headers);
+    final resp = await _get(_uri('/battles/$battleId/my-challenge'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> listBattles() async {
-    final resp = await http.get(_uri('/battles'), headers: _headers);
+    final resp = await _get(_uri('/battles'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> getProfile() async {
-    final resp = await http.get(_uri('/profile'), headers: _headers);
+    final resp = await _get(_uri('/profile'), headers: _headers);
     return _decode(resp);
   }
 
@@ -145,7 +191,7 @@ class ApiClient {
     String? locationCountry,
     required bool locationPublic,
   }) async {
-    final resp = await http.put(
+    final resp = await _put(
       _uri('/profile'),
       headers: _headers,
       body: jsonEncode({
@@ -160,17 +206,17 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> badges() async {
-    final resp = await http.get(_uri('/badges'), headers: _headers);
+    final resp = await _get(_uri('/badges'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> stats() async {
-    final resp = await http.get(_uri('/stats'), headers: _headers);
+    final resp = await _get(_uri('/stats'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> registerPushToken(String pushToken) async {
-    final resp = await http.post(
+    final resp = await _post(
       _uri('/notifications/register-token'),
       headers: _headers,
       body: jsonEncode({'push_token': pushToken}),
@@ -179,7 +225,7 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> getNotificationPreferences() async {
-    final resp = await http.get(_uri('/notifications/preferences'), headers: _headers);
+    final resp = await _get(_uri('/notifications/preferences'), headers: _headers);
     return _decode(resp);
   }
 
@@ -187,7 +233,7 @@ class ApiClient {
     required bool reengagementEnabled,
     required bool socialEnabled,
   }) async {
-    final resp = await http.put(
+    final resp = await _put(
       _uri('/notifications/preferences'),
       headers: _headers,
       body: jsonEncode({'reengagement_enabled': reengagementEnabled, 'social_enabled': socialEnabled}),
@@ -196,22 +242,22 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> enableMovement() async {
-    final resp = await http.post(_uri('/movement/enable'), headers: _headers);
+    final resp = await _post(_uri('/movement/enable'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> disableMovement() async {
-    final resp = await http.post(_uri('/movement/disable'), headers: _headers);
+    final resp = await _post(_uri('/movement/disable'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> movementStatus() async {
-    final resp = await http.get(_uri('/movement/status'), headers: _headers);
+    final resp = await _get(_uri('/movement/status'), headers: _headers);
     return _decode(resp);
   }
 
   Future<Map<String, dynamic>> setMovementGoal(int? dailyGoalSteps) async {
-    final resp = await http.put(
+    final resp = await _put(
       _uri('/movement/goal'),
       headers: _headers,
       body: jsonEncode({'daily_goal_steps': dailyGoalSteps}),
@@ -220,7 +266,7 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> collectMovementSteps({required int steps, String? cycleId}) async {
-    final resp = await http.post(
+    final resp = await _post(
       _uri('/movement/collect'),
       headers: _headers,
       body: jsonEncode({'steps': steps, 'cycle_id': cycleId}),
