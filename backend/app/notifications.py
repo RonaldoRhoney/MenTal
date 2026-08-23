@@ -14,7 +14,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from . import config, models, movement, notification_copy, push
-from .timeutil import utcnow
+from .timeutil import naive, utcnow
 
 
 def _check_reengagement(db: Session, now: datetime) -> int:
@@ -37,7 +37,7 @@ def _check_reengagement(db: Session, now: datetime) -> int:
     )
 
     for profile in profiles:
-        inactivity = now - profile.last_seen_at
+        inactivity = now - naive(profile.last_seen_at)
         if inactivity >= timedelta(hours=48):
             target_window = "48h"
         elif inactivity >= timedelta(hours=24):

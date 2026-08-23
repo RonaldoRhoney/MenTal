@@ -17,3 +17,21 @@ from datetime import datetime, timezone
 
 def utcnow() -> datetime:
     return datetime.now(timezone.utc).replace(tzinfo=None)
+
+
+def naive(dt: datetime | None) -> datetime | None:
+    """Remove o tzinfo de um datetime, se houver.
+
+    Achado real em produção (2026-08-23, primeira vez que o backend
+    conseguiu falar de verdade com o Postgres — antes disso a conexão
+    nunca funcionava): colunas `timestamptz` (ex.: movement_cycle_
+    anchor_at, last_seen_at, parental_gate_passed_at, challenger_served_
+    at) voltam do driver psycopg3 como datetime AWARE, enquanto utcnow()
+    aqui é deliberadamente naive (ver docstring do módulo). Subtrair um
+    aware de um naive lança `TypeError: can't subtract offset-naive and
+    offset-aware datetimes` — nunca apareceu em teste local (SQLite não
+    tem esse conceito) nem em produção antes (a conexão em si já falhava
+    por outro motivo). Usar em qualquer subtração/comparação entre
+    utcnow() e um datetime vindo do banco.
+    """
+    return dt.replace(tzinfo=None) if dt is not None and dt.tzinfo is not None else dt

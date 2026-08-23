@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from .. import config, models, schemas, services
 from ..auth import get_current_user_id
 from ..db import get_db
-from ..timeutil import utcnow
+from ..timeutil import naive, utcnow
 
 router = APIRouter()
 
@@ -54,7 +54,7 @@ def validate_receipt(
     # nunca em qualquer momento no passado — sem isso, um adulto que
     # validou o gate uma vez deixaria a conta "destravada para compra"
     # indefinidamente para qualquer pessoa com acesso ao celular logado.
-    age = utcnow() - passed_at
+    age = utcnow() - naive(passed_at)
     if age > timedelta(minutes=config.PARENTAL_GATE_VALIDITY_MINUTES):
         raise HTTPException(
             status_code=403,

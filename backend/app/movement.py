@@ -18,7 +18,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from . import config, models, scoring, services
-from .timeutil import utcnow
+from .timeutil import naive, utcnow
 
 
 class MovementError(Exception):
@@ -95,6 +95,7 @@ def set_daily_goal(db: Session, user_id: str, daily_goal_steps: int | None) -> m
 
 
 def _cycle_window_for(anchor: datetime, now: datetime) -> tuple[datetime, datetime]:
+    anchor = naive(anchor)
     cycle_len = timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
     elapsed = now - anchor
     cycles_elapsed = max(0, int(elapsed // cycle_len))
@@ -140,7 +141,7 @@ def get_pending_report_cycle(
         return None
     current_start, _ = _cycle_window_for(profile.movement_cycle_anchor_at, now)
     previous_start = current_start - timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
-    if previous_start < profile.movement_cycle_anchor_at:
+    if previous_start < naive(profile.movement_cycle_anchor_at):
         return None
     previous_end = previous_start + timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
     grace_deadline = previous_end + timedelta(hours=config.MOVEMENT_COLLECTION_GRACE_HOURS)
@@ -175,7 +176,7 @@ def collect_steps(
         cycle = db.get(models.MovementCycle, cycle_id)
         if cycle is None or cycle.user_id != user_id:
             raise MovementError("CYCLE_NOT_FOUND", "Ciclo de movimento não encontrado.")
-        grace_deadline = cycle.cycle_end_at + timedelta(hours=config.MOVEMENT_COLLECTION_GRACE_HOURS)
+        grace_deadline = naive(cycle.cycle_end_at) + timedelta(hours=config.MOVEMENT_COLLECTION_GRACE_HOURS)
         if now >= grace_deadline:
             raise MovementError("CYCLE_EXPIRED", "O prazo para coletar este ciclo já passou.")
 
