@@ -28,13 +28,25 @@ Nenhum campo opcional pode bloquear ou degradar o uso do app se não for preench
 
 | Campo | Formato recomendado | Justificativa |
 |---|---|---|
-| **Foto de perfil** | Avatares pré-definidos (ilustrados), **não upload de foto real** | Upload de foto real em app de público misto (criança + adulto) é risco de moderação e de identificação de menor — mesmo motivo que já levou à decisão de bloquear UGC de imagem no V3 (REGIONAL_UGC_CONCEPT_V3.md). Avatar resolve personalização sem abrir essa porta. |
+| **Foto de perfil** | Avatares pré-definidos (ilustrados) para todos; **upload de foto real permitido apenas para usuário confirmado como 18+** no campo obrigatório de idade | Ver seção 3.1 para regras completas (visibilidade condicional e moderação). |
 | **Nome real** | Campo interno, **nunca exibido publicamente** | Se existir, serve só para uso interno (ex.: contato/suporte) — nunca aparece em ranking, amigos, ou qualquer tela social. Nickname já cumpre o papel de identidade pública. Mesma lógica de proteção já usada no child_safe_mode. |
 | **Localização** | Só **estado/país** — nunca cidade exata | Cidade exata combinada com "criança usa este app" é dado sensível com risco regulatório real (mesmo cuidado já aplicado no MeuPet com GPS/IP/manual). Estado/país entrega valor social/cultural (inclusive conecta com a ideia futura de Regionalismo Brasileiro do V3) sem risco de localização fina de menor. |
 
 ---
 
-## 4. Regras de exibição pública
+### 3.1 Upload de foto real — regra especial (atualização)
+
+Diferente da decisão original (só avatar), foi aprovado permitir **upload de foto real de perfil**, sob três condições que precisam valer em conjunto:
+
+1. **Elegibilidade:** somente usuários que se declararam **18 anos ou mais** no campo obrigatório de idade do perfil podem habilitar upload de foto real. Usuários em `child_safe_mode` (ou que não confirmaram 18+) nunca veem essa opção — para eles, permanece só avatar pré-definido.
+
+2. **Visibilidade condicional (quem sobe ≠ quem vê):** a foto real de um adulto **só é exibida para outros usuários também confirmados como adultos**. Um usuário em `child_safe_mode` sempre vê o **avatar padrão** no lugar da foto real, mesmo ao visualizar o perfil de um amigo ou posição no ranking de alguém que tenha foto real cadastrada — a foto nunca chega a ser renderizada para essa audiência, em nenhuma tela (ranking, amigos, badges, disputa territorial, batalha assíncrona).
+
+3. **Moderação obrigatória:** toda foto de perfil enviada passa pela mesma camada de moderação já definida para UGC em REGIONAL_UGC_CONCEPT_V3.md — revisão em 3 camadas (Rhoney + Claude + Mentora_AI), **fail-closed** (foto ambígua nunca fica visível até revisão concluída; enquanto isso, avatar padrão é exibido no lugar).
+
+Esta regra é uma extensão da política de UGC já estabelecida — foto de perfil é tratada com o mesmo rigor de conteúdo enviado por usuário, não como um campo de perfil trivial.
+
+---
 
 - **Nickname:** sempre visível (ranking, amigos, badges) — respeitando já a regra de child_safe_mode (nickname gerado pelo sistema para perfis infantis, se aplicável).
 - **Avatar:** visível onde o nickname aparece.
