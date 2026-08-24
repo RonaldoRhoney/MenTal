@@ -246,6 +246,24 @@ def is_world_completed(db: Session, user_id: str, world_id: str) -> bool:
     return conquered_count >= len(territory_ids)
 
 
+def get_blocks(db: Session) -> list[dict]:
+    """Blocos (BLOCOS_MENUS.md) — sem user_id porque não há estado por
+    usuário, é organização de menu estática. Só inclui blocos que já têm
+    pelo menos 1 território de verdade (os que ainda não têm conteúdo
+    curado, ex.: ENEM/Concursos/Regiões/Mundo, não aparecem até ganhar
+    território — evita menu com bloco vazio sem nada pra abrir)."""
+    blocks = db.execute(select(models.Block).order_by(models.Block.display_order)).scalars().all()
+    out = []
+    for block in blocks:
+        territory_ids = db.execute(
+            select(models.Territory.id).where(models.Territory.block_id == block.id)
+        ).scalars().all()
+        if not territory_ids:
+            continue
+        out.append({"block_id": block.id, "name": block.name, "territory_ids": territory_ids})
+    return out
+
+
 def get_worlds_progress(db: Session, user_id: str) -> list[dict]:
     worlds = db.execute(select(models.World).order_by(models.World.display_order)).scalars().all()
     out = []

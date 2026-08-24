@@ -45,6 +45,10 @@ def get_progress(user_id: str = Depends(get_current_user_id), db: Session = Depe
         )
         for w in services.get_worlds_progress(db, user_id)
     ]
+    blocks = [
+        schemas.BlockOut(block_id=b["block_id"], name=b["name"], territory_ids=b["territory_ids"])
+        for b in services.get_blocks(db)
+    ]
 
     return schemas.ProgressResponse(
         xp_total=profile.xp_total,
@@ -52,5 +56,6 @@ def get_progress(user_id: str = Depends(get_current_user_id), db: Session = Depe
         xp_per_level=config.XP_PER_LEVEL,
         territories=out,
         worlds=worlds,
+        blocks=blocks,
         streak=schemas.StreakOut(current_streak=streak.current_streak, freeze_available=streak.freeze_available),
     )

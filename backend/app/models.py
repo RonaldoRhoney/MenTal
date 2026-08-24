@@ -184,6 +184,22 @@ class World(Base):
     display_order: Mapped[int] = mapped_column(Integer, default=0)
 
 
+class Block(Base):
+    """
+    Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23). Puramente organização
+    de menu/navegação — nunca progressão ou conquista (isso continua
+    sendo World, via UserTerritoryProgress). Mesmo padrão de World (tabela
+    simples com display_order), sem qualquer derivação de "completo": um
+    Bloco não tem estado, só agrupa territórios visualmente.
+    """
+
+    __tablename__ = "blocks"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    name: Mapped[str] = mapped_column(String, nullable=False)
+    display_order: Mapped[int] = mapped_column(Integer, default=0)
+
+
 class Territory(Base):
     __tablename__ = "territories"
 
@@ -193,6 +209,10 @@ class Territory(Base):
     free_sample_count: Mapped[int] = mapped_column(Integer, default=0)
     display_order: Mapped[int] = mapped_column(Integer, default=0)
     world_id: Mapped[str | None] = mapped_column(String, ForeignKey("worlds.id"), nullable=True)
+    # Bloco é opcional (BLOCOS_MENUS.md §3): territórios que não entraram
+    # em nenhum Bloco ainda continuam acessíveis normalmente, fora de
+    # qualquer agrupamento de menu extra.
+    block_id: Mapped[str | None] = mapped_column(String, ForeignKey("blocks.id"), nullable=True)
 
 
 class UserTerritoryProgress(Base):

@@ -58,6 +58,16 @@ class _FakeApiClient extends ApiClient {
             'completed': true,
           },
         ],
+        // BLOCOS_MENUS.md: Matemática agrupa numeros+logica dentro do
+        // Mundo da Mente Lógica — visual+conhecimento ficam soltos, sem
+        // bloco, no mesmo mundo.
+        'blocks': [
+          {
+            'block_id': 'matematica',
+            'name': 'Matemática',
+            'territory_ids': ['numeros', 'logica'],
+          },
+        ],
       };
 
   @override
@@ -114,5 +124,36 @@ void main() {
 
     expect(find.text('Detentor: Fulano'), findsOneWidget);
     expect(find.text('Você é o detentor'), findsOneWidget);
+  });
+
+  testWidgets('BLOCOS_MENUS.md: mostra sub-cabeçalho "Matemática" agrupando numeros e lógica', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: HomeScreen(client: _FakeApiClient()),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // ListView constrói os itens sob demanda (Sliver) — o bloco
+    // "Matemática" fica abaixo da dobra inicial, precisa rolar até ele
+    // aparecer antes de buscar pelo texto.
+    await tester.scrollUntilVisible(find.text('Matemática'), 200, scrollable: find.byType(Scrollable));
+
+    // Aparece uma única vez (agrupa numeros+logica sob o mesmo bloco,
+    // não repete o sub-cabeçalho por território).
+    expect(find.text('Matemática'), findsOneWidget);
+
+    // Território sem bloco (visual, no mesmo Mundo) continua acessível
+    // normalmente, sem nenhum sub-cabeçalho de bloco acima dele.
+    await tester.scrollUntilVisible(find.textContaining('Visual'), 200, scrollable: find.byType(Scrollable));
+    expect(find.textContaining('Visual'), findsWidgets);
   });
 }

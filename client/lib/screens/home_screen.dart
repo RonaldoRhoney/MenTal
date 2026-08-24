@@ -110,6 +110,23 @@ class _HomeScreenState extends State<HomeScreen> {
     return null;
   }
 
+  // BLOCOS_MENUS.md (aprovado 2026-08-23): Bloco é organização de menu
+  // dentro de um Mundo — puramente visual, sem afetar XP/conquista.
+  // Territórios sem bloco (block_id null) continuam soltos direto no
+  // Mundo, sem sub-cabeçalho, como sempre foram.
+  Map<String, String> _blockNameByTerritory() {
+    final blocks = (_progress?['blocks'] as List?)?.cast<Map<String, dynamic>>();
+    if (blocks == null) return const {};
+    final map = <String, String>{};
+    for (final block in blocks) {
+      final name = block['name'] as String;
+      for (final territoryId in (block['territory_ids'] as List).cast<String>()) {
+        map[territoryId] = name;
+      }
+    }
+    return map;
+  }
+
   // V2 item 10 — Mundos completos. O backend é a autoridade sobre o
   // agrupamento (GET /progress já devolve os territórios de cada mundo
   // e se está completo) — a Home só organiza visualmente, nunca decide
@@ -117,9 +134,10 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> _buildTerritoryItems(AppLocalizations l10n) {
     final worlds = (_progress?['worlds'] as List?)?.cast<Map<String, dynamic>>();
     if (worlds == null || worlds.isEmpty) {
-      return _territoryButtons(l10n, kTerritoryIds);
+      return _territoryButtons(l10n, kTerritoryIds, const {});
     }
 
+    final blockNameByTerritory = _blockNameByTerritory();
     final items = <Widget>[];
     for (final world in worlds) {
       final territoryIds = (world['territory_ids'] as List).cast<String>();
@@ -139,15 +157,35 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       );
       items.add(const SizedBox(height: 12));
-      items.addAll(_territoryButtons(l10n, territoryIds));
+      items.addAll(_territoryButtons(l10n, territoryIds, blockNameByTerritory));
     }
     return items;
   }
 
-  List<Widget> _territoryButtons(AppLocalizations l10n, List<String> territoryIds) {
+  List<Widget> _territoryButtons(
+    AppLocalizations l10n,
+    List<String> territoryIds,
+    Map<String, String> blockNameByTerritory,
+  ) {
     final items = <Widget>[];
+    String? currentBlock;
     for (final territoryId in territoryIds) {
-      if (items.isNotEmpty) items.add(const SizedBox(height: 12));
+      final blockName = blockNameByTerritory[territoryId];
+      if (blockName != currentBlock) {
+        if (items.isNotEmpty) items.add(const SizedBox(height: 16));
+        if (blockName != null) {
+          items.add(
+            Text(
+              blockName,
+              style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+            ),
+          );
+          items.add(const SizedBox(height: 8));
+        }
+        currentBlock = blockName;
+      } else if (items.isNotEmpty) {
+        items.add(const SizedBox(height: 12));
+      }
       final label = territoryLabel(l10n, territoryId);
       final territoryProgress = _territoryProgress(territoryId);
       final conquered = territoryProgress?['conquered'] as bool? ?? false;

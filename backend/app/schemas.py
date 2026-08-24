@@ -136,12 +136,23 @@ class WorldProgressOut(BaseModel):
     completed: bool
 
 
+class BlockOut(BaseModel):
+    """Bloco (BLOCOS_MENUS.md) — puramente organização de menu, sem
+    estado de progressão (diferente de WorldProgressOut, que tem
+    `completed`). Só existe pra agrupar territórios visualmente."""
+
+    block_id: str
+    name: str
+    territory_ids: list[str]
+
+
 class ProgressResponse(BaseModel):
     xp_total: int
     level: int
     xp_per_level: int
     territories: list[ProgressTerritoryOut]
     worlds: list[WorldProgressOut]
+    blocks: list[BlockOut]
     streak: StreakOut
 
 

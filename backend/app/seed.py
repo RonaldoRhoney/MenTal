@@ -9,10 +9,23 @@ WORLDS = [
     {"id": "mente_logica", "name": "Mundo da Mente Lógica", "display_order": 2},
 ]
 
+# Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
+# de menu, espelha migrations/020_blocks.sql. ENEM/Concursos/Regiões/
+# Mundo ainda não têm território (conteúdo por curar, fora de escopo
+# agora) — as linhas existem pra estrutura estar pronta pra quando
+# entrarem, mas nenhum território referencia esses IDs ainda.
+BLOCKS = [
+    {"id": "matematica", "name": "Matemática", "display_order": 1},
+    {"id": "enem", "name": "ENEM", "display_order": 2},
+    {"id": "concursos", "name": "Concursos", "display_order": 3},
+    {"id": "regioes", "name": "Regiões", "display_order": 4},
+    {"id": "mundo", "name": "Mundo", "display_order": 5},
+]
+
 TERRITORIES = [
     {"id": "palavras", "challenge_type": "palavras", "requires_subscription": False, "free_sample_count": 0, "display_order": 1, "world_id": "linguagem"},
-    {"id": "numeros", "challenge_type": "numeros", "requires_subscription": False, "free_sample_count": 0, "display_order": 2, "world_id": "mente_logica"},
-    {"id": "logica", "challenge_type": "logica", "requires_subscription": True, "free_sample_count": 2, "display_order": 3, "world_id": "mente_logica"},
+    {"id": "numeros", "challenge_type": "numeros", "requires_subscription": False, "free_sample_count": 0, "display_order": 2, "world_id": "mente_logica", "block_id": "matematica"},
+    {"id": "logica", "challenge_type": "logica", "requires_subscription": True, "free_sample_count": 2, "display_order": 3, "world_id": "mente_logica", "block_id": "matematica"},
     {"id": "conhecimento", "challenge_type": "conhecimento", "requires_subscription": True, "free_sample_count": 2, "display_order": 4, "world_id": "mente_logica"},
     # V2 item 2 — Enigmas/charadas (V2_KICKOFF.md §6A). Reaproveita 100% do
     # fluxo de desafio existente — nenhum campo/modelo novo. Tratado como
@@ -1239,6 +1252,10 @@ def seed_if_empty(db: Session) -> None:
 
     for w in WORLDS:
         db.add(models.World(**w))
+    db.commit()
+
+    for b in BLOCKS:
+        db.add(models.Block(**b))
     db.commit()
 
     for t in TERRITORIES:
