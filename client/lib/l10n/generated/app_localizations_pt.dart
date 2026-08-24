@@ -12,17 +12,25 @@ class AppLocalizationsPt extends AppLocalizations {
   String get preparingChallenge => 'Preparando seu desafio...';
 
   @override
-  String get ageGateTitle => 'Antes de começar, qual é a sua idade?';
+  String get ageGateTitle =>
+      'Este aplicativo é destinado a maiores de 18 anos.';
 
   @override
   String get ageGateSubtitle =>
-      'Isso ajuda a manter a experiência adequada para você.';
+      'Confirme que você tem 18 anos ou mais para continuar.';
 
   @override
-  String get ageGateChildOption => 'Tenho menos de 18 anos';
+  String get ageGateCheckboxLabel => 'Confirmo que tenho 18 anos ou mais.';
 
   @override
-  String get ageGateAdultOption => 'Tenho 18 anos ou mais';
+  String get ageGateTermsLinkPrefix => 'Ao continuar, você concorda com os ';
+
+  @override
+  String get ageGateTermsLinkText =>
+      'Termos de Uso e a Política de Privacidade';
+
+  @override
+  String get ageGateContinueButton => 'Continuar';
 
   @override
   String get homeTitle => 'MENTAL';

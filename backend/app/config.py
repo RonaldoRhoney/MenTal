@@ -20,6 +20,13 @@ DEFAULT_LANGUAGE_CODE = "pt-BR"
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET")
 
+# MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL passa a ser exclusivo pra
+# maiores de 18 anos — sem mais age gate multi-público nem
+# child_safe_mode. Versão dos Termos aceitos no momento da confirmação
+# de maioridade (POST /age-gate), registrada por usuário — só muda
+# quando o texto legal dos Termos mudar de verdade, não a cada deploy.
+TERMS_VERSION = "1.0"
+
 # MONETIZATION_UPDATE_FREE_LAUNCH.md: MENTAL lança 100% gratuito. Quando
 # false (default), toda checagem de "território exige assinatura" é
 # ignorada em services.is_territory_unlocked — ponto único de verificação,
@@ -37,6 +44,16 @@ MONETIZATION_ENABLED = os.environ.get("MONETIZATION_ENABLED", "false").lower() =
 # MONETIZATION_ENABLED=false (não tem relação com dinheiro, é ritmo de
 # uso). Centralizado aqui — nunca hardcoded em mais de um lugar.
 DAILY_FREE_CHALLENGE_LIMIT = 24
+
+# Pedido de Rhoney (2026-08-24): sem limite diário enquanto durar o
+# teste fechado/informal — testadores não devem esbarrar num teto
+# artificial no meio da avaliação. Mesmo padrão de MONETIZATION_ENABLED
+# (env var, default "true"/ligado): em produção, setar
+# DAILY_LIMIT_ENABLED=false no Render desliga a checagem sem afetar
+# testes locais (que não têm essa env var, continuam com o limite real
+# de 24 pra validar o comportamento de bloqueio). Religar (ou remover a
+# env var) quando o teste fechado terminar e a monetização for ativada.
+DAILY_LIMIT_ENABLED = os.environ.get("DAILY_LIMIT_ENABLED", "true").lower() != "false"
 HINT_PENALTY_FACTOR = 0.25
 STREAK_FREEZE_PER_WEEK = 1
 

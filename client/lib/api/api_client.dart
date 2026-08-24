@@ -73,11 +73,13 @@ class ApiClient {
     }
   }
 
-  Future<Map<String, dynamic>> ageGate(String ageMode) async {
+  // MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL é exclusivo pra maiores
+  // de 18 anos — confirmação única, sem mais age_mode child/adult.
+  Future<Map<String, dynamic>> confirmMajority() async {
     return _post(
       _uri('/age-gate'),
       headers: _headers,
-      body: jsonEncode({'age_mode': ageMode}),
+      body: jsonEncode({'age_confirmed': true}),
     );
   }
 

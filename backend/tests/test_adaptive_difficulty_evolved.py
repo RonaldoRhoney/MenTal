@@ -46,7 +46,7 @@ def test_heavy_hint_usage_does_not_count_as_full_mastery(client):
     # evoluída não sobe, porque o jogador só acertou com muita ajuda.
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(3):
         result = _answer(client, headers, "numeros", use_hints=2)
@@ -61,7 +61,7 @@ def test_hint_free_correct_answers_still_level_up_as_before(client):
     # exatamente como na fórmula original.
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(3):
         result = _answer(client, headers, "numeros", use_hints=0)
@@ -77,7 +77,7 @@ def test_mixed_hint_usage_produces_intermediate_mastery(client):
     # nível, nem sobe nem desce.
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     _answer(client, headers, "numeros", use_hints=0)
     _answer(client, headers, "numeros", use_hints=1)
@@ -96,7 +96,7 @@ def test_incorrect_answers_still_lower_difficulty_regardless_of_hints(client):
     # abaixo do limiar de descida (0.4).
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(3):
         _answer(client, headers, "numeros", use_hints=0)

@@ -13,8 +13,8 @@ from .conftest import auth_header
 def _make_friends(client, user_a, user_b):
     headers_a = auth_header(user_a)
     headers_b = auth_header(user_b)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers_a)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers_b)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
     code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
     client.post("/social/friends", json={"invite_code": code}, headers=headers_b)
     return headers_a, headers_b
@@ -42,7 +42,7 @@ def _answer_until_correct(client, headers, territory_id="palavras", tries=30):
 def test_no_detentor_when_nobody_has_xp_in_territory(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     progress = client.get("/progress", headers=headers).json()
     palavras = next(t for t in progress["territories"] if t["territory_id"] == "palavras")
@@ -53,7 +53,7 @@ def test_no_detentor_when_nobody_has_xp_in_territory(client):
 def test_sole_scorer_becomes_detentor(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     _answer_until_correct(client, headers)
 
@@ -66,8 +66,8 @@ def test_dispute_is_scoped_to_friends_never_global_strangers(client):
     user_a, stranger = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a = auth_header(user_a)
     headers_stranger = auth_header(stranger)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers_a)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers_stranger)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_stranger)
 
     # Estranho acumula MUITO mais XP que user_a, mas nunca foram amigos.
     for _ in range(5):
@@ -110,7 +110,7 @@ def test_friend_with_more_xp_becomes_detentor_and_dethrones_previous(client):
 def test_no_dethroned_nickname_on_first_ever_detentor(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     result = _answer_until_correct(client, headers)
     if result["territory_detentor_gained"]:

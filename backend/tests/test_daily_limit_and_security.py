@@ -10,7 +10,7 @@ from .conftest import auth_header
 def test_daily_free_limit_blocks_after_limit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for i in range(DAILY_FREE_CHALLENGE_LIMIT):
         resp = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)
@@ -30,7 +30,7 @@ def test_daily_free_limit_blocks_after_limit(client):
 def test_active_subscription_bypasses_daily_limit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 
@@ -48,7 +48,7 @@ def test_active_subscription_bypasses_daily_limit(client):
 def test_validate_receipt_requires_parental_gate(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
     assert resp.status_code == 403
@@ -61,7 +61,7 @@ def test_parental_gate_expires_and_requires_revalidation_per_purchase_attempt(cl
     # tenta comprar. O gate antigo NÃO pode autorizar essa nova tentativa.
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/subscription/parental-gate", headers=headers)
 
     from app.config import PARENTAL_GATE_VALIDITY_MINUTES
@@ -93,7 +93,7 @@ def test_parental_gate_expires_and_requires_revalidation_per_purchase_attempt(cl
 def test_ranking_never_exposes_user_id_or_email(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "child"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
     from app.seed import CHALLENGES

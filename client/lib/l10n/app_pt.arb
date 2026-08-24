@@ -4,17 +4,23 @@
   "preparingChallenge": "Preparando seu desafio...",
   "@preparingChallenge": {"description": "Loading state shown during cold start / initial bootstrap"},
 
-  "ageGateTitle": "Antes de começar, qual é a sua idade?",
-  "@ageGateTitle": {"description": "Neutral age gate question, FAMILY_SAFETY.md §3"},
+  "ageGateTitle": "Este aplicativo é destinado a maiores de 18 anos.",
+  "@ageGateTitle": {"description": "MENTAL-POL-002 §3.1 — single majority confirmation screen main text"},
 
-  "ageGateSubtitle": "Isso ajuda a manter a experiência adequada para você.",
-  "@ageGateSubtitle": {"description": "Age gate supporting text"},
+  "ageGateSubtitle": "Confirme que você tem 18 anos ou mais para continuar.",
+  "@ageGateSubtitle": {"description": "Age confirmation supporting text"},
 
-  "ageGateChildOption": "Tenho menos de 18 anos",
-  "@ageGateChildOption": {"description": "Age gate child option button"},
+  "ageGateCheckboxLabel": "Confirmo que tenho 18 anos ou mais.",
+  "@ageGateCheckboxLabel": {"description": "MENTAL-POL-002 §3.1 — mandatory majority confirmation checkbox"},
 
-  "ageGateAdultOption": "Tenho 18 anos ou mais",
-  "@ageGateAdultOption": {"description": "Age gate adult option button"},
+  "ageGateTermsLinkPrefix": "Ao continuar, você concorda com os ",
+  "@ageGateTermsLinkPrefix": {"description": "Text before the Terms/Privacy Policy link"},
+
+  "ageGateTermsLinkText": "Termos de Uso e a Política de Privacidade",
+  "@ageGateTermsLinkText": {"description": "Tappable Terms of Use / Privacy Policy link text"},
+
+  "ageGateContinueButton": "Continuar",
+  "@ageGateContinueButton": {"description": "Single continue button, enabled only when checkbox is checked"},
 
   "homeTitle": "MENTAL",
   "@homeTitle": {"description": "Home app bar title (brand wordmark)"},

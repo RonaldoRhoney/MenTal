@@ -26,7 +26,7 @@ def test_all_territories_unlocked_when_monetization_disabled(client, monkeypatch
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     # 'logica' e 'conhecimento' exigem assinatura no seed (requires_subscription=True),
     # mas com a flag desligada nenhum usuário deve ser bloqueado, mesmo
@@ -48,7 +48,7 @@ def test_progress_reports_all_territories_unlocked_when_disabled(client, monkeyp
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     progress = client.get("/progress", headers=headers).json()
     for territory in progress["territories"]:

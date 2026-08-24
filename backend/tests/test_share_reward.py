@@ -16,7 +16,7 @@ from .conftest import auth_header
 def test_first_share_of_the_day_awards_xp(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.post("/social/share-reward", headers=headers)
     body = resp.json()
@@ -30,7 +30,7 @@ def test_first_share_of_the_day_awards_xp(client):
 def test_second_share_same_day_awards_no_extra_xp(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     client.post("/social/share-reward", headers=headers)
     second = client.post("/social/share-reward", headers=headers).json()
@@ -43,7 +43,7 @@ def test_second_share_same_day_awards_no_extra_xp(client):
 def test_repeated_taps_never_exceed_daily_cap(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(5):
         client.post("/social/share-reward", headers=headers)

@@ -28,7 +28,7 @@ def _answer_correctly(client, headers, territory_id, use_hint=False):
 def test_badges_catalog_starts_unearned(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     badges = client.get("/badges", headers=headers).json()["badges"]
     codes = {b["code"] for b in badges}
@@ -43,7 +43,7 @@ def test_badges_catalog_starts_unearned(client):
 def test_first_conquest_badge_awarded_when_territory_conquered(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     # CONQUEST_XP_THRESHOLD=200, XP base varia por dificuldade — repete até
     # conquistar (teto de 20 tentativas, bem acima do necessário na prática).
@@ -63,7 +63,7 @@ def test_first_conquest_badge_awarded_when_territory_conquered(client):
 def test_no_help_needed_badge_awarded_after_10_hint_free_corrects(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(10):
         result = _answer_correctly(client, headers, "numeros", use_hint=False)
@@ -78,7 +78,7 @@ def test_no_help_needed_badge_awarded_after_10_hint_free_corrects(client):
 def test_sharp_mind_badge_requires_50_correct_answers(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     # Bypassa o limite diário (24) via assinatura ativa — só pra viabilizar
     # o teste; a regra de negócio do limite não é o que está sendo testado.
     client.post("/subscription/parental-gate", headers=headers)

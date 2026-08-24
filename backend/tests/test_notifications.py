@@ -43,7 +43,7 @@ def _set_last_seen(user_id: str, when: datetime) -> None:
 def test_register_token_and_preferences_round_trip(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     default_prefs = client.get("/notifications/preferences", headers=headers).json()
     assert default_prefs == {"reengagement_enabled": True, "social_enabled": True}
@@ -64,7 +64,7 @@ def test_register_token_and_preferences_round_trip(client):
 def test_progress_call_updates_last_seen(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.get("/progress", headers=headers)
 
     with SessionLocal() as db:
@@ -81,7 +81,7 @@ def test_reengagement_fires_once_per_window_24h_then_48h(client, monkeypatch):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     _register_token(client, headers)
 
     now = utcnow()
@@ -116,7 +116,7 @@ def test_reengagement_respects_disabled_preference(client, monkeypatch):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     _register_token(client, headers)
     client.put("/notifications/preferences", json={"reengagement_enabled": False, "social_enabled": True}, headers=headers)
 
@@ -139,8 +139,8 @@ def test_social_overtake_fires_with_nickname_for_adult(client, monkeypatch):
     winner = str(uuid.uuid4())
     loser_headers = auth_header(loser)
     winner_headers = auth_header(winner)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=loser_headers)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=winner_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=loser_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=winner_headers)
     _register_token(client, loser_headers, "loser-token")
     _register_token(client, winner_headers, "winner-token")
 
@@ -180,46 +180,8 @@ def test_social_overtake_fires_with_nickname_for_adult(client, monkeypatch):
     assert "passou você no ranking" in loser_events[0]["body"]
 
 
-def test_social_overtake_is_anonymized_for_child_safe_mode(client, monkeypatch):
-    from app.seed import CHALLENGES
-
-    sent_log = []
-    monkeypatch.setattr("app.notifications.push.send_push_notification", _fake_sender(sent_log))
-
-    loser = str(uuid.uuid4())
-    winner = str(uuid.uuid4())
-    loser_headers = auth_header(loser)
-    winner_headers = auth_header(winner)
-    # child_safe_mode=True é o default de perfil recém-criado (models.Profile).
-    client.post("/age-gate", json={"age_mode": "child"}, headers=loser_headers)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=winner_headers)
-    _register_token(client, loser_headers, "child-token")
-    _register_token(client, winner_headers, "winner-token")
-
-    def _answer(headers):
-        ch = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
-        correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == ch["prompt"] and sorted(c["options"]) == sorted(ch["options"]))
-        client.post(
-            f"/challenges/{ch['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct},
-            headers=headers,
-        )
-
-    _answer(loser_headers)
-    now = utcnow()
-    with SessionLocal() as db:
-        notifications.run_notification_checks(db, now=now)
-
-    for _ in range(2):
-        _answer(winner_headers)
-    with SessionLocal() as db:
-        result = notifications.run_notification_checks(db, now=now)
-
-    # Mesma ressalva de isolamento de teste do cenário adulto acima: só
-    # confere o evento deste usuário específico, não o total global.
-    assert result["social_sent"] >= 1
-    child_events = [e for e in sent_log if e["push_token"] == "child-token"]
-    assert len(child_events) == 1
-    # Nunca cita nome de outro jogador para perfil child_safe_mode.
-    assert "passou você" not in child_events[0]["body"]
-    assert child_events[0]["title"] == "A disputa está acirrada"
+# test_social_overtake_is_anonymized_for_child_safe_mode removido
+# (MENTAL-DIR-001, 24/08/2026): MENTAL passa a ser exclusivo pra
+# maiores de 18 anos — não existe mais variante anonimizada de
+# notificação, testada aqui. Ver test_social_overtake_fires_with_
+# nickname_for_adult acima, que cobre o único comportamento restante.

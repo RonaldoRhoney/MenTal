@@ -4,12 +4,18 @@ from pydantic import BaseModel, Field
 
 
 class AgeGateRequest(BaseModel):
-    age_mode: str  # "child" | "adult"
+    """MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL é exclusivo pra
+    maiores de 18 anos — confirmação única, sem mais bifurcação
+    child/adult. age_confirmed precisa ser True pra avançar; False não
+    cria nem atualiza perfil (routers/age_gate.py rejeita antes)."""
+
+    age_confirmed: bool
 
 
 class AgeGateResponse(BaseModel):
-    child_safe_mode: bool
     nickname: str
+    age_confirmed_at: datetime
+    terms_version_accepted: str
 
 
 class ChallengeOut(BaseModel):

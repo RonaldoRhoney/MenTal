@@ -145,12 +145,16 @@ def register_play_for_streak(db: Session, user_id: str, today: date) -> models.S
 
 
 def check_daily_limit(db: Session, user_id: str, today: date) -> tuple[bool, int]:
-    subscription = db.get(models.Subscription, user_id)
-    if subscription and subscription.status == "active":
-        return True, 0
-
     usage = db.get(models.DailyChallengeUsage, (user_id, today))
     consumed = usage.challenges_consumed if usage else 0
+
+    if not config.DAILY_LIMIT_ENABLED:
+        return True, consumed
+
+    subscription = db.get(models.Subscription, user_id)
+    if subscription and subscription.status == "active":
+        return True, consumed
+
     return consumed < config.DAILY_FREE_CHALLENGE_LIMIT, consumed
 
 

@@ -100,29 +100,41 @@ abstract class AppLocalizations {
   /// **'Preparando seu desafio...'**
   String get preparingChallenge;
 
-  /// Neutral age gate question, FAMILY_SAFETY.md §3
+  /// MENTAL-POL-002 §3.1 — single majority confirmation screen main text
   ///
   /// In pt, this message translates to:
-  /// **'Antes de começar, qual é a sua idade?'**
+  /// **'Este aplicativo é destinado a maiores de 18 anos.'**
   String get ageGateTitle;
 
-  /// Age gate supporting text
+  /// Age confirmation supporting text
   ///
   /// In pt, this message translates to:
-  /// **'Isso ajuda a manter a experiência adequada para você.'**
+  /// **'Confirme que você tem 18 anos ou mais para continuar.'**
   String get ageGateSubtitle;
 
-  /// Age gate child option button
+  /// MENTAL-POL-002 §3.1 — mandatory majority confirmation checkbox
   ///
   /// In pt, this message translates to:
-  /// **'Tenho menos de 18 anos'**
-  String get ageGateChildOption;
+  /// **'Confirmo que tenho 18 anos ou mais.'**
+  String get ageGateCheckboxLabel;
 
-  /// Age gate adult option button
+  /// Text before the Terms/Privacy Policy link
   ///
   /// In pt, this message translates to:
-  /// **'Tenho 18 anos ou mais'**
-  String get ageGateAdultOption;
+  /// **'Ao continuar, você concorda com os '**
+  String get ageGateTermsLinkPrefix;
+
+  /// Tappable Terms of Use / Privacy Policy link text
+  ///
+  /// In pt, this message translates to:
+  /// **'Termos de Uso e a Política de Privacidade'**
+  String get ageGateTermsLinkText;
+
+  /// Single continue button, enabled only when checkbox is checked
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar'**
+  String get ageGateContinueButton;
 
   /// Home app bar title (brand wordmark)
   ///

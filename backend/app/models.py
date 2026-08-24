@@ -41,16 +41,22 @@ class Profile(Base):
     user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     nickname: Mapped[str] = mapped_column(String, nullable=False)
     nickname_is_system_generated: Mapped[bool] = mapped_column(Boolean, default=True)
-    age_mode: Mapped[str] = mapped_column(String, default="unknown")  # unknown|child|adult
     # Padrão RhoneyInc (skill admin-padrao, aplicado 2026-08-20):
     # rhoneyinc@gmail.com é sempre admin, promovido automaticamente por
     # trigger no Postgres (migrations/002_admin_role.sql), não por passo
     # manual. Nenhum endpoint usa este campo ainda no V1 — não existe
     # painel admin no Vertical Slice 01 — mas a coluna/trigger nasce agora
-    # para não virar retrabalho estrutural depois (mesmo raciocínio já
-    # aplicado a child_safe_mode em FAMILY_SAFETY.md).
+    # para não virar retrabalho estrutural depois.
     role: Mapped[str] = mapped_column(String, default="user")  # user|admin
-    child_safe_mode: Mapped[bool] = mapped_column(Boolean, default=True)
+    # MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL passa a ser exclusivo
+    # pra maiores de 18 anos — sem mais age gate multi-público nem
+    # child_safe_mode (colunas antigas `age_mode`/`child_safe_mode`
+    # continuam existindo no banco por ora, deprecated/não lidas por
+    # nenhum código, ver migrations/021_majority_confirmation.sql).
+    # Substituídas por um registro simples de consentimento: confirmou
+    # maioridade quando, e aceitando qual versão dos Termos.
+    age_confirmed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    terms_version_accepted: Mapped[str | None] = mapped_column(String, nullable=True)
     xp_total: Mapped[int] = mapped_column(Integer, default=0)
     level: Mapped[int] = mapped_column(Integer, default=1)
     # Campo adicionado no Vertical Slice 01 (não estava no DATA_MODEL.md

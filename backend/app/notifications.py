@@ -69,8 +69,7 @@ def _check_social_overtakes(db: Session, now: datetime) -> int:
     posição do usuário no ranking semanal. Reaproveita exatamente o
     mesmo cálculo de ranking já usado em GET /ranking
     (routers/ranking.py) — nunca duas fontes de verdade para "quem está
-    em que posição". Anonimizado para child_safe_mode (§3: nunca citar
-    nome de outro jogador para criança).
+    em que posição".
     """
     since = now - timedelta(days=7)
     rows = db.execute(
@@ -93,16 +92,12 @@ def _check_social_overtakes(db: Session, now: datetime) -> int:
         # todo mundo levaria uma notificação "ultrapassado" só por ainda
         # não ter um histórico de posição salvo.
         if previous_rank is not None and idx > previous_rank:
-            if profile.child_safe_mode:
-                title = notification_copy.SOCIAL_OVERTAKE_CHILD_SAFE_TITLE
-                body = notification_copy.SOCIAL_OVERTAKE_CHILD_SAFE_BODY
-            else:
-                overtaker_index = previous_rank - 1  # 0-indexado: quem ocupa sua posição antiga agora
-                overtaker_user_id = rows[overtaker_index][0] if overtaker_index < len(rows) else None
-                overtaker_profile = db.get(models.Profile, overtaker_user_id) if overtaker_user_id else None
-                nickname = overtaker_profile.nickname if overtaker_profile else "Alguém"
-                title = notification_copy.SOCIAL_OVERTAKE_GENERIC_TITLE
-                body = notification_copy.SOCIAL_OVERTAKE_NAMED_BODY_TEMPLATE.format(nickname=nickname)
+            overtaker_index = previous_rank - 1  # 0-indexado: quem ocupa sua posição antiga agora
+            overtaker_user_id = rows[overtaker_index][0] if overtaker_index < len(rows) else None
+            overtaker_profile = db.get(models.Profile, overtaker_user_id) if overtaker_user_id else None
+            nickname = overtaker_profile.nickname if overtaker_profile else "Alguém"
+            title = notification_copy.SOCIAL_OVERTAKE_GENERIC_TITLE
+            body = notification_copy.SOCIAL_OVERTAKE_NAMED_BODY_TEMPLATE.format(nickname=nickname)
 
             if push.send_push_notification(profile.push_token, title, body):
                 sent += 1

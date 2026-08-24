@@ -33,7 +33,7 @@ def _answer(client, headers, territory_id, correct=True, use_hint=False):
 def test_stats_starts_zeroed_for_new_user(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     stats = client.get("/stats", headers=headers).json()
     assert stats["xp_total"] == 0
@@ -51,7 +51,7 @@ def test_stats_starts_zeroed_for_new_user(client):
 def test_stats_reflects_real_correct_and_incorrect_answers(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     _answer(client, headers, "numeros", correct=True)
     _answer(client, headers, "numeros", correct=False)
@@ -82,7 +82,7 @@ def test_stats_current_difficulty_level_matches_next_challenge_logic(client):
     # V2_KICKOFF), que tornaria a comparação direta inválida.
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(3):
         _answer(client, headers, "numeros", correct=True)
@@ -98,7 +98,7 @@ def test_stats_current_difficulty_level_matches_next_challenge_logic(client):
 def test_stats_badges_earned_reflects_real_grant(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(10):
         _answer(client, headers, "numeros", correct=True)
@@ -118,7 +118,7 @@ def test_current_streak_never_exceeds_longest_streak(client):
     # exato cenário impossível. Corrigido padronizando os dois em UTC.
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(3):
         _answer(client, headers, "numeros", correct=True)
@@ -140,7 +140,7 @@ def test_stats_longest_streak_survives_a_broken_streak(client):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(4):
         _answer(client, headers, "numeros", correct=True)

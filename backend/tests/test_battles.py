@@ -15,8 +15,8 @@ from .conftest import auth_header
 def _make_friends(client, user_a, user_b):
     headers_a = auth_header(user_a)
     headers_b = auth_header(user_b)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers_a)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers_b)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
     code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
     client.post("/social/friends", json={"invite_code": code}, headers=headers_b)
     return headers_a, headers_b
@@ -25,7 +25,7 @@ def _make_friends(client, user_a, user_b):
 def test_cannot_battle_a_non_friend(client):
     user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a = auth_header(user_a)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers_a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
 
     resp = client.post(
         "/battles",

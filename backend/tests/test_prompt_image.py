@@ -34,7 +34,7 @@ def test_prompt_image_travels_through_next_challenge(client):
     challenge_id = _insert_challenge_with_image("🏛️")
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     # Força repetidamente até o sorteio pegar exatamente esse desafio
     # (território tem outros também) — nunca deve falhar em algumas
@@ -51,7 +51,7 @@ def test_prompt_image_is_none_by_default(client):
     challenge_id = _insert_challenge_with_image(None)
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(50):
         body = client.get("/challenges/next", params={"territory_id": "conhecimento"}, headers=headers).json()

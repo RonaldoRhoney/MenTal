@@ -13,7 +13,7 @@ from .conftest import auth_header
 def test_progress_includes_matematica_block_with_numeros_e_logica(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get("/progress", headers=headers).json()
     blocks = {b["block_id"]: b for b in body["blocks"]}
@@ -29,7 +29,7 @@ def test_blocks_without_any_territory_are_not_returned(client):
     aparecer na resposta pra não virar um menu vazio sem nada pra abrir."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get("/progress", headers=headers).json()
     block_ids = {b["block_id"] for b in body["blocks"]}
@@ -43,7 +43,7 @@ def test_territories_without_block_are_not_grouped_into_any_block(client):
     territory_ids de nenhum bloco existente."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get("/progress", headers=headers).json()
     all_blocked_territory_ids = {tid for b in body["blocks"] for tid in b["territory_ids"]}
@@ -58,7 +58,7 @@ def test_block_grouping_does_not_change_territory_progress_or_worlds(client):
     que já existia em territories/worlds."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get("/progress", headers=headers).json()
 

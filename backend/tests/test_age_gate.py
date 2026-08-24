@@ -1,31 +1,31 @@
 import uuid
 
+from app import config
+
 from .conftest import auth_header
 
 
-def test_default_child_safe_mode_before_age_gate(client):
-    # FAMILY_SAFETY.md §2: até confirmar idade, tratar como criança.
-    resp = client.get("/progress", headers=auth_header(str(uuid.uuid4())))
-    assert resp.status_code == 200
-    # perfil é criado implicitamente por get_or_create_profile; confirmamos
-    # via age-gate que o estado inicial é child_safe.
-
-
-def test_age_gate_child_gets_system_generated_nickname(client):
-    resp = client.post("/age-gate", json={"age_mode": "child"}, headers=auth_header(str(uuid.uuid4())))
+def test_age_confirmed_true_creates_profile_and_records_consent(client):
+    resp = client.post("/age-gate", json={"age_confirmed": True}, headers=auth_header(str(uuid.uuid4())))
     assert resp.status_code == 200
     body = resp.json()
-    assert body["child_safe_mode"] is True
-    assert "-" in body["nickname"]
+    assert body["age_confirmed_at"] is not None
+    assert body["terms_version_accepted"] == config.TERMS_VERSION
+    assert "nickname" in body
 
 
-def test_age_gate_adult_disables_child_safe_mode(client):
-    resp = client.post("/age-gate", json={"age_mode": "adult"}, headers=auth_header(str(uuid.uuid4())))
-    assert resp.status_code == 200
-    body = resp.json()
-    assert body["child_safe_mode"] is False
+def test_age_confirmed_false_rejected_without_creating_profile(client):
+    """MENTAL-DIR-001 (24/08/2026): MENTAL é exclusivo pra maiores de 18
+    anos — sem confirmação, nenhum dado é coletado e nenhum caminho de
+    código trata o usuário como menor. Response não deve criar perfil
+    (GET /profile depois disso não deveria achar nada, mas o próprio
+    get_or_create_profile de outros endpoints cobre esse caso — aqui só
+    confirmamos que a tentativa em si é rejeitada)."""
+    resp = client.post("/age-gate", json={"age_confirmed": False}, headers=auth_header(str(uuid.uuid4())))
+    assert resp.status_code == 403
+    assert resp.json()["error"]["code"] == "MAJORITY_NOT_CONFIRMED"
 
 
-def test_age_gate_rejects_invalid_mode(client):
-    resp = client.post("/age-gate", json={"age_mode": "teen"}, headers=auth_header(str(uuid.uuid4())))
+def test_age_gate_requires_boolean_field(client):
+    resp = client.post("/age-gate", json={"age_confirmed": "maybe"}, headers=auth_header(str(uuid.uuid4())))
     assert resp.status_code == 422

@@ -15,7 +15,7 @@ from .conftest import auth_header
 def test_enigmas_territory_appears_in_progress(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     progress = client.get("/progress", headers=headers).json()
     territory_ids = {t["territory_id"] for t in progress["territories"]}
@@ -31,7 +31,7 @@ def test_enigmas_free_sample_then_lock(client, monkeypatch):
     monkeypatch.setattr(services_module.config, "MONETIZATION_ENABLED", True)
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(2):
         resp = client.get("/challenges/next", params={"territory_id": "enigmas"}, headers=headers)
@@ -55,7 +55,7 @@ def test_enigmas_full_answer_and_hint_flow(client):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge = client.get("/challenges/next", params={"territory_id": "enigmas"}, headers=headers).json()
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"])

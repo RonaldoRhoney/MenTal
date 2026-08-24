@@ -20,7 +20,7 @@ void main() {
     final client = ApiClient(baseUrl: 'https://example.com', accessToken: 'fake-token', httpClient: mockClient);
 
     await expectLater(
-      client.ageGate('adult'),
+      client.confirmMajority(),
       throwsA(isA<ApiException>().having((e) => e.code, 'code', 'NETWORK_ERROR')),
     );
   });
@@ -40,7 +40,7 @@ void main() {
     );
 
     await expectLater(
-      client.ageGate('adult'),
+      client.confirmMajority(),
       throwsA(isA<ApiException>().having((e) => e.code, 'code', 'TIMEOUT')),
     );
   });
@@ -58,7 +58,7 @@ void main() {
       final client = ApiClient(baseUrl: 'https://example.com', accessToken: 'fake-token', httpClient: mockClient);
 
       await expectLater(
-        client.ageGate('adult'),
+        client.confirmMajority(),
         throwsA(isA<ApiException>().having((e) => e.code, 'code', 'NETWORK_ERROR')),
       );
     },

@@ -40,7 +40,7 @@ def _fake_sender(sent_log):
 def test_enable_sets_anchor_once_disable_preserves_it(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.post("/movement/enable", headers=headers)
     assert resp.status_code == 200
@@ -64,7 +64,7 @@ def test_enable_sets_anchor_once_disable_preserves_it(client):
 def test_status_shows_current_cycle_after_enable(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
     status = client.get("/movement/status", headers=headers).json()
@@ -77,7 +77,7 @@ def test_status_shows_current_cycle_after_enable(client):
 def test_collect_disabled_is_rejected(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.post("/movement/collect", json={"steps": 1000}, headers=headers)
     assert resp.status_code == 400
@@ -87,7 +87,7 @@ def test_collect_disabled_is_rejected(client):
 def test_negative_steps_rejected_by_schema(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
     resp = client.post("/movement/collect", json={"steps": -5}, headers=headers)
@@ -104,7 +104,7 @@ def test_partial_collections_sum_tiers_without_double_awarding(client):
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
     with SessionLocal() as db:
@@ -135,7 +135,7 @@ def test_steps_beyond_top_tier_never_exceed_top_bonus(client):
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
     resp = client.post("/movement/collect", json={"steps": 999_999}, headers=headers).json()
@@ -149,7 +149,7 @@ def test_steps_beyond_top_tier_never_exceed_top_bonus(client):
 def test_previous_cycle_collectible_within_grace_then_expires(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
     anchor = utcnow() - timedelta(hours=30)
@@ -210,7 +210,7 @@ def test_movement_cycle_report_fires_once_per_cycle(client, monkeypatch):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
     client.post("/notifications/register-token", json={"push_token": "movement-token"}, headers=headers)
 
@@ -235,7 +235,7 @@ def test_movement_cycle_report_fires_once_per_cycle(client, monkeypatch):
 def test_daily_goal_round_trip(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     default_status = client.get("/movement/status", headers=headers).json()
     assert default_status["daily_goal_steps"] is None
@@ -254,7 +254,7 @@ def test_daily_goal_round_trip(client):
 def test_daily_goal_rejects_zero_or_negative(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.put("/movement/goal", json={"daily_goal_steps": 0}, headers=headers)
     assert resp.status_code == 422
@@ -268,7 +268,7 @@ def test_goal_bonus_awarded_once_when_crossing_threshold(client):
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
     client.put("/movement/goal", json={"daily_goal_steps": 5000}, headers=headers)
 
@@ -294,7 +294,7 @@ def test_goal_bonus_awarded_once_when_crossing_threshold(client):
 def test_no_goal_bonus_without_goal_set(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
     resp = client.post("/movement/collect", json={"steps": 20000}, headers=headers).json()
@@ -313,7 +313,7 @@ def test_checkpoint_bonus_awarded_once_when_window_closes(client):
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
     with SessionLocal() as db:
@@ -346,7 +346,7 @@ def test_checkpoint_bonus_catches_up_multiple_windows_in_one_lazy_collection(cli
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
     with SessionLocal() as db:

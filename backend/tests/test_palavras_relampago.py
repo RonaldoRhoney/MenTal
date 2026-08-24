@@ -16,7 +16,7 @@ from .conftest import auth_header
 def test_relampago_mode_returns_three_options_and_time_limit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.get(
         "/challenges/next", params={"territory_id": "palavras", "mode": "relampago"}, headers=headers
@@ -35,7 +35,7 @@ def test_relampago_never_serves_easy_level_even_for_brand_new_user(client):
     # relâmpago precisa ignorar isso e nunca servir fácil.
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(10):
         resp = client.get(
@@ -49,7 +49,7 @@ def test_relampago_options_include_correct_answer_from_seed(client):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get(
         "/challenges/next", params={"territory_id": "palavras", "mode": "relampago"}, headers=headers
@@ -73,7 +73,7 @@ def test_relampago_options_include_correct_answer_from_seed(client):
 def test_other_territories_ignore_relampago_mode(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get(
         "/challenges/next", params={"territory_id": "numeros", "mode": "relampago"}, headers=headers
@@ -84,7 +84,7 @@ def test_other_territories_ignore_relampago_mode(client):
 def test_normal_mode_unaffected_no_time_limit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get("/challenges/next", params={"territory_id": "palavras"}, headers=headers).json()
     assert body["time_limit_seconds"] is None
@@ -111,7 +111,7 @@ def test_timed_out_never_counts_as_correct_even_if_submitted_answer_matches(clie
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     ch, correct = _get_relampago_challenge_and_answer(client, headers)
 
     result = client.post(
@@ -129,7 +129,7 @@ def test_timed_out_never_counts_as_correct_even_if_submitted_answer_matches(clie
 def test_fast_correct_answer_gets_max_speed_bonus(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     ch, correct = _get_relampago_challenge_and_answer(client, headers)
 
     time_limit_ms = ch["time_limit_seconds"] * 1000
@@ -152,7 +152,7 @@ def test_fast_correct_answer_gets_max_speed_bonus(client):
 def test_slow_correct_answer_gets_no_speed_bonus_but_still_counts(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     ch, correct = _get_relampago_challenge_and_answer(client, headers)
 
     time_limit_ms = ch["time_limit_seconds"] * 1000
@@ -175,7 +175,7 @@ def test_slow_correct_answer_gets_no_speed_bonus_but_still_counts(client):
 def test_idempotent_replay_returns_same_timed_out_and_speed_bonus(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     ch, correct = _get_relampago_challenge_and_answer(client, headers)
 
     attempt_id = str(uuid.uuid4())

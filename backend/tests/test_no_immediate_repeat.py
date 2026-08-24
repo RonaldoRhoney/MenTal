@@ -18,7 +18,7 @@ from .conftest import auth_header
 def test_next_challenge_never_immediately_repeats_when_alternative_exists(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     # 'palavras' difficulty_level=1 tem 2 candidatos no seed — suficiente
     # para provar a regra sem depender do volume de conteúdo real.
@@ -47,7 +47,7 @@ def test_next_challenge_still_works_with_single_candidate(client):
     # mesmo tendo conteúdo).
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(3):
         resp = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)

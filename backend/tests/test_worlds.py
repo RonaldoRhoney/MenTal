@@ -41,7 +41,7 @@ def _conquer_territory(client, headers, territory_id, max_iterations=30):
 def test_progress_groups_territories_into_the_two_approved_worlds(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     progress = client.get("/progress", headers=headers).json()
     worlds = {w["world_id"]: w for w in progress["worlds"]}
@@ -56,7 +56,7 @@ def test_progress_groups_territories_into_the_two_approved_worlds(client):
 def test_world_just_completed_fires_once_at_the_exact_last_territory(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     # Conquistar 3 territórios facilmente ultrapassa o limite diário
     # gratuito (24/dia) — assinatura ativa contorna o limite, mesmo
     # padrão de test_active_subscription_bypasses_daily_limit. Não é o

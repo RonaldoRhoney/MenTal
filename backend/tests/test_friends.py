@@ -20,8 +20,8 @@ def test_add_friend_via_invite_code_creates_bidirectional_friendship(client):
     b = str(uuid.uuid4())
     a_headers = auth_header(a)
     b_headers = auth_header(b)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=a_headers)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=b_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=a_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=b_headers)
 
     a_code = _get_invite_code(client, a_headers)
     resp = client.post("/social/friends", json={"invite_code": a_code}, headers=b_headers)
@@ -40,7 +40,7 @@ def test_add_friend_via_invite_code_creates_bidirectional_friendship(client):
 def test_add_friend_rejects_own_invite_code(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     code = _get_invite_code(client, headers)
     resp = client.post("/social/friends", json={"invite_code": code}, headers=headers)
@@ -51,7 +51,7 @@ def test_add_friend_rejects_own_invite_code(client):
 def test_add_friend_rejects_unknown_invite_code(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.post("/social/friends", json={"invite_code": "does-not-exist"}, headers=headers)
     assert resp.status_code == 404
@@ -63,8 +63,8 @@ def test_add_friend_is_idempotent_never_duplicates(client):
     b = str(uuid.uuid4())
     a_headers = auth_header(a)
     b_headers = auth_header(b)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=a_headers)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=b_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=a_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=b_headers)
 
     a_code = _get_invite_code(client, a_headers)
     client.post("/social/friends", json={"invite_code": a_code}, headers=b_headers)
@@ -83,9 +83,9 @@ def test_ranking_scope_friends_filters_to_friends_and_self(client):
     a_headers = auth_header(a)
     b_headers = auth_header(b)
     stranger_headers = auth_header(stranger)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=a_headers)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=b_headers)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=stranger_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=a_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=b_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=stranger_headers)
 
     a_code = _get_invite_code(client, a_headers)
     client.post("/social/friends", json={"invite_code": a_code}, headers=b_headers)
@@ -111,26 +111,7 @@ def test_ranking_scope_friends_filters_to_friends_and_self(client):
     assert friends_ranking["me"] is not None
 
 
-def test_child_safe_mode_nickname_is_anonymized_in_friends_list(client):
-    """
-    FAMILY_SAFETY.md — decisão de Rhoney (2026-08-22): a feature de
-    Amigos fica disponível igual pra todo mundo, só anonimizando
-    identidade (mesmo padrão já usado no ranking geral e nas
-    notificações sociais), nunca bloqueada por child_safe_mode. O
-    nickname já nasce anônimo em age_gate.py — este teste confere que
-    isso se propaga corretamente pra dentro da lista de amigos, sem
-    nenhum tratamento especial precisar existir aqui.
-    """
-    adult = str(uuid.uuid4())
-    child = str(uuid.uuid4())
-    adult_headers = auth_header(adult)
-    child_headers = auth_header(child)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=adult_headers)
-    client.post("/age-gate", json={"age_mode": "child"}, headers=child_headers)
-
-    child_code = _get_invite_code(client, child_headers)
-    client.post("/social/friends", json={"invite_code": child_code}, headers=adult_headers)
-
-    adult_friends = client.get("/social/friends", headers=adult_headers).json()["friends"]
-    assert len(adult_friends) == 1
-    assert adult_friends[0]["nickname"] != child  # nunca o user_id cru
+# test_child_safe_mode_nickname_is_anonymized_in_friends_list removido
+# (MENTAL-DIR-001, 24/08/2026): MENTAL passa a ser exclusivo pra
+# maiores de 18 anos — não existe mais child_safe_mode nem nickname
+# anonimizado por faixa etária.

@@ -16,7 +16,7 @@ from .conftest import auth_header
 def test_progress_exposes_conquest_threshold_and_xp_per_level(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     progress = client.get("/progress", headers=headers).json()
 

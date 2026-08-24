@@ -28,7 +28,7 @@ def _answer_correctly(client, headers, territory_id):
 def test_streak_just_extended_only_on_first_play_of_the_day(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     first = _answer_correctly(client, headers, "numeros")
     assert first["streak_just_extended"] is True
@@ -42,7 +42,7 @@ def test_streak_just_extended_only_on_first_play_of_the_day(client):
 def test_territory_just_conquered_fires_once_at_the_exact_threshold(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     conquered_events = []
     for _ in range(20):
@@ -81,7 +81,7 @@ def test_wrong_answer_after_conquest_never_shows_false_positive_conquered(client
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(20):
         progress = client.get("/progress", headers=headers).json()
@@ -98,7 +98,7 @@ def test_wrong_answer_after_conquest_never_shows_false_positive_conquered(client
 def test_newly_awarded_badges_included_once_in_answer_response(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     results = []
     for _ in range(10):
@@ -114,7 +114,7 @@ def test_newly_awarded_badges_included_once_in_answer_response(client):
 def test_level_up_true_only_on_the_answer_that_crosses_the_level_boundary(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     # Bypassa o limite diário pra viabilizar XP suficiente pra subir de
     # nível (XP_PER_LEVEL=100) sem depender da regra de negócio do limite.
     client.post("/subscription/parental-gate", headers=headers)
@@ -134,7 +134,7 @@ def test_level_up_true_only_on_the_answer_that_crosses_the_level_boundary(client
 def test_new_level_only_populated_when_level_up_is_true(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 

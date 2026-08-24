@@ -37,7 +37,7 @@ def _get_challenge_and_answer(client, headers, territory_id):
 def test_correct_answer_recognized_on_first_attempt_without_any_hint(client, territory_id):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge, correct = _get_challenge_and_answer(client, headers, territory_id)
 
@@ -56,7 +56,7 @@ def test_correct_answer_recognized_on_first_attempt_without_any_hint(client, ter
 def test_answer_comparison_is_case_insensitive(client, territory_id):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge, correct = _get_challenge_and_answer(client, headers, territory_id)
 
@@ -80,7 +80,7 @@ def test_answer_comparison_is_case_insensitive(client, territory_id):
 def test_answer_comparison_trims_whitespace(client, territory_id):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge, correct = _get_challenge_and_answer(client, headers, territory_id)
 

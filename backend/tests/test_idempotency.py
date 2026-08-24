@@ -6,7 +6,7 @@ from .conftest import auth_header
 def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
 
@@ -62,7 +62,7 @@ def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
 def test_hint_penalty_applied_and_persisted_via_attempt_id(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
 
@@ -93,7 +93,7 @@ def test_hint_penalty_applied_and_persisted_via_attempt_id(client):
 def test_cannot_request_hint_after_answering(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
     attempt_id = str(uuid.uuid4())

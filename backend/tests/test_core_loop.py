@@ -7,7 +7,7 @@ def test_full_core_loop_correct_answer(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
 
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)
     assert resp.status_code == 200
@@ -38,7 +38,7 @@ def test_full_core_loop_correct_answer(client):
 def test_correct_answer_awards_xp_and_updates_territory_progress(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
 
@@ -78,7 +78,7 @@ def test_paid_territory_allows_free_sample_then_locks(client, monkeypatch):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     for _ in range(2):
         resp = client.get("/challenges/next", params={"territory_id": "logica"}, headers=headers)

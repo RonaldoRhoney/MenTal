@@ -17,7 +17,7 @@ def test_default_language_is_pt_br():
 def test_next_challenge_defaults_to_pt_br_without_explicit_param(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)
     assert resp.status_code == 200
@@ -26,7 +26,7 @@ def test_next_challenge_defaults_to_pt_br_without_explicit_param(client):
 def test_next_challenge_accepts_explicit_language_code_param(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.get(
         "/challenges/next",
@@ -41,7 +41,7 @@ def test_unsupported_language_code_returns_no_challenges_not_wrong_language(clie
     # existe no banco não deve, silenciosamente, devolver conteúdo pt-BR.
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     resp = client.get(
         "/challenges/next",

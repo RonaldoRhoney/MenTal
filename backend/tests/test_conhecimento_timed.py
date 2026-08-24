@@ -16,7 +16,7 @@ from .conftest import auth_header
 def test_conhecimento_always_returns_time_limit_even_without_mode_param(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get("/challenges/next", params={"territory_id": "conhecimento"}, headers=headers).json()
     assert body["time_limit_seconds"] is not None
@@ -27,7 +27,7 @@ def test_conhecimento_easy_level_is_also_timed_unlike_palavras_relampago(client)
     """Diferente de Palavras Relâmpago (nunca fácil), Conhecimento não tem piso de nível."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     saw_easy = False
     for _ in range(15):
@@ -47,7 +47,7 @@ def test_conhecimento_options_are_the_real_curated_ones_not_synthesized(client):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get("/challenges/next", params={"territory_id": "conhecimento"}, headers=headers).json()
     matching = next(
@@ -79,7 +79,7 @@ def test_conhecimento_speed_bonus_applies_like_palavras(client):
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     ch = client.get("/challenges/next", params={"territory_id": "conhecimento"}, headers=headers).json()
     correct = next(c["correct_answer"] for c in CHALLENGES if c["territory_id"] == "conhecimento" and c["prompt"] == ch["prompt"])
@@ -102,7 +102,7 @@ def test_palavras_normal_mode_still_untimed_unaffected_by_generalization(client)
     """Reafirma que a generalização não tornou Palavras obrigatoriamente cronometrado."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
-    client.post("/age-gate", json={"age_mode": "adult"}, headers=headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     body = client.get("/challenges/next", params={"territory_id": "palavras"}, headers=headers).json()
     assert body["time_limit_seconds"] is None
