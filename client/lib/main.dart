@@ -30,12 +30,13 @@ const String kApiBaseUrl = String.fromEnvironment(
 const String kSupabaseUrl = 'https://daogwiqwqplcvehdhksf.supabase.co';
 const String kSupabasePublishableKey = 'sb_publishable_-91P1bkCU4bGLEGPJ84l_A_CPqCRZys';
 
-/// MENTAL-DIR-001 (24/08/2026): publicar a Política de Privacidade/Termos
-/// de Uso numa URL pública é responsabilidade de Rhoney (fora do escopo
-/// técnico do Claude Code, ver MENTAL-POL-002 §8) — TROCAR por essa URL
-/// real assim que ela existir. mental-privacidade.html/PRIVACY_POLICY.md
-/// (raiz do repo) têm o conteúdo pronto, só falta hospedar.
-const String kPrivacyPolicyUrl = 'https://mental.rhoneyinc.com/privacidade';
+/// MENTAL-DIR-001 (24/08/2026): hospedagem definitiva em domínio próprio
+/// (mental.rhoneyinc.com) continua sendo responsabilidade de Rhoney, fora
+/// do escopo técnico do Claude Code (MENTAL-POL-002 §8) — trocar por essa
+/// URL quando ela existir. Até lá, hospedado via GitHub Pages (branch
+/// `gh-pages`, gratuito, sem risco de cobrança) só pra desbloquear a
+/// submissão no Google Play, que exige uma URL pública real já agora.
+const String kPrivacyPolicyUrl = 'https://ronaldorhoney.github.io/MenTal/';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

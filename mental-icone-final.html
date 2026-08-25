@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENTAL — Ícone Final Refinado</title>
+<style>
+  :root { --bg:#111013; --gold:#E2BE6E; --teal:#3FA796; --bone:#EDE7DA; --muted:#8A8578; }
+  * { box-sizing: border-box; }
+  body { background:#0a0a0c; color:var(--bone); font-family:'Segoe UI',system-ui,sans-serif; margin:0; padding:48px 24px; }
+  h1 { text-align:center; font-family:Georgia,serif; color:var(--gold); font-size:26px; margin-bottom:6px; }
+  .subtitle { text-align:center; color:var(--muted); margin-bottom:44px; font-size:14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:32px; max-width:1000px; margin:0 auto; }
+  .card { background:#16151a; border:1px solid rgba(226,190,110,0.15); border-radius:16px; padding:28px; text-align:center; }
+  .card h2 { font-size:15px; color:var(--bone); margin:20px 0 4px; }
+  .card p { font-size:12.5px; color:var(--muted); margin:0 0 20px; line-height:1.5; }
+  .icon-row { display:flex; justify-content:center; gap:18px; align-items:flex-end; flex-wrap:wrap; }
+  .icon-large { width:140px; height:140px; border-radius:30px; background:var(--bg); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .icon-med { width:64px; height:64px; border-radius:14px; background:var(--bg); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .icon-small { width:48px; height:48px; border-radius:11px; background:var(--bg); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .label { font-size:10px; color:var(--muted); margin-top:6px; }
+  .icon-wrap { display:flex; flex-direction:column; align-items:center; }
+  .on-white { background:#f4f0e6 !important; }
+  .note { max-width:760px; margin:40px auto 0; background:#16151a; border-left:3px solid var(--gold); padding:20px 24px; border-radius:6px; font-size:13.5px; color:var(--bone); line-height:1.7; }
+  .note strong { color:var(--gold); }
+</style>
+</head>
+<body>
+
+<h1>MENTAL — Ícone Final (Opção A Refinada)</h1>
+<p class="subtitle">Sinapse + silhueta de mente + trilha ascendente de conquista — em 3 tamanhos e 2 fundos</p>
+
+<div class="grid">
+  <div class="card">
+    <div class="icon-row">
+      <div class="icon-wrap">
+        <div class="icon-large">
+          <svg width="94" height="94" viewBox="0 0 100 100">
+            <defs>
+              <radialGradient id="glowF" cx="50%" cy="46%" r="62%">
+                <stop offset="0%" stop-color="#E2BE6E" stop-opacity="0.28"/>
+                <stop offset="100%" stop-color="#E2BE6E" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="47" r="38" fill="url(#glowF)"/>
+            <!-- silhueta sutil de mente -->
+            <path d="M50 15 C33 15, 19 27, 19 45 C19 57, 26 65, 34 70 L34 81 L66 81 L66 70 C74 65, 81 57, 81 45 C81 27, 67 15, 50 15 Z"
+                  fill="none" stroke="#3A3560" stroke-width="1.1" opacity="0.5"/>
+            <!-- trilha ascendente de conquista: do canto inferior esquerdo até o nó central, subindo -->
+            <path d="M28 68 L36 58 L44 62 L50 47" fill="none" stroke="#3FA796" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+            <circle cx="28" cy="68" r="2.2" fill="#3FA796"/>
+            <circle cx="36" cy="58" r="2.2" fill="#3FA796"/>
+            <circle cx="44" cy="62" r="2.2" fill="#3FA796"/>
+            <!-- sinapse principal -->
+            <line x1="33" y1="33" x2="50" y2="47" stroke="#E2BE6E" stroke-width="2.3"/>
+            <line x1="50" y1="47" x2="69" y2="37" stroke="#E2BE6E" stroke-width="2.3"/>
+            <line x1="50" y1="47" x2="63" y2="62" stroke="#3FA796" stroke-width="2.3"/>
+            <line x1="33" y1="33" x2="28" y2="49" stroke="#E2BE6E" stroke-width="1.5" opacity="0.75"/>
+            <line x1="69" y1="37" x2="72" y2="54" stroke="#3FA796" stroke-width="1.5" opacity="0.75"/>
+            <!-- nó central com destaque de "pico conquistado" -->
+            <circle cx="50" cy="47" r="9.5" fill="none" stroke="#E2BE6E" stroke-width="1" opacity="0.4"/>
+            <circle cx="50" cy="47" r="6" fill="#E2BE6E"/>
+            <path d="M47 44 L50 40 L53 44" fill="none" stroke="#111013" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="33" cy="33" r="4" fill="#E2BE6E"/>
+            <circle cx="69" cy="37" r="4" fill="#3FA796"/>
+            <circle cx="63" cy="62" r="4" fill="#E2BE6E"/>
+            <circle cx="28" cy="49" r="2.6" fill="#E2BE6E"/>
+            <circle cx="72" cy="54" r="2.6" fill="#3FA796"/>
+          </svg>
+        </div>
+        <span class="label">140px — fundo escuro</span>
+      </div>
+      <div class="icon-wrap">
+        <div class="icon-med">
+          <svg width="42" height="42" viewBox="0 0 100 100">
+            <path d="M28 68 L36 58 L44 62 L50 47" fill="none" stroke="#3FA796" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+            <circle cx="28" cy="68" r="2.6" fill="#3FA796"/>
+            <circle cx="36" cy="58" r="2.6" fill="#3FA796"/>
+            <line x1="33" y1="33" x2="50" y2="47" stroke="#E2BE6E" stroke-width="2.8"/>
+            <line x1="50" y1="47" x2="69" y2="37" stroke="#E2BE6E" stroke-width="2.8"/>
+            <line x1="50" y1="47" x2="63" y2="62" stroke="#3FA796" stroke-width="2.8"/>
+            <circle cx="50" cy="47" r="7" fill="#E2BE6E"/>
+            <path d="M47 44 L50 40 L53 44" fill="none" stroke="#111013" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="33" cy="33" r="4.5" fill="#E2BE6E"/>
+            <circle cx="69" cy="37" r="4.5" fill="#3FA796"/>
+            <circle cx="63" cy="62" r="4.5" fill="#E2BE6E"/>
+          </svg>
+        </div>
+        <span class="label">64px</span>
+      </div>
+      <div class="icon-wrap">
+        <div class="icon-small">
+          <svg width="30" height="30" viewBox="0 0 100 100">
+            <line x1="33" y1="33" x2="50" y2="47" stroke="#E2BE6E" stroke-width="3.2"/>
+            <line x1="50" y1="47" x2="69" y2="37" stroke="#E2BE6E" stroke-width="3.2"/>
+            <line x1="50" y1="47" x2="63" y2="62" stroke="#3FA796" stroke-width="3.2"/>
+            <circle cx="50" cy="47" r="7.5" fill="#E2BE6E"/>
+            <path d="M47 44 L50 40 L53 44" fill="none" stroke="#111013" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="33" cy="33" r="5" fill="#E2BE6E"/>
+            <circle cx="69" cy="37" r="5" fill="#3FA796"/>
+            <circle cx="63" cy="62" r="5" fill="#E2BE6E"/>
+          </svg>
+        </div>
+        <span class="label">48px — real</span>
+      </div>
+    </div>
+    <h2>Ícone Final</h2>
+    <p>
+      Sinapse central com pequeno "pico" (▲) gravado no nó principal — remete a cume/conquista.
+      Trilha teal ascendente inferior-esquerda sugere progresso subindo até o nó (o "caminho até a conquista").
+      Silhueta de mente quase invisível ao fundo, só perceptível de perto — ancora o conceito sem poluir.
+    </p>
+  </div>
+</div>
+
+<div class="note">
+  <strong>Por que essa versão comunica "Mental é quem conquista com a mente":</strong><br>
+  1. <strong>Sinapse</strong> = a mente em atividade, raciocínio, conexão de ideias — o "como".<br>
+  2. <strong>Pico/seta no nó central</strong> = o momento de conquista, o resultado do raciocínio — o "o quê".<br>
+  3. <strong>Trilha ascendente</strong> = a jornada de progresso (nível, território, mundo) — o "processo" gamificado do app.<br>
+  4. <strong>Cores douro/teal</strong> = mantém 100% a paleta oficial já usada em toda a identidade visual do MENTAL.
+</div>
+
+</body>
+</html>
