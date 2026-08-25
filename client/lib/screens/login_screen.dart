@@ -5,10 +5,11 @@ import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
 
 /// Login real via Supabase Auth (docs/02_IMPLEMENTATION/SUPABASE_SETUP.md
-/// §5, FAMILY_SAFETY.md §3.1). Ordem de método decidida por Rhoney:
-/// 1) Google, 2) email/senha, 3) Facebook — a ordem de exibição não pode
-/// significar fricção extra pra quem não tem conta Google, então
-/// email/senha fica igualmente visível, nunca enterrado.
+/// §5). Ordem decidida por Rhoney em 24/08/2026: Google, Facebook,
+/// email/senha — revisada depois de MENTAL-DIR-001 (MENTAL passou a
+/// ser exclusivo pra maiores de 18 anos), quando deixou de existir a
+/// preocupação original de FAMILY_SAFETY.md §3.1 (criança sem conta
+/// Google ficando com email/senha "enterrado" atrás de dois sociais).
 ///
 /// Google e Facebook usam signInWithOAuth (fluxo via navegador do
 /// sistema, nunca SDK nativo) — não depende de SHA-1 de nenhuma keystore
@@ -136,10 +137,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppColors.muted),
                 ),
                 const SizedBox(height: 40),
-                OutlinedButton.icon(
-                  onPressed: _loading ? null : () => _signInWithProvider(OAuthProvider.google),
-                  icon: const Icon(Icons.g_mobiledata, size: 28),
-                  label: Text(l10n.loginGoogleButton),
+                _GoogleButton(
+                  loading: _loading,
+                  onPressed: () => _signInWithProvider(OAuthProvider.google),
+                  label: l10n.loginGoogleButton,
+                ),
+                const SizedBox(height: 12),
+                _FacebookButton(
+                  loading: _loading,
+                  onPressed: () => _signInWithProvider(OAuthProvider.facebook),
+                  label: l10n.loginFacebookButton,
                 ),
                 const SizedBox(height: 20),
                 Row(
@@ -192,15 +199,131 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 8),
                   Text(_info!, style: const TextStyle(color: AppColors.teal), textAlign: TextAlign.center),
                 ],
-                const SizedBox(height: 24),
-                OutlinedButton.icon(
-                  onPressed: _loading ? null : () => _signInWithProvider(OAuthProvider.facebook),
-                  icon: const Icon(Icons.facebook_outlined, size: 22),
-                  label: Text(l10n.loginFacebookButton),
-                ),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Botão do Google seguindo as diretrizes oficiais de branding (fundo
+/// claro, nunca escuro — Google exige contraste específico pro logo
+/// multicolor): base branca, borda sutil, "G" pintado nas 4 cores
+/// oficiais (sem depender de asset de imagem/SVG externo).
+class _GoogleButton extends StatelessWidget {
+  const _GoogleButton({required this.loading, required this.onPressed, required this.label});
+
+  final bool loading;
+  final VoidCallback onPressed;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 48,
+      child: ElevatedButton(
+        onPressed: loading ? null : onPressed,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          foregroundColor: const Color(0xFF1F1F1F),
+          disabledBackgroundColor: Colors.white.withValues(alpha: 0.6),
+          elevation: 0,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+          side: const BorderSide(color: Color(0xFFDADCE0)),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const _GoogleGlyph(),
+            const SizedBox(width: 12),
+            Flexible(
+              child: Text(
+                label,
+                style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// "G" pintado nas 4 cores oficiais do Google (azul/vermelho/amarelo/
+/// verde) via CustomPaint — sem depender de fonte de ícone nem asset
+/// externo, evita o cinza monocromático de Icons.g_mobiledata que não
+/// é reconhecível como a marca real.
+class _GoogleGlyph extends StatelessWidget {
+  const _GoogleGlyph();
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(width: 20, height: 20, child: CustomPaint(painter: _GoogleGlyphPainter()));
+  }
+}
+
+class _GoogleGlyphPainter extends CustomPainter {
+  const _GoogleGlyphPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = Offset(size.width / 2, size.height / 2);
+    final radius = size.width / 2;
+    final strokeWidth = size.width * 0.22;
+    final rect = Rect.fromCircle(center: center, radius: radius - strokeWidth / 2);
+
+    void arc(double startDeg, double sweepDeg, Color color) {
+      final paint = Paint()
+        ..color = color
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = strokeWidth
+        ..strokeCap = StrokeCap.butt;
+      canvas.drawArc(rect, startDeg * 3.1415926535 / 180, sweepDeg * 3.1415926535 / 180, false, paint);
+    }
+
+    // Quatro arcos formando o círculo do "G", cores oficiais do Google.
+    arc(-40, 100, const Color(0xFF4285F4)); // azul
+    arc(60, 90, const Color(0xFF34A853)); // verde
+    arc(150, 80, const Color(0xFFFBBC05)); // amarelo
+    arc(230, 90, const Color(0xFFEA4335)); // vermelho
+
+    // Barra horizontal do "G" (traço característico), na cor azul.
+    final barPaint = Paint()..color = const Color(0xFF4285F4);
+    canvas.drawRect(
+      Rect.fromLTWH(size.width * 0.48, size.height * 0.42, size.width * 0.46, strokeWidth * 0.85),
+      barPaint,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+
+/// Botão do Facebook seguindo o branding oficial: fundo no azul da
+/// marca (#1877F2), ícone e texto em branco.
+class _FacebookButton extends StatelessWidget {
+  const _FacebookButton({required this.loading, required this.onPressed, required this.label});
+
+  final bool loading;
+  final VoidCallback onPressed;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 48,
+      child: ElevatedButton.icon(
+        onPressed: loading ? null : onPressed,
+        icon: const Icon(Icons.facebook, color: Colors.white, size: 24),
+        label: Text(label, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.white)),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xFF1877F2),
+          disabledBackgroundColor: const Color(0xFF1877F2).withValues(alpha: 0.6),
+          elevation: 0,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
         ),
       ),
     );

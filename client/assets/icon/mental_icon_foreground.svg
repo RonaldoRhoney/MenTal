@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <!-- Canvas adaptativo padrão Android (108x108, zona segura ~72x72
+       centralizada) — mesmo desenho do ícone completo, só sem o fundo
+       #111013 (o fundo do ícone adaptativo é a camada background
+       separada, cor sólida configurada no flutter_launcher_icons) e
+       deslocado +4/+4 pra centralizar a arte de 100x100 no canvas maior. -->
+  <g transform="translate(4, 4)">
+    <path
+      d="M50 15 C33 15, 19 27, 19 45 C19 57, 26 65, 34 70 L34 81 L66 81 L66 70 C74 65, 81 57, 81 45 C81 27, 67 15, 50 15 Z"
+      stroke="#3A3560" stroke-width="1.1" opacity="0.5" fill="none"/>
+
+    <path d="M28 68 L36 58 L44 62 L50 47"
+      stroke="#3FA796" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      opacity="0.85" fill="none"/>
+    <circle cx="28" cy="68" r="2.2" fill="#3FA796"/>
+    <circle cx="36" cy="58" r="2.2" fill="#3FA796"/>
+    <circle cx="44" cy="62" r="2.2" fill="#3FA796"/>
+
+    <line x1="50" y1="47" x2="33" y2="33" stroke="#E2BE6E" stroke-width="2.3"/>
+    <line x1="50" y1="47" x2="69" y2="37" stroke="#E2BE6E" stroke-width="2.3"/>
+    <line x1="50" y1="47" x2="63" y2="62" stroke="#3FA796" stroke-width="2.3"/>
+
+    <line x1="33" y1="33" x2="28" y2="49" stroke="#E2BE6E" stroke-width="1.5" opacity="0.75"/>
+    <line x1="69" y1="37" x2="72" y2="54" stroke="#3FA796" stroke-width="1.5" opacity="0.75"/>
+
+    <circle cx="50" cy="47" r="9.5" fill="none" stroke="#E2BE6E" stroke-width="1" opacity="0.4"/>
+    <circle cx="50" cy="47" r="6" fill="#E2BE6E"/>
+    <path d="M47 44 L50 40 L53 44" stroke="#111013" stroke-width="1.6" fill="none"
+      stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="33" cy="33" r="4" fill="#E2BE6E"/>
+    <circle cx="69" cy="37" r="4" fill="#3FA796"/>
+    <circle cx="63" cy="62" r="4" fill="#E2BE6E"/>
+    <circle cx="28" cy="49" r="2.6" fill="#E2BE6E"/>
+    <circle cx="72" cy="54" r="2.6" fill="#3FA796"/>
+  </g>
+</svg>

@@ -61,16 +61,16 @@ void main() {
   });
 
   testWidgets(
-    'FAMILY_SAFETY.md §3.1: Google aparece antes do formulário, Facebook depois — email/senha nunca enterrado',
+    'Ordem decidida por Rhoney (24/08/2026, pós-DIR-001): Google, depois Facebook, depois email/senha',
     (tester) async {
       await _pumpLoginScreen(tester);
 
-      final googleButton = tester.getRect(find.widgetWithText(OutlinedButton, 'Continuar com Google'));
+      final googleButton = tester.getRect(find.widgetWithText(ElevatedButton, 'Continuar com Google'));
+      final facebookButton = tester.getRect(find.widgetWithText(ElevatedButton, 'Continuar com Facebook'));
       final emailField = tester.getRect(find.widgetWithText(TextField, 'E-mail'));
-      final facebookButton = tester.getRect(find.widgetWithText(OutlinedButton, 'Continuar com Facebook'));
 
-      expect(googleButton.top, lessThan(emailField.top));
-      expect(facebookButton.top, greaterThan(emailField.top));
+      expect(googleButton.top, lessThan(facebookButton.top));
+      expect(facebookButton.top, lessThan(emailField.top));
     },
   );
 }
