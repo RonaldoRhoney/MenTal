@@ -133,6 +133,50 @@ class _CelebrationFakeApiClient extends ApiClient {
   }
 }
 
+/// FEEDBACK_POS_NIVEL.md — conta chamadas a nextChallenge/submitLevelFeedback
+/// pra provar que "Repetir este nível" NÃO busca um desafio novo (mesmo
+/// challenge_id) e "Seguir em frente" busca (comportamento já existente).
+class _FeedbackTrackingFakeApiClient extends ApiClient {
+  _FeedbackTrackingFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+
+  int nextChallengeCalls = 0;
+  final List<Map<String, dynamic>> feedbackSubmissions = [];
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+    nextChallengeCalls++;
+    return {
+      'challenge_id': 'fake-challenge-id',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': 'Quanto é 2 + 2?',
+      'options': ['3', '4', '5', '6'],
+      'hints_available': 2,
+    };
+  }
+
+  @override
+  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
+    return _baseAnswerPayload();
+  }
+
+  @override
+  Future<Map<String, dynamic>> submitLevelFeedback({
+    required String challengeId,
+    required String action,
+    required String difficultyRating,
+    String? comment,
+  }) async {
+    feedbackSubmissions.add({
+      'challenge_id': challengeId,
+      'action': action,
+      'difficulty_rating': difficultyRating,
+      'comment': comment,
+    });
+    return {'ok': true};
+  }
+}
+
 Map<String, dynamic> _baseAnswerPayload() => {
       'is_correct': true,
       'correct_answer': '4',
@@ -471,6 +515,87 @@ void main() {
 
       expect(errors, isEmpty, reason: '"reduzir movimento" não pode causar exceção ao celebrar um evento forte');
       expect(find.text('Nível 2 alcançado!'), findsOneWidget);
+    });
+  });
+
+  group('Feedback Pós-Nível (FEEDBACK_POS_NIVEL.md)', () {
+    Future<_FeedbackTrackingFakeApiClient> pumpAndAnswer(WidgetTester tester) async {
+      final client = _FeedbackTrackingFakeApiClient();
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: ChallengeScreen(client: client, territoryId: 'numeros', territoryLabel: 'Números'),
+        ),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.widgetWithText(RadioListTile<String>, '4'));
+      await tester.pump();
+      await tester.tap(find.widgetWithText(FilledButton, 'Confirmar resposta'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
+      return client;
+    }
+
+    testWidgets('tela de resultado mostra os blocos de ação e dificuldade em vez do botão "Próximo desafio"', (tester) async {
+      await pumpAndAnswer(tester);
+
+      expect(find.text('Como foi esse nível?'), findsOneWidget);
+      expect(find.text('Repetir este nível'), findsOneWidget);
+      expect(find.text('Seguir em frente'), findsOneWidget);
+      expect(find.text('Fácil'), findsOneWidget);
+      expect(find.text('Médio'), findsOneWidget);
+      expect(find.text('Difícil'), findsOneWidget);
+      expect(find.text('Muito difícil'), findsOneWidget);
+      expect(find.widgetWithText(FilledButton, 'Próximo desafio'), findsNothing);
+    });
+
+    testWidgets('"Repetir este nível" envia o feedback e NÃO busca um desafio novo', (tester) async {
+      final client = await pumpAndAnswer(tester);
+      final callsBefore = client.nextChallengeCalls;
+
+      await tester.tap(find.text('Repetir este nível'));
+      await tester.pump();
+      await tester.tap(find.text('Médio'));
+      await tester.pump();
+
+      expect(client.nextChallengeCalls, callsBefore, reason: 'repetir não deve chamar /challenges/next de novo');
+      expect(client.feedbackSubmissions, hasLength(1));
+      expect(client.feedbackSubmissions.single['action'], 'repeat');
+      expect(client.feedbackSubmissions.single['difficulty_rating'], 'medio');
+      // Volta pra tela de desafio (mesmo challenge), não fica presa no resultado.
+      expect(find.text('Quanto é 2 + 2?'), findsOneWidget);
+    });
+
+    testWidgets('"Seguir em frente" envia o feedback e busca o próximo desafio', (tester) async {
+      final client = await pumpAndAnswer(tester);
+      final callsBefore = client.nextChallengeCalls;
+
+      await tester.tap(find.text('Seguir em frente'));
+      await tester.pump();
+      await tester.tap(find.text('Difícil'));
+      await tester.pumpAndSettle();
+
+      expect(client.nextChallengeCalls, callsBefore + 1);
+      expect(client.feedbackSubmissions, hasLength(1));
+      expect(client.feedbackSubmissions.single['action'], 'continue');
+      expect(client.feedbackSubmissions.single['difficulty_rating'], 'dificil');
+    });
+
+    testWidgets('comentário opcional em branco não bloqueia o envio', (tester) async {
+      final client = await pumpAndAnswer(tester);
+
+      await tester.tap(find.text('Seguir em frente'));
+      await tester.pump();
+      await tester.tap(find.text('Fácil'));
+      await tester.pumpAndSettle();
+
+      expect(client.feedbackSubmissions.single['comment'], isNull);
     });
   });
 }

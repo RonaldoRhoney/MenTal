@@ -117,6 +117,26 @@ class ApiClient {
     );
   }
 
+  // FEEDBACK_POS_NIVEL.md (aprovado) — coleta pura, nunca afeta XP/
+  // dificuldade adaptativa. comment é opcional, não bloqueia o envio.
+  Future<Map<String, dynamic>> submitLevelFeedback({
+    required String challengeId,
+    required String action,
+    required String difficultyRating,
+    String? comment,
+  }) async {
+    return _post(
+      _uri('/level-feedback'),
+      headers: _headers,
+      body: jsonEncode({
+        'challenge_id': challengeId,
+        'action': action,
+        'difficulty_rating': difficultyRating,
+        'comment': comment,
+      }),
+    );
+  }
+
   Future<Map<String, dynamic>> progress() async {
     return _get(_uri('/progress'), headers: _headers);
   }

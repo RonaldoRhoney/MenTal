@@ -116,6 +116,30 @@ class AppLocalizationsPt extends AppLocalizations {
   String get nextChallengeButton => 'Próximo desafio';
 
   @override
+  String get levelFeedbackHeading => 'Como foi esse nível?';
+
+  @override
+  String get levelFeedbackRepeatAction => 'Repetir este nível';
+
+  @override
+  String get levelFeedbackContinueAction => 'Seguir em frente';
+
+  @override
+  String get levelFeedbackDifficultyFacil => 'Fácil';
+
+  @override
+  String get levelFeedbackDifficultyMedio => 'Médio';
+
+  @override
+  String get levelFeedbackDifficultyDificil => 'Difícil';
+
+  @override
+  String get levelFeedbackDifficultyMuitoDificil => 'Muito difícil';
+
+  @override
+  String get levelFeedbackCommentHint => 'Comentário (opcional)';
+
+  @override
   String get progressTooltip => 'Progresso';
 
   @override

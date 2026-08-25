@@ -280,6 +280,54 @@ abstract class AppLocalizations {
   /// **'Próximo desafio'**
   String get nextChallengeButton;
 
+  /// FEEDBACK_POS_NIVEL.md — heading for the post-level feedback blocks
+  ///
+  /// In pt, this message translates to:
+  /// **'Como foi esse nível?'**
+  String get levelFeedbackHeading;
+
+  /// FEEDBACK_POS_NIVEL.md — action block, option to redo the same level
+  ///
+  /// In pt, this message translates to:
+  /// **'Repetir este nível'**
+  String get levelFeedbackRepeatAction;
+
+  /// FEEDBACK_POS_NIVEL.md — action block, option to advance to the next level
+  ///
+  /// In pt, this message translates to:
+  /// **'Seguir em frente'**
+  String get levelFeedbackContinueAction;
+
+  /// FEEDBACK_POS_NIVEL.md — difficulty rating option
+  ///
+  /// In pt, this message translates to:
+  /// **'Fácil'**
+  String get levelFeedbackDifficultyFacil;
+
+  /// FEEDBACK_POS_NIVEL.md — difficulty rating option
+  ///
+  /// In pt, this message translates to:
+  /// **'Médio'**
+  String get levelFeedbackDifficultyMedio;
+
+  /// FEEDBACK_POS_NIVEL.md — difficulty rating option
+  ///
+  /// In pt, this message translates to:
+  /// **'Difícil'**
+  String get levelFeedbackDifficultyDificil;
+
+  /// FEEDBACK_POS_NIVEL.md — difficulty rating option
+  ///
+  /// In pt, this message translates to:
+  /// **'Muito difícil'**
+  String get levelFeedbackDifficultyMuitoDificil;
+
+  /// FEEDBACK_POS_NIVEL.md — optional free-text comment field hint
+  ///
+  /// In pt, this message translates to:
+  /// **'Comentário (opcional)'**
+  String get levelFeedbackCommentHint;
+
   /// Home app bar icon tooltip, opens Progress screen
   ///
   /// In pt, this message translates to:

@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -16,6 +17,32 @@ class AgeGateResponse(BaseModel):
     nickname: str
     age_confirmed_at: datetime
     terms_version_accepted: str
+
+
+class LevelFeedbackRequest(BaseModel):
+    """FEEDBACK_POS_NIVEL.md — coleta pura, nunca afeta hint_penalty_factor
+    nem qualquer mecânica adaptativa. challenge_id identifica o "nível"
+    (território + difficulty_level do desafio recém-respondido)."""
+
+    challenge_id: str
+    action: Literal["repeat", "continue"]
+    difficulty_rating: Literal["facil", "medio", "dificil", "muito_dificil"]
+    comment: str | None = Field(default=None, max_length=1000)
+
+
+class LevelFeedbackResponse(BaseModel):
+    ok: bool = True
+
+
+class AdminLevelFeedbackItem(BaseModel):
+    id: str
+    user_id: str
+    territory_id: str
+    challenge_id: str
+    action: str
+    difficulty_rating: str
+    comment: str | None
+    created_at: datetime
 
 
 class ChallengeOut(BaseModel):

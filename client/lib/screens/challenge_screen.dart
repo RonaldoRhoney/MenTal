@@ -60,6 +60,15 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   bool _hintsExhausted = false;
   Map<String, dynamic>? _result;
 
+  // FEEDBACK_POS_NIVEL.md (aprovado) — coleta pura de opinião pós-nível,
+  // nunca afeta hint_penalty_factor nem qualquer mecânica adaptativa.
+  // _feedbackHandled evita disparo duplo (ex.: dois taps rápidos nos
+  // blocos) já navegando/enviando de novo.
+  String? _feedbackAction;
+  String? _feedbackDifficulty;
+  bool _feedbackHandled = false;
+  final TextEditingController _feedbackCommentController = TextEditingController();
+
   // V2 item 15 — Palavras Relâmpago. Contagem regressiva controlada
   // aqui (não no backend) — o backend só recebe o tempo de resposta em
   // milissegundos ao submeter, é a única autoridade sobre XP/bônus. O
@@ -89,6 +98,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   void dispose() {
     _countdownTimer?.cancel();
     _celebration.dispose();
+    _feedbackCommentController.dispose();
     super.dispose();
   }
 
@@ -143,6 +153,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _timeLimitMs = null;
       _challengeShownAt = null;
       _submitted = false;
+      _feedbackAction = null;
+      _feedbackDifficulty = null;
+      _feedbackHandled = false;
+      _feedbackCommentController.clear();
     });
     try {
       final challenge = widget.battleId != null
@@ -300,6 +314,63 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       if (mounted) setState(() => _error = e.message);
     } finally {
       if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  /// FEEDBACK_POS_NIVEL.md §3 — "Repetir este nível" precisa de fato
+  /// refazer o MESMO desafio, não buscar um novo (_loadNextChallenge
+  /// sorteia outro). Mantém `_challenge` intacto, só reseta o estado de
+  /// resposta/tentativa.
+  Future<void> _repeatSameChallenge() async {
+    _countdownTimer?.cancel();
+    setState(() {
+      _attemptId = _uuid.v4();
+      _selectedOption = null;
+      _hintsShown = [];
+      _hintsExhausted = false;
+      _result = null;
+      _submitted = false;
+      _remainingMs = null;
+      _feedbackAction = null;
+      _feedbackDifficulty = null;
+      _feedbackHandled = false;
+      _feedbackCommentController.clear();
+    });
+    final timeLimitSeconds = _challenge?['time_limit_seconds'] as int?;
+    if (timeLimitSeconds != null) _startCountdown(timeLimitSeconds);
+  }
+
+  /// Dispara assim que os dois blocos obrigatórios (ação + dificuldade)
+  /// estiverem escolhidos — 1 toque por bloco, sem passo extra de
+  /// "confirmar" (FEEDBACK_POS_NIVEL.md §3, "sem fricção"). O comentário
+  /// livre é opcional e nunca bloqueia esse disparo. Envio ao backend é
+  /// melhor esforço: uma falha de rede aqui não deve travar a navegação
+  /// do jogador (é coleta de opinião, não uma ação crítica do core loop).
+  void _maybeSubmitLevelFeedback() {
+    if (_feedbackHandled || _feedbackAction == null || _feedbackDifficulty == null) return;
+    _feedbackHandled = true;
+
+    final challengeId = _challenge?['challenge_id'] as String?;
+    final action = _feedbackAction!;
+    final difficulty = _feedbackDifficulty!;
+    final comment = _feedbackCommentController.text.trim();
+    if (challengeId != null) {
+      unawaited(
+        widget.client
+            .submitLevelFeedback(
+              challengeId: challengeId,
+              action: action,
+              difficultyRating: difficulty,
+              comment: comment.isEmpty ? null : comment,
+            )
+            .catchError((_) => <String, dynamic>{}),
+      );
+    }
+
+    if (action == 'repeat') {
+      _repeatSameChallenge();
+    } else {
+      _loadNextChallenge();
     }
   }
 
@@ -724,10 +795,92 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         const SizedBox(height: 16),
         // V2 item 14 — batalha é um evento único por lado: depois de
         // responder, não há "próximo desafio" da mesma batalha, então o
-        // botão volta pra tela anterior em vez de tentar buscar de novo.
-        FilledButton(
-          onPressed: widget.battleId != null ? () => Navigator.of(context).pop() : _loadNextChallenge,
-          child: Text(widget.battleId != null ? l10n.backButton : l10n.nextChallengeButton),
+        // botão volta pra tela anterior em vez de mostrar o bloco de
+        // feedback (que fala em "nível", conceito que não existe numa
+        // batalha pontual entre dois jogadores).
+        if (widget.battleId != null)
+          FilledButton(onPressed: () => Navigator.of(context).pop(), child: Text(l10n.backButton))
+        else
+          _buildLevelFeedback(),
+      ],
+    );
+  }
+
+  /// FEEDBACK_POS_NIVEL.md — 3 blocos na mesma tela de resultado: ação,
+  /// avaliação de dificuldade (1 toque cada) e comentário livre opcional.
+  /// Assim que ação + dificuldade estiverem escolhidas, dispara o envio e
+  /// já navega (_maybeSubmitLevelFeedback) — sem botão extra de "confirmar
+  /// feedback", pra não parecer formulário burocrático.
+  Widget _buildLevelFeedback() {
+    final l10n = AppLocalizations.of(context)!;
+
+    Widget actionChip(String value, String label) {
+      final selected = _feedbackAction == value;
+      return Expanded(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4),
+          child: OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              backgroundColor: selected ? AppColors.gold.withValues(alpha: 0.15) : null,
+              side: BorderSide(color: selected ? AppColors.gold : AppColors.muted),
+            ),
+            onPressed: () {
+              setState(() => _feedbackAction = value);
+              _maybeSubmitLevelFeedback();
+            },
+            child: Text(label, textAlign: TextAlign.center),
+          ),
+        ),
+      );
+    }
+
+    Widget difficultyChip(String value, String label) {
+      final selected = _feedbackDifficulty == value;
+      return ChoiceChip(
+        label: Text(label),
+        selected: selected,
+        selectedColor: AppColors.teal.withValues(alpha: 0.25),
+        side: BorderSide(color: selected ? AppColors.teal : AppColors.muted),
+        onSelected: (_) {
+          setState(() => _feedbackDifficulty = value);
+          _maybeSubmitLevelFeedback();
+        },
+      );
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(
+          l10n.levelFeedbackHeading,
+          textAlign: TextAlign.center,
+          style: const TextStyle(color: AppColors.muted, fontSize: 14),
+        ),
+        const SizedBox(height: 8),
+        Row(
+          children: [
+            actionChip('repeat', l10n.levelFeedbackRepeatAction),
+            actionChip('continue', l10n.levelFeedbackContinueAction),
+          ],
+        ),
+        const SizedBox(height: 12),
+        Wrap(
+          alignment: WrapAlignment.center,
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            difficultyChip('facil', l10n.levelFeedbackDifficultyFacil),
+            difficultyChip('medio', l10n.levelFeedbackDifficultyMedio),
+            difficultyChip('dificil', l10n.levelFeedbackDifficultyDificil),
+            difficultyChip('muito_dificil', l10n.levelFeedbackDifficultyMuitoDificil),
+          ],
+        ),
+        const SizedBox(height: 12),
+        TextField(
+          controller: _feedbackCommentController,
+          decoration: InputDecoration(hintText: l10n.levelFeedbackCommentHint),
+          minLines: 1,
+          maxLines: 3,
         ),
       ],
     );

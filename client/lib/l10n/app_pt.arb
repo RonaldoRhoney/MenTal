@@ -117,6 +117,30 @@
   "nextChallengeButton": "Próximo desafio",
   "@nextChallengeButton": {"description": "Button to load the next challenge"},
 
+  "levelFeedbackHeading": "Como foi esse nível?",
+  "@levelFeedbackHeading": {"description": "FEEDBACK_POS_NIVEL.md — heading for the post-level feedback blocks"},
+
+  "levelFeedbackRepeatAction": "Repetir este nível",
+  "@levelFeedbackRepeatAction": {"description": "FEEDBACK_POS_NIVEL.md — action block, option to redo the same level"},
+
+  "levelFeedbackContinueAction": "Seguir em frente",
+  "@levelFeedbackContinueAction": {"description": "FEEDBACK_POS_NIVEL.md — action block, option to advance to the next level"},
+
+  "levelFeedbackDifficultyFacil": "Fácil",
+  "@levelFeedbackDifficultyFacil": {"description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"},
+
+  "levelFeedbackDifficultyMedio": "Médio",
+  "@levelFeedbackDifficultyMedio": {"description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"},
+
+  "levelFeedbackDifficultyDificil": "Difícil",
+  "@levelFeedbackDifficultyDificil": {"description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"},
+
+  "levelFeedbackDifficultyMuitoDificil": "Muito difícil",
+  "@levelFeedbackDifficultyMuitoDificil": {"description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"},
+
+  "levelFeedbackCommentHint": "Comentário (opcional)",
+  "@levelFeedbackCommentHint": {"description": "FEEDBACK_POS_NIVEL.md — optional free-text comment field hint"},
+
   "progressTooltip": "Progresso",
   "@progressTooltip": {"description": "Home app bar icon tooltip, opens Progress screen"},
 

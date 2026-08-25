@@ -290,6 +290,25 @@ class Attempt(Base):
     speed_bonus_xp: Mapped[int] = mapped_column(Integer, default=0)
 
 
+class LevelFeedback(Base):
+    __tablename__ = "level_feedback"
+
+    # FEEDBACK_POS_NIVEL.md (aprovado): coleta pura de opinião pós-nível,
+    # nunca lida por hint_penalty_factor nem qualquer mecânica adaptativa
+    # — só o endpoint admin read-only (routers/level_feedback.py) consulta
+    # esta tabela. "Nível" == o challenge (difficulty_level) que acabou de
+    # ser respondido, único conceito de "nível concluído" que já existe no
+    # schema hoje.
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType)
+    territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"))
+    challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
+    action: Mapped[str] = mapped_column(String)  # repeat|continue
+    difficulty_rating: Mapped[str] = mapped_column(String)  # facil|medio|dificil|muito_dificil
+    comment: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class Streak(Base):
     __tablename__ = "streaks"
 
