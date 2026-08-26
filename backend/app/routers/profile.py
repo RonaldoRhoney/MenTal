@@ -26,6 +26,7 @@ def get_profile(user_id: str = Depends(get_current_user_id), db: Session = Depen
         location_state=profile.location_state,
         location_country=profile.location_country,
         location_public=profile.location_public,
+        age_confirmed_at=profile.age_confirmed_at,
     )
 
 
@@ -51,4 +52,5 @@ def update_profile(
         location_state=profile.location_state,
         location_country=profile.location_country,
         location_public=profile.location_public,
+        age_confirmed_at=profile.age_confirmed_at,
     )

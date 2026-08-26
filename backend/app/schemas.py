@@ -349,6 +349,12 @@ class ProfileOut(BaseModel):
     location_state: str | None
     location_country: str | None
     location_public: bool
+    # Achado real (2026-08-26): o client mostrava a tela de confirmação
+    # de maioridade a cada novo login, mesmo pra quem já tinha confirmado
+    # antes — o estado só vivia em memória no app, nunca era checado
+    # contra o backend. Expor aqui permite ao client pular a tela quando
+    # já não-nulo, perguntando só uma vez por conta (nunca de novo).
+    age_confirmed_at: datetime | None
 
 
 class UpdateProfileRequest(BaseModel):

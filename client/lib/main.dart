@@ -91,7 +91,14 @@ class AppEntryPoint extends StatefulWidget {
 
 class _AppEntryPointState extends State<AppEntryPoint> {
   ApiClient? _client;
-  bool _ageGateDone = false;
+  // Achado real (2026-08-26): a tela de confirmação de maioridade
+  // aparecia a cada login, mesmo pra quem já tinha confirmado antes —
+  // esse estado só existia em memória, nunca era checado contra o
+  // backend. Agora é tri-state: null = ainda checando GET /profile,
+  // true = já confirmou antes (pula a tela), false = precisa confirmar
+  // agora (só na primeira vez por conta).
+  bool? _ageConfirmed;
+  String? _ageCheckError;
   bool _splashDone = false;
   late final Stream<AuthState> _authStateStream;
   String? _lastAccessToken;
@@ -123,12 +130,25 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     _lastAccessToken = accessToken;
     setState(() {
       _client = accessToken == null ? null : ApiClient(baseUrl: kApiBaseUrl, accessToken: accessToken);
-      if (accessToken == null) _ageGateDone = false;
+      _ageConfirmed = null;
+      _ageCheckError = null;
     });
     if (accessToken != null) {
       // Fire-and-forget: registro de push nunca deve atrasar a navegação
       // pro Age Gate/Home (PushService já é resiliente a qualquer falha).
       PushService.instance.initializeAndRegister(_client!);
+      _checkAgeConfirmed(_client!);
+    }
+  }
+
+  Future<void> _checkAgeConfirmed(ApiClient client) async {
+    try {
+      final profile = await client.getProfile();
+      if (!mounted || client != _client) return;
+      setState(() => _ageConfirmed = profile['age_confirmed_at'] != null);
+    } on ApiException catch (e) {
+      if (!mounted || client != _client) return;
+      setState(() => _ageCheckError = e.message);
     }
   }
 
@@ -158,10 +178,54 @@ class _AppEntryPointState extends State<AppEntryPoint> {
           return const LoginScreen();
         }
 
-        if (!_ageGateDone) {
+        final l10n = AppLocalizations.of(context)!;
+
+        final ageCheckError = _ageCheckError;
+        if (ageCheckError != null) {
+          return Scaffold(
+            body: SafeArea(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(ageCheckError, textAlign: TextAlign.center),
+                    const SizedBox(height: 16),
+                    FilledButton(
+                      onPressed: () {
+                        setState(() => _ageCheckError = null);
+                        _checkAgeConfirmed(client);
+                      },
+                      child: Text(l10n.tryAgainButton),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        }
+
+        final ageConfirmed = _ageConfirmed;
+        if (ageConfirmed == null) {
+          return Scaffold(
+            body: SafeArea(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const CircularProgressIndicator(),
+                    const SizedBox(height: 16),
+                    Text(l10n.preparingChallenge),
+                  ],
+                ),
+              ),
+            ),
+          );
+        }
+
+        if (!ageConfirmed) {
           return AgeGateScreen(
             client: client,
-            onDone: () => setState(() => _ageGateDone = true),
+            onDone: () => setState(() => _ageConfirmed = true),
           );
         }
 
