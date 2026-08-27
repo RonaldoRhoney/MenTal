@@ -25,12 +25,14 @@ class _WelcomeSplashScreenState extends State<WelcomeSplashScreen> with SingleTi
   @override
   void initState() {
     super.initState();
-    // Achado real (2026-08-26, teste no dispositivo): 2.2s corridos era
-    // rápido demais pra acompanhar a formação do símbolo e a subida do
-    // slogan — esticado pra dar tempo real de apreciar cada estágio,
-    // com uma pausa no final antes de navegar pra Home.
-    _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 3400))..forward();
-    Future.delayed(const Duration(milliseconds: 4400), () {
+    // Achado real (2026-08-26, teste no dispositivo, 2 rodadas): a
+    // formação do símbolo (nó central → sinapses → nós externos)
+    // continuava rápida demais mesmo depois do primeiro ajuste —
+    // esticada de novo, agora com bem mais peso pra essa etapa
+    // especificamente (não só pro texto), dando tempo real de VER cada
+    // linha se desenhando.
+    _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 4800))..forward();
+    Future.delayed(const Duration(milliseconds: 5800), () {
       if (mounted) widget.onDone();
     });
   }
@@ -61,8 +63,8 @@ class _WelcomeSplashScreenState extends State<WelcomeSplashScreen> with SingleTi
             // termina de se formar, uma pequena pausa, só então o
             // wordmark sobe, e o slogan chega por último — em vez de
             // tudo se sobrepondo no mesmo intervalo curto.
-            final wordmarkT = Curves.easeOut.transform(_stage(t, 0.62, 0.8));
-            final sloganT = Curves.easeOut.transform(_stage(t, 0.82, 1.0));
+            final wordmarkT = Curves.easeOut.transform(_stage(t, 0.72, 0.86));
+            final sloganT = Curves.easeOut.transform(_stage(t, 0.88, 1.0));
             return Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -119,11 +121,11 @@ class _SynapseSplashPainter extends CustomPainter {
 
     // Estágio 1 — nó central "nasce" com um leve exagero elástico
     // (Curves.elasticOut), dando o toque de energia/vida que pediu.
-    final centerScale = Curves.elasticOut.transform(_stage(0.0, 0.25).clamp(0.0, 1.0));
+    final centerScale = Curves.elasticOut.transform(_stage(0.0, 0.16).clamp(0.0, 1.0));
     if (centerScale <= 0) return;
 
     // Estágio 2 — as 3 sinapses "crescem" do centro pros nós externos.
-    final lineT = Curves.easeOut.transform(_stage(0.18, 0.44));
+    final lineT = Curves.easeOut.transform(_stage(0.14, 0.5));
     final outerPoints = [p(33, 33), p(69, 37), p(63, 62)];
     final outerColors = [_gold, _gold, _teal];
     for (var i = 0; i < outerPoints.length; i++) {
@@ -139,7 +141,7 @@ class _SynapseSplashPainter extends CustomPainter {
     }
 
     // Estágio 3 — nós externos "acendem" com um pequeno bounce.
-    final nodeT = Curves.easeOutBack.transform(_stage(0.36, 0.58).clamp(0.0, 1.0));
+    final nodeT = Curves.easeOutBack.transform(_stage(0.46, 0.68).clamp(0.0, 1.0));
     if (nodeT > 0) {
       for (var i = 0; i < outerPoints.length; i++) {
         canvas.drawCircle(outerPoints[i], 4.5 * scale * nodeT, Paint()..color = outerColors[i]);
