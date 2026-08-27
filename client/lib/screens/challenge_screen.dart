@@ -800,8 +800,17 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         // batalha pontual entre dois jogadores).
         if (widget.battleId != null)
           FilledButton(onPressed: () => Navigator.of(context).pop(), child: Text(l10n.backButton))
+        else if (levelUp)
+          // FEEDBACK_POS_NIVEL.md §3 — "aparece sempre que um nível é
+          // concluído", não a cada resposta. Achado real (2026-08-26,
+          // teste fechado): mostrar em toda resposta causava fricção e
+          // risco de abandono. "Nível" aqui é o Nível geral do jogador
+          // (profile.level, por XP) — o mesmo já exibido na Home — não o
+          // desafio individual. O backend já calcula level_up/new_level
+          // pra decidir a celebração; reaproveita o mesmo sinal aqui.
+          _buildLevelFeedback()
         else
-          _buildLevelFeedback(),
+          FilledButton(onPressed: _loadNextChallenge, child: Text(l10n.nextChallengeButton)),
       ],
     );
   }

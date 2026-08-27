@@ -155,9 +155,17 @@ class _FeedbackTrackingFakeApiClient extends ApiClient {
     };
   }
 
+  // FEEDBACK_POS_NIVEL.md §3 — o feedback só dispara em level_up (Nível
+  // geral do jogador), não em toda resposta. Default true aqui porque a
+  // maioria dos testes deste grupo quer exercitar o bloco de feedback;
+  // o teste específico de "não deve aparecer" sobrescreve pra false.
+  bool levelUpOnAnswer = true;
+
   @override
   Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
-    return _baseAnswerPayload();
+    return _baseAnswerPayload()
+      ..['level_up'] = levelUpOnAnswer
+      ..['new_level'] = levelUpOnAnswer ? 5 : null;
   }
 
   @override
@@ -579,7 +587,12 @@ void main() {
       await tester.tap(find.text('Seguir em frente'));
       await tester.pump();
       await tester.tap(find.text('Difícil'));
-      await tester.pumpAndSettle();
+      // Não usar pumpAndSettle(): o payload de resposta tem level_up:true,
+      // então a celebração forte (confete) fica ativa mesmo depois de
+      // navegar pro próximo desafio — mesmo motivo já documentado em
+      // _pumpChallengeScreen acima.
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
 
       expect(client.nextChallengeCalls, callsBefore + 1);
       expect(client.feedbackSubmissions, hasLength(1));
@@ -593,9 +606,45 @@ void main() {
       await tester.tap(find.text('Seguir em frente'));
       await tester.pump();
       await tester.tap(find.text('Fácil'));
-      await tester.pumpAndSettle();
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
 
       expect(client.feedbackSubmissions.single['comment'], isNull);
+    });
+
+    testWidgets('regressão: SEM level_up, mostra "Próximo desafio" normal, não o bloco de feedback', (tester) async {
+      final client = _FeedbackTrackingFakeApiClient()..levelUpOnAnswer = false;
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: ChallengeScreen(client: client, territoryId: 'numeros', territoryLabel: 'Números'),
+        ),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.widgetWithText(RadioListTile<String>, '4'));
+      await tester.pump();
+      await tester.tap(find.widgetWithText(FilledButton, 'Confirmar resposta'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
+
+      expect(find.text('Como foi esse nível?'), findsNothing);
+      expect(find.text('Repetir este nível'), findsNothing);
+      expect(find.widgetWithText(FilledButton, 'Próximo desafio'), findsOneWidget);
+
+      // Achado real (2026-08-26): mostrar em toda resposta causava
+      // fricção — este é o cenário que fazia isso acontecer antes da
+      // correção. "Próximo desafio" precisa continuar funcionando normal.
+      final callsBefore = client.nextChallengeCalls;
+      await tester.tap(find.widgetWithText(FilledButton, 'Próximo desafio'));
+      await tester.pumpAndSettle();
+      expect(client.nextChallengeCalls, callsBefore + 1);
+      expect(client.feedbackSubmissions, isEmpty);
     });
   });
 }
