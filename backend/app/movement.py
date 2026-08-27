@@ -197,6 +197,12 @@ def collect_steps(
 
     cycle.xp_awarded += xp_delta
 
+    # Registra o total acumulado NESTE momento — histórico intradiário
+    # real pro gráfico de progressão do dia (não deriva de checkpoint_
+    # bonus_mask, que só sabe SE um bônus foi pago, não quantos passos
+    # existiam em cada ponto do tempo).
+    db.add(models.MovementSnapshot(cycle_id=cycle.id, recorded_at=now, steps_total=cycle.steps_collected))
+
     level_before = profile.level
     if xp_delta:
         profile.xp_total += xp_delta
@@ -206,3 +212,31 @@ def collect_steps(
     db.commit()
     db.refresh(cycle)
     return cycle, xp_delta, level_up, (profile.level if level_up else None), goal_reached, checkpoints_reached
+
+
+def get_recent_cycles(db: Session, user_id: str, limit: int = 7) -> list[models.MovementCycle]:
+    """Últimos N ciclos (mais recente primeiro) — gráfico semanal de
+    barras da tela Movimento. Inclui o ciclo em andamento se já existir
+    (parcial, com o que já foi coletado até agora)."""
+    return list(
+        db.execute(
+            select(models.MovementCycle)
+            .where(models.MovementCycle.user_id == user_id)
+            .order_by(models.MovementCycle.cycle_start_at.desc())
+            .limit(limit)
+        )
+        .scalars()
+        .all()
+    )
+
+
+def get_snapshots_for_cycle(db: Session, cycle_id: str) -> list[models.MovementSnapshot]:
+    return list(
+        db.execute(
+            select(models.MovementSnapshot)
+            .where(models.MovementSnapshot.cycle_id == cycle_id)
+            .order_by(models.MovementSnapshot.recorded_at)
+        )
+        .scalars()
+        .all()
+    )

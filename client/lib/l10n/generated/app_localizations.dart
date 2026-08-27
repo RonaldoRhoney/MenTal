@@ -796,6 +796,36 @@ abstract class AppLocalizations {
   /// **'{percent}% da meta'**
   String movementGoalProgressLabel(int percent);
 
+  /// Shown inside the progress ring when no daily goal is set yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Sem meta'**
+  String get movementNoGoalProgressLabel;
+
+  /// Weekly steps bar chart title
+  ///
+  /// In pt, this message translates to:
+  /// **'Últimos 7 dias'**
+  String get movementWeeklyChartTitle;
+
+  /// Weekly steps bar chart subtitle
+  ///
+  /// In pt, this message translates to:
+  /// **'Passos coletados por dia — veja em quais você caminhou mais.'**
+  String get movementWeeklyChartSubtitle;
+
+  /// Intraday steps line chart title
+  ///
+  /// In pt, this message translates to:
+  /// **'Seu dia até agora'**
+  String get movementTodayChartTitle;
+
+  /// Intraday steps line chart subtitle
+  ///
+  /// In pt, this message translates to:
+  /// **'Como seus passos foram acumulando ao longo do ciclo.'**
+  String get movementTodayChartSubtitle;
+
   /// Celebration message for one or more intraday checkpoints reached in a single collection
   ///
   /// In pt, this message translates to:

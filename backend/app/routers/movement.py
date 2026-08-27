@@ -8,13 +8,15 @@ from ..db import get_db
 router = APIRouter()
 
 
-def _cycle_out(cycle) -> schemas.MovementCycleOut:
+def _cycle_out(cycle, db: Session, *, with_snapshots: bool = False) -> schemas.MovementCycleOut:
+    snapshots = movement.get_snapshots_for_cycle(db, cycle.id) if with_snapshots else []
     return schemas.MovementCycleOut(
         id=cycle.id,
         cycle_start_at=cycle.cycle_start_at,
         cycle_end_at=cycle.cycle_end_at,
         steps_collected=cycle.steps_collected,
         xp_awarded=cycle.xp_awarded,
+        snapshots=[schemas.MovementSnapshotOut(recorded_at=s.recorded_at, steps_total=s.steps_total) for s in snapshots],
     )
 
 
@@ -37,11 +39,13 @@ def movement_status(user_id: str = Depends(get_current_user_id), db: Session = D
     if profile.movement_enabled and profile.movement_cycle_anchor_at is not None:
         current_cycle = movement.get_current_cycle(db, profile)
     pending_cycle = movement.get_pending_report_cycle(db, profile)
+    recent_cycles = movement.get_recent_cycles(db, user_id) if profile.movement_enabled else []
     return schemas.MovementStatusResponse(
         movement_enabled=profile.movement_enabled,
         daily_goal_steps=profile.movement_daily_goal_steps,
-        current_cycle=_cycle_out(current_cycle) if current_cycle else None,
-        pending_report_cycle=_cycle_out(pending_cycle) if pending_cycle else None,
+        current_cycle=_cycle_out(current_cycle, db, with_snapshots=True) if current_cycle else None,
+        pending_report_cycle=_cycle_out(pending_cycle, db) if pending_cycle else None,
+        recent_cycles=[_cycle_out(c, db) for c in recent_cycles],
     )
 
 
@@ -68,7 +72,7 @@ def collect_steps(
     except movement.MovementError as e:
         raise HTTPException(status_code=400, detail={"error": {"code": e.code, "message": e.message}})
     return schemas.MovementCollectResponse(
-        cycle=_cycle_out(cycle),
+        cycle=_cycle_out(cycle, db, with_snapshots=True),
         xp_awarded=xp_awarded,
         level_up=level_up,
         new_level=new_level,

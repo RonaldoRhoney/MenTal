@@ -374,3 +374,45 @@ def test_checkpoint_bonus_catches_up_multiple_windows_in_one_lazy_collection(cli
         )
     assert checkpoints_reached == 3
     assert xp == expected_checkpoint_xp + expected_main_tier_xp
+
+
+def test_collect_steps_records_snapshot_history_for_intraday_chart(client):
+    """
+    Redesign da tela Movimento (26/08/2026): checkpoint_bonus_mask só
+    sabia SE um bônus já foi pago, nunca QUANTOS passos existiam em cada
+    ponto do dia — sem isso não dá pra desenhar a curva intradiária real
+    (gráfico de linha). Cada coleta agora grava um snapshot com o total
+    acumulado naquele momento.
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+
+    client.post("/movement/collect", json={"steps": 1000}, headers=headers)
+    resp = client.post("/movement/collect", json={"steps": 500}, headers=headers)
+    assert resp.status_code == 200
+    snapshots = resp.json()["cycle"]["snapshots"]
+
+    assert len(snapshots) == 2
+    assert snapshots[0]["steps_total"] == 1000
+    assert snapshots[1]["steps_total"] == 1500
+    # Ordenado cronologicamente (o segundo veio depois do primeiro).
+    assert snapshots[0]["recorded_at"] <= snapshots[1]["recorded_at"]
+
+    status = client.get("/movement/status", headers=headers).json()
+    assert len(status["current_cycle"]["snapshots"]) == 2
+
+
+def test_movement_status_returns_recent_cycles_for_weekly_chart(client):
+    """Gráfico semanal de barras (redesign 26/08/2026) — GET /movement/
+    status precisa trazer os últimos ciclos, não só o atual."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+    client.post("/movement/collect", json={"steps": 3000}, headers=headers)
+
+    status = client.get("/movement/status", headers=headers).json()
+    assert len(status["recent_cycles"]) == 1
+    assert status["recent_cycles"][0]["steps_collected"] == 3000

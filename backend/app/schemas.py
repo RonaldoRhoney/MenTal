@@ -250,12 +250,21 @@ class NotificationPreferencesResponse(BaseModel):
     social_enabled: bool
 
 
+class MovementSnapshotOut(BaseModel):
+    recorded_at: datetime
+    steps_total: int
+
+
 class MovementCycleOut(BaseModel):
     id: str
     cycle_start_at: datetime
     cycle_end_at: datetime
     steps_collected: int
     xp_awarded: int
+    # Histórico intradiário real (um ponto por coleta feita nesse ciclo)
+    # — gráfico de linha da tela Movimento. Vazio pra ciclos que nunca
+    # tiveram nenhuma coleta ainda.
+    snapshots: list[MovementSnapshotOut] = []
 
 
 class MovementStatusResponse(BaseModel):
@@ -263,6 +272,9 @@ class MovementStatusResponse(BaseModel):
     daily_goal_steps: int | None
     current_cycle: MovementCycleOut | None
     pending_report_cycle: MovementCycleOut | None
+    # Últimos ciclos (mais recente primeiro, inclui o atual se existir) —
+    # gráfico semanal de barras. Cada item é um dia/ciclo de 24h.
+    recent_cycles: list[MovementCycleOut] = []
 
 
 class MovementCollectRequest(BaseModel):

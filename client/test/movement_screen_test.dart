@@ -15,13 +15,19 @@ import 'package:mental/screens/movement_screen.dart';
 /// que a tela trata como "sensor indisponível agora", nunca como erro
 /// fatal. Isso é o que permite testar o layout sem mockar hardware.
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient({required this.movementEnabled, this.currentCycle, this.pendingCycle, this.dailyGoalSteps})
-      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _FakeApiClient({
+    required this.movementEnabled,
+    this.currentCycle,
+    this.pendingCycle,
+    this.dailyGoalSteps,
+    this.recentCycles = const [],
+  }) : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   bool movementEnabled;
   Map<String, dynamic>? currentCycle;
   Map<String, dynamic>? pendingCycle;
   int? dailyGoalSteps;
+  List<Map<String, dynamic>> recentCycles;
   final List<String> calls = [];
 
   @override
@@ -32,6 +38,7 @@ class _FakeApiClient extends ApiClient {
       'daily_goal_steps': dailyGoalSteps,
       'current_cycle': currentCycle,
       'pending_report_cycle': pendingCycle,
+      'recent_cycles': recentCycles,
     };
   }
 
@@ -178,5 +185,93 @@ void main() {
     expect(client.calls, contains('set_goal'));
     expect(client.dailyGoalSteps, 20000);
     expect(find.text('Meta diária: 20000 passos'), findsOneWidget);
+  });
+
+  testWidgets('sem meta definida, o anel mostra o total de passos em vez de sumir (regressão)', (tester) async {
+    final client = _FakeApiClient(
+      movementEnabled: true,
+      currentCycle: {
+        'id': 'cycle-5',
+        'cycle_start_at': DateTime.utc(2026, 8, 22).toIso8601String(),
+        'cycle_end_at': DateTime.utc(2026, 8, 23).toIso8601String(),
+        'steps_collected': 3200,
+        'xp_awarded': 20,
+      },
+    );
+    await _pumpMovementScreen(tester, client);
+
+    expect(find.text('3200'), findsOneWidget);
+    expect(find.text('Sem meta'), findsOneWidget);
+  });
+
+  testWidgets('gráfico semanal aparece com pelo menos 2 ciclos e destaca o dia recorde', (tester) async {
+    final client = _FakeApiClient(
+      movementEnabled: true,
+      currentCycle: {
+        'id': 'cycle-today',
+        'cycle_start_at': DateTime.utc(2026, 8, 26).toIso8601String(),
+        'cycle_end_at': DateTime.utc(2026, 8, 27).toIso8601String(),
+        'steps_collected': 4000,
+        'xp_awarded': 20,
+      },
+      recentCycles: [
+        {
+          'id': 'cycle-today',
+          'cycle_start_at': DateTime.utc(2026, 8, 26).toIso8601String(),
+          'cycle_end_at': DateTime.utc(2026, 8, 27).toIso8601String(),
+          'steps_collected': 4000,
+          'xp_awarded': 20,
+        },
+        {
+          'id': 'cycle-yesterday',
+          'cycle_start_at': DateTime.utc(2026, 8, 25).toIso8601String(),
+          'cycle_end_at': DateTime.utc(2026, 8, 26).toIso8601String(),
+          'steps_collected': 9000,
+          'xp_awarded': 60,
+        },
+      ],
+    );
+    await _pumpMovementScreen(tester, client);
+
+    expect(find.text('Últimos 7 dias'), findsOneWidget);
+    expect(find.byType(BarChart), findsOneWidget);
+  });
+
+  testWidgets('com só 1 coleta no ciclo, gráfico intradiário ainda não aparece', (tester) async {
+    final client = _FakeApiClient(
+      movementEnabled: true,
+      currentCycle: {
+        'id': 'cycle-6',
+        'cycle_start_at': DateTime.utc(2026, 8, 26).toIso8601String(),
+        'cycle_end_at': DateTime.utc(2026, 8, 27).toIso8601String(),
+        'steps_collected': 1000,
+        'xp_awarded': 0,
+        'snapshots': [
+          {'recorded_at': DateTime.utc(2026, 8, 26, 6).toIso8601String(), 'steps_total': 1000},
+        ],
+      },
+    );
+    await _pumpMovementScreen(tester, client);
+    expect(find.text('Seu dia até agora'), findsNothing);
+  });
+
+  testWidgets('com 2+ coletas no ciclo, gráfico intradiário aparece', (tester) async {
+    final client = _FakeApiClient(
+      movementEnabled: true,
+      currentCycle: {
+        'id': 'cycle-7',
+        'cycle_start_at': DateTime.utc(2026, 8, 26).toIso8601String(),
+        'cycle_end_at': DateTime.utc(2026, 8, 27).toIso8601String(),
+        'steps_collected': 2500,
+        'xp_awarded': 0,
+        'snapshots': [
+          {'recorded_at': DateTime.utc(2026, 8, 26, 6).toIso8601String(), 'steps_total': 1000},
+          {'recorded_at': DateTime.utc(2026, 8, 26, 12).toIso8601String(), 'steps_total': 2500},
+        ],
+      },
+    );
+    await _pumpMovementScreen(tester, client);
+    expect(find.text('Seu dia até agora'), findsOneWidget);
+    expect(find.byType(LineChart), findsOneWidget);
   });
 }

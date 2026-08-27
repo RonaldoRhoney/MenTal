@@ -461,6 +461,21 @@
     "placeholders": {"percent": {"type": "int"}}
   },
 
+  "movementNoGoalProgressLabel": "Sem meta",
+  "@movementNoGoalProgressLabel": {"description": "Shown inside the progress ring when no daily goal is set yet"},
+
+  "movementWeeklyChartTitle": "Últimos 7 dias",
+  "@movementWeeklyChartTitle": {"description": "Weekly steps bar chart title"},
+
+  "movementWeeklyChartSubtitle": "Passos coletados por dia — veja em quais você caminhou mais.",
+  "@movementWeeklyChartSubtitle": {"description": "Weekly steps bar chart subtitle"},
+
+  "movementTodayChartTitle": "Seu dia até agora",
+  "@movementTodayChartTitle": {"description": "Intraday steps line chart title"},
+
+  "movementTodayChartSubtitle": "Como seus passos foram acumulando ao longo do ciclo.",
+  "@movementTodayChartSubtitle": {"description": "Intraday steps line chart subtitle"},
+
   "movementCheckpointReachedMessage": "{count, plural, =1{Checkpoint do dia batido! +{xp} XP extra 🚶} other{{count} checkpoints do dia batidos! +{xp} XP extra 🚶}}",
   "@movementCheckpointReachedMessage": {
     "description": "Celebration message for one or more intraday checkpoints reached in a single collection",

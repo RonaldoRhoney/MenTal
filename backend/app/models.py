@@ -172,6 +172,24 @@ class MovementCycle(Base):
     checkpoint_bonus_mask: Mapped[int] = mapped_column(Integer, default=0)
 
 
+class MovementSnapshot(Base):
+    """
+    Registro de "quantos passos existiam até este momento", um por
+    coleta (POST /movement/collect) — achado real (2026-08-26): o
+    checkpoint_bonus_mask acima só guarda SE um bônus já foi pago, não
+    QUANTOS passos existiam em cada ponto do dia. Sem isso não dá pra
+    desenhar a curva intradiária real de progressão (pedido do redesign
+    da tela Movimento) — só o total acumulado do ciclo inteiro.
+    """
+
+    __tablename__ = "movement_snapshots"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    cycle_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("movement_cycles.id"), index=True)
+    recorded_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    steps_total: Mapped[int] = mapped_column(Integer)
+
+
 class World(Base):
     """
     V2 item 10 — Mundos completos (V2_KICKOFF.md §2/§6A). Agrupa

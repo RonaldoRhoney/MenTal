@@ -420,6 +420,23 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get movementNoGoalProgressLabel => 'Sem meta';
+
+  @override
+  String get movementWeeklyChartTitle => 'Últimos 7 dias';
+
+  @override
+  String get movementWeeklyChartSubtitle =>
+      'Passos coletados por dia — veja em quais você caminhou mais.';
+
+  @override
+  String get movementTodayChartTitle => 'Seu dia até agora';
+
+  @override
+  String get movementTodayChartSubtitle =>
+      'Como seus passos foram acumulando ao longo do ciclo.';
+
+  @override
   String movementCheckpointReachedMessage(int count, int xp) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
