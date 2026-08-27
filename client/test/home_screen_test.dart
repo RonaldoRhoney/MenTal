@@ -177,7 +177,7 @@ void main() {
     expect(find.textContaining('Visual'), findsWidgets);
   });
 
-  testWidgets('redesign 2026-08-26: bottom nav fixa com Início/Progresso/Ranking/Movimento/Mais', (tester) async {
+  testWidgets('redesign 2026-08-26: acessos dinâmicos (Progresso/Ranking/Amigos/Movimento) + bottom nav', (tester) async {
     SharedPreferences.setMockInitialValues({});
     await tester.pumpWidget(
       MaterialApp(
@@ -194,20 +194,19 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
 
-    expect(find.byType(NavigationBar), findsOneWidget);
-    expect(find.text('Início'), findsOneWidget);
+    // Ajuste de layout (pedido de Rhoney): Progresso/Ranking/Amigos/
+    // Movimento sobem pra cards de atalho dinâmicos logo abaixo da marca.
     expect(find.text('Progresso'), findsOneWidget);
     expect(find.text('Ranking'), findsOneWidget);
-    expect(find.text('Movimento'), findsOneWidget);
-    expect(find.text('Mais'), findsOneWidget);
-
-    // "Mais" abre um bottom sheet com os itens menos usados no dia a dia.
-    await tester.tap(find.text('Mais'));
-    await tester.pumpAndSettle();
     expect(find.text('Amigos'), findsOneWidget);
-    expect(find.text('Batalhas'), findsOneWidget);
+    expect(find.text('Movimento'), findsOneWidget);
+
+    // Bottom nav fica só com: Início, Perfil, Configurações, Batalhas, Feedback.
+    expect(find.byType(NavigationBar), findsOneWidget);
+    expect(find.text('Início'), findsOneWidget);
     expect(find.text('Perfil'), findsOneWidget);
     expect(find.text('Configurações'), findsOneWidget);
+    expect(find.text('Batalhas'), findsOneWidget);
     expect(find.text('Enviar feedback'), findsOneWidget);
   });
 }
