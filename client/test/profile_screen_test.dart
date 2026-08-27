@@ -33,6 +33,9 @@ class _FakeApiClient extends ApiClient {
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
+    String? city,
+    String? gender,
+    String? ageRange,
   }) async {
     lastUpdate = {
       'avatar_id': avatarId,
@@ -40,6 +43,9 @@ class _FakeApiClient extends ApiClient {
       'location_state': locationState,
       'location_country': locationCountry,
       'location_public': locationPublic,
+      'city': city,
+      'gender': gender,
+      'age_range': ageRange,
     };
     profile = {'nickname': 'Lontra-Sabida', ...lastUpdate!};
     return profile;
@@ -92,6 +98,9 @@ void main() {
       'location_state': 'SP',
       'location_country': 'Brasil',
       'location_public': true,
+      'city': null,
+      'gender': null,
+      'age_range': null,
     });
     expect(find.text('Perfil salvo!'), findsOneWidget);
   });

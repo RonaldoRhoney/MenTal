@@ -8,6 +8,7 @@ import 'l10n/generated/app_localizations.dart';
 import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
+import 'screens/mandatory_onboarding_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/welcome_splash_screen.dart';
 import 'services/push_service.dart';
@@ -100,6 +101,9 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   // agora (só na primeira vez por conta).
   bool? _ageConfirmed;
   String? _ageCheckError;
+  // Cadastro mínimo obrigatório (26/08/2026) — mesmo tri-state e mesma
+  // chamada GET /profile do age gate, checando onboarding_completed_at.
+  bool? _onboardingCompleted;
   // Splash de boas-vindas: uma vez por sessão de login, nunca de novo
   // enquanto a mesma sessão continuar ativa (ex.: navegar entre telas,
   // voltar do background).
@@ -137,21 +141,25 @@ class _AppEntryPointState extends State<AppEntryPoint> {
       _client = accessToken == null ? null : ApiClient(baseUrl: kApiBaseUrl, accessToken: accessToken);
       _ageConfirmed = null;
       _ageCheckError = null;
+      _onboardingCompleted = null;
       _welcomeSplashDone = false;
     });
     if (accessToken != null) {
       // Fire-and-forget: registro de push nunca deve atrasar a navegação
       // pro Age Gate/Home (PushService já é resiliente a qualquer falha).
       PushService.instance.initializeAndRegister(_client!);
-      _checkAgeConfirmed(_client!);
+      _checkProfileStatus(_client!);
     }
   }
 
-  Future<void> _checkAgeConfirmed(ApiClient client) async {
+  Future<void> _checkProfileStatus(ApiClient client) async {
     try {
       final profile = await client.getProfile();
       if (!mounted || client != _client) return;
-      setState(() => _ageConfirmed = profile['age_confirmed_at'] != null);
+      setState(() {
+        _ageConfirmed = profile['age_confirmed_at'] != null;
+        _onboardingCompleted = profile['onboarding_completed_at'] != null;
+      });
     } on ApiException catch (e) {
       if (!mounted || client != _client) return;
       setState(() => _ageCheckError = e.message);
@@ -199,7 +207,7 @@ class _AppEntryPointState extends State<AppEntryPoint> {
                     FilledButton(
                       onPressed: () {
                         setState(() => _ageCheckError = null);
-                        _checkAgeConfirmed(client);
+                        _checkProfileStatus(client);
                       },
                       child: Text(l10n.tryAgainButton),
                     ),
@@ -232,6 +240,31 @@ class _AppEntryPointState extends State<AppEntryPoint> {
           return AgeGateScreen(
             client: client,
             onDone: () => setState(() => _ageConfirmed = true),
+          );
+        }
+
+        final onboardingCompleted = _onboardingCompleted;
+        if (onboardingCompleted == null) {
+          return Scaffold(
+            body: SafeArea(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const CircularProgressIndicator(),
+                    const SizedBox(height: 16),
+                    Text(l10n.preparingChallenge),
+                  ],
+                ),
+              ),
+            ),
+          );
+        }
+
+        if (!onboardingCompleted) {
+          return MandatoryOnboardingScreen(
+            client: client,
+            onDone: () => setState(() => _onboardingCompleted = true),
           );
         }
 

@@ -202,6 +202,9 @@ class ApiClient {
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
+    String? city,
+    String? gender,
+    String? ageRange,
   }) async {
     return _put(
       _uri('/profile'),
@@ -212,6 +215,9 @@ class ApiClient {
         'location_state': locationState,
         'location_country': locationCountry,
         'location_public': locationPublic,
+        'city': city,
+        'gender': gender,
+        'age_range': ageRange,
       }),
     );
   }

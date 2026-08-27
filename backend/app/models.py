@@ -130,13 +130,28 @@ class Profile(Base):
     # ranking, battles). Existe só pra uso interno futuro (ex.: suporte),
     # nickname já cumpre o papel de identidade pública.
     real_name: Mapped[str | None] = mapped_column(String, nullable=True)
-    # Só estado/país, nunca cidade exata — risco real de localização fina
-    # de menor combinado com "usa este app" (mesmo cuidado já aplicado no
-    # MeuPet com GPS/IP/manual). location_public controla exibição:
-    # preencher não é o mesmo que exibir (opcional dentro do opcional).
+    # Estado é opcional (detalhe extra); location_public controla exibição
+    # pública de ambos — preencher não é o mesmo que exibir.
     location_state: Mapped[str | None] = mapped_column(String, nullable=True)
     location_country: Mapped[str | None] = mapped_column(String, nullable=True)
     location_public: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Cadastro mínimo obrigatório (pedido de Rhoney, 2026-08-26): antes
+    # dessa mudança, USER_PROFILE.md §1/§3 tratava nome/localização como
+    # 100% opcional e bloqueava explicitamente "cidade exata" por risco
+    # de localizar um menor — regra motivada pelo público misto de antes
+    # da DIR-001. Com o MENTAL agora exclusivo pra 18+ (sem child_safe_
+    # mode), essa restrição específica deixou de se aplicar; Rhoney
+    # decidiu tornar nome/país/cidade/gênero/faixa etária obrigatórios
+    # antes de liberar o jogo. `city` é campo novo (o antigo `location_
+    # state` continua existindo, mas não é mais obrigatório nem exigido
+    # aqui). `onboarding_completed_at` marca quando os 5 campos foram
+    # preenchidos pela primeira vez — GET /profile expõe pra o client
+    # decidir se mostra a tela de cadastro obrigatório, mesmo padrão já
+    # usado por age_confirmed_at.
+    city: Mapped[str | None] = mapped_column(String, nullable=True)
+    gender: Mapped[str | None] = mapped_column(String, nullable=True)  # masculino|feminino|nao_binario|prefiro_nao_informar
+    age_range: Mapped[str | None] = mapped_column(String, nullable=True)  # 18-25|26-30|31-45|46-50|51+
+    onboarding_completed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 
 class MovementCycle(Base):

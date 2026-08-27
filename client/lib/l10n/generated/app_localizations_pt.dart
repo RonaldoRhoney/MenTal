@@ -698,4 +698,41 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get loginOrDivider => 'ou';
+
+  @override
+  String get onboardingTitle => 'Antes de começar';
+
+  @override
+  String get onboardingSubtitle =>
+      'Só algumas informações básicas — leva menos de um minuto.';
+
+  @override
+  String get onboardingNameLabel => 'Nome';
+
+  @override
+  String get onboardingCountryLabel => 'País';
+
+  @override
+  String get onboardingCityLabel => 'Cidade';
+
+  @override
+  String get onboardingGenderTitle => 'Gênero';
+
+  @override
+  String get onboardingGenderMasculino => 'Masculino';
+
+  @override
+  String get onboardingGenderFeminino => 'Feminino';
+
+  @override
+  String get onboardingGenderNaoBinario => 'Não-binário';
+
+  @override
+  String get onboardingGenderPrefiroNaoInformar => 'Prefiro não informar';
+
+  @override
+  String get onboardingAgeRangeTitle => 'Faixa etária';
+
+  @override
+  String get onboardingContinueButton => 'Continuar';
 }

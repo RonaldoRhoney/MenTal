@@ -1257,6 +1257,78 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'ou'**
   String get loginOrDivider;
+
+  /// Mandatory onboarding screen title
+  ///
+  /// In pt, this message translates to:
+  /// **'Antes de começar'**
+  String get onboardingTitle;
+
+  /// Mandatory onboarding screen subtitle
+  ///
+  /// In pt, this message translates to:
+  /// **'Só algumas informações básicas — leva menos de um minuto.'**
+  String get onboardingSubtitle;
+
+  /// Mandatory onboarding name field label
+  ///
+  /// In pt, this message translates to:
+  /// **'Nome'**
+  String get onboardingNameLabel;
+
+  /// Mandatory onboarding country field label
+  ///
+  /// In pt, this message translates to:
+  /// **'País'**
+  String get onboardingCountryLabel;
+
+  /// Mandatory onboarding city field label
+  ///
+  /// In pt, this message translates to:
+  /// **'Cidade'**
+  String get onboardingCityLabel;
+
+  /// Mandatory onboarding gender section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Gênero'**
+  String get onboardingGenderTitle;
+
+  /// Gender option
+  ///
+  /// In pt, this message translates to:
+  /// **'Masculino'**
+  String get onboardingGenderMasculino;
+
+  /// Gender option
+  ///
+  /// In pt, this message translates to:
+  /// **'Feminino'**
+  String get onboardingGenderFeminino;
+
+  /// Gender option
+  ///
+  /// In pt, this message translates to:
+  /// **'Não-binário'**
+  String get onboardingGenderNaoBinario;
+
+  /// Gender option
+  ///
+  /// In pt, this message translates to:
+  /// **'Prefiro não informar'**
+  String get onboardingGenderPrefiroNaoInformar;
+
+  /// Mandatory onboarding age range section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Faixa etária'**
+  String get onboardingAgeRangeTitle;
+
+  /// Mandatory onboarding submit button
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar'**
+  String get onboardingContinueButton;
 }
 
 class _AppLocalizationsDelegate

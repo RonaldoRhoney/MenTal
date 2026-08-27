@@ -1,7 +1,27 @@
 # MENTAL — Perfil do Usuário (campos obrigatórios vs opcionais)
 
-**Status:** Aprovado.
-**Documentos relacionados:** FAMILY_SAFETY.md, V2_KICKOFF.md (item 12 — Amigos), DESIGN_SYSTEM.md
+**Status:** Aprovado. **Revisado em 26/08/2026** — ver nota abaixo.
+**Documentos relacionados:** FAMILY_SAFETY.md, V2_KICKOFF.md (item 12 — Amigos), DESIGN_SYSTEM.md, MENTAL-DIR-001
+
+---
+
+## Revisão 26/08/2026 — cadastro mínimo obrigatório
+
+Decisão de Rhoney: **nome, país, cidade, gênero e faixa etária** (18-25,
+26-30, 31-45, 46-50, 51+) passam a ser **obrigatórios antes de jogar**,
+coletados numa tela de onboarding única (uma vez por conta,
+`onboarding_completed_at` no backend). Isso substitui, para esses 5
+campos específicos, o princípio geral da seção 1 abaixo.
+
+A restrição original de "nunca cidade exata" (seção 3) era motivada
+pelo público misto (crianças incluídas) de antes da MENTAL-DIR-001 —
+com o MENTAL agora exclusivo para maiores de 18 anos (sem
+`child_safe_mode`), o risco de localização fina de menor que motivava
+essa regra deixou de existir. Cidade passa a ser coletada normalmente.
+
+Nickname/avatar continuam como identidade pública; nome real continua
+nunca exibido publicamente (mesma regra da seção 3). Localização
+(estado) continua opcional além do país/cidade agora obrigatórios.
 
 ---
 

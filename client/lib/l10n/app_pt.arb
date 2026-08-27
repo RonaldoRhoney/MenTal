@@ -744,5 +744,41 @@
   "@loginFacebookButton": {"description": "Facebook OAuth sign-in button"},
 
   "loginOrDivider": "ou",
-  "@loginOrDivider": {"description": "Divider text between OAuth buttons and email/password form"}
+  "@loginOrDivider": {"description": "Divider text between OAuth buttons and email/password form"},
+
+  "onboardingTitle": "Antes de começar",
+  "@onboardingTitle": {"description": "Mandatory onboarding screen title"},
+
+  "onboardingSubtitle": "Só algumas informações básicas — leva menos de um minuto.",
+  "@onboardingSubtitle": {"description": "Mandatory onboarding screen subtitle"},
+
+  "onboardingNameLabel": "Nome",
+  "@onboardingNameLabel": {"description": "Mandatory onboarding name field label"},
+
+  "onboardingCountryLabel": "País",
+  "@onboardingCountryLabel": {"description": "Mandatory onboarding country field label"},
+
+  "onboardingCityLabel": "Cidade",
+  "@onboardingCityLabel": {"description": "Mandatory onboarding city field label"},
+
+  "onboardingGenderTitle": "Gênero",
+  "@onboardingGenderTitle": {"description": "Mandatory onboarding gender section title"},
+
+  "onboardingGenderMasculino": "Masculino",
+  "@onboardingGenderMasculino": {"description": "Gender option"},
+
+  "onboardingGenderFeminino": "Feminino",
+  "@onboardingGenderFeminino": {"description": "Gender option"},
+
+  "onboardingGenderNaoBinario": "Não-binário",
+  "@onboardingGenderNaoBinario": {"description": "Gender option"},
+
+  "onboardingGenderPrefiroNaoInformar": "Prefiro não informar",
+  "@onboardingGenderPrefiroNaoInformar": {"description": "Gender option"},
+
+  "onboardingAgeRangeTitle": "Faixa etária",
+  "@onboardingAgeRangeTitle": {"description": "Mandatory onboarding age range section title"},
+
+  "onboardingContinueButton": "Continuar",
+  "@onboardingContinueButton": {"description": "Mandatory onboarding submit button"}
 }

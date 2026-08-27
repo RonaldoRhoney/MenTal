@@ -351,6 +351,10 @@ class BattlesResponse(BaseModel):
     battles: list[BattleOut]
 
 
+GenderValue = Literal["masculino", "feminino", "nao_binario", "prefiro_nao_informar"]
+AgeRangeValue = Literal["18-25", "26-30", "31-45", "46-50", "51+"]
+
+
 class ProfileOut(BaseModel):
     nickname: str
     avatar_id: str | None
@@ -367,6 +371,13 @@ class ProfileOut(BaseModel):
     # contra o backend. Expor aqui permite ao client pular a tela quando
     # já não-nulo, perguntando só uma vez por conta (nunca de novo).
     age_confirmed_at: datetime | None
+    # Cadastro mínimo obrigatório (26/08/2026) — mesmo padrão acima:
+    # onboarding_completed_at permite ao client pular a tela de cadastro
+    # quando os 5 campos já foram preenchidos antes.
+    city: str | None
+    gender: str | None
+    age_range: str | None
+    onboarding_completed_at: datetime | None
 
 
 class UpdateProfileRequest(BaseModel):
@@ -375,3 +386,6 @@ class UpdateProfileRequest(BaseModel):
     location_state: str | None = None
     location_country: str | None = None
     location_public: bool = False
+    city: str | None = None
+    gender: GenderValue | None = None
+    age_range: AgeRangeValue | None = None
