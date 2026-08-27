@@ -351,10 +351,11 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-/// Seção de um Mundo — cabeçalho com nome + selo de completo, visualmente
-/// separado do próximo Mundo por um Card com fundo levemente elevado
-/// (achado real do redesign: antes o cabeçalho "Mundo da X" mal se
-/// distinguia da lista de baixo, mesmo peso visual pra tudo).
+/// Seção de um Mundo — colapsável (pedido de Rhoney, 2026-08-26: "não
+/// quero tudo na tela"): só o cabeçalho fica visível por padrão, os
+/// territórios daquele Mundo (grid 2 colunas) só aparecem ao tocar nele
+/// e expandir. Cada Mundo é visualmente separado do próximo por um card
+/// com fundo levemente elevado.
 class _WorldSection extends StatelessWidget {
   const _WorldSection({this.title, this.completed = false, required this.children});
 
@@ -365,28 +366,32 @@ class _WorldSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: AppColors.bg2,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            if (title != null) ...[
-              Row(
-                children: [
-                  Expanded(child: Text(title!, style: Theme.of(context).textTheme.titleLarge)),
-                  if (completed) const Icon(Icons.check_circle, color: AppColors.gold, size: 20),
-                ],
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Material(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(16),
+        clipBehavior: Clip.antiAlias,
+        child: title == null
+            ? Padding(padding: const EdgeInsets.all(16), child: Column(children: children))
+            : Theme(
+                data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                child: ExpansionTile(
+                  tilePadding: const EdgeInsets.symmetric(horizontal: 16),
+                  childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                  iconColor: AppColors.gold,
+                  collapsedIconColor: AppColors.muted,
+                  title: Row(
+                    children: [
+                      Expanded(child: Text(title!, style: Theme.of(context).textTheme.titleLarge)),
+                      if (completed) ...[
+                        const Icon(Icons.check_circle, color: AppColors.gold, size: 20),
+                        const SizedBox(width: 8),
+                      ],
+                    ],
+                  ),
+                  children: children,
+                ),
               ),
-              const SizedBox(height: 14),
-            ],
-            ...children,
-          ],
-        ),
       ),
     );
   }

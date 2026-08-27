@@ -98,10 +98,19 @@ void main() {
     await tester.pump(const Duration(milliseconds: 100));
 
     expect(find.text('Mundo da Linguagem'), findsOneWidget);
+    // Redesign 2026-08-26 (pedido de Rhoney: "não quero tudo na tela"):
+    // Mundo colapsado por padrão — o território não deve estar visível
+    // ainda, só o cabeçalho.
+    expect(find.text('Novo desafio — Palavras'), findsNothing);
     // Redesign 2026-08-26: cards com grid 2 colunas + header de marca
     // empurram o segundo Mundo pra fora da dobra inicial — precisa rolar.
     await tester.scrollUntilVisible(find.text('Mundo da Mente Lógica'), 200, scrollable: find.byType(Scrollable).first);
     expect(find.text('Mundo da Mente Lógica'), findsOneWidget);
+
+    // Ao expandir, os territórios daquele Mundo aparecem.
+    await tester.tap(find.text('Mundo da Linguagem'));
+    await tester.pumpAndSettle();
+    expect(find.text('Novo desafio — Palavras'), findsOneWidget);
 
     // Selo de completo (ícone) aparece uma vez, só no mundo com
     // completed=true — o backend decide isso, não a Home.
@@ -125,6 +134,11 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
 
+    // Redesign 2026-08-26: cada Mundo agora é colapsável ("não quero
+    // tudo na tela") — precisa expandir antes de ver os territórios.
+    await tester.tap(find.text('Mundo da Linguagem'));
+    await tester.pumpAndSettle();
+
     expect(find.text('Detentor: Fulano'), findsOneWidget);
     expect(find.text('Você é o detentor'), findsOneWidget);
   });
@@ -145,13 +159,16 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    // ListView constrói os itens sob demanda (Sliver) — o bloco
-    // "Matemática" fica abaixo da dobra inicial, precisa rolar até ele
-    // aparecer antes de buscar pelo texto.
-    await tester.scrollUntilVisible(find.text('Matemática'), 200, scrollable: find.byType(Scrollable));
+    // Redesign 2026-08-26: Mundo colapsável — expande "Mundo da Mente
+    // Lógica" (onde numeros/logica/visual/conhecimento vivem) antes de
+    // procurar pelos territórios/blocos internos.
+    await tester.scrollUntilVisible(find.text('Mundo da Mente Lógica'), 200, scrollable: find.byType(Scrollable));
+    await tester.tap(find.text('Mundo da Mente Lógica'));
+    await tester.pumpAndSettle();
 
     // Aparece uma única vez (agrupa numeros+logica sob o mesmo bloco,
     // não repete o sub-cabeçalho por território).
+    await tester.scrollUntilVisible(find.text('Matemática'), 200, scrollable: find.byType(Scrollable));
     expect(find.text('Matemática'), findsOneWidget);
 
     // Território sem bloco (visual, no mesmo Mundo) continua acessível
