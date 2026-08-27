@@ -70,4 +70,57 @@ void main() {
     expect(client.updateCalls, hasLength(1));
     expect(client.updateCalls.single, {'reengagement_enabled': true, 'social_enabled': true});
   });
+
+  testWidgets('"Sair" esvazia a pilha de navegação, revelando a tela por baixo (regressão)', (tester) async {
+    // Achado real (2026-08-26): SettingsScreen chega via Navigator.push
+    // a partir da Home — sem esvaziar a pilha antes do signOut, ela (ou
+    // qualquer outra tela empilhada) continuava visível por cima mesmo
+    // depois da sessão cair, escondendo a transição automática pro
+    // Login que main.dart (authStateChanges) já faz na raiz.
+    SharedPreferences.setMockInitialValues({});
+    final client = _FakeApiClient();
+    var signOutCalled = false;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: Builder(
+          builder: (context) => Scaffold(
+            body: Center(
+              child: FilledButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => SettingsScreen(
+                      client: client,
+                      signOut: () async => signOutCalled = true,
+                    ),
+                  ),
+                ),
+                child: const Text('abrir configurações'),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('abrir configurações'));
+    await tester.pumpAndSettle();
+    expect(find.text('Sair'), findsOneWidget);
+
+    await tester.tap(find.text('Sair'));
+    await tester.pumpAndSettle();
+
+    expect(signOutCalled, isTrue);
+
+    expect(find.text('abrir configurações'), findsOneWidget, reason: 'a pilha deve voltar pra raiz, revelando a tela de baixo');
+    expect(find.text('Sair'), findsNothing);
+  });
 }

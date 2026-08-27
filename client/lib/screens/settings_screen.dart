@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -20,9 +22,15 @@ import '../theme/app_theme.dart';
 /// os toggles já funcionam (a preferência é salva e respeitada), só não
 /// há token pra receber notificação de fato.
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({super.key, required this.client});
+  const SettingsScreen({super.key, required this.client, this.signOut = _defaultSignOut});
 
   final ApiClient client;
+  // Injeção só pra teste (evita a chamada de rede real do Supabase SDK,
+  // que arma timers internos que sobrevivem ao fim do widget test) —
+  // em produção sempre usa o signOut real do Supabase Auth.
+  final Future<void> Function() signOut;
+
+  static Future<void> _defaultSignOut() => Supabase.instance.client.auth.signOut();
 
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
@@ -140,11 +148,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     Text(_notificationsError!, style: const TextStyle(color: AppColors.error)),
                   ],
                   const SizedBox(height: 28),
-                  // Login real via Supabase Auth — sair aqui só encerra a
-                  // sessão local; main.dart (authStateChanges) volta
-                  // sozinho pra tela de login.
+                  // Login real via Supabase Auth — main.dart
+                  // (authStateChanges) já reconstrói a raiz pra LoginScreen
+                  // sozinho quando a sessão cai. Mas essa tela chegou aqui
+                  // via Navigator.push (empilhada por cima da raiz) —
+                  // achado real (2026-08-26): sem o popUntil, essa tela
+                  // (e qualquer outra empilhada, ex.: veio de dentro de um
+                  // desafio) continuava visível por cima, escondendo a
+                  // transição — o usuário só via o Login depois de voltar
+                  // manualmente. Esvazia a pilha primeiro pra revelar a
+                  // raiz, então encerra a sessão.
                   OutlinedButton(
-                    onPressed: () => Supabase.instance.client.auth.signOut(),
+                    onPressed: () {
+                      Navigator.of(context).popUntil((route) => route.isFirst);
+                      // Fire-and-forget: a navegação já aconteceu acima,
+                      // não precisa esperar a resposta de rede do signOut
+                      // (main.dart já limpa a sessão local assim que o
+                      // evento de auth chega, mesmo que a chamada de
+                      // logout no servidor demore ou falhe).
+                      unawaited(widget.signOut().catchError((_) {}));
+                    },
                     child: Text(l10n.settingsSignOutButton),
                   ),
                 ],
