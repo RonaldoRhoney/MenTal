@@ -798,5 +798,11 @@
   "@feedbackSendButton": {"description": "General feedback submit button"},
 
   "feedbackSentMessage": "Feedback enviado! Obrigado por ajudar a melhorar o MENTAL. 🙌",
-  "@feedbackSentMessage": {"description": "Confirmation message after sending general feedback"}
+  "@feedbackSentMessage": {"description": "Confirmation message after sending general feedback"},
+
+  "homeNavLabel": "Início",
+  "@homeNavLabel": {"description": "Bottom navigation label for the Home destination"},
+
+  "moreNavLabel": "Mais",
+  "@moreNavLabel": {"description": "Bottom navigation label for the overflow menu (Friends/Battles/Profile/Settings/Feedback)"}
 }

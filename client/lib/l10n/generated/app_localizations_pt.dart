@@ -755,4 +755,10 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get feedbackSentMessage =>
       'Feedback enviado! Obrigado por ajudar a melhorar o MENTAL. 🙌';
+
+  @override
+  String get homeNavLabel => 'Início';
+
+  @override
+  String get moreNavLabel => 'Mais';
 }

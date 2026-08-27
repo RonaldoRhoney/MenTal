@@ -1365,6 +1365,18 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Feedback enviado! Obrigado por ajudar a melhorar o MENTAL. 🙌'**
   String get feedbackSentMessage;
+
+  /// Bottom navigation label for the Home destination
+  ///
+  /// In pt, this message translates to:
+  /// **'Início'**
+  String get homeNavLabel;
+
+  /// Bottom navigation label for the overflow menu (Friends/Battles/Profile/Settings/Feedback)
+  ///
+  /// In pt, this message translates to:
+  /// **'Mais'**
+  String get moreNavLabel;
 }
 
 class _AppLocalizationsDelegate

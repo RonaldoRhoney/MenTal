@@ -98,6 +98,9 @@ void main() {
     await tester.pump(const Duration(milliseconds: 100));
 
     expect(find.text('Mundo da Linguagem'), findsOneWidget);
+    // Redesign 2026-08-26: cards com grid 2 colunas + header de marca
+    // empurram o segundo Mundo pra fora da dobra inicial — precisa rolar.
+    await tester.scrollUntilVisible(find.text('Mundo da Mente Lógica'), 200, scrollable: find.byType(Scrollable).first);
     expect(find.text('Mundo da Mente Lógica'), findsOneWidget);
 
     // Selo de completo (ícone) aparece uma vez, só no mundo com
@@ -155,5 +158,39 @@ void main() {
     // normalmente, sem nenhum sub-cabeçalho de bloco acima dele.
     await tester.scrollUntilVisible(find.textContaining('Visual'), 200, scrollable: find.byType(Scrollable));
     expect(find.textContaining('Visual'), findsWidgets);
+  });
+
+  testWidgets('redesign 2026-08-26: bottom nav fixa com Início/Progresso/Ranking/Movimento/Mais', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: HomeScreen(client: _FakeApiClient()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.byType(NavigationBar), findsOneWidget);
+    expect(find.text('Início'), findsOneWidget);
+    expect(find.text('Progresso'), findsOneWidget);
+    expect(find.text('Ranking'), findsOneWidget);
+    expect(find.text('Movimento'), findsOneWidget);
+    expect(find.text('Mais'), findsOneWidget);
+
+    // "Mais" abre um bottom sheet com os itens menos usados no dia a dia.
+    await tester.tap(find.text('Mais'));
+    await tester.pumpAndSettle();
+    expect(find.text('Amigos'), findsOneWidget);
+    expect(find.text('Batalhas'), findsOneWidget);
+    expect(find.text('Perfil'), findsOneWidget);
+    expect(find.text('Configurações'), findsOneWidget);
+    expect(find.text('Enviar feedback'), findsOneWidget);
   });
 }
