@@ -342,6 +342,24 @@ class LevelFeedback(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class AppFeedback(Base):
+    """
+    Canal geral de feedback (pedido de Rhoney, 2026-08-26) — diferente
+    de LevelFeedback (associado a um nível/desafio específico), esse é
+    um comentário livre sobre o app em geral, acessível a qualquer
+    momento pelo usuário (não amarrado a completar um nível). Mesmo
+    padrão de moderação/consulta administrativa do LevelFeedback: só o
+    endpoint admin read-only consulta esta tabela.
+    """
+
+    __tablename__ = "app_feedback"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType)
+    comment: Mapped[str] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class Streak(Base):
     __tablename__ = "streaks"
 

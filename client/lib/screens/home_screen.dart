@@ -11,13 +11,14 @@ import '../widgets/xp_bar.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
+import 'feedback_screen.dart';
 import 'friends_screen.dart';
 import 'movement_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
 
-enum _HomeMenuAction { profile, settings }
+enum _HomeMenuAction { profile, settings, feedback }
 
 /// Home: um CTA primário claro por território, conforme Princípio de
 /// Clareza Imediata (PRODUCT_PRINCIPLES.md §1) — nada compete visualmente
@@ -342,6 +343,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => SettingsScreen(client: widget.client)),
                   );
+                case _HomeMenuAction.feedback:
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => FeedbackScreen(client: widget.client)),
+                  );
               }
             },
             itemBuilder: (context) => [
@@ -359,6 +364,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   contentPadding: EdgeInsets.zero,
                   leading: const Icon(Icons.settings_outlined),
                   title: Text(l10n.settingsTooltip),
+                ),
+              ),
+              PopupMenuItem(
+                value: _HomeMenuAction.feedback,
+                child: ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.feedback_outlined),
+                  title: Text(l10n.feedbackMenuTooltip),
                 ),
               ),
             ],

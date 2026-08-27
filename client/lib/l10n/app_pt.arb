@@ -780,5 +780,23 @@
   "@onboardingAgeRangeTitle": {"description": "Mandatory onboarding age range section title"},
 
   "onboardingContinueButton": "Continuar",
-  "@onboardingContinueButton": {"description": "Mandatory onboarding submit button"}
+  "@onboardingContinueButton": {"description": "Mandatory onboarding submit button"},
+
+  "feedbackMenuTooltip": "Enviar feedback",
+  "@feedbackMenuTooltip": {"description": "Menu item to open the general feedback screen"},
+
+  "feedbackScreenTitle": "Enviar feedback",
+  "@feedbackScreenTitle": {"description": "General feedback screen app bar title"},
+
+  "feedbackScreenIntro": "Conta pra gente o que você acha do MENTAL — sugestão, elogio ou algo que travou. Sua opinião ajuda a melhorar o app.",
+  "@feedbackScreenIntro": {"description": "General feedback screen intro text"},
+
+  "feedbackCommentHint": "Escreva aqui...",
+  "@feedbackCommentHint": {"description": "General feedback comment field hint"},
+
+  "feedbackSendButton": "Enviar",
+  "@feedbackSendButton": {"description": "General feedback submit button"},
+
+  "feedbackSentMessage": "Feedback enviado! Obrigado por ajudar a melhorar o MENTAL. 🙌",
+  "@feedbackSentMessage": {"description": "Confirmation message after sending general feedback"}
 }

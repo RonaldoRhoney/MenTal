@@ -735,4 +735,24 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get onboardingContinueButton => 'Continuar';
+
+  @override
+  String get feedbackMenuTooltip => 'Enviar feedback';
+
+  @override
+  String get feedbackScreenTitle => 'Enviar feedback';
+
+  @override
+  String get feedbackScreenIntro =>
+      'Conta pra gente o que você acha do MENTAL — sugestão, elogio ou algo que travou. Sua opinião ajuda a melhorar o app.';
+
+  @override
+  String get feedbackCommentHint => 'Escreva aqui...';
+
+  @override
+  String get feedbackSendButton => 'Enviar';
+
+  @override
+  String get feedbackSentMessage =>
+      'Feedback enviado! Obrigado por ajudar a melhorar o MENTAL. 🙌';
 }

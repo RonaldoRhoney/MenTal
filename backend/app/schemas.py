@@ -45,6 +45,24 @@ class AdminLevelFeedbackItem(BaseModel):
     created_at: datetime
 
 
+class AppFeedbackRequest(BaseModel):
+    """Menu de feedback geral (26/08/2026) — comentário livre sobre o
+    app, sem estar amarrado a um nível/desafio específico."""
+
+    comment: str = Field(min_length=1, max_length=2000)
+
+
+class AppFeedbackResponse(BaseModel):
+    ok: bool = True
+
+
+class AdminAppFeedbackItem(BaseModel):
+    id: str
+    user_id: str
+    comment: str
+    created_at: datetime
+
+
 class ChallengeOut(BaseModel):
     challenge_id: str
     territory_id: str

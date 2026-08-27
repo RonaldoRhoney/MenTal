@@ -1329,6 +1329,42 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Continuar'**
   String get onboardingContinueButton;
+
+  /// Menu item to open the general feedback screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Enviar feedback'**
+  String get feedbackMenuTooltip;
+
+  /// General feedback screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Enviar feedback'**
+  String get feedbackScreenTitle;
+
+  /// General feedback screen intro text
+  ///
+  /// In pt, this message translates to:
+  /// **'Conta pra gente o que você acha do MENTAL — sugestão, elogio ou algo que travou. Sua opinião ajuda a melhorar o app.'**
+  String get feedbackScreenIntro;
+
+  /// General feedback comment field hint
+  ///
+  /// In pt, this message translates to:
+  /// **'Escreva aqui...'**
+  String get feedbackCommentHint;
+
+  /// General feedback submit button
+  ///
+  /// In pt, this message translates to:
+  /// **'Enviar'**
+  String get feedbackSendButton;
+
+  /// Confirmation message after sending general feedback
+  ///
+  /// In pt, this message translates to:
+  /// **'Feedback enviado! Obrigado por ajudar a melhorar o MENTAL. 🙌'**
+  String get feedbackSentMessage;
 }
 
 class _AppLocalizationsDelegate

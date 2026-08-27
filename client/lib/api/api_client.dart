@@ -137,6 +137,16 @@ class ApiClient {
     );
   }
 
+  // Menu de feedback geral (26/08/2026) — comentário livre sobre o app,
+  // acessível a qualquer momento, diferente do Feedback Pós-Nível.
+  Future<Map<String, dynamic>> submitAppFeedback(String comment) async {
+    return _post(
+      _uri('/feedback'),
+      headers: _headers,
+      body: jsonEncode({'comment': comment}),
+    );
+  }
+
   Future<Map<String, dynamic>> progress() async {
     return _get(_uri('/progress'), headers: _headers);
   }
