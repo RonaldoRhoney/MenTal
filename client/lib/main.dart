@@ -9,6 +9,7 @@ import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/splash_screen.dart';
+import 'screens/welcome_splash_screen.dart';
 import 'services/push_service.dart';
 import 'theme/app_theme.dart';
 
@@ -99,6 +100,10 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   // agora (só na primeira vez por conta).
   bool? _ageConfirmed;
   String? _ageCheckError;
+  // Splash de boas-vindas: uma vez por sessão de login, nunca de novo
+  // enquanto a mesma sessão continuar ativa (ex.: navegar entre telas,
+  // voltar do background).
+  bool _welcomeSplashDone = false;
   bool _splashDone = false;
   late final Stream<AuthState> _authStateStream;
   String? _lastAccessToken;
@@ -132,6 +137,7 @@ class _AppEntryPointState extends State<AppEntryPoint> {
       _client = accessToken == null ? null : ApiClient(baseUrl: kApiBaseUrl, accessToken: accessToken);
       _ageConfirmed = null;
       _ageCheckError = null;
+      _welcomeSplashDone = false;
     });
     if (accessToken != null) {
       // Fire-and-forget: registro de push nunca deve atrasar a navegação
@@ -227,6 +233,10 @@ class _AppEntryPointState extends State<AppEntryPoint> {
             client: client,
             onDone: () => setState(() => _ageConfirmed = true),
           );
+        }
+
+        if (!_welcomeSplashDone) {
+          return WelcomeSplashScreen(onDone: () => setState(() => _welcomeSplashDone = true));
         }
 
         return HomeScreen(client: client);
