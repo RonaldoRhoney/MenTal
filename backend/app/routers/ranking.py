@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from .. import models, services
 from ..schemas import RankingResponse, RankingEntry
-from ..auth import get_current_user_id
+from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
 
@@ -17,7 +17,7 @@ router = APIRouter()
 def get_ranking(
     scope: str = "global",
     window: str = "weekly",
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     # V2 item 12 (V2_KICKOFF.md §6A) — "friends" agora filtra de verdade

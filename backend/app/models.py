@@ -328,6 +328,14 @@ class Attempt(Base):
     response_time_ms: Mapped[int | None] = mapped_column(Integer, nullable=True)
     timed_out: Mapped[bool] = mapped_column(Boolean, default=False)
     speed_bonus_xp: Mapped[int] = mapped_column(Integer, default=0)
+    # Achado de auditoria de segurança (28/08/2026): response_time_ms era
+    # 100% informado pelo client — enviar 0 dobrava o bônus de velocidade
+    # em qualquer território cronometrado. served_at é gravado pelo
+    # PRÓPRIO SERVIDOR no momento em que o desafio é entregue (GET
+    # /challenges/next), e o bônus de velocidade passa a ser calculado
+    # como (agora - served_at) no momento da resposta, nunca mais
+    # confiando no valor que o cliente manda.
+    served_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
 class LevelFeedback(Base):

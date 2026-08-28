@@ -541,6 +541,21 @@ def shuffled_options(options: list[str]) -> list[str]:
     return shuffled
 
 
+def create_served_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str) -> models.Attempt:
+    """
+    Cria a linha de Attempt no momento em que o desafio é de fato
+    entregue (GET /challenges/next), com served_at=agora — usado pra
+    calcular o tempo de resposta real no servidor em vez de confiar no
+    response_time_ms que o client manda em POST /answer (achado de
+    auditoria de segurança, 28/08/2026).
+    """
+    attempt = models.Attempt(attempt_id=attempt_id, user_id=user_id, challenge_id=challenge_id, hints_used=0, served_at=utcnow())
+    db.add(attempt)
+    db.commit()
+    db.refresh(attempt)
+    return attempt
+
+
 def compute_speed_bonus_xp(xp_base: int, response_time_ms: int, time_limit_seconds: int) -> int:
     """
     Bônus decrescente conforme o tempo consumido (PALAVRAS_RELAMPAGO.md

@@ -16,7 +16,12 @@ def _answer(client, headers, territory_id, correct=True, use_hint=False):
     from app.seed import CHALLENGES
 
     challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
-    attempt_id = str(uuid.uuid4())
+    # Achado de auditoria de segurança (28/08/2026): attempt_id agora
+    # nasce em GET /challenges/next (junto do served_at usado pro bônus
+    # de velocidade) — gerar um uuid novo aqui criava uma SEGUNDA linha
+    # de Attempt órfã (a de /next nunca era respondida), dobrando a
+    # contagem de tentativas nos testes de estatística.
+    attempt_id = challenge["attempt_id"]
     if use_hint:
         client.post(f"/challenges/{challenge['challenge_id']}/hint", json={"attempt_id": attempt_id}, headers=headers)
     if correct:

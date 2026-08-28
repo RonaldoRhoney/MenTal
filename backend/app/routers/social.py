@@ -5,14 +5,14 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import models, schemas, services
-from ..auth import get_current_user_id
+from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 
 router = APIRouter()
 
 
 @router.get("/social/invite-code")
-def get_invite_code(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+def get_invite_code(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     invite = db.execute(select(models.Invite).where(models.Invite.inviter_user_id == user_id)).scalars().first()
     if invite is None:
         invite = models.Invite(inviter_user_id=user_id, invite_code=secrets.token_urlsafe(6))
@@ -23,7 +23,7 @@ def get_invite_code(user_id: str = Depends(get_current_user_id), db: Session = D
 
 
 @router.post("/social/invite-conversions")
-def register_conversion(invite_code: str, user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+def register_conversion(invite_code: str, user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     invite = db.execute(select(models.Invite).where(models.Invite.invite_code == invite_code)).scalars().first()
     if invite is None:
         return {"registered": False}
@@ -39,7 +39,7 @@ def register_conversion(invite_code: str, user_id: str = Depends(get_current_use
 
 
 @router.post("/social/achievement-card")
-def generate_achievement_card(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+def generate_achievement_card(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     """
     STUB no Vertical Slice 01 — geração real de imagem (server-side vs.
     client-side) é decisão de implementação pendente (MENTAL_KICKOFF.md
@@ -66,7 +66,7 @@ def generate_achievement_card(user_id: str = Depends(get_current_user_id), db: S
 @router.post("/social/friends")
 def add_friend(
     body: schemas.AddFriendRequest,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     invite = db.execute(select(models.Invite).where(models.Invite.invite_code == body.invite_code)).scalars().first()
@@ -80,7 +80,7 @@ def add_friend(
 
 
 @router.get("/social/friends", response_model=schemas.FriendsResponse)
-def list_friends(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+def list_friends(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     friend_ids = services.get_friend_user_ids(db, user_id)
     friends = []
     for friend_id in friend_ids:
@@ -108,7 +108,7 @@ def list_friends(user_id: str = Depends(get_current_user_id), db: Session = Depe
 # award_share_reward) é a defesa contra farm, já que o app não confirma
 # conclusão real do compartilhamento no SO.
 @router.post("/social/share-reward", response_model=schemas.ShareRewardResponse)
-def reward_share(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+def reward_share(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     profile = db.get(models.Profile, user_id)
     if profile is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "PROFILE_NOT_FOUND", "message": "Perfil não encontrado."}})

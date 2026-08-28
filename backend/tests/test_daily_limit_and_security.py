@@ -27,6 +27,108 @@ def test_daily_free_limit_blocks_after_limit(client):
     assert over_limit.json()["error"]["code"] == "DAILY_LIMIT_REACHED"
 
 
+def test_answer_endpoint_enforces_daily_limit_even_skipping_next(client):
+    """
+    Achado de auditoria de segurança (28/08/2026): POST /answer não
+    checava limite diário nenhum (só GET /next checava) — dava pra
+    ignorar /next completamente e mandar POST /answer em loop, com um
+    attempt_id novo a cada vez, pro MESMO challenge_id, gerando XP sem
+    limite. Prova que agora /answer sozinho respeita o teto diário.
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    # Um único GET /next só pra obter um challenge_id válido — todo o
+    # resto do "farm" nunca mais passa por /next.
+    challenge_id = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()["challenge_id"]
+
+    for _ in range(DAILY_FREE_CHALLENGE_LIMIT):
+        resp = client.post(
+            f"/challenges/{challenge_id}/answer",
+            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
+            headers=headers,
+        )
+        assert resp.status_code == 200
+
+    over_limit = client.post(
+        f"/challenges/{challenge_id}/answer",
+        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
+        headers=headers,
+    )
+    assert over_limit.status_code == 429
+    assert over_limit.json()["error"]["code"] == "DAILY_LIMIT_REACHED"
+
+
+def test_attempt_id_from_another_user_is_rejected(client):
+    """
+    Achado de auditoria de segurança (28/08/2026): um attempt_id de OUTRO
+    usuário era aceito sem checagem de dono — devolvia correct_answer/
+    explanation de uma tentativa alheia. Agora responde 404 em vez de
+    vazar o resultado do desafio de outra pessoa.
+    """
+    victim = str(uuid.uuid4())
+    attacker = str(uuid.uuid4())
+    victim_headers = auth_header(victim)
+    attacker_headers = auth_header(attacker)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=victim_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=attacker_headers)
+
+    victim_challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=victim_headers).json()
+    victim_attempt_id = victim_challenge["attempt_id"]
+
+    resp = client.post(
+        f"/challenges/{victim_challenge['challenge_id']}/answer",
+        json={"attempt_id": victim_attempt_id, "submitted_answer": "qualquer"},
+        headers=attacker_headers,
+    )
+    assert resp.status_code == 404
+
+    hint_resp = client.post(
+        f"/challenges/{victim_challenge['challenge_id']}/hint",
+        json={"attempt_id": victim_attempt_id},
+        headers=attacker_headers,
+    )
+    assert hint_resp.status_code == 404
+
+
+def test_endpoints_require_age_confirmation_server_side(client):
+    """
+    Achado de auditoria de segurança (28/08/2026): a confirmação de
+    maioridade era um gate 100% de client — nenhum endpoint do backend
+    conferia age_confirmed_at. Um token válido que nunca chamou
+    POST /age-gate conseguia jogar, ver ranking, adicionar amigos e
+    editar perfil normalmente. Prova que agora isso é recusado no
+    servidor (GET /profile continua liberado de propósito — é a própria
+    chamada que o client usa pra decidir se mostra a tela de
+    confirmação).
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    # Nenhum POST /age-gate aqui de propósito.
+
+    profile_resp = client.get("/profile", headers=headers)
+    assert profile_resp.status_code == 200
+    assert profile_resp.json()["age_confirmed_at"] is None
+
+    next_resp = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers)
+    assert next_resp.status_code == 403
+    assert next_resp.json()["error"]["code"] == "AGE_NOT_CONFIRMED"
+
+    ranking_resp = client.get("/ranking", headers=headers)
+    assert ranking_resp.status_code == 403
+
+    friends_resp = client.get("/social/friends", headers=headers)
+    assert friends_resp.status_code == 403
+
+    put_profile_resp = client.put("/profile", json={"real_name": "Teste", "location_public": False}, headers=headers)
+    assert put_profile_resp.status_code == 403
+
+    # Depois de confirmar, os mesmos endpoints voltam a funcionar normalmente.
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    assert client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).status_code == 200
+
+
 def test_active_subscription_bypasses_daily_limit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)

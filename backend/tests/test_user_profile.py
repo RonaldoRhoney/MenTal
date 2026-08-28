@@ -89,8 +89,6 @@ def test_photo_url_only_appears_publicly_after_admin_approval(client):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
 
     photo_url = f"{config.SUPABASE_URL or 'https://fake.supabase.co'}/storage/v1/object/public/profile-photos/{user_b}/photo.jpg"
-    if config.SUPABASE_URL is None:
-        pass  # sem Supabase configurado (SQLite local), validação de URL é sempre aceita.
     client.put("/profile", json={"photo_url": photo_url}, headers=headers_b)
 
     code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
@@ -106,6 +104,27 @@ def test_photo_url_only_appears_publicly_after_admin_approval(client):
 
     friends_after = client.get("/social/friends", headers=headers_a).json()["friends"]
     assert friends_after[0]["photo_url"] == photo_url
+
+
+def test_photo_url_pointing_to_another_users_folder_is_rejected(client):
+    """
+    Achado de auditoria de segurança (28/08/2026): _is_valid_photo_url só
+    conferia prefixo do bucket + extensão — um usuário podia mandar a URL
+    da foto de OUTRO usuário (já aprovada) como se fosse sua e passar a
+    exibi-la como própria depois de aprovada pelo admin. Agora a URL
+    precisa apontar pra dentro da PRÓPRIA pasta do usuário autenticado.
+    """
+    user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
+    headers_a = auth_header(user_a)
+    headers_b = auth_header(user_b)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
+
+    stolen_photo_url = f"{config.SUPABASE_URL or 'https://fake.supabase.co'}/storage/v1/object/public/profile-photos/{user_b}/photo.jpg"
+
+    resp = client.put("/profile", json={"photo_url": stolen_photo_url}, headers=headers_a)
+    assert resp.status_code == 422
+    assert resp.json()["error"]["code"] == "INVALID_PHOTO_URL"
 
 
 def test_onboarding_stays_incomplete_until_all_5_mandatory_fields_filled(client):

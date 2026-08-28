@@ -20,6 +20,16 @@ DEFAULT_LANGUAGE_CODE = "pt-BR"
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET")
 
+# Achado de auditoria de segurança (28/08/2026): sem SUPABASE_URL nem
+# SUPABASE_JWT_SECRET, auth.py cai no modo DEV_INSECURE (token = user_id em
+# texto puro, sem verificar assinatura nenhuma) — se qualquer uma dessas
+# duas env vars sumir por engano em produção (redeploy, typo, restore de
+# config), o backend continuava rodando normalmente e aceitando QUALQUER
+# UUID como identidade de qualquer usuário, silenciosamente. Essa flag
+# precisa ser setada explicitamente pra permitir o modo inseguro — sem ela,
+# auth.py recusa subir (fail loud) em vez de fail-open.
+ALLOW_DEV_INSECURE_AUTH = os.environ.get("MENTAL_ALLOW_DEV_INSECURE_AUTH", "").lower() == "true"
+
 # MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL passa a ser exclusivo pra
 # maiores de 18 anos — sem mais age gate multi-público nem
 # child_safe_mode. Versão dos Termos aceitos no momento da confirmação

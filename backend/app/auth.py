@@ -13,14 +13,24 @@ Três modos, em ordem de prioridade:
 3. Nenhum dos dois → modo DEV_INSECURE: o token é tratado como o próprio
    user_id em texto puro. Nunca deve rodar assim em produção — existe só
    para desenvolvimento local/testes sem depender de um projeto Supabase.
+   Achado de auditoria (28/08/2026): sem uma trava explícita, uma
+   SUPABASE_URL/SUPABASE_JWT_SECRET ausente por engano em produção (env
+   var apagada, typo, restore de config no Render) fazia o backend cair
+   nesse modo 3 silenciosamente, aceitando qualquer UUID como identidade
+   de qualquer usuário. Agora exige config.ALLOW_DEV_INSECURE_AUTH
+   (env var MENTAL_ALLOW_DEV_INSECURE_AUTH=true) explicitamente setada —
+   sem ela, get_current_user_id recusa a requisição com 500 em vez de
+   aceitar silenciosamente (fail loud, nunca fail-open).
 """
 
 import uuid
 
 import jwt
-from fastapi import Header, HTTPException
+from fastapi import Depends, Header, HTTPException
+from sqlalchemy.orm import Session
 
-from . import config
+from . import config, models
+from .db import get_db
 
 _jwks_client: jwt.PyJWKClient | None = None
 
@@ -69,6 +79,17 @@ def get_current_user_id(authorization: str | None = Header(default=None)) -> str
             raise HTTPException(status_code=401, detail={"error": {"code": "INVALID_TOKEN", "message": "Token missing sub"}})
         return user_id
 
+    if not config.ALLOW_DEV_INSECURE_AUTH:
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "error": {
+                    "code": "AUTH_MISCONFIGURED",
+                    "message": "SUPABASE_URL/SUPABASE_JWT_SECRET ausentes e MENTAL_ALLOW_DEV_INSECURE_AUTH não setado — recusando autenticar em vez de aceitar qualquer token.",
+                }
+            },
+        )
+
     # DEV_INSECURE: token é o próprio user_id. Precisa ser um UUID válido
     # — desde que user_id virou coluna Uuid real (models.py, corrigido
     # testando contra Postgres), um token não-UUID quebrava com 500 lá na
@@ -82,3 +103,29 @@ def get_current_user_id(authorization: str | None = Header(default=None)) -> str
     except ValueError as exc:
         raise HTTPException(status_code=401, detail={"error": {"code": "INVALID_TOKEN", "message": "Token must be a valid UUID in DEV_INSECURE mode"}}) from exc
     return token
+
+
+def require_age_confirmed_user_id(
+    user_id: str = Depends(get_current_user_id),
+    db: Session = Depends(get_db),
+) -> str:
+    """
+    Achado de auditoria de segurança (28/08/2026): a confirmação de
+    maioridade (POL-002/POL-003, base legal do consentimento coletado no
+    onboarding) era um gate 100% de client — nenhum endpoint do backend
+    conferia age_confirmed_at. Um token válido que nunca chamou POST
+    /age-gate conseguia jogar, ver ranking, adicionar amigos, editar
+    perfil e subir foto normalmente. Usar esta dependência (em vez de
+    get_current_user_id puro) em qualquer endpoint que não seja
+    POST /age-gate ou GET /profile (que PRECISA continuar acessível
+    antes da confirmação — é a própria chamada que o client usa pra
+    decidir se mostra a tela de confirmação, main.dart::
+    _checkProfileStatus).
+    """
+    profile = db.get(models.Profile, user_id)
+    if profile is None or profile.age_confirmed_at is None:
+        raise HTTPException(
+            status_code=403,
+            detail={"error": {"code": "AGE_NOT_CONFIRMED", "message": "Confirm age via POST /age-gate first"}},
+        )
+    return user_id

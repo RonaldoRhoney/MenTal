@@ -4,7 +4,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from .. import config, models, schemas, scoring, services
-from ..auth import get_current_user_id
+from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
 
@@ -16,7 +16,7 @@ def next_challenge(
     territory_id: str,
     language_code: str = config.DEFAULT_LANGUAGE_CODE,
     mode: str = "normal",
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Modo
@@ -134,8 +134,19 @@ def next_challenge(
         options = services.shuffled_options(challenge.options) if challenge.options else challenge.options
     time_limit_seconds = config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS.get(challenge.difficulty_level) if timed else None
 
+    # Achado de auditoria de segurança (28/08/2026): attempt_id nasce
+    # aqui, no servidor, com served_at=agora — é o que permite calcular o
+    # bônus de velocidade em POST /answer a partir do tempo REAL decorrido
+    # no servidor, em vez de confiar em response_time_ms mandado pelo
+    # client (que dava pra zerar e dobrar o bônus). _get_or_create_pending_attempt
+    # só cria de fato quando o attempt_id não existir ainda — aqui ele
+    # sempre não existe (uuid novo), então é sempre uma criação.
+    attempt_id = models.new_uuid()
+    services.create_served_attempt(db, attempt_id, user_id, challenge.id)
+
     return schemas.ChallengeOut(
         challenge_id=challenge.id,
+        attempt_id=attempt_id,
         territory_id=challenge.territory_id,
         difficulty_level=challenge.difficulty_level,
         prompt=challenge.prompt,
@@ -149,8 +160,28 @@ def next_challenge(
 def _get_or_create_pending_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str) -> models.Attempt:
     attempt = db.get(models.Attempt, attempt_id)
     if attempt is not None:
+        # Achado de auditoria de segurança (28/08/2026): antes disso, um
+        # attempt_id de OUTRO usuário (ou de outro desafio) era aceito sem
+        # checagem nenhuma — devolvia correct_answer/explanation de uma
+        # tentativa alheia em /hint e /answer, e um reenvio conseguia
+        # gravar submitted_answer/xp_awarded na tentativa da vítima,
+        # creditando XP a quem não jogou (o ranking agrupa por
+        # Attempt.user_id). attempt_id é gerado client-side (uuid v4,
+        # não-enumerável), então a exploração exige um valor vazado —
+        # mas a checagem correta é "dono confere", nunca "não dá pra
+        # adivinhar".
+        if attempt.user_id != user_id or attempt.challenge_id != challenge_id:
+            raise HTTPException(status_code=404, detail={"error": {"code": "ATTEMPT_NOT_FOUND", "message": attempt_id}})
         return attempt
     try:
+        # Fallback só usado pelo fluxo de Batalha (o attempt_id nasce no
+        # client via GET /battles/{id}/my-challenge, que não passa por
+        # /challenges/next). served_at cai no default (agora), o que
+        # ainda deixa o bônus de velocidade de batalhas vulnerável ao
+        # mesmo problema que este commit corrigiu pro fluxo normal —
+        # servir corretamente exigiria gravar o served_at real de
+        # get_or_serve_opponent_challenge (services.py), fora do escopo
+        # deste fix. Registrado como pendência de segurança conhecida.
         attempt = models.Attempt(attempt_id=attempt_id, user_id=user_id, challenge_id=challenge_id, hints_used=0)
         db.add(attempt)
         db.commit()
@@ -166,7 +197,7 @@ def _get_or_create_pending_attempt(db: Session, attempt_id: str, user_id: str, c
 def request_hint(
     challenge_id: str,
     body: schemas.HintRequest,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     challenge = db.get(models.Challenge, challenge_id)
@@ -203,7 +234,7 @@ def request_hint(
 def submit_answer(
     challenge_id: str,
     body: schemas.AnswerRequest,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     challenge = db.get(models.Challenge, challenge_id)
@@ -233,6 +264,22 @@ def submit_answer(
             speed_bonus_xp=attempt.speed_bonus_xp,
         )
 
+    # Achado de auditoria de segurança (28/08/2026): este endpoint nunca
+    # checava o limite diário (só GET /challenges/next checava) — dava pra
+    # ignorar /next completamente e chamar /answer em loop com um
+    # attempt_id novo a cada vez (a resposta certa já vem em
+    # correct_answer desta própria rota), gerando XP e conquistando
+    # território/ranking sem limite. Checado aqui, DEPOIS do early-return
+    # idempotente acima, pra nunca bloquear o replay de uma tentativa já
+    # paga — só tentativas NOVAS consomem o limite.
+    today = utcnow().date()
+    allowed, _consumed = services.check_daily_limit(db, user_id, today)
+    if not allowed:
+        raise HTTPException(
+            status_code=429,
+            detail={"error": {"code": "DAILY_LIMIT_REACHED", "message": "Daily free challenge limit reached", "resets_at": str(today.isoformat())}},
+        )
+
     # V2 item 15 — Palavras Relâmpago: timed_out=True nunca confia em
     # submitted_answer vindo do cliente pra decidir acerto — tempo
     # esgotado é sempre tratado como resposta não dada, mesmo que o
@@ -245,19 +292,22 @@ def submit_answer(
     xp_base = scoring.xp_base_for(challenge.difficulty_level) if is_correct else 0
     xp_from_hints = scoring.xp_awarded(xp_base, attempt.hints_used) if is_correct else 0
 
+    # Achado de auditoria de segurança (28/08/2026): response_time_ms do
+    # corpo da requisição NUNCA mais alimenta o bônus — vinha 100% do
+    # client, e mandar 0 dobrava o bônus de velocidade em qualquer
+    # território cronometrado. server_response_time_ms é sempre
+    # (agora - attempt.served_at), o momento real em que o servidor
+    # entregou este desafio a este usuário (GET /challenges/next).
+    server_response_time_ms = max(0, int((utcnow() - attempt.served_at).total_seconds() * 1000))
+
     speed_bonus_xp = 0
     time_limit_seconds = config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS.get(challenge.difficulty_level)
     # CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): generaliza o
     # bônus de velocidade além de Palavras — mesma regra, agora vale pra
     # qualquer território do formato com tempo (config.
     # TIMED_MULTIPLE_CHOICE_TERRITORIES).
-    if (
-        is_correct
-        and challenge.territory_id in config.TIMED_MULTIPLE_CHOICE_TERRITORIES
-        and time_limit_seconds
-        and body.response_time_ms is not None
-    ):
-        speed_bonus_xp = services.compute_speed_bonus_xp(xp_base, body.response_time_ms, time_limit_seconds)
+    if is_correct and challenge.territory_id in config.TIMED_MULTIPLE_CHOICE_TERRITORIES and time_limit_seconds:
+        speed_bonus_xp = services.compute_speed_bonus_xp(xp_base, server_response_time_ms, time_limit_seconds)
 
     xp_final = xp_from_hints + speed_bonus_xp
 
@@ -265,7 +315,7 @@ def submit_answer(
     attempt.is_correct = is_correct
     attempt.xp_base = xp_base
     attempt.xp_awarded = xp_final
-    attempt.response_time_ms = body.response_time_ms
+    attempt.response_time_ms = server_response_time_ms
     attempt.timed_out = body.timed_out
     attempt.speed_bonus_xp = speed_bonus_xp
     db.commit()

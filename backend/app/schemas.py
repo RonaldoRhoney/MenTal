@@ -65,6 +65,13 @@ class AdminAppFeedbackItem(BaseModel):
 
 class ChallengeOut(BaseModel):
     challenge_id: str
+    # Achado de auditoria de segurança (28/08/2026): attempt_id agora
+    # nasce no servidor (junto do served_at usado pro bônus de
+    # velocidade), não mais gerado livremente pelo client — ver
+    # routers/challenges.py::next_challenge. None só no fluxo de
+    # batalha, que continua usando GET /battles/{id}/my-challenge (o
+    # client ainda gera o próprio attempt_id nesse caso específico).
+    attempt_id: str | None = None
     territory_id: str
     difficulty_level: int
     prompt: str
@@ -415,11 +422,18 @@ class ProfileOut(BaseModel):
 
 class UpdateProfileRequest(BaseModel):
     avatar_id: str | None = None
-    real_name: str | None = None
-    location_state: str | None = None
-    location_country: str | None = None
+    # Achado de auditoria de segurança (28/08/2026): real_name é exibido
+    # publicamente no ranking global desde a revisão de 27/08 (USER_
+    # PROFILE.md), mas nunca teve limite de tamanho — texto livre sem
+    # teto e sem moderação, visível pra toda a base. max_length não
+    # resolve moderação de conteúdo (isso é uma pendência maior, sem
+    # solução hoje), mas fecha o caso mais barato de abuso (payload
+    # gigante/spam longo).
+    real_name: str | None = Field(default=None, max_length=100)
+    location_state: str | None = Field(default=None, max_length=100)
+    location_country: str | None = Field(default=None, max_length=100)
     location_public: bool = False
-    city: str | None = None
+    city: str | None = Field(default=None, max_length=100)
     gender: GenderValue | None = None
     age_range: AgeRangeValue | None = None
     # Upload de foto real (26/08/2026) — client já fez o upload direto

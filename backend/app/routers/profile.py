@@ -26,7 +26,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import config, models, schemas, services
-from ..auth import get_current_user_id
+from ..auth import get_current_user_id, require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
 
@@ -35,24 +35,38 @@ router = APIRouter()
 _ALLOWED_PHOTO_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
 
 
-def _is_valid_photo_url(url: str) -> bool:
+def _is_valid_photo_url(url: str, user_id: str) -> bool:
     """
     Validação leve, só de forma da URL — confirma que aponta pro bucket
-    público esperado do próprio projeto Supabase e tem uma extensão de
-    imagem permitida. NÃO inspeciona o conteúdo real do arquivo (magic
-    bytes) — validação de conteúdo de verdade ficaria a cargo de uma
-    Storage Edge Function/webhook, fora do escopo desta etapa.
+    público esperado do próprio projeto Supabase, pra dentro da PRÓPRIA
+    pasta do usuário autenticado (mesma regra que a policy de escrita do
+    Storage já aplica: auth.uid()::text = (storage.foldername(name))[1]),
+    e tem uma extensão de imagem permitida. NÃO inspeciona o conteúdo
+    real do arquivo (magic bytes) — validação de conteúdo de verdade
+    ficaria a cargo de uma Storage Edge Function/webhook, fora do escopo
+    desta etapa.
+
+    Achado de auditoria de segurança (28/08/2026): antes só conferia o
+    prefixo do bucket + extensão — um usuário podia mandar
+    `PUT /profile {"photo_url": ".../profile-photos/{uid_de_outro}/photo.jpg"}`
+    e, depois de aprovado pelo admin, passar a exibir a foto de outra
+    pessoa como se fosse sua no ranking global.
 
     O client anexa `?t=<timestamp>` (cache-busting: mesmo nome de arquivo
     é reaproveitado a cada upload via upsert, então sem isso o
     Image.network do Flutter mostraria a foto antiga em cache) — a
-    extensão é checada só na parte de path, antes da querystring.
+    extensão e a pasta são checadas só na parte de path, antes da
+    querystring.
     """
     if config.SUPABASE_URL is None:
-        return True  # dev local sem Supabase configurado — não bloqueia.
-    expected_prefix = f"{config.SUPABASE_URL}/storage/v1/object/public/profile-photos/"
+        # dev local sem Supabase configurado — ainda assim exige que a
+        # URL aponte pra pasta do próprio usuário, checagem que não
+        # depende de SUPABASE_URL estar setado.
+        expected_prefix = f"/profile-photos/{user_id}/"
+    else:
+        expected_prefix = f"{config.SUPABASE_URL}/storage/v1/object/public/profile-photos/{user_id}/"
     path = url.split("?", 1)[0]
-    return url.startswith(expected_prefix) and path.lower().endswith(_ALLOWED_PHOTO_EXTENSIONS)
+    return expected_prefix in url and path.lower().endswith(_ALLOWED_PHOTO_EXTENSIONS)
 
 
 def _profile_out(profile: models.Profile) -> schemas.ProfileOut:
@@ -75,6 +89,11 @@ def _profile_out(profile: models.Profile) -> schemas.ProfileOut:
 
 @router.get("/profile", response_model=schemas.ProfileOut)
 def get_profile(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+    # Fica de fora do require_age_confirmed_user_id de propósito — é a
+    # própria chamada que o client usa (main.dart::_checkProfileStatus)
+    # pra decidir SE mostra a tela de confirmação de maioridade. Exigir
+    # a confirmação aqui criaria um 403 antes do usuário conseguir
+    # confirmar a idade.
     profile = services.get_or_create_profile(db, user_id)
     return _profile_out(profile)
 
@@ -82,7 +101,7 @@ def get_profile(user_id: str = Depends(get_current_user_id), db: Session = Depen
 @router.put("/profile", response_model=schemas.ProfileOut)
 def update_profile(
     body: schemas.UpdateProfileRequest,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     profile = services.get_or_create_profile(db, user_id)
@@ -98,7 +117,7 @@ def update_profile(
     profile.age_range = body.age_range
 
     if body.photo_url is not None and body.photo_url != profile.photo_url:
-        if not _is_valid_photo_url(body.photo_url):
+        if not _is_valid_photo_url(body.photo_url, user_id):
             raise HTTPException(
                 status_code=422,
                 detail={"error": {"code": "INVALID_PHOTO_URL", "message": "URL de foto inválida"}},

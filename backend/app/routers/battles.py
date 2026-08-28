@@ -12,7 +12,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import config, models, schemas, services
-from ..auth import get_current_user_id
+from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
 
@@ -22,7 +22,7 @@ router = APIRouter()
 @router.post("/battles", response_model=schemas.CreateBattleResponse)
 def create_battle(
     body: schemas.CreateBattleRequest,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     if body.opponent_user_id == user_id:
@@ -72,7 +72,7 @@ def create_battle(
 @router.get("/battles/{battle_id}/my-challenge", response_model=schemas.ChallengeOut)
 def get_my_battle_challenge(
     battle_id: str,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     battle = db.get(models.Battle, battle_id)
@@ -104,7 +104,7 @@ def get_my_battle_challenge(
 
 
 @router.get("/battles", response_model=schemas.BattlesResponse)
-def list_battles(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+def list_battles(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     rows = db.execute(
         select(models.Battle)
         .where((models.Battle.challenger_user_id == user_id) | (models.Battle.opponent_user_id == user_id))

@@ -7,8 +7,11 @@ mesmo território/nível, nunca geradas/inventadas.
 """
 
 import uuid
+from datetime import timedelta
 
-from app import config
+from app import config, models
+from app.db import SessionLocal
+from app.timeutil import utcnow
 
 from .conftest import auth_header
 
@@ -150,6 +153,14 @@ def test_fast_correct_answer_gets_max_speed_bonus(client):
 
 
 def test_slow_correct_answer_gets_no_speed_bonus_but_still_counts(client):
+    """
+    Achado de auditoria de segurança (28/08/2026): response_time_ms do
+    corpo da requisição não alimenta mais o bônus de velocidade — o
+    servidor calcula sozinho a partir de Attempt.served_at (gravado em
+    GET /challenges/next), pra não confiar em nenhum valor que o client
+    possa forjar. Pra simular uma resposta "lenta" de verdade neste
+    teste, backdate served_at direto no banco.
+    """
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -158,9 +169,14 @@ def test_slow_correct_answer_gets_no_speed_bonus_but_still_counts(client):
     time_limit_ms = ch["time_limit_seconds"] * 1000
     slow_time = int(time_limit_ms * 0.95)  # bem depois dos 70%
 
+    with SessionLocal() as db:
+        attempt = db.get(models.Attempt, ch["attempt_id"])
+        attempt.served_at = utcnow() - timedelta(milliseconds=slow_time)
+        db.commit()
+
     result = client.post(
         f"/challenges/{ch['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct, "response_time_ms": slow_time},
+        json={"attempt_id": ch["attempt_id"], "submitted_answer": correct},
         headers=headers,
     ).json()
 

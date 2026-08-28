@@ -148,7 +148,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _selectedOption = null;
       _hintsShown = [];
       _hintsExhausted = false;
-      _attemptId = _uuid.v4();
+      _attemptId = null;
       _remainingMs = null;
       _timeLimitMs = null;
       _challengeShownAt = null;
@@ -166,7 +166,15 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               mode: widget.relampago ? 'relampago' : 'normal',
             );
       if (mounted) {
-        setState(() => _challenge = challenge);
+        setState(() {
+          _challenge = challenge;
+          // Achado de auditoria de segurança (28/08/2026): attempt_id
+          // agora nasce no servidor junto do served_at usado pro bônus
+          // de velocidade (GET /challenges/next) — só o fluxo de
+          // Batalha (getMyBattleChallenge/prefetchedChallenge) ainda não
+          // devolve um, e mantém a geração local como estava.
+          _attemptId = challenge['attempt_id'] as String? ?? _uuid.v4();
+        });
         final timeLimitSeconds = challenge['time_limit_seconds'] as int?;
         if (timeLimitSeconds != null) _startCountdown(timeLimitSeconds);
       }

@@ -10,7 +10,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import models, schemas
-from ..auth import get_current_user_id
+from ..auth import get_current_user_id, require_age_confirmed_user_id
 from ..db import get_db
 
 router = APIRouter()
@@ -19,7 +19,7 @@ router = APIRouter()
 @router.post("/feedback", response_model=schemas.AppFeedbackResponse)
 def submit_app_feedback(
     body: schemas.AppFeedbackRequest,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     comment = body.comment.strip()

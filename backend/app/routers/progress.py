@@ -3,14 +3,14 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import config, models, schemas, services
-from ..auth import get_current_user_id
+from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 
 router = APIRouter()
 
 
 @router.get("/progress", response_model=schemas.ProgressResponse)
-def get_progress(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+def get_progress(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     profile = services.get_or_create_profile(db, user_id)
     # V2 item 8 — Notificações: GET /progress é chamado toda vez que a
     # Home carrega, então é o sinal mais confiável de "o jogador de fato

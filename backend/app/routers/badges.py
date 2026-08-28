@@ -3,14 +3,14 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import models, schemas
-from ..auth import get_current_user_id
+from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 
 router = APIRouter()
 
 
 @router.get("/badges", response_model=schemas.BadgesResponse)
-def list_badges(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+def list_badges(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     """
     Catálogo completo com status de conquista do usuário atual — V2 item 1
     (V2_KICKOFF.md §6A). Nunca concede badge aqui (leitura pura); a
