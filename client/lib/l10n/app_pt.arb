@@ -677,14 +677,26 @@
   "profileScreenTitle": "Meu Perfil",
   "@profileScreenTitle": {"description": "Profile screen app bar title"},
 
-  "profileAvatarSectionTitle": "Avatar",
-  "@profileAvatarSectionTitle": {"description": "Avatar picker section title"},
+  "profilePhotoSectionTitle": "Foto de perfil",
+  "@profilePhotoSectionTitle": {"description": "Profile photo section title"},
 
-  "profileRealNameLabel": "Nome real (opcional)",
+  "profilePhotoChangeButton": "Escolher foto",
+  "@profilePhotoChangeButton": {"description": "Button to pick a new profile photo"},
+
+  "profilePhotoPendingLabel": "Sua foto está em análise — só fica visível pra outros usuários depois de aprovada.",
+  "@profilePhotoPendingLabel": {"description": "Shown while the uploaded photo awaits moderation"},
+
+  "profilePhotoRejectedLabel": "Sua foto foi rejeitada na moderação. Envie outra.",
+  "@profilePhotoRejectedLabel": {"description": "Shown when the uploaded photo was rejected by moderation"},
+
+  "profilePhotoUploadError": "Não foi possível enviar a foto. Tente novamente.",
+  "@profilePhotoUploadError": {"description": "Generic error message when photo upload fails"},
+
+  "profileRealNameLabel": "Nome real",
   "@profileRealNameLabel": {"description": "Real name field label"},
 
-  "profileRealNameHelperText": "Nunca aparece publicamente — só uso interno, ex.: suporte. Seu apelido já te identifica no jogo.",
-  "@profileRealNameHelperText": {"description": "Helper text explaining real name is never public"},
+  "profileRealNameHelperText": "Aparece publicamente ao lado da sua foto de perfil, em Ranking, Amigos e Batalhas.",
+  "@profileRealNameHelperText": {"description": "Helper text explaining real name is now public"},
 
   "profileLocationSectionTitle": "Localização (opcional)",
   "@profileLocationSectionTitle": {"description": "Location section title"},

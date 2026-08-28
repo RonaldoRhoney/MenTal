@@ -1,13 +1,26 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../api/api_client.dart';
-import '../avatars.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
+import '../widgets/profile_photo.dart';
 
-/// USER_PROFILE.md (aprovado). Todos os campos são opcionais — nenhum
+/// USER_PROFILE.md (aprovado). Nome real/localização são opcionais aqui
+/// (podem já ter sido preenchidos no onboarding obrigatório) — nenhum
 /// bloqueia ou degrada o uso do app se não preenchidos. O backend é a
 /// única autoridade sobre o que fica salvo; esta tela só carrega/edita.
+///
+/// Upload de foto real (revisão 27/08/2026 — USER_PROFILE.md §3.1)
+/// substitui o antigo picker de avatar emoji: a imagem sobe direto pro
+/// Supabase Storage (bucket público `profile-photos`, RLS restringe
+/// escrita ao próprio dono via auth.uid()), e só a URL pública resultante
+/// é enviada ao backend em PUT /profile — o backend nunca recebe bytes de
+/// imagem, só valida a forma da URL. Toda foto nova nasce 'pending'
+/// (fail-closed) até um admin aprovar.
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key, required this.client});
 
@@ -20,8 +33,10 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   bool _loading = true;
   bool _saving = false;
+  bool _uploadingPhoto = false;
   String? _error;
-  String? _avatarId;
+  String? _photoUrl;
+  String? _photoModerationStatus;
   final _realNameController = TextEditingController();
   final _stateController = TextEditingController();
   final _countryController = TextEditingController();
@@ -47,7 +62,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
       final profile = await widget.client.getProfile();
       if (mounted) {
         setState(() {
-          _avatarId = profile['avatar_id'] as String?;
+          _photoUrl = profile['photo_url'] as String?;
+          _photoModerationStatus = profile['photo_moderation_status'] as String?;
           _realNameController.text = profile['real_name'] as String? ?? '';
           _stateController.text = profile['location_state'] as String? ?? '';
           _countryController.text = profile['location_country'] as String? ?? '';
@@ -61,6 +77,54 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
   }
 
+  Future<void> _pickAndUploadPhoto() async {
+    final l10n = AppLocalizations.of(context)!;
+    final picked = await ImagePicker().pickImage(source: ImageSource.gallery, imageQuality: 85);
+    if (picked == null) return;
+
+    final userId = Supabase.instance.client.auth.currentUser?.id;
+    if (userId == null) return;
+
+    setState(() {
+      _uploadingPhoto = true;
+      _error = null;
+    });
+    try {
+      final ext = picked.path.split('.').last.toLowerCase();
+      final path = '$userId/photo.$ext';
+      final storage = Supabase.instance.client.storage.from('profile-photos');
+      await storage.upload(
+        path,
+        File(picked.path),
+        fileOptions: const FileOptions(upsert: true),
+      );
+      final publicUrl = storage.getPublicUrl(path);
+      // Sufixo de cache-busting: o backend valida só a forma da URL
+      // (prefixo + extensão), então o parâmetro extra não quebra
+      // _is_valid_photo_url, e evita que o Image.network fique preso no
+      // cache de uma foto antiga com o mesmo nome de arquivo.
+      final bustedUrl = '$publicUrl?t=${DateTime.now().millisecondsSinceEpoch}';
+
+      final updated = await widget.client.updateProfile(
+        realName: _realNameController.text.trim().isEmpty ? null : _realNameController.text.trim(),
+        photoUrl: bustedUrl,
+        locationState: _stateController.text.trim().isEmpty ? null : _stateController.text.trim(),
+        locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
+        locationPublic: _locationPublic,
+      );
+      if (mounted) {
+        setState(() {
+          _photoUrl = updated['photo_url'] as String?;
+          _photoModerationStatus = updated['photo_moderation_status'] as String?;
+        });
+      }
+    } catch (_) {
+      if (mounted) setState(() => _error = l10n.profilePhotoUploadError);
+    } finally {
+      if (mounted) setState(() => _uploadingPhoto = false);
+    }
+  }
+
   Future<void> _save() async {
     setState(() {
       _saving = true;
@@ -68,8 +132,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
     });
     try {
       await widget.client.updateProfile(
-        avatarId: _avatarId,
         realName: _realNameController.text.trim().isEmpty ? null : _realNameController.text.trim(),
+        photoUrl: _photoUrl,
         locationState: _stateController.text.trim().isEmpty ? null : _stateController.text.trim(),
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
         locationPublic: _locationPublic,
@@ -97,28 +161,42 @@ class _ProfileScreenState extends State<ProfileScreen> {
             : ListView(
                 padding: const EdgeInsets.all(16),
                 children: [
-                  Text(l10n.profileAvatarSectionTitle, style: Theme.of(context).textTheme.titleLarge),
+                  Text(l10n.profilePhotoSectionTitle, style: Theme.of(context).textTheme.titleLarge),
                   const SizedBox(height: 12),
-                  Wrap(
-                    spacing: 12,
-                    runSpacing: 12,
+                  Row(
                     children: [
-                      for (final entry in kAvatarEmoji.entries)
-                        InkWell(
-                          borderRadius: BorderRadius.circular(28),
-                          onTap: () => setState(() => _avatarId = entry.key),
-                          child: Container(
-                            padding: const EdgeInsets.all(4),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(
-                                color: _avatarId == entry.key ? AppColors.gold : Colors.transparent,
-                                width: 2,
-                              ),
+                      ProfilePhotoCircle(photoUrl: _photoUrl, size: 72),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            OutlinedButton(
+                              onPressed: _uploadingPhoto ? null : _pickAndUploadPhoto,
+                              child: _uploadingPhoto
+                                  ? const SizedBox(
+                                      width: 16,
+                                      height: 16,
+                                      child: CircularProgressIndicator(strokeWidth: 2),
+                                    )
+                                  : Text(l10n.profilePhotoChangeButton),
                             ),
-                            child: AvatarCircle(avatarId: entry.key, size: 48),
-                          ),
+                            if (_photoModerationStatus == 'pending') ...[
+                              const SizedBox(height: 8),
+                              Text(
+                                l10n.profilePhotoPendingLabel,
+                                style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 13),
+                              ),
+                            ] else if (_photoModerationStatus == 'rejected') ...[
+                              const SizedBox(height: 8),
+                              Text(
+                                l10n.profilePhotoRejectedLabel,
+                                style: const TextStyle(color: AppColors.error, fontSize: 13),
+                              ),
+                            ],
+                          ],
                         ),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 24),

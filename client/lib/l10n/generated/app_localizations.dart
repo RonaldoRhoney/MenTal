@@ -1120,22 +1120,46 @@ abstract class AppLocalizations {
   /// **'Meu Perfil'**
   String get profileScreenTitle;
 
-  /// Avatar picker section title
+  /// Profile photo section title
   ///
   /// In pt, this message translates to:
-  /// **'Avatar'**
-  String get profileAvatarSectionTitle;
+  /// **'Foto de perfil'**
+  String get profilePhotoSectionTitle;
+
+  /// Button to pick a new profile photo
+  ///
+  /// In pt, this message translates to:
+  /// **'Escolher foto'**
+  String get profilePhotoChangeButton;
+
+  /// Shown while the uploaded photo awaits moderation
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua foto está em análise — só fica visível pra outros usuários depois de aprovada.'**
+  String get profilePhotoPendingLabel;
+
+  /// Shown when the uploaded photo was rejected by moderation
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua foto foi rejeitada na moderação. Envie outra.'**
+  String get profilePhotoRejectedLabel;
+
+  /// Generic error message when photo upload fails
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível enviar a foto. Tente novamente.'**
+  String get profilePhotoUploadError;
 
   /// Real name field label
   ///
   /// In pt, this message translates to:
-  /// **'Nome real (opcional)'**
+  /// **'Nome real'**
   String get profileRealNameLabel;
 
-  /// Helper text explaining real name is never public
+  /// Helper text explaining real name is now public
   ///
   /// In pt, this message translates to:
-  /// **'Nunca aparece publicamente — só uso interno, ex.: suporte. Seu apelido já te identifica no jogo.'**
+  /// **'Aparece publicamente ao lado da sua foto de perfil, em Ranking, Amigos e Batalhas.'**
   String get profileRealNameHelperText;
 
   /// Location section title

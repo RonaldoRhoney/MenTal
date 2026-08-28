@@ -209,6 +209,7 @@ class ApiClient {
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,
+    String? photoUrl,
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
@@ -222,6 +223,7 @@ class ApiClient {
       body: jsonEncode({
         'avatar_id': avatarId,
         'real_name': realName,
+        'photo_url': photoUrl,
         'location_state': locationState,
         'location_country': locationCountry,
         'location_public': locationPublic,

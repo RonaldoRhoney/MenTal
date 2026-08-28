@@ -9,18 +9,27 @@ import 'package:mental/theme/app_theme.dart';
 
 /// USER_PROFILE.md — o backend é a única autoridade sobre o que fica
 /// salvo (GET/PUT /profile); esta tela só carrega/edita o que já vem
-/// pronto.
+/// pronto. Revisão 27/08/2026: avatar emoji removido, upload de foto
+/// real + nome real público (ver USER_PROFILE.md §3.1). O fluxo de
+/// upload em si (image_picker + Supabase Storage) não é testável aqui —
+/// exigiria mockar plataforma nativa/Supabase; cobre-se só o que a tela
+/// controla diretamente (campos de texto, botão Salvar, indicador de
+/// moderação).
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _FakeApiClient({String? photoModerationStatus})
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token') {
+    profile = {
+      'nickname': 'Lontra-Sabida',
+      'real_name': null,
+      'photo_url': null,
+      'photo_moderation_status': photoModerationStatus ?? 'none',
+      'location_state': null,
+      'location_country': null,
+      'location_public': false,
+    };
+  }
 
-  Map<String, dynamic> profile = {
-    'nickname': 'Lontra-Sabida',
-    'avatar_id': null,
-    'real_name': null,
-    'location_state': null,
-    'location_country': null,
-    'location_public': false,
-  };
+  late Map<String, dynamic> profile;
   Map<String, dynamic>? lastUpdate;
 
   @override
@@ -30,6 +39,7 @@ class _FakeApiClient extends ApiClient {
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,
+    String? photoUrl,
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
@@ -38,8 +48,8 @@ class _FakeApiClient extends ApiClient {
     String? ageRange,
   }) async {
     lastUpdate = {
-      'avatar_id': avatarId,
       'real_name': realName,
+      'photo_url': photoUrl,
       'location_state': locationState,
       'location_country': locationCountry,
       'location_public': locationPublic,
@@ -47,7 +57,11 @@ class _FakeApiClient extends ApiClient {
       'gender': gender,
       'age_range': ageRange,
     };
-    profile = {'nickname': 'Lontra-Sabida', ...lastUpdate!};
+    profile = {
+      'nickname': 'Lontra-Sabida',
+      'photo_moderation_status': profile['photo_moderation_status'],
+      ...lastUpdate!,
+    };
     return profile;
   }
 }
@@ -70,22 +84,18 @@ Future<void> _pumpProfileScreen(WidgetTester tester, ApiClient client) async {
 }
 
 void main() {
-  testWidgets('carrega o perfil vazio e mostra os 8 avatares', (tester) async {
+  testWidgets('carrega o perfil vazio e mostra o botão de escolher foto', (tester) async {
     await _pumpProfileScreen(tester, _FakeApiClient());
 
-    expect(find.text('🦉'), findsOneWidget);
-    expect(find.text('🦊'), findsOneWidget);
-    expect(find.text('🦦'), findsOneWidget);
+    expect(find.text('Escolher foto'), findsOneWidget);
+    expect(find.text('Foto de perfil'), findsOneWidget);
   });
 
-  testWidgets('escolhe avatar, preenche campos e salva via PUT /profile', (tester) async {
+  testWidgets('preenche nome real e localização e salva via PUT /profile', (tester) async {
     final client = _FakeApiClient();
     await _pumpProfileScreen(tester, client);
 
-    await tester.tap(find.text('🦊'));
-    await tester.pump();
-
-    await tester.enterText(find.widgetWithText(TextField, 'Nome real (opcional)'), 'Fulano de Tal');
+    await tester.enterText(find.widgetWithText(TextField, 'Nome real'), 'Fulano de Tal');
     await tester.enterText(find.widgetWithText(TextField, 'Estado'), 'SP');
     await tester.enterText(find.widgetWithText(TextField, 'País'), 'Brasil');
     await tester.tap(find.byType(Switch));
@@ -93,8 +103,8 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(client.lastUpdate, {
-      'avatar_id': 'fox',
       'real_name': 'Fulano de Tal',
+      'photo_url': null,
       'location_state': 'SP',
       'location_country': 'Brasil',
       'location_public': true,
@@ -105,8 +115,18 @@ void main() {
     expect(find.text('Perfil salvo!'), findsOneWidget);
   });
 
-  testWidgets('nome real nunca some sozinho — helper text sempre visível', (tester) async {
+  testWidgets('nome real agora é anunciado como público — helper text reflete isso', (tester) async {
     await _pumpProfileScreen(tester, _FakeApiClient());
-    expect(find.textContaining('Nunca aparece publicamente'), findsOneWidget);
+    expect(find.textContaining('Aparece publicamente'), findsOneWidget);
+  });
+
+  testWidgets('foto pendente mostra aviso de moderação', (tester) async {
+    await _pumpProfileScreen(tester, _FakeApiClient(photoModerationStatus: 'pending'));
+    expect(find.textContaining('em análise'), findsOneWidget);
+  });
+
+  testWidgets('foto rejeitada mostra aviso pra reenviar', (tester) async {
+    await _pumpProfileScreen(tester, _FakeApiClient(photoModerationStatus: 'rejected'));
+    expect(find.textContaining('rejeitada'), findsOneWidget);
   });
 }

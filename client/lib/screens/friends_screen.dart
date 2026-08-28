@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../api/api_client.dart';
-import '../avatars.dart';
+import '../widgets/profile_photo.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/share_service.dart';
 import '../territories.dart';
@@ -278,9 +278,14 @@ class _FriendsScreenState extends State<FriendsScreen> {
                               itemCount: _friends.length,
                               itemBuilder: (context, index) {
                                 final friend = _friends[index];
+                                final realName = friend['real_name'] as String?;
                                 return ListTile(
-                                  leading: AvatarCircle(avatarId: friend['avatar_id'] as String?),
-                                  title: Text(friend['nickname'] as String),
+                                  leading: ProfilePhotoCircle(photoUrl: friend['photo_url'] as String?),
+                                  title: Text(
+                                    realName != null && realName.isNotEmpty
+                                        ? '${friend['nickname']} · $realName'
+                                        : friend['nickname'] as String,
+                                  ),
                                   subtitle: Text(
                                     '${friend['xp_total']} XP',
                                     style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 14),

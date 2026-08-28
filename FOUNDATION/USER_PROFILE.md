@@ -1,7 +1,35 @@
 # MENTAL — Perfil do Usuário (campos obrigatórios vs opcionais)
 
-**Status:** Aprovado. **Revisado em 26/08/2026** — ver nota abaixo.
+**Status:** Aprovado. **Revisado em 27/08/2026** — ver nota abaixo (mais recente primeiro).
 **Documentos relacionados:** FAMILY_SAFETY.md, V2_KICKOFF.md (item 12 — Amigos), DESIGN_SYSTEM.md, MENTAL-DIR-001
+
+---
+
+## Revisão 27/08/2026 — avatar removido; foto real + nome real agora públicos
+
+Decisão de Rhoney: o sistema de **avatares emoji foi retirado** do app.
+No lugar, todo usuário pode subir uma **foto de perfil real**, e o
+**nome real passa a ser exibido publicamente** ao lado dela — em
+Ranking, Amigos e Batalhas. Isso **reverte duas regras da seção 3**
+abaixo (avatar como identidade pública padrão; nome real nunca
+público), registradas quando o MENTAL ainda tinha público misto
+incluindo menores. Com a MENTAL-DIR-001 (app exclusivo 18+), o
+risco original que motivava as duas regras deixou de se aplicar: não
+há mais `child_safe_mode` nem usuário não-adulto na base.
+
+Continua valendo, sem alteração, o princípio de **moderação
+fail-closed** da seção 3.1: toda foto nova nasce em estado `pending` e
+só fica visível para outros usuários depois de aprovada. A diferença é
+o **estágio de implementação atual**: hoje só existe a camada manual
+(um admin aprova/rejeita via `/admin/profile-photos`) — as camadas
+automatizadas "Claude" e "Mentora_AI" descritas originalmente na seção
+3.1 **não estão implementadas**; ficam registradas aqui como parcela
+pendente do processo de 3 camadas, não como algo já em produção.
+
+A condição de elegibilidade "só 18+" da seção 3.1 também deixa de ser
+um filtro ativo — todo usuário do app já é 18+ por força da própria
+DIR-001, então não existe mais população "não-adulta" para diferenciar
+visibilidade de foto.
 
 ---
 
@@ -19,9 +47,11 @@ com o MENTAL agora exclusivo para maiores de 18 anos (sem
 `child_safe_mode`), o risco de localização fina de menor que motivava
 essa regra deixou de existir. Cidade passa a ser coletada normalmente.
 
-Nickname/avatar continuam como identidade pública; nome real continua
-nunca exibido publicamente (mesma regra da seção 3). Localização
-(estado) continua opcional além do país/cidade agora obrigatórios.
+Nickname/avatar continuavam, nesta data, como identidade pública; nome
+real continuava nunca exibido publicamente (mesma regra da seção 3) —
+**revertido em 27/08/2026, ver revisão mais recente no topo deste
+documento.** Localização (estado) continua opcional além do
+país/cidade agora obrigatórios.
 
 ---
 
@@ -48,29 +78,31 @@ Nenhum campo opcional pode bloquear ou degradar o uso do app se não for preench
 
 | Campo | Formato recomendado | Justificativa |
 |---|---|---|
-| **Foto de perfil** | Avatares pré-definidos (ilustrados) para todos; **upload de foto real permitido apenas para usuário confirmado como 18+** no campo obrigatório de idade | Ver seção 3.1 para regras completas (visibilidade condicional e moderação). |
-| **Nome real** | Campo interno, **nunca exibido publicamente** | Se existir, serve só para uso interno (ex.: contato/suporte) — nunca aparece em ranking, amigos, ou qualquer tela social. Nickname já cumpre o papel de identidade pública. Mesma lógica de proteção já usada no child_safe_mode. |
+| **Foto de perfil** | Upload de foto real (avatar emoji removido — Revisão 27/08/2026) | Ver seção 3.1 para regras completas (moderação obrigatória, fail-closed). |
+| **Nome real** | Exibido publicamente ao lado da foto (Revisão 27/08/2026) | Aparece em ranking, amigos e batalhas junto com a foto de perfil. Nickname continua existindo, mas nome real deixou de ser interno-apenas. |
 | **Localização** | Só **estado/país** — nunca cidade exata | Cidade exata combinada com "criança usa este app" é dado sensível com risco regulatório real (mesmo cuidado já aplicado no MeuPet com GPS/IP/manual). Estado/país entrega valor social/cultural (inclusive conecta com a ideia futura de Regionalismo Brasileiro do V3) sem risco de localização fina de menor. |
 
 ---
 
-### 3.1 Upload de foto real — regra especial (atualização)
+### 3.1 Upload de foto real — regra especial (atualização, revisada 27/08/2026)
 
-Diferente da decisão original (só avatar), foi aprovado permitir **upload de foto real de perfil**, sob três condições que precisam valer em conjunto:
+Todo usuário (já 18+ por força da DIR-001) pode fazer **upload de foto
+real de perfil**, sob duas condições que precisam valer em conjunto
+(a condição original de "elegibilidade só 18+" caiu — ver Revisão
+27/08/2026 no topo do documento, não existe mais população
+não-adulta a diferenciar):
 
-1. **Elegibilidade:** somente usuários que se declararam **18 anos ou mais** no campo obrigatório de idade do perfil podem habilitar upload de foto real. Usuários em `child_safe_mode` (ou que não confirmaram 18+) nunca veem essa opção — para eles, permanece só avatar pré-definido.
+1. **Visibilidade pública:** a foto real, junto do nome real, aparece para **todos os outros usuários** em ranking, amigos e batalhas — não há mais diferenciação de audiência por faixa etária.
 
-2. **Visibilidade condicional (quem sobe ≠ quem vê):** a foto real de um adulto **só é exibida para outros usuários também confirmados como adultos**. Um usuário em `child_safe_mode` sempre vê o **avatar padrão** no lugar da foto real, mesmo ao visualizar o perfil de um amigo ou posição no ranking de alguém que tenha foto real cadastrada — a foto nunca chega a ser renderizada para essa audiência, em nenhuma tela (ranking, amigos, badges, disputa territorial, batalha assíncrona).
-
-3. **Moderação obrigatória:** toda foto de perfil enviada passa pela mesma camada de moderação já definida para UGC em REGIONAL_UGC_CONCEPT_V3.md — revisão em 3 camadas (Rhoney + Claude + Mentora_AI), **fail-closed** (foto ambígua nunca fica visível até revisão concluída; enquanto isso, avatar padrão é exibido no lugar).
+2. **Moderação obrigatória, fail-closed:** toda foto nova enviada nasce em estado `pending` e só fica visível para outros usuários depois de aprovada (`services.public_photo_url()` no backend — checagem centralizada, nunca duplicada por tela). Enquanto pendente ou rejeitada, nenhuma foto é exibida para terceiros (o próprio dono pode ver o preview da própria foto pendente, com indicação de status). **Estado atual da implementação:** só a camada manual existe (`/admin/profile-photos`, um humano com role=admin aprova/rejeita). As camadas automatizadas "Claude" e "Mentora_AI" descritas na concepção original de UGC (REGIONAL_UGC_CONCEPT_V3.md) **não foram implementadas** — pendência registrada, não lacuna silenciosa.
 
 Esta regra é uma extensão da política de UGC já estabelecida — foto de perfil é tratada com o mesmo rigor de conteúdo enviado por usuário, não como um campo de perfil trivial.
 
 ---
 
-- **Nickname:** sempre visível (ranking, amigos, badges) — respeitando já a regra de child_safe_mode (nickname gerado pelo sistema para perfis infantis, se aplicável).
-- **Avatar:** visível onde o nickname aparece.
-- **Nome real:** nunca visível publicamente, em nenhuma tela.
+- **Nickname:** sempre visível (ranking, amigos, badges).
+- **Nome real:** visível publicamente ao lado da foto de perfil (Revisão 27/08/2026) — ranking, amigos, batalhas.
+- **Foto de perfil:** visível publicamente somente após moderação aprovada (fail-closed, seção 3.1) — antes disso, o campo aparece vazio/nulo para terceiros.
 - **Localização (estado/país):** visível apenas se o usuário preencher e explicitamente permitir exibição — campo opcional dentro do opcional (preencher ≠ exibir automaticamente). Detalhe de UI a definir na implementação (ex.: toggle "mostrar meu estado no perfil").
 
 ---

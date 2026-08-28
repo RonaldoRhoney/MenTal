@@ -629,14 +629,29 @@ class AppLocalizationsPt extends AppLocalizations {
   String get profileScreenTitle => 'Meu Perfil';
 
   @override
-  String get profileAvatarSectionTitle => 'Avatar';
+  String get profilePhotoSectionTitle => 'Foto de perfil';
 
   @override
-  String get profileRealNameLabel => 'Nome real (opcional)';
+  String get profilePhotoChangeButton => 'Escolher foto';
+
+  @override
+  String get profilePhotoPendingLabel =>
+      'Sua foto está em análise — só fica visível pra outros usuários depois de aprovada.';
+
+  @override
+  String get profilePhotoRejectedLabel =>
+      'Sua foto foi rejeitada na moderação. Envie outra.';
+
+  @override
+  String get profilePhotoUploadError =>
+      'Não foi possível enviar a foto. Tente novamente.';
+
+  @override
+  String get profileRealNameLabel => 'Nome real';
 
   @override
   String get profileRealNameHelperText =>
-      'Nunca aparece publicamente — só uso interno, ex.: suporte. Seu apelido já te identifica no jogo.';
+      'Aparece publicamente ao lado da sua foto de perfil, em Ranking, Amigos e Batalhas.';
 
   @override
   String get profileLocationSectionTitle => 'Localização (opcional)';

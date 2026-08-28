@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
-import '../avatars.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/movement_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
+import '../widgets/profile_photo.dart';
 import '../widgets/xp_bar.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
@@ -49,10 +49,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   Map<String, dynamic>? _progress;
   String? _error;
-  // Foto/avatar do usuário ao lado do Nível (pedido de Rhoney,
-  // 2026-08-26), clicável pra editar — GET /progress não traz avatar_id,
-  // então carrega separado via GET /profile.
-  String? _avatarId;
+  // Foto real + nome real do usuário ao lado do Nível (pedido de Rhoney,
+  // 26/08 e 27/08/2026), clicável pra editar — GET /progress não traz
+  // esses campos, então carrega separado via GET /profile.
+  String? _photoUrl;
+  String? _realName;
 
   // V2 item 9 — badge de passos ainda não coletados junto ao ícone de
   // Movimento (decisão de Rhoney, 2026-08-21: "catch-up ao reabrir o
@@ -68,15 +69,20 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     _loadProgress();
     _loadMovementBadge();
-    _loadAvatar();
+    _loadProfileHeader();
   }
 
-  Future<void> _loadAvatar() async {
+  Future<void> _loadProfileHeader() async {
     try {
       final profile = await widget.client.getProfile();
-      if (mounted) setState(() => _avatarId = profile['avatar_id'] as String?);
+      if (mounted) {
+        setState(() {
+          _photoUrl = profile['photo_url'] as String?;
+          _realName = profile['real_name'] as String?;
+        });
+      }
     } on ApiException catch (_) {
-      // Avatar é reforço visual, nunca bloqueia a Home por causa disso.
+      // Foto/nome são reforço visual, nunca bloqueiam a Home por causa disso.
     }
   }
 
@@ -84,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
     await Navigator.of(context).push(
       MaterialPageRoute(builder: (_) => ProfileScreen(client: widget.client)),
     );
-    _loadAvatar();
+    _loadProfileHeader();
   }
 
   @override
@@ -263,7 +269,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 20),
               if (progress != null)
-                _ProgressCard(progress: progress, avatarId: _avatarId, l10n: l10n, onTapAvatar: _openProfile),
+                _ProgressCard(
+                  progress: progress,
+                  photoUrl: _photoUrl,
+                  realName: _realName,
+                  l10n: l10n,
+                  onTapPhoto: _openProfile,
+                ),
               if (_error != null) ...[
                 const SizedBox(height: 8),
                 Text(_error!, style: const TextStyle(color: AppColors.error)),
@@ -428,9 +440,14 @@ class _QuickActionCard extends StatelessWidget {
               Text(
                 label,
                 textAlign: TextAlign.center,
-                maxLines: 1,
+                maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.bodySmall,
+                // Achado real de validação em dispositivo (26/08/2026):
+                // com maxLines: 1 + a largura estreita de 4 colunas,
+                // labels como "Progresso"/"Movimento" truncavam
+                // ("Progres...", "Movime..."). fontSize menor + 2 linhas
+                // resolve sem precisar encurtar o texto em si.
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 12, height: 1.15),
               ),
             ],
           ),
@@ -639,21 +656,27 @@ class _TerritoryCard extends StatelessWidget {
 /// borda dourada sutil) do restante da lista de territórios — achado
 /// real do redesign: antes tudo tinha o mesmo peso visual, sem
 /// hierarquia de importância entre "seu progresso" e "os territórios".
-/// Avatar clicável ao lado do Nível (pedido de Rhoney, 2026-08-26) —
-/// abre o Perfil pra editar, mesmo lugar visual onde o nickname/avatar
-/// já aparece em Amigos/Ranking/Batalhas (USER_PROFILE.md §4).
+/// Foto de perfil clicável ao lado do nome (pedido de Rhoney, 26/08 e
+/// 27/08/2026) — abre o Perfil pra editar, mesmo lugar visual onde o
+/// nome/foto já aparecem em Amigos/Ranking/Batalhas (USER_PROFILE.md §4).
+///
+/// O nível NÃO é repetido aqui — `XpBar` abaixo já renderiza "Nível $level"
+/// internamente; um `Text(l10n.levelLabel(level))` extra neste Row
+/// duplicava o texto (achado real de validação em dispositivo, 26/08/2026).
 class _ProgressCard extends StatelessWidget {
   const _ProgressCard({
     required this.progress,
-    required this.avatarId,
+    required this.photoUrl,
+    required this.realName,
     required this.l10n,
-    required this.onTapAvatar,
+    required this.onTapPhoto,
   });
 
   final Map<String, dynamic> progress;
-  final String? avatarId;
+  final String? photoUrl;
+  final String? realName;
   final AppLocalizations l10n;
-  final VoidCallback onTapAvatar;
+  final VoidCallback onTapPhoto;
 
   @override
   Widget build(BuildContext context) {
@@ -672,13 +695,18 @@ class _ProgressCard extends StatelessWidget {
             children: [
               InkWell(
                 borderRadius: BorderRadius.circular(28),
-                onTap: onTapAvatar,
-                child: AvatarCircle(avatarId: avatarId, size: 48),
+                onTap: onTapPhoto,
+                child: ProfilePhotoCircle(photoUrl: photoUrl, size: 48),
               ),
               const SizedBox(width: 12),
-              Expanded(
-                child: Text(l10n.levelLabel(level), style: Theme.of(context).textTheme.titleLarge),
-              ),
+              if (realName != null && realName!.isNotEmpty)
+                Expanded(
+                  child: Text(
+                    realName!,
+                    style: Theme.of(context).textTheme.titleLarge,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
             ],
           ),
           const SizedBox(height: 12),

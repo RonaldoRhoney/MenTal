@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
-import '../avatars.dart';
+import '../widgets/profile_photo.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
 
@@ -124,6 +124,10 @@ class _RankingScreenState extends State<RankingScreen> {
             itemBuilder: (context, index) {
               final entry = entries[index];
               final isMe = me != null && entry['rank'] == me['rank'] && entry['nickname'] == me['nickname'];
+              final realName = entry['real_name'] as String?;
+              final displayName = realName != null && realName.isNotEmpty
+                  ? '${entry['nickname']} · $realName'
+                  : entry['nickname'] as String;
               return ListTile(
                 leading: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -139,11 +143,11 @@ class _RankingScreenState extends State<RankingScreen> {
                       ),
                     ),
                     const SizedBox(width: 8),
-                    AvatarCircle(avatarId: entry['avatar_id'] as String?, size: 32),
+                    ProfilePhotoCircle(photoUrl: entry['photo_url'] as String?, size: 32),
                   ],
                 ),
                 title: Text(
-                  isMe ? '${entry['nickname']} (${l10n.rankingMePrefix})' : entry['nickname'] as String,
+                  isMe ? '$displayName (${l10n.rankingMePrefix})' : displayName,
                   style: TextStyle(
                     color: isMe ? AppColors.gold : AppColors.bone,
                     fontWeight: isMe ? FontWeight.w600 : FontWeight.normal,

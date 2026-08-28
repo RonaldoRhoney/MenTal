@@ -17,6 +17,7 @@ class _FakeApiClient extends ApiClient {
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,
+    String? photoUrl,
     String? locationState,
     String? locationCountry,
     required bool locationPublic,

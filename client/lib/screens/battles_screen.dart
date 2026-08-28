@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
-import '../avatars.dart';
+import '../widgets/profile_photo.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
@@ -106,10 +106,14 @@ class _BattlesScreenState extends State<BattlesScreen> {
                         itemBuilder: (context, index) {
                           final battle = _battles[index];
                           final canAnswer = battle['status'] == 'pending' && battle['i_answered'] == false;
+                          final opponentRealName = battle['opponent_real_name'] as String?;
+                          final opponentLabel = opponentRealName != null && opponentRealName.isNotEmpty
+                              ? '${battle['opponent_nickname']} · $opponentRealName'
+                              : battle['opponent_nickname'];
                           return ListTile(
-                            leading: AvatarCircle(avatarId: battle['opponent_avatar_id'] as String?),
+                            leading: ProfilePhotoCircle(photoUrl: battle['opponent_photo_url'] as String?),
                             title: Text(
-                              '${territoryLabel(l10n, battle['territory_id'] as String)} · ${battle['opponent_nickname']}',
+                              '${territoryLabel(l10n, battle['territory_id'] as String)} · $opponentLabel',
                             ),
                             subtitle: _statusLine(l10n, battle),
                             // AppTheme define minimumSize: Size.fromHeight(48)
