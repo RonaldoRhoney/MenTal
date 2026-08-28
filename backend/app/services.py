@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from . import config, models, notification_copy, push, scoring
 from .nickname import generate_anonymous_nickname
-from .timeutil import utcnow
+from .timeutil import naive, utcnow
 
 
 def _mastery_score(attempt: "models.Attempt") -> float:
@@ -554,6 +554,23 @@ def create_served_attempt(db: Session, attempt_id: str, user_id: str, challenge_
     db.commit()
     db.refresh(attempt)
     return attempt
+
+
+def elapsed_ms_since(served_at: datetime) -> int:
+    """
+    Milissegundos decorridos desde `served_at` até agora, sempre >= 0.
+    Extraído como função pura (sem depender do banco) especificamente
+    pra ser testável de verdade: `served_at` que vem do Postgres é
+    timestamptz (volta AWARE do driver), enquanto utcnow() deste projeto
+    é deliberadamente naive (timeutil.py) — subtrair sem `naive()` lança
+    `TypeError: can't subtract offset-naive and offset-aware datetimes`.
+    Bug real em produção (28/08/2026): SQLite não distingue aware/naive
+    ao gravar num teste (sempre volta naive depois de round-trip pelo
+    ORM), então um teste passando por PUT/POST + banco de teste nunca
+    pegaria essa classe de bug — só um teste unitário direto, com um
+    datetime aware de verdade em memória, pega isso.
+    """
+    return max(0, int((utcnow() - naive(served_at)).total_seconds() * 1000))
 
 
 def compute_speed_bonus_xp(xp_base: int, response_time_ms: int, time_limit_seconds: int) -> int:

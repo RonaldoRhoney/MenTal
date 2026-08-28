@@ -1,5 +1,5 @@
 import uuid
-from datetime import datetime, timedelta
+from datetime import timedelta
 from app.timeutil import utcnow
 
 from app.config import DAILY_FREE_CHALLENGE_LIMIT

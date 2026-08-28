@@ -295,10 +295,12 @@ def submit_answer(
     # Achado de auditoria de segurança (28/08/2026): response_time_ms do
     # corpo da requisição NUNCA mais alimenta o bônus — vinha 100% do
     # client, e mandar 0 dobrava o bônus de velocidade em qualquer
-    # território cronometrado. server_response_time_ms é sempre
-    # (agora - attempt.served_at), o momento real em que o servidor
-    # entregou este desafio a este usuário (GET /challenges/next).
-    server_response_time_ms = max(0, int((utcnow() - attempt.served_at).total_seconds() * 1000))
+    # território cronometrado. server_response_time_ms é sempre o tempo
+    # real decorrido desde que o servidor entregou este desafio a este
+    # usuário (GET /challenges/next) — services.elapsed_ms_since cuida
+    # do detalhe aware/naive (bug real em produção logo após o primeiro
+    # deploy desta correção: todo POST /answer quebrava com 500).
+    server_response_time_ms = services.elapsed_ms_since(attempt.served_at)
 
     speed_bonus_xp = 0
     time_limit_seconds = config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS.get(challenge.difficulty_level)
