@@ -1,7 +1,7 @@
 name: mental
 description: MENTAL — cliente Flutter (Vertical Slice 01)
 publish_to: "none"
-version: 0.1.0+2
+version: 0.1.0+3
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
@@ -29,6 +29,8 @@ dependencies:
   # MENTAL-POL-002 §3.1 (24/08/2026): tela de confirmação de maioridade
   # linka Termos de Uso/Política de Privacidade.
   url_launcher: ^6.3.0
+  # Upload de foto de perfil real (revisão 27/08/2026, substitui avatar emoji).
+  image_picker: ^1.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
