@@ -107,7 +107,10 @@ def test_ranking_never_exposes_user_id_or_email(client):
 
     ranking = client.get("/ranking", params={"scope": "global", "window": "weekly"}, headers=headers).json()
     for entry in ranking["entries"]:
-        # avatar_id: USER_PROFILE.md, aprovado — nunca expõe user_id/email,
-        # só o mesmo tipo de dado público que nickname já expunha.
-        assert set(entry.keys()) == {"rank", "nickname", "avatar_id", "xp"}
+        # avatar_id/real_name/photo_url: USER_PROFILE.md, aprovado — nunca
+        # expõe user_id/email. real_name e photo_url (revisão 26/08/2026)
+        # são o mesmo tipo de dado público que nickname já expunha; photo_url
+        # ainda passa pelo filtro fail-closed de moderação (services.
+        # public_photo_url), nunca o dado bruto.
+        assert set(entry.keys()) == {"rank", "nickname", "avatar_id", "real_name", "photo_url", "xp"}
         assert user not in entry["nickname"]  # nunca expõe o user_id bruto

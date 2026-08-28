@@ -1,11 +1,14 @@
 """
-Perfil do usuário (USER_PROFILE.md, aprovado). Todos os campos são
-opcionais — nenhum bloqueia uso do app. real_name é interno, nunca
-exposto em FriendOut/RankingEntry/BattleOut (só nickname/avatar_id vão
-lá). location_public controla exibição, separado de preencher.
+Perfil do usuário (USER_PROFILE.md, aprovado; revisado 2026-08-26).
+Campos base continuam opcionais — nenhum bloqueia uso do app.
+real_name/photo_url agora aparecem publicamente (foto só se aprovada na
+moderação) — reversão da regra anterior de "nunca exposto".
 """
 
 import uuid
+
+from app import config, models
+from app.db import SessionLocal
 
 from .conftest import auth_header
 
@@ -54,21 +57,55 @@ def test_update_profile_persists_all_fields(client):
     assert refetched == body
 
 
-def test_real_name_never_appears_in_friends_list(client):
+def test_real_name_appears_publicly_in_friends_list(client):
+    """
+    Revisão 26/08/2026 (decisão de Rhoney): nome real passa a ser
+    público, ao lado da foto de perfil — reverte a regra anterior
+    ("nunca exibido publicamente"), registrada agora em USER_PROFILE.md.
+    """
     user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a = auth_header(user_a)
     headers_b = auth_header(user_b)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
-    client.put("/profile", json={"real_name": "Segredo", "avatar_id": "fox"}, headers=headers_b)
+    client.put("/profile", json={"real_name": "Maria Silva", "avatar_id": "fox"}, headers=headers_b)
 
     code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
     client.post("/social/friends", json={"invite_code": code}, headers=headers_b)
 
     friends = client.get("/social/friends", headers=headers_a).json()["friends"]
     assert len(friends) == 1
-    assert "real_name" not in friends[0]
+    assert friends[0]["real_name"] == "Maria Silva"
     assert friends[0]["avatar_id"] == "fox"
+
+
+def test_photo_url_only_appears_publicly_after_admin_approval(client):
+    """USER_PROFILE.md §3.1 — fail-closed: foto pendente/rejeitada nunca
+    aparece pra outros usuários, só depois de aprovada por um admin."""
+    user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
+    headers_a = auth_header(user_a)
+    headers_b = auth_header(user_b)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
+
+    photo_url = f"{config.SUPABASE_URL or 'https://fake.supabase.co'}/storage/v1/object/public/profile-photos/{user_b}/photo.jpg"
+    if config.SUPABASE_URL is None:
+        pass  # sem Supabase configurado (SQLite local), validação de URL é sempre aceita.
+    client.put("/profile", json={"photo_url": photo_url}, headers=headers_b)
+
+    code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
+    client.post("/social/friends", json={"invite_code": code}, headers=headers_b)
+
+    friends_before = client.get("/social/friends", headers=headers_a).json()["friends"]
+    assert friends_before[0]["photo_url"] is None, "pendente não deve aparecer pra outros ainda"
+
+    with SessionLocal() as db:
+        profile_b = db.get(models.Profile, user_b)
+        profile_b.photo_moderation_status = "approved"
+        db.commit()
+
+    friends_after = client.get("/social/friends", headers=headers_a).json()["friends"]
+    assert friends_after[0]["photo_url"] == photo_url
 
 
 def test_onboarding_stays_incomplete_until_all_5_mandatory_fields_filled(client):

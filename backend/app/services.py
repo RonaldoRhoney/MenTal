@@ -785,3 +785,13 @@ def _notify_battle_result(challenger_profile: "models.Profile", opponent_profile
         else:
             title, body = notification_copy.BATTLE_RESULT_LOSS_TITLE, notification_copy.BATTLE_RESULT_LOSS_BODY_TEMPLATE.format(nickname=other_nickname)
         push.send_push_notification(me.push_token, title, body)
+
+
+def public_photo_url(profile: models.Profile) -> str | None:
+    """
+    Foto de perfil só é exibida pra OUTROS usuários (friends/ranking/
+    battles) quando aprovada na moderação (USER_PROFILE.md §3.1,
+    fail-closed) — pendente ou rejeitada nunca vaza pra fora do próprio
+    dono (que vê o status real via GET /profile).
+    """
+    return profile.photo_url if profile.photo_moderation_status == "approved" else None

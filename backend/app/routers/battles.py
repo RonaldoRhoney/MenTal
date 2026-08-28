@@ -135,6 +135,8 @@ def list_battles(user_id: str = Depends(get_current_user_id), db: Session = Depe
                 battle_id=battle.id,
                 opponent_nickname=opponent_profile.nickname if opponent_profile else "?",
                 opponent_avatar_id=opponent_profile.avatar_id if opponent_profile else None,
+                opponent_real_name=opponent_profile.real_name if opponent_profile else None,
+                opponent_photo_url=services.public_photo_url(opponent_profile) if opponent_profile else None,
                 territory_id=battle.territory_id,
                 difficulty_level=battle.difficulty_level,
                 role="challenger" if is_challenger else "opponent",

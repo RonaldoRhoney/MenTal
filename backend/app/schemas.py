@@ -220,6 +220,10 @@ class RankingEntry(BaseModel):
     rank: int
     nickname: str
     avatar_id: str | None = None
+    # Revisão 26/08/2026: nome real e foto de perfil (só se aprovada na
+    # moderação) passam a ser públicos, reversão da regra anterior.
+    real_name: str | None = None
+    photo_url: str | None = None
     xp: int
 
 
@@ -325,6 +329,8 @@ class FriendOut(BaseModel):
     user_id: str
     nickname: str
     avatar_id: str | None = None
+    real_name: str | None = None
+    photo_url: str | None = None
     xp_total: int
     level: int
 
@@ -355,6 +361,8 @@ class BattleOut(BaseModel):
     battle_id: str
     opponent_nickname: str
     opponent_avatar_id: str | None = None
+    opponent_real_name: str | None = None
+    opponent_photo_url: str | None = None
     territory_id: str
     difficulty_level: int
     role: str  # "challenger" | "opponent"
@@ -376,10 +384,17 @@ AgeRangeValue = Literal["18-25", "26-30", "31-45", "46-50", "51+"]
 class ProfileOut(BaseModel):
     nickname: str
     avatar_id: str | None
-    # real_name só aparece aqui porque é o PRÓPRIO usuário vendo o
-    # próprio perfil (GET /profile) — nunca em FriendOut/RankingEntry/
-    # BattleOut, que são visões de OUTRO usuário.
+    # Revisão 26/08/2026: real_name agora também aparece em FriendOut/
+    # RankingEntry/BattleOut (decisão de Rhoney, reverte a regra
+    # anterior de "nunca público").
     real_name: str | None
+    # Upload de foto real (26/08/2026) — photo_url é a URL pública no
+    # Storage; photo_moderation_status é sempre visível pro PRÓPRIO
+    # dono (pra ele saber se está pendente/aprovada/rejeitada), mas só
+    # aparece pra outros usuários (Friends/Ranking/Battles) quando
+    # 'approved' — USER_PROFILE.md §3.1, fail-closed.
+    photo_url: str | None
+    photo_moderation_status: str
     location_state: str | None
     location_country: str | None
     location_public: bool
@@ -407,3 +422,17 @@ class UpdateProfileRequest(BaseModel):
     city: str | None = None
     gender: GenderValue | None = None
     age_range: AgeRangeValue | None = None
+    # Upload de foto real (26/08/2026) — client já fez o upload direto
+    # pro Supabase Storage e manda aqui a URL pública resultante. Uma URL
+    # nova (diferente da já salva) reseta a moderação pra 'pending'.
+    photo_url: str | None = None
+
+
+class ModerateProfilePhotoRequest(BaseModel):
+    approved: bool
+
+
+class AdminPendingPhotoItem(BaseModel):
+    user_id: str
+    nickname: str
+    photo_url: str

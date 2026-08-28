@@ -120,16 +120,23 @@ class Profile(Base):
     # V2 — Perfil do usuário (USER_PROFILE.md, aprovado). Todos opcionais,
     # nenhum bloqueia ou degrada o uso do app se não preenchidos (mesmo
     # princípio de Clareza Imediata/não-humilhação já aplicado a tudo).
-    # avatar_id referencia um dos 8 avatares pré-definidos (ilustrados via
-    # emoji, nunca upload de foto real — risco de moderação/identificação
-    # de menor num público misto, mesmo raciocínio já usado pra bloquear
-    # UGC de imagem). Catálogo fixo vive no client (nada pra validar aqui
-    # além de "é uma string ou é nulo").
+    # Deprecated (26/08/2026) — avatar emoji pré-definido, substituído
+    # por upload de foto real (photo_url abaixo). Coluna mantida (dado
+    # de testadores reais já em produção), sem leitura pelo client a
+    # partir de agora, mesmo padrão de outras colunas deprecated.
     avatar_id: Mapped[str | None] = mapped_column(String, nullable=True)
-    # Campo interno — NUNCA exposto em nenhuma resposta pública (friends,
-    # ranking, battles). Existe só pra uso interno futuro (ex.: suporte),
-    # nickname já cumpre o papel de identidade pública.
+    # Revisão 26/08/2026 (decisão de Rhoney): real_name passa a ser
+    # exposto publicamente ao lado da foto de perfil (friends/ranking/
+    # battles) — reverte a regra anterior de "nunca exibido
+    # publicamente", registrada em USER_PROFILE.md.
     real_name: Mapped[str | None] = mapped_column(String, nullable=True)
+    # Upload de foto real (26/08/2026) substitui os avatares emoji —
+    # USER_PROFILE.md §3.1 exige moderação (fail-closed) antes de
+    # aparecer pra outros usuários: todo upload novo nasce 'pending',
+    # só fica visível quando 'approved'. Hoje só a camada manual (admin/
+    # Rhoney, via /admin/profile-photos) está implementada.
+    photo_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    photo_moderation_status: Mapped[str] = mapped_column(String, default="none")  # none|pending|approved|rejected
     # Estado é opcional (detalhe extra); location_public controla exibição
     # pública de ambos — preencher não é o mesmo que exibir.
     location_state: Mapped[str | None] = mapped_column(String, nullable=True)
