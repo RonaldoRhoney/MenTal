@@ -220,6 +220,28 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     });
   }
 
+  /// Achado de investigação de bug (28/08/2026, U.I/BUG_DESAFIO_NAO_AVANCA.md):
+  /// _submitOption/_submitTimedOut/_requestHint/_submitAnswer tratavam erro
+  /// da API escrevendo em `_error`, mas esse campo só é exibido quando
+  /// `_challenge == null` (tela de erro fatal, ex.: falha ao CARREGAR um
+  /// desafio) — no meio de uma resposta `_challenge` já está preenchido,
+  /// então a mensagem nunca aparecia: a tela ficava parada sem nenhum
+  /// aviso, indistinguível de "travou". Ficou mais fácil de acontecer
+  /// depois da correção de segurança que passou a checar o limite diário
+  /// também em POST /answer (antes só GET /next checava). SnackBar é
+  /// transiente e não deixa a tela presa em nenhum estado — o usuário
+  /// pode tentar de novo imediatamente.
+  void _showAnswerApiError(ApiException e) {
+    if (!mounted) return;
+    final l10n = AppLocalizations.of(context)!;
+    final message = switch (e.code) {
+      'DAILY_LIMIT_REACHED' => l10n.dailyLimitReachedMessage,
+      'TERRITORY_LOCKED' => l10n.territoryLockedMessage,
+      _ => e.message,
+    };
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+  }
+
   /// V2 item 15 — no modo relâmpago, tocar numa opção já submete na
   /// hora (sem o passo separado de "Confirmar resposta" do formato
   /// digitado) — é uma reação rápida, não uma escolha deliberada.
@@ -251,7 +273,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         _triggerFeedback(result);
       }
     } on ApiException catch (e) {
-      if (mounted) setState(() => _error = e.message);
+      // _submitted precisa voltar a false aqui — diferente de
+      // _submitAnswer (digitado), os botões de opção do relâmpago
+      // dependem de `_submitted` pra reabilitar (linha ~602). Sem isso,
+      // uma falha deixava TODAS as opções permanentemente desabilitadas,
+      // sem nenhum jeito de tentar de novo a não ser sair da tela.
+      if (mounted) setState(() => _submitted = false);
+      _showAnswerApiError(e);
     } finally {
       if (mounted) setState(() => _loading = false);
     }
@@ -279,7 +307,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         _triggerFeedback(result);
       }
     } on ApiException catch (e) {
-      if (mounted) setState(() => _error = e.message);
+      if (mounted) setState(() => _submitted = false);
+      _showAnswerApiError(e);
     } finally {
       if (mounted) setState(() => _loading = false);
     }
@@ -300,7 +329,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       if (e.code == 'NO_MORE_HINTS') {
         setState(() => _hintsExhausted = true);
       } else {
-        setState(() => _error = e.message);
+        _showAnswerApiError(e);
       }
     }
   }
@@ -319,7 +348,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         _triggerFeedback(result);
       }
     } on ApiException catch (e) {
-      if (mounted) setState(() => _error = e.message);
+      _showAnswerApiError(e);
     } finally {
       if (mounted) setState(() => _loading = false);
     }

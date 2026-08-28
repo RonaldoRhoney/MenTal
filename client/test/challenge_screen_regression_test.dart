@@ -185,6 +185,43 @@ class _FeedbackTrackingFakeApiClient extends ApiClient {
   }
 }
 
+/// Regressão para U.I/BUG_DESAFIO_NAO_AVANCA.md (28/08/2026).
+///
+/// Causa raiz confirmada: _submitAnswer/_submitOption/_submitTimedOut/
+/// _requestHint escreviam o erro da API em `_error`, mas esse campo só é
+/// renderizado quando `_challenge == null` (tela de falha ao CARREGAR um
+/// desafio) — no meio de uma resposta `_challenge` já está preenchido,
+/// então a mensagem nunca aparecia: a tela ficava parada sem nenhum
+/// aviso. Ficou mais fácil de acontecer depois da correção de segurança
+/// que passou a checar o limite diário também em POST /answer (antes só
+/// GET /next checava).
+class _AnswerFailsFakeApiClient extends ApiClient {
+  _AnswerFailsFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+
+  int submitAnswerCalls = 0;
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+    return {
+      'challenge_id': 'fake-challenge-id',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': 'Quanto é 2 + 2?',
+      'options': ['3', '4', '5', '6'],
+      'hints_available': 0,
+    };
+  }
+
+  @override
+  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
+    submitAnswerCalls++;
+    if (submitAnswerCalls == 1) {
+      throw ApiException(statusCode: 429, code: 'DAILY_LIMIT_REACHED', message: 'Limite diário atingido');
+    }
+    return _baseAnswerPayload();
+  }
+}
+
 Map<String, dynamic> _baseAnswerPayload() => {
       'is_correct': true,
       'correct_answer': '4',
@@ -645,6 +682,50 @@ void main() {
       await tester.pumpAndSettle();
       expect(client.nextChallengeCalls, callsBefore + 1);
       expect(client.feedbackSubmissions, isEmpty);
+    });
+  });
+
+  group('U.I/BUG_DESAFIO_NAO_AVANCA.md (regressão)', () {
+    testWidgets('erro ao responder mostra SnackBar e deixa o usuário tentar de novo, em vez de travar em silêncio', (tester) async {
+      final client = _AnswerFailsFakeApiClient();
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: ChallengeScreen(client: client, territoryId: 'numeros', territoryLabel: 'Números'),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.widgetWithText(RadioListTile<String>, '4'));
+      await tester.pump();
+      await tester.tap(find.widgetWithText(FilledButton, 'Confirmar resposta'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
+
+      // Antes da correção: nada disso aparecia, e a tela ficava presa no
+      // mesmo desafio sem nenhum aviso (indistinguível de "travou").
+      expect(find.text('Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.'), findsOneWidget);
+      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'), findsOneWidget);
+
+      // Dispensa o SnackBar explicitamente antes de tentar de novo — no
+      // viewport pequeno do teste ele sobrepõe o botão embaixo dele.
+      ScaffoldMessenger.of(tester.element(find.byType(ChallengeScreen))).hideCurrentSnackBar();
+      await tester.pumpAndSettle();
+
+      // O usuário consegue tentar de novo — segunda tentativa (o fake
+      // client responde com sucesso a partir da 2ª chamada) avança normal.
+      await tester.tap(find.widgetWithText(FilledButton, 'Confirmar resposta'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
+
+      expect(client.submitAnswerCalls, 2);
+      expect(find.widgetWithText(FilledButton, 'Próximo desafio'), findsOneWidget);
     });
   });
 }
