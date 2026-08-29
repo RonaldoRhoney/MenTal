@@ -13,6 +13,7 @@ import 'screens/splash_screen.dart';
 import 'screens/welcome_splash_screen.dart';
 import 'services/push_service.dart';
 import 'theme/app_theme.dart';
+import 'widgets/game_background.dart';
 
 /// Produção (Render) por padrão — qualquer build normal (incluindo os
 /// builds de release/AAB pra loja) fala com o backend real. Pra
@@ -75,6 +76,13 @@ class MentalApp extends StatelessWidget {
       // DESIGN_SYSTEM.md: tema único e centralizado — nenhuma tela define
       // cor ou fonte própria (lib/theme/app_theme.dart é a fonte única).
       theme: AppTheme.themeData,
+      // Fundo com profundidade em todo o app (pedido de Rhoney,
+      // 29/08/2026: "esse fundo tod escuro está muito fora do escopo de
+      // um game") — um único ponto de aplicação via builder, em vez de
+      // repetir o gradiente tela por tela. Cada Scaffold continua com
+      // backgroundColor transparente (AppTheme.themeData) pra deixar o
+      // gradiente aparecer por trás.
+      builder: (context, child) => GameBackground(child: child ?? const SizedBox.shrink()),
       home: const AppEntryPoint(),
     );
   }

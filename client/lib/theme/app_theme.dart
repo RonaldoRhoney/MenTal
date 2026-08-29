@@ -65,7 +65,11 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: AppColors.bg,
+      // Transparente de propósito (pedido de Rhoney, 29/08/2026: fundo
+      // com profundidade em vez de preto sólido) — o gradiente de fundo
+      // real vem do MaterialApp.builder (main.dart, GameBackground),
+      // aplicado uma única vez atrás de toda a árvore de telas.
+      scaffoldBackgroundColor: Colors.transparent,
       colorScheme: const ColorScheme.dark(
         surface: AppColors.bg,
         primary: AppColors.gold,
@@ -78,7 +82,7 @@ class AppTheme {
       ),
       textTheme: baseTextTheme,
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.bg,
+        backgroundColor: Colors.transparent,
         foregroundColor: AppColors.bone,
         elevation: 0,
         titleTextStyle: GoogleFonts.fraunces(

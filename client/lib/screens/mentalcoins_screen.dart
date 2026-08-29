@@ -159,6 +159,18 @@ class _BalanceCard extends StatelessWidget {
   final String cycleStart;
   final String cycleEnd;
 
+  // Datas chegam do backend como "YYYY-MM-DD" (ISO). Achado real em
+  // dispositivo (29/08/2026): a frase completa com as duas datas nesse
+  // formato ("Ciclo iniciado em 2026-08-24 · fecha em 2026-08-30") não
+  // cabia numa linha ao lado da moeda de 48px e cortava com reticências
+  // no meio da segunda data, ficando ilegível. "dd/mm" é suficiente pro
+  // contexto (sempre dentro do mesmo ano) e cabe com folga.
+  String _shortDate(String isoDate) {
+    final parts = isoDate.split('-');
+    if (parts.length != 3) return isoDate;
+    return '${parts[2]}/${parts[1]}';
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -181,10 +193,10 @@ class _BalanceCard extends StatelessWidget {
                 Text('$balance', style: Theme.of(context).textTheme.headlineSmall?.copyWith(height: 1.1)),
                 const SizedBox(height: 2),
                 Text(
-                  l10n.mentalCoinsCycleNote(cycleEnd, cycleStart),
+                  l10n.mentalCoinsCycleNote(_shortDate(cycleEnd), _shortDate(cycleStart)),
                   style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11),
                   overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
+                  maxLines: 2,
                 ),
               ],
             ),
