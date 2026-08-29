@@ -73,7 +73,13 @@ def test_relampago_options_include_correct_answer_from_seed(client):
     assert set(body["options"]).issubset(same_level_answers)
 
 
-def test_other_territories_ignore_relampago_mode(client):
+def test_relampago_generalized_to_other_territories_with_curated_options(client):
+    """
+    Generalização (29/08/2026, pedido de Rhoney: "em todos os módulos
+    tem que haver um relâmpago"): qualquer território com opções
+    curadas (todos, exceto "palavras") ganha timer no modo relâmpago,
+    reaproveitando as próprias opções curadas — sem sintetizar nada.
+    """
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -81,7 +87,9 @@ def test_other_territories_ignore_relampago_mode(client):
     body = client.get(
         "/challenges/next", params={"territory_id": "numeros", "mode": "relampago"}, headers=headers
     ).json()
-    assert body["time_limit_seconds"] is None
+    assert body["time_limit_seconds"] is not None
+    assert len(body["options"]) >= 2
+    assert "correct_answer" not in body
 
 
 def test_normal_mode_unaffected_no_time_limit(client):

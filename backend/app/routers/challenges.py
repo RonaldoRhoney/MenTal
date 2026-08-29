@@ -19,11 +19,11 @@ def next_challenge(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
-    # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Modo
-    # OPCIONAL, só em Palavras — qualquer outro território ignora "mode"
-    # e segue o fluxo normal, nunca erro (evita quebrar territórios que
-    # nunca deveriam ter pedido esse modo).
-    relampago = mode == "relampago" and territory_id == "palavras"
+    # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md), generalizado
+    # pra todos os territórios (29/08/2026, pedido de Rhoney: "em todos os
+    # módulos tem que haver um relâmpago"). Modo OPCIONAL — território
+    # normal sem "mode=relampago" segue o fluxo de sempre, sem mudança.
+    relampago = mode == "relampago"
     # CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): em
     # Conhecimento o formato com tempo é OBRIGATÓRIO e único — nunca
     # formato digitado, independente de "mode". Generaliza o mesmo
@@ -117,10 +117,14 @@ def next_challenge(
         db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
     )
 
-    if relampago:
-        # Palavras não tem múltipla escolha curada nos desafios digitados
-        # normais — as alternativas são sintetizadas a partir de
-        # correct_answer REAL de outros desafios (nunca inventadas).
+    if relampago and challenge.options is None:
+        # Só "palavras" não tem múltipla escolha curada nos desafios
+        # digitados normais (challenge.options is None) — pra esse
+        # território, sintetiza alternativas a partir de correct_answer
+        # REAL de outros desafios do mesmo nível (nunca inventadas).
+        # Todo território que JÁ nasce com options curadas (a imensa
+        # maioria) simplesmente reaproveita essas opções reais no modo
+        # relâmpago, só ganhando o timer — sem precisar sintetizar nada.
         options = services.generate_relampago_options(db, challenge)
     else:
         # Conhecimento (timed=True aqui) já nasce com options curadas de

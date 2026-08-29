@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENTAL — MentalCoins</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;900&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+  :root{
+    --bg-0: #0A0710;
+    --bg-card: #191228;
+    --hairline: rgba(255,255,255,0.08);
+    --ember: #FF8A3D;
+    --victory: #FFB238;
+    --victory-2: #FFDE8A;
+    --electric: #3FE8C4;
+    --electric-2: #22B8A0;
+    --text-hi: #FFFDF8;
+    --text-mid: #B8AFC9;
+    --text-low: #756D89;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#000; }
+  body{
+    font-family:'Inter',sans-serif;
+    display:flex; justify-content:center; align-items:flex-start;
+    padding:40px; min-height:100vh; gap:40px; flex-wrap:wrap;
+  }
+
+  /* ================= COIN SHOWCASE (standalone, not phone-framed) ================= */
+  .coin-stage{
+    width:390px; background: radial-gradient(120% 90% at 50% 0%, #241640 0%, var(--bg-0) 60%), var(--bg-0);
+    border-radius:32px; padding:44px 28px 34px;
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+
+  .coin-wrap{ position:relative; width:220px; height:220px; margin-bottom:26px; }
+  .coin-glow{
+    position:absolute; inset:-40px; border-radius:50%;
+    background: radial-gradient(circle, rgba(255,178,56,0.28) 0%, transparent 68%);
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+  @keyframes glowPulse{ 0%,100%{ opacity:0.7; transform:scale(1);} 50%{ opacity:1; transform:scale(1.06);} }
+
+  .coin{
+    position:relative; width:220px; height:220px; border-radius:50%;
+    animation: coinFloat 4s ease-in-out infinite;
+  }
+  @keyframes coinFloat{ 0%,100%{ transform:translateY(0) rotateY(0deg);} 50%{ transform:translateY(-8px) rotateY(0deg);} }
+
+  .coin-face{
+    position:absolute; inset:0; border-radius:50%;
+    background:
+      radial-gradient(circle at 32% 28%, #FFF4D2 0%, #FFDE8A 16%, #FFB238 42%, #E08A2A 68%, #A85F1B 92%, #7A4212 100%);
+    box-shadow:
+      0 0 0 2px rgba(255,222,138,0.5),
+      0 0 30px rgba(255,178,56,0.55),
+      inset 0 4px 10px rgba(255,255,255,0.55),
+      inset 0 -10px 22px rgba(0,0,0,0.45);
+  }
+  .coin-rim{
+    position:absolute; inset:8px; border-radius:50%;
+    border: 3px dashed rgba(122,66,18,0.35);
+  }
+  .coin-inner-ring{
+    position:absolute; inset:20px; border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), transparent 55%),
+                conic-gradient(from 200deg, #FFE9AE, #FFB238, #E08A2A, #FFB238, #FFE9AE);
+    box-shadow: inset 0 3px 8px rgba(255,255,255,0.4), inset 0 -6px 14px rgba(0,0,0,0.35);
+  }
+  .coin-center{
+    position:absolute; inset:44px; border-radius:50%;
+    background: radial-gradient(circle at 35% 25%, #FFF7E0 0%, #FFDE8A 30%, #E08A2A 100%);
+    display:flex; align-items:center; justify-content:center; flex-direction:column;
+    box-shadow: inset 0 3px 6px rgba(255,255,255,0.5), inset 0 -8px 16px rgba(122,66,18,0.4), 0 2px 4px rgba(0,0,0,0.3);
+  }
+  .coin-m{
+    font-family:'Fraunces', serif; font-weight:900; font-size:52px; color:#5C3510;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5), 0 -1px 1px rgba(0,0,0,0.25);
+    line-height:1;
+  }
+  .coin-synapse{
+    position:absolute; inset:0;
+  }
+  .coin-synapse svg{ width:100%; height:100%; }
+
+  .coin-shine{
+    position:absolute; top:8%; left:14%; width:38%; height:22%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.75), transparent 70%);
+    border-radius:50%; filter: blur(2px);
+    transform: rotate(-25deg);
+  }
+
+  .coin-label{ text-align:center; }
+  .coin-label .title{
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px;
+    background: linear-gradient(135deg, var(--victory-2), var(--victory));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    letter-spacing:0.3px;
+  }
+  .coin-label .sub{ font-size:11.5px; color:var(--text-low); margin-top:4px; letter-spacing:0.3px; }
+
+  /* ================= PHONE MOCK: Hall da Fama card ================= */
+  .phone{
+    width:390px; height:844px;
+    background: radial-gradient(120% 90% at 15% -10%, #241640 0%, var(--bg-0) 55%), var(--bg-0);
+    border-radius:44px; overflow:hidden; position:relative;
+    box-shadow: 0 0 0 10px #1c1c1c, 0 20px 60px rgba(0,0,0,0.6);
+  }
+  .statusbar{ height:38px; display:flex; align-items:center; justify-content:space-between; padding:0 26px; color:var(--text-hi); font-size:12.5px; font-weight:600; }
+  .statusbar .icons{ display:flex; gap:6px; color:var(--text-mid); font-size:11px; }
+  .screen{ height:calc(100% - 38px); padding:6px 18px 24px; overflow-y:auto; }
+  .screen::-webkit-scrollbar{ display:none; }
+
+  .ph-header{ display:flex; align-items:center; gap:10px; padding:8px 2px 18px; }
+  .back-btn{ width:30px; height:30px; border-radius:50%; background:rgba(255,255,255,0.06); border:1px solid var(--hairline); display:flex; align-items:center; justify-content:center; }
+  .ph-header h1{ font-family:'Fraunces',serif; font-weight:700; font-size:19px; color:var(--text-hi); }
+
+  /* Balance hero */
+  .balance-card{
+    background: linear-gradient(155deg, rgba(255,178,56,0.16) 0%, var(--bg-card) 55%, rgba(63,232,196,0.06) 100%);
+    border:1px solid rgba(255,178,56,0.25);
+    border-radius:22px; padding:22px 20px; margin-bottom:16px;
+    display:flex; flex-direction:column; align-items:center; position:relative; overflow:hidden;
+  }
+  .balance-card::before{ content:''; position:absolute; top:-40%; right:-20%; width:200px; height:200px; background:radial-gradient(circle, rgba(255,178,56,0.18), transparent 70%); }
+  .mini-coin{
+    width:52px; height:52px; border-radius:50%; margin-bottom:10px; position:relative; z-index:1;
+    background: radial-gradient(circle at 32% 28%, #FFF4D2 0%, #FFDE8A 18%, #FFB238 45%, #E08A2A 72%, #7A4212 100%);
+    box-shadow: 0 0 0 2px rgba(255,222,138,0.5), 0 0 18px rgba(255,178,56,0.5), inset 0 2px 5px rgba(255,255,255,0.5), inset 0 -5px 10px rgba(0,0,0,0.4);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .mini-coin span{ font-family:'Fraunces',serif; font-weight:900; font-size:20px; color:#5C3510; }
+  .balance-num{
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:34px; z-index:1;
+    background: linear-gradient(135deg, var(--victory-2), var(--victory));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .balance-label{ font-size:11px; color:var(--text-low); text-transform:uppercase; letter-spacing:1px; margin-top:2px; z-index:1; }
+  .cycle-note{ font-size:10.5px; color:var(--text-mid); margin-top:10px; z-index:1; }
+  .cycle-note b{ color:var(--victory); }
+
+  .section-label{ font-size:11px; color:var(--text-low); text-transform:uppercase; letter-spacing:1.5px; margin:20px 2px 10px; display:flex; align-items:center; gap:8px; }
+  .section-label::after{ content:''; flex:1; height:1px; background:var(--hairline); }
+
+  .track-row{ display:flex; gap:10px; margin-bottom:16px; }
+  .track-card{ flex:1; background:var(--bg-card); border:1px solid var(--hairline); border-radius:16px; padding:13px; }
+  .track-ic{ font-size:16px; margin-bottom:6px; }
+  .track-title{ font-size:11px; color:var(--text-hi); font-weight:700; margin-bottom:8px; }
+  .track-item{ display:flex; align-items:center; justify-content:space-between; font-size:10px; color:var(--text-mid); margin-bottom:5px; }
+  .track-item .medal{ font-size:11px; }
+  .track-item b{ color:var(--victory); font-family:'Space Grotesk',sans-serif; }
+
+  .fame-card{
+    background:var(--bg-card); border:1px solid var(--hairline); border-radius:16px; padding:14px 16px; margin-bottom:10px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .fame-card.first{ border:1px solid rgba(255,178,56,0.4); background:linear-gradient(135deg, rgba(255,178,56,0.1), var(--bg-card)); }
+  .fame-rank{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:var(--text-low); width:20px; }
+  .fame-card.first .fame-rank{ color:var(--victory); }
+  .fame-avatar{ width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,#8B6BFF,#3FE8C4); flex-shrink:0; border:2px solid rgba(255,255,255,0.15); }
+  .fame-name{ flex:1; font-size:13px; color:var(--text-hi); font-weight:600; }
+  .fame-coins{ display:flex; align-items:center; gap:5px; }
+  .fame-coins .dot{ width:12px; height:12px; border-radius:50%; background: radial-gradient(circle at 32% 28%, #FFF4D2, #FFB238 60%, #A85F1B); }
+  .fame-coins span{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; color:var(--victory); }
+
+  .redeem-card{
+    display:flex; align-items:center; gap:12px; background:var(--bg-card); border:1px solid var(--hairline); border-radius:16px; padding:13px 15px; margin-bottom:10px;
+  }
+  .redeem-frame{ width:42px; height:42px; border-radius:50%; border:2.5px solid var(--victory); background:linear-gradient(135deg,#8B6BFF,#3FE8C4); box-shadow:0 0 10px rgba(255,178,56,0.4); }
+  .redeem-info{ flex:1; }
+  .redeem-name{ font-size:12.5px; color:var(--text-hi); font-weight:600; }
+  .redeem-cost{ font-size:10.5px; color:var(--victory); margin-top:1px; font-family:'Space Grotesk',sans-serif; font-weight:600; }
+  .redeem-btn{ background:rgba(255,178,56,0.15); border:1px solid var(--victory); color:var(--victory); font-size:10.5px; font-weight:700; padding:6px 12px; border-radius:100px; }
+</style>
+</head>
+<body>
+
+<!-- Standalone coin showcase -->
+<div class="coin-stage">
+  <div class="coin-wrap">
+    <div class="coin-glow"></div>
+    <div class="coin">
+      <div class="coin-face"></div>
+      <div class="coin-rim"></div>
+      <div class="coin-inner-ring"></div>
+      <div class="coin-synapse">
+        <svg viewBox="0 0 220 220">
+          <g opacity="0.55" stroke="#7A4212" stroke-width="1.4" fill="none">
+            <path d="M60 70 L95 95 L110 60 L130 95 L160 70"/>
+          </g>
+          <g fill="#5C3510" opacity="0.6">
+            <circle cx="60" cy="70" r="2.6"/>
+            <circle cx="95" cy="95" r="2.6"/>
+            <circle cx="110" cy="60" r="2.6"/>
+            <circle cx="130" cy="95" r="2.6"/>
+            <circle cx="160" cy="70" r="2.6"/>
+          </g>
+        </svg>
+      </div>
+      <div class="coin-center">
+        <div class="coin-m">M</div>
+      </div>
+      <div class="coin-shine"></div>
+    </div>
+  </div>
+  <div class="coin-label">
+    <div class="title">128 MentalCoins</div>
+    <div class="sub">Moeda de prestígio · não compra com dinheiro real</div>
+  </div>
+</div>
+
+<!-- Phone mock: Hall da Fama / MentalCoins screen -->
+<div class="phone">
+  <div class="statusbar">
+    <span>06:25</span>
+    <div class="icons"><span>4G</span><span>📶</span><span>🔋</span></div>
+  </div>
+  <div class="screen">
+
+    <div class="ph-header">
+      <div class="back-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFDF8" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
+      </div>
+      <h1>MentalCoins</h1>
+    </div>
+
+    <div class="balance-card">
+      <div class="mini-coin"><span>M</span></div>
+      <div class="balance-num">128</div>
+      <div class="balance-label">Saldo atual</div>
+      <div class="cycle-note">Ciclo termina domingo 23:59 · reinicia <b>segunda 08:00</b></div>
+    </div>
+
+    <div class="section-label">Como ganhar essa semana</div>
+    <div class="track-row">
+      <div class="track-card">
+        <div class="track-ic">⚡</div>
+        <div class="track-title">Ranking diário de XP</div>
+        <div class="track-item"><span><span class="medal">🥇</span> 1º lugar</span><b>+10</b></div>
+        <div class="track-item"><span><span class="medal">🥈</span> 2º lugar</span><b>+5</b></div>
+        <div class="track-item"><span><span class="medal">🥉</span> 3º lugar</span><b>+3</b></div>
+      </div>
+      <div class="track-card">
+        <div class="track-ic">👣</div>
+        <div class="track-title">Passos</div>
+        <div class="track-item"><span>Campeão da semana</span><b>+20</b></div>
+        <div class="track-item"><span>Recorde do dia</span><b>+10</b></div>
+      </div>
+    </div>
+
+    <div class="section-label">Hall da Fama desta semana</div>
+    <div class="fame-card first">
+      <div class="fame-rank">1</div>
+      <div class="fame-avatar"></div>
+      <div class="fame-name">Rhoney</div>
+      <div class="fame-coins"><div class="dot"></div><span>34</span></div>
+    </div>
+    <div class="fame-card">
+      <div class="fame-rank">2</div>
+      <div class="fame-avatar"></div>
+      <div class="fame-name">Ana Clara</div>
+      <div class="fame-coins"><div class="dot"></div><span>27</span></div>
+    </div>
+    <div class="fame-card">
+      <div class="fame-rank">3</div>
+      <div class="fame-avatar"></div>
+      <div class="fame-name">Marcos V.</div>
+      <div class="fame-coins"><div class="dot"></div><span>19</span></div>
+    </div>
+
+    <div class="section-label">Resgatar</div>
+    <div class="redeem-card">
+      <div class="redeem-frame"></div>
+      <div class="redeem-info">
+        <div class="redeem-name">Moldura Conquistador</div>
+        <div class="redeem-cost">80 MentalCoins</div>
+      </div>
+      <div class="redeem-btn">Resgatar</div>
+    </div>
+    <div class="redeem-card">
+      <div class="redeem-frame" style="background:linear-gradient(135deg,#FFB238,#FF8A3D); border-color:#3FE8C4;"></div>
+      <div class="redeem-info">
+        <div class="redeem-name">Avatar Sinapse Dourada</div>
+        <div class="redeem-cost">150 MentalCoins</div>
+      </div>
+      <div class="redeem-btn">Resgatar</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

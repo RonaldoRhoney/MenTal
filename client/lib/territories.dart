@@ -2,7 +2,19 @@ import 'l10n/generated/app_localizations.dart';
 
 /// Ids dos 4 territórios do V1 — compartilhado entre Home, Progress e
 /// Challenge para não duplicar a lista nem o mapeamento id→label.
-const List<String> kTerritoryIds = ['palavras', 'numeros', 'logica', 'conhecimento', 'enigmas', 'textos', 'visual'];
+const List<String> kTerritoryIds = [
+  'palavras',
+  'numeros',
+  'logica',
+  'conhecimento',
+  'enigmas',
+  'textos',
+  'visual',
+  // V3.0 (U.I/../V3/V3.0_ESPORTES_REGIOES_CULTURA_POP.md).
+  'esportes',
+  'regioes',
+  'cultura_pop',
+];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
   switch (territoryId) {
@@ -20,6 +32,12 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryTextos;
     case 'visual':
       return l10n.territoryVisual;
+    case 'esportes':
+      return l10n.territoryEsportes;
+    case 'regioes':
+      return l10n.territoryRegioes;
+    case 'cultura_pop':
+      return l10n.territoryCulturaPop;
     default:
       return territoryId;
   }

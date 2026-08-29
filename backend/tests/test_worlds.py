@@ -38,7 +38,7 @@ def _conquer_territory(client, headers, territory_id, max_iterations=30):
     raise AssertionError(f"{territory_id} não conquistado em {max_iterations} tentativas")
 
 
-def test_progress_groups_territories_into_the_two_approved_worlds(client):
+def test_progress_groups_territories_into_the_approved_worlds(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -46,11 +46,16 @@ def test_progress_groups_territories_into_the_two_approved_worlds(client):
     progress = client.get("/progress", headers=headers).json()
     worlds = {w["world_id"]: w for w in progress["worlds"]}
 
-    assert set(worlds.keys()) == {"linguagem", "mente_logica"}
+    # V3.0 (V3.0_ESPORTES_REGIOES_CULTURA_POP.md) acrescenta o Mundo da
+    # Cultura Geral (esportes/regioes/cultura_pop) aos dois mundos
+    # originais.
+    assert set(worlds.keys()) == {"linguagem", "mente_logica", "cultura_geral"}
     assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas"}
     assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento"}
+    assert set(worlds["cultura_geral"]["territory_ids"]) == {"esportes", "regioes", "cultura_pop"}
     assert worlds["linguagem"]["completed"] is False
     assert worlds["mente_logica"]["completed"] is False
+    assert worlds["cultura_geral"]["completed"] is False
 
 
 def test_world_just_completed_fires_once_at_the_exact_last_territory(client):
