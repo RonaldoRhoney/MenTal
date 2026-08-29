@@ -490,6 +490,50 @@ class AppLocalizationsPt extends AppLocalizations {
       'Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.';
 
   @override
+  String get cancelButton => 'Cancelar';
+
+  @override
+  String get reportUserOption => 'Denunciar';
+
+  @override
+  String get blockUserOption => 'Bloquear';
+
+  @override
+  String get reportUserDialogTitle => 'Motivo da denúncia';
+
+  @override
+  String get reportUserDialogHint => 'Descreva o que aconteceu';
+
+  @override
+  String get reportUserDialogSendButton => 'Enviar denúncia';
+
+  @override
+  String get reportUserSuccessMessage =>
+      'Denúncia enviada. Nossa equipe vai revisar.';
+
+  @override
+  String get blockUserDialogTitle => 'Bloquear usuário';
+
+  @override
+  String blockUserDialogMessage(String nickname) {
+    return 'Bloquear $nickname? Isso encerra a amizade (se houver) e impede novos pedidos de amizade entre vocês dois.';
+  }
+
+  @override
+  String blockUserSuccessMessage(String nickname) {
+    return '$nickname foi bloqueado(a).';
+  }
+
+  @override
+  String get friendMoreOptionsTooltip => 'Mais opções';
+
+  @override
+  String get blockedUsersSectionTitle => 'Usuários bloqueados';
+
+  @override
+  String get unblockUserButton => 'Desbloquear';
+
+  @override
   String get friendsInviteNotFoundError => 'Código de convite não encontrado.';
 
   @override

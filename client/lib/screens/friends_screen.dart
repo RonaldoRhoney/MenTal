@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../api/api_client.dart';
 import '../widgets/profile_photo.dart';
+import '../widgets/report_block_sheet.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/share_service.dart';
 import '../territories.dart';
@@ -77,6 +78,13 @@ class _FriendsScreenState extends State<FriendsScreen> {
     } finally {
       if (mounted) setState(() => _loading = false);
     }
+  }
+
+  Future<void> _openReportBlockSheet({required String userId, required String nickname}) async {
+    final blocked = await showReportBlockSheet(context, client: widget.client, targetUserId: userId, targetNickname: nickname);
+    // Bloquear encerra qualquer amizade/pedido existente no backend —
+    // recarrega pra tirar a pessoa bloqueada das duas listas na tela.
+    if (blocked) await _load();
   }
 
   Future<void> _acceptRequest(Map<String, dynamic> request) async {
@@ -323,6 +331,14 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                 onPressed: () => _acceptRequest(request),
                                 child: Text(l10n.friendRequestAcceptButton),
                               ),
+                              IconButton(
+                                tooltip: l10n.friendMoreOptionsTooltip,
+                                icon: const Icon(Icons.more_vert, size: 20),
+                                onPressed: () => _openReportBlockSheet(
+                                  userId: request['from_user_id'] as String,
+                                  nickname: request['from_nickname'] as String,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -354,18 +370,32 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                     '${friend['xp_total']} XP',
                                     style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 14),
                                   ),
-                                  trailing: OutlinedButton(
-                                    // Mesmo achado do bug de largura infinita
-                                    // já documentado nesta tela (AppTheme
-                                    // define minimumSize: Size.fromHeight(48),
-                                    // largura infinita) — aqui o problema é
-                                    // outro sintoma do mesmo bug: dentro de
-                                    // ListTile.trailing (não um Row solto),
-                                    // então a correção é reduzir o mínimo,
-                                    // não usar Flexible/Expanded.
-                                    style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
-                                    onPressed: () => _challengeFriend(friend),
-                                    child: Text(l10n.battleChallengeButton),
+                                  trailing: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      OutlinedButton(
+                                        // Mesmo achado do bug de largura
+                                        // infinita já documentado nesta tela
+                                        // (AppTheme define minimumSize:
+                                        // Size.fromHeight(48), largura
+                                        // infinita) — aqui o problema é outro
+                                        // sintoma do mesmo bug: dentro de
+                                        // ListTile.trailing (não um Row
+                                        // solto), então a correção é reduzir
+                                        // o mínimo, não usar Flexible/Expanded.
+                                        style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                                        onPressed: () => _challengeFriend(friend),
+                                        child: Text(l10n.battleChallengeButton),
+                                      ),
+                                      IconButton(
+                                        tooltip: l10n.friendMoreOptionsTooltip,
+                                        icon: const Icon(Icons.more_vert, size: 20),
+                                        onPressed: () => _openReportBlockSheet(
+                                          userId: friend['user_id'] as String,
+                                          nickname: friend['nickname'] as String,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 );
                               },

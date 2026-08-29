@@ -44,6 +44,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   bool _socialEnabled = true;
   String? _notificationsError;
   bool _deletingAccount = false;
+  List<Map<String, dynamic>> _blockedUsers = [];
 
   @override
   void initState() {
@@ -59,6 +60,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
     } on ApiException catch (e) {
       if (mounted) setState(() => _notificationsError = e.message);
     }
+    List<Map<String, dynamic>> blocked = [];
+    try {
+      final blockedResponse = await widget.client.getBlockedUsers();
+      blocked = (blockedResponse['blocked'] as List).cast<Map<String, dynamic>>();
+    } on ApiException catch (_) {
+      // Não bloqueia o resto da tela — lista de bloqueados fica vazia.
+    }
     if (!mounted) return;
     setState(() {
       _soundEnabled = FeedbackService.instance.enabled;
@@ -67,8 +75,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
         _reengagementEnabled = prefs['reengagement_enabled'] as bool;
         _socialEnabled = prefs['social_enabled'] as bool;
       }
+      _blockedUsers = blocked;
       _loading = false;
     });
+  }
+
+  // Auditoria de conformidade Google Play (29/08/2026, item 6) — gestão
+  // de bloqueios: sem isso, um bloqueio acidental (ou de reconciliação)
+  // seria permanente, sem forma de desfazer.
+  Future<void> _unblockUser(String userId) async {
+    try {
+      await widget.client.unblockUser(userId);
+      if (mounted) setState(() => _blockedUsers.removeWhere((u) => u['user_id'] == userId));
+    } on ApiException catch (e) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+    }
   }
 
   Future<void> _updateNotificationPreferences() async {
@@ -189,6 +210,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   if (_notificationsError != null) ...[
                     const SizedBox(height: 8),
                     Text(_notificationsError!, style: const TextStyle(color: AppColors.error)),
+                  ],
+                  if (_blockedUsers.isNotEmpty) ...[
+                    const SizedBox(height: 28),
+                    Text(l10n.blockedUsersSectionTitle, style: Theme.of(context).textTheme.titleLarge),
+                    const SizedBox(height: 8),
+                    for (final user in _blockedUsers)
+                      ListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(user['nickname'] as String),
+                        trailing: OutlinedButton(
+                          style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                          onPressed: () => _unblockUser(user['user_id'] as String),
+                          child: Text(l10n.unblockUserButton),
+                        ),
+                      ),
                   ],
                   const SizedBox(height: 28),
                   // Login real via Supabase Auth — main.dart

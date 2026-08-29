@@ -594,6 +594,27 @@ class Report(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class UserBlock(Base):
+    """
+    Bloqueio de usuário (auditoria de conformidade Google Play,
+    29/08/2026, item 6 — "UGC precisa de mecanismo de bloqueio, além da
+    denúncia"). Direcional (A bloqueia B não implica B bloqueia A), mas
+    a checagem de elegibilidade pra amizade (services.is_blocked_either_way)
+    trata qualquer bloqueio em qualquer direção como suficiente pra
+    impedir novo contato — evita o cenário de quem bloqueou continuar
+    recebendo pedidos da mesma pessoa.
+    """
+
+    __tablename__ = "user_blocks"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    blocker_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    blocked_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+    __table_args__ = (UniqueConstraint("blocker_user_id", "blocked_user_id", name="uq_user_block_pair"),)
+
+
 class MentalCoinsBalance(Base):
     """
     Saldo de MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio

@@ -56,6 +56,26 @@ class _FakeApiClient extends ApiClient {
     ];
     return {'status': 'pending'};
   }
+
+  // Auditoria de conformidade Google Play (29/08/2026, item 6).
+  String? blockedUserId;
+  String? reportedUserId;
+  String? reportReason;
+
+  @override
+  Future<Map<String, dynamic>> blockUser(String blockedUserId) async {
+    this.blockedUserId = blockedUserId;
+    friends = [];
+    friendRequests = [];
+    return {'status': 'blocked'};
+  }
+
+  @override
+  Future<Map<String, dynamic>> reportUser({required String reportedUserId, required String reason}) async {
+    this.reportedUserId = reportedUserId;
+    reportReason = reason;
+    return {'status': 'reported'};
+  }
 }
 
 Future<void> _pumpFriendsScreen(WidgetTester tester, ApiClient client) async {
@@ -157,5 +177,47 @@ void main() {
 
     expect(client.declinedFriendshipId, 'req-2');
     expect(find.text('Beltrano'), findsNothing);
+  });
+
+  // Auditoria de conformidade Google Play (29/08/2026, item 6) — cada
+  // amigo/pedido tem um menu "mais opções" com Denunciar/Bloquear.
+  testWidgets('bloquear um amigo chama a API e o remove da lista', (tester) async {
+    final client = _FakeApiClient()
+      ..friends = [
+        {'user_id': 'friend-user-id', 'nickname': 'Amigo Chato', 'xp_total': 10, 'level': 1},
+      ];
+    await _pumpFriendsScreen(tester, client);
+
+    await tester.tap(find.byIcon(Icons.more_vert));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Bloquear'));
+    await tester.pumpAndSettle();
+    // Confirmação do diálogo.
+    await tester.tap(find.widgetWithText(FilledButton, 'Bloquear'));
+    await tester.pumpAndSettle();
+
+    expect(client.blockedUserId, 'friend-user-id');
+    expect(find.text('Amigo Chato'), findsNothing);
+  });
+
+  testWidgets('denunciar um amigo chama a API com o motivo digitado', (tester) async {
+    final client = _FakeApiClient()
+      ..friends = [
+        {'user_id': 'friend-user-id', 'nickname': 'Amigo Chato', 'xp_total': 10, 'level': 1},
+      ];
+    await _pumpFriendsScreen(tester, client);
+
+    await tester.tap(find.byIcon(Icons.more_vert));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Denunciar'));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField).last, 'Comportamento impróprio');
+    await tester.tap(find.text('Enviar denúncia'));
+    await tester.pumpAndSettle();
+
+    expect(client.reportedUserId, 'friend-user-id');
+    expect(client.reportReason, 'Comportamento impróprio');
+    // Denunciar não remove o amigo da lista (só bloquear faz isso).
+    expect(find.text('Amigo Chato'), findsOneWidget);
   });
 }

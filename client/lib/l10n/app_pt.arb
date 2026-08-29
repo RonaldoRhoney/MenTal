@@ -521,6 +521,51 @@
   "friendsEmptyMessage": "Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.",
   "@friendsEmptyMessage": {"description": "Empty state for the friends list"},
 
+  "cancelButton": "Cancelar",
+  "@cancelButton": {"description": "Generic cancel button used across confirmation dialogs"},
+
+  "reportUserOption": "Denunciar",
+  "@reportUserOption": {"description": "Bottom sheet option to report a user"},
+
+  "blockUserOption": "Bloquear",
+  "@blockUserOption": {"description": "Bottom sheet option to block a user"},
+
+  "reportUserDialogTitle": "Motivo da denúncia",
+  "@reportUserDialogTitle": {"description": "Title of the dialog asking for a report reason"},
+
+  "reportUserDialogHint": "Descreva o que aconteceu",
+  "@reportUserDialogHint": {"description": "Hint text for the report reason input"},
+
+  "reportUserDialogSendButton": "Enviar denúncia",
+  "@reportUserDialogSendButton": {"description": "Button to submit the report"},
+
+  "reportUserSuccessMessage": "Denúncia enviada. Nossa equipe vai revisar.",
+  "@reportUserSuccessMessage": {"description": "Confirmation shown after a report is submitted"},
+
+  "blockUserDialogTitle": "Bloquear usuário",
+  "@blockUserDialogTitle": {"description": "Title of the block confirmation dialog"},
+
+  "blockUserDialogMessage": "Bloquear {nickname}? Isso encerra a amizade (se houver) e impede novos pedidos de amizade entre vocês dois.",
+  "@blockUserDialogMessage": {
+    "description": "Confirmation message before blocking a user",
+    "placeholders": {"nickname": {"type": "String"}}
+  },
+
+  "blockUserSuccessMessage": "{nickname} foi bloqueado(a).",
+  "@blockUserSuccessMessage": {
+    "description": "Confirmation shown after a user is blocked",
+    "placeholders": {"nickname": {"type": "String"}}
+  },
+
+  "friendMoreOptionsTooltip": "Mais opções",
+  "@friendMoreOptionsTooltip": {"description": "Tooltip for the three-dot menu button next to a friend or friend request"},
+
+  "blockedUsersSectionTitle": "Usuários bloqueados",
+  "@blockedUsersSectionTitle": {"description": "Settings section title listing users the player has blocked"},
+
+  "unblockUserButton": "Desbloquear",
+  "@unblockUserButton": {"description": "Button to unblock a previously blocked user"},
+
   "friendsInviteNotFoundError": "Código de convite não encontrado.",
   "@friendsInviteNotFoundError": {"description": "Error shown when the invite code does not exist"},
 

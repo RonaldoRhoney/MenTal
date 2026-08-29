@@ -187,6 +187,46 @@ def report_user(
     return {"status": "reported"}
 
 
+# Achado de auditoria de conformidade Google Play (29/08/2026, item 6):
+# a denúncia já existia, mas não havia como impedir que a mesma pessoa
+# continuasse mandando pedido de amizade depois de denunciada/recusada.
+# Bloquear é a ação complementar — services.is_blocked_either_way passa
+# a ser checado em qualquer novo pedido de amizade.
+@router.post("/social/block")
+def block_user(
+    body: schemas.BlockUserRequest,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    if body.blocked_user_id == user_id:
+        raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_BLOCK_SELF", "message": "Não é possível bloquear a si mesmo."}})
+    services.block_user(db, user_id, body.blocked_user_id)
+    return {"status": "blocked"}
+
+
+@router.post("/social/unblock")
+def unblock_user(
+    body: schemas.BlockUserRequest,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    services.unblock_user(db, user_id, body.blocked_user_id)
+    return {"status": "unblocked"}
+
+
+@router.get("/social/blocked", response_model=schemas.BlockedUsersResponse)
+def list_blocked_users(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
+    blocked = []
+    for blocked_user_id in services.list_blocked_user_ids(db, user_id):
+        profile = db.get(models.Profile, blocked_user_id)
+        if profile is None:
+            continue
+        blocked.append(
+            schemas.BlockedUserOut(user_id=blocked_user_id, nickname=profile.nickname, photo_url=services.public_photo_url(profile))
+        )
+    return schemas.BlockedUsersResponse(blocked=blocked)
+
+
 @router.get("/admin/reports", response_model=list[schemas.AdminReportItem])
 def list_reports(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
     admin_profile = db.get(models.Profile, user_id)

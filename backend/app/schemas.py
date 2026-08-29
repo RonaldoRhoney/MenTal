@@ -515,6 +515,20 @@ class ReportUserRequest(BaseModel):
     reason: str = Field(max_length=500)
 
 
+class BlockUserRequest(BaseModel):
+    blocked_user_id: str
+
+
+class BlockedUserOut(BaseModel):
+    user_id: str
+    nickname: str
+    photo_url: str | None = None
+
+
+class BlockedUsersResponse(BaseModel):
+    blocked: list[BlockedUserOut]
+
+
 class AdminReportItem(BaseModel):
     id: str
     reporter_user_id: str

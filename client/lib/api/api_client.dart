@@ -384,6 +384,21 @@ class ApiClient {
     );
   }
 
+  // Auditoria de conformidade Google Play (29/08/2026, item 6) —
+  // complementa a denúncia: impede que a mesma pessoa continue mandando
+  // pedido de amizade depois de bloqueada.
+  Future<Map<String, dynamic>> blockUser(String blockedUserId) async {
+    return _post(_uri('/social/block'), headers: _headers, body: jsonEncode({'blocked_user_id': blockedUserId}));
+  }
+
+  Future<Map<String, dynamic>> unblockUser(String blockedUserId) async {
+    return _post(_uri('/social/unblock'), headers: _headers, body: jsonEncode({'blocked_user_id': blockedUserId}));
+  }
+
+  Future<Map<String, dynamic>> getBlockedUsers() async {
+    return _get(_uri('/social/blocked'), headers: _headers);
+  }
+
   Map<String, dynamic> _decode(http.Response resp) {
     final body = jsonDecode(resp.body) as Map<String, dynamic>;
     if (resp.statusCode >= 400) {

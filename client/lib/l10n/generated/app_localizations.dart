@@ -910,6 +910,84 @@ abstract class AppLocalizations {
   /// **'Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.'**
   String get friendsEmptyMessage;
 
+  /// Generic cancel button used across confirmation dialogs
+  ///
+  /// In pt, this message translates to:
+  /// **'Cancelar'**
+  String get cancelButton;
+
+  /// Bottom sheet option to report a user
+  ///
+  /// In pt, this message translates to:
+  /// **'Denunciar'**
+  String get reportUserOption;
+
+  /// Bottom sheet option to block a user
+  ///
+  /// In pt, this message translates to:
+  /// **'Bloquear'**
+  String get blockUserOption;
+
+  /// Title of the dialog asking for a report reason
+  ///
+  /// In pt, this message translates to:
+  /// **'Motivo da denúncia'**
+  String get reportUserDialogTitle;
+
+  /// Hint text for the report reason input
+  ///
+  /// In pt, this message translates to:
+  /// **'Descreva o que aconteceu'**
+  String get reportUserDialogHint;
+
+  /// Button to submit the report
+  ///
+  /// In pt, this message translates to:
+  /// **'Enviar denúncia'**
+  String get reportUserDialogSendButton;
+
+  /// Confirmation shown after a report is submitted
+  ///
+  /// In pt, this message translates to:
+  /// **'Denúncia enviada. Nossa equipe vai revisar.'**
+  String get reportUserSuccessMessage;
+
+  /// Title of the block confirmation dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Bloquear usuário'**
+  String get blockUserDialogTitle;
+
+  /// Confirmation message before blocking a user
+  ///
+  /// In pt, this message translates to:
+  /// **'Bloquear {nickname}? Isso encerra a amizade (se houver) e impede novos pedidos de amizade entre vocês dois.'**
+  String blockUserDialogMessage(String nickname);
+
+  /// Confirmation shown after a user is blocked
+  ///
+  /// In pt, this message translates to:
+  /// **'{nickname} foi bloqueado(a).'**
+  String blockUserSuccessMessage(String nickname);
+
+  /// Tooltip for the three-dot menu button next to a friend or friend request
+  ///
+  /// In pt, this message translates to:
+  /// **'Mais opções'**
+  String get friendMoreOptionsTooltip;
+
+  /// Settings section title listing users the player has blocked
+  ///
+  /// In pt, this message translates to:
+  /// **'Usuários bloqueados'**
+  String get blockedUsersSectionTitle;
+
+  /// Button to unblock a previously blocked user
+  ///
+  /// In pt, this message translates to:
+  /// **'Desbloquear'**
+  String get unblockUserButton;
+
   /// Error shown when the invite code does not exist
   ///
   /// In pt, this message translates to:

@@ -1,7 +1,7 @@
 import random
 from datetime import date, datetime, timedelta
 
-from sqlalchemy import func, select
+from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 
 from . import config, models, notification_copy, push, scoring, supabase_admin
@@ -293,6 +293,78 @@ def _canonical_pair(user_id_1: str, user_id_2: str) -> tuple[str, str]:
     return (user_id_1, user_id_2) if user_id_1 < user_id_2 else (user_id_2, user_id_1)
 
 
+def is_blocked_either_way(db: Session, user_a: str, user_b: str) -> bool:
+    """
+    Achado de auditoria de conformidade Google Play (29/08/2026, item
+    6): qualquer bloqueio em qualquer direção impede novo contato — não
+    importa se foi A que bloqueou B ou o contrário, nenhum dos dois
+    lados deve conseguir iniciar/reativar um pedido de amizade.
+    """
+    return (
+        db.execute(
+            select(models.UserBlock).where(
+                or_(
+                    and_(models.UserBlock.blocker_user_id == user_a, models.UserBlock.blocked_user_id == user_b),
+                    and_(models.UserBlock.blocker_user_id == user_b, models.UserBlock.blocked_user_id == user_a),
+                )
+            )
+        ).scalar_one_or_none()
+        is not None
+    )
+
+
+def block_user(db: Session, blocker_user_id: str, blocked_user_id: str) -> models.UserBlock:
+    """
+    Idempotente (retorna o bloqueio já existente em vez de duplicar).
+    Também encerra qualquer amizade/pedido pendente já existente entre
+    os dois — bloquear alguém não deveria deixar uma amizade "zumbi".
+    """
+    existing = db.execute(
+        select(models.UserBlock).where(
+            models.UserBlock.blocker_user_id == blocker_user_id,
+            models.UserBlock.blocked_user_id == blocked_user_id,
+        )
+    ).scalar_one_or_none()
+    if existing is not None:
+        return existing
+
+    block = models.UserBlock(blocker_user_id=blocker_user_id, blocked_user_id=blocked_user_id)
+    db.add(block)
+
+    a, b = _canonical_pair(blocker_user_id, blocked_user_id)
+    friendship = db.execute(
+        select(models.Friendship).where(models.Friendship.user_id_a == a, models.Friendship.user_id_b == b)
+    ).scalar_one_or_none()
+    if friendship is not None:
+        db.delete(friendship)
+
+    db.commit()
+    db.refresh(block)
+    return block
+
+
+def unblock_user(db: Session, blocker_user_id: str, blocked_user_id: str) -> bool:
+    existing = db.execute(
+        select(models.UserBlock).where(
+            models.UserBlock.blocker_user_id == blocker_user_id,
+            models.UserBlock.blocked_user_id == blocked_user_id,
+        )
+    ).scalar_one_or_none()
+    if existing is None:
+        return False
+    db.delete(existing)
+    db.commit()
+    return True
+
+
+def list_blocked_user_ids(db: Session, blocker_user_id: str) -> list[str]:
+    return list(
+        db.execute(
+            select(models.UserBlock.blocked_user_id).where(models.UserBlock.blocker_user_id == blocker_user_id)
+        ).scalars().all()
+    )
+
+
 def request_friendship(db: Session, requester_id: str, other_user_id: str) -> models.Friendship | None:
     """
     Achado de auditoria de segurança (28/08/2026): resgatar um
@@ -301,7 +373,14 @@ def request_friendship(db: Session, requester_id: str, other_user_id: str) -> mo
     verdade só quando o outro lado aceita explicitamente
     (accept_friend_request). Idempotente: retorna None se já existe
     qualquer linha entre os dois (pending ou accepted), sem duplicar.
+
+    Também retorna None se qualquer um dos dois bloqueou o outro
+    (achado de auditoria de conformidade Google Play, 29/08/2026, item
+    6) — mesmo retorno de "já existe"/self-friend, o router decide a
+    mensagem certa a partir do contexto.
     """
+    if is_blocked_either_way(db, requester_id, other_user_id):
+        return None
     a, b = _canonical_pair(requester_id, other_user_id)
     existing = db.execute(
         select(models.Friendship).where(models.Friendship.user_id_a == a, models.Friendship.user_id_b == b)
@@ -337,6 +416,11 @@ def accept_friend_request(db: Session, friendship_id: str, user_id: str) -> mode
     if friendship is None or friendship.status != "pending" or friendship.requested_by == user_id:
         return None
     if user_id not in (friendship.user_id_a, friendship.user_id_b):
+        return None
+    # Defesa em profundidade (29/08/2026, item 6 da auditoria): o pedido
+    # pode ter sido feito ANTES de um bloqueio acontecer — nunca aceitar
+    # um pedido de quem está bloqueado nesse meio-tempo.
+    if is_blocked_either_way(db, friendship.user_id_a, friendship.user_id_b):
         return None
     friendship.status = "accepted"
     db.commit()
