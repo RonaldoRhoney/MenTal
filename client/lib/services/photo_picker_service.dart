@@ -1,10 +1,12 @@
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:path_provider/path_provider.dart';
 
 import '../l10n/generated/app_localizations.dart';
+import '../screens/photo_crop_screen.dart';
 import '../theme/app_theme.dart';
 
 /// Fluxo completo de escolher/tirar + recortar uma foto de perfil
@@ -19,7 +21,7 @@ class PhotoPickerService {
   const PhotoPickerService._();
 
   /// Mostra um bottom sheet pra escolher Câmera ou Galeria, depois abre
-  /// o editor de recorte (proporção 1:1, igual ao círculo de exibição).
+  /// a tela de recorte (proporção 1:1, igual ao círculo de exibição).
   /// Devolve null se o usuário cancelar em qualquer etapa.
   static Future<File?> pickAndCrop(BuildContext context) async {
     final l10n = AppLocalizations.of(context)!;
@@ -49,30 +51,22 @@ class PhotoPickerService {
         ),
       ),
     );
-    if (source == null) return null;
+    if (source == null || !context.mounted) return null;
 
     final picked = await ImagePicker().pickImage(source: source, imageQuality: 85);
-    if (picked == null) return null;
+    if (picked == null || !context.mounted) return null;
 
-    final cropped = await ImageCropper().cropImage(
-      sourcePath: picked.path,
-      aspectRatio: const CropAspectRatio(ratioX: 1, ratioY: 1),
-      compressFormat: ImageCompressFormat.jpg,
-      compressQuality: 85,
-      uiSettings: [
-        AndroidUiSettings(
-          toolbarTitle: l10n.photoCropToolbarTitle,
-          toolbarColor: AppColors.bg,
-          toolbarWidgetColor: AppColors.bone,
-          backgroundColor: AppColors.bg,
-          activeControlsWidgetColor: AppColors.gold,
-          lockAspectRatio: true,
-        ),
-        IOSUiSettings(title: l10n.photoCropToolbarTitle, aspectRatioLockEnabled: true),
-      ],
+    final bytes = await picked.readAsBytes();
+    if (!context.mounted) return null;
+
+    final croppedBytes = await Navigator.of(context).push<Uint8List>(
+      MaterialPageRoute(builder: (_) => PhotoCropScreen(imageBytes: bytes)),
     );
-    if (cropped == null) return null;
+    if (croppedBytes == null) return null;
 
-    return File(cropped.path);
+    final tempDir = await getTemporaryDirectory();
+    final file = File('${tempDir.path}/profile_photo_${DateTime.now().millisecondsSinceEpoch}.jpg');
+    await file.writeAsBytes(croppedBytes);
+    return file;
   }
 }
