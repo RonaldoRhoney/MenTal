@@ -61,8 +61,31 @@ class AppFeedbackResponse(BaseModel):
 class AdminAppFeedbackItem(BaseModel):
     id: str
     user_id: str
+    user_nickname: str
     comment: str
     created_at: datetime
+    admin_reply: str | None = None
+    admin_reply_at: datetime | None = None
+
+
+class ReplyAppFeedbackRequest(BaseModel):
+    reply: str = Field(min_length=1, max_length=2000)
+
+
+class MyAppFeedbackItem(BaseModel):
+    id: str
+    comment: str
+    created_at: datetime
+    admin_reply: str | None = None
+    admin_reply_at: datetime | None = None
+
+
+class AdminAppFeedbackListResponse(BaseModel):
+    items: list[AdminAppFeedbackItem]
+
+
+class MyAppFeedbackListResponse(BaseModel):
+    items: list[MyAppFeedbackItem]
 
 
 class ChallengeOut(BaseModel):
@@ -437,6 +460,12 @@ class ProfileOut(BaseModel):
     gender: str | None
     age_range: str | None
     onboarding_completed_at: datetime | None
+    # Exposto pro client conseguir mostrar/esconder telas admin-only (ex.:
+    # feedback dos usuários) sem duplicar essa checagem em endpoint
+    # nenhum — a AUTORIZAÇÃO de verdade continua sempre no backend
+    # (routers já checam role == "admin" antes de qualquer leitura), isto
+    # aqui só decide o que aparece na UI.
+    role: str
 
 
 class UpdateProfileRequest(BaseModel):

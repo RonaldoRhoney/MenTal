@@ -373,6 +373,16 @@ class AppFeedback(Base):
     user_id: Mapped[str] = mapped_column(UUIDType)
     comment: Mapped[str] = mapped_column(Text)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    # Pedido de Rhoney (29/08/2026): "deve haver... campos que eu possa
+    # responder, discutir e interagir com o usuário" — resposta única do
+    # admin por feedback (não é uma thread completa; se precisar de
+    # várias trocas no futuro, o usuário sempre pode enviar outro
+    # feedback novo, que aparece como uma linha separada nesta mesma
+    # tabela). read_by_user marca se o autor já viu a resposta, pra
+    # decidir se mostra um badge de "não lido" na tela dele.
+    admin_reply: Mapped[str | None] = mapped_column(Text, nullable=True)
+    admin_reply_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    reply_read_by_user: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
 class Streak(Base):

@@ -73,6 +73,7 @@ def _profile_out(profile: models.Profile) -> schemas.ProfileOut:
         gender=profile.gender,
         age_range=profile.age_range,
         onboarding_completed_at=profile.onboarding_completed_at,
+        role=profile.role,
     )
 
 

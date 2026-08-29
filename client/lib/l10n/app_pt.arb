@@ -909,5 +909,32 @@
   "@mentalCoinsRedeemSuccessMessage": {"description": "Snackbar shown after a successful redemption"},
 
   "mentalCoinsInsufficientBalanceError": "Saldo insuficiente para resgatar este item.",
-  "@mentalCoinsInsufficientBalanceError": {"description": "Error shown when balance is not enough to redeem an item"}
+  "@mentalCoinsInsufficientBalanceError": {"description": "Error shown when balance is not enough to redeem an item"},
+
+  "feedbackMyHistoryTitle": "Meus feedbacks",
+  "@feedbackMyHistoryTitle": {"description": "Section title for the user's own feedback history"},
+
+  "feedbackAdminReplyLabel": "Resposta da equipe",
+  "@feedbackAdminReplyLabel": {"description": "Label shown above an admin's reply to a feedback"},
+
+  "adminFeedbackScreenTitle": "Feedbacks dos usuários",
+  "@adminFeedbackScreenTitle": {"description": "Admin feedback screen title"},
+
+  "adminFeedbackEmptyMessage": "Nenhum feedback recebido ainda.",
+  "@adminFeedbackEmptyMessage": {"description": "Empty state for admin feedback list"},
+
+  "adminFeedbackReplyButton": "Responder",
+  "@adminFeedbackReplyButton": {"description": "Button to reply to a feedback"},
+
+  "adminFeedbackEditReplyButton": "Editar resposta",
+  "@adminFeedbackEditReplyButton": {"description": "Button to edit an existing reply"},
+
+  "adminFeedbackReplyDialogTitle": "Responder feedback",
+  "@adminFeedbackReplyDialogTitle": {"description": "Reply dialog title"},
+
+  "adminFeedbackReplyHint": "Escreva sua resposta...",
+  "@adminFeedbackReplyHint": {"description": "Reply dialog text field hint"},
+
+  "adminFeedbackReplySendButton": "Enviar resposta",
+  "@adminFeedbackReplySendButton": {"description": "Reply dialog send button"}
 }

@@ -150,6 +150,27 @@ class ApiClient {
     );
   }
 
+  Future<Map<String, dynamic>> getMyAppFeedback() async {
+    return _get(_uri('/feedback/mine'), headers: _headers);
+  }
+
+  // Painel admin de feedback (pedido de Rhoney, 29/08/2026: "deve haver
+  // uma área para receber os feedbacks... e responder, discutir e
+  // interagir com o usuário") — só visível/utilizável de fato por quem
+  // tem role=admin no backend (a checagem de autorização real é sempre
+  // do servidor; o client só decide se MOSTRA a entrada de menu).
+  Future<Map<String, dynamic>> getAdminAppFeedback() async {
+    return _get(_uri('/admin/feedback'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> replyAppFeedback(String feedbackId, String reply) async {
+    return _post(
+      _uri('/admin/feedback/$feedbackId/reply'),
+      headers: _headers,
+      body: jsonEncode({'reply': reply}),
+    );
+  }
+
   Future<Map<String, dynamic>> progress() async {
     return _get(_uri('/progress'), headers: _headers);
   }

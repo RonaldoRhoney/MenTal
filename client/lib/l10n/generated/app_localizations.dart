@@ -1581,6 +1581,60 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Saldo insuficiente para resgatar este item.'**
   String get mentalCoinsInsufficientBalanceError;
+
+  /// Section title for the user's own feedback history
+  ///
+  /// In pt, this message translates to:
+  /// **'Meus feedbacks'**
+  String get feedbackMyHistoryTitle;
+
+  /// Label shown above an admin's reply to a feedback
+  ///
+  /// In pt, this message translates to:
+  /// **'Resposta da equipe'**
+  String get feedbackAdminReplyLabel;
+
+  /// Admin feedback screen title
+  ///
+  /// In pt, this message translates to:
+  /// **'Feedbacks dos usuários'**
+  String get adminFeedbackScreenTitle;
+
+  /// Empty state for admin feedback list
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum feedback recebido ainda.'**
+  String get adminFeedbackEmptyMessage;
+
+  /// Button to reply to a feedback
+  ///
+  /// In pt, this message translates to:
+  /// **'Responder'**
+  String get adminFeedbackReplyButton;
+
+  /// Button to edit an existing reply
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar resposta'**
+  String get adminFeedbackEditReplyButton;
+
+  /// Reply dialog title
+  ///
+  /// In pt, this message translates to:
+  /// **'Responder feedback'**
+  String get adminFeedbackReplyDialogTitle;
+
+  /// Reply dialog text field hint
+  ///
+  /// In pt, this message translates to:
+  /// **'Escreva sua resposta...'**
+  String get adminFeedbackReplyHint;
+
+  /// Reply dialog send button
+  ///
+  /// In pt, this message translates to:
+  /// **'Enviar resposta'**
+  String get adminFeedbackReplySendButton;
 }
 
 class _AppLocalizationsDelegate

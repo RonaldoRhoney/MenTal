@@ -12,12 +12,17 @@ class _FakeApiClient extends ApiClient {
   _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   String? sentComment;
+  List<Map<String, dynamic>> myFeedback = [];
 
   @override
   Future<Map<String, dynamic>> submitAppFeedback(String comment) async {
     sentComment = comment;
+    myFeedback = [...myFeedback, {'id': 'novo', 'comment': comment, 'created_at': DateTime.now().toIso8601String(), 'admin_reply': null}];
     return {'ok': true};
   }
+
+  @override
+  Future<Map<String, dynamic>> getMyAppFeedback() async => {'items': myFeedback};
 }
 
 Future<void> _pump(WidgetTester tester, ApiClient client) async {
@@ -60,5 +65,28 @@ void main() {
 
     expect(client.sentComment, 'Sugestão: mais territórios!');
     expect(find.textContaining('Feedback enviado'), findsOneWidget);
+  });
+
+  testWidgets('mostra resposta da equipe num feedback já respondido', (tester) async {
+    final client = _FakeApiClient()
+      ..myFeedback = [
+        {'id': '1', 'comment': 'O app trava ao marcar a resposta', 'created_at': DateTime.now().toIso8601String(), 'admin_reply': 'Já corrigimos, atualize o app!'},
+      ];
+    await _pump(tester, client);
+
+    expect(find.text('Meus feedbacks'), findsOneWidget);
+    expect(find.text('O app trava ao marcar a resposta'), findsOneWidget);
+    expect(find.text('Já corrigimos, atualize o app!'), findsOneWidget);
+  });
+
+  testWidgets('feedback sem resposta não mostra bloco de resposta', (tester) async {
+    final client = _FakeApiClient()
+      ..myFeedback = [
+        {'id': '1', 'comment': 'Sugestão qualquer', 'created_at': DateTime.now().toIso8601String(), 'admin_reply': null},
+      ];
+    await _pump(tester, client);
+
+    expect(find.text('Sugestão qualquer'), findsOneWidget);
+    expect(find.text('Resposta da equipe'), findsNothing);
   });
 }

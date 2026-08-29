@@ -873,4 +873,31 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get mentalCoinsInsufficientBalanceError =>
       'Saldo insuficiente para resgatar este item.';
+
+  @override
+  String get feedbackMyHistoryTitle => 'Meus feedbacks';
+
+  @override
+  String get feedbackAdminReplyLabel => 'Resposta da equipe';
+
+  @override
+  String get adminFeedbackScreenTitle => 'Feedbacks dos usuários';
+
+  @override
+  String get adminFeedbackEmptyMessage => 'Nenhum feedback recebido ainda.';
+
+  @override
+  String get adminFeedbackReplyButton => 'Responder';
+
+  @override
+  String get adminFeedbackEditReplyButton => 'Editar resposta';
+
+  @override
+  String get adminFeedbackReplyDialogTitle => 'Responder feedback';
+
+  @override
+  String get adminFeedbackReplyHint => 'Escreva sua resposta...';
+
+  @override
+  String get adminFeedbackReplySendButton => 'Enviar resposta';
 }

@@ -617,25 +617,48 @@ class _TerritoryCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        FilledButton(
-          style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8)),
-          onPressed: () async {
-            await Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => ChallengeScreen(client: client, territoryId: territoryId, territoryLabel: label),
+        // Pedido de Rhoney (29/08/2026): "eles devem seguir as mesmas
+        // formatação do menu pai" — antes era um FilledButton dourado
+        // sólido, visualmente destoante do card do Mundo (fundo bg2 +
+        // borda sutil). Agora usa a MESMA linguagem visual (fundo bg2,
+        // cantos arredondados, borda com destaque suave — mais forte em
+        // dourado quando já conquistado), consistente também com os
+        // cards de recompensa do MentalCoins.
+        Material(
+          color: AppColors.bg2,
+          borderRadius: BorderRadius.circular(16),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => ChallengeScreen(client: client, territoryId: territoryId, territoryLabel: label),
+                ),
+              );
+              onReturned();
+            },
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: conquered ? AppColors.gold.withValues(alpha: 0.45) : AppColors.muted.withValues(alpha: 0.18)),
               ),
-            );
-            onReturned();
-          },
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(l10n.newChallengeButton(label), textAlign: TextAlign.center, maxLines: 2),
-              if (conquered) ...[
-                const SizedBox(height: 4),
-                const Icon(Icons.check_circle, size: 18),
-              ],
-            ],
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    l10n.newChallengeButton(label),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                  if (conquered) ...[
+                    const SizedBox(height: 4),
+                    const Icon(Icons.check_circle, size: 18, color: AppColors.gold),
+                  ],
+                ],
+              ),
+            ),
           ),
         ),
         if (detentorNickname != null) ...[
