@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 from typing import Literal
 
 from pydantic import BaseModel, Field
@@ -490,3 +490,50 @@ class AdminReportItem(BaseModel):
     reported_photo_url: str | None = None
     reason: str
     created_at: datetime
+
+
+class MentalCoinsBalanceOut(BaseModel):
+    balance: int
+    cycle_start: date
+    cycle_end: date
+
+
+class MentalCoinsTransactionOut(BaseModel):
+    amount: int
+    reason: str
+    created_at: datetime
+
+
+class MentalCoinsHallOfFameEntryOut(BaseModel):
+    category: Literal["xp_daily", "steps_week", "steps_day"]
+    rank: int | None = None
+    reference_date: date | None = None
+    user_id: str
+    nickname: str
+    amount: int
+    metric_value: int
+
+
+class MentalCoinsCatalogItemOut(BaseModel):
+    id: str
+    name: str
+    description: str
+    cost: int
+    item_type: str
+    redeemed: bool
+
+
+class RedeemMentalCoinsItemRequest(BaseModel):
+    item_id: str
+
+
+class MentalCoinsTransactionsResponse(BaseModel):
+    transactions: list[MentalCoinsTransactionOut]
+
+
+class MentalCoinsHallOfFameResponse(BaseModel):
+    entries: list[MentalCoinsHallOfFameEntryOut]
+
+
+class MentalCoinsCatalogResponse(BaseModel):
+    items: list[MentalCoinsCatalogItemOut]

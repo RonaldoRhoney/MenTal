@@ -177,6 +177,33 @@ class ApiClient {
     return _get(_uri('/social/friends'), headers: _headers);
   }
 
+  // MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio semanal,
+  // sem valor monetário. Saldo/apuração são 100% autoridade do backend;
+  // o client nunca calcula, só exibe o que a API devolve.
+  Future<Map<String, dynamic>> getMentalCoinsBalance() async {
+    return _get(_uri('/mentalcoins/balance'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> getMentalCoinsTransactions() async {
+    return _get(_uri('/mentalcoins/transactions'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> getMentalCoinsHallOfFame() async {
+    return _get(_uri('/mentalcoins/hall-of-fame'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> getMentalCoinsCatalog() async {
+    return _get(_uri('/mentalcoins/catalog'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> redeemMentalCoinsItem(String itemId) async {
+    return _post(
+      _uri('/mentalcoins/catalog/redeem'),
+      headers: _headers,
+      body: jsonEncode({'item_id': itemId}),
+    );
+  }
+
   // Achado de auditoria de segurança (28/08/2026): resgatar o
   // invite_code não cria mais amizade direto, só um pedido pendente —
   // precisa do aceite explícito de quem convidou.

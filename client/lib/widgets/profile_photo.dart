@@ -14,21 +14,28 @@ import '../theme/app_theme.dart';
 /// real do redesign de 26/08/2026 — o avatar antigo usava `bg2` sobre um
 /// card que também é `bg2`, ficando invisível por falta de contraste.
 class ProfilePhotoCircle extends StatelessWidget {
-  const ProfilePhotoCircle({super.key, this.photoUrl, this.size = 36});
+  const ProfilePhotoCircle({super.key, this.photoUrl, this.size = 36, this.highlighted = false});
 
   final String? photoUrl;
   final double size;
 
+  // Reforço de gamificação (pedido de Rhoney, 29/08/2026): anel de
+  // destaque (gradiente dourado→roxo) no card de progresso da Home, sem
+  // mudar o comportamento padrão (sem anel) usado no resto do app
+  // (Amigos, Ranking, Batalhas) — evita ripple visual fora do escopo
+  // pedido.
+  final bool highlighted;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final photo = Container(
       width: size,
       height: size,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: AppColors.bg,
-        border: Border.all(color: AppColors.muted.withValues(alpha: 0.35)),
+        border: highlighted ? null : Border.all(color: AppColors.muted.withValues(alpha: 0.35)),
       ),
       child: photoUrl != null
           ? Image.network(
@@ -37,6 +44,17 @@ class ProfilePhotoCircle extends StatelessWidget {
               errorBuilder: (_, __, ___) => Icon(Icons.person, size: size * 0.55, color: AppColors.muted),
             )
           : Icon(Icons.person, size: size * 0.55, color: AppColors.muted),
+    );
+
+    if (!highlighted) return photo;
+
+    return Container(
+      padding: const EdgeInsets.all(3),
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: LinearGradient(colors: [AppColors.gold, AppColors.purple]),
+      ),
+      child: photo,
     );
   }
 }

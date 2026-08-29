@@ -818,4 +818,59 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get moreNavLabel => 'Mais';
+
+  @override
+  String get mentalCoinsTooltip => 'MentalCoins';
+
+  @override
+  String get mentalCoinsScreenTitle => 'MentalCoins';
+
+  @override
+  String mentalCoinsCycleNote(String end, String start) {
+    return 'Ciclo fecha em $end · reinicia em $start';
+  }
+
+  @override
+  String get mentalCoinsHowToEarnTitle => 'Como ganhar essa semana';
+
+  @override
+  String get mentalCoinsXpDailyLabel => 'Top 3 de XP do dia';
+
+  @override
+  String get mentalCoinsXpDailyValue => '1º: 10 · 2º: 5 · 3º: 3';
+
+  @override
+  String get mentalCoinsStepsWeekLabel => 'Campeão da semana em passos';
+
+  @override
+  String get mentalCoinsStepsWeekValue => '+20 MentalCoins';
+
+  @override
+  String get mentalCoinsStepsDayLabel => 'Recordista do dia em passos';
+
+  @override
+  String get mentalCoinsStepsDayValue => '+10 MentalCoins';
+
+  @override
+  String get mentalCoinsHallOfFameTitle => 'Hall da Fama da semana';
+
+  @override
+  String get mentalCoinsHallOfFameEmpty =>
+      'Nenhuma semana fechada ainda — os vencedores aparecem aqui a partir do primeiro fechamento de ciclo.';
+
+  @override
+  String get mentalCoinsRedeemTitle => 'Resgatar';
+
+  @override
+  String get mentalCoinsRedeemedLabel => 'Resgatado';
+
+  @override
+  String get mentalCoinsRedeemButton => 'Resgatar';
+
+  @override
+  String get mentalCoinsRedeemSuccessMessage => 'Item resgatado!';
+
+  @override
+  String get mentalCoinsInsufficientBalanceError =>
+      'Saldo insuficiente para resgatar este item.';
 }

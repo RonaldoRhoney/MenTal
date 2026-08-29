@@ -30,6 +30,13 @@ class AppColors {
   // Terracota, não vermelho vivo — vermelho sinaliza urgência/perigo, o
   // que contradiz o Princípio de Não-Humilhação (DESIGN_SYSTEM.md §1).
   static const error = Color(0xFFC96A5A);
+
+  // Paleta de gamificação (pedido de Rhoney, 29/08/2026): reforço visual
+  // de vitória/conquista no card de progresso da Home — verde de
+  // sucesso + roxo de "nível/rank", complementando o dourado (conquista)
+  // já existente, sem substituir os tokens base usados no resto do app.
+  static const victory = Color(0xFF4FBF7A);
+  static const purple = Color(0xFF9B7FE0);
 }
 
 class AppTheme {

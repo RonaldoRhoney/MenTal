@@ -855,5 +855,59 @@
   "@homeNavLabel": {"description": "Bottom navigation label for the Home destination"},
 
   "moreNavLabel": "Mais",
-  "@moreNavLabel": {"description": "Bottom navigation label for the overflow menu (Friends/Battles/Profile/Settings/Feedback)"}
+  "@moreNavLabel": {"description": "Bottom navigation label for the overflow menu (Friends/Battles/Profile/Settings/Feedback)"},
+
+  "mentalCoinsTooltip": "MentalCoins",
+  "@mentalCoinsTooltip": {"description": "MentalCoins quick action / badge label"},
+
+  "mentalCoinsScreenTitle": "MentalCoins",
+  "@mentalCoinsScreenTitle": {"description": "MentalCoins screen app bar title"},
+
+  "mentalCoinsCycleNote": "Ciclo fecha em {end} · reinicia em {start}",
+  "@mentalCoinsCycleNote": {
+    "description": "Note about when the current weekly cycle closes and restarts",
+    "placeholders": {"end": {"type": "String"}, "start": {"type": "String"}}
+  },
+
+  "mentalCoinsHowToEarnTitle": "Como ganhar essa semana",
+  "@mentalCoinsHowToEarnTitle": {"description": "Section title explaining how to earn MentalCoins this week"},
+
+  "mentalCoinsXpDailyLabel": "Top 3 de XP do dia",
+  "@mentalCoinsXpDailyLabel": {"description": "Daily XP ranking reward track label"},
+
+  "mentalCoinsXpDailyValue": "1º: 10 · 2º: 5 · 3º: 3",
+  "@mentalCoinsXpDailyValue": {"description": "Daily XP ranking reward values"},
+
+  "mentalCoinsStepsWeekLabel": "Campeão da semana em passos",
+  "@mentalCoinsStepsWeekLabel": {"description": "Weekly steps champion reward track label"},
+
+  "mentalCoinsStepsWeekValue": "+20 MentalCoins",
+  "@mentalCoinsStepsWeekValue": {"description": "Weekly steps champion reward value"},
+
+  "mentalCoinsStepsDayLabel": "Recordista do dia em passos",
+  "@mentalCoinsStepsDayLabel": {"description": "Daily steps record reward track label"},
+
+  "mentalCoinsStepsDayValue": "+10 MentalCoins",
+  "@mentalCoinsStepsDayValue": {"description": "Daily steps record reward value"},
+
+  "mentalCoinsHallOfFameTitle": "Hall da Fama da semana",
+  "@mentalCoinsHallOfFameTitle": {"description": "Hall of fame section title"},
+
+  "mentalCoinsHallOfFameEmpty": "Nenhuma semana fechada ainda — os vencedores aparecem aqui a partir do primeiro fechamento de ciclo.",
+  "@mentalCoinsHallOfFameEmpty": {"description": "Empty state for hall of fame when no cycle has closed yet"},
+
+  "mentalCoinsRedeemTitle": "Resgatar",
+  "@mentalCoinsRedeemTitle": {"description": "Redemption catalog section title"},
+
+  "mentalCoinsRedeemedLabel": "Resgatado",
+  "@mentalCoinsRedeemedLabel": {"description": "Label shown on an already-redeemed catalog item"},
+
+  "mentalCoinsRedeemButton": "Resgatar",
+  "@mentalCoinsRedeemButton": {"description": "Redeem button on a catalog item"},
+
+  "mentalCoinsRedeemSuccessMessage": "Item resgatado!",
+  "@mentalCoinsRedeemSuccessMessage": {"description": "Snackbar shown after a successful redemption"},
+
+  "mentalCoinsInsufficientBalanceError": "Saldo insuficiente para resgatar este item.",
+  "@mentalCoinsInsufficientBalanceError": {"description": "Error shown when balance is not enough to redeem an item"}
 }

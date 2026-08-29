@@ -80,10 +80,23 @@ class _FakeApiClient extends ApiClient {
 }
 
 void main() {
-  testWidgets('agrupa territórios por mundo e mostra selo de mundo completo', (tester) async {
-    SharedPreferences.setMockInitialValues({});
-    await tester.pumpWidget(
-      MaterialApp(
+  // Reforço de gamificação na Home (pedido de Rhoney, 29/08/2026): o
+  // _ProgressCard cresceu (avatar 64px + anel + chips de XP/streak),
+  // empurrando o conteúdo mais pra baixo. Em vez de depender de
+  // scrollUntilVisible (frágil: um ListView lazy pode não ter
+  // construído/hit-testável ainda o widget-alvo logo após o scroll, como
+  // já documentado no helper de mandatory_onboarding_screen_test.dart),
+  // aumenta o viewport de teste pra tudo caber de uma vez.
+  Future<void> pumpTall(WidgetTester tester, Widget child) async {
+    tester.view.physicalSize = const Size(800, 2400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(child);
+    await tester.pumpAndSettle();
+  }
+
+  Widget homeApp(ApiClient client) => MaterialApp(
         localizationsDelegates: const [
           AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
@@ -91,20 +104,18 @@ void main() {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: AppLocalizations.supportedLocales,
-        home: HomeScreen(client: _FakeApiClient()),
-      ),
-    );
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 100));
+        home: HomeScreen(client: client),
+      );
+
+  testWidgets('agrupa territórios por mundo e mostra selo de mundo completo', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(tester, homeApp(_FakeApiClient()));
 
     expect(find.text('Mundo da Linguagem'), findsOneWidget);
     // Redesign 2026-08-26 (pedido de Rhoney: "não quero tudo na tela"):
     // Mundo colapsado por padrão — o território não deve estar visível
     // ainda, só o cabeçalho.
     expect(find.text('Novo desafio — Palavras'), findsNothing);
-    // Redesign 2026-08-26: cards com grid 2 colunas + header de marca
-    // empurram o segundo Mundo pra fora da dobra inicial — precisa rolar.
-    await tester.scrollUntilVisible(find.text('Mundo da Mente Lógica'), 200, scrollable: find.byType(Scrollable).first);
     expect(find.text('Mundo da Mente Lógica'), findsOneWidget);
 
     // Ao expandir, os territórios daquele Mundo aparecem.
@@ -119,20 +130,7 @@ void main() {
 
   testWidgets('mostra o detentor do território entre amigos (V2 item 13)', (tester) async {
     SharedPreferences.setMockInitialValues({});
-    await tester.pumpWidget(
-      MaterialApp(
-        localizationsDelegates: const [
-          AppLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: AppLocalizations.supportedLocales,
-        home: HomeScreen(client: _FakeApiClient()),
-      ),
-    );
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 100));
+    await pumpTall(tester, homeApp(_FakeApiClient()));
 
     // Redesign 2026-08-26: cada Mundo agora é colapsável ("não quero
     // tudo na tela") — precisa expandir antes de ver os territórios.
@@ -145,35 +143,20 @@ void main() {
 
   testWidgets('BLOCOS_MENUS.md: mostra sub-cabeçalho "Matemática" agrupando numeros e lógica', (tester) async {
     SharedPreferences.setMockInitialValues({});
-    await tester.pumpWidget(
-      MaterialApp(
-        localizationsDelegates: const [
-          AppLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: AppLocalizations.supportedLocales,
-        home: HomeScreen(client: _FakeApiClient()),
-      ),
-    );
-    await tester.pumpAndSettle();
+    await pumpTall(tester, homeApp(_FakeApiClient()));
 
     // Redesign 2026-08-26: Mundo colapsável — expande "Mundo da Mente
     // Lógica" (onde numeros/logica/visual/conhecimento vivem) antes de
     // procurar pelos territórios/blocos internos.
-    await tester.scrollUntilVisible(find.text('Mundo da Mente Lógica'), 200, scrollable: find.byType(Scrollable));
     await tester.tap(find.text('Mundo da Mente Lógica'));
     await tester.pumpAndSettle();
 
     // Aparece uma única vez (agrupa numeros+logica sob o mesmo bloco,
     // não repete o sub-cabeçalho por território).
-    await tester.scrollUntilVisible(find.text('Matemática'), 200, scrollable: find.byType(Scrollable));
     expect(find.text('Matemática'), findsOneWidget);
 
     // Território sem bloco (visual, no mesmo Mundo) continua acessível
     // normalmente, sem nenhum sub-cabeçalho de bloco acima dele.
-    await tester.scrollUntilVisible(find.textContaining('Visual'), 200, scrollable: find.byType(Scrollable));
     expect(find.textContaining('Visual'), findsWidgets);
   });
 

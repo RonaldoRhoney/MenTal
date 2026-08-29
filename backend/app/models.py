@@ -549,3 +549,84 @@ class Report(Base):
     reason: Mapped[str] = mapped_column(Text)
     resolved: Mapped[bool] = mapped_column(Boolean, default=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class MentalCoinsBalance(Base):
+    """
+    Saldo de MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio
+    semanal, sem valor monetário. Autoridade 100% do backend: nunca
+    calculado ou decidido pelo client, só exibido.
+    """
+
+    __tablename__ = "mentalcoins_balances"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    balance: Mapped[int] = mapped_column(Integer, default=0)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class MentalCoinsTransaction(Base):
+    __tablename__ = "mentalcoins_transactions"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    amount: Mapped[int] = mapped_column(Integer)
+    reason: Mapped[str] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class MentalCoinsHallOfFameEntry(Base):
+    """
+    Congelamento dos vencedores da semana fechada (MENTALCOINS_V1.md §6)
+    — nunca recalculado durante a semana seguinte, só lido. category:
+    'xp_daily' (rank 1-3, reference_date = o dia específico), 'steps_week'
+    (vencedor único, reference_date null) ou 'steps_day' (vencedor único,
+    reference_date = o dia do pico).
+    """
+
+    __tablename__ = "mentalcoins_hall_of_fame"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    cycle_start: Mapped[date] = mapped_column(Date)
+    cycle_end: Mapped[date] = mapped_column(Date)
+    category: Mapped[str] = mapped_column(String)
+    rank: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    reference_date: Mapped[date | None] = mapped_column(Date, nullable=True)
+    user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    nickname: Mapped[str] = mapped_column(String)
+    amount: Mapped[int] = mapped_column(Integer)
+    metric_value: Mapped[int] = mapped_column(Integer)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class MentalCoinsProcessedCycle(Base):
+    """Idempotência da apuração semanal — evita creditar duas vezes o
+    mesmo ciclo se o job agendado rodar mais de uma vez."""
+
+    __tablename__ = "mentalcoins_processed_cycles"
+
+    cycle_start: Mapped[date] = mapped_column(Date, primary_key=True)
+    cycle_end: Mapped[date] = mapped_column(Date)
+    processed_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class MentalCoinsItem(Base):
+    """Catálogo de itens cosméticos resgatáveis só com MentalCoins —
+    nunca compráveis com dinheiro real (MENTALCOINS_V1.md §4)."""
+
+    __tablename__ = "mentalcoins_items"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    name: Mapped[str] = mapped_column(String)
+    description: Mapped[str] = mapped_column(Text)
+    cost: Mapped[int] = mapped_column(Integer)
+    item_type: Mapped[str] = mapped_column(String)
+    display_order: Mapped[int] = mapped_column(Integer, default=0)
+
+
+class MentalCoinsRedemption(Base):
+    __tablename__ = "mentalcoins_redemptions"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    item_id: Mapped[str] = mapped_column(String, ForeignKey("mentalcoins_items.id"), primary_key=True)
+    redeemed_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)

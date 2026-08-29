@@ -245,3 +245,18 @@ SHARE_XP_REWARD = 15
 # nunca um múltiplo alto, pra não virar a forma dominante de ganhar XP.
 BATTLE_DAILY_SEND_LIMIT = 3
 BATTLE_WIN_BONUS_XP = 30
+
+# MentalCoins — moeda de prestígio semanal (U.I/MENTALCOINS_V1.md).
+# Ciclo: segunda-feira 08:00 até domingo 23:59:59, horário de Brasília.
+# Apuração roda no fechamento via o mesmo agendador em background já
+# usado para notificações (app/scheduler.py) — nenhum serviço novo de
+# cron precisa existir só para isto. Default false pelo mesmo motivo de
+# NOTIFICATION_SCHEDULER_ENABLED: nunca roda em teste/dev casual.
+MENTALCOINS_SCHEDULER_ENABLED = os.environ.get("MENTALCOINS_SCHEDULER_ENABLED", "false").lower() == "true"
+MENTALCOINS_TIMEZONE = "America/Sao_Paulo"
+# §3.1 — ranking diário de XP, repetido a cada um dos 7 dias do ciclo.
+MENTALCOINS_XP_DAILY_REWARDS = [10, 5, 3]
+# §3.2 — ranking de passos da semana. Usa o número absoluto de passos
+# dados, independente da meta diária configurável de cada usuário.
+MENTALCOINS_STEPS_WEEK_CHAMPION_REWARD = 20
+MENTALCOINS_STEPS_DAY_RECORD_REWARD = 10

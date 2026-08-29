@@ -96,6 +96,16 @@ BADGES = [
     },
 ]
 
+# Catálogo de itens cosméticos resgatáveis com MentalCoins (U.I/
+# MENTALCOINS_V1.md §4/§7) — preços ilustrativos, a calibrar depois do
+# lançamento com base na velocidade real de acúmulo. Espelha
+# migrations/032_mentalcoins.sql para o banco de produção (Postgres);
+# aqui só popula o SQLite local de dev/teste.
+MENTALCOINS_ITEMS = [
+    {"id": "moldura_dourada", "name": "Moldura Dourada", "description": "Moldura de destaque para sua foto de perfil.", "cost": 80, "item_type": "avatar_frame", "display_order": 1},
+    {"id": "moldura_roxa", "name": "Moldura Roxa", "description": "Moldura de prestígio para sua foto de perfil.", "cost": 150, "item_type": "avatar_frame", "display_order": 2},
+]
+
 
 def _visual_option(shape: str, fill: str, color: str, index: int) -> str:
     # Formato "forma_preenchimento_cor_índice" — o índice existe só para
@@ -1283,4 +1293,8 @@ def seed_if_empty(db: Session) -> None:
 
     for b in BADGES:
         db.add(models.Badge(**b))
+    db.commit()
+
+    for item in MENTALCOINS_ITEMS:
+        db.add(models.MentalCoinsItem(**item))
     db.commit()

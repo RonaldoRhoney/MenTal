@@ -1479,6 +1479,108 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Mais'**
   String get moreNavLabel;
+
+  /// MentalCoins quick action / badge label
+  ///
+  /// In pt, this message translates to:
+  /// **'MentalCoins'**
+  String get mentalCoinsTooltip;
+
+  /// MentalCoins screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'MentalCoins'**
+  String get mentalCoinsScreenTitle;
+
+  /// Note about when the current weekly cycle closes and restarts
+  ///
+  /// In pt, this message translates to:
+  /// **'Ciclo fecha em {end} · reinicia em {start}'**
+  String mentalCoinsCycleNote(String end, String start);
+
+  /// Section title explaining how to earn MentalCoins this week
+  ///
+  /// In pt, this message translates to:
+  /// **'Como ganhar essa semana'**
+  String get mentalCoinsHowToEarnTitle;
+
+  /// Daily XP ranking reward track label
+  ///
+  /// In pt, this message translates to:
+  /// **'Top 3 de XP do dia'**
+  String get mentalCoinsXpDailyLabel;
+
+  /// Daily XP ranking reward values
+  ///
+  /// In pt, this message translates to:
+  /// **'1º: 10 · 2º: 5 · 3º: 3'**
+  String get mentalCoinsXpDailyValue;
+
+  /// Weekly steps champion reward track label
+  ///
+  /// In pt, this message translates to:
+  /// **'Campeão da semana em passos'**
+  String get mentalCoinsStepsWeekLabel;
+
+  /// Weekly steps champion reward value
+  ///
+  /// In pt, this message translates to:
+  /// **'+20 MentalCoins'**
+  String get mentalCoinsStepsWeekValue;
+
+  /// Daily steps record reward track label
+  ///
+  /// In pt, this message translates to:
+  /// **'Recordista do dia em passos'**
+  String get mentalCoinsStepsDayLabel;
+
+  /// Daily steps record reward value
+  ///
+  /// In pt, this message translates to:
+  /// **'+10 MentalCoins'**
+  String get mentalCoinsStepsDayValue;
+
+  /// Hall of fame section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Hall da Fama da semana'**
+  String get mentalCoinsHallOfFameTitle;
+
+  /// Empty state for hall of fame when no cycle has closed yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhuma semana fechada ainda — os vencedores aparecem aqui a partir do primeiro fechamento de ciclo.'**
+  String get mentalCoinsHallOfFameEmpty;
+
+  /// Redemption catalog section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Resgatar'**
+  String get mentalCoinsRedeemTitle;
+
+  /// Label shown on an already-redeemed catalog item
+  ///
+  /// In pt, this message translates to:
+  /// **'Resgatado'**
+  String get mentalCoinsRedeemedLabel;
+
+  /// Redeem button on a catalog item
+  ///
+  /// In pt, this message translates to:
+  /// **'Resgatar'**
+  String get mentalCoinsRedeemButton;
+
+  /// Snackbar shown after a successful redemption
+  ///
+  /// In pt, this message translates to:
+  /// **'Item resgatado!'**
+  String get mentalCoinsRedeemSuccessMessage;
+
+  /// Error shown when balance is not enough to redeem an item
+  ///
+  /// In pt, this message translates to:
+  /// **'Saldo insuficiente para resgatar este item.'**
+  String get mentalCoinsInsufficientBalanceError;
 }
 
 class _AppLocalizationsDelegate

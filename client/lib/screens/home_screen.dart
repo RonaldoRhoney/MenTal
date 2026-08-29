@@ -7,13 +7,14 @@ import '../l10n/generated/app_localizations.dart';
 import '../services/movement_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
+import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
-import '../widgets/xp_bar.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
 import 'feedback_screen.dart';
 import 'friends_screen.dart';
+import 'mentalcoins_screen.dart';
 import 'movement_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
@@ -55,6 +56,25 @@ class _HomeScreenState extends State<HomeScreen> {
   String? _photoUrl;
   String? _realName;
 
+  // MentalCoins (U.I/MENTALCOINS_V1.md) — reforço visual de gamificação
+  // pedido junto do redesign da Home. Falha silenciosa igual ao resto
+  // dos indicadores secundários: nunca bloqueia a Home carregar.
+  int? _mentalCoinsBalance;
+
+  Future<void> _loadMentalCoinsBalance() async {
+    try {
+      final balance = await widget.client.getMentalCoinsBalance();
+      if (mounted) setState(() => _mentalCoinsBalance = balance['balance'] as int);
+    } on ApiException catch (_) {}
+  }
+
+  Future<void> _openMentalCoins() async {
+    await Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => MentalCoinsScreen(client: widget.client)),
+    );
+    _loadMentalCoinsBalance();
+  }
+
   // V2 item 9 — badge de passos ainda não coletados junto ao ícone de
   // Movimento (decisão de Rhoney, 2026-08-21: "catch-up ao reabrir o
   // app", nunca serviço em segundo plano com notificação fixa). Mostra
@@ -70,6 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadProgress();
     _loadMovementBadge();
     _loadProfileHeader();
+    _loadMentalCoinsBalance();
   }
 
   Future<void> _loadProfileHeader() async {
@@ -273,8 +294,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   progress: progress,
                   photoUrl: _photoUrl,
                   realName: _realName,
+                  mentalCoinsBalance: _mentalCoinsBalance,
                   l10n: l10n,
                   onTapPhoto: _openProfile,
+                  onTapMentalCoins: _openMentalCoins,
                 ),
               if (_error != null) ...[
                 const SizedBox(height: 8),
@@ -652,41 +675,55 @@ class _TerritoryCard extends StatelessWidget {
   }
 }
 
-/// Card de progresso do usuário, visualmente destacado (fundo elevado +
-/// borda dourada sutil) do restante da lista de territórios — achado
-/// real do redesign: antes tudo tinha o mesmo peso visual, sem
-/// hierarquia de importância entre "seu progresso" e "os territórios".
-/// Foto de perfil clicável ao lado do nome (pedido de Rhoney, 26/08 e
-/// 27/08/2026) — abre o Perfil pra editar, mesmo lugar visual onde o
-/// nome/foto já aparecem em Amigos/Ranking/Batalhas (USER_PROFILE.md §4).
-///
-/// O nível NÃO é repetido aqui — `XpBar` abaixo já renderiza "Nível $level"
-/// internamente; um `Text(l10n.levelLabel(level))` extra neste Row
-/// duplicava o texto (achado real de validação em dispositivo, 26/08/2026).
+/// Card de identidade do usuário (U.I/HOME_REDESIGN_V1.md §3, reajustado
+/// 29/08/2026 a pedido de Rhoney: "está tomando muito espaço, diminua de
+/// forma a aproveitar todo o card de forma estruturada"). Substitui o
+/// avatar grande + XpBar completa + chips separados por uma estrutura de
+/// 3 linhas compactas dentro do MESMO card, sem nenhuma informação
+/// duplicada: nível vira badge sobre o avatar (não repetido em texto),
+/// XP ganha uma linha própria fina, e XP total/Mundos/Streak dividem uma
+/// única linha de metadados em vez de cards separados.
 class _ProgressCard extends StatelessWidget {
   const _ProgressCard({
     required this.progress,
     required this.photoUrl,
     required this.realName,
+    required this.mentalCoinsBalance,
     required this.l10n,
     required this.onTapPhoto,
+    required this.onTapMentalCoins,
   });
 
   final Map<String, dynamic> progress;
   final String? photoUrl;
   final String? realName;
+  final int? mentalCoinsBalance;
   final AppLocalizations l10n;
   final VoidCallback onTapPhoto;
+  final VoidCallback onTapMentalCoins;
+
+  static const _xpPerLevel = 100;
 
   @override
   Widget build(BuildContext context) {
     final level = progress['level'] as int;
+    final xpTotal = progress['xp_total'] as int;
+    final streakDays = progress['streak']['current_streak'] as int;
+    final xpIntoLevel = xpTotal % _xpPerLevel;
+    final fraction = (xpIntoLevel / _xpPerLevel).clamp(0.0, 1.0);
+    final worlds = (progress['worlds'] as List?)?.cast<Map<String, dynamic>>();
+    final worldsCompleted = worlds?.where((w) => w['completed'] as bool).length;
+
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(
-        color: AppColors.bg2,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.gold.withValues(alpha: 0.25)),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [AppColors.bg2, Color.lerp(AppColors.bg2, AppColors.purple, 0.08)!],
+        ),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -694,34 +731,126 @@ class _ProgressCard extends StatelessWidget {
           Row(
             children: [
               InkWell(
-                borderRadius: BorderRadius.circular(28),
+                borderRadius: BorderRadius.circular(24),
                 onTap: onTapPhoto,
-                child: ProfilePhotoCircle(photoUrl: photoUrl, size: 48),
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    ProfilePhotoCircle(photoUrl: photoUrl, size: 44, highlighted: true),
+                    Positioned(
+                      right: -2,
+                      bottom: -2,
+                      child: Container(
+                        width: 20,
+                        height: 20,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColors.teal,
+                          border: Border.all(color: AppColors.bg2, width: 2),
+                        ),
+                        child: Text('$level', style: AppTheme.technicalStyle(color: AppColors.bg, fontSize: 10).copyWith(fontWeight: FontWeight.w700)),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(width: 12),
-              if (realName != null && realName!.isNotEmpty)
-                Expanded(
-                  child: Text(
-                    realName!,
-                    style: Theme.of(context).textTheme.titleLarge,
-                    overflow: TextOverflow.ellipsis,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (realName != null && realName!.isNotEmpty)
+                      Text(realName!, style: Theme.of(context).textTheme.titleLarge, overflow: TextOverflow.ellipsis, maxLines: 1),
+                    Text('Nível $level', style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 12)),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              InkWell(
+                borderRadius: BorderRadius.circular(20),
+                onTap: onTapMentalCoins,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: AppColors.gold.withValues(alpha: 0.14),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: AppColors.gold.withValues(alpha: 0.4)),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const MentalCoin(size: 18),
+                      const SizedBox(width: 6),
+                      Text('${mentalCoinsBalance ?? 0}', style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
+                    ],
                   ),
                 ),
+              ),
             ],
           ),
-          const SizedBox(height: 12),
-          XpBar(xpTotal: progress['xp_total'] as int, level: level),
-          const SizedBox(height: 12),
-          Text(
-            l10n.progressSummary(
-              progress['xp_total'] as int,
-              level,
-              progress['streak']['current_streak'] as int,
-            ),
-            style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 14),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(6),
+                  child: SizedBox(
+                    height: 8,
+                    child: Stack(
+                      children: [
+                        Container(color: AppColors.bg),
+                        TweenAnimationBuilder<double>(
+                          tween: Tween(begin: 0, end: fraction),
+                          duration: const Duration(milliseconds: 700),
+                          curve: Curves.easeOutCubic,
+                          builder: (context, value, _) => FractionallySizedBox(
+                            widthFactor: value,
+                            child: Container(decoration: const BoxDecoration(gradient: LinearGradient(colors: [AppColors.victory, AppColors.purple, AppColors.gold]))),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text('$xpIntoLevel/$_xpPerLevel XP', style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(child: _MetaStat(value: '$xpTotal', label: 'XP total')),
+              Expanded(child: _MetaStat(value: worldsCompleted != null ? '$worldsCompleted/${worlds!.length}' : '—', label: 'Mundos')),
+              Expanded(child: _MetaStat(value: '$streakDays', label: l10n.streakSectionTitle)),
+            ],
           ),
         ],
       ),
+    );
+  }
+}
+
+/// Uma coluna da linha de metadados (XP total / Mundos / Streak) — texto
+/// puro, sem card/borda própria, pra manter o bloco todo compacto (uma
+/// única linha de altura, não 2-3 cards empilhados como antes).
+class _MetaStat extends StatelessWidget {
+  const _MetaStat({required this.value, required this.label});
+
+  final String value;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(value, style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 14).copyWith(fontWeight: FontWeight.w700)),
+        Text(label.toUpperCase(), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+      ],
     );
   }
 }

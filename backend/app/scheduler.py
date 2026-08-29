@@ -11,7 +11,7 @@ import logging
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
-from . import config, notifications
+from . import config, mentalcoins, notifications
 from .db import SessionLocal
 
 logger = logging.getLogger(__name__)
@@ -31,14 +31,32 @@ def _run_checks_job() -> None:
             logger.exception("Falha na checagem periódica de notificações")
 
 
+def _run_mentalcoins_job() -> None:
+    with SessionLocal() as db:
+        try:
+            cycle_start, cycle_end = mentalcoins.closed_cycle_bounds()
+            result = mentalcoins.run_weekly_apuration(db, cycle_start, cycle_end)
+            logger.info("Apuração semanal de MentalCoins concluída: %s", result)
+        except Exception:
+            logger.exception("Falha na apuração semanal de MentalCoins")
+
+
 def start_scheduler() -> None:
     global _scheduler
-    if not config.NOTIFICATION_SCHEDULER_ENABLED:
+    if not config.NOTIFICATION_SCHEDULER_ENABLED and not config.MENTALCOINS_SCHEDULER_ENABLED:
         return
     if _scheduler is not None:
         return
 
     _scheduler = BackgroundScheduler()
-    _scheduler.add_job(_run_checks_job, "interval", minutes=config.NOTIFICATION_CHECK_INTERVAL_MINUTES)
+    if config.NOTIFICATION_SCHEDULER_ENABLED:
+        _scheduler.add_job(_run_checks_job, "interval", minutes=config.NOTIFICATION_CHECK_INTERVAL_MINUTES)
+        logger.info("Agendador de notificações iniciado (a cada %s min)", config.NOTIFICATION_CHECK_INTERVAL_MINUTES)
+    if config.MENTALCOINS_SCHEDULER_ENABLED:
+        # U.I/MENTALCOINS_V1.md §2: fecha domingo 23:59:59, apura e
+        # distribui na segunda-feira 08:00, horário de Brasília.
+        _scheduler.add_job(
+            _run_mentalcoins_job, "cron", day_of_week="mon", hour=8, minute=0, timezone=config.MENTALCOINS_TIMEZONE
+        )
+        logger.info("Agendador de MentalCoins iniciado (segundas 08:00 %s)", config.MENTALCOINS_TIMEZONE)
     _scheduler.start()
-    logger.info("Agendador de notificações iniciado (a cada %s min)", config.NOTIFICATION_CHECK_INTERVAL_MINUTES)
