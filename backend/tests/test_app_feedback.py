@@ -1,6 +1,9 @@
 """
-Menu de feedback geral (26/08/2026) — comentário livre sobre o app,
-diferente de level_feedback (amarrado a um nível/desafio específico).
+Mural de feedback geral (26/08/2026; revisado 29/08/2026) — comentário
+livre sobre o app, diferente de level_feedback (amarrado a um
+nível/desafio específico). Desde 29/08/2026 é PÚBLICO: qualquer usuário
+autenticado vê todos os feedbacks (não só o próprio), com reações de
+curtir/amei; só a resposta continua exclusiva de quem tem role=admin.
 """
 
 import uuid
@@ -27,40 +30,25 @@ def test_submit_app_feedback_blank_comment_rejected(client):
     assert resp.status_code == 422
 
 
-def test_admin_app_feedback_requires_admin_role(client):
-    user = str(uuid.uuid4())
-    headers = auth_header(user)
-    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
-
-    resp = client.get("/admin/feedback", headers=headers)
-    assert resp.status_code == 403
-    assert resp.json()["error"]["code"] == "ADMIN_ONLY"
-
-
-def test_admin_app_feedback_lists_entries_for_admin(client):
-    from app.db import SessionLocal
-    from app import models
-
+def test_feedback_is_visible_to_any_authenticated_user(client):
+    """Achado de decisão de produto (29/08/2026): feedback deixou de ser
+    privado — qualquer usuário vê o feedback de qualquer outro."""
     submitter = str(uuid.uuid4())
     submitter_headers = auth_header(submitter)
     client.post("/age-gate", json={"age_confirmed": True}, headers=submitter_headers)
     client.post("/feedback", json={"comment": "Sugestão: mais territórios de matemática"}, headers=submitter_headers)
 
-    admin_user = str(uuid.uuid4())
-    admin_headers = auth_header(admin_user)
-    client.post("/age-gate", json={"age_confirmed": True}, headers=admin_headers)
-    with SessionLocal() as db:
-        profile = db.get(models.Profile, admin_user)
-        profile.role = "admin"
-        db.commit()
+    other_user = str(uuid.uuid4())
+    other_headers = auth_header(other_user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=other_headers)
 
-    resp = client.get("/admin/feedback", headers=admin_headers)
+    resp = client.get("/feedback", headers=other_headers)
     assert resp.status_code == 200
     entries = resp.json()["items"]
     assert any(e["user_id"] == submitter and "matemática" in e["comment"] for e in entries)
 
 
-def test_admin_can_reply_and_user_sees_the_reply(client):
+def test_admin_can_reply_and_reply_is_publicly_visible(client):
     from app.db import SessionLocal
     from app import models
 
@@ -77,17 +65,17 @@ def test_admin_can_reply_and_user_sees_the_reply(client):
         profile.role = "admin"
         db.commit()
 
-    feedback_id = client.get("/admin/feedback", headers=admin_headers).json()["items"][0]["id"]
+    feedback_id = next(i for i in client.get("/feedback", headers=admin_headers).json()["items"] if i["user_id"] == submitter)["id"]
 
     resp = client.post(f"/admin/feedback/{feedback_id}/reply", json={"reply": "Já identificamos e vamos corrigir!"}, headers=admin_headers)
     assert resp.status_code == 200
 
-    admin_view = client.get("/admin/feedback", headers=admin_headers).json()["items"][0]
-    assert admin_view["admin_reply"] == "Já identificamos e vamos corrigir!"
-    assert admin_view["admin_reply_at"] is not None
-
-    mine = client.get("/feedback/mine", headers=submitter_headers).json()["items"]
-    assert mine[0]["admin_reply"] == "Já identificamos e vamos corrigir!"
+    # Qualquer usuário (não só o autor) já vê a resposta.
+    other_user = str(uuid.uuid4())
+    other_headers = auth_header(other_user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=other_headers)
+    item = next(i for i in client.get("/feedback", headers=other_headers).json()["items"] if i["id"] == feedback_id)
+    assert item["admin_reply"] == "Já identificamos e vamos corrigir!"
 
 
 def test_reply_requires_admin_role(client):
@@ -116,17 +104,59 @@ def test_reply_to_unknown_feedback_returns_404(client):
     assert resp.status_code == 404
 
 
-def test_my_feedback_list_only_returns_own_entries(client):
-    user_a = str(uuid.uuid4())
-    headers_a = auth_header(user_a)
-    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
-    client.post("/feedback", json={"comment": "feedback do usuário A"}, headers=headers_a)
+def test_react_toggles_like_and_updates_count(client):
+    submitter = str(uuid.uuid4())
+    submitter_headers = auth_header(submitter)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=submitter_headers)
+    client.post("/feedback", json={"comment": "Testando reações"}, headers=submitter_headers)
+    feedback_id = client.get("/feedback", headers=submitter_headers).json()["items"][0]["id"]
 
-    user_b = str(uuid.uuid4())
-    headers_b = auth_header(user_b)
-    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
-    client.post("/feedback", json={"comment": "feedback do usuário B"}, headers=headers_b)
+    reactor = str(uuid.uuid4())
+    reactor_headers = auth_header(reactor)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=reactor_headers)
 
-    mine_a = client.get("/feedback/mine", headers=headers_a).json()["items"]
-    assert len(mine_a) == 1
-    assert mine_a[0]["comment"] == "feedback do usuário A"
+    resp = client.post(f"/feedback/{feedback_id}/react", json={"reaction_type": "like"}, headers=reactor_headers)
+    assert resp.status_code == 200
+    assert resp.json()["reacted"] is True
+
+    item = client.get("/feedback", headers=reactor_headers).json()["items"][0]
+    assert item["like_count"] == 1
+    assert item["love_count"] == 0
+    assert item["my_reactions"] == ["like"]
+
+    # Reagir de novo com o MESMO tipo remove a reação (toggle).
+    resp = client.post(f"/feedback/{feedback_id}/react", json={"reaction_type": "like"}, headers=reactor_headers)
+    assert resp.json()["reacted"] is False
+
+    item = client.get("/feedback", headers=reactor_headers).json()["items"][0]
+    assert item["like_count"] == 0
+    assert item["my_reactions"] == []
+
+
+def test_react_to_unknown_feedback_returns_404(client):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    resp = client.post("/feedback/nao-existe/react", json={"reaction_type": "love"}, headers=headers)
+    assert resp.status_code == 404
+
+
+def test_like_and_love_are_independent_reactions(client):
+    submitter = str(uuid.uuid4())
+    submitter_headers = auth_header(submitter)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=submitter_headers)
+    client.post("/feedback", json={"comment": "Testando like e love juntos"}, headers=submitter_headers)
+    feedback_id = client.get("/feedback", headers=submitter_headers).json()["items"][0]["id"]
+
+    reactor = str(uuid.uuid4())
+    reactor_headers = auth_header(reactor)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=reactor_headers)
+
+    client.post(f"/feedback/{feedback_id}/react", json={"reaction_type": "like"}, headers=reactor_headers)
+    client.post(f"/feedback/{feedback_id}/react", json={"reaction_type": "love"}, headers=reactor_headers)
+
+    item = client.get("/feedback", headers=reactor_headers).json()["items"][0]
+    assert item["like_count"] == 1
+    assert item["love_count"] == 1
+    assert set(item["my_reactions"]) == {"like", "love"}

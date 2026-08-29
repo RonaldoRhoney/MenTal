@@ -58,7 +58,20 @@ class AppFeedbackResponse(BaseModel):
     ok: bool = True
 
 
-class AdminAppFeedbackItem(BaseModel):
+class ReplyAppFeedbackRequest(BaseModel):
+    reply: str = Field(min_length=1, max_length=2000)
+
+
+class ReactToAppFeedbackRequest(BaseModel):
+    reaction_type: Literal["like", "love"]
+
+
+class PublicAppFeedbackItem(BaseModel):
+    """Mural público de feedback (29/08/2026, decisão de Rhoney) —
+    visível a TODOS os usuários, não só ao autor + admin. my_reactions
+    lista os tipos ('like'/'love') que o USUÁRIO ATUAL já deu neste
+    feedback, pra o client saber qual botão destacar como já ativado."""
+
     id: str
     user_id: str
     user_nickname: str
@@ -66,22 +79,13 @@ class AdminAppFeedbackItem(BaseModel):
     created_at: datetime
     admin_reply: str | None = None
     admin_reply_at: datetime | None = None
+    like_count: int = 0
+    love_count: int = 0
+    my_reactions: list[str] = []
 
 
-class ReplyAppFeedbackRequest(BaseModel):
-    reply: str = Field(min_length=1, max_length=2000)
-
-
-class MyAppFeedbackItem(BaseModel):
-    id: str
-    comment: str
-    created_at: datetime
-    admin_reply: str | None = None
-    admin_reply_at: datetime | None = None
-
-
-class AdminAppFeedbackListResponse(BaseModel):
-    items: list[AdminAppFeedbackItem]
+class PublicAppFeedbackListResponse(BaseModel):
+    items: list[PublicAppFeedbackItem]
 
 
 class MyAppFeedbackListResponse(BaseModel):

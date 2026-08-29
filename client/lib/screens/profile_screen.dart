@@ -89,15 +89,45 @@ class _ProfileScreenState extends State<ProfileScreen> {
       _uploadingPhoto = true;
       _error = null;
     });
+    // Achado real (29/08/2026): um catch único e genérico aqui escondia
+    // qual das duas etapas (upload pro Storage vs. PUT /profile) estava
+    // de fato falhando, dificultando o diagnóstico de bugs relatados
+    // por testadores. Separado em dois blocos, cada um com sua própria
+    // mensagem de erro específica + debugPrint da exceção real (visível
+    // via `adb logcat`/`flutter logs`, nunca exposto na UI).
+    //
+    // Extensão do arquivo escolhido: alguns pickers de galeria Android
+    // (conteúdo vindo de content:// resolvers de apps como Google
+    // Fotos) devolvem um path SEM extensão reconhecível — `.jpg`/etc.
+    // — o que resultava num path tipo "user-id/photo." (extensão
+    // vazia), rejeitado pelo backend (_is_valid_photo_path exige uma
+    // das extensões permitidas). Sem extensão válida, assume "jpg" —
+    // a foto foi comprimida pelo ImagePicker (imageQuality: 85), que
+    // sempre reencoda pra JPEG independente do formato original.
+    final rawExt = picked.path.contains('.') ? picked.path.split('.').last.toLowerCase() : '';
+    const allowedExtensions = {'jpg', 'jpeg', 'png', 'webp'};
+    final ext = allowedExtensions.contains(rawExt) ? rawExt : 'jpg';
+    final path = '$userId/photo.$ext';
+
     try {
-      final ext = picked.path.split('.').last.toLowerCase();
-      final path = '$userId/photo.$ext';
       final storage = Supabase.instance.client.storage.from('profile-photos');
       await storage.upload(
         path,
         File(picked.path),
         fileOptions: const FileOptions(upsert: true),
       );
+    } catch (e) {
+      debugPrint('MENTAL: falha no upload pro Supabase Storage: $e');
+      if (mounted) {
+        setState(() {
+          _error = l10n.profilePhotoUploadError;
+          _uploadingPhoto = false;
+        });
+      }
+      return;
+    }
+
+    try {
       // Achado de auditoria de segurança (28/08/2026): bucket
       // profile-photos virou privado — não existe mais "URL pública"
       // pra ler (getPublicUrl não funcionaria pra leitura). Manda só o
@@ -118,8 +148,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
           _photoModerationStatus = updated['photo_moderation_status'] as String?;
         });
       }
-    } catch (_) {
-      if (mounted) setState(() => _error = l10n.profilePhotoUploadError);
+    } on ApiException catch (e) {
+      debugPrint('MENTAL: falha ao salvar o path da foto no perfil: ${e.code} — ${e.message}');
+      if (mounted) setState(() => _error = e.message);
     } finally {
       if (mounted) setState(() => _uploadingPhoto = false);
     }

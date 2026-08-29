@@ -35,7 +35,7 @@
     }
   },
 
-  "newChallengeButton": "Novo desafio — {territory}",
+  "newChallengeButton": "Desafio — {territory}",
   "@newChallengeButton": {
     "description": "Primary CTA per territory on Home",
     "placeholders": {
@@ -833,10 +833,10 @@
   "onboardingContinueButton": "Continuar",
   "@onboardingContinueButton": {"description": "Mandatory onboarding submit button"},
 
-  "feedbackMenuTooltip": "Enviar feedback",
+  "feedbackMenuTooltip": "Feedback",
   "@feedbackMenuTooltip": {"description": "Menu item to open the general feedback screen"},
 
-  "feedbackScreenTitle": "Enviar feedback",
+  "feedbackScreenTitle": "Feedback",
   "@feedbackScreenTitle": {"description": "General feedback screen app bar title"},
 
   "feedbackScreenIntro": "Conta pra gente o que você acha do MENTAL — sugestão, elogio ou algo que travou. Sua opinião ajuda a melhorar o app.",
@@ -911,17 +911,17 @@
   "mentalCoinsInsufficientBalanceError": "Saldo insuficiente para resgatar este item.",
   "@mentalCoinsInsufficientBalanceError": {"description": "Error shown when balance is not enough to redeem an item"},
 
-  "feedbackMyHistoryTitle": "Meus feedbacks",
-  "@feedbackMyHistoryTitle": {"description": "Section title for the user's own feedback history"},
+  "feedbackMyHistoryTitle": "Comentários da comunidade",
+  "@feedbackMyHistoryTitle": {"description": "Section title for the public feedback wall"},
 
   "feedbackAdminReplyLabel": "Resposta da equipe",
   "@feedbackAdminReplyLabel": {"description": "Label shown above an admin's reply to a feedback"},
 
-  "adminFeedbackScreenTitle": "Feedbacks dos usuários",
-  "@adminFeedbackScreenTitle": {"description": "Admin feedback screen title"},
+  "feedbackMineLabel": "Você",
+  "@feedbackMineLabel": {"description": "Badge shown on the current user's own feedback entry in the public wall"},
 
-  "adminFeedbackEmptyMessage": "Nenhum feedback recebido ainda.",
-  "@adminFeedbackEmptyMessage": {"description": "Empty state for admin feedback list"},
+  "adminFeedbackEmptyMessage": "Nenhum feedback ainda. Seja o primeiro a comentar!",
+  "@adminFeedbackEmptyMessage": {"description": "Empty state for the public feedback wall"},
 
   "adminFeedbackReplyButton": "Responder",
   "@adminFeedbackReplyButton": {"description": "Button to reply to a feedback"},
@@ -936,5 +936,53 @@
   "@adminFeedbackReplyHint": {"description": "Reply dialog text field hint"},
 
   "adminFeedbackReplySendButton": "Enviar resposta",
-  "@adminFeedbackReplySendButton": {"description": "Reply dialog send button"}
+  "@adminFeedbackReplySendButton": {"description": "Reply dialog send button"},
+
+  "movementGoalChipLight": "5k",
+  "@movementGoalChipLight": {"description": "Daily goal chip: light tier (5000 steps)"},
+
+  "movementGoalChipStandard": "10k",
+  "@movementGoalChipStandard": {"description": "Daily goal chip: standard tier (10000 steps)"},
+
+  "movementGoalChipIntense": "15k",
+  "@movementGoalChipIntense": {"description": "Daily goal chip: intense tier (15000 steps)"},
+
+  "movementGoalChipElite": "20k",
+  "@movementGoalChipElite": {"description": "Daily goal chip: elite tier (20000 steps)"},
+
+  "movementGoalChipLightLabel": "leve",
+  "@movementGoalChipLightLabel": {"description": "Sub-label under the light goal chip"},
+
+  "movementGoalChipStandardLabel": "padrão",
+  "@movementGoalChipStandardLabel": {"description": "Sub-label under the standard goal chip"},
+
+  "movementGoalChipIntenseLabel": "intenso",
+  "@movementGoalChipIntenseLabel": {"description": "Sub-label under the intense goal chip"},
+
+  "movementGoalChipEliteLabel": "elite",
+  "@movementGoalChipEliteLabel": {"description": "Sub-label under the elite goal chip"},
+
+  "movementGoalSelectorTitle": "Sua meta diária",
+  "@movementGoalSelectorTitle": {"description": "Daily goal selector section title"},
+
+  "movementGoalSelectorSubtitle": "define seu ritmo de XP",
+  "@movementGoalSelectorSubtitle": {"description": "Daily goal selector section subtitle"},
+
+  "movementStepsTodayLabel": "passos hoje",
+  "@movementStepsTodayLabel": {"description": "Steps-today stat label in the hero block"},
+
+  "movementXpTodayLabel": "XP conquistado",
+  "@movementXpTodayLabel": {"description": "XP-today stat label in the hero block"},
+
+  "movementConversionRuleText": "A cada 100 passos = +2 XP",
+  "@movementConversionRuleText": {"description": "Explicit steps-to-XP conversion rule shown in the hero block"},
+
+  "movementLiveLabel": "AO VIVO",
+  "@movementLiveLabel": {"description": "Live badge on the progress ring"},
+
+  "movementPeakLabel": "pico",
+  "@movementPeakLabel": {"description": "Peak label for the intraday chart summary"},
+
+  "movementValleyLabel": "vale",
+  "@movementValleyLabel": {"description": "Valley label for the intraday chart summary"}
 }

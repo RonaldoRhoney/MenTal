@@ -42,7 +42,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String newChallengeButton(String territory) {
-    return 'Novo desafio — $territory';
+    return 'Desafio — $territory';
   }
 
   @override
@@ -794,10 +794,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get onboardingContinueButton => 'Continuar';
 
   @override
-  String get feedbackMenuTooltip => 'Enviar feedback';
+  String get feedbackMenuTooltip => 'Feedback';
 
   @override
-  String get feedbackScreenTitle => 'Enviar feedback';
+  String get feedbackScreenTitle => 'Feedback';
 
   @override
   String get feedbackScreenIntro =>
@@ -875,16 +875,17 @@ class AppLocalizationsPt extends AppLocalizations {
       'Saldo insuficiente para resgatar este item.';
 
   @override
-  String get feedbackMyHistoryTitle => 'Meus feedbacks';
+  String get feedbackMyHistoryTitle => 'Comentários da comunidade';
 
   @override
   String get feedbackAdminReplyLabel => 'Resposta da equipe';
 
   @override
-  String get adminFeedbackScreenTitle => 'Feedbacks dos usuários';
+  String get feedbackMineLabel => 'Você';
 
   @override
-  String get adminFeedbackEmptyMessage => 'Nenhum feedback recebido ainda.';
+  String get adminFeedbackEmptyMessage =>
+      'Nenhum feedback ainda. Seja o primeiro a comentar!';
 
   @override
   String get adminFeedbackReplyButton => 'Responder';
@@ -900,4 +901,52 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get adminFeedbackReplySendButton => 'Enviar resposta';
+
+  @override
+  String get movementGoalChipLight => '5k';
+
+  @override
+  String get movementGoalChipStandard => '10k';
+
+  @override
+  String get movementGoalChipIntense => '15k';
+
+  @override
+  String get movementGoalChipElite => '20k';
+
+  @override
+  String get movementGoalChipLightLabel => 'leve';
+
+  @override
+  String get movementGoalChipStandardLabel => 'padrão';
+
+  @override
+  String get movementGoalChipIntenseLabel => 'intenso';
+
+  @override
+  String get movementGoalChipEliteLabel => 'elite';
+
+  @override
+  String get movementGoalSelectorTitle => 'Sua meta diária';
+
+  @override
+  String get movementGoalSelectorSubtitle => 'define seu ritmo de XP';
+
+  @override
+  String get movementStepsTodayLabel => 'passos hoje';
+
+  @override
+  String get movementXpTodayLabel => 'XP conquistado';
+
+  @override
+  String get movementConversionRuleText => 'A cada 100 passos = +2 XP';
+
+  @override
+  String get movementLiveLabel => 'AO VIVO';
+
+  @override
+  String get movementPeakLabel => 'pico';
+
+  @override
+  String get movementValleyLabel => 'vale';
 }

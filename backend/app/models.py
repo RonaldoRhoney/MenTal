@@ -362,9 +362,14 @@ class AppFeedback(Base):
     Canal geral de feedback (pedido de Rhoney, 2026-08-26) — diferente
     de LevelFeedback (associado a um nível/desafio específico), esse é
     um comentário livre sobre o app em geral, acessível a qualquer
-    momento pelo usuário (não amarrado a completar um nível). Mesmo
-    padrão de moderação/consulta administrativa do LevelFeedback: só o
-    endpoint admin read-only consulta esta tabela.
+    momento pelo usuário (não amarrado a completar um nível).
+
+    Revisão 29/08/2026 (decisão de Rhoney): deixa de ser privado (só
+    autor + admin) e vira um MURAL PÚBLICO, visível a todos os usuários,
+    com reações de curtir/amei (AppFeedbackReaction) — "isso ajudará
+    mais usuários fazerem comentários sobre o app". A resposta do admin
+    (admin_reply) continua existindo e aparece pra todos verem, não só
+    pro autor.
     """
 
     __tablename__ = "app_feedback"
@@ -383,6 +388,22 @@ class AppFeedback(Base):
     admin_reply: Mapped[str | None] = mapped_column(Text, nullable=True)
     admin_reply_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     reply_read_by_user: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+class AppFeedbackReaction(Base):
+    """Curtir/amei num feedback do mural público (29/08/2026) — um
+    usuário pode reagir com no máximo uma linha por (feedback, tipo);
+    reagir de novo com o MESMO tipo remove a reação (toggle)."""
+
+    __tablename__ = "app_feedback_reactions"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    feedback_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("app_feedback.id"), index=True)
+    user_id: Mapped[str] = mapped_column(UUIDType)
+    reaction_type: Mapped[str] = mapped_column(String)  # like|love
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+    __table_args__ = (UniqueConstraint("feedback_id", "user_id", "reaction_type"),)
 
 
 class Streak(Base):

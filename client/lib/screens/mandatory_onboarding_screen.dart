@@ -37,7 +37,14 @@ class MandatoryOnboardingScreen extends StatefulWidget {
     final userId = Supabase.instance.client.auth.currentUser?.id;
     if (userId == null) return null;
 
-    final ext = picked.path.split('.').last.toLowerCase();
+    // Achado real (29/08/2026, profile_screen.dart): pickers de galeria
+    // Android vindos de content:// resolvers (Google Fotos, etc.) podem
+    // devolver um path SEM extensão reconhecível — sem esse fallback, o
+    // backend rejeitava o path (_is_valid_photo_path exige uma extensão
+    // permitida), quebrando o onboarding obrigatório silenciosamente.
+    final rawExt = picked.path.contains('.') ? picked.path.split('.').last.toLowerCase() : '';
+    const allowedExtensions = {'jpg', 'jpeg', 'png', 'webp'};
+    final ext = allowedExtensions.contains(rawExt) ? rawExt : 'jpg';
     final path = '$userId/photo.$ext';
     await Supabase.instance.client.storage.from('profile-photos').upload(
           path,

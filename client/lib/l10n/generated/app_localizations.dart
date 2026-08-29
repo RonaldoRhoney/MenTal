@@ -151,7 +151,7 @@ abstract class AppLocalizations {
   /// Primary CTA per territory on Home
   ///
   /// In pt, this message translates to:
-  /// **'Novo desafio — {territory}'**
+  /// **'Desafio — {territory}'**
   String newChallengeButton(String territory);
 
   /// Territory display name
@@ -1435,13 +1435,13 @@ abstract class AppLocalizations {
   /// Menu item to open the general feedback screen
   ///
   /// In pt, this message translates to:
-  /// **'Enviar feedback'**
+  /// **'Feedback'**
   String get feedbackMenuTooltip;
 
   /// General feedback screen app bar title
   ///
   /// In pt, this message translates to:
-  /// **'Enviar feedback'**
+  /// **'Feedback'**
   String get feedbackScreenTitle;
 
   /// General feedback screen intro text
@@ -1582,10 +1582,10 @@ abstract class AppLocalizations {
   /// **'Saldo insuficiente para resgatar este item.'**
   String get mentalCoinsInsufficientBalanceError;
 
-  /// Section title for the user's own feedback history
+  /// Section title for the public feedback wall
   ///
   /// In pt, this message translates to:
-  /// **'Meus feedbacks'**
+  /// **'Comentários da comunidade'**
   String get feedbackMyHistoryTitle;
 
   /// Label shown above an admin's reply to a feedback
@@ -1594,16 +1594,16 @@ abstract class AppLocalizations {
   /// **'Resposta da equipe'**
   String get feedbackAdminReplyLabel;
 
-  /// Admin feedback screen title
+  /// Badge shown on the current user's own feedback entry in the public wall
   ///
   /// In pt, this message translates to:
-  /// **'Feedbacks dos usuários'**
-  String get adminFeedbackScreenTitle;
+  /// **'Você'**
+  String get feedbackMineLabel;
 
-  /// Empty state for admin feedback list
+  /// Empty state for the public feedback wall
   ///
   /// In pt, this message translates to:
-  /// **'Nenhum feedback recebido ainda.'**
+  /// **'Nenhum feedback ainda. Seja o primeiro a comentar!'**
   String get adminFeedbackEmptyMessage;
 
   /// Button to reply to a feedback
@@ -1635,6 +1635,102 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Enviar resposta'**
   String get adminFeedbackReplySendButton;
+
+  /// Daily goal chip: light tier (5000 steps)
+  ///
+  /// In pt, this message translates to:
+  /// **'5k'**
+  String get movementGoalChipLight;
+
+  /// Daily goal chip: standard tier (10000 steps)
+  ///
+  /// In pt, this message translates to:
+  /// **'10k'**
+  String get movementGoalChipStandard;
+
+  /// Daily goal chip: intense tier (15000 steps)
+  ///
+  /// In pt, this message translates to:
+  /// **'15k'**
+  String get movementGoalChipIntense;
+
+  /// Daily goal chip: elite tier (20000 steps)
+  ///
+  /// In pt, this message translates to:
+  /// **'20k'**
+  String get movementGoalChipElite;
+
+  /// Sub-label under the light goal chip
+  ///
+  /// In pt, this message translates to:
+  /// **'leve'**
+  String get movementGoalChipLightLabel;
+
+  /// Sub-label under the standard goal chip
+  ///
+  /// In pt, this message translates to:
+  /// **'padrão'**
+  String get movementGoalChipStandardLabel;
+
+  /// Sub-label under the intense goal chip
+  ///
+  /// In pt, this message translates to:
+  /// **'intenso'**
+  String get movementGoalChipIntenseLabel;
+
+  /// Sub-label under the elite goal chip
+  ///
+  /// In pt, this message translates to:
+  /// **'elite'**
+  String get movementGoalChipEliteLabel;
+
+  /// Daily goal selector section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua meta diária'**
+  String get movementGoalSelectorTitle;
+
+  /// Daily goal selector section subtitle
+  ///
+  /// In pt, this message translates to:
+  /// **'define seu ritmo de XP'**
+  String get movementGoalSelectorSubtitle;
+
+  /// Steps-today stat label in the hero block
+  ///
+  /// In pt, this message translates to:
+  /// **'passos hoje'**
+  String get movementStepsTodayLabel;
+
+  /// XP-today stat label in the hero block
+  ///
+  /// In pt, this message translates to:
+  /// **'XP conquistado'**
+  String get movementXpTodayLabel;
+
+  /// Explicit steps-to-XP conversion rule shown in the hero block
+  ///
+  /// In pt, this message translates to:
+  /// **'A cada 100 passos = +2 XP'**
+  String get movementConversionRuleText;
+
+  /// Live badge on the progress ring
+  ///
+  /// In pt, this message translates to:
+  /// **'AO VIVO'**
+  String get movementLiveLabel;
+
+  /// Peak label for the intraday chart summary
+  ///
+  /// In pt, this message translates to:
+  /// **'pico'**
+  String get movementPeakLabel;
+
+  /// Valley label for the intraday chart summary
+  ///
+  /// In pt, this message translates to:
+  /// **'vale'**
+  String get movementValleyLabel;
 }
 
 class _AppLocalizationsDelegate

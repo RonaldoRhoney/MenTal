@@ -150,19 +150,25 @@ class ApiClient {
     );
   }
 
-  Future<Map<String, dynamic>> getMyAppFeedback() async {
-    return _get(_uri('/feedback/mine'), headers: _headers);
+  // Mural público de feedback (revisão 29/08/2026, decisão de Rhoney:
+  // "deve ficar visível para todos, isso ajudará mais usuários fazerem
+  // comentários sobre o app") — GET /feedback lista o feedback de TODOS
+  // os usuários, com reações e a resposta do admin quando houver.
+  Future<Map<String, dynamic>> getAppFeedback() async {
+    return _get(_uri('/feedback'), headers: _headers);
   }
 
-  // Painel admin de feedback (pedido de Rhoney, 29/08/2026: "deve haver
-  // uma área para receber os feedbacks... e responder, discutir e
-  // interagir com o usuário") — só visível/utilizável de fato por quem
-  // tem role=admin no backend (a checagem de autorização real é sempre
-  // do servidor; o client só decide se MOSTRA a entrada de menu).
-  Future<Map<String, dynamic>> getAdminAppFeedback() async {
-    return _get(_uri('/admin/feedback'), headers: _headers);
+  Future<Map<String, dynamic>> reactToAppFeedback(String feedbackId, String reactionType) async {
+    return _post(
+      _uri('/feedback/$feedbackId/react'),
+      headers: _headers,
+      body: jsonEncode({'reaction_type': reactionType}),
+    );
   }
 
+  // Responder é a única interação exclusiva de quem tem role=admin no
+  // backend (a checagem de autorização real é sempre do servidor; o
+  // client só decide se MOSTRA o botão de responder).
   Future<Map<String, dynamic>> replyAppFeedback(String feedbackId, String reply) async {
     return _post(
       _uri('/admin/feedback/$feedbackId/reply'),

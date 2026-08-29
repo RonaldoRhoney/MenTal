@@ -1,12 +1,12 @@
 """
-Menu de feedback geral (pedido de Rhoney, 2026-08-26) — comentário livre
-sobre o app, acessível a qualquer momento pelo usuário, diferente do
-Feedback Pós-Nível (que é amarrado a completar um nível/desafio
-específico). Mesmo padrão de acesso admin read-only do level_feedback.
-
-Resposta do admin (29/08/2026): "deve haver... campos que eu possa
-responder, discutir e interagir com o usuário" — resposta única por
-feedback (não é uma thread completa; ver models.AppFeedback).
+Mural de feedback geral (pedido de Rhoney, 2026-08-26; revisado
+29/08/2026) — comentário livre sobre o app. Diferente do Feedback
+Pós-Nível (amarrado a completar um nível/desafio específico), este é
+acessível a qualquer momento e, desde a revisão de 29/08/2026, PÚBLICO:
+visível a todos os usuários (não só autor + admin), com reações de
+curtir/amei — "isso ajudará mais usuários fazerem comentários sobre o
+app". A resposta do admin é a única interação exclusiva de quem tem
+role=admin.
 """
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -14,18 +14,11 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import models, schemas
-from ..auth import get_current_user_id, require_age_confirmed_user_id
+from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
 
 router = APIRouter()
-
-
-def _require_admin(db: Session, user_id: str) -> models.Profile:
-    profile = db.get(models.Profile, user_id)
-    if profile is None or profile.role != "admin":
-        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
-    return profile
 
 
 @router.post("/feedback", response_model=schemas.AppFeedbackResponse)
@@ -43,51 +36,33 @@ def submit_app_feedback(
     return schemas.AppFeedbackResponse()
 
 
-@router.get("/feedback/mine", response_model=schemas.MyAppFeedbackListResponse)
-def list_my_app_feedback(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
-    rows = (
-        db.execute(select(models.AppFeedback).where(models.AppFeedback.user_id == user_id).order_by(models.AppFeedback.created_at.desc()))
-        .scalars()
-        .all()
-    )
-    # Abrir a própria lista marca as respostas como lidas — mesmo
-    # princípio de "ler = marcar como visto" já usado em outras notificações
-    # do app, sem precisar de um endpoint dedicado só para isso.
-    changed = False
-    for row in rows:
-        if row.admin_reply is not None and not row.reply_read_by_user:
-            row.reply_read_by_user = True
-            changed = True
-    if changed:
-        db.commit()
+@router.get("/feedback", response_model=schemas.PublicAppFeedbackListResponse)
+def list_app_feedback(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
+    rows = db.execute(select(models.AppFeedback).order_by(models.AppFeedback.created_at.desc()).limit(500)).scalars().all()
+    if not rows:
+        return schemas.PublicAppFeedbackListResponse(items=[])
 
-    return schemas.MyAppFeedbackListResponse(
-        items=[
-            schemas.MyAppFeedbackItem(
-                id=row.id, comment=row.comment, created_at=row.created_at, admin_reply=row.admin_reply, admin_reply_at=row.admin_reply_at
-            )
-            for row in rows
-        ]
-    )
+    feedback_ids = [row.id for row in rows]
+    reactions = db.execute(select(models.AppFeedbackReaction).where(models.AppFeedbackReaction.feedback_id.in_(feedback_ids))).scalars().all()
 
+    like_counts: dict[str, int] = {}
+    love_counts: dict[str, int] = {}
+    my_reactions: dict[str, list[str]] = {}
+    for reaction in reactions:
+        counts = like_counts if reaction.reaction_type == "like" else love_counts
+        counts[reaction.feedback_id] = counts.get(reaction.feedback_id, 0) + 1
+        if reaction.user_id == user_id:
+            my_reactions.setdefault(reaction.feedback_id, []).append(reaction.reaction_type)
 
-@router.get("/admin/feedback", response_model=schemas.AdminAppFeedbackListResponse)
-def list_app_feedback(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
-    _require_admin(db, user_id)
-
-    rows = (
-        db.execute(select(models.AppFeedback).order_by(models.AppFeedback.created_at.desc()).limit(500))
-        .scalars()
-        .all()
-    )
     nicknames: dict[str, str] = {}
     for row in rows:
         if row.user_id not in nicknames:
             profile = db.get(models.Profile, row.user_id)
             nicknames[row.user_id] = profile.nickname if profile else "?"
-    return schemas.AdminAppFeedbackListResponse(
+
+    return schemas.PublicAppFeedbackListResponse(
         items=[
-            schemas.AdminAppFeedbackItem(
+            schemas.PublicAppFeedbackItem(
                 id=row.id,
                 user_id=row.user_id,
                 user_nickname=nicknames[row.user_id],
@@ -95,20 +70,55 @@ def list_app_feedback(user_id: str = Depends(get_current_user_id), db: Session =
                 created_at=row.created_at,
                 admin_reply=row.admin_reply,
                 admin_reply_at=row.admin_reply_at,
+                like_count=like_counts.get(row.id, 0),
+                love_count=love_counts.get(row.id, 0),
+                my_reactions=my_reactions.get(row.id, []),
             )
             for row in rows
         ]
     )
 
 
+@router.post("/feedback/{feedback_id}/react")
+def react_to_app_feedback(
+    feedback_id: str,
+    body: schemas.ReactToAppFeedbackRequest,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    feedback = db.get(models.AppFeedback, feedback_id)
+    if feedback is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "FEEDBACK_NOT_FOUND", "message": feedback_id}})
+
+    existing = db.execute(
+        select(models.AppFeedbackReaction).where(
+            models.AppFeedbackReaction.feedback_id == feedback_id,
+            models.AppFeedbackReaction.user_id == user_id,
+            models.AppFeedbackReaction.reaction_type == body.reaction_type,
+        )
+    ).scalar_one_or_none()
+
+    # Toggle: reagir de novo com o MESMO tipo remove a reação.
+    if existing is not None:
+        db.delete(existing)
+        db.commit()
+        return {"reacted": False}
+
+    db.add(models.AppFeedbackReaction(feedback_id=feedback_id, user_id=user_id, reaction_type=body.reaction_type))
+    db.commit()
+    return {"reacted": True}
+
+
 @router.post("/admin/feedback/{feedback_id}/reply")
 def reply_app_feedback(
     feedback_id: str,
     body: schemas.ReplyAppFeedbackRequest,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
-    _require_admin(db, user_id)
+    admin_profile = db.get(models.Profile, user_id)
+    if admin_profile is None or admin_profile.role != "admin":
+        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
 
     feedback = db.get(models.AppFeedback, feedback_id)
     if feedback is None:

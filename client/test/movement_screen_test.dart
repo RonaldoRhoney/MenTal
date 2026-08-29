@@ -109,7 +109,8 @@ void main() {
     );
     await _pumpMovementScreen(tester, client);
 
-    expect(find.text('Passos coletados neste ciclo: 4000'), findsOneWidget);
+    expect(find.text('4000'), findsWidgets);
+    expect(find.text('passos hoje'), findsOneWidget);
     // Sem canal de plataforma mockado, o sensor é tratado como
     // indisponível — a tela nunca deve travar ou lançar exceção por isso.
     expect(find.text('Não foi possível ler o sensor de passos agora.'), findsOneWidget);
@@ -154,13 +155,12 @@ void main() {
     );
     await _pumpMovementScreen(tester, client);
 
-    expect(find.text('Meta diária: 10000 passos'), findsOneWidget);
     expect(find.text('50% da meta'), findsOneWidget);
-    expect(find.text('Editar meta'), findsOneWidget);
+    expect(find.text('10k'), findsOneWidget);
     expect(find.byType(PieChart), findsWidgets);
   });
 
-  testWidgets('define uma meta nova via diálogo e chama PUT /movement/goal', (tester) async {
+  testWidgets('tocar num chip de meta chama PUT /movement/goal', (tester) async {
     final client = _FakeApiClient(
       movementEnabled: true,
       currentCycle: {
@@ -173,18 +173,13 @@ void main() {
     );
     await _pumpMovementScreen(tester, client);
 
-    expect(find.text('Definir meta diária'), findsOneWidget);
-    await tester.tap(find.text('Definir meta diária'));
-    await tester.pump();
-
-    await tester.enterText(find.byType(TextField), '20000');
-    await tester.tap(find.text('Salvar'));
+    expect(find.text('20k'), findsOneWidget);
+    await tester.tap(find.text('20k'));
     await tester.pump();
     await tester.pump(const Duration(seconds: 6));
 
     expect(client.calls, contains('set_goal'));
     expect(client.dailyGoalSteps, 20000);
-    expect(find.text('Meta diária: 20000 passos'), findsOneWidget);
   });
 
   testWidgets('sem meta definida, o anel mostra o total de passos em vez de sumir (regressão)', (tester) async {
@@ -200,7 +195,7 @@ void main() {
     );
     await _pumpMovementScreen(tester, client);
 
-    expect(find.text('3200'), findsOneWidget);
+    expect(find.text('3200'), findsWidgets);
     expect(find.text('Sem meta'), findsOneWidget);
   });
 

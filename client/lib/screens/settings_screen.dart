@@ -7,7 +7,6 @@ import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
 import '../theme/app_theme.dart';
-import 'admin_feedback_screen.dart';
 
 /// Tela de Configurações — controle do usuário sobre som
 /// (AUDIO_FEEDBACK.md §3, requisito não-negociável): toggle on/off e
@@ -45,10 +44,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
   bool _socialEnabled = true;
   String? _notificationsError;
   bool _deletingAccount = false;
-  // Entrada de menu pro painel admin de feedback (29/08/2026, pedido de
-  // Rhoney) — só decide se MOSTRA a entrada; a autorização de verdade é
-  // sempre do backend (GET/POST /admin/feedback exigem role=admin lá).
-  bool _isAdmin = false;
 
   @override
   void initState() {
@@ -64,13 +59,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     } on ApiException catch (e) {
       if (mounted) setState(() => _notificationsError = e.message);
     }
-    bool isAdmin = false;
-    try {
-      final profile = await widget.client.getProfile();
-      isAdmin = profile['role'] == 'admin';
-    } on ApiException catch (_) {
-      // Reforço de UI, nunca bloqueia o resto das configurações.
-    }
     if (!mounted) return;
     setState(() {
       _soundEnabled = FeedbackService.instance.enabled;
@@ -79,7 +67,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
         _reengagementEnabled = prefs['reengagement_enabled'] as bool;
         _socialEnabled = prefs['social_enabled'] as bool;
       }
-      _isAdmin = isAdmin;
       _loading = false;
     });
   }
@@ -202,16 +189,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   if (_notificationsError != null) ...[
                     const SizedBox(height: 8),
                     Text(_notificationsError!, style: const TextStyle(color: AppColors.error)),
-                  ],
-                  if (_isAdmin) ...[
-                    OutlinedButton.icon(
-                      icon: const Icon(Icons.forum_outlined),
-                      onPressed: () => Navigator.of(context).push(
-                        MaterialPageRoute(builder: (_) => AdminFeedbackScreen(client: widget.client)),
-                      ),
-                      label: Text(l10n.adminFeedbackScreenTitle),
-                    ),
-                    const SizedBox(height: 12),
                   ],
                   const SizedBox(height: 28),
                   // Login real via Supabase Auth — main.dart

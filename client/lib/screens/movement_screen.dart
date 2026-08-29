@@ -16,6 +16,15 @@ import '../widgets/share_achievement_button.dart';
 /// é sempre a autoridade sobre o estado do ciclo e o XP convertido —
 /// esta tela só lê o sensor local para saber QUANTOS passos ainda não
 /// foram enviados, nunca decide o bônus sozinha.
+///
+/// Redesign (U.I/MOVIMENTO_REDESIGN_V1.md, 29/08/2026): hierarquia fraca
+/// e paleta apagada da versão anterior substituídas por um bloco Hero
+/// compacto (anel + estatísticas lado a lado), regra de conversão
+/// "100 passos = +2 XP" sempre visível, e seletor de meta diária em
+/// chips (5k/10k/15k/20k) — GET/PUT /movement/goal já existiam no
+/// backend, esta versão só troca o diálogo de texto livre por uma
+/// escolha guiada. Meta continua sendo aceita como qualquer valor
+/// (compat com quem já tinha uma meta fora dessas 4 faixas).
 class MovementScreen extends StatefulWidget {
   const MovementScreen({super.key, required this.client});
 
@@ -37,6 +46,7 @@ class _MovementScreenState extends State<MovementScreen> {
   String? _goalReachedMessage;
   String? _checkpointReachedMessage;
   int? _lastRawStepsSinceBoot;
+  int _streakDays = 0;
   // Começa true: só vira false quando o primeiro evento REAL do sensor
   // chegar. Achado real testando no Moto G22 (2026-08-21):
   // TYPE_STEP_COUNTER não entrega uma leitura imediata ao registrar o
@@ -49,6 +59,8 @@ class _MovementScreenState extends State<MovementScreen> {
   StreamSubscription<int>? _stepSub;
 
   late final CelebrationController _celebration;
+
+  static const _goalTiers = [5000, 10000, 15000, 20000];
 
   @override
   void initState() {
@@ -100,6 +112,13 @@ class _MovementScreenState extends State<MovementScreen> {
     } finally {
       if (mounted) setState(() => _loading = false);
     }
+    // Chip de streak no header (U.I/MOVIMENTO_REDESIGN_V1.md §3) — reforço
+    // visual, nunca bloqueia a tela se falhar (mesmo princípio já usado
+    // pros outros indicadores secundários da Home).
+    try {
+      final progress = await widget.client.progress();
+      if (mounted) setState(() => _streakDays = progress['streak']['current_streak'] as int);
+    } on ApiException catch (_) {}
   }
 
   void _listenToSensor(String cycleId) {
@@ -188,37 +207,11 @@ class _MovementScreenState extends State<MovementScreen> {
     }
   }
 
-  Future<void> _showGoalDialog() async {
-    final l10n = AppLocalizations.of(context)!;
-    final controller = TextEditingController(
-      text: _dailyGoalSteps != null ? '$_dailyGoalSteps' : '',
-    );
-    final result = await showDialog<int?>(
-      context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: Text(l10n.movementGoalDialogTitle),
-        content: TextField(
-          controller: controller,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(hintText: l10n.movementGoalDialogHint),
-          autofocus: true,
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(dialogContext).pop(),
-            child: Text(l10n.movementGoalCancelButton),
-          ),
-          FilledButton(
-            onPressed: () => Navigator.of(dialogContext).pop(int.tryParse(controller.text)),
-            child: Text(l10n.movementGoalSaveButton),
-          ),
-        ],
-      ),
-    );
-    if (result == null || result <= 0) return;
+  Future<void> _setGoal(int steps) async {
+    if (_dailyGoalSteps == steps || _busy) return;
     setState(() => _busy = true);
     try {
-      await widget.client.setMovementGoal(result);
+      await widget.client.setMovementGoal(steps);
       await _load();
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -275,7 +268,31 @@ class _MovementScreenState extends State<MovementScreen> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.movementScreenTitle)),
+      appBar: AppBar(
+        title: Text(l10n.movementScreenTitle),
+        actions: [
+          if (_movementEnabled && _streakDays > 0)
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  color: AppColors.gold.withValues(alpha: 0.14),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: AppColors.gold.withValues(alpha: 0.4)),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.local_fire_department_rounded, color: AppColors.gold, size: 16),
+                    const SizedBox(width: 4),
+                    Text('$_streakDays', style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
+                  ],
+                ),
+              ),
+            ),
+        ],
+      ),
       body: SafeArea(
         child: CelebrationOverlay(
           controller: _celebration,
@@ -293,69 +310,59 @@ class _MovementScreenState extends State<MovementScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // DESIGN_SYSTEM.md §2: título da tela já vem do AppBar
-          // (Fraunces, padrão do resto do app) — aqui só o texto de
-          // apoio, em Inter. Achado real do redesign (2026-08-26): antes
-          // usava JetBrains Mono, reservado a metadado técnico
-          // (DESIGN_SYSTEM.md §2), não a texto corrido.
-          Text(l10n.movementIntro, style: Theme.of(context).textTheme.bodySmall),
-          const SizedBox(height: 24),
           if (_error != null) ...[
             Text(_error!, style: const TextStyle(color: AppColors.error)),
             const SizedBox(height: 16),
           ],
-          if (!_movementEnabled)
+          if (!_movementEnabled) ...[
+            Text(l10n.movementIntro, style: Theme.of(context).textTheme.bodySmall),
+            const SizedBox(height: 24),
             FilledButton(
               onPressed: _busy ? null : _enable,
               child: Text(l10n.movementEnableButton),
-            )
-          else ...[
+            ),
+          ] else ...[
             if (_pendingReportCycle != null) ...[
-              PulseIn(
-                intensity: 0.3,
-                child: Text(
-                  l10n.movementPendingReportLabel(_pendingReportCycle!['steps_collected'] as int),
-                  style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
-                ),
-              ),
-              const SizedBox(height: 8),
-              OutlinedButton(
-                onPressed: _busy ? null : _collectPending,
-                child: Text(l10n.movementCollectPreviousButton),
-              ),
-              const SizedBox(height: 24),
-            ],
-            if (_currentCycle != null) ...[
-              Center(
-                child: _MovementGoalDonut(
-                  stepsCollected: _currentCycle!['steps_collected'] as int,
-                  goal: _dailyGoalSteps,
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                decoration: BoxDecoration(color: AppColors.gold.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(14), border: Border.all(color: AppColors.gold.withValues(alpha: 0.35))),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: PulseIn(
+                        intensity: 0.3,
+                        child: Text(
+                          l10n.movementPendingReportLabel(_pendingReportCycle!['steps_collected'] as int),
+                          style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(minimumSize: const Size(0, 36), padding: const EdgeInsets.symmetric(horizontal: 12)),
+                      onPressed: _busy ? null : _collectPending,
+                      child: Text(l10n.movementCollectPreviousButton, style: const TextStyle(fontSize: 12)),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 16),
-              // Número de destaque — JetBrains Mono grande, reservado
-              // pra metadado técnico (DESIGN_SYSTEM.md §2), aqui o valor
-              // mais importante da tela.
-              Text(
-                l10n.movementCurrentCycleLabel(_currentCycle!['steps_collected'] as int),
-                style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 22),
-                textAlign: TextAlign.center,
+            ],
+            if (_currentCycle != null) ...[
+              _HeroBlock(
+                stepsCollected: _currentCycle!['steps_collected'] as int,
+                xpAwarded: _currentCycle!['xp_awarded'] as int,
+                goal: _dailyGoalSteps,
               ),
-              const SizedBox(height: 4),
-              Text(
-                _dailyGoalSteps != null ? l10n.movementGoalLabel(_dailyGoalSteps!) : l10n.movementNoGoalLabel,
-                style: Theme.of(context).textTheme.bodySmall,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 4),
-              Center(
-                child: TextButton(
-                  onPressed: _busy ? null : _showGoalDialog,
-                  child: Text(_dailyGoalSteps != null ? l10n.movementEditGoalButton : l10n.movementSetGoalButton),
-                ),
+              const SizedBox(height: 16),
+              _GoalSelector(
+                l10n: l10n,
+                tiers: _goalTiers,
+                currentGoal: _dailyGoalSteps,
+                onSelect: _busy ? null : _setGoal,
               ),
               if (_goalReachedMessage != null) ...[
-                const SizedBox(height: 8),
+                const SizedBox(height: 12),
                 PulseIn(
                   intensity: 0.3,
                   child: Text(
@@ -377,12 +384,17 @@ class _MovementScreenState extends State<MovementScreen> {
                   ),
                 ),
               ],
+              const SizedBox(height: 12),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (_sensorUnavailable)
+                    Text(l10n.movementSensorUnavailableMessage, style: const TextStyle(color: AppColors.muted, fontSize: 12))
+                  else
+                    Text(l10n.movementDetectedStepsLabel(_detectedUncollectedSteps), style: const TextStyle(fontSize: 12)),
+                ],
+              ),
               const SizedBox(height: 8),
-              if (_sensorUnavailable)
-                Text(l10n.movementSensorUnavailableMessage, style: const TextStyle(color: AppColors.muted))
-              else
-                Text(l10n.movementDetectedStepsLabel(_detectedUncollectedSteps)),
-              const SizedBox(height: 16),
               FilledButton(
                 onPressed: (_busy || _detectedUncollectedSteps <= 0) ? null : _collectCurrent,
                 child: Text(
@@ -395,14 +407,16 @@ class _MovementScreenState extends State<MovementScreen> {
               // uma curva com sentido; com 0-1 coleta ainda não há
               // "oscilação" nenhuma pra mostrar.
               if (((_currentCycle!['snapshots'] as List?)?.length ?? 0) >= 2) ...[
-                const SizedBox(height: 32),
-                Text(l10n.movementTodayChartTitle, style: Theme.of(context).textTheme.titleLarge),
-                const SizedBox(height: 4),
-                Text(l10n.movementTodayChartSubtitle, style: Theme.of(context).textTheme.bodySmall),
-                const SizedBox(height: 12),
-                _IntradayStepsLineChart(
-                  snapshots: (_currentCycle!['snapshots'] as List).cast<Map<String, dynamic>>(),
-                  cycleStart: DateTime.parse(_currentCycle!['cycle_start_at'] as String),
+                const SizedBox(height: 24),
+                _ChartCard(
+                  dotColor: AppColors.gold,
+                  title: l10n.movementTodayChartTitle,
+                  trailing: l10n.movementTodayChartSubtitle,
+                  child: _IntradayStepsSection(
+                    l10n: l10n,
+                    snapshots: (_currentCycle!['snapshots'] as List).cast<Map<String, dynamic>>(),
+                    cycleStart: DateTime.parse(_currentCycle!['cycle_start_at'] as String),
+                  ),
                 ),
               ],
             ],
@@ -411,17 +425,20 @@ class _MovementScreenState extends State<MovementScreen> {
             // destacados. Precisa de pelo menos 2 ciclos pra fazer
             // sentido comparar.
             if (_recentCycles.length >= 2) ...[
-              const SizedBox(height: 32),
-              Text(l10n.movementWeeklyChartTitle, style: Theme.of(context).textTheme.titleLarge),
-              const SizedBox(height: 4),
-              Text(l10n.movementWeeklyChartSubtitle, style: Theme.of(context).textTheme.bodySmall),
-              const SizedBox(height: 12),
-              _WeeklyStepsBarChart(cycles: _recentCycles),
+              const SizedBox(height: 16),
+              _ChartCard(
+                dotColor: AppColors.teal,
+                title: l10n.movementWeeklyChartTitle,
+                trailing: l10n.movementWeeklyChartSubtitle,
+                child: _WeeklyStepsBarChart(cycles: _recentCycles),
+              ),
             ],
-            const SizedBox(height: 24),
-            TextButton(
-              onPressed: _busy ? null : _disable,
-              child: Text(l10n.movementDisableButton),
+            const SizedBox(height: 16),
+            Center(
+              child: TextButton(
+                onPressed: _busy ? null : _disable,
+                child: Text(l10n.movementDisableButton),
+              ),
             ),
           ],
         ],
@@ -430,22 +447,88 @@ class _MovementScreenState extends State<MovementScreen> {
   }
 }
 
-/// Progresso em relação à meta diária (pedido de Rhoney, 2026-08-21:
-/// "sempre que possível use gráficos de fácil compreensão e dinâmico
-/// pra ilustrar os feitos do usuário"). Donut é a escolha certa aqui —
-/// é literalmente uma proporção de um todo (passos coletados / meta),
-/// mesmo raciocínio já aplicado nos gráficos de Estatísticas. Ao
-/// ultrapassar a meta, o anel fecha 100% em dourado — reforço visual do
-/// bônus extra, sem precisar de um segundo gráfico.
-///
-/// Redesign 2026-08-26: `goal` agora é opcional — sem meta definida, o
-/// anel continua visível (contorno decorativo neutro + total de passos
-/// no centro) em vez de simplesmente sumir da tela, e mesmo com meta
-/// definida um contorno fino sempre marca a borda do anel (achado real:
-/// em 0%, o preenchimento quase invisível em cima do fundo escuro dava
-/// a impressão de um componente quebrado/incompleto).
-class _MovementGoalDonut extends StatelessWidget {
-  const _MovementGoalDonut({required this.stepsCollected, required this.goal});
+/// Bloco Hero (U.I/MOVIMENTO_REDESIGN_V1.md §4) — anel de progresso +
+/// estatísticas lado a lado num único card compacto, substituindo o
+/// donut grande isolado + textos empilhados da versão anterior. A regra
+/// de conversão "100 passos = +2 XP" fica sempre visível aqui, nunca
+/// implícita.
+class _HeroBlock extends StatelessWidget {
+  const _HeroBlock({required this.stepsCollected, required this.xpAwarded, required this.goal});
+
+  final int stepsCollected;
+  final int xpAwarded;
+  final int? goal;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [AppColors.bg2, Color.lerp(AppColors.bg2, AppColors.gold, 0.08)!]),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          _ProgressRing(stepsCollected: stepsCollected, goal: goal),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                _StatLine(color: AppColors.gold, value: '$stepsCollected', label: l10n.movementStepsTodayLabel),
+                const SizedBox(height: 8),
+                _StatLine(color: AppColors.teal, value: '$xpAwarded', label: l10n.movementXpTodayLabel),
+                const SizedBox(height: 10),
+                Text.rich(
+                  TextSpan(
+                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11),
+                    children: const [
+                      TextSpan(text: 'A cada '),
+                      TextSpan(text: '100 passos', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+                      TextSpan(text: ' = '),
+                      TextSpan(text: '+2 XP', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _StatLine extends StatelessWidget {
+  const _StatLine({required this.color, required this.value, required this.label});
+
+  final Color color;
+  final String value;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.baseline,
+      textBaseline: TextBaseline.alphabetic,
+      children: [
+        Text(value, style: AppTheme.technicalStyle(color: color, fontSize: 20).copyWith(fontWeight: FontWeight.w800)),
+        const SizedBox(width: 6),
+        Text(label, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
+      ],
+    );
+  }
+}
+
+/// Anel de progresso compacto (~78px, U.I/MOVIMENTO_REDESIGN_V1.md §4)
+/// com badge "AO VIVO" pulsante — versão reduzida do donut anterior
+/// (148px), agora ao lado das estatísticas em vez de sozinho centralizado.
+class _ProgressRing extends StatelessWidget {
+  const _ProgressRing({required this.stepsCollected, required this.goal});
 
   final int stepsCollected;
   final int? goal;
@@ -461,51 +544,35 @@ class _MovementGoalDonut extends StatelessWidget {
     final ringColor = hasGoal ? (goalReached ? AppColors.gold : AppColors.teal) : AppColors.muted;
 
     return SizedBox(
-      height: 148,
-      width: 148,
+      height: 82,
+      width: 82,
       child: Stack(
         alignment: Alignment.center,
+        clipBehavior: Clip.none,
         children: [
-          // Contorno sempre visível, mesmo em 0%/sem meta — sem isso o
-          // anel "some" contra o fundo escuro quando o preenchimento
-          // real é quase nulo.
           Container(
-            width: 128,
-            height: 128,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: AppColors.bg2, width: 14),
-            ),
+            width: 78,
+            height: 78,
+            decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.bg, width: 9)),
           ),
           if (hasGoal)
-            PieChart(
-              PieChartData(
-                startDegreeOffset: -90,
-                sectionsSpace: 0,
-                centerSpaceRadius: 50,
-                sections: [
-                  PieChartSectionData(
-                    value: progress > 0 ? progress : 0.001,
-                    color: ringColor,
-                    showTitle: false,
-                    radius: 14,
-                  ),
-                  PieChartSectionData(
-                    value: 1 - progress,
-                    color: Colors.transparent,
-                    showTitle: false,
-                    radius: 14,
-                  ),
-                ],
+            SizedBox(
+              width: 78,
+              height: 78,
+              child: PieChart(
+                PieChartData(
+                  startDegreeOffset: -90,
+                  sectionsSpace: 0,
+                  centerSpaceRadius: 30,
+                  sections: [
+                    PieChartSectionData(value: progress > 0 ? progress : 0.001, color: ringColor, showTitle: false, radius: 9),
+                    PieChartSectionData(value: 1 - progress, color: Colors.transparent, showTitle: false, radius: 9),
+                  ],
+                ),
               ),
             ),
-          // Largura fixa (não só Padding) é necessária para o FittedBox
-          // ter uma caixa concreta pra encolher o texto — dentro de um
-          // Stack, um Column sem largura explícita cresce livremente e
-          // o "100% da meta" ficava cortado nas bordas do círculo
-          // (achado real em teste no dispositivo, 2026-08-21).
           SizedBox(
-            width: 96,
+            width: 54,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -513,18 +580,196 @@ class _MovementGoalDonut extends StatelessWidget {
                   fit: BoxFit.scaleDown,
                   child: Text(
                     hasGoal ? l10n.movementGoalProgressLabel(percent) : '$stepsCollected',
-                    style: AppTheme.technicalStyle(color: ringColor, fontSize: hasGoal ? 16 : 22),
+                    style: AppTheme.technicalStyle(color: ringColor, fontSize: hasGoal ? 13 : 16).copyWith(fontWeight: FontWeight.w700),
                   ),
                 ),
                 if (!hasGoal)
-                  Text(
-                    l10n.movementNoGoalProgressLabel,
-                    style: Theme.of(context).textTheme.bodySmall,
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(l10n.movementNoGoalProgressLabel, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 8)),
                   ),
-                if (goalReached) const Icon(Icons.emoji_events_rounded, color: AppColors.gold, size: 18),
               ],
             ),
           ),
+          Positioned(
+            top: -2,
+            right: -6,
+            child: _LiveBadge(),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Badge "AO VIVO" com ponto pulsante — indica que o valor atualiza em
+/// tempo real conforme o usuário anda (leitura contínua do sensor, não
+/// uma foto estática do último request).
+class _LiveBadge extends StatefulWidget {
+  @override
+  State<_LiveBadge> createState() => _LiveBadgeState();
+}
+
+class _LiveBadgeState extends State<_LiveBadge> with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 900))..repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+      decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(8), border: Border.all(color: AppColors.teal.withValues(alpha: 0.5))),
+      child: FadeTransition(
+        opacity: Tween(begin: 0.4, end: 1.0).animate(_controller),
+        child: const SizedBox(width: 5, height: 5, child: DecoratedBox(decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.teal))),
+      ),
+    );
+  }
+}
+
+/// Seletor de meta diária em chips (U.I/MOVIMENTO_REDESIGN_V1.md §6) —
+/// substitui o diálogo de texto livre anterior por uma escolha guiada
+/// entre 4 faixas. Uma meta fora dessas faixas (definida antes desta
+/// versão existir) continua funcionando normalmente — só não fica
+/// destacada em nenhum chip até o usuário escolher uma das 4.
+class _GoalSelector extends StatelessWidget {
+  const _GoalSelector({required this.l10n, required this.tiers, required this.currentGoal, required this.onSelect});
+
+  final AppLocalizations l10n;
+  final List<int> tiers;
+  final int? currentGoal;
+  final void Function(int steps)? onSelect;
+
+  String _chipLabel(int steps) {
+    switch (steps) {
+      case 5000:
+        return l10n.movementGoalChipLight;
+      case 10000:
+        return l10n.movementGoalChipStandard;
+      case 15000:
+        return l10n.movementGoalChipIntense;
+      default:
+        return l10n.movementGoalChipElite;
+    }
+  }
+
+  String _chipSubLabel(int steps) {
+    switch (steps) {
+      case 5000:
+        return l10n.movementGoalChipLightLabel;
+      case 10000:
+        return l10n.movementGoalChipStandardLabel;
+      case 15000:
+        return l10n.movementGoalChipIntenseLabel;
+      default:
+        return l10n.movementGoalChipEliteLabel;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(width: 6, height: 6, decoration: const BoxDecoration(shape: BoxShape.circle, color: AppColors.gold)),
+              const SizedBox(width: 8),
+              Expanded(child: Text(l10n.movementGoalSelectorTitle, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600))),
+              Text(l10n.movementGoalSelectorSubtitle, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10)),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              for (final steps in tiers) ...[
+                Expanded(child: _GoalChip(label: _chipLabel(steps), subLabel: _chipSubLabel(steps), selected: currentGoal == steps, onTap: onSelect == null ? null : () => onSelect!(steps))),
+                if (steps != tiers.last) const SizedBox(width: 8),
+              ],
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _GoalChip extends StatelessWidget {
+  const _GoalChip({required this.label, required this.subLabel, required this.selected, required this.onTap});
+
+  final String label;
+  final String subLabel;
+  final bool selected;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: selected ? AppColors.gold.withValues(alpha: 0.16) : AppColors.bg,
+      borderRadius: BorderRadius.circular(12),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(color: selected ? AppColors.gold : AppColors.muted.withValues(alpha: 0.25))),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(label, style: AppTheme.technicalStyle(color: selected ? AppColors.gold : AppColors.bone, fontSize: 14).copyWith(fontWeight: FontWeight.w700)),
+              Text(subLabel, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Card container comum aos dois gráficos — cabeçalho com ponto
+/// indicador + título à esquerda, texto pequeno à direita, mesma
+/// linguagem visual do resto do redesign (fundo bg2, cantos
+/// arredondados) em vez do texto solto direto na tela.
+class _ChartCard extends StatelessWidget {
+  const _ChartCard({required this.dotColor, required this.title, required this.trailing, required this.child});
+
+  final Color dotColor;
+  final String title;
+  final String trailing;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(16)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Container(width: 6, height: 6, decoration: BoxDecoration(shape: BoxShape.circle, color: dotColor)),
+              const SizedBox(width: 8),
+              Expanded(child: Text(title, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600))),
+              Flexible(child: Text(trailing, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10), textAlign: TextAlign.right, overflow: TextOverflow.ellipsis)),
+            ],
+          ),
+          const SizedBox(height: 10),
+          child,
         ],
       ),
     );
@@ -552,7 +797,7 @@ class _WeeklyStepsBarChart extends StatelessWidget {
     final hasVariation = maxValue != minValue;
 
     return SizedBox(
-      height: 170,
+      height: 150,
       child: BarChart(
         BarChartData(
           maxY: maxY,
@@ -567,16 +812,16 @@ class _WeeklyStepsBarChart extends StatelessWidget {
             bottomTitles: AxisTitles(
               sideTitles: SideTitles(
                 showTitles: true,
-                reservedSize: 28,
+                reservedSize: 24,
                 getTitlesWidget: (value, meta) {
                   final index = value.toInt();
                   if (index < 0 || index >= cycles.length) return const SizedBox.shrink();
                   final start = DateTime.parse(cycles[index]['cycle_start_at'] as String);
                   return Padding(
-                    padding: const EdgeInsets.only(top: 8),
+                    padding: const EdgeInsets.only(top: 6),
                     child: Text(
                       _weekdayLabels[start.weekday - 1],
-                      style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11),
+                      style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
                     ),
                   );
                 },
@@ -590,7 +835,7 @@ class _WeeklyStepsBarChart extends StatelessWidget {
                 barRods: [
                   BarChartRodData(
                     toY: values[i].toDouble(),
-                    width: 20,
+                    width: 18,
                     borderRadius: BorderRadius.circular(6),
                     color: !hasVariation
                         ? AppColors.teal
@@ -609,32 +854,87 @@ class _WeeklyStepsBarChart extends StatelessWidget {
   }
 }
 
-/// Gráfico do dia atual (linha) — pedido explícito do redesign
-/// (2026-08-26): oscilação de passos ao LONGO do ciclo em curso, um
-/// ponto por coleta (MovementSnapshot, backend), plotado como fração de
-/// hora desde o início do ciclo. Sempre começa em (0h, 0 passos) —
-/// nenhum passo é possível antes do próprio início do ciclo.
-class _IntradayStepsLineChart extends StatelessWidget {
-  const _IntradayStepsLineChart({required this.snapshots, required this.cycleStart});
+/// Gráfico do dia (linha) + mini-cards de pico/vale ao lado
+/// (U.I/MOVIMENTO_REDESIGN_V1.md §5.2) — oscilação de passos ao LONGO do
+/// ciclo em curso, um ponto por coleta (MovementSnapshot, backend).
+class _IntradayStepsSection extends StatelessWidget {
+  const _IntradayStepsSection({required this.l10n, required this.snapshots, required this.cycleStart});
 
+  final AppLocalizations l10n;
   final List<Map<String, dynamic>> snapshots;
   final DateTime cycleStart;
 
   @override
   Widget build(BuildContext context) {
-    final spots = <FlSpot>[
-      const FlSpot(0, 0),
+    final points = <(double hour, int steps)>[
+      (0, 0),
       for (final s in snapshots)
-        FlSpot(
-          DateTime.parse(s['recorded_at'] as String).difference(cycleStart).inMinutes / 60.0,
-          (s['steps_total'] as int).toDouble(),
-        ),
+        (DateTime.parse(s['recorded_at'] as String).difference(cycleStart).inMinutes / 60.0, s['steps_total'] as int),
     ];
+    final peak = points.reduce((a, b) => a.$2 >= b.$2 ? a : b);
+    final valley = points.reduce((a, b) => a.$2 <= b.$2 ? a : b);
+
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(flex: 3, child: _IntradayStepsLineChart(points: points)),
+        const SizedBox(width: 10),
+        Expanded(
+          flex: 2,
+          child: Column(
+            children: [
+              _PeakValleyCard(icon: '🔥', label: l10n.movementPeakLabel, hour: peak.$1, steps: peak.$2, color: AppColors.gold),
+              const SizedBox(height: 8),
+              _PeakValleyCard(icon: '💤', label: l10n.movementValleyLabel, hour: valley.$1, steps: valley.$2, color: AppColors.muted),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _PeakValleyCard extends StatelessWidget {
+  const _PeakValleyCard({required this.icon, required this.label, required this.hour, required this.steps, required this.color});
+
+  final String icon;
+  final String label;
+  final double hour;
+  final int steps;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    final h = hour.floor();
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+      decoration: BoxDecoration(color: AppColors.bg, borderRadius: BorderRadius.circular(10)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text('$icon ${h}h · $label', style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+          Text('$steps', style: AppTheme.technicalStyle(color: color, fontSize: 15).copyWith(fontWeight: FontWeight.w700)),
+        ],
+      ),
+    );
+  }
+}
+
+class _IntradayStepsLineChart extends StatelessWidget {
+  const _IntradayStepsLineChart({required this.points});
+
+  final List<(double hour, int steps)> points;
+
+  @override
+  Widget build(BuildContext context) {
+    final spots = [for (final p in points) FlSpot(p.$1, p.$2.toDouble())];
     final maxY = spots.map((s) => s.y).reduce((a, b) => a > b ? a : b);
     final chartMaxY = maxY <= 0 ? 10.0 : maxY * 1.2;
 
     return SizedBox(
-      height: 170,
+      height: 150,
       child: LineChart(
         LineChartData(
           minX: 0,
@@ -646,7 +946,7 @@ class _IntradayStepsLineChart extends StatelessWidget {
             show: true,
             drawVerticalLine: false,
             horizontalInterval: chartMaxY / 3,
-            getDrawingHorizontalLine: (_) => const FlLine(color: AppColors.bg2, strokeWidth: 1),
+            getDrawingHorizontalLine: (_) => const FlLine(color: AppColors.bg, strokeWidth: 1),
           ),
           borderData: FlBorderData(show: false),
           titlesData: FlTitlesData(
@@ -657,12 +957,12 @@ class _IntradayStepsLineChart extends StatelessWidget {
               sideTitles: SideTitles(
                 showTitles: true,
                 interval: 6,
-                reservedSize: 28,
+                reservedSize: 24,
                 getTitlesWidget: (value, meta) => Padding(
-                  padding: const EdgeInsets.only(top: 8),
+                  padding: const EdgeInsets.only(top: 6),
                   child: Text(
                     '${value.toInt()}h',
-                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11),
+                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
                   ),
                 ),
               ),
@@ -673,14 +973,21 @@ class _IntradayStepsLineChart extends StatelessWidget {
               spots: spots,
               isCurved: true,
               curveSmoothness: 0.25,
-              color: AppColors.teal,
+              color: AppColors.gold,
               barWidth: 3,
               dotData: FlDotData(
                 show: true,
                 getDotPainter: (spot, percent, bar, index) =>
                     FlDotCirclePainter(radius: 3.5, color: AppColors.gold, strokeWidth: 0),
               ),
-              belowBarData: BarAreaData(show: true, color: AppColors.teal.withValues(alpha: 0.12)),
+              belowBarData: BarAreaData(
+                show: true,
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [AppColors.gold.withValues(alpha: 0.2), AppColors.gold.withValues(alpha: 0.0)],
+                ),
+              ),
             ),
           ],
         ),
