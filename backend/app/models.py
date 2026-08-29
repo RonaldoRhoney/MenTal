@@ -157,7 +157,7 @@ class Profile(Base):
     # usado por age_confirmed_at.
     city: Mapped[str | None] = mapped_column(String, nullable=True)
     gender: Mapped[str | None] = mapped_column(String, nullable=True)  # masculino|feminino|nao_binario|prefiro_nao_informar
-    age_range: Mapped[str | None] = mapped_column(String, nullable=True)  # 18-25|26-30|31-45|46-50|51+
+    age_range: Mapped[str | None] = mapped_column(String, nullable=True)  # 18-25|26-35|36-45|46+ (revisão 28/08/2026)
     onboarding_completed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 

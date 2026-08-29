@@ -3,15 +3,17 @@ Perfil do usuário (USER_PROFILE.md, aprovado; revisado 2026-08-26).
 avatar_id (deprecated)/location_* continuam opcionais, nunca bloqueiam o
 uso do app.
 
-Cadastro mínimo obrigatório (decisão de Rhoney, 2026-08-26): nome, país,
-cidade, gênero e faixa etária passam a ser exigidos antes do usuário
-jogar — USER_PROFILE.md §1/§3 bloqueava especificamente "cidade exata"
-por risco de localizar um menor, mas essa restrição foi motivada pelo
+Cadastro mínimo obrigatório (decisão de Rhoney, 2026-08-26, revisado
+28/08/2026): nome, país, cidade, faixa etária e foto de perfil passam a
+ser exigidos antes do usuário jogar — gênero, que era obrigatório na
+versão original, foi revisado pra OPCIONAL em 28/08/2026.
+USER_PROFILE.md §1/§3 bloqueava especificamente "cidade exata" por
+risco de localizar um menor, mas essa restrição foi motivada pelo
 público misto de antes da DIR-001 (MENTAL agora é exclusivo pra maiores
 de 18 anos). onboarding_completed_at é marcado automaticamente aqui,
-nunca pelo client, na primeira vez que os 5 campos chegam preenchidos
-juntos — mesmo princípio de "backend é sempre autoridade" já usado em
-todo o resto do MENTAL.
+nunca pelo client, na primeira vez que os 5 campos obrigatórios chegam
+preenchidos juntos — mesmo princípio de "backend é sempre autoridade"
+já usado em todo o resto do MENTAL.
 
 Upload de foto real (revisão 26/08/2026): substitui os avatares emoji.
 real_name e photo_url (só se aprovada) agora aparecem publicamente em
@@ -112,7 +114,14 @@ def update_profile(
         profile.photo_url = body.photo_path
         profile.photo_moderation_status = "pending"
 
-    mandatory_fields = [body.real_name, body.location_country, body.city, body.gender, body.age_range]
+    # Revisão 28/08/2026 (decisão de Rhoney): gênero passa a ser
+    # OPCIONAL — cadastro mínimo obrigatório agora é nome, país, cidade,
+    # faixa etária e foto de perfil. profile.photo_url (não body.
+    # photo_path) porque a foto pode ter sido enviada numa chamada
+    # anterior — igual ao resto dos campos, o que importa é o estado
+    # final do profile, não se ESTA chamada especificamente mandou o
+    # campo.
+    mandatory_fields = [body.real_name, body.location_country, body.city, body.age_range, profile.photo_url]
     if profile.onboarding_completed_at is None and all(f is not None and f != "" for f in mandatory_fields):
         profile.onboarding_completed_at = utcnow()
 

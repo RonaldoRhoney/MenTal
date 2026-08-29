@@ -400,7 +400,9 @@ class BattlesResponse(BaseModel):
 
 
 GenderValue = Literal["masculino", "feminino", "nao_binario", "prefiro_nao_informar"]
-AgeRangeValue = Literal["18-25", "26-30", "31-45", "46-50", "51+"]
+# Revisão 28/08/2026 (decisão de Rhoney): novas faixas etárias — 4
+# faixas em vez das 5 anteriores (18-25/26-30/31-45/46-50/51+).
+AgeRangeValue = Literal["18-25", "26-35", "36-45", "46+"]
 
 
 class ProfileOut(BaseModel):

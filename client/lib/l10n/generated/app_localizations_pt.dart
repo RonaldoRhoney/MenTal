@@ -767,6 +767,15 @@ class AppLocalizationsPt extends AppLocalizations {
   String get onboardingGenderTitle => 'Gênero';
 
   @override
+  String get onboardingGenderOptionalTitle => 'Gênero (opcional)';
+
+  @override
+  String get onboardingPhotoTitle => 'Foto de perfil';
+
+  @override
+  String get onboardingPhotoChosenLabel => 'Trocar foto';
+
+  @override
   String get onboardingGenderMasculino => 'Masculino';
 
   @override

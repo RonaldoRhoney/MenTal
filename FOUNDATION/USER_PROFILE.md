@@ -1,7 +1,29 @@
 # MENTAL — Perfil do Usuário (campos obrigatórios vs opcionais)
 
-**Status:** Aprovado. **Revisado em 27/08/2026** — ver nota abaixo (mais recente primeiro).
+**Status:** Aprovado. **Revisado em 28/08/2026** — ver nota abaixo (mais recente primeiro).
 **Documentos relacionados:** FAMILY_SAFETY.md, V2_KICKOFF.md (item 12 — Amigos), DESIGN_SYSTEM.md, MENTAL-DIR-001
+
+---
+
+## Revisão 28/08/2026 — cadastro mínimo obrigatório: foto entra, gênero sai; novas faixas etárias
+
+Decisão de Rhoney: o cadastro mínimo obrigatório (fechado em 26/08/2026
+como nome, país, cidade, gênero e faixa etária) muda de composição:
+
+- **Foto de perfil passa a ser obrigatória** — antes era opcional
+  (upload liberado desde a revisão de 27/08, mas nunca exigido pra
+  completar o cadastro). Onboarding só marca `onboarding_completed_at`
+  quando o usuário também já tiver feito upload de uma foto.
+- **Gênero passa a ser OPCIONAL** — sai da lista de campos que bloqueiam
+  a conclusão do onboarding, mas o campo em si continua existindo
+  (quem quiser preencher, preenche; `PUT /profile` aceita normalmente).
+- **Faixas etárias mudam de 5 para 4**: eram `18-25/26-30/31-45/46-50/
+  51+`, passam a ser `18-25/26-35/36-45/46+`.
+
+Cadastro mínimo obrigatório atual: **nome, país, cidade, faixa etária e
+foto de perfil** (5 campos, nova composição). `MandatoryOnboardingScreen`
+(client) e `routers/profile.py::update_profile` (backend, autoridade
+final sobre `onboarding_completed_at`) foram atualizados juntos.
 
 ---
 

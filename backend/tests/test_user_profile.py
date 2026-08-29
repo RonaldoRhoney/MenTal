@@ -149,23 +149,24 @@ def test_photo_path_pointing_to_another_users_folder_is_rejected(client):
 
 def test_onboarding_stays_incomplete_until_all_5_mandatory_fields_filled(client):
     """
-    Cadastro mínimo obrigatório (26/08/2026): nome, país, cidade, gênero
-    e faixa etária. onboarding_completed_at só é marcado quando os 5
-    chegam preenchidos JUNTOS numa mesma chamada — nunca por decisão do
-    client, sempre calculado pelo backend.
+    Cadastro mínimo obrigatório (26/08/2026, revisado 28/08/2026): nome,
+    país, cidade, faixa etária e foto de perfil — gênero passou a ser
+    OPCIONAL nessa revisão, e foto entrou no lugar dele.
+    onboarding_completed_at só é marcado quando os 5 chegam preenchidos
+    JUNTOS (numa mesma chamada ou acumulados por chamadas anteriores) —
+    nunca por decisão do client, sempre calculado pelo backend.
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    # Só 4 dos 5 campos — ainda incompleto.
+    # Só 3 dos 5 campos (falta faixa etária e foto) — ainda incompleto.
     resp = client.put(
         "/profile",
         json={
             "real_name": "Maria Silva",
             "location_country": "Brasil",
             "city": "Belém",
-            "gender": "feminino",
         },
         headers=headers,
     )
@@ -173,6 +174,8 @@ def test_onboarding_stays_incomplete_until_all_5_mandatory_fields_filled(client)
 
 
 def test_onboarding_completes_when_all_5_mandatory_fields_filled(client):
+    """Gênero de propósito NUNCA enviado neste teste — prova que não é
+    mais exigido pra completar o onboarding (revisão 28/08/2026)."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -183,16 +186,16 @@ def test_onboarding_completes_when_all_5_mandatory_fields_filled(client):
             "real_name": "Maria Silva",
             "location_country": "Brasil",
             "city": "Belém",
-            "gender": "feminino",
-            "age_range": "26-30",
+            "age_range": "26-35",
+            "photo_path": f"{user}/photo.jpg",
         },
         headers=headers,
     )
     body = resp.json()
     assert resp.status_code == 200
     assert body["city"] == "Belém"
-    assert body["gender"] == "feminino"
-    assert body["age_range"] == "26-30"
+    assert body["gender"] is None
+    assert body["age_range"] == "26-35"
     assert body["onboarding_completed_at"] is not None
 
     refetched = client.get("/profile", headers=headers).json()

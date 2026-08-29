@@ -806,6 +806,15 @@
   "onboardingGenderTitle": "Gênero",
   "@onboardingGenderTitle": {"description": "Mandatory onboarding gender section title"},
 
+  "onboardingGenderOptionalTitle": "Gênero (opcional)",
+  "@onboardingGenderOptionalTitle": {"description": "Onboarding gender section title, revised 28/08/2026 to be optional"},
+
+  "onboardingPhotoTitle": "Foto de perfil",
+  "@onboardingPhotoTitle": {"description": "Mandatory onboarding photo section title, added 28/08/2026"},
+
+  "onboardingPhotoChosenLabel": "Trocar foto",
+  "@onboardingPhotoChosenLabel": {"description": "Button label once a photo has already been picked during onboarding"},
+
   "onboardingGenderMasculino": "Masculino",
   "@onboardingGenderMasculino": {"description": "Gender option"},
 

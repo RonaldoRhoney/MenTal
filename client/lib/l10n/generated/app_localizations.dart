@@ -1378,6 +1378,24 @@ abstract class AppLocalizations {
   /// **'Gênero'**
   String get onboardingGenderTitle;
 
+  /// Onboarding gender section title, revised 28/08/2026 to be optional
+  ///
+  /// In pt, this message translates to:
+  /// **'Gênero (opcional)'**
+  String get onboardingGenderOptionalTitle;
+
+  /// Mandatory onboarding photo section title, added 28/08/2026
+  ///
+  /// In pt, this message translates to:
+  /// **'Foto de perfil'**
+  String get onboardingPhotoTitle;
+
+  /// Button label once a photo has already been picked during onboarding
+  ///
+  /// In pt, this message translates to:
+  /// **'Trocar foto'**
+  String get onboardingPhotoChosenLabel;
+
   /// Gender option
   ///
   /// In pt, this message translates to:
