@@ -827,7 +827,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String mentalCoinsCycleNote(String end, String start) {
-    return 'Ciclo fecha em $end · reinicia em $start';
+    return 'Ciclo iniciado em $start · fecha em $end';
   }
 
   @override

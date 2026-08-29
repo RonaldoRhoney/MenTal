@@ -822,9 +822,9 @@ class _ProgressCard extends StatelessWidget {
           const SizedBox(height: 10),
           Row(
             children: [
-              Expanded(child: _MetaStat(value: '$xpTotal', label: 'XP total')),
-              Expanded(child: _MetaStat(value: worldsCompleted != null ? '$worldsCompleted/${worlds!.length}' : '—', label: 'Mundos')),
-              Expanded(child: _MetaStat(value: '$streakDays', label: l10n.streakSectionTitle)),
+              Expanded(child: _MetaStat(icon: Icons.bolt_rounded, color: AppColors.gold, value: '$xpTotal', label: 'XP total')),
+              Expanded(child: _MetaStat(icon: Icons.public_rounded, color: AppColors.purple, value: worldsCompleted != null ? '$worldsCompleted/${worlds!.length}' : '—', label: 'Mundos')),
+              Expanded(child: _MetaStat(icon: Icons.local_fire_department_rounded, color: AppColors.victory, value: '$streakDays', label: l10n.streakSectionTitle)),
             ],
           ),
         ],
@@ -833,12 +833,17 @@ class _ProgressCard extends StatelessWidget {
   }
 }
 
-/// Uma coluna da linha de metadados (XP total / Mundos / Streak) — texto
-/// puro, sem card/borda própria, pra manter o bloco todo compacto (uma
-/// única linha de altura, não 2-3 cards empilhados como antes).
+/// Uma coluna da linha de metadados (XP total / Mundos / Streak) — pedido
+/// de Rhoney (29/08/2026): "estão muito sóbrios e sem vida, o app precisa
+/// passar uma sensação de emoção" — cada métrica ganha ícone + cor própria
+/// (dourado/roxo/verde-vitória, mesma paleta de gamificação já usada no
+/// resto do card) e o valor cresce de tamanho, em vez de tudo em
+/// texto monocromático neutro.
 class _MetaStat extends StatelessWidget {
-  const _MetaStat({required this.value, required this.label});
+  const _MetaStat({required this.icon, required this.color, required this.value, required this.label});
 
+  final IconData icon;
+  final Color color;
   final String value;
   final String label;
 
@@ -848,8 +853,15 @@ class _MetaStat extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(value, style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 14).copyWith(fontWeight: FontWeight.w700)),
-        Text(label.toUpperCase(), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, color: color, size: 12),
+            const SizedBox(width: 3),
+            Text(label.toUpperCase(), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+          ],
+        ),
+        Text(value, style: AppTheme.technicalStyle(color: color, fontSize: 17).copyWith(fontWeight: FontWeight.w800)),
       ],
     );
   }

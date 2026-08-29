@@ -1495,7 +1495,7 @@ abstract class AppLocalizations {
   /// Note about when the current weekly cycle closes and restarts
   ///
   /// In pt, this message translates to:
-  /// **'Ciclo fecha em {end} · reinicia em {start}'**
+  /// **'Ciclo iniciado em {start} · fecha em {end}'**
   String mentalCoinsCycleNote(String end, String start);
 
   /// Section title explaining how to earn MentalCoins this week

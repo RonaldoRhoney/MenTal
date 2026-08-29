@@ -863,7 +863,7 @@
   "mentalCoinsScreenTitle": "MentalCoins",
   "@mentalCoinsScreenTitle": {"description": "MentalCoins screen app bar title"},
 
-  "mentalCoinsCycleNote": "Ciclo fecha em {end} · reinicia em {start}",
+  "mentalCoinsCycleNote": "Ciclo iniciado em {start} · fecha em {end}",
   "@mentalCoinsCycleNote": {
     "description": "Note about when the current weekly cycle closes and restarts",
     "placeholders": {"end": {"type": "String"}, "start": {"type": "String"}}
