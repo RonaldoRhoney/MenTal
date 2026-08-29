@@ -443,6 +443,15 @@ class Friendship(Base):
     user_id_a: Mapped[str] = mapped_column(UUIDType, index=True)
     user_id_b: Mapped[str] = mapped_column(UUIDType, index=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    # Achado de auditoria de segurança (28/08/2026): resgatar um
+    # invite_code criava a amizade de forma unilateral — o dono do
+    # código nunca era consultado, e passava a expor user_id/real_name/
+    # photo_url/XP pra um estranho automaticamente. status/requested_by
+    # tornam o resgate um PEDIDO ('pending'); só quem NÃO pediu pode
+    # aceitar ('accepted') via /social/friend-requests/{id}/accept.
+    # get_friend_user_ids só considera 'accepted'.
+    status: Mapped[str] = mapped_column(String, default="pending")  # pending|accepted
+    requested_by: Mapped[str] = mapped_column(UUIDType)
 
     __table_args__ = (UniqueConstraint("user_id_a", "user_id_b", name="uq_friendship_pair"),)
 

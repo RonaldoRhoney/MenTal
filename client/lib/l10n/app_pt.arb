@@ -512,6 +512,18 @@
   "friendsListTitle": "Seus amigos",
   "@friendsListTitle": {"description": "Section title for the friends list"},
 
+  "friendRequestsTitle": "Pedidos de amizade",
+  "@friendRequestsTitle": {"description": "Section title for pending friend requests"},
+
+  "friendRequestSentMessage": "Pedido de amizade enviado! A pessoa precisa aceitar.",
+  "@friendRequestSentMessage": {"description": "Shown after redeeming an invite code, since it no longer creates the friendship immediately"},
+
+  "friendRequestAcceptButton": "Aceitar",
+  "@friendRequestAcceptButton": {"description": "Accept a pending friend request"},
+
+  "friendRequestDeclineButton": "Recusar",
+  "@friendRequestDeclineButton": {"description": "Decline a pending friend request"},
+
   "friendsEmptyMessage": "Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.",
   "@friendsEmptyMessage": {"description": "Empty state for the friends list"},
 

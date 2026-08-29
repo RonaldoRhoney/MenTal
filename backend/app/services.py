@@ -293,25 +293,73 @@ def _canonical_pair(user_id_1: str, user_id_2: str) -> tuple[str, str]:
     return (user_id_1, user_id_2) if user_id_1 < user_id_2 else (user_id_2, user_id_1)
 
 
-def add_friendship(db: Session, user_id_1: str, user_id_2: str) -> models.Friendship | None:
-    """Idempotente: retorna None se já eram amigos, sem duplicar linha."""
-    a, b = _canonical_pair(user_id_1, user_id_2)
+def request_friendship(db: Session, requester_id: str, other_user_id: str) -> models.Friendship | None:
+    """
+    Achado de auditoria de segurança (28/08/2026): resgatar um
+    invite_code criava a amizade direto, sem o dono do código nunca ser
+    consultado. Agora só cria um PEDIDO ('pending') — vira amizade de
+    verdade só quando o outro lado aceita explicitamente
+    (accept_friend_request). Idempotente: retorna None se já existe
+    qualquer linha entre os dois (pending ou accepted), sem duplicar.
+    """
+    a, b = _canonical_pair(requester_id, other_user_id)
     existing = db.execute(
         select(models.Friendship).where(models.Friendship.user_id_a == a, models.Friendship.user_id_b == b)
     ).scalar_one_or_none()
     if existing is not None:
         return None
-    friendship = models.Friendship(user_id_a=a, user_id_b=b)
+    friendship = models.Friendship(user_id_a=a, user_id_b=b, status="pending", requested_by=requester_id)
     db.add(friendship)
     db.commit()
     db.refresh(friendship)
     return friendship
 
 
+def list_pending_friend_requests(db: Session, user_id: str) -> list[tuple[models.Friendship, str]]:
+    """Pedidos pendentes onde `user_id` é quem PODE aceitar (nunca quem pediu)."""
+    rows = db.execute(
+        select(models.Friendship).where(
+            models.Friendship.status == "pending",
+            models.Friendship.requested_by != user_id,
+            (models.Friendship.user_id_a == user_id) | (models.Friendship.user_id_b == user_id),
+        )
+    ).scalars().all()
+    return [(f, f.user_id_b if f.user_id_a == user_id else f.user_id_a) for f in rows]
+
+
+def accept_friend_request(db: Session, friendship_id: str, user_id: str) -> models.Friendship | None:
+    """
+    None se o pedido não existir, já não for mais 'pending', ou se
+    `user_id` for quem pediu (só o OUTRO lado pode aceitar o próprio
+    pedido — nunca o remetente).
+    """
+    friendship = db.get(models.Friendship, friendship_id)
+    if friendship is None or friendship.status != "pending" or friendship.requested_by == user_id:
+        return None
+    if user_id not in (friendship.user_id_a, friendship.user_id_b):
+        return None
+    friendship.status = "accepted"
+    db.commit()
+    db.refresh(friendship)
+    return friendship
+
+
+def decline_friend_request(db: Session, friendship_id: str, user_id: str) -> bool:
+    friendship = db.get(models.Friendship, friendship_id)
+    if friendship is None or friendship.status != "pending" or friendship.requested_by == user_id:
+        return False
+    if user_id not in (friendship.user_id_a, friendship.user_id_b):
+        return False
+    db.delete(friendship)
+    db.commit()
+    return True
+
+
 def get_friend_user_ids(db: Session, user_id: str) -> list[str]:
     rows = db.execute(
         select(models.Friendship).where(
-            (models.Friendship.user_id_a == user_id) | (models.Friendship.user_id_b == user_id)
+            models.Friendship.status == "accepted",
+            (models.Friendship.user_id_a == user_id) | (models.Friendship.user_id_b == user_id),
         )
     ).scalars().all()
     return [f.user_id_b if f.user_id_a == user_id else f.user_id_a for f in rows]

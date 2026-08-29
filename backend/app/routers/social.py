@@ -63,6 +63,14 @@ def generate_achievement_card(user_id: str = Depends(require_age_confirmed_user_
 # nenhuma tela nova de convite. Deliberadamente NÃO reaproveita
 # InviteConversion (1 atribuição por usuário, pensado pra métrica de
 # crescimento) — grava em mental.friendships, N:N de verdade.
+#
+# Achado de auditoria de segurança (28/08/2026): resgatar o código
+# criava a amizade DIRETO — o dono do invite_code nunca era consultado,
+# e um estranho com o código (compartilhado publicamente, por exemplo)
+# passava a ver o user_id/nome real/foto/XP do dono automaticamente.
+# Agora isso só cria um PEDIDO pendente (services.request_friendship);
+# vira amizade de verdade só quando o dono aceita explicitamente via
+# POST /social/friend-requests/{id}/accept.
 @router.post("/social/friends")
 def add_friend(
     body: schemas.AddFriendRequest,
@@ -75,8 +83,48 @@ def add_friend(
     if invite.inviter_user_id == user_id:
         raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_FRIEND_SELF", "message": "Não é possível adicionar a si mesmo como amigo."}})
 
-    services.add_friendship(db, user_id, invite.inviter_user_id)
-    return {"status": "ok"}
+    services.request_friendship(db, user_id, invite.inviter_user_id)
+    return {"status": "pending"}
+
+
+@router.get("/social/friend-requests", response_model=schemas.FriendRequestsResponse)
+def list_friend_requests(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
+    pending = services.list_pending_friend_requests(db, user_id)
+    requests = []
+    for friendship, from_user_id in pending:
+        from_profile = db.get(models.Profile, from_user_id)
+        requests.append(
+            schemas.FriendRequestOut(
+                friendship_id=friendship.id,
+                from_user_id=from_user_id,
+                from_nickname=from_profile.nickname if from_profile else "???",
+            )
+        )
+    return schemas.FriendRequestsResponse(requests=requests)
+
+
+@router.post("/social/friend-requests/{friendship_id}/accept")
+def accept_friend_request(
+    friendship_id: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    friendship = services.accept_friend_request(db, friendship_id, user_id)
+    if friendship is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "FRIEND_REQUEST_NOT_FOUND", "message": friendship_id}})
+    return {"status": "accepted"}
+
+
+@router.post("/social/friend-requests/{friendship_id}/decline")
+def decline_friend_request(
+    friendship_id: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    ok = services.decline_friend_request(db, friendship_id, user_id)
+    if not ok:
+        raise HTTPException(status_code=404, detail={"error": {"code": "FRIEND_REQUEST_NOT_FOUND", "message": friendship_id}})
+    return {"status": "declined"}
 
 
 @router.get("/social/friends", response_model=schemas.FriendsResponse)

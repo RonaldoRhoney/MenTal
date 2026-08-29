@@ -3,6 +3,8 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
+from . import config
+
 
 class AgeGateRequest(BaseModel):
     """MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL é exclusivo pra
@@ -321,7 +323,10 @@ class MovementCollectResponse(BaseModel):
 
 
 class MovementGoalRequest(BaseModel):
-    daily_goal_steps: int | None = Field(default=None, gt=0)
+    # Achado de auditoria de segurança (28/08/2026): só exigia "maior que
+    # zero" — uma meta de 1 passo garantia o bônus de meta (config.
+    # MOVEMENT_GOAL_BONUS_XP) com esforço zero, todo ciclo.
+    daily_goal_steps: int | None = Field(default=None, ge=config.MOVEMENT_MIN_DAILY_GOAL_STEPS)
 
 
 class MovementGoalResponse(BaseModel):
@@ -330,6 +335,16 @@ class MovementGoalResponse(BaseModel):
 
 class AddFriendRequest(BaseModel):
     invite_code: str
+
+
+class FriendRequestOut(BaseModel):
+    friendship_id: str
+    from_user_id: str
+    from_nickname: str
+
+
+class FriendRequestsResponse(BaseModel):
+    requests: list[FriendRequestOut]
 
 
 class FriendOut(BaseModel):

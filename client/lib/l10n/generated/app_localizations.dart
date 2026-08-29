@@ -880,6 +880,30 @@ abstract class AppLocalizations {
   /// **'Seus amigos'**
   String get friendsListTitle;
 
+  /// Section title for pending friend requests
+  ///
+  /// In pt, this message translates to:
+  /// **'Pedidos de amizade'**
+  String get friendRequestsTitle;
+
+  /// Shown after redeeming an invite code, since it no longer creates the friendship immediately
+  ///
+  /// In pt, this message translates to:
+  /// **'Pedido de amizade enviado! A pessoa precisa aceitar.'**
+  String get friendRequestSentMessage;
+
+  /// Accept a pending friend request
+  ///
+  /// In pt, this message translates to:
+  /// **'Aceitar'**
+  String get friendRequestAcceptButton;
+
+  /// Decline a pending friend request
+  ///
+  /// In pt, this message translates to:
+  /// **'Recusar'**
+  String get friendRequestDeclineButton;
+
   /// Empty state for the friends list
   ///
   /// In pt, this message translates to:

@@ -31,6 +31,10 @@ class _FriendsScreenState extends State<FriendsScreen> {
   String? _error;
   String? _inviteCode;
   List<Map<String, dynamic>> _friends = [];
+  // Achado de auditoria de segurança (28/08/2026): resgatar um
+  // invite_code não cria mais amizade direto, só um pedido pendente —
+  // precisa do aceite explícito de quem convidou.
+  List<Map<String, dynamic>> _friendRequests = [];
   final _codeController = TextEditingController();
   bool _adding = false;
 
@@ -57,10 +61,39 @@ class _FriendsScreenState extends State<FriendsScreen> {
           _friends = (friends['friends'] as List).cast<Map<String, dynamic>>();
         });
       }
+      // Pedidos pendentes buscados à parte: uma falha aqui não deve
+      // impedir a lista de amigos (que já carregou com sucesso acima)
+      // de aparecer.
+      try {
+        final requests = await widget.client.getFriendRequests();
+        if (mounted) {
+          setState(() => _friendRequests = (requests['requests'] as List).cast<Map<String, dynamic>>());
+        }
+      } on ApiException catch (_) {
+        // Reforço visual, não crítico — segue sem a lista de pedidos.
+      }
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
     } finally {
       if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  Future<void> _acceptRequest(Map<String, dynamic> request) async {
+    try {
+      await widget.client.acceptFriendRequest(request['friendship_id'] as String);
+      await _load();
+    } on ApiException catch (e) {
+      if (mounted) setState(() => _error = e.message);
+    }
+  }
+
+  Future<void> _declineRequest(Map<String, dynamic> request) async {
+    try {
+      await widget.client.declineFriendRequest(request['friendship_id'] as String);
+      await _load();
+    } on ApiException catch (e) {
+      if (mounted) setState(() => _error = e.message);
     }
   }
 
@@ -93,6 +126,11 @@ class _FriendsScreenState extends State<FriendsScreen> {
       await widget.client.addFriend(code);
       _codeController.clear();
       await _load();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.friendRequestSentMessage)),
+        );
+      }
     } on ApiException catch (e) {
       final message = switch (e.code) {
         'INVITE_NOT_FOUND' => l10n.friendsInviteNotFoundError,
@@ -262,6 +300,32 @@ class _FriendsScreenState extends State<FriendsScreen> {
                     if (_error != null) ...[
                       const SizedBox(height: 8),
                       Text(_error!, style: const TextStyle(color: AppColors.error)),
+                    ],
+                    if (_friendRequests.isNotEmpty) ...[
+                      const SizedBox(height: 24),
+                      Text(l10n.friendRequestsTitle, style: Theme.of(context).textTheme.titleMedium),
+                      const SizedBox(height: 8),
+                      for (final request in _friendRequests)
+                        ListTile(
+                          contentPadding: EdgeInsets.zero,
+                          title: Text(request['from_nickname'] as String),
+                          trailing: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              OutlinedButton(
+                                style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                                onPressed: () => _declineRequest(request),
+                                child: Text(l10n.friendRequestDeclineButton),
+                              ),
+                              const SizedBox(width: 8),
+                              FilledButton(
+                                style: FilledButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                                onPressed: () => _acceptRequest(request),
+                                child: Text(l10n.friendRequestAcceptButton),
+                              ),
+                            ],
+                          ),
+                        ),
                     ],
                     const SizedBox(height: 24),
                     Text(l10n.friendsListTitle, style: Theme.of(context).textTheme.titleMedium),

@@ -72,6 +72,8 @@ def test_real_name_appears_publicly_in_friends_list(client):
 
     code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
     client.post("/social/friends", json={"invite_code": code}, headers=headers_b)
+    friendship_id = client.get("/social/friend-requests", headers=headers_a).json()["requests"][0]["friendship_id"]
+    client.post(f"/social/friend-requests/{friendship_id}/accept", headers=headers_a)
 
     friends = client.get("/social/friends", headers=headers_a).json()["friends"]
     assert len(friends) == 1
@@ -93,6 +95,8 @@ def test_photo_url_only_appears_publicly_after_admin_approval(client):
 
     code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
     client.post("/social/friends", json={"invite_code": code}, headers=headers_b)
+    friendship_id = client.get("/social/friend-requests", headers=headers_a).json()["requests"][0]["friendship_id"]
+    client.post(f"/social/friend-requests/{friendship_id}/accept", headers=headers_a)
 
     friends_before = client.get("/social/friends", headers=headers_a).json()["friends"]
     assert friends_before[0]["photo_url"] is None, "pendente não deve aparecer pra outros ainda"

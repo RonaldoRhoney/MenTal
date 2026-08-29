@@ -17,6 +17,11 @@ def _make_friends(client, user_a, user_b):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
     code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
     client.post("/social/friends", json={"invite_code": code}, headers=headers_b)
+    # Achado de auditoria de segurança (28/08/2026): resgatar o código
+    # só cria um PEDIDO agora — precisa do aceite explícito de quem
+    # convidou antes de virar amizade de verdade.
+    friendship_id = client.get("/social/friend-requests", headers=headers_a).json()["requests"][0]["friendship_id"]
+    client.post(f"/social/friend-requests/{friendship_id}/accept", headers=headers_a)
     return headers_a, headers_b
 
 

@@ -200,9 +200,14 @@ TIMED_MULTIPLE_CHOICE_SPEED_BONUS_SLOW_FRACTION = 0.7
 # §4, extensão pedida por Rhoney em 2026-08-21): ultrapassar a PRÓPRIA
 # meta paga este bônus extra, uma vez por ciclo, além do bônus por faixa
 # de MOVEMENT_STEP_TIERS — recompensa superar o que a pessoa se propôs,
-# não o volume absoluto (que a faixa já cobre). Sem teto mínimo/máximo de
-# meta imposto aqui — só validação de "maior que zero" no schema.
+# não o volume absoluto (que a faixa já cobre).
 MOVEMENT_GOAL_BONUS_XP = 50
+# Achado de auditoria de segurança (28/08/2026): só validava "maior que
+# zero" — uma meta de 1 passo garantia o bônus com esforço zero, todo
+# ciclo. Piso alinhado com o menor patamar real de MOVEMENT_STEP_TIERS
+# (2000 passos já rende o multiplicador mínimo x1 ali) — abaixo disso a
+# "meta" deixa de significar qualquer esforço de verdade.
+MOVEMENT_MIN_DAILY_GOAL_STEPS = 2000
 
 # Checkpoints intradiários (STEP_COUNTER_MOVIMENTO.md §4, extensão pedida
 # por Rhoney em 2026-08-21): divide as 24h do ciclo em partes iguais.

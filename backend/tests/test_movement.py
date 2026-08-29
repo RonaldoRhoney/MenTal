@@ -260,6 +260,27 @@ def test_daily_goal_rejects_zero_or_negative(client):
     assert resp.status_code == 422
 
 
+def test_daily_goal_rejects_trivial_value_below_minimum(client):
+    """
+    Achado de auditoria de segurança (28/08/2026): só validava "maior
+    que zero" — uma meta de 1 passo garantia o bônus de meta
+    (config.MOVEMENT_GOAL_BONUS_XP) com esforço zero, todo ciclo.
+    """
+    from app.config import MOVEMENT_MIN_DAILY_GOAL_STEPS
+
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    resp = client.put("/movement/goal", json={"daily_goal_steps": 1}, headers=headers)
+    assert resp.status_code == 422
+
+    at_minimum = client.put(
+        "/movement/goal", json={"daily_goal_steps": MOVEMENT_MIN_DAILY_GOAL_STEPS}, headers=headers
+    )
+    assert at_minimum.status_code == 200
+
+
 def test_goal_bonus_awarded_once_when_crossing_threshold(client):
     """
     STEP_COUNTER_MOVIMENTO.md §4 (extensão, 2026-08-21): ultrapassar a

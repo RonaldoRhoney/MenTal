@@ -174,6 +174,21 @@ class ApiClient {
     return _get(_uri('/social/friends'), headers: _headers);
   }
 
+  // Achado de auditoria de segurança (28/08/2026): resgatar o
+  // invite_code não cria mais amizade direto, só um pedido pendente —
+  // precisa do aceite explícito de quem convidou.
+  Future<Map<String, dynamic>> getFriendRequests() async {
+    return _get(_uri('/social/friend-requests'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> acceptFriendRequest(String friendshipId) async {
+    return _post(_uri('/social/friend-requests/$friendshipId/accept'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> declineFriendRequest(String friendshipId) async {
+    return _post(_uri('/social/friend-requests/$friendshipId/decline'), headers: _headers);
+  }
+
   Future<Map<String, dynamic>> rewardShare() async {
     return _post(_uri('/social/share-reward'), headers: _headers);
   }

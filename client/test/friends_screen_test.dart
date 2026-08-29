@@ -24,6 +24,29 @@ class _FakeApiClient extends ApiClient {
   @override
   Future<Map<String, dynamic>> getFriends() async => {'friends': friends};
 
+  // Achado de auditoria de segurança (28/08/2026): resgatar o
+  // invite_code não cria mais amizade direto, só um pedido pendente.
+  List<Map<String, dynamic>> friendRequests = [];
+  String? acceptedFriendshipId;
+  String? declinedFriendshipId;
+
+  @override
+  Future<Map<String, dynamic>> getFriendRequests() async => {'requests': friendRequests};
+
+  @override
+  Future<Map<String, dynamic>> acceptFriendRequest(String friendshipId) async {
+    acceptedFriendshipId = friendshipId;
+    friendRequests = [];
+    return {'status': 'accepted'};
+  }
+
+  @override
+  Future<Map<String, dynamic>> declineFriendRequest(String friendshipId) async {
+    declinedFriendshipId = friendshipId;
+    friendRequests = [];
+    return {'status': 'declined'};
+  }
+
   @override
   Future<Map<String, dynamic>> addFriend(String inviteCode) async {
     addedCodes.add(inviteCode);
@@ -31,7 +54,7 @@ class _FakeApiClient extends ApiClient {
     friends = [
       {'user_id': 'friend-user-id', 'nickname': 'Amigo Novo', 'xp_total': 50, 'level': 1},
     ];
-    return {'status': 'ok'};
+    return {'status': 'pending'};
   }
 }
 
@@ -102,5 +125,37 @@ void main() {
     // FeedbackService/PushService.
     await tester.tap(find.text('Indicar'));
     await tester.pump();
+  });
+
+  testWidgets('mostra pedidos de amizade pendentes e permite aceitar', (tester) async {
+    final client = _FakeApiClient()
+      ..friendRequests = [
+        {'friendship_id': 'req-1', 'from_user_id': 'someone', 'from_nickname': 'Fulano'},
+      ];
+    await _pumpFriendsScreen(tester, client);
+
+    expect(find.text('Fulano'), findsOneWidget);
+    expect(find.text('Aceitar'), findsOneWidget);
+    expect(find.text('Recusar'), findsOneWidget);
+
+    await tester.tap(find.text('Aceitar'));
+    await tester.pumpAndSettle();
+
+    expect(client.acceptedFriendshipId, 'req-1');
+    expect(find.text('Fulano'), findsNothing);
+  });
+
+  testWidgets('permite recusar um pedido de amizade pendente', (tester) async {
+    final client = _FakeApiClient()
+      ..friendRequests = [
+        {'friendship_id': 'req-2', 'from_user_id': 'someone', 'from_nickname': 'Beltrano'},
+      ];
+    await _pumpFriendsScreen(tester, client);
+
+    await tester.tap(find.text('Recusar'));
+    await tester.pumpAndSettle();
+
+    expect(client.declinedFriendshipId, 'req-2');
+    expect(find.text('Beltrano'), findsNothing);
   });
 }

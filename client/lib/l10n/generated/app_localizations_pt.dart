@@ -474,6 +474,19 @@ class AppLocalizationsPt extends AppLocalizations {
   String get friendsListTitle => 'Seus amigos';
 
   @override
+  String get friendRequestsTitle => 'Pedidos de amizade';
+
+  @override
+  String get friendRequestSentMessage =>
+      'Pedido de amizade enviado! A pessoa precisa aceitar.';
+
+  @override
+  String get friendRequestAcceptButton => 'Aceitar';
+
+  @override
+  String get friendRequestDeclineButton => 'Recusar';
+
+  @override
   String get friendsEmptyMessage =>
       'Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.';
 
