@@ -761,6 +761,24 @@
   "settingsSignOutButton": "Sair",
   "@settingsSignOutButton": {"description": "Sign out button in settings screen"},
 
+  "settingsDeleteAccountButton": "Excluir minha conta",
+  "@settingsDeleteAccountButton": {"description": "Delete account button in settings screen"},
+
+  "settingsDeleteAccountConfirmTitle": "Excluir sua conta?",
+  "@settingsDeleteAccountConfirmTitle": {"description": "Title of the account deletion confirmation dialog"},
+
+  "settingsDeleteAccountConfirmMessage": "Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Não é possível desfazer.",
+  "@settingsDeleteAccountConfirmMessage": {"description": "Body of the account deletion confirmation dialog"},
+
+  "settingsDeleteAccountConfirmButton": "Excluir permanentemente",
+  "@settingsDeleteAccountConfirmButton": {"description": "Confirm button inside the account deletion dialog"},
+
+  "settingsDeleteAccountCancelButton": "Cancelar",
+  "@settingsDeleteAccountCancelButton": {"description": "Cancel button inside the account deletion dialog"},
+
+  "settingsDeleteAccountUnavailableError": "Exclusão de conta indisponível no momento. Tente novamente mais tarde ou entre em contato pelo e-mail de suporte.",
+  "@settingsDeleteAccountUnavailableError": {"description": "Shown when account deletion is not available in this environment (ACCOUNT_DELETION_UNAVAILABLE)"},
+
   "loginGoogleButton": "Continuar com Google",
   "@loginGoogleButton": {"description": "Google OAuth sign-in button"},
 

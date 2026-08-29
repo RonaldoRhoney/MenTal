@@ -35,38 +35,25 @@ router = APIRouter()
 _ALLOWED_PHOTO_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
 
 
-def _is_valid_photo_url(url: str, user_id: str) -> bool:
+def _is_valid_photo_path(path: str, user_id: str) -> bool:
     """
-    Validação leve, só de forma da URL — confirma que aponta pro bucket
-    público esperado do próprio projeto Supabase, pra dentro da PRÓPRIA
-    pasta do usuário autenticado (mesma regra que a policy de escrita do
-    Storage já aplica: auth.uid()::text = (storage.foldername(name))[1]),
-    e tem uma extensão de imagem permitida. NÃO inspeciona o conteúdo
-    real do arquivo (magic bytes) — validação de conteúdo de verdade
-    ficaria a cargo de uma Storage Edge Function/webhook, fora do escopo
-    desta etapa.
+    Validação leve, só de forma do path — confirma que aponta pra
+    DENTRO DA PRÓPRIA pasta do usuário autenticado (mesma regra que a
+    policy de escrita do Storage já aplica: auth.uid()::text =
+    (storage.foldername(name))[1]) e tem uma extensão de imagem
+    permitida. NÃO inspeciona o conteúdo real do arquivo (magic bytes)
+    — validação de conteúdo de verdade ficaria a cargo de uma Storage
+    Edge Function/webhook, fora do escopo desta etapa.
 
-    Achado de auditoria de segurança (28/08/2026): antes só conferia o
-    prefixo do bucket + extensão — um usuário podia mandar
-    `PUT /profile {"photo_url": ".../profile-photos/{uid_de_outro}/photo.jpg"}`
-    e, depois de aprovado pelo admin, passar a exibir a foto de outra
-    pessoa como se fosse sua no ranking global.
-
-    O client anexa `?t=<timestamp>` (cache-busting: mesmo nome de arquivo
-    é reaproveitado a cada upload via upsert, então sem isso o
-    Image.network do Flutter mostraria a foto antiga em cache) — a
-    extensão e a pasta são checadas só na parte de path, antes da
-    querystring.
+    Revisão 28/08/2026: bucket profile-photos virou privado (DIR-001/
+    POL-002 exigiam isso) — o client agora manda o PATH dentro do
+    bucket (ex.: "{user_id}/photo.jpg"), nunca mais uma URL pública fixa
+    (que nem funcionaria pra leitura num bucket privado). Achado de
+    auditoria de segurança anterior (28/08/2026) continua valendo: sem
+    checar que o path é da PRÓPRIA pasta, um usuário podia "roubar" a
+    foto de outro mandando o path dele.
     """
-    if config.SUPABASE_URL is None:
-        # dev local sem Supabase configurado — ainda assim exige que a
-        # URL aponte pra pasta do próprio usuário, checagem que não
-        # depende de SUPABASE_URL estar setado.
-        expected_prefix = f"/profile-photos/{user_id}/"
-    else:
-        expected_prefix = f"{config.SUPABASE_URL}/storage/v1/object/public/profile-photos/{user_id}/"
-    path = url.split("?", 1)[0]
-    return expected_prefix in url and path.lower().endswith(_ALLOWED_PHOTO_EXTENSIONS)
+    return path.startswith(f"{user_id}/") and path.lower().endswith(_ALLOWED_PHOTO_EXTENSIONS)
 
 
 def _profile_out(profile: models.Profile) -> schemas.ProfileOut:
@@ -74,7 +61,7 @@ def _profile_out(profile: models.Profile) -> schemas.ProfileOut:
         nickname=profile.nickname,
         avatar_id=profile.avatar_id,
         real_name=profile.real_name,
-        photo_url=profile.photo_url,
+        photo_url=services.own_photo_url(profile),
         photo_moderation_status=profile.photo_moderation_status,
         location_state=profile.location_state,
         location_country=profile.location_country,
@@ -116,13 +103,13 @@ def update_profile(
     profile.gender = body.gender
     profile.age_range = body.age_range
 
-    if body.photo_url is not None and body.photo_url != profile.photo_url:
-        if not _is_valid_photo_url(body.photo_url, user_id):
+    if body.photo_path is not None and body.photo_path != profile.photo_url:
+        if not _is_valid_photo_path(body.photo_path, user_id):
             raise HTTPException(
                 status_code=422,
-                detail={"error": {"code": "INVALID_PHOTO_URL", "message": "URL de foto inválida"}},
+                detail={"error": {"code": "INVALID_PHOTO_URL", "message": "Caminho de foto inválido"}},
             )
-        profile.photo_url = body.photo_url
+        profile.photo_url = body.photo_path
         profile.photo_moderation_status = "pending"
 
     mandatory_fields = [body.real_name, body.location_country, body.city, body.gender, body.age_range]
@@ -145,7 +132,7 @@ def list_pending_profile_photos(user_id: str = Depends(get_current_user_id), db:
         .all()
     )
     return [
-        schemas.AdminPendingPhotoItem(user_id=row.user_id, nickname=row.nickname, photo_url=row.photo_url)
+        schemas.AdminPendingPhotoItem(user_id=row.user_id, nickname=row.nickname, photo_url=services.own_photo_url(row))
         for row in rows
         if row.photo_url is not None
     ]
@@ -169,3 +156,28 @@ def moderate_profile_photo(
     target_profile.photo_moderation_status = "approved" if body.approved else "rejected"
     db.commit()
     return {"ok": True}
+
+
+@router.delete("/profile")
+def delete_profile(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
+    """
+    Exclusão real de conta (auditoria de segurança, 28/08/2026 —
+    DIR-001 item 5, LGPD). Delega ao Supabase Auth via
+    services.delete_account: apagar o usuário lá derruba em cascata
+    profile/attempts/friendships/battles/etc. no Postgres (FKs `on
+    delete cascade`, migrations/001_initial_schema.sql). 501 (não 500)
+    quando SUPABASE_SERVICE_ROLE_KEY não está configurado — é uma
+    limitação de ambiente conhecida, não um erro do pedido do usuário.
+    """
+    if config.SUPABASE_SERVICE_ROLE_KEY is None:
+        raise HTTPException(
+            status_code=501,
+            detail={"error": {"code": "ACCOUNT_DELETION_UNAVAILABLE", "message": "Exclusão de conta indisponível neste ambiente no momento."}},
+        )
+    ok = services.delete_account(db, user_id)
+    if not ok:
+        raise HTTPException(
+            status_code=502,
+            detail={"error": {"code": "ACCOUNT_DELETION_FAILED", "message": "Não foi possível excluir a conta agora. Tente novamente."}},
+        )
+    return {"status": "deleted"}

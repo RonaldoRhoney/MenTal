@@ -98,16 +98,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
         File(picked.path),
         fileOptions: const FileOptions(upsert: true),
       );
-      final publicUrl = storage.getPublicUrl(path);
-      // Sufixo de cache-busting: o backend valida só a forma da URL
-      // (prefixo + extensão), então o parâmetro extra não quebra
-      // _is_valid_photo_url, e evita que o Image.network fique preso no
-      // cache de uma foto antiga com o mesmo nome de arquivo.
-      final bustedUrl = '$publicUrl?t=${DateTime.now().millisecondsSinceEpoch}';
-
+      // Achado de auditoria de segurança (28/08/2026): bucket
+      // profile-photos virou privado — não existe mais "URL pública"
+      // pra ler (getPublicUrl não funcionaria pra leitura). Manda só o
+      // PATH; o backend devolve uma URL assinada de curta duração pra
+      // exibição (services.own_photo_url), gerada sob demanda — não
+      // precisa mais de cache-busting manual, já que o token da URL
+      // assinada muda a cada chamada.
       final updated = await widget.client.updateProfile(
         realName: _realNameController.text.trim().isEmpty ? null : _realNameController.text.trim(),
-        photoUrl: bustedUrl,
+        photoPath: path,
         locationState: _stateController.text.trim().isEmpty ? null : _stateController.text.trim(),
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
         locationPublic: _locationPublic,
@@ -133,7 +133,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
     try {
       await widget.client.updateProfile(
         realName: _realNameController.text.trim().isEmpty ? null : _realNameController.text.trim(),
-        photoUrl: _photoUrl,
+        // photoPath fica de fora aqui de propósito: este botão só salva
+        // nome/localização. A foto é enviada separadamente em
+        // _pickAndUploadPhoto — reenviar _photoUrl aqui mandaria a URL
+        // assinada de exibição como se fosse um path, o que falharia
+        // na validação do backend.
         locationState: _stateController.text.trim().isEmpty ? null : _stateController.text.trim(),
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
         locationPublic: _locationPublic,

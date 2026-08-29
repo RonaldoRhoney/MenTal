@@ -20,6 +20,14 @@ DEFAULT_LANGUAGE_CODE = "pt-BR"
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET")
 
+# Achado de auditoria de segurança (28/08/2026): sem isso, não havia
+# como o backend gerar URL assinada pro bucket de fotos (que era público
+# só por essa limitação) nem excluir de verdade a conta de um usuário no
+# Supabase Auth (LGPD/DIR-001 §item 5) — ambos exigem uma credencial com
+# privilégio de admin, nunca a chave publishable usada pelo client.
+# NUNCA logar/expor este valor; usado só em supabase_admin.py.
+SUPABASE_SERVICE_ROLE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+
 # Achado de auditoria de segurança (28/08/2026): sem SUPABASE_URL nem
 # SUPABASE_JWT_SECRET, auth.py cai no modo DEV_INSECURE (token = user_id em
 # texto puro, sem verificar assinatura nenhuma) — se qualquer uma dessas

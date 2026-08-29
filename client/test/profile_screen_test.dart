@@ -39,7 +39,7 @@ class _FakeApiClient extends ApiClient {
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,
-    String? photoUrl,
+    String? photoPath,
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
@@ -49,7 +49,7 @@ class _FakeApiClient extends ApiClient {
   }) async {
     lastUpdate = {
       'real_name': realName,
-      'photo_url': photoUrl,
+      'photo_path': photoPath,
       'location_state': locationState,
       'location_country': locationCountry,
       'location_public': locationPublic,
@@ -104,7 +104,7 @@ void main() {
 
     expect(client.lastUpdate, {
       'real_name': 'Fulano de Tal',
-      'photo_url': null,
+      'photo_path': null,
       'location_state': 'SP',
       'location_country': 'Brasil',
       'location_public': true,

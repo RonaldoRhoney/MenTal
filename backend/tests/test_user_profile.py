@@ -81,17 +81,32 @@ def test_real_name_appears_publicly_in_friends_list(client):
     assert friends[0]["avatar_id"] == "fox"
 
 
-def test_photo_url_only_appears_publicly_after_admin_approval(client):
-    """USER_PROFILE.md §3.1 — fail-closed: foto pendente/rejeitada nunca
-    aparece pra outros usuários, só depois de aprovada por um admin."""
+def test_photo_url_only_appears_publicly_after_admin_approval(client, monkeypatch):
+    """
+    USER_PROFILE.md §3.1 — fail-closed: foto pendente/rejeitada nunca
+    aparece pra outros usuários, só depois de aprovada por um admin.
+
+    Revisão 28/08/2026 (bucket privado): photo_url na resposta agora é
+    sempre uma URL ASSINADA gerada por services.own_photo_url/
+    public_photo_url via supabase_admin — sem SUPABASE_SERVICE_ROLE_KEY
+    configurado (ambiente de teste local), essa chamada real ao
+    Supabase não existe, então o teste monkeypatcha
+    create_signed_photo_url pra simular a assinatura sem precisar de
+    rede/credencial real, mantendo o foco no que este teste prova de
+    verdade: a transição pending → approved.
+    """
+    from app import supabase_admin
+
+    monkeypatch.setattr(supabase_admin, "create_signed_photo_url", lambda path, expires_in_seconds=3600: f"https://signed.example/{path}")
+
     user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a = auth_header(user_a)
     headers_b = auth_header(user_b)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
 
-    photo_url = f"{config.SUPABASE_URL or 'https://fake.supabase.co'}/storage/v1/object/public/profile-photos/{user_b}/photo.jpg"
-    client.put("/profile", json={"photo_url": photo_url}, headers=headers_b)
+    photo_path = f"{user_b}/photo.jpg"
+    client.put("/profile", json={"photo_path": photo_path}, headers=headers_b)
 
     code = client.get("/social/invite-code", headers=headers_a).json()["invite_code"]
     client.post("/social/friends", json={"invite_code": code}, headers=headers_b)
@@ -107,16 +122,17 @@ def test_photo_url_only_appears_publicly_after_admin_approval(client):
         db.commit()
 
     friends_after = client.get("/social/friends", headers=headers_a).json()["friends"]
-    assert friends_after[0]["photo_url"] == photo_url
+    assert friends_after[0]["photo_url"] == f"https://signed.example/{photo_path}"
 
 
-def test_photo_url_pointing_to_another_users_folder_is_rejected(client):
+def test_photo_path_pointing_to_another_users_folder_is_rejected(client):
     """
-    Achado de auditoria de segurança (28/08/2026): _is_valid_photo_url só
-    conferia prefixo do bucket + extensão — um usuário podia mandar a URL
-    da foto de OUTRO usuário (já aprovada) como se fosse sua e passar a
-    exibi-la como própria depois de aprovada pelo admin. Agora a URL
-    precisa apontar pra dentro da PRÓPRIA pasta do usuário autenticado.
+    Achado de auditoria de segurança (28/08/2026): _is_valid_photo_path
+    só conferia prefixo do bucket + extensão — um usuário podia mandar o
+    path da foto de OUTRO usuário (já aprovada) como se fosse sua e
+    passar a exibi-la como própria depois de aprovada pelo admin. Agora
+    o path precisa apontar pra dentro da PRÓPRIA pasta do usuário
+    autenticado.
     """
     user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a = auth_header(user_a)
@@ -124,9 +140,9 @@ def test_photo_url_pointing_to_another_users_folder_is_rejected(client):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers_b)
 
-    stolen_photo_url = f"{config.SUPABASE_URL or 'https://fake.supabase.co'}/storage/v1/object/public/profile-photos/{user_b}/photo.jpg"
+    stolen_photo_path = f"{user_b}/photo.jpg"
 
-    resp = client.put("/profile", json={"photo_url": stolen_photo_url}, headers=headers_a)
+    resp = client.put("/profile", json={"photo_path": stolen_photo_path}, headers=headers_a)
     assert resp.status_code == 422
     assert resp.json()["error"]["code"] == "INVALID_PHOTO_URL"
 

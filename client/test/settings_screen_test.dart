@@ -18,6 +18,17 @@ class _FakeApiClient extends ApiClient {
   Map<String, dynamic> preferences = {'reengagement_enabled': true, 'social_enabled': false};
   final List<Map<String, dynamic>> updateCalls = [];
 
+  // Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5, LGPD.
+  ApiException? deleteAccountError;
+  int deleteAccountCalls = 0;
+
+  @override
+  Future<Map<String, dynamic>> deleteAccount() async {
+    deleteAccountCalls++;
+    if (deleteAccountError != null) throw deleteAccountError!;
+    return {'status': 'deleted'};
+  }
+
   @override
   Future<Map<String, dynamic>> getNotificationPreferences() async => preferences;
 
@@ -122,5 +133,102 @@ void main() {
 
     expect(find.text('abrir configurações'), findsOneWidget, reason: 'a pilha deve voltar pra raiz, revelando a tela de baixo');
     expect(find.text('Sair'), findsNothing);
+  });
+
+  // Empilha SettingsScreen sobre uma tela-raiz de mentira, igual ao
+  // fluxo real (chega via Navigator.push a partir da Home) — achado
+  // real ao escrever o teste de exclusão de conta: com SettingsScreen
+  // diretamente como `home:`, popUntil(isFirst) não navega pra lugar
+  // nenhum (já é a raiz), o widget nunca desmonta, e o
+  // CircularProgressIndicator do botão de exclusão continua girando
+  // pra sempre — pumpAndSettle() nunca retorna. Mesmo princípio já
+  // documentado no teste de "Sair" logo acima.
+  Future<void> pumpSettingsScreenPushed(WidgetTester tester, ApiClient client, {Future<void> Function()? signOut}) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: Builder(
+          builder: (context) => Scaffold(
+            body: Center(
+              child: FilledButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => SettingsScreen(client: client, signOut: signOut ?? () async {}),
+                  ),
+                ),
+                child: const Text('abrir configurações'),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('abrir configurações'));
+    await tester.pumpAndSettle();
+  }
+
+  testWidgets('excluir conta pede confirmação e, ao confirmar, chama a API e encerra a sessão', (tester) async {
+    final client = _FakeApiClient();
+    var signOutCalled = false;
+    await pumpSettingsScreenPushed(tester, client, signOut: () async => signOutCalled = true);
+
+    await tester.scrollUntilVisible(find.text('Excluir minha conta'), 100);
+    await tester.ensureVisible(find.text('Excluir minha conta'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Excluir minha conta'));
+    await tester.pumpAndSettle();
+
+    // Diálogo de confirmação aparece — ainda não chamou a API.
+    expect(find.text('Excluir sua conta?'), findsOneWidget);
+    expect(client.deleteAccountCalls, 0);
+
+    await tester.tap(find.text('Excluir permanentemente'));
+    await tester.pumpAndSettle();
+
+    expect(client.deleteAccountCalls, 1);
+    expect(signOutCalled, isTrue);
+  });
+
+  testWidgets('cancelar o diálogo de exclusão não chama a API', (tester) async {
+    final client = _FakeApiClient();
+    await pumpSettingsScreenPushed(tester, client);
+
+    await tester.scrollUntilVisible(find.text('Excluir minha conta'), 100);
+    await tester.ensureVisible(find.text('Excluir minha conta'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Excluir minha conta'));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Cancelar'));
+    await tester.pumpAndSettle();
+
+    expect(client.deleteAccountCalls, 0);
+    expect(find.text('Excluir sua conta?'), findsNothing);
+  });
+
+  testWidgets('exclusão indisponível mostra mensagem amigável, sem travar a tela', (tester) async {
+    final client = _FakeApiClient()
+      ..deleteAccountError = ApiException(statusCode: 501, code: 'ACCOUNT_DELETION_UNAVAILABLE', message: 'unavailable');
+    await pumpSettingsScreenPushed(tester, client);
+
+    await tester.scrollUntilVisible(find.text('Excluir minha conta'), 100);
+    await tester.ensureVisible(find.text('Excluir minha conta'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Excluir minha conta'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Excluir permanentemente'));
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('indisponível'), findsOneWidget);
+    // A tela continua utilizável — o botão volta a ficar habilitado.
+    expect(find.widgetWithText(OutlinedButton, 'Excluir minha conta'), findsOneWidget);
   });
 }

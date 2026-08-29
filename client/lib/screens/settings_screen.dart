@@ -43,6 +43,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   bool _reengagementEnabled = true;
   bool _socialEnabled = true;
   String? _notificationsError;
+  bool _deletingAccount = false;
 
   @override
   void initState() {
@@ -78,6 +79,48 @@ class _SettingsScreenState extends State<SettingsScreen> {
       );
     } on ApiException catch (e) {
       if (mounted) setState(() => _notificationsError = e.message);
+    }
+  }
+
+  // Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5,
+  // LGPD: exclusão real de conta, não só zerar campos. Confirmação
+  // explícita (é irreversível) antes de chamar a API; em sucesso,
+  // mesmo padrão de "Sair" logo abaixo — esvazia a pilha de navegação
+  // primeiro pra revelar a tela de Login por baixo, só então encerra a
+  // sessão local (o backend já apagou a conta do lado dele).
+  Future<void> _deleteAccount() async {
+    final l10n = AppLocalizations.of(context)!;
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Text(l10n.settingsDeleteAccountConfirmTitle),
+        content: Text(l10n.settingsDeleteAccountConfirmMessage),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: Text(l10n.settingsDeleteAccountCancelButton),
+          ),
+          FilledButton(
+            style: FilledButton.styleFrom(backgroundColor: AppColors.error),
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: Text(l10n.settingsDeleteAccountConfirmButton),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true || !mounted) return;
+
+    setState(() => _deletingAccount = true);
+    try {
+      await widget.client.deleteAccount();
+      if (!mounted) return;
+      Navigator.of(context).popUntil((route) => route.isFirst);
+      unawaited(widget.signOut().catchError((_) {}));
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      final message = e.code == 'ACCOUNT_DELETION_UNAVAILABLE' ? l10n.settingsDeleteAccountUnavailableError : e.message;
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+      setState(() => _deletingAccount = false);
     }
   }
 
@@ -169,6 +212,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       unawaited(widget.signOut().catchError((_) {}));
                     },
                     child: Text(l10n.settingsSignOutButton),
+                  ),
+                  const SizedBox(height: 12),
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(foregroundColor: AppColors.error, side: const BorderSide(color: AppColors.error)),
+                    onPressed: _deletingAccount ? null : _deleteAccount,
+                    child: _deletingAccount
+                        ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))
+                        : Text(l10n.settingsDeleteAccountButton),
                   ),
                 ],
               ),

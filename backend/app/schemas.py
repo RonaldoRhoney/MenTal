@@ -410,9 +410,11 @@ class ProfileOut(BaseModel):
     # RankingEntry/BattleOut (decisão de Rhoney, reverte a regra
     # anterior de "nunca público").
     real_name: str | None
-    # Upload de foto real (26/08/2026) — photo_url é a URL pública no
-    # Storage; photo_moderation_status é sempre visível pro PRÓPRIO
-    # dono (pra ele saber se está pendente/aprovada/rejeitada), mas só
+    # Upload de foto real (26/08/2026, bucket privado desde 28/08/2026)
+    # — photo_url aqui é sempre uma URL ASSINADA de curta duração
+    # (services.own_photo_url), gerada na hora, nunca um link fixo.
+    # photo_moderation_status é sempre visível pro PRÓPRIO dono (pra ele
+    # saber se está pendente/aprovada/rejeitada), mas o link em si só
     # aparece pra outros usuários (Friends/Ranking/Battles) quando
     # 'approved' — USER_PROFILE.md §3.1, fail-closed.
     photo_url: str | None
@@ -452,9 +454,12 @@ class UpdateProfileRequest(BaseModel):
     gender: GenderValue | None = None
     age_range: AgeRangeValue | None = None
     # Upload de foto real (26/08/2026) — client já fez o upload direto
-    # pro Supabase Storage e manda aqui a URL pública resultante. Uma URL
-    # nova (diferente da já salva) reseta a moderação pra 'pending'.
-    photo_url: str | None = None
+    # pro Supabase Storage e manda aqui o PATH resultante dentro do
+    # bucket (ex.: "{user_id}/photo.jpg"), nunca uma URL — bucket
+    # privado desde 28/08/2026 (DIR-001/POL-002), então uma URL pública
+    # fixa não faria mais sentido nem funcionaria pra leitura. Um path
+    # novo (diferente do já salvo) reseta a moderação pra 'pending'.
+    photo_path: str | None = None
 
 
 class ModerateProfilePhotoRequest(BaseModel):
@@ -464,4 +469,22 @@ class ModerateProfilePhotoRequest(BaseModel):
 class AdminPendingPhotoItem(BaseModel):
     user_id: str
     nickname: str
-    photo_url: str
+    # URL assinada de curta duração (services.own_photo_url) — o admin
+    # precisa conseguir VER a foto pra moderar, mesmo o bucket sendo
+    # privado.
+    photo_url: str | None = None
+
+
+class ReportUserRequest(BaseModel):
+    reported_user_id: str
+    reason: str = Field(max_length=500)
+
+
+class AdminReportItem(BaseModel):
+    id: str
+    reporter_user_id: str
+    reported_user_id: str
+    reported_nickname: str
+    reported_photo_url: str | None = None
+    reason: str
+    created_at: datetime

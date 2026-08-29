@@ -719,6 +719,26 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsSignOutButton => 'Sair';
 
   @override
+  String get settingsDeleteAccountButton => 'Excluir minha conta';
+
+  @override
+  String get settingsDeleteAccountConfirmTitle => 'Excluir sua conta?';
+
+  @override
+  String get settingsDeleteAccountConfirmMessage =>
+      'Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Não é possível desfazer.';
+
+  @override
+  String get settingsDeleteAccountConfirmButton => 'Excluir permanentemente';
+
+  @override
+  String get settingsDeleteAccountCancelButton => 'Cancelar';
+
+  @override
+  String get settingsDeleteAccountUnavailableError =>
+      'Exclusão de conta indisponível no momento. Tente novamente mais tarde ou entre em contato pelo e-mail de suporte.';
+
+  @override
   String get loginGoogleButton => 'Continuar com Google';
 
   @override

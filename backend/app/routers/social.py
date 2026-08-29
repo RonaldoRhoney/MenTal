@@ -5,7 +5,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import models, schemas, services
-from ..auth import require_age_confirmed_user_id
+from ..auth import get_current_user_id, require_age_confirmed_user_id
 from ..db import get_db
 
 router = APIRouter()
@@ -168,3 +168,44 @@ def reward_share(user_id: str = Depends(require_age_confirmed_user_id), db: Sess
         xp_total=profile.xp_total,
         level=profile.level,
     )
+
+
+# Achado de auditoria de segurança (28/08/2026) — DIR-001 §4/POL-003
+# §2.4 exigem um canal de denúncia pra conteúdo já aprovado (foto/nome)
+# que se revele impróprio depois. Puramente reativo: só registra, não
+# esconde nada sozinho — um admin decide via GET /admin/reports +
+# POST /admin/profile-photos/{id}/moderate (endpoint já existente).
+@router.post("/social/report")
+def report_user(
+    body: schemas.ReportUserRequest,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    if body.reported_user_id == user_id:
+        raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_REPORT_SELF", "message": "Não é possível se autodenunciar."}})
+    services.create_report(db, reporter_user_id=user_id, reported_user_id=body.reported_user_id, reason=body.reason)
+    return {"status": "reported"}
+
+
+@router.get("/admin/reports", response_model=list[schemas.AdminReportItem])
+def list_reports(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
+    admin_profile = db.get(models.Profile, user_id)
+    if admin_profile is None or admin_profile.role != "admin":
+        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
+
+    reports = services.list_unresolved_reports(db)
+    out = []
+    for report in reports:
+        reported_profile = db.get(models.Profile, report.reported_user_id)
+        out.append(
+            schemas.AdminReportItem(
+                id=report.id,
+                reporter_user_id=report.reporter_user_id,
+                reported_user_id=report.reported_user_id,
+                reported_nickname=reported_profile.nickname if reported_profile else "???",
+                reported_photo_url=services.own_photo_url(reported_profile) if reported_profile else None,
+                reason=report.reason,
+                created_at=report.created_at,
+            )
+        )
+    return out

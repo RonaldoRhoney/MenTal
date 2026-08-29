@@ -52,6 +52,9 @@ class ApiClient {
   Future<Map<String, dynamic>> _put(Uri uri, {Map<String, String>? headers, Object? body}) =>
       _wrap(() => _client.put(uri, headers: headers, body: body));
 
+  Future<Map<String, dynamic>> _delete(Uri uri, {Map<String, String>? headers}) =>
+      _wrap(() => _client.delete(uri, headers: headers));
+
   Future<Map<String, dynamic>> _wrap(Future<http.Response> Function() request) async {
     try {
       final resp = await request().timeout(_timeout);
@@ -224,7 +227,12 @@ class ApiClient {
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,
-    String? photoUrl,
+    // Achado de auditoria de segurança (28/08/2026): bucket profile-photos
+    // virou privado — o backend manda de volta uma URL ASSINADA
+    // (photo_url na resposta), mas o que ENVIAMOS pra ele agora é só o
+    // PATH dentro do bucket (ex.: "{user_id}/photo.jpg"), nunca mais a
+    // URL pública completa (que nem funcionaria pra leitura).
+    String? photoPath,
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
@@ -238,7 +246,7 @@ class ApiClient {
       body: jsonEncode({
         'avatar_id': avatarId,
         'real_name': realName,
-        'photo_url': photoUrl,
+        'photo_path': photoPath,
         'location_state': locationState,
         'location_country': locationCountry,
         'location_public': locationPublic,
@@ -305,6 +313,20 @@ class ApiClient {
       _uri('/movement/collect'),
       headers: _headers,
       body: jsonEncode({'steps': steps, 'cycle_id': cycleId}),
+    );
+  }
+
+  // Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5, LGPD.
+  Future<Map<String, dynamic>> deleteAccount() async {
+    return _delete(_uri('/profile'), headers: _headers);
+  }
+
+  // Achado de auditoria de segurança (28/08/2026) — DIR-001 §4/POL-003 §2.4.
+  Future<Map<String, dynamic>> reportUser({required String reportedUserId, required String reason}) async {
+    return _post(
+      _uri('/social/report'),
+      headers: _headers,
+      body: jsonEncode({'reported_user_id': reportedUserId, 'reason': reason}),
     );
   }
 

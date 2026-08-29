@@ -1288,6 +1288,42 @@ abstract class AppLocalizations {
   /// **'Sair'**
   String get settingsSignOutButton;
 
+  /// Delete account button in settings screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Excluir minha conta'**
+  String get settingsDeleteAccountButton;
+
+  /// Title of the account deletion confirmation dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Excluir sua conta?'**
+  String get settingsDeleteAccountConfirmTitle;
+
+  /// Body of the account deletion confirmation dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Não é possível desfazer.'**
+  String get settingsDeleteAccountConfirmMessage;
+
+  /// Confirm button inside the account deletion dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Excluir permanentemente'**
+  String get settingsDeleteAccountConfirmButton;
+
+  /// Cancel button inside the account deletion dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Cancelar'**
+  String get settingsDeleteAccountCancelButton;
+
+  /// Shown when account deletion is not available in this environment (ACCOUNT_DELETION_UNAVAILABLE)
+  ///
+  /// In pt, this message translates to:
+  /// **'Exclusão de conta indisponível no momento. Tente novamente mais tarde ou entre em contato pelo e-mail de suporte.'**
+  String get settingsDeleteAccountUnavailableError;
+
   /// Google OAuth sign-in button
   ///
   /// In pt, this message translates to:

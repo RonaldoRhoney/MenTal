@@ -4,7 +4,7 @@ from datetime import date, datetime, timedelta
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from . import config, models, notification_copy, push, scoring
+from . import config, models, notification_copy, push, scoring, supabase_admin
 from .nickname import generate_anonymous_nickname
 from .timeutil import naive, utcnow
 
@@ -867,11 +867,75 @@ def _notify_battle_result(challenger_profile: "models.Profile", opponent_profile
         push.send_push_notification(me.push_token, title, body)
 
 
+def extract_photo_storage_path(stored_value: str) -> str:
+    """
+    profile.photo_url guarda o PATH dentro do bucket (`{user_id}/photo.
+    ext`), não mais a URL pública completa — desde a revisão de
+    28/08/2026 (bucket profile-photos virou privado, DIR-001/POL-002).
+    Tolera valores antigos (URL completa, com ou sem `?t=` de
+    cache-busting) já gravados antes dessa mudança, extraindo só o
+    trecho depois de "profile-photos/".
+    """
+    marker = "profile-photos/"
+    if marker in stored_value:
+        stored_value = stored_value.split(marker, 1)[1]
+    return stored_value.split("?", 1)[0]
+
+
 def public_photo_url(profile: models.Profile) -> str | None:
     """
     Foto de perfil só é exibida pra OUTROS usuários (friends/ranking/
     battles) quando aprovada na moderação (USER_PROFILE.md §3.1,
     fail-closed) — pendente ou rejeitada nunca vaza pra fora do próprio
-    dono (que vê o status real via GET /profile).
+    dono (que vê o status real via GET /profile). Bucket privado desde
+    28/08/2026: a "URL" agora é sempre uma URL assinada de curta
+    duração, gerada sob demanda — nunca mais a URL pública fixa.
     """
-    return profile.photo_url if profile.photo_moderation_status == "approved" else None
+    if profile.photo_moderation_status != "approved" or not profile.photo_url:
+        return None
+    return supabase_admin.create_signed_photo_url(extract_photo_storage_path(profile.photo_url))
+
+
+def own_photo_url(profile: models.Profile) -> str | None:
+    """
+    Diferente de public_photo_url: o PRÓPRIO dono pode ver a própria
+    foto mesmo enquanto 'pending'/'rejected' (é o preview que
+    profile_screen.dart mostra, com o aviso de status ao lado) — só
+    outros usuários passam pelo filtro de moderação.
+    """
+    if not profile.photo_url:
+        return None
+    return supabase_admin.create_signed_photo_url(extract_photo_storage_path(profile.photo_url))
+
+
+def delete_account(db: Session, user_id: str) -> bool:
+    """
+    Exclusão real de conta (auditoria de segurança, 28/08/2026 —
+    DIR-001 item 5, LGPD). Remove o arquivo do bucket (melhor esforço)
+    e delega a exclusão de verdade ao Supabase Auth
+    (supabase_admin.delete_auth_user) — todas as tabelas mental.*
+    referenciam auth.users(id) com `on delete cascade`
+    (migrations/001_initial_schema.sql), então apagar o usuário lá
+    apaga profile/attempts/friendships/battles/etc. em cascata no
+    Postgres, sem precisar de nenhum DELETE manual tabela por tabela
+    aqui. Retorna False (sem apagar nada) se SUPABASE_SERVICE_ROLE_KEY
+    não estiver configurado — o endpoint decide como reagir (501).
+    """
+    profile = db.get(models.Profile, user_id)
+    if profile is not None and profile.photo_url:
+        supabase_admin.delete_photo_object(extract_photo_storage_path(profile.photo_url))
+    return supabase_admin.delete_auth_user(user_id)
+
+
+def create_report(db: Session, reporter_user_id: str, reported_user_id: str, reason: str) -> models.Report:
+    report = models.Report(reporter_user_id=reporter_user_id, reported_user_id=reported_user_id, reason=reason)
+    db.add(report)
+    db.commit()
+    db.refresh(report)
+    return report
+
+
+def list_unresolved_reports(db: Session) -> list[models.Report]:
+    return db.execute(
+        select(models.Report).where(models.Report.resolved.is_(False)).order_by(models.Report.created_at.desc())
+    ).scalars().all()

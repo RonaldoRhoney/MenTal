@@ -528,3 +528,24 @@ class Battle(Base):
     winner_user_id: Mapped[str | None] = mapped_column(UUIDType, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     resolved_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+
+
+class Report(Base):
+    """
+    Canal de denúncia (auditoria de segurança, 28/08/2026) — DIR-001 §4
+    e POL-003 §2.4 exigem que um usuário consiga reportar conteúdo já
+    aprovado (foto/nome) que se revele impróprio depois. Puramente
+    reativo: não dispara nenhuma ação automática (não esconde a foto
+    sozinho) — um admin revisa via GET /admin/reports e decide,
+    aprovando/rejeitando a foto do lado de /admin/profile-photos como
+    já existia.
+    """
+
+    __tablename__ = "reports"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    reporter_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    reported_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    reason: Mapped[str] = mapped_column(Text)
+    resolved: Mapped[bool] = mapped_column(Boolean, default=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
