@@ -949,4 +949,13 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get movementValleyLabel => 'vale';
+
+  @override
+  String get photoSourceCameraOption => 'Tirar foto';
+
+  @override
+  String get photoSourceGalleryOption => 'Escolher da galeria';
+
+  @override
+  String get photoCropToolbarTitle => 'Ajustar foto';
 }

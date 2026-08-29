@@ -42,7 +42,7 @@ Future<void> _pump(
   WidgetTester tester,
   ApiClient client,
   VoidCallback onDone, {
-  Future<String?> Function()? pickAndUploadPhoto,
+  Future<String?> Function(BuildContext)? pickAndUploadPhoto,
 }) async {
   // Tela virtual bem mais alta que o normal: a lista tem bastante
   // conteúdo (foto + 3 campos + gênero + faixa etária + botão) e não
@@ -68,7 +68,7 @@ Future<void> _pump(
       home: MandatoryOnboardingScreen(
         client: client,
         onDone: onDone,
-        pickAndUploadPhoto: pickAndUploadPhoto ?? () async => 'fake-user-id/photo.jpg',
+        pickAndUploadPhoto: pickAndUploadPhoto ?? (_) async => 'fake-user-id/photo.jpg',
       ),
     ),
   );

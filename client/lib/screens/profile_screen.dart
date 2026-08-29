@@ -1,11 +1,9 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../services/photo_picker_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/profile_photo.dart';
 
@@ -79,8 +77,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Future<void> _pickAndUploadPhoto() async {
     final l10n = AppLocalizations.of(context)!;
-    final picked = await ImagePicker().pickImage(source: ImageSource.gallery, imageQuality: 85);
-    if (picked == null) return;
+    // 29/08/2026 (pedido de Rhoney): tirar foto na hora (câmera) além de
+    // escolher da galeria, e recortar antes de salvar — PhotoPickerService
+    // cobre as duas etapas (fonte + recorte 1:1), devolvendo um File já
+    // pronto pra upload.
+    final croppedFile = await PhotoPickerService.pickAndCrop(context);
+    if (croppedFile == null || !mounted) return;
 
     final userId = Supabase.instance.client.auth.currentUser?.id;
     if (userId == null) return;
@@ -96,15 +98,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
     // mensagem de erro específica + debugPrint da exceção real (visível
     // via `adb logcat`/`flutter logs`, nunca exposto na UI).
     //
-    // Extensão do arquivo escolhido: alguns pickers de galeria Android
-    // (conteúdo vindo de content:// resolvers de apps como Google
-    // Fotos) devolvem um path SEM extensão reconhecível — `.jpg`/etc.
-    // — o que resultava num path tipo "user-id/photo." (extensão
-    // vazia), rejeitado pelo backend (_is_valid_photo_path exige uma
-    // das extensões permitidas). Sem extensão válida, assume "jpg" —
-    // a foto foi comprimida pelo ImagePicker (imageQuality: 85), que
-    // sempre reencoda pra JPEG independente do formato original.
-    final rawExt = picked.path.contains('.') ? picked.path.split('.').last.toLowerCase() : '';
+    // Extensão do arquivo: o ImageCropper sempre devolve JPEG
+    // (compressFormat fixado em PhotoPickerService), então "jpg" é
+    // sempre uma extensão válida aqui — mas mantém o fallback por
+    // segurança caso o path do arquivo recortado não tenha extensão
+    // reconhecível por algum motivo específico de plataforma.
+    final rawExt = croppedFile.path.contains('.') ? croppedFile.path.split('.').last.toLowerCase() : '';
     const allowedExtensions = {'jpg', 'jpeg', 'png', 'webp'};
     final ext = allowedExtensions.contains(rawExt) ? rawExt : 'jpg';
     final path = '$userId/photo.$ext';
@@ -113,7 +112,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       final storage = Supabase.instance.client.storage.from('profile-photos');
       await storage.upload(
         path,
-        File(picked.path),
+        croppedFile,
         fileOptions: const FileOptions(upsert: true),
       );
     } catch (e) {

@@ -1,11 +1,9 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../services/photo_picker_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/profile_photo.dart';
 
@@ -28,11 +26,15 @@ class MandatoryOnboardingScreen extends StatefulWidget {
   // usado em SettingsScreen.signOut. Em produção sempre usa o fluxo
   // real de escolher + subir a foto, devolvendo o PATH resultante (ou
   // null se o usuário cancelou o picker / não há sessão).
-  final Future<String?> Function() pickAndUploadPhoto;
+  final Future<String?> Function(BuildContext context) pickAndUploadPhoto;
 
-  static Future<String?> _defaultPickAndUploadPhoto() async {
-    final picked = await ImagePicker().pickImage(source: ImageSource.gallery, imageQuality: 85);
-    if (picked == null) return null;
+  // 29/08/2026 (pedido de Rhoney): tirar foto na hora (câmera) além de
+  // escolher da galeria, e recortar antes de salvar — PhotoPickerService
+  // cobre fonte + recorte 1:1; aqui só o upload em si, igual a
+  // profile_screen.dart.
+  static Future<String?> _defaultPickAndUploadPhoto(BuildContext context) async {
+    final croppedFile = await PhotoPickerService.pickAndCrop(context);
+    if (croppedFile == null) return null;
 
     final userId = Supabase.instance.client.auth.currentUser?.id;
     if (userId == null) return null;
@@ -42,13 +44,13 @@ class MandatoryOnboardingScreen extends StatefulWidget {
     // devolver um path SEM extensão reconhecível — sem esse fallback, o
     // backend rejeitava o path (_is_valid_photo_path exige uma extensão
     // permitida), quebrando o onboarding obrigatório silenciosamente.
-    final rawExt = picked.path.contains('.') ? picked.path.split('.').last.toLowerCase() : '';
+    final rawExt = croppedFile.path.contains('.') ? croppedFile.path.split('.').last.toLowerCase() : '';
     const allowedExtensions = {'jpg', 'jpeg', 'png', 'webp'};
     final ext = allowedExtensions.contains(rawExt) ? rawExt : 'jpg';
     final path = '$userId/photo.$ext';
     await Supabase.instance.client.storage.from('profile-photos').upload(
           path,
-          File(picked.path),
+          croppedFile,
           fileOptions: const FileOptions(upsert: true),
         );
     return path;
@@ -96,8 +98,14 @@ class _MandatoryOnboardingScreenState extends State<MandatoryOnboardingScreen> {
       _error = null;
     });
     try {
-      final path = await widget.pickAndUploadPhoto();
-      if (mounted && path != null) setState(() => _photoPath = path);
+      // widget.pickAndUploadPhoto mostra o bottom sheet de fonte + o
+      // editor de recorte, depois sobe a foto — cobre a etapa inteira
+      // (não só a espera de rede), então o spinner do botão fica visível
+      // por baixo do bottom sheet/editor nativo enquanto o usuário
+      // interage, o que é inofensivo.
+      final path = await widget.pickAndUploadPhoto(context);
+      if (!mounted || path == null) return;
+      setState(() => _photoPath = path);
     } catch (_) {
       if (mounted) setState(() => _error = l10n.profilePhotoUploadError);
     } finally {

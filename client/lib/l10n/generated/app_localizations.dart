@@ -1731,6 +1731,24 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'vale'**
   String get movementValleyLabel;
+
+  /// Bottom sheet option to take a new photo with the camera
+  ///
+  /// In pt, this message translates to:
+  /// **'Tirar foto'**
+  String get photoSourceCameraOption;
+
+  /// Bottom sheet option to pick an existing photo from the gallery
+  ///
+  /// In pt, this message translates to:
+  /// **'Escolher da galeria'**
+  String get photoSourceGalleryOption;
+
+  /// Title of the native photo crop editor screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Ajustar foto'**
+  String get photoCropToolbarTitle;
 }
 
 class _AppLocalizationsDelegate

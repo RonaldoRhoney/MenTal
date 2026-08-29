@@ -984,5 +984,14 @@
   "@movementPeakLabel": {"description": "Peak label for the intraday chart summary"},
 
   "movementValleyLabel": "vale",
-  "@movementValleyLabel": {"description": "Valley label for the intraday chart summary"}
+  "@movementValleyLabel": {"description": "Valley label for the intraday chart summary"},
+
+  "photoSourceCameraOption": "Tirar foto",
+  "@photoSourceCameraOption": {"description": "Bottom sheet option to take a new photo with the camera"},
+
+  "photoSourceGalleryOption": "Escolher da galeria",
+  "@photoSourceGalleryOption": {"description": "Bottom sheet option to pick an existing photo from the gallery"},
+
+  "photoCropToolbarTitle": "Ajustar foto",
+  "@photoCropToolbarTitle": {"description": "Title of the native photo crop editor screen"}
 }

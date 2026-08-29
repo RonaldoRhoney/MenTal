@@ -31,6 +31,7 @@ dependencies:
   url_launcher: ^6.3.0
   # Upload de foto de perfil real (revisão 27/08/2026, substitui avatar emoji).
   image_picker: ^1.1.2
+  image_cropper: ^12.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

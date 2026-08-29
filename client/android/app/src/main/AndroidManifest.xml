@@ -10,6 +10,13 @@
          FirebaseMessaging.requestPermission() já cuida de pedir essa
          permissão em runtime, mas ela precisa estar declarada aqui. -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Foto de perfil (29/08/2026, pedido de Rhoney): "o usuário deve
+         ter a opção de também tirar uma foto" — câmera como fonte
+         alternativa à galeria (image_picker já cobria galeria; tirar
+         foto exige esta permissão declarada, pedida em runtime pelo
+         próprio image_picker na primeira vez que a câmera é usada). -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
     <application
         android:label="MENTAL"
         android:name="${applicationName}"
