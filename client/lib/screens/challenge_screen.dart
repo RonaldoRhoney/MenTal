@@ -486,6 +486,30 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     return _buildChallenge();
   }
 
+  /// Pedido de Rhoney (29/08/2026): "as perguntas e respostas estão muito
+  /// acima na tela... deixe um pouco no centro". Antes, o Expanded +
+  /// SingleChildScrollView deixava o conteúdo colado no topo sempre que
+  /// ele coubesse na tela, sobrando um vazio de fundo escuro embaixo.
+  /// Center dentro de um ConstrainedBox(minHeight: altura do viewport)
+  /// resolve os dois casos: quando o conteúdo cabe, centraliza
+  /// verticalmente; quando não cabe (parágrafos longos de "Textos", por
+  /// exemplo), o ConstrainedBox cresce além do minHeight e o scroll
+  /// funciona normalmente, sem cortar nada. SizedBox(width: infinity)
+  /// preserva o "stretch" horizontal que o Column original já tinha
+  /// (botões/RadioListTile ocupando a largura toda).
+  Widget _verticallyCenteredScroll(Widget child) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(minHeight: constraints.maxHeight),
+            child: Center(child: SizedBox(width: double.infinity, child: child)),
+          ),
+        );
+      },
+    );
+  }
+
   Widget _buildChallenge() {
     final l10n = AppLocalizations.of(context)!;
     final challenge = _challenge!;
@@ -510,8 +534,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         // e estouravam a tela em telas menores — achado antes de gerar o
         // conteúdo, corrigido aqui para qualquer território, não só esse.
         Expanded(
-          child: SingleChildScrollView(
-            child: Column(
+          child: _verticallyCenteredScroll(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 if (challenge['prompt_image'] != null) ...[
@@ -616,8 +640,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         ),
         const SizedBox(height: 24),
         Expanded(
-          child: SingleChildScrollView(
-            child: Column(
+          child: _verticallyCenteredScroll(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 if (challenge['prompt_image'] != null) ...[
@@ -727,8 +751,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(
-          child: SingleChildScrollView(
-            child: Column(
+          child: _verticallyCenteredScroll(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 // Pulso sutil só no acerto (MICROINTERACTIONS.md §3, "Erro:
