@@ -92,6 +92,43 @@ def test_relampago_generalized_to_other_territories_with_curated_options(client)
     assert "correct_answer" not in body
 
 
+def test_relampago_speed_bonus_applies_to_generalized_territories_too(client):
+    """
+    Achado real (29/08/2026, pedido de Rhoney: "quanto menos tempo o
+    jogador acertar melhor será seus pontos"): antes desta correção, o
+    bônus de velocidade só valia pra "palavras"/"conhecimento" (allowlist
+    fixa TIMED_MULTIPLE_CHOICE_TERRITORIES) — um território generalizado
+    como "numeros" mostrava o timer no modo relâmpago mas nunca pagava
+    bônus por resposta rápida. Corrigido: elegibilidade agora vem de
+    attempt.timed (gravado pelo servidor em /next), não mais da lista
+    fixa de territórios.
+    """
+    from app.seed import CHALLENGES
+
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    ch = client.get("/challenges/next", params={"territory_id": "numeros", "mode": "relampago"}, headers=headers).json()
+    correct = next(
+        c["correct_answer"] for c in CHALLENGES
+        if c["territory_id"] == "numeros" and c["prompt"] == ch["prompt"] and c["difficulty_level"] == ch["difficulty_level"]
+    )
+    fast_time = int(ch["time_limit_seconds"] * 1000 * 0.1)
+
+    result = client.post(
+        f"/challenges/{ch['challenge_id']}/answer",
+        json={"attempt_id": ch["attempt_id"], "submitted_answer": correct, "response_time_ms": fast_time},
+        headers=headers,
+    ).json()
+
+    from app import scoring
+
+    xp_base = scoring.xp_base_for(ch["difficulty_level"])
+    assert result["is_correct"] is True
+    assert result["speed_bonus_xp"] == xp_base
+
+
 def test_normal_mode_unaffected_no_time_limit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
@@ -146,9 +183,16 @@ def test_fast_correct_answer_gets_max_speed_bonus(client):
     time_limit_ms = ch["time_limit_seconds"] * 1000
     fast_time = int(time_limit_ms * 0.1)  # bem dentro dos primeiros 30%
 
+    # attempt_id precisa ser o mesmo devolvido por /next (não um uuid
+    # qualquer) — só assim a tentativa carrega attempt.timed=True gravado
+    # no momento em que o desafio foi servido. Achado real (29/08/2026,
+    # ao generalizar o bônus de velocidade pra além da allowlist fixa de
+    # territórios): um attempt_id inventado cai no fallback de
+    # _get_or_create_pending_attempt, que cria a tentativa com
+    # timed=False e mascarava esta asserção usando a checagem antiga.
     result = client.post(
         f"/challenges/{ch['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct, "response_time_ms": fast_time},
+        json={"attempt_id": ch["attempt_id"], "submitted_answer": correct, "response_time_ms": fast_time},
         headers=headers,
     ).json()
 

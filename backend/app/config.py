@@ -181,12 +181,6 @@ MOVEMENT_MAX_STEPS_PER_COLLECTION = 2_500_000
 # único e obrigatório, nunca opcional como em Palavras). Nome genérico de
 # propósito — não é mais um recurso de um território só.
 TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 12, 2: 10, 3: 7}
-# Territórios onde o formato com tempo existe. Em "palavras" é opcional
-# (mode=relampago); em "conhecimento" é obrigatório e único, desde
-# CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22) — nunca formato
-# digitado ali. Usado tanto para decidir o formato de next_challenge
-# quanto para decidir se o bônus de velocidade se aplica em answer.
-TIMED_MULTIPLE_CHOICE_TERRITORIES = {"palavras", "conhecimento"}
 # Só se aplica ao modo OPCIONAL de Palavras (mode=relampago) — nível
 # fácil nunca entra nesse modo lá, decisão fechada na spec original.
 # Conhecimento não tem esse piso: todo nível já usa o formato com tempo,

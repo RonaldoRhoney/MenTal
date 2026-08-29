@@ -146,7 +146,7 @@ def next_challenge(
     # só cria de fato quando o attempt_id não existir ainda — aqui ele
     # sempre não existe (uuid novo), então é sempre uma criação.
     attempt_id = models.new_uuid()
-    services.create_served_attempt(db, attempt_id, user_id, challenge.id)
+    services.create_served_attempt(db, attempt_id, user_id, challenge.id, timed=timed)
 
     return schemas.ChallengeOut(
         challenge_id=challenge.id,
@@ -308,11 +308,14 @@ def submit_answer(
 
     speed_bonus_xp = 0
     time_limit_seconds = config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS.get(challenge.difficulty_level)
-    # CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): generaliza o
-    # bônus de velocidade além de Palavras — mesma regra, agora vale pra
-    # qualquer território do formato com tempo (config.
-    # TIMED_MULTIPLE_CHOICE_TERRITORIES).
-    if is_correct and challenge.territory_id in config.TIMED_MULTIPLE_CHOICE_TERRITORIES and time_limit_seconds:
+    # Generalização do Relâmpago pra todos os territórios (29/08/2026,
+    # pedido de Rhoney: "quanto menos tempo o jogador acertar melhor
+    # será seus pontos"): elegibilidade decidida por attempt.timed
+    # (gravado pelo servidor em GET /challenges/next), não mais pela
+    # allowlist fixa TIMED_MULTIPLE_CHOICE_TERRITORIES — essa allowlist
+    # só cobria os 2 territórios originais e deixava de fora qualquer
+    # outro território jogado em modo relâmpago.
+    if is_correct and attempt.timed and time_limit_seconds:
         speed_bonus_xp = services.compute_speed_bonus_xp(xp_base, server_response_time_ms, time_limit_seconds)
 
     xp_final = xp_from_hints + speed_bonus_xp

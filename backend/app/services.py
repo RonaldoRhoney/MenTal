@@ -589,15 +589,17 @@ def shuffled_options(options: list[str]) -> list[str]:
     return shuffled
 
 
-def create_served_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str) -> models.Attempt:
+def create_served_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str, timed: bool = False) -> models.Attempt:
     """
     Cria a linha de Attempt no momento em que o desafio é de fato
     entregue (GET /challenges/next), com served_at=agora — usado pra
     calcular o tempo de resposta real no servidor em vez de confiar no
     response_time_ms que o client manda em POST /answer (achado de
-    auditoria de segurança, 28/08/2026).
+    auditoria de segurança, 28/08/2026). timed é gravado aqui pelo
+    mesmo motivo — POST /answer usa esse valor (não a lista fixa de
+    territórios) pra decidir se o bônus de velocidade se aplica.
     """
-    attempt = models.Attempt(attempt_id=attempt_id, user_id=user_id, challenge_id=challenge_id, hints_used=0, served_at=utcnow())
+    attempt = models.Attempt(attempt_id=attempt_id, user_id=user_id, challenge_id=challenge_id, hints_used=0, served_at=utcnow(), timed=timed)
     db.add(attempt)
     db.commit()
     db.refresh(attempt)

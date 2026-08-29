@@ -336,6 +336,18 @@ class Attempt(Base):
     # como (agora - served_at) no momento da resposta, nunca mais
     # confiando no valor que o cliente manda.
     served_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    # Generalização do Relâmpago pra todos os territórios (29/08/2026)
+    # expôs uma lacuna: o bônus de velocidade em POST /answer decidia
+    # elegibilidade só por challenge.territory_id (allowlist fixa
+    # TIMED_MULTIPLE_CHOICE_TERRITORIES), então um desafio servido em
+    # modo relâmpago fora de "palavras"/"conhecimento" mostrava o
+    # cronômetro no cliente mas nunca pagava bônus por responder rápido.
+    # Gravado pelo PRÓPRIO SERVIDOR no momento em que o desafio é
+    # entregue (mesmo raciocínio de served_at/response_time_ms — nunca
+    # confiar num flag "isso foi relâmpago" vindo do client em
+    # POST /answer, que poderia ser forjado pra sempre reivindicar
+    # bônus).
+    timed: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
 class LevelFeedback(Base):

@@ -85,9 +85,12 @@ def test_conhecimento_speed_bonus_applies_like_palavras(client):
     correct = next(c["correct_answer"] for c in CHALLENGES if c["territory_id"] == "conhecimento" and c["prompt"] == ch["prompt"])
 
     fast_time = int(ch["time_limit_seconds"] * 1000 * 0.1)
+    # attempt_id precisa ser o de /next (não um uuid qualquer) — só assim
+    # a tentativa carrega attempt.timed=True gravado no momento em que o
+    # desafio foi servido (ver mesmo achado em test_palavras_relampago.py).
     result = client.post(
         f"/challenges/{ch['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct, "response_time_ms": fast_time},
+        json={"attempt_id": ch["attempt_id"], "submitted_answer": correct, "response_time_ms": fast_time},
         headers=headers,
     ).json()
 
