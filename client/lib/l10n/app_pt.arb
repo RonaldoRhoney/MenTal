@@ -362,6 +362,18 @@
   "notificationsSectionTitle": "Notificações",
   "@notificationsSectionTitle": {"description": "Notifications settings section title"},
 
+  "pushPrimingDialogTitle": "Ativar notificações?",
+  "@pushPrimingDialogTitle": {"description": "Title of the priming dialog shown before the system push notification permission prompt"},
+
+  "pushPrimingDialogMessage": "O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Configurações.",
+  "@pushPrimingDialogMessage": {"description": "Explanation shown before asking for the system push notification permission"},
+
+  "pushPrimingDialogAllowButton": "Ativar",
+  "@pushPrimingDialogAllowButton": {"description": "Button that proceeds to the real system permission prompt"},
+
+  "pushPrimingDialogDeclineButton": "Agora não",
+  "@pushPrimingDialogDeclineButton": {"description": "Button that skips the system permission prompt for now"},
+
   "notifReengagementLabel": "Lembretes diários",
   "@notifReengagementLabel": {"description": "Reengagement notification toggle label"},
 
@@ -1030,6 +1042,9 @@
 
   "movementGoalChipCollectHint": "toque p/ coletar",
   "@movementGoalChipCollectHint": {"description": "Sub-label shown on a goal chip when its step threshold has been reached today, indicating a tap collects instead of changing the goal"},
+
+  "photoSourceExplanation": "Sua foto de perfil é obrigatória e passa por moderação antes de aparecer para outros jogadores. Escolha como enviar:",
+  "@photoSourceExplanation": {"description": "Explanation shown above the camera/gallery choice, before the system camera permission prompt appears"},
 
   "photoSourceCameraOption": "Tirar foto",
   "@photoSourceCameraOption": {"description": "Bottom sheet option to take a new photo with the camera"},

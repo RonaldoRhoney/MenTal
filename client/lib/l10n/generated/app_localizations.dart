@@ -646,6 +646,30 @@ abstract class AppLocalizations {
   /// **'Notificações'**
   String get notificationsSectionTitle;
 
+  /// Title of the priming dialog shown before the system push notification permission prompt
+  ///
+  /// In pt, this message translates to:
+  /// **'Ativar notificações?'**
+  String get pushPrimingDialogTitle;
+
+  /// Explanation shown before asking for the system push notification permission
+  ///
+  /// In pt, this message translates to:
+  /// **'O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Configurações.'**
+  String get pushPrimingDialogMessage;
+
+  /// Button that proceeds to the real system permission prompt
+  ///
+  /// In pt, this message translates to:
+  /// **'Ativar'**
+  String get pushPrimingDialogAllowButton;
+
+  /// Button that skips the system permission prompt for now
+  ///
+  /// In pt, this message translates to:
+  /// **'Agora não'**
+  String get pushPrimingDialogDeclineButton;
+
   /// Reengagement notification toggle label
   ///
   /// In pt, this message translates to:
@@ -1821,6 +1845,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'toque p/ coletar'**
   String get movementGoalChipCollectHint;
+
+  /// Explanation shown above the camera/gallery choice, before the system camera permission prompt appears
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua foto de perfil é obrigatória e passa por moderação antes de aparecer para outros jogadores. Escolha como enviar:'**
+  String get photoSourceExplanation;
 
   /// Bottom sheet option to take a new photo with the camera
   ///

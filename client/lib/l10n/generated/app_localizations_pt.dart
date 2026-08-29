@@ -328,6 +328,19 @@ class AppLocalizationsPt extends AppLocalizations {
   String get notificationsSectionTitle => 'Notificações';
 
   @override
+  String get pushPrimingDialogTitle => 'Ativar notificações?';
+
+  @override
+  String get pushPrimingDialogMessage =>
+      'O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Configurações.';
+
+  @override
+  String get pushPrimingDialogAllowButton => 'Ativar';
+
+  @override
+  String get pushPrimingDialogDeclineButton => 'Agora não';
+
+  @override
   String get notifReengagementLabel => 'Lembretes diários';
 
   @override
@@ -998,6 +1011,10 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get movementGoalChipCollectHint => 'toque p/ coletar';
+
+  @override
+  String get photoSourceExplanation =>
+      'Sua foto de perfil é obrigatória e passa por moderação antes de aparecer para outros jogadores. Escolha como enviar:';
 
   @override
   String get photoSourceCameraOption => 'Tirar foto';

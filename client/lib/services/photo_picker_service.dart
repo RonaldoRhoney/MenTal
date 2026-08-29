@@ -36,6 +36,18 @@ class PhotoPickerService {
             const SizedBox(height: 8),
             Container(width: 36, height: 4, decoration: BoxDecoration(color: AppColors.muted.withValues(alpha: 0.4), borderRadius: BorderRadius.circular(2))),
             const SizedBox(height: 12),
+            // Auditoria de conformidade Google Play (29/08/2026, item 4):
+            // antes, tocar em "Tirar foto" ia direto pro diálogo padrão do
+            // sistema pedindo CAMERA, sem nenhuma explicação do app antes.
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                l10n.photoSourceExplanation,
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: AppColors.muted, fontSize: 13),
+              ),
+            ),
+            const SizedBox(height: 8),
             ListTile(
               leading: const Icon(Icons.photo_camera_outlined, color: AppColors.gold),
               title: Text(l10n.photoSourceCameraOption),

@@ -155,7 +155,14 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     if (accessToken != null) {
       // Fire-and-forget: registro de push nunca deve atrasar a navegação
       // pro Age Gate/Home (PushService já é resiliente a qualquer falha).
-      PushService.instance.initializeAndRegister(_client!);
+      // addPostFrameCallback garante que já existe uma árvore de widgets
+      // montada com Navigator (initializeAndRegister agora pode abrir um
+      // diálogo de priming, auditoria de conformidade Google Play,
+      // 29/08/2026, item 4) — chamar direto do initState, antes do
+      // primeiro frame, quebraria isso.
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) PushService.instance.initializeAndRegister(_client!, context);
+      });
       _checkProfileStatus(_client!);
     }
   }

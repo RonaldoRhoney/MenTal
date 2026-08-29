@@ -1,6 +1,10 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../api/api_client.dart';
+import '../l10n/generated/app_localizations.dart';
+import '../theme/app_theme.dart';
 
 /// V2 item 8 — Notificações (NOTIFICATIONS.md). O backend é a única
 /// autoridade sobre QUANDO e SE notificar (app/notifications.py) — este
@@ -20,6 +24,16 @@ class PushService {
 
   bool _tokenRefreshListenerAttached = false;
 
+  // Auditoria de conformidade Google Play (29/08/2026, item 4): antes,
+  // o diálogo padrão do sistema (POST_NOTIFICATIONS) aparecia direto no
+  // login, sem nenhuma explicação do app antes — só a explicação do
+  // próprio Android, insuficiente pra boa prática de permissão sensível.
+  // Esta chave marca que o usuário já passou pelo diálogo REAL do
+  // sistema pelo menos uma vez — enquanto isso não acontecer (ex.:
+  // usuário disse "agora não" no priming), volta a perguntar no próximo
+  // login, em vez de desistir de vez.
+  static const _kPermissionDeterminedKey = 'push_permission_determined';
+
   /// Pede permissão, obtém o token do FCM e registra no backend. Também
   /// escuta `onTokenRefresh` (o token pode mudar depois da instalação,
   /// ex.: restauração de backup) para manter o backend sempre com o
@@ -30,10 +44,21 @@ class PushService {
   /// auth), não deve empilhar um novo listener de onTokenRefresh a cada
   /// chamada — visto em produção causando um loop de registro de token
   /// quase 1x/segundo, saturando conexões do backend.
-  Future<void> initializeAndRegister(ApiClient client) async {
+  Future<void> initializeAndRegister(ApiClient client, BuildContext context) async {
     try {
       final messaging = FirebaseMessaging.instance;
+      final prefs = await SharedPreferences.getInstance();
+      final alreadyDetermined = prefs.getBool(_kPermissionDeterminedKey) ?? false;
+
+      if (!alreadyDetermined) {
+        if (!context.mounted) return;
+        final wantsToEnable = await _showPrimingDialog(context);
+        if (!context.mounted) return;
+        if (!wantsToEnable) return; // Não marca como "determined" — pode perguntar de novo no próximo login.
+      }
+
       final settings = await messaging.requestPermission();
+      await prefs.setBool(_kPermissionDeterminedKey, true);
       if (settings.authorizationStatus == AuthorizationStatus.denied) {
         return; // Sem permissão, sem token — feature fica invisível, sem penalização.
       }
@@ -59,5 +84,29 @@ class PushService {
       // de desenvolvimento sem google-services.json) — notificações são
       // reforço, nunca requisito para o app funcionar.
     }
+  }
+
+  Future<bool> _showPrimingDialog(BuildContext context) async {
+    final l10n = AppLocalizations.of(context)!;
+    final result = await showDialog<bool>(
+      context: context,
+      barrierDismissible: false,
+      builder: (dialogContext) => AlertDialog(
+        backgroundColor: AppColors.bg2,
+        title: Text(l10n.pushPrimingDialogTitle),
+        content: Text(l10n.pushPrimingDialogMessage),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: Text(l10n.pushPrimingDialogDeclineButton),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: Text(l10n.pushPrimingDialogAllowButton),
+          ),
+        ],
+      ),
+    );
+    return result ?? false;
   }
 }
