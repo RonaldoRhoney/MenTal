@@ -305,7 +305,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
               const SizedBox(height: 16),
               Expanded(
-                child: ListView(children: _buildWorldSections(l10n)),
+                // Achado real (29/08/2026, pedido de Rhoney: "há um
+                // estouro de todo conteúdo na tela e depois a tela
+                // aparece como deve ser"): antes de `_progress` chegar,
+                // _buildWorldSections caía no fallback de "sem mundos"
+                // e desenhava os 10 territórios soltos, sem agrupar nem
+                // colapsar — um frame inteiro de conteúdo bruto antes
+                // do layout final (Mundos colapsados) assumir. Mostrar
+                // o spinner enquanto progress==null evita esse flash.
+                child: progress == null
+                    ? const Center(child: CircularProgressIndicator())
+                    : ListView(children: _buildWorldSections(l10n)),
               ),
             ],
           ),
@@ -646,11 +656,19 @@ class _TerritoryCard extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    l10n.newChallengeButton(label),
-                    textAlign: TextAlign.center,
-                    maxLines: 2,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                  // Pedido de Rhoney (29/08/2026): "Desafio X" numa linha
+                  // só, nunca quebrando a palavra — FittedBox encolhe a
+                  // fonte automaticamente quando o nome do território é
+                  // mais longo (ex.: "Cultura Pop"), em vez de arriscar
+                  // uma quebra de linha no meio da palavra.
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      l10n.newChallengeButton(label),
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                    ),
                   ),
                   if (conquered) ...[
                     const SizedBox(height: 4),
@@ -672,27 +690,31 @@ class _TerritoryCard extends StatelessWidget {
             ),
           ),
         ],
-        // V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md). Modo
-        // extra só pra "palavras", nunca substitui o modo normal.
-        if (territoryId == 'palavras') ...[
-          const SizedBox(height: 8),
-          OutlinedButton(
-            onPressed: () async {
-              await Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => ChallengeScreen(
-                    client: client,
-                    territoryId: territoryId,
-                    territoryLabel: label,
-                    relampago: true,
-                  ),
+        // V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md),
+        // generalizado pra todos os territórios (29/08/2026, pedido de
+        // Rhoney: "em todos os módulos tem que haver um relâmpago") —
+        // backend já aceita mode=relampago em qualquer território
+        // (routers/challenges.py), nunca mais restrito a "palavras".
+        const SizedBox(height: 8),
+        OutlinedButton(
+          onPressed: () async {
+            await Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ChallengeScreen(
+                  client: client,
+                  territoryId: territoryId,
+                  territoryLabel: label,
+                  relampago: true,
                 ),
-              );
-              onReturned();
-            },
-            child: Text(l10n.relampagoModeLabel, textAlign: TextAlign.center, maxLines: 2),
+              ),
+            );
+            onReturned();
+          },
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(l10n.relampagoModeLabel, textAlign: TextAlign.center, maxLines: 1),
           ),
-        ],
+        ),
       ],
     );
   }

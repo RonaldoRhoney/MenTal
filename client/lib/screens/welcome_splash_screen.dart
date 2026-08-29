@@ -6,10 +6,13 @@ import '../theme/app_theme.dart';
 /// Splash de boas-vindas exibido uma vez por sessão, logo depois do login
 /// (e da confirmação de maioridade, se for a primeira vez) — diferente do
 /// SplashScreen inicial (que roda ANTES de qualquer decisão de destino).
-/// Reconstrói o símbolo do ícone do app (nó central + sinapses douradas/
-/// teal, mesmas coordenadas de assets/icon/mental_icon.svg) como um
-/// CustomPainter animado, no mesmo espírito de _GoogleGlyphPainter em
-/// login_screen.dart — vetorial, sem depender de imagem rasterizada.
+/// Desenha um "M" completo (29/08/2026, pedido de Rhoney: "deve desenhar
+/// um M completo, com as sinapses cognitivas para dar mais relevância ao
+/// nome Mental") — as 4 hastes do M nascem como sinapses (nós + linhas
+/// douradas/teal) que se acendem em sequência, elegante e suave, em vez
+/// do símbolo abstrato de rede que havia antes. Vetorial via
+/// CustomPainter, mesmo espírito de _GoogleGlyphPainter em
+/// login_screen.dart — sem depender de imagem rasterizada.
 class WelcomeSplashScreen extends StatefulWidget {
   const WelcomeSplashScreen({super.key, required this.onDone});
 
@@ -71,7 +74,7 @@ class _WelcomeSplashScreenState extends State<WelcomeSplashScreen> with SingleTi
                 SizedBox(
                   width: 148,
                   height: 148,
-                  child: CustomPaint(painter: _SynapseSplashPainter(progress: t)),
+                  child: CustomPaint(painter: _MSynapsePainter(progress: t)),
                 ),
                 const SizedBox(height: 24),
                 Opacity(
@@ -99,8 +102,14 @@ class _WelcomeSplashScreenState extends State<WelcomeSplashScreen> with SingleTi
   }
 }
 
-class _SynapseSplashPainter extends CustomPainter {
-  _SynapseSplashPainter({required this.progress});
+/// Desenha o "M" de Mental como uma cadeia de 5 nós (sinapses) ligados
+/// por 4 hastes, na silhueta clássica da letra: vertical esquerda,
+/// diagonal descendo até o vale central, diagonal subindo até o pico
+/// direito, vertical direita. Cada haste nasce do nó anterior — a
+/// mesma linguagem de "sinapse acendendo" do símbolo antigo, só que
+/// agora formando uma letra reconhecível em vez de uma rede abstrata.
+class _MSynapsePainter extends CustomPainter {
+  _MSynapsePainter({required this.progress});
 
   final double progress;
 
@@ -117,49 +126,62 @@ class _SynapseSplashPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final scale = size.width / 100;
     Offset p(double x, double y) => Offset(x * scale, y * scale);
-    final center = p(50, 47);
 
-    // Estágio 1 — nó central "nasce" com um leve exagero elástico
-    // (Curves.elasticOut), dando o toque de energia/vida que pediu.
-    final centerScale = Curves.elasticOut.transform(_stage(0.0, 0.16).clamp(0.0, 1.0));
-    if (centerScale <= 0) return;
+    // Vértices do M, na ordem em que a letra é "escrita": base
+    // esquerda → topo esquerdo → vale central → topo direito → base
+    // direita.
+    final nodes = [p(28, 70), p(28, 30), p(50, 52), p(72, 30), p(72, 70)];
+    final segmentColors = [_gold, _teal, _teal, _gold];
+    final nodeColors = [_gold, _teal, _gold, _teal, _gold];
 
-    // Estágio 2 — as 3 sinapses "crescem" do centro pros nós externos.
-    final lineT = Curves.easeOut.transform(_stage(0.14, 0.5));
-    final outerPoints = [p(33, 33), p(69, 37), p(63, 62)];
-    final outerColors = [_gold, _gold, _teal];
-    for (var i = 0; i < outerPoints.length; i++) {
-      final end = Offset.lerp(center, outerPoints[i], lineT)!;
+    // Nó inicial nasce com um leve exagero elástico, dando o toque de
+    // energia/vida — só depois disso a primeira haste começa a crescer.
+    final firstNodeScale = Curves.elasticOut.transform(_stage(0.0, 0.1).clamp(0.0, 1.0));
+    if (firstNodeScale <= 0) return;
+    canvas.drawCircle(nodes[0], 4.5 * scale * firstNodeScale, Paint()..color = nodeColors[0]);
+
+    // As 4 hastes crescem em sequência, cada uma só começa quando a
+    // anterior termina — a letra "se escreve" com suavidade, um traço
+    // de cada vez, em vez de tudo aparecer junto.
+    const segmentSpan = 0.10;
+    const segmentGap = 0.02;
+    for (var i = 0; i < 4; i++) {
+      final start = 0.08 + i * (segmentSpan + segmentGap);
+      final end = start + segmentSpan;
+      final t = Curves.easeInOut.transform(_stage(start, end));
+      if (t <= 0) continue;
+      final segEnd = Offset.lerp(nodes[i], nodes[i + 1], t)!;
       canvas.drawLine(
-        center,
-        end,
+        nodes[i],
+        segEnd,
         Paint()
-          ..color = outerColors[i]
-          ..strokeWidth = 2.4 * scale
+          ..color = segmentColors[i]
+          ..strokeWidth = 2.6 * scale
           ..strokeCap = StrokeCap.round,
       );
-    }
-
-    // Estágio 3 — nós externos "acendem" com um pequeno bounce.
-    final nodeT = Curves.easeOutBack.transform(_stage(0.46, 0.68).clamp(0.0, 1.0));
-    if (nodeT > 0) {
-      for (var i = 0; i < outerPoints.length; i++) {
-        canvas.drawCircle(outerPoints[i], 4.5 * scale * nodeT, Paint()..color = outerColors[i]);
+      // Nó seguinte acende com um pequeno bounce assim que a haste chega nele.
+      final nodeT = Curves.easeOutBack.transform(_stage(end - 0.03, end + 0.02).clamp(0.0, 1.0));
+      if (nodeT > 0) {
+        canvas.drawCircle(nodes[i + 1], 4.5 * scale * nodeT, Paint()..color = nodeColors[i + 1]);
       }
     }
 
-    // Nó central por cima de tudo, com o halo suave já usado no ícone.
-    canvas.drawCircle(
-      center,
-      10 * scale * centerScale,
-      Paint()
-        ..color = _gold.withValues(alpha: 0.3 * centerScale)
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.2 * scale,
-    );
-    canvas.drawCircle(center, 6.5 * scale * centerScale, Paint()..color = _gold);
+    // Halo suave respirando por trás do nó central (o vale do M) —
+    // mesma assinatura visual do ícone do app, dá o acabamento elegante
+    // sem competir com a leitura da letra.
+    final haloT = _stage(0.5, 0.7);
+    if (haloT > 0) {
+      canvas.drawCircle(
+        nodes[2],
+        9 * scale * haloT,
+        Paint()
+          ..color = _gold.withValues(alpha: 0.25 * haloT)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.2 * scale,
+      );
+    }
   }
 
   @override
-  bool shouldRepaint(covariant _SynapseSplashPainter oldDelegate) => oldDelegate.progress != progress;
+  bool shouldRepaint(covariant _MSynapsePainter oldDelegate) => oldDelegate.progress != progress;
 }

@@ -35,7 +35,7 @@
     }
   },
 
-  "newChallengeButton": "Desafio — {territory}",
+  "newChallengeButton": "Desafio {territory}",
   "@newChallengeButton": {
     "description": "Primary CTA per territory on Home",
     "placeholders": {
@@ -57,6 +57,12 @@
   "@territoryTextos": {"description": "Territory display name"},
   "territoryVisual": "Visual",
   "@territoryVisual": {"description": "Territory display name"},
+  "territoryEsportes": "Esportes",
+  "@territoryEsportes": {"description": "Territory display name"},
+  "territoryRegioes": "Regiões",
+  "@territoryRegioes": {"description": "Territory display name"},
+  "territoryCulturaPop": "Cultura Pop",
+  "@territoryCulturaPop": {"description": "Territory display name"},
 
   "dailyLimitReachedMessage": "Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.",
   "@dailyLimitReachedMessage": {"description": "Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3"},
@@ -395,26 +401,14 @@
     "placeholders": {"steps": {"type": "int"}}
   },
 
-  "movementDetectedStepsLabel": "{steps} passos detectados agora, ainda não coletados",
-  "@movementDetectedStepsLabel": {
-    "description": "Steps detected locally but not yet submitted to the backend",
-    "placeholders": {"steps": {"type": "int"}}
-  },
+  "movementOscillationPendingMessage": "Ainda sem dados de oscilação hoje — ande um pouco pra ver o pico e o vale aparecerem.",
+  "@movementOscillationPendingMessage": {"description": "Shown in place of the peak/valley oscillation metrics when there are not enough snapshots yet today"},
 
-  "movementCollectButton": "Coletar passos",
-  "@movementCollectButton": {"description": "Button to submit detected steps to the backend"},
-
-  "movementNoStepsToCollect": "Nenhum passo novo pra coletar agora.",
-  "@movementNoStepsToCollect": {"description": "Shown when there are no new steps to collect"},
-
-  "movementPendingReportLabel": "Você ainda tem um ciclo anterior com {steps} passos pra coletar!",
+  "movementPendingReportLabel": "Você ainda tem um ciclo anterior com {steps} passos pra coletar — eles entram na próxima coleta.",
   "@movementPendingReportLabel": {
-    "description": "Previous cycle still within the grace window, pending final collection",
+    "description": "Previous cycle still within the grace window, pending final collection (folded into the next tap-to-collect level)",
     "placeholders": {"steps": {"type": "int"}}
   },
-
-  "movementCollectPreviousButton": "Coletar ciclo anterior",
-  "@movementCollectPreviousButton": {"description": "Button to do the final collection of the previous cycle"},
 
   "movementXpCollectedFeedback": "+{xp} XP dos seus passos!",
   "@movementXpCollectedFeedback": {
@@ -947,9 +941,6 @@
   "movementGoalChipIntense": "15k",
   "@movementGoalChipIntense": {"description": "Daily goal chip: intense tier (15000 steps)"},
 
-  "movementGoalChipElite": "20k",
-  "@movementGoalChipElite": {"description": "Daily goal chip: elite tier (20000 steps)"},
-
   "movementGoalChipLightLabel": "leve",
   "@movementGoalChipLightLabel": {"description": "Sub-label under the light goal chip"},
 
@@ -958,9 +949,6 @@
 
   "movementGoalChipIntenseLabel": "intenso",
   "@movementGoalChipIntenseLabel": {"description": "Sub-label under the intense goal chip"},
-
-  "movementGoalChipEliteLabel": "elite",
-  "@movementGoalChipEliteLabel": {"description": "Sub-label under the elite goal chip"},
 
   "movementGoalSelectorTitle": "Sua meta diária",
   "@movementGoalSelectorTitle": {"description": "Daily goal selector section title"},
@@ -985,6 +973,18 @@
 
   "movementValleyLabel": "vale",
   "@movementValleyLabel": {"description": "Valley label for the intraday chart summary"},
+
+  "movementGoalGoButton": "Ir",
+  "@movementGoalGoButton": {"description": "Confirm button that applies the selected/custom daily goal and starts tracking against it"},
+
+  "movementCustomGoalHint": "livre",
+  "@movementCustomGoalHint": {"description": "Short placeholder shown inside the editable custom-goal chip before the user types a value"},
+
+  "movementGoalChipCustomLabel": "sua meta",
+  "@movementGoalChipCustomLabel": {"description": "Sub-label under the editable custom-goal chip (the 4th, editable slot in the daily goal selector)"},
+
+  "movementGoalChipCollectHint": "toque p/ coletar",
+  "@movementGoalChipCollectHint": {"description": "Sub-label shown on a goal chip when its step threshold has been reached today, indicating a tap collects instead of changing the goal"},
 
   "photoSourceCameraOption": "Tirar foto",
   "@photoSourceCameraOption": {"description": "Bottom sheet option to take a new photo with the camera"},

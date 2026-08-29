@@ -42,7 +42,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String newChallengeButton(String territory) {
-    return 'Desafio — $territory';
+    return 'Desafio $territory';
   }
 
   @override
@@ -65,6 +65,15 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get territoryVisual => 'Visual';
+
+  @override
+  String get territoryEsportes => 'Esportes';
+
+  @override
+  String get territoryRegioes => 'Regiões';
+
+  @override
+  String get territoryCulturaPop => 'Cultura Pop';
 
   @override
   String get dailyLimitReachedMessage =>
@@ -360,23 +369,13 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String movementDetectedStepsLabel(int steps) {
-    return '$steps passos detectados agora, ainda não coletados';
-  }
-
-  @override
-  String get movementCollectButton => 'Coletar passos';
-
-  @override
-  String get movementNoStepsToCollect => 'Nenhum passo novo pra coletar agora.';
+  String get movementOscillationPendingMessage =>
+      'Ainda sem dados de oscilação hoje — ande um pouco pra ver o pico e o vale aparecerem.';
 
   @override
   String movementPendingReportLabel(int steps) {
-    return 'Você ainda tem um ciclo anterior com $steps passos pra coletar!';
+    return 'Você ainda tem um ciclo anterior com $steps passos pra coletar — eles entram na próxima coleta.';
   }
-
-  @override
-  String get movementCollectPreviousButton => 'Coletar ciclo anterior';
 
   @override
   String movementXpCollectedFeedback(int xp) {
@@ -912,9 +911,6 @@ class AppLocalizationsPt extends AppLocalizations {
   String get movementGoalChipIntense => '15k';
 
   @override
-  String get movementGoalChipElite => '20k';
-
-  @override
   String get movementGoalChipLightLabel => 'leve';
 
   @override
@@ -922,9 +918,6 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get movementGoalChipIntenseLabel => 'intenso';
-
-  @override
-  String get movementGoalChipEliteLabel => 'elite';
 
   @override
   String get movementGoalSelectorTitle => 'Sua meta diária';
@@ -949,6 +942,18 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get movementValleyLabel => 'vale';
+
+  @override
+  String get movementGoalGoButton => 'Ir';
+
+  @override
+  String get movementCustomGoalHint => 'livre';
+
+  @override
+  String get movementGoalChipCustomLabel => 'sua meta';
+
+  @override
+  String get movementGoalChipCollectHint => 'toque p/ coletar';
 
   @override
   String get photoSourceCameraOption => 'Tirar foto';

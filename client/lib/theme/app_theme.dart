@@ -89,6 +89,12 @@ class AppTheme {
           color: AppColors.bone,
           fontWeight: FontWeight.w600,
           fontSize: 20,
+          // A altura de linha padrão da Fraunces (fonte serifada) tem
+          // mais "leading" do que o Material espera pra centralizar o
+          // título junto com o ícone de voltar — sem isso o texto fica
+          // visivelmente mais baixo que a seta. height:1.0 remove esse
+          // espaço extra e alinha os dois.
+          height: 1.0,
         ),
       ),
       cardTheme: const CardThemeData(color: AppColors.bg2),

@@ -110,7 +110,6 @@ void main() {
     await _pumpMovementScreen(tester, client);
 
     expect(find.text('4000'), findsWidgets);
-    expect(find.text('passos hoje'), findsOneWidget);
     // Sem canal de plataforma mockado, o sensor é tratado como
     // indisponível — a tela nunca deve travar ou lançar exceção por isso.
     expect(find.text('Não foi possível ler o sensor de passos agora.'), findsOneWidget);
@@ -137,8 +136,11 @@ void main() {
     );
     await _pumpMovementScreen(tester, client);
 
+    // Sem botão dedicado (29/08/2026, pedido de Rhoney) — o aviso é só
+    // informativo, a coleta em si acontece ao tocar num nível de meta
+    // atingido no seletor.
     expect(find.textContaining('7000 passos pra coletar'), findsOneWidget);
-    expect(find.text('Coletar ciclo anterior'), findsOneWidget);
+    expect(find.text('Coletar ciclo anterior'), findsNothing);
   });
 
   testWidgets('mostra gráfico de progresso e rótulo quando há meta diária definida', (tester) async {
@@ -160,7 +162,7 @@ void main() {
     expect(find.byType(PieChart), findsWidgets);
   });
 
-  testWidgets('tocar num chip de meta chama PUT /movement/goal', (tester) async {
+  testWidgets('tocar num chip de meta e confirmar com Go chama PUT /movement/goal', (tester) async {
     final client = _FakeApiClient(
       movementEnabled: true,
       currentCycle: {
@@ -173,13 +175,48 @@ void main() {
     );
     await _pumpMovementScreen(tester, client);
 
-    expect(find.text('20k'), findsOneWidget);
-    await tester.tap(find.text('20k'));
+    expect(find.text('15k'), findsOneWidget);
+    await tester.tap(find.text('15k'));
+    await tester.pump();
+
+    // Tocar no chip só marca a seleção pendente — precisa confirmar com
+    // "Go" antes de valer pra tela (pedido de Rhoney 29/08/2026: dá o
+    // momento explícito de "começar a valer").
+    expect(client.calls, isNot(contains('set_goal')));
+    await tester.tap(find.text('Ir'));
     await tester.pump();
     await tester.pump(const Duration(seconds: 6));
 
     expect(client.calls, contains('set_goal'));
-    expect(client.dailyGoalSteps, 20000);
+    expect(client.dailyGoalSteps, 15000);
+  });
+
+  testWidgets('digitar meta no último card (editável) e confirmar com Go chama PUT /movement/goal', (tester) async {
+    final client = _FakeApiClient(
+      movementEnabled: true,
+      currentCycle: {
+        'id': 'cycle-4b',
+        'cycle_start_at': DateTime.utc(2026, 8, 22).toIso8601String(),
+        'cycle_end_at': DateTime.utc(2026, 8, 23).toIso8601String(),
+        'steps_collected': 0,
+        'xp_awarded': 0,
+      },
+    );
+    await _pumpMovementScreen(tester, client);
+
+    // 4º card do seletor é o próprio campo editável (29/08/2026, pedido
+    // de Rhoney: "o último card deve ser editável, isso resolve o
+    // problema do jogador estabelecer sua própria meta") — quem
+    // caminha/corre/treina facilmente passa dos tiers fixos.
+    await tester.enterText(find.byType(TextField), '25000');
+    await tester.pump();
+
+    await tester.tap(find.text('Ir'));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 6));
+
+    expect(client.calls, contains('set_goal'));
+    expect(client.dailyGoalSteps, 25000);
   });
 
   testWidgets('sem meta definida, o anel mostra o total de passos em vez de sumir (regressão)', (tester) async {

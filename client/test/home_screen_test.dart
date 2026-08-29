@@ -115,13 +115,13 @@ void main() {
     // Redesign 2026-08-26 (pedido de Rhoney: "não quero tudo na tela"):
     // Mundo colapsado por padrão — o território não deve estar visível
     // ainda, só o cabeçalho.
-    expect(find.text('Desafio — Palavras'), findsNothing);
+    expect(find.text('Desafio Palavras'), findsNothing);
     expect(find.text('Mundo da Mente Lógica'), findsOneWidget);
 
     // Ao expandir, os territórios daquele Mundo aparecem.
     await tester.tap(find.text('Mundo da Linguagem'));
     await tester.pumpAndSettle();
-    expect(find.text('Desafio — Palavras'), findsOneWidget);
+    expect(find.text('Desafio Palavras'), findsOneWidget);
 
     // Selo de completo (ícone) aparece uma vez, só no mundo com
     // completed=true — o backend decide isso, não a Home.

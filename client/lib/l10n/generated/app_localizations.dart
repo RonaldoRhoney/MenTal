@@ -151,7 +151,7 @@ abstract class AppLocalizations {
   /// Primary CTA per territory on Home
   ///
   /// In pt, this message translates to:
-  /// **'Desafio — {territory}'**
+  /// **'Desafio {territory}'**
   String newChallengeButton(String territory);
 
   /// Territory display name
@@ -195,6 +195,24 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Visual'**
   String get territoryVisual;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Esportes'**
+  String get territoryEsportes;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Regiões'**
+  String get territoryRegioes;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Cultura Pop'**
+  String get territoryCulturaPop;
 
   /// Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3
   ///
@@ -700,35 +718,17 @@ abstract class AppLocalizations {
   /// **'Passos coletados neste ciclo: {steps}'**
   String movementCurrentCycleLabel(int steps);
 
-  /// Steps detected locally but not yet submitted to the backend
+  /// Shown in place of the peak/valley oscillation metrics when there are not enough snapshots yet today
   ///
   /// In pt, this message translates to:
-  /// **'{steps} passos detectados agora, ainda não coletados'**
-  String movementDetectedStepsLabel(int steps);
+  /// **'Ainda sem dados de oscilação hoje — ande um pouco pra ver o pico e o vale aparecerem.'**
+  String get movementOscillationPendingMessage;
 
-  /// Button to submit detected steps to the backend
+  /// Previous cycle still within the grace window, pending final collection (folded into the next tap-to-collect level)
   ///
   /// In pt, this message translates to:
-  /// **'Coletar passos'**
-  String get movementCollectButton;
-
-  /// Shown when there are no new steps to collect
-  ///
-  /// In pt, this message translates to:
-  /// **'Nenhum passo novo pra coletar agora.'**
-  String get movementNoStepsToCollect;
-
-  /// Previous cycle still within the grace window, pending final collection
-  ///
-  /// In pt, this message translates to:
-  /// **'Você ainda tem um ciclo anterior com {steps} passos pra coletar!'**
+  /// **'Você ainda tem um ciclo anterior com {steps} passos pra coletar — eles entram na próxima coleta.'**
   String movementPendingReportLabel(int steps);
-
-  /// Button to do the final collection of the previous cycle
-  ///
-  /// In pt, this message translates to:
-  /// **'Coletar ciclo anterior'**
-  String get movementCollectPreviousButton;
 
   /// Feedback after collecting movement XP
   ///
@@ -1654,12 +1654,6 @@ abstract class AppLocalizations {
   /// **'15k'**
   String get movementGoalChipIntense;
 
-  /// Daily goal chip: elite tier (20000 steps)
-  ///
-  /// In pt, this message translates to:
-  /// **'20k'**
-  String get movementGoalChipElite;
-
   /// Sub-label under the light goal chip
   ///
   /// In pt, this message translates to:
@@ -1677,12 +1671,6 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'intenso'**
   String get movementGoalChipIntenseLabel;
-
-  /// Sub-label under the elite goal chip
-  ///
-  /// In pt, this message translates to:
-  /// **'elite'**
-  String get movementGoalChipEliteLabel;
 
   /// Daily goal selector section title
   ///
@@ -1731,6 +1719,30 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'vale'**
   String get movementValleyLabel;
+
+  /// Confirm button that applies the selected/custom daily goal and starts tracking against it
+  ///
+  /// In pt, this message translates to:
+  /// **'Ir'**
+  String get movementGoalGoButton;
+
+  /// Short placeholder shown inside the editable custom-goal chip before the user types a value
+  ///
+  /// In pt, this message translates to:
+  /// **'livre'**
+  String get movementCustomGoalHint;
+
+  /// Sub-label under the editable custom-goal chip (the 4th, editable slot in the daily goal selector)
+  ///
+  /// In pt, this message translates to:
+  /// **'sua meta'**
+  String get movementGoalChipCustomLabel;
+
+  /// Sub-label shown on a goal chip when its step threshold has been reached today, indicating a tap collects instead of changing the goal
+  ///
+  /// In pt, this message translates to:
+  /// **'toque p/ coletar'**
+  String get movementGoalChipCollectHint;
 
   /// Bottom sheet option to take a new photo with the camera
   ///

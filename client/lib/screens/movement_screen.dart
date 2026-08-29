@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
@@ -9,6 +10,7 @@ import '../services/feedback_service.dart';
 import '../services/movement_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/celebration_overlay.dart';
+import '../widgets/mentalcoin.dart';
 import '../widgets/pulse_in.dart';
 import '../widgets/share_achievement_button.dart';
 
@@ -17,14 +19,13 @@ import '../widgets/share_achievement_button.dart';
 /// esta tela só lê o sensor local para saber QUANTOS passos ainda não
 /// foram enviados, nunca decide o bônus sozinha.
 ///
-/// Redesign (U.I/MOVIMENTO_REDESIGN_V1.md, 29/08/2026): hierarquia fraca
-/// e paleta apagada da versão anterior substituídas por um bloco Hero
-/// compacto (anel + estatísticas lado a lado), regra de conversão
-/// "100 passos = +2 XP" sempre visível, e seletor de meta diária em
-/// chips (5k/10k/15k/20k) — GET/PUT /movement/goal já existiam no
-/// backend, esta versão só troca o diálogo de texto livre por uma
-/// escolha guiada. Meta continua sendo aceita como qualquer valor
-/// (compat com quem já tinha uma meta fora dessas 4 faixas).
+/// Redesign (U.I/MOVIMENTO_REDESIGN_V1.md, 29/08/2026): bloco Hero
+/// compacto (anel + estatísticas de Passos/XP/MentalCoins lado a lado),
+/// regra "100 passos = +2 XP" sempre visível, seletor de meta diária em
+/// chips + meta customizada com confirmação via botão "Go" (pedido de
+/// Rhoney, 29/08/2026: "existem pessoas que... facilmente vão além de
+/// 20k diário"). Layout em Column com Expanded nos gráficos — nenhum
+/// SingleChildScrollView — pra caber inteiro sem rolagem.
 class MovementScreen extends StatefulWidget {
   const MovementScreen({super.key, required this.client});
 
@@ -47,6 +48,7 @@ class _MovementScreenState extends State<MovementScreen> {
   String? _checkpointReachedMessage;
   int? _lastRawStepsSinceBoot;
   int _streakDays = 0;
+  int? _mentalCoinsBalance;
   // Começa true: só vira false quando o primeiro evento REAL do sensor
   // chegar. Achado real testando no Moto G22 (2026-08-21):
   // TYPE_STEP_COUNTER não entrega uma leitura imediata ao registrar o
@@ -60,7 +62,11 @@ class _MovementScreenState extends State<MovementScreen> {
 
   late final CelebrationController _celebration;
 
-  static const _goalTiers = [5000, 10000, 15000, 20000];
+  // O 4º slot da meta diária (U.I) virou o card editável (29/08/2026,
+  // pedido de Rhoney: "o último card deve ser editável, isso resolve o
+  // problema do jogador estabelecer sua própria meta") — substitui o
+  // antigo tier fixo de 20k.
+  static const _goalTiers = [5000, 10000, 15000];
 
   @override
   void initState() {
@@ -112,12 +118,17 @@ class _MovementScreenState extends State<MovementScreen> {
     } finally {
       if (mounted) setState(() => _loading = false);
     }
-    // Chip de streak no header (U.I/MOVIMENTO_REDESIGN_V1.md §3) — reforço
-    // visual, nunca bloqueia a tela se falhar (mesmo princípio já usado
-    // pros outros indicadores secundários da Home).
+    // Chip de streak no header + saldo de MentalCoins no Hero
+    // (U.I/MOVIMENTO_REDESIGN_V1.md §3, pedido de Rhoney 29/08/2026:
+    // "dê maior destaque aos passos, XP, MentalCoins") — reforço visual,
+    // nunca bloqueia a tela se falhar.
     try {
       final progress = await widget.client.progress();
       if (mounted) setState(() => _streakDays = progress['streak']['current_streak'] as int);
+    } on ApiException catch (_) {}
+    try {
+      final balance = await widget.client.getMentalCoinsBalance();
+      if (mounted) setState(() => _mentalCoinsBalance = balance['balance'] as int);
     } on ApiException catch (_) {}
   }
 
@@ -220,15 +231,20 @@ class _MovementScreenState extends State<MovementScreen> {
     }
   }
 
-  Future<void> _collectCurrent() async {
-    final cycle = _currentCycle;
-    if (cycle == null || _detectedUncollectedSteps <= 0) return;
+  bool get _hasStepsToCollect => _detectedUncollectedSteps > 0 || _pendingReportCycle != null;
+
+  /// Coleta disparada ao tocar num nível de meta aceso no seletor
+  /// (29/08/2026, pedido de Rhoney: "a coleta de ciclo deve ser ao
+  /// tocar cada nível diário alcançado") — substitui os antigos botões
+  /// "Coletar"/"Coletar ciclo anterior". Um único toque resolve os dois:
+  /// se existir ciclo anterior pendente, ele entra primeiro, sem UI
+  /// dedicada.
+  Future<void> _collectReachedLevel() async {
+    if (_busy || !_hasStepsToCollect) return;
     setState(() => _busy = true);
     try {
-      final localDelta = _detectedUncollectedSteps;
-      final result = await widget.client.collectMovementSteps(steps: localDelta);
-      final updatedCycle = result['cycle'] as Map<String, dynamic>;
-      await _handleCollectResponse(result, cycle['id'] as String, updatedCycle['steps_collected'] as int);
+      if (_pendingReportCycle != null) await _doCollectPending();
+      if (_detectedUncollectedSteps > 0) await _doCollectCurrent();
       await _load();
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -237,37 +253,46 @@ class _MovementScreenState extends State<MovementScreen> {
     }
   }
 
-  Future<void> _collectPending() async {
+  Future<void> _doCollectCurrent() async {
+    final cycle = _currentCycle;
+    if (cycle == null) return;
+    final localDelta = _detectedUncollectedSteps;
+    final result = await widget.client.collectMovementSteps(steps: localDelta);
+    final updatedCycle = result['cycle'] as Map<String, dynamic>;
+    await _handleCollectResponse(result, cycle['id'] as String, updatedCycle['steps_collected'] as int);
+  }
+
+  Future<void> _doCollectPending() async {
     final pending = _pendingReportCycle;
     if (pending == null) return;
-    setState(() => _busy = true);
-    try {
-      final pendingId = pending['id'] as String;
-      // Usa a última leitura do sensor recebida pela assinatura viva do
-      // ciclo atual (mesmo valor absoluto de hardware serve pra
-      // calcular o delta de QUALQUER ciclo — o baseline é que muda).
-      // Se nenhum passo real foi detectado ainda nesta sessão da tela,
-      // envia 0 — nunca bloqueia a coleta do que já está registrado no
-      // servidor.
-      final lastReading = _lastRawStepsSinceBoot;
-      final localDelta = lastReading == null
-          ? 0
-          : (await MovementService.instance.pendingDeltaFor(pendingId, lastReading)).uncollectedSteps;
-      final result = await widget.client.collectMovementSteps(steps: localDelta, cycleId: pendingId);
-      final updatedCycle = result['cycle'] as Map<String, dynamic>;
-      await _handleCollectResponse(result, pendingId, updatedCycle['steps_collected'] as int);
-      await _load();
-    } on ApiException catch (e) {
-      if (mounted) setState(() => _error = e.message);
-    } finally {
-      if (mounted) setState(() => _busy = false);
-    }
+    final pendingId = pending['id'] as String;
+    // Usa a última leitura do sensor recebida pela assinatura viva do
+    // ciclo atual (mesmo valor absoluto de hardware serve pra
+    // calcular o delta de QUALQUER ciclo — o baseline é que muda).
+    // Se nenhum passo real foi detectado ainda nesta sessão da tela,
+    // envia 0 — nunca bloqueia a coleta do que já está registrado no
+    // servidor.
+    final lastReading = _lastRawStepsSinceBoot;
+    final localDelta = lastReading == null
+        ? 0
+        : (await MovementService.instance.pendingDeltaFor(pendingId, lastReading)).uncollectedSteps;
+    final result = await widget.client.collectMovementSteps(steps: localDelta, cycleId: pendingId);
+    final updatedCycle = result['cycle'] as Map<String, dynamic>;
+    await _handleCollectResponse(result, pendingId, updatedCycle['steps_collected'] as int);
   }
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
+      // O layout é fixo, sem SingleChildScrollView (pedido de Rhoney,
+      // 29/08/2026: "sem precisar de rolagem") — com
+      // resizeToAvoidBottomInset padrão (true), o teclado do campo de
+      // meta personalizada encolhe a área disponível e a Column
+      // estoura por alguns pixels. false mantém o layout intacto; o
+      // teclado só sobrepõe a parte de baixo, que já não tem nada
+      // essencial de ler enquanto se digita a meta.
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(l10n.movementScreenTitle),
         actions: [
@@ -297,7 +322,7 @@ class _MovementScreenState extends State<MovementScreen> {
         child: CelebrationOverlay(
           controller: _celebration,
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
             child: _loading ? const Center(child: CircularProgressIndicator()) : _buildBody(l10n),
           ),
         ),
@@ -306,164 +331,152 @@ class _MovementScreenState extends State<MovementScreen> {
   }
 
   Widget _buildBody(AppLocalizations l10n) {
-    return SingleChildScrollView(
-      child: Column(
+    if (!_movementEnabled) {
+      return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (_error != null) ...[
             Text(_error!, style: const TextStyle(color: AppColors.error)),
             const SizedBox(height: 16),
           ],
-          if (!_movementEnabled) ...[
-            Text(l10n.movementIntro, style: Theme.of(context).textTheme.bodySmall),
-            const SizedBox(height: 24),
-            FilledButton(
-              onPressed: _busy ? null : _enable,
-              child: Text(l10n.movementEnableButton),
-            ),
-          ] else ...[
-            if (_pendingReportCycle != null) ...[
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                decoration: BoxDecoration(color: AppColors.gold.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(14), border: Border.all(color: AppColors.gold.withValues(alpha: 0.35))),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: PulseIn(
-                        intensity: 0.3,
-                        child: Text(
-                          l10n.movementPendingReportLabel(_pendingReportCycle!['steps_collected'] as int),
-                          style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    OutlinedButton(
-                      style: OutlinedButton.styleFrom(minimumSize: const Size(0, 36), padding: const EdgeInsets.symmetric(horizontal: 12)),
-                      onPressed: _busy ? null : _collectPending,
-                      child: Text(l10n.movementCollectPreviousButton, style: const TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
-            ],
-            if (_currentCycle != null) ...[
-              _HeroBlock(
-                stepsCollected: _currentCycle!['steps_collected'] as int,
-                xpAwarded: _currentCycle!['xp_awarded'] as int,
-                goal: _dailyGoalSteps,
-              ),
-              const SizedBox(height: 16),
-              _GoalSelector(
-                l10n: l10n,
-                tiers: _goalTiers,
-                currentGoal: _dailyGoalSteps,
-                onSelect: _busy ? null : _setGoal,
-              ),
-              if (_goalReachedMessage != null) ...[
-                const SizedBox(height: 12),
-                PulseIn(
-                  intensity: 0.3,
-                  child: Text(
-                    _goalReachedMessage!,
-                    style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                ShareAchievementButton(message: l10n.shareMovementGoalMessage, client: widget.client),
-              ],
-              if (_checkpointReachedMessage != null) ...[
-                const SizedBox(height: 8),
-                PulseIn(
-                  intensity: 0.3,
-                  child: Text(
-                    _checkpointReachedMessage!,
-                    style: const TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
-              const SizedBox(height: 12),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  if (_sensorUnavailable)
-                    Text(l10n.movementSensorUnavailableMessage, style: const TextStyle(color: AppColors.muted, fontSize: 12))
-                  else
-                    Text(l10n.movementDetectedStepsLabel(_detectedUncollectedSteps), style: const TextStyle(fontSize: 12)),
-                ],
-              ),
-              const SizedBox(height: 8),
-              FilledButton(
-                onPressed: (_busy || _detectedUncollectedSteps <= 0) ? null : _collectCurrent,
-                child: Text(
-                  _detectedUncollectedSteps > 0 ? l10n.movementCollectButton : l10n.movementNoStepsToCollect,
-                ),
-              ),
-              // Gráfico intradiário (linha) — oscilação de passos ao
-              // LONGO do dia em curso, usando os checkpoints/coletas já
-              // registrados. Precisa de pelo menos 2 pontos pra formar
-              // uma curva com sentido; com 0-1 coleta ainda não há
-              // "oscilação" nenhuma pra mostrar.
-              if (((_currentCycle!['snapshots'] as List?)?.length ?? 0) >= 2) ...[
-                const SizedBox(height: 24),
-                _ChartCard(
-                  dotColor: AppColors.gold,
-                  title: l10n.movementTodayChartTitle,
-                  trailing: l10n.movementTodayChartSubtitle,
-                  child: _IntradayStepsSection(
-                    l10n: l10n,
-                    snapshots: (_currentCycle!['snapshots'] as List).cast<Map<String, dynamic>>(),
-                    cycleStart: DateTime.parse(_currentCycle!['cycle_start_at'] as String),
-                  ),
-                ),
-              ],
-            ],
-            // Gráfico semanal (barras) — desempenho de cada um dos
-            // últimos 7 dias, com o dia recorde e o mais fraco
-            // destacados. Precisa de pelo menos 2 ciclos pra fazer
-            // sentido comparar.
-            if (_recentCycles.length >= 2) ...[
-              const SizedBox(height: 16),
-              _ChartCard(
-                dotColor: AppColors.teal,
-                title: l10n.movementWeeklyChartTitle,
-                trailing: l10n.movementWeeklyChartSubtitle,
-                child: _WeeklyStepsBarChart(cycles: _recentCycles),
-              ),
-            ],
-            const SizedBox(height: 16),
-            Center(
-              child: TextButton(
-                onPressed: _busy ? null : _disable,
-                child: Text(l10n.movementDisableButton),
-              ),
-            ),
-          ],
+          Text(l10n.movementIntro, style: Theme.of(context).textTheme.bodySmall),
+          const SizedBox(height: 24),
+          FilledButton(onPressed: _busy ? null : _enable, child: Text(l10n.movementEnableButton)),
         ],
-      ),
+      );
+    }
+
+    final currentCycle = _currentCycle;
+    // Coluna sem SingleChildScrollView (U.I/MOVIMENTO_REDESIGN_V1.md §8:
+    // "requisito funcional, não só estético") — cada seção tem altura
+    // compacta e fixa, os dois gráficos dividem o espaço restante via
+    // Expanded, proporcionalmente ao conteúdo de cada um.
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        if (_error != null) ...[
+          Text(_error!, style: const TextStyle(color: AppColors.error), maxLines: 2, overflow: TextOverflow.ellipsis),
+          const SizedBox(height: 8),
+        ],
+        if (_pendingReportCycle != null) ...[
+          // Sem botão dedicado (29/08/2026, pedido de Rhoney: a coleta
+          // passa a acontecer ao tocar num nível de meta atingido) — o
+          // ciclo anterior pendente é só avisado aqui e entra junto na
+          // próxima coleta disparada por qualquer nível aceso.
+          PulseIn(
+            intensity: 0.2,
+            child: Text(
+              l10n.movementPendingReportLabel(_pendingReportCycle!['steps_collected'] as int),
+              style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600, fontSize: 11),
+              maxLines: 2,
+            ),
+          ),
+          const SizedBox(height: 6),
+        ],
+        if (currentCycle != null) ...[
+          _HeroBlock(
+            stepsCollected: currentCycle['steps_collected'] as int,
+            xpAwarded: currentCycle['xp_awarded'] as int,
+            mentalCoinsBalance: _mentalCoinsBalance,
+            goal: _dailyGoalSteps,
+          ),
+          const SizedBox(height: 8),
+          _GoalSelector(
+            tiers: _goalTiers,
+            currentGoal: _dailyGoalSteps,
+            busy: _busy,
+            onConfirm: _setGoal,
+            // Cada card também funciona como checkpoint de coleta
+            // (29/08/2026, pedido de Rhoney): quando o total de passos
+            // de hoje alcança o valor do card, ele acende e tocar nele
+            // coleta em vez de trocar a meta.
+            totalStepsToday: (currentCycle['steps_collected'] as int) + _detectedUncollectedSteps,
+            canCollect: _hasStepsToCollect,
+            onCollect: _collectReachedLevel,
+          ),
+          if (_goalReachedMessage != null || _checkpointReachedMessage != null) ...[
+            const SizedBox(height: 6),
+            if (_goalReachedMessage != null)
+              PulseIn(intensity: 0.3, child: Text(_goalReachedMessage!, style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600, fontSize: 12), textAlign: TextAlign.center, maxLines: 2)),
+            if (_goalReachedMessage != null) ShareAchievementButton(message: l10n.shareMovementGoalMessage, client: widget.client),
+            if (_checkpointReachedMessage != null)
+              PulseIn(intensity: 0.3, child: Text(_checkpointReachedMessage!, style: const TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600, fontSize: 12), textAlign: TextAlign.center, maxLines: 2)),
+          ],
+          const SizedBox(height: 8),
+          // Métricas de oscilação diária (29/08/2026, pedido de Rhoney:
+          // no lugar dos botões de coletar) — a coleta em si agora
+          // acontece ao tocar num nível de meta aceso no seletor acima.
+          _OscillationMetricsRow(
+            l10n: l10n,
+            sensorUnavailable: _sensorUnavailable,
+            snapshots: (currentCycle['snapshots'] as List?)?.cast<Map<String, dynamic>>() ?? const [],
+            cycleStart: DateTime.parse(currentCycle['cycle_start_at'] as String),
+          ),
+          const SizedBox(height: 8),
+        ],
+        // Gráfico intradiário — precisa de pelo menos 2 pontos pra fazer
+        // sentido comparar (0-1 coleta ainda não tem "oscilação").
+        if (currentCycle != null && ((currentCycle['snapshots'] as List?)?.length ?? 0) >= 2)
+          Expanded(
+            flex: 6,
+            child: _ChartCard(
+              dotColor: AppColors.gold,
+              title: l10n.movementTodayChartTitle,
+              trailing: l10n.movementTodayChartSubtitle,
+              child: _IntradayStepsLineChart(
+                points: _intradayPoints(
+                  (currentCycle['snapshots'] as List).cast<Map<String, dynamic>>(),
+                  DateTime.parse(currentCycle['cycle_start_at'] as String),
+                ),
+              ),
+            ),
+          ),
+        if (currentCycle != null && ((currentCycle['snapshots'] as List?)?.length ?? 0) >= 2) const SizedBox(height: 8),
+        // Gráfico semanal — precisa de pelo menos 2 ciclos.
+        if (_recentCycles.length >= 2)
+          Expanded(
+            flex: 5,
+            child: _ChartCard(
+              dotColor: AppColors.teal,
+              title: l10n.movementWeeklyChartTitle,
+              trailing: l10n.movementWeeklyChartSubtitle,
+              child: _WeeklyStepsBarChart(cycles: _recentCycles),
+            ),
+          ),
+        const SizedBox(height: 4),
+        Center(
+          child: TextButton(
+            style: TextButton.styleFrom(minimumSize: const Size(0, 32), padding: const EdgeInsets.symmetric(horizontal: 12)),
+            onPressed: _busy ? null : _disable,
+            child: Text(l10n.movementDisableButton, style: const TextStyle(fontSize: 12)),
+          ),
+        ),
+      ],
     );
   }
 }
 
 /// Bloco Hero (U.I/MOVIMENTO_REDESIGN_V1.md §4) — anel de progresso +
-/// estatísticas lado a lado num único card compacto, substituindo o
-/// donut grande isolado + textos empilhados da versão anterior. A regra
-/// de conversão "100 passos = +2 XP" fica sempre visível aqui, nunca
-/// implícita.
+/// estatísticas de Passos/XP/MentalCoins lado a lado num único card
+/// compacto. A regra de conversão "100 passos = +2 XP" fica sempre
+/// visível aqui, nunca implícita. MentalCoins adicionado (29/08/2026,
+/// pedido de Rhoney: "dê maior destaque aos passos, XP, MentalCoins") —
+/// reforça a ligação entre passos e a moeda de prestígio semanal
+/// (campeão/recordista de passos ganham MentalCoins, ver
+/// U.I/MENTALCOINS_V1.md §3.2).
 class _HeroBlock extends StatelessWidget {
-  const _HeroBlock({required this.stepsCollected, required this.xpAwarded, required this.goal});
+  const _HeroBlock({required this.stepsCollected, required this.xpAwarded, required this.mentalCoinsBalance, required this.goal});
 
   final int stepsCollected;
   final int xpAwarded;
+  final int? mentalCoinsBalance;
   final int? goal;
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
         gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [AppColors.bg2, Color.lerp(AppColors.bg2, AppColors.gold, 0.08)!]),
         borderRadius: BorderRadius.circular(18),
@@ -473,21 +486,24 @@ class _HeroBlock extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           _ProgressRing(stepsCollected: stepsCollected, goal: goal),
-          const SizedBox(width: 16),
+          const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                _StatLine(color: AppColors.gold, value: '$stepsCollected', label: l10n.movementStepsTodayLabel),
+                Row(
+                  children: [
+                    Expanded(child: _HeroStat(icon: Icons.directions_walk_rounded, color: AppColors.gold, value: '$stepsCollected')),
+                    Expanded(child: _HeroStat(icon: Icons.bolt_rounded, color: AppColors.teal, value: '$xpAwarded')),
+                    Expanded(child: _HeroStat(icon: null, coin: true, color: AppColors.gold, value: '${mentalCoinsBalance ?? 0}')),
+                  ],
+                ),
                 const SizedBox(height: 8),
-                _StatLine(color: AppColors.teal, value: '$xpAwarded', label: l10n.movementXpTodayLabel),
-                const SizedBox(height: 10),
                 Text.rich(
                   TextSpan(
-                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11),
+                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
                     children: const [
-                      TextSpan(text: 'A cada '),
                       TextSpan(text: '100 passos', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
                       TextSpan(text: ' = '),
                       TextSpan(text: '+2 XP', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
@@ -503,22 +519,28 @@ class _HeroBlock extends StatelessWidget {
   }
 }
 
-class _StatLine extends StatelessWidget {
-  const _StatLine({required this.color, required this.value, required this.label});
+/// Estatística compacta e destacada dentro do Hero — ícone/moeda + valor
+/// grande, sem label textual (economiza espaço vertical; o significado
+/// já é óbvio pelo ícone/cor: passos, raio de XP, moeda).
+class _HeroStat extends StatelessWidget {
+  const _HeroStat({required this.color, required this.value, this.icon, this.coin = false});
 
+  final IconData? icon;
+  final bool coin;
   final Color color;
   final String value;
-  final String label;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.baseline,
-      textBaseline: TextBaseline.alphabetic,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Text(value, style: AppTheme.technicalStyle(color: color, fontSize: 20).copyWith(fontWeight: FontWeight.w800)),
-        const SizedBox(width: 6),
-        Text(label, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
+        coin ? const MentalCoin(size: 16) : Icon(icon, color: color, size: 16),
+        const SizedBox(height: 2),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(value, style: AppTheme.technicalStyle(color: color, fontSize: 17).copyWith(fontWeight: FontWeight.w800)),
+        ),
       ],
     );
   }
@@ -556,18 +578,23 @@ class _ProgressRing extends StatelessWidget {
             decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.bg, width: 9)),
           ),
           if (hasGoal)
-            SizedBox(
-              width: 78,
-              height: 78,
-              child: PieChart(
-                PieChartData(
-                  startDegreeOffset: -90,
-                  sectionsSpace: 0,
-                  centerSpaceRadius: 30,
-                  sections: [
-                    PieChartSectionData(value: progress > 0 ? progress : 0.001, color: ringColor, showTitle: false, radius: 9),
-                    PieChartSectionData(value: 1 - progress, color: Colors.transparent, showTitle: false, radius: 9),
-                  ],
+            TweenAnimationBuilder<double>(
+              tween: Tween(begin: 0, end: progress),
+              duration: const Duration(milliseconds: 900),
+              curve: Curves.easeOutCubic,
+              builder: (context, animatedProgress, _) => SizedBox(
+                width: 78,
+                height: 78,
+                child: PieChart(
+                  PieChartData(
+                    startDegreeOffset: -90,
+                    sectionsSpace: 0,
+                    centerSpaceRadius: 30,
+                    sections: [
+                      PieChartSectionData(value: animatedProgress > 0 ? animatedProgress : 0.001, color: ringColor, showTitle: false, radius: 9),
+                      PieChartSectionData(value: 1 - animatedProgress, color: Colors.transparent, showTitle: false, radius: 9),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -638,69 +665,179 @@ class _LiveBadgeState extends State<_LiveBadge> with SingleTickerProviderStateMi
   }
 }
 
-/// Seletor de meta diária em chips (U.I/MOVIMENTO_REDESIGN_V1.md §6) —
-/// substitui o diálogo de texto livre anterior por uma escolha guiada
-/// entre 4 faixas. Uma meta fora dessas faixas (definida antes desta
-/// versão existir) continua funcionando normalmente — só não fica
-/// destacada em nenhum chip até o usuário escolher uma das 4.
-class _GoalSelector extends StatelessWidget {
-  const _GoalSelector({required this.l10n, required this.tiers, required this.currentGoal, required this.onSelect});
+/// Seletor de meta diária — chips (5k/10k/15k/20k) + meta customizada
+/// (29/08/2026, pedido de Rhoney: "existem pessoas que... facilmente
+/// vão além de 20k diário"). Confirmação via botão "Go" em vez de
+/// salvar na hora do toque — permite trocar de ideia entre chip e valor
+/// customizado antes de gastar uma chamada de rede, e dá o momento
+/// explícito de "começar a valer" que Rhoney pediu.
+class _GoalSelector extends StatefulWidget {
+  const _GoalSelector({
+    required this.tiers,
+    required this.currentGoal,
+    required this.busy,
+    required this.onConfirm,
+    required this.totalStepsToday,
+    required this.canCollect,
+    required this.onCollect,
+  });
 
-  final AppLocalizations l10n;
   final List<int> tiers;
   final int? currentGoal;
-  final void Function(int steps)? onSelect;
+  final bool busy;
+  final void Function(int steps) onConfirm;
+  // Checkpoints de coleta (29/08/2026) — cada card acende quando o
+  // total de passos de hoje alcança o próprio valor do card, e passa a
+  // coletar (em vez de trocar a meta) ao ser tocado nesse estado.
+  final int totalStepsToday;
+  final bool canCollect;
+  final VoidCallback onCollect;
 
-  String _chipLabel(int steps) {
+  @override
+  State<_GoalSelector> createState() => _GoalSelectorState();
+}
+
+class _GoalSelectorState extends State<_GoalSelector> {
+  int? _pendingGoal;
+  late final _customController = TextEditingController(text: _isCustomGoal(widget.currentGoal) ? '${widget.currentGoal}' : '');
+
+  bool _isCustomGoal(int? goal) => goal != null && !widget.tiers.contains(goal);
+
+  @override
+  void didUpdateWidget(covariant _GoalSelector oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Meta customizada confirmada pelo backend (ex.: depois de um
+    // _load() após o "Ir") — mantém o valor visível no campo em vez de
+    // deixá-lo vazio (29/08/2026, pedido de Rhoney: "ao digitar uma
+    // meta ela deve ser adicionada e ficar visível na tela").
+    if (widget.currentGoal != oldWidget.currentGoal && _isCustomGoal(widget.currentGoal)) {
+      _customController.text = '${widget.currentGoal}';
+    }
+  }
+
+  @override
+  void dispose() {
+    _customController.dispose();
+    super.dispose();
+  }
+
+  String _chipLabel(AppLocalizations l10n, int steps) {
     switch (steps) {
       case 5000:
         return l10n.movementGoalChipLight;
       case 10000:
         return l10n.movementGoalChipStandard;
-      case 15000:
-        return l10n.movementGoalChipIntense;
       default:
-        return l10n.movementGoalChipElite;
+        return l10n.movementGoalChipIntense;
     }
   }
 
-  String _chipSubLabel(int steps) {
+  String _chipSubLabel(AppLocalizations l10n, int steps) {
     switch (steps) {
       case 5000:
         return l10n.movementGoalChipLightLabel;
       case 10000:
         return l10n.movementGoalChipStandardLabel;
-      case 15000:
-        return l10n.movementGoalChipIntenseLabel;
       default:
-        return l10n.movementGoalChipEliteLabel;
+        return l10n.movementGoalChipIntenseLabel;
     }
+  }
+
+  void _confirm() {
+    final pending = _pendingGoal;
+    if (pending == null || pending <= 0) return;
+    widget.onConfirm(pending);
+    setState(() {
+      _pendingGoal = null;
+      // Meta customizada continua visível no campo depois de confirmada
+      // — só limpa quando o valor confirmado é um dos chips fixos.
+      if (widget.tiers.contains(pending)) _customController.clear();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final hasPendingChange = _pendingGoal != null && _pendingGoal != widget.currentGoal;
+    final customGoalActive = _pendingGoal == null && _isCustomGoal(widget.currentGoal) && int.tryParse(_customController.text) == widget.currentGoal;
+
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Row(
             children: [
               Container(width: 6, height: 6, decoration: const BoxDecoration(shape: BoxShape.circle, color: AppColors.gold)),
               const SizedBox(width: 8),
-              Expanded(child: Text(l10n.movementGoalSelectorTitle, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600))),
-              Text(l10n.movementGoalSelectorSubtitle, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10)),
+              Expanded(child: Text(l10n.movementGoalSelectorTitle, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600, fontSize: 13))),
+              Text(l10n.movementGoalSelectorSubtitle, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              for (final steps in widget.tiers) ...[
+                Expanded(
+                  child: _GoalChip(
+                    label: _chipLabel(l10n, steps),
+                    subLabel: _chipSubLabel(l10n, steps),
+                    selected: (_pendingGoal ?? widget.currentGoal) == steps,
+                    // Checkpoint atingido (29/08/2026, pedido de Rhoney):
+                    // acende numa cor chamativa e passa a coletar em vez
+                    // de trocar a meta.
+                    reached: widget.canCollect && widget.totalStepsToday >= steps,
+                    reachedLabel: l10n.movementGoalChipCollectHint,
+                    onTap: widget.busy
+                        ? null
+                        : (widget.canCollect && widget.totalStepsToday >= steps)
+                            ? widget.onCollect
+                            : () => setState(() {
+                                  _pendingGoal = steps;
+                                  _customController.clear();
+                                }),
+                  ),
+                ),
+                const SizedBox(width: 6),
+              ],
+              // Último card é editável (29/08/2026, pedido de Rhoney: "o
+              // último card deve ser editável, isso resolve o problema
+              // do jogador estabelecer sua própria meta") — quem anda,
+              // corre ou treina facilmente passa dos tiers fixos acima.
+              // Também vira checkpoint de coleta quando a meta ativa é
+              // alcançada, igual aos 3 cards fixos.
+              Expanded(
+                child: _CustomGoalChip(
+                  controller: _customController,
+                  active: customGoalActive,
+                  reached: widget.canCollect &&
+                      _isCustomGoal(widget.currentGoal) &&
+                      widget.currentGoal != null &&
+                      widget.totalStepsToday >= widget.currentGoal!,
+                  reachedLabel: l10n.movementGoalChipCollectHint,
+                  busy: widget.busy,
+                  label: l10n.movementGoalChipCustomLabel,
+                  hint: l10n.movementCustomGoalHint,
+                  onChanged: (value) => setState(() => _pendingGoal = int.tryParse(value)),
+                  onCollect: widget.onCollect,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 10),
-          Row(
-            children: [
-              for (final steps in tiers) ...[
-                Expanded(child: _GoalChip(label: _chipLabel(steps), subLabel: _chipSubLabel(steps), selected: currentGoal == steps, onTap: onSelect == null ? null : () => onSelect!(steps))),
-                if (steps != tiers.last) const SizedBox(width: 8),
-              ],
-            ],
+          // Botão "Ir" centralizado e mais comprido (29/08/2026, pedido
+          // de Rhoney: "mesma largura, só que mais comprido +2x seu
+          // comprimento atual") — mantém o destaque dourado padrão do
+          // tema pra confirmação de meta.
+          Center(
+            child: FilledButton(
+              style: FilledButton.styleFrom(minimumSize: const Size(144, 40), padding: const EdgeInsets.symmetric(horizontal: 20)),
+              onPressed: (widget.busy || !hasPendingChange) ? null : _confirm,
+              child: Text(l10n.movementGoalGoButton, style: const TextStyle(fontWeight: FontWeight.w800)),
+            ),
           ),
         ],
       ),
@@ -709,33 +846,122 @@ class _GoalSelector extends StatelessWidget {
 }
 
 class _GoalChip extends StatelessWidget {
-  const _GoalChip({required this.label, required this.subLabel, required this.selected, required this.onTap});
+  const _GoalChip({required this.label, required this.subLabel, required this.selected, required this.reached, required this.reachedLabel, required this.onTap});
 
   final String label;
   final String subLabel;
   final bool selected;
+  // Checkpoint atingido (29/08/2026) — acende numa cor chamativa
+  // (victory green) e some sobrepõe o estado "selecionado como meta",
+  // já que nesse momento o toque coleta, não muda a meta.
+  final bool reached;
+  final String reachedLabel;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
+    final color = reached ? AppColors.victory : (selected ? AppColors.gold : AppColors.bone);
+    final bgAlpha = reached ? 0.22 : (selected ? 0.16 : 0.0);
     return Material(
-      color: selected ? AppColors.gold.withValues(alpha: 0.16) : AppColors.bg,
+      color: (reached || selected) ? color.withValues(alpha: bgAlpha) : AppColors.bg,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(color: selected ? AppColors.gold : AppColors.muted.withValues(alpha: 0.25))),
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(color: reached ? AppColors.victory : (selected ? AppColors.gold : AppColors.muted.withValues(alpha: 0.25)))),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(label, style: AppTheme.technicalStyle(color: selected ? AppColors.gold : AppColors.bone, fontSize: 14).copyWith(fontWeight: FontWeight.w700)),
-              Text(subLabel, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+              Text(label, style: AppTheme.technicalStyle(color: color, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
+              Text(reached ? reachedLabel : subLabel, style: AppTheme.technicalStyle(color: reached ? AppColors.victory : AppColors.muted, fontSize: 8).copyWith(fontWeight: reached ? FontWeight.w700 : FontWeight.w400)),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Último card do seletor de meta — em vez de um tier fixo, é o próprio
+/// campo editável (29/08/2026, pedido de Rhoney: "o último card deve
+/// ser editável, isso resolve o problema do jogador estabelecer sua
+/// própria meta"). Visualmente segue o mesmo container/borda dos outros
+/// 3 chips — só o conteúdo troca de Text estático pra um TextField.
+class _CustomGoalChip extends StatelessWidget {
+  const _CustomGoalChip({
+    required this.controller,
+    required this.active,
+    required this.reached,
+    required this.reachedLabel,
+    required this.busy,
+    required this.label,
+    required this.hint,
+    required this.onChanged,
+    required this.onCollect,
+  });
+
+  final TextEditingController controller;
+  final bool active;
+  // Meta customizada ativa e atingida (29/08/2026) — mesma semântica do
+  // checkpoint dos 3 chips fixos: o card acende e o toque passa a
+  // coletar em vez de abrir o teclado pra editar.
+  final bool reached;
+  final String reachedLabel;
+  final bool busy;
+  final String label;
+  final String hint;
+  final ValueChanged<String> onChanged;
+  final VoidCallback onCollect;
+
+  @override
+  Widget build(BuildContext context) {
+    final color = reached ? AppColors.victory : (active ? AppColors.gold : AppColors.bone);
+    final content = Container(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+      decoration: BoxDecoration(
+        color: reached ? AppColors.victory.withValues(alpha: 0.22) : (active ? AppColors.gold.withValues(alpha: 0.16) : AppColors.bg),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: reached ? AppColors.victory : (active ? AppColors.gold : AppColors.muted.withValues(alpha: 0.25))),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+            height: 18,
+            child: reached
+                ? FittedBox(fit: BoxFit.scaleDown, child: Text(controller.text, style: AppTheme.technicalStyle(color: color, fontSize: 13).copyWith(fontWeight: FontWeight.w700)))
+                : TextField(
+                    controller: controller,
+                    enabled: !busy,
+                    textAlign: TextAlign.center,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                    style: AppTheme.technicalStyle(color: color, fontSize: 13).copyWith(fontWeight: FontWeight.w700),
+                    decoration: InputDecoration(
+                      isDense: true,
+                      isCollapsed: true,
+                      border: InputBorder.none,
+                      hintText: hint,
+                      hintStyle: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11),
+                    ),
+                    onChanged: onChanged,
+                  ),
+          ),
+          const SizedBox(height: 2),
+          Text(reached ? reachedLabel : label, style: AppTheme.technicalStyle(color: reached ? AppColors.victory : (active ? AppColors.gold : AppColors.muted), fontSize: 8).copyWith(fontWeight: reached ? FontWeight.w700 : FontWeight.w400)),
+        ],
+      ),
+    );
+    if (!reached) return content;
+    // Atingida: o card inteiro vira botão de coleta — intercepta o
+    // toque antes que ele chegue ao TextField (que já não é o widget
+    // visível nesse estado, mas evita qualquer foco residual).
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(12),
+      child: InkWell(borderRadius: BorderRadius.circular(12), onTap: busy ? null : onCollect, child: content),
     );
   }
 }
@@ -755,7 +981,7 @@ class _ChartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(14),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -764,12 +990,12 @@ class _ChartCard extends StatelessWidget {
             children: [
               Container(width: 6, height: 6, decoration: BoxDecoration(shape: BoxShape.circle, color: dotColor)),
               const SizedBox(width: 8),
-              Expanded(child: Text(title, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600))),
-              Flexible(child: Text(trailing, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10), textAlign: TextAlign.right, overflow: TextOverflow.ellipsis)),
+              Expanded(child: Text(title, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600, fontSize: 13))),
+              Flexible(child: Text(trailing, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9), textAlign: TextAlign.right, overflow: TextOverflow.ellipsis)),
             ],
           ),
-          const SizedBox(height: 10),
-          child,
+          const SizedBox(height: 6),
+          Expanded(child: child),
         ],
       ),
     );
@@ -780,6 +1006,8 @@ class _ChartCard extends StatelessWidget {
 /// desempenho de cada um dos últimos dias, destacando visualmente o dia
 /// de maior (dourado) e o de menor (tom neutro) volume de passos, pra
 /// dar uma visão de desempenho ao longo do tempo, não só o ciclo atual.
+/// Animação de entrada (29/08/2026, pedido de Rhoney: gráficos "muito
+/// dinâmicos") via swapAnimationDuration nativo do fl_chart.
 class _WeeklyStepsBarChart extends StatelessWidget {
   const _WeeklyStepsBarChart({required this.cycles});
 
@@ -796,99 +1024,121 @@ class _WeeklyStepsBarChart extends StatelessWidget {
     final maxY = maxValue <= 0 ? 10.0 : maxValue * 1.25;
     final hasVariation = maxValue != minValue;
 
-    return SizedBox(
-      height: 150,
-      child: BarChart(
-        BarChartData(
-          maxY: maxY,
-          alignment: BarChartAlignment.spaceAround,
-          gridData: const FlGridData(show: false),
-          borderData: FlBorderData(show: false),
-          barTouchData: const BarTouchData(enabled: false),
-          titlesData: FlTitlesData(
-            leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            bottomTitles: AxisTitles(
-              sideTitles: SideTitles(
-                showTitles: true,
-                reservedSize: 24,
-                getTitlesWidget: (value, meta) {
-                  final index = value.toInt();
-                  if (index < 0 || index >= cycles.length) return const SizedBox.shrink();
-                  final start = DateTime.parse(cycles[index]['cycle_start_at'] as String);
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 6),
-                    child: Text(
-                      _weekdayLabels[start.weekday - 1],
-                      style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
-                    ),
-                  );
-                },
-              ),
+    return BarChart(
+      duration: const Duration(milliseconds: 700),
+      curve: Curves.easeOutCubic,
+      BarChartData(
+        maxY: maxY,
+        alignment: BarChartAlignment.spaceAround,
+        gridData: FlGridData(
+          show: true,
+          drawVerticalLine: false,
+          horizontalInterval: maxY / 3,
+          getDrawingHorizontalLine: (_) => const FlLine(color: AppColors.bg, strokeWidth: 1),
+        ),
+        borderData: FlBorderData(show: false),
+        barTouchData: BarTouchData(
+          enabled: true,
+          touchTooltipData: BarTouchTooltipData(
+            getTooltipColor: (_) => AppColors.bg,
+            getTooltipItem: (group, groupIndex, rod, rodIndex) => BarTooltipItem('${rod.toY.round()}', AppTheme.technicalStyle(color: AppColors.bone, fontSize: 11)),
+          ),
+        ),
+        titlesData: FlTitlesData(
+          leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          bottomTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: true,
+              reservedSize: 26,
+              getTitlesWidget: (value, meta) {
+                final index = value.toInt();
+                if (index < 0 || index >= cycles.length) return const SizedBox.shrink();
+                final start = DateTime.parse(cycles[index]['cycle_start_at'] as String);
+                final isRecordDay = values[index] == maxValue && hasVariation;
+                return Padding(
+                  padding: const EdgeInsets.only(top: 6),
+                  child: Text(
+                    _weekdayLabels[start.weekday - 1],
+                    style: AppTheme.technicalStyle(color: isRecordDay ? AppColors.gold : AppColors.bone, fontSize: 13).copyWith(fontWeight: FontWeight.w700),
+                  ),
+                );
+              },
             ),
           ),
-          barGroups: [
-            for (var i = 0; i < values.length; i++)
-              BarChartGroupData(
-                x: i,
-                barRods: [
-                  BarChartRodData(
-                    toY: values[i].toDouble(),
-                    width: 18,
-                    borderRadius: BorderRadius.circular(6),
-                    color: !hasVariation
-                        ? AppColors.teal
-                        : values[i] == maxValue
-                            ? AppColors.gold
-                            : values[i] == minValue
-                                ? AppColors.muted
-                                : AppColors.teal,
-                  ),
-                ],
-              ),
-          ],
         ),
+        barGroups: [
+          for (var i = 0; i < values.length; i++)
+            BarChartGroupData(
+              x: i,
+              barRods: [
+                BarChartRodData(
+                  toY: values[i].toDouble(),
+                  width: 18,
+                  borderRadius: BorderRadius.circular(6),
+                  color: !hasVariation
+                      ? AppColors.teal
+                      : values[i] == maxValue
+                          ? AppColors.gold
+                          : values[i] == minValue
+                              ? AppColors.muted
+                              : AppColors.teal,
+                ),
+              ],
+            ),
+        ],
       ),
     );
   }
 }
 
-/// Gráfico do dia (linha) + mini-cards de pico/vale ao lado
-/// (U.I/MOVIMENTO_REDESIGN_V1.md §5.2) — oscilação de passos ao LONGO do
-/// ciclo em curso, um ponto por coleta (MovementSnapshot, backend).
-class _IntradayStepsSection extends StatelessWidget {
-  const _IntradayStepsSection({required this.l10n, required this.snapshots, required this.cycleStart});
+/// Converte os snapshots do ciclo (backend) em pontos (hora, passos)
+/// pro gráfico de linha e pros cards de pico/vale — compartilhado entre
+/// `_OscillationMetricsRow` (topo da tela) e o gráfico intradiário
+/// completo (mais abaixo), já que os dois derivam do mesmo dado.
+List<(double hour, int steps)> _intradayPoints(List<Map<String, dynamic>> snapshots, DateTime cycleStart) {
+  return [
+    (0, 0),
+    for (final s in snapshots) (DateTime.parse(s['recorded_at'] as String).difference(cycleStart).inMinutes / 60.0, s['steps_total'] as int),
+  ];
+}
+
+/// Métricas de oscilação diária (U.I/MOVIMENTO_REDESIGN_V1.md §5.2,
+/// reposicionadas em 29/08/2026 — pedido de Rhoney: "no lugar dos dois
+/// botões abaixo deve aparecer as métricas de oscilações diário do
+/// jogador") — pico e vale de passos por hora, no lugar de onde ficavam
+/// os botões manuais de coleta. Precisa de pelo menos 2 snapshots pra
+/// fazer sentido comparar; com menos, mostra um aviso neutro.
+class _OscillationMetricsRow extends StatelessWidget {
+  const _OscillationMetricsRow({required this.l10n, required this.sensorUnavailable, required this.snapshots, required this.cycleStart});
 
   final AppLocalizations l10n;
+  final bool sensorUnavailable;
   final List<Map<String, dynamic>> snapshots;
   final DateTime cycleStart;
 
   @override
   Widget build(BuildContext context) {
-    final points = <(double hour, int steps)>[
-      (0, 0),
-      for (final s in snapshots)
-        (DateTime.parse(s['recorded_at'] as String).difference(cycleStart).inMinutes / 60.0, s['steps_total'] as int),
-    ];
+    if (snapshots.length < 2) {
+      return FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          sensorUnavailable ? l10n.movementSensorUnavailableMessage : l10n.movementOscillationPendingMessage,
+          style: const TextStyle(color: AppColors.muted, fontSize: 11),
+          maxLines: 1,
+        ),
+      );
+    }
+    final points = _intradayPoints(snapshots, cycleStart);
     final peak = points.reduce((a, b) => a.$2 >= b.$2 ? a : b);
     final valley = points.reduce((a, b) => a.$2 <= b.$2 ? a : b);
-
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(flex: 3, child: _IntradayStepsLineChart(points: points)),
-        const SizedBox(width: 10),
-        Expanded(
-          flex: 2,
-          child: Column(
-            children: [
-              _PeakValleyCard(icon: '🔥', label: l10n.movementPeakLabel, hour: peak.$1, steps: peak.$2, color: AppColors.gold),
-              const SizedBox(height: 8),
-              _PeakValleyCard(icon: '💤', label: l10n.movementValleyLabel, hour: valley.$1, steps: valley.$2, color: AppColors.muted),
-            ],
-          ),
-        ),
+        Expanded(child: _PeakValleyCard(icon: '🔥', label: l10n.movementPeakLabel, hour: peak.$1, steps: peak.$2, color: AppColors.gold)),
+        const SizedBox(width: 6),
+        Expanded(child: _PeakValleyCard(icon: '💤', label: l10n.movementValleyLabel, hour: valley.$1, steps: valley.$2, color: AppColors.muted)),
       ],
     );
   }
@@ -908,15 +1158,20 @@ class _PeakValleyCard extends StatelessWidget {
     final h = hour.floor();
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
       decoration: BoxDecoration(color: AppColors.bg, borderRadius: BorderRadius.circular(10)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text('$icon ${h}h · $label', style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
-          Text('$steps', style: AppTheme.technicalStyle(color: color, fontSize: 15).copyWith(fontWeight: FontWeight.w700)),
-        ],
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('$icon ${h}h · $label', style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+            Text('$steps', style: AppTheme.technicalStyle(color: color, fontSize: 15).copyWith(fontWeight: FontWeight.w700)),
+          ],
+        ),
       ),
     );
   }
@@ -933,64 +1188,71 @@ class _IntradayStepsLineChart extends StatelessWidget {
     final maxY = spots.map((s) => s.y).reduce((a, b) => a > b ? a : b);
     final chartMaxY = maxY <= 0 ? 10.0 : maxY * 1.2;
 
-    return SizedBox(
-      height: 150,
-      child: LineChart(
-        LineChartData(
-          minX: 0,
-          maxX: 24,
-          minY: 0,
-          maxY: chartMaxY,
-          lineTouchData: const LineTouchData(enabled: false),
-          gridData: FlGridData(
-            show: true,
-            drawVerticalLine: false,
-            horizontalInterval: chartMaxY / 3,
-            getDrawingHorizontalLine: (_) => const FlLine(color: AppColors.bg, strokeWidth: 1),
+    return LineChart(
+      duration: const Duration(milliseconds: 900),
+      curve: Curves.easeOutCubic,
+      LineChartData(
+        minX: 0,
+        maxX: 24,
+        minY: 0,
+        maxY: chartMaxY,
+        lineTouchData: LineTouchData(
+          enabled: true,
+          touchTooltipData: LineTouchTooltipData(
+            getTooltipColor: (_) => AppColors.bg,
+            getTooltipItems: (spots) => [
+              for (final s in spots) LineTooltipItem('${s.y.round()}', AppTheme.technicalStyle(color: AppColors.bone, fontSize: 11)),
+            ],
           ),
-          borderData: FlBorderData(show: false),
-          titlesData: FlTitlesData(
-            leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            bottomTitles: AxisTitles(
-              sideTitles: SideTitles(
-                showTitles: true,
-                interval: 6,
-                reservedSize: 24,
-                getTitlesWidget: (value, meta) => Padding(
-                  padding: const EdgeInsets.only(top: 6),
-                  child: Text(
-                    '${value.toInt()}h',
-                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          lineBarsData: [
-            LineChartBarData(
-              spots: spots,
-              isCurved: true,
-              curveSmoothness: 0.25,
-              color: AppColors.gold,
-              barWidth: 3,
-              dotData: FlDotData(
-                show: true,
-                getDotPainter: (spot, percent, bar, index) =>
-                    FlDotCirclePainter(radius: 3.5, color: AppColors.gold, strokeWidth: 0),
-              ),
-              belowBarData: BarAreaData(
-                show: true,
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [AppColors.gold.withValues(alpha: 0.2), AppColors.gold.withValues(alpha: 0.0)],
-                ),
-              ),
-            ),
-          ],
         ),
+        gridData: FlGridData(
+          show: true,
+          drawVerticalLine: false,
+          horizontalInterval: chartMaxY / 3,
+          getDrawingHorizontalLine: (_) => const FlLine(color: AppColors.bg, strokeWidth: 1),
+        ),
+        borderData: FlBorderData(show: false),
+        titlesData: FlTitlesData(
+          leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          bottomTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: true,
+              interval: 6,
+              reservedSize: 20,
+              getTitlesWidget: (value, meta) => Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text(
+                  '${value.toInt()}h',
+                  style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
+                ),
+              ),
+            ),
+          ),
+        ),
+        lineBarsData: [
+          LineChartBarData(
+            spots: spots,
+            isCurved: true,
+            curveSmoothness: 0.25,
+            color: AppColors.gold,
+            barWidth: 3,
+            dotData: FlDotData(
+              show: true,
+              getDotPainter: (spot, percent, bar, index) =>
+                  FlDotCirclePainter(radius: 3.5, color: AppColors.gold, strokeWidth: 0),
+            ),
+            belowBarData: BarAreaData(
+              show: true,
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [AppColors.gold.withValues(alpha: 0.2), AppColors.gold.withValues(alpha: 0.0)],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
