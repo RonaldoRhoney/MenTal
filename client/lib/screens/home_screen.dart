@@ -459,15 +459,20 @@ class _QuickActionCard extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(14),
         onTap: onTap,
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 6),
+          // Destaque de borda na cor do ícone (29/08/2026, pedido de
+          // Rhoney: "estão dimidamente quase na mesma tonalidade do
+          // fundo") — o card sozinho (bg2) quase não se distinguia do
+          // fundo da tela (bg); a borda colorida dá contorno próprio.
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(14), border: Border.all(color: color.withValues(alpha: 0.4))),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Badge(
                 isLabelVisible: (badgeCount ?? 0) > 0,
                 label: Text('$badgeCount'),
-                child: Icon(icon, color: color, size: 26),
+                child: Icon(icon, color: color, size: 28),
               ),
               const SizedBox(height: 6),
               Text(
@@ -480,7 +485,10 @@ class _QuickActionCard extends StatelessWidget {
                 // labels como "Progresso"/"Movimento" truncavam
                 // ("Progres...", "Movime..."). fontSize menor + 2 linhas
                 // resolve sem precisar encurtar o texto em si.
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 12, height: 1.15),
+                // Cor clara (bone) em vez do "muted" padrão do
+                // bodySmall (29/08/2026) — o cinza discreto ficava
+                // quase invisível contra o fundo escuro.
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.bone, fontWeight: FontWeight.w600, fontSize: 12, height: 1.15),
               ),
             ],
           ),
@@ -901,9 +909,13 @@ class _MetaStat extends StatelessWidget {
         Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: color, size: 12),
+            Icon(icon, color: color, size: 13),
             const SizedBox(width: 3),
-            Text(label.toUpperCase(), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
+            // Bone em vez de muted (29/08/2026, pedido de Rhoney: "estão
+            // dimidamente quase na mesma tonalidade do fundo") — rótulo
+            // pequeno já era proposital, mas precisa de contraste real
+            // pra ser lido, não só tamanho reduzido.
+            Text(label.toUpperCase(), style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 10).copyWith(fontWeight: FontWeight.w600)),
           ],
         ),
         Text(value, style: AppTheme.technicalStyle(color: color, fontSize: 17).copyWith(fontWeight: FontWeight.w800)),
