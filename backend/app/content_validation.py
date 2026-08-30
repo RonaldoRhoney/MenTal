@@ -126,3 +126,79 @@ def validate_learning_pauses(items: list[dict], known_territory_ids: set[str], e
         seen_in_file.add(key)
 
     return errors
+
+
+WORD_PUZZLE_REQUIRED_FIELDS = {"territory_id", "difficulty_level", "theme", "grid_size", "grid", "words", "age_reviewed"}
+
+
+def validate_word_puzzles(items: list[dict], known_territory_ids: set[str], existing_themes: set[tuple[str, str]]) -> list[str]:
+    """
+    V3.3 §6 (Jogos de Palavras — Caça-palavras). Valida a GRADE em si,
+    não só metadados: cada palavra de `words` precisa de fato existir na
+    grade numa linha reta (horizontal/vertical/diagonal, direção normal
+    ou invertida) — a mesma checagem que o próprio jogo faria pra
+    aceitar uma palavra encontrada, aplicada aqui pra pegar erro de
+    geração ANTES de publicar (grade e palavras vêm de
+    scripts/generate_word_search.py, nunca digitadas à mão, mas o
+    script pode ter bug — validar de novo aqui é defesa em profundidade).
+    """
+    errors: list[str] = []
+    seen_in_file: set[tuple[str, str]] = set()
+
+    directions = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+
+    def _word_exists_in_grid(grid: list[str], word: str) -> bool:
+        size = len(grid)
+        for row in range(size):
+            for col in range(size):
+                for d_row, d_col in directions:
+                    end_row = row + d_row * (len(word) - 1)
+                    end_col = col + d_col * (len(word) - 1)
+                    if not (0 <= end_row < size and 0 <= end_col < size):
+                        continue
+                    found = "".join(grid[row + d_row * i][col + d_col * i] for i in range(len(word)))
+                    if found == word:
+                        return True
+        return False
+
+    for idx, item in enumerate(items):
+        prefix = f"item {idx} ({item.get('theme', '<sem tema>')!r})"
+
+        missing = WORD_PUZZLE_REQUIRED_FIELDS - item.keys()
+        if missing:
+            errors.append(f"{prefix}: campos faltando: {sorted(missing)}")
+            continue
+
+        territory_id = item["territory_id"]
+        if territory_id not in known_territory_ids:
+            errors.append(f"{prefix}: territory_id {territory_id!r} não existe (veja app/seed.py TERRITORIES)")
+
+        if item["difficulty_level"] not in (1, 2, 3):
+            errors.append(f"{prefix}: difficulty_level precisa ser 1, 2 ou 3 (veio {item['difficulty_level']!r})")
+
+        if item["age_reviewed"] is not True:
+            errors.append(f"{prefix}: age_reviewed precisa ser true — confirme manualmente que o conteúdo é apropriado pro público misto antes de marcar")
+
+        grid = item["grid"]
+        grid_size = item["grid_size"]
+        if not isinstance(grid, list) or len(grid) != grid_size or any(not isinstance(r, str) or len(r) != grid_size for r in grid):
+            errors.append(f"{prefix}: grid precisa ser uma lista de {grid_size} strings de {grid_size} caracteres cada")
+            continue
+
+        words = item["words"]
+        if not isinstance(words, list) or not words:
+            errors.append(f"{prefix}: words precisa ser uma lista não vazia")
+            continue
+
+        for word in words:
+            if not _word_exists_in_grid(grid, word):
+                errors.append(f"{prefix}: palavra {word!r} não foi encontrada em nenhuma linha reta da grade — erro de geração")
+
+        key = (territory_id, item["theme"])
+        if key in existing_themes:
+            errors.append(f"{prefix}: já existe um Caça-palavras com esse tema nesse território")
+        if key in seen_in_file:
+            errors.append(f"{prefix}: tema duplicado dentro do próprio arquivo, no mesmo território")
+        seen_in_file.add(key)
+
+    return errors

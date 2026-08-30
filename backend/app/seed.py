@@ -63,6 +63,11 @@ BLOCKS = [
     # Pausa para Aprender (ver LearningPause.video_url/source_name/
     # source_url) — não um território/tipo de desafio diferente.
     {"id": "libras", "name": "Libras", "display_order": 13},
+    # V3.3 §6 (V3.3_VIDA_PRATICA_PENSAMENTO.md) — Jogos de Palavras,
+    # Fase 1: Caça-palavras (arquitetura própria, não reaproveita o
+    # mecanismo Relâmpago — ver models.WordPuzzle). Cruzadas fica pra
+    # uma Fase 2 separada, ainda não desenhada.
+    {"id": "jogos_de_palavras", "name": "Jogos de Palavras", "display_order": 14},
 ]
 
 TERRITORIES = [
@@ -165,6 +170,7 @@ TERRITORIES = [
     # familiaridade/sem ambiguidade) antes de qualquer charada entrar.
     {"id": "curiosidade_relampago", "challenge_type": "curiosidade_relampago", "requires_subscription": True, "free_sample_count": 2, "display_order": 30, "world_id": "cultura_geral", "block_id": "curiosidade_relampago"},
     {"id": "libras", "challenge_type": "libras", "requires_subscription": True, "free_sample_count": 2, "display_order": 31, "world_id": "cultura_geral", "block_id": "libras"},
+    {"id": "caca_palavras", "challenge_type": "caca_palavras", "requires_subscription": True, "free_sample_count": 1, "display_order": 32, "world_id": "cultura_geral", "block_id": "jogos_de_palavras"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à

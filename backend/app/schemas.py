@@ -137,6 +137,34 @@ class LearningPauseCompleteResponse(BaseModel):
     already_read_before: bool
 
 
+class WordPuzzleOut(BaseModel):
+    # V3.3 §6 (Jogos de Palavras, Fase 1: Caça-palavras) — a grade
+    # inteira já vem resolvida (letras + preenchimento aleatório): não
+    # existe "resposta escondida" pra proteger, diferente de ChallengeOut.
+    # result_id identifica esta tentativa específica (equivalente ao
+    # attempt_id de ChallengeOut) — nasce no servidor com started_at=agora,
+    # usado depois em POST /word-puzzles/{result_id}/complete pra calcular
+    # o tempo real decorrido (nunca confia em duração vinda do client).
+    result_id: str
+    puzzle_id: str
+    territory_id: str
+    difficulty_level: int
+    theme: str
+    grid_size: int
+    grid: list[str]
+    words: list[str]
+
+
+class WordPuzzleCompleteRequest(BaseModel):
+    found_words: list[str]
+
+
+class WordPuzzleCompleteResponse(BaseModel):
+    xp_awarded: int
+    speed_bonus_xp: int
+    already_completed_before: bool
+
+
 class HintRequest(BaseModel):
     attempt_id: str
 

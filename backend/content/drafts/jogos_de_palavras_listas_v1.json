@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "bloco": "jogos_de_palavras",
+    "fase": "V3.3",
+    "formato": "caca_palavras",
+    "status": "Listas iniciais para aprovacao. Cada tema indica o tamanho de grade recomendado com base no comprimento das palavras. Apos aprovacao, Claude Code gera as grades via script gerador ja especificado na arquitetura.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md — todos os temas sao neutros e de conhecimento geral."
+  },
+  "temas": [
+    {
+      "tema": "Animais",
+      "grade_recomendada": "8x8",
+      "palavras": ["GATO", "CAO", "LEAO", "TIGRE", "URSO", "COBRA", "AGUIA", "LOBO", "RATO", "PATO", "PEIXE", "CAVALO"]
+    },
+    {
+      "tema": "Frutas",
+      "grade_recomendada": "8x8",
+      "palavras": ["MACA", "BANANA", "UVA", "MANGA", "LIMAO", "MELAO", "PERA", "ABACAXI", "MAMAO", "MORANGO", "COCO", "CAJU"]
+    },
+    {
+      "tema": "Profissões",
+      "grade_recomendada": "10x10",
+      "palavras": ["MEDICO", "PROFESSOR", "ENGENHEIRO", "DENTISTA", "ADVOGADO", "COZINHEIRO", "BOMBEIRO", "PILOTO", "ENFERMEIRO", "JORNALISTA", "MOTORISTA", "ARQUITETO"]
+    },
+    {
+      "tema": "Capitais do Brasil",
+      "grade_recomendada": "10x10",
+      "palavras": ["BRASILIA", "SALVADOR", "RECIFE", "FORTALEZA", "MANAUS", "CURITIBA", "BELEM", "NATAL", "MACEIO", "VITORIA", "GOIANIA", "PALMAS"]
+    },
+    {
+      "tema": "Esportes",
+      "grade_recomendada": "10x10",
+      "palavras": ["FUTEBOL", "VOLEI", "BASQUETE", "NATACAO", "ATLETISMO", "TENIS", "JUDO", "CICLISMO", "GINASTICA", "SURFE", "BOXE", "REMO"]
+    },
+    {
+      "tema": "Planetas e Espaço",
+      "grade_recomendada": "12x12",
+      "palavras": ["MERCURIO", "VENUS", "TERRA", "MARTE", "JUPITER", "SATURNO", "URANO", "NETUNO", "COMETA", "ASTEROIDE", "GALAXIA", "METEORO", "ECLIPSE", "CONSTELACAO"]
+    },
+    {
+      "tema": "Instrumentos Musicais",
+      "grade_recomendada": "10x10",
+      "palavras": ["VIOLAO", "PIANO", "BATERIA", "FLAUTA", "VIOLINO", "TROMPETE", "SAXOFONE", "PANDEIRO", "CAVAQUINHO", "HARPA", "TUBA", "ORGAO"]
+    },
+    {
+      "tema": "Corpo Humano",
+      "grade_recomendada": "8x8",
+      "palavras": ["CORACAO", "PULMAO", "FIGADO", "CEREBRO", "ESTOMAGO", "RIM", "OSSO", "MUSCULO", "SANGUE", "PELE", "OLHO", "NARIZ"]
+    }
+  ]
+}

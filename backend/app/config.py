@@ -216,6 +216,18 @@ TIMED_MULTIPLE_CHOICE_SPEED_BONUS_MAX_MULTIPLIER = 1.0
 TIMED_MULTIPLE_CHOICE_SPEED_BONUS_FAST_FRACTION = 0.3
 TIMED_MULTIPLE_CHOICE_SPEED_BONUS_SLOW_FRACTION = 0.7
 
+# Jogos de Palavras — Fase 1: Caça-palavras (V3.3, arquitetura aprovada
+# 30/08/2026: grade variável por dificuldade + bônus de velocidade).
+# XP base reaproveita scoring.xp_base_for(difficulty_level), igual a
+# qualquer desafio normal — só o bônus de velocidade é próprio daqui:
+# achado sob o limite de segundos (por dificuldade, maior grade = mais
+# tempo) paga um bônus fixo, sem curva linear como o MCQ cronometrado
+# (aqui não existe "tempo limite" que se possa estourar, só velocidade a
+# premiar — nunca penaliza quem demora mais, só o oposto de MCQ_ e sem
+# curva por não ter um teto de tempo natural como o timer do MCQ).
+WORD_PUZZLE_FAST_COMPLETION_SECONDS = {1: 60, 2: 90, 3: 120}
+WORD_PUZZLE_SPEED_BONUS_MULTIPLIER = 0.5
+
 # Meta diária opcional definida pelo usuário (STEP_COUNTER_MOVIMENTO.md
 # §4, extensão pedida por Rhoney em 2026-08-21): ultrapassar a PRÓPRIA
 # meta paga este bônus extra, uma vez por ciclo, além do bônus por faixa

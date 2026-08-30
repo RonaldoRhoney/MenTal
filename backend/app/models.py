@@ -429,6 +429,57 @@ class ChallengeBatchProgress(Base):
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class WordPuzzle(Base):
+    """
+    V3.3 (V3/V3.3_VIDA_PRATICA_PENSAMENTO.md §6, Jogos de Palavras) —
+    Fase 1: Caça-palavras. Estrutura DELIBERADAMENTE diferente de
+    Challenge: a grade inteira (letras + preenchimento) é visível ao
+    jogador desde o início — não há "resposta escondida" pra proteger,
+    diferente de MCQ. `grid` é uma lista de N strings de N caracteres
+    (linhas da grade já resolvida); `words` é a lista de palavras reais
+    escondidas nela (maiúsculas, sem acento). A grade é gerada uma única
+    vez por scripts/generate_word_search.py a partir de uma lista de
+    palavras curada — nunca em runtime, pra manter geração determinística
+    e auditável (mesmo espírito de "nunca fabricar conteúdo").
+    """
+
+    __tablename__ = "word_puzzles"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"))
+    difficulty_level: Mapped[int] = mapped_column(Integer, default=1)
+    theme: Mapped[str] = mapped_column(String)
+    grid_size: Mapped[int] = mapped_column(Integer)
+    grid: Mapped[list] = mapped_column(JSON)
+    words: Mapped[list] = mapped_column(JSON)
+    age_reviewed: Mapped[bool] = mapped_column(Boolean, default=False)
+    language_code: Mapped[str] = mapped_column(String, default="pt-BR")
+
+
+class WordPuzzleResult(Base):
+    """
+    Uma linha por TENTATIVA (equivalente ao Attempt de Challenge): nasce
+    em GET /word-puzzles/next com started_at=agora, ANTES do jogador
+    encontrar qualquer palavra — é isso que permite calcular o tempo
+    real decorrido no servidor (nunca confiar em duração vinda do
+    client, mesma regra de segurança de todo o app). completed_at só é
+    preenchido quando POST /complete confirma que todas as palavras
+    foram encontradas. XP só é creditado na PRIMEIRA conclusão deste
+    puzzle por este usuário (mesmo espírito de LearningPauseRead —
+    "não deve ser atalho de XP fácil" se o puzzle reaparecer no sorteio).
+    """
+
+    __tablename__ = "word_puzzle_results"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType)
+    word_puzzle_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("word_puzzles.id"))
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    elapsed_ms: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    xp_awarded: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+
 class LevelFeedback(Base):
     __tablename__ = "level_feedback"
 
