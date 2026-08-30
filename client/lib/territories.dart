@@ -27,6 +27,11 @@ const List<String> kTerritoryIds = [
   'concursos_portugues',
   'concursos_raciocinio',
   'concursos_direito',
+  // V3.2 (U.I/../V3/V3.2_TECNOLOGIA.md).
+  'tecnologia_fundamentos',
+  'tecnologia_programacao',
+  'tecnologia_seguranca',
+  'tecnologia_fronteira',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -73,6 +78,14 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryConcursosRaciocinio;
     case 'concursos_direito':
       return l10n.territoryConcursosDireito;
+    case 'tecnologia_fundamentos':
+      return l10n.territoryTecnologiaFundamentos;
+    case 'tecnologia_programacao':
+      return l10n.territoryTecnologiaProgramacao;
+    case 'tecnologia_seguranca':
+      return l10n.territoryTecnologiaSeguranca;
+    case 'tecnologia_fronteira':
+      return l10n.territoryTecnologiaFronteira;
     default:
       return territoryId;
   }

@@ -8,6 +8,7 @@ import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
 import '../theme/app_theme.dart';
 import '../visual_options.dart';
+import 'learning_pause_screen.dart';
 import '../widgets/celebration_overlay.dart';
 import '../widgets/pulse_in.dart';
 import '../widgets/share_achievement_button.dart';
@@ -414,7 +415,30 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.territoryLabel)),
+      appBar: AppBar(
+        title: Text(widget.territoryLabel),
+        // V3.2 (V3/V3.2_TECNOLOGIA.md §3) — acesso à Pausa para Aprender
+        // como ação alternativa dentro do território (mesmo espírito do
+        // botão Relâmpago), nunca uma interrupção aleatória do fluxo
+        // normal de desafios. Sempre visível — territórios sem Pausa
+        // curada ainda mostram uma mensagem de "ainda não há" ao tocar,
+        // em vez de a checagem de disponibilidade atrasar esta tela.
+        actions: [
+          IconButton(
+            tooltip: AppLocalizations.of(context)!.learningPauseButtonTooltip,
+            icon: const Icon(Icons.menu_book_rounded),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => LearningPauseScreen(
+                  client: widget.client,
+                  territoryId: widget.territoryId,
+                  territoryLabel: widget.territoryLabel,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: CelebrationOverlay(
           controller: _celebration,

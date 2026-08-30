@@ -59,3 +59,33 @@ aborta se `mental.challenges` já tiver qualquer linha),
 `(territory_id, prompt)`, pula silenciosamente o que já existe, nunca
 duplica, e pode ser rodado várias vezes conforme novo conteúdo for
 curado ao longo do tempo.
+
+## Pausa para Aprender (V3.2, V3/V3.2_TECNOLOGIA.md §3)
+
+Estrutura de conteúdo DIFERENTE de um desafio — é leitura, sem
+options/correct_answer/hints/timer. Arquivo próprio, formato:
+
+```json
+[
+  {
+    "territory_id": "tecnologia_fronteira",
+    "difficulty_level": 3,
+    "text": "Um modelo de IA generativa não \"sabe\" fatos como um banco de dados — ele aprendeu padrões estatísticos de linguagem a partir de bilhões de exemplos, e prevê a próxima palavra mais provável. É por isso que às vezes ele erra com muita confiança: não está mentindo, está completando um padrão.",
+    "age_reviewed": true,
+    "prompt_image": "🤖"
+  }
+]
+```
+
+| Campo | Obrigatório | Regra |
+|---|---|---|
+| `territory_id` | sim | precisa existir (`app/seed.py TERRITORIES`) |
+| `difficulty_level` | sim | `1`, `2` ou `3` |
+| `text` | sim | texto de leitura curto (§3.3: "rápida e prazerosa", nunca um texto longo que canse) — não pode repetir um `text` já existente no mesmo território |
+| `age_reviewed` | sim | mesma disciplina de desafios — `true` só depois de checado manualmente |
+| `prompt_image` | não | emoji opcional, mesmo catálogo de sempre |
+
+Fluxo idêntico ao de desafios, só trocando os scripts:
+1. Curar em `backend/content/<nome>_pausas.json`.
+2. `python3 scripts/append_learning_pauses.py content/<nome>_pausas.json` — valida e insere (já valida por dentro, mesmo padrão de append_production_content.py — aborta sem tocar o banco se algo estiver errado).
+3. Testar em dev antes de rodar contra produção, mesma disciplina de sempre.

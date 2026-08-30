@@ -280,6 +280,66 @@ abstract class AppLocalizations {
   /// **'Concursos: Direito'**
   String get territoryConcursosDireito;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Tecnologia: Fundamentos'**
+  String get territoryTecnologiaFundamentos;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Tecnologia: Programação'**
+  String get territoryTecnologiaProgramacao;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Tecnologia: Segurança'**
+  String get territoryTecnologiaSeguranca;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Tecnologia: Fronteira'**
+  String get territoryTecnologiaFronteira;
+
+  /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
+  ///
+  /// In pt, this message translates to:
+  /// **'Pausa para Aprender'**
+  String get learningPauseButtonTooltip;
+
+  /// Learning Pause screen title
+  ///
+  /// In pt, this message translates to:
+  /// **'Pausa para Aprender'**
+  String get learningPauseScreenTitle;
+
+  /// Shown when there is no learning pause content for this territory yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda não há Pausas para Aprender neste território.'**
+  String get learningPauseEmptyMessage;
+
+  /// Button that marks the learning pause as read and awards XP
+  ///
+  /// In pt, this message translates to:
+  /// **'Concluí a leitura'**
+  String get learningPauseCompleteButton;
+
+  /// Shown after completing a learning pause for the first time
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP pela leitura!'**
+  String learningPauseXpAwardedMessage(int xp);
+
+  /// Shown when completing a learning pause that was already read before (no XP the second time)
+  ///
+  /// In pt, this message translates to:
+  /// **'Você já leu essa Pausa antes — obrigado por revisitar!'**
+  String get learningPauseAlreadyReadMessage;
+
   /// Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3
   ///
   /// In pt, this message translates to:

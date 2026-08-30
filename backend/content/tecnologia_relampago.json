@@ -1,0 +1,119 @@
+[
+  {
+    "territory_id": "tecnologia_fundamentos",
+    "difficulty_level": 1,
+    "prompt": "Quando você manda uma mensagem por um app, ela geralmente não vai direto pro celular do seu amigo. Ela passa antes por um computador gigante que fica ligado o tempo todo, em algum lugar do mundo. Como esse computador é chamado?",
+    "options": [
+      "Servidor",
+      "Roteador",
+      "Processador",
+      "Modem"
+    ],
+    "correct_answer": "Servidor",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "tecnologia_fundamentos",
+    "difficulty_level": 1,
+    "prompt": "Existe uma diferença entre a parte do computador que você pode tocar (tela, teclado, placas) e a parte que só existe como código, sem forma física. Como se chama essa segunda parte?",
+    "options": [
+      "Software",
+      "Hardware",
+      "Firmware",
+      "Kernel"
+    ],
+    "correct_answer": "Software",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "tecnologia_fundamentos",
+    "difficulty_level": 2,
+    "prompt": "Toda vez que você digita um endereço de site, algo 'traduz' aquele nome fácil de lembrar (ex.: google.com) para uma sequência de números que os computadores realmente usam para se encontrar na internet. Como esse número é chamado?",
+    "options": [
+      "Endereço IP",
+      "Código-fonte",
+      "Cookie",
+      "Cache"
+    ],
+    "correct_answer": "Endereço IP",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "tecnologia_programacao",
+    "difficulty_level": 1,
+    "prompt": "Imagine uma caixinha com um rótulo, dentro da qual você guarda um valor que pode mudar depois — hoje ela guarda seu nome, amanhã pode guardar outra coisa. Em programação, como essa 'caixinha' é chamada?",
+    "options": [
+      "Variável",
+      "Função",
+      "Loop",
+      "Array"
+    ],
+    "correct_answer": "Variável",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "tecnologia_programacao",
+    "difficulty_level": 2,
+    "prompt": "Um programa de computador precisa decidir entre dois caminhos: 'se isso acontecer, faça uma coisa; senão, faça outra'. Como essa estrutura de decisão é chamada?",
+    "options": [
+      "Estrutura condicional",
+      "Estrutura de repetição",
+      "Estrutura de dados",
+      "Estrutura de classe"
+    ],
+    "correct_answer": "Estrutura condicional",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "tecnologia_programacao",
+    "difficulty_level": 2,
+    "prompt": "Um conjunto de passos ordenados para resolver um problema — como uma receita de bolo, só que para o computador seguir — tem um nome específico em computação. Qual é?",
+    "options": [
+      "Algoritmo",
+      "Compilador",
+      "Interface",
+      "Servidor"
+    ],
+    "correct_answer": "Algoritmo",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "tecnologia_seguranca",
+    "difficulty_level": 1,
+    "prompt": "Você recebe uma mensagem parecida com a do seu banco, pedindo para clicar num link e confirmar sua senha — mas na verdade é um golpe para roubar seus dados. Como esse tipo de golpe é chamado?",
+    "options": [
+      "Phishing",
+      "Spam",
+      "Vírus",
+      "Backup"
+    ],
+    "correct_answer": "Phishing",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "tecnologia_seguranca",
+    "difficulty_level": 2,
+    "prompt": "Além da senha, muitos apps pedem um segundo código (por SMS ou aplicativo) para confirmar que é realmente você entrando na conta. Como essa camada extra de segurança é chamada?",
+    "options": [
+      "Autenticação em duas etapas",
+      "Criptografia simétrica",
+      "Firewall",
+      "VPN"
+    ],
+    "correct_answer": "Autenticação em duas etapas",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "tecnologia_fronteira",
+    "difficulty_level": 3,
+    "prompt": "Diferente de um programa tradicional, que segue regras escritas por humanos, este tipo de sistema aprende padrões a partir de exemplos e melhora sozinho com o tempo. Como se chama esse campo da computação?",
+    "options": [
+      "Inteligência Artificial",
+      "Criptografia",
+      "Virtualização",
+      "Compilação"
+    ],
+    "correct_answer": "Inteligência Artificial",
+    "age_reviewed": false
+  }
+]

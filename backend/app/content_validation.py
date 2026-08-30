@@ -66,3 +66,50 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
         seen_in_file.add(key)
 
     return errors
+
+
+# V3.2 (V3/V3.2_TECNOLOGIA.md §3) — "Pausa para Aprender": estrutura de
+# conteúdo NOVA, sem options/correct_answer/hints/timer (é leitura, não
+# desafio) — validação própria, formato de arquivo próprio
+# (backend/content/README.md §"Pausa para Aprender").
+LEARNING_PAUSE_REQUIRED_FIELDS = {"territory_id", "difficulty_level", "text", "age_reviewed"}
+
+
+def validate_learning_pauses(items: list[dict], known_territory_ids: set[str], existing_texts: set[tuple[str, str]]) -> list[str]:
+    """Mesmo contrato de validate_content (nunca lança, retorna lista de erros)."""
+    errors: list[str] = []
+    seen_in_file: set[tuple[str, str]] = set()
+
+    for idx, item in enumerate(items):
+        prefix = f"item {idx} ({item.get('text', '<sem texto>')[:40]!r})"
+
+        missing = LEARNING_PAUSE_REQUIRED_FIELDS - item.keys()
+        if missing:
+            errors.append(f"{prefix}: campos faltando: {sorted(missing)}")
+            continue
+
+        territory_id = item["territory_id"]
+        if territory_id not in known_territory_ids:
+            errors.append(f"{prefix}: territory_id {territory_id!r} não existe (veja app/seed.py TERRITORIES)")
+
+        if item["difficulty_level"] not in (1, 2, 3):
+            errors.append(f"{prefix}: difficulty_level precisa ser 1, 2 ou 3 (veio {item['difficulty_level']!r})")
+
+        if item["age_reviewed"] is not True:
+            errors.append(f"{prefix}: age_reviewed precisa ser true — confirme manualmente que o conteúdo é apropriado pro público misto antes de marcar")
+
+        if not item["text"].strip():
+            errors.append(f"{prefix}: text não pode ser vazio")
+
+        prompt_image = item.get("prompt_image")
+        if prompt_image is not None and not (isinstance(prompt_image, str) and prompt_image.strip()):
+            errors.append(f"{prefix}: prompt_image, quando presente, precisa ser uma string não vazia")
+
+        key = (territory_id, item["text"])
+        if key in existing_texts:
+            errors.append(f"{prefix}: já existe uma Pausa para Aprender com esse texto nesse território")
+        if key in seen_in_file:
+            errors.append(f"{prefix}: texto duplicado dentro do próprio arquivo, no mesmo território")
+        seen_in_file.add(key)
+
+    return errors

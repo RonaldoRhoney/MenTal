@@ -109,6 +109,40 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryConcursosDireito => 'Concursos: Direito';
 
   @override
+  String get territoryTecnologiaFundamentos => 'Tecnologia: Fundamentos';
+
+  @override
+  String get territoryTecnologiaProgramacao => 'Tecnologia: Programação';
+
+  @override
+  String get territoryTecnologiaSeguranca => 'Tecnologia: Segurança';
+
+  @override
+  String get territoryTecnologiaFronteira => 'Tecnologia: Fronteira';
+
+  @override
+  String get learningPauseButtonTooltip => 'Pausa para Aprender';
+
+  @override
+  String get learningPauseScreenTitle => 'Pausa para Aprender';
+
+  @override
+  String get learningPauseEmptyMessage =>
+      'Ainda não há Pausas para Aprender neste território.';
+
+  @override
+  String get learningPauseCompleteButton => 'Concluí a leitura';
+
+  @override
+  String learningPauseXpAwardedMessage(int xp) {
+    return '+$xp XP pela leitura!';
+  }
+
+  @override
+  String get learningPauseAlreadyReadMessage =>
+      'Você já leu essa Pausa antes — obrigado por revisitar!';
+
+  @override
   String get dailyLimitReachedMessage =>
       'Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.';
 

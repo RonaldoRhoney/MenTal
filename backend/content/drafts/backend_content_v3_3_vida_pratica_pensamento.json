@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "bloco": "vida_pratica_pensamento",
+    "fase": "V3.3",
+    "schema_note": "Nomes de campo provisórios, propostos por Claude (chat) sem acesso ao repositório. Validar contra o schema real de backend/content/*.json usado em V3.1 antes de mesclar.",
+    "principios": "Financas Pessoais: conceitos apenas, nunca conselho de investimento. Saude e Bem-estar: apenas fatico, nunca prescritivo. Jogos de Palavras (Caca-palavras/Cruzadas) ficam FORA deste arquivo — exigem arquitetura propria, nao compativel com o formato Relampago/Pausa para Aprender."
+  },
+  "items": [
+    {
+      "id": "vp-fin-001",
+      "sub_bloco": "financas_pessoais",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Guardar uma parte do que você ganha, todo mês, antes de gastar o resto, é uma prática recomendada para criar uma reserva. Como essa reserva de emergência costuma ser chamada?",
+      "opcoes": ["Poupança/Reserva de emergência", "Ação", "Fundo imobiliário", "Criptomoeda"],
+      "resposta_correta": "Poupança/Reserva de emergência",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["financas", "conceito"]
+    },
+    {
+      "id": "vp-fin-002",
+      "sub_bloco": "financas_pessoais",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Quando o preço de tudo sobe aos poucos com o tempo, fazendo o mesmo dinheiro comprar menos coisas do que antes, chamamos esse fenômeno econômico de:",
+      "opcoes": ["Inflação", "Deflação", "Recessão", "Superávit"],
+      "resposta_correta": "Inflação",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["financas", "economia"]
+    },
+    {
+      "id": "vp-fin-pausa-001",
+      "sub_bloco": "financas_pessoais",
+      "formato": "pausa_para_aprender",
+      "titulo": "Juros compostos: por que pequenas quantias crescem tanto com tempo",
+      "texto": "Juros simples somam sempre o mesmo valor a cada período. Juros compostos, por outro lado, calculam o juro em cima do valor que já inclui os juros anteriores — ou seja, 'juros sobre juros'. É por isso que investimentos de longo prazo crescem de forma acelerada com o tempo, e também por isso que dívidas com juros compostos (como cartão de crédito) podem crescer rapidamente se não forem pagas. Este conteúdo é educativo e conceitual — não constitui recomendação de investimento.",
+      "imagem_sugerida": null,
+      "xp_fixo": 3,
+      "tags": ["financas", "juros_compostos"]
+    },
+    {
+      "id": "vp-fil-001",
+      "sub_bloco": "filosofia",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Este filósofo grego ficou famoso por dizer 'só sei que nada sei' e por ensinar fazendo perguntas em vez de dar respostas prontas. Quem foi ele?",
+      "opcoes": ["Sócrates", "Platão", "Aristóteles", "Pitágoras"],
+      "resposta_correta": "Sócrates",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["filosofia", "grecia_antiga"]
+    },
+    {
+      "id": "vp-fil-002",
+      "sub_bloco": "filosofia",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Esta área da filosofia se dedica a estudar o que é certo e errado, o que devemos ou não fazer. Como ela é chamada?",
+      "opcoes": ["Ética", "Lógica", "Metafísica", "Estética"],
+      "resposta_correta": "Ética",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["filosofia", "etica"]
+    },
+    {
+      "id": "vp-art-001",
+      "sub_bloco": "artes",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Este pintor italiano pintou a Mona Lisa e também era inventor e cientista, à frente do seu tempo. Quem foi ele?",
+      "opcoes": ["Leonardo da Vinci", "Michelangelo", "Rafael", "Botticelli"],
+      "resposta_correta": "Leonardo da Vinci",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["artes", "pintura"]
+    },
+    {
+      "id": "vp-art-002",
+      "sub_bloco": "artes",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Este movimento artístico brasileiro do início do século XX buscava criar uma identidade nacional na arte, misturando influências europeias com elementos genuinamente brasileiros. Como ele é chamado?",
+      "opcoes": ["Modernismo", "Barroco", "Cubismo", "Impressionismo"],
+      "resposta_correta": "Modernismo",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["artes", "brasil"]
+    },
+    {
+      "id": "vp-saude-001",
+      "sub_bloco": "saude_bem_estar",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Especialistas recomendam, em geral, que um adulto durma entre 7 e 9 horas por noite para a saúde funcionar bem. O que acontece principalmente durante o sono profundo, segundo a ciência?",
+      "opcoes": ["O corpo consolida memórias e se recupera", "O metabolismo para completamente", "O cérebro se desliga totalmente", "A temperatura corporal sobe"],
+      "resposta_correta": "O corpo consolida memórias e se recupera",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["saude", "sono"]
+    },
+    {
+      "id": "vp-saude-pausa-001",
+      "sub_bloco": "saude_bem_estar",
+      "formato": "pausa_para_aprender",
+      "titulo": "Por que beber água basta cansaço mental",
+      "texto": "Mesmo uma desidratação leve (perda de cerca de 1-2% da água corporal) já foi associada, em estudos, a queda de concentração e sensação de cansaço mental — muitas vezes confundida com fome ou sono. O cérebro é um dos órgãos com maior necessidade de água para funcionar bem. Este conteúdo é informativo e não substitui orientação médica ou nutricional individual.",
+      "imagem_sugerida": null,
+      "xp_fixo": 3,
+      "tags": ["saude", "hidratacao"]
+    }
+  ]
+}

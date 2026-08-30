@@ -30,6 +30,12 @@ BLOCKS = [
     # existiam como linhas vazias esperando território; este é o
     # primeiro uso real dos dois.
     {"id": "mitologia", "name": "Mitologia", "display_order": 6},
+    # V3.2 (V3.2_TECNOLOGIA.md, aprovado) — "Tecnologia é o bloco com
+    # maior granularidade da V3, por decisão deliberada" (§2): 4
+    # sub-blocos, tratados como territórios distintos dentro do bloco
+    # "tecnologia" (mesma decisão de arquitetura já usada em V3.1 pra
+    # Mitologia — bloco agrupando N territórios).
+    {"id": "tecnologia", "name": "Tecnologia", "display_order": 7},
 ]
 
 TERRITORIES = [
@@ -107,6 +113,15 @@ TERRITORIES = [
     {"id": "concursos_portugues", "challenge_type": "concursos_portugues", "requires_subscription": True, "free_sample_count": 2, "display_order": 19, "world_id": "cultura_geral", "block_id": "concursos"},
     {"id": "concursos_raciocinio", "challenge_type": "concursos_raciocinio", "requires_subscription": True, "free_sample_count": 2, "display_order": 20, "world_id": "cultura_geral", "block_id": "concursos"},
     {"id": "concursos_direito", "challenge_type": "concursos_direito", "requires_subscription": True, "free_sample_count": 2, "display_order": 21, "world_id": "cultura_geral", "block_id": "concursos"},
+    # V3.2 (V3.2_TECNOLOGIA.md, aprovado) — só estrutura; conteúdo
+    # (Relâmpago e Pausa para Aprender) é curadoria manual de Rhoney via
+    # backend/content/*.json (RISKS_AND_OPEN_DECISIONS.md §2). Ordem de
+    # apresentação já reflete a cadência do doc (§2): Fundamentos →
+    # Programação/Lógica → Segurança Digital → Fronteira (avançado).
+    {"id": "tecnologia_fundamentos", "challenge_type": "tecnologia_fundamentos", "requires_subscription": True, "free_sample_count": 2, "display_order": 22, "world_id": "cultura_geral", "block_id": "tecnologia"},
+    {"id": "tecnologia_programacao", "challenge_type": "tecnologia_programacao", "requires_subscription": True, "free_sample_count": 2, "display_order": 23, "world_id": "cultura_geral", "block_id": "tecnologia"},
+    {"id": "tecnologia_seguranca", "challenge_type": "tecnologia_seguranca", "requires_subscription": True, "free_sample_count": 2, "display_order": 24, "world_id": "cultura_geral", "block_id": "tecnologia"},
+    {"id": "tecnologia_fronteira", "challenge_type": "tecnologia_fronteira", "requires_subscription": True, "free_sample_count": 2, "display_order": 25, "world_id": "cultura_geral", "block_id": "tecnologia"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à

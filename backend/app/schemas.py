@@ -116,6 +116,22 @@ class ChallengeOut(BaseModel):
     prompt_image: str | None = None
 
 
+class LearningPauseOut(BaseModel):
+    # V3.2 (V3/V3.2_TECNOLOGIA.md §3) — "Pausa para Aprender": leitura
+    # pura, sem options/correct_answer/timer (estrutura de conteúdo
+    # deliberadamente diferente de ChallengeOut).
+    learning_pause_id: str
+    territory_id: str
+    difficulty_level: int
+    text: str
+    prompt_image: str | None = None
+
+
+class LearningPauseCompleteResponse(BaseModel):
+    xp_awarded: int
+    already_read_before: bool
+
+
 class HintRequest(BaseModel):
     attempt_id: str
 

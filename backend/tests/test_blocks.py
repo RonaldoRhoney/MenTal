@@ -29,8 +29,8 @@ def test_blocks_without_any_territory_are_not_returned(client):
     virar um menu vazio sem nada pra abrir. "regioes" passou a ter
     território a partir da V3.0 (V3.0_ESPORTES_REGIOES_CULTURA_POP.md);
     "enem"/"concursos"/"mitologia" passaram a ter território a partir da
-    V3.1 (V3.1_MITOLOGIA_ENEM_CONCURSOS.md) — todos aparecem
-    normalmente agora."""
+    V3.1 (V3.1_MITOLOGIA_ENEM_CONCURSOS.md); "tecnologia" a partir da
+    V3.2 (V3.2_TECNOLOGIA.md) — todos aparecem normalmente agora."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -38,7 +38,7 @@ def test_blocks_without_any_territory_are_not_returned(client):
     body = client.get("/progress", headers=headers).json()
     block_ids = {b["block_id"] for b in body["blocks"]}
 
-    assert block_ids == {"matematica", "regioes", "enem", "concursos", "mitologia"}
+    assert block_ids == {"matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia"}
 
 
 def test_territories_without_block_are_not_grouped_into_any_block(client):

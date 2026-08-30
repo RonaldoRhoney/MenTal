@@ -370,6 +370,22 @@ class ApiClient {
     );
   }
 
+  // V3.2 (V3/V3.2_TECNOLOGIA.md §3) — Pausa para Aprender: leitura sem
+  // options/correct_answer/timer, endpoint separado de nextChallenge.
+  Future<Map<String, dynamic>> nextLearningPause(String territoryId) async {
+    return _get(
+      _uri('/learning-pauses/next', {'territory_id': territoryId}),
+      headers: _headers,
+    );
+  }
+
+  Future<Map<String, dynamic>> completeLearningPause(String learningPauseId) async {
+    return _post(
+      _uri('/learning-pauses/$learningPauseId/complete'),
+      headers: _headers,
+    );
+  }
+
   // Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5, LGPD.
   Future<Map<String, dynamic>> deleteAccount() async {
     return _delete(_uri('/profile'), headers: _headers);

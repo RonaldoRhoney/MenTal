@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "bloco": "curiosidade_relampago",
+    "fase": "V3.5",
+    "schema_note": "Nomes de campo provisórios, propostos por Claude (chat) sem acesso ao repositório. Validar contra o schema real de backend/content/*.json usado em V3.1 antes de mesclar.",
+    "principios": "Teste do obvio: a pista nunca pode entregar a resposta de cara. Teste da revelacao: todo item precisa de um fato surpresa exibido apos a resposta, mesmo para quem errou. Teste da familiaridade: o assunto deve ser do cotidiano, a surpresa vem do fato revelado, nao da obscuridade do tema."
+  },
+  "items": [
+    {
+      "id": "curio-001",
+      "formato": "relampago",
+      "pista": "Sou uma única célula, a maior que existe no reino animal — e você provavelmente já me quebrou hoje de manhã.",
+      "opcoes": ["A gema de um ovo", "Um neurônio", "Uma hemácia", "Um grão de pólen"],
+      "resposta_correta": "A gema de um ovo",
+      "revelacao": "A gema do ovo é literalmente uma única célula — a maior célula conhecida no reino animal.",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["biologia", "cotidiano"]
+    },
+    {
+      "id": "curio-002",
+      "formato": "relampago",
+      "pista": "Existo há mais de 200 anos, mas minha versão mais vendida do mundo tem motor menor que o de muitos cortadores de grama.",
+      "opcoes": ["A moto Honda Cub", "O Fusca", "O avião a hélice", "A bicicleta"],
+      "resposta_correta": "A moto Honda Cub",
+      "revelacao": "A Honda Cub é o veículo motorizado mais vendido da história — mais de 100 milhões de unidades — e tem motor pequeno.",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["tecnologia", "historia", "veiculos"]
+    },
+    {
+      "id": "curio-003",
+      "formato": "relampago",
+      "pista": "Sou formado dentro da Terra, mas o que veste seu dedo hoje pode ter viajado bilhões de anos antes de chegar até você.",
+      "opcoes": ["Um diamante", "Ouro", "Granito", "Sal-gema"],
+      "resposta_correta": "Um diamante",
+      "revelacao": "Muitos diamantes se formaram há bilhões de anos, antes até da vida complexa existir na Terra.",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["geologia", "curiosidade"]
+    },
+    {
+      "id": "curio-004",
+      "formato": "relampago",
+      "pista": "Trabalho sem parar a vida inteira, mas boa parte da minha energia não vai pra bombear sangue — vai só pra me manter com a forma certa.",
+      "opcoes": ["O coração", "O pulmão", "O cérebro", "O fêmur"],
+      "resposta_correta": "O coração",
+      "revelacao": "Boa parte da energia do coração é gasta mantendo sua própria estrutura muscular, não só no bombeamento.",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["biologia", "corpo_humano"]
+    },
+    {
+      "id": "curio-005",
+      "formato": "relampago",
+      "pista": "Fui criado sem nenhum motor, nenhuma pilha e nenhuma corda — e ainda assim nunca paro de me mover.",
+      "opcoes": ["Uma bússola", "Um relógio de pêndulo", "Uma roda d'água", "Um pião"],
+      "resposta_correta": "Uma bússola",
+      "revelacao": "A bússola se move usando só o campo magnético da Terra — sem nenhuma fonte de energia própria.",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["fisica", "curiosidade"]
+    },
+    {
+      "id": "curio-006",
+      "formato": "relampago",
+      "pista": "Sou um órgão, peso pouco mais de um quilo, e mesmo assim consumo cerca de 20% de toda a energia que você gasta em um dia inteiro.",
+      "opcoes": ["O cérebro", "O fígado", "O estômago", "O rim"],
+      "resposta_correta": "O cérebro",
+      "revelacao": "O cérebro humano consome por volta de 20% da energia diária do corpo, mesmo representando cerca de 2% do peso corporal.",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["biologia", "corpo_humano"]
+    },
+    {
+      "id": "curio-007",
+      "formato": "relampago",
+      "pista": "Sou um alimento tão durável que arqueólogos já encontraram potes meus, ainda comestíveis, com milhares de anos de idade.",
+      "opcoes": ["Mel", "Arroz", "Queijo", "Farinha"],
+      "resposta_correta": "Mel",
+      "revelacao": "Mel encontrado em tumbas egípcias antigas, com milhares de anos, foi analisado e considerado ainda comestível, graças às suas propriedades naturais de conservação.",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["historia", "alimentacao"]
+    },
+    {
+      "id": "curio-008",
+      "formato": "relampago",
+      "pista": "Pareço sólida, mas na verdade me movo tão devagar que sou tecnicamente considerada um líquido em fluxo extremamente lento, segundo alguns cientistas — debate que ainda divide opiniões.",
+      "opcoes": ["Vidro de janela antiga", "Pedra de mármore", "Gelo", "Plástico"],
+      "resposta_correta": "Vidro de janela antiga",
+      "revelacao": "Existe um debate científico sobre se o vidro é um 'líquido super-resfriado' de fluxo extremamente lento ou um sólido amorfo — vidros antigos às vezes parecem mais grossos na base por causa de como eram fabricados, não necessariamente por terem 'escorrido' com o tempo.",
+      "tempo_segundos": 12,
+      "xp_base": 12,
+      "tags": ["fisica", "quimica", "curiosidade"]
+    }
+  ]
+}

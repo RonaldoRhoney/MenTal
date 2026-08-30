@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "bloco": "tecnologia",
+    "fase": "V3.2",
+    "schema_note": "Nomes de campo provisórios, propostos por Claude (chat) sem acesso ao repositório. Validar contra o schema real de backend/content/*.json usado em V3.1 antes de mesclar — remapear nomes se necessário, o conteúdo (texto/opções/respostas) não muda.",
+    "principios": "Nunca pergunta fechada/técnica trivial (ex.: atalho de teclado). Sempre despertar curiosidade sobre o 'porquê'/'como funciona'. Cadência: fundamentos -> programação -> segurança -> fronteira."
+  },
+  "items": [
+    {
+      "id": "tec-fund-001",
+      "sub_bloco": "fundamentos",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Quando você manda uma mensagem por um app, ela geralmente não vai direto pro celular do seu amigo. Ela passa antes por um computador gigante que fica ligado o tempo todo, em algum lugar do mundo. Como esse computador é chamado?",
+      "opcoes": ["Servidor", "Roteador", "Processador", "Modem"],
+      "resposta_correta": "Servidor",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["internet", "servidor"]
+    },
+    {
+      "id": "tec-fund-002",
+      "sub_bloco": "fundamentos",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Existe uma diferença entre a parte do computador que você pode tocar (tela, teclado, placas) e a parte que só existe como código, sem forma física. Como se chama essa segunda parte?",
+      "opcoes": ["Software", "Hardware", "Firmware", "Kernel"],
+      "resposta_correta": "Software",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["hardware", "software"]
+    },
+    {
+      "id": "tec-fund-003",
+      "sub_bloco": "fundamentos",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Toda vez que você digita um endereço de site, algo 'traduz' aquele nome fácil de lembrar (ex.: google.com) para uma sequência de números que os computadores realmente usam para se encontrar na internet. Como esse número é chamado?",
+      "opcoes": ["Endereço IP", "Código-fonte", "Cookie", "Cache"],
+      "resposta_correta": "Endereço IP",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["internet", "rede"]
+    },
+    {
+      "id": "tec-prog-001",
+      "sub_bloco": "programacao_logica",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Imagine uma caixinha com um rótulo, dentro da qual você guarda um valor que pode mudar depois — hoje ela guarda seu nome, amanhã pode guardar outra coisa. Em programação, como essa 'caixinha' é chamada?",
+      "opcoes": ["Variável", "Função", "Loop", "Array"],
+      "resposta_correta": "Variável",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["programacao", "logica"]
+    },
+    {
+      "id": "tec-prog-002",
+      "sub_bloco": "programacao_logica",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Um programa de computador precisa decidir entre dois caminhos: 'se isso acontecer, faça uma coisa; senão, faça outra'. Como essa estrutura de decisão é chamada?",
+      "opcoes": ["Estrutura condicional", "Estrutura de repetição", "Estrutura de dados", "Estrutura de classe"],
+      "resposta_correta": "Estrutura condicional",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["programacao", "logica"]
+    },
+    {
+      "id": "tec-prog-003",
+      "sub_bloco": "programacao_logica",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Um conjunto de passos ordenados para resolver um problema — como uma receita de bolo, só que para o computador seguir — tem um nome específico em computação. Qual é?",
+      "opcoes": ["Algoritmo", "Compilador", "Interface", "Servidor"],
+      "resposta_correta": "Algoritmo",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["programacao", "algoritmo"]
+    },
+    {
+      "id": "tec-seg-001",
+      "sub_bloco": "seguranca_digital",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Você recebe uma mensagem parecida com a do seu banco, pedindo para clicar num link e confirmar sua senha — mas na verdade é um golpe para roubar seus dados. Como esse tipo de golpe é chamado?",
+      "opcoes": ["Phishing", "Spam", "Vírus", "Backup"],
+      "resposta_correta": "Phishing",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["seguranca", "golpe"]
+    },
+    {
+      "id": "tec-seg-002",
+      "sub_bloco": "seguranca_digital",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Além da senha, muitos apps pedem um segundo código (por SMS ou aplicativo) para confirmar que é realmente você entrando na conta. Como essa camada extra de segurança é chamada?",
+      "opcoes": ["Autenticação em duas etapas", "Criptografia simétrica", "Firewall", "VPN"],
+      "resposta_correta": "Autenticação em duas etapas",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["seguranca", "boas_praticas"]
+    },
+    {
+      "id": "tec-front-001",
+      "sub_bloco": "fronteira",
+      "dificuldade": "dificil",
+      "formato": "relampago",
+      "pergunta": "Diferente de um programa tradicional, que segue regras escritas por humanos, este tipo de sistema aprende padrões a partir de exemplos e melhora sozinho com o tempo. Como se chama esse campo da computação?",
+      "opcoes": ["Inteligência Artificial", "Criptografia", "Virtualização", "Compilação"],
+      "resposta_correta": "Inteligência Artificial",
+      "tempo_segundos": 12,
+      "xp_base": 15,
+      "tags": ["ia", "fronteira"]
+    },
+    {
+      "id": "tec-front-pausa-001",
+      "sub_bloco": "fronteira",
+      "formato": "pausa_para_aprender",
+      "titulo": "Por que computadores quânticos são tão diferentes?",
+      "texto": "Um computador comum guarda informação em bits, que só podem ser 0 ou 1 — como um interruptor, ligado ou desligado. Um computador quântico usa 'qubits', que conseguem existir numa mistura dos dois estados ao mesmo tempo, graças a um fenômeno da física chamado superposição. Isso não torna o computador quântico simplesmente 'mais rápido' em tudo — ele é útil especialmente para tipos específicos de problema, como simular moléculas ou quebrar certos tipos de criptografia, tarefas que um computador comum levaria milhares de anos para resolver.",
+      "imagem_sugerida": null,
+      "xp_fixo": 3,
+      "tags": ["ia", "computacao_quantica", "fronteira"]
+    },
+    {
+      "id": "tec-prog-pausa-001",
+      "sub_bloco": "programacao_logica",
+      "formato": "pausa_para_aprender",
+      "titulo": "Programar não é decorar comandos",
+      "texto": "Uma dúvida comum é achar que programar significa decorar um monte de palavras de um idioma de computador. Na prática, o que realmente importa é o raciocínio lógico por trás: decompor um problema grande em passos pequenos e claros. Uma pessoa que entende bem lógica consegue aprender qualquer linguagem de programação com relativa facilidade — porque a parte difícil nunca foi a sintaxe, foi aprender a pensar em passos.",
+      "imagem_sugerida": null,
+      "xp_fixo": 3,
+      "tags": ["programacao", "logica"]
+    }
+  ]
+}

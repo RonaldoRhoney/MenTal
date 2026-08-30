@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "bloco": "libras",
+    "fase": "V3.4",
+    "schema_note": "Nomes de campo provisórios, propostos por Claude (chat) sem acesso ao repositório. Validar contra o schema real de backend/content/*.json usado em V3.1 antes de mesclar.",
+    "aviso_critico": "IMPORTANTE: os campos 'midia_sugerida' abaixo são PLACEHOLDERS — não geramos imagem/vídeo real de sinais de Libras aqui. Todo o conteúdo textual (sinal descrito, feedback, pergunta) precisa de validação por fonte confiável/especialista em Libras antes de publicar, conforme exigido em V3.4_LIBRAS.md. Não publicar este conteúdo sem essa revisão.",
+    "principios": "Progressao em 3 etapas: (1) sinal isolado -> palavra, (2) combinacao de sinais -> frase, (3) o que a combinacao significa. Feedback sempre explicativo, tanto no acerto quanto no erro."
+  },
+  "items": [
+    {
+      "id": "libras-etapa1-001",
+      "etapa": 1,
+      "formato": "relampago",
+      "descricao_sinal": "Mão em formato de 'L', tocando a testa e descendo levemente.",
+      "midia_sugerida": "PLACEHOLDER_VIDEO_SINAL_OBRIGADO",
+      "pergunta": "A qual palavra corresponde este sinal?",
+      "opcoes": ["Obrigado(a)", "Desculpa", "Por favor", "Bom dia"],
+      "resposta_correta": "Obrigado(a)",
+      "feedback_acerto": "Isso mesmo! Esse sinal representa 'obrigado(a)' em Libras — é um dos sinais mais usados no dia a dia.",
+      "feedback_erro": "Não foi dessa vez. Esse sinal específico (mão tocando a testa e descendo) representa 'obrigado(a)' em Libras.",
+      "tempo_segundos": 12,
+      "xp_base": 10,
+      "tags": ["libras", "cotidiano"],
+      "necessita_validacao_especialista": true
+    },
+    {
+      "id": "libras-etapa1-002",
+      "etapa": 1,
+      "formato": "relampago",
+      "descricao_sinal": "As duas mãos em formato de concha se encontram na altura do peito, palmas voltadas para o corpo.",
+      "midia_sugerida": "PLACEHOLDER_VIDEO_SINAL_FAMILIA",
+      "pergunta": "A qual palavra corresponde este sinal?",
+      "opcoes": ["Família", "Amigo", "Casa", "Trabalho"],
+      "resposta_correta": "Família",
+      "feedback_acerto": "Correto! Este sinal representa 'família' em Libras.",
+      "feedback_erro": "Quase lá. Esse sinal (mãos em concha se encontrando no peito) representa 'família' em Libras.",
+      "tempo_segundos": 12,
+      "xp_base": 10,
+      "tags": ["libras", "cotidiano"],
+      "necessita_validacao_especialista": true
+    },
+    {
+      "id": "libras-etapa2-001",
+      "etapa": 2,
+      "formato": "relampago",
+      "descricao_sinal": "Sequência: sinal de 'eu' (dedo indicador apontando para o peito) seguido do sinal de 'gostar' (mão aberta circulando sobre o peito).",
+      "midia_sugerida": "PLACEHOLDER_VIDEO_SEQUENCIA_EU_GOSTAR",
+      "pergunta": "Que frase esta combinação de sinais forma?",
+      "opcoes": ["Eu gosto", "Eu quero", "Eu preciso", "Eu sei"],
+      "resposta_correta": "Eu gosto",
+      "feedback_acerto": "Exato! A combinação desses dois sinais em sequência forma a frase 'eu gosto'.",
+      "feedback_erro": "Essa combinação específica (sinal de 'eu' seguido do sinal de 'gostar') forma a frase 'eu gosto'.",
+      "tempo_segundos": 14,
+      "xp_base": 12,
+      "tags": ["libras", "frase_simples"],
+      "necessita_validacao_especialista": true
+    },
+    {
+      "id": "libras-etapa3-001",
+      "etapa": 3,
+      "formato": "relampago",
+      "descricao_sinal": "Sequência de três sinais em vídeo, representando uma saudação e uma pergunta sobre o bem-estar da outra pessoa.",
+      "midia_sugerida": "PLACEHOLDER_VIDEO_SEQUENCIA_COMO_VOCE_ESTA",
+      "pergunta": "O que essa combinação de sinais realmente significa?",
+      "opcoes": ["Como você está?", "Onde você mora?", "Qual seu nome?", "Até logo"],
+      "resposta_correta": "Como você está?",
+      "feedback_acerto": "Isso mesmo! Essa sequência de sinais significa 'Como você está?' — uma das saudações mais comuns em Libras.",
+      "feedback_erro": "Essa sequência específica de sinais significa 'Como você está?', uma saudação comum em Libras.",
+      "tempo_segundos": 15,
+      "xp_base": 14,
+      "tags": ["libras", "saudacao", "frase_completa"],
+      "necessita_validacao_especialista": true
+    },
+    {
+      "id": "libras-pausa-001",
+      "formato": "pausa_para_aprender",
+      "titulo": "Libras não é 'português com as mãos'",
+      "texto": "Um engano comum é achar que Libras é apenas o português traduzido sinal por sinal. Na verdade, Libras é uma língua própria, com gramática, ordem de palavras e estrutura gramatical diferentes do português. Por exemplo, a ordem das palavras em uma frase em Libras pode ser diferente da ordem em português. É reconhecida como língua oficial no Brasil, usada pela comunidade surda como primeira língua.",
+      "imagem_sugerida": null,
+      "xp_fixo": 3,
+      "tags": ["libras", "curiosidade", "cultura_surda"],
+      "necessita_validacao_especialista": true
+    }
+  ]
+}

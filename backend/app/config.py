@@ -187,6 +187,13 @@ TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 12, 2: 10, 3: 7}
 # incluindo fácil, porque ali o formato é obrigatório, não opcional.
 PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL = 2
 
+# V3.2 (V3/V3.2_TECNOLOGIA.md §3.4) — Pausa para Aprender: "quantidade
+# pequena e FIXA de XP por leitura concluída... não deve ser um atalho
+# de XP fácil". Fixo e único (não varia por dificuldade/território) —
+# claramente menor que o XP_BASE_BY_DIFFICULTY de um Relâmpago
+# respondido certo, propositalmente.
+LEARNING_PAUSE_XP_REWARD = 5
+
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
 # depende de mode=relampago) — Conhecimento (CONHECIMENTO_EXPANSAO_
 # GERAL.md) e agora Cores (V3.0.1_DESAFIO_CORES.md, 29/08/2026): um

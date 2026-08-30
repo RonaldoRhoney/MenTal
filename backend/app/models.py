@@ -308,6 +308,45 @@ class ChallengeHint(Base):
     content: Mapped[str] = mapped_column(Text)
 
 
+class LearningPause(Base):
+    """
+    V3.2 (V3/V3.2_TECNOLOGIA.md §3) — "Pausa para Aprender": estrutura
+    de conteúdo NOVA, deliberadamente diferente de Challenge — sem
+    options/correct_answer/timer, é leitura pura, nunca avaliação.
+    Reaproveitada também em V3.4 (Libras) e blocos futuros de V4 (§3.5),
+    por isso vive numa tabela própria em vez de forçar campos opcionais
+    dentro de Challenge (que exige correct_answer NOT NULL hoje).
+    """
+
+    __tablename__ = "learning_pauses"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"))
+    difficulty_level: Mapped[int] = mapped_column(Integer, default=1)
+    text: Mapped[str] = mapped_column(Text)
+    # Mesmo catálogo de emoji zero-custo já usado em Challenge.prompt_image.
+    prompt_image: Mapped[str | None] = mapped_column(String, nullable=True)
+    age_reviewed: Mapped[bool] = mapped_column(Boolean, default=False)
+    language_code: Mapped[str] = mapped_column(String, default="pt-BR")
+
+
+class LearningPauseRead(Base):
+    """
+    Registra a PRIMEIRA leitura concluída de cada Pausa por usuário —
+    §3.4: "não deve ser um atalho de XP fácil". XP (config.
+    LEARNING_PAUSE_XP_REWARD) só é concedido na primeira vez; reler a
+    mesma Pausa depois (ela pode reaparecer no sorteio) não paga de
+    novo, mas a leitura em si nunca é bloqueada.
+    """
+
+    __tablename__ = "learning_pause_reads"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType)
+    learning_pause_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("learning_pauses.id"))
+    read_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class Attempt(Base):
     __tablename__ = "attempts"
 
