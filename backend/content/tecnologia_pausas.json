@@ -4,13 +4,13 @@
     "difficulty_level": 2,
     "text": "Um computador comum guarda informação em bits, que só podem ser 0 ou 1 — como um interruptor, ligado ou desligado. Um computador quântico usa 'qubits', que conseguem existir numa mistura dos dois estados ao mesmo tempo, graças a um fenômeno da física chamado superposição. Isso não torna o computador quântico simplesmente 'mais rápido' em tudo — ele é útil especialmente para tipos específicos de problema, como simular moléculas ou quebrar certos tipos de criptografia, tarefas que um computador comum levaria milhares de anos para resolver.",
     "prompt_image": null,
-    "age_reviewed": false
+    "age_reviewed": true
   },
   {
     "territory_id": "tecnologia_programacao",
     "difficulty_level": 2,
     "text": "Uma dúvida comum é achar que programar significa decorar um monte de palavras de um idioma de computador. Na prática, o que realmente importa é o raciocínio lógico por trás: decompor um problema grande em passos pequenos e claros. Uma pessoa que entende bem lógica consegue aprender qualquer linguagem de programação com relativa facilidade — porque a parte difícil nunca foi a sintaxe, foi aprender a pensar em passos.",
     "prompt_image": null,
-    "age_reviewed": false
+    "age_reviewed": true
   }
 ]
