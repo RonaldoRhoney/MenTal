@@ -10,8 +10,10 @@ import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/mandatory_onboarding_screen.dart';
+import 'screens/onboarding_tutorial_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/welcome_splash_screen.dart';
+import 'services/onboarding_tutorial_service.dart';
 import 'services/push_service.dart';
 import 'services/theme_mode_service.dart';
 import 'theme/app_theme.dart';
@@ -143,6 +145,12 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   // voltar do background).
   bool _welcomeSplashDone = false;
   bool _splashDone = false;
+  // "Como usar o MENTAL" (29/08/2026, pedido de Rhoney): aparece uma
+  // vez, logo após o splash, ANTES do login — não depende de conta nem
+  // de backend, só de SharedPreferences local. null = ainda checando;
+  // carrega em paralelo com a animação do splash (~2.2s), então
+  // raramente há um frame de espera extra depois que o splash termina.
+  bool? _tutorialSeen;
   late final Stream<AuthState> _authStateStream;
   String? _lastAccessToken;
 
@@ -151,6 +159,9 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     super.initState();
     _authStateStream = Supabase.instance.client.auth.onAuthStateChange;
     _updateClientFromSession(Supabase.instance.client.auth.currentSession);
+    OnboardingTutorialService.hasSeen().then((seen) {
+      if (mounted) setState(() => _tutorialSeen = seen);
+    });
   }
 
   // Reconstrói o ApiClient quando a sessão muda de verdade — login,
@@ -214,6 +225,17 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     // decisão de Login/Age Gate/Home.
     if (!_splashDone) {
       return SplashScreen(onDone: () => setState(() => _splashDone = true));
+    }
+    if (_tutorialSeen == null) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
+    if (!_tutorialSeen!) {
+      return OnboardingTutorialScreen(
+        onDone: () {
+          OnboardingTutorialService.markSeen();
+          setState(() => _tutorialSeen = true);
+        },
+      );
     }
     return StreamBuilder<AuthState>(
       stream: _authStateStream,

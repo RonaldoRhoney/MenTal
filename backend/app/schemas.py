@@ -607,3 +607,40 @@ class MentalCoinsHallOfFameResponse(BaseModel):
 
 class MentalCoinsCatalogResponse(BaseModel):
     items: list[MentalCoinsCatalogItemOut]
+
+
+# U.I/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, dentro do
+# próprio app Flutter (visível só pra role=admin). Métricas listadas na
+# seção 3 do documento; deliberadamente mais enxuto que o painel externo
+# maior (ADMIN_DASHBOARD_V1.md, ainda não implementado).
+class AdminTopProgressorOut(BaseModel):
+    user_id: str
+    nickname: str
+    real_name: str | None = None
+    photo_url: str | None = None
+    level: int
+    xp_gained: int
+    current_streak: int
+
+
+class AdminTerritoryAccuracyOut(BaseModel):
+    territory_id: str
+    total_attempts: int
+    accuracy_percent: float
+
+
+class AdminFeedbackDistributionOut(BaseModel):
+    facil: int = 0
+    medio: int = 0
+    dificil: int = 0
+    muito_dificil: int = 0
+
+
+class AdminMetricsSummaryOut(BaseModel):
+    active_users_today: int
+    active_users_week: int
+    new_signups_in_period: int
+    average_streak_active_users: float
+    top_progressors: list[AdminTopProgressorOut]
+    accuracy_by_territory: list[AdminTerritoryAccuracyOut]
+    feedback_distribution: AdminFeedbackDistributionOut

@@ -7,6 +7,8 @@ import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
 import '../theme/app_theme.dart';
+import 'admin_metrics_screen.dart';
+import 'onboarding_tutorial_screen.dart';
 
 /// Tela de Configurações — controle do usuário sobre som
 /// (AUDIO_FEEDBACK.md §3, requisito não-negociável): toggle on/off e
@@ -45,6 +47,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   String? _notificationsError;
   bool _deletingAccount = false;
   List<Map<String, dynamic>> _blockedUsers = [];
+  // U.I/ADMIN_PAINEL_IN_APP_V1.md — mesmo padrão já usado em
+  // feedback_screen.dart (profile['role']): autorização de verdade
+  // sempre no backend, isto aqui só decide o que aparece na UI.
+  bool _isAdmin = false;
 
   @override
   void initState() {
@@ -67,6 +73,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
     } on ApiException catch (_) {
       // Não bloqueia o resto da tela — lista de bloqueados fica vazia.
     }
+    bool isAdmin = false;
+    try {
+      final profile = await widget.client.getProfile();
+      isAdmin = profile['role'] == 'admin';
+    } on ApiException catch (_) {
+      // Item admin só é reforço de UI — nunca bloqueia a tela por causa disso.
+    }
     if (!mounted) return;
     setState(() {
       _soundEnabled = FeedbackService.instance.enabled;
@@ -76,6 +89,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         _socialEnabled = prefs['social_enabled'] as bool;
       }
       _blockedUsers = blocked;
+      _isAdmin = isAdmin;
       _loading = false;
     });
   }
@@ -184,7 +198,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     l10n.soundSilencedNote,
                     style: TextStyle(color: AppColors.muted, fontSize: 13),
                   ),
-                  const SizedBox(height: 28),
+                  const SizedBox(height: 20),
+                  // "Como usar o MENTAL" (29/08/2026, pedido de Rhoney):
+                  // sempre disponível pra rever, sem mexer na flag de
+                  // "já visto" que controla a exibição automática após o
+                  // splash (main.dart).
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    leading: const Icon(Icons.help_outline_rounded),
+                    title: Text(l10n.tutorialMenuLabel),
+                    trailing: const Icon(Icons.chevron_right_rounded),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => OnboardingTutorialScreen(onDone: () => Navigator.of(context).pop())),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
                   Text(l10n.notificationsSectionTitle, style: Theme.of(context).textTheme.titleLarge),
                   const SizedBox(height: 8),
                   SwitchListTile(
@@ -231,6 +259,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           child: Text(l10n.unblockUserButton),
                         ),
                       ),
+                  ],
+                  if (_isAdmin) ...[
+                    const SizedBox(height: 28),
+                    // U.I/ADMIN_PAINEL_IN_APP_V1.md §2: "ponto de entrada
+                    // sugerido... ou menu de Configurações" — só aparece
+                    // pra role=admin, usuário comum nunca vê nem sabe que
+                    // essa tela existe.
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      leading: const Icon(Icons.admin_panel_settings_outlined),
+                      title: Text(l10n.adminMetricsMenuLabel),
+                      trailing: const Icon(Icons.chevron_right_rounded),
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => AdminMetricsScreen(client: widget.client)),
+                      ),
+                    ),
                   ],
                   const SizedBox(height: 28),
                   // Login real via Supabase Auth — main.dart

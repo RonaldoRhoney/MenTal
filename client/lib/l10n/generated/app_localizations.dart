@@ -340,6 +340,108 @@ abstract class AppLocalizations {
   /// **'Você já leu essa Pausa antes — obrigado por revisitar!'**
   String get learningPauseAlreadyReadMessage;
 
+  /// Settings menu entry that opens the in-app admin metrics panel, only visible to role=admin
+  ///
+  /// In pt, this message translates to:
+  /// **'Painel Admin'**
+  String get adminMetricsMenuLabel;
+
+  /// Skip button on the onboarding tutorial
+  ///
+  /// In pt, this message translates to:
+  /// **'Pular'**
+  String get tutorialSkipButton;
+
+  /// Next button on the onboarding tutorial
+  ///
+  /// In pt, this message translates to:
+  /// **'Próximo'**
+  String get tutorialNextButton;
+
+  /// Final button on the last onboarding tutorial page
+  ///
+  /// In pt, this message translates to:
+  /// **'Vamos começar'**
+  String get tutorialStartButton;
+
+  /// Settings menu entry that replays the onboarding tutorial
+  ///
+  /// In pt, this message translates to:
+  /// **'Como usar o MENTAL'**
+  String get tutorialMenuLabel;
+
+  /// Onboarding tutorial page 1 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Bem-vindo ao MENTAL'**
+  String get tutorialPage1Title;
+
+  /// Onboarding tutorial page 1 body
+  ///
+  /// In pt, this message translates to:
+  /// **'MENTAL é quem conquista com a mente. Você responde desafios de raciocínio, ganha XP e sobe de nível — sem pressa, no seu ritmo.'**
+  String get tutorialPage1Body;
+
+  /// Onboarding tutorial page 2 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Territórios e Mundos'**
+  String get tutorialPage2Title;
+
+  /// Onboarding tutorial page 2 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Cada território testa um tipo de raciocínio diferente — palavras, números, lógica, cultura geral e mais. Eles ficam agrupados em Mundos, na tela inicial.'**
+  String get tutorialPage2Body;
+
+  /// Onboarding tutorial page 3 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Modo Relâmpago'**
+  String get tutorialPage3Title;
+
+  /// Onboarding tutorial page 3 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Prefere emoção? O Relâmpago é o mesmo território, só que com cronômetro e bônus de XP por velocidade — quanto mais rápido acertar, maior o bônus.'**
+  String get tutorialPage3Body;
+
+  /// Onboarding tutorial page 4 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência e Movimento'**
+  String get tutorialPage4Title;
+
+  /// Onboarding tutorial page 4 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Jogue todo dia pra manter sua sequência (streak) viva. E ative o Movimento pra transformar os passos da sua caminhada em XP e MentalCoins, mesmo com o app fechado.'**
+  String get tutorialPage4Body;
+
+  /// Onboarding tutorial page 5 title
+  ///
+  /// In pt, this message translates to:
+  /// **'MentalCoins e Ranking'**
+  String get tutorialPage5Title;
+
+  /// Onboarding tutorial page 5 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Dispute o ranking semanal com seus amigos e ganhe MentalCoins — uma moeda de prestígio que você troca por itens exclusivos de perfil.'**
+  String get tutorialPage5Body;
+
+  /// Onboarding tutorial page 6 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Do seu jeito'**
+  String get tutorialPage6Title;
+
+  /// Onboarding tutorial page 6 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Em Ajuste, você troca entre tom claro e escuro, controla som e notificações — e pode rever este tutorial a qualquer momento.'**
+  String get tutorialPage6Body;
+
   /// Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3
   ///
   /// In pt, this message translates to:

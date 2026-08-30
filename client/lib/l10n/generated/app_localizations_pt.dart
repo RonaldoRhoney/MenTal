@@ -143,6 +143,63 @@ class AppLocalizationsPt extends AppLocalizations {
       'Você já leu essa Pausa antes — obrigado por revisitar!';
 
   @override
+  String get adminMetricsMenuLabel => 'Painel Admin';
+
+  @override
+  String get tutorialSkipButton => 'Pular';
+
+  @override
+  String get tutorialNextButton => 'Próximo';
+
+  @override
+  String get tutorialStartButton => 'Vamos começar';
+
+  @override
+  String get tutorialMenuLabel => 'Como usar o MENTAL';
+
+  @override
+  String get tutorialPage1Title => 'Bem-vindo ao MENTAL';
+
+  @override
+  String get tutorialPage1Body =>
+      'MENTAL é quem conquista com a mente. Você responde desafios de raciocínio, ganha XP e sobe de nível — sem pressa, no seu ritmo.';
+
+  @override
+  String get tutorialPage2Title => 'Territórios e Mundos';
+
+  @override
+  String get tutorialPage2Body =>
+      'Cada território testa um tipo de raciocínio diferente — palavras, números, lógica, cultura geral e mais. Eles ficam agrupados em Mundos, na tela inicial.';
+
+  @override
+  String get tutorialPage3Title => 'Modo Relâmpago';
+
+  @override
+  String get tutorialPage3Body =>
+      'Prefere emoção? O Relâmpago é o mesmo território, só que com cronômetro e bônus de XP por velocidade — quanto mais rápido acertar, maior o bônus.';
+
+  @override
+  String get tutorialPage4Title => 'Sequência e Movimento';
+
+  @override
+  String get tutorialPage4Body =>
+      'Jogue todo dia pra manter sua sequência (streak) viva. E ative o Movimento pra transformar os passos da sua caminhada em XP e MentalCoins, mesmo com o app fechado.';
+
+  @override
+  String get tutorialPage5Title => 'MentalCoins e Ranking';
+
+  @override
+  String get tutorialPage5Body =>
+      'Dispute o ranking semanal com seus amigos e ganhe MentalCoins — uma moeda de prestígio que você troca por itens exclusivos de perfil.';
+
+  @override
+  String get tutorialPage6Title => 'Do seu jeito';
+
+  @override
+  String get tutorialPage6Body =>
+      'Em Ajuste, você troca entre tom claro e escuro, controla som e notificações — e pode rever este tutorial a qualquer momento.';
+
+  @override
   String get dailyLimitReachedMessage =>
       'Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.';
 

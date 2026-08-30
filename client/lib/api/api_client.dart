@@ -386,6 +386,15 @@ class ApiClient {
     );
   }
 
+  // U.I/ADMIN_PAINEL_IN_APP_V1.md — só retorna dado de verdade pra
+  // role=admin (backend rejeita com 403 pra qualquer outro usuário).
+  Future<Map<String, dynamic>> getAdminMetricsSummary({String period = '7d'}) async {
+    return _get(
+      _uri('/admin/metrics/summary', {'period': period}),
+      headers: _headers,
+    );
+  }
+
   // Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5, LGPD.
   Future<Map<String, dynamic>> deleteAccount() async {
     return _delete(_uri('/profile'), headers: _headers);

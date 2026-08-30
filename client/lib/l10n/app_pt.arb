@@ -110,6 +110,48 @@
   "learningPauseAlreadyReadMessage": "Você já leu essa Pausa antes — obrigado por revisitar!",
   "@learningPauseAlreadyReadMessage": {"description": "Shown when completing a learning pause that was already read before (no XP the second time)"},
 
+  "adminMetricsMenuLabel": "Painel Admin",
+  "@adminMetricsMenuLabel": {"description": "Settings menu entry that opens the in-app admin metrics panel, only visible to role=admin"},
+
+  "tutorialSkipButton": "Pular",
+  "@tutorialSkipButton": {"description": "Skip button on the onboarding tutorial"},
+  "tutorialNextButton": "Próximo",
+  "@tutorialNextButton": {"description": "Next button on the onboarding tutorial"},
+  "tutorialStartButton": "Vamos começar",
+  "@tutorialStartButton": {"description": "Final button on the last onboarding tutorial page"},
+  "tutorialMenuLabel": "Como usar o MENTAL",
+  "@tutorialMenuLabel": {"description": "Settings menu entry that replays the onboarding tutorial"},
+
+  "tutorialPage1Title": "Bem-vindo ao MENTAL",
+  "@tutorialPage1Title": {"description": "Onboarding tutorial page 1 title"},
+  "tutorialPage1Body": "MENTAL é quem conquista com a mente. Você responde desafios de raciocínio, ganha XP e sobe de nível — sem pressa, no seu ritmo.",
+  "@tutorialPage1Body": {"description": "Onboarding tutorial page 1 body"},
+
+  "tutorialPage2Title": "Territórios e Mundos",
+  "@tutorialPage2Title": {"description": "Onboarding tutorial page 2 title"},
+  "tutorialPage2Body": "Cada território testa um tipo de raciocínio diferente — palavras, números, lógica, cultura geral e mais. Eles ficam agrupados em Mundos, na tela inicial.",
+  "@tutorialPage2Body": {"description": "Onboarding tutorial page 2 body"},
+
+  "tutorialPage3Title": "Modo Relâmpago",
+  "@tutorialPage3Title": {"description": "Onboarding tutorial page 3 title"},
+  "tutorialPage3Body": "Prefere emoção? O Relâmpago é o mesmo território, só que com cronômetro e bônus de XP por velocidade — quanto mais rápido acertar, maior o bônus.",
+  "@tutorialPage3Body": {"description": "Onboarding tutorial page 3 body"},
+
+  "tutorialPage4Title": "Sequência e Movimento",
+  "@tutorialPage4Title": {"description": "Onboarding tutorial page 4 title"},
+  "tutorialPage4Body": "Jogue todo dia pra manter sua sequência (streak) viva. E ative o Movimento pra transformar os passos da sua caminhada em XP e MentalCoins, mesmo com o app fechado.",
+  "@tutorialPage4Body": {"description": "Onboarding tutorial page 4 body"},
+
+  "tutorialPage5Title": "MentalCoins e Ranking",
+  "@tutorialPage5Title": {"description": "Onboarding tutorial page 5 title"},
+  "tutorialPage5Body": "Dispute o ranking semanal com seus amigos e ganhe MentalCoins — uma moeda de prestígio que você troca por itens exclusivos de perfil.",
+  "@tutorialPage5Body": {"description": "Onboarding tutorial page 5 body"},
+
+  "tutorialPage6Title": "Do seu jeito",
+  "@tutorialPage6Title": {"description": "Onboarding tutorial page 6 title"},
+  "tutorialPage6Body": "Em Ajuste, você troca entre tom claro e escuro, controla som e notificações — e pode rever este tutorial a qualquer momento.",
+  "@tutorialPage6Body": {"description": "Onboarding tutorial page 6 body"},
+
   "dailyLimitReachedMessage": "Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.",
   "@dailyLimitReachedMessage": {"description": "Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3"},
 
