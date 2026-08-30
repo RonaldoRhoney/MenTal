@@ -11,7 +11,11 @@
     ],
     "correct_answer": "A gema de um ovo",
     "explanation": "A gema do ovo é literalmente uma única célula — a maior célula conhecida no reino animal.",
-    "age_reviewed": false
+    "hints": [
+      "Você me encontra na cozinha, não em um laboratório.",
+      "Estou dentro da casca, ao lado da clara."
+    ],
+    "age_reviewed": true
   },
   {
     "territory_id": "curiosidade_relampago",
@@ -25,7 +29,11 @@
     ],
     "correct_answer": "A moto Honda Cub",
     "explanation": "A Honda Cub é o veículo motorizado mais vendido da história — mais de 100 milhões de unidades — e tem motor pequeno.",
-    "age_reviewed": false
+    "hints": [
+      "Sou japonesa e ando sobre duas rodas.",
+      "Já vendi mais de 100 milhões de unidades — sou o veículo motorizado mais vendido da história."
+    ],
+    "age_reviewed": true
   },
   {
     "territory_id": "curiosidade_relampago",
@@ -39,7 +47,11 @@
     ],
     "correct_answer": "Um diamante",
     "explanation": "Muitos diamantes se formaram há bilhões de anos, antes até da vida complexa existir na Terra.",
-    "age_reviewed": false
+    "hints": [
+      "Sou uma pedra preciosa, não um metal.",
+      "Sou o material natural mais duro conhecido."
+    ],
+    "age_reviewed": true
   },
   {
     "territory_id": "curiosidade_relampago",
@@ -53,7 +65,11 @@
     ],
     "correct_answer": "O coração",
     "explanation": "Boa parte da energia do coração é gasta mantendo sua própria estrutura muscular, não só no bombeamento.",
-    "age_reviewed": false
+    "hints": [
+      "Sou um músculo, mas nunca descanso, nem quando você dorme.",
+      "Bombeio sangue por todo o corpo."
+    ],
+    "age_reviewed": true
   },
   {
     "territory_id": "curiosidade_relampago",
@@ -67,7 +83,11 @@
     ],
     "correct_answer": "Uma bússola",
     "explanation": "A bússola se move usando só o campo magnético da Terra — sem nenhuma fonte de energia própria.",
-    "age_reviewed": false
+    "hints": [
+      "Ajudo viajantes a encontrar direção.",
+      "Minha agulha aponta sempre pro norte."
+    ],
+    "age_reviewed": true
   },
   {
     "territory_id": "curiosidade_relampago",
@@ -81,7 +101,11 @@
     ],
     "correct_answer": "O cérebro",
     "explanation": "O cérebro humano consome por volta de 20% da energia diária do corpo, mesmo representando cerca de 2% do peso corporal.",
-    "age_reviewed": false
+    "hints": [
+      "Sou o órgão mais 'faminto' de energia do corpo, proporcionalmente ao meu tamanho.",
+      "Comando pensamentos, memória e movimentos."
+    ],
+    "age_reviewed": true
   },
   {
     "territory_id": "curiosidade_relampago",
@@ -95,7 +119,11 @@
     ],
     "correct_answer": "Mel",
     "explanation": "Mel encontrado em tumbas egípcias antigas, com milhares de anos, foi analisado e considerado ainda comestível, graças às suas propriedades naturais de conservação.",
-    "age_reviewed": false
+    "hints": [
+      "Nunca estrago, mesmo sem geladeira nem conservante.",
+      "Faraós egípcios já me guardavam junto a tesouros, há milhares de anos."
+    ],
+    "age_reviewed": true
   },
   {
     "territory_id": "curiosidade_relampago",
@@ -109,6 +137,10 @@
     ],
     "correct_answer": "Vidro de janela antiga",
     "explanation": "Existe um debate científico sobre se o vidro é um 'líquido super-resfriado' de fluxo extremamente lento ou um sólido amorfo — vidros antigos às vezes parecem mais grossos na base por causa de como eram fabricados, não necessariamente por terem 'escorrido' com o tempo.",
-    "age_reviewed": false
+    "hints": [
+      "Você vê através de mim, mas eu não sou plástico.",
+      "Estou nas janelas — e prédios antigos têm exemplos famosos meus."
+    ],
+    "age_reviewed": true
   }
 ]

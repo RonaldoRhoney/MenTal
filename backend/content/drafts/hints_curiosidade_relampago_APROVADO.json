@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "bloco": "curiosidade_relampago",
+    "fase": "V3.5",
+    "status": "aprovado apos revisao — 4 de 8 itens ajustados (2, 4, 6, 7)",
+    "regra_aplicada": "Apos ler apenas a hint_1, o usuario deve ainda conseguir hesitar entre pelo menos 2 das 4 alternativas. Hint_2 pode ser mais reveladora, mas nunca deve repetir o texto literal do prompt ou da resposta correta.",
+    "instrucao_de_uso": "Inserir o array 'hints' de cada item abaixo no objeto correspondente (mesmo 'id') dentro de curiosidade_relampago.json, validar o JSON resultante, e completar a carga em producao com o comando ja usado anteriormente."
+  },
+  "hints_por_item": [
+    {
+      "id": "curio-001",
+      "hints": [
+        "Você me encontra na cozinha, não em um laboratório.",
+        "Estou dentro da casca, ao lado da clara."
+      ]
+    },
+    {
+      "id": "curio-002",
+      "hints": [
+        "Sou japonesa e ando sobre duas rodas.",
+        "Já vendi mais de 100 milhões de unidades — sou o veículo motorizado mais vendido da história."
+      ]
+    },
+    {
+      "id": "curio-003",
+      "hints": [
+        "Sou uma pedra preciosa, não um metal.",
+        "Sou o material natural mais duro conhecido."
+      ]
+    },
+    {
+      "id": "curio-004",
+      "hints": [
+        "Sou um músculo, mas nunca descanso, nem quando você dorme.",
+        "Bombeio sangue por todo o corpo."
+      ]
+    },
+    {
+      "id": "curio-005",
+      "hints": [
+        "Ajudo viajantes a encontrar direção.",
+        "Minha agulha aponta sempre pro norte."
+      ]
+    },
+    {
+      "id": "curio-006",
+      "hints": [
+        "Sou o órgão mais 'faminto' de energia do corpo, proporcionalmente ao meu tamanho.",
+        "Comando pensamentos, memória e movimentos."
+      ]
+    },
+    {
+      "id": "curio-007",
+      "hints": [
+        "Nunca estrago, mesmo sem geladeira nem conservante.",
+        "Faraós egípcios já me guardavam junto a tesouros, há milhares de anos."
+      ]
+    },
+    {
+      "id": "curio-008",
+      "hints": [
+        "Você vê através de mim, mas eu não sou plástico.",
+        "Estou nas janelas — e prédios antigos têm exemplos famosos meus."
+      ]
+    }
+  ]
+}
