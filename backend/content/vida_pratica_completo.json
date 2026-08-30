@@ -1,0 +1,1082 @@
+[
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome dado ao valor que sobra depois de descontar todas as despesas da renda mensal de uma pessoa?",
+    "options": [
+      "Saldo/sobra do orçamento",
+      "Salário bruto",
+      "Patrimônio líquido",
+      "Faturamento"
+    ],
+    "correct_answer": "Saldo/sobra do orçamento",
+    "explanation": "O saldo (ou sobra) do orçamento é o valor que resta da renda após o pagamento de todas as despesas do período.",
+    "hints": [
+      "É o que sobra, não o que entra.",
+      "Pode ser usado para poupar ou investir, dependendo da escolha da pessoa."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do documento usado para planejar e acompanhar quanto se ganha e quanto se gasta em um período?",
+    "options": [
+      "Orçamento pessoal",
+      "Extrato bancário",
+      "Nota fiscal",
+      "Contrato"
+    ],
+    "correct_answer": "Orçamento pessoal",
+    "explanation": "Orçamento pessoal é o planejamento que organiza receitas e despesas de uma pessoa em um determinado período.",
+    "hints": [
+      "Serve para planejar receitas e despesas, não só registrar o que já aconteceu.",
+      "Ajuda a visualizar para onde o dinheiro está indo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do documento de identificação fiscal usado no Brasil para praticamente qualquer operação financeira, como abrir conta em banco?",
+    "options": [
+      "CPF",
+      "RG",
+      "Título de eleitor",
+      "Carteira de trabalho"
+    ],
+    "correct_answer": "CPF",
+    "explanation": "O CPF (Cadastro de Pessoas Físicas) é o documento fiscal exigido para a maioria das operações financeiras no Brasil.",
+    "hints": [
+      "É exigido para abrir conta bancária, entre outras operações financeiras.",
+      "É diferente do RG, embora ambos sejam documentos pessoais."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do valor cobrado a mais quando alguém paga uma compra parcelada, em vez de à vista?",
+    "options": [
+      "Juros",
+      "Imposto",
+      "Taxa de câmbio",
+      "Desconto"
+    ],
+    "correct_answer": "Juros",
+    "explanation": "Juros é o valor cobrado como custo do dinheiro emprestado ou parcelado ao longo do tempo.",
+    "hints": [
+      "É o custo de 'esticar' um pagamento ao longo do tempo.",
+      "É o oposto de um desconto — torna o valor final maior, não menor."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do conceito que descreve guardar uma quantia de dinheiro específica para lidar com imprevistos, como perda de emprego ou emergência médica?",
+    "options": [
+      "Reserva de emergência",
+      "Investimento de risco",
+      "Patrimônio líquido",
+      "Ativo imobilizado"
+    ],
+    "correct_answer": "Reserva de emergência",
+    "explanation": "Reserva de emergência é a quantia guardada especificamente para cobrir imprevistos financeiros, sem comprometer o orçamento do dia a dia.",
+    "hints": [
+      "Serve especificamente para imprevistos, não para gastos planejados.",
+      "É recomendada como um dos primeiros passos de organização financeira pessoal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome dado ao conjunto de tudo que uma pessoa possui (bens e dinheiro) menos tudo que ela deve?",
+    "options": [
+      "Patrimônio líquido",
+      "Renda bruta",
+      "Orçamento mensal",
+      "Fluxo de caixa"
+    ],
+    "correct_answer": "Patrimônio líquido",
+    "explanation": "Patrimônio líquido é o valor total de bens e dinheiro que uma pessoa possui, subtraído de todas as suas dívidas.",
+    "hints": [
+      "Envolve subtrair dívidas de tudo que a pessoa possui.",
+      "Pode ser positivo ou negativo, dependendo da relação entre bens e dívidas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do fenômeno em que os preços de bens e serviços sobem continuamente ao longo do tempo, reduzindo o poder de compra do dinheiro?",
+    "options": [
+      "Inflação",
+      "Deflação",
+      "Recessão",
+      "Estagnação"
+    ],
+    "correct_answer": "Inflação",
+    "explanation": "Inflação é o aumento generalizado e contínuo dos preços, que reduz o poder de compra da moeda ao longo do tempo.",
+    "hints": [
+      "Faz o mesmo dinheiro comprar cada vez menos coisas com o tempo.",
+      "É o oposto de deflação (queda generalizada de preços)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do documento fiscal obrigatório emitido em uma compra, comprovando a transação e os impostos envolvidos?",
+    "options": [
+      "Nota fiscal",
+      "Boleto",
+      "Cheque",
+      "Contrato social"
+    ],
+    "correct_answer": "Nota fiscal",
+    "explanation": "Nota fiscal é o documento que comprova uma transação comercial e os impostos envolvidos, obrigatório na maioria das vendas.",
+    "hints": [
+      "É emitida no momento de uma compra ou venda.",
+      "Serve como comprovante oficial da transação, incluindo impostos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do conceito que descreve gastar menos do que se ganha, de forma consistente ao longo do tempo?",
+    "options": [
+      "Superávit pessoal",
+      "Déficit pessoal",
+      "Alavancagem",
+      "Diversificação"
+    ],
+    "correct_answer": "Superávit pessoal",
+    "explanation": "Superávit pessoal é a situação financeira em que a renda supera as despesas de forma consistente, permitindo poupança.",
+    "hints": [
+      "É o oposto de gastar mais do que se ganha.",
+      "É uma condição necessária para conseguir poupar dinheiro."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do princípio pelo qual os juros de um período passam a incidir também sobre os juros acumulados de períodos anteriores, não apenas sobre o valor original?",
+    "options": [
+      "Juros compostos",
+      "Juros simples",
+      "Taxa fixa",
+      "Amortização linear"
+    ],
+    "correct_answer": "Juros compostos",
+    "explanation": "Juros compostos são calculados sobre o valor original somado aos juros já acumulados, fazendo o valor crescer de forma acelerada com o tempo.",
+    "hints": [
+      "Envolve 'juros sobre juros', não apenas sobre o valor original.",
+      "É por isso que dívidas com esse tipo de juros podem crescer rapidamente se não pagas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do princípio financeiro que recomenda não concentrar todo o dinheiro num único tipo de aplicação, para reduzir risco?",
+    "options": [
+      "Diversificação",
+      "Alavancagem",
+      "Amortização",
+      "Capitalização simples"
+    ],
+    "correct_answer": "Diversificação",
+    "explanation": "Diversificação é o princípio de distribuir recursos entre diferentes tipos de aplicação, reduzindo o risco de perdas concentradas.",
+    "hints": [
+      "Está relacionado à ideia popular de 'não colocar todos os ovos na mesma cesta'.",
+      "É uma estratégia de redução de risco, não de garantia de lucro."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do processo de pagar uma dívida aos poucos, através de parcelas que incluem parte do valor original e parte de juros?",
+    "options": [
+      "Amortização",
+      "Diversificação",
+      "Inflação",
+      "Capitalização"
+    ],
+    "correct_answer": "Amortização",
+    "explanation": "Amortização é o processo de quitação gradual de uma dívida através de pagamentos parcelados, que reduzem o saldo devedor ao longo do tempo.",
+    "hints": [
+      "Está relacionado a quitar uma dívida aos poucos, não de uma vez.",
+      "É comum em financiamentos de longo prazo, como o de um imóvel."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do índice usado no Brasil para medir oficialmente a variação de preços ao consumidor, servindo de referência para a inflação?",
+    "options": [
+      "IPCA",
+      "Selic",
+      "PIB",
+      "CDI"
+    ],
+    "correct_answer": "IPCA",
+    "explanation": "O IPCA (Índice de Preços ao Consumidor Amplo) é o índice oficial usado no Brasil para medir a inflação.",
+    "hints": [
+      "É um índice, não uma taxa de juros.",
+      "É o principal indicador oficial de inflação no Brasil."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do dinheiro que uma pessoa recebe regularmente pelo seu trabalho, geralmente todo mês?",
+    "options": [
+      "Salário",
+      "Lucro",
+      "Dividendo",
+      "Herança"
+    ],
+    "correct_answer": "Salário",
+    "explanation": "Salário é a remuneração paga regularmente a um trabalhador em troca do seu trabalho, geralmente de forma mensal.",
+    "hints": [
+      "É pago regularmente em troca de trabalho realizado.",
+      "Geralmente tem periodicidade mensal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "financas_pessoais",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do compromisso financeiro assumido quando uma pessoa deve dinheiro a alguém ou a uma instituição?",
+    "options": [
+      "Dívida",
+      "Patrimônio",
+      "Investimento",
+      "Poupança"
+    ],
+    "correct_answer": "Dívida",
+    "explanation": "Dívida é o valor que uma pessoa deve a outra pessoa ou instituição, geralmente com prazo e condições de pagamento definidas.",
+    "hints": [
+      "Representa uma obrigação de pagamento futuro.",
+      "É o oposto de ter dinheiro guardado ou investido."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome da área da filosofia que estuda perguntas sobre o conhecimento, como 'o que podemos realmente saber?'",
+    "options": [
+      "Epistemologia",
+      "Ética",
+      "Estética",
+      "Metafísica"
+    ],
+    "correct_answer": "Epistemologia",
+    "explanation": "Epistemologia é a área da filosofia dedicada ao estudo do conhecimento: sua origem, natureza e limites.",
+    "hints": [
+      "Está relacionada especificamente ao estudo do conhecimento.",
+      "Pergunta coisas como 'como sabemos o que sabemos?'"
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 1,
+    "prompt": "Qual filósofo grego foi professor de Alexandre, o Grande, e escreveu sobre lógica, ética e política?",
+    "options": [
+      "Aristóteles",
+      "Platão",
+      "Sócrates",
+      "Heráclito"
+    ],
+    "correct_answer": "Aristóteles",
+    "explanation": "Aristóteles foi um filósofo grego, discípulo de Platão e professor de Alexandre, o Grande, com contribuições em lógica, ética e política.",
+    "hints": [
+      "Foi discípulo de outro grande filósofo grego, Platão.",
+      "Foi professor de um famoso conquistador da Antiguidade."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome dado ao método de Sócrates, que ensinava fazendo perguntas em vez de dar respostas prontas?",
+    "options": [
+      "Método socrático",
+      "Dedução aristotélica",
+      "Dialética hegeliana",
+      "Ceticismo"
+    ],
+    "correct_answer": "Método socrático",
+    "explanation": "O método socrático consiste em ensinar através de perguntas sucessivas, levando a pessoa a refletir e chegar às próprias conclusões.",
+    "hints": [
+      "Leva o nome do filósofo que o criou.",
+      "Baseia-se em perguntas, não em respostas prontas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do filósofo francês conhecido pela frase 'penso, logo existo'?",
+    "options": [
+      "René Descartes",
+      "Voltaire",
+      "Jean-Paul Sartre",
+      "Michel de Montaigne"
+    ],
+    "correct_answer": "René Descartes",
+    "explanation": "René Descartes é o filósofo francês autor da célebre frase 'penso, logo existo' (cogito, ergo sum).",
+    "hints": [
+      "Era francês e viveu no século XVII.",
+      "Sua frase mais famosa fala sobre pensar e existir."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome da área da filosofia que estuda a natureza da beleza, da arte e do gosto?",
+    "options": [
+      "Estética",
+      "Epistemologia",
+      "Lógica",
+      "Ontologia"
+    ],
+    "correct_answer": "Estética",
+    "explanation": "Estética é a área da filosofia dedicada ao estudo da beleza, da arte e das experiências relacionadas ao gosto.",
+    "hints": [
+      "Está relacionada à percepção de beleza e arte.",
+      "Não deve ser confundida com a área que estuda ética/moral."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome da corrente filosófica que defende que devemos duvidar sistematicamente de nosso conhecimento, questionando certezas?",
+    "options": [
+      "Ceticismo",
+      "Dogmatismo",
+      "Existencialismo",
+      "Idealismo"
+    ],
+    "correct_answer": "Ceticismo",
+    "explanation": "Ceticismo é a corrente filosófica que defende a dúvida sistemática como forma de questionar certezas e buscar conhecimento mais seguro.",
+    "hints": [
+      "Está relacionada à dúvida sistemática, não à certeza.",
+      "É o oposto de simplesmente aceitar ideias sem questionar."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 2,
+    "prompt": "Qual filósofo alemão é associado ao conceito de 'imperativo categórico', uma regra ética universal?",
+    "options": [
+      "Immanuel Kant",
+      "Friedrich Nietzsche",
+      "Karl Marx",
+      "Arthur Schopenhauer"
+    ],
+    "correct_answer": "Immanuel Kant",
+    "explanation": "Immanuel Kant é o filósofo alemão que desenvolveu o conceito de imperativo categórico, uma regra ética que deveria valer universalmente.",
+    "hints": [
+      "Era alemão e viveu no século XVIII.",
+      "Seu conceito ético mais famoso propõe uma regra válida para todos, sem exceção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome da corrente filosófica do século XX que enfatiza a liberdade individual e a responsabilidade pelas próprias escolhas, associada a Jean-Paul Sartre?",
+    "options": [
+      "Existencialismo",
+      "Racionalismo",
+      "Empirismo",
+      "Positivismo"
+    ],
+    "correct_answer": "Existencialismo",
+    "explanation": "Existencialismo é a corrente filosófica que enfatiza a liberdade individual, a responsabilidade e a busca de sentido na existência.",
+    "hints": [
+      "É fortemente associada a Jean-Paul Sartre, no século XX.",
+      "Coloca grande peso na liberdade e na responsabilidade de cada indivíduo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome da área da filosofia que estuda a natureza do ser e da existência em si, questionando 'o que realmente existe?'",
+    "options": [
+      "Ontologia",
+      "Epistemologia",
+      "Estética",
+      "Lógica"
+    ],
+    "correct_answer": "Ontologia",
+    "explanation": "Ontologia é a área da filosofia dedicada ao estudo da natureza do ser e da existência.",
+    "hints": [
+      "Vem do grego e significa, aproximadamente, 'estudo do ser'.",
+      "Diferente da epistemologia, que estuda o conhecimento, não a existência em si."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 3,
+    "prompt": "Qual filósofo alemão do século XIX é associado à frase 'Deus está morto', usada para descrever a crise de valores tradicionais na modernidade?",
+    "options": [
+      "Friedrich Nietzsche",
+      "Immanuel Kant",
+      "Georg Hegel",
+      "Arthur Schopenhauer"
+    ],
+    "correct_answer": "Friedrich Nietzsche",
+    "explanation": "Friedrich Nietzsche é o filósofo alemão autor da célebre e frequentemente mal-interpretada frase 'Deus está morto'.",
+    "hints": [
+      "Era alemão e viveu no século XIX.",
+      "Sua frase mais famosa e polêmica trata da perda de valores religiosos tradicionais na sociedade moderna."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome da corrente filosófica que defende que todo conhecimento verdadeiro vem da experiência sensorial, em oposição ao racionalismo?",
+    "options": [
+      "Empirismo",
+      "Idealismo",
+      "Dogmatismo",
+      "Existencialismo"
+    ],
+    "correct_answer": "Empirismo",
+    "explanation": "Empirismo é a corrente filosófica que defende que o conhecimento tem origem principalmente na experiência sensorial.",
+    "hints": [
+      "Valoriza a experiência sensorial como fonte principal de conhecimento.",
+      "Frequentemente contrastado com o racionalismo, que valoriza mais a razão pura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 3,
+    "prompt": "Qual filósofo brasileiro contemporâneo é conhecido por popularizar debates filosóficos em livros e mídia acessível ao público geral?",
+    "options": [
+      "Mario Sergio Cortella",
+      "Paulo Freire",
+      "Darcy Ribeiro",
+      "Roberto DaMatta"
+    ],
+    "correct_answer": "Mario Sergio Cortella",
+    "explanation": "Mario Sergio Cortella é um filósofo e escritor brasileiro contemporâneo, conhecido por popularizar reflexões filosóficas em formato acessível.",
+    "hints": [
+      "É brasileiro e contemporâneo, não da Antiguidade.",
+      "É conhecido por levar reflexão filosófica a um público mais amplo, fora da academia."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do conceito filosófico que descreve o dilema de escolher entre duas ações, ambas moralmente problemáticas de alguma forma?",
+    "options": [
+      "Dilema ético",
+      "Silogismo",
+      "Falácia lógica",
+      "Paradoxo epistemológico"
+    ],
+    "correct_answer": "Dilema ético",
+    "explanation": "Dilema ético é a situação em que uma pessoa precisa escolher entre duas ou mais opções, todas com implicações morais complexas.",
+    "hints": [
+      "Envolve uma escolha difícil entre opções moralmente complicadas.",
+      "É um conceito muito discutido na área da ética filosófica."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome da área da filosofia que estuda o que é certo e errado, o que devemos ou não fazer?",
+    "options": [
+      "Ética",
+      "Estética",
+      "Lógica",
+      "Metafísica"
+    ],
+    "correct_answer": "Ética",
+    "explanation": "Ética é a área da filosofia dedicada ao estudo do certo e errado, orientando reflexões sobre como devemos agir.",
+    "hints": [
+      "Está relacionada a certo e errado, não a beleza ou conhecimento.",
+      "É uma das áreas mais discutidas da filosofia no dia a dia."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "filosofia",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do experimento mental filosófico em que se imagina uma caverna onde prisioneiros só veem sombras, usada por Platão para discutir a natureza da realidade?",
+    "options": [
+      "Alegoria da Caverna",
+      "Paradoxo de Zenão",
+      "Navalha de Occam",
+      "Experimento da Sala Chinesa"
+    ],
+    "correct_answer": "Alegoria da Caverna",
+    "explanation": "A Alegoria da Caverna é um experimento mental criado por Platão para discutir a diferença entre aparência e realidade, e o caminho até o conhecimento verdadeiro.",
+    "hints": [
+      "Foi criada por um dos filósofos gregos mais conhecidos.",
+      "Envolve prisioneiros que só enxergam sombras, não a realidade completa."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 1,
+    "prompt": "Qual pintor espanhol é conhecido por obras como 'Guernica', retratando os horrores de um bombardeio de forma simbólica?",
+    "options": [
+      "Pablo Picasso",
+      "Salvador Dalí",
+      "Diego Velázquez",
+      "Francisco Goya"
+    ],
+    "correct_answer": "Pablo Picasso",
+    "explanation": "Pablo Picasso pintou 'Guernica', uma das obras mais famosas do século XX, retratando de forma simbólica o sofrimento causado por um bombardeio.",
+    "hints": [
+      "Foi um dos artistas mais influentes do século XX.",
+      "Sua obra mais famosa leva o nome de uma cidade espanhola."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do movimento artístico que retrata a luz e suas variações de forma solta e espontânea, com pintores como Monet e Renoir?",
+    "options": [
+      "Impressionismo",
+      "Cubismo",
+      "Surrealismo",
+      "Barroco"
+    ],
+    "correct_answer": "Impressionismo",
+    "explanation": "Impressionismo é o movimento artístico do século XIX que buscava capturar impressões momentâneas de luz e cor, com pintores como Monet e Renoir.",
+    "hints": [
+      "O nome do movimento vem de uma obra específica de Monet.",
+      "Busca capturar a sensação da luz num momento, não detalhes precisos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 1,
+    "prompt": "Qual compositor alemão, considerado surdo em boa parte de sua vida adulta, compôs a famosa Nona Sinfonia?",
+    "options": [
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart",
+      "Johann Sebastian Bach",
+      "Franz Schubert"
+    ],
+    "correct_answer": "Ludwig van Beethoven",
+    "explanation": "Ludwig van Beethoven, mesmo enfrentando perda progressiva de audição, compôs obras marcantes, incluindo a Nona Sinfonia.",
+    "hints": [
+      "Compôs boa parte de suas obras mais famosas enfrentando um grande desafio de audição.",
+      "Sua Nona Sinfonia é uma das obras mais conhecidas da música clássica."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do artista italiano que esculpiu o 'Davi' e pintou o teto da Capela Sistina?",
+    "options": [
+      "Michelangelo",
+      "Leonardo da Vinci",
+      "Rafael Sanzio",
+      "Donatello"
+    ],
+    "correct_answer": "Michelangelo",
+    "explanation": "Michelangelo é o artista renascentista italiano autor da escultura 'Davi' e dos afrescos do teto da Capela Sistina.",
+    "hints": [
+      "Foi um dos grandes nomes do Renascimento italiano.",
+      "É famoso tanto pela escultura quanto pela pintura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do movimento artístico brasileiro, marcado pela Semana de Arte Moderna de 1922, que buscava uma identidade nacional na arte?",
+    "options": [
+      "Modernismo brasileiro",
+      "Barroco mineiro",
+      "Naturalismo",
+      "Neoclassicismo"
+    ],
+    "correct_answer": "Modernismo brasileiro",
+    "explanation": "O Modernismo brasileiro, impulsionado pela Semana de Arte Moderna de 1922, buscou romper com padrões tradicionais e criar uma identidade artística nacional.",
+    "hints": [
+      "Foi marcado por um evento específico em 1922, em São Paulo.",
+      "Buscava misturar influências europeias com uma identidade genuinamente brasileira."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do movimento artístico do início do século XX que retratava objetos e figuras em formas geométricas fragmentadas, tendo Picasso como um dos pioneiros?",
+    "options": [
+      "Cubismo",
+      "Impressionismo",
+      "Expressionismo",
+      "Fauvismo"
+    ],
+    "correct_answer": "Cubismo",
+    "explanation": "Cubismo é o movimento artístico que representa objetos através de formas geométricas fragmentadas, tendo Picasso e Braque como pioneiros.",
+    "hints": [
+      "O nome do movimento remete diretamente a uma forma geométrica.",
+      "Fragmenta objetos e figuras em múltiplas perspectivas simultâneas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 2,
+    "prompt": "Qual pintora mexicana é conhecida por seus autorretratos marcantes, muitas vezes explorando temas de identidade e cultura mexicana?",
+    "options": [
+      "Frida Kahlo",
+      "Tarsila do Amaral",
+      "Georgia O'Keeffe",
+      "Leonora Carrington"
+    ],
+    "correct_answer": "Frida Kahlo",
+    "explanation": "Frida Kahlo é uma pintora mexicana reconhecida mundialmente por seus autorretratos intensos, explorando identidade, cultura e experiência pessoal.",
+    "hints": [
+      "Era mexicana e ficou muito conhecida por autorretratos.",
+      "Sua obra frequentemente reflete elementos da cultura e identidade mexicana."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome da pintora brasileira, autora da obra 'Abaporu', ícone do Modernismo brasileiro?",
+    "options": [
+      "Tarsila do Amaral",
+      "Anita Malfatti",
+      "Djanira da Motta",
+      "Maria Martins"
+    ],
+    "correct_answer": "Tarsila do Amaral",
+    "explanation": "Tarsila do Amaral é a pintora brasileira autora de 'Abaporu', uma das obras mais icônicas do Modernismo no Brasil.",
+    "hints": [
+      "Foi uma das principais figuras do Modernismo brasileiro.",
+      "Sua obra mais famosa tem um nome de origem indígena."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do estilo arquitetônico e artístico marcado por ornamentação excessiva, contrastes de luz e sombra, muito presente em igrejas brasileiras coloniais, como as de Minas Gerais?",
+    "options": [
+      "Barroco",
+      "Neoclássico",
+      "Art Nouveau",
+      "Gótico"
+    ],
+    "correct_answer": "Barroco",
+    "explanation": "O Barroco é o estilo artístico marcado por ornamentação rica, contraste de luz e sombra, muito presente na arquitetura religiosa colonial brasileira.",
+    "hints": [
+      "É muito presente em igrejas históricas de Minas Gerais.",
+      "É caracterizado por ornamentação bastante rica e detalhada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 3,
+    "prompt": "Qual escultor e arquiteto brasileiro, conhecido pelo apelido 'Aleijadinho', é famoso por suas obras em igrejas históricas de Minas Gerais?",
+    "options": [
+      "Antônio Francisco Lisboa",
+      "Oscar Niemeyer",
+      "Victor Brecheret",
+      "Bruno Giorgi"
+    ],
+    "correct_answer": "Antônio Francisco Lisboa",
+    "explanation": "Antônio Francisco Lisboa, conhecido como Aleijadinho, foi um dos maiores escultores do Barroco brasileiro, autor de obras marcantes em Minas Gerais.",
+    "hints": [
+      "Ficou conhecido por um apelido, não pelo próprio nome de batismo.",
+      "Suas obras mais famosas estão em cidades históricas de Minas Gerais."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do movimento artístico do início do século XX, associado a Salvador Dalí, que explorava imagens de sonhos e do inconsciente?",
+    "options": [
+      "Surrealismo",
+      "Cubismo",
+      "Dadaísmo",
+      "Futurismo"
+    ],
+    "correct_answer": "Surrealismo",
+    "explanation": "Surrealismo é o movimento artístico que explorava imagens do inconsciente e dos sonhos, tendo Salvador Dalí como um de seus representantes mais famosos.",
+    "hints": [
+      "É fortemente associado a imagens oníricas e bizarras.",
+      "Salvador Dalí é um de seus artistas mais reconhecidos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 3,
+    "prompt": "Qual arquiteto brasileiro projetou os principais edifícios de Brasília, sendo referência mundial em arquitetura moderna?",
+    "options": [
+      "Oscar Niemeyer",
+      "Antônio Francisco Lisboa",
+      "Lúcio Costa",
+      "Ramos de Azevedo"
+    ],
+    "correct_answer": "Oscar Niemeyer",
+    "explanation": "Oscar Niemeyer foi o arquiteto responsável pelo projeto dos principais edifícios de Brasília, considerado um dos maiores nomes da arquitetura moderna mundial.",
+    "hints": [
+      "Projetou boa parte dos edifícios mais famosos da capital do Brasil.",
+      "É considerado uma das maiores referências mundiais da arquitetura moderna."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome da técnica de pintura em que pequenas manchas de cor pura são justapostas, criando a impressão de uma cor misturada quando vista à distância, usada por Georges Seurat?",
+    "options": [
+      "Pontilhismo",
+      "Aquarela",
+      "Afresco",
+      "Colagem"
+    ],
+    "correct_answer": "Pontilhismo",
+    "explanation": "Pontilhismo é a técnica que usa pequenos pontos de cor pura, criando a ilusão de mistura de cores quando observada à distância.",
+    "hints": [
+      "A técnica usa pequenos pontos, não pinceladas largas.",
+      "O efeito de mistura de cor acontece na percepção de quem observa de longe."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do gênero musical brasileiro, de origem carioca, associado a compositores como Tom Jobim e João Gilberto?",
+    "options": [
+      "Bossa Nova",
+      "Forró",
+      "Frevo",
+      "Maracatu"
+    ],
+    "correct_answer": "Bossa Nova",
+    "explanation": "A Bossa Nova é um gênero musical brasileiro surgido no Rio de Janeiro, associado a compositores como Tom Jobim e João Gilberto.",
+    "hints": [
+      "Surgiu no Rio de Janeiro, na segunda metade do século XX.",
+      "É reconhecida internacionalmente como uma das grandes contribuições musicais do Brasil."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "artes",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome da técnica de pintura feita diretamente sobre uma parede ou teto, ainda com o reboco úmido, muito usada no Renascimento?",
+    "options": [
+      "Afresco",
+      "Aquarela",
+      "Têmpera",
+      "Gravura"
+    ],
+    "correct_answer": "Afresco",
+    "explanation": "Afresco é a técnica de pintura aplicada sobre reboco ainda úmido, muito usada durante o Renascimento, como no teto da Capela Sistina.",
+    "hints": [
+      "É aplicada diretamente sobre uma parede ou teto, não sobre tela.",
+      "Foi muito usada por artistas renascentistas, incluindo obras famosas em igrejas e capelas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 1,
+    "prompt": "Qual é a proporção aproximada de água que compõe o corpo humano adulto, segundo estimativas gerais?",
+    "options": [
+      "Cerca de 60%",
+      "Cerca de 20%",
+      "Cerca de 90%",
+      "Cerca de 40%"
+    ],
+    "correct_answer": "Cerca de 60%",
+    "explanation": "O corpo humano adulto é composto por aproximadamente 60% de água, variando conforme idade e composição corporal.",
+    "hints": [
+      "É uma proporção bem maior do que metade do corpo.",
+      "É um dos motivos pelos quais a hidratação é tão importante para o funcionamento do corpo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do processo pelo qual o corpo transforma alimentos em energia utilizável?",
+    "options": [
+      "Metabolismo",
+      "Respiração",
+      "Circulação",
+      "Digestão apenas"
+    ],
+    "correct_answer": "Metabolismo",
+    "explanation": "Metabolismo é o conjunto de processos químicos do corpo que transformam alimentos em energia e substâncias necessárias ao funcionamento do organismo.",
+    "hints": [
+      "Engloba mais processos do que só a digestão.",
+      "É o conjunto de reações que mantêm o corpo funcionando e gerando energia."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome da substância liberada pelo corpo durante exercícios físicos, associada à sensação de bem-estar?",
+    "options": [
+      "Endorfina",
+      "Melatonina",
+      "Insulina",
+      "Colesterol"
+    ],
+    "correct_answer": "Endorfina",
+    "explanation": "Endorfina é uma substância liberada pelo corpo, especialmente durante exercícios, associada à sensação de bem-estar e redução da percepção de dor.",
+    "hints": [
+      "É liberada especialmente durante a prática de exercícios físicos.",
+      "Está associada à sensação popularmente descrita como 'barato do exercício'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do hormônio relacionado à regulação do sono, produzido naturalmente pelo corpo à noite?",
+    "options": [
+      "Melatonina",
+      "Endorfina",
+      "Adrenalina",
+      "Testosterona"
+    ],
+    "correct_answer": "Melatonina",
+    "explanation": "Melatonina é o hormônio produzido naturalmente pelo corpo, principalmente à noite, associado à regulação do ciclo de sono.",
+    "hints": [
+      "É produzida naturalmente pelo corpo, especialmente à noite.",
+      "Está diretamente relacionada à sensação de sono."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do sistema do corpo responsável por defender o organismo contra vírus, bactérias e outros agentes causadores de doenças?",
+    "options": [
+      "Sistema imunológico",
+      "Sistema digestivo",
+      "Sistema circulatório",
+      "Sistema nervoso"
+    ],
+    "correct_answer": "Sistema imunológico",
+    "explanation": "O sistema imunológico é responsável por identificar e combater agentes invasores, como vírus e bactérias, protegendo o organismo.",
+    "hints": [
+      "É o sistema de 'defesa' do corpo.",
+      "Fica mais forte ou mais fraco dependendo de vários fatores, incluindo sono e alimentação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 2,
+    "prompt": "Qual é a recomendação geral de horas de sono por noite para a maioria dos adultos, segundo especialistas?",
+    "options": [
+      "Entre 7 e 9 horas",
+      "Entre 3 e 4 horas",
+      "Entre 10 e 12 horas",
+      "Menos de 5 horas"
+    ],
+    "correct_answer": "Entre 7 e 9 horas",
+    "explanation": "Especialistas geralmente recomendam entre 7 e 9 horas de sono por noite para a maioria dos adultos, variando conforme fatores individuais.",
+    "hints": [
+      "É uma faixa considerada saudável para a maioria dos adultos.",
+      "Nem muito pouco, nem excessivamente mais que isso, costuma ser recomendado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do processo pelo qual o corpo perde calor através da evaporação do suor na pele?",
+    "options": [
+      "Termorregulação por evaporação",
+      "Vasodilatação simples",
+      "Metabolismo basal",
+      "Respiração celular"
+    ],
+    "correct_answer": "Termorregulação por evaporação",
+    "explanation": "A termorregulação por evaporação do suor é um dos mecanismos que o corpo usa para se resfriar e manter a temperatura interna estável.",
+    "hints": [
+      "Envolve o suor evaporando na pele.",
+      "É um dos mecanismos naturais do corpo para regular sua própria temperatura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do tipo de gordura geralmente associada a benefícios para a saúde cardiovascular, presente em alimentos como azeite de oliva e abacate?",
+    "options": [
+      "Gordura insaturada",
+      "Gordura trans",
+      "Gordura saturada em excesso",
+      "Gordura hidrogenada"
+    ],
+    "correct_answer": "Gordura insaturada",
+    "explanation": "Gorduras insaturadas, presentes em alimentos como azeite de oliva e abacate, são geralmente associadas a benefícios para a saúde cardiovascular.",
+    "hints": [
+      "É considerada, de forma geral, mais benéfica do que outros tipos de gordura.",
+      "Está presente em alimentos como azeite de oliva e abacate."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do órgão responsável por filtrar o sangue e produzir a urina, eliminando substâncias que o corpo não precisa mais?",
+    "options": [
+      "Rim",
+      "Fígado",
+      "Pâncreas",
+      "Baço"
+    ],
+    "correct_answer": "Rim",
+    "explanation": "Os rins são os órgãos responsáveis por filtrar o sangue e produzir a urina, eliminando substâncias desnecessárias do organismo.",
+    "hints": [
+      "O corpo humano tem um par desse órgão.",
+      "Está diretamente relacionado à produção da urina."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do fenômeno em que o corpo se adapta gradualmente a um novo fuso horário, após uma viagem longa, algo popularmente conhecido como 'jet lag'?",
+    "options": [
+      "Dessincronização do ritmo circadiano",
+      "Hipertermia",
+      "Hipoglicemia transitória",
+      "Fadiga muscular crônica"
+    ],
+    "correct_answer": "Dessincronização do ritmo circadiano",
+    "explanation": "O 'jet lag' ocorre devido à dessincronização do ritmo circadiano (relógio biológico interno) em relação ao novo fuso horário.",
+    "hints": [
+      "Está relacionado ao 'relógio biológico' interno do corpo.",
+      "É popularmente conhecido pelo termo em inglês associado a viagens longas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do processo natural pelo qual células danificadas ou desnecessárias do corpo são eliminadas de forma controlada?",
+    "options": [
+      "Apoptose",
+      "Mitose",
+      "Meiose",
+      "Osmose"
+    ],
+    "correct_answer": "Apoptose",
+    "explanation": "Apoptose é o processo natural e controlado de eliminação de células danificadas ou desnecessárias, essencial para a saúde do organismo.",
+    "hints": [
+      "É um processo controlado, não um dano acidental às células.",
+      "É diferente de mitose, que é o processo de divisão celular."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do conjunto de microrganismos, em sua maioria benéficos, que habitam naturalmente o intestino humano, associado à digestão e imunidade?",
+    "options": [
+      "Microbiota intestinal",
+      "Flora patogênica",
+      "Sistema linfático",
+      "Bile hepática"
+    ],
+    "correct_answer": "Microbiota intestinal",
+    "explanation": "A microbiota intestinal é o conjunto de microrganismos, em sua maioria benéficos, que habitam o intestino e auxiliam na digestão e imunidade.",
+    "hints": [
+      "É formada por microrganismos que vivem naturalmente no corpo, não invasores.",
+      "Tem papel importante tanto na digestão quanto na imunidade."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome da fase do sono associada à consolidação de memórias e ao maior número de sonhos?",
+    "options": [
+      "Sono REM",
+      "Sono profundo não-REM",
+      "Vigília ativa",
+      "Estado de alerta"
+    ],
+    "correct_answer": "Sono REM",
+    "explanation": "O sono REM (movimento rápido dos olhos) é a fase do sono associada à consolidação de memórias e processamento emocional, além de ser quando ocorrem a maioria dos sonhos.",
+    "hints": [
+      "A sigla vem do inglês e se refere ao movimento dos olhos durante essa fase.",
+      "É a fase do sono mais associada aos sonhos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do neurotransmissor associado à sensação de prazer e recompensa, liberado, por exemplo, ao completar uma tarefa?",
+    "options": [
+      "Dopamina",
+      "Serotonina",
+      "Melatonina",
+      "Cortisol"
+    ],
+    "correct_answer": "Dopamina",
+    "explanation": "Dopamina é o neurotransmissor associado à sensação de prazer e recompensa, liberado em situações como completar uma tarefa ou alcançar uma meta.",
+    "hints": [
+      "Está associada à sensação de recompensa e motivação.",
+      "É diferente da serotonina, mais associada ao humor e bem-estar geral."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "saude_bemestar",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do músculo responsável por bombear sangue por todo o corpo humano?",
+    "options": [
+      "Coração",
+      "Diafragma",
+      "Bíceps",
+      "Fígado"
+    ],
+    "correct_answer": "Coração",
+    "explanation": "O coração é o músculo responsável por bombear sangue continuamente por todo o corpo, levando oxigênio e nutrientes.",
+    "hints": [
+      "Fica localizado no peito e nunca para de trabalhar.",
+      "É responsável por levar sangue, oxigênio e nutrientes a todo o corpo."
+    ],
+    "age_reviewed": true
+  }
+]

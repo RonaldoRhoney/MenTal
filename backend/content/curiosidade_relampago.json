@@ -142,5 +142,131 @@
       "Estou nas janelas — e prédios antigos têm exemplos famosos meus."
     ],
     "age_reviewed": true
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Minha casca é mais forte do que parece, mas ainda assim você consegue quebrá-la com uma leve batida na borda de uma tigela.",
+    "options": [
+      "Um ovo",
+      "Uma noz",
+      "Um coco",
+      "Uma castanha"
+    ],
+    "correct_answer": "Um ovo",
+    "explanation": "A casca do ovo é surpreendentemente resistente à pressão distribuída (por isso aguenta o peso de uma galinha chocando), mas frágil a um impacto pontual, como uma batida na borda de uma tigela.",
+    "hints": [
+      "Sou usado quase todo dia em alguma receita.",
+      "Sou branco ou marrom por fora, líquido por dentro."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Fui inventado para prender fraldas, mas hoje seguro praticamente qualquer coisa, de crachás a peças de arte moderna.",
+    "options": [
+      "O alfinete de segurança",
+      "O grampo de cabelo",
+      "O clipe de papel",
+      "O elástico"
+    ],
+    "correct_answer": "O alfinete de segurança",
+    "explanation": "O alfinete de segurança foi patenteado no século XIX e, apesar de ter sido pensado para fraldas de pano, hoje é usado nas mais diversas situações do cotidiano.",
+    "hints": [
+      "Fui pensado originalmente para um uso bem específico de bebês.",
+      "Tenho uma ponta que se esconde, para não furar quem me usa."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 2,
+    "prompt": "Fico pendurado de cabeça para baixo boa parte da minha vida, e meu coração bate mais devagar quando durmo do que quando estou acordado.",
+    "options": [
+      "Um morcego",
+      "Uma preguiça",
+      "Um coala",
+      "Um bicho-pau"
+    ],
+    "correct_answer": "Um morcego",
+    "explanation": "Morcegos passam a maior parte do tempo pendurados de cabeça para baixo e conseguem reduzir bastante os batimentos cardíacos durante o sono, economizando energia.",
+    "hints": [
+      "Sou o único mamífero capaz de voar de verdade.",
+      "Enxergo bem no escuro, mas também 'escuto' o caminho à minha frente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 2,
+    "prompt": "Fui construída para durar poucos anos como atração temporária, mas mais de cem anos depois ainda sou um dos símbolos mais fotografados do mundo.",
+    "options": [
+      "A Torre Eiffel",
+      "O Coliseu",
+      "A Estátua da Liberdade",
+      "O Cristo Redentor"
+    ],
+    "correct_answer": "A Torre Eiffel",
+    "explanation": "A Torre Eiffel foi construída para uma exposição temporária em 1889 e quase foi demolida vinte anos depois — só sobreviveu porque passou a ser usada como antena de rádio.",
+    "hints": [
+      "Fico em Paris, não sou uma construção da Antiguidade.",
+      "Quase fui demolida décadas depois de ser construída, mas um novo uso tecnológico me salvou."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 2,
+    "prompt": "Consigo regenerar partes do meu próprio corpo, e alguns cientistas me estudam para entender melhor a cicatrização humana.",
+    "options": [
+      "A estrela-do-mar",
+      "O polvo",
+      "A água-viva",
+      "O caranguejo"
+    ],
+    "correct_answer": "A estrela-do-mar",
+    "explanation": "Estrelas-do-mar conseguem regenerar braços perdidos, e em alguns casos até reconstruir o corpo inteiro a partir de um único braço — por isso são estudadas em pesquisas sobre regeneração.",
+    "hints": [
+      "Vivo no mar e tenho um formato bem reconhecível.",
+      "Se perco uma parte do corpo, em muitos casos consigo fazer ela crescer de novo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 3,
+    "prompt": "Fui inventado para ser uma cola fraca, mas o 'fracasso' virou um dos produtos de escritório mais usados do mundo.",
+    "options": [
+      "O post-it",
+      "O clipe de papel",
+      "A fita adesiva",
+      "O grampeador"
+    ],
+    "correct_answer": "O post-it",
+    "explanation": "O post-it nasceu de uma tentativa fracassada de criar uma supercola — o adesivo resultante era fraco demais para colar permanentemente, mas perfeito para notas removíveis.",
+    "hints": [
+      "Nasci de uma tentativa que, a princípio, foi considerada um erro.",
+      "Sou colorido, quadrado, e grudo em qualquer superfície sem deixar marca."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 3,
+    "prompt": "Bato tão rápido que você nunca consegue me ver batendo a olho nu, e ainda assim sustento um dos voos mais exigentes do reino animal.",
+    "options": [
+      "O coração de um beija-flor",
+      "As asas de uma libélula",
+      "As patas de uma barata",
+      "As asas de uma mosca"
+    ],
+    "correct_answer": "O coração de um beija-flor",
+    "explanation": "O coração de um beija-flor pode bater mais de mil vezes por minuto durante o voo — rápido demais para o olho humano perceber, e proporcionalmente um dos batimentos mais acelerados entre os animais.",
+    "hints": [
+      "Sou parte de um animal muito pequeno, mas extremamente ativo.",
+      "Esse animal precisa de muita energia só para conseguir voar parado no ar."
+    ],
+    "age_reviewed": true
   }
 ]

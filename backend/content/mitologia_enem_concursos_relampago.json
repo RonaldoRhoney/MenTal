@@ -10,7 +10,12 @@
       "Apolo"
     ],
     "correct_answer": "Zeus",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "Zeus é o deus supremo da mitologia grega, senhor dos céus e dos raios, e governa o Monte Olimpo.",
+    "hints": [
+      "Sou o líder dos deuses do Olimpo.",
+      "Meu símbolo é o raio."
+    ]
   },
   {
     "territory_id": "mitologia_grega",
@@ -23,7 +28,12 @@
       "O punho"
     ],
     "correct_answer": "O calcanhar (calcanhar de Aquiles)",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "O calcanhar de Aquiles virou expressão popular para designar o único ponto fraco de alguém, mesmo quando parece invencível.",
+    "hints": [
+      "Minha mãe tentou me tornar invulnerável mergulhando-me num rio mágico.",
+      "Ela me segurou por essa parte do corpo — que ficou de fora da água."
+    ]
   },
   {
     "territory_id": "mitologia_nordica",
@@ -36,7 +46,12 @@
       "Baldur"
     ],
     "correct_answer": "Thor",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "Thor é o deus nórdico do trovão, famoso por empunhar o martelo Mjölnir.",
+    "hints": [
+      "Sou filho de Odin.",
+      "Meu martelo se chama Mjölnir."
+    ]
   },
   {
     "territory_id": "mitologia_nordica",
@@ -49,7 +64,12 @@
       "Heimdall"
     ],
     "correct_answer": "Odin",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "Odin é o deus supremo nórdico, associado à sabedoria — sacrificou um olho em troca de conhecimento.",
+    "hints": [
+      "Sou considerado o pai de todos os deuses nórdicos.",
+      "Tenho só um olho — troquei o outro por sabedoria."
+    ]
   },
   {
     "territory_id": "mitologia_indigena",
@@ -62,7 +82,12 @@
       "Iara"
     ],
     "correct_answer": "Saci-Pererê",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "O Saci-Pererê é um dos personagens mais populares do folclore brasileiro: perna só, cachimbo e gorro vermelho.",
+    "hints": [
+      "Adoro pregar peças e sumir em turbilhões de vento.",
+      "Tenho uma perna só e um cachimbo na boca."
+    ]
   },
   {
     "territory_id": "mitologia_indigena",
@@ -75,7 +100,12 @@
       "Anhangá"
     ],
     "correct_answer": "Curupira",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "O Curupira protege as florestas na cultura popular brasileira — seus pés virados para trás confundem quem tenta segui-lo.",
+    "hints": [
+      "Protejo as florestas de caçadores e madeireiros.",
+      "Meus pés são virados para trás, pra confundir meus rastros."
+    ]
   },
   {
     "territory_id": "enem_matematica",
@@ -88,7 +118,12 @@
       "R$ 190"
     ],
     "correct_answer": "R$ 170",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "15% de R$ 200 é R$ 30; R$ 200 − R$ 30 = R$ 170.",
+    "hints": [
+      "Calcule primeiro quanto é 15% de R$ 200.",
+      "Subtraia esse valor do preço original de R$ 200."
+    ]
   },
   {
     "territory_id": "enem_humanas",
@@ -101,7 +136,12 @@
       "Abolição da escravatura"
     ],
     "correct_answer": "Vinda da família real portuguesa para o Brasil",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "Em 1808, a família real portuguesa se mudou para o Brasil fugindo de Napoleão, elevando o status da colônia.",
+    "hints": [
+      "Aconteceu em 1808, fugindo de uma invasão na Europa.",
+      "A família real portuguesa cruzou o Atlântico e se instalou no Rio de Janeiro."
+    ]
   },
   {
     "territory_id": "enem_natureza",
@@ -114,7 +154,12 @@
       "Osmose"
     ],
     "correct_answer": "Fotossíntese",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "Fotossíntese é o processo pelo qual plantas transformam luz solar em energia química, liberando oxigênio.",
+    "hints": [
+      "Só acontece na presença de luz.",
+      "Libera oxigênio como subproduto."
+    ]
   },
   {
     "territory_id": "enem_linguagens",
@@ -127,7 +172,12 @@
       "Ironia"
     ],
     "correct_answer": "Personificação",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "Personificação (ou prosopopeia) atribui características humanas a seres inanimados ou animais.",
+    "hints": [
+      "É uma figura de linguagem, não um erro gramatical.",
+      "Exemplo: 'o vento sussurrava' — o vento não fala de verdade."
+    ]
   },
   {
     "territory_id": "concursos_portugues",
@@ -140,7 +190,12 @@
       "Conclusão"
     ],
     "correct_answer": "Oposição/adversidade",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "'Porém' é uma conjunção adversativa — introduz uma ideia que contrasta com a anterior.",
+    "hints": [
+      "A frase tem duas ideias que se contradizem.",
+      "'Porém' tem o mesmo sentido de 'mas'."
+    ]
   },
   {
     "territory_id": "concursos_raciocinio",
@@ -153,7 +208,12 @@
       "Não é possível concluir nada"
     ],
     "correct_answer": "Todo A é C",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "Se todo A é B e todo B é C, por transitividade todo A é C — silogismo clássico da lógica.",
+    "hints": [
+      "Pense em conjuntos: A está dentro de B, e B está dentro de C.",
+      "Se A está dentro de B, e B está dentro de C, A também está dentro de C."
+    ]
   },
   {
     "territory_id": "concursos_direito",
@@ -166,7 +226,12 @@
       "Constituição Federativa"
     ],
     "correct_answer": "Constituição Cidadã",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "A Constituição de 1988 é chamada de 'Constituição Cidadã' por ampliar direitos sociais após a redemocratização.",
+    "hints": [
+      "Foi promulgada em 1988, após o fim da ditadura militar.",
+      "O apelido remete à ampliação de direitos dos cidadãos."
+    ]
   },
   {
     "territory_id": "concursos_direito",
@@ -179,6 +244,11 @@
       "Agenda 21"
     ],
     "correct_answer": "Objetivos de Desenvolvimento Sustentável (ODS)",
-    "age_reviewed": false
+    "age_reviewed": true,
+    "explanation": "Os Objetivos de Desenvolvimento Sustentável (ODS) são 17 metas da ONU, definidas em 2015, para até 2030.",
+    "hints": [
+      "Foram definidas pela ONU em 2015.",
+      "São 17 metas, incluindo erradicar a pobreza e agir contra as mudanças climáticas."
+    ]
   }
 ]

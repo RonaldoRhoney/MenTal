@@ -1,0 +1,758 @@
+[
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 1,
+    "prompt": "Na frase 'Maria e João foram ao mercado', qual é o sujeito da oração?",
+    "options": [
+      "Maria e João",
+      "Foram",
+      "Ao mercado",
+      "Mercado"
+    ],
+    "correct_answer": "Maria e João",
+    "explanation": "O sujeito é quem pratica a ação do verbo; em 'Maria e João foram ao mercado', o sujeito composto é 'Maria e João'.",
+    "hints": [
+      "O sujeito é quem pratica a ação descrita pelo verbo.",
+      "Pergunte 'quem foi ao mercado?' — a resposta é o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 1,
+    "prompt": "Qual classe gramatical tem a função de modificar um substantivo, indicando qualidade ou característica?",
+    "options": [
+      "Adjetivo",
+      "Advérbio",
+      "Substantivo",
+      "Preposição"
+    ],
+    "correct_answer": "Adjetivo",
+    "explanation": "O adjetivo é a classe gramatical que caracteriza o substantivo, indicando qualidade, estado ou característica.",
+    "hints": [
+      "Modifica o substantivo, não o verbo.",
+      "Exemplo: 'casa grande' — 'grande' é essa classe."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 1,
+    "prompt": "Qual é o plural correto da palavra 'cidadão'?",
+    "options": [
+      "Cidadãos",
+      "Cidadães",
+      "Cidadão",
+      "Cidadans"
+    ],
+    "correct_answer": "Cidadãos",
+    "explanation": "O plural de 'cidadão' é 'cidadãos', seguindo a regra de palavras terminadas em -ão que fazem plural em -ãos.",
+    "hints": [
+      "Palavras terminadas em -ão têm mais de uma regra de plural, dependendo da palavra.",
+      "Neste caso específico, o plural segue a terminação -ãos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 1,
+    "prompt": "Qual é a função da vírgula na frase 'Comprei maçã, banana e uva'?",
+    "options": [
+      "Separar itens de uma enumeração",
+      "Indicar pausa longa",
+      "Substituir o ponto final",
+      "Separar sujeito e verbo"
+    ],
+    "correct_answer": "Separar itens de uma enumeração",
+    "explanation": "A vírgula, nesse caso, separa os itens de uma enumeração (maçã, banana, uva).",
+    "hints": [
+      "Observe que há uma lista de itens na frase.",
+      "A vírgula organiza os elementos dessa lista."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 2,
+    "prompt": "Na frase 'Ele foi aprovado, contudo não comemorou', qual é a relação de sentido estabelecida por 'contudo'?",
+    "options": [
+      "Oposição/adversidade",
+      "Adição",
+      "Conclusão",
+      "Explicação"
+    ],
+    "correct_answer": "Oposição/adversidade",
+    "explanation": "'Contudo' é uma conjunção adversativa, assim como 'porém' e 'mas', indicando contraste entre duas ideias.",
+    "hints": [
+      "Repare que as duas partes da frase parecem contraditórias.",
+      "'Contudo' tem o mesmo sentido de 'porém' e 'mas'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 2,
+    "prompt": "Qual é o erro na frase 'Fazem dois anos que ele se formou'?",
+    "options": [
+      "'Fazem' deveria ser 'Faz', pois 'fazer' indicando tempo é impessoal",
+      "Falta uma vírgula após 'anos'",
+      "'formou' deveria ser 'formaram'",
+      "Não há erro na frase"
+    ],
+    "correct_answer": "'Fazem' deveria ser 'Faz', pois 'fazer' indicando tempo é impessoal",
+    "explanation": "O verbo 'fazer', quando indica tempo decorrido, é impessoal e deve ficar sempre na 3ª pessoa do singular: 'Faz dois anos'.",
+    "hints": [
+      "O verbo 'fazer' indicando tempo não varia como os outros verbos.",
+      "A forma correta seria sempre na 3ª pessoa do singular, mesmo com números maiores que um."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 2,
+    "prompt": "Qual é a diferença de sentido entre 'mal' e 'mau' nas frases 'ele se sentiu mal' e 'ele é um homem mau'?",
+    "options": [
+      "'Mal' é advérbio, 'mau' é adjetivo",
+      "'Mal' é substantivo, 'mau' é verbo",
+      "Ambos têm o mesmo sentido",
+      "'Mau' é advérbio, 'mal' é adjetivo"
+    ],
+    "correct_answer": "'Mal' é advérbio, 'mau' é adjetivo",
+    "explanation": "'Mal' geralmente funciona como advérbio (modifica um verbo), enquanto 'mau' é adjetivo (qualifica um substantivo), oposto de 'bom'.",
+    "hints": [
+      "Uma das palavras modifica um verbo, a outra qualifica uma pessoa/substantivo.",
+      "'Mau' é o oposto de 'bom'; 'mal' é o oposto de 'bem'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 2,
+    "prompt": "Na frase 'Se eu fosse rico, viajaria o mundo', qual é o tempo verbal de 'fosse'?",
+    "options": [
+      "Pretérito imperfeito do subjuntivo",
+      "Pretérito perfeito do indicativo",
+      "Futuro do subjuntivo",
+      "Presente do indicativo"
+    ],
+    "correct_answer": "Pretérito imperfeito do subjuntivo",
+    "explanation": "'Fosse' está no pretérito imperfeito do subjuntivo, usado para expressar hipóteses ou condições irreais.",
+    "hints": [
+      "Expressa uma condição hipotética, não um fato real.",
+      "É o tempo verbal típico de frases começando com 'se'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 2,
+    "prompt": "Qual é a regra de concordância correta em frases com o pronome 'se' partícula apassivadora, como 'Vendem-se casas'?",
+    "options": [
+      "O verbo concorda com o sujeito paciente ('casas')",
+      "O verbo sempre fica no singular",
+      "O verbo sempre fica no plural, independente do sujeito",
+      "Não existe regra definida"
+    ],
+    "correct_answer": "O verbo concorda com o sujeito paciente ('casas')",
+    "explanation": "Quando o 'se' é partícula apassivadora (voz passiva sintética), o verbo concorda com o sujeito paciente da oração — 'Vendem-se casas' equivale a 'Casas são vendidas'.",
+    "hints": [
+      "Pense em como a frase soaria na voz passiva analítica: 'casas são vendidas'.",
+      "O verbo concorda com o elemento que sofre a ação, não com quem a pratica."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 3,
+    "prompt": "Na frase 'Assiste-se a bons filmes', o pronome 'se' exerce qual função sintática?",
+    "options": [
+      "Índice de indeterminação do sujeito",
+      "Partícula apassivadora",
+      "Objeto direto",
+      "Sujeito da oração"
+    ],
+    "correct_answer": "Índice de indeterminação do sujeito",
+    "explanation": "Como 'assistir' no sentido de 'ver' é transitivo indireto (assiste A algo), o 'se' funciona como índice de indeterminação do sujeito, não como partícula apassivadora.",
+    "hints": [
+      "O verbo 'assistir', neste sentido, pede uma preposição ('assistir A algo').",
+      "Verbos transitivos indiretos com 'se' geram essa função sintática específica, diferente da voz passiva."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 3,
+    "prompt": "Qual é a diferença entre oração coordenada e oração subordinada?",
+    "options": [
+      "Coordenadas são independentes entre si; subordinadas dependem sintaticamente de outra",
+      "Coordenadas sempre vêm depois; subordinadas sempre vêm antes",
+      "Não existe diferença real entre elas",
+      "Coordenadas usam vírgula; subordinadas nunca usam"
+    ],
+    "correct_answer": "Coordenadas são independentes entre si; subordinadas dependem sintaticamente de outra",
+    "explanation": "Orações coordenadas têm sentido completo e independente entre si; orações subordinadas dependem sintaticamente da oração principal para fazer sentido completo.",
+    "hints": [
+      "Uma delas poderia 'existir sozinha' gramaticalmente, a outra não.",
+      "Pense em conjunções como 'e' (coordenada) versus 'que', 'porque' (geralmente subordinada)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 3,
+    "prompt": "Na frase 'Chegando o trem, todos embarcaram', qual é a classificação dessa oração reduzida?",
+    "options": [
+      "Oração reduzida de gerúndio",
+      "Oração reduzida de infinitivo",
+      "Oração reduzida de particípio",
+      "Oração coordenada assindética"
+    ],
+    "correct_answer": "Oração reduzida de gerúndio",
+    "explanation": "'Chegando o trem' é uma oração reduzida de gerúndio, equivalente a 'Quando o trem chegou'.",
+    "hints": [
+      "Repare na terminação do verbo 'chegando'.",
+      "Verbos terminados em -ndo indicam esse tipo específico de oração reduzida."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 3,
+    "prompt": "Segundo a norma culta, qual é a regência correta do verbo 'preferir' em frases comparativas?",
+    "options": [
+      "Preferir algo A outra coisa, sem usar 'mais do que'",
+      "Preferir algo MAIS QUE outra coisa",
+      "Preferir algo DO QUE outra coisa",
+      "Não existe regência específica para esse verbo"
+    ],
+    "correct_answer": "Preferir algo A outra coisa, sem usar 'mais do que'",
+    "explanation": "A norma culta considera inadequado usar 'preferir X mais do que Y' — o correto é 'preferir X a Y', já que o verbo já carrega ideia de comparação.",
+    "hints": [
+      "Esse verbo já tem uma ideia de comparação embutida em seu significado.",
+      "A preposição recomendada pela norma culta é diferente de 'do que' ou 'mais que'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 3,
+    "prompt": "Qual é a função do acento indicador de crase em frases como 'Vou à escola'?",
+    "options": [
+      "Indica a fusão da preposição 'a' com o artigo feminino 'a'",
+      "Indica apenas uma vogal tônica",
+      "Substitui a preposição 'para'",
+      "Indica plural do substantivo"
+    ],
+    "correct_answer": "Indica a fusão da preposição 'a' com o artigo feminino 'a'",
+    "explanation": "A crase indica a fusão da preposição 'a' exigida pelo verbo com o artigo definido feminino 'a' que precede o substantivo.",
+    "hints": [
+      "Envolve dois elementos gramaticais se fundindo em um só sinal.",
+      "Um dos elementos é uma preposição; o outro é um artigo que só existe no feminino."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 1,
+    "prompt": "Se todo cachorro é um animal, e Rex é um cachorro, é correto afirmar que:",
+    "options": [
+      "Rex é um animal",
+      "Rex não é um animal",
+      "Todo animal é um cachorro",
+      "Não é possível concluir nada"
+    ],
+    "correct_answer": "Rex é um animal",
+    "explanation": "Se todo cachorro é animal, e Rex é cachorro, por dedução lógica, Rex é animal.",
+    "hints": [
+      "Pense em conjuntos: cachorros estão dentro do conjunto de animais.",
+      "Se Rex está no conjunto 'cachorro', ele também está no conjunto maior 'animal'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 1,
+    "prompt": "Qual número completa a sequência: 2, 4, 6, 8, ___?",
+    "options": [
+      "10",
+      "9",
+      "12",
+      "11"
+    ],
+    "correct_answer": "10",
+    "explanation": "A sequência aumenta de 2 em 2 (números pares consecutivos), logo o próximo número é 10.",
+    "hints": [
+      "Observe o padrão de aumento entre os números.",
+      "Cada número é 2 unidades maior que o anterior."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 1,
+    "prompt": "Se A é maior que B, e B é maior que C, quem é o maior entre os três?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "Não é possível saber"
+    ],
+    "correct_answer": "A",
+    "explanation": "Por transitividade, se A > B e B > C, então A é o maior dos três.",
+    "hints": [
+      "Pense em ordem: quem está no topo dessa hierarquia?",
+      "A relação é transitiva: A supera B, que supera C."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 1,
+    "prompt": "Qual afirmação é a negação lógica de 'Todos os alunos passaram'?",
+    "options": [
+      "Pelo menos um aluno não passou",
+      "Nenhum aluno passou",
+      "Todos os alunos não passaram",
+      "Alguns alunos passaram"
+    ],
+    "correct_answer": "Pelo menos um aluno não passou",
+    "explanation": "A negação de 'todos' não é 'nenhum', mas sim 'pelo menos um não' — basta uma exceção para negar a afirmação universal.",
+    "hints": [
+      "A negação de uma afirmação universal ('todos') não precisa ser o extremo oposto ('nenhum').",
+      "Basta encontrar apenas UM caso contrário para negar 'todos'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 2,
+    "prompt": "Se 'Todo médico é formado em Medicina' e 'João não é formado em Medicina', o que se pode concluir sobre João?",
+    "options": [
+      "João não é médico",
+      "João é médico",
+      "João pode ser médico",
+      "Não é possível concluir nada"
+    ],
+    "correct_answer": "João não é médico",
+    "explanation": "Pela contrapositiva lógica: se todo médico é formado em Medicina, e João não é formado em Medicina, então João não pode ser médico.",
+    "hints": [
+      "Use a lógica da contrapositiva: se 'todo A é B', então 'quem não é B, não é A'.",
+      "João não tem a característica (formação) que todo médico obrigatoriamente tem."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 2,
+    "prompt": "Numa fila de 5 pessoas, Ana está na frente de Beatriz, que está na frente de Carlos. Quem está mais próximo do início da fila?",
+    "options": [
+      "Ana",
+      "Beatriz",
+      "Carlos",
+      "Não é possível saber"
+    ],
+    "correct_answer": "Ana",
+    "explanation": "Se Ana está na frente de Beatriz, e Beatriz na frente de Carlos, a ordem é Ana, depois Beatriz, depois Carlos — Ana está mais perto do início.",
+    "hints": [
+      "Organize mentalmente a ordem da fila com base nas informações dadas.",
+      "Quem está 'na frente de' outra pessoa está mais próximo do início."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 2,
+    "prompt": "Se a proposição 'Se chove, a rua fica molhada' é verdadeira, e a rua NÃO está molhada, o que se pode concluir?",
+    "options": [
+      "Não choveu",
+      "Choveu",
+      "Pode ter chovido ou não",
+      "A proposição é falsa"
+    ],
+    "correct_answer": "Não choveu",
+    "explanation": "Pela contrapositiva lógica: se 'chover implica rua molhada' é verdadeiro, e a rua não está molhada, então não pode ter chovido.",
+    "hints": [
+      "Use a lógica da contrapositiva: a ausência do efeito indica ausência da causa, nesse tipo de proposição.",
+      "Se a consequência não aconteceu, a condição que a geraria também não aconteceu."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 2,
+    "prompt": "Num grupo de 30 pessoas, 18 gostam de café e 15 gostam de chá, sendo que 8 gostam de ambos. Quantas pessoas não gostam de nenhum dos dois?",
+    "options": [
+      "5",
+      "8",
+      "10",
+      "3"
+    ],
+    "correct_answer": "5",
+    "explanation": "Pessoas que gostam de pelo menos um: 18 + 15 - 8 (interseção) = 25. Logo, 30 - 25 = 5 pessoas não gostam de nenhum.",
+    "hints": [
+      "Use o princípio de inclusão-exclusão: some os dois grupos e subtraia quem está nos dois.",
+      "Depois de achar quantos gostam de pelo menos um, subtraia do total de pessoas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 2,
+    "prompt": "Se 'nenhum peixe é mamífero' é verdadeiro, e 'a baleia é mamífero' também é verdadeiro, o que se conclui sobre a baleia?",
+    "options": [
+      "A baleia não é peixe",
+      "A baleia é peixe",
+      "A baleia é peixe e mamífero ao mesmo tempo",
+      "Não é possível concluir nada"
+    ],
+    "correct_answer": "A baleia não é peixe",
+    "explanation": "Se nenhum peixe é mamífero, e a baleia é mamífero, a baleia não pode pertencer ao grupo dos peixes.",
+    "hints": [
+      "Os dois grupos (peixe e mamífero) não têm elementos em comum, segundo a primeira afirmação.",
+      "Se a baleia está em um grupo, ela não pode estar no grupo que não tem intersecção com ele."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 3,
+    "prompt": "Três amigos, Ana, Bruno e Carla, têm idades diferentes. Ana é mais velha que Bruno. Carla é mais nova que Bruno. Quem é o mais novo dos três?",
+    "options": [
+      "Carla",
+      "Ana",
+      "Bruno",
+      "Não é possível saber"
+    ],
+    "correct_answer": "Carla",
+    "explanation": "Se Ana > Bruno, e Carla < Bruno, a ordem é Ana > Bruno > Carla, logo Carla é a mais nova.",
+    "hints": [
+      "Organize as idades em ordem, usando as duas comparações dadas.",
+      "Uma pessoa está no meio; as outras duas estão nos extremos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 3,
+    "prompt": "Se a proposição 'P e Q' é verdadeira, e sabe-se que P é falsa, o que se pode dizer sobre essa situação?",
+    "options": [
+      "É uma contradição — 'P e Q' não pode ser verdadeira se P é falsa",
+      "Q também é falsa",
+      "Q é necessariamente verdadeira",
+      "Não é possível avaliar"
+    ],
+    "correct_answer": "É uma contradição — 'P e Q' não pode ser verdadeira se P é falsa",
+    "explanation": "Uma conjunção ('e') só é verdadeira quando AMBAS as partes são verdadeiras; se P é falsa, 'P e Q' não pode ser verdadeira, independente de Q.",
+    "hints": [
+      "Lembre a regra da conjunção lógica: as duas partes precisam ser verdadeiras ao mesmo tempo.",
+      "Se uma parte já é falsa, a conjunção inteira já está comprometida."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 3,
+    "prompt": "Numa competição, sabe-se que 'se José ganhar, Maria não ganha' e 'Maria ganhou'. O que se pode concluir sobre José?",
+    "options": [
+      "José não ganhou",
+      "José ganhou",
+      "José e Maria ganharam juntos",
+      "Não é possível concluir nada"
+    ],
+    "correct_answer": "José não ganhou",
+    "explanation": "Pela contrapositiva: se 'José ganhar implica Maria não ganhar' é verdadeiro, e Maria ganhou, então José não pode ter ganhado.",
+    "hints": [
+      "Use a lógica da contrapositiva mais uma vez.",
+      "O fato de Maria ter ganho é incompatível com José também ter ganho, segundo a regra dada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 3,
+    "prompt": "Se 'ou chove, ou faz sol' (disjunção exclusiva) é verdadeiro, e sabe-se que choveu, o que se pode dizer sobre o sol?",
+    "options": [
+      "Não fez sol",
+      "Fez sol também",
+      "Pode ter feito sol ou não",
+      "A afirmação é falsa"
+    ],
+    "correct_answer": "Não fez sol",
+    "explanation": "Numa disjunção exclusiva ('ou... ou'), apenas uma das opções pode ser verdadeira por vez; se choveu, não pode ter feito sol ao mesmo tempo, segundo essa regra.",
+    "hints": [
+      "'Ou... ou' nesse sentido é diferente do 'ou' comum — só uma opção pode ser verdadeira.",
+      "Se uma das opções já é verdadeira, a outra é automaticamente falsa nesse tipo de disjunção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 3,
+    "prompt": "Numa mesa redonda com 4 pessoas, Ana está ao lado de Bruno, que está ao lado de Carla. A quarta pessoa, Davi, completa o círculo. Ao lado de quem Davi necessariamente está sentado, considerando que a mesa é redonda e fechada?",
+    "options": [
+      "Ana e Carla (um de cada lado)",
+      "Apenas Ana",
+      "Apenas Bruno",
+      "Não é possível determinar"
+    ],
+    "correct_answer": "Ana e Carla (um de cada lado)",
+    "explanation": "Numa mesa redonda fechada de 4 pessoas, se a sequência Ana-Bruno-Carla já ocupa 3 posições consecutivas, a quarta posição (Davi) necessariamente fecha o círculo entre Carla e Ana, ficando ao lado de ambas.",
+    "hints": [
+      "Visualize a mesa redonda como um círculo fechado com 4 posições.",
+      "A última pessoa sempre 'fecha' o círculo, ficando entre as duas pontas da sequência já formada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 1,
+    "prompt": "Quantos poderes compõem a organização política do Estado brasileiro, segundo o princípio da separação de poderes?",
+    "options": [
+      "Três (Executivo, Legislativo e Judiciário)",
+      "Dois (Executivo e Legislativo)",
+      "Quatro (incluindo o poder Militar)",
+      "Um poder central único"
+    ],
+    "correct_answer": "Três (Executivo, Legislativo e Judiciário)",
+    "explanation": "O Estado brasileiro é organizado em três poderes independentes e harmônicos entre si: Executivo, Legislativo e Judiciário.",
+    "hints": [
+      "É um princípio fundamental de organização do Estado democrático.",
+      "Cada poder tem uma função distinta: administrar, legislar e julgar."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do documento de identificação usado por eleitores brasileiros para votar?",
+    "options": [
+      "Título de eleitor",
+      "Certidão de nascimento",
+      "Carteira de trabalho",
+      "CPF"
+    ],
+    "correct_answer": "Título de eleitor",
+    "explanation": "O título de eleitor é o documento que comprova o registro de uma pessoa como eleitor, exigido para votar no Brasil.",
+    "hints": [
+      "É exigido especificamente no momento de votar.",
+      "É diferente do CPF, embora ambos sejam documentos pessoais."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do documento que registra o nascimento de uma pessoa, sendo o primeiro documento civil obrigatório no Brasil?",
+    "options": [
+      "Certidão de nascimento",
+      "Carteira de identidade",
+      "CPF",
+      "Título de eleitor"
+    ],
+    "correct_answer": "Certidão de nascimento",
+    "explanation": "A certidão de nascimento é o primeiro documento civil obrigatório, registrado logo após o nascimento de uma pessoa.",
+    "hints": [
+      "É o primeiro documento oficial que uma pessoa recebe na vida.",
+      "É emitido em cartório, logo após o nascimento."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do poder responsável por criar leis no Brasil, em nível federal?",
+    "options": [
+      "Poder Legislativo (Congresso Nacional)",
+      "Poder Executivo",
+      "Poder Judiciário",
+      "Ministério Público"
+    ],
+    "correct_answer": "Poder Legislativo (Congresso Nacional)",
+    "explanation": "O Poder Legislativo, exercido pelo Congresso Nacional (Câmara dos Deputados e Senado Federal), é o responsável por criar leis em nível federal.",
+    "hints": [
+      "É formado por deputados e senadores.",
+      "Seu principal papel é elaborar e votar as leis."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do princípio jurídico que estabelece que ninguém pode ser considerado culpado até que se prove o contrário?",
+    "options": [
+      "Presunção de inocência",
+      "Ampla defesa",
+      "Devido processo legal",
+      "Contraditório"
+    ],
+    "correct_answer": "Presunção de inocência",
+    "explanation": "O princípio da presunção de inocência garante que toda pessoa é considerada inocente até que se prove sua culpa, através de processo legal.",
+    "hints": [
+      "É um princípio fundamental de qualquer processo legal.",
+      "Garante que a pessoa não seja tratada como culpada antes de um julgamento."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do conjunto de direitos garantidos a todo trabalhador, previstos na legislação trabalhista brasileira, como férias e décimo terceiro salário?",
+    "options": [
+      "Direitos trabalhistas",
+      "Direitos autorais",
+      "Direitos difusos",
+      "Direitos reais"
+    ],
+    "correct_answer": "Direitos trabalhistas",
+    "explanation": "Direitos trabalhistas são o conjunto de garantias legais asseguradas ao trabalhador, como férias remuneradas e décimo terceiro salário.",
+    "hints": [
+      "Estão relacionados especificamente à relação entre trabalhador e empregador.",
+      "Incluem benefícios como férias e o décimo terceiro salário."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do documento que regula as relações de consumo no Brasil, protegendo o consumidor?",
+    "options": [
+      "Código de Defesa do Consumidor",
+      "Código Civil",
+      "Código Penal",
+      "Código Tributário"
+    ],
+    "correct_answer": "Código de Defesa do Consumidor",
+    "explanation": "O Código de Defesa do Consumidor (CDC) é a legislação que regula as relações de consumo, protegendo os direitos do consumidor.",
+    "hints": [
+      "Foi criado especificamente para proteger quem compra produtos e serviços.",
+      "É frequentemente citado quando alguém tem um problema com uma compra."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do órgão do Poder Judiciário responsável por julgar questões constitucionais no Brasil, sendo a mais alta instância do país?",
+    "options": [
+      "Supremo Tribunal Federal (STF)",
+      "Superior Tribunal de Justiça (STJ)",
+      "Tribunal de Contas da União (TCU)",
+      "Tribunal Superior Eleitoral (TSE)"
+    ],
+    "correct_answer": "Supremo Tribunal Federal (STF)",
+    "explanation": "O Supremo Tribunal Federal é o órgão máximo do Poder Judiciário brasileiro, responsável por questões constitucionais.",
+    "hints": [
+      "É a mais alta instância do Judiciário brasileiro.",
+      "Julga especificamente questões relacionadas à Constituição."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 2,
+    "prompt": "Após aprovado pelo Congresso, um projeto de lei federal precisa ser sancionado por qual autoridade para se tornar lei?",
+    "options": [
+      "Presidente da República",
+      "Governador",
+      "Prefeito",
+      "Ministro"
+    ],
+    "correct_answer": "Presidente da República",
+    "explanation": "Em nível federal, após aprovação pelo Congresso, o projeto de lei segue para sanção do Presidente da República.",
+    "hints": [
+      "É o chefe do Poder Executivo em nível federal.",
+      "Tem também o poder de vetar um projeto de lei, além de sancioná-lo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do instrumento jurídico usado para questionar a constitucionalidade de uma lei perante o Supremo Tribunal Federal?",
+    "options": [
+      "Ação Direta de Inconstitucionalidade (ADI)",
+      "Habeas Corpus",
+      "Mandado de Segurança",
+      "Recurso Extraordinário Simples"
+    ],
+    "correct_answer": "Ação Direta de Inconstitucionalidade (ADI)",
+    "explanation": "A ADI é o instrumento jurídico que questiona diretamente a constitucionalidade de uma lei ou ato normativo perante o STF.",
+    "hints": [
+      "Questiona diretamente se uma lei está de acordo com a Constituição.",
+      "É julgada especificamente pelo Supremo Tribunal Federal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do princípio jurídico que garante a qualquer pessoa o direito de se defender e apresentar provas antes de uma decisão judicial desfavorável?",
+    "options": [
+      "Ampla defesa",
+      "Presunção de inocência",
+      "Legalidade",
+      "Isonomia"
+    ],
+    "correct_answer": "Ampla defesa",
+    "explanation": "O princípio da ampla defesa garante o direito de toda pessoa se defender e apresentar provas antes de qualquer decisão judicial contrária a ela.",
+    "hints": [
+      "Garante o direito de se defender, não apenas de ser presumido inocente.",
+      "Está sempre associado ao direito ao contraditório em um processo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do princípio constitucional que garante que todos são iguais perante a lei, sem distinção de qualquer natureza?",
+    "options": [
+      "Princípio da isonomia",
+      "Princípio da legalidade",
+      "Princípio da anterioridade",
+      "Princípio da publicidade"
+    ],
+    "correct_answer": "Princípio da isonomia",
+    "explanation": "O princípio da isonomia (igualdade) garante que todos são iguais perante a lei, previsto no artigo 5º da Constituição Federal.",
+    "hints": [
+      "Está relacionado ao conceito de igualdade entre as pessoas perante a lei.",
+      "É um dos princípios fundamentais listados logo no início da Constituição."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do instrumento constitucional que protege a liberdade de locomoção de uma pessoa contra prisão ou ameaça ilegal?",
+    "options": [
+      "Habeas Corpus",
+      "Mandado de Segurança",
+      "Ação Popular",
+      "Habeas Data"
+    ],
+    "correct_answer": "Habeas Corpus",
+    "explanation": "O Habeas Corpus é o instrumento constitucional que protege especificamente a liberdade de locomoção contra prisão ou ameaça ilegal.",
+    "hints": [
+      "Protege especificamente a liberdade de ir e vir de uma pessoa.",
+      "É diferente do Mandado de Segurança, que protege outros tipos de direito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do processo pelo qual a Constituição pode ser alterada, exigindo quórum qualificado no Congresso Nacional?",
+    "options": [
+      "Processo de emenda constitucional",
+      "Processo legislativo ordinário",
+      "Plebiscito obrigatório",
+      "Decreto presidencial"
+    ],
+    "correct_answer": "Processo de emenda constitucional",
+    "explanation": "A Constituição pode ser alterada através do processo de Emenda Constitucional, que exige quórum qualificado no Congresso Nacional, diferente do processo legislativo comum.",
+    "hints": [
+      "Exige um processo mais rigoroso do que a criação de uma lei comum.",
+      "O resultado desse processo é chamado de Emenda Constitucional."
+    ],
+    "age_reviewed": true
+  }
+]

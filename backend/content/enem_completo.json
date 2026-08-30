@@ -1,0 +1,1010 @@
+[
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 1,
+    "prompt": "Qual é o resultado de 25% de 400?",
+    "options": [
+      "100",
+      "80",
+      "125",
+      "50"
+    ],
+    "correct_answer": "100",
+    "explanation": "25% de 400 é o mesmo que 400 dividido por 4, resultando em 100.",
+    "hints": [
+      "25% equivale a um quarto do valor.",
+      "Divida 400 por 4."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 1,
+    "prompt": "Se um carro percorre 60 km em 1 hora, mantendo velocidade constante, quantos km percorre em 3 horas?",
+    "options": [
+      "180 km",
+      "120 km",
+      "200 km",
+      "160 km"
+    ],
+    "correct_answer": "180 km",
+    "explanation": "Mantendo velocidade constante de 60 km/h, em 3 horas o carro percorre 60 × 3 = 180 km.",
+    "hints": [
+      "A velocidade é constante, então é só multiplicar.",
+      "Multiplique 60 km por 3 horas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 1,
+    "prompt": "Qual é a área de um retângulo com 8 metros de largura e 5 metros de comprimento?",
+    "options": [
+      "40 m²",
+      "26 m²",
+      "13 m²",
+      "35 m²"
+    ],
+    "correct_answer": "40 m²",
+    "explanation": "A área do retângulo é largura × comprimento: 8 × 5 = 40 m².",
+    "hints": [
+      "A área de um retângulo é base vezes altura.",
+      "Multiplique 8 por 5."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 1,
+    "prompt": "Numa turma de 40 alunos, 25% são meninos. Quantos meninos há na turma?",
+    "options": [
+      "10",
+      "15",
+      "8",
+      "12"
+    ],
+    "correct_answer": "10",
+    "explanation": "25% de 40 é 40 dividido por 4, resultando em 10 meninos.",
+    "hints": [
+      "25% equivale a um quarto do total.",
+      "Divida 40 por 4."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 2,
+    "prompt": "Se um produto teve um aumento de 20% e passou a custar R$ 120, qual era o preço original?",
+    "options": [
+      "R$ 100",
+      "R$ 96",
+      "R$ 110",
+      "R$ 105"
+    ],
+    "correct_answer": "R$ 100",
+    "explanation": "Se R$ 120 representa 120% do valor original, o valor original é R$ 120 ÷ 1,2 = R$ 100.",
+    "hints": [
+      "R$ 120 representa 120% do valor original.",
+      "Divida 120 por 1,2."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 2,
+    "prompt": "Qual é a probabilidade de tirar um número par ao lançar um dado comum de 6 faces?",
+    "options": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "2/3"
+    ],
+    "correct_answer": "1/2",
+    "explanation": "Existem 3 números pares (2, 4, 6) entre os 6 possíveis, resultando em probabilidade de 3/6 = 1/2.",
+    "hints": [
+      "Conte quantos números pares existem entre 1 e 6.",
+      "São 3 números pares em 6 possíveis."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 2,
+    "prompt": "Uma torneira enche um tanque em 4 horas sozinha. Outra torneira enche o mesmo tanque em 4 horas também. Juntas, quanto tempo levam para encher o tanque?",
+    "options": [
+      "2 horas",
+      "4 horas",
+      "8 horas",
+      "1 hora"
+    ],
+    "correct_answer": "2 horas",
+    "explanation": "Juntas, as duas torneiras enchem o tanque em metade do tempo que uma sozinha levaria: 2 horas.",
+    "hints": [
+      "Juntas, elas trabalham mais rápido que sozinhas.",
+      "O tempo conjunto é metade do tempo de uma torneira sozinha."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 2,
+    "prompt": "Qual é a média aritmética das notas 6, 7, 8 e 9?",
+    "options": [
+      "7,5",
+      "7",
+      "8",
+      "6,5"
+    ],
+    "correct_answer": "7,5",
+    "explanation": "A soma das notas é 30, dividida por 4 (quantidade de notas) resulta em 7,5.",
+    "hints": [
+      "Some todas as notas primeiro.",
+      "Divida a soma pela quantidade de notas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 2,
+    "prompt": "Um terreno retangular tem 200 m² de área e 10 metros de largura. Qual é o comprimento desse terreno?",
+    "options": [
+      "20 metros",
+      "15 metros",
+      "25 metros",
+      "18 metros"
+    ],
+    "correct_answer": "20 metros",
+    "explanation": "Área é largura × comprimento; logo, comprimento = área ÷ largura = 200 ÷ 10 = 20 metros.",
+    "hints": [
+      "Área é largura vezes comprimento.",
+      "Divida a área pela largura conhecida."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 3,
+    "prompt": "Se x + y = 10 e x − y = 4, qual é o valor de x?",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "correct_answer": "7",
+    "explanation": "Somando as duas equações: 2x = 14, logo x = 7.",
+    "hints": [
+      "Some as duas equações para eliminar y.",
+      "2x = 14, então x é metade disso."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 3,
+    "prompt": "Um investimento rende 10% ao ano, com juros compostos. Após 2 anos, um valor de R$ 1.000 se transforma em quanto, aproximadamente?",
+    "options": [
+      "R$ 1.210",
+      "R$ 1.200",
+      "R$ 1.100",
+      "R$ 1.221"
+    ],
+    "correct_answer": "R$ 1.210",
+    "explanation": "Com juros compostos de 10% ao ano por 2 anos: 1000 × 1,1 × 1,1 = 1.210.",
+    "hints": [
+      "Juros compostos incidem sobre o valor já corrigido do ano anterior.",
+      "Multiplique 1000 por 1,1 duas vezes seguidas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 3,
+    "prompt": "Numa progressão aritmética onde o primeiro termo é 3 e a razão é 5, qual é o 6º termo?",
+    "options": [
+      "28",
+      "23",
+      "33",
+      "25"
+    ],
+    "correct_answer": "28",
+    "explanation": "O 6º termo é dado por 3 + (6-1) × 5 = 3 + 25 = 28.",
+    "hints": [
+      "Some a razão repetidamente a partir do primeiro termo.",
+      "Use a fórmula: primeiro termo + (posição - 1) × razão."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 3,
+    "prompt": "Um cilindro tem raio 3 cm e altura 10 cm. Qual é aproximadamente seu volume, usando π ≈ 3,14?",
+    "options": [
+      "282,6 cm³",
+      "188,4 cm³",
+      "94,2 cm³",
+      "376,8 cm³"
+    ],
+    "correct_answer": "282,6 cm³",
+    "explanation": "Volume do cilindro é π × raio² × altura: 3,14 × 9 × 10 = 282,6 cm³.",
+    "hints": [
+      "A fórmula do volume do cilindro é π vezes o raio ao quadrado vezes a altura.",
+      "Calcule primeiro o raio ao quadrado (9), depois multiplique por π e pela altura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 3,
+    "prompt": "Se a probabilidade de chover amanhã é 30%, qual é a probabilidade de NÃO chover?",
+    "options": [
+      "70%",
+      "60%",
+      "50%",
+      "80%"
+    ],
+    "correct_answer": "70%",
+    "explanation": "A soma das probabilidades de chover e não chover é sempre 100%; logo, 100% - 30% = 70%.",
+    "hints": [
+      "As duas probabilidades somadas sempre totalizam 100%.",
+      "Subtraia 30% de 100%."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do processo histórico que oficializou a independência do Brasil em relação a Portugal, em 1822?",
+    "options": [
+      "Independência do Brasil",
+      "Proclamação da República",
+      "Abolição da escravatura",
+      "Revolução Farroupilha"
+    ],
+    "correct_answer": "Independência do Brasil",
+    "explanation": "Em 7 de setembro de 1822, Dom Pedro I proclamou a Independência do Brasil, encerrando o vínculo colonial com Portugal.",
+    "hints": [
+      "Aconteceu em 1822.",
+      "É associada à famosa frase 'Independência ou morte'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 1,
+    "prompt": "Qual sistema de governo o Brasil adotou a partir de 1889, substituindo a monarquia?",
+    "options": [
+      "República",
+      "Império",
+      "Confederação",
+      "Protetorado"
+    ],
+    "correct_answer": "República",
+    "explanation": "Em 15 de novembro de 1889, o Brasil deixou de ser uma monarquia e passou a adotar o sistema republicano.",
+    "hints": [
+      "Substituiu a monarquia que existia até então.",
+      "A data marcante é 15 de novembro de 1889."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome dado ao processo de organização territorial que divide o mundo em países com fronteiras reconhecidas?",
+    "options": [
+      "Estado-nação",
+      "Colonialismo",
+      "Globalização",
+      "Federalismo"
+    ],
+    "correct_answer": "Estado-nação",
+    "explanation": "O conceito de Estado-nação se refere à organização política do mundo em territórios soberanos com fronteiras reconhecidas.",
+    "hints": [
+      "É um conceito de organização política do mundo moderno.",
+      "Envolve território, população e um governo soberano reconhecido."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 1,
+    "prompt": "Qual documento é considerado a lei máxima que organiza o Estado brasileiro atualmente?",
+    "options": [
+      "Constituição Federal",
+      "Código Civil",
+      "Código Penal",
+      "Lei Orgânica"
+    ],
+    "correct_answer": "Constituição Federal",
+    "explanation": "A Constituição Federal é a lei máxima que organiza o Estado brasileiro, estabelecendo direitos e deveres fundamentais.",
+    "hints": [
+      "É a lei considerada 'acima' de todas as outras no país.",
+      "Foi promulgada em 1988, na versão atual."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 2,
+    "prompt": "Qual movimento migratório trouxe milhões de europeus e asiáticos para o Brasil entre o final do século XIX e início do XX, principalmente para trabalhar em lavouras?",
+    "options": [
+      "Imigração",
+      "Êxodo rural",
+      "Diáspora",
+      "Colonização"
+    ],
+    "correct_answer": "Imigração",
+    "explanation": "O movimento de imigração trouxe europeus (principalmente italianos) e depois japoneses ao Brasil, sobretudo para o trabalho nas lavouras de café.",
+    "hints": [
+      "Trouxe pessoas de outros continentes para o Brasil.",
+      "Muitos vieram trabalhar nas lavouras de café."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do processo de concentração de pessoas nas cidades, característico do século XX no Brasil?",
+    "options": [
+      "Urbanização",
+      "Industrialização",
+      "Globalização",
+      "Modernização"
+    ],
+    "correct_answer": "Urbanização",
+    "explanation": "A urbanização é o processo de crescimento das cidades e concentração populacional nelas, intenso no Brasil ao longo do século XX.",
+    "hints": [
+      "Está relacionado ao crescimento das cidades.",
+      "É o resultado observado do êxodo rural."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome dado à organização política e econômica que integra vários países da América do Sul, incluindo o Brasil, com fins comerciais?",
+    "options": [
+      "Mercosul",
+      "União Europeia",
+      "OTAN",
+      "ONU"
+    ],
+    "correct_answer": "Mercosul",
+    "explanation": "O Mercosul é um bloco econômico regional que reúne países da América do Sul, incluindo o Brasil, com fins de integração comercial.",
+    "hints": [
+      "É um bloco econômico regional, não global.",
+      "Reúne países da América do Sul."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 2,
+    "prompt": "Qual conceito da geografia descreve a diferença de desenvolvimento econômico e social entre diferentes regiões do mundo ou de um país?",
+    "options": [
+      "Desigualdade regional",
+      "Globalização",
+      "Urbanização",
+      "Federalismo"
+    ],
+    "correct_answer": "Desigualdade regional",
+    "explanation": "Desigualdade regional é o conceito que descreve diferenças de desenvolvimento entre regiões de um mesmo país ou entre países.",
+    "hints": [
+      "Descreve diferenças de desenvolvimento entre lugares.",
+      "Pode ser observada, por exemplo, entre diferentes regiões do Brasil."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 2,
+    "prompt": "Qual foi um dos principais produtos de exportação do Brasil durante boa parte do período colonial, dando nome a um ciclo econômico?",
+    "options": [
+      "Açúcar",
+      "Café",
+      "Ouro",
+      "Borracha"
+    ],
+    "correct_answer": "Açúcar",
+    "explanation": "O 'ciclo do açúcar' foi um dos principais períodos econômicos do Brasil colonial, com a produção concentrada especialmente no Nordeste.",
+    "hints": [
+      "Deu nome a um dos primeiros grandes ciclos econômicos do Brasil colonial.",
+      "Era produzido principalmente em engenhos no Nordeste."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do processo histórico, ocorrido no Brasil em 1888, que pôs fim legal à escravidão?",
+    "options": [
+      "Abolição da escravatura",
+      "Independência",
+      "Proclamação da República",
+      "Revolução de 1930"
+    ],
+    "correct_answer": "Abolição da escravatura",
+    "explanation": "A Lei Áurea, assinada em 1888, aboliu legalmente a escravidão no Brasil, sendo o último país das Américas a fazê-lo.",
+    "hints": [
+      "Aconteceu em 1888, através de uma lei assinada pela princesa regente.",
+      "O Brasil foi o último país das Américas a adotar essa medida."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do período da história brasileira, entre 1964 e 1985, marcado por governos militares?",
+    "options": [
+      "Ditadura Militar",
+      "Era Vargas",
+      "Primeira República",
+      "Período Regencial"
+    ],
+    "correct_answer": "Ditadura Militar",
+    "explanation": "Entre 1964 e 1985, o Brasil viveu um período de governos militares, conhecido como Ditadura Militar, encerrado com a redemocratização.",
+    "hints": [
+      "Durou de 1964 a 1985.",
+      "Foi encerrado com o processo de redemocratização do país."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 3,
+    "prompt": "Qual conceito da sociologia descreve o conjunto de valores, costumes e práticas compartilhadas por um grupo social?",
+    "options": [
+      "Cultura",
+      "Economia",
+      "Política",
+      "Demografia"
+    ],
+    "correct_answer": "Cultura",
+    "explanation": "Cultura é o conceito sociológico que engloba valores, costumes, crenças e práticas compartilhadas por um grupo social.",
+    "hints": [
+      "Envolve valores, costumes e crenças compartilhadas.",
+      "É um dos conceitos centrais da sociologia e da antropologia."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do processo pelo qual o comércio, a comunicação e a cultura se tornaram cada vez mais interconectados em escala mundial, especialmente a partir do fim do século XX?",
+    "options": [
+      "Globalização",
+      "Urbanização",
+      "Industrialização",
+      "Colonização"
+    ],
+    "correct_answer": "Globalização",
+    "explanation": "Globalização é o processo de crescente interconexão econômica, cultural e comunicacional entre países, intensificado a partir do final do século XX.",
+    "hints": [
+      "Envolve a interconexão de economias e culturas em escala mundial.",
+      "Foi intensificado com o avanço das tecnologias de comunicação e transporte."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 3,
+    "prompt": "Qual conceito da geografia descreve a organização do espaço em torno da relação entre sociedade e natureza, incluindo o uso e ocupação do território?",
+    "options": [
+      "Espaço geográfico",
+      "Estado-nação",
+      "Bloco econômico",
+      "Fronteira"
+    ],
+    "correct_answer": "Espaço geográfico",
+    "explanation": "Espaço geográfico é o conceito central da geografia que descreve a relação entre sociedade e natureza na organização e ocupação do território.",
+    "hints": [
+      "É um conceito central da geografia como ciência.",
+      "Descreve a relação entre a sociedade e a natureza na ocupação do território."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 1,
+    "prompt": "Qual é o processo pelo qual o corpo humano obtém energia a partir dos alimentos, utilizando oxigênio?",
+    "options": [
+      "Respiração celular",
+      "Fotossíntese",
+      "Digestão",
+      "Excreção"
+    ],
+    "correct_answer": "Respiração celular",
+    "explanation": "A respiração celular é o processo pelo qual as células obtêm energia a partir dos nutrientes, utilizando oxigênio.",
+    "hints": [
+      "Acontece dentro das células, usando oxigênio.",
+      "É o processo que converte nutrientes em energia utilizável pelo corpo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 1,
+    "prompt": "Qual é o estado físico da água quando ela se transforma em gelo?",
+    "options": [
+      "Sólido",
+      "Líquido",
+      "Gasoso",
+      "Plasma"
+    ],
+    "correct_answer": "Sólido",
+    "explanation": "Quando a água congela, ela passa do estado líquido para o sólido, formando o gelo.",
+    "hints": [
+      "É o estado mais 'organizado' e rígido da matéria.",
+      "É o oposto do estado líquido."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 1,
+    "prompt": "Qual força é responsável por manter os planetas em órbita ao redor do Sol?",
+    "options": [
+      "Gravidade",
+      "Magnetismo",
+      "Eletricidade",
+      "Atrito"
+    ],
+    "correct_answer": "Gravidade",
+    "explanation": "A força gravitacional exercida pelo Sol mantém os planetas em órbita ao redor dele.",
+    "hints": [
+      "É a mesma força que faz os objetos caírem na Terra.",
+      "É proporcional à massa dos corpos envolvidos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 1,
+    "prompt": "Qual gás os seres humanos liberam ao expirar, como resultado da respiração celular?",
+    "options": [
+      "Gás carbônico",
+      "Oxigênio",
+      "Nitrogênio",
+      "Hidrogênio"
+    ],
+    "correct_answer": "Gás carbônico",
+    "explanation": "Ao expirar, os seres humanos liberam gás carbônico (CO2), subproduto da respiração celular.",
+    "hints": [
+      "É um subproduto do processo de obtenção de energia do corpo.",
+      "Plantas absorvem justamente esse gás durante a fotossíntese."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do processo pelo qual a água muda do estado líquido para o gasoso, mesmo sem atingir o ponto de fervura?",
+    "options": [
+      "Evaporação",
+      "Condensação",
+      "Solidificação",
+      "Sublimação"
+    ],
+    "correct_answer": "Evaporação",
+    "explanation": "Evaporação é a mudança gradual da água do estado líquido para o gasoso, mesmo em temperaturas abaixo do ponto de fervura.",
+    "hints": [
+      "Acontece o tempo todo, mesmo sem fervura.",
+      "É o que faz roupas molhadas secarem ao ar livre."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome da unidade básica que forma todos os seres vivos?",
+    "options": [
+      "Célula",
+      "Átomo",
+      "Molécula",
+      "Tecido"
+    ],
+    "correct_answer": "Célula",
+    "explanation": "A célula é a unidade básica estrutural e funcional de todos os seres vivos.",
+    "hints": [
+      "É a unidade mais básica que ainda pode ser considerada 'viva'.",
+      "Pode ser vista apenas com auxílio de microscópio, na maioria dos casos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 2,
+    "prompt": "Qual lei da física afirma que 'para toda ação existe uma reação de igual intensidade e sentido oposto'?",
+    "options": [
+      "Terceira Lei de Newton",
+      "Lei da Gravitação Universal",
+      "Primeira Lei de Newton",
+      "Lei de Ohm"
+    ],
+    "correct_answer": "Terceira Lei de Newton",
+    "explanation": "A Terceira Lei de Newton (ação e reação) afirma que toda força aplicada gera uma força de reação igual e oposta.",
+    "hints": [
+      "Foi formulada por Isaac Newton.",
+      "É popularmente resumida como 'ação e reação'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do processo de reprodução em que células reprodutivas de dois indivíduos se unem para formar um novo organismo?",
+    "options": [
+      "Reprodução sexuada",
+      "Reprodução assexuada",
+      "Mitose",
+      "Fotossíntese"
+    ],
+    "correct_answer": "Reprodução sexuada",
+    "explanation": "Reprodução sexuada é o processo em que células reprodutivas (gametas) de dois indivíduos se unem para formar um novo organismo.",
+    "hints": [
+      "Envolve a união de células vindas de dois indivíduos diferentes.",
+      "É o tipo de reprodução da maioria dos animais."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 2,
+    "prompt": "Qual é a camada da atmosfera terrestre que nos protege da radiação ultravioleta excessiva do Sol?",
+    "options": [
+      "Camada de ozônio",
+      "Troposfera",
+      "Estratosfera baixa",
+      "Ionosfera"
+    ],
+    "correct_answer": "Camada de ozônio",
+    "explanation": "A camada de ozônio, localizada na estratosfera, filtra grande parte da radiação ultravioleta do Sol, protegendo a vida na Terra.",
+    "hints": [
+      "Fica localizada na estratosfera.",
+      "Filtra grande parte da radiação ultravioleta que vem do Sol."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome da molécula que carrega as informações genéticas dos seres vivos?",
+    "options": [
+      "DNA",
+      "RNA",
+      "Proteína",
+      "ATP"
+    ],
+    "correct_answer": "DNA",
+    "explanation": "O DNA (ácido desoxirribonucleico) é a molécula que armazena as informações genéticas dos seres vivos.",
+    "hints": [
+      "Tem formato de dupla hélice.",
+      "É onde estão armazenadas as instruções genéticas de um organismo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do fenômeno em que a luz muda de direção ao passar de um meio para outro, como do ar para a água?",
+    "options": [
+      "Refração",
+      "Reflexão",
+      "Difração",
+      "Absorção"
+    ],
+    "correct_answer": "Refração",
+    "explanation": "Refração é o fenômeno em que a luz muda de direção ao passar de um meio para outro com densidade diferente.",
+    "hints": [
+      "Acontece quando a luz muda de um meio para outro.",
+      "É o motivo pelo qual um objeto parece 'quebrado' dentro de um copo com água."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do processo evolutivo, proposto por Charles Darwin, que explica como espécies mudam ao longo do tempo?",
+    "options": [
+      "Seleção natural",
+      "Mutação genética",
+      "Adaptação forçada",
+      "Especiação artificial"
+    ],
+    "correct_answer": "Seleção natural",
+    "explanation": "A seleção natural, proposta por Darwin, é o mecanismo pelo qual características vantajosas para a sobrevivência tendem a ser passadas adiante ao longo de gerações.",
+    "hints": [
+      "Foi proposta por Charles Darwin no século XIX.",
+      "Explica como características vantajosas se tornam mais comuns ao longo de gerações."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome da unidade de medida usada tradicionalmente para expressar a quantidade de energia liberada por um alimento?",
+    "options": [
+      "Caloria",
+      "Watt",
+      "Joule por segundo",
+      "Newton"
+    ],
+    "correct_answer": "Caloria",
+    "explanation": "A caloria é a unidade tradicionalmente usada para medir a energia fornecida pelos alimentos.",
+    "hints": [
+      "É a unidade mais associada a rótulos de alimentos.",
+      "O Joule também mede energia, mas essa é a unidade mais popular para nutrição."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do gás que compõe a maior parte da atmosfera terrestre, cerca de 78%?",
+    "options": [
+      "Nitrogênio",
+      "Oxigênio",
+      "Gás carbônico",
+      "Hidrogênio"
+    ],
+    "correct_answer": "Nitrogênio",
+    "explanation": "O nitrogênio compõe cerca de 78% da atmosfera terrestre, sendo o gás mais abundante nela, embora o oxigênio seja o mais lembrado.",
+    "hints": [
+      "Não é o gás que respiramos para obter energia.",
+      "É o gás mais abundante da atmosfera, mesmo sendo menos lembrado que o oxigênio."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 1,
+    "prompt": "Como é chamada a figura de linguagem que consiste em uma comparação implícita entre dois elementos, sem usar 'como'?",
+    "options": [
+      "Metáfora",
+      "Comparação",
+      "Hipérbole",
+      "Ironia"
+    ],
+    "correct_answer": "Metáfora",
+    "explanation": "Metáfora é a figura de linguagem que compara dois elementos de forma implícita, sem usar conectivos como 'como'.",
+    "hints": [
+      "É uma comparação, mas sem usar a palavra 'como'.",
+      "Exemplo: 'seus olhos são estrelas' (sem dizer 'como estrelas')."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 1,
+    "prompt": "Como é chamado o exagero proposital usado para dar ênfase a uma ideia, como em 'chorei rios de lágrimas'?",
+    "options": [
+      "Hipérbole",
+      "Metáfora",
+      "Eufemismo",
+      "Antítese"
+    ],
+    "correct_answer": "Hipérbole",
+    "explanation": "Hipérbole é a figura de linguagem que usa exagero proposital para enfatizar uma ideia.",
+    "hints": [
+      "Envolve um exagero claramente impossível de ser levado ao pé da letra.",
+      "Exemplo: 'já te falei mil vezes'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome do gênero textual que narra fatos reais ou fictícios, organizados em uma sequência de acontecimentos?",
+    "options": [
+      "Narrativo",
+      "Dissertativo",
+      "Descritivo",
+      "Injuntivo"
+    ],
+    "correct_answer": "Narrativo",
+    "explanation": "O texto narrativo é aquele que conta uma história, organizando fatos (reais ou fictícios) em uma sequência de acontecimentos.",
+    "hints": [
+      "Envolve contar uma sequência de fatos.",
+      "Contos e romances são exemplos desse tipo de texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 1,
+    "prompt": "Como é chamado o conjunto de regras que organiza o funcionamento de uma língua?",
+    "options": [
+      "Gramática",
+      "Semântica",
+      "Fonética",
+      "Ortografia"
+    ],
+    "correct_answer": "Gramática",
+    "explanation": "Gramática é o conjunto de regras que organiza o funcionamento estrutural de uma língua.",
+    "hints": [
+      "Envolve as regras que organizam como a língua funciona.",
+      "Inclui, entre outras coisas, sintaxe e morfologia."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 2,
+    "prompt": "Como é chamada a repetição proposital de sons no início de palavras próximas, como em 'o rato roeu a roupa do rei'?",
+    "options": [
+      "Aliteração",
+      "Assonância",
+      "Rima",
+      "Onomatopeia"
+    ],
+    "correct_answer": "Aliteração",
+    "explanation": "Aliteração é a repetição proposital de sons consonantais no início ou ao longo de palavras próximas em um texto.",
+    "hints": [
+      "Envolve a repetição de um som consonantal, não vogal.",
+      "É muito usada em trava-línguas."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome da figura de linguagem que consiste em dizer o contrário do que se pensa, com intenção crítica ou humorística?",
+    "options": [
+      "Ironia",
+      "Metáfora",
+      "Eufemismo",
+      "Metonímia"
+    ],
+    "correct_answer": "Ironia",
+    "explanation": "Ironia é a figura de linguagem em que se diz o oposto do que realmente se pensa, geralmente com intenção crítica ou humorística.",
+    "hints": [
+      "Envolve dizer o oposto do que realmente se quer comunicar.",
+      "Costuma ter intenção crítica ou de humor."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 2,
+    "prompt": "Como é chamado o uso de uma palavra ou expressão mais suave para substituir outra considerada desagradável, como dizer 'partiu desta para uma melhor' em vez de 'morreu'?",
+    "options": [
+      "Eufemismo",
+      "Hipérbole",
+      "Ironia",
+      "Antítese"
+    ],
+    "correct_answer": "Eufemismo",
+    "explanation": "Eufemismo é o recurso linguístico usado para suavizar uma ideia considerada desagradável, substituindo-a por uma expressão mais branda.",
+    "hints": [
+      "Serve para suavizar algo desagradável de se dizer diretamente.",
+      "É muito usado para falar de temas delicados de forma mais leve."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome do gênero textual que tem como objetivo defender um ponto de vista com argumentos, típico das redações do ENEM?",
+    "options": [
+      "Dissertativo-argumentativo",
+      "Narrativo",
+      "Descritivo",
+      "Injuntivo"
+    ],
+    "correct_answer": "Dissertativo-argumentativo",
+    "explanation": "O texto dissertativo-argumentativo tem o objetivo de defender um ponto de vista através de argumentos organizados, sendo o gênero cobrado na redação do ENEM.",
+    "hints": [
+      "É o gênero de texto usado especificamente na redação do ENEM.",
+      "Seu objetivo é defender um ponto de vista com argumentos."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 2,
+    "prompt": "Como é chamada a variação da língua conforme a região geográfica onde é falada?",
+    "options": [
+      "Variação regional",
+      "Variação social",
+      "Variação histórica",
+      "Registro formal"
+    ],
+    "correct_answer": "Variação regional",
+    "explanation": "Variação regional (ou dialetal) é a forma como a língua muda de acordo com a região geográfica onde é falada.",
+    "hints": [
+      "Está relacionada ao lugar onde a pessoa mora ou nasceu.",
+      "Explica por que palavras e sotaques mudam de uma região do Brasil para outra."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 3,
+    "prompt": "Como é chamada a figura de linguagem que consiste em usar uma parte para representar o todo, como em 'faltam braços para a colheita' (referindo-se a trabalhadores)?",
+    "options": [
+      "Sinédoque",
+      "Metáfora",
+      "Antítese",
+      "Catacrese"
+    ],
+    "correct_answer": "Sinédoque",
+    "explanation": "Sinédoque é a figura de linguagem em que uma parte representa o todo (ou vice-versa), como 'braços' representando trabalhadores.",
+    "hints": [
+      "Usa uma parte de algo para representar o todo.",
+      "Exemplo: 'braços' representando pessoas trabalhando."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome do uso de palavras que soam parecido mas têm significados diferentes, como 'cessão' e 'sessão'?",
+    "options": [
+      "Parônimos",
+      "Sinônimos",
+      "Antônimos",
+      "Homônimos"
+    ],
+    "correct_answer": "Parônimos",
+    "explanation": "Parônimos são palavras com grafia e pronúncia semelhantes, mas significados diferentes, como 'cessão' e 'sessão'.",
+    "hints": [
+      "São palavras parecidas na escrita/som, mas com significados diferentes.",
+      "Diferente de homônimos, que soam exatamente igual."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 3,
+    "prompt": "Como é chamado o recurso de aproximar duas ideias opostas em um texto, criando contraste, como em 'era o melhor e o pior dos tempos'?",
+    "options": [
+      "Antítese",
+      "Metáfora",
+      "Hipérbole",
+      "Prosopopeia"
+    ],
+    "correct_answer": "Antítese",
+    "explanation": "Antítese é o recurso que aproxima ideias contrárias em um mesmo trecho, criando contraste proposital.",
+    "hints": [
+      "Envolve colocar duas ideias opostas lado a lado.",
+      "Cria um efeito de contraste no texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 3,
+    "prompt": "Qual é o nome da linguagem usada em situações informais, com gírias e expressões do dia a dia, diferente da linguagem culta?",
+    "options": [
+      "Linguagem coloquial",
+      "Linguagem técnica",
+      "Linguagem jurídica",
+      "Linguagem científica"
+    ],
+    "correct_answer": "Linguagem coloquial",
+    "explanation": "Linguagem coloquial é a variedade usada em situações informais do cotidiano, com gírias e expressões populares.",
+    "hints": [
+      "É usada no dia a dia, em situações informais.",
+      "É o oposto da linguagem culta/formal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 3,
+    "prompt": "Como é chamado o recurso literário de atribuir características humanas a seres inanimados ou animais, como em 'o vento sussurrava segredos'?",
+    "options": [
+      "Personificação",
+      "Metáfora",
+      "Hipérbole",
+      "Ironia"
+    ],
+    "correct_answer": "Personificação",
+    "explanation": "Personificação (ou prosopopeia) é o recurso de atribuir características humanas a seres inanimados ou animais.",
+    "hints": [
+      "Dá características humanas a algo que não é humano.",
+      "Exemplo: dizer que o vento 'sussurra' ou 'conversa'."
+    ],
+    "age_reviewed": true
+  }
+]

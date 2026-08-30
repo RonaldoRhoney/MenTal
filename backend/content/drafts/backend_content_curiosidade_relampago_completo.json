@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "bloco": "curiosidade_relampago",
+    "fase": "V3.5",
+    "status": "7 itens novos (curio-009 a curio-015) — combinar com os 8 ja aprovados para totalizar 15",
+    "nota_dificuldade": "Os 8 itens originais (curio-001 a curio-008) nao tinham campo 'dificuldade' explicito. Estes 7 novos ja incluem o campo, seguindo o criterio de 4+ por nivel 1/2/3 usado nos demais blocos. Recomenda-se retroativamente classificar os 8 originais por dificuldade tambem, para manter consistencia de filtro no app.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md — todos os itens permanecem em torno de curiosidades de ciencia, historia e cotidiano, sem tocar temas sensiveis."
+  },
+  "items": [
+    {
+      "id": "curio-009",
+      "dificuldade": 1,
+      "pista": "Minha casca é mais forte do que parece, mas ainda assim você consegue quebrá-la com uma leve batida na borda de uma tigela.",
+      "opcoes": ["Um ovo", "Uma noz", "Um coco", "Uma castanha"],
+      "resposta_correta": "Um ovo",
+      "revelacao": "A casca do ovo é surpreendentemente resistente à pressão distribuída (por isso aguenta o peso de uma galinha chocando), mas frágil a um impacto pontual, como uma batida na borda de uma tigela.",
+      "hints": ["Sou usado quase todo dia em alguma receita.", "Sou branco ou marrom por fora, líquido por dentro."],
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["cotidiano", "curiosidade"]
+    },
+    {
+      "id": "curio-010",
+      "dificuldade": 1,
+      "pista": "Fui inventado para prender fraldas, mas hoje seguro praticamente qualquer coisa, de crachás a peças de arte moderna.",
+      "opcoes": ["O alfinete de segurança", "O grampo de cabelo", "O clipe de papel", "O elástico"],
+      "resposta_correta": "O alfinete de segurança",
+      "revelacao": "O alfinete de segurança foi patenteado no século XIX e, apesar de ter sido pensado para fraldas de pano, hoje é usado nas mais diversas situações do cotidiano.",
+      "hints": ["Fui pensado originalmente para um uso bem específico de bebês.", "Tenho uma ponta que se esconde, para não furar quem me usa."],
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["historia", "invencao"]
+    },
+    {
+      "id": "curio-011",
+      "dificuldade": 2,
+      "pista": "Fico pendurado de cabeça para baixo boa parte da minha vida, e meu coração bate mais devagar quando durmo do que quando estou acordado.",
+      "opcoes": ["Um morcego", "Uma preguiça", "Um coala", "Um bicho-pau"],
+      "resposta_correta": "Um morcego",
+      "revelacao": "Morcegos passam a maior parte do tempo pendurados de cabeça para baixo e conseguem reduzir bastante os batimentos cardíacos durante o sono, economizando energia.",
+      "hints": ["Sou o único mamífero capaz de voar de verdade.", "Enxergo bem no escuro, mas também 'escuto' o caminho à minha frente."],
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["biologia", "animais"]
+    },
+    {
+      "id": "curio-012",
+      "dificuldade": 2,
+      "pista": "Fui construída para durar poucos anos como atração temporária, mas mais de cem anos depois ainda sou um dos símbolos mais fotografados do mundo.",
+      "opcoes": ["A Torre Eiffel", "O Coliseu", "A Estátua da Liberdade", "O Cristo Redentor"],
+      "resposta_correta": "A Torre Eiffel",
+      "revelacao": "A Torre Eiffel foi construída para uma exposição temporária em 1889 e quase foi demolida vinte anos depois — só sobreviveu porque passou a ser usada como antena de rádio.",
+      "hints": ["Fico em Paris, não sou uma construção da Antiguidade.", "Quase fui demolida décadas depois de ser construída, mas um novo uso tecnológico me salvou."],
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["historia", "construcao", "curiosidade"]
+    },
+    {
+      "id": "curio-013",
+      "dificuldade": 2,
+      "pista": "Consigo regenerar partes do meu próprio corpo, e alguns cientistas me estudam para entender melhor a cicatrização humana.",
+      "opcoes": ["A estrela-do-mar", "O polvo", "A água-viva", "O caranguejo"],
+      "resposta_correta": "A estrela-do-mar",
+      "revelacao": "Estrelas-do-mar conseguem regenerar braços perdidos, e em alguns casos até reconstruir o corpo inteiro a partir de um único braço — por isso são estudadas em pesquisas sobre regeneração.",
+      "hints": ["Vivo no mar e tenho um formato bem reconhecível.", "Se perco uma parte do corpo, em muitos casos consigo fazer ela crescer de novo."],
+      "tempo_segundos": 12,
+      "xp_base": 12,
+      "tags": ["biologia", "oceano", "curiosidade"]
+    },
+    {
+      "id": "curio-014",
+      "dificuldade": 3,
+      "pista": "Fui inventado para ser uma cola fraca, mas o 'fracasso' virou um dos produtos de escritório mais usados do mundo.",
+      "opcoes": ["O post-it", "O clipe de papel", "A fita adesiva", "O grampeador"],
+      "resposta_correta": "O post-it",
+      "revelacao": "O post-it nasceu de uma tentativa fracassada de criar uma supercola — o adesivo resultante era fraco demais para colar permanentemente, mas perfeito para notas removíveis.",
+      "hints": ["Nasci de uma tentativa que, a princípio, foi considerada um erro.", "Sou colorido, quadrado, e grudo em qualquer superfície sem deixar marca."],
+      "tempo_segundos": 12,
+      "xp_base": 14,
+      "tags": ["historia", "invencao", "curiosidade"]
+    },
+    {
+      "id": "curio-015",
+      "dificuldade": 3,
+      "pista": "Bato tão rápido que você nunca consegue me ver batendo a olho nu, e ainda assim sustento um dos voos mais exigentes do reino animal.",
+      "opcoes": ["O coração de um beija-flor", "As asas de uma libélula", "As patas de uma barata", "As asas de uma mosca"],
+      "resposta_correta": "O coração de um beija-flor",
+      "revelacao": "O coração de um beija-flor pode bater mais de mil vezes por minuto durante o voo — rápido demais para o olho humano perceber, e proporcionalmente um dos batimentos mais acelerados entre os animais.",
+      "hints": ["Sou parte de um animal muito pequeno, mas extremamente ativo.", "Esse animal precisa de muita energia só para conseguir voar parado no ar."],
+      "tempo_segundos": 12,
+      "xp_base": 14,
+      "tags": ["biologia", "animais", "curiosidade"]
+    }
+  ]
+}
