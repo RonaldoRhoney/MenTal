@@ -636,11 +636,32 @@ class AdminFeedbackDistributionOut(BaseModel):
     muito_dificil: int = 0
 
 
+class AdminDemographicBucketOut(BaseModel):
+    label: str
+    count: int
+
+
+class AdminDemographicsOut(BaseModel):
+    # Distribuição sobre a base TOTAL de perfis com cadastro completo
+    # (onboarding_completed_at preenchido) — não é escopada pelo seletor
+    # de período (today/7d/30d), porque gênero/faixa etária/localização
+    # são atributos estáveis do perfil, não eventos que aconteceram
+    # "dentro" de uma janela de tempo. Só perfis com valor preenchido
+    # entram nos buckets — quem não informou não aparece, não vira
+    # "outros" (nunca inventar dado que o usuário não deu).
+    gender: list[AdminDemographicBucketOut]
+    age_range: list[AdminDemographicBucketOut]
+    state: list[AdminDemographicBucketOut]
+    city: list[AdminDemographicBucketOut]
+
+
 class AdminMetricsSummaryOut(BaseModel):
     active_users_today: int
     active_users_week: int
     new_signups_in_period: int
+    engaged_users_in_period: int
     average_streak_active_users: float
     top_progressors: list[AdminTopProgressorOut]
     accuracy_by_territory: list[AdminTerritoryAccuracyOut]
     feedback_distribution: AdminFeedbackDistributionOut
+    demographics: AdminDemographicsOut

@@ -52,12 +52,16 @@ def test_admin_gets_summary_with_expected_shape(client):
         "active_users_today",
         "active_users_week",
         "new_signups_in_period",
+        "engaged_users_in_period",
         "average_streak_active_users",
         "top_progressors",
         "accuracy_by_territory",
         "feedback_distribution",
+        "demographics",
     ):
         assert key in body
+    for key in ("gender", "age_range", "state", "city"):
+        assert key in body["demographics"]
 
 
 def test_top_progressors_and_accuracy_reflect_real_attempts(client):
@@ -87,3 +91,31 @@ def test_top_progressors_and_accuracy_reflect_real_attempts(client):
     accuracy = {a["territory_id"]: a for a in body["accuracy_by_territory"]}
     assert "esportes" in accuracy
     assert accuracy["esportes"]["total_attempts"] >= 1
+
+    # engaged_users_in_period conta ação real (Attempt), não só ter
+    # aberto o app — o player respondeu, então precisa entrar na contagem.
+    assert body["engaged_users_in_period"] >= 1
+
+
+def test_demographics_reflect_profile_fields(client):
+    admin = str(uuid.uuid4())
+    player = str(uuid.uuid4())
+    admin_headers = auth_header(admin)
+    player_headers = auth_header(player)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=admin_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=player_headers)
+    _promote_to_admin(admin)
+
+    client.put(
+        "/profile",
+        json={"gender": "feminino", "age_range": "26-35", "location_state": "SP", "city": "São Paulo"},
+        headers=player_headers,
+    )
+
+    body = client.get("/admin/metrics/summary", params={"period": "30d"}, headers=admin_headers).json()
+    demographics = body["demographics"]
+
+    assert any(b["label"] == "feminino" and b["count"] >= 1 for b in demographics["gender"])
+    assert any(b["label"] == "26-35" and b["count"] >= 1 for b in demographics["age_range"])
+    assert any(b["label"] == "SP" and b["count"] >= 1 for b in demographics["state"])
+    assert any(b["label"] == "São Paulo" and b["count"] >= 1 for b in demographics["city"])

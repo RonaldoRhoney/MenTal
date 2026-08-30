@@ -66,6 +66,14 @@ def get_metrics_summary(
         select(func.count(models.Profile.user_id)).where(models.Profile.created_at >= period_start)
     ).scalar_one()
 
+    # "Quantos entraram e fizeram alguma ação" — proxy direto: usuário
+    # distinto com pelo menos uma resposta registrada (Attempt) dentro do
+    # período selecionado. Diferente de active_users_* (baseado em
+    # last_seen_at, que marca só ter aberto o app) — este conta ação real.
+    engaged_users_in_period = db.execute(
+        select(func.count(func.distinct(models.Attempt.user_id))).where(models.Attempt.created_at >= period_start)
+    ).scalar_one()
+
     xp_gained_rows = (
         db.execute(
             select(models.Attempt.user_id, func.sum(models.Attempt.xp_awarded).label("xp_gained"))
@@ -123,10 +131,30 @@ def get_metrics_summary(
     ).all()
     feedback_counts = {rating: count for rating, count in feedback_rows}
 
+    def _distribution(column, limit: int | None = None) -> list[schemas.AdminDemographicBucketOut]:
+        query = (
+            select(column, func.count(models.Profile.user_id))
+            .where(column.is_not(None))
+            .group_by(column)
+            .order_by(func.count(models.Profile.user_id).desc())
+        )
+        if limit is not None:
+            query = query.limit(limit)
+        rows = db.execute(query).all()
+        return [schemas.AdminDemographicBucketOut(label=label, count=count) for label, count in rows]
+
+    demographics = schemas.AdminDemographicsOut(
+        gender=_distribution(models.Profile.gender),
+        age_range=_distribution(models.Profile.age_range),
+        state=_distribution(models.Profile.location_state, limit=10),
+        city=_distribution(models.Profile.city, limit=10),
+    )
+
     return schemas.AdminMetricsSummaryOut(
         active_users_today=active_users_today,
         active_users_week=active_users_week,
         new_signups_in_period=new_signups,
+        engaged_users_in_period=engaged_users_in_period,
         average_streak_active_users=round(average_streak or 0.0, 1),
         top_progressors=top_progressors,
         accuracy_by_territory=accuracy_by_territory,
@@ -136,4 +164,5 @@ def get_metrics_summary(
             dificil=feedback_counts.get("dificil", 0),
             muito_dificil=feedback_counts.get("muito_dificil", 0),
         ),
+        demographics=demographics,
     )
