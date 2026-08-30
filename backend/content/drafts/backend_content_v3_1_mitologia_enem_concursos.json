@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "bloco": "mitologia_enem_concursos",
+    "fase": "V3.1",
+    "schema_note": "Nomes de campo provisórios, propostos por Claude (chat) sem acesso ao repositório. Validar contra o schema real de backend/content/*.json já usado na estrutura de V3.1 antes de mesclar — remapear nomes se necessário, o conteúdo não muda.",
+    "principios": "Mitologia: ordem Grega -> Nordica -> Indigena/Brasileira. ENEM: organizado por materia, Redacao excluida (fica para V4). Concursos: Portugues/Raciocinio Logico/Direito/Atualidades, com filtro rigoroso de estabilidade factual (evitar Atualidades que mudem rapido)."
+  },
+  "items": [
+    {
+      "id": "mito-grega-001",
+      "sub_bloco": "mitologia_grega",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Na mitologia grega, este deus é o senhor do céu e dos trovões, e governa os demais deuses do Monte Olimpo. Quem é ele?",
+      "opcoes": ["Zeus", "Poseidon", "Hades", "Apolo"],
+      "resposta_correta": "Zeus",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["mitologia", "grecia"]
+    },
+    {
+      "id": "mito-grega-002",
+      "sub_bloco": "mitologia_grega",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Este herói grego tinha apenas um ponto fraco no corpo, justamente o local por onde sua mãe o segurou ao mergulhá-lo num rio mágico para torná-lo invulnerável. Qual é esse ponto, hoje usado até como expressão popular?",
+      "opcoes": ["O calcanhar (calcanhar de Aquiles)", "O joelho", "O pescoço", "O punho"],
+      "resposta_correta": "O calcanhar (calcanhar de Aquiles)",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["mitologia", "grecia", "expressao_popular"]
+    },
+    {
+      "id": "mito-nordica-001",
+      "sub_bloco": "mitologia_nordica",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Na mitologia nórdica, este é o deus do trovão, conhecido por empunhar um poderoso martelo. Quem é ele?",
+      "opcoes": ["Thor", "Odin", "Loki", "Baldur"],
+      "resposta_correta": "Thor",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["mitologia", "nordica"]
+    },
+    {
+      "id": "mito-nordica-002",
+      "sub_bloco": "mitologia_nordica",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Na mitologia nórdica, este deus é o pai de todos, associado à sabedoria, e sacrificou um dos próprios olhos em troca de conhecimento. Quem é ele?",
+      "opcoes": ["Odin", "Thor", "Freyr", "Heimdall"],
+      "resposta_correta": "Odin",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["mitologia", "nordica"]
+    },
+    {
+      "id": "mito-indigena-001",
+      "sub_bloco": "mitologia_indigena_brasileira",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Este é um dos seres mais conhecidos do folclore brasileiro: uma criança de um perna só, cachimbo na boca, que protege as florestas e assusta caçadores predatórios. Quem é ele?",
+      "opcoes": ["Saci-Pererê", "Curupira", "Boitatá", "Iara"],
+      "resposta_correta": "Saci-Pererê",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["folclore", "brasil"]
+    },
+    {
+      "id": "mito-indigena-002",
+      "sub_bloco": "mitologia_indigena_brasileira",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Este protetor das florestas, presente em lendas indígenas brasileiras, tem os pés virados para trás — justamente para confundir quem tenta rastreá-lo. Quem é ele?",
+      "opcoes": ["Curupira", "Saci-Pererê", "Mapinguari", "Anhangá"],
+      "resposta_correta": "Curupira",
+      "tempo_segundos": 10,
+      "xp_base": 12,
+      "tags": ["folclore", "brasil", "povos_indigenas"]
+    },
+    {
+      "id": "enem-mat-001",
+      "sub_bloco": "enem_matematica",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Se um produto custava R$ 200 e teve um desconto de 15%, qual é o novo preço?",
+      "opcoes": ["R$ 170", "R$ 180", "R$ 185", "R$ 190"],
+      "resposta_correta": "R$ 170",
+      "tempo_segundos": 12,
+      "xp_base": 12,
+      "tags": ["enem", "matematica", "porcentagem"]
+    },
+    {
+      "id": "enem-humanas-001",
+      "sub_bloco": "enem_ciencias_humanas",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Este processo histórico marcou a transferência de poder político do Brasil colônia para o status de Reino Unido, quando a família real portuguesa se mudou para o Brasil em 1808. Qual evento histórico é este?",
+      "opcoes": ["Vinda da família real portuguesa para o Brasil", "Independência do Brasil", "Proclamação da República", "Abolição da escravatura"],
+      "resposta_correta": "Vinda da família real portuguesa para o Brasil",
+      "tempo_segundos": 12,
+      "xp_base": 12,
+      "tags": ["enem", "historia_do_brasil"]
+    },
+    {
+      "id": "enem-natureza-001",
+      "sub_bloco": "enem_ciencias_natureza",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "O processo pelo qual as plantas convertem luz solar em energia química, liberando oxigênio, é chamado de:",
+      "opcoes": ["Fotossíntese", "Respiração celular", "Fermentação", "Osmose"],
+      "resposta_correta": "Fotossíntese",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["enem", "biologia"]
+    },
+    {
+      "id": "enem-linguagens-001",
+      "sub_bloco": "enem_linguagens",
+      "dificuldade": "facil",
+      "formato": "relampago",
+      "pergunta": "Uma figura de linguagem que consiste em atribuir características humanas a seres inanimados ou animais é chamada de:",
+      "opcoes": ["Personificação", "Metáfora", "Hipérbole", "Ironia"],
+      "resposta_correta": "Personificação",
+      "tempo_segundos": 10,
+      "xp_base": 10,
+      "tags": ["enem", "portugues", "figuras_de_linguagem"]
+    },
+    {
+      "id": "concurso-port-001",
+      "sub_bloco": "concursos_portugues",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Na frase 'Ele chegou, porém não avisou', a palavra destacada estabelece uma relação de:",
+      "opcoes": ["Oposição/adversidade", "Adição", "Causa", "Conclusão"],
+      "resposta_correta": "Oposição/adversidade",
+      "tempo_segundos": 12,
+      "xp_base": 12,
+      "tags": ["concursos", "portugues", "conjuncoes"]
+    },
+    {
+      "id": "concurso-logica-001",
+      "sub_bloco": "concursos_raciocinio_logico",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Se todo A é B, e todo B é C, então é correto afirmar que:",
+      "opcoes": ["Todo A é C", "Todo C é A", "Nenhum A é C", "Não é possível concluir nada"],
+      "resposta_correta": "Todo A é C",
+      "tempo_segundos": 14,
+      "xp_base": 14,
+      "tags": ["concursos", "raciocinio_logico", "silogismo"]
+    },
+    {
+      "id": "concurso-direito-001",
+      "sub_bloco": "concursos_direito",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "A Constituição Federal de 1988, que rege o Brasil atualmente, também é conhecida por qual apelido, em referência ao contexto histórico de redemocratização em que foi promulgada?",
+      "opcoes": ["Constituição Cidadã", "Constituição Republicana", "Carta Magna Brasileira", "Constituição Federativa"],
+      "resposta_correta": "Constituição Cidadã",
+      "tempo_segundos": 12,
+      "xp_base": 12,
+      "tags": ["concursos", "direito_constitucional"]
+    },
+    {
+      "id": "concurso-atualidades-001",
+      "sub_bloco": "concursos_atualidades",
+      "dificuldade": "medio",
+      "formato": "relampago",
+      "pergunta": "Este é o nome do conjunto de 17 metas globais estabelecidas pela ONU em 2015, a serem alcançadas até 2030, cobrindo temas como erradicação da pobreza e ação climática. Como são chamadas?",
+      "opcoes": ["Objetivos de Desenvolvimento Sustentável (ODS)", "Acordo de Paris", "Protocolo de Kyoto", "Agenda 21"],
+      "resposta_correta": "Objetivos de Desenvolvimento Sustentável (ODS)",
+      "tempo_segundos": 12,
+      "xp_base": 12,
+      "tags": ["concursos", "atualidades", "estavel_factualmente"]
+    },
+    {
+      "id": "concurso-port-pausa-001",
+      "sub_bloco": "concursos_portugues",
+      "formato": "pausa_para_aprender",
+      "titulo": "Por que 'porque', 'por que', 'porquê' e 'por quê' confundem tanta gente",
+      "texto": "A diferença entre essas quatro formas depende da função na frase: 'por que' (separado, sem acento) é usado em perguntas ou quando equivale a 'pelo qual'; 'porque' (junto) explica uma causa, geralmente em respostas ou afirmações; 'porquê' (junto, com acento) é um substantivo, equivalente a 'motivo' (ex.: 'não sei o porquê'); e 'por quê' (separado, com acento) aparece no final de frases ou isolado. Essa regra costuma ser uma das mais cobradas em provas de português justamente por gerar confusão mesmo entre falantes fluentes.",
+      "imagem_sugerida": null,
+      "xp_fixo": 3,
+      "tags": ["concursos", "portugues", "ortografia"]
+    }
+  ]
+}

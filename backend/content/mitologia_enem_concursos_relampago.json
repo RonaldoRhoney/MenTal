@@ -1,0 +1,184 @@
+[
+  {
+    "territory_id": "mitologia_grega",
+    "difficulty_level": 1,
+    "prompt": "Na mitologia grega, este deus é o senhor do céu e dos trovões, e governa os demais deuses do Monte Olimpo. Quem é ele?",
+    "options": [
+      "Zeus",
+      "Poseidon",
+      "Hades",
+      "Apolo"
+    ],
+    "correct_answer": "Zeus",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "mitologia_grega",
+    "difficulty_level": 2,
+    "prompt": "Este herói grego tinha apenas um ponto fraco no corpo, justamente o local por onde sua mãe o segurou ao mergulhá-lo num rio mágico para torná-lo invulnerável. Qual é esse ponto, hoje usado até como expressão popular?",
+    "options": [
+      "O calcanhar (calcanhar de Aquiles)",
+      "O joelho",
+      "O pescoço",
+      "O punho"
+    ],
+    "correct_answer": "O calcanhar (calcanhar de Aquiles)",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "mitologia_nordica",
+    "difficulty_level": 1,
+    "prompt": "Na mitologia nórdica, este é o deus do trovão, conhecido por empunhar um poderoso martelo. Quem é ele?",
+    "options": [
+      "Thor",
+      "Odin",
+      "Loki",
+      "Baldur"
+    ],
+    "correct_answer": "Thor",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "mitologia_nordica",
+    "difficulty_level": 2,
+    "prompt": "Na mitologia nórdica, este deus é o pai de todos, associado à sabedoria, e sacrificou um dos próprios olhos em troca de conhecimento. Quem é ele?",
+    "options": [
+      "Odin",
+      "Thor",
+      "Freyr",
+      "Heimdall"
+    ],
+    "correct_answer": "Odin",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "mitologia_indigena",
+    "difficulty_level": 1,
+    "prompt": "Este é um dos seres mais conhecidos do folclore brasileiro: uma criança de um perna só, cachimbo na boca, que protege as florestas e assusta caçadores predatórios. Quem é ele?",
+    "options": [
+      "Saci-Pererê",
+      "Curupira",
+      "Boitatá",
+      "Iara"
+    ],
+    "correct_answer": "Saci-Pererê",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "mitologia_indigena",
+    "difficulty_level": 2,
+    "prompt": "Este protetor das florestas, presente em lendas indígenas brasileiras, tem os pés virados para trás — justamente para confundir quem tenta rastreá-lo. Quem é ele?",
+    "options": [
+      "Curupira",
+      "Saci-Pererê",
+      "Mapinguari",
+      "Anhangá"
+    ],
+    "correct_answer": "Curupira",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "enem_matematica",
+    "difficulty_level": 2,
+    "prompt": "Se um produto custava R$ 200 e teve um desconto de 15%, qual é o novo preço?",
+    "options": [
+      "R$ 170",
+      "R$ 180",
+      "R$ 185",
+      "R$ 190"
+    ],
+    "correct_answer": "R$ 170",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "enem_humanas",
+    "difficulty_level": 2,
+    "prompt": "Este processo histórico marcou a transferência de poder político do Brasil colônia para o status de Reino Unido, quando a família real portuguesa se mudou para o Brasil em 1808. Qual evento histórico é este?",
+    "options": [
+      "Vinda da família real portuguesa para o Brasil",
+      "Independência do Brasil",
+      "Proclamação da República",
+      "Abolição da escravatura"
+    ],
+    "correct_answer": "Vinda da família real portuguesa para o Brasil",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "enem_natureza",
+    "difficulty_level": 2,
+    "prompt": "O processo pelo qual as plantas convertem luz solar em energia química, liberando oxigênio, é chamado de:",
+    "options": [
+      "Fotossíntese",
+      "Respiração celular",
+      "Fermentação",
+      "Osmose"
+    ],
+    "correct_answer": "Fotossíntese",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "enem_linguagens",
+    "difficulty_level": 1,
+    "prompt": "Uma figura de linguagem que consiste em atribuir características humanas a seres inanimados ou animais é chamada de:",
+    "options": [
+      "Personificação",
+      "Metáfora",
+      "Hipérbole",
+      "Ironia"
+    ],
+    "correct_answer": "Personificação",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "concursos_portugues",
+    "difficulty_level": 2,
+    "prompt": "Na frase 'Ele chegou, porém não avisou', a palavra destacada estabelece uma relação de:",
+    "options": [
+      "Oposição/adversidade",
+      "Adição",
+      "Causa",
+      "Conclusão"
+    ],
+    "correct_answer": "Oposição/adversidade",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "concursos_raciocinio",
+    "difficulty_level": 2,
+    "prompt": "Se todo A é B, e todo B é C, então é correto afirmar que:",
+    "options": [
+      "Todo A é C",
+      "Todo C é A",
+      "Nenhum A é C",
+      "Não é possível concluir nada"
+    ],
+    "correct_answer": "Todo A é C",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 2,
+    "prompt": "A Constituição Federal de 1988, que rege o Brasil atualmente, também é conhecida por qual apelido, em referência ao contexto histórico de redemocratização em que foi promulgada?",
+    "options": [
+      "Constituição Cidadã",
+      "Constituição Republicana",
+      "Carta Magna Brasileira",
+      "Constituição Federativa"
+    ],
+    "correct_answer": "Constituição Cidadã",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "concursos_direito",
+    "difficulty_level": 2,
+    "prompt": "Este é o nome do conjunto de 17 metas globais estabelecidas pela ONU em 2015, a serem alcançadas até 2030, cobrindo temas como erradicação da pobreza e ação climática. Como são chamadas?",
+    "options": [
+      "Objetivos de Desenvolvimento Sustentável (ODS)",
+      "Acordo de Paris",
+      "Protocolo de Kyoto",
+      "Agenda 21"
+    ],
+    "correct_answer": "Objetivos de Desenvolvimento Sustentável (ODS)",
+    "age_reviewed": false
+  }
+]

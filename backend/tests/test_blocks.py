@@ -38,7 +38,10 @@ def test_blocks_without_any_territory_are_not_returned(client):
     body = client.get("/progress", headers=headers).json()
     block_ids = {b["block_id"] for b in body["blocks"]}
 
-    assert block_ids == {"matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia"}
+    assert block_ids == {
+        "matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia",
+        "financas_pessoais", "filosofia", "artes", "saude_bemestar",
+    }
 
 
 def test_territories_without_block_are_not_grouped_into_any_block(client):

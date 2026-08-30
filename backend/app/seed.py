@@ -36,6 +36,16 @@ BLOCKS = [
     # "tecnologia" (mesma decisão de arquitetura já usada em V3.1 pra
     # Mitologia — bloco agrupando N territórios).
     {"id": "tecnologia", "name": "Tecnologia", "display_order": 7},
+    # V3.3 (V3.3_VIDA_PRATICA_PENSAMENTO.md, aprovado) — 4 dos 5 blocos
+    # do doc (Finanças/Filosofia/Artes/Saúde), cada um 1 território só
+    # (mesma decisão de "regioes": bloco e território homônimos, sem
+    # sub-divisão). "Jogos de Palavras" (Caça-palavras/Cruzadas, §6) fica
+    # de fora desta leva — não reaproveita o mecanismo Relâmpago, exige
+    # arquitetura de jogo própria (grade), desenhada numa etapa separada.
+    {"id": "financas_pessoais", "name": "Finanças Pessoais", "display_order": 8},
+    {"id": "filosofia", "name": "Filosofia", "display_order": 9},
+    {"id": "artes", "name": "Artes", "display_order": 10},
+    {"id": "saude_bemestar", "name": "Saúde e Bem-estar", "display_order": 11},
 ]
 
 TERRITORIES = [
@@ -122,6 +132,16 @@ TERRITORIES = [
     {"id": "tecnologia_programacao", "challenge_type": "tecnologia_programacao", "requires_subscription": True, "free_sample_count": 2, "display_order": 23, "world_id": "cultura_geral", "block_id": "tecnologia"},
     {"id": "tecnologia_seguranca", "challenge_type": "tecnologia_seguranca", "requires_subscription": True, "free_sample_count": 2, "display_order": 24, "world_id": "cultura_geral", "block_id": "tecnologia"},
     {"id": "tecnologia_fronteira", "challenge_type": "tecnologia_fronteira", "requires_subscription": True, "free_sample_count": 2, "display_order": 25, "world_id": "cultura_geral", "block_id": "tecnologia"},
+    # V3.3 (V3.3_VIDA_PRATICA_PENSAMENTO.md, aprovado) — só estrutura;
+    # conteúdo é curadoria manual de Rhoney via backend/content/*.json
+    # (RISKS_AND_OPEN_DECISIONS.md §2). Saúde e Bem-estar pede "cautela
+    # redobrada" (§5 do doc) — sem orientação prescritiva de dieta/
+    # exercício/saúde, só curiosidade factual; isso é responsabilidade de
+    # quem curar, não uma trava técnica aqui.
+    {"id": "financas_pessoais", "challenge_type": "financas_pessoais", "requires_subscription": True, "free_sample_count": 2, "display_order": 26, "world_id": "cultura_geral", "block_id": "financas_pessoais"},
+    {"id": "filosofia", "challenge_type": "filosofia", "requires_subscription": True, "free_sample_count": 2, "display_order": 27, "world_id": "cultura_geral", "block_id": "filosofia"},
+    {"id": "artes", "challenge_type": "artes", "requires_subscription": True, "free_sample_count": 2, "display_order": 28, "world_id": "cultura_geral", "block_id": "artes"},
+    {"id": "saude_bemestar", "challenge_type": "saude_bemestar", "requires_subscription": True, "free_sample_count": 2, "display_order": 29, "world_id": "cultura_geral", "block_id": "saude_bemestar"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à

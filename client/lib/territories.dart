@@ -32,6 +32,11 @@ const List<String> kTerritoryIds = [
   'tecnologia_programacao',
   'tecnologia_seguranca',
   'tecnologia_fronteira',
+  // V3.3 (U.I/../V3/V3.3_VIDA_PRATICA_PENSAMENTO.md).
+  'financas_pessoais',
+  'filosofia',
+  'artes',
+  'saude_bemestar',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -86,6 +91,14 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryTecnologiaSeguranca;
     case 'tecnologia_fronteira':
       return l10n.territoryTecnologiaFronteira;
+    case 'financas_pessoais':
+      return l10n.territoryFinancasPessoais;
+    case 'filosofia':
+      return l10n.territoryFilosofia;
+    case 'artes':
+      return l10n.territoryArtes;
+    case 'saude_bemestar':
+      return l10n.territorySaudeBemestar;
     default:
       return territoryId;
   }

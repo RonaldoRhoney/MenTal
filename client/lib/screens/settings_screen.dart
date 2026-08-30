@@ -199,15 +199,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     style: TextStyle(color: AppColors.muted, fontSize: 13),
                   ),
                   const SizedBox(height: 20),
-                  // "Como usar o MENTAL" (29/08/2026, pedido de Rhoney):
-                  // sempre disponível pra rever, sem mexer na flag de
-                  // "já visto" que controla a exibição automática após o
-                  // splash (main.dart).
-                  ListTile(
-                    contentPadding: EdgeInsets.zero,
-                    leading: const Icon(Icons.help_outline_rounded),
-                    title: Text(l10n.tutorialMenuLabel),
-                    trailing: const Icon(Icons.chevron_right_rounded),
+                  // "Como usar o MENTAL" (29/08/2026, pedido de Rhoney:
+                  // "dê melhor destaque") — card com cor própria em vez
+                  // de ListTile solto, mesma linguagem visual dos outros
+                  // destaques do app (borda + fundo tintado). Sempre
+                  // disponível pra rever, sem mexer na flag de "já visto"
+                  // que controla a exibição automática após o splash
+                  // (main.dart).
+                  _HighlightedSettingsTile(
+                    icon: Icons.help_outline_rounded,
+                    color: AppColors.teal,
+                    label: l10n.tutorialMenuLabel,
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(builder: (_) => OnboardingTutorialScreen(onDone: () => Navigator.of(context).pop())),
                     ),
@@ -266,11 +268,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     // sugerido... ou menu de Configurações" — só aparece
                     // pra role=admin, usuário comum nunca vê nem sabe que
                     // essa tela existe.
-                    ListTile(
-                      contentPadding: EdgeInsets.zero,
-                      leading: const Icon(Icons.admin_panel_settings_outlined),
-                      title: Text(l10n.adminMetricsMenuLabel),
-                      trailing: const Icon(Icons.chevron_right_rounded),
+                    _HighlightedSettingsTile(
+                      icon: Icons.admin_panel_settings_outlined,
+                      color: AppColors.gold,
+                      label: l10n.adminMetricsMenuLabel,
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute(builder: (_) => AdminMetricsScreen(client: widget.client)),
                       ),
@@ -309,6 +310,46 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                 ],
               ),
+      ),
+    );
+  }
+}
+
+/// Card de destaque em Ajuste (29/08/2026, pedido de Rhoney: "dê melhor
+/// destaque em Como usar o MENTAL e no Painel Admin") — mesma
+/// linguagem visual dos outros cards de destaque do app (fundo tintado
+/// + borda na cor do ícone), em vez de um ListTile solto igual aos
+/// toggles de som/notificação ao redor.
+class _HighlightedSettingsTile extends StatelessWidget {
+  const _HighlightedSettingsTile({required this.icon, required this.color, required this.label, required this.onTap});
+
+  final IconData icon;
+  final Color color;
+  final String label;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: color.withValues(alpha: 0.12),
+      borderRadius: BorderRadius.circular(14),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(14),
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(14), border: Border.all(color: color.withValues(alpha: 0.4))),
+          child: Row(
+            children: [
+              Icon(icon, color: color),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(label, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w700, color: color)),
+              ),
+              Icon(Icons.chevron_right_rounded, color: color.withValues(alpha: 0.7)),
+            ],
+          ),
+        ),
       ),
     );
   }

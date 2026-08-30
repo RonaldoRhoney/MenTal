@@ -121,6 +121,18 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryTecnologiaFronteira => 'Tecnologia: Fronteira';
 
   @override
+  String get territoryFinancasPessoais => 'Finanças Pessoais';
+
+  @override
+  String get territoryFilosofia => 'Filosofia';
+
+  @override
+  String get territoryArtes => 'Artes';
+
+  @override
+  String get territorySaudeBemestar => 'Saúde e Bem-estar';
+
+  @override
   String get learningPauseButtonTooltip => 'Pausa para Aprender';
 
   @override

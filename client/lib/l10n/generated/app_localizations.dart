@@ -304,6 +304,30 @@ abstract class AppLocalizations {
   /// **'Tecnologia: Fronteira'**
   String get territoryTecnologiaFronteira;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Finanças Pessoais'**
+  String get territoryFinancasPessoais;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Filosofia'**
+  String get territoryFilosofia;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Artes'**
+  String get territoryArtes;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Saúde e Bem-estar'**
+  String get territorySaudeBemestar;
+
   /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
   ///
   /// In pt, this message translates to:
