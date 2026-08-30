@@ -236,6 +236,11 @@
   "nextChallengeButton": "Próximo desafio",
   "@nextChallengeButton": {"description": "Button to load the next challenge"},
 
+  "batchCompletedMessage": "Você completou todos os desafios disponíveis aqui por agora!",
+  "@batchCompletedMessage": {"description": "Shown when the player has answered every available challenge in this territory/difficulty batch"},
+  "batchCompletedBackToHomeButton": "Voltar para o Início",
+  "@batchCompletedBackToHomeButton": {"description": "Button to return to Home after completing a full batch of challenges"},
+
   "levelFeedbackHeading": "Como foi esse nível?",
   "@levelFeedbackHeading": {"description": "FEEDBACK_POS_NIVEL.md — heading for the post-level feedback blocks"},
 

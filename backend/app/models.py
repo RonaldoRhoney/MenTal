@@ -397,6 +397,36 @@ class Attempt(Base):
     # POST /answer, que poderia ser forjado pra sempre reivindicar
     # bônus).
     timed: Mapped[bool] = mapped_column(Boolean, default=False)
+    # BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md §2.3 — gravado no momento em
+    # que o desafio é servido (GET /challenges/next), não recalculado
+    # depois: True quando este era o ÚLTIMO item restante do lote sem
+    # repetição daquele território+dificuldade+timed para este usuário.
+    # POST /answer devolve esse valor em AnswerResponse.batch_exhausted
+    # pro client saber que deve voltar à Home em vez de oferecer
+    # repetir/seguir (não existe "próximo" real nesse ponto).
+    was_last_of_batch: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+class ChallengeBatchProgress(Base):
+    """
+    BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md — fila embaralhada e persistente
+    de challenge_ids ainda não servidos, por (user_id, territory_id,
+    difficulty_level, timed). Substitui a heurística probabilística
+    anterior (evitar repetir o último N e limitar repetições recentes)
+    por uma garantia real: nenhum item se repete até o lote inteiro
+    (todos os candidatos daquele território+dificuldade) ser consumido.
+    Ao esvaziar, o próximo GET /challenges/next reembaralha o mesmo lote
+    do zero (§2.1: "pode reiniciar... só depois de esgotado").
+    """
+
+    __tablename__ = "challenge_batch_progress"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"), primary_key=True)
+    difficulty_level: Mapped[int] = mapped_column(Integer, primary_key=True)
+    timed: Mapped[bool] = mapped_column(Boolean, primary_key=True)
+    remaining_challenge_ids: Mapped[list] = mapped_column(JSON, default=list)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
 class LevelFeedback(Base):

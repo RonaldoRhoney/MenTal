@@ -205,15 +205,6 @@ ALWAYS_TIMED_TERRITORIES = {"conhecimento", "cores", "curiosidade_relampago"}
 # natureza do desafio, não um modo opcional (mesmo raciocínio de
 # Conhecimento/Cores acima).
 
-# Achado real (feedback de jogadores, 29/08/2026): a mesma pergunta
-# repetia mais de 2 vezes numa sessão — aceitável repetir, mas nunca mais
-# que isso (routers/challenges.py). Janela de quantas entregas recentes
-# olhar pra contar repetição por usuário+território+timed; grande o
-# bastante pra cobrir uma sessão de jogo normal, sem olhar história
-# antiga demais.
-MAX_CHALLENGE_REPEATS_PER_SESSION = 2
-RECENT_SERVED_WINDOW_FOR_REPEAT_AVOIDANCE = 20
-
 # Bônus de velocidade (PALAVRAS_RELAMPAGO.md §4): responder nos primeiros
 # 30% do tempo disponível vale o bônus máximo (até +100% do xp_base do
 # desafio); responder depois de 70% do tempo consumido não perde o

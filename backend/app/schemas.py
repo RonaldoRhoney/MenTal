@@ -222,6 +222,11 @@ class AnswerResponse(BaseModel):
     # nesse território sem rival ainda).
     territory_detentor_gained: bool = False
     dethroned_nickname: str | None = None
+    # BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md §2.3 — True quando este era o
+    # último item do lote sem repetição daquele território+dificuldade.
+    # Client deve voltar à Home em vez de oferecer repetir/seguir (não
+    # existe "próximo" real nesse ponto até o lote reembaralhar).
+    batch_exhausted: bool = False
 
 
 class ProgressTerritoryOut(BaseModel):

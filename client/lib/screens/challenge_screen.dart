@@ -755,6 +755,11 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         .cast<Map<String, dynamic>>();
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
     final currentStreak = (result['streak'] as Map<String, dynamic>)['current_streak'] as int;
+    // BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md §2.3 — este era o último item
+    // do lote sem repetição deste território+dificuldade: não existe
+    // "próximo" real até o backend reembaralhar, então a tela volta à
+    // Home em vez de oferecer repetir/seguir.
+    final batchExhausted = result['batch_exhausted'] as bool? ?? false;
 
     // V2 item 15 — tempo esgotado nunca mostra a copy padrão de erro
     // (Princípio de Não-Humilhação, PALAVRAS_RELAMPAGO.md §3) — texto e
@@ -885,7 +890,18 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         // batalha pontual entre dois jogadores).
         if (widget.battleId != null)
           FilledButton(onPressed: () => Navigator.of(context).pop(), child: Text(l10n.backButton))
-        else if (levelUp)
+        else if (batchExhausted) ...[
+          Text(
+            l10n.batchCompletedMessage,
+            textAlign: TextAlign.center,
+            style: TextStyle(color: AppColors.muted),
+          ),
+          const SizedBox(height: 12),
+          FilledButton(
+            onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
+            child: Text(l10n.batchCompletedBackToHomeButton),
+          ),
+        ] else if (levelUp)
           // FEEDBACK_POS_NIVEL.md §3 — "aparece sempre que um nível é
           // concluído", não a cada resposta. Achado real (2026-08-26,
           // teste fechado): mostrar em toda resposta causava fricção e

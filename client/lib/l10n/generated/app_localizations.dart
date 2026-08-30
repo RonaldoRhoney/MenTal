@@ -598,6 +598,18 @@ abstract class AppLocalizations {
   /// **'Próximo desafio'**
   String get nextChallengeButton;
 
+  /// Shown when the player has answered every available challenge in this territory/difficulty batch
+  ///
+  /// In pt, this message translates to:
+  /// **'Você completou todos os desafios disponíveis aqui por agora!'**
+  String get batchCompletedMessage;
+
+  /// Button to return to Home after completing a full batch of challenges
+  ///
+  /// In pt, this message translates to:
+  /// **'Voltar para o Início'**
+  String get batchCompletedBackToHomeButton;
+
   /// FEEDBACK_POS_NIVEL.md — heading for the post-level feedback blocks
   ///
   /// In pt, this message translates to:

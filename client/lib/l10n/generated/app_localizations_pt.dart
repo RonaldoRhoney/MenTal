@@ -288,6 +288,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get nextChallengeButton => 'Próximo desafio';
 
   @override
+  String get batchCompletedMessage =>
+      'Você completou todos os desafios disponíveis aqui por agora!';
+
+  @override
+  String get batchCompletedBackToHomeButton => 'Voltar para o Início';
+
+  @override
   String get levelFeedbackHeading => 'Como foi esse nível?';
 
   @override

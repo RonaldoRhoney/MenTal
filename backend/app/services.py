@@ -673,7 +673,9 @@ def shuffled_options(options: list[str]) -> list[str]:
     return shuffled
 
 
-def create_served_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str, timed: bool = False) -> models.Attempt:
+def create_served_attempt(
+    db: Session, attempt_id: str, user_id: str, challenge_id: str, timed: bool = False, was_last_of_batch: bool = False
+) -> models.Attempt:
     """
     Cria a linha de Attempt no momento em que o desafio é de fato
     entregue (GET /challenges/next), com served_at=agora — usado pra
@@ -682,12 +684,87 @@ def create_served_attempt(db: Session, attempt_id: str, user_id: str, challenge_
     auditoria de segurança, 28/08/2026). timed é gravado aqui pelo
     mesmo motivo — POST /answer usa esse valor (não a lista fixa de
     territórios) pra decidir se o bônus de velocidade se aplica.
+    was_last_of_batch (BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md) idem: só o
+    momento do serve sabe se este era o último item do lote sem
+    repetição — POST /answer só devolve o que foi gravado aqui.
     """
-    attempt = models.Attempt(attempt_id=attempt_id, user_id=user_id, challenge_id=challenge_id, hints_used=0, served_at=utcnow(), timed=timed)
+    attempt = models.Attempt(
+        attempt_id=attempt_id,
+        user_id=user_id,
+        challenge_id=challenge_id,
+        hints_used=0,
+        served_at=utcnow(),
+        timed=timed,
+        was_last_of_batch=was_last_of_batch,
+    )
     db.add(attempt)
     db.commit()
     db.refresh(attempt)
     return attempt
+
+
+def pick_next_challenge_from_batch(
+    db: Session,
+    user_id: str,
+    territory_id: str,
+    difficulty_level: int,
+    timed: bool,
+    candidates: list["models.Challenge"],
+) -> tuple["models.Challenge", bool]:
+    """
+    BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md §2.1 — consome de uma fila
+    embaralhada persistida em ChallengeBatchProgress, garantindo que
+    nenhum candidato se repita até o lote INTEIRO (todos os `candidates`
+    desta chamada) ser servido uma vez. Reembaralha do zero quando a
+    fila está vazia (primeira chamada desta combinação, ou lote recém
+    esgotado). Se o conteúdo mudou desde o último embaralhamento (item
+    novo curado, ou item removido), os ids que sobraram na fila mas não
+    existem mais em `candidates` são descartados silenciosamente — nunca
+    trava a sessão por causa disso.
+
+    Retorna (challenge_escolhido, is_last_of_batch) — is_last_of_batch
+    True significa "depois deste, a fila fica vazia": não existe
+    "próximo" real dentro deste lote até ele ser reembaralhado.
+    """
+    candidate_ids_by_id = {c.id: c for c in candidates}
+
+    row = db.get(models.ChallengeBatchProgress, (user_id, territory_id, difficulty_level, timed))
+    remaining_ids = [cid for cid in (row.remaining_challenge_ids if row else []) if cid in candidate_ids_by_id]
+
+    if not remaining_ids:
+        remaining_ids = list(candidate_ids_by_id.keys())
+        random.shuffle(remaining_ids)
+        # Caso de borda com lote pequeno (ex.: 2 candidatos): o
+        # reembaralhamento pode sortear, por acaso, o mesmo item que
+        # fechou o lote anterior como primeiro da nova fila — repetiria
+        # imediatamente na fronteira entre um lote e o próximo, o exato
+        # bug que esta correção existe para eliminar. Empurra pro fim se
+        # colidir (só possível checar quando sobra mais de 1 candidato).
+        last_served_id = db.execute(
+            select(models.Attempt.challenge_id)
+            .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
+            .where(models.Attempt.user_id == user_id)
+            .where(models.Challenge.territory_id == territory_id)
+            .where(models.Attempt.timed == timed)
+            .order_by(models.Attempt.created_at.desc())
+            .limit(1)
+        ).scalar_one_or_none()
+        if len(remaining_ids) > 1 and remaining_ids[0] == last_served_id:
+            remaining_ids.append(remaining_ids.pop(0))
+
+    next_id = remaining_ids.pop(0)
+    is_last_of_batch = len(remaining_ids) == 0
+
+    if row is None:
+        row = models.ChallengeBatchProgress(
+            user_id=user_id, territory_id=territory_id, difficulty_level=difficulty_level, timed=timed
+        )
+        db.add(row)
+    row.remaining_challenge_ids = remaining_ids
+    row.updated_at = utcnow()
+    db.commit()
+
+    return candidate_ids_by_id[next_id], is_last_of_batch
 
 
 def elapsed_ms_since(served_at: datetime) -> int:

@@ -88,59 +88,15 @@ def next_challenge(
     if not candidates:
         raise HTTPException(status_code=404, detail={"error": {"code": "NO_CHALLENGES_AVAILABLE", "message": territory_id}})
 
-    import random
-    from collections import Counter
-
-    # Achado testando no celular real: com poucos candidatos por nível de
-    # dificuldade (2-3 no seed atual), random.choice puro repete o mesmo
-    # desafio imediatamente com chance alta (~50% com 2 candidatos) —
-    # rodou 20x seguidas em teste manual e saiu sequência de 5 iguais.
-    # Não é falta de embaralhamento no cliente, é ausência de "não repetir
-    # o último" no sorteio do backend.
-    #
-    # Achado real (feedback de jogadores, 29/08/2026): só evitar repetir
-    # o ÚLTIMO desafio (distância 1) não impede um padrão A,B,A,B,A,...
-    # quando o nível tem poucos candidatos — a mesma pergunta ainda
-    # aparecia mais de 2 vezes numa sessão. Agora olha as últimas
-    # RECENT_SERVED_WINDOW_FOR_REPEAT_AVOIDANCE entregas pra esse
-    # usuário+território+timed (relâmpago/territórios sempre cronometrados
-    # contam à parte de território normal — sessões diferentes) e nunca
-    # deixa um desafio aparecer pela 3ª vez enquanto sobrar outro
-    # candidato com menos repetições. "Nunca repetir o último" continua
-    # valendo por cima disso, só relaxado se for a única forma de não
-    # travar a sessão (ex.: restou 1 candidato de verdade).
-    recent_served_ids = list(
-        db.execute(
-            select(models.Attempt.challenge_id)
-            .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
-            .where(models.Attempt.user_id == user_id)
-            .where(models.Challenge.territory_id == territory_id)
-            .where(models.Attempt.timed == timed)
-            .order_by(models.Attempt.created_at.desc())
-            .limit(config.RECENT_SERVED_WINDOW_FOR_REPEAT_AVOIDANCE)
-        )
-        .scalars()
-        .all()
+    # BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md — substitui a antiga heurística
+    # probabilística (evitar repetir o último N, limitar repetições
+    # recentes) por consumo de uma fila embaralhada persistente: garante
+    # sequência sem repetição real até o lote inteiro (todos os
+    # `candidates` desta chamada, por território+dificuldade+timed) ser
+    # servido, reembaralhando do zero só quando esgota.
+    challenge, is_last_of_batch = services.pick_next_challenge_from_batch(
+        db, user_id, territory_id, difficulty, timed, candidates
     )
-    last_challenge_id = recent_served_ids[0] if recent_served_ids else None
-    served_counts = Counter(recent_served_ids)
-
-    # "Nunca repetir o último" é a garantia mais forte (comportamento já
-    # validado antes desta mudança) — só relaxada se o único candidato
-    # restante for o próprio último. Dentro do que sobra, prioriza quem
-    # ainda não bateu o teto de repetições recentes; só ignora o teto se
-    # TODOS os candidatos elegíveis já bateram (conteúdo escasso demais
-    # pro teto ser sempre respeitável — nunca trava a sessão por causa
-    # disso).
-    non_last = [c for c in candidates if c.id != last_challenge_id] or candidates
-    under_cap = [c for c in non_last if served_counts.get(c.id, 0) < config.MAX_CHALLENGE_REPEATS_PER_SESSION]
-    if under_cap:
-        candidates = under_cap
-    else:
-        min_repeats = min(served_counts.get(c.id, 0) for c in non_last)
-        candidates = [c for c in non_last if served_counts.get(c.id, 0) == min_repeats]
-
-    challenge = random.choice(candidates)
     hints_available = len(
         db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
     )
@@ -174,7 +130,7 @@ def next_challenge(
     # só cria de fato quando o attempt_id não existir ainda — aqui ele
     # sempre não existe (uuid novo), então é sempre uma criação.
     attempt_id = models.new_uuid()
-    services.create_served_attempt(db, attempt_id, user_id, challenge.id, timed=timed)
+    services.create_served_attempt(db, attempt_id, user_id, challenge.id, timed=timed, was_last_of_batch=is_last_of_batch)
 
     return schemas.ChallengeOut(
         challenge_id=challenge.id,
@@ -294,6 +250,7 @@ def submit_answer(
             ),
             timed_out=attempt.timed_out,
             speed_bonus_xp=attempt.speed_bonus_xp,
+            batch_exhausted=attempt.was_last_of_batch,
         )
 
     # Achado de auditoria de segurança (28/08/2026): este endpoint nunca
@@ -466,4 +423,5 @@ def submit_answer(
         speed_bonus_xp=speed_bonus_xp,
         territory_detentor_gained=territory_detentor_gained,
         dethroned_nickname=dethroned_nickname,
+        batch_exhausted=attempt.was_last_of_batch,
     )
