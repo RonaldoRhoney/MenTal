@@ -199,7 +199,11 @@ LEARNING_PAUSE_XP_REWARD = 5
 # GERAL.md) e agora Cores (V3.0.1_DESAFIO_CORES.md, 29/08/2026): um
 # desafio de atenção/velocidade de leitura só faz sentido cronometrado,
 # em qualquer nível, incluindo fácil.
-ALWAYS_TIMED_TERRITORIES = {"conhecimento", "cores"}
+ALWAYS_TIMED_TERRITORIES = {"conhecimento", "cores", "curiosidade_relampago"}
+# V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — o próprio doc descreve
+# a charada "no formato Relâmpago (timer curto, ~10 segundos)" como a
+# natureza do desafio, não um modo opcional (mesmo raciocínio de
+# Conhecimento/Cores acima).
 
 # Achado real (feedback de jogadores, 29/08/2026): a mesma pergunta
 # repetia mais de 2 vezes numa sessão — aceitável repetir, mas nunca mais

@@ -61,6 +61,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "concursos_portugues", "concursos_raciocinio", "concursos_direito",
         "tecnologia_fundamentos", "tecnologia_programacao", "tecnologia_seguranca", "tecnologia_fronteira",
         "financas_pessoais", "filosofia", "artes", "saude_bemestar",
+        "curiosidade_relampago",
     }
     assert worlds["linguagem"]["completed"] is False
     assert worlds["mente_logica"]["completed"] is False

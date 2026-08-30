@@ -1,0 +1,114 @@
+[
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Sou uma única célula, a maior que existe no reino animal — e você provavelmente já me quebrou hoje de manhã.",
+    "options": [
+      "A gema de um ovo",
+      "Um neurônio",
+      "Uma hemácia",
+      "Um grão de pólen"
+    ],
+    "correct_answer": "A gema de um ovo",
+    "explanation": "A gema do ovo é literalmente uma única célula — a maior célula conhecida no reino animal.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Existo há mais de 200 anos, mas minha versão mais vendida do mundo tem motor menor que o de muitos cortadores de grama.",
+    "options": [
+      "A moto Honda Cub",
+      "O Fusca",
+      "O avião a hélice",
+      "A bicicleta"
+    ],
+    "correct_answer": "A moto Honda Cub",
+    "explanation": "A Honda Cub é o veículo motorizado mais vendido da história — mais de 100 milhões de unidades — e tem motor pequeno.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Sou formado dentro da Terra, mas o que veste seu dedo hoje pode ter viajado bilhões de anos antes de chegar até você.",
+    "options": [
+      "Um diamante",
+      "Ouro",
+      "Granito",
+      "Sal-gema"
+    ],
+    "correct_answer": "Um diamante",
+    "explanation": "Muitos diamantes se formaram há bilhões de anos, antes até da vida complexa existir na Terra.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Trabalho sem parar a vida inteira, mas boa parte da minha energia não vai pra bombear sangue — vai só pra me manter com a forma certa.",
+    "options": [
+      "O coração",
+      "O pulmão",
+      "O cérebro",
+      "O fêmur"
+    ],
+    "correct_answer": "O coração",
+    "explanation": "Boa parte da energia do coração é gasta mantendo sua própria estrutura muscular, não só no bombeamento.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Fui criado sem nenhum motor, nenhuma pilha e nenhuma corda — e ainda assim nunca paro de me mover.",
+    "options": [
+      "Uma bússola",
+      "Um relógio de pêndulo",
+      "Uma roda d'água",
+      "Um pião"
+    ],
+    "correct_answer": "Uma bússola",
+    "explanation": "A bússola se move usando só o campo magnético da Terra — sem nenhuma fonte de energia própria.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Sou um órgão, peso pouco mais de um quilo, e mesmo assim consumo cerca de 20% de toda a energia que você gasta em um dia inteiro.",
+    "options": [
+      "O cérebro",
+      "O fígado",
+      "O estômago",
+      "O rim"
+    ],
+    "correct_answer": "O cérebro",
+    "explanation": "O cérebro humano consome por volta de 20% da energia diária do corpo, mesmo representando cerca de 2% do peso corporal.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Sou um alimento tão durável que arqueólogos já encontraram potes meus, ainda comestíveis, com milhares de anos de idade.",
+    "options": [
+      "Mel",
+      "Arroz",
+      "Queijo",
+      "Farinha"
+    ],
+    "correct_answer": "Mel",
+    "explanation": "Mel encontrado em tumbas egípcias antigas, com milhares de anos, foi analisado e considerado ainda comestível, graças às suas propriedades naturais de conservação.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "curiosidade_relampago",
+    "difficulty_level": 1,
+    "prompt": "Pareço sólida, mas na verdade me movo tão devagar que sou tecnicamente considerada um líquido em fluxo extremamente lento, segundo alguns cientistas — debate que ainda divide opiniões.",
+    "options": [
+      "Vidro de janela antiga",
+      "Pedra de mármore",
+      "Gelo",
+      "Plástico"
+    ],
+    "correct_answer": "Vidro de janela antiga",
+    "explanation": "Existe um debate científico sobre se o vidro é um 'líquido super-resfriado' de fluxo extremamente lento ou um sólido amorfo — vidros antigos às vezes parecem mais grossos na base por causa de como eram fabricados, não necessariamente por terem 'escorrido' com o tempo.",
+    "age_reviewed": false
+  }
+]

@@ -46,6 +46,13 @@ BLOCKS = [
     {"id": "filosofia", "name": "Filosofia", "display_order": 9},
     {"id": "artes", "name": "Artes", "display_order": 10},
     {"id": "saude_bemestar", "name": "Saúde e Bem-estar", "display_order": 11},
+    # V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — charada de
+    # curiosidade (pista indireta + fato de revelação), sempre no
+    # formato cronometrado (config.ALWAYS_TIMED_TERRITORIES). "Fato de
+    # revelação" é o campo `explanation` que já existe e já é sempre
+    # mostrado pós-resposta (challenge_screen.dart) — nenhuma mudança de
+    # schema, só um território/bloco novo.
+    {"id": "curiosidade_relampago", "name": "Curiosidade Relâmpago", "display_order": 12},
 ]
 
 TERRITORIES = [
@@ -142,6 +149,11 @@ TERRITORIES = [
     {"id": "filosofia", "challenge_type": "filosofia", "requires_subscription": True, "free_sample_count": 2, "display_order": 27, "world_id": "cultura_geral", "block_id": "filosofia"},
     {"id": "artes", "challenge_type": "artes", "requires_subscription": True, "free_sample_count": 2, "display_order": 28, "world_id": "cultura_geral", "block_id": "artes"},
     {"id": "saude_bemestar", "challenge_type": "saude_bemestar", "requires_subscription": True, "free_sample_count": 2, "display_order": 29, "world_id": "cultura_geral", "block_id": "saude_bemestar"},
+    # V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — só estrutura;
+    # conteúdo é curadoria manual (RISKS_AND_OPEN_DECISIONS.md §2),
+    # seguindo os 4 testes de qualidade do doc (óbvio/revelação/
+    # familiaridade/sem ambiguidade) antes de qualquer charada entrar.
+    {"id": "curiosidade_relampago", "challenge_type": "curiosidade_relampago", "requires_subscription": True, "free_sample_count": 2, "display_order": 30, "world_id": "cultura_geral", "block_id": "curiosidade_relampago"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à

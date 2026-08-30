@@ -40,7 +40,7 @@ def test_blocks_without_any_territory_are_not_returned(client):
 
     assert block_ids == {
         "matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia",
-        "financas_pessoais", "filosofia", "artes", "saude_bemestar",
+        "financas_pessoais", "filosofia", "artes", "saude_bemestar", "curiosidade_relampago",
     }
 
 

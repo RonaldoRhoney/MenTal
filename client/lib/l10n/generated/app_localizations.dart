@@ -328,6 +328,12 @@ abstract class AppLocalizations {
   /// **'Saúde e Bem-estar'**
   String get territorySaudeBemestar;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Curiosidade Relâmpago'**
+  String get territoryCuriosidadeRelampago;
+
   /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
   ///
   /// In pt, this message translates to:

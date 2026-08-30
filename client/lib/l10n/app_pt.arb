@@ -101,6 +101,8 @@
   "@territoryArtes": {"description": "Territory display name"},
   "territorySaudeBemestar": "Saúde e Bem-estar",
   "@territorySaudeBemestar": {"description": "Territory display name"},
+  "territoryCuriosidadeRelampago": "Curiosidade Relâmpago",
+  "@territoryCuriosidadeRelampago": {"description": "Territory display name"},
 
   "learningPauseButtonTooltip": "Pausa para Aprender",
   "@learningPauseButtonTooltip": {"description": "AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory"},
