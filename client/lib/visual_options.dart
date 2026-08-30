@@ -41,7 +41,11 @@ const Map<String, String> _kShapeName = {
   'heart': 'coração',
 };
 
-const Map<String, Color> _kColorValue = {
+// Não-const (era `const Map`): os valores de AppColors deixaram de ser
+// compile-time constant quando passaram a resolver claro/escuro em
+// runtime (theme/app_theme.dart) — função em vez de variável top-level
+// pra nunca cachear a cor de um tom antigo depois de um toggle.
+Map<String, Color> _kColorValue() => {
   'gold': AppColors.gold,
   'teal': AppColors.teal,
   'error': AppColors.error,
@@ -68,7 +72,7 @@ VisualOptionSpec? parseVisualOption(String optionId) {
 
   final iconMap = fill == 'outline' ? _kShapeOutline : _kShapeFilled;
   final icon = iconMap[shape];
-  final resolvedColor = _kColorValue[color];
+  final resolvedColor = _kColorValue()[color];
   final shapeName = _kShapeName[shape];
   final colorName = _kColorName[color];
   if (icon == null || resolvedColor == null || shapeName == null || colorName == null) return null;

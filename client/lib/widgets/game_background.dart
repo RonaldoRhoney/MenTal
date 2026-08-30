@@ -17,11 +17,11 @@ class GameBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: RadialGradient(
           center: Alignment(-0.7, -0.9),
           radius: 1.4,
-          colors: [Color(0xFF241640), AppColors.bg],
+          colors: [AppColors.bgGlow, AppColors.bg],
           stops: [0.0, 0.75],
         ),
       ),

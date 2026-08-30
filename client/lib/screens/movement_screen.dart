@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
@@ -49,6 +50,12 @@ class _MovementScreenState extends State<MovementScreen> {
   int? _lastRawStepsSinceBoot;
   int _streakDays = 0;
   int? _mentalCoinsBalance;
+  // Achado real (29/08/2026): reinstalar o app (ou trocar de aparelho)
+  // com Movimento já ativado na conta reseta a permissão do Android,
+  // mas a flag do servidor (_movementEnabled) continua true — sem essa
+  // checagem à parte, a tela mostrava o painel inteiro normalmente e só
+  // dizia "sensor indisponível", sem nunca oferecer um jeito de resolver.
+  bool _permissionMissing = false;
   // Começa true: só vira false quando o primeiro evento REAL do sensor
   // chegar. Achado real testando no Moto G22 (2026-08-21):
   // TYPE_STEP_COUNTER não entrega uma leitura imediata ao registrar o
@@ -59,6 +66,18 @@ class _MovementScreenState extends State<MovementScreen> {
   bool _sensorUnavailable = true;
   bool _busy = false;
   StreamSubscription<int>? _stepSub;
+  // Coleta automática (V3, achado real de campo 29/08/2026, doc
+  // BUG_MOVIMENTO_XP_GRAFICOS.md): antes, XP e os dois gráficos só
+  // existiam depois de uma coleta manual, e coleta manual só era
+  // possível ao atingir pelo menos 5k passos — uma caminhada real de
+  // ~800 passos nunca disparava nada no backend. Agora a tela coleta
+  // sozinha em segundo plano, em pequenos intervalos, sem esperar
+  // nenhum patamar — collect_steps() no backend já foi desenhado pra
+  // aceitar deltas pequenos repetidos (soma cumulativa, reavalia faixa/
+  // checkpoint a cada chamada), só nunca tinha sido chamado assim.
+  DateTime? _lastAutoCollectAt;
+  bool _autoCollecting = false;
+  static const _autoCollectMinInterval = Duration(seconds: 20);
 
   late final CelebrationController _celebration;
 
@@ -72,14 +91,26 @@ class _MovementScreenState extends State<MovementScreen> {
   void initState() {
     super.initState();
     _celebration = CelebrationController();
+    // Recebe leituras do sensor capturadas pelo foreground service
+    // (movement_task_handler.dart) mesmo com esta tela fechada — é essa
+    // via, e não a stream direta abaixo, que sustenta a contagem com o
+    // app em segundo plano/tela apagada.
+    FlutterForegroundTask.addTaskDataCallback(_onForegroundTaskData);
     _load();
   }
 
   @override
   void dispose() {
     _stepSub?.cancel();
+    FlutterForegroundTask.removeTaskDataCallback(_onForegroundTaskData);
     _celebration.dispose();
     super.dispose();
+  }
+
+  void _onForegroundTaskData(Object data) {
+    final cycleId = _currentCycle?['id'] as String?;
+    if (cycleId == null || data is! Map || data['steps'] is! int) return;
+    _handleRawSteps(cycleId, data['steps'] as int);
   }
 
   Future<void> _load() async {
@@ -110,6 +141,7 @@ class _MovementScreenState extends State<MovementScreen> {
           _sensorUnavailable = false;
         }
         _listenToSensor(cycleId);
+        unawaited(_ensurePermissionAndStartTracking());
       } else {
         _stepSub?.cancel();
       }
@@ -134,21 +166,76 @@ class _MovementScreenState extends State<MovementScreen> {
 
   void _listenToSensor(String cycleId) {
     _stepSub?.cancel();
+    // Além da leitura em tempo real do foreground service (via
+    // _onForegroundTaskData), mantém também a assinatura local — cobre o
+    // intervalo entre ativar a permissão e o serviço terminar de subir,
+    // e serve de fallback se o serviço falhar ao iniciar em algum
+    // aparelho (startForegroundTracking nunca derruba o app).
     _stepSub = MovementService.instance.stepCountStream().listen(
-      (steps) async {
-        _lastRawStepsSinceBoot = steps;
-        final delta = await MovementService.instance.pendingDeltaFor(cycleId, steps);
-        if (mounted) {
-          setState(() {
-            _sensorUnavailable = false;
-            _detectedUncollectedSteps = delta.uncollectedSteps;
-          });
-        }
-      },
+      (steps) => _handleRawSteps(cycleId, steps),
       onError: (_) {
         if (mounted) setState(() => _sensorUnavailable = true);
       },
     );
+  }
+
+  /// Checa a permissão REAL do Android (não só a flag do servidor) antes
+  /// de subir o foreground service — achado real (29/08/2026):
+  /// reinstalar o app (ou trocar de aparelho) com Movimento já ativado
+  /// na conta reseta a permissão do Android, mas movement_enabled
+  /// continua true; sem isso, a tela ficava travada em "sensor
+  /// indisponível" pra sempre, sem nenhuma ação possível. Tenta pedir de
+  /// novo automaticamente; só se a resposta continuar negada é que
+  /// mostra o aviso com o botão pra abrir as Configurações do Android
+  /// (único jeito de reverter um "não perguntar de novo").
+  Future<void> _ensurePermissionAndStartTracking() async {
+    final hasPermission = await MovementService.instance.hasPermission();
+    final granted = hasPermission || await MovementService.instance.requestPermission();
+    if (mounted) setState(() => _permissionMissing = !granted);
+    if (!granted) return;
+    await MovementService.instance.startForegroundTracking();
+  }
+
+  Future<void> _handleRawSteps(String cycleId, int steps) async {
+    _lastRawStepsSinceBoot = steps;
+    final delta = await MovementService.instance.pendingDeltaFor(cycleId, steps);
+    if (mounted) {
+      setState(() {
+        _sensorUnavailable = false;
+        _detectedUncollectedSteps = delta.uncollectedSteps;
+      });
+    }
+    unawaited(_maybeAutoCollect(cycleId));
+  }
+
+  /// Coleta automática do ciclo ATUAL — nunca do ciclo anterior pendente
+  /// (isso continua manual, ver _doCollectPending). Throttle de
+  /// _autoCollectMinInterval evita um POST a cada passo detectado
+  /// (TYPE_STEP_COUNTER pode emitir bem mais de um evento por segundo
+  /// andando); falha de rede é silenciosa de propósito — a próxima
+  /// leitura de passo tenta nesse ciclo, ou o próximo tenta de novo,
+  /// nunca interrompe a caminhada por causa disso.
+  Future<void> _maybeAutoCollect(String cycleId) async {
+    if (_autoCollecting || _detectedUncollectedSteps <= 0 || _currentCycle == null) return;
+    final last = _lastAutoCollectAt;
+    if (last != null && DateTime.now().difference(last) < _autoCollectMinInterval) return;
+    _autoCollecting = true;
+    _lastAutoCollectAt = DateTime.now();
+    try {
+      final localDelta = _detectedUncollectedSteps;
+      final result = await widget.client.collectMovementSteps(steps: localDelta, cycleId: cycleId);
+      final updatedCycle = result['cycle'] as Map<String, dynamic>;
+      await _handleCollectResponse(result, cycleId, updatedCycle['steps_collected'] as int);
+      if (mounted) {
+        setState(() {
+          _currentCycle = updatedCycle;
+          _detectedUncollectedSteps = 0;
+        });
+      }
+    } on ApiException catch (_) {
+    } finally {
+      _autoCollecting = false;
+    }
   }
 
   Future<void> _enable() async {
@@ -166,6 +253,7 @@ class _MovementScreenState extends State<MovementScreen> {
         return;
       }
       await widget.client.enableMovement();
+      await MovementService.instance.startForegroundTracking();
       await _load();
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -178,6 +266,7 @@ class _MovementScreenState extends State<MovementScreen> {
     setState(() => _busy = true);
     try {
       await widget.client.disableMovement();
+      await MovementService.instance.stopForegroundTracking();
       await MovementService.instance.clear();
       await _load();
     } on ApiException catch (e) {
@@ -193,6 +282,14 @@ class _MovementScreenState extends State<MovementScreen> {
     final levelUp = result['level_up'] as bool? ?? false;
     final goalReached = result['goal_reached'] as bool? ?? false;
     final checkpointsReached = result['checkpoints_reached'] as int? ?? 0;
+    // MentalCoins por passo (29/08/2026: "a cada 1000 passos = 5
+    // MentalCoins") — vem direto na resposta da coleta, sem chamada de
+    // rede extra (a coleta ficou muito mais frequente com a coleta
+    // automática em segundo plano).
+    final mentalCoinsAwarded = result['mentalcoins_awarded'] as int? ?? 0;
+    if (mentalCoinsAwarded > 0 && mounted) {
+      setState(() => _mentalCoinsBalance = (_mentalCoinsBalance ?? 0) + mentalCoinsAwarded);
+    }
     if (xpAwarded > 0) {
       FeedbackService.instance.play(FeedbackSound.correct);
     }
@@ -309,7 +406,7 @@ class _MovementScreenState extends State<MovementScreen> {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Icon(Icons.local_fire_department_rounded, color: AppColors.gold, size: 16),
+                    Icon(Icons.local_fire_department_rounded, color: AppColors.gold, size: 16),
                     const SizedBox(width: 4),
                     Text('$_streakDays', style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
                   ],
@@ -337,7 +434,7 @@ class _MovementScreenState extends State<MovementScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (_error != null) ...[
-            Text(_error!, style: const TextStyle(color: AppColors.error)),
+            Text(_error!, style: TextStyle(color: AppColors.error)),
             const SizedBox(height: 16),
           ],
           Text(l10n.movementIntro, style: Theme.of(context).textTheme.bodySmall),
@@ -356,8 +453,20 @@ class _MovementScreenState extends State<MovementScreen> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         if (_error != null) ...[
-          Text(_error!, style: const TextStyle(color: AppColors.error), maxLines: 2, overflow: TextOverflow.ellipsis),
+          Text(_error!, style: TextStyle(color: AppColors.error), maxLines: 2, overflow: TextOverflow.ellipsis),
           const SizedBox(height: 8),
+        ],
+        if (_permissionMissing) ...[
+          Text(l10n.movementPermissionDeniedMessage, style: TextStyle(color: AppColors.error), maxLines: 3),
+          const SizedBox(height: 4),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: TextButton(
+              onPressed: () => MovementService.instance.openSettings(),
+              child: Text(l10n.movementOpenSettingsButton),
+            ),
+          ),
+          const SizedBox(height: 4),
         ],
         if (_pendingReportCycle != null) ...[
           // Sem botão dedicado (29/08/2026, pedido de Rhoney: a coleta
@@ -368,7 +477,7 @@ class _MovementScreenState extends State<MovementScreen> {
             intensity: 0.2,
             child: Text(
               l10n.movementPendingReportLabel(_pendingReportCycle!['steps_collected'] as int),
-              style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600, fontSize: 11),
+              style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600, fontSize: 11),
               maxLines: 2,
             ),
           ),
@@ -376,7 +485,15 @@ class _MovementScreenState extends State<MovementScreen> {
         ],
         if (currentCycle != null) ...[
           _HeroBlock(
-            stepsCollected: currentCycle['steps_collected'] as int,
+            // Anel + número precisam refletir o total AO VIVO (badge
+            // "LIVE" promete "atualiza em tempo real conforme o usuário
+            // anda" — U.I/MOVIMENTO_REDESIGN_V1.md §4), não só o que já
+            // foi coletado no servidor. Achado real (29/08/2026,
+            // caminhada de teste com meta 15k): sem somar o delta local
+            // ainda não coletado, o valor fica parado em 0 até o
+            // jogador tocar num card de meta atingido — parecendo que
+            // nenhum passo foi contabilizado.
+            stepsCollected: (currentCycle['steps_collected'] as int) + _detectedUncollectedSteps,
             xpAwarded: currentCycle['xp_awarded'] as int,
             mentalCoinsBalance: _mentalCoinsBalance,
             goal: _dailyGoalSteps,
@@ -398,10 +515,10 @@ class _MovementScreenState extends State<MovementScreen> {
           if (_goalReachedMessage != null || _checkpointReachedMessage != null) ...[
             const SizedBox(height: 6),
             if (_goalReachedMessage != null)
-              PulseIn(intensity: 0.3, child: Text(_goalReachedMessage!, style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600, fontSize: 12), textAlign: TextAlign.center, maxLines: 2)),
+              PulseIn(intensity: 0.3, child: Text(_goalReachedMessage!, style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600, fontSize: 12), textAlign: TextAlign.center, maxLines: 2)),
             if (_goalReachedMessage != null) ShareAchievementButton(message: l10n.shareMovementGoalMessage, client: widget.client),
             if (_checkpointReachedMessage != null)
-              PulseIn(intensity: 0.3, child: Text(_checkpointReachedMessage!, style: const TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600, fontSize: 12), textAlign: TextAlign.center, maxLines: 2)),
+              PulseIn(intensity: 0.3, child: Text(_checkpointReachedMessage!, style: TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600, fontSize: 12), textAlign: TextAlign.center, maxLines: 2)),
           ],
           const SizedBox(height: 8),
           // Métricas de oscilação diária (29/08/2026, pedido de Rhoney:
@@ -420,14 +537,23 @@ class _MovementScreenState extends State<MovementScreen> {
         if (currentCycle != null && ((currentCycle['snapshots'] as List?)?.length ?? 0) >= 2)
           Expanded(
             flex: 6,
-            child: _ChartCard(
-              dotColor: AppColors.gold,
-              title: l10n.movementTodayChartTitle,
-              trailing: l10n.movementTodayChartSubtitle,
-              child: _IntradayStepsLineChart(
-                points: _intradayPoints(
-                  (currentCycle['snapshots'] as List).cast<Map<String, dynamic>>(),
-                  DateTime.parse(currentCycle['cycle_start_at'] as String),
+            // RepaintBoundary (achado real, 29/08/2026 — Rhoney: "telas
+            // saltando"): com a coleta automática em segundo plano, esta
+            // tela agora recebe um setState a cada passo detectado
+            // (_handleRawSteps) — sem isolar o repaint, os dois gráficos
+            // (canvas custom do fl_chart, mais pesados que o resto da
+            // árvore) repintavam de novo a cada evento, mesmo sem seus
+            // próprios dados terem mudado.
+            child: RepaintBoundary(
+              child: _ChartCard(
+                dotColor: AppColors.gold,
+                title: l10n.movementTodayChartTitle,
+                trailing: l10n.movementTodayChartSubtitle,
+                child: _IntradayStepsLineChart(
+                  points: _intradayPoints(
+                    (currentCycle['snapshots'] as List).cast<Map<String, dynamic>>(),
+                    DateTime.parse(currentCycle['cycle_start_at'] as String),
+                  ),
                 ),
               ),
             ),
@@ -437,11 +563,13 @@ class _MovementScreenState extends State<MovementScreen> {
         if (_recentCycles.length >= 2)
           Expanded(
             flex: 5,
-            child: _ChartCard(
-              dotColor: AppColors.teal,
-              title: l10n.movementWeeklyChartTitle,
-              trailing: l10n.movementWeeklyChartSubtitle,
-              child: _WeeklyStepsBarChart(cycles: _recentCycles),
+            child: RepaintBoundary(
+              child: _ChartCard(
+                dotColor: AppColors.teal,
+                title: l10n.movementWeeklyChartTitle,
+                trailing: l10n.movementWeeklyChartSubtitle,
+                child: _WeeklyStepsBarChart(cycles: _recentCycles),
+              ),
             ),
           ),
         const SizedBox(height: 4),
@@ -500,14 +628,18 @@ class _HeroBlock extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 8),
-                Text.rich(
-                  TextSpan(
-                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
-                    children: const [
-                      TextSpan(text: '100 passos', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
-                      TextSpan(text: ' = '),
-                      TextSpan(text: '+2 XP', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
-                    ],
+                SizedBox(
+                  width: double.infinity,
+                  child: Text.rich(
+                    textAlign: TextAlign.center,
+                    TextSpan(
+                      style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
+                      children: [
+                        TextSpan(text: '100 passos', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+                        const TextSpan(text: ' = '),
+                        TextSpan(text: '+2 XP', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -659,7 +791,7 @@ class _LiveBadgeState extends State<_LiveBadge> with SingleTickerProviderStateMi
       decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(8), border: Border.all(color: AppColors.teal.withValues(alpha: 0.5))),
       child: FadeTransition(
         opacity: Tween(begin: 0.4, end: 1.0).animate(_controller),
-        child: const SizedBox(width: 5, height: 5, child: DecoratedBox(decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.teal))),
+        child: SizedBox(width: 5, height: 5, child: DecoratedBox(decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.teal))),
       ),
     );
   }
@@ -700,6 +832,13 @@ class _GoalSelector extends StatefulWidget {
 class _GoalSelectorState extends State<_GoalSelector> {
   int? _pendingGoal;
   late final _customController = TextEditingController(text: _isCustomGoal(widget.currentGoal) ? '${widget.currentGoal}' : '');
+  // Destaque temporário do botão "Ir" ao confirmar (29/08/2026, pedido
+  // de Rhoney: "botão ir deve ficar em destaque ao ser clicado,
+  // sinalizando que está ativo") — sem isso, a única confirmação visual
+  // de que a meta foi de fato salva era o chip mudar de estado, fácil de
+  // não notar.
+  bool _justConfirmed = false;
+  Timer? _confirmedTimer;
 
   bool _isCustomGoal(int? goal) => goal != null && !widget.tiers.contains(goal);
 
@@ -718,6 +857,7 @@ class _GoalSelectorState extends State<_GoalSelector> {
   @override
   void dispose() {
     _customController.dispose();
+    _confirmedTimer?.cancel();
     super.dispose();
   }
 
@@ -747,11 +887,16 @@ class _GoalSelectorState extends State<_GoalSelector> {
     final pending = _pendingGoal;
     if (pending == null || pending <= 0) return;
     widget.onConfirm(pending);
+    _confirmedTimer?.cancel();
     setState(() {
       _pendingGoal = null;
+      _justConfirmed = true;
       // Meta customizada continua visível no campo depois de confirmada
       // — só limpa quando o valor confirmado é um dos chips fixos.
       if (widget.tiers.contains(pending)) _customController.clear();
+    });
+    _confirmedTimer = Timer(const Duration(milliseconds: 1500), () {
+      if (mounted) setState(() => _justConfirmed = false);
     });
   }
 
@@ -770,7 +915,7 @@ class _GoalSelectorState extends State<_GoalSelector> {
         children: [
           Row(
             children: [
-              Container(width: 6, height: 6, decoration: const BoxDecoration(shape: BoxShape.circle, color: AppColors.gold)),
+              Container(width: 6, height: 6, decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.gold)),
               const SizedBox(width: 8),
               Expanded(child: Text(l10n.movementGoalSelectorTitle, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600, fontSize: 13))),
               Text(l10n.movementGoalSelectorSubtitle, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
@@ -828,16 +973,42 @@ class _GoalSelectorState extends State<_GoalSelector> {
             ],
           ),
           const SizedBox(height: 10),
-          // Botão "Ir" centralizado e mais comprido (29/08/2026, pedido
-          // de Rhoney: "mesma largura, só que mais comprido +2x seu
-          // comprimento atual") — mantém o destaque dourado padrão do
-          // tema pra confirmação de meta.
+          // Botão "Ir" só aparece quando existe de fato uma mudança de
+          // meta a confirmar (29/08/2026, achado real de campo — V3/
+          // BUG_MOVIMENTO_XP_GRAFICOS.md item 4: com a meta salva já
+          // selecionada, o botão ficava cinza/desabilitado, parecendo
+          // quebrado). Sem mudança pendente, mostra a meta atual como
+          // texto simples no lugar — mesma altura fixa do slot, nunca um
+          // botão morto.
           Center(
-            child: FilledButton(
-              style: FilledButton.styleFrom(minimumSize: const Size(144, 40), padding: const EdgeInsets.symmetric(horizontal: 20)),
-              onPressed: (widget.busy || !hasPendingChange) ? null : _confirm,
-              child: Text(l10n.movementGoalGoButton, style: const TextStyle(fontWeight: FontWeight.w800)),
-            ),
+            child: hasPendingChange || _justConfirmed
+                ? FilledButton(
+                    style: FilledButton.styleFrom(
+                      backgroundColor: _justConfirmed ? AppColors.victory : null,
+                      minimumSize: const Size(144, 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                    ),
+                    onPressed: widget.busy ? null : _confirm,
+                    child: _justConfirmed
+                        ? const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.check_rounded, size: 18),
+                              SizedBox(width: 6),
+                              Text('Ativo!', style: TextStyle(fontWeight: FontWeight.w800)),
+                            ],
+                          )
+                        : Text(l10n.movementGoalGoButton, style: const TextStyle(fontWeight: FontWeight.w800)),
+                  )
+                : SizedBox(
+                    height: 40,
+                    child: Center(
+                      child: Text(
+                        l10n.movementCurrentGoalLabel,
+                        style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+                      ),
+                    ),
+                  ),
           ),
         ],
       ),
@@ -1034,7 +1205,7 @@ class _WeeklyStepsBarChart extends StatelessWidget {
           show: true,
           drawVerticalLine: false,
           horizontalInterval: maxY / 3,
-          getDrawingHorizontalLine: (_) => const FlLine(color: AppColors.bg, strokeWidth: 1),
+          getDrawingHorizontalLine: (_) => FlLine(color: AppColors.bg, strokeWidth: 1),
         ),
         borderData: FlBorderData(show: false),
         barTouchData: BarTouchData(
@@ -1126,7 +1297,7 @@ class _OscillationMetricsRow extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: Text(
           sensorUnavailable ? l10n.movementSensorUnavailableMessage : l10n.movementOscillationPendingMessage,
-          style: const TextStyle(color: AppColors.muted, fontSize: 11),
+          style: TextStyle(color: AppColors.muted, fontSize: 11),
           maxLines: 1,
         ),
       );
@@ -1209,7 +1380,7 @@ class _IntradayStepsLineChart extends StatelessWidget {
           show: true,
           drawVerticalLine: false,
           horizontalInterval: chartMaxY / 3,
-          getDrawingHorizontalLine: (_) => const FlLine(color: AppColors.bg, strokeWidth: 1),
+          getDrawingHorizontalLine: (_) => FlLine(color: AppColors.bg, strokeWidth: 1),
         ),
         borderData: FlBorderData(show: false),
         titlesData: FlTitlesData(

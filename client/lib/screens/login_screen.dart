@@ -154,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Expanded(child: Divider()),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: Text(l10n.loginOrDivider, style: const TextStyle(color: AppColors.muted)),
+                      child: Text(l10n.loginOrDivider, style: TextStyle(color: AppColors.muted)),
                     ),
                     const Expanded(child: Divider()),
                   ],
@@ -193,11 +193,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 if (_error != null) ...[
                   const SizedBox(height: 8),
-                  Text(_error!, style: const TextStyle(color: AppColors.error), textAlign: TextAlign.center),
+                  Text(_error!, style: TextStyle(color: AppColors.error), textAlign: TextAlign.center),
                 ],
                 if (_info != null) ...[
                   const SizedBox(height: 8),
-                  Text(_info!, style: const TextStyle(color: AppColors.teal), textAlign: TextAlign.center),
+                  Text(_info!, style: TextStyle(color: AppColors.teal), textAlign: TextAlign.center),
                 ],
               ],
             ),

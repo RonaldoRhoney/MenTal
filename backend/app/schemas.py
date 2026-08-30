@@ -347,6 +347,11 @@ class MovementCollectResponse(BaseModel):
     new_level: int | None = None
     goal_reached: bool = False
     checkpoints_reached: int = 0
+    # MentalCoins por passo (29/08/2026) — devolvido direto aqui pra tela
+    # de Movimento poder atualizar o saldo sem precisar de mais uma
+    # chamada de rede a cada coleta (a coleta ficou muito mais frequente
+    # com a coleta automática em segundo plano).
+    mentalcoins_awarded: int = 0
 
 
 class MovementGoalRequest(BaseModel):
@@ -522,6 +527,7 @@ class BlockUserRequest(BaseModel):
 class BlockedUserOut(BaseModel):
     user_id: str
     nickname: str
+    real_name: str | None = None
     photo_url: str | None = None
 
 
@@ -557,6 +563,7 @@ class MentalCoinsHallOfFameEntryOut(BaseModel):
     reference_date: date | None = None
     user_id: str
     nickname: str
+    real_name: str | None = None
     amount: int
     metric_value: int
 

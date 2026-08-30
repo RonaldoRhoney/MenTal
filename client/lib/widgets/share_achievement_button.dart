@@ -47,8 +47,8 @@ class ShareAchievementButton extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: TextButton.icon(
         onPressed: () => _handleShare(context),
-        icon: const Icon(Icons.share_outlined, size: 16, color: AppColors.teal),
-        label: Text(l10n.shareButtonLabel, style: const TextStyle(color: AppColors.teal)),
+        icon: Icon(Icons.share_outlined, size: 16, color: AppColors.teal),
+        label: Text(l10n.shareButtonLabel, style: TextStyle(color: AppColors.teal)),
       ),
     );
   }

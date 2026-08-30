@@ -77,7 +77,7 @@ class _RankingScreenState extends State<RankingScreen> {
               child: ranking == null
                   ? Center(
                       child: _error != null
-                          ? Text(_error!, style: const TextStyle(color: AppColors.error))
+                          ? Text(_error!, style: TextStyle(color: AppColors.error))
                           : Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -124,10 +124,12 @@ class _RankingScreenState extends State<RankingScreen> {
             itemBuilder: (context, index) {
               final entry = entries[index];
               final isMe = me != null && entry['rank'] == me['rank'] && entry['nickname'] == me['nickname'];
+              // Nome real substitui o apelido gerado pelo sistema
+              // ("jogador-xxxx") assim que existir — pedido de Rhoney
+              // (29/08/2026): "deixa de ser exibido, ficando apenas no
+              // nome do usuário visível aos demais jogadores".
               final realName = entry['real_name'] as String?;
-              final displayName = realName != null && realName.isNotEmpty
-                  ? '${entry['nickname']} · $realName'
-                  : entry['nickname'] as String;
+              final displayName = realName != null && realName.isNotEmpty ? realName : entry['nickname'] as String;
               return ListTile(
                 leading: Row(
                   mainAxisSize: MainAxisSize.min,

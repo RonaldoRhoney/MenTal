@@ -185,7 +185,7 @@ def test_previous_cycle_collectible_within_grace_then_expires(client):
         expected_main_tier_xp = _expected_tier_bonus(6000, 1.0) - _expected_tier_bonus(1000, 1.0)
 
         result = movement.collect_steps(db, user, 5000, cycle_id=pending.id, now=collect_now)
-        cycle, xp_awarded, _, _, _, checkpoints_reached = result
+        cycle, xp_awarded, _, _, _, checkpoints_reached, _ = result
         # 1.000 (já coletado) + 5.000 (coleta final) = 6.000 no total do
         # ciclo -> faixa 5.000-9.999 -> bônus x2 pelo tier normal, mais
         # os 3 bônus de checkpoint (calculados na fração de tempo de
@@ -346,7 +346,7 @@ def test_checkpoint_bonus_awarded_once_when_window_closes(client):
     # Faixa CHEIA (600 sobre 2.000/5.000/...) não é cruzada -> bônus do
     # tier normal é 0; todo o xp desta chamada vem só do checkpoint.
     with SessionLocal() as db:
-        _, xp1, _, _, _, checkpoints1 = movement.collect_steps(db, user, 600, now=anchor + timedelta(hours=7))
+        _, xp1, _, _, _, checkpoints1, _ = movement.collect_steps(db, user, 600, now=anchor + timedelta(hours=7))
     assert checkpoints1 == 1
     assert xp1 == config.MOVEMENT_XP_BASE * 1
 
@@ -354,7 +354,7 @@ def test_checkpoint_bonus_awarded_once_when_window_closes(client):
     # pago de novo, e os passos ainda não bastam pra tier cheio nem
     # checkpoint 1 (que só fecha às 12h).
     with SessionLocal() as db:
-        _, xp2, _, _, _, checkpoints2 = movement.collect_steps(db, user, 100, now=anchor + timedelta(hours=8))
+        _, xp2, _, _, _, checkpoints2, _ = movement.collect_steps(db, user, 100, now=anchor + timedelta(hours=8))
     assert checkpoints2 == 0
     assert xp2 == 0
 
@@ -390,7 +390,7 @@ def test_checkpoint_bonus_catches_up_multiple_windows_in_one_lazy_collection(cli
     expected_main_tier_xp = _expected_tier_bonus(steps, 1.0)
 
     with SessionLocal() as db:
-        _, xp, _, _, _, checkpoints_reached = movement.collect_steps(
+        _, xp, _, _, _, checkpoints_reached, _ = movement.collect_steps(
             db, user, steps, now=anchor + timedelta(hours=20)
         )
     assert checkpoints_reached == 3

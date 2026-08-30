@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -12,6 +13,7 @@ import 'screens/mandatory_onboarding_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/welcome_splash_screen.dart';
 import 'services/push_service.dart';
+import 'services/theme_mode_service.dart';
 import 'theme/app_theme.dart';
 import 'widgets/game_background.dart';
 
@@ -43,6 +45,10 @@ const String kPrivacyPolicyUrl = 'https://ronaldorhoney.github.io/MenTal/';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Porta de comunicação entre o foreground service de Movimento
+  // (movement_task_handler.dart) e a UI — precisa ser inicializada aqui
+  // mesmo que Movimento nunca seja ativado (custo zero se não for usada).
+  FlutterForegroundTask.initCommunicationPort();
   try {
     await Firebase.initializeApp();
   } catch (_) {
@@ -52,6 +58,10 @@ Future<void> main() async {
     // PushService).
   }
   await Supabase.initialize(url: kSupabaseUrl, publishableKey: kSupabasePublishableKey);
+  // Carrega a preferência de tom salva ANTES do primeiro frame — sem
+  // isso, quem escolheu claro veria um flash de escuro (padrão) até o
+  // SharedPreferences responder.
+  await ThemeModeService.instance.load();
   runApp(const MentalApp());
 }
 
@@ -60,30 +70,46 @@ class MentalApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MENTAL',
-      debugShowCheckedModeBanner: false,
-      // ARCHITECTURE_UPDATE_I18N_READY.md: arquitetura i18n-ready desde já
-      // (delegates + supportedLocales), mas lançamento é 100% pt-BR — sem
-      // seletor de idioma na UI, sem conteúdo em outro idioma ainda.
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: AppLocalizations.supportedLocales,
-      // DESIGN_SYSTEM.md: tema único e centralizado — nenhuma tela define
-      // cor ou fonte própria (lib/theme/app_theme.dart é a fonte única).
-      theme: AppTheme.themeData,
-      // Fundo com profundidade em todo o app (pedido de Rhoney,
-      // 29/08/2026: "esse fundo tod escuro está muito fora do escopo de
-      // um game") — um único ponto de aplicação via builder, em vez de
-      // repetir o gradiente tela por tela. Cada Scaffold continua com
-      // backgroundColor transparente (AppTheme.themeData) pra deixar o
-      // gradiente aparecer por trás.
-      builder: (context, child) => GameBackground(child: child ?? const SizedBox.shrink()),
-      home: const AppEntryPoint(),
+    // Claro/escuro (29/08/2026, pedido de Rhoney: botão na Home) —
+    // ThemeModeService não é um InheritedWidget (AppColors é consumida
+    // como constante estática em toda a UI, sem passar por context), só
+    // um ChangeNotifier global; ListenableBuilder aqui é o único ponto
+    // que precisa ouvi-lo, pra reconstruir o MaterialApp (e portanto
+    // GameBackground, que também lê AppColors direto) com o tom novo.
+    return ListenableBuilder(
+      listenable: ThemeModeService.instance,
+      builder: (context, _) {
+        return MaterialApp(
+          title: 'MENTAL',
+          debugShowCheckedModeBanner: false,
+          // ARCHITECTURE_UPDATE_I18N_READY.md: arquitetura i18n-ready desde já
+          // (delegates + supportedLocales), mas lançamento é 100% pt-BR — sem
+          // seletor de idioma na UI, sem conteúdo em outro idioma ainda.
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          // DESIGN_SYSTEM.md: tema único e centralizado — nenhuma tela define
+          // cor ou fonte própria (lib/theme/app_theme.dart é a fonte única).
+          theme: AppTheme.themeData,
+          // Fundo com profundidade em todo o app (pedido de Rhoney,
+          // 29/08/2026: "esse fundo tod escuro está muito fora do escopo de
+          // um game") — um único ponto de aplicação via builder, em vez de
+          // repetir o gradiente tela por tela. Cada Scaffold continua com
+          // backgroundColor transparente (AppTheme.themeData) pra deixar o
+          // gradiente aparecer por trás.
+          builder: (context, child) => GameBackground(child: child ?? const SizedBox.shrink()),
+          // Não-const de propósito: precisa ser uma instância NOVA a
+          // cada rebuild do MaterialApp (ListenableBuilder acima) pro
+          // toggle de tom realmente descer e reconstruir a árvore
+          // inteira — um `const AppEntryPoint()` seria a mesma
+          // instância de sempre, e o Flutter pularia o rebuild dela.
+          home: AppEntryPoint(),
+        );
+      },
     );
   }
 }

@@ -463,7 +463,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               textAlign: TextAlign.center,
               // Erro/limite em terracota suave, nunca vermelho vivo —
               // DESIGN_SYSTEM.md §1/§4, coerente com não-humilhação.
-              style: const TextStyle(color: AppColors.error),
+              style: TextStyle(color: AppColors.error),
             ),
             const SizedBox(height: 16),
             if (isPermanentForToday)
@@ -571,7 +571,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     padding: const EdgeInsets.only(bottom: 8),
                     child: Text(
                       l10n.hintPrefix(hint),
-                      style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+                      style: TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
                     ),
                   ),
                 ),
@@ -580,7 +580,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     padding: const EdgeInsets.only(bottom: 8),
                     child: Text(
                       l10n.noMoreHintsMessage,
-                      style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+                      style: TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
                     ),
                   )
                 else
@@ -777,7 +777,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.relampagoSpeedBonusMessage(speedBonusXp),
-                      style: const TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],
@@ -790,7 +790,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.streakExtendedCelebrationMessage(currentStreak),
-                      style: const TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],
@@ -800,7 +800,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.levelUpMessage(newLevel),
-                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
                   ShareAchievementButton(message: l10n.shareLevelUpMessage(newLevel), client: widget.client),
@@ -811,7 +811,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.territoryConqueredCelebrationMessage,
-                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
                   ShareAchievementButton(message: l10n.shareTerritoryConqueredMessage(widget.territoryLabel), client: widget.client),
@@ -822,7 +822,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.territoryDetentorGainedMessage(widget.territoryLabel),
-                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
                   ShareAchievementButton(message: l10n.shareTerritoryDetentorMessage(widget.territoryLabel), client: widget.client),
@@ -833,7 +833,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.worldCompletedCelebrationMessage(completedWorldName, worldCompletionBonusXp),
-                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
                   ShareAchievementButton(message: l10n.shareWorldCompletedMessage(completedWorldName), client: widget.client),
@@ -844,7 +844,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.badgeUnlockedCelebrationMessage(badge['name'] as String),
-                      style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
                   ShareAchievementButton(message: l10n.shareBadgeUnlockedMessage(badge['name'] as String), client: widget.client),
@@ -924,7 +924,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         Text(
           l10n.levelFeedbackHeading,
           textAlign: TextAlign.center,
-          style: const TextStyle(color: AppColors.muted, fontSize: 14),
+          style: TextStyle(color: AppColors.muted, fontSize: 14),
         ),
         const SizedBox(height: 8),
         Row(

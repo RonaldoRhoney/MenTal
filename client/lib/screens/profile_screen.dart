@@ -225,7 +225,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               const SizedBox(height: 8),
                               Text(
                                 l10n.profilePhotoRejectedLabel,
-                                style: const TextStyle(color: AppColors.error, fontSize: 13),
+                                style: TextStyle(color: AppColors.error, fontSize: 13),
                               ),
                             ],
                           ],
@@ -262,7 +262,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   if (_error != null) ...[
                     const SizedBox(height: 8),
-                    Text(_error!, style: const TextStyle(color: AppColors.error)),
+                    Text(_error!, style: TextStyle(color: AppColors.error)),
                   ],
                   const SizedBox(height: 16),
                   FilledButton(

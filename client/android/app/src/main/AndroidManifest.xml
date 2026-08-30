@@ -17,6 +17,15 @@
          próprio image_picker na primeira vez que a câmera é usada). -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- V3.0.1 — foreground service (flutter_foreground_task) pra manter
+         o listener do sensor de passos vivo com o app em segundo
+         plano/tela apagada (achado real, 29/08/2026: sem isso, uma
+         caminhada inteira com o celular no bolso não contabiliza nenhum
+         passo — ver movement_service.dart e movement_task_handler.dart).
+         foregroundServiceType "health" é a categoria correta do Android
+         14+ pra contagem de passos/dados de saúde. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
     <application
         android:label="MENTAL"
         android:name="${applicationName}"
@@ -56,6 +65,11 @@
                 <data android:scheme="com.rhoneyinc.mental" android:host="login-callback"/>
             </intent-filter>
         </activity>
+        <!-- Warning: Do not change service name (flutter_foreground_task). -->
+        <service
+            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
+            android:foregroundServiceType="health"
+            android:exported="false" />
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

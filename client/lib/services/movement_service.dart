@@ -1,8 +1,11 @@
 import 'dart:convert';
 
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:pedometer/pedometer.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'movement_task_handler.dart';
 
 /// V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md). O sensor
 /// TYPE_STEP_COUNTER (via pacote `pedometer`) devolve a contagem
@@ -60,6 +63,18 @@ class MovementService {
     } catch (_) {
       return false;
     }
+  }
+
+  /// Abre a tela de permissões do app nas Configurações do Android —
+  /// único jeito de recuperar a permissão quando o usuário já negou
+  /// "não perguntar de novo" (achado real, 29/08/2026: reinstalar o app
+  /// com Movimento já ativado na conta reseta a permissão do Android,
+  /// mas a flag do servidor continua true — sem isso, o jogador ficava
+  /// travado sem nenhuma ação possível na própria tela).
+  Future<void> openSettings() async {
+    try {
+      await openAppSettings();
+    } catch (_) {}
   }
 
   Future<bool> requestPermission() async {
@@ -162,5 +177,72 @@ class MovementService {
     await ensureLoaded();
     _state = {};
     await _persist();
+  }
+
+  bool _foregroundTaskInitialized = false;
+
+  void _ensureForegroundTaskInitialized() {
+    if (_foregroundTaskInitialized) return;
+    FlutterForegroundTask.init(
+      androidNotificationOptions: AndroidNotificationOptions(
+        channelId: 'movement_tracking',
+        channelName: 'Contagem de passos',
+        channelDescription: 'Mantém a contagem de passos ativa com o app em segundo plano.',
+        onlyAlertOnce: true,
+      ),
+      iosNotificationOptions: const IOSNotificationOptions(),
+      foregroundTaskOptions: ForegroundTaskOptions(
+        eventAction: ForegroundTaskEventAction.nothing(),
+        autoRunOnBoot: true,
+      ),
+    );
+    _foregroundTaskInitialized = true;
+  }
+
+  /// Notificação persistente é exigida pelo Android 13+ (POST_NOTIFICATIONS)
+  /// pra manter o foreground service visível — sem ela o serviço até roda,
+  /// mas o Android tende a matá-lo mais cedo por não conseguir mostrar a
+  /// notificação obrigatória.
+  Future<void> _ensureNotificationPermission() async {
+    final status = await FlutterForegroundTask.checkNotificationPermission();
+    if (status != NotificationPermission.granted) {
+      await FlutterForegroundTask.requestNotificationPermission();
+    }
+  }
+
+  /// Inicia o foreground service que mantém o sensor de passos vivo com
+  /// o app em segundo plano/tela apagada (ver movement_task_handler.dart
+  /// pro porquê disso ser necessário). Chamado ao ativar Movimento e
+  /// sempre que a tela de Movimento carrega com a feature já ativa —
+  /// idempotente, não faz nada se o serviço já estiver rodando.
+  Future<bool> startForegroundTracking() async {
+    try {
+      _ensureForegroundTaskInitialized();
+      await _ensureNotificationPermission();
+      if (await FlutterForegroundTask.isRunningService) return true;
+      final result = await FlutterForegroundTask.startService(
+        serviceId: 3001,
+        serviceTypes: const [ForegroundServiceTypes.health],
+        notificationTitle: 'MENTAL — Movimento ativo',
+        notificationText: 'Contando seus passos em segundo plano.',
+        callback: startMovementTaskCallback,
+      );
+      return result is ServiceRequestSuccess;
+    } catch (_) {
+      // Mesmo princípio de hasPermission/requestPermission: falha aqui
+      // nunca derruba o app, só deixa a contagem limitada ao app aberto
+      // (comportamento anterior), nunca pior que isso.
+      return false;
+    }
+  }
+
+  /// Chamado ao desativar Movimento — sem isso o serviço (e a notificação)
+  /// continuariam rodando indefinidamente mesmo com a feature desligada.
+  Future<void> stopForegroundTracking() async {
+    try {
+      if (await FlutterForegroundTask.isRunningService) {
+        await FlutterForegroundTask.stopService();
+      }
+    } catch (_) {}
   }
 }

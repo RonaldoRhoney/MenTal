@@ -222,7 +222,12 @@ def list_blocked_users(user_id: str = Depends(require_age_confirmed_user_id), db
         if profile is None:
             continue
         blocked.append(
-            schemas.BlockedUserOut(user_id=blocked_user_id, nickname=profile.nickname, photo_url=services.public_photo_url(profile))
+            schemas.BlockedUserOut(
+                user_id=blocked_user_id,
+                nickname=profile.nickname,
+                real_name=profile.real_name,
+                photo_url=services.public_photo_url(profile),
+            )
         )
     return schemas.BlockedUsersResponse(blocked=blocked)
 

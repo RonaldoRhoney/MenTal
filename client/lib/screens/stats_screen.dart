@@ -57,7 +57,7 @@ class _StatsScreenState extends State<StatsScreen> {
         child: stats == null
             ? Center(
                 child: _error != null
-                    ? Text(_error!, style: const TextStyle(color: AppColors.error))
+                    ? Text(_error!, style: TextStyle(color: AppColors.error))
                     : Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -182,7 +182,7 @@ class _AccuracyDonut extends StatelessWidget {
               const SizedBox(height: 2),
               Text(
                 l10n.statsAccuracyLabel,
-                style: const TextStyle(color: AppColors.muted, fontSize: 12),
+                style: TextStyle(color: AppColors.muted, fontSize: 12),
               ),
             ],
           ),
@@ -403,11 +403,11 @@ class _TerritoryStatsCard extends StatelessWidget {
             Text(label, style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 6),
             if (attempts == 0)
-              Text(l10n.statsNoAttemptsYet, style: const TextStyle(color: AppColors.muted))
+              Text(l10n.statsNoAttemptsYet, style: TextStyle(color: AppColors.muted))
             else ...[
               Text(
                 l10n.statsTerritoryAttemptsAndAccuracy(attempts, '${(accuracy * 100).round()}%'),
-                style: const TextStyle(color: AppColors.muted),
+                style: TextStyle(color: AppColors.muted),
               ),
               const SizedBox(height: 4),
               Text(

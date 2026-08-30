@@ -63,6 +63,28 @@
   "@territoryRegioes": {"description": "Territory display name"},
   "territoryCulturaPop": "Cultura Pop",
   "@territoryCulturaPop": {"description": "Territory display name"},
+  "territoryCores": "Cores",
+  "@territoryCores": {"description": "Territory display name"},
+  "territoryMitologiaGrega": "Mitologia Grega",
+  "@territoryMitologiaGrega": {"description": "Territory display name"},
+  "territoryMitologiaNordica": "Mitologia Nórdica",
+  "@territoryMitologiaNordica": {"description": "Territory display name"},
+  "territoryMitologiaIndigena": "Mitologia Indígena",
+  "@territoryMitologiaIndigena": {"description": "Territory display name"},
+  "territoryEnemLinguagens": "ENEM: Linguagens",
+  "@territoryEnemLinguagens": {"description": "Territory display name"},
+  "territoryEnemHumanas": "ENEM: Humanas",
+  "@territoryEnemHumanas": {"description": "Territory display name"},
+  "territoryEnemNatureza": "ENEM: Natureza",
+  "@territoryEnemNatureza": {"description": "Territory display name"},
+  "territoryEnemMatematica": "ENEM: Matemática",
+  "@territoryEnemMatematica": {"description": "Territory display name"},
+  "territoryConcursosPortugues": "Concursos: Português",
+  "@territoryConcursosPortugues": {"description": "Territory display name"},
+  "territoryConcursosRaciocinio": "Concursos: Lógica",
+  "@territoryConcursosRaciocinio": {"description": "Territory display name"},
+  "territoryConcursosDireito": "Concursos: Direito",
+  "@territoryConcursosDireito": {"description": "Territory display name"},
 
   "dailyLimitReachedMessage": "Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.",
   "@dailyLimitReachedMessage": {"description": "Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3"},
@@ -228,10 +250,10 @@
   "badgeLockedLabel": "Bloqueado",
   "@badgeLockedLabel": {"description": "Badge not-yet-earned status"},
 
-  "settingsTooltip": "Configurações",
+  "settingsTooltip": "Ajuste",
   "@settingsTooltip": {"description": "Home app bar icon tooltip, opens Settings screen"},
 
-  "settingsScreenTitle": "Configurações",
+  "settingsScreenTitle": "Ajuste",
   "@settingsScreenTitle": {"description": "Settings screen app bar title"},
 
   "soundSectionTitle": "Som",
@@ -365,7 +387,7 @@
   "pushPrimingDialogTitle": "Ativar notificações?",
   "@pushPrimingDialogTitle": {"description": "Title of the priming dialog shown before the system push notification permission prompt"},
 
-  "pushPrimingDialogMessage": "O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Configurações.",
+  "pushPrimingDialogMessage": "O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Ajuste.",
   "@pushPrimingDialogMessage": {"description": "Explanation shown before asking for the system push notification permission"},
 
   "pushPrimingDialogAllowButton": "Ativar",
@@ -404,6 +426,9 @@
   "movementPermissionDeniedMessage": "Sem permissão de atividade física, o contador de passos fica indisponível. Você pode conceder depois, nas configurações do aparelho.",
   "@movementPermissionDeniedMessage": {"description": "Shown when the user denies the activity recognition permission"},
 
+  "movementOpenSettingsButton": "Abrir configurações do aparelho",
+  "@movementOpenSettingsButton": {"description": "Button that opens the Android app settings to grant the activity recognition permission"},
+
   "movementSensorUnavailableMessage": "Não foi possível ler o sensor de passos agora.",
   "@movementSensorUnavailableMessage": {"description": "Shown when the step sensor is unavailable"},
 
@@ -421,6 +446,9 @@
     "description": "Previous cycle still within the grace window, pending final collection (folded into the next tap-to-collect level)",
     "placeholders": {"steps": {"type": "int"}}
   },
+
+  "movementBonusAlertMessage": "Colete seus bônus de Movimento",
+  "@movementBonusAlertMessage": {"description": "Subtle Home banner inviting the user to open Movement and collect accumulated but uncollected XP/MentalCoins"},
 
   "movementXpCollectedFeedback": "+{xp} XP dos seus passos!",
   "@movementXpCollectedFeedback": {
@@ -1033,6 +1061,9 @@
 
   "movementGoalGoButton": "Ir",
   "@movementGoalGoButton": {"description": "Confirm button that applies the selected/custom daily goal and starts tracking against it"},
+
+  "movementCurrentGoalLabel": "Meta atual",
+  "@movementCurrentGoalLabel": {"description": "Shown in place of the Go button when the selected goal is already the active one, nothing to confirm"},
 
   "movementCustomGoalHint": "livre",
   "@movementCustomGoalHint": {"description": "Short placeholder shown inside the editable custom-goal chip before the user types a value"},

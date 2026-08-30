@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/app_theme.dart';
 
-const List<Color> kBalloonColors = [AppColors.gold, AppColors.teal, AppColors.bone, AppColors.error];
+List<Color> get kBalloonColors => [AppColors.gold, AppColors.teal, AppColors.bone, AppColors.error];
 
 /// Dispara uma leva de balões — chame [play] a partir de quem detectou o
 /// evento raro (MICROINTERACTIONS.md §3). Não depende de BuildContext,

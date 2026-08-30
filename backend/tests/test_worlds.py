@@ -48,11 +48,18 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
 
     # V3.0 (V3.0_ESPORTES_REGIOES_CULTURA_POP.md) acrescenta o Mundo da
     # Cultura Geral (esportes/regioes/cultura_pop) aos dois mundos
-    # originais.
+    # originais. V3.0.1 (cores) entra em Mente Lógica; V3.1 (mitologia/
+    # enem/concursos) entra em Cultura Geral, junto dos demais
+    # territórios de trivia.
     assert set(worlds.keys()) == {"linguagem", "mente_logica", "cultura_geral"}
     assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas"}
-    assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento"}
-    assert set(worlds["cultura_geral"]["territory_ids"]) == {"esportes", "regioes", "cultura_pop"}
+    assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento", "cores"}
+    assert set(worlds["cultura_geral"]["territory_ids"]) == {
+        "esportes", "regioes", "cultura_pop",
+        "mitologia_grega", "mitologia_nordica", "mitologia_indigena",
+        "enem_linguagens", "enem_humanas", "enem_natureza", "enem_matematica",
+        "concursos_portugues", "concursos_raciocinio", "concursos_direito",
+    }
     assert worlds["linguagem"]["completed"] is False
     assert worlds["mente_logica"]["completed"] is False
     assert worlds["cultura_geral"]["completed"] is False

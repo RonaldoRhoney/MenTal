@@ -77,7 +77,7 @@ class _AgeGateScreenState extends State<AgeGateScreen> {
                     TextSpan(text: l10n.ageGateTermsLinkPrefix),
                     TextSpan(
                       text: l10n.ageGateTermsLinkText,
-                      style: const TextStyle(color: AppColors.teal, decoration: TextDecoration.underline),
+                      style: TextStyle(color: AppColors.teal, decoration: TextDecoration.underline),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () => launchUrl(Uri.parse(kPrivacyPolicyUrl), mode: LaunchMode.externalApplication),
                     ),
@@ -94,7 +94,7 @@ class _AgeGateScreenState extends State<AgeGateScreen> {
                 ),
               if (_error != null) ...[
                 const SizedBox(height: 16),
-                Text(_error!, style: const TextStyle(color: AppColors.error), textAlign: TextAlign.center),
+                Text(_error!, style: TextStyle(color: AppColors.error), textAlign: TextAlign.center),
               ],
             ],
           ),

@@ -187,6 +187,22 @@ TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 12, 2: 10, 3: 7}
 # incluindo fácil, porque ali o formato é obrigatório, não opcional.
 PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL = 2
 
+# Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
+# depende de mode=relampago) — Conhecimento (CONHECIMENTO_EXPANSAO_
+# GERAL.md) e agora Cores (V3.0.1_DESAFIO_CORES.md, 29/08/2026): um
+# desafio de atenção/velocidade de leitura só faz sentido cronometrado,
+# em qualquer nível, incluindo fácil.
+ALWAYS_TIMED_TERRITORIES = {"conhecimento", "cores"}
+
+# Achado real (feedback de jogadores, 29/08/2026): a mesma pergunta
+# repetia mais de 2 vezes numa sessão — aceitável repetir, mas nunca mais
+# que isso (routers/challenges.py). Janela de quantas entregas recentes
+# olhar pra contar repetição por usuário+território+timed; grande o
+# bastante pra cobrir uma sessão de jogo normal, sem olhar história
+# antiga demais.
+MAX_CHALLENGE_REPEATS_PER_SESSION = 2
+RECENT_SERVED_WINDOW_FOR_REPEAT_AVOIDANCE = 20
+
 # Bônus de velocidade (PALAVRAS_RELAMPAGO.md §4): responder nos primeiros
 # 30% do tempo disponível vale o bônus máximo (até +100% do xp_base do
 # desafio); responder depois de 70% do tempo consumido não perde o
@@ -203,6 +219,12 @@ TIMED_MULTIPLE_CHOICE_SPEED_BONUS_SLOW_FRACTION = 0.7
 # meta paga este bônus extra, uma vez por ciclo, além do bônus por faixa
 # de MOVEMENT_STEP_TIERS — recompensa superar o que a pessoa se propôs,
 # não o volume absoluto (que a faixa já cobre).
+# MentalCoins por passo (29/08/2026, pedido de Rhoney): "a cada 1000
+# passos = 5 MentalCoins" — por marco cruzado dentro do ciclo (app/
+# movement.py), independente da faixa de XP acima.
+MOVEMENT_STEPS_PER_MENTALCOIN = 1000
+MOVEMENT_MENTALCOINS_PER_MILESTONE = 5
+
 MOVEMENT_GOAL_BONUS_XP = 50
 # Achado de auditoria de segurança (28/08/2026): só validava "maior que
 # zero" — uma meta de 1 passo garantia o bônus com esforço zero, todo

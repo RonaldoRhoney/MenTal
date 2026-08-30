@@ -307,7 +307,7 @@ class _FriendsScreenState extends State<FriendsScreen> {
                     ),
                     if (_error != null) ...[
                       const SizedBox(height: 8),
-                      Text(_error!, style: const TextStyle(color: AppColors.error)),
+                      Text(_error!, style: TextStyle(color: AppColors.error)),
                     ],
                     if (_friendRequests.isNotEmpty) ...[
                       const SizedBox(height: 24),
@@ -361,10 +361,11 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                 final realName = friend['real_name'] as String?;
                                 return ListTile(
                                   leading: ProfilePhotoCircle(photoUrl: friend['photo_url'] as String?),
+                                  // Nome real substitui o apelido gerado
+                                  // pelo sistema assim que existir
+                                  // (29/08/2026, pedido de Rhoney).
                                   title: Text(
-                                    realName != null && realName.isNotEmpty
-                                        ? '${friend['nickname']} · $realName'
-                                        : friend['nickname'] as String,
+                                    realName != null && realName.isNotEmpty ? realName : friend['nickname'] as String,
                                   ),
                                   subtitle: Text(
                                     '${friend['xp_total']} XP',

@@ -47,7 +47,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
         child: data == null
             ? Center(
                 child: _error != null
-                    ? Text(_error!, style: const TextStyle(color: AppColors.error))
+                    ? Text(_error!, style: TextStyle(color: AppColors.error))
                     : Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [

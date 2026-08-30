@@ -93,7 +93,7 @@ class _BattlesScreenState extends State<BattlesScreen> {
         child: _loading
             ? const Center(child: CircularProgressIndicator())
             : _error != null
-                ? Center(child: Text(_error!, style: const TextStyle(color: AppColors.error)))
+                ? Center(child: Text(_error!, style: TextStyle(color: AppColors.error)))
                 : _battles.isEmpty
                     ? Center(
                         child: Padding(
@@ -106,9 +106,12 @@ class _BattlesScreenState extends State<BattlesScreen> {
                         itemBuilder: (context, index) {
                           final battle = _battles[index];
                           final canAnswer = battle['status'] == 'pending' && battle['i_answered'] == false;
+                          // Nome real substitui o apelido gerado pelo
+                          // sistema assim que existir (29/08/2026,
+                          // pedido de Rhoney).
                           final opponentRealName = battle['opponent_real_name'] as String?;
                           final opponentLabel = opponentRealName != null && opponentRealName.isNotEmpty
-                              ? '${battle['opponent_nickname']} · $opponentRealName'
+                              ? opponentRealName
                               : battle['opponent_nickname'];
                           return ListTile(
                             leading: ProfilePhotoCircle(photoUrl: battle['opponent_photo_url'] as String?),

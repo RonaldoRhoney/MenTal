@@ -25,6 +25,11 @@ BLOCKS = [
     {"id": "concursos", "name": "Concursos", "display_order": 3},
     {"id": "regioes", "name": "Regiões", "display_order": 4},
     {"id": "mundo", "name": "Mundo", "display_order": 5},
+    # V3.1 (V3.1_MITOLOGIA_ENEM_CONCURSOS.md, aprovado) — bloco novo,
+    # não previsto em BLOCOS_MENUS.md original. ENEM/Concursos acima já
+    # existiam como linhas vazias esperando território; este é o
+    # primeiro uso real dos dois.
+    {"id": "mitologia", "name": "Mitologia", "display_order": 6},
 ]
 
 TERRITORIES = [
@@ -63,6 +68,45 @@ TERRITORIES = [
     {"id": "esportes", "challenge_type": "esportes", "requires_subscription": True, "free_sample_count": 2, "display_order": 8, "world_id": "cultura_geral"},
     {"id": "regioes", "challenge_type": "regioes", "requires_subscription": True, "free_sample_count": 2, "display_order": 9, "world_id": "cultura_geral", "block_id": "regioes"},
     {"id": "cultura_pop", "challenge_type": "cultura_pop", "requires_subscription": True, "free_sample_count": 2, "display_order": 10, "world_id": "cultura_geral"},
+    # V3.0.1 (V3.0.1_DESAFIO_CORES.md, aprovado 29/08/2026) — desafio de
+    # atenção/velocidade de leitura (Stroop simplificado, sem
+    # interferência entre cor da tinta e significado). Formato sempre
+    # cronometrado (config.ALWAYS_TIMED_TERRITORIES), mesmo território
+    # normal em todo o resto (não é um "modo", é o próprio território) —
+    # entra no Mundo da Mente Lógica junto de lógica/visual/conhecimento,
+    # que já testam habilidade cognitiva em vez de conteúdo factual.
+    {"id": "cores", "challenge_type": "cores", "requires_subscription": True, "free_sample_count": 2, "display_order": 11, "world_id": "mente_logica"},
+    # V3.1 (V3.1_MITOLOGIA_ENEM_CONCURSOS.md, aprovado) — só estrutura
+    # (território/bloco/mundo/l10n); conteúdo (CHALLENGES) é curadoria
+    # manual de Rhoney via backend/content/*.json + append_production_
+    # content.py (backend/content/README.md, RISKS_AND_OPEN_DECISIONS.md
+    # §2: "nunca gerado/validado por IA") — nenhuma pergunta é adicionada
+    # aqui. Mesmo tier avançado dos demais territórios de trivia, mesmo
+    # Mundo (Cultura Geral) de esportes/regiões/cultura_pop.
+    #
+    # Mitologia — "nessa ordem de introdução" do doc (mais conhecido →
+    # mais nichado) vira 3 territórios sob o bloco "mitologia", em vez de
+    # cadência de dificuldade dentro de um único território — mesmo
+    # padrão de "regioes" (um bloco pode ter 1+ território).
+    {"id": "mitologia_grega", "challenge_type": "mitologia_grega", "requires_subscription": True, "free_sample_count": 2, "display_order": 12, "world_id": "cultura_geral", "block_id": "mitologia"},
+    {"id": "mitologia_nordica", "challenge_type": "mitologia_nordica", "requires_subscription": True, "free_sample_count": 2, "display_order": 13, "world_id": "cultura_geral", "block_id": "mitologia"},
+    {"id": "mitologia_indigena", "challenge_type": "mitologia_indigena", "requires_subscription": True, "free_sample_count": 2, "display_order": 14, "world_id": "cultura_geral", "block_id": "mitologia"},
+    # ENEM — "dividido por matéria" (doc §3), Redação fica de fora
+    # (V3.4). 4 territórios sob o bloco "enem" (já existia vazio em
+    # BLOCKS desde BLOCOS_MENUS.md).
+    {"id": "enem_linguagens", "challenge_type": "enem_linguagens", "requires_subscription": True, "free_sample_count": 2, "display_order": 15, "world_id": "cultura_geral", "block_id": "enem"},
+    {"id": "enem_humanas", "challenge_type": "enem_humanas", "requires_subscription": True, "free_sample_count": 2, "display_order": 16, "world_id": "cultura_geral", "block_id": "enem"},
+    {"id": "enem_natureza", "challenge_type": "enem_natureza", "requires_subscription": True, "free_sample_count": 2, "display_order": 17, "world_id": "cultura_geral", "block_id": "enem"},
+    {"id": "enem_matematica", "challenge_type": "enem_matematica", "requires_subscription": True, "free_sample_count": 2, "display_order": 18, "world_id": "cultura_geral", "block_id": "enem"},
+    # Concursos (doc §4) — Português, Raciocínio Lógico, Direito/
+    # Cidadania básica. "Atualidades" fica de fora por enquanto (doc:
+    # "somente com filtro forte pra fatos consolidados" — decisão de
+    # incluir ou não fica com Rhoney na hora de curar, não é um
+    # território à parte aqui). 3 territórios sob o bloco "concursos"
+    # (já existia vazio em BLOCKS).
+    {"id": "concursos_portugues", "challenge_type": "concursos_portugues", "requires_subscription": True, "free_sample_count": 2, "display_order": 19, "world_id": "cultura_geral", "block_id": "concursos"},
+    {"id": "concursos_raciocinio", "challenge_type": "concursos_raciocinio", "requires_subscription": True, "free_sample_count": 2, "display_order": 20, "world_id": "cultura_geral", "block_id": "concursos"},
+    {"id": "concursos_direito", "challenge_type": "concursos_direito", "requires_subscription": True, "free_sample_count": 2, "display_order": 21, "world_id": "cultura_geral", "block_id": "concursos"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -1683,6 +1727,175 @@ CHALLENGES = [
         "explanation": "Elsa é a princesa com poderes de congelar coisas em \"Frozen\" — Anna é sua irmã, sem poderes mágicos.",
         "age_reviewed": True,
         "hints": ["É a irmã mais velha na história.", "A música \"Livre Estou\" (Let It Go) é cantada por essa personagem."],
+    },
+
+    # V3.0.1 (V3.0.1_DESAFIO_CORES.md, aprovado 29/08/2026) — Stroop
+    # simplificado: sem interferência entre cor da tinta e significado, o
+    # nome da cor certa aparece em texto neutro entre as opções. Não é
+    # curadoria factual — dificuldade aqui é só o tempo (config.
+    # TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS), então os 3 níveis variam
+    # só a formulação do comando, nunca o conceito testado.
+    {
+        "territory_id": "cores", "difficulty_level": 1,
+        "prompt": "Toque na cor Vermelha.",
+        "options": ["Vermelha", "Azul", "Verde", "Amarela"],
+        "correct_answer": "Vermelha",
+        "explanation": "A cor pedida era Vermelha.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 1,
+        "prompt": "Toque na cor Azul.",
+        "options": ["Roxa", "Azul", "Laranja", "Rosa"],
+        "correct_answer": "Azul",
+        "explanation": "A cor pedida era Azul.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 1,
+        "prompt": "Toque na cor Verde.",
+        "options": ["Verde", "Preta", "Branca", "Cinza"],
+        "correct_answer": "Verde",
+        "explanation": "A cor pedida era Verde.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 1,
+        "prompt": "Toque na cor Amarela.",
+        "options": ["Marrom", "Turquesa", "Amarela", "Vermelha"],
+        "correct_answer": "Amarela",
+        "explanation": "A cor pedida era Amarela.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 1,
+        "prompt": "Toque na cor Roxa.",
+        "options": ["Azul", "Roxa", "Rosa", "Verde"],
+        "correct_answer": "Roxa",
+        "explanation": "A cor pedida era Roxa.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 1,
+        "prompt": "Toque na cor Laranja.",
+        "options": ["Laranja", "Cinza", "Preta", "Branca"],
+        "correct_answer": "Laranja",
+        "explanation": "A cor pedida era Laranja.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 2,
+        "prompt": "Qual das alternativas mostra a cor Rosa?",
+        "options": ["Turquesa", "Marrom", "Rosa", "Amarela"],
+        "correct_answer": "Rosa",
+        "explanation": "A cor pedida era Rosa.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 2,
+        "prompt": "Qual das alternativas mostra a cor Preta?",
+        "options": ["Preta", "Vermelha", "Azul", "Roxa"],
+        "correct_answer": "Preta",
+        "explanation": "A cor pedida era Preta.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 2,
+        "prompt": "Qual das alternativas mostra a cor Branca?",
+        "options": ["Verde", "Laranja", "Branca", "Cinza"],
+        "correct_answer": "Branca",
+        "explanation": "A cor pedida era Branca.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 2,
+        "prompt": "Qual das alternativas mostra a cor Cinza?",
+        "options": ["Rosa", "Cinza", "Marrom", "Turquesa"],
+        "correct_answer": "Cinza",
+        "explanation": "A cor pedida era Cinza.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 2,
+        "prompt": "Qual das alternativas mostra a cor Marrom?",
+        "options": ["Preta", "Branca", "Marrom", "Vermelha"],
+        "correct_answer": "Marrom",
+        "explanation": "A cor pedida era Marrom.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 2,
+        "prompt": "Qual das alternativas mostra a cor Turquesa?",
+        "options": ["Azul", "Turquesa", "Verde", "Roxa"],
+        "correct_answer": "Turquesa",
+        "explanation": "A cor pedida era Turquesa.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 3,
+        "prompt": "Encontre rápido: a alternativa correta é a cor Vermelha.",
+        "options": ["Laranja", "Rosa", "Vermelha", "Amarela"],
+        "correct_answer": "Vermelha",
+        "explanation": "A cor pedida era Vermelha.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 3,
+        "prompt": "Encontre rápido: a alternativa correta é a cor Azul.",
+        "options": ["Azul", "Verde", "Cinza", "Preta"],
+        "correct_answer": "Azul",
+        "explanation": "A cor pedida era Azul.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 3,
+        "prompt": "Encontre rápido: a alternativa correta é a cor Verde.",
+        "options": ["Branca", "Turquesa", "Verde", "Marrom"],
+        "correct_answer": "Verde",
+        "explanation": "A cor pedida era Verde.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 3,
+        "prompt": "Encontre rápido: a alternativa correta é a cor Amarela.",
+        "options": ["Amarela", "Roxa", "Rosa", "Azul"],
+        "correct_answer": "Amarela",
+        "explanation": "A cor pedida era Amarela.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 3,
+        "prompt": "Encontre rápido: a alternativa correta é a cor Roxa.",
+        "options": ["Marrom", "Preta", "Roxa", "Turquesa"],
+        "correct_answer": "Roxa",
+        "explanation": "A cor pedida era Roxa.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
+    },
+    {
+        "territory_id": "cores", "difficulty_level": 3,
+        "prompt": "Encontre rápido: a alternativa correta é a cor Laranja.",
+        "options": ["Cinza", "Branca", "Vermelha", "Laranja"],
+        "correct_answer": "Laranja",
+        "explanation": "A cor pedida era Laranja.",
+        "age_reviewed": True,
+        "hints": ["Leia o nome exato pedido, sem pensar em nenhuma cor visual.", "Todas as opções estão escritas na mesma cor de texto — o nome é a única pista."],
     },
 ]
 

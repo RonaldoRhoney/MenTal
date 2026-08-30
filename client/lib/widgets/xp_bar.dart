@@ -35,7 +35,7 @@ class XpBar extends StatelessWidget {
               width: 32,
               height: 32,
               alignment: Alignment.center,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(colors: [AppColors.purple, AppColors.gold]),
               ),
@@ -64,7 +64,7 @@ class XpBar extends StatelessWidget {
                     widthFactor: value,
                     child: Container(
                       decoration: BoxDecoration(
-                        gradient: const LinearGradient(
+                        gradient: LinearGradient(
                           colors: [AppColors.victory, AppColors.purple, AppColors.gold],
                         ),
                         boxShadow: [

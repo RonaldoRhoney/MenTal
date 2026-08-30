@@ -76,6 +76,39 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryCulturaPop => 'Cultura Pop';
 
   @override
+  String get territoryCores => 'Cores';
+
+  @override
+  String get territoryMitologiaGrega => 'Mitologia Grega';
+
+  @override
+  String get territoryMitologiaNordica => 'Mitologia Nórdica';
+
+  @override
+  String get territoryMitologiaIndigena => 'Mitologia Indígena';
+
+  @override
+  String get territoryEnemLinguagens => 'ENEM: Linguagens';
+
+  @override
+  String get territoryEnemHumanas => 'ENEM: Humanas';
+
+  @override
+  String get territoryEnemNatureza => 'ENEM: Natureza';
+
+  @override
+  String get territoryEnemMatematica => 'ENEM: Matemática';
+
+  @override
+  String get territoryConcursosPortugues => 'Concursos: Português';
+
+  @override
+  String get territoryConcursosRaciocinio => 'Concursos: Lógica';
+
+  @override
+  String get territoryConcursosDireito => 'Concursos: Direito';
+
+  @override
   String get dailyLimitReachedMessage =>
       'Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.';
 
@@ -220,10 +253,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get badgeLockedLabel => 'Bloqueado';
 
   @override
-  String get settingsTooltip => 'Configurações';
+  String get settingsTooltip => 'Ajuste';
 
   @override
-  String get settingsScreenTitle => 'Configurações';
+  String get settingsScreenTitle => 'Ajuste';
 
   @override
   String get soundSectionTitle => 'Som';
@@ -332,7 +365,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get pushPrimingDialogMessage =>
-      'O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Configurações.';
+      'O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Ajuste.';
 
   @override
   String get pushPrimingDialogAllowButton => 'Ativar';
@@ -373,6 +406,9 @@ class AppLocalizationsPt extends AppLocalizations {
       'Sem permissão de atividade física, o contador de passos fica indisponível. Você pode conceder depois, nas configurações do aparelho.';
 
   @override
+  String get movementOpenSettingsButton => 'Abrir configurações do aparelho';
+
+  @override
   String get movementSensorUnavailableMessage =>
       'Não foi possível ler o sensor de passos agora.';
 
@@ -389,6 +425,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String movementPendingReportLabel(int steps) {
     return 'Você ainda tem um ciclo anterior com $steps passos pra coletar — eles entram na próxima coleta.';
   }
+
+  @override
+  String get movementBonusAlertMessage => 'Colete seus bônus de Movimento';
 
   @override
   String movementXpCollectedFeedback(int xp) {
@@ -1002,6 +1041,9 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get movementGoalGoButton => 'Ir';
+
+  @override
+  String get movementCurrentGoalLabel => 'Meta atual';
 
   @override
   String get movementCustomGoalHint => 'livre';

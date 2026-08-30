@@ -66,7 +66,7 @@ def collect_steps(
     db: Session = Depends(get_db),
 ):
     try:
-        cycle, xp_awarded, level_up, new_level, goal_reached, checkpoints_reached = movement.collect_steps(
+        cycle, xp_awarded, level_up, new_level, goal_reached, checkpoints_reached, mentalcoins_awarded = movement.collect_steps(
             db, user_id, body.steps, body.cycle_id
         )
     except movement.MovementError as e:
@@ -78,4 +78,5 @@ def collect_steps(
         new_level=new_level,
         goal_reached=goal_reached,
         checkpoints_reached=checkpoints_reached,
+        mentalcoins_awarded=mentalcoins_awarded,
     )

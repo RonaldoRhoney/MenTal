@@ -157,7 +157,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
             ),
             if (_error != null) ...[
               const SizedBox(height: 8),
-              Text(_error!, style: const TextStyle(color: AppColors.error)),
+              Text(_error!, style: TextStyle(color: AppColors.error)),
             ],
             const SizedBox(height: 8),
             FilledButton(

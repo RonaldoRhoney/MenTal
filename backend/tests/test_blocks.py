@@ -24,11 +24,13 @@ def test_progress_includes_matematica_block_with_numeros_e_logica(client):
 
 
 def test_blocks_without_any_territory_are_not_returned(client):
-    """ENEM/Concursos/Mundo existem como linha (BLOCOS_MENUS.md §3,
-    conteúdo por curar) mas não têm território ainda — não devem
-    aparecer na resposta pra não virar um menu vazio sem nada pra abrir.
-    "regioes" passou a ter território a partir da V3.0
-    (V3.0_ESPORTES_REGIOES_CULTURA_POP.md), então aparece normalmente."""
+    """"Mundo" existe como linha (BLOCOS_MENUS.md §3, conteúdo por curar)
+    mas não tem território ainda — não deve aparecer na resposta pra não
+    virar um menu vazio sem nada pra abrir. "regioes" passou a ter
+    território a partir da V3.0 (V3.0_ESPORTES_REGIOES_CULTURA_POP.md);
+    "enem"/"concursos"/"mitologia" passaram a ter território a partir da
+    V3.1 (V3.1_MITOLOGIA_ENEM_CONCURSOS.md) — todos aparecem
+    normalmente agora."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -36,7 +38,7 @@ def test_blocks_without_any_territory_are_not_returned(client):
     body = client.get("/progress", headers=headers).json()
     block_ids = {b["block_id"] for b in body["blocks"]}
 
-    assert block_ids == {"matematica", "regioes"}
+    assert block_ids == {"matematica", "regioes", "enem", "concursos", "mitologia"}
 
 
 def test_territories_without_block_are_not_grouped_into_any_block(client):

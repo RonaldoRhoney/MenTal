@@ -53,7 +53,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
         child: progress == null
             ? Center(
                 child: _error != null
-                    ? Text(_error!, style: const TextStyle(color: AppColors.error))
+                    ? Text(_error!, style: TextStyle(color: AppColors.error))
                     : Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [

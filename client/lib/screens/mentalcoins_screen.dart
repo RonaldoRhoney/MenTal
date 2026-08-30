@@ -89,7 +89,7 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
         child: balance == null
             ? Center(
                 child: _error != null
-                    ? Padding(padding: const EdgeInsets.all(24), child: Text(_error!, style: const TextStyle(color: AppColors.error)))
+                    ? Padding(padding: const EdgeInsets.all(24), child: Text(_error!, style: TextStyle(color: AppColors.error)))
                     : const CircularProgressIndicator(),
               )
             : ListView(
@@ -282,7 +282,16 @@ class _HallOfFameTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(entry['nickname'] as String, style: Theme.of(context).textTheme.bodyMedium, overflow: TextOverflow.ellipsis),
+                  // Nome real substitui o apelido gerado pelo sistema
+                  // assim que existir (29/08/2026, pedido de Rhoney).
+                  Text(
+                    () {
+                      final realName = entry['real_name'] as String?;
+                      return realName != null && realName.isNotEmpty ? realName : entry['nickname'] as String;
+                    }(),
+                    style: Theme.of(context).textTheme.bodyMedium,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                   Text(_categoryLabel(entry['category'] as String, rank), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
                 ],
               ),

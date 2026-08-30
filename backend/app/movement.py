@@ -17,7 +17,7 @@ from datetime import datetime, timedelta
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from . import config, models, scoring, services
+from . import config, mentalcoins, models, scoring, services
 from .timeutil import naive, utcnow
 
 
@@ -161,8 +161,8 @@ def collect_steps(
     steps: int,
     cycle_id: str | None = None,
     now: datetime | None = None,
-) -> tuple[models.MovementCycle, int, bool, int | None, bool, int]:
-    """Retorna (ciclo, xp ganho nesta chamada, level_up, new_level, goal_reached, checkpoints_reached)."""
+) -> tuple[models.MovementCycle, int, bool, int | None, bool, int, int]:
+    """Retorna (ciclo, xp ganho nesta chamada, level_up, new_level, goal_reached, checkpoints_reached, mentalcoins_awarded)."""
     now = now or utcnow()
     profile = services.get_or_create_profile(db, user_id)
     if not profile.movement_enabled or profile.movement_cycle_anchor_at is None:
@@ -181,9 +181,24 @@ def collect_steps(
             raise MovementError("CYCLE_EXPIRED", "O prazo para coletar este ciclo já passou.")
 
     previous_bonus = _bonus_for_steps(cycle.steps_collected)
+    previous_total = cycle.steps_collected
     cycle.steps_collected += steps
     new_bonus = _bonus_for_steps(cycle.steps_collected)
     xp_delta = max(0, new_bonus - previous_bonus)
+
+    # MentalCoins por passo (29/08/2026, pedido de Rhoney: "a cada 1000
+    # passos = 5 MentalCoins") — por CICLO (mesma janela de 24h da faixa
+    # de XP acima), calculado por marco cruzado (previous_total//1000 →
+    # steps_collected//1000), não por "steps//1000" isolado — suporta
+    # coletas pequenas e repetidas (auto-coleta) sem pagar de novo o
+    # mesmo marco já cruzado numa chamada anterior.
+    previous_milestones = previous_total // config.MOVEMENT_STEPS_PER_MENTALCOIN
+    new_milestones = cycle.steps_collected // config.MOVEMENT_STEPS_PER_MENTALCOIN
+    milestones_crossed = new_milestones - previous_milestones
+    mentalcoins_awarded = 0
+    if milestones_crossed > 0:
+        mentalcoins_awarded = milestones_crossed * config.MOVEMENT_MENTALCOINS_PER_MILESTONE
+        mentalcoins.credit(db, user_id, mentalcoins_awarded, "movement_steps_milestone")
 
     goal_reached = False
     goal = profile.movement_daily_goal_steps
@@ -211,7 +226,7 @@ def collect_steps(
 
     db.commit()
     db.refresh(cycle)
-    return cycle, xp_delta, level_up, (profile.level if level_up else None), goal_reached, checkpoints_reached
+    return cycle, xp_delta, level_up, (profile.level if level_up else None), goal_reached, checkpoints_reached, mentalcoins_awarded
 
 
 def get_recent_cycles(db: Session, user_id: str, limit: int = 7) -> list[models.MovementCycle]:

@@ -34,12 +34,12 @@ Future<bool> showReportBlockSheet(
           Container(width: 36, height: 4, decoration: BoxDecoration(color: AppColors.muted.withValues(alpha: 0.4), borderRadius: BorderRadius.circular(2))),
           const SizedBox(height: 12),
           ListTile(
-            leading: const Icon(Icons.flag_outlined, color: AppColors.gold),
+            leading: Icon(Icons.flag_outlined, color: AppColors.gold),
             title: Text(l10n.reportUserOption),
             onTap: () => Navigator.of(sheetContext).pop('report'),
           ),
           ListTile(
-            leading: const Icon(Icons.block_outlined, color: AppColors.error),
+            leading: Icon(Icons.block_outlined, color: AppColors.error),
             title: Text(l10n.blockUserOption),
             onTap: () => Navigator.of(sheetContext).pop('block'),
           ),

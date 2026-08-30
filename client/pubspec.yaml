@@ -22,6 +22,12 @@ dependencies:
   fl_chart: ^1.2.0
   pedometer: ^4.2.0
   permission_handler: ^12.0.3
+  # V3.0.1 — foreground service Android pra manter o listener do sensor
+  # de passos vivo com o app em segundo plano/tela apagada (achado real,
+  # 29/08/2026: TYPE_STEP_COUNTER só entrega evento com um listener ATIVO
+  # no momento do passo — sem isso, passos dados com o app fechado/tela
+  # apagada nunca chegam, mesmo reabrindo depois; ver movement_service.dart).
+  flutter_foreground_task: ^11.0.1
   firebase_core: ^4.13.0
   firebase_messaging: ^16.5.0
   share_plus: ^13.3.0

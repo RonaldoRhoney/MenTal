@@ -50,7 +50,7 @@ class ProfilePhotoCircle extends StatelessWidget {
 
     return Container(
       padding: const EdgeInsets.all(3),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         shape: BoxShape.circle,
         gradient: LinearGradient(colors: [AppColors.gold, AppColors.purple]),
       ),

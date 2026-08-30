@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/movement_service.dart';
+import '../services/theme_mode_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
+import '../widgets/pulse_in.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
@@ -83,6 +85,13 @@ class _HomeScreenState extends State<HomeScreen> {
   int? _movementPendingSteps;
   String? _movementCycleId;
   StreamSubscription<int>? _movementStepSub;
+  // Alerta sutil de bônus acumulado (29/08/2026, pedido de Rhoney):
+  // nada se perde enquanto não coletado — passos do ciclo atual ficam
+  // guardados localmente (MovementService) e o ciclo anterior fica
+  // reservado dentro da janela de graça (MOVEMENT_COLLECTION_GRACE_
+  // HOURS, backend) — isso só formaliza um convite visual pra vir
+  // coletar, sem mudar nenhuma regra de acúmulo que já existia.
+  bool _movementHasPendingCycle = false;
 
   @override
   void initState() {
@@ -134,6 +143,8 @@ class _HomeScreenState extends State<HomeScreen> {
       final status = await widget.client.movementStatus();
       final enabled = status['movement_enabled'] as bool;
       final cycle = status['current_cycle'] as Map<String, dynamic>?;
+      final hasPendingCycle = status['pending_report_cycle'] != null;
+      if (mounted) setState(() => _movementHasPendingCycle = hasPendingCycle);
       if (!enabled || cycle == null) {
         _movementStepSub?.cancel();
         _movementCycleId = null;
@@ -268,17 +279,44 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // Identidade de marca no topo — mesma linguagem visual do
-              // splash/login (BRAND.md), sem nenhum ícone de utilidade
-              // competindo com o wordmark.
+              // splash/login (BRAND.md). Único ícone de utilidade
+              // permitido aqui (29/08/2026, pedido de Rhoney): alternar
+              // claro/escuro — fica no canto pra não competir com o
+              // wordmark centralizado.
               const SizedBox(height: 16),
-              Text(l10n.homeTitle, textAlign: TextAlign.center, style: Theme.of(context).textTheme.displaySmall),
-              const SizedBox(height: 4),
-              Text(
-                l10n.loginSlogan,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodySmall,
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Text(l10n.homeTitle, textAlign: TextAlign.center, style: Theme.of(context).textTheme.displaySmall),
+                      const SizedBox(height: 4),
+                      Text(
+                        l10n.loginSlogan,
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                    ],
+                  ),
+                  const Positioned(
+                    right: 0,
+                    top: 0,
+                    child: _ThemeModeToggleButton(),
+                  ),
+                ],
               ),
               const SizedBox(height: 16),
+              if ((_movementPendingSteps ?? 0) > 0 || _movementHasPendingCycle) ...[
+                _MovementBonusAlert(
+                  onTap: () async {
+                    await Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => MovementScreen(client: widget.client)),
+                    );
+                    _loadMovementBadge();
+                  },
+                ),
+                const SizedBox(height: 12),
+              ],
               // Acessos dinâmicos (pedido de Rhoney, 2026-08-26): Progresso/
               // Ranking/Amigos/Movimento como cards de atalho logo abaixo da
               // marca, em vez de ícones pequenos disputando espaço.
@@ -301,7 +339,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               if (_error != null) ...[
                 const SizedBox(height: 8),
-                Text(_error!, style: const TextStyle(color: AppColors.error)),
+                Text(_error!, style: TextStyle(color: AppColors.error)),
               ],
               const SizedBox(height: 16),
               Expanded(
@@ -354,6 +392,76 @@ class _HomeScreenState extends State<HomeScreen> {
           NavigationDestination(icon: const Icon(Icons.feedback_outlined), label: l10n.feedbackMenuTooltip),
         ],
       ),
+    );
+  }
+}
+
+/// Alerta sutil de bônus acumulado (29/08/2026, pedido de Rhoney):
+/// "colete seus bônus..." — nunca bloqueia nem perde nada (o acúmulo já
+/// existia: passos do ciclo atual ficam guardados localmente, o ciclo
+/// anterior fica reservado dentro da janela de graça no backend), só
+/// avisa visualmente que existe algo esperando. PulseIn com
+/// intensidade baixa (0.15, mesma usada em outros reforços "sutis" do
+/// app) em vez de qualquer animação chamativa.
+class _MovementBonusAlert extends StatelessWidget {
+  const _MovementBonusAlert({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return PulseIn(
+      intensity: 0.15,
+      child: Material(
+        color: AppColors.gold.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(14),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(14),
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(14), border: Border.all(color: AppColors.gold.withValues(alpha: 0.35))),
+            child: Row(
+              children: [
+                Icon(Icons.redeem_rounded, color: AppColors.gold, size: 18),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    l10n.movementBonusAlertMessage,
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.gold, fontWeight: FontWeight.w600),
+                  ),
+                ),
+                Icon(Icons.chevron_right_rounded, color: AppColors.gold.withValues(alpha: 0.7), size: 20),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Botão de alternância claro/escuro (29/08/2026, pedido de Rhoney: "na
+/// parte superior") — ListenableBuilder próprio, isolado do resto da
+/// Home: só este ícone precisa saber o tom atual pra escolher sol/lua,
+/// o resto da tela já reconstrói sozinho via main.dart quando o toggle
+/// dispara (ThemeModeService.instance).
+class _ThemeModeToggleButton extends StatelessWidget {
+  const _ThemeModeToggleButton();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: ThemeModeService.instance,
+      builder: (context, _) {
+        final isDark = ThemeModeService.instance.isDark;
+        return IconButton(
+          tooltip: isDark ? 'Ativar tom claro' : 'Ativar tom escuro',
+          onPressed: () => ThemeModeService.instance.toggle(),
+          icon: Icon(isDark ? Icons.light_mode_rounded : Icons.dark_mode_rounded, color: AppColors.gold),
+        );
+      },
     );
   }
 }
@@ -512,11 +620,19 @@ class _WorldSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Destaque leve quando o Mundo está 100% concluído (29/08/2026,
+    // pedido de Rhoney) — só decorativo, nunca trava: o jogador pode
+    // refazer os territórios do Mundo quantas vezes quiser, o card
+    // simplesmente reflete "já bati esse Mundo" com uma borda dourada
+    // sutil, além do check que já existia no título.
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Material(
         color: AppColors.bg2,
-        borderRadius: BorderRadius.circular(16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: BorderSide(color: completed ? AppColors.gold.withValues(alpha: 0.35) : Colors.transparent),
+        ),
         clipBehavior: Clip.antiAlias,
         child: title == null
             ? Padding(padding: const EdgeInsets.all(16), child: Column(children: children))
@@ -531,7 +647,7 @@ class _WorldSection extends StatelessWidget {
                     children: [
                       Expanded(child: Text(title!, style: Theme.of(context).textTheme.titleLarge)),
                       if (completed) ...[
-                        const Icon(Icons.check_circle, color: AppColors.gold, size: 20),
+                        Icon(Icons.check_circle, color: AppColors.gold, size: 20),
                         const SizedBox(width: 8),
                       ],
                     ],
@@ -625,7 +741,17 @@ class _TerritoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final conquered = progress?['conquered'] as bool? ?? false;
+    // Cor de progresso do território (29/08/2026, pedido de Rhoney): em
+    // vez de um check quando "conquistado", card e botão Relâmpago vão
+    // de vermelho suave (recém-começado) a verde (100% da conquista) —
+    // mesma métrica de xp_in_territory/conquest_threshold já usada em
+    // progress_screen.dart. AppColors.error já é terracota, não vermelho
+    // vivo (Princípio de Não-Humilhação, DESIGN_SYSTEM.md §1), então o
+    // "vermelho leve" pedido já é o próprio tom padrão de erro do app.
+    final xpInTerritory = progress?['xp_in_territory'] as int? ?? 0;
+    final conquestThreshold = progress?['conquest_threshold'] as int? ?? 200;
+    final progressFraction = (xpInTerritory / conquestThreshold).clamp(0.0, 1.0);
+    final progressColor = Color.lerp(AppColors.error, AppColors.victory, progressFraction)!;
     // V2 item 13 — Disputa territorial (TERRITORY_DISPUTE.md). Sempre
     // relativo a você + amigos confirmados (nunca global) — o backend
     // já filtra isso, a Home só exibe o que vem pronto.
@@ -659,7 +785,7 @@ class _TerritoryCard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: conquered ? AppColors.gold.withValues(alpha: 0.45) : AppColors.muted.withValues(alpha: 0.18)),
+                border: Border.all(color: progressColor.withValues(alpha: 0.5)),
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -678,10 +804,6 @@ class _TerritoryCard extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
-                  if (conquered) ...[
-                    const SizedBox(height: 4),
-                    const Icon(Icons.check_circle, size: 18, color: AppColors.gold),
-                  ],
                 ],
               ),
             ),
@@ -705,6 +827,7 @@ class _TerritoryCard extends StatelessWidget {
         // (routers/challenges.py), nunca mais restrito a "palavras".
         const SizedBox(height: 8),
         OutlinedButton(
+          style: OutlinedButton.styleFrom(side: BorderSide(color: progressColor.withValues(alpha: 0.6))),
           onPressed: () async {
             await Navigator.of(context).push(
               MaterialPageRoute(
@@ -860,7 +983,7 @@ class _ProgressCard extends StatelessWidget {
                           curve: Curves.easeOutCubic,
                           builder: (context, value, _) => FractionallySizedBox(
                             widthFactor: value,
-                            child: Container(decoration: const BoxDecoration(gradient: LinearGradient(colors: [AppColors.victory, AppColors.purple, AppColors.gold]))),
+                            child: Container(decoration: BoxDecoration(gradient: LinearGradient(colors: [AppColors.victory, AppColors.purple, AppColors.gold]))),
                           ),
                         ),
                       ],
@@ -902,8 +1025,14 @@ class _MetaStat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Centralizado (29/08/2026, pedido de Rhoney: "os números abaixo de
+    // XP TOTAL, MUNDOS E SEQUÊNCIA devem ficar bem no centro de cada
+    // palavra") — antes cada linha (label e valor) só encolhia pro
+    // próprio conteúdo (mainAxisSize.min + crossAxisAlignment.start),
+    // então o valor nunca alinhava embaixo do centro do rótulo quando os
+    // dois tinham larguras diferentes.
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
         Row(

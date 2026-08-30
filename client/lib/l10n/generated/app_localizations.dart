@@ -214,6 +214,72 @@ abstract class AppLocalizations {
   /// **'Cultura Pop'**
   String get territoryCulturaPop;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Cores'**
+  String get territoryCores;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Mitologia Grega'**
+  String get territoryMitologiaGrega;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Mitologia Nórdica'**
+  String get territoryMitologiaNordica;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Mitologia Indígena'**
+  String get territoryMitologiaIndigena;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'ENEM: Linguagens'**
+  String get territoryEnemLinguagens;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'ENEM: Humanas'**
+  String get territoryEnemHumanas;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'ENEM: Natureza'**
+  String get territoryEnemNatureza;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'ENEM: Matemática'**
+  String get territoryEnemMatematica;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Concursos: Português'**
+  String get territoryConcursosPortugues;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Concursos: Lógica'**
+  String get territoryConcursosRaciocinio;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Concursos: Direito'**
+  String get territoryConcursosDireito;
+
   /// Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3
   ///
   /// In pt, this message translates to:
@@ -469,13 +535,13 @@ abstract class AppLocalizations {
   /// Home app bar icon tooltip, opens Settings screen
   ///
   /// In pt, this message translates to:
-  /// **'Configurações'**
+  /// **'Ajuste'**
   String get settingsTooltip;
 
   /// Settings screen app bar title
   ///
   /// In pt, this message translates to:
-  /// **'Configurações'**
+  /// **'Ajuste'**
   String get settingsScreenTitle;
 
   /// Sound settings section title, MICROINTERACTIONS.md/AUDIO_FEEDBACK.md
@@ -655,7 +721,7 @@ abstract class AppLocalizations {
   /// Explanation shown before asking for the system push notification permission
   ///
   /// In pt, this message translates to:
-  /// **'O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Configurações.'**
+  /// **'O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Ajuste.'**
   String get pushPrimingDialogMessage;
 
   /// Button that proceeds to the real system permission prompt
@@ -730,6 +796,12 @@ abstract class AppLocalizations {
   /// **'Sem permissão de atividade física, o contador de passos fica indisponível. Você pode conceder depois, nas configurações do aparelho.'**
   String get movementPermissionDeniedMessage;
 
+  /// Button that opens the Android app settings to grant the activity recognition permission
+  ///
+  /// In pt, this message translates to:
+  /// **'Abrir configurações do aparelho'**
+  String get movementOpenSettingsButton;
+
   /// Shown when the step sensor is unavailable
   ///
   /// In pt, this message translates to:
@@ -753,6 +825,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Você ainda tem um ciclo anterior com {steps} passos pra coletar — eles entram na próxima coleta.'**
   String movementPendingReportLabel(int steps);
+
+  /// Subtle Home banner inviting the user to open Movement and collect accumulated but uncollected XP/MentalCoins
+  ///
+  /// In pt, this message translates to:
+  /// **'Colete seus bônus de Movimento'**
+  String get movementBonusAlertMessage;
 
   /// Feedback after collecting movement XP
   ///
@@ -1827,6 +1905,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Ir'**
   String get movementGoalGoButton;
+
+  /// Shown in place of the Go button when the selected goal is already the active one, nothing to confirm
+  ///
+  /// In pt, this message translates to:
+  /// **'Meta atual'**
+  String get movementCurrentGoalLabel;
 
   /// Short placeholder shown inside the editable custom-goal chip before the user types a value
   ///

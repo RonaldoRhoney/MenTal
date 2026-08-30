@@ -182,7 +182,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   const SizedBox(height: 8),
                   Text(
                     l10n.soundSilencedNote,
-                    style: const TextStyle(color: AppColors.muted, fontSize: 13),
+                    style: TextStyle(color: AppColors.muted, fontSize: 13),
                   ),
                   const SizedBox(height: 28),
                   Text(l10n.notificationsSectionTitle, style: Theme.of(context).textTheme.titleLarge),
@@ -209,7 +209,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   if (_notificationsError != null) ...[
                     const SizedBox(height: 8),
-                    Text(_notificationsError!, style: const TextStyle(color: AppColors.error)),
+                    Text(_notificationsError!, style: TextStyle(color: AppColors.error)),
                   ],
                   if (_blockedUsers.isNotEmpty) ...[
                     const SizedBox(height: 28),
@@ -218,7 +218,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     for (final user in _blockedUsers)
                       ListTile(
                         contentPadding: EdgeInsets.zero,
-                        title: Text(user['nickname'] as String),
+                        // Nome real substitui o apelido gerado pelo
+                        // sistema assim que existir (29/08/2026, pedido
+                        // de Rhoney).
+                        title: Text(() {
+                          final realName = user['real_name'] as String?;
+                          return realName != null && realName.isNotEmpty ? realName : user['nickname'] as String;
+                        }()),
                         trailing: OutlinedButton(
                           style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
                           onPressed: () => _unblockUser(user['user_id'] as String),
@@ -251,7 +257,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   const SizedBox(height: 12),
                   OutlinedButton(
-                    style: OutlinedButton.styleFrom(foregroundColor: AppColors.error, side: const BorderSide(color: AppColors.error)),
+                    style: OutlinedButton.styleFrom(foregroundColor: AppColors.error, side: BorderSide(color: AppColors.error)),
                     onPressed: _deletingAccount ? null : _deleteAccount,
                     child: _deletingAccount
                         ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))

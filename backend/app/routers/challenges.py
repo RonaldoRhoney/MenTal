@@ -24,11 +24,12 @@ def next_challenge(
     # módulos tem que haver um relâmpago"). Modo OPCIONAL — território
     # normal sem "mode=relampago" segue o fluxo de sempre, sem mudança.
     relampago = mode == "relampago"
-    # CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): em
-    # Conhecimento o formato com tempo é OBRIGATÓRIO e único — nunca
-    # formato digitado, independente de "mode". Generaliza o mesmo
-    # mecanismo do Palavras Relâmpago (mesmo componente, dois territórios).
-    timed = relampago or territory_id == "conhecimento"
+    # CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22) / V3.0.1_
+    # DESAFIO_CORES.md (aprovado 29/08/2026): em Conhecimento e Cores o
+    # formato com tempo é OBRIGATÓRIO e único — nunca formato digitado,
+    # independente de "mode". Generaliza o mesmo mecanismo do Palavras
+    # Relâmpago (mesmo componente, territórios diferentes).
+    timed = relampago or territory_id in config.ALWAYS_TIMED_TERRITORIES
     territory = db.get(models.Territory, territory_id)
     if territory is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "TERRITORY_NOT_FOUND", "message": territory_id}})
@@ -88,29 +89,56 @@ def next_challenge(
         raise HTTPException(status_code=404, detail={"error": {"code": "NO_CHALLENGES_AVAILABLE", "message": territory_id}})
 
     import random
+    from collections import Counter
 
     # Achado testando no celular real: com poucos candidatos por nível de
     # dificuldade (2-3 no seed atual), random.choice puro repete o mesmo
     # desafio imediatamente com chance alta (~50% com 2 candidatos) —
     # rodou 20x seguidas em teste manual e saiu sequência de 5 iguais.
     # Não é falta de embaralhamento no cliente, é ausência de "não repetir
-    # o último" no sorteio do backend. Exclui o último desafio já servido
-    # pra esse usuário+território (via Attempt mais recente), mas só
-    # quando sobra pelo menos 1 outro candidato — nunca bloqueia o único
-    # desafio existente.
-    last_challenge_id = db.execute(
-        select(models.Attempt.challenge_id)
-        .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
-        .where(models.Attempt.user_id == user_id)
-        .where(models.Challenge.territory_id == territory_id)
-        .order_by(models.Attempt.created_at.desc())
-        .limit(1)
-    ).scalar_one_or_none()
+    # o último" no sorteio do backend.
+    #
+    # Achado real (feedback de jogadores, 29/08/2026): só evitar repetir
+    # o ÚLTIMO desafio (distância 1) não impede um padrão A,B,A,B,A,...
+    # quando o nível tem poucos candidatos — a mesma pergunta ainda
+    # aparecia mais de 2 vezes numa sessão. Agora olha as últimas
+    # RECENT_SERVED_WINDOW_FOR_REPEAT_AVOIDANCE entregas pra esse
+    # usuário+território+timed (relâmpago/territórios sempre cronometrados
+    # contam à parte de território normal — sessões diferentes) e nunca
+    # deixa um desafio aparecer pela 3ª vez enquanto sobrar outro
+    # candidato com menos repetições. "Nunca repetir o último" continua
+    # valendo por cima disso, só relaxado se for a única forma de não
+    # travar a sessão (ex.: restou 1 candidato de verdade).
+    recent_served_ids = list(
+        db.execute(
+            select(models.Attempt.challenge_id)
+            .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
+            .where(models.Attempt.user_id == user_id)
+            .where(models.Challenge.territory_id == territory_id)
+            .where(models.Attempt.timed == timed)
+            .order_by(models.Attempt.created_at.desc())
+            .limit(config.RECENT_SERVED_WINDOW_FOR_REPEAT_AVOIDANCE)
+        )
+        .scalars()
+        .all()
+    )
+    last_challenge_id = recent_served_ids[0] if recent_served_ids else None
+    served_counts = Counter(recent_served_ids)
 
-    if last_challenge_id is not None and len(candidates) > 1:
-        narrowed = [c for c in candidates if c.id != last_challenge_id]
-        if narrowed:
-            candidates = narrowed
+    # "Nunca repetir o último" é a garantia mais forte (comportamento já
+    # validado antes desta mudança) — só relaxada se o único candidato
+    # restante for o próprio último. Dentro do que sobra, prioriza quem
+    # ainda não bateu o teto de repetições recentes; só ignora o teto se
+    # TODOS os candidatos elegíveis já bateram (conteúdo escasso demais
+    # pro teto ser sempre respeitável — nunca trava a sessão por causa
+    # disso).
+    non_last = [c for c in candidates if c.id != last_challenge_id] or candidates
+    under_cap = [c for c in non_last if served_counts.get(c.id, 0) < config.MAX_CHALLENGE_REPEATS_PER_SESSION]
+    if under_cap:
+        candidates = under_cap
+    else:
+        min_repeats = min(served_counts.get(c.id, 0) for c in non_last)
+        candidates = [c for c in non_last if served_counts.get(c.id, 0) == min_repeats]
 
     challenge = random.choice(candidates)
     hints_available = len(

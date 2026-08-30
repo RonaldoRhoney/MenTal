@@ -29,6 +29,14 @@ SOCIAL_OVERTAKE_NAMED_BODY_TEMPLATE = "{nickname} passou você no ranking. Hora 
 MOVEMENT_CYCLE_REPORT_TITLE = "Seu ciclo fechou!"
 MOVEMENT_CYCLE_REPORT_BODY_TEMPLATE = "{steps} passos hoje — toque pra coletar seus pontos. 🚶"
 
+# Convite diário pra ativar Movimento (29/08/2026, pedido de Rhoney:
+# "todos os dias às 07:30... convidando o usuário a ativar o contador de
+# passos") — só chega a quem ainda NÃO ativou (a própria consulta em
+# notifications.py para de mandar assim que a pessoa ativa, sem precisar
+# de nenhum controle extra de "já mandei hoje").
+MOVEMENT_ACTIVATION_INVITE_TITLE = "Bora somar passos ao XP?"
+MOVEMENT_ACTIVATION_INVITE_BODY = "Ative o contador de Movimento e transforme sua caminhada de hoje em XP e MentalCoins. 🚶"
+
 # V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md §5, aprovado
 # 2026-08-22). Batalha só existe entre amigos JÁ confirmados (item 12).
 # Tom de convite/comemoração, nunca de provocação — perdedor nunca lê

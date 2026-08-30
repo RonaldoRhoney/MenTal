@@ -150,9 +150,53 @@ def _check_movement_reports(db: Session, now: datetime) -> int:
     return sent
 
 
+def _check_movement_activation_invite(db: Session, now: datetime) -> int:
+    """
+    Convite diário pra ativar Movimento (29/08/2026, pedido de Rhoney:
+    "todos os dias às 07:30... convidando o usuário a ativar o contador
+    de passos"). Disparado por um cron dedicado às 07:30 horário de
+    Brasília (app/scheduler.py) — roda uma vez por dia, nunca precisa de
+    marcação de "já enviado hoje" como _check_reengagement, porque a
+    própria condição (movement_enabled=False) já para de bater assim
+    que a pessoa ativa, e o cron só dispara uma vez por dia de qualquer
+    forma.
+    """
+    sent = 0
+    profiles = (
+        db.execute(
+            select(models.Profile)
+            .where(models.Profile.movement_enabled.is_(False))
+            .where(models.Profile.push_token.is_not(None))
+        )
+        .scalars()
+        .all()
+    )
+
+    for profile in profiles:
+        if push.send_push_notification(
+            profile.push_token,
+            notification_copy.MOVEMENT_ACTIVATION_INVITE_TITLE,
+            notification_copy.MOVEMENT_ACTIVATION_INVITE_BODY,
+        ):
+            sent += 1
+
+    return sent
+
+
 def run_notification_checks(db: Session, now: datetime | None = None) -> dict:
     now = now or utcnow()
     reengagement_sent = _check_reengagement(db, now)
     social_sent = _check_social_overtakes(db, now)
     movement_sent = _check_movement_reports(db, now)
     return {"reengagement_sent": reengagement_sent, "social_sent": social_sent, "movement_sent": movement_sent}
+
+
+def run_movement_activation_invite_check(db: Session, now: datetime | None = None) -> dict:
+    """
+    Chamado por um cron DEDICADO (07:30 horário de Brasília, app/
+    scheduler.py) — nunca pelo `run_notification_checks` de 30 em 30
+    minutos, que mandaria o convite várias vezes por dia pra mesma
+    pessoa.
+    """
+    now = now or utcnow()
+    return {"movement_invite_sent": _check_movement_activation_invite(db, now)}

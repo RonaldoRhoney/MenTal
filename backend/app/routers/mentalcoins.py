@@ -35,6 +35,16 @@ def get_transactions(user_id: str = Depends(require_age_confirmed_user_id), db: 
 
 @router.get("/mentalcoins/hall-of-fame", response_model=schemas.MentalCoinsHallOfFameResponse)
 def get_hall_of_fame(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
+    entries = mentalcoins.get_current_hall_of_fame(db)
+    # nickname vem congelado no registro histórico (snapshot de quando o
+    # ciclo fechou), mas real_name é sempre lido ao vivo do perfil
+    # (29/08/2026, pedido de Rhoney: nome real substitui o apelido
+    # gerado pelo sistema assim que existir) — lista sempre pequena
+    # (no máximo ~23 linhas), um get por linha não pesa.
+    def _real_name(target_user_id: str) -> str | None:
+        profile = db.get(models.Profile, target_user_id)
+        return profile.real_name if profile else None
+
     return schemas.MentalCoinsHallOfFameResponse(
         entries=[
             schemas.MentalCoinsHallOfFameEntryOut(
@@ -43,10 +53,11 @@ def get_hall_of_fame(user_id: str = Depends(require_age_confirmed_user_id), db: 
                 reference_date=entry.reference_date,
                 user_id=entry.user_id,
                 nickname=entry.nickname,
+                real_name=_real_name(entry.user_id),
                 amount=entry.amount,
                 metric_value=entry.metric_value,
             )
-            for entry in mentalcoins.get_current_hall_of_fame(db)
+            for entry in entries
         ]
     )
 

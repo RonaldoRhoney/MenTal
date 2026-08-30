@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import 'balloons_overlay.dart';
 
-const List<Color> kCelebrationColors = [AppColors.gold, AppColors.teal, AppColors.bone, AppColors.error];
+List<Color> get kCelebrationColors => [AppColors.gold, AppColors.teal, AppColors.bone, AppColors.error];
 
 /// Celebração forte — território conquistado, badge desbloqueado, level
 /// up (MICROINTERACTIONS.md §3, "mesma família visual" para os três).

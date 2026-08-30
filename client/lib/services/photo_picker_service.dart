@@ -44,17 +44,17 @@ class PhotoPickerService {
               child: Text(
                 l10n.photoSourceExplanation,
                 textAlign: TextAlign.center,
-                style: const TextStyle(color: AppColors.muted, fontSize: 13),
+                style: TextStyle(color: AppColors.muted, fontSize: 13),
               ),
             ),
             const SizedBox(height: 8),
             ListTile(
-              leading: const Icon(Icons.photo_camera_outlined, color: AppColors.gold),
+              leading: Icon(Icons.photo_camera_outlined, color: AppColors.gold),
               title: Text(l10n.photoSourceCameraOption),
               onTap: () => Navigator.of(sheetContext).pop(ImageSource.camera),
             ),
             ListTile(
-              leading: const Icon(Icons.photo_library_outlined, color: AppColors.gold),
+              leading: Icon(Icons.photo_library_outlined, color: AppColors.gold),
               title: Text(l10n.photoSourceGalleryOption),
               onTap: () => Navigator.of(sheetContext).pop(ImageSource.gallery),
             ),

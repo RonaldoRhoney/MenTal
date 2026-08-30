@@ -41,6 +41,15 @@ def _run_mentalcoins_job() -> None:
             logger.exception("Falha na apuração semanal de MentalCoins")
 
 
+def _run_movement_invite_job() -> None:
+    with SessionLocal() as db:
+        try:
+            result = notifications.run_movement_activation_invite_check(db)
+            logger.info("Convite diário de ativação de Movimento concluído: %s", result)
+        except Exception:
+            logger.exception("Falha no convite diário de ativação de Movimento")
+
+
 def start_scheduler() -> None:
     global _scheduler
     if not config.NOTIFICATION_SCHEDULER_ENABLED and not config.MENTALCOINS_SCHEDULER_ENABLED:
@@ -52,6 +61,13 @@ def start_scheduler() -> None:
     if config.NOTIFICATION_SCHEDULER_ENABLED:
         _scheduler.add_job(_run_checks_job, "interval", minutes=config.NOTIFICATION_CHECK_INTERVAL_MINUTES)
         logger.info("Agendador de notificações iniciado (a cada %s min)", config.NOTIFICATION_CHECK_INTERVAL_MINUTES)
+        # Convite diário de Movimento (29/08/2026, pedido de Rhoney:
+        # "todos os dias às 07:30") — cron dedicado, nunca o job de
+        # intervalo acima (que rodaria isso a cada 30min o dia todo).
+        _scheduler.add_job(
+            _run_movement_invite_job, "cron", hour=7, minute=30, timezone=config.MENTALCOINS_TIMEZONE
+        )
+        logger.info("Agendador de convite de Movimento iniciado (diário 07:30 %s)", config.MENTALCOINS_TIMEZONE)
     if config.MENTALCOINS_SCHEDULER_ENABLED:
         # U.I/MENTALCOINS_V1.md §2: fecha domingo 23:59:59, apura e
         # distribui na segunda-feira 08:00, horário de Brasília.
