@@ -55,6 +55,9 @@ def next_learning_pause(
         difficulty_level=pause.difficulty_level,
         text=pause.text,
         prompt_image=pause.prompt_image,
+        video_url=pause.video_url,
+        source_name=pause.source_name,
+        source_url=pause.source_url,
     )
 
 

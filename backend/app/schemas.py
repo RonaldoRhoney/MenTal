@@ -125,6 +125,11 @@ class LearningPauseOut(BaseModel):
     difficulty_level: int
     text: str
     prompt_image: str | None = None
+    # V3.4 (V3/V3.4_LIBRAS.md §3.2) — vídeo institucional opcional, com
+    # atribuição de fonte. Tudo-ou-nada: os 3 vêm juntos ou nenhum vem.
+    video_url: str | None = None
+    source_name: str | None = None
+    source_url: str | None = None
 
 
 class LearningPauseCompleteResponse(BaseModel):

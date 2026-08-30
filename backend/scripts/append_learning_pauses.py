@@ -59,6 +59,9 @@ def main() -> None:
                     text=item["text"],
                     prompt_image=item.get("prompt_image"),
                     age_reviewed=item["age_reviewed"],
+                    video_url=item.get("video_url"),
+                    source_name=item.get("source_name"),
+                    source_url=item.get("source_url"),
                 )
             )
             db.commit()

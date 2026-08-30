@@ -39,6 +39,13 @@ dependencies:
   image_picker: ^1.1.2
   crop_your_image: ^2.0.0
   path_provider: ^2.1.6
+  # V3.4 (V3/V3.4_LIBRAS.md §5) — player de vídeo embutido para os
+  # vídeos institucionais de referência (INES/VLibras/UFSC). Escolhido
+  # youtube_player_iframe em vez do youtube_player_flutter (mais antigo,
+  # baseado em PlatformView nativo): iframe usa webview_flutter por
+  # baixo, é o sucessor mantido pela mesma equipe (pod_learning), com
+  # suporte mais atual e melhor compatibilidade entre plataformas.
+  youtube_player_iframe: ^5.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

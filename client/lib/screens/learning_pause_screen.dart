@@ -4,6 +4,7 @@ import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/institutional_video_player.dart';
 
 /// V3.2 (V3/V3.2_TECNOLOGIA.md §3) — "Pausa para Aprender": leitura sem
 /// cronômetro, sem múltipla escolha, sem certo/errado (§3.3) — o único
@@ -31,6 +32,9 @@ class _LearningPauseScreenState extends State<LearningPauseScreen> {
   String? _learningPauseId;
   String? _text;
   String? _promptImage;
+  String? _videoUrl;
+  String? _sourceName;
+  String? _sourceUrl;
   bool _completed = false;
   int? _xpAwarded;
   bool _busy = false;
@@ -54,6 +58,9 @@ class _LearningPauseScreenState extends State<LearningPauseScreen> {
         _learningPauseId = result['learning_pause_id'] as String;
         _text = result['text'] as String;
         _promptImage = result['prompt_image'] as String?;
+        _videoUrl = result['video_url'] as String?;
+        _sourceName = result['source_name'] as String?;
+        _sourceUrl = result['source_url'] as String?;
       });
     } on ApiException catch (e) {
       if (!mounted) return;
@@ -129,6 +136,19 @@ class _LearningPauseScreenState extends State<LearningPauseScreen> {
                   const SizedBox(height: 12),
                 ],
                 Text(_text ?? '', style: Theme.of(context).textTheme.bodyLarge?.copyWith(height: 1.5)),
+                if (_videoUrl != null) ...[
+                  const SizedBox(height: 16),
+                  OutlinedButton.icon(
+                    onPressed: () => showInstitutionalVideo(
+                      context,
+                      videoUrl: _videoUrl!,
+                      sourceName: _sourceName ?? '',
+                      sourceUrl: _sourceUrl ?? '',
+                    ),
+                    icon: const Icon(Icons.play_circle_outline),
+                    label: Text(l10n.learningPauseWatchVideoButton),
+                  ),
+                ],
               ],
             ),
           ),

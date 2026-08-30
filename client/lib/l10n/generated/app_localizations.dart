@@ -358,6 +358,42 @@ abstract class AppLocalizations {
   /// **'Concluí a leitura'**
   String get learningPauseCompleteButton;
 
+  /// Button to open the institutional reference video
+  ///
+  /// In pt, this message translates to:
+  /// **'Assistir vídeo de referência'**
+  String get learningPauseWatchVideoButton;
+
+  /// Institutional source attribution shown under the embedded video
+  ///
+  /// In pt, this message translates to:
+  /// **'Fonte: {source}'**
+  String institutionalVideoSourceLabel(String source);
+
+  /// Fallback dialog title when embedded player is unavailable
+  ///
+  /// In pt, this message translates to:
+  /// **'Abrir vídeo no YouTube?'**
+  String get institutionalVideoFallbackTitle;
+
+  /// Fallback dialog body
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível abrir o vídeo dentro do MENTAL. Deseja abri-lo no YouTube?'**
+  String get institutionalVideoFallbackBody;
+
+  /// Fallback dialog cancel button
+  ///
+  /// In pt, this message translates to:
+  /// **'Cancelar'**
+  String get institutionalVideoFallbackCancel;
+
+  /// Fallback dialog confirm button
+  ///
+  /// In pt, this message translates to:
+  /// **'Abrir'**
+  String get institutionalVideoFallbackConfirm;
+
   /// Shown after completing a learning pause for the first time
   ///
   /// In pt, this message translates to:

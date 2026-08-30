@@ -53,6 +53,16 @@ BLOCKS = [
     # mostrado pós-resposta (challenge_screen.dart) — nenhuma mudança de
     # schema, só um território/bloco novo.
     {"id": "curiosidade_relampago", "name": "Curiosidade Relâmpago", "display_order": 12},
+    # V3.4 (V3.4_LIBRAS.md, aprovado) — quinta e última fase de conteúdo
+    # da V3. Um território só (mesma decisão de "regioes"/financas_
+    # pessoais/etc.: bloco e território homônimos). Mecânica de desafio
+    # é o Challenge padrão (difficulty_level 1/2/3 mapeia às 3 etapas do
+    # documento: sinal isolado → combinação → significado — nenhum
+    # campo/mecânica nova precisa existir em Challenge pra isso). O que
+    # É novo é o conteúdo institucional rico (vídeo+fonte) reaproveitando
+    # Pausa para Aprender (ver LearningPause.video_url/source_name/
+    # source_url) — não um território/tipo de desafio diferente.
+    {"id": "libras", "name": "Libras", "display_order": 13},
 ]
 
 TERRITORIES = [
@@ -154,6 +164,7 @@ TERRITORIES = [
     # seguindo os 4 testes de qualidade do doc (óbvio/revelação/
     # familiaridade/sem ambiguidade) antes de qualquer charada entrar.
     {"id": "curiosidade_relampago", "challenge_type": "curiosidade_relampago", "requires_subscription": True, "free_sample_count": 2, "display_order": 30, "world_id": "cultura_geral", "block_id": "curiosidade_relampago"},
+    {"id": "libras", "challenge_type": "libras", "requires_subscription": True, "free_sample_count": 2, "display_order": 31, "world_id": "cultura_geral", "block_id": "libras"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à

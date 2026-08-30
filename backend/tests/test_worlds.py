@@ -62,6 +62,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "tecnologia_fundamentos", "tecnologia_programacao", "tecnologia_seguranca", "tecnologia_fronteira",
         "financas_pessoais", "filosofia", "artes", "saude_bemestar",
         "curiosidade_relampago",
+        "libras",
     }
     assert worlds["linguagem"]["completed"] is False
     assert worlds["mente_logica"]["completed"] is False

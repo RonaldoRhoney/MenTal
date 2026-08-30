@@ -328,6 +328,16 @@ class LearningPause(Base):
     prompt_image: Mapped[str | None] = mapped_column(String, nullable=True)
     age_reviewed: Mapped[bool] = mapped_column(Boolean, default=False)
     language_code: Mapped[str] = mapped_column(String, default="pt-BR")
+    # V3.4 (V3/V3.4_LIBRAS.md §3.2/§8) — vídeo de referência opcional,
+    # sempre de fonte institucional (INES/VLibras/UFSC/IFs), com
+    # atribuição obrigatória exibida junto ao player (nunca ocultar a
+    # fonte). Os 3 campos são tudo-ou-nada: video_url só existe com
+    # source_name/source_url preenchidos (validate_learning_pauses).
+    # Nullable porque a maioria das Pausas (Tecnologia, etc.) não tem
+    # vídeo — é específico de blocos com fonte de referência em vídeo.
+    video_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    source_name: Mapped[str | None] = mapped_column(String, nullable=True)
+    source_url: Mapped[str | None] = mapped_column(String, nullable=True)
 
 
 class LearningPauseRead(Base):

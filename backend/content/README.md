@@ -84,6 +84,9 @@ options/correct_answer/hints/timer. Arquivo próprio, formato:
 | `text` | sim | texto de leitura curto (§3.3: "rápida e prazerosa", nunca um texto longo que canse) — não pode repetir um `text` já existente no mesmo território |
 | `age_reviewed` | sim | mesma disciplina de desafios — `true` só depois de checado manualmente |
 | `prompt_image` | não | emoji opcional, mesmo catálogo de sempre |
+| `video_url` | não | vídeo de referência institucional (V3.4_LIBRAS.md §2/§3.2) — só INES/VLibras/UFSC/Institutos Federais/universidades federais, nunca canal comercial/criador independente. Tudo-ou-nada com `source_name`/`source_url`: os 3 vêm juntos ou nenhum vem. |
+| `source_name` | não* | nome da instituição de origem do vídeo (ex.: "INES — Instituto Nacional de Educação de Surdos"). *Obrigatório junto com `video_url`. |
+| `source_url` | não* | link da instituição/página de origem, exibido junto ao player (nunca ocultar a atribuição). *Obrigatório junto com `video_url`. |
 
 Fluxo idêntico ao de desafios, só trocando os scripts:
 1. Curar em `backend/content/<nome>_pausas.json`.

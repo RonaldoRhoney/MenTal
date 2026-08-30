@@ -71,6 +71,46 @@ def test_complete_learning_pause_awards_xp_once(client):
         assert profile_after.xp_total - xp_before == body1["xp_awarded"]
 
 
+def test_next_learning_pause_includes_institutional_video_when_present(client):
+    """V3.4 (V3/V3.4_LIBRAS.md §2/§3.2) — vídeo institucional opcional
+    com atribuição de fonte, reaproveitando Pausa para Aprender."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    with SessionLocal() as db:
+        pause = models.LearningPause(
+            territory_id="libras",
+            difficulty_level=1,
+            text="O sinal de 'obrigado(a)' em Libras...",
+            age_reviewed=True,
+            video_url="https://dicionario.ines.gov.br/exemplo",
+            source_name="INES — Instituto Nacional de Educação de Surdos",
+            source_url="https://www.ines.gov.br",
+        )
+        db.add(pause)
+        db.commit()
+
+    resp = client.get("/learning-pauses/next", params={"territory_id": "libras"}, headers=headers)
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["video_url"] == "https://dicionario.ines.gov.br/exemplo"
+    assert body["source_name"] == "INES — Instituto Nacional de Educação de Surdos"
+    assert body["source_url"] == "https://www.ines.gov.br"
+
+
+def test_next_learning_pause_video_fields_absent_by_default(client):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _seed_pause()
+
+    resp = client.get("/learning-pauses/next", params={"territory_id": "tecnologia_fundamentos"}, headers=headers)
+    body = resp.json()
+    assert body["video_url"] is None
+    assert body["source_name"] is None
+    assert body["source_url"] is None
+
+
 def test_complete_unknown_learning_pause_404s(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)

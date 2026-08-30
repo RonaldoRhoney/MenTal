@@ -105,6 +105,19 @@ def validate_learning_pauses(items: list[dict], known_territory_ids: set[str], e
         if prompt_image is not None and not (isinstance(prompt_image, str) and prompt_image.strip()):
             errors.append(f"{prefix}: prompt_image, quando presente, precisa ser uma string não vazia")
 
+        # V3.4 (V3/V3.4_LIBRAS.md §2/§3.2) — vídeo de referência é
+        # tudo-ou-nada: se um dos 3 campos vier preenchido, os outros
+        # dois também precisam vir (nunca vídeo sem atribuição de fonte,
+        # nunca fonte "solta" sem vídeo nem vídeo sem link de origem).
+        video_url = item.get("video_url")
+        source_name = item.get("source_name")
+        source_url = item.get("source_url")
+        video_fields = {"video_url": video_url, "source_name": source_name, "source_url": source_url}
+        present = {k: v for k, v in video_fields.items() if v is not None and str(v).strip()}
+        if present and len(present) != 3:
+            missing_video_fields = sorted(set(video_fields) - set(present))
+            errors.append(f"{prefix}: vídeo institucional precisa de video_url + source_name + source_url juntos (faltando: {missing_video_fields})")
+
         key = (territory_id, item["text"])
         if key in existing_texts:
             errors.append(f"{prefix}: já existe uma Pausa para Aprender com esse texto nesse território")

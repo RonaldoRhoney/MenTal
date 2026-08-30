@@ -3,9 +3,9 @@ Validação de conteúdo curado (backend/content/README.md). Só testa
 ESTRUTURA — nunca a correção factual do conteúdo em si.
 """
 
-from app.content_validation import validate_content
+from app.content_validation import validate_content, validate_learning_pauses
 
-KNOWN_TERRITORIES = {"conhecimento", "numeros"}
+KNOWN_TERRITORIES = {"conhecimento", "numeros", "libras"}
 
 
 def _valid_item(**overrides):
@@ -107,3 +107,50 @@ def test_prompt_image_valid_emoji_is_fine():
 def test_prompt_image_empty_string_is_reported():
     errors = validate_content([_valid_item(prompt_image="   ")], KNOWN_TERRITORIES, set())
     assert any("prompt_image" in e for e in errors)
+
+
+def _valid_pause(**overrides):
+    item = {
+        "territory_id": "libras",
+        "difficulty_level": 1,
+        "text": "O sinal de 'obrigado(a)' em Libras tem origem em...",
+        "age_reviewed": True,
+    }
+    item.update(overrides)
+    return item
+
+
+def test_learning_pause_without_video_fields_has_no_errors():
+    errors = validate_learning_pauses([_valid_pause()], KNOWN_TERRITORIES, set())
+    assert errors == []
+
+
+def test_learning_pause_with_all_three_video_fields_has_no_errors():
+    errors = validate_learning_pauses(
+        [
+            _valid_pause(
+                video_url="https://dicionario.ines.gov.br/exemplo",
+                source_name="INES",
+                source_url="https://www.ines.gov.br",
+            )
+        ],
+        KNOWN_TERRITORIES,
+        set(),
+    )
+    assert errors == []
+
+
+def test_learning_pause_with_only_video_url_is_reported():
+    errors = validate_learning_pauses(
+        [_valid_pause(video_url="https://dicionario.ines.gov.br/exemplo")], KNOWN_TERRITORIES, set()
+    )
+    assert any("vídeo institucional" in e for e in errors)
+
+
+def test_learning_pause_with_video_url_and_source_name_but_no_source_url_is_reported():
+    errors = validate_learning_pauses(
+        [_valid_pause(video_url="https://dicionario.ines.gov.br/exemplo", source_name="INES")],
+        KNOWN_TERRITORIES,
+        set(),
+    )
+    assert any("vídeo institucional" in e for e in errors)

@@ -149,6 +149,27 @@ class AppLocalizationsPt extends AppLocalizations {
   String get learningPauseCompleteButton => 'Concluí a leitura';
 
   @override
+  String get learningPauseWatchVideoButton => 'Assistir vídeo de referência';
+
+  @override
+  String institutionalVideoSourceLabel(String source) {
+    return 'Fonte: $source';
+  }
+
+  @override
+  String get institutionalVideoFallbackTitle => 'Abrir vídeo no YouTube?';
+
+  @override
+  String get institutionalVideoFallbackBody =>
+      'Não foi possível abrir o vídeo dentro do MENTAL. Deseja abri-lo no YouTube?';
+
+  @override
+  String get institutionalVideoFallbackCancel => 'Cancelar';
+
+  @override
+  String get institutionalVideoFallbackConfirm => 'Abrir';
+
+  @override
   String learningPauseXpAwardedMessage(int xp) {
     return '+$xp XP pela leitura!';
   }
