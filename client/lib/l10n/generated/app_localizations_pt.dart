@@ -136,6 +136,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryCuriosidadeRelampago => 'Curiosidade Relâmpago';
 
   @override
+  String get territoryLibras => 'Libras';
+
+  @override
   String get learningPauseButtonTooltip => 'Pausa para Aprender';
 
   @override

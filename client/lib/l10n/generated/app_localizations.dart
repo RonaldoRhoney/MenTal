@@ -334,6 +334,12 @@ abstract class AppLocalizations {
   /// **'Curiosidade Relâmpago'**
   String get territoryCuriosidadeRelampago;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Libras'**
+  String get territoryLibras;
+
   /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
   ///
   /// In pt, this message translates to:
