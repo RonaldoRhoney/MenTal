@@ -322,12 +322,30 @@ class _SectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(icon, color: AppColors.gold, size: 18),
-        const SizedBox(width: 8),
-        Text(text, style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 16).copyWith(fontWeight: FontWeight.w700)),
-      ],
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 14),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [AppColors.gold.withValues(alpha: 0.20), AppColors.gold.withValues(alpha: 0.05)],
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+        ),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.4)),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, color: AppColors.gold, size: 20),
+          const SizedBox(width: 10),
+          Text(
+            text.toUpperCase(),
+            textAlign: TextAlign.center,
+            style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 15).copyWith(fontWeight: FontWeight.w800, letterSpacing: 1.1),
+          ),
+        ],
+      ),
     );
   }
 }
