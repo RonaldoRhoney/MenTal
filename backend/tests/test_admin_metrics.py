@@ -58,10 +58,20 @@ def test_admin_gets_summary_with_expected_shape(client):
         "accuracy_by_territory",
         "feedback_distribution",
         "demographics",
+        "movement",
     ):
         assert key in body
     for key in ("gender", "age_range", "state", "city"):
         assert key in body["demographics"]
+    for key in (
+        "enabled_users",
+        "active_users_in_period",
+        "total_steps_in_period",
+        "total_xp_in_period",
+        "average_steps_per_active_user",
+        "goal_distribution",
+    ):
+        assert key in body["movement"]
 
 
 def test_top_progressors_and_accuracy_reflect_real_attempts(client):
@@ -119,3 +129,27 @@ def test_demographics_reflect_profile_fields(client):
     assert any(b["label"] == "26-35" and b["count"] >= 1 for b in demographics["age_range"])
     assert any(b["label"] == "SP" and b["count"] >= 1 for b in demographics["state"])
     assert any(b["label"] == "São Paulo" and b["count"] >= 1 for b in demographics["city"])
+
+
+def test_movement_metrics_reflect_real_collected_steps(client):
+    admin = str(uuid.uuid4())
+    player = str(uuid.uuid4())
+    admin_headers = auth_header(admin)
+    player_headers = auth_header(player)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=admin_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=player_headers)
+    _promote_to_admin(admin)
+
+    client.post("/movement/enable", headers=player_headers)
+    client.put("/movement/goal", json={"daily_goal_steps": 10000}, headers=player_headers)
+    collect_resp = client.post("/movement/collect", json={"steps": 3000}, headers=player_headers)
+    assert collect_resp.status_code == 200
+
+    body = client.get("/admin/metrics/summary", params={"period": "today"}, headers=admin_headers).json()
+    movement = body["movement"]
+
+    assert movement["enabled_users"] >= 1
+    assert movement["active_users_in_period"] >= 1
+    assert movement["total_steps_in_period"] >= 3000
+    assert movement["average_steps_per_active_user"] >= 1
+    assert any(b["label"] == "10.000 (padrão)" and b["count"] >= 1 for b in movement["goal_distribution"])

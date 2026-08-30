@@ -1,0 +1,184 @@
+[
+  {
+    "territory_id": "libras",
+    "difficulty_level": 1,
+    "prompt": "Mão direita em formato de concha, tocando o peito e fazendo um pequeno movimento circular. A qual palavra corresponde este sinal?",
+    "options": [
+      "Casa",
+      "Família",
+      "Trabalho",
+      "Escola"
+    ],
+    "correct_answer": "Casa",
+    "explanation": "Isso mesmo! Esse sinal representa 'casa' em Libras.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 1,
+    "prompt": "Mão em formato de 'V' com os dedos tocando os olhos e movendo-se para frente. A qual palavra corresponde este sinal?",
+    "options": [
+      "Ver",
+      "Ouvir",
+      "Sentir",
+      "Pensar"
+    ],
+    "correct_answer": "Ver",
+    "explanation": "Correto! Este sinal representa o verbo 'ver' em Libras.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 1,
+    "prompt": "Mãos unidas na altura do peito, com um leve movimento para frente, palmas voltadas para cima. A qual expressão corresponde este sinal?",
+    "options": [
+      "Por favor",
+      "Desculpa",
+      "Obrigado(a)",
+      "Com licença"
+    ],
+    "correct_answer": "Por favor",
+    "explanation": "Isso mesmo! Esse é o sinal de 'por favor' em Libras.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 2,
+    "prompt": "Dedo indicador tocando a têmpora e girando levemente, como se 'ligasse' algo na cabeça. A qual palavra corresponde este sinal?",
+    "options": [
+      "Pensar",
+      "Lembrar",
+      "Esquecer",
+      "Sonhar"
+    ],
+    "correct_answer": "Pensar",
+    "explanation": "Correto! Esse sinal representa o verbo 'pensar' em Libras.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 2,
+    "prompt": "Mãos formando um telhado triangular acima da cabeça, dedos das duas mãos se encontrando no topo. A qual palavra corresponde este sinal?",
+    "options": [
+      "Escola",
+      "Casa",
+      "Igreja",
+      "Hospital"
+    ],
+    "correct_answer": "Escola",
+    "explanation": "Isso mesmo! Esse sinal representa 'escola' em Libras.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 2,
+    "prompt": "Sequência: sinal de 'eu' (indicador no peito) seguido do sinal de 'precisar' (mãos fechadas descendo com força). Que frase esta combinação de sinais forma?",
+    "options": [
+      "Eu preciso",
+      "Eu quero",
+      "Eu posso",
+      "Eu devo"
+    ],
+    "correct_answer": "Eu preciso",
+    "explanation": "Exato! A combinação forma a frase 'eu preciso'.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 2,
+    "prompt": "Sequência: sinal de 'obrigado(a)' seguido do sinal que indica a outra pessoa (apontar à frente). Que frase esta combinação de sinais forma?",
+    "options": [
+      "Obrigado(a) você",
+      "Por favor, você",
+      "Desculpa você",
+      "Com licença, você"
+    ],
+    "correct_answer": "Obrigado(a) você",
+    "explanation": "Isso mesmo! A combinação forma 'obrigado(a) você', uma forma de agradecimento direto.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 3,
+    "prompt": "Sequência de três sinais: 'eu', 'gostar' e 'estudar', em sequência fluida. Que frase esta combinação de sinais forma?",
+    "options": [
+      "Eu gosto de estudar",
+      "Eu quero estudar",
+      "Eu preciso estudar",
+      "Eu vou estudar"
+    ],
+    "correct_answer": "Eu gosto de estudar",
+    "explanation": "Exato! A sequência completa forma 'eu gosto de estudar'.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 3,
+    "prompt": "Sequência de sinais representando uma pergunta comum ao encontrar alguém pela primeira vez. O que essa combinação de sinais realmente significa?",
+    "options": [
+      "Qual é o seu nome?",
+      "Onde você mora?",
+      "Como você está?",
+      "Quantos anos você tem?"
+    ],
+    "correct_answer": "Qual é o seu nome?",
+    "explanation": "Isso mesmo! Essa sequência significa 'Qual é o seu nome?', uma das primeiras perguntas ao conhecer alguém.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 3,
+    "prompt": "Sequência de sinais usada para se despedir ao final de um encontro ou conversa. O que essa combinação de sinais realmente significa?",
+    "options": [
+      "Até logo",
+      "Bom dia",
+      "Como vai?",
+      "Muito prazer"
+    ],
+    "correct_answer": "Até logo",
+    "explanation": "Correto! Essa sequência significa 'até logo', uma despedida comum em Libras.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 1,
+    "prompt": "Mão aberta batendo levemente no peito duas vezes, palma voltada para o corpo. A qual palavra corresponde este sinal?",
+    "options": [
+      "Eu",
+      "Você",
+      "Nós",
+      "Ele/Ela"
+    ],
+    "correct_answer": "Eu",
+    "explanation": "Isso mesmo! Esse é o sinal do pronome 'eu' em Libras.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 2,
+    "prompt": "As duas mãos em formato de garra se movem em direção ao rosto, indicando expressão de alegria. A qual palavra corresponde este sinal?",
+    "options": [
+      "Feliz",
+      "Triste",
+      "Bravo",
+      "Cansado"
+    ],
+    "correct_answer": "Feliz",
+    "explanation": "Correto! Esse sinal representa o sentimento 'feliz' em Libras.",
+    "age_reviewed": false
+  },
+  {
+    "territory_id": "libras",
+    "difficulty_level": 3,
+    "prompt": "Mão em formato de 'C' passando perto do rosto, de cima para baixo, próximo ao queixo. A qual palavra corresponde este sinal?",
+    "options": [
+      "Bonito(a)",
+      "Feio(a)",
+      "Grande",
+      "Pequeno"
+    ],
+    "correct_answer": "Bonito(a)",
+    "explanation": "Isso mesmo! Esse sinal representa 'bonito(a)' em Libras.",
+    "age_reviewed": false
+  }
+]

@@ -144,6 +144,10 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
                           child: _FeedbackDistributionRow(distribution: _summary!['feedback_distribution'] as Map<String, dynamic>),
                         ),
                         const SizedBox(height: 24),
+                        _SectionTitle('Movimento', icon: Icons.directions_walk_rounded),
+                        const SizedBox(height: 10),
+                        _MovementSection(movement: _summary!['movement'] as Map<String, dynamic>),
+                        const SizedBox(height: 24),
                         _SectionTitle('Quem está usando o app', icon: Icons.groups_rounded),
                         const SizedBox(height: 4),
                         Text(
@@ -516,6 +520,38 @@ class _DemographicCard extends StatelessWidget {
             ),
         ],
       ),
+    );
+  }
+}
+
+class _MovementSection extends StatelessWidget {
+  const _MovementSection({required this.movement});
+
+  final Map<String, dynamic> movement;
+
+  @override
+  Widget build(BuildContext context) {
+    final goalBuckets = (movement['goal_distribution'] as List).cast<Map<String, dynamic>>();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        GridView.count(
+          crossAxisCount: 2,
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+          childAspectRatio: 1.7,
+          children: [
+            _KpiCard(data: _KpiData('Já ativaram', '${movement['enabled_users']}', Icons.toggle_on_outlined, AppColors.teal)),
+            _KpiCard(data: _KpiData('Ativos no período', '${movement['active_users_in_period']}', Icons.directions_walk_rounded, AppColors.victory)),
+            _KpiCard(data: _KpiData('Passos no período', '${movement['total_steps_in_period']}', Icons.bar_chart_rounded, AppColors.gold)),
+            _KpiCard(data: _KpiData('Média por ativo', '${movement['average_steps_per_active_user']}', Icons.trending_up_rounded, AppColors.purple)),
+          ],
+        ),
+        const SizedBox(height: 10),
+        _DemographicCard(title: 'Meta diária escolhida', icon: Icons.flag_outlined, buckets: goalBuckets),
+      ],
     );
   }
 }

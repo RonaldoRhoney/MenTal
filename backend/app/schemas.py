@@ -665,6 +665,21 @@ class AdminDemographicsOut(BaseModel):
     city: list[AdminDemographicBucketOut]
 
 
+class AdminMovementMetricsOut(BaseModel):
+    # enabled_users é sobre a base TOTAL (ligou o recurso alguma vez),
+    # igual à filosofia de AdminDemographicsOut — não escopado pelo
+    # período. O resto é escopado pelo período selecionado (today/7d/30d),
+    # contado por ciclo iniciado dentro da janela (MovementCycle.
+    # cycle_start_at), mesma semântica de "criado dentro do período" já
+    # usada em new_signups_in_period.
+    enabled_users: int
+    active_users_in_period: int
+    total_steps_in_period: int
+    total_xp_in_period: int
+    average_steps_per_active_user: int
+    goal_distribution: list[AdminDemographicBucketOut]
+
+
 class AdminMetricsSummaryOut(BaseModel):
     active_users_today: int
     active_users_week: int
@@ -675,3 +690,4 @@ class AdminMetricsSummaryOut(BaseModel):
     accuracy_by_territory: list[AdminTerritoryAccuracyOut]
     feedback_distribution: AdminFeedbackDistributionOut
     demographics: AdminDemographicsOut
+    movement: AdminMovementMetricsOut

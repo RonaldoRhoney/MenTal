@@ -150,6 +150,49 @@ def get_metrics_summary(
         city=_distribution(models.Profile.city, limit=10),
     )
 
+    movement_enabled_users = db.execute(
+        select(func.count(models.Profile.user_id)).where(models.Profile.movement_enabled.is_(True))
+    ).scalar_one()
+
+    movement_cycles_in_period = db.execute(
+        select(models.MovementCycle.user_id, models.MovementCycle.steps_collected, models.MovementCycle.xp_awarded)
+        .where(models.MovementCycle.cycle_start_at >= period_start)
+        .where(models.MovementCycle.steps_collected > 0)
+    ).all()
+    movement_active_users = {row[0] for row in movement_cycles_in_period}
+    movement_total_steps = sum(row[1] for row in movement_cycles_in_period)
+    movement_total_xp = sum(row[2] for row in movement_cycles_in_period)
+    movement_average_steps = round(movement_total_steps / len(movement_active_users)) if movement_active_users else 0
+
+    # Metas fixas (5k/10k/15k) viram bucket próprio; qualquer outro
+    # valor é meta personalizada (U.I/MOVIMENTO_REDESIGN_V1.md §3, "o
+    # último card deve ser editável") — agrupado sob um único rótulo pra
+    # não espalhar a distribuição em dezenas de buckets de 1 usuário.
+    goal_rows = db.execute(
+        select(models.Profile.movement_daily_goal_steps, func.count(models.Profile.user_id))
+        .where(models.Profile.movement_daily_goal_steps.is_not(None))
+        .group_by(models.Profile.movement_daily_goal_steps)
+    ).all()
+    fixed_tier_labels = {5000: "5.000 (leve)", 10000: "10.000 (padrão)", 15000: "15.000 (intenso)"}
+    goal_counts: dict[str, int] = {}
+    for goal_steps, count in goal_rows:
+        label = fixed_tier_labels.get(goal_steps, "Personalizada")
+        goal_counts[label] = goal_counts.get(label, 0) + count
+    goal_distribution = sorted(
+        (schemas.AdminDemographicBucketOut(label=label, count=count) for label, count in goal_counts.items()),
+        key=lambda b: b.count,
+        reverse=True,
+    )
+
+    movement = schemas.AdminMovementMetricsOut(
+        enabled_users=movement_enabled_users,
+        active_users_in_period=len(movement_active_users),
+        total_steps_in_period=movement_total_steps,
+        total_xp_in_period=movement_total_xp,
+        average_steps_per_active_user=movement_average_steps,
+        goal_distribution=goal_distribution,
+    )
+
     return schemas.AdminMetricsSummaryOut(
         active_users_today=active_users_today,
         active_users_week=active_users_week,
@@ -165,4 +208,5 @@ def get_metrics_summary(
             muito_dificil=feedback_counts.get("muito_dificil", 0),
         ),
         demographics=demographics,
+        movement=movement,
     )
