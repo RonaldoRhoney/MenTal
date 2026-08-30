@@ -340,6 +340,12 @@ abstract class AppLocalizations {
   /// **'Libras'**
   String get territoryLibras;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Caça-palavras'**
+  String get territoryCacaPalavras;
+
   /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
   ///
   /// In pt, this message translates to:
@@ -357,6 +363,30 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Ainda não há Pausas para Aprender neste território.'**
   String get learningPauseEmptyMessage;
+
+  /// Shown when there is no word search content for this territory yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda não há Caça-palavras neste território.'**
+  String get wordSearchEmptyMessage;
+
+  /// Shown when the player finds every word in the puzzle
+  ///
+  /// In pt, this message translates to:
+  /// **'Você encontrou todas as palavras!'**
+  String get wordSearchCompletedMessage;
+
+  /// XP awarded for completing a word search puzzle
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP'**
+  String wordSearchXpAwardedMessage(int xp);
+
+  /// Speed bonus detail shown after completing a word search puzzle
+  ///
+  /// In pt, this message translates to:
+  /// **'Incluindo +{bonus} XP de bônus de velocidade!'**
+  String wordSearchSpeedBonusMessage(int bonus);
 
   /// Button that marks the learning pause as read and awards XP
   ///

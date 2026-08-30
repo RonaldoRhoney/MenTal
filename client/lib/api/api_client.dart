@@ -386,6 +386,23 @@ class ApiClient {
     );
   }
 
+  // V3.3 §6 (Jogos de Palavras — Fase 1: Caça-palavras). A grade inteira
+  // já vem resolvida na resposta (sem opção escondida pra proteger).
+  Future<Map<String, dynamic>> nextWordPuzzle(String territoryId) async {
+    return _get(
+      _uri('/word-puzzles/next', {'territory_id': territoryId}),
+      headers: _headers,
+    );
+  }
+
+  Future<Map<String, dynamic>> completeWordPuzzle({required String resultId, required List<String> foundWords}) async {
+    return _post(
+      _uri('/word-puzzles/$resultId/complete'),
+      headers: _headers,
+      body: jsonEncode({'found_words': foundWords}),
+    );
+  }
+
   // U.I/ADMIN_PAINEL_IN_APP_V1.md — só retorna dado de verdade pra
   // role=admin (backend rejeita com 403 pra qualquer outro usuário).
   Future<Map<String, dynamic>> getAdminMetricsSummary({String period = '7d'}) async {

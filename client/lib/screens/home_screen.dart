@@ -21,6 +21,7 @@ import 'movement_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
+import 'word_search_screen.dart';
 
 /// Home: um CTA primário claro por território, conforme Princípio de
 /// Clareza Imediata (PRODUCT_PRINCIPLES.md §1) — nada compete visualmente
@@ -757,6 +758,47 @@ class _TerritoryCard extends StatelessWidget {
     // já filtra isso, a Home só exibe o que vem pronto.
     final detentorNickname = progress?['detentor_nickname'] as String?;
     final isDetentor = progress?['is_detentor'] as bool? ?? false;
+
+    // V3.3 §6 (Jogos de Palavras — Fase 1: Caça-palavras). Estrutura de
+    // jogo própria (grade, não pergunta+alternativas) — nunca abre
+    // ChallengeScreen, e não tem modo Relâmpago (não existe timer/nível
+    // adaptativo por resposta individual nesse formato).
+    if (territoryId == 'caca_palavras') {
+      return Material(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(16),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () async {
+            await Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => WordSearchScreen(client: client, territoryId: territoryId, territoryLabel: label)),
+            );
+            onReturned();
+          },
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: progressColor.withValues(alpha: 0.5)),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    l10n.newChallengeButton(label),
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,

@@ -139,6 +139,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryLibras => 'Libras';
 
   @override
+  String get territoryCacaPalavras => 'Caça-palavras';
+
+  @override
   String get learningPauseButtonTooltip => 'Pausa para Aprender';
 
   @override
@@ -147,6 +150,23 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get learningPauseEmptyMessage =>
       'Ainda não há Pausas para Aprender neste território.';
+
+  @override
+  String get wordSearchEmptyMessage =>
+      'Ainda não há Caça-palavras neste território.';
+
+  @override
+  String get wordSearchCompletedMessage => 'Você encontrou todas as palavras!';
+
+  @override
+  String wordSearchXpAwardedMessage(int xp) {
+    return '+$xp XP';
+  }
+
+  @override
+  String wordSearchSpeedBonusMessage(int bonus) {
+    return 'Incluindo +$bonus XP de bônus de velocidade!';
+  }
 
   @override
   String get learningPauseCompleteButton => 'Concluí a leitura';
