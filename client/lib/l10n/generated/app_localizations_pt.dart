@@ -631,6 +631,47 @@ class AppLocalizationsPt extends AppLocalizations {
   String get friendsListTitle => 'Seus amigos';
 
   @override
+  String get friendsHelpTooltip => 'Como funciona';
+
+  @override
+  String get friendsHelpTitle => 'Amigos — como funciona';
+
+  @override
+  String get friendsHelpStep1Title => 'Convide pelo seu código';
+
+  @override
+  String get friendsHelpStep1Body =>
+      'Copie seu código ou compartilhe direto com alguém. Quem receber pode colar esse código no campo \"Adicionar amigo\".';
+
+  @override
+  String get friendsHelpStep2Title => 'Adicionar não é automático';
+
+  @override
+  String get friendsHelpStep2Body =>
+      'Colar o código de alguém envia um pedido de amizade — a pessoa precisa aceitar antes de vocês virarem amigos de verdade.';
+
+  @override
+  String get friendsHelpStep3Title => 'Aceitar ou recusar';
+
+  @override
+  String get friendsHelpStep3Body =>
+      'Pedidos recebidos aparecem em \"Pedidos de amizade\", com botões para aceitar ou recusar cada um.';
+
+  @override
+  String get friendsHelpStep4Title => 'Desafie seus amigos';
+
+  @override
+  String get friendsHelpStep4Body =>
+      'Depois de amigos, toque em \"Desafiar\" ao lado do nome dele pra criar uma Batalha entre vocês dois.';
+
+  @override
+  String get friendsHelpStep5Title => 'Denunciar ou bloquear';
+
+  @override
+  String get friendsHelpStep5Body =>
+      'Toque nos \"⋮\" ao lado de um amigo ou pedido pra denunciar um comportamento inadequado ou bloquear a pessoa.';
+
+  @override
   String get friendRequestsTitle => 'Pedidos de amizade';
 
   @override
@@ -768,6 +809,47 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get battlesScreenTitle => 'Batalhas';
+
+  @override
+  String get battlesHelpTooltip => 'Como funciona';
+
+  @override
+  String get battlesHelpTitle => 'Batalhas — como funciona';
+
+  @override
+  String get battlesHelpStep1Title => 'Só entre amigos';
+
+  @override
+  String get battlesHelpStep1Body =>
+      'Uma batalha só pode ser criada com quem já é seu amigo — toque em \"Desafiar\" na tela Amigos.';
+
+  @override
+  String get battlesHelpStep2Title => 'Escolha território e nível';
+
+  @override
+  String get battlesHelpStep2Body =>
+      'Ao desafiar, você escolhe o território e o nível de dificuldade (1 a 5) do desafio que os dois vão responder.';
+
+  @override
+  String get battlesHelpStep3Title => 'Cada um no seu tempo';
+
+  @override
+  String get battlesHelpStep3Body =>
+      'A batalha não é ao vivo — cada pessoa responde quando quiser, sem precisar estar online ao mesmo tempo.';
+
+  @override
+  String get battlesHelpStep4Title => 'Quem vence';
+
+  @override
+  String get battlesHelpStep4Body =>
+      'Acertar sempre vence errar. Se os dois acertarem, vence quem respondeu mais rápido. Se os dois errarem, é empate.';
+
+  @override
+  String get battlesHelpStep5Title => 'Limite e recompensa';
+
+  @override
+  String get battlesHelpStep5Body =>
+      'Você pode enviar até 3 desafios por dia. Vencer uma batalha dá um bônus de +30 XP.';
 
   @override
   String get battleChallengeButton => 'Desafiar';

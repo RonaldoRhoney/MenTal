@@ -1,7 +1,7 @@
 [
   {
     "territory_id": "curiosidade_relampago",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Sou uma única célula, a maior que existe no reino animal — e você provavelmente já me quebrou hoje de manhã.",
     "options": [
       "A gema de um ovo",
@@ -19,7 +19,7 @@
   },
   {
     "territory_id": "curiosidade_relampago",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Existo há mais de 200 anos, mas minha versão mais vendida do mundo tem motor menor que o de muitos cortadores de grama.",
     "options": [
       "A moto Honda Cub",
@@ -37,7 +37,7 @@
   },
   {
     "territory_id": "curiosidade_relampago",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Sou formado dentro da Terra, mas o que veste seu dedo hoje pode ter viajado bilhões de anos antes de chegar até você.",
     "options": [
       "Um diamante",
@@ -55,7 +55,7 @@
   },
   {
     "territory_id": "curiosidade_relampago",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Trabalho sem parar a vida inteira, mas boa parte da minha energia não vai pra bombear sangue — vai só pra me manter com a forma certa.",
     "options": [
       "O coração",
@@ -91,7 +91,7 @@
   },
   {
     "territory_id": "curiosidade_relampago",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Sou um órgão, peso pouco mais de um quilo, e mesmo assim consumo cerca de 20% de toda a energia que você gasta em um dia inteiro.",
     "options": [
       "O cérebro",
@@ -127,7 +127,7 @@
   },
   {
     "territory_id": "curiosidade_relampago",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Pareço sólida, mas na verdade me movo tão devagar que sou tecnicamente considerada um líquido em fluxo extremamente lento, segundo alguns cientistas — debate que ainda divide opiniões.",
     "options": [
       "Vidro de janela antiga",

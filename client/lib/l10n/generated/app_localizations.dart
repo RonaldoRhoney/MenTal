@@ -1174,6 +1174,78 @@ abstract class AppLocalizations {
   /// **'Seus amigos'**
   String get friendsListTitle;
 
+  /// Tooltip for the help icon on Friends screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Como funciona'**
+  String get friendsHelpTooltip;
+
+  /// Title of the Friends help sheet
+  ///
+  /// In pt, this message translates to:
+  /// **'Amigos — como funciona'**
+  String get friendsHelpTitle;
+
+  /// Friends help step 1 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Convide pelo seu código'**
+  String get friendsHelpStep1Title;
+
+  /// Friends help step 1 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Copie seu código ou compartilhe direto com alguém. Quem receber pode colar esse código no campo \"Adicionar amigo\".'**
+  String get friendsHelpStep1Body;
+
+  /// Friends help step 2 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Adicionar não é automático'**
+  String get friendsHelpStep2Title;
+
+  /// Friends help step 2 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Colar o código de alguém envia um pedido de amizade — a pessoa precisa aceitar antes de vocês virarem amigos de verdade.'**
+  String get friendsHelpStep2Body;
+
+  /// Friends help step 3 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Aceitar ou recusar'**
+  String get friendsHelpStep3Title;
+
+  /// Friends help step 3 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Pedidos recebidos aparecem em \"Pedidos de amizade\", com botões para aceitar ou recusar cada um.'**
+  String get friendsHelpStep3Body;
+
+  /// Friends help step 4 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Desafie seus amigos'**
+  String get friendsHelpStep4Title;
+
+  /// Friends help step 4 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Depois de amigos, toque em \"Desafiar\" ao lado do nome dele pra criar uma Batalha entre vocês dois.'**
+  String get friendsHelpStep4Body;
+
+  /// Friends help step 5 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Denunciar ou bloquear'**
+  String get friendsHelpStep5Title;
+
+  /// Friends help step 5 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Toque nos \"⋮\" ao lado de um amigo ou pedido pra denunciar um comportamento inadequado ou bloquear a pessoa.'**
+  String get friendsHelpStep5Body;
+
   /// Section title for pending friend requests
   ///
   /// In pt, this message translates to:
@@ -1401,6 +1473,78 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Batalhas'**
   String get battlesScreenTitle;
+
+  /// Tooltip for the help icon on Battles screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Como funciona'**
+  String get battlesHelpTooltip;
+
+  /// Title of the Battles help sheet
+  ///
+  /// In pt, this message translates to:
+  /// **'Batalhas — como funciona'**
+  String get battlesHelpTitle;
+
+  /// Battles help step 1 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Só entre amigos'**
+  String get battlesHelpStep1Title;
+
+  /// Battles help step 1 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Uma batalha só pode ser criada com quem já é seu amigo — toque em \"Desafiar\" na tela Amigos.'**
+  String get battlesHelpStep1Body;
+
+  /// Battles help step 2 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Escolha território e nível'**
+  String get battlesHelpStep2Title;
+
+  /// Battles help step 2 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Ao desafiar, você escolhe o território e o nível de dificuldade (1 a 5) do desafio que os dois vão responder.'**
+  String get battlesHelpStep2Body;
+
+  /// Battles help step 3 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Cada um no seu tempo'**
+  String get battlesHelpStep3Title;
+
+  /// Battles help step 3 body
+  ///
+  /// In pt, this message translates to:
+  /// **'A batalha não é ao vivo — cada pessoa responde quando quiser, sem precisar estar online ao mesmo tempo.'**
+  String get battlesHelpStep3Body;
+
+  /// Battles help step 4 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Quem vence'**
+  String get battlesHelpStep4Title;
+
+  /// Battles help step 4 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Acertar sempre vence errar. Se os dois acertarem, vence quem respondeu mais rápido. Se os dois errarem, é empate.'**
+  String get battlesHelpStep4Body;
+
+  /// Battles help step 5 title
+  ///
+  /// In pt, this message translates to:
+  /// **'Limite e recompensa'**
+  String get battlesHelpStep5Title;
+
+  /// Battles help step 5 body
+  ///
+  /// In pt, this message translates to:
+  /// **'Você pode enviar até 3 desafios por dia. Vencer uma batalha dá um bônus de +30 XP.'**
+  String get battlesHelpStep5Body;
 
   /// Button on a friend row to challenge them to a battle
   ///

@@ -934,5 +934,23 @@
       "É comum em celulares e caixas de som inteligentes."
     ],
     "age_reviewed": true
+  },
+  {
+    "territory_id": "tecnologia_fronteira",
+    "difficulty_level": 2,
+    "prompt": "Qual é o nome dado ao processo de ajustar um modelo de IA já treinado para se especializar melhor numa tarefa específica, sem treinar do zero?",
+    "options": [
+      "Ajuste fino (fine-tuning)",
+      "Compilação de modelo",
+      "Criptografia de rede",
+      "Cache de inferência"
+    ],
+    "correct_answer": "Ajuste fino (fine-tuning)",
+    "explanation": "Ajuste fino é o processo de continuar o treinamento de um modelo já pronto, especializando-o numa tarefa específica sem precisar treinar tudo do zero.",
+    "hints": [
+      "Aproveita um modelo que já foi treinado antes, em vez de começar do absoluto zero.",
+      "Serve para 'especializar' um modelo genérico numa tarefa mais específica."
+    ],
+    "age_reviewed": true
   }
 ]

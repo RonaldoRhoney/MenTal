@@ -5,6 +5,7 @@ import '../widgets/profile_photo.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
+import '../widgets/help_sheet.dart';
 import 'challenge_screen.dart';
 
 /// V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md). Lista batalhas
@@ -62,6 +63,21 @@ class _BattlesScreenState extends State<BattlesScreen> {
     _load();
   }
 
+  void _showHelp() {
+    final l10n = AppLocalizations.of(context)!;
+    showHelpSheet(
+      context,
+      title: l10n.battlesHelpTitle,
+      steps: [
+        HelpStep(icon: Icons.people_outline, title: l10n.battlesHelpStep1Title, description: l10n.battlesHelpStep1Body),
+        HelpStep(icon: Icons.tune, title: l10n.battlesHelpStep2Title, description: l10n.battlesHelpStep2Body),
+        HelpStep(icon: Icons.schedule_outlined, title: l10n.battlesHelpStep3Title, description: l10n.battlesHelpStep3Body),
+        HelpStep(icon: Icons.emoji_events_outlined, title: l10n.battlesHelpStep4Title, description: l10n.battlesHelpStep4Body),
+        HelpStep(icon: Icons.bolt_outlined, title: l10n.battlesHelpStep5Title, description: l10n.battlesHelpStep5Body),
+      ],
+    );
+  }
+
   Widget _statusLine(AppLocalizations l10n, Map<String, dynamic> battle) {
     final status = battle['status'] as String;
     final iAnswered = battle['i_answered'] as bool;
@@ -88,7 +104,16 @@ class _BattlesScreenState extends State<BattlesScreen> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.battlesScreenTitle)),
+      appBar: AppBar(
+        title: Text(l10n.battlesScreenTitle),
+        actions: [
+          IconButton(
+            tooltip: l10n.battlesHelpTooltip,
+            icon: const Icon(Icons.help_outline),
+            onPressed: _showHelp,
+          ),
+        ],
+      ),
       body: SafeArea(
         child: _loading
             ? const Center(child: CircularProgressIndicator())

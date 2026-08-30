@@ -1946,7 +1946,7 @@ CHALLENGES = [
     },
     # V3.5 (V3/V3.5_CURIOSIDADE_RELAMPAGO.md) — backend/content/curiosidade_relampago.json.
     {
-        "territory_id": "curiosidade_relampago", "difficulty_level": 1,
+        "territory_id": "curiosidade_relampago", "difficulty_level": 2,
         "prompt": "Sou uma única célula, a maior que existe no reino animal — e você provavelmente já me quebrou hoje de manhã.",
         "options": ["A gema de um ovo", "Um neurônio", "Uma hemácia", "Um grão de pólen"],
         "correct_answer": "A gema de um ovo",
@@ -1955,7 +1955,7 @@ CHALLENGES = [
         "hints": ["Você me encontra na cozinha, não em um laboratório.", "Estou dentro da casca, ao lado da clara."],
     },
     {
-        "territory_id": "curiosidade_relampago", "difficulty_level": 1,
+        "territory_id": "curiosidade_relampago", "difficulty_level": 2,
         "prompt": "Existo há mais de 200 anos, mas minha versão mais vendida do mundo tem motor menor que o de muitos cortadores de grama.",
         "options": ["A moto Honda Cub", "O Fusca", "O avião a hélice", "A bicicleta"],
         "correct_answer": "A moto Honda Cub",
@@ -1964,7 +1964,7 @@ CHALLENGES = [
         "hints": ["Sou japonesa e ando sobre duas rodas.", "Já vendi mais de 100 milhões de unidades — sou o veículo motorizado mais vendido da história."],
     },
     {
-        "territory_id": "curiosidade_relampago", "difficulty_level": 1,
+        "territory_id": "curiosidade_relampago", "difficulty_level": 3,
         "prompt": "Sou formado dentro da Terra, mas o que veste seu dedo hoje pode ter viajado bilhões de anos antes de chegar até você.",
         "options": ["Um diamante", "Ouro", "Granito", "Sal-gema"],
         "correct_answer": "Um diamante",
@@ -1973,7 +1973,7 @@ CHALLENGES = [
         "hints": ["Sou uma pedra preciosa, não um metal.", "Sou o material natural mais duro conhecido."],
     },
     {
-        "territory_id": "curiosidade_relampago", "difficulty_level": 1,
+        "territory_id": "curiosidade_relampago", "difficulty_level": 3,
         "prompt": "Trabalho sem parar a vida inteira, mas boa parte da minha energia não vai pra bombear sangue — vai só pra me manter com a forma certa.",
         "options": ["O coração", "O pulmão", "O cérebro", "O fêmur"],
         "correct_answer": "O coração",
@@ -1991,7 +1991,7 @@ CHALLENGES = [
         "hints": ["Ajudo viajantes a encontrar direção.", "Minha agulha aponta sempre pro norte."],
     },
     {
-        "territory_id": "curiosidade_relampago", "difficulty_level": 1,
+        "territory_id": "curiosidade_relampago", "difficulty_level": 2,
         "prompt": "Sou um órgão, peso pouco mais de um quilo, e mesmo assim consumo cerca de 20% de toda a energia que você gasta em um dia inteiro.",
         "options": ["O cérebro", "O fígado", "O estômago", "O rim"],
         "correct_answer": "O cérebro",
@@ -2009,7 +2009,7 @@ CHALLENGES = [
         "hints": ["Nunca estrago, mesmo sem geladeira nem conservante.", "Faraós egípcios já me guardavam junto a tesouros, há milhares de anos."],
     },
     {
-        "territory_id": "curiosidade_relampago", "difficulty_level": 1,
+        "territory_id": "curiosidade_relampago", "difficulty_level": 3,
         "prompt": "Pareço sólida, mas na verdade me movo tão devagar que sou tecnicamente considerada um líquido em fluxo extremamente lento, segundo alguns cientistas — debate que ainda divide opiniões.",
         "options": ["Vidro de janela antiga", "Pedra de mármore", "Gelo", "Plástico"],
         "correct_answer": "Vidro de janela antiga",
@@ -4532,6 +4532,15 @@ CHALLENGES = [
         "explanation": "O coração de um beija-flor pode bater mais de mil vezes por minuto durante o voo — rápido demais para o olho humano perceber, e proporcionalmente um dos batimentos mais acelerados entre os animais.",
         "age_reviewed": True,
         "hints": ["Sou parte de um animal muito pequeno, mas extremamente ativo.", "Esse animal precisa de muita energia só para conseguir voar parado no ar."],
+    },
+    {
+        "territory_id": "tecnologia_fronteira", "difficulty_level": 2,
+        "prompt": "Qual é o nome dado ao processo de ajustar um modelo de IA já treinado para se especializar melhor numa tarefa específica, sem treinar do zero?",
+        "options": ["Ajuste fino (fine-tuning)", "Compilação de modelo", "Criptografia de rede", "Cache de inferência"],
+        "correct_answer": "Ajuste fino (fine-tuning)",
+        "explanation": "Ajuste fino é o processo de continuar o treinamento de um modelo já pronto, especializando-o numa tarefa específica sem precisar treinar tudo do zero.",
+        "age_reviewed": True,
+        "hints": ["Aproveita um modelo que já foi treinado antes, em vez de começar do absoluto zero.", "Serve para 'especializar' um modelo genérico numa tarefa mais específica."],
     },
 ]
 

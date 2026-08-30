@@ -8,6 +8,7 @@ import '../l10n/generated/app_localizations.dart';
 import '../services/share_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
+import '../widgets/help_sheet.dart';
 import 'challenge_screen.dart';
 
 /// V2 item 12 — Amigos (V2_KICKOFF.md §6A). Reaproveita o MESMO
@@ -120,6 +121,21 @@ class _FriendsScreenState extends State<FriendsScreen> {
     final code = _inviteCode;
     if (code == null) return;
     await ShareService.share(AppLocalizations.of(context)!.friendsInviteShareMessage(code));
+  }
+
+  void _showHelp() {
+    final l10n = AppLocalizations.of(context)!;
+    showHelpSheet(
+      context,
+      title: l10n.friendsHelpTitle,
+      steps: [
+        HelpStep(icon: Icons.share_outlined, title: l10n.friendsHelpStep1Title, description: l10n.friendsHelpStep1Body),
+        HelpStep(icon: Icons.hourglass_top_outlined, title: l10n.friendsHelpStep2Title, description: l10n.friendsHelpStep2Body),
+        HelpStep(icon: Icons.check_circle_outline, title: l10n.friendsHelpStep3Title, description: l10n.friendsHelpStep3Body),
+        HelpStep(icon: Icons.flash_on_outlined, title: l10n.friendsHelpStep4Title, description: l10n.friendsHelpStep4Body),
+        HelpStep(icon: Icons.shield_outlined, title: l10n.friendsHelpStep5Title, description: l10n.friendsHelpStep5Body),
+      ],
+    );
   }
 
   Future<void> _addFriend() async {
@@ -238,7 +254,16 @@ class _FriendsScreenState extends State<FriendsScreen> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.friendsScreenTitle)),
+      appBar: AppBar(
+        title: Text(l10n.friendsScreenTitle),
+        actions: [
+          IconButton(
+            tooltip: l10n.friendsHelpTooltip,
+            icon: const Icon(Icons.help_outline),
+            onPressed: _showHelp,
+          ),
+        ],
+      ),
       body: SafeArea(
         child: _loading
             ? const Center(child: CircularProgressIndicator())
