@@ -469,17 +469,48 @@ class _MovementScreenState extends State<MovementScreen> {
           const SizedBox(height: 4),
         ],
         if (_pendingReportCycle != null) ...[
-          // Sem botão dedicado (29/08/2026, pedido de Rhoney: a coleta
-          // passa a acontecer ao tocar num nível de meta atingido) — o
-          // ciclo anterior pendente é só avisado aqui e entra junto na
-          // próxima coleta disparada por qualquer nível aceso.
-          PulseIn(
-            intensity: 0.2,
-            child: Text(
-              l10n.movementPendingReportLabel(_pendingReportCycle!['steps_collected'] as int),
-              style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600, fontSize: 11),
-              maxLines: 2,
-            ),
+          // O ciclo anterior pendente pode não ter caminho nenhum até um
+          // nível de meta do dia atual (ex.: usuário ainda não andou o
+          // suficiente hoje) — sem isso, o saldo fica preso indefinidamente.
+          // Aviso tocável (30/08/2026, bug encontrado ao investigar coleta
+          // travada) + botão explícito ao lado (30/08/2026, pedido de
+          // Rhoney: um botão visível, não só o texto tocável) — os dois
+          // chamam a mesma _collectReachedLevel.
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: _busy ? null : _collectReachedLevel,
+                  child: PulseIn(
+                    intensity: 0.2,
+                    child: Text(
+                      l10n.movementPendingReportLabel(_pendingReportCycle!['steps_collected'] as int),
+                      style: TextStyle(
+                        color: AppColors.gold,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 11,
+                        decoration: TextDecoration.underline,
+                        decorationColor: AppColors.gold.withValues(alpha: 0.5),
+                      ),
+                      maxLines: 2,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              FilledButton(
+                style: FilledButton.styleFrom(
+                  backgroundColor: AppColors.gold,
+                  foregroundColor: AppColors.bg,
+                  minimumSize: const Size(0, 32),
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  textStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800),
+                ),
+                onPressed: _busy ? null : _collectReachedLevel,
+                child: Text(l10n.movementCollectPendingButton),
+              ),
+            ],
           ),
           const SizedBox(height: 6),
         ],
@@ -532,9 +563,14 @@ class _MovementScreenState extends State<MovementScreen> {
           ),
           const SizedBox(height: 8),
         ],
-        // Gráfico intradiário — precisa de pelo menos 2 pontos pra fazer
-        // sentido comparar (0-1 coleta ainda não tem "oscilação").
-        if (currentCycle != null && ((currentCycle['snapshots'] as List?)?.length ?? 0) >= 2)
+        // Gráfico intradiário — sempre visível quando o ciclo de hoje
+        // existe (30/08/2026, pedido de Rhoney: "crie o gráfico de
+        // progresso diário", que antes só aparecia com 2+ registros —
+        // na prática quase nunca, já que a coleta ficava presa antes da
+        // correção do ciclo pendente). _intradayPoints sempre inclui o
+        // ponto inicial (0,0), então mesmo sem nenhum snapshot ainda o
+        // gráfico mostra a linha começando do zero.
+        if (currentCycle != null)
           Expanded(
             flex: 6,
             // RepaintBoundary (achado real, 29/08/2026 — Rhoney: "telas
@@ -551,14 +587,14 @@ class _MovementScreenState extends State<MovementScreen> {
                 trailing: l10n.movementTodayChartSubtitle,
                 child: _IntradayStepsLineChart(
                   points: _intradayPoints(
-                    (currentCycle['snapshots'] as List).cast<Map<String, dynamic>>(),
+                    (currentCycle['snapshots'] as List?)?.cast<Map<String, dynamic>>() ?? const [],
                     DateTime.parse(currentCycle['cycle_start_at'] as String),
                   ),
                 ),
               ),
             ),
           ),
-        if (currentCycle != null && ((currentCycle['snapshots'] as List?)?.length ?? 0) >= 2) const SizedBox(height: 8),
+        if (currentCycle != null) const SizedBox(height: 8),
         // Gráfico semanal — precisa de pelo menos 2 ciclos.
         if (_recentCycles.length >= 2)
           Expanded(

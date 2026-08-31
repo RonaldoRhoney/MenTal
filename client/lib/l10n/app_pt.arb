@@ -555,6 +555,9 @@
     "placeholders": {"steps": {"type": "int"}}
   },
 
+  "movementCollectPendingButton": "Coletar",
+  "@movementCollectPendingButton": {"description": "Explicit button next to the pending-cycle warning that triggers collection directly"},
+
   "movementBonusAlertMessage": "Colete seus bônus de Movimento",
   "@movementBonusAlertMessage": {"description": "Subtle Home banner inviting the user to open Movement and collect accumulated but uncollected XP/MentalCoins"},
 

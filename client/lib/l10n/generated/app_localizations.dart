@@ -1102,6 +1102,12 @@ abstract class AppLocalizations {
   /// **'Você ainda tem um ciclo anterior com {steps} passos pra coletar — eles entram na próxima coleta.'**
   String movementPendingReportLabel(int steps);
 
+  /// Explicit button next to the pending-cycle warning that triggers collection directly
+  ///
+  /// In pt, this message translates to:
+  /// **'Coletar'**
+  String get movementCollectPendingButton;
+
   /// Subtle Home banner inviting the user to open Movement and collect accumulated but uncollected XP/MentalCoins
   ///
   /// In pt, this message translates to:

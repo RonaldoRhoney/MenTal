@@ -584,6 +584,9 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get movementCollectPendingButton => 'Coletar';
+
+  @override
   String get movementBonusAlertMessage => 'Colete seus bônus de Movimento';
 
   @override
