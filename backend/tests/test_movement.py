@@ -413,16 +413,19 @@ def test_collect_steps_records_snapshot_history_for_intraday_chart(client):
     client.post("/movement/collect", json={"steps": 1000}, headers=headers)
     resp = client.post("/movement/collect", json={"steps": 500}, headers=headers)
     assert resp.status_code == 200
-    snapshots = resp.json()["cycle"]["snapshots"]
+    # A resposta da própria coleta não traz mais o histórico de snapshots
+    # (30/08/2026, achado real: o client nunca lia isso daqui, só de
+    # GET /movement/status — buscar de novo a cada coleta era trabalho
+    # puro descartado, e piorava a cada snapshot acumulado no ciclo).
+    assert resp.json()["cycle"]["snapshots"] == []
 
+    status = client.get("/movement/status", headers=headers).json()
+    snapshots = status["current_cycle"]["snapshots"]
     assert len(snapshots) == 2
     assert snapshots[0]["steps_total"] == 1000
     assert snapshots[1]["steps_total"] == 1500
     # Ordenado cronologicamente (o segundo veio depois do primeiro).
     assert snapshots[0]["recorded_at"] <= snapshots[1]["recorded_at"]
-
-    status = client.get("/movement/status", headers=headers).json()
-    assert len(status["current_cycle"]["snapshots"]) == 2
 
 
 def test_movement_status_returns_recent_cycles_for_weekly_chart(client):

@@ -71,8 +71,16 @@ def collect_steps(
         )
     except movement.MovementError as e:
         raise HTTPException(status_code=400, detail={"error": {"code": e.code, "message": e.message}})
+    # with_snapshots=False (achado real, 30/08/2026): o client só lê
+    # cycle.steps_collected desta resposta (movement_screen.dart nunca
+    # consome result['cycle']['snapshots']) — buscar o histórico
+    # completo aqui era trabalho puro descartado, e ficava cada vez mais
+    # lento à medida que o ciclo acumulava snapshots (coleta automática a
+    # cada ~20s some rápido numa sessão longa), até estourar o timeout do
+    # client em ciclos com muitos registros — exatamente o "sem conexão"
+    # reportado ao tentar coletar o ciclo pendente.
     return schemas.MovementCollectResponse(
-        cycle=_cycle_out(cycle, db, with_snapshots=True),
+        cycle=_cycle_out(cycle, db, with_snapshots=False),
         xp_awarded=xp_awarded,
         level_up=level_up,
         new_level=new_level,
