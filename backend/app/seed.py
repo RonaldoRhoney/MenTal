@@ -4677,6 +4677,24 @@ CHALLENGES = [
         "age_reviewed": True,
         "hints": ["A mão passa perto do rosto.", "O movimento vai de cima pra baixo, próximo ao queixo."],
     },
+    {
+        "territory_id": "libras", "difficulty_level": 2,
+        "prompt": "Mão fechada com o polegar estendido, movendo-se para frente a partir do queixo. A qual palavra corresponde este sinal?",
+        "options": ["Bom", "Ruim", "Certo", "Errado"],
+        "correct_answer": "Bom",
+        "explanation": "Isso mesmo! Esse sinal representa 'bom' em Libras.",
+        "age_reviewed": True,
+        "hints": ["A mão sai do queixo, com o polegar estendido.", "O movimento vai do queixo para frente, num único sinal."],
+    },
+    {
+        "territory_id": "libras", "difficulty_level": 3,
+        "prompt": "Sequência: sinal de 'muito' seguido do sinal de 'obrigado(a)', em movimento contínuo. Que frase esta combinação de sinais forma?",
+        "options": ["Muito obrigado(a)", "Por favor mesmo", "Desculpa mesmo", "Com certeza"],
+        "correct_answer": "Muito obrigado(a)",
+        "explanation": "Isso mesmo! A combinação forma 'muito obrigado(a)', um agradecimento intensificado.",
+        "age_reviewed": True,
+        "hints": ["É uma sequência de dois sinais, não um só.", "Começa com o sinal de intensidade e termina no agradecimento."],
+    },
 ]
 
 
