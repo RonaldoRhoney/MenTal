@@ -188,7 +188,8 @@ void main() {
     expect(find.byType(NavigationBar), findsOneWidget);
     expect(find.text('Início'), findsOneWidget);
     expect(find.text('Perfil'), findsOneWidget);
-    expect(find.text('Configurações'), findsOneWidget);
+    // Renomeado pra "Ajuste" (commit 07bfe08, Painel Admin in-app).
+    expect(find.text('Ajuste'), findsOneWidget);
     expect(find.text('Batalhas'), findsOneWidget);
     expect(find.text('Feedback'), findsOneWidget);
   });

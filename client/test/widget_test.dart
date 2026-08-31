@@ -25,6 +25,16 @@ void main() {
     await tester.pump(const Duration(milliseconds: 2300));
     await tester.pump();
 
+    // Tutorial "Como usar o MENTAL" (29/08/2026) aparece uma vez, logo
+    // após o splash e antes do login — pula pra chegar na tela de login
+    // de verdade, que é o que este teste quer confirmar. Um pump extra
+    // dá tempo pro OnboardingTutorialService.hasSeen() (async, lê
+    // SharedPreferences) resolver antes de procurar o botão.
+    await tester.pump(const Duration(milliseconds: 100));
+    expect(find.text('Pular'), findsOneWidget);
+    await tester.tap(find.text('Pular'));
+    await tester.pump();
+
     // MENTAL (BRAND.md §1: nome nunca aparece sozinho, sem o slogan por
     // perto, em nenhum primeiro contato) e o formulário de e-mail/senha.
     expect(find.text('MENTAL'), findsOneWidget);
