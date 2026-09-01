@@ -421,21 +421,6 @@ class ApiClient {
     );
   }
 
-  Future<Map<String, dynamic>> nextCrossword(String territoryId) async {
-    return _get(
-      _uri('/crosswords/next', {'territory_id': territoryId}),
-      headers: _headers,
-    );
-  }
-
-  Future<Map<String, dynamic>> completeCrossword({required String resultId, required List<Map<String, dynamic>> answers}) async {
-    return _post(
-      _uri('/crosswords/$resultId/complete'),
-      headers: _headers,
-      body: jsonEncode({'answers': answers}),
-    );
-  }
-
   // U.I/ADMIN_PAINEL_IN_APP_V1.md — só retorna dado de verdade pra
   // role=admin (backend rejeita com 403 pra qualquer outro usuário).
   Future<Map<String, dynamic>> getAdminMetricsSummary({String period = '7d'}) async {

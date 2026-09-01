@@ -165,47 +165,6 @@ class WordPuzzleCompleteResponse(BaseModel):
     already_completed_before: bool
 
 
-class CrosswordEntryOut(BaseModel):
-    # Sem 'answer' aqui de propósito — ao contrário do Caça-palavras, a
-    # cruzadinha tem resposta escondida de verdade (o jogador preenche).
-    number: int
-    direction: str
-    row: int
-    col: int
-    length: int
-    clue: str
-
-
-class CrosswordOut(BaseModel):
-    result_id: str
-    puzzle_id: str
-    territory_id: str
-    difficulty_level: int
-    theme: str
-    grid_size: int
-    # Formato da grade sem revelar letras: '#' = célula preta, '.' =
-    # célula preenchível (o client desenha a estrutura, nunca o
-    # conteúdo). Calculado a partir de puzzle.grid no router.
-    grid_shape: list[str]
-    entries: list[CrosswordEntryOut]
-
-
-class CrosswordAnswerIn(BaseModel):
-    number: int
-    direction: str
-    answer: str
-
-
-class CrosswordCompleteRequest(BaseModel):
-    answers: list[CrosswordAnswerIn]
-
-
-class CrosswordCompleteResponse(BaseModel):
-    xp_awarded: int
-    speed_bonus_xp: int
-    already_completed_before: bool
-
-
 class HintRequest(BaseModel):
     attempt_id: str
 
