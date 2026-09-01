@@ -21,7 +21,6 @@ import 'movement_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
-import 'crossword_screen.dart';
 import 'word_search_screen.dart';
 
 /// Home: um CTA primário claro por território, conforme Princípio de
@@ -770,7 +769,7 @@ class _TerritoryCard extends StatelessWidget {
     // jogo própria (grade, não pergunta+alternativas) — nunca abre
     // ChallengeScreen, e não tem modo Relâmpago (não existe timer/nível
     // adaptativo por resposta individual nesse formato).
-    if (territoryId == 'caca_palavras' || territoryId == 'cruzadas') {
+    if (territoryId == 'caca_palavras') {
       return Material(
         color: AppColors.bg2,
         borderRadius: BorderRadius.circular(16),
@@ -778,11 +777,7 @@ class _TerritoryCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           onTap: () async {
             await Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => territoryId == 'caca_palavras'
-                    ? WordSearchScreen(client: client, territoryId: territoryId, territoryLabel: label)
-                    : CrosswordScreen(client: client, territoryId: territoryId, territoryLabel: label),
-              ),
+              MaterialPageRoute(builder: (_) => WordSearchScreen(client: client, territoryId: territoryId, territoryLabel: label)),
             );
             onReturned();
           },
