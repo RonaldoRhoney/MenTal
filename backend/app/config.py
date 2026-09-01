@@ -171,6 +171,22 @@ MOVEMENT_COLLECTION_GRACE_HOURS = 24
 # corrompido (ex.: overflow, campo em branco). Passos negativos entram
 # a partir do schema Pydantic (Field(ge=0)), não daqui.
 MOVEMENT_MAX_STEPS_PER_COLLECTION = 2_500_000
+# Achado real de produção (31/08/2026, MENTAL_MOVIMENTO_REFORMULACAO.md
+# §2 e auditoria de segurança do mesmo dia): sensor de passos do
+# aparelho de um usuário começou a reportar leituras corrompidas, e a
+# auto-coleta (a cada ~20s) foi somando cada leitura sem nenhum teto
+# ACUMULADO por ciclo — o teto acima é só por chamada, então uma
+# sequência de deltas "plausíveis" isoladamente inflou o ciclo para
+# ~165.000 passos em minutos, convertendo isso em MentalCoins reais
+# (mentalcoins.py, marco de 1000 passos = 5 moedas, sem teto próprio).
+# Este teto é um CLAMP (trava o valor aceito no que falta pro teto),
+# nunca uma rejeição — preserva o teste já existente de que um único
+# valor absurdo numa chamada (ex.: 999.999) ainda deve render XP da
+# faixa máxima normalmente; só a soma ACUMULADA do ciclo passa a ter
+# limite. ~150.000 passos/dia é generoso o bastante pra nunca ser
+# atingido por caminhada real, mas finito o bastante pra travar
+# corrupção de sensor ou abuso repetido.
+MOVEMENT_MAX_STEPS_PER_CYCLE = 150_000
 
 # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md, aprovado
 # 2026-08-22). Múltipla escolha com tempo regressivo — nível 1 tem mais

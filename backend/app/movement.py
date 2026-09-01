@@ -182,7 +182,15 @@ def collect_steps(
 
     previous_bonus = _bonus_for_steps(cycle.steps_collected)
     previous_total = cycle.steps_collected
-    cycle.steps_collected += steps
+    # Achado real de produção (31/08/2026): teto por chamada acima não
+    # impede que uma SEQUÊNCIA de deltas plausíveis-isoladamente infle o
+    # ciclo sem limite (foi assim que um ciclo chegou a ~165.000 passos
+    # em minutos via auto-coleta). Clampa no que falta pro teto do
+    # ciclo, nunca rejeita — um valor único e absurdo numa só chamada
+    # continua caindo normalmente na faixa máxima de XP (ver
+    # MOVEMENT_MAX_STEPS_PER_CYCLE em config.py para o raciocínio).
+    headroom = max(0, config.MOVEMENT_MAX_STEPS_PER_CYCLE - previous_total)
+    cycle.steps_collected += min(steps, headroom)
     new_bonus = _bonus_for_steps(cycle.steps_collected)
     xp_delta = max(0, new_bonus - previous_bonus)
 

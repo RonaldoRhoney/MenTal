@@ -146,6 +146,65 @@ def test_steps_beyond_top_tier_never_exceed_top_bonus(client):
     assert resp2["xp_awarded"] == 0
 
 
+def test_repeated_small_collections_never_exceed_cycle_cap(client):
+    """
+    Achado real de produção (31/08/2026): sensor de passos corrompido +
+    auto-coleta a cada ~20s inflou um ciclo pra ~165.000 passos em
+    minutos, sem nenhum request isolado passar do teto por chamada —
+    o problema era a SOMA. Simula a mesma sequência (muitas coletas
+    pequenas e repetidas) e confirma que o total do ciclo nunca passa
+    de MOVEMENT_MAX_STEPS_PER_CYCLE, mesmo entregando bem mais que isso.
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+
+    for _ in range(30):
+        client.post("/movement/collect", json={"steps": 10_000}, headers=headers)
+
+    status = client.get("/movement/status", headers=headers).json()
+    assert status["current_cycle"]["steps_collected"] == config.MOVEMENT_MAX_STEPS_PER_CYCLE
+
+
+def test_cycle_cap_bounds_mentalcoins_from_runaway_sensor(client):
+    """
+    A mesma corrupção de sensor também inflava MentalCoins de verdade
+    (marco de 1000 passos = 5 moedas, sem teto próprio) — o teto por
+    ciclo em steps_collected precisa limitar isso também, não só o XP.
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+
+    total_awarded = 0
+    for _ in range(30):
+        resp = client.post("/movement/collect", json={"steps": 10_000}, headers=headers).json()
+        total_awarded += resp["mentalcoins_awarded"]
+
+    max_possible = (config.MOVEMENT_MAX_STEPS_PER_CYCLE // config.MOVEMENT_STEPS_PER_MENTALCOIN) * config.MOVEMENT_MENTALCOINS_PER_MILESTONE
+    assert total_awarded == max_possible
+    balance = client.get("/mentalcoins/balance", headers=headers).json()
+    assert balance["balance"] == max_possible
+
+
+def test_single_huge_collection_still_clamped_but_reaches_top_xp_tier(client):
+    """Confirma que o clamp por ciclo não quebra o comportamento já
+    validado em test_steps_beyond_top_tier_never_exceed_top_bonus: um
+    valor absurdo numa única chamada ainda cai na faixa máxima de XP,
+    mesmo com o total do ciclo sendo travado bem abaixo do valor bruto
+    enviado."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+
+    resp = client.post("/movement/collect", json={"steps": 999_999}, headers=headers).json()
+    assert resp["xp_awarded"] == config.MOVEMENT_XP_BASE * 4
+    assert resp["cycle"]["steps_collected"] == config.MOVEMENT_MAX_STEPS_PER_CYCLE
+
+
 def test_previous_cycle_collectible_within_grace_then_expires(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
