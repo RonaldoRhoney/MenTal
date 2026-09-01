@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from .. import movement, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
+from ..timeutil import utcnow
 
 router = APIRouter()
 
@@ -72,8 +73,11 @@ def get_movement_yearly_summary(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
-    """MOVIMENTO_REFORMULACAO §13 — card "Ano ›"."""
-    target_year = year or datetime.utcnow().year
+    """MOVIMENTO_REFORMULACAO §13 — card "Ano ›". "Ano atual" (§17) tem
+    que respeitar Brasília, não UTC puro — achado de revisão: perto da
+    virada do ano, UTC já pode estar em 1º de janeiro enquanto Brasília
+    (UTC-3) ainda está em 31 de dezembro, e vice-versa."""
+    target_year = year or utcnow().replace(tzinfo=timezone.utc).astimezone(movement.BRAZIL_TZ).year
     return schemas.MovementYearlySummaryOut(**movement.get_yearly_summary(db, user_id, target_year))
 
 

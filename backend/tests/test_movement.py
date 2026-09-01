@@ -631,6 +631,26 @@ def test_yearly_summary_aggregates_by_month_and_computes_best_month(client):
     assert months_by_number[2]["active_days"] == 2
 
 
+def test_yearly_summary_default_year_respects_brasilia_not_utc(client, monkeypatch):
+    """Achado de revisão de código (01/09/2026): o endpoint usava
+    datetime.utcnow().year pra 'ano atual' quando nenhum ?year= é
+    passado — perto da virada, UTC (00h-03h de 1º de janeiro) já está
+    num ano novo enquanto Brasília (UTC-3) ainda está em 31 de
+    dezembro. §17 exige 'ano atual segundo a regra temporal' (Brasília,
+    não UTC puro, mesmo princípio de §4)."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    # 01:30 UTC de 1º de janeiro de 2027 = 22:30 de 31/12/2026 em
+    # Brasília — "ano atual" ainda deveria ser 2026, não 2027.
+    monkeypatch.setattr("app.routers.movement.utcnow", lambda: datetime(2027, 1, 1, 1, 30, 0))
+
+    resp = client.get("/movement/yearly-summary", headers=headers)
+    assert resp.status_code == 200
+    assert resp.json()["year"] == 2026
+
+
 def test_cycle_window_matches_exact_brasilia_midnight_boundary():
     """MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §4/§22 —
     teste explícito de 23:59:59 -> 00:00:00 de Brasília. Brasília é
