@@ -46,6 +46,50 @@ void main() {
   });
 
   test(
+    'conexão recusada (cold start do Render) repete automaticamente e '
+    'tem sucesso na 2ª tentativa, sem expor erro nenhum',
+    () async {
+      // MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §9/§25 —
+      // a 1ª tentativa nunca chega a ser processada pelo servidor (conexão
+      // recusada, container do Render ainda subindo) — repetir é seguro
+      // e não duplica nada, diferente de um timeout.
+      var attempts = 0;
+      final mockClient = MockClient((request) async {
+        attempts++;
+        if (attempts == 1) throw const SocketException('Conexão recusada simulada (cold start)');
+        return http.Response('{"status": "ok"}', 200);
+      });
+      final client = ApiClient(baseUrl: 'https://example.com', accessToken: 'fake-token', httpClient: mockClient);
+
+      final result = await client.confirmMajority();
+
+      expect(result, {'status': 'ok'});
+      expect(attempts, 2);
+    },
+  );
+
+  test(
+    'timeout NUNCA repete sozinho (evita duplicar XP/recompensa numa coleta)',
+    () async {
+      var attempts = 0;
+      final mockClient = MockClient((request) async {
+        attempts++;
+        await Future.delayed(const Duration(seconds: 5));
+        throw StateError('não deveria chegar aqui');
+      });
+      final client = ApiClient(
+        baseUrl: 'https://example.com',
+        accessToken: 'fake-token',
+        httpClient: mockClient,
+        timeout: const Duration(milliseconds: 100),
+      );
+
+      await expectLater(client.confirmMajority(), throwsA(isA<ApiException>()));
+      expect(attempts, 1);
+    },
+  );
+
+  test(
     'resposta HTTP 200 com corpo não-JSON (proxy/erro do provedor) vira ApiException, não FormatException crua',
     () async {
       // Achado real: durante cold start do Render, o proxy às vezes

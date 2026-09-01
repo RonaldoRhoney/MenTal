@@ -1210,6 +1210,150 @@ abstract class AppLocalizations {
   /// **'Como seus passos foram acumulando ao longo do ciclo.'**
   String get movementTodayChartSubtitle;
 
+  /// Title of the tappable 'Hoje' summary card on the main Movimento screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Hoje'**
+  String get movementTodayCardTitle;
+
+  /// Subtitle of the 'Hoje' summary card
+  ///
+  /// In pt, this message translates to:
+  /// **'Progressão do dia'**
+  String get movementTodayCardSubtitle;
+
+  /// Value line of the 'Hoje' card when a daily goal is set
+  ///
+  /// In pt, this message translates to:
+  /// **'{steps} passos · {percent}% da meta'**
+  String movementTodayCardValue(int steps, int percent);
+
+  /// Value line of the 'Hoje' card when no daily goal is set
+  ///
+  /// In pt, this message translates to:
+  /// **'{steps} passos hoje'**
+  String movementTodayCardValueNoGoal(int steps);
+
+  /// Title of the tappable 'Semana' summary card
+  ///
+  /// In pt, this message translates to:
+  /// **'Semana'**
+  String get movementWeekCardTitle;
+
+  /// Subtitle of the 'Semana' summary card
+  ///
+  /// In pt, this message translates to:
+  /// **'Últimos 7 dias'**
+  String get movementWeekCardSubtitle;
+
+  /// Value line of the 'Semana' card
+  ///
+  /// In pt, this message translates to:
+  /// **'média {average} · total {total}'**
+  String movementWeekCardValue(int average, int total);
+
+  /// Title of the tappable 'Ano' summary card
+  ///
+  /// In pt, this message translates to:
+  /// **'Ano'**
+  String get movementYearCardTitle;
+
+  /// Subtitle of the 'Ano' summary card
+  ///
+  /// In pt, this message translates to:
+  /// **'Seu progresso em {year}'**
+  String movementYearCardSubtitle(int year);
+
+  /// Title of the daily detail screen (opened from the 'Hoje' card or a weekly bar)
+  ///
+  /// In pt, this message translates to:
+  /// **'Progressão do dia'**
+  String get movementDailyDetailTitle;
+
+  /// Steps label in the daily detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Passos'**
+  String get movementDailyDetailStepsLabel;
+
+  /// XP label in the daily detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'XP'**
+  String get movementDailyDetailXpLabel;
+
+  /// Goal label in the daily detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Meta do dia'**
+  String get movementDailyDetailGoalLabel;
+
+  /// Title of the weekly detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Progressão semanal'**
+  String get movementWeeklyDetailTitle;
+
+  /// Hint shown above the weekly bar chart explaining each bar is tappable
+  ///
+  /// In pt, this message translates to:
+  /// **'Toque num dia para ver os detalhes.'**
+  String get movementWeeklyDetailHint;
+
+  /// Title of the yearly detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Progressão anual'**
+  String get movementYearlyDetailTitle;
+
+  /// Total steps label in the yearly detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Total de passos'**
+  String get movementYearlyTotalStepsLabel;
+
+  /// Average steps per active day label in the yearly detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Média por dia ativo'**
+  String get movementYearlyAverageLabel;
+
+  /// Active days label in the yearly detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Dias ativos'**
+  String get movementYearlyActiveDaysLabel;
+
+  /// Best month label in the yearly detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Melhor mês'**
+  String get movementYearlyBestMonthLabel;
+
+  /// Yearly Movement XP label in the yearly detail screen
+  ///
+  /// In pt, this message translates to:
+  /// **'XP de Movimento no ano'**
+  String get movementYearlyXpLabel;
+
+  /// Shown when the yearly summary has no cycles yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda não há dados de Movimento neste ano.'**
+  String get movementYearlyEmptyMessage;
+
+  /// Discreet message shown instead of a raw technical error when a background sync fails but local data is already displayed
+  ///
+  /// In pt, this message translates to:
+  /// **'Dados atualizados localmente. Não foi possível sincronizar agora.'**
+  String get movementSyncFailedMessage;
+
+  /// Retry button shown alongside movementSyncFailedMessage
+  ///
+  /// In pt, this message translates to:
+  /// **'Tentar novamente'**
+  String get movementRetryButton;
+
   /// Celebration message for one or more intraday checkpoints reached in a single collection
   ///
   /// In pt, this message translates to:

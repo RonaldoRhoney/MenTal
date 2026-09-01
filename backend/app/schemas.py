@@ -408,6 +408,22 @@ class MovementCollectResponse(BaseModel):
     mentalcoins_awarded: int = 0
 
 
+class MovementMonthSummaryOut(BaseModel):
+    month: int
+    total_steps: int
+    active_days: int
+
+
+class MovementYearlySummaryOut(BaseModel):
+    year: int
+    months: list[MovementMonthSummaryOut]
+    total_steps: int
+    active_days: int
+    average_steps_per_active_day: int
+    best_month: int | None
+    total_xp_awarded: int
+
+
 class MovementGoalRequest(BaseModel):
     # Achado de auditoria de segurança (28/08/2026): só exigia "maior que
     # zero" — uma meta de 1 passo garantia o bônus de meta (config.

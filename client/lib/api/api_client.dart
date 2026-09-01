@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'package:http/http.dart' as http;
 
 /// Cliente HTTP para a API MENTAL.
@@ -15,7 +16,16 @@ class ApiClient {
     required this.baseUrl,
     required this.accessToken,
     http.Client? httpClient,
-    Duration timeout = const Duration(seconds: 30),
+    // MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §25 —
+    // diagnóstico confirmado: o backend roda no Render free tier, que
+    // hiberna após 15min sem tráfego e leva até ~1min pra acordar
+    // (docs/01_FOUNDATION/ARCHITECTURE.md §3, risco residual já
+    // documentado desde 19/08). 30s era MENOR que esse cold start
+    // documentado — qualquer chamada que coincidisse com ele estourava
+    // o timeout antes do servidor sequer terminar de subir. A auto-
+    // coleta do Movimento (a cada ~20s, inclusive em segundo plano)
+    // tem exposição muito maior a essa janela que qualquer outra tela.
+    Duration timeout = const Duration(seconds: 60),
   })  : _client = httpClient ?? http.Client(),
         _timeout = timeout;
 
@@ -57,8 +67,35 @@ class ApiClient {
 
   Future<Map<String, dynamic>> _wrap(Future<http.Response> Function() request) async {
     try {
+      return await _attempt(request);
+    } on _ConnectionRefused {
+      // MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §8/§9 —
+      // só repete automaticamente quando a conexão foi RECUSADA (nunca
+      // chegou a alcançar o servidor, ex.: container ainda subindo no
+      // cold start) — nesse caso é comprovadamente seguro repetir, a
+      // requisição original nunca foi processada. Um TimeoutException
+      // (abaixo) é diferente: o servidor pode ter recebido e estar
+      // processando, então nunca repete sozinho — arriscaria duplicar
+      // XP/recompensa numa coleta (idempotência exigida no §8).
+      await Future.delayed(const Duration(seconds: 3));
+      try {
+        return await _attempt(request);
+      } on _ConnectionRefused {
+        throw ApiException(
+          statusCode: 0,
+          code: 'NETWORK_ERROR',
+          message: 'Sem conexão com o servidor. Tente novamente.',
+        );
+      }
+    }
+  }
+
+  Future<Map<String, dynamic>> _attempt(Future<http.Response> Function() request) async {
+    try {
       final resp = await request().timeout(_timeout);
       return _decode(resp);
+    } on SocketException {
+      throw _ConnectionRefused();
     } on TimeoutException {
       throw ApiException(
         statusCode: 0,
@@ -388,6 +425,22 @@ class ApiClient {
     );
   }
 
+  // MENTAL_MOVIMENTO_REFORMULACAO.md §11/§12 — detalhamento de um dia
+  // específico (card "Hoje ›" fora da tela principal, ou tocar um dia
+  // na tela "Semana"). Sempre traz o histórico intradiário completo,
+  // diferente de movementStatus() (cujo recent_cycles nunca traz isso).
+  Future<Map<String, dynamic>> getMovementCycle(String cycleId) async {
+    return _get(_uri('/movement/cycles/$cycleId'), headers: _headers);
+  }
+
+  // MENTAL_MOVIMENTO_REFORMULACAO.md §13 — card "Ano ›".
+  Future<Map<String, dynamic>> getMovementYearlySummary({int? year}) async {
+    return _get(
+      _uri('/movement/yearly-summary', year == null ? null : {'year': '$year'}),
+      headers: _headers,
+    );
+  }
+
   // V3.2 (V3/V3.2_TECNOLOGIA.md §3) — Pausa para Aprender: leitura sem
   // options/correct_answer/timer, endpoint separado de nextChallenge.
   Future<Map<String, dynamic>> nextLearningPause(String territoryId) async {
@@ -472,6 +525,11 @@ class ApiClient {
     return body;
   }
 }
+
+// Marcador interno — nunca escapa de ApiClient. Distingue "a requisição
+// nunca chegou a ser processada" (seguro repetir) de qualquer outra
+// falha (não é seguro, ver _wrap).
+class _ConnectionRefused implements Exception {}
 
 class ApiException implements Exception {
   ApiException({required this.statusCode, required this.code, required this.message});

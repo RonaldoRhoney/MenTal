@@ -31,17 +31,20 @@ def test_naive_passes_through_none():
     assert naive(None) is None
 
 
-def test_cycle_window_for_accepts_aware_anchor_without_raising():
-    """Reprodução direta do TypeError real visto em produção: subtrair
-    um datetime aware (anchor vindo do driver) de um naive (now,
-    utcnow()) lançava 'can't subtract offset-naive and offset-aware
+def test_cycle_window_for_accepts_aware_now_without_raising():
+    """Reprodução direta do TypeError real visto em produção: comparar/
+    subtrair um datetime aware (vindo do driver psycopg3) com um naive
+    (utcnow()) lançava 'can't subtract offset-naive and offset-aware
     datetimes' — sem isso, /movement/status ficava permanentemente
-    quebrado (500) pra qualquer usuário com o contador de passos ativo."""
-    aware_anchor = datetime(2026, 8, 20, 0, 0, 0, tzinfo=timezone.utc)
-    now = utcnow()
+    quebrado (500) pra qualquer usuário com o contador de passos ativo.
+    _cycle_window_for não recebe mais anchor (MENTAL_ESPECIFICACAO_
+    TECNICA_APROVADA_MOVIMENTO_v2.docx §4 — ciclo é sempre meia-noite de
+    Brasília, igual pra todo mundo), mas `now` em si ainda pode chegar
+    aware de algum chamador — a função precisa continuar tolerando isso."""
+    aware_now = datetime(2026, 8, 20, 15, 0, 0, tzinfo=timezone.utc)
 
-    cycle_start, cycle_end = _cycle_window_for(aware_anchor, now)
+    cycle_start, cycle_end = _cycle_window_for(aware_now)
 
     assert cycle_start.tzinfo is None
     assert cycle_end.tzinfo is None
-    assert cycle_start <= now < cycle_end
+    assert cycle_start <= naive(aware_now) < cycle_end

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
@@ -47,6 +49,32 @@ def movement_status(user_id: str = Depends(require_age_confirmed_user_id), db: S
         pending_report_cycle=_cycle_out(pending_cycle, db) if pending_cycle else None,
         recent_cycles=[_cycle_out(c, db) for c in recent_cycles],
     )
+
+
+@router.get("/movement/cycles/{cycle_id}", response_model=schemas.MovementCycleOut)
+def get_movement_cycle(
+    cycle_id: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """MOVIMENTO_REFORMULACAO §11/§12 — detalhamento de um dia específico
+    (card "Hoje ›" ou tocar um dia na tela "Semana"). Sempre com
+    snapshots, diferente de recent_cycles em /movement/status."""
+    cycle = movement.get_cycle_by_id(db, user_id, cycle_id)
+    if cycle is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "CYCLE_NOT_FOUND", "message": "Ciclo de movimento não encontrado."}})
+    return _cycle_out(cycle, db, with_snapshots=True)
+
+
+@router.get("/movement/yearly-summary", response_model=schemas.MovementYearlySummaryOut)
+def get_movement_yearly_summary(
+    year: int | None = None,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """MOVIMENTO_REFORMULACAO §13 — card "Ano ›"."""
+    target_year = year or datetime.utcnow().year
+    return schemas.MovementYearlySummaryOut(**movement.get_yearly_summary(db, user_id, target_year))
 
 
 @router.put("/movement/goal", response_model=schemas.MovementGoalResponse)

@@ -14,6 +14,9 @@ import '../widgets/celebration_overlay.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/pulse_in.dart';
 import '../widgets/share_achievement_button.dart';
+import 'movement_daily_detail_screen.dart';
+import 'movement_weekly_detail_screen.dart';
+import 'movement_yearly_detail_screen.dart';
 
 /// V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md). O backend
 /// é sempre a autoridade sobre o estado do ciclo e o XP convertido —
@@ -123,7 +126,15 @@ class _MovementScreenState extends State<MovementScreen> {
   }
 
   Future<void> _load() async {
-    setState(() => _loading = true);
+    // Achado real (01/09/2026): _error nunca era limpo aqui — uma
+    // falha transitória (rede/cold-start do Render) ficava presa na
+    // tela pra sempre, mesmo depois de recarregamentos bem-sucedidos
+    // subsequentes, parecendo um problema contínuo que já tinha sido
+    // resolvido.
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
     try {
       final status = await widget.client.movementStatus();
       _movementEnabled = status['movement_enabled'] as bool;
@@ -576,60 +587,80 @@ class _MovementScreenState extends State<MovementScreen> {
             if (_checkpointReachedMessage != null)
               PulseIn(intensity: 0.3, child: Text(_checkpointReachedMessage!, style: TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600, fontSize: 12), textAlign: TextAlign.center, maxLines: 2)),
           ],
-          const SizedBox(height: 8),
-          // Métricas de oscilação diária (29/08/2026, pedido de Rhoney:
-          // no lugar dos botões de coletar) — a coleta em si agora
-          // acontece ao tocar num nível de meta aceso no seletor acima.
-          _OscillationMetricsRow(
-            l10n: l10n,
-            sensorUnavailable: _sensorUnavailable,
-            snapshots: (currentCycle['snapshots'] as List?)?.cast<Map<String, dynamic>>() ?? const [],
-            cycleStart: DateTime.parse(currentCycle['cycle_start_at'] as String),
-          ),
-          const SizedBox(height: 8),
+          if (_sensorUnavailable) ...[
+            const SizedBox(height: 6),
+            Text(l10n.movementSensorUnavailableMessage, style: TextStyle(color: AppColors.muted, fontSize: 11)),
+          ],
+          const SizedBox(height: 12),
         ],
-        // Gráfico intradiário — sempre visível quando o ciclo de hoje
-        // existe (30/08/2026, pedido de Rhoney: "crie o gráfico de
-        // progresso diário", que antes só aparecia com 2+ registros —
-        // na prática quase nunca, já que a coleta ficava presa antes da
-        // correção do ciclo pendente). _intradayPoints sempre inclui o
-        // ponto inicial (0,0), então mesmo sem nenhum snapshot ainda o
-        // gráfico mostra a linha começando do zero.
+        // MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §11-19
+        // — "RESUMO NA SUPERFÍCIE → PROFUNDIDADE SOB DEMANDA". Os
+        // gráficos completos (intradiário, semanal, anual) e as
+        // métricas de pico/vale deixam de ficar abertos na tela
+        // principal — moram só nas telas de detalhe, uma por conceito
+        // (Hoje/Semana/Ano), nunca um card por número isolado.
         if (currentCycle != null)
+          // Expanded + scroll SÓ desta seção (achado real, teste de
+          // widget 01/09/2026: em telas curtas, 3 cards + tudo acima
+          // podem passar da altura disponível — vira scroll local
+          // discreto em vez de estourar a tela, sem exigir rolagem no
+          // resto do layout, que continua fixo).
           Expanded(
-            flex: 6,
-            // RepaintBoundary (achado real, 29/08/2026 — Rhoney: "telas
-            // saltando"): com a coleta automática em segundo plano, esta
-            // tela agora recebe um setState a cada passo detectado
-            // (_handleRawSteps) — sem isolar o repaint, os dois gráficos
-            // (canvas custom do fl_chart, mais pesados que o resto da
-            // árvore) repintavam de novo a cada evento, mesmo sem seus
-            // próprios dados terem mudado.
-            child: RepaintBoundary(
-              child: _ChartCard(
-                dotColor: AppColors.gold,
-                title: l10n.movementTodayChartTitle,
-                trailing: l10n.movementTodayChartSubtitle,
-                child: _IntradayStepsLineChart(
-                  points: _intradayPoints(
-                    (currentCycle['snapshots'] as List?)?.cast<Map<String, dynamic>>() ?? const [],
-                    DateTime.parse(currentCycle['cycle_start_at'] as String),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  _SummaryCard(
+                    title: l10n.movementTodayCardTitle,
+                    subtitle: l10n.movementTodayCardSubtitle,
+                    value: _dailyGoalSteps != null && _dailyGoalSteps! > 0
+                        ? l10n.movementTodayCardValue(
+                            (currentCycle['steps_collected'] as int) + _detectedUncollectedSteps,
+                            (((currentCycle['steps_collected'] as int) + _detectedUncollectedSteps) / _dailyGoalSteps! * 100).clamp(0, 999).round(),
+                          )
+                        : l10n.movementTodayCardValueNoGoal((currentCycle['steps_collected'] as int) + _detectedUncollectedSteps),
+                    dotColor: AppColors.gold,
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => MovementDailyDetailScreen(
+                          client: widget.client,
+                          cycleId: currentCycle['id'] as String,
+                          initialCycle: currentCycle,
+                          goal: _dailyGoalSteps,
+                          liveExtraSteps: _detectedUncollectedSteps,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ),
-          ),
-        if (currentCycle != null) const SizedBox(height: 8),
-        // Gráfico semanal — precisa de pelo menos 2 ciclos.
-        if (_recentCycles.length >= 2)
-          Expanded(
-            flex: 5,
-            child: RepaintBoundary(
-              child: _ChartCard(
-                dotColor: AppColors.teal,
-                title: l10n.movementWeeklyChartTitle,
-                trailing: l10n.movementWeeklyChartSubtitle,
-                child: _WeeklyStepsBarChart(cycles: _recentCycles),
+                  const SizedBox(height: 8),
+                  _SummaryCard(
+                    title: l10n.movementWeekCardTitle,
+                    subtitle: l10n.movementWeekCardSubtitle,
+                    value: _recentCycles.isEmpty
+                        ? null
+                        : l10n.movementWeekCardValue(
+                            _recentCycles.map((c) => c['steps_collected'] as int).reduce((a, b) => a + b) ~/ _recentCycles.length,
+                            _recentCycles.map((c) => c['steps_collected'] as int).reduce((a, b) => a + b),
+                          ),
+                    dotColor: AppColors.teal,
+                    enabled: _recentCycles.length >= 2,
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => MovementWeeklyDetailScreen(client: widget.client, cycles: _recentCycles),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  _SummaryCard(
+                    title: l10n.movementYearCardTitle,
+                    subtitle: l10n.movementYearCardSubtitle(DateTime.now().year),
+                    value: null,
+                    dotColor: AppColors.bone,
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => MovementYearlyDetailScreen(client: widget.client)),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -642,6 +673,67 @@ class _MovementScreenState extends State<MovementScreen> {
           ),
         ),
       ],
+    );
+  }
+}
+
+/// Card resumo clicável (MENTAL_ESPECIFICACAO_TECNICA_APROVADA_
+/// MOVIMENTO_v2.docx §11-19) — representa um CONCEITO (Hoje/Semana/Ano),
+/// nunca um número isolado ("não transformar a solução em um card para
+/// cada número"). Toque abre a tela de detalhamento correspondente;
+/// `value` null (ex.: Ano sem dados ainda) mostra só título/subtítulo,
+/// sem inventar um placeholder numérico.
+class _SummaryCard extends StatelessWidget {
+  const _SummaryCard({
+    required this.title,
+    required this.subtitle,
+    required this.value,
+    required this.dotColor,
+    required this.onTap,
+    this.enabled = true,
+  });
+
+  final String title;
+  final String subtitle;
+  final String? value;
+  final Color dotColor;
+  final VoidCallback onTap;
+  final bool enabled;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: AppColors.bg2,
+      borderRadius: BorderRadius.circular(16),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: enabled ? onTap : null,
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          child: Row(
+            children: [
+              Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: dotColor)),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
+                    Text(subtitle, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
+                    if (value != null) ...[
+                      const SizedBox(height: 4),
+                      Text(value!, style: AppTheme.technicalStyle(color: dotColor, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
+                    ],
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right_rounded, color: AppColors.muted.withValues(alpha: enabled ? 1.0 : 0.4)),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
@@ -1202,8 +1294,8 @@ class _CustomGoalChip extends StatelessWidget {
 /// indicador + título à esquerda, texto pequeno à direita, mesma
 /// linguagem visual do resto do redesign (fundo bg2, cantos
 /// arredondados) em vez do texto solto direto na tela.
-class _ChartCard extends StatelessWidget {
-  const _ChartCard({required this.dotColor, required this.title, required this.trailing, required this.child});
+class ChartCard extends StatelessWidget {
+  const ChartCard({super.key, required this.dotColor, required this.title, required this.trailing, required this.child});
 
   final Color dotColor;
   final String title;
@@ -1240,11 +1332,15 @@ class _ChartCard extends StatelessWidget {
 /// dar uma visão de desempenho ao longo do tempo, não só o ciclo atual.
 /// Animação de entrada (29/08/2026, pedido de Rhoney: gráficos "muito
 /// dinâmicos") via swapAnimationDuration nativo do fl_chart.
-class _WeeklyStepsBarChart extends StatelessWidget {
-  const _WeeklyStepsBarChart({required this.cycles});
+class WeeklyStepsBarChart extends StatelessWidget {
+  const WeeklyStepsBarChart({super.key, required this.cycles, this.onBarTap});
 
   /// Em ordem cronológica (mais antigo primeiro).
   final List<Map<String, dynamic>> cycles;
+  // MENTAL_MOVIMENTO_REFORMULACAO.md §12 — "cada dia pode ser tocável".
+  // Índice na lista `cycles` do dia tocado; null quando o gráfico é só
+  // ilustrativo (não usado hoje, mas mantém o widget reutilizável).
+  final void Function(int index)? onBarTap;
 
   static const _weekdayLabels = ['seg', 'ter', 'qua', 'qui', 'sex', 'sáb', 'dom'];
 
@@ -1271,6 +1367,13 @@ class _WeeklyStepsBarChart extends StatelessWidget {
         borderData: FlBorderData(show: false),
         barTouchData: BarTouchData(
           enabled: true,
+          touchCallback: onBarTap == null
+              ? null
+              : (event, response) {
+                  if (event is! FlTapUpEvent) return;
+                  final index = response?.spot?.touchedBarGroupIndex;
+                  if (index != null && index >= 0 && index < cycles.length) onBarTap!(index);
+                },
           touchTooltipData: BarTouchTooltipData(
             getTooltipColor: (_) => AppColors.bg,
             getTooltipItem: (group, groupIndex, rod, rodIndex) => BarTooltipItem('${rod.toY.round()}', AppTheme.technicalStyle(color: AppColors.bone, fontSize: 11)),
@@ -1327,9 +1430,9 @@ class _WeeklyStepsBarChart extends StatelessWidget {
 
 /// Converte os snapshots do ciclo (backend) em pontos (hora, passos)
 /// pro gráfico de linha e pros cards de pico/vale — compartilhado entre
-/// `_OscillationMetricsRow` (topo da tela) e o gráfico intradiário
+/// `OscillationMetricsRow` (topo da tela) e o gráfico intradiário
 /// completo (mais abaixo), já que os dois derivam do mesmo dado.
-List<(double hour, int steps)> _intradayPoints(List<Map<String, dynamic>> snapshots, DateTime cycleStart) {
+List<(double hour, int steps)> intradayPoints(List<Map<String, dynamic>> snapshots, DateTime cycleStart) {
   return [
     (0, 0),
     for (final s in snapshots) (DateTime.parse(s['recorded_at'] as String).difference(cycleStart).inMinutes / 60.0, s['steps_total'] as int),
@@ -1342,8 +1445,8 @@ List<(double hour, int steps)> _intradayPoints(List<Map<String, dynamic>> snapsh
 /// jogador") — pico e vale de passos por hora, no lugar de onde ficavam
 /// os botões manuais de coleta. Precisa de pelo menos 2 snapshots pra
 /// fazer sentido comparar; com menos, mostra um aviso neutro.
-class _OscillationMetricsRow extends StatelessWidget {
-  const _OscillationMetricsRow({required this.l10n, required this.sensorUnavailable, required this.snapshots, required this.cycleStart});
+class OscillationMetricsRow extends StatelessWidget {
+  const OscillationMetricsRow({super.key, required this.l10n, required this.sensorUnavailable, required this.snapshots, required this.cycleStart});
 
   final AppLocalizations l10n;
   final bool sensorUnavailable;
@@ -1363,21 +1466,21 @@ class _OscillationMetricsRow extends StatelessWidget {
         ),
       );
     }
-    final points = _intradayPoints(snapshots, cycleStart);
+    final points = intradayPoints(snapshots, cycleStart);
     final peak = points.reduce((a, b) => a.$2 >= b.$2 ? a : b);
     final valley = points.reduce((a, b) => a.$2 <= b.$2 ? a : b);
     return Row(
       children: [
-        Expanded(child: _PeakValleyCard(icon: '🔥', label: l10n.movementPeakLabel, hour: peak.$1, steps: peak.$2, color: AppColors.gold)),
+        Expanded(child: PeakValleyCard(icon: '🔥', label: l10n.movementPeakLabel, hour: peak.$1, steps: peak.$2, color: AppColors.gold)),
         const SizedBox(width: 6),
-        Expanded(child: _PeakValleyCard(icon: '💤', label: l10n.movementValleyLabel, hour: valley.$1, steps: valley.$2, color: AppColors.muted)),
+        Expanded(child: PeakValleyCard(icon: '💤', label: l10n.movementValleyLabel, hour: valley.$1, steps: valley.$2, color: AppColors.muted)),
       ],
     );
   }
 }
 
-class _PeakValleyCard extends StatelessWidget {
-  const _PeakValleyCard({required this.icon, required this.label, required this.hour, required this.steps, required this.color});
+class PeakValleyCard extends StatelessWidget {
+  const PeakValleyCard({super.key, required this.icon, required this.label, required this.hour, required this.steps, required this.color});
 
   final String icon;
   final String label;
@@ -1409,8 +1512,8 @@ class _PeakValleyCard extends StatelessWidget {
   }
 }
 
-class _IntradayStepsLineChart extends StatelessWidget {
-  const _IntradayStepsLineChart({required this.points});
+class IntradayStepsLineChart extends StatelessWidget {
+  const IntradayStepsLineChart({super.key, required this.points});
 
   final List<(double hour, int steps)> points;
 

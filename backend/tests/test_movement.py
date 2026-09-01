@@ -9,7 +9,9 @@ test_notifications.py para simular janelas de inatividade.
 import sqlite3
 import uuid
 from datetime import datetime, timedelta
-from app.timeutil import utcnow
+from app.timeutil import naive, utcnow
+
+from sqlalchemy import select
 
 from app import config, models, movement, notifications
 from app.db import SessionLocal
@@ -27,6 +29,19 @@ def _set_anchor(user_id: str, when: datetime) -> None:
     )
     con.commit()
     con.close()
+
+
+def _cycle_start_now() -> datetime:
+    """Início do ciclo corrente (meia-noite de Brasília em UTC naive) —
+    MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §4 trocou o
+    ciclo de "24h a partir de quando o usuário ativou" para "meia-noite
+    de Brasília pra todo mundo". Sem fixar `now`, os testes de bônus/
+    checkpoint ficam sujeitos à hora real do relógio de quem roda a
+    suíte (se já passou das 6h/12h/18h do dia em Brasília, checkpoints
+    "fecham" sozinhos e poluem o XP esperado) — usado via
+    monkeypatch.setattr(movement, "utcnow", ...) nesses testes."""
+    start, _ = movement._cycle_window_for(utcnow())
+    return start + timedelta(minutes=1)
 
 
 def _fake_sender(sent_log):
@@ -94,7 +109,7 @@ def test_negative_steps_rejected_by_schema(client):
     assert resp.status_code == 422
 
 
-def test_partial_collections_sum_tiers_without_double_awarding(client):
+def test_partial_collections_sum_tiers_without_double_awarding(client, monkeypatch):
     """
     STEP_COUNTER_MOVIMENTO.md §4: bônus escalonado por faixa TOTAL do
     ciclo. Duas coletas parciais que juntas cruzam de uma faixa pra outra
@@ -102,6 +117,7 @@ def test_partial_collections_sum_tiers_without_double_awarding(client):
     dois bônus inteiros (mesmo princípio de level_up_true_only_on_the_
     answer_that_crosses_the_level_boundary já usado em challenges).
     """
+    monkeypatch.setattr(movement, "utcnow", _cycle_start_now)
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -127,12 +143,13 @@ def test_partial_collections_sum_tiers_without_double_awarding(client):
         assert profile_after.xp_total - xp_before == config.MOVEMENT_XP_BASE * 2
 
 
-def test_steps_beyond_top_tier_never_exceed_top_bonus(client):
+def test_steps_beyond_top_tier_never_exceed_top_bonus(client, monkeypatch):
     """
     §4: "quem andar 19.000 recebe o mesmo múltiplo da faixa mais alta" —
     é o próprio desenho que neutraliza valor client-side absurdo, sem
     precisar de anti-cheat adicional.
     """
+    monkeypatch.setattr(movement, "utcnow", _cycle_start_now)
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -189,12 +206,13 @@ def test_cycle_cap_bounds_mentalcoins_from_runaway_sensor(client):
     assert balance["balance"] == max_possible
 
 
-def test_single_huge_collection_still_clamped_but_reaches_top_xp_tier(client):
+def test_single_huge_collection_still_clamped_but_reaches_top_xp_tier(client, monkeypatch):
     """Confirma que o clamp por ciclo não quebra o comportamento já
     validado em test_steps_beyond_top_tier_never_exceed_top_bonus: um
     valor absurdo numa única chamada ainda cai na faixa máxima de XP,
     mesmo com o total do ciclo sendo travado bem abaixo do valor bruto
     enviado."""
+    monkeypatch.setattr(movement, "utcnow", _cycle_start_now)
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -211,8 +229,16 @@ def test_previous_cycle_collectible_within_grace_then_expires(client):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
-    anchor = utcnow() - timedelta(hours=30)
-    _set_anchor(user, anchor)
+    # Anchor real deliberadamente bem no passado (MENTAL_ESPECIFICACAO_
+    # TECNICA_APROVADA_MOVIMENTO_v2.docx §4: anchor não determina mais a
+    # virada do ciclo, só continua servindo pra "desde quando o usuário
+    # tem Movimento ativo" — sem isso, o "ciclo de ontem" simulado abaixo
+    # cairia antes do anchor real de hoje e get_pending_report_cycle
+    # rejeitaria como se fosse anterior à ativação).
+    _set_anchor(user, utcnow() - timedelta(days=10))
+    # Início do ciclo de ONTEM em Brasília — ponto de referência local a
+    # este teste (não mais o anchor do usuário).
+    anchor = _cycle_start_now() - timedelta(hours=24)
 
     # Coleta parcial DURANTE o 1º ciclo (é isso que cria o registro do
     # ciclo em primeiro lugar — sem nenhuma coleta, não há linha a
@@ -222,9 +248,10 @@ def test_previous_cycle_collectible_within_grace_then_expires(client):
 
     with SessionLocal() as db:
         profile = db.get(models.Profile, user.replace("-", ""))
-        # "now" real (30h após o anchor) já está dentro do 2º ciclo;
-        # o 1º ciclo fechou 6h atrás — ainda dentro da graça de 24h.
-        pending = movement.get_pending_report_cycle(db, profile)
+        # "now" (30h após o início do ciclo de ontem) já está dentro do
+        # ciclo de hoje; o ciclo de ontem fechou 6h atrás — ainda dentro
+        # da graça de 24h.
+        pending = movement.get_pending_report_cycle(db, profile, now=anchor + timedelta(hours=30))
         assert pending is not None
         assert pending.steps_collected == 1000
 
@@ -273,8 +300,13 @@ def test_movement_cycle_report_fires_once_per_cycle(client, monkeypatch):
     client.post("/movement/enable", headers=headers)
     client.post("/notifications/register-token", json={"push_token": "movement-token"}, headers=headers)
 
-    anchor = utcnow() - timedelta(hours=25)
-    _set_anchor(user, anchor)
+    # Anchor bem no passado (MENTAL_ESPECIFICACAO_TECNICA_APROVADA_
+    # MOVIMENTO_v2.docx §4: anchor não determina mais a virada do ciclo,
+    # só continua servindo pra "desde quando o usuário tem Movimento
+    # ativo" — sem isso, o ciclo de ONTEM em Brasília, calculado agora
+    # de forma independente do anchor, poderia cair antes dele e o
+    # relatório nunca dispararia).
+    _set_anchor(user, utcnow() - timedelta(days=10))
     now = utcnow()
 
     with SessionLocal() as db:
@@ -340,12 +372,13 @@ def test_daily_goal_rejects_trivial_value_below_minimum(client):
     assert at_minimum.status_code == 200
 
 
-def test_goal_bonus_awarded_once_when_crossing_threshold(client):
+def test_goal_bonus_awarded_once_when_crossing_threshold(client, monkeypatch):
     """
     STEP_COUNTER_MOVIMENTO.md §4 (extensão, 2026-08-21): ultrapassar a
     PRÓPRIA meta paga um bônus extra, uma vez por ciclo, somado (não no
     lugar) ao bônus por faixa de MOVEMENT_STEP_TIERS.
     """
+    monkeypatch.setattr(movement, "utcnow", _cycle_start_now)
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -371,7 +404,8 @@ def test_goal_bonus_awarded_once_when_crossing_threshold(client):
     assert r3["xp_awarded"] == 0
 
 
-def test_no_goal_bonus_without_goal_set(client):
+def test_no_goal_bonus_without_goal_set(client, monkeypatch):
+    monkeypatch.setattr(movement, "utcnow", _cycle_start_now)
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -396,9 +430,11 @@ def test_checkpoint_bonus_awarded_once_when_window_closes(client):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
-    with SessionLocal() as db:
-        profile = db.get(models.Profile, user.replace("-", ""))
-        anchor = profile.movement_cycle_anchor_at
+    # Ponto de referência é o início do ciclo de HOJE em Brasília (não
+    # mais o anchor por usuário, MENTAL_ESPECIFICACAO_TECNICA_APROVADA_
+    # MOVIMENTO_v2.docx §4) — a primeira coleta abaixo cria o ciclo com
+    # esse cycle_start_at.
+    anchor = _cycle_start_now()
 
     # Checkpoint 0 fecha às 6h (1/4 do ciclo). Faixa proporcional (1/4):
     # 500/1.250/2.500/3.750. 600 passos cruza só a de 500 -> bônus x1.
@@ -429,9 +465,9 @@ def test_checkpoint_bonus_catches_up_multiple_windows_in_one_lazy_collection(cli
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/movement/enable", headers=headers)
 
-    with SessionLocal() as db:
-        profile = db.get(models.Profile, user.replace("-", ""))
-        anchor = profile.movement_cycle_anchor_at
+    # Início do ciclo de HOJE em Brasília (não mais o anchor por
+    # usuário) — a primeira coleta abaixo cria o ciclo com esse valor.
+    anchor = _cycle_start_now()
 
     # now = 20h depois do anchor: os 3 checkpoints (6h/12h/18h) já
     # fecharam de uma vez. Cada um usa a faixa proporcional à SUA fração
@@ -499,3 +535,162 @@ def test_movement_status_returns_recent_cycles_for_weekly_chart(client):
     status = client.get("/movement/status", headers=headers).json()
     assert len(status["recent_cycles"]) == 1
     assert status["recent_cycles"][0]["steps_collected"] == 3000
+
+
+def test_get_movement_cycle_returns_snapshots_for_own_cycle(client):
+    """MOVIMENTO_REFORMULACAO §11/§12 — card "Hoje ›" e tocar um dia na
+    tela "Semana" precisam do histórico intradiário de um ciclo
+    específico, diferente de recent_cycles (que nunca traz snapshots)."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+    client.post("/movement/collect", json={"steps": 2000}, headers=headers)
+    status = client.get("/movement/status", headers=headers).json()
+    cycle_id = status["current_cycle"]["id"]
+
+    resp = client.get(f"/movement/cycles/{cycle_id}", headers=headers)
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["steps_collected"] == 2000
+    assert len(body["snapshots"]) == 1
+
+
+def test_get_movement_cycle_rejects_another_users_cycle(client):
+    owner_headers = auth_header(str(uuid.uuid4()))
+    intruder_headers = auth_header(str(uuid.uuid4()))
+    client.post("/age-gate", json={"age_confirmed": True}, headers=owner_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=intruder_headers)
+    client.post("/movement/enable", headers=owner_headers)
+    client.post("/movement/collect", json={"steps": 2000}, headers=owner_headers)
+    status = client.get("/movement/status", headers=owner_headers).json()
+    cycle_id = status["current_cycle"]["id"]
+
+    resp = client.get(f"/movement/cycles/{cycle_id}", headers=intruder_headers)
+    assert resp.status_code == 404
+
+
+def test_get_movement_cycle_rejects_nonexistent_id(client):
+    headers = auth_header(str(uuid.uuid4()))
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    resp = client.get(f"/movement/cycles/{uuid.uuid4()}", headers=headers)
+    assert resp.status_code == 404
+
+
+def test_yearly_summary_aggregates_by_month_and_computes_best_month(client):
+    """MOVIMENTO_REFORMULACAO §13 — card "Ano ›": meses, total, média por
+    dia ativo, dias ativos, melhor mês e XP do ano."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+
+    now = utcnow()
+    with SessionLocal() as db:
+        profile = db.execute(select(models.Profile).where(models.Profile.user_id == user)).scalar_one()
+        anchor = naive(profile.movement_cycle_anchor_at)
+        # Um ciclo em janeiro (mês 1) e dois em fevereiro (mês 2) do
+        # mesmo ano do anchor, todos independentes do ciclo real de hoje.
+        year = anchor.year
+        c1 = models.MovementCycle(
+            user_id=user,
+            cycle_start_at=datetime(year, 1, 10),
+            cycle_end_at=datetime(year, 1, 11),
+            steps_collected=5000,
+            xp_awarded=40,
+        )
+        c2 = models.MovementCycle(
+            user_id=user,
+            cycle_start_at=datetime(year, 2, 5),
+            cycle_end_at=datetime(year, 2, 6),
+            steps_collected=8000,
+            xp_awarded=60,
+        )
+        c3 = models.MovementCycle(
+            user_id=user,
+            cycle_start_at=datetime(year, 2, 12),
+            cycle_end_at=datetime(year, 2, 13),
+            steps_collected=2000,
+            xp_awarded=20,
+        )
+        db.add_all([c1, c2, c3])
+        db.commit()
+
+    resp = client.get("/movement/yearly-summary", params={"year": year}, headers=headers)
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["year"] == year
+    assert body["total_steps"] == 15000
+    assert body["active_days"] == 3
+    assert body["average_steps_per_active_day"] == 5000
+    assert body["best_month"] == 2
+    assert body["total_xp_awarded"] == 120
+    months_by_number = {m["month"]: m for m in body["months"]}
+    assert months_by_number[1]["total_steps"] == 5000
+    assert months_by_number[2]["total_steps"] == 10000
+    assert months_by_number[2]["active_days"] == 2
+
+
+def test_cycle_window_matches_exact_brasilia_midnight_boundary():
+    """MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §4/§22 —
+    teste explícito de 23:59:59 -> 00:00:00 de Brasília. Brasília é
+    UTC-3 fixo (sem horário de verão desde 2019), então meia-noite lá é
+    sempre 03:00 UTC, ano inteiro."""
+    # 23:59:59 de Brasília em 15/06/2026 = 02:59:59 UTC em 16/06 — ainda
+    # pertence ao ciclo do dia 15.
+    just_before_midnight = datetime(2026, 6, 16, 2, 59, 59)
+    start, end = movement._cycle_window_for(just_before_midnight)
+    assert start == datetime(2026, 6, 15, 3, 0, 0)
+    assert end == datetime(2026, 6, 16, 3, 0, 0)
+    assert start <= just_before_midnight < end
+
+    # 00:00:00 de Brasília em 16/06/2026 = 03:00:00 UTC — já é o
+    # próximo ciclo, 1 segundo depois do caso acima.
+    exactly_midnight = datetime(2026, 6, 16, 3, 0, 0)
+    start2, end2 = movement._cycle_window_for(exactly_midnight)
+    assert start2 == datetime(2026, 6, 16, 3, 0, 0)
+    assert start2 == end  # o fim do ciclo anterior É o início do novo
+    assert start2 != start
+
+
+def test_cycle_window_uses_fixed_offset_never_daylight_saving():
+    """Brasil aboliu horário de verão em 2019 (§4: 'confirmar que a
+    biblioteca de timezone usada não aplica transição de horário de
+    verão por engano') — datas de verão (jan/fev, quando o DST antigo
+    valia) não podem usar offset diferente de -03:00."""
+    # Meio-dia UTC em janeiro = 09:00 em Brasília (-3h) — mesmo dia.
+    summer_now = datetime(2026, 1, 15, 12, 0, 0)
+    start, _ = movement._cycle_window_for(summer_now)
+    assert start == datetime(2026, 1, 15, 3, 0, 0)
+
+
+def test_pending_cycle_preserved_across_midnight_transition(client):
+    """§4: 'passos do ciclo anterior não podem desaparecer na virada' e
+    'a virada não pode duplicar passos, XP ou recompensas' — coleta
+    parcial antes da meia-noite, depois confirma que os passos
+    continuam intactos e coletáveis no ciclo pendente após a virada."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+    _set_anchor(user, utcnow() - timedelta(days=10))
+
+    # yesterday_start já embute +1min de folga (_cycle_start_now) — usa
+    # 23h57 (não 23h59) pra garantir margem clara antes da virada real.
+    yesterday_start = _cycle_start_now() - timedelta(hours=24)
+    just_before_midnight = yesterday_start + timedelta(hours=23, minutes=57)
+    with SessionLocal() as db:
+        movement.collect_steps(db, user, 4000, now=just_before_midnight)
+
+    # 2 minutos depois, já virou o dia — os 4.000 passos não desaparecem
+    # nem se duplicam, e ficam disponíveis como ciclo pendente.
+    just_after_midnight = yesterday_start + timedelta(hours=24, minutes=2)
+    with SessionLocal() as db:
+        profile = db.get(models.Profile, user.replace("-", ""))
+        pending = movement.get_pending_report_cycle(db, profile, now=just_after_midnight)
+        assert pending is not None
+        assert pending.steps_collected == 4000
+
+        current = movement.get_current_cycle(db, profile, now=just_after_midnight)
+        assert current.id != pending.id
+        assert current.steps_collected == 0

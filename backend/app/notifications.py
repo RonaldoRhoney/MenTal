@@ -130,7 +130,7 @@ def _check_movement_reports(db: Session, now: datetime) -> int:
     )
 
     for profile in profiles:
-        current_start, _ = movement._cycle_window_for(profile.movement_cycle_anchor_at, now)
+        current_start, _ = movement._cycle_window_for(now)
         previous_start = current_start - timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
         if previous_start < profile.movement_cycle_anchor_at:
             continue  # ainda não completou nenhum ciclo desde a ativação

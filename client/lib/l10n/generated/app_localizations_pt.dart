@@ -648,6 +648,88 @@ class AppLocalizationsPt extends AppLocalizations {
       'Como seus passos foram acumulando ao longo do ciclo.';
 
   @override
+  String get movementTodayCardTitle => 'Hoje';
+
+  @override
+  String get movementTodayCardSubtitle => 'Progressão do dia';
+
+  @override
+  String movementTodayCardValue(int steps, int percent) {
+    return '$steps passos · $percent% da meta';
+  }
+
+  @override
+  String movementTodayCardValueNoGoal(int steps) {
+    return '$steps passos hoje';
+  }
+
+  @override
+  String get movementWeekCardTitle => 'Semana';
+
+  @override
+  String get movementWeekCardSubtitle => 'Últimos 7 dias';
+
+  @override
+  String movementWeekCardValue(int average, int total) {
+    return 'média $average · total $total';
+  }
+
+  @override
+  String get movementYearCardTitle => 'Ano';
+
+  @override
+  String movementYearCardSubtitle(int year) {
+    return 'Seu progresso em $year';
+  }
+
+  @override
+  String get movementDailyDetailTitle => 'Progressão do dia';
+
+  @override
+  String get movementDailyDetailStepsLabel => 'Passos';
+
+  @override
+  String get movementDailyDetailXpLabel => 'XP';
+
+  @override
+  String get movementDailyDetailGoalLabel => 'Meta do dia';
+
+  @override
+  String get movementWeeklyDetailTitle => 'Progressão semanal';
+
+  @override
+  String get movementWeeklyDetailHint => 'Toque num dia para ver os detalhes.';
+
+  @override
+  String get movementYearlyDetailTitle => 'Progressão anual';
+
+  @override
+  String get movementYearlyTotalStepsLabel => 'Total de passos';
+
+  @override
+  String get movementYearlyAverageLabel => 'Média por dia ativo';
+
+  @override
+  String get movementYearlyActiveDaysLabel => 'Dias ativos';
+
+  @override
+  String get movementYearlyBestMonthLabel => 'Melhor mês';
+
+  @override
+  String get movementYearlyXpLabel => 'XP de Movimento no ano';
+
+  @override
+  String get movementYearlyEmptyMessage =>
+      'Ainda não há dados de Movimento neste ano.';
+
+  @override
+  String get movementSyncFailedMessage =>
+      'Dados atualizados localmente. Não foi possível sincronizar agora.';
+
+  @override
+  String get movementRetryButton => 'Tentar novamente';
+
+  @override
   String movementCheckpointReachedMessage(int count, int xp) {
     String _temp0 = intl.Intl.pluralLogic(
       count,

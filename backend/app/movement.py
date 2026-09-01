@@ -12,13 +12,21 @@ inflado — não precisa de anti-cheat adicional além do teto de sanidade
 em MOVEMENT_MAX_STEPS_PER_COLLECTION.
 """
 
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from . import config, mentalcoins, models, scoring, services
 from .timeutil import naive, utcnow
+
+# MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §4 — o ciclo
+# reinicia EXATAMENTE às 00:00 de Brasília, nunca UTC puro nem o fuso
+# configurado no aparelho. Brasil não adota horário de verão desde
+# 2019 (offset fixo -03:00) — zoneinfo usa a tzdata do IANA, que já
+# reflete isso corretamente, sem cálculo manual de transição.
+BRAZIL_TZ = ZoneInfo("America/Sao_Paulo")
 
 
 class MovementError(Exception):
@@ -94,13 +102,17 @@ def set_daily_goal(db: Session, user_id: str, daily_goal_steps: int | None) -> m
     return profile
 
 
-def _cycle_window_for(anchor: datetime, now: datetime) -> tuple[datetime, datetime]:
-    anchor = naive(anchor)
-    cycle_len = timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
-    elapsed = now - anchor
-    cycles_elapsed = max(0, int(elapsed // cycle_len))
-    cycle_start = anchor + cycles_elapsed * cycle_len
-    return cycle_start, cycle_start + cycle_len
+def _cycle_window_for(now: datetime) -> tuple[datetime, datetime]:
+    """Ciclo do dia CORRENTE em Brasília, meia-noite a meia-noite —
+    uniforme pra todos os usuários, não depende mais de quando cada um
+    ativou o Movimento (esse "anchor" antigo, `movement_cycle_anchor_at`,
+    continua existindo só pra saber DESDE QUANDO o usuário tem Movimento
+    ativo — ver get_pending_report_cycle — nunca mais pra calcular a
+    virada do ciclo)."""
+    now_aware = now if now.tzinfo is not None else now.replace(tzinfo=timezone.utc)
+    local_midnight = now_aware.astimezone(BRAZIL_TZ).replace(hour=0, minute=0, second=0, microsecond=0)
+    cycle_start = naive(local_midnight.astimezone(timezone.utc))
+    return cycle_start, cycle_start + timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
 
 
 def _get_or_create_cycle_for_window(
@@ -122,7 +134,7 @@ def _get_or_create_cycle_for_window(
 
 def get_current_cycle(db: Session, profile: models.Profile, now: datetime | None = None) -> models.MovementCycle:
     now = now or utcnow()
-    cycle_start, cycle_end = _cycle_window_for(profile.movement_cycle_anchor_at, now)
+    cycle_start, cycle_end = _cycle_window_for(now)
     return _get_or_create_cycle_for_window(db, profile.user_id, cycle_start, cycle_end)
 
 
@@ -139,7 +151,7 @@ def get_pending_report_cycle(
     now = now or utcnow()
     if profile.movement_cycle_anchor_at is None:
         return None
-    current_start, _ = _cycle_window_for(profile.movement_cycle_anchor_at, now)
+    current_start, _ = _cycle_window_for(now)
     previous_start = current_start - timedelta(hours=config.MOVEMENT_CYCLE_HOURS)
     if previous_start < naive(profile.movement_cycle_anchor_at):
         return None
@@ -251,6 +263,58 @@ def get_recent_cycles(db: Session, user_id: str, limit: int = 7) -> list[models.
         .scalars()
         .all()
     )
+
+
+def get_cycle_by_id(db: Session, user_id: str, cycle_id: str) -> models.MovementCycle | None:
+    """Ciclo específico por id, sempre validando dono — usado pelo
+    detalhamento diário (card "Hoje ›" / tocar um dia da tela Semana),
+    MOVIMENTO_REFORMULACAO §12: "cada dia pode ser tocável"."""
+    cycle = db.get(models.MovementCycle, cycle_id)
+    if cycle is None or cycle.user_id != user_id:
+        return None
+    return cycle
+
+
+def get_yearly_summary(db: Session, user_id: str, year: int) -> dict:
+    """Resumo anual (MOVIMENTO_REFORMULACAO §13, card "Ano ›") — meses,
+    total, média por dia ativo, dias ativos, melhor mês e XP de
+    Movimento no ano. Agrupa por mês do calendário a partir de
+    cycle_start_at, mesmo os ciclos não sendo alinhados à meia-noite."""
+    year_start = naive(datetime(year, 1, 1))
+    year_end = naive(datetime(year + 1, 1, 1))
+    cycles = list(
+        db.execute(
+            select(models.MovementCycle).where(
+                models.MovementCycle.user_id == user_id,
+                models.MovementCycle.cycle_start_at >= year_start,
+                models.MovementCycle.cycle_start_at < year_end,
+            )
+        )
+        .scalars()
+        .all()
+    )
+    months: dict[int, dict[str, int]] = {}
+    total_steps = 0
+    active_days = 0
+    total_xp = 0
+    for cycle in cycles:
+        bucket = months.setdefault(cycle.cycle_start_at.month, {"total_steps": 0, "active_days": 0})
+        bucket["total_steps"] += cycle.steps_collected
+        if cycle.steps_collected > 0:
+            bucket["active_days"] += 1
+            active_days += 1
+        total_steps += cycle.steps_collected
+        total_xp += cycle.xp_awarded
+    best_month = max(months, key=lambda m: months[m]["total_steps"], default=None) if months else None
+    return {
+        "year": year,
+        "months": [{"month": m, **data} for m, data in sorted(months.items())],
+        "total_steps": total_steps,
+        "active_days": active_days,
+        "average_steps_per_active_day": total_steps // active_days if active_days > 0 else 0,
+        "best_month": best_month,
+        "total_xp_awarded": total_xp,
+    }
 
 
 def get_snapshots_for_cycle(db: Session, cycle_id: str) -> list[models.MovementSnapshot]:

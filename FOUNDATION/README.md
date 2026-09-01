@@ -18,6 +18,7 @@ escopo de uma versão específica. Atualizados conforme necessário, não
 - `MENTAL-DIR-002_*.docx` — capa de orientação de escopo (24/08/2026), leitura prévia aos documentos POL-002/003.
 - `MENTAL-POL-002_*.docx` — classificação etária e upload de imagem.
 - `MENTAL-POL-003_*.docx` — política de privacidade e termos de uso (fonte formal).
+- `POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md` — política transversal de conteúdo seguro, aplicada retroativamente a V3.1-V3.5 e prospectivamente a V4 em diante (movida da raiz do repositório em 01/09/2026, sem mudança de conteúdo).
 
 A pasta `docs/` (00_DISCOVERY → 02_IMPLEMENTATION) já é a Foundation técnica
 da V1 (Vertical Slice 01) — não duplicada aqui.

@@ -30,9 +30,19 @@ class _FakeApiClient extends ApiClient {
   List<Map<String, dynamic>> recentCycles;
   final List<String> calls = [];
 
+  // Achado real (01/09/2026): uma falha transitória de rede deixava o
+  // aviso "Sem conexão com o servidor" preso na tela pra sempre, mesmo
+  // depois de um recarregamento bem-sucedido — simula exatamente isso
+  // (falha só na 1ª chamada, sucesso nas seguintes).
+  int failStatusCallsRemaining = 0;
+
   @override
   Future<Map<String, dynamic>> movementStatus() async {
     calls.add('status');
+    if (failStatusCallsRemaining > 0) {
+      failStatusCallsRemaining--;
+      throw ApiException(statusCode: 0, code: 'NETWORK_ERROR', message: 'Sem conexão com o servidor. Tente novamente.');
+    }
     return {
       'movement_enabled': movementEnabled,
       'daily_goal_steps': dailyGoalSteps,
@@ -62,9 +72,21 @@ class _FakeApiClient extends ApiClient {
     movementEnabled = false;
     return {'status': 'ok'};
   }
+
+  Map<String, dynamic>? yearlySummary;
+
+  @override
+  Future<Map<String, dynamic>> getMovementYearlySummary({int? year}) async {
+    return yearlySummary ?? {'year': year ?? DateTime.now().year, 'months': [], 'total_steps': 0, 'active_days': 0, 'average_steps_per_active_day': 0, 'best_month': null, 'total_xp_awarded': 0};
+  }
+
+  @override
+  Future<Map<String, dynamic>> getMovementCycle(String cycleId) async {
+    return currentCycle ?? {};
+  }
 }
 
-Future<void> _pumpMovementScreen(WidgetTester tester, ApiClient client) async {
+Future<void> _pumpMovementScreen(WidgetTester tester, ApiClient client, {Key? key}) async {
   SharedPreferences.setMockInitialValues({});
   await tester.pumpWidget(
     MaterialApp(
@@ -75,7 +97,7 @@ Future<void> _pumpMovementScreen(WidgetTester tester, ApiClient client) async {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: MovementScreen(client: client),
+      home: MovementScreen(key: key, client: client),
     ),
   );
   // pumpAndSettle trava com o CelebrationOverlay (confete usa animação
@@ -94,6 +116,24 @@ void main() {
 
     expect(find.text('Ativar contador de passos'), findsOneWidget);
     expect(find.text('Desativar'), findsNothing);
+  });
+
+  testWidgets('erro de rede transitório some depois de um recarregamento bem-sucedido', (tester) async {
+    // Achado real (01/09/2026): _load() nunca limpava _error no início —
+    // uma falha de rede transitória na 1ª chamada ficava presa na tela
+    // pra sempre, mesmo reabrindo a tela depois com a rede normalizada.
+    // Reabrir a tela (novo mount, novo initState→_load()) é o caminho
+    // real que o usuário tem pra tentar de novo, sem depender do fluxo
+    // de permissão do botão "Ativar" (não mockável neste nível de teste).
+    final client = _FakeApiClient(movementEnabled: false)..failStatusCallsRemaining = 1;
+    await _pumpMovementScreen(tester, client, key: UniqueKey());
+    expect(find.text('Sem conexão com o servidor. Tente novamente.'), findsOneWidget);
+
+    // Novo Key força um remount de verdade (novo State, novo
+    // initState→_load()) — simula o usuário saindo e reabrindo a tela,
+    // que é como ele de fato tentaria de novo na prática.
+    await _pumpMovementScreen(tester, client, key: UniqueKey());
+    expect(find.text('Sem conexão com o servidor. Tente novamente.'), findsNothing);
   });
 
   testWidgets('mostra ciclo atual e trata sensor indisponível quando já ativado', (tester) async {
@@ -265,15 +305,25 @@ void main() {
     );
     await _pumpMovementScreen(tester, client);
 
+    // MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §12/§19 —
+    // "resumo na superfície, profundidade sob demanda": o gráfico
+    // completo não fica mais na tela principal, só o card "Semana" com
+    // média/total; o gráfico só aparece depois de tocar o card.
+    expect(find.text('Semana'), findsOneWidget);
+    expect(find.byType(BarChart), findsNothing);
+
+    await tester.tap(find.text('Semana'));
+    await tester.pumpAndSettle();
+
     expect(find.text('Últimos 7 dias'), findsOneWidget);
     expect(find.byType(BarChart), findsOneWidget);
   });
 
-  testWidgets('com só 1 coleta no ciclo, gráfico intradiário já aparece (sempre visível)', (tester) async {
+  testWidgets('card Hoje leva ao detalhamento com o gráfico intradiário, mesmo com só 1 coleta', (tester) async {
     // 30/08/2026, pedido de Rhoney: o gráfico "Seu dia até agora" deixou
     // de exigir 2+ snapshots — antes disso quase nunca aparecia na
-    // prática, já que a coleta ficava travada (ver commit "Movimento:
-    // adiciona botão de coleta e torna o gráfico diário sempre visível").
+    // prática, já que a coleta ficava travada. Continua valendo agora
+    // dentro da tela de detalhamento (não mais na tela principal).
     final client = _FakeApiClient(
       movementEnabled: true,
       currentCycle: {
@@ -288,10 +338,17 @@ void main() {
       },
     );
     await _pumpMovementScreen(tester, client);
+
+    expect(find.text('Hoje'), findsOneWidget);
+    expect(find.text('Seu dia até agora'), findsNothing);
+
+    await tester.tap(find.text('Hoje'));
+    await tester.pumpAndSettle();
+
     expect(find.text('Seu dia até agora'), findsOneWidget);
   });
 
-  testWidgets('com 2+ coletas no ciclo, gráfico intradiário aparece', (tester) async {
+  testWidgets('card Hoje leva ao detalhamento com o gráfico intradiário, com 2+ coletas', (tester) async {
     final client = _FakeApiClient(
       movementEnabled: true,
       currentCycle: {
@@ -307,7 +364,47 @@ void main() {
       },
     );
     await _pumpMovementScreen(tester, client);
+
+    await tester.tap(find.text('Hoje'));
+    await tester.pumpAndSettle();
+
     expect(find.text('Seu dia até agora'), findsOneWidget);
     expect(find.byType(LineChart), findsOneWidget);
+  });
+
+  testWidgets('card Ano leva ao detalhamento anual', (tester) async {
+    final client = _FakeApiClient(
+      movementEnabled: true,
+      currentCycle: {
+        'id': 'cycle-8',
+        'cycle_start_at': DateTime.utc(2026, 8, 26).toIso8601String(),
+        'cycle_end_at': DateTime.utc(2026, 8, 27).toIso8601String(),
+        'steps_collected': 1000,
+        'xp_awarded': 0,
+      },
+    )..yearlySummary = {
+        'year': 2026,
+        'months': [
+          {'month': 8, 'total_steps': 1000, 'active_days': 1},
+        ],
+        'total_steps': 1000,
+        'active_days': 1,
+        'average_steps_per_active_day': 1000,
+        'best_month': 8,
+        'total_xp_awarded': 20,
+      };
+    await _pumpMovementScreen(tester, client);
+
+    expect(find.text('Ano'), findsOneWidget);
+
+    // 3º card, dentro do scroll local da seção — garante que está
+    // visível antes de tocar (mesmo achado real que os outros cards
+    // acima não precisaram, por estarem mais perto do topo).
+    await tester.ensureVisible(find.text('Ano'));
+    await tester.tap(find.text('Ano'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Progressão anual'), findsOneWidget);
+    expect(find.text('1000'), findsWidgets);
   });
 }
