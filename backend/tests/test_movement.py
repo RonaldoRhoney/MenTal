@@ -631,6 +631,24 @@ def test_yearly_summary_aggregates_by_month_and_computes_best_month(client):
     assert months_by_number[2]["active_days"] == 2
 
 
+def test_yearly_summary_best_month_none_when_no_steps_collected(client):
+    """Achado real em teste no dispositivo (01/09/2026): ativar Movimento
+    já cria o ciclo do dia corrente com steps_collected=0 — isso não pode
+    contar como "melhor mês", senão a tela mostra 'Melhor mês: set' junto
+    com 'Total de passos: 0', o que não faz sentido nenhum pro usuário."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    client.post("/movement/enable", headers=headers)
+
+    resp = client.get("/movement/yearly-summary", headers=headers)
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["total_steps"] == 0
+    assert body["active_days"] == 0
+    assert body["best_month"] is None
+
+
 def test_yearly_summary_default_year_respects_brasilia_not_utc(client, monkeypatch):
     """Achado de revisão de código (01/09/2026): o endpoint usava
     datetime.utcnow().year pra 'ano atual' quando nenhum ?year= é

@@ -305,7 +305,7 @@ def get_yearly_summary(db: Session, user_id: str, year: int) -> dict:
             active_days += 1
         total_steps += cycle.steps_collected
         total_xp += cycle.xp_awarded
-    best_month = max(months, key=lambda m: months[m]["total_steps"], default=None) if months else None
+    best_month = max(months, key=lambda m: months[m]["total_steps"]) if total_steps > 0 else None
     return {
         "year": year,
         "months": [{"month": m, **data} for m, data in sorted(months.items())],
