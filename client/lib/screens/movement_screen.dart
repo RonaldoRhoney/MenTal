@@ -56,6 +56,15 @@ class _MovementScreenState extends State<MovementScreen> {
   // checagem à parte, a tela mostrava o painel inteiro normalmente e só
   // dizia "sensor indisponível", sem nunca oferecer um jeito de resolver.
   bool _permissionMissing = false;
+  // Achado real (30/08/2026, MENTAL_MOVIMENTO_REFORMULACAO.md §2): sem
+  // baseline local prévio para o ciclo pendente, o delta calculado é
+  // sempre 0 — o aviso "toque pra coletar" ficava preso pra sempre,
+  // convidando um toque sem efeito nenhum. Depois de uma tentativa de
+  // coleta sem nenhum delta real a enviar, o ciclo é "reconhecido"
+  // localmente (ver MovementService.acknowledgePendingCycle) e o aviso
+  // some — volta a aparecer se um delta real surgir antes do fim da
+  // janela de graça.
+  bool _pendingAcknowledged = false;
   // Começa true: só vira false quando o primeiro evento REAL do sensor
   // chegar. Achado real testando no Moto G22 (2026-08-21):
   // TYPE_STEP_COUNTER não entrega uma leitura imediata ao registrar o
@@ -121,6 +130,9 @@ class _MovementScreenState extends State<MovementScreen> {
       _dailyGoalSteps = status['daily_goal_steps'] as int?;
       _currentCycle = status['current_cycle'] as Map<String, dynamic>?;
       _pendingReportCycle = status['pending_report_cycle'] as Map<String, dynamic>?;
+      _pendingAcknowledged = _pendingReportCycle == null
+          ? false
+          : await MovementService.instance.isPendingCycleAcknowledged(_pendingReportCycle!['id'] as String);
       // Backend devolve mais recente primeiro — inverte pra ordem
       // cronológica (esquerda→direita) esperada num gráfico de barras.
       _recentCycles = ((status['recent_cycles'] as List?) ?? const [])
@@ -328,7 +340,8 @@ class _MovementScreenState extends State<MovementScreen> {
     }
   }
 
-  bool get _hasStepsToCollect => _detectedUncollectedSteps > 0 || _pendingReportCycle != null;
+  bool get _hasStepsToCollect =>
+      _detectedUncollectedSteps > 0 || (_pendingReportCycle != null && !_pendingAcknowledged);
 
   /// Coleta disparada ao tocar num nível de meta aceso no seletor
   /// (29/08/2026, pedido de Rhoney: "a coleta de ciclo deve ser ao
@@ -340,7 +353,7 @@ class _MovementScreenState extends State<MovementScreen> {
     if (_busy || !_hasStepsToCollect) return;
     setState(() => _busy = true);
     try {
-      if (_pendingReportCycle != null) await _doCollectPending();
+      if (_pendingReportCycle != null && !_pendingAcknowledged) await _doCollectPending();
       if (_detectedUncollectedSteps > 0) await _doCollectCurrent();
       await _load();
     } on ApiException catch (e) {
@@ -366,13 +379,25 @@ class _MovementScreenState extends State<MovementScreen> {
     // Usa a última leitura do sensor recebida pela assinatura viva do
     // ciclo atual (mesmo valor absoluto de hardware serve pra
     // calcular o delta de QUALQUER ciclo — o baseline é que muda).
-    // Se nenhum passo real foi detectado ainda nesta sessão da tela,
-    // envia 0 — nunca bloqueia a coleta do que já está registrado no
-    // servidor.
+    // pendingDeltaForClosedCycle (ao contrário de pendingDeltaFor, usado
+    // pro ciclo atual) nunca inventa um baseline novo pra um ciclo
+    // fechado — sem baseline local prévio, retorna null.
     final lastReading = _lastRawStepsSinceBoot;
-    final localDelta = lastReading == null
-        ? 0
-        : (await MovementService.instance.pendingDeltaFor(pendingId, lastReading)).uncollectedSteps;
+    final delta = lastReading == null
+        ? null
+        : await MovementService.instance.pendingDeltaForClosedCycle(pendingId, lastReading);
+    final localDelta = delta?.uncollectedSteps ?? 0;
+    if (localDelta <= 0) {
+      // Nada de novo pra enviar a partir deste aparelho — reconhece
+      // localmente em vez de mandar uma coleta de 0 passos, que só
+      // deixaria o aviso preso pedindo um toque sem efeito nenhum.
+      await MovementService.instance.acknowledgePendingCycle(
+        pendingId,
+        keepCycleIds: [pendingId, if (_currentCycle != null) _currentCycle!['id'] as String],
+      );
+      if (mounted) setState(() => _pendingAcknowledged = true);
+      return;
+    }
     final result = await widget.client.collectMovementSteps(steps: localDelta, cycleId: pendingId);
     final updatedCycle = result['cycle'] as Map<String, dynamic>;
     await _handleCollectResponse(result, pendingId, updatedCycle['steps_collected'] as int);
@@ -468,7 +493,7 @@ class _MovementScreenState extends State<MovementScreen> {
           ),
           const SizedBox(height: 4),
         ],
-        if (_pendingReportCycle != null) ...[
+        if (_pendingReportCycle != null && !_pendingAcknowledged) ...[
           // O ciclo anterior pendente pode não ter caminho nenhum até um
           // nível de meta do dia atual (ex.: usuário ainda não andou o
           // suficiente hoje) — sem isso, o saldo fica preso indefinidamente.

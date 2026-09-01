@@ -34,6 +34,7 @@ class MovementService {
 
   static const _kStateKey = 'movement_cycle_state_v1';
   static const _kLastKnownRawStepsKey = 'movement_last_known_raw_steps_v1';
+  static const _kAcknowledgedPendingKey = 'movement_acknowledged_pending_cycles_v1';
 
   Map<String, dynamic> _state = {};
   bool _loaded = false;
@@ -160,6 +161,33 @@ class MovementService {
     return MovementLocalDelta(uncollectedSteps: uncollected, totalStepsInCycle: totalSoFar);
   }
 
+  /// Igual a [pendingDeltaFor], mas para um ciclo JÁ FECHADO (o
+  /// "pendente" pra coleta, fora do ciclo atual). Diferença crítica:
+  /// NUNCA cria um baseline novo quando não existe um registrado
+  /// localmente para esse `cycleId`. [pendingDeltaFor] faz isso porque é
+  /// seguro para o ciclo atual (que acabou de nascer agora mesmo), mas
+  /// para um ciclo antigo seria sempre errado — inventaria um baseline
+  /// usando a leitura de HOJE, quando o baseline de verdade daquele
+  /// ciclo é de um dia anterior. Achado real (30/08/2026,
+  /// MENTAL_MOVIMENTO_REFORMULACAO.md §2): esse fallback é a causa raiz
+  /// de "coletar não faz nada" no ciclo pendente — sempre calculava
+  /// delta 0 e mascarava o problema.
+  ///
+  /// Sem baseline local prévio, este aparelho não tem como saber quanto
+  /// daquele ciclo específico ainda falta enviar — retorna null para o
+  /// chamador tratar como "nada a coletar a partir deste aparelho", em
+  /// vez de inventar um delta.
+  Future<MovementLocalDelta?> pendingDeltaForClosedCycle(String cycleId, int currentStepsSinceBoot) async {
+    await ensureLoaded();
+    final entry = _state[cycleId] as Map<String, dynamic>?;
+    if (entry == null) return null;
+    final baseline = entry['baseline'] as int;
+    final lastSubmittedTotal = entry['lastSubmittedTotal'] as int;
+    final totalSoFar = currentStepsSinceBoot - baseline < 0 ? 0 : currentStepsSinceBoot - baseline;
+    final uncollected = totalSoFar - lastSubmittedTotal < 0 ? 0 : totalSoFar - lastSubmittedTotal;
+    return MovementLocalDelta(uncollectedSteps: uncollected, totalStepsInCycle: totalSoFar);
+  }
+
   /// Chamado após uma coleta bem-sucedida no backend — registra que o
   /// total até `totalStepsInCycle` já foi enviado, para a próxima
   /// chamada calcular só o delta novo.
@@ -177,6 +205,28 @@ class MovementService {
     await ensureLoaded();
     _state = {};
     await _persist();
+  }
+
+  /// Marca um ciclo pendente como "já resolvido por este aparelho" —
+  /// usado quando uma coleta do ciclo pendente não teve nenhum delta
+  /// real pra enviar (ver [pendingDeltaForClosedCycle]), pra parar de
+  /// convidar o usuário a tocar em "Coletar" indefinidamente sem efeito
+  /// nenhum. Guardado numa lista simples de ids — a janela de graça do
+  /// próprio ciclo (24h) já limita naturalmente o crescimento dessa
+  /// lista, mas limpa entradas de ciclos que não estão mais entre os
+  /// `keepCycleIds` (o atual + o pendente de verdade) a cada chamada
+  /// pra nunca crescer sem limite.
+  Future<void> acknowledgePendingCycle(String cycleId, {required Iterable<String> keepCycleIds}) async {
+    final prefs = await SharedPreferences.getInstance();
+    final acknowledged = (prefs.getStringList(_kAcknowledgedPendingKey) ?? <String>[]).toSet();
+    acknowledged.add(cycleId);
+    acknowledged.retainWhere(keepCycleIds.contains);
+    await prefs.setStringList(_kAcknowledgedPendingKey, acknowledged.toList());
+  }
+
+  Future<bool> isPendingCycleAcknowledged(String cycleId) async {
+    final prefs = await SharedPreferences.getInstance();
+    return (prefs.getStringList(_kAcknowledgedPendingKey) ?? const <String>[]).contains(cycleId);
   }
 
   bool _foregroundTaskInitialized = false;

@@ -21,6 +21,7 @@ import 'movement_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
+import 'crossword_screen.dart';
 import 'word_search_screen.dart';
 
 /// Home: um CTA primário claro por território, conforme Princípio de
@@ -144,7 +145,13 @@ class _HomeScreenState extends State<HomeScreen> {
       final status = await widget.client.movementStatus();
       final enabled = status['movement_enabled'] as bool;
       final cycle = status['current_cycle'] as Map<String, dynamic>?;
-      final hasPendingCycle = status['pending_report_cycle'] != null;
+      final pendingCycle = status['pending_report_cycle'] as Map<String, dynamic>?;
+      // Mesmo reconhecimento local usado na tela Movimento (achado
+      // 30/08/2026, MENTAL_MOVIMENTO_REFORMULACAO.md §2): sem isso, este
+      // banner ficaria pedindo pra sempre um toque que não colhe nada
+      // (ver MovementService.pendingDeltaForClosedCycle).
+      final hasPendingCycle = pendingCycle != null &&
+          !(await MovementService.instance.isPendingCycleAcknowledged(pendingCycle['id'] as String));
       if (mounted) setState(() => _movementHasPendingCycle = hasPendingCycle);
       if (!enabled || cycle == null) {
         _movementStepSub?.cancel();
@@ -763,7 +770,7 @@ class _TerritoryCard extends StatelessWidget {
     // jogo própria (grade, não pergunta+alternativas) — nunca abre
     // ChallengeScreen, e não tem modo Relâmpago (não existe timer/nível
     // adaptativo por resposta individual nesse formato).
-    if (territoryId == 'caca_palavras') {
+    if (territoryId == 'caca_palavras' || territoryId == 'cruzadas') {
       return Material(
         color: AppColors.bg2,
         borderRadius: BorderRadius.circular(16),
@@ -771,7 +778,11 @@ class _TerritoryCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           onTap: () async {
             await Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => WordSearchScreen(client: client, territoryId: territoryId, territoryLabel: label)),
+              MaterialPageRoute(
+                builder: (_) => territoryId == 'caca_palavras'
+                    ? WordSearchScreen(client: client, territoryId: territoryId, territoryLabel: label)
+                    : CrosswordScreen(client: client, territoryId: territoryId, territoryLabel: label),
+              ),
             );
             onReturned();
           },

@@ -676,6 +676,22 @@ class AppLocalizationsPt extends AppLocalizations {
   String get friendsCodeCopiedMessage => 'Código copiado!';
 
   @override
+  String get friendsSearchFieldHint => 'Buscar amigo pelo nome';
+
+  @override
+  String get friendsSearchSendInviteButton => 'Convidar';
+
+  @override
+  String get friendsSearchAlreadyFriendsLabel => 'Já são amigos';
+
+  @override
+  String get friendsSearchRequestPendingLabel => 'Pedido enviado';
+
+  @override
+  String get friendsSearchEmptyMessage =>
+      'Nenhum resultado — confira se digitou o nome certo.';
+
+  @override
   String get friendsAddFieldHint => 'Cole o código de um amigo';
 
   @override

@@ -76,6 +76,23 @@ class _FakeApiClient extends ApiClient {
     reportReason = reason;
     return {'status': 'reported'};
   }
+
+  // AMIGOS_CONVITE_POR_NOME.md — busca por nome.
+  List<Map<String, dynamic>> searchResults = [];
+  String? lastSearchQuery;
+  String? sentFriendRequestToUserId;
+
+  @override
+  Future<Map<String, dynamic>> searchUsers(String query) async {
+    lastSearchQuery = query;
+    return {'results': searchResults};
+  }
+
+  @override
+  Future<Map<String, dynamic>> sendFriendRequest(String toUserId) async {
+    sentFriendRequestToUserId = toUserId;
+    return {'status': 'pending'};
+  }
 }
 
 Future<void> _pumpFriendsScreen(WidgetTester tester, ApiClient client) async {
@@ -113,7 +130,9 @@ void main() {
     final client = _FakeApiClient();
     await _pumpFriendsScreen(tester, client);
 
-    await tester.enterText(find.byType(TextField), 'XYZ789');
+    // .last: a tela agora tem 2 TextFields (busca por nome + código) —
+    // o de código é o segundo (AMIGOS_CONVITE_POR_NOME.md).
+    await tester.enterText(find.byType(TextField).last, 'XYZ789');
     await tester.tap(find.text('Adicionar'));
     await tester.pumpAndSettle();
 
@@ -128,7 +147,7 @@ void main() {
     );
     await _pumpFriendsScreen(tester, client);
 
-    await tester.enterText(find.byType(TextField), 'BAD_CODE');
+    await tester.enterText(find.byType(TextField).last, 'BAD_CODE');
     await tester.tap(find.text('Adicionar'));
     await tester.pumpAndSettle();
 
@@ -219,5 +238,65 @@ void main() {
     expect(client.reportReason, 'Comportamento impróprio');
     // Denunciar não remove o amigo da lista (só bloquear faz isso).
     expect(find.text('Amigo Chato'), findsOneWidget);
+  });
+
+  testWidgets('busca por nome só dispara a partir da 3ª letra', (tester) async {
+    final client = _FakeApiClient();
+    await _pumpFriendsScreen(tester, client);
+
+    await tester.enterText(find.byType(TextField).first, 'Fe');
+    await tester.pump(const Duration(milliseconds: 400));
+
+    expect(client.lastSearchQuery, isNull);
+  });
+
+  testWidgets('busca por nome mostra resultado e envia convite ao tocar', (tester) async {
+    final client = _FakeApiClient()
+      ..searchResults = [
+        {
+          'user_id': 'searched-user-id',
+          'nickname': 'gerado123',
+          'real_name': 'Fernanda Lima',
+          'photo_url': null,
+          'level': 3,
+          'friendship_status': null,
+        },
+      ];
+    await _pumpFriendsScreen(tester, client);
+
+    await tester.enterText(find.byType(TextField).first, 'Fernanda');
+    await tester.pump(const Duration(milliseconds: 400));
+    await tester.pumpAndSettle();
+
+    expect(client.lastSearchQuery, 'Fernanda');
+    expect(find.text('Fernanda Lima'), findsOneWidget);
+
+    await tester.tap(find.text('Convidar'));
+    await tester.pumpAndSettle();
+
+    expect(client.sentFriendRequestToUserId, 'searched-user-id');
+    expect(find.text('Pedido enviado'), findsOneWidget);
+  });
+
+  testWidgets('busca por nome mostra status já existente sem botão de convite', (tester) async {
+    final client = _FakeApiClient()
+      ..searchResults = [
+        {
+          'user_id': 'friend-already',
+          'nickname': 'gerado456',
+          'real_name': 'Beatriz Amiga',
+          'photo_url': null,
+          'level': 5,
+          'friendship_status': 'accepted',
+        },
+      ];
+    await _pumpFriendsScreen(tester, client);
+
+    await tester.enterText(find.byType(TextField).first, 'Beatriz');
+    await tester.pump(const Duration(milliseconds: 400));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Já são amigos'), findsOneWidget);
+    expect(find.text('Convidar'), findsNothing);
   });
 }

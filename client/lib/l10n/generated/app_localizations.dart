@@ -1246,6 +1246,36 @@ abstract class AppLocalizations {
   /// **'Código copiado!'**
   String get friendsCodeCopiedMessage;
 
+  /// Input hint for searching a friend by name
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar amigo pelo nome'**
+  String get friendsSearchFieldHint;
+
+  /// Button to send a friend request to a name-search result
+  ///
+  /// In pt, this message translates to:
+  /// **'Convidar'**
+  String get friendsSearchSendInviteButton;
+
+  /// Shown instead of the invite button when the search result is already an accepted friend
+  ///
+  /// In pt, this message translates to:
+  /// **'Já são amigos'**
+  String get friendsSearchAlreadyFriendsLabel;
+
+  /// Shown instead of the invite button when a friend request already exists with the search result
+  ///
+  /// In pt, this message translates to:
+  /// **'Pedido enviado'**
+  String get friendsSearchRequestPendingLabel;
+
+  /// Shown when a name search (3+ letters) returns no results
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum resultado — confira se digitou o nome certo.'**
+  String get friendsSearchEmptyMessage;
+
   /// Input hint for adding a friend by code
   ///
   /// In pt, this message translates to:

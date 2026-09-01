@@ -204,6 +204,24 @@ class ApiClient {
     return _get(_uri('/social/friends'), headers: _headers);
   }
 
+  // AMIGOS_CONVITE_POR_NOME.md — busca por nome, complementa (não
+  // substitui) o convite por código acima. Autoridade da busca é 100%
+  // do backend (§5 do doc) — este método só repassa o texto digitado.
+  Future<Map<String, dynamic>> searchUsers(String query) async {
+    return _get(_uri('/social/users/search', {'q': query}), headers: _headers);
+  }
+
+  // Envia o convite direto a partir de um resultado de busca por nome —
+  // não usa invite_code aqui (esse continua reservado pro fluxo de
+  // compartilhar fora do app).
+  Future<Map<String, dynamic>> sendFriendRequest(String toUserId) async {
+    return _post(
+      _uri('/social/friend-requests'),
+      headers: _headers,
+      body: jsonEncode({'to_user_id': toUserId}),
+    );
+  }
+
   // MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio semanal,
   // sem valor monetário. Saldo/apuração são 100% autoridade do backend;
   // o client nunca calcula, só exibe o que a API devolve.
@@ -400,6 +418,21 @@ class ApiClient {
       _uri('/word-puzzles/$resultId/complete'),
       headers: _headers,
       body: jsonEncode({'found_words': foundWords}),
+    );
+  }
+
+  Future<Map<String, dynamic>> nextCrossword(String territoryId) async {
+    return _get(
+      _uri('/crosswords/next', {'territory_id': territoryId}),
+      headers: _headers,
+    );
+  }
+
+  Future<Map<String, dynamic>> completeCrossword({required String resultId, required List<Map<String, dynamic>> answers}) async {
+    return _post(
+      _uri('/crosswords/$resultId/complete'),
+      headers: _headers,
+      body: jsonEncode({'answers': answers}),
     );
   }
 

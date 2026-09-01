@@ -87,6 +87,27 @@ def add_friend(
     return {"status": "pending"}
 
 
+# AMIGOS_CONVITE_POR_NOME.md §1/§3 — envia convite direto a partir de um
+# resultado de busca por nome (o convite por código continua sendo o
+# caminho pra quem ainda nem tem o app). Idempotente/sem vazamento: se
+# já existe pedido, já são amigos, ou um bloqueou o outro,
+# request_friendship retorna None silenciosamente e a resposta é a
+# mesma — o requisitante nunca descobre por essa via se foi bloqueado.
+@router.post("/social/friend-requests")
+def send_friend_request(
+    body: schemas.SendFriendRequestRequest,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    if body.to_user_id == user_id:
+        raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_FRIEND_SELF", "message": "Não é possível adicionar a si mesmo como amigo."}})
+    target = db.get(models.Profile, body.to_user_id)
+    if target is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "USER_NOT_FOUND", "message": "Usuário não encontrado."}})
+    services.request_friendship(db, user_id, body.to_user_id)
+    return {"status": "pending"}
+
+
 @router.get("/social/friend-requests", response_model=schemas.FriendRequestsResponse)
 def list_friend_requests(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     pending = services.list_pending_friend_requests(db, user_id)
@@ -147,6 +168,35 @@ def list_friends(user_id: str = Depends(require_age_confirmed_user_id), db: Sess
             )
         )
     return schemas.FriendsResponse(friends=friends)
+
+
+# AMIGOS_CONVITE_POR_NOME.md — busca de amigos por nome, complementando
+# o convite por código já existente (não o substitui — código funciona
+# fora do app, nome só ajuda quem já está nele). Escopada estritamente
+# ao fluxo de convite (§2 do doc): devolve só nome+foto+nível, nunca
+# abre o perfil público completo a partir daqui.
+@router.get("/social/users/search", response_model=schemas.UserSearchResponse)
+def search_users(
+    q: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    query = q.strip()
+    if len(query) < 3:
+        return schemas.UserSearchResponse(results=[])
+    profiles = services.search_users_by_name(db, query, user_id)
+    results = [
+        schemas.UserSearchResultOut(
+            user_id=profile.user_id,
+            nickname=profile.nickname,
+            real_name=profile.real_name,
+            photo_url=services.public_photo_url(profile),
+            level=profile.level,
+            friendship_status=services.friendship_status_between(db, user_id, profile.user_id),
+        )
+        for profile in profiles
+    ]
+    return schemas.UserSearchResponse(results=results)
 
 
 # Pedido de Rhoney (2026-08-22): compartilhar uma conquista (nível,

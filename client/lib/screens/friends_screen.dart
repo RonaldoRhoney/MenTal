@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -40,16 +42,73 @@ class _FriendsScreenState extends State<FriendsScreen> {
   final _codeController = TextEditingController();
   bool _adding = false;
 
+  // AMIGOS_CONVITE_POR_NOME.md — busca por nome, complementa o convite
+  // por código acima (não substitui: código funciona fora do app).
+  // Autocomplete só a partir da 3ª letra (§5 do doc) e com debounce de
+  // ~300ms — evita uma chamada de API a cada tecla digitada.
+  final _searchController = TextEditingController();
+  Timer? _searchDebounce;
+  List<Map<String, dynamic>> _searchResults = [];
+  bool _searching = false;
+  final Set<String> _pendingRequestUserIds = {};
+
   @override
   void initState() {
     super.initState();
     _load();
+    _searchController.addListener(_onSearchChanged);
   }
 
   @override
   void dispose() {
     _codeController.dispose();
+    _searchDebounce?.cancel();
+    _searchController.dispose();
     super.dispose();
+  }
+
+  void _onSearchChanged() {
+    _searchDebounce?.cancel();
+    final query = _searchController.text.trim();
+    if (query.length < 3) {
+      setState(() {
+        _searchResults = [];
+        _searching = false;
+      });
+      return;
+    }
+    _searchDebounce = Timer(const Duration(milliseconds: 300), () => _runSearch(query));
+  }
+
+  Future<void> _runSearch(String query) async {
+    setState(() => _searching = true);
+    try {
+      final response = await widget.client.searchUsers(query);
+      if (mounted && _searchController.text.trim() == query) {
+        setState(() => _searchResults = (response['results'] as List).cast<Map<String, dynamic>>());
+      }
+    } on ApiException catch (_) {
+      // Busca é um reforço, não crítico — nunca sobrescreve o erro
+      // principal da tela (ex.: falha ao carregar amigos).
+    } finally {
+      if (mounted) setState(() => _searching = false);
+    }
+  }
+
+  Future<void> _sendSearchFriendRequest(Map<String, dynamic> result) async {
+    final userId = result['user_id'] as String;
+    setState(() => _pendingRequestUserIds.add(userId));
+    try {
+      await widget.client.sendFriendRequest(userId);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context)!.friendRequestSentMessage)),
+        );
+      }
+    } on ApiException catch (e) {
+      _pendingRequestUserIds.remove(userId);
+      if (mounted) setState(() => _error = e.message);
+    }
   }
 
   Future<void> _load() async {
@@ -250,6 +309,23 @@ class _FriendsScreenState extends State<FriendsScreen> {
     }
   }
 
+  Widget _buildSearchResultAction(Map<String, dynamic> result) {
+    final l10n = AppLocalizations.of(context)!;
+    final userId = result['user_id'] as String;
+    final status = result['friendship_status'] as String?;
+    if (status == 'accepted') {
+      return Text(l10n.friendsSearchAlreadyFriendsLabel, style: Theme.of(context).textTheme.bodySmall);
+    }
+    if (status == 'pending' || _pendingRequestUserIds.contains(userId)) {
+      return Text(l10n.friendsSearchRequestPendingLabel, style: Theme.of(context).textTheme.bodySmall);
+    }
+    return OutlinedButton(
+      style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+      onPressed: () => _sendSearchFriendRequest(result),
+      child: Text(l10n.friendsSearchSendInviteButton),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -304,6 +380,55 @@ class _FriendsScreenState extends State<FriendsScreen> {
                       ),
                     ],
                     const SizedBox(height: 24),
+                    TextField(
+                      controller: _searchController,
+                      decoration: InputDecoration(
+                        hintText: l10n.friendsSearchFieldHint,
+                        prefixIcon: const Icon(Icons.search),
+                        suffixIcon: _searching
+                            ? const Padding(
+                                padding: EdgeInsets.all(12),
+                                child: SizedBox(
+                                  width: 16,
+                                  height: 16,
+                                  child: CircularProgressIndicator(strokeWidth: 2),
+                                ),
+                              )
+                            : null,
+                      ),
+                    ),
+                    if (_searchController.text.trim().length >= 3 && !_searching) ...[
+                      const SizedBox(height: 4),
+                      if (_searchResults.isEmpty)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: Text(
+                            l10n.friendsSearchEmptyMessage,
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        )
+                      else
+                        // Resultado leva direto à ação de convite — nunca
+                        // abre o perfil público completo a partir daqui
+                        // (AMIGOS_CONVITE_POR_NOME.md §2, exceção escopada
+                        // estritamente ao fluxo de convite).
+                        ...[
+                          for (final result in _searchResults)
+                            ListTile(
+                              contentPadding: EdgeInsets.zero,
+                              leading: ProfilePhotoCircle(photoUrl: result['photo_url'] as String?),
+                              title: Text(
+                                (result['real_name'] as String?) ?? (result['nickname'] as String),
+                              ),
+                              subtitle: Text(
+                                l10n.levelLabel(result['level'] as int),
+                                style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 14),
+                              ),
+                              trailing: _buildSearchResultAction(result),
+                            ),
+                        ],
+                    ],
+                    const SizedBox(height: 16),
                     Row(
                       children: [
                         Expanded(

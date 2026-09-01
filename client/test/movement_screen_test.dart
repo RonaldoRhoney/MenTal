@@ -269,7 +269,11 @@ void main() {
     expect(find.byType(BarChart), findsOneWidget);
   });
 
-  testWidgets('com só 1 coleta no ciclo, gráfico intradiário ainda não aparece', (tester) async {
+  testWidgets('com só 1 coleta no ciclo, gráfico intradiário já aparece (sempre visível)', (tester) async {
+    // 30/08/2026, pedido de Rhoney: o gráfico "Seu dia até agora" deixou
+    // de exigir 2+ snapshots — antes disso quase nunca aparecia na
+    // prática, já que a coleta ficava travada (ver commit "Movimento:
+    // adiciona botão de coleta e torna o gráfico diário sempre visível").
     final client = _FakeApiClient(
       movementEnabled: true,
       currentCycle: {
@@ -284,7 +288,7 @@ void main() {
       },
     );
     await _pumpMovementScreen(tester, client);
-    expect(find.text('Seu dia até agora'), findsNothing);
+    expect(find.text('Seu dia até agora'), findsOneWidget);
   });
 
   testWidgets('com 2+ coletas no ciclo, gráfico intradiário aparece', (tester) async {

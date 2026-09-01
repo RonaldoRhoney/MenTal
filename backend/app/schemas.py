@@ -165,6 +165,47 @@ class WordPuzzleCompleteResponse(BaseModel):
     already_completed_before: bool
 
 
+class CrosswordEntryOut(BaseModel):
+    # Sem 'answer' aqui de propósito — ao contrário do Caça-palavras, a
+    # cruzadinha tem resposta escondida de verdade (o jogador preenche).
+    number: int
+    direction: str
+    row: int
+    col: int
+    length: int
+    clue: str
+
+
+class CrosswordOut(BaseModel):
+    result_id: str
+    puzzle_id: str
+    territory_id: str
+    difficulty_level: int
+    theme: str
+    grid_size: int
+    # Formato da grade sem revelar letras: '#' = célula preta, '.' =
+    # célula preenchível (o client desenha a estrutura, nunca o
+    # conteúdo). Calculado a partir de puzzle.grid no router.
+    grid_shape: list[str]
+    entries: list[CrosswordEntryOut]
+
+
+class CrosswordAnswerIn(BaseModel):
+    number: int
+    direction: str
+    answer: str
+
+
+class CrosswordCompleteRequest(BaseModel):
+    answers: list[CrosswordAnswerIn]
+
+
+class CrosswordCompleteResponse(BaseModel):
+    xp_awarded: int
+    speed_bonus_xp: int
+    already_completed_before: bool
+
+
 class HintRequest(BaseModel):
     attempt_id: str
 
@@ -423,6 +464,10 @@ class AddFriendRequest(BaseModel):
     invite_code: str
 
 
+class SendFriendRequestRequest(BaseModel):
+    to_user_id: str
+
+
 class FriendRequestOut(BaseModel):
     friendship_id: str
     from_user_id: str
@@ -445,6 +490,23 @@ class FriendOut(BaseModel):
 
 class FriendsResponse(BaseModel):
     friends: list[FriendOut]
+
+
+# AMIGOS_CONVITE_POR_NOME.md §5 — resultado de busca por nome. Nunca
+# inclui e-mail ou outro dado sensível: só o que já é público (nome,
+# foto, nível), o mínimo necessário para identificar a pessoa certa
+# entre homônimos (§4 do doc).
+class UserSearchResultOut(BaseModel):
+    user_id: str
+    nickname: str
+    real_name: str | None = None
+    photo_url: str | None = None
+    level: int
+    friendship_status: str | None = None  # None|"pending"|"accepted"
+
+
+class UserSearchResponse(BaseModel):
+    results: list[UserSearchResultOut]
 
 
 class ShareRewardResponse(BaseModel):

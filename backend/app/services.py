@@ -439,6 +439,60 @@ def decline_friend_request(db: Session, friendship_id: str, user_id: str) -> boo
     return True
 
 
+def friendship_status_between(db: Session, user_a: str, user_b: str) -> str | None:
+    """None|"pending"|"accepted" — usado pra UI decidir se ainda mostra o
+    botão de convite ou já reflete o estado atual (AMIGOS_CONVITE_POR_NOME.md
+    §5, resultado de busca deve dar o mesmo contexto que a lista de
+    amigos já dá)."""
+    a, b = _canonical_pair(user_a, user_b)
+    friendship = db.execute(
+        select(models.Friendship).where(models.Friendship.user_id_a == a, models.Friendship.user_id_b == b)
+    ).scalar_one_or_none()
+    return friendship.status if friendship is not None else None
+
+
+def search_users_by_name(db: Session, query: str, requester_id: str, limit: int = 10) -> list[models.Profile]:
+    """
+    Busca por PREFIXO (AMIGOS_CONVITE_POR_NOME.md §5 — "comparação de
+    prefixo simples, não full-text search pesado") em nickname OU
+    real_name. Nunca retorna o próprio requester, nem ninguém bloqueado
+    em qualquer direção (mesma regra de request_friendship) — busca por
+    nome não deveria contornar um bloqueio já feito.
+    """
+    escaped = query.replace("\\", "\\\\").replace("%", r"\%").replace("_", r"\_")
+    pattern = f"{escaped}%"
+    blocked_ids = set(
+        db.execute(
+            select(models.UserBlock.blocked_user_id).where(models.UserBlock.blocker_user_id == requester_id)
+        )
+        .scalars()
+        .all()
+    ) | set(
+        db.execute(
+            select(models.UserBlock.blocker_user_id).where(models.UserBlock.blocked_user_id == requester_id)
+        )
+        .scalars()
+        .all()
+    )
+    candidates = (
+        db.execute(
+            select(models.Profile)
+            .where(
+                or_(
+                    models.Profile.nickname.ilike(pattern, escape="\\"),
+                    models.Profile.real_name.ilike(pattern, escape="\\"),
+                ),
+                models.Profile.user_id != requester_id,
+            )
+            .order_by(models.Profile.nickname)
+            .limit(limit + len(blocked_ids))
+        )
+        .scalars()
+        .all()
+    )
+    return [p for p in candidates if p.user_id not in blocked_ids][:limit]
+
+
 def get_friend_user_ids(db: Session, user_id: str) -> list[str]:
     rows = db.execute(
         select(models.Friendship).where(

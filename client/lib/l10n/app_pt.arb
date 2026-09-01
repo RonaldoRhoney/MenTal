@@ -125,6 +125,7 @@
   "@wordSearchXpAwardedMessage": {"description": "XP awarded for completing a word search puzzle", "placeholders": {"xp": {"type": "int"}}},
   "wordSearchSpeedBonusMessage": "Incluindo +{bonus} XP de bônus de velocidade!",
   "@wordSearchSpeedBonusMessage": {"description": "Speed bonus detail shown after completing a word search puzzle", "placeholders": {"bonus": {"type": "int"}}},
+
   "learningPauseCompleteButton": "Concluí a leitura",
   "@learningPauseCompleteButton": {"description": "Button that marks the learning pause as read and awards XP"},
   "learningPauseWatchVideoButton": "Assistir vídeo de referência",
@@ -647,6 +648,21 @@
 
   "friendsCodeCopiedMessage": "Código copiado!",
   "@friendsCodeCopiedMessage": {"description": "Snackbar shown after copying the invite code"},
+
+  "friendsSearchFieldHint": "Buscar amigo pelo nome",
+  "@friendsSearchFieldHint": {"description": "Input hint for searching a friend by name"},
+
+  "friendsSearchSendInviteButton": "Convidar",
+  "@friendsSearchSendInviteButton": {"description": "Button to send a friend request to a name-search result"},
+
+  "friendsSearchAlreadyFriendsLabel": "Já são amigos",
+  "@friendsSearchAlreadyFriendsLabel": {"description": "Shown instead of the invite button when the search result is already an accepted friend"},
+
+  "friendsSearchRequestPendingLabel": "Pedido enviado",
+  "@friendsSearchRequestPendingLabel": {"description": "Shown instead of the invite button when a friend request already exists with the search result"},
+
+  "friendsSearchEmptyMessage": "Nenhum resultado — confira se digitou o nome certo.",
+  "@friendsSearchEmptyMessage": {"description": "Shown when a name search (3+ letters) returns no results"},
 
   "friendsAddFieldHint": "Cole o código de um amigo",
   "@friendsAddFieldHint": {"description": "Input hint for adding a friend by code"},
