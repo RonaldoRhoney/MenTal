@@ -764,6 +764,11 @@ class _TerritoryCard extends StatelessWidget {
     // já filtra isso, a Home só exibe o que vem pronto.
     final detentorNickname = progress?['detentor_nickname'] as String?;
     final isDetentor = progress?['is_detentor'] as bool? ?? false;
+    // Cor de identidade do bloco Curiosidade Relâmpago (V3.5 §5, item
+    // movido pra V4) — índigo em vez do roxo já usado em XP/nível,
+    // reforçado só no ícone e no rótulo do card, sem substituir a borda
+    // de progresso (vermelho→verde) que já existe em todos os cards.
+    final isMysteryBlock = territoryId == 'curiosidade_relampago';
 
     // V3.3 §6 (Jogos de Palavras — Fase 1: Caça-palavras). Estrutura de
     // jogo própria (grade, não pergunta+alternativas) — nunca abre
@@ -845,11 +850,23 @@ class _TerritoryCard extends StatelessWidget {
                   // uma quebra de linha no meio da palavra.
                   FittedBox(
                     fit: BoxFit.scaleDown,
-                    child: Text(
-                      l10n.newChallengeButton(label),
-                      textAlign: TextAlign.center,
-                      maxLines: 1,
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (isMysteryBlock) ...[
+                          Icon(Icons.auto_awesome, size: 14, color: AppColors.mystery),
+                          const SizedBox(width: 4),
+                        ],
+                        Text(
+                          l10n.newChallengeButton(label),
+                          textAlign: TextAlign.center,
+                          maxLines: 1,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                fontWeight: FontWeight.w600,
+                                color: isMysteryBlock ? AppColors.mystery : null,
+                              ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

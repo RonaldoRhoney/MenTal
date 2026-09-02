@@ -50,6 +50,16 @@ class AppColors {
   static Color get victory => _isDark ? const Color(0xFF4FBF7A) : const Color(0xFF2E8F5A);
   static Color get purple => _isDark ? const Color(0xFF9B7FE0) : const Color(0xFF6B4FC2);
 
+  // V4 — cor de identidade visual do bloco Curiosidade Relâmpago
+  // (V3.5_CURIOSIDADE_RELAMPAGO.md §5, item movido da V3 pra V4). O
+  // documento sugeria roxo/violeta ("remetendo a mistério a ser
+  // desvendado"), mas esse tom já é usado em todo o app pra XP/nível/
+  // rank (xp_bar.dart, profile_photo.dart, card "Mundos" da Home) —
+  // reaproveitar aqui criaria confusão visual (o jogador associaria o
+  // bloco a progresso de XP). Índigo mantém o mesmo espírito de
+  // "mistério" sem colidir com nenhum uso existente da paleta.
+  static Color get mystery => _isDark ? const Color(0xFF7B8FE8) : const Color(0xFF3F4FA0);
+
   // Ponto de "profundidade" do gradiente radial de fundo
   // (widgets/game_background.dart) — no escuro é o roxo original
   // (U.I/MOVIMENTO_REDESIGN_V1.md §2); no claro vira um dourado bem

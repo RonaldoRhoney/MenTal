@@ -79,6 +79,41 @@ class _FakeApiClient extends ApiClient {
       };
 }
 
+/// V4 — cor de identidade do bloco Curiosidade Relâmpago (item movido
+/// da V3 pra V4, V3.5_CURIOSIDADE_RELAMPAGO.md §5). Só esse território
+/// ganha o ícone/tom índigo no card da Home, nenhum outro.
+class _FakeApiClientWithMysteryBlock extends ApiClient {
+  _FakeApiClientWithMysteryBlock() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+
+  @override
+  Future<Map<String, dynamic>> progress() async => {
+        'xp_total': 0,
+        'level': 1,
+        'streak': {'current_streak': 0, 'freeze_available': true},
+        'territories': [
+          {'territory_id': 'palavras', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
+          {'territory_id': 'curiosidade_relampago', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
+        ],
+        'worlds': [
+          {
+            'world_id': 'cultura_geral',
+            'name': 'Mundo da Cultura Geral',
+            'territory_ids': ['palavras', 'curiosidade_relampago'],
+            'completed': false,
+          },
+        ],
+        'blocks': [],
+      };
+
+  @override
+  Future<Map<String, dynamic>> movementStatus() async => {
+        'movement_enabled': false,
+        'daily_goal_steps': null,
+        'current_cycle': null,
+        'pending_report_cycle': null,
+      };
+}
+
 void main() {
   // Reforço de gamificação na Home (pedido de Rhoney, 29/08/2026): o
   // _ProgressCard cresceu (avatar 64px + anel + chips de XP/streak),
@@ -126,6 +161,16 @@ void main() {
     // Selo de completo (ícone) aparece uma vez, só no mundo com
     // completed=true — o backend decide isso, não a Home.
     expect(find.byIcon(Icons.check_circle), findsWidgets);
+  });
+
+  testWidgets('card de Curiosidade Relâmpago mostra o ícone de identidade índigo, outros territórios não', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(tester, homeApp(_FakeApiClientWithMysteryBlock()));
+
+    await tester.tap(find.text('Mundo da Cultura Geral'));
+    await tester.pumpAndSettle();
+
+    expect(find.byIcon(Icons.auto_awesome), findsOneWidget);
   });
 
   testWidgets('mostra o detentor do território entre amigos (V2 item 13)', (tester) async {

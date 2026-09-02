@@ -9,8 +9,8 @@
 
 ## Ordem de implementação (decisão de Rhoney, 02/09/2026)
 
-1. **Perfil Público + Torcida** (`PERFIL_PUBLICO_E_TORCIDA_V1.md` + `TORCIDA_MULTIPLA_V2.md`, na raiz do repo) — já aprovado desde a V3, pequeno, fecha uma experiência que já existe parcialmente (Ranking sem lugar pra "entrar"). Primeiro item de produto, logo após a Fase 1 dos agentes.
-2. **Cor de identidade visual do bloco Curiosidade Relâmpago** — menor item de todos, puramente visual, zero risco funcional, sem curadoria de conteúdo.
+1. ✅ **Perfil Público + Torcida** (`PERFIL_PUBLICO_E_TORCIDA_V1.md` + `TORCIDA_MULTIPLA_V2.md`, na raiz do repo) — concluído e em produção (02/09/2026): `GET/POST /profile/{id}/*`, migration 049, tela nova + pontos de entrada em Ranking/Amigos/Batalhas/Hall da Fama.
+2. ✅ **Cor de identidade visual do bloco Curiosidade Relâmpago** — concluído (02/09/2026): `AppColors.mystery` (índigo, não o roxo sugerido no doc original — já em uso pra XP/nível/rank), ícone no card da Home.
 3. **Redação** — precisa ser desenhada do zero (mecânica nunca foi definida, nenhum rascunho aproveitável); vem depois dos itens mais prontos por exigir mais trabalho de concepção antes mesmo de curadoria.
 4. **5 territórios novos** (Invenções, Veículos, Ouvido Afiado, Detetive Mental, Astronomia) — maior volume de trabalho, cada um exige curadoria completa do zero; deixados por último por serem o item mais "caro" em tempo.
 
