@@ -1,0 +1,308 @@
+[
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 1,
+    "prompt": "Qual é a função principal da introdução em um texto dissertativo?",
+    "options": [
+      "Apresentar o tema e o ponto de vista que será defendido",
+      "Repetir a conclusão com outras palavras",
+      "Listar todas as fontes consultadas",
+      "Contar uma história pessoal sem relação com o tema"
+    ],
+    "correct_answer": "Apresentar o tema e o ponto de vista que será defendido",
+    "explanation": "A introdução situa o leitor no tema e antecipa a tese (o ponto de vista) que o texto vai defender ao longo do desenvolvimento.",
+    "age_reviewed": true,
+    "hints": [
+      "É o primeiro parágrafo — pense no que o leitor precisa saber antes de continuar.",
+      "Ela não desenvolve os argumentos, só os anuncia."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 1,
+    "prompt": "O que é a 'tese' de uma redação?",
+    "options": [
+      "A opinião central que o texto defende",
+      "O título do texto",
+      "A primeira frase do texto, sempre",
+      "Um resumo de todos os parágrafos"
+    ],
+    "correct_answer": "A opinião central que o texto defende",
+    "explanation": "A tese é o posicionamento/opinião central que todos os argumentos do texto vão sustentar — o 'norte' da redação.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no que o autor está tentando provar ou defender.",
+      "Não é o assunto em si, é a posição sobre o assunto."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 1,
+    "prompt": "Qual é o papel da conclusão em um texto dissertativo?",
+    "options": [
+      "Retomar a tese e fechar o raciocínio, às vezes propondo uma solução",
+      "Introduzir um argumento novo pela primeira vez",
+      "Repetir a introdução palavra por palavra",
+      "Fazer uma pergunta sem resposta ao leitor"
+    ],
+    "correct_answer": "Retomar a tese e fechar o raciocínio, às vezes propondo uma solução",
+    "explanation": "A conclusão fecha o texto retomando a tese à luz do que foi argumentado — introduzir argumento novo ali quebra a lógica do texto.",
+    "age_reviewed": true,
+    "hints": [
+      "É o último parágrafo — ele arremata, não abre uma frente nova.",
+      "Em textos como o do ENEM, costuma incluir uma proposta de solução."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 1,
+    "prompt": "O que caracteriza um parágrafo bem construído?",
+    "options": [
+      "Gira em torno de UMA ideia central, desenvolvida com clareza",
+      "Precisa ter exatamente 5 linhas",
+      "Deve conter o máximo de ideias possível, uma por frase",
+      "Nunca pode ter mais de uma frase"
+    ],
+    "correct_answer": "Gira em torno de UMA ideia central, desenvolvida com clareza",
+    "explanation": "Um parágrafo organizado desenvolve uma única ideia central — misturar várias ideias não relacionadas no mesmo parágrafo confunde o leitor.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é sobre tamanho fixo, é sobre foco.",
+      "Pense em cada parágrafo como um 'mini-argumento' dentro do texto."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 1,
+    "prompt": "O que faz a 'coesão' num texto?",
+    "options": [
+      "Conecta as partes do texto (frases, parágrafos) de forma fluida",
+      "Garante que o texto seja sempre curto",
+      "Define se o texto é verdadeiro ou falso",
+      "Escolhe o tema do texto"
+    ],
+    "correct_answer": "Conecta as partes do texto (frases, parágrafos) de forma fluida",
+    "explanation": "Coesão é a 'costura' do texto — os elos (conectivos, pronomes, sinônimos) que ligam frases e parágrafos, evitando que o texto pareça picotado.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em palavras como 'portanto', 'além disso', 'porém' — elas ligam ideias.",
+      "Sem coesão, o texto parece uma lista de frases soltas."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 1,
+    "prompt": "Qual destas frases apresenta um problema de redundância?",
+    "options": [
+      "'Subir para cima é perigoso.'",
+      "'Subir a escada é perigoso.'",
+      "'A escada é estreita e alta.'",
+      "'Ele decidiu não subir.'"
+    ],
+    "correct_answer": "'Subir para cima é perigoso.'",
+    "explanation": "'Subir' já implica movimento para cima — dizer 'subir para cima' repete a mesma ideia com palavras diferentes, um erro clássico de redundância.",
+    "age_reviewed": true,
+    "hints": [
+      "Procure duas palavras que dizem a mesma coisa na mesma frase.",
+      "'Subir' já tem a direção 'para cima' embutida no próprio verbo."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 2,
+    "prompt": "Qual é a diferença central entre coesão e coerência?",
+    "options": [
+      "Coesão liga as palavras/frases; coerência é a lógica e o sentido geral do texto",
+      "Coesão e coerência são sinônimos exatos",
+      "Coesão é sobre ortografia; coerência é sobre pontuação",
+      "Coesão só existe em textos longos; coerência só em textos curtos"
+    ],
+    "correct_answer": "Coesão liga as palavras/frases; coerência é a lógica e o sentido geral do texto",
+    "explanation": "Coesão é o encadeamento gramatical (conectivos, pronomes); coerência é o sentido lógico do todo — um texto pode ser coeso e mesmo assim incoerente, se as ideias se contradisserem.",
+    "age_reviewed": true,
+    "hints": [
+      "Uma é sobre a 'costura' das palavras; a outra é sobre a 'lógica' das ideias.",
+      "Um texto pode estar bem conectado gramaticalmente e, ainda assim, não fazer sentido."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 2,
+    "prompt": "Qual é a função de um 'tópico frasal' no início de um parágrafo argumentativo?",
+    "options": [
+      "Anunciar a ideia central que o parágrafo vai desenvolver",
+      "Encerrar definitivamente o assunto do parágrafo",
+      "Ser sempre uma pergunta retórica",
+      "Citar uma fonte bibliográfica obrigatoriamente"
+    ],
+    "correct_answer": "Anunciar a ideia central que o parágrafo vai desenvolver",
+    "explanation": "O tópico frasal (geralmente a primeira frase do parágrafo) apresenta a ideia que será desenvolvida no restante do parágrafo, orientando o leitor.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense nele como o 'título' informal daquele parágrafo específico.",
+      "Ele abre o parágrafo, não o fecha."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 2,
+    "prompt": "Por que frases muito genéricas (ex.: 'a educação é importante para a sociedade') costumam enfraquecer um argumento?",
+    "options": [
+      "Porque não trazem nenhum dado, exemplo ou raciocínio específico que sustente a afirmação",
+      "Porque são sempre gramaticalmente incorretas",
+      "Porque são proibidas em qualquer tipo de texto",
+      "Porque só podem aparecer na conclusão"
+    ],
+    "correct_answer": "Porque não trazem nenhum dado, exemplo ou raciocínio específico que sustente a afirmação",
+    "explanation": "Uma afirmação genérica, sem exemplo, dado ou desenvolvimento, soa como clichê e não convence o leitor — o argumento precisa de sustentação concreta.",
+    "age_reviewed": true,
+    "hints": [
+      "O problema não é a gramática, é a falta de conteúdo por trás da frase.",
+      "Pergunte-se: 'por quê?' — se a frase não responde, ela é genérica demais."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 2,
+    "prompt": "O que é um 'argumento de autoridade'?",
+    "options": [
+      "Sustentar uma ideia citando uma fonte, especialista ou dado reconhecido",
+      "Repetir a própria opinião em voz mais firme",
+      "Um argumento que só pode ser usado por autores famosos",
+      "Uma regra de pontuação"
+    ],
+    "correct_answer": "Sustentar uma ideia citando uma fonte, especialista ou dado reconhecido",
+    "explanation": "O argumento de autoridade reforça uma tese ao se apoiar em uma fonte confiável (pesquisa, especialista, dado oficial) — não é sobre quem escreve, mas sobre o que se cita.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em citar uma pesquisa, um especialista ou uma estatística.",
+      "Não é sobre repetir a opinião mais alto, é sobre trazer apoio externo."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 2,
+    "prompt": "Qual destes é um exemplo de conectivo que indica OPOSIÇÃO entre duas ideias?",
+    "options": [
+      "Porém",
+      "Além disso",
+      "Portanto",
+      "Ou seja"
+    ],
+    "correct_answer": "Porém",
+    "explanation": "'Porém' introduz uma ideia que contrasta com a anterior. 'Além disso' soma, 'portanto' conclui, e 'ou seja' explica/reformula.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em qual dessas palavras você usaria para dizer 'só que...'.",
+      "As outras três somam, concluem ou explicam — só uma contrasta."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 2,
+    "prompt": "Por que repetir a mesma palavra várias vezes seguidas costuma ser um problema de estilo?",
+    "options": [
+      "Porque deixa o texto cansativo e sugere vocabulário limitado — melhor variar com sinônimos ou pronomes",
+      "Porque é sempre um erro gramatical grave",
+      "Porque toda repetição é proibida em qualquer idioma",
+      "Porque muda o sentido da frase"
+    ],
+    "correct_answer": "Porque deixa o texto cansativo e sugere vocabulário limitado — melhor variar com sinônimos ou pronomes",
+    "explanation": "Repetição excessiva não é necessariamente 'errada' gramaticalmente, mas prejudica a fluidez e a impressão de domínio de vocabulário — sinônimos e pronomes ajudam a variar.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é um erro de gramática, é uma questão de estilo e fluidez.",
+      "Pense em como sinônimos e pronomes evitam repetição sem mudar o sentido."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 3,
+    "prompt": "Ao apresentar um contra-argumento (ideia contrária à tese) num texto dissertativo, qual é a técnica mais eficaz?",
+    "options": [
+      "Reconhecer o contra-argumento e depois refutá-lo com um raciocínio próprio",
+      "Ignorar completamente qualquer ideia contrária à tese",
+      "Copiar o contra-argumento sem comentário nenhum",
+      "Substituir a tese pelo contra-argumento no meio do texto"
+    ],
+    "correct_answer": "Reconhecer o contra-argumento e depois refutá-lo com um raciocínio próprio",
+    "explanation": "Reconhecer uma objeção e refutá-la mostra domínio do tema e fortalece a tese — ignorá-la deixa o texto mais frágil diante de quem já pensa diferente.",
+    "age_reviewed": true,
+    "hints": [
+      "A técnica envolve DUAS etapas: mencionar e depois rebater.",
+      "Ignorar a objeção não faz ela desaparecer para quem está lendo com espírito crítico."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 3,
+    "prompt": "O que é 'raciocínio circular' (um tipo de falha lógica) num argumento?",
+    "options": [
+      "Quando a conclusão apenas repete a premissa, sem provar nada de fato novo",
+      "Quando o texto usa muitos exemplos diferentes",
+      "Quando o parágrafo tem formato circular na página",
+      "Quando o autor muda de assunto no meio do texto"
+    ],
+    "correct_answer": "Quando a conclusão apenas repete a premissa, sem provar nada de fato novo",
+    "explanation": "Raciocínio circular ocorre quando o argumento 'prova' algo usando a própria afirmação como prova (ex.: 'isso é verdade porque é verdade') — não avança o raciocínio.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em um argumento que dá voltas e volta pro mesmo ponto de partida sem provar nada.",
+      "Não tem relação com o formato visual do texto — é sobre lógica."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 3,
+    "prompt": "Por que usar gírias e linguagem muito informal costuma prejudicar um texto dissertativo formal?",
+    "options": [
+      "Porque o registro formal é esperado nesse tipo de texto, e a informalidade pode soar inadequada ao contexto",
+      "Porque gírias sempre mudam completamente o sentido da frase",
+      "Porque é ilegal usar gírias em qualquer texto escrito",
+      "Porque textos formais não podem ter nenhuma palavra do dia a dia"
+    ],
+    "correct_answer": "Porque o registro formal é esperado nesse tipo de texto, e a informalidade pode soar inadequada ao contexto",
+    "explanation": "Adequação de registro (formal x informal) é uma questão de contexto: um texto dissertativo/argumentativo tradicionalmente pede linguagem formal, e fugir disso pode comprometer a credibilidade do texto.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é sobre 'certo ou errado' absoluto, é sobre adequação ao contexto de escrita.",
+      "Pense em como você falaria numa entrevista de emprego formal versus com amigos."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 3,
+    "prompt": "Numa proposta de intervenção (comum em redações estilo ENEM), qual elemento é essencial além de indicar UMA solução?",
+    "options": [
+      "Detalhar quem vai executar a ação e como ela funcionaria na prática",
+      "Repetir a tese com outras palavras",
+      "Citar o máximo de problemas possíveis, sem propor nenhuma solução",
+      "Terminar sempre com uma pergunta ao leitor"
+    ],
+    "correct_answer": "Detalhar quem vai executar a ação e como ela funcionaria na prática",
+    "explanation": "Uma boa proposta de intervenção detalha agente, ação, modo/meio e, idealmente, efeito esperado — só dizer 'o governo deveria agir' sem detalhamento é considerado uma proposta vaga.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em 'quem faz o quê, e como' — não basta dizer que algo 'deveria' acontecer.",
+      "Uma proposta vaga (ex.: só 'o governo deveria agir') é considerada incompleta."
+    ]
+  },
+  {
+    "territory_id": "redacao",
+    "difficulty_level": 3,
+    "prompt": "O que caracteriza uma 'falácia do espantalho' (straw man) num debate por escrito?",
+    "options": [
+      "Distorcer ou simplificar demais o argumento do outro lado para depois refutar essa versão distorcida",
+      "Usar muitos exemplos concretos para sustentar a própria tese",
+      "Citar uma fonte oficial para embasar um dado",
+      "Reconhecer honestamente os pontos fortes do contra-argumento"
+    ],
+    "correct_answer": "Distorcer ou simplificar demais o argumento do outro lado para depois refutar essa versão distorcida",
+    "explanation": "A falácia do espantalho ataca uma versão enfraquecida/distorcida do argumento alheio, não o argumento real — isso parece refutar o outro lado, mas na verdade não enfrenta o argumento de verdade.",
+    "age_reviewed": true,
+    "hints": [
+      "O nome vem da ideia de 'lutar contra um boneco de palha' em vez do adversário real.",
+      "É sobre representar mal a posição do outro pra ser mais fácil de derrubar."
+    ]
+  }
+]
