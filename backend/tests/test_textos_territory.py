@@ -38,7 +38,7 @@ def test_textos_free_sample_then_lock(client, monkeypatch):
         assert "correct_answer" not in challenge
         client.post(
             f"/challenges/{challenge['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer coisa"},
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": "qualquer coisa"},
             headers=headers,
         )
 
@@ -60,7 +60,7 @@ def test_textos_full_answer_and_hint_flow(client):
     assert len(challenge["prompt"]) > 150
 
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"])
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
 
     hint_resp = client.post(
         f"/challenges/{challenge['challenge_id']}/hint",

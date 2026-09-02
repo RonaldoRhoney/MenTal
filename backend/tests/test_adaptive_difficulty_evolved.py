@@ -17,7 +17,7 @@ def _answer(client, headers, territory_id, use_hints=0):
     from app.seed import CHALLENGES
 
     challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
     for _ in range(use_hints):
         client.post(f"/challenges/{challenge['challenge_id']}/hint", json={"attempt_id": attempt_id}, headers=headers)
     correct = next(
@@ -106,7 +106,7 @@ def test_incorrect_answers_still_lower_difficulty_regardless_of_hints(client):
         challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
         client.post(
             f"/challenges/{challenge['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "resposta-errada-de-propósito"},
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": "resposta-errada-de-propósito"},
             headers=headers,
         )
 

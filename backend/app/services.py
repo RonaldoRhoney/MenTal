@@ -933,6 +933,7 @@ def create_battle(
         return None
     challenger_challenge, opponent_challenge = pair
 
+    challenger_attempt_id = models.new_uuid()
     battle = models.Battle(
         challenger_user_id=challenger_user_id,
         opponent_user_id=opponent_user_id,
@@ -940,9 +941,13 @@ def create_battle(
         difficulty_level=difficulty_level,
         challenger_challenge_id=challenger_challenge.id,
         opponent_challenge_id=opponent_challenge.id,
+        challenger_attempt_id=challenger_attempt_id,
         challenger_served_at=utcnow(),
     )
     db.add(battle)
+    # attempt_id gerado pelo SERVIDOR (achado de auditoria CRÍTICO,
+    # 01/09/2026, migration 047) — nunca mais inventado pelo client.
+    create_served_attempt(db, challenger_attempt_id, challenger_user_id, challenger_challenge.id)
     db.commit()
     db.refresh(battle)
 
@@ -961,9 +966,14 @@ def create_battle(
 
 
 def get_or_serve_opponent_challenge(db: Session, battle: "models.Battle") -> None:
-    """Marca opponent_served_at na PRIMEIRA vez que o desafiado abre o próprio desafio (nunca reescreve depois)."""
+    """Marca opponent_served_at e cria o attempt_id do desafiado (achado
+    de auditoria CRÍTICO, 01/09/2026, migration 047 — gerado pelo
+    SERVIDOR, nunca mais inventado pelo client) na PRIMEIRA vez que ele
+    abre o próprio desafio (nunca reescreve depois)."""
     if battle.opponent_served_at is None:
         battle.opponent_served_at = utcnow()
+        battle.opponent_attempt_id = models.new_uuid()
+        create_served_attempt(db, battle.opponent_attempt_id, battle.opponent_user_id, battle.opponent_challenge_id)
         db.commit()
 
 

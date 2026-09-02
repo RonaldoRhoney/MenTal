@@ -38,7 +38,7 @@ def test_all_territories_unlocked_when_monetization_disabled(client, monkeypatch
             challenge = resp.json()
             client.post(
                 f"/challenges/{challenge['challenge_id']}/answer",
-                json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
+                json={"attempt_id": challenge["attempt_id"], "submitted_answer": "qualquer"},
                 headers=headers,
             )
 

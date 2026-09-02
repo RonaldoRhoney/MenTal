@@ -34,7 +34,7 @@ def test_next_challenge_never_immediately_repeats_when_alternative_exists(client
 
         client.post(
             f"/challenges/{current_id}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": "qualquer"},
             headers=headers,
         )
         previous_id = current_id
@@ -55,6 +55,6 @@ def test_next_challenge_still_works_with_single_candidate(client):
         challenge = resp.json()
         client.post(
             f"/challenges/{challenge['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": "qualquer"},
             headers=headers,
         )

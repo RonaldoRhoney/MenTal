@@ -43,7 +43,7 @@ def test_correct_answer_recognized_on_first_attempt_without_any_hint(client, ter
 
     result = client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct},
+        json={"attempt_id": challenge["attempt_id"], "submitted_answer": correct},
         headers=headers,
     ).json()
 
@@ -62,7 +62,7 @@ def test_answer_comparison_is_case_insensitive(client, territory_id):
 
     result = client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct.lower()},
+        json={"attempt_id": challenge["attempt_id"], "submitted_answer": correct.lower()},
         headers=headers,
     ).json()
     assert result["is_correct"] is True, f"minúsculo não reconhecido em {territory_id}"
@@ -70,7 +70,7 @@ def test_answer_comparison_is_case_insensitive(client, territory_id):
     challenge2, correct2 = _get_challenge_and_answer(client, headers, territory_id)
     result2 = client.post(
         f"/challenges/{challenge2['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct2.upper()},
+        json={"attempt_id": challenge2["attempt_id"], "submitted_answer": correct2.upper()},
         headers=headers,
     ).json()
     assert result2["is_correct"] is True, f"maiúsculo não reconhecido em {territory_id}"
@@ -86,7 +86,7 @@ def test_answer_comparison_trims_whitespace(client, territory_id):
 
     result = client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": f"  {correct}  "},
+        json={"attempt_id": challenge["attempt_id"], "submitted_answer": f"  {correct}  "},
         headers=headers,
     ).json()
     assert result["is_correct"] is True, f"espaço nas pontas não tolerado em {territory_id}"

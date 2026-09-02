@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
-from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from .. import config, models, schemas, scoring, services
@@ -161,24 +160,19 @@ def _get_or_create_pending_attempt(db: Session, attempt_id: str, user_id: str, c
         if attempt.user_id != user_id or attempt.challenge_id != challenge_id:
             raise HTTPException(status_code=404, detail={"error": {"code": "ATTEMPT_NOT_FOUND", "message": attempt_id}})
         return attempt
-    try:
-        # Fallback só usado pelo fluxo de Batalha (o attempt_id nasce no
-        # client via GET /battles/{id}/my-challenge, que não passa por
-        # /challenges/next). served_at cai no default (agora), o que
-        # ainda deixa o bônus de velocidade de batalhas vulnerável ao
-        # mesmo problema que este commit corrigiu pro fluxo normal —
-        # servir corretamente exigiria gravar o served_at real de
-        # get_or_serve_opponent_challenge (services.py), fora do escopo
-        # deste fix. Registrado como pendência de segurança conhecida.
-        attempt = models.Attempt(attempt_id=attempt_id, user_id=user_id, challenge_id=challenge_id, hints_used=0)
-        db.add(attempt)
-        db.commit()
-        db.refresh(attempt)
-        return attempt
-    except IntegrityError:
-        # Corrida: outra requisição concorrente já criou a mesma attempt_id.
-        db.rollback()
-        return db.get(models.Attempt, attempt_id)
+    # Achado de auditoria de segurança CRÍTICO (01/09/2026): esta função
+    # tinha um fallback que criava uma tentativa nova pra QUALQUER
+    # attempt_id desconhecido (originalmente pensado só pro fluxo de
+    # Batalha, onde o client inventava o id). Na prática isso aceitava
+    # qualquer attempt_id novo pra qualquer challenge_id, permitindo
+    # responder o MESMO desafio repetidamente (attempt_id novo a cada
+    # chamada) sem nunca passar por GET /challenges/next, rendendo XP
+    # ilimitado. Corrigido na origem: Batalha agora gera o attempt_id no
+    # SERVIDOR (migration 047, services.create_battle/
+    # get_or_serve_opponent_challenge) — todo attempt_id que chega aqui
+    # tem que ter sido criado por um "serve" real do servidor
+    # (/challenges/next ou Batalha), nunca inventado pelo client.
+    raise HTTPException(status_code=404, detail={"error": {"code": "ATTEMPT_NOT_FOUND", "message": attempt_id}})
 
 
 @router.post("/challenges/{challenge_id}/hint", response_model=schemas.HintResponse)

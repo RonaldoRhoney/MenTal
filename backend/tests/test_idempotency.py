@@ -14,7 +14,7 @@ def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
 
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"])
 
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
     payload = {"attempt_id": attempt_id, "submitted_answer": correct}
 
     first = client.post(f"/challenges/{challenge['challenge_id']}/answer", json=payload, headers=headers).json()
@@ -70,7 +70,7 @@ def test_hint_penalty_applied_and_persisted_via_attempt_id(client):
 
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"])
 
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
 
     hint_resp = client.post(
         f"/challenges/{challenge['challenge_id']}/hint",
@@ -96,7 +96,7 @@ def test_cannot_request_hint_after_answering(client):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
 
     client.post(
         f"/challenges/{challenge['challenge_id']}/answer",

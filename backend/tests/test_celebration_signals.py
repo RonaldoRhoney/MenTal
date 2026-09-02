@@ -17,7 +17,7 @@ def _answer_correctly(client, headers, territory_id):
 
     challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and (challenge["options"] is None or sorted(c["options"] or []) == sorted(challenge["options"])))
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
     return client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
         json={"attempt_id": attempt_id, "submitted_answer": correct},
@@ -62,7 +62,7 @@ def test_territory_just_conquered_fires_once_at_the_exact_threshold(client):
 
 def _answer_wrong(client, headers, territory_id):
     challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
     return client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
         json={"attempt_id": attempt_id, "submitted_answer": "resposta errada de propósito"},

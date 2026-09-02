@@ -20,7 +20,7 @@ def _answer_correctly(client, headers, territory_id):
     correct = next(
         c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and (challenge["options"] is None or sorted(c["options"] or []) == sorted(challenge["options"]))
     )
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
     return client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
         json={"attempt_id": attempt_id, "submitted_answer": correct},

@@ -15,7 +15,7 @@ def test_full_core_loop_correct_answer(client):
     assert challenge["territory_id"] == "numeros"
     assert "prompt" in challenge
 
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
 
     # Backend nunca envia a resposta correta antes da confirmação.
     assert "correct_answer" not in challenge
@@ -49,7 +49,7 @@ def test_correct_answer_awards_xp_and_updates_territory_progress(client):
     prompt = challenge["prompt"]
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == prompt)
 
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
     result = client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
         json={"attempt_id": attempt_id, "submitted_answer": correct},
@@ -86,7 +86,7 @@ def test_paid_territory_allows_free_sample_then_locks(client, monkeypatch):
         challenge = resp.json()
         client.post(
             f"/challenges/{challenge['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer coisa"},
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": "qualquer coisa"},
             headers=headers,
         )
 

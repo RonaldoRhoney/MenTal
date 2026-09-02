@@ -36,7 +36,7 @@ def _answer_until_correct(client, headers, territory_id="palavras", tries=30):
         )
         result = client.post(
             f"/challenges/{ch['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct},
+            json={"attempt_id": ch["attempt_id"], "submitted_answer": correct},
             headers=headers,
         ).json()
         if result["is_correct"]:

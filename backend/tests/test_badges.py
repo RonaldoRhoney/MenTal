@@ -15,7 +15,7 @@ def _answer_correctly(client, headers, territory_id, use_hint=False):
 
     challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"])
-    attempt_id = str(uuid.uuid4())
+    attempt_id = challenge["attempt_id"]
     if use_hint:
         client.post(f"/challenges/{challenge['challenge_id']}/hint", json={"attempt_id": attempt_id}, headers=headers)
     return client.post(

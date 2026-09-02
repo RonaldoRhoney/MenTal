@@ -18,7 +18,7 @@ def test_daily_free_limit_blocks_after_limit(client):
         challenge = resp.json()
         client.post(
             f"/challenges/{challenge['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": "qualquer"},
             headers=headers,
         )
 
@@ -27,37 +27,43 @@ def test_daily_free_limit_blocks_after_limit(client):
     assert over_limit.json()["error"]["code"] == "DAILY_LIMIT_REACHED"
 
 
-def test_answer_endpoint_enforces_daily_limit_even_skipping_next(client):
+def test_answer_endpoint_rejects_invented_attempt_id_for_already_served_challenge(client):
     """
-    Achado de auditoria de segurança (28/08/2026): POST /answer não
-    checava limite diário nenhum (só GET /next checava) — dava pra
-    ignorar /next completamente e mandar POST /answer em loop, com um
-    attempt_id novo a cada vez, pro MESMO challenge_id, gerando XP sem
-    limite. Prova que agora /answer sozinho respeita o teto diário.
+    Achado de auditoria de segurança CRÍTICO (01/09/2026): antes, POST
+    /answer aceitava QUALQUER attempt_id novo (inventado pelo client) e
+    criava uma tentativa nova pra ele — dava pra ignorar /next
+    completamente e mandar POST /answer em loop, com um attempt_id novo
+    a cada vez, pro MESMO challenge_id, gerando XP sem limite algum
+    (nem o limite diário barrava, já que cada chamada é uma "tentativa
+    nova"). Agora um attempt_id só é válido se tiver sido de fato
+    servido pelo servidor (GET /challenges/next ou fluxo de Batalha) —
+    qualquer id inventado pra um challenge_id já servido é 404, mesmo
+    dentro do limite diário.
     """
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    # Um único GET /next só pra obter um challenge_id válido — todo o
-    # resto do "farm" nunca mais passa por /next.
-    challenge_id = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()["challenge_id"]
+    challenge = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
 
-    for _ in range(DAILY_FREE_CHALLENGE_LIMIT):
-        resp = client.post(
-            f"/challenges/{challenge_id}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
-            headers=headers,
-        )
-        assert resp.status_code == 200
+    # A primeira resposta, com o attempt_id REAL servido, funciona.
+    first = client.post(
+        f"/challenges/{challenge['challenge_id']}/answer",
+        json={"attempt_id": challenge["attempt_id"], "submitted_answer": "qualquer"},
+        headers=headers,
+    )
+    assert first.status_code == 200
 
-    over_limit = client.post(
-        f"/challenges/{challenge_id}/answer",
+    # Qualquer tentativa de "responder de novo" o MESMO desafio com um
+    # attempt_id inventado (nunca servido pelo servidor) é rejeitada —
+    # o farm de XP não pode mais nascer de dentro de /answer sozinho.
+    farm_attempt = client.post(
+        f"/challenges/{challenge['challenge_id']}/answer",
         json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
         headers=headers,
     )
-    assert over_limit.status_code == 429
-    assert over_limit.json()["error"]["code"] == "DAILY_LIMIT_REACHED"
+    assert farm_attempt.status_code == 404
+    assert farm_attempt.json()["error"]["code"] == "ATTEMPT_NOT_FOUND"
 
 
 def test_attempt_id_from_another_user_is_rejected(client):
@@ -142,7 +148,7 @@ def test_active_subscription_bypasses_daily_limit(client):
         challenge = resp.json()
         client.post(
             f"/challenges/{challenge['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": "qualquer"},
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": "qualquer"},
             headers=headers,
         )
 
@@ -203,7 +209,7 @@ def test_ranking_never_exposes_user_id_or_email(client):
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"])
     client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct},
+        json={"attempt_id": challenge["attempt_id"], "submitted_answer": correct},
         headers=headers,
     )
 

@@ -58,6 +58,7 @@ def create_battle(
         battle_id=battle.id,
         challenge=schemas.ChallengeOut(
             challenge_id=challenger_challenge.id,
+            attempt_id=battle.challenger_attempt_id,
             territory_id=challenger_challenge.territory_id,
             difficulty_level=challenger_challenge.difficulty_level,
             prompt=challenger_challenge.prompt,
@@ -81,9 +82,11 @@ def get_my_battle_challenge(
 
     if user_id == battle.challenger_user_id:
         challenge_id = battle.challenger_challenge_id
+        attempt_id = battle.challenger_attempt_id
     elif user_id == battle.opponent_user_id:
         challenge_id = battle.opponent_challenge_id
         services.get_or_serve_opponent_challenge(db, battle)
+        attempt_id = battle.opponent_attempt_id
     else:
         raise HTTPException(status_code=403, detail={"error": {"code": "NOT_A_PARTICIPANT", "message": "Você não faz parte desta batalha."}})
 
@@ -93,6 +96,7 @@ def get_my_battle_challenge(
     )
     return schemas.ChallengeOut(
         challenge_id=challenge.id,
+        attempt_id=attempt_id,
         territory_id=challenge.territory_id,
         difficulty_level=challenge.difficulty_level,
         prompt=challenge.prompt,

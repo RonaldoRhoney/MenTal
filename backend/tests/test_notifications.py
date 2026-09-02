@@ -149,7 +149,7 @@ def test_social_overtake_fires_with_nickname_for_adult(client, monkeypatch):
         correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == ch["prompt"] and sorted(c["options"]) == sorted(ch["options"]))
         client.post(
             f"/challenges/{ch['challenge_id']}/answer",
-            json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct},
+            json={"attempt_id": ch["attempt_id"], "submitted_answer": correct},
             headers=headers,
         )
 

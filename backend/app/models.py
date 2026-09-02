@@ -688,6 +688,18 @@ class Battle(Base):
     difficulty_level: Mapped[int] = mapped_column(Integer)
     challenger_challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
     opponent_challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
+    # Achado de auditoria de segurança CRÍTICO (01/09/2026, migration
+    # 047): antes, o CLIENT inventava um attempt_id novo (uuid v4) pra
+    # responder o desafio de batalha, porque GET /battles/{id}/
+    # my-challenge não devolvia nenhum — e POST /challenges/{id}/answer
+    # aceitava qualquer attempt_id novo, criando uma tentativa (e XP)
+    # nova pra ele sem limite algum, permitindo responder o MESMO
+    # desafio repetidas vezes. Agora o SERVIDOR gera e grava aqui o
+    # attempt_id de cada lado no momento em que o desafio é de fato
+    # servido (challenger: na criação da batalha; opponent: na primeira
+    # abertura) — mesmo padrão de GET /challenges/next.
+    challenger_attempt_id: Mapped[str | None] = mapped_column(UUIDType, nullable=True)
+    opponent_attempt_id: Mapped[str | None] = mapped_column(UUIDType, nullable=True)
     status: Mapped[str] = mapped_column(String, default="pending")  # pending|resolved
     challenger_served_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     opponent_served_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)

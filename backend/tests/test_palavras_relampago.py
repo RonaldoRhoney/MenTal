@@ -164,7 +164,7 @@ def test_timed_out_never_counts_as_correct_even_if_submitted_answer_matches(clie
 
     result = client.post(
         f"/challenges/{ch['challenge_id']}/answer",
-        json={"attempt_id": str(uuid.uuid4()), "submitted_answer": correct, "timed_out": True},
+        json={"attempt_id": ch["attempt_id"], "submitted_answer": correct, "timed_out": True},
         headers=headers,
     ).json()
 
@@ -246,7 +246,7 @@ def test_idempotent_replay_returns_same_timed_out_and_speed_bonus(client):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     ch, correct = _get_relampago_challenge_and_answer(client, headers)
 
-    attempt_id = str(uuid.uuid4())
+    attempt_id = ch["attempt_id"]
     time_limit_ms = ch["time_limit_seconds"] * 1000
     body = {"attempt_id": attempt_id, "submitted_answer": correct, "response_time_ms": int(time_limit_ms * 0.1)}
 
