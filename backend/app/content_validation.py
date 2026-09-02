@@ -69,6 +69,24 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
             if not isinstance(clues, list) or not (2 <= len(clues) <= 3) or not all(isinstance(c, str) and c.strip() for c in clues):
                 errors.append(f"{prefix}: clues, quando presente, precisa ser uma lista de 2 a 3 strings não vazias")
 
+        # V4 — Ouvido Afiado (V4/V4_NOVOS_TERRITORIOS.md §3). Tudo-ou-
+        # nada: audio_url OBRIGATÓRIO em ouvido_afiado (sem áudio não há
+        # desafio), e audio_source_name/audio_source_url OBRIGATÓRIOS
+        # junto — mesma disciplina de atribuição de fonte já usada em
+        # video_url/source_name/source_url na Pausa para Aprender de
+        # Libras, aqui tratada como piso mínimo de compliance de
+        # licenciamento (nunca embutir áudio sem crédito rastreável).
+        audio_url = item.get("audio_url")
+        audio_source_name = item.get("audio_source_name")
+        audio_source_url = item.get("audio_source_url")
+        if territory_id == "ouvido_afiado":
+            if not audio_url:
+                errors.append(f"{prefix}: território 'ouvido_afiado' precisa do campo 'audio_url'")
+            if not audio_source_name or not audio_source_url:
+                errors.append(f"{prefix}: território 'ouvido_afiado' precisa de 'audio_source_name' e 'audio_source_url' (atribuição de licença)")
+        if audio_url is not None and not (isinstance(audio_url, str) and audio_url.startswith("https://")):
+            errors.append(f"{prefix}: audio_url, quando presente, precisa ser uma URL https válida")
+
         key = (territory_id, item["prompt"])
         if key in existing_prompts:
             errors.append(f"{prefix}: já existe um desafio com esse prompt nesse território (em app/seed.py ou já carregado no banco)")
@@ -213,4 +231,3 @@ def validate_word_puzzles(items: list[dict], known_territory_ids: set[str], exis
         seen_in_file.add(key)
 
     return errors
-

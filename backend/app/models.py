@@ -306,6 +306,15 @@ class Challenge(Base):
     # "veredito" da dedução). None em todo o resto do app — mesmo padrão
     # opcional-nunca-obrigatório já usado em prompt_image.
     clues: Mapped[list | None] = mapped_column(JSON, nullable=True)
+    # V4 — Ouvido Afiado (V4/V4_NOVOS_TERRITORIOS.md §3): primeiro bloco
+    # a usar áudio como o próprio enunciado do desafio (não confundir com
+    # o futuro Sound AI, que é trilha sonora ambiente — MENTAL_V3_SOUND_
+    # AI_PRD, produto diferente). Tudo-ou-nada, mesmo padrão de
+    # video_url/source_name/source_url já usado na Pausa para Aprender
+    # de Libras (V3.4_LIBRAS.md §3.2). None em todo o resto do app.
+    audio_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    audio_source_name: Mapped[str | None] = mapped_column(String, nullable=True)
+    audio_source_url: Mapped[str | None] = mapped_column(String, nullable=True)
 
 
 class ChallengeHint(Base):

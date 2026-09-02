@@ -394,6 +394,36 @@ abstract class AppLocalizations {
   /// **'Pista {number}'**
   String detectiveClueLabel(int number);
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Ouvido Afiado'**
+  String get territoryOuvidoAfiado;
+
+  /// Button that plays the challenge audio clip in Ouvido Afiado
+  ///
+  /// In pt, this message translates to:
+  /// **'Tocar som'**
+  String get audioPlayButton;
+
+  /// Button that replays the challenge audio clip after it already finished once
+  ///
+  /// In pt, this message translates to:
+  /// **'Ouvir de novo'**
+  String get audioReplayButton;
+
+  /// Shown when the challenge audio clip fails to load or play
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar o áudio. Tente de novo.'**
+  String get audioLoadErrorMessage;
+
+  /// Attribution caption shown under the audio player, e.g. 'Fonte: Author — CC BY 4.0 — Wikimedia Commons'
+  ///
+  /// In pt, this message translates to:
+  /// **'Fonte: {source}'**
+  String audioSourceCreditLabel(String source);
+
   /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
   ///
   /// In pt, this message translates to:

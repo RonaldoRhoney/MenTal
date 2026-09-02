@@ -168,6 +168,24 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get territoryOuvidoAfiado => 'Ouvido Afiado';
+
+  @override
+  String get audioPlayButton => 'Tocar som';
+
+  @override
+  String get audioReplayButton => 'Ouvir de novo';
+
+  @override
+  String get audioLoadErrorMessage =>
+      'Não foi possível carregar o áudio. Tente de novo.';
+
+  @override
+  String audioSourceCreditLabel(String source) {
+    return 'Fonte: $source';
+  }
+
+  @override
   String get learningPauseButtonTooltip => 'Pausa para Aprender';
 
   @override

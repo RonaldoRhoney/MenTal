@@ -67,6 +67,9 @@ def create_battle(
             time_limit_seconds=None,
             prompt_image=challenger_challenge.prompt_image,
             clues=challenger_challenge.clues,
+            audio_url=challenger_challenge.audio_url,
+            audio_source_name=challenger_challenge.audio_source_name,
+            audio_source_url=challenger_challenge.audio_source_url,
         ),
     )
 
@@ -106,6 +109,9 @@ def get_my_battle_challenge(
         time_limit_seconds=None,
         prompt_image=challenge.prompt_image,
         clues=challenge.clues,
+        audio_url=challenge.audio_url,
+        audio_source_name=challenge.audio_source_name,
+        audio_source_url=challenge.audio_source_url,
     )
 
 

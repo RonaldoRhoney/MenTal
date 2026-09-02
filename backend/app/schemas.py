@@ -124,6 +124,12 @@ class ChallengeOut(BaseModel):
     # em ordem de revelação — o client mostra uma de cada vez antes da
     # pergunta final (`prompt`). None em todo o resto do app.
     clues: list[str] | None = None
+    # V4 — Ouvido Afiado (V4/V4_NOVOS_TERRITORIOS.md §3). Tudo-ou-nada,
+    # mesmo padrão de video_url/source_name/source_url da Pausa para
+    # Aprender de Libras. None em todo o resto do app.
+    audio_url: str | None = None
+    audio_source_name: str | None = None
+    audio_source_url: str | None = None
 
 
 class LearningPauseOut(BaseModel):

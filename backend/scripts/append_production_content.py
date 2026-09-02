@@ -71,6 +71,9 @@ def main() -> None:
                 age_reviewed=item["age_reviewed"],
                 prompt_image=item.get("prompt_image"),
                 clues=item.get("clues"),
+                audio_url=item.get("audio_url"),
+                audio_source_name=item.get("audio_source_name"),
+                audio_source_url=item.get("audio_source_url"),
             )
             db.add(challenge)
             db.commit()

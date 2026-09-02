@@ -142,6 +142,9 @@ def next_challenge(
         time_limit_seconds=time_limit_seconds,
         prompt_image=challenge.prompt_image,
         clues=challenge.clues,
+        audio_url=challenge.audio_url,
+        audio_source_name=challenge.audio_source_name,
+        audio_source_url=challenge.audio_source_url,
     )
 
 

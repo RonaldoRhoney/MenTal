@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
@@ -91,6 +92,16 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   int _cluesRevealedCount = 0;
   bool _showingQuestion = false;
 
+  // V4 — Ouvido Afiado (V4/V4_NOVOS_TERRITORIOS.md §3). Um único
+  // AudioPlayer reaproveitado durante a vida da tela (mesmo padrão de
+  // instância única já usado em FeedbackService) — reprodução via URL
+  // (UrlSource), nunca asset embutido no app (o conteúdo curado vem do
+  // backend, mesma autoridade de servidor de todo o resto do app).
+  late final AudioPlayer _audioPlayer;
+  bool _audioPlaying = false;
+  bool _audioLoadFailed = false;
+  bool _audioHasPlayedOnce = false;
+
   // MICROINTERACTIONS.md §3 — celebração forte (território/badge/level
   // up) usa confete + fogos + balões (pedido explícito: algo que remeta a
   // comemoração de verdade, não só confete); sons e o pulso sutil/
@@ -101,6 +112,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   void initState() {
     super.initState();
     _celebration = CelebrationController();
+    _audioPlayer = AudioPlayer();
     _loadNextChallenge();
   }
 
@@ -109,6 +121,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     _countdownTimer?.cancel();
     _celebration.dispose();
     _feedbackCommentController.dispose();
+    _audioPlayer.dispose();
     super.dispose();
   }
 
@@ -169,7 +182,11 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _feedbackCommentController.clear();
       _cluesRevealedCount = 0;
       _showingQuestion = false;
+      _audioPlaying = false;
+      _audioLoadFailed = false;
+      _audioHasPlayedOnce = false;
     });
+    unawaited(_audioPlayer.stop());
     try {
       final challenge = widget.battleId != null
           ? (widget.prefetchedChallenge ?? await widget.client.getMyBattleChallenge(widget.battleId!))
@@ -356,6 +373,27 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     }
   }
 
+  /// V4 — Ouvido Afiado (V4/V4_NOVOS_TERRITORIOS.md §3). Reprodução via
+  /// URL nunca é requisito garantido (rede instável, formato não
+  /// suportado no aparelho) — uma falha aqui mostra erro + permite
+  /// tentar de novo, mas nunca trava o resto da tela (mesmo princípio de
+  /// "som é reforço, nunca bloqueio" já usado em FeedbackService).
+  Future<void> _playChallengeAudio(String url) async {
+    setState(() {
+      _audioPlaying = true;
+      _audioLoadFailed = false;
+    });
+    try {
+      await _audioPlayer.stop();
+      await _audioPlayer.play(UrlSource(url));
+      if (mounted) setState(() => _audioHasPlayedOnce = true);
+    } catch (_) {
+      if (mounted) setState(() => _audioLoadFailed = true);
+    } finally {
+      if (mounted) setState(() => _audioPlaying = false);
+    }
+  }
+
   Future<void> _submitAnswer() async {
     final challenge = _challenge;
     final attemptId = _attemptId;
@@ -397,7 +435,11 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _feedbackCommentController.clear();
       _cluesRevealedCount = (clues != null && clues.isNotEmpty) ? 1 : 0;
       _showingQuestion = false;
+      _audioPlaying = false;
+      _audioLoadFailed = false;
+      _audioHasPlayedOnce = false;
     });
+    unawaited(_audioPlayer.stop());
     final timeLimitSeconds = _challenge?['time_limit_seconds'] as int?;
     if (timeLimitSeconds != null && (clues == null || clues.isEmpty)) {
       _startCountdown(timeLimitSeconds);
@@ -613,6 +655,36 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     );
   }
 
+  /// V4 — Ouvido Afiado (V4/V4_NOVOS_TERRITORIOS.md §3). Botão único de
+  /// tocar/tocar de novo + crédito de atribuição da fonte (mesma
+  /// disciplina de transparência de origem já usada nos vídeos da Pausa
+  /// para Aprender de Libras, video_url/source_name/source_url).
+  Widget _buildAudioPlayerSection(String audioUrl, String? sourceName) {
+    final l10n = AppLocalizations.of(context)!;
+    return Column(
+      children: [
+        FilledButton.icon(
+          onPressed: _audioPlaying ? null : () => _playChallengeAudio(audioUrl),
+          icon: Icon(_audioHasPlayedOnce ? Icons.replay : Icons.play_arrow),
+          label: Text(_audioHasPlayedOnce ? l10n.audioReplayButton : l10n.audioPlayButton),
+        ),
+        if (_audioLoadFailed) ...[
+          const SizedBox(height: 8),
+          Text(l10n.audioLoadErrorMessage, style: TextStyle(color: AppColors.error)),
+        ],
+        if (sourceName != null) ...[
+          const SizedBox(height: 8),
+          Text(
+            l10n.audioSourceCreditLabel(sourceName),
+            textAlign: TextAlign.center,
+            style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+          ),
+        ],
+        const SizedBox(height: 24),
+      ],
+    );
+  }
+
   Widget _buildChallenge() {
     final l10n = AppLocalizations.of(context)!;
     final challenge = _challenge!;
@@ -653,6 +725,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   Text(challenge['prompt_image'] as String, style: const TextStyle(fontSize: 56)),
                   const SizedBox(height: 12),
                 ],
+                if (challenge['audio_url'] != null)
+                  _buildAudioPlayerSection(challenge['audio_url'] as String, challenge['audio_source_name'] as String?),
                 Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'visual' && options != null)
@@ -759,6 +833,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   Text(challenge['prompt_image'] as String, style: const TextStyle(fontSize: 56)),
                   const SizedBox(height: 12),
                 ],
+                if (challenge['audio_url'] != null)
+                  _buildAudioPlayerSection(challenge['audio_url'] as String, challenge['audio_source_name'] as String?),
                 Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
                 for (final option in options) ...[

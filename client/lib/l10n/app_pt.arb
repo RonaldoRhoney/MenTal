@@ -131,6 +131,18 @@
   "detectiveClueLabel": "Pista {number}",
   "@detectiveClueLabel": {"description": "Label prefix shown before each revealed clue, e.g. 'Pista 1'", "placeholders": {"number": {"type": "int"}}},
 
+  "territoryOuvidoAfiado": "Ouvido Afiado",
+  "@territoryOuvidoAfiado": {"description": "Territory display name"},
+
+  "audioPlayButton": "Tocar som",
+  "@audioPlayButton": {"description": "Button that plays the challenge audio clip in Ouvido Afiado"},
+  "audioReplayButton": "Ouvir de novo",
+  "@audioReplayButton": {"description": "Button that replays the challenge audio clip after it already finished once"},
+  "audioLoadErrorMessage": "Não foi possível carregar o áudio. Tente de novo.",
+  "@audioLoadErrorMessage": {"description": "Shown when the challenge audio clip fails to load or play"},
+  "audioSourceCreditLabel": "Fonte: {source}",
+  "@audioSourceCreditLabel": {"description": "Attribution caption shown under the audio player, e.g. 'Fonte: Author — CC BY 4.0 — Wikimedia Commons'", "placeholders": {"source": {"type": "String"}}},
+
   "learningPauseButtonTooltip": "Pausa para Aprender",
   "@learningPauseButtonTooltip": {"description": "AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory"},
   "learningPauseScreenTitle": "Pausa para Aprender",
