@@ -124,7 +124,12 @@ class _RankingScreenState extends State<RankingScreen> {
             itemCount: entries.length,
             itemBuilder: (context, index) {
               final entry = entries[index];
-              final isMe = me != null && entry['rank'] == me['rank'] && entry['nickname'] == me['nickname'];
+              // V4 item 1: user_id passou a vir na resposta (antes
+              // deliberadamente omitido) — comparação direta por id é
+              // mais robusta que rank+nickname (achado de revisão,
+              // 02/09/2026, embora nickname/rank combinados já não
+              // tivessem colisão real conhecida).
+              final isMe = me != null && entry['user_id'] == me['user_id'];
               // Nome real substitui o apelido gerado pelo sistema
               // ("jogador-xxxx") assim que existir — pedido de Rhoney
               // (29/08/2026): "deixa de ser exibido, ficando apenas no

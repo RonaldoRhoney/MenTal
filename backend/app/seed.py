@@ -5058,7 +5058,7 @@ CHALLENGES = [
         "prompt": "O apelido 'Fusca', usado no Brasil para o Volkswagen Beetle, faz referência a quê?",
         "options": ["À semelhança do formato arredondado do carro com um besouro (inseto)", "Ao nome do engenheiro que o projetou", "A uma marca registrada oficial da fábrica", "Ao som do motor, parecido com um zumbido de inseto"],
         "correct_answer": "À semelhança do formato arredondado do carro com um besouro (inseto)",
-        "explanation": "'Fusca' vem de 'fuscus' (referência a besouro/inseto escuro) — o apelido, como 'Beetle' (besouro, em inglês) em outros países, remete ao formato arredondado do carro, parecido com um inseto.",
+        "explanation": "O apelido brasileiro, assim como 'Beetle' (besouro, em inglês) usado em outros países, remete ao formato arredondado e compacto do carro, que lembra o corpo de um besouro.",
         "age_reviewed": True,
         "hints": ["Pense na FORMA do carro, não no som ou em nomes próprios.", "Em inglês, o mesmo carro é chamado de 'Beetle' — mesmo tipo de bicho."],
     },
