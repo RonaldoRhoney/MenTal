@@ -1,0 +1,317 @@
+[
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 1,
+    "prompt": "Som 1: Que som é este?",
+    "options": [
+      "Latido de cachorro",
+      "Rosnado de lobo",
+      "Grunhido de porco",
+      "Miado de gato"
+    ],
+    "correct_answer": "Latido de cachorro",
+    "explanation": "O latido curto e repetido é característico do cachorro — diferente do rosnado grave e contínuo do lobo ou do grunhido do porco.",
+    "age_reviewed": true,
+    "hints": [
+      "É o som que o melhor amigo do homem faz.",
+      "Não é um rosnado grave — é um latido curto e repetido."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Barking_of_a_dog.ogg",
+    "audio_source_name": "Amada44 — CC BY-SA 3.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Barking_of_a_dog.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 1,
+    "prompt": "Som 2: Que som é este?",
+    "options": [
+      "Miado de gato",
+      "Latido de cachorro",
+      "Grasnado de pato",
+      "Cacarejar de galinha"
+    ],
+    "correct_answer": "Miado de gato",
+    "explanation": "O miado agudo e melódico é típico do gato doméstico — bem diferente do latido, do grasnado ou do cacarejar.",
+    "age_reviewed": true,
+    "hints": [
+      "É o som que um felino doméstico faz pra chamar atenção.",
+      "Não é grave como um latido — é um som mais agudo e curto."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Meow_of_a_Siamese_cat_-_freemaster2.wav",
+    "audio_source_name": "TeleComNasSprVen, via Freesound — CC0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Meow_of_a_Siamese_cat_-_freemaster2.wav"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 1,
+    "prompt": "Som 3: Que som é este?",
+    "options": [
+      "Mugido de vaca",
+      "Relincho de cavalo",
+      "Balido de ovelha",
+      "Grunhido de porco"
+    ],
+    "correct_answer": "Mugido de vaca",
+    "explanation": "O mugido grave e prolongado ('muuu') é característico da vaca — diferente do relincho agudo do cavalo ou do balido da ovelha.",
+    "age_reviewed": true,
+    "hints": [
+      "É um som grave e arrastado, típico de fazenda.",
+      "Não é agudo como um relincho — pense num animal bem maior."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Single_Cow_Moo.ogg",
+    "audio_source_name": "MichaeltheFox8621 — CC BY-SA 4.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Single_Cow_Moo.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 1,
+    "prompt": "Som 4: Que som é este?",
+    "options": [
+      "Aplausos de uma plateia",
+      "Chuva forte batendo no telhado",
+      "Passos correndo",
+      "Fogos de artifício"
+    ],
+    "correct_answer": "Aplausos de uma plateia",
+    "explanation": "O som contínuo de muitas palmas sobrepostas é característico de aplausos — a chuva tem um chiado mais uniforme, e passos/fogos têm ritmo bem diferente.",
+    "age_reviewed": true,
+    "hints": [
+      "É o som que uma plateia faz depois de gostar de algo.",
+      "São muitas 'palmas' batendo ao mesmo tempo, não um som único."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/277021_sandermotions_applause-2.wav",
+    "audio_source_name": "Sandermotions, via Freesound — CC0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:277021_sandermotions_applause-2.wav"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 1,
+    "prompt": "Som 5: Que som é este?",
+    "options": [
+      "Nota de piano",
+      "Nota de violão",
+      "Nota de flauta",
+      "Nota de violino"
+    ],
+    "correct_answer": "Nota de piano",
+    "explanation": "O timbre percussivo (a nota já nasce no volume máximo e só diminui) é característico do piano — instrumentos de corda dedilhada como o violão soam parecido, mas com um ataque mais suave, e o violino/flauta sustentam a nota de forma contínua.",
+    "age_reviewed": true,
+    "hints": [
+      "É um instrumento de teclas.",
+      "A nota começa forte e vai diminuindo, sem ser sustentada como um sopro."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/68448_pinkyfinger_Piano_G.ogg",
+    "audio_source_name": "pinkyfinger, via Freesound — CC BY 2.5 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:68448_pinkyfinger_Piano_G.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 2,
+    "prompt": "Som 6: Que som é este?",
+    "options": [
+      "Canto de galo",
+      "Grasnado de pato",
+      "Pio de coruja",
+      "Grito de pavão"
+    ],
+    "correct_answer": "Canto de galo",
+    "explanation": "O 'cocoricó' é a vocalização inconfundível do galo, usada tradicionalmente pra marcar o amanhecer — bem diferente do grasnado do pato ou do pio da coruja.",
+    "age_reviewed": true,
+    "hints": [
+      "É o som clássico que anuncia o amanhecer numa fazenda.",
+      "Tem um padrão bem marcado: 'có-có-ri-có'."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Rooster_crowing.ogg",
+    "audio_source_name": "Filo gèn' — CC BY-SA 4.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Rooster_crowing.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 2,
+    "prompt": "Som 7: Que som é este?",
+    "options": [
+      "Trovão durante uma tempestade",
+      "Fogos de artifício",
+      "Avalanche de neve",
+      "Motor de avião decolando"
+    ],
+    "correct_answer": "Trovão durante uma tempestade",
+    "explanation": "O estrondo grave, prolongado e que ecoa é característico do trovão — fogos de artifício têm estampidos mais curtos e secos, e avalanche/motor de avião têm uma textura sonora diferente (mais 'rugido' contínuo que estrondo).",
+    "age_reviewed": true,
+    "hints": [
+      "Costuma vir logo depois de um relâmpago.",
+      "É um estrondo grave que ecoa, não um estampido seco e curto."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Thunder.wav",
+    "audio_source_name": "Subhashish Panigrahi — CC BY-SA 4.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Thunder.wav"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 2,
+    "prompt": "Som 8: Que som é este?",
+    "options": [
+      "Acorde de violão",
+      "Acorde de piano",
+      "Riff de guitarra elétrica distorcida",
+      "Dedilhado de harpa"
+    ],
+    "correct_answer": "Acorde de violão",
+    "explanation": "O timbre quente das cordas de náilon/aço tocadas ao mesmo tempo, sem distorção nem sustain eletrônico, é característico do violão acústico — diferente do ataque percussivo do piano ou da distorção da guitarra elétrica.",
+    "age_reviewed": true,
+    "hints": [
+      "É um instrumento de cordas, tocado sem nenhum efeito eletrônico.",
+      "Não tem a distorção 'suja' de uma guitarra elétrica."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Audio_files_of_spanish_guitar_chords_01.wav",
+    "audio_source_name": "Wilfredor — CC0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Audio_files_of_spanish_guitar_chords_01.wav"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 2,
+    "prompt": "Som 9: Que som é este?",
+    "options": [
+      "Sino de igreja tocando",
+      "Despertador tocando",
+      "Campainha de porta",
+      "Sirene de ambulância"
+    ],
+    "correct_answer": "Sino de igreja tocando",
+    "explanation": "O timbre metálico grave, ressonante e com eco longo é característico de um sino de igreja — bem diferente do bipe eletrônico de um despertador ou do toque curto de uma campainha.",
+    "age_reviewed": true,
+    "hints": [
+      "É um som metálico grave, com bastante eco/ressonância.",
+      "Vem de uma torre — não é um aparelho eletrônico pequeno."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Bytom_Assumption_church_bell_ringing_2021.ogg",
+    "audio_source_name": "Adrian Tync (Gower) — CC BY-SA 4.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Bytom_Assumption_church_bell_ringing_2021.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 2,
+    "prompt": "Som 10: Que som é este?",
+    "options": [
+      "Ondas do mar quebrando na praia",
+      "Chuva batendo na janela",
+      "Vento forte soprando",
+      "Água de uma cachoeira"
+    ],
+    "correct_answer": "Ondas do mar quebrando na praia",
+    "explanation": "O som em ondas — sobe, quebra num 'chiado' mais forte e recua — é característico do mar batendo na praia; chuva e cachoeira têm um chiado mais constante, sem esse ritmo de sobe-e-desce.",
+    "age_reviewed": true,
+    "hints": [
+      "Tem um ritmo de sobe e desce, repetido — não é um som constante.",
+      "É o som de estar na praia, não embaixo de chuva."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Oceanwavescrushing.ogg",
+    "audio_source_name": "Luftrum — CC BY 3.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Oceanwavescrushing.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 3,
+    "prompt": "Som 11: Que som é este?",
+    "options": [
+      "Pio de coruja",
+      "Canto de corvo",
+      "Grito de gavião",
+      "Cacarejar de galinha"
+    ],
+    "correct_answer": "Pio de coruja",
+    "explanation": "O pio grave e ressonante ('uu-uu') é característico da coruja — o corvo tem um grasnado mais áspero, o gavião um grito agudo estridente, e a galinha um cacarejar bem diferente de qualquer ave de rapina noturna.",
+    "age_reviewed": true,
+    "hints": [
+      "É uma ave que costuma ser ativa à noite.",
+      "O som é grave e repetitivo, tipo 'uu-uu' — não é um grito agudo."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Maghreb_owl_hooting.wav",
+    "audio_source_name": "عثمان (Osman) — CC BY-SA 4.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Maghreb_owl_hooting.wav"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 3,
+    "prompt": "Som 12: Que som é este?",
+    "options": [
+      "Nota de violino",
+      "Nota de viola",
+      "Nota de violoncelo",
+      "Nota de piano"
+    ],
+    "correct_answer": "Nota de violino",
+    "explanation": "O timbre agudo e brilhante, sustentado pelo arco, é característico do violino — o instrumento mais agudo da família das cordas friccionadas (viola e violoncelo soam mais graves, e o piano tem ataque percussivo, não sustentado).",
+    "age_reviewed": true,
+    "hints": [
+      "É o membro mais AGUDO da família de instrumentos de arco.",
+      "A nota é sustentada de forma contínua — não é um ataque percussivo como o piano."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Violin_fingered.ogg",
+    "audio_source_name": "Clngre — CC BY-SA 3.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Violin_fingered.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 3,
+    "prompt": "Som 13: Que som é este?",
+    "options": [
+      "Trompete (cornetim)",
+      "Trombone",
+      "Tuba",
+      "Saxofone"
+    ],
+    "correct_answer": "Trompete (cornetim)",
+    "explanation": "Esta é uma gravação histórica de 1878 (uma das mais antigas gravações de áudio já feitas) — o timbre agudo e brilhante do metal é característico do trompete/cornetim, distinto do timbre grave da tuba, do deslizante do trombone (com vara) ou da palheta do saxofone.",
+    "age_reviewed": true,
+    "hints": [
+      "É o mais AGUDO dos instrumentos de metal listados aqui.",
+      "Esta é uma gravação muito antiga — repare na qualidade 'de época' do som."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Trumpet_cornet.ogg",
+    "audio_source_name": "Thomas Mason, gravação de 1878 — Domínio público — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:Trumpet_cornet.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 3,
+    "prompt": "Som 14: Que som é este?",
+    "options": [
+      "Apito de locomotiva a vapor",
+      "Buzina de navio",
+      "Sirene de fábrica",
+      "Apito de árbitro"
+    ],
+    "correct_answer": "Apito de locomotiva a vapor",
+    "explanation": "O apito agudo e prolongado, com a textura característica de vapor sob pressão, é o som clássico de uma locomotiva a vapor — a buzina de navio é bem mais grave, e sirene/apito de árbitro têm timbres eletrônicos ou metálicos bem diferentes.",
+    "age_reviewed": true,
+    "hints": [
+      "É o som de um trem antigo, movido a vapor — não um trem moderno.",
+      "Tem uma textura de 'vapor escapando', bem característica."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/WWS_SteamWhistle.ogg",
+    "audio_source_name": "Konrad Gutkowski / Julian Blaschke, Work With Sounds — CC BY 4.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:WWS_SteamWhistle.ogg"
+  },
+  {
+    "territory_id": "ouvido_afiado",
+    "difficulty_level": 3,
+    "prompt": "Som 15: Que som é este?",
+    "options": [
+      "Máquina de escrever batendo as teclas",
+      "Teclado de computador",
+      "Relógio mecânico",
+      "Metrônomo"
+    ],
+    "correct_answer": "Máquina de escrever batendo as teclas",
+    "explanation": "O som mecânico mais forte e variado (teclas + o 'tlim' do sino de fim de linha) é característico de uma máquina de escrever antiga — um teclado de computador é bem mais discreto/uniforme, e relógio/metrônomo têm um tique-taque regular e repetitivo, sem o sino.",
+    "age_reviewed": true,
+    "hints": [
+      "É um aparelho antigo, anterior ao computador, usado pra escrever.",
+      "Preste atenção num 'tlim' que marca o fim de cada linha — isso não existe em teclado de computador."
+    ],
+    "audio_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/WWS_Typewriter.ogg",
+    "audio_source_name": "Konrad Gutkowski, Work With Sounds — CC BY 4.0 — Wikimedia Commons",
+    "audio_source_url": "https://commons.wikimedia.org/wiki/File:WWS_Typewriter.ogg"
+  }
+]
