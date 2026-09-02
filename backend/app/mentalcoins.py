@@ -102,7 +102,12 @@ def run_weekly_apuration(db: Session, cycle_start: date, cycle_end: date) -> dic
     entries_created = 0
 
     # §3.1 — ranking diário de XP, um top-3 por cada um dos 7 dias do ciclo.
-    xp_expr = func.sum(func.coalesce(models.Attempt.xp_awarded, 0) + models.Attempt.speed_bonus_xp)
+    # Achado de auditoria (01/09/2026): attempt.xp_awarded JÁ inclui o
+    # bônus de velocidade (ver challenges.py: xp_final = xp_from_hints +
+    # speed_bonus_xp, salvo em attempt.xp_awarded) — somar speed_bonus_xp
+    # de novo aqui contava esse bônus duas vezes pra qualquer tentativa
+    # cronometrada correta, inflando o Top 3 diário e o Hall da Fama.
+    xp_expr = func.sum(func.coalesce(models.Attempt.xp_awarded, 0))
     day = cycle_start
     while day <= cycle_end:
         next_day = day + timedelta(days=1)

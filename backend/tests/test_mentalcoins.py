@@ -10,6 +10,8 @@ aceitáveis aqui (só o valor numérico agregado importa pra este teste).
 import uuid
 from datetime import date, datetime, timedelta
 
+from sqlalchemy import select
+
 from app import config, mentalcoins, models
 from app.db import SessionLocal
 
@@ -20,7 +22,7 @@ def _midday(on_date: date) -> datetime:
     return datetime.combine(on_date, datetime.min.time()) + timedelta(hours=12)
 
 
-def _make_attempt(db, user_id: str, xp: int, on_date: date):
+def _make_attempt(db, user_id: str, xp: int, on_date: date, speed_bonus_xp: int = 0):
     when = _midday(on_date)
     db.add(
         models.Attempt(
@@ -30,8 +32,12 @@ def _make_attempt(db, user_id: str, xp: int, on_date: date):
             submitted_answer="x",
             is_correct=True,
             xp_base=xp,
+            # xp já vem com o bônus de velocidade somado (mesma regra de
+            # challenges.py: xp_final = xp_from_hints + speed_bonus_xp) —
+            # speed_bonus_xp aqui é só o REGISTRO do quanto disso veio de
+            # velocidade, nunca soma extra.
             xp_awarded=xp,
-            speed_bonus_xp=0,
+            speed_bonus_xp=speed_bonus_xp,
             created_at=when,
             served_at=when,
         )
@@ -129,6 +135,49 @@ def test_weekly_apuration_credits_top3_xp_per_day():
         hall = mentalcoins.get_current_hall_of_fame(db)
         xp_entries = [e for e in hall if e.category == "xp_daily" and e.reference_date == cycle_start]
         assert {e.user_id for e in xp_entries} == {first, second, third}
+
+
+def test_weekly_apuration_does_not_double_count_speed_bonus_xp():
+    """Achado de auditoria (01/09/2026): attempt.xp_awarded JÁ inclui o
+    bônus de velocidade (challenges.py: xp_final = xp_from_hints +
+    speed_bonus_xp, salvo em xp_awarded) — a apuração não pode somar
+    speed_bonus_xp de novo, senão conta esse bônus duas vezes. Sem
+    o bug, o 2º lugar (xp_awarded=60, sem bônus) NUNCA deveria superar
+    o 1º (xp_awarded=80, com 20 de bônus já embutido); com o bug antigo
+    o 1º contaria como 100 (80+20 de novo), mas o resultado seria o
+    mesmo rank aqui — o teste checa o valor exato creditado, não só o
+    rank, pra pegar a duplicação mesmo quando não muda quem fica em 1º."""
+    # Data anterior a todas as outras deste arquivo de propósito:
+    # get_current_hall_of_fame (usado por outros testes) devolve só o
+    # cycle_start mais recente no banco compartilhado da suíte — um
+    # cycle_start mais novo aqui "esconderia" as entradas dos outros
+    # testes que rodam depois deste.
+    cycle_start = date(2026, 7, 27)
+    cycle_end = cycle_start + timedelta(days=6)
+    fast_user, slow_user = str(uuid.uuid4()), str(uuid.uuid4())
+
+    with SessionLocal() as db:
+        # xp_awarded=80 já inclui os 20 de bônus de velocidade — total
+        # real de XP ganho no dia é 80, nunca 100.
+        _make_attempt(db, fast_user, 80, cycle_start, speed_bonus_xp=20)
+        _make_attempt(db, slow_user, 79, cycle_start, speed_bonus_xp=0)
+        db.commit()
+
+        mentalcoins.run_weekly_apuration(db, cycle_start, cycle_end)
+
+        # Consulta direta por cycle_start (não get_current_hall_of_fame,
+        # que só devolve o cycle_start mais recente entre TODOS os testes
+        # que compartilham este banco — usar essa função aqui deixaria o
+        # teste dependente da ordem de execução dos demais testes deste
+        # arquivo).
+        entry = db.execute(
+            select(models.MentalCoinsHallOfFameEntry).where(
+                models.MentalCoinsHallOfFameEntry.cycle_start == cycle_start,
+                models.MentalCoinsHallOfFameEntry.category == "xp_daily",
+                models.MentalCoinsHallOfFameEntry.user_id == fast_user,
+            )
+        ).scalar_one()
+        assert entry.metric_value == 80
 
 
 def test_weekly_apuration_is_idempotent():
