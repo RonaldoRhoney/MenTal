@@ -16,9 +16,15 @@ MIN_CHALLENGES_PER_TERRITORY = 15
 MIN_PER_DIFFICULTY_LEVEL = 4
 REQUIRED_DIFFICULTY_LEVELS = (1, 2, 3)
 
+# V3.3 §6 (Jogos de Palavras) — Caça-palavras não usa a tabela
+# `challenges` (mecânica própria: WordPuzzle, com seu próprio critério
+# de volume em test_palavras_relampago.py/testes específicos). O
+# critério do item 7 é especificamente sobre território de MCQ.
+NON_MCQ_TERRITORY_IDS = {"caca_palavras"}
+
 
 def test_every_active_territory_meets_the_v2_item7_closing_criterion():
-    territory_ids = [t["id"] for t in TERRITORIES]
+    territory_ids = [t["id"] for t in TERRITORIES if t["id"] not in NON_MCQ_TERRITORY_IDS]
     assert territory_ids, "seed sem território algum — algo está muito errado"
 
     by_territory = {tid: [] for tid in territory_ids}
@@ -49,7 +55,10 @@ def test_no_duplicate_prompts_within_text_based_territories():
     # registrada no item 4) — excluído desta checagem. Todos os outros
     # territórios são baseados em texto puro: prompt duplicado ali é sinal
     # real de curadoria descuidada (item quase copiado sem querer), não
-    # um padrão intencional.
+    # um padrão intencional. "detetive_mental" (V4/V4_NOVOS_TERRITORIOS.md
+    # §4) usa uma pergunta final curta e repetitiva por natureza ("Quem
+    # sou eu?") — cada item é numerado ("Caso N: ...") justamente pra
+    # manter o prompt único mesmo com a fórmula se repetindo.
     text_based = [c for c in CHALLENGES if c["territory_id"] != "visual"]
     prompts = [c["prompt"] for c in text_based]
     counts = Counter(prompts)

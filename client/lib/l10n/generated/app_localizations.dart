@@ -370,6 +370,30 @@ abstract class AppLocalizations {
   /// **'Astronomia e Espaço'**
   String get territoryAstronomia;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Detetive Mental'**
+  String get territoryDetetiveMental;
+
+  /// Button that reveals the next clue in a Detetive Mental case
+  ///
+  /// In pt, this message translates to:
+  /// **'Próxima pista'**
+  String get detectiveNextClueButton;
+
+  /// Button shown after the last clue, that reveals the final multiple-choice question
+  ///
+  /// In pt, this message translates to:
+  /// **'Ver pergunta'**
+  String get detectiveRevealQuestionButton;
+
+  /// Label prefix shown before each revealed clue, e.g. 'Pista 1'
+  ///
+  /// In pt, this message translates to:
+  /// **'Pista {number}'**
+  String detectiveClueLabel(int number);
+
   /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
   ///
   /// In pt, this message translates to:

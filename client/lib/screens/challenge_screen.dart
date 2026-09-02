@@ -82,6 +82,15 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   DateTime? _challengeShownAt;
   bool _submitted = false;
 
+  // V4 — Detetive Mental (V4/V4_NOVOS_TERRITORIOS.md §4). Pistas
+  // reveladas em etapas ANTES da pergunta/opções aparecerem —
+  // _cluesRevealedCount conta quantas já foram mostradas (1 = só a
+  // primeira, visível assim que o desafio carrega); _showingQuestion
+  // vira true depois que o jogador pede pra ver a pergunta final, só
+  // então o corpo normal do desafio (prompt + options) é renderizado.
+  int _cluesRevealedCount = 0;
+  bool _showingQuestion = false;
+
   // MICROINTERACTIONS.md §3 — celebração forte (território/badge/level
   // up) usa confete + fogos + balões (pedido explícito: algo que remeta a
   // comemoração de verdade, não só confete); sons e o pulso sutil/
@@ -158,6 +167,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _feedbackDifficulty = null;
       _feedbackHandled = false;
       _feedbackCommentController.clear();
+      _cluesRevealedCount = 0;
+      _showingQuestion = false;
     });
     try {
       final challenge = widget.battleId != null
@@ -167,6 +178,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               mode: widget.relampago ? 'relampago' : 'normal',
             );
       if (mounted) {
+        final clues = (challenge['clues'] as List?)?.cast<String>();
         setState(() {
           _challenge = challenge;
           // Achado de auditoria de segurança (28/08/2026): attempt_id
@@ -175,9 +187,18 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           // Batalha (getMyBattleChallenge/prefetchedChallenge) ainda não
           // devolve um, e mantém a geração local como estava.
           _attemptId = challenge['attempt_id'] as String? ?? _uuid.v4();
+          // V4 — Detetive Mental: a primeira pista já aparece assim que
+          // o caso carrega, sem exigir um toque extra pra "começar".
+          if (clues != null && clues.isNotEmpty) _cluesRevealedCount = 1;
         });
         final timeLimitSeconds = challenge['time_limit_seconds'] as int?;
-        if (timeLimitSeconds != null) _startCountdown(timeLimitSeconds);
+        // V4 — Detetive Mental: quando há pistas, o cronômetro (modo
+        // Relâmpago) só começa depois que o jogador pede pra ver a
+        // pergunta (_revealQuestion) — ler as pistas com calma não pode
+        // consumir o tempo da decisão final.
+        if (timeLimitSeconds != null && (clues == null || clues.isEmpty)) {
+          _startCountdown(timeLimitSeconds);
+        }
       }
     } on ApiException catch (e) {
       if (mounted) {
@@ -361,6 +382,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   /// resposta/tentativa.
   Future<void> _repeatSameChallenge() async {
     _countdownTimer?.cancel();
+    final clues = (_challenge?['clues'] as List?)?.cast<String>();
     setState(() {
       _attemptId = _uuid.v4();
       _selectedOption = null;
@@ -373,7 +395,21 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _feedbackDifficulty = null;
       _feedbackHandled = false;
       _feedbackCommentController.clear();
+      _cluesRevealedCount = (clues != null && clues.isNotEmpty) ? 1 : 0;
+      _showingQuestion = false;
     });
+    final timeLimitSeconds = _challenge?['time_limit_seconds'] as int?;
+    if (timeLimitSeconds != null && (clues == null || clues.isEmpty)) {
+      _startCountdown(timeLimitSeconds);
+    }
+  }
+
+  /// V4 — Detetive Mental: chamado pelo botão "Ver pergunta" depois da
+  /// última pista. Se o desafio também estiver no modo Relâmpago
+  /// (time_limit_seconds presente), é só AGORA que o cronômetro começa
+  /// — nunca durante a leitura das pistas.
+  void _revealQuestion() {
+    setState(() => _showingQuestion = true);
     final timeLimitSeconds = _challenge?['time_limit_seconds'] as int?;
     if (timeLimitSeconds != null) _startCountdown(timeLimitSeconds);
   }
@@ -534,10 +570,61 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     );
   }
 
+  /// V4 — Detetive Mental (V4/V4_NOVOS_TERRITORIOS.md §4): revelação
+  /// progressiva das pistas, uma de cada vez, antes da pergunta final.
+  /// "Próxima pista" avança _cluesRevealedCount; ao chegar na última
+  /// pista, o botão vira "Ver pergunta" (_revealQuestion), que é quando
+  /// o corpo normal do desafio (prompt + options, e o cronômetro do
+  /// Relâmpago, se houver) passa a ser mostrado.
+  Widget _buildDetectiveClues(List<String> clues) {
+    final l10n = AppLocalizations.of(context)!;
+    final revealed = clues.take(_cluesRevealedCount);
+    final isLastClueRevealed = _cluesRevealedCount >= clues.length;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Expanded(
+          child: _verticallyCenteredScroll(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (final (index, clue) in revealed.indexed) ...[
+                  Text(
+                    l10n.detectiveClueLabel(index + 1),
+                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 14),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(clue, style: Theme.of(context).textTheme.headlineSmall),
+                  const SizedBox(height: 20),
+                ],
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+        FilledButton(
+          onPressed: isLastClueRevealed
+              ? _revealQuestion
+              : () => setState(() => _cluesRevealedCount++),
+          child: Text(isLastClueRevealed ? l10n.detectiveRevealQuestionButton : l10n.detectiveNextClueButton),
+        ),
+      ],
+    );
+  }
+
   Widget _buildChallenge() {
     final l10n = AppLocalizations.of(context)!;
     final challenge = _challenge!;
     final options = (challenge['options'] as List?)?.cast<String>();
+
+    // V4 — Detetive Mental (V4/V4_NOVOS_TERRITORIOS.md §4): enquanto o
+    // jogador ainda não pediu pra ver a pergunta final, a tela mostra só
+    // as pistas reveladas até agora — prompt/options ficam escondidos.
+    final clues = (challenge['clues'] as List?)?.cast<String>();
+    if (clues != null && clues.isNotEmpty && !_showingQuestion) {
+      return _buildDetectiveClues(clues);
+    }
 
     // CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): quem decide
     // "este desafio tem tempo" é o SERVIDOR (time_limit_seconds na

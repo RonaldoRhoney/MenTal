@@ -45,10 +45,11 @@ const List<String> kTerritoryIds = [
   'libras',
   // V3.3 §6 (V3.3_VIDA_PRATICA_PENSAMENTO.md) — Jogos de Palavras.
   'caca_palavras',
-  // V4 (V4/V4_NOVOS_TERRITORIOS.md §1-2 e §5).
+  // V4 (V4/V4_NOVOS_TERRITORIOS.md §1-2, §4 e §5).
   'invencoes',
   'veiculos',
   'astronomia',
+  'detetive_mental',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -125,6 +126,8 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryVeiculos;
     case 'astronomia':
       return l10n.territoryAstronomia;
+    case 'detetive_mental':
+      return l10n.territoryDetetiveMental;
     default:
       return territoryId;
   }

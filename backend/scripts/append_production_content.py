@@ -70,6 +70,7 @@ def main() -> None:
                 explanation=item["explanation"],
                 age_reviewed=item["age_reviewed"],
                 prompt_image=item.get("prompt_image"),
+                clues=item.get("clues"),
             )
             db.add(challenge)
             db.commit()

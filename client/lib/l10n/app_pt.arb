@@ -121,6 +121,16 @@
   "territoryAstronomia": "Astronomia e Espaço",
   "@territoryAstronomia": {"description": "Territory display name"},
 
+  "territoryDetetiveMental": "Detetive Mental",
+  "@territoryDetetiveMental": {"description": "Territory display name"},
+
+  "detectiveNextClueButton": "Próxima pista",
+  "@detectiveNextClueButton": {"description": "Button that reveals the next clue in a Detetive Mental case"},
+  "detectiveRevealQuestionButton": "Ver pergunta",
+  "@detectiveRevealQuestionButton": {"description": "Button shown after the last clue, that reveals the final multiple-choice question"},
+  "detectiveClueLabel": "Pista {number}",
+  "@detectiveClueLabel": {"description": "Label prefix shown before each revealed clue, e.g. 'Pista 1'", "placeholders": {"number": {"type": "int"}}},
+
   "learningPauseButtonTooltip": "Pausa para Aprender",
   "@learningPauseButtonTooltip": {"description": "AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory"},
   "learningPauseScreenTitle": "Pausa para Aprender",

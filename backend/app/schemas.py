@@ -120,6 +120,10 @@ class ChallengeOut(BaseModel):
     # opcional (emoji), nunca obrigatório. None na grande maioria dos
     # desafios, sempre foi assim e continua assim.
     prompt_image: str | None = None
+    # V4 — Detetive Mental (V4/V4_NOVOS_TERRITORIOS.md §4). 2-3 pistas,
+    # em ordem de revelação — o client mostra uma de cada vez antes da
+    # pergunta final (`prompt`). None em todo o resto do app.
+    clues: list[str] | None = None
 
 
 class LearningPauseOut(BaseModel):

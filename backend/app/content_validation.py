@@ -58,6 +58,17 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
         if prompt_image is not None and not (isinstance(prompt_image, str) and prompt_image.strip()):
             errors.append(f"{prefix}: prompt_image, quando presente, precisa ser uma string não vazia")
 
+        # V4 — Detetive Mental (V4/V4_NOVOS_TERRITORIOS.md §4). Opcional
+        # em qualquer outro território (None, mesmo padrão de
+        # prompt_image), mas OBRIGATÓRIO em detetive_mental — sem pistas,
+        # o desafio vira um MCQ comum e a mecânica do bloco não existe.
+        clues = item.get("clues")
+        if territory_id == "detetive_mental" and not clues:
+            errors.append(f"{prefix}: território 'detetive_mental' precisa do campo 'clues' (2-3 pistas)")
+        if clues is not None:
+            if not isinstance(clues, list) or not (2 <= len(clues) <= 3) or not all(isinstance(c, str) and c.strip() for c in clues):
+                errors.append(f"{prefix}: clues, quando presente, precisa ser uma lista de 2 a 3 strings não vazias")
+
         key = (territory_id, item["prompt"])
         if key in existing_prompts:
             errors.append(f"{prefix}: já existe um desafio com esse prompt nesse território (em app/seed.py ou já carregado no banco)")
@@ -202,3 +213,4 @@ def validate_word_puzzles(items: list[dict], known_territory_ids: set[str], exis
         seen_in_file.add(key)
 
     return errors
+

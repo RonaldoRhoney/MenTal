@@ -141,6 +141,7 @@ def next_challenge(
         hints_available=hints_available,
         time_limit_seconds=time_limit_seconds,
         prompt_image=challenge.prompt_image,
+        clues=challenge.clues,
     )
 
 

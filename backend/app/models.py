@@ -301,6 +301,11 @@ class Challenge(Base):
     # app: Palavras Relâmpago, Batalha, etc.), uma mudança maior que
     # merece desenho dedicado, não encaixe apressado aqui.
     prompt_image: Mapped[str | None] = mapped_column(String, nullable=True)
+    # V4 — Detetive Mental (V4/V4_NOVOS_TERRITORIOS.md §4): 2-3 pistas
+    # reveladas em etapas antes de `prompt` (a pergunta final com o
+    # "veredito" da dedução). None em todo o resto do app — mesmo padrão
+    # opcional-nunca-obrigatório já usado em prompt_image.
+    clues: Mapped[list | None] = mapped_column(JSON, nullable=True)
 
 
 class ChallengeHint(Base):

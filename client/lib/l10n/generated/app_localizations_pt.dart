@@ -154,6 +154,20 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryAstronomia => 'Astronomia e Espaço';
 
   @override
+  String get territoryDetetiveMental => 'Detetive Mental';
+
+  @override
+  String get detectiveNextClueButton => 'Próxima pista';
+
+  @override
+  String get detectiveRevealQuestionButton => 'Ver pergunta';
+
+  @override
+  String detectiveClueLabel(int number) {
+    return 'Pista $number';
+  }
+
+  @override
   String get learningPauseButtonTooltip => 'Pausa para Aprender';
 
   @override
