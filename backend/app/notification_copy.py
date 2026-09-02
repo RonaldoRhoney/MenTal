@@ -63,6 +63,20 @@ TERRITORY_DETENTOR_GAINED_BODY_TEMPLATE = "Você assumiu {territory} entre seus 
 TERRITORY_DETENTOR_LOST_TITLE = "Seu território mudou de mãos"
 TERRITORY_DETENTOR_LOST_BODY_TEMPLATE = "{nickname} assumiu {territory}. Bora reconquistar? 💪"
 
+# V4 item 1 — Torcida (TORCIDA_MULTIPLA_V2.md §4): notificação sempre
+# identifica QUEM mandou e QUAL tipo — nunca agrupa múltiplos envios
+# numa mensagem só, mesmo enviados quase juntos (cada envio dispara a
+# própria notificação, decisão explícita do documento). Emoji por tipo
+# reforça visualmente o ícone que o client mostra na tela de perfil.
+TORCIDA_RECEIVED_TITLE = "Você recebeu uma torcida! 🎉"
+TORCIDA_EMOJI_BY_TYPE = {
+    "vibracao": "⚡",
+    "balao": "🎈",
+    "coracao": "💚",
+    "joinha": "👍",
+}
+TORCIDA_RECEIVED_BODY_TEMPLATE = "{nickname} te mandou um {emoji}!"
+
 # Usado nas notificações de batalha e de disputa territorial — os
 # territórios ainda não têm uma tabela de nomes server-side (o client
 # resolve isso via l10n). 7 territórios fixos, mesmo texto exibido no

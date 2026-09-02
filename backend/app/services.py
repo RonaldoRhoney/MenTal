@@ -1123,6 +1123,123 @@ def public_photo_url(profile: models.Profile) -> str | None:
     return supabase_admin.create_signed_photo_url(extract_photo_storage_path(profile.photo_url))
 
 
+class PublicProfileError(Exception):
+    """V4 item 1 — Perfil Público/Torcida. Mesmo padrão de exceção de
+    domínio já usado em MovementError — o router traduz pra HTTPException."""
+
+    def __init__(self, code: str, message: str):
+        self.code = code
+        self.message = message
+        super().__init__(message)
+
+
+def get_public_profile(db: Session, viewer_user_id: str, target_user_id: str) -> dict | None:
+    """
+    V4 item 1 — Perfil Público (PERFIL_PUBLICO_E_TORCIDA_V1.md §2/§6).
+    Reaproveita 100% dado já existente (Profile, UserBadge+Badge,
+    get_worlds_progress, Streak, UserTerritoryProgress) — nunca uma
+    nova coleta ou persistência própria. Retorna None se o alvo não
+    existir (router decide o 404).
+    """
+    profile = db.get(models.Profile, target_user_id)
+    if profile is None:
+        return None
+
+    badge_rows = db.execute(
+        select(models.UserBadge, models.Badge)
+        .join(models.Badge, models.Badge.id == models.UserBadge.badge_id)
+        .where(models.UserBadge.user_id == target_user_id)
+        .order_by(models.UserBadge.earned_at)
+    ).all()
+    badges = [
+        {"code": badge.code, "name": badge.name, "description": badge.description, "earned_at": user_badge.earned_at.isoformat()}
+        for user_badge, badge in badge_rows
+    ]
+
+    streak = db.get(models.Streak, target_user_id)
+
+    # Território de melhor desempenho — maior xp_in_territory já
+    # acumulado (PERFIL_PUBLICO_E_TORCIDA_V1.md §2: "território de
+    # melhor desempenho"), null se ainda não pontuou em nenhum.
+    best_progress = db.execute(
+        select(models.UserTerritoryProgress)
+        .where(models.UserTerritoryProgress.user_id == target_user_id)
+        .order_by(models.UserTerritoryProgress.xp_in_territory.desc())
+        .limit(1)
+    ).scalars().first()
+
+    today_start = naive(datetime.combine(utcnow().date(), datetime.min.time()))
+    sent_today = db.execute(
+        select(func.count())
+        .select_from(models.TorcidaReaction)
+        .where(
+            models.TorcidaReaction.from_user_id == viewer_user_id,
+            models.TorcidaReaction.to_user_id == target_user_id,
+            models.TorcidaReaction.created_at >= today_start,
+        )
+    ).scalar_one()
+
+    return {
+        "user_id": target_user_id,
+        "nickname": profile.nickname,
+        "real_name": profile.real_name,
+        "photo_url": public_photo_url(profile),
+        "level": profile.level,
+        "xp_total": profile.xp_total,
+        "xp_per_level": config.XP_PER_LEVEL,
+        "current_streak": streak.current_streak if streak else 0,
+        "badges": badges,
+        "worlds": get_worlds_progress(db, target_user_id),
+        "best_territory_id": best_progress.territory_id if best_progress and best_progress.xp_in_territory > 0 else None,
+        "best_territory_xp": best_progress.xp_in_territory if best_progress and best_progress.xp_in_territory > 0 else 0,
+        "torcida_sent_today_by_me": sent_today,
+    }
+
+
+def send_torcida(db: Session, from_user_id: str, to_user_id: str, reaction_type: str) -> int:
+    """
+    V4 item 1 — Torcida (TORCIDA_MULTIPLA_V2.md). Limite diário AGREGADO
+    entre os 4 tipos (§3: "sem limite diferenciado por tipo"), por
+    (remetente, destinatário) — calculado por COUNT em tempo real, sem
+    contador mantido à parte. Notifica o destinatário (mesmo padrão
+    não-humilhante de Batalha/Disputa Territorial), nunca bloqueia o
+    envio se a notificação falhar.
+    """
+    if from_user_id == to_user_id:
+        raise PublicProfileError("CANNOT_TORCER_FOR_SELF", "Não é possível torcer para si mesmo.")
+
+    target_profile = db.get(models.Profile, to_user_id)
+    if target_profile is None:
+        raise PublicProfileError("USER_NOT_FOUND", to_user_id)
+
+    today_start = naive(datetime.combine(utcnow().date(), datetime.min.time()))
+    sent_today = db.execute(
+        select(func.count())
+        .select_from(models.TorcidaReaction)
+        .where(
+            models.TorcidaReaction.from_user_id == from_user_id,
+            models.TorcidaReaction.to_user_id == to_user_id,
+            models.TorcidaReaction.created_at >= today_start,
+        )
+    ).scalar_one()
+    if sent_today >= config.TORCIDA_DAILY_LIMIT_PER_TARGET:
+        raise PublicProfileError("TORCIDA_DAILY_LIMIT_REACHED", "Limite diário de torcida pra esta pessoa atingido.")
+
+    db.add(models.TorcidaReaction(from_user_id=from_user_id, to_user_id=to_user_id, reaction_type=reaction_type))
+    db.commit()
+
+    if target_profile.notif_social_enabled and target_profile.push_token:
+        from_profile = db.get(models.Profile, from_user_id)
+        emoji = notification_copy.TORCIDA_EMOJI_BY_TYPE.get(reaction_type, "🎉")
+        body = notification_copy.TORCIDA_RECEIVED_BODY_TEMPLATE.format(
+            nickname=from_profile.nickname if from_profile else "Alguém",
+            emoji=emoji,
+        )
+        push.send_push_notification(target_profile.push_token, notification_copy.TORCIDA_RECEIVED_TITLE, body)
+
+    return sent_today + 1
+
+
 def own_photo_url(profile: models.Profile) -> str | None:
     """
     Diferente de public_photo_url: o PRÓPRIO dono pode ver a própria

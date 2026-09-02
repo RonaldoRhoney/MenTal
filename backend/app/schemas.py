@@ -293,6 +293,63 @@ class BlockOut(BaseModel):
     territory_ids: list[str]
 
 
+class PublicProfileBadgeOut(BaseModel):
+    """V4 item 1 — Perfil Público (PERFIL_PUBLICO_E_TORCIDA_V1.md §2):
+    só badges CONQUISTADAS aparecem (nunca o catálogo inteiro com
+    earned=False como em BadgeOut — não faz sentido mostrar pra outro
+    usuário o que ele ainda não desbloqueou)."""
+
+    code: str
+    name: str
+    description: str
+    earned_at: str
+
+
+class PublicProfileOut(BaseModel):
+    """V4 item 1 — Perfil Público de outro usuário
+    (PERFIL_PUBLICO_E_TORCIDA_V1.md §2). Regra central do documento:
+    nunca expor dado que o próprio usuário não tenha já tornado público
+    em algum outro lugar do app — mesmos campos de ProfileOut/
+    RankingEntry (nickname, real_name, photo_url só se aprovada), nunca
+    e-mail/localização granular/histórico de resposta individual/saldo
+    de MentalCoins (decisão explícita: Hall da Fama só expõe o Top 3 da
+    semana como reconhecimento pontual, não o saldo de qualquer usuário
+    a qualquer momento — expor isso aqui seria uma exposição nova, não
+    reaproveitamento de precedente)."""
+
+    user_id: str
+    nickname: str
+    real_name: str | None
+    photo_url: str | None
+    level: int
+    xp_total: int
+    xp_per_level: int
+    current_streak: int
+    badges: list[PublicProfileBadgeOut]
+    worlds: list[WorldProgressOut]
+    # Território onde este usuário tem mais XP acumulado — null se ainda
+    # não pontuou em nenhum território.
+    best_territory_id: str | None
+    best_territory_xp: int
+    # V4 item 1 — Torcida: quantos incentivos EU (quem está vendo este
+    # perfil agora) já mandei pra esta pessoa hoje, agregando os 4 tipos
+    # (TORCIDA_MULTIPLA_V2.md §3) — o client usa isso pra decidir se
+    # ainda mostra os botões de envio habilitados ou já bateu o teto.
+    torcida_sent_today_by_me: int
+
+
+class TorcidaSendRequest(BaseModel):
+    reaction_type: Literal["vibracao", "balao", "coracao", "joinha"]
+
+
+class TorcidaSendResponse(BaseModel):
+    ok: bool = True
+    # Total agregado (todos os tipos) já enviado por mim pra esta pessoa
+    # hoje, incluindo este envio — permite ao client atualizar o estado
+    # dos botões sem precisar de uma segunda chamada.
+    sent_today_by_me: int
+
+
 class ProgressResponse(BaseModel):
     xp_total: int
     level: int
@@ -314,6 +371,13 @@ class ValidateReceiptRequest(BaseModel):
 
 class RankingEntry(BaseModel):
     rank: int
+    # V4 item 1 — Perfil Público (PERFIL_PUBLICO_E_TORCIDA_V1.md §3):
+    # antes desta feature o Ranking deliberadamente NÃO expunha user_id
+    # (só nickname/xp) — a feature de Perfil Público autoriza
+    # explicitamente Ranking como ponto de entrada, então precisa dele
+    # agora. Nickname/XP continuam sendo o dado "primário" do ranking;
+    # user_id só existe pra abrir GET /profile/{id}/public.
+    user_id: str
     nickname: str
     avatar_id: str | None = None
     # Revisão 26/08/2026: nome real e foto de perfil (só se aprovada na
@@ -510,6 +574,10 @@ class CreateBattleResponse(BaseModel):
 
 class BattleOut(BaseModel):
     battle_id: str
+    # V4 item 1 — Perfil Público (PERFIL_PUBLICO_E_TORCIDA_V1.md §3):
+    # Batalha é um dos pontos de entrada aprovados pra visitar o perfil
+    # do oponente — precisa do user_id dele pra isso.
+    opponent_user_id: str
     opponent_nickname: str
     opponent_avatar_id: str | None = None
     opponent_real_name: str | None = None

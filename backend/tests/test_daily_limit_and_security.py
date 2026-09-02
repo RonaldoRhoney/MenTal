@@ -198,7 +198,7 @@ def test_parental_gate_expires_and_requires_revalidation_per_purchase_attempt(cl
     assert resp2.json()["status"] == "active"
 
 
-def test_ranking_never_exposes_user_id_or_email(client):
+def test_ranking_never_exposes_email_or_extra_fields(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -216,9 +216,14 @@ def test_ranking_never_exposes_user_id_or_email(client):
     ranking = client.get("/ranking", params={"scope": "global", "window": "weekly"}, headers=headers).json()
     for entry in ranking["entries"]:
         # avatar_id/real_name/photo_url: USER_PROFILE.md, aprovado — nunca
-        # expõe user_id/email. real_name e photo_url (revisão 26/08/2026)
-        # são o mesmo tipo de dado público que nickname já expunha; photo_url
+        # expõe e-mail. real_name e photo_url (revisão 26/08/2026) são o
+        # mesmo tipo de dado público que nickname já expunha; photo_url
         # ainda passa pelo filtro fail-closed de moderação (services.
-        # public_photo_url), nunca o dado bruto.
-        assert set(entry.keys()) == {"rank", "nickname", "avatar_id", "real_name", "photo_url", "xp"}
-        assert user not in entry["nickname"]  # nunca expõe o user_id bruto
+        # public_photo_url), nunca o dado bruto. user_id (achado de
+        # auditoria/V4 item 1, 02/09/2026): antes NUNCA exposto aqui —
+        # passa a ser exposto de propósito porque PERFIL_PUBLICO_E_
+        # TORCIDA_V1.md §3 autoriza explicitamente o Ranking como ponto
+        # de entrada pro perfil público de outro usuário, que precisa
+        # do id pra existir. Ainda assim, nada além desses 7 campos.
+        assert set(entry.keys()) == {"rank", "user_id", "nickname", "avatar_id", "real_name", "photo_url", "xp"}
+        assert user not in entry["nickname"]  # nickname nunca contém o user_id bruto

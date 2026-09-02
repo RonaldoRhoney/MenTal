@@ -4,6 +4,7 @@ import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
 import '../widgets/mentalcoin.dart';
+import 'public_profile_screen.dart';
 
 /// Tela de MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio
 /// semanal, sem valor monetário, não compravel com dinheiro real (§1).
@@ -113,7 +114,7 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
                       child: Text(l10n.mentalCoinsHallOfFameEmpty, style: Theme.of(context).textTheme.bodySmall),
                     )
                   else
-                    ..._hallOfFame!.map((entry) => _HallOfFameTile(entry: entry)),
+                    ..._hallOfFame!.map((entry) => _HallOfFameTile(client: widget.client, entry: entry)),
                   const SizedBox(height: 20),
                   _SectionHeader(title: l10n.mentalCoinsRedeemTitle),
                   const SizedBox(height: 10),
@@ -243,8 +244,9 @@ class _RewardTrackCard extends StatelessWidget {
 }
 
 class _HallOfFameTile extends StatelessWidget {
-  const _HallOfFameTile({required this.entry});
+  const _HallOfFameTile({required this.client, required this.entry});
 
+  final ApiClient client;
   final Map<String, dynamic> entry;
 
   String _categoryLabel(String category, int? rank) {
@@ -266,14 +268,23 @@ class _HallOfFameTile extends StatelessWidget {
     final isFirst = rank == 1 || entry['category'] != 'xp_daily';
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-        decoration: BoxDecoration(
-          color: AppColors.bg2,
+      child: Material(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(14),
+        child: InkWell(
+          // V4 item 1 — Perfil Público: Hall da Fama é ponto de entrada
+          // aprovado (PERFIL_PUBLICO_E_TORCIDA_V1.md §3).
           borderRadius: BorderRadius.circular(14),
-          border: isFirst ? Border.all(color: AppColors.gold.withValues(alpha: 0.4)) : null,
-        ),
-        child: Row(
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(builder: (_) => PublicProfileScreen(client: client, userId: entry['user_id'] as String)),
+          ),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(14),
+              border: isFirst ? Border.all(color: AppColors.gold.withValues(alpha: 0.4)) : null,
+            ),
+            child: Row(
           children: [
             Icon(Icons.emoji_events, color: isFirst ? AppColors.gold : AppColors.muted, size: 20),
             const SizedBox(width: 10),
@@ -299,6 +310,8 @@ class _HallOfFameTile extends StatelessWidget {
             const SizedBox(width: 8),
             Text('+${entry['amount']}', style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
           ],
+            ),
+          ),
         ),
       ),
     );

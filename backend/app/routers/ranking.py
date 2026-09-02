@@ -63,6 +63,7 @@ def get_ranking(
         photo_url = services.public_photo_url(profile) if profile else None
         entry = RankingEntry(
             rank=idx,
+            user_id=row_user_id,
             nickname=nickname,
             avatar_id=avatar_id,
             real_name=real_name,

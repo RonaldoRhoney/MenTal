@@ -137,6 +137,7 @@ def list_battles(user_id: str = Depends(require_age_confirmed_user_id), db: Sess
         out.append(
             schemas.BattleOut(
                 battle_id=battle.id,
+                opponent_user_id=opponent_id,
                 opponent_nickname=opponent_profile.nickname if opponent_profile else "?",
                 opponent_avatar_id=opponent_profile.avatar_id if opponent_profile else None,
                 opponent_real_name=opponent_profile.real_name if opponent_profile else None,

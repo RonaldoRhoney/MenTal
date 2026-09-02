@@ -350,6 +350,45 @@
   "badgesScreenTitle": "Conquistas",
   "@badgesScreenTitle": {"description": "Badges screen app bar title"},
 
+  "publicProfileScreenTitle": "Perfil",
+  "@publicProfileScreenTitle": {"description": "Public profile screen app bar title"},
+
+  "publicProfileLevelLabel": "Nível {level}",
+  "@publicProfileLevelLabel": {"description": "Level shown on public profile", "placeholders": {"level": {"type": "int"}}},
+
+  "publicProfileXpLabel": "{xp} XP",
+  "@publicProfileXpLabel": {"description": "Total XP shown on public profile", "placeholders": {"xp": {"type": "int"}}},
+
+  "publicProfileStreakLabel": "{days} dias de sequência",
+  "@publicProfileStreakLabel": {"description": "Current streak on public profile", "placeholders": {"days": {"type": "int"}}},
+
+  "publicProfileBestTerritoryLabel": "Melhor desempenho",
+  "@publicProfileBestTerritoryLabel": {"description": "Best territory section label"},
+
+  "publicProfileNoBestTerritory": "Ainda sem território de destaque",
+  "@publicProfileNoBestTerritory": {"description": "Shown when the user has no XP in any territory yet"},
+
+  "publicProfileBadgesLabel": "Conquistas",
+  "@publicProfileBadgesLabel": {"description": "Badges section label on public profile"},
+
+  "publicProfileNoBadges": "Ainda sem conquistas",
+  "@publicProfileNoBadges": {"description": "Shown when the user has no earned badges yet"},
+
+  "publicProfileWorldsLabel": "Mundos",
+  "@publicProfileWorldsLabel": {"description": "Worlds section label on public profile"},
+
+  "publicProfileTorcidaLabel": "Mande uma torcida!",
+  "@publicProfileTorcidaLabel": {"description": "Torcida section label on public profile"},
+
+  "publicProfileTorcidaSentToday": "Você já torceu {count}x hoje",
+  "@publicProfileTorcidaSentToday": {"description": "How many torcida sent today to this person", "placeholders": {"count": {"type": "int"}}},
+
+  "publicProfileTorcidaSentFeedback": "Torcida enviada!",
+  "@publicProfileTorcidaSentFeedback": {"description": "Snackbar confirming a torcida was sent"},
+
+  "publicProfileTorcidaLimitReached": "Você já atingiu o limite de torcida hoje pra esta pessoa",
+  "@publicProfileTorcidaLimitReached": {"description": "Snackbar shown when the daily torcida limit is hit"},
+
   "viewBadgesButton": "Ver conquistas",
   "@viewBadgesButton": {"description": "Button on Progress screen linking to Badges screen"},
 

@@ -12,6 +12,7 @@ import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/help_sheet.dart';
 import 'challenge_screen.dart';
+import 'public_profile_screen.dart';
 
 /// V2 item 12 — Amigos (V2_KICKOFF.md §6A). Reaproveita o MESMO
 /// invite_code de sempre (GET /social/invite-code, já existente desde o
@@ -510,6 +511,13 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                 final friend = _friends[index];
                                 final realName = friend['real_name'] as String?;
                                 return ListTile(
+                                  // V4 item 1 — Perfil Público: toque na
+                                  // linha (fora dos botões de ação) abre o
+                                  // perfil público do amigo
+                                  // (PERFIL_PUBLICO_E_TORCIDA_V1.md §3).
+                                  onTap: () => Navigator.of(context).push(
+                                    MaterialPageRoute(builder: (_) => PublicProfileScreen(client: widget.client, userId: friend['user_id'] as String)),
+                                  ),
                                   leading: ProfilePhotoCircle(photoUrl: friend['photo_url'] as String?),
                                   // Nome real substitui o apelido gerado
                                   // pelo sistema assim que existir

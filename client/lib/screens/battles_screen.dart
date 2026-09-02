@@ -7,6 +7,7 @@ import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/help_sheet.dart';
 import 'challenge_screen.dart';
+import 'public_profile_screen.dart';
 
 /// V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md). Lista batalhas
 /// enviadas/recebidas via GET /battles — backend é a única autoridade
@@ -139,6 +140,17 @@ class _BattlesScreenState extends State<BattlesScreen> {
                               ? opponentRealName
                               : battle['opponent_nickname'];
                           return ListTile(
+                            // V4 item 1 — Perfil Público: só quando a
+                            // batalha NÃO exige resposta agora (senão o
+                            // toque na linha continuaria sendo a ação
+                            // principal de responder, via botão em
+                            // trailing) — PERFIL_PUBLICO_E_TORCIDA_V1.md
+                            // §3, Batalha é ponto de entrada aprovado.
+                            onTap: canAnswer
+                                ? null
+                                : () => Navigator.of(context).push(
+                                      MaterialPageRoute(builder: (_) => PublicProfileScreen(client: widget.client, userId: battle['opponent_user_id'] as String)),
+                                    ),
                             leading: ProfilePhotoCircle(photoUrl: battle['opponent_photo_url'] as String?),
                             title: Text(
                               '${territoryLabel(l10n, battle['territory_id'] as String)} · $opponentLabel',

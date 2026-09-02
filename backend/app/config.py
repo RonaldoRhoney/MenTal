@@ -290,6 +290,17 @@ SHARE_XP_REWARD = 15
 # modesto de propósito — perto de um acerto de nível médio (20 XP),
 # nunca um múltiplo alto, pra não virar a forma dominante de ganhar XP.
 BATTLE_DAILY_SEND_LIMIT = 3
+
+# V4 item 1 — Torcida (PERFIL_PUBLICO_E_TORCIDA_V1.md §4, TORCIDA_
+# MULTIPLA_V2.md §3): "limite razoável... a definir com Claude Code".
+# Mesma ordem de grandeza de outros limites diários de interação social
+# do app (BATTLE_DAILY_SEND_LIMIT=3, mas Torcida é um toque só, sem
+# custo de resposta do outro lado — cabe um teto mais alto). Agregado
+# entre os 4 tipos de ícone (§3: "sem limite diferenciado por tipo"),
+# por (remetente, destinatário), reseta à meia-noite (mesmo padrão de
+# DAILY_FREE_CHALLENGE_LIMIT).
+TORCIDA_DAILY_LIMIT_PER_TARGET = 10
+TORCIDA_REACTION_TYPES = ("vibracao", "balao", "coracao", "joinha")
 BATTLE_WIN_BONUS_XP = 30
 
 # MentalCoins — moeda de prestígio semanal (U.I/MENTALCOINS_V1.md).

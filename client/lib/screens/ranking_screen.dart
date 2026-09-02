@@ -4,6 +4,7 @@ import '../api/api_client.dart';
 import '../widgets/profile_photo.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
+import 'public_profile_screen.dart';
 
 /// Tela de Ranking geral — V1.1. Consome GET /ranking, que já garante no
 /// backend (RANKING.md §4, SECURITY.md §8) que só `nickname` e `xp` são
@@ -130,7 +131,16 @@ class _RankingScreenState extends State<RankingScreen> {
               // nome do usuário visível aos demais jogadores".
               final realName = entry['real_name'] as String?;
               final displayName = realName != null && realName.isNotEmpty ? realName : entry['nickname'] as String;
+              // V4 item 1 — Perfil Público: tocar em qualquer linha (exceto
+              // a própria, sem perfil público de si mesmo aqui) abre o
+              // perfil público do jogador (PERFIL_PUBLICO_E_TORCIDA_V1.md
+              // §3, Ranking é ponto de entrada aprovado).
               return ListTile(
+                onTap: isMe
+                    ? null
+                    : () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => PublicProfileScreen(client: widget.client, userId: entry['user_id'] as String)),
+                        ),
                 leading: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [

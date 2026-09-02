@@ -749,6 +749,26 @@ class Report(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class TorcidaReaction(Base):
+    """
+    V4 item 1 — Torcida (PERFIL_PUBLICO_E_TORCIDA_V1.md §4, expandida por
+    TORCIDA_MULTIPLA_V2.md §2 pra 4 tipos de ícone). Nunca texto livre —
+    reaction_type é sempre um dos 4 valores fixos de
+    config.TORCIDA_REACTION_TYPES. Uma linha por envio (não agregada),
+    igual ao padrão já usado em AppFeedbackReaction — o limite diário
+    (services.send_torcida) é calculado por COUNT em tempo real, não por
+    um contador mantido à parte.
+    """
+
+    __tablename__ = "torcida_reactions"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    from_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    to_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    reaction_type: Mapped[str] = mapped_column(String)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class UserBlock(Base):
     """
     Bloqueio de usuário (auditoria de conformidade Google Play,

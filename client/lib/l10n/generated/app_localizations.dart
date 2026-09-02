@@ -790,6 +790,84 @@ abstract class AppLocalizations {
   /// **'Conquistas'**
   String get badgesScreenTitle;
 
+  /// Public profile screen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Perfil'**
+  String get publicProfileScreenTitle;
+
+  /// Level shown on public profile
+  ///
+  /// In pt, this message translates to:
+  /// **'Nível {level}'**
+  String publicProfileLevelLabel(int level);
+
+  /// Total XP shown on public profile
+  ///
+  /// In pt, this message translates to:
+  /// **'{xp} XP'**
+  String publicProfileXpLabel(int xp);
+
+  /// Current streak on public profile
+  ///
+  /// In pt, this message translates to:
+  /// **'{days} dias de sequência'**
+  String publicProfileStreakLabel(int days);
+
+  /// Best territory section label
+  ///
+  /// In pt, this message translates to:
+  /// **'Melhor desempenho'**
+  String get publicProfileBestTerritoryLabel;
+
+  /// Shown when the user has no XP in any territory yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda sem território de destaque'**
+  String get publicProfileNoBestTerritory;
+
+  /// Badges section label on public profile
+  ///
+  /// In pt, this message translates to:
+  /// **'Conquistas'**
+  String get publicProfileBadgesLabel;
+
+  /// Shown when the user has no earned badges yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda sem conquistas'**
+  String get publicProfileNoBadges;
+
+  /// Worlds section label on public profile
+  ///
+  /// In pt, this message translates to:
+  /// **'Mundos'**
+  String get publicProfileWorldsLabel;
+
+  /// Torcida section label on public profile
+  ///
+  /// In pt, this message translates to:
+  /// **'Mande uma torcida!'**
+  String get publicProfileTorcidaLabel;
+
+  /// How many torcida sent today to this person
+  ///
+  /// In pt, this message translates to:
+  /// **'Você já torceu {count}x hoje'**
+  String publicProfileTorcidaSentToday(int count);
+
+  /// Snackbar confirming a torcida was sent
+  ///
+  /// In pt, this message translates to:
+  /// **'Torcida enviada!'**
+  String get publicProfileTorcidaSentFeedback;
+
+  /// Snackbar shown when the daily torcida limit is hit
+  ///
+  /// In pt, this message translates to:
+  /// **'Você já atingiu o limite de torcida hoje pra esta pessoa'**
+  String get publicProfileTorcidaLimitReached;
+
   /// Button on Progress screen linking to Badges screen
   ///
   /// In pt, this message translates to:

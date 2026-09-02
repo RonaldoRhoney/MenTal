@@ -401,6 +401,54 @@ class AppLocalizationsPt extends AppLocalizations {
   String get badgesScreenTitle => 'Conquistas';
 
   @override
+  String get publicProfileScreenTitle => 'Perfil';
+
+  @override
+  String publicProfileLevelLabel(int level) {
+    return 'Nível $level';
+  }
+
+  @override
+  String publicProfileXpLabel(int xp) {
+    return '$xp XP';
+  }
+
+  @override
+  String publicProfileStreakLabel(int days) {
+    return '$days dias de sequência';
+  }
+
+  @override
+  String get publicProfileBestTerritoryLabel => 'Melhor desempenho';
+
+  @override
+  String get publicProfileNoBestTerritory => 'Ainda sem território de destaque';
+
+  @override
+  String get publicProfileBadgesLabel => 'Conquistas';
+
+  @override
+  String get publicProfileNoBadges => 'Ainda sem conquistas';
+
+  @override
+  String get publicProfileWorldsLabel => 'Mundos';
+
+  @override
+  String get publicProfileTorcidaLabel => 'Mande uma torcida!';
+
+  @override
+  String publicProfileTorcidaSentToday(int count) {
+    return 'Você já torceu ${count}x hoje';
+  }
+
+  @override
+  String get publicProfileTorcidaSentFeedback => 'Torcida enviada!';
+
+  @override
+  String get publicProfileTorcidaLimitReached =>
+      'Você já atingiu o limite de torcida hoje pra esta pessoa';
+
+  @override
   String get viewBadgesButton => 'Ver conquistas';
 
   @override

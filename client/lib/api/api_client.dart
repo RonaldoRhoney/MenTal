@@ -333,6 +333,24 @@ class ApiClient {
     return _get(_uri('/profile'), headers: _headers);
   }
 
+  // V4 item 1 — Perfil Público (PERFIL_PUBLICO_E_TORCIDA_V1.md). Backend
+  // é a única autoridade sobre quais campos são públicos — o client só
+  // renderiza o que a API devolve.
+  Future<Map<String, dynamic>> getPublicProfile(String userId) async {
+    return _get(_uri('/profile/$userId/public'), headers: _headers);
+  }
+
+  // V4 item 1 — Torcida (TORCIDA_MULTIPLA_V2.md). reactionType é sempre
+  // um dos 4 valores fixos ('vibracao'|'balao'|'coracao'|'joinha') —
+  // nunca texto livre. Limite diário é sempre validado no backend.
+  Future<Map<String, dynamic>> sendTorcida(String userId, String reactionType) async {
+    return _post(
+      _uri('/profile/$userId/torcida'),
+      headers: _headers,
+      body: jsonEncode({'reaction_type': reactionType}),
+    );
+  }
+
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,
