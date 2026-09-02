@@ -189,14 +189,25 @@ MOVEMENT_MAX_STEPS_PER_COLLECTION = 2_500_000
 MOVEMENT_MAX_STEPS_PER_CYCLE = 150_000
 
 # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md, aprovado
-# 2026-08-22). Múltipla escolha com tempo regressivo — nível 1 tem mais
-# tempo, e cai conforme o nível: mais difícil, menos tempo, mais pressão
-# (§2 da spec). Generalizado em 2026-08-22 (CONHECIMENTO_EXPANSAO_GERAL.md
-# §2) pra deixar de ser exclusivo de Palavras: mesmo mecanismo agora
-# também usado pelo conteúdo geral de Conhecimento (nesse caso, formato
-# único e obrigatório, nunca opcional como em Palavras). Nome genérico de
+# 2026-08-22). Múltipla escolha com tempo regressivo. Generalizado em
+# 2026-08-22 (CONHECIMENTO_EXPANSAO_GERAL.md §2) pra deixar de ser
+# exclusivo de Palavras: mesmo mecanismo agora também usado pelo
+# conteúdo geral de Conhecimento (nesse caso, formato único e
+# obrigatório, nunca opcional como em Palavras). Nome genérico de
 # propósito — não é mais um recurso de um território só.
-TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 12, 2: 10, 3: 7}
+#
+# RELAMPAGO_TEMPO_20S_UNIVERSAL.md (aprovado, 02/09/2026): janela ÚNICA
+# de 20s pra TODO desafio Relâmpago, substituindo os valores variados
+# por nível (antes: mais difícil = menos tempo, 12/10/7s) — o volume de
+# conteúdo curado nas fases V3.1-V3.5 gerou perguntas mais longas do
+# que o tempo original comportava pra leitura, mesmo sabendo a
+# resposta. Continua um dict por nível (não um int solto) só pra não
+# quebrar a assinatura de quem já usa `.get(difficulty_level)` — mas os
+# 3 valores agora são idênticos de propósito. A fórmula de bônus de
+# velocidade (compute_speed_bonus_xp) é baseada em FRAÇÃO do tempo, não
+# em segundos absolutos — recalibra sozinha pra escala nova, nenhuma
+# mudança de fórmula foi necessária.
+TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 20, 2: 20, 3: 20}
 # Só se aplica ao modo OPCIONAL de Palavras (mode=relampago) — nível
 # fácil nunca entra nesse modo lá, decisão fechada na spec original.
 # Conhecimento não tem esse piso: todo nível já usa o formato com tempo,

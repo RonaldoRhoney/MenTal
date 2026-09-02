@@ -33,6 +33,30 @@ def test_relampago_mode_returns_three_options_and_time_limit(client):
     assert body["time_limit_seconds"] == config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS[body["difficulty_level"]]
 
 
+def test_relampago_time_limit_is_uniform_20_seconds_across_all_levels(client):
+    """RELAMPAGO_TEMPO_20S_UNIVERSAL.md (aprovado, 02/09/2026): janela
+    ÚNICA de 20s pra todo desafio Relâmpago, substituindo os valores
+    variados por nível usados até então (12/10/7s) — trava a correção
+    contra regressão futura pra "mais difícil = menos tempo"."""
+    assert config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS == {1: 20, 2: 20, 3: 20}
+
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    # Nível 1 não entra no modo opcional de Palavras (PALAVRAS_RELAMPAGO_
+    # MIN_DIFFICULTY_LEVEL=2), mas "conhecimento" é sempre cronometrado em
+    # TODOS os níveis (CONHECIMENTO_EXPANSAO_GERAL.md) — cobre o nível 1
+    # sem precisar mockar dificuldade adaptativa.
+    resp_level_1 = client.get("/challenges/next", params={"territory_id": "conhecimento"}, headers=headers)
+    assert resp_level_1.json()["time_limit_seconds"] == 20
+
+    resp_level_2_or_3 = client.get(
+        "/challenges/next", params={"territory_id": "palavras", "mode": "relampago"}, headers=headers
+    )
+    assert resp_level_2_or_3.json()["time_limit_seconds"] == 20
+
+
 def test_relampago_never_serves_easy_level_even_for_brand_new_user(client):
     # Usuário novo sem histórico começa no nível 1 (fácil) — modo
     # relâmpago precisa ignorar isso e nunca servir fácil.
