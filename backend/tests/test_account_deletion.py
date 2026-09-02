@@ -3,7 +3,18 @@ Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5, LGPD:
 não existia nenhuma forma de excluir de verdade uma conta, só zerar
 campos manualmente. DELETE /profile agora delega ao Supabase Auth
 (services.delete_account) — apagar o usuário lá derruba em cascata
-todo o resto (FKs `on delete cascade`, migrations/001_initial_schema.sql).
+todo o resto.
+
+A cascata real (quais tabelas cascade-deletam vs. quais anonimizam via
+SET NULL) não dá pra testar aqui: supabase_admin.delete_auth_user é
+sempre mockado (é uma chamada HTTP real ao Supabase Admin API, que
+cascateia dentro do Postgres de produção, fora do alcance do SQLite de
+teste). A cobertura real da cascata é a migration 048 em si + as
+queries de verificação rodadas em produção antes/depois de aplicá-la
+(auditoria de segurança, 01/09/2026, achado LGPD: 3 tabelas tinham
+NO ACTION em vez de CASCADE, travando a exclusão; 5 tabelas não tinham
+FK nenhuma). Estes testes cobrem só o CONTRATO do endpoint (sucesso,
+falha, 501 sem credencial, autenticação).
 """
 
 import uuid

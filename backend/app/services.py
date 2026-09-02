@@ -1140,13 +1140,26 @@ def delete_account(db: Session, user_id: str) -> bool:
     Exclusão real de conta (auditoria de segurança, 28/08/2026 —
     DIR-001 item 5, LGPD). Remove o arquivo do bucket (melhor esforço)
     e delega a exclusão de verdade ao Supabase Auth
-    (supabase_admin.delete_auth_user) — todas as tabelas mental.*
-    referenciam auth.users(id) com `on delete cascade`
-    (migrations/001_initial_schema.sql), então apagar o usuário lá
-    apaga profile/attempts/friendships/battles/etc. em cascata no
-    Postgres, sem precisar de nenhum DELETE manual tabela por tabela
-    aqui. Retorna False (sem apagar nada) se SUPABASE_SERVICE_ROLE_KEY
-    não estiver configurado — o endpoint decide como reagir (501).
+    (supabase_admin.delete_auth_user) — apagar o usuário lá cascateia
+    por todo o schema mental via FK, sem precisar de nenhum DELETE
+    manual tabela por tabela aqui.
+
+    Achado de auditoria (01/09/2026, corrigido na migration 048): a
+    afirmação original deste comentário ("todas as tabelas mental.*
+    referenciam auth.users(id) com on delete cascade") estava errada —
+    movement_cycles/friendships referenciavam mental.profiles (não
+    auth.users) com NO ACTION, travando a exclusão em qualquer conta
+    com Movimento ou Amigos ativos; battles/challenge_batch_progress/
+    word_puzzle_results não tinham FK nenhuma, deixando dado órfão. A
+    migration 048 corrigiu as 3 primeiras pra CASCADE de verdade e
+    adicionou FK CASCADE nas outras 3. app_feedback/level_feedback são
+    exceção deliberada: ON DELETE SET NULL (anonimiza, não apaga) —
+    preservam texto livre com valor duradouro (mural público com
+    resposta do admin; insumo de calibração de dificuldade) sem manter
+    o vínculo com a pessoa.
+
+    Retorna False (sem apagar nada) se SUPABASE_SERVICE_ROLE_KEY não
+    estiver configurado — o endpoint decide como reagir (501).
     """
     profile = db.get(models.Profile, user_id)
     if profile is not None and profile.photo_url:

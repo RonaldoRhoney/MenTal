@@ -105,3 +105,48 @@ def test_admin_level_feedback_lists_entries_for_admin(client):
     assert resp.status_code == 200
     entries = resp.json()
     assert any(e["user_id"] == submitter and e["difficulty_rating"] == "muito_dificil" for e in entries)
+
+
+def test_admin_level_feedback_survives_author_deletion_shown_anonymized(client):
+    """
+    Migration 048 (LGPD, 01/09/2026): excluir a conta do autor NÃO
+    apaga o registro (insumo de calibração de dificuldade de conteúdo)
+    — anonimiza via ON DELETE SET NULL. Simula esse estado direto no
+    banco (a cascata real só acontece no Postgres de produção via
+    Supabase Auth, fora do alcance do SQLite de teste) pra garantir que
+    o endpoint admin tolera user_id=None sem quebrar (AdminLevelFeedbackItem
+    precisou virar user_id: str | None pra isso).
+    """
+    from app.db import SessionLocal
+    from app import models
+
+    submitter = str(uuid.uuid4())
+    submitter_headers = auth_header(submitter)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=submitter_headers)
+    challenge = _get_challenge(client, submitter_headers)
+    client.post(
+        "/level-feedback",
+        json={"challenge_id": challenge["challenge_id"], "action": "continue", "difficulty_rating": "dificil", "comment": "insumo valioso"},
+        headers=submitter_headers,
+    )
+
+    with SessionLocal() as db:
+        feedback = db.execute(
+            models.LevelFeedback.__table__.select().where(models.LevelFeedback.user_id == submitter)
+        ).first()
+        db.execute(models.LevelFeedback.__table__.update().where(models.LevelFeedback.id == feedback.id).values(user_id=None))
+        db.commit()
+
+    admin_user = str(uuid.uuid4())
+    admin_headers = auth_header(admin_user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=admin_headers)
+    with SessionLocal() as db:
+        profile = db.get(models.Profile, admin_user)
+        profile.role = "admin"
+        db.commit()
+
+    resp = client.get("/admin/level-feedback", headers=admin_headers)
+    assert resp.status_code == 200
+    entry = next(e for e in resp.json() if e["comment"] == "insumo valioso")
+    assert entry["user_id"] is None
+    assert entry["difficulty_rating"] == "dificil"

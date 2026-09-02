@@ -54,10 +54,14 @@ def list_app_feedback(user_id: str = Depends(require_age_confirmed_user_id), db:
         if reaction.user_id == user_id:
             my_reactions.setdefault(reaction.feedback_id, []).append(reaction.reaction_type)
 
-    nicknames: dict[str, str] = {}
+    nicknames: dict[str | None, str] = {}
     for row in rows:
         if row.user_id not in nicknames:
-            profile = db.get(models.Profile, row.user_id)
+            # Migration 048 (LGPD, 01/09/2026): user_id vira NULL quando
+            # o autor exclui a conta (anonimização, não exclusão do
+            # comentário) — trata explicitamente em vez de consultar
+            # Profile com um id nulo.
+            profile = db.get(models.Profile, row.user_id) if row.user_id is not None else None
             nicknames[row.user_id] = profile.nickname if profile else "?"
 
     return schemas.PublicAppFeedbackListResponse(

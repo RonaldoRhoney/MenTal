@@ -48,6 +48,41 @@ def test_feedback_is_visible_to_any_authenticated_user(client):
     assert any(e["user_id"] == submitter and "matemática" in e["comment"] for e in entries)
 
 
+def test_feedback_survives_author_deletion_shown_anonymized(client):
+    """
+    Migration 048 (LGPD, 01/09/2026): excluir a conta do autor NÃO
+    apaga o feedback (mural público com possível resposta do admin) —
+    anonimiza via ON DELETE SET NULL. Simula esse estado direto no
+    banco (a cascata real só acontece no Postgres de produção via
+    Supabase Auth, fora do alcance do SQLite de teste) pra garantir que
+    o endpoint tolera user_id=None sem quebrar.
+    """
+    from app.db import SessionLocal
+    from app import models
+
+    submitter = str(uuid.uuid4())
+    submitter_headers = auth_header(submitter)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=submitter_headers)
+    client.post("/feedback", json={"comment": "Feedback de quem depois vai excluir a conta"}, headers=submitter_headers)
+
+    with SessionLocal() as db:
+        feedback = db.execute(
+            models.AppFeedback.__table__.select().where(models.AppFeedback.user_id == submitter)
+        ).first()
+        db.execute(models.AppFeedback.__table__.update().where(models.AppFeedback.id == feedback.id).values(user_id=None))
+        db.commit()
+
+    other_user = str(uuid.uuid4())
+    other_headers = auth_header(other_user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=other_headers)
+
+    resp = client.get("/feedback", headers=other_headers)
+    assert resp.status_code == 200
+    item = next(i for i in resp.json()["items"] if "excluir a conta" in i["comment"])
+    assert item["user_id"] is None
+    assert item["user_nickname"] == "?"
+
+
 def test_admin_can_reply_and_reply_is_publicly_visible(client):
     from app.db import SessionLocal
     from app import models

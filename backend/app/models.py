@@ -207,7 +207,11 @@ class MovementSnapshot(Base):
     __tablename__ = "movement_snapshots"
 
     id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
-    cycle_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("movement_cycles.id"), index=True)
+    # ondelete="CASCADE" (migration 048, 01/09/2026): sem isso, o
+    # SQLAlchemy declara a FK mas não seu comportamento de exclusão — em
+    # produção o Postgres real usava NO ACTION, travando a exclusão de
+    # conta em cascata pra qualquer usuário com Movimento ativo.
+    cycle_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("movement_cycles.id", ondelete="CASCADE"), index=True)
     recorded_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     steps_total: Mapped[int] = mapped_column(Integer)
 
@@ -490,7 +494,11 @@ class LevelFeedback(Base):
     # ser respondido, único conceito de "nível concluído" que já existe no
     # schema hoje.
     id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
-    user_id: Mapped[str] = mapped_column(UUIDType)
+    # Migration 048 (LGPD, 01/09/2026): nullable — vira NULL quando o
+    # autor exclui a conta (ON DELETE SET NULL). Preservado anonimizado
+    # (decisão de Rhoney: é insumo de calibração de dificuldade de
+    # conteúdo, tem valor analítico além do vínculo com a pessoa).
+    user_id: Mapped[str | None] = mapped_column(UUIDType, nullable=True)
     territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"))
     challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"))
     action: Mapped[str] = mapped_column(String)  # repeat|continue
@@ -517,7 +525,12 @@ class AppFeedback(Base):
     __tablename__ = "app_feedback"
 
     id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
-    user_id: Mapped[str] = mapped_column(UUIDType)
+    # Migration 048 (LGPD, 01/09/2026): nullable — vira NULL quando o
+    # autor exclui a conta (ON DELETE SET NULL), preservando o
+    # comentário/resposta do admin no mural público sem manter o
+    # vínculo com a pessoa (decisão de Rhoney: anonimizar, não apagar,
+    # pra não quebrar o histórico da conversa pra quem acompanhava).
+    user_id: Mapped[str | None] = mapped_column(UUIDType, nullable=True)
     comment: Mapped[str] = mapped_column(Text)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     # Pedido de Rhoney (29/08/2026): "deve haver... campos que eu possa

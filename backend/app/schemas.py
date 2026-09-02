@@ -38,7 +38,10 @@ class LevelFeedbackResponse(BaseModel):
 
 class AdminLevelFeedbackItem(BaseModel):
     id: str
-    user_id: str
+    # Migration 048 (LGPD, 01/09/2026): user_id vira NULL quando o autor
+    # exclui a conta — o feedback (insumo de calibração de dificuldade)
+    # é preservado anonimizado, nunca apagado.
+    user_id: str | None
     territory_id: str
     challenge_id: str
     action: str
@@ -73,7 +76,10 @@ class PublicAppFeedbackItem(BaseModel):
     feedback, pra o client saber qual botão destacar como já ativado."""
 
     id: str
-    user_id: str
+    # Migration 048 (LGPD, 01/09/2026): user_id vira NULL quando o autor
+    # exclui a conta — o comentário (mural público, com resposta do
+    # admin) é preservado anonimizado, nunca apagado.
+    user_id: str | None
     user_nickname: str
     comment: str
     created_at: datetime
