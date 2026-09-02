@@ -427,7 +427,11 @@ class _MovementScreenState extends State<MovementScreen> {
       // essencial de ler enquanto se digita a meta.
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text(l10n.movementScreenTitle),
+        centerTitle: true,
+        title: Text(
+          l10n.movementScreenTitle,
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800, letterSpacing: 0.3),
+        ),
         actions: [
           if (_movementEnabled && _streakDays > 0)
             Padding(
@@ -703,34 +707,64 @@ class _SummaryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.bg2,
-      borderRadius: BorderRadius.circular(16),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(16),
-        onTap: enabled ? onTap : null,
-        child: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-          child: Row(
-            children: [
-              Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: dotColor)),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
-                    Text(subtitle, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
-                    if (value != null) ...[
-                      const SizedBox(height: 4),
-                      Text(value!, style: AppTheme.technicalStyle(color: dotColor, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
-                    ],
-                  ],
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(18),
+      child: Ink(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [AppColors.bg2, Color.lerp(AppColors.bg2, dotColor, enabled ? 0.06 : 0.0)!],
+          ),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: dotColor.withValues(alpha: enabled ? 0.32 : 0.1)),
+        ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: enabled ? onTap : null,
+          child: Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            child: Row(
+              children: [
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: dotColor.withValues(alpha: enabled ? 1.0 : 0.4),
+                    boxShadow: enabled ? [BoxShadow(color: dotColor.withValues(alpha: 0.5), blurRadius: 6, spreadRadius: 0.5)] : null,
+                  ),
                 ),
-              ),
-              Icon(Icons.chevron_right_rounded, color: AppColors.muted.withValues(alpha: enabled ? 1.0 : 0.4)),
-            ],
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        title,
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800, fontSize: 16, letterSpacing: 0.2),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(subtitle, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11.5)),
+                      if (value != null) ...[
+                        const SizedBox(height: 6),
+                        Text(value!, style: AppTheme.technicalStyle(color: dotColor, fontSize: 14).copyWith(fontWeight: FontWeight.w800)),
+                      ],
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: dotColor.withValues(alpha: enabled ? 0.12 : 0.0),
+                  ),
+                  child: Icon(Icons.chevron_right_rounded, color: enabled ? dotColor : AppColors.muted.withValues(alpha: 0.4)),
+                ),
+              ],
+            ),
           ),
         ),
       ),
