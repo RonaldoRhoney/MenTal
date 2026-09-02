@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 1,
+    "prompt": "Quantos planetas há no Sistema Solar, segundo a classificação oficial atual?",
+    "options": [
+      "8",
+      "9",
+      "7",
+      "10"
+    ],
+    "correct_answer": "8",
+    "explanation": "Desde 2006, quando a União Astronômica Internacional redefiniu o critério de 'planeta', Plutão passou a ser classificado como planeta anão — restando 8 planetas no Sistema Solar.",
+    "age_reviewed": true,
+    "hints": [
+      "Até 2006 a resposta comum era 9 — algo mudou nesse ano.",
+      "O 'excluído' foi Plutão, reclassificado como planeta anão."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 1,
+    "prompt": "Qual é o planeta mais próximo do Sol?",
+    "options": [
+      "Mercúrio",
+      "Vênus",
+      "Terra",
+      "Marte"
+    ],
+    "correct_answer": "Mercúrio",
+    "explanation": "Mercúrio é o planeta mais interno do Sistema Solar, orbitando o Sol a uma distância média de cerca de 58 milhões de km.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é o mais quente (esse título é do Vênus, por causa da atmosfera) — é o mais PRÓXIMO.",
+      "É também o menor planeta do Sistema Solar."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 1,
+    "prompt": "O que causa as fases da lua (nova, crescente, cheia, minguante)?",
+    "options": [
+      "A quantidade da face iluminada da Lua que é visível da Terra, conforme ela orbita",
+      "A Lua muda de tamanho fisicamente ao longo do mês",
+      "A sombra de outros planetas cobrindo parte da Lua",
+      "Nuvens da Terra bloqueando parcialmente a visão"
+    ],
+    "correct_answer": "A quantidade da face iluminada da Lua que é visível da Terra, conforme ela orbita",
+    "explanation": "A Lua não emite luz própria — ela reflete a luz do Sol. Conforme a Lua orbita a Terra, a fração da face iluminada que conseguimos ver muda, criando o ciclo de fases.",
+    "age_reviewed": true,
+    "hints": [
+      "A Lua não muda de tamanho — o que muda é o quanto dela vemos iluminado.",
+      "Pense em uma bola sempre metade iluminada pelo Sol, vista de ângulos diferentes."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 1,
+    "prompt": "Qual é a estrela mais próxima da Terra?",
+    "options": [
+      "O Sol",
+      "Proxima Centauri",
+      "Sirius",
+      "Alfa Centauri"
+    ],
+    "correct_answer": "O Sol",
+    "explanation": "O Sol é uma estrela, a mais próxima da Terra por larga margem — a segunda mais próxima (Proxima Centauri) já está a mais de 4 anos-luz de distância.",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunta mais simples do que parece — pense no que ilumina o dia.",
+      "É a estrela que vemos (e sentimos o calor) todos os dias."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 1,
+    "prompt": "O que é, na verdade, uma 'estrela cadente'?",
+    "options": [
+      "Um pequeno pedaço de rocha ou poeira espacial queimando ao entrar na atmosfera",
+      "Uma estrela de verdade que está morrendo e caindo",
+      "Um satélite artificial reentrando na atmosfera",
+      "Um reflexo da luz da Lua em nuvens altas"
+    ],
+    "correct_answer": "Um pequeno pedaço de rocha ou poeira espacial queimando ao entrar na atmosfera",
+    "explanation": "Apesar do nome, uma 'estrela cadente' não é uma estrela — é um meteoro: um fragmento pequeno de rocha ou poeira que, ao entrar na atmosfera terrestre em alta velocidade, se aquece por atrito e brilha intensamente por poucos instantes.",
+    "age_reviewed": true,
+    "hints": [
+      "O nome é enganoso — não tem nada a ver com estrelas de verdade.",
+      "É basicamente um pedacinho de rocha espacial pegando fogo ao entrar na atmosfera."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 2,
+    "prompt": "Por que, ao olhar para uma estrela distante à noite, estamos vendo uma luz que já 'viajou' por muito tempo?",
+    "options": [
+      "Porque a luz tem velocidade finita, e leva tempo para percorrer a distância até a Terra",
+      "Porque as estrelas piscam e demoram para acender de novo",
+      "Porque a atmosfera da Terra atrasa a luz que chega",
+      "Porque só conseguimos ver estrelas depois que elas já se apagaram"
+    ],
+    "correct_answer": "Porque a luz tem velocidade finita, e leva tempo para percorrer a distância até a Terra",
+    "explanation": "A luz viaja a uma velocidade altíssima, mas finita (cerca de 300 mil km/s). Para distâncias astronômicas, mesmo essa velocidade enorme significa anos, séculos ou milênios de viagem — então olhar para uma estrela distante é, literalmente, olhar para o passado dela.",
+    "age_reviewed": true,
+    "hints": [
+      "A luz é rápida, mas não é instantânea — ela também precisa de tempo para percorrer distância.",
+      "Quanto mais distante a estrela, mais 'antiga' é a luz que estamos vendo dela."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 2,
+    "prompt": "O que é um 'ano-luz'?",
+    "options": [
+      "Uma unidade de DISTÂNCIA: o quanto a luz percorre em um ano",
+      "Uma unidade de TEMPO equivalente a um ano terrestre",
+      "O tempo que a Terra leva para dar uma volta ao redor do Sol",
+      "A distância entre a Terra e o Sol"
+    ],
+    "correct_answer": "Uma unidade de DISTÂNCIA: o quanto a luz percorre em um ano",
+    "explanation": "Apesar do nome conter 'ano', ano-luz é uma medida de distância, não de tempo — é a distância que a luz percorre viajando por um ano inteiro (cerca de 9,5 trilhões de km), usada porque as distâncias entre estrelas são grandes demais para quilômetros serem práticos.",
+    "age_reviewed": true,
+    "hints": [
+      "O nome confunde, mas repare: ele descreve o que a luz FAZ em um ano, não o ano em si.",
+      "É usado justamente porque quilômetro fica um número absurdamente grande nessa escala."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 2,
+    "prompt": "Qual foi a primeira missão espacial a levar seres humanos à superfície da Lua?",
+    "options": [
+      "Apollo 11 (1969)",
+      "Sputnik 1 (1957)",
+      "Apollo 1 (1967)",
+      "Voyager 1 (1977)"
+    ],
+    "correct_answer": "Apollo 11 (1969)",
+    "explanation": "A missão Apollo 11, da NASA, pousou na Lua em 20 de julho de 1969, levando Neil Armstrong e Buzz Aldrin a caminhar sobre a superfície lunar — o primeiro pouso humano em outro corpo celeste.",
+    "age_reviewed": true,
+    "hints": [
+      "O nome desta missão é associado à frase 'um pequeno passo para o homem'.",
+      "Aconteceu em 1969, não nos anos 1950 nem nos anos 1970."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 2,
+    "prompt": "O que causa as marés dos oceanos?",
+    "options": [
+      "A atração gravitacional da Lua (e, em menor grau, do Sol) sobre a água da Terra",
+      "O vento forte que sopra sobre o mar em certos horários",
+      "A rotação da Terra sozinha, sem influência de outros corpos",
+      "O derretimento e congelamento diário das calotas polares"
+    ],
+    "correct_answer": "A atração gravitacional da Lua (e, em menor grau, do Sol) sobre a água da Terra",
+    "explanation": "A gravidade da Lua puxa a água dos oceanos, criando uma elevação do nível do mar do lado da Terra mais próximo dela (e também do lado oposto, por efeito de inércia) — o Sol também influencia, mas com efeito bem menor por estar muito mais distante.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no corpo celeste mais próximo da Terra, capaz de 'puxar' a água à distância.",
+      "Não é vento nem rotação sozinha — é atração gravitacional."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 2,
+    "prompt": "Por que planetas como Marte, quando vistos de olho nu no céu noturno, não piscam como as estrelas costumam parecer piscar?",
+    "options": [
+      "Porque planetas aparecem como um pontinho de luz maior, menos afetado pela turbulência da atmosfera do que a luz pontual de uma estrela distante",
+      "Porque planetas não emitem nem refletem luz o suficiente para piscar",
+      "Porque só é possível ver planetas através de telescópio, nunca a olho nu",
+      "Porque planetas ficam parados enquanto as estrelas se movem no céu"
+    ],
+    "correct_answer": "Porque planetas aparecem como um pontinho de luz maior, menos afetado pela turbulência da atmosfera do que a luz pontual de uma estrela distante",
+    "explanation": "Estrelas estão tão distantes que aparecem como uma fonte de luz praticamente pontual, muito sensível à turbulência do ar (o que causa o 'piscar'). Planetas, por estarem muito mais próximos, aparecem como um disco de luz minúsculo mas com área — o que suaviza esse efeito de cintilação.",
+    "age_reviewed": true,
+    "hints": [
+      "Tem a ver com o tamanho aparente do ponto de luz no céu, não com o brilho.",
+      "Planetas são visíveis a olho nu, sim — vários deles, inclusive."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 3,
+    "prompt": "O que é um buraco negro?",
+    "options": [
+      "Uma região do espaço com gravidade tão intensa que nem a luz consegue escapar dela",
+      "Uma área do espaço completamente vazia, sem nenhuma matéria",
+      "Um buraco literal no tecido do espaço, sem nenhuma força associada",
+      "Uma nuvem escura de poeira que bloqueia a visão de outras estrelas"
+    ],
+    "correct_answer": "Uma região do espaço com gravidade tão intensa que nem a luz consegue escapar dela",
+    "explanation": "Um buraco negro se forma quando uma quantidade enorme de massa é comprimida em um espaço muito pequeno, gerando um campo gravitacional tão forte que nada — nem mesmo a luz, a coisa mais rápida do universo — consegue escapar dele uma vez ultrapassado um certo limite (o 'horizonte de eventos').",
+    "age_reviewed": true,
+    "hints": [
+      "Não é um buraco vazio — é o oposto: extremamente denso e com gravidade extrema.",
+      "A característica que dá nome a ele é justamente reter até a luz."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 3,
+    "prompt": "O que é um 'exoplaneta'?",
+    "options": [
+      "Um planeta que orbita uma estrela fora do nosso Sistema Solar",
+      "Um planeta do nosso Sistema Solar que foi 'excluído' da lista oficial, como Plutão",
+      "Um planeta sem nenhuma estrela para orbitar, vagando livremente",
+      "Um satélite natural (lua) que orbita um planeta distante"
+    ],
+    "correct_answer": "Um planeta que orbita uma estrela fora do nosso Sistema Solar",
+    "explanation": "Exoplaneta ('exo' = fora) é qualquer planeta que orbita uma estrela diferente do Sol. Milhares já foram confirmados desde os anos 1990, principalmente por métodos indiretos como a detecção de pequenas variações no brilho da estrela quando o planeta passa à frente dela.",
+    "age_reviewed": true,
+    "hints": [
+      "O prefixo 'exo' já dá a pista: é sobre estar FORA de algum lugar.",
+      "É 'fora do nosso Sistema Solar', não 'fora da lista de planetas'."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 3,
+    "prompt": "Como se chama a galáxia onde fica o nosso Sistema Solar?",
+    "options": [
+      "Via Láctea",
+      "Andrômeda",
+      "Galáxia do Sombrero",
+      "Nebulosa de Órion"
+    ],
+    "correct_answer": "Via Láctea",
+    "explanation": "O Sistema Solar, incluindo a Terra, fica em um dos braços espirais da Via Láctea — uma galáxia com centenas de bilhões de estrelas. Andrômeda é a galáxia espiral grande mais próxima da nossa, mas é uma galáxia diferente.",
+    "age_reviewed": true,
+    "hints": [
+      "É o nome que também dá título a uma faixa esbranquiçada visível no céu noturno bem escuro.",
+      "Andrômeda é uma galáxia vizinha, não a nossa."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 3,
+    "prompt": "O que a Teoria do Big Bang descreve, de forma resumida?",
+    "options": [
+      "A origem do universo a partir de um estado extremamente denso e quente, que vem se expandindo desde então",
+      "Uma explosão específica que aconteceu dentro de uma galáxia já existente",
+      "O momento em que o Sistema Solar se formou",
+      "A colisão entre duas galáxias que gerou as estrelas atuais"
+    ],
+    "correct_answer": "A origem do universo a partir de um estado extremamente denso e quente, que vem se expandindo desde então",
+    "explanation": "A Teoria do Big Bang é o modelo cosmológico mais aceito para a origem do universo: ele teria começado extremamente denso e quente, cerca de 13,8 bilhões de anos atrás, e vem se expandindo (e esfriando) desde então — evidenciado, entre outras coisas, pela radiação cósmica de fundo detectável hoje.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é sobre uma galáxia ou o Sistema Solar especificamente — é sobre o universo inteiro.",
+      "A palavra-chave é 'expansão', que continua acontecendo até hoje."
+    ]
+  },
+  {
+    "territory_id": "astronomia",
+    "difficulty_level": 3,
+    "prompt": "Do que são feitos os famosos anéis de Saturno?",
+    "options": [
+      "Bilhões de partículas de gelo e rocha, de tamanhos variados",
+      "Uma faixa sólida e contínua de metal",
+      "Gás comprimido que circula o planeta",
+      "Nuvens permanentes da própria atmosfera de Saturno"
+    ],
+    "correct_answer": "Bilhões de partículas de gelo e rocha, de tamanhos variados",
+    "explanation": "Os anéis de Saturno não são sólidos — são compostos por um número enorme de partículas individuais, principalmente gelo de água com um pouco de material rochoso, variando de grãos minúsculos a blocos de vários metros, todas orbitando o planeta.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é uma peça sólida única — é feito de um número enorme de pedaços separados.",
+      "O material predominante é o mesmo que forma cometas: gelo."
+    ]
+  }
+]
