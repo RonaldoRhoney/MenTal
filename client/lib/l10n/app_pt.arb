@@ -118,6 +118,9 @@
   "territoryVeiculos": "Carros, Motos e Aviões",
   "@territoryVeiculos": {"description": "Territory display name"},
 
+  "territoryAstronomia": "Astronomia e Espaço",
+  "@territoryAstronomia": {"description": "Territory display name"},
+
   "learningPauseButtonTooltip": "Pausa para Aprender",
   "@learningPauseButtonTooltip": {"description": "AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory"},
   "learningPauseScreenTitle": "Pausa para Aprender",

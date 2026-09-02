@@ -151,6 +151,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryVeiculos => 'Carros, Motos e Aviões';
 
   @override
+  String get territoryAstronomia => 'Astronomia e Espaço';
+
+  @override
   String get learningPauseButtonTooltip => 'Pausa para Aprender';
 
   @override

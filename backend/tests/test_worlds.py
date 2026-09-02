@@ -66,6 +66,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "caca_palavras",
         "invencoes",
         "veiculos",
+        "astronomia",
     }
     assert worlds["linguagem"]["completed"] is False
     assert worlds["mente_logica"]["completed"] is False
