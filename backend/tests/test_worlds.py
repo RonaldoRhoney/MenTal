@@ -52,7 +52,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     # enem/concursos) entra em Cultura Geral, junto dos demais
     # territórios de trivia.
     assert set(worlds.keys()) == {"linguagem", "mente_logica", "cultura_geral"}
-    assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas"}
+    assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas", "redacao"}
     assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento", "cores"}
     assert set(worlds["cultura_geral"]["territory_ids"]) == {
         "esportes", "regioes", "cultura_pop",
@@ -82,8 +82,9 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client):
     client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 
-    # Mundo da Linguagem tem só 3 territórios (palavras/textos/enigmas) —
-    # o menor dos dois, mais rápido de fechar num teste.
+    # Mundo da Linguagem tem 4 territórios desde a V4 (palavras/textos/
+    # enigmas/redacao, V4/V3_ENCERRAMENTO_PENDENCIAS_PARA_V4.md §2.1) —
+    # conquista os 3 primeiros, deixando "enigmas" por último de propósito.
     _conquer_territory(client, headers, "palavras")
     progress = client.get("/progress", headers=headers).json()
     assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is False
@@ -92,9 +93,13 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client):
     progress = client.get("/progress", headers=headers).json()
     assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is False
 
+    _conquer_territory(client, headers, "redacao")
+    progress = client.get("/progress", headers=headers).json()
+    assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is False
+
     xp_before_completion = client.get("/progress", headers=headers).json()["xp_total"]
 
-    # Última resposta correta em "enigmas" fecha os 3 territórios do
+    # Última resposta correta em "enigmas" fecha os 4 territórios do
     # Mundo da Linguagem — world_just_completed deve disparar EXATAMENTE
     # nessa resposta, nunca antes.
     world_completed_events = []

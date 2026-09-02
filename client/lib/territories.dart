@@ -9,6 +9,8 @@ const List<String> kTerritoryIds = [
   'conhecimento',
   'enigmas',
   'textos',
+  // V4 item 3 (V4/V3_ENCERRAMENTO_PENDENCIAS_PARA_V4.md §2.1).
+  'redacao',
   'visual',
   // V3.0 (U.I/../V3/V3.0_ESPORTES_REGIOES_CULTURA_POP.md).
   'esportes',
@@ -59,6 +61,8 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryEnigmas;
     case 'textos':
       return l10n.territoryTextos;
+    case 'redacao':
+      return l10n.territoryRedacao;
     case 'visual':
       return l10n.territoryVisual;
     case 'esportes':

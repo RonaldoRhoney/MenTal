@@ -64,6 +64,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryTextos => 'Textos';
 
   @override
+  String get territoryRedacao => 'Redação';
+
+  @override
   String get territoryVisual => 'Visual';
 
   @override

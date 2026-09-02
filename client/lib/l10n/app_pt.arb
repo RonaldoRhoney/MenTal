@@ -55,6 +55,8 @@
   "@territoryEnigmas": {"description": "Territory display name"},
   "territoryTextos": "Textos",
   "@territoryTextos": {"description": "Territory display name"},
+  "territoryRedacao": "Redação",
+  "@territoryRedacao": {"description": "Territory display name"},
   "territoryVisual": "Visual",
   "@territoryVisual": {"description": "Territory display name"},
   "territoryEsportes": "Esportes",

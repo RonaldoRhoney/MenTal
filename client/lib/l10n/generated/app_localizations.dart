@@ -193,6 +193,12 @@ abstract class AppLocalizations {
   /// Territory display name
   ///
   /// In pt, this message translates to:
+  /// **'Redação'**
+  String get territoryRedacao;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
   /// **'Visual'**
   String get territoryVisual;
 
