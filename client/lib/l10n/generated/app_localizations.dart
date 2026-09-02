@@ -352,6 +352,12 @@ abstract class AppLocalizations {
   /// **'Caça-palavras'**
   String get territoryCacaPalavras;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Invenções'**
+  String get territoryInvencoes;
+
   /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
   ///
   /// In pt, this message translates to:

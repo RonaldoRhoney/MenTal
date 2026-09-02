@@ -177,6 +177,14 @@ TERRITORIES = [
     {"id": "curiosidade_relampago", "challenge_type": "curiosidade_relampago", "requires_subscription": True, "free_sample_count": 2, "display_order": 30, "world_id": "cultura_geral", "block_id": "curiosidade_relampago"},
     {"id": "libras", "challenge_type": "libras", "requires_subscription": True, "free_sample_count": 2, "display_order": 31, "world_id": "cultura_geral", "block_id": "libras"},
     {"id": "caca_palavras", "challenge_type": "caca_palavras", "requires_subscription": True, "free_sample_count": 1, "display_order": 32, "world_id": "cultura_geral", "block_id": "jogos_de_palavras"},
+    # V4 — Invenções, Grandes Construções e Como Surge uma Ideia
+    # (V4/V4_NOVOS_TERRITORIOS.md §1). Primeiro dos 5 territórios novos
+    # da V4, rollout sequencial (cada bloco só avança depois do anterior
+    # validado, mesmo princípio da V3). Sobre PROCESSO CRIATIVO/engenho
+    # humano — não sobre o objeto/construção em si como fato isolado
+    # (diferenciação explícita do doc de origem: não é Tecnologia nem
+    # Artes nem Curiosidade Relâmpago genérico).
+    {"id": "invencoes", "challenge_type": "invencoes", "requires_subscription": True, "free_sample_count": 2, "display_order": 35, "world_id": "cultura_geral"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -4859,6 +4867,146 @@ CHALLENGES = [
         "explanation": "A falácia do espantalho ataca uma versão enfraquecida/distorcida do argumento alheio, não o argumento real — isso parece refutar o outro lado, mas na verdade não enfrenta o argumento de verdade.",
         "age_reviewed": True,
         "hints": ["O nome vem da ideia de 'lutar contra um boneco de palha' em vez do adversário real.", "É sobre representar mal a posição do outro pra ser mais fácil de derrubar."],
+    },
+    # V4 — Invenções, Grandes Construções e Como Surge uma Ideia
+    # (V4/V4_NOVOS_TERRITORIOS.md §1). Sobre a HISTÓRIA DE ORIGEM —
+    # o acaso, a necessidade, o "momento eureka" — não o objeto em si
+    # como fato isolado. 15 itens (5 por nível), acima do piso de
+    # test_content_volume.py.
+    {
+        "territory_id": "invencoes", "difficulty_level": 1,
+        "prompt": "Qual foi a função original da Muralha da China, construída ao longo de séculos?",
+        "options": ["Defesa contra invasões de povos nômades do norte", "Rota comercial exclusiva para especiarias", "Delimitar terras agrícolas entre famílias", "Servir de aqueduto para transportar água"],
+        "correct_answer": "Defesa contra invasões de povos nômades do norte",
+        "explanation": "A Muralha da China foi erguida principalmente como fortificação defensiva contra invasões de povos nômades vindos do norte, ao longo de diferentes dinastias.",
+        "age_reviewed": True,
+        "hints": ["Pense em proteção de fronteira, não em comércio ou irrigação.", "É uma estrutura militar, feita pra impedir a passagem de exércitos."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 1,
+        "prompt": "A penicilina, um dos antibióticos mais importantes da história, foi descoberta como?",
+        "options": ["Por acaso, quando Alexander Fleming notou um fungo contaminando uma placa esquecida", "Após décadas de testes sistemáticos planejados em laboratório", "Por uma equipe farmacêutica testando compostos sintéticos", "Como resultado de uma pesquisa sobre vacinas"],
+        "correct_answer": "Por acaso, quando Alexander Fleming notou um fungo contaminando uma placa esquecida",
+        "explanation": "Fleming voltou de férias e notou que um fungo (Penicillium) havia contaminado uma placa de bactérias esquecida — e que ao redor do fungo as bactérias não cresciam, revelando o efeito antibiótico por acidente.",
+        "age_reviewed": True,
+        "hints": ["Não foi planejado — envolveu um esquecimento e uma observação atenta depois.", "O 'vilão' da história era, na verdade, um fungo comum de contaminação em laboratório."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 1,
+        "prompt": "O post-it (aquele papel adesivo removível) nasceu de qual situação?",
+        "options": ["Uma cola que deveria ser forte, mas saiu fraca e removível, foi reaproveitada", "Um projeto de escritório para substituir clipes de papel", "Uma encomenda específica de uma editora de livros", "Um teste de papel reciclado que deu errado"],
+        "correct_answer": "Uma cola que deveria ser forte, mas saiu fraca e removível, foi reaproveitada",
+        "explanation": "Um pesquisador da 3M tentava criar uma supercola forte e, sem querer, criou uma cola fraca e removível — anos depois, essa 'falha' virou a base do post-it.",
+        "age_reviewed": True,
+        "hints": ["A ideia central é um 'erro' que virou solução.", "O objetivo original era o oposto: uma cola bem forte, permanente."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 1,
+        "prompt": "Como o forno de micro-ondas foi inventado?",
+        "options": ["Um engenheiro notou que um radar derreteu uma barra de chocolate no seu bolso", "Foi encomendado por uma empresa de eletrodomésticos para facilitar o cozimento", "Surgiu de pesquisas sobre energia solar aplicada à cozinha", "Foi adaptado de um forno elétrico comum já existente"],
+        "correct_answer": "Um engenheiro notou que um radar derreteu uma barra de chocolate no seu bolso",
+        "explanation": "Percy Spencer, trabalhando com equipamentos de radar, percebeu que as micro-ondas emitidas derreteram uma barra de chocolate em seu bolso — a partir daí, testou e desenvolveu o forno de micro-ondas.",
+        "age_reviewed": True,
+        "hints": ["Envolve tecnologia de radar, não de cozinha, na origem.", "Um doce derretido no bolso foi a pista que levou à descoberta."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 1,
+        "prompt": "Qual é o grande feito de engenharia por trás de Machu Picchu, construída pelos incas no topo de uma montanha?",
+        "options": ["Foi erguida sem ferramentas de metal ou argamassa, encaixando pedras com precisão", "Foi construída em apenas um mês, com mão de obra escrava", "Usou concreto romano importado por comerciantes", "Foi projetada por engenheiros europeus antes da colonização"],
+        "correct_answer": "Foi erguida sem ferramentas de metal ou argamassa, encaixando pedras com precisão",
+        "explanation": "Os incas encaixavam blocos de pedra com precisão milimétrica, sem argamassa e sem ferramentas de metal (que não usavam), resultando em construções que resistem a terremotos até hoje.",
+        "age_reviewed": True,
+        "hints": ["Pense em técnica de encaixe, não em cimento ou cola.", "É uma proeza de precisão manual, feita numa altitude e terreno difíceis."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 2,
+        "prompt": "O velcro foi inventado depois que seu criador observou o quê?",
+        "options": ["Sementes (carrapichos) grudadas no pelo do seu cachorro após uma caminhada", "Uma teia de aranha extremamente resistente", "Um tecido militar usado em paraquedas", "A forma como répteis se agarram a superfícies"],
+        "correct_answer": "Sementes (carrapichos) grudadas no pelo do seu cachorro após uma caminhada",
+        "explanation": "O engenheiro suíço George de Mestral examinou ao microscópio os carrapichos grudados no pelo do seu cão e reproduziu o mecanismo de ganchos e laços, criando o velcro.",
+        "age_reviewed": True,
+        "hints": ["A inspiração veio de uma caminhada no campo, não de um laboratório.", "Envolve um animal de estimação e uma planta que 'gruda' na pelagem."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 2,
+        "prompt": "O emoji, hoje usado no mundo inteiro, foi criado originalmente onde e por quem?",
+        "options": ["No Japão, por Shigetaka Kurita, para uma operadora de celular", "Nos Estados Unidos, por uma equipe de designers da Apple", "Na Coreia do Sul, como parte de um aplicativo de mensagens", "Na Finlândia, junto com o primeiro celular com tela colorida"],
+        "correct_answer": "No Japão, por Shigetaka Kurita, para uma operadora de celular",
+        "explanation": "Shigetaka Kurita criou o primeiro conjunto de emojis no Japão, em 1999, para um serviço de mensagens de uma operadora japonesa — décadas antes de virarem padrão mundial.",
+        "age_reviewed": True,
+        "hints": ["A origem é asiática, ligada a telefonia móvel antiga.", "O criador trabalhava numa operadora, não numa empresa de smartphones atual."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 2,
+        "prompt": "Qual foi um dos grandes desafios de engenharia na construção do Burj Khalifa, o arranha-céu mais alto do mundo?",
+        "options": ["Resistir a ventos fortíssimos em grande altitude, exigindo um formato afunilado e recuado", "Construir todo o prédio sem usar nenhum tipo de concreto", "Fazer a fundação flutuar sobre um lago artificial", "Evitar completamente o uso de vidro na fachada"],
+        "correct_answer": "Resistir a ventos fortíssimos em grande altitude, exigindo um formato afunilado e recuado",
+        "explanation": "O design em espiral e afunilado do Burj Khalifa foi pensado especificamente para reduzir a força do vento em cada andar, um desafio central de qualquer estrutura extremamente alta.",
+        "age_reviewed": True,
+        "hints": ["O problema principal em prédios muito altos não é o peso, é o vento.", "A forma do prédio (que vai afinando) existe por um motivo estrutural."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 2,
+        "prompt": "O código de barras, hoje em quase todo produto, foi inspirado em quê pelos seus criadores?",
+        "options": ["No código Morse, adaptado visualmente em linhas grossas e finas", "Em impressões digitais humanas", "Em padrões de tecido usados em roupas", "Em mapas de constelações"],
+        "correct_answer": "No código Morse, adaptado visualmente em linhas grossas e finas",
+        "explanation": "Norman Joseph Woodland, um dos inventores do código de barras, se inspirou no código Morse — que ele conhecia dos escoteiros — e o 'esticou' visualmente em linhas de espessuras variadas.",
+        "age_reviewed": True,
+        "hints": ["Pense em um sistema de comunicação por pontos e traços já conhecido.", "O inventor teve a ideia arrastando os dedos na areia, lembrando desse código."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 2,
+        "prompt": "O metrô de Londres, inaugurado em 1863, foi pioneiro em quê?",
+        "options": ["Foi o primeiro sistema de transporte ferroviário subterrâneo urbano do mundo", "Foi o primeiro trem movido inteiramente a energia solar", "Foi o primeiro transporte público totalmente automatizado, sem maquinista", "Foi a primeira linha ferroviária internacional da história"],
+        "correct_answer": "Foi o primeiro sistema de transporte ferroviário subterrâneo urbano do mundo",
+        "explanation": "O Metropolitan Railway de Londres, aberto em 1863, foi o primeiro sistema de metrô (ferrovia subterrânea urbana) do mundo, décadas antes de qualquer outra cidade construir o seu.",
+        "age_reviewed": True,
+        "hints": ["O feito é sobre SER O PRIMEIRO, em qualquer lugar do mundo, não sobre tecnologia moderna.", "É um marco de transporte urbano do século 19, não do século 20 ou 21."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 3,
+        "prompt": "A Coca-Cola, hoje um refrigerante popular, foi originalmente vendida como o quê, no século 19?",
+        "options": ["Um tônico medicinal, vendido em farmácias, prometendo aliviar dores de cabeça", "Um substituto barato do café para operários", "Uma bebida energética para atletas olímpicos", "Um xarope usado exclusivamente em coquetéis alcoólicos"],
+        "correct_answer": "Um tônico medicinal, vendido em farmácias, prometendo aliviar dores de cabeça",
+        "explanation": "Criada pelo farmacêutico John Pemberton, a Coca-Cola foi vendida inicialmente como tônico medicinal em farmácias, antes de se tornar o refrigerante de consumo popular que é hoje.",
+        "age_reviewed": True,
+        "hints": ["O criador era farmacêutico, não um fabricante de bebidas.", "Era vendida como remédio, prometendo benefícios à saúde."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 3,
+        "prompt": "Como o raio-X foi descoberto por Wilhelm Röntgen, em 1895?",
+        "options": ["Por acidente, ao notar que uma tela fluorescente brilhava perto de um tubo de raios catódicos que ele estudava", "Após anos de pesquisa dedicada exclusivamente a enxergar através de objetos", "Como parte de um projeto militar secreto de vigilância", "A partir de estudos sobre luz solar e vidro colorido"],
+        "correct_answer": "Por acidente, ao notar que uma tela fluorescente brilhava perto de um tubo de raios catódicos que ele estudava",
+        "explanation": "Röntgen estudava tubos de raios catódicos quando notou, por acaso, que uma tela fluorescente próxima brilhava mesmo com o tubo coberto — descobrindo um novo tipo de radiação, que batizou de 'raios X' por ser desconhecida.",
+        "age_reviewed": True,
+        "hints": ["O próprio nome 'X' já sugere que era algo desconhecido/misterioso na hora da descoberta.", "Envolveu observar um brilho inesperado onde não deveria haver luz nenhuma."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 3,
+        "prompt": "O Teflon, hoje usado em panelas antiaderentes, foi descoberto como?",
+        "options": ["Por acaso, quando um químico encontrou um gás que havia se transformado em um pó branco escorregadio dentro de um cilindro", "Como resultado direto de pesquisas sobre culinária e panelas", "Foi sintetizado deliberadamente para revestir naves espaciais", "Surgiu de testes com borracha vulcanizada"],
+        "correct_answer": "Por acaso, quando um químico encontrou um gás que havia se transformado em um pó branco escorregadio dentro de um cilindro",
+        "explanation": "O químico Roy Plunkett, pesquisando gases refrigerantes, abriu um cilindro que deveria conter gás e encontrou, em vez disso, um pó branco extremamente escorregadio — o politetrafluoretileno, mais tarde comercializado como Teflon.",
+        "age_reviewed": True,
+        "hints": ["A descoberta não tinha nada a ver com cozinha na origem — era sobre gases industriais.", "Um cilindro que 'devia' estar cheio de gás surpreendeu com um pó sólido dentro."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 3,
+        "prompt": "Qual é o mito comum sobre a Muralha da China que não é verdade?",
+        "options": ["Que ela é visível a olho nu do espaço — não é, dada sua largura estreita em relação à distância", "Que ela foi construída em várias dinastias diferentes ao longo dos séculos", "Que ela tinha função defensiva contra invasões", "Que partes dela usaram arroz glutinoso como argamassa"],
+        "correct_answer": "Que ela é visível a olho nu do espaço — não é, dada sua largura estreita em relação à distância",
+        "explanation": "Apesar de populacional, o mito de que a Muralha da China é visível a olho nu do espaço é falso — ela é estreita demais (poucos metros de largura) para ser distinguida a olho nu na distância orbital, mesmo sendo longuíssima.",
+        "age_reviewed": True,
+        "hints": ["As outras três alternativas são fatos reais e bem documentados sobre a muralha.", "O problema não é o comprimento da muralha, é a largura dela comparada à distância do espaço."],
+    },
+    {
+        "territory_id": "invencoes", "difficulty_level": 3,
+        "prompt": "Quando foi inaugurada, em 1889, qual foi a reação inicial de muitos parisienses à Torre Eiffel?",
+        "options": ["Foi duramente criticada por artistas e intelectuais, que a achavam feia e queriam derrubá-la depois da exposição", "Foi aclamada unanimemente como obra-prima desde o primeiro dia", "Foi ignorada, sem gerar nenhuma reação pública relevante", "Foi proibida de ser visitada por questões de segurança"],
+        "correct_answer": "Foi duramente criticada por artistas e intelectuais, que a achavam feia e queriam derrubá-la depois da exposição",
+        "explanation": "Um grupo de artistas e escritores franceses assinou uma petição pública chamando a torre de monstruosidade — ela era originalmente temporária, construída para uma exposição, e só permaneceu de pé por causa de sua utilidade posterior (antena de rádio).",
+        "age_reviewed": True,
+        "hints": ["A torre hoje é ícone querido, mas não começou assim.", "Ela era pra ser desmontada depois de um evento — algo mudou essa decisão depois."],
     },
 ]
 

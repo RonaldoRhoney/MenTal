@@ -112,6 +112,9 @@
   "territoryCacaPalavras": "Caça-palavras",
   "@territoryCacaPalavras": {"description": "Territory display name"},
 
+  "territoryInvencoes": "Invenções",
+  "@territoryInvencoes": {"description": "Territory display name"},
+
   "learningPauseButtonTooltip": "Pausa para Aprender",
   "@learningPauseButtonTooltip": {"description": "AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory"},
   "learningPauseScreenTitle": "Pausa para Aprender",
