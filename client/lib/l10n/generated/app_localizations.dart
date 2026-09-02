@@ -358,6 +358,12 @@ abstract class AppLocalizations {
   /// **'Invenções'**
   String get territoryInvencoes;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Carros, Motos e Aviões'**
+  String get territoryVeiculos;
+
   /// AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory
   ///
   /// In pt, this message translates to:
