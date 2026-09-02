@@ -1,0 +1,332 @@
+[
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 1,
+    "clues": [
+      "Sou o maior animal terrestre vivo hoje.",
+      "Tenho uma tromba enorme que uso quase como se fosse uma mão."
+    ],
+    "prompt": "Caso 1: Quem sou eu?",
+    "options": [
+      "Elefante",
+      "Rinoceronte",
+      "Girafa",
+      "Hipopótamo"
+    ],
+    "correct_answer": "Elefante",
+    "explanation": "A primeira pista (maior animal terrestre) já elimina girafa e hipopótamo; a segunda (tromba usada como mão) é exclusiva do elefante — nenhum outro animal terrestre tem esse órgão tão versátil.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em qual desses quatro animais tem uma tromba.",
+      "É o maior mamífero que vive em terra firme, não na água."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 1,
+    "clues": [
+      "Tenho duas rodas, e você precisa se equilibrar pedalando pra me usar.",
+      "Fui inventado antes do automóvel existir."
+    ],
+    "prompt": "Caso 2: O que sou eu?",
+    "options": [
+      "Bicicleta",
+      "Motocicleta",
+      "Patinete",
+      "Triciclo"
+    ],
+    "correct_answer": "Bicicleta",
+    "explanation": "A primeira pista (duas rodas + equilíbrio ao pedalar) já elimina triciclo (três rodas) e patinete (sem pedal tradicional); a segunda (antes do automóvel) elimina a motocicleta, que surgiu depois, já com motor.",
+    "age_reviewed": true,
+    "hints": [
+      "Não tem motor — o esforço pra mover é todo seu.",
+      "Duas rodas, uma na frente da outra, exigem equilíbrio ativo pra não cair."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 1,
+    "clues": [
+      "Sou o maior deserto QUENTE do mundo.",
+      "Fico no continente africano, na sua porção norte."
+    ],
+    "prompt": "Caso 3: Quem sou eu?",
+    "options": [
+      "Deserto do Saara",
+      "Deserto de Gobi",
+      "Deserto do Atacama",
+      "Deserto de Kalahari"
+    ],
+    "correct_answer": "Deserto do Saara",
+    "explanation": "A palavra 'quente' na primeira pista já elimina o Gobi (deserto frio, na Ásia); a segunda pista (norte da África) aponta diretamente para o Saara — Atacama fica na América do Sul e Kalahari, no sul da África.",
+    "age_reviewed": true,
+    "hints": [
+      "'Quente' é a palavra-chave — nem todo deserto é quente.",
+      "É o deserto mais famoso e mais citado do continente africano."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 1,
+    "clues": [
+      "Pintei um dos quadros mais famosos do mundo, com um sorriso enigmático.",
+      "Também fui inventor, cientista e engenheiro na Itália renascentista."
+    ],
+    "prompt": "Caso 4: Quem sou eu?",
+    "options": [
+      "Leonardo da Vinci",
+      "Michelangelo",
+      "Rafael",
+      "Botticelli"
+    ],
+    "correct_answer": "Leonardo da Vinci",
+    "explanation": "O 'sorriso enigmático' na primeira pista aponta para a Mona Lisa; a segunda pista (inventor/cientista/engenheiro, além de pintor) é a marca registrada de Leonardo da Vinci — os outros três nomes foram grandes pintores renascentistas, mas não tiveram essa faceta de engenheiro/inventor tão marcante.",
+    "age_reviewed": true,
+    "hints": [
+      "O quadro do sorriso enigmático é a Mona Lisa.",
+      "Este artista também projetou máquinas e estudou anatomia — mais que só pintura."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 1,
+    "clues": [
+      "Fui inventado para substituir o correio tradicional, e minha mensagem chega quase instantaneamente.",
+      "Meu nome, em inglês, vem de uma abreviação da palavra 'eletrônico'."
+    ],
+    "prompt": "Caso 5: O que sou eu?",
+    "options": [
+      "E-mail",
+      "Telégrafo",
+      "SMS",
+      "Fax"
+    ],
+    "correct_answer": "E-mail",
+    "explanation": "A segunda pista é decisiva: 'e-' em e-mail vem de 'electronic' — nenhuma das outras opções tem esse prefixo no nome. O telégrafo é mais antigo (não tem o prefixo 'e-'), e SMS/fax também não encaixam no nome descrito.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no nome em inglês — ele começa com uma letra que é uma abreviação.",
+      "Você usa isso todos os dias pra mandar mensagens escritas pela internet."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 2,
+    "clues": [
+      "Fui construída pra ser temporária, mas continuo de pé há mais de 130 anos.",
+      "No início, muitos artistas e intelectuais da minha própria cidade odiavam minha existência."
+    ],
+    "prompt": "Caso 6: Quem sou eu?",
+    "options": [
+      "Torre Eiffel",
+      "Estátua da Liberdade",
+      "Cristo Redentor",
+      "Coliseu"
+    ],
+    "correct_answer": "Torre Eiffel",
+    "explanation": "'Construída pra ser temporária' (originalmente ergida para uma exposição, com desmonte planejado) e 'artistas odiavam' (uma petição famosa de intelectuais parisienses contra sua construção) apontam especificamente para a Torre Eiffel — nenhum dos outros monumentos teve essa história de rejeição inicial nem foi pensado como temporário.",
+    "age_reviewed": true,
+    "hints": [
+      "Fica em Paris — foi construída para uma Exposição Universal.",
+      "Hoje é amada, mas nem sempre foi bem-vinda pelos moradores da cidade."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 2,
+    "clues": [
+      "Fui descoberta por acidente, quando um cientista deixou uma cultura de bactérias contaminada por um fungo.",
+      "Salvei milhões de vidas ao combater infecções bacterianas."
+    ],
+    "prompt": "Caso 7: O que sou eu?",
+    "options": [
+      "Penicilina",
+      "Vacina",
+      "Anestesia",
+      "Aspirina"
+    ],
+    "correct_answer": "Penicilina",
+    "explanation": "A descoberta acidental por contaminação de fungo em uma cultura de bactérias é especificamente a história de Alexander Fleming e a penicilina, o primeiro antibiótico — nenhuma das outras opções tem essa origem por acaso ligada a fungo/bactéria.",
+    "age_reviewed": true,
+    "hints": [
+      "Foi o primeiro antibiótico da história.",
+      "O 'acidente' envolveu mofo crescendo onde não devia, numa placa de laboratório esquecida."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 2,
+    "clues": [
+      "Sou o único mamífero capaz de voar de verdade, batendo asas como um pássaro.",
+      "Uso um tipo de 'radar sonoro' pra enxergar no escuro."
+    ],
+    "prompt": "Caso 8: Quem sou eu?",
+    "options": [
+      "Morcego",
+      "Esquilo-voador",
+      "Coruja",
+      "Andorinha"
+    ],
+    "correct_answer": "Morcego",
+    "explanation": "A primeira pista já elimina esquilo-voador (que plana, não bate asas) e as aves (coruja/andorinha não são mamíferos); a segunda pista (ecolocalização, o 'radar sonoro') é a característica mais famosa do morcego.",
+    "age_reviewed": true,
+    "hints": [
+      "'Voador' na coruja e na andorinha não vale — elas não são mamíferos.",
+      "A técnica de 'enxergar' com som se chama ecolocalização."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 2,
+    "clues": [
+      "Fui erguida como túmulo, mas hoje sou a única das sete maravilhas do mundo antigo ainda de pé.",
+      "Fico no Egito, perto da atual cidade do Cairo."
+    ],
+    "prompt": "Caso 9: Quem sou eu?",
+    "options": [
+      "Grande Pirâmide de Gizé",
+      "Coliseu",
+      "Estátua de Zeus em Olímpia",
+      "Farol de Alexandria"
+    ],
+    "correct_answer": "Grande Pirâmide de Gizé",
+    "explanation": "'Única das sete maravilhas do mundo antigo ainda de pé' é uma característica exclusiva da Grande Pirâmide de Gizé — todas as outras seis maravilhas antigas (incluindo Farol de Alexandria e Estátua de Zeus) já foram destruídas, e o Coliseu nem sequer é uma das sete maravilhas antigas.",
+    "age_reviewed": true,
+    "hints": [
+      "Foi construída como túmulo de um faraó.",
+      "É a mais antiga E a única das sete maravilhas antigas que sobrevive intacta até hoje."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 2,
+    "clues": [
+      "Fui a primeira mulher a vencer um Prêmio Nobel.",
+      "Sou, até hoje, a única pessoa a vencer o Nobel em duas áreas científicas diferentes."
+    ],
+    "prompt": "Caso 10: Quem sou eu?",
+    "options": [
+      "Marie Curie",
+      "Rosalind Franklin",
+      "Ada Lovelace",
+      "Marie Antoinette"
+    ],
+    "correct_answer": "Marie Curie",
+    "explanation": "As duas pistas juntas são exclusivas de Marie Curie: primeira mulher a vencer um Nobel (Física, 1903) e a única pessoa da história a vencer em duas ciências diferentes (Física e Química) — nenhuma das outras opções tem esse feito.",
+    "age_reviewed": true,
+    "hints": [
+      "Seus estudos foram sobre radioatividade — termo que ela ajudou a popularizar.",
+      "Venceu o Nobel de Física e, anos depois, o de Química."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 3,
+    "clues": [
+      "Fui projetado para ser praticamente inafundável, mas afundei na minha viagem de estreia.",
+      "Colidi com um iceberg no Oceano Atlântico Norte, em 1912."
+    ],
+    "prompt": "Caso 11: Quem sou eu?",
+    "options": [
+      "Titanic",
+      "Lusitania",
+      "Andrea Doria",
+      "Bismarck"
+    ],
+    "correct_answer": "Titanic",
+    "explanation": "A combinação de 'considerado inafundável', 'viagem de estreia' e 'colisão com iceberg em 1912' é exclusiva do Titanic — os outros três navios também naufragaram em desastres famosos, mas nenhum bate com essas três características ao mesmo tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "Foi a viagem inaugural desse navio — nunca tinha cruzado o Atlântico antes.",
+      "O ano do naufrágio é 1912."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 3,
+    "clues": [
+      "Minha escrita ficou incompreendida por séculos.",
+      "Uma pedra encontrada no Egito, com o mesmo texto repetido em três escritas diferentes, foi a chave para me decifrar."
+    ],
+    "prompt": "Caso 12: Que sistema de escrita sou eu?",
+    "options": [
+      "Hieróglifos egípcios",
+      "Escrita cuneiforme",
+      "Alfabeto fenício",
+      "Linear B"
+    ],
+    "correct_answer": "Hieróglifos egípcios",
+    "explanation": "A 'pedra com o mesmo texto em três escritas' é a Pedra de Roseta, encontrada no Egito — ela permitiu decifrar especificamente os hieróglifos egípcios, comparando-os com o grego antigo (uma das outras escritas gravadas na mesma pedra).",
+    "age_reviewed": true,
+    "hints": [
+      "A pedra que ajudou a decifrar essa escrita tem o nome de uma cidade egípcia.",
+      "É o sistema de escrita usado pelos antigos egípcios em templos e tumbas."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 3,
+    "clues": [
+      "Sou um fenômeno em que a luz do Sol se divide em várias cores ao atravessar gotas de água suspensas no ar.",
+      "Tradicionalmente, sete cores me são atribuídas, embora a transição entre elas seja contínua."
+    ],
+    "prompt": "Caso 13: Que fenômeno sou eu?",
+    "options": [
+      "Arco-íris",
+      "Aurora boreal",
+      "Halo solar",
+      "Miragem"
+    ],
+    "correct_answer": "Arco-íris",
+    "explanation": "A divisão da luz solar em cores ao atravessar gotas de água, tradicionalmente associada a sete cores, descreve exatamente o arco-íris — aurora boreal depende de partículas solares na atmosfera polar, halo solar envolve cristais de gelo, e miragem é um efeito óptico de temperatura, não de água.",
+    "age_reviewed": true,
+    "hints": [
+      "Costuma aparecer depois (ou durante) a chuva, com o Sol às costas de quem observa.",
+      "As sete cores tradicionais vão do vermelho ao violeta."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 3,
+    "clues": [
+      "Minha estrutura foi descrita pela primeira vez com a famosa forma de dupla hélice.",
+      "Sem o meu código, nenhuma característica hereditária poderia ser passada adiante."
+    ],
+    "prompt": "Caso 14: O que sou eu?",
+    "options": [
+      "DNA",
+      "RNA",
+      "Proteína",
+      "Cromossomo"
+    ],
+    "correct_answer": "DNA",
+    "explanation": "'Dupla hélice' é a descrição estrutural mais famosa do DNA (descrita por Watson e Crick); ele é o portador do código genético hereditário — RNA tem estrutura de fita simples, proteínas não carregam o código genético em si, e cromossomo é a estrutura que organiza o DNA, não o DNA propriamente dito.",
+    "age_reviewed": true,
+    "hints": [
+      "A forma da minha estrutura lembra uma escada torcida.",
+      "Guardo as 'instruções' que definem características hereditárias."
+    ]
+  },
+  {
+    "territory_id": "detetive_mental",
+    "difficulty_level": 3,
+    "clues": [
+      "Fui erguido em Berlim para dividir uma cidade em dois — capitalista de um lado, comunista do outro.",
+      "Minha queda, em 1989, é vista como um dos símbolos do fim da Guerra Fria."
+    ],
+    "prompt": "Caso 15: O que sou eu?",
+    "options": [
+      "Muro de Berlim",
+      "Cortina de Ferro",
+      "Linha Maginot",
+      "Muralha da China"
+    ],
+    "correct_answer": "Muro de Berlim",
+    "explanation": "A divisão física de Berlim em duas partes, com queda em 1989 símbolo do fim da Guerra Fria, é exclusiva do Muro de Berlim — 'Cortina de Ferro' era um conceito político mais amplo (não uma estrutura física única), Linha Maginot é francesa e da Segunda Guerra, e Muralha da China é muito mais antiga.",
+    "age_reviewed": true,
+    "hints": [
+      "Divide uma única cidade alemã, não um país inteiro.",
+      "Sua queda foi um evento muito comemorado, marcando o fim de uma era."
+    ]
+  }
+]
