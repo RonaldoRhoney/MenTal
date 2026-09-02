@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 1,
+    "prompt": "Qual é o veículo motorizado mais vendido da história, com mais de 100 milhões de unidades?",
+    "options": [
+      "A moto Honda Cub",
+      "O Fusca",
+      "O Ford Model T",
+      "O ônibus escolar americano"
+    ],
+    "correct_answer": "A moto Honda Cub",
+    "explanation": "A Honda Cub, uma moto pequena e simples lançada em 1958, já passou de 100 milhões de unidades vendidas — o veículo motorizado mais vendido de todos os tempos.",
+    "age_reviewed": true,
+    "hints": [
+      "É japonesa, pequena, e anda sobre duas rodas.",
+      "Foi lançada em 1958 e nunca parou de ser produzida."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 1,
+    "prompt": "O que os irmãos Wright fizeram em 1903, num marco histórico da aviação?",
+    "options": [
+      "Realizaram o primeiro voo controlado e sustentado de uma aeronave motorizada",
+      "Inventaram o primeiro balão de ar quente tripulado",
+      "Cruzaram o Oceano Atlântico voando pela primeira vez",
+      "Projetaram o primeiro avião comercial de passageiros"
+    ],
+    "correct_answer": "Realizaram o primeiro voo controlado e sustentado de uma aeronave motorizada",
+    "explanation": "Em 17 de dezembro de 1903, na Carolina do Norte (EUA), os irmãos Wright realizaram o primeiro voo controlado e sustentado de uma aeronave mais pesada que o ar, com motor.",
+    "age_reviewed": true,
+    "hints": [
+      "Não envolve balão nem travessia de oceano — é sobre um avião com motor de verdade.",
+      "Aconteceu no início do século 20, nos Estados Unidos."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 1,
+    "prompt": "Por que o Ford Model T, do início do século 20, foi tão importante para a história do automóvel?",
+    "options": [
+      "Foi um dos primeiros carros produzidos em linha de montagem, tornando-o acessível às massas",
+      "Foi o primeiro carro elétrico já fabricado",
+      "Foi o primeiro carro a ultrapassar 300 km/h",
+      "Foi o primeiro carro produzido fora dos Estados Unidos"
+    ],
+    "correct_answer": "Foi um dos primeiros carros produzidos em linha de montagem, tornando-o acessível às massas",
+    "explanation": "A produção em massa via linha de montagem reduziu drasticamente o custo do Model T, tornando o automóvel acessível a muito mais gente do que antes, quando carros eram artigos de luxo raros.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é sobre velocidade nem sobre ser elétrico — é sobre um novo jeito de FABRICAR.",
+      "A grande mudança foi tornar o carro mais barato de produzir e comprar."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 1,
+    "prompt": "Qual é a cor real da 'caixa-preta' dos aviões, usada para investigar acidentes?",
+    "options": [
+      "Laranja — para ser fácil de encontrar nos destroços",
+      "Preta mesmo, para combinar com o nome",
+      "Prateada, como o resto da fuselagem",
+      "Verde, para camuflagem em áreas de mata"
+    ],
+    "correct_answer": "Laranja — para ser fácil de encontrar nos destroços",
+    "explanation": "Apesar do nome 'caixa-preta', o equipamento é pintado de laranja vivo (ou vermelho) justamente para facilitar a localização em meio aos destroços após um acidente.",
+    "age_reviewed": true,
+    "hints": [
+      "O nome popular não corresponde à cor real — pense em uma cor bem chamativa.",
+      "A cor foi escolhida justamente para NÃO se camuflar em lugar nenhum."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 1,
+    "prompt": "O apelido 'Fusca', usado no Brasil para o Volkswagen Beetle, faz referência a quê?",
+    "options": [
+      "À semelhança do formato arredondado do carro com um besouro (inseto)",
+      "Ao nome do engenheiro que o projetou",
+      "A uma marca registrada oficial da fábrica",
+      "Ao som do motor, parecido com um zumbido de inseto"
+    ],
+    "correct_answer": "À semelhança do formato arredondado do carro com um besouro (inseto)",
+    "explanation": "'Fusca' vem de 'fuscus' (referência a besouro/inseto escuro) — o apelido, como 'Beetle' (besouro, em inglês) em outros países, remete ao formato arredondado do carro, parecido com um inseto.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na FORMA do carro, não no som ou em nomes próprios.",
+      "Em inglês, o mesmo carro é chamado de 'Beetle' — mesmo tipo de bicho."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 2,
+    "prompt": "Por que aviões comerciais não caem quando um dos motores falha em pleno voo?",
+    "options": [
+      "Aviões são projetados e certificados para voar e pousar com segurança mesmo com um motor parado",
+      "Porque todo avião tem um paraquedas embutido na fuselagem",
+      "Porque pilotos automáticos assumem o controle total nesses casos",
+      "Porque o motor que falha se desprende automaticamente do avião"
+    ],
+    "correct_answer": "Aviões são projetados e certificados para voar e pousar com segurança mesmo com um motor parado",
+    "explanation": "Aviões comerciais com múltiplos motores são projetados e certificados especificamente para manter voo seguro e pousar mesmo com um motor inoperante — é um requisito de segurança da aviação, não um acaso.",
+    "age_reviewed": true,
+    "hints": [
+      "Não tem nada a ver com paraquedas ou desprendimento de peças.",
+      "É uma exigência de projeto e certificação, pensada desde o início."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 2,
+    "prompt": "O que muitos não sabem sobre carros elétricos: quando eles realmente começaram a existir?",
+    "options": [
+      "Já existiam no final do século 19, antes dos carros a gasolina dominarem o mercado",
+      "Só surgiram nos anos 1990, como resposta a leis ambientais",
+      "Foram inventados nos anos 2000 por montadoras de tecnologia",
+      "Só se tornaram tecnicamente possíveis depois da invenção do smartphone"
+    ],
+    "correct_answer": "Já existiam no final do século 19, antes dos carros a gasolina dominarem o mercado",
+    "explanation": "Carros elétricos já circulavam no final do século 19 e início do século 20 — antes de motores a combustão se tornarem dominantes por causa do petróleo barato e da autonomia maior na época.",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta certa é muito mais antiga do que a maioria imagina.",
+      "Antes da gasolina dominar, elétricos e a vapor também disputavam o mercado."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 2,
+    "prompt": "O Concorde, avião comercial supersônico que operou até 2003, tinha como principal característica o quê?",
+    "options": [
+      "Voava mais rápido que o som, cruzando o Atlântico em cerca de 3 horas",
+      "Era o maior avião de passageiros já construído",
+      "Era movido a energia solar, sem usar combustível fóssil",
+      "Não precisava de pista para decolar, era um hidroavião"
+    ],
+    "correct_answer": "Voava mais rápido que o som, cruzando o Atlântico em cerca de 3 horas",
+    "explanation": "O Concorde era um avião supersônico, capaz de cruzar o Oceano Atlântico (Paris/Londres a Nova York) em cerca de 3 horas, bem menos que o tempo de um voo subsônico comum.",
+    "age_reviewed": true,
+    "hints": [
+      "A palavra 'supersônico' já entrega boa parte da resposta.",
+      "Não é sobre tamanho, energia solar ou decolagem na água — é sobre velocidade."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 2,
+    "prompt": "O cinto de segurança de três pontos, hoje padrão em praticamente todo carro, teve sua patente liberada gratuitamente por quê?",
+    "options": [
+      "O fabricante decidiu que a segurança era mais importante que o lucro exclusivo da patente",
+      "Por determinação de um tribunal internacional",
+      "Porque a patente expirou antes de ser usada por qualquer montadora",
+      "Porque nenhuma outra empresa quis pagar pelos direitos"
+    ],
+    "correct_answer": "O fabricante decidiu que a segurança era mais importante que o lucro exclusivo da patente",
+    "explanation": "A Volvo, que patenteou o cinto de três pontos em 1959, decidiu liberar a patente gratuitamente para toda a indústria automotiva, priorizando a segurança de vidas acima do lucro exclusivo.",
+    "age_reviewed": true,
+    "hints": [
+      "Foi uma decisão voluntária de quem criou a invenção, não uma imposição externa.",
+      "A lógica foi: 'segurança salva vidas, não deve ficar restrita a uma marca só'."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 2,
+    "prompt": "O airbag, item de segurança automotiva hoje padrão, tem como função principal o quê?",
+    "options": [
+      "Amortecer o impacto do corpo do ocupante contra partes rígidas do carro em uma colisão",
+      "Substituir completamente a função do cinto de segurança",
+      "Proteger apenas o motor contra danos em colisões frontais",
+      "Servir como flutuador em caso do carro cair na água"
+    ],
+    "correct_answer": "Amortecer o impacto do corpo do ocupante contra partes rígidas do carro em uma colisão",
+    "explanation": "O airbag infla em milissegundos durante uma colisão para amortecer o impacto do corpo contra o volante, painel ou outras partes rígidas — funciona em conjunto com o cinto, nunca no lugar dele.",
+    "age_reviewed": true,
+    "hints": [
+      "Ele trabalha JUNTO com o cinto de segurança, não sozinho.",
+      "A função é amortecer um impacto contra partes duras do veículo."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 3,
+    "prompt": "Por que aviões comerciais costumam voar a cerca de 10-12 km de altitude durante a viagem de cruzeiro?",
+    "options": [
+      "O ar mais fino nessa altitude gera menos resistência (arrasto), economizando combustível",
+      "É a única altitude onde o piloto automático funciona corretamente",
+      "É a altitude exigida por lei em todos os países do mundo",
+      "É onde a temperatura externa é mais alta, economizando aquecimento"
+    ],
+    "correct_answer": "O ar mais fino nessa altitude gera menos resistência (arrasto), economizando combustível",
+    "explanation": "Em altitudes mais altas, o ar é mais rarefeito (menos denso), reduzindo o arrasto aerodinâmico sobre a aeronave — isso permite voar de forma mais eficiente, gastando menos combustível na viagem de cruzeiro.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em densidade do ar, não em lei ou temperatura.",
+      "Menos resistência do ar significa gastar menos combustível pra manter a velocidade."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 3,
+    "prompt": "Qual é a diferença central entre um motor turbo e um motor 'aspirado' (sem turbo)?",
+    "options": [
+      "O turbo reaproveita os gases de escape para forçar mais ar para dentro do motor, aumentando a potência",
+      "O motor aspirado usa eletricidade para funcionar, o turbo não",
+      "O turbo só existe em motos, nunca em carros",
+      "O motor aspirado é sempre mais potente que qualquer motor turbo"
+    ],
+    "correct_answer": "O turbo reaproveita os gases de escape para forçar mais ar para dentro do motor, aumentando a potência",
+    "explanation": "O turbocompressor usa a energia dos próprios gases de escape (que sairiam do motor de qualquer forma) para girar uma turbina que comprime mais ar para dentro dos cilindros, aumentando a potência sem aumentar o tamanho do motor.",
+    "age_reviewed": true,
+    "hints": [
+      "A palavra-chave é 'reaproveitamento' — de algo que o motor já produz sozinho.",
+      "Não tem relação com eletricidade nem é exclusivo de motos."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 3,
+    "prompt": "Por que aviões comerciais costumam ter as asas 'enflechadas' (inclinadas para trás), em vez de retas?",
+    "options": [
+      "Isso atrasa os efeitos de compressibilidade do ar conforme a aeronave se aproxima da velocidade do som",
+      "É puramente uma questão estética, sem função aerodinâmica",
+      "Facilita a decolagem em pistas muito curtas",
+      "Reduz o peso total da aeronave, tornando-a mais leve"
+    ],
+    "correct_answer": "Isso atrasa os efeitos de compressibilidade do ar conforme a aeronave se aproxima da velocidade do som",
+    "explanation": "Em velocidades altas (próximas à do som), o ar se comporta de forma diferente sobre a asa — o formato enflechado retarda esses efeitos de compressibilidade, permitindo que o avião voe mais rápido com mais eficiência.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é estética nem sobre pista curta — é sobre física do ar em alta velocidade.",
+      "Pense em como o formato ajuda o avião a 'lidar' com se aproximar da velocidade do som."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 3,
+    "prompt": "Os veículos que já bateram recordes de velocidade terrestre (ultrapassando 1000 km/h) são movidos por qual tipo de propulsão?",
+    "options": [
+      "Motores a jato ou foguete, não motores a pistão convencionais",
+      "Motores elétricos de altíssima potência",
+      "Motores a pistão turbinados ao extremo",
+      "Motores híbridos gasolina-elétrico"
+    ],
+    "correct_answer": "Motores a jato ou foguete, não motores a pistão convencionais",
+    "explanation": "Os veículos de recorde de velocidade terrestre mais rápidos da história usam propulsão a jato ou foguete (como aviões/mísseis), não motores a pistão tradicionais — a potência necessária ultrapassa o que esse tipo de motor conseguiria entregar.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na mesma tecnologia usada em aviões militares, não em carros de rua.",
+      "Motor a pistão convencional não chega nem perto dessas velocidades."
+    ]
+  },
+  {
+    "territory_id": "veiculos",
+    "difficulty_level": 3,
+    "prompt": "Por que, para virar uma moto em alta velocidade para a direita, o piloto na verdade empurra levemente o guidão para a direita de um jeito contraintuitivo (chamado de 'contra-esterço')?",
+    "options": [
+      "Esse pequeno movimento inicial faz a moto inclinar na direção certa, e é a inclinação que realmente faz a curva",
+      "É apenas um mito popular sem nenhuma base física real",
+      "Serve só para ajustar o espelho retrovisor durante a curva",
+      "É uma técnica usada exclusivamente em corridas, nunca no trânsito comum"
+    ],
+    "correct_answer": "Esse pequeno movimento inicial faz a moto inclinar na direção certa, e é a inclinação que realmente faz a curva",
+    "explanation": "Em velocidades mais altas, um leve empurrão no guidão para o lado 'errado' faz a moto inclinar rapidamente para o lado certo — é essa inclinação (não o giro direto do guidão) que efetivamente realiza a curva. É física real, usada o tempo todo por qualquer motociclista, mesmo sem perceber.",
+    "age_reviewed": true,
+    "hints": [
+      "Não é mito nem coisa de retrovisor — é um efeito físico real de duas rodas em movimento.",
+      "Todo motociclista faz isso o tempo todo, mesmo sem perceber conscientemente."
+    ]
+  }
+]
