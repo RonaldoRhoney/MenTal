@@ -39,23 +39,31 @@ _ALLOWED_PHOTO_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
 
 def _is_valid_photo_path(path: str, user_id: str) -> bool:
     """
-    Validação leve, só de forma do path — confirma que aponta pra
-    DENTRO DA PRÓPRIA pasta do usuário autenticado (mesma regra que a
-    policy de escrita do Storage já aplica: auth.uid()::text =
-    (storage.foldername(name))[1]) e tem uma extensão de imagem
-    permitida. NÃO inspeciona o conteúdo real do arquivo (magic bytes)
-    — validação de conteúdo de verdade ficaria a cargo de uma Storage
-    Edge Function/webhook, fora do escopo desta etapa.
+    Confirma que o path é EXATAMENTE o esperado pra este usuário —
+    "{user_id}/photo.{ext}", com uma das extensões permitidas — nunca
+    apenas um prefixo. NÃO inspeciona o conteúdo real do arquivo (magic
+    bytes) — validação de conteúdo de verdade ficaria a cargo de uma
+    Storage Edge Function/webhook, fora do escopo desta etapa.
 
     Revisão 28/08/2026: bucket profile-photos virou privado (DIR-001/
     POL-002 exigiam isso) — o client agora manda o PATH dentro do
-    bucket (ex.: "{user_id}/photo.jpg"), nunca mais uma URL pública fixa
-    (que nem funcionaria pra leitura num bucket privado). Achado de
-    auditoria de segurança anterior (28/08/2026) continua valendo: sem
-    checar que o path é da PRÓPRIA pasta, um usuário podia "roubar" a
-    foto de outro mandando o path dele.
+    bucket (ex.: "{user_id}/photo.jpg"), nunca mais uma URL pública fixa.
+
+    Achado de auditoria de segurança (01/09/2026, CRÍTICO): a versão
+    anterior desta função só checava `path.startswith(f"{user_id}/")` —
+    um path como "{user_id}/../{outro_user_id}/photo.jpg" PASSAVA nessa
+    checagem (começa com o prefixo certo), mas o httpx normaliza os
+    segmentos ".." antes de mandar a requisição pro Supabase Storage,
+    resultando numa chamada real pra pasta de OUTRO usuário — leitura
+    (URL assinada), e até remoção (na exclusão de conta) da foto
+    alheia. Exigir igualdade EXATA com a única forma canônica válida
+    elimina qualquer variante desse ataque (".." , "//", múltiplos
+    níveis de pasta etc.), não só o caso specific de "..".
     """
-    return path.startswith(f"{user_id}/") and path.lower().endswith(_ALLOWED_PHOTO_EXTENSIONS)
+    ext = path.rsplit(".", 1)[-1].lower() if "." in path else ""
+    if f".{ext}" not in _ALLOWED_PHOTO_EXTENSIONS:
+        return False
+    return path == f"{user_id}/photo.{ext}"
 
 
 def _profile_out(profile: models.Profile) -> schemas.ProfileOut:

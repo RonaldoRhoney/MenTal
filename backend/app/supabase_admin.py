@@ -38,6 +38,18 @@ def _admin_headers() -> dict[str, str] | None:
     }
 
 
+def _reject_path_traversal(path: str) -> None:
+    """
+    Segunda camada de defesa (achado de auditoria CRÍTICO, 01/09/2026)
+    — o chamador (routers/profile.py::_is_valid_photo_path) já exige
+    igualdade EXATA com "{user_id}/photo.{ext}", mas path traversal em
+    acesso a storage é grave o bastante (leitura/remoção cruzada de
+    foto alheia) pra não depender de uma única camada de validação.
+    """
+    if ".." in path or "\\" in path or "\x00" in path:
+        raise ValueError(f"path de storage suspeito de traversal: {path!r}")
+
+
 def create_signed_photo_url(path: str, expires_in_seconds: int = 3600) -> str | None:
     """
     URL temporária de leitura pro bucket privado `profile-photos`
@@ -46,6 +58,7 @@ def create_signed_photo_url(path: str, expires_in_seconds: int = 3600) -> str | 
     a credencial de admin não estiver configurada (fallback: chamador
     trata como "foto indisponível", nunca quebra a resposta principal).
     """
+    _reject_path_traversal(path)
     headers = _admin_headers()
     if headers is None:
         return None

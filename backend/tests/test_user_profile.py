@@ -147,6 +147,31 @@ def test_photo_path_pointing_to_another_users_folder_is_rejected(client):
     assert resp.json()["error"]["code"] == "INVALID_PHOTO_URL"
 
 
+def test_photo_path_traversal_to_another_users_folder_is_rejected(client):
+    """
+    Achado de auditoria de segurança CRÍTICO (01/09/2026): a checagem
+    antiga só conferia `path.startswith(f"{user_id}/")` — um path como
+    "{user_id}/../{outro_user_id}/photo.jpg" passava por essa checagem
+    (começa com o prefixo certo), mas o httpx normaliza os segmentos
+    ".." antes de mandar a requisição ao Supabase Storage, resultando
+    numa chamada real pra pasta de OUTRO usuário (leitura/remoção
+    cruzada da foto alheia). Cobre ".." e também "//" duplicado, que
+    normalizadores de URL costumam colapsar do mesmo jeito.
+    """
+    user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
+    headers_a = auth_header(user_a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+
+    for payload in (
+        f"{user_a}/../{user_b}/photo.jpg",
+        f"{user_a}//../{user_b}/photo.jpg",
+        f"{user_a}/../../{user_b}/photo.jpg",
+    ):
+        resp = client.put("/profile", json={"photo_path": payload}, headers=headers_a)
+        assert resp.status_code == 422, payload
+        assert resp.json()["error"]["code"] == "INVALID_PHOTO_URL", payload
+
+
 def test_onboarding_stays_incomplete_until_all_5_mandatory_fields_filled(client):
     """
     Cadastro mínimo obrigatório (26/08/2026, revisado 28/08/2026): nome,
