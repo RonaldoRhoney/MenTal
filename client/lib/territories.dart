@@ -1,5 +1,20 @@
 import 'l10n/generated/app_localizations.dart';
 
+/// Territórios sempre cronometrados no backend (config.ALWAYS_TIMED_
+/// TERRITORIES, routers/challenges.py::next_challenge) — o servidor já
+/// ignora `mode` e sempre serve com timer, independente do que o client
+/// pedir. Usado só pra decidir a UI da Home: mostrar um botão
+/// "Relâmpago" separado ao lado do botão normal é redundante e confuso
+/// aqui, já que os dois abrem o MESMO formato cronometrado (achado real,
+/// pedido de Rhoney 2026-09-03: "busque erros... em Desafio de cores e
+/// relâmpago" — tocar em qualquer um dos dois botões de Cores é
+/// indistinguível pro jogador).
+const Set<String> kAlwaysTimedTerritoryIds = {
+  'conhecimento',
+  'cores',
+  'curiosidade_relampago',
+};
+
 /// Ids dos 4 territórios do V1 — compartilhado entre Home, Progress e
 /// Challenge para não duplicar a lista nem o mapeamento id→label.
 const List<String> kTerritoryIds = [

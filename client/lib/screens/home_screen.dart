@@ -1229,27 +1229,38 @@ class _TerritoryCard extends StatelessWidget {
         // Rhoney: "em todos os módulos tem que haver um relâmpago") —
         // backend já aceita mode=relampago em qualquer território
         // (routers/challenges.py), nunca mais restrito a "palavras".
-        const SizedBox(height: 8),
-        OutlinedButton(
-          style: OutlinedButton.styleFrom(side: BorderSide(color: progressColor.withValues(alpha: 0.6))),
-          onPressed: () async {
-            await Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => ChallengeScreen(
-                  client: client,
-                  territoryId: territoryId,
-                  territoryLabel: label,
-                  relampago: true,
+        //
+        // Achado real (pedido de Rhoney, 2026-09-03: "busque erros...
+        // em Desafio de cores e relâmpago"): territórios em
+        // kAlwaysTimedTerritoryIds (Cores, Conhecimento, Curiosidade
+        // Relâmpago) já são SEMPRE cronometrados no backend, com ou sem
+        // mode=relampago — mostrar um segundo botão "Relâmpago" ao lado
+        // do botão normal é redundante e confuso, já que os dois abrem
+        // exatamente o mesmo formato (a única diferença real, um piso
+        // de dificuldade mínima, é invisível pro jogador).
+        if (!kAlwaysTimedTerritoryIds.contains(territoryId)) ...[
+          const SizedBox(height: 8),
+          OutlinedButton(
+            style: OutlinedButton.styleFrom(side: BorderSide(color: progressColor.withValues(alpha: 0.6))),
+            onPressed: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => ChallengeScreen(
+                    client: client,
+                    territoryId: territoryId,
+                    territoryLabel: label,
+                    relampago: true,
+                  ),
                 ),
-              ),
-            );
-            onReturned();
-          },
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Text(l10n.relampagoModeLabel, textAlign: TextAlign.center, maxLines: 1),
+              );
+              onReturned();
+            },
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(l10n.relampagoModeLabel, textAlign: TextAlign.center, maxLines: 1),
+            ),
           ),
-        ),
+        ],
       ],
     );
   }

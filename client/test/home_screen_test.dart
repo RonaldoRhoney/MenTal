@@ -203,6 +203,12 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byIcon(Icons.auto_awesome), findsOneWidget);
+
+    // Achado real (pedido de Rhoney, 2026-09-03): territórios sempre
+    // cronometrados (kAlwaysTimedTerritoryIds) não ganham um segundo
+    // botão "Relâmpago" redundante — só "palavras" (normal) tem um;
+    // "curiosidade_relampago" (já sempre timed) não.
+    expect(find.text('⚡ Relâmpago'), findsOneWidget);
   });
 
   testWidgets('busca por tema (nome de território) navega direto pro território, sem chamar o backend', (tester) async {
