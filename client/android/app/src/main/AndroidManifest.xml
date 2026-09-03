@@ -5,6 +5,15 @@
          usuário abre a tela de Movimento pela primeira vez, nunca no
          onboarding genérico. -->
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <!-- Achado testando no celular real (02/09/2026): sem esta permissão
+         (normal, concedida automaticamente na instalação — não pede
+         diálogo em runtime), o Android 12+ (API 31+) bloqueia o registro
+         do sensor TYPE_STEP_COUNTER com "Permission failure:
+         HIGH_SAMPLING_RATE_SENSORS", mesmo com ACTIVITY_RECOGNITION já
+         concedida — a tela de Movimento mostrava "Não foi possível ler o
+         sensor de passos agora" permanentemente, mesmo após conceder a
+         permissão certa. -->
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
     <!-- V2 item 8 — Notificações (NOTIFICATIONS.md). Exigida em runtime
          pelo Android 13+ (API 33+) para exibir notificações — o próprio
          FirebaseMessaging.requestPermission() já cuida de pedir essa
