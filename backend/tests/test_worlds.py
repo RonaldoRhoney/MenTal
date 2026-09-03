@@ -50,8 +50,11 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     # Cultura Geral (esportes/regioes/cultura_pop) aos dois mundos
     # originais. V3.0.1 (cores) entra em Mente Lógica; V3.1 (mitologia/
     # enem/concursos) entra em Cultura Geral, junto dos demais
-    # territórios de trivia.
-    assert set(worlds.keys()) == {"linguagem", "mente_logica", "cultura_geral"}
+    # territórios de trivia. PROMPT_CLAUDE_CODE_MUNDO_DESCOBERTA.md
+    # (aprovado): os 5 territórios novos da V4 saem de Cultura Geral
+    # (que ficou extenso demais) e ganham Mundo da Descoberta próprio —
+    # pura reorganização de agrupamento, nunca afeta XP/progresso.
+    assert set(worlds.keys()) == {"linguagem", "mente_logica", "cultura_geral", "descoberta"}
     assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas", "redacao"}
     assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento", "cores"}
     assert set(worlds["cultura_geral"]["territory_ids"]) == {
@@ -64,6 +67,8 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "curiosidade_relampago",
         "libras",
         "caca_palavras",
+    }
+    assert set(worlds["descoberta"]["territory_ids"]) == {
         "invencoes",
         "veiculos",
         "astronomia",
@@ -73,6 +78,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     assert worlds["linguagem"]["completed"] is False
     assert worlds["mente_logica"]["completed"] is False
     assert worlds["cultura_geral"]["completed"] is False
+    assert worlds["descoberta"]["completed"] is False
 
 
 def test_world_just_completed_fires_once_at_the_exact_last_territory(client):

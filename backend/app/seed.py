@@ -11,6 +11,13 @@ WORLDS = [
     # primeira fase de conteúdo novo pós-teste fechado. Trivia geral,
     # mesmo tier avançado de "conhecimento" (requires_subscription).
     {"id": "cultura_geral", "name": "Mundo da Cultura Geral", "display_order": 3},
+    # PROMPT_CLAUDE_CODE_MUNDO_DESCOBERTA.md — Mundo Cultura Geral ficou
+    # extenso demais pra navegar; os 5 territórios novos da V4 (Invenções,
+    # Veículos, Astronomia, Detetive Mental, Ouvido Afiado) ganham Mundo
+    # próprio. Reorganização pura de agrupamento — "mundo completo" nunca
+    # é armazenado, é sempre derivado de UserTerritoryProgress, então
+    # isso não afeta XP/progresso/estatística de ninguém.
+    {"id": "descoberta", "name": "Mundo da Descoberta", "display_order": 4},
 ]
 
 # Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
@@ -184,31 +191,31 @@ TERRITORIES = [
     # humano — não sobre o objeto/construção em si como fato isolado
     # (diferenciação explícita do doc de origem: não é Tecnologia nem
     # Artes nem Curiosidade Relâmpago genérico).
-    {"id": "invencoes", "challenge_type": "invencoes", "requires_subscription": True, "free_sample_count": 2, "display_order": 35, "world_id": "cultura_geral"},
+    {"id": "invencoes", "challenge_type": "invencoes", "requires_subscription": True, "free_sample_count": 2, "display_order": 35, "world_id": "descoberta"},
     # V4 — Carros, Motos e Aviões (V4/V4_NOVOS_TERRITORIOS.md §2).
     # Segundo dos 5 territórios novos da V4. Sobre o veículo como objeto
     # de fascínio/curiosidade histórica-cultural — nunca comparação
     # comercial entre marcas nem propaganda implícita de fabricante
     # (regra explícita do doc de origem).
-    {"id": "veiculos", "challenge_type": "veiculos", "requires_subscription": True, "free_sample_count": 2, "display_order": 36, "world_id": "cultura_geral"},
+    {"id": "veiculos", "challenge_type": "veiculos", "requires_subscription": True, "free_sample_count": 2, "display_order": 36, "world_id": "descoberta"},
     # V4 — Astronomia e Espaço (V4/V4_NOVOS_TERRITORIOS.md §5). Terceiro
     # dos 5 territórios novos da V4. Universo natural, corpos celestes,
     # exploração espacial e fenômenos astronômicos — nunca sobrepõe
     # Tecnologia-Fronteira (IA/computação quântica, feito humano) nem
     # Curiosidade Relâmpago genérico (aqui o tema é fixo: o cosmos).
-    {"id": "astronomia", "challenge_type": "astronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 37, "world_id": "cultura_geral"},
+    {"id": "astronomia", "challenge_type": "astronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 37, "world_id": "descoberta"},
     # V4 — Detetive Mental (V4/V4_NOVOS_TERRITORIOS.md §4). Quarto dos 5
     # territórios novos da V4 — primeiro a mudar a ESTRUTURA do desafio
     # (2-3 pistas reveladas em etapas antes da pergunta final), não só o
     # assunto. Extensão do formato Relâmpago já existente (nova coluna
     # opcional `clues` em Challenge), nunca um mecanismo do zero.
-    {"id": "detetive_mental", "challenge_type": "detetive_mental", "requires_subscription": True, "free_sample_count": 2, "display_order": 38, "world_id": "cultura_geral"},
+    {"id": "detetive_mental", "challenge_type": "detetive_mental", "requires_subscription": True, "free_sample_count": 2, "display_order": 38, "world_id": "descoberta"},
     # V4 — Ouvido Afiado (V4/V4_NOVOS_TERRITORIOS.md §3). Quinto e último
     # dos 5 territórios novos da V4 — primeiro bloco a mudar a MODALIDADE
     # SENSORIAL do desafio (áudio, não texto/imagem). Extensão do formato
     # Challenge já existente (audio_url/audio_source_name/audio_source_url,
     # nunca um mecanismo do zero).
-    {"id": "ouvido_afiado", "challenge_type": "ouvido_afiado", "requires_subscription": True, "free_sample_count": 2, "display_order": 39, "world_id": "cultura_geral"},
+    {"id": "ouvido_afiado", "challenge_type": "ouvido_afiado", "requires_subscription": True, "free_sample_count": 2, "display_order": 39, "world_id": "descoberta"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
