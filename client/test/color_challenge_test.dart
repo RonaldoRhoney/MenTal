@@ -4,8 +4,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mental/color_challenge.dart';
 
 /// Efeito Stroop clássico no território "cores" (pedido de Rhoney,
-/// 2026-09-03: "está muito fácil... a cor da pergunta deve ser
-/// colorida de outra criando maior grau de dificuldade").
+/// 2026-09-03, 3 rodadas de ajuste testando no aparelho real):
+/// enunciado fica neutro; as 4 caixas de resposta usam as cores REAIS
+/// das próprias alternativas, embaralhadas entre si — nenhuma caixa
+/// mostra a cor que ela mesma nomeia, e a cor pedida no enunciado
+/// sempre aparece em alguma caixa ERRADA (confusão deliberada).
 void main() {
   test('colorForWord reconhece todas as 12 cores curadas, case-insensitive', () {
     expect(colorForWord('Vermelha'), isNotNull);
@@ -14,34 +17,41 @@ void main() {
     expect(colorForWord('não-é-uma-cor'), isNull);
   });
 
-  test('buildColorChallengePromptSpans destaca a palavra-alvo numa tinta diferente da cor que ela nomeia', () {
-    const style = TextStyle(fontSize: 20);
-    final spans = buildColorChallengePromptSpans('Toque na cor Vermelha.', style);
-
-    // 3 pedaços: antes da palavra, a palavra em si, depois da palavra.
-    expect(spans.length, 3);
-    expect(spans[0].text, 'Toque na cor ');
-    expect(spans[1].text, 'Vermelha');
-    expect(spans[2].text, '.');
-
-    // A tinta da palavra-alvo NUNCA é a cor que ela mesma nomeia —
-    // essa é a interferência de Stroop que cria a dificuldade real.
-    expect(spans[1].style?.color, isNot(equals(colorForWord('Vermelha'))));
+  test('deriveOptionBoxColors nunca deixa uma caixa com a cor que ela mesma nomeia', () {
+    // Achado real (03/09/2026, Rhoney: "as cores estão entregando a
+    // resposta") — cada caixa precisa de uma cor DIFERENTE da que ela
+    // nomeia, senão dá pra achar a resposta certa só pela cor, sem ler.
+    const options = ['Vermelha', 'Azul', 'Verde', 'Amarela'];
+    for (final prompt in ['Toque na cor Vermelha.', 'Toque na cor Azul.', 'Encontre rápido: a cor Verde.']) {
+      final boxColors = deriveOptionBoxColors(prompt, options);
+      expect(boxColors.length, options.length);
+      for (var i = 0; i < options.length; i++) {
+        expect(boxColors[i], isNot(equals(colorForWord(options[i]))), reason: 'prompt=$prompt opção=${options[i]}');
+      }
+    }
   });
 
-  test('mesmo prompt sempre produz a mesma tinta de armadilha (determinístico, não pisca ao reconstruir)', () {
-    const style = TextStyle(fontSize: 20);
-    final first = buildColorChallengePromptSpans('Toque na cor Azul.', style);
-    final second = buildColorChallengePromptSpans('Toque na cor Azul.', style);
+  test('a cor pedida no enunciado sempre aparece em alguma caixa (a confusão pedida por Rhoney)', () {
+    const options = ['Vermelha', 'Azul', 'Verde', 'Amarela'];
+    final boxColors = deriveOptionBoxColors('Toque na cor Verde.', options);
 
-    expect(first[1].style?.color, second[1].style?.color);
+    // "a cor da pergunta na resposta deve confundir o usuário" — a cor
+    // Verde precisa estar presente em alguma caixa (necessariamente uma
+    // caixa ERRADA, já que a própria caixa "Verde" nunca pode ser
+    // colorida de verde, conforme o teste acima).
+    expect(boxColors, contains(colorForWord('Verde')));
   });
 
-  test('prompt sem nenhuma cor conhecida não quebra — devolve o texto original sem destaque', () {
-    const style = TextStyle(fontSize: 20);
-    final spans = buildColorChallengePromptSpans('Quanto é 2 + 2?', style);
+  test('deriveOptionBoxColors é determinístico pro mesmo prompt (não pisca ao reconstruir)', () {
+    const options = ['Vermelha', 'Azul', 'Verde', 'Amarela'];
+    final first = deriveOptionBoxColors('Toque na cor Azul.', options);
+    final second = deriveOptionBoxColors('Toque na cor Azul.', options);
 
-    expect(spans.length, 1);
-    expect(spans[0].text, 'Quanto é 2 + 2?');
+    expect(first, second);
+  });
+
+  test('readableTextColorOn escolhe preto ou branco pelo contraste real', () {
+    expect(readableTextColorOn(const Color(0xFFFFFFFF)), Colors.black87);
+    expect(readableTextColorOn(const Color(0xFF000000)), Colors.white);
   });
 }

@@ -4,19 +4,21 @@ import 'package:flutter/material.dart';
 
 /// V3.0.1_DESAFIO_CORES.md descrevia uma versão "Stroop simplificada"
 /// (texto neutro, sem interferência de cor). Pedido de Rhoney
-/// (2026-09-03, testando o Relâmpago real: "está muito fácil, as
-/// respostas devem ter cores e a cor da pergunta deve ser colorida de
-/// outra criando maior grau de dificuldade") substitui isso pela
-/// versão CLÁSSICA do efeito Stroop: as alternativas aparecem coloridas
-/// na cor que nomeiam, e a palavra-alvo dentro do enunciado aparece
-/// numa tinta DIFERENTE da cor que ela nomeia — o jogador precisa ler
-/// (não só reconhecer a cor) sob pressão de tempo, o que é
-/// genuinamente mais difícil que a versão neutra anterior.
-///
-/// Puramente visual — nunca muda challenge_id/options/correct_answer
-/// nem qualquer contrato com o backend, só como o client pinta o texto
-/// já existente. Território "cores" continua 100% de responsabilidade
-/// do backend pra XP/resultado; isto é só apresentação.
+/// (2026-09-03, testando o Relâmpago real) evoluiu em 3 rodadas até
+/// este desenho final:
+/// 1ª tentativa (texto de cada alternativa na cor que ela mesma nomeia)
+///    — rejeitada: "as cores estão entregando a resposta" (dava pra
+///    achar só procurando "o botão da cor certa", sem ler).
+/// 2ª tentativa (cor do ENUNCIADO destacada numa tinta diferente) —
+///    rejeitada: "a cor da pergunta não precisa ser colorida".
+/// Desenho final: o ENUNCIADO fica neutro (sem destaque). As 4 CAIXAS
+/// de resposta (fundo, não só o texto) recebem as cores REAIS das 4
+/// alternativas desta pergunta, mas EMBARALHADAS entre si — nenhuma
+/// caixa fica com a cor que ela mesma nomeia (não entrega a resposta),
+/// e a cor pedida no enunciado aparece garantidamente em alguma caixa
+/// ERRADA ("a cor da pergunta na resposta deve confundir o usuário").
+/// O jogador só acerta lendo o texto de cada caixa, nunca reconhecendo
+/// a cor de relance.
 const Map<String, Color> kColorChallengePalette = {
   'vermelha': Color(0xFFE53935),
   'azul': Color(0xFF2979FF),
@@ -41,36 +43,32 @@ String _normalize(String word) => word.trim().toLowerCase();
 
 Color? colorForWord(String word) => kColorChallengePalette[_normalize(word)];
 
-/// Monta o enunciado com a palavra-alvo destacada numa tinta diferente
-/// da cor que ela nomeia (interferência de Stroop). Escolhe a cor da
-/// tinta de forma determinística a partir do próprio prompt (mesmo
-/// enunciado sempre rende a mesma "armadilha visual" — não pisca ao
-/// reconstruir o widget), sempre excluindo a cor real nomeada.
-List<TextSpan> buildColorChallengePromptSpans(String prompt, TextStyle? baseStyle) {
-  for (final entry in kColorChallengePalette.entries) {
-    final wordName = entry.key;
-    // Encontra a palavra no prompt preservando a capitalização original
-    // (conteúdo curado sempre capitaliza o nome da cor, ex.: "Vermelha").
-    final pattern = RegExp(wordName, caseSensitive: false);
-    final match = pattern.firstMatch(prompt);
-    if (match == null) continue;
+/// Cor de texto legível sobre um fundo qualquer da paleta acima —
+/// preto ou branco, o que tiver mais contraste (ex.: fundo "Amarela"
+/// pede texto escuro; fundo "Roxa" pede texto claro).
+Color readableTextColorOn(Color background) {
+  return ThemeData.estimateBrightnessForColor(background) == Brightness.dark ? Colors.white : Colors.black87;
+}
 
-    final decoyOptions = kColorChallengePalette.keys.where((k) => k != wordName).toList();
-    final seed = prompt.hashCode;
-    final decoyWord = decoyOptions[Random(seed).nextInt(decoyOptions.length)];
-    final decoyColor = kColorChallengePalette[decoyWord]!;
+/// Deriva a cor de FUNDO de cada caixa de alternativa, embaralhando as
+/// cores reais das próprias `options` desta pergunta entre si — nunca
+/// a cor que a caixa mesma nomeia. Um deslocamento cíclico (rotação por
+/// 1..n-1 posições) sobre uma lista de cores distintas garante
+/// matematicamente que nenhuma posição mantém sua própria cor
+/// (derangement), incluindo a caixa da resposta certa. Como as 4 cores
+/// usadas são exatamente as das alternativas desta pergunta, a cor
+/// pedida no enunciado sempre aparece em alguma caixa ERRADA — a
+/// confusão visual pedida por Rhoney.
+///
+/// `contextSeed` (o prompt) decide a rotação de forma determinística —
+/// mesma pergunta sempre embaralha do mesmo jeito (não pisca ao
+/// reconstruir o widget), mas perguntas diferentes não repetem sempre o
+/// mesmo deslocamento (evita decorar "gira sempre 1 posição").
+List<Color> deriveOptionBoxColors(String contextSeed, List<String> options) {
+  final trueColors = [for (final o in options) colorForWord(o) ?? kColorChallengePalette['cinza']!];
+  final n = trueColors.length;
+  if (n < 2) return trueColors;
 
-    return [
-      TextSpan(text: prompt.substring(0, match.start), style: baseStyle),
-      TextSpan(
-        text: prompt.substring(match.start, match.end),
-        style: baseStyle?.copyWith(color: decoyColor, fontWeight: FontWeight.w800),
-      ),
-      TextSpan(text: prompt.substring(match.end), style: baseStyle),
-    ];
-  }
-  // Nenhuma cor conhecida encontrada no prompt (não deveria acontecer
-  // pro território "cores" com conteúdo curado) — mostra sem destaque,
-  // nunca quebra a tela por causa de um enunciado inesperado.
-  return [TextSpan(text: prompt, style: baseStyle)];
+  final shift = 1 + Random(contextSeed.hashCode).nextInt(n - 1);
+  return List.generate(n, (i) => trueColors[(i + shift) % n]);
 }

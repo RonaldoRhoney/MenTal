@@ -867,29 +867,44 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 ],
                 if (challenge['audio_url'] != null)
                   _buildAudioPlayerSection(challenge['audio_url'] as String, challenge['audio_source_name'] as String?),
-                widget.territoryId == 'cores'
-                    ? Text.rich(
-                        TextSpan(
-                          children: buildColorChallengePromptSpans(
-                            challenge['prompt'] as String,
-                            Theme.of(context).textTheme.headlineSmall,
+                Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
+                const SizedBox(height: 24),
+                if (widget.territoryId == 'cores') ...[
+                  // Efeito Stroop clássico (pedido de Rhoney, 2026-09-03,
+                  // 3 rodadas de ajuste até este desenho): enunciado
+                  // neutro; as 4 caixas de resposta usam as cores REAIS
+                  // das próprias alternativas, embaralhadas entre si —
+                  // nenhuma caixa mostra a cor que ela mesma nomeia, e a
+                  // cor pedida no enunciado sempre aparece em alguma
+                  // caixa ERRADA (confusão deliberada). Só acerta lendo.
+                  for (final indexed in deriveOptionBoxColors(challenge['prompt'] as String, options).asMap().entries) ...[
+                    Material(
+                      color: indexed.value,
+                      borderRadius: BorderRadius.circular(28),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(28),
+                        onTap: _submitted ? null : () => _submitOption(options[indexed.key]),
+                        child: Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                          alignment: Alignment.center,
+                          child: Text(
+                            options[indexed.key],
+                            style: TextStyle(color: readableTextColorOn(indexed.value), fontWeight: FontWeight.w800),
                           ),
                         ),
-                      )
-                    : Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
-                const SizedBox(height: 24),
-                for (final option in options) ...[
-                  OutlinedButton(
-                    onPressed: _submitted ? null : () => _submitOption(option),
-                    child: Text(
-                      option,
-                      style: widget.territoryId == 'cores'
-                          ? TextStyle(color: colorForWord(option), fontWeight: FontWeight.w800)
-                          : null,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-                ],
+                    const SizedBox(height: 12),
+                  ],
+                ] else
+                  for (final option in options) ...[
+                    OutlinedButton(
+                      onPressed: _submitted ? null : () => _submitOption(option),
+                      child: Text(option),
+                    ),
+                    const SizedBox(height: 12),
+                  ],
               ],
             ),
           ),
