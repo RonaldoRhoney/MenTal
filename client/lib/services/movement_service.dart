@@ -7,6 +7,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'movement_task_handler.dart';
 
+/// Limiar de "passos pendentes que já valem a pena mostrar um convite
+/// de coleta" (Home, pedido de Rhoney 2026-09-03) — mesma unidade da
+/// conversão já documentada na tela Movimento ("100 passos = +2 XP").
+/// Abaixo disso, o pendente ainda não gerou nenhum XP real, então
+/// convidar a coletar seria ruído (o sensor sempre acumula alguns
+/// passos entre um relatório e outro de quem já está andando).
+const int kMovementMeaningfulPendingSteps = 100;
+
 /// V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md). O sensor
 /// TYPE_STEP_COUNTER (via pacote `pedometer`) devolve a contagem
 /// CUMULATIVA desde o último boot do aparelho — não desde que o app foi

@@ -257,10 +257,19 @@ void main() {
     expect(suggestButtonFinder, findsOneWidget);
 
     await tester.tap(suggestButtonFinder);
-    await tester.pumpAndSettle();
+    // Não usa pumpAndSettle aqui: o card fecha sozinho ~1.4s depois da
+    // confirmação (pedido de Rhoney, 2026-09-03) — pumpAndSettle
+    // esperaria esse fechamento acontecer e o texto já teria sumido.
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
 
     expect(client.submittedSuggestions, ['termo-sem-nenhum-resultado-xyz']);
     expect(find.text('Sugestão registrada! Um agente vai avaliar esse conteúdo.'), findsOneWidget);
+
+    // E depois do delay, o card some sozinho — sem precisar de toque no X.
+    await tester.pump(const Duration(milliseconds: 1500));
+    await tester.pumpAndSettle();
+    expect(find.text('Sugestão registrada! Um agente vai avaliar esse conteúdo.'), findsNothing);
   });
 
   testWidgets('mostra o detentor do território entre amigos (V2 item 13)', (tester) async {

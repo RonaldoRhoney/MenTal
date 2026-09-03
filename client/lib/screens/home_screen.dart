@@ -216,6 +216,12 @@ class _HomeScreenState extends State<HomeScreen> {
     try {
       await widget.client.submitContentSuggestion(query);
       if (mounted) setState(() => _suggestionSent = true);
+      // Pedido de Rhoney (2026-09-03): o card não deve ficar preso na
+      // tela esperando um toque manual no X — some sozinho pouco depois
+      // da confirmação, tempo suficiente só pra o texto "Sugestão
+      // registrada!" ser lido.
+      await Future.delayed(const Duration(milliseconds: 1400));
+      if (mounted && _notFoundQuery == query) setState(() => _notFoundQuery = null);
     } on ApiException catch (_) {
       // Sugestão é reforço opcional — falha ao registrar não pode
       // quebrar o fluxo de busca já concluído (mesmo princípio de
@@ -464,7 +470,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               const SizedBox(height: 16),
-              if ((_movementPendingSteps ?? 0) > 0 || _movementHasPendingCycle) ...[
+              // Achado real (pedido de Rhoney, 2026-09-03): "> 0" fazia
+              // esse banner aparecer o tempo todo pra quem já está
+              // andando com o app aberto — o sensor sempre acumula
+              // alguns passos não coletados entre um relatório e outro,
+              // então "> 0" nunca ficava vazio de verdade. Usa o mesmo
+              // limiar da conversão já documentada na tela Movimento
+              // ("100 passos = +2 XP") — só convida a coletar quando já
+              // existe pelo menos um incremento de XP real acumulado.
+              if ((_movementPendingSteps ?? 0) >= kMovementMeaningfulPendingSteps || _movementHasPendingCycle) ...[
                 _MovementBonusAlert(
                   onTap: () async {
                     await Navigator.of(context).push(
