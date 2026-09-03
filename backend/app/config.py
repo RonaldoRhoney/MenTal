@@ -182,11 +182,23 @@ MOVEMENT_MAX_STEPS_PER_COLLECTION = 2_500_000
 # Este teto é um CLAMP (trava o valor aceito no que falta pro teto),
 # nunca uma rejeição — preserva o teste já existente de que um único
 # valor absurdo numa chamada (ex.: 999.999) ainda deve render XP da
-# faixa máxima normalmente; só a soma ACUMULADA do ciclo passa a ter
-# limite. ~150.000 passos/dia é generoso o bastante pra nunca ser
-# atingido por caminhada real, mas finito o bastante pra travar
-# corrupção de sensor ou abuso repetido.
-MOVEMENT_MAX_STEPS_PER_CYCLE = 150_000
+# faixa máxima normalmente (bem abaixo de MOVEMENT_STEP_TIERS[0]=15000);
+# só a soma ACUMULADA do ciclo passa a ter limite.
+#
+# Reduzido de 150.000 pra 60.000 em 03/09/2026 (achado real, teste no
+# aparelho de Rhoney): mesmo com o clamp acima já existindo, um ciclo
+# corrompido conseguiu chegar EXATAMENTE nos 150.000 (não em ~165.000
+# como o incidente original) — ou seja, 150k ainda era alto o
+# suficiente pra um sensor com defeito/loop de auto-coleta bater o
+# teto sem soar como corrupção óbvia, e poluiu a média/total exibidos
+# no gráfico "Últimos 7 dias" da Home (61.624 passos/dia de média — o
+# gráfico "elegante e rico em detalhes" pedido não faz sentido em cima
+# de dado corrompido). 60.000 continua muito acima de qualquer
+# caminhada humana real (a maratona mais longa do mundo tem ~40k
+# passos) e continua acima de MOVEMENT_STEP_TIERS[0]=15000, então o
+# comportamento de "faixa máxima de XP alcançável" continua intacto —
+# só reduz o tamanho do estrago quando o sensor falha de novo.
+MOVEMENT_MAX_STEPS_PER_CYCLE = 60_000
 
 # V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md, aprovado
 # 2026-08-22). Múltipla escolha com tempo regressivo. Generalizado em
