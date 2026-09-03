@@ -163,6 +163,21 @@ void main() {
     expect(find.byIcon(Icons.check_circle), findsWidgets);
   });
 
+  testWidgets('botão de convidar amigos aparece ao lado do nome e não trava a tela ao tocar', (tester) async {
+    // Achado testando: o share sheet nativo não existe no ambiente de
+    // widget test — o mesmo princípio de ShareAchievementButton se
+    // aplica aqui (compartilhar é reforço, nunca pode lançar exceção
+    // não tratada), então este teste prova só isso: o botão existe e
+    // tocar nele não derruba a tela.
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(tester, homeApp(_FakeApiClient()));
+
+    expect(find.byIcon(Icons.share_outlined), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.share_outlined));
+    await tester.pumpAndSettle();
+  });
+
   testWidgets('card de Curiosidade Relâmpago mostra o ícone de identidade índigo, outros territórios não', (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClientWithMysteryBlock()));

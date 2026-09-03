@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/movement_service.dart';
+import '../services/share_service.dart';
 import '../services/theme_mode_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
@@ -22,6 +23,10 @@ import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
 import 'word_search_screen.dart';
+
+/// Link oficial da ficha do MENTAL na Google Play — usado pelo botão de
+/// convidar amigos (ao lado do nome do usuário, no card de progresso).
+const String kPlayStoreUrl = 'https://play.google.com/store/apps/details?id=com.rhoneyinc.mental';
 
 /// Home: um CTA primário claro por território, conforme Princípio de
 /// Clareza Imediata (PRODUCT_PRINCIPLES.md §1) — nada compete visualmente
@@ -341,6 +346,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   realName: _realName,
                   mentalCoinsBalance: _mentalCoinsBalance,
                   l10n: l10n,
+                  client: widget.client,
                   onTapPhoto: _openProfile,
                   onTapMentalCoins: _openMentalCoins,
                 ),
@@ -931,6 +937,7 @@ class _ProgressCard extends StatelessWidget {
     required this.realName,
     required this.mentalCoinsBalance,
     required this.l10n,
+    required this.client,
     required this.onTapPhoto,
     required this.onTapMentalCoins,
   });
@@ -940,10 +947,34 @@ class _ProgressCard extends StatelessWidget {
   final String? realName;
   final int? mentalCoinsBalance;
   final AppLocalizations l10n;
+  final ApiClient client;
   final VoidCallback onTapPhoto;
   final VoidCallback onTapMentalCoins;
 
   static const _xpPerLevel = 100;
+
+  /// Convidar amigos pra baixar o app (pedido de Rhoney) — mesmo padrão
+  /// de ShareAchievementButton: usa o share sheet nativo do SO e, se o
+  /// jogador de fato compartilhou, tenta a recompensa diária de XP
+  /// (POST /social/share-reward, teto de 1x/dia já garantido pelo
+  /// backend — mesma chamada de qualquer outro compartilhamento, o
+  /// convite ao app não é um tipo à parte).
+  Future<void> _shareApp(BuildContext context) async {
+    final shared = await ShareService.share(l10n.shareAppInviteMessage(kPlayStoreUrl));
+    if (!shared) return;
+    try {
+      final result = await client.rewardShare();
+      final xpAwarded = result['xp_awarded'] as int? ?? 0;
+      if (xpAwarded > 0 && context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.shareXpRewardedMessage(xpAwarded))),
+        );
+      }
+    } catch (_) {
+      // Reforço opcional — falha ao pedir a recompensa não pode
+      // interromper o fluxo de compartilhamento já concluído.
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -1008,7 +1039,26 @@ class _ProgressCard extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 8),
+              // Convidar amigos pra baixar o app (pedido de Rhoney) — ao
+              // lado do nome, sempre visível (não depende de realName
+              // estar preenchido). Mesmo ícone/cor já usado em toda
+              // ShareAchievementButton do app.
+              Semantics(
+                button: true,
+                label: l10n.shareAppButtonTooltip,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(20),
+                  onTap: () => _shareApp(context),
+                  child: Padding(
+                    padding: const EdgeInsets.all(6),
+                    child: Tooltip(
+                      message: l10n.shareAppButtonTooltip,
+                      child: Icon(Icons.share_outlined, size: 20, color: AppColors.teal),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 4),
               InkWell(
                 borderRadius: BorderRadius.circular(20),
                 onTap: onTapMentalCoins,

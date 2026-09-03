@@ -1804,6 +1804,18 @@ abstract class AppLocalizations {
   /// **'Compartilhar'**
   String get shareButtonLabel;
 
+  /// Tooltip/semantics label for the icon button next to the username on Home that invites friends to download the app
+  ///
+  /// In pt, this message translates to:
+  /// **'Convidar amigos para o MENTAL'**
+  String get shareAppButtonTooltip;
+
+  /// Share text used by the invite-friends button, linking straight to the Google Play listing
+  ///
+  /// In pt, this message translates to:
+  /// **'Venha jogar MENTAL comigo — quem conquista, conquista com a mente! Baixe grátis: {playStoreUrl}'**
+  String shareAppInviteMessage(String playStoreUrl);
+
   /// Share text for territory conquered achievement
   ///
   /// In pt, this message translates to:

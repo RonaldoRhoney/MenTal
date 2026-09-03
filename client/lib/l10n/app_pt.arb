@@ -900,6 +900,15 @@
   "shareButtonLabel": "Compartilhar",
   "@shareButtonLabel": {"description": "Generic share button label"},
 
+  "shareAppButtonTooltip": "Convidar amigos para o MENTAL",
+  "@shareAppButtonTooltip": {"description": "Tooltip/semantics label for the icon button next to the username on Home that invites friends to download the app"},
+
+  "shareAppInviteMessage": "Venha jogar MENTAL comigo — quem conquista, conquista com a mente! Baixe grátis: {playStoreUrl}",
+  "@shareAppInviteMessage": {
+    "description": "Share text used by the invite-friends button, linking straight to the Google Play listing",
+    "placeholders": {"playStoreUrl": {"type": "String"}}
+  },
+
   "shareTerritoryConqueredMessage": "Conquistei o território {territory} no MENTAL! 🏆",
   "@shareTerritoryConqueredMessage": {
     "description": "Share text for territory conquered achievement",

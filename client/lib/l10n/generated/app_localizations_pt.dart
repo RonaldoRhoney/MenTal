@@ -993,6 +993,14 @@ class AppLocalizationsPt extends AppLocalizations {
   String get shareButtonLabel => 'Compartilhar';
 
   @override
+  String get shareAppButtonTooltip => 'Convidar amigos para o MENTAL';
+
+  @override
+  String shareAppInviteMessage(String playStoreUrl) {
+    return 'Venha jogar MENTAL comigo — quem conquista, conquista com a mente! Baixe grátis: $playStoreUrl';
+  }
+
+  @override
   String shareTerritoryConqueredMessage(String territory) {
     return 'Conquistei o território $territory no MENTAL! 🏆';
   }
