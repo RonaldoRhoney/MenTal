@@ -9,6 +9,7 @@ import '../services/share_service.dart';
 import '../services/theme_mode_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
+import '../widgets/coins_rise_overlay.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
 import '../widgets/pulse_in.dart';
@@ -84,24 +85,30 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   /// Convidar amigos pra baixar o app (pedido de Rhoney, ao lado do
-  /// wordmark "MENTAL" no topo) — mesmo padrão de ShareAchievementButton:
-  /// usa o share sheet nativo do SO e, se o jogador de fato
-  /// compartilhou, tenta a recompensa diária de XP (POST /social/
-  /// share-reward, teto de 1x/dia já garantido pelo backend — mesma
-  /// chamada de qualquer outro compartilhamento, o convite ao app não é
-  /// um tipo à parte).
+  /// wordmark "MENTAL" no topo) — usa o share sheet nativo do SO e, se o
+  /// jogador de fato compartilhou, tenta a recompensa diária PRÓPRIA
+  /// deste botão (POST /social/share-app-reward: 20 XP + 5 MentalCoins,
+  /// teto de 1x/dia — nunca a mesma chamada/teto de ShareAchievementButton,
+  /// que é sobre compartilhar uma conquista, não convidar gente nova).
   Future<void> _shareApp() async {
     final l10n = AppLocalizations.of(context)!;
     final shared = await ShareService.share(l10n.shareAppInviteMessage(kPlayStoreUrl));
     if (!shared) return;
     try {
-      final result = await widget.client.rewardShare();
+      final result = await widget.client.rewardAppInviteShare();
       final xpAwarded = result['xp_awarded'] as int? ?? 0;
+      final mentalCoinsAwarded = result['mentalcoins_awarded'] as int? ?? 0;
+      final coinMilestoneReached = result['coin_milestone_reached'] as bool? ?? false;
       if (xpAwarded > 0 && mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.shareXpRewardedMessage(xpAwarded))),
+          SnackBar(content: Text(l10n.shareAppXpAndCoinsRewardedMessage(xpAwarded, mentalCoinsAwarded))),
         );
       }
+      if (coinMilestoneReached && mounted && !MediaQuery.of(context).disableAnimations) {
+        _coinsRise.play();
+      }
+      if (mentalCoinsAwarded > 0) _loadMentalCoinsBalance();
+      if (xpAwarded > 0) _loadProgress();
     } catch (_) {
       // Reforço opcional — falha ao pedir a recompensa não pode
       // interromper o fluxo de compartilhamento já concluído.
@@ -123,6 +130,12 @@ class _HomeScreenState extends State<HomeScreen> {
   // HOURS, backend) — isso só formaliza um convite visual pra vir
   // coletar, sem mudar nenhuma regra de acúmulo que já existia.
   bool _movementHasPendingCycle = false;
+
+  // Pedido de Rhoney (2026-09-02): moedas sobem na tela ao cruzar 100 XP
+  // ou 50 MentalCoins ao convidar amigos (services.crossed_coin_milestone
+  // via POST /social/share-app-reward) — mesmo controller/widget usado em
+  // ChallengeScreen para o mesmo marco.
+  final _coinsRise = CoinsRiseController();
 
   @override
   void initState() {
@@ -157,6 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void dispose() {
     _movementStepSub?.cancel();
+    _coinsRise.dispose();
     super.dispose();
   }
 
@@ -310,7 +324,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       body: SafeArea(
-        child: Padding(
+        child: CoinsRiseOverlay(
+          controller: _coinsRise,
+          child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -406,6 +422,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     : ListView(children: _buildWorldSections(l10n)),
               ),
             ],
+          ),
           ),
         ),
       ),

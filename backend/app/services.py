@@ -4,7 +4,7 @@ from datetime import date, datetime, timedelta
 from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 
-from . import config, models, notification_copy, push, scoring, supabase_admin
+from . import config, mentalcoins, models, notification_copy, push, scoring, supabase_admin
 from .nickname import generate_anonymous_nickname
 from .timeutil import naive, utcnow
 
@@ -885,6 +885,45 @@ def award_share_reward(db: Session, profile: "models.Profile") -> tuple[int, boo
     profile.level = scoring.level_from_xp(profile.xp_total)
     db.commit()
     return config.SHARE_XP_REWARD, False
+
+
+def award_app_invite_reward(db: Session, profile: "models.Profile") -> tuple[int, int, bool]:
+    """
+    Pedido de Rhoney: o botão de convidar amigos (ao lado do wordmark
+    MENTAL) rende XP + MentalCoins, teto de 1x/dia PRÓPRIO — nunca
+    compartilha o teto de award_share_reward acima (botão diferente,
+    recompensa diferente, mesmo princípio de "cada ação registra seu
+    próprio dia já usado" já estabelecido ali). Mesma defesa contra farm
+    (o app não confirma conclusão real do compartilhamento no SO).
+
+    Retorna (xp_awarded, mentalcoins_awarded, already_rewarded_today).
+    """
+    today = date.today()
+    if profile.last_app_invite_reward_date == today:
+        return 0, 0, True
+
+    profile.last_app_invite_reward_date = today
+    profile.xp_total += config.APP_INVITE_XP_REWARD
+    profile.level = scoring.level_from_xp(profile.xp_total)
+    db.commit()
+    mentalcoins.credit(db, profile.user_id, config.APP_INVITE_MENTALCOINS_REWARD, "convite_app_compartilhado")
+    return config.APP_INVITE_XP_REWARD, config.APP_INVITE_MENTALCOINS_REWARD, False
+
+
+def crossed_coin_milestone(xp_before: int, xp_after: int, coins_before: int, coins_after: int) -> bool:
+    """
+    Pedido de Rhoney (2026-09-02): "toda vez que o usuário somar 100 xp
+    OU somar 50 MentalCoins, sobem umas moedas" — celebração visual de
+    engajamento, não uma recompensa (não altera XP/MentalCoins, só
+    dispara o efeito no client). Mesmo princípio de TRANSIÇÃO exata já
+    usado para level_up/territory_just_conquered/world_just_completed
+    acima: compara floor(antes/N) com floor(depois/N), nunca "o valor
+    atual é múltiplo" — isso evitaria re-celebrar em toda resposta
+    seguinte enquanto o total ficasse parado num múltiplo exato.
+    """
+    crossed_xp = xp_after // 100 > xp_before // 100
+    crossed_coins = coins_after // 50 > coins_before // 50
+    return crossed_xp or crossed_coins
 
 
 def count_battles_sent_today(db: Session, user_id: str, today: date) -> int:

@@ -11,6 +11,7 @@ import '../theme/app_theme.dart';
 import '../visual_options.dart';
 import 'learning_pause_screen.dart';
 import '../widgets/celebration_overlay.dart';
+import '../widgets/coins_rise_overlay.dart';
 import '../widgets/pulse_in.dart';
 import '../widgets/share_achievement_button.dart';
 
@@ -108,10 +109,17 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   // moderado não precisam de controller próprio.
   late final CelebrationController _celebration;
 
+  // Pedido de Rhoney (2026-09-02): moedas sobem na tela ao cruzar 100 XP
+  // ou 50 MentalCoins (services.crossed_coin_milestone) — reforço visual
+  // leve, independente da celebração forte acima (pode disparar junto ou
+  // sozinho, dependendo do que o backend sinalizar).
+  late final CoinsRiseController _coinsRise;
+
   @override
   void initState() {
     super.initState();
     _celebration = CelebrationController();
+    _coinsRise = CoinsRiseController();
     _audioPlayer = AudioPlayer();
     _loadNextChallenge();
   }
@@ -120,6 +128,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   void dispose() {
     _countdownTimer?.cancel();
     _celebration.dispose();
+    _coinsRise.dispose();
     _feedbackCommentController.dispose();
     _audioPlayer.dispose();
     super.dispose();
@@ -139,8 +148,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
     final newlyAwardedBadges = (result['newly_awarded_badges'] as List?) ?? const [];
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
+    final coinMilestoneReached = result['coin_milestone_reached'] as bool? ?? false;
 
     final isStrongEvent = levelUp || territoryJustConquered || territoryDetentorGained || worldJustCompleted || newlyAwardedBadges.isNotEmpty;
+
+    if (coinMilestoneReached && !MediaQuery.of(context).disableAnimations) {
+      _coinsRise.play();
+    }
 
     if (isStrongEvent) {
       FeedbackService.instance.play(FeedbackSound.celebration);
@@ -520,9 +534,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       body: SafeArea(
         child: CelebrationOverlay(
           controller: _celebration,
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: _buildBody(),
+          child: CoinsRiseOverlay(
+            controller: _coinsRise,
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: _buildBody(),
+            ),
           ),
         ),
       ),

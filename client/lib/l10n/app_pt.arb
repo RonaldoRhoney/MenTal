@@ -942,6 +942,12 @@
     "placeholders": {"xp": {"type": "int"}}
   },
 
+  "shareAppXpAndCoinsRewardedMessage": "+{xp} XP e +{coins} MentalCoins por convidar um amigo!",
+  "@shareAppXpAndCoinsRewardedMessage": {
+    "description": "Snackbar shown after using the invite-friends button when the daily reward is granted",
+    "placeholders": {"xp": {"type": "int"}, "coins": {"type": "int"}}
+  },
+
   "friendsInviteShareButton": "Indicar",
   "@friendsInviteShareButton": {"description": "Button to share the invite code via WhatsApp/social apps"},
 

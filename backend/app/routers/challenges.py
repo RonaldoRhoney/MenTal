@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import config, models, schemas, scoring, services
+from .. import config, mentalcoins, models, schemas, scoring, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
@@ -318,6 +318,11 @@ def submit_answer(
     # nunca o estado absoluto — senão o client celebraria de novo a cada
     # resposta seguinte num território já conquistado.
     level_before = profile.level
+    # Pedido de Rhoney (2026-09-02): captura XP/MentalCoins ANTES desta
+    # resposta pra detectar a TRANSIÇÃO de marco (100 XP / 50
+    # MentalCoins), mesmo raciocínio de level_before acima.
+    xp_before = profile.xp_total
+    mentalcoins_before = mentalcoins.get_or_create_balance(db, user_id).balance
     # Achado real testando no aparelho (2026-08-22): estava dentro do
     # bloco `if is_correct`, então numa resposta ERRADA a um território
     # JÁ conquistado antes, was_conquered_before ficava preso em False
@@ -385,6 +390,13 @@ def submit_answer(
     # lado de uma batalha pendente (Attempt normal não é afetado).
     services.maybe_resolve_battle_side(db, user_id, challenge_id, is_correct)
 
+    coin_milestone_reached = services.crossed_coin_milestone(
+        xp_before,
+        profile.xp_total,
+        mentalcoins_before,
+        mentalcoins.get_or_create_balance(db, user_id).balance,
+    )
+
     newly_awarded = services.check_and_award_badges(db, user_id)
     newly_awarded_out = [
         schemas.BadgeOut(
@@ -422,4 +434,5 @@ def submit_answer(
         territory_detentor_gained=territory_detentor_gained,
         dethroned_nickname=dethroned_nickname,
         batch_exhausted=attempt.was_last_of_batch,
+        coin_milestone_reached=coin_milestone_reached,
     )

@@ -271,6 +271,12 @@ class AnswerResponse(BaseModel):
     # Client deve voltar à Home em vez de oferecer repetir/seguir (não
     # existe "próximo" real nesse ponto até o lote reembaralhar).
     batch_exhausted: bool = False
+    # Pedido de Rhoney (2026-09-02): moedas sobem na tela quando o XP
+    # total cruza um múltiplo de 100 OU o saldo de MentalCoins cruza um
+    # múltiplo de 50 (services.crossed_coin_milestone) — puramente
+    # visual, não é recompensa. Mesma regra de transição dos sinais
+    # acima: nunca True de novo numa resposta idempotente reenviada.
+    coin_milestone_reached: bool = False
 
 
 class ProgressTerritoryOut(BaseModel):
@@ -569,6 +575,16 @@ class ShareRewardResponse(BaseModel):
     already_rewarded_today: bool
     xp_total: int
     level: int
+
+
+class AppInviteShareRewardResponse(BaseModel):
+    xp_awarded: int
+    mentalcoins_awarded: int
+    already_rewarded_today: bool
+    xp_total: int
+    level: int
+    mentalcoins_balance: int
+    coin_milestone_reached: bool = False
 
 
 class CreateBattleRequest(BaseModel):

@@ -295,6 +295,14 @@ MOVEMENT_CHECKPOINT_PARTS = 4
 # grandeza de UM acerto, nunca de vários, e só uma vez por dia.
 SHARE_XP_REWARD = 15
 
+# Recompensa do botão de convidar amigos pra baixar o app (pedido de
+# Rhoney), distinta da recompensa de compartilhar conquista acima —
+# maior que SHARE_XP_REWARD e paga também em MentalCoins, de propósito:
+# convidar gente nova pro app é um ato de valor diferente (crescimento
+# de base de jogadores) do que compartilhar a própria conquista.
+APP_INVITE_XP_REWARD = 20
+APP_INVITE_MENTALCOINS_REWARD = 5
+
 # V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md §3/§4, aprovado
 # 2026-08-22). Limite é sobre desafios ENVIADOS por dia (não recebidos),
 # mesmo padrão de reset de DAILY_FREE_CHALLENGE_LIMIT. Bônus de vitória

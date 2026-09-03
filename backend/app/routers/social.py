@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import models, schemas, services
+from .. import mentalcoins, models, schemas, services
 from ..auth import get_current_user_id, require_age_confirmed_user_id
 from ..db import get_db
 
@@ -217,6 +217,31 @@ def reward_share(user_id: str = Depends(require_age_confirmed_user_id), db: Sess
         already_rewarded_today=already_rewarded_today,
         xp_total=profile.xp_total,
         level=profile.level,
+    )
+
+
+# Pedido de Rhoney: o botão de convidar amigos (ao lado do wordmark
+# MENTAL) rende XP + MentalCoins — recompensa e teto diário PRÓPRIOS,
+# distintos de /social/share-reward acima (compartilhar conquista).
+@router.post("/social/share-app-reward", response_model=schemas.AppInviteShareRewardResponse)
+def reward_app_invite_share(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
+    profile = db.get(models.Profile, user_id)
+    if profile is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "PROFILE_NOT_FOUND", "message": "Perfil não encontrado."}})
+
+    xp_before = profile.xp_total
+    coins_before = mentalcoins.get_or_create_balance(db, user_id).balance
+    xp_awarded, mentalcoins_awarded, already_rewarded_today = services.award_app_invite_reward(db, profile)
+    balance = mentalcoins.get_or_create_balance(db, user_id)
+    coin_milestone_reached = services.crossed_coin_milestone(xp_before, profile.xp_total, coins_before, balance.balance)
+    return schemas.AppInviteShareRewardResponse(
+        xp_awarded=xp_awarded,
+        mentalcoins_awarded=mentalcoins_awarded,
+        already_rewarded_today=already_rewarded_today,
+        xp_total=profile.xp_total,
+        level=profile.level,
+        mentalcoins_balance=balance.balance,
+        coin_milestone_reached=coin_milestone_reached,
     )
 
 

@@ -305,6 +305,10 @@ class ApiClient {
     return _post(_uri('/social/share-reward'), headers: _headers);
   }
 
+  Future<Map<String, dynamic>> rewardAppInviteShare() async {
+    return _post(_uri('/social/share-app-reward'), headers: _headers);
+  }
+
   Future<Map<String, dynamic>> createBattle({
     required String opponentUserId,
     required String territoryId,

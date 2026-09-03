@@ -1030,6 +1030,11 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String shareAppXpAndCoinsRewardedMessage(int xp, int coins) {
+    return '+$xp XP e +$coins MentalCoins por convidar um amigo!';
+  }
+
+  @override
   String get friendsInviteShareButton => 'Indicar';
 
   @override

@@ -1852,6 +1852,12 @@ abstract class AppLocalizations {
   /// **'+{xp} XP por compartilhar!'**
   String shareXpRewardedMessage(int xp);
 
+  /// Snackbar shown after using the invite-friends button when the daily reward is granted
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP e +{coins} MentalCoins por convidar um amigo!'**
+  String shareAppXpAndCoinsRewardedMessage(int xp, int coins);
+
   /// Button to share the invite code via WhatsApp/social apps
   ///
   /// In pt, this message translates to:

@@ -117,6 +117,13 @@ class Profile(Base):
     # backend que trata data como referência UTC única.
     last_share_reward_date: Mapped[date | None] = mapped_column(Date, nullable=True)
 
+    # Recompensa do botão de convidar amigos pra baixar o app (pedido de
+    # Rhoney) — teto de 1x/dia PRÓPRIO, separado do teto de
+    # last_share_reward_date acima: são botões/recompensas distintos
+    # (esta rende XP + MentalCoins, aquela só XP), então cada um tem seu
+    # próprio dia já usado, nunca compartilham o mesmo teto.
+    last_app_invite_reward_date: Mapped[date | None] = mapped_column(Date, nullable=True)
+
     # V2 — Perfil do usuário (USER_PROFILE.md, aprovado). Todos opcionais,
     # nenhum bloqueia ou degrada o uso do app se não preenchidos (mesmo
     # princípio de Clareza Imediata/não-humilhação já aplicado a tudo).
