@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
 import '../api/api_client.dart';
+import '../color_challenge.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
 import '../theme/app_theme.dart';
@@ -866,12 +867,26 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 ],
                 if (challenge['audio_url'] != null)
                   _buildAudioPlayerSection(challenge['audio_url'] as String, challenge['audio_source_name'] as String?),
-                Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
+                widget.territoryId == 'cores'
+                    ? Text.rich(
+                        TextSpan(
+                          children: buildColorChallengePromptSpans(
+                            challenge['prompt'] as String,
+                            Theme.of(context).textTheme.headlineSmall,
+                          ),
+                        ),
+                      )
+                    : Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
                 for (final option in options) ...[
                   OutlinedButton(
                     onPressed: _submitted ? null : () => _submitOption(option),
-                    child: Text(option),
+                    child: Text(
+                      option,
+                      style: widget.territoryId == 'cores'
+                          ? TextStyle(color: colorForWord(option), fontWeight: FontWeight.w800)
+                          : null,
+                    ),
                   ),
                   const SizedBox(height: 12),
                 ],
