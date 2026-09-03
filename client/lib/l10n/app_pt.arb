@@ -948,6 +948,27 @@
     "placeholders": {"xp": {"type": "int"}, "coins": {"type": "int"}}
   },
 
+  "homeSearchHint": "Buscar tema, frase ou palavra...",
+  "@homeSearchHint": {
+    "description": "Placeholder text for the search field on Home, above Mundo da Linguagem"
+  },
+
+  "homeSearchNotFoundMessage": "Não encontramos nada para \"{query}\".",
+  "@homeSearchNotFoundMessage": {
+    "description": "Shown when the Home search finds no matching theme, phrase or word",
+    "placeholders": {"query": {"type": "String"}}
+  },
+
+  "homeSearchSuggestButton": "Sugerir esse conteúdo",
+  "@homeSearchSuggestButton": {
+    "description": "Button offered alongside homeSearchNotFoundMessage, letting the user register the search term as a content suggestion"
+  },
+
+  "homeSearchSuggestionRegisteredMessage": "Sugestão registrada! Um agente vai avaliar esse conteúdo.",
+  "@homeSearchSuggestionRegisteredMessage": {
+    "description": "Confirmation snackbar after the user taps homeSearchSuggestButton"
+  },
+
   "friendsInviteShareButton": "Indicar",
   "@friendsInviteShareButton": {"description": "Button to share the invite code via WhatsApp/social apps"},
 

@@ -77,6 +77,23 @@ class _FakeApiClient extends ApiClient {
         'current_cycle': null,
         'pending_report_cycle': null,
       };
+
+  // Busca na Home (pedido de Rhoney, 2026-09-03) — configurável por
+  // teste: null = "não encontrado" (found: false).
+  Map<String, dynamic>? searchResultChallenge;
+  final List<String> submittedSuggestions = [];
+
+  @override
+  Future<Map<String, dynamic>> searchChallenges(String query) async {
+    if (searchResultChallenge == null) return {'found': false, 'challenge': null};
+    return {'found': true, 'challenge': searchResultChallenge};
+  }
+
+  @override
+  Future<Map<String, dynamic>> submitContentSuggestion(String queryText) async {
+    submittedSuggestions.add(queryText);
+    return {'ok': true};
+  }
 }
 
 /// V4 — cor de identidade do bloco Curiosidade Relâmpago (item movido
@@ -186,6 +203,60 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byIcon(Icons.auto_awesome), findsOneWidget);
+  });
+
+  testWidgets('busca por tema (nome de território) navega direto pro território, sem chamar o backend', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final client = _FakeApiClient();
+    await pumpTall(tester, homeApp(client));
+
+    await tester.enterText(find.byType(TextField), 'Palavras');
+    await tester.testTextInput.receiveAction(TextInputAction.search);
+    await tester.pumpAndSettle();
+
+    // Navegou pra ChallengeScreen do território "palavras" — o campo de
+    // busca da Home não está mais visível (mudou de tela).
+    expect(find.byType(TextField), findsNothing);
+    expect(client.submittedSuggestions, isEmpty);
+  });
+
+  testWidgets('busca por frase/palavra encontrada no backend navega direto pro desafio', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final client = _FakeApiClient()
+      ..searchResultChallenge = {
+        'challenge_id': 'c1',
+        'attempt_id': 'a1',
+        'territory_id': 'numeros',
+        'difficulty_level': 1,
+        'prompt': 'Quanto é 2 + 2?',
+        'options': ['3', '4', '5', '6'],
+        'hints_available': 0,
+      };
+    await pumpTall(tester, homeApp(client));
+
+    await tester.enterText(find.byType(TextField), 'termo-que-nao-e-nome-de-territorio');
+    await tester.testTextInput.receiveAction(TextInputAction.search);
+    await tester.pumpAndSettle();
+
+    expect(find.text('Quanto é 2 + 2?'), findsOneWidget);
+  });
+
+  testWidgets('busca sem resultado oferece sugerir o conteúdo, e registrar não trava a tela', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final client = _FakeApiClient();
+    await pumpTall(tester, homeApp(client));
+
+    await tester.enterText(find.byType(TextField), 'termo-sem-nenhum-resultado-xyz');
+    await tester.testTextInput.receiveAction(TextInputAction.search);
+    await tester.pumpAndSettle();
+
+    final suggestButtonFinder = find.byType(SnackBarAction);
+    expect(suggestButtonFinder, findsOneWidget);
+
+    await tester.tap(suggestButtonFinder);
+    await tester.pumpAndSettle();
+
+    expect(client.submittedSuggestions, ['termo-sem-nenhum-resultado-xyz']);
   });
 
   testWidgets('mostra o detentor do território entre amigos (V2 item 13)', (tester) async {

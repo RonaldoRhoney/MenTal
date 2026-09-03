@@ -148,6 +148,74 @@ def next_challenge(
     )
 
 
+@router.get("/challenges/search", response_model=schemas.ChallengeSearchResponse)
+def search_challenges(
+    q: str,
+    language_code: str = config.DEFAULT_LANGUAGE_CODE,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """
+    Busca na Home (pedido de Rhoney, 2026-09-03): "tema, frase ou
+    palavra"; "tema" já foi tentado no client (territories.dart) antes
+    de chamar este endpoint — aqui só cobre "frase"/"palavra" (trecho
+    literal no prompt de algum desafio). found=False é o resultado
+    normal de "nada encontrado" (não é erro) — o client então oferece
+    registrar via POST /content-suggestions.
+    """
+    services.get_or_create_profile(db, user_id)
+
+    challenge = services.find_challenge_by_search(db, language_code, q)
+    if challenge is None:
+        return schemas.ChallengeSearchResponse(found=False)
+
+    territory = db.get(models.Territory, challenge.territory_id)
+    if territory is None or not services.is_territory_unlocked(db, user_id, territory):
+        # Território bloqueado (exige assinatura) ou inconsistente: trata
+        # como "não encontrado" pro buscador — nunca revela a existência
+        # de conteúdo pago/bloqueado a quem não tem acesso.
+        return schemas.ChallengeSearchResponse(found=False)
+
+    today = utcnow().date()
+    allowed, _consumed = services.check_daily_limit(db, user_id, today)
+    if not allowed:
+        raise HTTPException(
+            status_code=429,
+            detail={"error": {"code": "DAILY_LIMIT_REACHED", "message": "Daily free challenge limit reached", "resets_at": str(today.isoformat())}},
+        )
+
+    hints_available = len(
+        db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
+    )
+    # Resultado de busca nunca é cronometrado (V2 item 15 é sobre modo
+    # deliberado escolhido pelo jogador, não uma pesquisa dirigida) —
+    # sempre normal, mesma lógica de options de next_challenge com
+    # timed=False.
+    options = services.shuffled_options(challenge.options) if challenge.options else challenge.options
+
+    attempt_id = models.new_uuid()
+    services.create_served_attempt(db, attempt_id, user_id, challenge.id, timed=False, was_last_of_batch=True)
+
+    return schemas.ChallengeSearchResponse(
+        found=True,
+        challenge=schemas.ChallengeOut(
+            challenge_id=challenge.id,
+            attempt_id=attempt_id,
+            territory_id=challenge.territory_id,
+            difficulty_level=challenge.difficulty_level,
+            prompt=challenge.prompt,
+            options=options,
+            hints_available=hints_available,
+            time_limit_seconds=None,
+            prompt_image=challenge.prompt_image,
+            clues=challenge.clues,
+            audio_url=challenge.audio_url,
+            audio_source_name=challenge.audio_source_name,
+            audio_source_url=challenge.audio_source_url,
+        ),
+    )
+
+
 def _get_or_create_pending_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str) -> models.Attempt:
     attempt = db.get(models.Attempt, attempt_id)
     if attempt is not None:

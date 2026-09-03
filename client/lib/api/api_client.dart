@@ -130,6 +130,22 @@ class ApiClient {
     );
   }
 
+  // Busca na Home (pedido de Rhoney, 2026-09-03): "tema, frase ou
+  // palavra". "Tema" é tentado primeiro no client (territories.dart, já
+  // tem o mapa id→label localizado) antes de chamar isto — este método
+  // só cobre a busca de "frase"/"palavra" no backend.
+  Future<Map<String, dynamic>> searchChallenges(String query) async {
+    return _get(_uri('/challenges/search', {'q': query}), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> submitContentSuggestion(String queryText) async {
+    return _post(
+      _uri('/content-suggestions'),
+      headers: _headers,
+      body: jsonEncode({'query_text': queryText}),
+    );
+  }
+
   Future<Map<String, dynamic>> requestHint(String challengeId, String attemptId) async {
     return _post(
       _uri('/challenges/$challengeId/hint'),
@@ -503,6 +519,13 @@ class ApiClient {
       _uri('/admin/metrics/summary', {'period': period}),
       headers: _headers,
     );
+  }
+
+  // Busca na Home (pedido de Rhoney, 2026-09-03) — termos pesquisados
+  // sem resultado, registrados via POST /content-suggestions, listados
+  // aqui só pra role=admin (mesma autorização de getAdminMetricsSummary).
+  Future<Map<String, dynamic>> getAdminContentSuggestions() async {
+    return _get(_uri('/admin/content-suggestions'), headers: _headers);
   }
 
   // Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5, LGPD.

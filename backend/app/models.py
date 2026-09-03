@@ -566,6 +566,26 @@ class AppFeedback(Base):
     reply_read_by_user: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
+class ContentSuggestion(Base):
+    """
+    Busca na Home (pedido de Rhoney, 2026-09-03): quando o termo
+    buscado não corresponde a nenhum desafio/tema existente, fica
+    registrado aqui pra avaliação futura de um agente de curadoria de
+    conteúdo (Motor B, V4/MENTAL_AI_AGENT_TEAM_V1.md §5.3 — ainda não
+    implementado, exige infraestrutura n8n fora do alcance desta
+    sessão). Por ora, visível só no painel admin in-app.
+    """
+
+    __tablename__ = "content_suggestions"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    # Mesmo padrão de anonimização de AppFeedback.user_id acima: nullable,
+    # vira NULL quando o autor exclui a conta, sem apagar o registro.
+    user_id: Mapped[str | None] = mapped_column(UUIDType, nullable=True)
+    query_text: Mapped[str] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class AppFeedbackReaction(Base):
     """Curtir/amei num feedback do mural público (29/08/2026) — um
     usuário pode reagir com no máximo uma linha por (feedback, tipo);

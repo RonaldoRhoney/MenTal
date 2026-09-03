@@ -25,11 +25,17 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
   String? _error;
   String _period = '7d';
   Map<String, dynamic>? _summary;
+  // Busca na Home (pedido de Rhoney, 2026-09-03) — não é escopada pelo
+  // seletor de período acima (lista tudo que já foi registrado); falha
+  // ao carregar não pode derrubar o resto do painel, por isso não usa o
+  // mesmo _error das métricas.
+  List<Map<String, dynamic>>? _contentSuggestions;
 
   @override
   void initState() {
     super.initState();
     _load();
+    _loadContentSuggestions();
   }
 
   Future<void> _load() async {
@@ -47,6 +53,17 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
     }
   }
 
+  Future<void> _loadContentSuggestions() async {
+    try {
+      final result = await widget.client.getAdminContentSuggestions();
+      final items = (result['items'] as List).cast<Map<String, dynamic>>();
+      if (mounted) setState(() => _contentSuggestions = items);
+    } on ApiException catch (_) {
+      // Reforço secundário do painel — falha aqui não impede o resto
+      // das métricas de aparecer normalmente.
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +76,7 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
       ),
       body: SafeArea(
         child: RefreshIndicator(
-          onRefresh: _load,
+          onRefresh: () => Future.wait([_load(), _loadContentSuggestions()]),
           color: AppColors.gold,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
@@ -156,6 +173,27 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
                         ),
                         const SizedBox(height: 10),
                         _DemographicsSection(demographics: _summary!['demographics'] as Map<String, dynamic>),
+                        const SizedBox(height: 24),
+                        _SectionTitle('Sugestões de conteúdo (busca)', icon: Icons.lightbulb_outline_rounded),
+                        const SizedBox(height: 10),
+                        _Card(
+                          child: Column(
+                            children: [
+                              for (final s in (_contentSuggestions ?? const []))
+                                _ContentSuggestionRow(item: s),
+                              if (_contentSuggestions != null && _contentSuggestions!.isEmpty) const _EmptyRow(),
+                              if (_contentSuggestions == null)
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 6),
+                                  child: SizedBox(
+                                    height: 16,
+                                    width: 16,
+                                    child: CircularProgressIndicator(strokeWidth: 2),
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
                         const SizedBox(height: 20),
                       ],
                     ),
@@ -385,6 +423,29 @@ class _TopProgressorTile extends StatelessWidget {
             ),
           ),
           Text('+${progressor['xp_gained']} XP', style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+        ],
+      ),
+    );
+  }
+}
+
+class _ContentSuggestionRow extends StatelessWidget {
+  const _ContentSuggestionRow({required this.item});
+
+  final Map<String, dynamic> item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(Icons.search_rounded, size: 18, color: AppColors.muted),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text('"${item['query_text']}"', style: TextStyle(color: AppColors.bone)),
+          ),
         ],
       ),
     );

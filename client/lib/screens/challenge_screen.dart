@@ -40,10 +40,14 @@ class ChallengeScreen extends StatefulWidget {
   final bool relampago;
   // V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md). Quando não-nulo,
   // esta tela serve o desafio de UMA batalha específica (nunca "próximo
-  // desafio" em sequência — é um evento único por lado). prefetchedChallenge
-  // evita uma chamada de rede redundante pro desafiante, que já recebeu o
-  // próprio desafio na resposta de POST /battles.
+  // desafio" em sequência — é um evento único por lado).
   final String? battleId;
+  // prefetchedChallenge evita uma chamada de rede redundante quando o
+  // desafio já foi entregue por outra chamada — batalha (POST
+  // /battles) OU busca na Home (GET /challenges/search, pedido de
+  // Rhoney 2026-09-03). Usado só na primeira carga (ver
+  // _prefetchedConsumed); "Próximo desafio" depois sempre busca
+  // normalmente no território.
   final Map<String, dynamic>? prefetchedChallenge;
 
   @override
@@ -52,6 +56,13 @@ class ChallengeScreen extends StatefulWidget {
 
 class _ChallengeScreenState extends State<ChallengeScreen> {
   static const _uuid = Uuid();
+
+  // Busca na Home (pedido de Rhoney, 2026-09-03): prefetchedChallenge
+  // agora também serve o resultado de GET /challenges/search, não só
+  // batalha — usado uma única vez (na primeira carga); "Próximo
+  // desafio" depois disso sempre busca normalmente no território, nunca
+  // reexibe o mesmo desafio pesquisado em loop.
+  bool _prefetchedConsumed = false;
 
   bool _loading = true;
   String? _error;
@@ -202,12 +213,15 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     });
     unawaited(_audioPlayer.stop());
     try {
-      final challenge = widget.battleId != null
-          ? (widget.prefetchedChallenge ?? await widget.client.getMyBattleChallenge(widget.battleId!))
-          : await widget.client.nextChallenge(
-              widget.territoryId,
-              mode: widget.relampago ? 'relampago' : 'normal',
-            );
+      final challenge = (widget.prefetchedChallenge != null && !_prefetchedConsumed)
+          ? widget.prefetchedChallenge!
+          : widget.battleId != null
+              ? await widget.client.getMyBattleChallenge(widget.battleId!)
+              : await widget.client.nextChallenge(
+                  widget.territoryId,
+                  mode: widget.relampago ? 'relampago' : 'normal',
+                );
+      _prefetchedConsumed = true;
       if (mounted) {
         final clues = (challenge['clues'] as List?)?.cast<String>();
         setState(() {

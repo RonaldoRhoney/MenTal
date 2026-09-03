@@ -137,6 +137,90 @@ class _HomeScreenState extends State<HomeScreen> {
   // ChallengeScreen para o mesmo marco.
   final _coinsRise = CoinsRiseController();
 
+  // Busca na Home (pedido de Rhoney, 2026-09-03): "tema, frase ou
+  // palavra" acima de Mundo da Linguagem. _searching evita duplo envio
+  // enquanto a busca de frase/palavra está em andamento no backend
+  // ("tema" é resolvido localmente, sem rede — nunca passa por aqui).
+  final TextEditingController _searchController = TextEditingController();
+  bool _searching = false;
+
+  Future<void> _handleSearch(String rawQuery) async {
+    final query = rawQuery.trim();
+    if (query.isEmpty || _searching) return;
+    final l10n = AppLocalizations.of(context)!;
+    FocusScope.of(context).unfocus();
+
+    final themeMatch = findTerritoryIdByThemeQuery(l10n, query);
+    if (themeMatch != null) {
+      _searchController.clear();
+      await Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (_) => ChallengeScreen(
+            client: widget.client,
+            territoryId: themeMatch,
+            territoryLabel: territoryLabel(l10n, themeMatch),
+          ),
+        ),
+      );
+      _loadProgress();
+      return;
+    }
+
+    setState(() => _searching = true);
+    try {
+      final result = await widget.client.searchChallenges(query);
+      if (result['found'] == true) {
+        _searchController.clear();
+        final challenge = result['challenge'] as Map<String, dynamic>;
+        final territoryId = challenge['territory_id'] as String;
+        if (!mounted) return;
+        await Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => ChallengeScreen(
+              client: widget.client,
+              territoryId: territoryId,
+              territoryLabel: territoryLabel(l10n, territoryId),
+              prefetchedChallenge: challenge,
+            ),
+          ),
+        );
+        _loadProgress();
+        return;
+      }
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(l10n.homeSearchNotFoundMessage(query)),
+          duration: const Duration(seconds: 6),
+          action: SnackBarAction(
+            label: l10n.homeSearchSuggestButton,
+            onPressed: () => _submitContentSuggestion(query),
+          ),
+        ),
+      );
+    } on ApiException catch (e) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+    } finally {
+      if (mounted) setState(() => _searching = false);
+    }
+  }
+
+  Future<void> _submitContentSuggestion(String query) async {
+    final l10n = AppLocalizations.of(context)!;
+    try {
+      await widget.client.submitContentSuggestion(query);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.homeSearchSuggestionRegisteredMessage)),
+        );
+      }
+    } on ApiException catch (_) {
+      // Sugestão é reforço opcional — falha ao registrar não pode
+      // quebrar o fluxo de busca já concluído (mesmo princípio de
+      // ShareService/_shareApp acima).
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -171,6 +255,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void dispose() {
     _movementStepSub?.cancel();
     _coinsRise.dispose();
+    _searchController.dispose();
     super.dispose();
   }
 
@@ -407,6 +492,32 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 8),
                 Text(_error!, style: TextStyle(color: AppColors.error)),
               ],
+              const SizedBox(height: 16),
+              // Busca na Home (pedido de Rhoney, 2026-09-03): "acima de
+              // Mundo da Linguagem" — logo antes da lista de Mundos, já
+              // que "Mundo da Linguagem" é sempre o primeiro item dela.
+              TextField(
+                controller: _searchController,
+                textInputAction: TextInputAction.search,
+                onSubmitted: _handleSearch,
+                decoration: InputDecoration(
+                  hintText: l10n.homeSearchHint,
+                  prefixIcon: const Icon(Icons.search),
+                  suffixIcon: _searching
+                      ? const Padding(
+                          padding: EdgeInsets.all(12),
+                          child: SizedBox(
+                            width: 16,
+                            height: 16,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          ),
+                        )
+                      : IconButton(
+                          icon: const Icon(Icons.arrow_forward),
+                          onPressed: () => _handleSearch(_searchController.text),
+                        ),
+                ),
+              ),
               const SizedBox(height: 16),
               Expanded(
                 // Achado real (29/08/2026, pedido de Rhoney: "há um

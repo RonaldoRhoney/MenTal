@@ -1858,6 +1858,30 @@ abstract class AppLocalizations {
   /// **'+{xp} XP e +{coins} MentalCoins por convidar um amigo!'**
   String shareAppXpAndCoinsRewardedMessage(int xp, int coins);
 
+  /// Placeholder text for the search field on Home, above Mundo da Linguagem
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar tema, frase ou palavra...'**
+  String get homeSearchHint;
+
+  /// Shown when the Home search finds no matching theme, phrase or word
+  ///
+  /// In pt, this message translates to:
+  /// **'Não encontramos nada para \"{query}\".'**
+  String homeSearchNotFoundMessage(String query);
+
+  /// Button offered alongside homeSearchNotFoundMessage, letting the user register the search term as a content suggestion
+  ///
+  /// In pt, this message translates to:
+  /// **'Sugerir esse conteúdo'**
+  String get homeSearchSuggestButton;
+
+  /// Confirmation snackbar after the user taps homeSearchSuggestButton
+  ///
+  /// In pt, this message translates to:
+  /// **'Sugestão registrada! Um agente vai avaliar esse conteúdo.'**
+  String get homeSearchSuggestionRegisteredMessage;
+
   /// Button to share the invite code via WhatsApp/social apps
   ///
   /// In pt, this message translates to:

@@ -1035,6 +1035,21 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get homeSearchHint => 'Buscar tema, frase ou palavra...';
+
+  @override
+  String homeSearchNotFoundMessage(String query) {
+    return 'Não encontramos nada para \"$query\".';
+  }
+
+  @override
+  String get homeSearchSuggestButton => 'Sugerir esse conteúdo';
+
+  @override
+  String get homeSearchSuggestionRegisteredMessage =>
+      'Sugestão registrada! Um agente vai avaliar esse conteúdo.';
+
+  @override
   String get friendsInviteShareButton => 'Indicar';
 
   @override

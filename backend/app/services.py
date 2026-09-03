@@ -727,6 +727,33 @@ def shuffled_options(options: list[str]) -> list[str]:
     return shuffled
 
 
+def find_challenge_by_search(db: Session, language_code: str, query_text: str) -> models.Challenge | None:
+    """
+    Busca na Home (pedido de Rhoney, 2026-09-03): "buscar por tema,
+    frase ou palavra". "Tema" (nome de território) é resolvido pelo
+    CLIENT antes de chamar esta função — territories.dart já tem o
+    mapa id→label localizado, então bater "tema" contra a label é mais
+    barato e correto ali do que duplicar tradução aqui. Esta função só
+    cobre "frase"/"palavra": trecho literal (case-insensitive) dentro
+    do prompt de algum desafio já curado. Retorna sempre o primeiro
+    match — não há ranking de relevância nesta v1.
+    """
+    query_text = query_text.strip()
+    if not query_text:
+        return None
+    return db.execute(
+        select(models.Challenge)
+        .where(models.Challenge.language_code == language_code)
+        .where(models.Challenge.prompt.ilike(f"%{query_text}%"))
+        .limit(1)
+    ).scalars().first()
+
+
+def register_content_suggestion(db: Session, user_id: str, query_text: str) -> None:
+    db.add(models.ContentSuggestion(user_id=user_id, query_text=query_text.strip()))
+    db.commit()
+
+
 def create_served_attempt(
     db: Session, attempt_id: str, user_id: str, challenge_id: str, timed: bool = False, was_last_of_batch: bool = False
 ) -> models.Attempt:

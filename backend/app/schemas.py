@@ -132,6 +132,38 @@ class ChallengeOut(BaseModel):
     audio_source_url: str | None = None
 
 
+class ChallengeSearchResponse(BaseModel):
+    """
+    Busca na Home (pedido de Rhoney, 2026-09-03): "tema, frase ou
+    palavra" — found=True traz o desafio já servido (mesma autoridade
+    de GET /challenges/next, attempt_id já criado), pronto pro client
+    abrir direto em ChallengeScreen. found=False significa "não achamos
+    nada pra isso" — o client então oferece registrar como sugestão via
+    POST /content-suggestions.
+    """
+
+    found: bool
+    challenge: ChallengeOut | None = None
+
+
+class ContentSuggestionRequest(BaseModel):
+    query_text: str = Field(min_length=1, max_length=200)
+
+
+class ContentSuggestionResponse(BaseModel):
+    ok: bool = True
+
+
+class AdminContentSuggestionItem(BaseModel):
+    id: str
+    query_text: str
+    created_at: str
+
+
+class AdminContentSuggestionListResponse(BaseModel):
+    items: list[AdminContentSuggestionItem]
+
+
 class LearningPauseOut(BaseModel):
     # V3.2 (V3/V3.2_TECNOLOGIA.md §3) — "Pausa para Aprender": leitura
     # pura, sem options/correct_answer/timer (estrutura de conteúdo

@@ -135,3 +135,23 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return territoryId;
   }
 }
+
+/// Busca na Home por "tema" (pedido de Rhoney, 2026-09-03) — resolvida
+/// aqui no client, não no backend: territories.dart já tem o mapa
+/// id→label localizado, então bater a busca contra a label é mais
+/// barato e correto aqui do que duplicar tradução no servidor. Match
+/// por trecho literal (case-insensitive) em qualquer direção — cobre
+/// tanto "astronomia" quanto "astro" ou o nome completo digitado.
+/// Retorna null quando nada bate (o client então tenta a busca de
+/// frase/palavra no backend, GET /challenges/search).
+String? findTerritoryIdByThemeQuery(AppLocalizations l10n, String query) {
+  final needle = query.trim().toLowerCase();
+  if (needle.isEmpty) return null;
+  for (final territoryId in kTerritoryIds) {
+    final label = territoryLabel(l10n, territoryId).toLowerCase();
+    if (label.contains(needle) || needle.contains(label)) {
+      return territoryId;
+    }
+  }
+  return null;
+}
