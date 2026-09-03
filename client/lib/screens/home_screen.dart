@@ -83,6 +83,31 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadMentalCoinsBalance();
   }
 
+  /// Convidar amigos pra baixar o app (pedido de Rhoney, ao lado do
+  /// wordmark "MENTAL" no topo) — mesmo padrão de ShareAchievementButton:
+  /// usa o share sheet nativo do SO e, se o jogador de fato
+  /// compartilhou, tenta a recompensa diária de XP (POST /social/
+  /// share-reward, teto de 1x/dia já garantido pelo backend — mesma
+  /// chamada de qualquer outro compartilhamento, o convite ao app não é
+  /// um tipo à parte).
+  Future<void> _shareApp() async {
+    final l10n = AppLocalizations.of(context)!;
+    final shared = await ShareService.share(l10n.shareAppInviteMessage(kPlayStoreUrl));
+    if (!shared) return;
+    try {
+      final result = await widget.client.rewardShare();
+      final xpAwarded = result['xp_awarded'] as int? ?? 0;
+      if (xpAwarded > 0 && mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.shareXpRewardedMessage(xpAwarded))),
+        );
+      }
+    } catch (_) {
+      // Reforço opcional — falha ao pedir a recompensa não pode
+      // interromper o fluxo de compartilhamento já concluído.
+    }
+  }
+
   // V2 item 9 — badge de passos ainda não coletados junto ao ícone de
   // Movimento (decisão de Rhoney, 2026-08-21: "catch-up ao reabrir o
   // app", nunca serviço em segundo plano com notificação fixa). Mostra
@@ -291,10 +316,10 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // Identidade de marca no topo — mesma linguagem visual do
-              // splash/login (BRAND.md). Único ícone de utilidade
-              // permitido aqui (29/08/2026, pedido de Rhoney): alternar
-              // claro/escuro — fica no canto pra não competir com o
-              // wordmark centralizado.
+              // splash/login (BRAND.md). Alternar claro/escuro (29/08/2026)
+              // fica à direita; convidar amigos (pedido de Rhoney) fica à
+              // esquerda, espelhado — os dois cantos do wordmark
+              // centralizado, sem competir com ele.
               const SizedBox(height: 16),
               Stack(
                 alignment: Alignment.center,
@@ -309,6 +334,19 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
+                  ),
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: Semantics(
+                      button: true,
+                      label: l10n.shareAppButtonTooltip,
+                      child: IconButton(
+                        tooltip: l10n.shareAppButtonTooltip,
+                        onPressed: _shareApp,
+                        icon: Icon(Icons.share_outlined, color: AppColors.gold),
+                      ),
+                    ),
                   ),
                   const Positioned(
                     right: 0,
@@ -346,7 +384,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   realName: _realName,
                   mentalCoinsBalance: _mentalCoinsBalance,
                   l10n: l10n,
-                  client: widget.client,
                   onTapPhoto: _openProfile,
                   onTapMentalCoins: _openMentalCoins,
                 ),
@@ -937,7 +974,6 @@ class _ProgressCard extends StatelessWidget {
     required this.realName,
     required this.mentalCoinsBalance,
     required this.l10n,
-    required this.client,
     required this.onTapPhoto,
     required this.onTapMentalCoins,
   });
@@ -947,34 +983,10 @@ class _ProgressCard extends StatelessWidget {
   final String? realName;
   final int? mentalCoinsBalance;
   final AppLocalizations l10n;
-  final ApiClient client;
   final VoidCallback onTapPhoto;
   final VoidCallback onTapMentalCoins;
 
   static const _xpPerLevel = 100;
-
-  /// Convidar amigos pra baixar o app (pedido de Rhoney) — mesmo padrão
-  /// de ShareAchievementButton: usa o share sheet nativo do SO e, se o
-  /// jogador de fato compartilhou, tenta a recompensa diária de XP
-  /// (POST /social/share-reward, teto de 1x/dia já garantido pelo
-  /// backend — mesma chamada de qualquer outro compartilhamento, o
-  /// convite ao app não é um tipo à parte).
-  Future<void> _shareApp(BuildContext context) async {
-    final shared = await ShareService.share(l10n.shareAppInviteMessage(kPlayStoreUrl));
-    if (!shared) return;
-    try {
-      final result = await client.rewardShare();
-      final xpAwarded = result['xp_awarded'] as int? ?? 0;
-      if (xpAwarded > 0 && context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.shareXpRewardedMessage(xpAwarded))),
-        );
-      }
-    } catch (_) {
-      // Reforço opcional — falha ao pedir a recompensa não pode
-      // interromper o fluxo de compartilhamento já concluído.
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -1028,6 +1040,8 @@ class _ProgressCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12),
+              // Flexible com flex maior que os dois Spacer abaixo — o
+              // nome continua tendo prioridade de espaço (só encolhe/
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -1039,26 +1053,7 @@ class _ProgressCard extends StatelessWidget {
                   ],
                 ),
               ),
-              // Convidar amigos pra baixar o app (pedido de Rhoney) — ao
-              // lado do nome, sempre visível (não depende de realName
-              // estar preenchido). Mesmo ícone/cor já usado em toda
-              // ShareAchievementButton do app.
-              Semantics(
-                button: true,
-                label: l10n.shareAppButtonTooltip,
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(20),
-                  onTap: () => _shareApp(context),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6),
-                    child: Tooltip(
-                      message: l10n.shareAppButtonTooltip,
-                      child: Icon(Icons.share_outlined, size: 20, color: AppColors.teal),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 4),
+              const SizedBox(width: 8),
               InkWell(
                 borderRadius: BorderRadius.circular(20),
                 onTap: onTapMentalCoins,

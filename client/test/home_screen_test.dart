@@ -163,7 +163,7 @@ void main() {
     expect(find.byIcon(Icons.check_circle), findsWidgets);
   });
 
-  testWidgets('botão de convidar amigos aparece ao lado do nome e não trava a tela ao tocar', (tester) async {
+  testWidgets('botão de convidar amigos aparece ao lado do wordmark MENTAL e não trava a tela ao tocar', (tester) async {
     // Achado testando: o share sheet nativo não existe no ambiente de
     // widget test — o mesmo princípio de ShareAchievementButton se
     // aplica aqui (compartilhar é reforço, nunca pode lançar exceção
