@@ -137,18 +137,29 @@ class _HomeScreenState extends State<HomeScreen> {
   // ChallengeScreen para o mesmo marco.
   final _coinsRise = CoinsRiseController();
 
-  // Busca na Home (pedido de Rhoney, 2026-09-03): "tema, frase ou
-  // palavra" acima de Mundo da Linguagem. _searching evita duplo envio
-  // enquanto a busca de frase/palavra está em andamento no backend
-  // ("tema" é resolvido localmente, sem rede — nunca passa por aqui).
+  // Busca na Home (pedido de Rhoney, 2026-09-03; estilo revisado
+  // 2026-09-03 — "nível profissional", campo de sugestão em destaque em
+  // vez de snackbar) — "tema, frase ou palavra" acima de Mundo da
+  // Linguagem. _searching evita duplo envio enquanto a busca de frase/
+  // palavra está em andamento no backend ("tema" é resolvido localmente,
+  // sem rede — nunca passa por aqui). _notFoundQuery != null é o que
+  // revela o card "não encontramos / sugerir" logo abaixo do campo;
+  // _suggestionSent controla o estado de confirmação dentro do próprio
+  // card, sem depender de SnackBar (que desaparece rápido demais pra
+  // esse tipo de convite de ação).
   final TextEditingController _searchController = TextEditingController();
+  final FocusNode _searchFocusNode = FocusNode();
   bool _searching = false;
+  String? _notFoundQuery;
+  bool _suggestionSending = false;
+  bool _suggestionSent = false;
 
   Future<void> _handleSearch(String rawQuery) async {
     final query = rawQuery.trim();
     if (query.isEmpty || _searching) return;
     final l10n = AppLocalizations.of(context)!;
     FocusScope.of(context).unfocus();
+    setState(() => _notFoundQuery = null);
 
     final themeMatch = findTerritoryIdByThemeQuery(l10n, query);
     if (themeMatch != null) {
@@ -187,17 +198,12 @@ class _HomeScreenState extends State<HomeScreen> {
         _loadProgress();
         return;
       }
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(l10n.homeSearchNotFoundMessage(query)),
-          duration: const Duration(seconds: 6),
-          action: SnackBarAction(
-            label: l10n.homeSearchSuggestButton,
-            onPressed: () => _submitContentSuggestion(query),
-          ),
-        ),
-      );
+      if (mounted) {
+        setState(() {
+          _notFoundQuery = query;
+          _suggestionSent = false;
+        });
+      }
     } on ApiException catch (e) {
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
     } finally {
@@ -206,18 +212,18 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _submitContentSuggestion(String query) async {
-    final l10n = AppLocalizations.of(context)!;
+    setState(() => _suggestionSending = true);
     try {
       await widget.client.submitContentSuggestion(query);
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.homeSearchSuggestionRegisteredMessage)),
-        );
-      }
+      if (mounted) setState(() => _suggestionSent = true);
     } on ApiException catch (_) {
       // Sugestão é reforço opcional — falha ao registrar não pode
       // quebrar o fluxo de busca já concluído (mesmo princípio de
-      // ShareService/_shareApp acima).
+      // ShareService/_shareApp acima). O card simplesmente fecha, sem
+      // culpar o usuário por um problema de rede que não é dele.
+      if (mounted) setState(() => _notFoundQuery = null);
+    } finally {
+      if (mounted) setState(() => _suggestionSending = false);
     }
   }
 
@@ -256,6 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _movementStepSub?.cancel();
     _coinsRise.dispose();
     _searchController.dispose();
+    _searchFocusNode.dispose();
     super.dispose();
   }
 
@@ -493,30 +500,83 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(_error!, style: TextStyle(color: AppColors.error)),
               ],
               const SizedBox(height: 16),
-              // Busca na Home (pedido de Rhoney, 2026-09-03): "acima de
-              // Mundo da Linguagem" — logo antes da lista de Mundos, já
-              // que "Mundo da Linguagem" é sempre o primeiro item dela.
-              TextField(
-                controller: _searchController,
-                textInputAction: TextInputAction.search,
-                onSubmitted: _handleSearch,
-                decoration: InputDecoration(
-                  hintText: l10n.homeSearchHint,
-                  prefixIcon: const Icon(Icons.search),
-                  suffixIcon: _searching
-                      ? const Padding(
-                          padding: EdgeInsets.all(12),
-                          child: SizedBox(
-                            width: 16,
-                            height: 16,
-                            child: CircularProgressIndicator(strokeWidth: 2),
-                          ),
-                        )
-                      : IconButton(
-                          icon: const Icon(Icons.arrow_forward),
-                          onPressed: () => _handleSearch(_searchController.text),
-                        ),
+              // Busca na Home (pedido de Rhoney, 2026-09-03; estilo
+              // revisado 2026-09-03 — "nível profissional, com o devido
+              // destaque") — "acima de Mundo da Linguagem", logo antes
+              // da lista de Mundos. Mesma linguagem visual dos cards de
+              // atalho (_QuickActionCard) abaixo: fundo bg2, cantos bem
+              // arredondados, borda de destaque na cor de acento — aqui
+              // dourado, por ser uma ação de "descobrir/encontrar algo
+              // novo", distinta do teal usado nos atalhos de navegação.
+              Container(
+                decoration: BoxDecoration(
+                  color: AppColors.bg2,
+                  borderRadius: BorderRadius.circular(28),
+                  border: Border.all(color: AppColors.gold.withValues(alpha: 0.45)),
                 ),
+                child: TextField(
+                  controller: _searchController,
+                  focusNode: _searchFocusNode,
+                  textInputAction: TextInputAction.search,
+                  onSubmitted: _handleSearch,
+                  style: TextStyle(color: AppColors.bone),
+                  decoration: InputDecoration(
+                    hintText: l10n.homeSearchHint,
+                    hintStyle: TextStyle(color: AppColors.muted),
+                    border: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    contentPadding: const EdgeInsets.symmetric(vertical: 14),
+                    prefixIcon: Icon(Icons.search_rounded, color: AppColors.gold),
+                    suffixIcon: _searching
+                        ? Padding(
+                            padding: const EdgeInsets.all(14),
+                            child: SizedBox(
+                              width: 18,
+                              height: 18,
+                              child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.gold),
+                            ),
+                          )
+                        : AnimatedBuilder(
+                            animation: _searchController,
+                            builder: (context, _) => _searchController.text.isEmpty
+                                ? IconButton(
+                                    icon: Icon(Icons.arrow_forward_rounded, color: AppColors.gold),
+                                    onPressed: () => _handleSearch(_searchController.text),
+                                  )
+                                : IconButton(
+                                    icon: Icon(Icons.close_rounded, color: AppColors.muted),
+                                    onPressed: () {
+                                      _searchController.clear();
+                                      setState(() => _notFoundQuery = null);
+                                    },
+                                  ),
+                          ),
+                  ),
+                ),
+              ),
+              // "Não encontramos / sugerir esse conteúdo" — card em
+              // destaque em vez de SnackBar (pedido de Rhoney, revisão
+              // 2026-09-03): um SnackBar some rápido demais pra um
+              // convite de ação que exige leitura + decisão; o card fica
+              // até o usuário decidir (sugerir, fechar, ou buscar de
+              // novo, que já limpa o estado em _handleSearch).
+              AnimatedSize(
+                duration: const Duration(milliseconds: 220),
+                curve: Curves.easeOut,
+                alignment: Alignment.topCenter,
+                child: _notFoundQuery == null
+                    ? const SizedBox(width: double.infinity)
+                    : Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: _ContentSuggestionCard(
+                          query: _notFoundQuery!,
+                          sending: _suggestionSending,
+                          sent: _suggestionSent,
+                          onSuggest: () => _submitContentSuggestion(_notFoundQuery!),
+                          onDismiss: () => setState(() => _notFoundQuery = null),
+                        ),
+                      ),
               ),
               const SizedBox(height: 16),
               Expanded(
@@ -718,6 +778,100 @@ class _QuickActionsRow extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+/// Busca na Home — card de "não encontramos nada / sugerir conteúdo"
+/// (revisão de estilo 2026-09-03, pedido de Rhoney: "nível
+/// profissional... o campo que aparece quando o usuário não encontra o
+/// tema"). Nunca usa tom de erro (Princípio de Não-Humilhação,
+/// PRODUCT_PRINCIPLES.md §1) — "não encontramos" é neutro/convite, não
+/// falha do usuário, por isso a moldura é dourada (mesma cor da própria
+/// busca), nunca terracota/error.
+class _ContentSuggestionCard extends StatelessWidget {
+  const _ContentSuggestionCard({
+    required this.query,
+    required this.sending,
+    required this.sent,
+    required this.onSuggest,
+    required this.onDismiss,
+  });
+
+  final String query;
+  final bool sending;
+  final bool sent;
+  final VoidCallback onSuggest;
+  final VoidCallback onDismiss;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(16, 14, 10, 14),
+      decoration: BoxDecoration(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(Icons.travel_explore_rounded, color: AppColors.gold, size: 22),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  l10n.homeSearchNotFoundMessage(query),
+                  style: TextStyle(color: AppColors.bone, fontWeight: FontWeight.w600, height: 1.3),
+                ),
+              ),
+              SizedBox(
+                width: 32,
+                height: 32,
+                child: IconButton(
+                  padding: EdgeInsets.zero,
+                  icon: Icon(Icons.close_rounded, color: AppColors.muted, size: 18),
+                  onPressed: onDismiss,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          if (sent)
+            Row(
+              children: [
+                Icon(Icons.check_circle_rounded, color: AppColors.victory, size: 18),
+                const SizedBox(width: 6),
+                Expanded(
+                  child: Text(
+                    l10n.homeSearchSuggestionRegisteredMessage,
+                    style: TextStyle(color: AppColors.victory, fontWeight: FontWeight.w600, fontSize: 13),
+                  ),
+                ),
+              ],
+            )
+          else
+            Align(
+              alignment: Alignment.centerRight,
+              child: FilledButton.icon(
+                onPressed: sending ? null : onSuggest,
+                icon: sending
+                    ? SizedBox(
+                        width: 14,
+                        height: 14,
+                        child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.bg),
+                      )
+                    : const Icon(Icons.lightbulb_outline_rounded, size: 18),
+                label: Text(l10n.homeSearchSuggestButton),
+                style: FilledButton.styleFrom(minimumSize: const Size(0, 40), padding: const EdgeInsets.symmetric(horizontal: 16)),
+              ),
+            ),
+        ],
+      ),
     );
   }
 }

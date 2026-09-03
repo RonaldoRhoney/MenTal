@@ -250,13 +250,17 @@ void main() {
     await tester.testTextInput.receiveAction(TextInputAction.search);
     await tester.pumpAndSettle();
 
-    final suggestButtonFinder = find.byType(SnackBarAction);
+    // Revisão de estilo (2026-09-03): não é mais SnackBar — um card em
+    // destaque fica visível até o usuário decidir (sugerir ou fechar).
+    expect(find.text('Não encontramos nada para "termo-sem-nenhum-resultado-xyz".'), findsOneWidget);
+    final suggestButtonFinder = find.widgetWithText(FilledButton, 'Sugerir esse conteúdo');
     expect(suggestButtonFinder, findsOneWidget);
 
     await tester.tap(suggestButtonFinder);
     await tester.pumpAndSettle();
 
     expect(client.submittedSuggestions, ['termo-sem-nenhum-resultado-xyz']);
+    expect(find.text('Sugestão registrada! Um agente vai avaliar esse conteúdo.'), findsOneWidget);
   });
 
   testWidgets('mostra o detentor do território entre amigos (V2 item 13)', (tester) async {
