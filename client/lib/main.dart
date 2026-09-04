@@ -10,6 +10,7 @@ import 'screens/age_gate_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/mandatory_onboarding_screen.dart';
+import 'screens/movement_screen.dart';
 import 'screens/onboarding_tutorial_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/welcome_splash_screen.dart';
@@ -44,6 +45,14 @@ const String kSupabasePublishableKey = 'sb_publishable_-91P1bkCU4bGLEGPJ84l_A_CP
 /// `gh-pages`, gratuito, sem risco de cobrança) só pra desbloquear a
 /// submissão no Google Play, que exige uma URL pública real já agora.
 const String kPrivacyPolicyUrl = 'https://ronaldorhoney.github.io/MenTal/';
+
+/// NOTIFICACAO_ICONE_M_MENTAL.md §4 — tocar na notificação persistente
+/// de Movimento precisa navegar até a tela Movimento mesmo com o app já
+/// aberto em outra tela; um GlobalKey no nível do MaterialApp é o jeito
+/// padrão de empurrar uma rota de fora da árvore de widgets (o sinal
+/// chega via FlutterForegroundTask.addTaskDataCallback, registrado em
+/// _AppEntryPointState, bem longe de qualquer BuildContext local).
+final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -82,6 +91,7 @@ class MentalApp extends StatelessWidget {
       listenable: ThemeModeService.instance,
       builder: (context, _) {
         return MaterialApp(
+          navigatorKey: rootNavigatorKey,
           title: 'MENTAL',
           debugShowCheckedModeBanner: false,
           // ARCHITECTURE_UPDATE_I18N_READY.md: arquitetura i18n-ready desde já
@@ -162,6 +172,26 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     OnboardingTutorialService.hasSeen().then((seen) {
       if (mounted) setState(() => _tutorialSeen = seen);
     });
+    // NOTIFICACAO_ICONE_M_MENTAL.md §4 — sinal enviado por
+    // MovementTaskHandler.onNotificationPressed() (engine isolada do
+    // foreground service) ao tocar na notificação persistente de
+    // Movimento. Registrado aqui (não em main(), fora de qualquer State)
+    // porque só aqui existe o ApiClient real da sessão logada.
+    FlutterForegroundTask.addTaskDataCallback(_onForegroundTaskData);
+  }
+
+  void _onForegroundTaskData(Object data) {
+    final client = _client;
+    if (client == null || data is! Map || data['navigate'] != 'movement') return;
+    rootNavigatorKey.currentState?.push(
+      MaterialPageRoute(builder: (_) => MovementScreen(client: client)),
+    );
+  }
+
+  @override
+  void dispose() {
+    FlutterForegroundTask.removeTaskDataCallback(_onForegroundTaskData);
+    super.dispose();
   }
 
   // Reconstrói o ApiClient quando a sessão muda de verdade — login,

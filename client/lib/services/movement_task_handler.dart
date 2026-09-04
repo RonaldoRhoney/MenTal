@@ -43,4 +43,15 @@ class MovementTaskHandler extends TaskHandler {
   Future<void> onDestroy(DateTime timestamp, bool isTimeout) async {
     await _sub?.cancel();
   }
+
+  // NOTIFICACAO_ICONE_M_MENTAL.md §4 — tocar na notificação persistente
+  // de Movimento deve abrir direto a tela Movimento, app aberto ou
+  // fechado. Este handler roda na engine isolada do foreground service,
+  // então não dá pra navegar direto daqui — sendDataToMain avisa a
+  // engine principal (main.dart escuta via addTaskDataCallback), que
+  // decide a navegação de verdade (com o ApiClient real da sessão).
+  @override
+  void onNotificationPressed() {
+    FlutterForegroundTask.sendDataToMain({'navigate': 'movement'});
+  }
 }

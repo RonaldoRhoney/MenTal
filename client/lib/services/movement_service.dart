@@ -283,6 +283,13 @@ class MovementService {
         serviceTypes: const [ForegroundServiceTypes.health],
         notificationTitle: 'MENTAL — Movimento ativo',
         notificationText: 'Contando seus passos em segundo plano.',
+        // NOTIFICACAO_ICONE_M_MENTAL.md — sem isso, o Android mostrava
+        // um ícone genérico do sistema em vez do "M" do app (achado
+        // real, 03/09/2026). metaDataName referencia o meta-data
+        // declarado em AndroidManifest.xml, que aponta pro drawable
+        // ic_stat_mental (monocromático, gerado a partir do ícone
+        // oficial do app).
+        notificationIcon: const NotificationIcon(metaDataName: 'com.rhoneyinc.mental.NOTIFICATION_ICON'),
         callback: startMovementTaskCallback,
       );
       return result is ServiceRequestSuccess;

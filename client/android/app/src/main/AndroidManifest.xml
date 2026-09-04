@@ -79,6 +79,25 @@
             android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
             android:foregroundServiceType="health"
             android:exported="false" />
+        <!-- NOTIFICACAO_ICONE_M_MENTAL.md — ícone monocromático (branco
+             sobre transparente, gerado a partir de assets/icon/
+             icon_foreground.png) usado como small icon em TODAS as
+             notificações do app, de forma centralizada:
+             1) meta-data abaixo, referenciado pelo NotificationIcon da
+                notificação persistente de Movimento
+                (movement_service.dart);
+             2) default_notification_icon, usado pelo Firebase Messaging
+                pra qualquer push (streak, ranking, Torcida etc.) que não
+                especifique um ícone próprio — o backend (push.py) nunca
+                define um, então esse default cobre todos eles de uma vez.
+             Sem isso, o Android caía no ícone genérico do sistema
+             (achado real, 03/09/2026). -->
+        <meta-data
+            android:name="com.rhoneyinc.mental.NOTIFICATION_ICON"
+            android:resource="@drawable/ic_stat_mental" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_mental" />
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
