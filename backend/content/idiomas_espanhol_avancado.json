@@ -1,0 +1,1044 @@
+[
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'negociar' em espanhol?",
+    "options": [
+      "Negociar",
+      "Negosiar",
+      "Negociarr",
+      "Negosear"
+    ],
+    "correct_answer": "Negociar",
+    "explanation": "'negociar' se traduz como 'Negociar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'acordo' em espanhol?",
+    "options": [
+      "Acuerdo",
+      "Acordo",
+      "Acuerdoo",
+      "Acurdo"
+    ],
+    "correct_answer": "Acuerdo",
+    "explanation": "'acordo' se traduz como 'Acuerdo' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'a menos que' novamente para fixar em espanhol?",
+    "options": [
+      "A menos que",
+      "A menos de que",
+      "Salvo que",
+      "Amenos que"
+    ],
+    "correct_answer": "A menos que",
+    "explanation": "'a menos que' se traduz como 'A menos que' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'assinado(a)' em espanhol?",
+    "options": [
+      "Firmado",
+      "Asinado",
+      "Firmadoo",
+      "Firmato"
+    ],
+    "correct_answer": "Firmado",
+    "explanation": "'assinado(a)' se traduz como 'Firmado' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'antes de' (prazo) em espanhol?",
+    "options": [
+      "Antes de",
+      "Hasta",
+      "Para",
+      "Por"
+    ],
+    "correct_answer": "Antes de",
+    "explanation": "'antes de' se traduz como 'Antes de' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'A menos que o contrato seja assinado antes de sexta-feira, não haverá acordo.'",
+    "options": null,
+    "correct_answer": "A menos que el contrato sea firmado antes del viernes, no habrá acuerdo",
+    "accepted_answers": [
+      "A menos que se firme el contrato antes del viernes, no habrá acuerdo"
+    ],
+    "explanation": "'Sea firmado' está no subjuntivo (exigido por 'a menos que') e na voz passiva — dupla estrutura formal típica de contextos de negócios.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Negócios' que você acabou de ver.",
+      "A frase começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'se eu tivesse tido' (hipótese passada) em espanhol?",
+    "options": [
+      "Si hubiera tenido",
+      "Si tendría",
+      "Si tuviera tenido",
+      "Si había tenido"
+    ],
+    "correct_answer": "Si hubiera tenido",
+    "explanation": "'se eu tivesse tido' se traduz como 'Si hubiera tenido' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'teria feito' em espanhol?",
+    "options": [
+      "Habría hecho",
+      "Habria hecho",
+      "Hubiera hacer",
+      "Habría hacido"
+    ],
+    "correct_answer": "Habría hecho",
+    "explanation": "'teria feito' se traduz como 'Habría hecho' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'diferente' em espanhol?",
+    "options": [
+      "Diferente",
+      "Diferrente",
+      "Deferente",
+      "Diferentte"
+    ],
+    "correct_answer": "Diferente",
+    "explanation": "'diferente' se traduz como 'Diferente' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'com antecedência' em espanhol?",
+    "options": [
+      "Con antelación",
+      "Con antecipación",
+      "Antecipadamente",
+      "Con anterioridad ya"
+    ],
+    "correct_answer": "Con antelación",
+    "explanation": "'com antecedência' se traduz como 'Con antelación' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'aviso' em espanhol?",
+    "options": [
+      "Aviso",
+      "Avizo",
+      "Avisoo",
+      "Abiso"
+    ],
+    "correct_answer": "Aviso",
+    "explanation": "'aviso' se traduz como 'Aviso' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'Se eu tivesse recebido o aviso com antecedência, eu teria feito algo diferente.'",
+    "options": null,
+    "correct_answer": "Si hubiera recibido el aviso con antelación, habría hecho algo diferente",
+    "accepted_answers": [
+      "Si hubiese recibido el aviso con antelación, habría hecho algo diferente"
+    ],
+    "explanation": "Esta é a condicional composta (hipótese sobre o passado): 'si + pretérito pluscuamperfecto de subjuntivo' seguido de 'condicional compuesto' — equivalente à terceira condicional do inglês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Condicionais e hipóteses' que você acabou de ver.",
+      "A frase começa com 'Si'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'foi anunciado' (voz passiva) em espanhol?",
+    "options": [
+      "Fue anunciado",
+      "Ha anunciado",
+      "Fue anunciando",
+      "Anunciado fue"
+    ],
+    "correct_answer": "Fue anunciado",
+    "explanation": "'foi anunciado' se traduz como 'Fue anunciado' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'de acordo com' em espanhol?",
+    "options": [
+      "De acuerdo con",
+      "Según con",
+      "De acuerdo a",
+      "Acorde con"
+    ],
+    "correct_answer": "De acuerdo con",
+    "explanation": "'de acordo com' se traduz como 'De acuerdo con' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'fontes' (informação) em espanhol?",
+    "options": [
+      "Fuentes",
+      "Fontes",
+      "Fuenttes",
+      "Fuintes"
+    ],
+    "correct_answer": "Fuentes",
+    "explanation": "'fontes' se traduz como 'Fuentes' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'adiado(a)' em espanhol?",
+    "options": [
+      "Aplazado",
+      "Adiado",
+      "Aplasado",
+      "Aplazadoo"
+    ],
+    "correct_answer": "Aplazado",
+    "explanation": "'adiado(a)' se traduz como 'Aplazado' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'devido a' em espanhol?",
+    "options": [
+      "Debido a",
+      "Devido a",
+      "Debido de",
+      "Por debido"
+    ],
+    "correct_answer": "Debido a",
+    "explanation": "'devido a' se traduz como 'Debido a' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'De acordo com as fontes, o evento foi adiado devido à chuva.'",
+    "options": null,
+    "correct_answer": "De acuerdo con las fuentes, el evento fue aplazado debido a la lluvia",
+    "accepted_answers": [
+      "Según las fuentes, el evento fue aplazado debido a la lluvia"
+    ],
+    "explanation": "'Según' é um sinônimo mais direto e comum de 'de acuerdo con' no jornalismo em espanhol, ambos equivalentes a 'de acordo com'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Notícias e eventos' que você acabou de ver.",
+      "A frase começa com 'De'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'desistir' em espanhol?",
+    "options": [
+      "Rendirse",
+      "Desistir",
+      "Rendirce",
+      "Rendersee"
+    ],
+    "correct_answer": "Rendirse",
+    "explanation": "'desistir' se traduz como 'Rendirse' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'adiar' em espanhol?",
+    "options": [
+      "Postergar",
+      "Postponerr",
+      "Posponer",
+      "Posterger"
+    ],
+    "correct_answer": "Postergar",
+    "explanation": "'adiar' se traduz como 'Postergar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'lidar com' em espanhol?",
+    "options": [
+      "Lidiar con",
+      "Lidiar de",
+      "Tratar con",
+      "Manejar de"
+    ],
+    "correct_answer": "Lidiar con",
+    "explanation": "'lidar com' se traduz como 'Lidiar con' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'em vez de' em espanhol?",
+    "options": [
+      "En vez de",
+      "En lugar que",
+      "En vés de",
+      "En vez que"
+    ],
+    "correct_answer": "En vez de",
+    "explanation": "'em vez de' se traduz como 'En vez de' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'decidiu' em espanhol?",
+    "options": [
+      "Decidió",
+      "Decidio",
+      "Decidiu",
+      "Decedió"
+    ],
+    "correct_answer": "Decidió",
+    "explanation": "'decidiu' se traduz como 'Decidió' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'Em vez de desistir, ela decidiu lidar com o problema em vez de adiá-lo.'",
+    "options": null,
+    "correct_answer": "En vez de rendirse, ella decidió lidiar con el problema en vez de postergarlo",
+    "accepted_answers": [
+      "En lugar de rendirse, ella decidió enfrentar el problema en vez de postergarlo"
+    ],
+    "explanation": "'En vez de' e 'en lugar de' são intercambiáveis em espanhol, ambos significando 'em vez de' — diferença apenas de preferência regional/estilística.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Expressões idiomáticas do dia a dia' que você acabou de ver.",
+      "A frase começa com 'En'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'por outro lado' em espanhol?",
+    "options": [
+      "Por otro lado",
+      "Por otra parte",
+      "Del otro lado",
+      "En otro lado"
+    ],
+    "correct_answer": "Por otro lado",
+    "explanation": "'por outro lado' se traduz como 'Por otro lado' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'apesar de' em espanhol?",
+    "options": [
+      "A pesar de",
+      "Apesar de",
+      "Pese de",
+      "A pesar que"
+    ],
+    "correct_answer": "A pesar de",
+    "explanation": "'apesar de' se traduz como 'A pesar de' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sugerem' em espanhol?",
+    "options": [
+      "Sugieren",
+      "Sujieren",
+      "Sugeren",
+      "Sugierren"
+    ],
+    "correct_answer": "Sugieren",
+    "explanation": "'sugerem' se traduz como 'Sugieren' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ao contrário' em espanhol?",
+    "options": [
+      "Al contrario",
+      "Por contrario",
+      "En contrario",
+      "Del contrario"
+    ],
+    "correct_answer": "Al contrario",
+    "explanation": "'ao contrário' se traduz como 'Al contrario' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'Apesar da evidência, alguns pesquisadores sugerem, ao contrário, uma explicação diferente.'",
+    "options": null,
+    "correct_answer": "A pesar de la evidencia, algunos investigadores sugieren, al contrario, una explicación diferente",
+    "accepted_answers": [
+      "A pesar de la evidencia, algunos investigadores sugieren, por el contrario, una explicación diferente"
+    ],
+    "explanation": "'A pesar de' é seguido diretamente de substantivo, sem preposição adicional — mesma estrutura do 'despite' em inglês, diferente do 'apesar de' português apenas na grafia.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Opinião e argumentação' que você acabou de ver.",
+      "A frase começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'descoberto(a)' em espanhol?",
+    "options": [
+      "Descubierto",
+      "Descuberto",
+      "Descubierrto",
+      "Discubierto"
+    ],
+    "correct_answer": "Descubierto",
+    "explanation": "'descoberto(a)' se traduz como 'Descubierto' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'estudo' (pesquisa) em espanhol?",
+    "options": [
+      "Estudio",
+      "Estudo",
+      "Estudioo",
+      "Studio"
+    ],
+    "correct_answer": "Estudio",
+    "explanation": "'estudo' se traduz como 'Estudio' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'demonstrou' em espanhol?",
+    "options": [
+      "Demostró",
+      "Demonstrou",
+      "Demostro",
+      "Demostrou"
+    ],
+    "correct_answer": "Demostró",
+    "explanation": "'demonstrou' se traduz como 'Demostró' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'a fim de' em espanhol?",
+    "options": [
+      "Con el fin de",
+      "A fin de",
+      "Por el fin de",
+      "Al fin de"
+    ],
+    "correct_answer": "Con el fin de",
+    "explanation": "'a fim de' se traduz como 'Con el fin de' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'confirmar' em espanhol?",
+    "options": [
+      "Confirmar",
+      "Confirnar",
+      "Comfirmar",
+      "Confirmarr"
+    ],
+    "correct_answer": "Confirmar",
+    "explanation": "'confirmar' se traduz como 'Confirmar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'O estudo demonstrou o que foi descoberto, a fim de confirmar a hipótese.'",
+    "options": null,
+    "correct_answer": "El estudio demostró lo que fue descubierto, con el fin de confirmar la hipótesis",
+    "accepted_answers": [
+      "El estudio demostró lo descubierto, a fin de confirmar la hipótesis"
+    ],
+    "explanation": "'Con el fin de' e 'a fin de' são formas equivalentes de expressar propósito em espanhol formal, ambas mais elaboradas que o simples 'para'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Ciência e pesquisa' que você acabou de ver.",
+      "A frase começa com 'El'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'mal-entendido' em espanhol?",
+    "options": [
+      "Malentendido",
+      "Mal entendido",
+      "Malentendimiento",
+      "Mal entendimento"
+    ],
+    "correct_answer": "Malentendido",
+    "explanation": "'mal-entendido' se traduz como 'Malentendido' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'esclarecer' em espanhol?",
+    "options": [
+      "Aclarar",
+      "Esclarecer",
+      "Aclararr",
+      "Esclareser"
+    ],
+    "correct_answer": "Aclarar",
+    "explanation": "'esclarecer' se traduz como 'Aclarar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sem querer' em espanhol?",
+    "options": [
+      "Sin querer",
+      "Sin querir",
+      "Sen querer",
+      "Sin quierer"
+    ],
+    "correct_answer": "Sin querer",
+    "explanation": "'sem querer' se traduz como 'Sin querer' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ofendido(a)' em espanhol?",
+    "options": [
+      "Ofendido",
+      "Ofendidoo",
+      "Ofendito",
+      "Ofendidu"
+    ],
+    "correct_answer": "Ofendido",
+    "explanation": "'ofendido(a)' se traduz como 'Ofendido' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'pretendia' em espanhol?",
+    "options": [
+      "Pretendía",
+      "Pretendia",
+      "Pretendiera",
+      "Pretendio"
+    ],
+    "correct_answer": "Pretendía",
+    "explanation": "'pretendia' se traduz como 'Pretendía' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'Foi um mal-entendido; eu não pretendia ofender ninguém sem querer, deixe-me esclarecer.'",
+    "options": null,
+    "correct_answer": "Fue un malentendido, no pretendía ofender a nadie sin querer, déjame aclarar",
+    "accepted_answers": [
+      "Fue un malentendido, no quería ofender a nadie, permíteme aclarar"
+    ],
+    "explanation": "'A nadie' usa o 'a' pessoal, obrigatório em espanhol antes de objeto direto que se refere a pessoa ('ofender a nadie'), regra que não existe em português.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Relações e comunicação' que você acabou de ver.",
+      "A frase começa com 'Fue'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sustentável' em espanhol?",
+    "options": [
+      "Sostenible",
+      "Sustentable",
+      "Sostenibel",
+      "Sustenible"
+    ],
+    "correct_answer": "Sostenible",
+    "explanation": "'sustentável' se traduz como 'Sostenible' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'a menos que' novamente para fixar (condicional) em espanhol?",
+    "options": [
+      "A menos que",
+      "A menos de que",
+      "Salvo que",
+      "Amenos que"
+    ],
+    "correct_answer": "A menos que",
+    "explanation": "'a menos que' se traduz como 'A menos que' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'reduzir' em espanhol?",
+    "options": [
+      "Reducir",
+      "Reduzir",
+      "Reducirr",
+      "Redusir"
+    ],
+    "correct_answer": "Reducir",
+    "explanation": "'reduzir' se traduz como 'Reducir' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'consequências' em espanhol?",
+    "options": [
+      "Consecuencias",
+      "Consequencias",
+      "Consecuensias",
+      "Consecuencas"
+    ],
+    "correct_answer": "Consecuencias",
+    "explanation": "'consequências' se traduz como 'Consecuencias' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'irreversível' em espanhol?",
+    "options": [
+      "Irreversible",
+      "Irrebersible",
+      "Irreversibel",
+      "Irrevercible"
+    ],
+    "correct_answer": "Irreversible",
+    "explanation": "'irreversível' se traduz como 'Irreversible' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'A menos que reduzamos o consumo agora, as consequências podem ser irreversíveis.'",
+    "options": null,
+    "correct_answer": "A menos que reduzcamos el consumo ahora, las consecuencias podrían ser irreversibles",
+    "accepted_answers": [
+      "A menos que reduzcamos el consumo ahora, las consecuencias pueden ser irreversibles"
+    ],
+    "explanation": "'Reduzcamos' está no subjuntivo (primeira pessoa do plural), exigido novamente pela expressão condicional 'a menos que' — padrão que se repete em toda construção desse tipo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Meio ambiente' que você acabou de ver.",
+      "A frase começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'olhando para trás' em espanhol?",
+    "options": [
+      "Mirando hacia atrás",
+      "Mirando atrás",
+      "Viendo atrás",
+      "Mirando para atrás"
+    ],
+    "correct_answer": "Mirando hacia atrás",
+    "explanation": "'olhando para trás' se traduz como 'Mirando hacia atrás' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'teria feito' novamente para fixar em espanhol?",
+    "options": [
+      "Habría hecho",
+      "Habria hecho",
+      "Hubiera hacer",
+      "Habría hacido"
+    ],
+    "correct_answer": "Habría hecho",
+    "explanation": "'teria feito' se traduz como 'Habría hecho' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'de qualquer forma' em espanhol?",
+    "options": [
+      "De todos modos",
+      "De cualquier forma",
+      "De toda forma",
+      "En todo caso"
+    ],
+    "correct_answer": "De todos modos",
+    "explanation": "'de qualquer forma' se traduz como 'De todos modos' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'valeu a pena' em espanhol?",
+    "options": [
+      "Valió la pena",
+      "Valio la pena",
+      "Valió el pena",
+      "Valia la pena"
+    ],
+    "correct_answer": "Valió la pena",
+    "explanation": "'valeu a pena' se traduz como 'Valió la pena' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'crescimento' em espanhol?",
+    "options": [
+      "Crecimiento",
+      "Crescimiento",
+      "Crecimento",
+      "Crecimientoo"
+    ],
+    "correct_answer": "Crecimiento",
+    "explanation": "'crescimento' se traduz como 'Crecimiento' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'Ao olhar para trás, eu teria feito diferente, mas de qualquer forma valeu a pena pelo crescimento.'",
+    "options": null,
+    "correct_answer": "Mirando hacia atrás, habría hecho las cosas diferente, pero de todos modos valió la pena por el crecimiento",
+    "accepted_answers": [
+      "Mirando hacia atrás, lo habría hecho diferente, pero valió la pena por el crecimiento"
+    ],
+    "explanation": "'Mirando hacia atrás' (gerúndio no início) introduz reflexão sobre o passado, mesma função do 'looking back' em inglês e 'ao olhar para trás' em português.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Reflexão pessoal' que você acabou de ver.",
+      "A frase começa com 'Mirando'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'no entanto' em espanhol?",
+    "options": [
+      "Sin embargo",
+      "No entanto",
+      "Sen embargo",
+      "Sin embargoo"
+    ],
+    "correct_answer": "Sin embargo",
+    "explanation": "'no entanto' se traduz como 'Sin embargo' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'inegavelmente' em espanhol?",
+    "options": [
+      "Innegablemente",
+      "Inegablemente",
+      "Inegavelmente",
+      "Innegablementi"
+    ],
+    "correct_answer": "Innegablemente",
+    "explanation": "'inegavelmente' se traduz como 'Innegablemente' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ainda que' em espanhol?",
+    "options": [
+      "Aun cuando",
+      "Aunque",
+      "Aun que",
+      "Aun si"
+    ],
+    "correct_answer": "Aun cuando",
+    "explanation": "'ainda que' se traduz como 'Aun cuando' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'permanece' em espanhol?",
+    "options": [
+      "Permanece",
+      "Permaneçe",
+      "Permanesse",
+      "Permanecce"
+    ],
+    "correct_answer": "Permanece",
+    "explanation": "'permanece' se traduz como 'Permanece' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'incerto(a)' em espanhol?",
+    "options": [
+      "Incierto",
+      "Incerto",
+      "Insierto",
+      "Inciertoo"
+    ],
+    "correct_answer": "Incierto",
+    "explanation": "'incerto(a)' se traduz como 'Incierto' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o espanhol: 'Ainda que o resultado seja incerto, o esforço, no entanto, permanece inegavelmente valioso.'",
+    "options": null,
+    "correct_answer": "Aun cuando el resultado sea incierto, el esfuerzo, sin embargo, permanece innegablemente valioso",
+    "accepted_answers": [
+      "Aunque el resultado sea incierto, el esfuerzo sin embargo sigue siendo innegablemente valioso"
+    ],
+    "explanation": "'Aun cuando' + subjuntivo expressa um contraste mais formal/enfático que 'aunque', comum em textos escritos e argumentativos em espanhol.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Revisão geral avançada' que você acabou de ver.",
+      "A frase começa com 'Aun'."
+    ],
+    "age_reviewed": true
+  }
+]

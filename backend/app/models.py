@@ -322,6 +322,13 @@ class Challenge(Base):
     audio_url: Mapped[str | None] = mapped_column(String, nullable=True)
     audio_source_name: Mapped[str | None] = mapped_column(String, nullable=True)
     audio_source_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    # V5 — Mundo dos Idiomas: desafio de tradução em texto livre
+    # (options=None) tem mais de uma resposta correta possível (ex.:
+    # "The house is big" e "The house is big." e "the house is big").
+    # None em todo o resto do app — mesmo padrão opcional-nunca-
+    # obrigatório de prompt_image/clues/audio_url. A comparação em
+    # submit_answer aceita correct_answer OU qualquer item daqui.
+    accepted_answers: Mapped[list | None] = mapped_column(JSON, nullable=True)
 
 
 class ChallengeHint(Base):

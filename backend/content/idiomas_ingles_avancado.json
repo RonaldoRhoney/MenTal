@@ -1,0 +1,1044 @@
+[
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'negociar' em inglês?",
+    "options": [
+      "Negotiate",
+      "Negociate",
+      "Negotiat",
+      "Negosiate"
+    ],
+    "correct_answer": "Negotiate",
+    "explanation": "'negociar' se traduz como 'Negotiate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'acordo' em inglês?",
+    "options": [
+      "Agreement",
+      "Agrement",
+      "Agreemant",
+      "Agreament"
+    ],
+    "correct_answer": "Agreement",
+    "explanation": "'acordo' se traduz como 'Agreement' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'a menos que' em inglês?",
+    "options": [
+      "Unless",
+      "Unles",
+      "Onless",
+      "Unlesss"
+    ],
+    "correct_answer": "Unless",
+    "explanation": "'a menos que' se traduz como 'Unless' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'assinado(a)' em inglês?",
+    "options": [
+      "Signed",
+      "Signd",
+      "Sined",
+      "Singed"
+    ],
+    "correct_answer": "Signed",
+    "explanation": "'assinado(a)' se traduz como 'Signed' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'até' (prazo) em inglês?",
+    "options": [
+      "By",
+      "Until",
+      "Till",
+      "For"
+    ],
+    "correct_answer": "By",
+    "explanation": "'até' se traduz como 'By' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'A menos que o contrato seja assinado até sexta-feira, não haverá acordo.'",
+    "options": null,
+    "correct_answer": "Unless the contract is signed by Friday, there will be no agreement",
+    "accepted_answers": [
+      "Unless the contract is signed by Friday, there won't be an agreement"
+    ],
+    "explanation": "'Is signed' está na voz passiva (o contrato recebe a ação, não a pratica) — estrutura comum em contextos formais/de negócios, onde quem assina é menos importante que o fato de ser assinado.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Negócios' que você acabou de ver.",
+      "A frase começa com 'Unless'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'se eu tivesse' (hipótese) em inglês?",
+    "options": [
+      "If I had",
+      "If I have",
+      "If I would have",
+      "If I has"
+    ],
+    "correct_answer": "If I had",
+    "explanation": "'se eu tivesse' se traduz como 'If I had' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'teria feito' em inglês?",
+    "options": [
+      "Would have done",
+      "Would did",
+      "Will have done",
+      "Would has done"
+    ],
+    "correct_answer": "Would have done",
+    "explanation": "'teria feito' se traduz como 'Would have done' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'diferente' em inglês?",
+    "options": [
+      "Different",
+      "Diferent",
+      "Differant",
+      "Diferrent"
+    ],
+    "correct_answer": "Different",
+    "explanation": "'diferente' se traduz como 'Different' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'antecipadamente' em inglês?",
+    "options": [
+      "In advance",
+      "Advanced",
+      "Beforehand time",
+      "Anticipatedly"
+    ],
+    "correct_answer": "In advance",
+    "explanation": "'antecipadamente' se traduz como 'In advance' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'aviso' em inglês?",
+    "options": [
+      "Warning",
+      "Warnning",
+      "Warming",
+      "Warnin"
+    ],
+    "correct_answer": "Warning",
+    "explanation": "'aviso' se traduz como 'Warning' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'Se eu tivesse recebido o aviso com antecedência, eu teria feito algo diferente.'",
+    "options": null,
+    "correct_answer": "If I had received the warning in advance, I would have done something different",
+    "accepted_answers": [
+      "If I'd received the warning in advance, I would have done something different"
+    ],
+    "explanation": "Esta é a terceira condicional em inglês (fato hipotético sobre o passado): 'if + past perfect' seguido de 'would have + particípio', usada para lamentar ou imaginar algo que não aconteceu.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Condicionais e hipóteses' que você acabou de ver.",
+      "A frase começa com 'If'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'foi anunciado' (voz passiva) em inglês?",
+    "options": [
+      "Was announced",
+      "Has announced",
+      "Was announcing",
+      "Announced was"
+    ],
+    "correct_answer": "Was announced",
+    "explanation": "'foi anunciado' se traduz como 'Was announced' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'de acordo com' em inglês?",
+    "options": [
+      "According to",
+      "Accord with",
+      "According with",
+      "In accord to"
+    ],
+    "correct_answer": "According to",
+    "explanation": "'de acordo com' se traduz como 'According to' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'fontes' (informação) em inglês?",
+    "options": [
+      "Sources",
+      "Sourses",
+      "Sorces",
+      "Sourcis"
+    ],
+    "correct_answer": "Sources",
+    "explanation": "'fontes' se traduz como 'Sources' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'adiado(a)' em inglês?",
+    "options": [
+      "Postponed",
+      "Posponed",
+      "Postponned",
+      "Pospooned"
+    ],
+    "correct_answer": "Postponed",
+    "explanation": "'adiado(a)' se traduz como 'Postponed' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'devido a' em inglês?",
+    "options": [
+      "Due to",
+      "Due for",
+      "Because to",
+      "Cause of"
+    ],
+    "correct_answer": "Due to",
+    "explanation": "'devido a' se traduz como 'Due to' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'De acordo com as fontes, o evento foi adiado devido à chuva.'",
+    "options": null,
+    "correct_answer": "According to sources, the event was postponed due to the rain",
+    "accepted_answers": [
+      "According to sources, the event was postponed due to rain"
+    ],
+    "explanation": "'Due to' é seguido de substantivo ('due to the rain'), diferente de 'because', que é seguido de uma oração completa com sujeito e verbo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Notícias e eventos' que você acabou de ver.",
+      "A frase começa com 'According'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'desistir' em inglês?",
+    "options": [
+      "Give up",
+      "Give off",
+      "Give down",
+      "Give out"
+    ],
+    "correct_answer": "Give up",
+    "explanation": "'desistir' se traduz como 'Give up' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Phrasal verbs no dia a dia'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'adiar' em inglês?",
+    "options": [
+      "Put off",
+      "Put down",
+      "Put away",
+      "Put out"
+    ],
+    "correct_answer": "Put off",
+    "explanation": "'adiar' se traduz como 'Put off' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Phrasal verbs no dia a dia'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'lidar com' em inglês?",
+    "options": [
+      "Deal with",
+      "Deal to",
+      "Deal for",
+      "Deal on"
+    ],
+    "correct_answer": "Deal with",
+    "explanation": "'lidar com' se traduz como 'Deal with' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Phrasal verbs no dia a dia'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'em vez de' em inglês?",
+    "options": [
+      "Instead of",
+      "In stead of",
+      "In place to",
+      "Instead for"
+    ],
+    "correct_answer": "Instead of",
+    "explanation": "'em vez de' se traduz como 'Instead of' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Phrasal verbs no dia a dia'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'decidiu' em inglês?",
+    "options": [
+      "Decided",
+      "Desided",
+      "Decidded",
+      "Decideed"
+    ],
+    "correct_answer": "Decided",
+    "explanation": "'decidiu' se traduz como 'Decided' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Phrasal verbs no dia a dia'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'Em vez de desistir, ela decidiu lidar com o problema em vez de adiá-lo.'",
+    "options": null,
+    "correct_answer": "Instead of giving up, she decided to deal with the problem instead of putting it off",
+    "accepted_answers": [
+      "Instead of giving up, she decided to deal with the problem instead of postponing it"
+    ],
+    "explanation": "Phrasal verbs (give up, put off, deal with) são combinações de verbo + preposição/advérbio que mudam completamente o significado do verbo original — muito comuns na fala natural em inglês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Phrasal verbs no dia a dia' que você acabou de ver.",
+      "A frase começa com 'Instead'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'por outro lado' em inglês?",
+    "options": [
+      "On the other hand",
+      "On other hand",
+      "By the other hand",
+      "In the other hand"
+    ],
+    "correct_answer": "On the other hand",
+    "explanation": "'por outro lado' se traduz como 'On the other hand' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'apesar de' em inglês?",
+    "options": [
+      "Despite",
+      "Dispite",
+      "Despit",
+      "Dispight"
+    ],
+    "correct_answer": "Despite",
+    "explanation": "'apesar de' se traduz como 'Despite' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'evidência' em inglês?",
+    "options": [
+      "Evidence",
+      "Evidance",
+      "Evedence",
+      "Evidenc"
+    ],
+    "correct_answer": "Evidence",
+    "explanation": "'evidência' se traduz como 'Evidence' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ao contrário' em inglês?",
+    "options": [
+      "On the contrary",
+      "By contrary",
+      "In contrary",
+      "To contrary"
+    ],
+    "correct_answer": "On the contrary",
+    "explanation": "'ao contrário' se traduz como 'On the contrary' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'Apesar da evidência, alguns pesquisadores sugerem, ao contrário, uma explicação diferente.'",
+    "options": null,
+    "correct_answer": "Despite the evidence, some researchers suggest, on the contrary, a different explanation",
+    "accepted_answers": [
+      "Despite the evidence, some researchers suggest, on the contrary, a different explanation."
+    ],
+    "explanation": "'Despite' é seguido diretamente de substantivo, sem preposição extra ('despite the evidence', não 'despite of the evidence') — erro comum entre falantes de português.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Opinião e argumentação' que você acabou de ver.",
+      "A frase começa com 'Despite'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'descoberto(a)' em inglês?",
+    "options": [
+      "Discovered",
+      "Discoverd",
+      "Discovred",
+      "Discoverred"
+    ],
+    "correct_answer": "Discovered",
+    "explanation": "'descoberto(a)' se traduz como 'Discovered' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'estudo' (pesquisa) em inglês?",
+    "options": [
+      "Study",
+      "Studdy",
+      "Studie",
+      "Stady"
+    ],
+    "correct_answer": "Study",
+    "explanation": "'estudo' se traduz como 'Study' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'demonstrou' em inglês?",
+    "options": [
+      "Demonstrated",
+      "Demonstred",
+      "Demonsted",
+      "Demontrated"
+    ],
+    "correct_answer": "Demonstrated",
+    "explanation": "'demonstrou' se traduz como 'Demonstrated' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'a fim de' em inglês?",
+    "options": [
+      "In order to",
+      "For to",
+      "In order for",
+      "To order"
+    ],
+    "correct_answer": "In order to",
+    "explanation": "'a fim de' se traduz como 'In order to' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'confirmar' em inglês?",
+    "options": [
+      "Confirm",
+      "Confirn",
+      "Comfirm",
+      "Confirmm"
+    ],
+    "correct_answer": "Confirm",
+    "explanation": "'confirmar' se traduz como 'Confirm' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'O estudo demonstrou o que foi descoberto, a fim de confirmar a hipótese.'",
+    "options": null,
+    "correct_answer": "The study demonstrated what was discovered, in order to confirm the hypothesis",
+    "accepted_answers": [
+      "The study demonstrated what was discovered in order to confirm the hypothesis."
+    ],
+    "explanation": "'In order to' é uma forma mais formal de expressar propósito/finalidade do que apenas 'to', comum em textos acadêmicos e científicos.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Ciência e pesquisa' que você acabou de ver.",
+      "A frase começa com 'The'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'mal-entendido' em inglês?",
+    "options": [
+      "Misunderstanding",
+      "Missunderstanding",
+      "Misundertanding",
+      "Misunderstending"
+    ],
+    "correct_answer": "Misunderstanding",
+    "explanation": "'mal-entendido' se traduz como 'Misunderstanding' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'esclarecer' em inglês?",
+    "options": [
+      "Clarify",
+      "Clarrify",
+      "Clearify",
+      "Clarifie"
+    ],
+    "correct_answer": "Clarify",
+    "explanation": "'esclarecer' se traduz como 'Clarify' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sem querer' em inglês?",
+    "options": [
+      "Unintentionally",
+      "Without wanting",
+      "Not wanting",
+      "Unwantly"
+    ],
+    "correct_answer": "Unintentionally",
+    "explanation": "'sem querer' se traduz como 'Unintentionally' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ofendido(a)' em inglês?",
+    "options": [
+      "Offended",
+      "Ofended",
+      "Offendid",
+      "Offendded"
+    ],
+    "correct_answer": "Offended",
+    "explanation": "'ofendido(a)' se traduz como 'Offended' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'pretendia' em inglês?",
+    "options": [
+      "Intended",
+      "Intendid",
+      "Intendded",
+      "Intented"
+    ],
+    "correct_answer": "Intended",
+    "explanation": "'pretendia' se traduz como 'Intended' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'Foi um mal-entendido; eu não pretendia ofender ninguém sem querer, deixe-me esclarecer.'",
+    "options": null,
+    "correct_answer": "It was a misunderstanding, I did not intend to unintentionally offend anyone, let me clarify",
+    "accepted_answers": [
+      "It was a misunderstanding, I didn't intend to offend anyone, let me clarify"
+    ],
+    "explanation": "'Intend to' + verbo expressa intenção — negar essa estrutura ('did not intend to') é uma forma comum de se desculpar formalmente por um mal-entendido em inglês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Relações e comunicação' que você acabou de ver.",
+      "A frase começa com 'It'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sustentável' em inglês?",
+    "options": [
+      "Sustainable",
+      "Sustenable",
+      "Sustainble",
+      "Sustainible"
+    ],
+    "correct_answer": "Sustainable",
+    "explanation": "'sustentável' se traduz como 'Sustainable' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'a menos que' novamente para fixar (condicional) em inglês?",
+    "options": [
+      "Unless",
+      "Unles",
+      "Onless",
+      "Unlesss"
+    ],
+    "correct_answer": "Unless",
+    "explanation": "'a menos que' se traduz como 'Unless' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'reduzir' em inglês?",
+    "options": [
+      "Reduce",
+      "Reduse",
+      "Redusse",
+      "Reducee"
+    ],
+    "correct_answer": "Reduce",
+    "explanation": "'reduzir' se traduz como 'Reduce' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'consequências' em inglês?",
+    "options": [
+      "Consequences",
+      "Consecuences",
+      "Consequenses",
+      "Consequenceis"
+    ],
+    "correct_answer": "Consequences",
+    "explanation": "'consequências' se traduz como 'Consequences' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'irreversível' em inglês?",
+    "options": [
+      "Irreversible",
+      "Ireversible",
+      "Irreversibel",
+      "Irreverssible"
+    ],
+    "correct_answer": "Irreversible",
+    "explanation": "'irreversível' se traduz como 'Irreversible' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'A menos que reduzamos o consumo agora, as consequências podem ser irreversíveis.'",
+    "options": null,
+    "correct_answer": "Unless we reduce consumption now, the consequences may be irreversible",
+    "accepted_answers": [
+      "Unless we reduce consumption now, the consequences could be irreversible"
+    ],
+    "explanation": "'Unless' reaparece aqui numa condicional de aviso/alerta — estrutura frequente em textos sobre meio ambiente e sustentabilidade, tanto no jornalismo quanto na academia.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Meio ambiente' que você acabou de ver.",
+      "A frase começa com 'Unless'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ao olhar para trás' em inglês?",
+    "options": [
+      "Looking back",
+      "Looking behind",
+      "Look back",
+      "Backward looking"
+    ],
+    "correct_answer": "Looking back",
+    "explanation": "'ao olhar para trás' se traduz como 'Looking back' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'teria feito' novamente para fixar (condicional 3) em inglês?",
+    "options": [
+      "Would have done",
+      "Would did",
+      "Will have done",
+      "Would has done"
+    ],
+    "correct_answer": "Would have done",
+    "explanation": "'teria feito' se traduz como 'Would have done' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'de qualquer forma' em inglês?",
+    "options": [
+      "Anyway",
+      "Any way",
+      "Anywise",
+      "In any way"
+    ],
+    "correct_answer": "Anyway",
+    "explanation": "'de qualquer forma' se traduz como 'Anyway' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'valeu a pena' em inglês?",
+    "options": [
+      "Was worth it",
+      "Was worthy it",
+      "Worthed it",
+      "Was value it"
+    ],
+    "correct_answer": "Was worth it",
+    "explanation": "'valeu a pena' se traduz como 'Was worth it' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'crescimento' em inglês?",
+    "options": [
+      "Growth",
+      "Growht",
+      "Groth",
+      "Growrth"
+    ],
+    "correct_answer": "Growth",
+    "explanation": "'crescimento' se traduz como 'Growth' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'Ao olhar para trás, eu teria feito diferente, mas de qualquer forma valeu a pena pelo crescimento.'",
+    "options": null,
+    "correct_answer": "Looking back, I would have done it differently, but anyway it was worth it for the growth",
+    "accepted_answers": [
+      "Looking back, I would have done things differently, but it was worth it for the growth"
+    ],
+    "explanation": "'Looking back' (gerúndio no início da frase) é uma forma comum de introduzir reflexão sobre o passado em inglês, equivalente a 'olhando para trás' ou 'em retrospectiva'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Reflexão pessoal' que você acabou de ver.",
+      "A frase começa com 'Looking'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'no entanto' em inglês?",
+    "options": [
+      "However",
+      "Howevar",
+      "Howevver",
+      "Howeever"
+    ],
+    "correct_answer": "However",
+    "explanation": "'no entanto' se traduz como 'However' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'inegavelmente' em inglês?",
+    "options": [
+      "Undeniably",
+      "Undenyably",
+      "Undeniabley",
+      "Undenniably"
+    ],
+    "correct_answer": "Undeniably",
+    "explanation": "'inegavelmente' se traduz como 'Undeniably' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ainda que' em inglês?",
+    "options": [
+      "Even though",
+      "Even if",
+      "Even that",
+      "Even how"
+    ],
+    "correct_answer": "Even though",
+    "explanation": "'ainda que' se traduz como 'Even though' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'permanece' em inglês?",
+    "options": [
+      "Remains",
+      "Remans",
+      "Remaines",
+      "Remainss"
+    ],
+    "correct_answer": "Remains",
+    "explanation": "'permanece' se traduz como 'Remains' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'incerto(a)' em inglês?",
+    "options": [
+      "Uncertain",
+      "Unsertain",
+      "Uncertan",
+      "Uncertaine"
+    ],
+    "correct_answer": "Uncertain",
+    "explanation": "'incerto(a)' se traduz como 'Uncertain' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o inglês: 'Ainda que o resultado seja incerto, o esforço, no entanto, permanece inegavelmente valioso.'",
+    "options": null,
+    "correct_answer": "Even though the result is uncertain, the effort, however, remains undeniably valuable",
+    "accepted_answers": [
+      "Even though the result is uncertain, the effort however remains undeniably valuable"
+    ],
+    "explanation": "'Even though' introduz um contraste mais forte que 'although', e 'however' no meio da frase (entre vírgulas) é um uso formal comum em textos escritos, diferente de seu uso mais comum no início de frase.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Revisão geral avançada' que você acabou de ver.",
+      "A frase começa com 'Even'."
+    ],
+    "age_reviewed": true
+  }
+]

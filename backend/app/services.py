@@ -9,6 +9,21 @@ from .nickname import generate_anonymous_nickname
 from .timeutil import naive, utcnow
 
 
+def is_submitted_answer_correct(challenge: "models.Challenge", submitted_answer: str, timed_out: bool) -> bool:
+    """
+    V2 item 15 (timed_out nunca confia no client) + V5 Mundo dos
+    Idiomas (accepted_answers): true só se não esgotou o tempo E a
+    resposta normalizada bate com correct_answer OU alguma variação em
+    accepted_answers (desafio de tradução em texto livre pode ter mais
+    de uma resposta certa, ex. com/sem ponto final).
+    """
+    if timed_out:
+        return False
+    normalized = submitted_answer.strip().lower()
+    valid_answers = {challenge.correct_answer, *(challenge.accepted_answers or [])}
+    return normalized in {a.strip().lower() for a in valid_answers}
+
+
 def _mastery_score(attempt: "models.Attempt") -> float:
     """
     V2 item 6 — Dificuldade adaptativa evoluída (V2_KICKOFF.md §2: evoluir

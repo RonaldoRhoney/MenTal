@@ -1,0 +1,1030 @@
+[
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'casa' em inglês?",
+    "options": [
+      "House",
+      "Horse",
+      "Hoase",
+      "Hose"
+    ],
+    "correct_answer": "House",
+    "explanation": "'casa' se traduz como 'House' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'porta' em inglês?",
+    "options": [
+      "Door",
+      "Doar",
+      "Dorr",
+      "Dour"
+    ],
+    "correct_answer": "Door",
+    "explanation": "'porta' se traduz como 'Door' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'janela' em inglês?",
+    "options": [
+      "Window",
+      "Windo",
+      "Widnow",
+      "Winndow"
+    ],
+    "correct_answer": "Window",
+    "explanation": "'janela' se traduz como 'Window' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'mesa' em inglês?",
+    "options": [
+      "Table",
+      "Tabel",
+      "Tible",
+      "Tabble"
+    ],
+    "correct_answer": "Table",
+    "explanation": "'mesa' se traduz como 'Table' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'grande' em inglês?",
+    "options": [
+      "Big",
+      "Bigg",
+      "Beeg",
+      "Bige"
+    ],
+    "correct_answer": "Big",
+    "explanation": "'grande' se traduz como 'Big' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'A casa é grande.'",
+    "options": null,
+    "correct_answer": "The house is big",
+    "accepted_answers": [
+      "The house is big.",
+      "the house is big"
+    ],
+    "explanation": "'The house is big' usa 'the' antes de 'house' (artigo definido) e 'is' para ligar sujeito e adjetivo — a mesma estrutura que aparece em praticamente toda frase simples em inglês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Em casa' que você acabou de ver.",
+      "A frase começa com 'The'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'maçã' em inglês?",
+    "options": [
+      "Apple",
+      "Aple",
+      "Appel",
+      "Apel"
+    ],
+    "correct_answer": "Apple",
+    "explanation": "'maçã' se traduz como 'Apple' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'água' em inglês?",
+    "options": [
+      "Water",
+      "Watter",
+      "Woter",
+      "Watar"
+    ],
+    "correct_answer": "Water",
+    "explanation": "'água' se traduz como 'Water' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pão' em inglês?",
+    "options": [
+      "Bread",
+      "Bred",
+      "Breed",
+      "Braed"
+    ],
+    "correct_answer": "Bread",
+    "explanation": "'pão' se traduz como 'Bread' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'gostar/gostoso' em inglês?",
+    "options": [
+      "Like",
+      "Lick",
+      "Liake",
+      "Lyke"
+    ],
+    "correct_answer": "Like",
+    "explanation": "'gostar/gostoso' se traduz como 'Like' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'eu' em inglês?",
+    "options": [
+      "I",
+      "Me",
+      "My",
+      "Ai"
+    ],
+    "correct_answer": "I",
+    "explanation": "'eu' se traduz como 'I' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'Eu gosto de maçã.'",
+    "options": null,
+    "correct_answer": "I like apple",
+    "accepted_answers": [
+      "I like apples",
+      "I like apple."
+    ],
+    "explanation": "'I like apple' usa a ordem sujeito-verbo-objeto (I + like + apple), a estrutura mais comum de frases afirmativas simples em inglês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Comida' que você acabou de ver.",
+      "A frase começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'mãe' em inglês?",
+    "options": [
+      "Mother",
+      "Mothar",
+      "Mader",
+      "Mothier"
+    ],
+    "correct_answer": "Mother",
+    "explanation": "'mãe' se traduz como 'Mother' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pai' em inglês?",
+    "options": [
+      "Father",
+      "Fathar",
+      "Fader",
+      "Fathier"
+    ],
+    "correct_answer": "Father",
+    "explanation": "'pai' se traduz como 'Father' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'irmão' em inglês?",
+    "options": [
+      "Brother",
+      "Brothar",
+      "Broder",
+      "Bruther"
+    ],
+    "correct_answer": "Brother",
+    "explanation": "'irmão' se traduz como 'Brother' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'ter' em inglês?",
+    "options": [
+      "Have",
+      "Has",
+      "Haev",
+      "Havi"
+    ],
+    "correct_answer": "Have",
+    "explanation": "'ter' se traduz como 'Have' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'dois' em inglês?",
+    "options": [
+      "Two",
+      "Too",
+      "To",
+      "Tow"
+    ],
+    "correct_answer": "Two",
+    "explanation": "'dois' se traduz como 'Two' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'Eu tenho dois irmãos.'",
+    "options": null,
+    "correct_answer": "I have two brothers",
+    "accepted_answers": [
+      "I have two brothers."
+    ],
+    "explanation": "'Brothers' recebe 's' no plural, e 'have' (não 'has') é usado com o sujeito 'I' — 'has' seria usado apenas com he/she/it.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Família' que você acabou de ver.",
+      "A frase começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'vermelho' em inglês?",
+    "options": [
+      "Red",
+      "Read",
+      "Redd",
+      "Rad"
+    ],
+    "correct_answer": "Red",
+    "explanation": "'vermelho' se traduz como 'Red' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'azul' em inglês?",
+    "options": [
+      "Blue",
+      "Blu",
+      "Bloo",
+      "Bleu"
+    ],
+    "correct_answer": "Blue",
+    "explanation": "'azul' se traduz como 'Blue' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'camisa' em inglês?",
+    "options": [
+      "Shirt",
+      "Shert",
+      "Shirtt",
+      "Chirt"
+    ],
+    "correct_answer": "Shirt",
+    "explanation": "'camisa' se traduz como 'Shirt' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'meu' em inglês?",
+    "options": [
+      "My",
+      "Me",
+      "Mine",
+      "Mai"
+    ],
+    "correct_answer": "My",
+    "explanation": "'meu' se traduz como 'My' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'é/está' (ele/ela) em inglês?",
+    "options": [
+      "Is",
+      "Are",
+      "Am",
+      "Be"
+    ],
+    "correct_answer": "Is",
+    "explanation": "'é/está' se traduz como 'Is' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'Minha camisa é azul.'",
+    "options": null,
+    "correct_answer": "My shirt is blue",
+    "accepted_answers": [
+      "My shirt is blue."
+    ],
+    "explanation": "'Is' concorda com sujeitos no singular como 'shirt' (ela) — 'are' seria usado no plural, e 'am' apenas com 'I'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Cores e roupas' que você acabou de ver.",
+      "A frase começa com 'My'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cachorro' em inglês?",
+    "options": [
+      "Dog",
+      "Dogg",
+      "Doge",
+      "Dogh"
+    ],
+    "correct_answer": "Dog",
+    "explanation": "'cachorro' se traduz como 'Dog' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'gato' em inglês?",
+    "options": [
+      "Cat",
+      "Catt",
+      "Kat",
+      "Caat"
+    ],
+    "correct_answer": "Cat",
+    "explanation": "'gato' se traduz como 'Cat' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pequeno' em inglês?",
+    "options": [
+      "Small",
+      "Smal",
+      "Smoll",
+      "Smaal"
+    ],
+    "correct_answer": "Small",
+    "explanation": "'pequeno' se traduz como 'Small' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'e' (conectivo) em inglês?",
+    "options": [
+      "And",
+      "An",
+      "End",
+      "Und"
+    ],
+    "correct_answer": "And",
+    "explanation": "'e' se traduz como 'And' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'são/estão' (eles) em inglês?",
+    "options": [
+      "Are",
+      "Is",
+      "Am",
+      "Be"
+    ],
+    "correct_answer": "Are",
+    "explanation": "'são/estão' se traduz como 'Are' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'O cachorro e o gato são pequenos.'",
+    "options": null,
+    "correct_answer": "The dog and the cat are small",
+    "accepted_answers": [
+      "The dog and the cat are small."
+    ],
+    "explanation": "Com dois sujeitos ligados por 'and' (dog and cat), o verbo vai para o plural: 'are', não 'is'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Animais' que você acabou de ver.",
+      "A frase começa com 'The'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'três' em inglês?",
+    "options": [
+      "Three",
+      "Tree",
+      "Thre",
+      "Threee"
+    ],
+    "correct_answer": "Three",
+    "explanation": "'três' se traduz como 'Three' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'hoje' em inglês?",
+    "options": [
+      "Today",
+      "Todai",
+      "Tuday",
+      "Todday"
+    ],
+    "correct_answer": "Today",
+    "explanation": "'hoje' se traduz como 'Today' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'horas' em inglês?",
+    "options": [
+      "Hours",
+      "Ours",
+      "Howers",
+      "Hors"
+    ],
+    "correct_answer": "Hours",
+    "explanation": "'horas' se traduz como 'Hours' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'eu vou' (futuro) em inglês?",
+    "options": [
+      "I will",
+      "I go",
+      "I gonna",
+      "I future"
+    ],
+    "correct_answer": "I will",
+    "explanation": "'eu vou' se traduz como 'I will' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'Eu vou trabalhar três horas hoje.'",
+    "options": null,
+    "correct_answer": "I will work three hours today",
+    "accepted_answers": [
+      "I will work three hours today."
+    ],
+    "explanation": "'Will' antes do verbo indica ação futura em inglês — não muda a forma do verbo principal (work continua igual).",
+    "hints": [
+      "Relembre o vocabulário do tema 'Números e tempo' que você acabou de ver.",
+      "A frase começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'escola' em inglês?",
+    "options": [
+      "School",
+      "Scool",
+      "Schoool",
+      "Skool"
+    ],
+    "correct_answer": "School",
+    "explanation": "'escola' se traduz como 'School' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'livro' em inglês?",
+    "options": [
+      "Book",
+      "Boock",
+      "Buk",
+      "Booc"
+    ],
+    "correct_answer": "Book",
+    "explanation": "'livro' se traduz como 'Book' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'professor(a)' em inglês?",
+    "options": [
+      "Teacher",
+      "Teachar",
+      "Techer",
+      "Teatcher"
+    ],
+    "correct_answer": "Teacher",
+    "explanation": "'professor(a)' se traduz como 'Teacher' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'ler' em inglês?",
+    "options": [
+      "Read",
+      "Red",
+      "Reed",
+      "Raed"
+    ],
+    "correct_answer": "Read",
+    "explanation": "'ler' se traduz como 'Read' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'todo dia' em inglês?",
+    "options": [
+      "Every day",
+      "All day",
+      "Everyday time",
+      "Each days"
+    ],
+    "correct_answer": "Every day",
+    "explanation": "'todo dia' se traduz como 'Every day' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'O professor lê um livro todo dia.'",
+    "options": null,
+    "correct_answer": "The teacher reads a book every day",
+    "accepted_answers": [
+      "The teacher reads a book every day."
+    ],
+    "explanation": "Com sujeito na 3ª pessoa do singular (the teacher), o verbo no presente ganha 's': 'reads', não 'read'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Escola' que você acabou de ver.",
+      "A frase começa com 'The'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'carro' em inglês?",
+    "options": [
+      "Car",
+      "Care",
+      "Karr",
+      "Carr"
+    ],
+    "correct_answer": "Car",
+    "explanation": "'carro' se traduz como 'Car' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'rua' em inglês?",
+    "options": [
+      "Street",
+      "Estreet",
+      "Streat",
+      "Estrit"
+    ],
+    "correct_answer": "Street",
+    "explanation": "'rua' se traduz como 'Street' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'rápido' em inglês?",
+    "options": [
+      "Fast",
+      "Fest",
+      "Faast",
+      "Fasty"
+    ],
+    "correct_answer": "Fast",
+    "explanation": "'rápido' se traduz como 'Fast' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'dirigir' em inglês?",
+    "options": [
+      "Drive",
+      "Drivi",
+      "Draive",
+      "Driive"
+    ],
+    "correct_answer": "Drive",
+    "explanation": "'dirigir' se traduz como 'Drive' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'muito' (intensificador) em inglês?",
+    "options": [
+      "Very",
+      "Much",
+      "Mucho",
+      "Verry"
+    ],
+    "correct_answer": "Very",
+    "explanation": "'muito' se traduz como 'Very' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'Ele dirige muito rápido na rua.'",
+    "options": null,
+    "correct_answer": "He drives very fast on the street",
+    "accepted_answers": [
+      "He drives very fast on the street."
+    ],
+    "explanation": "Com sujeito 'he', o verbo 'drive' ganha 's' no presente: 'drives'. 'Very' intensifica o advérbio 'fast'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Cidade e transporte' que você acabou de ver.",
+      "A frase começa com 'He'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'feliz' em inglês?",
+    "options": [
+      "Happy",
+      "Hapy",
+      "Happi",
+      "Hapiy"
+    ],
+    "correct_answer": "Happy",
+    "explanation": "'feliz' se traduz como 'Happy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'triste' em inglês?",
+    "options": [
+      "Sad",
+      "Sadd",
+      "Saad",
+      "Sed"
+    ],
+    "correct_answer": "Sad",
+    "explanation": "'triste' se traduz como 'Sad' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'porque' em inglês?",
+    "options": [
+      "Because",
+      "Becase",
+      "Becouse",
+      "Becuz"
+    ],
+    "correct_answer": "Because",
+    "explanation": "'porque' se traduz como 'Because' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'hoje' novamente para fixar (dia) em inglês?",
+    "options": [
+      "Today",
+      "Todai",
+      "Tuday",
+      "Todday"
+    ],
+    "correct_answer": "Today",
+    "explanation": "'hoje' se traduz como 'Today' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'estou' (eu) em inglês?",
+    "options": [
+      "Am",
+      "Is",
+      "Are",
+      "Be"
+    ],
+    "correct_answer": "Am",
+    "explanation": "'estou' se traduz como 'Am' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'Eu estou feliz hoje porque...'",
+    "options": null,
+    "correct_answer": "I am happy today because",
+    "accepted_answers": [
+      "I'm happy today because",
+      "I am happy today because."
+    ],
+    "explanation": "'Am' só é usado com o sujeito 'I' — é a única forma do verbo 'to be' exclusiva desse pronome no presente.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Sentimentos' que você acabou de ver.",
+      "A frase começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'obrigado(a)' em inglês?",
+    "options": [
+      "Thank you",
+      "Thanks you",
+      "Thankful",
+      "Thanky"
+    ],
+    "correct_answer": "Thank you",
+    "explanation": "'obrigado(a)' se traduz como 'Thank you' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'por favor' em inglês?",
+    "options": [
+      "Please",
+      "Pleas",
+      "Plese",
+      "Pliz"
+    ],
+    "correct_answer": "Please",
+    "explanation": "'por favor' se traduz como 'Please' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'amigo(a)' em inglês?",
+    "options": [
+      "Friend",
+      "Freind",
+      "Frend",
+      "Friand"
+    ],
+    "correct_answer": "Friend",
+    "explanation": "'amigo(a)' se traduz como 'Friend' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'você' em inglês?",
+    "options": [
+      "You",
+      "Yu",
+      "Yuo",
+      "You'"
+    ],
+    "correct_answer": "You",
+    "explanation": "'você' se traduz como 'You' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'Y'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o inglês: 'Obrigado, você é um bom amigo.'",
+    "options": null,
+    "correct_answer": "Thank you, you are a good friend",
+    "accepted_answers": [
+      "Thank you, you're a good friend",
+      "Thank you, you are a good friend."
+    ],
+    "explanation": "'Are' concorda com 'you', que sempre usa 'are' no presente, mesmo se referindo a uma só pessoa.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Revisão geral' que você acabou de ver.",
+      "A frase começa com 'Thank'."
+    ],
+    "age_reviewed": true
+  }
+]

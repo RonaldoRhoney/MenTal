@@ -66,6 +66,16 @@ const List<String> kTerritoryIds = [
   'astronomia',
   'detetive_mental',
   'ouvido_afiado',
+  // V5 (V5/README.md) — Mundo dos Idiomas.
+  'ingles_basico',
+  'ingles_intermediario',
+  'ingles_avancado',
+  'espanhol_basico',
+  'espanhol_intermediario',
+  'espanhol_avancado',
+  'frances_basico',
+  'frances_intermediario',
+  'frances_avancado',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -146,6 +156,24 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryDetetiveMental;
     case 'ouvido_afiado':
       return l10n.territoryOuvidoAfiado;
+    case 'ingles_basico':
+      return l10n.territoryInglesBasico;
+    case 'ingles_intermediario':
+      return l10n.territoryInglesIntermediario;
+    case 'ingles_avancado':
+      return l10n.territoryInglesAvancado;
+    case 'espanhol_basico':
+      return l10n.territoryEspanholBasico;
+    case 'espanhol_intermediario':
+      return l10n.territoryEspanholIntermediario;
+    case 'espanhol_avancado':
+      return l10n.territoryEspanholAvancado;
+    case 'frances_basico':
+      return l10n.territoryFrancesBasico;
+    case 'frances_intermediario':
+      return l10n.territoryFrancesIntermediario;
+    case 'frances_avancado':
+      return l10n.territoryFrancesAvancado;
     default:
       return territoryId;
   }

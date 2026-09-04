@@ -1,0 +1,1062 @@
+[
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'reunião' em francês?",
+    "options": [
+      "Réunion",
+      "Reunion",
+      "Réuniao",
+      "Reuniom"
+    ],
+    "correct_answer": "Réunion",
+    "explanation": "'reunião' se traduz como 'Réunion' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ocupado(a)' em francês?",
+    "options": [
+      "Occupé(e)",
+      "Ocupé",
+      "Occupée",
+      "Ocupado"
+    ],
+    "correct_answer": "Occupé(e)",
+    "explanation": "'ocupado(a)' se traduz como 'Occupé(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'terminar' em francês?",
+    "options": [
+      "Finir",
+      "Terminer",
+      "Finirr",
+      "Finire"
+    ],
+    "correct_answer": "Finir",
+    "explanation": "'terminar' se traduz como 'Finir' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'antes de' em francês?",
+    "options": [
+      "Avant de",
+      "Devant de",
+      "Avant que",
+      "Avent de"
+    ],
+    "correct_answer": "Avant de",
+    "explanation": "'antes de' se traduz como 'Avant de' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'preciso' (necessidade) em francês?",
+    "options": [
+      "J'ai besoin de",
+      "Je nécessite",
+      "Je precise",
+      "J'ai besoin"
+    ],
+    "correct_answer": "J'ai besoin de",
+    "explanation": "'preciso' se traduz como 'J'ai besoin de' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Eu preciso terminar a reunião antes do almoço porque estou ocupado.'",
+    "options": null,
+    "correct_answer": "J'ai besoin de finir la réunion avant le déjeuner parce que je suis occupé",
+    "accepted_answers": [
+      "J'ai besoin de terminer la réunion avant le déjeuner car je suis occupé"
+    ],
+    "explanation": "'Avoir besoin de' é a estrutura padrão para expressar necessidade em francês, literalmente 'ter necessidade de' — sempre seguida de substantivo ou infinitivo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Trabalho e rotina' que você acabou de ver.",
+      "A frase começa com 'J'ai'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'aeroporto' em francês?",
+    "options": [
+      "Aéroport",
+      "Aeroport",
+      "Aéroporte",
+      "Aeroporte"
+    ],
+    "correct_answer": "Aéroport",
+    "explanation": "'aeroporto' se traduz como 'Aéroport' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'mala' em francês?",
+    "options": [
+      "Valise",
+      "Malette",
+      "Valisse",
+      "Valize"
+    ],
+    "correct_answer": "Valise",
+    "explanation": "'mala' se traduz como 'Valise' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'atrasado(a)' em francês?",
+    "options": [
+      "En retard",
+      "Retardé",
+      "Tarde",
+      "En retarde"
+    ],
+    "correct_answer": "En retard",
+    "explanation": "'atrasado(a)' se traduz como 'En retard' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'já' em francês?",
+    "options": [
+      "Déjà",
+      "Deja",
+      "Ja",
+      "Dèjà"
+    ],
+    "correct_answer": "Déjà",
+    "explanation": "'já' se traduz como 'Déjà' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esquecer' em francês?",
+    "options": [
+      "Oublier",
+      "Esquecer",
+      "Oublir",
+      "Oubliar"
+    ],
+    "correct_answer": "Oublier",
+    "explanation": "'esquecer' se traduz como 'Oublier' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Nós já estamos atrasados para o aeroporto, não esqueça a mala.'",
+    "options": null,
+    "correct_answer": "Nous sommes déjà en retard pour l'aéroport, n'oublie pas la valise",
+    "accepted_answers": [
+      "On est déjà en retard pour l'aéroport, n'oubliez pas la valise"
+    ],
+    "explanation": "'N'oublie pas' é o imperativo negativo informal — o negativo em francês se forma com 'ne...pas' ao redor do verbo, mesmo no imperativo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Viagem' que você acabou de ver.",
+      "A frase começa com 'Nous'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'doente' em francês?",
+    "options": [
+      "Malade",
+      "Doente",
+      "Maladee",
+      "Malaid"
+    ],
+    "correct_answer": "Malade",
+    "explanation": "'doente' se traduz como 'Malade' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'médico(a)' em francês?",
+    "options": [
+      "Médecin",
+      "Medecin",
+      "Médecine",
+      "Medisin"
+    ],
+    "correct_answer": "Médecin",
+    "explanation": "'médico(a)' se traduz como 'Médecin' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'dor' em francês?",
+    "options": [
+      "Douleur",
+      "Dolor",
+      "Douler",
+      "Doulor"
+    ],
+    "correct_answer": "Douleur",
+    "explanation": "'dor' se traduz como 'Douleur' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'deveria' em francês?",
+    "options": [
+      "Devrait",
+      "Devrai",
+      "Devrais",
+      "Devraient"
+    ],
+    "correct_answer": "Devrait",
+    "explanation": "'deveria' se traduz como 'Devrait' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'descansar' em francês?",
+    "options": [
+      "Se reposer",
+      "Descansar",
+      "Se repose",
+      "Reposer"
+    ],
+    "correct_answer": "Se reposer",
+    "explanation": "'descansar' se traduz como 'Se reposer' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Você está doente e sentindo dor, deveria descansar e ver um médico.'",
+    "options": null,
+    "correct_answer": "Tu es malade et tu as mal, tu devrais te reposer et voir un médecin",
+    "accepted_answers": [
+      "Vous êtes malade et vous avez mal, vous devriez vous reposer et voir un médecin"
+    ],
+    "explanation": "'Avoir mal' é a expressão idiomática para 'sentir dor' em francês (literalmente 'ter mal'), diferente de usar 'douleur' diretamente como verbo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Saúde' que você acabou de ver.",
+      "A frase começa com 'Tu'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'caro(a)' em francês?",
+    "options": [
+      "Cher/Chère",
+      "Caro",
+      "Chèr",
+      "Chere"
+    ],
+    "correct_answer": "Cher/Chère",
+    "explanation": "'caro(a)' se traduz como 'Cher/Chère' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'barato(a)' em francês?",
+    "options": [
+      "Bon marché",
+      "Pas cher",
+      "Baratô",
+      "Cheap"
+    ],
+    "correct_answer": "Pas cher",
+    "explanation": "'barato(a)' se traduz como 'Pas cher' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'devolver' em francês?",
+    "options": [
+      "Rendre",
+      "Retourner",
+      "Devolvoir",
+      "Rendrre"
+    ],
+    "correct_answer": "Rendre",
+    "explanation": "'devolver' se traduz como 'Rendre' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'que' (comparação) em francês?",
+    "options": [
+      "Que",
+      "Comme",
+      "Qui",
+      "Quoi"
+    ],
+    "correct_answer": "Que",
+    "explanation": "'que' se traduz como 'Que' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esperava' em francês?",
+    "options": [
+      "J'espérais",
+      "J'espere",
+      "J'esperait",
+      "J'esperai"
+    ],
+    "correct_answer": "J'espérais",
+    "explanation": "'esperava' se traduz como 'J'espérais' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Este produto é mais caro do que eu esperava, eu quero devolver.'",
+    "options": null,
+    "correct_answer": "Ce produit est plus cher que je ne l'espérais, je veux le rendre",
+    "accepted_answers": [
+      "Ce produit est plus cher que ce que j'espérais, je veux le rendre"
+    ],
+    "explanation": "Comparações em francês formal podem usar 'ne' expletivo (sem valor negativo real) antes do verbo — 'que je ne l'espérais' é uma estrutura elegante, embora a versão simples sem 'ne' também seja aceita na fala.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Compras' que você acabou de ver.",
+      "A frase começa com 'Ce'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'provavelmente' em francês?",
+    "options": [
+      "Probablement",
+      "Probabelment",
+      "Probablemente",
+      "Probablemant"
+    ],
+    "correct_answer": "Probablement",
+    "explanation": "'provavelmente' se traduz como 'Probablement' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'chuva' em francês?",
+    "options": [
+      "Pluie",
+      "Chuva",
+      "Pluye",
+      "Ploi"
+    ],
+    "correct_answer": "Pluie",
+    "explanation": "'chuva' se traduz como 'Pluie' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cancelar' em francês?",
+    "options": [
+      "Annuler",
+      "Cancelar",
+      "Anuler",
+      "Annullar"
+    ],
+    "correct_answer": "Annuler",
+    "explanation": "'cancelar' se traduz como 'Annuler' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'a menos que' em francês?",
+    "options": [
+      "À moins que",
+      "A moins de",
+      "Sauf que",
+      "À moins de que"
+    ],
+    "correct_answer": "À moins que",
+    "explanation": "'a menos que' se traduz como 'À moins que' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'À'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'parar' (chuva) em francês?",
+    "options": [
+      "S'arrêter",
+      "Arreter",
+      "Stoper",
+      "S'arreter"
+    ],
+    "correct_answer": "S'arrêter",
+    "explanation": "'parar' se traduz como 'S'arrêter' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Nós provavelmente vamos cancelar o passeio a menos que a chuva pare.'",
+    "options": null,
+    "correct_answer": "Nous allons probablement annuler la sortie à moins que la pluie s'arrête",
+    "accepted_answers": [
+      "On va probablement annuler la sortie à moins que la pluie ne s'arrête"
+    ],
+    "explanation": "'À moins que' exige o modo subjuntivo no verbo seguinte ('s'arrête', subjuntivo, não 's'arrête' indicativo que teria a mesma grafia neste caso específico, mas a regra vale para a maioria dos verbos).",
+    "hints": [
+      "Relembre o vocabulário do tema 'Clima e planos' que você acabou de ver.",
+      "A frase começa com 'Nous'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'quebrado(a)' em francês?",
+    "options": [
+      "Cassé(e)",
+      "Casse",
+      "Cassée",
+      "Kassé"
+    ],
+    "correct_answer": "Cassé(e)",
+    "explanation": "'quebrado(a)' se traduz como 'Cassé(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'consertar' em francês?",
+    "options": [
+      "Réparer",
+      "Consertar",
+      "Reparer",
+      "Réparé"
+    ],
+    "correct_answer": "Réparer",
+    "explanation": "'consertar' se traduz como 'Réparer' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'senha' em francês?",
+    "options": [
+      "Mot de passe",
+      "Senha",
+      "Code secret",
+      "Passe mot"
+    ],
+    "correct_answer": "Mot de passe",
+    "explanation": "'senha' se traduz como 'Mot de passe' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de novo' em francês?",
+    "options": [
+      "De nouveau",
+      "De novo",
+      "Encore une",
+      "Denovo"
+    ],
+    "correct_answer": "De nouveau",
+    "explanation": "'de novo' se traduz como 'De nouveau' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'tentar' em francês?",
+    "options": [
+      "Essayer",
+      "Tenter",
+      "Essaier",
+      "Essayerr"
+    ],
+    "correct_answer": "Essayer",
+    "explanation": "'tentar' se traduz como 'Essayer' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Meu celular está quebrado, eu preciso tentar consertar de novo.'",
+    "options": null,
+    "correct_answer": "Mon téléphone est cassé, je dois essayer de le réparer de nouveau",
+    "accepted_answers": [
+      "Mon portable est cassé, je dois essayer de le réparer encore une fois"
+    ],
+    "explanation": "'Essayer de' + infinitivo expressa tentativa — o 'de' é obrigatório entre 'essayer' e o verbo seguinte, diferente de outros verbos que ligam diretamente ao infinitivo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Tecnologia' que você acabou de ver.",
+      "A frase começa com 'Mon'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'difícil' em francês?",
+    "options": [
+      "Difficile",
+      "Dificil",
+      "Difficille",
+      "Difisile"
+    ],
+    "correct_answer": "Difficile",
+    "explanation": "'difícil' se traduz como 'Difficile' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'entender' em francês?",
+    "options": [
+      "Comprendre",
+      "Entender",
+      "Comprender",
+      "Comprandre"
+    ],
+    "correct_answer": "Comprendre",
+    "explanation": "'entender' se traduz como 'Comprendre' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'explicar' em francês?",
+    "options": [
+      "Expliquer",
+      "Explicar",
+      "Expliquar",
+      "Expliqer"
+    ],
+    "correct_answer": "Expliquer",
+    "explanation": "'explicar' se traduz como 'Expliquer' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de novo' novamente para fixar em francês?",
+    "options": [
+      "De nouveau",
+      "De novo",
+      "Encore une",
+      "Denovo"
+    ],
+    "correct_answer": "De nouveau",
+    "explanation": "'de novo' se traduz como 'De nouveau' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'poderia' (pedido educado) em francês?",
+    "options": [
+      "Pourriez-vous",
+      "Pouvez-vous",
+      "Pourrait-il",
+      "Pourriez"
+    ],
+    "correct_answer": "Pourriez-vous",
+    "explanation": "'poderia' se traduz como 'Pourriez-vous' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Este assunto é difícil, você poderia explicar de novo?'",
+    "options": null,
+    "correct_answer": "Ce sujet est difficile, pourriez-vous l'expliquer de nouveau ?",
+    "accepted_answers": [
+      "Ce sujet est difficile, pourriez-vous expliquer encore une fois ?"
+    ],
+    "explanation": "'Pourriez-vous' é o condicional de 'pouvoir' com inversão (forma interrogativa formal) — uma das formas mais educadas de fazer um pedido em francês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Estudos' que você acabou de ver.",
+      "A frase começa com 'Ce'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'surpreso(a)' em francês?",
+    "options": [
+      "Surpris(e)",
+      "Surprise",
+      "Suprise",
+      "Surprize"
+    ],
+    "correct_answer": "Surpris(e)",
+    "explanation": "'surpreso(a)' se traduz como 'Surpris(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'na verdade' em francês?",
+    "options": [
+      "En fait",
+      "En verité",
+      "A la verité",
+      "En vrai fait"
+    ],
+    "correct_answer": "En fait",
+    "explanation": "'na verdade' se traduz como 'En fait' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esperava (algo diferente)' em francês?",
+    "options": [
+      "J'espérais",
+      "J'espere",
+      "J'esperait",
+      "J'esperai"
+    ],
+    "correct_answer": "J'espérais",
+    "explanation": "'esperava (algo diferente)' se traduz como 'J'espérais' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'melhor' em francês?",
+    "options": [
+      "Meilleur",
+      "Milleur",
+      "Meillor",
+      "Meiller"
+    ],
+    "correct_answer": "Meilleur",
+    "explanation": "'melhor' se traduz como 'Meilleur' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'do que eu pensava' em francês?",
+    "options": [
+      "Que je ne le pensais",
+      "Que je pensava",
+      "Del que pensaba",
+      "Comme je pensais"
+    ],
+    "correct_answer": "Que je ne le pensais",
+    "explanation": "'do que eu pensava' se traduz como 'Que je ne le pensais' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Na verdade, eu estou surpreso(a) — o filme foi melhor do que eu pensava.'",
+    "options": null,
+    "correct_answer": "En fait, je suis surpris, le film était meilleur que je ne le pensais",
+    "accepted_answers": [
+      "En fait, je suis surprise, le film était meilleur que ce que je pensais"
+    ],
+    "explanation": "'Meilleur' é o comparativo irregular de 'bon' (bom), equivalente a 'melhor' — não existe 'plus bon' em francês, assim como não dizemos 'mais bom' em português correto.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Emoções e opinião' que você acabou de ver.",
+      "A frase começa com 'En'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'planejar' em francês?",
+    "options": [
+      "Planifier",
+      "Planejar",
+      "Planifiquer",
+      "Planer"
+    ],
+    "correct_answer": "Planifier",
+    "explanation": "'planejar' se traduz como 'Planifier' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'economizar' em francês?",
+    "options": [
+      "Économiser",
+      "Economiser",
+      "Épargner",
+      "Economizar"
+    ],
+    "correct_answer": "Économiser",
+    "explanation": "'economizar' se traduz como 'Économiser' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'É'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'dinheiro suficiente' em francês?",
+    "options": [
+      "Assez d'argent",
+      "Argent assez",
+      "Suffisant argent",
+      "Assez de l'argent"
+    ],
+    "correct_answer": "Assez d'argent",
+    "explanation": "'dinheiro suficiente' se traduz como 'Assez d'argent' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'antes de' novamente para fixar em francês?",
+    "options": [
+      "Avant de",
+      "Devant de",
+      "Avant que",
+      "Avent de"
+    ],
+    "correct_answer": "Avant de",
+    "explanation": "'antes de' se traduz como 'Avant de' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'meu sonho' em francês?",
+    "options": [
+      "Mon rêve",
+      "Mon reve",
+      "Ma rêve",
+      "Mon rêv"
+    ],
+    "correct_answer": "Mon rêve",
+    "explanation": "'meu sonho' se traduz como 'Mon rêve' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Eu preciso planejar e economizar dinheiro suficiente antes de realizar meu sonho.'",
+    "options": null,
+    "correct_answer": "Je dois planifier et économiser assez d'argent avant de réaliser mon rêve",
+    "accepted_answers": [
+      "J'ai besoin de planifier et d'épargner assez d'argent avant de réaliser mon rêve"
+    ],
+    "explanation": "'Assez d'argent' usa 'de' (não 'de l'') antes de substantivo não contável em expressões de quantidade — regra comum a 'assez de', 'beaucoup de', 'peu de'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Planejamento futuro' que você acabou de ver.",
+      "A frase começa com 'Je'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'embora/apesar de' em francês?",
+    "options": [
+      "Bien que",
+      "Malgré que",
+      "Bien de",
+      "Malgré de"
+    ],
+    "correct_answer": "Bien que",
+    "explanation": "'embora/apesar de' se traduz como 'Bien que' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'conseguir' em francês?",
+    "options": [
+      "Réussir",
+      "Conseguir",
+      "Reussir",
+      "Réussirr"
+    ],
+    "correct_answer": "Réussir",
+    "explanation": "'conseguir' se traduz como 'Réussir' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ainda' em francês?",
+    "options": [
+      "Encore",
+      "Ainda",
+      "Encor",
+      "Encoree"
+    ],
+    "correct_answer": "Encore",
+    "explanation": "'ainda' se traduz como 'Encore' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'orgulhoso(a)' em francês?",
+    "options": [
+      "Fier/Fière",
+      "Orgulhoso",
+      "Fièr",
+      "Fiere"
+    ],
+    "correct_answer": "Fier/Fière",
+    "explanation": "'orgulhoso(a)' se traduz como 'Fier/Fière' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de mim mesmo(a)' em francês?",
+    "options": [
+      "De moi-même",
+      "De moi meme",
+      "De moi",
+      "De moi mesmo"
+    ],
+    "correct_answer": "De moi-même",
+    "explanation": "'de mim mesmo(a)' se traduz como 'De moi-même' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o francês: 'Embora tenha sido difícil, eu ainda consegui e estou orgulhoso de mim mesmo.'",
+    "options": null,
+    "correct_answer": "Bien que ça ait été difficile, j'ai quand même réussi et je suis fier de moi-même",
+    "accepted_answers": [
+      "Bien que cela ait été difficile, j'ai réussi quand même et je suis fière de moi-même"
+    ],
+    "explanation": "'Bien que' exige o subjuntivo no verbo seguinte ('ait été', subjuntivo de 'avoir été') — assim como 'à moins que', é uma das conjunções que sempre pede esse modo verbal em francês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Revisão geral' que você acabou de ver.",
+      "A frase começa com 'Bien'."
+    ],
+    "age_reviewed": true
+  }
+]

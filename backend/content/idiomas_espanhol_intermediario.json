@@ -1,0 +1,1008 @@
+[
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'reunião' em espanhol?",
+    "options": [
+      "Reunión",
+      "Reunion",
+      "Reuniao",
+      "Reunón"
+    ],
+    "correct_answer": "Reunión",
+    "explanation": "'reunião' se traduz como 'Reunión' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ocupado(a)' em espanhol?",
+    "options": [
+      "Ocupado",
+      "Ocupadoo",
+      "Ocupato",
+      "Ocupadu"
+    ],
+    "correct_answer": "Ocupado",
+    "explanation": "'ocupado(a)' se traduz como 'Ocupado' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'terminar' em espanhol?",
+    "options": [
+      "Terminar",
+      "Terminarr",
+      "Terminear",
+      "Terminarl"
+    ],
+    "correct_answer": "Terminar",
+    "explanation": "'terminar' se traduz como 'Terminar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'antes de' em espanhol?",
+    "options": [
+      "Antes de",
+      "Antes que",
+      "Delante de",
+      "Ante de"
+    ],
+    "correct_answer": "Antes de",
+    "explanation": "'antes de' se traduz como 'Antes de' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Eu preciso terminar a reunião antes do almuerzo porque estou ocupado.'",
+    "options": null,
+    "correct_answer": "Necesito terminar la reunión antes del almuerzo porque estoy ocupado",
+    "accepted_answers": [
+      "Necesito terminar la reunión antes del almuerzo porque estoy ocupado."
+    ],
+    "explanation": "'Antes del' é a contração de 'antes de' + 'el' (artigo masculino) — em espanhol, 'de + el' sempre vira 'del', assim como 'a + el' vira 'al'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Trabalho e rotina' que você acabou de ver.",
+      "A frase começa com 'Necesito'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'mala' em espanhol?",
+    "options": [
+      "Maleta",
+      "Mala",
+      "Maletta",
+      "Maleto"
+    ],
+    "correct_answer": "Maleta",
+    "explanation": "'mala' se traduz como 'Maleta' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'atrasado(a)' em espanhol?",
+    "options": [
+      "Atrasado",
+      "Tarde",
+      "Atrasadoo",
+      "Retrasado"
+    ],
+    "correct_answer": "Retrasado",
+    "explanation": "'atrasado(a)' se traduz como 'Retrasado' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'já' em espanhol?",
+    "options": [
+      "Ya",
+      "Ja",
+      "Yaa",
+      "Iya"
+    ],
+    "correct_answer": "Ya",
+    "explanation": "'já' se traduz como 'Ya' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'Y'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esquecer' em espanhol?",
+    "options": [
+      "Olvidar",
+      "Esquecer",
+      "Olvider",
+      "Olbidar"
+    ],
+    "correct_answer": "Olvidar",
+    "explanation": "'esquecer' se traduz como 'Olvidar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Nós já estamos atrasados para o aeroporto, não esqueça a mala.'",
+    "options": null,
+    "correct_answer": "Ya estamos retrasados para el aeropuerto, no olvides la maleta",
+    "accepted_answers": [
+      "Ya vamos tarde al aeropuerto, no olvides la maleta"
+    ],
+    "explanation": "'No olvides' usa o imperativo negativo informal (tú) — em espanhol, o imperativo negativo usa a forma do subjuntivo, diferente do imperativo afirmativo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Viagem' que você acabou de ver.",
+      "A frase começa com 'Ya'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'doente' em espanhol?",
+    "options": [
+      "Enfermo",
+      "Doente",
+      "Enfermoo",
+      "Enfermu"
+    ],
+    "correct_answer": "Enfermo",
+    "explanation": "'doente' se traduz como 'Enfermo' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'médico(a)' em espanhol?",
+    "options": [
+      "Médico",
+      "Medico",
+      "Médicoo",
+      "Medicu"
+    ],
+    "correct_answer": "Médico",
+    "explanation": "'médico(a)' se traduz como 'Médico' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'dor' em espanhol?",
+    "options": [
+      "Dolor",
+      "Dor",
+      "Doloor",
+      "Dolorr"
+    ],
+    "correct_answer": "Dolor",
+    "explanation": "'dor' se traduz como 'Dolor' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'deveria' em espanhol?",
+    "options": [
+      "Debería",
+      "Deberia",
+      "Debiera",
+      "Deberías"
+    ],
+    "correct_answer": "Debería",
+    "explanation": "'deveria' se traduz como 'Debería' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'descansar' em espanhol?",
+    "options": [
+      "Descansar",
+      "Discansar",
+      "Descanssar",
+      "Decansar"
+    ],
+    "correct_answer": "Descansar",
+    "explanation": "'descansar' se traduz como 'Descansar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Você está doente e sentindo dor, deveria descansar e ver um médico.'",
+    "options": null,
+    "correct_answer": "Estás enfermo y sientes dolor, deberías descansar y ver a un médico",
+    "accepted_answers": [
+      "Estás enfermo y tienes dolor, deberías descansar y ver a un médico"
+    ],
+    "explanation": "'Deberías' está no condicional, forma educada de dar um conselho — equivalente a 'você deveria' em português, mais suave que uma ordem direta.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Saúde' que você acabou de ver.",
+      "A frase começa com 'Estás'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'caro(a)' em espanhol?",
+    "options": [
+      "Caro",
+      "Caroo",
+      "Karo",
+      "Cara"
+    ],
+    "correct_answer": "Caro",
+    "explanation": "'caro(a)' se traduz como 'Caro' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'barato(a)' em espanhol?",
+    "options": [
+      "Barato",
+      "Baratoo",
+      "Varato",
+      "Baratu"
+    ],
+    "correct_answer": "Barato",
+    "explanation": "'barato(a)' se traduz como 'Barato' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'devolver' em espanhol?",
+    "options": [
+      "Devolver",
+      "Debolver",
+      "Devolber",
+      "Devolverr"
+    ],
+    "correct_answer": "Devolver",
+    "explanation": "'devolver' se traduz como 'Devolver' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'que' (comparação) em espanhol?",
+    "options": [
+      "Que",
+      "Como",
+      "Del que",
+      "Qué"
+    ],
+    "correct_answer": "Que",
+    "explanation": "'que' se traduz como 'Que' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esperava' em espanhol?",
+    "options": [
+      "Esperaba",
+      "Esperava",
+      "Esperabam",
+      "Esperar"
+    ],
+    "correct_answer": "Esperaba",
+    "explanation": "'esperava' se traduz como 'Esperaba' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Este produto é mais caro do que eu esperava, eu quero devolver.'",
+    "options": null,
+    "correct_answer": "Este producto es más caro de lo que esperaba, quiero devolverlo",
+    "accepted_answers": [
+      "Este producto es más caro de lo que yo esperaba, quiero devolverlo"
+    ],
+    "explanation": "'Más caro de lo que' é a estrutura comparativa usada quando se compara com uma oração inteira (o que eu esperava), diferente de comparar apenas com um substantivo, que usaria 'que' sozinho.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Compras' que você acabou de ver.",
+      "A frase começa com 'Este'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'chuva' em espanhol?",
+    "options": [
+      "Lluvia",
+      "Chuva",
+      "Lluvea",
+      "Luvia"
+    ],
+    "correct_answer": "Lluvia",
+    "explanation": "'chuva' se traduz como 'Lluvia' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cancelar' em espanhol?",
+    "options": [
+      "Cancelar",
+      "Cancellar",
+      "Canselar",
+      "Cancelaar"
+    ],
+    "correct_answer": "Cancelar",
+    "explanation": "'cancelar' se traduz como 'Cancelar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'a menos que' em espanhol?",
+    "options": [
+      "A menos que",
+      "A menos de que",
+      "Salvo que",
+      "Amenos que"
+    ],
+    "correct_answer": "A menos que",
+    "explanation": "'a menos que' se traduz como 'A menos que' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'parar' (chuva) em espanhol?",
+    "options": [
+      "Parar",
+      "Pare",
+      "Parrar",
+      "Parir"
+    ],
+    "correct_answer": "Parar",
+    "explanation": "'parar' se traduz como 'Parar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Nós provavelmente vamos cancelar o passeio a menos que a chuva pare.'",
+    "options": null,
+    "correct_answer": "Probablemente vamos a cancelar el paseo a menos que pare la lluvia",
+    "accepted_answers": [
+      "Probablemente cancelaremos el paseo a menos que la lluvia pare"
+    ],
+    "explanation": "'A menos que' exige o modo subjuntivo no verbo seguinte ('pare', não 'para') — construções de condição/exceção em espanhol geralmente pedem subjuntivo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Clima e planos' que você acabou de ver.",
+      "A frase começa com 'Probablemente'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'quebrado(a)' em espanhol?",
+    "options": [
+      "Roto",
+      "Rompido",
+      "Rotoo",
+      "Rroto"
+    ],
+    "correct_answer": "Roto",
+    "explanation": "'quebrado(a)' se traduz como 'Roto' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'consertar' em espanhol?",
+    "options": [
+      "Arreglar",
+      "Consertar",
+      "Arreglarr",
+      "Arreglear"
+    ],
+    "correct_answer": "Arreglar",
+    "explanation": "'consertar' se traduz como 'Arreglar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'senha' em espanhol?",
+    "options": [
+      "Contraseña",
+      "Contrasenha",
+      "Contraseñaa",
+      "Contraceña"
+    ],
+    "correct_answer": "Contraseña",
+    "explanation": "'senha' se traduz como 'Contraseña' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de novo' em espanhol?",
+    "options": [
+      "De nuevo",
+      "De novo",
+      "Otra vez mas",
+      "Denuevo"
+    ],
+    "correct_answer": "De nuevo",
+    "explanation": "'de novo' se traduz como 'De nuevo' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'tentar' em espanhol?",
+    "options": [
+      "Intentar",
+      "Tentar",
+      "Intenter",
+      "Intentarr"
+    ],
+    "correct_answer": "Intentar",
+    "explanation": "'tentar' se traduz como 'Intentar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Meu celular está quebrado, eu preciso tentar consertar de novo.'",
+    "options": null,
+    "correct_answer": "Mi celular está roto, necesito intentar arreglarlo de nuevo",
+    "accepted_answers": [
+      "Mi móvil está roto, necesito intentar arreglarlo de nuevo"
+    ],
+    "explanation": "'Celular' (América Latina) e 'móvil' (Espanha) são as duas palavras mais comuns para 'celular' — ambas corretas, variando por região.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Tecnologia' que você acabou de ver.",
+      "A frase começa com 'Mi'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'difícil' em espanhol?",
+    "options": [
+      "Difícil",
+      "Dificil",
+      "Deficil",
+      "Difícel"
+    ],
+    "correct_answer": "Difícil",
+    "explanation": "'difícil' se traduz como 'Difícil' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'entender' em espanhol?",
+    "options": [
+      "Entender",
+      "Intender",
+      "Entendir",
+      "Entenderr"
+    ],
+    "correct_answer": "Entender",
+    "explanation": "'entender' se traduz como 'Entender' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'explicar' em espanhol?",
+    "options": [
+      "Explicar",
+      "Esplicar",
+      "Explicarr",
+      "Explicear"
+    ],
+    "correct_answer": "Explicar",
+    "explanation": "'explicar' se traduz como 'Explicar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de novo' novamente para fixar em espanhol?",
+    "options": [
+      "De nuevo",
+      "De novo",
+      "Otra vez mas",
+      "Denuevo"
+    ],
+    "correct_answer": "De nuevo",
+    "explanation": "'de novo' se traduz como 'De nuevo' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'poderia' (pedido educado) em espanhol?",
+    "options": [
+      "Podría",
+      "Podria",
+      "Puedes",
+      "Podrías"
+    ],
+    "correct_answer": "Podría",
+    "explanation": "'poderia' se traduz como 'Podría' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Este assunto é difícil, você poderia explicar de novo?'",
+    "options": null,
+    "correct_answer": "Este tema es difícil, ¿podría explicarlo de nuevo?",
+    "accepted_answers": [
+      "Este tema es difícil, ¿podrías explicarlo de nuevo?"
+    ],
+    "explanation": "'¿Podría?' (formal, usted) e '¿Podrías?' (informal, tú) são duas formas educadas de pedir algo — a escolha depende do nível de formalidade da conversa.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Estudos' que você acabou de ver.",
+      "A frase começa com 'Este'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'surpreso(a)' em espanhol?",
+    "options": [
+      "Sorprendido",
+      "Surpreso",
+      "Sorprendidoo",
+      "Sorprendiido"
+    ],
+    "correct_answer": "Sorprendido",
+    "explanation": "'surpreso(a)' se traduz como 'Sorprendido' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'na verdade' em espanhol?",
+    "options": [
+      "En realidad",
+      "De verdad",
+      "A la verdad",
+      "En verdade"
+    ],
+    "correct_answer": "En realidad",
+    "explanation": "'na verdade' se traduz como 'En realidad' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esperava (algo diferente)' em espanhol?",
+    "options": [
+      "Esperaba",
+      "Esperava",
+      "Esperabam",
+      "Esperar"
+    ],
+    "correct_answer": "Esperaba",
+    "explanation": "'esperava (algo diferente)' se traduz como 'Esperaba' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'melhor' em espanhol?",
+    "options": [
+      "Mejor",
+      "Milhor",
+      "Mejorr",
+      "Mehor"
+    ],
+    "correct_answer": "Mejor",
+    "explanation": "'melhor' se traduz como 'Mejor' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'do que eu pensava' em espanhol?",
+    "options": [
+      "De lo que pensaba",
+      "Que yo pensaba",
+      "Del que pensaba",
+      "Como pensaba"
+    ],
+    "correct_answer": "De lo que pensaba",
+    "explanation": "'do que eu pensava' se traduz como 'De lo que pensaba' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Na verdade, eu estou surpreso(a) — o filme foi melhor do que eu pensava.'",
+    "options": null,
+    "correct_answer": "En realidad, estoy sorprendido, la película fue mejor de lo que pensaba",
+    "accepted_answers": [
+      "En realidad, estoy sorprendido/a, la película fue mejor de lo que yo pensaba"
+    ],
+    "explanation": "'Mejor de lo que' segue a mesma lógica comparativa já vista ('más caro de lo que') — usada quando o comparativo se refere a uma ideia inteira, não a um único substantivo.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Emoções e opinião' que você acabou de ver.",
+      "A frase começa com 'En'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'planejar' em espanhol?",
+    "options": [
+      "Planear",
+      "Planejar",
+      "Planeaar",
+      "Plannear"
+    ],
+    "correct_answer": "Planear",
+    "explanation": "'planejar' se traduz como 'Planear' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'economizar' em espanhol?",
+    "options": [
+      "Ahorrar",
+      "Economizar",
+      "Ahorar",
+      "Ahorrarr"
+    ],
+    "correct_answer": "Ahorrar",
+    "explanation": "'economizar' se traduz como 'Ahorrar' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'dinheiro suficiente' em espanhol?",
+    "options": [
+      "Dinero suficiente",
+      "Suficiente dinero",
+      "Bastante dinero",
+      "Dinero bastante"
+    ],
+    "correct_answer": "Dinero suficiente",
+    "explanation": "'dinheiro suficiente' se traduz como 'Dinero suficiente' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'antes de' novamente para fixar em espanhol?",
+    "options": [
+      "Antes de",
+      "Antes que",
+      "Delante de",
+      "Ante de"
+    ],
+    "correct_answer": "Antes de",
+    "explanation": "'antes de' se traduz como 'Antes de' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'meu sonho' em espanhol?",
+    "options": [
+      "Mi sueño",
+      "Mi soño",
+      "Mi sueno",
+      "Mio sueño"
+    ],
+    "correct_answer": "Mi sueño",
+    "explanation": "'meu sonho' se traduz como 'Mi sueño' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Eu preciso planejar e economizar dinheiro suficiente antes de realizar meu sonho.'",
+    "options": null,
+    "correct_answer": "Necesito planear y ahorrar dinero suficiente antes de realizar mi sueño",
+    "accepted_answers": [
+      "Necesito planificar y ahorrar suficiente dinero antes de cumplir mi sueño"
+    ],
+    "explanation": "'Planear' e 'planificar' são sinônimos em espanhol, ambos usados para 'planejar' — a escolha entre eles costuma ser questão de preferência regional.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Planejamento futuro' que você acabou de ver.",
+      "A frase começa com 'Necesito'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'embora/apesar de' em espanhol?",
+    "options": [
+      "Aunque",
+      "Aungue",
+      "Aunqui",
+      "Anque"
+    ],
+    "correct_answer": "Aunque",
+    "explanation": "'embora/apesar de' se traduz como 'Aunque' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'conseguir' em espanhol?",
+    "options": [
+      "Lograr",
+      "Conseguir",
+      "Logar",
+      "Lograrr"
+    ],
+    "correct_answer": "Lograr",
+    "explanation": "'conseguir' se traduz como 'Lograr' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ainda' em espanhol?",
+    "options": [
+      "Todavía",
+      "Todavia",
+      "Todabía",
+      "Aun"
+    ],
+    "correct_answer": "Todavía",
+    "explanation": "'ainda' se traduz como 'Todavía' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'orgulhoso(a)' em espanhol?",
+    "options": [
+      "Orgulloso",
+      "Orgulhoso",
+      "Orgullosoo",
+      "Orgullozo"
+    ],
+    "correct_answer": "Orgulloso",
+    "explanation": "'orgulhoso(a)' se traduz como 'Orgulloso' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de mim mesmo(a)' em espanhol?",
+    "options": [
+      "De mí mismo",
+      "De mi mismo",
+      "De mí mesmo",
+      "De yo mismo"
+    ],
+    "correct_answer": "De mí mismo",
+    "explanation": "'de mim mesmo(a)' se traduz como 'De mí mismo' em espanhol.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o espanhol: 'Embora tenha sido difícil, eu ainda consegui e estou orgulhoso de mim mesmo.'",
+    "options": null,
+    "correct_answer": "Aunque fue difícil, todavía lo logré y estoy orgulloso de mí mismo",
+    "accepted_answers": [
+      "Aunque haya sido difícil, aun así lo logré y estoy orgulloso de mí mismo"
+    ],
+    "explanation": "'Aunque' pode ser seguido de indicativo (fato já ocorrido, 'fue difícil') ou subjuntivo (incerteza, 'haya sido difícil') — a escolha muda a nuance da frase.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Revisão geral' que você acabou de ver.",
+      "A frase começa com 'Aunque'."
+    ],
+    "age_reviewed": true
+  }
+]

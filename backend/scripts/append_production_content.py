@@ -74,6 +74,7 @@ def main() -> None:
                 audio_url=item.get("audio_url"),
                 audio_source_name=item.get("audio_source_name"),
                 audio_source_url=item.get("audio_source_url"),
+                accepted_answers=item.get("accepted_answers"),
             )
             db.add(challenge)
             db.commit()

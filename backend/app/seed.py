@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 from sqlalchemy.orm import Session
 
 from . import models
@@ -18,6 +21,13 @@ WORLDS = [
     # é armazenado, é sempre derivado de UserTerritoryProgress, então
     # isso não afeta XP/progresso/estatística de ninguém.
     {"id": "descoberta", "name": "Mundo da Descoberta", "display_order": 4},
+    # V5/README.md — inglês/espanhol/francês x básico/intermediário/
+    # avançado, 9 territórios. Conteúdo carregado de content/idiomas_*.json
+    # (não inline aqui, ver CHALLENGES abaixo) — 540 desafios curados
+    # manualmente seria repetição de texto grande demais pra manter dentro
+    # deste arquivo, e o JSON já é a fonte usada por
+    # scripts/append_production_content.py em produção.
+    {"id": "idiomas", "name": "Mundo dos Idiomas", "display_order": 5},
 ]
 
 # Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
@@ -216,6 +226,20 @@ TERRITORIES = [
     # Challenge já existente (audio_url/audio_source_name/audio_source_url,
     # nunca um mecanismo do zero).
     {"id": "ouvido_afiado", "challenge_type": "ouvido_afiado", "requires_subscription": True, "free_sample_count": 2, "display_order": 39, "world_id": "descoberta"},
+    # V5 — Mundo dos Idiomas (V5/README.md, migrations/060_mundo_idiomas.sql).
+    # 3 idiomas x 3 níveis, cada um um território próprio (não um só
+    # território "idiomas" com sub-navegação) — mesmo padrão de progresso
+    # independente (XP/conquista por território) já usado em todo o resto
+    # do app, sem precisar de um conceito novo de "sub-território".
+    {"id": "ingles_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 40, "world_id": "idiomas"},
+    {"id": "ingles_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 41, "world_id": "idiomas"},
+    {"id": "ingles_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 42, "world_id": "idiomas"},
+    {"id": "espanhol_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 43, "world_id": "idiomas"},
+    {"id": "espanhol_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 44, "world_id": "idiomas"},
+    {"id": "espanhol_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 45, "world_id": "idiomas"},
+    {"id": "frances_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 46, "world_id": "idiomas"},
+    {"id": "frances_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 47, "world_id": "idiomas"},
+    {"id": "frances_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 48, "world_id": "idiomas"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -5667,6 +5691,17 @@ CHALLENGES = [
         "audio_source_url": "https://commons.wikimedia.org/wiki/File:WWS_Typewriter.ogg",
     },
 ]
+
+# V5 — Mundo dos Idiomas: 521 desafios (19 excluídos por bug estrutural
+# na fonte original, ver V5/README.md), carregados diretamente de
+# content/idiomas_*.json em vez de duplicados inline aqui — divergência
+# deliberada do padrão do resto deste arquivo (decisão registrada em
+# V5/README.md), pra não arrastar ~1500 linhas de texto duplicado e pra
+# nunca divergir de content/, a mesma fonte usada em produção via
+# scripts/append_production_content.py.
+_CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
+for _path in sorted(_CONTENT_DIR.glob("idiomas_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 
 def seed_if_empty(db: Session) -> None:

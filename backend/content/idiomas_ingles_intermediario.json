@@ -1,0 +1,990 @@
+[
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'reunião' em inglês?",
+    "options": [
+      "Meeting",
+      "Meting",
+      "Meetting",
+      "Miting"
+    ],
+    "correct_answer": "Meeting",
+    "explanation": "'reunião' se traduz como 'Meeting' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ocupado(a)' em inglês?",
+    "options": [
+      "Busy",
+      "Bussy",
+      "Buzy",
+      "Busi"
+    ],
+    "correct_answer": "Busy",
+    "explanation": "'ocupado(a)' se traduz como 'Busy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'terminar' em inglês?",
+    "options": [
+      "Finish",
+      "Finnish",
+      "Finesh",
+      "Finich"
+    ],
+    "correct_answer": "Finish",
+    "explanation": "'terminar' se traduz como 'Finish' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'antes de' em inglês?",
+    "options": [
+      "Before",
+      "Befor",
+      "Beforre",
+      "Byfore"
+    ],
+    "correct_answer": "Before",
+    "explanation": "'antes de' se traduz como 'Before' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'preciso' (necessidade) em inglês?",
+    "options": [
+      "Need",
+      "Nead",
+      "Neeed",
+      "Ned"
+    ],
+    "correct_answer": "Need",
+    "explanation": "'preciso' se traduz como 'Need' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Trabalho e rotina'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Eu preciso terminar a reunião antes do almoço porque estou ocupado.'",
+    "options": null,
+    "correct_answer": "I need to finish the meeting before lunch because I am busy",
+    "accepted_answers": [
+      "I need to finish the meeting before lunch because I'm busy"
+    ],
+    "explanation": "'Need to' + verbo no infinitivo é a estrutura padrão para expressar necessidade em inglês — sempre com 'to' entre 'need' e o verbo principal.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Trabalho e rotina' que você acabou de ver.",
+      "A frase começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'aeroporto' em inglês?",
+    "options": [
+      "Airport",
+      "Airporte",
+      "Erport",
+      "Airpot"
+    ],
+    "correct_answer": "Airport",
+    "explanation": "'aeroporto' se traduz como 'Airport' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'mala' em inglês?",
+    "options": [
+      "Suitcase",
+      "Sutcase",
+      "Suitecase",
+      "Sootcase"
+    ],
+    "correct_answer": "Suitcase",
+    "explanation": "'mala' se traduz como 'Suitcase' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'atrasado(a)' em inglês?",
+    "options": [
+      "Late",
+      "Lat",
+      "Leyt",
+      "Laate"
+    ],
+    "correct_answer": "Late",
+    "explanation": "'atrasado(a)' se traduz como 'Late' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'já' em inglês?",
+    "options": [
+      "Already",
+      "Alredy",
+      "Allready",
+      "Alredi"
+    ],
+    "correct_answer": "Already",
+    "explanation": "'já' se traduz como 'Already' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esquecer' em inglês?",
+    "options": [
+      "Forget",
+      "Forgett",
+      "Forgat",
+      "Forgot"
+    ],
+    "correct_answer": "Forget",
+    "explanation": "'esquecer' se traduz como 'Forget' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Viagem'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Nós já estamos atrasados para o aeroporto, não esqueça a mala.'",
+    "options": null,
+    "correct_answer": "We are already late for the airport, do not forget the suitcase",
+    "accepted_answers": [
+      "We're already late for the airport, don't forget the suitcase"
+    ],
+    "explanation": "'Already' geralmente aparece entre o verbo auxiliar (are) e o restante da frase, reforçando que algo já aconteceu ou já é o caso.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Viagem' que você acabou de ver.",
+      "A frase começa com 'We'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'doente' em inglês?",
+    "options": [
+      "Sick",
+      "Sik",
+      "Sike",
+      "Cick"
+    ],
+    "correct_answer": "Sick",
+    "explanation": "'doente' se traduz como 'Sick' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'médico(a)' em inglês?",
+    "options": [
+      "Doctor",
+      "Doctar",
+      "Docter",
+      "Doktor"
+    ],
+    "correct_answer": "Doctor",
+    "explanation": "'médico(a)' se traduz como 'Doctor' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'dor' em inglês?",
+    "options": [
+      "Pain",
+      "Pane",
+      "Paine",
+      "Payn"
+    ],
+    "correct_answer": "Pain",
+    "explanation": "'dor' se traduz como 'Pain' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'deveria' em inglês?",
+    "options": [
+      "Should",
+      "Shoud",
+      "Shold",
+      "Shoulde"
+    ],
+    "correct_answer": "Should",
+    "explanation": "'deveria' se traduz como 'Should' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'descansar' em inglês?",
+    "options": [
+      "Rest",
+      "Reste",
+      "Ryst",
+      "Resst"
+    ],
+    "correct_answer": "Rest",
+    "explanation": "'descansar' se traduz como 'Rest' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Saúde'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Você está doente e sentindo dor, deveria descansar e ver um médico.'",
+    "options": null,
+    "correct_answer": "You are sick and feeling pain, you should rest and see a doctor",
+    "accepted_answers": [
+      "You're sick and feeling pain, you should rest and see a doctor"
+    ],
+    "explanation": "'Should' expressa recomendação/conselho e é sempre seguido pelo verbo no infinitivo sem 'to' (should rest, não should to rest).",
+    "hints": [
+      "Relembre o vocabulário do tema 'Saúde' que você acabou de ver.",
+      "A frase começa com 'You'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'caro(a)' em inglês?",
+    "options": [
+      "Expensive",
+      "Expencive",
+      "Expensiv",
+      "Expansive"
+    ],
+    "correct_answer": "Expensive",
+    "explanation": "'caro(a)' se traduz como 'Expensive' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'barato(a)' em inglês?",
+    "options": [
+      "Cheap",
+      "Chip",
+      "Cheep",
+      "Chiap"
+    ],
+    "correct_answer": "Cheap",
+    "explanation": "'barato(a)' se traduz como 'Cheap' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'trocar/devolver' em inglês?",
+    "options": [
+      "Return",
+      "Reeturn",
+      "Returm",
+      "Retorn"
+    ],
+    "correct_answer": "Return",
+    "explanation": "'trocar/devolver' se traduz como 'Return' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'do que' (comparação) em inglês?",
+    "options": [
+      "Than",
+      "Then",
+      "That",
+      "Thean"
+    ],
+    "correct_answer": "Than",
+    "explanation": "'do que' se traduz como 'Than' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esperava' em inglês?",
+    "options": [
+      "Expected",
+      "Expectded",
+      "Expeted",
+      "Exspected"
+    ],
+    "correct_answer": "Expected",
+    "explanation": "'esperava' se traduz como 'Expected' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Compras'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Este produto é mais caro do que eu esperava, eu quero devolver.'",
+    "options": null,
+    "correct_answer": "This product is more expensive than I expected, I want to return it",
+    "accepted_answers": [
+      "This product is more expensive than I expected, I want to return it."
+    ],
+    "explanation": "'Than' é usado em comparações ('more expensive than'), diferente de 'then', que se refere a tempo/sequência — um erro comum mesmo entre falantes avançados.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Compras' que você acabou de ver.",
+      "A frase começa com 'This'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'provavelmente' em inglês?",
+    "options": [
+      "Probably",
+      "Probaly",
+      "Probabli",
+      "Probablly"
+    ],
+    "correct_answer": "Probably",
+    "explanation": "'provavelmente' se traduz como 'Probably' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'chuva' em inglês?",
+    "options": [
+      "Rain",
+      "Rein",
+      "Rane",
+      "Raen"
+    ],
+    "correct_answer": "Rain",
+    "explanation": "'chuva' se traduz como 'Rain' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cancelar' em inglês?",
+    "options": [
+      "Cancel",
+      "Cancell",
+      "Cansel",
+      "Cancele"
+    ],
+    "correct_answer": "Cancel",
+    "explanation": "'cancelar' se traduz como 'Cancel' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'para' (com objetivo) em inglês?",
+    "options": [
+      "To",
+      "For",
+      "At",
+      "In"
+    ],
+    "correct_answer": "To",
+    "explanation": "'para' se traduz como 'To' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Clima e planos'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Nós provavelmente vamos cancelar o passeio a menos que a chuva pare.'",
+    "options": null,
+    "correct_answer": "We will probably cancel the trip unless the rain stops",
+    "accepted_answers": [
+      "We will probably cancel the trip unless the rain stops."
+    ],
+    "explanation": "'Unless' introduz uma condição negativa ('a menos que') e já carrega o sentido de negação — não se usa 'not' junto dela na mesma oração.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Clima e planos' que você acabou de ver.",
+      "A frase começa com 'We'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'quebrado(a)' em inglês?",
+    "options": [
+      "Broken",
+      "Brokken",
+      "Broked",
+      "Brocken"
+    ],
+    "correct_answer": "Broken",
+    "explanation": "'quebrado(a)' se traduz como 'Broken' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'consertar' em inglês?",
+    "options": [
+      "Fix",
+      "Ficks",
+      "Fics",
+      "Fixe"
+    ],
+    "correct_answer": "Fix",
+    "explanation": "'consertar' se traduz como 'Fix' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'senha' em inglês?",
+    "options": [
+      "Password",
+      "Pasword",
+      "Passworde",
+      "Passward"
+    ],
+    "correct_answer": "Password",
+    "explanation": "'senha' se traduz como 'Password' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de novo' em inglês?",
+    "options": [
+      "Again",
+      "Agen",
+      "Agein",
+      "Agin"
+    ],
+    "correct_answer": "Again",
+    "explanation": "'de novo' se traduz como 'Again' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tecnologia'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Meu celular está quebrado, eu preciso tentar consertar de novo.'",
+    "options": null,
+    "correct_answer": "My phone is broken, I need to try to fix it again",
+    "accepted_answers": [
+      "My phone is broken, I need to try to fix it again."
+    ],
+    "explanation": "'Try to' + verbo expressa tentativa de fazer algo — assim como 'need to', é seguida do infinitivo com 'to'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Tecnologia' que você acabou de ver.",
+      "A frase começa com 'My'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'difícil' em inglês?",
+    "options": [
+      "Difficult",
+      "Dificult",
+      "Difficolt",
+      "Difficoult"
+    ],
+    "correct_answer": "Difficult",
+    "explanation": "'difícil' se traduz como 'Difficult' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'explicar' em inglês?",
+    "options": [
+      "Explain",
+      "Explein",
+      "Expalin",
+      "Explayn"
+    ],
+    "correct_answer": "Explain",
+    "explanation": "'explicar' se traduz como 'Explain' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de novo/outra vez' (pedir) em inglês?",
+    "options": [
+      "Again",
+      "Agen",
+      "Agein",
+      "Agin"
+    ],
+    "correct_answer": "Again",
+    "explanation": "'de novo/outra vez' se traduz como 'Again' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'poderia' (pedido educado) em inglês?",
+    "options": [
+      "Could",
+      "Coud",
+      "Cold",
+      "Coulde"
+    ],
+    "correct_answer": "Could",
+    "explanation": "'poderia' se traduz como 'Could' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Estudos'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Este assunto é difícil, você poderia explicar de novo?'",
+    "options": null,
+    "correct_answer": "This subject is difficult, could you explain it again",
+    "accepted_answers": [
+      "This subject is difficult, could you explain it again?"
+    ],
+    "explanation": "'Could you' é uma forma educada de fazer um pedido em inglês, mais formal que 'can you', mas ainda de uso comum no dia a dia.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Estudos' que você acabou de ver.",
+      "A frase começa com 'This'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'surpreso(a)' em inglês?",
+    "options": [
+      "Surprised",
+      "Suprised",
+      "Surprized",
+      "Surpirsed"
+    ],
+    "correct_answer": "Surprised",
+    "explanation": "'surpreso(a)' se traduz como 'Surprised' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'na verdade' em inglês?",
+    "options": [
+      "Actually",
+      "Actualy",
+      "Actuallly",
+      "Actualley"
+    ],
+    "correct_answer": "Actually",
+    "explanation": "'na verdade' se traduz como 'Actually' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'esperava (que algo fosse diferente)' em inglês?",
+    "options": [
+      "Expected",
+      "Expectded",
+      "Expeted",
+      "Exspected"
+    ],
+    "correct_answer": "Expected",
+    "explanation": "'esperava (que algo fosse diferente)' se traduz como 'Expected' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'melhor' em inglês?",
+    "options": [
+      "Better",
+      "Beter",
+      "Bettar",
+      "Betterr"
+    ],
+    "correct_answer": "Better",
+    "explanation": "'melhor' se traduz como 'Better' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'do que eu pensava' (comparação) em inglês?",
+    "options": [
+      "Than I thought",
+      "That I think",
+      "Then I thinked",
+      "Than I think"
+    ],
+    "correct_answer": "Than I thought",
+    "explanation": "'do que eu pensava' se traduz como 'Than I thought' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Emoções e opinião'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Na verdade, eu estou surpreso(a) — o filme foi melhor do que eu pensava.'",
+    "options": null,
+    "correct_answer": "Actually, I am surprised, the movie was better than I thought",
+    "accepted_answers": [
+      "Actually, I'm surprised, the movie was better than I thought"
+    ],
+    "explanation": "'Better than' segue a mesma lógica de comparativos já vista antes (usar 'than', não 'then'), e 'thought' é o passado irregular de 'think'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Emoções e opinião' que você acabou de ver.",
+      "A frase começa com 'Actually,'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'planejar' em inglês?",
+    "options": [
+      "Plan",
+      "Plann",
+      "Plane",
+      "Pland"
+    ],
+    "correct_answer": "Plan",
+    "explanation": "'planejar' se traduz como 'Plan' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'dinheiro suficiente' em inglês?",
+    "options": [
+      "Enough money",
+      "Sufficient money",
+      "Money enough",
+      "Much money enough"
+    ],
+    "correct_answer": "Enough money",
+    "explanation": "'dinheiro suficiente' se traduz como 'Enough money' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'antes que' em inglês?",
+    "options": [
+      "Before",
+      "Befor",
+      "Beforre",
+      "Byfore"
+    ],
+    "correct_answer": "Before",
+    "explanation": "'antes que' se traduz como 'Before' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'meu sonho' em inglês?",
+    "options": [
+      "My dream",
+      "My dreamer",
+      "My dreaming",
+      "Mine dream"
+    ],
+    "correct_answer": "My dream",
+    "explanation": "'meu sonho' se traduz como 'My dream' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Planejamento futuro'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Eu preciso planejar e economizar dinheiro suficiente antes de realizar meu sonho.'",
+    "options": null,
+    "correct_answer": "I need to plan and save enough money before making my dream come true",
+    "accepted_answers": [
+      "I need to plan and save enough money before my dream comes true"
+    ],
+    "explanation": "'Enough' vem antes do substantivo que modifica ('enough money'), diferente do português, onde 'suficiente' costuma vir depois.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Planejamento futuro' que você acabou de ver.",
+      "A frase começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'embora/apesar de' em inglês?",
+    "options": [
+      "Although",
+      "Altough",
+      "Allthough",
+      "Athough"
+    ],
+    "correct_answer": "Although",
+    "explanation": "'embora/apesar de' se traduz como 'Although' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'conseguir/gerenciar' em inglês?",
+    "options": [
+      "Manage",
+      "Manege",
+      "Manag",
+      "Managge"
+    ],
+    "correct_answer": "Manage",
+    "explanation": "'conseguir/gerenciar' se traduz como 'Manage' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ainda' em inglês?",
+    "options": [
+      "Still",
+      "Stil",
+      "Stille",
+      "Stiil"
+    ],
+    "correct_answer": "Still",
+    "explanation": "'ainda' se traduz como 'Still' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'orgulhoso(a)' em inglês?",
+    "options": [
+      "Proud",
+      "Prowd",
+      "Proude",
+      "Prawd"
+    ],
+    "correct_answer": "Proud",
+    "explanation": "'orgulhoso(a)' se traduz como 'Proud' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'de mim mesmo(a)' em inglês?",
+    "options": [
+      "Of myself",
+      "Of me",
+      "For myself",
+      "About myself"
+    ],
+    "correct_answer": "Of myself",
+    "explanation": "'de mim mesmo(a)' se traduz como 'Of myself' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Traduza para o inglês: 'Embora tenha sido difícil, eu ainda consegui e estou orgulhoso de mim mesmo.'",
+    "options": null,
+    "correct_answer": "Although it was difficult, I still managed and I am proud of myself",
+    "accepted_answers": [
+      "Although it was difficult, I still managed and I'm proud of myself"
+    ],
+    "explanation": "'Although' introduz uma ideia de contraste ('embora'), similar a 'but', mas usada no início da oração subordinada, não entre duas frases independentes.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Revisão geral' que você acabou de ver.",
+      "A frase começa com 'Although'."
+    ],
+    "age_reviewed": true
+  }
+]

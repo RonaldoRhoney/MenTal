@@ -22,6 +22,19 @@ REQUIRED_DIFFICULTY_LEVELS = (1, 2, 3)
 # critério do item 7 é especificamente sobre território de MCQ.
 NON_MCQ_TERRITORY_IDS = {"caca_palavras"}
 
+# V5 — Mundo dos Idiomas: cada território JÁ É um nível (ingles_basico,
+# ingles_intermediario, ingles_avancado, ...) — a progressão de
+# dificuldade acontece entre territórios irmãos, não dentro de um único
+# território como no resto do app. Todo challenge de um território de
+# idiomas nasce no mesmo difficulty_level (o do próprio nível), de
+# propósito — exigir 1/2/3 dentro de "ingles_basico" não faz sentido
+# aqui. O piso de volume total (>=15) continua valendo normalmente.
+SINGLE_DIFFICULTY_TERRITORY_IDS = {
+    "ingles_basico", "ingles_intermediario", "ingles_avancado",
+    "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
+    "frances_basico", "frances_intermediario", "frances_avancado",
+}
+
 
 def test_every_active_territory_meets_the_v2_item7_closing_criterion():
     territory_ids = [t["id"] for t in TERRITORIES if t["id"] not in NON_MCQ_TERRITORY_IDS]
@@ -39,6 +52,9 @@ def test_every_active_territory_meets_the_v2_item7_closing_criterion():
 
         if total < MIN_CHALLENGES_PER_TERRITORY:
             failures.append(f"{territory_id}: total={total} (mínimo {MIN_CHALLENGES_PER_TERRITORY})")
+
+        if territory_id in SINGLE_DIFFICULTY_TERRITORY_IDS:
+            continue
 
         for level in REQUIRED_DIFFICULTY_LEVELS:
             if counts.get(level, 0) < MIN_PER_DIFFICULTY_LEVEL:

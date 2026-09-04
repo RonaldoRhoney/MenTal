@@ -171,6 +171,33 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryOuvidoAfiado => 'Ouvido Afiado';
 
   @override
+  String get territoryInglesBasico => 'Inglês Básico';
+
+  @override
+  String get territoryInglesIntermediario => 'Inglês Intermediário';
+
+  @override
+  String get territoryInglesAvancado => 'Inglês Avançado';
+
+  @override
+  String get territoryEspanholBasico => 'Espanhol Básico';
+
+  @override
+  String get territoryEspanholIntermediario => 'Espanhol Intermediário';
+
+  @override
+  String get territoryEspanholAvancado => 'Espanhol Avançado';
+
+  @override
+  String get territoryFrancesBasico => 'Francês Básico';
+
+  @override
+  String get territoryFrancesIntermediario => 'Francês Intermediário';
+
+  @override
+  String get territoryFrancesAvancado => 'Francês Avançado';
+
+  @override
   String get audioPlayButton => 'Tocar som';
 
   @override

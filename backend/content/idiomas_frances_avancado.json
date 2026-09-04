@@ -1,0 +1,1044 @@
+[
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'negociar' em francês?",
+    "options": [
+      "Négocier",
+      "Negociar",
+      "Négocié",
+      "Negosier"
+    ],
+    "correct_answer": "Négocier",
+    "explanation": "'negociar' se traduz como 'Négocier' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'acordo' em francês?",
+    "options": [
+      "Accord",
+      "Acordo",
+      "Accorde",
+      "Acord"
+    ],
+    "correct_answer": "Accord",
+    "explanation": "'acordo' se traduz como 'Accord' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'a menos que' novamente para fixar em francês?",
+    "options": [
+      "À moins que",
+      "A moins de",
+      "Sauf que",
+      "À moins de que"
+    ],
+    "correct_answer": "À moins que",
+    "explanation": "'a menos que' se traduz como 'À moins que' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'À'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'assinado(a)' em francês?",
+    "options": [
+      "Signé(e)",
+      "Assiné",
+      "Signee",
+      "Signè"
+    ],
+    "correct_answer": "Signé(e)",
+    "explanation": "'assinado(a)' se traduz como 'Signé(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'antes de' (prazo) em francês?",
+    "options": [
+      "Avant",
+      "Jusqu'à",
+      "Pour",
+      "Par"
+    ],
+    "correct_answer": "Avant",
+    "explanation": "'antes de' se traduz como 'Avant' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Negócios'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'A menos que o contrato seja assinado antes de sexta-feira, não haverá acordo.'",
+    "options": null,
+    "correct_answer": "À moins que le contrat soit signé avant vendredi, il n'y aura pas d'accord",
+    "accepted_answers": [
+      "À moins que le contrat ne soit signé avant vendredi, il n'y aura pas d'accord"
+    ],
+    "explanation": "'Soit signé' está no subjuntivo (exigido por 'à moins que') e na voz passiva — combinação formal típica de contextos contratuais e de negócios.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Negócios' que você acabou de ver.",
+      "A frase começa com 'À'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'se eu tivesse recebido' (hipótese passada) em francês?",
+    "options": [
+      "Si j'avais reçu",
+      "Si j'aurais reçu",
+      "Si je recevais",
+      "Si j'ai reçu"
+    ],
+    "correct_answer": "Si j'avais reçu",
+    "explanation": "'se eu tivesse recebido' se traduz como 'Si j'avais reçu' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'teria feito' em francês?",
+    "options": [
+      "J'aurais fait",
+      "J'avait fait",
+      "Je ferais fait",
+      "J'aurai fait"
+    ],
+    "correct_answer": "J'aurais fait",
+    "explanation": "'teria feito' se traduz como 'J'aurais fait' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'diferente' em francês?",
+    "options": [
+      "Différent(e)",
+      "Diferente",
+      "Différant",
+      "Diferant"
+    ],
+    "correct_answer": "Différent(e)",
+    "explanation": "'diferente' se traduz como 'Différent(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'com antecedência' em francês?",
+    "options": [
+      "À l'avance",
+      "En avance",
+      "Avec antecipation",
+      "Antécédemment"
+    ],
+    "correct_answer": "À l'avance",
+    "explanation": "'com antecedência' se traduz como 'À l'avance' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'À'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'aviso' em francês?",
+    "options": [
+      "Avertissement",
+      "Aviso",
+      "Avertir",
+      "Avertence"
+    ],
+    "correct_answer": "Avertissement",
+    "explanation": "'aviso' se traduz como 'Avertissement' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Condicionais e hipóteses'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'Se eu tivesse recebido o aviso com antecedência, eu teria feito algo diferente.'",
+    "options": null,
+    "correct_answer": "Si j'avais reçu l'avertissement à l'avance, j'aurais fait quelque chose de différent",
+    "accepted_answers": [
+      "Si j'avais reçu l'avis à l'avance, j'aurais fait autre chose"
+    ],
+    "explanation": "Esta é a condicional do tipo 'passé' em francês: 'si + plus-que-parfait' seguido de 'conditionnel passé' — equivalente à terceira condicional do inglês e à condicional composta do espanhol.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Condicionais e hipóteses' que você acabou de ver.",
+      "A frase começa com 'Si'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'foi anunciado' (voz passiva) em francês?",
+    "options": [
+      "A été annoncé",
+      "Est annoncé",
+      "Était annoncant",
+      "Annoncé était"
+    ],
+    "correct_answer": "A été annoncé",
+    "explanation": "'foi anunciado' se traduz como 'A été annoncé' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'de acordo com' em francês?",
+    "options": [
+      "Selon",
+      "D'accord avec",
+      "Selong",
+      "Selons"
+    ],
+    "correct_answer": "Selon",
+    "explanation": "'de acordo com' se traduz como 'Selon' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'fontes' (informação) em francês?",
+    "options": [
+      "Sources",
+      "Fontes",
+      "Sourses",
+      "Sourcess"
+    ],
+    "correct_answer": "Sources",
+    "explanation": "'fontes' se traduz como 'Sources' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'adiado(a)' em francês?",
+    "options": [
+      "Reporté(e)",
+      "Adié",
+      "Reportée",
+      "Repotré"
+    ],
+    "correct_answer": "Reporté(e)",
+    "explanation": "'adiado(a)' se traduz como 'Reporté(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'devido a' em francês?",
+    "options": [
+      "En raison de",
+      "Devido a",
+      "À cause que",
+      "Par raison de"
+    ],
+    "correct_answer": "En raison de",
+    "explanation": "'devido a' se traduz como 'En raison de' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e eventos'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'De acordo com as fontes, o evento foi adiado devido à chuva.'",
+    "options": null,
+    "correct_answer": "Selon les sources, l'événement a été reporté en raison de la pluie",
+    "accepted_answers": [
+      "D'après les sources, l'événement a été reporté à cause de la pluie"
+    ],
+    "explanation": "'En raison de' é mais formal que 'à cause de', ambos significando 'devido a' — comum ver o primeiro em textos jornalísticos e o segundo na fala cotidiana.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Notícias e eventos' que você acabou de ver.",
+      "A frase começa com 'Selon'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'desistir' em francês?",
+    "options": [
+      "Abandonner",
+      "Desister",
+      "Abandoner",
+      "Abandonar"
+    ],
+    "correct_answer": "Abandonner",
+    "explanation": "'desistir' se traduz como 'Abandonner' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'adiar' em francês?",
+    "options": [
+      "Repousser",
+      "Reporter",
+      "Adiar",
+      "Repouser"
+    ],
+    "correct_answer": "Reporter",
+    "explanation": "'adiar' se traduz como 'Reporter' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'lidar com' em francês?",
+    "options": [
+      "Faire face à",
+      "Traiter avec",
+      "Gérer avec",
+      "Lidar con"
+    ],
+    "correct_answer": "Faire face à",
+    "explanation": "'lidar com' se traduz como 'Faire face à' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'em vez de' em francês?",
+    "options": [
+      "Au lieu de",
+      "En vez de",
+      "A la place que",
+      "Au lieu que"
+    ],
+    "correct_answer": "Au lieu de",
+    "explanation": "'em vez de' se traduz como 'Au lieu de' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'decidiu' em francês?",
+    "options": [
+      "A décidé",
+      "Décida",
+      "A décider",
+      "Décidé a"
+    ],
+    "correct_answer": "A décidé",
+    "explanation": "'decidiu' se traduz como 'A décidé' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Expressões idiomáticas do dia a dia'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'Em vez de desistir, ela decidiu lidar com o problema em vez de adiá-lo.'",
+    "options": null,
+    "correct_answer": "Au lieu d'abandonner, elle a décidé de faire face au problème au lieu de le reporter",
+    "accepted_answers": [
+      "Au lieu d'abandonner, elle a décidé d'affronter le problème plutôt que de le reporter"
+    ],
+    "explanation": "'Faire face à' é uma expressão idiomática que significa 'lidar com/enfrentar', literalmente 'fazer face a' — muito usada tanto em contexto formal quanto cotidiano.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Expressões idiomáticas do dia a dia' que você acabou de ver.",
+      "A frase começa com 'Au'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'por outro lado' em francês?",
+    "options": [
+      "D'autre part",
+      "Par autre côté",
+      "De l'autre part",
+      "Par ailleurs bien"
+    ],
+    "correct_answer": "D'autre part",
+    "explanation": "'por outro lado' se traduz como 'D'autre part' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'apesar de' em francês?",
+    "options": [
+      "Malgré",
+      "Apesar de",
+      "Malgrè",
+      "Malgres"
+    ],
+    "correct_answer": "Malgré",
+    "explanation": "'apesar de' se traduz como 'Malgré' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'evidência' em francês?",
+    "options": [
+      "Preuve",
+      "Evidence",
+      "Évidence",
+      "Preuves"
+    ],
+    "correct_answer": "Preuve",
+    "explanation": "'evidência' se traduz como 'Preuve' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sugerem' em francês?",
+    "options": [
+      "Suggèrent",
+      "Sugerent",
+      "Suggerent",
+      "Suggèrant"
+    ],
+    "correct_answer": "Suggèrent",
+    "explanation": "'sugerem' se traduz como 'Suggèrent' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ao contrário' em francês?",
+    "options": [
+      "Au contraire",
+      "Par contraire",
+      "En contraire",
+      "Del contraire"
+    ],
+    "correct_answer": "Au contraire",
+    "explanation": "'ao contrário' se traduz como 'Au contraire' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Opinião e argumentação'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'Apesar da evidência, alguns pesquisadores sugerem, ao contrário, uma explicação diferente.'",
+    "options": null,
+    "correct_answer": "Malgré la preuve, certains chercheurs suggèrent, au contraire, une explication différente",
+    "accepted_answers": [
+      "Malgré les preuves, certains chercheurs suggèrent au contraire une explication différente"
+    ],
+    "explanation": "'Malgré' é seguido diretamente de substantivo, sem preposição adicional — mesma estrutura de 'despite' em inglês e 'a pesar de' em espanhol.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Opinião e argumentação' que você acabou de ver.",
+      "A frase começa com 'Malgré'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'descoberto(a)' em francês?",
+    "options": [
+      "Découvert(e)",
+      "Descuberto",
+      "Découverte",
+      "Decouvert"
+    ],
+    "correct_answer": "Découvert(e)",
+    "explanation": "'descoberto(a)' se traduz como 'Découvert(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'estudo' (pesquisa) em francês?",
+    "options": [
+      "Étude",
+      "Estudo",
+      "Etude",
+      "Étudie"
+    ],
+    "correct_answer": "Étude",
+    "explanation": "'estudo' se traduz como 'Étude' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'É'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'demonstrou' em francês?",
+    "options": [
+      "A démontré",
+      "Démontra",
+      "A démonter",
+      "Démontré a"
+    ],
+    "correct_answer": "A démontré",
+    "explanation": "'demonstrou' se traduz como 'A démontré' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'a fim de' em francês?",
+    "options": [
+      "Afin de",
+      "A fin de",
+      "Pour fin de",
+      "En fin de"
+    ],
+    "correct_answer": "Afin de",
+    "explanation": "'a fim de' se traduz como 'Afin de' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'confirmar' em francês?",
+    "options": [
+      "Confirmer",
+      "Confirnar",
+      "Comfirmer",
+      "Confirmé"
+    ],
+    "correct_answer": "Confirmer",
+    "explanation": "'confirmar' se traduz como 'Confirmer' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência e pesquisa'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'O estudo demonstrou o que foi descoberto, a fim de confirmar a hipótese.'",
+    "options": null,
+    "correct_answer": "L'étude a démontré ce qui a été découvert, afin de confirmer l'hypothèse",
+    "accepted_answers": [
+      "L'étude a démontré ce qui avait été découvert, afin de confirmer l'hypothèse"
+    ],
+    "explanation": "'Afin de' é uma forma mais formal de expressar propósito/finalidade do que 'pour', comum em textos acadêmicos e científicos em francês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Ciência e pesquisa' que você acabou de ver.",
+      "A frase começa com 'L'étude'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'mal-entendido' em francês?",
+    "options": [
+      "Malentendu",
+      "Mal entendu",
+      "Malentendido",
+      "Mal-entendu"
+    ],
+    "correct_answer": "Malentendu",
+    "explanation": "'mal-entendido' se traduz como 'Malentendu' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'esclarecer' em francês?",
+    "options": [
+      "Clarifier",
+      "Esclarecer",
+      "Clarifiquer",
+      "Éclaircir"
+    ],
+    "correct_answer": "Clarifier",
+    "explanation": "'esclarecer' se traduz como 'Clarifier' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sem querer' em francês?",
+    "options": [
+      "Sans le vouloir",
+      "Sans vouloir",
+      "San querer",
+      "Sans querer"
+    ],
+    "correct_answer": "Sans le vouloir",
+    "explanation": "'sem querer' se traduz como 'Sans le vouloir' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ofendido(a)' em francês?",
+    "options": [
+      "Offensé(e)",
+      "Ofendido",
+      "Offense",
+      "Offencé"
+    ],
+    "correct_answer": "Offensé(e)",
+    "explanation": "'ofendido(a)' se traduz como 'Offensé(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'pretendia' em francês?",
+    "options": [
+      "J'avais l'intention de",
+      "Je pretendia",
+      "J'intentionnais",
+      "J'ai intention"
+    ],
+    "correct_answer": "J'avais l'intention de",
+    "explanation": "'pretendia' se traduz como 'J'avais l'intention de' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Relações e comunicação'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'Foi um mal-entendido; eu não pretendia ofender ninguém sem querer, deixe-me esclarecer.'",
+    "options": null,
+    "correct_answer": "C'était un malentendu, je n'avais pas l'intention d'offenser qui que ce soit sans le vouloir, laisse-moi clarifier",
+    "accepted_answers": [
+      "C'était un malentendu, je ne voulais offenser personne, laissez-moi clarifier"
+    ],
+    "explanation": "'Avoir l'intention de' + infinitivo expressa intenção — negar essa estrutura é uma forma comum de se desculpar formalmente por um mal-entendido em francês.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Relações e comunicação' que você acabou de ver.",
+      "A frase começa com 'C'était'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sustentável' em francês?",
+    "options": [
+      "Durable",
+      "Sustentável",
+      "Soutenable",
+      "Sustainable"
+    ],
+    "correct_answer": "Durable",
+    "explanation": "'sustentável' se traduz como 'Durable' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'reduzir' em francês?",
+    "options": [
+      "Réduire",
+      "Reduzir",
+      "Reduire",
+      "Réduir"
+    ],
+    "correct_answer": "Réduire",
+    "explanation": "'reduzir' se traduz como 'Réduire' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'consequências' em francês?",
+    "options": [
+      "Conséquences",
+      "Consequencias",
+      "Consequences",
+      "Conséquancias"
+    ],
+    "correct_answer": "Conséquences",
+    "explanation": "'consequências' se traduz como 'Conséquences' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'irreversível' em francês?",
+    "options": [
+      "Irréversible",
+      "Irreversible",
+      "Irréversibel",
+      "Irreversibl"
+    ],
+    "correct_answer": "Irréversible",
+    "explanation": "'irreversível' se traduz como 'Irréversible' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Meio ambiente'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'A menos que reduzamos o consumo agora, as consequências podem ser irreversíveis.'",
+    "options": null,
+    "correct_answer": "À moins que nous réduisions la consommation maintenant, les conséquences pourraient être irréversibles",
+    "accepted_answers": [
+      "À moins qu'on ne réduise la consommation maintenant, les conséquences peuvent être irréversibles"
+    ],
+    "explanation": "'Réduisions' está no subjuntivo (primeira pessoa do plural do verbo 'réduire'), exigido novamente pela expressão 'à moins que'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Meio ambiente' que você acabou de ver.",
+      "A frase começa com 'À'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'olhando para trás' em francês?",
+    "options": [
+      "En regardant en arrière",
+      "En regardant derrière",
+      "Regardant arrière",
+      "En voyant arrière"
+    ],
+    "correct_answer": "En regardant en arrière",
+    "explanation": "'olhando para trás' se traduz como 'En regardant en arrière' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'teria feito' novamente para fixar em francês?",
+    "options": [
+      "J'aurais fait",
+      "J'avait fait",
+      "Je ferais fait",
+      "J'aurai fait"
+    ],
+    "correct_answer": "J'aurais fait",
+    "explanation": "'teria feito' se traduz como 'J'aurais fait' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'de qualquer forma' em francês?",
+    "options": [
+      "De toute façon",
+      "De toute forme",
+      "En tout cas là",
+      "De toute manière là"
+    ],
+    "correct_answer": "De toute façon",
+    "explanation": "'de qualquer forma' se traduz como 'De toute façon' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'valeu a pena' em francês?",
+    "options": [
+      "Ça en valait la peine",
+      "Valia la pena",
+      "C'était valu",
+      "Ça valait pena"
+    ],
+    "correct_answer": "Ça en valait la peine",
+    "explanation": "'valeu a pena' se traduz como 'Ça en valait la peine' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'Ç'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'crescimento' em francês?",
+    "options": [
+      "Croissance",
+      "Crescimento",
+      "Croisance",
+      "Croissence"
+    ],
+    "correct_answer": "Croissance",
+    "explanation": "'crescimento' se traduz como 'Croissance' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Reflexão pessoal'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'Ao olhar para trás, eu teria feito diferente, mas de qualquer forma valeu a pena pelo crescimento.'",
+    "options": null,
+    "correct_answer": "En regardant en arrière, j'aurais fait différemment, mais de toute façon ça en valait la peine pour la croissance",
+    "accepted_answers": [
+      "En regardant en arrière, j'aurais fait les choses autrement, mais ça en valait la peine pour la croissance"
+    ],
+    "explanation": "'Ça en valait la peine' é uma expressão idiomática fixa para 'valeu a pena', literalmente 'isso valia a pena disso' — a partícula 'en' é obrigatória nessa construção.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Reflexão pessoal' que você acabou de ver.",
+      "A frase começa com 'En'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'no entanto' em francês?",
+    "options": [
+      "Cependant",
+      "No entanto",
+      "Cepandant",
+      "Sependant"
+    ],
+    "correct_answer": "Cependant",
+    "explanation": "'no entanto' se traduz como 'Cependant' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'inegavelmente' em francês?",
+    "options": [
+      "Indéniablement",
+      "Inegavelmente",
+      "Indeniablement",
+      "Indénieblement"
+    ],
+    "correct_answer": "Indéniablement",
+    "explanation": "'inegavelmente' se traduz como 'Indéniablement' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ainda que' em francês?",
+    "options": [
+      "Même si",
+      "Bien que",
+      "Encore que là",
+      "Même que"
+    ],
+    "correct_answer": "Même si",
+    "explanation": "'ainda que' se traduz como 'Même si' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'permanece' em francês?",
+    "options": [
+      "Reste",
+      "Permanece",
+      "Restée",
+      "Restant"
+    ],
+    "correct_answer": "Reste",
+    "explanation": "'permanece' se traduz como 'Reste' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'incerto(a)' em francês?",
+    "options": [
+      "Incertain(e)",
+      "Incerto",
+      "Insertain",
+      "Incertaine ele"
+    ],
+    "correct_answer": "Incertain(e)",
+    "explanation": "'incerto(a)' se traduz como 'Incertain(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral avançada'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_avancado",
+    "difficulty_level": 3,
+    "prompt": "Traduza para o francês: 'Ainda que o resultado seja incerto, o esforço, no entanto, permanece inegavelmente valioso.'",
+    "options": null,
+    "correct_answer": "Même si le résultat est incertain, l'effort, cependant, reste indéniablement précieux",
+    "accepted_answers": [
+      "Bien que le résultat soit incertain, l'effort reste néanmoins indéniablement précieux"
+    ],
+    "explanation": "'Même si' + indicativo expressa um contraste mais direto que 'bien que' + subjuntivo — as duas formas existem em francês, com nuance de formalidade diferente.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Revisão geral avançada' que você acabou de ver.",
+      "A frase começa com 'Même'."
+    ],
+    "age_reviewed": true
+  }
+]

@@ -1,21 +1,82 @@
 # V5
 
-**Status:** Ainda não iniciada. V4 encerrada (Fase 1 dos agentes, Perfil Público + Torcida, cor da Curiosidade Relâmpago, Redação, timing 20s universal do Relâmpago, e os 5 territórios novos — Invenções, Veículos, Astronomia, Detetive Mental, Ouvido Afiado — todos em produção).
+**Status:** Mundo dos Idiomas implementado no código e testado (backend
+300 testes, client 115 testes) — falta rodar a migração e carregar o
+conteúdo em produção (ver "Próximo passo" abaixo).
 
-## Itens já decididos para a V5
+## Mundo dos Idiomas — arquitetura implementada em 04/09/2026
 
-- **Idiomas Estrangeiros** — movido da V4 para a V5 em 02/09/2026 (decisão de Rhoney ao priorizar o roadmap da V4, registrada em `V4/V3_ENCERRAMENTO_PENDENCIAS_PARA_V4.md` §2.2). Já existe um piloto de mecânica desenhado (Inglês, bloco de 5 + desafio de frase), mas nenhum documento formal de escopo ainda — a formalizar quando a V5 começar de fato.
+- 9 territórios (não um só "idiomas" com sub-navegação): `ingles_basico`,
+  `ingles_intermediario`, `ingles_avancado`, `espanhol_basico`,
+  `espanhol_intermediario`, `espanhol_avancado`, `frances_basico`,
+  `frances_intermediario`, `frances_avancado` — cada nível é um
+  território próprio, com progresso/XP independente, mesmo padrão do
+  resto do app. Novo World `idiomas` (`migrations/060_mundo_idiomas.sql`).
+- Requer assinatura, com 3 tentativas grátis por território
+  (`requires_subscription=true`, `free_sample_count=3`), igual ao padrão
+  do resto do conteúdo denso do app.
+- Desafio de tradução em texto livre ganhou suporte a mais de uma
+  resposta correta: campo novo `Challenge.accepted_answers` (JSON,
+  opcional), comparado em `services.is_submitted_answer_correct()`. Ver
+  `backend/content/README.md` §"Desafio de texto livre".
+- Conteúdo bruto (`mundo_dos_idiomas_*.json`, formato de blocos) é
+  convertido pro formato plano do app via
+  `backend/scripts/convert_idiomas_content.py`, que também GERA hints
+  automaticamente (o arquivo bruto não tinha esse campo — decisão:
+  gerar genéricas em vez de bloquear o lançamento, ex.: "É uma palavra
+  do tema 'Em casa'." / "Começa com 'H'."). Resultado em
+  `backend/content/idiomas_*.json`, carregado por `app/seed.py`
+  diretamente (não duplicado inline como o resto do arquivo — divergência
+  deliberada do padrão, pra não arrastar ~1500 linhas de texto repetido e
+  nunca divergir da fonte usada em produção).
 
-## Candidatos registrados (V4_NOVOS_TERRITORIOS.md §6, sem detalhamento)
+### 19 itens excluídos por bug de curadoria na fonte original
 
-Ideias discutidas durante o planejamento da V4 e explicitamente adiadas para uma fase futura, sem mecânica nem conteúdo desenhados ainda:
+O conversor detecta e pula automaticamente (nunca entram no banco):
+18 itens com uma alternativa duplicada dentro de `options` (a resposta
+certa aparecia 2x na lista, ex. `['Work', 'Work', 'Werk', 'Wrok']`) e 1
+prompt repetido entre `ingles_intermediario`/`ingles_avancado` (mesma
+frase "a menos que" ensinada duas vezes). Rodar o script de novo (`cd
+backend && python3 scripts/convert_idiomas_content.py`) imprime a lista
+completa com território e motivo de cada exclusão. Se algum dia
+corrigir a fonte (`V5/mundo_dos_idiomas_*.json`), o item volta a entrar
+automaticamente na próxima conversão.
+
+### Testes
+
+- Backend: `test_idiomas_content.py` (accepted_answers aceita variação,
+  rejeita resposta fora do conjunto) + `test_content_volume.py` (piso de
+  volume, com exceção documentada pra não exigir 3 níveis de dificuldade
+  DENTRO de um território que já É um nível) + `test_worlds.py`
+  (mundo novo aparece em `/progress`).
+- Client: rótulos dos 9 territórios em `territories.dart` +
+  `app_pt.arb`. Nenhuma tela nova precisou ser escrita — Home já lista
+  Mundos genericamente, e o desafio de texto livre já reaproveita o
+  mesmo campo de texto usado no anagrama de "palavras".
+
+## Próximo passo
+
+1. Rodar `backend/migrations/060_mundo_idiomas.sql` no SQL Editor do
+   Supabase (cria o World, os 9 territórios, e a coluna
+   `accepted_answers`).
+2. Rodar, localmente, com `MENTAL_DATABASE_URL` apontando pra produção:
+   `cd backend && for f in content/idiomas_*.json; do python3 scripts/append_production_content.py "$f"; done`
+   — carrega os 521 desafios (idempotente, pode rodar de novo sem
+   duplicar).
+3. Fazer deploy do backend no Render (o código já tem o suporte a
+   `accepted_answers`, mas só funciona depois do passo 1).
+4. Testar no dispositivo real (padrão desta sessão): abrir um território
+   de Idiomas, responder uma pergunta de vocabulário e o desafio de
+   frase, confirmar que uma variação aceita (ex. com/sem ponto final)
+   conta como acerto.
+
+## Candidatos registrados (herdados de V4_NOVOS_TERRITORIOS.md §6, ainda sem dono de fase)
+
+Ideias adiadas em fases anteriores, sem mecânica nem conteúdo desenhados
+ainda — revisar se algum deles vira o escopo da V6:
 
 - Inteligência Emocional e Habilidades Socioemocionais (exige desenho pedagógico mais cuidadoso — risco de parecer conselho/diagnóstico se mal curado).
 - Decifra o Símbolo (decodificação visual de ícones e sinais do mundo real).
 - Corpo Humano em Profundidade (funcionamento biológico, distinto de Saúde e Bem-estar).
 - Bandeiras, Mapas e Geografia do Mundo.
 - Dinheiro e Objetos que Mudaram de Valor (curiosidade histórica/anedótica, distinta de Finanças Pessoais).
-
-## Próximo passo
-
-Nenhum ainda — aguardando Rhoney priorizar e formalizar o escopo da V5.

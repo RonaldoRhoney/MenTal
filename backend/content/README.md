@@ -39,6 +39,32 @@ desafio de múltipla escolha:
 | `age_reviewed` | sim | `true` só depois de checado manualmente que o conteúdo é apropriado pro público misto (inclusive crianças) do MENTAL — nunca `true` por padrão |
 | `prompt_image` | não | um emoji Unicode (ex.: `"🏛️"`) exibido junto com a pergunta — CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md §3, decisão de arquitetura 2026-08-22: só emoji nesta etapa, nunca upload de foto/ilustração real (zero custo, zero risco de direito autoral, mesmo catálogo já usado nos avatares). Omitir o campo (ou deixar `null`) quando a pergunta não precisa de reforço visual — a maioria dos casos. **Imagem nas próprias alternativas de resposta** (§3 do documento, casos 2-3) fica fora desta etapa — mudaria a estrutura de `options`, usada em todo o app; ver V2_KICKOFF.md §11 pro raciocínio completo. |
 
+## Desafio de texto livre (`options: null`)
+
+Precedente: anagrama em `palavras`. V5 (Mundo dos Idiomas) acrescenta o
+2º caso, tradução de frase — mais de uma resposta correta possível.
+Quando `options` é `null`, o client renderiza um campo de texto em vez
+de múltipla escolha, e a resposta é comparada (case-insensitive, sem
+espaço nas pontas) contra `correct_answer` OU qualquer item de
+`accepted_answers`:
+
+```json
+{
+  "territory_id": "ingles_basico",
+  "difficulty_level": 1,
+  "prompt": "Traduza para o inglês: 'A casa é grande.'",
+  "options": null,
+  "correct_answer": "The house is big",
+  "accepted_answers": ["The house is big.", "the house is big"],
+  "explanation": "'The house is big' usa 'the' antes de 'house'...",
+  "hints": ["Relembre o vocabulário do tema.", "A frase começa com 'The'."],
+  "age_reviewed": true
+}
+```
+
+`accepted_answers` é opcional (só faz sentido com `options: null`) —
+omitir quando só existe uma forma certa de responder.
+
 ## Fluxo
 
 1. Curar o conteúdo neste formato num arquivo `backend/content/<nome>.json`

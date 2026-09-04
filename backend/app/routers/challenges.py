@@ -376,7 +376,7 @@ def submit_answer(
     # uma segunda chance de pontuar. Sai ANTES da checagem de limite
     # diário abaixo de propósito: revisão nunca consome esse limite.
     if attempt.is_review:
-        is_correct = not body.timed_out and body.submitted_answer.strip().lower() == challenge.correct_answer.strip().lower()
+        is_correct = services.is_submitted_answer_correct(challenge, body.submitted_answer, body.timed_out)
         attempt.submitted_answer = body.submitted_answer
         attempt.is_correct = is_correct
         attempt.xp_base = 0
@@ -423,10 +423,7 @@ def submit_answer(
     # esgotado é sempre tratado como resposta não dada, mesmo que o
     # corpo da requisição contenha algo (defesa contra cliente malicioso
     # tentando reportar acerto depois do prazo).
-    is_correct = (
-        not body.timed_out
-        and body.submitted_answer.strip().lower() == challenge.correct_answer.strip().lower()
-    )
+    is_correct = services.is_submitted_answer_correct(challenge, body.submitted_answer, body.timed_out)
     xp_base = scoring.xp_base_for(challenge.difficulty_level) if is_correct else 0
     xp_from_hints = scoring.xp_awarded(xp_base, attempt.hints_used) if is_correct else 0
 

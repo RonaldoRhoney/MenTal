@@ -1,0 +1,1008 @@
+[
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'casa' em francês?",
+    "options": [
+      "Maison",
+      "Maisson",
+      "Meson",
+      "Maisan"
+    ],
+    "correct_answer": "Maison",
+    "explanation": "'casa' se traduz como 'Maison' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'porta' em francês?",
+    "options": [
+      "Porte",
+      "Porta",
+      "Port",
+      "Porrte"
+    ],
+    "correct_answer": "Porte",
+    "explanation": "'porta' se traduz como 'Porte' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'janela' em francês?",
+    "options": [
+      "Fenêtre",
+      "Fenetre",
+      "Fenetra",
+      "Fenaitre"
+    ],
+    "correct_answer": "Fenêtre",
+    "explanation": "'janela' se traduz como 'Fenêtre' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'mesa' em francês?",
+    "options": [
+      "Table",
+      "Tabel",
+      "Tabl",
+      "Tabble"
+    ],
+    "correct_answer": "Table",
+    "explanation": "'mesa' se traduz como 'Table' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'grande' em francês?",
+    "options": [
+      "Grand",
+      "Grande",
+      "Gran",
+      "Grrand"
+    ],
+    "correct_answer": "Grand",
+    "explanation": "'grande' se traduz como 'Grand' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Em casa'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'A casa é grande.'",
+    "options": null,
+    "correct_answer": "La maison est grande",
+    "accepted_answers": [
+      "La maison est grande."
+    ],
+    "explanation": "'Grand' concorda em gênero com o substantivo: como 'maison' é feminino, o adjetivo vira 'grande' (com 'e' no final), diferente da forma masculina 'grand'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Em casa' que você acabou de ver.",
+      "A frase começa com 'La'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'maçã' em francês?",
+    "options": [
+      "Pomme",
+      "Pome",
+      "Pomm",
+      "Pomè"
+    ],
+    "correct_answer": "Pomme",
+    "explanation": "'maçã' se traduz como 'Pomme' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'água' em francês?",
+    "options": [
+      "Eau",
+      "Aut",
+      "Au",
+      "Eaut"
+    ],
+    "correct_answer": "Eau",
+    "explanation": "'água' se traduz como 'Eau' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pão' em francês?",
+    "options": [
+      "Pain",
+      "Pan",
+      "Peinn",
+      "Paen"
+    ],
+    "correct_answer": "Pain",
+    "explanation": "'pão' se traduz como 'Pain' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'gostar' em francês?",
+    "options": [
+      "Aimer",
+      "Aimeer",
+      "Emer",
+      "Aymer"
+    ],
+    "correct_answer": "Aimer",
+    "explanation": "'gostar' se traduz como 'Aimer' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'eu' em francês?",
+    "options": [
+      "Je",
+      "Moi",
+      "Me",
+      "Ju"
+    ],
+    "correct_answer": "Je",
+    "explanation": "'eu' se traduz como 'Je' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'Eu gosto de maçã.'",
+    "options": null,
+    "correct_answer": "J'aime la pomme",
+    "accepted_answers": [
+      "J'aime les pommes"
+    ],
+    "explanation": "'Je' perde o 'e' antes de verbo iniciado por vogal, formando a contração 'j'aime' — regra chamada de elisão, muito comum no francês falado e escrito.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Comida' que você acabou de ver.",
+      "A frase começa com 'J'aime'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pai' em francês?",
+    "options": [
+      "Père",
+      "Pere",
+      "Paire",
+      "Pair"
+    ],
+    "correct_answer": "Père",
+    "explanation": "'pai' se traduz como 'Père' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'ter' em francês?",
+    "options": [
+      "Avoir",
+      "Avoire",
+      "Avor",
+      "Avvoir"
+    ],
+    "correct_answer": "Avoir",
+    "explanation": "'ter' se traduz como 'Avoir' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'dois' em francês?",
+    "options": [
+      "Deux",
+      "Deus",
+      "Deuxe",
+      "Deuh"
+    ],
+    "correct_answer": "Deux",
+    "explanation": "'dois' se traduz como 'Deux' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'Eu tenho dois irmãos.'",
+    "options": null,
+    "correct_answer": "J'ai deux frères",
+    "accepted_answers": [
+      "J'ai deux frères."
+    ],
+    "explanation": "'Avoir' é irregular na primeira pessoa: 'j'ai' (não 'je avoir'), com elisão do 'je' antes da vogal de 'ai'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Família' que você acabou de ver.",
+      "A frase começa com 'J'ai'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'azul' em francês?",
+    "options": [
+      "Bleu",
+      "Bleuh",
+      "Blue",
+      "Bleus"
+    ],
+    "correct_answer": "Bleu",
+    "explanation": "'azul' se traduz como 'Bleu' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'camisa' em francês?",
+    "options": [
+      "Chemise",
+      "Chamise",
+      "Chemize",
+      "Chemisse"
+    ],
+    "correct_answer": "Chemise",
+    "explanation": "'camisa' se traduz como 'Chemise' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'meu(minha)' em francês?",
+    "options": [
+      "Mon/Ma",
+      "Mien",
+      "Moi",
+      "Mes"
+    ],
+    "correct_answer": "Mon/Ma",
+    "explanation": "'meu(minha)' se traduz como 'Mon/Ma' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'é/está' em francês?",
+    "options": [
+      "Est",
+      "Es",
+      "Sont",
+      "Être"
+    ],
+    "correct_answer": "Est",
+    "explanation": "'é/está' se traduz como 'Est' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cores e roupas'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'Minha camisa é azul.'",
+    "options": null,
+    "correct_answer": "Ma chemise est bleue",
+    "accepted_answers": [
+      "Ma chemise est bleue."
+    ],
+    "explanation": "'Ma' (não 'mon') é usado porque 'chemise' é feminino, e 'bleu' vira 'bleue' concordando com o mesmo gênero — dois ajustes de concordância na mesma frase.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Cores e roupas' que você acabou de ver.",
+      "A frase começa com 'Ma'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cachorro' em francês?",
+    "options": [
+      "Chien",
+      "Chian",
+      "Chienn",
+      "Chein"
+    ],
+    "correct_answer": "Chien",
+    "explanation": "'cachorro' se traduz como 'Chien' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'gato' em francês?",
+    "options": [
+      "Chat",
+      "Cha",
+      "Chatte",
+      "Chatt"
+    ],
+    "correct_answer": "Chat",
+    "explanation": "'gato' se traduz como 'Chat' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pequeno' em francês?",
+    "options": [
+      "Petit",
+      "Peti",
+      "Ptit",
+      "Petitt"
+    ],
+    "correct_answer": "Petit",
+    "explanation": "'pequeno' se traduz como 'Petit' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'e' (conectivo) em francês?",
+    "options": [
+      "Et",
+      "E",
+      "É",
+      "Ete"
+    ],
+    "correct_answer": "Et",
+    "explanation": "'e' se traduz como 'Et' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'são/estão' (eles) em francês?",
+    "options": [
+      "Sont",
+      "Est",
+      "Sonts",
+      "Son"
+    ],
+    "correct_answer": "Sont",
+    "explanation": "'são/estão' se traduz como 'Sont' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'O cachorro e o gato são pequenos.'",
+    "options": null,
+    "correct_answer": "Le chien et le chat sont petits",
+    "accepted_answers": [
+      "Le chien et le chat sont petits."
+    ],
+    "explanation": "'Petits' recebe 's' no plural, concordando com o sujeito composto ('chien et chat') — plural exige verbo 'sont', não 'est'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Animais' que você acabou de ver.",
+      "A frase começa com 'Le'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'três' em francês?",
+    "options": [
+      "Trois",
+      "Troi",
+      "Troix",
+      "Troiss"
+    ],
+    "correct_answer": "Trois",
+    "explanation": "'três' se traduz como 'Trois' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'hoje' em francês?",
+    "options": [
+      "Aujourd'hui",
+      "Ajordui",
+      "Aujourdhui",
+      "Ojourdui"
+    ],
+    "correct_answer": "Aujourd'hui",
+    "explanation": "'hoje' se traduz como 'Aujourd'hui' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'trabalhar' em francês?",
+    "options": [
+      "Travailler",
+      "Travaler",
+      "Trabalher",
+      "Travaillier"
+    ],
+    "correct_answer": "Travailler",
+    "explanation": "'trabalhar' se traduz como 'Travailler' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'horas' em francês?",
+    "options": [
+      "Heures",
+      "Ores",
+      "Heurs",
+      "Eures"
+    ],
+    "correct_answer": "Heures",
+    "explanation": "'horas' se traduz como 'Heures' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'eu vou' (futuro próximo) em francês?",
+    "options": [
+      "Je vais",
+      "J'irai",
+      "Je va",
+      "Je vai"
+    ],
+    "correct_answer": "Je vais",
+    "explanation": "'eu vou' se traduz como 'Je vais' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Números e tempo'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'Eu vou trabalhar três horas hoje.'",
+    "options": null,
+    "correct_answer": "Je vais travailler trois heures aujourd'hui",
+    "accepted_answers": [
+      "Je vais travailler trois heures aujourd'hui."
+    ],
+    "explanation": "'Je vais' + infinitivo é o futuro próximo em francês, equivalente ao 'vou' + verbo em português — estrutura muito usada na fala cotidiana.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Números e tempo' que você acabou de ver.",
+      "A frase começa com 'Je'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'escola' em francês?",
+    "options": [
+      "École",
+      "Ecole",
+      "Escole",
+      "Ecolle"
+    ],
+    "correct_answer": "École",
+    "explanation": "'escola' se traduz como 'École' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'É'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'livro' em francês?",
+    "options": [
+      "Livre",
+      "Libre",
+      "Livro",
+      "Livree"
+    ],
+    "correct_answer": "Livre",
+    "explanation": "'livro' se traduz como 'Livre' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'professor(a)' em francês?",
+    "options": [
+      "Professeur",
+      "Profeseur",
+      "Proffesseur",
+      "Profeçeur"
+    ],
+    "correct_answer": "Professeur",
+    "explanation": "'professor(a)' se traduz como 'Professeur' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'ler' em francês?",
+    "options": [
+      "Lire",
+      "Ler",
+      "Liere",
+      "Lirre"
+    ],
+    "correct_answer": "Lire",
+    "explanation": "'ler' se traduz como 'Lire' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'todo dia' em francês?",
+    "options": [
+      "Tous les jours",
+      "Chaque jour",
+      "Tout jour",
+      "Tous jour"
+    ],
+    "correct_answer": "Tous les jours",
+    "explanation": "'todo dia' se traduz como 'Tous les jours' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Escola'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'O professor lê um livro todo dia.'",
+    "options": null,
+    "correct_answer": "Le professeur lit un livre tous les jours",
+    "accepted_answers": [
+      "Le professeur lit un livre tous les jours."
+    ],
+    "explanation": "'Lit' é a forma de 'lire' na terceira pessoa do singular — verbos do terceiro grupo (irregulares) como 'lire' têm conjugação própria, diferente dos verbos regulares em -er.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Escola' que você acabou de ver.",
+      "A frase começa com 'Le'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'carro' em francês?",
+    "options": [
+      "Voiture",
+      "Voitura",
+      "Voitur",
+      "Voiturre"
+    ],
+    "correct_answer": "Voiture",
+    "explanation": "'carro' se traduz como 'Voiture' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'rua' em francês?",
+    "options": [
+      "Rue",
+      "Rua",
+      "Ru",
+      "Ruee"
+    ],
+    "correct_answer": "Rue",
+    "explanation": "'rua' se traduz como 'Rue' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'rápido' em francês?",
+    "options": [
+      "Vite",
+      "Rapide",
+      "Vitte",
+      "Rapid"
+    ],
+    "correct_answer": "Vite",
+    "explanation": "'rápido' se traduz como 'Vite' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'dirigir' em francês?",
+    "options": [
+      "Conduire",
+      "Diriger",
+      "Conduir",
+      "Conduirre"
+    ],
+    "correct_answer": "Conduire",
+    "explanation": "'dirigir' se traduz como 'Conduire' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'muito' (intensificador) em francês?",
+    "options": [
+      "Très",
+      "Tres",
+      "Trais",
+      "Trèss"
+    ],
+    "correct_answer": "Très",
+    "explanation": "'muito' se traduz como 'Très' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Cidade e transporte'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'Ele dirige muito rápido na rua.'",
+    "options": null,
+    "correct_answer": "Il conduit très vite dans la rue",
+    "accepted_answers": [
+      "Il conduit très vite dans la rue."
+    ],
+    "explanation": "'Vite' já é um advérbio de velocidade ('rápido/depressa'), diferente de 'rapide', que é adjetivo — 'conduire vite' é a forma correta, não 'conduire rapide'.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Cidade e transporte' que você acabou de ver.",
+      "A frase começa com 'Il'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'feliz' em francês?",
+    "options": [
+      "Heureux",
+      "Heureu",
+      "Eureux",
+      "Heureuxe"
+    ],
+    "correct_answer": "Heureux",
+    "explanation": "'feliz' se traduz como 'Heureux' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'triste' em francês?",
+    "options": [
+      "Triste",
+      "Tristi",
+      "Trisste",
+      "Tristee"
+    ],
+    "correct_answer": "Triste",
+    "explanation": "'triste' se traduz como 'Triste' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'porque' em francês?",
+    "options": [
+      "Parce que",
+      "Parceque",
+      "Pasque",
+      "Par que"
+    ],
+    "correct_answer": "Parce que",
+    "explanation": "'porque' se traduz como 'Parce que' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'hoje' novamente para fixar em francês?",
+    "options": [
+      "Aujourd'hui",
+      "Ajordui",
+      "Aujourdhui",
+      "Ojourdui"
+    ],
+    "correct_answer": "Aujourd'hui",
+    "explanation": "'hoje' se traduz como 'Aujourd'hui' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'estou/sou' (eu) em francês?",
+    "options": [
+      "Je suis",
+      "Je suit",
+      "J'ai",
+      "Je sui"
+    ],
+    "correct_answer": "Je suis",
+    "explanation": "'estou/sou' se traduz como 'Je suis' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Sentimentos'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'Eu estou feliz hoje porque...'",
+    "options": null,
+    "correct_answer": "Je suis heureux aujourd'hui parce que",
+    "accepted_answers": [
+      "Je suis heureuse aujourd'hui parce que"
+    ],
+    "explanation": "'Heureux' (masculino) e 'heureuse' (feminino) concordam com o gênero de quem fala — diferente do português, o adjetivo de sentimento também varia em francês conforme quem está falando.",
+    "hints": [
+      "Relembre o vocabulário do tema 'Sentimentos' que você acabou de ver.",
+      "A frase começa com 'Je'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'obrigado(a)' em francês?",
+    "options": [
+      "Merci",
+      "Merçi",
+      "Mersi",
+      "Mercy"
+    ],
+    "correct_answer": "Merci",
+    "explanation": "'obrigado(a)' se traduz como 'Merci' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'por favor' em francês?",
+    "options": [
+      "S'il vous plaît",
+      "Si vous plait",
+      "Sil vous plait",
+      "S'il vous plait"
+    ],
+    "correct_answer": "S'il vous plaît",
+    "explanation": "'por favor' se traduz como 'S'il vous plaît' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'amigo(a)' em francês?",
+    "options": [
+      "Ami(e)",
+      "Amie",
+      "Amis",
+      "Amig"
+    ],
+    "correct_answer": "Ami(e)",
+    "explanation": "'amigo(a)' se traduz como 'Ami(e)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'bom(a)' em francês?",
+    "options": [
+      "Bon(ne)",
+      "Bom",
+      "Bone",
+      "Bonn"
+    ],
+    "correct_answer": "Bon(ne)",
+    "explanation": "'bom(a)' se traduz como 'Bon(ne)' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'você' em francês?",
+    "options": [
+      "Tu/Vous",
+      "Toi",
+      "Te",
+      "Vou"
+    ],
+    "correct_answer": "Tu/Vous",
+    "explanation": "'você' se traduz como 'Tu/Vous' em francês.",
+    "hints": [
+      "É uma palavra do tema 'Revisão geral'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "frances_basico",
+    "difficulty_level": 1,
+    "prompt": "Traduza para o francês: 'Obrigado, você é um bom amigo.'",
+    "options": null,
+    "correct_answer": "Merci, tu es un bon ami",
+    "accepted_answers": [
+      "Merci, vous êtes un bon ami"
+    ],
+    "explanation": "'Tu' (informal) e 'vous' (formal/plural) são as duas formas de 'você' em francês — a escolha muda a conjugação do verbo seguinte ('tu es' vs. 'vous êtes').",
+    "hints": [
+      "Relembre o vocabulário do tema 'Revisão geral' que você acabou de ver.",
+      "A frase começa com 'Merci,'."
+    ],
+    "age_reviewed": true
+  }
+]

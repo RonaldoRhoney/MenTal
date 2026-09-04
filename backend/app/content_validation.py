@@ -33,13 +33,31 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
         if item["difficulty_level"] not in (1, 2, 3):
             errors.append(f"{prefix}: difficulty_level precisa ser 1, 2 ou 3 (veio {item['difficulty_level']!r})")
 
+        # V5 — Mundo dos Idiomas: desafio de tradução em texto livre
+        # (options=None) é o 2º precedente do app, depois do anagrama de
+        # "palavras" — validação de options só se aplica quando ela
+        # existe; texto livre exige correct_answer não vazio no lugar.
         options = item["options"]
-        if not isinstance(options, list) or len(options) != 4:
+        if options is None:
+            if not item["correct_answer"].strip():
+                errors.append(f"{prefix}: options é None (texto livre), então correct_answer não pode ser vazio")
+        elif not isinstance(options, list) or len(options) != 4:
             errors.append(f"{prefix}: options precisa ter exatamente 4 alternativas (veio {len(options) if isinstance(options, list) else type(options).__name__})")
         elif len(set(options)) != len(options):
             errors.append(f"{prefix}: options tem alternativas repetidas: {options}")
         elif item["correct_answer"] not in options:
             errors.append(f"{prefix}: correct_answer {item['correct_answer']!r} não está em options {options}")
+
+        # accepted_answers: opcional, só faz sentido com options=None
+        # (texto livre) — mesmo padrão opcional-nunca-obrigatório de
+        # prompt_image/clues. Nunca com múltipla escolha (não faria
+        # sentido, correct_answer já precisa estar em options ali).
+        accepted_answers = item.get("accepted_answers")
+        if accepted_answers is not None:
+            if options is not None:
+                errors.append(f"{prefix}: accepted_answers só faz sentido com options=None (texto livre)")
+            elif not isinstance(accepted_answers, list) or not all(isinstance(a, str) and a.strip() for a in accepted_answers):
+                errors.append(f"{prefix}: accepted_answers, quando presente, precisa ser uma lista de strings não vazias")
 
         hints = item["hints"]
         if not isinstance(hints, list) or len(hints) != 2:

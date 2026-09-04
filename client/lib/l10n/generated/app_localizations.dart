@@ -400,6 +400,60 @@ abstract class AppLocalizations {
   /// **'Ouvido Afiado'**
   String get territoryOuvidoAfiado;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Inglês Básico'**
+  String get territoryInglesBasico;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Inglês Intermediário'**
+  String get territoryInglesIntermediario;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Inglês Avançado'**
+  String get territoryInglesAvancado;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Espanhol Básico'**
+  String get territoryEspanholBasico;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Espanhol Intermediário'**
+  String get territoryEspanholIntermediario;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Espanhol Avançado'**
+  String get territoryEspanholAvancado;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Francês Básico'**
+  String get territoryFrancesBasico;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Francês Intermediário'**
+  String get territoryFrancesIntermediario;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Francês Avançado'**
+  String get territoryFrancesAvancado;
+
   /// Button that plays the challenge audio clip in Ouvido Afiado
   ///
   /// In pt, this message translates to:
