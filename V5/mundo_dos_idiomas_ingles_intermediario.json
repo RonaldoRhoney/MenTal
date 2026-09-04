@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "ingles",
+    "nivel": "intermediario",
+    "fase": "V5.0",
+    "status": "10 blocos completos, cada um com 5 palavras de vocabulario conectadas a 1 desafio de frase, conforme MUNDO_DOS_IDIOMAS_INGLES_V1.md. Vocabulario e estrutura gramatical mais avancados que o nivel Basico, mas cada bloco ainda reinicia do mais simples dentro de si.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases neutras."
+  },
+  "blocos": [
+    {
+      "id": "ing-inter-01",
+      "tema": "Trabalho e rotina",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'reunião' em inglês?", "opcoes": ["Meeting", "Meting", "Meetting", "Miting"], "resposta_correta": "Meeting"},
+        {"pergunta": "Como se escreve 'ocupado(a)' em inglês?", "opcoes": ["Busy", "Bussy", "Buzy", "Busi"], "resposta_correta": "Busy"},
+        {"pergunta": "Como se escreve 'terminar' em inglês?", "opcoes": ["Finish", "Finnish", "Finesh", "Finich"], "resposta_correta": "Finish"},
+        {"pergunta": "Como se escreve 'antes de' em inglês?", "opcoes": ["Before", "Befor", "Beforre", "Byfore"], "resposta_correta": "Before"},
+        {"pergunta": "Como se escreve 'preciso' (necessidade) em inglês?", "opcoes": ["Need", "Nead", "Neeed", "Ned"], "resposta_correta": "Need"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Eu preciso terminar a reunião antes do almoço porque estou ocupado.'",
+        "resposta_esperada": "I need to finish the meeting before lunch because I am busy",
+        "aceita_variacoes": ["I need to finish the meeting before lunch because I'm busy"],
+        "feedback_explicativo": "'Need to' + verbo no infinitivo é a estrutura padrão para expressar necessidade em inglês — sempre com 'to' entre 'need' e o verbo principal."
+      }
+    },
+    {
+      "id": "ing-inter-02",
+      "tema": "Viagem",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'aeroporto' em inglês?", "opcoes": ["Airport", "Airporte", "Erport", "Airpot"], "resposta_correta": "Airport"},
+        {"pergunta": "Como se escreve 'mala' em inglês?", "opcoes": ["Suitcase", "Sutcase", "Suitecase", "Sootcase"], "resposta_correta": "Suitcase"},
+        {"pergunta": "Como se escreve 'atrasado(a)' em inglês?", "opcoes": ["Late", "Lat", "Leyt", "Laate"], "resposta_correta": "Late"},
+        {"pergunta": "Como se escreve 'já' em inglês?", "opcoes": ["Already", "Alredy", "Allready", "Alredi"], "resposta_correta": "Already"},
+        {"pergunta": "Como se escreve 'esquecer' em inglês?", "opcoes": ["Forget", "Forgett", "Forgat", "Forgot"], "resposta_correta": "Forget"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Nós já estamos atrasados para o aeroporto, não esqueça a mala.'",
+        "resposta_esperada": "We are already late for the airport, do not forget the suitcase",
+        "aceita_variacoes": ["We're already late for the airport, don't forget the suitcase"],
+        "feedback_explicativo": "'Already' geralmente aparece entre o verbo auxiliar (are) e o restante da frase, reforçando que algo já aconteceu ou já é o caso."
+      }
+    },
+    {
+      "id": "ing-inter-03",
+      "tema": "Saúde",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'doente' em inglês?", "opcoes": ["Sick", "Sik", "Sike", "Cick"], "resposta_correta": "Sick"},
+        {"pergunta": "Como se escreve 'médico(a)' em inglês?", "opcoes": ["Doctor", "Doctar", "Docter", "Doktor"], "resposta_correta": "Doctor"},
+        {"pergunta": "Como se escreve 'dor' em inglês?", "opcoes": ["Pain", "Pane", "Paine", "Payn"], "resposta_correta": "Pain"},
+        {"pergunta": "Como se escreve 'deveria' em inglês?", "opcoes": ["Should", "Shoud", "Shold", "Shoulde"], "resposta_correta": "Should"},
+        {"pergunta": "Como se escreve 'descansar' em inglês?", "opcoes": ["Rest", "Reste", "Ryst", "Resst"], "resposta_correta": "Rest"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Você está doente e sentindo dor, deveria descansar e ver um médico.'",
+        "resposta_esperada": "You are sick and feeling pain, you should rest and see a doctor",
+        "aceita_variacoes": ["You're sick and feeling pain, you should rest and see a doctor"],
+        "feedback_explicativo": "'Should' expressa recomendação/conselho e é sempre seguido pelo verbo no infinitivo sem 'to' (should rest, não should to rest)."
+      }
+    },
+    {
+      "id": "ing-inter-04",
+      "tema": "Compras",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'caro(a)' em inglês?", "opcoes": ["Expensive", "Expencive", "Expensiv", "Expansive"], "resposta_correta": "Expensive"},
+        {"pergunta": "Como se escreve 'barato(a)' em inglês?", "opcoes": ["Cheap", "Chip", "Cheep", "Chiap"], "resposta_correta": "Cheap"},
+        {"pergunta": "Como se escreve 'trocar/devolver' em inglês?", "opcoes": ["Return", "Reeturn", "Returm", "Retorn"], "resposta_correta": "Return"},
+        {"pergunta": "Como se escreve 'do que' (comparação) em inglês?", "opcoes": ["Than", "Then", "That", "Thean"], "resposta_correta": "Than"},
+        {"pergunta": "Como se escreve 'esperava' em inglês?", "opcoes": ["Expected", "Expectded", "Expeted", "Exspected"], "resposta_correta": "Expected"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Este produto é mais caro do que eu esperava, eu quero devolver.'",
+        "resposta_esperada": "This product is more expensive than I expected, I want to return it",
+        "aceita_variacoes": ["This product is more expensive than I expected, I want to return it."],
+        "feedback_explicativo": "'Than' é usado em comparações ('more expensive than'), diferente de 'then', que se refere a tempo/sequência — um erro comum mesmo entre falantes avançados."
+      }
+    },
+    {
+      "id": "ing-inter-05",
+      "tema": "Clima e planos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'provavelmente' em inglês?", "opcoes": ["Probably", "Probaly", "Probabli", "Probablly"], "resposta_correta": "Probably"},
+        {"pergunta": "Como se escreve 'chuva' em inglês?", "opcoes": ["Rain", "Rein", "Rane", "Raen"], "resposta_correta": "Rain"},
+        {"pergunta": "Como se escreve 'cancelar' em inglês?", "opcoes": ["Cancel", "Cancell", "Cansel", "Cancele"], "resposta_correta": "Cancel"},
+        {"pergunta": "Como se escreve 'a menos que' em inglês?", "opcoes": ["Unless", "Unles", "Onless", "Unlesss"], "resposta_correta": "Unless"},
+        {"pergunta": "Como se escreve 'para' (com objetivo) em inglês?", "opcoes": ["To", "For", "At", "In"], "resposta_correta": "To"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Nós provavelmente vamos cancelar o passeio a menos que a chuva pare.'",
+        "resposta_esperada": "We will probably cancel the trip unless the rain stops",
+        "aceita_variacoes": ["We will probably cancel the trip unless the rain stops."],
+        "feedback_explicativo": "'Unless' introduz uma condição negativa ('a menos que') e já carrega o sentido de negação — não se usa 'not' junto dela na mesma oração."
+      }
+    },
+    {
+      "id": "ing-inter-06",
+      "tema": "Tecnologia",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'quebrado(a)' em inglês?", "opcoes": ["Broken", "Brokken", "Broked", "Brocken"], "resposta_correta": "Broken"},
+        {"pergunta": "Como se escreve 'consertar' em inglês?", "opcoes": ["Fix", "Ficks", "Fics", "Fixe"], "resposta_correta": "Fix"},
+        {"pergunta": "Como se escreve 'senha' em inglês?", "opcoes": ["Password", "Pasword", "Passworde", "Passward"], "resposta_correta": "Password"},
+        {"pergunta": "Como se escreve 'de novo' em inglês?", "opcoes": ["Again", "Agen", "Agein", "Agin"], "resposta_correta": "Again"},
+        {"pergunta": "Como se escreve 'tentar' em inglês?", "opcoes": ["Try", "Tri", "Trye", "Trye"], "resposta_correta": "Try"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Meu celular está quebrado, eu preciso tentar consertar de novo.'",
+        "resposta_esperada": "My phone is broken, I need to try to fix it again",
+        "aceita_variacoes": ["My phone is broken, I need to try to fix it again."],
+        "feedback_explicativo": "'Try to' + verbo expressa tentativa de fazer algo — assim como 'need to', é seguida do infinitivo com 'to'."
+      }
+    },
+    {
+      "id": "ing-inter-07",
+      "tema": "Estudos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'difícil' em inglês?", "opcoes": ["Difficult", "Dificult", "Difficolt", "Difficoult"], "resposta_correta": "Difficult"},
+        {"pergunta": "Como se escreve 'entender' em inglês?", "opcoes": ["Understand", "Understend", "Understaend", "Understend"], "resposta_correta": "Understand"},
+        {"pergunta": "Como se escreve 'explicar' em inglês?", "opcoes": ["Explain", "Explein", "Expalin", "Explayn"], "resposta_correta": "Explain"},
+        {"pergunta": "Como se escreve 'de novo/outra vez' (pedir) em inglês?", "opcoes": ["Again", "Agen", "Agein", "Agin"], "resposta_correta": "Again"},
+        {"pergunta": "Como se escreve 'poderia' (pedido educado) em inglês?", "opcoes": ["Could", "Coud", "Cold", "Coulde"], "resposta_correta": "Could"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Este assunto é difícil, você poderia explicar de novo?'",
+        "resposta_esperada": "This subject is difficult, could you explain it again",
+        "aceita_variacoes": ["This subject is difficult, could you explain it again?"],
+        "feedback_explicativo": "'Could you' é uma forma educada de fazer um pedido em inglês, mais formal que 'can you', mas ainda de uso comum no dia a dia."
+      }
+    },
+    {
+      "id": "ing-inter-08",
+      "tema": "Emoções e opinião",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'surpreso(a)' em inglês?", "opcoes": ["Surprised", "Suprised", "Surprized", "Surpirsed"], "resposta_correta": "Surprised"},
+        {"pergunta": "Como se escreve 'na verdade' em inglês?", "opcoes": ["Actually", "Actualy", "Actuallly", "Actualley"], "resposta_correta": "Actually"},
+        {"pergunta": "Como se escreve 'esperava (que algo fosse diferente)' em inglês?", "opcoes": ["Expected", "Expectded", "Expeted", "Exspected"], "resposta_correta": "Expected"},
+        {"pergunta": "Como se escreve 'melhor' em inglês?", "opcoes": ["Better", "Beter", "Bettar", "Betterr"], "resposta_correta": "Better"},
+        {"pergunta": "Como se escreve 'do que eu pensava' (comparação) em inglês?", "opcoes": ["Than I thought", "That I think", "Then I thinked", "Than I think"], "resposta_correta": "Than I thought"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Na verdade, eu estou surpreso(a) — o filme foi melhor do que eu pensava.'",
+        "resposta_esperada": "Actually, I am surprised, the movie was better than I thought",
+        "aceita_variacoes": ["Actually, I'm surprised, the movie was better than I thought"],
+        "feedback_explicativo": "'Better than' segue a mesma lógica de comparativos já vista antes (usar 'than', não 'then'), e 'thought' é o passado irregular de 'think'."
+      }
+    },
+    {
+      "id": "ing-inter-09",
+      "tema": "Planejamento futuro",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'planejar' em inglês?", "opcoes": ["Plan", "Plann", "Plane", "Pland"], "resposta_correta": "Plan"},
+        {"pergunta": "Como se escreve 'economizar' em inglês?", "opcoes": ["Save", "Safe", "Save", "Saeve"], "resposta_correta": "Save"},
+        {"pergunta": "Como se escreve 'dinheiro suficiente' em inglês?", "opcoes": ["Enough money", "Sufficient money", "Money enough", "Much money enough"], "resposta_correta": "Enough money"},
+        {"pergunta": "Como se escreve 'antes que' em inglês?", "opcoes": ["Before", "Befor", "Beforre", "Byfore"], "resposta_correta": "Before"},
+        {"pergunta": "Como se escreve 'meu sonho' em inglês?", "opcoes": ["My dream", "My dreamer", "My dreaming", "Mine dream"], "resposta_correta": "My dream"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Eu preciso planejar e economizar dinheiro suficiente antes de realizar meu sonho.'",
+        "resposta_esperada": "I need to plan and save enough money before making my dream come true",
+        "aceita_variacoes": ["I need to plan and save enough money before my dream comes true"],
+        "feedback_explicativo": "'Enough' vem antes do substantivo que modifica ('enough money'), diferente do português, onde 'suficiente' costuma vir depois."
+      }
+    },
+    {
+      "id": "ing-inter-10",
+      "tema": "Revisão geral",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'embora/apesar de' em inglês?", "opcoes": ["Although", "Altough", "Allthough", "Athough"], "resposta_correta": "Although"},
+        {"pergunta": "Como se escreve 'conseguir/gerenciar' em inglês?", "opcoes": ["Manage", "Manege", "Manag", "Managge"], "resposta_correta": "Manage"},
+        {"pergunta": "Como se escreve 'ainda' em inglês?", "opcoes": ["Still", "Stil", "Stille", "Stiil"], "resposta_correta": "Still"},
+        {"pergunta": "Como se escreve 'orgulhoso(a)' em inglês?", "opcoes": ["Proud", "Prowd", "Proude", "Prawd"], "resposta_correta": "Proud"},
+        {"pergunta": "Como se escreve 'de mim mesmo(a)' em inglês?", "opcoes": ["Of myself", "Of me", "For myself", "About myself"], "resposta_correta": "Of myself"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Embora tenha sido difícil, eu ainda consegui e estou orgulhoso de mim mesmo.'",
+        "resposta_esperada": "Although it was difficult, I still managed and I am proud of myself",
+        "aceita_variacoes": ["Although it was difficult, I still managed and I'm proud of myself"],
+        "feedback_explicativo": "'Although' introduz uma ideia de contraste ('embora'), similar a 'but', mas usada no início da oração subordinada, não entre duas frases independentes."
+      }
+    }
+  ]
+}

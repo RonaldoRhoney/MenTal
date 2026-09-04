@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "ingles",
+    "nivel": "basico",
+    "fase": "V5.0",
+    "status": "10 blocos completos, cada um com 5 palavras de vocabulario conectadas a 1 desafio de frase, conforme MUNDO_DOS_IDIOMAS_INGLES_V1.md",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases cotidianas, neutras."
+  },
+  "blocos": [
+    {
+      "id": "ing-basico-01",
+      "tema": "Em casa",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'casa' em inglês?", "opcoes": ["House", "Horse", "Hoase", "Hose"], "resposta_correta": "House"},
+        {"pergunta": "Como se escreve 'porta' em inglês?", "opcoes": ["Door", "Doar", "Dorr", "Dour"], "resposta_correta": "Door"},
+        {"pergunta": "Como se escreve 'janela' em inglês?", "opcoes": ["Window", "Windo", "Widnow", "Winndow"], "resposta_correta": "Window"},
+        {"pergunta": "Como se escreve 'mesa' em inglês?", "opcoes": ["Table", "Tabel", "Tible", "Tabble"], "resposta_correta": "Table"},
+        {"pergunta": "Como se escreve 'grande' em inglês?", "opcoes": ["Big", "Bigg", "Beeg", "Bige"], "resposta_correta": "Big"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'A casa é grande.'",
+        "resposta_esperada": "The house is big",
+        "aceita_variacoes": ["The house is big.", "the house is big"],
+        "feedback_explicativo": "'The house is big' usa 'the' antes de 'house' (artigo definido) e 'is' para ligar sujeito e adjetivo — a mesma estrutura que aparece em praticamente toda frase simples em inglês."
+      }
+    },
+    {
+      "id": "ing-basico-02",
+      "tema": "Comida",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'maçã' em inglês?", "opcoes": ["Apple", "Aple", "Appel", "Apel"], "resposta_correta": "Apple"},
+        {"pergunta": "Como se escreve 'água' em inglês?", "opcoes": ["Water", "Watter", "Woter", "Watar"], "resposta_correta": "Water"},
+        {"pergunta": "Como se escreve 'pão' em inglês?", "opcoes": ["Bread", "Bred", "Breed", "Braed"], "resposta_correta": "Bread"},
+        {"pergunta": "Como se escreve 'gostar/gostoso' em inglês?", "opcoes": ["Like", "Lick", "Liake", "Lyke"], "resposta_correta": "Like"},
+        {"pergunta": "Como se escreve 'eu' em inglês?", "opcoes": ["I", "Me", "My", "Ai"], "resposta_correta": "I"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Eu gosto de maçã.'",
+        "resposta_esperada": "I like apple",
+        "aceita_variacoes": ["I like apples", "I like apple."],
+        "feedback_explicativo": "'I like apple' usa a ordem sujeito-verbo-objeto (I + like + apple), a estrutura mais comum de frases afirmativas simples em inglês."
+      }
+    },
+    {
+      "id": "ing-basico-03",
+      "tema": "Família",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'mãe' em inglês?", "opcoes": ["Mother", "Mothar", "Mader", "Mothier"], "resposta_correta": "Mother"},
+        {"pergunta": "Como se escreve 'pai' em inglês?", "opcoes": ["Father", "Fathar", "Fader", "Fathier"], "resposta_correta": "Father"},
+        {"pergunta": "Como se escreve 'irmão' em inglês?", "opcoes": ["Brother", "Brothar", "Broder", "Bruther"], "resposta_correta": "Brother"},
+        {"pergunta": "Como se escreve 'ter' em inglês?", "opcoes": ["Have", "Has", "Haev", "Havi"], "resposta_correta": "Have"},
+        {"pergunta": "Como se escreve 'dois' em inglês?", "opcoes": ["Two", "Too", "To", "Tow"], "resposta_correta": "Two"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Eu tenho dois irmãos.'",
+        "resposta_esperada": "I have two brothers",
+        "aceita_variacoes": ["I have two brothers."],
+        "feedback_explicativo": "'Brothers' recebe 's' no plural, e 'have' (não 'has') é usado com o sujeito 'I' — 'has' seria usado apenas com he/she/it."
+      }
+    },
+    {
+      "id": "ing-basico-04",
+      "tema": "Cores e roupas",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'vermelho' em inglês?", "opcoes": ["Red", "Read", "Redd", "Rad"], "resposta_correta": "Red"},
+        {"pergunta": "Como se escreve 'azul' em inglês?", "opcoes": ["Blue", "Blu", "Bloo", "Bleu"], "resposta_correta": "Blue"},
+        {"pergunta": "Como se escreve 'camisa' em inglês?", "opcoes": ["Shirt", "Shert", "Shirtt", "Chirt"], "resposta_correta": "Shirt"},
+        {"pergunta": "Como se escreve 'meu' em inglês?", "opcoes": ["My", "Me", "Mine", "Mai"], "resposta_correta": "My"},
+        {"pergunta": "Como se escreve 'é/está' (ele/ela) em inglês?", "opcoes": ["Is", "Are", "Am", "Be"], "resposta_correta": "Is"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Minha camisa é azul.'",
+        "resposta_esperada": "My shirt is blue",
+        "aceita_variacoes": ["My shirt is blue."],
+        "feedback_explicativo": "'Is' concorda com sujeitos no singular como 'shirt' (ela) — 'are' seria usado no plural, e 'am' apenas com 'I'."
+      }
+    },
+    {
+      "id": "ing-basico-05",
+      "tema": "Animais",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'cachorro' em inglês?", "opcoes": ["Dog", "Dogg", "Doge", "Dogh"], "resposta_correta": "Dog"},
+        {"pergunta": "Como se escreve 'gato' em inglês?", "opcoes": ["Cat", "Catt", "Kat", "Caat"], "resposta_correta": "Cat"},
+        {"pergunta": "Como se escreve 'pequeno' em inglês?", "opcoes": ["Small", "Smal", "Smoll", "Smaal"], "resposta_correta": "Small"},
+        {"pergunta": "Como se escreve 'e' (conectivo) em inglês?", "opcoes": ["And", "An", "End", "Und"], "resposta_correta": "And"},
+        {"pergunta": "Como se escreve 'são/estão' (eles) em inglês?", "opcoes": ["Are", "Is", "Am", "Be"], "resposta_correta": "Are"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'O cachorro e o gato são pequenos.'",
+        "resposta_esperada": "The dog and the cat are small",
+        "aceita_variacoes": ["The dog and the cat are small."],
+        "feedback_explicativo": "Com dois sujeitos ligados por 'and' (dog and cat), o verbo vai para o plural: 'are', não 'is'."
+      }
+    },
+    {
+      "id": "ing-basico-06",
+      "tema": "Números e tempo",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'três' em inglês?", "opcoes": ["Three", "Tree", "Thre", "Threee"], "resposta_correta": "Three"},
+        {"pergunta": "Como se escreve 'hoje' em inglês?", "opcoes": ["Today", "Todai", "Tuday", "Todday"], "resposta_correta": "Today"},
+        {"pergunta": "Como se escreve 'trabalhar' em inglês?", "opcoes": ["Work", "Work", "Werk", "Wrok"], "resposta_correta": "Work"},
+        {"pergunta": "Como se escreve 'horas' em inglês?", "opcoes": ["Hours", "Ours", "Howers", "Hors"], "resposta_correta": "Hours"},
+        {"pergunta": "Como se escreve 'eu vou' (futuro) em inglês?", "opcoes": ["I will", "I go", "I gonna", "I future"], "resposta_correta": "I will"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Eu vou trabalhar três horas hoje.'",
+        "resposta_esperada": "I will work three hours today",
+        "aceita_variacoes": ["I will work three hours today."],
+        "feedback_explicativo": "'Will' antes do verbo indica ação futura em inglês — não muda a forma do verbo principal (work continua igual)."
+      }
+    },
+    {
+      "id": "ing-basico-07",
+      "tema": "Escola",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'escola' em inglês?", "opcoes": ["School", "Scool", "Schoool", "Skool"], "resposta_correta": "School"},
+        {"pergunta": "Como se escreve 'livro' em inglês?", "opcoes": ["Book", "Boock", "Buk", "Booc"], "resposta_correta": "Book"},
+        {"pergunta": "Como se escreve 'professor(a)' em inglês?", "opcoes": ["Teacher", "Teachar", "Techer", "Teatcher"], "resposta_correta": "Teacher"},
+        {"pergunta": "Como se escreve 'ler' em inglês?", "opcoes": ["Read", "Red", "Reed", "Raed"], "resposta_correta": "Read"},
+        {"pergunta": "Como se escreve 'todo dia' em inglês?", "opcoes": ["Every day", "All day", "Everyday time", "Each days"], "resposta_correta": "Every day"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'O professor lê um livro todo dia.'",
+        "resposta_esperada": "The teacher reads a book every day",
+        "aceita_variacoes": ["The teacher reads a book every day."],
+        "feedback_explicativo": "Com sujeito na 3ª pessoa do singular (the teacher), o verbo no presente ganha 's': 'reads', não 'read'."
+      }
+    },
+    {
+      "id": "ing-basico-08",
+      "tema": "Cidade e transporte",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'carro' em inglês?", "opcoes": ["Car", "Care", "Karr", "Carr"], "resposta_correta": "Car"},
+        {"pergunta": "Como se escreve 'rua' em inglês?", "opcoes": ["Street", "Estreet", "Streat", "Estrit"], "resposta_correta": "Street"},
+        {"pergunta": "Como se escreve 'rápido' em inglês?", "opcoes": ["Fast", "Fest", "Faast", "Fasty"], "resposta_correta": "Fast"},
+        {"pergunta": "Como se escreve 'dirigir' em inglês?", "opcoes": ["Drive", "Drivi", "Draive", "Driive"], "resposta_correta": "Drive"},
+        {"pergunta": "Como se escreve 'muito' (intensificador) em inglês?", "opcoes": ["Very", "Much", "Mucho", "Verry"], "resposta_correta": "Very"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Ele dirige muito rápido na rua.'",
+        "resposta_esperada": "He drives very fast on the street",
+        "aceita_variacoes": ["He drives very fast on the street."],
+        "feedback_explicativo": "Com sujeito 'he', o verbo 'drive' ganha 's' no presente: 'drives'. 'Very' intensifica o advérbio 'fast'."
+      }
+    },
+    {
+      "id": "ing-basico-09",
+      "tema": "Sentimentos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'feliz' em inglês?", "opcoes": ["Happy", "Hapy", "Happi", "Hapiy"], "resposta_correta": "Happy"},
+        {"pergunta": "Como se escreve 'triste' em inglês?", "opcoes": ["Sad", "Sadd", "Saad", "Sed"], "resposta_correta": "Sad"},
+        {"pergunta": "Como se escreve 'porque' em inglês?", "opcoes": ["Because", "Becase", "Becouse", "Becuz"], "resposta_correta": "Because"},
+        {"pergunta": "Como se escreve 'hoje' novamente para fixar (dia) em inglês?", "opcoes": ["Today", "Todai", "Tuday", "Todday"], "resposta_correta": "Today"},
+        {"pergunta": "Como se escreve 'estou' (eu) em inglês?", "opcoes": ["Am", "Is", "Are", "Be"], "resposta_correta": "Am"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Eu estou feliz hoje porque...'",
+        "resposta_esperada": "I am happy today because",
+        "aceita_variacoes": ["I'm happy today because", "I am happy today because."],
+        "feedback_explicativo": "'Am' só é usado com o sujeito 'I' — é a única forma do verbo 'to be' exclusiva desse pronome no presente."
+      }
+    },
+    {
+      "id": "ing-basico-10",
+      "tema": "Revisão geral",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'obrigado(a)' em inglês?", "opcoes": ["Thank you", "Thanks you", "Thankful", "Thanky"], "resposta_correta": "Thank you"},
+        {"pergunta": "Como se escreve 'por favor' em inglês?", "opcoes": ["Please", "Pleas", "Plese", "Pliz"], "resposta_correta": "Please"},
+        {"pergunta": "Como se escreve 'amigo(a)' em inglês?", "opcoes": ["Friend", "Freind", "Frend", "Friand"], "resposta_correta": "Friend"},
+        {"pergunta": "Como se escreve 'bom(a)' em inglês?", "opcoes": ["Good", "Good", "Gud", "Goad"], "resposta_correta": "Good"},
+        {"pergunta": "Como se escreve 'você' em inglês?", "opcoes": ["You", "Yu", "Yuo", "You'"], "resposta_correta": "You"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Obrigado, você é um bom amigo.'",
+        "resposta_esperada": "Thank you, you are a good friend",
+        "aceita_variacoes": ["Thank you, you're a good friend", "Thank you, you are a good friend."],
+        "feedback_explicativo": "'Are' concorda com 'you', que sempre usa 'are' no presente, mesmo se referindo a uma só pessoa."
+      }
+    }
+  ]
+}

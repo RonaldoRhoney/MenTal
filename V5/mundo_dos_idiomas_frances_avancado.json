@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "frances",
+    "nivel": "avancado",
+    "fase": "V5.2",
+    "status": "10 blocos completos, mesmo padrao ja validado. Estruturas mais complexas (subjuntivo, condicional composto, voz passiva).",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases neutras."
+  },
+  "blocos": [
+    {
+      "id": "fr-avanc-01",
+      "tema": "Negócios",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'negociar' em francês?", "opcoes": ["Négocier", "Negociar", "Négocié", "Negosier"], "resposta_correta": "Négocier"},
+        {"pergunta": "Como se escreve 'acordo' em francês?", "opcoes": ["Accord", "Acordo", "Accorde", "Acord"], "resposta_correta": "Accord"},
+        {"pergunta": "Como se escreve 'a menos que' novamente para fixar em francês?", "opcoes": ["À moins que", "A moins de", "Sauf que", "À moins de que"], "resposta_correta": "À moins que"},
+        {"pergunta": "Como se escreve 'assinado(a)' em francês?", "opcoes": ["Signé(e)", "Assiné", "Signee", "Signè"], "resposta_correta": "Signé(e)"},
+        {"pergunta": "Como se escreve 'antes de' (prazo) em francês?", "opcoes": ["Avant", "Jusqu'à", "Pour", "Par"], "resposta_correta": "Avant"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'A menos que o contrato seja assinado antes de sexta-feira, não haverá acordo.'",
+        "resposta_esperada": "À moins que le contrat soit signé avant vendredi, il n'y aura pas d'accord",
+        "aceita_variacoes": ["À moins que le contrat ne soit signé avant vendredi, il n'y aura pas d'accord"],
+        "feedback_explicativo": "'Soit signé' está no subjuntivo (exigido por 'à moins que') e na voz passiva — combinação formal típica de contextos contratuais e de negócios."
+      }
+    },
+    {
+      "id": "fr-avanc-02",
+      "tema": "Condicionais e hipóteses",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'se eu tivesse recebido' (hipótese passada) em francês?", "opcoes": ["Si j'avais reçu", "Si j'aurais reçu", "Si je recevais", "Si j'ai reçu"], "resposta_correta": "Si j'avais reçu"},
+        {"pergunta": "Como se escreve 'teria feito' em francês?", "opcoes": ["J'aurais fait", "J'avait fait", "Je ferais fait", "J'aurai fait"], "resposta_correta": "J'aurais fait"},
+        {"pergunta": "Como se escreve 'diferente' em francês?", "opcoes": ["Différent(e)", "Diferente", "Différant", "Diferant"], "resposta_correta": "Différent(e)"},
+        {"pergunta": "Como se escreve 'com antecedência' em francês?", "opcoes": ["À l'avance", "En avance", "Avec antecipation", "Antécédemment"], "resposta_correta": "À l'avance"},
+        {"pergunta": "Como se escreve 'aviso' em francês?", "opcoes": ["Avertissement", "Aviso", "Avertir", "Avertence"], "resposta_correta": "Avertissement"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Se eu tivesse recebido o aviso com antecedência, eu teria feito algo diferente.'",
+        "resposta_esperada": "Si j'avais reçu l'avertissement à l'avance, j'aurais fait quelque chose de différent",
+        "aceita_variacoes": ["Si j'avais reçu l'avis à l'avance, j'aurais fait autre chose"],
+        "feedback_explicativo": "Esta é a condicional do tipo 'passé' em francês: 'si + plus-que-parfait' seguido de 'conditionnel passé' — equivalente à terceira condicional do inglês e à condicional composta do espanhol."
+      }
+    },
+    {
+      "id": "fr-avanc-03",
+      "tema": "Notícias e eventos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'foi anunciado' (voz passiva) em francês?", "opcoes": ["A été annoncé", "Est annoncé", "Était annoncant", "Annoncé était"], "resposta_correta": "A été annoncé"},
+        {"pergunta": "Como se escreve 'de acordo com' em francês?", "opcoes": ["Selon", "D'accord avec", "Selong", "Selons"], "resposta_correta": "Selon"},
+        {"pergunta": "Como se escreve 'fontes' (informação) em francês?", "opcoes": ["Sources", "Fontes", "Sourses", "Sourcess"], "resposta_correta": "Sources"},
+        {"pergunta": "Como se escreve 'adiado(a)' em francês?", "opcoes": ["Reporté(e)", "Adié", "Reportée", "Repotré"], "resposta_correta": "Reporté(e)"},
+        {"pergunta": "Como se escreve 'devido a' em francês?", "opcoes": ["En raison de", "Devido a", "À cause que", "Par raison de"], "resposta_correta": "En raison de"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'De acordo com as fontes, o evento foi adiado devido à chuva.'",
+        "resposta_esperada": "Selon les sources, l'événement a été reporté en raison de la pluie",
+        "aceita_variacoes": ["D'après les sources, l'événement a été reporté à cause de la pluie"],
+        "feedback_explicativo": "'En raison de' é mais formal que 'à cause de', ambos significando 'devido a' — comum ver o primeiro em textos jornalísticos e o segundo na fala cotidiana."
+      }
+    },
+    {
+      "id": "fr-avanc-04",
+      "tema": "Expressões idiomáticas do dia a dia",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'desistir' em francês?", "opcoes": ["Abandonner", "Desister", "Abandoner", "Abandonar"], "resposta_correta": "Abandonner"},
+        {"pergunta": "Como se escreve 'adiar' em francês?", "opcoes": ["Repousser", "Reporter", "Adiar", "Repouser"], "resposta_correta": "Reporter"},
+        {"pergunta": "Como se escreve 'lidar com' em francês?", "opcoes": ["Faire face à", "Traiter avec", "Gérer avec", "Lidar con"], "resposta_correta": "Faire face à"},
+        {"pergunta": "Como se escreve 'em vez de' em francês?", "opcoes": ["Au lieu de", "En vez de", "A la place que", "Au lieu que"], "resposta_correta": "Au lieu de"},
+        {"pergunta": "Como se escreve 'decidiu' em francês?", "opcoes": ["A décidé", "Décida", "A décider", "Décidé a"], "resposta_correta": "A décidé"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Em vez de desistir, ela decidiu lidar com o problema em vez de adiá-lo.'",
+        "resposta_esperada": "Au lieu d'abandonner, elle a décidé de faire face au problème au lieu de le reporter",
+        "aceita_variacoes": ["Au lieu d'abandonner, elle a décidé d'affronter le problème plutôt que de le reporter"],
+        "feedback_explicativo": "'Faire face à' é uma expressão idiomática que significa 'lidar com/enfrentar', literalmente 'fazer face a' — muito usada tanto em contexto formal quanto cotidiano."
+      }
+    },
+    {
+      "id": "fr-avanc-05",
+      "tema": "Opinião e argumentação",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'por outro lado' em francês?", "opcoes": ["D'autre part", "Par autre côté", "De l'autre part", "Par ailleurs bien"], "resposta_correta": "D'autre part"},
+        {"pergunta": "Como se escreve 'apesar de' em francês?", "opcoes": ["Malgré", "Apesar de", "Malgrè", "Malgres"], "resposta_correta": "Malgré"},
+        {"pergunta": "Como se escreve 'evidência' em francês?", "opcoes": ["Preuve", "Evidence", "Évidence", "Preuves"], "resposta_correta": "Preuve"},
+        {"pergunta": "Como se escreve 'sugerem' em francês?", "opcoes": ["Suggèrent", "Sugerent", "Suggerent", "Suggèrant"], "resposta_correta": "Suggèrent"},
+        {"pergunta": "Como se escreve 'ao contrário' em francês?", "opcoes": ["Au contraire", "Par contraire", "En contraire", "Del contraire"], "resposta_correta": "Au contraire"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Apesar da evidência, alguns pesquisadores sugerem, ao contrário, uma explicação diferente.'",
+        "resposta_esperada": "Malgré la preuve, certains chercheurs suggèrent, au contraire, une explication différente",
+        "aceita_variacoes": ["Malgré les preuves, certains chercheurs suggèrent au contraire une explication différente"],
+        "feedback_explicativo": "'Malgré' é seguido diretamente de substantivo, sem preposição adicional — mesma estrutura de 'despite' em inglês e 'a pesar de' em espanhol."
+      }
+    },
+    {
+      "id": "fr-avanc-06",
+      "tema": "Ciência e pesquisa",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'descoberto(a)' em francês?", "opcoes": ["Découvert(e)", "Descuberto", "Découverte", "Decouvert"], "resposta_correta": "Découvert(e)"},
+        {"pergunta": "Como se escreve 'estudo' (pesquisa) em francês?", "opcoes": ["Étude", "Estudo", "Etude", "Étudie"], "resposta_correta": "Étude"},
+        {"pergunta": "Como se escreve 'demonstrou' em francês?", "opcoes": ["A démontré", "Démontra", "A démonter", "Démontré a"], "resposta_correta": "A démontré"},
+        {"pergunta": "Como se escreve 'a fim de' em francês?", "opcoes": ["Afin de", "A fin de", "Pour fin de", "En fin de"], "resposta_correta": "Afin de"},
+        {"pergunta": "Como se escreve 'confirmar' em francês?", "opcoes": ["Confirmer", "Confirnar", "Comfirmer", "Confirmé"], "resposta_correta": "Confirmer"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'O estudo demonstrou o que foi descoberto, a fim de confirmar a hipótese.'",
+        "resposta_esperada": "L'étude a démontré ce qui a été découvert, afin de confirmer l'hypothèse",
+        "aceita_variacoes": ["L'étude a démontré ce qui avait été découvert, afin de confirmer l'hypothèse"],
+        "feedback_explicativo": "'Afin de' é uma forma mais formal de expressar propósito/finalidade do que 'pour', comum em textos acadêmicos e científicos em francês."
+      }
+    },
+    {
+      "id": "fr-avanc-07",
+      "tema": "Relações e comunicação",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'mal-entendido' em francês?", "opcoes": ["Malentendu", "Mal entendu", "Malentendido", "Mal-entendu"], "resposta_correta": "Malentendu"},
+        {"pergunta": "Como se escreve 'esclarecer' em francês?", "opcoes": ["Clarifier", "Esclarecer", "Clarifiquer", "Éclaircir"], "resposta_correta": "Clarifier"},
+        {"pergunta": "Como se escreve 'sem querer' em francês?", "opcoes": ["Sans le vouloir", "Sans vouloir", "San querer", "Sans querer"], "resposta_correta": "Sans le vouloir"},
+        {"pergunta": "Como se escreve 'ofendido(a)' em francês?", "opcoes": ["Offensé(e)", "Ofendido", "Offense", "Offencé"], "resposta_correta": "Offensé(e)"},
+        {"pergunta": "Como se escreve 'pretendia' em francês?", "opcoes": ["J'avais l'intention de", "Je pretendia", "J'intentionnais", "J'ai intention"], "resposta_correta": "J'avais l'intention de"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Foi um mal-entendido; eu não pretendia ofender ninguém sem querer, deixe-me esclarecer.'",
+        "resposta_esperada": "C'était un malentendu, je n'avais pas l'intention d'offenser qui que ce soit sans le vouloir, laisse-moi clarifier",
+        "aceita_variacoes": ["C'était un malentendu, je ne voulais offenser personne, laissez-moi clarifier"],
+        "feedback_explicativo": "'Avoir l'intention de' + infinitivo expressa intenção — negar essa estrutura é uma forma comum de se desculpar formalmente por um mal-entendido em francês."
+      }
+    },
+    {
+      "id": "fr-avanc-08",
+      "tema": "Meio ambiente",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'sustentável' em francês?", "opcoes": ["Durable", "Sustentável", "Soutenable", "Sustainable"], "resposta_correta": "Durable"},
+        {"pergunta": "Como se escreve 'a menos que' novamente para fixar em francês?", "opcoes": ["À moins que", "A moins de", "Sauf que", "À moins de que"], "resposta_correta": "À moins que"},
+        {"pergunta": "Como se escreve 'reduzir' em francês?", "opcoes": ["Réduire", "Reduzir", "Reduire", "Réduir"], "resposta_correta": "Réduire"},
+        {"pergunta": "Como se escreve 'consequências' em francês?", "opcoes": ["Conséquences", "Consequencias", "Consequences", "Conséquancias"], "resposta_correta": "Conséquences"},
+        {"pergunta": "Como se escreve 'irreversível' em francês?", "opcoes": ["Irréversible", "Irreversible", "Irréversibel", "Irreversibl"], "resposta_correta": "Irréversible"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'A menos que reduzamos o consumo agora, as consequências podem ser irreversíveis.'",
+        "resposta_esperada": "À moins que nous réduisions la consommation maintenant, les conséquences pourraient être irréversibles",
+        "aceita_variacoes": ["À moins qu'on ne réduise la consommation maintenant, les conséquences peuvent être irréversibles"],
+        "feedback_explicativo": "'Réduisions' está no subjuntivo (primeira pessoa do plural do verbo 'réduire'), exigido novamente pela expressão 'à moins que'."
+      }
+    },
+    {
+      "id": "fr-avanc-09",
+      "tema": "Reflexão pessoal",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'olhando para trás' em francês?", "opcoes": ["En regardant en arrière", "En regardant derrière", "Regardant arrière", "En voyant arrière"], "resposta_correta": "En regardant en arrière"},
+        {"pergunta": "Como se escreve 'teria feito' novamente para fixar em francês?", "opcoes": ["J'aurais fait", "J'avait fait", "Je ferais fait", "J'aurai fait"], "resposta_correta": "J'aurais fait"},
+        {"pergunta": "Como se escreve 'de qualquer forma' em francês?", "opcoes": ["De toute façon", "De toute forme", "En tout cas là", "De toute manière là"], "resposta_correta": "De toute façon"},
+        {"pergunta": "Como se escreve 'valeu a pena' em francês?", "opcoes": ["Ça en valait la peine", "Valia la pena", "C'était valu", "Ça valait pena"], "resposta_correta": "Ça en valait la peine"},
+        {"pergunta": "Como se escreve 'crescimento' em francês?", "opcoes": ["Croissance", "Crescimento", "Croisance", "Croissence"], "resposta_correta": "Croissance"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Ao olhar para trás, eu teria feito diferente, mas de qualquer forma valeu a pena pelo crescimento.'",
+        "resposta_esperada": "En regardant en arrière, j'aurais fait différemment, mais de toute façon ça en valait la peine pour la croissance",
+        "aceita_variacoes": ["En regardant en arrière, j'aurais fait les choses autrement, mais ça en valait la peine pour la croissance"],
+        "feedback_explicativo": "'Ça en valait la peine' é uma expressão idiomática fixa para 'valeu a pena', literalmente 'isso valia a pena disso' — a partícula 'en' é obrigatória nessa construção."
+      }
+    },
+    {
+      "id": "fr-avanc-10",
+      "tema": "Revisão geral avançada",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'no entanto' em francês?", "opcoes": ["Cependant", "No entanto", "Cepandant", "Sependant"], "resposta_correta": "Cependant"},
+        {"pergunta": "Como se escreve 'inegavelmente' em francês?", "opcoes": ["Indéniablement", "Inegavelmente", "Indeniablement", "Indénieblement"], "resposta_correta": "Indéniablement"},
+        {"pergunta": "Como se escreve 'ainda que' em francês?", "opcoes": ["Même si", "Bien que", "Encore que là", "Même que"], "resposta_correta": "Même si"},
+        {"pergunta": "Como se escreve 'permanece' em francês?", "opcoes": ["Reste", "Permanece", "Restée", "Restant"], "resposta_correta": "Reste"},
+        {"pergunta": "Como se escreve 'incerto(a)' em francês?", "opcoes": ["Incertain(e)", "Incerto", "Insertain", "Incertaine ele"], "resposta_correta": "Incertain(e)"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Ainda que o resultado seja incerto, o esforço, no entanto, permanece inegavelmente valioso.'",
+        "resposta_esperada": "Même si le résultat est incertain, l'effort, cependant, reste indéniablement précieux",
+        "aceita_variacoes": ["Bien que le résultat soit incertain, l'effort reste néanmoins indéniablement précieux"],
+        "feedback_explicativo": "'Même si' + indicativo expressa um contraste mais direto que 'bien que' + subjuntivo — as duas formas existem em francês, com nuance de formalidade diferente."
+      }
+    }
+  ]
+}

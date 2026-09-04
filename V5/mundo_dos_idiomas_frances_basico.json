@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "frances",
+    "nivel": "basico",
+    "fase": "V5.2",
+    "status": "10 blocos completos, mesmo padrao ja validado em Ingles e Espanhol.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases cotidianas, neutras."
+  },
+  "blocos": [
+    {
+      "id": "fr-basico-01",
+      "tema": "Em casa",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'casa' em francês?", "opcoes": ["Maison", "Maisson", "Meson", "Maisan"], "resposta_correta": "Maison"},
+        {"pergunta": "Como se escreve 'porta' em francês?", "opcoes": ["Porte", "Porta", "Port", "Porrte"], "resposta_correta": "Porte"},
+        {"pergunta": "Como se escreve 'janela' em francês?", "opcoes": ["Fenêtre", "Fenetre", "Fenetra", "Fenaitre"], "resposta_correta": "Fenêtre"},
+        {"pergunta": "Como se escreve 'mesa' em francês?", "opcoes": ["Table", "Tabel", "Tabl", "Tabble"], "resposta_correta": "Table"},
+        {"pergunta": "Como se escreve 'grande' em francês?", "opcoes": ["Grand", "Grande", "Gran", "Grrand"], "resposta_correta": "Grand"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'A casa é grande.'",
+        "resposta_esperada": "La maison est grande",
+        "aceita_variacoes": ["La maison est grande."],
+        "feedback_explicativo": "'Grand' concorda em gênero com o substantivo: como 'maison' é feminino, o adjetivo vira 'grande' (com 'e' no final), diferente da forma masculina 'grand'."
+      }
+    },
+    {
+      "id": "fr-basico-02",
+      "tema": "Comida",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'maçã' em francês?", "opcoes": ["Pomme", "Pome", "Pomm", "Pomè"], "resposta_correta": "Pomme"},
+        {"pergunta": "Como se escreve 'água' em francês?", "opcoes": ["Eau", "Aut", "Au", "Eaut"], "resposta_correta": "Eau"},
+        {"pergunta": "Como se escreve 'pão' em francês?", "opcoes": ["Pain", "Pan", "Peinn", "Paen"], "resposta_correta": "Pain"},
+        {"pergunta": "Como se escreve 'gostar' em francês?", "opcoes": ["Aimer", "Aimeer", "Emer", "Aymer"], "resposta_correta": "Aimer"},
+        {"pergunta": "Como se escreve 'eu' em francês?", "opcoes": ["Je", "Moi", "Me", "Ju"], "resposta_correta": "Je"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Eu gosto de maçã.'",
+        "resposta_esperada": "J'aime la pomme",
+        "aceita_variacoes": ["J'aime les pommes"],
+        "feedback_explicativo": "'Je' perde o 'e' antes de verbo iniciado por vogal, formando a contração 'j'aime' — regra chamada de elisão, muito comum no francês falado e escrito."
+      }
+    },
+    {
+      "id": "fr-basico-03",
+      "tema": "Família",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'mãe' em francês?", "opcoes": ["Mère", "Mere", "Maire", "Mère"], "resposta_correta": "Mère"},
+        {"pergunta": "Como se escreve 'pai' em francês?", "opcoes": ["Père", "Pere", "Paire", "Pair"], "resposta_correta": "Père"},
+        {"pergunta": "Como se escreve 'irmão' em francês?", "opcoes": ["Frère", "Frere", "Frair", "Frère"], "resposta_correta": "Frère"},
+        {"pergunta": "Como se escreve 'ter' em francês?", "opcoes": ["Avoir", "Avoire", "Avor", "Avvoir"], "resposta_correta": "Avoir"},
+        {"pergunta": "Como se escreve 'dois' em francês?", "opcoes": ["Deux", "Deus", "Deuxe", "Deuh"], "resposta_correta": "Deux"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Eu tenho dois irmãos.'",
+        "resposta_esperada": "J'ai deux frères",
+        "aceita_variacoes": ["J'ai deux frères."],
+        "feedback_explicativo": "'Avoir' é irregular na primeira pessoa: 'j'ai' (não 'je avoir'), com elisão do 'je' antes da vogal de 'ai'."
+      }
+    },
+    {
+      "id": "fr-basico-04",
+      "tema": "Cores e roupas",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'vermelho' em francês?", "opcoes": ["Rouge", "Rouje", "Rougi", "Rouje"], "resposta_correta": "Rouge"},
+        {"pergunta": "Como se escreve 'azul' em francês?", "opcoes": ["Bleu", "Bleuh", "Blue", "Bleus"], "resposta_correta": "Bleu"},
+        {"pergunta": "Como se escreve 'camisa' em francês?", "opcoes": ["Chemise", "Chamise", "Chemize", "Chemisse"], "resposta_correta": "Chemise"},
+        {"pergunta": "Como se escreve 'meu(minha)' em francês?", "opcoes": ["Mon/Ma", "Mien", "Moi", "Mes"], "resposta_correta": "Mon/Ma"},
+        {"pergunta": "Como se escreve 'é/está' em francês?", "opcoes": ["Est", "Es", "Sont", "Être"], "resposta_correta": "Est"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Minha camisa é azul.'",
+        "resposta_esperada": "Ma chemise est bleue",
+        "aceita_variacoes": ["Ma chemise est bleue."],
+        "feedback_explicativo": "'Ma' (não 'mon') é usado porque 'chemise' é feminino, e 'bleu' vira 'bleue' concordando com o mesmo gênero — dois ajustes de concordância na mesma frase."
+      }
+    },
+    {
+      "id": "fr-basico-05",
+      "tema": "Animais",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'cachorro' em francês?", "opcoes": ["Chien", "Chian", "Chienn", "Chein"], "resposta_correta": "Chien"},
+        {"pergunta": "Como se escreve 'gato' em francês?", "opcoes": ["Chat", "Cha", "Chatte", "Chatt"], "resposta_correta": "Chat"},
+        {"pergunta": "Como se escreve 'pequeno' em francês?", "opcoes": ["Petit", "Peti", "Ptit", "Petitt"], "resposta_correta": "Petit"},
+        {"pergunta": "Como se escreve 'e' (conectivo) em francês?", "opcoes": ["Et", "E", "É", "Ete"], "resposta_correta": "Et"},
+        {"pergunta": "Como se escreve 'são/estão' (eles) em francês?", "opcoes": ["Sont", "Est", "Sonts", "Son"], "resposta_correta": "Sont"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'O cachorro e o gato são pequenos.'",
+        "resposta_esperada": "Le chien et le chat sont petits",
+        "aceita_variacoes": ["Le chien et le chat sont petits."],
+        "feedback_explicativo": "'Petits' recebe 's' no plural, concordando com o sujeito composto ('chien et chat') — plural exige verbo 'sont', não 'est'."
+      }
+    },
+    {
+      "id": "fr-basico-06",
+      "tema": "Números e tempo",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'três' em francês?", "opcoes": ["Trois", "Troi", "Troix", "Troiss"], "resposta_correta": "Trois"},
+        {"pergunta": "Como se escreve 'hoje' em francês?", "opcoes": ["Aujourd'hui", "Ajordui", "Aujourdhui", "Ojourdui"], "resposta_correta": "Aujourd'hui"},
+        {"pergunta": "Como se escreve 'trabalhar' em francês?", "opcoes": ["Travailler", "Travaler", "Trabalher", "Travaillier"], "resposta_correta": "Travailler"},
+        {"pergunta": "Como se escreve 'horas' em francês?", "opcoes": ["Heures", "Ores", "Heurs", "Eures"], "resposta_correta": "Heures"},
+        {"pergunta": "Como se escreve 'eu vou' (futuro próximo) em francês?", "opcoes": ["Je vais", "J'irai", "Je va", "Je vai"], "resposta_correta": "Je vais"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Eu vou trabalhar três horas hoje.'",
+        "resposta_esperada": "Je vais travailler trois heures aujourd'hui",
+        "aceita_variacoes": ["Je vais travailler trois heures aujourd'hui."],
+        "feedback_explicativo": "'Je vais' + infinitivo é o futuro próximo em francês, equivalente ao 'vou' + verbo em português — estrutura muito usada na fala cotidiana."
+      }
+    },
+    {
+      "id": "fr-basico-07",
+      "tema": "Escola",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'escola' em francês?", "opcoes": ["École", "Ecole", "Escole", "Ecolle"], "resposta_correta": "École"},
+        {"pergunta": "Como se escreve 'livro' em francês?", "opcoes": ["Livre", "Libre", "Livro", "Livree"], "resposta_correta": "Livre"},
+        {"pergunta": "Como se escreve 'professor(a)' em francês?", "opcoes": ["Professeur", "Profeseur", "Proffesseur", "Profeçeur"], "resposta_correta": "Professeur"},
+        {"pergunta": "Como se escreve 'ler' em francês?", "opcoes": ["Lire", "Ler", "Liere", "Lirre"], "resposta_correta": "Lire"},
+        {"pergunta": "Como se escreve 'todo dia' em francês?", "opcoes": ["Tous les jours", "Chaque jour", "Tout jour", "Tous jour"], "resposta_correta": "Tous les jours"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'O professor lê um livro todo dia.'",
+        "resposta_esperada": "Le professeur lit un livre tous les jours",
+        "aceita_variacoes": ["Le professeur lit un livre tous les jours."],
+        "feedback_explicativo": "'Lit' é a forma de 'lire' na terceira pessoa do singular — verbos do terceiro grupo (irregulares) como 'lire' têm conjugação própria, diferente dos verbos regulares em -er."
+      }
+    },
+    {
+      "id": "fr-basico-08",
+      "tema": "Cidade e transporte",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'carro' em francês?", "opcoes": ["Voiture", "Voitura", "Voitur", "Voiturre"], "resposta_correta": "Voiture"},
+        {"pergunta": "Como se escreve 'rua' em francês?", "opcoes": ["Rue", "Rua", "Ru", "Ruee"], "resposta_correta": "Rue"},
+        {"pergunta": "Como se escreve 'rápido' em francês?", "opcoes": ["Vite", "Rapide", "Vitte", "Rapid"], "resposta_correta": "Vite"},
+        {"pergunta": "Como se escreve 'dirigir' em francês?", "opcoes": ["Conduire", "Diriger", "Conduir", "Conduirre"], "resposta_correta": "Conduire"},
+        {"pergunta": "Como se escreve 'muito' (intensificador) em francês?", "opcoes": ["Très", "Tres", "Trais", "Trèss"], "resposta_correta": "Très"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Ele dirige muito rápido na rua.'",
+        "resposta_esperada": "Il conduit très vite dans la rue",
+        "aceita_variacoes": ["Il conduit très vite dans la rue."],
+        "feedback_explicativo": "'Vite' já é um advérbio de velocidade ('rápido/depressa'), diferente de 'rapide', que é adjetivo — 'conduire vite' é a forma correta, não 'conduire rapide'."
+      }
+    },
+    {
+      "id": "fr-basico-09",
+      "tema": "Sentimentos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'feliz' em francês?", "opcoes": ["Heureux", "Heureu", "Eureux", "Heureuxe"], "resposta_correta": "Heureux"},
+        {"pergunta": "Como se escreve 'triste' em francês?", "opcoes": ["Triste", "Tristi", "Trisste", "Tristee"], "resposta_correta": "Triste"},
+        {"pergunta": "Como se escreve 'porque' em francês?", "opcoes": ["Parce que", "Parceque", "Pasque", "Par que"], "resposta_correta": "Parce que"},
+        {"pergunta": "Como se escreve 'hoje' novamente para fixar em francês?", "opcoes": ["Aujourd'hui", "Ajordui", "Aujourdhui", "Ojourdui"], "resposta_correta": "Aujourd'hui"},
+        {"pergunta": "Como se escreve 'estou/sou' (eu) em francês?", "opcoes": ["Je suis", "Je suit", "J'ai", "Je sui"], "resposta_correta": "Je suis"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Eu estou feliz hoje porque...'",
+        "resposta_esperada": "Je suis heureux aujourd'hui parce que",
+        "aceita_variacoes": ["Je suis heureuse aujourd'hui parce que"],
+        "feedback_explicativo": "'Heureux' (masculino) e 'heureuse' (feminino) concordam com o gênero de quem fala — diferente do português, o adjetivo de sentimento também varia em francês conforme quem está falando."
+      }
+    },
+    {
+      "id": "fr-basico-10",
+      "tema": "Revisão geral",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'obrigado(a)' em francês?", "opcoes": ["Merci", "Merçi", "Mersi", "Mercy"], "resposta_correta": "Merci"},
+        {"pergunta": "Como se escreve 'por favor' em francês?", "opcoes": ["S'il vous plaît", "Si vous plait", "Sil vous plait", "S'il vous plait"], "resposta_correta": "S'il vous plaît"},
+        {"pergunta": "Como se escreve 'amigo(a)' em francês?", "opcoes": ["Ami(e)", "Amie", "Amis", "Amig"], "resposta_correta": "Ami(e)"},
+        {"pergunta": "Como se escreve 'bom(a)' em francês?", "opcoes": ["Bon(ne)", "Bom", "Bone", "Bonn"], "resposta_correta": "Bon(ne)"},
+        {"pergunta": "Como se escreve 'você' em francês?", "opcoes": ["Tu/Vous", "Toi", "Te", "Vou"], "resposta_correta": "Tu/Vous"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Obrigado, você é um bom amigo.'",
+        "resposta_esperada": "Merci, tu es un bon ami",
+        "aceita_variacoes": ["Merci, vous êtes un bon ami"],
+        "feedback_explicativo": "'Tu' (informal) e 'vous' (formal/plural) são as duas formas de 'você' em francês — a escolha muda a conjugação do verbo seguinte ('tu es' vs. 'vous êtes')."
+      }
+    }
+  ]
+}

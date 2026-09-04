@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "ingles",
+    "nivel": "avancado",
+    "fase": "V5.0",
+    "status": "10 blocos completos, cada um com 5 palavras de vocabulario conectadas a 1 desafio de frase, conforme MUNDO_DOS_IDIOMAS_INGLES_V1.md. Vocabulario e estruturas gramaticais mais complexas (condicionais, voz passiva, phrasal verbs), mas cada bloco ainda reinicia do mais simples dentro de si.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases neutras."
+  },
+  "blocos": [
+    {
+      "id": "ing-avanc-01",
+      "tema": "Negócios",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'negociar' em inglês?", "opcoes": ["Negotiate", "Negociate", "Negotiat", "Negosiate"], "resposta_correta": "Negotiate"},
+        {"pergunta": "Como se escreve 'acordo' em inglês?", "opcoes": ["Agreement", "Agrement", "Agreemant", "Agreament"], "resposta_correta": "Agreement"},
+        {"pergunta": "Como se escreve 'a menos que' em inglês?", "opcoes": ["Unless", "Unles", "Onless", "Unlesss"], "resposta_correta": "Unless"},
+        {"pergunta": "Como se escreve 'assinado(a)' em inglês?", "opcoes": ["Signed", "Signd", "Sined", "Singed"], "resposta_correta": "Signed"},
+        {"pergunta": "Como se escreve 'até' (prazo) em inglês?", "opcoes": ["By", "Until", "Till", "For"], "resposta_correta": "By"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'A menos que o contrato seja assinado até sexta-feira, não haverá acordo.'",
+        "resposta_esperada": "Unless the contract is signed by Friday, there will be no agreement",
+        "aceita_variacoes": ["Unless the contract is signed by Friday, there won't be an agreement"],
+        "feedback_explicativo": "'Is signed' está na voz passiva (o contrato recebe a ação, não a pratica) — estrutura comum em contextos formais/de negócios, onde quem assina é menos importante que o fato de ser assinado."
+      }
+    },
+    {
+      "id": "ing-avanc-02",
+      "tema": "Condicionais e hipóteses",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'se eu tivesse' (hipótese) em inglês?", "opcoes": ["If I had", "If I have", "If I would have", "If I has"], "resposta_correta": "If I had"},
+        {"pergunta": "Como se escreve 'teria feito' em inglês?", "opcoes": ["Would have done", "Would did", "Will have done", "Would has done"], "resposta_correta": "Would have done"},
+        {"pergunta": "Como se escreve 'diferente' em inglês?", "opcoes": ["Different", "Diferent", "Differant", "Diferrent"], "resposta_correta": "Different"},
+        {"pergunta": "Como se escreve 'antecipadamente' em inglês?", "opcoes": ["In advance", "Advanced", "Beforehand time", "Anticipatedly"], "resposta_correta": "In advance"},
+        {"pergunta": "Como se escreve 'aviso' em inglês?", "opcoes": ["Warning", "Warnning", "Warming", "Warnin"], "resposta_correta": "Warning"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Se eu tivesse recebido o aviso com antecedência, eu teria feito algo diferente.'",
+        "resposta_esperada": "If I had received the warning in advance, I would have done something different",
+        "aceita_variacoes": ["If I'd received the warning in advance, I would have done something different"],
+        "feedback_explicativo": "Esta é a terceira condicional em inglês (fato hipotético sobre o passado): 'if + past perfect' seguido de 'would have + particípio', usada para lamentar ou imaginar algo que não aconteceu."
+      }
+    },
+    {
+      "id": "ing-avanc-03",
+      "tema": "Notícias e eventos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'foi anunciado' (voz passiva) em inglês?", "opcoes": ["Was announced", "Has announced", "Was announcing", "Announced was"], "resposta_correta": "Was announced"},
+        {"pergunta": "Como se escreve 'de acordo com' em inglês?", "opcoes": ["According to", "Accord with", "According with", "In accord to"], "resposta_correta": "According to"},
+        {"pergunta": "Como se escreve 'fontes' (informação) em inglês?", "opcoes": ["Sources", "Sourses", "Sorces", "Sourcis"], "resposta_correta": "Sources"},
+        {"pergunta": "Como se escreve 'adiado(a)' em inglês?", "opcoes": ["Postponed", "Posponed", "Postponned", "Pospooned"], "resposta_correta": "Postponed"},
+        {"pergunta": "Como se escreve 'devido a' em inglês?", "opcoes": ["Due to", "Due for", "Because to", "Cause of"], "resposta_correta": "Due to"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'De acordo com as fontes, o evento foi adiado devido à chuva.'",
+        "resposta_esperada": "According to sources, the event was postponed due to the rain",
+        "aceita_variacoes": ["According to sources, the event was postponed due to rain"],
+        "feedback_explicativo": "'Due to' é seguido de substantivo ('due to the rain'), diferente de 'because', que é seguido de uma oração completa com sujeito e verbo."
+      }
+    },
+    {
+      "id": "ing-avanc-04",
+      "tema": "Phrasal verbs no dia a dia",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'desistir' em inglês?", "opcoes": ["Give up", "Give off", "Give down", "Give out"], "resposta_correta": "Give up"},
+        {"pergunta": "Como se escreve 'adiar' em inglês?", "opcoes": ["Put off", "Put down", "Put away", "Put out"], "resposta_correta": "Put off"},
+        {"pergunta": "Como se escreve 'lidar com' em inglês?", "opcoes": ["Deal with", "Deal to", "Deal for", "Deal on"], "resposta_correta": "Deal with"},
+        {"pergunta": "Como se escreve 'em vez de' em inglês?", "opcoes": ["Instead of", "In stead of", "In place to", "Instead for"], "resposta_correta": "Instead of"},
+        {"pergunta": "Como se escreve 'decidiu' em inglês?", "opcoes": ["Decided", "Desided", "Decidded", "Decideed"], "resposta_correta": "Decided"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Em vez de desistir, ela decidiu lidar com o problema em vez de adiá-lo.'",
+        "resposta_esperada": "Instead of giving up, she decided to deal with the problem instead of putting it off",
+        "aceita_variacoes": ["Instead of giving up, she decided to deal with the problem instead of postponing it"],
+        "feedback_explicativo": "Phrasal verbs (give up, put off, deal with) são combinações de verbo + preposição/advérbio que mudam completamente o significado do verbo original — muito comuns na fala natural em inglês."
+      }
+    },
+    {
+      "id": "ing-avanc-05",
+      "tema": "Opinião e argumentação",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'por outro lado' em inglês?", "opcoes": ["On the other hand", "On other hand", "By the other hand", "In the other hand"], "resposta_correta": "On the other hand"},
+        {"pergunta": "Como se escreve 'apesar de' em inglês?", "opcoes": ["Despite", "Dispite", "Despit", "Dispight"], "resposta_correta": "Despite"},
+        {"pergunta": "Como se escreve 'evidência' em inglês?", "opcoes": ["Evidence", "Evidance", "Evedence", "Evidenc"], "resposta_correta": "Evidence"},
+        {"pergunta": "Como se escreve 'sugere' em inglês?", "opcoes": ["Suggests", "Sugests", "Suggests", "Sugjests"], "resposta_correta": "Suggests"},
+        {"pergunta": "Como se escreve 'ao contrário' em inglês?", "opcoes": ["On the contrary", "By contrary", "In contrary", "To contrary"], "resposta_correta": "On the contrary"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Apesar da evidência, alguns pesquisadores sugerem, ao contrário, uma explicação diferente.'",
+        "resposta_esperada": "Despite the evidence, some researchers suggest, on the contrary, a different explanation",
+        "aceita_variacoes": ["Despite the evidence, some researchers suggest, on the contrary, a different explanation."],
+        "feedback_explicativo": "'Despite' é seguido diretamente de substantivo, sem preposição extra ('despite the evidence', não 'despite of the evidence') — erro comum entre falantes de português."
+      }
+    },
+    {
+      "id": "ing-avanc-06",
+      "tema": "Ciência e pesquisa",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'descoberto(a)' em inglês?", "opcoes": ["Discovered", "Discoverd", "Discovred", "Discoverred"], "resposta_correta": "Discovered"},
+        {"pergunta": "Como se escreve 'estudo' (pesquisa) em inglês?", "opcoes": ["Study", "Studdy", "Studie", "Stady"], "resposta_correta": "Study"},
+        {"pergunta": "Como se escreve 'demonstrou' em inglês?", "opcoes": ["Demonstrated", "Demonstred", "Demonsted", "Demontrated"], "resposta_correta": "Demonstrated"},
+        {"pergunta": "Como se escreve 'a fim de' em inglês?", "opcoes": ["In order to", "For to", "In order for", "To order"], "resposta_correta": "In order to"},
+        {"pergunta": "Como se escreve 'confirmar' em inglês?", "opcoes": ["Confirm", "Confirn", "Comfirm", "Confirmm"], "resposta_correta": "Confirm"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'O estudo demonstrou o que foi descoberto, a fim de confirmar a hipótese.'",
+        "resposta_esperada": "The study demonstrated what was discovered, in order to confirm the hypothesis",
+        "aceita_variacoes": ["The study demonstrated what was discovered in order to confirm the hypothesis."],
+        "feedback_explicativo": "'In order to' é uma forma mais formal de expressar propósito/finalidade do que apenas 'to', comum em textos acadêmicos e científicos."
+      }
+    },
+    {
+      "id": "ing-avanc-07",
+      "tema": "Relações e comunicação",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'mal-entendido' em inglês?", "opcoes": ["Misunderstanding", "Missunderstanding", "Misundertanding", "Misunderstending"], "resposta_correta": "Misunderstanding"},
+        {"pergunta": "Como se escreve 'esclarecer' em inglês?", "opcoes": ["Clarify", "Clarrify", "Clearify", "Clarifie"], "resposta_correta": "Clarify"},
+        {"pergunta": "Como se escreve 'sem querer' em inglês?", "opcoes": ["Unintentionally", "Without wanting", "Not wanting", "Unwantly"], "resposta_correta": "Unintentionally"},
+        {"pergunta": "Como se escreve 'ofendido(a)' em inglês?", "opcoes": ["Offended", "Ofended", "Offendid", "Offendded"], "resposta_correta": "Offended"},
+        {"pergunta": "Como se escreve 'pretendia' em inglês?", "opcoes": ["Intended", "Intendid", "Intendded", "Intented"], "resposta_correta": "Intended"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Foi um mal-entendido; eu não pretendia ofender ninguém sem querer, deixe-me esclarecer.'",
+        "resposta_esperada": "It was a misunderstanding, I did not intend to unintentionally offend anyone, let me clarify",
+        "aceita_variacoes": ["It was a misunderstanding, I didn't intend to offend anyone, let me clarify"],
+        "feedback_explicativo": "'Intend to' + verbo expressa intenção — negar essa estrutura ('did not intend to') é uma forma comum de se desculpar formalmente por um mal-entendido em inglês."
+      }
+    },
+    {
+      "id": "ing-avanc-08",
+      "tema": "Meio ambiente",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'sustentável' em inglês?", "opcoes": ["Sustainable", "Sustenable", "Sustainble", "Sustainible"], "resposta_correta": "Sustainable"},
+        {"pergunta": "Como se escreve 'a menos que' novamente para fixar (condicional) em inglês?", "opcoes": ["Unless", "Unles", "Onless", "Unlesss"], "resposta_correta": "Unless"},
+        {"pergunta": "Como se escreve 'reduzir' em inglês?", "opcoes": ["Reduce", "Reduse", "Redusse", "Reducee"], "resposta_correta": "Reduce"},
+        {"pergunta": "Como se escreve 'consequências' em inglês?", "opcoes": ["Consequences", "Consecuences", "Consequenses", "Consequenceis"], "resposta_correta": "Consequences"},
+        {"pergunta": "Como se escreve 'irreversível' em inglês?", "opcoes": ["Irreversible", "Ireversible", "Irreversibel", "Irreverssible"], "resposta_correta": "Irreversible"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'A menos que reduzamos o consumo agora, as consequências podem ser irreversíveis.'",
+        "resposta_esperada": "Unless we reduce consumption now, the consequences may be irreversible",
+        "aceita_variacoes": ["Unless we reduce consumption now, the consequences could be irreversible"],
+        "feedback_explicativo": "'Unless' reaparece aqui numa condicional de aviso/alerta — estrutura frequente em textos sobre meio ambiente e sustentabilidade, tanto no jornalismo quanto na academia."
+      }
+    },
+    {
+      "id": "ing-avanc-09",
+      "tema": "Reflexão pessoal",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'ao olhar para trás' em inglês?", "opcoes": ["Looking back", "Looking behind", "Look back", "Backward looking"], "resposta_correta": "Looking back"},
+        {"pergunta": "Como se escreve 'teria feito' novamente para fixar (condicional 3) em inglês?", "opcoes": ["Would have done", "Would did", "Will have done", "Would has done"], "resposta_correta": "Would have done"},
+        {"pergunta": "Como se escreve 'de qualquer forma' em inglês?", "opcoes": ["Anyway", "Any way", "Anywise", "In any way"], "resposta_correta": "Anyway"},
+        {"pergunta": "Como se escreve 'valeu a pena' em inglês?", "opcoes": ["Was worth it", "Was worthy it", "Worthed it", "Was value it"], "resposta_correta": "Was worth it"},
+        {"pergunta": "Como se escreve 'crescimento' em inglês?", "opcoes": ["Growth", "Growht", "Groth", "Growrth"], "resposta_correta": "Growth"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Ao olhar para trás, eu teria feito diferente, mas de qualquer forma valeu a pena pelo crescimento.'",
+        "resposta_esperada": "Looking back, I would have done it differently, but anyway it was worth it for the growth",
+        "aceita_variacoes": ["Looking back, I would have done things differently, but it was worth it for the growth"],
+        "feedback_explicativo": "'Looking back' (gerúndio no início da frase) é uma forma comum de introduzir reflexão sobre o passado em inglês, equivalente a 'olhando para trás' ou 'em retrospectiva'."
+      }
+    },
+    {
+      "id": "ing-avanc-10",
+      "tema": "Revisão geral avançada",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'no entanto' em inglês?", "opcoes": ["However", "Howevar", "Howevver", "Howeever"], "resposta_correta": "However"},
+        {"pergunta": "Como se escreve 'inegavelmente' em inglês?", "opcoes": ["Undeniably", "Undenyably", "Undeniabley", "Undenniably"], "resposta_correta": "Undeniably"},
+        {"pergunta": "Como se escreve 'ainda que' em inglês?", "opcoes": ["Even though", "Even if", "Even that", "Even how"], "resposta_correta": "Even though"},
+        {"pergunta": "Como se escreve 'permanece' em inglês?", "opcoes": ["Remains", "Remans", "Remaines", "Remainss"], "resposta_correta": "Remains"},
+        {"pergunta": "Como se escreve 'incerto(a)' em inglês?", "opcoes": ["Uncertain", "Unsertain", "Uncertan", "Uncertaine"], "resposta_correta": "Uncertain"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_EN",
+        "enunciado": "Traduza para o inglês: 'Ainda que o resultado seja incerto, o esforço, no entanto, permanece inegavelmente valioso.'",
+        "resposta_esperada": "Even though the result is uncertain, the effort, however, remains undeniably valuable",
+        "aceita_variacoes": ["Even though the result is uncertain, the effort however remains undeniably valuable"],
+        "feedback_explicativo": "'Even though' introduz um contraste mais forte que 'although', e 'however' no meio da frase (entre vírgulas) é um uso formal comum em textos escritos, diferente de seu uso mais comum no início de frase."
+      }
+    }
+  ]
+}

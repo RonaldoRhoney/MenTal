@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "espanhol",
+    "nivel": "avancado",
+    "fase": "V5.1",
+    "status": "10 blocos completos, cada um com 5 palavras de vocabulario conectadas a 1 desafio de frase, mesmo padrao ja validado. Vocabulario e estruturas mais complexas (subjuntivo, condicional composto, voz passiva).",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases neutras."
+  },
+  "blocos": [
+    {
+      "id": "esp-avanc-01",
+      "tema": "Negócios",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'negociar' em espanhol?", "opcoes": ["Negociar", "Negosiar", "Negociarr", "Negosear"], "resposta_correta": "Negociar"},
+        {"pergunta": "Como se escreve 'acordo' em espanhol?", "opcoes": ["Acuerdo", "Acordo", "Acuerdoo", "Acurdo"], "resposta_correta": "Acuerdo"},
+        {"pergunta": "Como se escreve 'a menos que' novamente para fixar em espanhol?", "opcoes": ["A menos que", "A menos de que", "Salvo que", "Amenos que"], "resposta_correta": "A menos que"},
+        {"pergunta": "Como se escreve 'assinado(a)' em espanhol?", "opcoes": ["Firmado", "Asinado", "Firmadoo", "Firmato"], "resposta_correta": "Firmado"},
+        {"pergunta": "Como se escreve 'antes de' (prazo) em espanhol?", "opcoes": ["Antes de", "Hasta", "Para", "Por"], "resposta_correta": "Antes de"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'A menos que o contrato seja assinado antes de sexta-feira, não haverá acordo.'",
+        "resposta_esperada": "A menos que el contrato sea firmado antes del viernes, no habrá acuerdo",
+        "aceita_variacoes": ["A menos que se firme el contrato antes del viernes, no habrá acuerdo"],
+        "feedback_explicativo": "'Sea firmado' está no subjuntivo (exigido por 'a menos que') e na voz passiva — dupla estrutura formal típica de contextos de negócios."
+      }
+    },
+    {
+      "id": "esp-avanc-02",
+      "tema": "Condicionais e hipóteses",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'se eu tivesse tido' (hipótese passada) em espanhol?", "opcoes": ["Si hubiera tenido", "Si tendría", "Si tuviera tenido", "Si había tenido"], "resposta_correta": "Si hubiera tenido"},
+        {"pergunta": "Como se escreve 'teria feito' em espanhol?", "opcoes": ["Habría hecho", "Habria hecho", "Hubiera hacer", "Habría hacido"], "resposta_correta": "Habría hecho"},
+        {"pergunta": "Como se escreve 'diferente' em espanhol?", "opcoes": ["Diferente", "Diferrente", "Deferente", "Diferentte"], "resposta_correta": "Diferente"},
+        {"pergunta": "Como se escreve 'com antecedência' em espanhol?", "opcoes": ["Con antelación", "Con antecipación", "Antecipadamente", "Con anterioridad ya"], "resposta_correta": "Con antelación"},
+        {"pergunta": "Como se escreve 'aviso' em espanhol?", "opcoes": ["Aviso", "Avizo", "Avisoo", "Abiso"], "resposta_correta": "Aviso"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Se eu tivesse recebido o aviso com antecedência, eu teria feito algo diferente.'",
+        "resposta_esperada": "Si hubiera recibido el aviso con antelación, habría hecho algo diferente",
+        "aceita_variacoes": ["Si hubiese recibido el aviso con antelación, habría hecho algo diferente"],
+        "feedback_explicativo": "Esta é a condicional composta (hipótese sobre o passado): 'si + pretérito pluscuamperfecto de subjuntivo' seguido de 'condicional compuesto' — equivalente à terceira condicional do inglês."
+      }
+    },
+    {
+      "id": "esp-avanc-03",
+      "tema": "Notícias e eventos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'foi anunciado' (voz passiva) em espanhol?", "opcoes": ["Fue anunciado", "Ha anunciado", "Fue anunciando", "Anunciado fue"], "resposta_correta": "Fue anunciado"},
+        {"pergunta": "Como se escreve 'de acordo com' em espanhol?", "opcoes": ["De acuerdo con", "Según con", "De acuerdo a", "Acorde con"], "resposta_correta": "De acuerdo con"},
+        {"pergunta": "Como se escreve 'fontes' (informação) em espanhol?", "opcoes": ["Fuentes", "Fontes", "Fuenttes", "Fuintes"], "resposta_correta": "Fuentes"},
+        {"pergunta": "Como se escreve 'adiado(a)' em espanhol?", "opcoes": ["Aplazado", "Adiado", "Aplasado", "Aplazadoo"], "resposta_correta": "Aplazado"},
+        {"pergunta": "Como se escreve 'devido a' em espanhol?", "opcoes": ["Debido a", "Devido a", "Debido de", "Por debido"], "resposta_correta": "Debido a"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'De acordo com as fontes, o evento foi adiado devido à chuva.'",
+        "resposta_esperada": "De acuerdo con las fuentes, el evento fue aplazado debido a la lluvia",
+        "aceita_variacoes": ["Según las fuentes, el evento fue aplazado debido a la lluvia"],
+        "feedback_explicativo": "'Según' é um sinônimo mais direto e comum de 'de acuerdo con' no jornalismo em espanhol, ambos equivalentes a 'de acordo com'."
+      }
+    },
+    {
+      "id": "esp-avanc-04",
+      "tema": "Expressões idiomáticas do dia a dia",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'desistir' em espanhol?", "opcoes": ["Rendirse", "Desistir", "Rendirce", "Rendersee"], "resposta_correta": "Rendirse"},
+        {"pergunta": "Como se escreve 'adiar' em espanhol?", "opcoes": ["Postergar", "Postponerr", "Posponer", "Posterger"], "resposta_correta": "Postergar"},
+        {"pergunta": "Como se escreve 'lidar com' em espanhol?", "opcoes": ["Lidiar con", "Lidiar de", "Tratar con", "Manejar de"], "resposta_correta": "Lidiar con"},
+        {"pergunta": "Como se escreve 'em vez de' em espanhol?", "opcoes": ["En vez de", "En lugar que", "En vés de", "En vez que"], "resposta_correta": "En vez de"},
+        {"pergunta": "Como se escreve 'decidiu' em espanhol?", "opcoes": ["Decidió", "Decidio", "Decidiu", "Decedió"], "resposta_correta": "Decidió"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Em vez de desistir, ela decidiu lidar com o problema em vez de adiá-lo.'",
+        "resposta_esperada": "En vez de rendirse, ella decidió lidiar con el problema en vez de postergarlo",
+        "aceita_variacoes": ["En lugar de rendirse, ella decidió enfrentar el problema en vez de postergarlo"],
+        "feedback_explicativo": "'En vez de' e 'en lugar de' são intercambiáveis em espanhol, ambos significando 'em vez de' — diferença apenas de preferência regional/estilística."
+      }
+    },
+    {
+      "id": "esp-avanc-05",
+      "tema": "Opinião e argumentação",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'por outro lado' em espanhol?", "opcoes": ["Por otro lado", "Por otra parte", "Del otro lado", "En otro lado"], "resposta_correta": "Por otro lado"},
+        {"pergunta": "Como se escreve 'apesar de' em espanhol?", "opcoes": ["A pesar de", "Apesar de", "Pese de", "A pesar que"], "resposta_correta": "A pesar de"},
+        {"pergunta": "Como se escreve 'evidência' em espanhol?", "opcoes": ["Evidencia", "Evidencia", "Evidenzia", "Evidensia"], "resposta_correta": "Evidencia"},
+        {"pergunta": "Como se escreve 'sugerem' em espanhol?", "opcoes": ["Sugieren", "Sujieren", "Sugeren", "Sugierren"], "resposta_correta": "Sugieren"},
+        {"pergunta": "Como se escreve 'ao contrário' em espanhol?", "opcoes": ["Al contrario", "Por contrario", "En contrario", "Del contrario"], "resposta_correta": "Al contrario"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Apesar da evidência, alguns pesquisadores sugerem, ao contrário, uma explicação diferente.'",
+        "resposta_esperada": "A pesar de la evidencia, algunos investigadores sugieren, al contrario, una explicación diferente",
+        "aceita_variacoes": ["A pesar de la evidencia, algunos investigadores sugieren, por el contrario, una explicación diferente"],
+        "feedback_explicativo": "'A pesar de' é seguido diretamente de substantivo, sem preposição adicional — mesma estrutura do 'despite' em inglês, diferente do 'apesar de' português apenas na grafia."
+      }
+    },
+    {
+      "id": "esp-avanc-06",
+      "tema": "Ciência e pesquisa",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'descoberto(a)' em espanhol?", "opcoes": ["Descubierto", "Descuberto", "Descubierrto", "Discubierto"], "resposta_correta": "Descubierto"},
+        {"pergunta": "Como se escreve 'estudo' (pesquisa) em espanhol?", "opcoes": ["Estudio", "Estudo", "Estudioo", "Studio"], "resposta_correta": "Estudio"},
+        {"pergunta": "Como se escreve 'demonstrou' em espanhol?", "opcoes": ["Demostró", "Demonstrou", "Demostro", "Demostrou"], "resposta_correta": "Demostró"},
+        {"pergunta": "Como se escreve 'a fim de' em espanhol?", "opcoes": ["Con el fin de", "A fin de", "Por el fin de", "Al fin de"], "resposta_correta": "Con el fin de"},
+        {"pergunta": "Como se escreve 'confirmar' em espanhol?", "opcoes": ["Confirmar", "Confirnar", "Comfirmar", "Confirmarr"], "resposta_correta": "Confirmar"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'O estudo demonstrou o que foi descoberto, a fim de confirmar a hipótese.'",
+        "resposta_esperada": "El estudio demostró lo que fue descubierto, con el fin de confirmar la hipótesis",
+        "aceita_variacoes": ["El estudio demostró lo descubierto, a fin de confirmar la hipótesis"],
+        "feedback_explicativo": "'Con el fin de' e 'a fin de' são formas equivalentes de expressar propósito em espanhol formal, ambas mais elaboradas que o simples 'para'."
+      }
+    },
+    {
+      "id": "esp-avanc-07",
+      "tema": "Relações e comunicação",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'mal-entendido' em espanhol?", "opcoes": ["Malentendido", "Mal entendido", "Malentendimiento", "Mal entendimento"], "resposta_correta": "Malentendido"},
+        {"pergunta": "Como se escreve 'esclarecer' em espanhol?", "opcoes": ["Aclarar", "Esclarecer", "Aclararr", "Esclareser"], "resposta_correta": "Aclarar"},
+        {"pergunta": "Como se escreve 'sem querer' em espanhol?", "opcoes": ["Sin querer", "Sin querir", "Sen querer", "Sin quierer"], "resposta_correta": "Sin querer"},
+        {"pergunta": "Como se escreve 'ofendido(a)' em espanhol?", "opcoes": ["Ofendido", "Ofendidoo", "Ofendito", "Ofendidu"], "resposta_correta": "Ofendido"},
+        {"pergunta": "Como se escreve 'pretendia' em espanhol?", "opcoes": ["Pretendía", "Pretendia", "Pretendiera", "Pretendio"], "resposta_correta": "Pretendía"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Foi um mal-entendido; eu não pretendia ofender ninguém sem querer, deixe-me esclarecer.'",
+        "resposta_esperada": "Fue un malentendido, no pretendía ofender a nadie sin querer, déjame aclarar",
+        "aceita_variacoes": ["Fue un malentendido, no quería ofender a nadie, permíteme aclarar"],
+        "feedback_explicativo": "'A nadie' usa o 'a' pessoal, obrigatório em espanhol antes de objeto direto que se refere a pessoa ('ofender a nadie'), regra que não existe em português."
+      }
+    },
+    {
+      "id": "esp-avanc-08",
+      "tema": "Meio ambiente",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'sustentável' em espanhol?", "opcoes": ["Sostenible", "Sustentable", "Sostenibel", "Sustenible"], "resposta_correta": "Sostenible"},
+        {"pergunta": "Como se escreve 'a menos que' novamente para fixar (condicional) em espanhol?", "opcoes": ["A menos que", "A menos de que", "Salvo que", "Amenos que"], "resposta_correta": "A menos que"},
+        {"pergunta": "Como se escreve 'reduzir' em espanhol?", "opcoes": ["Reducir", "Reduzir", "Reducirr", "Redusir"], "resposta_correta": "Reducir"},
+        {"pergunta": "Como se escreve 'consequências' em espanhol?", "opcoes": ["Consecuencias", "Consequencias", "Consecuensias", "Consecuencas"], "resposta_correta": "Consecuencias"},
+        {"pergunta": "Como se escreve 'irreversível' em espanhol?", "opcoes": ["Irreversible", "Irrebersible", "Irreversibel", "Irrevercible"], "resposta_correta": "Irreversible"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'A menos que reduzamos o consumo agora, as consequências podem ser irreversíveis.'",
+        "resposta_esperada": "A menos que reduzcamos el consumo ahora, las consecuencias podrían ser irreversibles",
+        "aceita_variacoes": ["A menos que reduzcamos el consumo ahora, las consecuencias pueden ser irreversibles"],
+        "feedback_explicativo": "'Reduzcamos' está no subjuntivo (primeira pessoa do plural), exigido novamente pela expressão condicional 'a menos que' — padrão que se repete em toda construção desse tipo."
+      }
+    },
+    {
+      "id": "esp-avanc-09",
+      "tema": "Reflexão pessoal",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'olhando para trás' em espanhol?", "opcoes": ["Mirando hacia atrás", "Mirando atrás", "Viendo atrás", "Mirando para atrás"], "resposta_correta": "Mirando hacia atrás"},
+        {"pergunta": "Como se escreve 'teria feito' novamente para fixar em espanhol?", "opcoes": ["Habría hecho", "Habria hecho", "Hubiera hacer", "Habría hacido"], "resposta_correta": "Habría hecho"},
+        {"pergunta": "Como se escreve 'de qualquer forma' em espanhol?", "opcoes": ["De todos modos", "De cualquier forma", "De toda forma", "En todo caso"], "resposta_correta": "De todos modos"},
+        {"pergunta": "Como se escreve 'valeu a pena' em espanhol?", "opcoes": ["Valió la pena", "Valio la pena", "Valió el pena", "Valia la pena"], "resposta_correta": "Valió la pena"},
+        {"pergunta": "Como se escreve 'crescimento' em espanhol?", "opcoes": ["Crecimiento", "Crescimiento", "Crecimento", "Crecimientoo"], "resposta_correta": "Crecimiento"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Ao olhar para trás, eu teria feito diferente, mas de qualquer forma valeu a pena pelo crescimento.'",
+        "resposta_esperada": "Mirando hacia atrás, habría hecho las cosas diferente, pero de todos modos valió la pena por el crecimiento",
+        "aceita_variacoes": ["Mirando hacia atrás, lo habría hecho diferente, pero valió la pena por el crecimiento"],
+        "feedback_explicativo": "'Mirando hacia atrás' (gerúndio no início) introduz reflexão sobre o passado, mesma função do 'looking back' em inglês e 'ao olhar para trás' em português."
+      }
+    },
+    {
+      "id": "esp-avanc-10",
+      "tema": "Revisão geral avançada",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'no entanto' em espanhol?", "opcoes": ["Sin embargo", "No entanto", "Sen embargo", "Sin embargoo"], "resposta_correta": "Sin embargo"},
+        {"pergunta": "Como se escreve 'inegavelmente' em espanhol?", "opcoes": ["Innegablemente", "Inegablemente", "Inegavelmente", "Innegablementi"], "resposta_correta": "Innegablemente"},
+        {"pergunta": "Como se escreve 'ainda que' em espanhol?", "opcoes": ["Aun cuando", "Aunque", "Aun que", "Aun si"], "resposta_correta": "Aun cuando"},
+        {"pergunta": "Como se escreve 'permanece' em espanhol?", "opcoes": ["Permanece", "Permaneçe", "Permanesse", "Permanecce"], "resposta_correta": "Permanece"},
+        {"pergunta": "Como se escreve 'incerto(a)' em espanhol?", "opcoes": ["Incierto", "Incerto", "Insierto", "Inciertoo"], "resposta_correta": "Incierto"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Ainda que o resultado seja incerto, o esforço, no entanto, permanece inegavelmente valioso.'",
+        "resposta_esperada": "Aun cuando el resultado sea incierto, el esfuerzo, sin embargo, permanece innegablemente valioso",
+        "aceita_variacoes": ["Aunque el resultado sea incierto, el esfuerzo sin embargo sigue siendo innegablemente valioso"],
+        "feedback_explicativo": "'Aun cuando' + subjuntivo expressa um contraste mais formal/enfático que 'aunque', comum em textos escritos e argumentativos em espanhol."
+      }
+    }
+  ]
+}

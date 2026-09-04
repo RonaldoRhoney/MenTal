@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "espanhol",
+    "nivel": "intermediario",
+    "fase": "V5.1",
+    "status": "10 blocos completos, cada um com 5 palavras de vocabulario conectadas a 1 desafio de frase, mesmo padrao ja validado.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases neutras."
+  },
+  "blocos": [
+    {
+      "id": "esp-inter-01",
+      "tema": "Trabalho e rotina",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'reunião' em espanhol?", "opcoes": ["Reunión", "Reunion", "Reuniao", "Reunón"], "resposta_correta": "Reunión"},
+        {"pergunta": "Como se escreve 'ocupado(a)' em espanhol?", "opcoes": ["Ocupado", "Ocupadoo", "Ocupato", "Ocupadu"], "resposta_correta": "Ocupado"},
+        {"pergunta": "Como se escreve 'terminar' em espanhol?", "opcoes": ["Terminar", "Terminarr", "Terminear", "Terminarl"], "resposta_correta": "Terminar"},
+        {"pergunta": "Como se escreve 'antes de' em espanhol?", "opcoes": ["Antes de", "Antes que", "Delante de", "Ante de"], "resposta_correta": "Antes de"},
+        {"pergunta": "Como se escreve 'preciso' (necessidade) em espanhol?", "opcoes": ["Necesito", "Necesito", "Nesesito", "Necezito"], "resposta_correta": "Necesito"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Eu preciso terminar a reunião antes do almuerzo porque estou ocupado.'",
+        "resposta_esperada": "Necesito terminar la reunión antes del almuerzo porque estoy ocupado",
+        "aceita_variacoes": ["Necesito terminar la reunión antes del almuerzo porque estoy ocupado."],
+        "feedback_explicativo": "'Antes del' é a contração de 'antes de' + 'el' (artigo masculino) — em espanhol, 'de + el' sempre vira 'del', assim como 'a + el' vira 'al'."
+      }
+    },
+    {
+      "id": "esp-inter-02",
+      "tema": "Viagem",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'aeroporto' em espanhol?", "opcoes": ["Aeropuerto", "Aereporto", "Aeroporto", "Aeropuerto"], "resposta_correta": "Aeropuerto"},
+        {"pergunta": "Como se escreve 'mala' em espanhol?", "opcoes": ["Maleta", "Mala", "Maletta", "Maleto"], "resposta_correta": "Maleta"},
+        {"pergunta": "Como se escreve 'atrasado(a)' em espanhol?", "opcoes": ["Atrasado", "Tarde", "Atrasadoo", "Retrasado"], "resposta_correta": "Retrasado"},
+        {"pergunta": "Como se escreve 'já' em espanhol?", "opcoes": ["Ya", "Ja", "Yaa", "Iya"], "resposta_correta": "Ya"},
+        {"pergunta": "Como se escreve 'esquecer' em espanhol?", "opcoes": ["Olvidar", "Esquecer", "Olvider", "Olbidar"], "resposta_correta": "Olvidar"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Nós já estamos atrasados para o aeroporto, não esqueça a mala.'",
+        "resposta_esperada": "Ya estamos retrasados para el aeropuerto, no olvides la maleta",
+        "aceita_variacoes": ["Ya vamos tarde al aeropuerto, no olvides la maleta"],
+        "feedback_explicativo": "'No olvides' usa o imperativo negativo informal (tú) — em espanhol, o imperativo negativo usa a forma do subjuntivo, diferente do imperativo afirmativo."
+      }
+    },
+    {
+      "id": "esp-inter-03",
+      "tema": "Saúde",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'doente' em espanhol?", "opcoes": ["Enfermo", "Doente", "Enfermoo", "Enfermu"], "resposta_correta": "Enfermo"},
+        {"pergunta": "Como se escreve 'médico(a)' em espanhol?", "opcoes": ["Médico", "Medico", "Médicoo", "Medicu"], "resposta_correta": "Médico"},
+        {"pergunta": "Como se escreve 'dor' em espanhol?", "opcoes": ["Dolor", "Dor", "Doloor", "Dolorr"], "resposta_correta": "Dolor"},
+        {"pergunta": "Como se escreve 'deveria' em espanhol?", "opcoes": ["Debería", "Deberia", "Debiera", "Deberías"], "resposta_correta": "Debería"},
+        {"pergunta": "Como se escreve 'descansar' em espanhol?", "opcoes": ["Descansar", "Discansar", "Descanssar", "Decansar"], "resposta_correta": "Descansar"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Você está doente e sentindo dor, deveria descansar e ver um médico.'",
+        "resposta_esperada": "Estás enfermo y sientes dolor, deberías descansar y ver a un médico",
+        "aceita_variacoes": ["Estás enfermo y tienes dolor, deberías descansar y ver a un médico"],
+        "feedback_explicativo": "'Deberías' está no condicional, forma educada de dar um conselho — equivalente a 'você deveria' em português, mais suave que uma ordem direta."
+      }
+    },
+    {
+      "id": "esp-inter-04",
+      "tema": "Compras",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'caro(a)' em espanhol?", "opcoes": ["Caro", "Caroo", "Karo", "Cara"], "resposta_correta": "Caro"},
+        {"pergunta": "Como se escreve 'barato(a)' em espanhol?", "opcoes": ["Barato", "Baratoo", "Varato", "Baratu"], "resposta_correta": "Barato"},
+        {"pergunta": "Como se escreve 'devolver' em espanhol?", "opcoes": ["Devolver", "Debolver", "Devolber", "Devolverr"], "resposta_correta": "Devolver"},
+        {"pergunta": "Como se escreve 'que' (comparação) em espanhol?", "opcoes": ["Que", "Como", "Del que", "Qué"], "resposta_correta": "Que"},
+        {"pergunta": "Como se escreve 'esperava' em espanhol?", "opcoes": ["Esperaba", "Esperava", "Esperabam", "Esperar"], "resposta_correta": "Esperaba"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Este produto é mais caro do que eu esperava, eu quero devolver.'",
+        "resposta_esperada": "Este producto es más caro de lo que esperaba, quiero devolverlo",
+        "aceita_variacoes": ["Este producto es más caro de lo que yo esperaba, quiero devolverlo"],
+        "feedback_explicativo": "'Más caro de lo que' é a estrutura comparativa usada quando se compara com uma oração inteira (o que eu esperava), diferente de comparar apenas com um substantivo, que usaria 'que' sozinho."
+      }
+    },
+    {
+      "id": "esp-inter-05",
+      "tema": "Clima e planos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'provavelmente' em espanhol?", "opcoes": ["Probablemente", "Probablemente", "Probablementi", "Provablemente"], "resposta_correta": "Probablemente"},
+        {"pergunta": "Como se escreve 'chuva' em espanhol?", "opcoes": ["Lluvia", "Chuva", "Lluvea", "Luvia"], "resposta_correta": "Lluvia"},
+        {"pergunta": "Como se escreve 'cancelar' em espanhol?", "opcoes": ["Cancelar", "Cancellar", "Canselar", "Cancelaar"], "resposta_correta": "Cancelar"},
+        {"pergunta": "Como se escreve 'a menos que' em espanhol?", "opcoes": ["A menos que", "A menos de que", "Salvo que", "Amenos que"], "resposta_correta": "A menos que"},
+        {"pergunta": "Como se escreve 'parar' (chuva) em espanhol?", "opcoes": ["Parar", "Pare", "Parrar", "Parir"], "resposta_correta": "Parar"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Nós provavelmente vamos cancelar o passeio a menos que a chuva pare.'",
+        "resposta_esperada": "Probablemente vamos a cancelar el paseo a menos que pare la lluvia",
+        "aceita_variacoes": ["Probablemente cancelaremos el paseo a menos que la lluvia pare"],
+        "feedback_explicativo": "'A menos que' exige o modo subjuntivo no verbo seguinte ('pare', não 'para') — construções de condição/exceção em espanhol geralmente pedem subjuntivo."
+      }
+    },
+    {
+      "id": "esp-inter-06",
+      "tema": "Tecnologia",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'quebrado(a)' em espanhol?", "opcoes": ["Roto", "Rompido", "Rotoo", "Rroto"], "resposta_correta": "Roto"},
+        {"pergunta": "Como se escreve 'consertar' em espanhol?", "opcoes": ["Arreglar", "Consertar", "Arreglarr", "Arreglear"], "resposta_correta": "Arreglar"},
+        {"pergunta": "Como se escreve 'senha' em espanhol?", "opcoes": ["Contraseña", "Contrasenha", "Contraseñaa", "Contraceña"], "resposta_correta": "Contraseña"},
+        {"pergunta": "Como se escreve 'de novo' em espanhol?", "opcoes": ["De nuevo", "De novo", "Otra vez mas", "Denuevo"], "resposta_correta": "De nuevo"},
+        {"pergunta": "Como se escreve 'tentar' em espanhol?", "opcoes": ["Intentar", "Tentar", "Intenter", "Intentarr"], "resposta_correta": "Intentar"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Meu celular está quebrado, eu preciso tentar consertar de novo.'",
+        "resposta_esperada": "Mi celular está roto, necesito intentar arreglarlo de nuevo",
+        "aceita_variacoes": ["Mi móvil está roto, necesito intentar arreglarlo de nuevo"],
+        "feedback_explicativo": "'Celular' (América Latina) e 'móvil' (Espanha) são as duas palavras mais comuns para 'celular' — ambas corretas, variando por região."
+      }
+    },
+    {
+      "id": "esp-inter-07",
+      "tema": "Estudos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'difícil' em espanhol?", "opcoes": ["Difícil", "Dificil", "Deficil", "Difícel"], "resposta_correta": "Difícil"},
+        {"pergunta": "Como se escreve 'entender' em espanhol?", "opcoes": ["Entender", "Intender", "Entendir", "Entenderr"], "resposta_correta": "Entender"},
+        {"pergunta": "Como se escreve 'explicar' em espanhol?", "opcoes": ["Explicar", "Esplicar", "Explicarr", "Explicear"], "resposta_correta": "Explicar"},
+        {"pergunta": "Como se escreve 'de novo' novamente para fixar em espanhol?", "opcoes": ["De nuevo", "De novo", "Otra vez mas", "Denuevo"], "resposta_correta": "De nuevo"},
+        {"pergunta": "Como se escreve 'poderia' (pedido educado) em espanhol?", "opcoes": ["Podría", "Podria", "Puedes", "Podrías"], "resposta_correta": "Podría"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Este assunto é difícil, você poderia explicar de novo?'",
+        "resposta_esperada": "Este tema es difícil, ¿podría explicarlo de nuevo?",
+        "aceita_variacoes": ["Este tema es difícil, ¿podrías explicarlo de nuevo?"],
+        "feedback_explicativo": "'¿Podría?' (formal, usted) e '¿Podrías?' (informal, tú) são duas formas educadas de pedir algo — a escolha depende do nível de formalidade da conversa."
+      }
+    },
+    {
+      "id": "esp-inter-08",
+      "tema": "Emoções e opinião",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'surpreso(a)' em espanhol?", "opcoes": ["Sorprendido", "Surpreso", "Sorprendidoo", "Sorprendiido"], "resposta_correta": "Sorprendido"},
+        {"pergunta": "Como se escreve 'na verdade' em espanhol?", "opcoes": ["En realidad", "De verdad", "A la verdad", "En verdade"], "resposta_correta": "En realidad"},
+        {"pergunta": "Como se escreve 'esperava (algo diferente)' em espanhol?", "opcoes": ["Esperaba", "Esperava", "Esperabam", "Esperar"], "resposta_correta": "Esperaba"},
+        {"pergunta": "Como se escreve 'melhor' em espanhol?", "opcoes": ["Mejor", "Milhor", "Mejorr", "Mehor"], "resposta_correta": "Mejor"},
+        {"pergunta": "Como se escreve 'do que eu pensava' em espanhol?", "opcoes": ["De lo que pensaba", "Que yo pensaba", "Del que pensaba", "Como pensaba"], "resposta_correta": "De lo que pensaba"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Na verdade, eu estou surpreso(a) — o filme foi melhor do que eu pensava.'",
+        "resposta_esperada": "En realidad, estoy sorprendido, la película fue mejor de lo que pensaba",
+        "aceita_variacoes": ["En realidad, estoy sorprendido/a, la película fue mejor de lo que yo pensaba"],
+        "feedback_explicativo": "'Mejor de lo que' segue a mesma lógica comparativa já vista ('más caro de lo que') — usada quando o comparativo se refere a uma ideia inteira, não a um único substantivo."
+      }
+    },
+    {
+      "id": "esp-inter-09",
+      "tema": "Planejamento futuro",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'planejar' em espanhol?", "opcoes": ["Planear", "Planejar", "Planeaar", "Plannear"], "resposta_correta": "Planear"},
+        {"pergunta": "Como se escreve 'economizar' em espanhol?", "opcoes": ["Ahorrar", "Economizar", "Ahorar", "Ahorrarr"], "resposta_correta": "Ahorrar"},
+        {"pergunta": "Como se escreve 'dinheiro suficiente' em espanhol?", "opcoes": ["Dinero suficiente", "Suficiente dinero", "Bastante dinero", "Dinero bastante"], "resposta_correta": "Dinero suficiente"},
+        {"pergunta": "Como se escreve 'antes de' novamente para fixar em espanhol?", "opcoes": ["Antes de", "Antes que", "Delante de", "Ante de"], "resposta_correta": "Antes de"},
+        {"pergunta": "Como se escreve 'meu sonho' em espanhol?", "opcoes": ["Mi sueño", "Mi soño", "Mi sueno", "Mio sueño"], "resposta_correta": "Mi sueño"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Eu preciso planejar e economizar dinheiro suficiente antes de realizar meu sonho.'",
+        "resposta_esperada": "Necesito planear y ahorrar dinero suficiente antes de realizar mi sueño",
+        "aceita_variacoes": ["Necesito planificar y ahorrar suficiente dinero antes de cumplir mi sueño"],
+        "feedback_explicativo": "'Planear' e 'planificar' são sinônimos em espanhol, ambos usados para 'planejar' — a escolha entre eles costuma ser questão de preferência regional."
+      }
+    },
+    {
+      "id": "esp-inter-10",
+      "tema": "Revisão geral",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'embora/apesar de' em espanhol?", "opcoes": ["Aunque", "Aungue", "Aunqui", "Anque"], "resposta_correta": "Aunque"},
+        {"pergunta": "Como se escreve 'conseguir' em espanhol?", "opcoes": ["Lograr", "Conseguir", "Logar", "Lograrr"], "resposta_correta": "Lograr"},
+        {"pergunta": "Como se escreve 'ainda' em espanhol?", "opcoes": ["Todavía", "Todavia", "Todabía", "Aun"], "resposta_correta": "Todavía"},
+        {"pergunta": "Como se escreve 'orgulhoso(a)' em espanhol?", "opcoes": ["Orgulloso", "Orgulhoso", "Orgullosoo", "Orgullozo"], "resposta_correta": "Orgulloso"},
+        {"pergunta": "Como se escreve 'de mim mesmo(a)' em espanhol?", "opcoes": ["De mí mismo", "De mi mismo", "De mí mesmo", "De yo mismo"], "resposta_correta": "De mí mismo"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Embora tenha sido difícil, eu ainda consegui e estou orgulhoso de mim mesmo.'",
+        "resposta_esperada": "Aunque fue difícil, todavía lo logré y estoy orgulloso de mí mismo",
+        "aceita_variacoes": ["Aunque haya sido difícil, aun así lo logré y estoy orgulloso de mí mismo"],
+        "feedback_explicativo": "'Aunque' pode ser seguido de indicativo (fato já ocorrido, 'fue difícil') ou subjuntivo (incerteza, 'haya sido difícil') — a escolha muda a nuance da frase."
+      }
+    }
+  ]
+}

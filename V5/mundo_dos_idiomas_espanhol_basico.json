@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "espanhol",
+    "nivel": "basico",
+    "fase": "V5.1",
+    "status": "10 blocos completos, cada um com 5 palavras de vocabulario conectadas a 1 desafio de frase, mesmo padrao ja validado em Ingles.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases cotidianas, neutras."
+  },
+  "blocos": [
+    {
+      "id": "esp-basico-01",
+      "tema": "Em casa",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'casa' em espanhol?", "opcoes": ["Casa", "Caza", "Casaa", "Kasa"], "resposta_correta": "Casa"},
+        {"pergunta": "Como se escreve 'porta' em espanhol?", "opcoes": ["Puerta", "Porta", "Puertta", "Puirta"], "resposta_correta": "Puerta"},
+        {"pergunta": "Como se escreve 'janela' em espanhol?", "opcoes": ["Ventana", "Bentana", "Ventena", "Ventana"], "resposta_correta": "Ventana"},
+        {"pergunta": "Como se escreve 'mesa' em espanhol?", "opcoes": ["Mesa", "Meza", "Messa", "Meça"], "resposta_correta": "Mesa"},
+        {"pergunta": "Como se escreve 'grande' em espanhol?", "opcoes": ["Grande", "Grandee", "Grade", "Grandi"], "resposta_correta": "Grande"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'A casa é grande.'",
+        "resposta_esperada": "La casa es grande",
+        "aceita_variacoes": ["La casa es grande."],
+        "feedback_explicativo": "'La' é o artigo definido feminino em espanhol, equivalente a 'a' em português — 'casa' é palavra feminina em ambas as línguas."
+      }
+    },
+    {
+      "id": "esp-basico-02",
+      "tema": "Comida",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'maçã' em espanhol?", "opcoes": ["Manzana", "Mansana", "Manzanna", "Manzena"], "resposta_correta": "Manzana"},
+        {"pergunta": "Como se escreve 'água' em espanhol?", "opcoes": ["Agua", "Água", "Ahua", "Agüa"], "resposta_correta": "Agua"},
+        {"pergunta": "Como se escreve 'pão' em espanhol?", "opcoes": ["Pan", "Pao", "Pane", "Pann"], "resposta_correta": "Pan"},
+        {"pergunta": "Como se escreve 'gostar' em espanhol?", "opcoes": ["Gustar", "Gustear", "Gostar", "Gustarr"], "resposta_correta": "Gustar"},
+        {"pergunta": "Como se escreve 'eu' em espanhol?", "opcoes": ["Yo", "Mi", "Me", "Ye"], "resposta_correta": "Yo"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Eu gosto de maçã.'",
+        "resposta_esperada": "Me gusta la manzana",
+        "aceita_variacoes": ["A mí me gusta la manzana"],
+        "feedback_explicativo": "O verbo 'gustar' funciona ao contrário do português: em vez de 'eu gosto de', a estrutura literal é 'a mim agrada' — por isso 'me gusta', não 'yo gusto'."
+      }
+    },
+    {
+      "id": "esp-basico-03",
+      "tema": "Família",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'mãe' em espanhol?", "opcoes": ["Madre", "Mama", "Madree", "Madere"], "resposta_correta": "Madre"},
+        {"pergunta": "Como se escreve 'pai' em espanhol?", "opcoes": ["Padre", "Papa", "Padree", "Padere"], "resposta_correta": "Padre"},
+        {"pergunta": "Como se escreve 'irmão' em espanhol?", "opcoes": ["Hermano", "Ermano", "Hermanno", "Hermanoo"], "resposta_correta": "Hermano"},
+        {"pergunta": "Como se escreve 'ter' em espanhol?", "opcoes": ["Tener", "Tenar", "Tener", "Tenner"], "resposta_correta": "Tener"},
+        {"pergunta": "Como se escreve 'dois' em espanhol?", "opcoes": ["Dos", "Does", "Doss", "Duos"], "resposta_correta": "Dos"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Eu tenho dois irmãos.'",
+        "resposta_esperada": "Yo tengo dos hermanos",
+        "aceita_variacoes": ["Tengo dos hermanos"],
+        "feedback_explicativo": "'Tener' é irregular na primeira pessoa: 'yo tengo' (não 'yo tener'), diferente do padrão regular de outros verbos em -er."
+      }
+    },
+    {
+      "id": "esp-basico-04",
+      "tema": "Cores e roupas",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'vermelho' em espanhol?", "opcoes": ["Rojo", "Roho", "Rrojo", "Rojjo"], "resposta_correta": "Rojo"},
+        {"pergunta": "Como se escreve 'azul' em espanhol?", "opcoes": ["Azul", "Asul", "Azull", "Azzul"], "resposta_correta": "Azul"},
+        {"pergunta": "Como se escreve 'camisa' em espanhol?", "opcoes": ["Camisa", "Camissa", "Camiza", "Camiça"], "resposta_correta": "Camisa"},
+        {"pergunta": "Como se escreve 'meu(minha)' em espanhol?", "opcoes": ["Mi", "Mio", "Me", "Mia"], "resposta_correta": "Mi"},
+        {"pergunta": "Como se escreve 'é/está' (ele/ela) em espanhol?", "opcoes": ["Es", "Esta", "Son", "Ser"], "resposta_correta": "Es"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Minha camisa é azul.'",
+        "resposta_esperada": "Mi camisa es azul",
+        "aceita_variacoes": ["Mi camisa es azul."],
+        "feedback_explicativo": "'Mi' (sem acento) é possessivo ('meu/minha'), diferente de 'mí' (com acento), que é pronome pessoal — um erro comum mesmo entre falantes nativos."
+      }
+    },
+    {
+      "id": "esp-basico-05",
+      "tema": "Animais",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'cachorro' em espanhol?", "opcoes": ["Perro", "Pero", "Perro", "Perho"], "resposta_correta": "Perro"},
+        {"pergunta": "Como se escreve 'gato' em espanhol?", "opcoes": ["Gato", "Gatto", "Gatoo", "Ghato"], "resposta_correta": "Gato"},
+        {"pergunta": "Como se escreve 'pequeno' em espanhol?", "opcoes": ["Pequeño", "Pequeno", "Piqueño", "Pequenno"], "resposta_correta": "Pequeño"},
+        {"pergunta": "Como se escreve 'e' (conectivo) em espanhol?", "opcoes": ["Y", "E", "I", "Et"], "resposta_correta": "Y"},
+        {"pergunta": "Como se escreve 'são/estão' (eles) em espanhol?", "opcoes": ["Son", "Es", "Esta", "Estan"], "resposta_correta": "Son"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'O cachorro e o gato são pequenos.'",
+        "resposta_esperada": "El perro y el gato son pequeños",
+        "aceita_variacoes": ["El perro y el gato son pequeños."],
+        "feedback_explicativo": "'Pequeños' concorda em gênero e número com o sujeito composto ('perro y gato', masculino plural) — o adjetivo em espanhol sempre concorda com o substantivo."
+      }
+    },
+    {
+      "id": "esp-basico-06",
+      "tema": "Números e tempo",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'três' em espanhol?", "opcoes": ["Tres", "Treis", "Tress", "Tres"], "resposta_correta": "Tres"},
+        {"pergunta": "Como se escreve 'hoje' em espanhol?", "opcoes": ["Hoy", "Oy", "Hoi", "Hoye"], "resposta_correta": "Hoy"},
+        {"pergunta": "Como se escreve 'trabalhar' em espanhol?", "opcoes": ["Trabajar", "Trabalhar", "Trabajarr", "Trabajjar"], "resposta_correta": "Trabajar"},
+        {"pergunta": "Como se escreve 'horas' em espanhol?", "opcoes": ["Horas", "Oras", "Horass", "Horras"], "resposta_correta": "Horas"},
+        {"pergunta": "Como se escreve 'eu vou' (futuro imediato) em espanhol?", "opcoes": ["Voy a", "Ire a", "Voy para", "Va a"], "resposta_correta": "Voy a"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Eu vou trabalhar três horas hoje.'",
+        "resposta_esperada": "Voy a trabajar tres horas hoy",
+        "aceita_variacoes": ["Voy a trabajar tres horas hoy."],
+        "feedback_explicativo": "'Voy a' + infinitivo é a forma mais comum de expressar futuro próximo em espanhol falado, equivalente a 'vou' + verbo em português."
+      }
+    },
+    {
+      "id": "esp-basico-07",
+      "tema": "Escola",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'escola' em espanhol?", "opcoes": ["Escuela", "Escola", "Escuella", "Escola"], "resposta_correta": "Escuela"},
+        {"pergunta": "Como se escreve 'livro' em espanhol?", "opcoes": ["Libro", "Libbro", "Livro", "Libroo"], "resposta_correta": "Libro"},
+        {"pergunta": "Como se escreve 'professor(a)' em espanhol?", "opcoes": ["Profesor", "Professor", "Profesorr", "Profesar"], "resposta_correta": "Profesor"},
+        {"pergunta": "Como se escreve 'ler' em espanhol?", "opcoes": ["Leer", "Ler", "Leher", "Leerr"], "resposta_correta": "Leer"},
+        {"pergunta": "Como se escreve 'todo dia' em espanhol?", "opcoes": ["Todos los días", "Cada dia", "Todo día", "Todo los dias"], "resposta_correta": "Todos los días"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'O professor lê um livro todo dia.'",
+        "resposta_esperada": "El profesor lee un libro todos los días",
+        "aceita_variacoes": ["El profesor lee un libro todos los días."],
+        "feedback_explicativo": "'Lee' é a forma de 'leer' na terceira pessoa (él/ella) — verbos terminados em -er mudam para -e nessa conjugação, diferente do -a usado com verbos em -ar."
+      }
+    },
+    {
+      "id": "esp-basico-08",
+      "tema": "Cidade e transporte",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'carro' em espanhol?", "opcoes": ["Carro", "Coche", "Caro", "Carroo"], "resposta_correta": "Carro"},
+        {"pergunta": "Como se escreve 'rua' em espanhol?", "opcoes": ["Calle", "Rua", "Cale", "Calhe"], "resposta_correta": "Calle"},
+        {"pergunta": "Como se escreve 'rápido' em espanhol?", "opcoes": ["Rápido", "Rapido", "Rapidoo", "Rrapido"], "resposta_correta": "Rápido"},
+        {"pergunta": "Como se escreve 'dirigir' em espanhol?", "opcoes": ["Conducir", "Dirigir", "Manejarr", "Conducirr"], "resposta_correta": "Conducir"},
+        {"pergunta": "Como se escreve 'muito' (intensificador) em espanhol?", "opcoes": ["Muy", "Mucho", "Muyy", "Muitoo"], "resposta_correta": "Muy"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Ele dirige muito rápido na rua.'",
+        "resposta_esperada": "Él conduce muy rápido en la calle",
+        "aceita_variacoes": ["Él maneja muy rápido en la calle"],
+        "feedback_explicativo": "'Muy' se usa antes de adjetivos e advérbios ('muy rápido'), enquanto 'mucho' se usa com verbos ou substantivos — os dois significam 'muito', mas não são intercambiáveis."
+      }
+    },
+    {
+      "id": "esp-basico-09",
+      "tema": "Sentimentos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'feliz' em espanhol?", "opcoes": ["Feliz", "Felis", "Felizz", "Felice"], "resposta_correta": "Feliz"},
+        {"pergunta": "Como se escreve 'triste' em espanhol?", "opcoes": ["Triste", "Tristi", "Tristee", "Trizte"], "resposta_correta": "Triste"},
+        {"pergunta": "Como se escreve 'porque' em espanhol?", "opcoes": ["Porque", "Por que", "Porqué", "Porqui"], "resposta_correta": "Porque"},
+        {"pergunta": "Como se escreve 'hoje' novamente para fixar em espanhol?", "opcoes": ["Hoy", "Oy", "Hoi", "Hoye"], "resposta_correta": "Hoy"},
+        {"pergunta": "Como se escreve 'estou' (eu) em espanhol?", "opcoes": ["Estoy", "Esto", "Estoi", "Estoyy"], "resposta_correta": "Estoy"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Eu estou feliz hoje porque...'",
+        "resposta_esperada": "Estoy feliz hoy porque",
+        "aceita_variacoes": ["Yo estoy feliz hoy porque"],
+        "feedback_explicativo": "'Estoy' vem do verbo 'estar', usado para estados temporários (como sentimentos) — diferente de 'soy' (do verbo 'ser'), usado para características permanentes."
+      }
+    },
+    {
+      "id": "esp-basico-10",
+      "tema": "Revisão geral",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'obrigado(a)' em espanhol?", "opcoes": ["Gracias", "Grasias", "Graciass", "Gratias"], "resposta_correta": "Gracias"},
+        {"pergunta": "Como se escreve 'por favor' em espanhol?", "opcoes": ["Por favor", "Por fabor", "Porfavor", "Por favorr"], "resposta_correta": "Por favor"},
+        {"pergunta": "Como se escreve 'amigo(a)' em espanhol?", "opcoes": ["Amigo", "Amigoo", "Amijo", "Amigho"], "resposta_correta": "Amigo"},
+        {"pergunta": "Como se escreve 'bom(a)' em espanhol?", "opcoes": ["Bueno", "Buen", "Bono", "Buenoo"], "resposta_correta": "Bueno"},
+        {"pergunta": "Como se escreve 'você' em espanhol?", "opcoes": ["Tú", "Usted", "Tu", "Ustede"], "resposta_correta": "Tú"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_ES",
+        "enunciado": "Traduza para o espanhol: 'Obrigado, você é um bom amigo.'",
+        "resposta_esperada": "Gracias, tú eres un buen amigo",
+        "aceita_variacoes": ["Gracias, eres un buen amigo"],
+        "feedback_explicativo": "'Bueno' vira 'buen' quando vem antes de um substantivo masculino singular ('buen amigo') — essa forma reduzida (apócope) acontece com alguns adjetivos em espanhol."
+      }
+    }
+  ]
+}

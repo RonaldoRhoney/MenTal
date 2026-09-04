@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_idiomas",
+    "idioma": "frances",
+    "nivel": "intermediario",
+    "fase": "V5.2",
+    "status": "10 blocos completos, mesmo padrao ja validado.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - vocabulario e frases neutras."
+  },
+  "blocos": [
+    {
+      "id": "fr-inter-01",
+      "tema": "Trabalho e rotina",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'reunião' em francês?", "opcoes": ["Réunion", "Reunion", "Réuniao", "Reuniom"], "resposta_correta": "Réunion"},
+        {"pergunta": "Como se escreve 'ocupado(a)' em francês?", "opcoes": ["Occupé(e)", "Ocupé", "Occupée", "Ocupado"], "resposta_correta": "Occupé(e)"},
+        {"pergunta": "Como se escreve 'terminar' em francês?", "opcoes": ["Finir", "Terminer", "Finirr", "Finire"], "resposta_correta": "Finir"},
+        {"pergunta": "Como se escreve 'antes de' em francês?", "opcoes": ["Avant de", "Devant de", "Avant que", "Avent de"], "resposta_correta": "Avant de"},
+        {"pergunta": "Como se escreve 'preciso' (necessidade) em francês?", "opcoes": ["J'ai besoin de", "Je nécessite", "Je precise", "J'ai besoin"], "resposta_correta": "J'ai besoin de"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Eu preciso terminar a reunião antes do almoço porque estou ocupado.'",
+        "resposta_esperada": "J'ai besoin de finir la réunion avant le déjeuner parce que je suis occupé",
+        "aceita_variacoes": ["J'ai besoin de terminer la réunion avant le déjeuner car je suis occupé"],
+        "feedback_explicativo": "'Avoir besoin de' é a estrutura padrão para expressar necessidade em francês, literalmente 'ter necessidade de' — sempre seguida de substantivo ou infinitivo."
+      }
+    },
+    {
+      "id": "fr-inter-02",
+      "tema": "Viagem",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'aeroporto' em francês?", "opcoes": ["Aéroport", "Aeroport", "Aéroporte", "Aeroporte"], "resposta_correta": "Aéroport"},
+        {"pergunta": "Como se escreve 'mala' em francês?", "opcoes": ["Valise", "Malette", "Valisse", "Valize"], "resposta_correta": "Valise"},
+        {"pergunta": "Como se escreve 'atrasado(a)' em francês?", "opcoes": ["En retard", "Retardé", "Tarde", "En retarde"], "resposta_correta": "En retard"},
+        {"pergunta": "Como se escreve 'já' em francês?", "opcoes": ["Déjà", "Deja", "Ja", "Dèjà"], "resposta_correta": "Déjà"},
+        {"pergunta": "Como se escreve 'esquecer' em francês?", "opcoes": ["Oublier", "Esquecer", "Oublir", "Oubliar"], "resposta_correta": "Oublier"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Nós já estamos atrasados para o aeroporto, não esqueça a mala.'",
+        "resposta_esperada": "Nous sommes déjà en retard pour l'aéroport, n'oublie pas la valise",
+        "aceita_variacoes": ["On est déjà en retard pour l'aéroport, n'oubliez pas la valise"],
+        "feedback_explicativo": "'N'oublie pas' é o imperativo negativo informal — o negativo em francês se forma com 'ne...pas' ao redor do verbo, mesmo no imperativo."
+      }
+    },
+    {
+      "id": "fr-inter-03",
+      "tema": "Saúde",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'doente' em francês?", "opcoes": ["Malade", "Doente", "Maladee", "Malaid"], "resposta_correta": "Malade"},
+        {"pergunta": "Como se escreve 'médico(a)' em francês?", "opcoes": ["Médecin", "Medecin", "Médecine", "Medisin"], "resposta_correta": "Médecin"},
+        {"pergunta": "Como se escreve 'dor' em francês?", "opcoes": ["Douleur", "Dolor", "Douler", "Doulor"], "resposta_correta": "Douleur"},
+        {"pergunta": "Como se escreve 'deveria' em francês?", "opcoes": ["Devrait", "Devrai", "Devrais", "Devraient"], "resposta_correta": "Devrait"},
+        {"pergunta": "Como se escreve 'descansar' em francês?", "opcoes": ["Se reposer", "Descansar", "Se repose", "Reposer"], "resposta_correta": "Se reposer"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Você está doente e sentindo dor, deveria descansar e ver um médico.'",
+        "resposta_esperada": "Tu es malade et tu as mal, tu devrais te reposer et voir un médecin",
+        "aceita_variacoes": ["Vous êtes malade et vous avez mal, vous devriez vous reposer et voir un médecin"],
+        "feedback_explicativo": "'Avoir mal' é a expressão idiomática para 'sentir dor' em francês (literalmente 'ter mal'), diferente de usar 'douleur' diretamente como verbo."
+      }
+    },
+    {
+      "id": "fr-inter-04",
+      "tema": "Compras",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'caro(a)' em francês?", "opcoes": ["Cher/Chère", "Caro", "Chèr", "Chere"], "resposta_correta": "Cher/Chère"},
+        {"pergunta": "Como se escreve 'barato(a)' em francês?", "opcoes": ["Bon marché", "Pas cher", "Baratô", "Cheap"], "resposta_correta": "Pas cher"},
+        {"pergunta": "Como se escreve 'devolver' em francês?", "opcoes": ["Rendre", "Retourner", "Devolvoir", "Rendrre"], "resposta_correta": "Rendre"},
+        {"pergunta": "Como se escreve 'que' (comparação) em francês?", "opcoes": ["Que", "Comme", "Qui", "Quoi"], "resposta_correta": "Que"},
+        {"pergunta": "Como se escreve 'esperava' em francês?", "opcoes": ["J'espérais", "J'espere", "J'esperait", "J'esperai"], "resposta_correta": "J'espérais"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Este produto é mais caro do que eu esperava, eu quero devolver.'",
+        "resposta_esperada": "Ce produit est plus cher que je ne l'espérais, je veux le rendre",
+        "aceita_variacoes": ["Ce produit est plus cher que ce que j'espérais, je veux le rendre"],
+        "feedback_explicativo": "Comparações em francês formal podem usar 'ne' expletivo (sem valor negativo real) antes do verbo — 'que je ne l'espérais' é uma estrutura elegante, embora a versão simples sem 'ne' também seja aceita na fala."
+      }
+    },
+    {
+      "id": "fr-inter-05",
+      "tema": "Clima e planos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'provavelmente' em francês?", "opcoes": ["Probablement", "Probabelment", "Probablemente", "Probablemant"], "resposta_correta": "Probablement"},
+        {"pergunta": "Como se escreve 'chuva' em francês?", "opcoes": ["Pluie", "Chuva", "Pluye", "Ploi"], "resposta_correta": "Pluie"},
+        {"pergunta": "Como se escreve 'cancelar' em francês?", "opcoes": ["Annuler", "Cancelar", "Anuler", "Annullar"], "resposta_correta": "Annuler"},
+        {"pergunta": "Como se escreve 'a menos que' em francês?", "opcoes": ["À moins que", "A moins de", "Sauf que", "À moins de que"], "resposta_correta": "À moins que"},
+        {"pergunta": "Como se escreve 'parar' (chuva) em francês?", "opcoes": ["S'arrêter", "Arreter", "Stoper", "S'arreter"], "resposta_correta": "S'arrêter"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Nós provavelmente vamos cancelar o passeio a menos que a chuva pare.'",
+        "resposta_esperada": "Nous allons probablement annuler la sortie à moins que la pluie s'arrête",
+        "aceita_variacoes": ["On va probablement annuler la sortie à moins que la pluie ne s'arrête"],
+        "feedback_explicativo": "'À moins que' exige o modo subjuntivo no verbo seguinte ('s'arrête', subjuntivo, não 's'arrête' indicativo que teria a mesma grafia neste caso específico, mas a regra vale para a maioria dos verbos)."
+      }
+    },
+    {
+      "id": "fr-inter-06",
+      "tema": "Tecnologia",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'quebrado(a)' em francês?", "opcoes": ["Cassé(e)", "Casse", "Cassée", "Kassé"], "resposta_correta": "Cassé(e)"},
+        {"pergunta": "Como se escreve 'consertar' em francês?", "opcoes": ["Réparer", "Consertar", "Reparer", "Réparé"], "resposta_correta": "Réparer"},
+        {"pergunta": "Como se escreve 'senha' em francês?", "opcoes": ["Mot de passe", "Senha", "Code secret", "Passe mot"], "resposta_correta": "Mot de passe"},
+        {"pergunta": "Como se escreve 'de novo' em francês?", "opcoes": ["De nouveau", "De novo", "Encore une", "Denovo"], "resposta_correta": "De nouveau"},
+        {"pergunta": "Como se escreve 'tentar' em francês?", "opcoes": ["Essayer", "Tenter", "Essaier", "Essayerr"], "resposta_correta": "Essayer"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Meu celular está quebrado, eu preciso tentar consertar de novo.'",
+        "resposta_esperada": "Mon téléphone est cassé, je dois essayer de le réparer de nouveau",
+        "aceita_variacoes": ["Mon portable est cassé, je dois essayer de le réparer encore une fois"],
+        "feedback_explicativo": "'Essayer de' + infinitivo expressa tentativa — o 'de' é obrigatório entre 'essayer' e o verbo seguinte, diferente de outros verbos que ligam diretamente ao infinitivo."
+      }
+    },
+    {
+      "id": "fr-inter-07",
+      "tema": "Estudos",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'difícil' em francês?", "opcoes": ["Difficile", "Dificil", "Difficille", "Difisile"], "resposta_correta": "Difficile"},
+        {"pergunta": "Como se escreve 'entender' em francês?", "opcoes": ["Comprendre", "Entender", "Comprender", "Comprandre"], "resposta_correta": "Comprendre"},
+        {"pergunta": "Como se escreve 'explicar' em francês?", "opcoes": ["Expliquer", "Explicar", "Expliquar", "Expliqer"], "resposta_correta": "Expliquer"},
+        {"pergunta": "Como se escreve 'de novo' novamente para fixar em francês?", "opcoes": ["De nouveau", "De novo", "Encore une", "Denovo"], "resposta_correta": "De nouveau"},
+        {"pergunta": "Como se escreve 'poderia' (pedido educado) em francês?", "opcoes": ["Pourriez-vous", "Pouvez-vous", "Pourrait-il", "Pourriez"], "resposta_correta": "Pourriez-vous"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Este assunto é difícil, você poderia explicar de novo?'",
+        "resposta_esperada": "Ce sujet est difficile, pourriez-vous l'expliquer de nouveau ?",
+        "aceita_variacoes": ["Ce sujet est difficile, pourriez-vous expliquer encore une fois ?"],
+        "feedback_explicativo": "'Pourriez-vous' é o condicional de 'pouvoir' com inversão (forma interrogativa formal) — uma das formas mais educadas de fazer um pedido em francês."
+      }
+    },
+    {
+      "id": "fr-inter-08",
+      "tema": "Emoções e opinião",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'surpreso(a)' em francês?", "opcoes": ["Surpris(e)", "Surprise", "Suprise", "Surprize"], "resposta_correta": "Surpris(e)"},
+        {"pergunta": "Como se escreve 'na verdade' em francês?", "opcoes": ["En fait", "En verité", "A la verité", "En vrai fait"], "resposta_correta": "En fait"},
+        {"pergunta": "Como se escreve 'esperava (algo diferente)' em francês?", "opcoes": ["J'espérais", "J'espere", "J'esperait", "J'esperai"], "resposta_correta": "J'espérais"},
+        {"pergunta": "Como se escreve 'melhor' em francês?", "opcoes": ["Meilleur", "Milleur", "Meillor", "Meiller"], "resposta_correta": "Meilleur"},
+        {"pergunta": "Como se escreve 'do que eu pensava' em francês?", "opcoes": ["Que je ne le pensais", "Que je pensava", "Del que pensaba", "Comme je pensais"], "resposta_correta": "Que je ne le pensais"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Na verdade, eu estou surpreso(a) — o filme foi melhor do que eu pensava.'",
+        "resposta_esperada": "En fait, je suis surpris, le film était meilleur que je ne le pensais",
+        "aceita_variacoes": ["En fait, je suis surprise, le film était meilleur que ce que je pensais"],
+        "feedback_explicativo": "'Meilleur' é o comparativo irregular de 'bon' (bom), equivalente a 'melhor' — não existe 'plus bon' em francês, assim como não dizemos 'mais bom' em português correto."
+      }
+    },
+    {
+      "id": "fr-inter-09",
+      "tema": "Planejamento futuro",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'planejar' em francês?", "opcoes": ["Planifier", "Planejar", "Planifiquer", "Planer"], "resposta_correta": "Planifier"},
+        {"pergunta": "Como se escreve 'economizar' em francês?", "opcoes": ["Économiser", "Economiser", "Épargner", "Economizar"], "resposta_correta": "Économiser"},
+        {"pergunta": "Como se escreve 'dinheiro suficiente' em francês?", "opcoes": ["Assez d'argent", "Argent assez", "Suffisant argent", "Assez de l'argent"], "resposta_correta": "Assez d'argent"},
+        {"pergunta": "Como se escreve 'antes de' novamente para fixar em francês?", "opcoes": ["Avant de", "Devant de", "Avant que", "Avent de"], "resposta_correta": "Avant de"},
+        {"pergunta": "Como se escreve 'meu sonho' em francês?", "opcoes": ["Mon rêve", "Mon reve", "Ma rêve", "Mon rêv"], "resposta_correta": "Mon rêve"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Eu preciso planejar e economizar dinheiro suficiente antes de realizar meu sonho.'",
+        "resposta_esperada": "Je dois planifier et économiser assez d'argent avant de réaliser mon rêve",
+        "aceita_variacoes": ["J'ai besoin de planifier et d'épargner assez d'argent avant de réaliser mon rêve"],
+        "feedback_explicativo": "'Assez d'argent' usa 'de' (não 'de l'') antes de substantivo não contável em expressões de quantidade — regra comum a 'assez de', 'beaucoup de', 'peu de'."
+      }
+    },
+    {
+      "id": "fr-inter-10",
+      "tema": "Revisão geral",
+      "vocabulario": [
+        {"pergunta": "Como se escreve 'embora/apesar de' em francês?", "opcoes": ["Bien que", "Malgré que", "Bien de", "Malgré de"], "resposta_correta": "Bien que"},
+        {"pergunta": "Como se escreve 'conseguir' em francês?", "opcoes": ["Réussir", "Conseguir", "Reussir", "Réussirr"], "resposta_correta": "Réussir"},
+        {"pergunta": "Como se escreve 'ainda' em francês?", "opcoes": ["Encore", "Ainda", "Encor", "Encoree"], "resposta_correta": "Encore"},
+        {"pergunta": "Como se escreve 'orgulhoso(a)' em francês?", "opcoes": ["Fier/Fière", "Orgulhoso", "Fièr", "Fiere"], "resposta_correta": "Fier/Fière"},
+        {"pergunta": "Como se escreve 'de mim mesmo(a)' em francês?", "opcoes": ["De moi-même", "De moi meme", "De moi", "De moi mesmo"], "resposta_correta": "De moi-même"}
+      ],
+      "desafio_frase": {
+        "sentido": "PT_PARA_FR",
+        "enunciado": "Traduza para o francês: 'Embora tenha sido difícil, eu ainda consegui e estou orgulhoso de mim mesmo.'",
+        "resposta_esperada": "Bien que ça ait été difficile, j'ai quand même réussi et je suis fier de moi-même",
+        "aceita_variacoes": ["Bien que cela ait été difficile, j'ai réussi quand même et je suis fière de moi-même"],
+        "feedback_explicativo": "'Bien que' exige o subjuntivo no verbo seguinte ('ait été', subjuntivo de 'avoir été') — assim como 'à moins que', é uma das conjunções que sempre pede esse modo verbal em francês."
+      }
+    }
+  ]
+}
