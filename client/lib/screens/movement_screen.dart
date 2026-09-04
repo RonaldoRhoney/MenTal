@@ -1607,10 +1607,24 @@ class IntradayStepsLineChart extends StatelessWidget {
             curveSmoothness: 0.25,
             color: AppColors.gold,
             barWidth: 3,
+            // MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx
+            // §14 / U.I/MOVIMENTO_REDESIGN_V1.md §5.2 — "marcador
+            // circular dourado destacando o ponto de pico" (confirmado
+            // com Rhoney, 03/09/2026): todo ponto já é dourado, então o
+            // pico precisa de mais que a mesma cor pra se destacar —
+            // maior raio + um halo translúcido ao redor (glow sutil),
+            // os demais pontos continuam do tamanho normal.
             dotData: FlDotData(
               show: true,
-              getDotPainter: (spot, percent, bar, index) =>
-                  FlDotCirclePainter(radius: 3.5, color: AppColors.gold, strokeWidth: 0),
+              getDotPainter: (spot, percent, bar, index) {
+                final isPeak = spot.y == maxY;
+                return FlDotCirclePainter(
+                  radius: isPeak ? 6 : 3.5,
+                  color: AppColors.gold,
+                  strokeWidth: isPeak ? 5 : 0,
+                  strokeColor: AppColors.gold.withValues(alpha: 0.25),
+                );
+              },
             ),
             belowBarData: BarAreaData(
               show: true,
