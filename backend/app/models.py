@@ -430,6 +430,15 @@ class Attempt(Base):
     # pro client saber que deve voltar à Home em vez de oferecer
     # repetir/seguir (não existe "próximo" real nesse ponto).
     was_last_of_batch: Mapped[bool] = mapped_column(Boolean, default=False)
+    # REGRA_REVISAO_ERROS_FIM_RODADA.md — gravado pelo SERVIDOR no
+    # momento em que o desafio é servido pra revisão (GET /challenges/
+    # {id}/reattempt), nunca por um flag vindo do client em POST
+    # /answer (mesmo raciocínio de `timed`/`was_last_of_batch` acima —
+    # um client malicioso poderia reivindicar "isso é revisão" só pra
+    # tentar responder de novo sem gastar o limite diário). submit_answer
+    # usa isso pra pular XP/streak/badge/progresso — revisão é só
+    # reforço de aprendizado, nunca uma segunda chance de pontuar.
+    is_review: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
 class ChallengeBatchProgress(Base):

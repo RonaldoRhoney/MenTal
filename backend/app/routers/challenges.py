@@ -216,6 +216,55 @@ def search_challenges(
     )
 
 
+@router.get("/challenges/{challenge_id}/reattempt", response_model=schemas.ChallengeOut)
+def reattempt_challenge(
+    challenge_id: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """
+    REGRA_REVISAO_ERROS_FIM_RODADA.md — reapresenta um desafio já visto
+    NESTA MESMA rodada, especificamente pra revisão de um erro. Nunca
+    consome o limite diário (não é um desafio "novo": já foi contado
+    quando servido a primeira vez) e a resposta nunca gera XP/streak/
+    badge/progresso de território — submit_answer detecta
+    attempt.is_review e pula toda mutação, devolvendo só se acertou ou
+    não ("apenas confirmar o aprendizado", nunca pontuação nova).
+    """
+    challenge = db.get(models.Challenge, challenge_id)
+    if challenge is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})
+
+    services.get_or_create_profile(db, user_id)
+    territory = db.get(models.Territory, challenge.territory_id)
+    if territory is None or not services.is_territory_unlocked(db, user_id, territory):
+        raise HTTPException(status_code=403, detail={"error": {"code": "TERRITORY_LOCKED", "message": "Requires active subscription"}})
+
+    hints_available = len(
+        db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
+    )
+    options = services.shuffled_options(challenge.options) if challenge.options else challenge.options
+
+    attempt_id = models.new_uuid()
+    services.create_served_attempt(db, attempt_id, user_id, challenge.id, timed=False, was_last_of_batch=False, is_review=True)
+
+    return schemas.ChallengeOut(
+        challenge_id=challenge.id,
+        attempt_id=attempt_id,
+        territory_id=challenge.territory_id,
+        difficulty_level=challenge.difficulty_level,
+        prompt=challenge.prompt,
+        options=options,
+        hints_available=hints_available,
+        time_limit_seconds=None,
+        prompt_image=challenge.prompt_image,
+        clues=challenge.clues,
+        audio_url=challenge.audio_url,
+        audio_source_name=challenge.audio_source_name,
+        audio_source_url=challenge.audio_source_url,
+    )
+
+
 def _get_or_create_pending_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str) -> models.Attempt:
     attempt = db.get(models.Attempt, attempt_id)
     if attempt is not None:
@@ -317,6 +366,40 @@ def submit_answer(
             timed_out=attempt.timed_out,
             speed_bonus_xp=attempt.speed_bonus_xp,
             batch_exhausted=attempt.was_last_of_batch,
+        )
+
+    # REGRA_REVISAO_ERROS_FIM_RODADA.md — tentativa servida via GET
+    # /challenges/{id}/reattempt (attempt.is_review, gravado pelo
+    # SERVIDOR no momento do serve, nunca por flag do client): responde
+    # se acertou ou não, mas NUNCA mexe em XP/streak/badge/progresso de
+    # território/limite diário — "apenas confirmar o aprendizado", não
+    # uma segunda chance de pontuar. Sai ANTES da checagem de limite
+    # diário abaixo de propósito: revisão nunca consome esse limite.
+    if attempt.is_review:
+        is_correct = not body.timed_out and body.submitted_answer.strip().lower() == challenge.correct_answer.strip().lower()
+        attempt.submitted_answer = body.submitted_answer
+        attempt.is_correct = is_correct
+        attempt.xp_base = 0
+        attempt.xp_awarded = 0
+        attempt.response_time_ms = services.elapsed_ms_since(attempt.served_at)
+        attempt.timed_out = body.timed_out
+        db.commit()
+        streak = services.get_or_create_streak(db, user_id)
+        territory_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
+        return schemas.AnswerResponse(
+            is_correct=is_correct,
+            correct_answer=challenge.correct_answer,
+            explanation=challenge.explanation,
+            xp_base=0,
+            hints_used=attempt.hints_used,
+            xp_awarded=0,
+            streak=schemas.StreakOut(current_streak=streak.current_streak, freeze_available=streak.freeze_available),
+            territory_progress=schemas.TerritoryProgressOut(
+                xp_in_territory=territory_progress.xp_in_territory if territory_progress else 0,
+                conquered=bool(territory_progress and territory_progress.conquered_at),
+            ),
+            timed_out=body.timed_out,
+            batch_exhausted=False,
         )
 
     # Achado de auditoria de segurança (28/08/2026): este endpoint nunca

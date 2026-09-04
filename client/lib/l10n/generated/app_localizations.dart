@@ -718,6 +718,48 @@ abstract class AppLocalizations {
   /// **'Voltar para o Início'**
   String get batchCompletedBackToHomeButton;
 
+  /// Shown at the end of a batch when the player got at least one question wrong, offering to review just the wrong ones
+  ///
+  /// In pt, this message translates to:
+  /// **'{count, plural, one{Você errou 1 pergunta nesta rodada.} other{Você errou {count} perguntas nesta rodada.}}'**
+  String roundReviewOfferMessage(int count);
+
+  /// Declines the offer to review wrong answers, proceeding to the normal batch-completed screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Não, obrigado'**
+  String get roundReviewDeclineButton;
+
+  /// Accepts the offer to review wrong answers from this round
+  ///
+  /// In pt, this message translates to:
+  /// **'Refazer erros'**
+  String get roundReviewAcceptButton;
+
+  /// Small label shown while answering a question during the round-review phase, making clear it won't award XP
+  ///
+  /// In pt, this message translates to:
+  /// **'Modo revisão · sem XP'**
+  String get roundReviewBadgeLabel;
+
+  /// Shown after answering a review question, when there are still more wrong answers left to review
+  ///
+  /// In pt, this message translates to:
+  /// **'{count, plural, one{Falta 1 revisão.} other{Faltam {count} revisões.}}'**
+  String roundReviewRemainingMessage(int count);
+
+  /// Loads the next wrong-answer question during round review
+  ///
+  /// In pt, this message translates to:
+  /// **'Próxima revisão'**
+  String get roundReviewNextButton;
+
+  /// Shown after answering the last question in the round-review queue
+  ///
+  /// In pt, this message translates to:
+  /// **'Revisão concluída!'**
+  String get roundReviewFinishedMessage;
+
   /// FEEDBACK_POS_NIVEL.md — heading for the post-level feedback blocks
   ///
   /// In pt, this message translates to:

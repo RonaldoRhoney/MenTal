@@ -287,6 +287,27 @@
   "batchCompletedBackToHomeButton": "Voltar para o Início",
   "@batchCompletedBackToHomeButton": {"description": "Button to return to Home after completing a full batch of challenges"},
 
+  "roundReviewOfferMessage": "{count, plural, one{Você errou 1 pergunta nesta rodada.} other{Você errou {count} perguntas nesta rodada.}}",
+  "@roundReviewOfferMessage": {
+    "description": "Shown at the end of a batch when the player got at least one question wrong, offering to review just the wrong ones",
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "roundReviewDeclineButton": "Não, obrigado",
+  "@roundReviewDeclineButton": {"description": "Declines the offer to review wrong answers, proceeding to the normal batch-completed screen"},
+  "roundReviewAcceptButton": "Refazer erros",
+  "@roundReviewAcceptButton": {"description": "Accepts the offer to review wrong answers from this round"},
+  "roundReviewBadgeLabel": "Modo revisão · sem XP",
+  "@roundReviewBadgeLabel": {"description": "Small label shown while answering a question during the round-review phase, making clear it won't award XP"},
+  "roundReviewRemainingMessage": "{count, plural, one{Falta 1 revisão.} other{Faltam {count} revisões.}}",
+  "@roundReviewRemainingMessage": {
+    "description": "Shown after answering a review question, when there are still more wrong answers left to review",
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "roundReviewNextButton": "Próxima revisão",
+  "@roundReviewNextButton": {"description": "Loads the next wrong-answer question during round review"},
+  "roundReviewFinishedMessage": "Revisão concluída!",
+  "@roundReviewFinishedMessage": {"description": "Shown after answering the last question in the round-review queue"},
+
   "levelFeedbackHeading": "Como foi esse nível?",
   "@levelFeedbackHeading": {"description": "FEEDBACK_POS_NIVEL.md — heading for the post-level feedback blocks"},
 

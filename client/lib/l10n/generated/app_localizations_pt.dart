@@ -359,6 +359,43 @@ class AppLocalizationsPt extends AppLocalizations {
   String get batchCompletedBackToHomeButton => 'Voltar para o Início';
 
   @override
+  String roundReviewOfferMessage(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Você errou $count perguntas nesta rodada.',
+      one: 'Você errou 1 pergunta nesta rodada.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get roundReviewDeclineButton => 'Não, obrigado';
+
+  @override
+  String get roundReviewAcceptButton => 'Refazer erros';
+
+  @override
+  String get roundReviewBadgeLabel => 'Modo revisão · sem XP';
+
+  @override
+  String roundReviewRemainingMessage(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Faltam $count revisões.',
+      one: 'Falta 1 revisão.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get roundReviewNextButton => 'Próxima revisão';
+
+  @override
+  String get roundReviewFinishedMessage => 'Revisão concluída!';
+
+  @override
   String get levelFeedbackHeading => 'Como foi esse nível?';
 
   @override

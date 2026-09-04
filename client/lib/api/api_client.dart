@@ -173,6 +173,14 @@ class ApiClient {
     );
   }
 
+  // REGRA_REVISAO_ERROS_FIM_RODADA.md — reapresenta um desafio já visto
+  // nesta rodada pra revisão de erro. Nunca conta pro limite diário e a
+  // resposta nunca gera XP/streak/badge (submit_answer detecta
+  // is_review no servidor, gravado aqui, não por flag do client).
+  Future<Map<String, dynamic>> reattemptChallenge(String challengeId) async {
+    return _get(_uri('/challenges/$challengeId/reattempt'), headers: _headers);
+  }
+
   // FEEDBACK_POS_NIVEL.md (aprovado) — coleta pura, nunca afeta XP/
   // dificuldade adaptativa. comment é opcional, não bloqueia o envio.
   Future<Map<String, dynamic>> submitLevelFeedback({

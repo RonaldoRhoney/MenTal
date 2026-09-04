@@ -755,7 +755,13 @@ def register_content_suggestion(db: Session, user_id: str, query_text: str) -> N
 
 
 def create_served_attempt(
-    db: Session, attempt_id: str, user_id: str, challenge_id: str, timed: bool = False, was_last_of_batch: bool = False
+    db: Session,
+    attempt_id: str,
+    user_id: str,
+    challenge_id: str,
+    timed: bool = False,
+    was_last_of_batch: bool = False,
+    is_review: bool = False,
 ) -> models.Attempt:
     """
     Cria a linha de Attempt no momento em que o desafio é de fato
@@ -768,6 +774,9 @@ def create_served_attempt(
     was_last_of_batch (BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md) idem: só o
     momento do serve sabe se este era o último item do lote sem
     repetição — POST /answer só devolve o que foi gravado aqui.
+    is_review (REGRA_REVISAO_ERROS_FIM_RODADA.md): True só quando
+    servido via GET /challenges/{id}/reattempt — submit_answer pula
+    XP/streak/badge/progresso pra tentativas marcadas assim.
     """
     attempt = models.Attempt(
         attempt_id=attempt_id,
@@ -777,6 +786,7 @@ def create_served_attempt(
         served_at=utcnow(),
         timed=timed,
         was_last_of_batch=was_last_of_batch,
+        is_review=is_review,
     )
     db.add(attempt)
     db.commit()

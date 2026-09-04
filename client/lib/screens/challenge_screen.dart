@@ -115,6 +115,20 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   bool _audioLoadFailed = false;
   bool _audioHasPlayedOnce = false;
 
+  // REGRA_REVISAO_ERROS_FIM_RODADA.md — erros da rodada atual (só
+  // challenge_id, o suficiente pra reapresentar via GET /challenges/
+  // {id}/reattempt), guardados só em memória desta tela: nunca
+  // persistidos, zerados ao decidir não revisar ou ao terminar a
+  // revisão. Timeout NUNCA entra aqui — mesmo princípio já usado no
+  // resto do app (V2 item 15, Não-Humilhação): tempo esgotado não é
+  // "saber errado", é ausência de resposta, não precisa de revisão.
+  final List<String> _roundErrorChallengeIds = [];
+  // true enquanto o jogador está na etapa de revisão (depois de aceitar
+  // o convite) — desvia a tela de resultado pra "próxima revisão" em
+  // vez do fluxo normal de fim de lote/próximo desafio.
+  bool _inRoundReview = false;
+  final List<String> _reviewQueue = [];
+
   // MICROINTERACTIONS.md §3 — celebração forte (território/badge/level
   // up) usa confete + fogos + balões (pedido explícito: algo que remeta a
   // comemoração de verdade, não só confete); sons e o pulso sutil/
@@ -337,7 +351,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         responseTimeMs: responseTimeMs,
       );
       if (mounted) {
-        setState(() => _result = result);
+        setState(() {
+          _result = result;
+          _trackRoundErrorIfNeeded(result);
+        });
         _triggerFeedback(result);
       }
     } on ApiException catch (e) {
@@ -371,7 +388,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         timedOut: true,
       );
       if (mounted) {
-        setState(() => _result = result);
+        setState(() {
+          _result = result;
+          _trackRoundErrorIfNeeded(result);
+        });
         _triggerFeedback(result);
       }
     } on ApiException catch (e) {
@@ -433,11 +453,91 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     try {
       final result = await widget.client.submitAnswer(challenge['challenge_id'], attemptId, answer);
       if (mounted) {
-        setState(() => _result = result);
+        setState(() {
+          _result = result;
+          _trackRoundErrorIfNeeded(result);
+        });
         _triggerFeedback(result);
       }
     } on ApiException catch (e) {
       _showAnswerApiError(e);
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  /// REGRA_REVISAO_ERROS_FIM_RODADA.md §2 — registra o erro da rodada
+  /// atual (challenge_id só, chamado de dentro do mesmo setState que
+  /// grava `_result`). Timeout nunca conta como erro pra revisão (mesmo
+  /// raciocínio de Não-Humilhação já usado no resto da tela: tempo
+  /// esgotado não é "saber errado"). Durante a própria revisão
+  /// (`_inRoundReview`) não empilha de novo — evita loop infinito se o
+  /// jogador errar a mesma pergunta na revisão.
+  void _trackRoundErrorIfNeeded(Map<String, dynamic> result) {
+    if (_inRoundReview) return;
+    final isCorrect = result['is_correct'] as bool;
+    final timedOut = result['timed_out'] as bool? ?? false;
+    if (isCorrect || timedOut) return;
+    final challengeId = _challenge?['challenge_id'] as String?;
+    if (challengeId != null && !_roundErrorChallengeIds.contains(challengeId)) {
+      _roundErrorChallengeIds.add(challengeId);
+    }
+  }
+
+  /// REGRA_REVISAO_ERROS_FIM_RODADA.md §3 — aceito o convite de
+  /// revisão: move os erros acumulados pra fila de revisão e carrega o
+  /// primeiro. `_roundErrorChallengeIds` esvazia aqui (não da fila) pra
+  /// nunca reoferecer a mesma revisão de novo se o jogador voltar a
+  /// errar durante a própria revisão.
+  Future<void> _startRoundReview() async {
+    setState(() {
+      _inRoundReview = true;
+      _reviewQueue
+        ..clear()
+        ..addAll(_roundErrorChallengeIds);
+      _roundErrorChallengeIds.clear();
+    });
+    await _loadNextReviewChallenge();
+  }
+
+  /// Recusa o convite — some da tela sem carregar mais nada; o fluxo
+  /// normal de fim de lote assume (batchExhausted volta a ser o único
+  /// critério, já que `_roundErrorChallengeIds` fica vazio).
+  void _declineRoundReview() {
+    setState(() => _roundErrorChallengeIds.clear());
+  }
+
+  /// Reapresenta o próximo desafio errado da fila via GET /challenges/
+  /// {id}/reattempt (nunca via /next — precisa ser exatamente aquele
+  /// desafio, não um sorteado do lote). Mesmo reset de estado de
+  /// _repeatSameChallenge, adaptado pro resultado de ChallengeOut vindo
+  /// de reattempt em vez de manter `_challenge` intacto.
+  Future<void> _loadNextReviewChallenge() async {
+    if (_reviewQueue.isEmpty) return;
+    final challengeId = _reviewQueue.removeAt(0);
+    setState(() {
+      _loading = true;
+      _result = null;
+      _selectedOption = null;
+      _hintsShown = [];
+      _hintsExhausted = false;
+      _submitted = false;
+      _cluesRevealedCount = 0;
+      _showingQuestion = false;
+      _audioPlaying = false;
+      _audioLoadFailed = false;
+      _audioHasPlayedOnce = false;
+    });
+    try {
+      final challenge = await widget.client.reattemptChallenge(challengeId);
+      if (mounted) {
+        setState(() {
+          _challenge = challenge;
+          _attemptId = challenge['attempt_id'] as String?;
+        });
+      }
+    } on ApiException catch (e) {
+      if (mounted) setState(() => _error = e.message);
     } finally {
       if (mounted) setState(() => _loading = false);
     }
@@ -759,6 +859,26 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 ],
                 if (challenge['audio_url'] != null)
                   _buildAudioPlayerSection(challenge['audio_url'] as String, challenge['audio_source_name'] as String?),
+                // REGRA_REVISAO_ERROS_FIM_RODADA.md §3 — Clareza
+                // Imediata: o jogador precisa saber ANTES de responder
+                // que esta pergunta não vale XP (é revisão de um erro
+                // desta mesma rodada), não só descobrir depois de já ter
+                // respondido.
+                if (_inRoundReview) ...[
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: AppColors.teal.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: AppColors.teal.withValues(alpha: 0.4)),
+                    ),
+                    child: Text(
+                      l10n.roundReviewBadgeLabel,
+                      style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 11),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                ],
                 Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'visual' && options != null)
@@ -1114,7 +1234,53 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         // batalha pontual entre dois jogadores).
         if (widget.battleId != null)
           FilledButton(onPressed: () => Navigator.of(context).pop(), child: Text(l10n.backButton))
-        else if (batchExhausted) ...[
+        // REGRA_REVISAO_ERROS_FIM_RODADA.md §3 — enquanto o jogador está
+        // na etapa de revisão, o rodapé é sempre "próxima revisão" ou
+        // "revisão concluída", nunca o fluxo normal de fim de lote (que
+        // não se aplica aqui — a fila de revisão é o que manda).
+        else if (_inRoundReview) ...[
+          Text(
+            _reviewQueue.isEmpty
+                ? l10n.roundReviewFinishedMessage
+                : l10n.roundReviewRemainingMessage(_reviewQueue.length),
+            textAlign: TextAlign.center,
+            style: TextStyle(color: AppColors.muted),
+          ),
+          const SizedBox(height: 12),
+          FilledButton(
+            onPressed: _reviewQueue.isEmpty
+                ? () => Navigator.of(context).popUntil((route) => route.isFirst)
+                : _loadNextReviewChallenge,
+            child: Text(_reviewQueue.isEmpty ? l10n.batchCompletedBackToHomeButton : l10n.roundReviewNextButton),
+          ),
+        ] else if (batchExhausted && _roundErrorChallengeIds.isNotEmpty) ...[
+          // §3 — fim da rodada normal, mas com pelo menos um erro
+          // acumulado: oferece revisar antes de ir pra tela de
+          // conclusão de sempre (que só aparece se recusar).
+          Text(
+            l10n.roundReviewOfferMessage(_roundErrorChallengeIds.length),
+            textAlign: TextAlign.center,
+            style: TextStyle(color: AppColors.muted),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: _declineRoundReview,
+                  child: Text(l10n.roundReviewDeclineButton),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: FilledButton(
+                  onPressed: _startRoundReview,
+                  child: Text(l10n.roundReviewAcceptButton),
+                ),
+              ),
+            ],
+          ),
+        ] else if (batchExhausted) ...[
           Text(
             l10n.batchCompletedMessage,
             textAlign: TextAlign.center,
