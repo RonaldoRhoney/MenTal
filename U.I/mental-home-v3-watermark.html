@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENTAL — Home Redesign v3 (marca d'água)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+
+  :root{
+    --bg: #0B0D0E;
+    --bg-elev: #14171A;
+    --bg-card: #181B1E;
+    --hairline: #26292D;
+    --gold: #E2BE6E;
+    --teal: #3FA796;
+    --violet: #8B6BFF;
+    --text-hi: #F3F1EC;
+    --text-mid: #A9AEB3;
+    --text-low: #6C7176;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#000; }
+  body{ font-family:'Inter',sans-serif; display:flex; justify-content:center; align-items:flex-start; padding:40px 0; min-height:100vh; }
+
+  .phone{ width:390px; height:844px; background:var(--bg); border-radius:44px; overflow:hidden; position:relative; box-shadow: 0 0 0 10px #1c1c1c, 0 20px 60px rgba(0,0,0,0.6); }
+  .statusbar{ height:40px; display:flex; align-items:center; justify-content:space-between; padding:0 26px; color:var(--text-hi); font-size:13px; font-weight:600; position:relative; z-index:2; }
+  .statusbar .icons{ display:flex; gap:6px; align-items:center; color:var(--text-mid); font-size:12px; }
+
+  /* Watermark layer: MENTAL wordmark as faint background texture, fixed behind all content */
+  .watermark{
+    position:absolute; top:0; left:0; right:0; bottom:0;
+    display:flex; align-items:center; justify-content:center;
+    pointer-events:none; z-index:0; overflow:hidden;
+  }
+  .watermark span{
+    font-family:'Fraunces', serif; font-weight:700;
+    font-size:118px; letter-spacing:6px;
+    color:rgba(226,190,110,0.045);
+    transform:rotate(-12deg) translateY(-30px);
+    white-space:nowrap;
+    user-select:none;
+  }
+  .watermark::after{
+    content:'';
+    position:absolute; inset:0;
+    background: radial-gradient(circle at 30% 20%, rgba(63,167,150,0.03) 0%, transparent 55%);
+  }
+
+  .screen{ position:relative; z-index:1; height: calc(100% - 40px - 76px); overflow-y:auto; padding: 12px 20px 28px; }
+  .screen::-webkit-scrollbar{ display:none; }
+
+  .identity-card{ background: linear-gradient(155deg, rgba(24,27,30,0.92) 0%, rgba(21,24,26,0.94) 100%); backdrop-filter: blur(2px); border:1px solid var(--hairline); border-radius:20px; padding:20px; position:relative; overflow:hidden; opacity:0; animation: riseIn .5s cubic-bezier(.2,.8,.2,1) .05s forwards; }
+  .identity-card::before{ content:''; position:absolute; top:-40%; right:-20%; width:200px; height:200px; background: radial-gradient(circle, rgba(63,167,150,0.10) 0%, transparent 70%); pointer-events:none; }
+  .id-top{ display:flex; align-items:center; gap:13px; }
+  .avatar-wrap{ position:relative; flex-shrink:0; }
+  .avatar{ width:56px; height:56px; border-radius:50%; object-fit:cover; border:2px solid var(--gold); box-shadow: 0 0 0 3px var(--bg-card); }
+  .level-badge{ position:absolute; bottom:-4px; right:-4px; background:var(--teal); color:#08110F; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:10px; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:2px solid var(--bg-card); }
+  .id-name-block{ flex:1; min-width:0; }
+  .id-name{ font-family:'Fraunces', serif; font-weight:600; font-size:19px; color:var(--text-hi); }
+  .id-level-label{ font-size:12px; color:var(--teal); font-weight:600; margin-top:2px; }
+  .mentalcoins{ display:flex; align-items:center; gap:5px; flex-shrink:0; background:rgba(226,190,110,0.08); border:1px solid rgba(226,190,110,0.25); padding:6px 10px; border-radius:12px; }
+  .mentalcoins .coin{ width:15px; height:15px; border-radius:50%; background: conic-gradient(from 180deg, #F5D98A, #C99A3E, #F5D98A); }
+  .mentalcoins span{ font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; color:var(--gold); }
+
+  .xp-block{ margin-top:18px; }
+  .xp-row{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:7px; }
+  .xp-row .label{ font-size:11px; color:var(--text-low); text-transform:uppercase; letter-spacing:1px; }
+  .xp-row .value{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-mid); }
+  .xp-track{ height:7px; background:var(--bg); border-radius:100px; overflow:hidden; border:1px solid var(--hairline); }
+  .xp-fill{ height:100%; width:46%; border-radius:100px; background: linear-gradient(90deg, var(--violet) 0%, var(--gold) 50%, var(--teal) 100%); }
+
+  .id-meta-row{ display:flex; gap:16px; margin-top:14px; padding-top:14px; border-top:1px solid var(--hairline); }
+  .id-meta-item{ display:flex; flex-direction:column; gap:2px; }
+  .id-meta-item .n{ font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; color:var(--text-hi); }
+  .id-meta-item .l{ font-size:9.5px; color:var(--text-low); text-transform:uppercase; letter-spacing:0.8px; }
+
+  @keyframes riseIn{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+  @keyframes fadeDown{ from{opacity:0; transform:translateY(-8px);} to{opacity:1; transform:translateY(0);} }
+
+  .quicknav{ display:grid; grid-template-columns: repeat(5,1fr); gap:7px; margin-top:16px; opacity:0; animation: fadeDown .5s ease-out .15s forwards; }
+  .qn-item{ background:rgba(20,23,26,0.85); backdrop-filter: blur(2px); border:1px solid var(--hairline); border-radius:14px; padding:10px 4px; display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .qn-item svg{ width:17px; height:17px; opacity:0.75; }
+  .qn-item span{ font-size:9px; color:var(--text-mid); font-weight:500; text-align:center; }
+  .qn-item.movimento{ position:relative; }
+  .qn-badge{ position:absolute; top:-6px; right:2px; background:#E05A4E; color:#fff; font-size:8.5px; font-weight:700; padding:2px 5px; border-radius:100px; border:2px solid var(--bg); }
+
+  /* 5th card now shares the exact same column layout/size as the other 4 — only the icon row differs (2 small icons side by side instead of 1) */
+  .qn-item.merged{ border-color: rgba(226,190,110,0.3); background: linear-gradient(135deg, rgba(226,190,110,0.1), rgba(20,23,26,0.9)); }
+  .qn-item.merged .merged-icons{ display:flex; flex-direction:row; align-items:center; gap:5px; }
+  .qn-item.merged .merged-icons svg{ width:14px; height:14px; opacity:0.85; }
+  .qn-item.merged .divider{ width:1px; height:13px; background:var(--hairline); }
+  .qn-item.merged span{ font-size:9px; color:var(--text-mid); font-weight:500; text-align:center; line-height:1.25; }
+
+  .section-label{ font-size:11px; color:var(--text-low); text-transform:uppercase; letter-spacing:1.5px; margin:22px 2px 10px; display:flex; align-items:center; gap:8px; opacity:0; animation: fadeDown .5s ease-out .25s forwards; }
+  .section-label::after{ content:''; flex:1; height:1px; background:var(--hairline); }
+
+  .search-bar{ display:flex; align-items:center; gap:10px; background:rgba(20,23,26,0.85); backdrop-filter: blur(2px); border:1px solid var(--hairline); border-radius:100px; padding:13px 16px; margin-top:16px; opacity:0; animation: fadeDown .5s ease-out .2s forwards; }
+  .search-bar svg{ width:16px; height:16px; opacity:0.6; flex-shrink:0; }
+  .search-bar input{ background:none; border:none; outline:none; color:var(--text-hi); font-family:'Inter',sans-serif; font-size:13px; flex:1; }
+  .search-bar input::placeholder{ color:var(--text-low); }
+  .search-bar .go{ width:16px; height:16px; opacity:0.8; flex-shrink:0; }
+
+  .world-item{ display:flex; align-items:center; justify-content:space-between; background:rgba(24,27,30,0.88); backdrop-filter: blur(2px); border:1px solid var(--hairline); border-radius:16px; padding:16px 18px; margin-bottom:10px; opacity:0; transform:translateY(10px); animation: riseIn .5s cubic-bezier(.2,.8,.2,1) forwards; }
+  .world-item:nth-child(1){ animation-delay:.32s; }
+  .world-item:nth-child(2){ animation-delay:.38s; }
+  .world-item:nth-child(3){ animation-delay:.44s; }
+  .world-item span{ font-family:'Fraunces',serif; font-weight:600; font-size:15.5px; color:var(--text-hi); }
+  .world-item svg{ width:16px; height:16px; opacity:0.6; }
+
+  .bottomnav{ position:absolute; bottom:0; left:0; right:0; height:76px; background:rgba(11,13,14,0.92); backdrop-filter:blur(20px); border-top:1px solid var(--hairline); display:flex; align-items:center; justify-content:space-around; padding-bottom:10px; z-index:2; }
+  .bn-item{ display:flex; flex-direction:column; align-items:center; gap:4px; }
+  .bn-item svg{ width:19px; height:19px; opacity:0.5; }
+  .bn-item span{ font-size:9.5px; color:var(--text-low); font-weight:500; }
+  .bn-item.active{ position:relative; top:-6px; }
+  .bn-item.active .icon-wrap{ background: linear-gradient(135deg, var(--teal), #2C8577); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow: 0 4px 16px rgba(63,167,150,0.4); }
+  .bn-item.active svg{ opacity:1; width:19px; height:19px; }
+  .bn-item.active span{ color:var(--teal); font-weight:600; margin-top:2px; }
+
+  .caption{ max-width:390px; margin-top:22px; color:var(--text-mid); font-family:'Inter',sans-serif; font-size:13px; line-height:1.6; padding:0 4px; }
+  .caption h3{ color:#F3F1EC; font-family:'Fraunces',serif; font-size:15px; margin-bottom:6px; font-weight:600; }
+  .wrap{ position:relative; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="phone">
+    <div class="statusbar">
+      <span>08:14</span>
+      <div class="icons"><span>4G</span><span>📶</span><span>🔋</span></div>
+    </div>
+
+    <!-- Watermark layer: sits behind everything, never intercepts touch, never competes for reading attention -->
+    <div class="watermark"><span>MENTAL</span></div>
+
+    <div class="screen">
+
+      <div class="identity-card">
+        <div class="id-top">
+          <div class="avatar-wrap">
+            <img class="avatar" src="https://i.pravatar.cc/120?img=13" alt="">
+            <div class="level-badge">82</div>
+          </div>
+          <div class="id-name-block">
+            <div class="id-name">Rhoney</div>
+            <div class="id-level-label">Nível 82 · Conquistador</div>
+          </div>
+          <div class="mentalcoins">
+            <div class="coin"></div>
+            <span>40</span>
+          </div>
+        </div>
+
+        <div class="xp-block">
+          <div class="xp-row">
+            <span class="label">Progresso do nível</span>
+            <span class="value">46 / 100 XP</span>
+          </div>
+          <div class="xp-track"><div class="xp-fill"></div></div>
+        </div>
+
+        <div class="id-meta-row">
+          <div class="id-meta-item"><span class="n">8.146</span><span class="l">XP total</span></div>
+          <div class="id-meta-item"><span class="n">0 / 4</span><span class="l">Mundos</span></div>
+          <div class="id-meta-item"><span class="n">🔥 11</span><span class="l">Sequência</span></div>
+        </div>
+      </div>
+
+      <div class="quicknav">
+        <div class="qn-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3FA796" stroke-width="2"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+          <span>Progresso</span>
+        </div>
+        <div class="qn-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E2BE6E" stroke-width="2"><path d="M4 20v-6M12 20V8M20 20v-4"/></svg>
+          <span>Ranking</span>
+        </div>
+        <div class="qn-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3FA796" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M14.5 19c.3-2 1.8-3.5 4-3.5"/></svg>
+          <span>Amigos</span>
+        </div>
+        <div class="qn-item movimento">
+          <div class="qn-badge">966</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E2BE6E" stroke-width="2"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l-3 8M12 13l3 8M8 12l4-2 4 2"/></svg>
+          <span>Movimento</span>
+        </div>
+        <div class="qn-item merged">
+          <div class="merged-icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#E2BE6E" stroke-width="2"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8L15.8 7.2M8.2 13.2L15.8 16.8"/></svg>
+            <div class="divider"></div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#E2BE6E" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+          </div>
+          <span>Mais</span>
+        </div>
+      </div>
+
+      <div class="search-bar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#A9AEB3" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Buscar tema, frase ou palavra...">
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="#E2BE6E" stroke-width="2.3"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="section-label">Seus Mundos</div>
+
+      <div class="world-item">
+        <span>Mundo da Linguagem</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#A9AEB3" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="world-item">
+        <span>Mundo da Mente Lógica</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#A9AEB3" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="world-item">
+        <span>Mundo da Cultura Geral</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#A9AEB3" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+
+    </div>
+
+    <div class="bottomnav">
+      <div class="bn-item active">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#08110F" stroke-width="2.3"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg>
+        </div>
+        <span>Início</span>
+      </div>
+      <div class="bn-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#6C7176" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+        <span>Perfil</span>
+      </div>
+      <div class="bn-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#6C7176" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M17.7 6.3l-1.4 1.4M7.7 16.3l-1.4 1.4"/></svg>
+        <span>Ajuste</span>
+      </div>
+      <div class="bn-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#6C7176" stroke-width="2"><path d="M13 3L5 13h6l-1 8 8-10h-6z"/></svg>
+        <span>Batalhas</span>
+      </div>
+      <div class="bn-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#6C7176" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 9 9 0 01-4-1L3 20l1.3-3.9a8.4 8.4 0 01-1-4A8.4 8.4 0 0112 3a8.5 8.5 0 019 8.5z"/></svg>
+        <span>Feedback</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="caption">
+  <h3>Como a marca d'água funciona</h3>
+  1. "MENTAL" fica atrás de todo o conteúdo, em opacidade muito baixa (~4.5%), rotacionado suavemente — presente, mas nunca competindo com leitura ou toque.<br>
+  2. Fica numa camada própria (z-index 0), sem receber toque nenhum — nenhum risco de capturar cliques que deveriam ir para os cards acima.<br>
+  3. Cards e barra de busca ganharam leve transparência + blur para deixar a marca d'água "respirar" através deles, sem prejudicar a legibilidade do conteúdo.<br>
+  4. Não conta como redundância de informação (diferente do wordmark antigo) — é textura de fundo, do mesmo jeito que padrões/watermarks de apps como bancos e apps de produtividade usam para reforçar identidade sem custar espaço de UI.
+</div>
+
+</div>
+
+</body>
+</html>
