@@ -1882,6 +1882,12 @@ abstract class AppLocalizations {
   /// **'Sugestão registrada! Um agente vai avaliar esse conteúdo.'**
   String get homeSearchSuggestionRegisteredMessage;
 
+  /// Label for the 5th quick-action card on Home (HOME_REDESIGN_V2_MINIMALISMO.md), merging the share and theme-toggle icons
+  ///
+  /// In pt, this message translates to:
+  /// **'Mais'**
+  String get homeMoreCardLabel;
+
   /// Button to share the invite code via WhatsApp/social apps
   ///
   /// In pt, this message translates to:

@@ -1050,6 +1050,9 @@ class AppLocalizationsPt extends AppLocalizations {
       'Sugestão registrada! Um agente vai avaliar esse conteúdo.';
 
   @override
+  String get homeMoreCardLabel => 'Mais';
+
+  @override
   String get friendsInviteShareButton => 'Indicar';
 
   @override

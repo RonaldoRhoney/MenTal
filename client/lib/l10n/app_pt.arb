@@ -969,6 +969,11 @@
     "description": "Confirmation snackbar after the user taps homeSearchSuggestButton"
   },
 
+  "homeMoreCardLabel": "Mais",
+  "@homeMoreCardLabel": {
+    "description": "Label for the 5th quick-action card on Home (HOME_REDESIGN_V2_MINIMALISMO.md), merging the share and theme-toggle icons"
+  },
+
   "friendsInviteShareButton": "Indicar",
   "@friendsInviteShareButton": {"description": "Button to share the invite code via WhatsApp/social apps"},
 

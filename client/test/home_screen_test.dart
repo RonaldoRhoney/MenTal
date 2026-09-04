@@ -180,18 +180,53 @@ void main() {
     expect(find.byIcon(Icons.check_circle), findsWidgets);
   });
 
-  testWidgets('botão de convidar amigos aparece ao lado do wordmark MENTAL e não trava a tela ao tocar', (tester) async {
-    // Achado testando: o share sheet nativo não existe no ambiente de
-    // widget test — o mesmo princípio de ShareAchievementButton se
-    // aplica aqui (compartilhar é reforço, nunca pode lançar exceção
-    // não tratada), então este teste prova só isso: o botão existe e
-    // tocar nele não derruba a tela.
+  testWidgets('botão de convidar amigos existe no 5º card ("Mais") e não trava a tela ao tocar', (tester) async {
+    // HOME_REDESIGN_V2_MINIMALISMO.md §3.3 (03/09/2026) — o ícone de
+    // compartilhar saiu do cabeçalho (removido junto do wordmark) e
+    // agora mora dentro do 5º card do grid de atalhos, ao lado do
+    // alternador de tema. Achado testando: o share sheet nativo não
+    // existe no ambiente de widget test — o mesmo princípio de
+    // ShareAchievementButton se aplica aqui (compartilhar é reforço,
+    // nunca pode lançar exceção não tratada), então este teste prova só
+    // isso: o botão existe e tocar nele não derruba a tela.
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
     expect(find.byIcon(Icons.share_outlined), findsOneWidget);
 
     await tester.tap(find.byIcon(Icons.share_outlined));
+    await tester.pumpAndSettle();
+  });
+
+  testWidgets('HOME_REDESIGN_V2: sem wordmark/slogan de destaque, banner de Movimento removido, grid com 5 cards', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(tester, homeApp(_FakeApiClient()));
+
+    // §2/§3.1 — o slogan (só existia junto do bloco de texto de
+    // destaque) não aparece mais na Home; "MENTAL" só sobrevive como
+    // marca d'água de fundo (widget dedicado, sem interceptar toque).
+    expect(find.text('Mental é quem conquista com a mente.'), findsNothing);
+
+    // §3.2 — o banner de bônus de Movimento não existe mais na Home,
+    // em nenhuma circunstância (a lógica foi removida, não só ocultada).
+    expect(find.text('Colete seus bônus de Movimento'), findsNothing);
+
+    // §3.3 — grid de 5 cards com tamanho idêntico: os 4 de sempre + o
+    // novo "Mais", que consolida compartilhar + tema.
+    expect(find.text('Progresso'), findsOneWidget);
+    expect(find.text('Ranking'), findsOneWidget);
+    expect(find.text('Amigos'), findsOneWidget);
+    expect(find.text('Movimento'), findsOneWidget);
+    expect(find.text('Mais'), findsOneWidget);
+
+    // Os dois ícones do card "Mais" continuam funcionando, cada um com
+    // sua própria área de toque.
+    expect(find.byIcon(Icons.share_outlined), findsOneWidget);
+    final themeIcon = find.byIcon(Icons.dark_mode_rounded).evaluate().isNotEmpty
+        ? find.byIcon(Icons.dark_mode_rounded)
+        : find.byIcon(Icons.light_mode_rounded);
+    expect(themeIcon, findsOneWidget);
+    await tester.tap(themeIcon);
     await tester.pumpAndSettle();
   });
 

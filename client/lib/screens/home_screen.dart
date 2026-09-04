@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
@@ -12,7 +14,6 @@ import '../theme/app_theme.dart';
 import '../widgets/coins_rise_overlay.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
-import '../widgets/pulse_in.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
@@ -123,13 +124,6 @@ class _HomeScreenState extends State<HomeScreen> {
   int? _movementPendingSteps;
   String? _movementCycleId;
   StreamSubscription<int>? _movementStepSub;
-  // Alerta sutil de bônus acumulado (29/08/2026, pedido de Rhoney):
-  // nada se perde enquanto não coletado — passos do ciclo atual ficam
-  // guardados localmente (MovementService) e o ciclo anterior fica
-  // reservado dentro da janela de graça (MOVEMENT_COLLECTION_GRACE_
-  // HOURS, backend) — isso só formaliza um convite visual pra vir
-  // coletar, sem mudar nenhuma regra de acúmulo que já existia.
-  bool _movementHasPendingCycle = false;
 
   // Pedido de Rhoney (2026-09-02): moedas sobem na tela ao cruzar 100 XP
   // ou 50 MentalCoins ao convidar amigos (services.crossed_coin_milestone
@@ -286,14 +280,6 @@ class _HomeScreenState extends State<HomeScreen> {
       final status = await widget.client.movementStatus();
       final enabled = status['movement_enabled'] as bool;
       final cycle = status['current_cycle'] as Map<String, dynamic>?;
-      final pendingCycle = status['pending_report_cycle'] as Map<String, dynamic>?;
-      // Mesmo reconhecimento local usado na tela Movimento (achado
-      // 30/08/2026, MENTAL_MOVIMENTO_REFORMULACAO.md §2): sem isso, este
-      // banner ficaria pedindo pra sempre um toque que não colhe nada
-      // (ver MovementService.pendingDeltaForClosedCycle).
-      final hasPendingCycle = pendingCycle != null &&
-          !(await MovementService.instance.isPendingCycleAcknowledged(pendingCycle['id'] as String));
-      if (mounted) setState(() => _movementHasPendingCycle = hasPendingCycle);
       if (!enabled || cycle == null) {
         _movementStepSub?.cancel();
         _movementCycleId = null;
@@ -424,81 +410,33 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: CoinsRiseOverlay(
           controller: _coinsRise,
-          child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Stack(
             children: [
-              // Identidade de marca no topo — mesma linguagem visual do
-              // splash/login (BRAND.md). Alternar claro/escuro (29/08/2026)
-              // fica à direita; convidar amigos (pedido de Rhoney) fica à
-              // esquerda, espelhado — os dois cantos do wordmark
-              // centralizado, sem competir com ele.
-              const SizedBox(height: 16),
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Column(
-                    children: [
-                      Text(l10n.homeTitle, textAlign: TextAlign.center, style: Theme.of(context).textTheme.displaySmall),
-                      const SizedBox(height: 4),
-                      Text(
-                        l10n.loginSlogan,
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                    ],
-                  ),
-                  Positioned(
-                    left: 0,
-                    top: 0,
-                    child: Semantics(
-                      button: true,
-                      label: l10n.shareAppButtonTooltip,
-                      child: IconButton(
-                        tooltip: l10n.shareAppButtonTooltip,
-                        onPressed: _shareApp,
-                        icon: Icon(Icons.share_outlined, color: AppColors.gold),
-                      ),
+              // HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — "MENTAL" some como
+              // bloco de texto de destaque (já aparece na Splash, repetir
+              // aqui era redundância pura) e vira marca d'água: opacidade
+              // muito baixa, camada de fundo, NUNCA recebe toque
+              // (IgnorePointer) — os cards acima continuam 100% clicáveis.
+              const Positioned.fill(child: _MentalWatermark()),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const SizedBox(height: 16),
+                    // §3.3 — grid de 5 cards (Progresso/Ranking/Amigos/
+                    // Movimento/Mais), todos com o mesmo tamanho. O 5º
+                    // card ("Mais") reaproveita os handlers de
+                    // compartilhar e alternar tema que antes ficavam
+                    // soltos no cabeçalho.
+                    _QuickActionsRow(
+                      client: widget.client,
+                      movementPendingSteps: _movementPendingSteps,
+                      onReturnFromProgress: _loadProgress,
+                      onReturnFromMovement: _loadMovementBadge,
+                      onShareApp: _shareApp,
                     ),
-                  ),
-                  const Positioned(
-                    right: 0,
-                    top: 0,
-                    child: _ThemeModeToggleButton(),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              // Achado real (pedido de Rhoney, 2026-09-03): "> 0" fazia
-              // esse banner aparecer o tempo todo pra quem já está
-              // andando com o app aberto — o sensor sempre acumula
-              // alguns passos não coletados entre um relatório e outro,
-              // então "> 0" nunca ficava vazio de verdade. Usa o mesmo
-              // limiar da conversão já documentada na tela Movimento
-              // ("100 passos = +2 XP") — só convida a coletar quando já
-              // existe pelo menos um incremento de XP real acumulado.
-              if ((_movementPendingSteps ?? 0) >= kMovementMeaningfulPendingSteps || _movementHasPendingCycle) ...[
-                _MovementBonusAlert(
-                  onTap: () async {
-                    await Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => MovementScreen(client: widget.client)),
-                    );
-                    _loadMovementBadge();
-                  },
-                ),
-                const SizedBox(height: 12),
-              ],
-              // Acessos dinâmicos (pedido de Rhoney, 2026-08-26): Progresso/
-              // Ranking/Amigos/Movimento como cards de atalho logo abaixo da
-              // marca, em vez de ícones pequenos disputando espaço.
-              _QuickActionsRow(
-                client: widget.client,
-                movementPendingSteps: _movementPendingSteps,
-                onReturnFromProgress: _loadProgress,
-                onReturnFromMovement: _loadMovementBadge,
-              ),
-              const SizedBox(height: 20),
+                    const SizedBox(height: 20),
               if (progress != null)
                 _ProgressCard(
                   progress: progress,
@@ -524,7 +462,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // novo", distinta do teal usado nos atalhos de navegação.
               Container(
                 decoration: BoxDecoration(
-                  color: AppColors.bg2,
+                  color: AppColors.bg2.withValues(alpha: 0.92),
                   borderRadius: BorderRadius.circular(28),
                   border: Border.all(color: AppColors.gold.withValues(alpha: 0.45)),
                 ),
@@ -606,8 +544,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ? const Center(child: CircularProgressIndicator())
                     : ListView(children: _buildWorldSections(l10n)),
               ),
+                  ],
+                ),
+              ),
             ],
-          ),
           ),
         ),
       ),
@@ -648,44 +588,31 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-/// Alerta sutil de bônus acumulado (29/08/2026, pedido de Rhoney):
-/// "colete seus bônus..." — nunca bloqueia nem perde nada (o acúmulo já
-/// existia: passos do ciclo atual ficam guardados localmente, o ciclo
-/// anterior fica reservado dentro da janela de graça no backend), só
-/// avisa visualmente que existe algo esperando. PulseIn com
-/// intensidade baixa (0.15, mesma usada em outros reforços "sutis" do
-/// app) em vez de qualquer animação chamativa.
-class _MovementBonusAlert extends StatelessWidget {
-  const _MovementBonusAlert({required this.onTap});
-
-  final VoidCallback onTap;
+/// HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — "MENTAL" como textura de
+/// fundo em vez de bloco de texto de destaque (já redundante com a
+/// Splash). IgnorePointer garante que esta camada NUNCA intercepta
+/// toque, mesmo cobrindo a tela inteira (Positioned.fill no chamador) —
+/// os cards acima continuam 100% clicáveis. Opacidade ~4.5% e rotação
+/// leve, mesmos valores do protótipo validado (mental-home-v3-
+/// watermark.html).
+class _MentalWatermark extends StatelessWidget {
+  const _MentalWatermark();
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    return PulseIn(
-      intensity: 0.15,
-      child: Material(
-        color: AppColors.gold.withValues(alpha: 0.12),
-        borderRadius: BorderRadius.circular(14),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(14),
-          onTap: onTap,
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(14), border: Border.all(color: AppColors.gold.withValues(alpha: 0.35))),
-            child: Row(
-              children: [
-                Icon(Icons.redeem_rounded, color: AppColors.gold, size: 18),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Text(
-                    l10n.movementBonusAlertMessage,
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.gold, fontWeight: FontWeight.w600),
-                  ),
-                ),
-                Icon(Icons.chevron_right_rounded, color: AppColors.gold.withValues(alpha: 0.7), size: 20),
-              ],
+    return IgnorePointer(
+      child: ClipRect(
+        child: Center(
+          child: Transform.rotate(
+            angle: -12 * math.pi / 180,
+            child: Text(
+              'MENTAL',
+              style: GoogleFonts.fraunces(
+                fontSize: 96,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 6,
+                color: AppColors.gold.withValues(alpha: 0.045),
+              ),
             ),
           ),
         ),
@@ -694,29 +621,11 @@ class _MovementBonusAlert extends StatelessWidget {
   }
 }
 
-/// Botão de alternância claro/escuro (29/08/2026, pedido de Rhoney: "na
-/// parte superior") — ListenableBuilder próprio, isolado do resto da
-/// Home: só este ícone precisa saber o tom atual pra escolher sol/lua,
-/// o resto da tela já reconstrói sozinho via main.dart quando o toggle
-/// dispara (ThemeModeService.instance).
-class _ThemeModeToggleButton extends StatelessWidget {
-  const _ThemeModeToggleButton();
-
-  @override
-  Widget build(BuildContext context) {
-    return ListenableBuilder(
-      listenable: ThemeModeService.instance,
-      builder: (context, _) {
-        final isDark = ThemeModeService.instance.isDark;
-        return IconButton(
-          tooltip: isDark ? 'Ativar tom claro' : 'Ativar tom escuro',
-          onPressed: () => ThemeModeService.instance.toggle(),
-          icon: Icon(isDark ? Icons.light_mode_rounded : Icons.dark_mode_rounded, color: AppColors.gold),
-        );
-      },
-    );
-  }
-}
+/// HOME_REDESIGN_V2_MINIMALISMO.md §3.2 — o banner "Colete seus bônus
+/// de Movimento" saiu da Home (removido daqui, 03/09/2026): o badge
+/// numérico no ícone de Movimento do grid de atalhos já sinaliza "há
+/// algo pendente aqui", e a tela Movimento já tem seu próprio chip de
+/// ciclo pendente (movement_screen.dart) — nenhum lugar fica sem aviso.
 
 /// Acessos rápidos a Progresso/Ranking/Amigos/Movimento — pedido de
 /// Rhoney (2026-08-26): "de forma mais dinâmica e com melhor
@@ -729,12 +638,14 @@ class _QuickActionsRow extends StatelessWidget {
     required this.movementPendingSteps,
     required this.onReturnFromProgress,
     required this.onReturnFromMovement,
+    required this.onShareApp,
   });
 
   final ApiClient client;
   final int? movementPendingSteps;
   final VoidCallback onReturnFromProgress;
   final VoidCallback onReturnFromMovement;
+  final VoidCallback onShareApp;
 
   @override
   Widget build(BuildContext context) {
@@ -754,7 +665,7 @@ class _QuickActionsRow extends StatelessWidget {
             },
           ),
         ),
-        const SizedBox(width: 10),
+        const SizedBox(width: 8),
         Expanded(
           child: _QuickActionCard(
             icon: Icons.leaderboard_rounded,
@@ -765,7 +676,7 @@ class _QuickActionsRow extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(width: 10),
+        const SizedBox(width: 8),
         Expanded(
           child: _QuickActionCard(
             icon: Icons.people_outline_rounded,
@@ -776,7 +687,7 @@ class _QuickActionsRow extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(width: 10),
+        const SizedBox(width: 8),
         Expanded(
           child: _QuickActionCard(
             icon: Icons.directions_walk_rounded,
@@ -791,7 +702,133 @@ class _QuickActionsRow extends StatelessWidget {
             },
           ),
         ),
+        const SizedBox(width: 8),
+        // HOME_REDESIGN_V2_MINIMALISMO.md §3.3 — 5º card, MESMO tamanho
+        // dos outros 4 (Expanded igual), consolidando compartilhar +
+        // alternar tema (antes soltos no cabeçalho da Home).
+        Expanded(
+          child: _MergedActionCard(
+            label: l10n.homeMoreCardLabel,
+            onShareTap: onShareApp,
+          ),
+        ),
       ],
+    );
+  }
+}
+
+/// HOME_REDESIGN_V2_MINIMALISMO.md §3.3 — 5º card do grid de atalhos,
+/// mesmo container/padding/estrutura de _QuickActionCard, mas com DOIS
+/// ícones lado a lado (compartilhar + tema) em vez de um só, separados
+/// por um divisor fino. Cada ícone mantém sua própria área de toque —
+/// o card inteiro não é um único InkWell (doc §5: "não é preciso que o
+/// card inteiro dispare as duas ações ao mesmo tempo").
+class _MergedActionCard extends StatelessWidget {
+  const _MergedActionCard({required this.label, required this.onShareTap});
+
+  final String label;
+  final VoidCallback onShareTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 6),
+      decoration: BoxDecoration(
+        color: AppColors.bg2.withValues(alpha: 0.92),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.4)),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _MiniIconAction(
+                icon: Icons.share_outlined,
+                tooltip: l10n.shareAppButtonTooltip,
+                onTap: onShareTap,
+              ),
+              Container(
+                width: 1,
+                height: 20,
+                margin: const EdgeInsets.symmetric(horizontal: 2),
+                color: AppColors.muted.withValues(alpha: 0.3),
+              ),
+              const _ThemeModeMiniToggle(),
+            ],
+          ),
+          const SizedBox(height: 6),
+          Text(
+            label,
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.bone, fontWeight: FontWeight.w600, fontSize: 12, height: 1.15),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Ícone pequeno com área de toque própria (usado dentro de
+/// _MergedActionCard) — CircleBorder pra feedback de toque redondo,
+/// consistente com o resto do app (InkWell/Material já usado em
+/// _QuickActionCard).
+class _MiniIconAction extends StatelessWidget {
+  const _MiniIconAction({required this.icon, required this.tooltip, required this.onTap});
+
+  final IconData icon;
+  final String tooltip;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      button: true,
+      label: tooltip,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          customBorder: const CircleBorder(),
+          onTap: onTap,
+          child: Padding(
+            padding: const EdgeInsets.all(3),
+            // Achado real no aparelho (03/09/2026, pedido de Rhoney:
+            // "ajuste as proporções... trabalhe o espaçamento"): 18px
+            // ficava visivelmente menor que os 28px do ícone único dos
+            // outros 4 cards do grid — 22px aproxima o peso visual sem
+            // estourar a coluna estreita (2 ícones + divisor no mesmo
+            // espaço de 1 ícone dos demais cards).
+            child: Icon(icon, color: AppColors.gold, size: 22),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Versão compacta de _ThemeModeToggleButton pra caber lado a lado com
+/// o ícone de compartilhar dentro do mesmo card pequeno (o IconButton
+/// original tem alvo de toque de 48dp, largo demais pros dois ícones
+/// juntos no espaço de uma única coluna do grid).
+class _ThemeModeMiniToggle extends StatelessWidget {
+  const _ThemeModeMiniToggle();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: ThemeModeService.instance,
+      builder: (context, _) {
+        final isDark = ThemeModeService.instance.isDark;
+        return _MiniIconAction(
+          icon: isDark ? Icons.light_mode_rounded : Icons.dark_mode_rounded,
+          tooltip: isDark ? 'Ativar tom claro' : 'Ativar tom escuro',
+          onTap: () => ThemeModeService.instance.toggle(),
+        );
+      },
     );
   }
 }
@@ -908,7 +945,9 @@ class _QuickActionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.bg2,
+      // HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — leve transparência pra
+      // marca d'água "respirar" através do card.
+      color: AppColors.bg2.withValues(alpha: 0.92),
       borderRadius: BorderRadius.circular(14),
       child: InkWell(
         borderRadius: BorderRadius.circular(14),
@@ -929,20 +968,25 @@ class _QuickActionCard extends StatelessWidget {
                 child: Icon(icon, color: color, size: 28),
               ),
               const SizedBox(height: 6),
-              Text(
-                label,
-                textAlign: TextAlign.center,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                // Achado real de validação em dispositivo (26/08/2026):
-                // com maxLines: 1 + a largura estreita de 4 colunas,
-                // labels como "Progresso"/"Movimento" truncavam
-                // ("Progres...", "Movime..."). fontSize menor + 2 linhas
-                // resolve sem precisar encurtar o texto em si.
-                // Cor clara (bone) em vez do "muted" padrão do
-                // bodySmall (29/08/2026) — o cinza discreto ficava
-                // quase invisível contra o fundo escuro.
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.bone, fontWeight: FontWeight.w600, fontSize: 12, height: 1.15),
+              // Achado real no aparelho (03/09/2026, grid passou de 4
+              // pra 5 colunas — HOME_REDESIGN_V2_MINIMALISMO.md §3.3):
+              // a coluna ficou estreita demais até pra "Progresso"/
+              // "Movimento" quebrarem em 2 linhas de forma legível —
+              // sem um ponto de quebra de palavra disponível, o texto
+              // cortava no meio ("Progress"/"o"). FittedBox encolhe a
+              // fonte automaticamente pra caber numa linha só, mesmo
+              // recurso já usado em "Desafio X" nos cards de território.
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  label,
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                  // Cor clara (bone) em vez do "muted" padrão do
+                  // bodySmall (29/08/2026) — o cinza discreto ficava
+                  // quase invisível contra o fundo escuro.
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.bone, fontWeight: FontWeight.w600, fontSize: 12, height: 1.15),
+                ),
               ),
             ],
           ),
@@ -974,7 +1018,9 @@ class _WorldSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Material(
-        color: AppColors.bg2,
+        // HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — leve transparência pra
+        // marca d'água "respirar" através dos itens de Mundo.
+        color: AppColors.bg2.withValues(alpha: 0.92),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
           side: BorderSide(color: completed ? AppColors.gold.withValues(alpha: 0.35) : Colors.transparent),
@@ -1311,7 +1357,13 @@ class _ProgressCard extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [AppColors.bg2, Color.lerp(AppColors.bg2, AppColors.purple, 0.08)!],
+          // HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — leve transparência
+          // (alpha 0.92) pra marca d'água "respirar" através do card,
+          // sem prejudicar a legibilidade do conteúdo por cima.
+          colors: [
+            AppColors.bg2.withValues(alpha: 0.92),
+            Color.lerp(AppColors.bg2, AppColors.purple, 0.08)!.withValues(alpha: 0.92),
+          ],
         ),
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
