@@ -11,6 +11,7 @@ escopo de uma versão específica. Atualizados conforme necessário, não
 - `FAMILY_SAFETY.md` — políticas de segurança (histórico multi-geracional, hoje superado pela DIR-001).
 - `USER_PROFILE.md` — campos de perfil, visibilidade pública, moderação de foto.
 - `MICROINTERACTIONS.md`, `AUDIO_FEEDBACK.md`, `NOTIFICATIONS.md` — camadas de feedback do produto.
+- `NOTIFICACAO_ICONE_M_MENTAL.md` — correção de bug (03/09/2026, **implementado e testado no aparelho**): ícone genérico do Android trocado pelo "M" oficial em todas as notificações, e toque na notificação persistente de Movimento navega direto pra tela Movimento.
 - `ADMIN_PANEL_E_CREDITO_INSTITUCIONAL.md` — painel administrativo.
 - `ARCHITECTURE_UPDATE_I18N_READY.md` — atualização de `docs/01_FOUNDATION/ARCHITECTURE.md`.
 - `PRIVACY_POLICY.md` — política de privacidade (texto-fonte; versão hospedada em `store_assets/mental-privacidade.html`).
