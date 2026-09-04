@@ -6,6 +6,7 @@
 - `MENTAL_AI_AGENT_TEAM_V1.md` — arquitetura de agentes de IA para curadoria/revisão de conteúdo; Fase 1 é a primeira ação prevista ao início da V4. **Progresso (02/09/2026):** Motor A implementado — `mental-security` (Segurança + Revisor de Código fundidos, §5.1) reescrito com a stack real do projeto e escopo de qualidade de código adicionado; `mental-testing` (§5.2) criado do zero. Ambos em `/home/rhoney/Documentos/MyApps/.claude/agents/`. Motor B (Pesquisador de Conteúdo, §5.3 — agendado via n8n) **não implementado**: exige acesso à infraestrutura n8n, fora do alcance desta sessão do Claude Code. "Painel de Relatórios" (§3) fica adiado — sem Motor B rodando, o output direto no chat de cada agente Motor A já satisfaz "um único lugar onde Rhoney vê o achado", não há ainda necessidade real de um painel consolidado.
 - `MENTAL_V3_SOUND_AI_PRD_Implementacao_Pos_V3_revisado.docx` — PRD de Som + IA, pós-V3.
 - `V4_NOVOS_TERRITORIOS.md` — cinco novos blocos de conteúdo (Invenções, Veículos, Ouvido Afiado, Detetive Mental, Astronomia), rollout sequencial igual ao usado na V3.
+- `MENTAL_AGENTES_CONSOLIDADO_V1.md` — documento vivo consolidando a descrição dos 9 agentes de IA nomeados (função, contexto, relação entre si), complementando `MENTAL_AI_AGENT_TEAM_V1.md`. **Aprovado**, sem pendência de implementação em si (registra status de cada agente: `mental-security`/`mental-testing` implementados, demais formalizados ou candidatos) — atualizar sempre que um agente mudar de status.
 
 ## Ordem de implementação (decisão de Rhoney, 02/09/2026)
 
