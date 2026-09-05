@@ -1,8 +1,9 @@
 # V5
 
-**Status:** Mundo dos Idiomas implementado no código e testado (backend
-300 testes, client 115 testes) — falta rodar a migração e carregar o
-conteúdo em produção (ver "Próximo passo" abaixo).
+**Status:** Encerrada em 04/09/2026. Mundo dos Idiomas em produção —
+migração aplicada, 520 desafios carregados, backend deployado, testado
+no dispositivo real (pergunta de vocabulário + desafio de tradução com
+`accepted_answers`, XP concedido corretamente, sem crash).
 
 ## Mundo dos Idiomas — arquitetura implementada em 04/09/2026
 
@@ -30,17 +31,19 @@ conteúdo em produção (ver "Próximo passo" abaixo).
   deliberada do padrão, pra não arrastar ~1500 linhas de texto repetido e
   nunca divergir da fonte usada em produção).
 
-### 19 itens excluídos por bug de curadoria na fonte original
+### 20 itens excluídos por bug de curadoria na fonte original
 
 O conversor detecta e pula automaticamente (nunca entram no banco):
 18 itens com uma alternativa duplicada dentro de `options` (a resposta
-certa aparecia 2x na lista, ex. `['Work', 'Work', 'Werk', 'Wrok']`) e 1
+certa aparecia 2x na lista, ex. `['Work', 'Work', 'Werk', 'Wrok']`), 1
 prompt repetido entre `ingles_intermediario`/`ingles_avancado` (mesma
-frase "a menos que" ensinada duas vezes). Rodar o script de novo (`cd
-backend && python3 scripts/convert_idiomas_content.py`) imprime a lista
-completa com território e motivo de cada exclusão. Se algum dia
-corrigir a fonte (`V5/mundo_dos_idiomas_*.json`), o item volta a entrar
-automaticamente na próxima conversão.
+frase "a menos que" ensinada duas vezes) e 1 prompt duplicado dentro do
+próprio `frances_avancado` (item "... novamente para fixar em
+francês?", claramente um preenchimento acidental). Rodar o script de
+novo (`cd backend && python3 scripts/convert_idiomas_content.py`)
+imprime a lista completa com território e motivo de cada exclusão. Se
+algum dia corrigir a fonte (`V5/mundo_dos_idiomas_*.json`), o item volta
+a entrar automaticamente na próxima conversão.
 
 ### Testes
 
@@ -54,21 +57,20 @@ automaticamente na próxima conversão.
   Mundos genericamente, e o desafio de texto livre já reaproveita o
   mesmo campo de texto usado no anagrama de "palavras".
 
-## Próximo passo
+## Concluído em produção (04/09/2026)
 
-1. Rodar `backend/migrations/060_mundo_idiomas.sql` no SQL Editor do
-   Supabase (cria o World, os 9 territórios, e a coluna
-   `accepted_answers`).
-2. Rodar, localmente, com `MENTAL_DATABASE_URL` apontando pra produção:
-   `cd backend && for f in content/idiomas_*.json; do python3 scripts/append_production_content.py "$f"; done`
-   — carrega os 521 desafios (idempotente, pode rodar de novo sem
-   duplicar).
-3. Fazer deploy do backend no Render (o código já tem o suporte a
-   `accepted_answers`, mas só funciona depois do passo 1).
-4. Testar no dispositivo real (padrão desta sessão): abrir um território
-   de Idiomas, responder uma pergunta de vocabulário e o desafio de
-   frase, confirmar que uma variação aceita (ex. com/sem ponto final)
-   conta como acerto.
+1. ✅ Migração `060_mundo_idiomas.sql` rodada no Supabase.
+2. ✅ 520 desafios carregados via `append_production_content.py` (não
+   521 como uma versão anterior deste documento dizia — a exclusão
+   global de prompt duplicado entre níveis, seção acima, pegou mais um
+   item depois daquela contagem inicial).
+3. ✅ Backend deployado no Render.
+4. ✅ Testado no dispositivo real: "Mundo dos Idiomas" aparece na Home
+   com os 9 territórios rotulados corretamente; pergunta de vocabulário
+   (múltipla escolha) funciona normal; desafio de tradução aceitou a
+   variação "He drives very fast on the street." (com ponto final,
+   diferente do `correct_answer` exato) como correta, XP concedido, sem
+   crash no logcat.
 
 ## Candidatos registrados (herdados de V4_NOVOS_TERRITORIOS.md §6, ainda sem dono de fase)
 

@@ -224,6 +224,13 @@ def test_ranking_never_exposes_email_or_extra_fields(client):
         # passa a ser exposto de propósito porque PERFIL_PUBLICO_E_
         # TORCIDA_V1.md §3 autoriza explicitamente o Ranking como ponto
         # de entrada pro perfil público de outro usuário, que precisa
-        # do id pra existir. Ainda assim, nada além desses 7 campos.
-        assert set(entry.keys()) == {"rank", "user_id", "nickname", "avatar_id", "real_name", "photo_url", "xp"}
+        # do id pra existir. RANKING_ENRIQUECIDO_V1.md §2 (04/09/2026)
+        # acrescenta o resumo de conquistas (streak/mundos/badges/
+        # MentalCoins/passos) — mesmo dado já público em outras telas
+        # (perfil, progresso), nunca e-mail ou dado sensível.
+        assert set(entry.keys()) == {
+            "rank", "user_id", "nickname", "avatar_id", "real_name", "photo_url", "xp",
+            "level", "current_streak", "worlds_completed", "worlds_total",
+            "badges_count", "mentalcoins_balance", "total_steps",
+        }
         assert user not in entry["nickname"]  # nickname nunca contém o user_id bruto

@@ -433,6 +433,18 @@ class RankingEntry(BaseModel):
     real_name: str | None = None
     photo_url: str | None = None
     xp: int
+    # RANKING_ENRIQUECIDO_V1.md §2 — resumo de conquistas por linha, pra
+    # não exigir abrir o perfil de cada jogador só pra ver o quanto ele
+    # evoluiu. Tudo dado já calculado em outro lugar do app (streak,
+    # progresso de mundo, badges, MentalCoins, passos) — nenhuma lógica
+    # de cálculo nova, só exposição.
+    level: int
+    current_streak: int
+    worlds_completed: int
+    worlds_total: int
+    badges_count: int
+    mentalcoins_balance: int
+    total_steps: int
 
 
 class RankingResponse(BaseModel):
