@@ -236,6 +236,20 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadMentalCoinsBalance();
   }
 
+  // Pedido de Rhoney (04/09/2026): "pull to refresh" em qualquer tela do
+  // app — puxar a tela pra baixo atualiza o conteúdo. Home tem 4 fontes
+  // de dado carregadas separadamente (progresso, badge de Movimento,
+  // cabeçalho de perfil, saldo de MentalCoins); refresh combinado
+  // dispara todas em paralelo, igual ao initState.
+  Future<void> _refreshAll() {
+    return Future.wait([
+      _loadProgress(),
+      _loadMovementBadge(),
+      _loadProfileHeader(),
+      _loadMentalCoinsBalance(),
+    ]);
+  }
+
   Future<void> _loadProfileHeader() async {
     try {
       final profile = await widget.client.getProfile();
@@ -542,7 +556,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 // o spinner enquanto progress==null evita esse flash.
                 child: progress == null
                     ? const Center(child: CircularProgressIndicator())
-                    : ListView(children: _buildWorldSections(l10n)),
+                    : RefreshIndicator(
+                        onRefresh: _refreshAll,
+                        color: AppColors.gold,
+                        child: ListView(children: _buildWorldSections(l10n)),
+                      ),
               ),
                   ],
                 ),

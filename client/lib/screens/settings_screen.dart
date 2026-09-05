@@ -168,7 +168,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: SafeArea(
         child: _loading
             ? const Center(child: CircularProgressIndicator())
-            : ListView(
+            // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
+            // tela do app.
+            : RefreshIndicator(
+                onRefresh: _load,
+                color: AppColors.gold,
+                child: ListView(
                 padding: const EdgeInsets.all(16),
                 children: [
                   Text(l10n.soundSectionTitle, style: Theme.of(context).textTheme.titleLarge),
@@ -310,6 +315,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                 ],
               ),
+                ),
       ),
     );
   }

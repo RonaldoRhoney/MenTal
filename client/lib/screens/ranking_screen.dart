@@ -140,23 +140,29 @@ class _RankingScreenState extends State<RankingScreen> {
           ),
         ),
         Expanded(
-          child: ListView.builder(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-            itemCount: entries.length,
-            itemBuilder: (context, index) {
-              final entry = entries[index];
-              final isMe = me != null && entry['user_id'] == me['user_id'];
-              return _RankingRow(
-                entry: entry,
-                isMe: isMe,
-                l10n: l10n,
-                onTap: isMe
-                    ? null
-                    : () => Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => PublicProfileScreen(client: widget.client, userId: entry['user_id'] as String)),
-                        ),
-              );
-            },
+          // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
+          // tela do app.
+          child: RefreshIndicator(
+            onRefresh: _load,
+            color: AppColors.gold,
+            child: ListView.builder(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+              itemCount: entries.length,
+              itemBuilder: (context, index) {
+                final entry = entries[index];
+                final isMe = me != null && entry['user_id'] == me['user_id'];
+                return _RankingRow(
+                  entry: entry,
+                  isMe: isMe,
+                  l10n: l10n,
+                  onTap: isMe
+                      ? null
+                      : () => Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => PublicProfileScreen(client: widget.client, userId: entry['user_id'] as String)),
+                          ),
+                );
+              },
+            ),
           ),
         ),
       ],

@@ -63,7 +63,12 @@ class _ProgressScreenState extends State<ProgressScreen> {
                         ],
                       ),
               )
-            : ListView(
+            // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
+            // tela do app.
+            : RefreshIndicator(
+                onRefresh: _load,
+                color: AppColors.gold,
+                child: ListView(
                 padding: const EdgeInsets.all(16),
                 children: [
                   XpBar(xpTotal: progress['xp_total'] as int, level: progress['level'] as int),
@@ -95,6 +100,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                   ),
                 ],
               ),
+                ),
       ),
     );
   }

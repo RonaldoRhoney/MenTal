@@ -57,7 +57,12 @@ class _BadgesScreenState extends State<BadgesScreen> {
                         ],
                       ),
               )
-            : ListView(
+            // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
+            // tela do app.
+            : RefreshIndicator(
+                onRefresh: _load,
+                color: AppColors.gold,
+                child: ListView(
                 padding: const EdgeInsets.all(16),
                 children: (data['badges'] as List).cast<Map<String, dynamic>>().map((badge) {
                   final earned = badge['earned'] as bool;
@@ -104,6 +109,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                   );
                 }).toList(),
               ),
+                ),
       ),
     );
   }

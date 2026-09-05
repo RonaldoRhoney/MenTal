@@ -98,7 +98,12 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
     final worlds = (profile['worlds'] as List).cast<Map<String, dynamic>>();
     final sentToday = profile['torcida_sent_today_by_me'] as int;
 
-    return ListView(
+    // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer tela do
+    // app.
+    return RefreshIndicator(
+      onRefresh: _load,
+      color: AppColors.gold,
+      child: ListView(
       padding: const EdgeInsets.all(16),
       children: [
         Center(
@@ -192,6 +197,7 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
               .toList(),
         ),
       ],
+      ),
     );
   }
 }

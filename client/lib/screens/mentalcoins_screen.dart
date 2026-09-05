@@ -93,7 +93,12 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
                     ? Padding(padding: const EdgeInsets.all(24), child: Text(_error!, style: TextStyle(color: AppColors.error)))
                     : const CircularProgressIndicator(),
               )
-            : ListView(
+            // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
+            // tela do app.
+            : RefreshIndicator(
+                onRefresh: _load,
+                color: AppColors.gold,
+                child: ListView(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
                 children: [
                   _BalanceCard(balance: balance['balance'] as int, cycleStart: balance['cycle_start'] as String, cycleEnd: balance['cycle_end'] as String),
@@ -128,6 +133,7 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
                   ),
                 ],
               ),
+                ),
       ),
     );
   }

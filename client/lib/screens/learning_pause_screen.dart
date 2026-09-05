@@ -127,7 +127,13 @@ class _LearningPauseScreenState extends State<LearningPauseScreen> {
           const SizedBox(height: 12),
         ],
         Expanded(
-          child: SingleChildScrollView(
+          // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
+          // tela do app.
+          child: RefreshIndicator(
+            onRefresh: _load,
+            color: AppColors.gold,
+            child: SingleChildScrollView(
+            physics: const AlwaysScrollableScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -151,6 +157,7 @@ class _LearningPauseScreenState extends State<LearningPauseScreen> {
                 ],
               ],
             ),
+          ),
           ),
         ),
         const SizedBox(height: 16),

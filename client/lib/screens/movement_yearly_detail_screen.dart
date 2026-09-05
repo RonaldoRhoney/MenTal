@@ -49,14 +49,33 @@ class _MovementYearlyDetailScreenState extends State<MovementYearlyDetailScreen>
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.movementYearlyDetailTitle)),
+      // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer tela
+      // do app. Mesmo achado de movement_daily_detail_screen.dart —
+      // SliverFillRemaining quebra com "LayoutBuilder does not support
+      // returning intrinsic dimensions" (o gráfico usa LayoutBuilder
+      // internamente, fl_chart). LayoutBuilder aqui fora + SizedBox de
+      // altura exata dá ao Column altura delimitada (Expanded funciona)
+      // sem nenhum cálculo de dimensão intrínseca.
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-          child: _loading
-              ? const Center(child: CircularProgressIndicator())
-              : _error != null
-                  ? Center(child: Text(_error!, style: TextStyle(color: AppColors.error)))
-                  : _buildBody(l10n),
+        child: RefreshIndicator(
+          onRefresh: _load,
+          color: AppColors.gold,
+          child: LayoutBuilder(
+            builder: (context, constraints) => SingleChildScrollView(
+              physics: const AlwaysScrollableScrollPhysics(),
+              child: SizedBox(
+                height: constraints.maxHeight,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+                  child: _loading
+                      ? const Center(child: CircularProgressIndicator())
+                      : _error != null
+                          ? Center(child: Text(_error!, style: TextStyle(color: AppColors.error)))
+                          : _buildBody(l10n),
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );

@@ -505,7 +505,12 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                 child: Text(l10n.friendsEmptyMessage, textAlign: TextAlign.center),
                               ),
                             )
-                          : ListView.builder(
+                          // Pedido de Rhoney (04/09/2026): pull-to-refresh
+                          // em qualquer tela do app.
+                          : RefreshIndicator(
+                              onRefresh: _load,
+                              color: AppColors.gold,
+                              child: ListView.builder(
                               itemCount: _friends.length,
                               itemBuilder: (context, index) {
                                 final friend = _friends[index];
@@ -558,6 +563,7 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                   ),
                                 );
                               },
+                            ),
                             ),
                     ),
                   ],

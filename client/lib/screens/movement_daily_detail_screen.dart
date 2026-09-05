@@ -76,14 +76,37 @@ class _MovementDailyDetailScreenState extends State<MovementDailyDetailScreen> {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.movementDailyDetailTitle)),
+      // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer tela
+      // do app. _buildBody usa Expanded internamente (gráfico ocupa o
+      // espaço restante) — precisa de altura DELIMITADA, o que
+      // SingleChildScrollView sozinho não dá. SliverFillRemaining foi
+      // tentado primeiro, mas quebra com "LayoutBuilder does not support
+      // returning intrinsic dimensions" — limitação conhecida do
+      // framework quando o conteúdo usa LayoutBuilder internamente
+      // (fl_chart usa, pro gráfico se dimensionar). LayoutBuilder aqui
+      // fora + SizedBox com altura EXATA dá ao Column uma altura
+      // delimitada de verdade (Expanded funciona) sem nenhum cálculo de
+      // dimensão intrínseca — nunca colide com o LayoutBuilder do chart.
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-          child: _loading
-              ? const Center(child: CircularProgressIndicator())
-              : _error != null
-                  ? Center(child: Text(_error!, style: TextStyle(color: AppColors.error)))
-                  : _buildBody(l10n),
+        child: RefreshIndicator(
+          onRefresh: _load,
+          color: AppColors.gold,
+          child: LayoutBuilder(
+            builder: (context, constraints) => SingleChildScrollView(
+              physics: const AlwaysScrollableScrollPhysics(),
+              child: SizedBox(
+                height: constraints.maxHeight,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+                  child: _loading
+                      ? const Center(child: CircularProgressIndicator())
+                      : _error != null
+                          ? Center(child: Text(_error!, style: TextStyle(color: AppColors.error)))
+                          : _buildBody(l10n),
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );
