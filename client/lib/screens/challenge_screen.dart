@@ -91,7 +91,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   // imediato), mas quem CALCULA o bônus de velocidade é sempre o
   // backend, com o mesmo response_time_ms enviado aqui.
   Timer? _countdownTimer;
-  int? _remainingMs;
+  // Achado de auditoria UI/UX (05/09/2026): o tick de 100ms do countdown
+  // chamava setState() na tela inteira (~1400 linhas, muitas árvores de
+  // widget filhas) 10x/segundo — este notifier isola o rebuild só na
+  // barra de progresso/contador em _buildRelampagoChallenge
+  // (ValueListenableBuilder), sem tocar no resto da árvore a cada tick.
+  final ValueNotifier<int?> _remainingMsTick = ValueNotifier<int?>(null);
   int? _timeLimitMs;
   DateTime? _challengeShownAt;
   bool _submitted = false;
@@ -153,6 +158,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   @override
   void dispose() {
     _countdownTimer?.cancel();
+    _remainingMsTick.dispose();
     _celebration.dispose();
     _coinsRise.dispose();
     _feedbackCommentController.dispose();
@@ -212,7 +218,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _hintsShown = [];
       _hintsExhausted = false;
       _attemptId = null;
-      _remainingMs = null;
+      _remainingMsTick.value = null;
       _timeLimitMs = null;
       _challengeShownAt = null;
       _submitted = false;
@@ -282,7 +288,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
 
   void _startCountdown(int timeLimitSeconds) {
     _timeLimitMs = timeLimitSeconds * 1000;
-    _remainingMs = _timeLimitMs;
+    _remainingMsTick.value = _timeLimitMs!;
     _challengeShownAt = DateTime.now();
     _countdownTimer?.cancel();
     _countdownTimer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
@@ -294,10 +300,14 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       final remaining = _timeLimitMs! - elapsed;
       if (remaining <= 0) {
         timer.cancel();
-        setState(() => _remainingMs = 0);
+        _remainingMsTick.value = 0;
         _submitTimedOut();
       } else {
-        setState(() => _remainingMs = remaining);
+        // Sem setState aqui de propósito (achado de auditoria UI/UX,
+        // 05/09/2026): só o ValueNotifier muda a cada 100ms — quem
+        // depende dele (o contador visual) escuta via
+        // ValueListenableBuilder, sem rebuildar a tela inteira.
+        _remainingMsTick.value = remaining;
       }
     });
   }
@@ -557,7 +567,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _hintsExhausted = false;
       _result = null;
       _submitted = false;
-      _remainingMs = null;
+      _remainingMsTick.value = null;
       _feedbackAction = null;
       _feedbackDifficulty = null;
       _feedbackHandled = false;
@@ -942,38 +952,48 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   Widget _buildRelampagoChallenge(Map<String, dynamic> challenge, List<String> options) {
     final l10n = AppLocalizations.of(context)!;
     final timeLimitMs = _timeLimitMs ?? 1;
-    final remainingMs = _remainingMs ?? timeLimitMs;
-    final remainingSeconds = (remainingMs / 1000).ceil();
-    final progress = (remainingMs / timeLimitMs).clamp(0.0, 1.0);
-    // Verde/teal com tempo sobrando, terracota suave nos últimos 30% —
-    // reforço visual da pressão sem soar de alarme (DESIGN_SYSTEM.md).
-    final urgent = progress <= 0.3;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Row(
-          children: [
-            Expanded(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: LinearProgressIndicator(
-                  value: progress,
-                  minHeight: 8,
-                  backgroundColor: AppColors.bg2,
-                  color: urgent ? AppColors.error : AppColors.teal,
+        // Achado de auditoria UI/UX (05/09/2026): isolado num
+        // ValueListenableBuilder pra só este trecho rebuildar a cada
+        // tick de 100ms — antes, o setState do timer rebuildava a tela
+        // de desafio inteira 10x/segundo.
+        ValueListenableBuilder<int?>(
+          valueListenable: _remainingMsTick,
+          builder: (context, tickMs, _) {
+            final remainingMs = tickMs ?? timeLimitMs;
+            final remainingSeconds = (remainingMs / 1000).ceil();
+            final progress = (remainingMs / timeLimitMs).clamp(0.0, 1.0);
+            // Verde/teal com tempo sobrando, terracota suave nos últimos
+            // 30% — reforço visual da pressão sem soar de alarme
+            // (DESIGN_SYSTEM.md).
+            final urgent = progress <= 0.3;
+            return Row(
+              children: [
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: LinearProgressIndicator(
+                      value: progress,
+                      minHeight: 8,
+                      backgroundColor: AppColors.bg2,
+                      color: urgent ? AppColors.error : AppColors.teal,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Text(
-              l10n.relampagoSecondsRemainingLabel(remainingSeconds),
-              style: AppTheme.technicalStyle(
-                color: urgent ? AppColors.error : AppColors.teal,
-                fontSize: 16,
-              ),
-            ),
-          ],
+                const SizedBox(width: 12),
+                Text(
+                  l10n.relampagoSecondsRemainingLabel(remainingSeconds),
+                  style: AppTheme.technicalStyle(
+                    color: urgent ? AppColors.error : AppColors.teal,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            );
+          },
         ),
         const SizedBox(height: 24),
         Expanded(

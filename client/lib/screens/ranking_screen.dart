@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
+import '../color_challenge.dart';
 import '../widgets/profile_photo.dart';
 import '../widgets/mentalcoin.dart';
 import '../l10n/generated/app_localizations.dart';
@@ -294,7 +295,11 @@ class _AvatarWithLevel extends StatelessWidget {
             child: FittedBox(
               child: Padding(
                 padding: const EdgeInsets.all(2),
-                child: Text('$level', style: const TextStyle(color: Color(0xFF04231D), fontWeight: FontWeight.w700, fontSize: 9)),
+                // Achado de auditoria UI/UX (05/09/2026): cor de texto
+                // fixa dava contraste baixo no tema claro (teal escuro +
+                // quase-preto) — usa o mesmo helper de contraste já
+                // usado em challenge_screen.dart pra badge de cor.
+                child: Text('$level', style: TextStyle(color: readableTextColorOn(AppColors.teal), fontWeight: FontWeight.w700, fontSize: 9)),
               ),
             ),
           ),
