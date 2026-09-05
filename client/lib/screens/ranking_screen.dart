@@ -316,40 +316,47 @@ class _BadgeRow extends StatelessWidget {
     // Cada badge ganha uma cor de identidade (mesma paleta já usada no
     // resto do app, nenhuma cor nova introduzida) — achado de revisão
     // (04/09/2026, pedido de Rhoney: "está confuso, dê mais elegância").
-    // Numa linha só, espaçamento proporcional (spaceBetween — pedido de
-    // Rhoney): Wrap deixava a 5ª badge cair pra uma 2ª linha em nomes
-    // longos; Flexible+FittedBox por pill garante as 5 sempre cabendo
-    // numa linha única, encolhendo levemente se precisar, sem nunca
-    // estourar a largura disponível.
+    // Numa linha só (Wrap deixava a 5ª badge cair pra uma 2ª linha em
+    // nomes longos), com um gap FIXO e generoso entre badges — spaceBetween
+    // (tentativa anterior) deixava o espaçamento apertado demais quando
+    // as 5 juntas quase preenchiam a largura disponível. Flexible+
+    // FittedBox por pill garante que, no pior caso (nome bem comprido),
+    // as badges encolhem levemente em vez de estourar a largura.
+    final pills = [
+      _pill(
+        color: AppColors.error,
+        semanticLabel: l10n.rankingBadgeStreakSemantics(streak),
+        child: Text('🔥 $streak', style: _pillTextStyle(AppColors.error)),
+      ),
+      _pill(
+        color: AppColors.purple,
+        semanticLabel: l10n.rankingBadgeWorldsSemantics(worldsCompleted, worldsTotal),
+        child: Text('🌍 $worldsCompleted/$worldsTotal', style: _pillTextStyle(AppColors.purple)),
+      ),
+      _pill(
+        color: AppColors.victory,
+        semanticLabel: l10n.rankingBadgeBadgesSemantics(badgesCount),
+        child: Text('🏆 $badgesCount', style: _pillTextStyle(AppColors.victory)),
+      ),
+      _mentalcoinPill(mentalcoins),
+      _pill(
+        color: AppColors.teal,
+        semanticLabel: l10n.rankingBadgeStepsSemantics(steps),
+        child: Text('👟 ${_compactNumber(steps)}', style: _pillTextStyle(AppColors.teal)),
+      ),
+    ];
+
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        _flex(_pill(
-          color: AppColors.error,
-          semanticLabel: l10n.rankingBadgeStreakSemantics(streak),
-          child: Text('🔥 $streak', style: _pillTextStyle(AppColors.error)),
-        )),
-        _flex(_pill(
-          color: AppColors.purple,
-          semanticLabel: l10n.rankingBadgeWorldsSemantics(worldsCompleted, worldsTotal),
-          child: Text('🌍 $worldsCompleted/$worldsTotal', style: _pillTextStyle(AppColors.purple)),
-        )),
-        _flex(_pill(
-          color: AppColors.victory,
-          semanticLabel: l10n.rankingBadgeBadgesSemantics(badgesCount),
-          child: Text('🏆 $badgesCount', style: _pillTextStyle(AppColors.victory)),
-        )),
-        _flex(_mentalcoinPill(mentalcoins)),
-        _flex(_pill(
-          color: AppColors.teal,
-          semanticLabel: l10n.rankingBadgeStepsSemantics(steps),
-          child: Text('👟 ${_compactNumber(steps)}', style: _pillTextStyle(AppColors.teal)),
-        )),
+        for (var i = 0; i < pills.length; i++) ...[
+          if (i > 0) const SizedBox(width: 9),
+          _flex(pills[i]),
+        ],
       ],
     );
   }
 
-  Widget _flex(Widget pill) => Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: pill));
+  Widget _flex(Widget pill) => Flexible(child: FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: pill));
 
   static TextStyle _pillTextStyle(Color color) => TextStyle(fontSize: 10, color: color, fontWeight: FontWeight.w700);
 
