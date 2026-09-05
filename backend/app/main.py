@@ -6,7 +6,7 @@ from . import config, models, services
 from .db import Base, engine, SessionLocal
 from .scheduler import start_scheduler
 from .seed import seed_if_empty
-from .routers import admin_metrics, age_gate, app_feedback, badges, battles, challenges, content_suggestions, learning_pauses, level_feedback, mentalcoins, movement, notifications, profile, progress, public_profile, stats, subscription, ranking, social, word_puzzles
+from .routers import admin_metrics, age_gate, app_feedback, app_version, badges, battles, challenges, content_suggestions, learning_pauses, level_feedback, mentalcoins, movement, notifications, profile, progress, public_profile, stats, subscription, ranking, social, word_puzzles
 
 # create_all() e o seed de desenvolvimento só rodam contra o SQLite local.
 # Correção feita testando contra o Postgres real do MENTAL (2026-08-19,
@@ -67,6 +67,7 @@ app.include_router(profile.router, tags=["profile"])
 app.include_router(public_profile.router, tags=["public-profile"])
 app.include_router(level_feedback.router, tags=["level-feedback"])
 app.include_router(app_feedback.router, tags=["app-feedback"])
+app.include_router(app_version.router, tags=["app-version"])
 app.include_router(mentalcoins.router, tags=["mentalcoins"])
 app.include_router(learning_pauses.router, tags=["learning-pauses"])
 app.include_router(admin_metrics.router, tags=["admin-metrics"])

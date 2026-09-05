@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../services/app_version_service.dart';
 import '../services/movement_service.dart';
 import '../services/share_service.dart';
 import '../services/theme_mode_service.dart';
@@ -14,6 +15,7 @@ import '../theme/app_theme.dart';
 import '../widgets/coins_rise_overlay.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
+import '../widgets/update_available_dialog.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
@@ -234,6 +236,17 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadMovementBadge();
     _loadProfileHeader();
     _loadMentalCoinsBalance();
+    _checkAppVersion();
+  }
+
+  // SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md §2 (05/09/2026) — checado
+  // uma vez por abertura do app (Home é a tela de entrada), nunca a
+  // cada pull-to-refresh (não faz parte de _refreshAll de propósito,
+  // pra não repetir o aviso toda vez que o usuário atualiza a tela).
+  Future<void> _checkAppVersion() async {
+    final result = await AppVersionService.check(widget.client);
+    if (!mounted || result.status == AppUpdateStatus.upToDate) return;
+    showUpdateAvailableDialog(context, required: result.status == AppUpdateStatus.updateRequired);
   }
 
   // Pedido de Rhoney (04/09/2026): "pull to refresh" em qualquer tela do

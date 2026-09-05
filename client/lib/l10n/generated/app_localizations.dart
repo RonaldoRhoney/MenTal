@@ -3045,6 +3045,42 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Ajustar foto'**
   String get photoCropToolbarTitle;
+
+  /// Title of the gentle update-available dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Nova versão disponível'**
+  String get updateAvailableTitle;
+
+  /// Body of the gentle update-available dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Uma nova versão do MENTAL está disponível, com melhorias e correções. Deseja atualizar agora?'**
+  String get updateAvailableMessage;
+
+  /// Title of the mandatory update dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Atualização necessária'**
+  String get updateRequiredTitle;
+
+  /// Body of the mandatory update dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Esta versão do MENTAL não pode mais ser usada — atualize para continuar, ela corrige algo importante de segurança.'**
+  String get updateRequiredMessage;
+
+  /// Button that opens the Play Store listing
+  ///
+  /// In pt, this message translates to:
+  /// **'Atualizar'**
+  String get updateNowButton;
+
+  /// Button that dismisses the non-mandatory update dialog
+  ///
+  /// In pt, this message translates to:
+  /// **'Mais tarde'**
+  String get updateLaterButton;
 }
 
 class _AppLocalizationsDelegate

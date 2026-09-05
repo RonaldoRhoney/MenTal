@@ -2422,5 +2422,29 @@
   "photoCropToolbarTitle": "Ajustar foto",
   "@photoCropToolbarTitle": {
     "description": "Title of the native photo crop editor screen"
+  },
+  "updateAvailableTitle": "Nova versão disponível",
+  "@updateAvailableTitle": {
+    "description": "Title of the gentle update-available dialog"
+  },
+  "updateAvailableMessage": "Uma nova versão do MENTAL está disponível, com melhorias e correções. Deseja atualizar agora?",
+  "@updateAvailableMessage": {
+    "description": "Body of the gentle update-available dialog"
+  },
+  "updateRequiredTitle": "Atualização necessária",
+  "@updateRequiredTitle": {
+    "description": "Title of the mandatory update dialog"
+  },
+  "updateRequiredMessage": "Esta versão do MENTAL não pode mais ser usada — atualize para continuar, ela corrige algo importante de segurança.",
+  "@updateRequiredMessage": {
+    "description": "Body of the mandatory update dialog"
+  },
+  "updateNowButton": "Atualizar",
+  "@updateNowButton": {
+    "description": "Button that opens the Play Store listing"
+  },
+  "updateLaterButton": "Mais tarde",
+  "@updateLaterButton": {
+    "description": "Button that dismisses the non-mandatory update dialog"
   }
 }

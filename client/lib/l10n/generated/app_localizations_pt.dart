@@ -1731,4 +1731,24 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get photoCropToolbarTitle => 'Ajustar foto';
+
+  @override
+  String get updateAvailableTitle => 'Nova versão disponível';
+
+  @override
+  String get updateAvailableMessage =>
+      'Uma nova versão do MENTAL está disponível, com melhorias e correções. Deseja atualizar agora?';
+
+  @override
+  String get updateRequiredTitle => 'Atualização necessária';
+
+  @override
+  String get updateRequiredMessage =>
+      'Esta versão do MENTAL não pode mais ser usada — atualize para continuar, ela corrige algo importante de segurança.';
+
+  @override
+  String get updateNowButton => 'Atualizar';
+
+  @override
+  String get updateLaterButton => 'Mais tarde';
 }

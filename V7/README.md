@@ -40,11 +40,20 @@ sociais (Feedback/Torcida/Movimento) pedidos por Rhoney em 05/09/2026.
   **implementado** (`MovementInvite`, migration 062,
   `POST /profile/{id}/invite-movement`). Tela de Perfil Público também
   compactada pra caber sem rolagem (pedido de Rhoney, 05/09/2026).
-- `SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md` — **Parcial**. Screenshots
-  atualizados da ficha da Google Play são tarefa manual de Rhoney (fora
-  do alcance do Claude Code) — não implementado por não ser código.
-  Aviso gentil de nova versão disponível: **não implementado ainda**,
-  próximo item desta pasta.
+- `SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md` — Screenshots atualizados
+  da ficha da Google Play continuam sendo tarefa manual de Rhoney (fora
+  do alcance do Claude Code, ver §1.3 do próprio documento) — não é
+  código, não bloqueia esta pasta. Aviso gentil de nova versão
+  disponível (§2): **concluído (05/09/2026)** — `GET /app/version`
+  (público, sem auth) expõe `latest_version`/`min_required_version`
+  configuráveis por env var; client compara com a própria versão
+  instalada (`kInstalledAppVersion`) na abertura da Home, mostra diálogo
+  animado (fade+escala, paleta dourado/teal) com "Atualizar" (abre a
+  ficha na Play Store) e "Mais tarde" (ausente se a atualização for
+  obrigatória). API do Google Play In-App Update **não adotada** nesta
+  entrega (§2.3 já previa essa alternativa como válida) — abrir a ficha
+  da loja é suficiente pro cenário atual sem depender de infraestrutura
+  adicional.
 - `BUG_ADMIN_DASHBOARD_TESTADORES_NAO_APARECEM.md` — **Encerrado
   (05/09/2026)** sem bug de dado confirmado: números do Painel Admin
   in-app comparados diretamente contra o Postgres de produção batem
@@ -52,11 +61,9 @@ sociais (Feedback/Torcida/Movimento) pedidos por Rhoney em 05/09/2026.
 
 ## Pendências desta pasta
 
-1. Aviso gentil de nova versão disponível (`SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md`
-   §2) — ainda não implementado.
-2. Teste de widget dedicado pra `movement_reports_screen.dart` (achado
+1. Teste de widget dedicado pra `movement_reports_screen.dart` (achado
    do agente de auditoria de testes, 05/09/2026) — tela sem cobertura
    direta, só indireta via `movement_screen_test.dart`.
-3. B4 da auditoria de segurança (funções/módulos grandes demais,
+2. B4 da auditoria de segurança (funções/módulos grandes demais,
    ex. `submit_answer` com 250 linhas, `services.py` com ~1400) —
    classificado como limpeza pós-lançamento, não bloqueante.

@@ -555,6 +555,12 @@ class ApiClient {
 
   // U.I/ADMIN_PAINEL_IN_APP_V1.md — só retorna dado de verdade pra
   // role=admin (backend rejeita com 403 pra qualquer outro usuário).
+  // SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md §2 — endpoint público
+  // (sem auth no backend), mas os headers padrão não fazem mal enviar.
+  Future<Map<String, dynamic>> getAppVersion() async {
+    return _get(_uri('/app/version'), headers: _headers);
+  }
+
   Future<Map<String, dynamic>> getAdminMetricsSummary({String period = '7d'}) async {
     return _get(
       _uri('/admin/metrics/summary', {'period': period}),

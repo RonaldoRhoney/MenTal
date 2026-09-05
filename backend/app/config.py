@@ -386,3 +386,18 @@ MENTALCOINS_XP_DAILY_REWARDS = [10, 5, 3]
 # dados, independente da meta diária configurável de cada usuário.
 MENTALCOINS_STEPS_WEEK_CHAMPION_REWARD = 20
 MENTALCOINS_STEPS_DAY_RECORD_REWARD = 10
+
+# SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md §2 (05/09/2026) — aviso
+# gentil de nova versão disponível. Backend expõe a versão mais recente
+# publicada e a mínima ainda aceita (client compara com sua própria
+# versão instalada, ver client/pubspec.yaml). Sobrescrevível por env
+# var pra não exigir redeploy só pra anunciar uma versão nova — versão
+# (não build number) no formato "major.minor.patch", igual ao
+# `version:` de pubspec.yaml sem o sufixo "+build".
+#
+# min_required == latest por padrão: nenhuma versão em campo hoje exige
+# atualização obrigatória. Só sobe min_required quando uma versão
+# publicada corrigir algo crítico de segurança/integridade (decisão de
+# Rhoney, nunca automática).
+APP_LATEST_VERSION = os.environ.get("APP_LATEST_VERSION", "0.3.0")
+APP_MIN_REQUIRED_VERSION = os.environ.get("APP_MIN_REQUIRED_VERSION", "0.3.0")

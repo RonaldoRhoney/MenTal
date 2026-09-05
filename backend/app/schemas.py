@@ -992,3 +992,13 @@ class AdminMetricsSummaryOut(BaseModel):
     feedback_distribution: AdminFeedbackDistributionOut
     demographics: AdminDemographicsOut
     movement: AdminMovementMetricsOut
+
+
+class AppVersionOut(BaseModel):
+    """SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md §2 — o client compara
+    estes dois valores com a própria versão instalada (pubspec.yaml)
+    pra decidir se mostra o aviso gentil de atualização (latest_version
+    > instalada) ou exige atualização (min_required_version > instalada)."""
+
+    latest_version: str
+    min_required_version: str
