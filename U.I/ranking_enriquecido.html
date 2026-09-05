@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENTAL — Ranking Enriquecido</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;900&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+  :root{
+    --bg-0:#0A0710; --bg-card:#191228; --hairline:rgba(255,255,255,0.08);
+    --ember:#FF8A3D; --victory:#FFB238; --victory-2:#FFDE8A;
+    --electric:#3FE8C4; --electric-2:#22B8A0; --violet:#8B6BFF; --violet-2:#B79CFF;
+    --text-hi:#FFFDF8; --text-mid:#B8AFC9; --text-low:#756D89;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:#000;}
+  body{font-family:'Inter',sans-serif;display:flex;justify-content:center;padding:40px 0;min-height:100vh;}
+  .phone{width:390px;height:844px;background:radial-gradient(120% 90% at 15% -10%,#241640 0%,var(--bg-0) 55%),var(--bg-0);border-radius:44px;overflow:hidden;position:relative;box-shadow:0 0 0 10px #1c1c1c,0 20px 60px rgba(0,0,0,.6);}
+  .statusbar{height:36px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;color:var(--text-hi);font-size:12px;font-weight:600;}
+  .icons{display:flex;gap:6px;color:var(--text-mid);font-size:11px;}
+  .screen{height:calc(100% - 36px);overflow-y:auto;padding:10px 17px 24px;}
+  .screen::-webkit-scrollbar{display:none;}
+
+  .header{display:flex;align-items:center;gap:10px;padding:6px 2px 14px;}
+  .back{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .header h1{font-family:'Fraunces',serif;font-weight:700;font-size:18px;}
+
+  .tabs{display:flex;background:var(--bg-card);border:1px solid var(--hairline);border-radius:100px;padding:4px;margin-bottom:14px;}
+  .tab{flex:1;text-align:center;padding:8px 0;border-radius:100px;font-size:12px;font-weight:700;color:var(--text-low);}
+  .tab.active{background:linear-gradient(135deg,var(--electric),var(--electric-2));color:#04231d;}
+
+  .period-label{font-size:10px;color:var(--text-low);text-transform:uppercase;letter-spacing:1.2px;font-weight:700;margin:4px 2px 12px;}
+
+  .hint{display:flex;align-items:center;gap:6px;font-size:9.5px;color:var(--text-low);margin-bottom:12px;padding:0 2px;}
+
+  .row{display:flex;align-items:center;gap:11px;background:var(--bg-card);border:1px solid var(--hairline);border-radius:16px;padding:11px 13px;margin-bottom:8px;position:relative;overflow:hidden;}
+  .row.me{background:linear-gradient(120deg,rgba(255,178,56,.14),var(--bg-card) 60%);border-color:rgba(255,178,56,.35);}
+  .row.top1{background:linear-gradient(120deg,rgba(255,178,56,.18),var(--bg-card) 65%);border-color:rgba(255,178,56,.4);}
+
+  .rank-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;color:var(--text-low);width:22px;flex-shrink:0;text-align:center;}
+  .rank-num.gold{color:var(--victory);font-size:15px;}
+
+  .avatar-wrap{position:relative;flex-shrink:0;}
+  .avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3a2f5c,#241640);display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.1);}
+  .avatar.gold-ring{border-color:var(--victory);box-shadow:0 0 10px rgba(255,178,56,.35);}
+  .level-chip{position:absolute;bottom:-3px;right:-3px;background:var(--electric);color:#04231d;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:8px;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--bg-card);}
+
+  .row-mid{flex:1;min-width:0;}
+  .row-name{font-family:'Fraunces',serif;font-weight:600;font-size:13.5px;color:var(--text-hi);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .row-name.me-text{color:var(--victory-2);}
+  .badges{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap;row-gap:3px;}
+  .badge-pill{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.05);border-radius:100px;padding:2px 6px;font-size:8px;color:var(--text-mid);font-weight:600;}
+
+  .row-right{text-align:right;flex-shrink:0;}
+  .row-xp{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;color:var(--electric);}
+  .row-xp.gold{color:var(--victory);}
+  .row-xp-label{font-size:7px;color:var(--text-low);text-transform:uppercase;letter-spacing:.5px;}
+
+  .chevron{color:var(--text-low);flex-shrink:0;opacity:.5;}
+
+  .crown{position:absolute;top:-2px;right:8px;font-size:16px;}
+
+  .badge-pill.mcoin{background:rgba(255,178,56,.12);border:1px solid rgba(255,178,56,.3);padding-left:3px;}
+  .mcoin-icon{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,#FFDE8A,#C9922E);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:7px;color:#3A1F00;flex-shrink:0;}
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar"><span>18:12</span><div class="icons"><span>4G</span><span>📶</span><span>🔋</span></div></div>
+  <div class="screen">
+
+    <div class="header">
+      <div class="back"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FFFDF8" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg></div>
+      <h1>Ranking</h1>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active">Global</div>
+      <div class="tab">Amigos</div>
+    </div>
+
+    <div class="period-label">Ranking da semana</div>
+    <div class="hint">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#756D89" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+      Toque em qualquer jogador para ver o desempenho completo
+    </div>
+
+    <div class="row top1">
+      <span class="crown">👑</span>
+      <span class="rank-num gold">#1</span>
+      <div class="avatar-wrap">
+        <div class="avatar gold-ring"></div>
+        <div class="level-chip">82</div>
+      </div>
+      <div class="row-mid">
+        <div class="row-name me-text">Rhoney (Você)</div>
+        <div class="badges">
+          <div class="badge-pill">🔥 11</div>
+          <div class="badge-pill">🌍 4/4</div>
+          <div class="badge-pill">🏆 9</div>
+          <div class="badge-pill mcoin"><span class="mcoin-icon">M</span>40</div>
+          <div class="badge-pill">👟 8.4k</div>
+        </div>
+      </div>
+      <div class="row-right"><div class="row-xp gold">6.232</div><div class="row-xp-label">XP</div></div>
+      <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+
+    <div class="row">
+      <span class="rank-num">#2</span>
+      <div class="avatar-wrap"><div class="avatar"></div><div class="level-chip">51</div></div>
+      <div class="row-mid">
+        <div class="row-name">Eduardo</div>
+        <div class="badges">
+          <div class="badge-pill">🔥 6</div>
+          <div class="badge-pill">🌍 2/4</div>
+          <div class="badge-pill">🏆 4</div>
+          <div class="badge-pill mcoin"><span class="mcoin-icon">M</span>18</div>
+          <div class="badge-pill">👟 5.1k</div>
+        </div>
+      </div>
+      <div class="row-right"><div class="row-xp">2.620</div><div class="row-xp-label">XP</div></div>
+      <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+
+    <div class="row">
+      <span class="rank-num">#3</span>
+      <div class="avatar-wrap"><div class="avatar"></div><div class="level-chip">38</div></div>
+      <div class="row-mid">
+        <div class="row-name">atcjjj</div>
+        <div class="badges">
+          <div class="badge-pill">🔥 3</div>
+          <div class="badge-pill">🌍 1/4</div>
+          <div class="badge-pill">🏆 2</div>
+          <div class="badge-pill mcoin"><span class="mcoin-icon">M</span>9</div>
+          <div class="badge-pill">👟 3.2k</div>
+        </div>
+      </div>
+      <div class="row-right"><div class="row-xp">1.390</div><div class="row-xp-label">XP</div></div>
+      <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+
+    <div class="row">
+      <span class="rank-num">#4</span>
+      <div class="avatar-wrap"><div class="avatar"></div><div class="level-chip">29</div></div>
+      <div class="row-mid">
+        <div class="row-name">will</div>
+        <div class="badges">
+          <div class="badge-pill">🔥 2</div>
+          <div class="badge-pill">🌍 1/4</div>
+          <div class="badge-pill">🏆 1</div>
+          <div class="badge-pill mcoin"><span class="mcoin-icon">M</span>5</div>
+          <div class="badge-pill">👟 2.0k</div>
+        </div>
+      </div>
+      <div class="row-right"><div class="row-xp">706</div><div class="row-xp-label">XP</div></div>
+      <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+
+    <div class="row">
+      <span class="rank-num">#5</span>
+      <div class="avatar-wrap"><div class="avatar"></div><div class="level-chip">26</div></div>
+      <div class="row-mid">
+        <div class="row-name">Junior Mercês</div>
+        <div class="badges">
+          <div class="badge-pill">🔥 4</div>
+          <div class="badge-pill">🌍 1/4</div>
+          <div class="badge-pill">🏆 1</div>
+          <div class="badge-pill mcoin"><span class="mcoin-icon">M</span>6</div>
+          <div class="badge-pill">👟 2.6k</div>
+        </div>
+      </div>
+      <div class="row-right"><div class="row-xp">629</div><div class="row-xp-label">XP</div></div>
+      <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

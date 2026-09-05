@@ -20,6 +20,7 @@ uma fase ou item específico do roadmap da V3.
 - `MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx` — spec de correção completa do Movimento (bug de "Sem conexão com o servidor" na coleta, ciclo à meia-noite de Brasília, idempotência, arquitetura Hoje/Semana/Ano). **Já implementado e validado** (commits `ed53904`, `8072e90`, `dee8ee2`, `a112700`; código cita o documento diretamente em `client/lib/api/api_client.dart` §8/§9) — nada pendente dele.
 - `BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md` — correção de sequência sem repetição de desafios.
 - `REGRA_REVISAO_ERROS_FIM_RODADA.md` — ao errar a última pergunta de um lote, oferece refazer só as erradas (sem XP), via `GET /challenges/{id}/reattempt`. **Já implementado e validado em produção** (commit `45d40ff`, migração `059_review_errors_round.sql` aplicada, testado ponta a ponta no dispositivo em 04/09/2026) — nada pendente dele.
+- `RANKING_ENRIQUECIDO_V1.md` (protótipo em `U.I/ranking_enriquecido.html`) — cada linha do Ranking mostra streak/mundos completos/badges/MentalCoins/passos, destaque visual pro 1º lugar, chevron indicando que é tocável. **Já implementado e validado em produção** (commits `a351e19`, `d1ba495`, `7ac89c5`, `90b444c`, 04/09/2026), incluindo revisão de UX pós-lançamento (badges com cor por categoria, espaçamento fixo numa linha só) — nada pendente dele.
 
 Jogos de Palavras — Fase 2 (Cruzadas) segue como trabalho em andamento,
 propositalmente não encerrado junto com o resto da V3 (ver §4 do
