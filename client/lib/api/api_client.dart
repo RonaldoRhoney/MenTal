@@ -487,6 +487,33 @@ class ApiClient {
     );
   }
 
+  // MOVIMENTO_GRAFICOS_RICOS_V1.md §3 — 6 sessões de 4h do dia (padrão:
+  // hoje; cycleId pra ver um dia específico do histórico).
+  Future<Map<String, dynamic>> getMovementDailyChart({String? cycleId}) async {
+    return _get(
+      _uri('/movement/daily-chart', cycleId == null ? null : {'cycle_id': cycleId}),
+      headers: _headers,
+    );
+  }
+
+  // MOVIMENTO_GRAFICOS_RICOS_V1.md §5 — granularidade diária dentro de
+  // um mês.
+  Future<Map<String, dynamic>> getMovementMonthlyChart({int? year, int? month}) async {
+    return _get(
+      _uri('/movement/monthly-chart', year == null ? null : {'year': '$year', 'month': '$month'}),
+      headers: _headers,
+    );
+  }
+
+  // MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
+  // paginado (mais recente primeiro).
+  Future<Map<String, dynamic>> getMovementHistory({String? before, int limit = 20}) async {
+    return _get(
+      _uri('/movement/history', {'limit': '$limit', if (before != null) 'before': before}),
+      headers: _headers,
+    );
+  }
+
   // V3.2 (V3/V3.2_TECNOLOGIA.md §3) — Pausa para Aprender: leitura sem
   // options/correct_answer/timer, endpoint separado de nextChallenge.
   Future<Map<String, dynamic>> nextLearningPause(String territoryId) async {

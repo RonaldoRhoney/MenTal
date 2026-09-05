@@ -14,9 +14,7 @@ import '../widgets/celebration_overlay.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/pulse_in.dart';
 import '../widgets/share_achievement_button.dart';
-import 'movement_daily_detail_screen.dart';
-import 'movement_weekly_detail_screen.dart';
-import 'movement_yearly_detail_screen.dart';
+import 'movement_reports_screen.dart';
 
 /// V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md). O backend
 /// é sempre a autoridade sobre o estado do ciclo e o XP convertido —
@@ -626,13 +624,7 @@ class _MovementScreenState extends State<MovementScreen> {
                     dotColor: AppColors.gold,
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => MovementDailyDetailScreen(
-                          client: widget.client,
-                          cycleId: currentCycle['id'] as String,
-                          initialCycle: currentCycle,
-                          goal: _dailyGoalSteps,
-                          liveExtraSteps: _detectedUncollectedSteps,
-                        ),
+                        builder: (_) => MovementReportsScreen(client: widget.client, initialPeriod: MovementReportPeriod.day),
                       ),
                     ),
                   ),
@@ -650,7 +642,7 @@ class _MovementScreenState extends State<MovementScreen> {
                     enabled: _recentCycles.length >= 2,
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => MovementWeeklyDetailScreen(client: widget.client, cycles: _recentCycles),
+                        builder: (_) => MovementReportsScreen(client: widget.client, initialPeriod: MovementReportPeriod.week),
                       ),
                     ),
                   ),
@@ -661,7 +653,9 @@ class _MovementScreenState extends State<MovementScreen> {
                     value: null,
                     dotColor: AppColors.bone,
                     onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => MovementYearlyDetailScreen(client: widget.client)),
+                      MaterialPageRoute(
+                        builder: (_) => MovementReportsScreen(client: widget.client, initialPeriod: MovementReportPeriod.year),
+                      ),
                     ),
                   ),
                 ],
@@ -1462,181 +1456,3 @@ class WeeklyStepsBarChart extends StatelessWidget {
   }
 }
 
-/// Converte os snapshots do ciclo (backend) em pontos (hora, passos)
-/// pro gráfico de linha e pros cards de pico/vale — compartilhado entre
-/// `OscillationMetricsRow` (topo da tela) e o gráfico intradiário
-/// completo (mais abaixo), já que os dois derivam do mesmo dado.
-List<(double hour, int steps)> intradayPoints(List<Map<String, dynamic>> snapshots, DateTime cycleStart) {
-  return [
-    (0, 0),
-    for (final s in snapshots) (DateTime.parse(s['recorded_at'] as String).difference(cycleStart).inMinutes / 60.0, s['steps_total'] as int),
-  ];
-}
-
-/// Métricas de oscilação diária (U.I/MOVIMENTO_REDESIGN_V1.md §5.2,
-/// reposicionadas em 29/08/2026 — pedido de Rhoney: "no lugar dos dois
-/// botões abaixo deve aparecer as métricas de oscilações diário do
-/// jogador") — pico e vale de passos por hora, no lugar de onde ficavam
-/// os botões manuais de coleta. Precisa de pelo menos 2 snapshots pra
-/// fazer sentido comparar; com menos, mostra um aviso neutro.
-class OscillationMetricsRow extends StatelessWidget {
-  const OscillationMetricsRow({super.key, required this.l10n, required this.sensorUnavailable, required this.snapshots, required this.cycleStart});
-
-  final AppLocalizations l10n;
-  final bool sensorUnavailable;
-  final List<Map<String, dynamic>> snapshots;
-  final DateTime cycleStart;
-
-  @override
-  Widget build(BuildContext context) {
-    if (snapshots.length < 2) {
-      return FittedBox(
-        fit: BoxFit.scaleDown,
-        alignment: Alignment.centerLeft,
-        child: Text(
-          sensorUnavailable ? l10n.movementSensorUnavailableMessage : l10n.movementOscillationPendingMessage,
-          style: TextStyle(color: AppColors.muted, fontSize: 11),
-          maxLines: 1,
-        ),
-      );
-    }
-    final points = intradayPoints(snapshots, cycleStart);
-    final peak = points.reduce((a, b) => a.$2 >= b.$2 ? a : b);
-    final valley = points.reduce((a, b) => a.$2 <= b.$2 ? a : b);
-    return Row(
-      children: [
-        Expanded(child: PeakValleyCard(icon: '🔥', label: l10n.movementPeakLabel, hour: peak.$1, steps: peak.$2, color: AppColors.gold)),
-        const SizedBox(width: 6),
-        Expanded(child: PeakValleyCard(icon: '💤', label: l10n.movementValleyLabel, hour: valley.$1, steps: valley.$2, color: AppColors.muted)),
-      ],
-    );
-  }
-}
-
-class PeakValleyCard extends StatelessWidget {
-  const PeakValleyCard({super.key, required this.icon, required this.label, required this.hour, required this.steps, required this.color});
-
-  final String icon;
-  final String label;
-  final double hour;
-  final int steps;
-  final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    final h = hour.floor();
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-      decoration: BoxDecoration(color: AppColors.bg, borderRadius: BorderRadius.circular(10)),
-      child: FittedBox(
-        fit: BoxFit.scaleDown,
-        alignment: Alignment.centerLeft,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text('$icon ${h}h · $label', style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9)),
-            Text('$steps', style: AppTheme.technicalStyle(color: color, fontSize: 15).copyWith(fontWeight: FontWeight.w700)),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class IntradayStepsLineChart extends StatelessWidget {
-  const IntradayStepsLineChart({super.key, required this.points});
-
-  final List<(double hour, int steps)> points;
-
-  @override
-  Widget build(BuildContext context) {
-    final spots = [for (final p in points) FlSpot(p.$1, p.$2.toDouble())];
-    final maxY = spots.map((s) => s.y).reduce((a, b) => a > b ? a : b);
-    final chartMaxY = maxY <= 0 ? 10.0 : maxY * 1.2;
-
-    return LineChart(
-      duration: const Duration(milliseconds: 900),
-      curve: Curves.easeOutCubic,
-      LineChartData(
-        minX: 0,
-        maxX: 24,
-        minY: 0,
-        maxY: chartMaxY,
-        lineTouchData: LineTouchData(
-          enabled: true,
-          touchTooltipData: LineTouchTooltipData(
-            getTooltipColor: (_) => AppColors.bg,
-            getTooltipItems: (spots) => [
-              for (final s in spots) LineTooltipItem('${s.y.round()}', AppTheme.technicalStyle(color: AppColors.bone, fontSize: 11)),
-            ],
-          ),
-        ),
-        gridData: FlGridData(
-          show: true,
-          drawVerticalLine: false,
-          horizontalInterval: chartMaxY / 3,
-          getDrawingHorizontalLine: (_) => FlLine(color: AppColors.bg, strokeWidth: 1),
-        ),
-        borderData: FlBorderData(show: false),
-        titlesData: FlTitlesData(
-          leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          bottomTitles: AxisTitles(
-            sideTitles: SideTitles(
-              showTitles: true,
-              interval: 6,
-              reservedSize: 20,
-              getTitlesWidget: (value, meta) => Padding(
-                padding: const EdgeInsets.only(top: 4),
-                child: Text(
-                  '${value.toInt()}h',
-                  style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10),
-                ),
-              ),
-            ),
-          ),
-        ),
-        lineBarsData: [
-          LineChartBarData(
-            spots: spots,
-            isCurved: true,
-            curveSmoothness: 0.25,
-            color: AppColors.gold,
-            barWidth: 3,
-            // MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx
-            // §14 / U.I/MOVIMENTO_REDESIGN_V1.md §5.2 — "marcador
-            // circular dourado destacando o ponto de pico" (confirmado
-            // com Rhoney, 03/09/2026): todo ponto já é dourado, então o
-            // pico precisa de mais que a mesma cor pra se destacar —
-            // maior raio + um halo translúcido ao redor (glow sutil),
-            // os demais pontos continuam do tamanho normal.
-            dotData: FlDotData(
-              show: true,
-              getDotPainter: (spot, percent, bar, index) {
-                final isPeak = spot.y == maxY;
-                return FlDotCirclePainter(
-                  radius: isPeak ? 6 : 3.5,
-                  color: AppColors.gold,
-                  strokeWidth: isPeak ? 5 : 0,
-                  strokeColor: AppColors.gold.withValues(alpha: 0.25),
-                );
-              },
-            ),
-            belowBarData: BarAreaData(
-              show: true,
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [AppColors.gold.withValues(alpha: 0.2), AppColors.gold.withValues(alpha: 0.0)],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

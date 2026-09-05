@@ -760,10 +760,6 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get movementOscillationPendingMessage =>
-      'Ainda sem dados de oscilação hoje — ande um pouco pra ver o pico e o vale aparecerem.';
-
-  @override
   String movementPendingReportLabel(int steps) {
     return 'Você ainda tem um ciclo anterior com $steps passos pra coletar — eles entram na próxima coleta.';
   }
@@ -819,13 +815,6 @@ class AppLocalizationsPt extends AppLocalizations {
   String get movementNoGoalProgressLabel => 'Sem meta';
 
   @override
-  String get movementWeeklyChartTitle => 'Últimos 7 dias';
-
-  @override
-  String get movementWeeklyChartSubtitle =>
-      'Passos coletados por dia — veja em quais você caminhou mais.';
-
-  @override
   String get movementTodayChartTitle => 'Seu dia até agora';
 
   @override
@@ -868,44 +857,111 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get movementDailyDetailTitle => 'Progressão do dia';
+  String get movementReportsTitle => 'Movimento';
 
   @override
-  String get movementDailyDetailStepsLabel => 'Passos';
+  String get movementReportsTabDay => 'Dia';
 
   @override
-  String get movementDailyDetailXpLabel => 'XP';
+  String get movementReportsTabWeek => 'Semana';
 
   @override
-  String get movementDailyDetailGoalLabel => 'Meta do dia';
+  String get movementReportsTabMonth => 'Mês';
 
   @override
-  String get movementWeeklyDetailTitle => 'Progressão semanal';
+  String get movementReportsTabYear => 'Ano';
 
   @override
-  String get movementWeeklyDetailHint => 'Toque num dia para ver os detalhes.';
+  String movementReportsTotalLabel(String period) {
+    return 'Total acumulado $period';
+  }
 
   @override
-  String get movementYearlyDetailTitle => 'Progressão anual';
+  String get movementReportsTotalPeriodDay => 'hoje';
 
   @override
-  String get movementYearlyTotalStepsLabel => 'Total de passos';
+  String get movementReportsTotalPeriodWeek => 'na semana';
 
   @override
-  String get movementYearlyAverageLabel => 'Média por dia ativo';
+  String get movementReportsTotalPeriodMonth => 'no mês';
 
   @override
-  String get movementYearlyActiveDaysLabel => 'Dias ativos';
+  String get movementReportsTotalPeriodYear => 'no ano';
 
   @override
-  String get movementYearlyBestMonthLabel => 'Melhor mês';
+  String movementReportsTotalSteps(int steps) {
+    return '$steps passos';
+  }
+
+  @override
+  String get movementReportsXpLabel => 'XP';
+
+  @override
+  String get movementReportsGoalPercentLabel => 'da meta';
+
+  @override
+  String get movementReportsStreakLabel => 'sequência';
+
+  @override
+  String get movementReportsDayChartTitle => 'Seu dia, sessão a sessão';
+
+  @override
+  String get movementReportsLiveBadge => 'AO VIVO';
+
+  @override
+  String movementReportsPeakTag(String steps) {
+    return 'Pico: $steps';
+  }
+
+  @override
+  String get movementReportsWeekChartTitle => 'Últimos 7 dias';
+
+  @override
+  String movementReportsAverageBadge(int value) {
+    return 'média $value';
+  }
+
+  @override
+  String get movementReportsTodayLabel => 'Hoje';
+
+  @override
+  String get movementReportsMonthChartTitle => 'Dias do mês';
+
+  @override
+  String get movementReportsYearChartTitle => 'Progressão anual';
+
+  @override
+  String get movementReportsHistorySectionTitle => 'Seu histórico completo';
+
+  @override
+  String movementReportsHistoryDayLabel(int number) {
+    return 'Dia $number';
+  }
+
+  @override
+  String movementReportsHistoryTodayLabel(int number) {
+    return 'Hoje · Dia $number';
+  }
+
+  @override
+  String movementReportsHistoryXp(int xp) {
+    return '+$xp XP';
+  }
+
+  @override
+  String movementReportsHistoryAccumulated(int steps) {
+    return 'acumulado: $steps';
+  }
+
+  @override
+  String get movementReportsHistoryLoadMore => 'Carregar mais';
+
+  @override
+  String get movementReportsEmptyMessage =>
+      'Ainda sem dados suficientes pra esse período.';
 
   @override
   String get movementYearlyXpLabel => 'XP de Movimento no ano';
-
-  @override
-  String get movementYearlyEmptyMessage =>
-      'Ainda não há dados de Movimento neste ano.';
 
   @override
   String get movementSyncFailedMessage =>
@@ -1592,12 +1648,6 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get movementLiveLabel => 'AO VIVO';
-
-  @override
-  String get movementPeakLabel => 'pico';
-
-  @override
-  String get movementValleyLabel => 'vale';
 
   @override
   String get movementGoalGoButton => 'Ir';

@@ -1,1494 +1,2339 @@
 {
   "@@locale": "pt",
-
   "preparingChallenge": "Preparando seu desafio...",
-  "@preparingChallenge": {"description": "Loading state shown during cold start / initial bootstrap"},
-
+  "@preparingChallenge": {
+    "description": "Loading state shown during cold start / initial bootstrap"
+  },
   "ageGateTitle": "Este aplicativo é destinado a maiores de 18 anos.",
-  "@ageGateTitle": {"description": "MENTAL-POL-002 §3.1 — single majority confirmation screen main text"},
-
+  "@ageGateTitle": {
+    "description": "MENTAL-POL-002 §3.1 — single majority confirmation screen main text"
+  },
   "ageGateSubtitle": "Confirme que você tem 18 anos ou mais para continuar.",
-  "@ageGateSubtitle": {"description": "Age confirmation supporting text"},
-
+  "@ageGateSubtitle": {
+    "description": "Age confirmation supporting text"
+  },
   "ageGateCheckboxLabel": "Confirmo que tenho 18 anos ou mais.",
-  "@ageGateCheckboxLabel": {"description": "MENTAL-POL-002 §3.1 — mandatory majority confirmation checkbox"},
-
+  "@ageGateCheckboxLabel": {
+    "description": "MENTAL-POL-002 §3.1 — mandatory majority confirmation checkbox"
+  },
   "ageGateTermsLinkPrefix": "Ao continuar, você concorda com os ",
-  "@ageGateTermsLinkPrefix": {"description": "Text before the Terms/Privacy Policy link"},
-
+  "@ageGateTermsLinkPrefix": {
+    "description": "Text before the Terms/Privacy Policy link"
+  },
   "ageGateTermsLinkText": "Termos de Uso e a Política de Privacidade",
-  "@ageGateTermsLinkText": {"description": "Tappable Terms of Use / Privacy Policy link text"},
-
+  "@ageGateTermsLinkText": {
+    "description": "Tappable Terms of Use / Privacy Policy link text"
+  },
   "ageGateContinueButton": "Continuar",
-  "@ageGateContinueButton": {"description": "Single continue button, enabled only when checkbox is checked"},
-
+  "@ageGateContinueButton": {
+    "description": "Single continue button, enabled only when checkbox is checked"
+  },
   "homeTitle": "MENTAL",
-  "@homeTitle": {"description": "Home app bar title (brand wordmark)"},
-
+  "@homeTitle": {
+    "description": "Home app bar title (brand wordmark)"
+  },
   "progressSummary": "XP: {xp} · Nível {level} · Streak: {streak} dias",
   "@progressSummary": {
     "description": "Home progress summary line",
     "placeholders": {
-      "xp": {"type": "int"},
-      "level": {"type": "int"},
-      "streak": {"type": "int"}
+      "xp": {
+        "type": "int"
+      },
+      "level": {
+        "type": "int"
+      },
+      "streak": {
+        "type": "int"
+      }
     }
   },
-
   "newChallengeButton": "Desafio {territory}",
   "@newChallengeButton": {
     "description": "Primary CTA per territory on Home",
     "placeholders": {
-      "territory": {"type": "String"}
+      "territory": {
+        "type": "String"
+      }
     }
   },
-
   "territoryPalavras": "Palavras",
-  "@territoryPalavras": {"description": "Territory display name"},
+  "@territoryPalavras": {
+    "description": "Territory display name"
+  },
   "territoryNumeros": "Números",
-  "@territoryNumeros": {"description": "Territory display name"},
+  "@territoryNumeros": {
+    "description": "Territory display name"
+  },
   "territoryLogica": "Lógica",
-  "@territoryLogica": {"description": "Territory display name"},
+  "@territoryLogica": {
+    "description": "Territory display name"
+  },
   "territoryConhecimento": "Conhecimento",
-  "@territoryConhecimento": {"description": "Territory display name"},
+  "@territoryConhecimento": {
+    "description": "Territory display name"
+  },
   "territoryEnigmas": "Enigmas",
-  "@territoryEnigmas": {"description": "Territory display name"},
+  "@territoryEnigmas": {
+    "description": "Territory display name"
+  },
   "territoryTextos": "Textos",
-  "@territoryTextos": {"description": "Territory display name"},
+  "@territoryTextos": {
+    "description": "Territory display name"
+  },
   "territoryRedacao": "Redação",
-  "@territoryRedacao": {"description": "Territory display name"},
+  "@territoryRedacao": {
+    "description": "Territory display name"
+  },
   "territoryVisual": "Visual",
-  "@territoryVisual": {"description": "Territory display name"},
+  "@territoryVisual": {
+    "description": "Territory display name"
+  },
   "territoryEsportes": "Esportes",
-  "@territoryEsportes": {"description": "Territory display name"},
+  "@territoryEsportes": {
+    "description": "Territory display name"
+  },
   "territoryRegioes": "Regiões",
-  "@territoryRegioes": {"description": "Territory display name"},
+  "@territoryRegioes": {
+    "description": "Territory display name"
+  },
   "territoryCulturaPop": "Cultura Pop",
-  "@territoryCulturaPop": {"description": "Territory display name"},
+  "@territoryCulturaPop": {
+    "description": "Territory display name"
+  },
   "territoryCores": "Cores",
-  "@territoryCores": {"description": "Territory display name"},
+  "@territoryCores": {
+    "description": "Territory display name"
+  },
   "territoryMitologiaGrega": "Mitologia Grega",
-  "@territoryMitologiaGrega": {"description": "Territory display name"},
+  "@territoryMitologiaGrega": {
+    "description": "Territory display name"
+  },
   "territoryMitologiaNordica": "Mitologia Nórdica",
-  "@territoryMitologiaNordica": {"description": "Territory display name"},
+  "@territoryMitologiaNordica": {
+    "description": "Territory display name"
+  },
   "territoryMitologiaIndigena": "Mitologia Indígena",
-  "@territoryMitologiaIndigena": {"description": "Territory display name"},
+  "@territoryMitologiaIndigena": {
+    "description": "Territory display name"
+  },
   "territoryEnemLinguagens": "ENEM: Linguagens",
-  "@territoryEnemLinguagens": {"description": "Territory display name"},
+  "@territoryEnemLinguagens": {
+    "description": "Territory display name"
+  },
   "territoryEnemHumanas": "ENEM: Humanas",
-  "@territoryEnemHumanas": {"description": "Territory display name"},
+  "@territoryEnemHumanas": {
+    "description": "Territory display name"
+  },
   "territoryEnemNatureza": "ENEM: Natureza",
-  "@territoryEnemNatureza": {"description": "Territory display name"},
+  "@territoryEnemNatureza": {
+    "description": "Territory display name"
+  },
   "territoryEnemMatematica": "ENEM: Matemática",
-  "@territoryEnemMatematica": {"description": "Territory display name"},
+  "@territoryEnemMatematica": {
+    "description": "Territory display name"
+  },
   "territoryConcursosPortugues": "Concursos: Português",
-  "@territoryConcursosPortugues": {"description": "Territory display name"},
+  "@territoryConcursosPortugues": {
+    "description": "Territory display name"
+  },
   "territoryConcursosRaciocinio": "Concursos: Lógica",
-  "@territoryConcursosRaciocinio": {"description": "Territory display name"},
+  "@territoryConcursosRaciocinio": {
+    "description": "Territory display name"
+  },
   "territoryConcursosDireito": "Concursos: Direito",
-  "@territoryConcursosDireito": {"description": "Territory display name"},
+  "@territoryConcursosDireito": {
+    "description": "Territory display name"
+  },
   "territoryTecnologiaFundamentos": "Tecnologia: Fundamentos",
-  "@territoryTecnologiaFundamentos": {"description": "Territory display name"},
+  "@territoryTecnologiaFundamentos": {
+    "description": "Territory display name"
+  },
   "territoryTecnologiaProgramacao": "Tecnologia: Programação",
-  "@territoryTecnologiaProgramacao": {"description": "Territory display name"},
+  "@territoryTecnologiaProgramacao": {
+    "description": "Territory display name"
+  },
   "territoryTecnologiaSeguranca": "Tecnologia: Segurança",
-  "@territoryTecnologiaSeguranca": {"description": "Territory display name"},
+  "@territoryTecnologiaSeguranca": {
+    "description": "Territory display name"
+  },
   "territoryTecnologiaFronteira": "Tecnologia: Fronteira",
-  "@territoryTecnologiaFronteira": {"description": "Territory display name"},
+  "@territoryTecnologiaFronteira": {
+    "description": "Territory display name"
+  },
   "territoryFinancasPessoais": "Finanças Pessoais",
-  "@territoryFinancasPessoais": {"description": "Territory display name"},
+  "@territoryFinancasPessoais": {
+    "description": "Territory display name"
+  },
   "territoryFilosofia": "Filosofia",
-  "@territoryFilosofia": {"description": "Territory display name"},
+  "@territoryFilosofia": {
+    "description": "Territory display name"
+  },
   "territoryArtes": "Artes",
-  "@territoryArtes": {"description": "Territory display name"},
+  "@territoryArtes": {
+    "description": "Territory display name"
+  },
   "territorySaudeBemestar": "Saúde e Bem-estar",
-  "@territorySaudeBemestar": {"description": "Territory display name"},
+  "@territorySaudeBemestar": {
+    "description": "Territory display name"
+  },
   "territoryCuriosidadeRelampago": "Curiosidade Relâmpago",
-  "@territoryCuriosidadeRelampago": {"description": "Territory display name"},
-
+  "@territoryCuriosidadeRelampago": {
+    "description": "Territory display name"
+  },
   "territoryLibras": "Libras",
-  "@territoryLibras": {"description": "Territory display name"},
-
+  "@territoryLibras": {
+    "description": "Territory display name"
+  },
   "territoryCacaPalavras": "Caça-palavras",
-  "@territoryCacaPalavras": {"description": "Territory display name"},
-
+  "@territoryCacaPalavras": {
+    "description": "Territory display name"
+  },
   "territoryInvencoes": "Invenções",
-  "@territoryInvencoes": {"description": "Territory display name"},
-
+  "@territoryInvencoes": {
+    "description": "Territory display name"
+  },
   "territoryVeiculos": "Carros, Motos e Aviões",
-  "@territoryVeiculos": {"description": "Territory display name"},
-
+  "@territoryVeiculos": {
+    "description": "Territory display name"
+  },
   "territoryAstronomia": "Astronomia e Espaço",
-  "@territoryAstronomia": {"description": "Territory display name"},
-
+  "@territoryAstronomia": {
+    "description": "Territory display name"
+  },
   "territoryDetetiveMental": "Detetive Mental",
-  "@territoryDetetiveMental": {"description": "Territory display name"},
-
+  "@territoryDetetiveMental": {
+    "description": "Territory display name"
+  },
   "detectiveNextClueButton": "Próxima pista",
-  "@detectiveNextClueButton": {"description": "Button that reveals the next clue in a Detetive Mental case"},
+  "@detectiveNextClueButton": {
+    "description": "Button that reveals the next clue in a Detetive Mental case"
+  },
   "detectiveRevealQuestionButton": "Ver pergunta",
-  "@detectiveRevealQuestionButton": {"description": "Button shown after the last clue, that reveals the final multiple-choice question"},
+  "@detectiveRevealQuestionButton": {
+    "description": "Button shown after the last clue, that reveals the final multiple-choice question"
+  },
   "detectiveClueLabel": "Pista {number}",
-  "@detectiveClueLabel": {"description": "Label prefix shown before each revealed clue, e.g. 'Pista 1'", "placeholders": {"number": {"type": "int"}}},
-
+  "@detectiveClueLabel": {
+    "description": "Label prefix shown before each revealed clue, e.g. 'Pista 1'",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
   "territoryOuvidoAfiado": "Ouvido Afiado",
-  "@territoryOuvidoAfiado": {"description": "Territory display name"},
-
+  "@territoryOuvidoAfiado": {
+    "description": "Territory display name"
+  },
   "territoryInglesBasico": "Inglês Básico",
-  "@territoryInglesBasico": {"description": "Territory display name"},
+  "@territoryInglesBasico": {
+    "description": "Territory display name"
+  },
   "territoryInglesIntermediario": "Inglês Intermediário",
-  "@territoryInglesIntermediario": {"description": "Territory display name"},
+  "@territoryInglesIntermediario": {
+    "description": "Territory display name"
+  },
   "territoryInglesAvancado": "Inglês Avançado",
-  "@territoryInglesAvancado": {"description": "Territory display name"},
+  "@territoryInglesAvancado": {
+    "description": "Territory display name"
+  },
   "territoryEspanholBasico": "Espanhol Básico",
-  "@territoryEspanholBasico": {"description": "Territory display name"},
+  "@territoryEspanholBasico": {
+    "description": "Territory display name"
+  },
   "territoryEspanholIntermediario": "Espanhol Intermediário",
-  "@territoryEspanholIntermediario": {"description": "Territory display name"},
+  "@territoryEspanholIntermediario": {
+    "description": "Territory display name"
+  },
   "territoryEspanholAvancado": "Espanhol Avançado",
-  "@territoryEspanholAvancado": {"description": "Territory display name"},
+  "@territoryEspanholAvancado": {
+    "description": "Territory display name"
+  },
   "territoryFrancesBasico": "Francês Básico",
-  "@territoryFrancesBasico": {"description": "Territory display name"},
+  "@territoryFrancesBasico": {
+    "description": "Territory display name"
+  },
   "territoryFrancesIntermediario": "Francês Intermediário",
-  "@territoryFrancesIntermediario": {"description": "Territory display name"},
+  "@territoryFrancesIntermediario": {
+    "description": "Territory display name"
+  },
   "territoryFrancesAvancado": "Francês Avançado",
-  "@territoryFrancesAvancado": {"description": "Territory display name"},
-
+  "@territoryFrancesAvancado": {
+    "description": "Territory display name"
+  },
   "audioPlayButton": "Tocar som",
-  "@audioPlayButton": {"description": "Button that plays the challenge audio clip in Ouvido Afiado"},
+  "@audioPlayButton": {
+    "description": "Button that plays the challenge audio clip in Ouvido Afiado"
+  },
   "audioReplayButton": "Ouvir de novo",
-  "@audioReplayButton": {"description": "Button that replays the challenge audio clip after it already finished once"},
+  "@audioReplayButton": {
+    "description": "Button that replays the challenge audio clip after it already finished once"
+  },
   "audioLoadErrorMessage": "Não foi possível carregar o áudio. Tente de novo.",
-  "@audioLoadErrorMessage": {"description": "Shown when the challenge audio clip fails to load or play"},
+  "@audioLoadErrorMessage": {
+    "description": "Shown when the challenge audio clip fails to load or play"
+  },
   "audioSourceCreditLabel": "Fonte: {source}",
-  "@audioSourceCreditLabel": {"description": "Attribution caption shown under the audio player, e.g. 'Fonte: Author — CC BY 4.0 — Wikimedia Commons'", "placeholders": {"source": {"type": "String"}}},
-
+  "@audioSourceCreditLabel": {
+    "description": "Attribution caption shown under the audio player, e.g. 'Fonte: Author — CC BY 4.0 — Wikimedia Commons'",
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    }
+  },
   "learningPauseButtonTooltip": "Pausa para Aprender",
-  "@learningPauseButtonTooltip": {"description": "AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory"},
+  "@learningPauseButtonTooltip": {
+    "description": "AppBar action on Challenge screen that opens a reading-only Learning Pause for this territory"
+  },
   "learningPauseScreenTitle": "Pausa para Aprender",
-  "@learningPauseScreenTitle": {"description": "Learning Pause screen title"},
+  "@learningPauseScreenTitle": {
+    "description": "Learning Pause screen title"
+  },
   "learningPauseEmptyMessage": "Ainda não há Pausas para Aprender neste território.",
-  "@learningPauseEmptyMessage": {"description": "Shown when there is no learning pause content for this territory yet"},
-
+  "@learningPauseEmptyMessage": {
+    "description": "Shown when there is no learning pause content for this territory yet"
+  },
   "wordSearchEmptyMessage": "Ainda não há Caça-palavras neste território.",
-  "@wordSearchEmptyMessage": {"description": "Shown when there is no word search content for this territory yet"},
+  "@wordSearchEmptyMessage": {
+    "description": "Shown when there is no word search content for this territory yet"
+  },
   "wordSearchCompletedMessage": "Você encontrou todas as palavras!",
-  "@wordSearchCompletedMessage": {"description": "Shown when the player finds every word in the puzzle"},
+  "@wordSearchCompletedMessage": {
+    "description": "Shown when the player finds every word in the puzzle"
+  },
   "wordSearchXpAwardedMessage": "+{xp} XP",
-  "@wordSearchXpAwardedMessage": {"description": "XP awarded for completing a word search puzzle", "placeholders": {"xp": {"type": "int"}}},
+  "@wordSearchXpAwardedMessage": {
+    "description": "XP awarded for completing a word search puzzle",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
   "wordSearchSpeedBonusMessage": "Incluindo +{bonus} XP de bônus de velocidade!",
-  "@wordSearchSpeedBonusMessage": {"description": "Speed bonus detail shown after completing a word search puzzle", "placeholders": {"bonus": {"type": "int"}}},
-
+  "@wordSearchSpeedBonusMessage": {
+    "description": "Speed bonus detail shown after completing a word search puzzle",
+    "placeholders": {
+      "bonus": {
+        "type": "int"
+      }
+    }
+  },
   "learningPauseCompleteButton": "Concluí a leitura",
-  "@learningPauseCompleteButton": {"description": "Button that marks the learning pause as read and awards XP"},
+  "@learningPauseCompleteButton": {
+    "description": "Button that marks the learning pause as read and awards XP"
+  },
   "learningPauseWatchVideoButton": "Assistir vídeo de referência",
-  "@learningPauseWatchVideoButton": {"description": "Button to open the institutional reference video"},
+  "@learningPauseWatchVideoButton": {
+    "description": "Button to open the institutional reference video"
+  },
   "institutionalVideoSourceLabel": "Fonte: {source}",
-  "@institutionalVideoSourceLabel": {"description": "Institutional source attribution shown under the embedded video", "placeholders": {"source": {"type": "String"}}},
+  "@institutionalVideoSourceLabel": {
+    "description": "Institutional source attribution shown under the embedded video",
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    }
+  },
   "institutionalVideoFallbackTitle": "Abrir vídeo no YouTube?",
-  "@institutionalVideoFallbackTitle": {"description": "Fallback dialog title when embedded player is unavailable"},
+  "@institutionalVideoFallbackTitle": {
+    "description": "Fallback dialog title when embedded player is unavailable"
+  },
   "institutionalVideoFallbackBody": "Não foi possível abrir o vídeo dentro do MENTAL. Deseja abri-lo no YouTube?",
-  "@institutionalVideoFallbackBody": {"description": "Fallback dialog body"},
+  "@institutionalVideoFallbackBody": {
+    "description": "Fallback dialog body"
+  },
   "institutionalVideoFallbackCancel": "Cancelar",
-  "@institutionalVideoFallbackCancel": {"description": "Fallback dialog cancel button"},
+  "@institutionalVideoFallbackCancel": {
+    "description": "Fallback dialog cancel button"
+  },
   "institutionalVideoFallbackConfirm": "Abrir",
-  "@institutionalVideoFallbackConfirm": {"description": "Fallback dialog confirm button"},
+  "@institutionalVideoFallbackConfirm": {
+    "description": "Fallback dialog confirm button"
+  },
   "learningPauseXpAwardedMessage": "+{xp} XP pela leitura!",
   "@learningPauseXpAwardedMessage": {
     "description": "Shown after completing a learning pause for the first time",
-    "placeholders": {"xp": {"type": "int"}}
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
   },
   "learningPauseAlreadyReadMessage": "Você já leu essa Pausa antes — obrigado por revisitar!",
-  "@learningPauseAlreadyReadMessage": {"description": "Shown when completing a learning pause that was already read before (no XP the second time)"},
-
+  "@learningPauseAlreadyReadMessage": {
+    "description": "Shown when completing a learning pause that was already read before (no XP the second time)"
+  },
   "adminMetricsMenuLabel": "Painel Admin",
-  "@adminMetricsMenuLabel": {"description": "Settings menu entry that opens the in-app admin metrics panel, only visible to role=admin"},
-
+  "@adminMetricsMenuLabel": {
+    "description": "Settings menu entry that opens the in-app admin metrics panel, only visible to role=admin"
+  },
   "tutorialSkipButton": "Pular",
-  "@tutorialSkipButton": {"description": "Skip button on the onboarding tutorial"},
+  "@tutorialSkipButton": {
+    "description": "Skip button on the onboarding tutorial"
+  },
   "tutorialNextButton": "Próximo",
-  "@tutorialNextButton": {"description": "Next button on the onboarding tutorial"},
+  "@tutorialNextButton": {
+    "description": "Next button on the onboarding tutorial"
+  },
   "tutorialStartButton": "Vamos começar",
-  "@tutorialStartButton": {"description": "Final button on the last onboarding tutorial page"},
+  "@tutorialStartButton": {
+    "description": "Final button on the last onboarding tutorial page"
+  },
   "tutorialMenuLabel": "Como usar o MENTAL",
-  "@tutorialMenuLabel": {"description": "Settings menu entry that replays the onboarding tutorial"},
-
+  "@tutorialMenuLabel": {
+    "description": "Settings menu entry that replays the onboarding tutorial"
+  },
   "tutorialPage1Title": "Bem-vindo ao MENTAL",
-  "@tutorialPage1Title": {"description": "Onboarding tutorial page 1 title"},
+  "@tutorialPage1Title": {
+    "description": "Onboarding tutorial page 1 title"
+  },
   "tutorialPage1Body": "MENTAL é quem conquista com a mente. Você responde desafios de raciocínio, ganha XP e sobe de nível — sem pressa, no seu ritmo.",
-  "@tutorialPage1Body": {"description": "Onboarding tutorial page 1 body"},
-
+  "@tutorialPage1Body": {
+    "description": "Onboarding tutorial page 1 body"
+  },
   "tutorialPage2Title": "Territórios e Mundos",
-  "@tutorialPage2Title": {"description": "Onboarding tutorial page 2 title"},
+  "@tutorialPage2Title": {
+    "description": "Onboarding tutorial page 2 title"
+  },
   "tutorialPage2Body": "Cada território testa um tipo de raciocínio diferente — palavras, números, lógica, cultura geral e mais. Eles ficam agrupados em Mundos, na tela inicial.",
-  "@tutorialPage2Body": {"description": "Onboarding tutorial page 2 body"},
-
+  "@tutorialPage2Body": {
+    "description": "Onboarding tutorial page 2 body"
+  },
   "tutorialPage3Title": "Modo Relâmpago",
-  "@tutorialPage3Title": {"description": "Onboarding tutorial page 3 title"},
+  "@tutorialPage3Title": {
+    "description": "Onboarding tutorial page 3 title"
+  },
   "tutorialPage3Body": "Prefere emoção? O Relâmpago é o mesmo território, só que com cronômetro e bônus de XP por velocidade — quanto mais rápido acertar, maior o bônus.",
-  "@tutorialPage3Body": {"description": "Onboarding tutorial page 3 body"},
-
+  "@tutorialPage3Body": {
+    "description": "Onboarding tutorial page 3 body"
+  },
   "tutorialPage4Title": "Sequência e Movimento",
-  "@tutorialPage4Title": {"description": "Onboarding tutorial page 4 title"},
+  "@tutorialPage4Title": {
+    "description": "Onboarding tutorial page 4 title"
+  },
   "tutorialPage4Body": "Jogue todo dia pra manter sua sequência (streak) viva. E ative o Movimento pra transformar os passos da sua caminhada em XP e MentalCoins, mesmo com o app fechado.",
-  "@tutorialPage4Body": {"description": "Onboarding tutorial page 4 body"},
-
+  "@tutorialPage4Body": {
+    "description": "Onboarding tutorial page 4 body"
+  },
   "tutorialPage5Title": "MentalCoins e Ranking",
-  "@tutorialPage5Title": {"description": "Onboarding tutorial page 5 title"},
+  "@tutorialPage5Title": {
+    "description": "Onboarding tutorial page 5 title"
+  },
   "tutorialPage5Body": "Dispute o ranking semanal com seus amigos e ganhe MentalCoins — uma moeda de prestígio que você troca por itens exclusivos de perfil.",
-  "@tutorialPage5Body": {"description": "Onboarding tutorial page 5 body"},
-
+  "@tutorialPage5Body": {
+    "description": "Onboarding tutorial page 5 body"
+  },
   "tutorialPage6Title": "Do seu jeito",
-  "@tutorialPage6Title": {"description": "Onboarding tutorial page 6 title"},
+  "@tutorialPage6Title": {
+    "description": "Onboarding tutorial page 6 title"
+  },
   "tutorialPage6Body": "Em Ajuste, você troca entre tom claro e escuro, controla som e notificações — e pode rever este tutorial a qualquer momento.",
-  "@tutorialPage6Body": {"description": "Onboarding tutorial page 6 body"},
-
+  "@tutorialPage6Body": {
+    "description": "Onboarding tutorial page 6 body"
+  },
   "dailyLimitReachedMessage": "Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.",
-  "@dailyLimitReachedMessage": {"description": "Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3"},
-
+  "@dailyLimitReachedMessage": {
+    "description": "Celebratory daily-limit message, MONETIZATION_UPDATE_FREE_LAUNCH.md §3"
+  },
   "territoryLockedMessage": "Este território exige assinatura.",
-  "@territoryLockedMessage": {"description": "Territory locked message"},
-
+  "@territoryLockedMessage": {
+    "description": "Territory locked message"
+  },
   "backToHomeButton": "Voltar para o início",
-  "@backToHomeButton": {"description": "Button for permanent-for-today errors (daily limit / locked)"},
-
+  "@backToHomeButton": {
+    "description": "Button for permanent-for-today errors (daily limit / locked)"
+  },
   "tryAgainButton": "Tentar de novo",
-  "@tryAgainButton": {"description": "Button for transient/retryable errors"},
-
+  "@tryAgainButton": {
+    "description": "Button for transient/retryable errors"
+  },
   "yourAnswerLabel": "Sua resposta",
-  "@yourAnswerLabel": {"description": "Free-text answer field label"},
-
+  "@yourAnswerLabel": {
+    "description": "Free-text answer field label"
+  },
   "hintPrefix": "Dica: {hint}",
   "@hintPrefix": {
     "description": "Shown hint content, prefixed",
     "placeholders": {
-      "hint": {"type": "String"}
+      "hint": {
+        "type": "String"
+      }
     }
   },
-
   "noMoreHintsMessage": "Sem mais dicas para este desafio.",
-  "@noMoreHintsMessage": {"description": "Shown once hints_available is exhausted"},
-
+  "@noMoreHintsMessage": {
+    "description": "Shown once hints_available is exhausted"
+  },
   "requestHintButton": "Pedir uma dica",
-  "@requestHintButton": {"description": "Hint request button"},
-
+  "@requestHintButton": {
+    "description": "Hint request button"
+  },
   "confirmAnswerButton": "Confirmar resposta",
-  "@confirmAnswerButton": {"description": "Primary CTA to submit an answer"},
-
+  "@confirmAnswerButton": {
+    "description": "Primary CTA to submit an answer"
+  },
   "correctAnswerFeedback": "Você acertou!",
-  "@correctAnswerFeedback": {"description": "Result screen headline when correct"},
-
+  "@correctAnswerFeedback": {
+    "description": "Result screen headline when correct"
+  },
   "incorrectAnswerFeedback": "Não foi dessa vez.",
-  "@incorrectAnswerFeedback": {"description": "Result screen headline when incorrect, non-punitive tone"},
-
+  "@incorrectAnswerFeedback": {
+    "description": "Result screen headline when incorrect, non-punitive tone"
+  },
   "correctAnswerLabel": "Resposta correta: {answer}",
   "@correctAnswerLabel": {
     "description": "Shows the correct answer after submission",
     "placeholders": {
-      "answer": {"type": "String"}
+      "answer": {
+        "type": "String"
+      }
     }
   },
-
   "xpEarnedLabel": "XP ganho: {xp} (base: {base}, dicas usadas: {hints})",
   "@xpEarnedLabel": {
     "description": "XP breakdown after answering",
     "placeholders": {
-      "xp": {"type": "int"},
-      "base": {"type": "int"},
-      "hints": {"type": "int"}
+      "xp": {
+        "type": "int"
+      },
+      "base": {
+        "type": "int"
+      },
+      "hints": {
+        "type": "int"
+      }
     }
   },
-
   "nextChallengeButton": "Próximo desafio",
-  "@nextChallengeButton": {"description": "Button to load the next challenge"},
-
+  "@nextChallengeButton": {
+    "description": "Button to load the next challenge"
+  },
   "batchCompletedMessage": "Você completou todos os desafios disponíveis aqui por agora!",
-  "@batchCompletedMessage": {"description": "Shown when the player has answered every available challenge in this territory/difficulty batch"},
+  "@batchCompletedMessage": {
+    "description": "Shown when the player has answered every available challenge in this territory/difficulty batch"
+  },
   "batchCompletedBackToHomeButton": "Voltar para o Início",
-  "@batchCompletedBackToHomeButton": {"description": "Button to return to Home after completing a full batch of challenges"},
-
+  "@batchCompletedBackToHomeButton": {
+    "description": "Button to return to Home after completing a full batch of challenges"
+  },
   "roundReviewOfferMessage": "{count, plural, one{Você errou 1 pergunta nesta rodada.} other{Você errou {count} perguntas nesta rodada.}}",
   "@roundReviewOfferMessage": {
     "description": "Shown at the end of a batch when the player got at least one question wrong, offering to review just the wrong ones",
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "roundReviewDeclineButton": "Não, obrigado",
-  "@roundReviewDeclineButton": {"description": "Declines the offer to review wrong answers, proceeding to the normal batch-completed screen"},
+  "@roundReviewDeclineButton": {
+    "description": "Declines the offer to review wrong answers, proceeding to the normal batch-completed screen"
+  },
   "roundReviewAcceptButton": "Refazer erros",
-  "@roundReviewAcceptButton": {"description": "Accepts the offer to review wrong answers from this round"},
+  "@roundReviewAcceptButton": {
+    "description": "Accepts the offer to review wrong answers from this round"
+  },
   "roundReviewBadgeLabel": "Modo revisão · sem XP",
-  "@roundReviewBadgeLabel": {"description": "Small label shown while answering a question during the round-review phase, making clear it won't award XP"},
+  "@roundReviewBadgeLabel": {
+    "description": "Small label shown while answering a question during the round-review phase, making clear it won't award XP"
+  },
   "roundReviewRemainingMessage": "{count, plural, one{Falta 1 revisão.} other{Faltam {count} revisões.}}",
   "@roundReviewRemainingMessage": {
     "description": "Shown after answering a review question, when there are still more wrong answers left to review",
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "roundReviewNextButton": "Próxima revisão",
-  "@roundReviewNextButton": {"description": "Loads the next wrong-answer question during round review"},
+  "@roundReviewNextButton": {
+    "description": "Loads the next wrong-answer question during round review"
+  },
   "roundReviewFinishedMessage": "Revisão concluída!",
-  "@roundReviewFinishedMessage": {"description": "Shown after answering the last question in the round-review queue"},
-
+  "@roundReviewFinishedMessage": {
+    "description": "Shown after answering the last question in the round-review queue"
+  },
   "levelFeedbackHeading": "Como foi esse nível?",
-  "@levelFeedbackHeading": {"description": "FEEDBACK_POS_NIVEL.md — heading for the post-level feedback blocks"},
-
+  "@levelFeedbackHeading": {
+    "description": "FEEDBACK_POS_NIVEL.md — heading for the post-level feedback blocks"
+  },
   "levelFeedbackRepeatAction": "Repetir este nível",
-  "@levelFeedbackRepeatAction": {"description": "FEEDBACK_POS_NIVEL.md — action block, option to redo the same level"},
-
+  "@levelFeedbackRepeatAction": {
+    "description": "FEEDBACK_POS_NIVEL.md — action block, option to redo the same level"
+  },
   "levelFeedbackContinueAction": "Seguir em frente",
-  "@levelFeedbackContinueAction": {"description": "FEEDBACK_POS_NIVEL.md — action block, option to advance to the next level"},
-
+  "@levelFeedbackContinueAction": {
+    "description": "FEEDBACK_POS_NIVEL.md — action block, option to advance to the next level"
+  },
   "levelFeedbackDifficultyFacil": "Fácil",
-  "@levelFeedbackDifficultyFacil": {"description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"},
-
+  "@levelFeedbackDifficultyFacil": {
+    "description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"
+  },
   "levelFeedbackDifficultyMedio": "Médio",
-  "@levelFeedbackDifficultyMedio": {"description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"},
-
+  "@levelFeedbackDifficultyMedio": {
+    "description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"
+  },
   "levelFeedbackDifficultyDificil": "Difícil",
-  "@levelFeedbackDifficultyDificil": {"description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"},
-
+  "@levelFeedbackDifficultyDificil": {
+    "description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"
+  },
   "levelFeedbackDifficultyMuitoDificil": "Muito difícil",
-  "@levelFeedbackDifficultyMuitoDificil": {"description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"},
-
+  "@levelFeedbackDifficultyMuitoDificil": {
+    "description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"
+  },
   "levelFeedbackCommentHint": "Comentário (opcional)",
-  "@levelFeedbackCommentHint": {"description": "FEEDBACK_POS_NIVEL.md — optional free-text comment field hint"},
-
+  "@levelFeedbackCommentHint": {
+    "description": "FEEDBACK_POS_NIVEL.md — optional free-text comment field hint"
+  },
   "progressTooltip": "Progresso",
-  "@progressTooltip": {"description": "Home app bar icon tooltip, opens Progress screen"},
-
+  "@progressTooltip": {
+    "description": "Home app bar icon tooltip, opens Progress screen"
+  },
   "rankingTooltip": "Ranking",
-  "@rankingTooltip": {"description": "Home app bar icon tooltip, opens Ranking screen"},
-
+  "@rankingTooltip": {
+    "description": "Home app bar icon tooltip, opens Ranking screen"
+  },
   "progressScreenTitle": "Progresso",
-  "@progressScreenTitle": {"description": "Progress screen app bar title"},
-
+  "@progressScreenTitle": {
+    "description": "Progress screen app bar title"
+  },
   "levelLabel": "Nível {level}",
   "@levelLabel": {
     "description": "Level headline",
     "placeholders": {
-      "level": {"type": "int"}
+      "level": {
+        "type": "int"
+      }
     }
   },
-
   "territoryXpLabel": "{xp} / {threshold} XP",
   "@territoryXpLabel": {
     "description": "Per-territory XP progress caption",
     "placeholders": {
-      "xp": {"type": "int"},
-      "threshold": {"type": "int"}
+      "xp": {
+        "type": "int"
+      },
+      "threshold": {
+        "type": "int"
+      }
     }
   },
-
   "conqueredBadge": "Conquistado",
-  "@conqueredBadge": {"description": "Badge shown on a conquered territory"},
-
+  "@conqueredBadge": {
+    "description": "Badge shown on a conquered territory"
+  },
   "inProgressBadge": "Em progresso",
-  "@inProgressBadge": {"description": "Badge shown on a territory not yet conquered"},
-
+  "@inProgressBadge": {
+    "description": "Badge shown on a territory not yet conquered"
+  },
   "streakSectionTitle": "Sequência",
-  "@streakSectionTitle": {"description": "Streak section title on Progress screen"},
-
+  "@streakSectionTitle": {
+    "description": "Streak section title on Progress screen"
+  },
   "streakDaysLabel": "{days} dias seguidos",
   "@streakDaysLabel": {
     "description": "Current streak count",
     "placeholders": {
-      "days": {"type": "int"}
+      "days": {
+        "type": "int"
+      }
     }
   },
-
   "streakFreezeAvailableMessage": "Proteção de sequência disponível esta semana — uma falha não quebra sua sequência.",
-  "@streakFreezeAvailableMessage": {"description": "Streak freeze available explanation"},
-
+  "@streakFreezeAvailableMessage": {
+    "description": "Streak freeze available explanation"
+  },
   "streakFreezeUsedMessage": "Proteção de sequência já usada esta semana.",
-  "@streakFreezeUsedMessage": {"description": "Streak freeze already used explanation"},
-
+  "@streakFreezeUsedMessage": {
+    "description": "Streak freeze already used explanation"
+  },
   "rankingScreenTitle": "Ranking",
-  "@rankingScreenTitle": {"description": "Ranking screen app bar title"},
-
+  "@rankingScreenTitle": {
+    "description": "Ranking screen app bar title"
+  },
   "rankingWindowLabel": "Ranking da semana",
-  "@rankingWindowLabel": {"description": "Ranking window caption (weekly)"},
-
+  "@rankingWindowLabel": {
+    "description": "Ranking window caption (weekly)"
+  },
   "rankingPositionLabel": "#{rank}",
   "@rankingPositionLabel": {
     "description": "Rank position prefix",
     "placeholders": {
-      "rank": {"type": "int"}
+      "rank": {
+        "type": "int"
+      }
     }
   },
-
   "rankingMePrefix": "Você",
-  "@rankingMePrefix": {"description": "Marks the current user's row in the ranking list"},
-
+  "@rankingMePrefix": {
+    "description": "Marks the current user's row in the ranking list"
+  },
   "rankingEmptyMessage": "Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!",
-  "@rankingEmptyMessage": {"description": "Empty ranking state"},
-
+  "@rankingEmptyMessage": {
+    "description": "Empty ranking state"
+  },
   "rankingTapHint": "Toque em qualquer jogador para ver o desempenho completo",
-  "@rankingTapHint": {"description": "RANKING_ENRIQUECIDO_V1.md §4 — hint text at the top of the ranking list"},
-
+  "@rankingTapHint": {
+    "description": "RANKING_ENRIQUECIDO_V1.md §4 — hint text at the top of the ranking list"
+  },
   "rankingBadgeStreakSemantics": "Sequência de {days} dias",
-  "@rankingBadgeStreakSemantics": {"description": "Accessibility label for the streak badge pill", "placeholders": {"days": {"type": "int"}}},
-
+  "@rankingBadgeStreakSemantics": {
+    "description": "Accessibility label for the streak badge pill",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "rankingBadgeWorldsSemantics": "{completed} de {total} mundos completos",
-  "@rankingBadgeWorldsSemantics": {"description": "Accessibility label for the worlds-completed badge pill", "placeholders": {"completed": {"type": "int"}, "total": {"type": "int"}}},
-
+  "@rankingBadgeWorldsSemantics": {
+    "description": "Accessibility label for the worlds-completed badge pill",
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "rankingBadgeBadgesSemantics": "{count} conquistas",
-  "@rankingBadgeBadgesSemantics": {"description": "Accessibility label for the badges-count badge pill", "placeholders": {"count": {"type": "int"}}},
-
+  "@rankingBadgeBadgesSemantics": {
+    "description": "Accessibility label for the badges-count badge pill",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "rankingBadgeMentalcoinsSemantics": "{count} MentalCoins",
-  "@rankingBadgeMentalcoinsSemantics": {"description": "Accessibility label for the MentalCoins badge pill", "placeholders": {"count": {"type": "int"}}},
-
+  "@rankingBadgeMentalcoinsSemantics": {
+    "description": "Accessibility label for the MentalCoins badge pill",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "rankingBadgeStepsSemantics": "{count} passos",
-  "@rankingBadgeStepsSemantics": {"description": "Accessibility label for the total-steps badge pill", "placeholders": {"count": {"type": "int"}}},
-
+  "@rankingBadgeStepsSemantics": {
+    "description": "Accessibility label for the total-steps badge pill",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "badgesScreenTitle": "Conquistas",
-  "@badgesScreenTitle": {"description": "Badges screen app bar title"},
-
+  "@badgesScreenTitle": {
+    "description": "Badges screen app bar title"
+  },
   "publicProfileScreenTitle": "Perfil",
-  "@publicProfileScreenTitle": {"description": "Public profile screen app bar title"},
-
+  "@publicProfileScreenTitle": {
+    "description": "Public profile screen app bar title"
+  },
   "publicProfileLevelLabel": "Nível {level}",
-  "@publicProfileLevelLabel": {"description": "Level shown on public profile", "placeholders": {"level": {"type": "int"}}},
-
+  "@publicProfileLevelLabel": {
+    "description": "Level shown on public profile",
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
   "publicProfileXpLabel": "{xp} XP",
-  "@publicProfileXpLabel": {"description": "Total XP shown on public profile", "placeholders": {"xp": {"type": "int"}}},
-
+  "@publicProfileXpLabel": {
+    "description": "Total XP shown on public profile",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
   "publicProfileStreakLabel": "{days} dias de sequência",
-  "@publicProfileStreakLabel": {"description": "Current streak on public profile", "placeholders": {"days": {"type": "int"}}},
-
+  "@publicProfileStreakLabel": {
+    "description": "Current streak on public profile",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "publicProfileBestTerritoryLabel": "Melhor desempenho",
-  "@publicProfileBestTerritoryLabel": {"description": "Best territory section label"},
-
+  "@publicProfileBestTerritoryLabel": {
+    "description": "Best territory section label"
+  },
   "publicProfileNoBestTerritory": "Ainda sem território de destaque",
-  "@publicProfileNoBestTerritory": {"description": "Shown when the user has no XP in any territory yet"},
-
+  "@publicProfileNoBestTerritory": {
+    "description": "Shown when the user has no XP in any territory yet"
+  },
   "publicProfileBadgesLabel": "Conquistas",
-  "@publicProfileBadgesLabel": {"description": "Badges section label on public profile"},
-
+  "@publicProfileBadgesLabel": {
+    "description": "Badges section label on public profile"
+  },
   "publicProfileNoBadges": "Ainda sem conquistas",
-  "@publicProfileNoBadges": {"description": "Shown when the user has no earned badges yet"},
-
+  "@publicProfileNoBadges": {
+    "description": "Shown when the user has no earned badges yet"
+  },
   "publicProfileWorldsLabel": "Mundos",
-  "@publicProfileWorldsLabel": {"description": "Worlds section label on public profile"},
-
+  "@publicProfileWorldsLabel": {
+    "description": "Worlds section label on public profile"
+  },
   "publicProfileTorcidaLabel": "Mande uma torcida!",
-  "@publicProfileTorcidaLabel": {"description": "Torcida section label on public profile"},
-
+  "@publicProfileTorcidaLabel": {
+    "description": "Torcida section label on public profile"
+  },
   "publicProfileTorcidaSentToday": "Você já torceu {count}x hoje",
-  "@publicProfileTorcidaSentToday": {"description": "How many torcida sent today to this person", "placeholders": {"count": {"type": "int"}}},
-
+  "@publicProfileTorcidaSentToday": {
+    "description": "How many torcida sent today to this person",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "publicProfileTorcidaSentFeedback": "Torcida enviada!",
-  "@publicProfileTorcidaSentFeedback": {"description": "Snackbar confirming a torcida was sent"},
-
+  "@publicProfileTorcidaSentFeedback": {
+    "description": "Snackbar confirming a torcida was sent"
+  },
   "publicProfileTorcidaLimitReached": "Você já atingiu o limite de torcida hoje pra esta pessoa",
-  "@publicProfileTorcidaLimitReached": {"description": "Snackbar shown when the daily torcida limit is hit"},
-
+  "@publicProfileTorcidaLimitReached": {
+    "description": "Snackbar shown when the daily torcida limit is hit"
+  },
   "viewBadgesButton": "Ver conquistas",
-  "@viewBadgesButton": {"description": "Button on Progress screen linking to Badges screen"},
-
+  "@viewBadgesButton": {
+    "description": "Button on Progress screen linking to Badges screen"
+  },
   "badgeEarnedLabel": "Conquistado",
-  "@badgeEarnedLabel": {"description": "Badge earned status"},
-
+  "@badgeEarnedLabel": {
+    "description": "Badge earned status"
+  },
   "badgeLockedLabel": "Bloqueado",
-  "@badgeLockedLabel": {"description": "Badge not-yet-earned status"},
-
+  "@badgeLockedLabel": {
+    "description": "Badge not-yet-earned status"
+  },
   "settingsTooltip": "Ajuste",
-  "@settingsTooltip": {"description": "Home app bar icon tooltip, opens Settings screen"},
-
+  "@settingsTooltip": {
+    "description": "Home app bar icon tooltip, opens Settings screen"
+  },
   "settingsScreenTitle": "Ajuste",
-  "@settingsScreenTitle": {"description": "Settings screen app bar title"},
-
+  "@settingsScreenTitle": {
+    "description": "Settings screen app bar title"
+  },
   "soundSectionTitle": "Som",
-  "@soundSectionTitle": {"description": "Sound settings section title, MICROINTERACTIONS.md/AUDIO_FEEDBACK.md"},
-
+  "@soundSectionTitle": {
+    "description": "Sound settings section title, MICROINTERACTIONS.md/AUDIO_FEEDBACK.md"
+  },
   "soundToggleLabel": "Efeitos sonoros",
-  "@soundToggleLabel": {"description": "Sound effects on/off toggle label"},
-
+  "@soundToggleLabel": {
+    "description": "Sound effects on/off toggle label"
+  },
   "soundVolumeLabel": "Volume dos efeitos",
-  "@soundVolumeLabel": {"description": "Sound effects volume slider label"},
-
+  "@soundVolumeLabel": {
+    "description": "Sound effects volume slider label"
+  },
   "soundSilencedNote": "O som não toca enquanto o aparelho estiver no modo silencioso ou vibrar.",
-  "@soundSilencedNote": {"description": "Explains that device silent/vibrate mode is respected, AUDIO_FEEDBACK.md §3"},
-
+  "@soundSilencedNote": {
+    "description": "Explains that device silent/vibrate mode is respected, AUDIO_FEEDBACK.md §3"
+  },
   "levelUpMessage": "Nível {level} alcançado!",
   "@levelUpMessage": {
     "description": "Level up celebration message",
     "placeholders": {
-      "level": {"type": "int"}
+      "level": {
+        "type": "int"
+      }
     }
   },
-
   "territoryConqueredCelebrationMessage": "Território conquistado!",
-  "@territoryConqueredCelebrationMessage": {"description": "Territory just conquered celebration message"},
-
+  "@territoryConqueredCelebrationMessage": {
+    "description": "Territory just conquered celebration message"
+  },
   "worldCompletedCelebrationMessage": "{world} completo! +{xp} XP de bônus",
   "@worldCompletedCelebrationMessage": {
     "description": "World just completed celebration message, including the completion bonus XP",
     "placeholders": {
-      "world": {"type": "String"},
-      "xp": {"type": "int"}
+      "world": {
+        "type": "String"
+      },
+      "xp": {
+        "type": "int"
+      }
     }
   },
-
   "badgeUnlockedCelebrationMessage": "Nova conquista: {badgeName}!",
   "@badgeUnlockedCelebrationMessage": {
     "description": "Badge just unlocked celebration message",
     "placeholders": {
-      "badgeName": {"type": "String"}
+      "badgeName": {
+        "type": "String"
+      }
     }
   },
-
   "streakExtendedCelebrationMessage": "Sequência de {days} dias mantida!",
   "@streakExtendedCelebrationMessage": {
     "description": "Streak extended/protected celebration message",
     "placeholders": {
-      "days": {"type": "int"}
+      "days": {
+        "type": "int"
+      }
     }
   },
-
   "statsTooltip": "Estatísticas",
-  "@statsTooltip": {"description": "Home app bar icon tooltip, opens Stats screen"},
-
+  "@statsTooltip": {
+    "description": "Home app bar icon tooltip, opens Stats screen"
+  },
   "statsScreenTitle": "Estatísticas",
-  "@statsScreenTitle": {"description": "Stats screen app bar title"},
-
+  "@statsScreenTitle": {
+    "description": "Stats screen app bar title"
+  },
   "viewStatsButton": "Ver estatísticas",
-  "@viewStatsButton": {"description": "Button on Progress screen linking to Stats screen"},
-
+  "@viewStatsButton": {
+    "description": "Button on Progress screen linking to Stats screen"
+  },
   "statsOverviewSectionTitle": "Visão geral",
-  "@statsOverviewSectionTitle": {"description": "Stats screen overview section title"},
-
+  "@statsOverviewSectionTitle": {
+    "description": "Stats screen overview section title"
+  },
   "statsTotalAttemptsLabel": "Desafios respondidos",
-  "@statsTotalAttemptsLabel": {"description": "Total attempts stat label"},
-
+  "@statsTotalAttemptsLabel": {
+    "description": "Total attempts stat label"
+  },
   "statsAccuracyLabel": "Acerto geral",
-  "@statsAccuracyLabel": {"description": "Overall accuracy stat label"},
-
+  "@statsAccuracyLabel": {
+    "description": "Overall accuracy stat label"
+  },
   "statsHintFreeCorrectLabel": "Acertos sem dica",
-  "@statsHintFreeCorrectLabel": {"description": "Hint-free correct answers stat label"},
-
+  "@statsHintFreeCorrectLabel": {
+    "description": "Hint-free correct answers stat label"
+  },
   "statsHintsUsedLabel": "Dicas usadas",
-  "@statsHintsUsedLabel": {"description": "Total hints used stat label"},
-
+  "@statsHintsUsedLabel": {
+    "description": "Total hints used stat label"
+  },
   "statsCorrectWithHintLegend": "Acertos com dica",
-  "@statsCorrectWithHintLegend": {"description": "Answer breakdown donut legend: correct answers that used a hint"},
-
+  "@statsCorrectWithHintLegend": {
+    "description": "Answer breakdown donut legend: correct answers that used a hint"
+  },
   "statsIncorrectLegend": "Erros",
-  "@statsIncorrectLegend": {"description": "Answer breakdown donut legend: incorrect answers"},
-
+  "@statsIncorrectLegend": {
+    "description": "Answer breakdown donut legend: incorrect answers"
+  },
   "statsStreakLabel": "Sequência atual / mais longa",
-  "@statsStreakLabel": {"description": "Current / longest streak stat label"},
-
+  "@statsStreakLabel": {
+    "description": "Current / longest streak stat label"
+  },
   "statsStreakValue": "{current} / {longest} dias",
   "@statsStreakValue": {
     "description": "Current / longest streak value",
     "placeholders": {
-      "current": {"type": "int"},
-      "longest": {"type": "int"}
+      "current": {
+        "type": "int"
+      },
+      "longest": {
+        "type": "int"
+      }
     }
   },
-
   "statsBadgesLabel": "Conquistas desbloqueadas",
-  "@statsBadgesLabel": {"description": "Badges earned stat label"},
-
+  "@statsBadgesLabel": {
+    "description": "Badges earned stat label"
+  },
   "statsBadgesValue": "{earned} / {total}",
   "@statsBadgesValue": {
     "description": "Badges earned / total value",
     "placeholders": {
-      "earned": {"type": "int"},
-      "total": {"type": "int"}
+      "earned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
-
   "statsByTerritorySectionTitle": "Desempenho por território",
-  "@statsByTerritorySectionTitle": {"description": "Stats screen per-territory section title"},
-
+  "@statsByTerritorySectionTitle": {
+    "description": "Stats screen per-territory section title"
+  },
   "statsTerritoryAttemptsAndAccuracy": "{attempts} respondidos · {accuracy} de acerto",
   "@statsTerritoryAttemptsAndAccuracy": {
     "description": "Per-territory attempts and accuracy caption",
     "placeholders": {
-      "attempts": {"type": "int"},
-      "accuracy": {"type": "String"}
+      "attempts": {
+        "type": "int"
+      },
+      "accuracy": {
+        "type": "String"
+      }
     }
   },
-
   "statsTerritoryDifficultyLabel": "Nível de dificuldade atual: {level}",
   "@statsTerritoryDifficultyLabel": {
     "description": "Per-territory current adaptive difficulty level",
     "placeholders": {
-      "level": {"type": "int"}
+      "level": {
+        "type": "int"
+      }
     }
   },
-
   "statsNoAttemptsYet": "Ainda sem desafios respondidos neste território.",
-  "@statsNoAttemptsYet": {"description": "Empty state for a territory with zero attempts"},
-
+  "@statsNoAttemptsYet": {
+    "description": "Empty state for a territory with zero attempts"
+  },
   "notificationsSectionTitle": "Notificações",
-  "@notificationsSectionTitle": {"description": "Notifications settings section title"},
-
+  "@notificationsSectionTitle": {
+    "description": "Notifications settings section title"
+  },
   "pushPrimingDialogTitle": "Ativar notificações?",
-  "@pushPrimingDialogTitle": {"description": "Title of the priming dialog shown before the system push notification permission prompt"},
-
+  "@pushPrimingDialogTitle": {
+    "description": "Title of the priming dialog shown before the system push notification permission prompt"
+  },
   "pushPrimingDialogMessage": "O MENTAL usa notificações pra avisar quando alguém ultrapassa você no ranking e pra lembrar de manter sua sequência em dia. Você pode desativar cada tipo depois em Ajuste.",
-  "@pushPrimingDialogMessage": {"description": "Explanation shown before asking for the system push notification permission"},
-
+  "@pushPrimingDialogMessage": {
+    "description": "Explanation shown before asking for the system push notification permission"
+  },
   "pushPrimingDialogAllowButton": "Ativar",
-  "@pushPrimingDialogAllowButton": {"description": "Button that proceeds to the real system permission prompt"},
-
+  "@pushPrimingDialogAllowButton": {
+    "description": "Button that proceeds to the real system permission prompt"
+  },
   "pushPrimingDialogDeclineButton": "Agora não",
-  "@pushPrimingDialogDeclineButton": {"description": "Button that skips the system permission prompt for now"},
-
+  "@pushPrimingDialogDeclineButton": {
+    "description": "Button that skips the system permission prompt for now"
+  },
   "notifReengagementLabel": "Lembretes diários",
-  "@notifReengagementLabel": {"description": "Reengagement notification toggle label"},
-
+  "@notifReengagementLabel": {
+    "description": "Reengagement notification toggle label"
+  },
   "notifReengagementDescription": "Após 24h e 48h sem abrir o app",
-  "@notifReengagementDescription": {"description": "Reengagement notification toggle description"},
-
+  "@notifReengagementDescription": {
+    "description": "Reengagement notification toggle description"
+  },
   "notifSocialLabel": "Ranking",
-  "@notifSocialLabel": {"description": "Social/ranking notification toggle label"},
-
+  "@notifSocialLabel": {
+    "description": "Social/ranking notification toggle label"
+  },
   "notifSocialDescription": "Quando alguém avança no seu ranking",
-  "@notifSocialDescription": {"description": "Social/ranking notification toggle description"},
-
+  "@notifSocialDescription": {
+    "description": "Social/ranking notification toggle description"
+  },
   "movementTooltip": "Movimento",
-  "@movementTooltip": {"description": "Home app bar icon tooltip, opens Movement screen"},
-
+  "@movementTooltip": {
+    "description": "Home app bar icon tooltip, opens Movement screen"
+  },
   "movementScreenTitle": "Movimento",
-  "@movementScreenTitle": {"description": "Movement screen app bar title"},
-
+  "@movementScreenTitle": {
+    "description": "Movement screen app bar title"
+  },
   "movementIntro": "Jogar não precisa ser só ficar parado. Ative o contador de passos e transforme sua caminhada em pontos — sem esforço extra.",
-  "@movementIntro": {"description": "Movement screen intro explaining the feature"},
-
+  "@movementIntro": {
+    "description": "Movement screen intro explaining the feature"
+  },
   "movementEnableButton": "Ativar contador de passos",
-  "@movementEnableButton": {"description": "Button to enable step counting"},
-
+  "@movementEnableButton": {
+    "description": "Button to enable step counting"
+  },
   "movementDisableButton": "Desativar",
-  "@movementDisableButton": {"description": "Button to disable step counting"},
-
+  "@movementDisableButton": {
+    "description": "Button to disable step counting"
+  },
   "movementPermissionDeniedMessage": "Sem permissão de atividade física, o contador de passos fica indisponível. Você pode conceder depois, nas configurações do aparelho.",
-  "@movementPermissionDeniedMessage": {"description": "Shown when the user denies the activity recognition permission"},
-
+  "@movementPermissionDeniedMessage": {
+    "description": "Shown when the user denies the activity recognition permission"
+  },
   "movementOpenSettingsButton": "Abrir configurações do aparelho",
-  "@movementOpenSettingsButton": {"description": "Button that opens the Android app settings to grant the activity recognition permission"},
-
+  "@movementOpenSettingsButton": {
+    "description": "Button that opens the Android app settings to grant the activity recognition permission"
+  },
   "movementSensorUnavailableMessage": "Não foi possível ler o sensor de passos agora.",
-  "@movementSensorUnavailableMessage": {"description": "Shown when the step sensor is unavailable"},
-
+  "@movementSensorUnavailableMessage": {
+    "description": "Shown when the step sensor is unavailable"
+  },
   "movementCurrentCycleLabel": "Passos coletados neste ciclo: {steps}",
   "@movementCurrentCycleLabel": {
     "description": "Steps collected so far in the current cycle",
-    "placeholders": {"steps": {"type": "int"}}
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
   },
-
-  "movementOscillationPendingMessage": "Ainda sem dados de oscilação hoje — ande um pouco pra ver o pico e o vale aparecerem.",
-  "@movementOscillationPendingMessage": {"description": "Shown in place of the peak/valley oscillation metrics when there are not enough snapshots yet today"},
-
   "movementPendingReportLabel": "Você ainda tem um ciclo anterior com {steps} passos pra coletar — eles entram na próxima coleta.",
   "@movementPendingReportLabel": {
     "description": "Previous cycle still within the grace window, pending final collection (folded into the next tap-to-collect level)",
-    "placeholders": {"steps": {"type": "int"}}
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
   },
-
   "movementCollectPendingButton": "Coletar",
-  "@movementCollectPendingButton": {"description": "Explicit button next to the pending-cycle warning that triggers collection directly"},
-
+  "@movementCollectPendingButton": {
+    "description": "Explicit button next to the pending-cycle warning that triggers collection directly"
+  },
   "movementBonusAlertMessage": "Colete seus bônus de Movimento",
-  "@movementBonusAlertMessage": {"description": "Subtle Home banner inviting the user to open Movement and collect accumulated but uncollected XP/MentalCoins"},
-
+  "@movementBonusAlertMessage": {
+    "description": "Subtle Home banner inviting the user to open Movement and collect accumulated but uncollected XP/MentalCoins"
+  },
   "movementXpCollectedFeedback": "+{xp} XP dos seus passos!",
   "@movementXpCollectedFeedback": {
     "description": "Feedback after collecting movement XP",
-    "placeholders": {"xp": {"type": "int"}}
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
   },
-
   "movementGoalLabel": "Meta diária: {goal} passos",
   "@movementGoalLabel": {
     "description": "Shows the user's configured daily step goal",
-    "placeholders": {"goal": {"type": "int"}}
+    "placeholders": {
+      "goal": {
+        "type": "int"
+      }
+    }
   },
-
   "movementNoGoalLabel": "Nenhuma meta diária definida",
-  "@movementNoGoalLabel": {"description": "Shown when the user has not set a daily goal"},
-
+  "@movementNoGoalLabel": {
+    "description": "Shown when the user has not set a daily goal"
+  },
   "movementSetGoalButton": "Definir meta diária",
-  "@movementSetGoalButton": {"description": "Button to open the goal-setting dialog"},
-
+  "@movementSetGoalButton": {
+    "description": "Button to open the goal-setting dialog"
+  },
   "movementEditGoalButton": "Editar meta",
-  "@movementEditGoalButton": {"description": "Button to edit the existing daily goal"},
-
+  "@movementEditGoalButton": {
+    "description": "Button to edit the existing daily goal"
+  },
   "movementGoalDialogTitle": "Sua meta diária de passos",
-  "@movementGoalDialogTitle": {"description": "Title of the goal-setting dialog"},
-
+  "@movementGoalDialogTitle": {
+    "description": "Title of the goal-setting dialog"
+  },
   "movementGoalDialogHint": "Ex.: 20000",
-  "@movementGoalDialogHint": {"description": "Input hint for the goal text field"},
-
+  "@movementGoalDialogHint": {
+    "description": "Input hint for the goal text field"
+  },
   "movementGoalSaveButton": "Salvar",
-  "@movementGoalSaveButton": {"description": "Save button in the goal dialog"},
-
+  "@movementGoalSaveButton": {
+    "description": "Save button in the goal dialog"
+  },
   "movementGoalCancelButton": "Cancelar",
-  "@movementGoalCancelButton": {"description": "Cancel button in the goal dialog"},
-
+  "@movementGoalCancelButton": {
+    "description": "Cancel button in the goal dialog"
+  },
   "movementGoalReachedMessage": "Meta batida! +{xp} XP extra por superar seu próprio objetivo 🎉",
   "@movementGoalReachedMessage": {
     "description": "Celebration message shown when the user's daily goal is exceeded",
-    "placeholders": {"xp": {"type": "int"}}
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
   },
-
   "movementGoalProgressLabel": "{percent}% da meta",
   "@movementGoalProgressLabel": {
     "description": "Percentage of the daily goal reached, shown inside the progress chart",
-    "placeholders": {"percent": {"type": "int"}}
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
   },
-
   "movementNoGoalProgressLabel": "Sem meta",
-  "@movementNoGoalProgressLabel": {"description": "Shown inside the progress ring when no daily goal is set yet"},
-
-  "movementWeeklyChartTitle": "Últimos 7 dias",
-  "@movementWeeklyChartTitle": {"description": "Weekly steps bar chart title"},
-
-  "movementWeeklyChartSubtitle": "Passos coletados por dia — veja em quais você caminhou mais.",
-  "@movementWeeklyChartSubtitle": {"description": "Weekly steps bar chart subtitle"},
-
+  "@movementNoGoalProgressLabel": {
+    "description": "Shown inside the progress ring when no daily goal is set yet"
+  },
   "movementTodayChartTitle": "Seu dia até agora",
-  "@movementTodayChartTitle": {"description": "Intraday steps line chart title"},
-
+  "@movementTodayChartTitle": {
+    "description": "Intraday steps line chart title"
+  },
   "movementTodayChartSubtitle": "Como seus passos foram acumulando ao longo do ciclo.",
-  "@movementTodayChartSubtitle": {"description": "Intraday steps line chart subtitle"},
-
+  "@movementTodayChartSubtitle": {
+    "description": "Intraday steps line chart subtitle"
+  },
   "movementTodayCardTitle": "Hoje",
-  "@movementTodayCardTitle": {"description": "Title of the tappable 'Hoje' summary card on the main Movimento screen"},
+  "@movementTodayCardTitle": {
+    "description": "Title of the tappable 'Hoje' summary card on the main Movimento screen"
+  },
   "movementTodayCardSubtitle": "Progressão do dia",
-  "@movementTodayCardSubtitle": {"description": "Subtitle of the 'Hoje' summary card"},
+  "@movementTodayCardSubtitle": {
+    "description": "Subtitle of the 'Hoje' summary card"
+  },
   "movementTodayCardValue": "{steps} passos · {percent}% da meta",
-  "@movementTodayCardValue": {"description": "Value line of the 'Hoje' card when a daily goal is set", "placeholders": {"steps": {"type": "int"}, "percent": {"type": "int"}}},
+  "@movementTodayCardValue": {
+    "description": "Value line of the 'Hoje' card when a daily goal is set",
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "movementTodayCardValueNoGoal": "{steps} passos hoje",
-  "@movementTodayCardValueNoGoal": {"description": "Value line of the 'Hoje' card when no daily goal is set", "placeholders": {"steps": {"type": "int"}}},
-
+  "@movementTodayCardValueNoGoal": {
+    "description": "Value line of the 'Hoje' card when no daily goal is set",
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
   "movementWeekCardTitle": "Semana",
-  "@movementWeekCardTitle": {"description": "Title of the tappable 'Semana' summary card"},
+  "@movementWeekCardTitle": {
+    "description": "Title of the tappable 'Semana' summary card"
+  },
   "movementWeekCardSubtitle": "Últimos 7 dias",
-  "@movementWeekCardSubtitle": {"description": "Subtitle of the 'Semana' summary card"},
+  "@movementWeekCardSubtitle": {
+    "description": "Subtitle of the 'Semana' summary card"
+  },
   "movementWeekCardValue": "média {average} · total {total}",
-  "@movementWeekCardValue": {"description": "Value line of the 'Semana' card", "placeholders": {"average": {"type": "int"}, "total": {"type": "int"}}},
-
+  "@movementWeekCardValue": {
+    "description": "Value line of the 'Semana' card",
+    "placeholders": {
+      "average": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "movementYearCardTitle": "Ano",
-  "@movementYearCardTitle": {"description": "Title of the tappable 'Ano' summary card"},
+  "@movementYearCardTitle": {
+    "description": "Title of the tappable 'Ano' summary card"
+  },
   "movementYearCardSubtitle": "Seu progresso em {year}",
-  "@movementYearCardSubtitle": {"description": "Subtitle of the 'Ano' summary card", "placeholders": {"year": {"type": "int"}}},
-
-  "movementDailyDetailTitle": "Progressão do dia",
-  "@movementDailyDetailTitle": {"description": "Title of the daily detail screen (opened from the 'Hoje' card or a weekly bar)"},
-  "movementDailyDetailStepsLabel": "Passos",
-  "@movementDailyDetailStepsLabel": {"description": "Steps label in the daily detail screen"},
-  "movementDailyDetailXpLabel": "XP",
-  "@movementDailyDetailXpLabel": {"description": "XP label in the daily detail screen"},
-  "movementDailyDetailGoalLabel": "Meta do dia",
-  "@movementDailyDetailGoalLabel": {"description": "Goal label in the daily detail screen"},
-
-  "movementWeeklyDetailTitle": "Progressão semanal",
-  "@movementWeeklyDetailTitle": {"description": "Title of the weekly detail screen"},
-  "movementWeeklyDetailHint": "Toque num dia para ver os detalhes.",
-  "@movementWeeklyDetailHint": {"description": "Hint shown above the weekly bar chart explaining each bar is tappable"},
-
-  "movementYearlyDetailTitle": "Progressão anual",
-  "@movementYearlyDetailTitle": {"description": "Title of the yearly detail screen"},
-  "movementYearlyTotalStepsLabel": "Total de passos",
-  "@movementYearlyTotalStepsLabel": {"description": "Total steps label in the yearly detail screen"},
-  "movementYearlyAverageLabel": "Média por dia ativo",
-  "@movementYearlyAverageLabel": {"description": "Average steps per active day label in the yearly detail screen"},
-  "movementYearlyActiveDaysLabel": "Dias ativos",
-  "@movementYearlyActiveDaysLabel": {"description": "Active days label in the yearly detail screen"},
-  "movementYearlyBestMonthLabel": "Melhor mês",
-  "@movementYearlyBestMonthLabel": {"description": "Best month label in the yearly detail screen"},
+  "@movementYearCardSubtitle": {
+    "description": "Subtitle of the 'Ano' summary card",
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsTitle": "Movimento",
+  "@movementReportsTitle": {
+    "description": "MOVIMENTO_GRAFICOS_RICOS_V1.md — title of the unified Dia/Semana/Mês/Ano reports screen"
+  },
+  "movementReportsTabDay": "Dia",
+  "@movementReportsTabDay": {
+    "description": "Reports screen period tab: day"
+  },
+  "movementReportsTabWeek": "Semana",
+  "@movementReportsTabWeek": {
+    "description": "Reports screen period tab: week"
+  },
+  "movementReportsTabMonth": "Mês",
+  "@movementReportsTabMonth": {
+    "description": "Reports screen period tab: month"
+  },
+  "movementReportsTabYear": "Ano",
+  "@movementReportsTabYear": {
+    "description": "Reports screen period tab: year"
+  },
+  "movementReportsTotalLabel": "Total acumulado {period}",
+  "@movementReportsTotalLabel": {
+    "description": "Total card label, e.g. 'Total acumulado hoje'",
+    "placeholders": {
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "movementReportsTotalPeriodDay": "hoje",
+  "@movementReportsTotalPeriodDay": {
+    "description": "Period phrase used inside movementReportsTotalLabel for the day tab"
+  },
+  "movementReportsTotalPeriodWeek": "na semana",
+  "@movementReportsTotalPeriodWeek": {
+    "description": "Period phrase used inside movementReportsTotalLabel for the week tab"
+  },
+  "movementReportsTotalPeriodMonth": "no mês",
+  "@movementReportsTotalPeriodMonth": {
+    "description": "Period phrase used inside movementReportsTotalLabel for the month tab"
+  },
+  "movementReportsTotalPeriodYear": "no ano",
+  "@movementReportsTotalPeriodYear": {
+    "description": "Period phrase used inside movementReportsTotalLabel for the year tab"
+  },
+  "movementReportsTotalSteps": "{steps} passos",
+  "@movementReportsTotalSteps": {
+    "description": "Total value in the total card",
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsXpLabel": "XP",
+  "@movementReportsXpLabel": {
+    "description": "XP sub-stat label in the total card"
+  },
+  "movementReportsGoalPercentLabel": "da meta",
+  "@movementReportsGoalPercentLabel": {
+    "description": "Goal percent sub-stat label in the total card"
+  },
+  "movementReportsStreakLabel": "sequência",
+  "@movementReportsStreakLabel": {
+    "description": "Streak sub-stat label in the total card"
+  },
+  "movementReportsDayChartTitle": "Seu dia, sessão a sessão",
+  "@movementReportsDayChartTitle": {
+    "description": "Day chart card title"
+  },
+  "movementReportsLiveBadge": "AO VIVO",
+  "@movementReportsLiveBadge": {
+    "description": "Badge on the day chart card, only shown for today"
+  },
+  "movementReportsPeakTag": "Pico: {steps}",
+  "@movementReportsPeakTag": {
+    "description": "Floating tag over the peak point of the day chart",
+    "placeholders": {
+      "steps": {
+        "type": "String"
+      }
+    }
+  },
+  "movementReportsWeekChartTitle": "Últimos 7 dias",
+  "@movementReportsWeekChartTitle": {
+    "description": "Week chart card title"
+  },
+  "movementReportsAverageBadge": "média {value}",
+  "@movementReportsAverageBadge": {
+    "description": "Average badge shown on week/month chart cards",
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsTodayLabel": "Hoje",
+  "@movementReportsTodayLabel": {
+    "description": "Label under today's bar in the week chart"
+  },
+  "movementReportsMonthChartTitle": "Dias do mês",
+  "@movementReportsMonthChartTitle": {
+    "description": "Month chart card title"
+  },
+  "movementReportsYearChartTitle": "Progressão anual",
+  "@movementReportsYearChartTitle": {
+    "description": "Year chart card title"
+  },
+  "movementReportsHistorySectionTitle": "Seu histórico completo",
+  "@movementReportsHistorySectionTitle": {
+    "description": "History section label"
+  },
+  "movementReportsHistoryDayLabel": "Dia {number}",
+  "@movementReportsHistoryDayLabel": {
+    "description": "History item day number label",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryTodayLabel": "Hoje · Dia {number}",
+  "@movementReportsHistoryTodayLabel": {
+    "description": "History item day number label for today specifically",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryXp": "+{xp} XP",
+  "@movementReportsHistoryXp": {
+    "description": "History item XP value",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryAccumulated": "acumulado: {steps}",
+  "@movementReportsHistoryAccumulated": {
+    "description": "History item cumulative steps caption",
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryLoadMore": "Carregar mais",
+  "@movementReportsHistoryLoadMore": {
+    "description": "Button to load the next page of history"
+  },
+  "movementReportsEmptyMessage": "Ainda sem dados suficientes pra esse período.",
+  "@movementReportsEmptyMessage": {
+    "description": "Shown when a chart/period has no data yet"
+  },
   "movementYearlyXpLabel": "XP de Movimento no ano",
-  "@movementYearlyXpLabel": {"description": "Yearly Movement XP label in the yearly detail screen"},
-  "movementYearlyEmptyMessage": "Ainda não há dados de Movimento neste ano.",
-  "@movementYearlyEmptyMessage": {"description": "Shown when the yearly summary has no cycles yet"},
-
+  "@movementYearlyXpLabel": {
+    "description": "Yearly Movement XP label in the yearly detail screen"
+  },
   "movementSyncFailedMessage": "Dados atualizados localmente. Não foi possível sincronizar agora.",
-  "@movementSyncFailedMessage": {"description": "Discreet message shown instead of a raw technical error when a background sync fails but local data is already displayed"},
+  "@movementSyncFailedMessage": {
+    "description": "Discreet message shown instead of a raw technical error when a background sync fails but local data is already displayed"
+  },
   "movementRetryButton": "Tentar novamente",
-  "@movementRetryButton": {"description": "Retry button shown alongside movementSyncFailedMessage"},
-
+  "@movementRetryButton": {
+    "description": "Retry button shown alongside movementSyncFailedMessage"
+  },
   "movementCheckpointReachedMessage": "{count, plural, =1{Checkpoint do dia batido! +{xp} XP extra 🚶} other{{count} checkpoints do dia batidos! +{xp} XP extra 🚶}}",
   "@movementCheckpointReachedMessage": {
     "description": "Celebration message for one or more intraday checkpoints reached in a single collection",
     "placeholders": {
-      "count": {"type": "int"},
-      "xp": {"type": "int"}
+      "count": {
+        "type": "int"
+      },
+      "xp": {
+        "type": "int"
+      }
     }
   },
-
   "friendsTooltip": "Amigos",
-  "@friendsTooltip": {"description": "Home app bar icon tooltip, opens Friends screen"},
-
+  "@friendsTooltip": {
+    "description": "Home app bar icon tooltip, opens Friends screen"
+  },
   "friendsScreenTitle": "Amigos",
-  "@friendsScreenTitle": {"description": "Friends screen app bar title"},
-
+  "@friendsScreenTitle": {
+    "description": "Friends screen app bar title"
+  },
   "friendsInviteCodeLabel": "Seu código: {code}",
   "@friendsInviteCodeLabel": {
     "description": "Shows the user's own invite code to share with friends",
-    "placeholders": {"code": {"type": "String"}}
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
   },
-
   "friendsCopyCodeButton": "Copiar código",
-  "@friendsCopyCodeButton": {"description": "Button to copy the invite code to clipboard"},
-
+  "@friendsCopyCodeButton": {
+    "description": "Button to copy the invite code to clipboard"
+  },
   "friendsCodeCopiedMessage": "Código copiado!",
-  "@friendsCodeCopiedMessage": {"description": "Snackbar shown after copying the invite code"},
-
+  "@friendsCodeCopiedMessage": {
+    "description": "Snackbar shown after copying the invite code"
+  },
   "friendsSearchFieldHint": "Buscar amigo pelo nome",
-  "@friendsSearchFieldHint": {"description": "Input hint for searching a friend by name"},
-
+  "@friendsSearchFieldHint": {
+    "description": "Input hint for searching a friend by name"
+  },
   "friendsSearchSendInviteButton": "Convidar",
-  "@friendsSearchSendInviteButton": {"description": "Button to send a friend request to a name-search result"},
-
+  "@friendsSearchSendInviteButton": {
+    "description": "Button to send a friend request to a name-search result"
+  },
   "friendsSearchAlreadyFriendsLabel": "Já são amigos",
-  "@friendsSearchAlreadyFriendsLabel": {"description": "Shown instead of the invite button when the search result is already an accepted friend"},
-
+  "@friendsSearchAlreadyFriendsLabel": {
+    "description": "Shown instead of the invite button when the search result is already an accepted friend"
+  },
   "friendsSearchRequestPendingLabel": "Pedido enviado",
-  "@friendsSearchRequestPendingLabel": {"description": "Shown instead of the invite button when a friend request already exists with the search result"},
-
+  "@friendsSearchRequestPendingLabel": {
+    "description": "Shown instead of the invite button when a friend request already exists with the search result"
+  },
   "friendsSearchEmptyMessage": "Nenhum resultado — confira se digitou o nome certo.",
-  "@friendsSearchEmptyMessage": {"description": "Shown when a name search (3+ letters) returns no results"},
-
+  "@friendsSearchEmptyMessage": {
+    "description": "Shown when a name search (3+ letters) returns no results"
+  },
   "friendsAddFieldHint": "Cole o código de um amigo",
-  "@friendsAddFieldHint": {"description": "Input hint for adding a friend by code"},
-
+  "@friendsAddFieldHint": {
+    "description": "Input hint for adding a friend by code"
+  },
   "friendsAddButton": "Adicionar",
-  "@friendsAddButton": {"description": "Button to add a friend by code"},
-
+  "@friendsAddButton": {
+    "description": "Button to add a friend by code"
+  },
   "friendsListTitle": "Seus amigos",
-  "@friendsListTitle": {"description": "Section title for the friends list"},
-
+  "@friendsListTitle": {
+    "description": "Section title for the friends list"
+  },
   "friendsHelpTooltip": "Como funciona",
-  "@friendsHelpTooltip": {"description": "Tooltip for the help icon on Friends screen"},
+  "@friendsHelpTooltip": {
+    "description": "Tooltip for the help icon on Friends screen"
+  },
   "friendsHelpTitle": "Amigos — como funciona",
-  "@friendsHelpTitle": {"description": "Title of the Friends help sheet"},
+  "@friendsHelpTitle": {
+    "description": "Title of the Friends help sheet"
+  },
   "friendsHelpStep1Title": "Convide pelo seu código",
-  "@friendsHelpStep1Title": {"description": "Friends help step 1 title"},
+  "@friendsHelpStep1Title": {
+    "description": "Friends help step 1 title"
+  },
   "friendsHelpStep1Body": "Copie seu código ou compartilhe direto com alguém. Quem receber pode colar esse código no campo \"Adicionar amigo\".",
-  "@friendsHelpStep1Body": {"description": "Friends help step 1 body"},
+  "@friendsHelpStep1Body": {
+    "description": "Friends help step 1 body"
+  },
   "friendsHelpStep2Title": "Adicionar não é automático",
-  "@friendsHelpStep2Title": {"description": "Friends help step 2 title"},
+  "@friendsHelpStep2Title": {
+    "description": "Friends help step 2 title"
+  },
   "friendsHelpStep2Body": "Colar o código de alguém envia um pedido de amizade — a pessoa precisa aceitar antes de vocês virarem amigos de verdade.",
-  "@friendsHelpStep2Body": {"description": "Friends help step 2 body"},
+  "@friendsHelpStep2Body": {
+    "description": "Friends help step 2 body"
+  },
   "friendsHelpStep3Title": "Aceitar ou recusar",
-  "@friendsHelpStep3Title": {"description": "Friends help step 3 title"},
+  "@friendsHelpStep3Title": {
+    "description": "Friends help step 3 title"
+  },
   "friendsHelpStep3Body": "Pedidos recebidos aparecem em \"Pedidos de amizade\", com botões para aceitar ou recusar cada um.",
-  "@friendsHelpStep3Body": {"description": "Friends help step 3 body"},
+  "@friendsHelpStep3Body": {
+    "description": "Friends help step 3 body"
+  },
   "friendsHelpStep4Title": "Desafie seus amigos",
-  "@friendsHelpStep4Title": {"description": "Friends help step 4 title"},
+  "@friendsHelpStep4Title": {
+    "description": "Friends help step 4 title"
+  },
   "friendsHelpStep4Body": "Depois de amigos, toque em \"Desafiar\" ao lado do nome dele pra criar uma Batalha entre vocês dois.",
-  "@friendsHelpStep4Body": {"description": "Friends help step 4 body"},
+  "@friendsHelpStep4Body": {
+    "description": "Friends help step 4 body"
+  },
   "friendsHelpStep5Title": "Denunciar ou bloquear",
-  "@friendsHelpStep5Title": {"description": "Friends help step 5 title"},
+  "@friendsHelpStep5Title": {
+    "description": "Friends help step 5 title"
+  },
   "friendsHelpStep5Body": "Toque nos \"⋮\" ao lado de um amigo ou pedido pra denunciar um comportamento inadequado ou bloquear a pessoa.",
-  "@friendsHelpStep5Body": {"description": "Friends help step 5 body"},
-
+  "@friendsHelpStep5Body": {
+    "description": "Friends help step 5 body"
+  },
   "friendRequestsTitle": "Pedidos de amizade",
-  "@friendRequestsTitle": {"description": "Section title for pending friend requests"},
-
+  "@friendRequestsTitle": {
+    "description": "Section title for pending friend requests"
+  },
   "friendRequestSentMessage": "Pedido de amizade enviado! A pessoa precisa aceitar.",
-  "@friendRequestSentMessage": {"description": "Shown after redeeming an invite code, since it no longer creates the friendship immediately"},
-
+  "@friendRequestSentMessage": {
+    "description": "Shown after redeeming an invite code, since it no longer creates the friendship immediately"
+  },
   "friendRequestAcceptButton": "Aceitar",
-  "@friendRequestAcceptButton": {"description": "Accept a pending friend request"},
-
+  "@friendRequestAcceptButton": {
+    "description": "Accept a pending friend request"
+  },
   "friendRequestDeclineButton": "Recusar",
-  "@friendRequestDeclineButton": {"description": "Decline a pending friend request"},
-
+  "@friendRequestDeclineButton": {
+    "description": "Decline a pending friend request"
+  },
   "friendsEmptyMessage": "Você ainda não tem amigos adicionados. Compartilhe seu código ou cole o código de alguém.",
-  "@friendsEmptyMessage": {"description": "Empty state for the friends list"},
-
+  "@friendsEmptyMessage": {
+    "description": "Empty state for the friends list"
+  },
   "cancelButton": "Cancelar",
-  "@cancelButton": {"description": "Generic cancel button used across confirmation dialogs"},
-
+  "@cancelButton": {
+    "description": "Generic cancel button used across confirmation dialogs"
+  },
   "reportUserOption": "Denunciar",
-  "@reportUserOption": {"description": "Bottom sheet option to report a user"},
-
+  "@reportUserOption": {
+    "description": "Bottom sheet option to report a user"
+  },
   "blockUserOption": "Bloquear",
-  "@blockUserOption": {"description": "Bottom sheet option to block a user"},
-
+  "@blockUserOption": {
+    "description": "Bottom sheet option to block a user"
+  },
   "reportUserDialogTitle": "Motivo da denúncia",
-  "@reportUserDialogTitle": {"description": "Title of the dialog asking for a report reason"},
-
+  "@reportUserDialogTitle": {
+    "description": "Title of the dialog asking for a report reason"
+  },
   "reportUserDialogHint": "Descreva o que aconteceu",
-  "@reportUserDialogHint": {"description": "Hint text for the report reason input"},
-
+  "@reportUserDialogHint": {
+    "description": "Hint text for the report reason input"
+  },
   "reportUserDialogSendButton": "Enviar denúncia",
-  "@reportUserDialogSendButton": {"description": "Button to submit the report"},
-
+  "@reportUserDialogSendButton": {
+    "description": "Button to submit the report"
+  },
   "reportUserSuccessMessage": "Denúncia enviada. Nossa equipe vai revisar.",
-  "@reportUserSuccessMessage": {"description": "Confirmation shown after a report is submitted"},
-
+  "@reportUserSuccessMessage": {
+    "description": "Confirmation shown after a report is submitted"
+  },
   "blockUserDialogTitle": "Bloquear usuário",
-  "@blockUserDialogTitle": {"description": "Title of the block confirmation dialog"},
-
+  "@blockUserDialogTitle": {
+    "description": "Title of the block confirmation dialog"
+  },
   "blockUserDialogMessage": "Bloquear {nickname}? Isso encerra a amizade (se houver) e impede novos pedidos de amizade entre vocês dois.",
   "@blockUserDialogMessage": {
     "description": "Confirmation message before blocking a user",
-    "placeholders": {"nickname": {"type": "String"}}
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
   },
-
   "blockUserSuccessMessage": "{nickname} foi bloqueado(a).",
   "@blockUserSuccessMessage": {
     "description": "Confirmation shown after a user is blocked",
-    "placeholders": {"nickname": {"type": "String"}}
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
   },
-
   "friendMoreOptionsTooltip": "Mais opções",
-  "@friendMoreOptionsTooltip": {"description": "Tooltip for the three-dot menu button next to a friend or friend request"},
-
+  "@friendMoreOptionsTooltip": {
+    "description": "Tooltip for the three-dot menu button next to a friend or friend request"
+  },
   "blockedUsersSectionTitle": "Usuários bloqueados",
-  "@blockedUsersSectionTitle": {"description": "Settings section title listing users the player has blocked"},
-
+  "@blockedUsersSectionTitle": {
+    "description": "Settings section title listing users the player has blocked"
+  },
   "unblockUserButton": "Desbloquear",
-  "@unblockUserButton": {"description": "Button to unblock a previously blocked user"},
-
+  "@unblockUserButton": {
+    "description": "Button to unblock a previously blocked user"
+  },
   "friendsInviteNotFoundError": "Código de convite não encontrado.",
-  "@friendsInviteNotFoundError": {"description": "Error shown when the invite code does not exist"},
-
+  "@friendsInviteNotFoundError": {
+    "description": "Error shown when the invite code does not exist"
+  },
   "friendsCannotAddSelfError": "Você não pode adicionar a si mesmo como amigo.",
-  "@friendsCannotAddSelfError": {"description": "Error shown when trying to add own invite code"},
-
+  "@friendsCannotAddSelfError": {
+    "description": "Error shown when trying to add own invite code"
+  },
   "rankingScopeGlobal": "Global",
-  "@rankingScopeGlobal": {"description": "Ranking scope toggle: global"},
-
+  "@rankingScopeGlobal": {
+    "description": "Ranking scope toggle: global"
+  },
   "rankingScopeFriends": "Amigos",
-  "@rankingScopeFriends": {"description": "Ranking scope toggle: friends"},
-
+  "@rankingScopeFriends": {
+    "description": "Ranking scope toggle: friends"
+  },
   "shareButtonLabel": "Compartilhar",
-  "@shareButtonLabel": {"description": "Generic share button label"},
-
+  "@shareButtonLabel": {
+    "description": "Generic share button label"
+  },
   "shareAppButtonTooltip": "Convidar amigos para o MENTAL",
-  "@shareAppButtonTooltip": {"description": "Tooltip/semantics label for the icon button next to the username on Home that invites friends to download the app"},
-
+  "@shareAppButtonTooltip": {
+    "description": "Tooltip/semantics label for the icon button next to the username on Home that invites friends to download the app"
+  },
   "shareAppInviteMessage": "Venha jogar MENTAL comigo — quem conquista, conquista com a mente! Baixe grátis: {playStoreUrl}",
   "@shareAppInviteMessage": {
     "description": "Share text used by the invite-friends button, linking straight to the Google Play listing",
-    "placeholders": {"playStoreUrl": {"type": "String"}}
+    "placeholders": {
+      "playStoreUrl": {
+        "type": "String"
+      }
+    }
   },
-
   "shareTerritoryConqueredMessage": "Conquistei o território {territory} no MENTAL! 🏆",
   "@shareTerritoryConqueredMessage": {
     "description": "Share text for territory conquered achievement",
-    "placeholders": {"territory": {"type": "String"}}
+    "placeholders": {
+      "territory": {
+        "type": "String"
+      }
+    }
   },
-
   "shareWorldCompletedMessage": "Completei o {world} no MENTAL! 🎉",
   "@shareWorldCompletedMessage": {
     "description": "Share text for world completed achievement",
-    "placeholders": {"world": {"type": "String"}}
+    "placeholders": {
+      "world": {
+        "type": "String"
+      }
+    }
   },
-
   "shareLevelUpMessage": "Alcancei o Nível {level} no MENTAL! 🚀",
   "@shareLevelUpMessage": {
     "description": "Share text for level up achievement",
-    "placeholders": {"level": {"type": "int"}}
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
   },
-
   "shareBadgeUnlockedMessage": "Desbloqueei a conquista \"{badge}\" no MENTAL! 🏅",
   "@shareBadgeUnlockedMessage": {
     "description": "Share text for badge unlocked achievement",
-    "placeholders": {"badge": {"type": "String"}}
+    "placeholders": {
+      "badge": {
+        "type": "String"
+      }
+    }
   },
-
   "shareMovementGoalMessage": "Bati minha meta de passos no MENTAL e ganhei XP de bônus! 🚶💪",
-  "@shareMovementGoalMessage": {"description": "Share text for movement daily goal achievement"},
-
+  "@shareMovementGoalMessage": {
+    "description": "Share text for movement daily goal achievement"
+  },
   "shareXpRewardedMessage": "+{xp} XP por compartilhar!",
   "@shareXpRewardedMessage": {
     "description": "Snackbar shown after sharing when the daily share-XP reward is granted",
-    "placeholders": {"xp": {"type": "int"}}
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
   },
-
   "shareAppXpAndCoinsRewardedMessage": "+{xp} XP e +{coins} MentalCoins por convidar um amigo!",
   "@shareAppXpAndCoinsRewardedMessage": {
     "description": "Snackbar shown after using the invite-friends button when the daily reward is granted",
-    "placeholders": {"xp": {"type": "int"}, "coins": {"type": "int"}}
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      },
+      "coins": {
+        "type": "int"
+      }
+    }
   },
-
   "homeSearchHint": "Buscar tema, frase ou palavra...",
   "@homeSearchHint": {
     "description": "Placeholder text for the search field on Home, above Mundo da Linguagem"
   },
-
   "homeSearchNotFoundMessage": "Não encontramos nada para \"{query}\".",
   "@homeSearchNotFoundMessage": {
     "description": "Shown when the Home search finds no matching theme, phrase or word",
-    "placeholders": {"query": {"type": "String"}}
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
   },
-
   "homeSearchSuggestButton": "Sugerir esse conteúdo",
   "@homeSearchSuggestButton": {
     "description": "Button offered alongside homeSearchNotFoundMessage, letting the user register the search term as a content suggestion"
   },
-
   "homeSearchSuggestionRegisteredMessage": "Sugestão registrada! Um agente vai avaliar esse conteúdo.",
   "@homeSearchSuggestionRegisteredMessage": {
     "description": "Confirmation snackbar after the user taps homeSearchSuggestButton"
   },
-
   "homeMoreCardLabel": "Mais",
   "@homeMoreCardLabel": {
     "description": "Label for the 5th quick-action card on Home (HOME_REDESIGN_V2_MINIMALISMO.md), merging the share and theme-toggle icons"
   },
-
   "friendsInviteShareButton": "Indicar",
-  "@friendsInviteShareButton": {"description": "Button to share the invite code via WhatsApp/social apps"},
-
+  "@friendsInviteShareButton": {
+    "description": "Button to share the invite code via WhatsApp/social apps"
+  },
   "friendsInviteShareMessage": "Bora treinar a mente comigo? Baixe o MENTAL e use meu código de convite: {code}",
   "@friendsInviteShareMessage": {
     "description": "Share text for inviting a friend with the invite code",
-    "placeholders": {"code": {"type": "String"}}
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
   },
-
   "relampagoSecondsRemainingLabel": "{seconds}s",
   "@relampagoSecondsRemainingLabel": {
     "description": "Countdown timer label in Palavras Relâmpago mode",
-    "placeholders": {"seconds": {"type": "int"}}
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
   },
-
   "relampagoTimedOutFeedback": "Quase lá! Tenta de novo",
-  "@relampagoTimedOutFeedback": {"description": "Soft feedback shown when the countdown runs out without an answer"},
-
+  "@relampagoTimedOutFeedback": {
+    "description": "Soft feedback shown when the countdown runs out without an answer"
+  },
   "relampagoSpeedBonusMessage": "+{xp} XP de bônus de velocidade! ⚡",
   "@relampagoSpeedBonusMessage": {
     "description": "Shown when a fast correct answer earns a speed bonus",
-    "placeholders": {"xp": {"type": "int"}}
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
   },
-
   "relampagoModeLabel": "⚡ Relâmpago",
-  "@relampagoModeLabel": {"description": "Button/toggle label to start Palavras in lightning (multiple choice with timer) mode"},
-
+  "@relampagoModeLabel": {
+    "description": "Button/toggle label to start Palavras in lightning (multiple choice with timer) mode"
+  },
   "backButton": "Voltar",
-  "@backButton": {"description": "Generic back button label"},
-
+  "@backButton": {
+    "description": "Generic back button label"
+  },
   "battlesTooltip": "Batalhas",
-  "@battlesTooltip": {"description": "Home app bar icon tooltip for the battles screen"},
-
+  "@battlesTooltip": {
+    "description": "Home app bar icon tooltip for the battles screen"
+  },
   "battlesScreenTitle": "Batalhas",
-  "@battlesScreenTitle": {"description": "Battles screen app bar title"},
-
+  "@battlesScreenTitle": {
+    "description": "Battles screen app bar title"
+  },
   "battlesHelpTooltip": "Como funciona",
-  "@battlesHelpTooltip": {"description": "Tooltip for the help icon on Battles screen"},
+  "@battlesHelpTooltip": {
+    "description": "Tooltip for the help icon on Battles screen"
+  },
   "battlesHelpTitle": "Batalhas — como funciona",
-  "@battlesHelpTitle": {"description": "Title of the Battles help sheet"},
+  "@battlesHelpTitle": {
+    "description": "Title of the Battles help sheet"
+  },
   "battlesHelpStep1Title": "Só entre amigos",
-  "@battlesHelpStep1Title": {"description": "Battles help step 1 title"},
+  "@battlesHelpStep1Title": {
+    "description": "Battles help step 1 title"
+  },
   "battlesHelpStep1Body": "Uma batalha só pode ser criada com quem já é seu amigo — toque em \"Desafiar\" na tela Amigos.",
-  "@battlesHelpStep1Body": {"description": "Battles help step 1 body"},
+  "@battlesHelpStep1Body": {
+    "description": "Battles help step 1 body"
+  },
   "battlesHelpStep2Title": "Escolha território e nível",
-  "@battlesHelpStep2Title": {"description": "Battles help step 2 title"},
+  "@battlesHelpStep2Title": {
+    "description": "Battles help step 2 title"
+  },
   "battlesHelpStep2Body": "Ao desafiar, você escolhe o território e o nível de dificuldade (1 a 5) do desafio que os dois vão responder.",
-  "@battlesHelpStep2Body": {"description": "Battles help step 2 body"},
+  "@battlesHelpStep2Body": {
+    "description": "Battles help step 2 body"
+  },
   "battlesHelpStep3Title": "Cada um no seu tempo",
-  "@battlesHelpStep3Title": {"description": "Battles help step 3 title"},
+  "@battlesHelpStep3Title": {
+    "description": "Battles help step 3 title"
+  },
   "battlesHelpStep3Body": "A batalha não é ao vivo — cada pessoa responde quando quiser, sem precisar estar online ao mesmo tempo.",
-  "@battlesHelpStep3Body": {"description": "Battles help step 3 body"},
+  "@battlesHelpStep3Body": {
+    "description": "Battles help step 3 body"
+  },
   "battlesHelpStep4Title": "Quem vence",
-  "@battlesHelpStep4Title": {"description": "Battles help step 4 title"},
+  "@battlesHelpStep4Title": {
+    "description": "Battles help step 4 title"
+  },
   "battlesHelpStep4Body": "Acertar sempre vence errar. Se os dois acertarem, vence quem respondeu mais rápido. Se os dois errarem, é empate.",
-  "@battlesHelpStep4Body": {"description": "Battles help step 4 body"},
+  "@battlesHelpStep4Body": {
+    "description": "Battles help step 4 body"
+  },
   "battlesHelpStep5Title": "Limite e recompensa",
-  "@battlesHelpStep5Title": {"description": "Battles help step 5 title"},
+  "@battlesHelpStep5Title": {
+    "description": "Battles help step 5 title"
+  },
   "battlesHelpStep5Body": "Você pode enviar até 3 desafios por dia. Vencer uma batalha dá um bônus de +30 XP.",
-  "@battlesHelpStep5Body": {"description": "Battles help step 5 body"},
-
+  "@battlesHelpStep5Body": {
+    "description": "Battles help step 5 body"
+  },
   "battleChallengeButton": "Desafiar",
-  "@battleChallengeButton": {"description": "Button on a friend row to challenge them to a battle"},
-
+  "@battleChallengeButton": {
+    "description": "Button on a friend row to challenge them to a battle"
+  },
   "battleDialogTitle": "Desafiar {nickname}",
   "@battleDialogTitle": {
     "description": "Battle creation dialog title",
-    "placeholders": {"nickname": {"type": "String"}}
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
   },
-
   "battleDialogTerritoryLabel": "Território",
-  "@battleDialogTerritoryLabel": {"description": "Territory picker label in battle creation dialog"},
-
+  "@battleDialogTerritoryLabel": {
+    "description": "Territory picker label in battle creation dialog"
+  },
   "battleDialogDifficultyLabel": "Nível de dificuldade",
-  "@battleDialogDifficultyLabel": {"description": "Difficulty picker label in battle creation dialog"},
-
+  "@battleDialogDifficultyLabel": {
+    "description": "Difficulty picker label in battle creation dialog"
+  },
   "battleDialogSendButton": "Enviar desafio",
-  "@battleDialogSendButton": {"description": "Send button in battle creation dialog"},
-
+  "@battleDialogSendButton": {
+    "description": "Send button in battle creation dialog"
+  },
   "battleDailyLimitReachedMessage": "Você já enviou o máximo de desafios hoje. Volte amanhã!",
-  "@battleDailyLimitReachedMessage": {"description": "Shown when the daily battle send limit is reached"},
-
+  "@battleDailyLimitReachedMessage": {
+    "description": "Shown when the daily battle send limit is reached"
+  },
   "battlesEmptyMessage": "Nenhuma batalha ainda. Desafie um amigo na tela de Amigos!",
-  "@battlesEmptyMessage": {"description": "Empty state for the battles list"},
-
+  "@battlesEmptyMessage": {
+    "description": "Empty state for the battles list"
+  },
   "battleStatusPendingWaitingMe": "Sua vez de responder",
-  "@battleStatusPendingWaitingMe": {"description": "Battle row status when it's the current user's turn to answer"},
-
+  "@battleStatusPendingWaitingMe": {
+    "description": "Battle row status when it's the current user's turn to answer"
+  },
   "battleStatusPendingWaitingOpponent": "Aguardando {nickname} responder",
   "@battleStatusPendingWaitingOpponent": {
     "description": "Battle row status when waiting for the opponent to answer",
-    "placeholders": {"nickname": {"type": "String"}}
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
   },
-
   "battleStatusWon": "Você venceu! +{xp} XP",
   "@battleStatusWon": {
     "description": "Battle row status when the current user won",
-    "placeholders": {"xp": {"type": "int"}}
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
   },
-
   "battleStatusLost": "{nickname} levou essa",
   "@battleStatusLost": {
     "description": "Battle row status when the current user lost",
-    "placeholders": {"nickname": {"type": "String"}}
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
   },
-
   "battleStatusTie": "Empate — os dois erraram",
-  "@battleStatusTie": {"description": "Battle row status on a tie"},
-
+  "@battleStatusTie": {
+    "description": "Battle row status on a tie"
+  },
   "battleAnswerButton": "Responder",
-  "@battleAnswerButton": {"description": "Button to answer a pending battle challenge"},
-
+  "@battleAnswerButton": {
+    "description": "Button to answer a pending battle challenge"
+  },
   "territoryDetentorGainedMessage": "Você assumiu {territory} entre seus amigos! 🏰",
   "@territoryDetentorGainedMessage": {
     "description": "Celebration message when the user becomes the territory detentor among friends",
-    "placeholders": {"territory": {"type": "String"}}
+    "placeholders": {
+      "territory": {
+        "type": "String"
+      }
+    }
   },
-
   "territoryDetentorLabel": "Detentor: {nickname}",
   "@territoryDetentorLabel": {
     "description": "Caption under a territory button showing the current detentor among friends",
-    "placeholders": {"nickname": {"type": "String"}}
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
   },
-
   "territoryDetentorIsMeLabel": "Você é o detentor",
-  "@territoryDetentorIsMeLabel": {"description": "Caption under a territory button when the current user is the detentor"},
-
+  "@territoryDetentorIsMeLabel": {
+    "description": "Caption under a territory button when the current user is the detentor"
+  },
   "shareTerritoryDetentorMessage": "Assumi {territory} entre meus amigos no MENTAL! 🏰",
   "@shareTerritoryDetentorMessage": {
     "description": "Share text for territory detentor achievement",
-    "placeholders": {"territory": {"type": "String"}}
+    "placeholders": {
+      "territory": {
+        "type": "String"
+      }
+    }
   },
-
   "profileTooltip": "Perfil",
-  "@profileTooltip": {"description": "Home app bar icon tooltip for the profile screen"},
-
+  "@profileTooltip": {
+    "description": "Home app bar icon tooltip for the profile screen"
+  },
   "profileScreenTitle": "Meu Perfil",
-  "@profileScreenTitle": {"description": "Profile screen app bar title"},
-
+  "@profileScreenTitle": {
+    "description": "Profile screen app bar title"
+  },
   "profilePhotoSectionTitle": "Foto de perfil",
-  "@profilePhotoSectionTitle": {"description": "Profile photo section title"},
-
+  "@profilePhotoSectionTitle": {
+    "description": "Profile photo section title"
+  },
   "profilePhotoChangeButton": "Escolher foto",
-  "@profilePhotoChangeButton": {"description": "Button to pick a new profile photo"},
-
+  "@profilePhotoChangeButton": {
+    "description": "Button to pick a new profile photo"
+  },
   "profilePhotoPendingLabel": "Sua foto está em análise — só fica visível pra outros usuários depois de aprovada.",
-  "@profilePhotoPendingLabel": {"description": "Shown while the uploaded photo awaits moderation"},
-
+  "@profilePhotoPendingLabel": {
+    "description": "Shown while the uploaded photo awaits moderation"
+  },
   "profilePhotoRejectedLabel": "Sua foto foi rejeitada na moderação. Envie outra.",
-  "@profilePhotoRejectedLabel": {"description": "Shown when the uploaded photo was rejected by moderation"},
-
+  "@profilePhotoRejectedLabel": {
+    "description": "Shown when the uploaded photo was rejected by moderation"
+  },
   "profilePhotoUploadError": "Não foi possível enviar a foto. Tente novamente.",
-  "@profilePhotoUploadError": {"description": "Generic error message when photo upload fails"},
-
+  "@profilePhotoUploadError": {
+    "description": "Generic error message when photo upload fails"
+  },
   "photoCropFailedError": "Não foi possível recortar essa foto. Tente escolher outra ou tirar uma nova.",
-  "@photoCropFailedError": {"description": "Shown when the crop_your_image package reports CropFailure, so the user isn't stuck on the crop screen with no feedback"},
-
+  "@photoCropFailedError": {
+    "description": "Shown when the crop_your_image package reports CropFailure, so the user isn't stuck on the crop screen with no feedback"
+  },
   "profileRealNameLabel": "Nome real",
-  "@profileRealNameLabel": {"description": "Real name field label"},
-
+  "@profileRealNameLabel": {
+    "description": "Real name field label"
+  },
   "profileRealNameHelperText": "Aparece publicamente ao lado da sua foto de perfil, em Ranking, Amigos e Batalhas.",
-  "@profileRealNameHelperText": {"description": "Helper text explaining real name is now public"},
-
+  "@profileRealNameHelperText": {
+    "description": "Helper text explaining real name is now public"
+  },
   "profileLocationSectionTitle": "Localização (opcional)",
-  "@profileLocationSectionTitle": {"description": "Location section title"},
-
+  "@profileLocationSectionTitle": {
+    "description": "Location section title"
+  },
   "profileLocationStateLabel": "Estado",
-  "@profileLocationStateLabel": {"description": "State field label"},
-
+  "@profileLocationStateLabel": {
+    "description": "State field label"
+  },
   "profileLocationCountryLabel": "País",
-  "@profileLocationCountryLabel": {"description": "Country field label"},
-
+  "@profileLocationCountryLabel": {
+    "description": "Country field label"
+  },
   "profileLocationPublicLabel": "Mostrar meu estado/país no perfil",
-  "@profileLocationPublicLabel": {"description": "Toggle to make location public"},
-
+  "@profileLocationPublicLabel": {
+    "description": "Toggle to make location public"
+  },
   "profileSaveButton": "Salvar",
-  "@profileSaveButton": {"description": "Save profile button"},
-
+  "@profileSaveButton": {
+    "description": "Save profile button"
+  },
   "profileSavedMessage": "Perfil salvo!",
-  "@profileSavedMessage": {"description": "Snackbar shown after saving the profile"},
-
+  "@profileSavedMessage": {
+    "description": "Snackbar shown after saving the profile"
+  },
   "loginTitle": "MENTAL",
-  "@loginTitle": {"description": "Login screen title (brand wordmark)"},
-
+  "@loginTitle": {
+    "description": "Login screen title (brand wordmark)"
+  },
   "loginSlogan": "Mental é quem conquista com a mente.",
-  "@loginSlogan": {"description": "Brand slogan, BRAND.md §2 — always near the name on first contact"},
-
+  "@loginSlogan": {
+    "description": "Brand slogan, BRAND.md §2 — always near the name on first contact"
+  },
   "loginEmailLabel": "E-mail",
-  "@loginEmailLabel": {"description": "Email field label"},
-
+  "@loginEmailLabel": {
+    "description": "Email field label"
+  },
   "loginPasswordLabel": "Senha",
-  "@loginPasswordLabel": {"description": "Password field label"},
-
+  "@loginPasswordLabel": {
+    "description": "Password field label"
+  },
   "loginSignInButton": "Entrar",
-  "@loginSignInButton": {"description": "Sign in button"},
-
+  "@loginSignInButton": {
+    "description": "Sign in button"
+  },
   "loginSignUpButton": "Criar conta",
-  "@loginSignUpButton": {"description": "Sign up button"},
-
+  "@loginSignUpButton": {
+    "description": "Sign up button"
+  },
   "loginToggleToSignUp": "Ainda não tem conta? Criar uma",
-  "@loginToggleToSignUp": {"description": "Link to switch to sign-up mode"},
-
+  "@loginToggleToSignUp": {
+    "description": "Link to switch to sign-up mode"
+  },
   "loginToggleToSignIn": "Já tem conta? Entrar",
-  "@loginToggleToSignIn": {"description": "Link to switch to sign-in mode"},
-
+  "@loginToggleToSignIn": {
+    "description": "Link to switch to sign-in mode"
+  },
   "loginCheckEmailMessage": "Conta criada! Confira seu e-mail para confirmar antes de entrar.",
-  "@loginCheckEmailMessage": {"description": "Shown after sign-up when email confirmation is required"},
-
+  "@loginCheckEmailMessage": {
+    "description": "Shown after sign-up when email confirmation is required"
+  },
   "loginMissingFieldsError": "Preencha e-mail e senha.",
-  "@loginMissingFieldsError": {"description": "Validation error when email or password is empty"},
-
+  "@loginMissingFieldsError": {
+    "description": "Validation error when email or password is empty"
+  },
   "settingsSignOutButton": "Sair",
-  "@settingsSignOutButton": {"description": "Sign out button in settings screen"},
-
+  "@settingsSignOutButton": {
+    "description": "Sign out button in settings screen"
+  },
   "settingsDeleteAccountButton": "Excluir minha conta",
-  "@settingsDeleteAccountButton": {"description": "Delete account button in settings screen"},
-
+  "@settingsDeleteAccountButton": {
+    "description": "Delete account button in settings screen"
+  },
   "settingsDeleteAccountConfirmTitle": "Excluir sua conta?",
-  "@settingsDeleteAccountConfirmTitle": {"description": "Title of the account deletion confirmation dialog"},
-
+  "@settingsDeleteAccountConfirmTitle": {
+    "description": "Title of the account deletion confirmation dialog"
+  },
   "settingsDeleteAccountConfirmMessage": "Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Não é possível desfazer.",
-  "@settingsDeleteAccountConfirmMessage": {"description": "Body of the account deletion confirmation dialog"},
-
+  "@settingsDeleteAccountConfirmMessage": {
+    "description": "Body of the account deletion confirmation dialog"
+  },
   "settingsDeleteAccountConfirmButton": "Excluir permanentemente",
-  "@settingsDeleteAccountConfirmButton": {"description": "Confirm button inside the account deletion dialog"},
-
+  "@settingsDeleteAccountConfirmButton": {
+    "description": "Confirm button inside the account deletion dialog"
+  },
   "settingsDeleteAccountCancelButton": "Cancelar",
-  "@settingsDeleteAccountCancelButton": {"description": "Cancel button inside the account deletion dialog"},
-
+  "@settingsDeleteAccountCancelButton": {
+    "description": "Cancel button inside the account deletion dialog"
+  },
   "settingsDeleteAccountUnavailableError": "Exclusão de conta indisponível no momento. Tente novamente mais tarde ou entre em contato pelo e-mail de suporte.",
-  "@settingsDeleteAccountUnavailableError": {"description": "Shown when account deletion is not available in this environment (ACCOUNT_DELETION_UNAVAILABLE)"},
-
+  "@settingsDeleteAccountUnavailableError": {
+    "description": "Shown when account deletion is not available in this environment (ACCOUNT_DELETION_UNAVAILABLE)"
+  },
   "loginGoogleButton": "Continuar com Google",
-  "@loginGoogleButton": {"description": "Google OAuth sign-in button"},
-
+  "@loginGoogleButton": {
+    "description": "Google OAuth sign-in button"
+  },
   "loginFacebookButton": "Continuar com Facebook",
-  "@loginFacebookButton": {"description": "Facebook OAuth sign-in button"},
-
+  "@loginFacebookButton": {
+    "description": "Facebook OAuth sign-in button"
+  },
   "loginOrDivider": "ou",
-  "@loginOrDivider": {"description": "Divider text between OAuth buttons and email/password form"},
-
+  "@loginOrDivider": {
+    "description": "Divider text between OAuth buttons and email/password form"
+  },
   "onboardingTitle": "Antes de começar",
-  "@onboardingTitle": {"description": "Mandatory onboarding screen title"},
-
+  "@onboardingTitle": {
+    "description": "Mandatory onboarding screen title"
+  },
   "onboardingSubtitle": "Só algumas informações básicas — leva menos de um minuto.",
-  "@onboardingSubtitle": {"description": "Mandatory onboarding screen subtitle"},
-
+  "@onboardingSubtitle": {
+    "description": "Mandatory onboarding screen subtitle"
+  },
   "onboardingNameLabel": "Nome",
-  "@onboardingNameLabel": {"description": "Mandatory onboarding name field label"},
-
+  "@onboardingNameLabel": {
+    "description": "Mandatory onboarding name field label"
+  },
   "onboardingCountryLabel": "País",
-  "@onboardingCountryLabel": {"description": "Mandatory onboarding country field label"},
-
+  "@onboardingCountryLabel": {
+    "description": "Mandatory onboarding country field label"
+  },
   "onboardingCityLabel": "Cidade",
-  "@onboardingCityLabel": {"description": "Mandatory onboarding city field label"},
-
+  "@onboardingCityLabel": {
+    "description": "Mandatory onboarding city field label"
+  },
   "onboardingGenderTitle": "Gênero",
-  "@onboardingGenderTitle": {"description": "Mandatory onboarding gender section title"},
-
+  "@onboardingGenderTitle": {
+    "description": "Mandatory onboarding gender section title"
+  },
   "onboardingGenderOptionalTitle": "Gênero (opcional)",
-  "@onboardingGenderOptionalTitle": {"description": "Onboarding gender section title, revised 28/08/2026 to be optional"},
-
+  "@onboardingGenderOptionalTitle": {
+    "description": "Onboarding gender section title, revised 28/08/2026 to be optional"
+  },
   "onboardingPhotoTitle": "Foto de perfil",
-  "@onboardingPhotoTitle": {"description": "Mandatory onboarding photo section title, added 28/08/2026"},
-
+  "@onboardingPhotoTitle": {
+    "description": "Mandatory onboarding photo section title, added 28/08/2026"
+  },
   "onboardingPhotoChosenLabel": "Trocar foto",
-  "@onboardingPhotoChosenLabel": {"description": "Button label once a photo has already been picked during onboarding"},
-
+  "@onboardingPhotoChosenLabel": {
+    "description": "Button label once a photo has already been picked during onboarding"
+  },
   "onboardingGenderMasculino": "Masculino",
-  "@onboardingGenderMasculino": {"description": "Gender option"},
-
+  "@onboardingGenderMasculino": {
+    "description": "Gender option"
+  },
   "onboardingGenderFeminino": "Feminino",
-  "@onboardingGenderFeminino": {"description": "Gender option"},
-
+  "@onboardingGenderFeminino": {
+    "description": "Gender option"
+  },
   "onboardingGenderNaoBinario": "Não-binário",
-  "@onboardingGenderNaoBinario": {"description": "Gender option"},
-
+  "@onboardingGenderNaoBinario": {
+    "description": "Gender option"
+  },
   "onboardingGenderPrefiroNaoInformar": "Prefiro não informar",
-  "@onboardingGenderPrefiroNaoInformar": {"description": "Gender option"},
-
+  "@onboardingGenderPrefiroNaoInformar": {
+    "description": "Gender option"
+  },
   "onboardingAgeRangeTitle": "Faixa etária",
-  "@onboardingAgeRangeTitle": {"description": "Mandatory onboarding age range section title"},
-
+  "@onboardingAgeRangeTitle": {
+    "description": "Mandatory onboarding age range section title"
+  },
   "onboardingContinueButton": "Continuar",
-  "@onboardingContinueButton": {"description": "Mandatory onboarding submit button"},
-
+  "@onboardingContinueButton": {
+    "description": "Mandatory onboarding submit button"
+  },
   "feedbackMenuTooltip": "Feedback",
-  "@feedbackMenuTooltip": {"description": "Menu item to open the general feedback screen"},
-
+  "@feedbackMenuTooltip": {
+    "description": "Menu item to open the general feedback screen"
+  },
   "feedbackScreenTitle": "Feedback",
-  "@feedbackScreenTitle": {"description": "General feedback screen app bar title"},
-
+  "@feedbackScreenTitle": {
+    "description": "General feedback screen app bar title"
+  },
   "feedbackScreenIntro": "Conta pra gente o que você acha do MENTAL — sugestão, elogio ou algo que travou. Sua opinião ajuda a melhorar o app.",
-  "@feedbackScreenIntro": {"description": "General feedback screen intro text"},
-
+  "@feedbackScreenIntro": {
+    "description": "General feedback screen intro text"
+  },
   "feedbackCommentHint": "Escreva aqui...",
-  "@feedbackCommentHint": {"description": "General feedback comment field hint"},
-
+  "@feedbackCommentHint": {
+    "description": "General feedback comment field hint"
+  },
   "feedbackSendButton": "Enviar",
-  "@feedbackSendButton": {"description": "General feedback submit button"},
-
+  "@feedbackSendButton": {
+    "description": "General feedback submit button"
+  },
   "feedbackSentMessage": "Feedback enviado! Obrigado por ajudar a melhorar o MENTAL. 🙌",
-  "@feedbackSentMessage": {"description": "Confirmation message after sending general feedback"},
-
+  "@feedbackSentMessage": {
+    "description": "Confirmation message after sending general feedback"
+  },
   "homeNavLabel": "Início",
-  "@homeNavLabel": {"description": "Bottom navigation label for the Home destination"},
-
+  "@homeNavLabel": {
+    "description": "Bottom navigation label for the Home destination"
+  },
   "moreNavLabel": "Mais",
-  "@moreNavLabel": {"description": "Bottom navigation label for the overflow menu (Friends/Battles/Profile/Settings/Feedback)"},
-
+  "@moreNavLabel": {
+    "description": "Bottom navigation label for the overflow menu (Friends/Battles/Profile/Settings/Feedback)"
+  },
   "mentalCoinsTooltip": "MentalCoins",
-  "@mentalCoinsTooltip": {"description": "MentalCoins quick action / badge label"},
-
+  "@mentalCoinsTooltip": {
+    "description": "MentalCoins quick action / badge label"
+  },
   "mentalCoinsScreenTitle": "MentalCoins",
-  "@mentalCoinsScreenTitle": {"description": "MentalCoins screen app bar title"},
-
+  "@mentalCoinsScreenTitle": {
+    "description": "MentalCoins screen app bar title"
+  },
   "mentalCoinsCycleNote": "Ciclo iniciado em {start} · fecha em {end}",
   "@mentalCoinsCycleNote": {
     "description": "Note about when the current weekly cycle closes and restarts",
-    "placeholders": {"end": {"type": "String"}, "start": {"type": "String"}}
+    "placeholders": {
+      "end": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      }
+    }
   },
-
   "mentalCoinsHowToEarnTitle": "Como ganhar essa semana",
-  "@mentalCoinsHowToEarnTitle": {"description": "Section title explaining how to earn MentalCoins this week"},
-
+  "@mentalCoinsHowToEarnTitle": {
+    "description": "Section title explaining how to earn MentalCoins this week"
+  },
   "mentalCoinsXpDailyLabel": "Top 3 de XP do dia",
-  "@mentalCoinsXpDailyLabel": {"description": "Daily XP ranking reward track label"},
-
+  "@mentalCoinsXpDailyLabel": {
+    "description": "Daily XP ranking reward track label"
+  },
   "mentalCoinsXpDailyValue": "1º: 10 · 2º: 5 · 3º: 3",
-  "@mentalCoinsXpDailyValue": {"description": "Daily XP ranking reward values"},
-
+  "@mentalCoinsXpDailyValue": {
+    "description": "Daily XP ranking reward values"
+  },
   "mentalCoinsStepsWeekLabel": "Campeão da semana em passos",
-  "@mentalCoinsStepsWeekLabel": {"description": "Weekly steps champion reward track label"},
-
+  "@mentalCoinsStepsWeekLabel": {
+    "description": "Weekly steps champion reward track label"
+  },
   "mentalCoinsStepsWeekValue": "+20 MentalCoins",
-  "@mentalCoinsStepsWeekValue": {"description": "Weekly steps champion reward value"},
-
+  "@mentalCoinsStepsWeekValue": {
+    "description": "Weekly steps champion reward value"
+  },
   "mentalCoinsStepsDayLabel": "Recordista do dia em passos",
-  "@mentalCoinsStepsDayLabel": {"description": "Daily steps record reward track label"},
-
+  "@mentalCoinsStepsDayLabel": {
+    "description": "Daily steps record reward track label"
+  },
   "mentalCoinsStepsDayValue": "+10 MentalCoins",
-  "@mentalCoinsStepsDayValue": {"description": "Daily steps record reward value"},
-
+  "@mentalCoinsStepsDayValue": {
+    "description": "Daily steps record reward value"
+  },
   "mentalCoinsHallOfFameTitle": "Hall da Fama da semana",
-  "@mentalCoinsHallOfFameTitle": {"description": "Hall of fame section title"},
-
+  "@mentalCoinsHallOfFameTitle": {
+    "description": "Hall of fame section title"
+  },
   "mentalCoinsHallOfFameEmpty": "Nenhuma semana fechada ainda — os vencedores aparecem aqui a partir do primeiro fechamento de ciclo.",
-  "@mentalCoinsHallOfFameEmpty": {"description": "Empty state for hall of fame when no cycle has closed yet"},
-
+  "@mentalCoinsHallOfFameEmpty": {
+    "description": "Empty state for hall of fame when no cycle has closed yet"
+  },
   "mentalCoinsRedeemTitle": "Resgatar",
-  "@mentalCoinsRedeemTitle": {"description": "Redemption catalog section title"},
-
+  "@mentalCoinsRedeemTitle": {
+    "description": "Redemption catalog section title"
+  },
   "mentalCoinsRedeemedLabel": "Resgatado",
-  "@mentalCoinsRedeemedLabel": {"description": "Label shown on an already-redeemed catalog item"},
-
+  "@mentalCoinsRedeemedLabel": {
+    "description": "Label shown on an already-redeemed catalog item"
+  },
   "mentalCoinsRedeemButton": "Resgatar",
-  "@mentalCoinsRedeemButton": {"description": "Redeem button on a catalog item"},
-
+  "@mentalCoinsRedeemButton": {
+    "description": "Redeem button on a catalog item"
+  },
   "mentalCoinsRedeemSuccessMessage": "Item resgatado!",
-  "@mentalCoinsRedeemSuccessMessage": {"description": "Snackbar shown after a successful redemption"},
-
+  "@mentalCoinsRedeemSuccessMessage": {
+    "description": "Snackbar shown after a successful redemption"
+  },
   "mentalCoinsInsufficientBalanceError": "Saldo insuficiente para resgatar este item.",
-  "@mentalCoinsInsufficientBalanceError": {"description": "Error shown when balance is not enough to redeem an item"},
-
+  "@mentalCoinsInsufficientBalanceError": {
+    "description": "Error shown when balance is not enough to redeem an item"
+  },
   "feedbackMyHistoryTitle": "Comentários da comunidade",
-  "@feedbackMyHistoryTitle": {"description": "Section title for the public feedback wall"},
-
+  "@feedbackMyHistoryTitle": {
+    "description": "Section title for the public feedback wall"
+  },
   "feedbackAdminReplyLabel": "Resposta da equipe",
-  "@feedbackAdminReplyLabel": {"description": "Label shown above an admin's reply to a feedback"},
-
+  "@feedbackAdminReplyLabel": {
+    "description": "Label shown above an admin's reply to a feedback"
+  },
   "feedbackMineLabel": "Você",
-  "@feedbackMineLabel": {"description": "Badge shown on the current user's own feedback entry in the public wall"},
-
+  "@feedbackMineLabel": {
+    "description": "Badge shown on the current user's own feedback entry in the public wall"
+  },
   "adminFeedbackEmptyMessage": "Nenhum feedback ainda. Seja o primeiro a comentar!",
-  "@adminFeedbackEmptyMessage": {"description": "Empty state for the public feedback wall"},
-
+  "@adminFeedbackEmptyMessage": {
+    "description": "Empty state for the public feedback wall"
+  },
   "adminFeedbackReplyButton": "Responder",
-  "@adminFeedbackReplyButton": {"description": "Button to reply to a feedback"},
-
+  "@adminFeedbackReplyButton": {
+    "description": "Button to reply to a feedback"
+  },
   "adminFeedbackEditReplyButton": "Editar resposta",
-  "@adminFeedbackEditReplyButton": {"description": "Button to edit an existing reply"},
-
+  "@adminFeedbackEditReplyButton": {
+    "description": "Button to edit an existing reply"
+  },
   "adminFeedbackReplyDialogTitle": "Responder feedback",
-  "@adminFeedbackReplyDialogTitle": {"description": "Reply dialog title"},
-
+  "@adminFeedbackReplyDialogTitle": {
+    "description": "Reply dialog title"
+  },
   "adminFeedbackReplyHint": "Escreva sua resposta...",
-  "@adminFeedbackReplyHint": {"description": "Reply dialog text field hint"},
-
+  "@adminFeedbackReplyHint": {
+    "description": "Reply dialog text field hint"
+  },
   "adminFeedbackReplySendButton": "Enviar resposta",
-  "@adminFeedbackReplySendButton": {"description": "Reply dialog send button"},
-
+  "@adminFeedbackReplySendButton": {
+    "description": "Reply dialog send button"
+  },
   "movementGoalChipLight": "5k",
-  "@movementGoalChipLight": {"description": "Daily goal chip: light tier (5000 steps)"},
-
+  "@movementGoalChipLight": {
+    "description": "Daily goal chip: light tier (5000 steps)"
+  },
   "movementGoalChipStandard": "10k",
-  "@movementGoalChipStandard": {"description": "Daily goal chip: standard tier (10000 steps)"},
-
+  "@movementGoalChipStandard": {
+    "description": "Daily goal chip: standard tier (10000 steps)"
+  },
   "movementGoalChipIntense": "15k",
-  "@movementGoalChipIntense": {"description": "Daily goal chip: intense tier (15000 steps)"},
-
+  "@movementGoalChipIntense": {
+    "description": "Daily goal chip: intense tier (15000 steps)"
+  },
   "movementGoalChipLightLabel": "leve",
-  "@movementGoalChipLightLabel": {"description": "Sub-label under the light goal chip"},
-
+  "@movementGoalChipLightLabel": {
+    "description": "Sub-label under the light goal chip"
+  },
   "movementGoalChipStandardLabel": "padrão",
-  "@movementGoalChipStandardLabel": {"description": "Sub-label under the standard goal chip"},
-
+  "@movementGoalChipStandardLabel": {
+    "description": "Sub-label under the standard goal chip"
+  },
   "movementGoalChipIntenseLabel": "intenso",
-  "@movementGoalChipIntenseLabel": {"description": "Sub-label under the intense goal chip"},
-
+  "@movementGoalChipIntenseLabel": {
+    "description": "Sub-label under the intense goal chip"
+  },
   "movementGoalSelectorTitle": "Sua meta diária",
-  "@movementGoalSelectorTitle": {"description": "Daily goal selector section title"},
-
+  "@movementGoalSelectorTitle": {
+    "description": "Daily goal selector section title"
+  },
   "movementGoalSelectorSubtitle": "define seu ritmo de XP",
-  "@movementGoalSelectorSubtitle": {"description": "Daily goal selector section subtitle"},
-
+  "@movementGoalSelectorSubtitle": {
+    "description": "Daily goal selector section subtitle"
+  },
   "movementStepsTodayLabel": "passos hoje",
-  "@movementStepsTodayLabel": {"description": "Steps-today stat label in the hero block"},
-
+  "@movementStepsTodayLabel": {
+    "description": "Steps-today stat label in the hero block"
+  },
   "movementXpTodayLabel": "XP conquistado",
-  "@movementXpTodayLabel": {"description": "XP-today stat label in the hero block"},
-
+  "@movementXpTodayLabel": {
+    "description": "XP-today stat label in the hero block"
+  },
   "movementConversionRuleText": "A cada 100 passos = +2 XP",
-  "@movementConversionRuleText": {"description": "Explicit steps-to-XP conversion rule shown in the hero block"},
-
+  "@movementConversionRuleText": {
+    "description": "Explicit steps-to-XP conversion rule shown in the hero block"
+  },
   "movementLiveLabel": "AO VIVO",
-  "@movementLiveLabel": {"description": "Live badge on the progress ring"},
-
-  "movementPeakLabel": "pico",
-  "@movementPeakLabel": {"description": "Peak label for the intraday chart summary"},
-
-  "movementValleyLabel": "vale",
-  "@movementValleyLabel": {"description": "Valley label for the intraday chart summary"},
-
+  "@movementLiveLabel": {
+    "description": "Live badge on the progress ring"
+  },
   "movementGoalGoButton": "Ir",
-  "@movementGoalGoButton": {"description": "Confirm button that applies the selected/custom daily goal and starts tracking against it"},
-
+  "@movementGoalGoButton": {
+    "description": "Confirm button that applies the selected/custom daily goal and starts tracking against it"
+  },
   "movementCurrentGoalLabel": "Meta atual",
-  "@movementCurrentGoalLabel": {"description": "Shown in place of the Go button when the selected goal is already the active one, nothing to confirm"},
-
+  "@movementCurrentGoalLabel": {
+    "description": "Shown in place of the Go button when the selected goal is already the active one, nothing to confirm"
+  },
   "movementCustomGoalHint": "livre",
-  "@movementCustomGoalHint": {"description": "Short placeholder shown inside the editable custom-goal chip before the user types a value"},
-
+  "@movementCustomGoalHint": {
+    "description": "Short placeholder shown inside the editable custom-goal chip before the user types a value"
+  },
   "movementGoalChipCustomLabel": "sua meta",
-  "@movementGoalChipCustomLabel": {"description": "Sub-label under the editable custom-goal chip (the 4th, editable slot in the daily goal selector)"},
-
+  "@movementGoalChipCustomLabel": {
+    "description": "Sub-label under the editable custom-goal chip (the 4th, editable slot in the daily goal selector)"
+  },
   "movementGoalChipCollectHint": "toque p/ coletar",
-  "@movementGoalChipCollectHint": {"description": "Sub-label shown on a goal chip when its step threshold has been reached today, indicating a tap collects instead of changing the goal"},
-
+  "@movementGoalChipCollectHint": {
+    "description": "Sub-label shown on a goal chip when its step threshold has been reached today, indicating a tap collects instead of changing the goal"
+  },
   "photoSourceExplanation": "Sua foto de perfil é obrigatória e passa por moderação antes de aparecer para outros jogadores. Escolha como enviar:",
-  "@photoSourceExplanation": {"description": "Explanation shown above the camera/gallery choice, before the system camera permission prompt appears"},
-
+  "@photoSourceExplanation": {
+    "description": "Explanation shown above the camera/gallery choice, before the system camera permission prompt appears"
+  },
   "photoSourceCameraOption": "Tirar foto",
-  "@photoSourceCameraOption": {"description": "Bottom sheet option to take a new photo with the camera"},
-
+  "@photoSourceCameraOption": {
+    "description": "Bottom sheet option to take a new photo with the camera"
+  },
   "photoSourceGalleryOption": "Escolher da galeria",
-  "@photoSourceGalleryOption": {"description": "Bottom sheet option to pick an existing photo from the gallery"},
-
+  "@photoSourceGalleryOption": {
+    "description": "Bottom sheet option to pick an existing photo from the gallery"
+  },
   "photoCropToolbarTitle": "Ajustar foto",
-  "@photoCropToolbarTitle": {"description": "Title of the native photo crop editor screen"}
+  "@photoCropToolbarTitle": {
+    "description": "Title of the native photo crop editor screen"
+  }
 }

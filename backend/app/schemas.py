@@ -596,6 +596,7 @@ class MovementMonthlyChartOut(BaseModel):
     month: int
     days: list[MovementMonthDayOut]
     total_steps: int
+    total_xp_awarded: int
     active_days: int
     average_steps_per_active_day: int
 

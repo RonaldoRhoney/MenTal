@@ -84,6 +84,31 @@ class _FakeApiClient extends ApiClient {
   Future<Map<String, dynamic>> getMovementCycle(String cycleId) async {
     return currentCycle ?? {};
   }
+
+  @override
+  Future<Map<String, dynamic>> progress() async {
+    return {
+      'xp_total': 0, 'level': 1, 'xp_per_level': 100, 'territories': [], 'worlds': [], 'blocks': [],
+      'streak': {'current_streak': 0, 'freeze_available': false},
+    };
+  }
+
+  Map<String, dynamic>? dailyChart;
+  @override
+  Future<Map<String, dynamic>> getMovementDailyChart({String? cycleId}) async {
+    return dailyChart ?? {'sessions': []};
+  }
+
+  Map<String, dynamic>? monthlyChart;
+  @override
+  Future<Map<String, dynamic>> getMovementMonthlyChart({int? year, int? month}) async {
+    return monthlyChart ?? {'year': year ?? 2026, 'month': month ?? 1, 'days': [], 'total_steps': 0, 'total_xp_awarded': 0, 'active_days': 0, 'average_steps_per_active_day': 0};
+  }
+
+  @override
+  Future<Map<String, dynamic>> getMovementHistory({String? before, int limit = 20}) async {
+    return {'items': [], 'next_cursor': null};
+  }
 }
 
 Future<void> _pumpMovementScreen(WidgetTester tester, ApiClient client, {Key? key}) async {
@@ -319,11 +344,10 @@ void main() {
     expect(find.byType(BarChart), findsOneWidget);
   });
 
-  testWidgets('card Hoje leva ao detalhamento com o gráfico intradiário, mesmo com só 1 coleta', (tester) async {
-    // 30/08/2026, pedido de Rhoney: o gráfico "Seu dia até agora" deixou
-    // de exigir 2+ snapshots — antes disso quase nunca aparecia na
-    // prática, já que a coleta ficava travada. Continua valendo agora
-    // dentro da tela de detalhamento (não mais na tela principal).
+  testWidgets('card Hoje leva à tela unificada de relatórios, aba Dia', (tester) async {
+    // MOVIMENTO_GRAFICOS_RICOS_V1.md — as 3 telas de detalhe separadas
+    // (Hoje/Semana/Ano) foram substituídas por uma tela só com abas
+    // Dia/Semana/Mês/Ano; o card "Hoje" abre direto na aba Dia.
     final client = _FakeApiClient(
       movementEnabled: true,
       currentCycle: {
@@ -336,43 +360,29 @@ void main() {
           {'recorded_at': DateTime.utc(2026, 8, 26, 6).toIso8601String(), 'steps_total': 1000},
         ],
       },
-    );
+    )..dailyChart = {
+        'sessions': [
+          {'label': 'Madrugada', 'emoji': '🌙', 'start_hour': 0, 'end_hour': 4, 'steps': 0, 'is_peak': false, 'description': 'Nenhum passo registrado ainda hoje.'},
+          {'label': 'Início da manhã', 'emoji': '🌅', 'start_hour': 4, 'end_hour': 8, 'steps': 1000, 'is_peak': true, 'description': 'Pico do dia — maior atividade registrada.'},
+          {'label': 'Fim da manhã', 'emoji': '☀️', 'start_hour': 8, 'end_hour': 12, 'steps': 0, 'is_peak': false, 'description': 'Sem passos registrados nessa janela.'},
+          {'label': 'Início da tarde', 'emoji': '🌤️', 'start_hour': 12, 'end_hour': 16, 'steps': 0, 'is_peak': false, 'description': 'Sem passos registrados nessa janela.'},
+          {'label': 'Fim da tarde', 'emoji': '🌇', 'start_hour': 16, 'end_hour': 20, 'steps': 0, 'is_peak': false, 'description': 'Sem passos registrados nessa janela.'},
+          {'label': 'Noite', 'emoji': '🌃', 'start_hour': 20, 'end_hour': 24, 'steps': 0, 'is_peak': false, 'description': 'Sem passos registrados nessa janela.'},
+        ],
+      };
     await _pumpMovementScreen(tester, client);
 
     expect(find.text('Hoje'), findsOneWidget);
-    expect(find.text('Seu dia até agora'), findsNothing);
+    expect(find.text('Seu dia, sessão a sessão'), findsNothing);
 
     await tester.tap(find.text('Hoje'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Seu dia até agora'), findsOneWidget);
-  });
-
-  testWidgets('card Hoje leva ao detalhamento com o gráfico intradiário, com 2+ coletas', (tester) async {
-    final client = _FakeApiClient(
-      movementEnabled: true,
-      currentCycle: {
-        'id': 'cycle-7',
-        'cycle_start_at': DateTime.utc(2026, 8, 26).toIso8601String(),
-        'cycle_end_at': DateTime.utc(2026, 8, 27).toIso8601String(),
-        'steps_collected': 2500,
-        'xp_awarded': 0,
-        'snapshots': [
-          {'recorded_at': DateTime.utc(2026, 8, 26, 6).toIso8601String(), 'steps_total': 1000},
-          {'recorded_at': DateTime.utc(2026, 8, 26, 12).toIso8601String(), 'steps_total': 2500},
-        ],
-      },
-    );
-    await _pumpMovementScreen(tester, client);
-
-    await tester.tap(find.text('Hoje'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('Seu dia até agora'), findsOneWidget);
+    expect(find.text('Seu dia, sessão a sessão'), findsOneWidget);
     expect(find.byType(LineChart), findsOneWidget);
   });
 
-  testWidgets('card Ano leva ao detalhamento anual', (tester) async {
+  testWidgets('card Ano leva à tela unificada de relatórios, aba Ano', (tester) async {
     final client = _FakeApiClient(
       movementEnabled: true,
       currentCycle: {
@@ -385,7 +395,7 @@ void main() {
     )..yearlySummary = {
         'year': 2026,
         'months': [
-          {'month': 8, 'total_steps': 1000, 'active_days': 1},
+          {'month': 8, 'total_steps': 1000, 'active_days': 1, 'is_best': true},
         ],
         'total_steps': 1000,
         'active_days': 1,
@@ -405,6 +415,6 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Progressão anual'), findsOneWidget);
-    expect(find.text('1000'), findsWidgets);
+    expect(find.textContaining('1000'), findsWidgets);
   });
 }

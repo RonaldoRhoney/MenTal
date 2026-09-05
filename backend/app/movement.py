@@ -425,6 +425,7 @@ def get_monthly_daily_breakdown(db: Session, user_id: str, year: int, month: int
     )
     by_day = {c.cycle_start_at.day: c.steps_collected for c in cycles}
     total_steps = sum(by_day.values())
+    total_xp = sum(c.xp_awarded for c in cycles)
     active_days = sum(1 for v in by_day.values() if v > 0)
     best_day = max(by_day, key=lambda d: by_day[d]) if total_steps > 0 else None
     return {
@@ -432,6 +433,7 @@ def get_monthly_daily_breakdown(db: Session, user_id: str, year: int, month: int
         "month": month,
         "days": [{"day": d, "steps": s, "is_best": d == best_day} for d, s in sorted(by_day.items())],
         "total_steps": total_steps,
+        "total_xp_awarded": total_xp,
         "active_days": active_days,
         "average_steps_per_active_day": total_steps // active_days if active_days > 0 else 0,
     }

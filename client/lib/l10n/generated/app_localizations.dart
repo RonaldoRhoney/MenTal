@@ -1378,12 +1378,6 @@ abstract class AppLocalizations {
   /// **'Passos coletados neste ciclo: {steps}'**
   String movementCurrentCycleLabel(int steps);
 
-  /// Shown in place of the peak/valley oscillation metrics when there are not enough snapshots yet today
-  ///
-  /// In pt, this message translates to:
-  /// **'Ainda sem dados de oscilação hoje — ande um pouco pra ver o pico e o vale aparecerem.'**
-  String get movementOscillationPendingMessage;
-
   /// Previous cycle still within the grace window, pending final collection (folded into the next tap-to-collect level)
   ///
   /// In pt, this message translates to:
@@ -1474,18 +1468,6 @@ abstract class AppLocalizations {
   /// **'Sem meta'**
   String get movementNoGoalProgressLabel;
 
-  /// Weekly steps bar chart title
-  ///
-  /// In pt, this message translates to:
-  /// **'Últimos 7 dias'**
-  String get movementWeeklyChartTitle;
-
-  /// Weekly steps bar chart subtitle
-  ///
-  /// In pt, this message translates to:
-  /// **'Passos coletados por dia — veja em quais você caminhou mais.'**
-  String get movementWeeklyChartSubtitle;
-
   /// Intraday steps line chart title
   ///
   /// In pt, this message translates to:
@@ -1552,83 +1534,185 @@ abstract class AppLocalizations {
   /// **'Seu progresso em {year}'**
   String movementYearCardSubtitle(int year);
 
-  /// Title of the daily detail screen (opened from the 'Hoje' card or a weekly bar)
+  /// MOVIMENTO_GRAFICOS_RICOS_V1.md — title of the unified Dia/Semana/Mês/Ano reports screen
   ///
   /// In pt, this message translates to:
-  /// **'Progressão do dia'**
-  String get movementDailyDetailTitle;
+  /// **'Movimento'**
+  String get movementReportsTitle;
 
-  /// Steps label in the daily detail screen
+  /// Reports screen period tab: day
   ///
   /// In pt, this message translates to:
-  /// **'Passos'**
-  String get movementDailyDetailStepsLabel;
+  /// **'Dia'**
+  String get movementReportsTabDay;
 
-  /// XP label in the daily detail screen
+  /// Reports screen period tab: week
+  ///
+  /// In pt, this message translates to:
+  /// **'Semana'**
+  String get movementReportsTabWeek;
+
+  /// Reports screen period tab: month
+  ///
+  /// In pt, this message translates to:
+  /// **'Mês'**
+  String get movementReportsTabMonth;
+
+  /// Reports screen period tab: year
+  ///
+  /// In pt, this message translates to:
+  /// **'Ano'**
+  String get movementReportsTabYear;
+
+  /// Total card label, e.g. 'Total acumulado hoje'
+  ///
+  /// In pt, this message translates to:
+  /// **'Total acumulado {period}'**
+  String movementReportsTotalLabel(String period);
+
+  /// Period phrase used inside movementReportsTotalLabel for the day tab
+  ///
+  /// In pt, this message translates to:
+  /// **'hoje'**
+  String get movementReportsTotalPeriodDay;
+
+  /// Period phrase used inside movementReportsTotalLabel for the week tab
+  ///
+  /// In pt, this message translates to:
+  /// **'na semana'**
+  String get movementReportsTotalPeriodWeek;
+
+  /// Period phrase used inside movementReportsTotalLabel for the month tab
+  ///
+  /// In pt, this message translates to:
+  /// **'no mês'**
+  String get movementReportsTotalPeriodMonth;
+
+  /// Period phrase used inside movementReportsTotalLabel for the year tab
+  ///
+  /// In pt, this message translates to:
+  /// **'no ano'**
+  String get movementReportsTotalPeriodYear;
+
+  /// Total value in the total card
+  ///
+  /// In pt, this message translates to:
+  /// **'{steps} passos'**
+  String movementReportsTotalSteps(int steps);
+
+  /// XP sub-stat label in the total card
   ///
   /// In pt, this message translates to:
   /// **'XP'**
-  String get movementDailyDetailXpLabel;
+  String get movementReportsXpLabel;
 
-  /// Goal label in the daily detail screen
+  /// Goal percent sub-stat label in the total card
   ///
   /// In pt, this message translates to:
-  /// **'Meta do dia'**
-  String get movementDailyDetailGoalLabel;
+  /// **'da meta'**
+  String get movementReportsGoalPercentLabel;
 
-  /// Title of the weekly detail screen
+  /// Streak sub-stat label in the total card
   ///
   /// In pt, this message translates to:
-  /// **'Progressão semanal'**
-  String get movementWeeklyDetailTitle;
+  /// **'sequência'**
+  String get movementReportsStreakLabel;
 
-  /// Hint shown above the weekly bar chart explaining each bar is tappable
+  /// Day chart card title
   ///
   /// In pt, this message translates to:
-  /// **'Toque num dia para ver os detalhes.'**
-  String get movementWeeklyDetailHint;
+  /// **'Seu dia, sessão a sessão'**
+  String get movementReportsDayChartTitle;
 
-  /// Title of the yearly detail screen
+  /// Badge on the day chart card, only shown for today
+  ///
+  /// In pt, this message translates to:
+  /// **'AO VIVO'**
+  String get movementReportsLiveBadge;
+
+  /// Floating tag over the peak point of the day chart
+  ///
+  /// In pt, this message translates to:
+  /// **'Pico: {steps}'**
+  String movementReportsPeakTag(String steps);
+
+  /// Week chart card title
+  ///
+  /// In pt, this message translates to:
+  /// **'Últimos 7 dias'**
+  String get movementReportsWeekChartTitle;
+
+  /// Average badge shown on week/month chart cards
+  ///
+  /// In pt, this message translates to:
+  /// **'média {value}'**
+  String movementReportsAverageBadge(int value);
+
+  /// Label under today's bar in the week chart
+  ///
+  /// In pt, this message translates to:
+  /// **'Hoje'**
+  String get movementReportsTodayLabel;
+
+  /// Month chart card title
+  ///
+  /// In pt, this message translates to:
+  /// **'Dias do mês'**
+  String get movementReportsMonthChartTitle;
+
+  /// Year chart card title
   ///
   /// In pt, this message translates to:
   /// **'Progressão anual'**
-  String get movementYearlyDetailTitle;
+  String get movementReportsYearChartTitle;
 
-  /// Total steps label in the yearly detail screen
+  /// History section label
   ///
   /// In pt, this message translates to:
-  /// **'Total de passos'**
-  String get movementYearlyTotalStepsLabel;
+  /// **'Seu histórico completo'**
+  String get movementReportsHistorySectionTitle;
 
-  /// Average steps per active day label in the yearly detail screen
+  /// History item day number label
   ///
   /// In pt, this message translates to:
-  /// **'Média por dia ativo'**
-  String get movementYearlyAverageLabel;
+  /// **'Dia {number}'**
+  String movementReportsHistoryDayLabel(int number);
 
-  /// Active days label in the yearly detail screen
+  /// History item day number label for today specifically
   ///
   /// In pt, this message translates to:
-  /// **'Dias ativos'**
-  String get movementYearlyActiveDaysLabel;
+  /// **'Hoje · Dia {number}'**
+  String movementReportsHistoryTodayLabel(int number);
 
-  /// Best month label in the yearly detail screen
+  /// History item XP value
   ///
   /// In pt, this message translates to:
-  /// **'Melhor mês'**
-  String get movementYearlyBestMonthLabel;
+  /// **'+{xp} XP'**
+  String movementReportsHistoryXp(int xp);
+
+  /// History item cumulative steps caption
+  ///
+  /// In pt, this message translates to:
+  /// **'acumulado: {steps}'**
+  String movementReportsHistoryAccumulated(int steps);
+
+  /// Button to load the next page of history
+  ///
+  /// In pt, this message translates to:
+  /// **'Carregar mais'**
+  String get movementReportsHistoryLoadMore;
+
+  /// Shown when a chart/period has no data yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda sem dados suficientes pra esse período.'**
+  String get movementReportsEmptyMessage;
 
   /// Yearly Movement XP label in the yearly detail screen
   ///
   /// In pt, this message translates to:
   /// **'XP de Movimento no ano'**
   String get movementYearlyXpLabel;
-
-  /// Shown when the yearly summary has no cycles yet
-  ///
-  /// In pt, this message translates to:
-  /// **'Ainda não há dados de Movimento neste ano.'**
-  String get movementYearlyEmptyMessage;
 
   /// Discreet message shown instead of a raw technical error when a background sync fails but local data is already displayed
   ///
@@ -2829,18 +2913,6 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'AO VIVO'**
   String get movementLiveLabel;
-
-  /// Peak label for the intraday chart summary
-  ///
-  /// In pt, this message translates to:
-  /// **'pico'**
-  String get movementPeakLabel;
-
-  /// Valley label for the intraday chart summary
-  ///
-  /// In pt, this message translates to:
-  /// **'vale'**
-  String get movementValleyLabel;
 
   /// Confirm button that applies the selected/custom daily goal and starts tracking against it
   ///
