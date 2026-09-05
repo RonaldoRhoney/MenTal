@@ -34,9 +34,7 @@ def submit_content_suggestion(
 
 @router.get("/admin/content-suggestions", response_model=schemas.AdminContentSuggestionListResponse)
 def list_content_suggestions(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
-    profile = db.get(models.Profile, user_id)
-    if profile is None or profile.role != "admin":
-        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Requires admin role"}})
+    services.require_admin(db, user_id)
 
     rows = db.execute(select(models.ContentSuggestion).order_by(models.ContentSuggestion.created_at.desc()).limit(500)).scalars().all()
     return schemas.AdminContentSuggestionListResponse(

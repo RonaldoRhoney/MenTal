@@ -11,7 +11,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import models, schemas
+from .. import models, schemas, services
 from ..auth import get_current_user_id, require_age_confirmed_user_id
 from ..db import get_db
 
@@ -47,9 +47,7 @@ def list_level_feedback(
     user_id: str = Depends(get_current_user_id),
     db: Session = Depends(get_db),
 ):
-    profile = db.get(models.Profile, user_id)
-    if profile is None or profile.role != "admin":
-        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
+    services.require_admin(db, user_id)
 
     rows = (
         db.execute(select(models.LevelFeedback).order_by(models.LevelFeedback.created_at.desc()).limit(500))

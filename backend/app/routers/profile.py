@@ -140,9 +140,7 @@ def update_profile(
 
 @router.get("/admin/profile-photos", response_model=list[schemas.AdminPendingPhotoItem])
 def list_pending_profile_photos(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
-    admin_profile = db.get(models.Profile, user_id)
-    if admin_profile is None or admin_profile.role != "admin":
-        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
+    services.require_admin(db, user_id)
 
     rows = (
         db.execute(select(models.Profile).where(models.Profile.photo_moderation_status == "pending"))
@@ -163,9 +161,7 @@ def moderate_profile_photo(
     user_id: str = Depends(get_current_user_id),
     db: Session = Depends(get_db),
 ):
-    admin_profile = db.get(models.Profile, user_id)
-    if admin_profile is None or admin_profile.role != "admin":
-        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
+    services.require_admin(db, user_id)
 
     target_profile = db.get(models.Profile, target_user_id)
     if target_profile is None:

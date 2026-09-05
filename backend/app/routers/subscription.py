@@ -3,10 +3,10 @@ from datetime import timedelta
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from .. import config, models, schemas, services
+from .. import config, models, schemas
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
-from ..timeutil import naive, utcnow
+from ..timeutil import utcnow
 
 router = APIRouter()
 
@@ -17,14 +17,6 @@ def get_status(user_id: str = Depends(require_age_confirmed_user_id), db: Sessio
     if sub is None:
         return schemas.SubscriptionStatusResponse(status="none", expires_at=None)
     return schemas.SubscriptionStatusResponse(status=sub.status, expires_at=sub.expires_at.isoformat() if sub.expires_at else None)
-
-
-@router.post("/subscription/parental-gate")
-def pass_parental_gate(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
-    profile = services.get_or_create_profile(db, user_id)
-    profile.parental_gate_passed_at = utcnow()
-    db.commit()
-    return {"parental_gate_passed": True}
 
 
 @router.post("/subscription/validate-receipt", response_model=schemas.SubscriptionStatusResponse)
@@ -42,25 +34,13 @@ def validate_receipt(
     purchase_token fixo de teste. Antes de qualquer build de release, este
     endpoint precisa ser substituído pela chamada real à API server-side
     do Google Play (SECURITY.md §4).
+
+    Achado de auditoria de qualidade B3 (05/09/2026): a "porta de pais"
+    que existia aqui (POST /subscription/parental-gate + checagem de
+    validade de janela) foi removida — fazia sentido quando o app podia
+    incluir menores; desde DIR-001 (MENTAL exclusivo 18+), não há mais
+    cenário de uso real pra esse fluxo.
     """
-    profile = db.get(models.Profile, user_id)
-    passed_at = profile.parental_gate_passed_at if profile else None
-
-    if passed_at is None:
-        raise HTTPException(status_code=403, detail={"error": {"code": "PARENTAL_GATE_REQUIRED", "message": "Call /subscription/parental-gate first"}})
-
-    # Correção de segurança (ver config.PARENTAL_GATE_VALIDITY_MINUTES):
-    # o gate precisa ter sido passado dentro da mesma janela de checkout,
-    # nunca em qualquer momento no passado — sem isso, um adulto que
-    # validou o gate uma vez deixaria a conta "destravada para compra"
-    # indefinidamente para qualquer pessoa com acesso ao celular logado.
-    age = utcnow() - naive(passed_at)
-    if age > timedelta(minutes=config.PARENTAL_GATE_VALIDITY_MINUTES):
-        raise HTTPException(
-            status_code=403,
-            detail={"error": {"code": "PARENTAL_GATE_EXPIRED", "message": "Parental gate must be re-passed for this purchase attempt"}},
-        )
-
     # Achado de auditoria de segurança (28/08/2026): o token fixo de teste
     # sempre funcionou, mesmo em produção — hoje é inofensivo porque
     # MONETIZATION_ENABLED=false neutraliza is_territory_unlocked, mas já

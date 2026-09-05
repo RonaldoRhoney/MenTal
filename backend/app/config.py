@@ -107,15 +107,6 @@ ADAPTIVE_DIFFICULTY_DOWN_THRESHOLD = 0.4
 ADAPTIVE_DIFFICULTY_MIN_LEVEL = 1
 ADAPTIVE_DIFFICULTY_MAX_LEVEL = 5
 
-# Parental gate (MONETIZATION.md §5): correção de segurança pedida por
-# Rhoney na revisão do Vertical Slice 01 — parental_gate_passed_at NÃO
-# pode valer para sempre depois de passado uma vez (cenário de risco real:
-# criança usa o celular do adulto meses depois, já logado, e o backend
-# aceitaria a compra achando que o gate "já foi validado"). A janela é
-# curta o suficiente para completar o fluxo de checkout em andamento,
-# curta demais para servir de autorização permanente.
-PARENTAL_GATE_VALIDITY_MINUTES = 10
-
 # V2 item 8 — Notificações (NOTIFICATIONS.md). Provedor: Firebase Cloud
 # Messaging — verificado contra a régua Zero-Cost antes de integrar
 # (skill zero-cost-api, 2026-08-21): FCM é ZERO_COST com certeza, não só

@@ -9,7 +9,7 @@ para disparo manual/teste, nunca é chamado pelo app do jogador.
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from .. import mentalcoins, models, schemas
+from .. import mentalcoins, models, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 
@@ -96,9 +96,7 @@ def redeem(
 
 @router.post("/admin/mentalcoins/run-apuration")
 def run_apuration(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
-    admin_profile = db.get(models.Profile, user_id)
-    if admin_profile is None or admin_profile.role != "admin":
-        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
+    services.require_admin(db, user_id)
 
     cycle_start, cycle_end = mentalcoins.closed_cycle_bounds()
     return mentalcoins.run_weekly_apuration(db, cycle_start, cycle_end)

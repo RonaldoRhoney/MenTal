@@ -45,6 +45,13 @@ async def rate_limit_error_handler(request: Request, exc: services.RateLimitExce
     )
 
 
+# Achado de auditoria de qualidade B5 (05/09/2026): services.require_admin
+# centraliza a checagem que os 8 endpoints admin repetiam copiada.
+@app.exception_handler(services.AdminOnlyError)
+async def admin_only_error_handler(request: Request, exc: services.AdminOnlyError):
+    return JSONResponse(status_code=403, content={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
+
+
 app.include_router(age_gate.router, tags=["age-gate"])
 app.include_router(challenges.router, tags=["challenges"])
 app.include_router(progress.router, tags=["progress"])

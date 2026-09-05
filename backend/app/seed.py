@@ -2096,7 +2096,7 @@ CHALLENGES = [
     },
     {
         "territory_id": "curiosidade_relampago", "difficulty_level": 3,
-        "prompt": "Pareço sólida, mas na verdade me movo tão devagar que sou tecnicamente considerada um líquido em fluxo extremamente lento, segundo alguns cientistas — debate que ainda divide opiniões.",
+        "prompt": "Pareço sólida, mas alguns cientistas me consideram um líquido de fluxo extremamente lento — ainda gera debate.",
         "options": ["Vidro de janela antiga", "Pedra de mármore", "Gelo", "Plástico"],
         "correct_answer": "Vidro de janela antiga",
         "explanation": "Existe um debate científico sobre se o vidro é um 'líquido super-resfriado' de fluxo extremamente lento ou um sólido amorfo — vidros antigos às vezes parecem mais grossos na base por causa de como eram fabricados, não necessariamente por terem 'escorrido' com o tempo.",
@@ -4585,7 +4585,7 @@ CHALLENGES = [
     },
     {
         "territory_id": "curiosidade_relampago", "difficulty_level": 2,
-        "prompt": "Fui construída para durar poucos anos como atração temporária, mas mais de cem anos depois ainda sou um dos símbolos mais fotografados do mundo.",
+        "prompt": "Fui construída como atração temporária, mas cem anos depois ainda sou um dos símbolos mais fotografados do mundo.",
         "options": ["A Torre Eiffel", "O Coliseu", "A Estátua da Liberdade", "O Cristo Redentor"],
         "correct_answer": "A Torre Eiffel",
         "explanation": "A Torre Eiffel foi construída para uma exposição temporária em 1889 e quase foi demolida vinte anos depois — só sobreviveu porque passou a ser usada como antena de rádio.",

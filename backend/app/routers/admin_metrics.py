@@ -26,19 +26,13 @@ router = APIRouter()
 _PERIOD_DAYS = {"today": 1, "7d": 7, "30d": 30}
 
 
-def _require_admin(db: Session, user_id: str) -> None:
-    profile = db.get(models.Profile, user_id)
-    if profile is None or profile.role != "admin":
-        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Requires admin role"}})
-
-
 @router.get("/admin/metrics/summary", response_model=schemas.AdminMetricsSummaryOut)
 def get_metrics_summary(
     period: str = "7d",
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
-    _require_admin(db, user_id)
+    services.require_admin(db, user_id)
     if period not in _PERIOD_DAYS:
         raise HTTPException(status_code=422, detail={"error": {"code": "INVALID_PERIOD", "message": "period precisa ser 'today', '7d' ou '30d'"}})
 

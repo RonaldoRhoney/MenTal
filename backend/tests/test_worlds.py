@@ -96,7 +96,6 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client, mon
     # padrão de test_active_subscription_bypasses_daily_limit. Não é o
     # que este teste verifica; é só infraestrutura pra ter respostas
     # suficientes.
-    client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
     # Achado de auditoria de segurança M1 (05/09/2026): rate limiting em
     # /answer não é o que este teste verifica — dezenas de respostas

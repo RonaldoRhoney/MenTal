@@ -117,7 +117,6 @@ def test_level_up_true_only_on_the_answer_that_crosses_the_level_boundary(client
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     # Bypassa o limite diário pra viabilizar XP suficiente pra subir de
     # nível (XP_PER_LEVEL=100) sem depender da regra de negócio do limite.
-    client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 
     level_up_events = []
@@ -135,7 +134,6 @@ def test_new_level_only_populated_when_level_up_is_true(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
-    client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 
     for _ in range(15):

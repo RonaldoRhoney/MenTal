@@ -47,6 +47,19 @@ def enforce_rate_limit(scope: str, user_id: str, *, max_calls: int, window_secon
     hits.append(now)
 
 
+class AdminOnlyError(Exception):
+    """Achado de auditoria de qualidade B5 (05/09/2026): os 8 endpoints
+    admin repetiam o mesmo bloco `if profile is None or profile.role !=
+    'admin': raise HTTPException(...)` copiado — handler global em
+    main.py (mesmo padrão de RateLimitExceeded) traduz pra 403."""
+
+
+def require_admin(db: Session, user_id: str) -> None:
+    profile = db.get(models.Profile, user_id)
+    if profile is None or profile.role != "admin":
+        raise AdminOnlyError()
+
+
 def is_submitted_answer_correct(challenge: "models.Challenge", submitted_answer: str, timed_out: bool) -> bool:
     """
     V2 item 15 (timed_out nunca confia no client) + V5 Mundo dos

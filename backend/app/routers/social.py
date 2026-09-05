@@ -309,9 +309,7 @@ def list_blocked_users(user_id: str = Depends(require_age_confirmed_user_id), db
 
 @router.get("/admin/reports", response_model=list[schemas.AdminReportItem])
 def list_reports(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
-    admin_profile = db.get(models.Profile, user_id)
-    if admin_profile is None or admin_profile.role != "admin":
-        raise HTTPException(status_code=403, detail={"error": {"code": "ADMIN_ONLY", "message": "Restricted to admin accounts"}})
+    services.require_admin(db, user_id)
 
     reports = services.list_unresolved_reports(db)
     out = []

@@ -83,7 +83,6 @@ def test_sharp_mind_badge_requires_50_correct_answers(client, monkeypatch):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     # Bypassa o limite diário (24) via assinatura ativa — só pra viabilizar
     # o teste; a regra de negócio do limite não é o que está sendo testado.
-    client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
     # Achado de auditoria de segurança M1 (05/09/2026): rate limiting em
     # /answer não é o que este teste verifica — 50 respostas instantâneas

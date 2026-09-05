@@ -128,7 +128,7 @@
   {
     "territory_id": "curiosidade_relampago",
     "difficulty_level": 3,
-    "prompt": "Pareço sólida, mas na verdade me movo tão devagar que sou tecnicamente considerada um líquido em fluxo extremamente lento, segundo alguns cientistas — debate que ainda divide opiniões.",
+    "prompt": "Pareço sólida, mas alguns cientistas me consideram um líquido de fluxo extremamente lento — ainda gera debate.",
     "options": [
       "Vidro de janela antiga",
       "Pedra de mármore",
@@ -200,7 +200,7 @@
   {
     "territory_id": "curiosidade_relampago",
     "difficulty_level": 2,
-    "prompt": "Fui construída para durar poucos anos como atração temporária, mas mais de cem anos depois ainda sou um dos símbolos mais fotografados do mundo.",
+    "prompt": "Fui construída como atração temporária, mas cem anos depois ainda sou um dos símbolos mais fotografados do mundo.",
     "options": [
       "A Torre Eiffel",
       "O Coliseu",

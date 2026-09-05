@@ -59,13 +59,13 @@ class Profile(Base):
     terms_version_accepted: Mapped[str | None] = mapped_column(String, nullable=True)
     xp_total: Mapped[int] = mapped_column(Integer, default=0)
     level: Mapped[int] = mapped_column(Integer, default=1)
-    # Campo adicionado no Vertical Slice 01 (não estava no DATA_MODEL.md
-    # original): API_CONTRACT.md §6 previa "backend registra
-    # parental_gate_passed_at na sessão", mas o V1 não tem mecanismo de
-    # sessão de servidor (auth é stateless via token) — registrar no
-    # profile é a forma mais simples de persistir esse estado sem
-    # introduzir um sistema de sessão só para isso. Ver relatório do VS01.
-    parental_gate_passed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    # Achado de auditoria de qualidade B3 (05/09/2026): "porta de pais"
+    # fazia sentido quando o app podia incluir menores — desde DIR-001
+    # (MENTAL exclusivo 18+), não existe mais cenário de uso real. O
+    # endpoint POST /subscription/parental-gate e a checagem em
+    # validate-receipt foram removidos; a coluna em si (migration
+    # 001_initial_schema.sql) fica sem mapeamento aqui, sem precisar de
+    # uma migration destrutiva pra dropar do Postgres de produção.
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
     # V2 item 8 — Notificações (NOTIFICATIONS.md). Preferência é por
