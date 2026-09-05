@@ -1311,6 +1311,10 @@ class AppLocalizationsPt extends AppLocalizations {
       'Não foi possível enviar a foto. Tente novamente.';
 
   @override
+  String get photoCropFailedError =>
+      'Não foi possível recortar essa foto. Tente escolher outra ou tirar uma nova.';
+
+  @override
   String get profileRealNameLabel => 'Nome real';
 
   @override

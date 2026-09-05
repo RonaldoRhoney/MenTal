@@ -65,7 +65,15 @@ class PhotoPickerService {
     );
     if (source == null || !context.mounted) return null;
 
-    final picked = await ImagePicker().pickImage(source: source, imageQuality: 85);
+    // maxWidth/maxHeight (achado real, 04/09/2026 — testadores novos
+    // travando no recorte sem erro nenhum, PhotoCropScreen §CropFailure):
+    // fotos de câmera reais chegam em resolução muito maior que qualquer
+    // uso possível de uma foto de perfil circular — decodificar isso
+    // inteiro no widget de recorte (crop_your_image, 100% Flutter, sem
+    // downsampling nativo) é o cenário mais provável de estourar memória
+    // ou travar em aparelho mais fraco. 1600px já é generoso pro maior
+    // uso real (foto de perfil, nunca exibida em tela cheia).
+    final picked = await ImagePicker().pickImage(source: source, imageQuality: 85, maxWidth: 1600, maxHeight: 1600);
     if (picked == null || !context.mounted) return null;
 
     final bytes = await picked.readAsBytes();

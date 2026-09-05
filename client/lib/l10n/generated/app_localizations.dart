@@ -2290,6 +2290,12 @@ abstract class AppLocalizations {
   /// **'Não foi possível enviar a foto. Tente novamente.'**
   String get profilePhotoUploadError;
 
+  /// Shown when the crop_your_image package reports CropFailure, so the user isn't stuck on the crop screen with no feedback
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível recortar essa foto. Tente escolher outra ou tirar uma nova.'**
+  String get photoCropFailedError;
+
   /// Real name field label
   ///
   /// In pt, this message translates to:

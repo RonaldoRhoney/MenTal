@@ -1186,6 +1186,9 @@
   "profilePhotoUploadError": "Não foi possível enviar a foto. Tente novamente.",
   "@profilePhotoUploadError": {"description": "Generic error message when photo upload fails"},
 
+  "photoCropFailedError": "Não foi possível recortar essa foto. Tente escolher outra ou tirar uma nova.",
+  "@photoCropFailedError": {"description": "Shown when the crop_your_image package reports CropFailure, so the user isn't stuck on the crop screen with no feedback"},
+
   "profileRealNameLabel": "Nome real",
   "@profileRealNameLabel": {"description": "Real name field label"},
 

@@ -55,7 +55,19 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
             case CropSuccess(:final croppedImage):
               Navigator.of(context).pop(croppedImage);
             case CropFailure():
-              if (mounted) setState(() => _cropping = false);
+              // Achado real (04/09/2026): testadores novos ficavam
+              // presos aqui sem NENHUM aviso — o spinner só voltava ao
+              // normal e nada mais acontecia, sem sair da tela nem
+              // dizer o que fazer. Onboarding obrigatório trava de
+              // verdade sem uma foto (photoPath == null bloqueia o
+              // botão Continuar em mandatory_onboarding_screen.dart),
+              // então esse silêncio parava o cadastro inteiro.
+              if (mounted) {
+                setState(() => _cropping = false);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text(l10n.photoCropFailedError)),
+                );
+              }
           }
         },
       ),
