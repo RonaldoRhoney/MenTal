@@ -323,7 +323,7 @@ class _MovementReportsScreenState extends State<MovementReportsScreen> {
             physics: const NeverScrollableScrollPhysics(),
             crossAxisSpacing: 8,
             mainAxisSpacing: 8,
-            childAspectRatio: 0.95,
+            childAspectRatio: 0.82,
             children: [for (final session in _daySessions) _SessionCard(session: session)],
           ),
         ],
@@ -567,12 +567,12 @@ class _SessionCard extends StatelessWidget {
         children: [
           Text(
             '${session['emoji']} ${session['label']}',
-            style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w700, color: AppColors.bone),
-            maxLines: 1,
+            style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w700, color: AppColors.bone, height: 1.15),
+            maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
           Text(
-            '${session['start_hour']}h–${session['end_hour']}h',
+            '${session['start_hour']}h–${session['end_hour'] == 24 ? '23:59' : '${session['end_hour']}h'}',
             style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9.5),
           ),
           const SizedBox(height: 3),
