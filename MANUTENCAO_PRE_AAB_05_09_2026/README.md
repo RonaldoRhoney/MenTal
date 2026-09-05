@@ -1,13 +1,19 @@
-# V7
+# Manutenção Pré-AAB (05/09/2026)
+
+**Nota de nomenclatura:** esta pasta viveu brevemente como `V7/` nesta
+mesma sessão, mas Rhoney reservou V7 para o Mundo do Trânsito (um
+"Mundo" de conteúdo de verdade, na mesma numeração de V1-V6) — renomeada
+pra não colidir. Esta pasta NÃO é um "Mundo"; é manutenção/auditoria
+cross-cutting (backend, segurança, telas existentes), por isso fica
+fora da numeração V.
 
 **Status:** Encerrada em 05/09/2026. AAB (versionCode 6, versão 0.3.0)
 publicado no teste fechado do Google Play — todo o lote abaixo está em
 produção (backend) e na versão enviada à loja (client). Lote de
-trabalho pós-V5 (V5 encerrada em 04/09/2026, V6 reservada para o Mundo
-dos Valores e ainda não iniciada — nada deste lote toca em V6). Cobre a
-auditoria de segurança pré-AAB, a reformulação de Movimento em
-gráficos ricos por período, e ajustes sociais (Feedback/Torcida/
-Movimento) pedidos por Rhoney em 05/09/2026.
+trabalho pós-V5 (V5 encerrada em 04/09/2026). Cobre a auditoria de
+segurança pré-AAB, a reformulação de Movimento em gráficos ricos por
+período, e ajustes sociais (Feedback/Torcida/Movimento) pedidos por
+Rhoney em 05/09/2026.
 
 **Nota de versionCode:** a primeira geração do AAB usou versionCode 5,
 já consumido por um upload anterior no Play Console — corrigido para
