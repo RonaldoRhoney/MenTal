@@ -17,6 +17,7 @@ class _FakeApiClient extends ApiClient {
 
   final ApiException? torcidaError;
   int sentCount = 0;
+  int movementInviteSentCount = 0;
   String? lastReactionType;
 
   @override
@@ -40,6 +41,7 @@ class _FakeApiClient extends ApiClient {
       'best_territory_id': 'palavras',
       'best_territory_xp': 300,
       'torcida_sent_today_by_me': sentCount,
+      'movement_invite_sent_today_by_me': movementInviteSentCount,
     };
   }
 
@@ -49,6 +51,12 @@ class _FakeApiClient extends ApiClient {
     if (torcidaError != null) throw torcidaError!;
     sentCount += 1;
     return {'ok': true, 'sent_today_by_me': sentCount};
+  }
+
+  @override
+  Future<Map<String, dynamic>> sendMovementInvite(String userId) async {
+    movementInviteSentCount += 1;
+    return {'ok': true, 'sent_today_by_me': movementInviteSentCount};
   }
 }
 
@@ -111,5 +119,21 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Você já atingiu o limite de torcida hoje pra esta pessoa'), findsOneWidget);
+  });
+
+  testWidgets('botão GO convida pro Movimento e depois fica desabilitado', (tester) async {
+    final client = _FakeApiClient();
+    await _pump(tester, client);
+
+    await tester.scrollUntilVisible(find.text('GO'), 300, scrollable: find.byType(Scrollable));
+    await tester.tap(find.text('GO'));
+    await tester.pumpAndSettle();
+
+    expect(client.movementInviteSentCount, 1);
+    expect(find.text('Convite enviado!'), findsOneWidget);
+    expect(find.text('Convite já enviado hoje'), findsOneWidget);
+
+    final button = tester.widget<FilledButton>(find.ancestor(of: find.text('GO'), matching: find.byType(FilledButton)));
+    expect(button.onPressed, isNull);
   });
 }

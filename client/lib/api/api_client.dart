@@ -379,6 +379,12 @@ class ApiClient {
     );
   }
 
+  // Pedido de Rhoney (05/09/2026): botão "GO" na mesma área de Torcida,
+  // convidando o visitado a ligar o Movimento.
+  Future<Map<String, dynamic>> sendMovementInvite(String userId) async {
+    return _post(_uri('/profile/$userId/invite-movement'), headers: _headers);
+  }
+
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,

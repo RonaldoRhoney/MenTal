@@ -25,6 +25,7 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
   Map<String, dynamic>? _profile;
   String? _error;
   bool _sendingReaction = false;
+  bool _sendingMovementInvite = false;
 
   static const _reactionTypes = ['vibracao', 'balao', 'coracao', 'joinha'];
   static const _reactionEmoji = {'vibracao': '⚡', 'balao': '🎈', 'coracao': '💚', 'joinha': '👍'};
@@ -66,6 +67,27 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
     }
   }
 
+  // Pedido de Rhoney (05/09/2026): botão "GO" na mesma área de Torcida,
+  // convidando o visitado a ligar o Movimento — notificação com deep
+  // link é responsabilidade do backend (services.send_movement_invite).
+  Future<void> _sendMovementInvite() async {
+    if (_sendingMovementInvite) return;
+    setState(() => _sendingMovementInvite = true);
+    final l10n = AppLocalizations.of(context)!;
+    try {
+      final result = await widget.client.sendMovementInvite(widget.userId);
+      if (!mounted) return;
+      setState(() => _profile = {..._profile!, 'movement_invite_sent_today_by_me': result['sent_today_by_me']});
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l10n.publicProfileMovementInviteSentFeedback)));
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      final message = e.code == 'MOVEMENT_INVITE_DAILY_LIMIT_REACHED' ? l10n.publicProfileMovementInviteLimitReached : e.message;
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    } finally {
+      if (mounted) setState(() => _sendingMovementInvite = false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -97,6 +119,7 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
     final badges = (profile['badges'] as List).cast<Map<String, dynamic>>();
     final worlds = (profile['worlds'] as List).cast<Map<String, dynamic>>();
     final sentToday = profile['torcida_sent_today_by_me'] as int;
+    final movementInviteSentToday = profile['movement_invite_sent_today_by_me'] as int;
 
     // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer tela do
     // app.
@@ -201,6 +224,40 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
                 ),
               )
               .toList(),
+        ),
+        const SizedBox(height: 24),
+        // Pedido de Rhoney (05/09/2026): convite pra ligar o Movimento,
+        // na mesma área de incentivo entre jogadores — "GO" leva um
+        // alerta com deep link pra tela de Movimento de quem recebe
+        // (client de quem recebe trata isso em main.dart).
+        Container(
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+          child: Row(
+            children: [
+              Icon(Icons.directions_walk_rounded, color: AppColors.teal),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(l10n.publicProfileMovementInviteLabel, style: Theme.of(context).textTheme.titleSmall),
+                    if (movementInviteSentToday > 0)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 2),
+                        child: Text(l10n.publicProfileMovementInviteAlreadySentToday, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
+                      ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              FilledButton(
+                onPressed: (_sendingMovementInvite || movementInviteSentToday > 0) ? null : _sendMovementInvite,
+                style: FilledButton.styleFrom(backgroundColor: AppColors.teal, minimumSize: const Size(64, 40)),
+                child: Text(l10n.publicProfileMovementInviteButton),
+              ),
+            ],
+          ),
         ),
       ],
       ),

@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -163,6 +166,7 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   bool? _tutorialSeen;
   late final Stream<AuthState> _authStateStream;
   String? _lastAccessToken;
+  StreamSubscription<RemoteMessage>? _pushOpenedSubscription;
 
   @override
   void initState() {
@@ -178,11 +182,42 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     // Movimento. Registrado aqui (não em main(), fora de qualquer State)
     // porque só aqui existe o ApiClient real da sessão logada.
     FlutterForegroundTask.addTaskDataCallback(_onForegroundTaskData);
+    // Pedido de Rhoney (05/09/2026, convite pra ligar o Movimento): tocar
+    // numa notificação push (FCM) com data {"navigate": "movement"} —
+    // mesma chave já usada pelo foreground service acima, um único
+    // formato de "navegar pra X" em todo o app — leva direto pra tela de
+    // Movimento. onMessageOpenedApp cobre o app em background/foreground;
+    // getInitialMessage cobre o app sendo aberto A PARTIR do toque
+    // (cold start), que não dispara onMessageOpenedApp.
+    //
+    // Resiliente por design (mesmo princípio de PushService): Firebase
+    // pode não estar configurado (build de teste/dev sem
+    // google-services.json real) — nunca pode travar ou quebrar o resto
+    // do app, a notificação passa a simplesmente não navegar sozinha.
+    try {
+      _pushOpenedSubscription = FirebaseMessaging.onMessageOpenedApp.listen(
+        _onPushMessageOpened,
+        onError: (_) {},
+      );
+      FirebaseMessaging.instance.getInitialMessage().then((message) {
+        if (message != null) _onPushMessageOpened(message);
+      }).catchError((_) {});
+    } catch (_) {}
   }
 
   void _onForegroundTaskData(Object data) {
+    if (data is! Map || data['navigate'] != 'movement') return;
+    _navigateToMovement();
+  }
+
+  void _onPushMessageOpened(RemoteMessage message) {
+    if (message.data['navigate'] != 'movement') return;
+    _navigateToMovement();
+  }
+
+  void _navigateToMovement() {
     final client = _client;
-    if (client == null || data is! Map || data['navigate'] != 'movement') return;
+    if (client == null) return;
     rootNavigatorKey.currentState?.push(
       MaterialPageRoute(builder: (_) => MovementScreen(client: client)),
     );
@@ -191,6 +226,7 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   @override
   void dispose() {
     FlutterForegroundTask.removeTaskDataCallback(_onForegroundTaskData);
+    _pushOpenedSubscription?.cancel();
     super.dispose();
   }
 

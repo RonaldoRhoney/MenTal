@@ -1078,6 +1078,36 @@ abstract class AppLocalizations {
   /// **'Você já atingiu o limite de torcida hoje pra esta pessoa'**
   String get publicProfileTorcidaLimitReached;
 
+  /// Label inviting the viewer to send a Movement invite to this profile's owner
+  ///
+  /// In pt, this message translates to:
+  /// **'Convide para o Movimento'**
+  String get publicProfileMovementInviteLabel;
+
+  /// Button that sends the Movement invite
+  ///
+  /// In pt, this message translates to:
+  /// **'GO'**
+  String get publicProfileMovementInviteButton;
+
+  /// Snackbar confirming a Movement invite was sent
+  ///
+  /// In pt, this message translates to:
+  /// **'Convite enviado!'**
+  String get publicProfileMovementInviteSentFeedback;
+
+  /// Shown under the label once the daily Movement invite was already sent
+  ///
+  /// In pt, this message translates to:
+  /// **'Convite já enviado hoje'**
+  String get publicProfileMovementInviteAlreadySentToday;
+
+  /// Snackbar shown when the daily Movement invite limit is hit
+  ///
+  /// In pt, this message translates to:
+  /// **'Você já convidou esta pessoa pro Movimento hoje'**
+  String get publicProfileMovementInviteLimitReached;
+
   /// Button on Progress screen linking to Badges screen
   ///
   /// In pt, this message translates to:

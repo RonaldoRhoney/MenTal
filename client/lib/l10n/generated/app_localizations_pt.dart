@@ -586,6 +586,23 @@ class AppLocalizationsPt extends AppLocalizations {
       'Você já atingiu o limite de torcida hoje pra esta pessoa';
 
   @override
+  String get publicProfileMovementInviteLabel => 'Convide para o Movimento';
+
+  @override
+  String get publicProfileMovementInviteButton => 'GO';
+
+  @override
+  String get publicProfileMovementInviteSentFeedback => 'Convite enviado!';
+
+  @override
+  String get publicProfileMovementInviteAlreadySentToday =>
+      'Convite já enviado hoje';
+
+  @override
+  String get publicProfileMovementInviteLimitReached =>
+      'Você já convidou esta pessoa pro Movimento hoje';
+
+  @override
   String get viewBadgesButton => 'Ver conquistas';
 
   @override

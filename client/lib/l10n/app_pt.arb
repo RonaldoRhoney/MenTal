@@ -804,6 +804,26 @@
   "@publicProfileTorcidaLimitReached": {
     "description": "Snackbar shown when the daily torcida limit is hit"
   },
+  "publicProfileMovementInviteLabel": "Convide para o Movimento",
+  "@publicProfileMovementInviteLabel": {
+    "description": "Label inviting the viewer to send a Movement invite to this profile's owner"
+  },
+  "publicProfileMovementInviteButton": "GO",
+  "@publicProfileMovementInviteButton": {
+    "description": "Button that sends the Movement invite"
+  },
+  "publicProfileMovementInviteSentFeedback": "Convite enviado!",
+  "@publicProfileMovementInviteSentFeedback": {
+    "description": "Snackbar confirming a Movement invite was sent"
+  },
+  "publicProfileMovementInviteAlreadySentToday": "Convite já enviado hoje",
+  "@publicProfileMovementInviteAlreadySentToday": {
+    "description": "Shown under the label once the daily Movement invite was already sent"
+  },
+  "publicProfileMovementInviteLimitReached": "Você já convidou esta pessoa pro Movimento hoje",
+  "@publicProfileMovementInviteLimitReached": {
+    "description": "Snackbar shown when the daily Movement invite limit is hit"
+  },
   "viewBadgesButton": "Ver conquistas",
   "@viewBadgesButton": {
     "description": "Button on Progress screen linking to Badges screen"

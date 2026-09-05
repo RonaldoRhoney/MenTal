@@ -408,6 +408,10 @@ class PublicProfileOut(BaseModel):
     # (TORCIDA_MULTIPLA_V2.md §3) — o client usa isso pra decidir se
     # ainda mostra os botões de envio habilitados ou já bateu o teto.
     torcida_sent_today_by_me: int
+    # Pedido de Rhoney (05/09/2026): convite pra ligar o Movimento, mesma
+    # área de Torcida — o client desabilita o botão "GO" depois do envio
+    # do dia (teto de config.MOVEMENT_INVITE_DAILY_LIMIT_PER_TARGET).
+    movement_invite_sent_today_by_me: int
 
 
 class TorcidaSendRequest(BaseModel):
@@ -419,6 +423,11 @@ class TorcidaSendResponse(BaseModel):
     # Total agregado (todos os tipos) já enviado por mim pra esta pessoa
     # hoje, incluindo este envio — permite ao client atualizar o estado
     # dos botões sem precisar de uma segunda chamada.
+    sent_today_by_me: int
+
+
+class MovementInviteSendResponse(BaseModel):
+    ok: bool = True
     sent_today_by_me: int
 
 

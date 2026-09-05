@@ -77,6 +77,13 @@ TORCIDA_EMOJI_BY_TYPE = {
 }
 TORCIDA_RECEIVED_BODY_TEMPLATE = "{nickname} te mandou um {emoji}!"
 
+# Pedido de Rhoney (05/09/2026): convite pra ligar o Movimento, mesma
+# área do Perfil Público onde já existe Torcida — tocar na notificação
+# leva direto pra tela de Movimento (data payload "navigate": "movement",
+# ver push.send_push_notification).
+MOVEMENT_INVITE_RECEIVED_TITLE = "Bora se mexer? 🚶"
+MOVEMENT_INVITE_RECEIVED_BODY_TEMPLATE = "{nickname} te convidou a ligar o Movimento e contar seus passos!"
+
 # Usado nas notificações de batalha e de disputa territorial — os
 # territórios ainda não têm uma tabela de nomes server-side (o client
 # resolve isso via l10n). 7 territórios fixos, mesmo texto exibido no

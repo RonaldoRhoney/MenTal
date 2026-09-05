@@ -48,3 +48,21 @@ def send_torcida(
         status_code = {"USER_NOT_FOUND": 404, "TORCIDA_DAILY_LIMIT_REACHED": 429}.get(e.code, 422)
         raise HTTPException(status_code=status_code, detail={"error": {"code": e.code, "message": e.message}})
     return schemas.TorcidaSendResponse(sent_today_by_me=sent_today)
+
+
+@router.post("/profile/{target_user_id}/invite-movement", response_model=schemas.MovementInviteSendResponse)
+def send_movement_invite(
+    target_user_id: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """Pedido de Rhoney (05/09/2026): botão "GO" na mesma área de
+    Torcida, convidando o visitado a ligar o Movimento — notificação
+    push com deep link pra tela de Movimento (ver services.
+    send_movement_invite)."""
+    try:
+        sent_today = services.send_movement_invite(db, from_user_id=user_id, to_user_id=target_user_id)
+    except services.PublicProfileError as e:
+        status_code = {"USER_NOT_FOUND": 404, "MOVEMENT_INVITE_DAILY_LIMIT_REACHED": 429}.get(e.code, 422)
+        raise HTTPException(status_code=status_code, detail={"error": {"code": e.code, "message": e.message}})
+    return schemas.MovementInviteSendResponse(sent_today_by_me=sent_today)

@@ -47,7 +47,14 @@ def _get_firebase_app():
         return None
 
 
-def send_push_notification(push_token: str, title: str, body: str) -> bool:
+def send_push_notification(push_token: str, title: str, body: str, data: dict[str, str] | None = None) -> bool:
+    """
+    `data` (05/09/2026, convite de Movimento): payload extra pro client
+    decidir deep link ao tocar na notificação (ex.: {"navigate":
+    "movement"}) — mesma chave já usada pelo sinal do foreground service
+    de Movimento (main.dart::_onForegroundTaskData), reaproveitada aqui
+    pra manter um único formato de "navegar pra X" em todo o app.
+    """
     app = _get_firebase_app()
     if app is None:
         return False
@@ -58,6 +65,7 @@ def send_push_notification(push_token: str, title: str, body: str) -> bool:
         message = messaging.Message(
             token=push_token,
             notification=messaging.Notification(title=title, body=body),
+            data=data,
         )
         messaging.send(message)
         return True

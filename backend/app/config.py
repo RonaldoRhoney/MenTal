@@ -364,6 +364,12 @@ RATE_LIMIT_LEARNING_PAUSE_COMPLETE = (10, 60.0)
 
 TORCIDA_DAILY_LIMIT_PER_TARGET = 10
 TORCIDA_REACTION_TYPES = ("vibracao", "balao", "coracao", "joinha")
+
+# Pedido de Rhoney (05/09/2026) — convite pra ligar o Movimento, mesma
+# área do Perfil Público. Teto BEM mais baixo que Torcida de propósito:
+# é um convite pessoal e mais "pesado" que uma reação rápida, não faz
+# sentido mandar várias vezes no mesmo dia pro mesmo alvo.
+MOVEMENT_INVITE_DAILY_LIMIT_PER_TARGET = 1
 BATTLE_WIN_BONUS_XP = 30
 
 # MentalCoins — moeda de prestígio semanal (U.I/MENTALCOINS_V1.md).

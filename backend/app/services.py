@@ -1348,6 +1348,19 @@ def get_public_profile(db: Session, viewer_user_id: str, target_user_id: str) ->
         )
     ).scalar_one()
 
+    # Pedido de Rhoney (05/09/2026): convite pra ligar o Movimento, mesma
+    # área de Torcida — "sent_today" deixa o client desabilitar o botão
+    # "GO" depois do envio, mesmo padrão de torcida_sent_today_by_me.
+    movement_invite_sent_today = db.execute(
+        select(func.count())
+        .select_from(models.MovementInvite)
+        .where(
+            models.MovementInvite.from_user_id == viewer_user_id,
+            models.MovementInvite.to_user_id == target_user_id,
+            models.MovementInvite.created_at >= today_start,
+        )
+    ).scalar_one()
+
     return {
         "user_id": target_user_id,
         "nickname": profile.nickname,
@@ -1362,6 +1375,7 @@ def get_public_profile(db: Session, viewer_user_id: str, target_user_id: str) ->
         "best_territory_id": best_progress.territory_id if best_progress and best_progress.xp_in_territory > 0 else None,
         "best_territory_xp": best_progress.xp_in_territory if best_progress and best_progress.xp_in_territory > 0 else 0,
         "torcida_sent_today_by_me": sent_today,
+        "movement_invite_sent_today_by_me": movement_invite_sent_today,
     }
 
 
@@ -1413,6 +1427,56 @@ def send_torcida(db: Session, from_user_id: str, to_user_id: str, reaction_type:
             emoji=emoji,
         )
         push.send_push_notification(target_profile.push_token, notification_copy.TORCIDA_RECEIVED_TITLE, body)
+
+    return sent_today + 1
+
+
+def send_movement_invite(db: Session, from_user_id: str, to_user_id: str) -> int:
+    """
+    Pedido de Rhoney (05/09/2026): convite pra ligar o Movimento, mesma
+    área do Perfil Público onde já existe Torcida — botão "GO" em quem
+    convida, notificação push com deep link ("navigate": "movement") em
+    quem recebe. Mesmo espírito de bloqueio/limite diário de
+    send_torcida, mas teto próprio e bem mais baixo (convite pessoal,
+    não reação rápida — ver config.MOVEMENT_INVITE_DAILY_LIMIT_PER_TARGET).
+    """
+    if from_user_id == to_user_id:
+        raise PublicProfileError("CANNOT_INVITE_SELF", "Não é possível convidar a si mesmo.")
+
+    if is_blocked_either_way(db, from_user_id, to_user_id):
+        raise PublicProfileError("USER_NOT_FOUND", to_user_id)
+
+    target_profile = db.get(models.Profile, to_user_id)
+    if target_profile is None:
+        raise PublicProfileError("USER_NOT_FOUND", to_user_id)
+
+    today_start = naive(datetime.combine(utcnow().date(), datetime.min.time()))
+    sent_today = db.execute(
+        select(func.count())
+        .select_from(models.MovementInvite)
+        .where(
+            models.MovementInvite.from_user_id == from_user_id,
+            models.MovementInvite.to_user_id == to_user_id,
+            models.MovementInvite.created_at >= today_start,
+        )
+    ).scalar_one()
+    if sent_today >= config.MOVEMENT_INVITE_DAILY_LIMIT_PER_TARGET:
+        raise PublicProfileError("MOVEMENT_INVITE_DAILY_LIMIT_REACHED", "Limite diário de convite de Movimento pra esta pessoa atingido.")
+
+    db.add(models.MovementInvite(from_user_id=from_user_id, to_user_id=to_user_id))
+    db.commit()
+
+    if target_profile.notif_social_enabled and target_profile.push_token:
+        from_profile = db.get(models.Profile, from_user_id)
+        body = notification_copy.MOVEMENT_INVITE_RECEIVED_BODY_TEMPLATE.format(
+            nickname=from_profile.nickname if from_profile else "Alguém",
+        )
+        push.send_push_notification(
+            target_profile.push_token,
+            notification_copy.MOVEMENT_INVITE_RECEIVED_TITLE,
+            body,
+            data={"navigate": "movement"},
+        )
 
     return sent_today + 1
 

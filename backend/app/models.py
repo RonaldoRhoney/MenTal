@@ -843,6 +843,26 @@ class TorcidaReaction(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class MovementInvite(Base):
+    """
+    Pedido de Rhoney (05/09/2026): convite pontual, na mesma área do
+    Perfil Público onde já existe Torcida, pra incentivar o visitado a
+    ligar o Movimento — botão "GO" na tela de quem convida, notificação
+    push com deep link pra tela de Movimento em quem recebe. Mesmo
+    padrão de TorcidaReaction (uma linha por envio, limite diário por
+    COUNT em tempo real, nunca contador à parte), mas conceito distinto
+    (convite de funcionalidade, não reação de torcida) — tabela própria
+    em vez de forçar um 5º reaction_type dentro de Torcida.
+    """
+
+    __tablename__ = "movement_invites"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    from_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    to_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class UserBlock(Base):
     """
     Bloqueio de usuário (auditoria de conformidade Google Play,
