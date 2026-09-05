@@ -1684,6 +1684,42 @@ abstract class AppLocalizations {
   /// **'Hoje · Dia {number}'**
   String movementReportsHistoryTodayLabel(int number);
 
+  /// History item week number label
+  ///
+  /// In pt, this message translates to:
+  /// **'Semana {number}'**
+  String movementReportsHistoryWeekLabel(int number);
+
+  /// History item week number label for the current week
+  ///
+  /// In pt, this message translates to:
+  /// **'Esta semana · Semana {number}'**
+  String movementReportsHistoryCurrentWeekLabel(int number);
+
+  /// History item month number label
+  ///
+  /// In pt, this message translates to:
+  /// **'Mês {number}'**
+  String movementReportsHistoryMonthLabel(int number);
+
+  /// History item month number label for the current month
+  ///
+  /// In pt, this message translates to:
+  /// **'Este mês · Mês {number}'**
+  String movementReportsHistoryCurrentMonthLabel(int number);
+
+  /// History item year number label
+  ///
+  /// In pt, this message translates to:
+  /// **'Ano {number}'**
+  String movementReportsHistoryYearLabel(int number);
+
+  /// History item year number label for the current year
+  ///
+  /// In pt, this message translates to:
+  /// **'Este ano · Ano {number}'**
+  String movementReportsHistoryCurrentYearLabel(int number);
+
   /// History item XP value
   ///
   /// In pt, this message translates to:

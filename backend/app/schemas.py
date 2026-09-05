@@ -604,9 +604,15 @@ class MovementMonthlyChartOut(BaseModel):
 # MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
 # paginado. next_cursor é o cycle_start_at (ISO) do último item da
 # página — passar de volta como `before` na próxima chamada.
+# MOVIMENTO_GRAFICOS_RICOS_V1.md §7 (revisado 05/09/2026) — cada
+# período (dia/semana/mês/ano) tem seu próprio histórico agrupado
+# nessa granularidade. `label` já vem formatado em português
+# (ex.: "05 de setembro", "01–07 de set", "Setembro de 2026", "2026") —
+# o client não precisa fazer nenhum parsing de data.
 class MovementHistoryItemOut(BaseModel):
-    day_number: int
-    date: str
+    period_number: int
+    label: str
+    is_current: bool
     steps: int
     xp_awarded: int
     cumulative_steps: int

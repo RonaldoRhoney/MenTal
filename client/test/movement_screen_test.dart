@@ -106,7 +106,7 @@ class _FakeApiClient extends ApiClient {
   }
 
   @override
-  Future<Map<String, dynamic>> getMovementHistory({String? before, int limit = 20}) async {
+  Future<Map<String, dynamic>> getMovementHistory({String period = 'day', String? before, int limit = 20}) async {
     return {'items': [], 'next_cursor': null};
   }
 }

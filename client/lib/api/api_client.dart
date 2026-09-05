@@ -507,9 +507,9 @@ class ApiClient {
 
   // MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
   // paginado (mais recente primeiro).
-  Future<Map<String, dynamic>> getMovementHistory({String? before, int limit = 20}) async {
+  Future<Map<String, dynamic>> getMovementHistory({String period = 'day', String? before, int limit = 20}) async {
     return _get(
-      _uri('/movement/history', {'limit': '$limit', if (before != null) 'before': before}),
+      _uri('/movement/history', {'period': period, 'limit': '$limit', if (before != null) 'before': before}),
       headers: _headers,
     );
   }

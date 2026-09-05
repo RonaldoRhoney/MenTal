@@ -944,6 +944,36 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String movementReportsHistoryWeekLabel(int number) {
+    return 'Semana $number';
+  }
+
+  @override
+  String movementReportsHistoryCurrentWeekLabel(int number) {
+    return 'Esta semana · Semana $number';
+  }
+
+  @override
+  String movementReportsHistoryMonthLabel(int number) {
+    return 'Mês $number';
+  }
+
+  @override
+  String movementReportsHistoryCurrentMonthLabel(int number) {
+    return 'Este mês · Mês $number';
+  }
+
+  @override
+  String movementReportsHistoryYearLabel(int number) {
+    return 'Ano $number';
+  }
+
+  @override
+  String movementReportsHistoryCurrentYearLabel(int number) {
+    return 'Este ano · Ano $number';
+  }
+
+  @override
   String movementReportsHistoryXp(int xp) {
     return '+$xp XP';
   }

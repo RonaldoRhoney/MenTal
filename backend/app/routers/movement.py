@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from .. import movement, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
-from ..timeutil import naive, utcnow
+from ..timeutil import utcnow
 
 router = APIRouter()
 
@@ -121,18 +121,22 @@ def get_movement_monthly_chart(
 
 @router.get("/movement/history", response_model=schemas.MovementHistoryPageOut)
 def get_movement_history(
+    period: str = "day",
     before: str | None = None,
     limit: int = 20,
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
-    """MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
-    paginado (mais recente primeiro), com acumulado de passos até cada
-    dia. `before` é o `next_cursor` da página anterior."""
+    """MOVIMENTO_GRAFICOS_RICOS_V1.md §7 (revisado 05/09/2026) — cada
+    aba (Dia/Semana/Mês/Ano) tem seu próprio histórico, agrupado na
+    granularidade de `period`. `before` é o `next_cursor` da página
+    anterior, na MESMA granularidade (nunca reaproveitado entre
+    períodos diferentes)."""
+    if period not in ("day", "week", "month", "year"):
+        raise HTTPException(status_code=422, detail={"error": {"code": "INVALID_PERIOD", "message": "period precisa ser 'day', 'week', 'month' ou 'year'"}})
     profile = services.get_or_create_profile(db, user_id)
     limit = max(1, min(limit, 100))
-    before_cycle_start = naive(datetime.fromisoformat(before)) if before else None
-    result = movement.get_history_page(db, profile, limit=limit, before_cycle_start=before_cycle_start)
+    result = movement.get_history_page(db, profile, period=period, limit=limit, before_key=before)
     return schemas.MovementHistoryPageOut(**result)
 
 

@@ -14,6 +14,16 @@ import 'movement_screen.dart' show ChartCard;
 /// sempre visível abaixo, independente da aba selecionada.
 enum MovementReportPeriod { day, week, month, year }
 
+/// Estado do histórico de UM período — paginação independente por aba
+/// (§7, revisado 05/09/2026: "dia, semana, mês e ano devem ter seus
+/// históricos fiéis"), nunca uma lista única reaproveitada entre abas.
+class _HistoryState {
+  final List<Map<String, dynamic>> items = [];
+  String? cursor;
+  bool loadingMore = false;
+  bool hasMore = true;
+}
+
 class MovementReportsScreen extends StatefulWidget {
   const MovementReportsScreen({super.key, required this.client, this.initialPeriod = MovementReportPeriod.day});
 
@@ -44,11 +54,20 @@ class _MovementReportsScreenState extends State<MovementReportsScreen> {
   // Ano
   Map<String, dynamic>? _yearData;
 
-  // Histórico (§7) — paginado, independente da aba.
-  final List<Map<String, dynamic>> _history = [];
-  String? _historyCursor;
-  bool _historyLoadingMore = false;
-  bool _historyHasMore = true;
+  // Histórico (§7, revisado 05/09/2026 — "dia, semana, mês e ano devem
+  // ter seus históricos fiéis"): cada aba tem seu PRÓPRIO histórico,
+  // agrupado na granularidade correspondente — nunca a mesma lista
+  // diária reaproveitada embaixo de todas as abas.
+  final Map<MovementReportPeriod, _HistoryState> _historyByPeriod = {
+    for (final p in MovementReportPeriod.values) p: _HistoryState(),
+  };
+
+  static const _periodApiValue = {
+    MovementReportPeriod.day: 'day',
+    MovementReportPeriod.week: 'week',
+    MovementReportPeriod.month: 'month',
+    MovementReportPeriod.year: 'year',
+  };
 
   @override
   void initState() {
@@ -68,7 +87,7 @@ class _MovementReportsScreenState extends State<MovementReportsScreen> {
         _loadWeek(),
         _loadMonth(),
         _loadYear(),
-        _loadHistoryFirstPage(),
+        for (final period in MovementReportPeriod.values) _loadHistoryFirstPage(period),
       ]);
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -107,34 +126,37 @@ class _MovementReportsScreenState extends State<MovementReportsScreen> {
     _yearData = await widget.client.getMovementYearlySummary();
   }
 
-  Future<void> _loadHistoryFirstPage() async {
-    final page = await widget.client.getMovementHistory();
-    _history
+  Future<void> _loadHistoryFirstPage(MovementReportPeriod period) async {
+    final page = await widget.client.getMovementHistory(period: _periodApiValue[period]!);
+    final state = _historyByPeriod[period]!;
+    state.items
       ..clear()
       ..addAll((page['items'] as List).cast<Map<String, dynamic>>());
-    _historyCursor = page['next_cursor'] as String?;
-    _historyHasMore = _historyCursor != null;
+    state.cursor = page['next_cursor'] as String?;
+    state.hasMore = state.cursor != null;
   }
 
-  Future<void> _loadMoreHistory() async {
-    if (_historyLoadingMore || !_historyHasMore) return;
-    setState(() => _historyLoadingMore = true);
+  Future<void> _loadMoreHistory(MovementReportPeriod period) async {
+    final state = _historyByPeriod[period]!;
+    if (state.loadingMore || !state.hasMore) return;
+    setState(() => state.loadingMore = true);
     try {
-      final page = await widget.client.getMovementHistory(before: _historyCursor);
+      final page = await widget.client.getMovementHistory(period: _periodApiValue[period]!, before: state.cursor);
       setState(() {
-        _history.addAll((page['items'] as List).cast<Map<String, dynamic>>());
-        _historyCursor = page['next_cursor'] as String?;
-        _historyHasMore = _historyCursor != null;
+        state.items.addAll((page['items'] as List).cast<Map<String, dynamic>>());
+        state.cursor = page['next_cursor'] as String?;
+        state.hasMore = state.cursor != null;
       });
     } on ApiException catch (_) {
     } finally {
-      if (mounted) setState(() => _historyLoadingMore = false);
+      if (mounted) setState(() => state.loadingMore = false);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final historyState = _historyByPeriod[_period]!;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.movementReportsTitle)),
       body: SafeArea(
@@ -156,13 +178,13 @@ class _MovementReportsScreenState extends State<MovementReportsScreen> {
                         const SizedBox(height: 18),
                         _buildHistorySectionLabel(l10n),
                         const SizedBox(height: 10),
-                        ..._history.map((item) => _HistoryItem(item: item, l10n: l10n)),
-                        if (_historyHasMore) ...[
+                        ...historyState.items.map((item) => _HistoryItem(item: item, period: _period, l10n: l10n)),
+                        if (historyState.hasMore) ...[
                           const SizedBox(height: 8),
                           Center(
-                            child: _historyLoadingMore
+                            child: historyState.loadingMore
                                 ? const Padding(padding: EdgeInsets.all(12), child: SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2)))
-                                : TextButton(onPressed: _loadMoreHistory, child: Text(l10n.movementReportsHistoryLoadMore)),
+                                : TextButton(onPressed: () => _loadMoreHistory(_period), child: Text(l10n.movementReportsHistoryLoadMore)),
                           ),
                         ],
                       ],
@@ -288,7 +310,7 @@ class _MovementReportsScreenState extends State<MovementReportsScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(color: AppColors.teal.withValues(alpha: 0.12), border: Border.all(color: AppColors.teal.withValues(alpha: 0.3)), borderRadius: BorderRadius.circular(100)),
-                child: Text(l10n.movementReportsLiveBadge, style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 9).copyWith(fontWeight: FontWeight.w700)),
+                child: Text(l10n.movementReportsLiveBadge, style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 10.5).copyWith(fontWeight: FontWeight.w700)),
               ),
             ],
           ),
@@ -369,8 +391,8 @@ class _TotalSubItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(value, style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
-        Text(label, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 8).copyWith(letterSpacing: 0.5)),
+        Text(value, style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 15).copyWith(fontWeight: FontWeight.w700)),
+        Text(label, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10.5).copyWith(letterSpacing: 0.4)),
       ],
     );
   }
@@ -503,7 +525,7 @@ class _DaySessionsChart extends StatelessWidget {
                   decoration: BoxDecoration(color: AppColors.gold, borderRadius: BorderRadius.circular(6)),
                   child: Text(
                     l10n.movementReportsPeakTag(_compact(maxValue)),
-                    style: const TextStyle(color: Color(0xFF241000), fontSize: 9, fontWeight: FontWeight.w700),
+                    style: const TextStyle(color: Color(0xFF241000), fontSize: 10.5, fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
@@ -545,21 +567,21 @@ class _SessionCard extends StatelessWidget {
         children: [
           Text(
             '${session['emoji']} ${session['label']}',
-            style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: AppColors.bone),
+            style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w700, color: AppColors.bone),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
           Text(
             '${session['start_hour']}h–${session['end_hour']}h',
-            style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 7.5),
+            style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9.5),
           ),
           const SizedBox(height: 3),
-          Text('${session['steps']}', style: AppTheme.technicalStyle(color: accent, fontSize: 12).copyWith(fontWeight: FontWeight.w700)),
+          Text('${session['steps']}', style: AppTheme.technicalStyle(color: accent, fontSize: 14).copyWith(fontWeight: FontWeight.w700)),
           const SizedBox(height: 2),
           Expanded(
             child: Text(
               session['description'] as String,
-              style: TextStyle(fontSize: 7.5, color: AppColors.muted, height: 1.3),
+              style: TextStyle(fontSize: 9.5, color: AppColors.muted, height: 1.3),
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
             ),
@@ -683,7 +705,7 @@ class _MonthBarChart extends StatelessWidget {
               getTitlesWidget: (value, meta) {
                 final index = value.toInt();
                 if (index < 0 || index >= days.length) return const SizedBox.shrink();
-                return Text('${days[index]['day']}', style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 9));
+                return Text('${days[index]['day']}', style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 10.5));
               },
             ),
           ),
@@ -749,7 +771,7 @@ class _YearBarChart extends StatelessWidget {
                 final index = value.toInt();
                 if (index < 0 || index >= 12) return const SizedBox.shrink();
                 final isBest = byMonth[index + 1]?['is_best'] as bool? ?? false;
-                return Text(_monthLabels[index], style: AppTheme.technicalStyle(color: isBest ? AppColors.gold : AppColors.muted, fontSize: 9).copyWith(fontWeight: isBest ? FontWeight.w700 : FontWeight.w400));
+                return Text(_monthLabels[index], style: AppTheme.technicalStyle(color: isBest ? AppColors.gold : AppColors.muted, fontSize: 10.5).copyWith(fontWeight: isBest ? FontWeight.w700 : FontWeight.w400));
               },
             ),
           ),
@@ -777,17 +799,24 @@ class _YearBarChart extends StatelessWidget {
 /// passos, XP, e acumulado até aquele dia. Ponto colorido indica se a
 /// meta diária foi atingida naquele dia.
 class _HistoryItem extends StatelessWidget {
-  const _HistoryItem({required this.item, required this.l10n});
+  const _HistoryItem({required this.item, required this.period, required this.l10n});
 
   final Map<String, dynamic> item;
+  final MovementReportPeriod period;
   final AppLocalizations l10n;
 
   @override
   Widget build(BuildContext context) {
-    final dayNumber = item['day_number'] as int;
-    final date = DateTime.parse(item['date'] as String);
-    final isToday = DateTime.now().difference(date).inDays == 0 && DateTime.now().day == date.day;
+    final number = item['period_number'] as int;
+    final isCurrent = item['is_current'] as bool;
     final goalReached = item['goal_reached'] as bool;
+
+    final title = switch (period) {
+      MovementReportPeriod.day => isCurrent ? l10n.movementReportsHistoryTodayLabel(number) : l10n.movementReportsHistoryDayLabel(number),
+      MovementReportPeriod.week => isCurrent ? l10n.movementReportsHistoryCurrentWeekLabel(number) : l10n.movementReportsHistoryWeekLabel(number),
+      MovementReportPeriod.month => isCurrent ? l10n.movementReportsHistoryCurrentMonthLabel(number) : l10n.movementReportsHistoryMonthLabel(number),
+      MovementReportPeriod.year => isCurrent ? l10n.movementReportsHistoryCurrentYearLabel(number) : l10n.movementReportsHistoryYearLabel(number),
+    };
 
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
@@ -795,7 +824,7 @@ class _HistoryItem extends StatelessWidget {
       decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14), border: Border.all(color: AppColors.muted.withValues(alpha: 0.12))),
       child: Row(
         children: [
-          Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: goalReached ? AppColors.gold : AppColors.teal)),
+          Container(width: 9, height: 9, decoration: BoxDecoration(shape: BoxShape.circle, color: goalReached ? AppColors.gold : AppColors.teal)),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
@@ -803,10 +832,10 @@ class _HistoryItem extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  isToday ? l10n.movementReportsHistoryTodayLabel(dayNumber) : l10n.movementReportsHistoryDayLabel(dayNumber),
-                  style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 12.5).copyWith(fontWeight: FontWeight.w700),
+                  title,
+                  style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 13.5).copyWith(fontWeight: FontWeight.w700),
                 ),
-                Text(_formatDate(date), style: TextStyle(color: AppColors.muted, fontSize: 9)),
+                Text(item['label'] as String, style: TextStyle(color: AppColors.muted, fontSize: 11)),
               ],
             ),
           ),
@@ -814,17 +843,13 @@ class _HistoryItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('${item['steps']}', style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
-              Text(l10n.movementReportsHistoryXp(item['xp_awarded'] as int), style: TextStyle(color: AppColors.gold, fontSize: 8.5)),
-              Text(l10n.movementReportsHistoryAccumulated(item['cumulative_steps'] as int), style: TextStyle(color: AppColors.muted, fontSize: 8)),
+              Text('${item['steps']}', style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 14.5).copyWith(fontWeight: FontWeight.w700)),
+              Text(l10n.movementReportsHistoryXp(item['xp_awarded'] as int), style: TextStyle(color: AppColors.gold, fontSize: 10.5, fontWeight: FontWeight.w600)),
+              Text(l10n.movementReportsHistoryAccumulated(item['cumulative_steps'] as int), style: TextStyle(color: AppColors.muted, fontSize: 10)),
             ],
           ),
         ],
       ),
     );
   }
-
-  static const _months = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
-
-  String _formatDate(DateTime date) => '${date.day.toString().padLeft(2, '0')} de ${_months[date.month - 1]}';
 }

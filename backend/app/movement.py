@@ -12,10 +12,10 @@ inflado — não precisa de anti-cheat adicional além do teto de sanidade
 em MOVEMENT_MAX_STEPS_PER_COLLECTION.
 """
 
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from sqlalchemy import func, select
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from . import config, mentalcoins, models, scoring, services
@@ -439,49 +439,133 @@ def get_monthly_daily_breakdown(db: Session, user_id: str, year: int, month: int
     }
 
 
-# MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
-# paginado (mais recente primeiro), com numeração sequencial de dia de
-# uso e acumulado de passos até aquele dia. profile.movement_cycle_
-# anchor_at marca o dia 1 (§7: "desde o primeiro dia de uso") — a
-# numeração conta a partir dali, não do primeiro ciclo com passos>0
-# (um dia sem nenhum passo ainda é um "dia de uso" contado).
+_MONTHS_PT = [
+    "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+    "julho", "agosto", "setembro", "outubro", "novembro", "dezembro",
+]
+_MONTHS_PT_SHORT = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
+
+
+def _month_end(year: int, month: int) -> date:
+    if month == 12:
+        return date(year, 12, 31)
+    return date(year, month + 1, 1) - timedelta(days=1)
+
+
+def _history_bucket(period: str, cycle_start_at: datetime) -> tuple[object, date, date]:
+    """Retorna (chave de agrupamento, início do bucket, fim do bucket)
+    pro dia de cycle_start_at, na granularidade pedida."""
+    d = cycle_start_at.date()
+    if period == "day":
+        return d, d, d
+    if period == "week":
+        iso_year, iso_week, _ = d.isocalendar()
+        monday = date.fromisocalendar(iso_year, iso_week, 1)
+        return (iso_year, iso_week), monday, monday + timedelta(days=6)
+    if period == "month":
+        return (d.year, d.month), date(d.year, d.month, 1), _month_end(d.year, d.month)
+    if period == "year":
+        return d.year, date(d.year, 1, 1), date(d.year, 12, 31)
+    raise ValueError(f"período inválido: {period!r}")
+
+
+def _history_label(period: str, range_start: date, range_end: date) -> str:
+    if period == "day":
+        return f"{range_start.day:02d} de {_MONTHS_PT[range_start.month - 1]}"
+    if period == "week":
+        if range_start.month == range_end.month:
+            return f"{range_start.day:02d}–{range_end.day:02d} de {_MONTHS_PT_SHORT[range_start.month - 1]}"
+        return f"{range_start.day:02d} {_MONTHS_PT_SHORT[range_start.month - 1]} – {range_end.day:02d} {_MONTHS_PT_SHORT[range_end.month - 1]}"
+    if period == "month":
+        return f"{_MONTHS_PT[range_start.month - 1].capitalize()} de {range_start.year}"
+    if period == "year":
+        return str(range_start.year)
+    raise ValueError(f"período inválido: {period!r}")
+
+
+# MOVIMENTO_GRAFICOS_RICOS_V1.md §7 (revisado 05/09/2026, pedido de
+# Rhoney: "dia, semana, mês e ano devem ter seus históricos fiéis") —
+# cada aba tem seu PRÓPRIO histórico, agrupado na granularidade
+# correspondente (não só dia a dia pra todas as abas). Sempre mais
+# recente primeiro, com numeração sequencial (1º dia/semana/mês/ano de
+# uso) e acumulado de passos até aquele bucket, inclusive.
+#
+# Carrega todos os ciclos do usuário de uma vez pra agrupar em memória —
+# aceitável no volume atual (um MovementCycle por dia de uso, nunca
+# mais que ~365/ano); se algum dia isso crescer demais, vale mover a
+# agregação pro banco (GROUP BY ano ISO/mês/ano).
 def get_history_page(
-    db: Session, profile: models.Profile, *, limit: int, before_cycle_start: datetime | None = None
+    db: Session, profile: models.Profile, *, period: str, limit: int, before_key: str | None = None
 ) -> dict:
     if profile.movement_cycle_anchor_at is None:
         return {"items": [], "next_cursor": None}
 
-    anchor_start, _ = _cycle_window_for(naive(profile.movement_cycle_anchor_at))
-    query = select(models.MovementCycle).where(models.MovementCycle.user_id == profile.user_id)
-    if before_cycle_start is not None:
-        query = query.where(models.MovementCycle.cycle_start_at < before_cycle_start)
-    query = query.order_by(models.MovementCycle.cycle_start_at.desc()).limit(limit + 1)
-    cycles = list(db.execute(query).scalars().all())
+    all_cycles = list(
+        db.execute(
+            select(models.MovementCycle)
+            .where(models.MovementCycle.user_id == profile.user_id)
+            .order_by(models.MovementCycle.cycle_start_at)
+        )
+        .scalars()
+        .all()
+    )
+    if not all_cycles:
+        return {"items": [], "next_cursor": None}
 
-    has_more = len(cycles) > limit
-    cycles = cycles[:limit]
+    buckets: dict[object, dict] = {}
+    order: list[object] = []
+    for cycle in all_cycles:
+        key, range_start, range_end = _history_bucket(period, cycle.cycle_start_at)
+        bucket = buckets.get(key)
+        if bucket is None:
+            bucket = {"range_start": range_start, "range_end": range_end, "steps": 0, "xp": 0}
+            buckets[key] = bucket
+            order.append(key)
+        bucket["steps"] += cycle.steps_collected
+        bucket["xp"] += cycle.xp_awarded
 
-    # Acumulado até cada dia = soma de TODOS os ciclos anteriores
-    # (inclusive), não só os desta página — soma direto no banco em vez
-    # de carregar todo o histórico em memória.
-    items = []
-    for cycle in cycles:
-        cumulative = db.execute(
-            select(func.sum(models.MovementCycle.steps_collected)).where(
-                models.MovementCycle.user_id == profile.user_id,
-                models.MovementCycle.cycle_start_at <= cycle.cycle_start_at,
-            )
-        ).scalar_one() or 0
-        day_number = (naive(cycle.cycle_start_at) - anchor_start).days + 1
-        goal = profile.movement_daily_goal_steps
-        items.append({
-            "day_number": day_number,
-            "date": cycle.cycle_start_at.date().isoformat(),
-            "steps": cycle.steps_collected,
-            "xp_awarded": cycle.xp_awarded,
+    today = naive(utcnow()).date()
+    current_key, _, _ = _history_bucket(period, naive(utcnow()))
+    goal = profile.movement_daily_goal_steps
+
+    # Cumulativo calculado em ordem CRONOLÓGICA (order já é assim), cada
+    # item guarda sua própria _key pra servir de cursor de paginação —
+    # nunca reconstruída a partir do label (frágil), sempre a chave real.
+    cumulative = 0
+    enriched = []
+    for index, key in enumerate(order, start=1):
+        bucket = buckets[key]
+        cumulative += bucket["steps"]
+        days_in_bucket = (bucket["range_end"] - bucket["range_start"]).days + 1
+        # Bucket em andamento (ex.: semana/mês/ano corrente) não conta os
+        # dias futuros ainda não vividos na exigência de meta — só os
+        # dias já decorridos até hoje.
+        elapsed_days = min(days_in_bucket, (min(bucket["range_end"], today) - bucket["range_start"]).days + 1)
+        enriched.append({
+            "_key": key,
+            "_sort_date": bucket["range_start"],
+            "period_number": index,
+            "label": _history_label(period, bucket["range_start"], bucket["range_end"]),
+            "is_current": key == current_key,
+            "steps": bucket["steps"],
+            "xp_awarded": bucket["xp"],
             "cumulative_steps": cumulative,
-            "goal_reached": bool(goal and cycle.steps_collected >= goal),
+            "goal_reached": bool(goal and elapsed_days > 0 and bucket["steps"] >= goal * elapsed_days),
         })
 
-    next_cursor = cycles[-1].cycle_start_at.isoformat() if has_more and cycles else None
-    return {"items": items, "next_cursor": next_cursor}
+    # Mais recente primeiro daqui pra frente (cumulative acima precisava
+    # da ordem cronológica inversa — crescente).
+    enriched.reverse()
+
+    if before_key is not None:
+        cut = next((i for i, e in enumerate(enriched) if str(e["_key"]) == before_key), None)
+        enriched = enriched[cut + 1:] if cut is not None else []
+
+    page = enriched[:limit]
+    has_more = len(enriched) > limit
+    next_cursor = str(page[-1]["_key"]) if has_more and page else None
+
+    return {
+        "items": [{k: v for k, v in item.items() if not k.startswith("_")} for item in page],
+        "next_cursor": next_cursor,
+    }

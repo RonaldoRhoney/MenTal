@@ -131,8 +131,8 @@ def test_history_page_has_sequential_day_number_and_running_cumulative(client, m
     assert items[1]["steps"] == 1000
     assert items[1]["cumulative_steps"] == 1000
     # Numeração sequencial cresce com o tempo — dia mais antigo tem
-    # day_number menor.
-    assert items[1]["day_number"] < items[0]["day_number"]
+    # period_number menor.
+    assert items[1]["period_number"] < items[0]["period_number"]
 
 
 def test_history_page_respects_daily_goal_for_goal_reached_flag(client, monkeypatch):
@@ -160,3 +160,77 @@ def test_yearly_summary_flags_best_month(client, monkeypatch):
     months = {m["month"]: m for m in data["months"]}
     current_month = movement._cycle_window_for(utcnow())[0].month
     assert months[current_month]["is_best"] is True
+
+
+# MOVIMENTO_GRAFICOS_RICOS_V1.md §7 (revisado 05/09/2026, pedido de
+# Rhoney: "dia, semana, mês e ano devem ter seus históricos fiéis") —
+# cada aba agrupa o histórico na SUA PRÓPRIA granularidade, não só dia
+# a dia pra todas.
+def test_history_page_groups_by_week_when_period_is_week(client, monkeypatch):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    _enable_movement(client, headers)
+
+    cycle_start, _ = movement._cycle_window_for(utcnow())
+    # Dois dias na MESMA semana ISO (segunda + terça) somam no mesmo
+    # bucket; um dia da semana seguinte vira um bucket separado.
+    monday = cycle_start - timedelta(days=cycle_start.weekday())
+    monkeypatch.setattr(movement, "utcnow", lambda: monday + timedelta(hours=1))
+    client.post("/movement/collect", json={"steps": 1000}, headers=headers)
+    monkeypatch.setattr(movement, "utcnow", lambda: monday + timedelta(days=1, hours=1))
+    client.post("/movement/collect", json={"steps": 2000}, headers=headers)
+    monkeypatch.setattr(movement, "utcnow", lambda: monday + timedelta(days=8, hours=1))
+    client.post("/movement/collect", json={"steps": 500}, headers=headers)
+
+    items = client.get("/movement/history", params={"period": "week"}, headers=headers).json()["items"]
+    assert len(items) == 2
+    # Mais recente primeiro: a semana seguinte (500) vem antes da semana
+    # com os dois dias somados (1000+2000=3000).
+    assert items[0]["steps"] == 500
+    assert items[1]["steps"] == 3000
+    assert items[1]["cumulative_steps"] == 3000
+    assert items[0]["cumulative_steps"] == 3500
+
+
+def test_history_page_groups_by_month_when_period_is_month(client, monkeypatch):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    _enable_movement(client, headers)
+
+    cycle_start, _ = movement._cycle_window_for(utcnow())
+    month_start = cycle_start.replace(day=1)
+    monkeypatch.setattr(movement, "utcnow", lambda: month_start + timedelta(hours=1))
+    client.post("/movement/collect", json={"steps": 1200}, headers=headers)
+    monkeypatch.setattr(movement, "utcnow", lambda: month_start + timedelta(days=5, hours=1))
+    client.post("/movement/collect", json={"steps": 800}, headers=headers)
+
+    items = client.get("/movement/history", params={"period": "month"}, headers=headers).json()["items"]
+    assert len(items) == 1
+    assert items[0]["steps"] == 2000
+    assert items[0]["is_current"] is True
+    assert f"de {month_start.year}" in items[0]["label"]
+
+
+def test_history_page_groups_by_year_when_period_is_year(client, monkeypatch):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    _enable_movement(client, headers)
+
+    cycle_start, _ = movement._cycle_window_for(utcnow())
+    monkeypatch.setattr(movement, "utcnow", lambda: cycle_start + timedelta(hours=1))
+    client.post("/movement/collect", json={"steps": 4321}, headers=headers)
+
+    items = client.get("/movement/history", params={"period": "year"}, headers=headers).json()["items"]
+    assert len(items) == 1
+    assert items[0]["steps"] == 4321
+    assert items[0]["label"] == str(cycle_start.year)
+    assert items[0]["is_current"] is True
+
+
+def test_invalid_history_period_is_rejected(client):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    _enable_movement(client, headers)
+
+    resp = client.get("/movement/history", params={"period": "century"}, headers=headers)
+    assert resp.status_code == 422

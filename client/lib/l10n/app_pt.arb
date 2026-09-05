@@ -1346,6 +1346,60 @@
       }
     }
   },
+  "movementReportsHistoryWeekLabel": "Semana {number}",
+  "@movementReportsHistoryWeekLabel": {
+    "description": "History item week number label",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryCurrentWeekLabel": "Esta semana · Semana {number}",
+  "@movementReportsHistoryCurrentWeekLabel": {
+    "description": "History item week number label for the current week",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryMonthLabel": "Mês {number}",
+  "@movementReportsHistoryMonthLabel": {
+    "description": "History item month number label",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryCurrentMonthLabel": "Este mês · Mês {number}",
+  "@movementReportsHistoryCurrentMonthLabel": {
+    "description": "History item month number label for the current month",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryYearLabel": "Ano {number}",
+  "@movementReportsHistoryYearLabel": {
+    "description": "History item year number label",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "movementReportsHistoryCurrentYearLabel": "Este ano · Ano {number}",
+  "@movementReportsHistoryCurrentYearLabel": {
+    "description": "History item year number label for the current year",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
   "movementReportsHistoryXp": "+{xp} XP",
   "@movementReportsHistoryXp": {
     "description": "History item XP value",
