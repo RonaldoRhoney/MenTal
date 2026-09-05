@@ -420,6 +420,24 @@
   "rankingEmptyMessage": "Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!",
   "@rankingEmptyMessage": {"description": "Empty ranking state"},
 
+  "rankingTapHint": "Toque em qualquer jogador para ver o desempenho completo",
+  "@rankingTapHint": {"description": "RANKING_ENRIQUECIDO_V1.md §4 — hint text at the top of the ranking list"},
+
+  "rankingBadgeStreakSemantics": "Sequência de {days} dias",
+  "@rankingBadgeStreakSemantics": {"description": "Accessibility label for the streak badge pill", "placeholders": {"days": {"type": "int"}}},
+
+  "rankingBadgeWorldsSemantics": "{completed} de {total} mundos completos",
+  "@rankingBadgeWorldsSemantics": {"description": "Accessibility label for the worlds-completed badge pill", "placeholders": {"completed": {"type": "int"}, "total": {"type": "int"}}},
+
+  "rankingBadgeBadgesSemantics": "{count} conquistas",
+  "@rankingBadgeBadgesSemantics": {"description": "Accessibility label for the badges-count badge pill", "placeholders": {"count": {"type": "int"}}},
+
+  "rankingBadgeMentalcoinsSemantics": "{count} MentalCoins",
+  "@rankingBadgeMentalcoinsSemantics": {"description": "Accessibility label for the MentalCoins badge pill", "placeholders": {"count": {"type": "int"}}},
+
+  "rankingBadgeStepsSemantics": "{count} passos",
+  "@rankingBadgeStepsSemantics": {"description": "Accessibility label for the total-steps badge pill", "placeholders": {"count": {"type": "int"}}},
+
   "badgesScreenTitle": "Conquistas",
   "@badgesScreenTitle": {"description": "Badges screen app bar title"},
 

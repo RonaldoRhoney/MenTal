@@ -506,6 +506,35 @@ class AppLocalizationsPt extends AppLocalizations {
       'Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!';
 
   @override
+  String get rankingTapHint =>
+      'Toque em qualquer jogador para ver o desempenho completo';
+
+  @override
+  String rankingBadgeStreakSemantics(int days) {
+    return 'Sequência de $days dias';
+  }
+
+  @override
+  String rankingBadgeWorldsSemantics(int completed, int total) {
+    return '$completed de $total mundos completos';
+  }
+
+  @override
+  String rankingBadgeBadgesSemantics(int count) {
+    return '$count conquistas';
+  }
+
+  @override
+  String rankingBadgeMentalcoinsSemantics(int count) {
+    return '$count MentalCoins';
+  }
+
+  @override
+  String rankingBadgeStepsSemantics(int count) {
+    return '$count passos';
+  }
+
+  @override
   String get badgesScreenTitle => 'Conquistas';
 
   @override

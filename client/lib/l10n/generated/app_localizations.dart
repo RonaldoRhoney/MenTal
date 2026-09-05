@@ -958,6 +958,42 @@ abstract class AppLocalizations {
   /// **'Ainda não há desafios respondidos esta semana. Jogue para aparecer no ranking!'**
   String get rankingEmptyMessage;
 
+  /// RANKING_ENRIQUECIDO_V1.md §4 — hint text at the top of the ranking list
+  ///
+  /// In pt, this message translates to:
+  /// **'Toque em qualquer jogador para ver o desempenho completo'**
+  String get rankingTapHint;
+
+  /// Accessibility label for the streak badge pill
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência de {days} dias'**
+  String rankingBadgeStreakSemantics(int days);
+
+  /// Accessibility label for the worlds-completed badge pill
+  ///
+  /// In pt, this message translates to:
+  /// **'{completed} de {total} mundos completos'**
+  String rankingBadgeWorldsSemantics(int completed, int total);
+
+  /// Accessibility label for the badges-count badge pill
+  ///
+  /// In pt, this message translates to:
+  /// **'{count} conquistas'**
+  String rankingBadgeBadgesSemantics(int count);
+
+  /// Accessibility label for the MentalCoins badge pill
+  ///
+  /// In pt, this message translates to:
+  /// **'{count} MentalCoins'**
+  String rankingBadgeMentalcoinsSemantics(int count);
+
+  /// Accessibility label for the total-steps badge pill
+  ///
+  /// In pt, this message translates to:
+  /// **'{count} passos'**
+  String rankingBadgeStepsSemantics(int count);
+
   /// Badges screen app bar title
   ///
   /// In pt, this message translates to:
