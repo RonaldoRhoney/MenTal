@@ -315,37 +315,41 @@ class _BadgeRow extends StatelessWidget {
 
     // Cada badge ganha uma cor de identidade (mesma paleta já usada no
     // resto do app, nenhuma cor nova introduzida) — achado de revisão
-    // (04/09/2026, pedido de Rhoney: "está confuso, dê mais elegância"):
-    // 5 pills cinzas idênticas exigiam ler o número pra saber o que é;
-    // a cor vira o primeiro sinal visual, o número confirma.
-    return Wrap(
-      spacing: 6,
-      runSpacing: 4,
+    // (04/09/2026, pedido de Rhoney: "está confuso, dê mais elegância").
+    // Numa linha só, espaçamento proporcional (spaceBetween — pedido de
+    // Rhoney): Wrap deixava a 5ª badge cair pra uma 2ª linha em nomes
+    // longos; Flexible+FittedBox por pill garante as 5 sempre cabendo
+    // numa linha única, encolhendo levemente se precisar, sem nunca
+    // estourar a largura disponível.
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        _pill(
+        _flex(_pill(
           color: AppColors.error,
           semanticLabel: l10n.rankingBadgeStreakSemantics(streak),
           child: Text('🔥 $streak', style: _pillTextStyle(AppColors.error)),
-        ),
-        _pill(
+        )),
+        _flex(_pill(
           color: AppColors.purple,
           semanticLabel: l10n.rankingBadgeWorldsSemantics(worldsCompleted, worldsTotal),
           child: Text('🌍 $worldsCompleted/$worldsTotal', style: _pillTextStyle(AppColors.purple)),
-        ),
-        _pill(
+        )),
+        _flex(_pill(
           color: AppColors.victory,
           semanticLabel: l10n.rankingBadgeBadgesSemantics(badgesCount),
           child: Text('🏆 $badgesCount', style: _pillTextStyle(AppColors.victory)),
-        ),
-        _mentalcoinPill(mentalcoins),
-        _pill(
+        )),
+        _flex(_mentalcoinPill(mentalcoins)),
+        _flex(_pill(
           color: AppColors.teal,
           semanticLabel: l10n.rankingBadgeStepsSemantics(steps),
           child: Text('👟 ${_compactNumber(steps)}', style: _pillTextStyle(AppColors.teal)),
-        ),
+        )),
       ],
     );
   }
+
+  Widget _flex(Widget pill) => Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: pill));
 
   static TextStyle _pillTextStyle(Color color) => TextStyle(fontSize: 10, color: color, fontWeight: FontWeight.w700);
 
