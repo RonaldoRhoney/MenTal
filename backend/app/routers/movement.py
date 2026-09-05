@@ -1,4 +1,4 @@
-from datetime import timezone
+from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from .. import movement, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
-from ..timeutil import utcnow
+from ..timeutil import naive, utcnow
 
 router = APIRouter()
 
@@ -79,6 +79,61 @@ def get_movement_yearly_summary(
     (UTC-3) ainda está em 31 de dezembro, e vice-versa."""
     target_year = year or utcnow().replace(tzinfo=timezone.utc).astimezone(movement.BRAZIL_TZ).year
     return schemas.MovementYearlySummaryOut(**movement.get_yearly_summary(db, user_id, target_year))
+
+
+@router.get("/movement/daily-chart", response_model=schemas.MovementDailyChartOut)
+def get_movement_daily_chart(
+    cycle_id: str | None = None,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """MOVIMENTO_GRAFICOS_RICOS_V1.md §3 — 6 sessões de 4h do dia (hoje,
+    por padrão, ou um dia específico via cycle_id — tocar num dia da
+    Semana/Mês/histórico deve poder abrir esse mesmo detalhamento)."""
+    profile = services.get_or_create_profile(db, user_id)
+    if cycle_id is None:
+        cycle = movement.get_current_cycle(db, profile)
+    else:
+        cycle = movement.get_cycle_by_id(db, user_id, cycle_id)
+        if cycle is None:
+            raise HTTPException(status_code=404, detail={"error": {"code": "CYCLE_NOT_FOUND", "message": "Ciclo de movimento não encontrado."}})
+    sessions = movement.get_daily_sessions(db, cycle)
+    return schemas.MovementDailyChartOut(sessions=[schemas.MovementDaySessionOut(**s) for s in sessions])
+
+
+@router.get("/movement/monthly-chart", response_model=schemas.MovementMonthlyChartOut)
+def get_movement_monthly_chart(
+    year: int | None = None,
+    month: int | None = None,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """MOVIMENTO_GRAFICOS_RICOS_V1.md §5 — granularidade diária dentro
+    de um mês (distinto do resumo por mês inteiro em /yearly-summary).
+    Mês/ano padrão: o mês corrente em Brasília, mesmo cuidado de fuso já
+    usado em /yearly-summary."""
+    now_brazil = utcnow().replace(tzinfo=timezone.utc).astimezone(movement.BRAZIL_TZ)
+    target_year = year or now_brazil.year
+    target_month = month or now_brazil.month
+    result = movement.get_monthly_daily_breakdown(db, user_id, target_year, target_month)
+    return schemas.MovementMonthlyChartOut(**result)
+
+
+@router.get("/movement/history", response_model=schemas.MovementHistoryPageOut)
+def get_movement_history(
+    before: str | None = None,
+    limit: int = 20,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
+    paginado (mais recente primeiro), com acumulado de passos até cada
+    dia. `before` é o `next_cursor` da página anterior."""
+    profile = services.get_or_create_profile(db, user_id)
+    limit = max(1, min(limit, 100))
+    before_cycle_start = naive(datetime.fromisoformat(before)) if before else None
+    result = movement.get_history_page(db, profile, limit=limit, before_cycle_start=before_cycle_start)
+    return schemas.MovementHistoryPageOut(**result)
 
 
 @router.put("/movement/goal", response_model=schemas.MovementGoalResponse)

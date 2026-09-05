@@ -15,7 +15,7 @@ em MOVEMENT_MAX_STEPS_PER_COLLECTION.
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from . import config, mentalcoins, models, scoring, services
@@ -308,7 +308,7 @@ def get_yearly_summary(db: Session, user_id: str, year: int) -> dict:
     best_month = max(months, key=lambda m: months[m]["total_steps"]) if total_steps > 0 else None
     return {
         "year": year,
-        "months": [{"month": m, **data} for m, data in sorted(months.items())],
+        "months": [{"month": m, "is_best": m == best_month, **data} for m, data in sorted(months.items())],
         "total_steps": total_steps,
         "active_days": active_days,
         "average_steps_per_active_day": total_steps // active_days if active_days > 0 else 0,
@@ -327,3 +327,159 @@ def get_snapshots_for_cycle(db: Session, cycle_id: str) -> list[models.MovementS
         .scalars()
         .all()
     )
+
+
+# MOVIMENTO_GRAFICOS_RICOS_V1.md §3.1 — o dia sempre divide em 6 sessões
+# de 4h, meia-noite a meia-noite de Brasília (cycle_start_at já nasce
+# ancorado nisso, ver _cycle_window_for). Nomes fixos por posição (não
+# dependem do dado do usuário, só da faixa de horário em si).
+DAY_SESSION_LABELS = [
+    ("Madrugada", "🌙"),
+    ("Início da manhã", "🌅"),
+    ("Fim da manhã", "☀️"),
+    ("Início da tarde", "🌤️"),
+    ("Fim da tarde", "🌇"),
+    ("Noite", "🌃"),
+]
+_SESSION_HOURS = 4
+
+
+def get_daily_sessions(db: Session, cycle: models.MovementCycle) -> list[dict]:
+    """
+    6 sessões de 4h (§3.1) derivadas dos MovementSnapshot já salvos —
+    nenhuma mudança de frequência de captura foi necessária (snapshot
+    grava o acumulado a cada coleta real, granularidade bem mais fina
+    que 4h). Passos DA SESSÃO = acumulado no fim da janela menos
+    acumulado no fim da janela anterior (nunca o total do ciclo
+    inteiro). Frase descritiva (§3.3) é sempre relativa ao PRÓPRIO
+    padrão do usuário naquele dia — pico/vale são identificados
+    dinamicamente a partir dos números reais, nunca fixos.
+    """
+    snapshots = get_snapshots_for_cycle(db, cycle.id)
+    cumulative_at = [0] * 7
+    for i in range(1, 7):
+        window_end = cycle.cycle_start_at + timedelta(hours=_SESSION_HOURS * i)
+        # Último snapshot com recorded_at <= window_end (snapshots vêm em
+        # ordem crescente de recorded_at) — sem nenhum snapshot ainda
+        # nessa janela, o acumulado continua o da janela anterior.
+        value = cumulative_at[i - 1]
+        for snap in snapshots:
+            if snap.recorded_at <= window_end:
+                value = snap.steps_total
+            else:
+                break
+        cumulative_at[i] = value
+
+    session_steps = [cumulative_at[i + 1] - cumulative_at[i] for i in range(6)]
+    max_steps = max(session_steps) if any(session_steps) else 0
+    min_steps = min(session_steps) if any(session_steps) else 0
+
+    sessions = []
+    for i, (label, emoji) in enumerate(DAY_SESSION_LABELS):
+        steps = session_steps[i]
+        is_peak = max_steps > 0 and steps == max_steps
+        is_valley = max_steps > 0 and steps == min_steps and not is_peak
+        sessions.append({
+            "label": label,
+            "emoji": emoji,
+            "start_hour": i * _SESSION_HOURS,
+            "end_hour": (i + 1) * _SESSION_HOURS,
+            "steps": steps,
+            "is_peak": is_peak,
+            "description": _session_description(label, steps, is_peak, is_valley, max_steps > 0),
+        })
+    return sessions
+
+
+def _session_description(label: str, steps: int, is_peak: bool, is_valley: bool, has_any_activity: bool) -> str:
+    if not has_any_activity:
+        return "Nenhum passo registrado ainda hoje."
+    if is_peak:
+        return "Pico do dia — maior atividade registrada."
+    if is_valley:
+        return "Praticamente parado, período de menor movimento."
+    if steps == 0:
+        return "Sem passos registrados nessa janela."
+    return f"Ritmo moderado — {steps} passos nesse período."
+
+
+# MOVIMENTO_GRAFICOS_RICOS_V1.md §5 — granularidade diária DENTRO de um
+# mês (distinto de get_yearly_summary, que só agrega por mês inteiro).
+def get_monthly_daily_breakdown(db: Session, user_id: str, year: int, month: int) -> dict:
+    if month == 12:
+        month_start = naive(datetime(year, 12, 1))
+        month_end = naive(datetime(year + 1, 1, 1))
+    else:
+        month_start = naive(datetime(year, month, 1))
+        month_end = naive(datetime(year, month + 1, 1))
+    cycles = list(
+        db.execute(
+            select(models.MovementCycle).where(
+                models.MovementCycle.user_id == user_id,
+                models.MovementCycle.cycle_start_at >= month_start,
+                models.MovementCycle.cycle_start_at < month_end,
+            )
+        )
+        .scalars()
+        .all()
+    )
+    by_day = {c.cycle_start_at.day: c.steps_collected for c in cycles}
+    total_steps = sum(by_day.values())
+    active_days = sum(1 for v in by_day.values() if v > 0)
+    best_day = max(by_day, key=lambda d: by_day[d]) if total_steps > 0 else None
+    return {
+        "year": year,
+        "month": month,
+        "days": [{"day": d, "steps": s, "is_best": d == best_day} for d, s in sorted(by_day.items())],
+        "total_steps": total_steps,
+        "active_days": active_days,
+        "average_steps_per_active_day": total_steps // active_days if active_days > 0 else 0,
+    }
+
+
+# MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
+# paginado (mais recente primeiro), com numeração sequencial de dia de
+# uso e acumulado de passos até aquele dia. profile.movement_cycle_
+# anchor_at marca o dia 1 (§7: "desde o primeiro dia de uso") — a
+# numeração conta a partir dali, não do primeiro ciclo com passos>0
+# (um dia sem nenhum passo ainda é um "dia de uso" contado).
+def get_history_page(
+    db: Session, profile: models.Profile, *, limit: int, before_cycle_start: datetime | None = None
+) -> dict:
+    if profile.movement_cycle_anchor_at is None:
+        return {"items": [], "next_cursor": None}
+
+    anchor_start, _ = _cycle_window_for(naive(profile.movement_cycle_anchor_at))
+    query = select(models.MovementCycle).where(models.MovementCycle.user_id == profile.user_id)
+    if before_cycle_start is not None:
+        query = query.where(models.MovementCycle.cycle_start_at < before_cycle_start)
+    query = query.order_by(models.MovementCycle.cycle_start_at.desc()).limit(limit + 1)
+    cycles = list(db.execute(query).scalars().all())
+
+    has_more = len(cycles) > limit
+    cycles = cycles[:limit]
+
+    # Acumulado até cada dia = soma de TODOS os ciclos anteriores
+    # (inclusive), não só os desta página — soma direto no banco em vez
+    # de carregar todo o histórico em memória.
+    items = []
+    for cycle in cycles:
+        cumulative = db.execute(
+            select(func.sum(models.MovementCycle.steps_collected)).where(
+                models.MovementCycle.user_id == profile.user_id,
+                models.MovementCycle.cycle_start_at <= cycle.cycle_start_at,
+            )
+        ).scalar_one() or 0
+        day_number = (naive(cycle.cycle_start_at) - anchor_start).days + 1
+        goal = profile.movement_daily_goal_steps
+        items.append({
+            "day_number": day_number,
+            "date": cycle.cycle_start_at.date().isoformat(),
+            "steps": cycle.steps_collected,
+            "xp_awarded": cycle.xp_awarded,
+            "cumulative_steps": cumulative,
+            "goal_reached": bool(goal and cycle.steps_collected >= goal),
+        })
+
+    next_cursor = cycles[-1].cycle_start_at.isoformat() if has_more and cycles else None
+    return {"items": items, "next_cursor": next_cursor}

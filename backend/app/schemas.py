@@ -542,6 +542,9 @@ class MovementMonthSummaryOut(BaseModel):
     month: int
     total_steps: int
     active_days: int
+    # MOVIMENTO_GRAFICOS_RICOS_V1.md §6 — destaca o mês de melhor
+    # desempenho no gráfico de Ano.
+    is_best: bool = False
 
 
 class MovementYearlySummaryOut(BaseModel):
@@ -563,6 +566,55 @@ class MovementGoalRequest(BaseModel):
 
 class MovementGoalResponse(BaseModel):
     daily_goal_steps: int | None
+
+
+# MOVIMENTO_GRAFICOS_RICOS_V1.md §3 — 6 sessões de 4h do dia, cada uma
+# com frase descritiva gerada dinamicamente a partir do padrão real do
+# usuário (nunca texto fixo desacoplado do dado).
+class MovementDaySessionOut(BaseModel):
+    label: str
+    emoji: str
+    start_hour: int
+    end_hour: int
+    steps: int
+    is_peak: bool
+    description: str
+
+
+class MovementDailyChartOut(BaseModel):
+    sessions: list[MovementDaySessionOut]
+
+
+class MovementMonthDayOut(BaseModel):
+    day: int
+    steps: int
+    is_best: bool = False
+
+
+class MovementMonthlyChartOut(BaseModel):
+    year: int
+    month: int
+    days: list[MovementMonthDayOut]
+    total_steps: int
+    active_days: int
+    average_steps_per_active_day: int
+
+
+# MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
+# paginado. next_cursor é o cycle_start_at (ISO) do último item da
+# página — passar de volta como `before` na próxima chamada.
+class MovementHistoryItemOut(BaseModel):
+    day_number: int
+    date: str
+    steps: int
+    xp_awarded: int
+    cumulative_steps: int
+    goal_reached: bool
+
+
+class MovementHistoryPageOut(BaseModel):
+    items: list[MovementHistoryItemOut]
+    next_cursor: str | None
 
 
 class AddFriendRequest(BaseModel):
