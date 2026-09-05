@@ -1,10 +1,17 @@
 # V7
 
-**Status:** Em andamento. Lote de trabalho pós-V5 (V5 encerrada em
-04/09/2026, V6 reservada para o Mundo dos Valores e ainda não iniciada
-— nada deste lote toca em V6). Cobre a auditoria de segurança pré-AAB,
-a reformulação de Movimento em gráficos ricos por período, e ajustes
-sociais (Feedback/Torcida/Movimento) pedidos por Rhoney em 05/09/2026.
+**Status:** Encerrada em 05/09/2026. AAB (versionCode 6, versão 0.3.0)
+publicado no teste fechado do Google Play — todo o lote abaixo está em
+produção (backend) e na versão enviada à loja (client). Lote de
+trabalho pós-V5 (V5 encerrada em 04/09/2026, V6 reservada para o Mundo
+dos Valores e ainda não iniciada — nada deste lote toca em V6). Cobre a
+auditoria de segurança pré-AAB, a reformulação de Movimento em
+gráficos ricos por período, e ajustes sociais (Feedback/Torcida/
+Movimento) pedidos por Rhoney em 05/09/2026.
+
+**Nota de versionCode:** a primeira geração do AAB usou versionCode 5,
+já consumido por um upload anterior no Play Console — corrigido para
+6 (`pubspec.yaml`, `version: 0.3.0+6`) antes do upload que foi aceito.
 
 - `APROVACAO_CORRECOES_PRE_AAB_V1.md` — auditoria de segurança/qualidade/
   testes/conteúdo/UI-UX pré-geração do AAB. **Concluído (05/09/2026)**:
