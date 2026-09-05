@@ -133,128 +133,143 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
       // bem a área de gesto em todo aparelho/API, então soma o inset
       // real do sistema (MediaQuery) a um respiro fixo generoso, em vez
       // de confiar só no valor mínimo do SafeArea.
-      padding: EdgeInsets.fromLTRB(16, 16, 16, 16 + MediaQuery.paddingOf(context).bottom + 24),
+      padding: EdgeInsets.fromLTRB(16, 12, 16, 8 + MediaQuery.paddingOf(context).bottom + 12),
       children: [
+        // Pedido de Rhoney (05/09/2026): tela compacta o bastante pra
+        // caber sem rolagem em telas normais — espaçamentos e tamanhos
+        // reduzidos em todas as seções abaixo, "Mundos" virou uma linha
+        // (Wrap) em vez de lista vertical.
         Center(
           child: Column(
             children: [
-              ProfilePhotoCircle(photoUrl: profile['photo_url'] as String?, size: 88),
-              const SizedBox(height: 12),
-              Text(displayName, style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
-              const SizedBox(height: 4),
-              Text(l10n.publicProfileLevelLabel(level), style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
-              Text(l10n.publicProfileXpLabel(xpTotal), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 13)),
-              if (streak > 0) ...[
-                const SizedBox(height: 4),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.local_fire_department_rounded, color: AppColors.gold, size: 16),
-                    const SizedBox(width: 4),
-                    Text(l10n.publicProfileStreakLabel(streak), style: TextStyle(color: AppColors.gold, fontSize: 13)),
+              ProfilePhotoCircle(photoUrl: profile['photo_url'] as String?, size: 64),
+              const SizedBox(height: 6),
+              Text(displayName, style: Theme.of(context).textTheme.titleLarge, textAlign: TextAlign.center),
+              const SizedBox(height: 2),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(l10n.publicProfileLevelLabel(level), style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700, fontSize: 13)),
+                  const SizedBox(width: 8),
+                  Text(l10n.publicProfileXpLabel(xpTotal), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
+                  if (streak > 0) ...[
+                    const SizedBox(width: 8),
+                    Icon(Icons.local_fire_department_rounded, color: AppColors.gold, size: 14),
+                    const SizedBox(width: 2),
+                    Text(l10n.publicProfileStreakLabel(streak), style: TextStyle(color: AppColors.gold, fontSize: 12)),
                   ],
-                ),
-              ],
+                ],
+              ),
             ],
           ),
         ),
-        const SizedBox(height: 24),
-        Text(l10n.publicProfileBestTerritoryLabel, style: Theme.of(context).textTheme.titleMedium),
-        const SizedBox(height: 8),
-        Text(
-          bestTerritoryId ?? l10n.publicProfileNoBestTerritory,
-          style: TextStyle(color: bestTerritoryId != null ? AppColors.bone : AppColors.muted),
+        const SizedBox(height: 10),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(l10n.publicProfileBestTerritoryLabel, style: Theme.of(context).textTheme.labelMedium?.copyWith(color: AppColors.muted)),
+            const SizedBox(width: 6),
+            Expanded(
+              child: Text(
+                bestTerritoryId ?? l10n.publicProfileNoBestTerritory,
+                style: TextStyle(color: bestTerritoryId != null ? AppColors.bone : AppColors.muted, fontSize: 13),
+              ),
+            ),
+          ],
         ),
-        const SizedBox(height: 24),
-        Text(l10n.publicProfileBadgesLabel, style: Theme.of(context).textTheme.titleMedium),
-        const SizedBox(height: 8),
+        const SizedBox(height: 10),
+        Text(l10n.publicProfileBadgesLabel, style: Theme.of(context).textTheme.labelMedium?.copyWith(color: AppColors.muted)),
+        const SizedBox(height: 4),
         if (badges.isEmpty)
-          Text(l10n.publicProfileNoBadges, style: TextStyle(color: AppColors.muted))
+          Text(l10n.publicProfileNoBadges, style: TextStyle(color: AppColors.muted, fontSize: 13))
         else
           Wrap(
-            spacing: 8,
-            runSpacing: 8,
+            spacing: 6,
+            runSpacing: 4,
             children: badges
                 .map(
                   (badge) => Chip(
-                    avatar: Icon(Icons.emoji_events, color: AppColors.gold, size: 18),
-                    label: Text(badge['name'] as String),
+                    visualDensity: VisualDensity.compact,
+                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    avatar: Icon(Icons.emoji_events, color: AppColors.gold, size: 14),
+                    label: Text(badge['name'] as String, style: const TextStyle(fontSize: 12)),
                   ),
                 )
                 .toList(),
           ),
-        const SizedBox(height: 24),
-        Text(l10n.publicProfileWorldsLabel, style: Theme.of(context).textTheme.titleMedium),
-        const SizedBox(height: 8),
-        ...worlds.map(
-          (world) => Padding(
-            padding: const EdgeInsets.only(bottom: 6),
-            child: Row(
-              children: [
-                Icon(
-                  (world['completed'] as bool) ? Icons.check_circle : Icons.radio_button_unchecked,
-                  color: (world['completed'] as bool) ? AppColors.success : AppColors.muted,
-                  size: 18,
-                ),
-                const SizedBox(width: 8),
-                Text(world['name'] as String),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(height: 24),
-        Text(l10n.publicProfileTorcidaLabel, style: Theme.of(context).textTheme.titleMedium),
+        const SizedBox(height: 10),
+        Text(l10n.publicProfileWorldsLabel, style: Theme.of(context).textTheme.labelMedium?.copyWith(color: AppColors.muted)),
         const SizedBox(height: 4),
+        Wrap(
+          spacing: 12,
+          runSpacing: 4,
+          children: worlds
+              .map(
+                (world) => Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      (world['completed'] as bool) ? Icons.check_circle : Icons.radio_button_unchecked,
+                      color: (world['completed'] as bool) ? AppColors.success : AppColors.muted,
+                      size: 14,
+                    ),
+                    const SizedBox(width: 4),
+                    Text(world['name'] as String, style: const TextStyle(fontSize: 12)),
+                  ],
+                ),
+              )
+              .toList(),
+        ),
+        const SizedBox(height: 10),
+        Text(l10n.publicProfileTorcidaLabel, style: Theme.of(context).textTheme.labelMedium?.copyWith(color: AppColors.muted)),
+        const SizedBox(height: 2),
         Text(l10n.publicProfileTorcidaSentToday(sentToday), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
-        const SizedBox(height: 12),
+        const SizedBox(height: 6),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: _reactionTypes
               .map(
                 (type) => InkWell(
-                  borderRadius: BorderRadius.circular(28),
+                  borderRadius: BorderRadius.circular(22),
                   onTap: _sendingReaction ? null : () => _sendTorcida(type),
                   child: Container(
-                    width: 56,
-                    height: 56,
+                    width: 44,
+                    height: 44,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.bg2),
-                    child: Text(_reactionEmoji[type]!, style: const TextStyle(fontSize: 26)),
+                    child: Text(_reactionEmoji[type]!, style: const TextStyle(fontSize: 20)),
                   ),
                 ),
               )
               .toList(),
         ),
-        const SizedBox(height: 24),
+        const SizedBox(height: 10),
         // Pedido de Rhoney (05/09/2026): convite pra ligar o Movimento,
         // na mesma área de incentivo entre jogadores — "GO" leva um
         // alerta com deep link pra tela de Movimento de quem recebe
         // (client de quem recebe trata isso em main.dart).
         Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(12)),
           child: Row(
             children: [
-              Icon(Icons.directions_walk_rounded, color: AppColors.teal),
-              const SizedBox(width: 10),
+              Icon(Icons.directions_walk_rounded, color: AppColors.teal, size: 20),
+              const SizedBox(width: 8),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(l10n.publicProfileMovementInviteLabel, style: Theme.of(context).textTheme.titleSmall),
+                    Text(l10n.publicProfileMovementInviteLabel, style: Theme.of(context).textTheme.labelMedium),
                     if (movementInviteSentToday > 0)
-                      Padding(
-                        padding: const EdgeInsets.only(top: 2),
-                        child: Text(l10n.publicProfileMovementInviteAlreadySentToday, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
-                      ),
+                      Text(l10n.publicProfileMovementInviteAlreadySentToday, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
                   ],
                 ),
               ),
               const SizedBox(width: 8),
               FilledButton(
                 onPressed: (_sendingMovementInvite || movementInviteSentToday > 0) ? null : _sendMovementInvite,
-                style: FilledButton.styleFrom(backgroundColor: AppColors.teal, minimumSize: const Size(64, 40)),
-                child: Text(l10n.publicProfileMovementInviteButton),
+                style: FilledButton.styleFrom(backgroundColor: AppColors.teal, minimumSize: const Size(52, 32), padding: const EdgeInsets.symmetric(horizontal: 12)),
+                child: Text(l10n.publicProfileMovementInviteButton, style: const TextStyle(fontSize: 12)),
               ),
             ],
           ),
