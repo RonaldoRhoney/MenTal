@@ -29,8 +29,9 @@ sociais (Feedback/Torcida/Movimento) pedidos por Rhoney em 05/09/2026.
   passada de legibilidade em textos pequenos, correções pontuais (card
   "Noite" mostra "23:59" em vez de "24h", palavras cortadas nos cards de
   sessão, label da aba "Dia"→"Hoje" pra bater com o card "Hoje" da tela
-  principal). Teste de widget dedicado (`movement_reports_screen_test.dart`)
-  ainda pendente — ver "Pendências" abaixo.
+  principal). Teste de widget dedicado adicionado em 05/09/2026
+  (`movement_reports_screen_test.dart`, 6 testes — cada aba com seu
+  próprio histórico, paginação por período, `initialPeriod`).
 - `FEEDBACK_NOME_REAL_E_TORCIDA_LAYOUT_V1.md` — **Concluído (05/09/2026)**:
   mural de Feedback exibe nome real do autor (mascarado por bloqueio
   mútuo), corte de layout dos 4 ícones de Torcida no Perfil Público
@@ -61,9 +62,8 @@ sociais (Feedback/Torcida/Movimento) pedidos por Rhoney em 05/09/2026.
 
 ## Pendências desta pasta
 
-1. Teste de widget dedicado pra `movement_reports_screen.dart` (achado
-   do agente de auditoria de testes, 05/09/2026) — tela sem cobertura
-   direta, só indireta via `movement_screen_test.dart`.
-2. B4 da auditoria de segurança (funções/módulos grandes demais,
+1. B4 da auditoria de segurança (funções/módulos grandes demais,
    ex. `submit_answer` com 250 linhas, `services.py` com ~1400) —
    classificado como limpeza pós-lançamento, não bloqueante.
+2. Novo deploy do backend no Render — necessário pra `/app/version` e
+   `/profile/{id}/invite-movement` funcionarem em produção.
