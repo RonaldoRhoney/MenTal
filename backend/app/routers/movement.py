@@ -3,7 +3,7 @@ from datetime import timezone
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from .. import movement, schemas, services
+from .. import config, movement, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
@@ -156,6 +156,7 @@ def collect_steps(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit("movement_collect", user_id, max_calls=config.RATE_LIMIT_MOVEMENT_COLLECT[0], window_seconds=config.RATE_LIMIT_MOVEMENT_COLLECT[1])
     try:
         cycle, xp_awarded, level_up, new_level, goal_reached, checkpoints_reached, mentalcoins_awarded = movement.collect_steps(
             db, user_id, body.steps, body.cycle_id

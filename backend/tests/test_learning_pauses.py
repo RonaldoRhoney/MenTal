@@ -4,11 +4,32 @@ options/correct_answer/timer, XP fixo só na primeira conclusão.
 """
 
 import uuid
+from datetime import timedelta
 
-from app import models
+from app import config, models
 from app.db import SessionLocal
+from app.timeutil import utcnow
 
 from .conftest import auth_header
+
+
+def _serve_and_backdate(client, headers, user_id: str, territory_id: str) -> str:
+    """Passa pelo fluxo real (GET /next, que agora grava
+    LearningPauseServe — achado de auditoria de segurança M2, 05/09/2026)
+    e empurra served_at pro passado o suficiente pra passar do piso
+    LEARNING_PAUSE_MIN_READ_SECONDS, simulando "levou um tempo real pra
+    ler", nunca "completou instantaneamente". Retorna o pause_id
+    REALMENTE servido por /next (a base de teste é compartilhada entre
+    testes na mesma sessão — outro teste pode ter semeado uma Pausa no
+    mesmo território, então /next pode sortear uma diferente da que
+    este teste acabou de criar)."""
+    served = client.get("/learning-pauses/next", params={"territory_id": territory_id}, headers=headers).json()
+    pause_id = served["learning_pause_id"]
+    with SessionLocal() as db:
+        serve = db.get(models.LearningPauseServe, (user_id, pause_id))
+        serve.served_at = utcnow() - timedelta(seconds=config.LEARNING_PAUSE_MIN_READ_SECONDS + 5)
+        db.commit()
+    return pause_id
 
 
 def _seed_pause(territory_id: str = "tecnologia_fundamentos", text: str = "O que é a internet, de verdade?") -> str:
@@ -49,12 +70,13 @@ def test_complete_learning_pause_awards_xp_once(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
-    pause_id = _seed_pause()
+    _seed_pause()
 
     with SessionLocal() as db:
         profile_before = db.get(models.Profile, user.replace("-", ""))
         xp_before = profile_before.xp_total if profile_before else 0
 
+    pause_id = _serve_and_backdate(client, headers, user, "tecnologia_fundamentos")
     resp1 = client.post(f"/learning-pauses/{pause_id}/complete", headers=headers)
     assert resp1.status_code == 200
     body1 = resp1.json()
@@ -109,6 +131,32 @@ def test_next_learning_pause_video_fields_absent_by_default(client):
     assert body["video_url"] is None
     assert body["source_name"] is None
     assert body["source_url"] is None
+
+
+def test_complete_without_ever_calling_next_is_rejected(client):
+    """Achado de auditoria de segurança M2 (05/09/2026): sem nunca ter
+    passado por GET /next, /complete não pode conceder XP — nenhuma
+    prova de que a Pausa foi de fato aberta."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    pause_id = _seed_pause()
+
+    resp = client.post(f"/learning-pauses/{pause_id}/complete", headers=headers)
+    assert resp.status_code == 400
+    assert resp.json()["error"]["code"] == "COMPLETION_TOO_FAST"
+
+
+def test_completing_instantly_after_next_is_rejected(client):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    pause_id = _seed_pause()
+
+    client.get("/learning-pauses/next", params={"territory_id": "tecnologia_fundamentos"}, headers=headers)
+    resp = client.post(f"/learning-pauses/{pause_id}/complete", headers=headers)
+    assert resp.status_code == 400
+    assert resp.json()["error"]["code"] == "COMPLETION_TOO_FAST"
 
 
 def test_complete_unknown_learning_pause_404s(client):

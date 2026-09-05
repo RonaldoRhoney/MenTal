@@ -49,6 +49,17 @@ def next_learning_pause(
         raise HTTPException(status_code=404, detail={"error": {"code": "NO_LEARNING_PAUSES_AVAILABLE", "message": territory_id}})
 
     pause = random.choice(candidates)
+
+    # Achado de auditoria de segurança M2 (05/09/2026): registra que
+    # este usuário recebeu esta Pausa agora — /complete exige este
+    # registro e um tempo mínimo decorrido antes de conceder XP.
+    serve = db.get(models.LearningPauseServe, (user_id, pause.id))
+    if serve is None:
+        db.add(models.LearningPauseServe(user_id=user_id, learning_pause_id=pause.id))
+    else:
+        serve.served_at = utcnow()
+    db.commit()
+
     return schemas.LearningPauseOut(
         learning_pause_id=pause.id,
         territory_id=pause.territory_id,
@@ -74,9 +85,22 @@ def complete_learning_pause(
     novo (mas nunca bloqueia a releitura em si). Nunca afeta estatística
     de acerto/erro — não é avaliação, é leitura (§3.3).
     """
+    services.enforce_rate_limit("learning_pauses_complete", user_id, max_calls=config.RATE_LIMIT_LEARNING_PAUSE_COMPLETE[0], window_seconds=config.RATE_LIMIT_LEARNING_PAUSE_COMPLETE[1])
+
     pause = db.get(models.LearningPause, learning_pause_id)
     if pause is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "LEARNING_PAUSE_NOT_FOUND", "message": learning_pause_id}})
+
+    # Achado de auditoria de segurança M2 (05/09/2026): sem esta
+    # checagem, /complete concedia XP sem nenhuma prova de que a Pausa
+    # foi de fato aberta — exige ter passado por GET /next e um tempo
+    # mínimo plausível de leitura desde então.
+    serve = db.get(models.LearningPauseServe, (user_id, learning_pause_id))
+    if serve is None or services.elapsed_ms_since(serve.served_at) < config.LEARNING_PAUSE_MIN_READ_SECONDS * 1000:
+        raise HTTPException(
+            status_code=400,
+            detail={"error": {"code": "COMPLETION_TOO_FAST", "message": "Tempo de leitura implausível."}},
+        )
 
     already_read = (
         db.execute(

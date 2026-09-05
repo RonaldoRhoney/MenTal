@@ -232,6 +232,11 @@ PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL = 2
 # claramente menor que o XP_BASE_BY_DIFFICULTY de um Relâmpago
 # respondido certo, propositalmente.
 LEARNING_PAUSE_XP_REWARD = 5
+# Achado de auditoria de segurança M2 (05/09/2026): sem piso de tempo,
+# /complete concedia XP sem nenhuma prova de leitura real — bem abaixo
+# do tempo de leitura de qualquer texto curado, só bloqueia conclusão
+# instantânea de script.
+LEARNING_PAUSE_MIN_READ_SECONDS = 3
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
 # depende de mode=relampago) — Conhecimento (CONHECIMENTO_EXPANSAO_
@@ -266,6 +271,13 @@ TIMED_MULTIPLE_CHOICE_SPEED_BONUS_SLOW_FRACTION = 0.7
 # curva por não ter um teto de tempo natural como o timer do MCQ).
 WORD_PUZZLE_FAST_COMPLETION_SECONDS = {1: 60, 2: 90, 3: 120}
 WORD_PUZZLE_SPEED_BONUS_MULTIPLIER = 0.5
+# Achado de auditoria de segurança M2 (05/09/2026): um script que chama
+# GET /next, copia `words` direto pra `found_words` e chama /complete em
+# ~50ms sempre ganhava xp_base + bônus de velocidade — piso de sanidade
+# análogo ao MOVEMENT_MAX_STEPS_PER_CYCLE de Movimento. Bem abaixo do
+# menor WORD_PUZZLE_FAST_COMPLETION_SECONDS (60s) pra nunca incomodar um
+# jogador real rápido, só bloquear conclusão fisicamente implausível.
+WORD_PUZZLE_MIN_COMPLETION_SECONDS = 3
 
 # Meta diária opcional definida pelo usuário (STEP_COUNTER_MOVIMENTO.md
 # §4, extensão pedida por Rhoney em 2026-08-21): ultrapassar a PRÓPRIA
@@ -330,6 +342,35 @@ BATTLE_DAILY_SEND_LIMIT = 3
 # entre os 4 tipos de ícone (§3: "sem limite diferenciado por tipo"),
 # por (remetente, destinatário), reseta à meia-noite (mesmo padrão de
 # DAILY_FREE_CHALLENGE_LIMIT).
+# Achado de auditoria de segurança CRÍTICO (05/09/2026): GET
+# /challenges/{id}/reattempt não verificava que o usuário de fato tinha
+# errado aquele desafio antes — aceitava qualquer challenge_id, e o
+# is_review em POST /answer devolve correct_answer/explanation sem
+# nunca consumir limite diário nem gerar XP. Isso transformava o
+# endpoint num oráculo de respostas de custo zero, ilimitado, para
+# qualquer desafio do banco (mesmo um nunca servido ao usuário).
+# REGRA_REVISAO_ERROS_FIM_RODADA.md define "rodada" como conceito só de
+# sessão do client (não existe round_id no servidor) — a aproximação
+# server-side mais forte e verificável é exigir um Attempt real e
+# recente deste usuário neste challenge com is_correct=False.
+REVIEW_REATTEMPT_MAX_AGE_HOURS = 6
+
+# Achado de auditoria de segurança M1 (05/09/2026): nenhum endpoint
+# tinha rate limiting — combinado com C1 (já corrigido), permitia varrer
+# automaticamente todo o banco de conteúdo. Limites generosos o
+# suficiente pra nunca incomodar uma pessoa jogando normal (um humano
+# não resolve/erra 30 desafios em 60s), mas baixos o bastante pra
+# inviabilizar automação em loop apertado.
+RATE_LIMIT_ANSWER_SUBMIT = (30, 60.0)
+RATE_LIMIT_REATTEMPT = (10, 60.0)
+RATE_LIMIT_SEARCH = (20, 60.0)
+RATE_LIMIT_HINT = (30, 60.0)
+RATE_LIMIT_BATTLE_CREATE = (10, 60.0)
+RATE_LIMIT_BATTLE_MY_CHALLENGE = (20, 60.0)
+RATE_LIMIT_MOVEMENT_COLLECT = (30, 60.0)
+RATE_LIMIT_WORD_PUZZLE_COMPLETE = (10, 60.0)
+RATE_LIMIT_LEARNING_PAUSE_COMPLETE = (10, 60.0)
+
 TORCIDA_DAILY_LIMIT_PER_TARGET = 10
 TORCIDA_REACTION_TYPES = ("vibracao", "balao", "coracao", "joinha")
 BATTLE_WIN_BONUS_XP = 30

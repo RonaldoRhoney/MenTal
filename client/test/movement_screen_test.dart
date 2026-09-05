@@ -344,10 +344,10 @@ void main() {
     expect(find.byType(BarChart), findsOneWidget);
   });
 
-  testWidgets('card Hoje leva à tela unificada de relatórios, aba Dia', (tester) async {
+  testWidgets('card Hoje leva à tela unificada de relatórios, aba Hoje', (tester) async {
     // MOVIMENTO_GRAFICOS_RICOS_V1.md — as 3 telas de detalhe separadas
     // (Hoje/Semana/Ano) foram substituídas por uma tela só com abas
-    // Dia/Semana/Mês/Ano; o card "Hoje" abre direto na aba Dia.
+    // Hoje/Semana/Mês/Ano; o card "Hoje" abre direto na aba Hoje.
     final client = _FakeApiClient(
       movementEnabled: true,
       currentCycle: {

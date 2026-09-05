@@ -25,6 +25,8 @@ def create_battle(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit("battles_create", user_id, max_calls=config.RATE_LIMIT_BATTLE_CREATE[0], window_seconds=config.RATE_LIMIT_BATTLE_CREATE[1])
+
     if body.opponent_user_id == user_id:
         raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_BATTLE_SELF", "message": "Não é possível desafiar a si mesmo."}})
 
@@ -80,6 +82,8 @@ def get_my_battle_challenge(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit("battles_my_challenge", user_id, max_calls=config.RATE_LIMIT_BATTLE_MY_CHALLENGE[0], window_seconds=config.RATE_LIMIT_BATTLE_MY_CHALLENGE[1])
+
     battle = db.get(models.Battle, battle_id)
     if battle is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "BATTLE_NOT_FOUND", "message": battle_id}})

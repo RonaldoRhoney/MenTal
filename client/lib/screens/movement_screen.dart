@@ -16,6 +16,11 @@ import '../widgets/pulse_in.dart';
 import '../widgets/share_achievement_button.dart';
 import 'movement_reports_screen.dart';
 
+const _monthNamePt = [
+  'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+  'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro',
+];
+
 /// V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md). O backend
 /// é sempre a autoridade sobre o estado do ciclo e o XP convertido —
 /// esta tela só lê o sensor local para saber QUANTOS passos ainda não
@@ -600,10 +605,11 @@ class _MovementScreenState extends State<MovementScreen> {
         // gráficos completos (intradiário, semanal, anual) e as
         // métricas de pico/vale deixam de ficar abertos na tela
         // principal — moram só nas telas de detalhe, uma por conceito
-        // (Hoje/Semana/Ano), nunca um card por número isolado.
+        // (Hoje/Semana/Mês/Ano), nunca um card por número isolado. Os 4
+        // cards correspondem 1:1 às 4 abas de MovementReportsScreen.
         if (currentCycle != null)
           // Expanded + scroll SÓ desta seção (achado real, teste de
-          // widget 01/09/2026: em telas curtas, 3 cards + tudo acima
+          // widget 01/09/2026: em telas curtas, 4 cards + tudo acima
           // podem passar da altura disponível — vira scroll local
           // discreto em vez de estourar a tela, sem exigir rolagem no
           // resto do layout, que continua fixo).
@@ -628,7 +634,7 @@ class _MovementScreenState extends State<MovementScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 6),
                   _SummaryCard(
                     title: l10n.movementWeekCardTitle,
                     subtitle: l10n.movementWeekCardSubtitle,
@@ -646,7 +652,19 @@ class _MovementScreenState extends State<MovementScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 6),
+                  _SummaryCard(
+                    title: l10n.movementMonthCardTitle,
+                    subtitle: l10n.movementMonthCardSubtitle(_monthNamePt[DateTime.now().month - 1]),
+                    value: null,
+                    dotColor: AppColors.purple,
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => MovementReportsScreen(client: widget.client, initialPeriod: MovementReportPeriod.month),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 6),
                   _SummaryCard(
                     title: l10n.movementYearCardTitle,
                     subtitle: l10n.movementYearCardSubtitle(DateTime.now().year),
@@ -718,7 +736,7 @@ class _SummaryCard extends StatelessWidget {
           onTap: enabled ? onTap : null,
           child: Container(
             width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             child: Row(
               children: [
                 Container(

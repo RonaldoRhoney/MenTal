@@ -1522,6 +1522,18 @@ abstract class AppLocalizations {
   /// **'média {average} · total {total}'**
   String movementWeekCardValue(int average, int total);
 
+  /// Title of the tappable 'Mês' summary card
+  ///
+  /// In pt, this message translates to:
+  /// **'Mês'**
+  String get movementMonthCardTitle;
+
+  /// Subtitle of the 'Mês' summary card
+  ///
+  /// In pt, this message translates to:
+  /// **'Seu progresso em {month}'**
+  String movementMonthCardSubtitle(String month);
+
   /// Title of the tappable 'Ano' summary card
   ///
   /// In pt, this message translates to:
@@ -1543,7 +1555,7 @@ abstract class AppLocalizations {
   /// Reports screen period tab: day
   ///
   /// In pt, this message translates to:
-  /// **'Dia'**
+  /// **'Hoje'**
   String get movementReportsTabDay;
 
   /// Reports screen period tab: week

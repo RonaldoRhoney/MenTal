@@ -1,7 +1,7 @@
 from datetime import date, datetime
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from . import config
 
@@ -204,7 +204,19 @@ class WordPuzzleOut(BaseModel):
 
 
 class WordPuzzleCompleteRequest(BaseModel):
-    found_words: list[str]
+    # Achado de auditoria de segurança M4 (05/09/2026): sem teto, um
+    # payload com milhões de itens (ou itens gigantes) era aceito e
+    # comparado contra puzzle.words sem custo limitado. Nenhuma grade
+    # real tem mais que algumas dezenas de palavras nem palavra com mais
+    # de ~20 caracteres — margem generosa, nunca perto do abuso.
+    found_words: list[str] = Field(max_length=100)
+
+    @field_validator("found_words")
+    @classmethod
+    def _validate_word_lengths(cls, value: list[str]) -> list[str]:
+        if any(len(word) > 50 for word in value):
+            raise ValueError("found_words: cada palavra deve ter no máximo 50 caracteres")
+        return value
 
 
 class WordPuzzleCompleteResponse(BaseModel):
@@ -224,7 +236,12 @@ class HintResponse(BaseModel):
 
 class AnswerRequest(BaseModel):
     attempt_id: str
-    submitted_answer: str
+    # Achado de auditoria de segurança M4 (05/09/2026): sem teto, um
+    # payload de MBs por request era gravado em attempts.submitted_answer
+    # (Text) — a tabela mais quente do banco. Maior resposta correta real
+    # de todo o conteúdo curado tem 144 caracteres; 300 dá margem
+    # generosa sem abrir espaço de abuso.
+    submitted_answer: str = Field(max_length=300)
     # V2 item 15 — Palavras Relâmpago. response_time_ms só é enviado no
     # modo relâmpago; ausente em toda resposta digitada normal.
     # timed_out=True força is_correct=False independente de

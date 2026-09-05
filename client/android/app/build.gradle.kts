@@ -59,14 +59,27 @@ android {
 
     buildTypes {
         release {
-            // Assina com a keystore real quando key.properties existe;
-            // cai pra debug só se alguém rodar sem o arquivo (nunca quebra
-            // o build local de quem não tem a keystore).
+            // Achado de auditoria de segurança M5 (05/09/2026): cair
+            // silenciosamente pra assinatura de debug quando key.properties
+            // não existe significava que "gerar o AAB" num checkout sem a
+            // keystore de produção produzia um artefato assinado com a
+            // chave errada, sem erro nenhum — só seria percebido tarde
+            // demais, na submissão à loja. Falha explícita é melhor que um
+            // AAB inutilizável silencioso.
             signingConfig = if (keystorePropertiesFile.exists()) {
                 signingConfigs.getByName("release")
-            } else {
+            } else if (project.hasProperty("allowInsecureDebugSigning")) {
                 signingConfigs.getByName("debug")
+            } else {
+                throw GradleException(
+                    "android/key.properties não encontrado — build de release sem a keystore de produção seria assinado com a chave de debug " +
+                        "e rejeitado/inutilizável na Play Store. Para builds de desenvolvimento local (nunca pra submissão), rode com " +
+                        "-PallowInsecureDebugSigning."
+                )
             }
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 }

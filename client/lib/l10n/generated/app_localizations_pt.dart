@@ -849,6 +849,14 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get movementMonthCardTitle => 'Mês';
+
+  @override
+  String movementMonthCardSubtitle(String month) {
+    return 'Seu progresso em $month';
+  }
+
+  @override
   String get movementYearCardTitle => 'Ano';
 
   @override
@@ -860,7 +868,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get movementReportsTitle => 'Movimento';
 
   @override
-  String get movementReportsTabDay => 'Dia';
+  String get movementReportsTabDay => 'Hoje';
 
   @override
   String get movementReportsTabWeek => 'Semana';

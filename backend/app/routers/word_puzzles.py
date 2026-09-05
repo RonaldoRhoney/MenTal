@@ -86,6 +86,8 @@ def complete_word_puzzle(
     este usuário (achado real reaproveitado de LearningPause — "não deve
     ser atalho de XP fácil" se o mesmo puzzle reaparecer no sorteio).
     """
+    services.enforce_rate_limit("word_puzzles_complete", user_id, max_calls=config.RATE_LIMIT_WORD_PUZZLE_COMPLETE[0], window_seconds=config.RATE_LIMIT_WORD_PUZZLE_COMPLETE[1])
+
     result = db.get(models.WordPuzzleResult, result_id)
     if result is None or result.user_id != user_id:
         raise HTTPException(status_code=404, detail={"error": {"code": "WORD_PUZZLE_RESULT_NOT_FOUND", "message": result_id}})
@@ -122,6 +124,16 @@ def complete_word_puzzle(
 
     elapsed_ms = services.elapsed_ms_since(result.started_at)
     elapsed_seconds = elapsed_ms / 1000
+
+    # Achado de auditoria de segurança M2 (05/09/2026): sem piso de
+    # tempo, copiar `words` de /next direto pra `found_words` e chamar
+    # /complete em ~50ms sempre rendia XP cheio — nenhuma pessoa real
+    # encontra um caça-palavras inteiro nesse tempo.
+    if elapsed_seconds < config.WORD_PUZZLE_MIN_COMPLETION_SECONDS:
+        raise HTTPException(
+            status_code=400,
+            detail={"error": {"code": "COMPLETION_TOO_FAST", "message": "Tempo de conclusão implausível."}},
+        )
 
     xp_awarded = 0
     speed_bonus_xp = 0

@@ -7,6 +7,8 @@ partir de ações reais do jogador, não apenas que o catálogo existe.
 
 import uuid
 
+from app import config
+
 from .conftest import auth_header
 
 
@@ -75,7 +77,7 @@ def test_no_help_needed_badge_awarded_after_10_hint_free_corrects(client):
     assert badge["earned"] is True
 
 
-def test_sharp_mind_badge_requires_50_correct_answers(client):
+def test_sharp_mind_badge_requires_50_correct_answers(client, monkeypatch):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -83,6 +85,11 @@ def test_sharp_mind_badge_requires_50_correct_answers(client):
     # o teste; a regra de negócio do limite não é o que está sendo testado.
     client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
+    # Achado de auditoria de segurança M1 (05/09/2026): rate limiting em
+    # /answer não é o que este teste verifica — 50 respostas instantâneas
+    # (sem o intervalo real de pensar que uma pessoa levaria) estourariam
+    # o limite de abuso, então o teste levanta o teto só pra si mesmo.
+    monkeypatch.setattr(config, "RATE_LIMIT_ANSWER_SUBMIT", (10_000, 60.0))
 
     for _ in range(49):
         _answer_correctly(client, headers, "numeros")

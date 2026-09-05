@@ -87,7 +87,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     assert worlds["idiomas"]["completed"] is False
 
 
-def test_world_just_completed_fires_once_at_the_exact_last_territory(client):
+def test_world_just_completed_fires_once_at_the_exact_last_territory(client, monkeypatch):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -98,6 +98,11 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client):
     # suficientes.
     client.post("/subscription/parental-gate", headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
+    # Achado de auditoria de segurança M1 (05/09/2026): rate limiting em
+    # /answer não é o que este teste verifica — dezenas de respostas
+    # instantâneas pra conquistar 3 territórios estourariam o limite de
+    # abuso, então o teste levanta o teto só pra si mesmo.
+    monkeypatch.setattr(config, "RATE_LIMIT_ANSWER_SUBMIT", (10_000, 60.0))
 
     # Mundo da Linguagem tem 4 territórios desde a V4 (palavras/textos/
     # enigmas/redacao, V4/V3_ENCERRAMENTO_PENDENCIAS_PARA_V4.md §2.1) —

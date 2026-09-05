@@ -1,4 +1,6 @@
-from fastapi import APIRouter, Depends, HTTPException
+from datetime import timedelta
+
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
@@ -150,7 +152,9 @@ def next_challenge(
 
 @router.get("/challenges/search", response_model=schemas.ChallengeSearchResponse)
 def search_challenges(
-    q: str,
+    # Achado de auditoria de segurança M4 (05/09/2026): sem max_length,
+    # nada limitava o tamanho da busca antes de virar um padrão ILIKE.
+    q: str = Query(max_length=200),
     language_code: str = config.DEFAULT_LANGUAGE_CODE,
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
@@ -163,6 +167,7 @@ def search_challenges(
     normal de "nada encontrado" (não é erro) — o client então oferece
     registrar via POST /content-suggestions.
     """
+    services.enforce_rate_limit("challenges_search", user_id, max_calls=config.RATE_LIMIT_SEARCH[0], window_seconds=config.RATE_LIMIT_SEARCH[1])
     services.get_or_create_profile(db, user_id)
 
     challenge = services.find_challenge_by_search(db, language_code, q)
@@ -230,7 +235,18 @@ def reattempt_challenge(
     badge/progresso de território — submit_answer detecta
     attempt.is_review e pula toda mutação, devolvendo só se acertou ou
     não ("apenas confirmar o aprendizado", nunca pontuação nova).
+
+    Achado de auditoria de segurança CRÍTICO (05/09/2026): sem a
+    checagem abaixo, este endpoint aceitava QUALQUER challenge_id —
+    inclusive um nunca servido ao usuário — e o caminho is_review de
+    POST /answer devolve correct_answer/explanation sem consumir limite
+    diário. Isso virava um oráculo de respostas de custo zero pra todo
+    o banco de conteúdo. Exige um Attempt real e recente deste usuário
+    neste desafio com is_correct=False (nunca outro is_review) — a
+    aproximação server-side mais forte de "errou isso nesta rodada".
     """
+    services.enforce_rate_limit("challenges_reattempt", user_id, max_calls=config.RATE_LIMIT_REATTEMPT[0], window_seconds=config.RATE_LIMIT_REATTEMPT[1])
+
     challenge = db.get(models.Challenge, challenge_id)
     if challenge is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})
@@ -239,6 +255,24 @@ def reattempt_challenge(
     territory = db.get(models.Territory, challenge.territory_id)
     if territory is None or not services.is_territory_unlocked(db, user_id, territory):
         raise HTTPException(status_code=403, detail={"error": {"code": "TERRITORY_LOCKED", "message": "Requires active subscription"}})
+
+    min_created_at = utcnow() - timedelta(hours=config.REVIEW_REATTEMPT_MAX_AGE_HOURS)
+    prior_wrong_attempt = db.execute(
+        select(models.Attempt)
+        .where(
+            models.Attempt.user_id == user_id,
+            models.Attempt.challenge_id == challenge_id,
+            models.Attempt.is_correct.is_(False),
+            models.Attempt.is_review.is_(False),
+            models.Attempt.created_at >= min_created_at,
+        )
+        .limit(1)
+    ).scalar_one_or_none()
+    if prior_wrong_attempt is None:
+        raise HTTPException(
+            status_code=403,
+            detail={"error": {"code": "REVIEW_NOT_ALLOWED", "message": "Só é possível revisar um desafio que você errou recentemente."}},
+        )
 
     hints_available = len(
         db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
@@ -303,6 +337,8 @@ def request_hint(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit("challenges_hint", user_id, max_calls=config.RATE_LIMIT_HINT[0], window_seconds=config.RATE_LIMIT_HINT[1])
+
     challenge = db.get(models.Challenge, challenge_id)
     if challenge is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})
@@ -340,6 +376,8 @@ def submit_answer(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit("challenges_answer", user_id, max_calls=config.RATE_LIMIT_ANSWER_SUBMIT[0], window_seconds=config.RATE_LIMIT_ANSWER_SUBMIT[1])
+
     challenge = db.get(models.Challenge, challenge_id)
     if challenge is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})

@@ -1,4 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Achado de auditoria de segurança M5 (05/09/2026): INTERNET só
+         estava declarada em src/debug/ e src/profile/ (herdada por
+         acidente do merge de alguma dependência de debug), nunca aqui
+         em main/ — o app depende 100% de rede (backend, Supabase Auth,
+         Firebase). Declarar explicitamente em vez de depender de merge
+         implícito de biblioteca de terceiro. -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <!-- V2 item 9 — Contador de passos (STEP_COUNTER_MOVIMENTO.md §6).
          Exigida em runtime pelo Android 10+ (API 29+) para acessar o
          sensor TYPE_STEP_COUNTER; pedida de forma contextual quando o
@@ -38,7 +45,14 @@
     <application
         android:label="MENTAL"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:fullBackupContent="false">
+        <!-- Achado de auditoria de segurança M5 (05/09/2026): sem
+             allowBackup="false", o default é true — o token de sessão
+             do Supabase guardado em SharedPreferences entraria no backup
+             automático do Google Drive e em `adb backup`, risco de LGPD
+             para um app com dado pessoal. -->
         <activity
             android:name=".MainActivity"
             android:exported="true"

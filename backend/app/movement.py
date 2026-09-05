@@ -57,14 +57,20 @@ def _checkpoint_bonus(cycle: models.MovementCycle, now: datetime) -> tuple[int, 
     com o fim do próprio ciclo, já coberto pelo bônus de faixa cheio.
     """
     parts = config.MOVEMENT_CHECKPOINT_PARTS
-    cycle_len = cycle.cycle_end_at - cycle.cycle_start_at
+    cycle_start = naive(cycle.cycle_start_at)
+    cycle_len = naive(cycle.cycle_end_at) - cycle_start
     xp_total = 0
     reached = 0
     for i in range(parts - 1):
         bit = 1 << i
         if cycle.checkpoint_bonus_mask & bit:
             continue
-        window_end = cycle.cycle_start_at + cycle_len * (i + 1) / parts
+        # Achado de auditoria de segurança (05/09/2026): cycle_start_at/
+        # cycle_end_at voltam AWARE do psycopg3 (timestamptz), enquanto
+        # `now` é sempre naive (timeutil.utcnow()) — comparar direto
+        # lançava TypeError em toda coleta que ainda tivesse checkpoint
+        # pendente (mesmo achado documentado em timeutil.naive()).
+        window_end = cycle_start + cycle_len * (i + 1) / parts
         if now < window_end:
             continue
         fraction = (i + 1) / parts
@@ -236,7 +242,18 @@ def collect_steps(
     # real pro gráfico de progressão do dia (não deriva de checkpoint_
     # bonus_mask, que só sabe SE um bônus foi pago, não quantos passos
     # existiam em cada ponto do tempo).
-    db.add(models.MovementSnapshot(cycle_id=cycle.id, recorded_at=now, steps_total=cycle.steps_collected))
+    #
+    # Achado de auditoria de segurança M1 (05/09/2026): a gravação era
+    # incondicional, mesmo pra steps=0 — um client em loop enchia a
+    # tabela de linhas infinitas com o mesmo cumulative_steps repetido,
+    # sem nunca ser barrado pelo clamp de MOVEMENT_MAX_STEPS_PER_CYCLE
+    # (que só limita steps_collected, não a QUANTIDADE de snapshots).
+    # Um snapshot sem mudança de acumulado não carrega nenhuma
+    # informação nova pro gráfico (get_daily_sessions já trata "sem
+    # snapshot na janela" como "0 passos naquela janela", corretamente)
+    # — só grava quando o acumulado de fato avançou.
+    if cycle.steps_collected != previous_total:
+        db.add(models.MovementSnapshot(cycle_id=cycle.id, recorded_at=now, steps_total=cycle.steps_collected))
 
     level_before = profile.level
     if xp_delta:

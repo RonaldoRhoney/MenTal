@@ -1203,6 +1203,19 @@
       }
     }
   },
+  "movementMonthCardTitle": "Mês",
+  "@movementMonthCardTitle": {
+    "description": "Title of the tappable 'Mês' summary card"
+  },
+  "movementMonthCardSubtitle": "Seu progresso em {month}",
+  "@movementMonthCardSubtitle": {
+    "description": "Subtitle of the 'Mês' summary card",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
   "movementYearCardTitle": "Ano",
   "@movementYearCardTitle": {
     "description": "Title of the tappable 'Ano' summary card"
@@ -1220,7 +1233,7 @@
   "@movementReportsTitle": {
     "description": "MOVIMENTO_GRAFICOS_RICOS_V1.md — title of the unified Dia/Semana/Mês/Ano reports screen"
   },
-  "movementReportsTabDay": "Dia",
+  "movementReportsTabDay": "Hoje",
   "@movementReportsTabDay": {
     "description": "Reports screen period tab: day"
   },

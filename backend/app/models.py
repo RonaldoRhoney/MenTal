@@ -389,6 +389,23 @@ class LearningPauseRead(Base):
     read_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class LearningPauseServe(Base):
+    """
+    Achado de auditoria de segurança M2 (05/09/2026): registra que ESTE
+    usuário recebeu ESTA Pausa agora (migration 061) — sem isso, POST
+    /learning-pauses/{id}/complete concedia XP sem nenhuma prova de que
+    a Pausa foi de fato aberta/lida. served_at é sobrescrito a cada
+    novo GET /next da mesma Pausa (reabrir reinicia a contagem do piso
+    de tempo mínimo, nunca acumula de uma sessão antiga).
+    """
+
+    __tablename__ = "learning_pause_serves"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    learning_pause_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("learning_pauses.id"), primary_key=True)
+    served_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class Attempt(Base):
     __tablename__ = "attempts"
 

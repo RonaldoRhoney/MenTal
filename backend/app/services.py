@@ -1,4 +1,6 @@
 import random
+import time
+from collections import defaultdict
 from datetime import date, datetime, timedelta
 
 from sqlalchemy import and_, func, or_, select
@@ -7,6 +9,42 @@ from sqlalchemy.orm import Session
 from . import config, mentalcoins, models, notification_copy, push, scoring, supabase_admin
 from .nickname import generate_anonymous_nickname
 from .timeutil import naive, utcnow
+
+
+class RateLimitExceeded(Exception):
+    """Achado de auditoria de segurança M1 (05/09/2026) — o router
+    traduz pra HTTPException 429, mesmo padrão de exceção de domínio já
+    usado em MovementError/PublicProfileError."""
+
+    def __init__(self, scope: str):
+        self.scope = scope
+        super().__init__(scope)
+
+
+# Limiter em memória de processo, por (scope, user_id) — ZERO_COST (skill
+# zero-cost-api: nenhuma infra nova/paga), suficiente pro volume atual de
+# um único processo Render. Se o deploy virar múltiplas instâncias, isto
+# passa a limitar por instância, não globalmente — migrar pra um store
+# compartilhado (ex.: Redis) nesse cenário, não antes.
+_rate_limit_hits: dict[str, list[float]] = defaultdict(list)
+
+
+def enforce_rate_limit(scope: str, user_id: str, *, max_calls: int, window_seconds: float) -> None:
+    """Achado de auditoria de segurança M1 (05/09/2026): nenhum endpoint
+    do app tinha rate limiting — combinado com o oráculo de respostas
+    (C1, já corrigido) isso permitia varrer automaticamente todo o banco
+    de conteúdo curado em minutos. Aplicado nos endpoints de pontuação/
+    recompensa mais sensíveis, priorizando os que compunham os vetores
+    de C1 (reattempt, search, battles)."""
+    key = f"{scope}:{user_id}"
+    now = time.monotonic()
+    cutoff = now - window_seconds
+    hits = _rate_limit_hits[key]
+    while hits and hits[0] < cutoff:
+        hits.pop(0)
+    if len(hits) >= max_calls:
+        raise RateLimitExceeded(scope)
+    hits.append(now)
 
 
 def is_submitted_answer_correct(challenge: "models.Challenge", submitted_answer: str, timed_out: bool) -> bool:
@@ -756,10 +794,16 @@ def find_challenge_by_search(db: Session, language_code: str, query_text: str) -
     query_text = query_text.strip()
     if not query_text:
         return None
+    # Achado de auditoria de segurança M4 (05/09/2026): sem escapar
+    # `%`/`_`, um texto de busca contendo esses caracteres virava
+    # curinga de padrão SQL (ex.: q="%" casa qualquer prompt), forçando
+    # full scan em challenges.prompt — mesmo escape já correto em
+    # search_users_by_name.
+    escaped = query_text.replace("\\", "\\\\").replace("%", r"\%").replace("_", r"\_")
     return db.execute(
         select(models.Challenge)
         .where(models.Challenge.language_code == language_code)
-        .where(models.Challenge.prompt.ilike(f"%{query_text}%"))
+        .where(models.Challenge.prompt.ilike(f"%{escaped}%"))
         .limit(1)
     ).scalars().first()
 
@@ -928,7 +972,13 @@ def award_share_reward(db: Session, profile: "models.Profile") -> tuple[int, boo
 
     Retorna (xp_awarded, already_rewarded_today).
     """
-    today = date.today()
+    # Achado de auditoria de segurança M3 (05/09/2026): date.today() usa
+    # o fuso LOCAL do processo, enquanto todo o resto do app (limite
+    # diário, streak, ranking, Torcida) usa utcnow().date() — hoje
+    # coincide porque o Render roda em UTC, mas qualquer mudança de TZ
+    # do processo criaria uma fronteira de dia diferente das outras
+    # janelas diárias, permitindo cobrar esta recompensa 2x na virada.
+    today = utcnow().date()
     if profile.last_share_reward_date == today:
         return 0, True
 
@@ -950,7 +1000,11 @@ def award_app_invite_reward(db: Session, profile: "models.Profile") -> tuple[int
 
     Retorna (xp_awarded, mentalcoins_awarded, already_rewarded_today).
     """
-    today = date.today()
+    # Achado de auditoria de segurança M3 (05/09/2026): mesmo raciocínio
+    # de award_share_reward acima — date.today() trocado por
+    # utcnow().date() pra usar o mesmo fuso (UTC) de toda janela diária
+    # do app, nunca o fuso local do processo.
+    today = utcnow().date()
     if profile.last_app_invite_reward_date == today:
         return 0, 0, True
 
@@ -1231,7 +1285,18 @@ def get_public_profile(db: Session, viewer_user_id: str, target_user_id: str) ->
     get_worlds_progress, Streak, UserTerritoryProgress) — nunca uma
     nova coleta ou persistência própria. Retorna None se o alvo não
     existir (router decide o 404).
+
+    Achado de auditoria de segurança/conformidade Google Play (05/09/2026):
+    is_blocked_either_way já protege pedido de amizade e busca por nome
+    (mesmo achado de 29/08/2026, item 6), mas não protegia perfil
+    público — bloquear alguém não impedia a pessoa bloqueada de
+    continuar vendo nome real, foto, badges e streak da vítima. Trata
+    como perfil inexistente pra quem está do lado bloqueado, igual ao
+    404 de alvo inexistente (nunca revela QUE houve bloqueio).
     """
+    if is_blocked_either_way(db, viewer_user_id, target_user_id):
+        return None
+
     profile = db.get(models.Profile, target_user_id)
     if profile is None:
         return None
@@ -1299,6 +1364,14 @@ def send_torcida(db: Session, from_user_id: str, to_user_id: str, reaction_type:
     if from_user_id == to_user_id:
         raise PublicProfileError("CANNOT_TORCER_FOR_SELF", "Não é possível torcer para si mesmo.")
 
+    # Achado de auditoria de segurança/conformidade Google Play
+    # (05/09/2026): bloqueio não impedia torcida — a vítima continuava
+    # recebendo push notification com o apelido de quem ela bloqueou, o
+    # canal de contato mais intrusivo do app. Mesmo código USER_NOT_FOUND
+    # do alvo inexistente, nunca revela que houve bloqueio.
+    if is_blocked_either_way(db, from_user_id, to_user_id):
+        raise PublicProfileError("USER_NOT_FOUND", to_user_id)
+
     target_profile = db.get(models.Profile, to_user_id)
     if target_profile is None:
         raise PublicProfileError("USER_NOT_FOUND", to_user_id)
@@ -1365,6 +1438,15 @@ def delete_account(db: Session, user_id: str) -> bool:
     preservam texto livre com valor duradouro (mural público com
     resposta do admin; insumo de calibração de dificuldade) sem manter
     o vínculo com a pessoa.
+
+    Achado de auditoria de segurança B2 (05/09/2026): content_suggestions
+    (migration 058) é uma TERCEIRA exceção deliberada com o mesmo
+    ON DELETE SET NULL — o texto de busca sugerido tem valor duradouro
+    pra curadoria de conteúdo futuro, e anonimizar (em vez de apagar)
+    preserva esse insumo sem manter o vínculo com quem sugeriu. Esta
+    docstring não listava esta exceção até agora; qualquer nova tabela
+    com texto livre de valor duradouro deve seguir o mesmo padrão E ser
+    adicionada aqui.
 
     Retorna False (sem apagar nada) se SUPABASE_SERVICE_ROLE_KEY não
     estiver configurado — o endpoint decide como reagir (501).
