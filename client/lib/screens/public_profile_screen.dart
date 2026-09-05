@@ -104,7 +104,13 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
       onRefresh: _load,
       color: AppColors.gold,
       child: ListView(
-      padding: const EdgeInsets.all(16),
+      // FEEDBACK_NOME_REAL_E_TORCIDA_LAYOUT_V1.md §3 (05/09/2026): os 4
+      // ícones de Torcida (último conteúdo da lista) apareciam cortados
+      // pela barra de navegação do Android — SafeArea sozinho não cobre
+      // bem a área de gesto em todo aparelho/API, então soma o inset
+      // real do sistema (MediaQuery) a um respiro fixo generoso, em vez
+      // de confiar só no valor mínimo do SafeArea.
+      padding: EdgeInsets.fromLTRB(16, 16, 16, 16 + MediaQuery.paddingOf(context).bottom + 24),
       children: [
         Center(
           child: Column(

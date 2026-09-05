@@ -81,6 +81,13 @@ class PublicAppFeedbackItem(BaseModel):
     # admin) é preservado anonimizado, nunca apagado.
     user_id: str | None
     user_nickname: str
+    # FEEDBACK_NOME_REAL_E_TORCIDA_LAYOUT_V1.md §1 (05/09/2026): nome
+    # real do autor, mesmo padrão já usado em Ranking (client prefere
+    # real_name, cai pra nickname se ausente). None quando o autor não
+    # tem nome real cadastrado OU quando o viewer e o autor estão
+    # bloqueados entre si (§2) — nesse caso user_nickname também vem
+    # mascarado para um rótulo genérico, só para esta relação.
+    user_real_name: str | None = None
     comment: str
     created_at: datetime
     admin_reply: str | None = None

@@ -13,7 +13,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import models, schemas
+from .. import models, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
@@ -54,22 +54,32 @@ def list_app_feedback(user_id: str = Depends(require_age_confirmed_user_id), db:
         if reaction.user_id == user_id:
             my_reactions.setdefault(reaction.feedback_id, []).append(reaction.reaction_type)
 
-    nicknames: dict[str | None, str] = {}
+    # FEEDBACK_NOME_REAL_E_TORCIDA_LAYOUT_V1.md §1 (05/09/2026, pré-
+    # requisito A1 já aplicado): mural passa a exibir nome real do autor
+    # (mesmo padrão de Ranking — real_name com fallback pro client pra
+    # nickname). §2: quem está bloqueado entre si nunca vê o nome real
+    # nem o nickname um do outro aqui, mesmo com os comentários de ambos
+    # continuando visíveis ao restante da comunidade — usa um rótulo
+    # genérico só para essa relação específica.
+    display_names: dict[str | None, tuple[str, str | None]] = {}
     for row in rows:
-        if row.user_id not in nicknames:
-            # Migration 048 (LGPD, 01/09/2026): user_id vira NULL quando
-            # o autor exclui a conta (anonimização, não exclusão do
-            # comentário) — trata explicitamente em vez de consultar
-            # Profile com um id nulo.
-            profile = db.get(models.Profile, row.user_id) if row.user_id is not None else None
-            nicknames[row.user_id] = profile.nickname if profile else "?"
+        if row.user_id in display_names:
+            continue
+        if row.user_id is None:
+            display_names[row.user_id] = ("?", None)
+        elif services.is_blocked_either_way(db, user_id, row.user_id):
+            display_names[row.user_id] = ("Usuário", None)
+        else:
+            profile = db.get(models.Profile, row.user_id)
+            display_names[row.user_id] = (profile.nickname, profile.real_name) if profile else ("?", None)
 
     return schemas.PublicAppFeedbackListResponse(
         items=[
             schemas.PublicAppFeedbackItem(
                 id=row.id,
                 user_id=row.user_id,
-                user_nickname=nicknames[row.user_id],
+                user_nickname=display_names[row.user_id][0],
+                user_real_name=display_names[row.user_id][1],
                 comment=row.comment,
                 created_at=row.created_at,
                 admin_reply=row.admin_reply,

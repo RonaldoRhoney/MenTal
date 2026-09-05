@@ -83,6 +83,58 @@ def test_feedback_survives_author_deletion_shown_anonymized(client):
     assert item["user_nickname"] == "?"
 
 
+def test_feedback_exposes_author_real_name(client):
+    """FEEDBACK_NOME_REAL_E_TORCIDA_LAYOUT_V1.md §1 (05/09/2026) — mural
+    passa a expor o nome real do autor, mesmo padrão já usado em
+    Ranking/Perfil Público (client prefere real_name, cai pra nickname
+    se ausente)."""
+    submitter = str(uuid.uuid4())
+    submitter_headers = auth_header(submitter)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=submitter_headers)
+    client.put("/profile", json={"real_name": "Fulano de Tal"}, headers=submitter_headers)
+    client.post("/feedback", json={"comment": "Comentário com nome real"}, headers=submitter_headers)
+
+    other_user = str(uuid.uuid4())
+    other_headers = auth_header(other_user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=other_headers)
+
+    item = next(i for i in client.get("/feedback", headers=other_headers).json()["items"] if i["user_id"] == submitter)
+    assert item["user_real_name"] == "Fulano de Tal"
+
+
+def test_feedback_masks_name_between_blocked_users(client):
+    """FEEDBACK_NOME_REAL_E_TORCIDA_LAYOUT_V1.md §2 — usuários bloqueados
+    entre si nunca veem o nome real (nem o nickname de verdade) um do
+    outro no mural, mesmo com os comentários de ambos continuando
+    visíveis à comunidade em geral."""
+    author = str(uuid.uuid4())
+    author_headers = auth_header(author)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=author_headers)
+    client.put("/profile", json={"real_name": "Autor Real"}, headers=author_headers)
+    client.post("/feedback", json={"comment": "Comentário de quem vai ser bloqueado"}, headers=author_headers)
+
+    blocker = str(uuid.uuid4())
+    blocker_headers = auth_header(blocker)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=blocker_headers)
+    client.post("/social/block", json={"blocked_user_id": author}, headers=blocker_headers)
+
+    # O comentário CONTINUA visível ao bloqueador — só o nome é mascarado.
+    item = next(
+        i for i in client.get("/feedback", headers=blocker_headers).json()["items"] if "vai ser bloqueado" in i["comment"]
+    )
+    assert item["user_real_name"] is None
+    assert item["user_nickname"] == "Usuário"
+
+    # Terceiro usuário, sem bloqueio, continua vendo o nome real normalmente.
+    third_party = str(uuid.uuid4())
+    third_headers = auth_header(third_party)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=third_headers)
+    item_for_third_party = next(
+        i for i in client.get("/feedback", headers=third_headers).json()["items"] if "vai ser bloqueado" in i["comment"]
+    )
+    assert item_for_third_party["user_real_name"] == "Autor Real"
+
+
 def test_admin_can_reply_and_reply_is_publicly_visible(client):
     from app.db import SessionLocal
     from app import models

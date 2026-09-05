@@ -197,6 +197,15 @@ class _FeedbackWallTile extends StatelessWidget {
   final void Function(String reactionType) onReact;
   final VoidCallback onReply;
 
+  // FEEDBACK_NOME_REAL_E_TORCIDA_LAYOUT_V1.md §1 (05/09/2026) — mesmo
+  // padrão já usado em ranking_screen.dart: prefere o nome real, cai
+  // pro nickname quando ausente (autor sem nome real, ou mascarado por
+  // bloqueio — o backend já resolve qual dos dois mandar).
+  static String _authorDisplayName(Map<String, dynamic> item) {
+    final realName = item['user_real_name'] as String?;
+    return realName != null && realName.isNotEmpty ? realName : item['user_nickname'] as String;
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -213,7 +222,7 @@ class _FeedbackWallTile extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(item['user_nickname'] as String, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
+            Text(_authorDisplayName(item), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
             const SizedBox(height: 4),
             Text(item['comment'] as String, style: Theme.of(context).textTheme.bodyMedium),
             if (reply != null) ...[
