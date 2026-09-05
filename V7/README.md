@@ -62,8 +62,32 @@ sociais (Feedback/Torcida/Movimento) pedidos por Rhoney em 05/09/2026.
 
 ## Pendências desta pasta
 
-1. B4 da auditoria de segurança (funções/módulos grandes demais,
-   ex. `submit_answer` com 250 linhas, `services.py` com ~1400) —
-   classificado como limpeza pós-lançamento, não bloqueante.
-2. Novo deploy do backend no Render — necessário pra `/app/version` e
+1. Novo deploy do backend no Render — necessário pra `/app/version` e
    `/profile/{id}/invite-movement` funcionarem em produção.
+
+## B4 — limpeza de funções/módulos grandes demais (05/09/2026)
+
+**Executado parcialmente, com cautela** (área crítica de scoring/XP —
+cada mudança rodou a suíte completa antes de seguir pra próxima):
+
+- `submit_answer` (routers/challenges.py): as seis leituras soltas de
+  "estado antes desta resposta" (nível, XP, MentalCoins, conquista de
+  território/mundo, detentor) — cada uma com seu próprio comentário
+  explicando por que precisa ser capturada incondicionalmente e antes
+  de qualquer mutação — foram empacotadas num único
+  `services.capture_answer_before_snapshot()`, sem mudar ordem nem
+  lógica de nenhuma.
+- `services.py` (1548→1400 linhas): amizade/bloqueio/busca por nome
+  (12 funções, ~230 linhas, sem nenhuma dependência de outra função de
+  services.py) extraídos pra `app/social.py`, mesmo espírito de
+  `movement.py`/`mentalcoins.py`. Re-exportado no topo de services.py —
+  todo `services.is_blocked_either_way(...)` etc. continua funcionando
+  sem tocar em nenhum router.
+- **Não estendido** a outros grupos (foto/storage, batalha, perfil
+  público/Torcida) nesta rodada — services.py ainda tem ~1400 linhas.
+  Decisão deliberada: cada extração adicional teria retorno decrescente
+  e risco crescente (mais dependências cruzadas) pelo tempo restante
+  desta sessão; fica registrado como candidato pra uma próxima rodada,
+  não como pendência bloqueante.
+
+Suíte backend: 328/328 depois de cada mudança.

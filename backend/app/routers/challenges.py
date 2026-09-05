@@ -499,38 +499,24 @@ def submit_answer(
     db.commit()
 
     profile = services.get_or_create_profile(db, user_id)
-    # MICROINTERACTIONS.md: captura o "antes" pra detectar a TRANSIÇÃO
-    # exata (nível subiu / território acabou de ser conquistado agora),
-    # nunca o estado absoluto — senão o client celebraria de novo a cada
-    # resposta seguinte num território já conquistado.
-    level_before = profile.level
-    # Pedido de Rhoney (2026-09-02): captura XP/MentalCoins ANTES desta
-    # resposta pra detectar a TRANSIÇÃO de marco (100 XP / 50
-    # MentalCoins), mesmo raciocínio de level_before acima.
-    xp_before = profile.xp_total
-    mentalcoins_before = mentalcoins.get_or_create_balance(db, user_id).balance
-    # Achado real testando no aparelho (2026-08-22): estava dentro do
-    # bloco `if is_correct`, então numa resposta ERRADA a um território
-    # JÁ conquistado antes, was_conquered_before ficava preso em False
-    # (nunca recalculado) e territory_just_conquered abaixo dava um falso
-    # positivo — "Território conquistado!" aparecendo numa resposta
-    # errada. Precisa ser capturado ANTES e incondicionalmente, mesmo
-    # raciocínio já usado (corretamente) em was_world_completed_before/
-    # detentor_before logo abaixo.
-    existing_progress = db.get(models.UserTerritoryProgress, (user_id, challenge.territory_id))
-    was_conquered_before = bool(existing_progress and existing_progress.conquered_at)
-    territory_progress = existing_progress
-    # V2 item 10 — captura o "antes" do mundo, mesmo raciocínio de
-    # level_before/was_conquered_before acima: precisa saber se o mundo
-    # JÁ estava completo antes desta resposta pra detectar a transição
-    # exata, nunca celebrar de novo num mundo já fechado.
-    world_id = db.get(models.Territory, challenge.territory_id).world_id
-    was_world_completed_before = services.is_world_completed(db, user_id, world_id) if world_id else False
-    # V2 item 13 — Disputa territorial: captura o detentor ANTES de
-    # aplicar o XP desta resposta, pra detectar a transição exata de
-    # "acabei de assumir" (mesmo raciocínio de was_conquered_before/
-    # was_world_completed_before acima).
-    detentor_before = services.get_territory_detentor(db, user_id, challenge.territory_id)
+    # MICROINTERACTIONS.md + achados reais de 22/08 e 02/09/2026: tudo
+    # aqui detecta a TRANSIÇÃO exata (nível subiu / território ou mundo
+    # acabou de fechar / marco de XP-MentalCoins cruzado / detentor
+    # trocou AGORA), nunca o estado absoluto — senão o client celebraria
+    # de novo a cada resposta seguinte num território já conquistado.
+    # Capturado incondicionalmente, ANTES de qualquer mutação abaixo
+    # (mesmo numa resposta ERRADA — achado real testando no aparelho:
+    # capturar só dentro do `if is_correct` deixava was_conquered preso
+    # em False e gerava falso positivo de "Território conquistado!").
+    before = services.capture_answer_before_snapshot(db, user_id, profile, challenge.territory_id)
+    level_before = before.level
+    xp_before = before.xp_total
+    mentalcoins_before = before.mentalcoins_balance
+    was_conquered_before = before.was_conquered
+    territory_progress = before.territory_progress
+    world_id = before.world_id
+    was_world_completed_before = before.was_world_completed
+    detentor_before = before.detentor
     if is_correct and xp_final > 0:
         profile.xp_total += xp_final
         profile.level = scoring.level_from_xp(profile.xp_total)
