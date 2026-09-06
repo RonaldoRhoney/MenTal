@@ -1,7 +1,7 @@
 """
-MUNDO_LINGUAGEM_CONTEUDO_DENSO_V1.md — 100 desafios de vocabulário
+Mundo_da_Linguagem/README.md — 100 desafios de vocabulário
 avançado/jargão (geral, jurídico, política, negócios), curadoria de
-Rhoney (palavras_dificeis_bloco{1..4}.json, raiz do repo), convertidos
+Rhoney (palavras_dificeis_bloco{1..4}.json, pasta Mundo_da_Linguagem/), convertidos
 por scripts/convert_palavras_dificeis_content.py em
 content/linguagem_vocabulario_avancado.json e carregados no território
 "palavras" via app/seed.py. Cobre o que é próprio desta leva — mesma

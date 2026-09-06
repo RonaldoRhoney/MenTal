@@ -1,7 +1,7 @@
 """
-MUNDO_LINGUAGEM_CONTEUDO_DENSO_V1.md — 100 desafios de interpretação de
+Mundo_da_Linguagem/README.md — 100 desafios de interpretação de
 texto (textos originais + pergunta), curadoria de Rhoney
-(interpretacao_textos_bloco{1..4}.json, raiz do repo), convertidos por
+(interpretacao_textos_bloco{1..4}.json, pasta Mundo_da_Linguagem/), convertidos por
 scripts/convert_interpretacao_textos_content.py em
 content/linguagem_interpretacao_textos.json e carregados no território
 "textos" já existente via app/seed.py. Cobre o que é próprio desta leva

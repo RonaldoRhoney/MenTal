@@ -5720,7 +5720,7 @@ for _path in sorted(_CONTENT_DIR.glob("idiomas_*.json")):
 for _path in sorted(_CONTENT_DIR.glob("valores_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
-# MUNDO_LINGUAGEM_CONTEUDO_DENSO_V1.md (06/09/2026, aprovado por Rhoney):
+# Mundo_da_Linguagem/README.md (06/09/2026, aprovado por Rhoney):
 # 30 desafios de regência, crase, concordância, pares confusos (porque/
 # por que/porquê/por quê, mal/mau, senão/se não, há/a), pontuação e
 # ortografia — território "palavras" já existente, sem campo/formato

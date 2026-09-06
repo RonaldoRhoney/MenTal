@@ -1,7 +1,7 @@
 """
-MUNDO_LINGUAGEM_CONTEUDO_DENSO_V1.md — converte os 4 blocos brutos de
-vocabulário avançado/jargão (palavras_dificeis_bloco{1..4}.json, raiz
-do repo, curadoria de Rhoney) pro formato plano exigido por
+Mundo_da_Linguagem/README.md — converte os 4 blocos brutos de
+vocabulário avançado/jargão (Mundo_da_Linguagem/palavras_dificeis_bloco{1..4}.json,
+curadoria de Rhoney) pro formato plano exigido por
 app/content_validation.py e scripts/append_production_content.py.
 
 100 palavras (25 por bloco), território "palavras" (Mundo da Linguagem
@@ -38,7 +38,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_PATH = REPO_ROOT / "backend" / "content" / "linguagem_vocabulario_avancado.json"
 
 SOURCE_FILES = [
-    REPO_ROOT / f"palavras_dificeis_bloco{n}.json" for n in (1, 2, 3, 4)
+    REPO_ROOT / "Mundo_da_Linguagem" / f"palavras_dificeis_bloco{n}.json" for n in (1, 2, 3, 4)
 ]
 
 TERRITORY_ID = "palavras"

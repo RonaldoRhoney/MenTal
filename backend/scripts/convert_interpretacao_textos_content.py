@@ -1,7 +1,7 @@
 """
-MUNDO_LINGUAGEM_CONTEUDO_DENSO_V1.md — converte os 4 blocos brutos de
-interpretação de texto (interpretacao_textos_bloco{1..4}.json, raiz do
-repo, curadoria de Rhoney, 100 textos originais + pergunta) pro formato
+Mundo_da_Linguagem/README.md — converte os 4 blocos brutos de
+interpretação de texto (Mundo_da_Linguagem/interpretacao_textos_bloco{1..4}.json,
+curadoria de Rhoney, 100 textos originais + pergunta) pro formato
 plano exigido por app/content_validation.py e
 scripts/append_production_content.py.
 
@@ -32,7 +32,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_PATH = REPO_ROOT / "backend" / "content" / "linguagem_interpretacao_textos.json"
 
 SOURCE_FILES = [
-    REPO_ROOT / f"interpretacao_textos_bloco{n}.json" for n in (1, 2, 3, 4)
+    REPO_ROOT / "Mundo_da_Linguagem" / f"interpretacao_textos_bloco{n}.json" for n in (1, 2, 3, 4)
 ]
 
 TERRITORY_ID = "textos"

@@ -1,5 +1,5 @@
 """
-MUNDO_LINGUAGEM_CONTEUDO_DENSO_V1.md — 30 desafios de regência, crase,
+Mundo_da_Linguagem/README.md — 30 desafios de regência, crase,
 concordância, pares confusos, pontuação e ortografia, carregados de
 content/linguagem_gramatica_densa.json (app/seed.py) no território
 "palavras" já existente. Cobre o que é próprio desta leva — volume e a
