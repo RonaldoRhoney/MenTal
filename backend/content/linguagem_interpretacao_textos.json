@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Marina sempre chegava cedo ao trabalho, mas naquela manhã o trânsito estava tão parado que ela decidiu descer do ônibus e caminhar o resto do caminho. Mesmo suada e um pouco atrasada, chegou satisfeita: tinha descoberto um atalho por uma praça que nunca havia notado antes.\n\nQual foi a atitude de Marina diante do trânsito parado?",
+    "options": [
+      "Ela decidiu descer do ônibus e caminhar",
+      "Ela esperou pacientemente dentro do ônibus",
+      "Ela voltou para casa e faltou ao trabalho",
+      "Ela pediu para o motorista mudar de rota"
+    ],
+    "correct_answer": "Ela decidiu descer do ônibus e caminhar",
+    "explanation": "O texto afirma isso diretamente: \"Ela decidiu descer do ônibus e caminhar\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O uso excessivo de embalagens plásticas tem preocupado especialistas em meio ambiente. Ainda assim, muitas empresas argumentam que a substituição por materiais alternativos aumentaria os custos de produção, o que tornaria os produtos mais caros para o consumidor final.\n\nSegundo o texto, qual é o argumento das empresas contra a substituição do plástico?",
+    "options": [
+      "A substituição aumentaria os custos e o preço final dos produtos",
+      "O plástico já está sendo eliminado por completo",
+      "Materiais alternativos são proibidos por lei",
+      "Os consumidores preferem embalagens plásticas por gosto"
+    ],
+    "correct_answer": "A substituição aumentaria os custos e o preço final dos produtos",
+    "explanation": "O texto afirma isso diretamente: \"A substituição aumentaria os custos e o preço final dos produtos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de anos treinando sozinho num campo improvisado no bairro, o jovem atleta finalmente foi convidado para um teste numa equipe profissional. Ele hesitou por alguns dias antes de aceitar, com medo de não estar preparado, mas o incentivo da família fez toda a diferença em sua decisão.\n\nO que fez o jovem atleta decidir aceitar o convite?",
+    "options": [
+      "O incentivo da família",
+      "A pressão do técnico da equipe",
+      "Um contrato milionário oferecido",
+      "A insistência de outros jogadores"
+    ],
+    "correct_answer": "O incentivo da família",
+    "explanation": "O texto afirma isso diretamente: \"O incentivo da família\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A pesquisa mostrou que boa parte dos entrevistados prefere trabalhar de forma remota pelo menos parte da semana. Entre os motivos citados, o mais comum foi o tempo economizado com deslocamento, seguido pela maior flexibilidade para organizar tarefas pessoais durante o dia.\n\nQual foi o motivo mais citado pelos entrevistados para preferir o trabalho remoto?",
+    "options": [
+      "O tempo economizado com deslocamento",
+      "A possibilidade de ganhar mais dinheiro",
+      "A obrigatoriedade imposta pela empresa",
+      "A falta de espaço no escritório"
+    ],
+    "correct_answer": "O tempo economizado com deslocamento",
+    "explanation": "O texto afirma isso diretamente: \"O tempo economizado com deslocamento\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Antes de decidir abrir o próprio negócio, Ricardo passou dois anos trabalhando como funcionário numa padaria, aprendendo desde a produção até o atendimento ao cliente. Segundo ele, essa experiência prévia foi essencial para evitar erros comuns que via outros donos de padaria cometerem.\n\nPor que a experiência prévia de Ricardo foi importante, segundo o texto?",
+    "options": [
+      "Ajudou a evitar erros comuns cometidos por outros donos de padaria",
+      "Permitiu que ele ganhasse dinheiro suficiente para se aposentar",
+      "Fez com que ele desistisse de abrir o próprio negócio",
+      "Serviu apenas para conhecer outros funcionários"
+    ],
+    "correct_answer": "Ajudou a evitar erros comuns cometidos por outros donos de padaria",
+    "explanation": "O texto afirma isso diretamente: \"Ajudou a evitar erros comuns cometidos por outros donos de padaria\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Embora a cidade tenha investido em novos parques nos últimos anos, moradores de bairros mais afastados do centro reclamam que essas áreas de lazer continuam concentradas nas regiões mais centrais, deixando periferias com poucas opções de espaço público de qualidade.\n\nQual é a reclamação dos moradores de bairros afastados, segundo o texto?",
+    "options": [
+      "Os novos parques estão concentrados nas regiões mais centrais",
+      "Não existe nenhum parque na cidade",
+      "Os parques centrais serão fechados em breve",
+      "Os moradores não têm interesse em espaços de lazer"
+    ],
+    "correct_answer": "Os novos parques estão concentrados nas regiões mais centrais",
+    "explanation": "O texto afirma isso diretamente: \"Os novos parques estão concentrados nas regiões mais centrais\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Ana estudou o assunto da prova por semanas, mas na hora do exame percebeu que as questões cobravam um enfoque diferente do que ela havia praticado. Mesmo assim, conseguiu aplicar o raciocínio geral que já dominava e resolveu a maior parte das questões corretamente.\n\nO que permitiu que Ana resolvesse a maior parte das questões, mesmo com o enfoque diferente?",
+    "options": [
+      "O raciocínio geral que ela já dominava",
+      "Uma cola que ela levou escondida",
+      "A ajuda de um colega durante a prova",
+      "Um erro no gabarito da prova"
+    ],
+    "correct_answer": "O raciocínio geral que ela já dominava",
+    "explanation": "O texto afirma isso diretamente: \"O raciocínio geral que ela já dominava\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O relatório apontou uma queda no número de reclamações registradas contra a empresa de telefonia ao longo do último ano. Segundo a própria empresa, essa melhora está relacionada a um novo sistema de atendimento, que resolve boa parte dos problemas já no primeiro contato do cliente.\n\nA que a empresa atribui a queda no número de reclamações?",
+    "options": [
+      "A um novo sistema de atendimento que resolve problemas no primeiro contato",
+      "A uma redução no número de clientes atendidos",
+      "A uma mudança na lei que regula reclamações",
+      "A um aumento no preço dos serviços"
+    ],
+    "correct_answer": "A um novo sistema de atendimento que resolve problemas no primeiro contato",
+    "explanation": "O texto afirma isso diretamente: \"A um novo sistema de atendimento que resolve problemas no primeiro contato\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Mesmo sabendo que o caminho mais curto passava por uma rua sem iluminação, Camila preferiu fazer um trajeto mais longo, mas por vias movimentadas e bem iluminadas, principalmente porque estava voltando para casa já tarde da noite.\n\nPor que Camila escolheu o trajeto mais longo?",
+    "options": [
+      "Porque as vias eram mais movimentadas e iluminadas, e ela voltava tarde",
+      "Porque o caminho mais curto estava interditado",
+      "Porque ela queria fazer mais exercício físico",
+      "Porque um amigo pediu para acompanhá-la por lá"
+    ],
+    "correct_answer": "Porque as vias eram mais movimentadas e iluminadas, e ela voltava tarde",
+    "explanation": "O texto afirma isso diretamente: \"Porque as vias eram mais movimentadas e iluminadas, e ela voltava tarde\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A adoção de animais em situação de abandono cresceu significativamente nos últimos anos, impulsionada em parte pela maior divulgação de casos através das redes sociais. Organizações que cuidam desses animais afirmam que a visibilidade online ajudou a conectar pessoas interessadas em adotar com os bichos que precisavam de um lar.\n\nO que ajudou a impulsionar o crescimento da adoção de animais, segundo o texto?",
+    "options": [
+      "A maior divulgação de casos através das redes sociais",
+      "Uma lei que obriga a adoção de animais",
+      "A redução do número de animais abandonados",
+      "Uma campanha exclusiva de um único bairro"
+    ],
+    "correct_answer": "A maior divulgação de casos através das redes sociais",
+    "explanation": "O texto afirma isso diretamente: \"A maior divulgação de casos através das redes sociais\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de meses testando diferentes formatos, o podcast finalmente encontrou um público fiel ao mudar o foco de notícias gerais para histórias reais contadas pelos próprios ouvintes. Segundo os apresentadores, esse formato mais pessoal criou uma conexão que o conteúdo anterior não conseguia gerar.\n\nO que fez o podcast conquistar um público fiel, segundo o texto?",
+    "options": [
+      "A mudança para histórias reais contadas pelos próprios ouvintes",
+      "Um aumento no número de episódios semanais",
+      "A contratação de um apresentador famoso",
+      "A redução da duração de cada episódio"
+    ],
+    "correct_answer": "A mudança para histórias reais contadas pelos próprios ouvintes",
+    "explanation": "O texto afirma isso diretamente: \"A mudança para histórias reais contadas pelos próprios ouvintes\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O agricultor decidiu investir num sistema de irrigação por gotejamento depois de perceber que o método antigo, por aspersão, desperdiçava muita água em dias de vento forte. Apesar do investimento inicial mais alto, ele calcula que a economia de água vai compensar o custo em poucos anos.\n\nPor que o agricultor trocou o método de irrigação?",
+    "options": [
+      "O método antigo desperdiçava muita água em dias de vento forte",
+      "O governo proibiu o uso do método antigo",
+      "O novo sistema era mais barato desde o início",
+      "Ele queria usar menos água por questões estéticas"
+    ],
+    "correct_answer": "O método antigo desperdiçava muita água em dias de vento forte",
+    "explanation": "O texto afirma isso diretamente: \"O método antigo desperdiçava muita água em dias de vento forte\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Apesar de ter recebido propostas de emprego em outras cidades com salários mais altos, Beto optou por continuar na empresa onde já trabalhava, priorizando a proximidade da família e o relacionamento que já havia construído com os colegas ao longo dos anos.\n\nPor que Beto recusou as propostas com salários mais altos?",
+    "options": [
+      "Priorizou a proximidade da família e o relacionamento com os colegas",
+      "Porque as outras cidades não tinham vagas de fato",
+      "Porque seu contrato atual o impedia de sair",
+      "Porque os salários oferecidos eram menores do que o atual"
+    ],
+    "correct_answer": "Priorizou a proximidade da família e o relacionamento com os colegas",
+    "explanation": "O texto afirma isso diretamente: \"Priorizou a proximidade da família e o relacionamento com os colegas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A biblioteca do bairro passou por uma reforma completa e reabriu com um espaço específico para crianças, além de um horário estendido nos finais de semana. A frequência de visitantes praticamente dobrou nos primeiros três meses após a reabertura.\n\nO que aconteceu com a frequência de visitantes após a reforma da biblioteca?",
+    "options": [
+      "Praticamente dobrou nos primeiros três meses",
+      "Diminuiu pela metade",
+      "Permaneceu exatamente igual a antes",
+      "Só aumentou entre crianças, não entre adultos"
+    ],
+    "correct_answer": "Praticamente dobrou nos primeiros três meses",
+    "explanation": "O texto afirma isso diretamente: \"Praticamente dobrou nos primeiros três meses\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O time perdeu os três primeiros jogos do campeonato, mas o técnico resistiu à pressão para trocar toda a estratégia de jogo, argumentando que o elenco só precisava de tempo para se adaptar às novas táticas. Nas rodadas seguintes, o time venceu quatro partidas consecutivas.\n\nQual foi a justificativa do técnico para não mudar a estratégia?",
+    "options": [
+      "O elenco só precisava de tempo para se adaptar às novas táticas",
+      "Ele já tinha decidido pedir demissão de qualquer forma",
+      "A diretoria do time exigiu que nada fosse mudado",
+      "Os jogadores ameaçaram parar de jogar se algo mudasse"
+    ],
+    "correct_answer": "O elenco só precisava de tempo para se adaptar às novas táticas",
+    "explanation": "O texto afirma isso diretamente: \"O elenco só precisava de tempo para se adaptar às novas táticas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Uma pesquisa recente revelou que grande parte dos consumidores prefere ler as avaliações de outros clientes antes de comprar um produto online, mesmo quando o preço já parece atrativo. Segundo os pesquisadores, isso mostra que a confiança gerada por outros compradores pesa mais do que apenas o valor cobrado.\n\nO que a pesquisa revela sobre o comportamento dos consumidores, segundo o texto?",
+    "options": [
+      "Eles preferem ler avaliações de outros clientes antes de comprar, mesmo com preço atrativo",
+      "Eles compram exclusivamente pelo preço mais baixo disponível",
+      "Eles nunca leem avaliações antes de qualquer compra",
+      "Eles preferem comprar apenas em lojas físicas"
+    ],
+    "correct_answer": "Eles preferem ler avaliações de outros clientes antes de comprar, mesmo com preço atrativo",
+    "explanation": "O texto afirma isso diretamente: \"Eles preferem ler avaliações de outros clientes antes de comprar, mesmo com preço atrativo\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Mesmo com a previsão de chuva forte para o fim de semana, os organizadores do festival decidiram manter o evento ao ar livre, apostando numa cobertura parcial do espaço e num plano alternativo de realocar as atrações para uma tenda maior, caso fosse necessário.\n\nQual foi a decisão dos organizadores diante da previsão de chuva?",
+    "options": [
+      "Manter o evento, com um plano alternativo de realocação para uma tenda",
+      "Cancelar totalmente o festival",
+      "Adiar o evento para o mês seguinte",
+      "Transferir o evento para outra cidade"
+    ],
+    "correct_answer": "Manter o evento, com um plano alternativo de realocação para uma tenda",
+    "explanation": "O texto afirma isso diretamente: \"Manter o evento, com um plano alternativo de realocação para uma tenda\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O motorista de aplicativo relatou que, depois de anos dirigindo em período integral, decidiu reduzir a carga de trabalho para apenas as manhãs, priorizando o tempo livre à tarde para cuidar da própria saúde e reduzir o cansaço acumulado ao longo dos anos.\n\nPor que o motorista decidiu reduzir sua carga de trabalho?",
+    "options": [
+      "Para priorizar a própria saúde e reduzir o cansaço acumulado",
+      "Porque o aplicativo reduziu o número de corridas disponíveis",
+      "Porque ele decidiu trocar de profissão",
+      "Porque seu veículo precisava de manutenção prolongada"
+    ],
+    "correct_answer": "Para priorizar a própria saúde e reduzir o cansaço acumulado",
+    "explanation": "O texto afirma isso diretamente: \"Para priorizar a própria saúde e reduzir o cansaço acumulado\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A escola municipal implementou uma horta comunitária cuidada pelos próprios alunos, como parte de um projeto de educação ambiental. Além de ensinar sobre plantio, a iniciativa também passou a fornecer parte dos vegetais usados na merenda escolar, reduzindo o custo de compra de alguns itens.\n\nQual benefício adicional a horta trouxe para a escola, além do aprendizado dos alunos?",
+    "options": [
+      "Passou a fornecer parte dos vegetais usados na merenda, reduzindo custos",
+      "Aumentou o número de matrículas na escola",
+      "Substituiu totalmente as aulas de outras matérias",
+      "Gerou lucro para ser distribuído entre os alunos"
+    ],
+    "correct_answer": "Passou a fornecer parte dos vegetais usados na merenda, reduzindo custos",
+    "explanation": "O texto afirma isso diretamente: \"Passou a fornecer parte dos vegetais usados na merenda, reduzindo custos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de perder o emprego numa grande empresa, Fernanda decidiu usar a experiência acumulada para abrir uma consultoria própria, atendendo especificamente pequenos negócios que não tinham orçamento para contratar profissionais das grandes consultorias do mercado.\n\nQual público Fernanda decidiu atender com sua consultoria?",
+    "options": [
+      "Pequenos negócios que não tinham orçamento para grandes consultorias",
+      "Exclusivamente grandes empresas multinacionais",
+      "Apenas ex-colegas da empresa onde trabalhava",
+      "Somente empresas do mesmo setor da anterior"
+    ],
+    "correct_answer": "Pequenos negócios que não tinham orçamento para grandes consultorias",
+    "explanation": "O texto afirma isso diretamente: \"Pequenos negócios que não tinham orçamento para grandes consultorias\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O museu decidiu digitalizar todo o acervo histórico depois de um incidente que danificou parte dos documentos originais. Agora, pesquisadores de qualquer lugar do mundo podem acessar cópias digitais de alta qualidade sem precisar manusear diretamente os documentos físicos, mais frágeis.\n\nO que motivou o museu a digitalizar o acervo, segundo o texto?",
+    "options": [
+      "Um incidente que danificou parte dos documentos originais",
+      "A falta de espaço físico no museu",
+      "Uma exigência do governo federal",
+      "O desejo de vender cópias digitais"
+    ],
+    "correct_answer": "Um incidente que danificou parte dos documentos originais",
+    "explanation": "O texto afirma isso diretamente: \"Um incidente que danificou parte dos documentos originais\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Ainda que o novo aplicativo de transporte público prometesse economizar tempo de espera, muitos usuários relataram dificuldade em se adaptar à interface no início. Após algumas atualizações que simplificaram o design, as reclamações caíram e a avaliação média do aplicativo melhorou.\n\nO que aconteceu depois que o aplicativo simplificou o design?",
+    "options": [
+      "As reclamações caíram e a avaliação média melhorou",
+      "O aplicativo foi descontinuado",
+      "O número de usuários diminuiu drasticamente",
+      "O tempo de espera aumentou"
+    ],
+    "correct_answer": "As reclamações caíram e a avaliação média melhorou",
+    "explanation": "O texto afirma isso diretamente: \"As reclamações caíram e a avaliação média melhorou\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno produtor de queijos artesanais relutou em vender seu produto pela internet por anos, achando que o contato pessoal na feira era insubstituível. Quando finalmente aceitou tentar, percebeu que conseguia alcançar clientes de cidades vizinhas que nunca teriam ido até a feira local.\n\nQual foi o benefício que o produtor percebeu ao vender pela internet?",
+    "options": [
+      "Conseguiu alcançar clientes de cidades vizinhas que não iam à feira",
+      "Deixou de vender na feira local completamente",
+      "Reduziu o preço do produto pela metade",
+      "Perdeu contato com seus clientes antigos"
+    ],
+    "correct_answer": "Conseguiu alcançar clientes de cidades vizinhas que não iam à feira",
+    "explanation": "O texto afirma isso diretamente: \"Conseguiu alcançar clientes de cidades vizinhas que não iam à feira\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A equipe de resgate levou mais tempo do que o previsto para localizar os trilheiros perdidos, já que a névoa densa na região dificultava tanto a visibilidade quanto o uso de equipamentos aéreos de busca. Ainda assim, todos foram encontrados em segurança antes do anoitecer.\n\nO que dificultou o trabalho da equipe de resgate, segundo o texto?",
+    "options": [
+      "A névoa densa na região",
+      "A falta de treinamento da equipe",
+      "A recusa dos trilheiros em serem encontrados",
+      "A ausência de qualquer equipamento de busca"
+    ],
+    "correct_answer": "A névoa densa na região",
+    "explanation": "O texto afirma isso diretamente: \"A névoa densa na região\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de anos usando um sistema de anotações em papel, o pequeno escritório de contabilidade migrou para um software de gestão. A transição não foi simples no início, mas os próprios funcionários relataram, meses depois, que o tempo gasto em tarefas repetitivas caiu significativamente.\n\nO que os funcionários relataram meses depois da transição para o software?",
+    "options": [
+      "O tempo gasto em tarefas repetitivas caiu significativamente",
+      "Preferiam voltar ao sistema em papel",
+      "O escritório perdeu clientes por causa da mudança",
+      "O software era mais caro do que o esperado"
+    ],
+    "correct_answer": "O tempo gasto em tarefas repetitivas caiu significativamente",
+    "explanation": "O texto afirma isso diretamente: \"O tempo gasto em tarefas repetitivas caiu significativamente\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno mercado de bairro decidiu manter os preços dos produtos básicos congelados por três meses, mesmo com o aumento de custos dos fornecedores, numa tentativa de reter os clientes fiéis que moravam nas redondezas e evitar que migrassem para os supermercados maiores da região.\n\nPor que o mercado decidiu congelar os preços mesmo com custo maior?",
+    "options": [
+      "Para reter os clientes fiéis e evitar que migrassem para supermercados maiores",
+      "Porque o governo exigiu por lei",
+      "Porque os fornecedores reduziram os preços na mesma proporção",
+      "Porque não havia mais clientes fiéis para reter"
+    ],
+    "correct_answer": "Para reter os clientes fiéis e evitar que migrassem para supermercados maiores",
+    "explanation": "O texto afirma isso diretamente: \"Para reter os clientes fiéis e evitar que migrassem para supermercados maiores\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de sofrer uma lesão que o afastou dos treinos por seis meses, o nadador precisou reaprender alguns movimentos básicos junto com o fisioterapeuta, antes de voltar a competir. Segundo ele, esse período serviu também para reavaliar sua rotina de treino, que estava mais intensa do que o corpo suportava.\n\nO que o período de afastamento serviu para o nadador, além da recuperação física?",
+    "options": [
+      "Reavaliar a rotina de treino, que estava mais intensa do que o corpo suportava",
+      "Desistir definitivamente da natação",
+      "Trocar de modalidade esportiva",
+      "Conseguir um novo patrocinador"
+    ],
+    "correct_answer": "Reavaliar a rotina de treino, que estava mais intensa do que o corpo suportava",
+    "explanation": "O texto afirma isso diretamente: \"Reavaliar a rotina de treino, que estava mais intensa do que o corpo suportava\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A prefeitura anunciou a criação de uma ciclovia ligando dois bairros historicamente separados por uma via expressa. Moradores comemoraram a notícia, mas alguns comerciantes da região manifestaram preocupação com a possível redução de vagas de estacionamento em frente aos próprios estabelecimentos.\n\nQual foi a preocupação manifestada por alguns comerciantes, segundo o texto?",
+    "options": [
+      "A possível redução de vagas de estacionamento em frente aos estabelecimentos",
+      "O aumento do preço dos aluguéis comerciais",
+      "A proibição total de veículos na região",
+      "A construção de um novo shopping próximo"
+    ],
+    "correct_answer": "A possível redução de vagas de estacionamento em frente aos estabelecimentos",
+    "explanation": "O texto afirma isso diretamente: \"A possível redução de vagas de estacionamento em frente aos estabelecimentos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Ao perceber que muitos clientes abandonavam o carrinho de compras antes de finalizar a compra online, a loja resolveu simplificar o processo de pagamento, reduzindo de seis para três o número de etapas necessárias. Nos meses seguintes, a taxa de conclusão de compra aumentou consideravelmente.\n\nO que a loja fez para reduzir o abandono de carrinho, segundo o texto?",
+    "options": [
+      "Reduziu o número de etapas do processo de pagamento",
+      "Aumentou o preço dos produtos",
+      "Eliminou totalmente a opção de compra online",
+      "Passou a exigir cadastro obrigatório antes da navegação"
+    ],
+    "correct_answer": "Reduziu o número de etapas do processo de pagamento",
+    "explanation": "O texto afirma isso diretamente: \"Reduziu o número de etapas do processo de pagamento\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O professor notou que a turma tinha mais facilidade em entender o conteúdo de matemática quando os exemplos eram relacionados a situações do dia a dia dos próprios alunos, como cálculo de troco ou divisão de contas entre amigos, em vez de apenas exercícios abstratos no quadro.\n\nO que o professor percebeu sobre o aprendizado da turma?",
+    "options": [
+      "A turma entendia melhor com exemplos relacionados ao dia a dia dos alunos",
+      "A turma preferia exercícios totalmente abstratos",
+      "Os alunos não conseguiam aprender matemática de forma alguma",
+      "O conteúdo precisava ser reduzido pela metade"
+    ],
+    "correct_answer": "A turma entendia melhor com exemplos relacionados ao dia a dia dos alunos",
+    "explanation": "O texto afirma isso diretamente: \"A turma entendia melhor com exemplos relacionados ao dia a dia dos alunos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Apesar do escritório oferecer a opção de trabalho totalmente remoto, boa parte dos funcionários optou por continuar indo presencialmente pelo menos três vezes por semana, alegando que o contato direto com os colegas facilitava a resolução de problemas mais complexos do dia a dia.\n\nPor que muitos funcionários preferiram continuar indo presencialmente?",
+    "options": [
+      "O contato direto com colegas facilitava a resolução de problemas complexos",
+      "A empresa proibiu o trabalho remoto na prática",
+      "Não havia internet suficiente nas casas dos funcionários",
+      "O escritório oferecia salário maior para quem fosse presencial"
+    ],
+    "correct_answer": "O contato direto com colegas facilitava a resolução de problemas complexos",
+    "explanation": "O texto afirma isso diretamente: \"O contato direto com colegas facilitava a resolução de problemas complexos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A pequena vinícola familiar decidiu investir em turismo rural como forma de diversificar a renda, oferecendo visitas guiadas e degustação aos fins de semana. Em pouco tempo, essa nova atividade passou a representar quase um terço do faturamento total do negócio.\n\nQual foi o resultado da nova atividade de turismo rural para a vinícola?",
+    "options": [
+      "Passou a representar quase um terço do faturamento total",
+      "Reduziu drasticamente a produção de vinho",
+      "Fez a vinícola encerrar as atividades originais",
+      "Gerou prejuízo nos primeiros anos, sem recuperação"
+    ],
+    "correct_answer": "Passou a representar quase um terço do faturamento total",
+    "explanation": "O texto afirma isso diretamente: \"Passou a representar quase um terço do faturamento total\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de amigos planejava uma viagem de carro para o litoral, mas, ao verificar a previsão de forte chuva na estrada, decidiu adiar a partida em um dia, esperando que as condições melhorassem, em vez de arriscar dirigir sob chuva intensa por horas.\n\nPor que o grupo decidiu adiar a viagem em um dia?",
+    "options": [
+      "Para evitar dirigir sob chuva intensa por horas",
+      "Porque o carro quebrou antes da viagem",
+      "Porque um dos amigos desistiu de ir",
+      "Porque o litoral estava fechado para visitantes"
+    ],
+    "correct_answer": "Para evitar dirigir sob chuva intensa por horas",
+    "explanation": "O texto afirma isso diretamente: \"Para evitar dirigir sob chuva intensa por horas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A rede de farmácias decidiu ampliar o horário de atendimento em algumas unidades para 24 horas, após perceber, por meio de dados de vendas, que havia demanda significativa durante a madrugada, especialmente por medicamentos de uso contínuo e itens de emergência.\n\nO que motivou a rede de farmácias a ampliar o horário de atendimento?",
+    "options": [
+      "A demanda significativa durante a madrugada, identificada em dados de vendas",
+      "Uma exigência do governo local",
+      "A falta de concorrência na região",
+      "Um pedido direto de um único cliente"
+    ],
+    "correct_answer": "A demanda significativa durante a madrugada, identificada em dados de vendas",
+    "explanation": "O texto afirma isso diretamente: \"A demanda significativa durante a madrugada, identificada em dados de vendas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Mesmo tendo recebido diversas críticas nas primeiras apresentações, a jovem cantora decidiu manter seu estilo autoral em vez de seguir as fórmulas mais populares do momento. Anos depois, seu trabalho passou a ser reconhecido justamente pela originalidade que antes havia sido motivo de crítica.\n\nO que a cantora manteve, apesar das críticas iniciais?",
+    "options": [
+      "Seu estilo autoral, em vez de seguir fórmulas populares",
+      "A decisão de abandonar a carreira musical",
+      "A cópia de outros artistas de sucesso",
+      "A recusa em se apresentar publicamente"
+    ],
+    "correct_answer": "Seu estilo autoral, em vez de seguir fórmulas populares",
+    "explanation": "O texto afirma isso diretamente: \"Seu estilo autoral, em vez de seguir fórmulas populares\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O condomínio decidiu instalar painéis solares nas áreas comuns depois de comparar o investimento inicial com a economia projetada na conta de energia ao longo dos anos seguintes. Segundo os cálculos apresentados na assembleia, o valor investido seria recuperado em pouco mais de quatro anos.\n\nO que os cálculos apresentados na assembleia indicavam, segundo o texto?",
+    "options": [
+      "O investimento seria recuperado em pouco mais de quatro anos",
+      "A instalação nunca se pagaria financeiramente",
+      "O condomínio precisaria aumentar a taxa condominial permanentemente",
+      "A energia solar não geraria nenhuma economia real"
+    ],
+    "correct_answer": "O investimento seria recuperado em pouco mais de quatro anos",
+    "explanation": "O texto afirma isso diretamente: \"O investimento seria recuperado em pouco mais de quatro anos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Ao longo do processo seletivo, a candidata percebeu que a empresa valorizava mais exemplos concretos de experiências passadas do que respostas genéricas sobre qualidades pessoais. A partir dessa percepção, ela ajustou sua forma de responder nas próximas etapas, sempre citando situações reais que havia vivido.\n\nO que a candidata ajustou depois de perceber a preferência da empresa?",
+    "options": [
+      "Passou a citar situações reais que havia vivido",
+      "Parou de participar do processo seletivo",
+      "Passou a exagerar suas qualificações",
+      "Decidiu não responder mais nenhuma pergunta"
+    ],
+    "correct_answer": "Passou a citar situações reais que havia vivido",
+    "explanation": "O texto afirma isso diretamente: \"Passou a citar situações reais que havia vivido\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de anos vendendo apenas em feiras livres, o artesão resolveu criar um perfil em rede social para divulgar suas peças. No início, teve dificuldade em fotografar bem os produtos, mas, com o tempo, aprendeu técnicas simples de iluminação que melhoraram bastante a apresentação visual dos itens.\n\nQual dificuldade inicial o artesão teve ao divulgar seu trabalho online?",
+    "options": [
+      "Dificuldade em fotografar bem os produtos",
+      "Falta de peças para vender",
+      "Preço muito alto cobrado pelas redes sociais",
+      "Proibição de vender artesanato pela internet"
+    ],
+    "correct_answer": "Dificuldade em fotografar bem os produtos",
+    "explanation": "O texto afirma isso diretamente: \"Dificuldade em fotografar bem os produtos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A equipe de engenheiros precisou refazer parte do projeto da ponte depois que um estudo geológico mais detalhado revelou que o solo da região era menos firme do que o inicialmente previsto, exigindo uma fundação mais profunda para garantir a segurança da estrutura.\n\nPor que a equipe precisou refazer parte do projeto da ponte?",
+    "options": [
+      "Um estudo revelou que o solo era menos firme do que o previsto",
+      "O orçamento da obra havia sido reduzido pela metade",
+      "A prefeitura pediu uma ponte maior do que a planejada",
+      "Os engenheiros mudaram de empresa no meio do projeto"
+    ],
+    "correct_answer": "Um estudo revelou que o solo era menos firme do que o previsto",
+    "explanation": "O texto afirma isso diretamente: \"Um estudo revelou que o solo era menos firme do que o previsto\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O restaurante familiar, tradicional no bairro há mais de vinte anos, resistiu à tentação de mudar completamente o cardápio para acompanhar tendências passageiras, preferindo aperfeiçoar aos poucos os pratos que já eram populares entre os clientes mais antigos, mantendo assim sua identidade.\n\nQual foi a estratégia do restaurante em relação ao cardápio, segundo o texto?",
+    "options": [
+      "Aperfeiçoar aos poucos os pratos já populares, mantendo a identidade",
+      "Substituir completamente o cardápio a cada ano",
+      "Copiar exatamente o cardápio de restaurantes concorrentes",
+      "Reduzir o cardápio a apenas um único prato"
+    ],
+    "correct_answer": "Aperfeiçoar aos poucos os pratos já populares, mantendo a identidade",
+    "explanation": "O texto afirma isso diretamente: \"Aperfeiçoar aos poucos os pratos já populares, mantendo a identidade\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Ao notar que grande parte dos acidentes de trabalho na fábrica acontecia no início do turno da manhã, a gestão de segurança decidiu implementar uma pausa de alongamento obrigatória de cinco minutos antes do início das atividades, o que reduziu significativamente os incidentes registrados.\n\nO que a gestão de segurança implementou após identificar o padrão de acidentes?",
+    "options": [
+      "Uma pausa de alongamento obrigatória antes do início das atividades",
+      "A demissão dos funcionários envolvidos nos acidentes",
+      "O fechamento do turno da manhã",
+      "A redução do horário de trabalho para todos"
+    ],
+    "correct_answer": "Uma pausa de alongamento obrigatória antes do início das atividades",
+    "explanation": "O texto afirma isso diretamente: \"Uma pausa de alongamento obrigatória antes do início das atividades\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A cooperativa de pescadores decidiu adotar um período de defeso mais rigoroso do que o exigido por lei, com o objetivo de preservar a reprodução de uma espécie de peixe que vinha sendo capturada em excesso nos últimos anos, mesmo sabendo que isso reduziria a renda no curto prazo.\n\nPor que a cooperativa adotou um período de defeso mais rigoroso do que o exigido?",
+    "options": [
+      "Para preservar a reprodução de uma espécie capturada em excesso",
+      "Porque a lei havia mudado recentemente",
+      "Porque não havia mais peixes disponíveis na região",
+      "Porque o governo pagava um subsídio por isso"
+    ],
+    "correct_answer": "Para preservar a reprodução de uma espécie capturada em excesso",
+    "explanation": "O texto afirma isso diretamente: \"Para preservar a reprodução de uma espécie capturada em excesso\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Durante a reforma do apartamento, o casal decidiu manter o piso original de madeira da sala, mesmo com sugestões de trocá-lo por um material mais moderno, porque aquele piso havia pertencido aos avós e carregava um valor sentimental importante para ambos.\n\nPor que o casal decidiu manter o piso original?",
+    "options": [
+      "Porque o piso havia pertencido aos avós e tinha valor sentimental",
+      "Porque não havia dinheiro suficiente para trocar o piso",
+      "Porque o material moderno não estava disponível na loja",
+      "Porque o síndico do prédio proibiu a troca"
+    ],
+    "correct_answer": "Porque o piso havia pertencido aos avós e tinha valor sentimental",
+    "explanation": "O texto afirma isso diretamente: \"Porque o piso havia pertencido aos avós e tinha valor sentimental\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A startup de tecnologia decidiu adiar o lançamento do aplicativo em duas semanas depois que os testes internos identificaram uma falha de segurança que poderia expor dados dos usuários. Apesar da pressão para lançar na data original, a equipe considerou que corrigir o problema era prioridade.\n\nPor que a startup adiou o lançamento do aplicativo?",
+    "options": [
+      "Os testes identificaram uma falha de segurança que poderia expor dados",
+      "A equipe de desenvolvimento pediu férias coletivas",
+      "Faltavam recursos financeiros para o lançamento",
+      "Um concorrente lançou um produto parecido antes"
+    ],
+    "correct_answer": "Os testes identificaram uma falha de segurança que poderia expor dados",
+    "explanation": "O texto afirma isso diretamente: \"Os testes identificaram uma falha de segurança que poderia expor dados\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de teatro amador, formado majoritariamente por moradores do bairro, conseguiu financiar sua primeira peça própria através de uma campanha de arrecadação coletiva online, depois de anos apresentando apenas adaptações de textos já conhecidos por falta de recursos para produções originais.\n\nComo o grupo de teatro conseguiu financiar sua primeira peça original?",
+    "options": [
+      "Através de uma campanha de arrecadação coletiva online",
+      "Recebendo um patrocínio de uma grande empresa",
+      "Vendendo o prédio onde ensaiavam",
+      "Através de um empréstimo bancário tradicional"
+    ],
+    "correct_answer": "Através de uma campanha de arrecadação coletiva online",
+    "explanation": "O texto afirma isso diretamente: \"Através de uma campanha de arrecadação coletiva online\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de identificar que muitos idosos da região tinham dificuldade em usar o aplicativo do banco, a agência local passou a oferecer, uma vez por semana, um atendimento presencial dedicado exclusivamente a ensinar o uso das funções básicas do aplicativo para esse público.\n\nO que a agência bancária passou a oferecer para os idosos da região?",
+    "options": [
+      "Um atendimento presencial semanal dedicado a ensinar o uso do aplicativo",
+      "O fechamento definitivo da agência física",
+      "Um desconto especial em taxas bancárias",
+      "A proibição do uso do aplicativo por idosos"
+    ],
+    "correct_answer": "Um atendimento presencial semanal dedicado a ensinar o uso do aplicativo",
+    "explanation": "O texto afirma isso diretamente: \"Um atendimento presencial semanal dedicado a ensinar o uso do aplicativo\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O motorista de caminhão relatou que, após anos fazendo a mesma rota entre duas capitais, decidiu investir num curso de direção econômica, que ensina técnicas para reduzir o consumo de combustível. Segundo ele, a economia mensal gerada compensou rapidamente o valor pago pelo curso.\n\nO que o curso de direção econômica ensinava, segundo o texto?",
+    "options": [
+      "Técnicas para reduzir o consumo de combustível",
+      "Como trocar de rota com mais frequência",
+      "Como conduzir veículos maiores do que o habitual",
+      "Como reduzir o tempo total de viagem"
+    ],
+    "correct_answer": "Técnicas para reduzir o consumo de combustível",
+    "explanation": "O texto afirma isso diretamente: \"Técnicas para reduzir o consumo de combustível\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Apesar de a empresa de logística ter investido pesado em automação de estoque, os gestores perceberam que ainda era necessário manter uma equipe humana para lidar com situações imprevistas, como produtos com embalagens danificadas, que o sistema automatizado não conseguia identificar sozinho.\n\nPor que a empresa manteve uma equipe humana mesmo após investir em automação?",
+    "options": [
+      "Para lidar com situações imprevistas que o sistema não identificava sozinho",
+      "Porque a automação havia sido totalmente cancelada",
+      "Porque os funcionários se recusaram a sair",
+      "Porque o sistema automatizado quebrou permanentemente"
+    ],
+    "correct_answer": "Para lidar com situações imprevistas que o sistema não identificava sozinho",
+    "explanation": "O texto afirma isso diretamente: \"Para lidar com situações imprevistas que o sistema não identificava sozinho\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A escola de idiomas notou que os alunos que praticavam conversação em grupos pequenos, de no máximo quatro pessoas, avançavam mais rápido do que aqueles em turmas grandes, provavelmente por terem mais oportunidades de falar durante cada aula.\n\nO que a escola notou sobre os alunos em grupos pequenos?",
+    "options": [
+      "Avançavam mais rápido, possivelmente por falarem mais durante a aula",
+      "Tinham mais dificuldade de aprender do que em turmas grandes",
+      "Desistiam do curso com mais frequência",
+      "Pagavam um valor menor pela mensalidade"
+    ],
+    "correct_answer": "Avançavam mais rápido, possivelmente por falarem mais durante a aula",
+    "explanation": "O texto afirma isso diretamente: \"Avançavam mais rápido, possivelmente por falarem mais durante a aula\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O casal de aposentados decidiu transformar parte do quintal de casa numa horta comunitária aberta aos vizinhos, depois de perceber que muitas famílias próximas não tinham espaço próprio para cultivar hortaliças. A iniciativa, além de fortalecer laços entre vizinhos, ajudou a reduzir o gasto mensal com alimentação de várias famílias.\n\nQual foi um dos benefícios da horta comunitária, segundo o texto?",
+    "options": [
+      "Ajudou a reduzir o gasto mensal com alimentação de várias famílias",
+      "Gerou lucro financeiro direto para o casal",
+      "Substituiu totalmente os supermercados da região",
+      "Fez com que os vizinhos se afastassem uns dos outros"
+    ],
+    "correct_answer": "Ajudou a reduzir o gasto mensal com alimentação de várias famílias",
+    "explanation": "O texto afirma isso diretamente: \"Ajudou a reduzir o gasto mensal com alimentação de várias famílias\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O laboratório universitário conseguiu reduzir o tempo de análise de amostras de dias para poucas horas depois de automatizar uma etapa que antes era feita manualmente por técnicos. Isso permitiu que a equipe atendesse um número muito maior de pesquisas simultâneas ao longo do semestre.\n\nO que a automação permitiu ao laboratório, segundo o texto?",
+    "options": [
+      "Atender um número muito maior de pesquisas simultâneas",
+      "Reduzir o número de pesquisadores contratados",
+      "Eliminar totalmente a necessidade de análise de amostras",
+      "Aumentar o custo de cada análise realizada"
+    ],
+    "correct_answer": "Atender um número muito maior de pesquisas simultâneas",
+    "explanation": "O texto afirma isso diretamente: \"Atender um número muito maior de pesquisas simultâneas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Mesmo com a oferta de um cargo de gerência em outra filial, com salário mais alto, Juliana preferiu continuar na função atual, alegando que o novo cargo exigiria viagens frequentes, o que dificultaria conciliar o trabalho com o cuidado dos filhos pequenos.\n\nPor que Juliana recusou o cargo de gerência oferecido?",
+    "options": [
+      "O novo cargo exigiria viagens frequentes, dificultando o cuidado dos filhos",
+      "O salário oferecido era menor do que o atual",
+      "Ela já havia decidido pedir demissão da empresa",
+      "A filial oferecida ficava muito perto de sua casa"
+    ],
+    "correct_answer": "O novo cargo exigiria viagens frequentes, dificultando o cuidado dos filhos",
+    "explanation": "O texto afirma isso diretamente: \"O novo cargo exigiria viagens frequentes, dificultando o cuidado dos filhos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A cidade litorânea investiu na recuperação de dunas de areia que haviam sido degradadas por décadas de ocupação irregular. Além do benefício ambiental, técnicos apontaram que as dunas recuperadas também funcionam como barreira natural contra o avanço do mar em dias de ressaca mais forte.\n\nQual função adicional as dunas recuperadas passaram a cumprir, segundo o texto?",
+    "options": [
+      "Funcionar como barreira natural contra o avanço do mar",
+      "Servir de estacionamento para turistas",
+      "Substituir a necessidade de saneamento básico",
+      "Aumentar a temperatura da água do mar"
+    ],
+    "correct_answer": "Funcionar como barreira natural contra o avanço do mar",
+    "explanation": "O texto afirma isso diretamente: \"Funcionar como barreira natural contra o avanço do mar\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno estúdio de animação, formado por apenas três pessoas, decidiu focar em curtas-metragens autorais em vez de aceitar contratos maiores de publicidade, mesmo sabendo que isso significaria uma receita mensal menos previsível no curto prazo.\n\nQual escolha o estúdio de animação fez, segundo o texto?",
+    "options": [
+      "Focar em curtas-metragens autorais em vez de contratos de publicidade",
+      "Fechar as portas por falta de clientes",
+      "Aceitar apenas grandes contratos publicitários",
+      "Contratar dezenas de novos funcionários"
+    ],
+    "correct_answer": "Focar em curtas-metragens autorais em vez de contratos de publicidade",
+    "explanation": "O texto afirma isso diretamente: \"Focar em curtas-metragens autorais em vez de contratos de publicidade\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de um período de queda nas vendas, a loja de roupas decidiu reformular a vitrine trocando manequins a cada semana, em vez de manter a mesma exposição por meses. O movimento de clientes entrando apenas para observar as novidades aumentou visivelmente nas semanas seguintes.\n\nO que a loja fez para tentar reverter a queda nas vendas?",
+    "options": [
+      "Passou a trocar os manequins da vitrine semanalmente",
+      "Reduziu drasticamente o preço de todos os produtos",
+      "Fechou a loja física e passou a vender só online",
+      "Contratou um novo gerente de vendas"
+    ],
+    "correct_answer": "Passou a trocar os manequins da vitrine semanalmente",
+    "explanation": "O texto afirma isso diretamente: \"Passou a trocar os manequins da vitrine semanalmente\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de pesquisadores precisou revisar sua hipótese inicial depois que os dados coletados em campo mostraram um padrão diferente do esperado. Em vez de descartar o estudo, a equipe decidiu investigar essa divergência mais a fundo, o que acabou levando a uma descoberta não planejada originalmente.\n\nO que a divergência nos dados levou a equipe a fazer?",
+    "options": [
+      "Investigar mais a fundo, levando a uma descoberta não planejada",
+      "Abandonar completamente a pesquisa",
+      "Ignorar os dados coletados e manter a hipótese original",
+      "Repetir o experimento exatamente da mesma forma"
+    ],
+    "correct_answer": "Investigar mais a fundo, levando a uma descoberta não planejada",
+    "explanation": "O texto afirma isso diretamente: \"Investigar mais a fundo, levando a uma descoberta não planejada\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno hotel de montanha, tradicionalmente aberto apenas no verão, decidiu funcionar também no inverno depois de perceber uma demanda crescente por turismo de neve na região. A mudança exigiu investimento em aquecimento e isolamento térmico dos quartos, mas os primeiros resultados foram considerados positivos pelos donos.\n\nO que motivou o hotel a funcionar também no inverno?",
+    "options": [
+      "Uma demanda crescente por turismo de neve na região",
+      "A proibição de funcionar apenas no verão",
+      "A falta de hóspedes durante o próprio verão",
+      "Uma exigência do governo local"
+    ],
+    "correct_answer": "Uma demanda crescente por turismo de neve na região",
+    "explanation": "O texto afirma isso diretamente: \"Uma demanda crescente por turismo de neve na região\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Ao perceber que grande parte dos clientes abandonava o aplicativo de delivery após o primeiro pedido, a empresa passou a investigar os motivos através de pesquisas de satisfação. Descobriu que o tempo de entrega, mais do que o preço, era o principal fator de insatisfação relatado.\n\nQual foi o principal fator de insatisfação identificado pela empresa?",
+    "options": [
+      "O tempo de entrega",
+      "O preço dos produtos",
+      "A variedade de restaurantes disponíveis",
+      "A dificuldade de pagamento no aplicativo"
+    ],
+    "correct_answer": "O tempo de entrega",
+    "explanation": "O texto afirma isso diretamente: \"O tempo de entrega\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de teatro infantil decidiu incluir intérpretes de língua de sinais em todas as apresentações, depois de receber sugestões de famílias de crianças surdas que frequentavam o espaço cultural. A iniciativa foi bem recebida e passou a ser adotada também por outros grupos da mesma região.\n\nO que motivou o grupo de teatro a incluir intérpretes de língua de sinais?",
+    "options": [
+      "Sugestões de famílias de crianças surdas que frequentavam o espaço",
+      "Uma exigência obrigatória do teatro municipal",
+      "A redução no número de espectadores ouvintes",
+      "Um pedido dos próprios atores do grupo"
+    ],
+    "correct_answer": "Sugestões de famílias de crianças surdas que frequentavam o espaço",
+    "explanation": "O texto afirma isso diretamente: \"Sugestões de famílias de crianças surdas que frequentavam o espaço\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno produtor de café decidiu certificar sua produção como orgânica, processo que levou quase três anos entre adaptações no cultivo e auditorias externas. Apesar do tempo e custo envolvidos, ele relata que conseguiu vender o produto a um preço melhor depois de obter o selo.\n\nO que o produtor conseguiu depois de obter a certificação orgânica?",
+    "options": [
+      "Vender o produto a um preço melhor",
+      "Reduzir o tempo de plantio pela metade",
+      "Eliminar totalmente a necessidade de auditorias futuras",
+      "Triplicar a área plantada da propriedade"
+    ],
+    "correct_answer": "Vender o produto a um preço melhor",
+    "explanation": "O texto afirma isso diretamente: \"Vender o produto a um preço melhor\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A equipe de desenvolvimento do jogo eletrônico recebeu críticas dos jogadores sobre a dificuldade excessiva de uma fase específica. Em vez de simplesmente reduzir a dificuldade, os desenvolvedores optaram por adicionar dicas visuais opcionais, mantendo o desafio para quem preferisse a experiência original.\n\nComo os desenvolvedores resolveram o problema da fase difícil?",
+    "options": [
+      "Adicionaram dicas visuais opcionais, mantendo o desafio original disponível",
+      "Removeram a fase completamente do jogo",
+      "Reduziram drasticamente a dificuldade para todos os jogadores",
+      "Pediram desculpas mas não fizeram nenhuma alteração"
+    ],
+    "correct_answer": "Adicionaram dicas visuais opcionais, mantendo o desafio original disponível",
+    "explanation": "O texto afirma isso diretamente: \"Adicionaram dicas visuais opcionais, mantendo o desafio original disponível\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de anos ministrando aulas apenas presenciais, a professora de música decidiu gravar videoaulas gratuitas sobre teoria musical básica, disponibilizando o material online. Embora não gerasse renda direta, ela relata que essa iniciativa aumentou significativamente a procura por suas aulas particulares presenciais.\n\nQual foi o efeito das videoaulas gratuitas sobre as aulas particulares da professora?",
+    "options": [
+      "Aumentou significativamente a procura por suas aulas particulares",
+      "Fez com que ela parasse de dar aulas presenciais",
+      "Reduziu o interesse das pessoas por aulas de música",
+      "Gerou uma renda direta maior do que as aulas presenciais"
+    ],
+    "correct_answer": "Aumentou significativamente a procura por suas aulas particulares",
+    "explanation": "O texto afirma isso diretamente: \"Aumentou significativamente a procura por suas aulas particulares\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O condomínio decidiu instalar câmeras de segurança adicionais na garagem depois de dois furtos registrados em poucos meses. Alguns moradores questionaram o custo da instalação, mas a maioria concordou, na assembleia seguinte, que a medida era necessária diante do histórico recente de ocorrências.\n\nO que motivou a instalação de câmeras adicionais no condomínio?",
+    "options": [
+      "Dois furtos registrados na garagem em poucos meses",
+      "Uma exigência da prefeitura local",
+      "O desejo de reduzir a taxa condominial",
+      "A reforma geral do prédio"
+    ],
+    "correct_answer": "Dois furtos registrados na garagem em poucos meses",
+    "explanation": "O texto afirma isso diretamente: \"Dois furtos registrados na garagem em poucos meses\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O escritor, depois de ter vários manuscritos recusados por editoras tradicionais, decidiu publicar seu primeiro livro de forma independente pela internet. Com o sucesso inesperado das vendas digitais, uma editora acabou entrando em contato tempos depois, propondo lançar uma versão física da obra.\n\nO que aconteceu depois do sucesso das vendas digitais do livro?",
+    "options": [
+      "Uma editora entrou em contato propondo uma versão física",
+      "O escritor decidiu parar de escrever",
+      "As vendas digitais foram canceladas por completo",
+      "O livro foi banido das plataformas digitais"
+    ],
+    "correct_answer": "Uma editora entrou em contato propondo uma versão física",
+    "explanation": "O texto afirma isso diretamente: \"Uma editora entrou em contato propondo uma versão física\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A fábrica de móveis passou a utilizar madeira certificada, proveniente de manejo florestal sustentável, depois de perceber uma mudança na preferência de parte dos clientes corporativos, que passaram a exigir esse tipo de comprovação em suas licitações de compra.\n\nPor que a fábrica passou a usar madeira certificada?",
+    "options": [
+      "Clientes corporativos passaram a exigir esse tipo de comprovação",
+      "A madeira certificada era mais barata que a comum",
+      "Houve uma proibição total de madeira não certificada",
+      "A fábrica não conseguia mais comprar madeira comum"
+    ],
+    "correct_answer": "Clientes corporativos passaram a exigir esse tipo de comprovação",
+    "explanation": "O texto afirma isso diretamente: \"Clientes corporativos passaram a exigir esse tipo de comprovação\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de corredores amadores, que se reunia informalmente aos sábados, decidiu formalizar um clube com regras básicas de organização depois que o número de participantes cresceu de cinco para mais de cinquenta pessoas, tornando inviável continuar sem nenhuma estrutura mínima.\n\nPor que o grupo decidiu se formalizar como clube?",
+    "options": [
+      "O número de participantes cresceu, tornando inviável continuar sem estrutura",
+      "Um patrocinador exigiu a formalização para investir",
+      "A prefeitura proibiu corridas informais nas ruas",
+      "Os corredores originais decidiram parar de correr"
+    ],
+    "correct_answer": "O número de participantes cresceu, tornando inviável continuar sem estrutura",
+    "explanation": "O texto afirma isso diretamente: \"O número de participantes cresceu, tornando inviável continuar sem estrutura\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Ao identificar um aumento nas reclamações sobre ruído em determinado trecho da linha de produção, a fábrica investiu em isolamento acústico e trocou parte dos equipamentos mais antigos. Além de reduzir o desconforto dos funcionários, a mudança também diminuiu o número de afastamentos por problemas auditivos.\n\nQual benefício adicional a mudança trouxe, além de reduzir o desconforto dos funcionários?",
+    "options": [
+      "Diminuiu o número de afastamentos por problemas auditivos",
+      "Aumentou a produção em dez vezes",
+      "Eliminou a necessidade de qualquer manutenção futura",
+      "Reduziu o número total de funcionários necessários"
+    ],
+    "correct_answer": "Diminuiu o número de afastamentos por problemas auditivos",
+    "explanation": "O texto afirma isso diretamente: \"Diminuiu o número de afastamentos por problemas auditivos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A pequena confeitaria, conhecida por um único tipo de bolo, resistiu por anos à pressão de clientes para expandir o cardápio, temendo perder a qualidade que a diferenciava. Quando finalmente decidiu adicionar apenas mais duas opções, manteve o mesmo padrão de qualidade que já era reconhecido pelos clientes.\n\nO que a confeitaria temia ao considerar expandir o cardápio?",
+    "options": [
+      "Perder a qualidade que a diferenciava dos concorrentes",
+      "Não ter clientes suficientes para o produto original",
+      "Ter que fechar as portas definitivamente",
+      "Perder o ponto comercial onde funcionava"
+    ],
+    "correct_answer": "Perder a qualidade que a diferenciava dos concorrentes",
+    "explanation": "O texto afirma isso diretamente: \"Perder a qualidade que a diferenciava dos concorrentes\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O técnico de manutenção elétrica relatou que, depois de anos atuando sozinho, decidiu formar uma pequena equipe para atender mais clientes simultaneamente. A mudança exigiu que ele aprendesse também a gerenciar pessoas, uma habilidade que não fazia parte de sua formação técnica original.\n\nQual nova habilidade o técnico precisou desenvolver, segundo o texto?",
+    "options": [
+      "Gerenciar pessoas",
+      "Consertar equipamentos mais modernos",
+      "Falar outro idioma com os clientes",
+      "Trabalhar em alturas elevadas"
+    ],
+    "correct_answer": "Gerenciar pessoas",
+    "explanation": "O texto afirma isso diretamente: \"Gerenciar pessoas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A biblioteca pública decidiu criar um espaço silencioso separado, exclusivo para quem precisava estudar de forma mais concentrada, depois de receber reclamações recorrentes sobre o barulho gerado por grupos de estudo em outras áreas do mesmo salão.\n\nPor que a biblioteca criou um espaço silencioso separado?",
+    "options": [
+      "Recebeu reclamações sobre o barulho gerado por grupos de estudo",
+      "Queria reduzir o número total de visitantes",
+      "O governo exigiu essa divisão por lei",
+      "Não havia mais espaço físico disponível no prédio"
+    ],
+    "correct_answer": "Recebeu reclamações sobre o barulho gerado por grupos de estudo",
+    "explanation": "O texto afirma isso diretamente: \"Recebeu reclamações sobre o barulho gerado por grupos de estudo\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O casal de designers gráficos, ao abrir o próprio escritório, decidiu recusar propostas de clientes que exigiam prazos considerados irreais, mesmo com receio inicial de perder receita, priorizando entregar um trabalho de qualidade dentro de prazos que consideravam factíveis.\n\nQue tipo de proposta o casal decidiu recusar?",
+    "options": [
+      "Propostas com prazos considerados irreais",
+      "Propostas de clientes de outras cidades",
+      "Propostas com pagamento à vista",
+      "Propostas de projetos muito pequenos"
+    ],
+    "correct_answer": "Propostas com prazos considerados irreais",
+    "explanation": "O texto afirma isso diretamente: \"Propostas com prazos considerados irreais\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de perceber que boa parte dos turistas visitava a cidade histórica apenas por um dia, sem pernoitar, a associação de comércio local criou um roteiro noturno com atividades culturais, na tentativa de incentivar uma permanência mais longa e, consequentemente, maior gasto na região.\n\nQual foi o objetivo da associação de comércio ao criar o roteiro noturno?",
+    "options": [
+      "Incentivar uma permanência mais longa dos turistas na cidade",
+      "Reduzir o número de turistas que visitavam a cidade",
+      "Proibir visitas diurnas à cidade histórica",
+      "Fechar o comércio durante o dia"
+    ],
+    "correct_answer": "Incentivar uma permanência mais longa dos turistas na cidade",
+    "explanation": "O texto afirma isso diretamente: \"Incentivar uma permanência mais longa dos turistas na cidade\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno laboratório farmacêutico universitário conseguiu uma parceria com uma empresa privada para financiar a fase final de testes de um novo medicamento, depois de anos de pesquisa custeada majoritariamente por recursos públicos limitados.\n\nO que permitiu ao laboratório avançar para a fase final de testes, segundo o texto?",
+    "options": [
+      "Uma parceria com uma empresa privada para financiamento",
+      "O aumento do número de pesquisadores envolvidos",
+      "A descoberta de uma nova substância",
+      "A doação voluntária de pacientes para testes"
+    ],
+    "correct_answer": "Uma parceria com uma empresa privada para financiamento",
+    "explanation": "O texto afirma isso diretamente: \"Uma parceria com uma empresa privada para financiamento\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A escola de samba, tradicional no bairro há décadas, decidiu abrir as portas dos ensaios para visitantes de fora da comunidade, como forma de gerar renda extra através da venda de ingressos, sem perder o caráter comunitário que sempre marcou a agremiação.\n\nQual foi o motivo de a escola de samba abrir os ensaios para visitantes externos?",
+    "options": [
+      "Gerar renda extra através da venda de ingressos",
+      "Reduzir o número de integrantes da comunidade",
+      "Uma exigência da prefeitura para continuar funcionando",
+      "Substituir totalmente os ensaios internos"
+    ],
+    "correct_answer": "Gerar renda extra através da venda de ingressos",
+    "explanation": "O texto afirma isso diretamente: \"Gerar renda extra através da venda de ingressos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O aplicativo de caronas compartilhadas passou a oferecer um desconto para quem agendasse a corrida com pelo menos duas horas de antecedência, incentivando os usuários a planejar melhor os deslocamentos e ajudando a empresa a organizar melhor a distribuição de motoristas disponíveis na região.\n\nQual foi o benefício do desconto por agendamento antecipado para a própria empresa, segundo o texto?",
+    "options": [
+      "Ajudou a organizar melhor a distribuição de motoristas disponíveis",
+      "Reduziu o número total de usuários do aplicativo",
+      "Eliminou a necessidade de motoristas na região",
+      "Aumentou o preço de todas as corridas"
+    ],
+    "correct_answer": "Ajudou a organizar melhor a distribuição de motoristas disponíveis",
+    "explanation": "O texto afirma isso diretamente: \"Ajudou a organizar melhor a distribuição de motoristas disponíveis\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de moradores de um condomínio antigo decidiu criar um fundo de reserva específico para manutenção do elevador, depois de perceber que consertos emergenciais estavam consumindo boa parte do orçamento mensal sem nenhum planejamento prévio de longo prazo.\n\nPor que o grupo de moradores criou um fundo específico para o elevador?",
+    "options": [
+      "Consertos emergenciais consumiam boa parte do orçamento sem planejamento prévio",
+      "O elevador havia sido substituído recentemente",
+      "A prefeitura exigiu esse tipo de fundo por lei",
+      "Os moradores decidiram parar de usar o elevador"
+    ],
+    "correct_answer": "Consertos emergenciais consumiam boa parte do orçamento sem planejamento prévio",
+    "explanation": "O texto afirma isso diretamente: \"Consertos emergenciais consumiam boa parte do orçamento sem planejamento prévio\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A pequena editora independente decidiu apostar em autores estreantes da própria região, em vez de disputar direitos de tradução de livros estrangeiros já consagrados, como forma de reduzir custos e ao mesmo tempo dar visibilidade a talentos locais ainda desconhecidos do público.\n\nQual foi a estratégia adotada pela editora, segundo o texto?",
+    "options": [
+      "Apostar em autores estreantes da própria região",
+      "Publicar exclusivamente traduções de best-sellers estrangeiros",
+      "Parar de publicar novos títulos por um ano",
+      "Vender os direitos autorais para outra editora"
+    ],
+    "correct_answer": "Apostar em autores estreantes da própria região",
+    "explanation": "O texto afirma isso diretamente: \"Apostar em autores estreantes da própria região\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O posto de saúde do bairro passou a oferecer atendimento noturno duas vezes por semana, depois de identificar que muitos moradores que trabalhavam durante o dia inteiro tinham dificuldade em conseguir consultas dentro do horário comercial tradicional.\n\nO que motivou o posto de saúde a oferecer atendimento noturno?",
+    "options": [
+      "Moradores que trabalhavam o dia inteiro tinham dificuldade em conseguir consultas",
+      "A redução no número de médicos disponíveis durante o dia",
+      "Uma determinação do governo federal",
+      "O fechamento de outro posto de saúde próximo"
+    ],
+    "correct_answer": "Moradores que trabalhavam o dia inteiro tinham dificuldade em conseguir consultas",
+    "explanation": "O texto afirma isso diretamente: \"Moradores que trabalhavam o dia inteiro tinham dificuldade em conseguir consultas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Ao planejar a reforma da praça central, a prefeitura promoveu consultas públicas com moradores antes de definir o projeto final, o que resultou na inclusão de uma área para idosos praticarem exercícios, sugestão que não constava no projeto original apresentado pelos técnicos.\n\nO que resultou das consultas públicas realizadas pela prefeitura?",
+    "options": [
+      "A inclusão de uma área para idosos praticarem exercícios",
+      "O cancelamento total da reforma da praça",
+      "A redução do orçamento destinado à obra",
+      "A escolha de outro local para a praça"
+    ],
+    "correct_answer": "A inclusão de uma área para idosos praticarem exercícios",
+    "explanation": "O texto afirma isso diretamente: \"A inclusão de uma área para idosos praticarem exercícios\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de músicos de rua, depois de anos tocando apenas no centro da cidade, decidiu se apresentar também em bairros mais afastados, alternando os pontos a cada semana. Segundo eles, essa mudança ajudou a alcançar um público que nunca tinha visto o grupo tocar antes.\n\nQual foi o resultado de o grupo passar a se apresentar em bairros afastados?",
+    "options": [
+      "Ajudou a alcançar um público que nunca tinha visto o grupo tocar",
+      "Reduziu o número de pessoas que assistiam às apresentações",
+      "Fez o grupo parar de tocar no centro da cidade",
+      "Gerou reclamações dos moradores dos novos bairros"
+    ],
+    "correct_answer": "Ajudou a alcançar um público que nunca tinha visto o grupo tocar",
+    "explanation": "O texto afirma isso diretamente: \"Ajudou a alcançar um público que nunca tinha visto o grupo tocar\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A cooperativa agrícola decidiu investir em um sistema de previsão climática mais preciso, voltado especificamente para a região onde os produtores atuavam, depois de registrar perdas significativas em safras anteriores causadas por geadas que não haviam sido previstas com antecedência suficiente.\n\nPor que a cooperativa investiu num sistema de previsão climática mais preciso?",
+    "options": [
+      "Registrou perdas em safras anteriores causadas por geadas não previstas",
+      "O governo exigiu esse investimento por lei",
+      "Os produtores queriam vender o sistema para outras cooperativas",
+      "Houve um aumento no preço dos produtos agrícolas"
+    ],
+    "correct_answer": "Registrou perdas em safras anteriores causadas por geadas não previstas",
+    "explanation": "O texto afirma isso diretamente: \"Registrou perdas em safras anteriores causadas por geadas não previstas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno estúdio de tatuagem decidiu adotar um sistema de agendamento online depois de perceber que muitos clientes desistiam ao precisar ligar durante o horário comercial, quando o artista estava ocupado atendendo outros clientes e não conseguia responder rapidamente.\n\nPor que muitos clientes desistiam do agendamento antes da mudança, segundo o texto?",
+    "options": [
+      "Precisavam ligar durante o horário comercial, quando o artista estava ocupado",
+      "O preço da tatuagem era considerado muito alto",
+      "O estúdio não tinha boa reputação na região",
+      "Faltava espaço físico no estúdio para novos clientes"
+    ],
+    "correct_answer": "Precisavam ligar durante o horário comercial, quando o artista estava ocupado",
+    "explanation": "O texto afirma isso diretamente: \"Precisavam ligar durante o horário comercial, quando o artista estava ocupado\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "Depois de anos utilizando apenas fertilizantes químicos, o produtor rural começou a intercalar o uso com adubos orgânicos produzidos na própria propriedade, a partir de restos de colheita, numa tentativa de reduzir custos e melhorar a qualidade do solo a longo prazo.\n\nQual foi o objetivo do produtor ao intercalar fertilizantes químicos com adubo orgânico?",
+    "options": [
+      "Reduzir custos e melhorar a qualidade do solo a longo prazo",
+      "Aumentar imediatamente o preço de venda da produção",
+      "Parar de vender para o mercado tradicional",
+      "Eliminar totalmente a necessidade de colheita"
+    ],
+    "correct_answer": "Reduzir custos e melhorar a qualidade do solo a longo prazo",
+    "explanation": "O texto afirma isso diretamente: \"Reduzir custos e melhorar a qualidade do solo a longo prazo\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A rádio comunitária, mantida havia anos apenas por doações voluntárias dos ouvintes, passou a oferecer espaços publicitários para pequenos comércios locais, o que garantiu uma receita mais estável para cobrir os custos fixos mensais de manutenção do equipamento.\n\nO que a rádio comunitária passou a fazer para ter uma receita mais estável?",
+    "options": [
+      "Oferecer espaços publicitários para pequenos comércios locais",
+      "Parar de transmitir programação diariamente",
+      "Cobrar uma taxa mensal dos próprios ouvintes",
+      "Vender o equipamento de transmissão"
+    ],
+    "correct_answer": "Oferecer espaços publicitários para pequenos comércios locais",
+    "explanation": "O texto afirma isso diretamente: \"Oferecer espaços publicitários para pequenos comércios locais\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O time de vôlei amador, formado por colegas de trabalho, decidiu contratar um técnico apenas para os treinos de sábado, mesmo sem nenhuma pretensão profissional, porque perceberam que a orientação técnica melhorava significativamente o desempenho e a diversão durante os jogos.\n\nPor que o time decidiu contratar um técnico, segundo o texto?",
+    "options": [
+      "A orientação técnica melhorava o desempenho e a diversão durante os jogos",
+      "Queriam disputar competições profissionais no futuro",
+      "Um patrocinador exigiu a contratação de um técnico",
+      "O time estava perdendo todos os jogos disputados"
+    ],
+    "correct_answer": "A orientação técnica melhorava o desempenho e a diversão durante os jogos",
+    "explanation": "O texto afirma isso diretamente: \"A orientação técnica melhorava o desempenho e a diversão durante os jogos\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A gráfica familiar, tradicionalmente especializada em cartões de visita e panfletos, decidiu investir em equipamentos para impressão de tecido depois de identificar uma demanda crescente por camisetas personalizadas entre pequenos empreendedores da região.\n\nO que motivou a gráfica a investir em impressão de tecido?",
+    "options": [
+      "Uma demanda crescente por camisetas personalizadas entre pequenos empreendedores",
+      "O fim da demanda por cartões de visita",
+      "Uma exigência dos fornecedores de papel",
+      "A falência de outra gráfica concorrente"
+    ],
+    "correct_answer": "Uma demanda crescente por camisetas personalizadas entre pequenos empreendedores",
+    "explanation": "O texto afirma isso diretamente: \"Uma demanda crescente por camisetas personalizadas entre pequenos empreendedores\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de estudantes de arquitetura decidiu desenvolver, como projeto de conclusão de curso, um modelo de casa popular de baixo custo utilizando materiais reaproveitados de demolições, buscando provar que era possível unir sustentabilidade e economia numa construção habitacional real.\n\nQual foi o objetivo do projeto de conclusão de curso, segundo o texto?",
+    "options": [
+      "Provar que era possível unir sustentabilidade e economia numa construção real",
+      "Vencer um prêmio internacional de arquitetura",
+      "Substituir totalmente a construção civil tradicional",
+      "Reduzir o número de demolições na cidade"
+    ],
+    "correct_answer": "Provar que era possível unir sustentabilidade e economia numa construção real",
+    "explanation": "O texto afirma isso diretamente: \"Provar que era possível unir sustentabilidade e economia numa construção real\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A pequena loja de instrumentos musicais decidiu oferecer aulas experimentais gratuitas aos sábados, como forma de atrair clientes interessados em aprender a tocar antes de decidir qual instrumento comprar, reduzindo assim o número de devoluções por arrependimento.\n\nQual foi o benefício das aulas experimentais gratuitas para a loja, segundo o texto?",
+    "options": [
+      "Reduziu o número de devoluções por arrependimento",
+      "Aumentou o preço dos instrumentos vendidos",
+      "Eliminou a necessidade de vendedores na loja",
+      "Fez a loja parar de vender instrumentos usados"
+    ],
+    "correct_answer": "Reduziu o número de devoluções por arrependimento",
+    "explanation": "O texto afirma isso diretamente: \"Reduziu o número de devoluções por arrependimento\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O motorista de ônibus urbano, depois de anos de experiência, passou a orientar informalmente novos colegas sobre pontos de atenção específicos de cada linha, como cruzamentos mais perigosos ou horários de maior movimento, compartilhando um conhecimento que só havia adquirido com o tempo.\n\nO que o motorista experiente passou a compartilhar com os colegas mais novos?",
+    "options": [
+      "Pontos de atenção específicos de cada linha, adquiridos com a experiência",
+      "A senha de acesso ao sistema interno da empresa",
+      "Informações sobre o salário de outros funcionários",
+      "Reclamações sobre a empresa de ônibus"
+    ],
+    "correct_answer": "Pontos de atenção específicos de cada linha, adquiridos com a experiência",
+    "explanation": "O texto afirma isso diretamente: \"Pontos de atenção específicos de cada linha, adquiridos com a experiência\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A associação de moradores decidiu organizar um mutirão de limpeza no rio que cortava o bairro, depois de perceber que o acúmulo de lixo estava causando enchentes mais frequentes em dias de chuva forte, mesmo em períodos que antes não costumavam registrar esse tipo de problema.\n\nPor que a associação de moradores organizou o mutirão de limpeza?",
+    "options": [
+      "O acúmulo de lixo estava causando enchentes mais frequentes",
+      "A prefeitura pagou os moradores para participar",
+      "Queriam vender o lixo recolhido para reciclagem",
+      "Um novo morador sugeriu a ideia sem motivo aparente"
+    ],
+    "correct_answer": "O acúmulo de lixo estava causando enchentes mais frequentes",
+    "explanation": "O texto afirma isso diretamente: \"O acúmulo de lixo estava causando enchentes mais frequentes\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno restaurante vegetariano, inicialmente aberto apenas para almoço, passou a funcionar também à noite depois de perceber, através de pedidos recorrentes nas redes sociais, que havia interesse real do público por um jantar com o mesmo estilo de comida oferecido durante o dia.\n\nO que motivou o restaurante a passar a funcionar também à noite?",
+    "options": [
+      "Pedidos recorrentes nas redes sociais mostrando interesse do público",
+      "A proibição de servir apenas almoço pela prefeitura",
+      "A falta de clientes durante o horário de almoço",
+      "Uma reforma que impediu o funcionamento diurno"
+    ],
+    "correct_answer": "Pedidos recorrentes nas redes sociais mostrando interesse do público",
+    "explanation": "O texto afirma isso diretamente: \"Pedidos recorrentes nas redes sociais mostrando interesse do público\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O centro de reabilitação decidiu incluir sessões de musicoterapia na rotina dos pacientes em recuperação, depois de observar, em estudos preliminares, uma melhora no engajamento e na disposição para outras atividades terapêuticas nos dias em que essa prática era realizada.\n\nO que foi observado nos estudos preliminares mencionados no texto?",
+    "options": [
+      "Melhora no engajamento e disposição para outras atividades terapêuticas",
+      "Uma piora geral no estado dos pacientes",
+      "Nenhuma diferença perceptível no comportamento dos pacientes",
+      "Redução no número de pacientes atendidos"
+    ],
+    "correct_answer": "Melhora no engajamento e disposição para outras atividades terapêuticas",
+    "explanation": "O texto afirma isso diretamente: \"Melhora no engajamento e disposição para outras atividades terapêuticas\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A fábrica de calçados decidiu reduzir o número de modelos produzidos simultaneamente, concentrando esforços em uma linha mais enxuta, mas com maior controle de qualidade, depois de perceber que a dispersão em muitos modelos diferentes estava gerando falhas recorrentes na produção.\n\nPor que a fábrica reduziu o número de modelos produzidos simultaneamente?",
+    "options": [
+      "A dispersão em muitos modelos estava gerando falhas recorrentes na produção",
+      "Faltavam matérias-primas para continuar produzindo todos os modelos",
+      "Os modelos antigos pararam de vender completamente",
+      "Uma nova lei limitou o número de modelos permitidos"
+    ],
+    "correct_answer": "A dispersão em muitos modelos estava gerando falhas recorrentes na produção",
+    "explanation": "O texto afirma isso diretamente: \"A dispersão em muitos modelos estava gerando falhas recorrentes na produção\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de artesãs que produzia bordados à mão decidiu criar um catálogo digital com fotos profissionais de cada peça, depois de perceber que compradores de fora da cidade tinham dificuldade em avaliar a qualidade do trabalho apenas por descrições escritas em texto.\n\nPor que o grupo de artesãs criou um catálogo digital com fotos profissionais?",
+    "options": [
+      "Compradores de fora tinham dificuldade em avaliar a qualidade só por texto",
+      "Queriam parar de vender para a própria cidade",
+      "O governo exigiu um catálogo formal para funcionamento",
+      "As peças pararam de ser vendidas nas feiras locais"
+    ],
+    "correct_answer": "Compradores de fora tinham dificuldade em avaliar a qualidade só por texto",
+    "explanation": "O texto afirma isso diretamente: \"Compradores de fora tinham dificuldade em avaliar a qualidade só por texto\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O posto de combustíveis da estrada decidiu instalar pontos de recarga para carros elétricos, mesmo sendo ainda poucos os veículos desse tipo circulando na região, apostando que a demanda cresceria nos próximos anos e que sair na frente traria vantagem competitiva sobre os concorrentes.\n\nQual foi a aposta do posto de combustíveis ao instalar os pontos de recarga?",
+    "options": [
+      "Que a demanda cresceria e sair na frente traria vantagem competitiva",
+      "Que os carros a combustão desapareceriam imediatamente",
+      "Que o governo pagaria pela instalação dos pontos",
+      "Que os concorrentes fechariam as portas em breve"
+    ],
+    "correct_answer": "Que a demanda cresceria e sair na frente traria vantagem competitiva",
+    "explanation": "O texto afirma isso diretamente: \"Que a demanda cresceria e sair na frente traria vantagem competitiva\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A pequena escola de dança decidiu criar uma turma específica para adultos iniciantes, depois de perceber que muitos interessados desistiam ao serem colocados em turmas mistas com crianças e adolescentes, por sentirem vergonha de aprender os passos básicos junto com alunos mais jovens.\n\nPor que muitos adultos desistiam das aulas antes da criação da turma específica?",
+    "options": [
+      "Sentiam vergonha de aprender junto com alunos mais jovens",
+      "O preço da aula para adultos era muito mais alto",
+      "Não havia horário disponível para adultos",
+      "A escola não aceitava alunos adultos anteriormente"
+    ],
+    "correct_answer": "Sentiam vergonha de aprender junto com alunos mais jovens",
+    "explanation": "O texto afirma isso diretamente: \"Sentiam vergonha de aprender junto com alunos mais jovens\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno laboratório de análises clínicas decidiu implantar um sistema de envio de resultados por aplicativo, depois de perceber que muitos pacientes idosos tinham dificuldade em se deslocar até o local apenas para retirar um exame já pronto.\n\nO que motivou a implantação do sistema de envio de resultados por aplicativo?",
+    "options": [
+      "Pacientes idosos tinham dificuldade em se deslocar para retirar exames",
+      "O laboratório queria reduzir o número de exames realizados",
+      "Houve uma exigência do plano de saúde parceiro",
+      "O sistema anterior de entrega física foi proibido por lei"
+    ],
+    "correct_answer": "Pacientes idosos tinham dificuldade em se deslocar para retirar exames",
+    "explanation": "O texto afirma isso diretamente: \"Pacientes idosos tinham dificuldade em se deslocar para retirar exames\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O grupo de teatro de bonecos, tradicional em festas juninas do interior, decidiu registrar em vídeo suas apresentações mais antigas antes que os poucos integrantes que ainda dominavam a técnica original se aposentassem, buscando preservar esse conhecimento para futuras gerações.\n\nPor que o grupo decidiu registrar em vídeo suas apresentações mais antigas?",
+    "options": [
+      "Para preservar o conhecimento antes que os integrantes se aposentassem",
+      "Porque as apresentações seriam proibidas no futuro",
+      "Para vender os vídeos e gerar receita imediata",
+      "Porque o grupo decidiu encerrar as atividades"
+    ],
+    "correct_answer": "Para preservar o conhecimento antes que os integrantes se aposentassem",
+    "explanation": "O texto afirma isso diretamente: \"Para preservar o conhecimento antes que os integrantes se aposentassem\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "A cooperativa de reciclagem decidiu investir em uma prensa mais moderna para compactar materiais, depois de calcular que o transporte de cargas mais compactas para os compradores finais reduziria significativamente o custo com frete, mesmo com o investimento inicial elevado no equipamento.\n\nQual foi o cálculo que motivou o investimento na prensa mais moderna?",
+    "options": [
+      "Cargas mais compactas reduziriam significativamente o custo com frete",
+      "A prensa antiga havia quebrado definitivamente",
+      "O preço dos materiais recicláveis havia caído muito",
+      "Os compradores exigiam um novo tipo de embalagem"
+    ],
+    "correct_answer": "Cargas mais compactas reduziriam significativamente o custo com frete",
+    "explanation": "O texto afirma isso diretamente: \"Cargas mais compactas reduziriam significativamente o custo com frete\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  },
+  {
+    "territory_id": "textos",
+    "difficulty_level": 1,
+    "prompt": "O pequeno grupo de apicultores da região decidiu criar uma marca coletiva para vender o mel produzido por todos os associados sob um único rótulo, depois de perceber que, vendendo separadamente, cada produtor tinha dificuldade em negociar preços melhores com os grandes compradores.\n\nPor que os apicultores decidiram criar uma marca coletiva?",
+    "options": [
+      "Vendendo separadamente, cada produtor tinha dificuldade em negociar preços melhores",
+      "O governo exigiu a unificação da produção por lei",
+      "A produção individual de mel havia sido proibida",
+      "Queriam reduzir o número total de apicultores na região"
+    ],
+    "correct_answer": "Vendendo separadamente, cada produtor tinha dificuldade em negociar preços melhores",
+    "explanation": "O texto afirma isso diretamente: \"Vendendo separadamente, cada produtor tinha dificuldade em negociar preços melhores\".",
+    "age_reviewed": true,
+    "hints": [
+      "A resposta está dita de forma direta em algum trecho do texto.",
+      "Releia o texto uma segunda vez, prestando atenção às causas e decisões descritas."
+    ]
+  }
+]

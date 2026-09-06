@@ -1,0 +1,542 @@
+[
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Na norma culta, o verbo 'assistir' no sentido de 'ver, presenciar' é transitivo indireto e exige qual preposição?",
+    "options": [
+      "a",
+      "de",
+      "com",
+      "em"
+    ],
+    "correct_answer": "a",
+    "explanation": "'Assistir' no sentido de ver/presenciar é transitivo indireto e pede a preposição 'a': 'Assisti ao jogo'. Na linguagem informal é comum ouvir 'assisti o jogo', sem a preposição, mas a norma culta exige o 'a'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em 'Assisti ___ um filme ontem'.",
+      "É a mesma preposição usada em 'ir a algum lugar'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual das frases está de acordo com a regência culta do verbo 'namorar' (transitivo direto, sem preposição)?",
+    "options": [
+      "Pedro namora com Ana.",
+      "Pedro namora Ana.",
+      "Pedro namora à Ana.",
+      "Pedro namora de Ana."
+    ],
+    "correct_answer": "Pedro namora Ana.",
+    "explanation": "'Namorar' é transitivo direto — não exige preposição antes do objeto. 'Namorar com alguém' é uso comum na fala informal, mas foge da regência culta.",
+    "age_reviewed": true,
+    "hints": [
+      "O verbo não precisa de nenhuma preposição antes da pessoa.",
+      "Pense em 'amar Ana', que também não leva preposição."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "De acordo com a regência culta, qual frase usa corretamente o verbo 'chegar'?",
+    "options": [
+      "Cheguei em casa cedo.",
+      "Cheguei à escola cedo.",
+      "Cheguei em São Paulo cedo.",
+      "Cheguei no trabalho cedo."
+    ],
+    "correct_answer": "Cheguei à escola cedo.",
+    "explanation": "O verbo 'chegar' pede a preposição 'a' (aqui craseada: 'à escola'), não 'em'. 'Cheguei em casa' é comum na fala cotidiana, mas a norma culta prefere 'cheguei a casa'.",
+    "age_reviewed": true,
+    "hints": [
+      "A norma culta evita a preposição 'em' depois de verbos de movimento como 'chegar' e 'ir'.",
+      "A opção certa usa a mesma preposição de 'ir à escola'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O verbo 'implicar', no sentido de 'ter como consequência', é transitivo direto. Qual frase segue a regência culta?",
+    "options": [
+      "O atraso implica em multa.",
+      "O atraso implica multa.",
+      "O atraso implica de multa.",
+      "O atraso implica à multa."
+    ],
+    "correct_answer": "O atraso implica multa.",
+    "explanation": "Nesse sentido ('causar, acarretar'), 'implicar' é transitivo direto e não deveria vir seguido de preposição. 'Implicar em' é bastante usado na fala, mas foge da regência tradicional.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em 'causar multa' — o verbo 'causar' também não usa preposição aqui.",
+      "A forma mais curta, sem preposição nenhuma, é a considerada correta."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O verbo 'visar', quando seguido de um verbo no infinitivo (ex.: 'visar resolver um problema'), normalmente é usado:",
+    "options": [
+      "sem preposição antes do infinitivo",
+      "sempre com a preposição 'a' antes do infinitivo",
+      "sempre com a preposição 'de' antes do infinitivo",
+      "sempre com a preposição 'para' antes do infinitivo"
+    ],
+    "correct_answer": "sem preposição antes do infinitivo",
+    "explanation": "Antes de um verbo no infinitivo, 'visar' dispensa preposição: 'Viso conseguir o emprego'. Já antes de um substantivo (o objetivo em si), a norma pede 'a': 'Viso ao sucesso da empresa'.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare com 'Viso ___ conseguir o emprego' — o espaço fica vazio.",
+      "A preposição só aparece quando depois vem um substantivo, não um verbo."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Em qual frase o uso da crase está correto?",
+    "options": [
+      "Fui à padaria comprar pão.",
+      "Fui à São Paulo no feriado.",
+      "Ele chegou à cavalo.",
+      "Estou disposta à ajudar."
+    ],
+    "correct_answer": "Fui à padaria comprar pão.",
+    "explanation": "'Padaria' é substantivo feminino determinado por artigo ('a padaria'), então a crase (a+a) é obrigatória: 'à padaria'. As outras frases erram: 'São Paulo' normalmente não leva artigo, 'a cavalo' é locução sem artigo, e nunca há crase antes de verbo no infinitivo ('ajudar').",
+    "age_reviewed": true,
+    "hints": [
+      "Crase só existe quando dá pra reconhecer 'a' (preposição) + 'a' (artigo feminino) juntos.",
+      "As outras três frases têm cada uma um motivo diferente pra não levar crase."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Por que a frase 'Estou disposta a ajudar todos' nunca deve levar crase antes de 'ajudar'?",
+    "options": [
+      "Porque 'ajudar' é uma palavra masculina",
+      "Porque nunca existe crase antes de verbo no infinitivo",
+      "Porque 'disposta' já é feminino, então não precisa de mais nenhum acento",
+      "Porque a frase está no presente do indicativo"
+    ],
+    "correct_answer": "Porque nunca existe crase antes de verbo no infinitivo",
+    "explanation": "Crase marca a fusão de uma preposição 'a' com um artigo feminino 'a'. Verbos no infinitivo não têm gênero nem levam artigo, então a crase antes deles está sempre errada, mesmo quando soa parecido com outros casos de crase.",
+    "age_reviewed": true,
+    "hints": [
+      "A regra não tem exceção neste caso — é sobre a classe gramatical da palavra seguinte, não sobre gênero.",
+      "Pense: um verbo no infinitivo nunca é precedido de artigo 'a'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "As locuções adverbiais femininas de modo, como 'à francesa', 'à vontade' e 'à moda antiga', seguem qual regra de crase?",
+    "options": [
+      "Nunca levam crase",
+      "Levam crase facultativamente, a critério de quem escreve",
+      "Levam crase obrigatoriamente, mesmo sem repetir a palavra 'moda' ou 'maneira'",
+      "Só levam crase se vierem no início da frase"
+    ],
+    "correct_answer": "Levam crase obrigatoriamente, mesmo sem repetir a palavra 'moda' ou 'maneira'",
+    "explanation": "Locuções adverbiais femininas de modo levam crase por convenção da língua, mesmo quando a palavra 'moda' ou 'maneira' está subentendida: 'à francesa' (= 'à moda francesa'), 'à vontade', 'à toa'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em expressões fixas como 'à toa' e 'às pressas' — elas sempre levam o acento.",
+      "A regra vale mesmo quando a palavra 'moda'/'maneira' não aparece escrita."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ela mora a duas quadras daqui', por que não existe crase antes de 'duas'?",
+    "options": [
+      "Porque 'quadras' é uma palavra masculina",
+      "Porque a distância não foi especificada com um número exato",
+      "Porque não há artigo feminino definido antes de 'duas quadras'",
+      "Porque a frase está errada e deveria ter crase"
+    ],
+    "correct_answer": "Porque não há artigo feminino definido antes de 'duas quadras'",
+    "explanation": "'Duas quadras' é uma expressão indeterminada (não é 'a distância de duas quadras'), sem artigo definido feminino envolvido — por isso o 'a' aqui é só a preposição, sem crase. A crase exigiria algo como 'à distância de duas quadras'.",
+    "age_reviewed": true,
+    "hints": [
+      "Crase precisa de um artigo feminino 'a' escondido ali — aqui ele simplesmente não existe.",
+      "Compare com 'Ele mora à distância de duas quadras', onde 'distância' é que traz o artigo."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Diante de nomes de lugares, a crase é obrigatória quando o nome do lugar:",
+    "options": [
+      "tem mais de duas sílabas",
+      "normalmente aceita o artigo 'a' antes dele (ex.: 'a Bahia')",
+      "começa com consoante",
+      "é uma cidade grande"
+    ],
+    "correct_answer": "normalmente aceita o artigo 'a' antes dele (ex.: 'a Bahia')",
+    "explanation": "A crase antes de nomes de lugar depende de o lugar aceitar artigo feminino ou não: dizemos 'a Bahia', por isso existe 'Fui à Bahia'; já 'São Paulo' normalmente não aceita artigo ('Fui a São Paulo', sem crase).",
+    "age_reviewed": true,
+    "hints": [
+      "Teste mentalmente: você diria 'Gosto da Bahia' ou 'Gosto de São Paulo'? Só o primeiro usa artigo.",
+      "Se o lugar aceita 'a' na frente no dia a dia, ele também aceita crase depois de uma preposição 'a'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Com a expressão 'a maioria dos alunos', qual concordância verbal a norma culta aceita?",
+    "options": [
+      "Só no singular, concordando com 'maioria'",
+      "Só no plural, concordando com 'alunos'",
+      "As duas formas são aceitas pela norma culta",
+      "Nenhuma das duas — o certo seria 'a maioria dos aluno'"
+    ],
+    "correct_answer": "As duas formas são aceitas pela norma culta",
+    "explanation": "Com expressões partitivas como 'a maioria de', 'a maior parte de', 'grande parte de', a norma culta aceita tanto a concordância com o núcleo ('a maioria... chegou') quanto a concordância atrativa com o termo no plural mais próximo ('a maioria... chegaram').",
+    "age_reviewed": true,
+    "hints": [
+      "Não existe só uma resposta certa aqui — pense nas duas concordâncias possíveis.",
+      "O nome técnico do fenômeno é 'concordância atrativa' (com o termo mais próximo)."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Em 'O pai e o filho ___ ao mercado', com o sujeito composto antes do verbo, a concordância correta é:",
+    "options": [
+      "saiu (singular)",
+      "saíram (plural)",
+      "as duas formas são igualmente aceitas aqui",
+      "depende do gênero das palavras"
+    ],
+    "correct_answer": "saíram (plural)",
+    "explanation": "Quando o sujeito composto vem antes do verbo, a concordância no plural é obrigatória: 'O pai e o filho saíram'. A concordância no singular só é aceita quando o sujeito composto vem depois do verbo ('Saiu o pai e o filho' ou 'Saíram o pai e o filho').",
+    "age_reviewed": true,
+    "hints": [
+      "A posição do sujeito composto (antes ou depois do verbo) muda a regra.",
+      "Aqui o sujeito vem primeiro — isso torna uma das opções obrigatória, não facultativa."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual das frases abaixo segue a norma culta sobre o verbo 'haver' no sentido de 'existir'?",
+    "options": [
+      "Haviam muitos problemas na reunião.",
+      "Havia muitos problemas na reunião.",
+      "Houveram muitos problemas na reunião.",
+      "Existem havia muitos problemas."
+    ],
+    "correct_answer": "Havia muitos problemas na reunião.",
+    "explanation": "'Haver' no sentido de 'existir' é impessoal — não tem sujeito e por isso fica sempre na 3ª pessoa do singular, mesmo quando o que existe está no plural: 'Havia muitos problemas' (nunca 'haviam').",
+    "age_reviewed": true,
+    "hints": [
+      "Esse é um dos erros mais comuns até entre adultos escolarizados — o verbo nunca vai para o plural aqui.",
+      "Pense em 'Há muitos problemas' (presente) — no passado, a mesma lógica de singular se mantém: 'Havia'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Em 'Faz dois anos que ele se mudou', por que o verbo 'fazer' fica no singular mesmo com 'dois anos' no plural?",
+    "options": [
+      "Porque 'fazer' indicando tempo decorrido é impessoal, sem sujeito",
+      "Porque é uma exceção sem explicação",
+      "Porque 'anos' concorda com 'ele', que é singular",
+      "Na verdade está errado, o certo seria 'fazem dois anos'"
+    ],
+    "correct_answer": "Porque 'fazer' indicando tempo decorrido é impessoal, sem sujeito",
+    "explanation": "Assim como 'haver' em sentido de existência, o verbo 'fazer' indicando tempo decorrido é impessoal e fica sempre na 3ª pessoa do singular: 'Faz dois anos', nunca 'fazem dois anos'.",
+    "age_reviewed": true,
+    "hints": [
+      "É o mesmo tipo de regra do verbo 'haver' quando significa 'existir'.",
+      "'Anos' aqui não é sujeito de nada — o verbo simplesmente não tem sujeito."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ele foi um dos alunos que mais ___ no torneio', qual preenchimento segue a concordância culta?",
+    "options": [
+      "se destacou",
+      "se destacaram",
+      "se destacava",
+      "se destacam"
+    ],
+    "correct_answer": "se destacaram",
+    "explanation": "Em construções como 'um dos que', o verbo da oração introduzida por 'que' concorda no plural com o antecedente ('os alunos'), não no singular com 'um': 'um dos alunos que mais se destacaram'.",
+    "age_reviewed": true,
+    "hints": [
+      "O 'que' está se referindo a 'os alunos', não só a 'um'.",
+      "Pense em quantos alunos, ao todo, se destacaram no torneio."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual opção completa corretamente: '___ você chegou atrasado hoje?' (início de pergunta direta)",
+    "options": [
+      "Porque",
+      "Por que",
+      "Porquê",
+      "Por quê"
+    ],
+    "correct_answer": "Por que",
+    "explanation": "No início de perguntas diretas, usa-se 'por que' separado e sem acento. O acento ('por quê') só aparece quando essa expressão vem no final da frase.",
+    "age_reviewed": true,
+    "hints": [
+      "Nas perguntas, o padrão é sempre separado (duas palavras).",
+      "O acento só aparece quando essa expressão vem no final da frase."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual opção completa corretamente: 'Cheguei atrasado ___ perdi o ônibus.' (explicando o motivo)",
+    "options": [
+      "porque",
+      "por que",
+      "porquê",
+      "por quê"
+    ],
+    "correct_answer": "porque",
+    "explanation": "Ao dar uma explicação/resposta (equivalente a 'pois'), usa-se 'porque' junto e sem acento.",
+    "age_reviewed": true,
+    "hints": [
+      "Aqui a palavra tem o mesmo sentido de 'pois' — junto e sem acento.",
+      "É o oposto da forma usada para perguntar."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual opção completa corretamente: 'Ninguém sabe o ___ da sua decisão.' (substantivo, precedido do artigo 'o')",
+    "options": [
+      "porque",
+      "por que",
+      "porquê",
+      "por quê"
+    ],
+    "correct_answer": "porquê",
+    "explanation": "Quando funciona como substantivo (geralmente precedido de artigo, como 'o porquê'), a palavra fica junta e com acento: 'o porquê', 'os porquês'.",
+    "age_reviewed": true,
+    "hints": [
+      "Repare que antes dela existe um artigo ('o') — isso é sinal de substantivo.",
+      "É a única das quatro formas que funciona como um nome, não como conjunção/pronome."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual frase usa corretamente 'mau' (adjetivo) e 'mal' (advérbio)?",
+    "options": [
+      "Ele é um mal aluno e se comporta mau.",
+      "Ele é um mau aluno e se comporta mal.",
+      "Ele é um mau aluno e se comporta mau.",
+      "Ele é um mal aluno e se comporta mal."
+    ],
+    "correct_answer": "Ele é um mau aluno e se comporta mal.",
+    "explanation": "'Mau' é adjetivo (oposto de 'bom') e acompanha substantivos: 'mau aluno'. 'Mal' é advérbio (oposto de 'bem') e acompanha verbos: 'comporta-se mal'.",
+    "age_reviewed": true,
+    "hints": [
+      "Troque cada palavra por 'bom'/'bem': onde cabe 'bom', é 'mau'; onde cabe 'bem', é 'mal'.",
+      "'Aluno' é substantivo (precisa de adjetivo); 'comportar-se' é verbo (precisa de advérbio)."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual frase usa corretamente 'senão' (= 'do contrário') e 'se não' (condicional, separado)?",
+    "options": [
+      "Estude, se não vai reprovar.",
+      "Estude, senão vai reprovar.",
+      "Senão estudar, vai reprovar.",
+      "Se não vai reprovar, estude."
+    ],
+    "correct_answer": "Estude, senão vai reprovar.",
+    "explanation": "'Senão', junto, tem o sentido de 'do contrário, caso contrário': 'Estude, senão vai reprovar'. Já 'se não', separado, é a conjunção condicional 'se' + a negação 'não': 'Se não estudar, vai reprovar'.",
+    "age_reviewed": true,
+    "hints": [
+      "Troque a palavra por 'do contrário' — se o sentido continuar igual, é 'senão' junto.",
+      "A forma separada 'se não' sempre pode ser trocada por 'caso não'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual frase usa corretamente 'há' (verbo haver, tempo passado) e 'a' (preposição, tempo futuro)?",
+    "options": [
+      "Ele viajou a dois dias e volta há uma semana.",
+      "Ele viajou há dois dias e volta a uma semana.",
+      "Ele viajou há dois dias e volta daqui há uma semana.",
+      "Ele viajou a dois dias e volta a uma semana."
+    ],
+    "correct_answer": "Ele viajou há dois dias e volta a uma semana.",
+    "explanation": "'Há' (verbo haver) indica tempo já passado: 'viajou há dois dias' (dois dias atrás). 'A' (preposição) indica tempo futuro: 'volta a uma semana' (dali a uma semana, ainda vai acontecer).",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunte-se: o tempo mencionado já passou ou ainda vai acontecer?",
+      "'Há' sempre pode ser trocado por 'faz'; 'a' (tempo futuro) nunca pode."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Por que a vírgula está errada em 'Os alunos que estudaram bastante para a prova, foram aprovados'?",
+    "options": [
+      "Porque vírgula nunca separa sujeito e predicado, mesmo quando o sujeito é longo",
+      "Porque a frase deveria ter ponto final ali",
+      "Porque falta uma vírgula antes de 'que'",
+      "Na verdade essa vírgula está correta"
+    ],
+    "correct_answer": "Porque vírgula nunca separa sujeito e predicado, mesmo quando o sujeito é longo",
+    "explanation": "Mesmo quando o sujeito é uma oração inteira e fica bem longo ('Os alunos que estudaram bastante para a prova'), a regra continua a mesma: nunca se separa sujeito de predicado com vírgula.",
+    "age_reviewed": true,
+    "hints": [
+      "A regra não muda com o tamanho do sujeito — vale para sujeitos curtos e longos igualmente.",
+      "Pergunte-se: qual é o sujeito da frase, e qual é o predicado? A vírgula está bem no meio dos dois."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Em uma lista simples como 'Comprei pão, leite e queijo', por que não se usa vírgula antes do 'e' final?",
+    "options": [
+      "Porque 'e' já liga os dois últimos elementos, tornando a vírgula redundante",
+      "Porque toda enumeração deve ter no máximo duas vírgulas",
+      "Porque 'queijo' é a última palavra da frase",
+      "Na verdade deveria ter vírgula: 'leite, e queijo'"
+    ],
+    "correct_answer": "Porque 'e' já liga os dois últimos elementos, tornando a vírgula redundante",
+    "explanation": "Numa enumeração simples, a conjunção 'e' já faz a função de unir o último elemento — colocar vírgula antes dela ('leite, e queijo') é redundante e considerado erro na norma culta.",
+    "age_reviewed": true,
+    "hints": [
+      "A conjunção 'e' já está fazendo o trabalho que a vírgula faria.",
+      "Note que a regra é diferente quando o sujeito muda de uma oração pra outra — aqui não é o caso."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ele estudou bastante, e ela nem abriu o caderno', a vírgula antes de 'e' é aceita porque:",
+    "options": [
+      "A frase tem sujeitos diferentes em cada oração ('ele' e 'ela')",
+      "É uma enumeração de itens",
+      "A frase é uma pergunta",
+      "Nunca se usa vírgula antes de 'e', em nenhum caso"
+    ],
+    "correct_answer": "A frase tem sujeitos diferentes em cada oração ('ele' e 'ela')",
+    "explanation": "Diferente da enumeração simples, quando o 'e' liga duas orações com sujeitos diferentes, a vírgula antes dele é aceita (e recomendada) para marcar essa mudança de sujeito.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare com a lista 'pão, leite e queijo' — ali não há troca de sujeito.",
+      "Aqui existem duas orações completas, cada uma com seu próprio sujeito."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual é uma função correta do ponto e vírgula?",
+    "options": [
+      "Separar itens de uma enumeração que já contém vírgulas internas",
+      "Substituir a vírgula em qualquer lista simples",
+      "Marcar o fim de toda pergunta",
+      "Ligar duas palavras dentro da mesma oração"
+    ],
+    "correct_answer": "Separar itens de uma enumeração que já contém vírgulas internas",
+    "explanation": "O ponto e vírgula é útil, por exemplo, para separar itens de uma lista quando algum desses itens já tem vírgula dentro dele, evitando confusão: 'Levou pão, leite e queijo; roupas, sapatos e um casaco; e os documentos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em quando uma vírgula sozinha geraria confusão dentro de uma lista.",
+      "Não é sobre perguntas, nem sobre ligar duas palavras soltas."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual frase está correta quanto ao uso de 'mim' e 'eu'?",
+    "options": [
+      "Compraram um presente para mim levar.",
+      "Compraram um presente para eu levar.",
+      "Compraram um presente para mim levar ele.",
+      "Compraram um presente para eu levar ele."
+    ],
+    "correct_answer": "Compraram um presente para eu levar.",
+    "explanation": "'Mim' nunca pode ser sujeito de um verbo no infinitivo — nesses casos, usa-se 'eu': 'para eu levar', não 'para mim levar'. 'Mim' é usado como objeto de preposição sem verbo seguinte, como em 'Isso é para mim'.",
+    "age_reviewed": true,
+    "hints": [
+      "'Mim' nunca pratica a ação de um verbo — ele nunca é sujeito.",
+      "Troque mentalmente por uma frase mais simples: 'eu levo' soa certo; 'mim levo' não existe."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual frase segue a distinção entre 'onde' (permanência/lugar fixo) e 'aonde' (movimento, com verbos como 'ir')?",
+    "options": [
+      "Aonde você mora?",
+      "Onde você vai passar as férias?",
+      "Aonde você vai passar as férias?",
+      "Onde você vai à padaria?"
+    ],
+    "correct_answer": "Aonde você vai passar as férias?",
+    "explanation": "'Aonde' é usado com verbos de movimento, como 'ir': 'Aonde você vai?'. 'Onde' indica permanência, lugar fixo: 'Onde você mora?', 'Onde fica sua casa?'.",
+    "age_reviewed": true,
+    "hints": [
+      "'Ir' é o verbo clássico que pede 'aonde', não 'onde'.",
+      "'Morar' é permanência, não movimento — por isso pede a outra forma."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual frase usa corretamente 'mais' (advérbio de intensidade) e 'mas' (conjunção adversativa)?",
+    "options": [
+      "Ele quer mais tempo, mas não pede.",
+      "Ele quer mas tempo, mais não pede.",
+      "Ele quer mais tempo, mais não pede.",
+      "Ele quer mas tempo, mas não pede."
+    ],
+    "correct_answer": "Ele quer mais tempo, mas não pede.",
+    "explanation": "'Mais' é advérbio de quantidade/intensidade (oposto de 'menos'): 'mais tempo'. 'Mas' é conjunção adversativa (equivale a 'porém'): 'mas não pede'.",
+    "age_reviewed": true,
+    "hints": [
+      "Troque por 'menos' — se fizer sentido, é 'mais'. Troque por 'porém' — se fizer sentido, é 'mas'.",
+      "As duas palavras têm papéis completamente diferentes na frase: uma mede quantidade, a outra liga ideias opostas."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "'Seção', 'sessão' e 'cessão' têm sentidos diferentes. Qual frase usa a palavra correta?",
+    "options": [
+      "Fomos à seção de cinema às 20h.",
+      "Fomos à sessão de cinema às 20h.",
+      "Fomos à cessão de cinema às 20h.",
+      "Trabalho na sessão de frios do mercado."
+    ],
+    "correct_answer": "Fomos à sessão de cinema às 20h.",
+    "explanation": "'Sessão' é um período de tempo/evento (sessão de cinema, sessão de terapia). 'Seção' é uma parte/divisão (seção de frios do mercado). 'Cessão' é o ato de ceder (cessão de direitos).",
+    "age_reviewed": true,
+    "hints": [
+      "Pense em qual das três palavras está relacionada a 'tempo de duração de um evento'.",
+      "'Seção' seria usada, por exemplo, pra 'seção de frios', não pra cinema."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Qual é a diferença correta entre 'conserto' e 'concerto'?",
+    "options": [
+      "'Conserto' é reparo; 'concerto' é espetáculo musical",
+      "'Conserto' é espetáculo musical; 'concerto' é reparo",
+      "As duas palavras têm o mesmo significado",
+      "'Concerto' só existe no plural"
+    ],
+    "correct_answer": "'Conserto' é reparo; 'concerto' é espetáculo musical",
+    "explanation": "'Conserto' (do verbo 'consertar') é o ato de reparar algo: 'o conserto da geladeira'. 'Concerto' é um espetáculo musical: 'o concerto de piano'.",
+    "age_reviewed": true,
+    "hints": [
+      "Uma delas vem do verbo 'consertar' (reparar) — a outra não tem nada a ver com conserto.",
+      "Pense em qual das duas você usaria pra falar de uma apresentação de orquestra."
+    ]
+  }
+]

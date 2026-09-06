@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "bloco": "interpretacao_de_textos",
+    "fase": "bloco_1_de_4",
+    "mundo_destino": "Mundo da Linguagem",
+    "total_itens_neste_bloco": 25,
+    "formato": "texto curto original (situacao cotidiana ou informativa) seguido de 1 pergunta de interpretacao com alternativas",
+    "checagem_direitos_autorais": "Todos os textos foram escritos originalmente para este material - nenhum trecho de livro, artigo, noticia real ou letra de musica foi reproduzido ou parafraseado de fonte externa.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - temas neutros do cotidiano, sem conteudo sensivel."
+  },
+  "itens": [
+    {
+      "id": "int-001",
+      "texto": "Marina sempre chegava cedo ao trabalho, mas naquela manhã o trânsito estava tão parado que ela decidiu descer do ônibus e caminhar o resto do caminho. Mesmo suada e um pouco atrasada, chegou satisfeita: tinha descoberto um atalho por uma praça que nunca havia notado antes.",
+      "pergunta": "Qual foi a atitude de Marina diante do trânsito parado?",
+      "opcoes": [
+        "Ela decidiu descer do ônibus e caminhar",
+        "Ela esperou pacientemente dentro do ônibus",
+        "Ela voltou para casa e faltou ao trabalho",
+        "Ela pediu para o motorista mudar de rota"
+      ],
+      "resposta_correta": "Ela decidiu descer do ônibus e caminhar"
+    },
+    {
+      "id": "int-002",
+      "texto": "O uso excessivo de embalagens plásticas tem preocupado especialistas em meio ambiente. Ainda assim, muitas empresas argumentam que a substituição por materiais alternativos aumentaria os custos de produção, o que tornaria os produtos mais caros para o consumidor final.",
+      "pergunta": "Segundo o texto, qual é o argumento das empresas contra a substituição do plástico?",
+      "opcoes": [
+        "A substituição aumentaria os custos e o preço final dos produtos",
+        "O plástico já está sendo eliminado por completo",
+        "Materiais alternativos são proibidos por lei",
+        "Os consumidores preferem embalagens plásticas por gosto"
+      ],
+      "resposta_correta": "A substituição aumentaria os custos e o preço final dos produtos"
+    },
+    {
+      "id": "int-003",
+      "texto": "Depois de anos treinando sozinho num campo improvisado no bairro, o jovem atleta finalmente foi convidado para um teste numa equipe profissional. Ele hesitou por alguns dias antes de aceitar, com medo de não estar preparado, mas o incentivo da família fez toda a diferença em sua decisão.",
+      "pergunta": "O que fez o jovem atleta decidir aceitar o convite?",
+      "opcoes": [
+        "O incentivo da família",
+        "A pressão do técnico da equipe",
+        "Um contrato milionário oferecido",
+        "A insistência de outros jogadores"
+      ],
+      "resposta_correta": "O incentivo da família"
+    },
+    {
+      "id": "int-004",
+      "texto": "A pesquisa mostrou que boa parte dos entrevistados prefere trabalhar de forma remota pelo menos parte da semana. Entre os motivos citados, o mais comum foi o tempo economizado com deslocamento, seguido pela maior flexibilidade para organizar tarefas pessoais durante o dia.",
+      "pergunta": "Qual foi o motivo mais citado pelos entrevistados para preferir o trabalho remoto?",
+      "opcoes": [
+        "O tempo economizado com deslocamento",
+        "A possibilidade de ganhar mais dinheiro",
+        "A obrigatoriedade imposta pela empresa",
+        "A falta de espaço no escritório"
+      ],
+      "resposta_correta": "O tempo economizado com deslocamento"
+    },
+    {
+      "id": "int-005",
+      "texto": "Antes de decidir abrir o próprio negócio, Ricardo passou dois anos trabalhando como funcionário numa padaria, aprendendo desde a produção até o atendimento ao cliente. Segundo ele, essa experiência prévia foi essencial para evitar erros comuns que via outros donos de padaria cometerem.",
+      "pergunta": "Por que a experiência prévia de Ricardo foi importante, segundo o texto?",
+      "opcoes": [
+        "Ajudou a evitar erros comuns cometidos por outros donos de padaria",
+        "Permitiu que ele ganhasse dinheiro suficiente para se aposentar",
+        "Fez com que ele desistisse de abrir o próprio negócio",
+        "Serviu apenas para conhecer outros funcionários"
+      ],
+      "resposta_correta": "Ajudou a evitar erros comuns cometidos por outros donos de padaria"
+    },
+    {
+      "id": "int-006",
+      "texto": "Embora a cidade tenha investido em novos parques nos últimos anos, moradores de bairros mais afastados do centro reclamam que essas áreas de lazer continuam concentradas nas regiões mais centrais, deixando periferias com poucas opções de espaço público de qualidade.",
+      "pergunta": "Qual é a reclamação dos moradores de bairros afastados, segundo o texto?",
+      "opcoes": [
+        "Os novos parques estão concentrados nas regiões mais centrais",
+        "Não existe nenhum parque na cidade",
+        "Os parques centrais serão fechados em breve",
+        "Os moradores não têm interesse em espaços de lazer"
+      ],
+      "resposta_correta": "Os novos parques estão concentrados nas regiões mais centrais"
+    },
+    {
+      "id": "int-007",
+      "texto": "Ana estudou o assunto da prova por semanas, mas na hora do exame percebeu que as questões cobravam um enfoque diferente do que ela havia praticado. Mesmo assim, conseguiu aplicar o raciocínio geral que já dominava e resolveu a maior parte das questões corretamente.",
+      "pergunta": "O que permitiu que Ana resolvesse a maior parte das questões, mesmo com o enfoque diferente?",
+      "opcoes": [
+        "O raciocínio geral que ela já dominava",
+        "Uma cola que ela levou escondida",
+        "A ajuda de um colega durante a prova",
+        "Um erro no gabarito da prova"
+      ],
+      "resposta_correta": "O raciocínio geral que ela já dominava"
+    },
+    {
+      "id": "int-008",
+      "texto": "O relatório apontou uma queda no número de reclamações registradas contra a empresa de telefonia ao longo do último ano. Segundo a própria empresa, essa melhora está relacionada a um novo sistema de atendimento, que resolve boa parte dos problemas já no primeiro contato do cliente.",
+      "pergunta": "A que a empresa atribui a queda no número de reclamações?",
+      "opcoes": [
+        "A um novo sistema de atendimento que resolve problemas no primeiro contato",
+        "A uma redução no número de clientes atendidos",
+        "A uma mudança na lei que regula reclamações",
+        "A um aumento no preço dos serviços"
+      ],
+      "resposta_correta": "A um novo sistema de atendimento que resolve problemas no primeiro contato"
+    },
+    {
+      "id": "int-009",
+      "texto": "Mesmo sabendo que o caminho mais curto passava por uma rua sem iluminação, Camila preferiu fazer um trajeto mais longo, mas por vias movimentadas e bem iluminadas, principalmente porque estava voltando para casa já tarde da noite.",
+      "pergunta": "Por que Camila escolheu o trajeto mais longo?",
+      "opcoes": [
+        "Porque as vias eram mais movimentadas e iluminadas, e ela voltava tarde",
+        "Porque o caminho mais curto estava interditado",
+        "Porque ela queria fazer mais exercício físico",
+        "Porque um amigo pediu para acompanhá-la por lá"
+      ],
+      "resposta_correta": "Porque as vias eram mais movimentadas e iluminadas, e ela voltava tarde"
+    },
+    {
+      "id": "int-010",
+      "texto": "A adoção de animais em situação de abandono cresceu significativamente nos últimos anos, impulsionada em parte pela maior divulgação de casos através das redes sociais. Organizações que cuidam desses animais afirmam que a visibilidade online ajudou a conectar pessoas interessadas em adotar com os bichos que precisavam de um lar.",
+      "pergunta": "O que ajudou a impulsionar o crescimento da adoção de animais, segundo o texto?",
+      "opcoes": [
+        "A maior divulgação de casos através das redes sociais",
+        "Uma lei que obriga a adoção de animais",
+        "A redução do número de animais abandonados",
+        "Uma campanha exclusiva de um único bairro"
+      ],
+      "resposta_correta": "A maior divulgação de casos através das redes sociais"
+    },
+    {
+      "id": "int-011",
+      "texto": "Depois de meses testando diferentes formatos, o podcast finalmente encontrou um público fiel ao mudar o foco de notícias gerais para histórias reais contadas pelos próprios ouvintes. Segundo os apresentadores, esse formato mais pessoal criou uma conexão que o conteúdo anterior não conseguia gerar.",
+      "pergunta": "O que fez o podcast conquistar um público fiel, segundo o texto?",
+      "opcoes": [
+        "A mudança para histórias reais contadas pelos próprios ouvintes",
+        "Um aumento no número de episódios semanais",
+        "A contratação de um apresentador famoso",
+        "A redução da duração de cada episódio"
+      ],
+      "resposta_correta": "A mudança para histórias reais contadas pelos próprios ouvintes"
+    },
+    {
+      "id": "int-012",
+      "texto": "O agricultor decidiu investir num sistema de irrigação por gotejamento depois de perceber que o método antigo, por aspersão, desperdiçava muita água em dias de vento forte. Apesar do investimento inicial mais alto, ele calcula que a economia de água vai compensar o custo em poucos anos.",
+      "pergunta": "Por que o agricultor trocou o método de irrigação?",
+      "opcoes": [
+        "O método antigo desperdiçava muita água em dias de vento forte",
+        "O governo proibiu o uso do método antigo",
+        "O novo sistema era mais barato desde o início",
+        "Ele queria usar menos água por questões estéticas"
+      ],
+      "resposta_correta": "O método antigo desperdiçava muita água em dias de vento forte"
+    },
+    {
+      "id": "int-013",
+      "texto": "Apesar de ter recebido propostas de emprego em outras cidades com salários mais altos, Beto optou por continuar na empresa onde já trabalhava, priorizando a proximidade da família e o relacionamento que já havia construído com os colegas ao longo dos anos.",
+      "pergunta": "Por que Beto recusou as propostas com salários mais altos?",
+      "opcoes": [
+        "Priorizou a proximidade da família e o relacionamento com os colegas",
+        "Porque as outras cidades não tinham vagas de fato",
+        "Porque seu contrato atual o impedia de sair",
+        "Porque os salários oferecidos eram menores do que o atual"
+      ],
+      "resposta_correta": "Priorizou a proximidade da família e o relacionamento com os colegas"
+    },
+    {
+      "id": "int-014",
+      "texto": "A biblioteca do bairro passou por uma reforma completa e reabriu com um espaço específico para crianças, além de um horário estendido nos finais de semana. A frequência de visitantes praticamente dobrou nos primeiros três meses após a reabertura.",
+      "pergunta": "O que aconteceu com a frequência de visitantes após a reforma da biblioteca?",
+      "opcoes": [
+        "Praticamente dobrou nos primeiros três meses",
+        "Diminuiu pela metade",
+        "Permaneceu exatamente igual a antes",
+        "Só aumentou entre crianças, não entre adultos"
+      ],
+      "resposta_correta": "Praticamente dobrou nos primeiros três meses"
+    },
+    {
+      "id": "int-015",
+      "texto": "O time perdeu os três primeiros jogos do campeonato, mas o técnico resistiu à pressão para trocar toda a estratégia de jogo, argumentando que o elenco só precisava de tempo para se adaptar às novas táticas. Nas rodadas seguintes, o time venceu quatro partidas consecutivas.",
+      "pergunta": "Qual foi a justificativa do técnico para não mudar a estratégia?",
+      "opcoes": [
+        "O elenco só precisava de tempo para se adaptar às novas táticas",
+        "Ele já tinha decidido pedir demissão de qualquer forma",
+        "A diretoria do time exigiu que nada fosse mudado",
+        "Os jogadores ameaçaram parar de jogar se algo mudasse"
+      ],
+      "resposta_correta": "O elenco só precisava de tempo para se adaptar às novas táticas"
+    },
+    {
+      "id": "int-016",
+      "texto": "Uma pesquisa recente revelou que grande parte dos consumidores prefere ler as avaliações de outros clientes antes de comprar um produto online, mesmo quando o preço já parece atrativo. Segundo os pesquisadores, isso mostra que a confiança gerada por outros compradores pesa mais do que apenas o valor cobrado.",
+      "pergunta": "O que a pesquisa revela sobre o comportamento dos consumidores, segundo o texto?",
+      "opcoes": [
+        "Eles preferem ler avaliações de outros clientes antes de comprar, mesmo com preço atrativo",
+        "Eles compram exclusivamente pelo preço mais baixo disponível",
+        "Eles nunca leem avaliações antes de qualquer compra",
+        "Eles preferem comprar apenas em lojas físicas"
+      ],
+      "resposta_correta": "Eles preferem ler avaliações de outros clientes antes de comprar, mesmo com preço atrativo"
+    },
+    {
+      "id": "int-017",
+      "texto": "Mesmo com a previsão de chuva forte para o fim de semana, os organizadores do festival decidiram manter o evento ao ar livre, apostando numa cobertura parcial do espaço e num plano alternativo de realocar as atrações para uma tenda maior, caso fosse necessário.",
+      "pergunta": "Qual foi a decisão dos organizadores diante da previsão de chuva?",
+      "opcoes": [
+        "Manter o evento, com um plano alternativo de realocação para uma tenda",
+        "Cancelar totalmente o festival",
+        "Adiar o evento para o mês seguinte",
+        "Transferir o evento para outra cidade"
+      ],
+      "resposta_correta": "Manter o evento, com um plano alternativo de realocação para uma tenda"
+    },
+    {
+      "id": "int-018",
+      "texto": "O motorista de aplicativo relatou que, depois de anos dirigindo em período integral, decidiu reduzir a carga de trabalho para apenas as manhãs, priorizando o tempo livre à tarde para cuidar da própria saúde e reduzir o cansaço acumulado ao longo dos anos.",
+      "pergunta": "Por que o motorista decidiu reduzir sua carga de trabalho?",
+      "opcoes": [
+        "Para priorizar a própria saúde e reduzir o cansaço acumulado",
+        "Porque o aplicativo reduziu o número de corridas disponíveis",
+        "Porque ele decidiu trocar de profissão",
+        "Porque seu veículo precisava de manutenção prolongada"
+      ],
+      "resposta_correta": "Para priorizar a própria saúde e reduzir o cansaço acumulado"
+    },
+    {
+      "id": "int-019",
+      "texto": "A escola municipal implementou uma horta comunitária cuidada pelos próprios alunos, como parte de um projeto de educação ambiental. Além de ensinar sobre plantio, a iniciativa também passou a fornecer parte dos vegetais usados na merenda escolar, reduzindo o custo de compra de alguns itens.",
+      "pergunta": "Qual benefício adicional a horta trouxe para a escola, além do aprendizado dos alunos?",
+      "opcoes": [
+        "Passou a fornecer parte dos vegetais usados na merenda, reduzindo custos",
+        "Aumentou o número de matrículas na escola",
+        "Substituiu totalmente as aulas de outras matérias",
+        "Gerou lucro para ser distribuído entre os alunos"
+      ],
+      "resposta_correta": "Passou a fornecer parte dos vegetais usados na merenda, reduzindo custos"
+    },
+    {
+      "id": "int-020",
+      "texto": "Depois de perder o emprego numa grande empresa, Fernanda decidiu usar a experiência acumulada para abrir uma consultoria própria, atendendo especificamente pequenos negócios que não tinham orçamento para contratar profissionais das grandes consultorias do mercado.",
+      "pergunta": "Qual público Fernanda decidiu atender com sua consultoria?",
+      "opcoes": [
+        "Pequenos negócios que não tinham orçamento para grandes consultorias",
+        "Exclusivamente grandes empresas multinacionais",
+        "Apenas ex-colegas da empresa onde trabalhava",
+        "Somente empresas do mesmo setor da anterior"
+      ],
+      "resposta_correta": "Pequenos negócios que não tinham orçamento para grandes consultorias"
+    },
+    {
+      "id": "int-021",
+      "texto": "O museu decidiu digitalizar todo o acervo histórico depois de um incidente que danificou parte dos documentos originais. Agora, pesquisadores de qualquer lugar do mundo podem acessar cópias digitais de alta qualidade sem precisar manusear diretamente os documentos físicos, mais frágeis.",
+      "pergunta": "O que motivou o museu a digitalizar o acervo, segundo o texto?",
+      "opcoes": [
+        "Um incidente que danificou parte dos documentos originais",
+        "A falta de espaço físico no museu",
+        "Uma exigência do governo federal",
+        "O desejo de vender cópias digitais"
+      ],
+      "resposta_correta": "Um incidente que danificou parte dos documentos originais"
+    },
+    {
+      "id": "int-022",
+      "texto": "Ainda que o novo aplicativo de transporte público prometesse economizar tempo de espera, muitos usuários relataram dificuldade em se adaptar à interface no início. Após algumas atualizações que simplificaram o design, as reclamações caíram e a avaliação média do aplicativo melhorou.",
+      "pergunta": "O que aconteceu depois que o aplicativo simplificou o design?",
+      "opcoes": [
+        "As reclamações caíram e a avaliação média melhorou",
+        "O aplicativo foi descontinuado",
+        "O número de usuários diminuiu drasticamente",
+        "O tempo de espera aumentou"
+      ],
+      "resposta_correta": "As reclamações caíram e a avaliação média melhorou"
+    },
+    {
+      "id": "int-023",
+      "texto": "O pequeno produtor de queijos artesanais relutou em vender seu produto pela internet por anos, achando que o contato pessoal na feira era insubstituível. Quando finalmente aceitou tentar, percebeu que conseguia alcançar clientes de cidades vizinhas que nunca teriam ido até a feira local.",
+      "pergunta": "Qual foi o benefício que o produtor percebeu ao vender pela internet?",
+      "opcoes": [
+        "Conseguiu alcançar clientes de cidades vizinhas que não iam à feira",
+        "Deixou de vender na feira local completamente",
+        "Reduziu o preço do produto pela metade",
+        "Perdeu contato com seus clientes antigos"
+      ],
+      "resposta_correta": "Conseguiu alcançar clientes de cidades vizinhas que não iam à feira"
+    },
+    {
+      "id": "int-024",
+      "texto": "A equipe de resgate levou mais tempo do que o previsto para localizar os trilheiros perdidos, já que a névoa densa na região dificultava tanto a visibilidade quanto o uso de equipamentos aéreos de busca. Ainda assim, todos foram encontrados em segurança antes do anoitecer.",
+      "pergunta": "O que dificultou o trabalho da equipe de resgate, segundo o texto?",
+      "opcoes": [
+        "A névoa densa na região",
+        "A falta de treinamento da equipe",
+        "A recusa dos trilheiros em serem encontrados",
+        "A ausência de qualquer equipamento de busca"
+      ],
+      "resposta_correta": "A névoa densa na região"
+    },
+    {
+      "id": "int-025",
+      "texto": "Depois de anos usando um sistema de anotações em papel, o pequeno escritório de contabilidade migrou para um software de gestão. A transição não foi simples no início, mas os próprios funcionários relataram, meses depois, que o tempo gasto em tarefas repetitivas caiu significativamente.",
+      "pergunta": "O que os funcionários relataram meses depois da transição para o software?",
+      "opcoes": [
+        "O tempo gasto em tarefas repetitivas caiu significativamente",
+        "Preferiam voltar ao sistema em papel",
+        "O escritório perdeu clientes por causa da mudança",
+        "O software era mais caro do que o esperado"
+      ],
+      "resposta_correta": "O tempo gasto em tarefas repetitivas caiu significativamente"
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "bloco": "interpretacao_de_textos",
+    "fase": "bloco_2_de_4",
+    "mundo_destino": "Mundo da Linguagem",
+    "total_itens_neste_bloco": 25,
+    "formato": "texto curto original seguido de 1 pergunta de interpretacao com alternativas",
+    "checagem_direitos_autorais": "Todos os textos foram escritos originalmente para este material - nenhum trecho de fonte externa foi reproduzido.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - temas neutros do cotidiano."
+  },
+  "itens": [
+    {
+      "id": "int-026",
+      "texto": "O pequeno mercado de bairro decidiu manter os preços dos produtos básicos congelados por três meses, mesmo com o aumento de custos dos fornecedores, numa tentativa de reter os clientes fiéis que moravam nas redondezas e evitar que migrassem para os supermercados maiores da região.",
+      "pergunta": "Por que o mercado decidiu congelar os preços mesmo com custo maior?",
+      "opcoes": [
+        "Para reter os clientes fiéis e evitar que migrassem para supermercados maiores",
+        "Porque o governo exigiu por lei",
+        "Porque os fornecedores reduziram os preços na mesma proporção",
+        "Porque não havia mais clientes fiéis para reter"
+      ],
+      "resposta_correta": "Para reter os clientes fiéis e evitar que migrassem para supermercados maiores"
+    },
+    {
+      "id": "int-027",
+      "texto": "Depois de sofrer uma lesão que o afastou dos treinos por seis meses, o nadador precisou reaprender alguns movimentos básicos junto com o fisioterapeuta, antes de voltar a competir. Segundo ele, esse período serviu também para reavaliar sua rotina de treino, que estava mais intensa do que o corpo suportava.",
+      "pergunta": "O que o período de afastamento serviu para o nadador, além da recuperação física?",
+      "opcoes": [
+        "Reavaliar a rotina de treino, que estava mais intensa do que o corpo suportava",
+        "Desistir definitivamente da natação",
+        "Trocar de modalidade esportiva",
+        "Conseguir um novo patrocinador"
+      ],
+      "resposta_correta": "Reavaliar a rotina de treino, que estava mais intensa do que o corpo suportava"
+    },
+    {
+      "id": "int-028",
+      "texto": "A prefeitura anunciou a criação de uma ciclovia ligando dois bairros historicamente separados por uma via expressa. Moradores comemoraram a notícia, mas alguns comerciantes da região manifestaram preocupação com a possível redução de vagas de estacionamento em frente aos próprios estabelecimentos.",
+      "pergunta": "Qual foi a preocupação manifestada por alguns comerciantes, segundo o texto?",
+      "opcoes": [
+        "A possível redução de vagas de estacionamento em frente aos estabelecimentos",
+        "O aumento do preço dos aluguéis comerciais",
+        "A proibição total de veículos na região",
+        "A construção de um novo shopping próximo"
+      ],
+      "resposta_correta": "A possível redução de vagas de estacionamento em frente aos estabelecimentos"
+    },
+    {
+      "id": "int-029",
+      "texto": "Ao perceber que muitos clientes abandonavam o carrinho de compras antes de finalizar a compra online, a loja resolveu simplificar o processo de pagamento, reduzindo de seis para três o número de etapas necessárias. Nos meses seguintes, a taxa de conclusão de compra aumentou consideravelmente.",
+      "pergunta": "O que a loja fez para reduzir o abandono de carrinho, segundo o texto?",
+      "opcoes": [
+        "Reduziu o número de etapas do processo de pagamento",
+        "Aumentou o preço dos produtos",
+        "Eliminou totalmente a opção de compra online",
+        "Passou a exigir cadastro obrigatório antes da navegação"
+      ],
+      "resposta_correta": "Reduziu o número de etapas do processo de pagamento"
+    },
+    {
+      "id": "int-030",
+      "texto": "O professor notou que a turma tinha mais facilidade em entender o conteúdo de matemática quando os exemplos eram relacionados a situações do dia a dia dos próprios alunos, como cálculo de troco ou divisão de contas entre amigos, em vez de apenas exercícios abstratos no quadro.",
+      "pergunta": "O que o professor percebeu sobre o aprendizado da turma?",
+      "opcoes": [
+        "A turma entendia melhor com exemplos relacionados ao dia a dia dos alunos",
+        "A turma preferia exercícios totalmente abstratos",
+        "Os alunos não conseguiam aprender matemática de forma alguma",
+        "O conteúdo precisava ser reduzido pela metade"
+      ],
+      "resposta_correta": "A turma entendia melhor com exemplos relacionados ao dia a dia dos alunos"
+    },
+    {
+      "id": "int-031",
+      "texto": "Apesar do escritório oferecer a opção de trabalho totalmente remoto, boa parte dos funcionários optou por continuar indo presencialmente pelo menos três vezes por semana, alegando que o contato direto com os colegas facilitava a resolução de problemas mais complexos do dia a dia.",
+      "pergunta": "Por que muitos funcionários preferiram continuar indo presencialmente?",
+      "opcoes": [
+        "O contato direto com colegas facilitava a resolução de problemas complexos",
+        "A empresa proibiu o trabalho remoto na prática",
+        "Não havia internet suficiente nas casas dos funcionários",
+        "O escritório oferecia salário maior para quem fosse presencial"
+      ],
+      "resposta_correta": "O contato direto com colegas facilitava a resolução de problemas complexos"
+    },
+    {
+      "id": "int-032",
+      "texto": "A pequena vinícola familiar decidiu investir em turismo rural como forma de diversificar a renda, oferecendo visitas guiadas e degustação aos fins de semana. Em pouco tempo, essa nova atividade passou a representar quase um terço do faturamento total do negócio.",
+      "pergunta": "Qual foi o resultado da nova atividade de turismo rural para a vinícola?",
+      "opcoes": [
+        "Passou a representar quase um terço do faturamento total",
+        "Reduziu drasticamente a produção de vinho",
+        "Fez a vinícola encerrar as atividades originais",
+        "Gerou prejuízo nos primeiros anos, sem recuperação"
+      ],
+      "resposta_correta": "Passou a representar quase um terço do faturamento total"
+    },
+    {
+      "id": "int-033",
+      "texto": "O grupo de amigos planejava uma viagem de carro para o litoral, mas, ao verificar a previsão de forte chuva na estrada, decidiu adiar a partida em um dia, esperando que as condições melhorassem, em vez de arriscar dirigir sob chuva intensa por horas.",
+      "pergunta": "Por que o grupo decidiu adiar a viagem em um dia?",
+      "opcoes": [
+        "Para evitar dirigir sob chuva intensa por horas",
+        "Porque o carro quebrou antes da viagem",
+        "Porque um dos amigos desistiu de ir",
+        "Porque o litoral estava fechado para visitantes"
+      ],
+      "resposta_correta": "Para evitar dirigir sob chuva intensa por horas"
+    },
+    {
+      "id": "int-034",
+      "texto": "A rede de farmácias decidiu ampliar o horário de atendimento em algumas unidades para 24 horas, após perceber, por meio de dados de vendas, que havia demanda significativa durante a madrugada, especialmente por medicamentos de uso contínuo e itens de emergência.",
+      "pergunta": "O que motivou a rede de farmácias a ampliar o horário de atendimento?",
+      "opcoes": [
+        "A demanda significativa durante a madrugada, identificada em dados de vendas",
+        "Uma exigência do governo local",
+        "A falta de concorrência na região",
+        "Um pedido direto de um único cliente"
+      ],
+      "resposta_correta": "A demanda significativa durante a madrugada, identificada em dados de vendas"
+    },
+    {
+      "id": "int-035",
+      "texto": "Mesmo tendo recebido diversas críticas nas primeiras apresentações, a jovem cantora decidiu manter seu estilo autoral em vez de seguir as fórmulas mais populares do momento. Anos depois, seu trabalho passou a ser reconhecido justamente pela originalidade que antes havia sido motivo de crítica.",
+      "pergunta": "O que a cantora manteve, apesar das críticas iniciais?",
+      "opcoes": [
+        "Seu estilo autoral, em vez de seguir fórmulas populares",
+        "A decisão de abandonar a carreira musical",
+        "A cópia de outros artistas de sucesso",
+        "A recusa em se apresentar publicamente"
+      ],
+      "resposta_correta": "Seu estilo autoral, em vez de seguir fórmulas populares"
+    },
+    {
+      "id": "int-036",
+      "texto": "O condomínio decidiu instalar painéis solares nas áreas comuns depois de comparar o investimento inicial com a economia projetada na conta de energia ao longo dos anos seguintes. Segundo os cálculos apresentados na assembleia, o valor investido seria recuperado em pouco mais de quatro anos.",
+      "pergunta": "O que os cálculos apresentados na assembleia indicavam, segundo o texto?",
+      "opcoes": [
+        "O investimento seria recuperado em pouco mais de quatro anos",
+        "A instalação nunca se pagaria financeiramente",
+        "O condomínio precisaria aumentar a taxa condominial permanentemente",
+        "A energia solar não geraria nenhuma economia real"
+      ],
+      "resposta_correta": "O investimento seria recuperado em pouco mais de quatro anos"
+    },
+    {
+      "id": "int-037",
+      "texto": "Ao longo do processo seletivo, a candidata percebeu que a empresa valorizava mais exemplos concretos de experiências passadas do que respostas genéricas sobre qualidades pessoais. A partir dessa percepção, ela ajustou sua forma de responder nas próximas etapas, sempre citando situações reais que havia vivido.",
+      "pergunta": "O que a candidata ajustou depois de perceber a preferência da empresa?",
+      "opcoes": [
+        "Passou a citar situações reais que havia vivido",
+        "Parou de participar do processo seletivo",
+        "Passou a exagerar suas qualificações",
+        "Decidiu não responder mais nenhuma pergunta"
+      ],
+      "resposta_correta": "Passou a citar situações reais que havia vivido"
+    },
+    {
+      "id": "int-038",
+      "texto": "Depois de anos vendendo apenas em feiras livres, o artesão resolveu criar um perfil em rede social para divulgar suas peças. No início, teve dificuldade em fotografar bem os produtos, mas, com o tempo, aprendeu técnicas simples de iluminação que melhoraram bastante a apresentação visual dos itens.",
+      "pergunta": "Qual dificuldade inicial o artesão teve ao divulgar seu trabalho online?",
+      "opcoes": [
+        "Dificuldade em fotografar bem os produtos",
+        "Falta de peças para vender",
+        "Preço muito alto cobrado pelas redes sociais",
+        "Proibição de vender artesanato pela internet"
+      ],
+      "resposta_correta": "Dificuldade em fotografar bem os produtos"
+    },
+    {
+      "id": "int-039",
+      "texto": "A equipe de engenheiros precisou refazer parte do projeto da ponte depois que um estudo geológico mais detalhado revelou que o solo da região era menos firme do que o inicialmente previsto, exigindo uma fundação mais profunda para garantir a segurança da estrutura.",
+      "pergunta": "Por que a equipe precisou refazer parte do projeto da ponte?",
+      "opcoes": [
+        "Um estudo revelou que o solo era menos firme do que o previsto",
+        "O orçamento da obra havia sido reduzido pela metade",
+        "A prefeitura pediu uma ponte maior do que a planejada",
+        "Os engenheiros mudaram de empresa no meio do projeto"
+      ],
+      "resposta_correta": "Um estudo revelou que o solo era menos firme do que o previsto"
+    },
+    {
+      "id": "int-040",
+      "texto": "O restaurante familiar, tradicional no bairro há mais de vinte anos, resistiu à tentação de mudar completamente o cardápio para acompanhar tendências passageiras, preferindo aperfeiçoar aos poucos os pratos que já eram populares entre os clientes mais antigos, mantendo assim sua identidade.",
+      "pergunta": "Qual foi a estratégia do restaurante em relação ao cardápio, segundo o texto?",
+      "opcoes": [
+        "Aperfeiçoar aos poucos os pratos já populares, mantendo a identidade",
+        "Substituir completamente o cardápio a cada ano",
+        "Copiar exatamente o cardápio de restaurantes concorrentes",
+        "Reduzir o cardápio a apenas um único prato"
+      ],
+      "resposta_correta": "Aperfeiçoar aos poucos os pratos já populares, mantendo a identidade"
+    },
+    {
+      "id": "int-041",
+      "texto": "Ao notar que grande parte dos acidentes de trabalho na fábrica acontecia no início do turno da manhã, a gestão de segurança decidiu implementar uma pausa de alongamento obrigatória de cinco minutos antes do início das atividades, o que reduziu significativamente os incidentes registrados.",
+      "pergunta": "O que a gestão de segurança implementou após identificar o padrão de acidentes?",
+      "opcoes": [
+        "Uma pausa de alongamento obrigatória antes do início das atividades",
+        "A demissão dos funcionários envolvidos nos acidentes",
+        "O fechamento do turno da manhã",
+        "A redução do horário de trabalho para todos"
+      ],
+      "resposta_correta": "Uma pausa de alongamento obrigatória antes do início das atividades"
+    },
+    {
+      "id": "int-042",
+      "texto": "A cooperativa de pescadores decidiu adotar um período de defeso mais rigoroso do que o exigido por lei, com o objetivo de preservar a reprodução de uma espécie de peixe que vinha sendo capturada em excesso nos últimos anos, mesmo sabendo que isso reduziria a renda no curto prazo.",
+      "pergunta": "Por que a cooperativa adotou um período de defeso mais rigoroso do que o exigido?",
+      "opcoes": [
+        "Para preservar a reprodução de uma espécie capturada em excesso",
+        "Porque a lei havia mudado recentemente",
+        "Porque não havia mais peixes disponíveis na região",
+        "Porque o governo pagava um subsídio por isso"
+      ],
+      "resposta_correta": "Para preservar a reprodução de uma espécie capturada em excesso"
+    },
+    {
+      "id": "int-043",
+      "texto": "Durante a reforma do apartamento, o casal decidiu manter o piso original de madeira da sala, mesmo com sugestões de trocá-lo por um material mais moderno, porque aquele piso havia pertencido aos avós e carregava um valor sentimental importante para ambos.",
+      "pergunta": "Por que o casal decidiu manter o piso original?",
+      "opcoes": [
+        "Porque o piso havia pertencido aos avós e tinha valor sentimental",
+        "Porque não havia dinheiro suficiente para trocar o piso",
+        "Porque o material moderno não estava disponível na loja",
+        "Porque o síndico do prédio proibiu a troca"
+      ],
+      "resposta_correta": "Porque o piso havia pertencido aos avós e tinha valor sentimental"
+    },
+    {
+      "id": "int-044",
+      "texto": "A startup de tecnologia decidiu adiar o lançamento do aplicativo em duas semanas depois que os testes internos identificaram uma falha de segurança que poderia expor dados dos usuários. Apesar da pressão para lançar na data original, a equipe considerou que corrigir o problema era prioridade.",
+      "pergunta": "Por que a startup adiou o lançamento do aplicativo?",
+      "opcoes": [
+        "Os testes identificaram uma falha de segurança que poderia expor dados",
+        "A equipe de desenvolvimento pediu férias coletivas",
+        "Faltavam recursos financeiros para o lançamento",
+        "Um concorrente lançou um produto parecido antes"
+      ],
+      "resposta_correta": "Os testes identificaram uma falha de segurança que poderia expor dados"
+    },
+    {
+      "id": "int-045",
+      "texto": "O grupo de teatro amador, formado majoritariamente por moradores do bairro, conseguiu financiar sua primeira peça própria através de uma campanha de arrecadação coletiva online, depois de anos apresentando apenas adaptações de textos já conhecidos por falta de recursos para produções originais.",
+      "pergunta": "Como o grupo de teatro conseguiu financiar sua primeira peça original?",
+      "opcoes": [
+        "Através de uma campanha de arrecadação coletiva online",
+        "Recebendo um patrocínio de uma grande empresa",
+        "Vendendo o prédio onde ensaiavam",
+        "Através de um empréstimo bancário tradicional"
+      ],
+      "resposta_correta": "Através de uma campanha de arrecadação coletiva online"
+    },
+    {
+      "id": "int-046",
+      "texto": "Depois de identificar que muitos idosos da região tinham dificuldade em usar o aplicativo do banco, a agência local passou a oferecer, uma vez por semana, um atendimento presencial dedicado exclusivamente a ensinar o uso das funções básicas do aplicativo para esse público.",
+      "pergunta": "O que a agência bancária passou a oferecer para os idosos da região?",
+      "opcoes": [
+        "Um atendimento presencial semanal dedicado a ensinar o uso do aplicativo",
+        "O fechamento definitivo da agência física",
+        "Um desconto especial em taxas bancárias",
+        "A proibição do uso do aplicativo por idosos"
+      ],
+      "resposta_correta": "Um atendimento presencial semanal dedicado a ensinar o uso do aplicativo"
+    },
+    {
+      "id": "int-047",
+      "texto": "O motorista de caminhão relatou que, após anos fazendo a mesma rota entre duas capitais, decidiu investir num curso de direção econômica, que ensina técnicas para reduzir o consumo de combustível. Segundo ele, a economia mensal gerada compensou rapidamente o valor pago pelo curso.",
+      "pergunta": "O que o curso de direção econômica ensinava, segundo o texto?",
+      "opcoes": [
+        "Técnicas para reduzir o consumo de combustível",
+        "Como trocar de rota com mais frequência",
+        "Como conduzir veículos maiores do que o habitual",
+        "Como reduzir o tempo total de viagem"
+      ],
+      "resposta_correta": "Técnicas para reduzir o consumo de combustível"
+    },
+    {
+      "id": "int-048",
+      "texto": "Apesar de a empresa de logística ter investido pesado em automação de estoque, os gestores perceberam que ainda era necessário manter uma equipe humana para lidar com situações imprevistas, como produtos com embalagens danificadas, que o sistema automatizado não conseguia identificar sozinho.",
+      "pergunta": "Por que a empresa manteve uma equipe humana mesmo após investir em automação?",
+      "opcoes": [
+        "Para lidar com situações imprevistas que o sistema não identificava sozinho",
+        "Porque a automação havia sido totalmente cancelada",
+        "Porque os funcionários se recusaram a sair",
+        "Porque o sistema automatizado quebrou permanentemente"
+      ],
+      "resposta_correta": "Para lidar com situações imprevistas que o sistema não identificava sozinho"
+    },
+    {
+      "id": "int-049",
+      "texto": "A escola de idiomas notou que os alunos que praticavam conversação em grupos pequenos, de no máximo quatro pessoas, avançavam mais rápido do que aqueles em turmas grandes, provavelmente por terem mais oportunidades de falar durante cada aula.",
+      "pergunta": "O que a escola notou sobre os alunos em grupos pequenos?",
+      "opcoes": [
+        "Avançavam mais rápido, possivelmente por falarem mais durante a aula",
+        "Tinham mais dificuldade de aprender do que em turmas grandes",
+        "Desistiam do curso com mais frequência",
+        "Pagavam um valor menor pela mensalidade"
+      ],
+      "resposta_correta": "Avançavam mais rápido, possivelmente por falarem mais durante a aula"
+    },
+    {
+      "id": "int-050",
+      "texto": "O casal de aposentados decidiu transformar parte do quintal de casa numa horta comunitária aberta aos vizinhos, depois de perceber que muitas famílias próximas não tinham espaço próprio para cultivar hortaliças. A iniciativa, além de fortalecer laços entre vizinhos, ajudou a reduzir o gasto mensal com alimentação de várias famílias.",
+      "pergunta": "Qual foi um dos benefícios da horta comunitária, segundo o texto?",
+      "opcoes": [
+        "Ajudou a reduzir o gasto mensal com alimentação de várias famílias",
+        "Gerou lucro financeiro direto para o casal",
+        "Substituiu totalmente os supermercados da região",
+        "Fez com que os vizinhos se afastassem uns dos outros"
+      ],
+      "resposta_correta": "Ajudou a reduzir o gasto mensal com alimentação de várias famílias"
+    }
+  ]
+}

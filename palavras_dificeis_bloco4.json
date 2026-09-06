@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "bloco": "vocabulario_avancado_jargao",
+    "fase": "bloco_4_de_4",
+    "mundo_destino": "Mundo da Linguagem",
+    "total_palavras_neste_bloco": 25,
+    "formato": "duas variantes alternadas: (A) 'O que significa a palavra?' com definicoes como alternativas; (B) contexto descritivo sem citar a palavra, seguido de 'A palavra e:' com palavras como alternativas",
+    "areas_cobertas": "geral, juridico, politica, negocios",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - termos politicos tratados como conceito neutro de ciencia politica, sem viés partidario. Conclui o total de 100 palavras solicitado."
+  },
+  "itens": [
+    {
+      "id": "pd-076",
+      "formato": "A",
+      "palavra": "Compliance",
+      "pergunta": "No contexto empresarial, o que significa 'compliance'?",
+      "opcoes": [
+        "Conjunto de práticas que garantem que uma empresa siga leis, normas e regras internas",
+        "Um tipo de imposto sobre lucro",
+        "Documento que registra a fundação de uma empresa",
+        "Processo de venda de ações na bolsa"
+      ],
+      "resposta_correta": "Conjunto de práticas que garantem que uma empresa siga leis, normas e regras internas",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-077",
+      "formato": "B",
+      "palavra": "Gabinete",
+      "contexto": "Espaço de trabalho reservado a uma autoridade pública, como um parlamentar, onde ficam sua equipe e a estrutura de apoio para o exercício do mandato.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Gabinete",
+        "Plenário",
+        "Comissão",
+        "Bancada"
+      ],
+      "resposta_correta": "Gabinete",
+      "area": "politica"
+    },
+    {
+      "id": "pd-078",
+      "formato": "A",
+      "palavra": "Sagaz",
+      "pergunta": "O que significa 'sagaz'?",
+      "opcoes": [
+        "Perspicaz, esperto, que percebe as coisas com rapidez e inteligência",
+        "Que age sem pensar nas consequências",
+        "Que é extremamente lento para decidir",
+        "Relativo a documentos oficiais"
+      ],
+      "resposta_correta": "Perspicaz, esperto, que percebe as coisas com rapidez e inteligência",
+      "area": "geral"
+    },
+    {
+      "id": "pd-079",
+      "formato": "B",
+      "palavra": "Due diligence",
+      "contexto": "Processo de investigação e análise detalhada realizado antes de uma negociação importante, como a compra de uma empresa, para verificar riscos e confirmar informações apresentadas.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Due diligence",
+        "Compliance",
+        "Holding",
+        "Auditoria"
+      ],
+      "resposta_correta": "Due diligence",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-080",
+      "formato": "A",
+      "palavra": "Auditoria",
+      "pergunta": "O que significa 'auditoria', no contexto empresarial?",
+      "opcoes": [
+        "Exame independente das contas e processos de uma empresa, para verificar sua conformidade e precisão",
+        "Processo de contratação de novos funcionários",
+        "Divulgação pública do lucro de uma empresa",
+        "Fusão entre duas empresas do mesmo setor"
+      ],
+      "resposta_correta": "Exame independente das contas e processos de uma empresa, para verificar sua conformidade e precisão",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-081",
+      "formato": "B",
+      "palavra": "Quórum",
+      "contexto": "Número mínimo de participantes presentes exigido para que uma reunião, votação ou sessão legislativa seja considerada válida e possa tomar decisões oficiais.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Quórum",
+        "Plenário",
+        "Bancada",
+        "Mandato"
+      ],
+      "resposta_correta": "Quórum",
+      "area": "politica"
+    },
+    {
+      "id": "pd-082",
+      "formato": "A",
+      "palavra": "Ostensivo",
+      "pergunta": "O que significa 'ostensivo'?",
+      "opcoes": [
+        "Que é feito às claras, de forma visível e não disfarçada",
+        "Que é feito em segredo, de forma oculta",
+        "Que é proibido por lei",
+        "Relativo apenas a documentos antigos"
+      ],
+      "resposta_correta": "Que é feito às claras, de forma visível e não disfarçada",
+      "area": "geral"
+    },
+    {
+      "id": "pd-083",
+      "formato": "B",
+      "palavra": "Cláusula pétrea",
+      "contexto": "Dispositivo da Constituição de um país considerado tão fundamental que não pode ser alterado ou eliminado nem mesmo por emenda constitucional, servindo como proteção permanente de determinados princípios.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Cláusula pétrea",
+        "Emenda",
+        "Decreto",
+        "Sanção"
+      ],
+      "resposta_correta": "Cláusula pétrea",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-084",
+      "formato": "A",
+      "palavra": "Estoicismo",
+      "pergunta": "O que significa, no uso comum, ter 'estoicismo' diante de uma dificuldade?",
+      "opcoes": [
+        "Manter a calma e a serenidade mesmo diante de adversidades",
+        "Reagir com raiva imediata a qualquer contratempo",
+        "Evitar completamente qualquer tipo de desafio",
+        "Depender sempre da ajuda de terceiros"
+      ],
+      "resposta_correta": "Manter a calma e a serenidade mesmo diante de adversidades",
+      "area": "geral"
+    },
+    {
+      "id": "pd-085",
+      "formato": "B",
+      "palavra": "Ativo circulante",
+      "contexto": "Na contabilidade de uma empresa, são os bens e direitos que podem ser convertidos em dinheiro em um prazo relativamente curto, geralmente até um ano, como caixa e estoque.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Ativo circulante",
+        "Passivo exigível",
+        "Patrimônio líquido",
+        "Ativo imobilizado"
+      ],
+      "resposta_correta": "Ativo circulante",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-086",
+      "formato": "A",
+      "palavra": "Impasse",
+      "pergunta": "O que significa 'impasse'?",
+      "opcoes": [
+        "Situação sem solução aparente, em que nenhuma das partes consegue avançar",
+        "Acordo já fechado entre duas partes",
+        "Decisão tomada rapidamente sem discussão",
+        "Documento que encerra um processo judicial"
+      ],
+      "resposta_correta": "Situação sem solução aparente, em que nenhuma das partes consegue avançar",
+      "area": "geral"
+    },
+    {
+      "id": "pd-087",
+      "formato": "B",
+      "palavra": "Patrimônio líquido",
+      "contexto": "Na contabilidade, é o valor que resulta da diferença entre tudo que uma empresa ou pessoa possui e tudo que ela deve, representando a riqueza real acumulada.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Patrimônio líquido",
+        "Ativo circulante",
+        "Passivo exigível",
+        "Provisão"
+      ],
+      "resposta_correta": "Patrimônio líquido",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-088",
+      "formato": "A",
+      "palavra": "Passivo exigível",
+      "pergunta": "Na contabilidade, o que é 'passivo exigível'?",
+      "opcoes": [
+        "O conjunto de obrigações e dívidas que uma empresa precisa pagar",
+        "O total de dinheiro em caixa disponível imediatamente",
+        "O lucro líquido distribuído aos sócios",
+        "O valor de mercado das ações da empresa"
+      ],
+      "resposta_correta": "O conjunto de obrigações e dívidas que uma empresa precisa pagar",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-089",
+      "formato": "B",
+      "palavra": "Jurisprudência",
+      "contexto": "Conjunto de decisões judiciais anteriores sobre um mesmo tema, que passam a servir de referência e orientação para julgamentos futuros de casos semelhantes.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Jurisprudência",
+        "Legislação",
+        "Doutrina",
+        "Sentença"
+      ],
+      "resposta_correta": "Jurisprudência",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-090",
+      "formato": "A",
+      "palavra": "Doutrina",
+      "pergunta": "No contexto jurídico, o que significa 'doutrina'?",
+      "opcoes": [
+        "Conjunto de estudos e opiniões de especialistas do Direito sobre determinado tema",
+        "Uma lei aprovada pelo Congresso Nacional",
+        "A decisão final de um juiz num processo específico",
+        "Um tipo de multa administrativa"
+      ],
+      "resposta_correta": "Conjunto de estudos e opiniões de especialistas do Direito sobre determinado tema",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-091",
+      "formato": "B",
+      "palavra": "Sentença",
+      "contexto": "Decisão final proferida por um juiz, colocando fim a um processo judicial em primeira instância, podendo ainda estar sujeita a recurso pelas partes envolvidas.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Sentença",
+        "Jurisprudência",
+        "Doutrina",
+        "Petição"
+      ],
+      "resposta_correta": "Sentença",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-092",
+      "formato": "A",
+      "palavra": "Petição",
+      "pergunta": "No contexto jurídico, o que é uma 'petição'?",
+      "opcoes": [
+        "Documento formal apresentado por uma parte para solicitar algo à Justiça",
+        "A decisão final de um processo",
+        "Um tipo de multa de trânsito",
+        "Um contrato de compra e venda"
+      ],
+      "resposta_correta": "Documento formal apresentado por uma parte para solicitar algo à Justiça",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-093",
+      "formato": "B",
+      "palavra": "Obsoleto",
+      "contexto": "Que caiu em desuso, ultrapassado, substituído por algo mais moderno ou eficiente, deixando de ser utilizado com a mesma frequência de antes.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Obsoleto",
+        "Longevo",
+        "Perene",
+        "Iminente"
+      ],
+      "resposta_correta": "Obsoleto",
+      "area": "geral"
+    },
+    {
+      "id": "pd-094",
+      "formato": "A",
+      "palavra": "Escrutínio",
+      "pergunta": "No contexto eleitoral, o que significa 'escrutínio'?",
+      "opcoes": [
+        "Processo de apuração e contagem dos votos numa eleição",
+        "O ato de se candidatar a um cargo público",
+        "A campanha eleitoral realizada antes da votação",
+        "O documento de identidade usado para votar"
+      ],
+      "resposta_correta": "Processo de apuração e contagem dos votos numa eleição",
+      "area": "politica"
+    },
+    {
+      "id": "pd-095",
+      "formato": "B",
+      "palavra": "Legislação",
+      "contexto": "Conjunto de leis vigentes num país ou região, criadas pelo Poder Legislativo, que regulam o comportamento e as relações entre pessoas, empresas e o próprio Estado.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Legislação",
+        "Jurisprudência",
+        "Doutrina",
+        "Sentença"
+      ],
+      "resposta_correta": "Legislação",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-096",
+      "formato": "A",
+      "palavra": "Meticuloso",
+      "pergunta": "O que significa 'meticuloso'?",
+      "opcoes": [
+        "Extremamente cuidadoso e detalhista na realização de algo",
+        "Que age de forma apressada e descuidada",
+        "Que evita qualquer tipo de planejamento",
+        "Relativo apenas a documentos financeiros"
+      ],
+      "resposta_correta": "Extremamente cuidadoso e detalhista na realização de algo",
+      "area": "geral"
+    },
+    {
+      "id": "pd-097",
+      "formato": "B",
+      "palavra": "Ativo imobilizado",
+      "contexto": "Na contabilidade, são os bens de uma empresa destinados ao uso na própria operação do negócio, como máquinas e imóveis, não sendo destinados à venda no curto prazo.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Ativo imobilizado",
+        "Ativo circulante",
+        "Passivo exigível",
+        "Patrimônio líquido"
+      ],
+      "resposta_correta": "Ativo imobilizado",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-098",
+      "formato": "A",
+      "palavra": "Cerceamento",
+      "pergunta": "No contexto jurídico, o que significa 'cerceamento de defesa'?",
+      "opcoes": [
+        "Limitação indevida do direito de uma parte se defender num processo",
+        "A confirmação de que a defesa foi bem-sucedida",
+        "O prazo final para apresentação de provas",
+        "Um tipo de recurso usado apenas por advogados"
+      ],
+      "resposta_correta": "Limitação indevida do direito de uma parte se defender num processo",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-099",
+      "formato": "B",
+      "palavra": "Prerrogativa",
+      "contexto": "Direito ou privilégio especial concedido a determinada pessoa ou cargo, geralmente em razão da função exercida, que não se estende automaticamente a todos os demais cidadãos.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Prerrogativa",
+        "Sufrágio",
+        "Mandato",
+        "Anistia"
+      ],
+      "resposta_correta": "Prerrogativa",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-100",
+      "formato": "A",
+      "palavra": "Inexorável",
+      "pergunta": "O que significa 'inexorável'?",
+      "opcoes": [
+        "Que não pode ser evitado ou interrompido, inevitável",
+        "Que pode ser facilmente cancelado",
+        "Que depende de decisão judicial",
+        "Relativo apenas a prazos administrativos"
+      ],
+      "resposta_correta": "Que não pode ser evitado ou interrompido, inevitável",
+      "area": "geral"
+    }
+  ]
+}

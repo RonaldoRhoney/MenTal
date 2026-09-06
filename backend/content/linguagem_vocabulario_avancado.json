@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'hodierno'?",
+    "options": [
+      "Relativo ao dia de hoje, atual",
+      "Relativo ao passado distante",
+      "Que se repete todo ano",
+      "Relativo à noite"
+    ],
+    "correct_answer": "Relativo ao dia de hoje, atual",
+    "explanation": "'Hodierno' significa: Relativo ao dia de hoje, atual.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Hodierno'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Processo político e jurídico pelo qual uma autoridade eleita pode ser afastada do cargo antes do fim do mandato, mediante acusação formal e julgamento por órgão competente.\n\nA palavra é:",
+    "options": [
+      "Impeachment",
+      "Plebiscito",
+      "Recall",
+      "Anistia"
+    ],
+    "correct_answer": "Impeachment",
+    "explanation": "'Impeachment' é a palavra que combina com a descrição: Processo político e jurídico pelo qual uma autoridade eleita pode ser afastada do cargo antes do fim do mandato, mediante acusação formal e julgamento por órgão competente.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'I'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'usucapião'?",
+    "options": [
+      "Modo de adquirir propriedade pela posse prolongada e ininterrupta de um bem",
+      "Imposto cobrado sobre herança",
+      "Contrato de aluguel comercial",
+      "Multa por atraso de pagamento"
+    ],
+    "correct_answer": "Modo de adquirir propriedade pela posse prolongada e ininterrupta de um bem",
+    "explanation": "'Usucapião' significa: Modo de adquirir propriedade pela posse prolongada e ininterrupta de um bem.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Usucapião'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Empresa criada com o propósito principal de deter participação societária em outras empresas, controlando-as sem necessariamente operar diretamente no mercado.\n\nA palavra é:",
+    "options": [
+      "Holding",
+      "Franquia",
+      "Cooperativa",
+      "Sociedade anônima"
+    ],
+    "correct_answer": "Holding",
+    "explanation": "'Holding' é a palavra que combina com a descrição: Empresa criada com o propósito principal de deter participação societária em outras empresas, controlando-as sem necessariamente operar diretamente no mercado.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'H'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'entrementes'?",
+    "options": [
+      "Enquanto isso, nesse meio tempo",
+      "De forma definitiva",
+      "Ao final de tudo",
+      "Antes de qualquer coisa"
+    ],
+    "correct_answer": "Enquanto isso, nesse meio tempo",
+    "explanation": "'Entrementes' significa: Enquanto isso, nesse meio tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Entrementes'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Consulta popular realizada antes da criação de uma lei ou de uma decisão política relevante, para que os cidadãos se manifestem previamente sobre o tema.\n\nA palavra é:",
+    "options": [
+      "Plebiscito",
+      "Referendo",
+      "Impeachment",
+      "Sufrágio"
+    ],
+    "correct_answer": "Plebiscito",
+    "explanation": "'Plebiscito' é a palavra que combina com a descrição: Consulta popular realizada antes da criação de uma lei ou de uma decisão política relevante, para que os cidadãos se manifestem previamente sobre o tema.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'habeas corpus'?",
+    "options": [
+      "Instrumento jurídico usado para proteger o direito de ir e vir de alguém",
+      "Documento que comprova propriedade de um imóvel",
+      "Recurso usado para contestar uma multa de trânsito",
+      "Pedido de revisão de contrato de trabalho"
+    ],
+    "correct_answer": "Instrumento jurídico usado para proteger o direito de ir e vir de alguém",
+    "explanation": "'Habeas corpus' significa: Instrumento jurídico usado para proteger o direito de ir e vir de alguém.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Habeas corpus'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Termo usado no mercado financeiro para descrever a diferença entre a taxa de juros que um banco paga para captar dinheiro e a taxa que cobra para emprestá-lo.\n\nA palavra é:",
+    "options": [
+      "Spread",
+      "Dividendo",
+      "Deságio",
+      "Rating"
+    ],
+    "correct_answer": "Spread",
+    "explanation": "'Spread' é a palavra que combina com a descrição: Termo usado no mercado financeiro para descrever a diferença entre a taxa de juros que um banco paga para captar dinheiro e a taxa que cobra para emprestá-lo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'S'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'lapidar' (como adjetivo, referindo-se a uma frase ou texto)?",
+    "options": [
+      "Perfeito, bem elaborado, digno de nota",
+      "Confuso e mal escrito",
+      "Muito extenso e repetitivo",
+      "Escrito às pressas"
+    ],
+    "correct_answer": "Perfeito, bem elaborado, digno de nota",
+    "explanation": "'Lapidar' significa: Perfeito, bem elaborado, digno de nota.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Lapidar'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Consulta popular realizada depois que uma lei já foi aprovada, para que os cidadãos confirmem ou rejeitem aquela decisão já tomada pelos representantes eleitos.\n\nA palavra é:",
+    "options": [
+      "Referendo",
+      "Plebiscito",
+      "Veto",
+      "Emenda"
+    ],
+    "correct_answer": "Referendo",
+    "explanation": "'Referendo' é a palavra que combina com a descrição: Consulta popular realizada depois que uma lei já foi aprovada, para que os cidadãos confirmem ou rejeitem aquela decisão já tomada pelos representantes eleitos.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'R'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'litígio'?",
+    "options": [
+      "Disputa ou conflito levado à Justiça para ser resolvido",
+      "Um tipo de contrato de aluguel",
+      "Documento de identidade civil",
+      "Certidão de nascimento"
+    ],
+    "correct_answer": "Disputa ou conflito levado à Justiça para ser resolvido",
+    "explanation": "'Litígio' significa: Disputa ou conflito levado à Justiça para ser resolvido.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Litígio'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Modelo de negócio em que uma empresa permite que outras pessoas usem sua marca e seu método de operação já estabelecido, mediante pagamento de taxas.\n\nA palavra é:",
+    "options": [
+      "Franquia",
+      "Holding",
+      "Fusão",
+      "Consórcio"
+    ],
+    "correct_answer": "Franquia",
+    "explanation": "'Franquia' é a palavra que combina com a descrição: Modelo de negócio em que uma empresa permite que outras pessoas usem sua marca e seu método de operação já estabelecido, mediante pagamento de taxas.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'F'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'perene'?",
+    "options": [
+      "Que dura por muito tempo, contínuo, permanente",
+      "Que acontece uma única vez",
+      "Que muda de cor com frequência",
+      "Relativo à estação do inverno"
+    ],
+    "correct_answer": "Que dura por muito tempo, contínuo, permanente",
+    "explanation": "'Perene' significa: Que dura por muito tempo, contínuo, permanente.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Perene'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Medida legal que perdoa determinados crimes ou infrações cometidas até certa data, geralmente aplicada de forma ampla a um grupo de pessoas, não a um caso individual.\n\nA palavra é:",
+    "options": [
+      "Anistia",
+      "Impeachment",
+      "Indulto",
+      "Habeas corpus"
+    ],
+    "correct_answer": "Anistia",
+    "explanation": "'Anistia' é a palavra que combina com a descrição: Medida legal que perdoa determinados crimes ou infrações cometidas até certa data, geralmente aplicada de forma ampla a um grupo de pessoas, não a um caso individual.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de politica_juridico.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'fidúcia'?",
+    "options": [
+      "Confiança depositada em alguém ou em algo",
+      "Um tipo de multa administrativa",
+      "Documento que registra uma dívida",
+      "Taxa cobrada por atraso de pagamento"
+    ],
+    "correct_answer": "Confiança depositada em alguém ou em algo",
+    "explanation": "'Fidúcia' significa: Confiança depositada em alguém ou em algo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Fidúcia'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Desconto aplicado sobre o valor original de um título ou de uma dívida no momento da compra ou negociação, fazendo o comprador pagar menos que o valor de face.\n\nA palavra é:",
+    "options": [
+      "Deságio",
+      "Ágio",
+      "Spread",
+      "Superávit"
+    ],
+    "correct_answer": "Deságio",
+    "explanation": "'Deságio' é a palavra que combina com a descrição: Desconto aplicado sobre o valor original de um título ou de uma dívida no momento da compra ou negociação, fazendo o comprador pagar menos que o valor de face.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'D'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'contumaz'?",
+    "options": [
+      "Que insiste ou reincide constantemente em determinado comportamento",
+      "Que age apenas uma vez na vida",
+      "Que muda de opinião facilmente",
+      "Que é extremamente educado"
+    ],
+    "correct_answer": "Que insiste ou reincide constantemente em determinado comportamento",
+    "explanation": "'Contumaz' significa: Que insiste ou reincide constantemente em determinado comportamento.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Contumaz'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Valor pago a mais do que o preço original de um bem ou título, geralmente porque a demanda por ele é maior do que a oferta disponível no momento.\n\nA palavra é:",
+    "options": [
+      "Ágio",
+      "Deságio",
+      "Dividendo",
+      "Provisão"
+    ],
+    "correct_answer": "Ágio",
+    "explanation": "'Ágio' é a palavra que combina com a descrição: Valor pago a mais do que o preço original de um bem ou título, geralmente porque a demanda por ele é maior do que a oferta disponível no momento.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'Á'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto jurídico, o que significa 'cognição' de um processo?",
+    "options": [
+      "A análise e o conhecimento dos fatos e provas de um caso pelo juiz",
+      "O prazo final para apresentar um recurso",
+      "O valor da causa julgada",
+      "O local onde o julgamento ocorre"
+    ],
+    "correct_answer": "A análise e o conhecimento dos fatos e provas de um caso pelo juiz",
+    "explanation": "'Cognição' significa: A análise e o conhecimento dos fatos e provas de um caso pelo juiz.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Cognição'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Termo usado para descrever um sistema legislativo dividido em duas casas distintas, como acontece no Congresso Nacional do Brasil, formado por Câmara dos Deputados e Senado Federal.\n\nA palavra é:",
+    "options": [
+      "Bicameral",
+      "Unicameral",
+      "Parlamentarista",
+      "Presidencialista"
+    ],
+    "correct_answer": "Bicameral",
+    "explanation": "'Bicameral' é a palavra que combina com a descrição: Termo usado para descrever um sistema legislativo dividido em duas casas distintas, como acontece no Congresso Nacional do Brasil, formado por Câmara dos Deputados e Senado Federal.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'B'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'inócuo'?",
+    "options": [
+      "Que não causa dano ou efeito relevante",
+      "Extremamente perigoso e nocivo",
+      "Que gera lucro imediato",
+      "Relativo a documentos oficiais"
+    ],
+    "correct_answer": "Que não causa dano ou efeito relevante",
+    "explanation": "'Inócuo' significa: Que não causa dano ou efeito relevante.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Inócuo'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Situação em que as receitas de um governo, empresa ou pessoa superam as despesas num determinado período, resultando em saldo positivo.\n\nA palavra é:",
+    "options": [
+      "Superávit",
+      "Déficit",
+      "Ágio",
+      "Provisão"
+    ],
+    "correct_answer": "Superávit",
+    "explanation": "'Superávit' é a palavra que combina com a descrição: Situação em que as receitas de um governo, empresa ou pessoa superam as despesas num determinado período, resultando em saldo positivo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'S'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'peremptório', referindo-se a um prazo?",
+    "options": [
+      "Que não pode ser prorrogado ou adiado",
+      "Que pode ser estendido livremente",
+      "Que se refere apenas a feriados",
+      "Que é definido a cada ano"
+    ],
+    "correct_answer": "Que não pode ser prorrogado ou adiado",
+    "explanation": "'Peremptório' significa: Que não pode ser prorrogado ou adiado.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Peremptório'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Sistema de governo em que o chefe de governo é indicado pelo parlamento e depende de sua confiança para permanecer no cargo, diferente de sistemas em que o chefe de governo é eleito diretamente pela população.\n\nA palavra é:",
+    "options": [
+      "Parlamentarismo",
+      "Presidencialismo",
+      "Federalismo",
+      "Bicameralismo"
+    ],
+    "correct_answer": "Parlamentarismo",
+    "explanation": "'Parlamentarismo' é a palavra que combina com a descrição: Sistema de governo em que o chefe de governo é indicado pelo parlamento e depende de sua confiança para permanecer no cargo, diferente de sistemas em que o chefe de governo é eleito diretamente pela população.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'eclético'?",
+    "options": [
+      "Que combina elementos ou estilos variados e diferentes entre si",
+      "Que segue rigidamente um único padrão",
+      "Que é extremamente caro",
+      "Relativo a assuntos religiosos apenas"
+    ],
+    "correct_answer": "Que combina elementos ou estilos variados e diferentes entre si",
+    "explanation": "'Ecléti​co' significa: Que combina elementos ou estilos variados e diferentes entre si.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Ecléti​co'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'exegese'?",
+    "options": [
+      "Interpretação e explicação detalhada de um texto, especialmente jurídico ou religioso",
+      "Um tipo de recurso judicial",
+      "Documento que comprova quitação de dívida",
+      "Prazo final para resposta a um processo"
+    ],
+    "correct_answer": "Interpretação e explicação detalhada de um texto, especialmente jurídico ou religioso",
+    "explanation": "'Exegese' significa: Interpretação e explicação detalhada de um texto, especialmente jurídico ou religioso.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Exegese'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Forma de organização de um Estado em que o poder é dividido entre um governo central e governos regionais (como estados ou províncias), cada um com autonomia em determinadas áreas.\n\nA palavra é:",
+    "options": [
+      "Federalismo",
+      "Parlamentarismo",
+      "Presidencialismo",
+      "Bicameralismo"
+    ],
+    "correct_answer": "Federalismo",
+    "explanation": "'Federalismo' é a palavra que combina com a descrição: Forma de organização de um Estado em que o poder é dividido entre um governo central e governos regionais (como estados ou províncias), cada um com autonomia em determinadas áreas.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'F'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto contábil/financeiro, o que significa 'provisão'?",
+    "options": [
+      "Valor reservado antecipadamente para cobrir uma despesa ou perda futura provável",
+      "Lucro distribuído aos sócios de uma empresa",
+      "Imposto cobrado sobre a folha de pagamento",
+      "Documento de abertura de uma empresa"
+    ],
+    "correct_answer": "Valor reservado antecipadamente para cobrir uma despesa ou perda futura provável",
+    "explanation": "'Provisão' significa: Valor reservado antecipadamente para cobrir uma despesa ou perda futura provável.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Provisão'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Que existe de forma instável, provisória ou sem garantias sólidas, podendo ser interrompido ou revogado a qualquer momento, sem estabilidade duradoura.\n\nA palavra é:",
+    "options": [
+      "Precário",
+      "Perene",
+      "Peremptório",
+      "Definitivo"
+    ],
+    "correct_answer": "Precário",
+    "explanation": "'Precário' é a palavra que combina com a descrição: Que existe de forma instável, provisória ou sem garantias sólidas, podendo ser interrompido ou revogado a qualquer momento, sem estabilidade duradoura.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa um ato 'discricionário' da administração pública?",
+    "options": [
+      "Aquele em que a autoridade tem certa margem de escolha, dentro dos limites da lei",
+      "Aquele que é sempre ilegal",
+      "Aquele que depende de aprovação popular direta",
+      "Aquele aplicado apenas em casos de emergência"
+    ],
+    "correct_answer": "Aquele em que a autoridade tem certa margem de escolha, dentro dos limites da lei",
+    "explanation": "'Discricionário' significa: Aquele em que a autoridade tem certa margem de escolha, dentro dos limites da lei.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Discricionário'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Operação em que duas ou mais empresas se juntam para formar uma nova empresa única, deixando de existir separadamente como eram antes.\n\nA palavra é:",
+    "options": [
+      "Fusão",
+      "Franquia",
+      "Holding",
+      "Cisão"
+    ],
+    "correct_answer": "Fusão",
+    "explanation": "'Fusão' é a palavra que combina com a descrição: Operação em que duas ou mais empresas se juntam para formar uma nova empresa única, deixando de existir separadamente como eram antes.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'F'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'assíduo'?",
+    "options": [
+      "Que comparece ou participa com frequência e regularidade",
+      "Que falta constantemente sem justificativa",
+      "Que age de forma imprevisível",
+      "Que só aparece uma vez por ano"
+    ],
+    "correct_answer": "Que comparece ou participa com frequência e regularidade",
+    "explanation": "'Assíduo' significa: Que comparece ou participa com frequência e regularidade.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Assíduo'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Direito de votar em eleições, garantido aos cidadãos de um país como forma de participação no processo democrático de escolha de representantes.\n\nA palavra é:",
+    "options": [
+      "Sufrágio",
+      "Plebiscito",
+      "Referendo",
+      "Mandato"
+    ],
+    "correct_answer": "Sufrágio",
+    "explanation": "'Sufrágio' é a palavra que combina com a descrição: Direito de votar em eleições, garantido aos cidadãos de um país como forma de participação no processo democrático de escolha de representantes.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'S'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto empresarial, o que significa 'cisão'?",
+    "options": [
+      "Divisão de uma empresa em duas ou mais partes distintas",
+      "União de duas empresas em uma só",
+      "Falência declarada judicialmente",
+      "Mudança de nome de uma empresa"
+    ],
+    "correct_answer": "Divisão de uma empresa em duas ou mais partes distintas",
+    "explanation": "'Cisão' significa: Divisão de uma empresa em duas ou mais partes distintas.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Cisão'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Medida que perdoa ou reduz a pena de uma pessoa já condenada judicialmente, concedida geralmente pelo chefe do Poder Executivo, aplicada a casos específicos ou a grupos determinados de condenados.\n\nA palavra é:",
+    "options": [
+      "Indulto",
+      "Anistia",
+      "Habeas corpus",
+      "Sursis"
+    ],
+    "correct_answer": "Indulto",
+    "explanation": "'Indulto' é a palavra que combina com a descrição: Medida que perdoa ou reduz a pena de uma pessoa já condenada judicialmente, concedida geralmente pelo chefe do Poder Executivo, aplicada a casos específicos ou a grupos determinados de condenados.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'I'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'deliberar'?",
+    "options": [
+      "Decidir após reflexão ou discussão sobre um assunto",
+      "Recusar-se a participar de uma decisão",
+      "Adiar indefinidamente uma escolha",
+      "Executar uma ordem sem questionar"
+    ],
+    "correct_answer": "Decidir após reflexão ou discussão sobre um assunto",
+    "explanation": "'Deliberar' significa: Decidir após reflexão ou discussão sobre um assunto.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Deliberar'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Sistema de governo em que o chefe de Estado e o chefe de governo se concentram na mesma pessoa, eleita diretamente pela população para um mandato de duração determinada.\n\nA palavra é:",
+    "options": [
+      "Presidencialismo",
+      "Parlamentarismo",
+      "Federalismo",
+      "Bicameralismo"
+    ],
+    "correct_answer": "Presidencialismo",
+    "explanation": "'Presidencialismo' é a palavra que combina com a descrição: Sistema de governo em que o chefe de Estado e o chefe de governo se concentram na mesma pessoa, eleita diretamente pela população para um mandato de duração determinada.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No mercado financeiro, o que significa 'rating' de crédito?",
+    "options": [
+      "Uma nota que avalia a capacidade de pagamento de uma dívida por um governo ou empresa",
+      "O valor total de uma dívida contraída",
+      "A taxa de juros cobrada por um banco",
+      "O prazo máximo para pagar um empréstimo"
+    ],
+    "correct_answer": "Uma nota que avalia a capacidade de pagamento de uma dívida por um governo ou empresa",
+    "explanation": "'Rating' significa: Uma nota que avalia a capacidade de pagamento de uma dívida por um governo ou empresa.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Rating'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Situação em que uma pessoa que cometeu uma infração ou crime não recebe nenhuma punição correspondente por aquele ato.\n\nA palavra é:",
+    "options": [
+      "Impune",
+      "Anistiado",
+      "Indultado",
+      "Absolvido"
+    ],
+    "correct_answer": "Impune",
+    "explanation": "'Impune' é a palavra que combina com a descrição: Situação em que uma pessoa que cometeu uma infração ou crime não recebe nenhuma punição correspondente por aquele ato.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "A palavra procurada começa com 'I'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto político, o que significa 'mandato'?",
+    "options": [
+      "O período de tempo determinado em que uma pessoa eleita exerce um cargo público",
+      "Um tipo específico de imposto federal",
+      "O local onde ocorrem as eleições",
+      "Um documento de identificação civil"
+    ],
+    "correct_answer": "O período de tempo determinado em que uma pessoa eleita exerce um cargo público",
+    "explanation": "'Mandato' significa: O período de tempo determinado em que uma pessoa eleita exerce um cargo público.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Mandato'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Benefício previsto em lei que permite a suspensão condicional da execução de uma pena, sob determinadas condições impostas pelo juiz, sem que o condenado precise cumpri-la de imediato.\n\nA palavra é:",
+    "options": [
+      "Sursis",
+      "Indulto",
+      "Anistia",
+      "Habeas corpus"
+    ],
+    "correct_answer": "Sursis",
+    "explanation": "'Sursis' é a palavra que combina com a descrição: Benefício previsto em lei que permite a suspensão condicional da execução de uma pena, sob determinadas condições impostas pelo juiz, sem que o condenado precise cumpri-la de imediato.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'S'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'idôneo'?",
+    "options": [
+      "Que possui boa reputação, confiável, apto para determinado fim",
+      "Que é considerado suspeito de má conduta",
+      "Que é temporário por natureza",
+      "Relativo apenas a documentos antigos"
+    ],
+    "correct_answer": "Que possui boa reputação, confiável, apto para determinado fim",
+    "explanation": "'Idôneo' significa: Que possui boa reputação, confiável, apto para determinado fim.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Idôneo'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Situação em que as despesas de um governo, empresa ou pessoa superam as receitas num determinado período, resultando em saldo negativo.\n\nA palavra é:",
+    "options": [
+      "Déficit",
+      "Superávit",
+      "Ágio",
+      "Spread"
+    ],
+    "correct_answer": "Déficit",
+    "explanation": "'Déficit' é a palavra que combina com a descrição: Situação em que as despesas de um governo, empresa ou pessoa superam as receitas num determinado período, resultando em saldo negativo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'D'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto eleitoral, o que significa 'coligação' entre partidos?",
+    "options": [
+      "União temporária entre partidos políticos para disputar uma eleição juntos",
+      "Fusão definitiva entre dois partidos, que deixam de existir separadamente",
+      "Proibição legal de um partido participar de eleições",
+      "Um tipo de imposto cobrado de partidos políticos"
+    ],
+    "correct_answer": "União temporária entre partidos políticos para disputar uma eleição juntos",
+    "explanation": "'Coligação' significa: União temporária entre partidos políticos para disputar uma eleição juntos.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Coligação'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Situação financeira em que uma pessoa ou empresa não possui recursos suficientes para pagar as dívidas que já venceram, o que pode levar a processos judiciais específicos, como falência.\n\nA palavra é:",
+    "options": [
+      "Insolvência",
+      "Superávit",
+      "Déficit",
+      "Provisão"
+    ],
+    "correct_answer": "Insolvência",
+    "explanation": "'Insolvência' é a palavra que combina com a descrição: Situação financeira em que uma pessoa ou empresa não possui recursos suficientes para pagar as dívidas que já venceram, o que pode levar a processos judiciais específicos, como falência.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'I'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'coercitivo'?",
+    "options": [
+      "Que obriga ou força alguém a fazer algo, geralmente por meio de pressão ou ameaça de sanção",
+      "Que é voluntário e espontâneo",
+      "Que se aplica apenas a contratos verbais",
+      "Que é sempre benéfico a quem recebe"
+    ],
+    "correct_answer": "Que obriga ou força alguém a fazer algo, geralmente por meio de pressão ou ameaça de sanção",
+    "explanation": "'Coercitivo' significa: Que obriga ou força alguém a fazer algo, geralmente por meio de pressão ou ameaça de sanção.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Coercitivo'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Ato pelo qual um chefe do Poder Executivo rejeita, total ou parcialmente, um projeto de lei já aprovado pelo Poder Legislativo, podendo ainda ser derrubado pelos parlamentares em determinadas condições.\n\nA palavra é:",
+    "options": [
+      "Veto",
+      "Emenda",
+      "Referendo",
+      "Sanção"
+    ],
+    "correct_answer": "Veto",
+    "explanation": "'Veto' é a palavra que combina com a descrição: Ato pelo qual um chefe do Poder Executivo rejeita, total ou parcialmente, um projeto de lei já aprovado pelo Poder Legislativo, podendo ainda ser derrubado pelos parlamentares em determinadas condições.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'V'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto jurídico/administrativo, o que significa 'diligência'?",
+    "options": [
+      "Ato ou procedimento realizado para apurar ou verificar algo com cuidado",
+      "Um tipo de multa aplicada a empresas",
+      "Documento final de um processo já encerrado",
+      "Prazo de validade de um contrato"
+    ],
+    "correct_answer": "Ato ou procedimento realizado para apurar ou verificar algo com cuidado",
+    "explanation": "'Diligência' significa: Ato ou procedimento realizado para apurar ou verificar algo com cuidado.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Diligência'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No processo legislativo, é o ato pelo qual o chefe do Poder Executivo aprova e confirma um projeto de lei já votado pelo Legislativo, transformando-o oficialmente em lei.\n\nA palavra é:",
+    "options": [
+      "Sanção",
+      "Veto",
+      "Emenda",
+      "Decreto"
+    ],
+    "correct_answer": "Sanção",
+    "explanation": "'Sanção' é a palavra que combina com a descrição: No processo legislativo, é o ato pelo qual o chefe do Poder Executivo aprova e confirma um projeto de lei já votado pelo Legislativo, transformando-o oficialmente em lei.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'S'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'prolixo'?",
+    "options": [
+      "Excessivamente longo, cheio de detalhes desnecessários",
+      "Extremamente curto e direto",
+      "Escrito em linguagem técnica apenas",
+      "Relativo a documentos sigilosos"
+    ],
+    "correct_answer": "Excessivamente longo, cheio de detalhes desnecessários",
+    "explanation": "'Prolixo' significa: Excessivamente longo, cheio de detalhes desnecessários.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Prolixo'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'efêmero'?",
+    "options": [
+      "Que dura pouco tempo, passageiro",
+      "Que dura para sempre",
+      "Que se repete todo dia",
+      "Relativo a documentos oficiais"
+    ],
+    "correct_answer": "Que dura pouco tempo, passageiro",
+    "explanation": "'Efêmero' significa: Que dura pouco tempo, passageiro.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Efêmero'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Ato normativo emitido pelo Poder Executivo para regulamentar ou dar cumprimento a uma lei já existente, sem precisar passar por votação no Poder Legislativo.\n\nA palavra é:",
+    "options": [
+      "Decreto",
+      "Sanção",
+      "Emenda",
+      "Veto"
+    ],
+    "correct_answer": "Decreto",
+    "explanation": "'Decreto' é a palavra que combina com a descrição: Ato normativo emitido pelo Poder Executivo para regulamentar ou dar cumprimento a uma lei já existente, sem precisar passar por votação no Poder Legislativo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'D'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto financeiro, o que significa dar um 'aval'?",
+    "options": [
+      "Assumir a responsabilidade de pagar uma dívida caso o devedor original não pague",
+      "Emprestar dinheiro diretamente a alguém",
+      "Cobrar uma taxa adicional sobre um empréstimo",
+      "Recusar-se a garantir uma dívida de terceiros"
+    ],
+    "correct_answer": "Assumir a responsabilidade de pagar uma dívida caso o devedor original não pague",
+    "explanation": "'Aval' significa: Assumir a responsabilidade de pagar uma dívida caso o devedor original não pague.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Aval'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Pessoa que está cumprindo pena em regime fechado dentro de um estabelecimento prisional, sem liberdade para circular fora dali.\n\nA palavra é:",
+    "options": [
+      "Recluso",
+      "Impune",
+      "Indultado",
+      "Anistiado"
+    ],
+    "correct_answer": "Recluso",
+    "explanation": "'Recluso' é a palavra que combina com a descrição: Pessoa que está cumprindo pena em regime fechado dentro de um estabelecimento prisional, sem liberdade para circular fora dali.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'R'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'tácito', referindo-se a um acordo?",
+    "options": [
+      "Que é subentendido, não expresso formalmente por palavras",
+      "Que está escrito em contrato formal e assinado",
+      "Que é anulado por decisão judicial",
+      "Que depende de aprovação do governo"
+    ],
+    "correct_answer": "Que é subentendido, não expresso formalmente por palavras",
+    "explanation": "'Tácito' significa: Que é subentendido, não expresso formalmente por palavras.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Tácito'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Proposta de alteração apresentada por um parlamentar para modificar o texto original de um projeto de lei em tramitação no Poder Legislativo.\n\nA palavra é:",
+    "options": [
+      "Emenda",
+      "Veto",
+      "Decreto",
+      "Sanção"
+    ],
+    "correct_answer": "Emenda",
+    "explanation": "'Emenda' é a palavra que combina com a descrição: Proposta de alteração apresentada por um parlamentar para modificar o texto original de um projeto de lei em tramitação no Poder Legislativo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'E'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto financeiro, o que significa 'amortização' de uma dívida?",
+    "options": [
+      "Pagamento gradual de uma dívida ao longo do tempo, reduzindo o saldo devedor",
+      "Cancelamento total e imediato de uma dívida",
+      "Aumento do valor de uma dívida por atraso",
+      "Transferência de uma dívida para outra pessoa"
+    ],
+    "correct_answer": "Pagamento gradual de uma dívida ao longo do tempo, reduzindo o saldo devedor",
+    "explanation": "'Amortização' significa: Pagamento gradual de uma dívida ao longo do tempo, reduzindo o saldo devedor.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Amortização'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Situação em que uma pessoa acusada de um crime é julgada e considerada inocente pelo tribunal, sendo liberada de qualquer pena relacionada àquela acusação específica.\n\nA palavra é:",
+    "options": [
+      "Absolvido",
+      "Indultado",
+      "Anistiado",
+      "Impune"
+    ],
+    "correct_answer": "Absolvido",
+    "explanation": "'Absolvido' é a palavra que combina com a descrição: Situação em que uma pessoa acusada de um crime é julgada e considerada inocente pelo tribunal, sendo liberada de qualquer pena relacionada àquela acusação específica.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'circunspecto'?",
+    "options": [
+      "Cauteloso, prudente, que age com discrição",
+      "Extremamente falante e impulsivo",
+      "Que nunca toma decisões",
+      "Relativo a documentos antigos"
+    ],
+    "correct_answer": "Cauteloso, prudente, que age com discrição",
+    "explanation": "'Circunspecto' significa: Cauteloso, prudente, que age com discrição.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Circunspecto'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Conjunto de partidos ou parlamentares que discordam e fiscalizam as ações do governo em exercício, sem fazer parte da base que sustenta as decisões do Poder Executivo.\n\nA palavra é:",
+    "options": [
+      "Oposição",
+      "Coligação",
+      "Base aliada",
+      "Bancada"
+    ],
+    "correct_answer": "Oposição",
+    "explanation": "'Oposição' é a palavra que combina com a descrição: Conjunto de partidos ou parlamentares que discordam e fiscalizam as ações do governo em exercício, sem fazer parte da base que sustenta as decisões do Poder Executivo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'O'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'consórcio', no contexto financeiro?",
+    "options": [
+      "Grupo de pessoas que se reúnem para juntar recursos e adquirir bens por meio de sorteio ou lance",
+      "Empréstimo bancário com garantia de imóvel",
+      "Fusão obrigatória entre duas empresas concorrentes",
+      "Um tipo de imposto sobre veículos"
+    ],
+    "correct_answer": "Grupo de pessoas que se reúnem para juntar recursos e adquirir bens por meio de sorteio ou lance",
+    "explanation": "'Consórcio' significa: Grupo de pessoas que se reúnem para juntar recursos e adquirir bens por meio de sorteio ou lance.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Consórcio'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Pessoa que comete uma nova infração ou crime depois de já ter sido condenada anteriormente por outro ato semelhante, o que pode agravar a pena numa nova condenação.\n\nA palavra é:",
+    "options": [
+      "Reincidente",
+      "Contumaz",
+      "Recluso",
+      "Absolvido"
+    ],
+    "correct_answer": "Reincidente",
+    "explanation": "'Reincidente' é a palavra que combina com a descrição: Pessoa que comete uma nova infração ou crime depois de já ter sido condenada anteriormente por outro ato semelhante, o que pode agravar a pena numa nova condenação.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'R'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'iminente'?",
+    "options": [
+      "Que está prestes a acontecer, muito próximo no tempo",
+      "Que já aconteceu há muito tempo",
+      "Que nunca vai acontecer",
+      "Que depende de aprovação judicial"
+    ],
+    "correct_answer": "Que está prestes a acontecer, muito próximo no tempo",
+    "explanation": "'Iminente' significa: Que está prestes a acontecer, muito próximo no tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Iminente'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Conjunto de parlamentares de um mesmo partido, estado ou grupo de interesse específico que atuam de forma articulada dentro do Poder Legislativo.\n\nA palavra é:",
+    "options": [
+      "Bancada",
+      "Coligação",
+      "Oposição",
+      "Plenário"
+    ],
+    "correct_answer": "Bancada",
+    "explanation": "'Bancada' é a palavra que combina com a descrição: Conjunto de parlamentares de um mesmo partido, estado ou grupo de interesse específico que atuam de forma articulada dentro do Poder Legislativo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'B'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto financeiro, o que significa 'alavancagem'?",
+    "options": [
+      "Uso de recursos de terceiros (como empréstimos) para ampliar o potencial de retorno de um investimento",
+      "Redução total do risco de um investimento",
+      "Pagamento antecipado de uma dívida",
+      "Distribuição de lucro entre os sócios de uma empresa"
+    ],
+    "correct_answer": "Uso de recursos de terceiros (como empréstimos) para ampliar o potencial de retorno de um investimento",
+    "explanation": "'Alavancagem' significa: Uso de recursos de terceiros (como empréstimos) para ampliar o potencial de retorno de um investimento.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Alavancagem'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Espaço físico onde os parlamentares se reúnem para debater e votar projetos de lei em conjunto, representando a atuação coletiva de uma casa legislativa.\n\nA palavra é:",
+    "options": [
+      "Plenário",
+      "Bancada",
+      "Gabinete",
+      "Comissão"
+    ],
+    "correct_answer": "Plenário",
+    "explanation": "'Plenário' é a palavra que combina com a descrição: Espaço físico onde os parlamentares se reúnem para debater e votar projetos de lei em conjunto, representando a atuação coletiva de uma casa legislativa.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'explícito'?",
+    "options": [
+      "Que é dito ou expresso de forma clara e direta",
+      "Que é subentendido, sem ser dito diretamente",
+      "Que é proibido por lei",
+      "Relativo apenas a documentos sigilosos"
+    ],
+    "correct_answer": "Que é dito ou expresso de forma clara e direta",
+    "explanation": "'Explícito' significa: Que é dito ou expresso de forma clara e direta.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Explícito'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Grupo menor de parlamentares, formado dentro do Poder Legislativo, responsável por analisar em detalhe um tema ou projeto de lei específico antes de ele seguir para votação mais ampla.\n\nA palavra é:",
+    "options": [
+      "Comissão",
+      "Plenário",
+      "Bancada",
+      "Coligação"
+    ],
+    "correct_answer": "Comissão",
+    "explanation": "'Comissão' é a palavra que combina com a descrição: Grupo menor de parlamentares, formado dentro do Poder Legislativo, responsável por analisar em detalhe um tema ou projeto de lei específico antes de ele seguir para votação mais ampla.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'C'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa estar 'inadimplente'?",
+    "options": [
+      "Estar em atraso no cumprimento de uma obrigação, geralmente de pagamento",
+      "Ter quitado todas as dívidas em dia",
+      "Ter um contrato cancelado por acordo mútuo",
+      "Ter recebido um empréstimo aprovado"
+    ],
+    "correct_answer": "Estar em atraso no cumprimento de uma obrigação, geralmente de pagamento",
+    "explanation": "'Inadimplente' significa: Estar em atraso no cumprimento de uma obrigação, geralmente de pagamento.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Inadimplente'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Pessoa que presenciou um fato relevante para um processo judicial e é chamada a relatar o que viu ou sabe perante a Justiça, sob compromisso de dizer a verdade.\n\nA palavra é:",
+    "options": [
+      "Testemunha",
+      "Réu",
+      "Autor",
+      "Perito"
+    ],
+    "correct_answer": "Testemunha",
+    "explanation": "'Testemunha' é a palavra que combina com a descrição: Pessoa que presenciou um fato relevante para um processo judicial e é chamada a relatar o que viu ou sabe perante a Justiça, sob compromisso de dizer a verdade.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'T'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'recôndito'?",
+    "options": [
+      "Escondido, de difícil acesso ou pouco conhecido",
+      "Que está exposto publicamente",
+      "Que é muito conhecido e popular",
+      "Relativo a documentos financeiros"
+    ],
+    "correct_answer": "Escondido, de difícil acesso ou pouco conhecido",
+    "explanation": "'Recôndito' significa: Escondido, de difícil acesso ou pouco conhecido.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Recôndito'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Pessoa que responde a um processo judicial por ser acusada de ter cometido determinada infração ou de dever algo à parte que iniciou aquela ação.\n\nA palavra é:",
+    "options": [
+      "Réu",
+      "Autor",
+      "Testemunha",
+      "Perito"
+    ],
+    "correct_answer": "Réu",
+    "explanation": "'Réu' é a palavra que combina com a descrição: Pessoa que responde a um processo judicial por ser acusada de ter cometido determinada infração ou de dever algo à parte que iniciou aquela ação.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'R'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto judicial, o que é um 'perito'?",
+    "options": [
+      "Profissional especializado chamado para dar um parecer técnico sobre determinado fato do processo",
+      "A pessoa que decide o resultado final do julgamento",
+      "O advogado responsável pela defesa do réu",
+      "O funcionário responsável por arquivar documentos do tribunal"
+    ],
+    "correct_answer": "Profissional especializado chamado para dar um parecer técnico sobre determinado fato do processo",
+    "explanation": "'Perito' significa: Profissional especializado chamado para dar um parecer técnico sobre determinado fato do processo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Perito'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Na esfera judicial, é a pessoa ou parte que inicia um processo, apresentando uma demanda ou pedido formal contra outra parte perante a Justiça.\n\nA palavra é:",
+    "options": [
+      "Autor",
+      "Réu",
+      "Testemunha",
+      "Perito"
+    ],
+    "correct_answer": "Autor",
+    "explanation": "'Autor' é a palavra que combina com a descrição: Na esfera judicial, é a pessoa ou parte que inicia um processo, apresentando uma demanda ou pedido formal contra outra parte perante a Justiça.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'longevo'?",
+    "options": [
+      "Que tem vida longa, que dura muito tempo",
+      "Que dura muito pouco tempo",
+      "Que se refere apenas a documentos",
+      "Relativo a um único evento pontual"
+    ],
+    "correct_answer": "Que tem vida longa, que dura muito tempo",
+    "explanation": "'Longevo' significa: Que tem vida longa, que dura muito tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Longevo'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto empresarial, o que significa 'compliance'?",
+    "options": [
+      "Conjunto de práticas que garantem que uma empresa siga leis, normas e regras internas",
+      "Um tipo de imposto sobre lucro",
+      "Documento que registra a fundação de uma empresa",
+      "Processo de venda de ações na bolsa"
+    ],
+    "correct_answer": "Conjunto de práticas que garantem que uma empresa siga leis, normas e regras internas",
+    "explanation": "'Compliance' significa: Conjunto de práticas que garantem que uma empresa siga leis, normas e regras internas.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Compliance'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Espaço de trabalho reservado a uma autoridade pública, como um parlamentar, onde ficam sua equipe e a estrutura de apoio para o exercício do mandato.\n\nA palavra é:",
+    "options": [
+      "Gabinete",
+      "Plenário",
+      "Comissão",
+      "Bancada"
+    ],
+    "correct_answer": "Gabinete",
+    "explanation": "'Gabinete' é a palavra que combina com a descrição: Espaço de trabalho reservado a uma autoridade pública, como um parlamentar, onde ficam sua equipe e a estrutura de apoio para o exercício do mandato.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'G'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'sagaz'?",
+    "options": [
+      "Perspicaz, esperto, que percebe as coisas com rapidez e inteligência",
+      "Que age sem pensar nas consequências",
+      "Que é extremamente lento para decidir",
+      "Relativo a documentos oficiais"
+    ],
+    "correct_answer": "Perspicaz, esperto, que percebe as coisas com rapidez e inteligência",
+    "explanation": "'Sagaz' significa: Perspicaz, esperto, que percebe as coisas com rapidez e inteligência.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Sagaz'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Processo de investigação e análise detalhada realizado antes de uma negociação importante, como a compra de uma empresa, para verificar riscos e confirmar informações apresentadas.\n\nA palavra é:",
+    "options": [
+      "Due diligence",
+      "Compliance",
+      "Holding",
+      "Auditoria"
+    ],
+    "correct_answer": "Due diligence",
+    "explanation": "'Due diligence' é a palavra que combina com a descrição: Processo de investigação e análise detalhada realizado antes de uma negociação importante, como a compra de uma empresa, para verificar riscos e confirmar informações apresentadas.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'D'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'auditoria', no contexto empresarial?",
+    "options": [
+      "Exame independente das contas e processos de uma empresa, para verificar sua conformidade e precisão",
+      "Processo de contratação de novos funcionários",
+      "Divulgação pública do lucro de uma empresa",
+      "Fusão entre duas empresas do mesmo setor"
+    ],
+    "correct_answer": "Exame independente das contas e processos de uma empresa, para verificar sua conformidade e precisão",
+    "explanation": "'Auditoria' significa: Exame independente das contas e processos de uma empresa, para verificar sua conformidade e precisão.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Auditoria'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Número mínimo de participantes presentes exigido para que uma reunião, votação ou sessão legislativa seja considerada válida e possa tomar decisões oficiais.\n\nA palavra é:",
+    "options": [
+      "Quórum",
+      "Plenário",
+      "Bancada",
+      "Mandato"
+    ],
+    "correct_answer": "Quórum",
+    "explanation": "'Quórum' é a palavra que combina com a descrição: Número mínimo de participantes presentes exigido para que uma reunião, votação ou sessão legislativa seja considerada válida e possa tomar decisões oficiais.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "A palavra procurada começa com 'Q'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'ostensivo'?",
+    "options": [
+      "Que é feito às claras, de forma visível e não disfarçada",
+      "Que é feito em segredo, de forma oculta",
+      "Que é proibido por lei",
+      "Relativo apenas a documentos antigos"
+    ],
+    "correct_answer": "Que é feito às claras, de forma visível e não disfarçada",
+    "explanation": "'Ostensivo' significa: Que é feito às claras, de forma visível e não disfarçada.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Ostensivo'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Dispositivo da Constituição de um país considerado tão fundamental que não pode ser alterado ou eliminado nem mesmo por emenda constitucional, servindo como proteção permanente de determinados princípios.\n\nA palavra é:",
+    "options": [
+      "Cláusula pétrea",
+      "Emenda",
+      "Decreto",
+      "Sanção"
+    ],
+    "correct_answer": "Cláusula pétrea",
+    "explanation": "'Cláusula pétrea' é a palavra que combina com a descrição: Dispositivo da Constituição de um país considerado tão fundamental que não pode ser alterado ou eliminado nem mesmo por emenda constitucional, servindo como proteção permanente de determinados princípios.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'C'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa, no uso comum, ter 'estoicismo' diante de uma dificuldade?",
+    "options": [
+      "Manter a calma e a serenidade mesmo diante de adversidades",
+      "Reagir com raiva imediata a qualquer contratempo",
+      "Evitar completamente qualquer tipo de desafio",
+      "Depender sempre da ajuda de terceiros"
+    ],
+    "correct_answer": "Manter a calma e a serenidade mesmo diante de adversidades",
+    "explanation": "'Estoicismo' significa: Manter a calma e a serenidade mesmo diante de adversidades.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Estoicismo'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Na contabilidade de uma empresa, são os bens e direitos que podem ser convertidos em dinheiro em um prazo relativamente curto, geralmente até um ano, como caixa e estoque.\n\nA palavra é:",
+    "options": [
+      "Ativo circulante",
+      "Passivo exigível",
+      "Patrimônio líquido",
+      "Ativo imobilizado"
+    ],
+    "correct_answer": "Ativo circulante",
+    "explanation": "'Ativo circulante' é a palavra que combina com a descrição: Na contabilidade de uma empresa, são os bens e direitos que podem ser convertidos em dinheiro em um prazo relativamente curto, geralmente até um ano, como caixa e estoque.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'impasse'?",
+    "options": [
+      "Situação sem solução aparente, em que nenhuma das partes consegue avançar",
+      "Acordo já fechado entre duas partes",
+      "Decisão tomada rapidamente sem discussão",
+      "Documento que encerra um processo judicial"
+    ],
+    "correct_answer": "Situação sem solução aparente, em que nenhuma das partes consegue avançar",
+    "explanation": "'Impasse' significa: Situação sem solução aparente, em que nenhuma das partes consegue avançar.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Impasse'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Na contabilidade, é o valor que resulta da diferença entre tudo que uma empresa ou pessoa possui e tudo que ela deve, representando a riqueza real acumulada.\n\nA palavra é:",
+    "options": [
+      "Patrimônio líquido",
+      "Ativo circulante",
+      "Passivo exigível",
+      "Provisão"
+    ],
+    "correct_answer": "Patrimônio líquido",
+    "explanation": "'Patrimônio líquido' é a palavra que combina com a descrição: Na contabilidade, é o valor que resulta da diferença entre tudo que uma empresa ou pessoa possui e tudo que ela deve, representando a riqueza real acumulada.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Na contabilidade, o que é 'passivo exigível'?",
+    "options": [
+      "O conjunto de obrigações e dívidas que uma empresa precisa pagar",
+      "O total de dinheiro em caixa disponível imediatamente",
+      "O lucro líquido distribuído aos sócios",
+      "O valor de mercado das ações da empresa"
+    ],
+    "correct_answer": "O conjunto de obrigações e dívidas que uma empresa precisa pagar",
+    "explanation": "'Passivo exigível' significa: O conjunto de obrigações e dívidas que uma empresa precisa pagar.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Passivo exigível'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Conjunto de decisões judiciais anteriores sobre um mesmo tema, que passam a servir de referência e orientação para julgamentos futuros de casos semelhantes.\n\nA palavra é:",
+    "options": [
+      "Jurisprudência",
+      "Legislação",
+      "Doutrina",
+      "Sentença"
+    ],
+    "correct_answer": "Jurisprudência",
+    "explanation": "'Jurisprudência' é a palavra que combina com a descrição: Conjunto de decisões judiciais anteriores sobre um mesmo tema, que passam a servir de referência e orientação para julgamentos futuros de casos semelhantes.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'J'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto jurídico, o que significa 'doutrina'?",
+    "options": [
+      "Conjunto de estudos e opiniões de especialistas do Direito sobre determinado tema",
+      "Uma lei aprovada pelo Congresso Nacional",
+      "A decisão final de um juiz num processo específico",
+      "Um tipo de multa administrativa"
+    ],
+    "correct_answer": "Conjunto de estudos e opiniões de especialistas do Direito sobre determinado tema",
+    "explanation": "'Doutrina' significa: Conjunto de estudos e opiniões de especialistas do Direito sobre determinado tema.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Doutrina'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Decisão final proferida por um juiz, colocando fim a um processo judicial em primeira instância, podendo ainda estar sujeita a recurso pelas partes envolvidas.\n\nA palavra é:",
+    "options": [
+      "Sentença",
+      "Jurisprudência",
+      "Doutrina",
+      "Petição"
+    ],
+    "correct_answer": "Sentença",
+    "explanation": "'Sentença' é a palavra que combina com a descrição: Decisão final proferida por um juiz, colocando fim a um processo judicial em primeira instância, podendo ainda estar sujeita a recurso pelas partes envolvidas.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'S'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto jurídico, o que é uma 'petição'?",
+    "options": [
+      "Documento formal apresentado por uma parte para solicitar algo à Justiça",
+      "A decisão final de um processo",
+      "Um tipo de multa de trânsito",
+      "Um contrato de compra e venda"
+    ],
+    "correct_answer": "Documento formal apresentado por uma parte para solicitar algo à Justiça",
+    "explanation": "'Petição' significa: Documento formal apresentado por uma parte para solicitar algo à Justiça.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Petição'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Que caiu em desuso, ultrapassado, substituído por algo mais moderno ou eficiente, deixando de ser utilizado com a mesma frequência de antes.\n\nA palavra é:",
+    "options": [
+      "Obsoleto",
+      "Longevo",
+      "Perene",
+      "Iminente"
+    ],
+    "correct_answer": "Obsoleto",
+    "explanation": "'Obsoleto' é a palavra que combina com a descrição: Que caiu em desuso, ultrapassado, substituído por algo mais moderno ou eficiente, deixando de ser utilizado com a mesma frequência de antes.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "A palavra procurada começa com 'O'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto eleitoral, o que significa 'escrutínio'?",
+    "options": [
+      "Processo de apuração e contagem dos votos numa eleição",
+      "O ato de se candidatar a um cargo público",
+      "A campanha eleitoral realizada antes da votação",
+      "O documento de identidade usado para votar"
+    ],
+    "correct_answer": "Processo de apuração e contagem dos votos numa eleição",
+    "explanation": "'Escrutínio' significa: Processo de apuração e contagem dos votos numa eleição.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de ciência política.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Escrutínio'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Conjunto de leis vigentes num país ou região, criadas pelo Poder Legislativo, que regulam o comportamento e as relações entre pessoas, empresas e o próprio Estado.\n\nA palavra é:",
+    "options": [
+      "Legislação",
+      "Jurisprudência",
+      "Doutrina",
+      "Sentença"
+    ],
+    "correct_answer": "Legislação",
+    "explanation": "'Legislação' é a palavra que combina com a descrição: Conjunto de leis vigentes num país ou região, criadas pelo Poder Legislativo, que regulam o comportamento e as relações entre pessoas, empresas e o próprio Estado.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'L'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'meticuloso'?",
+    "options": [
+      "Extremamente cuidadoso e detalhista na realização de algo",
+      "Que age de forma apressada e descuidada",
+      "Que evita qualquer tipo de planejamento",
+      "Relativo apenas a documentos financeiros"
+    ],
+    "correct_answer": "Extremamente cuidadoso e detalhista na realização de algo",
+    "explanation": "'Meticuloso' significa: Extremamente cuidadoso e detalhista na realização de algo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Meticuloso'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Na contabilidade, são os bens de uma empresa destinados ao uso na própria operação do negócio, como máquinas e imóveis, não sendo destinados à venda no curto prazo.\n\nA palavra é:",
+    "options": [
+      "Ativo imobilizado",
+      "Ativo circulante",
+      "Passivo exigível",
+      "Patrimônio líquido"
+    ],
+    "correct_answer": "Ativo imobilizado",
+    "explanation": "'Ativo imobilizado' é a palavra que combina com a descrição: Na contabilidade, são os bens de uma empresa destinados ao uso na própria operação do negócio, como máquinas e imóveis, não sendo destinados à venda no curto prazo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de negócios.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "No contexto jurídico, o que significa 'cerceamento de defesa'?",
+    "options": [
+      "Limitação indevida do direito de uma parte se defender num processo",
+      "A confirmação de que a defesa foi bem-sucedida",
+      "O prazo final para apresentação de provas",
+      "Um tipo de recurso usado apenas por advogados"
+    ],
+    "correct_answer": "Limitação indevida do direito de uma parte se defender num processo",
+    "explanation": "'Cerceamento' significa: Limitação indevida do direito de uma parte se defender num processo.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Cerceamento'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "Direito ou privilégio especial concedido a determinada pessoa ou cargo, geralmente em razão da função exercida, que não se estende automaticamente a todos os demais cidadãos.\n\nA palavra é:",
+    "options": [
+      "Prerrogativa",
+      "Sufrágio",
+      "Mandato",
+      "Anistia"
+    ],
+    "correct_answer": "Prerrogativa",
+    "explanation": "'Prerrogativa' é a palavra que combina com a descrição: Direito ou privilégio especial concedido a determinada pessoa ou cargo, geralmente em razão da função exercida, que não se estende automaticamente a todos os demais cidadãos.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de área jurídica.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'inexorável'?",
+    "options": [
+      "Que não pode ser evitado ou interrompido, inevitável",
+      "Que pode ser facilmente cancelado",
+      "Que depende de decisão judicial",
+      "Relativo apenas a prazos administrativos"
+    ],
+    "correct_answer": "Que não pode ser evitado ou interrompido, inevitável",
+    "explanation": "'Inexorável' significa: Que não pode ser evitado ou interrompido, inevitável.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo usado principalmente em contextos de vocabulário geral.",
+      "Pense em frases onde você já ouviu ou leu a palavra 'Inexorável'."
+    ]
+  }
+]

@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "bloco": "vocabulario_avancado_jargao",
+    "fase": "bloco_2_de_4",
+    "total_palavras_neste_bloco": 25,
+    "formato": "duas variantes alternadas: (A) 'O que significa a palavra?' com definicoes como alternativas; (B) contexto descritivo sem citar a palavra, seguido de 'A palavra e:' com palavras como alternativas",
+    "areas_cobertas": "geral, juridico, politica, negocios",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - termos politicos tratados como conceito neutro de ciencia politica, sem viés partidario."
+  },
+  "itens": [
+    {
+      "id": "pd-026",
+      "formato": "A",
+      "palavra": "Exegese",
+      "pergunta": "O que significa 'exegese'?",
+      "opcoes": [
+        "Interpretação e explicação detalhada de um texto, especialmente jurídico ou religioso",
+        "Um tipo de recurso judicial",
+        "Documento que comprova quitação de dívida",
+        "Prazo final para resposta a um processo"
+      ],
+      "resposta_correta": "Interpretação e explicação detalhada de um texto, especialmente jurídico ou religioso",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-027",
+      "formato": "B",
+      "palavra": "Federalismo",
+      "contexto": "Forma de organização de um Estado em que o poder é dividido entre um governo central e governos regionais (como estados ou províncias), cada um com autonomia em determinadas áreas.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Federalismo",
+        "Parlamentarismo",
+        "Presidencialismo",
+        "Bicameralismo"
+      ],
+      "resposta_correta": "Federalismo",
+      "area": "politica"
+    },
+    {
+      "id": "pd-028",
+      "formato": "A",
+      "palavra": "Provisão",
+      "pergunta": "No contexto contábil/financeiro, o que significa 'provisão'?",
+      "opcoes": [
+        "Valor reservado antecipadamente para cobrir uma despesa ou perda futura provável",
+        "Lucro distribuído aos sócios de uma empresa",
+        "Imposto cobrado sobre a folha de pagamento",
+        "Documento de abertura de uma empresa"
+      ],
+      "resposta_correta": "Valor reservado antecipadamente para cobrir uma despesa ou perda futura provável",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-029",
+      "formato": "B",
+      "palavra": "Precário",
+      "contexto": "Que existe de forma instável, provisória ou sem garantias sólidas, podendo ser interrompido ou revogado a qualquer momento, sem estabilidade duradoura.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Precário",
+        "Perene",
+        "Peremptório",
+        "Definitivo"
+      ],
+      "resposta_correta": "Precário",
+      "area": "geral"
+    },
+    {
+      "id": "pd-030",
+      "formato": "A",
+      "palavra": "Discricionário",
+      "pergunta": "O que significa um ato 'discricionário' da administração pública?",
+      "opcoes": [
+        "Aquele em que a autoridade tem certa margem de escolha, dentro dos limites da lei",
+        "Aquele que é sempre ilegal",
+        "Aquele que depende de aprovação popular direta",
+        "Aquele aplicado apenas em casos de emergência"
+      ],
+      "resposta_correta": "Aquele em que a autoridade tem certa margem de escolha, dentro dos limites da lei",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-031",
+      "formato": "B",
+      "palavra": "Fusão",
+      "contexto": "Operação em que duas ou mais empresas se juntam para formar uma nova empresa única, deixando de existir separadamente como eram antes.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Fusão",
+        "Franquia",
+        "Holding",
+        "Cisão"
+      ],
+      "resposta_correta": "Fusão",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-032",
+      "formato": "A",
+      "palavra": "Assíduo",
+      "pergunta": "O que significa 'assíduo'?",
+      "opcoes": [
+        "Que comparece ou participa com frequência e regularidade",
+        "Que falta constantemente sem justificativa",
+        "Que age de forma imprevisível",
+        "Que só aparece uma vez por ano"
+      ],
+      "resposta_correta": "Que comparece ou participa com frequência e regularidade",
+      "area": "geral"
+    },
+    {
+      "id": "pd-033",
+      "formato": "B",
+      "palavra": "Sufrágio",
+      "contexto": "Direito de votar em eleições, garantido aos cidadãos de um país como forma de participação no processo democrático de escolha de representantes.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Sufrágio",
+        "Plebiscito",
+        "Referendo",
+        "Mandato"
+      ],
+      "resposta_correta": "Sufrágio",
+      "area": "politica"
+    },
+    {
+      "id": "pd-034",
+      "formato": "A",
+      "palavra": "Cisão",
+      "pergunta": "No contexto empresarial, o que significa 'cisão'?",
+      "opcoes": [
+        "Divisão de uma empresa em duas ou mais partes distintas",
+        "União de duas empresas em uma só",
+        "Falência declarada judicialmente",
+        "Mudança de nome de uma empresa"
+      ],
+      "resposta_correta": "Divisão de uma empresa em duas ou mais partes distintas",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-035",
+      "formato": "B",
+      "palavra": "Indulto",
+      "contexto": "Medida que perdoa ou reduz a pena de uma pessoa já condenada judicialmente, concedida geralmente pelo chefe do Poder Executivo, aplicada a casos específicos ou a grupos determinados de condenados.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Indulto",
+        "Anistia",
+        "Habeas corpus",
+        "Sursis"
+      ],
+      "resposta_correta": "Indulto",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-036",
+      "formato": "A",
+      "palavra": "Deliberar",
+      "pergunta": "O que significa 'deliberar'?",
+      "opcoes": [
+        "Decidir após reflexão ou discussão sobre um assunto",
+        "Recusar-se a participar de uma decisão",
+        "Adiar indefinidamente uma escolha",
+        "Executar uma ordem sem questionar"
+      ],
+      "resposta_correta": "Decidir após reflexão ou discussão sobre um assunto",
+      "area": "geral"
+    },
+    {
+      "id": "pd-037",
+      "formato": "B",
+      "palavra": "Presidencialismo",
+      "contexto": "Sistema de governo em que o chefe de Estado e o chefe de governo se concentram na mesma pessoa, eleita diretamente pela população para um mandato de duração determinada.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Presidencialismo",
+        "Parlamentarismo",
+        "Federalismo",
+        "Bicameralismo"
+      ],
+      "resposta_correta": "Presidencialismo",
+      "area": "politica"
+    },
+    {
+      "id": "pd-038",
+      "formato": "A",
+      "palavra": "Rating",
+      "pergunta": "No mercado financeiro, o que significa 'rating' de crédito?",
+      "opcoes": [
+        "Uma nota que avalia a capacidade de pagamento de uma dívida por um governo ou empresa",
+        "O valor total de uma dívida contraída",
+        "A taxa de juros cobrada por um banco",
+        "O prazo máximo para pagar um empréstimo"
+      ],
+      "resposta_correta": "Uma nota que avalia a capacidade de pagamento de uma dívida por um governo ou empresa",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-039",
+      "formato": "B",
+      "palavra": "Impune",
+      "contexto": "Situação em que uma pessoa que cometeu uma infração ou crime não recebe nenhuma punição correspondente por aquele ato.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Impune",
+        "Anistiado",
+        "Indultado",
+        "Absolvido"
+      ],
+      "resposta_correta": "Impune",
+      "area": "geral"
+    },
+    {
+      "id": "pd-040",
+      "formato": "A",
+      "palavra": "Mandato",
+      "pergunta": "No contexto político, o que significa 'mandato'?",
+      "opcoes": [
+        "O período de tempo determinado em que uma pessoa eleita exerce um cargo público",
+        "Um tipo específico de imposto federal",
+        "O local onde ocorrem as eleições",
+        "Um documento de identificação civil"
+      ],
+      "resposta_correta": "O período de tempo determinado em que uma pessoa eleita exerce um cargo público",
+      "area": "politica"
+    },
+    {
+      "id": "pd-041",
+      "formato": "B",
+      "palavra": "Sursis",
+      "contexto": "Benefício previsto em lei que permite a suspensão condicional da execução de uma pena, sob determinadas condições impostas pelo juiz, sem que o condenado precise cumpri-la de imediato.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Sursis",
+        "Indulto",
+        "Anistia",
+        "Habeas corpus"
+      ],
+      "resposta_correta": "Sursis",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-042",
+      "formato": "A",
+      "palavra": "Idôneo",
+      "pergunta": "O que significa 'idôneo'?",
+      "opcoes": [
+        "Que possui boa reputação, confiável, apto para determinado fim",
+        "Que é considerado suspeito de má conduta",
+        "Que é temporário por natureza",
+        "Relativo apenas a documentos antigos"
+      ],
+      "resposta_correta": "Que possui boa reputação, confiável, apto para determinado fim",
+      "area": "geral"
+    },
+    {
+      "id": "pd-043",
+      "formato": "B",
+      "palavra": "Déficit",
+      "contexto": "Situação em que as despesas de um governo, empresa ou pessoa superam as receitas num determinado período, resultando em saldo negativo.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Déficit",
+        "Superávit",
+        "Ágio",
+        "Spread"
+      ],
+      "resposta_correta": "Déficit",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-044",
+      "formato": "A",
+      "palavra": "Coligação",
+      "pergunta": "No contexto eleitoral, o que significa 'coligação' entre partidos?",
+      "opcoes": [
+        "União temporária entre partidos políticos para disputar uma eleição juntos",
+        "Fusão definitiva entre dois partidos, que deixam de existir separadamente",
+        "Proibição legal de um partido participar de eleições",
+        "Um tipo de imposto cobrado de partidos políticos"
+      ],
+      "resposta_correta": "União temporária entre partidos políticos para disputar uma eleição juntos",
+      "area": "politica"
+    },
+    {
+      "id": "pd-045",
+      "formato": "B",
+      "palavra": "Insolvência",
+      "contexto": "Situação financeira em que uma pessoa ou empresa não possui recursos suficientes para pagar as dívidas que já venceram, o que pode levar a processos judiciais específicos, como falência.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Insolvência",
+        "Superávit",
+        "Déficit",
+        "Provisão"
+      ],
+      "resposta_correta": "Insolvência",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-046",
+      "formato": "A",
+      "palavra": "Coercitivo",
+      "pergunta": "O que significa 'coercitivo'?",
+      "opcoes": [
+        "Que obriga ou força alguém a fazer algo, geralmente por meio de pressão ou ameaça de sanção",
+        "Que é voluntário e espontâneo",
+        "Que se aplica apenas a contratos verbais",
+        "Que é sempre benéfico a quem recebe"
+      ],
+      "resposta_correta": "Que obriga ou força alguém a fazer algo, geralmente por meio de pressão ou ameaça de sanção",
+      "area": "geral"
+    },
+    {
+      "id": "pd-047",
+      "formato": "B",
+      "palavra": "Veto",
+      "contexto": "Ato pelo qual um chefe do Poder Executivo rejeita, total ou parcialmente, um projeto de lei já aprovado pelo Poder Legislativo, podendo ainda ser derrubado pelos parlamentares em determinadas condições.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Veto",
+        "Emenda",
+        "Referendo",
+        "Sanção"
+      ],
+      "resposta_correta": "Veto",
+      "area": "politica"
+    },
+    {
+      "id": "pd-048",
+      "formato": "A",
+      "palavra": "Diligência",
+      "pergunta": "No contexto jurídico/administrativo, o que significa 'diligência'?",
+      "opcoes": [
+        "Ato ou procedimento realizado para apurar ou verificar algo com cuidado",
+        "Um tipo de multa aplicada a empresas",
+        "Documento final de um processo já encerrado",
+        "Prazo de validade de um contrato"
+      ],
+      "resposta_correta": "Ato ou procedimento realizado para apurar ou verificar algo com cuidado",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-049",
+      "formato": "B",
+      "palavra": "Sanção",
+      "contexto": "No processo legislativo, é o ato pelo qual o chefe do Poder Executivo aprova e confirma um projeto de lei já votado pelo Legislativo, transformando-o oficialmente em lei.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Sanção",
+        "Veto",
+        "Emenda",
+        "Decreto"
+      ],
+      "resposta_correta": "Sanção",
+      "area": "politica"
+    },
+    {
+      "id": "pd-050",
+      "formato": "A",
+      "palavra": "Prolixo",
+      "pergunta": "O que significa 'prolixo'?",
+      "opcoes": [
+        "Excessivamente longo, cheio de detalhes desnecessários",
+        "Extremamente curto e direto",
+        "Escrito em linguagem técnica apenas",
+        "Relativo a documentos sigilosos"
+      ],
+      "resposta_correta": "Excessivamente longo, cheio de detalhes desnecessários",
+      "area": "geral"
+    }
+  ]
+}

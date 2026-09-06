@@ -5720,6 +5720,32 @@ for _path in sorted(_CONTENT_DIR.glob("idiomas_*.json")):
 for _path in sorted(_CONTENT_DIR.glob("valores_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
+# MUNDO_LINGUAGEM_CONTEUDO_DENSO_V1.md (06/09/2026, aprovado por Rhoney):
+# 30 desafios de regência, crase, concordância, pares confusos (porque/
+# por que/porquê/por quê, mal/mau, senão/se não, há/a), pontuação e
+# ortografia — território "palavras" já existente, sem campo/formato
+# novo (é múltipla escolha normal, só o conteúdo é mais denso/raciocinado
+# que o restante do território). Mesmo padrão de carregar de content/
+# em vez de duplicar inline.
+#
+# Achado real ao integrar (06/09/2026): todo o lote nasce em
+# difficulty_level=1 de propósito, mesmo sendo conteúdo mais difícil em
+# esforço de raciocínio (não em nível de vocabulário — critério da
+# própria spec, §2.3). Motivo: o modo Palavras Relâmpago (options=None)
+# sintetiza alternativas erradas a partir do correct_answer de QUALQUER
+# outro desafio de "palavras" no mesmo difficulty_level
+# (services.generate_relampago_options), assumindo que essas respostas
+# são todas curtas e intercambiáveis entre perguntas (antônimos,
+# anagramas). As respostas deste lote são frases completas específicas
+# de cada pergunta — se entrassem em nível 2/3 (elegível pro Relâmpago),
+# apareceriam como alternativa sem nexo nenhum em perguntas totalmente
+# diferentes. difficulty_level=1 nunca entra no Relâmpago
+# (PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL=2), então o problema nem
+# chega a existir pra este lote — sem tocar na lógica compartilhada do
+# Relâmpago nem em nenhum outro território.
+for _path in sorted(_CONTENT_DIR.glob("linguagem_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
 
 def seed_if_empty(db: Session) -> None:
     if db.query(models.Territory).count() > 0:

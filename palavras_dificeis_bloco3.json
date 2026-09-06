@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "bloco": "vocabulario_avancado_jargao",
+    "fase": "bloco_3_de_4",
+    "mundo_destino": "Mundo da Linguagem",
+    "total_palavras_neste_bloco": 25,
+    "formato": "duas variantes alternadas: (A) 'O que significa a palavra?' com definicoes como alternativas; (B) contexto descritivo sem citar a palavra, seguido de 'A palavra e:' com palavras como alternativas",
+    "areas_cobertas": "geral, juridico, politica, negocios",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - termos politicos tratados como conceito neutro de ciencia politica, sem viés partidario."
+  },
+  "itens": [
+    {
+      "id": "pd-051",
+      "formato": "A",
+      "palavra": "Efêmero",
+      "pergunta": "O que significa 'efêmero'?",
+      "opcoes": [
+        "Que dura pouco tempo, passageiro",
+        "Que dura para sempre",
+        "Que se repete todo dia",
+        "Relativo a documentos oficiais"
+      ],
+      "resposta_correta": "Que dura pouco tempo, passageiro",
+      "area": "geral"
+    },
+    {
+      "id": "pd-052",
+      "formato": "B",
+      "palavra": "Decreto",
+      "contexto": "Ato normativo emitido pelo Poder Executivo para regulamentar ou dar cumprimento a uma lei já existente, sem precisar passar por votação no Poder Legislativo.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Decreto",
+        "Sanção",
+        "Emenda",
+        "Veto"
+      ],
+      "resposta_correta": "Decreto",
+      "area": "politica"
+    },
+    {
+      "id": "pd-053",
+      "formato": "A",
+      "palavra": "Aval",
+      "pergunta": "No contexto financeiro, o que significa dar um 'aval'?",
+      "opcoes": [
+        "Assumir a responsabilidade de pagar uma dívida caso o devedor original não pague",
+        "Emprestar dinheiro diretamente a alguém",
+        "Cobrar uma taxa adicional sobre um empréstimo",
+        "Recusar-se a garantir uma dívida de terceiros"
+      ],
+      "resposta_correta": "Assumir a responsabilidade de pagar uma dívida caso o devedor original não pague",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-054",
+      "formato": "B",
+      "palavra": "Recluso",
+      "contexto": "Pessoa que está cumprindo pena em regime fechado dentro de um estabelecimento prisional, sem liberdade para circular fora dali.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Recluso",
+        "Impune",
+        "Indultado",
+        "Anistiado"
+      ],
+      "resposta_correta": "Recluso",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-055",
+      "formato": "A",
+      "palavra": "Tácito",
+      "pergunta": "O que significa 'tácito', referindo-se a um acordo?",
+      "opcoes": [
+        "Que é subentendido, não expresso formalmente por palavras",
+        "Que está escrito em contrato formal e assinado",
+        "Que é anulado por decisão judicial",
+        "Que depende de aprovação do governo"
+      ],
+      "resposta_correta": "Que é subentendido, não expresso formalmente por palavras",
+      "area": "geral"
+    },
+    {
+      "id": "pd-056",
+      "formato": "B",
+      "palavra": "Emenda",
+      "contexto": "Proposta de alteração apresentada por um parlamentar para modificar o texto original de um projeto de lei em tramitação no Poder Legislativo.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Emenda",
+        "Veto",
+        "Decreto",
+        "Sanção"
+      ],
+      "resposta_correta": "Emenda",
+      "area": "politica"
+    },
+    {
+      "id": "pd-057",
+      "formato": "A",
+      "palavra": "Amortização",
+      "pergunta": "No contexto financeiro, o que significa 'amortização' de uma dívida?",
+      "opcoes": [
+        "Pagamento gradual de uma dívida ao longo do tempo, reduzindo o saldo devedor",
+        "Cancelamento total e imediato de uma dívida",
+        "Aumento do valor de uma dívida por atraso",
+        "Transferência de uma dívida para outra pessoa"
+      ],
+      "resposta_correta": "Pagamento gradual de uma dívida ao longo do tempo, reduzindo o saldo devedor",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-058",
+      "formato": "B",
+      "palavra": "Absolvido",
+      "contexto": "Situação em que uma pessoa acusada de um crime é julgada e considerada inocente pelo tribunal, sendo liberada de qualquer pena relacionada àquela acusação específica.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Absolvido",
+        "Indultado",
+        "Anistiado",
+        "Impune"
+      ],
+      "resposta_correta": "Absolvido",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-059",
+      "formato": "A",
+      "palavra": "Circunspecto",
+      "pergunta": "O que significa 'circunspecto'?",
+      "opcoes": [
+        "Cauteloso, prudente, que age com discrição",
+        "Extremamente falante e impulsivo",
+        "Que nunca toma decisões",
+        "Relativo a documentos antigos"
+      ],
+      "resposta_correta": "Cauteloso, prudente, que age com discrição",
+      "area": "geral"
+    },
+    {
+      "id": "pd-060",
+      "formato": "B",
+      "palavra": "Oposição",
+      "contexto": "Conjunto de partidos ou parlamentares que discordam e fiscalizam as ações do governo em exercício, sem fazer parte da base que sustenta as decisões do Poder Executivo.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Oposição",
+        "Coligação",
+        "Base aliada",
+        "Bancada"
+      ],
+      "resposta_correta": "Oposição",
+      "area": "politica"
+    },
+    {
+      "id": "pd-061",
+      "formato": "A",
+      "palavra": "Consórcio",
+      "pergunta": "O que significa 'consórcio', no contexto financeiro?",
+      "opcoes": [
+        "Grupo de pessoas que se reúnem para juntar recursos e adquirir bens por meio de sorteio ou lance",
+        "Empréstimo bancário com garantia de imóvel",
+        "Fusão obrigatória entre duas empresas concorrentes",
+        "Um tipo de imposto sobre veículos"
+      ],
+      "resposta_correta": "Grupo de pessoas que se reúnem para juntar recursos e adquirir bens por meio de sorteio ou lance",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-062",
+      "formato": "B",
+      "palavra": "Reincidente",
+      "contexto": "Pessoa que comete uma nova infração ou crime depois de já ter sido condenada anteriormente por outro ato semelhante, o que pode agravar a pena numa nova condenação.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Reincidente",
+        "Contumaz",
+        "Recluso",
+        "Absolvido"
+      ],
+      "resposta_correta": "Reincidente",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-063",
+      "formato": "A",
+      "palavra": "Iminente",
+      "pergunta": "O que significa 'iminente'?",
+      "opcoes": [
+        "Que está prestes a acontecer, muito próximo no tempo",
+        "Que já aconteceu há muito tempo",
+        "Que nunca vai acontecer",
+        "Que depende de aprovação judicial"
+      ],
+      "resposta_correta": "Que está prestes a acontecer, muito próximo no tempo",
+      "area": "geral"
+    },
+    {
+      "id": "pd-064",
+      "formato": "B",
+      "palavra": "Bancada",
+      "contexto": "Conjunto de parlamentares de um mesmo partido, estado ou grupo de interesse específico que atuam de forma articulada dentro do Poder Legislativo.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Bancada",
+        "Coligação",
+        "Oposição",
+        "Plenário"
+      ],
+      "resposta_correta": "Bancada",
+      "area": "politica"
+    },
+    {
+      "id": "pd-065",
+      "formato": "A",
+      "palavra": "Alavancagem",
+      "pergunta": "No contexto financeiro, o que significa 'alavancagem'?",
+      "opcoes": [
+        "Uso de recursos de terceiros (como empréstimos) para ampliar o potencial de retorno de um investimento",
+        "Redução total do risco de um investimento",
+        "Pagamento antecipado de uma dívida",
+        "Distribuição de lucro entre os sócios de uma empresa"
+      ],
+      "resposta_correta": "Uso de recursos de terceiros (como empréstimos) para ampliar o potencial de retorno de um investimento",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-066",
+      "formato": "B",
+      "palavra": "Plenário",
+      "contexto": "Espaço físico onde os parlamentares se reúnem para debater e votar projetos de lei em conjunto, representando a atuação coletiva de uma casa legislativa.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Plenário",
+        "Bancada",
+        "Gabinete",
+        "Comissão"
+      ],
+      "resposta_correta": "Plenário",
+      "area": "politica"
+    },
+    {
+      "id": "pd-067",
+      "formato": "A",
+      "palavra": "Explícito",
+      "pergunta": "O que significa 'explícito'?",
+      "opcoes": [
+        "Que é dito ou expresso de forma clara e direta",
+        "Que é subentendido, sem ser dito diretamente",
+        "Que é proibido por lei",
+        "Relativo apenas a documentos sigilosos"
+      ],
+      "resposta_correta": "Que é dito ou expresso de forma clara e direta",
+      "area": "geral"
+    },
+    {
+      "id": "pd-068",
+      "formato": "B",
+      "palavra": "Comissão",
+      "contexto": "Grupo menor de parlamentares, formado dentro do Poder Legislativo, responsável por analisar em detalhe um tema ou projeto de lei específico antes de ele seguir para votação mais ampla.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Comissão",
+        "Plenário",
+        "Bancada",
+        "Coligação"
+      ],
+      "resposta_correta": "Comissão",
+      "area": "politica"
+    },
+    {
+      "id": "pd-069",
+      "formato": "A",
+      "palavra": "Inadimplente",
+      "pergunta": "O que significa estar 'inadimplente'?",
+      "opcoes": [
+        "Estar em atraso no cumprimento de uma obrigação, geralmente de pagamento",
+        "Ter quitado todas as dívidas em dia",
+        "Ter um contrato cancelado por acordo mútuo",
+        "Ter recebido um empréstimo aprovado"
+      ],
+      "resposta_correta": "Estar em atraso no cumprimento de uma obrigação, geralmente de pagamento",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-070",
+      "formato": "B",
+      "palavra": "Testemunha",
+      "contexto": "Pessoa que presenciou um fato relevante para um processo judicial e é chamada a relatar o que viu ou sabe perante a Justiça, sob compromisso de dizer a verdade.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Testemunha",
+        "Réu",
+        "Autor",
+        "Perito"
+      ],
+      "resposta_correta": "Testemunha",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-071",
+      "formato": "A",
+      "palavra": "Recôndito",
+      "pergunta": "O que significa 'recôndito'?",
+      "opcoes": [
+        "Escondido, de difícil acesso ou pouco conhecido",
+        "Que está exposto publicamente",
+        "Que é muito conhecido e popular",
+        "Relativo a documentos financeiros"
+      ],
+      "resposta_correta": "Escondido, de difícil acesso ou pouco conhecido",
+      "area": "geral"
+    },
+    {
+      "id": "pd-072",
+      "formato": "B",
+      "palavra": "Réu",
+      "contexto": "Pessoa que responde a um processo judicial por ser acusada de ter cometido determinada infração ou de dever algo à parte que iniciou aquela ação.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Réu",
+        "Autor",
+        "Testemunha",
+        "Perito"
+      ],
+      "resposta_correta": "Réu",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-073",
+      "formato": "A",
+      "palavra": "Perito",
+      "pergunta": "No contexto judicial, o que é um 'perito'?",
+      "opcoes": [
+        "Profissional especializado chamado para dar um parecer técnico sobre determinado fato do processo",
+        "A pessoa que decide o resultado final do julgamento",
+        "O advogado responsável pela defesa do réu",
+        "O funcionário responsável por arquivar documentos do tribunal"
+      ],
+      "resposta_correta": "Profissional especializado chamado para dar um parecer técnico sobre determinado fato do processo",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-074",
+      "formato": "B",
+      "palavra": "Autor",
+      "contexto": "Na esfera judicial, é a pessoa ou parte que inicia um processo, apresentando uma demanda ou pedido formal contra outra parte perante a Justiça.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Autor",
+        "Réu",
+        "Testemunha",
+        "Perito"
+      ],
+      "resposta_correta": "Autor",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-075",
+      "formato": "A",
+      "palavra": "Longevo",
+      "pergunta": "O que significa 'longevo'?",
+      "opcoes": [
+        "Que tem vida longa, que dura muito tempo",
+        "Que dura muito pouco tempo",
+        "Que se refere apenas a documentos",
+        "Relativo a um único evento pontual"
+      ],
+      "resposta_correta": "Que tem vida longa, que dura muito tempo",
+      "area": "geral"
+    }
+  ]
+}

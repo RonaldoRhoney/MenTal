@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "bloco": "interpretacao_de_textos",
+    "fase": "bloco_4_de_4",
+    "mundo_destino": "Mundo da Linguagem",
+    "total_itens_neste_bloco": 25,
+    "formato": "texto curto original seguido de 1 pergunta de interpretacao com alternativas",
+    "checagem_direitos_autorais": "Todos os textos foram escritos originalmente para este material - nenhum trecho de fonte externa foi reproduzido. Conclui o total de 100 itens solicitado.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - temas neutros do cotidiano."
+  },
+  "itens": [
+    {
+      "id": "int-076",
+      "texto": "O grupo de moradores de um condomínio antigo decidiu criar um fundo de reserva específico para manutenção do elevador, depois de perceber que consertos emergenciais estavam consumindo boa parte do orçamento mensal sem nenhum planejamento prévio de longo prazo.",
+      "pergunta": "Por que o grupo de moradores criou um fundo específico para o elevador?",
+      "opcoes": [
+        "Consertos emergenciais consumiam boa parte do orçamento sem planejamento prévio",
+        "O elevador havia sido substituído recentemente",
+        "A prefeitura exigiu esse tipo de fundo por lei",
+        "Os moradores decidiram parar de usar o elevador"
+      ],
+      "resposta_correta": "Consertos emergenciais consumiam boa parte do orçamento sem planejamento prévio"
+    },
+    {
+      "id": "int-077",
+      "texto": "A pequena editora independente decidiu apostar em autores estreantes da própria região, em vez de disputar direitos de tradução de livros estrangeiros já consagrados, como forma de reduzir custos e ao mesmo tempo dar visibilidade a talentos locais ainda desconhecidos do público.",
+      "pergunta": "Qual foi a estratégia adotada pela editora, segundo o texto?",
+      "opcoes": [
+        "Apostar em autores estreantes da própria região",
+        "Publicar exclusivamente traduções de best-sellers estrangeiros",
+        "Parar de publicar novos títulos por um ano",
+        "Vender os direitos autorais para outra editora"
+      ],
+      "resposta_correta": "Apostar em autores estreantes da própria região"
+    },
+    {
+      "id": "int-078",
+      "texto": "O posto de saúde do bairro passou a oferecer atendimento noturno duas vezes por semana, depois de identificar que muitos moradores que trabalhavam durante o dia inteiro tinham dificuldade em conseguir consultas dentro do horário comercial tradicional.",
+      "pergunta": "O que motivou o posto de saúde a oferecer atendimento noturno?",
+      "opcoes": [
+        "Moradores que trabalhavam o dia inteiro tinham dificuldade em conseguir consultas",
+        "A redução no número de médicos disponíveis durante o dia",
+        "Uma determinação do governo federal",
+        "O fechamento de outro posto de saúde próximo"
+      ],
+      "resposta_correta": "Moradores que trabalhavam o dia inteiro tinham dificuldade em conseguir consultas"
+    },
+    {
+      "id": "int-079",
+      "texto": "Ao planejar a reforma da praça central, a prefeitura promoveu consultas públicas com moradores antes de definir o projeto final, o que resultou na inclusão de uma área para idosos praticarem exercícios, sugestão que não constava no projeto original apresentado pelos técnicos.",
+      "pergunta": "O que resultou das consultas públicas realizadas pela prefeitura?",
+      "opcoes": [
+        "A inclusão de uma área para idosos praticarem exercícios",
+        "O cancelamento total da reforma da praça",
+        "A redução do orçamento destinado à obra",
+        "A escolha de outro local para a praça"
+      ],
+      "resposta_correta": "A inclusão de uma área para idosos praticarem exercícios"
+    },
+    {
+      "id": "int-080",
+      "texto": "O grupo de músicos de rua, depois de anos tocando apenas no centro da cidade, decidiu se apresentar também em bairros mais afastados, alternando os pontos a cada semana. Segundo eles, essa mudança ajudou a alcançar um público que nunca tinha visto o grupo tocar antes.",
+      "pergunta": "Qual foi o resultado de o grupo passar a se apresentar em bairros afastados?",
+      "opcoes": [
+        "Ajudou a alcançar um público que nunca tinha visto o grupo tocar",
+        "Reduziu o número de pessoas que assistiam às apresentações",
+        "Fez o grupo parar de tocar no centro da cidade",
+        "Gerou reclamações dos moradores dos novos bairros"
+      ],
+      "resposta_correta": "Ajudou a alcançar um público que nunca tinha visto o grupo tocar"
+    },
+    {
+      "id": "int-081",
+      "texto": "A cooperativa agrícola decidiu investir em um sistema de previsão climática mais preciso, voltado especificamente para a região onde os produtores atuavam, depois de registrar perdas significativas em safras anteriores causadas por geadas que não haviam sido previstas com antecedência suficiente.",
+      "pergunta": "Por que a cooperativa investiu num sistema de previsão climática mais preciso?",
+      "opcoes": [
+        "Registrou perdas em safras anteriores causadas por geadas não previstas",
+        "O governo exigiu esse investimento por lei",
+        "Os produtores queriam vender o sistema para outras cooperativas",
+        "Houve um aumento no preço dos produtos agrícolas"
+      ],
+      "resposta_correta": "Registrou perdas em safras anteriores causadas por geadas não previstas"
+    },
+    {
+      "id": "int-082",
+      "texto": "O pequeno estúdio de tatuagem decidiu adotar um sistema de agendamento online depois de perceber que muitos clientes desistiam ao precisar ligar durante o horário comercial, quando o artista estava ocupado atendendo outros clientes e não conseguia responder rapidamente.",
+      "pergunta": "Por que muitos clientes desistiam do agendamento antes da mudança, segundo o texto?",
+      "opcoes": [
+        "Precisavam ligar durante o horário comercial, quando o artista estava ocupado",
+        "O preço da tatuagem era considerado muito alto",
+        "O estúdio não tinha boa reputação na região",
+        "Faltava espaço físico no estúdio para novos clientes"
+      ],
+      "resposta_correta": "Precisavam ligar durante o horário comercial, quando o artista estava ocupado"
+    },
+    {
+      "id": "int-083",
+      "texto": "Depois de anos utilizando apenas fertilizantes químicos, o produtor rural começou a intercalar o uso com adubos orgânicos produzidos na própria propriedade, a partir de restos de colheita, numa tentativa de reduzir custos e melhorar a qualidade do solo a longo prazo.",
+      "pergunta": "Qual foi o objetivo do produtor ao intercalar fertilizantes químicos com adubo orgânico?",
+      "opcoes": [
+        "Reduzir custos e melhorar a qualidade do solo a longo prazo",
+        "Aumentar imediatamente o preço de venda da produção",
+        "Parar de vender para o mercado tradicional",
+        "Eliminar totalmente a necessidade de colheita"
+      ],
+      "resposta_correta": "Reduzir custos e melhorar a qualidade do solo a longo prazo"
+    },
+    {
+      "id": "int-084",
+      "texto": "A rádio comunitária, mantida havia anos apenas por doações voluntárias dos ouvintes, passou a oferecer espaços publicitários para pequenos comércios locais, o que garantiu uma receita mais estável para cobrir os custos fixos mensais de manutenção do equipamento.",
+      "pergunta": "O que a rádio comunitária passou a fazer para ter uma receita mais estável?",
+      "opcoes": [
+        "Oferecer espaços publicitários para pequenos comércios locais",
+        "Parar de transmitir programação diariamente",
+        "Cobrar uma taxa mensal dos próprios ouvintes",
+        "Vender o equipamento de transmissão"
+      ],
+      "resposta_correta": "Oferecer espaços publicitários para pequenos comércios locais"
+    },
+    {
+      "id": "int-085",
+      "texto": "O time de vôlei amador, formado por colegas de trabalho, decidiu contratar um técnico apenas para os treinos de sábado, mesmo sem nenhuma pretensão profissional, porque perceberam que a orientação técnica melhorava significativamente o desempenho e a diversão durante os jogos.",
+      "pergunta": "Por que o time decidiu contratar um técnico, segundo o texto?",
+      "opcoes": [
+        "A orientação técnica melhorava o desempenho e a diversão durante os jogos",
+        "Queriam disputar competições profissionais no futuro",
+        "Um patrocinador exigiu a contratação de um técnico",
+        "O time estava perdendo todos os jogos disputados"
+      ],
+      "resposta_correta": "A orientação técnica melhorava o desempenho e a diversão durante os jogos"
+    },
+    {
+      "id": "int-086",
+      "texto": "A gráfica familiar, tradicionalmente especializada em cartões de visita e panfletos, decidiu investir em equipamentos para impressão de tecido depois de identificar uma demanda crescente por camisetas personalizadas entre pequenos empreendedores da região.",
+      "pergunta": "O que motivou a gráfica a investir em impressão de tecido?",
+      "opcoes": [
+        "Uma demanda crescente por camisetas personalizadas entre pequenos empreendedores",
+        "O fim da demanda por cartões de visita",
+        "Uma exigência dos fornecedores de papel",
+        "A falência de outra gráfica concorrente"
+      ],
+      "resposta_correta": "Uma demanda crescente por camisetas personalizadas entre pequenos empreendedores"
+    },
+    {
+      "id": "int-087",
+      "texto": "O grupo de estudantes de arquitetura decidiu desenvolver, como projeto de conclusão de curso, um modelo de casa popular de baixo custo utilizando materiais reaproveitados de demolições, buscando provar que era possível unir sustentabilidade e economia numa construção habitacional real.",
+      "pergunta": "Qual foi o objetivo do projeto de conclusão de curso, segundo o texto?",
+      "opcoes": [
+        "Provar que era possível unir sustentabilidade e economia numa construção real",
+        "Vencer um prêmio internacional de arquitetura",
+        "Substituir totalmente a construção civil tradicional",
+        "Reduzir o número de demolições na cidade"
+      ],
+      "resposta_correta": "Provar que era possível unir sustentabilidade e economia numa construção real"
+    },
+    {
+      "id": "int-088",
+      "texto": "A pequena loja de instrumentos musicais decidiu oferecer aulas experimentais gratuitas aos sábados, como forma de atrair clientes interessados em aprender a tocar antes de decidir qual instrumento comprar, reduzindo assim o número de devoluções por arrependimento.",
+      "pergunta": "Qual foi o benefício das aulas experimentais gratuitas para a loja, segundo o texto?",
+      "opcoes": [
+        "Reduziu o número de devoluções por arrependimento",
+        "Aumentou o preço dos instrumentos vendidos",
+        "Eliminou a necessidade de vendedores na loja",
+        "Fez a loja parar de vender instrumentos usados"
+      ],
+      "resposta_correta": "Reduziu o número de devoluções por arrependimento"
+    },
+    {
+      "id": "int-089",
+      "texto": "O motorista de ônibus urbano, depois de anos de experiência, passou a orientar informalmente novos colegas sobre pontos de atenção específicos de cada linha, como cruzamentos mais perigosos ou horários de maior movimento, compartilhando um conhecimento que só havia adquirido com o tempo.",
+      "pergunta": "O que o motorista experiente passou a compartilhar com os colegas mais novos?",
+      "opcoes": [
+        "Pontos de atenção específicos de cada linha, adquiridos com a experiência",
+        "A senha de acesso ao sistema interno da empresa",
+        "Informações sobre o salário de outros funcionários",
+        "Reclamações sobre a empresa de ônibus"
+      ],
+      "resposta_correta": "Pontos de atenção específicos de cada linha, adquiridos com a experiência"
+    },
+    {
+      "id": "int-090",
+      "texto": "A associação de moradores decidiu organizar um mutirão de limpeza no rio que cortava o bairro, depois de perceber que o acúmulo de lixo estava causando enchentes mais frequentes em dias de chuva forte, mesmo em períodos que antes não costumavam registrar esse tipo de problema.",
+      "pergunta": "Por que a associação de moradores organizou o mutirão de limpeza?",
+      "opcoes": [
+        "O acúmulo de lixo estava causando enchentes mais frequentes",
+        "A prefeitura pagou os moradores para participar",
+        "Queriam vender o lixo recolhido para reciclagem",
+        "Um novo morador sugeriu a ideia sem motivo aparente"
+      ],
+      "resposta_correta": "O acúmulo de lixo estava causando enchentes mais frequentes"
+    },
+    {
+      "id": "int-091",
+      "texto": "O pequeno restaurante vegetariano, inicialmente aberto apenas para almoço, passou a funcionar também à noite depois de perceber, através de pedidos recorrentes nas redes sociais, que havia interesse real do público por um jantar com o mesmo estilo de comida oferecido durante o dia.",
+      "pergunta": "O que motivou o restaurante a passar a funcionar também à noite?",
+      "opcoes": [
+        "Pedidos recorrentes nas redes sociais mostrando interesse do público",
+        "A proibição de servir apenas almoço pela prefeitura",
+        "A falta de clientes durante o horário de almoço",
+        "Uma reforma que impediu o funcionamento diurno"
+      ],
+      "resposta_correta": "Pedidos recorrentes nas redes sociais mostrando interesse do público"
+    },
+    {
+      "id": "int-092",
+      "texto": "O centro de reabilitação decidiu incluir sessões de musicoterapia na rotina dos pacientes em recuperação, depois de observar, em estudos preliminares, uma melhora no engajamento e na disposição para outras atividades terapêuticas nos dias em que essa prática era realizada.",
+      "pergunta": "O que foi observado nos estudos preliminares mencionados no texto?",
+      "opcoes": [
+        "Melhora no engajamento e disposição para outras atividades terapêuticas",
+        "Uma piora geral no estado dos pacientes",
+        "Nenhuma diferença perceptível no comportamento dos pacientes",
+        "Redução no número de pacientes atendidos"
+      ],
+      "resposta_correta": "Melhora no engajamento e disposição para outras atividades terapêuticas"
+    },
+    {
+      "id": "int-093",
+      "texto": "A fábrica de calçados decidiu reduzir o número de modelos produzidos simultaneamente, concentrando esforços em uma linha mais enxuta, mas com maior controle de qualidade, depois de perceber que a dispersão em muitos modelos diferentes estava gerando falhas recorrentes na produção.",
+      "pergunta": "Por que a fábrica reduziu o número de modelos produzidos simultaneamente?",
+      "opcoes": [
+        "A dispersão em muitos modelos estava gerando falhas recorrentes na produção",
+        "Faltavam matérias-primas para continuar produzindo todos os modelos",
+        "Os modelos antigos pararam de vender completamente",
+        "Uma nova lei limitou o número de modelos permitidos"
+      ],
+      "resposta_correta": "A dispersão em muitos modelos estava gerando falhas recorrentes na produção"
+    },
+    {
+      "id": "int-094",
+      "texto": "O grupo de artesãs que produzia bordados à mão decidiu criar um catálogo digital com fotos profissionais de cada peça, depois de perceber que compradores de fora da cidade tinham dificuldade em avaliar a qualidade do trabalho apenas por descrições escritas em texto.",
+      "pergunta": "Por que o grupo de artesãs criou um catálogo digital com fotos profissionais?",
+      "opcoes": [
+        "Compradores de fora tinham dificuldade em avaliar a qualidade só por texto",
+        "Queriam parar de vender para a própria cidade",
+        "O governo exigiu um catálogo formal para funcionamento",
+        "As peças pararam de ser vendidas nas feiras locais"
+      ],
+      "resposta_correta": "Compradores de fora tinham dificuldade em avaliar a qualidade só por texto"
+    },
+    {
+      "id": "int-095",
+      "texto": "O posto de combustíveis da estrada decidiu instalar pontos de recarga para carros elétricos, mesmo sendo ainda poucos os veículos desse tipo circulando na região, apostando que a demanda cresceria nos próximos anos e que sair na frente traria vantagem competitiva sobre os concorrentes.",
+      "pergunta": "Qual foi a aposta do posto de combustíveis ao instalar os pontos de recarga?",
+      "opcoes": [
+        "Que a demanda cresceria e sair na frente traria vantagem competitiva",
+        "Que os carros a combustão desapareceriam imediatamente",
+        "Que o governo pagaria pela instalação dos pontos",
+        "Que os concorrentes fechariam as portas em breve"
+      ],
+      "resposta_correta": "Que a demanda cresceria e sair na frente traria vantagem competitiva"
+    },
+    {
+      "id": "int-096",
+      "texto": "A pequena escola de dança decidiu criar uma turma específica para adultos iniciantes, depois de perceber que muitos interessados desistiam ao serem colocados em turmas mistas com crianças e adolescentes, por sentirem vergonha de aprender os passos básicos junto com alunos mais jovens.",
+      "pergunta": "Por que muitos adultos desistiam das aulas antes da criação da turma específica?",
+      "opcoes": [
+        "Sentiam vergonha de aprender junto com alunos mais jovens",
+        "O preço da aula para adultos era muito mais alto",
+        "Não havia horário disponível para adultos",
+        "A escola não aceitava alunos adultos anteriormente"
+      ],
+      "resposta_correta": "Sentiam vergonha de aprender junto com alunos mais jovens"
+    },
+    {
+      "id": "int-097",
+      "texto": "O pequeno laboratório de análises clínicas decidiu implantar um sistema de envio de resultados por aplicativo, depois de perceber que muitos pacientes idosos tinham dificuldade em se deslocar até o local apenas para retirar um exame já pronto.",
+      "pergunta": "O que motivou a implantação do sistema de envio de resultados por aplicativo?",
+      "opcoes": [
+        "Pacientes idosos tinham dificuldade em se deslocar para retirar exames",
+        "O laboratório queria reduzir o número de exames realizados",
+        "Houve uma exigência do plano de saúde parceiro",
+        "O sistema anterior de entrega física foi proibido por lei"
+      ],
+      "resposta_correta": "Pacientes idosos tinham dificuldade em se deslocar para retirar exames"
+    },
+    {
+      "id": "int-098",
+      "texto": "O grupo de teatro de bonecos, tradicional em festas juninas do interior, decidiu registrar em vídeo suas apresentações mais antigas antes que os poucos integrantes que ainda dominavam a técnica original se aposentassem, buscando preservar esse conhecimento para futuras gerações.",
+      "pergunta": "Por que o grupo decidiu registrar em vídeo suas apresentações mais antigas?",
+      "opcoes": [
+        "Para preservar o conhecimento antes que os integrantes se aposentassem",
+        "Porque as apresentações seriam proibidas no futuro",
+        "Para vender os vídeos e gerar receita imediata",
+        "Porque o grupo decidiu encerrar as atividades"
+      ],
+      "resposta_correta": "Para preservar o conhecimento antes que os integrantes se aposentassem"
+    },
+    {
+      "id": "int-099",
+      "texto": "A cooperativa de reciclagem decidiu investir em uma prensa mais moderna para compactar materiais, depois de calcular que o transporte de cargas mais compactas para os compradores finais reduziria significativamente o custo com frete, mesmo com o investimento inicial elevado no equipamento.",
+      "pergunta": "Qual foi o cálculo que motivou o investimento na prensa mais moderna?",
+      "opcoes": [
+        "Cargas mais compactas reduziriam significativamente o custo com frete",
+        "A prensa antiga havia quebrado definitivamente",
+        "O preço dos materiais recicláveis havia caído muito",
+        "Os compradores exigiam um novo tipo de embalagem"
+      ],
+      "resposta_correta": "Cargas mais compactas reduziriam significativamente o custo com frete"
+    },
+    {
+      "id": "int-100",
+      "texto": "O pequeno grupo de apicultores da região decidiu criar uma marca coletiva para vender o mel produzido por todos os associados sob um único rótulo, depois de perceber que, vendendo separadamente, cada produtor tinha dificuldade em negociar preços melhores com os grandes compradores.",
+      "pergunta": "Por que os apicultores decidiram criar uma marca coletiva?",
+      "opcoes": [
+        "Vendendo separadamente, cada produtor tinha dificuldade em negociar preços melhores",
+        "O governo exigiu a unificação da produção por lei",
+        "A produção individual de mel havia sido proibida",
+        "Queriam reduzir o número total de apicultores na região"
+      ],
+      "resposta_correta": "Vendendo separadamente, cada produtor tinha dificuldade em negociar preços melhores"
+    }
+  ]
+}

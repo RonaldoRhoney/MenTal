@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "bloco": "vocabulario_avancado_jargao",
+    "fase": "bloco_1_de_4",
+    "total_palavras_neste_bloco": 25,
+    "formato": "duas variantes alternadas: (A) 'O que significa a palavra?' com definicoes como alternativas; (B) contexto descritivo sem citar a palavra, seguido de 'A palavra e:' com palavras como alternativas",
+    "areas_cobertas": "geral, juridico, politica, negocios - conforme pedido, jargao variado do dia a dia do brasileiro",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - termos neutros de vocabulario/jargao, sem viés politico-partidario (termos politicos tratados como conceito neutro de ciencia politica, nao ligados a partido ou figura especifica)."
+  },
+  "itens": [
+    {
+      "id": "pd-001",
+      "formato": "A",
+      "palavra": "Hodierno",
+      "pergunta": "O que significa 'hodierno'?",
+      "opcoes": [
+        "Relativo ao dia de hoje, atual",
+        "Relativo ao passado distante",
+        "Que se repete todo ano",
+        "Relativo à noite"
+      ],
+      "resposta_correta": "Relativo ao dia de hoje, atual",
+      "area": "geral"
+    },
+    {
+      "id": "pd-002",
+      "formato": "B",
+      "palavra": "Impeachment",
+      "contexto": "Processo político e jurídico pelo qual uma autoridade eleita pode ser afastada do cargo antes do fim do mandato, mediante acusação formal e julgamento por órgão competente.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Impeachment",
+        "Plebiscito",
+        "Recall",
+        "Anistia"
+      ],
+      "resposta_correta": "Impeachment",
+      "area": "politica"
+    },
+    {
+      "id": "pd-003",
+      "formato": "A",
+      "palavra": "Usucapião",
+      "pergunta": "O que significa 'usucapião'?",
+      "opcoes": [
+        "Modo de adquirir propriedade pela posse prolongada e ininterrupta de um bem",
+        "Imposto cobrado sobre herança",
+        "Contrato de aluguel comercial",
+        "Multa por atraso de pagamento"
+      ],
+      "resposta_correta": "Modo de adquirir propriedade pela posse prolongada e ininterrupta de um bem",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-004",
+      "formato": "B",
+      "palavra": "Holding",
+      "contexto": "Empresa criada com o propósito principal de deter participação societária em outras empresas, controlando-as sem necessariamente operar diretamente no mercado.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Holding",
+        "Franquia",
+        "Cooperativa",
+        "Sociedade anônima"
+      ],
+      "resposta_correta": "Holding",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-005",
+      "formato": "A",
+      "palavra": "Entrementes",
+      "pergunta": "O que significa 'entrementes'?",
+      "opcoes": [
+        "Enquanto isso, nesse meio tempo",
+        "De forma definitiva",
+        "Ao final de tudo",
+        "Antes de qualquer coisa"
+      ],
+      "resposta_correta": "Enquanto isso, nesse meio tempo",
+      "area": "geral"
+    },
+    {
+      "id": "pd-006",
+      "formato": "B",
+      "palavra": "Plebiscito",
+      "contexto": "Consulta popular realizada antes da criação de uma lei ou de uma decisão política relevante, para que os cidadãos se manifestem previamente sobre o tema.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Plebiscito",
+        "Referendo",
+        "Impeachment",
+        "Sufrágio"
+      ],
+      "resposta_correta": "Plebiscito",
+      "area": "politica"
+    },
+    {
+      "id": "pd-007",
+      "formato": "A",
+      "palavra": "Habeas corpus",
+      "pergunta": "O que significa 'habeas corpus'?",
+      "opcoes": [
+        "Instrumento jurídico usado para proteger o direito de ir e vir de alguém",
+        "Documento que comprova propriedade de um imóvel",
+        "Recurso usado para contestar uma multa de trânsito",
+        "Pedido de revisão de contrato de trabalho"
+      ],
+      "resposta_correta": "Instrumento jurídico usado para proteger o direito de ir e vir de alguém",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-008",
+      "formato": "B",
+      "palavra": "Spread",
+      "contexto": "Termo usado no mercado financeiro para descrever a diferença entre a taxa de juros que um banco paga para captar dinheiro e a taxa que cobra para emprestá-lo.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Spread",
+        "Dividendo",
+        "Deságio",
+        "Rating"
+      ],
+      "resposta_correta": "Spread",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-009",
+      "formato": "A",
+      "palavra": "Lapidar",
+      "pergunta": "O que significa 'lapidar' (como adjetivo, referindo-se a uma frase ou texto)?",
+      "opcoes": [
+        "Perfeito, bem elaborado, digno de nota",
+        "Confuso e mal escrito",
+        "Muito extenso e repetitivo",
+        "Escrito às pressas"
+      ],
+      "resposta_correta": "Perfeito, bem elaborado, digno de nota",
+      "area": "geral"
+    },
+    {
+      "id": "pd-010",
+      "formato": "B",
+      "palavra": "Referendo",
+      "contexto": "Consulta popular realizada depois que uma lei já foi aprovada, para que os cidadãos confirmem ou rejeitem aquela decisão já tomada pelos representantes eleitos.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Referendo",
+        "Plebiscito",
+        "Veto",
+        "Emenda"
+      ],
+      "resposta_correta": "Referendo",
+      "area": "politica"
+    },
+    {
+      "id": "pd-011",
+      "formato": "A",
+      "palavra": "Litígio",
+      "pergunta": "O que significa 'litígio'?",
+      "opcoes": [
+        "Disputa ou conflito levado à Justiça para ser resolvido",
+        "Um tipo de contrato de aluguel",
+        "Documento de identidade civil",
+        "Certidão de nascimento"
+      ],
+      "resposta_correta": "Disputa ou conflito levado à Justiça para ser resolvido",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-012",
+      "formato": "B",
+      "palavra": "Franquia",
+      "contexto": "Modelo de negócio em que uma empresa permite que outras pessoas usem sua marca e seu método de operação já estabelecido, mediante pagamento de taxas.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Franquia",
+        "Holding",
+        "Fusão",
+        "Consórcio"
+      ],
+      "resposta_correta": "Franquia",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-013",
+      "formato": "A",
+      "palavra": "Perene",
+      "pergunta": "O que significa 'perene'?",
+      "opcoes": [
+        "Que dura por muito tempo, contínuo, permanente",
+        "Que acontece uma única vez",
+        "Que muda de cor com frequência",
+        "Relativo à estação do inverno"
+      ],
+      "resposta_correta": "Que dura por muito tempo, contínuo, permanente",
+      "area": "geral"
+    },
+    {
+      "id": "pd-014",
+      "formato": "B",
+      "palavra": "Anistia",
+      "contexto": "Medida legal que perdoa determinados crimes ou infrações cometidas até certa data, geralmente aplicada de forma ampla a um grupo de pessoas, não a um caso individual.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Anistia",
+        "Impeachment",
+        "Indulto",
+        "Habeas corpus"
+      ],
+      "resposta_correta": "Anistia",
+      "area": "politica_juridico"
+    },
+    {
+      "id": "pd-015",
+      "formato": "A",
+      "palavra": "Fidúcia",
+      "pergunta": "O que significa 'fidúcia'?",
+      "opcoes": [
+        "Confiança depositada em alguém ou em algo",
+        "Um tipo de multa administrativa",
+        "Documento que registra uma dívida",
+        "Taxa cobrada por atraso de pagamento"
+      ],
+      "resposta_correta": "Confiança depositada em alguém ou em algo",
+      "area": "geral"
+    },
+    {
+      "id": "pd-016",
+      "formato": "B",
+      "palavra": "Deságio",
+      "contexto": "Desconto aplicado sobre o valor original de um título ou de uma dívida no momento da compra ou negociação, fazendo o comprador pagar menos que o valor de face.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Deságio",
+        "Ágio",
+        "Spread",
+        "Superávit"
+      ],
+      "resposta_correta": "Deságio",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-017",
+      "formato": "A",
+      "palavra": "Contumaz",
+      "pergunta": "O que significa 'contumaz'?",
+      "opcoes": [
+        "Que insiste ou reincide constantemente em determinado comportamento",
+        "Que age apenas uma vez na vida",
+        "Que muda de opinião facilmente",
+        "Que é extremamente educado"
+      ],
+      "resposta_correta": "Que insiste ou reincide constantemente em determinado comportamento",
+      "area": "geral"
+    },
+    {
+      "id": "pd-018",
+      "formato": "B",
+      "palavra": "Ágio",
+      "contexto": "Valor pago a mais do que o preço original de um bem ou título, geralmente porque a demanda por ele é maior do que a oferta disponível no momento.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Ágio",
+        "Deságio",
+        "Dividendo",
+        "Provisão"
+      ],
+      "resposta_correta": "Ágio",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-019",
+      "formato": "A",
+      "palavra": "Cognição",
+      "pergunta": "No contexto jurídico, o que significa 'cognição' de um processo?",
+      "opcoes": [
+        "A análise e o conhecimento dos fatos e provas de um caso pelo juiz",
+        "O prazo final para apresentar um recurso",
+        "O valor da causa julgada",
+        "O local onde o julgamento ocorre"
+      ],
+      "resposta_correta": "A análise e o conhecimento dos fatos e provas de um caso pelo juiz",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-020",
+      "formato": "B",
+      "palavra": "Bicameral",
+      "contexto": "Termo usado para descrever um sistema legislativo dividido em duas casas distintas, como acontece no Congresso Nacional do Brasil, formado por Câmara dos Deputados e Senado Federal.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Bicameral",
+        "Unicameral",
+        "Parlamentarista",
+        "Presidencialista"
+      ],
+      "resposta_correta": "Bicameral",
+      "area": "politica"
+    },
+    {
+      "id": "pd-021",
+      "formato": "A",
+      "palavra": "Inócuo",
+      "pergunta": "O que significa 'inócuo'?",
+      "opcoes": [
+        "Que não causa dano ou efeito relevante",
+        "Extremamente perigoso e nocivo",
+        "Que gera lucro imediato",
+        "Relativo a documentos oficiais"
+      ],
+      "resposta_correta": "Que não causa dano ou efeito relevante",
+      "area": "geral"
+    },
+    {
+      "id": "pd-022",
+      "formato": "B",
+      "palavra": "Superávit",
+      "contexto": "Situação em que as receitas de um governo, empresa ou pessoa superam as despesas num determinado período, resultando em saldo positivo.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Superávit",
+        "Déficit",
+        "Ágio",
+        "Provisão"
+      ],
+      "resposta_correta": "Superávit",
+      "area": "negocios"
+    },
+    {
+      "id": "pd-023",
+      "formato": "A",
+      "palavra": "Peremptório",
+      "pergunta": "O que significa 'peremptório', referindo-se a um prazo?",
+      "opcoes": [
+        "Que não pode ser prorrogado ou adiado",
+        "Que pode ser estendido livremente",
+        "Que se refere apenas a feriados",
+        "Que é definido a cada ano"
+      ],
+      "resposta_correta": "Que não pode ser prorrogado ou adiado",
+      "area": "juridico"
+    },
+    {
+      "id": "pd-024",
+      "formato": "B",
+      "palavra": "Parlamentarismo",
+      "contexto": "Sistema de governo em que o chefe de governo é indicado pelo parlamento e depende de sua confiança para permanecer no cargo, diferente de sistemas em que o chefe de governo é eleito diretamente pela população.",
+      "pergunta": "A palavra é:",
+      "opcoes": [
+        "Parlamentarismo",
+        "Presidencialismo",
+        "Federalismo",
+        "Bicameralismo"
+      ],
+      "resposta_correta": "Parlamentarismo",
+      "area": "politica"
+    },
+    {
+      "id": "pd-025",
+      "formato": "A",
+      "palavra": "Ecléti​co",
+      "pergunta": "O que significa 'eclético'?",
+      "opcoes": [
+        "Que combina elementos ou estilos variados e diferentes entre si",
+        "Que segue rigidamente um único padrão",
+        "Que é extremamente caro",
+        "Relativo a assuntos religiosos apenas"
+      ],
+      "resposta_correta": "Que combina elementos ou estilos variados e diferentes entre si",
+      "area": "geral"
+    }
+  ]
+}

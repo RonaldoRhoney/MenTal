@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "bloco": "interpretacao_de_textos",
+    "fase": "bloco_3_de_4",
+    "mundo_destino": "Mundo da Linguagem",
+    "total_itens_neste_bloco": 25,
+    "formato": "texto curto original seguido de 1 pergunta de interpretacao com alternativas",
+    "checagem_direitos_autorais": "Todos os textos foram escritos originalmente para este material - nenhum trecho de fonte externa foi reproduzido.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - temas neutros do cotidiano."
+  },
+  "itens": [
+    {
+      "id": "int-051",
+      "texto": "O laboratório universitário conseguiu reduzir o tempo de análise de amostras de dias para poucas horas depois de automatizar uma etapa que antes era feita manualmente por técnicos. Isso permitiu que a equipe atendesse um número muito maior de pesquisas simultâneas ao longo do semestre.",
+      "pergunta": "O que a automação permitiu ao laboratório, segundo o texto?",
+      "opcoes": [
+        "Atender um número muito maior de pesquisas simultâneas",
+        "Reduzir o número de pesquisadores contratados",
+        "Eliminar totalmente a necessidade de análise de amostras",
+        "Aumentar o custo de cada análise realizada"
+      ],
+      "resposta_correta": "Atender um número muito maior de pesquisas simultâneas"
+    },
+    {
+      "id": "int-052",
+      "texto": "Mesmo com a oferta de um cargo de gerência em outra filial, com salário mais alto, Juliana preferiu continuar na função atual, alegando que o novo cargo exigiria viagens frequentes, o que dificultaria conciliar o trabalho com o cuidado dos filhos pequenos.",
+      "pergunta": "Por que Juliana recusou o cargo de gerência oferecido?",
+      "opcoes": [
+        "O novo cargo exigiria viagens frequentes, dificultando o cuidado dos filhos",
+        "O salário oferecido era menor do que o atual",
+        "Ela já havia decidido pedir demissão da empresa",
+        "A filial oferecida ficava muito perto de sua casa"
+      ],
+      "resposta_correta": "O novo cargo exigiria viagens frequentes, dificultando o cuidado dos filhos"
+    },
+    {
+      "id": "int-053",
+      "texto": "A cidade litorânea investiu na recuperação de dunas de areia que haviam sido degradadas por décadas de ocupação irregular. Além do benefício ambiental, técnicos apontaram que as dunas recuperadas também funcionam como barreira natural contra o avanço do mar em dias de ressaca mais forte.",
+      "pergunta": "Qual função adicional as dunas recuperadas passaram a cumprir, segundo o texto?",
+      "opcoes": [
+        "Funcionar como barreira natural contra o avanço do mar",
+        "Servir de estacionamento para turistas",
+        "Substituir a necessidade de saneamento básico",
+        "Aumentar a temperatura da água do mar"
+      ],
+      "resposta_correta": "Funcionar como barreira natural contra o avanço do mar"
+    },
+    {
+      "id": "int-054",
+      "texto": "O pequeno estúdio de animação, formado por apenas três pessoas, decidiu focar em curtas-metragens autorais em vez de aceitar contratos maiores de publicidade, mesmo sabendo que isso significaria uma receita mensal menos previsível no curto prazo.",
+      "pergunta": "Qual escolha o estúdio de animação fez, segundo o texto?",
+      "opcoes": [
+        "Focar em curtas-metragens autorais em vez de contratos de publicidade",
+        "Fechar as portas por falta de clientes",
+        "Aceitar apenas grandes contratos publicitários",
+        "Contratar dezenas de novos funcionários"
+      ],
+      "resposta_correta": "Focar em curtas-metragens autorais em vez de contratos de publicidade"
+    },
+    {
+      "id": "int-055",
+      "texto": "Depois de um período de queda nas vendas, a loja de roupas decidiu reformular a vitrine trocando manequins a cada semana, em vez de manter a mesma exposição por meses. O movimento de clientes entrando apenas para observar as novidades aumentou visivelmente nas semanas seguintes.",
+      "pergunta": "O que a loja fez para tentar reverter a queda nas vendas?",
+      "opcoes": [
+        "Passou a trocar os manequins da vitrine semanalmente",
+        "Reduziu drasticamente o preço de todos os produtos",
+        "Fechou a loja física e passou a vender só online",
+        "Contratou um novo gerente de vendas"
+      ],
+      "resposta_correta": "Passou a trocar os manequins da vitrine semanalmente"
+    },
+    {
+      "id": "int-056",
+      "texto": "O grupo de pesquisadores precisou revisar sua hipótese inicial depois que os dados coletados em campo mostraram um padrão diferente do esperado. Em vez de descartar o estudo, a equipe decidiu investigar essa divergência mais a fundo, o que acabou levando a uma descoberta não planejada originalmente.",
+      "pergunta": "O que a divergência nos dados levou a equipe a fazer?",
+      "opcoes": [
+        "Investigar mais a fundo, levando a uma descoberta não planejada",
+        "Abandonar completamente a pesquisa",
+        "Ignorar os dados coletados e manter a hipótese original",
+        "Repetir o experimento exatamente da mesma forma"
+      ],
+      "resposta_correta": "Investigar mais a fundo, levando a uma descoberta não planejada"
+    },
+    {
+      "id": "int-057",
+      "texto": "O pequeno hotel de montanha, tradicionalmente aberto apenas no verão, decidiu funcionar também no inverno depois de perceber uma demanda crescente por turismo de neve na região. A mudança exigiu investimento em aquecimento e isolamento térmico dos quartos, mas os primeiros resultados foram considerados positivos pelos donos.",
+      "pergunta": "O que motivou o hotel a funcionar também no inverno?",
+      "opcoes": [
+        "Uma demanda crescente por turismo de neve na região",
+        "A proibição de funcionar apenas no verão",
+        "A falta de hóspedes durante o próprio verão",
+        "Uma exigência do governo local"
+      ],
+      "resposta_correta": "Uma demanda crescente por turismo de neve na região"
+    },
+    {
+      "id": "int-058",
+      "texto": "Ao perceber que grande parte dos clientes abandonava o aplicativo de delivery após o primeiro pedido, a empresa passou a investigar os motivos através de pesquisas de satisfação. Descobriu que o tempo de entrega, mais do que o preço, era o principal fator de insatisfação relatado.",
+      "pergunta": "Qual foi o principal fator de insatisfação identificado pela empresa?",
+      "opcoes": [
+        "O tempo de entrega",
+        "O preço dos produtos",
+        "A variedade de restaurantes disponíveis",
+        "A dificuldade de pagamento no aplicativo"
+      ],
+      "resposta_correta": "O tempo de entrega"
+    },
+    {
+      "id": "int-059",
+      "texto": "O grupo de teatro infantil decidiu incluir intérpretes de língua de sinais em todas as apresentações, depois de receber sugestões de famílias de crianças surdas que frequentavam o espaço cultural. A iniciativa foi bem recebida e passou a ser adotada também por outros grupos da mesma região.",
+      "pergunta": "O que motivou o grupo de teatro a incluir intérpretes de língua de sinais?",
+      "opcoes": [
+        "Sugestões de famílias de crianças surdas que frequentavam o espaço",
+        "Uma exigência obrigatória do teatro municipal",
+        "A redução no número de espectadores ouvintes",
+        "Um pedido dos próprios atores do grupo"
+      ],
+      "resposta_correta": "Sugestões de famílias de crianças surdas que frequentavam o espaço"
+    },
+    {
+      "id": "int-060",
+      "texto": "O pequeno produtor de café decidiu certificar sua produção como orgânica, processo que levou quase três anos entre adaptações no cultivo e auditorias externas. Apesar do tempo e custo envolvidos, ele relata que conseguiu vender o produto a um preço melhor depois de obter o selo.",
+      "pergunta": "O que o produtor conseguiu depois de obter a certificação orgânica?",
+      "opcoes": [
+        "Vender o produto a um preço melhor",
+        "Reduzir o tempo de plantio pela metade",
+        "Eliminar totalmente a necessidade de auditorias futuras",
+        "Triplicar a área plantada da propriedade"
+      ],
+      "resposta_correta": "Vender o produto a um preço melhor"
+    },
+    {
+      "id": "int-061",
+      "texto": "A equipe de desenvolvimento do jogo eletrônico recebeu críticas dos jogadores sobre a dificuldade excessiva de uma fase específica. Em vez de simplesmente reduzir a dificuldade, os desenvolvedores optaram por adicionar dicas visuais opcionais, mantendo o desafio para quem preferisse a experiência original.",
+      "pergunta": "Como os desenvolvedores resolveram o problema da fase difícil?",
+      "opcoes": [
+        "Adicionaram dicas visuais opcionais, mantendo o desafio original disponível",
+        "Removeram a fase completamente do jogo",
+        "Reduziram drasticamente a dificuldade para todos os jogadores",
+        "Pediram desculpas mas não fizeram nenhuma alteração"
+      ],
+      "resposta_correta": "Adicionaram dicas visuais opcionais, mantendo o desafio original disponível"
+    },
+    {
+      "id": "int-062",
+      "texto": "Depois de anos ministrando aulas apenas presenciais, a professora de música decidiu gravar videoaulas gratuitas sobre teoria musical básica, disponibilizando o material online. Embora não gerasse renda direta, ela relata que essa iniciativa aumentou significativamente a procura por suas aulas particulares presenciais.",
+      "pergunta": "Qual foi o efeito das videoaulas gratuitas sobre as aulas particulares da professora?",
+      "opcoes": [
+        "Aumentou significativamente a procura por suas aulas particulares",
+        "Fez com que ela parasse de dar aulas presenciais",
+        "Reduziu o interesse das pessoas por aulas de música",
+        "Gerou uma renda direta maior do que as aulas presenciais"
+      ],
+      "resposta_correta": "Aumentou significativamente a procura por suas aulas particulares"
+    },
+    {
+      "id": "int-063",
+      "texto": "O condomínio decidiu instalar câmeras de segurança adicionais na garagem depois de dois furtos registrados em poucos meses. Alguns moradores questionaram o custo da instalação, mas a maioria concordou, na assembleia seguinte, que a medida era necessária diante do histórico recente de ocorrências.",
+      "pergunta": "O que motivou a instalação de câmeras adicionais no condomínio?",
+      "opcoes": [
+        "Dois furtos registrados na garagem em poucos meses",
+        "Uma exigência da prefeitura local",
+        "O desejo de reduzir a taxa condominial",
+        "A reforma geral do prédio"
+      ],
+      "resposta_correta": "Dois furtos registrados na garagem em poucos meses"
+    },
+    {
+      "id": "int-064",
+      "texto": "O escritor, depois de ter vários manuscritos recusados por editoras tradicionais, decidiu publicar seu primeiro livro de forma independente pela internet. Com o sucesso inesperado das vendas digitais, uma editora acabou entrando em contato tempos depois, propondo lançar uma versão física da obra.",
+      "pergunta": "O que aconteceu depois do sucesso das vendas digitais do livro?",
+      "opcoes": [
+        "Uma editora entrou em contato propondo uma versão física",
+        "O escritor decidiu parar de escrever",
+        "As vendas digitais foram canceladas por completo",
+        "O livro foi banido das plataformas digitais"
+      ],
+      "resposta_correta": "Uma editora entrou em contato propondo uma versão física"
+    },
+    {
+      "id": "int-065",
+      "texto": "A fábrica de móveis passou a utilizar madeira certificada, proveniente de manejo florestal sustentável, depois de perceber uma mudança na preferência de parte dos clientes corporativos, que passaram a exigir esse tipo de comprovação em suas licitações de compra.",
+      "pergunta": "Por que a fábrica passou a usar madeira certificada?",
+      "opcoes": [
+        "Clientes corporativos passaram a exigir esse tipo de comprovação",
+        "A madeira certificada era mais barata que a comum",
+        "Houve uma proibição total de madeira não certificada",
+        "A fábrica não conseguia mais comprar madeira comum"
+      ],
+      "resposta_correta": "Clientes corporativos passaram a exigir esse tipo de comprovação"
+    },
+    {
+      "id": "int-066",
+      "texto": "O grupo de corredores amadores, que se reunia informalmente aos sábados, decidiu formalizar um clube com regras básicas de organização depois que o número de participantes cresceu de cinco para mais de cinquenta pessoas, tornando inviável continuar sem nenhuma estrutura mínima.",
+      "pergunta": "Por que o grupo decidiu se formalizar como clube?",
+      "opcoes": [
+        "O número de participantes cresceu, tornando inviável continuar sem estrutura",
+        "Um patrocinador exigiu a formalização para investir",
+        "A prefeitura proibiu corridas informais nas ruas",
+        "Os corredores originais decidiram parar de correr"
+      ],
+      "resposta_correta": "O número de participantes cresceu, tornando inviável continuar sem estrutura"
+    },
+    {
+      "id": "int-067",
+      "texto": "Ao identificar um aumento nas reclamações sobre ruído em determinado trecho da linha de produção, a fábrica investiu em isolamento acústico e trocou parte dos equipamentos mais antigos. Além de reduzir o desconforto dos funcionários, a mudança também diminuiu o número de afastamentos por problemas auditivos.",
+      "pergunta": "Qual benefício adicional a mudança trouxe, além de reduzir o desconforto dos funcionários?",
+      "opcoes": [
+        "Diminuiu o número de afastamentos por problemas auditivos",
+        "Aumentou a produção em dez vezes",
+        "Eliminou a necessidade de qualquer manutenção futura",
+        "Reduziu o número total de funcionários necessários"
+      ],
+      "resposta_correta": "Diminuiu o número de afastamentos por problemas auditivos"
+    },
+    {
+      "id": "int-068",
+      "texto": "A pequena confeitaria, conhecida por um único tipo de bolo, resistiu por anos à pressão de clientes para expandir o cardápio, temendo perder a qualidade que a diferenciava. Quando finalmente decidiu adicionar apenas mais duas opções, manteve o mesmo padrão de qualidade que já era reconhecido pelos clientes.",
+      "pergunta": "O que a confeitaria temia ao considerar expandir o cardápio?",
+      "opcoes": [
+        "Perder a qualidade que a diferenciava dos concorrentes",
+        "Não ter clientes suficientes para o produto original",
+        "Ter que fechar as portas definitivamente",
+        "Perder o ponto comercial onde funcionava"
+      ],
+      "resposta_correta": "Perder a qualidade que a diferenciava dos concorrentes"
+    },
+    {
+      "id": "int-069",
+      "texto": "O técnico de manutenção elétrica relatou que, depois de anos atuando sozinho, decidiu formar uma pequena equipe para atender mais clientes simultaneamente. A mudança exigiu que ele aprendesse também a gerenciar pessoas, uma habilidade que não fazia parte de sua formação técnica original.",
+      "pergunta": "Qual nova habilidade o técnico precisou desenvolver, segundo o texto?",
+      "opcoes": [
+        "Gerenciar pessoas",
+        "Consertar equipamentos mais modernos",
+        "Falar outro idioma com os clientes",
+        "Trabalhar em alturas elevadas"
+      ],
+      "resposta_correta": "Gerenciar pessoas"
+    },
+    {
+      "id": "int-070",
+      "texto": "A biblioteca pública decidiu criar um espaço silencioso separado, exclusivo para quem precisava estudar de forma mais concentrada, depois de receber reclamações recorrentes sobre o barulho gerado por grupos de estudo em outras áreas do mesmo salão.",
+      "pergunta": "Por que a biblioteca criou um espaço silencioso separado?",
+      "opcoes": [
+        "Recebeu reclamações sobre o barulho gerado por grupos de estudo",
+        "Queria reduzir o número total de visitantes",
+        "O governo exigiu essa divisão por lei",
+        "Não havia mais espaço físico disponível no prédio"
+      ],
+      "resposta_correta": "Recebeu reclamações sobre o barulho gerado por grupos de estudo"
+    },
+    {
+      "id": "int-071",
+      "texto": "O casal de designers gráficos, ao abrir o próprio escritório, decidiu recusar propostas de clientes que exigiam prazos considerados irreais, mesmo com receio inicial de perder receita, priorizando entregar um trabalho de qualidade dentro de prazos que consideravam factíveis.",
+      "pergunta": "Que tipo de proposta o casal decidiu recusar?",
+      "opcoes": [
+        "Propostas com prazos considerados irreais",
+        "Propostas de clientes de outras cidades",
+        "Propostas com pagamento à vista",
+        "Propostas de projetos muito pequenos"
+      ],
+      "resposta_correta": "Propostas com prazos considerados irreais"
+    },
+    {
+      "id": "int-072",
+      "texto": "Depois de perceber que boa parte dos turistas visitava a cidade histórica apenas por um dia, sem pernoitar, a associação de comércio local criou um roteiro noturno com atividades culturais, na tentativa de incentivar uma permanência mais longa e, consequentemente, maior gasto na região.",
+      "pergunta": "Qual foi o objetivo da associação de comércio ao criar o roteiro noturno?",
+      "opcoes": [
+        "Incentivar uma permanência mais longa dos turistas na cidade",
+        "Reduzir o número de turistas que visitavam a cidade",
+        "Proibir visitas diurnas à cidade histórica",
+        "Fechar o comércio durante o dia"
+      ],
+      "resposta_correta": "Incentivar uma permanência mais longa dos turistas na cidade"
+    },
+    {
+      "id": "int-073",
+      "texto": "O pequeno laboratório farmacêutico universitário conseguiu uma parceria com uma empresa privada para financiar a fase final de testes de um novo medicamento, depois de anos de pesquisa custeada majoritariamente por recursos públicos limitados.",
+      "pergunta": "O que permitiu ao laboratório avançar para a fase final de testes, segundo o texto?",
+      "opcoes": [
+        "Uma parceria com uma empresa privada para financiamento",
+        "O aumento do número de pesquisadores envolvidos",
+        "A descoberta de uma nova substância",
+        "A doação voluntária de pacientes para testes"
+      ],
+      "resposta_correta": "Uma parceria com uma empresa privada para financiamento"
+    },
+    {
+      "id": "int-074",
+      "texto": "A escola de samba, tradicional no bairro há décadas, decidiu abrir as portas dos ensaios para visitantes de fora da comunidade, como forma de gerar renda extra através da venda de ingressos, sem perder o caráter comunitário que sempre marcou a agremiação.",
+      "pergunta": "Qual foi o motivo de a escola de samba abrir os ensaios para visitantes externos?",
+      "opcoes": [
+        "Gerar renda extra através da venda de ingressos",
+        "Reduzir o número de integrantes da comunidade",
+        "Uma exigência da prefeitura para continuar funcionando",
+        "Substituir totalmente os ensaios internos"
+      ],
+      "resposta_correta": "Gerar renda extra através da venda de ingressos"
+    },
+    {
+      "id": "int-075",
+      "texto": "O aplicativo de caronas compartilhadas passou a oferecer um desconto para quem agendasse a corrida com pelo menos duas horas de antecedência, incentivando os usuários a planejar melhor os deslocamentos e ajudando a empresa a organizar melhor a distribuição de motoristas disponíveis na região.",
+      "pergunta": "Qual foi o benefício do desconto por agendamento antecipado para a própria empresa, segundo o texto?",
+      "opcoes": [
+        "Ajudou a organizar melhor a distribuição de motoristas disponíveis",
+        "Reduziu o número total de usuários do aplicativo",
+        "Eliminou a necessidade de motoristas na região",
+        "Aumentou o preço de todas as corridas"
+      ],
+      "resposta_correta": "Ajudou a organizar melhor a distribuição de motoristas disponíveis"
+    }
+  ]
+}
