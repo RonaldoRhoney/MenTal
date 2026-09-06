@@ -1,6 +1,10 @@
 # MENTAL — Bug: Push de Torcida não chega ao destinatário + Verificação de lembretes 24/48h
 
-**Status:** Prioridade alta — investigar hoje.
+**Status:** Causa raiz confirmada e corrigida (06/09/2026) — ver seção
+final. Falta só o teste de ponta a ponta em produção com um token
+recém-registrado, e confirmar separadamente a entrega dos lembretes
+24h/48h (nunca teve relação com este bug, mas a pergunta original segue
+em aberto).
 **Tipo:** Investigação de bug — causa raiz desconhecida, não presumir antes de investigar.
 **Contexto de teste:** Rhoney usa duas contas (uma administrativa, outra espelho/testadora) e confirmou, testando manualmente, que reações de Torcida enviadas entre as duas contas não chegam como notificação ao destinatário.
 
@@ -41,3 +45,44 @@ Rhoney questiona se as notificações programadas de lembrete (ausência de 24h/
 - Após a correção, teste manual (conta ADM ↔ conta espelho) confirma que a notificação chega corretamente nos dois sentidos.
 - Confirmação com evidência real (não suposição) de que os lembretes de 24h/48h estão sendo entregues corretamente, ou identificação do problema caso não estejam.
 - Se ambos os problemas compartilharem causa raiz (ex.: falha geral de configuração do FCM), isso deve ser reportado explicitamente, já que uma única correção poderia resolver os dois de uma vez.
+
+## Causa raiz confirmada e correção aplicada (06/09/2026)
+
+Evidência real: logs do Render (Rhoney compartilhou), erro
+`firebase_admin._messaging_utils.UnregisteredError: NotRegistered` ao
+tentar enviar a Torcida — confirma que `FIREBASE_SERVICE_ACCOUNT_JSON`
+está configurado corretamente e o Firebase Admin SDK inicializa sem
+problema algum (chegou a fazer a chamada real pro FCM). O problema é
+específico: o `push_token` salvo pra aquele destinatário não existe
+mais do lado do Google (token expira/é invalidado quando o app é
+desinstalado, dados são limpos, ou o token é rotacionado sem que o
+client tenha reenviado o novo via `POST /notifications/register-token`
+naquele momento).
+
+**Duas causas descartadas por evidência real, não suposição:**
+`FIREBASE_SERVICE_ACCOUNT_JSON` existe no Render (confirmado no
+painel); `NOTIFICATION_SCHEDULER_ENABLED` existe e está `true`
+(confirmado no painel) — os lembretes 24h/48h não têm relação com este
+bug específico.
+
+**Correção**: `push.send_push_notification()` agora recebe
+`db`/`profile` (não mais só a string do token) e, ao detectar
+especificamente `UnregisteredError`, limpa `profile.push_token` e
+commita — nunca mais insiste pra sempre no mesmo token morto. Qualquer
+outra falha (rede instável, erro transitório do FCM) continua
+preservando o token pra nova tentativa, distinção deliberada (só
+`UnregisteredError` é uma confirmação DEFINITIVA do Google de que
+aquele token nunca mais vai funcionar). Os ~9 pontos de chamada em
+`services.py`/`notifications.py` foram atualizados pra passar o
+profile inteiro.
+
+Testes: `tests/test_push.py` (3 testes — token limpo e commitado só em
+`UnregisteredError`, token preservado em falha genérica, nenhuma
+chamada ao Firebase quando não há token). Suíte backend completa:
+360/360.
+
+**Pendente**: teste manual de ponta a ponta em produção (conta ADM →
+conta espelho, com a conta espelho tendo reaberto o app pra registrar
+um token novo e válido depois da limpeza do antigo) — confirmar que a
+notificação chega de fato ao dispositivo agora que o token está
+atualizado.

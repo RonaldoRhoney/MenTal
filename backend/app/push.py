@@ -15,7 +15,9 @@ externa nunca derruba o produto"): nenhuma exceção escapa desta função.
 import json
 import logging
 
-from . import config
+from sqlalchemy.orm import Session
+
+from . import config, models
 
 logger = logging.getLogger(__name__)
 
@@ -47,14 +49,31 @@ def _get_firebase_app():
         return None
 
 
-def send_push_notification(push_token: str, title: str, body: str, data: dict[str, str] | None = None) -> bool:
+def send_push_notification(db: Session, profile: "models.Profile", title: str, body: str, data: dict[str, str] | None = None) -> bool:
     """
+    Achado real de produção (06/09/2026, BUG_PUSH_TORCIDA_E_LEMBRETES_
+    NAO_CHEGAM.md): logs confirmaram `UnregisteredError: NotRegistered`
+    do FCM — o token salvo não existe mais do lado do Google (app
+    desinstalado, dados limpos, token rotacionado sem novo registro).
+    Sem tratamento, o backend insistia pra sempre no mesmo token morto,
+    sem nunca entregar nada. Agora, ao detectar especificamente esse
+    erro, `profile.push_token` é limpo e commitado aqui mesmo — a
+    própria função recebe `db`/`profile` (não mais só a string do
+    token) justamente pra poder fazer essa limpeza sem exigir que cada
+    um dos ~9 pontos de chamada replique a mesma lógica. Da próxima vez
+    que o dispositivo abrir o app, `PushService.initializeAndRegister()`
+    (client) registra um token novo normalmente.
+
     `data` (05/09/2026, convite de Movimento): payload extra pro client
     decidir deep link ao tocar na notificação (ex.: {"navigate":
     "movement"}) — mesma chave já usada pelo sinal do foreground service
     de Movimento (main.dart::_onForegroundTaskData), reaproveitada aqui
     pra manter um único formato de "navegar pra X" em todo o app.
     """
+    push_token = profile.push_token
+    if not push_token:
+        return False
+
     app = _get_firebase_app()
     if app is None:
         return False
@@ -69,6 +88,11 @@ def send_push_notification(push_token: str, title: str, body: str, data: dict[st
         )
         messaging.send(message)
         return True
+    except messaging.UnregisteredError:
+        logger.info("Token push não registrado mais no FCM (dispositivo desinstalou/limpou o app) — limpando push_token de %s.", profile.user_id)
+        profile.push_token = None
+        db.commit()
+        return False
     except Exception:
-        logger.exception("Falha ao enviar notificação push (token possivelmente inválido/expirado)")
+        logger.exception("Falha ao enviar notificação push")
         return False

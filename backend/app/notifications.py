@@ -55,7 +55,7 @@ def _check_reengagement(db: Session, now: datetime) -> int:
             title = notification_copy.REENGAGEMENT_48H_TITLE
             body = notification_copy.REENGAGEMENT_48H_BODY_TEMPLATE.format(level=profile.level)
 
-        if push.send_push_notification(profile.push_token, title, body):
+        if push.send_push_notification(db, profile, title, body):
             profile.last_reengagement_notified_window = target_window
             sent += 1
 
@@ -99,7 +99,7 @@ def _check_social_overtakes(db: Session, now: datetime) -> int:
             title = notification_copy.SOCIAL_OVERTAKE_GENERIC_TITLE
             body = notification_copy.SOCIAL_OVERTAKE_NAMED_BODY_TEMPLATE.format(nickname=nickname)
 
-            if push.send_push_notification(profile.push_token, title, body):
+            if push.send_push_notification(db, profile, title, body):
                 sent += 1
 
         profile.last_known_weekly_rank = idx
@@ -142,7 +142,7 @@ def _check_movement_reports(db: Session, now: datetime) -> int:
 
         title = notification_copy.MOVEMENT_CYCLE_REPORT_TITLE
         body = notification_copy.MOVEMENT_CYCLE_REPORT_BODY_TEMPLATE.format(steps=cycle.steps_collected)
-        if push.send_push_notification(profile.push_token, title, body):
+        if push.send_push_notification(db, profile, title, body):
             cycle.report_sent = True
             sent += 1
 
@@ -174,7 +174,8 @@ def _check_movement_activation_invite(db: Session, now: datetime) -> int:
 
     for profile in profiles:
         if push.send_push_notification(
-            profile.push_token,
+            db,
+            profile,
             notification_copy.MOVEMENT_ACTIVATION_INVITE_TITLE,
             notification_copy.MOVEMENT_ACTIVATION_INVITE_BODY,
         ):

@@ -45,8 +45,8 @@ def _cycle_start_now() -> datetime:
 
 
 def _fake_sender(sent_log):
-    def _send(push_token, title, body):
-        sent_log.append({"push_token": push_token, "title": title, "body": body})
+    def _send(db, profile, title, body, data=None):
+        sent_log.append({"push_token": profile.push_token, "title": title, "body": body})
         return True
 
     return _send

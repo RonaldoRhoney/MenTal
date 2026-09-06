@@ -984,7 +984,7 @@ def create_battle(
             nickname=challenger_profile.nickname if challenger_profile else "Um amigo",
             territory=territory_label,
         )
-        push.send_push_notification(opponent_profile.push_token, title, body)
+        push.send_push_notification(db, opponent_profile, title, body)
 
     return battle
 
@@ -1058,7 +1058,7 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
 
         challenger_profile = db.get(models.Profile, battle.challenger_user_id)
         opponent_profile = db.get(models.Profile, battle.opponent_user_id)
-        _notify_battle_result(challenger_profile, opponent_profile, winner_user_id)
+        _notify_battle_result(db, challenger_profile, opponent_profile, winner_user_id)
 
         # FEED_SOCIAL_V1.md §2 — "vitória em Batalha contra outro
         # jogador", mesmo evento já detectado acima (_resolve_battle_winner),
@@ -1105,13 +1105,14 @@ def notify_territory_dethroned(db: Session, new_detentor_profile: "models.Profil
         return
     territory_label = notification_copy.TERRITORY_NAMES.get(territory_id, territory_id)
     push.send_push_notification(
-        previous_detentor_profile.push_token,
+        db,
+        previous_detentor_profile,
         notification_copy.TERRITORY_DETENTOR_LOST_TITLE,
         notification_copy.TERRITORY_DETENTOR_LOST_BODY_TEMPLATE.format(nickname=new_detentor_profile.nickname, territory=territory_label),
     )
 
 
-def _notify_battle_result(challenger_profile: "models.Profile", opponent_profile: "models.Profile", winner_user_id: str | None) -> None:
+def _notify_battle_result(db: Session, challenger_profile: "models.Profile", opponent_profile: "models.Profile", winner_user_id: str | None) -> None:
     for me, other in ((challenger_profile, opponent_profile), (opponent_profile, challenger_profile)):
         if not (me and me.notif_social_enabled and me.push_token):
             continue
@@ -1122,7 +1123,7 @@ def _notify_battle_result(challenger_profile: "models.Profile", opponent_profile
             title, body = notification_copy.BATTLE_RESULT_WIN_TITLE, notification_copy.BATTLE_RESULT_WIN_BODY_TEMPLATE.format(nickname=other_nickname)
         else:
             title, body = notification_copy.BATTLE_RESULT_LOSS_TITLE, notification_copy.BATTLE_RESULT_LOSS_BODY_TEMPLATE.format(nickname=other_nickname)
-        push.send_push_notification(me.push_token, title, body)
+        push.send_push_notification(db, me, title, body)
 
 
 def extract_photo_storage_path(stored_value: str) -> str:
@@ -1301,7 +1302,7 @@ def send_torcida(db: Session, from_user_id: str, to_user_id: str, reaction_type:
             nickname=from_profile.nickname if from_profile else "Alguém",
             emoji=emoji,
         )
-        push.send_push_notification(target_profile.push_token, notification_copy.TORCIDA_RECEIVED_TITLE, body)
+        push.send_push_notification(db, target_profile, notification_copy.TORCIDA_RECEIVED_TITLE, body)
 
     return sent_today + 1
 
@@ -1347,7 +1348,8 @@ def send_movement_invite(db: Session, from_user_id: str, to_user_id: str) -> int
             nickname=from_profile.nickname if from_profile else "Alguém",
         )
         push.send_push_notification(
-            target_profile.push_token,
+            db,
+            target_profile,
             notification_copy.MOVEMENT_INVITE_RECEIVED_TITLE,
             body,
             data={"navigate": "movement"},

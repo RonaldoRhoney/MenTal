@@ -186,7 +186,7 @@ def test_send_torcida_notifies_recipient_with_type_and_sender_nickname(client, m
     from app import services
 
     sent_notifications = []
-    monkeypatch.setattr(services.push, "send_push_notification", lambda token, title, body: sent_notifications.append((token, title, body)))
+    monkeypatch.setattr(services.push, "send_push_notification", lambda db, profile, title, body, data=None: sent_notifications.append((profile.push_token, title, body)))
 
     sender = str(uuid.uuid4())
     sender_headers = auth_header(sender)
@@ -298,7 +298,7 @@ def test_send_movement_invite_notifies_recipient_with_deep_link_data(client, mon
     monkeypatch.setattr(
         services.push,
         "send_push_notification",
-        lambda token, title, body, data=None: sent_notifications.append((token, title, body, data)),
+        lambda db, profile, title, body, data=None: sent_notifications.append((profile.push_token, title, body, data)),
     )
 
     sender = str(uuid.uuid4())
