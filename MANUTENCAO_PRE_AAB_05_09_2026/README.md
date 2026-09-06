@@ -75,8 +75,11 @@ já consumido por um upload anterior no Play Console — corrigido para
 
 ## Pendências desta pasta
 
-1. Novo deploy do backend no Render — necessário pra `/app/version` e
-   `/profile/{id}/invite-movement` funcionarem em produção.
+Nenhuma — o deploy do backend no Render (necessário pra `/app/version`
+e `/profile/{id}/invite-movement` funcionarem em produção) já ocorreu
+várias vezes desde então (confirmado indiretamente pelo AAB já
+publicado no Google Play e, mais recentemente, pelo deploy do Feed
+Social em 06/09/2026 — ver `Engenharia_Geral/FEED_SOCIAL_V1.md`).
 
 ## B4 — limpeza de funções/módulos grandes demais (05/09/2026)
 
