@@ -80,7 +80,7 @@ const List<String> kTerritoryIds = [
   'astronomia',
   'detetive_mental',
   'ouvido_afiado',
-  // V5 (V5/README.md) — Mundo dos Idiomas.
+  // V5 (Mundo_dos_Idiomas/README.md) — Mundo dos Idiomas.
   'ingles_basico',
   'ingles_intermediario',
   'ingles_avancado',
@@ -90,7 +90,7 @@ const List<String> kTerritoryIds = [
   'frances_basico',
   'frances_intermediario',
   'frances_avancado',
-  // V6 (V6/README.md) — Mundo dos Valores.
+  // V6 (Mundo_dos_Valores/README.md) — Mundo dos Valores.
   'bolsa',
   'criptomoedas',
   'cenario_global',

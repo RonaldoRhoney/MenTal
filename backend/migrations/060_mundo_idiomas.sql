@@ -1,4 +1,4 @@
--- MENTAL — Mundo dos Idiomas (V5/README.md, V5/mundo_dos_idiomas_*.json).
+-- MENTAL — Mundo dos Idiomas (Mundo_dos_Idiomas/README.md, Mundo_dos_Idiomas/mundo_dos_idiomas_*.json).
 -- Cria o Mundo novo, os 9 territórios (inglês/espanhol/francês x
 -- básico/intermediário/avançado) e a coluna accepted_answers em
 -- mental.challenges (desafio de tradução em texto livre tem mais de
@@ -6,7 +6,7 @@
 -- house is big.").
 -- Rodar no SQL Editor do projeto Supabase DEPOIS de 059_review_errors_round.sql.
 -- Conteúdo em si (os 540 challenges) é carregado DEPOIS desta
--- migração, via scripts/append_production_content.py (ver V5/README.md).
+-- migração, via scripts/append_production_content.py (ver Mundo_dos_Idiomas/README.md).
 
 alter table mental.challenges add column if not exists accepted_answers jsonb;
 

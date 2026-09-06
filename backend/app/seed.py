@@ -21,14 +21,14 @@ WORLDS = [
     # é armazenado, é sempre derivado de UserTerritoryProgress, então
     # isso não afeta XP/progresso/estatística de ninguém.
     {"id": "descoberta", "name": "Mundo da Descoberta", "display_order": 4},
-    # V5/README.md — inglês/espanhol/francês x básico/intermediário/
+    # Mundo_dos_Idiomas/README.md — inglês/espanhol/francês x básico/intermediário/
     # avançado, 9 territórios. Conteúdo carregado de content/idiomas_*.json
     # (não inline aqui, ver CHALLENGES abaixo) — 540 desafios curados
     # manualmente seria repetição de texto grande demais pra manter dentro
     # deste arquivo, e o JSON já é a fonte usada por
     # scripts/append_production_content.py em produção.
     {"id": "idiomas", "name": "Mundo dos Idiomas", "display_order": 5},
-    # V6/README.md — educação financeira/economia (Bolsa/B3, Criptomoedas,
+    # Mundo_dos_Valores/README.md — educação financeira/economia (Bolsa/B3, Criptomoedas,
     # Cenário Global, Finanças do Dia a Dia). Nunca aconselhamento de
     # investimento (POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md) — "cápsula
     # de texto + perguntas", reaproveitando o Challenge normal com o novo
@@ -233,7 +233,7 @@ TERRITORIES = [
     # Challenge já existente (audio_url/audio_source_name/audio_source_url,
     # nunca um mecanismo do zero).
     {"id": "ouvido_afiado", "challenge_type": "ouvido_afiado", "requires_subscription": True, "free_sample_count": 2, "display_order": 39, "world_id": "descoberta"},
-    # V5 — Mundo dos Idiomas (V5/README.md, migrations/060_mundo_idiomas.sql).
+    # V5 — Mundo dos Idiomas (Mundo_dos_Idiomas/README.md, migrations/060_mundo_idiomas.sql).
     # 3 idiomas x 3 níveis, cada um um território próprio (não um só
     # território "idiomas" com sub-navegação) — mesmo padrão de progresso
     # independente (XP/conquista por território) já usado em todo o resto
@@ -5704,10 +5704,10 @@ CHALLENGES = [
 ]
 
 # V5 — Mundo dos Idiomas: 521 desafios (19 excluídos por bug estrutural
-# na fonte original, ver V5/README.md), carregados diretamente de
+# na fonte original, ver Mundo_dos_Idiomas/README.md), carregados diretamente de
 # content/idiomas_*.json em vez de duplicados inline aqui — divergência
 # deliberada do padrão do resto deste arquivo (decisão registrada em
-# V5/README.md), pra não arrastar ~1500 linhas de texto duplicado e pra
+# Mundo_dos_Idiomas/README.md), pra não arrastar ~1500 linhas de texto duplicado e pra
 # nunca divergir de content/, a mesma fonte usada em produção via
 # scripts/append_production_content.py.
 _CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
@@ -5716,7 +5716,7 @@ for _path in sorted(_CONTENT_DIR.glob("idiomas_*.json")):
 
 # V6 — Mundo dos Valores: 159 desafios ("cápsula de texto + perguntas",
 # reading_passage), mesmo padrão de carregar direto de content/ em vez
-# de duplicar inline (ver V6/README.md e scripts/convert_valores_content.py).
+# de duplicar inline (ver Mundo_dos_Valores/README.md e scripts/convert_valores_content.py).
 for _path in sorted(_CONTENT_DIR.glob("valores_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 

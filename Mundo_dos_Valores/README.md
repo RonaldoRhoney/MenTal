@@ -1,4 +1,4 @@
-# V6
+# Mundo dos Valores (V6)
 
 **Status:** Em andamento (iniciada em 05/09/2026). Mundo dos Valores —
 educação financeira/economia, nunca aconselhamento de investimento (ver
@@ -80,4 +80,4 @@ V6 considerada concluída (conteúdo em produção + validado em
 dispositivo real). Falta só decidir o ícone/cor do Mundo dos Valores.
 Próxima prioridade a decidir com Rhoney: `MUNDO_LINGUAGEM_CONTEUDO_
 DENSO_V1.md`, `FEED_SOCIAL_V1.md` ou V7 (Mundo do Trânsito, conteúdo já
-presente em `V7/`).
+presente em `Mundo_do_Transito/`).

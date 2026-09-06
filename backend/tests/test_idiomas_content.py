@@ -1,5 +1,5 @@
 """
-V5/README.md — Mundo dos Idiomas: 9 territórios (inglês/espanhol/
+Mundo_dos_Idiomas/README.md — Mundo dos Idiomas: 9 territórios (inglês/espanhol/
 francês x básico/intermediário/avançado), conteúdo carregado de
 content/idiomas_*.json (app/seed.py). Cobre especificamente o que é
 NOVO nesta feature — Challenge.accepted_answers e a comparação de

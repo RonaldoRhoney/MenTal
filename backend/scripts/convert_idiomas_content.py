@@ -1,6 +1,6 @@
 """
-V5/README.md — converte os 9 arquivos brutos de conteúdo do Mundo dos
-Idiomas (V5/mundo_dos_idiomas_<idioma>_<nivel>.json, formato de
+Mundo_dos_Idiomas/README.md — converte os 9 arquivos brutos de conteúdo do Mundo dos
+Idiomas (Mundo_dos_Idiomas/mundo_dos_idiomas_<idioma>_<nivel>.json, formato de
 blocos/vocabulario/desafio_frase) pro formato plano exigido por
 app/content_validation.py e scripts/append_production_content.py.
 
@@ -8,7 +8,7 @@ Roda uma vez (conteúdo já é fixo/curado) e escreve os 9 arquivos em
 backend/content/idiomas_<idioma>_<nivel>.json. hints e explanation NÃO
 existem no arquivo bruto — gerados automaticamente aqui (genéricos:
 tema do bloco + primeira letra/palavra da resposta), decisão registrada
-em V5/README.md.
+em Mundo_dos_Idiomas/README.md.
 
 Uso:
     cd backend && python3 scripts/convert_idiomas_content.py

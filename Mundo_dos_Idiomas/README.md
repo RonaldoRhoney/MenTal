@@ -1,4 +1,4 @@
-# V5
+# Mundo dos Idiomas (V5)
 
 **Status:** Encerrada em 04/09/2026. Mundo dos Idiomas em produção —
 migração aplicada, 520 desafios carregados, backend deployado, testado
@@ -42,7 +42,7 @@ próprio `frances_avancado` (item "... novamente para fixar em
 francês?", claramente um preenchimento acidental). Rodar o script de
 novo (`cd backend && python3 scripts/convert_idiomas_content.py`)
 imprime a lista completa com território e motivo de cada exclusão. Se
-algum dia corrigir a fonte (`V5/mundo_dos_idiomas_*.json`), o item volta
+algum dia corrigir a fonte (`Mundo_dos_Idiomas/mundo_dos_idiomas_*.json`), o item volta
 a entrar automaticamente na próxima conversão.
 
 ### Testes

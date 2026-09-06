@@ -1,5 +1,5 @@
 """
-V6/README.md — Mundo dos Valores: 4 territórios (bolsa, criptomoedas,
+Mundo_dos_Valores/README.md — Mundo dos Valores: 4 territórios (bolsa, criptomoedas,
 cenario_global, financas_dia_a_dia), conteúdo carregado de
 content/valores_*.json (app/seed.py). Cobre o que é NOVO nesta feature
 — Challenge.reading_passage e a exigência de NUNCA cronometrado, mesmo

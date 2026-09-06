@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_do_transito",
+    "tema": "prevencao_e_seguranca_viaria",
+    "fase": "V7.0",
+    "numero_bloco": 5,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "principio": "CONSCIENTIZAR, NUNCA ASSUSTAR. Tom estritamente protetivo e educativo, sem nenhum detalhe grafico de acidente, sem estatistica de mortes/feridos, sem culpar ou generalizar nenhum grupo de condutor. Foco em praticas de prevencao (direcao defensiva, cinto, capacete, distancia segura, atencao, alcool, manutencao), nao em consequencias tragicas.",
+    "checagem_seguranca": "Revisado com rigor redobrado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md, por ser o bloco mais sensivel do Mundo do Transito. Fatos verificados via pesquisa antes da redacao. Nenhuma reproducao literal de texto das fontes consultadas. Nenhum numero de mortos/feridos foi incluido deliberadamente, mesmo estando disponivel nas fontes pesquisadas."
+  },
+  "capsulas": [
+    {
+      "id": "transito-prev-01",
+      "titulo": "O que é direção defensiva?",
+      "texto": "Direção defensiva é uma forma de dirigir baseada em antecipar situações de risco antes que elas aconteçam, em vez de apenas reagir depois que um problema já está em curso. O conceito costuma ser descrito a partir de cinco elementos combinados: atenção, previsão, conhecimento, habilidade e ação. A ideia central é que, ao se manter atento ao comportamento de outros condutores e pedestres, e ao prever possíveis situações de perigo com antecedência, um condutor consegue reduzir significativamente as chances de se envolver num incidente, mesmo quando o erro inicial não é seu.",
+      "perguntas": [
+        {
+          "pergunta": "O que é direção defensiva?",
+          "opcoes": [
+            "Uma forma de dirigir baseada em antecipar situações de risco antes que aconteçam",
+            "Um tipo de veículo blindado",
+            "Uma categoria específica de CNH",
+            "Um seguro obrigatório para motoristas"
+          ],
+          "resposta_correta": "Uma forma de dirigir baseada em antecipar situações de risco antes que aconteçam"
+        },
+        {
+          "pergunta": "Quais são os cinco elementos que costumam descrever a direção defensiva, segundo o texto?",
+          "opcoes": [
+            "Atenção, previsão, conhecimento, habilidade e ação",
+            "Velocidade, potência, conforto, estilo e economia",
+            "Cor, marca, modelo, ano e placa",
+            "Freio, embreagem, acelerador, câmbio e volante"
+          ],
+          "resposta_correta": "Atenção, previsão, conhecimento, habilidade e ação"
+        },
+        {
+          "pergunta": "Qual é a ideia central da direção defensiva, segundo o texto?",
+          "opcoes": [
+            "Reduzir chances de incidente, mesmo quando o erro inicial não é do próprio condutor",
+            "Dirigir sempre no limite máximo de velocidade permitido",
+            "Evitar completamente o uso de qualquer via pública",
+            "Confiar apenas na experiência, sem necessidade de atenção"
+          ],
+          "resposta_correta": "Reduzir chances de incidente, mesmo quando o erro inicial não é do próprio condutor"
+        }
+      ]
+    },
+    {
+      "id": "transito-prev-02",
+      "titulo": "Desde quando o cinto de segurança é obrigatório no Brasil?",
+      "texto": "O uso do cinto de segurança tornou-se obrigatório no Brasil em etapas: primeiro, em 1989, apenas nas rodovias; depois, a partir de 1997, com o novo Código de Trânsito Brasileiro, a obrigatoriedade passou a valer em todas as vias do território nacional, tanto para condutor quanto para passageiros, incluindo os bancos traseiros. Para funcionar corretamente, o cinto deve ser usado sem estar torcido, passando por cima do ombro e pela cintura, abaixo do abdômen — um detalhe de uso correto que muitas vezes passa despercebido, mesmo entre quem já usa o equipamento regularmente.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano o uso do cinto de segurança se tornou obrigatório nas rodovias brasileiras?",
+          "opcoes": [
+            "1989",
+            "1997",
+            "1968",
+            "2001"
+          ],
+          "resposta_correta": "1989"
+        },
+        {
+          "pergunta": "A partir de que ano a obrigatoriedade do cinto passou a valer em todas as vias do Brasil?",
+          "opcoes": [
+            "1997",
+            "1989",
+            "2005",
+            "1970"
+          ],
+          "resposta_correta": "1997"
+        },
+        {
+          "pergunta": "A obrigatoriedade do cinto de segurança vale para quais ocupantes do veículo, segundo o texto?",
+          "opcoes": [
+            "Condutor e passageiros, incluindo os bancos traseiros",
+            "Apenas o condutor",
+            "Somente passageiros do banco da frente",
+            "Apenas crianças, não adultos"
+          ],
+          "resposta_correta": "Condutor e passageiros, incluindo os bancos traseiros"
+        }
+      ]
+    },
+    {
+      "id": "transito-prev-03",
+      "titulo": "O que é a campanha Maio Amarelo?",
+      "texto": "Maio Amarelo é um movimento internacional de conscientização sobre segurança no trânsito, realizado anualmente durante o mês de maio, em diversos países, incluindo o Brasil. A cor amarela escolhida para simbolizar a campanha remete aos sinais de atenção e advertência, reforçando a ideia de prudência compartilhada entre todos que usam as vias — motoristas, motociclistas, ciclistas e pedestres. A campanha busca promover reflexão sobre atitudes individuais e responsabilidades coletivas, incentivando comportamentos mais seguros através de ações educativas.",
+      "perguntas": [
+        {
+          "pergunta": "O que é o Maio Amarelo?",
+          "opcoes": [
+            "Um movimento internacional de conscientização sobre segurança no trânsito",
+            "Uma lei que proíbe dirigir durante o mês de maio",
+            "Um tipo de multa aplicada apenas em maio",
+            "Uma categoria de veículo com faixa amarela obrigatória"
+          ],
+          "resposta_correta": "Um movimento internacional de conscientização sobre segurança no trânsito"
+        },
+        {
+          "pergunta": "Por que a cor amarela foi escolhida para simbolizar a campanha, segundo o texto?",
+          "opcoes": [
+            "Remete aos sinais de atenção e advertência",
+            "Porque é a cor oficial do CTB",
+            "Porque representa a cor de todos os táxis do Brasil",
+            "Porque foi sorteada entre outras opções de cor"
+          ],
+          "resposta_correta": "Remete aos sinais de atenção e advertência"
+        },
+        {
+          "pergunta": "Quais grupos a campanha busca engajar, segundo o texto?",
+          "opcoes": [
+            "Motoristas, motociclistas, ciclistas e pedestres",
+            "Apenas motoristas profissionais",
+            "Somente fabricantes de veículos",
+            "Exclusivamente órgãos de trânsito"
+          ],
+          "resposta_correta": "Motoristas, motociclistas, ciclistas e pedestres"
+        }
+      ]
+    },
+    {
+      "id": "transito-prev-04",
+      "titulo": "Por que manter distância segura entre veículos é importante?",
+      "texto": "Manter uma distância segura em relação ao veículo à frente é um dos princípios centrais da direção defensiva, já que oferece tempo de reação suficiente caso o veículo da frente freie de forma repentina. Esse tempo de reação envolve tanto o tempo que o cérebro do condutor leva para perceber e processar a situação quanto o tempo necessário para o próprio veículo reduzir a velocidade, que aumenta conforme a velocidade em que se está trafegando. Por isso, a distância segura recomendada tende a aumentar proporcionalmente quanto maior for a velocidade do trajeto.",
+      "perguntas": [
+        {
+          "pergunta": "Por que manter distância segura entre veículos é um princípio da direção defensiva?",
+          "opcoes": [
+            "Oferece tempo de reação suficiente caso o veículo da frente freie repentinamente",
+            "Porque é uma exigência apenas em dias de chuva",
+            "Porque reduz o consumo de combustível",
+            "Porque evita multas de estacionamento"
+          ],
+          "resposta_correta": "Oferece tempo de reação suficiente caso o veículo da frente freie repentinamente"
+        },
+        {
+          "pergunta": "O tempo de reação envolve quais dois componentes, segundo o texto?",
+          "opcoes": [
+            "O tempo de percepção do cérebro e o tempo de frenagem do veículo",
+            "Apenas o tempo de frenagem do veículo",
+            "Apenas a velocidade máxima permitida na via",
+            "O tempo de troca de marcha e o tempo de buzinar"
+          ],
+          "resposta_correta": "O tempo de percepção do cérebro e o tempo de frenagem do veículo"
+        },
+        {
+          "pergunta": "Como a distância segura recomendada se comporta em relação à velocidade, segundo o texto?",
+          "opcoes": [
+            "Tende a aumentar proporcionalmente quanto maior a velocidade",
+            "Permanece sempre a mesma, independente da velocidade",
+            "Diminui conforme a velocidade aumenta",
+            "Não tem nenhuma relação com a velocidade"
+          ],
+          "resposta_correta": "Tende a aumentar proporcionalmente quanto maior a velocidade"
+        }
+      ]
+    },
+    {
+      "id": "transito-prev-05",
+      "titulo": "Como o uso do celular afeta a atenção ao dirigir?",
+      "texto": "O uso do celular durante a condução de um veículo é apontado por pesquisas de segurança viária como um dos fatores que mais comprometem a atenção do condutor, mesmo em interações consideradas rápidas, como ler ou responder uma mensagem. Isso acontece porque a atenção humana tem capacidade limitada: ao direcionar parte dela para o celular, mesmo por poucos segundos, o condutor reduz sua capacidade de perceber mudanças no trânsito à sua volta, como a freada de um carro à frente ou a travessia repentina de um pedestre.",
+      "perguntas": [
+        {
+          "pergunta": "O que pesquisas de segurança viária apontam sobre o uso do celular ao dirigir?",
+          "opcoes": [
+            "É um dos fatores que mais comprometem a atenção do condutor",
+            "Não tem nenhum efeito relevante sobre a atenção",
+            "Só é um problema em rodovias, nunca em vias urbanas",
+            "Melhora a atenção do condutor em curtas distâncias"
+          ],
+          "resposta_correta": "É um dos fatores que mais comprometem a atenção do condutor"
+        },
+        {
+          "pergunta": "Por que mesmo interações rápidas com o celular já representam risco, segundo o texto?",
+          "opcoes": [
+            "A atenção humana tem capacidade limitada",
+            "Porque o celular emite uma luz que ofusca a visão",
+            "Porque isso é proibido apenas para motoristas iniciantes",
+            "Porque desliga automaticamente o painel do carro"
+          ],
+          "resposta_correta": "A atenção humana tem capacidade limitada"
+        },
+        {
+          "pergunta": "O que o condutor tem menos capacidade de perceber ao usar o celular, segundo o texto?",
+          "opcoes": [
+            "Mudanças no trânsito à sua volta, como freadas ou travessias de pedestres",
+            "O valor do combustível no painel",
+            "O horário atual no relógio do carro",
+            "A temperatura externa do veículo"
+          ],
+          "resposta_correta": "Mudanças no trânsito à sua volta, como freadas ou travessias de pedestres"
+        }
+      ]
+    },
+    {
+      "id": "transito-prev-06",
+      "titulo": "Como o álcool afeta a capacidade de dirigir?",
+      "texto": "O consumo de álcool afeta diretamente funções necessárias para dirigir com segurança, como tempo de reação, coordenação motora e capacidade de julgamento de distância e velocidade. No Brasil, a fiscalização desse comportamento é feita, entre outras formas, pelo uso do bafômetro, equipamento que mede a concentração de álcool no organismo do condutor. A chamada 'Lei Seca' estabelece tolerância zero para condução sob efeito de álcool, com penalidades específicas previstas no Código de Trânsito Brasileiro para quem for flagrado dirigindo nessa condição.",
+      "perguntas": [
+        {
+          "pergunta": "Quais funções necessárias para dirigir com segurança o álcool afeta diretamente, segundo o texto?",
+          "opcoes": [
+            "Tempo de reação, coordenação motora e capacidade de julgamento",
+            "Apenas a visão noturna",
+            "Somente a audição do condutor",
+            "Exclusivamente a capacidade de estacionar"
+          ],
+          "resposta_correta": "Tempo de reação, coordenação motora e capacidade de julgamento"
+        },
+        {
+          "pergunta": "Que equipamento é usado para medir a concentração de álcool no organismo do condutor?",
+          "opcoes": [
+            "Bafômetro",
+            "Radar de velocidade",
+            "Sensor de estacionamento",
+            "Câmera de trânsito"
+          ],
+          "resposta_correta": "Bafômetro"
+        },
+        {
+          "pergunta": "O que a chamada 'Lei Seca' estabelece, segundo o texto?",
+          "opcoes": [
+            "Tolerância zero para condução sob efeito de álcool",
+            "Permissão para dirigir com qualquer quantidade de álcool no sangue",
+            "Proibição de venda de bebida alcoólica aos finais de semana",
+            "Multa apenas para motoristas profissionais"
+          ],
+          "resposta_correta": "Tolerância zero para condução sob efeito de álcool"
+        }
+      ]
+    },
+    {
+      "id": "transito-prev-07",
+      "titulo": "Por que a manutenção periódica do veículo é parte da prevenção?",
+      "texto": "Manter um veículo em bom estado de conservação, através de manutenções periódicas, é considerado parte das boas práticas de prevenção no trânsito. Itens como freios, pneus, faróis, lanternas e limpador de para-brisa em bom funcionamento reduzem a chance de uma falha mecânica se transformar num fator de risco durante a condução. Assim como a direção defensiva foca em antecipar riscos causados por outros participantes do trânsito, a manutenção preventiva do próprio veículo foca em reduzir riscos que poderiam surgir do estado do carro em si.",
+      "perguntas": [
+        {
+          "pergunta": "A manutenção periódica do veículo é considerada parte de quê, segundo o texto?",
+          "opcoes": [
+            "Das boas práticas de prevenção no trânsito",
+            "Apenas de uma exigência estética",
+            "De um requisito exclusivo para revenda do veículo",
+            "De uma obrigação apenas em dias de chuva"
+          ],
+          "resposta_correta": "Das boas práticas de prevenção no trânsito"
+        },
+        {
+          "pergunta": "Cite um item mencionado no texto que deve estar em bom funcionamento por questão de segurança.",
+          "opcoes": [
+            "Freios",
+            "Rádio do veículo",
+            "Ar-condicionado",
+            "Porta-copos"
+          ],
+          "resposta_correta": "Freios"
+        },
+        {
+          "pergunta": "Qual é a diferença de foco entre direção defensiva e manutenção preventiva, segundo o texto?",
+          "opcoes": [
+            "A defensiva foca em riscos de outros participantes; a manutenção foca em riscos do próprio veículo",
+            "Não existe nenhuma diferença entre as duas",
+            "A manutenção é sobre velocidade; a defensiva é sobre combustível",
+            "A defensiva é só para rodovias; a manutenção é só para vias urbanas"
+          ],
+          "resposta_correta": "A defensiva foca em riscos de outros participantes; a manutenção foca em riscos do próprio veículo"
+        }
+      ]
+    },
+    {
+      "id": "transito-prev-08",
+      "titulo": "Qual é o papel do capacete para quem anda de moto ou bicicleta?",
+      "texto": "O uso do capacete é obrigatório por lei para condutores e passageiros de motocicleta no Brasil, e altamente recomendado também para ciclistas, mesmo quando não há exigência legal para esse último grupo em todas as situações. O capacete tem a função de proteger a cabeça em caso de queda ou colisão, área do corpo especialmente vulnerável nesse tipo de veículo, que não conta com a mesma estrutura de proteção externa presente em carros, como carroceria e airbags.",
+      "perguntas": [
+        {
+          "pergunta": "O uso do capacete é obrigatório por lei para quais condutores no Brasil, segundo o texto?",
+          "opcoes": [
+            "Condutores e passageiros de motocicleta",
+            "Apenas motoristas de caminhão",
+            "Somente pedestres em vias movimentadas",
+            "Exclusivamente ciclistas profissionais"
+          ],
+          "resposta_correta": "Condutores e passageiros de motocicleta"
+        },
+        {
+          "pergunta": "Qual é a função do capacete, segundo o texto?",
+          "opcoes": [
+            "Proteger a cabeça em caso de queda ou colisão",
+            "Melhorar a aerodinâmica do veículo",
+            "Reduzir o barulho do motor",
+            "Servir apenas como identificação visual"
+          ],
+          "resposta_correta": "Proteger a cabeça em caso de queda ou colisão"
+        },
+        {
+          "pergunta": "Por que motos não contam com a mesma proteção que carros, segundo o texto?",
+          "opcoes": [
+            "Não têm estrutura como carroceria e airbags",
+            "Porque são fabricadas com material mais fraco",
+            "Porque não podem ter faróis",
+            "Porque não seguem nenhuma norma de segurança"
+          ],
+          "resposta_correta": "Não têm estrutura como carroceria e airbags"
+        }
+      ]
+    }
+  ]
+}

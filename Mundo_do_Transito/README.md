@@ -1,8 +1,8 @@
-# V7
+# Mundo do Trânsito (V7)
 
 **Status:** Ainda não iniciada. Reservada para o Mundo do Trânsito
 (decisão de Rhoney, 05/09/2026). V6 (Mundo dos Valores) em andamento —
-ver `V6/README.md`.
+ver `Mundo_dos_Valores/README.md`.
 
 ## Itens já decididos para a V7
 

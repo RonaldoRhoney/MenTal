@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_do_transito",
+    "tema": "historia_e_curiosidades_do_transito",
+    "fase": "V7.0",
+    "numero_bloco": 2,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "principio": "Esclarecer curiosidades historicas de forma factual e envolvente, no mesmo espirito de 'uau, nao sabia disso' ja usado em Curiosidade Relampago.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md. Fatos verificados via pesquisa antes da redacao. Nenhuma reproducao literal de texto das fontes consultadas - todo conteudo reescrito com palavras proprias. O incidente do vazamento de gas de 1868 e mencionado apenas como fato historico breve, sem detalhe grafico."
+  },
+  "capsulas": [
+    {
+      "id": "transito-hist-01",
+      "titulo": "Onde surgiu o primeiro semáforo da história?",
+      "texto": "O primeiro semáforo do mundo foi instalado em 1868, em Londres, próximo ao Palácio de Westminster. Criado pelo engenheiro J.P. Knight, especializado em sinalização ferroviária, o equipamento era inspirado diretamente no sistema usado para controlar trens: braços móveis operados manualmente por um agente indicavam 'pare' quando estendidos na horizontal, e 'siga com cuidado' quando inclinados. À noite, duas lâmpadas a gás (vermelha e verde) reforçavam essas indicações.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano e cidade foi instalado o primeiro semáforo da história?",
+          "opcoes": [
+            "1868, em Londres",
+            "1914, em Cleveland",
+            "1935, em São Paulo",
+            "1920, em Nova York"
+          ],
+          "resposta_correta": "1868, em Londres"
+        },
+        {
+          "pergunta": "Quem criou o primeiro semáforo, e em que área ele era especializado?",
+          "opcoes": [
+            "J.P. Knight, especializado em sinalização ferroviária",
+            "William Potts, especializado em eletrônica",
+            "James Hoge, especializado em arquitetura",
+            "Lester Wire, especializado em mecânica automotiva"
+          ],
+          "resposta_correta": "J.P. Knight, especializado em sinalização ferroviária"
+        },
+        {
+          "pergunta": "Em que sistema já existente o primeiro semáforo foi inspirado?",
+          "opcoes": [
+            "No sistema usado para controlar trens",
+            "No sistema de navegação marítima",
+            "No sistema de sinalização militar",
+            "No sistema de comunicação por telégrafo"
+          ],
+          "resposta_correta": "No sistema usado para controlar trens"
+        }
+      ]
+    },
+    {
+      "id": "transito-hist-02",
+      "titulo": "Por que o primeiro semáforo foi abandonado?",
+      "texto": "Apesar da inovação, o semáforo de Londres de 1868 teve vida curta. As lâmpadas a gás usadas para sinalização noturna sofreram um vazamento que resultou numa explosão, ferindo o policial responsável por operar o equipamento. Esse acidente levou ao abandono da ideia por várias décadas — o próximo avanço relevante na história dos semáforos só aconteceria já no início do século XX, do outro lado do Atlântico, nos Estados Unidos.",
+      "perguntas": [
+        {
+          "pergunta": "O que causou o abandono do primeiro semáforo de Londres?",
+          "opcoes": [
+            "Uma explosão causada por vazamento de gás, que feriu o operador",
+            "A falta de interesse do governo britânico",
+            "O alto custo de manutenção do equipamento",
+            "A invenção de uma tecnologia melhor no mesmo ano"
+          ],
+          "resposta_correta": "Uma explosão causada por vazamento de gás, que feriu o operador"
+        },
+        {
+          "pergunta": "Por quanto tempo, aproximadamente, a ideia do semáforo ficou abandonada após esse incidente?",
+          "opcoes": [
+            "Várias décadas",
+            "Apenas alguns meses",
+            "Uma semana",
+            "Nunca foi abandonada"
+          ],
+          "resposta_correta": "Várias décadas"
+        },
+        {
+          "pergunta": "Onde aconteceu o próximo avanço relevante na história do semáforo, segundo o texto?",
+          "opcoes": [
+            "Nos Estados Unidos",
+            "Na França",
+            "No Japão",
+            "Na Alemanha"
+          ],
+          "resposta_correta": "Nos Estados Unidos"
+        }
+      ]
+    },
+    {
+      "id": "transito-hist-03",
+      "titulo": "Curiosidade: a 'jaula de Wire'",
+      "texto": "Em 1912, o policial Lester Wire, da cidade de Salt Lake City, nos Estados Unidos, desenvolveu um dos primeiros protótipos de semáforo elétrico: uma caixa de madeira montada sobre um poste, com luzes vermelha e verde de cada lado, posicionada num cruzamento. Apesar de representar um avanço técnico em relação ao sistema manual anterior, o equipamento ainda precisava de um agente de trânsito operando manualmente as luzes, e acabou apelidado de forma pouco lisonjeira pela população da época, que não recebeu bem sua aparência.",
+      "perguntas": [
+        {
+          "pergunta": "Quem desenvolveu um dos primeiros protótipos de semáforo elétrico, em 1912?",
+          "opcoes": [
+            "Lester Wire",
+            "J.P. Knight",
+            "James Hoge",
+            "William Potts"
+          ],
+          "resposta_correta": "Lester Wire"
+        },
+        {
+          "pergunta": "Em que cidade americana esse protótipo de 1912 foi desenvolvido?",
+          "opcoes": [
+            "Salt Lake City",
+            "Cleveland",
+            "Nova York",
+            "Chicago"
+          ],
+          "resposta_correta": "Salt Lake City"
+        },
+        {
+          "pergunta": "O protótipo de 1912 ainda precisava de quê para funcionar, segundo o texto?",
+          "opcoes": [
+            "Um agente de trânsito operando manualmente as luzes",
+            "Conexão com a internet",
+            "Baterias solares",
+            "Um motorista sinalizando com a mão"
+          ],
+          "resposta_correta": "Um agente de trânsito operando manualmente as luzes"
+        }
+      ]
+    },
+    {
+      "id": "transito-hist-04",
+      "titulo": "Quando surgiu o primeiro semáforo elétrico totalmente automático?",
+      "texto": "O primeiro sistema de semáforo elétrico bem-sucedido e automático, sem depender de um operador humano constante, foi criado em 1914, na cidade de Cleveland, nos Estados Unidos, pelo engenheiro James Hoge. Esse sistema representou um salto importante em relação aos modelos anteriores, que ainda exigiam a presença constante de um agente controlando manualmente as luzes a cada mudança de sinal.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano e cidade surgiu o primeiro semáforo elétrico automático bem-sucedido?",
+          "opcoes": [
+            "1914, em Cleveland",
+            "1868, em Londres",
+            "1935, em São Paulo",
+            "1958, em Buenos Aires"
+          ],
+          "resposta_correta": "1914, em Cleveland"
+        },
+        {
+          "pergunta": "Quem foi o engenheiro responsável por esse sistema de 1914?",
+          "opcoes": [
+            "James Hoge",
+            "Lester Wire",
+            "J.P. Knight",
+            "William Potts"
+          ],
+          "resposta_correta": "James Hoge"
+        },
+        {
+          "pergunta": "Qual foi o principal avanço desse sistema em relação aos modelos anteriores?",
+          "opcoes": [
+            "Não exigia mais a presença constante de um agente operando manualmente",
+            "Foi o primeiro a usar a cor amarela",
+            "Foi o primeiro a ser instalado fora dos Estados Unidos",
+            "Foi o primeiro semáforo movido a energia solar"
+          ],
+          "resposta_correta": "Não exigia mais a presença constante de um agente operando manualmente"
+        }
+      ]
+    },
+    {
+      "id": "transito-hist-05",
+      "titulo": "De onde vem a terceira luz do semáforo, o amarelo?",
+      "texto": "O sistema de semáforo com as três cores que conhecemos hoje — vermelho, amarelo e verde — foi consolidado por volta de 1920, nos Estados Unidos, através do trabalho do agente William Potts. A adição da luz amarela cumpria uma função específica: servir como uma transição de aviso entre o sinal verde (siga) e o vermelho (pare), avisando os condutores de que deveriam reduzir a velocidade e se preparar para parar, evitando frenagens bruscas e repentinas.",
+      "perguntas": [
+        {
+          "pergunta": "Quem é associado à consolidação do sistema de semáforo com as três cores (vermelho, amarelo, verde), por volta de 1920?",
+          "opcoes": [
+            "William Potts",
+            "James Hoge",
+            "Lester Wire",
+            "J.P. Knight"
+          ],
+          "resposta_correta": "William Potts"
+        },
+        {
+          "pergunta": "Qual é a função da luz amarela no semáforo, segundo o texto?",
+          "opcoes": [
+            "Servir como aviso de transição entre o verde e o vermelho",
+            "Indicar que o semáforo está com defeito",
+            "Sinalizar apenas para pedestres",
+            "Substituir o vermelho à noite"
+          ],
+          "resposta_correta": "Servir como aviso de transição entre o verde e o vermelho"
+        },
+        {
+          "pergunta": "O que a luz amarela ajuda a evitar, segundo o texto?",
+          "opcoes": [
+            "Frenagens bruscas e repentinas",
+            "Excesso de velocidade em rodovias",
+            "Poluição sonora nas cidades",
+            "Congestionamento em horário de pico"
+          ],
+          "resposta_correta": "Frenagens bruscas e repentinas"
+        }
+      ]
+    },
+    {
+      "id": "transito-hist-06",
+      "titulo": "Quando o Brasil ganhou seu primeiro semáforo?",
+      "texto": "O primeiro semáforo instalado no Brasil entrou em funcionamento em 1935, na cidade de São Paulo, especificamente na região do Brás. Essa instalação aconteceu quase sete décadas depois do primeiro semáforo da história, em Londres (1868), refletindo o ritmo de crescimento da frota de veículos nas grandes cidades brasileiras ao longo da primeira metade do século XX, período em que o trânsito urbano passou a exigir soluções mais organizadas de controle de fluxo.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano e cidade foi instalado o primeiro semáforo do Brasil?",
+          "opcoes": [
+            "1935, em São Paulo",
+            "1958, no Rio de Janeiro",
+            "1920, em Salvador",
+            "1914, em Curitiba"
+          ],
+          "resposta_correta": "1935, em São Paulo"
+        },
+        {
+          "pergunta": "Em qual região específica de São Paulo esse primeiro semáforo foi instalado?",
+          "opcoes": [
+            "Brás",
+            "Vila Madalena",
+            "Moema",
+            "Liberdade"
+          ],
+          "resposta_correta": "Brás"
+        },
+        {
+          "pergunta": "Aproximadamente quantas décadas depois do primeiro semáforo de Londres (1868) o Brasil instalou o seu?",
+          "opcoes": [
+            "Quase sete décadas",
+            "Duas décadas",
+            "Uma década",
+            "Mais de um século"
+          ],
+          "resposta_correta": "Quase sete décadas"
+        }
+      ]
+    },
+    {
+      "id": "transito-hist-07",
+      "titulo": "O que é um semáforo inteligente?",
+      "texto": "Semáforos inteligentes são sistemas mais modernos que combinam o semáforo tradicional com sensores capazes de identificar, em tempo real, o volume de tráfego numa via. Diferente do semáforo tradicional, que segue ciclos de tempo pré-programados e fixos, o semáforo inteligente pode ajustar a duração de cada sinal dinamicamente, conforme a quantidade de veículos presente naquele momento — ajudando a reduzir o tempo de espera em situações de menor fluxo e a responder melhor a imprevistos, como acidentes ou eventos que alterem o trânsito da região.",
+      "perguntas": [
+        {
+          "pergunta": "O que diferencia um semáforo inteligente de um semáforo tradicional?",
+          "opcoes": [
+            "Ele ajusta a duração dos sinais dinamicamente, conforme o volume real de tráfego",
+            "Ele funciona sem nenhuma luz vermelha",
+            "Ele é controlado exclusivamente por satélite",
+            "Ele elimina totalmente a necessidade de sinalização"
+          ],
+          "resposta_correta": "Ele ajusta a duração dos sinais dinamicamente, conforme o volume real de tráfego"
+        },
+        {
+          "pergunta": "Como o semáforo tradicional costuma funcionar, em contraste com o inteligente?",
+          "opcoes": [
+            "Seguindo ciclos de tempo pré-programados e fixos",
+            "Sem nenhum ciclo definido",
+            "Apenas durante o período noturno",
+            "Somente em dias de chuva"
+          ],
+          "resposta_correta": "Seguindo ciclos de tempo pré-programados e fixos"
+        },
+        {
+          "pergunta": "Qual é um benefício do semáforo inteligente citado no texto?",
+          "opcoes": [
+            "Responder melhor a imprevistos, como acidentes ou eventos",
+            "Eliminar totalmente acidentes de trânsito",
+            "Reduzir o preço do combustível",
+            "Substituir completamente os agentes de trânsito"
+          ],
+          "resposta_correta": "Responder melhor a imprevistos, como acidentes ou eventos"
+        }
+      ]
+    },
+    {
+      "id": "transito-hist-08",
+      "titulo": "Curiosidade: de onde vem a palavra 'semáforo'?",
+      "texto": "A palavra 'semáforo' tem origem grega, formada pela junção de termos que remetem à ideia de 'portador de sinal'. O conceito de usar sinais visuais para comunicar informações à distância já existia antes da invenção aplicada ao trânsito de veículos — sistemas de sinalização similares foram usados historicamente, por exemplo, em contextos ferroviários e navais, antes de o termo e a tecnologia serem adaptados especificamente para organizar o tráfego de ruas e cruzamentos nas cidades.",
+      "perguntas": [
+        {
+          "pergunta": "Qual é a origem da palavra 'semáforo'?",
+          "opcoes": [
+            "Grega",
+            "Latina",
+            "Inglesa",
+            "Francesa"
+          ],
+          "resposta_correta": "Grega"
+        },
+        {
+          "pergunta": "A que ideia a origem da palavra 'semáforo' remete?",
+          "opcoes": [
+            "'Portador de sinal'",
+            "'Luz vermelha'",
+            "'Cruzamento seguro'",
+            "'Parar e seguir'"
+          ],
+          "resposta_correta": "'Portador de sinal'"
+        },
+        {
+          "pergunta": "Em que contextos sistemas de sinalização similares já eram usados antes de serem aplicados ao trânsito de veículos, segundo o texto?",
+          "opcoes": [
+            "Contextos ferroviários e navais",
+            "Apenas em competições esportivas",
+            "Somente em cerimônias religiosas",
+            "Exclusivamente em aeroportos"
+          ],
+          "resposta_correta": "Contextos ferroviários e navais"
+        }
+      ]
+    }
+  ]
+}

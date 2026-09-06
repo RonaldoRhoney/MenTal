@@ -2,7 +2,7 @@
 -- de conteúdo: "cápsula de texto + perguntas" (educação financeira/
 -- economia — nunca aconselhamento de investimento, ver
 -- FOUNDATION/POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md e o campo
--- `meta.principio` de cada arquivo fonte em V6/*.json).
+-- `meta.principio` de cada arquivo fonte em Mundo_dos_Valores/*.json).
 --
 -- Decisão de arquitetura: reaproveita 100% o Challenge normal (nunca
 -- cronometrado — não entra em nenhuma lista TIMED_*) em vez de criar
@@ -26,4 +26,4 @@ on conflict (id) do nothing;
 
 -- Conteúdo em si (159 perguntas) é carregado DEPOIS desta migração,
 -- via scripts/append_production_content.py (mesmo padrão de idiomas,
--- ver V5/README.md), a partir de backend/content/valores_*.json.
+-- ver Mundo_dos_Idiomas/README.md), a partir de backend/content/valores_*.json.

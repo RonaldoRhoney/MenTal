@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_do_transito",
+    "tema": "economia_e_transito",
+    "fase": "V7.0",
+    "numero_bloco": 4,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "principio": "Esclarecer conceitos de economia do transito de forma factual, sem alarmismo em relacao a numeros de acidentes (tratados apenas como estimativa de custo economico, sem detalhe grafico de vitimas), sem favorecer nenhuma politica publica ou empresa especifica.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md. Fatos verificados via pesquisa antes da redacao; valores monetarios de diferentes estudos apresentados como estimativas variaveis, nao como numero unico definitivo, dada a divergencia real entre fontes. Nenhuma reproducao literal de texto das fontes consultadas."
+  },
+  "capsulas": [
+    {
+      "id": "transito-econ-01",
+      "titulo": "Qual é o impacto econômico dos acidentes de trânsito no Brasil?",
+      "texto": "Estudos brasileiros sobre segurança viária estimam que os acidentes de trânsito geram um custo econômico expressivo ao país todos os anos, envolvendo gastos com saúde, perda de produtividade e outros impactos indiretos. Diferentes pesquisas, conduzidas em anos distintos, chegaram a valores que variam de dezenas a mais de cem bilhões de reais por ano, representando uma fração relevante do PIB nacional. Essas estimativas costumam considerar não apenas o custo direto de atendimento médico, mas também o valor da produção econômica que deixa de ser gerada por quem sofre lesões graves ou perde a vida no trânsito.",
+      "perguntas": [
+        {
+          "pergunta": "O que os estudos sobre segurança viária no Brasil costumam estimar em relação aos acidentes de trânsito?",
+          "opcoes": [
+            "Um custo econômico expressivo ao país todos os anos",
+            "Que os acidentes não geram nenhum custo mensurável",
+            "Que o custo é irrelevante em comparação ao PIB",
+            "Que apenas o governo federal arca com os custos"
+          ],
+          "resposta_correta": "Um custo econômico expressivo ao país todos os anos"
+        },
+        {
+          "pergunta": "Que tipos de custo essas estimativas costumam considerar, segundo o texto?",
+          "opcoes": [
+            "Gastos com saúde, perda de produtividade e outros impactos indiretos",
+            "Apenas o valor de multas aplicadas",
+            "Somente o custo de reparo dos veículos",
+            "Exclusivamente o preço do combustível"
+          ],
+          "resposta_correta": "Gastos com saúde, perda de produtividade e outros impactos indiretos"
+        },
+        {
+          "pergunta": "As estimativas de diferentes pesquisas sobre esse custo são sempre idênticas?",
+          "opcoes": [
+            "Não, variam entre pesquisas conduzidas em anos distintos",
+            "Sim, é sempre exatamente o mesmo valor",
+            "Sim, porque existe uma única pesquisa oficial",
+            "Não, mas a variação é sempre menor que 1%"
+          ],
+          "resposta_correta": "Não, variam entre pesquisas conduzidas em anos distintos"
+        }
+      ]
+    },
+    {
+      "id": "transito-econ-02",
+      "titulo": "Quanto custa o congestionamento nas grandes cidades?",
+      "texto": "Além do custo relacionado a acidentes, o tempo perdido em congestionamentos também representa um impacto econômico relevante. Estimativas apontam que os congestionamentos nas regiões metropolitanas de São Paulo e Rio de Janeiro, somados, geram um custo da ordem de dezenas de bilhões de reais por ano, considerando tanto a perda de produtividade (tempo que poderia ser usado em atividades produtivas) quanto o gasto adicional de combustível causado por veículos parados ou em baixa velocidade.",
+      "perguntas": [
+        {
+          "pergunta": "Além dos acidentes, que outro fator de trânsito também gera custo econômico relevante, segundo o texto?",
+          "opcoes": [
+            "O tempo perdido em congestionamentos",
+            "O número de semáforos instalados",
+            "A cor predominante dos veículos",
+            "O tamanho das vagas de estacionamento"
+          ],
+          "resposta_correta": "O tempo perdido em congestionamentos"
+        },
+        {
+          "pergunta": "Quais duas regiões metropolitanas são citadas no texto com custo relevante de congestionamento?",
+          "opcoes": [
+            "São Paulo e Rio de Janeiro",
+            "Belo Horizonte e Salvador",
+            "Curitiba e Porto Alegre",
+            "Brasília e Fortaleza"
+          ],
+          "resposta_correta": "São Paulo e Rio de Janeiro"
+        },
+        {
+          "pergunta": "Quais dois tipos de custo são considerados no cálculo do impacto dos congestionamentos, segundo o texto?",
+          "opcoes": [
+            "Perda de produtividade e gasto adicional de combustível",
+            "Custo de pedágio e custo de estacionamento",
+            "Imposto sobre veículos e seguro obrigatório",
+            "Manutenção de semáforos e sinalização"
+          ],
+          "resposta_correta": "Perda de produtividade e gasto adicional de combustível"
+        }
+      ]
+    },
+    {
+      "id": "transito-econ-03",
+      "titulo": "Por que o transporte rodoviário domina o transporte de cargas no Brasil?",
+      "texto": "O Brasil tem sua matriz de transporte de cargas fortemente concentrada no modal rodoviário, que responde por mais da metade de tudo que é transportado no país — em alguns setores, como alimentos e bebidas, essa dependência das estradas ultrapassa 90% do volume transportado. Isso acontece, em parte, por decisões históricas de investimento em infraestrutura ao longo do século XX, que priorizaram rodovias em detrimento de outros modais, como ferrovias e hidrovias, mais comuns em países de dimensão territorial parecida com a do Brasil.",
+      "perguntas": [
+        {
+          "pergunta": "Qual modal de transporte domina o transporte de cargas no Brasil?",
+          "opcoes": [
+            "Rodoviário",
+            "Ferroviário",
+            "Hidroviário",
+            "Aéreo"
+          ],
+          "resposta_correta": "Rodoviário"
+        },
+        {
+          "pergunta": "Em setores como alimentos e bebidas, que proporção do volume transportado depende de rodovias, segundo o texto?",
+          "opcoes": [
+            "Mais de 90%",
+            "Cerca de 10%",
+            "Exatamente 50%",
+            "Menos de 20%"
+          ],
+          "resposta_correta": "Mais de 90%"
+        },
+        {
+          "pergunta": "Por que essa concentração no modal rodoviário aconteceu, segundo o texto?",
+          "opcoes": [
+            "Por decisões históricas de investimento em infraestrutura ao longo do século XX",
+            "Porque outros modais foram proibidos por lei",
+            "Porque o Brasil não tem rios navegáveis",
+            "Porque ferrovias nunca existiram no país"
+          ],
+          "resposta_correta": "Por decisões históricas de investimento em infraestrutura ao longo do século XX"
+        }
+      ]
+    },
+    {
+      "id": "transito-econ-04",
+      "titulo": "Qual é o peso da indústria automotiva na economia brasileira?",
+      "texto": "A indústria automobilística tem peso significativo na economia do Brasil, respondendo por uma fatia relevante tanto do PIB industrial quanto do PIB total do país. Além da produção de veículos em si, esse setor movimenta uma cadeia extensa de fornecedores de peças, distribuidores, revendedoras e serviços associados, sendo um dos pilares do modelo de transporte majoritariamente rodoviário já discutido — quanto mais a economia depende de rodovias para se movimentar, maior tende a ser a relevância econômica da indústria que fabrica os veículos usados nesse transporte.",
+      "perguntas": [
+        {
+          "pergunta": "A indústria automobilística tem que tipo de peso na economia brasileira, segundo o texto?",
+          "opcoes": [
+            "Significativo, respondendo por fatia relevante do PIB industrial e total",
+            "Irrelevante, representando menos de 1% da economia",
+            "Peso apenas simbólico, sem relevância real",
+            "Peso exclusivamente regional, sem alcance nacional"
+          ],
+          "resposta_correta": "Significativo, respondendo por fatia relevante do PIB industrial e total"
+        },
+        {
+          "pergunta": "Além da produção de veículos, que outra cadeia esse setor movimenta, segundo o texto?",
+          "opcoes": [
+            "Fornecedores de peças, distribuidores, revendedoras e serviços associados",
+            "Apenas a produção de combustível",
+            "Somente a fabricação de pneus",
+            "Exclusivamente a exportação de matéria-prima"
+          ],
+          "resposta_correta": "Fornecedores de peças, distribuidores, revendedoras e serviços associados"
+        },
+        {
+          "pergunta": "Segundo o texto, a relevância da indústria automotiva está ligada a quê?",
+          "opcoes": [
+            "À dependência da economia em relação ao transporte rodoviário",
+            "Exclusivamente ao clima do Brasil",
+            "À proibição de importação de veículos",
+            "Ao tamanho da população urbana apenas"
+          ],
+          "resposta_correta": "À dependência da economia em relação ao transporte rodoviário"
+        }
+      ]
+    },
+    {
+      "id": "transito-econ-05",
+      "titulo": "Quantos empregos o setor de transporte gera no Brasil?",
+      "texto": "O setor de transporte é um gerador relevante de empregos formais no Brasil, incluindo motoristas profissionais, operadores logísticos e uma ampla cadeia de serviços de apoio. O transporte rodoviário de cargas, especificamente, costuma concentrar boa parte desses postos de trabalho, dada sua posição dominante na matriz de transporte do país. Apesar da relevância, o setor também enfrenta desafios recorrentes, como a dificuldade de atrair e reter motoristas profissionais qualificados, um problema discutido há anos entre empresas de logística e transporte.",
+      "perguntas": [
+        {
+          "pergunta": "O setor de transporte é um gerador relevante de quê no Brasil, segundo o texto?",
+          "opcoes": [
+            "Empregos formais",
+            "Impostos exclusivamente estaduais",
+            "Patentes de invenção",
+            "Vistos de trabalho internacional"
+          ],
+          "resposta_correta": "Empregos formais"
+        },
+        {
+          "pergunta": "Qual segmento específico do transporte costuma concentrar boa parte desses empregos?",
+          "opcoes": [
+            "Transporte rodoviário de cargas",
+            "Transporte aéreo internacional",
+            "Transporte fluvial de passageiros",
+            "Transporte ferroviário de longa distância"
+          ],
+          "resposta_correta": "Transporte rodoviário de cargas"
+        },
+        {
+          "pergunta": "Qual desafio recorrente o setor enfrenta, segundo o texto?",
+          "opcoes": [
+            "Dificuldade de atrair e reter motoristas profissionais qualificados",
+            "Excesso de candidatos para poucas vagas",
+            "Proibição de contratação de novos motoristas",
+            "Falta total de demanda por transporte"
+          ],
+          "resposta_correta": "Dificuldade de atrair e reter motoristas profissionais qualificados"
+        }
+      ]
+    },
+    {
+      "id": "transito-econ-06",
+      "titulo": "Como funciona o modelo de concessão de rodovias por pedágio?",
+      "texto": "No Brasil, parte da malha rodoviária é administrada por meio de concessões, em que uma empresa privada assume a responsabilidade por manter e operar determinado trecho de estrada, cobrando pedágio dos usuários em troca. Esse modelo busca viabilizar investimentos em manutenção e melhoria de rodovias sem depender exclusivamente de recursos públicos diretos. Um desafio observado nesse processo é que trechos mais rentáveis (com maior tráfego e retorno financeiro mais rápido) tendem a atrair mais interesse de concessão do que trechos menos movimentados, o que pode gerar desigualdade na qualidade da malha rodoviária entre diferentes regiões do país.",
+      "perguntas": [
+        {
+          "pergunta": "O que é uma concessão de rodovia por pedágio?",
+          "opcoes": [
+            "Uma empresa privada assume manutenção e operação de um trecho, cobrando pedágio em troca",
+            "Uma rodovia administrada exclusivamente pelo governo federal",
+            "Um imposto cobrado sobre a compra de veículos novos",
+            "Um tipo de seguro obrigatório para motoristas"
+          ],
+          "resposta_correta": "Uma empresa privada assume manutenção e operação de um trecho, cobrando pedágio em troca"
+        },
+        {
+          "pergunta": "Qual é o objetivo desse modelo de concessão, segundo o texto?",
+          "opcoes": [
+            "Viabilizar investimentos em manutenção e melhoria de rodovias sem depender só de recursos públicos",
+            "Eliminar totalmente o uso de rodovias no país",
+            "Reduzir o número de veículos em circulação",
+            "Aumentar exclusivamente a arrecadação de impostos federais"
+          ],
+          "resposta_correta": "Viabilizar investimentos em manutenção e melhoria de rodovias sem depender só de recursos públicos"
+        },
+        {
+          "pergunta": "Qual desafio esse modelo pode gerar, segundo o texto?",
+          "opcoes": [
+            "Desigualdade na qualidade da malha rodoviária entre regiões",
+            "Aumento imediato de acidentes em todas as rodovias",
+            "Fim total do transporte de cargas no país",
+            "Redução do preço dos veículos novos"
+          ],
+          "resposta_correta": "Desigualdade na qualidade da malha rodoviária entre regiões"
+        }
+      ]
+    },
+    {
+      "id": "transito-econ-07",
+      "titulo": "Como tecnologias de segurança veicular podem gerar economia?",
+      "texto": "Pesquisas na área de segurança viária têm estudado o potencial impacto econômico da adoção mais ampla de tecnologias de assistência ao condutor, conhecidas pela sigla em inglês ADAS (Advanced Driver Assistant Systems) — sistemas que ajudam a prevenir colisões, manter faixa ou frear automaticamente em situações de risco. A lógica econômica por trás desse tipo de estudo é direta: reduzir o número de acidentes através de tecnologia tende a reduzir, por consequência, os custos associados a eles (atendimento médico, perda de produtividade), gerando economia para o sistema de saúde e para a sociedade como um todo ao longo do tempo.",
+      "perguntas": [
+        {
+          "pergunta": "O que significa a sigla ADAS?",
+          "opcoes": [
+            "Advanced Driver Assistant Systems",
+            "Automatic Driving Access System",
+            "Advanced Data Analysis Software",
+            "Automated Vehicle Detection System"
+          ],
+          "resposta_correta": "Advanced Driver Assistant Systems"
+        },
+        {
+          "pergunta": "O que sistemas ADAS ajudam a fazer, segundo o texto?",
+          "opcoes": [
+            "Prevenir colisões, manter faixa ou frear automaticamente em situações de risco",
+            "Calcular automaticamente o valor do IPVA",
+            "Substituir totalmente a necessidade de CNH",
+            "Aumentar a velocidade máxima permitida"
+          ],
+          "resposta_correta": "Prevenir colisões, manter faixa ou frear automaticamente em situações de risco"
+        },
+        {
+          "pergunta": "Qual é a lógica econômica por trás do estudo dessas tecnologias, segundo o texto?",
+          "opcoes": [
+            "Menos acidentes tendem a reduzir custos de saúde e perda de produtividade",
+            "Essas tecnologias aumentam o preço dos veículos sem nenhum benefício",
+            "Elas eliminam totalmente a necessidade de seguro veicular",
+            "Elas servem apenas para fins de marketing das montadoras"
+          ],
+          "resposta_correta": "Menos acidentes tendem a reduzir custos de saúde e perda de produtividade"
+        }
+      ]
+    },
+    {
+      "id": "transito-econ-08",
+      "titulo": "Por que a diversificação da matriz de transporte poderia beneficiar a economia?",
+      "texto": "Especialistas em logística argumentam que diversificar a matriz de transporte brasileira — investindo mais em modais como ferroviário e hidroviário, hoje pouco utilizados em comparação ao rodoviário — poderia reduzir custos de transporte de mercadorias no país. Como o custo de transportar cargas por longas distâncias tende a ser menor em ferrovias e hidrovias do que em rodovias, essa mudança poderia, em tese, reduzir o preço final de produtos que dependem de transporte por grandes distâncias, beneficiando tanto empresas quanto consumidores.",
+      "perguntas": [
+        {
+          "pergunta": "O que especialistas em logística argumentam sobre a matriz de transporte do Brasil, segundo o texto?",
+          "opcoes": [
+            "Que diversificá-la, investindo mais em ferrovias e hidrovias, poderia reduzir custos",
+            "Que ela já está perfeitamente equilibrada e não precisa de mudanças",
+            "Que deveria depender ainda mais exclusivamente de rodovias",
+            "Que o transporte aéreo deveria substituir todos os outros modais"
+          ],
+          "resposta_correta": "Que diversificá-la, investindo mais em ferrovias e hidrovias, poderia reduzir custos"
+        },
+        {
+          "pergunta": "Por que o custo de transporte por ferrovias e hidrovias tende a ser menor em longas distâncias, segundo o texto?",
+          "opcoes": [
+            "Essa é uma característica observada desses modais em comparação ao rodoviário",
+            "Porque ferrovias e hidrovias não pagam nenhum tipo de manutenção",
+            "Porque esses modais não têm nenhum custo operacional",
+            "Porque o governo subsidia integralmente esses modais"
+          ],
+          "resposta_correta": "Essa é uma característica observada desses modais em comparação ao rodoviário"
+        },
+        {
+          "pergunta": "Quem poderia se beneficiar dessa diversificação da matriz de transporte, segundo o texto?",
+          "opcoes": [
+            "Tanto empresas quanto consumidores",
+            "Apenas o governo federal",
+            "Somente empresas de rodovias",
+            "Exclusivamente motoristas de aplicativo"
+          ],
+          "resposta_correta": "Tanto empresas quanto consumidores"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_do_transito",
+    "tema": "transportes_terrestres",
+    "fase": "V7.0",
+    "numero_bloco": 3,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "principio": "Esclarecer conceitos de mobilidade urbana e transporte coletivo/individual de forma factual, sem favorecer nenhuma cidade, partido ou politica publica especifica de forma tendenciosa.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md. Fatos verificados via pesquisa antes da redacao. Nenhuma reproducao literal de texto das fontes consultadas - todo conteudo reescrito com palavras proprias."
+  },
+  "capsulas": [
+    {
+      "id": "transito-transp-01",
+      "titulo": "O que é BRT (Bus Rapid Transit)?",
+      "texto": "BRT é a sigla em inglês para 'Bus Rapid Transit' (Transporte Rápido por Ônibus). É um sistema de transporte coletivo que utiliza ônibus circulando em corredores exclusivos, separados do tráfego comum de veículos, permitindo maior velocidade e previsibilidade nos deslocamentos. O conceito de BRT como conhecemos hoje foi implantado de forma pioneira em Curitiba, ainda na década de 1970, e posteriormente inspirou sistemas semelhantes em diversas cidades ao redor do mundo, incluindo grandes centros urbanos internacionais.",
+      "perguntas": [
+        {
+          "pergunta": "O que significa a sigla BRT?",
+          "opcoes": [
+            "Bus Rapid Transit",
+            "Basic Road Transport",
+            "Brazilian Rail Transit",
+            "Bike Route Transfer"
+          ],
+          "resposta_correta": "Bus Rapid Transit"
+        },
+        {
+          "pergunta": "O que caracteriza um sistema BRT?",
+          "opcoes": [
+            "Ônibus circulando em corredores exclusivos, separados do tráfego comum",
+            "Trens que circulam sobre trilhos elevados",
+            "Bicicletas compartilhadas em toda a cidade",
+            "Carros elétricos autônomos"
+          ],
+          "resposta_correta": "Ônibus circulando em corredores exclusivos, separados do tráfego comum"
+        },
+        {
+          "pergunta": "Em qual cidade brasileira o conceito de BRT foi implantado de forma pioneira, na década de 1970?",
+          "opcoes": [
+            "Curitiba",
+            "São Paulo",
+            "Rio de Janeiro",
+            "Belo Horizonte"
+          ],
+          "resposta_correta": "Curitiba"
+        }
+      ]
+    },
+    {
+      "id": "transito-transp-02",
+      "titulo": "Qual é a diferença entre metrô, trem e VLT?",
+      "texto": "Metrô, trem e VLT (Veículo Leve sobre Trilhos) são todos sistemas de transporte sobre trilhos, mas com diferenças importantes. O metrô costuma circular em túneis subterrâneos ou vias elevadas, totalmente separado do trânsito de veículos comuns, com grande capacidade de passageiros. O trem metropolitano geralmente circula em superfície, conectando regiões mais distantes dentro de uma cidade ou região metropolitana. Já o VLT é um sistema mais leve que o metrô tradicional, podendo circular tanto em vias próprias quanto compartilhando espaço com o tráfego urbano em alguns trechos, geralmente com custo de implantação menor que o metrô.",
+      "perguntas": [
+        {
+          "pergunta": "O que os três sistemas — metrô, trem e VLT — têm em comum?",
+          "opcoes": [
+            "Todos são sistemas de transporte sobre trilhos",
+            "Todos circulam exclusivamente debaixo da terra",
+            "Todos usam apenas energia solar",
+            "Todos foram criados no mesmo ano"
+          ],
+          "resposta_correta": "Todos são sistemas de transporte sobre trilhos"
+        },
+        {
+          "pergunta": "Como o metrô costuma circular, segundo o texto?",
+          "opcoes": [
+            "Em túneis subterrâneos ou vias elevadas, separado do trânsito comum",
+            "Sempre em superfície, misturado ao trânsito de carros",
+            "Apenas em áreas rurais",
+            "Somente durante a noite"
+          ],
+          "resposta_correta": "Em túneis subterrâneos ou vias elevadas, separado do trânsito comum"
+        },
+        {
+          "pergunta": "O que caracteriza o VLT em relação ao metrô tradicional, segundo o texto?",
+          "opcoes": [
+            "É mais leve e geralmente tem custo de implantação menor",
+            "É sempre mais caro de construir",
+            "Não pode circular em nenhuma via urbana",
+            "Transporta apenas cargas, não passageiros"
+          ],
+          "resposta_correta": "É mais leve e geralmente tem custo de implantação menor"
+        }
+      ]
+    },
+    {
+      "id": "transito-transp-03",
+      "titulo": "Por que Curitiba é referência mundial em mobilidade urbana?",
+      "texto": "Curitiba é frequentemente citada como um dos maiores exemplos de planejamento urbano da América Latina, reconhecida internacionalmente por integrar transporte público e crescimento da cidade de forma coordenada. Além do sistema BRT implantado nos anos 1970, a cidade investiu em integração tarifária (permitindo trocar de linha pagando uma única passagem) e no planejamento de ocupação urbana próxima aos corredores de transporte — tratando mobilidade não apenas como uma questão de trânsito, mas como parte de um planejamento urbano mais amplo, que envolve também habitação e comércio.",
+      "perguntas": [
+        {
+          "pergunta": "Por que Curitiba é reconhecida internacionalmente em mobilidade urbana, segundo o texto?",
+          "opcoes": [
+            "Por integrar transporte público e crescimento urbano de forma coordenada",
+            "Por ser a maior cidade do Brasil em população",
+            "Por não ter nenhum tipo de trânsito",
+            "Por proibir totalmente o uso de carros"
+          ],
+          "resposta_correta": "Por integrar transporte público e crescimento urbano de forma coordenada"
+        },
+        {
+          "pergunta": "O que é 'integração tarifária', mencionada no texto sobre Curitiba?",
+          "opcoes": [
+            "Poder trocar de linha de transporte pagando uma única passagem",
+            "Um desconto exclusivo para turistas",
+            "Uma taxa extra cobrada em horário de pico",
+            "Um imposto sobre veículos particulares"
+          ],
+          "resposta_correta": "Poder trocar de linha de transporte pagando uma única passagem"
+        },
+        {
+          "pergunta": "Segundo o texto, Curitiba trata mobilidade como parte de quê, além do trânsito em si?",
+          "opcoes": [
+            "Um planejamento urbano mais amplo, envolvendo habitação e comércio",
+            "Apenas da administração de multas de trânsito",
+            "Somente da construção de estacionamentos",
+            "Exclusivamente do turismo local"
+          ],
+          "resposta_correta": "Um planejamento urbano mais amplo, envolvendo habitação e comércio"
+        }
+      ]
+    },
+    {
+      "id": "transito-transp-04",
+      "titulo": "Por que sistemas sobre trilhos custam mais para construir do que o BRT?",
+      "texto": "Sistemas de transporte sobre trilhos, como metrô e VLT, costumam ser significativamente mais caros e demorados para construir do que sistemas de BRT. Segundo estimativas do setor, um quilômetro de BRT pode custar entre 20 e 100 vezes menos do que um quilômetro de metrô, dependendo do contexto. Além do custo, o tempo de construção também varia bastante: um corredor de BRT costuma levar de um a dois anos para ficar pronto, enquanto uma linha de VLT leva pelo menos três anos, e uma linha de metrô pode levar mais de dez anos até ser concluída.",
+      "perguntas": [
+        {
+          "pergunta": "Segundo estimativas do setor, quanto um quilômetro de BRT pode custar em comparação a um quilômetro de metrô?",
+          "opcoes": [
+            "Entre 20 e 100 vezes menos",
+            "Cerca de 2 vezes menos",
+            "O mesmo valor, sem diferença",
+            "Até 5 vezes mais caro"
+          ],
+          "resposta_correta": "Entre 20 e 100 vezes menos"
+        },
+        {
+          "pergunta": "Quanto tempo, aproximadamente, costuma levar a construção de um corredor de BRT?",
+          "opcoes": [
+            "De um a dois anos",
+            "Mais de dez anos",
+            "Cerca de um mês",
+            "Vinte anos"
+          ],
+          "resposta_correta": "De um a dois anos"
+        },
+        {
+          "pergunta": "Quanto tempo uma linha de metrô pode levar para ser concluída, segundo o texto?",
+          "opcoes": [
+            "Mais de dez anos",
+            "Menos de um ano",
+            "Exatamente dois anos",
+            "Seis meses"
+          ],
+          "resposta_correta": "Mais de dez anos"
+        }
+      ]
+    },
+    {
+      "id": "transito-transp-05",
+      "titulo": "Como o espaço da rua é usado de forma diferente por cada modo de transporte?",
+      "texto": "Um mesmo espaço de rua pode transportar quantidades muito diferentes de pessoas, dependendo do modo de transporte usado. Estudos de mobilidade urbana mostram que uma faixa de via com a mesma largura pode transportar muito mais pessoas por hora quando usada por ônibus em sistema BRT do que quando usada por carros particulares — e uma faixa de pedestres ou ciclovia também pode movimentar um número expressivo de pessoas em relação ao espaço físico ocupado. Essa comparação é usada por planejadores urbanos para argumentar a favor de investimento em transporte coletivo e modos não motorizados, como forma de aproveitar melhor um espaço viário que é, por natureza, limitado nas grandes cidades.",
+      "perguntas": [
+        {
+          "pergunta": "O que estudos de mobilidade urbana mostram sobre o uso do espaço da rua, segundo o texto?",
+          "opcoes": [
+            "Uma mesma faixa pode transportar quantidades muito diferentes de pessoas, dependendo do modo de transporte",
+            "Todos os modos de transporte usam exatamente a mesma quantidade de espaço por pessoa",
+            "Carros particulares sempre transportam mais pessoas por faixa do que ônibus",
+            "O espaço da rua nunca é um fator relevante para mobilidade"
+          ],
+          "resposta_correta": "Uma mesma faixa pode transportar quantidades muito diferentes de pessoas, dependendo do modo de transporte"
+        },
+        {
+          "pergunta": "Para que planejadores urbanos costumam usar esse tipo de comparação, segundo o texto?",
+          "opcoes": [
+            "Para argumentar a favor de investimento em transporte coletivo e modos não motorizados",
+            "Para justificar a construção de mais estacionamentos",
+            "Para reduzir o número de faixas de pedestres",
+            "Para aumentar o preço do combustível"
+          ],
+          "resposta_correta": "Para argumentar a favor de investimento em transporte coletivo e modos não motorizados"
+        },
+        {
+          "pergunta": "Por que essa comparação de espaço é relevante nas grandes cidades, segundo o texto?",
+          "opcoes": [
+            "Porque o espaço viário é, por natureza, limitado",
+            "Porque as cidades grandes não têm ruas suficientes",
+            "Porque apenas carros elétricos podem circular nelas",
+            "Porque o espaço viário é ilimitado e o problema é outro"
+          ],
+          "resposta_correta": "Porque o espaço viário é, por natureza, limitado"
+        }
+      ]
+    },
+    {
+      "id": "transito-transp-06",
+      "titulo": "O que aconteceu com o transporte no Rio de Janeiro por causa das Olimpíadas de 2016?",
+      "texto": "O VLT (Veículo Leve sobre Trilhos) do Rio de Janeiro começou a operar em 2016, no contexto dos Jogos Olímpicos realizados na cidade naquele ano. Grandes eventos internacionais, como Olimpíadas e Copas do Mundo, frequentemente servem como catalisadores para investimentos em infraestrutura de transporte urbano, já que exigem das cidades-sede uma capacidade ampliada de deslocar grande volume de pessoas em curto espaço de tempo — um padrão que se repete em diferentes países que sediam esse tipo de evento.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano o VLT do Rio de Janeiro começou a operar?",
+          "opcoes": [
+            "2016",
+            "2010",
+            "2020",
+            "2000"
+          ],
+          "resposta_correta": "2016"
+        },
+        {
+          "pergunta": "Em que contexto o VLT do Rio de Janeiro foi implantado?",
+          "opcoes": [
+            "Nos Jogos Olímpicos realizados na cidade",
+            "Em uma Copa do Mundo de futebol",
+            "Em um evento local sem repercussão internacional",
+            "Antes de qualquer evento esportivo importante"
+          ],
+          "resposta_correta": "Nos Jogos Olímpicos realizados na cidade"
+        },
+        {
+          "pergunta": "Segundo o texto, grandes eventos internacionais costumam servir como o quê para investimentos em transporte?",
+          "opcoes": [
+            "Catalisadores para investimentos em infraestrutura de transporte urbano",
+            "Motivos para reduzir investimentos em mobilidade",
+            "Eventos sem nenhuma relação com transporte público",
+            "Razões para fechar linhas de transporte já existentes"
+          ],
+          "resposta_correta": "Catalisadores para investimentos em infraestrutura de transporte urbano"
+        }
+      ]
+    },
+    {
+      "id": "transito-transp-07",
+      "titulo": "Por que o Brasil ainda tem uma grande defasagem em transporte coletivo?",
+      "texto": "Estudos sobre mobilidade urbana apontam que o Brasil precisaria de um volume expressivo de investimento para alcançar um padrão de transporte coletivo comparável ao de outras grandes cidades latino-americanas de referência, como Cidade do México e Santiago. Boa parte desse investimento necessário estaria concentrada na expansão de linhas de metrô, seguida por trens metropolitanos e sistemas de BRT. Quando o investimento em transporte coletivo é insuficiente, uma consequência observada é que mais pessoas passam a optar pelo transporte individual, o que tende a aumentar o tempo de deslocamento nas grandes cidades, especialmente em trajetos entre casa e trabalho.",
+      "perguntas": [
+        {
+          "pergunta": "Segundo estudos, a que padrão de transporte coletivo o Brasil precisaria chegar, comparativamente?",
+          "opcoes": [
+            "Ao de outras grandes cidades latino-americanas de referência",
+            "Ao de países com clima muito diferente do Brasil",
+            "A nenhum padrão específico, já que o Brasil já é referência mundial",
+            "Apenas ao padrão de cidades pequenas"
+          ],
+          "resposta_correta": "Ao de outras grandes cidades latino-americanas de referência"
+        },
+        {
+          "pergunta": "Em qual tipo de expansão estaria concentrada boa parte do investimento necessário, segundo o texto?",
+          "opcoes": [
+            "Expansão de linhas de metrô",
+            "Construção de novos aeroportos",
+            "Ampliação de rodovias exclusivamente",
+            "Construção de novos estádios"
+          ],
+          "resposta_correta": "Expansão de linhas de metrô"
+        },
+        {
+          "pergunta": "O que acontece, segundo o texto, quando o investimento em transporte coletivo é insuficiente?",
+          "opcoes": [
+            "Mais pessoas optam pelo transporte individual, aumentando o tempo de deslocamento",
+            "O tempo de deslocamento diminui automaticamente",
+            "As cidades passam a ter menos veículos circulando",
+            "O transporte coletivo se torna mais barato"
+          ],
+          "resposta_correta": "Mais pessoas optam pelo transporte individual, aumentando o tempo de deslocamento"
+        }
+      ]
+    },
+    {
+      "id": "transito-transp-08",
+      "titulo": "O que é mobilidade urbana sustentável?",
+      "texto": "Mobilidade urbana sustentável é um conceito que busca organizar o deslocamento de pessoas nas cidades priorizando modos de transporte mais eficientes em termos de espaço e menos poluentes — como transporte coletivo de qualidade, caminhada e uso de bicicleta — em vez de depender majoritariamente do transporte individual motorizado. A ideia central é que, como o espaço das cidades é limitado, cidades mais sustentáveis buscam formas de mover mais pessoas ocupando menos espaço viário e gerando menos impacto ambiental por pessoa transportada, sem depender exclusivamente da expansão constante de vias para carros.",
+      "perguntas": [
+        {
+          "pergunta": "O que é mobilidade urbana sustentável, segundo o texto?",
+          "opcoes": [
+            "Um conceito que prioriza modos de transporte mais eficientes e menos poluentes",
+            "Um tipo específico de combustível para carros",
+            "Uma lei que proíbe totalmente carros nas cidades",
+            "Um imposto cobrado sobre bicicletas"
+          ],
+          "resposta_correta": "Um conceito que prioriza modos de transporte mais eficientes e menos poluentes"
+        },
+        {
+          "pergunta": "Quais modos de transporte são citados como exemplos dentro desse conceito?",
+          "opcoes": [
+            "Transporte coletivo de qualidade, caminhada e bicicleta",
+            "Apenas aviões particulares",
+            "Somente caminhões de carga",
+            "Exclusivamente carros elétricos de luxo"
+          ],
+          "resposta_correta": "Transporte coletivo de qualidade, caminhada e bicicleta"
+        },
+        {
+          "pergunta": "Qual é a ideia central da mobilidade urbana sustentável, segundo o texto?",
+          "opcoes": [
+            "Mover mais pessoas ocupando menos espaço viário e gerando menos impacto ambiental",
+            "Aumentar ao máximo o número de carros nas ruas",
+            "Eliminar totalmente o transporte público",
+            "Reduzir a população das grandes cidades"
+          ],
+          "resposta_correta": "Mover mais pessoas ocupando menos espaço viário e gerando menos impacto ambiental"
+        }
+      ]
+    }
+  ]
+}
