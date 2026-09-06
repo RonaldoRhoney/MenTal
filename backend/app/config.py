@@ -235,6 +235,15 @@ LEARNING_PAUSE_MIN_READ_SECONDS = 3
 # desafio de atenção/velocidade de leitura só faz sentido cronometrado,
 # em qualquer nível, incluindo fácil.
 ALWAYS_TIMED_TERRITORIES = {"conhecimento", "cores", "curiosidade_relampago"}
+
+# V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_
+# TERRITORIES acima — "cápsula de texto + perguntas" exige NUNCA
+# cronometrado, mesmo se o client pedir mode=relampago (backend é a
+# única autoridade, nunca confia no client pra isso). Fonte do próprio
+# conteúdo curado: "NAO e Relampago, sem timer, sem penalidade de
+# velocidade" — ler um texto de economia contra o relógio contraria o
+# propósito de compreensão de leitura.
+NEVER_TIMED_TERRITORY_IDS = {"bolsa", "criptomoedas", "cenario_global", "financas_dia_a_dia"}
 # V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — o próprio doc descreve
 # a charada "no formato Relâmpago (timer curto, ~10 segundos)" como a
 # natureza do desafio, não um modo opcional (mesmo raciocínio de

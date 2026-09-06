@@ -54,7 +54,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     # (aprovado): os 5 territórios novos da V4 saem de Cultura Geral
     # (que ficou extenso demais) e ganham Mundo da Descoberta próprio —
     # pura reorganização de agrupamento, nunca afeta XP/progresso.
-    assert set(worlds.keys()) == {"linguagem", "mente_logica", "cultura_geral", "descoberta", "idiomas"}
+    assert set(worlds.keys()) == {"linguagem", "mente_logica", "cultura_geral", "descoberta", "idiomas", "valores"}
     assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas", "redacao"}
     assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento", "cores"}
     assert set(worlds["cultura_geral"]["territory_ids"]) == {
@@ -80,11 +80,15 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
         "frances_basico", "frances_intermediario", "frances_avancado",
     }
+    assert set(worlds["valores"]["territory_ids"]) == {
+        "bolsa", "criptomoedas", "cenario_global", "financas_dia_a_dia",
+    }
     assert worlds["linguagem"]["completed"] is False
     assert worlds["mente_logica"]["completed"] is False
     assert worlds["cultura_geral"]["completed"] is False
     assert worlds["descoberta"]["completed"] is False
     assert worlds["idiomas"]["completed"] is False
+    assert worlds["valores"]["completed"] is False
 
 
 def test_world_just_completed_fires_once_at_the_exact_last_territory(client, monkeypatch):

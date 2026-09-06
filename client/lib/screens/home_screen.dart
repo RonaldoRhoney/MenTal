@@ -1315,7 +1315,7 @@ class _TerritoryCard extends StatelessWidget {
         // do botão normal é redundante e confuso, já que os dois abrem
         // exatamente o mesmo formato (a única diferença real, um piso
         // de dificuldade mínima, é invisível pro jogador).
-        if (!kAlwaysTimedTerritoryIds.contains(territoryId)) ...[
+        if (!kAlwaysTimedTerritoryIds.contains(territoryId) && !kNeverTimedTerritoryIds.contains(territoryId)) ...[
           const SizedBox(height: 8),
           OutlinedButton(
             style: OutlinedButton.styleFrom(side: BorderSide(color: progressColor.withValues(alpha: 0.6))),

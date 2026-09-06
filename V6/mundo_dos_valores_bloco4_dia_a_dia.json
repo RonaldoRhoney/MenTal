@@ -1,0 +1,642 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_valores",
+    "tema": "controle_gastos_saude_financeira_educacao_inflacao_social",
+    "fase": "V6.0",
+    "numero_bloco": 4,
+    "formato": "capsula_texto_mais_perguntas (NAO e Relampago, sem timer, sem penalidade de velocidade)",
+    "principio": "Esclarecer conceitos de finanças pessoais e seus efeitos sociais, NUNCA prescrever quanto gastar/poupar, NUNCA definir 'liberdade financeira' de forma unica e prescritiva, tratar diferencas de impacto da inflacao entre classes de renda como fato economico estabelecido, nao como juizo de valor sobre nenhum grupo.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - nenhuma mencao a valor de renda especifico de qualquer pessoa real, apenas conceitos economicos gerais e ja publicos (BNCC, IPCA, cesta basica). Fatos sobre educacao financeira na BNCC verificados via pesquisa antes da redacao."
+  },
+  "capsulas": [
+    {
+      "id": "valores-diaadia-01",
+      "titulo": "O que é controle de gastos pessoais?",
+      "texto": "Controle de gastos pessoais é o hábito de acompanhar quanto dinheiro entra (renda) e quanto sai (despesas) na vida de uma pessoa, geralmente organizado por categoria — moradia, alimentação, transporte, lazer, entre outras. Esse acompanhamento pode ser feito de formas simples, como anotar gastos num caderno ou aplicativo, até formas mais elaboradas, como uma planilha detalhada. O objetivo central do controle de gastos não é restringir o consumo por si só, mas dar à pessoa uma visão clara de para onde o dinheiro está indo, o que é o primeiro passo para qualquer decisão financeira mais consciente.",
+      "perguntas": [
+        {
+          "pergunta": "O que é controle de gastos pessoais?",
+          "opcoes": [
+            "O hábito de acompanhar quanto dinheiro entra e sai, organizado por categoria",
+            "Um tipo de conta bancária exclusiva para gastos",
+            "Um imposto cobrado sobre despesas do mês",
+            "Um aplicativo obrigatório exigido pelo Banco Central"
+          ],
+          "resposta_correta": "O hábito de acompanhar quanto dinheiro entra e sai, organizado por categoria"
+        },
+        {
+          "pergunta": "Qual é o objetivo central do controle de gastos, segundo o texto?",
+          "opcoes": [
+            "Dar à pessoa uma visão clara de para onde o dinheiro está indo",
+            "Proibir qualquer tipo de gasto com lazer",
+            "Garantir isenção de impostos",
+            "Eliminar a necessidade de trabalhar"
+          ],
+          "resposta_correta": "Dar à pessoa uma visão clara de para onde o dinheiro está indo"
+        },
+        {
+          "pergunta": "De que formas o controle de gastos pode ser feito, segundo o texto?",
+          "opcoes": [
+            "Desde anotações simples em caderno/aplicativo até planilhas mais elaboradas",
+            "Apenas através de um contador profissional contratado",
+            "Somente por meio de um aplicativo do governo",
+            "Exclusivamente de forma mental, sem registro"
+          ],
+          "resposta_correta": "Desde anotações simples em caderno/aplicativo até planilhas mais elaboradas"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-02",
+      "titulo": "O que significa 'saúde financeira'?",
+      "texto": "Saúde financeira é uma expressão usada para descrever a situação geral das finanças de uma pessoa, de forma parecida com como se descreve a saúde física do corpo. Alguns indicadores comumente associados a esse conceito incluem: ter as contas em dia (sem dívidas em atraso), gastar menos do que se ganha, e ter algum tipo de reserva para imprevistos. Assim como a saúde física, a saúde financeira não é um estado fixo — ela pode melhorar ou piorar ao longo do tempo, dependendo de hábitos e também de fatores externos, como mudanças na renda ou despesas inesperadas.",
+      "perguntas": [
+        {
+          "pergunta": "O que é 'saúde financeira'?",
+          "opcoes": [
+            "Uma expressão que descreve a situação geral das finanças de uma pessoa",
+            "Um exame médico obrigatório para abrir conta bancária",
+            "Um seguro contra dívidas",
+            "Um tipo de imposto sobre a saúde"
+          ],
+          "resposta_correta": "Uma expressão que descreve a situação geral das finanças de uma pessoa"
+        },
+        {
+          "pergunta": "Cite um indicador comumente associado à saúde financeira, segundo o texto.",
+          "opcoes": [
+            "Ter as contas em dia, sem dívidas em atraso",
+            "Ter uma ação específica da B3",
+            "Ter uma criptomoeda em carteira",
+            "Morar em um imóvel próprio"
+          ],
+          "resposta_correta": "Ter as contas em dia, sem dívidas em atraso"
+        },
+        {
+          "pergunta": "A saúde financeira é um estado fixo, que nunca muda?",
+          "opcoes": [
+            "Não, pode melhorar ou piorar ao longo do tempo",
+            "Sim, é definida uma única vez na vida",
+            "Sim, é determinada exclusivamente pelo governo",
+            "Não, mas só pode piorar, nunca melhorar"
+          ],
+          "resposta_correta": "Não, pode melhorar ou piorar ao longo do tempo"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-03",
+      "titulo": "O que significa 'liberdade financeira'?",
+      "texto": "Liberdade financeira é uma expressão usada para descrever a situação em que uma pessoa tem recursos suficientes para cobrir suas despesas e necessidades sem depender exclusivamente de um único tipo de renda ativa (como um salário), tendo mais flexibilidade sobre suas escolhas de vida e trabalho. O conceito é usado de formas diferentes por pessoas diferentes — para alguns, significa não ter nenhuma dívida; para outros, significa ter renda passiva (proveniente de investimentos ou outras fontes) suficiente para cobrir os gastos básicos. Não existe uma definição única e universalmente aceita do termo, e alcançar esse objetivo depende de fatores muito variados para cada pessoa.",
+      "perguntas": [
+        {
+          "pergunta": "O que a expressão 'liberdade financeira' costuma descrever?",
+          "opcoes": [
+            "A situação de ter recursos suficientes sem depender exclusivamente de um único tipo de renda ativa",
+            "Um tipo específico de conta bancária isenta de impostos",
+            "Uma lei brasileira sobre finanças pessoais",
+            "Um certificado emitido pela CVM"
+          ],
+          "resposta_correta": "A situação de ter recursos suficientes sem depender exclusivamente de um único tipo de renda ativa"
+        },
+        {
+          "pergunta": "Existe uma definição única e universalmente aceita de 'liberdade financeira'?",
+          "opcoes": [
+            "Não, o conceito é usado de formas diferentes por pessoas diferentes",
+            "Sim, definida por lei federal",
+            "Sim, definida pelo Banco Central",
+            "Não, é um termo proibido de ser usado no Brasil"
+          ],
+          "resposta_correta": "Não, o conceito é usado de formas diferentes por pessoas diferentes"
+        },
+        {
+          "pergunta": "O que é 'renda passiva', mencionada no texto como associada por algumas pessoas à liberdade financeira?",
+          "opcoes": [
+            "Renda proveniente de investimentos ou outras fontes que não exigem trabalho ativo constante",
+            "Um tipo de salário fixo mensal",
+            "Um imposto sobre herança",
+            "Uma taxa cobrada pelo banco"
+          ],
+          "resposta_correta": "Renda proveniente de investimentos ou outras fontes que não exigem trabalho ativo constante"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-04",
+      "titulo": "Por que a educação financeira não é uma matéria isolada nas escolas do Brasil?",
+      "texto": "No Brasil, a educação financeira foi incluída na Base Nacional Comum Curricular (BNCC), documento que orienta o currículo escolar em todo o país, como um 'tema transversal' — ou seja, um assunto que deve aparecer integrado a outras matérias já existentes (como Matemática, Geografia e História), em vez de se tornar uma disciplina própria, com aula e professor específicos. Essa abordagem existe desde 2018, quando a BNCC foi aprovada. Mais recentemente, tramitou no Congresso Nacional um projeto de lei buscando reforçar essa presença no currículo, ainda mantendo o formato de tema transversal, e não de disciplina isolada. Essa é uma das razões estruturais pelas quais o assunto costuma aparecer de forma mais esporádica e dependente de cada escola, em vez de ter carga horária própria garantida.",
+      "perguntas": [
+        {
+          "pergunta": "Como a educação financeira foi incluída na BNCC (currículo escolar brasileiro)?",
+          "opcoes": [
+            "Como um 'tema transversal', integrado a outras matérias já existentes",
+            "Como uma disciplina isolada, com professor e aula próprios",
+            "Não foi incluída em nenhum documento oficial",
+            "Apenas como uma atividade extracurricular opcional"
+          ],
+          "resposta_correta": "Como um 'tema transversal', integrado a outras matérias já existentes"
+        },
+        {
+          "pergunta": "Desde quando a educação financeira está prevista na BNCC como tema transversal?",
+          "opcoes": [
+            "Desde 2018, quando a BNCC foi aprovada",
+            "Desde a década de 1990",
+            "Apenas a partir de 2024",
+            "Não está prevista até hoje"
+          ],
+          "resposta_correta": "Desde 2018, quando a BNCC foi aprovada"
+        },
+        {
+          "pergunta": "O fato de ser 'tema transversal', e não disciplina isolada, ajuda a explicar o quê, segundo o texto?",
+          "opcoes": [
+            "Por que o assunto aparece de forma mais esporádica, dependendo de cada escola",
+            "Por que o assunto é proibido nas escolas públicas",
+            "Por que apenas escolas particulares podem ensinar o tema",
+            "Por que o tema só pode ser ensinado na faculdade"
+          ],
+          "resposta_correta": "Por que o assunto aparece de forma mais esporádica, dependendo de cada escola"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-05",
+      "titulo": "A inflação afeta todo mundo da mesma forma?",
+      "texto": "Embora a inflação seja medida como uma média geral de aumento de preços (o IPCA, por exemplo), o efeito real dela no dia a dia varia bastante dependendo do padrão de consumo de cada família. Famílias com renda mais baixa costumam gastar uma proporção maior do que ganham em itens essenciais, como alimentação básica e transporte — categorias que, historicamente, já sofreram períodos de alta acima da média geral da inflação em determinados momentos. Já famílias com renda mais alta costumam ter uma parcela maior do orçamento em itens não-essenciais, o que pode significar mais margem para ajustar o consumo quando os preços sobem. Por isso, mesmo uma mesma taxa oficial de inflação pode ser sentida de forma bem diferente, dependendo da composição de gastos de cada família.",
+      "perguntas": [
+        {
+          "pergunta": "A inflação é sentida da mesma forma por todas as famílias, independente da renda?",
+          "opcoes": [
+            "Não, o efeito varia conforme o padrão de consumo de cada família",
+            "Sim, o impacto é sempre idêntico para todos",
+            "Sim, mas apenas para famílias de renda alta",
+            "Não, mas apenas em anos de eleição"
+          ],
+          "resposta_correta": "Não, o efeito varia conforme o padrão de consumo de cada família"
+        },
+        {
+          "pergunta": "Famílias com renda mais baixa costumam gastar uma proporção maior da renda em quê, segundo o texto?",
+          "opcoes": [
+            "Itens essenciais, como alimentação básica e transporte",
+            "Viagens internacionais",
+            "Investimentos em ações",
+            "Itens de luxo importados"
+          ],
+          "resposta_correta": "Itens essenciais, como alimentação básica e transporte"
+        },
+        {
+          "pergunta": "Por que uma mesma taxa oficial de inflação pode ser sentida de forma diferente entre famílias?",
+          "opcoes": [
+            "Por causa da diferença na composição de gastos de cada família",
+            "Porque o IPCA é calculado de forma diferente para cada estado",
+            "Porque a inflação só existe em algumas cidades",
+            "Porque cada banco define sua própria taxa de inflação"
+          ],
+          "resposta_correta": "Por causa da diferença na composição de gastos de cada família"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-06",
+      "titulo": "O que é a 'cesta básica' e por que ela é usada como referência?",
+      "texto": "A cesta básica é um conjunto de produtos considerados essenciais para a subsistência de uma pessoa por um mês, incluindo itens como arroz, feijão, carne, leite, entre outros. O valor da cesta básica é calculado periodicamente por diferentes instituições de pesquisa no Brasil, e costuma ser usado como uma referência prática para entender o custo de vida básico da população — sendo, inclusive, historicamente usado como parâmetro em discussões sobre o valor do salário mínimo. Diferenças no preço da cesta básica entre diferentes cidades e regiões do Brasil também ajudam a ilustrar como o custo de vida pode variar dentro do próprio país.",
+      "perguntas": [
+        {
+          "pergunta": "O que é a 'cesta básica'?",
+          "opcoes": [
+            "Um conjunto de produtos considerados essenciais para a subsistência de uma pessoa por um mês",
+            "Um tipo de conta bancária gratuita",
+            "Um imposto sobre produtos alimentícios",
+            "Um fundo de investimento em alimentos"
+          ],
+          "resposta_correta": "Um conjunto de produtos considerados essenciais para a subsistência de uma pessoa por um mês"
+        },
+        {
+          "pergunta": "Para que a cesta básica costuma servir como referência, segundo o texto?",
+          "opcoes": [
+            "Para entender o custo de vida básico da população, inclusive em discussões sobre o salário mínimo",
+            "Para calcular o valor do dólar",
+            "Para definir a taxa de juros do Banco Central",
+            "Para determinar o preço de ações na B3"
+          ],
+          "resposta_correta": "Para entender o custo de vida básico da população, inclusive em discussões sobre o salário mínimo"
+        },
+        {
+          "pergunta": "O preço da cesta básica é igual em todas as cidades do Brasil?",
+          "opcoes": [
+            "Não, varia entre diferentes cidades e regiões",
+            "Sim, é um valor único e fixo em todo o país",
+            "Sim, definido por lei federal, sem variação",
+            "Não, mas só varia entre capitais e não entre outras cidades"
+          ],
+          "resposta_correta": "Não, varia entre diferentes cidades e regiões"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-07",
+      "titulo": "O que é planejamento financeiro de curto, médio e longo prazo?",
+      "texto": "Planejamento financeiro é a prática de organizar objetivos financeiros de acordo com o tempo necessário para alcançá-los. Objetivos de curto prazo costumam ser alcançados em até um ano, como quitar uma dívida pequena ou guardar dinheiro para uma viagem próxima. Objetivos de médio prazo costumam levar entre um e cinco anos, como trocar de carro ou dar entrada num imóvel. Já objetivos de longo prazo levam mais de cinco anos, como planejar a aposentadoria. Organizar metas dessa forma ajuda a pessoa a entender que estratégias e prazos diferentes exigem abordagens diferentes, em vez de tratar todo objetivo financeiro da mesma maneira.",
+      "perguntas": [
+        {
+          "pergunta": "O que é planejamento financeiro, segundo o texto?",
+          "opcoes": [
+            "A prática de organizar objetivos financeiros de acordo com o tempo necessário para alcançá-los",
+            "Um documento exigido pela Receita Federal",
+            "Um tipo de seguro obrigatório",
+            "Uma taxa cobrada por bancos em qualquer transação"
+          ],
+          "resposta_correta": "A prática de organizar objetivos financeiros de acordo com o tempo necessário para alcançá-los"
+        },
+        {
+          "pergunta": "Um objetivo de curto prazo costuma ser alcançado em qual período, segundo o texto?",
+          "opcoes": [
+            "Até um ano",
+            "Entre um e cinco anos",
+            "Mais de cinco anos",
+            "Mais de vinte anos"
+          ],
+          "resposta_correta": "Até um ano"
+        },
+        {
+          "pergunta": "Qual exemplo o texto dá para um objetivo de longo prazo?",
+          "opcoes": [
+            "Planejar a aposentadoria",
+            "Guardar dinheiro para uma viagem próxima",
+            "Quitar uma dívida pequena",
+            "Trocar de celular"
+          ],
+          "resposta_correta": "Planejar a aposentadoria"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-08",
+      "titulo": "O Réis: a moeda que durou mais tempo no Brasil",
+      "texto": "O Réis foi a moeda oficial do Brasil por mais tempo na história do país, circulando desde o período colonial até 1942 — mais de dois séculos. O nome tem origem em Portugal, e passou a ser usado no Brasil como consequência da colonização portuguesa. Ao longo do tempo, por causa de sucessivas desvalorizações, tornou-se comum falar em 'Mil-Réis', já que valores menores perderam relevância prática no dia a dia das transações. O Réis foi finalmente substituído em 1942, dando lugar à primeira de várias trocas de moeda que o Brasil ainda viveria ao longo do século XX.",
+      "perguntas": [
+        {
+          "pergunta": "Por quanto tempo, aproximadamente, o Réis foi a moeda oficial do Brasil?",
+          "opcoes": [
+            "Mais de dois séculos",
+            "Cerca de 10 anos",
+            "Apenas durante o período colonial inicial",
+            "Menos de 50 anos"
+          ],
+          "resposta_correta": "Mais de dois séculos"
+        },
+        {
+          "pergunta": "De onde vem a origem do nome 'Réis'?",
+          "opcoes": [
+            "De Portugal, como consequência da colonização portuguesa",
+            "De uma palavra indígena brasileira",
+            "De uma sigla criada pelo Banco do Brasil",
+            "Do nome de um imperador brasileiro"
+          ],
+          "resposta_correta": "De Portugal, como consequência da colonização portuguesa"
+        },
+        {
+          "pergunta": "Em que ano o Réis foi substituído no Brasil?",
+          "opcoes": [
+            "1942",
+            "1889",
+            "1822",
+            "1994"
+          ],
+          "resposta_correta": "1942"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-09",
+      "titulo": "O Cruzeiro: a primeira grande troca de moeda do Brasil moderno",
+      "texto": "Em 1942, durante o governo de Getúlio Vargas, o Brasil adotou o Cruzeiro como nova moeda oficial, substituindo o Réis. Essa troca representou o primeiro 'corte de zeros' da história monetária do país — mil réis passaram a valer um cruzeiro. O Cruzeiro teve, ao longo das décadas seguintes, mais de uma versão: existiu um primeiro período (1942 a 1967), depois deu lugar a outras moedas de transição, e chegou a retornar novamente em outros momentos da história econômica brasileira, sempre em meio a tentativas de conter a inflação.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano o Cruzeiro foi adotado como moeda oficial do Brasil pela primeira vez?",
+          "opcoes": [
+            "1942",
+            "1930",
+            "1960",
+            "1970"
+          ],
+          "resposta_correta": "1942"
+        },
+        {
+          "pergunta": "Durante o governo de qual presidente o Cruzeiro foi criado?",
+          "opcoes": [
+            "Getúlio Vargas",
+            "Juscelino Kubitschek",
+            "Getúlio Vargas e João Goulart juntos",
+            "Fernando Collor"
+          ],
+          "resposta_correta": "Getúlio Vargas"
+        },
+        {
+          "pergunta": "O que aconteceu na conversão de Réis para Cruzeiro em 1942?",
+          "opcoes": [
+            "Mil réis passaram a valer um cruzeiro (corte de zeros)",
+            "Um cruzeiro passou a valer mil réis a mais",
+            "Não houve nenhuma mudança no valor, só no nome",
+            "A moeda dobrou de valor instantaneamente"
+          ],
+          "resposta_correta": "Mil réis passaram a valer um cruzeiro (corte de zeros)"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-10",
+      "titulo": "Por que o Brasil trocou de moeda tantas vezes?",
+      "texto": "Entre 1942 e a criação do Real, em 1994, o Brasil já havia mudado de moeda oito vezes — um número alto quando comparado à maioria dos países. Esse padrão de trocas frequentes esteve quase sempre ligado a períodos de inflação muito elevada, especialmente intensos nas décadas de 1980 e início de 1990. Trocar o nome da moeda, geralmente cortando alguns zeros dos valores, era uma forma de tentar simplificar cálculos e, em alguns casos, sinalizar o início de um novo esforço para conter a alta de preços — embora, historicamente, o problema de fundo (como gastos públicos e outros fatores estruturais da economia) frequentemente continuasse existindo, mesmo após a moeda ser trocada.",
+      "perguntas": [
+        {
+          "pergunta": "Quantas vezes, aproximadamente, o Brasil trocou de moeda entre 1942 e a criação do Real, em 1994?",
+          "opcoes": [
+            "Oito vezes",
+            "Duas vezes",
+            "Quinze vezes",
+            "Uma vez"
+          ],
+          "resposta_correta": "Oito vezes"
+        },
+        {
+          "pergunta": "A que período o padrão de trocas frequentes de moeda esteve mais associado?",
+          "opcoes": [
+            "Períodos de inflação muito elevada, especialmente nas décadas de 1980 e início de 1990",
+            "Períodos de baixa inflação e estabilidade total",
+            "Apenas a mudanças de governo, sem relação com inflação",
+            "Apenas ao período colonial brasileiro"
+          ],
+          "resposta_correta": "Períodos de inflação muito elevada, especialmente nas décadas de 1980 e início de 1990"
+        },
+        {
+          "pergunta": "Trocar de moeda resolvia sozinho o problema estrutural de inflação, segundo o texto?",
+          "opcoes": [
+            "Não, o problema de fundo frequentemente continuava existindo mesmo após a troca",
+            "Sim, sempre resolvia definitivamente o problema",
+            "Sim, mas apenas na primeira vez que aconteceu",
+            "Não, porque trocar de moeda era proibido por lei"
+          ],
+          "resposta_correta": "Não, o problema de fundo frequentemente continuava existindo mesmo após a troca"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-11",
+      "titulo": "O Cruzado e o Cruzado Novo: a era dos 'Planos Econômicos'",
+      "texto": "Em 1986, durante o governo de José Sarney, o Cruzeiro foi substituído pelo Cruzado, no contexto de um plano econômico que ficou conhecido como Plano Cruzado — uma tentativa de conter a inflação através de medidas como congelamento de preços. Poucos anos depois, em 1989, diante da inflação ainda elevada, uma nova moeda foi criada: o Cruzado Novo, novamente com corte de zeros em relação à moeda anterior. Esse período da história econômica brasileira ficou marcado por uma sucessão de planos econômicos, cada um com nome próprio, tentando conter uma inflação que se mostrava persistente.",
+      "perguntas": [
+        {
+          "pergunta": "Durante o governo de qual presidente o Cruzado foi criado, em 1986?",
+          "opcoes": [
+            "José Sarney",
+            "Fernando Collor",
+            "Itamar Franco",
+            "Fernando Henrique Cardoso"
+          ],
+          "resposta_correta": "José Sarney"
+        },
+        {
+          "pergunta": "Como ficou conhecido o plano econômico que criou o Cruzado?",
+          "opcoes": [
+            "Plano Cruzado",
+            "Plano Real",
+            "Plano Collor",
+            "Plano Verão"
+          ],
+          "resposta_correta": "Plano Cruzado"
+        },
+        {
+          "pergunta": "Em que ano o Cruzado Novo foi criado, substituindo o Cruzado?",
+          "opcoes": [
+            "1989",
+            "1986",
+            "1994",
+            "1990"
+          ],
+          "resposta_correta": "1989"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-12",
+      "titulo": "O Cruzeiro Real: a última moeda antes do Real",
+      "texto": "Em 1993, durante o governo de Itamar Franco, o Brasil adotou o Cruzeiro Real como moeda oficial, num momento em que a inflação do país já era extremamente elevada — período que ficou conhecido como um dos picos de hiperinflação na história econômica brasileira. O Cruzeiro Real teve vida curta: durou pouco mais de um ano, servindo como uma das últimas etapas de transição antes da chegada do Real, em 1994. Fernando Henrique Cardoso, então Ministro da Fazenda, teve papel central na formulação do plano que levaria à criação do Real.",
+      "perguntas": [
+        {
+          "pergunta": "Durante o governo de qual presidente o Cruzeiro Real foi adotado, em 1993?",
+          "opcoes": [
+            "Itamar Franco",
+            "José Sarney",
+            "Fernando Collor",
+            "Fernando Henrique Cardoso"
+          ],
+          "resposta_correta": "Itamar Franco"
+        },
+        {
+          "pergunta": "O período em que o Cruzeiro Real foi criado é lembrado por quê, segundo o texto?",
+          "opcoes": [
+            "Por ser um dos picos de hiperinflação na história econômica brasileira",
+            "Por ser um período de total estabilidade econômica",
+            "Por não ter nenhuma relação com inflação",
+            "Por ser o único período sem nenhuma crise no Brasil"
+          ],
+          "resposta_correta": "Por ser um dos picos de hiperinflação na história econômica brasileira"
+        },
+        {
+          "pergunta": "Quem teve papel central, como Ministro da Fazenda, na formulação do plano que levou à criação do Real?",
+          "opcoes": [
+            "Fernando Henrique Cardoso",
+            "Itamar Franco",
+            "José Sarney",
+            "Getúlio Vargas"
+          ],
+          "resposta_correta": "Fernando Henrique Cardoso"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-13",
+      "titulo": "O Real: a moeda que trouxe estabilidade",
+      "texto": "O Real foi introduzido em 1994, substituindo o Cruzeiro Real, e é a moeda oficial do Brasil até hoje — a mais duradoura desde o Cruzeiro de 1942. Antes da introdução física da nova moeda, foi criada uma unidade de referência chamada URV (Unidade Real de Valor), usada por um período de transição para ajudar a reorganizar preços e salários antes da mudança definitiva. Diferente das trocas de moeda anteriores, o Plano Real, do qual a nova moeda fez parte, é amplamente reconhecido por ter conseguido controlar a inflação de forma mais duradoura, marcando o fim da era de trocas frequentes de moeda no Brasil.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano o Real foi introduzido como moeda oficial do Brasil?",
+          "opcoes": [
+            "1994",
+            "1993",
+            "2000",
+            "1989"
+          ],
+          "resposta_correta": "1994"
+        },
+        {
+          "pergunta": "O que era a URV, usada antes da introdução física do Real?",
+          "opcoes": [
+            "Uma unidade de referência usada num período de transição para reorganizar preços e salários",
+            "Uma criptomoeda criada pelo governo brasileiro",
+            "Um tipo de imposto federal",
+            "Um banco público criado em 1994"
+          ],
+          "resposta_correta": "Uma unidade de referência usada num período de transição para reorganizar preços e salários"
+        },
+        {
+          "pergunta": "O que o Plano Real é amplamente reconhecido por ter conseguido fazer, segundo o texto?",
+          "opcoes": [
+            "Controlar a inflação de forma mais duradoura que os planos anteriores",
+            "Eliminar totalmente qualquer imposto no Brasil",
+            "Criar a primeira moeda digital do mundo",
+            "Tornar o Brasil a maior economia do mundo"
+          ],
+          "resposta_correta": "Controlar a inflação de forma mais duradoura que os planos anteriores"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-14",
+      "titulo": "O Cruzeiro Novo (1967): o segundo corte de zeros",
+      "texto": "Em 1967, o Cruzeiro (criado em 1942) foi substituído pelo Cruzeiro Novo, num novo corte de três zeros — mil cruzeiros antigos passaram a valer um cruzeiro novo. Assim como a troca de 1942, essa mudança buscava simplificar cálculos numa economia cujos preços já haviam subido bastante ao longo das duas décadas anteriores. Poucos anos depois, em 1970, o nome voltou a ser simplesmente 'Cruzeiro' (sem o 'novo'), mantendo o mesmo valor — uma mudança mais de nome do que de fato econômico naquele momento específico.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano o Cruzeiro Novo substituiu o Cruzeiro original?",
+          "opcoes": [
+            "1967",
+            "1942",
+            "1986",
+            "1994"
+          ],
+          "resposta_correta": "1967"
+        },
+        {
+          "pergunta": "O que aconteceu na conversão de Cruzeiro para Cruzeiro Novo?",
+          "opcoes": [
+            "Mil cruzeiros antigos passaram a valer um cruzeiro novo (corte de três zeros)",
+            "O valor da moeda dobrou instantaneamente",
+            "Não houve nenhuma alteração de valor",
+            "A moeda foi extinta sem substituta"
+          ],
+          "resposta_correta": "Mil cruzeiros antigos passaram a valer um cruzeiro novo (corte de três zeros)"
+        },
+        {
+          "pergunta": "O que aconteceu em 1970 com o nome da moeda?",
+          "opcoes": [
+            "Voltou a ser chamada simplesmente de 'Cruzeiro', mantendo o mesmo valor",
+            "Foi criado o Cruzado pela primeira vez",
+            "O Brasil adotou o dólar como moeda oficial",
+            "Surgiu o Real pela primeira vez"
+          ],
+          "resposta_correta": "Voltou a ser chamada simplesmente de 'Cruzeiro', mantendo o mesmo valor"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-15",
+      "titulo": "Qual foi o impacto dessas trocas de moeda na poupança das famílias?",
+      "texto": "Um dos impactos mais sentidos pela população brasileira, durante o longo período de trocas frequentes de moeda entre 1942 e 1994, foi a corrosão do valor de dinheiro guardado. Como a inflação elevada reduzia rapidamente o poder de compra da moeda vigente, famílias que guardavam dinheiro por período mais longo viam esse valor perder força de forma acelerada — um fenômeno que, historicamente, gerou desconfiança generalizada em relação à moeda nacional e incentivou práticas como converter economias para moeda estrangeira (como o dólar) ou bens físicos, na tentativa de preservar valor diante da inflação.",
+      "perguntas": [
+        {
+          "pergunta": "Qual foi um dos impactos mais sentidos pela população durante o período de trocas frequentes de moeda?",
+          "opcoes": [
+            "A corrosão do valor de dinheiro guardado, por causa da inflação elevada",
+            "O aumento imediato de todos os salários",
+            "A eliminação total dos impostos",
+            "A criação automática de novos empregos"
+          ],
+          "resposta_correta": "A corrosão do valor de dinheiro guardado, por causa da inflação elevada"
+        },
+        {
+          "pergunta": "O que a inflação elevada fazia com o poder de compra da moeda guardada por mais tempo?",
+          "opcoes": [
+            "Reduzia rapidamente esse poder de compra",
+            "Aumentava esse poder de compra com o tempo",
+            "Não tinha nenhum efeito sobre isso",
+            "Convertia automaticamente em ouro"
+          ],
+          "resposta_correta": "Reduzia rapidamente esse poder de compra"
+        },
+        {
+          "pergunta": "Que tipo de prática esse cenário histórico incentivou, segundo o texto?",
+          "opcoes": [
+            "Converter economias para moeda estrangeira ou bens físicos",
+            "Guardar dinheiro exclusivamente em espécie por décadas",
+            "Investir apenas em ações da B3",
+            "Pagar todos os impostos antecipadamente"
+          ],
+          "resposta_correta": "Converter economias para moeda estrangeira ou bens físicos"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-16",
+      "titulo": "Qual foi o impacto da estabilidade trazida pelo Real na vida cotidiana?",
+      "texto": "Após a introdução do Real, em 1994, o Brasil viveu uma mudança significativa na experiência cotidiana relacionada a preços e planejamento financeiro. Antes do Real, era comum que preços mudassem com grande frequência, dificultando o planejamento de compras e orçamentos familiares. Com a maior estabilidade trazida pelo Plano Real, tornou-se mais viável para famílias e empresas planejar gastos e investimentos a médio e longo prazo, algo que era muito mais difícil durante os períodos de inflação descontrolada das décadas anteriores. Essa mudança é frequentemente citada como um dos fatores que ajudaram a reorganizar a economia brasileira a partir de meados da década de 1990.",
+      "perguntas": [
+        {
+          "pergunta": "Como era comum que os preços se comportassem antes do Plano Real?",
+          "opcoes": [
+            "Mudavam com grande frequência, dificultando o planejamento de orçamentos",
+            "Permaneciam completamente fixos por décadas",
+            "Só mudavam uma vez por ano, em janeiro",
+            "Eram definidos exclusivamente pelo governo federal"
+          ],
+          "resposta_correta": "Mudavam com grande frequência, dificultando o planejamento de orçamentos"
+        },
+        {
+          "pergunta": "O que a maior estabilidade trazida pelo Real tornou mais viável para famílias e empresas?",
+          "opcoes": [
+            "Planejar gastos e investimentos a médio e longo prazo",
+            "Eliminar totalmente a necessidade de trabalhar",
+            "Pagar impostos apenas uma vez na vida",
+            "Comprar imóveis sem nenhum tipo de financiamento"
+          ],
+          "resposta_correta": "Planejar gastos e investimentos a médio e longo prazo"
+        },
+        {
+          "pergunta": "A partir de que década aproximadamente essa reorganização da economia brasileira é frequentemente associada?",
+          "opcoes": [
+            "Meados da década de 1990",
+            "Início da década de 1960",
+            "Final da década de 2000",
+            "Início do século XIX"
+          ],
+          "resposta_correta": "Meados da década de 1990"
+        }
+      ]
+    },
+    {
+      "id": "valores-diaadia-17",
+      "titulo": "Linha do tempo: as moedas do Brasil, do Réis ao Real",
+      "texto": "Resumindo a trajetória monetária do Brasil: Réis (período colonial até 1942), Cruzeiro (1942-1967), Cruzeiro Novo (1967-1970), Cruzeiro novamente (1970-1986), Cruzado (1986-1989), Cruzado Novo (1989-1990), Cruzeiro mais uma vez (1990-1993), Cruzeiro Real (1993-1994), e finalmente o Real, a partir de 1994, moeda oficial até os dias de hoje. Essa sequência de nove nomes diferentes ao longo de pouco mais de três séculos (a maior parte da mudança concentrada em pouco mais de 50 anos, entre 1942 e 1994) é um retrato direto de como a instabilidade econômica se refletiu, de forma muito concreta, no próprio dinheiro que os brasileiros usavam no dia a dia.",
+      "perguntas": [
+        {
+          "pergunta": "Quantos nomes diferentes de moeda o Brasil teve, contando desde o Réis até o Real, segundo o texto?",
+          "opcoes": [
+            "Nove",
+            "Três",
+            "Cinco",
+            "Vinte"
+          ],
+          "resposta_correta": "Nove"
+        },
+        {
+          "pergunta": "Em que período a maior parte dessas trocas de moeda se concentrou?",
+          "opcoes": [
+            "Entre 1942 e 1994",
+            "Entre 1500 e 1700",
+            "Entre 2000 e 2020",
+            "Entre 1822 e 1889"
+          ],
+          "resposta_correta": "Entre 1942 e 1994"
+        },
+        {
+          "pergunta": "O que essa sequência de trocas de moeda retrata, segundo o texto?",
+          "opcoes": [
+            "Como a instabilidade econômica se refletiu diretamente no dinheiro usado no dia a dia",
+            "Que o Brasil sempre teve a economia mais estável do mundo",
+            "Que o Brasil nunca enfrentou nenhum período de inflação",
+            "Que a moeda brasileira nunca mudou de nome"
+          ],
+          "resposta_correta": "Como a instabilidade econômica se refletiu diretamente no dinheiro usado no dia a dia"
+        }
+      ]
+    }
+  ]
+}

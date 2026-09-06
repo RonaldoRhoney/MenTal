@@ -56,6 +56,25 @@ class _ConhecimentoFakeApiClient extends ApiClient {
   }
 }
 
+/// V6 — Mundo dos Valores (05/09/2026): "cápsula de texto + perguntas",
+/// nunca cronometrado.
+class _ValoresFakeApiClient extends ApiClient {
+  _ValoresFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+    return {
+      'challenge_id': 'fake-challenge-id-valores',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': 'O que é a B3?',
+      'options': ['A bolsa de valores oficial do Brasil', 'Um banco público', 'Uma empresa privada', 'Um imposto'],
+      'hints_available': 2,
+      'reading_passage': 'A B3 é a bolsa de valores oficial do Brasil, criada em 2017.',
+    };
+  }
+}
+
 /// Simula um desafio do território "textos" (V2 item 3) — parágrafo-base
 /// bem mais longo que qualquer enunciado dos territórios anteriores, com
 /// múltipla escolha, para provar que a tela não estoura (RenderFlex
@@ -465,6 +484,36 @@ void main() {
       // TextField digitado nem o botão "Confirmar resposta" separado.
       expect(find.byType(TextField), findsNothing);
       expect(find.widgetWithText(FilledButton, 'Confirmar resposta'), findsNothing);
+    },
+  );
+
+  testWidgets(
+    'Mundo dos Valores mostra o reading_passage ANTES da pergunta, nunca cronometrado (05/09/2026)',
+    (tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: ChallengeScreen(
+            client: _ValoresFakeApiClient(),
+            territoryId: 'bolsa',
+            territoryLabel: 'Bolsa e Investimentos',
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.textContaining('A B3 é a bolsa de valores oficial do Brasil'), findsOneWidget);
+      expect(find.text('O que é a B3?'), findsOneWidget);
+      // Nunca cronometrado: usa RadioListTile + botão "Confirmar
+      // resposta" separado, nunca o formato de OutlinedButton por opção
+      // do Relâmpago.
+      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'), findsOneWidget);
     },
   );
 

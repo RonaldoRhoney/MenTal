@@ -869,6 +869,21 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 ],
                 if (challenge['audio_url'] != null)
                   _buildAudioPlayerSection(challenge['audio_url'] as String, challenge['audio_source_name'] as String?),
+                // V6 — Mundo dos Valores (05/09/2026): texto lido ANTES
+                // da pergunta, mesmo espírito de prompt_image/audio_url
+                // acima. Nunca cronometrado (config.NEVER_TIMED_
+                // TERRITORY_IDS) — sem pressa pra ler.
+                if (challenge['reading_passage'] != null) ...[
+                  Container(
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+                    child: Text(
+                      challenge['reading_passage'] as String,
+                      style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 14).copyWith(height: 1.5),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                ],
                 // REGRA_REVISAO_ERROS_FIM_RODADA.md §3 — Clareza
                 // Imediata: o jogador precisa saber ANTES de responder
                 // que esta pergunta não vale XP (é revisão de um erro

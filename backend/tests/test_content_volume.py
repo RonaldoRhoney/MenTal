@@ -33,6 +33,11 @@ SINGLE_DIFFICULTY_TERRITORY_IDS = {
     "ingles_basico", "ingles_intermediario", "ingles_avancado",
     "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
     "frances_basico", "frances_intermediario", "frances_avancado",
+    # V6 — Mundo dos Valores: "cápsula de texto + perguntas" é checagem
+    # de compreensão de leitura, não trilha de maestria por dificuldade
+    # — todo desafio nasce em difficulty_level=1 de propósito (mesmo
+    # raciocínio de idiomas acima).
+    "bolsa", "criptomoedas", "cenario_global", "financas_dia_a_dia",
 }
 
 

@@ -1,0 +1,686 @@
+[
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é a B3?",
+    "options": [
+      "A bolsa de valores oficial do Brasil",
+      "Um banco público brasileiro",
+      "Uma empresa de investimentos privada",
+      "Um imposto sobre ações"
+    ],
+    "correct_answer": "A bolsa de valores oficial do Brasil",
+    "explanation": "A B3 é a bolsa de valores oficial do Brasil — o lugar onde ações de empresas, fundos e outros ativos financeiros são comprados e vendidos. O nome 'B3' vem da fusão entre a antiga Bovespa (Bolsa de Valores de São Paulo) e a Cetip, ocorrida em 2017. A sigla significa 'Brasil, Bolsa, Balcão'. Assim como um mercado físico reúne compradores e vendedores de produtos, a B3 reúne compradores e vendedores de partes de empresas e outros ativos, de forma totalmente digital.",
+    "reading_passage": "A B3 é a bolsa de valores oficial do Brasil — o lugar onde ações de empresas, fundos e outros ativos financeiros são comprados e vendidos. O nome 'B3' vem da fusão entre a antiga Bovespa (Bolsa de Valores de São Paulo) e a Cetip, ocorrida em 2017. A sigla significa 'Brasil, Bolsa, Balcão'. Assim como um mercado físico reúne compradores e vendedores de produtos, a B3 reúne compradores e vendedores de partes de empresas e outros ativos, de forma totalmente digital.",
+    "hints": [
+      "Releia 'O que é a B3?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "De onde vem o nome 'B3'?",
+    "options": [
+      "Da fusão entre Bovespa e Cetip",
+      "De uma sigla do governo federal",
+      "Do terceiro prédio da bolsa em São Paulo",
+      "De uma empresa fundadora chamada B3"
+    ],
+    "correct_answer": "Da fusão entre Bovespa e Cetip",
+    "explanation": "A B3 é a bolsa de valores oficial do Brasil — o lugar onde ações de empresas, fundos e outros ativos financeiros são comprados e vendidos. O nome 'B3' vem da fusão entre a antiga Bovespa (Bolsa de Valores de São Paulo) e a Cetip, ocorrida em 2017. A sigla significa 'Brasil, Bolsa, Balcão'. Assim como um mercado físico reúne compradores e vendedores de produtos, a B3 reúne compradores e vendedores de partes de empresas e outros ativos, de forma totalmente digital.",
+    "reading_passage": "A B3 é a bolsa de valores oficial do Brasil — o lugar onde ações de empresas, fundos e outros ativos financeiros são comprados e vendidos. O nome 'B3' vem da fusão entre a antiga Bovespa (Bolsa de Valores de São Paulo) e a Cetip, ocorrida em 2017. A sigla significa 'Brasil, Bolsa, Balcão'. Assim como um mercado físico reúne compradores e vendedores de produtos, a B3 reúne compradores e vendedores de partes de empresas e outros ativos, de forma totalmente digital.",
+    "hints": [
+      "Releia 'O que é a B3?' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que a sigla B3 significa?",
+    "options": [
+      "Brasil, Bolsa, Balcão",
+      "Banco, Bolsa, Bônus",
+      "Bovespa, Bônus, Balcão",
+      "Brasil, Banco, Bolsa"
+    ],
+    "correct_answer": "Brasil, Bolsa, Balcão",
+    "explanation": "A B3 é a bolsa de valores oficial do Brasil — o lugar onde ações de empresas, fundos e outros ativos financeiros são comprados e vendidos. O nome 'B3' vem da fusão entre a antiga Bovespa (Bolsa de Valores de São Paulo) e a Cetip, ocorrida em 2017. A sigla significa 'Brasil, Bolsa, Balcão'. Assim como um mercado físico reúne compradores e vendedores de produtos, a B3 reúne compradores e vendedores de partes de empresas e outros ativos, de forma totalmente digital.",
+    "reading_passage": "A B3 é a bolsa de valores oficial do Brasil — o lugar onde ações de empresas, fundos e outros ativos financeiros são comprados e vendidos. O nome 'B3' vem da fusão entre a antiga Bovespa (Bolsa de Valores de São Paulo) e a Cetip, ocorrida em 2017. A sigla significa 'Brasil, Bolsa, Balcão'. Assim como um mercado físico reúne compradores e vendedores de produtos, a B3 reúne compradores e vendedores de partes de empresas e outros ativos, de forma totalmente digital.",
+    "hints": [
+      "Releia 'O que é a B3?' — a resposta está no texto.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é a CVM?",
+    "options": [
+      "O órgão que fiscaliza e regula o mercado de capitais no Brasil",
+      "Uma bolsa de valores alternativa à B3",
+      "Um banco estatal de investimentos",
+      "Uma empresa privada de auditoria"
+    ],
+    "correct_answer": "O órgão que fiscaliza e regula o mercado de capitais no Brasil",
+    "explanation": "A CVM (Comissão de Valores Mobiliários) é o órgão do governo federal responsável por fiscalizar e regular o mercado de capitais no Brasil — incluindo a B3, as empresas que têm ações negociadas publicamente, e os profissionais que atuam nesse mercado. A função da CVM é parecida com a de um árbitro: ela existe para garantir que as regras do jogo sejam seguidas, protegendo investidores contra fraudes e uso indevido de informação. A CVM foi criada em 1976 e é equivalente, em espírito, à SEC nos Estados Unidos.",
+    "reading_passage": "A CVM (Comissão de Valores Mobiliários) é o órgão do governo federal responsável por fiscalizar e regular o mercado de capitais no Brasil — incluindo a B3, as empresas que têm ações negociadas publicamente, e os profissionais que atuam nesse mercado. A função da CVM é parecida com a de um árbitro: ela existe para garantir que as regras do jogo sejam seguidas, protegendo investidores contra fraudes e uso indevido de informação. A CVM foi criada em 1976 e é equivalente, em espírito, à SEC nos Estados Unidos.",
+    "hints": [
+      "Releia 'O que é a CVM?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Qual é a principal função da CVM?",
+    "options": [
+      "Garantir que as regras do mercado sejam seguidas",
+      "Vender ações diretamente aos investidores",
+      "Definir o preço das ações",
+      "Administrar a B3 diretamente"
+    ],
+    "correct_answer": "Garantir que as regras do mercado sejam seguidas",
+    "explanation": "A CVM (Comissão de Valores Mobiliários) é o órgão do governo federal responsável por fiscalizar e regular o mercado de capitais no Brasil — incluindo a B3, as empresas que têm ações negociadas publicamente, e os profissionais que atuam nesse mercado. A função da CVM é parecida com a de um árbitro: ela existe para garantir que as regras do jogo sejam seguidas, protegendo investidores contra fraudes e uso indevido de informação. A CVM foi criada em 1976 e é equivalente, em espírito, à SEC nos Estados Unidos.",
+    "reading_passage": "A CVM (Comissão de Valores Mobiliários) é o órgão do governo federal responsável por fiscalizar e regular o mercado de capitais no Brasil — incluindo a B3, as empresas que têm ações negociadas publicamente, e os profissionais que atuam nesse mercado. A função da CVM é parecida com a de um árbitro: ela existe para garantir que as regras do jogo sejam seguidas, protegendo investidores contra fraudes e uso indevido de informação. A CVM foi criada em 1976 e é equivalente, em espírito, à SEC nos Estados Unidos.",
+    "hints": [
+      "Releia 'O que é a CVM?' — a resposta está no texto.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "A CVM é equivalente, em espírito, a qual órgão dos Estados Unidos?",
+    "options": [
+      "SEC",
+      "FED",
+      "IRS",
+      "FBI"
+    ],
+    "correct_answer": "SEC",
+    "explanation": "A CVM (Comissão de Valores Mobiliários) é o órgão do governo federal responsável por fiscalizar e regular o mercado de capitais no Brasil — incluindo a B3, as empresas que têm ações negociadas publicamente, e os profissionais que atuam nesse mercado. A função da CVM é parecida com a de um árbitro: ela existe para garantir que as regras do jogo sejam seguidas, protegendo investidores contra fraudes e uso indevido de informação. A CVM foi criada em 1976 e é equivalente, em espírito, à SEC nos Estados Unidos.",
+    "reading_passage": "A CVM (Comissão de Valores Mobiliários) é o órgão do governo federal responsável por fiscalizar e regular o mercado de capitais no Brasil — incluindo a B3, as empresas que têm ações negociadas publicamente, e os profissionais que atuam nesse mercado. A função da CVM é parecida com a de um árbitro: ela existe para garantir que as regras do jogo sejam seguidas, protegendo investidores contra fraudes e uso indevido de informação. A CVM foi criada em 1976 e é equivalente, em espírito, à SEC nos Estados Unidos.",
+    "hints": [
+      "Releia 'O que é a CVM?' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que uma ação representa?",
+    "options": [
+      "Uma pequena parte de uma empresa",
+      "Um empréstimo feito à empresa",
+      "Um imposto pago pela empresa",
+      "Um produto vendido pela empresa"
+    ],
+    "correct_answer": "Uma pequena parte de uma empresa",
+    "explanation": "Uma ação representa uma pequena parte (uma 'fatia') de uma empresa. Quando uma pessoa compra uma ação, ela se torna sócia daquela empresa, na proporção correspondente ao que comprou — mesmo que seja uma fração muito pequena do total. Empresas emitem ações principalmente para captar dinheiro, permitindo que financiem sua operação ou expansão sem precisar pegar empréstimo. O valor de uma ação varia ao longo do tempo, refletindo diversos fatores relacionados à empresa e ao mercado em geral.",
+    "reading_passage": "Uma ação representa uma pequena parte (uma 'fatia') de uma empresa. Quando uma pessoa compra uma ação, ela se torna sócia daquela empresa, na proporção correspondente ao que comprou — mesmo que seja uma fração muito pequena do total. Empresas emitem ações principalmente para captar dinheiro, permitindo que financiem sua operação ou expansão sem precisar pegar empréstimo. O valor de uma ação varia ao longo do tempo, refletindo diversos fatores relacionados à empresa e ao mercado em geral.",
+    "hints": [
+      "Releia 'O que é uma ação?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Ao comprar uma ação, a pessoa se torna o quê da empresa?",
+    "options": [
+      "Sócia, na proporção do que comprou",
+      "Funcionária temporária",
+      "Credora exclusiva",
+      "Fornecedora oficial"
+    ],
+    "correct_answer": "Sócia, na proporção do que comprou",
+    "explanation": "Uma ação representa uma pequena parte (uma 'fatia') de uma empresa. Quando uma pessoa compra uma ação, ela se torna sócia daquela empresa, na proporção correspondente ao que comprou — mesmo que seja uma fração muito pequena do total. Empresas emitem ações principalmente para captar dinheiro, permitindo que financiem sua operação ou expansão sem precisar pegar empréstimo. O valor de uma ação varia ao longo do tempo, refletindo diversos fatores relacionados à empresa e ao mercado em geral.",
+    "reading_passage": "Uma ação representa uma pequena parte (uma 'fatia') de uma empresa. Quando uma pessoa compra uma ação, ela se torna sócia daquela empresa, na proporção correspondente ao que comprou — mesmo que seja uma fração muito pequena do total. Empresas emitem ações principalmente para captar dinheiro, permitindo que financiem sua operação ou expansão sem precisar pegar empréstimo. O valor de uma ação varia ao longo do tempo, refletindo diversos fatores relacionados à empresa e ao mercado em geral.",
+    "hints": [
+      "Releia 'O que é uma ação?' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Por que empresas emitem ações, principalmente?",
+    "options": [
+      "Para captar dinheiro sem pegar empréstimo",
+      "Para pagar menos impostos",
+      "Para reduzir o número de funcionários",
+      "Para evitar fiscalização da CVM"
+    ],
+    "correct_answer": "Para captar dinheiro sem pegar empréstimo",
+    "explanation": "Uma ação representa uma pequena parte (uma 'fatia') de uma empresa. Quando uma pessoa compra uma ação, ela se torna sócia daquela empresa, na proporção correspondente ao que comprou — mesmo que seja uma fração muito pequena do total. Empresas emitem ações principalmente para captar dinheiro, permitindo que financiem sua operação ou expansão sem precisar pegar empréstimo. O valor de uma ação varia ao longo do tempo, refletindo diversos fatores relacionados à empresa e ao mercado em geral.",
+    "reading_passage": "Uma ação representa uma pequena parte (uma 'fatia') de uma empresa. Quando uma pessoa compra uma ação, ela se torna sócia daquela empresa, na proporção correspondente ao que comprou — mesmo que seja uma fração muito pequena do total. Empresas emitem ações principalmente para captar dinheiro, permitindo que financiem sua operação ou expansão sem precisar pegar empréstimo. O valor de uma ação varia ao longo do tempo, refletindo diversos fatores relacionados à empresa e ao mercado em geral.",
+    "hints": [
+      "Releia 'O que é uma ação?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que significa a sigla IPO?",
+    "options": [
+      "Initial Public Offering",
+      "Internal Product Offer",
+      "Investment Public Order",
+      "International Price Option"
+    ],
+    "correct_answer": "Initial Public Offering",
+    "explanation": "IPO é a sigla em inglês para 'Initial Public Offering' (Oferta Pública Inicial). É o processo pelo qual uma empresa, que antes era privada (suas ações não podiam ser compradas por qualquer pessoa), passa a ter ações negociadas publicamente na bolsa de valores pela primeira vez. A partir do IPO, qualquer investidor cadastrado pode comprar ações daquela empresa. Esse processo costuma envolver bancos especializados, que ajudam a definir o preço inicial das ações e a estrutura da oferta.",
+    "reading_passage": "IPO é a sigla em inglês para 'Initial Public Offering' (Oferta Pública Inicial). É o processo pelo qual uma empresa, que antes era privada (suas ações não podiam ser compradas por qualquer pessoa), passa a ter ações negociadas publicamente na bolsa de valores pela primeira vez. A partir do IPO, qualquer investidor cadastrado pode comprar ações daquela empresa. Esse processo costuma envolver bancos especializados, que ajudam a definir o preço inicial das ações e a estrutura da oferta.",
+    "hints": [
+      "Releia 'O que é um IPO?' — a resposta está no texto.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que acontece durante um IPO?",
+    "options": [
+      "Uma empresa privada passa a ter ações negociadas publicamente pela primeira vez",
+      "Uma empresa fecha o capital e some da bolsa",
+      "O governo cria uma nova empresa estatal",
+      "Uma ação é dividida em partes menores"
+    ],
+    "correct_answer": "Uma empresa privada passa a ter ações negociadas publicamente pela primeira vez",
+    "explanation": "IPO é a sigla em inglês para 'Initial Public Offering' (Oferta Pública Inicial). É o processo pelo qual uma empresa, que antes era privada (suas ações não podiam ser compradas por qualquer pessoa), passa a ter ações negociadas publicamente na bolsa de valores pela primeira vez. A partir do IPO, qualquer investidor cadastrado pode comprar ações daquela empresa. Esse processo costuma envolver bancos especializados, que ajudam a definir o preço inicial das ações e a estrutura da oferta.",
+    "reading_passage": "IPO é a sigla em inglês para 'Initial Public Offering' (Oferta Pública Inicial). É o processo pelo qual uma empresa, que antes era privada (suas ações não podiam ser compradas por qualquer pessoa), passa a ter ações negociadas publicamente na bolsa de valores pela primeira vez. A partir do IPO, qualquer investidor cadastrado pode comprar ações daquela empresa. Esse processo costuma envolver bancos especializados, que ajudam a definir o preço inicial das ações e a estrutura da oferta.",
+    "hints": [
+      "Releia 'O que é um IPO?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Quem costuma ajudar a definir o preço inicial das ações num IPO?",
+    "options": [
+      "Bancos especializados",
+      "A CVM diretamente",
+      "O próprio investidor comprador",
+      "O Banco Central"
+    ],
+    "correct_answer": "Bancos especializados",
+    "explanation": "IPO é a sigla em inglês para 'Initial Public Offering' (Oferta Pública Inicial). É o processo pelo qual uma empresa, que antes era privada (suas ações não podiam ser compradas por qualquer pessoa), passa a ter ações negociadas publicamente na bolsa de valores pela primeira vez. A partir do IPO, qualquer investidor cadastrado pode comprar ações daquela empresa. Esse processo costuma envolver bancos especializados, que ajudam a definir o preço inicial das ações e a estrutura da oferta.",
+    "reading_passage": "IPO é a sigla em inglês para 'Initial Public Offering' (Oferta Pública Inicial). É o processo pelo qual uma empresa, que antes era privada (suas ações não podiam ser compradas por qualquer pessoa), passa a ter ações negociadas publicamente na bolsa de valores pela primeira vez. A partir do IPO, qualquer investidor cadastrado pode comprar ações daquela empresa. Esse processo costuma envolver bancos especializados, que ajudam a definir o preço inicial das ações e a estrutura da oferta.",
+    "hints": [
+      "Releia 'O que é um IPO?' — a resposta está no texto.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é um Fundo de Investimento Imobiliário (FII)?",
+    "options": [
+      "Um fundo que reúne dinheiro de vários investidores para aplicar em imóveis",
+      "Um empréstimo bancário para comprar casa própria",
+      "Um imposto sobre a compra de imóveis",
+      "Um seguro contra incêndio de imóveis"
+    ],
+    "correct_answer": "Um fundo que reúne dinheiro de vários investidores para aplicar em imóveis",
+    "explanation": "Um Fundo de Investimento Imobiliário (FII) reúne o dinheiro de vários investidores para aplicar em imóveis — como shoppings, galpões logísticos ou prédios comerciais — ou em ativos financeiros ligados ao setor imobiliário. Em vez de comprar um imóvel inteiro sozinho, o investidor compra 'cotas' do fundo, que representam uma fração de tudo que aquele fundo possui. FIIs são negociados na B3, assim como ações, e costumam distribuir parte dos resultados obtidos com aluguéis ou outras receitas do fundo aos cotistas periodicamente.",
+    "reading_passage": "Um Fundo de Investimento Imobiliário (FII) reúne o dinheiro de vários investidores para aplicar em imóveis — como shoppings, galpões logísticos ou prédios comerciais — ou em ativos financeiros ligados ao setor imobiliário. Em vez de comprar um imóvel inteiro sozinho, o investidor compra 'cotas' do fundo, que representam uma fração de tudo que aquele fundo possui. FIIs são negociados na B3, assim como ações, e costumam distribuir parte dos resultados obtidos com aluguéis ou outras receitas do fundo aos cotistas periodicamente.",
+    "hints": [
+      "Releia 'O que é um Fundo Imobiliário (FII)?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que o investidor compra ao investir num FII?",
+    "options": [
+      "Cotas do fundo",
+      "O imóvel inteiro",
+      "Uma ação da construtora",
+      "Um título de dívida do governo"
+    ],
+    "correct_answer": "Cotas do fundo",
+    "explanation": "Um Fundo de Investimento Imobiliário (FII) reúne o dinheiro de vários investidores para aplicar em imóveis — como shoppings, galpões logísticos ou prédios comerciais — ou em ativos financeiros ligados ao setor imobiliário. Em vez de comprar um imóvel inteiro sozinho, o investidor compra 'cotas' do fundo, que representam uma fração de tudo que aquele fundo possui. FIIs são negociados na B3, assim como ações, e costumam distribuir parte dos resultados obtidos com aluguéis ou outras receitas do fundo aos cotistas periodicamente.",
+    "reading_passage": "Um Fundo de Investimento Imobiliário (FII) reúne o dinheiro de vários investidores para aplicar em imóveis — como shoppings, galpões logísticos ou prédios comerciais — ou em ativos financeiros ligados ao setor imobiliário. Em vez de comprar um imóvel inteiro sozinho, o investidor compra 'cotas' do fundo, que representam uma fração de tudo que aquele fundo possui. FIIs são negociados na B3, assim como ações, e costumam distribuir parte dos resultados obtidos com aluguéis ou outras receitas do fundo aos cotistas periodicamente.",
+    "hints": [
+      "Releia 'O que é um Fundo Imobiliário (FII)?' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Onde os FIIs são negociados?",
+    "options": [
+      "Na B3, assim como ações",
+      "Apenas em cartórios de imóveis",
+      "Diretamente com o proprietário do imóvel",
+      "Somente em bancos privados"
+    ],
+    "correct_answer": "Na B3, assim como ações",
+    "explanation": "Um Fundo de Investimento Imobiliário (FII) reúne o dinheiro de vários investidores para aplicar em imóveis — como shoppings, galpões logísticos ou prédios comerciais — ou em ativos financeiros ligados ao setor imobiliário. Em vez de comprar um imóvel inteiro sozinho, o investidor compra 'cotas' do fundo, que representam uma fração de tudo que aquele fundo possui. FIIs são negociados na B3, assim como ações, e costumam distribuir parte dos resultados obtidos com aluguéis ou outras receitas do fundo aos cotistas periodicamente.",
+    "reading_passage": "Um Fundo de Investimento Imobiliário (FII) reúne o dinheiro de vários investidores para aplicar em imóveis — como shoppings, galpões logísticos ou prédios comerciais — ou em ativos financeiros ligados ao setor imobiliário. Em vez de comprar um imóvel inteiro sozinho, o investidor compra 'cotas' do fundo, que representam uma fração de tudo que aquele fundo possui. FIIs são negociados na B3, assim como ações, e costumam distribuir parte dos resultados obtidos com aluguéis ou outras receitas do fundo aos cotistas periodicamente.",
+    "hints": [
+      "Releia 'O que é um Fundo Imobiliário (FII)?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é um dividendo?",
+    "options": [
+      "Parte do lucro da empresa distribuída aos acionistas",
+      "Um imposto cobrado sobre ações",
+      "O valor pago para comprar uma ação",
+      "Uma multa por venda antecipada de ação"
+    ],
+    "correct_answer": "Parte do lucro da empresa distribuída aos acionistas",
+    "explanation": "Dividendo é a parte do lucro de uma empresa que é distribuída aos seus acionistas, geralmente de forma proporcional à quantidade de ações que cada um possui. Quando uma empresa tem lucro, ela pode decidir reinvestir esse dinheiro no próprio negócio, guardá-lo, ou distribuir uma parte aos sócios (acionistas) na forma de dividendos. Essa decisão é tomada pela própria empresa e pode variar bastante de uma companhia para outra, e de um período para outro.",
+    "reading_passage": "Dividendo é a parte do lucro de uma empresa que é distribuída aos seus acionistas, geralmente de forma proporcional à quantidade de ações que cada um possui. Quando uma empresa tem lucro, ela pode decidir reinvestir esse dinheiro no próprio negócio, guardá-lo, ou distribuir uma parte aos sócios (acionistas) na forma de dividendos. Essa decisão é tomada pela própria empresa e pode variar bastante de uma companhia para outra, e de um período para outro.",
+    "hints": [
+      "Releia 'O que é dividendo?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Quem decide se uma empresa vai distribuir dividendos?",
+    "options": [
+      "A própria empresa",
+      "A CVM",
+      "O investidor individual",
+      "O Banco Central"
+    ],
+    "correct_answer": "A própria empresa",
+    "explanation": "Dividendo é a parte do lucro de uma empresa que é distribuída aos seus acionistas, geralmente de forma proporcional à quantidade de ações que cada um possui. Quando uma empresa tem lucro, ela pode decidir reinvestir esse dinheiro no próprio negócio, guardá-lo, ou distribuir uma parte aos sócios (acionistas) na forma de dividendos. Essa decisão é tomada pela própria empresa e pode variar bastante de uma companhia para outra, e de um período para outro.",
+    "reading_passage": "Dividendo é a parte do lucro de uma empresa que é distribuída aos seus acionistas, geralmente de forma proporcional à quantidade de ações que cada um possui. Quando uma empresa tem lucro, ela pode decidir reinvestir esse dinheiro no próprio negócio, guardá-lo, ou distribuir uma parte aos sócios (acionistas) na forma de dividendos. Essa decisão é tomada pela própria empresa e pode variar bastante de uma companhia para outra, e de um período para outro.",
+    "hints": [
+      "Releia 'O que é dividendo?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O pagamento de dividendos é sempre o mesmo, ano após ano?",
+    "options": [
+      "Não, pode variar bastante entre empresas e períodos",
+      "Sim, é um valor fixo obrigatório por lei",
+      "Sim, é sempre 50% do lucro",
+      "Não, é definido exclusivamente pela CVM"
+    ],
+    "correct_answer": "Não, pode variar bastante entre empresas e períodos",
+    "explanation": "Dividendo é a parte do lucro de uma empresa que é distribuída aos seus acionistas, geralmente de forma proporcional à quantidade de ações que cada um possui. Quando uma empresa tem lucro, ela pode decidir reinvestir esse dinheiro no próprio negócio, guardá-lo, ou distribuir uma parte aos sócios (acionistas) na forma de dividendos. Essa decisão é tomada pela própria empresa e pode variar bastante de uma companhia para outra, e de um período para outro.",
+    "reading_passage": "Dividendo é a parte do lucro de uma empresa que é distribuída aos seus acionistas, geralmente de forma proporcional à quantidade de ações que cada um possui. Quando uma empresa tem lucro, ela pode decidir reinvestir esse dinheiro no próprio negócio, guardá-lo, ou distribuir uma parte aos sócios (acionistas) na forma de dividendos. Essa decisão é tomada pela própria empresa e pode variar bastante de uma companhia para outra, e de um período para outro.",
+    "hints": [
+      "Releia 'O que é dividendo?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é volatilidade?",
+    "options": [
+      "O quanto o preço de um ativo varia num período de tempo",
+      "O valor total de uma empresa na bolsa",
+      "A taxa de juros cobrada por um banco",
+      "O número de ações disponíveis para compra"
+    ],
+    "correct_answer": "O quanto o preço de um ativo varia num período de tempo",
+    "explanation": "Volatilidade é o termo usado para descrever o quanto o preço de um ativo (como uma ação) varia num determinado período de tempo. Um ativo muito volátil tem seu preço subindo e descendo com frequência e intensidade; um ativo pouco volátil tende a manter um preço mais estável ao longo do tempo. A volatilidade é uma característica observável e mensurável do histórico de preços — ela descreve o comportamento passado de variação, não prevê o que vai acontecer no futuro.",
+    "reading_passage": "Volatilidade é o termo usado para descrever o quanto o preço de um ativo (como uma ação) varia num determinado período de tempo. Um ativo muito volátil tem seu preço subindo e descendo com frequência e intensidade; um ativo pouco volátil tende a manter um preço mais estável ao longo do tempo. A volatilidade é uma característica observável e mensurável do histórico de preços — ela descreve o comportamento passado de variação, não prevê o que vai acontecer no futuro.",
+    "hints": [
+      "Releia 'O que é volatilidade?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Um ativo muito volátil tem que característica?",
+    "options": [
+      "Preço subindo e descendo com frequência e intensidade",
+      "Preço sempre fixo e estável",
+      "Nenhuma negociação na bolsa",
+      "Isenção total de impostos"
+    ],
+    "correct_answer": "Preço subindo e descendo com frequência e intensidade",
+    "explanation": "Volatilidade é o termo usado para descrever o quanto o preço de um ativo (como uma ação) varia num determinado período de tempo. Um ativo muito volátil tem seu preço subindo e descendo com frequência e intensidade; um ativo pouco volátil tende a manter um preço mais estável ao longo do tempo. A volatilidade é uma característica observável e mensurável do histórico de preços — ela descreve o comportamento passado de variação, não prevê o que vai acontecer no futuro.",
+    "reading_passage": "Volatilidade é o termo usado para descrever o quanto o preço de um ativo (como uma ação) varia num determinado período de tempo. Um ativo muito volátil tem seu preço subindo e descendo com frequência e intensidade; um ativo pouco volátil tende a manter um preço mais estável ao longo do tempo. A volatilidade é uma característica observável e mensurável do histórico de preços — ela descreve o comportamento passado de variação, não prevê o que vai acontecer no futuro.",
+    "hints": [
+      "Releia 'O que é volatilidade?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "A volatilidade descreve o quê, exatamente?",
+    "options": [
+      "O comportamento passado de variação de preço",
+      "Uma previsão garantida do preço futuro",
+      "O lucro exato que a empresa terá",
+      "A opinião da CVM sobre o ativo"
+    ],
+    "correct_answer": "O comportamento passado de variação de preço",
+    "explanation": "Volatilidade é o termo usado para descrever o quanto o preço de um ativo (como uma ação) varia num determinado período de tempo. Um ativo muito volátil tem seu preço subindo e descendo com frequência e intensidade; um ativo pouco volátil tende a manter um preço mais estável ao longo do tempo. A volatilidade é uma característica observável e mensurável do histórico de preços — ela descreve o comportamento passado de variação, não prevê o que vai acontecer no futuro.",
+    "reading_passage": "Volatilidade é o termo usado para descrever o quanto o preço de um ativo (como uma ação) varia num determinado período de tempo. Um ativo muito volátil tem seu preço subindo e descendo com frequência e intensidade; um ativo pouco volátil tende a manter um preço mais estável ao longo do tempo. A volatilidade é uma característica observável e mensurável do histórico de preços — ela descreve o comportamento passado de variação, não prevê o que vai acontecer no futuro.",
+    "hints": [
+      "Releia 'O que é volatilidade?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é diversificação, no contexto de investimentos?",
+    "options": [
+      "Distribuir recursos entre diferentes tipos de ativo",
+      "Comprar apenas ações de uma única empresa",
+      "Guardar todo o dinheiro em espécie",
+      "Investir exclusivamente em imóveis"
+    ],
+    "correct_answer": "Distribuir recursos entre diferentes tipos de ativo",
+    "explanation": "Diversificação é o princípio de distribuir recursos entre diferentes tipos de ativo, em vez de concentrar tudo em um único lugar. A lógica por trás desse conceito é reduzir o impacto de um resultado ruim isolado: se um investidor tem recursos em vários ativos diferentes, o desempenho negativo de um deles tende a pesar menos no resultado total do que pesaria se todos os recursos estivessem concentrados apenas ali. Diversificação é um conceito de gestão de risco, amplamente estudado em finanças, não uma garantia de resultado.",
+    "reading_passage": "Diversificação é o princípio de distribuir recursos entre diferentes tipos de ativo, em vez de concentrar tudo em um único lugar. A lógica por trás desse conceito é reduzir o impacto de um resultado ruim isolado: se um investidor tem recursos em vários ativos diferentes, o desempenho negativo de um deles tende a pesar menos no resultado total do que pesaria se todos os recursos estivessem concentrados apenas ali. Diversificação é um conceito de gestão de risco, amplamente estudado em finanças, não uma garantia de resultado.",
+    "hints": [
+      "Releia 'O que é diversificação?' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Qual é a lógica por trás da diversificação?",
+    "options": [
+      "Reduzir o impacto de um resultado ruim isolado",
+      "Garantir lucro certo em qualquer cenário",
+      "Eliminar totalmente o risco de perda",
+      "Aumentar a velocidade de valorização"
+    ],
+    "correct_answer": "Reduzir o impacto de um resultado ruim isolado",
+    "explanation": "Diversificação é o princípio de distribuir recursos entre diferentes tipos de ativo, em vez de concentrar tudo em um único lugar. A lógica por trás desse conceito é reduzir o impacto de um resultado ruim isolado: se um investidor tem recursos em vários ativos diferentes, o desempenho negativo de um deles tende a pesar menos no resultado total do que pesaria se todos os recursos estivessem concentrados apenas ali. Diversificação é um conceito de gestão de risco, amplamente estudado em finanças, não uma garantia de resultado.",
+    "reading_passage": "Diversificação é o princípio de distribuir recursos entre diferentes tipos de ativo, em vez de concentrar tudo em um único lugar. A lógica por trás desse conceito é reduzir o impacto de um resultado ruim isolado: se um investidor tem recursos em vários ativos diferentes, o desempenho negativo de um deles tende a pesar menos no resultado total do que pesaria se todos os recursos estivessem concentrados apenas ali. Diversificação é um conceito de gestão de risco, amplamente estudado em finanças, não uma garantia de resultado.",
+    "hints": [
+      "Releia 'O que é diversificação?' — a resposta está no texto.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Diversificação é uma garantia de quê?",
+    "options": [
+      "Não é garantia de resultado — é um conceito de gestão de risco",
+      "Garantia de lucro anual fixo",
+      "Garantia de isenção de impostos",
+      "Garantia de aprovação pela CVM"
+    ],
+    "correct_answer": "Não é garantia de resultado — é um conceito de gestão de risco",
+    "explanation": "Diversificação é o princípio de distribuir recursos entre diferentes tipos de ativo, em vez de concentrar tudo em um único lugar. A lógica por trás desse conceito é reduzir o impacto de um resultado ruim isolado: se um investidor tem recursos em vários ativos diferentes, o desempenho negativo de um deles tende a pesar menos no resultado total do que pesaria se todos os recursos estivessem concentrados apenas ali. Diversificação é um conceito de gestão de risco, amplamente estudado em finanças, não uma garantia de resultado.",
+    "reading_passage": "Diversificação é o princípio de distribuir recursos entre diferentes tipos de ativo, em vez de concentrar tudo em um único lugar. A lógica por trás desse conceito é reduzir o impacto de um resultado ruim isolado: se um investidor tem recursos em vários ativos diferentes, o desempenho negativo de um deles tende a pesar menos no resultado total do que pesaria se todos os recursos estivessem concentrados apenas ali. Diversificação é um conceito de gestão de risco, amplamente estudado em finanças, não uma garantia de resultado.",
+    "hints": [
+      "Releia 'O que é diversificação?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Qual é a função essencial de um banco, segundo o texto?",
+    "options": [
+      "Intermediar quem tem dinheiro sobrando e quem precisa de dinheiro emprestado",
+      "Fabricar moeda física para o governo",
+      "Fiscalizar empresas listadas na bolsa",
+      "Definir o valor do dólar diariamente"
+    ],
+    "correct_answer": "Intermediar quem tem dinheiro sobrando e quem precisa de dinheiro emprestado",
+    "explanation": "Um banco funciona, em essência, como um intermediário entre quem tem dinheiro sobrando e quem precisa de dinheiro emprestado. Pessoas e empresas depositam dinheiro nos bancos, que por sua vez usam parte desses recursos para conceder empréstimos e financiamentos a outros clientes, cobrando juros por isso. Além dessa função de intermediação financeira, os bancos oferecem outros serviços, como guarda de valores, meios de pagamento (cartões, transferências) e, em muitos casos, produtos de investimento. No Brasil, o funcionamento dos bancos é fiscalizado pelo Banco Central.",
+    "reading_passage": "Um banco funciona, em essência, como um intermediário entre quem tem dinheiro sobrando e quem precisa de dinheiro emprestado. Pessoas e empresas depositam dinheiro nos bancos, que por sua vez usam parte desses recursos para conceder empréstimos e financiamentos a outros clientes, cobrando juros por isso. Além dessa função de intermediação financeira, os bancos oferecem outros serviços, como guarda de valores, meios de pagamento (cartões, transferências) e, em muitos casos, produtos de investimento. No Brasil, o funcionamento dos bancos é fiscalizado pelo Banco Central.",
+    "hints": [
+      "Releia 'Qual é a função de um banco?' — a resposta está no texto.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que o banco cobra ao conceder um empréstimo com o dinheiro depositado por outros clientes?",
+    "options": [
+      "Juros",
+      "Imposto de Renda",
+      "Uma taxa fixa da CVM",
+      "Dividendos"
+    ],
+    "correct_answer": "Juros",
+    "explanation": "Um banco funciona, em essência, como um intermediário entre quem tem dinheiro sobrando e quem precisa de dinheiro emprestado. Pessoas e empresas depositam dinheiro nos bancos, que por sua vez usam parte desses recursos para conceder empréstimos e financiamentos a outros clientes, cobrando juros por isso. Além dessa função de intermediação financeira, os bancos oferecem outros serviços, como guarda de valores, meios de pagamento (cartões, transferências) e, em muitos casos, produtos de investimento. No Brasil, o funcionamento dos bancos é fiscalizado pelo Banco Central.",
+    "reading_passage": "Um banco funciona, em essência, como um intermediário entre quem tem dinheiro sobrando e quem precisa de dinheiro emprestado. Pessoas e empresas depositam dinheiro nos bancos, que por sua vez usam parte desses recursos para conceder empréstimos e financiamentos a outros clientes, cobrando juros por isso. Além dessa função de intermediação financeira, os bancos oferecem outros serviços, como guarda de valores, meios de pagamento (cartões, transferências) e, em muitos casos, produtos de investimento. No Brasil, o funcionamento dos bancos é fiscalizado pelo Banco Central.",
+    "hints": [
+      "Releia 'Qual é a função de um banco?' — a resposta está no texto.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Quem fiscaliza o funcionamento dos bancos no Brasil?",
+    "options": [
+      "O Banco Central",
+      "A B3",
+      "A CVM",
+      "O IBGE"
+    ],
+    "correct_answer": "O Banco Central",
+    "explanation": "Um banco funciona, em essência, como um intermediário entre quem tem dinheiro sobrando e quem precisa de dinheiro emprestado. Pessoas e empresas depositam dinheiro nos bancos, que por sua vez usam parte desses recursos para conceder empréstimos e financiamentos a outros clientes, cobrando juros por isso. Além dessa função de intermediação financeira, os bancos oferecem outros serviços, como guarda de valores, meios de pagamento (cartões, transferências) e, em muitos casos, produtos de investimento. No Brasil, o funcionamento dos bancos é fiscalizado pelo Banco Central.",
+    "reading_passage": "Um banco funciona, em essência, como um intermediário entre quem tem dinheiro sobrando e quem precisa de dinheiro emprestado. Pessoas e empresas depositam dinheiro nos bancos, que por sua vez usam parte desses recursos para conceder empréstimos e financiamentos a outros clientes, cobrando juros por isso. Além dessa função de intermediação financeira, os bancos oferecem outros serviços, como guarda de valores, meios de pagamento (cartões, transferências) e, em muitos casos, produtos de investimento. No Brasil, o funcionamento dos bancos é fiscalizado pelo Banco Central.",
+    "hints": [
+      "Releia 'Qual é a função de um banco?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é o Open Finance?",
+    "options": [
+      "Um sistema que permite compartilhar dados financeiros entre instituições, com autorização do cliente",
+      "Uma nova moeda digital criada pelo Banco Central",
+      "Um imposto sobre transferências bancárias",
+      "Um tipo de conta bancária gratuita"
+    ],
+    "correct_answer": "Um sistema que permite compartilhar dados financeiros entre instituições, com autorização do cliente",
+    "explanation": "Open Finance é um sistema, regulado pelo Banco Central do Brasil, que permite ao cliente compartilhar seus próprios dados financeiros (como histórico de conta, cartão e investimentos) entre diferentes instituições, de forma segura e mediante autorização explícita do cliente para cada compartilhamento. Antes do Open Finance, os dados financeiros de uma pessoa ficavam concentrados apenas na instituição onde ela tinha conta, dificultando a comparação de ofertas entre bancos diferentes. Com o sistema, a pessoa pode, por exemplo, permitir que um banco veja seu histórico em outro banco, facilitando a análise de crédito ou a busca por condições mais vantajosas.",
+    "reading_passage": "Open Finance é um sistema, regulado pelo Banco Central do Brasil, que permite ao cliente compartilhar seus próprios dados financeiros (como histórico de conta, cartão e investimentos) entre diferentes instituições, de forma segura e mediante autorização explícita do cliente para cada compartilhamento. Antes do Open Finance, os dados financeiros de uma pessoa ficavam concentrados apenas na instituição onde ela tinha conta, dificultando a comparação de ofertas entre bancos diferentes. Com o sistema, a pessoa pode, por exemplo, permitir que um banco veja seu histórico em outro banco, facilitando a análise de crédito ou a busca por condições mais vantajosas.",
+    "hints": [
+      "Releia 'O que é Open Finance?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Quem regula o Open Finance no Brasil?",
+    "options": [
+      "O Banco Central do Brasil",
+      "A CVM",
+      "A B3",
+      "O Ministério da Fazenda"
+    ],
+    "correct_answer": "O Banco Central do Brasil",
+    "explanation": "Open Finance é um sistema, regulado pelo Banco Central do Brasil, que permite ao cliente compartilhar seus próprios dados financeiros (como histórico de conta, cartão e investimentos) entre diferentes instituições, de forma segura e mediante autorização explícita do cliente para cada compartilhamento. Antes do Open Finance, os dados financeiros de uma pessoa ficavam concentrados apenas na instituição onde ela tinha conta, dificultando a comparação de ofertas entre bancos diferentes. Com o sistema, a pessoa pode, por exemplo, permitir que um banco veja seu histórico em outro banco, facilitando a análise de crédito ou a busca por condições mais vantajosas.",
+    "reading_passage": "Open Finance é um sistema, regulado pelo Banco Central do Brasil, que permite ao cliente compartilhar seus próprios dados financeiros (como histórico de conta, cartão e investimentos) entre diferentes instituições, de forma segura e mediante autorização explícita do cliente para cada compartilhamento. Antes do Open Finance, os dados financeiros de uma pessoa ficavam concentrados apenas na instituição onde ela tinha conta, dificultando a comparação de ofertas entre bancos diferentes. Com o sistema, a pessoa pode, por exemplo, permitir que um banco veja seu histórico em outro banco, facilitando a análise de crédito ou a busca por condições mais vantajosas.",
+    "hints": [
+      "Releia 'O que é Open Finance?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O compartilhamento de dados no Open Finance acontece de que forma?",
+    "options": [
+      "Mediante autorização explícita do cliente para cada compartilhamento",
+      "Automaticamente, sem necessidade de autorização",
+      "Apenas uma vez, de forma permanente e irreversível",
+      "Somente entre agências do mesmo banco"
+    ],
+    "correct_answer": "Mediante autorização explícita do cliente para cada compartilhamento",
+    "explanation": "Open Finance é um sistema, regulado pelo Banco Central do Brasil, que permite ao cliente compartilhar seus próprios dados financeiros (como histórico de conta, cartão e investimentos) entre diferentes instituições, de forma segura e mediante autorização explícita do cliente para cada compartilhamento. Antes do Open Finance, os dados financeiros de uma pessoa ficavam concentrados apenas na instituição onde ela tinha conta, dificultando a comparação de ofertas entre bancos diferentes. Com o sistema, a pessoa pode, por exemplo, permitir que um banco veja seu histórico em outro banco, facilitando a análise de crédito ou a busca por condições mais vantajosas.",
+    "reading_passage": "Open Finance é um sistema, regulado pelo Banco Central do Brasil, que permite ao cliente compartilhar seus próprios dados financeiros (como histórico de conta, cartão e investimentos) entre diferentes instituições, de forma segura e mediante autorização explícita do cliente para cada compartilhamento. Antes do Open Finance, os dados financeiros de uma pessoa ficavam concentrados apenas na instituição onde ela tinha conta, dificultando a comparação de ofertas entre bancos diferentes. Com o sistema, a pessoa pode, por exemplo, permitir que um banco veja seu histórico em outro banco, facilitando a análise de crédito ou a busca por condições mais vantajosas.",
+    "hints": [
+      "Releia 'O que é Open Finance?' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é uma startup?",
+    "options": [
+      "Uma empresa em fase inicial, com modelo de negócio inovador e potencial de crescimento rápido",
+      "Uma empresa que já é listada há décadas na bolsa",
+      "Um tipo de banco especializado em crédito imobiliário",
+      "Um fundo de investimento exclusivo para grandes empresas"
+    ],
+    "correct_answer": "Uma empresa em fase inicial, com modelo de negócio inovador e potencial de crescimento rápido",
+    "explanation": "Startup é o nome dado a uma empresa em fase inicial, geralmente construída em torno de um modelo de negócio inovador e com potencial de crescimento rápido, muitas vezes apoiada em tecnologia. Diferente de negócios tradicionais, startups costumam começar operando com incerteza sobre se o modelo de negócio vai funcionar, testando e ajustando a ideia continuamente. Por não terem, na maioria das vezes, garantias suficientes para empréstimos bancários tradicionais, startups costumam buscar outras formas de financiamento, como investidores especializados nesse tipo de negócio.",
+    "reading_passage": "Startup é o nome dado a uma empresa em fase inicial, geralmente construída em torno de um modelo de negócio inovador e com potencial de crescimento rápido, muitas vezes apoiada em tecnologia. Diferente de negócios tradicionais, startups costumam começar operando com incerteza sobre se o modelo de negócio vai funcionar, testando e ajustando a ideia continuamente. Por não terem, na maioria das vezes, garantias suficientes para empréstimos bancários tradicionais, startups costumam buscar outras formas de financiamento, como investidores especializados nesse tipo de negócio.",
+    "hints": [
+      "Releia 'O que é uma startup?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que costuma diferenciar uma startup de um negócio tradicional, segundo o texto?",
+    "options": [
+      "Opera com incerteza inicial, testando e ajustando o modelo de negócio continuamente",
+      "Startups nunca precisam de nenhum tipo de financiamento",
+      "Startups são sempre maiores que empresas tradicionais",
+      "Startups não podem contratar funcionários"
+    ],
+    "correct_answer": "Opera com incerteza inicial, testando e ajustando o modelo de negócio continuamente",
+    "explanation": "Startup é o nome dado a uma empresa em fase inicial, geralmente construída em torno de um modelo de negócio inovador e com potencial de crescimento rápido, muitas vezes apoiada em tecnologia. Diferente de negócios tradicionais, startups costumam começar operando com incerteza sobre se o modelo de negócio vai funcionar, testando e ajustando a ideia continuamente. Por não terem, na maioria das vezes, garantias suficientes para empréstimos bancários tradicionais, startups costumam buscar outras formas de financiamento, como investidores especializados nesse tipo de negócio.",
+    "reading_passage": "Startup é o nome dado a uma empresa em fase inicial, geralmente construída em torno de um modelo de negócio inovador e com potencial de crescimento rápido, muitas vezes apoiada em tecnologia. Diferente de negócios tradicionais, startups costumam começar operando com incerteza sobre se o modelo de negócio vai funcionar, testando e ajustando a ideia continuamente. Por não terem, na maioria das vezes, garantias suficientes para empréstimos bancários tradicionais, startups costumam buscar outras formas de financiamento, como investidores especializados nesse tipo de negócio.",
+    "hints": [
+      "Releia 'O que é uma startup?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "Por que startups costumam buscar formas de financiamento diferentes do empréstimo bancário tradicional?",
+    "options": [
+      "Por não terem, na maioria das vezes, garantias suficientes para esse tipo de empréstimo",
+      "Porque é proibido por lei conceder empréstimo a startups",
+      "Porque bancos nunca atendem empresas de tecnologia",
+      "Porque startups já nascem com muito dinheiro em caixa"
+    ],
+    "correct_answer": "Por não terem, na maioria das vezes, garantias suficientes para esse tipo de empréstimo",
+    "explanation": "Startup é o nome dado a uma empresa em fase inicial, geralmente construída em torno de um modelo de negócio inovador e com potencial de crescimento rápido, muitas vezes apoiada em tecnologia. Diferente de negócios tradicionais, startups costumam começar operando com incerteza sobre se o modelo de negócio vai funcionar, testando e ajustando a ideia continuamente. Por não terem, na maioria das vezes, garantias suficientes para empréstimos bancários tradicionais, startups costumam buscar outras formas de financiamento, como investidores especializados nesse tipo de negócio.",
+    "reading_passage": "Startup é o nome dado a uma empresa em fase inicial, geralmente construída em torno de um modelo de negócio inovador e com potencial de crescimento rápido, muitas vezes apoiada em tecnologia. Diferente de negócios tradicionais, startups costumam começar operando com incerteza sobre se o modelo de negócio vai funcionar, testando e ajustando a ideia continuamente. Por não terem, na maioria das vezes, garantias suficientes para empréstimos bancários tradicionais, startups costumam buscar outras formas de financiamento, como investidores especializados nesse tipo de negócio.",
+    "hints": [
+      "Releia 'O que é uma startup?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é o BNDES?",
+    "options": [
+      "Um banco público que oferece linhas de financiamento para desenvolvimento econômico",
+      "Uma bolsa de valores exclusiva para pequenas empresas",
+      "Um imposto cobrado sobre startups",
+      "Uma seguradora estatal de crédito"
+    ],
+    "correct_answer": "Um banco público que oferece linhas de financiamento para desenvolvimento econômico",
+    "explanation": "No Brasil, empresas e startups contam com diferentes fontes de apoio financeiro. O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) é um banco público que oferece linhas de financiamento voltadas a projetos de desenvolvimento econômico, incluindo apoio a pequenas e médias empresas. Já no universo das startups especificamente, é comum a presença de investidores-anjo (pessoas físicas que investem capital próprio em empresas em estágio inicial) e fundos de Venture Capital (empresas especializadas em investir em startups com alto potencial de crescimento, em troca de uma participação societária). Aceleradoras e incubadoras também têm papel de apoiar startups com mentoria, estrutura e, em alguns casos, investimento inicial.",
+    "reading_passage": "No Brasil, empresas e startups contam com diferentes fontes de apoio financeiro. O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) é um banco público que oferece linhas de financiamento voltadas a projetos de desenvolvimento econômico, incluindo apoio a pequenas e médias empresas. Já no universo das startups especificamente, é comum a presença de investidores-anjo (pessoas físicas que investem capital próprio em empresas em estágio inicial) e fundos de Venture Capital (empresas especializadas em investir em startups com alto potencial de crescimento, em troca de uma participação societária). Aceleradoras e incubadoras também têm papel de apoiar startups com mentoria, estrutura e, em alguns casos, investimento inicial.",
+    "hints": [
+      "Releia 'Como o mercado brasileiro apoia empresas e startups?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que é um investidor-anjo?",
+    "options": [
+      "Uma pessoa física que investe capital próprio em empresas em estágio inicial",
+      "Um fundo de investimento administrado pelo governo",
+      "Um tipo de seguro para startups",
+      "Um cargo dentro do Banco Central"
+    ],
+    "correct_answer": "Uma pessoa física que investe capital próprio em empresas em estágio inicial",
+    "explanation": "No Brasil, empresas e startups contam com diferentes fontes de apoio financeiro. O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) é um banco público que oferece linhas de financiamento voltadas a projetos de desenvolvimento econômico, incluindo apoio a pequenas e médias empresas. Já no universo das startups especificamente, é comum a presença de investidores-anjo (pessoas físicas que investem capital próprio em empresas em estágio inicial) e fundos de Venture Capital (empresas especializadas em investir em startups com alto potencial de crescimento, em troca de uma participação societária). Aceleradoras e incubadoras também têm papel de apoiar startups com mentoria, estrutura e, em alguns casos, investimento inicial.",
+    "reading_passage": "No Brasil, empresas e startups contam com diferentes fontes de apoio financeiro. O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) é um banco público que oferece linhas de financiamento voltadas a projetos de desenvolvimento econômico, incluindo apoio a pequenas e médias empresas. Já no universo das startups especificamente, é comum a presença de investidores-anjo (pessoas físicas que investem capital próprio em empresas em estágio inicial) e fundos de Venture Capital (empresas especializadas em investir em startups com alto potencial de crescimento, em troca de uma participação societária). Aceleradoras e incubadoras também têm papel de apoiar startups com mentoria, estrutura e, em alguns casos, investimento inicial.",
+    "hints": [
+      "Releia 'Como o mercado brasileiro apoia empresas e startups?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "bolsa",
+    "difficulty_level": 1,
+    "prompt": "O que fundos de Venture Capital costumam receber em troca de investir em uma startup?",
+    "options": [
+      "Uma participação societária na empresa",
+      "Apenas o pagamento de juros fixos",
+      "Isenção de impostos federais",
+      "Ações negociadas na B3 imediatamente"
+    ],
+    "correct_answer": "Uma participação societária na empresa",
+    "explanation": "No Brasil, empresas e startups contam com diferentes fontes de apoio financeiro. O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) é um banco público que oferece linhas de financiamento voltadas a projetos de desenvolvimento econômico, incluindo apoio a pequenas e médias empresas. Já no universo das startups especificamente, é comum a presença de investidores-anjo (pessoas físicas que investem capital próprio em empresas em estágio inicial) e fundos de Venture Capital (empresas especializadas em investir em startups com alto potencial de crescimento, em troca de uma participação societária). Aceleradoras e incubadoras também têm papel de apoiar startups com mentoria, estrutura e, em alguns casos, investimento inicial.",
+    "reading_passage": "No Brasil, empresas e startups contam com diferentes fontes de apoio financeiro. O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) é um banco público que oferece linhas de financiamento voltadas a projetos de desenvolvimento econômico, incluindo apoio a pequenas e médias empresas. Já no universo das startups especificamente, é comum a presença de investidores-anjo (pessoas físicas que investem capital próprio em empresas em estágio inicial) e fundos de Venture Capital (empresas especializadas em investir em startups com alto potencial de crescimento, em troca de uma participação societária). Aceleradoras e incubadoras também têm papel de apoiar startups com mentoria, estrutura e, em alguns casos, investimento inicial.",
+    "hints": [
+      "Releia 'Como o mercado brasileiro apoia empresas e startups?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  }
+]

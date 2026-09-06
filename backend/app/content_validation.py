@@ -94,6 +94,13 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
         # video_url/source_name/source_url na Pausa para Aprender de
         # Libras, aqui tratada como piso mínimo de compliance de
         # licenciamento (nunca embutir áudio sem crédito rastreável).
+        # V6 — Mundo dos Valores (05/09/2026). Opcional em qualquer outro
+        # território (None, mesmo padrão de prompt_image/clues) — texto
+        # lido ANTES da pergunta.
+        reading_passage = item.get("reading_passage")
+        if reading_passage is not None and not (isinstance(reading_passage, str) and reading_passage.strip()):
+            errors.append(f"{prefix}: reading_passage, quando presente, precisa ser uma string não vazia")
+
         audio_url = item.get("audio_url")
         audio_source_name = item.get("audio_source_name")
         audio_source_url = item.get("audio_source_url")

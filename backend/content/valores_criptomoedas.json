@@ -1,0 +1,914 @@
+[
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que é uma criptomoeda?",
+    "options": [
+      "Uma forma de dinheiro digital, sem cédulas ou moedas físicas",
+      "Uma moeda física emitida por um banco privado",
+      "Um tipo de ação negociada na bolsa",
+      "Um documento de identidade digital"
+    ],
+    "correct_answer": "Uma forma de dinheiro digital, sem cédulas ou moedas físicas",
+    "explanation": "Uma criptomoeda é uma forma de dinheiro digital que existe apenas em formato eletrônico, sem cédulas ou moedas físicas. Diferente do dinheiro tradicional, que é emitido e controlado por um banco central de um país, a maioria das criptomoedas funciona de forma descentralizada — ou seja, não depende de uma única instituição central para existir ou para validar as transações. O nome 'cripto' vem de criptografia, a técnica matemática usada para proteger e verificar as transações dentro desse sistema.",
+    "reading_passage": "Uma criptomoeda é uma forma de dinheiro digital que existe apenas em formato eletrônico, sem cédulas ou moedas físicas. Diferente do dinheiro tradicional, que é emitido e controlado por um banco central de um país, a maioria das criptomoedas funciona de forma descentralizada — ou seja, não depende de uma única instituição central para existir ou para validar as transações. O nome 'cripto' vem de criptografia, a técnica matemática usada para proteger e verificar as transações dentro desse sistema.",
+    "hints": [
+      "Releia 'O que é uma criptomoeda?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que diferencia a maioria das criptomoedas do dinheiro tradicional?",
+    "options": [
+      "Funcionam de forma descentralizada, sem um banco central único",
+      "São sempre mais caras que o dinheiro tradicional",
+      "Só podem ser usadas dentro de um país específico",
+      "São emitidas exclusivamente por governos"
+    ],
+    "correct_answer": "Funcionam de forma descentralizada, sem um banco central único",
+    "explanation": "Uma criptomoeda é uma forma de dinheiro digital que existe apenas em formato eletrônico, sem cédulas ou moedas físicas. Diferente do dinheiro tradicional, que é emitido e controlado por um banco central de um país, a maioria das criptomoedas funciona de forma descentralizada — ou seja, não depende de uma única instituição central para existir ou para validar as transações. O nome 'cripto' vem de criptografia, a técnica matemática usada para proteger e verificar as transações dentro desse sistema.",
+    "reading_passage": "Uma criptomoeda é uma forma de dinheiro digital que existe apenas em formato eletrônico, sem cédulas ou moedas físicas. Diferente do dinheiro tradicional, que é emitido e controlado por um banco central de um país, a maioria das criptomoedas funciona de forma descentralizada — ou seja, não depende de uma única instituição central para existir ou para validar as transações. O nome 'cripto' vem de criptografia, a técnica matemática usada para proteger e verificar as transações dentro desse sistema.",
+    "hints": [
+      "Releia 'O que é uma criptomoeda?' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "De onde vem o nome 'cripto' em criptomoeda?",
+    "options": [
+      "De criptografia, técnica usada para proteger as transações",
+      "Do nome do criador da primeira criptomoeda",
+      "De uma abreviação de 'crédito digital'",
+      "De uma sigla usada pelos bancos centrais"
+    ],
+    "correct_answer": "De criptografia, técnica usada para proteger as transações",
+    "explanation": "Uma criptomoeda é uma forma de dinheiro digital que existe apenas em formato eletrônico, sem cédulas ou moedas físicas. Diferente do dinheiro tradicional, que é emitido e controlado por um banco central de um país, a maioria das criptomoedas funciona de forma descentralizada — ou seja, não depende de uma única instituição central para existir ou para validar as transações. O nome 'cripto' vem de criptografia, a técnica matemática usada para proteger e verificar as transações dentro desse sistema.",
+    "reading_passage": "Uma criptomoeda é uma forma de dinheiro digital que existe apenas em formato eletrônico, sem cédulas ou moedas físicas. Diferente do dinheiro tradicional, que é emitido e controlado por um banco central de um país, a maioria das criptomoedas funciona de forma descentralizada — ou seja, não depende de uma única instituição central para existir ou para validar as transações. O nome 'cripto' vem de criptografia, a técnica matemática usada para proteger e verificar as transações dentro desse sistema.",
+    "hints": [
+      "Releia 'O que é uma criptomoeda?' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O Bitcoin foi a primeira criptomoeda a existir. Em que ano ele foi criado?",
+    "options": [
+      "2008",
+      "1998",
+      "2015",
+      "2001"
+    ],
+    "correct_answer": "2008",
+    "explanation": "O Bitcoin foi a primeira criptomoeda a existir, criada em 2008 por uma pessoa (ou grupo de pessoas) usando o pseudônimo Satoshi Nakamoto, cuja identidade real nunca foi confirmada publicamente. O Bitcoin foi lançado oficialmente em 2009, através de um documento técnico (conhecido como 'whitepaper') que descrevia como o sistema funcionaria. Existe um limite máximo de 21 milhões de unidades de Bitcoin que podem ser criadas ao longo do tempo — esse limite está definido no próprio código do sistema.",
+    "reading_passage": "O Bitcoin foi a primeira criptomoeda a existir, criada em 2008 por uma pessoa (ou grupo de pessoas) usando o pseudônimo Satoshi Nakamoto, cuja identidade real nunca foi confirmada publicamente. O Bitcoin foi lançado oficialmente em 2009, através de um documento técnico (conhecido como 'whitepaper') que descrevia como o sistema funcionaria. Existe um limite máximo de 21 milhões de unidades de Bitcoin que podem ser criadas ao longo do tempo — esse limite está definido no próprio código do sistema.",
+    "hints": [
+      "Releia 'O que é o Bitcoin?' — a resposta está no texto.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Qual é o pseudônimo usado pelo criador (ou criadores) do Bitcoin?",
+    "options": [
+      "Satoshi Nakamoto",
+      "Vitalik Buterin",
+      "John Nash",
+      "Craig Wright"
+    ],
+    "correct_answer": "Satoshi Nakamoto",
+    "explanation": "O Bitcoin foi a primeira criptomoeda a existir, criada em 2008 por uma pessoa (ou grupo de pessoas) usando o pseudônimo Satoshi Nakamoto, cuja identidade real nunca foi confirmada publicamente. O Bitcoin foi lançado oficialmente em 2009, através de um documento técnico (conhecido como 'whitepaper') que descrevia como o sistema funcionaria. Existe um limite máximo de 21 milhões de unidades de Bitcoin que podem ser criadas ao longo do tempo — esse limite está definido no próprio código do sistema.",
+    "reading_passage": "O Bitcoin foi a primeira criptomoeda a existir, criada em 2008 por uma pessoa (ou grupo de pessoas) usando o pseudônimo Satoshi Nakamoto, cuja identidade real nunca foi confirmada publicamente. O Bitcoin foi lançado oficialmente em 2009, através de um documento técnico (conhecido como 'whitepaper') que descrevia como o sistema funcionaria. Existe um limite máximo de 21 milhões de unidades de Bitcoin que podem ser criadas ao longo do tempo — esse limite está definido no próprio código do sistema.",
+    "hints": [
+      "Releia 'O que é o Bitcoin?' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Qual é o limite máximo de unidades de Bitcoin que podem existir, definido no código do sistema?",
+    "options": [
+      "21 milhões",
+      "1 bilhão",
+      "Sem limite definido",
+      "100 milhões"
+    ],
+    "correct_answer": "21 milhões",
+    "explanation": "O Bitcoin foi a primeira criptomoeda a existir, criada em 2008 por uma pessoa (ou grupo de pessoas) usando o pseudônimo Satoshi Nakamoto, cuja identidade real nunca foi confirmada publicamente. O Bitcoin foi lançado oficialmente em 2009, através de um documento técnico (conhecido como 'whitepaper') que descrevia como o sistema funcionaria. Existe um limite máximo de 21 milhões de unidades de Bitcoin que podem ser criadas ao longo do tempo — esse limite está definido no próprio código do sistema.",
+    "reading_passage": "O Bitcoin foi a primeira criptomoeda a existir, criada em 2008 por uma pessoa (ou grupo de pessoas) usando o pseudônimo Satoshi Nakamoto, cuja identidade real nunca foi confirmada publicamente. O Bitcoin foi lançado oficialmente em 2009, através de um documento técnico (conhecido como 'whitepaper') que descrevia como o sistema funcionaria. Existe um limite máximo de 21 milhões de unidades de Bitcoin que podem ser criadas ao longo do tempo — esse limite está definido no próprio código do sistema.",
+    "hints": [
+      "Releia 'O que é o Bitcoin?' — a resposta está no texto.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que é blockchain?",
+    "options": [
+      "Um livro de registros público organizado em blocos conectados em sequência",
+      "Um tipo específico de criptomoeda",
+      "Uma empresa que administra o Bitcoin",
+      "Um aplicativo de carteira digital"
+    ],
+    "correct_answer": "Um livro de registros público organizado em blocos conectados em sequência",
+    "explanation": "Blockchain é a tecnologia que serve de base para o funcionamento da maioria das criptomoedas. Ela funciona como um livro de registros público e compartilhado, organizado em 'blocos' de informação conectados em sequência (uma 'corrente', ou 'chain'). Cada bloco contém um conjunto de transações, e uma vez que um bloco é adicionado à cadeia, ele se torna extremamente difícil de alterar — essa característica é chamada de imutabilidade. A tecnologia blockchain não se limita a criptomoedas: também é estudada e aplicada em outras áreas, como rastreamento de cadeia de suprimentos e registro de documentos.",
+    "reading_passage": "Blockchain é a tecnologia que serve de base para o funcionamento da maioria das criptomoedas. Ela funciona como um livro de registros público e compartilhado, organizado em 'blocos' de informação conectados em sequência (uma 'corrente', ou 'chain'). Cada bloco contém um conjunto de transações, e uma vez que um bloco é adicionado à cadeia, ele se torna extremamente difícil de alterar — essa característica é chamada de imutabilidade. A tecnologia blockchain não se limita a criptomoedas: também é estudada e aplicada em outras áreas, como rastreamento de cadeia de suprimentos e registro de documentos.",
+    "hints": [
+      "Releia 'O que é blockchain?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que significa 'imutabilidade' no contexto de blockchain?",
+    "options": [
+      "Uma vez adicionado, um bloco se torna extremamente difícil de alterar",
+      "O preço do ativo nunca muda",
+      "A quantidade de usuários nunca aumenta",
+      "As transações nunca podem ser visualizadas"
+    ],
+    "correct_answer": "Uma vez adicionado, um bloco se torna extremamente difícil de alterar",
+    "explanation": "Blockchain é a tecnologia que serve de base para o funcionamento da maioria das criptomoedas. Ela funciona como um livro de registros público e compartilhado, organizado em 'blocos' de informação conectados em sequência (uma 'corrente', ou 'chain'). Cada bloco contém um conjunto de transações, e uma vez que um bloco é adicionado à cadeia, ele se torna extremamente difícil de alterar — essa característica é chamada de imutabilidade. A tecnologia blockchain não se limita a criptomoedas: também é estudada e aplicada em outras áreas, como rastreamento de cadeia de suprimentos e registro de documentos.",
+    "reading_passage": "Blockchain é a tecnologia que serve de base para o funcionamento da maioria das criptomoedas. Ela funciona como um livro de registros público e compartilhado, organizado em 'blocos' de informação conectados em sequência (uma 'corrente', ou 'chain'). Cada bloco contém um conjunto de transações, e uma vez que um bloco é adicionado à cadeia, ele se torna extremamente difícil de alterar — essa característica é chamada de imutabilidade. A tecnologia blockchain não se limita a criptomoedas: também é estudada e aplicada em outras áreas, como rastreamento de cadeia de suprimentos e registro de documentos.",
+    "hints": [
+      "Releia 'O que é blockchain?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "A tecnologia blockchain se limita apenas a criptomoedas?",
+    "options": [
+      "Não, também é aplicada em outras áreas, como rastreamento de cadeia de suprimentos",
+      "Sim, existe exclusivamente para criptomoedas",
+      "Sim, foi criada apenas para o Bitcoin",
+      "Não, mas só é usada por bancos centrais"
+    ],
+    "correct_answer": "Não, também é aplicada em outras áreas, como rastreamento de cadeia de suprimentos",
+    "explanation": "Blockchain é a tecnologia que serve de base para o funcionamento da maioria das criptomoedas. Ela funciona como um livro de registros público e compartilhado, organizado em 'blocos' de informação conectados em sequência (uma 'corrente', ou 'chain'). Cada bloco contém um conjunto de transações, e uma vez que um bloco é adicionado à cadeia, ele se torna extremamente difícil de alterar — essa característica é chamada de imutabilidade. A tecnologia blockchain não se limita a criptomoedas: também é estudada e aplicada em outras áreas, como rastreamento de cadeia de suprimentos e registro de documentos.",
+    "reading_passage": "Blockchain é a tecnologia que serve de base para o funcionamento da maioria das criptomoedas. Ela funciona como um livro de registros público e compartilhado, organizado em 'blocos' de informação conectados em sequência (uma 'corrente', ou 'chain'). Cada bloco contém um conjunto de transações, e uma vez que um bloco é adicionado à cadeia, ele se torna extremamente difícil de alterar — essa característica é chamada de imutabilidade. A tecnologia blockchain não se limita a criptomoedas: também é estudada e aplicada em outras áreas, como rastreamento de cadeia de suprimentos e registro de documentos.",
+    "hints": [
+      "Releia 'O que é blockchain?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que é mineração de criptomoeda?",
+    "options": [
+      "O processo pelo qual transações são verificadas e novas unidades são criadas",
+      "A compra de criptomoeda diretamente numa corretora",
+      "O armazenamento de criptomoeda numa carteira digital",
+      "A conversão de criptomoeda para dinheiro tradicional"
+    ],
+    "correct_answer": "O processo pelo qual transações são verificadas e novas unidades são criadas",
+    "explanation": "Mineração é o processo pelo qual novas transações são verificadas e adicionadas à blockchain, e novas unidades de determinadas criptomoedas (como o Bitcoin) são criadas como recompensa por esse trabalho. Esse processo é feito por computadores especializados, que competem para resolver problemas matemáticos complexos — o primeiro a resolver valida o próximo bloco de transações e recebe a recompensa. Esse mecanismo específico é chamado de 'Prova de Trabalho' (Proof of Work), e não é o único método existente entre diferentes criptomoedas — outras usam mecanismos alternativos, como 'Prova de Participação' (Proof of Stake).",
+    "reading_passage": "Mineração é o processo pelo qual novas transações são verificadas e adicionadas à blockchain, e novas unidades de determinadas criptomoedas (como o Bitcoin) são criadas como recompensa por esse trabalho. Esse processo é feito por computadores especializados, que competem para resolver problemas matemáticos complexos — o primeiro a resolver valida o próximo bloco de transações e recebe a recompensa. Esse mecanismo específico é chamado de 'Prova de Trabalho' (Proof of Work), e não é o único método existente entre diferentes criptomoedas — outras usam mecanismos alternativos, como 'Prova de Participação' (Proof of Stake).",
+    "hints": [
+      "Releia 'O que é mineração de criptomoeda?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Como se chama o mecanismo em que computadores competem para resolver problemas matemáticos e validar blocos?",
+    "options": [
+      "Prova de Trabalho (Proof of Work)",
+      "Prova de Participação (Proof of Stake)",
+      "Validação Instantânea",
+      "Mineração Simples"
+    ],
+    "correct_answer": "Prova de Trabalho (Proof of Work)",
+    "explanation": "Mineração é o processo pelo qual novas transações são verificadas e adicionadas à blockchain, e novas unidades de determinadas criptomoedas (como o Bitcoin) são criadas como recompensa por esse trabalho. Esse processo é feito por computadores especializados, que competem para resolver problemas matemáticos complexos — o primeiro a resolver valida o próximo bloco de transações e recebe a recompensa. Esse mecanismo específico é chamado de 'Prova de Trabalho' (Proof of Work), e não é o único método existente entre diferentes criptomoedas — outras usam mecanismos alternativos, como 'Prova de Participação' (Proof of Stake).",
+    "reading_passage": "Mineração é o processo pelo qual novas transações são verificadas e adicionadas à blockchain, e novas unidades de determinadas criptomoedas (como o Bitcoin) são criadas como recompensa por esse trabalho. Esse processo é feito por computadores especializados, que competem para resolver problemas matemáticos complexos — o primeiro a resolver valida o próximo bloco de transações e recebe a recompensa. Esse mecanismo específico é chamado de 'Prova de Trabalho' (Proof of Work), e não é o único método existente entre diferentes criptomoedas — outras usam mecanismos alternativos, como 'Prova de Participação' (Proof of Stake).",
+    "hints": [
+      "Releia 'O que é mineração de criptomoeda?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "A Prova de Trabalho é o único mecanismo de validação existente entre criptomoedas?",
+    "options": [
+      "Não, outras usam mecanismos alternativos, como Prova de Participação",
+      "Sim, é o único mecanismo existente",
+      "Sim, todas as criptomoedas usam exatamente o mesmo sistema",
+      "Não, mas o Bitcoin nunca usou esse mecanismo"
+    ],
+    "correct_answer": "Não, outras usam mecanismos alternativos, como Prova de Participação",
+    "explanation": "Mineração é o processo pelo qual novas transações são verificadas e adicionadas à blockchain, e novas unidades de determinadas criptomoedas (como o Bitcoin) são criadas como recompensa por esse trabalho. Esse processo é feito por computadores especializados, que competem para resolver problemas matemáticos complexos — o primeiro a resolver valida o próximo bloco de transações e recebe a recompensa. Esse mecanismo específico é chamado de 'Prova de Trabalho' (Proof of Work), e não é o único método existente entre diferentes criptomoedas — outras usam mecanismos alternativos, como 'Prova de Participação' (Proof of Stake).",
+    "reading_passage": "Mineração é o processo pelo qual novas transações são verificadas e adicionadas à blockchain, e novas unidades de determinadas criptomoedas (como o Bitcoin) são criadas como recompensa por esse trabalho. Esse processo é feito por computadores especializados, que competem para resolver problemas matemáticos complexos — o primeiro a resolver valida o próximo bloco de transações e recebe a recompensa. Esse mecanismo específico é chamado de 'Prova de Trabalho' (Proof of Work), e não é o único método existente entre diferentes criptomoedas — outras usam mecanismos alternativos, como 'Prova de Participação' (Proof of Stake).",
+    "hints": [
+      "Releia 'O que é mineração de criptomoeda?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Para que serve uma carteira digital (wallet)?",
+    "options": [
+      "Para armazenar, enviar e receber criptomoedas",
+      "Para converter criptomoeda em ações da bolsa",
+      "Para minerar novas criptomoedas automaticamente",
+      "Para pagar impostos sobre criptomoedas"
+    ],
+    "correct_answer": "Para armazenar, enviar e receber criptomoedas",
+    "explanation": "Uma carteira digital (em inglês, 'wallet') é a ferramenta usada para armazenar, enviar e receber criptomoedas. Tecnicamente, a carteira não guarda a criptomoeda em si — ela guarda as chaves criptográficas que dão acesso e permitem movimentar os ativos registrados na blockchain. Existem carteiras 'quentes' (conectadas à internet, geralmente mais práticas para uso frequente) e carteiras 'frias' (desconectadas da internet, geralmente usadas para armazenamento de longo prazo, com camada adicional de proteção física).",
+    "reading_passage": "Uma carteira digital (em inglês, 'wallet') é a ferramenta usada para armazenar, enviar e receber criptomoedas. Tecnicamente, a carteira não guarda a criptomoeda em si — ela guarda as chaves criptográficas que dão acesso e permitem movimentar os ativos registrados na blockchain. Existem carteiras 'quentes' (conectadas à internet, geralmente mais práticas para uso frequente) e carteiras 'frias' (desconectadas da internet, geralmente usadas para armazenamento de longo prazo, com camada adicional de proteção física).",
+    "hints": [
+      "Releia 'O que é uma carteira digital (wallet)?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que uma carteira digital efetivamente guarda?",
+    "options": [
+      "As chaves criptográficas que dão acesso aos ativos",
+      "A criptomoeda física em si",
+      "Uma cópia da blockchain inteira",
+      "O histórico de preços do ativo"
+    ],
+    "correct_answer": "As chaves criptográficas que dão acesso aos ativos",
+    "explanation": "Uma carteira digital (em inglês, 'wallet') é a ferramenta usada para armazenar, enviar e receber criptomoedas. Tecnicamente, a carteira não guarda a criptomoeda em si — ela guarda as chaves criptográficas que dão acesso e permitem movimentar os ativos registrados na blockchain. Existem carteiras 'quentes' (conectadas à internet, geralmente mais práticas para uso frequente) e carteiras 'frias' (desconectadas da internet, geralmente usadas para armazenamento de longo prazo, com camada adicional de proteção física).",
+    "reading_passage": "Uma carteira digital (em inglês, 'wallet') é a ferramenta usada para armazenar, enviar e receber criptomoedas. Tecnicamente, a carteira não guarda a criptomoeda em si — ela guarda as chaves criptográficas que dão acesso e permitem movimentar os ativos registrados na blockchain. Existem carteiras 'quentes' (conectadas à internet, geralmente mais práticas para uso frequente) e carteiras 'frias' (desconectadas da internet, geralmente usadas para armazenamento de longo prazo, com camada adicional de proteção física).",
+    "hints": [
+      "Releia 'O que é uma carteira digital (wallet)?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Qual é a diferença entre carteira 'quente' e carteira 'fria'?",
+    "options": [
+      "A quente está conectada à internet; a fria, não",
+      "A quente é gratuita; a fria é sempre paga",
+      "A quente é usada só por empresas; a fria, só por pessoas físicas",
+      "A quente guarda Bitcoin; a fria guarda outras criptomoedas"
+    ],
+    "correct_answer": "A quente está conectada à internet; a fria, não",
+    "explanation": "Uma carteira digital (em inglês, 'wallet') é a ferramenta usada para armazenar, enviar e receber criptomoedas. Tecnicamente, a carteira não guarda a criptomoeda em si — ela guarda as chaves criptográficas que dão acesso e permitem movimentar os ativos registrados na blockchain. Existem carteiras 'quentes' (conectadas à internet, geralmente mais práticas para uso frequente) e carteiras 'frias' (desconectadas da internet, geralmente usadas para armazenamento de longo prazo, com camada adicional de proteção física).",
+    "reading_passage": "Uma carteira digital (em inglês, 'wallet') é a ferramenta usada para armazenar, enviar e receber criptomoedas. Tecnicamente, a carteira não guarda a criptomoeda em si — ela guarda as chaves criptográficas que dão acesso e permitem movimentar os ativos registrados na blockchain. Existem carteiras 'quentes' (conectadas à internet, geralmente mais práticas para uso frequente) e carteiras 'frias' (desconectadas da internet, geralmente usadas para armazenamento de longo prazo, com camada adicional de proteção física).",
+    "hints": [
+      "Releia 'O que é uma carteira digital (wallet)?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o Ethereum foi lançado?",
+    "options": [
+      "2015",
+      "2009",
+      "2020",
+      "2012"
+    ],
+    "correct_answer": "2015",
+    "explanation": "Ethereum é uma plataforma de blockchain lançada em 2015, com uma criptomoeda própria chamada Ether (ETH). Diferente do Bitcoin, que foi criado principalmente como uma forma de dinheiro digital, o Ethereum foi desenhado para permitir a criação de 'contratos inteligentes' (smart contracts) — programas de computador que executam ações automaticamente quando certas condições são atendidas, sem depender de um intermediário central. O Ethereum é frequentemente citado como a segunda maior criptomoeda em termos de capitalização de mercado, atrás apenas do Bitcoin.",
+    "reading_passage": "Ethereum é uma plataforma de blockchain lançada em 2015, com uma criptomoeda própria chamada Ether (ETH). Diferente do Bitcoin, que foi criado principalmente como uma forma de dinheiro digital, o Ethereum foi desenhado para permitir a criação de 'contratos inteligentes' (smart contracts) — programas de computador que executam ações automaticamente quando certas condições são atendidas, sem depender de um intermediário central. O Ethereum é frequentemente citado como a segunda maior criptomoeda em termos de capitalização de mercado, atrás apenas do Bitcoin.",
+    "hints": [
+      "Releia 'O que é Ethereum?' — a resposta está no texto.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome da criptomoeda própria do Ethereum?",
+    "options": [
+      "Ether (ETH)",
+      "EtherCoin",
+      "EthCoin",
+      "SmartCoin"
+    ],
+    "correct_answer": "Ether (ETH)",
+    "explanation": "Ethereum é uma plataforma de blockchain lançada em 2015, com uma criptomoeda própria chamada Ether (ETH). Diferente do Bitcoin, que foi criado principalmente como uma forma de dinheiro digital, o Ethereum foi desenhado para permitir a criação de 'contratos inteligentes' (smart contracts) — programas de computador que executam ações automaticamente quando certas condições são atendidas, sem depender de um intermediário central. O Ethereum é frequentemente citado como a segunda maior criptomoeda em termos de capitalização de mercado, atrás apenas do Bitcoin.",
+    "reading_passage": "Ethereum é uma plataforma de blockchain lançada em 2015, com uma criptomoeda própria chamada Ether (ETH). Diferente do Bitcoin, que foi criado principalmente como uma forma de dinheiro digital, o Ethereum foi desenhado para permitir a criação de 'contratos inteligentes' (smart contracts) — programas de computador que executam ações automaticamente quando certas condições são atendidas, sem depender de um intermediário central. O Ethereum é frequentemente citado como a segunda maior criptomoeda em termos de capitalização de mercado, atrás apenas do Bitcoin.",
+    "hints": [
+      "Releia 'O que é Ethereum?' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Para que o Ethereum foi especialmente desenhado, além de ser uma criptomoeda?",
+    "options": [
+      "Para permitir a criação de contratos inteligentes (smart contracts)",
+      "Para substituir totalmente o sistema bancário mundial",
+      "Para ser usado exclusivamente por governos",
+      "Para eliminar a necessidade de mineração em qualquer criptomoeda"
+    ],
+    "correct_answer": "Para permitir a criação de contratos inteligentes (smart contracts)",
+    "explanation": "Ethereum é uma plataforma de blockchain lançada em 2015, com uma criptomoeda própria chamada Ether (ETH). Diferente do Bitcoin, que foi criado principalmente como uma forma de dinheiro digital, o Ethereum foi desenhado para permitir a criação de 'contratos inteligentes' (smart contracts) — programas de computador que executam ações automaticamente quando certas condições são atendidas, sem depender de um intermediário central. O Ethereum é frequentemente citado como a segunda maior criptomoeda em termos de capitalização de mercado, atrás apenas do Bitcoin.",
+    "reading_passage": "Ethereum é uma plataforma de blockchain lançada em 2015, com uma criptomoeda própria chamada Ether (ETH). Diferente do Bitcoin, que foi criado principalmente como uma forma de dinheiro digital, o Ethereum foi desenhado para permitir a criação de 'contratos inteligentes' (smart contracts) — programas de computador que executam ações automaticamente quando certas condições são atendidas, sem depender de um intermediário central. O Ethereum é frequentemente citado como a segunda maior criptomoeda em termos de capitalização de mercado, atrás apenas do Bitcoin.",
+    "hints": [
+      "Releia 'O que é Ethereum?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que é uma stablecoin?",
+    "options": [
+      "Um tipo de criptomoeda desenhada para manter valor estável",
+      "Uma criptomoeda que só pode ser minerada, nunca comprada",
+      "Um tipo de carteira digital de alta segurança",
+      "Uma taxa cobrada em toda transação de criptomoeda"
+    ],
+    "correct_answer": "Um tipo de criptomoeda desenhada para manter valor estável",
+    "explanation": "Uma stablecoin é um tipo de criptomoeda desenhada especificamente para manter um valor estável, geralmente atrelado a uma moeda tradicional, como o dólar americano. Isso é feito, na maioria dos casos, através de reservas — a empresa emissora da stablecoin mantém ativos (como dólares reais em conta bancária) equivalentes à quantidade de stablecoins em circulação, na tentativa de manter a paridade de valor. Esse mecanismo diferencia a stablecoin de criptomoedas como o Bitcoin, cujo valor não é atrelado a nenhum ativo específico e pode variar livremente conforme oferta e demanda no mercado.",
+    "reading_passage": "Uma stablecoin é um tipo de criptomoeda desenhada especificamente para manter um valor estável, geralmente atrelado a uma moeda tradicional, como o dólar americano. Isso é feito, na maioria dos casos, através de reservas — a empresa emissora da stablecoin mantém ativos (como dólares reais em conta bancária) equivalentes à quantidade de stablecoins em circulação, na tentativa de manter a paridade de valor. Esse mecanismo diferencia a stablecoin de criptomoedas como o Bitcoin, cujo valor não é atrelado a nenhum ativo específico e pode variar livremente conforme oferta e demanda no mercado.",
+    "hints": [
+      "Releia 'O que é uma stablecoin?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "A que uma stablecoin costuma estar atrelada?",
+    "options": [
+      "A uma moeda tradicional, como o dólar americano",
+      "Ao preço do ouro exclusivamente",
+      "A um índice da bolsa de valores",
+      "A nenhum ativo, seu valor é sempre fixo por decreto"
+    ],
+    "correct_answer": "A uma moeda tradicional, como o dólar americano",
+    "explanation": "Uma stablecoin é um tipo de criptomoeda desenhada especificamente para manter um valor estável, geralmente atrelado a uma moeda tradicional, como o dólar americano. Isso é feito, na maioria dos casos, através de reservas — a empresa emissora da stablecoin mantém ativos (como dólares reais em conta bancária) equivalentes à quantidade de stablecoins em circulação, na tentativa de manter a paridade de valor. Esse mecanismo diferencia a stablecoin de criptomoedas como o Bitcoin, cujo valor não é atrelado a nenhum ativo específico e pode variar livremente conforme oferta e demanda no mercado.",
+    "reading_passage": "Uma stablecoin é um tipo de criptomoeda desenhada especificamente para manter um valor estável, geralmente atrelado a uma moeda tradicional, como o dólar americano. Isso é feito, na maioria dos casos, através de reservas — a empresa emissora da stablecoin mantém ativos (como dólares reais em conta bancária) equivalentes à quantidade de stablecoins em circulação, na tentativa de manter a paridade de valor. Esse mecanismo diferencia a stablecoin de criptomoedas como o Bitcoin, cujo valor não é atrelado a nenhum ativo específico e pode variar livremente conforme oferta e demanda no mercado.",
+    "hints": [
+      "Releia 'O que é uma stablecoin?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Como a paridade de valor de uma stablecoin costuma ser mantida?",
+    "options": [
+      "Através de reservas de ativos equivalentes mantidas pela emissora",
+      "Através de mineração constante",
+      "Através de um contrato com a CVM",
+      "Através de votação entre os usuários"
+    ],
+    "correct_answer": "Através de reservas de ativos equivalentes mantidas pela emissora",
+    "explanation": "Uma stablecoin é um tipo de criptomoeda desenhada especificamente para manter um valor estável, geralmente atrelado a uma moeda tradicional, como o dólar americano. Isso é feito, na maioria dos casos, através de reservas — a empresa emissora da stablecoin mantém ativos (como dólares reais em conta bancária) equivalentes à quantidade de stablecoins em circulação, na tentativa de manter a paridade de valor. Esse mecanismo diferencia a stablecoin de criptomoedas como o Bitcoin, cujo valor não é atrelado a nenhum ativo específico e pode variar livremente conforme oferta e demanda no mercado.",
+    "reading_passage": "Uma stablecoin é um tipo de criptomoeda desenhada especificamente para manter um valor estável, geralmente atrelado a uma moeda tradicional, como o dólar americano. Isso é feito, na maioria dos casos, através de reservas — a empresa emissora da stablecoin mantém ativos (como dólares reais em conta bancária) equivalentes à quantidade de stablecoins em circulação, na tentativa de manter a paridade de valor. Esse mecanismo diferencia a stablecoin de criptomoedas como o Bitcoin, cujo valor não é atrelado a nenhum ativo específico e pode variar livremente conforme oferta e demanda no mercado.",
+    "hints": [
+      "Releia 'O que é uma stablecoin?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Qual lei estabeleceu o primeiro marco legal específico para criptoativos no Brasil?",
+    "options": [
+      "Lei 14.478, de 2022",
+      "Lei 8.078, de 1990",
+      "Lei 12.965, de 2014",
+      "Lei 13.709, de 2018"
+    ],
+    "correct_answer": "Lei 14.478, de 2022",
+    "explanation": "No Brasil, a Lei 14.478, sancionada em 2022, estabeleceu o primeiro marco legal específico para criptoativos no país, definindo regras gerais sobre prestadoras de serviços de ativos virtuais (como exchanges, plataformas onde criptomoedas podem ser compradas e vendidas). O Banco Central do Brasil foi designado como principal regulador desse mercado. Antes dessa lei, o uso e a comercialização de criptomoedas já eram legais no país, mas sem uma regulamentação específica tão abrangente — a nova lei buscou trazer mais clareza sobre supervisão e regras de funcionamento desse mercado.",
+    "reading_passage": "No Brasil, a Lei 14.478, sancionada em 2022, estabeleceu o primeiro marco legal específico para criptoativos no país, definindo regras gerais sobre prestadoras de serviços de ativos virtuais (como exchanges, plataformas onde criptomoedas podem ser compradas e vendidas). O Banco Central do Brasil foi designado como principal regulador desse mercado. Antes dessa lei, o uso e a comercialização de criptomoedas já eram legais no país, mas sem uma regulamentação específica tão abrangente — a nova lei buscou trazer mais clareza sobre supervisão e regras de funcionamento desse mercado.",
+    "hints": [
+      "Releia 'Como as criptomoedas são tratadas no Brasil?' — a resposta está no texto.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Qual instituição foi designada como principal reguladora do mercado de criptoativos no Brasil?",
+    "options": [
+      "Banco Central do Brasil",
+      "CVM",
+      "Receita Federal",
+      "B3"
+    ],
+    "correct_answer": "Banco Central do Brasil",
+    "explanation": "No Brasil, a Lei 14.478, sancionada em 2022, estabeleceu o primeiro marco legal específico para criptoativos no país, definindo regras gerais sobre prestadoras de serviços de ativos virtuais (como exchanges, plataformas onde criptomoedas podem ser compradas e vendidas). O Banco Central do Brasil foi designado como principal regulador desse mercado. Antes dessa lei, o uso e a comercialização de criptomoedas já eram legais no país, mas sem uma regulamentação específica tão abrangente — a nova lei buscou trazer mais clareza sobre supervisão e regras de funcionamento desse mercado.",
+    "reading_passage": "No Brasil, a Lei 14.478, sancionada em 2022, estabeleceu o primeiro marco legal específico para criptoativos no país, definindo regras gerais sobre prestadoras de serviços de ativos virtuais (como exchanges, plataformas onde criptomoedas podem ser compradas e vendidas). O Banco Central do Brasil foi designado como principal regulador desse mercado. Antes dessa lei, o uso e a comercialização de criptomoedas já eram legais no país, mas sem uma regulamentação específica tão abrangente — a nova lei buscou trazer mais clareza sobre supervisão e regras de funcionamento desse mercado.",
+    "hints": [
+      "Releia 'Como as criptomoedas são tratadas no Brasil?' — a resposta está no texto.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Antes da Lei 14.478, o uso de criptomoedas já era legal no Brasil?",
+    "options": [
+      "Sim, já era legal, mas sem regulamentação específica tão abrangente",
+      "Não, era proibido até 2022",
+      "Sim, mas só para empresas, nunca para pessoas físicas",
+      "Não, continua sendo tecnicamente ilegal até hoje"
+    ],
+    "correct_answer": "Sim, já era legal, mas sem regulamentação específica tão abrangente",
+    "explanation": "No Brasil, a Lei 14.478, sancionada em 2022, estabeleceu o primeiro marco legal específico para criptoativos no país, definindo regras gerais sobre prestadoras de serviços de ativos virtuais (como exchanges, plataformas onde criptomoedas podem ser compradas e vendidas). O Banco Central do Brasil foi designado como principal regulador desse mercado. Antes dessa lei, o uso e a comercialização de criptomoedas já eram legais no país, mas sem uma regulamentação específica tão abrangente — a nova lei buscou trazer mais clareza sobre supervisão e regras de funcionamento desse mercado.",
+    "reading_passage": "No Brasil, a Lei 14.478, sancionada em 2022, estabeleceu o primeiro marco legal específico para criptoativos no país, definindo regras gerais sobre prestadoras de serviços de ativos virtuais (como exchanges, plataformas onde criptomoedas podem ser compradas e vendidas). O Banco Central do Brasil foi designado como principal regulador desse mercado. Antes dessa lei, o uso e a comercialização de criptomoedas já eram legais no país, mas sem uma regulamentação específica tão abrangente — a nova lei buscou trazer mais clareza sobre supervisão e regras de funcionamento desse mercado.",
+    "hints": [
+      "Releia 'Como as criptomoedas são tratadas no Brasil?' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que a pessoa comprou na primeira transação comercial documentada com Bitcoin, em 2010?",
+    "options": [
+      "Duas pizzas",
+      "Um computador",
+      "Um carro usado",
+      "Uma casa"
+    ],
+    "correct_answer": "Duas pizzas",
+    "explanation": "Em maio de 2010, um programador pagou 10 mil bitcoins por duas pizzas, numa transação considerada a primeira compra comercial documentada usando a criptomoeda. Na época, aquele valor em bitcoins tinha um preço equivalente a poucos dólares. Esse episódio ficou conhecido como 'Bitcoin Pizza Day', e é lembrado até hoje pela comunidade de criptomoedas como um marco simbólico — o momento em que o Bitcoin deixou de ser apenas um experimento técnico entre programadores e passou a ser usado, na prática, como meio de troca por algo do mundo real.",
+    "reading_passage": "Em maio de 2010, um programador pagou 10 mil bitcoins por duas pizzas, numa transação considerada a primeira compra comercial documentada usando a criptomoeda. Na época, aquele valor em bitcoins tinha um preço equivalente a poucos dólares. Esse episódio ficou conhecido como 'Bitcoin Pizza Day', e é lembrado até hoje pela comunidade de criptomoedas como um marco simbólico — o momento em que o Bitcoin deixou de ser apenas um experimento técnico entre programadores e passou a ser usado, na prática, como meio de troca por algo do mundo real.",
+    "hints": [
+      "Releia 'Curiosidade: a primeira compra real com Bitcoin' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Como esse episódio ficou conhecido na comunidade cripto?",
+    "options": [
+      "Bitcoin Pizza Day",
+      "Satoshi's Feast",
+      "Crypto Lunch Day",
+      "First Coin Trade"
+    ],
+    "correct_answer": "Bitcoin Pizza Day",
+    "explanation": "Em maio de 2010, um programador pagou 10 mil bitcoins por duas pizzas, numa transação considerada a primeira compra comercial documentada usando a criptomoeda. Na época, aquele valor em bitcoins tinha um preço equivalente a poucos dólares. Esse episódio ficou conhecido como 'Bitcoin Pizza Day', e é lembrado até hoje pela comunidade de criptomoedas como um marco simbólico — o momento em que o Bitcoin deixou de ser apenas um experimento técnico entre programadores e passou a ser usado, na prática, como meio de troca por algo do mundo real.",
+    "reading_passage": "Em maio de 2010, um programador pagou 10 mil bitcoins por duas pizzas, numa transação considerada a primeira compra comercial documentada usando a criptomoeda. Na época, aquele valor em bitcoins tinha um preço equivalente a poucos dólares. Esse episódio ficou conhecido como 'Bitcoin Pizza Day', e é lembrado até hoje pela comunidade de criptomoedas como um marco simbólico — o momento em que o Bitcoin deixou de ser apenas um experimento técnico entre programadores e passou a ser usado, na prática, como meio de troca por algo do mundo real.",
+    "hints": [
+      "Releia 'Curiosidade: a primeira compra real com Bitcoin' — a resposta está no texto.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Por que esse episódio é considerado simbólico?",
+    "options": [
+      "Marcou o momento em que o Bitcoin passou a ser usado na prática como meio de troca",
+      "Foi a primeira vez que o Bitcoin foi minerado",
+      "Foi quando a CVM regulamentou criptomoedas no Brasil",
+      "Foi a criação da primeira exchange de criptomoedas"
+    ],
+    "correct_answer": "Marcou o momento em que o Bitcoin passou a ser usado na prática como meio de troca",
+    "explanation": "Em maio de 2010, um programador pagou 10 mil bitcoins por duas pizzas, numa transação considerada a primeira compra comercial documentada usando a criptomoeda. Na época, aquele valor em bitcoins tinha um preço equivalente a poucos dólares. Esse episódio ficou conhecido como 'Bitcoin Pizza Day', e é lembrado até hoje pela comunidade de criptomoedas como um marco simbólico — o momento em que o Bitcoin deixou de ser apenas um experimento técnico entre programadores e passou a ser usado, na prática, como meio de troca por algo do mundo real.",
+    "reading_passage": "Em maio de 2010, um programador pagou 10 mil bitcoins por duas pizzas, numa transação considerada a primeira compra comercial documentada usando a criptomoeda. Na época, aquele valor em bitcoins tinha um preço equivalente a poucos dólares. Esse episódio ficou conhecido como 'Bitcoin Pizza Day', e é lembrado até hoje pela comunidade de criptomoedas como um marco simbólico — o momento em que o Bitcoin deixou de ser apenas um experimento técnico entre programadores e passou a ser usado, na prática, como meio de troca por algo do mundo real.",
+    "hints": [
+      "Releia 'Curiosidade: a primeira compra real com Bitcoin' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que é o halving do Bitcoin?",
+    "options": [
+      "Um evento que reduz pela metade a recompensa dos mineradores",
+      "Uma taxa cobrada em cada transação",
+      "Uma nova versão do Bitcoin lançada anualmente",
+      "Um imposto sobre a mineração"
+    ],
+    "correct_answer": "Um evento que reduz pela metade a recompensa dos mineradores",
+    "explanation": "Halving é um evento programado no próprio código do Bitcoin que reduz pela metade a recompensa que os mineradores recebem por validar um novo bloco de transações. Esse evento acontece aproximadamente a cada quatro anos, e faz parte do mecanismo que controla o ritmo de criação de novos bitcoins, contribuindo para que o limite total de 21 milhões de unidades seja alcançado apenas de forma gradual, ao longo de muitas décadas. O halving é um exemplo de regra definida de forma transparente e pública desde a criação do sistema, sem depender de decisão posterior de nenhuma autoridade central.",
+    "reading_passage": "Halving é um evento programado no próprio código do Bitcoin que reduz pela metade a recompensa que os mineradores recebem por validar um novo bloco de transações. Esse evento acontece aproximadamente a cada quatro anos, e faz parte do mecanismo que controla o ritmo de criação de novos bitcoins, contribuindo para que o limite total de 21 milhões de unidades seja alcançado apenas de forma gradual, ao longo de muitas décadas. O halving é um exemplo de regra definida de forma transparente e pública desde a criação do sistema, sem depender de decisão posterior de nenhuma autoridade central.",
+    "hints": [
+      "Releia 'O que é o halving do Bitcoin?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Com que frequência aproximada o halving acontece?",
+    "options": [
+      "A cada quatro anos",
+      "A cada mês",
+      "A cada dez anos",
+      "A cada semana"
+    ],
+    "correct_answer": "A cada quatro anos",
+    "explanation": "Halving é um evento programado no próprio código do Bitcoin que reduz pela metade a recompensa que os mineradores recebem por validar um novo bloco de transações. Esse evento acontece aproximadamente a cada quatro anos, e faz parte do mecanismo que controla o ritmo de criação de novos bitcoins, contribuindo para que o limite total de 21 milhões de unidades seja alcançado apenas de forma gradual, ao longo de muitas décadas. O halving é um exemplo de regra definida de forma transparente e pública desde a criação do sistema, sem depender de decisão posterior de nenhuma autoridade central.",
+    "reading_passage": "Halving é um evento programado no próprio código do Bitcoin que reduz pela metade a recompensa que os mineradores recebem por validar um novo bloco de transações. Esse evento acontece aproximadamente a cada quatro anos, e faz parte do mecanismo que controla o ritmo de criação de novos bitcoins, contribuindo para que o limite total de 21 milhões de unidades seja alcançado apenas de forma gradual, ao longo de muitas décadas. O halving é um exemplo de regra definida de forma transparente e pública desde a criação do sistema, sem depender de decisão posterior de nenhuma autoridade central.",
+    "hints": [
+      "Releia 'O que é o halving do Bitcoin?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O halving depende de decisão de alguma autoridade central para acontecer?",
+    "options": [
+      "Não, é uma regra definida no próprio código desde a criação do sistema",
+      "Sim, depende de aprovação do Banco Central de cada país",
+      "Sim, depende de votação anual dos mineradores",
+      "Não, mas pode ser cancelado por decisão da CVM"
+    ],
+    "correct_answer": "Não, é uma regra definida no próprio código desde a criação do sistema",
+    "explanation": "Halving é um evento programado no próprio código do Bitcoin que reduz pela metade a recompensa que os mineradores recebem por validar um novo bloco de transações. Esse evento acontece aproximadamente a cada quatro anos, e faz parte do mecanismo que controla o ritmo de criação de novos bitcoins, contribuindo para que o limite total de 21 milhões de unidades seja alcançado apenas de forma gradual, ao longo de muitas décadas. O halving é um exemplo de regra definida de forma transparente e pública desde a criação do sistema, sem depender de decisão posterior de nenhuma autoridade central.",
+    "reading_passage": "Halving é um evento programado no próprio código do Bitcoin que reduz pela metade a recompensa que os mineradores recebem por validar um novo bloco de transações. Esse evento acontece aproximadamente a cada quatro anos, e faz parte do mecanismo que controla o ritmo de criação de novos bitcoins, contribuindo para que o limite total de 21 milhões de unidades seja alcançado apenas de forma gradual, ao longo de muitas décadas. O halving é um exemplo de regra definida de forma transparente e pública desde a criação do sistema, sem depender de decisão posterior de nenhuma autoridade central.",
+    "hints": [
+      "Releia 'O que é o halving do Bitcoin?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que caracteriza os ciclos históricos observados no mercado de criptomoedas?",
+    "options": [
+      "Períodos de forte alta seguidos por períodos de forte queda",
+      "Crescimento constante e linear, sem nenhuma variação",
+      "Estabilidade total de preço desde a criação do Bitcoin",
+      "Queda contínua desde 2009 sem nenhuma recuperação"
+    ],
+    "correct_answer": "Períodos de forte alta seguidos por períodos de forte queda",
+    "explanation": "O mercado de criptomoedas já passou por diversos ciclos históricos de forte alta seguidos de forte queda, um padrão observado repetidamente desde os primeiros anos do Bitcoin. Em 2017, por exemplo, o preço do Bitcoin passou por uma valorização expressiva ao longo do ano, seguida por um período de queda acentuada em 2018. Um padrão parecido se repetiu entre 2020 e 2022: forte alta em 2020-2021, puxada em parte pelo boom dos NFTs (tokens não-fungíveis), seguida por um período difícil em 2022, marcado por eventos como o colapso da stablecoin Terra/Luna e a falência da corretora FTX. Esses ciclos são estudados como parte da história do mercado, sem que isso implique qualquer garantia sobre como o mercado vai se comportar no futuro.",
+    "reading_passage": "O mercado de criptomoedas já passou por diversos ciclos históricos de forte alta seguidos de forte queda, um padrão observado repetidamente desde os primeiros anos do Bitcoin. Em 2017, por exemplo, o preço do Bitcoin passou por uma valorização expressiva ao longo do ano, seguida por um período de queda acentuada em 2018. Um padrão parecido se repetiu entre 2020 e 2022: forte alta em 2020-2021, puxada em parte pelo boom dos NFTs (tokens não-fungíveis), seguida por um período difícil em 2022, marcado por eventos como o colapso da stablecoin Terra/Luna e a falência da corretora FTX. Esses ciclos são estudados como parte da história do mercado, sem que isso implique qualquer garantia sobre como o mercado vai se comportar no futuro.",
+    "hints": [
+      "Releia 'Curiosidade histórica: os grandes ciclos do mercado cripto' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que impulsionou parte da alta do mercado cripto entre 2020 e 2021, segundo o texto?",
+    "options": [
+      "O boom dos NFTs (tokens não-fungíveis)",
+      "A criação da Lei 14.478 no Brasil",
+      "O lançamento do Ethereum",
+      "A adoção do padrão-ouro"
+    ],
+    "correct_answer": "O boom dos NFTs (tokens não-fungíveis)",
+    "explanation": "O mercado de criptomoedas já passou por diversos ciclos históricos de forte alta seguidos de forte queda, um padrão observado repetidamente desde os primeiros anos do Bitcoin. Em 2017, por exemplo, o preço do Bitcoin passou por uma valorização expressiva ao longo do ano, seguida por um período de queda acentuada em 2018. Um padrão parecido se repetiu entre 2020 e 2022: forte alta em 2020-2021, puxada em parte pelo boom dos NFTs (tokens não-fungíveis), seguida por um período difícil em 2022, marcado por eventos como o colapso da stablecoin Terra/Luna e a falência da corretora FTX. Esses ciclos são estudados como parte da história do mercado, sem que isso implique qualquer garantia sobre como o mercado vai se comportar no futuro.",
+    "reading_passage": "O mercado de criptomoedas já passou por diversos ciclos históricos de forte alta seguidos de forte queda, um padrão observado repetidamente desde os primeiros anos do Bitcoin. Em 2017, por exemplo, o preço do Bitcoin passou por uma valorização expressiva ao longo do ano, seguida por um período de queda acentuada em 2018. Um padrão parecido se repetiu entre 2020 e 2022: forte alta em 2020-2021, puxada em parte pelo boom dos NFTs (tokens não-fungíveis), seguida por um período difícil em 2022, marcado por eventos como o colapso da stablecoin Terra/Luna e a falência da corretora FTX. Esses ciclos são estudados como parte da história do mercado, sem que isso implique qualquer garantia sobre como o mercado vai se comportar no futuro.",
+    "hints": [
+      "Releia 'Curiosidade histórica: os grandes ciclos do mercado cripto' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Estudar os ciclos históricos do mercado cripto garante o quê sobre o futuro?",
+    "options": [
+      "Nada — não implica qualquer garantia sobre comportamento futuro",
+      "Garante que o próximo ciclo será sempre de alta",
+      "Garante uma previsão exata de quando a próxima queda ocorrerá",
+      "Garante que o mercado nunca mais terá quedas"
+    ],
+    "correct_answer": "Nada — não implica qualquer garantia sobre comportamento futuro",
+    "explanation": "O mercado de criptomoedas já passou por diversos ciclos históricos de forte alta seguidos de forte queda, um padrão observado repetidamente desde os primeiros anos do Bitcoin. Em 2017, por exemplo, o preço do Bitcoin passou por uma valorização expressiva ao longo do ano, seguida por um período de queda acentuada em 2018. Um padrão parecido se repetiu entre 2020 e 2022: forte alta em 2020-2021, puxada em parte pelo boom dos NFTs (tokens não-fungíveis), seguida por um período difícil em 2022, marcado por eventos como o colapso da stablecoin Terra/Luna e a falência da corretora FTX. Esses ciclos são estudados como parte da história do mercado, sem que isso implique qualquer garantia sobre como o mercado vai se comportar no futuro.",
+    "reading_passage": "O mercado de criptomoedas já passou por diversos ciclos históricos de forte alta seguidos de forte queda, um padrão observado repetidamente desde os primeiros anos do Bitcoin. Em 2017, por exemplo, o preço do Bitcoin passou por uma valorização expressiva ao longo do ano, seguida por um período de queda acentuada em 2018. Um padrão parecido se repetiu entre 2020 e 2022: forte alta em 2020-2021, puxada em parte pelo boom dos NFTs (tokens não-fungíveis), seguida por um período difícil em 2022, marcado por eventos como o colapso da stablecoin Terra/Luna e a falência da corretora FTX. Esses ciclos são estudados como parte da história do mercado, sem que isso implique qualquer garantia sobre como o mercado vai se comportar no futuro.",
+    "hints": [
+      "Releia 'Curiosidade histórica: os grandes ciclos do mercado cripto' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceu com a stablecoin Terra/Luna em maio de 2022?",
+    "options": [
+      "Perdeu sua paridade com o dólar de forma abrupta",
+      "Se tornou a criptomoeda mais valiosa do mundo",
+      "Foi adotada como moeda oficial por um país",
+      "Recebeu aprovação da CVM brasileira"
+    ],
+    "correct_answer": "Perdeu sua paridade com o dólar de forma abrupta",
+    "explanation": "Em maio de 2022, a stablecoin Terra (conhecida pelo código LUNA) perdeu sua paridade com o dólar de forma abrupta, um evento que ficou conhecido como o colapso da Terra/Luna — episódio amplamente estudado depois como um caso de falha no mecanismo que deveria manter aquele tipo específico de stablecoin estável. Meses depois, em novembro de 2022, a corretora de criptomoedas FTX, então uma das maiores do mundo, declarou falência em meio a acusações de má gestão de recursos de clientes. Esses dois episódios são frequentemente citados em discussões sobre a importância de entender como cada plataforma ou ativo específico realmente funciona, e sobre o papel da regulação nesse mercado.",
+    "reading_passage": "Em maio de 2022, a stablecoin Terra (conhecida pelo código LUNA) perdeu sua paridade com o dólar de forma abrupta, um evento que ficou conhecido como o colapso da Terra/Luna — episódio amplamente estudado depois como um caso de falha no mecanismo que deveria manter aquele tipo específico de stablecoin estável. Meses depois, em novembro de 2022, a corretora de criptomoedas FTX, então uma das maiores do mundo, declarou falência em meio a acusações de má gestão de recursos de clientes. Esses dois episódios são frequentemente citados em discussões sobre a importância de entender como cada plataforma ou ativo específico realmente funciona, e sobre o papel da regulação nesse mercado.",
+    "hints": [
+      "Releia 'Curiosidade histórica: colapsos que marcaram o mercado cripto' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceu com a corretora FTX em novembro de 2022?",
+    "options": [
+      "Declarou falência em meio a acusações de má gestão de recursos de clientes",
+      "Se tornou a maior bolsa de valores do mundo",
+      "Foi comprada pelo Banco Central americano",
+      "Lançou uma nova criptomoeda de sucesso"
+    ],
+    "correct_answer": "Declarou falência em meio a acusações de má gestão de recursos de clientes",
+    "explanation": "Em maio de 2022, a stablecoin Terra (conhecida pelo código LUNA) perdeu sua paridade com o dólar de forma abrupta, um evento que ficou conhecido como o colapso da Terra/Luna — episódio amplamente estudado depois como um caso de falha no mecanismo que deveria manter aquele tipo específico de stablecoin estável. Meses depois, em novembro de 2022, a corretora de criptomoedas FTX, então uma das maiores do mundo, declarou falência em meio a acusações de má gestão de recursos de clientes. Esses dois episódios são frequentemente citados em discussões sobre a importância de entender como cada plataforma ou ativo específico realmente funciona, e sobre o papel da regulação nesse mercado.",
+    "reading_passage": "Em maio de 2022, a stablecoin Terra (conhecida pelo código LUNA) perdeu sua paridade com o dólar de forma abrupta, um evento que ficou conhecido como o colapso da Terra/Luna — episódio amplamente estudado depois como um caso de falha no mecanismo que deveria manter aquele tipo específico de stablecoin estável. Meses depois, em novembro de 2022, a corretora de criptomoedas FTX, então uma das maiores do mundo, declarou falência em meio a acusações de má gestão de recursos de clientes. Esses dois episódios são frequentemente citados em discussões sobre a importância de entender como cada plataforma ou ativo específico realmente funciona, e sobre o papel da regulação nesse mercado.",
+    "hints": [
+      "Releia 'Curiosidade histórica: colapsos que marcaram o mercado cripto' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Esses dois episódios são frequentemente citados em discussões sobre o quê?",
+    "options": [
+      "A importância de entender como cada plataforma/ativo funciona e o papel da regulação",
+      "A garantia de que criptomoedas sempre sobem de valor",
+      "A proibição definitiva de criptomoedas no mundo todo",
+      "A criação de uma nova moeda única mundial"
+    ],
+    "correct_answer": "A importância de entender como cada plataforma/ativo funciona e o papel da regulação",
+    "explanation": "Em maio de 2022, a stablecoin Terra (conhecida pelo código LUNA) perdeu sua paridade com o dólar de forma abrupta, um evento que ficou conhecido como o colapso da Terra/Luna — episódio amplamente estudado depois como um caso de falha no mecanismo que deveria manter aquele tipo específico de stablecoin estável. Meses depois, em novembro de 2022, a corretora de criptomoedas FTX, então uma das maiores do mundo, declarou falência em meio a acusações de má gestão de recursos de clientes. Esses dois episódios são frequentemente citados em discussões sobre a importância de entender como cada plataforma ou ativo específico realmente funciona, e sobre o papel da regulação nesse mercado.",
+    "reading_passage": "Em maio de 2022, a stablecoin Terra (conhecida pelo código LUNA) perdeu sua paridade com o dólar de forma abrupta, um evento que ficou conhecido como o colapso da Terra/Luna — episódio amplamente estudado depois como um caso de falha no mecanismo que deveria manter aquele tipo específico de stablecoin estável. Meses depois, em novembro de 2022, a corretora de criptomoedas FTX, então uma das maiores do mundo, declarou falência em meio a acusações de má gestão de recursos de clientes. Esses dois episódios são frequentemente citados em discussões sobre a importância de entender como cada plataforma ou ativo específico realmente funciona, e sobre o papel da regulação nesse mercado.",
+    "hints": [
+      "Releia 'Curiosidade histórica: colapsos que marcaram o mercado cripto' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Por que a mineração por Prova de Trabalho consome tanta energia elétrica?",
+    "options": [
+      "Envolve muitos computadores competindo para resolver problemas matemáticos complexos",
+      "Porque cada transação precisa ser impressa em papel",
+      "Porque exige refrigeração de data centers do governo",
+      "Porque cada moeda precisa ser fisicamente cunhada"
+    ],
+    "correct_answer": "Envolve muitos computadores competindo para resolver problemas matemáticos complexos",
+    "explanation": "A mineração de criptomoedas que usam o mecanismo de Prova de Trabalho (como o Bitcoin) consome uma quantidade significativa de energia elétrica, já que envolve muitos computadores competindo continuamente para resolver problemas matemáticos complexos. Esse consumo energético gerou debate público sobre o impacto ambiental dessa atividade, especialmente em regiões onde a energia usada vem de fontes não-renováveis. Em resposta a esse tipo de preocupação, o Ethereum — a segunda maior criptomoeda em capitalização de mercado — migrou, em 2022, do mecanismo de Prova de Trabalho para o de Prova de Participação (Proof of Stake), reduzindo seu consumo energético de forma expressiva, segundo estimativas da própria comunidade de desenvolvedores do projeto.",
+    "reading_passage": "A mineração de criptomoedas que usam o mecanismo de Prova de Trabalho (como o Bitcoin) consome uma quantidade significativa de energia elétrica, já que envolve muitos computadores competindo continuamente para resolver problemas matemáticos complexos. Esse consumo energético gerou debate público sobre o impacto ambiental dessa atividade, especialmente em regiões onde a energia usada vem de fontes não-renováveis. Em resposta a esse tipo de preocupação, o Ethereum — a segunda maior criptomoeda em capitalização de mercado — migrou, em 2022, do mecanismo de Prova de Trabalho para o de Prova de Participação (Proof of Stake), reduzindo seu consumo energético de forma expressiva, segundo estimativas da própria comunidade de desenvolvedores do projeto.",
+    "hints": [
+      "Releia 'Qual é o impacto ambiental da mineração de criptomoedas?' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Qual criptomoeda migrou, em 2022, de Prova de Trabalho para Prova de Participação, visando reduzir consumo energético?",
+    "options": [
+      "Ethereum",
+      "Bitcoin",
+      "Dogecoin",
+      "Litecoin"
+    ],
+    "correct_answer": "Ethereum",
+    "explanation": "A mineração de criptomoedas que usam o mecanismo de Prova de Trabalho (como o Bitcoin) consome uma quantidade significativa de energia elétrica, já que envolve muitos computadores competindo continuamente para resolver problemas matemáticos complexos. Esse consumo energético gerou debate público sobre o impacto ambiental dessa atividade, especialmente em regiões onde a energia usada vem de fontes não-renováveis. Em resposta a esse tipo de preocupação, o Ethereum — a segunda maior criptomoeda em capitalização de mercado — migrou, em 2022, do mecanismo de Prova de Trabalho para o de Prova de Participação (Proof of Stake), reduzindo seu consumo energético de forma expressiva, segundo estimativas da própria comunidade de desenvolvedores do projeto.",
+    "reading_passage": "A mineração de criptomoedas que usam o mecanismo de Prova de Trabalho (como o Bitcoin) consome uma quantidade significativa de energia elétrica, já que envolve muitos computadores competindo continuamente para resolver problemas matemáticos complexos. Esse consumo energético gerou debate público sobre o impacto ambiental dessa atividade, especialmente em regiões onde a energia usada vem de fontes não-renováveis. Em resposta a esse tipo de preocupação, o Ethereum — a segunda maior criptomoeda em capitalização de mercado — migrou, em 2022, do mecanismo de Prova de Trabalho para o de Prova de Participação (Proof of Stake), reduzindo seu consumo energético de forma expressiva, segundo estimativas da própria comunidade de desenvolvedores do projeto.",
+    "hints": [
+      "Releia 'Qual é o impacto ambiental da mineração de criptomoedas?' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que motivou parte do debate público sobre mineração de criptomoedas?",
+    "options": [
+      "O impacto ambiental relacionado ao consumo de energia elétrica",
+      "O custo de impressão de moedas físicas",
+      "A falta de aplicativos de celular para criptomoedas",
+      "A proibição total de internet em alguns países"
+    ],
+    "correct_answer": "O impacto ambiental relacionado ao consumo de energia elétrica",
+    "explanation": "A mineração de criptomoedas que usam o mecanismo de Prova de Trabalho (como o Bitcoin) consome uma quantidade significativa de energia elétrica, já que envolve muitos computadores competindo continuamente para resolver problemas matemáticos complexos. Esse consumo energético gerou debate público sobre o impacto ambiental dessa atividade, especialmente em regiões onde a energia usada vem de fontes não-renováveis. Em resposta a esse tipo de preocupação, o Ethereum — a segunda maior criptomoeda em capitalização de mercado — migrou, em 2022, do mecanismo de Prova de Trabalho para o de Prova de Participação (Proof of Stake), reduzindo seu consumo energético de forma expressiva, segundo estimativas da própria comunidade de desenvolvedores do projeto.",
+    "reading_passage": "A mineração de criptomoedas que usam o mecanismo de Prova de Trabalho (como o Bitcoin) consome uma quantidade significativa de energia elétrica, já que envolve muitos computadores competindo continuamente para resolver problemas matemáticos complexos. Esse consumo energético gerou debate público sobre o impacto ambiental dessa atividade, especialmente em regiões onde a energia usada vem de fontes não-renováveis. Em resposta a esse tipo de preocupação, o Ethereum — a segunda maior criptomoeda em capitalização de mercado — migrou, em 2022, do mecanismo de Prova de Trabalho para o de Prova de Participação (Proof of Stake), reduzindo seu consumo energético de forma expressiva, segundo estimativas da própria comunidade de desenvolvedores do projeto.",
+    "hints": [
+      "Releia 'Qual é o impacto ambiental da mineração de criptomoedas?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que é um contrato inteligente (smart contract)?",
+    "options": [
+      "Um programa de computador que executa ações automaticamente quando condições pré-programadas são satisfeitas",
+      "Um documento em papel assinado digitalmente",
+      "Um tipo específico de criptomoeda",
+      "Um acordo verbal registrado em áudio na blockchain"
+    ],
+    "correct_answer": "Um programa de computador que executa ações automaticamente quando condições pré-programadas são satisfeitas",
+    "explanation": "Um contrato inteligente é um programa de computador que roda numa blockchain (mais comumente associado ao Ethereum) e executa ações automaticamente quando condições pré-programadas são satisfeitas — sem depender de um intermediário humano ou de uma instituição central para isso acontecer. Por exemplo, um contrato inteligente poderia ser programado para liberar um pagamento automaticamente assim que uma entrega for confirmada, sem que nenhuma das partes precise confiar cegamente na outra: o próprio código executa o que foi combinado. Contratos inteligentes são a base técnica de aplicações descentralizadas (conhecidas como dApps) e de todo o ecossistema chamado de Finanças Descentralizadas (DeFi).",
+    "reading_passage": "Um contrato inteligente é um programa de computador que roda numa blockchain (mais comumente associado ao Ethereum) e executa ações automaticamente quando condições pré-programadas são satisfeitas — sem depender de um intermediário humano ou de uma instituição central para isso acontecer. Por exemplo, um contrato inteligente poderia ser programado para liberar um pagamento automaticamente assim que uma entrega for confirmada, sem que nenhuma das partes precise confiar cegamente na outra: o próprio código executa o que foi combinado. Contratos inteligentes são a base técnica de aplicações descentralizadas (conhecidas como dApps) e de todo o ecossistema chamado de Finanças Descentralizadas (DeFi).",
+    "hints": [
+      "Releia 'Como funciona um contrato inteligente (smart contract), na prática?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Contratos inteligentes dependem de um intermediário humano para funcionar?",
+    "options": [
+      "Não, o próprio código executa o que foi combinado",
+      "Sim, sempre precisam de um banco para validar",
+      "Sim, sempre precisam de aprovação da CVM",
+      "Não, mas dependem de um cartório digital"
+    ],
+    "correct_answer": "Não, o próprio código executa o que foi combinado",
+    "explanation": "Um contrato inteligente é um programa de computador que roda numa blockchain (mais comumente associado ao Ethereum) e executa ações automaticamente quando condições pré-programadas são satisfeitas — sem depender de um intermediário humano ou de uma instituição central para isso acontecer. Por exemplo, um contrato inteligente poderia ser programado para liberar um pagamento automaticamente assim que uma entrega for confirmada, sem que nenhuma das partes precise confiar cegamente na outra: o próprio código executa o que foi combinado. Contratos inteligentes são a base técnica de aplicações descentralizadas (conhecidas como dApps) e de todo o ecossistema chamado de Finanças Descentralizadas (DeFi).",
+    "reading_passage": "Um contrato inteligente é um programa de computador que roda numa blockchain (mais comumente associado ao Ethereum) e executa ações automaticamente quando condições pré-programadas são satisfeitas — sem depender de um intermediário humano ou de uma instituição central para isso acontecer. Por exemplo, um contrato inteligente poderia ser programado para liberar um pagamento automaticamente assim que uma entrega for confirmada, sem que nenhuma das partes precise confiar cegamente na outra: o próprio código executa o que foi combinado. Contratos inteligentes são a base técnica de aplicações descentralizadas (conhecidas como dApps) e de todo o ecossistema chamado de Finanças Descentralizadas (DeFi).",
+    "hints": [
+      "Releia 'Como funciona um contrato inteligente (smart contract), na prática?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Contratos inteligentes são a base técnica de qual ecossistema, citado no texto?",
+    "options": [
+      "Finanças Descentralizadas (DeFi)",
+      "Sistema bancário tradicional",
+      "Mercado de ações da B3",
+      "Sistema de previdência pública"
+    ],
+    "correct_answer": "Finanças Descentralizadas (DeFi)",
+    "explanation": "Um contrato inteligente é um programa de computador que roda numa blockchain (mais comumente associado ao Ethereum) e executa ações automaticamente quando condições pré-programadas são satisfeitas — sem depender de um intermediário humano ou de uma instituição central para isso acontecer. Por exemplo, um contrato inteligente poderia ser programado para liberar um pagamento automaticamente assim que uma entrega for confirmada, sem que nenhuma das partes precise confiar cegamente na outra: o próprio código executa o que foi combinado. Contratos inteligentes são a base técnica de aplicações descentralizadas (conhecidas como dApps) e de todo o ecossistema chamado de Finanças Descentralizadas (DeFi).",
+    "reading_passage": "Um contrato inteligente é um programa de computador que roda numa blockchain (mais comumente associado ao Ethereum) e executa ações automaticamente quando condições pré-programadas são satisfeitas — sem depender de um intermediário humano ou de uma instituição central para isso acontecer. Por exemplo, um contrato inteligente poderia ser programado para liberar um pagamento automaticamente assim que uma entrega for confirmada, sem que nenhuma das partes precise confiar cegamente na outra: o próprio código executa o que foi combinado. Contratos inteligentes são a base técnica de aplicações descentralizadas (conhecidas como dApps) e de todo o ecossistema chamado de Finanças Descentralizadas (DeFi).",
+    "hints": [
+      "Releia 'Como funciona um contrato inteligente (smart contract), na prática?' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Qual é um dos impactos sociais mais discutidos das criptomoedas, segundo o texto?",
+    "options": [
+      "O potencial de servir como alternativa de acesso a serviços financeiros para quem não tem conta bancária",
+      "A eliminação total dos bancos tradicionais no mundo",
+      "A obrigatoriedade de todo cidadão possuir criptomoeda",
+      "O fim do uso de dinheiro físico em qualquer país"
+    ],
+    "correct_answer": "O potencial de servir como alternativa de acesso a serviços financeiros para quem não tem conta bancária",
+    "explanation": "Um dos impactos sociais mais discutidos das criptomoedas é o potencial de servir como alternativa de acesso a serviços financeiros para pessoas que não têm conta bancária tradicional — uma situação relativamente comum em diversas partes do mundo. Como criptomoedas podem, em teoria, ser acessadas por qualquer pessoa com um dispositivo conectado à internet, sem necessidade de abrir conta num banco tradicional, elas são frequentemente citadas em discussões sobre inclusão financeira. Criptomoedas também passaram a ser usadas em remessas internacionais — o envio de dinheiro entre países, especialmente por trabalhadores migrantes — como alternativa que pode, em determinados contextos, reduzir custo e tempo em comparação a métodos tradicionais de transferência internacional.",
+    "reading_passage": "Um dos impactos sociais mais discutidos das criptomoedas é o potencial de servir como alternativa de acesso a serviços financeiros para pessoas que não têm conta bancária tradicional — uma situação relativamente comum em diversas partes do mundo. Como criptomoedas podem, em teoria, ser acessadas por qualquer pessoa com um dispositivo conectado à internet, sem necessidade de abrir conta num banco tradicional, elas são frequentemente citadas em discussões sobre inclusão financeira. Criptomoedas também passaram a ser usadas em remessas internacionais — o envio de dinheiro entre países, especialmente por trabalhadores migrantes — como alternativa que pode, em determinados contextos, reduzir custo e tempo em comparação a métodos tradicionais de transferência internacional.",
+    "hints": [
+      "Releia 'Qual é o impacto social das criptomoedas em inclusão financeira?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Para que tipo de uso internacional as criptomoedas também passaram a ser usadas, segundo o texto?",
+    "options": [
+      "Remessas internacionais, como o envio de dinheiro entre países por trabalhadores migrantes",
+      "Pagamento obrigatório de impostos federais",
+      "Substituição total dos passaportes",
+      "Emissão de vistos de viagem"
+    ],
+    "correct_answer": "Remessas internacionais, como o envio de dinheiro entre países por trabalhadores migrantes",
+    "explanation": "Um dos impactos sociais mais discutidos das criptomoedas é o potencial de servir como alternativa de acesso a serviços financeiros para pessoas que não têm conta bancária tradicional — uma situação relativamente comum em diversas partes do mundo. Como criptomoedas podem, em teoria, ser acessadas por qualquer pessoa com um dispositivo conectado à internet, sem necessidade de abrir conta num banco tradicional, elas são frequentemente citadas em discussões sobre inclusão financeira. Criptomoedas também passaram a ser usadas em remessas internacionais — o envio de dinheiro entre países, especialmente por trabalhadores migrantes — como alternativa que pode, em determinados contextos, reduzir custo e tempo em comparação a métodos tradicionais de transferência internacional.",
+    "reading_passage": "Um dos impactos sociais mais discutidos das criptomoedas é o potencial de servir como alternativa de acesso a serviços financeiros para pessoas que não têm conta bancária tradicional — uma situação relativamente comum em diversas partes do mundo. Como criptomoedas podem, em teoria, ser acessadas por qualquer pessoa com um dispositivo conectado à internet, sem necessidade de abrir conta num banco tradicional, elas são frequentemente citadas em discussões sobre inclusão financeira. Criptomoedas também passaram a ser usadas em remessas internacionais — o envio de dinheiro entre países, especialmente por trabalhadores migrantes — como alternativa que pode, em determinados contextos, reduzir custo e tempo em comparação a métodos tradicionais de transferência internacional.",
+    "hints": [
+      "Releia 'Qual é o impacto social das criptomoedas em inclusão financeira?' — a resposta está no texto.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Por que criptomoedas são citadas em discussões sobre inclusão financeira?",
+    "options": [
+      "Porque podem, em teoria, ser acessadas por qualquer pessoa com dispositivo conectado à internet, sem precisar de conta bancária",
+      "Porque são gratuitas para qualquer pessoa obter",
+      "Porque substituem automaticamente a necessidade de documento de identidade",
+      "Porque eliminam a necessidade de internet para uso"
+    ],
+    "correct_answer": "Porque podem, em teoria, ser acessadas por qualquer pessoa com dispositivo conectado à internet, sem precisar de conta bancária",
+    "explanation": "Um dos impactos sociais mais discutidos das criptomoedas é o potencial de servir como alternativa de acesso a serviços financeiros para pessoas que não têm conta bancária tradicional — uma situação relativamente comum em diversas partes do mundo. Como criptomoedas podem, em teoria, ser acessadas por qualquer pessoa com um dispositivo conectado à internet, sem necessidade de abrir conta num banco tradicional, elas são frequentemente citadas em discussões sobre inclusão financeira. Criptomoedas também passaram a ser usadas em remessas internacionais — o envio de dinheiro entre países, especialmente por trabalhadores migrantes — como alternativa que pode, em determinados contextos, reduzir custo e tempo em comparação a métodos tradicionais de transferência internacional.",
+    "reading_passage": "Um dos impactos sociais mais discutidos das criptomoedas é o potencial de servir como alternativa de acesso a serviços financeiros para pessoas que não têm conta bancária tradicional — uma situação relativamente comum em diversas partes do mundo. Como criptomoedas podem, em teoria, ser acessadas por qualquer pessoa com um dispositivo conectado à internet, sem necessidade de abrir conta num banco tradicional, elas são frequentemente citadas em discussões sobre inclusão financeira. Criptomoedas também passaram a ser usadas em remessas internacionais — o envio de dinheiro entre países, especialmente por trabalhadores migrantes — como alternativa que pode, em determinados contextos, reduzir custo e tempo em comparação a métodos tradicionais de transferência internacional.",
+    "hints": [
+      "Releia 'Qual é o impacto social das criptomoedas em inclusão financeira?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que significa a sigla NFT?",
+    "options": [
+      "Non-Fungible Token (Token Não-Fungível)",
+      "New Financial Technology",
+      "National Fund Transfer",
+      "Network File Type"
+    ],
+    "correct_answer": "Non-Fungible Token (Token Não-Fungível)",
+    "explanation": "NFT é a sigla para 'Non-Fungible Token' (Token Não-Fungível). Diferente de uma criptomoeda comum, onde cada unidade é idêntica e intercambiável com qualquer outra (por isso 'fungível'), um NFT representa algo único e não-intercambiável, registrado numa blockchain — geralmente associado a um item digital específico, como uma imagem, vídeo ou outro tipo de arquivo. Em 2021, os NFTs se tornaram um fenômeno amplamente comentado, com o mercado desse tipo de token crescendo de forma expressiva ao longo do ano, impulsionado por interesse de artistas digitais, marcas e colecionadores. Tecnicamente, os NFTs abriram debate sobre como conceitos de propriedade e autenticidade digital podem funcionar num mundo cada vez mais virtual.",
+    "reading_passage": "NFT é a sigla para 'Non-Fungible Token' (Token Não-Fungível). Diferente de uma criptomoeda comum, onde cada unidade é idêntica e intercambiável com qualquer outra (por isso 'fungível'), um NFT representa algo único e não-intercambiável, registrado numa blockchain — geralmente associado a um item digital específico, como uma imagem, vídeo ou outro tipo de arquivo. Em 2021, os NFTs se tornaram um fenômeno amplamente comentado, com o mercado desse tipo de token crescendo de forma expressiva ao longo do ano, impulsionado por interesse de artistas digitais, marcas e colecionadores. Tecnicamente, os NFTs abriram debate sobre como conceitos de propriedade e autenticidade digital podem funcionar num mundo cada vez mais virtual.",
+    "hints": [
+      "Releia 'O que são NFTs e por que viraram um fenômeno tecnológico?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "O que diferencia um NFT de uma criptomoeda comum, como o Bitcoin?",
+    "options": [
+      "O NFT representa algo único e não-intercambiável, enquanto criptomoedas comuns são idênticas entre si",
+      "O NFT não usa nenhuma tecnologia blockchain",
+      "O NFT é sempre mais barato que qualquer criptomoeda",
+      "O NFT só pode ser criado pelo governo"
+    ],
+    "correct_answer": "O NFT representa algo único e não-intercambiável, enquanto criptomoedas comuns são idênticas entre si",
+    "explanation": "NFT é a sigla para 'Non-Fungible Token' (Token Não-Fungível). Diferente de uma criptomoeda comum, onde cada unidade é idêntica e intercambiável com qualquer outra (por isso 'fungível'), um NFT representa algo único e não-intercambiável, registrado numa blockchain — geralmente associado a um item digital específico, como uma imagem, vídeo ou outro tipo de arquivo. Em 2021, os NFTs se tornaram um fenômeno amplamente comentado, com o mercado desse tipo de token crescendo de forma expressiva ao longo do ano, impulsionado por interesse de artistas digitais, marcas e colecionadores. Tecnicamente, os NFTs abriram debate sobre como conceitos de propriedade e autenticidade digital podem funcionar num mundo cada vez mais virtual.",
+    "reading_passage": "NFT é a sigla para 'Non-Fungible Token' (Token Não-Fungível). Diferente de uma criptomoeda comum, onde cada unidade é idêntica e intercambiável com qualquer outra (por isso 'fungível'), um NFT representa algo único e não-intercambiável, registrado numa blockchain — geralmente associado a um item digital específico, como uma imagem, vídeo ou outro tipo de arquivo. Em 2021, os NFTs se tornaram um fenômeno amplamente comentado, com o mercado desse tipo de token crescendo de forma expressiva ao longo do ano, impulsionado por interesse de artistas digitais, marcas e colecionadores. Tecnicamente, os NFTs abriram debate sobre como conceitos de propriedade e autenticidade digital podem funcionar num mundo cada vez mais virtual.",
+    "hints": [
+      "Releia 'O que são NFTs e por que viraram um fenômeno tecnológico?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "criptomoedas",
+    "difficulty_level": 1,
+    "prompt": "Em que ano os NFTs se tornaram um fenômeno amplamente comentado, segundo o texto?",
+    "options": [
+      "2021",
+      "2015",
+      "2009",
+      "2023"
+    ],
+    "correct_answer": "2021",
+    "explanation": "NFT é a sigla para 'Non-Fungible Token' (Token Não-Fungível). Diferente de uma criptomoeda comum, onde cada unidade é idêntica e intercambiável com qualquer outra (por isso 'fungível'), um NFT representa algo único e não-intercambiável, registrado numa blockchain — geralmente associado a um item digital específico, como uma imagem, vídeo ou outro tipo de arquivo. Em 2021, os NFTs se tornaram um fenômeno amplamente comentado, com o mercado desse tipo de token crescendo de forma expressiva ao longo do ano, impulsionado por interesse de artistas digitais, marcas e colecionadores. Tecnicamente, os NFTs abriram debate sobre como conceitos de propriedade e autenticidade digital podem funcionar num mundo cada vez mais virtual.",
+    "reading_passage": "NFT é a sigla para 'Non-Fungible Token' (Token Não-Fungível). Diferente de uma criptomoeda comum, onde cada unidade é idêntica e intercambiável com qualquer outra (por isso 'fungível'), um NFT representa algo único e não-intercambiável, registrado numa blockchain — geralmente associado a um item digital específico, como uma imagem, vídeo ou outro tipo de arquivo. Em 2021, os NFTs se tornaram um fenômeno amplamente comentado, com o mercado desse tipo de token crescendo de forma expressiva ao longo do ano, impulsionado por interesse de artistas digitais, marcas e colecionadores. Tecnicamente, os NFTs abriram debate sobre como conceitos de propriedade e autenticidade digital podem funcionar num mundo cada vez mais virtual.",
+    "hints": [
+      "Releia 'O que são NFTs e por que viraram um fenômeno tecnológico?' — a resposta está no texto.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  }
+]

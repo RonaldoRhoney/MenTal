@@ -15,6 +15,20 @@ const Set<String> kAlwaysTimedTerritoryIds = {
   'curiosidade_relampago',
 };
 
+/// V6 — Mundo dos Valores (05/09/2026): "cápsula de texto + perguntas"
+/// exige NUNCA cronometrado (fonte do conteúdo: "NAO e Relampago, sem
+/// timer, sem penalidade de velocidade" — ler um texto de economia
+/// contra o relógio contraria o próprio propósito de compreensão de
+/// leitura). O backend já ignora mode=relampago pra estes territórios
+/// (config.NEVER_TIMED_TERRITORY_IDS) — aqui só decide a UI da Home:
+/// nunca oferecer o botão "Relâmpago" pra eles.
+const Set<String> kNeverTimedTerritoryIds = {
+  'bolsa',
+  'criptomoedas',
+  'cenario_global',
+  'financas_dia_a_dia',
+};
+
 /// Ids dos 4 territórios do V1 — compartilhado entre Home, Progress e
 /// Challenge para não duplicar a lista nem o mapeamento id→label.
 const List<String> kTerritoryIds = [
@@ -76,6 +90,11 @@ const List<String> kTerritoryIds = [
   'frances_basico',
   'frances_intermediario',
   'frances_avancado',
+  // V6 (V6/README.md) — Mundo dos Valores.
+  'bolsa',
+  'criptomoedas',
+  'cenario_global',
+  'financas_dia_a_dia',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -174,6 +193,14 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryFrancesIntermediario;
     case 'frances_avancado':
       return l10n.territoryFrancesAvancado;
+    case 'bolsa':
+      return l10n.territoryBolsa;
+    case 'criptomoedas':
+      return l10n.territoryCriptomoedas;
+    case 'cenario_global':
+      return l10n.territoryCenarioGlobal;
+    case 'financas_dia_a_dia':
+      return l10n.territoryFinancasDiaADia;
     default:
       return territoryId;
   }

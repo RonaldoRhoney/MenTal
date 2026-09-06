@@ -198,6 +198,18 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryFrancesAvancado => 'Francês Avançado';
 
   @override
+  String get territoryBolsa => 'Bolsa e Investimentos';
+
+  @override
+  String get territoryCriptomoedas => 'Criptomoedas';
+
+  @override
+  String get territoryCenarioGlobal => 'Cenário Global';
+
+  @override
+  String get territoryFinancasDiaADia => 'Finanças do Dia a Dia';
+
+  @override
   String get audioPlayButton => 'Tocar som';
 
   @override

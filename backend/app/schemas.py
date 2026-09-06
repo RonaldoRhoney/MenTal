@@ -137,6 +137,10 @@ class ChallengeOut(BaseModel):
     audio_url: str | None = None
     audio_source_name: str | None = None
     audio_source_url: str | None = None
+    # V6 — Mundo dos Valores (05/09/2026). Texto lido ANTES da pergunta,
+    # mesmo espírito de clues/audio_url acima. None em todo o resto do
+    # app.
+    reading_passage: str | None = None
 
 
 class ChallengeSearchResponse(BaseModel):

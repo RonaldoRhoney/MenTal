@@ -261,6 +261,22 @@
   "@territoryFrancesAvancado": {
     "description": "Territory display name"
   },
+  "territoryBolsa": "Bolsa e Investimentos",
+  "@territoryBolsa": {
+    "description": "Territory display name"
+  },
+  "territoryCriptomoedas": "Criptomoedas",
+  "@territoryCriptomoedas": {
+    "description": "Territory display name"
+  },
+  "territoryCenarioGlobal": "Cenário Global",
+  "@territoryCenarioGlobal": {
+    "description": "Territory display name"
+  },
+  "territoryFinancasDiaADia": "Finanças do Dia a Dia",
+  "@territoryFinancasDiaADia": {
+    "description": "Territory display name"
+  },
   "audioPlayButton": "Tocar som",
   "@audioPlayButton": {
     "description": "Button that plays the challenge audio clip in Ouvido Afiado"

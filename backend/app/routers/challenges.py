@@ -30,7 +30,11 @@ def next_challenge(
     # formato com tempo é OBRIGATÓRIO e único — nunca formato digitado,
     # independente de "mode". Generaliza o mesmo mecanismo do Palavras
     # Relâmpago (mesmo componente, territórios diferentes).
-    timed = relampago or territory_id in config.ALWAYS_TIMED_TERRITORIES
+    # V6 — Mundo dos Valores: NEVER_TIMED_TERRITORY_IDS vence mesmo se
+    # mode=relampago foi pedido — backend nunca confia no client pra
+    # decidir isso (mesmo raciocínio de ALWAYS_TIMED_TERRITORIES acima,
+    # só que na direção oposta).
+    timed = (relampago or territory_id in config.ALWAYS_TIMED_TERRITORIES) and territory_id not in config.NEVER_TIMED_TERRITORY_IDS
     territory = db.get(models.Territory, territory_id)
     if territory is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "TERRITORY_NOT_FOUND", "message": territory_id}})
@@ -147,6 +151,7 @@ def next_challenge(
         audio_url=challenge.audio_url,
         audio_source_name=challenge.audio_source_name,
         audio_source_url=challenge.audio_source_url,
+        reading_passage=challenge.reading_passage,
     )
 
 
@@ -217,6 +222,7 @@ def search_challenges(
             audio_url=challenge.audio_url,
             audio_source_name=challenge.audio_source_name,
             audio_source_url=challenge.audio_source_url,
+            reading_passage=challenge.reading_passage,
         ),
     )
 
@@ -296,6 +302,7 @@ def reattempt_challenge(
         audio_url=challenge.audio_url,
         audio_source_name=challenge.audio_source_name,
         audio_source_url=challenge.audio_source_url,
+        reading_passage=challenge.reading_passage,
     )
 
 

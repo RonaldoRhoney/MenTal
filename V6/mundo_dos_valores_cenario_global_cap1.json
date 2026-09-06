@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_valores",
+    "tema": "dolar_mercado_internacional_ouro_economias",
+    "fase": "V6.0",
+    "formato": "capsula_texto_mais_perguntas (NAO e Relampago, sem timer, sem penalidade de velocidade)",
+    "principio": "Esclarecer conceitos de economia internacional e curiosidades historicas, NUNCA prever cambio futuro, NUNCA recomendar compra de moeda/ouro, NUNCA opinar sobre qual pais 'e melhor' economicamente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo factual/historico/geografico, sem previsao de mercado nem recomendacao financeira. Dados de PIB tratados como referencia historica recente, nao como ranking definitivo e imutavel."
+  },
+  "capsulas": [
+    {
+      "id": "valores-global-01",
+      "titulo": "Por que o dólar é a principal moeda de referência mundial?",
+      "texto": "O dólar americano é amplamente utilizado como moeda de referência em transações internacionais, mesmo entre países que não são os Estados Unidos. Esse papel se consolidou principalmente após a Segunda Guerra Mundial, com o acordo de Bretton Woods (1944), que estabeleceu o dólar como moeda de referência do sistema financeiro internacional da época. Mesmo após mudanças nesse sistema ao longo das décadas seguintes, o dólar manteve um papel central no comércio internacional, sendo usado, por exemplo, como referência de preço para commodities como petróleo em boa parte do mundo.",
+      "perguntas": [
+        {"pergunta": "Qual acordo, firmado em 1944, ajudou a consolidar o papel do dólar como moeda de referência internacional?", "opcoes": ["Bretton Woods", "Tratado de Versalhes", "Acordo de Paris", "Protocolo de Kyoto"], "resposta_correta": "Bretton Woods"},
+        {"pergunta": "O dólar é usado como referência de preço para qual tipo de produto em boa parte do mundo?", "opcoes": ["Commodities, como petróleo", "Apenas produtos eletrônicos", "Exclusivamente imóveis", "Somente serviços de streaming"], "resposta_correta": "Commodities, como petróleo"},
+        {"pergunta": "O papel central do dólar no comércio internacional se consolidou principalmente após qual evento histórico?", "opcoes": ["A Segunda Guerra Mundial", "A Revolução Industrial", "A Guerra Fria terminar", "A criação da União Europeia"], "resposta_correta": "A Segunda Guerra Mundial"}
+      ]
+    },
+    {
+      "id": "valores-global-02",
+      "titulo": "O que é taxa de câmbio?",
+      "texto": "A taxa de câmbio é o valor de conversão entre duas moedas diferentes — por exemplo, quantos reais são necessários para comprar um dólar. Essa taxa varia constantemente, influenciada por diversos fatores econômicos, como a relação entre exportações e importações de um país, as taxas de juros praticadas, e a percepção geral de investidores sobre a economia de cada país envolvido. Diferente de um preço fixo definido por uma única entidade, a taxa de câmbio na maioria dos países resulta da interação entre compradores e vendedores de moeda estrangeira no mercado.",
+      "perguntas": [
+        {"pergunta": "O que é taxa de câmbio?", "opcoes": ["O valor de conversão entre duas moedas diferentes", "Uma taxa cobrada por bancos ao abrir conta", "Um imposto sobre produtos importados", "Uma tarifa cobrada em viagens internacionais"], "resposta_correta": "O valor de conversão entre duas moedas diferentes"},
+        {"pergunta": "A taxa de câmbio é geralmente definida por quem, na maioria dos países?", "opcoes": ["Pela interação entre compradores e vendedores de moeda estrangeira no mercado", "Exclusivamente pelo governo, de forma fixa", "Por um único banco internacional", "Por sorteio mensal"], "resposta_correta": "Pela interação entre compradores e vendedores de moeda estrangeira no mercado"},
+        {"pergunta": "Cite um fator que pode influenciar a taxa de câmbio, segundo o texto.", "opcoes": ["Taxas de juros praticadas pelo país", "A quantidade de feriados no calendário", "O tamanho territorial do país", "O número de bandeiras que o país possui"], "resposta_correta": "Taxas de juros praticadas pelo país"}
+      ]
+    },
+    {
+      "id": "valores-global-03",
+      "titulo": "Por que o ouro é considerado uma reserva de valor?",
+      "texto": "O ouro é usado como forma de guardar valor há milhares de anos, muito antes da existência do dinheiro em papel ou digital. Diferente de moedas emitidas por governos, o ouro é um recurso físico finito na natureza, o que historicamente contribuiu para sua percepção como algo que preserva valor ao longo do tempo, especialmente em períodos de instabilidade econômica. Muitos bancos centrais ao redor do mundo, incluindo o Banco Central do Brasil, mantêm reservas de ouro como parte de suas reservas internacionais, ao lado de moedas estrangeiras como o dólar.",
+      "perguntas": [
+        {"pergunta": "Há quanto tempo, aproximadamente, o ouro é usado como forma de guardar valor?", "opcoes": ["Milhares de anos", "Cerca de 50 anos", "Desde o século XX apenas", "Desde a criação do dólar"], "resposta_correta": "Milhares de anos"},
+        {"pergunta": "O que diferencia o ouro de moedas emitidas por governos, segundo o texto?", "opcoes": ["O ouro é um recurso físico finito na natureza", "O ouro só pode ser usado dentro de um único país", "O ouro perde valor automaticamente com o tempo", "O ouro é emitido por bancos centrais, como o dinheiro"], "resposta_correta": "O ouro é um recurso físico finito na natureza"},
+        {"pergunta": "Bancos centrais, incluindo o do Brasil, mantêm reservas de quê, ao lado de moedas estrangeiras?", "opcoes": ["Ouro", "Petróleo", "Ações de empresas privadas", "Imóveis comerciais"], "resposta_correta": "Ouro"}
+      ]
+    },
+    {
+      "id": "valores-global-04",
+      "titulo": "Quais são as maiores economias do mundo?",
+      "texto": "O tamanho da economia de um país costuma ser medido pelo PIB (Produto Interno Bruto), que representa o valor total de todos os bens e serviços produzidos naquele país num determinado período. Com base em dados recentes de organismos internacionais, os Estados Unidos ocupam historicamente a posição de maior economia do mundo em valores nominais, seguidos de perto pela China. Japão, Alemanha e Índia costumam aparecer entre as posições seguintes nesse tipo de ranking, embora a ordem exata entre elas possa variar de ano para ano, conforme o método de cálculo e o período analisado.",
+      "perguntas": [
+        {"pergunta": "O que o PIB (Produto Interno Bruto) representa?", "opcoes": ["O valor total de bens e serviços produzidos num país", "A quantidade de dinheiro guardada nos bancos do país", "O número de empresas registradas na bolsa", "A população total de um país"], "resposta_correta": "O valor total de bens e serviços produzidos num país"},
+        {"pergunta": "Segundo o texto, qual país ocupa historicamente a posição de maior economia do mundo em valores nominais?", "opcoes": ["Estados Unidos", "China", "Japão", "Alemanha"], "resposta_correta": "Estados Unidos"},
+        {"pergunta": "A ordem exata entre as maiores economias do mundo é sempre fixa e nunca muda?", "opcoes": ["Não, pode variar de ano para ano conforme o método e período analisado", "Sim, é definida uma única vez e nunca muda", "Sim, é fixada por um tratado internacional permanente", "Não, muda a cada dia de negociação na bolsa"], "resposta_correta": "Não, pode variar de ano para ano conforme o método e período analisado"}
+      ]
+    },
+    {
+      "id": "valores-global-05",
+      "titulo": "O que é a NYSE?",
+      "texto": "A NYSE (New York Stock Exchange, ou Bolsa de Valores de Nova York) é uma das maiores bolsas de valores do mundo em valor de mercado das empresas listadas nela. Fundada em 1792, é uma das bolsas mais antigas ainda em operação. Está localizada na Wall Street, em Nova York, região que se tornou sinônimo do mercado financeiro americano. Diferente da B3, que é a única grande bolsa do Brasil, os Estados Unidos têm mais de uma bolsa relevante — a NASDAQ, por exemplo, é outra bolsa americana de grande destaque, historicamente mais associada a empresas de tecnologia.",
+      "perguntas": [
+        {"pergunta": "O que significa a sigla NYSE?", "opcoes": ["New York Stock Exchange", "National Yield Securities Exchange", "New Yearly Stock Exchange", "North York Stock Exchange"], "resposta_correta": "New York Stock Exchange"},
+        {"pergunta": "Em que ano a NYSE foi fundada?", "opcoes": ["1792", "1929", "1850", "1901"], "resposta_correta": "1792"},
+        {"pergunta": "Além da NYSE, qual outra bolsa americana é citada no texto, historicamente associada a empresas de tecnologia?", "opcoes": ["NASDAQ", "Dow Jones", "S&P", "FTSE"], "resposta_correta": "NASDAQ"}
+      ]
+    },
+    {
+      "id": "valores-global-06",
+      "titulo": "O que é o FMI?",
+      "texto": "O FMI (Fundo Monetário Internacional) é uma organização internacional criada em 1944, no mesmo contexto do acordo de Bretton Woods, com o objetivo de promover a cooperação monetária internacional e a estabilidade financeira entre os países-membros. O FMI pode oferecer empréstimos a países que enfrentam dificuldades financeiras significativas, geralmente associados a condições e recomendações de política econômica. Praticamente todos os países do mundo, incluindo o Brasil, são membros do FMI atualmente.",
+      "perguntas": [
+        {"pergunta": "O que significa a sigla FMI?", "opcoes": ["Fundo Monetário Internacional", "Federação Mundial de Investimentos", "Fórum Mundial de Interesses", "Fundo Multilateral de Investimento"], "resposta_correta": "Fundo Monetário Internacional"},
+        {"pergunta": "Em que contexto histórico o FMI foi criado?", "opcoes": ["No mesmo contexto do acordo de Bretton Woods, em 1944", "Durante a Guerra Fria, na década de 1960", "Após a crise financeira de 2008", "Na criação da União Europeia"], "resposta_correta": "No mesmo contexto do acordo de Bretton Woods, em 1944"},
+        {"pergunta": "O que o FMI pode oferecer a países com dificuldades financeiras significativas?", "opcoes": ["Empréstimos, geralmente associados a condições de política econômica", "Doações sem nenhuma condição", "Ações de empresas privadas", "Ouro físico diretamente"], "resposta_correta": "Empréstimos, geralmente associados a condições de política econômica"}
+      ]
+    },
+    {
+      "id": "valores-global-07",
+      "titulo": "Curiosidade: o padrão-ouro e seu fim",
+      "texto": "Por muito tempo, diversos países operaram sob o chamado 'padrão-ouro', um sistema em que o valor da moeda de um país era diretamente atrelado a uma quantidade fixa de ouro. Isso significava que, em teoria, uma pessoa poderia trocar seu dinheiro em papel por uma quantidade correspondente de ouro físico junto ao governo. Esse sistema foi definitivamente abandonado pelos Estados Unidos em 1971, numa decisão do então presidente Richard Nixon, encerrando de vez a conversibilidade direta entre dólar e ouro que havia sido parte do próprio acordo de Bretton Woods.",
+      "perguntas": [
+        {"pergunta": "O que era o 'padrão-ouro'?", "opcoes": ["Um sistema em que o valor da moeda era atrelado a uma quantidade fixa de ouro", "Uma lei que proibia o comércio de ouro", "Um imposto cobrado sobre joias de ouro", "Uma bolsa de valores especializada em metais"], "resposta_correta": "Um sistema em que o valor da moeda era atrelado a uma quantidade fixa de ouro"},
+        {"pergunta": "Em que ano os Estados Unidos abandonaram definitivamente o padrão-ouro?", "opcoes": ["1971", "1944", "1929", "2001"], "resposta_correta": "1971"},
+        {"pergunta": "Qual presidente americano tomou a decisão de encerrar a conversibilidade direta entre dólar e ouro?", "opcoes": ["Richard Nixon", "John F. Kennedy", "Franklin D. Roosevelt", "Ronald Reagan"], "resposta_correta": "Richard Nixon"}
+      ]
+    },
+    {
+      "id": "valores-global-08",
+      "titulo": "Curiosidade: bolsas de valores ao redor do mundo",
+      "texto": "Cada grande centro financeiro do mundo tem sua própria bolsa de valores principal, geralmente identificada por um índice de referência que reúne as maiores empresas negociadas ali. No Japão, o principal índice é o Nikkei 225, calculado pela Bolsa de Tóquio. Na Alemanha, o índice de referência é o DAX. No Reino Unido, é o FTSE 100, associado à Bolsa de Londres. Esses índices funcionam como um 'termômetro' resumido do desempenho geral das principais empresas de cada mercado, de forma parecida com o papel que o Ibovespa exerce no Brasil.",
+      "perguntas": [
+        {"pergunta": "Qual é o principal índice da bolsa de valores do Japão?", "opcoes": ["Nikkei 225", "DAX", "FTSE 100", "Ibovespa"], "resposta_correta": "Nikkei 225"},
+        {"pergunta": "Qual é o índice de referência da bolsa de valores da Alemanha?", "opcoes": ["DAX", "Nikkei 225", "CAC 40", "S&P 500"], "resposta_correta": "DAX"},
+        {"pergunta": "O que um índice de bolsa, como o Nikkei ou o FTSE, representa?", "opcoes": ["Um 'termômetro' resumido do desempenho geral das principais empresas do mercado", "O valor total de ouro guardado pelo país", "A taxa de câmbio oficial daquele país", "O número exato de bolsas existentes no mundo"], "resposta_correta": "Um 'termômetro' resumido do desempenho geral das principais empresas do mercado"}
+      ]
+    }
+  ]
+}

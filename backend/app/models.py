@@ -329,6 +329,12 @@ class Challenge(Base):
     # obrigatório de prompt_image/clues/audio_url. A comparação em
     # submit_answer aceita correct_answer OU qualquer item daqui.
     accepted_answers: Mapped[list | None] = mapped_column(JSON, nullable=True)
+    # V6 — Mundo dos Valores (05/09/2026): "cápsula de texto + perguntas"
+    # (educação financeira/economia, nunca aconselhamento de
+    # investimento). Texto lido ANTES da pergunta, mesmo espírito de
+    # `clues`/`audio_url` acima — reaproveita o Challenge normal em vez
+    # de criar mecânica nova. None em todo o resto do app.
+    reading_passage: Mapped[str | None] = mapped_column(Text, nullable=True)
 
 
 class ChallengeHint(Base):

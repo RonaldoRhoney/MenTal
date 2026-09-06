@@ -454,6 +454,30 @@ abstract class AppLocalizations {
   /// **'Francês Avançado'**
   String get territoryFrancesAvancado;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Bolsa e Investimentos'**
+  String get territoryBolsa;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Criptomoedas'**
+  String get territoryCriptomoedas;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Cenário Global'**
+  String get territoryCenarioGlobal;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Finanças do Dia a Dia'**
+  String get territoryFinancasDiaADia;
+
   /// Button that plays the challenge audio clip in Ouvido Afiado
   ///
   /// In pt, this message translates to:

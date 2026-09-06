@@ -28,6 +28,13 @@ WORLDS = [
     # deste arquivo, e o JSON já é a fonte usada por
     # scripts/append_production_content.py em produção.
     {"id": "idiomas", "name": "Mundo dos Idiomas", "display_order": 5},
+    # V6/README.md — educação financeira/economia (Bolsa/B3, Criptomoedas,
+    # Cenário Global, Finanças do Dia a Dia). Nunca aconselhamento de
+    # investimento (POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md) — "cápsula
+    # de texto + perguntas", reaproveitando o Challenge normal com o novo
+    # campo opcional reading_passage. Conteúdo carregado de
+    # content/valores_*.json (mesmo padrão de idiomas acima).
+    {"id": "valores", "name": "Mundo dos Valores", "display_order": 6},
 ]
 
 # Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
@@ -240,6 +247,10 @@ TERRITORIES = [
     {"id": "frances_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 46, "world_id": "idiomas"},
     {"id": "frances_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 47, "world_id": "idiomas"},
     {"id": "frances_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 48, "world_id": "idiomas"},
+    {"id": "bolsa", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 49, "world_id": "valores"},
+    {"id": "criptomoedas", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 50, "world_id": "valores"},
+    {"id": "cenario_global", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 51, "world_id": "valores"},
+    {"id": "financas_dia_a_dia", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 52, "world_id": "valores"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -5701,6 +5712,12 @@ CHALLENGES = [
 # scripts/append_production_content.py.
 _CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
 for _path in sorted(_CONTENT_DIR.glob("idiomas_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
+# V6 — Mundo dos Valores: 159 desafios ("cápsula de texto + perguntas",
+# reading_passage), mesmo padrão de carregar direto de content/ em vez
+# de duplicar inline (ver V6/README.md e scripts/convert_valores_content.py).
+for _path in sorted(_CONTENT_DIR.glob("valores_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 

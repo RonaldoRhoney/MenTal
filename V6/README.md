@@ -1,21 +1,64 @@
 # V6
 
-**Status:** Ainda não iniciada. V5 (Mundo dos Idiomas — Inglês, Espanhol, Francês, básico/intermediário/avançado) em andamento/concluída conforme registrado em `V5/README.md`.
+**Status:** Em andamento (iniciada em 05/09/2026). Mundo dos Valores —
+educação financeira/economia, nunca aconselhamento de investimento (ver
+`FOUNDATION/POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md` e o campo
+`meta.principio` de cada arquivo `mundo_dos_valores_*.json` desta pasta).
 
-## Itens já decididos para a V6
+## Arquitetura implementada em 05/09/2026
 
-Nenhum ainda.
+Decisão confirmada com Rhoney: o formato "cápsula de texto + perguntas"
+(sem timer, sem Relâmpago, sem penalidade de velocidade) reaproveita
+100% o `Challenge` normal em vez de criar uma mecânica nova —
+mesma infraestrutura já auditada (scoring, streak, badges, conquista de
+território, rate limiting, etc.), zero telas novas.
 
-## Candidatos registrados (herdados de V4_NOVOS_TERRITORIOS.md §6, ainda sem dono de fase)
+- **Novo World**: `valores` (Mundo dos Valores), display_order 6.
+- **4 territórios** (migration `063_mundo_valores.sql`): `bolsa`,
+  `criptomoedas`, `cenario_global`, `financas_dia_a_dia` — cada
+  "pergunta" de uma cápsula vira um `Challenge` normal (difficulty_level
+  fixo em 1, é checagem de compreensão de leitura, não trilha de
+  maestria por nível — mesmo raciocínio já usado nos territórios de
+  idiomas, ver `SINGLE_DIFFICULTY_TERRITORY_IDS`).
+- **Novo campo** `Challenge.reading_passage` (nullable, `None` em todo o
+  resto do app): o texto da cápsula, mostrado no client ANTES da
+  pergunta (mesmo espírito de `clues`/`audio_url` de Detetive Mental/
+  Ouvido Afiado). Reaproveitado também como `explanation` (mostrado
+  DEPOIS de responder) — os arquivos fonte não têm um campo de
+  explicação próprio, só o texto da cápsula.
+- **Nunca cronometrado, mesmo com `mode=relampago`**: os 4 territórios
+  entram em `config.NEVER_TIMED_TERRITORY_IDS` (oposto de
+  `ALWAYS_TIMED_TERRITORIES`) — o backend ignora o pedido do client,
+  nunca confia nele pra decidir isso (mesmo princípio de segurança já
+  aplicado em C1/A1 da auditoria pré-AAB). O client também não oferece
+  o botão "Relâmpago" pra esses territórios (`kNeverTimedTerritoryIds`,
+  `client/lib/territories.dart`).
+- **Conteúdo**: 159 desafios (36 Bolsa, 48 Criptomoedas, 24 Cenário
+  Global, 51 Finanças do Dia a Dia), convertidos de
+  `mundo_dos_valores_*.json` (formato bruto: cápsulas com texto +
+  perguntas) via `backend/scripts/convert_valores_content.py` — hints
+  gerados automaticamente (nunca entregam a resposta, mesmo padrão já
+  usado em `convert_idiomas_content.py`), carregados direto de
+  `backend/content/valores_*.json` no `seed.py` (nunca duplicados
+  inline, mesmo padrão de idiomas).
+- Testes: `backend/tests/test_valores_content.py` (territórios, campo
+  `reading_passage`, nunca cronometrado mesmo com `mode=relampago`,
+  fluxo de resposta normal) + `client/test/challenge_screen_regression_test.dart`
+  (reading_passage exibido antes da pergunta). Suíte backend: 334/334.
+  Suíte client: 133/133.
 
-Ideias adiadas em fases anteriores, sem mecânica nem conteúdo desenhados ainda — revisar se algum deles vira o escopo da V6 quando ela for formalizada:
+## Pendências
 
-- Inteligência Emocional e Habilidades Socioemocionais (exige desenho pedagógico mais cuidadoso — risco de parecer conselho/diagnóstico se mal curado).
-- Decifra o Símbolo (decodificação visual de ícones e sinais do mundo real).
-- Corpo Humano em Profundidade (funcionamento biológico, distinto de Saúde e Bem-estar).
-- Bandeiras, Mapas e Geografia do Mundo.
-- Dinheiro e Objetos que Mudaram de Valor (curiosidade histórica/anedótica, distinta de Finanças Pessoais).
+- Rodar `migrations/063_mundo_valores.sql` em produção (Supabase SQL
+  Editor).
+- Rodar `scripts/append_production_content.py` com os 4 arquivos
+  `content/valores_*.json` em produção (mesmo fluxo já usado pra
+  idiomas).
+- Testar no dispositivo real antes de considerar a V6 concluída.
+- Ícone/cor de identidade visual do Mundo dos Valores na Home (ainda
+  não decidido).
 
 ## Próximo passo
 
-Nenhum ainda — aguardando Rhoney priorizar e formalizar o escopo da V6.
+Confirmar com Rhoney o teste em produção (deploy do backend + migration
++ carga de conteúdo) e validar visualmente no app antes de fechar a V6.
