@@ -6,6 +6,16 @@ import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/feed_screen.dart';
 
+/// Revisão visual (06/09/2026) trocou o Text simples do card por um
+/// RichText (nome em negrito + resto da frase) — find.text não
+/// enxerga RichText, então os testes que checam o texto do evento
+/// usam este finder por conteúdo combinado (mesmo texto que o backend
+/// mandou, só verificando que ele aparece renderizado, sem se importar
+/// com a formatação interna dos spans).
+Finder _findRichTextContaining(String text) {
+  return find.byWidgetPredicate((widget) => widget is RichText && widget.text.toPlainText().contains(text));
+}
+
 /// FEED_SOCIAL_V1.md — prova que a tela só exibe o texto/paginação que
 /// o backend já devolve prontos (nenhum cálculo de texto no client) e
 /// que reagir a um evento reaproveita POST /profile/{id}/torcida.
@@ -79,7 +89,7 @@ void main() {
     ]);
     await _pump(tester, client);
 
-    expect(find.text('joao123 chegou ao Nível 20! ⭐'), findsOneWidget);
+    expect(_findRichTextContaining('joao123 chegou ao Nível 20! ⭐'), findsOneWidget);
   });
 
   testWidgets('reagir a um evento chama Torcida com o user_id do evento', (tester) async {
@@ -142,14 +152,14 @@ void main() {
     ]);
     await _pump(tester, client);
 
-    expect(find.text('Primeira página'), findsOneWidget);
-    expect(find.text('Segunda página'), findsNothing);
+    expect(_findRichTextContaining('Primeira página'), findsOneWidget);
+    expect(_findRichTextContaining('Segunda página'), findsNothing);
 
     await tester.tap(find.text('Carregar mais'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Primeira página'), findsOneWidget);
-    expect(find.text('Segunda página'), findsOneWidget);
+    expect(_findRichTextContaining('Primeira página'), findsOneWidget);
+    expect(_findRichTextContaining('Segunda página'), findsOneWidget);
     expect(find.text('Carregar mais'), findsNothing);
   });
 }

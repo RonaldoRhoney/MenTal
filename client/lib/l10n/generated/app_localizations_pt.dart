@@ -1125,6 +1125,42 @@ class AppLocalizationsPt extends AppLocalizations {
   String get feedLoadMoreButton => 'Carregar mais';
 
   @override
+  String get feedTimeJustNow => 'agora mesmo';
+
+  @override
+  String feedTimeMinutesAgo(int minutes) {
+    String _temp0 = intl.Intl.pluralLogic(
+      minutes,
+      locale: localeName,
+      other: 'há $minutes min',
+      one: 'há 1 min',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String feedTimeHoursAgo(int hours) {
+    String _temp0 = intl.Intl.pluralLogic(
+      hours,
+      locale: localeName,
+      other: 'há ${hours}h',
+      one: 'há 1h',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String feedTimeDaysAgo(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: 'há $days dias',
+      one: 'há 1 dia',
+    );
+    return '$_temp0';
+  }
+
+  @override
   String get friendsHelpTitle => 'Amigos — como funciona';
 
   @override

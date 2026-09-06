@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/app_version_service.dart';
+import '../services/feed_activity_service.dart';
 import '../services/movement_service.dart';
 import '../services/share_service.dart';
 import '../services/theme_mode_service.dart';
@@ -126,6 +127,17 @@ class _HomeScreenState extends State<HomeScreen> {
   int? _movementPendingSteps;
   String? _movementCycleId;
   StreamSubscription<int>? _movementStepSub;
+
+  // FEED_SOCIAL_V1.md — badge discreto no card "Amigos" (decisão de
+  // Rhoney, 06/09/2026: nunca um atalho novo na Home pro Feed, um
+  // recurso social secundário) — contagem de eventos novos desde a
+  // última vez que o jogador abriu a tela de Feed.
+  int? _feedUnseenCount;
+
+  Future<void> _loadFeedBadge() async {
+    final count = await FeedActivityService.unseenCount(widget.client);
+    if (mounted) setState(() => _feedUnseenCount = count);
+  }
 
   // Pedido de Rhoney (2026-09-02): moedas sobem na tela ao cruzar 100 XP
   // ou 50 MentalCoins ao convidar amigos (services.crossed_coin_milestone
@@ -261,6 +273,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadMovementBadge();
     _loadProfileHeader();
     _loadMentalCoinsBalance();
+    _loadFeedBadge();
     _checkAppVersion();
   }
 
@@ -285,6 +298,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _loadMovementBadge(),
       _loadProfileHeader(),
       _loadMentalCoinsBalance(),
+      _loadFeedBadge(),
     ]);
   }
 
@@ -486,8 +500,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     _QuickActionsRow(
                       client: widget.client,
                       movementPendingSteps: _movementPendingSteps,
+                      feedUnseenCount: _feedUnseenCount,
                       onReturnFromProgress: _loadProgress,
                       onReturnFromMovement: _loadMovementBadge,
+                      onReturnFromFriends: _loadFeedBadge,
                       onShareApp: _shareApp,
                     ),
                     const SizedBox(height: 20),
@@ -744,15 +760,19 @@ class _QuickActionsRow extends StatelessWidget {
   const _QuickActionsRow({
     required this.client,
     required this.movementPendingSteps,
+    required this.feedUnseenCount,
     required this.onReturnFromProgress,
     required this.onReturnFromMovement,
+    required this.onReturnFromFriends,
     required this.onShareApp,
   });
 
   final ApiClient client;
   final int? movementPendingSteps;
+  final int? feedUnseenCount;
   final VoidCallback onReturnFromProgress;
   final VoidCallback onReturnFromMovement;
+  final VoidCallback onReturnFromFriends;
   final VoidCallback onShareApp;
 
   @override
@@ -790,9 +810,17 @@ class _QuickActionsRow extends StatelessWidget {
             icon: Icons.people_outline_rounded,
             label: l10n.friendsTooltip,
             color: AppColors.teal,
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => FriendsScreen(client: client)),
-            ),
+            // FEED_SOCIAL_V1.md — badge de atividade nova do Feed
+            // aparece aqui (não um atalho novo na Home): Amigos é a
+            // tela onde o Feed já vive (ícone na AppBar), então o
+            // sinal de "tem coisa nova" pertence a este card.
+            badgeCount: feedUnseenCount,
+            onTap: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => FriendsScreen(client: client)),
+              );
+              onReturnFromFriends();
+            },
           ),
         ),
         const SizedBox(width: 8),

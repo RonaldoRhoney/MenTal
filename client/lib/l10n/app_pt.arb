@@ -1593,6 +1593,37 @@
   "@feedLoadMoreButton": {
     "description": "Button to load the next page of the feed"
   },
+  "feedTimeJustNow": "agora mesmo",
+  "@feedTimeJustNow": {
+    "description": "Relative time for a feed event that just happened"
+  },
+  "feedTimeMinutesAgo": "{minutes, plural, =1{há 1 min} other{há {minutes} min}}",
+  "@feedTimeMinutesAgo": {
+    "description": "Relative time for a feed event, in minutes",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "feedTimeHoursAgo": "{hours, plural, =1{há 1h} other{há {hours}h}}",
+  "@feedTimeHoursAgo": {
+    "description": "Relative time for a feed event, in hours",
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "feedTimeDaysAgo": "{days, plural, =1{há 1 dia} other{há {days} dias}}",
+  "@feedTimeDaysAgo": {
+    "description": "Relative time for a feed event, in days",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "friendsHelpTitle": "Amigos — como funciona",
   "@friendsHelpTitle": {
     "description": "Title of the Friends help sheet"

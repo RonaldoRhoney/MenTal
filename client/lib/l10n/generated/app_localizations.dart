@@ -1960,6 +1960,30 @@ abstract class AppLocalizations {
   /// **'Carregar mais'**
   String get feedLoadMoreButton;
 
+  /// Relative time for a feed event that just happened
+  ///
+  /// In pt, this message translates to:
+  /// **'agora mesmo'**
+  String get feedTimeJustNow;
+
+  /// Relative time for a feed event, in minutes
+  ///
+  /// In pt, this message translates to:
+  /// **'{minutes, plural, =1{há 1 min} other{há {minutes} min}}'**
+  String feedTimeMinutesAgo(int minutes);
+
+  /// Relative time for a feed event, in hours
+  ///
+  /// In pt, this message translates to:
+  /// **'{hours, plural, =1{há 1h} other{há {hours}h}}'**
+  String feedTimeHoursAgo(int hours);
+
+  /// Relative time for a feed event, in days
+  ///
+  /// In pt, this message translates to:
+  /// **'{days, plural, =1{há 1 dia} other{há {days} dias}}'**
+  String feedTimeDaysAgo(int days);
+
   /// Title of the Friends help sheet
   ///
   /// In pt, this message translates to:

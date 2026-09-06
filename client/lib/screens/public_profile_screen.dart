@@ -208,10 +208,45 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
                       side: BorderSide(color: isFollowing ? AppColors.muted : AppColors.teal),
                       visualDensity: VisualDensity.compact,
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                      // Achado real em dispositivo (06/09/2026): o tema
+                      // padrão de OutlinedButton força minimumSize com
+                      // largura infinita — dentro de um Row sem
+                      // constraint (mainAxisSize.min) isso quebra o
+                      // layout inteiro da tela (mesmo bug já documentado
+                      // em friends_screen.dart, aqui sem Expanded como
+                      // solução por não fazer sentido esticar um botão
+                      // ao lado de um texto de contagem).
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                   ),
                   const SizedBox(width: 10),
-                  Text(l10n.publicProfileFanCount(fanCount), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
+                  // Pedido de Rhoney (06/09/2026): "dê maior destaque à
+                  // Fã, crie um botão elegante" — de texto discreto pra
+                  // um chip com peso visual próprio, mesma linguagem de
+                  // badge dourado já usada em conquista/XP no resto do
+                  // app (nunca cor por decoração — gold aqui reforça
+                  // "reconhecimento social", mesmo significado de gold
+                  // em qualquer outro lugar do app).
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: AppColors.gold.withValues(alpha: 0.10),
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: AppColors.gold.withValues(alpha: 0.35)),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.star_rounded, color: AppColors.gold, size: 14),
+                        const SizedBox(width: 4),
+                        Text(
+                          l10n.publicProfileFanCount(fanCount),
+                          style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 12).copyWith(fontWeight: FontWeight.w700),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ],
