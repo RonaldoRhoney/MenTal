@@ -47,18 +47,37 @@ território, rate limiting, etc.), zero telas novas.
   (reading_passage exibido antes da pergunta). Suíte backend: 334/334.
   Suíte client: 133/133.
 
+## Deploy em produção (05/09/2026) — concluído
+
+- Migration `063_mundo_valores.sql` rodada em produção (Supabase).
+- `scripts/append_production_content.py` rodado com os 4 arquivos
+  `content/valores_*.json` — 159/159 desafios inseridos (36 Bolsa, 48
+  Criptomoedas, 24 Cenário Global, 51 Finanças do Dia a Dia), 0
+  pulados.
+- Teste em dispositivo real (release + reinstalação local):
+  "Mundo dos Valores" aparece na Home com os 4 territórios; abriu
+  desafio de Bolsa e Investimentos; `reading_passage` mostrado ANTES da
+  pergunta, sem timer/Relâmpago; resposta certa concedeu XP
+  normalmente (10 XP) e mostrou a explicação (mesmo texto da cápsula);
+  território marcado "Você é o detentor" após acerto; logcat sem
+  exceção do app.
+- Achado durante o teste em dispositivo (05/09/2026, pedido de Rhoney):
+  pergunta+alternativas exigiam rolar a tela quando a cápsula de texto
+  era longa — corrigido dando altura máxima com rolagem própria ao
+  `reading_passage`, deixando pergunta/alternativas/botão sempre
+  visíveis abaixo. Também corrigido, no mesmo teste, um overflow real
+  (mascarado em builds release) no card "Mais" da Home, e adicionada
+  uma seta indicando "há mais Mundos abaixo" na lista da Home.
+
 ## Pendências
 
-- Rodar `migrations/063_mundo_valores.sql` em produção (Supabase SQL
-  Editor).
-- Rodar `scripts/append_production_content.py` com os 4 arquivos
-  `content/valores_*.json` em produção (mesmo fluxo já usado pra
-  idiomas).
-- Testar no dispositivo real antes de considerar a V6 concluída.
 - Ícone/cor de identidade visual do Mundo dos Valores na Home (ainda
   não decidido).
 
 ## Próximo passo
 
-Confirmar com Rhoney o teste em produção (deploy do backend + migration
-+ carga de conteúdo) e validar visualmente no app antes de fechar a V6.
+V6 considerada concluída (conteúdo em produção + validado em
+dispositivo real). Falta só decidir o ícone/cor do Mundo dos Valores.
+Próxima prioridade a decidir com Rhoney: `MUNDO_LINGUAGEM_CONTEUDO_
+DENSO_V1.md`, `FEED_SOCIAL_V1.md` ou V7 (Mundo do Trânsito, conteúdo já
+presente em `V7/`).
