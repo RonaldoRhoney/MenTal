@@ -78,6 +78,7 @@ território, rate limiting, etc.), zero telas novas.
 
 V6 considerada concluída (conteúdo em produção + validado em
 dispositivo real). Falta só decidir o ícone/cor do Mundo dos Valores.
-Próxima prioridade a decidir com Rhoney: `MUNDO_LINGUAGEM_CONTEUDO_
-DENSO_V1.md`, `FEED_SOCIAL_V1.md` ou V7 (Mundo do Trânsito, conteúdo já
-presente em `Mundo_do_Transito/`).
+Conteúdo denso do Mundo da Linguagem (`Mundo_da_Linguagem/README.md`) e
+o Feed Social (`Engenharia_Geral/FEED_SOCIAL_V1.md`) já foram
+implementados — próxima prioridade a decidir com Rhoney: V7 (Mundo do
+Trânsito, conteúdo já presente em `Mundo_do_Transito/`).
