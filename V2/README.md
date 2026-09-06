@@ -10,7 +10,7 @@ da V2" no cabeçalho de cada um.
 - `TERRITORY_DISPUTE.md` — item 13, disputa territorial.
 - `BLOCOS_MENUS.md` — item 10, agrupamento de Mundos.
 - `PALAVRAS_RELAMPAGO.md` — item 15, modo relâmpago.
-- `CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md`, `CONHECIMENTO_EXPANSAO_GERAL.md` — expansão de conteúdo do território Conhecimento.
+- `Mundo_da_Mente_Logica/CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md`, `Mundo_da_Mente_Logica/CONHECIMENTO_EXPANSAO_GERAL.md` — expansão de conteúdo do território Conhecimento (Mundo da Mente Lógica). Movidos pra pasta do próprio Mundo em 06/09/2026.
 - `STEP_COUNTER_MOVIMENTO.md` — contador de passos/Movimento.
 - `FEEDBACK_POS_NIVEL.md` — coleta de opinião pós-nível.
 - `RANDOMIZACAO_ALTERNATIVAS.md` — posição aleatória de alternativas em múltipla escolha.

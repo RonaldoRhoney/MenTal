@@ -74,7 +74,7 @@ Formato de saída: relatório de status da suíte (passou/falhou, quantos testes
 Escopo:
 - Reaproveita exatamente o processo que Rhoney e Claude já fazem manualmente nesta conversa: buscar tendências de conteúdo, validar fatos de curiosidades, sugerir novos temas/blocos.
 - Roda de forma agendada (ex: semanal), trazendo um lote de sugestões para aprovação de Rhoney — nunca publica conteúdo direto no app.
-- Aplica automaticamente, como primeiro filtro, os critérios já formalizados: teste do óbvio e teste da revelação (V3.5_CURIOSIDADE_RELAMPAGO.md), e a Política de Conteúdo Seguro (POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md).
+- Aplica automaticamente, como primeiro filtro, os critérios já formalizados: teste do óbvio e teste da revelação (Mundo_da_Cultura_Geral/V3.5_CURIOSIDADE_RELAMPAGO.md), e a Política de Conteúdo Seguro (POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md).
 
 Gatilho: agendado (ex: toda segunda-feira), reaproveitando a mesma infraestrutura n8n já desenhada para automação do app.
 

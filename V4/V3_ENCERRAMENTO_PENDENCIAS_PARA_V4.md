@@ -36,4 +36,4 @@ Não é uma pendência não identificada — já está registrada como proposita
 
 ## 5. Encerramento
 
-Com este documento, a V3 do MENTAL está formalmente fechada. Nenhuma pendência remanescente bloqueia o que já foi publicado. Todo trabalho futuro relacionado aos itens da seção 2 passa a ser tratado como parte do planejamento de V4, junto com o restante do roadmap já registrado (V4_NOVOS_TERRITORIOS.md e a arquitetura de agentes de IA, cuja Fase 1 é a primeira ação ao início da V4).
+Com este documento, a V3 do MENTAL está formalmente fechada. Nenhuma pendência remanescente bloqueia o que já foi publicado. Todo trabalho futuro relacionado aos itens da seção 2 passa a ser tratado como parte do planejamento de V4, junto com o restante do roadmap já registrado (Mundo_da_Descoberta/V4_NOVOS_TERRITORIOS.md e a arquitetura de agentes de IA, cuja Fase 1 é a primeira ação ao início da V4).

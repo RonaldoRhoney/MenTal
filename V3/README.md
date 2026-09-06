@@ -5,13 +5,13 @@
 uma fase ou item específico do roadmap da V3.
 
 - `MENTAL-ROAD-001_*.docx` — guia de continuidade de conteúdo/dificuldade/feedback/ranking entre a V2 (pós-teste fechado) e a V3.
-- `V3.0_ESPORTES_REGIOES_CULTURA_POP.md` — fase 1 (Esportes, Regiões, Cultura Pop).
-- `V3.0.1_DESAFIO_CORES.md` — mecânica transversal (efeito Stroop, revisado pra versão clássica em 03/09/2026), nascida junto da fase 1.
-- `V3.1_MITOLOGIA_ENEM_CONCURSOS.md` — fase 2.
-- `V3.2_TECNOLOGIA.md` — fase 3, introduz a mecânica Pausa para Aprender.
-- `V3.3_VIDA_PRATICA_PENSAMENTO.md` — fase 4 (Finanças, Filosofia, Artes, Saúde e Bem-estar, Jogos de Palavras).
-- `V3.4_LIBRAS.md` — fase 5 e última de conteúdo.
-- `V3.5_CURIOSIDADE_RELAMPAGO.md` — bloco Curiosidade Relâmpago.
+- `Mundo_da_Cultura_Geral/V3.0_ESPORTES_REGIOES_CULTURA_POP.md` — fase 1 (Esportes, Regiões, Cultura Pop). Movido pra pasta do próprio Mundo em 06/09/2026 (pedido de Rhoney), junto dos demais docs desta lista que são conteúdo de um Mundo específico.
+- `Mundo_da_Mente_Logica/V3.0.1_DESAFIO_CORES.md` — mecânica transversal (efeito Stroop, revisado pra versão clássica em 03/09/2026), nascida junto da fase 1; território "cores" pertence ao Mundo da Mente Lógica.
+- `Mundo_da_Cultura_Geral/V3.1_MITOLOGIA_ENEM_CONCURSOS.md` — fase 2.
+- `Mundo_da_Cultura_Geral/V3.2_TECNOLOGIA.md` — fase 3, introduz a mecânica Pausa para Aprender.
+- `Mundo_da_Cultura_Geral/V3.3_VIDA_PRATICA_PENSAMENTO.md` — fase 4 (Finanças, Filosofia, Artes, Saúde e Bem-estar, Jogos de Palavras).
+- `Mundo_da_Cultura_Geral/V3.4_LIBRAS.md` — fase 5 e última de conteúdo.
+- `Mundo_da_Cultura_Geral/V3.5_CURIOSIDADE_RELAMPAGO.md` — bloco Curiosidade Relâmpago.
 - `TRIAGEM_FEEDBACK_TESTE.md` — triagem do feedback do teste fechado; introduziu o MentalCoins (moeda de prestígio semanal).
 - `PERFIL_PUBLICO_E_TORCIDA_V1.md` — perfil público e torcida entre amigos.
 - `AMIGOS_CONVITE_POR_NOME.md` — busca de amigos por nome, complementando o convite por código.

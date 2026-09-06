@@ -72,7 +72,7 @@ a entrar automaticamente na próxima conversão.
    diferente do `correct_answer` exato) como correta, XP concedido, sem
    crash no logcat.
 
-## Candidatos registrados (herdados de V4_NOVOS_TERRITORIOS.md §6, ainda sem dono de fase)
+## Candidatos registrados (herdados de Mundo_da_Descoberta/V4_NOVOS_TERRITORIOS.md §6, ainda sem dono de fase)
 
 Ideias adiadas em fases anteriores, sem mecânica nem conteúdo desenhados
 ainda — revisar se algum deles vira o escopo da V6:
