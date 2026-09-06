@@ -97,6 +97,7 @@ def test_top_progressors_and_accuracy_reflect_real_attempts(client):
     progressors = {p["user_id"]: p for p in body["top_progressors"]}
     assert player in progressors
     assert progressors[player]["xp_gained"] > 0
+    assert progressors[player]["position"] >= 1
 
     accuracy = {a["territory_id"]: a for a in body["accuracy_by_territory"]}
     assert "esportes" in accuracy
@@ -105,6 +106,36 @@ def test_top_progressors_and_accuracy_reflect_real_attempts(client):
     # engaged_users_in_period conta ação real (Attempt), não só ter
     # aberto o app — o player respondeu, então precisa entrar na contagem.
     assert body["engaged_users_in_period"] >= 1
+
+
+def test_top_progressors_lists_everyone_ranked_by_position_no_cap(client):
+    """Pedido de Rhoney (06/09/2026): "mostre todos que fizerem teste
+    por posição 1, 2, 3..." — antes limitado aos 5 primeiros
+    (.limit(5)); agora lista todo mundo que ganhou XP no período,
+    numerado 1º/2º/3º/... na ordem de quem mais progrediu."""
+    admin = str(uuid.uuid4())
+    admin_headers = auth_header(admin)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=admin_headers)
+    _promote_to_admin(admin)
+
+    players = [str(uuid.uuid4()) for _ in range(6)]
+    for player in players:
+        headers = auth_header(player)
+        client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+        challenge = client.get("/challenges/next", params={"territory_id": "esportes"}, headers=headers).json()
+        correct_answer = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"])
+        client.post(
+            f"/challenges/{challenge['challenge_id']}/answer",
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": correct_answer},
+            headers=headers,
+        )
+
+    body = client.get("/admin/metrics/summary", params={"period": "today"}, headers=admin_headers).json()
+    progressor_ids = {p["user_id"] for p in body["top_progressors"]}
+    assert set(players) <= progressor_ids  # todos os 6 aparecem, não só os 5 primeiros
+
+    positions = [p["position"] for p in body["top_progressors"]]
+    assert positions == list(range(1, len(positions) + 1))  # 1, 2, 3... sem lacuna
 
 
 def test_demographics_reflect_profile_fields(client):

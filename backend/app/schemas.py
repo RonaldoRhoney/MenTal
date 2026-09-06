@@ -929,6 +929,11 @@ class MentalCoinsCatalogResponse(BaseModel):
 # seção 3 do documento; deliberadamente mais enxuto que o painel externo
 # maior (ADMIN_DASHBOARD_V1.md, ainda não implementado).
 class AdminTopProgressorOut(BaseModel):
+    # Pedido de Rhoney (06/09/2026): "mostre todos que fizerem teste por
+    # posição 1, 2, 3..." — position é 1-indexado, calculado no servidor
+    # (nunca o client infere pela ordem da lista, pra sobreviver a
+    # qualquer reordenação futura sem quebrar a numeração exibida).
+    position: int
     user_id: str
     nickname: str
     real_name: str | None = None

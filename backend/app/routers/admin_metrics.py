@@ -68,6 +68,11 @@ def get_metrics_summary(
         select(func.count(func.distinct(models.Attempt.user_id))).where(models.Attempt.created_at >= period_start)
     ).scalar_one()
 
+    # Pedido de Rhoney (06/09/2026): "mostre todos que fizerem teste por
+    # posição 1, 2, 3..." — antes limitado a 5 (.limit(5)), agora lista
+    # todo mundo que ganhou XP no período, sem teto. position calculada
+    # aqui, no servidor, a partir da própria ordem do ranking por
+    # xp_gained (nunca inferida no client).
     xp_gained_rows = (
         db.execute(
             select(models.Attempt.user_id, func.sum(models.Attempt.xp_awarded).label("xp_gained"))
@@ -75,7 +80,6 @@ def get_metrics_summary(
             .where(models.Attempt.xp_awarded > 0)
             .group_by(models.Attempt.user_id)
             .order_by(func.sum(models.Attempt.xp_awarded).desc())
-            .limit(5)
         )
         .all()
     )
@@ -87,6 +91,7 @@ def get_metrics_summary(
         streak = db.get(models.Streak, row_user_id)
         top_progressors.append(
             schemas.AdminTopProgressorOut(
+                position=len(top_progressors) + 1,
                 user_id=row_user_id,
                 nickname=profile.nickname,
                 real_name=profile.real_name,

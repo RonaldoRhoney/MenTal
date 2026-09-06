@@ -411,6 +411,15 @@ class _TopProgressorTile extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Row(
         children: [
+          SizedBox(
+            width: 28,
+            child: Text(
+              '${progressor['position']}º',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: AppColors.muted, fontWeight: FontWeight.w700, fontSize: 12),
+            ),
+          ),
+          const SizedBox(width: 8),
           ProfilePhotoCircle(photoUrl: progressor['photo_url'] as String?, size: 36),
           const SizedBox(width: 12),
           Expanded(
