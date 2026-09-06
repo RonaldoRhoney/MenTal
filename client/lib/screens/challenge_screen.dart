@@ -874,12 +874,29 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 // acima. Nunca cronometrado (config.NEVER_TIMED_
                 // TERRITORY_IDS) — sem pressa pra ler.
                 if (challenge['reading_passage'] != null) ...[
-                  Container(
-                    padding: const EdgeInsets.all(14),
-                    decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
-                    child: Text(
-                      challenge['reading_passage'] as String,
-                      style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 14).copyWith(height: 1.5),
+                  // Achado real (05/09/2026, pedido de Rhoney: "ajuste
+                  // para a pergunta e alternativas caberem na tela") —
+                  // cápsulas de texto do Mundo dos Valores são longas o
+                  // bastante pra empurrar pergunta+alternativas pra fora
+                  // da tela, exigindo rolar duas vezes (a rolagem da
+                  // página inteira, e outra dentro do texto). Altura
+                  // máxima com rolagem PRÓPRIA aqui dentro resolve isso:
+                  // o texto rola sozinho quando é longo, mas pergunta e
+                  // alternativas ficam sempre visíveis logo abaixo, sem
+                  // depender do tamanho do texto.
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(maxHeight: 180),
+                    child: Container(
+                      padding: const EdgeInsets.all(14),
+                      decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+                      child: Scrollbar(
+                        child: SingleChildScrollView(
+                          child: Text(
+                            challenge['reading_passage'] as String,
+                            style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 14).copyWith(height: 1.5),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 20),

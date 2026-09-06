@@ -150,6 +150,30 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _suggestionSending = false;
   bool _suggestionSent = false;
 
+  // Seta indicando "há mais Mundos abaixo" (pedido de Rhoney, 05/09/2026,
+  // ao ver a lista com 6 Mundos sem nenhuma pista visual de rolagem) —
+  // some assim que o jogador já rolou perto do fim da lista, evitando
+  // poluir a tela pra quem já sabe que há mais conteúdo.
+  final ScrollController _worldsScrollController = ScrollController();
+  bool _showMoreWorldsHint = false;
+
+  void _onWorldsScroll() {
+    if (!_worldsScrollController.hasClients) return;
+    final position = _worldsScrollController.position;
+    final hasMoreBelow = position.maxScrollExtent - position.pixels > 24;
+    if (hasMoreBelow != _showMoreWorldsHint) {
+      setState(() => _showMoreWorldsHint = hasMoreBelow);
+    }
+  }
+
+  void _checkWorldsOverflow() {
+    if (!_worldsScrollController.hasClients) return;
+    final hasMoreBelow = _worldsScrollController.position.maxScrollExtent > 24;
+    if (hasMoreBelow != _showMoreWorldsHint) {
+      setState(() => _showMoreWorldsHint = hasMoreBelow);
+    }
+  }
+
   Future<void> _handleSearch(String rawQuery) async {
     final query = rawQuery.trim();
     if (query.isEmpty || _searching) return;
@@ -232,6 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    _worldsScrollController.addListener(_onWorldsScroll);
     _loadProgress();
     _loadMovementBadge();
     _loadProfileHeader();
@@ -290,6 +315,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _coinsRise.dispose();
     _searchController.dispose();
     _searchFocusNode.dispose();
+    _worldsScrollController.dispose();
     super.dispose();
   }
 
@@ -297,6 +323,7 @@ class _HomeScreenState extends State<HomeScreen> {
     try {
       final progress = await widget.client.progress();
       if (mounted) setState(() => _progress = progress);
+      WidgetsBinding.instance.addPostFrameCallback((_) => _checkWorldsOverflow());
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
     }
@@ -569,10 +596,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 // o spinner enquanto progress==null evita esse flash.
                 child: progress == null
                     ? const Center(child: CircularProgressIndicator())
-                    : RefreshIndicator(
-                        onRefresh: _refreshAll,
-                        color: AppColors.gold,
-                        child: ListView(children: _buildWorldSections(l10n)),
+                    : Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          RefreshIndicator(
+                            onRefresh: _refreshAll,
+                            color: AppColors.gold,
+                            child: ListView(
+                              controller: _worldsScrollController,
+                              children: _buildWorldSections(l10n),
+                            ),
+                          ),
+                          IgnorePointer(
+                            child: AnimatedOpacity(
+                              duration: const Duration(milliseconds: 220),
+                              opacity: _showMoreWorldsHint ? 1 : 0,
+                              child: const _MoreWorldsBelowHint(),
+                            ),
+                          ),
+                        ],
                       ),
               ),
                   ],
@@ -646,6 +688,41 @@ class _MentalWatermark extends StatelessWidget {
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Seta flutuante "há mais Mundos abaixo" (pedido de Rhoney, 05/09/2026)
+/// — some assim que o jogador rola perto do fim da lista
+/// (`_onWorldsScroll`), pra não virar poluição visual permanente.
+class _MoreWorldsBelowHint extends StatelessWidget {
+  const _MoreWorldsBelowHint();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 6),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              AppColors.bg.withValues(alpha: 0),
+              AppColors.bg.withValues(alpha: 0.95),
+            ],
+          ),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            color: AppColors.gold.withValues(alpha: 0.92),
+            shape: BoxShape.circle,
+          ),
+          padding: const EdgeInsets.all(4),
+          child: Icon(Icons.keyboard_arrow_down_rounded, color: AppColors.bg, size: 20),
         ),
       ),
     );
@@ -773,22 +850,31 @@ class _MergedActionCard extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              _MiniIconAction(
-                icon: Icons.share_outlined,
-                tooltip: l10n.shareAppButtonTooltip,
-                onTap: onShareTap,
-              ),
-              Container(
-                width: 1,
-                height: 20,
-                margin: const EdgeInsets.symmetric(horizontal: 2),
-                color: AppColors.muted.withValues(alpha: 0.3),
-              ),
-              const _ThemeModeMiniToggle(),
-            ],
+          // Achado real (05/09/2026, banner de debug "RIGHT OVERFLOWED"):
+          // em telas mais estreitas os dois ícones + divisor não cabem
+          // na largura do card (mesma largura dos outros 4 cards do
+          // grid) — FittedBox encolhe o conteúdo pra caber sempre, em
+          // vez de depender de um cálculo de padding/tamanho frágil a
+          // qualquer mudança de fonte/idioma/tela.
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                _MiniIconAction(
+                  icon: Icons.share_outlined,
+                  tooltip: l10n.shareAppButtonTooltip,
+                  onTap: onShareTap,
+                ),
+                Container(
+                  width: 1,
+                  height: 20,
+                  margin: const EdgeInsets.symmetric(horizontal: 2),
+                  color: AppColors.muted.withValues(alpha: 0.3),
+                ),
+                const _ThemeModeMiniToggle(),
+              ],
+            ),
           ),
           const SizedBox(height: 6),
           Text(
