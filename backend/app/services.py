@@ -30,6 +30,20 @@ from .social import (
     unblock_user,
 )
 
+# FEED_SOCIAL_V1.md — mesmo padrão de re-exportação de app/social.py
+# acima: app/feed.py não depende de nada daqui, mas o resto do backend
+# importa via `from . import services`.
+from .feed import (
+    build_feed_event_text,
+    create_feed_event,
+    follow_user,
+    get_fan_count,
+    get_following_user_ids,
+    is_following,
+    list_feed,
+    unfollow_user,
+)
+
 
 class RateLimitExceeded(Exception):
     """Achado de auditoria de segurança M1 (05/09/2026) — o router
@@ -1046,6 +1060,13 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
         opponent_profile = db.get(models.Profile, battle.opponent_user_id)
         _notify_battle_result(challenger_profile, opponent_profile, winner_user_id)
 
+        # FEED_SOCIAL_V1.md §2 — "vitória em Batalha contra outro
+        # jogador", mesmo evento já detectado acima (_resolve_battle_winner),
+        # nunca empate (winner_user_id é None nesse caso).
+        if winner_user_id:
+            loser_profile = opponent_profile if winner_user_id == battle.challenger_user_id else challenger_profile
+            create_feed_event(db, winner_user_id, "battle_won", {"opponent_nickname": loser_profile.nickname})
+
     db.commit()
 
 
@@ -1228,6 +1249,8 @@ def get_public_profile(db: Session, viewer_user_id: str, target_user_id: str) ->
         "best_territory_xp": best_progress.xp_in_territory if best_progress and best_progress.xp_in_territory > 0 else 0,
         "torcida_sent_today_by_me": sent_today,
         "movement_invite_sent_today_by_me": movement_invite_sent_today,
+        "fan_count": get_fan_count(db, target_user_id),
+        "is_following_by_me": is_following(db, viewer_user_id, target_user_id),
     }
 
 

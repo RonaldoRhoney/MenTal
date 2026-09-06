@@ -66,3 +66,36 @@ def send_movement_invite(
         status_code = {"USER_NOT_FOUND": 404, "MOVEMENT_INVITE_DAILY_LIMIT_REACHED": 429}.get(e.code, 422)
         raise HTTPException(status_code=status_code, detail={"error": {"code": e.code, "message": e.message}})
     return schemas.MovementInviteSendResponse(sent_today_by_me=sent_today)
+
+
+@router.post("/profile/{target_user_id}/follow", response_model=schemas.FollowResponse)
+def follow_user(
+    target_user_id: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """FEED_SOCIAL_V1.md §4 — "seguir" é unilateral, sem aceite da outra
+    parte. 422 genérico cobre tanto self-follow quanto bloqueio em
+    qualquer direção (nunca revela QUAL dos dois motivos foi, mesmo
+    princípio não-revelador já usado em USER_NOT_FOUND de bloqueio no
+    perfil público) — já seguir também cai aqui (idempotente pro
+    resultado que o client vê: seguindo=true)."""
+    services.follow_user(db, follower_id=user_id, followed_id=target_user_id)
+    return schemas.FollowResponse(
+        following=services.is_following(db, user_id, target_user_id),
+        fan_count=services.get_fan_count(db, target_user_id),
+    )
+
+
+@router.delete("/profile/{target_user_id}/follow", response_model=schemas.FollowResponse)
+def unfollow_user(
+    target_user_id: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """§4: deixar de seguir é livre e não notifica a outra parte."""
+    services.unfollow_user(db, follower_id=user_id, followed_id=target_user_id)
+    return schemas.FollowResponse(
+        following=False,
+        fan_count=services.get_fan_count(db, target_user_id),
+    )

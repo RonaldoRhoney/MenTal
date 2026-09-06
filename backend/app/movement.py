@@ -15,7 +15,7 @@ em MOVEMENT_MAX_STEPS_PER_COLLECTION.
 from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from . import config, mentalcoins, models, scoring, services
@@ -254,6 +254,21 @@ def collect_steps(
     # — só grava quando o acumulado de fato avançou.
     if cycle.steps_collected != previous_total:
         db.add(models.MovementSnapshot(cycle_id=cycle.id, recorded_at=now, steps_total=cycle.steps_collected))
+
+    # FEED_SOCIAL_V1.md §2 — "recorde pessoal em Movimento (ex.: maior
+    # contagem de passos em um dia)". Captura a TRANSIÇÃO exata (cruzou
+    # o recorde ANTERIOR agora), nunca o estado absoluto — senão toda
+    # coleta seguinte no mesmo dia, já acima do recorde, dispararia de
+    # novo. best_before > 0 evita que o primeiríssimo dia de uso do
+    # Movimento sempre "quebre um recorde" contra um histórico vazio.
+    best_before = db.execute(
+        select(func.max(models.MovementCycle.steps_collected)).where(
+            models.MovementCycle.user_id == user_id,
+            models.MovementCycle.id != cycle.id,
+        )
+    ).scalar_one_or_none() or 0
+    if best_before > 0 and previous_total <= best_before < cycle.steps_collected:
+        services.create_feed_event(db, user_id, "movement_record", {"steps": cycle.steps_collected})
 
     level_before = profile.level
     if xp_delta:

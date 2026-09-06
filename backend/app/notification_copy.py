@@ -84,6 +84,20 @@ TORCIDA_RECEIVED_BODY_TEMPLATE = "{nickname} te mandou um {emoji}!"
 MOVEMENT_INVITE_RECEIVED_TITLE = "Bora se mexer? 🚶"
 MOVEMENT_INVITE_RECEIVED_BODY_TEMPLATE = "{nickname} te convidou a ligar o Movimento e contar seus passos!"
 
+# FEED_SOCIAL_V1.md §2 — texto de exibição de cada evento automático do
+# Feed, montado no servidor (feed.build_feed_event_text) a partir do
+# `payload` do FeedEvent. Nunca texto livre do usuário — só interpolação
+# num template fixo, mesmo princípio de não-humilhação/reforço positivo
+# já usado no resto das notificações deste arquivo.
+FEED_EVENT_TEMPLATES = {
+    "world_completed": "{nickname} completou o {world_name}! 🌍",
+    "streak_milestone": "{nickname} alcançou {days} dias de sequência! 🔥",
+    "level_up_milestone": "{nickname} chegou ao Nível {level}! ⭐",
+    "battle_won": "{nickname} venceu uma Batalha contra {opponent_nickname}! 🏆",
+    "badge_earned": '{nickname} conquistou o troféu "{badge_name}"! 🏅',
+    "movement_record": "{nickname} bateu seu recorde pessoal de passos: {steps} em um dia! 🚶",
+}
+
 # Usado nas notificações de batalha e de disputa territorial — os
 # territórios ainda não têm uma tabela de nomes server-side (o client
 # resolve isso via l10n). 7 territórios fixos, mesmo texto exibido no

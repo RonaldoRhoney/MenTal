@@ -416,6 +416,41 @@ class PublicProfileOut(BaseModel):
     # área de Torcida — o client desabilita o botão "GO" depois do envio
     # do dia (teto de config.MOVEMENT_INVITE_DAILY_LIMIT_PER_TARGET).
     movement_invite_sent_today_by_me: int
+    # FEED_SOCIAL_V1.md §4 — contagem de fãs é pública (mesmo espírito
+    # de nível/XP), is_following_by_me é relativo a QUEM está vendo o
+    # perfil agora (mesmo padrão de torcida_sent_today_by_me).
+    fan_count: int
+    is_following_by_me: bool
+
+
+class FollowResponse(BaseModel):
+    ok: bool = True
+    following: bool
+    fan_count: int
+
+
+class FeedEventOut(BaseModel):
+    """FEED_SOCIAL_V1.md §2-3 — o texto de exibição já vem PRONTO do
+    servidor (services.build_feed_event_text), nunca montado no client
+    a partir do payload cru: evita duplicar a lógica de formatação/
+    pluralização em Flutter e mantém a copy num único lugar revisável
+    (notification_copy.FEED_EVENT_TEMPLATES)."""
+
+    id: str
+    user_id: str
+    nickname: str
+    photo_url: str | None
+    event_type: str
+    text: str
+    created_at: str
+
+
+class FeedListResponse(BaseModel):
+    events: list[FeedEventOut]
+    # created_at (ISO) do último evento da página — None quando a
+    # página veio vazia ou é a última. Client manda de volta como
+    # `before` pra buscar a próxima página (cursor, não offset).
+    next_cursor: str | None
 
 
 class TorcidaSendRequest(BaseModel):

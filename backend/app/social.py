@@ -46,6 +46,14 @@ def block_user(db: Session, blocker_user_id: str, blocked_user_id: str) -> model
     Idempotente (retorna o bloqueio já existente em vez de duplicar).
     Também encerra qualquer amizade/pedido pendente já existente entre
     os dois — bloquear alguém não deveria deixar uma amizade "zumbi".
+
+    FEED_SOCIAL_V1.md §6: bloquear também desfaz qualquer relação de
+    "seguir" (models.Follow) já existente entre os dois, nos dois
+    sentidos — segue.follow_user já impede uma nova relação enquanto o
+    bloqueio existir (checa is_blocked_either_way), então só falta
+    desfazer a que já existia antes do bloqueio. Inline aqui (não em
+    app/feed.py) pra social.py continuar sem depender de nenhum outro
+    módulo além de models/SQLAlchemy.
     """
     existing = db.execute(
         select(models.UserBlock).where(
@@ -65,6 +73,15 @@ def block_user(db: Session, blocker_user_id: str, blocked_user_id: str) -> model
     ).scalar_one_or_none()
     if friendship is not None:
         db.delete(friendship)
+
+    db.execute(
+        models.Follow.__table__.delete().where(
+            or_(
+                and_(models.Follow.follower_user_id == blocker_user_id, models.Follow.followed_user_id == blocked_user_id),
+                and_(models.Follow.follower_user_id == blocked_user_id, models.Follow.followed_user_id == blocker_user_id),
+            )
+        )
+    )
 
     db.commit()
     db.refresh(block)
@@ -179,6 +196,26 @@ def friendship_status_between(db: Session, user_a: str, user_b: str) -> str | No
     return friendship.status if friendship is not None else None
 
 
+def get_blocked_user_ids_either_way(db: Session, user_id: str) -> set[str]:
+    """Todo user_id que bloqueou OU foi bloqueado por `user_id`, num set só
+    — reaproveitado por search_users_by_name e por app/feed.py (listagem
+    do Feed nunca pode incluir evento de quem está bloqueado em qualquer
+    direção, FEED_SOCIAL_V1.md §6)."""
+    return set(
+        db.execute(
+            select(models.UserBlock.blocked_user_id).where(models.UserBlock.blocker_user_id == user_id)
+        )
+        .scalars()
+        .all()
+    ) | set(
+        db.execute(
+            select(models.UserBlock.blocker_user_id).where(models.UserBlock.blocked_user_id == user_id)
+        )
+        .scalars()
+        .all()
+    )
+
+
 def search_users_by_name(db: Session, query: str, requester_id: str, limit: int = 10) -> list[models.Profile]:
     """
     Busca por PREFIXO (AMIGOS_CONVITE_POR_NOME.md §5 — "comparação de
@@ -189,19 +226,7 @@ def search_users_by_name(db: Session, query: str, requester_id: str, limit: int 
     """
     escaped = query.replace("\\", "\\\\").replace("%", r"\%").replace("_", r"\_")
     pattern = f"{escaped}%"
-    blocked_ids = set(
-        db.execute(
-            select(models.UserBlock.blocked_user_id).where(models.UserBlock.blocker_user_id == requester_id)
-        )
-        .scalars()
-        .all()
-    ) | set(
-        db.execute(
-            select(models.UserBlock.blocker_user_id).where(models.UserBlock.blocked_user_id == requester_id)
-        )
-        .scalars()
-        .all()
-    )
+    blocked_ids = get_blocked_user_ids_either_way(db, requester_id)
     candidates = (
         db.execute(
             select(models.Profile)

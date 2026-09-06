@@ -890,6 +890,48 @@ class UserBlock(Base):
     __table_args__ = (UniqueConstraint("blocker_user_id", "blocked_user_id", name="uq_user_block_pair"),)
 
 
+class FeedEvent(Base):
+    """
+    FEED_SOCIAL_V1.md §1-2 — piloto do Feed Social. Evento gerado 100%
+    pelo sistema no momento em que a condição é detectada (nunca texto
+    livre do usuário) — elimina o risco de moderação de conteúdo livre
+    que recursos sociais desse tipo normalmente trazem. `event_type` é
+    sempre um dos valores fixos de config.FEED_EVENT_TYPES; `payload`
+    guarda só o dado necessário pra montar a frase de exibição no
+    servidor (ex.: world_name, streak_days, new_level, badge_name,
+    opponent_nickname, steps) — nunca texto livre nem HTML, sempre
+    interpolado num template fixo (notification_copy.FEED_EVENT_TEMPLATES).
+    """
+
+    __tablename__ = "feed_events"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    event_type: Mapped[str] = mapped_column(String)
+    payload: Mapped[dict] = mapped_column(JSON, default=dict)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
+
+
+class Follow(Base):
+    """
+    FEED_SOCIAL_V1.md §4 — "seguir" é uma relação unilateral (sem
+    aceite da outra parte), distinta de Friendship (sempre mútua).
+    Quem segue vira "fã", na linguagem do app, de quem é seguido.
+    Bloqueio (§6) desfaz qualquer relação de seguir já existente nos
+    dois sentidos e impede nova criação enquanto o bloqueio existir —
+    ver social.block_user e feed.follow_user.
+    """
+
+    __tablename__ = "follows"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    follower_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    followed_user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+    __table_args__ = (UniqueConstraint("follower_user_id", "followed_user_id", name="uq_follow_pair"),)
+
+
 class MentalCoinsBalance(Base):
     """
     Saldo de MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio

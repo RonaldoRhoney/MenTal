@@ -381,6 +381,27 @@ TORCIDA_REACTION_TYPES = ("vibracao", "balao", "coracao", "joinha")
 MOVEMENT_INVITE_DAILY_LIMIT_PER_TARGET = 1
 BATTLE_WIN_BONUS_XP = 30
 
+# FEED_SOCIAL_V1.md §2 — eventos automáticos aceitos no Feed (piloto).
+# Nenhum evento fora desta lista pode ser criado (feed.create_feed_event
+# valida contra este conjunto) — trava contra typo/tipo inventado em
+# runtime virar uma entrada de feed "órfã" que o client não sabe exibir.
+FEED_EVENT_TYPES = frozenset({
+    "world_completed",
+    "streak_milestone",
+    "level_up_milestone",
+    "battle_won",
+    "badge_earned",
+    "movement_record",
+})
+
+# FEED_SOCIAL_V1.md §2: "a cada 10 níveis, não em todo nível pra não
+# poluir o feed", e marcos de streak citados como exemplo (30/60/100).
+FEED_LEVEL_UP_MILESTONE_INTERVAL = 10
+FEED_STREAK_MILESTONES = (30, 60, 100)
+
+FEED_LIST_DEFAULT_LIMIT = 20
+FEED_LIST_MAX_LIMIT = 50
+
 # MentalCoins — moeda de prestígio semanal (U.I/MENTALCOINS_V1.md).
 # Ciclo: segunda-feira 08:00 até domingo 23:59:59, horário de Brasília.
 # Apuração roda no fechamento via o mesmo agendador em background já

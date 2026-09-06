@@ -588,6 +588,20 @@ def submit_answer(
         for b in newly_awarded
     ]
 
+    # FEED_SOCIAL_V1.md §2/§7 — registra no Feed os MESMOS eventos que
+    # este endpoint já detectou acima (nenhuma lógica de detecção nova).
+    # Falha ao registrar no feed nunca pode quebrar a resposta normal do
+    # desafio — mesmo princípio de "notificação nunca bloqueia o fluxo
+    # principal" já usado em send_torcida/send_movement_invite.
+    if world_just_completed and world_id:
+        services.create_feed_event(db, user_id, "world_completed", {"world_name": completed_world_name})
+    if streak_just_extended and streak.current_streak in config.FEED_STREAK_MILESTONES:
+        services.create_feed_event(db, user_id, "streak_milestone", {"days": streak.current_streak})
+    if level_up and (profile.level // config.FEED_LEVEL_UP_MILESTONE_INTERVAL) > (level_before // config.FEED_LEVEL_UP_MILESTONE_INTERVAL):
+        services.create_feed_event(db, user_id, "level_up_milestone", {"level": profile.level})
+    for badge in newly_awarded:
+        services.create_feed_event(db, user_id, "badge_earned", {"badge_name": badge.name})
+
     return schemas.AnswerResponse(
         is_correct=is_correct,
         correct_answer=challenge.correct_answer,
