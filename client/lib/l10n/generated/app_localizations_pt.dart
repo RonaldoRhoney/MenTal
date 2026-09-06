@@ -615,6 +615,24 @@ class AppLocalizationsPt extends AppLocalizations {
       'Você já convidou esta pessoa pro Movimento hoje';
 
   @override
+  String get publicProfileFollowButton => 'Seguir';
+
+  @override
+  String get publicProfileUnfollowButton => 'Seguindo';
+
+  @override
+  String publicProfileFanCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count fãs',
+      one: '1 fã',
+      zero: 'Nenhum fã ainda',
+    );
+    return '$_temp0';
+  }
+
+  @override
   String get viewBadgesButton => 'Ver conquistas';
 
   @override
@@ -1092,6 +1110,19 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get friendsHelpTooltip => 'Como funciona';
+
+  @override
+  String get friendsFeedTooltip => 'Feed';
+
+  @override
+  String get feedScreenTitle => 'Feed';
+
+  @override
+  String get feedEmptyState =>
+      'Nada por aqui ainda. Conquistas de amigos e de quem você segue vão aparecer neste feed.';
+
+  @override
+  String get feedLoadMoreButton => 'Carregar mais';
 
   @override
   String get friendsHelpTitle => 'Amigos — como funciona';

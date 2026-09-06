@@ -1132,6 +1132,24 @@ abstract class AppLocalizations {
   /// **'Você já convidou esta pessoa pro Movimento hoje'**
   String get publicProfileMovementInviteLimitReached;
 
+  /// Button to follow this profile's owner
+  ///
+  /// In pt, this message translates to:
+  /// **'Seguir'**
+  String get publicProfileFollowButton;
+
+  /// Button shown when already following this profile's owner, tapping it unfollows
+  ///
+  /// In pt, this message translates to:
+  /// **'Seguindo'**
+  String get publicProfileUnfollowButton;
+
+  /// How many fans (followers) this profile's owner has
+  ///
+  /// In pt, this message translates to:
+  /// **'{count, plural, =0{Nenhum fã ainda} =1{1 fã} other{{count} fãs}}'**
+  String publicProfileFanCount(int count);
+
   /// Button on Progress screen linking to Badges screen
   ///
   /// In pt, this message translates to:
@@ -1917,6 +1935,30 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Como funciona'**
   String get friendsHelpTooltip;
+
+  /// Tooltip for the Feed icon on Friends screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Feed'**
+  String get friendsFeedTooltip;
+
+  /// Feed screen title
+  ///
+  /// In pt, this message translates to:
+  /// **'Feed'**
+  String get feedScreenTitle;
+
+  /// Shown when the feed has no events yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Nada por aqui ainda. Conquistas de amigos e de quem você segue vão aparecer neste feed.'**
+  String get feedEmptyState;
+
+  /// Button to load the next page of the feed
+  ///
+  /// In pt, this message translates to:
+  /// **'Carregar mais'**
+  String get feedLoadMoreButton;
 
   /// Title of the Friends help sheet
   ///

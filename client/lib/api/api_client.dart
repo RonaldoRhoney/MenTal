@@ -385,6 +385,24 @@ class ApiClient {
     return _post(_uri('/profile/$userId/invite-movement'), headers: _headers);
   }
 
+  // FEED_SOCIAL_V1.md §4 — "seguir" é unilateral, sem aceite da outra
+  // parte, mesma área de Torcida/convite de Movimento no Perfil Público.
+  Future<Map<String, dynamic>> followUser(String userId) async {
+    return _post(_uri('/profile/$userId/follow'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> unfollowUser(String userId) async {
+    return _delete(_uri('/profile/$userId/follow'), headers: _headers);
+  }
+
+  // FEED_SOCIAL_V1.md §2/§5 — eventos automáticos de amigos + seguidos.
+  // `before` é o cursor (created_at ISO do último evento da página
+  // anterior) — null na primeira página.
+  Future<Map<String, dynamic>> getFeed({String? before}) async {
+    final params = before != null ? {'before': before} : null;
+    return _get(_uri('/feed', params), headers: _headers);
+  }
+
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,

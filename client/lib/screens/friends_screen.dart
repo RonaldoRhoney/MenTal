@@ -12,6 +12,7 @@ import '../territories.dart';
 import '../theme/app_theme.dart';
 import '../widgets/help_sheet.dart';
 import 'challenge_screen.dart';
+import 'feed_screen.dart';
 import 'public_profile_screen.dart';
 
 /// V2 item 12 — Amigos (V2_KICKOFF.md §6A). Reaproveita o MESMO
@@ -334,6 +335,17 @@ class _FriendsScreenState extends State<FriendsScreen> {
       appBar: AppBar(
         title: Text(l10n.friendsScreenTitle),
         actions: [
+          // FEED_SOCIAL_V1.md — Feed é escopado a amigos+seguidos, então
+          // o atalho mais natural fica aqui, na mesma tela onde essas
+          // relações já são geridas (nenhum espaço novo na Home/bottom
+          // nav, que já estão no limite de itens).
+          IconButton(
+            tooltip: l10n.friendsFeedTooltip,
+            icon: const Icon(Icons.dynamic_feed_outlined),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => FeedScreen(client: widget.client)),
+            ),
+          ),
           IconButton(
             tooltip: l10n.friendsHelpTooltip,
             icon: const Icon(Icons.help_outline),

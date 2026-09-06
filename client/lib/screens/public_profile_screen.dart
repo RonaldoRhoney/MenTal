@@ -26,6 +26,7 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
   String? _error;
   bool _sendingReaction = false;
   bool _sendingMovementInvite = false;
+  bool _togglingFollow = false;
 
   static const _reactionTypes = ['vibracao', 'balao', 'coracao', 'joinha'];
   static const _reactionEmoji = {'vibracao': '⚡', 'balao': '🎈', 'coracao': '💚', 'joinha': '👍'};
@@ -88,6 +89,33 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
     }
   }
 
+  // FEED_SOCIAL_V1.md §4 — "seguir" é unilateral, sem aceite: não passa
+  // por ApiException de negócio (self-follow/bloqueio já viram
+  // following=false, silenciosamente, no backend) — só falha de rede
+  // real cai no catch, e mesmo essa não trava a tela (mesmo espírito de
+  // notificação nunca bloquear o fluxo principal).
+  Future<void> _toggleFollow() async {
+    if (_togglingFollow || _profile == null) return;
+    final wasFollowing = _profile!['is_following_by_me'] as bool;
+    setState(() => _togglingFollow = true);
+    try {
+      final result = wasFollowing ? await widget.client.unfollowUser(widget.userId) : await widget.client.followUser(widget.userId);
+      if (!mounted) return;
+      setState(() {
+        _profile = {
+          ..._profile!,
+          'is_following_by_me': result['following'],
+          'fan_count': result['fan_count'],
+        };
+      });
+    } on ApiException catch (_) {
+      // Falha de rede — o botão simplesmente volta ao estado anterior,
+      // sem mensagem de erro alarmante pra uma ação leve como esta.
+    } finally {
+      if (mounted) setState(() => _togglingFollow = false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -120,6 +148,8 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
     final worlds = (profile['worlds'] as List).cast<Map<String, dynamic>>();
     final sentToday = profile['torcida_sent_today_by_me'] as int;
     final movementInviteSentToday = profile['movement_invite_sent_today_by_me'] as int;
+    final fanCount = profile['fan_count'] as int;
+    final isFollowing = profile['is_following_by_me'] as bool;
 
     // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer tela do
     // app.
@@ -158,6 +188,30 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
                     const SizedBox(width: 2),
                     Text(l10n.publicProfileStreakLabel(streak), style: TextStyle(color: AppColors.gold, fontSize: 12)),
                   ],
+                ],
+              ),
+              const SizedBox(height: 8),
+              // FEED_SOCIAL_V1.md §4 — "seguir" é unilateral, sem
+              // aceite; contagem de fãs é pública, mesmo espírito de
+              // nível/XP. Botão junto do cabeçalho de identidade (não
+              // na área de Torcida/GO abaixo) porque é um estado
+              // PERSISTENTE de relação, não uma ação diária.
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  OutlinedButton.icon(
+                    onPressed: _togglingFollow ? null : _toggleFollow,
+                    icon: Icon(isFollowing ? Icons.person_remove_alt_1_rounded : Icons.person_add_alt_1_rounded, size: 16),
+                    label: Text(isFollowing ? l10n.publicProfileUnfollowButton : l10n.publicProfileFollowButton),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: isFollowing ? AppColors.muted : AppColors.teal,
+                      side: BorderSide(color: isFollowing ? AppColors.muted : AppColors.teal),
+                      visualDensity: VisualDensity.compact,
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Text(l10n.publicProfileFanCount(fanCount), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
                 ],
               ),
             ],

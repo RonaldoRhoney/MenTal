@@ -19,6 +19,8 @@ class _FakeApiClient extends ApiClient {
   int sentCount = 0;
   int movementInviteSentCount = 0;
   String? lastReactionType;
+  bool isFollowing = false;
+  int fanCount = 0;
 
   @override
   Future<Map<String, dynamic>> getPublicProfile(String userId) async {
@@ -42,6 +44,8 @@ class _FakeApiClient extends ApiClient {
       'best_territory_xp': 300,
       'torcida_sent_today_by_me': sentCount,
       'movement_invite_sent_today_by_me': movementInviteSentCount,
+      'fan_count': fanCount,
+      'is_following_by_me': isFollowing,
     };
   }
 
@@ -57,6 +61,20 @@ class _FakeApiClient extends ApiClient {
   Future<Map<String, dynamic>> sendMovementInvite(String userId) async {
     movementInviteSentCount += 1;
     return {'ok': true, 'sent_today_by_me': movementInviteSentCount};
+  }
+
+  @override
+  Future<Map<String, dynamic>> followUser(String userId) async {
+    isFollowing = true;
+    fanCount += 1;
+    return {'ok': true, 'following': isFollowing, 'fan_count': fanCount};
+  }
+
+  @override
+  Future<Map<String, dynamic>> unfollowUser(String userId) async {
+    isFollowing = false;
+    fanCount = fanCount > 0 ? fanCount - 1 : 0;
+    return {'ok': true, 'following': isFollowing, 'fan_count': fanCount};
   }
 }
 
@@ -135,5 +153,27 @@ void main() {
 
     final button = tester.widget<FilledButton>(find.ancestor(of: find.text('GO'), matching: find.byType(FilledButton)));
     expect(button.onPressed, isNull);
+  });
+
+  testWidgets('botão de seguir alterna estado e contagem de fãs', (tester) async {
+    final client = _FakeApiClient();
+    await _pump(tester, client);
+
+    expect(find.text('Seguir'), findsOneWidget);
+    expect(find.text('Nenhum fã ainda'), findsOneWidget);
+
+    await tester.tap(find.text('Seguir'));
+    await tester.pumpAndSettle();
+
+    expect(client.isFollowing, isTrue);
+    expect(find.text('Seguindo'), findsOneWidget);
+    expect(find.text('1 fã'), findsOneWidget);
+
+    await tester.tap(find.text('Seguindo'));
+    await tester.pumpAndSettle();
+
+    expect(client.isFollowing, isFalse);
+    expect(find.text('Seguir'), findsOneWidget);
+    expect(find.text('Nenhum fã ainda'), findsOneWidget);
   });
 }

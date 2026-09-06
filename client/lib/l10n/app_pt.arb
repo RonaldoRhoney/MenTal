@@ -840,6 +840,23 @@
   "@publicProfileMovementInviteLimitReached": {
     "description": "Snackbar shown when the daily Movement invite limit is hit"
   },
+  "publicProfileFollowButton": "Seguir",
+  "@publicProfileFollowButton": {
+    "description": "Button to follow this profile's owner"
+  },
+  "publicProfileUnfollowButton": "Seguindo",
+  "@publicProfileUnfollowButton": {
+    "description": "Button shown when already following this profile's owner, tapping it unfollows"
+  },
+  "publicProfileFanCount": "{count, plural, =0{Nenhum fã ainda} =1{1 fã} other{{count} fãs}}",
+  "@publicProfileFanCount": {
+    "description": "How many fans (followers) this profile's owner has",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "viewBadgesButton": "Ver conquistas",
   "@viewBadgesButton": {
     "description": "Button on Progress screen linking to Badges screen"
@@ -1559,6 +1576,22 @@
   "friendsHelpTooltip": "Como funciona",
   "@friendsHelpTooltip": {
     "description": "Tooltip for the help icon on Friends screen"
+  },
+  "friendsFeedTooltip": "Feed",
+  "@friendsFeedTooltip": {
+    "description": "Tooltip for the Feed icon on Friends screen"
+  },
+  "feedScreenTitle": "Feed",
+  "@feedScreenTitle": {
+    "description": "Feed screen title"
+  },
+  "feedEmptyState": "Nada por aqui ainda. Conquistas de amigos e de quem você segue vão aparecer neste feed.",
+  "@feedEmptyState": {
+    "description": "Shown when the feed has no events yet"
+  },
+  "feedLoadMoreButton": "Carregar mais",
+  "@feedLoadMoreButton": {
+    "description": "Button to load the next page of the feed"
   },
   "friendsHelpTitle": "Amigos — como funciona",
   "@friendsHelpTitle": {

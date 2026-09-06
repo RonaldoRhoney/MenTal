@@ -1,6 +1,6 @@
 # MENTAL — Feed Social de Conquistas + Seguir/Fã (Piloto)
 
-**Status:** Backend implementado (06/09/2026) — ver seção 10. Client (telas Flutter: Feed, botão seguir/fã no perfil público) ainda pendente.
+**Status:** Implementado (06/09/2026) — backend na seção 10, client na seção 11.
 **Contexto/justificativa:** Pedido espontâneo de múltiplos testadores durante o teste fechado. Pesquisa de mercado confirma que recursos sociais (feed de conquistas) são um dos fatores de maior impacto em retenção de apps gamificados — comparável ou superior a badges e pontos isolados. Essa possibilidade já estava registrada como ideia de longo prazo antes do app se tornar 18+; a mudança de público (MENTAL-DIR-001) remove a restrição original que motivava adiar esse recurso.
 **Documentos relacionados:** PERFIL_PUBLICO_E_TORCIDA_V1.md, TORCIDA_MULTIPLA_V2.md, RANKING_ENRIQUECIDO_V1.md (o Feed se conecta a esses três recursos sociais já existentes), APROVACAO_CORRECOES_PRE_AAB_V1.md (item A1 — bloqueio efetivo, requisito obrigatório aqui também).
 
@@ -114,5 +114,28 @@ Adicionalmente: bloquear um usuário deve automaticamente desfazer qualquer rela
   disparando no momento certo e só nesse momento). Suíte backend
   completa: 357/357.
 
-**Pendente**: telas Flutter (Feed, botão seguir/contagem de fãs no
-Perfil Público) — ver próximo passo.
+## 11. Implementação (06/09/2026) — client
+
+- `PublicProfileScreen`: botão "Seguir"/"Seguindo" junto do cabeçalho
+  de identidade (foto/nome/nível), com a contagem de fãs ao lado —
+  colocado ali (não na área de Torcida/GO abaixo) por ser um estado
+  PERSISTENTE de relação, não uma ação diária. Falha de rede ao
+  seguir/deixar de seguir não mostra erro alarmante (ação leve).
+- `FeedScreen` (novo, `lib/screens/feed_screen.dart`): lista os
+  eventos com pull-to-refresh + paginação por cursor ("Carregar
+  mais"), cada card mostra o texto JÁ PRONTO do servidor (nunca
+  reformatado no client) e os mesmos 4 ícones de reação de Torcida —
+  tocar num ícone reaproveita 100% `POST /profile/{id}/torcida`
+  (§7), mandando pro `user_id` do EVENTO. Tocar no avatar/texto abre
+  o Perfil Público de quem gerou o evento.
+- Ponto de entrada: ícone na AppBar da tela Amigos (`friends_screen.dart`)
+  — Feed é escopado a amigos+seguidos, e a Home/bottom nav já estavam
+  no limite de itens (5 cards/5 abas), então o atalho mais natural é
+  na própria tela onde essas relações são geridas.
+- `ApiClient`: `followUser`/`unfollowUser` (`POST`/`DELETE
+  /profile/{id}/follow`), `getFeed({before})`.
+- Testes: `test/feed_screen_test.dart` (4 testes — estado vazio, texto
+  exibido sem reformatação, reação chama Torcida com o user_id certo,
+  paginação com o cursor certo) + `test/public_profile_screen_test.dart`
+  (1 teste novo — alternar seguir/deixar de seguir e a contagem de
+  fãs). Suíte client completa: 138/138.
