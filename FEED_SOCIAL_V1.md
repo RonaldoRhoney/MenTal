@@ -139,3 +139,39 @@ Adicionalmente: bloquear um usuário deve automaticamente desfazer qualquer rela
   paginação com o cursor certo) + `test/public_profile_screen_test.dart`
   (1 teste novo — alternar seguir/deixar de seguir e a contagem de
   fãs). Suíte client completa: 138/138.
+
+## 12. Revisão visual + badge de atividade (06/09/2026)
+
+Pedido de Rhoney: "padrão profissional, com design, estilo, dinamismo e
+elegância" pro Feed, e perguntou se o Feed deveria ter atalho na Home.
+
+- **Achado real em dispositivo (crítico)**: o botão "Seguir" quebrava a
+  tela inteira do Perfil Público (`RenderBox was not laid out`) — mesmo
+  bug já documentado em `friends_screen.dart` (tema padrão de
+  `OutlinedButton` força `minimumSize` com largura infinita dentro de
+  um `Row` sem constraint). Corrigido com `minimumSize: Size.zero` +
+  `tapTargetSize: MaterialTapTargetSize.shrinkWrap`. O teste de widget
+  não pegou porque `MaterialApp` de teste não usa o tema real do app —
+  só apareceu testando no aparelho físico.
+- **Redesign do Feed**: cada tipo de evento ganha ícone/cor de
+  identidade num badge sobreposto no avatar (mesmo padrão do nível em
+  `ranking_screen.dart`) — mundo completo (globo/teal), streak
+  (fogo/gold), nível (estrela/purple), badge (troféu/gold), batalha
+  (medalha/teal), recorde de Movimento (passos/teal). Nome em destaque
+  via `RichText`, tempo relativo ("há 2h"), reações em chips circulares,
+  cards com borda/gradiente sutil na cor do evento — nunca decoração
+  sem significado (DESIGN_SYSTEM.md §1).
+- **Chip de "Fã"**: de texto discreto pra um chip com ícone de estrela
+  dourada, mesmo peso visual do botão Seguir.
+- **Feed na Home?** Decisão registrada via AskUserQuestion: não — Home
+  é o painel de jogo (progresso/XP/Mundos), não um hub social, e os 5
+  cards de atalho já estão no limite. Em vez de um atalho novo, um
+  **badge de atividade** aparece no card "Amigos" (contagem de eventos
+  novos desde a última visita ao Feed) — resolve a descobribilidade sem
+  competir com o painel principal. `FeedActivityService` rastreia
+  "último visto" só no dispositivo (SharedPreferences), nunca no
+  backend.
+- Testes: `test/feed_activity_service_test.dart` (4 testes). Suíte
+  client completa: 142/142. Verificado em dispositivo real com backend
+  local: badge aparece/some corretamente, chip de fã correto, sem
+  exceções no logcat.
