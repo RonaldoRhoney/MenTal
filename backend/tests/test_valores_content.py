@@ -32,7 +32,11 @@ def test_every_valores_challenge_has_a_reading_passage():
 
 
 def test_valores_territories_are_registered_as_never_timed():
-    assert VALORES_TERRITORY_IDS == NEVER_TIMED_TERRITORY_IDS
+    # Não é mais igualdade exata (V7 — Mundo do Trânsito, 06/09/2026,
+    # adicionou seus próprios territórios ao mesmo conjunto, mesmo
+    # motivo: "cápsula de texto + perguntas", nunca cronometrado) — só
+    # garante que os 4 territórios de Valores continuam lá dentro.
+    assert VALORES_TERRITORY_IDS <= NEVER_TIMED_TERRITORY_IDS
 
 
 def test_reading_passage_is_served_before_the_question(client):

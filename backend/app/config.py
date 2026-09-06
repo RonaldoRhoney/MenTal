@@ -243,7 +243,14 @@ ALWAYS_TIMED_TERRITORIES = {"conhecimento", "cores", "curiosidade_relampago"}
 # conteúdo curado: "NAO e Relampago, sem timer, sem penalidade de
 # velocidade" — ler um texto de economia contra o relógio contraria o
 # propósito de compreensão de leitura.
-NEVER_TIMED_TERRITORY_IDS = {"bolsa", "criptomoedas", "cenario_global", "financas_dia_a_dia"}
+NEVER_TIMED_TERRITORY_IDS = {
+    "bolsa", "criptomoedas", "cenario_global", "financas_dia_a_dia",
+    # V7 — Mundo do Trânsito (06/09/2026): mesmo formato "cápsula de
+    # texto + perguntas", mesmo motivo — sem timer, sem penalidade de
+    # velocidade (fonte do conteúdo curado, ver Mundo_do_Transito/*.json).
+    "educacao_legislacao", "historia_curiosidades", "transportes_terrestres",
+    "economia_transito", "prevencao_seguranca",
+}
 # V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — o próprio doc descreve
 # a charada "no formato Relâmpago (timer curto, ~10 segundos)" como a
 # natureza do desafio, não um modo opcional (mesmo raciocínio de

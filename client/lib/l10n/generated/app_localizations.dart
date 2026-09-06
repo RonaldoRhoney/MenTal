@@ -478,6 +478,36 @@ abstract class AppLocalizations {
   /// **'Finanças do Dia a Dia'**
   String get territoryFinancasDiaADia;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Educação e Legislação'**
+  String get territoryEducacaoLegislacao;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'História e Curiosidades'**
+  String get territoryHistoriaCuriosidades;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Transportes Terrestres'**
+  String get territoryTransportesTerrestres;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Economia do Trânsito'**
+  String get territoryEconomiaTransito;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Prevenção e Segurança'**
+  String get territoryPrevencaoSeguranca;
+
   /// Button that plays the challenge audio clip in Ouvido Afiado
   ///
   /// In pt, this message translates to:

@@ -277,6 +277,26 @@
   "@territoryFinancasDiaADia": {
     "description": "Territory display name"
   },
+  "territoryEducacaoLegislacao": "Educação e Legislação",
+  "@territoryEducacaoLegislacao": {
+    "description": "Territory display name"
+  },
+  "territoryHistoriaCuriosidades": "História e Curiosidades",
+  "@territoryHistoriaCuriosidades": {
+    "description": "Territory display name"
+  },
+  "territoryTransportesTerrestres": "Transportes Terrestres",
+  "@territoryTransportesTerrestres": {
+    "description": "Territory display name"
+  },
+  "territoryEconomiaTransito": "Economia do Trânsito",
+  "@territoryEconomiaTransito": {
+    "description": "Territory display name"
+  },
+  "territoryPrevencaoSeguranca": "Prevenção e Segurança",
+  "@territoryPrevencaoSeguranca": {
+    "description": "Territory display name"
+  },
   "audioPlayButton": "Tocar som",
   "@audioPlayButton": {
     "description": "Button that plays the challenge audio clip in Ouvido Afiado"

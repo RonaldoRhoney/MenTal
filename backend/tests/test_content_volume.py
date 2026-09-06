@@ -38,6 +38,11 @@ SINGLE_DIFFICULTY_TERRITORY_IDS = {
     # — todo desafio nasce em difficulty_level=1 de propósito (mesmo
     # raciocínio de idiomas acima).
     "bolsa", "criptomoedas", "cenario_global", "financas_dia_a_dia",
+    # V7 — Mundo do Trânsito: mesmo formato e mesmo raciocínio do Mundo
+    # dos Valores acima — checagem de compreensão de leitura, não
+    # trilha de maestria por dificuldade.
+    "educacao_legislacao", "historia_curiosidades", "transportes_terrestres",
+    "economia_transito", "prevencao_seguranca",
 }
 
 

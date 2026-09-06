@@ -27,6 +27,13 @@ const Set<String> kNeverTimedTerritoryIds = {
   'criptomoedas',
   'cenario_global',
   'financas_dia_a_dia',
+  // V7 — Mundo do Trânsito (06/09/2026): mesmo formato "cápsula de
+  // texto + perguntas", mesmo motivo.
+  'educacao_legislacao',
+  'historia_curiosidades',
+  'transportes_terrestres',
+  'economia_transito',
+  'prevencao_seguranca',
 };
 
 /// Ids dos 4 territórios do V1 — compartilhado entre Home, Progress e
@@ -95,6 +102,12 @@ const List<String> kTerritoryIds = [
   'criptomoedas',
   'cenario_global',
   'financas_dia_a_dia',
+  // V7 (Mundo_do_Transito/README.md) — Mundo do Trânsito.
+  'educacao_legislacao',
+  'historia_curiosidades',
+  'transportes_terrestres',
+  'economia_transito',
+  'prevencao_seguranca',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -201,6 +214,16 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryCenarioGlobal;
     case 'financas_dia_a_dia':
       return l10n.territoryFinancasDiaADia;
+    case 'educacao_legislacao':
+      return l10n.territoryEducacaoLegislacao;
+    case 'historia_curiosidades':
+      return l10n.territoryHistoriaCuriosidades;
+    case 'transportes_terrestres':
+      return l10n.territoryTransportesTerrestres;
+    case 'economia_transito':
+      return l10n.territoryEconomiaTransito;
+    case 'prevencao_seguranca':
+      return l10n.territoryPrevencaoSeguranca;
     default:
       return territoryId;
   }

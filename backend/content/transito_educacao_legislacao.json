@@ -1,0 +1,458 @@
+[
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Por qual lei o Código de Trânsito Brasileiro foi criado?",
+    "options": [
+      "Lei nº 9.503, de 1997",
+      "Lei nº 14.071, de 2020",
+      "Lei nº 8.078, de 1990",
+      "Lei nº 13.709, de 2018"
+    ],
+    "correct_answer": "Lei nº 9.503, de 1997",
+    "explanation": "O Código de Trânsito Brasileiro (CTB) é o conjunto de normas que organiza o trânsito em todo o país, criado pela Lei nº 9.503, de 1997, e em vigor desde janeiro de 1998. Ele substituiu o antigo Código Nacional de Trânsito e estabelece direitos, deveres e responsabilidades de motoristas, pedestres, ciclistas e das autoridades responsáveis pela fiscalização. O CTB organiza temas como formação de condutores, registro de veículos, sinalização viária, infrações e penalidades, e educação para o trânsito.",
+    "reading_passage": "O Código de Trânsito Brasileiro (CTB) é o conjunto de normas que organiza o trânsito em todo o país, criado pela Lei nº 9.503, de 1997, e em vigor desde janeiro de 1998. Ele substituiu o antigo Código Nacional de Trânsito e estabelece direitos, deveres e responsabilidades de motoristas, pedestres, ciclistas e das autoridades responsáveis pela fiscalização. O CTB organiza temas como formação de condutores, registro de veículos, sinalização viária, infrações e penalidades, e educação para o trânsito.",
+    "hints": [
+      "Releia 'O que é o CTB (Código de Trânsito Brasileiro)?' — a resposta está no texto.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Desde quando o CTB está em vigor?",
+    "options": [
+      "Janeiro de 1998",
+      "Janeiro de 1988",
+      "Abril de 2021",
+      "Dezembro de 2000"
+    ],
+    "correct_answer": "Janeiro de 1998",
+    "explanation": "O Código de Trânsito Brasileiro (CTB) é o conjunto de normas que organiza o trânsito em todo o país, criado pela Lei nº 9.503, de 1997, e em vigor desde janeiro de 1998. Ele substituiu o antigo Código Nacional de Trânsito e estabelece direitos, deveres e responsabilidades de motoristas, pedestres, ciclistas e das autoridades responsáveis pela fiscalização. O CTB organiza temas como formação de condutores, registro de veículos, sinalização viária, infrações e penalidades, e educação para o trânsito.",
+    "reading_passage": "O Código de Trânsito Brasileiro (CTB) é o conjunto de normas que organiza o trânsito em todo o país, criado pela Lei nº 9.503, de 1997, e em vigor desde janeiro de 1998. Ele substituiu o antigo Código Nacional de Trânsito e estabelece direitos, deveres e responsabilidades de motoristas, pedestres, ciclistas e das autoridades responsáveis pela fiscalização. O CTB organiza temas como formação de condutores, registro de veículos, sinalização viária, infrações e penalidades, e educação para o trânsito.",
+    "hints": [
+      "Releia 'O que é o CTB (Código de Trânsito Brasileiro)?' — a resposta está no texto.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "O CTB define direitos e deveres de quais grupos, segundo o texto?",
+    "options": [
+      "Motoristas, pedestres, ciclistas e autoridades de trânsito",
+      "Apenas motoristas profissionais",
+      "Somente fabricantes de veículos",
+      "Exclusivamente órgãos federais"
+    ],
+    "correct_answer": "Motoristas, pedestres, ciclistas e autoridades de trânsito",
+    "explanation": "O Código de Trânsito Brasileiro (CTB) é o conjunto de normas que organiza o trânsito em todo o país, criado pela Lei nº 9.503, de 1997, e em vigor desde janeiro de 1998. Ele substituiu o antigo Código Nacional de Trânsito e estabelece direitos, deveres e responsabilidades de motoristas, pedestres, ciclistas e das autoridades responsáveis pela fiscalização. O CTB organiza temas como formação de condutores, registro de veículos, sinalização viária, infrações e penalidades, e educação para o trânsito.",
+    "reading_passage": "O Código de Trânsito Brasileiro (CTB) é o conjunto de normas que organiza o trânsito em todo o país, criado pela Lei nº 9.503, de 1997, e em vigor desde janeiro de 1998. Ele substituiu o antigo Código Nacional de Trânsito e estabelece direitos, deveres e responsabilidades de motoristas, pedestres, ciclistas e das autoridades responsáveis pela fiscalização. O CTB organiza temas como formação de condutores, registro de veículos, sinalização viária, infrações e penalidades, e educação para o trânsito.",
+    "hints": [
+      "Releia 'O que é o CTB (Código de Trânsito Brasileiro)?' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Em quantas categorias de gravidade o CTB divide as infrações de trânsito?",
+    "options": [
+      "Quatro",
+      "Duas",
+      "Seis",
+      "Oito"
+    ],
+    "correct_answer": "Quatro",
+    "explanation": "O CTB divide as infrações de trânsito em quatro categorias, de acordo com a gravidade: leve, média, grave e gravíssima. Cada categoria tem uma pontuação própria atribuída à Carteira Nacional de Habilitação (CNH) do condutor, além de multa financeira específica. Quanto mais grave a infração, maior a pontuação e o valor da multa. Essa pontuação acumulada ao longo do tempo é um dos mecanismos usados para identificar condutores com padrão de risco elevado no trânsito.",
+    "reading_passage": "O CTB divide as infrações de trânsito em quatro categorias, de acordo com a gravidade: leve, média, grave e gravíssima. Cada categoria tem uma pontuação própria atribuída à Carteira Nacional de Habilitação (CNH) do condutor, além de multa financeira específica. Quanto mais grave a infração, maior a pontuação e o valor da multa. Essa pontuação acumulada ao longo do tempo é um dos mecanismos usados para identificar condutores com padrão de risco elevado no trânsito.",
+    "hints": [
+      "Releia 'Como as infrações de trânsito são categorizadas?' — a resposta está no texto.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Quais são as quatro categorias de infração, segundo o texto?",
+    "options": [
+      "Leve, média, grave e gravíssima",
+      "Simples, moderada, séria e crítica",
+      "Tipo 1, 2, 3 e 4",
+      "Amarela, laranja, vermelha e preta"
+    ],
+    "correct_answer": "Leve, média, grave e gravíssima",
+    "explanation": "O CTB divide as infrações de trânsito em quatro categorias, de acordo com a gravidade: leve, média, grave e gravíssima. Cada categoria tem uma pontuação própria atribuída à Carteira Nacional de Habilitação (CNH) do condutor, além de multa financeira específica. Quanto mais grave a infração, maior a pontuação e o valor da multa. Essa pontuação acumulada ao longo do tempo é um dos mecanismos usados para identificar condutores com padrão de risco elevado no trânsito.",
+    "reading_passage": "O CTB divide as infrações de trânsito em quatro categorias, de acordo com a gravidade: leve, média, grave e gravíssima. Cada categoria tem uma pontuação própria atribuída à Carteira Nacional de Habilitação (CNH) do condutor, além de multa financeira específica. Quanto mais grave a infração, maior a pontuação e o valor da multa. Essa pontuação acumulada ao longo do tempo é um dos mecanismos usados para identificar condutores com padrão de risco elevado no trânsito.",
+    "hints": [
+      "Releia 'Como as infrações de trânsito são categorizadas?' — a resposta está no texto.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "O que acontece com a pontuação e a multa conforme a infração fica mais grave?",
+    "options": [
+      "Ambas aumentam",
+      "Ambas diminuem",
+      "A pontuação aumenta mas a multa diminui",
+      "Nenhuma das duas muda"
+    ],
+    "correct_answer": "Ambas aumentam",
+    "explanation": "O CTB divide as infrações de trânsito em quatro categorias, de acordo com a gravidade: leve, média, grave e gravíssima. Cada categoria tem uma pontuação própria atribuída à Carteira Nacional de Habilitação (CNH) do condutor, além de multa financeira específica. Quanto mais grave a infração, maior a pontuação e o valor da multa. Essa pontuação acumulada ao longo do tempo é um dos mecanismos usados para identificar condutores com padrão de risco elevado no trânsito.",
+    "reading_passage": "O CTB divide as infrações de trânsito em quatro categorias, de acordo com a gravidade: leve, média, grave e gravíssima. Cada categoria tem uma pontuação própria atribuída à Carteira Nacional de Habilitação (CNH) do condutor, além de multa financeira específica. Quanto mais grave a infração, maior a pontuação e o valor da multa. Essa pontuação acumulada ao longo do tempo é um dos mecanismos usados para identificar condutores com padrão de risco elevado no trânsito.",
+    "hints": [
+      "Releia 'Como as infrações de trânsito são categorizadas?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Qual lei atualizou, em 2021, as regras de pontuação da CNH?",
+    "options": [
+      "Lei nº 14.071/2020",
+      "Lei nº 9.503/1997",
+      "Lei nº 12.965/2014",
+      "Lei nº 13.709/2018"
+    ],
+    "correct_answer": "Lei nº 14.071/2020",
+    "explanation": "Cada infração de trânsito gera uma quantidade de pontos que é somada à Carteira Nacional de Habilitação do condutor. Em 2021, entrou em vigor uma atualização no Código de Trânsito Brasileiro (Lei nº 14.071/2020) que alterou o limite de pontos tolerado antes da suspensão da CNH: o novo limite passou a ser de até 40 pontos para quem não tem nenhuma infração gravíssima registrada, caindo para 30 pontos com uma infração gravíssima, e para 20 pontos a partir de duas infrações gravíssimas. Antes dessa mudança, o limite era fixo em 20 pontos para todos os condutores, independentemente do tipo de infração cometida.",
+    "reading_passage": "Cada infração de trânsito gera uma quantidade de pontos que é somada à Carteira Nacional de Habilitação do condutor. Em 2021, entrou em vigor uma atualização no Código de Trânsito Brasileiro (Lei nº 14.071/2020) que alterou o limite de pontos tolerado antes da suspensão da CNH: o novo limite passou a ser de até 40 pontos para quem não tem nenhuma infração gravíssima registrada, caindo para 30 pontos com uma infração gravíssima, e para 20 pontos a partir de duas infrações gravíssimas. Antes dessa mudança, o limite era fixo em 20 pontos para todos os condutores, independentemente do tipo de infração cometida.",
+    "hints": [
+      "Releia 'Como funciona a pontuação da CNH?' — a resposta está no texto.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Qual passou a ser o limite de pontos para quem não tem nenhuma infração gravíssima, após a mudança de 2021?",
+    "options": [
+      "40 pontos",
+      "20 pontos",
+      "10 pontos",
+      "100 pontos"
+    ],
+    "correct_answer": "40 pontos",
+    "explanation": "Cada infração de trânsito gera uma quantidade de pontos que é somada à Carteira Nacional de Habilitação do condutor. Em 2021, entrou em vigor uma atualização no Código de Trânsito Brasileiro (Lei nº 14.071/2020) que alterou o limite de pontos tolerado antes da suspensão da CNH: o novo limite passou a ser de até 40 pontos para quem não tem nenhuma infração gravíssima registrada, caindo para 30 pontos com uma infração gravíssima, e para 20 pontos a partir de duas infrações gravíssimas. Antes dessa mudança, o limite era fixo em 20 pontos para todos os condutores, independentemente do tipo de infração cometida.",
+    "reading_passage": "Cada infração de trânsito gera uma quantidade de pontos que é somada à Carteira Nacional de Habilitação do condutor. Em 2021, entrou em vigor uma atualização no Código de Trânsito Brasileiro (Lei nº 14.071/2020) que alterou o limite de pontos tolerado antes da suspensão da CNH: o novo limite passou a ser de até 40 pontos para quem não tem nenhuma infração gravíssima registrada, caindo para 30 pontos com uma infração gravíssima, e para 20 pontos a partir de duas infrações gravíssimas. Antes dessa mudança, o limite era fixo em 20 pontos para todos os condutores, independentemente do tipo de infração cometida.",
+    "hints": [
+      "Releia 'Como funciona a pontuação da CNH?' — a resposta está no texto.",
+      "Começa com '4'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Antes da mudança de 2021, qual era o limite de pontos, independentemente do tipo de infração?",
+    "options": [
+      "20 pontos, fixo para todos",
+      "40 pontos, fixo para todos",
+      "Não havia limite definido",
+      "15 pontos, fixo para todos"
+    ],
+    "correct_answer": "20 pontos, fixo para todos",
+    "explanation": "Cada infração de trânsito gera uma quantidade de pontos que é somada à Carteira Nacional de Habilitação do condutor. Em 2021, entrou em vigor uma atualização no Código de Trânsito Brasileiro (Lei nº 14.071/2020) que alterou o limite de pontos tolerado antes da suspensão da CNH: o novo limite passou a ser de até 40 pontos para quem não tem nenhuma infração gravíssima registrada, caindo para 30 pontos com uma infração gravíssima, e para 20 pontos a partir de duas infrações gravíssimas. Antes dessa mudança, o limite era fixo em 20 pontos para todos os condutores, independentemente do tipo de infração cometida.",
+    "reading_passage": "Cada infração de trânsito gera uma quantidade de pontos que é somada à Carteira Nacional de Habilitação do condutor. Em 2021, entrou em vigor uma atualização no Código de Trânsito Brasileiro (Lei nº 14.071/2020) que alterou o limite de pontos tolerado antes da suspensão da CNH: o novo limite passou a ser de até 40 pontos para quem não tem nenhuma infração gravíssima registrada, caindo para 30 pontos com uma infração gravíssima, e para 20 pontos a partir de duas infrações gravíssimas. Antes dessa mudança, o limite era fixo em 20 pontos para todos os condutores, independentemente do tipo de infração cometida.",
+    "hints": [
+      "Releia 'Como funciona a pontuação da CNH?' — a resposta está no texto.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "O que é a CNH?",
+    "options": [
+      "O documento que autoriza a condução de veículos automotores no Brasil",
+      "Um seguro obrigatório para todo veículo",
+      "Um imposto cobrado anualmente sobre carros",
+      "Um tipo de multa de trânsito"
+    ],
+    "correct_answer": "O documento que autoriza a condução de veículos automotores no Brasil",
+    "explanation": "A Carteira Nacional de Habilitação (CNH) é o documento que autoriza uma pessoa a conduzir veículos automotores no Brasil, emitido após aprovação em exames teóricos e práticos. A CNH é dividida em categorias (como A, para motocicletas, e B, para carros de passeio, entre outras), cada uma habilitando o condutor a dirigir um tipo específico de veículo. Além de comprovar a habilitação para dirigir, a CNH também serve como documento de identificação pessoal em diversas situações do dia a dia no Brasil.",
+    "reading_passage": "A Carteira Nacional de Habilitação (CNH) é o documento que autoriza uma pessoa a conduzir veículos automotores no Brasil, emitido após aprovação em exames teóricos e práticos. A CNH é dividida em categorias (como A, para motocicletas, e B, para carros de passeio, entre outras), cada uma habilitando o condutor a dirigir um tipo específico de veículo. Além de comprovar a habilitação para dirigir, a CNH também serve como documento de identificação pessoal em diversas situações do dia a dia no Brasil.",
+    "hints": [
+      "Releia 'O que é a CNH e para que serve?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "A CNH é emitida após o quê, segundo o texto?",
+    "options": [
+      "Aprovação em exames teóricos e práticos",
+      "Apenas o pagamento de uma taxa",
+      "Um sorteio realizado pelo Detran",
+      "A idade mínima de 30 anos"
+    ],
+    "correct_answer": "Aprovação em exames teóricos e práticos",
+    "explanation": "A Carteira Nacional de Habilitação (CNH) é o documento que autoriza uma pessoa a conduzir veículos automotores no Brasil, emitido após aprovação em exames teóricos e práticos. A CNH é dividida em categorias (como A, para motocicletas, e B, para carros de passeio, entre outras), cada uma habilitando o condutor a dirigir um tipo específico de veículo. Além de comprovar a habilitação para dirigir, a CNH também serve como documento de identificação pessoal em diversas situações do dia a dia no Brasil.",
+    "reading_passage": "A Carteira Nacional de Habilitação (CNH) é o documento que autoriza uma pessoa a conduzir veículos automotores no Brasil, emitido após aprovação em exames teóricos e práticos. A CNH é dividida em categorias (como A, para motocicletas, e B, para carros de passeio, entre outras), cada uma habilitando o condutor a dirigir um tipo específico de veículo. Além de comprovar a habilitação para dirigir, a CNH também serve como documento de identificação pessoal em diversas situações do dia a dia no Brasil.",
+    "hints": [
+      "Releia 'O que é a CNH e para que serve?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Além de habilitar para dirigir, para que mais a CNH pode servir no Brasil?",
+    "options": [
+      "Como documento de identificação pessoal em diversas situações",
+      "Como comprovante de renda",
+      "Como certidão de nascimento",
+      "Como título de propriedade do veículo"
+    ],
+    "correct_answer": "Como documento de identificação pessoal em diversas situações",
+    "explanation": "A Carteira Nacional de Habilitação (CNH) é o documento que autoriza uma pessoa a conduzir veículos automotores no Brasil, emitido após aprovação em exames teóricos e práticos. A CNH é dividida em categorias (como A, para motocicletas, e B, para carros de passeio, entre outras), cada uma habilitando o condutor a dirigir um tipo específico de veículo. Além de comprovar a habilitação para dirigir, a CNH também serve como documento de identificação pessoal em diversas situações do dia a dia no Brasil.",
+    "reading_passage": "A Carteira Nacional de Habilitação (CNH) é o documento que autoriza uma pessoa a conduzir veículos automotores no Brasil, emitido após aprovação em exames teóricos e práticos. A CNH é dividida em categorias (como A, para motocicletas, e B, para carros de passeio, entre outras), cada uma habilitando o condutor a dirigir um tipo específico de veículo. Além de comprovar a habilitação para dirigir, a CNH também serve como documento de identificação pessoal em diversas situações do dia a dia no Brasil.",
+    "hints": [
+      "Releia 'O que é a CNH e para que serve?' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "O que é o CONTRAN?",
+    "options": [
+      "O órgão máximo normativo do trânsito no Brasil",
+      "Um tipo de multa de trânsito",
+      "Uma seguradora de veículos",
+      "Um exame obrigatório para tirar a CNH"
+    ],
+    "correct_answer": "O órgão máximo normativo do trânsito no Brasil",
+    "explanation": "O trânsito brasileiro é organizado por um conjunto de órgãos com funções distintas. O CONTRAN (Conselho Nacional de Trânsito) é o órgão máximo normativo, responsável por estabelecer diretrizes gerais aplicadas em todo o país. Já os DETRANs (Departamentos Estaduais de Trânsito) atuam em cada estado, cuidando de registro de veículos, emissão de CNH e fiscalização local. Existem ainda órgãos municipais de trânsito, responsáveis pela gestão do trânsito dentro das cidades, incluindo sinalização e fiscalização de vias urbanas.",
+    "reading_passage": "O trânsito brasileiro é organizado por um conjunto de órgãos com funções distintas. O CONTRAN (Conselho Nacional de Trânsito) é o órgão máximo normativo, responsável por estabelecer diretrizes gerais aplicadas em todo o país. Já os DETRANs (Departamentos Estaduais de Trânsito) atuam em cada estado, cuidando de registro de veículos, emissão de CNH e fiscalização local. Existem ainda órgãos municipais de trânsito, responsáveis pela gestão do trânsito dentro das cidades, incluindo sinalização e fiscalização de vias urbanas.",
+    "hints": [
+      "Releia 'Quem são os principais órgãos de trânsito no Brasil?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "O que os DETRANs fazem, segundo o texto?",
+    "options": [
+      "Cuidam de registro de veículos, emissão de CNH e fiscalização em cada estado",
+      "Definem o preço da gasolina no país",
+      "Fabricam sinalizações de trânsito",
+      "Administram rodovias federais exclusivamente"
+    ],
+    "correct_answer": "Cuidam de registro de veículos, emissão de CNH e fiscalização em cada estado",
+    "explanation": "O trânsito brasileiro é organizado por um conjunto de órgãos com funções distintas. O CONTRAN (Conselho Nacional de Trânsito) é o órgão máximo normativo, responsável por estabelecer diretrizes gerais aplicadas em todo o país. Já os DETRANs (Departamentos Estaduais de Trânsito) atuam em cada estado, cuidando de registro de veículos, emissão de CNH e fiscalização local. Existem ainda órgãos municipais de trânsito, responsáveis pela gestão do trânsito dentro das cidades, incluindo sinalização e fiscalização de vias urbanas.",
+    "reading_passage": "O trânsito brasileiro é organizado por um conjunto de órgãos com funções distintas. O CONTRAN (Conselho Nacional de Trânsito) é o órgão máximo normativo, responsável por estabelecer diretrizes gerais aplicadas em todo o país. Já os DETRANs (Departamentos Estaduais de Trânsito) atuam em cada estado, cuidando de registro de veículos, emissão de CNH e fiscalização local. Existem ainda órgãos municipais de trânsito, responsáveis pela gestão do trânsito dentro das cidades, incluindo sinalização e fiscalização de vias urbanas.",
+    "hints": [
+      "Releia 'Quem são os principais órgãos de trânsito no Brasil?' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Quem é responsável pela gestão do trânsito dentro das cidades, segundo o texto?",
+    "options": [
+      "Órgãos municipais de trânsito",
+      "Exclusivamente o CONTRAN",
+      "Apenas a Polícia Federal",
+      "Somente concessionárias de rodovias"
+    ],
+    "correct_answer": "Órgãos municipais de trânsito",
+    "explanation": "O trânsito brasileiro é organizado por um conjunto de órgãos com funções distintas. O CONTRAN (Conselho Nacional de Trânsito) é o órgão máximo normativo, responsável por estabelecer diretrizes gerais aplicadas em todo o país. Já os DETRANs (Departamentos Estaduais de Trânsito) atuam em cada estado, cuidando de registro de veículos, emissão de CNH e fiscalização local. Existem ainda órgãos municipais de trânsito, responsáveis pela gestão do trânsito dentro das cidades, incluindo sinalização e fiscalização de vias urbanas.",
+    "reading_passage": "O trânsito brasileiro é organizado por um conjunto de órgãos com funções distintas. O CONTRAN (Conselho Nacional de Trânsito) é o órgão máximo normativo, responsável por estabelecer diretrizes gerais aplicadas em todo o país. Já os DETRANs (Departamentos Estaduais de Trânsito) atuam em cada estado, cuidando de registro de veículos, emissão de CNH e fiscalização local. Existem ainda órgãos municipais de trânsito, responsáveis pela gestão do trânsito dentro das cidades, incluindo sinalização e fiscalização de vias urbanas.",
+    "hints": [
+      "Releia 'Quem são os principais órgãos de trânsito no Brasil?' — a resposta está no texto.",
+      "Começa com 'Ó'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "O que é a hierarquia de proteção no trânsito?",
+    "options": [
+      "Um princípio que prioriza a proteção de quem está mais vulnerável numa colisão",
+      "Uma ordem de chegada em um cruzamento",
+      "A ordem de fabricação dos veículos",
+      "Uma lista de multas por valor"
+    ],
+    "correct_answer": "Um princípio que prioriza a proteção de quem está mais vulnerável numa colisão",
+    "explanation": "O Código de Trânsito Brasileiro estabelece um princípio de hierarquia de proteção entre os diferentes participantes do trânsito, priorizando quem está mais vulnerável fisicamente numa eventual colisão. De forma geral, essa hierarquia coloca pedestres e ciclistas como prioridade de proteção em relação a veículos motorizados, e veículos menores como motocicletas em situação de maior vulnerabilidade em relação a veículos maiores, como caminhões. Esse princípio orienta, por exemplo, regras de prioridade em faixas de pedestre e em ciclovias.",
+    "reading_passage": "O Código de Trânsito Brasileiro estabelece um princípio de hierarquia de proteção entre os diferentes participantes do trânsito, priorizando quem está mais vulnerável fisicamente numa eventual colisão. De forma geral, essa hierarquia coloca pedestres e ciclistas como prioridade de proteção em relação a veículos motorizados, e veículos menores como motocicletas em situação de maior vulnerabilidade em relação a veículos maiores, como caminhões. Esse princípio orienta, por exemplo, regras de prioridade em faixas de pedestre e em ciclovias.",
+    "hints": [
+      "Releia 'Qual é a hierarquia de proteção no trânsito?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Segundo o texto, quem costuma ser priorizado em relação a veículos motorizados?",
+    "options": [
+      "Pedestres e ciclistas",
+      "Caminhões",
+      "Ônibus articulados",
+      "Veículos de carga pesada"
+    ],
+    "correct_answer": "Pedestres e ciclistas",
+    "explanation": "O Código de Trânsito Brasileiro estabelece um princípio de hierarquia de proteção entre os diferentes participantes do trânsito, priorizando quem está mais vulnerável fisicamente numa eventual colisão. De forma geral, essa hierarquia coloca pedestres e ciclistas como prioridade de proteção em relação a veículos motorizados, e veículos menores como motocicletas em situação de maior vulnerabilidade em relação a veículos maiores, como caminhões. Esse princípio orienta, por exemplo, regras de prioridade em faixas de pedestre e em ciclovias.",
+    "reading_passage": "O Código de Trânsito Brasileiro estabelece um princípio de hierarquia de proteção entre os diferentes participantes do trânsito, priorizando quem está mais vulnerável fisicamente numa eventual colisão. De forma geral, essa hierarquia coloca pedestres e ciclistas como prioridade de proteção em relação a veículos motorizados, e veículos menores como motocicletas em situação de maior vulnerabilidade em relação a veículos maiores, como caminhões. Esse princípio orienta, por exemplo, regras de prioridade em faixas de pedestre e em ciclovias.",
+    "hints": [
+      "Releia 'Qual é a hierarquia de proteção no trânsito?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Esse princípio de hierarquia orienta, por exemplo, que tipo de regra?",
+    "options": [
+      "Prioridade em faixas de pedestre e em ciclovias",
+      "O valor do IPVA de cada veículo",
+      "O horário de funcionamento dos postos de gasolina",
+      "A cor obrigatória dos táxis"
+    ],
+    "correct_answer": "Prioridade em faixas de pedestre e em ciclovias",
+    "explanation": "O Código de Trânsito Brasileiro estabelece um princípio de hierarquia de proteção entre os diferentes participantes do trânsito, priorizando quem está mais vulnerável fisicamente numa eventual colisão. De forma geral, essa hierarquia coloca pedestres e ciclistas como prioridade de proteção em relação a veículos motorizados, e veículos menores como motocicletas em situação de maior vulnerabilidade em relação a veículos maiores, como caminhões. Esse princípio orienta, por exemplo, regras de prioridade em faixas de pedestre e em ciclovias.",
+    "reading_passage": "O Código de Trânsito Brasileiro estabelece um princípio de hierarquia de proteção entre os diferentes participantes do trânsito, priorizando quem está mais vulnerável fisicamente numa eventual colisão. De forma geral, essa hierarquia coloca pedestres e ciclistas como prioridade de proteção em relação a veículos motorizados, e veículos menores como motocicletas em situação de maior vulnerabilidade em relação a veículos maiores, como caminhões. Esse princípio orienta, por exemplo, regras de prioridade em faixas de pedestre e em ciclovias.",
+    "hints": [
+      "Releia 'Qual é a hierarquia de proteção no trânsito?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "O CTB reserva um capítulo específico a qual tema, segundo o texto?",
+    "options": [
+      "Educação para o trânsito",
+      "Fabricação de veículos",
+      "Importação de combustíveis",
+      "Direito internacional de trânsito"
+    ],
+    "correct_answer": "Educação para o trânsito",
+    "explanation": "O Código de Trânsito Brasileiro reserva um capítulo específico ao tema 'educação para o trânsito', reconhecendo que reduzir acidentes depende não apenas de fiscalização e punição, mas também de conscientização da população desde cedo. O CTB prevê que a educação para o trânsito deve integrar os currículos escolares, de forma parecida com o que acontece com a educação financeira — outro tema tratado como conteúdo a ser incorporado à formação básica, não como uma obrigação isolada de quem já dirige.",
+    "reading_passage": "O Código de Trânsito Brasileiro reserva um capítulo específico ao tema 'educação para o trânsito', reconhecendo que reduzir acidentes depende não apenas de fiscalização e punição, mas também de conscientização da população desde cedo. O CTB prevê que a educação para o trânsito deve integrar os currículos escolares, de forma parecida com o que acontece com a educação financeira — outro tema tratado como conteúdo a ser incorporado à formação básica, não como uma obrigação isolada de quem já dirige.",
+    "hints": [
+      "Releia 'O que é 'educação para o trânsito', segundo o próprio CTB?' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Segundo o texto, reduzir acidentes depende apenas de fiscalização e punição?",
+    "options": [
+      "Não, depende também de conscientização da população desde cedo",
+      "Sim, exclusivamente disso",
+      "Não, depende apenas do preço do combustível",
+      "Sim, mas apenas para motoristas profissionais"
+    ],
+    "correct_answer": "Não, depende também de conscientização da população desde cedo",
+    "explanation": "O Código de Trânsito Brasileiro reserva um capítulo específico ao tema 'educação para o trânsito', reconhecendo que reduzir acidentes depende não apenas de fiscalização e punição, mas também de conscientização da população desde cedo. O CTB prevê que a educação para o trânsito deve integrar os currículos escolares, de forma parecida com o que acontece com a educação financeira — outro tema tratado como conteúdo a ser incorporado à formação básica, não como uma obrigação isolada de quem já dirige.",
+    "reading_passage": "O Código de Trânsito Brasileiro reserva um capítulo específico ao tema 'educação para o trânsito', reconhecendo que reduzir acidentes depende não apenas de fiscalização e punição, mas também de conscientização da população desde cedo. O CTB prevê que a educação para o trânsito deve integrar os currículos escolares, de forma parecida com o que acontece com a educação financeira — outro tema tratado como conteúdo a ser incorporado à formação básica, não como uma obrigação isolada de quem já dirige.",
+    "hints": [
+      "Releia 'O que é 'educação para o trânsito', segundo o próprio CTB?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "A que outro tema o texto compara a forma como a educação para o trânsito deveria integrar o currículo escolar?",
+    "options": [
+      "Educação financeira",
+      "Educação física",
+      "Ensino de idiomas",
+      "Educação artística"
+    ],
+    "correct_answer": "Educação financeira",
+    "explanation": "O Código de Trânsito Brasileiro reserva um capítulo específico ao tema 'educação para o trânsito', reconhecendo que reduzir acidentes depende não apenas de fiscalização e punição, mas também de conscientização da população desde cedo. O CTB prevê que a educação para o trânsito deve integrar os currículos escolares, de forma parecida com o que acontece com a educação financeira — outro tema tratado como conteúdo a ser incorporado à formação básica, não como uma obrigação isolada de quem já dirige.",
+    "reading_passage": "O Código de Trânsito Brasileiro reserva um capítulo específico ao tema 'educação para o trânsito', reconhecendo que reduzir acidentes depende não apenas de fiscalização e punição, mas também de conscientização da população desde cedo. O CTB prevê que a educação para o trânsito deve integrar os currículos escolares, de forma parecida com o que acontece com a educação financeira — outro tema tratado como conteúdo a ser incorporado à formação básica, não como uma obrigação isolada de quem já dirige.",
+    "hints": [
+      "Releia 'O que é 'educação para o trânsito', segundo o próprio CTB?' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Qual é o limite de pontos tolerado para condutores que exercem atividade remunerada, independentemente da gravidade das infrações?",
+    "options": [
+      "40 pontos",
+      "20 pontos",
+      "10 pontos",
+      "60 pontos"
+    ],
+    "correct_answer": "40 pontos",
+    "explanation": "O Código de Trânsito Brasileiro prevê uma regra específica para condutores que exercem atividade remunerada ao volante, como motoristas de aplicativo, taxistas e motoristas de transporte de carga ou passageiros. Para esse grupo, o limite de pontos tolerado antes da suspensão da CNH é de 40 pontos, independentemente da gravidade das infrações cometidas — diferente da regra geral, que reduz esse limite conforme o número de infrações gravíssimas acumuladas. Essa diferenciação reconhece que motoristas profissionais passam mais tempo no trânsito, e por isso têm, naturalmente, mais chances de acumular pontuação ao longo do tempo.",
+    "reading_passage": "O Código de Trânsito Brasileiro prevê uma regra específica para condutores que exercem atividade remunerada ao volante, como motoristas de aplicativo, taxistas e motoristas de transporte de carga ou passageiros. Para esse grupo, o limite de pontos tolerado antes da suspensão da CNH é de 40 pontos, independentemente da gravidade das infrações cometidas — diferente da regra geral, que reduz esse limite conforme o número de infrações gravíssimas acumuladas. Essa diferenciação reconhece que motoristas profissionais passam mais tempo no trânsito, e por isso têm, naturalmente, mais chances de acumular pontuação ao longo do tempo.",
+    "hints": [
+      "Releia 'O que muda quando uma infração é cometida por quem dirige por profissão?' — a resposta está no texto.",
+      "Começa com '4'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Cite um exemplo de condutor por atividade remunerada mencionado no texto.",
+    "options": [
+      "Motorista de aplicativo",
+      "Piloto de avião",
+      "Maquinista de trem",
+      "Capitão de navio"
+    ],
+    "correct_answer": "Motorista de aplicativo",
+    "explanation": "O Código de Trânsito Brasileiro prevê uma regra específica para condutores que exercem atividade remunerada ao volante, como motoristas de aplicativo, taxistas e motoristas de transporte de carga ou passageiros. Para esse grupo, o limite de pontos tolerado antes da suspensão da CNH é de 40 pontos, independentemente da gravidade das infrações cometidas — diferente da regra geral, que reduz esse limite conforme o número de infrações gravíssimas acumuladas. Essa diferenciação reconhece que motoristas profissionais passam mais tempo no trânsito, e por isso têm, naturalmente, mais chances de acumular pontuação ao longo do tempo.",
+    "reading_passage": "O Código de Trânsito Brasileiro prevê uma regra específica para condutores que exercem atividade remunerada ao volante, como motoristas de aplicativo, taxistas e motoristas de transporte de carga ou passageiros. Para esse grupo, o limite de pontos tolerado antes da suspensão da CNH é de 40 pontos, independentemente da gravidade das infrações cometidas — diferente da regra geral, que reduz esse limite conforme o número de infrações gravíssimas acumuladas. Essa diferenciação reconhece que motoristas profissionais passam mais tempo no trânsito, e por isso têm, naturalmente, mais chances de acumular pontuação ao longo do tempo.",
+    "hints": [
+      "Releia 'O que muda quando uma infração é cometida por quem dirige por profissão?' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "educacao_legislacao",
+    "difficulty_level": 1,
+    "prompt": "Por que essa diferenciação existe, segundo o texto?",
+    "options": [
+      "Motoristas profissionais passam mais tempo no trânsito e têm mais chances de acumular pontuação",
+      "Porque motoristas profissionais nunca cometem infrações graves",
+      "Porque a lei os isenta de qualquer multa",
+      "Porque eles usam veículos diferentes dos demais condutores"
+    ],
+    "correct_answer": "Motoristas profissionais passam mais tempo no trânsito e têm mais chances de acumular pontuação",
+    "explanation": "O Código de Trânsito Brasileiro prevê uma regra específica para condutores que exercem atividade remunerada ao volante, como motoristas de aplicativo, taxistas e motoristas de transporte de carga ou passageiros. Para esse grupo, o limite de pontos tolerado antes da suspensão da CNH é de 40 pontos, independentemente da gravidade das infrações cometidas — diferente da regra geral, que reduz esse limite conforme o número de infrações gravíssimas acumuladas. Essa diferenciação reconhece que motoristas profissionais passam mais tempo no trânsito, e por isso têm, naturalmente, mais chances de acumular pontuação ao longo do tempo.",
+    "reading_passage": "O Código de Trânsito Brasileiro prevê uma regra específica para condutores que exercem atividade remunerada ao volante, como motoristas de aplicativo, taxistas e motoristas de transporte de carga ou passageiros. Para esse grupo, o limite de pontos tolerado antes da suspensão da CNH é de 40 pontos, independentemente da gravidade das infrações cometidas — diferente da regra geral, que reduz esse limite conforme o número de infrações gravíssimas acumuladas. Essa diferenciação reconhece que motoristas profissionais passam mais tempo no trânsito, e por isso têm, naturalmente, mais chances de acumular pontuação ao longo do tempo.",
+    "hints": [
+      "Releia 'O que muda quando uma infração é cometida por quem dirige por profissão?' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  }
+]

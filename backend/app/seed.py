@@ -35,6 +35,12 @@ WORLDS = [
     # campo opcional reading_passage. Conteúdo carregado de
     # content/valores_*.json (mesmo padrão de idiomas acima).
     {"id": "valores", "name": "Mundo dos Valores", "display_order": 6},
+    # Mundo_do_Transito/README.md — educação/legislação, história e
+    # curiosidades, transportes terrestres, economia do trânsito,
+    # prevenção e segurança viária. Mesmo formato "cápsula de texto +
+    # perguntas" do Mundo dos Valores (reading_passage, nunca
+    # cronometrado) — conteúdo carregado de content/transito_*.json.
+    {"id": "transito", "name": "Mundo do Trânsito", "display_order": 7},
 ]
 
 # Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
@@ -251,6 +257,11 @@ TERRITORIES = [
     {"id": "criptomoedas", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 50, "world_id": "valores"},
     {"id": "cenario_global", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 51, "world_id": "valores"},
     {"id": "financas_dia_a_dia", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 52, "world_id": "valores"},
+    {"id": "educacao_legislacao", "challenge_type": "transito", "requires_subscription": True, "free_sample_count": 2, "display_order": 53, "world_id": "transito"},
+    {"id": "historia_curiosidades", "challenge_type": "transito", "requires_subscription": True, "free_sample_count": 2, "display_order": 54, "world_id": "transito"},
+    {"id": "transportes_terrestres", "challenge_type": "transito", "requires_subscription": True, "free_sample_count": 2, "display_order": 55, "world_id": "transito"},
+    {"id": "economia_transito", "challenge_type": "transito", "requires_subscription": True, "free_sample_count": 2, "display_order": 56, "world_id": "transito"},
+    {"id": "prevencao_seguranca", "challenge_type": "transito", "requires_subscription": True, "free_sample_count": 2, "display_order": 57, "world_id": "transito"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -5744,6 +5755,12 @@ for _path in sorted(_CONTENT_DIR.glob("valores_*.json")):
 # chega a existir pra este lote — sem tocar na lógica compartilhada do
 # Relâmpago nem em nenhum outro território.
 for _path in sorted(_CONTENT_DIR.glob("linguagem_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
+# V7 — Mundo do Trânsito (06/09/2026): 120 desafios (24 por território,
+# 5 territórios), mesmo formato "cápsula de texto + perguntas" do Mundo
+# dos Valores, convertidos via scripts/convert_transito_content.py.
+for _path in sorted(_CONTENT_DIR.glob("transito_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 

@@ -210,6 +210,21 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryFinancasDiaADia => 'Finanças do Dia a Dia';
 
   @override
+  String get territoryEducacaoLegislacao => 'Educação e Legislação';
+
+  @override
+  String get territoryHistoriaCuriosidades => 'História e Curiosidades';
+
+  @override
+  String get territoryTransportesTerrestres => 'Transportes Terrestres';
+
+  @override
+  String get territoryEconomiaTransito => 'Economia do Trânsito';
+
+  @override
+  String get territoryPrevencaoSeguranca => 'Prevenção e Segurança';
+
+  @override
   String get audioPlayButton => 'Tocar som';
 
   @override
