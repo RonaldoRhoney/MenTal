@@ -1335,6 +1335,7 @@ class _TerritoryCard extends StatelessWidget {
     // relativo a você + amigos confirmados (nunca global) — o backend
     // já filtra isso, a Home só exibe o que vem pronto.
     final detentorNickname = progress?['detentor_nickname'] as String?;
+    final detentorPhotoUrl = progress?['detentor_photo_url'] as String?;
     final isDetentor = progress?['is_detentor'] as bool? ?? false;
     // Cor de identidade do bloco Curiosidade Relâmpago (V3.5 §5, item
     // movido pra V4) — índigo em vez do roxo já usado em XP/nível,
@@ -1463,15 +1464,31 @@ class _TerritoryCard extends StatelessWidget {
         ),
         if (detentorNickname != null) ...[
           const SizedBox(height: 4),
-          Text(
-            isDetentor
-                ? l10n.territoryDetentorIsMeLabel
-                : l10n.territoryDetentorLabel(detentorNickname),
-            textAlign: TextAlign.center,
-            style: AppTheme.technicalStyle(
-              color: isDetentor ? AppColors.gold : AppColors.muted,
-              fontSize: 11,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Pedido de Rhoney (07/09/2026): "agora que os nomes
+              // aparecem em qualquer tela, ponha as fotos também" — só
+              // quando o detentor é outra pessoa (a própria foto do
+              // jogador, no card "Você é o detentor", seria redundante).
+              if (!isDetentor && detentorPhotoUrl != null) ...[
+                ProfilePhotoCircle(photoUrl: detentorPhotoUrl, size: 14),
+                const SizedBox(width: 4),
+              ],
+              Flexible(
+                child: Text(
+                  isDetentor
+                      ? l10n.territoryDetentorIsMeLabel
+                      : l10n.territoryDetentorLabel(detentorNickname),
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTheme.technicalStyle(
+                    color: isDetentor ? AppColors.gold : AppColors.muted,
+                    fontSize: 11,
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
         // V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md),

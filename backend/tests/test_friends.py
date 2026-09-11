@@ -108,6 +108,40 @@ def test_friend_request_from_nickname_field_prefers_real_name_when_set(client):
     assert a_requests[0]["from_nickname"] == "Ciclano Pereira"
 
 
+def test_friend_request_includes_photo_url_when_approved(client, monkeypatch):
+    """Pedido de Rhoney (07/09/2026): "agora que os nomes aparecem em
+    qualquer tela, ponha as fotos também" — mesma regra fail-closed de
+    moderação de qualquer outra foto exibida a terceiros."""
+    from app import models, supabase_admin
+    from app.db import SessionLocal
+
+    monkeypatch.setattr(supabase_admin, "create_signed_photo_url", lambda path, expires_in_seconds=3600: f"https://signed.example/{path}")
+
+    a = str(uuid.uuid4())
+    b = str(uuid.uuid4())
+    a_headers = auth_header(a)
+    b_headers = auth_header(b)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=a_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=b_headers)
+
+    photo_path = f"{b}/photo.jpg"
+    client.put("/profile", json={"photo_path": photo_path}, headers=b_headers)
+
+    a_code = _get_invite_code(client, a_headers)
+    client.post("/social/friends", json={"invite_code": a_code}, headers=b_headers)
+
+    a_requests = client.get("/social/friend-requests", headers=a_headers).json()["requests"]
+    assert a_requests[0]["from_photo_url"] is None, "pendente de moderação nunca aparece pra outros"
+
+    with SessionLocal() as db:
+        profile_b = db.get(models.Profile, b)
+        profile_b.photo_moderation_status = "approved"
+        db.commit()
+
+    a_requests_after = client.get("/social/friend-requests", headers=a_headers).json()["requests"]
+    assert a_requests_after[0]["from_photo_url"] is not None
+
+
 def test_friend_request_can_be_declined(client):
     a = str(uuid.uuid4())
     b = str(uuid.uuid4())

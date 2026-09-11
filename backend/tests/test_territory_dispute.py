@@ -135,6 +135,41 @@ def test_detentor_nickname_field_prefers_real_name_when_set(client):
     assert palavras_a["detentor_nickname"] == "Beltrano da Silva"
 
 
+def test_detentor_photo_url_present_only_when_approved_and_never_for_self(client, monkeypatch):
+    """Pedido de Rhoney (07/09/2026): "agora que os nomes aparecem em
+    qualquer tela, ponha as fotos também" — mesma regra fail-closed de
+    moderação de qualquer outra foto exibida a terceiros."""
+    from app import models, supabase_admin
+    from app.db import SessionLocal
+
+    monkeypatch.setattr(supabase_admin, "create_signed_photo_url", lambda path, expires_in_seconds=3600: f"https://signed.example/{path}")
+
+    user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
+    headers_a, headers_b = _make_friends(client, user_a, user_b)
+
+    _answer_until_correct(client, headers_a)
+    progress_a_self = client.get("/progress", headers=headers_a).json()
+    palavras_a_self = next(t for t in progress_a_self["territories"] if t["territory_id"] == "palavras")
+    assert palavras_a_self["is_detentor"] is True
+    assert palavras_a_self["detentor_photo_url"] is None, "detentor sendo o próprio jogador não precisa de foto"
+
+    client.put("/profile", json={"photo_path": f"{user_b}/photo.jpg"}, headers=headers_b)
+
+    _answer_until_correct(client, headers_b)
+    progress_a = client.get("/progress", headers=headers_a).json()
+    palavras_a = next(t for t in progress_a["territories"] if t["territory_id"] == "palavras")
+    assert palavras_a["detentor_photo_url"] is None, "pendente de moderação nunca aparece pra outros"
+
+    with SessionLocal() as db:
+        profile_b = db.get(models.Profile, user_b)
+        profile_b.photo_moderation_status = "approved"
+        db.commit()
+
+    progress_a_after = client.get("/progress", headers=headers_a).json()
+    palavras_a_after = next(t for t in progress_a_after["territories"] if t["territory_id"] == "palavras")
+    assert palavras_a_after["detentor_photo_url"] is not None
+
+
 def test_no_dethroned_nickname_on_first_ever_detentor(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)

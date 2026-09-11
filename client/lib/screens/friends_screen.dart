@@ -534,6 +534,12 @@ class _FriendsScreenState extends State<FriendsScreen> {
                       for (final request in _friendRequests)
                         ListTile(
                           contentPadding: EdgeInsets.zero,
+                          // Pedido de Rhoney (07/09/2026): "agora que os
+                          // nomes aparecem em qualquer tela, ponha as
+                          // fotos também" — mesmo widget já usado na
+                          // lista de amigos e no resultado de busca.
+                          leading: ProfilePhotoCircle(
+                              photoUrl: request['from_photo_url'] as String?),
                           title: Text(request['from_nickname'] as String),
                           trailing: Row(
                             mainAxisSize: MainAxisSize.min,

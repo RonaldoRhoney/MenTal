@@ -121,6 +121,7 @@ def list_friend_requests(user_id: str = Depends(require_age_confirmed_user_id), 
                 # Pedido de Rhoney (07/09/2026): nome real tem prioridade
                 # sobre o apelido gerado, mesmo padrão de Ranking/Amigos.
                 from_nickname=(from_profile.real_name or from_profile.nickname) if from_profile else "???",
+                from_photo_url=services.public_photo_url(from_profile) if from_profile else None,
             )
         )
     return schemas.FriendRequestsResponse(requests=requests)

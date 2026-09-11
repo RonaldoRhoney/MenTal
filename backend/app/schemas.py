@@ -355,6 +355,11 @@ class ProgressTerritoryOut(BaseModel):
     # amigos confirmados (nunca global) — null quando ninguém no grupo
     # tem XP nesse território ainda.
     detentor_nickname: str | None = None
+    # Pedido de Rhoney (07/09/2026): "agora que os nomes aparecem em
+    # qualquer tela, ponha as fotos também" — mesma regra de moderação
+    # fail-closed de qualquer outra foto exibida a terceiros
+    # (services.public_photo_url), nunca a foto crua do dono.
+    detentor_photo_url: str | None = None
     is_detentor: bool = False
 
 
@@ -714,6 +719,11 @@ class FriendRequestOut(BaseModel):
     friendship_id: str
     from_user_id: str
     from_nickname: str
+    # Pedido de Rhoney (07/09/2026): "agora que os nomes aparecem em
+    # qualquer tela, ponha as fotos também" — mesma regra de moderação
+    # fail-closed de qualquer outra foto exibida a terceiros
+    # (services.public_photo_url).
+    from_photo_url: str | None = None
 
 
 class FriendRequestsResponse(BaseModel):
