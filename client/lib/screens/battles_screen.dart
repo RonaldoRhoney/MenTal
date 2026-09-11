@@ -39,7 +39,8 @@ class _BattlesScreenState extends State<BattlesScreen> {
     try {
       final result = await widget.client.listBattles();
       if (mounted) {
-        setState(() => _battles = (result['battles'] as List).cast<Map<String, dynamic>>());
+        setState(() => _battles =
+            (result['battles'] as List).cast<Map<String, dynamic>>());
       }
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -70,11 +71,26 @@ class _BattlesScreenState extends State<BattlesScreen> {
       context,
       title: l10n.battlesHelpTitle,
       steps: [
-        HelpStep(icon: Icons.people_outline, title: l10n.battlesHelpStep1Title, description: l10n.battlesHelpStep1Body),
-        HelpStep(icon: Icons.tune, title: l10n.battlesHelpStep2Title, description: l10n.battlesHelpStep2Body),
-        HelpStep(icon: Icons.schedule_outlined, title: l10n.battlesHelpStep3Title, description: l10n.battlesHelpStep3Body),
-        HelpStep(icon: Icons.emoji_events_outlined, title: l10n.battlesHelpStep4Title, description: l10n.battlesHelpStep4Body),
-        HelpStep(icon: Icons.bolt_outlined, title: l10n.battlesHelpStep5Title, description: l10n.battlesHelpStep5Body),
+        HelpStep(
+            icon: Icons.people_outline,
+            title: l10n.battlesHelpStep1Title,
+            description: l10n.battlesHelpStep1Body),
+        HelpStep(
+            icon: Icons.tune,
+            title: l10n.battlesHelpStep2Title,
+            description: l10n.battlesHelpStep2Body),
+        HelpStep(
+            icon: Icons.schedule_outlined,
+            title: l10n.battlesHelpStep3Title,
+            description: l10n.battlesHelpStep3Body),
+        HelpStep(
+            icon: Icons.emoji_events_outlined,
+            title: l10n.battlesHelpStep4Title,
+            description: l10n.battlesHelpStep4Body),
+        HelpStep(
+            icon: Icons.bolt_outlined,
+            title: l10n.battlesHelpStep5Title,
+            description: l10n.battlesHelpStep5Body),
       ],
     );
   }
@@ -83,7 +99,13 @@ class _BattlesScreenState extends State<BattlesScreen> {
     final status = battle['status'] as String;
     final iAnswered = battle['i_answered'] as bool;
     final winner = battle['winner'] as String?;
-    final nickname = battle['opponent_nickname'] as String;
+    // Pedido de Rhoney (07/09/2026): nome real tem prioridade sobre o
+    // apelido gerado — mesmo padrão já usado no rótulo principal da
+    // linha (ver opponentRealName/opponentLabel mais abaixo).
+    final opponentRealName = battle['opponent_real_name'] as String?;
+    final nickname = opponentRealName != null && opponentRealName.isNotEmpty
+        ? opponentRealName
+        : battle['opponent_nickname'] as String;
 
     if (status == 'resolved') {
       return Text(
@@ -92,12 +114,17 @@ class _BattlesScreenState extends State<BattlesScreen> {
           'tie' => l10n.battleStatusTie,
           _ => l10n.battleStatusLost(nickname),
         },
-        style: TextStyle(color: winner == 'me' ? AppColors.gold : AppColors.muted),
+        style:
+            TextStyle(color: winner == 'me' ? AppColors.gold : AppColors.muted),
       );
     }
     return Text(
-      iAnswered ? l10n.battleStatusPendingWaitingOpponent(nickname) : l10n.battleStatusPendingWaitingMe,
-      style: TextStyle(color: iAnswered ? AppColors.muted : AppColors.teal, fontWeight: iAnswered ? null : FontWeight.w600),
+      iAnswered
+          ? l10n.battleStatusPendingWaitingOpponent(nickname)
+          : l10n.battleStatusPendingWaitingMe,
+      style: TextStyle(
+          color: iAnswered ? AppColors.muted : AppColors.teal,
+          fontWeight: iAnswered ? null : FontWeight.w600),
     );
   }
 
@@ -119,12 +146,15 @@ class _BattlesScreenState extends State<BattlesScreen> {
         child: _loading
             ? const Center(child: CircularProgressIndicator())
             : _error != null
-                ? Center(child: Text(_error!, style: TextStyle(color: AppColors.error)))
+                ? Center(
+                    child:
+                        Text(_error!, style: TextStyle(color: AppColors.error)))
                 : _battles.isEmpty
                     ? Center(
                         child: Padding(
                           padding: const EdgeInsets.all(24),
-                          child: Text(l10n.battlesEmptyMessage, textAlign: TextAlign.center),
+                          child: Text(l10n.battlesEmptyMessage,
+                              textAlign: TextAlign.center),
                         ),
                       )
                     // Pedido de Rhoney (04/09/2026): pull-to-refresh em
@@ -133,52 +163,65 @@ class _BattlesScreenState extends State<BattlesScreen> {
                         onRefresh: _load,
                         color: AppColors.gold,
                         child: ListView.builder(
-                        itemCount: _battles.length,
-                        itemBuilder: (context, index) {
-                          final battle = _battles[index];
-                          final canAnswer = battle['status'] == 'pending' && battle['i_answered'] == false;
-                          // Nome real substitui o apelido gerado pelo
-                          // sistema assim que existir (29/08/2026,
-                          // pedido de Rhoney).
-                          final opponentRealName = battle['opponent_real_name'] as String?;
-                          final opponentLabel = opponentRealName != null && opponentRealName.isNotEmpty
-                              ? opponentRealName
-                              : battle['opponent_nickname'];
-                          return ListTile(
-                            // V4 item 1 — Perfil Público: só quando a
-                            // batalha NÃO exige resposta agora (senão o
-                            // toque na linha continuaria sendo a ação
-                            // principal de responder, via botão em
-                            // trailing) — PERFIL_PUBLICO_E_TORCIDA_V1.md
-                            // §3, Batalha é ponto de entrada aprovado.
-                            onTap: canAnswer
-                                ? null
-                                : () => Navigator.of(context).push(
-                                      MaterialPageRoute(builder: (_) => PublicProfileScreen(client: widget.client, userId: battle['opponent_user_id'] as String)),
-                                    ),
-                            leading: ProfilePhotoCircle(photoUrl: battle['opponent_photo_url'] as String?),
-                            title: Text(
-                              '${territoryLabel(l10n, battle['territory_id'] as String)} · $opponentLabel',
-                            ),
-                            subtitle: _statusLine(l10n, battle),
-                            // AppTheme define minimumSize: Size.fromHeight(48)
-                            // (largura infinita) pro FilledButton — dentro de
-                            // ListTile.trailing isso quebra o layout do
-                            // tile inteiro (achado já documentado em
-                            // friends_screen.dart), corrigido reduzindo o
-                            // mínimo em vez de usar Flexible/Expanded (que
-                            // não existem aqui, é ListTile, não Row).
-                            trailing: canAnswer
-                                ? FilledButton(
-                                    style: FilledButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
-                                    onPressed: () => _answer(battle),
-                                    child: Text(l10n.battleAnswerButton),
-                                  )
-                                : null,
-                          );
-                        },
+                          itemCount: _battles.length,
+                          itemBuilder: (context, index) {
+                            final battle = _battles[index];
+                            final canAnswer = battle['status'] == 'pending' &&
+                                battle['i_answered'] == false;
+                            // Nome real substitui o apelido gerado pelo
+                            // sistema assim que existir (29/08/2026,
+                            // pedido de Rhoney).
+                            final opponentRealName =
+                                battle['opponent_real_name'] as String?;
+                            final opponentLabel = opponentRealName != null &&
+                                    opponentRealName.isNotEmpty
+                                ? opponentRealName
+                                : battle['opponent_nickname'];
+                            return ListTile(
+                              // V4 item 1 — Perfil Público: só quando a
+                              // batalha NÃO exige resposta agora (senão o
+                              // toque na linha continuaria sendo a ação
+                              // principal de responder, via botão em
+                              // trailing) — PERFIL_PUBLICO_E_TORCIDA_V1.md
+                              // §3, Batalha é ponto de entrada aprovado.
+                              onTap: canAnswer
+                                  ? null
+                                  : () => Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (_) => PublicProfileScreen(
+                                                client: widget.client,
+                                                userId:
+                                                    battle['opponent_user_id']
+                                                        as String)),
+                                      ),
+                              leading: ProfilePhotoCircle(
+                                  photoUrl:
+                                      battle['opponent_photo_url'] as String?),
+                              title: Text(
+                                '${territoryLabel(l10n, battle['territory_id'] as String)} · $opponentLabel',
+                              ),
+                              subtitle: _statusLine(l10n, battle),
+                              // AppTheme define minimumSize: Size.fromHeight(48)
+                              // (largura infinita) pro FilledButton — dentro de
+                              // ListTile.trailing isso quebra o layout do
+                              // tile inteiro (achado já documentado em
+                              // friends_screen.dart), corrigido reduzindo o
+                              // mínimo em vez de usar Flexible/Expanded (que
+                              // não existem aqui, é ListTile, não Row).
+                              trailing: canAnswer
+                                  ? FilledButton(
+                                      style: FilledButton.styleFrom(
+                                          minimumSize: Size.zero,
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 12, vertical: 8)),
+                                      onPressed: () => _answer(battle),
+                                      child: Text(l10n.battleAnswerButton),
+                                    )
+                                  : null,
+                            );
+                          },
+                        ),
                       ),
-                    ),
       ),
     );
   }

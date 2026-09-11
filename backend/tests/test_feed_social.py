@@ -171,6 +171,28 @@ def test_feed_event_text_is_built_server_side_from_template(client):
     assert event["text"] == f"{nickname} chegou ao Nível 20! ⭐"
 
 
+def test_feed_event_uses_real_name_instead_of_nickname_when_set(client):
+    """Pedido de Rhoney (07/09/2026): "em todas as telas... o nome do
+    usuário deve aparecer e não o código" — real_name tem prioridade
+    sobre o apelido gerado, mesmo padrão já usado em Ranking/Amigos."""
+    viewer, friend = str(uuid.uuid4()), str(uuid.uuid4())
+    headers_viewer = auth_header(viewer)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_viewer)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=auth_header(friend))
+    _make_friends(client, viewer, friend)
+
+    with SessionLocal() as db:
+        profile = db.get(models.Profile, friend)
+        profile.real_name = "Fulano de Tal"
+        db.add(models.FeedEvent(user_id=friend, event_type="level_up_milestone", payload={"level": 20}))
+        db.commit()
+
+    body = client.get("/feed", headers=headers_viewer).json()
+    event = next(e for e in body["events"] if e["user_id"] == friend)
+    assert event["nickname"] == "Fulano de Tal"
+    assert event["text"] == "Fulano de Tal chegou ao Nível 20! ⭐"
+
+
 # ---------------------------------------------------------------------------
 # Cada tipo de evento automático (§2) — registrado no momento certo
 # ---------------------------------------------------------------------------

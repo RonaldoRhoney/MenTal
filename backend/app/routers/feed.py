@@ -41,14 +41,23 @@ def get_feed(
         profile = db.get(models.Profile, event.user_id)
         if profile is None:
             continue
+        # Pedido de Rhoney (07/09/2026): "em todas as telas... o nome do
+        # usuário deve aparecer e não o código" — mesmo padrão já usado em
+        # Ranking/Amigos (real_name tem prioridade, nickname é só
+        # fallback pra quem não cadastrou nome real). O texto do evento é
+        # montado inteiro no servidor com este mesmo nome — precisa ser
+        # exatamente o valor que entra no campo abaixo, porque o client
+        # (feed_screen.dart::_splitNameFromText) separa o nome do resto
+        # da frase procurando este texto no início de `text`.
+        display_name = profile.real_name or profile.nickname
         out.append(
             schemas.FeedEventOut(
                 id=event.id,
                 user_id=event.user_id,
-                nickname=profile.nickname,
+                nickname=display_name,
                 photo_url=services.public_photo_url(profile),
                 event_type=event.event_type,
-                text=services.build_feed_event_text(event, profile.nickname),
+                text=services.build_feed_event_text(event, display_name),
                 created_at=event.created_at.isoformat(),
             )
         )

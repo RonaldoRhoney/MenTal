@@ -112,6 +112,29 @@ def test_friend_with_more_xp_becomes_detentor_and_dethrones_previous(client):
     assert palavras_a_after["detentor_nickname"] is not None
 
 
+def test_detentor_nickname_field_prefers_real_name_when_set(client):
+    """Pedido de Rhoney (07/09/2026): "em todas as telas... o nome do
+    usuário deve aparecer e não o código" — apesar do nome do campo
+    (detentor_nickname, mantido por compatibilidade), o valor prioriza
+    real_name sobre o apelido gerado, mesmo padrão de Ranking/Amigos."""
+    from app import models
+    from app.db import SessionLocal
+
+    user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
+    headers_a, headers_b = _make_friends(client, user_a, user_b)
+
+    with SessionLocal() as db:
+        profile_b = db.get(models.Profile, user_b)
+        profile_b.real_name = "Beltrano da Silva"
+        db.commit()
+
+    _answer_until_correct(client, headers_b)
+
+    progress_a = client.get("/progress", headers=headers_a).json()
+    palavras_a = next(t for t in progress_a["territories"] if t["territory_id"] == "palavras")
+    assert palavras_a["detentor_nickname"] == "Beltrano da Silva"
+
+
 def test_no_dethroned_nickname_on_first_ever_detentor(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)

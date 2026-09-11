@@ -81,6 +81,33 @@ def test_add_friend_request_appears_pending_until_owner_accepts(client):
     assert client.get("/social/friend-requests", headers=b_headers).json()["requests"] == []
 
 
+def test_friend_request_from_nickname_field_prefers_real_name_when_set(client):
+    """Pedido de Rhoney (07/09/2026): "em todas as telas... o nome do
+    usuário deve aparecer e não o código" — apesar do nome do campo
+    (from_nickname, mantido por compatibilidade), o valor prioriza
+    real_name sobre o apelido gerado, mesmo padrão de Ranking/Amigos."""
+    from app import models
+    from app.db import SessionLocal
+
+    a = str(uuid.uuid4())
+    b = str(uuid.uuid4())
+    a_headers = auth_header(a)
+    b_headers = auth_header(b)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=a_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=b_headers)
+
+    with SessionLocal() as db:
+        profile_b = db.get(models.Profile, b)
+        profile_b.real_name = "Ciclano Pereira"
+        db.commit()
+
+    a_code = _get_invite_code(client, a_headers)
+    client.post("/social/friends", json={"invite_code": a_code}, headers=b_headers)
+
+    a_requests = client.get("/social/friend-requests", headers=a_headers).json()["requests"]
+    assert a_requests[0]["from_nickname"] == "Ciclano Pereira"
+
+
 def test_friend_request_can_be_declined(client):
     a = str(uuid.uuid4())
     b = str(uuid.uuid4())

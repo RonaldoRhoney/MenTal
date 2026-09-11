@@ -86,4 +86,33 @@ void main() {
     expect(find.textContaining('Você venceu'), findsOneWidget);
     expect(find.text('Responder'), findsNothing);
   });
+
+  testWidgets('linha de status usa o nome real do oponente quando existe, não o apelido', (tester) async {
+    // Pedido de Rhoney (07/09/2026): "em todas as telas... o nome do
+    // usuário deve aparecer e não o código" — achado real testando esta
+    // tela: o rótulo principal da linha já usava opponent_real_name, mas
+    // a mensagem de status (_statusLine) ainda usava opponent_nickname
+    // direto, sem checar o nome real.
+    await _pumpBattlesScreen(
+      tester,
+      _FakeApiClient(battles: [
+        {
+          'battle_id': 'b3',
+          'opponent_nickname': 'Fulano8f3a',
+          'opponent_real_name': 'Fulano de Tal',
+          'territory_id': 'palavras',
+          'difficulty_level': 2,
+          'role': 'opponent',
+          'status': 'pending',
+          'i_answered': true,
+          'opponent_answered': false,
+          'winner': null,
+          'win_bonus_xp': 0,
+        },
+      ]),
+    );
+
+    expect(find.textContaining('Fulano de Tal'), findsWidgets);
+    expect(find.textContaining('Fulano8f3a'), findsNothing);
+  });
 }

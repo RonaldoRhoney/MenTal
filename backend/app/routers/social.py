@@ -118,7 +118,9 @@ def list_friend_requests(user_id: str = Depends(require_age_confirmed_user_id), 
             schemas.FriendRequestOut(
                 friendship_id=friendship.id,
                 from_user_id=from_user_id,
-                from_nickname=from_profile.nickname if from_profile else "???",
+                # Pedido de Rhoney (07/09/2026): nome real tem prioridade
+                # sobre o apelido gerado, mesmo padrão de Ranking/Amigos.
+                from_nickname=(from_profile.real_name or from_profile.nickname) if from_profile else "???",
             )
         )
     return schemas.FriendRequestsResponse(requests=requests)

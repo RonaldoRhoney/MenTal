@@ -79,7 +79,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
       });
       return;
     }
-    _searchDebounce = Timer(const Duration(milliseconds: 300), () => _runSearch(query));
+    _searchDebounce =
+        Timer(const Duration(milliseconds: 300), () => _runSearch(query));
   }
 
   Future<void> _runSearch(String query) async {
@@ -87,7 +88,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
     try {
       final response = await widget.client.searchUsers(query);
       if (mounted && _searchController.text.trim() == query) {
-        setState(() => _searchResults = (response['results'] as List).cast<Map<String, dynamic>>());
+        setState(() => _searchResults =
+            (response['results'] as List).cast<Map<String, dynamic>>());
       }
     } on ApiException catch (_) {
       // Busca é um reforço, não crítico — nunca sobrescreve o erro
@@ -104,7 +106,9 @@ class _FriendsScreenState extends State<FriendsScreen> {
       await widget.client.sendFriendRequest(userId);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(AppLocalizations.of(context)!.friendRequestSentMessage)),
+          SnackBar(
+              content:
+                  Text(AppLocalizations.of(context)!.friendRequestSentMessage)),
         );
       }
     } on ApiException catch (e) {
@@ -130,7 +134,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
       try {
         final requests = await widget.client.getFriendRequests();
         if (mounted) {
-          setState(() => _friendRequests = (requests['requests'] as List).cast<Map<String, dynamic>>());
+          setState(() => _friendRequests =
+              (requests['requests'] as List).cast<Map<String, dynamic>>());
         }
       } on ApiException catch (_) {
         // Reforço visual, não crítico — segue sem a lista de pedidos.
@@ -142,8 +147,10 @@ class _FriendsScreenState extends State<FriendsScreen> {
     }
   }
 
-  Future<void> _openReportBlockSheet({required String userId, required String nickname}) async {
-    final blocked = await showReportBlockSheet(context, client: widget.client, targetUserId: userId, targetNickname: nickname);
+  Future<void> _openReportBlockSheet(
+      {required String userId, required String nickname}) async {
+    final blocked = await showReportBlockSheet(context,
+        client: widget.client, targetUserId: userId, targetNickname: nickname);
     // Bloquear encerra qualquer amizade/pedido existente no backend —
     // recarrega pra tirar a pessoa bloqueada das duas listas na tela.
     if (blocked) await _load();
@@ -151,7 +158,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
 
   Future<void> _acceptRequest(Map<String, dynamic> request) async {
     try {
-      await widget.client.acceptFriendRequest(request['friendship_id'] as String);
+      await widget.client
+          .acceptFriendRequest(request['friendship_id'] as String);
       await _load();
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -160,7 +168,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
 
   Future<void> _declineRequest(Map<String, dynamic> request) async {
     try {
-      await widget.client.declineFriendRequest(request['friendship_id'] as String);
+      await widget.client
+          .declineFriendRequest(request['friendship_id'] as String);
       await _load();
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -173,7 +182,9 @@ class _FriendsScreenState extends State<FriendsScreen> {
     await Clipboard.setData(ClipboardData(text: code));
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(AppLocalizations.of(context)!.friendsCodeCopiedMessage)),
+        SnackBar(
+            content:
+                Text(AppLocalizations.of(context)!.friendsCodeCopiedMessage)),
       );
     }
   }
@@ -181,7 +192,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
   Future<void> _shareInvite() async {
     final code = _inviteCode;
     if (code == null) return;
-    await ShareService.share(AppLocalizations.of(context)!.friendsInviteShareMessage(code));
+    await ShareService.share(
+        AppLocalizations.of(context)!.friendsInviteShareMessage(code));
   }
 
   void _showHelp() {
@@ -190,11 +202,26 @@ class _FriendsScreenState extends State<FriendsScreen> {
       context,
       title: l10n.friendsHelpTitle,
       steps: [
-        HelpStep(icon: Icons.share_outlined, title: l10n.friendsHelpStep1Title, description: l10n.friendsHelpStep1Body),
-        HelpStep(icon: Icons.hourglass_top_outlined, title: l10n.friendsHelpStep2Title, description: l10n.friendsHelpStep2Body),
-        HelpStep(icon: Icons.check_circle_outline, title: l10n.friendsHelpStep3Title, description: l10n.friendsHelpStep3Body),
-        HelpStep(icon: Icons.flash_on_outlined, title: l10n.friendsHelpStep4Title, description: l10n.friendsHelpStep4Body),
-        HelpStep(icon: Icons.shield_outlined, title: l10n.friendsHelpStep5Title, description: l10n.friendsHelpStep5Body),
+        HelpStep(
+            icon: Icons.share_outlined,
+            title: l10n.friendsHelpStep1Title,
+            description: l10n.friendsHelpStep1Body),
+        HelpStep(
+            icon: Icons.hourglass_top_outlined,
+            title: l10n.friendsHelpStep2Title,
+            description: l10n.friendsHelpStep2Body),
+        HelpStep(
+            icon: Icons.check_circle_outline,
+            title: l10n.friendsHelpStep3Title,
+            description: l10n.friendsHelpStep3Body),
+        HelpStep(
+            icon: Icons.flash_on_outlined,
+            title: l10n.friendsHelpStep4Title,
+            description: l10n.friendsHelpStep4Body),
+        HelpStep(
+            icon: Icons.shield_outlined,
+            title: l10n.friendsHelpStep5Title,
+            description: l10n.friendsHelpStep5Body),
       ],
     );
   }
@@ -237,6 +264,14 @@ class _FriendsScreenState extends State<FriendsScreen> {
     final l10n = AppLocalizations.of(context)!;
     String territoryId = kTerritoryIds.first;
     int difficultyLevel = 2;
+    // Pedido de Rhoney (07/09/2026): nome real tem prioridade sobre o
+    // apelido gerado — mesmo padrão já usado na própria listagem de
+    // amigos logo abaixo (ver friendRealName mais adiante nesta tela).
+    final friendRealName = friend['real_name'] as String?;
+    final friendDisplayName =
+        friendRealName != null && friendRealName.isNotEmpty
+            ? friendRealName
+            : friend['nickname'] as String;
 
     final confirmed = await showDialog<bool>(
       context: context,
@@ -244,24 +279,28 @@ class _FriendsScreenState extends State<FriendsScreen> {
         return StatefulBuilder(
           builder: (dialogContext, setDialogState) {
             return AlertDialog(
-              title: Text(l10n.battleDialogTitle(friend['nickname'] as String)),
+              title: Text(l10n.battleDialogTitle(friendDisplayName)),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   DropdownButtonFormField<String>(
                     initialValue: territoryId,
-                    decoration: InputDecoration(labelText: l10n.battleDialogTerritoryLabel),
+                    decoration: InputDecoration(
+                        labelText: l10n.battleDialogTerritoryLabel),
                     items: [
                       for (final id in kTerritoryIds)
-                        DropdownMenuItem(value: id, child: Text(territoryLabel(l10n, id))),
+                        DropdownMenuItem(
+                            value: id, child: Text(territoryLabel(l10n, id))),
                     ],
-                    onChanged: (value) => setDialogState(() => territoryId = value ?? territoryId),
+                    onChanged: (value) => setDialogState(
+                        () => territoryId = value ?? territoryId),
                   ),
                   const SizedBox(height: 12),
                   DropdownButtonFormField<int>(
                     initialValue: difficultyLevel,
-                    decoration: InputDecoration(labelText: l10n.battleDialogDifficultyLabel),
+                    decoration: InputDecoration(
+                        labelText: l10n.battleDialogDifficultyLabel),
                     items: const [
                       DropdownMenuItem(value: 1, child: Text('1')),
                       DropdownMenuItem(value: 2, child: Text('2')),
@@ -269,7 +308,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
                       DropdownMenuItem(value: 4, child: Text('4')),
                       DropdownMenuItem(value: 5, child: Text('5')),
                     ],
-                    onChanged: (value) => setDialogState(() => difficultyLevel = value ?? difficultyLevel),
+                    onChanged: (value) => setDialogState(
+                        () => difficultyLevel = value ?? difficultyLevel),
                   ),
                 ],
               ),
@@ -306,8 +346,11 @@ class _FriendsScreenState extends State<FriendsScreen> {
       );
     } on ApiException catch (e) {
       if (!mounted) return;
-      final message = e.code == 'BATTLE_DAILY_LIMIT_REACHED' ? l10n.battleDailyLimitReachedMessage : e.message;
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+      final message = e.code == 'BATTLE_DAILY_LIMIT_REACHED'
+          ? l10n.battleDailyLimitReachedMessage
+          : e.message;
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(message)));
     }
   }
 
@@ -316,13 +359,17 @@ class _FriendsScreenState extends State<FriendsScreen> {
     final userId = result['user_id'] as String;
     final status = result['friendship_status'] as String?;
     if (status == 'accepted') {
-      return Text(l10n.friendsSearchAlreadyFriendsLabel, style: Theme.of(context).textTheme.bodySmall);
+      return Text(l10n.friendsSearchAlreadyFriendsLabel,
+          style: Theme.of(context).textTheme.bodySmall);
     }
     if (status == 'pending' || _pendingRequestUserIds.contains(userId)) {
-      return Text(l10n.friendsSearchRequestPendingLabel, style: Theme.of(context).textTheme.bodySmall);
+      return Text(l10n.friendsSearchRequestPendingLabel,
+          style: Theme.of(context).textTheme.bodySmall);
     }
     return OutlinedButton(
-      style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+      style: OutlinedButton.styleFrom(
+          minimumSize: Size.zero,
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
       onPressed: () => _sendSearchFriendRequest(result),
       child: Text(l10n.friendsSearchSendInviteButton),
     );
@@ -343,7 +390,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
             tooltip: l10n.friendsFeedTooltip,
             icon: const Icon(Icons.dynamic_feed_outlined),
             onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => FeedScreen(client: widget.client)),
+              MaterialPageRoute(
+                  builder: (_) => FeedScreen(client: widget.client)),
             ),
           ),
           IconButton(
@@ -404,13 +452,15 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                 child: SizedBox(
                                   width: 16,
                                   height: 16,
-                                  child: CircularProgressIndicator(strokeWidth: 2),
+                                  child:
+                                      CircularProgressIndicator(strokeWidth: 2),
                                 ),
                               )
                             : null,
                       ),
                     ),
-                    if (_searchController.text.trim().length >= 3 && !_searching) ...[
+                    if (_searchController.text.trim().length >= 3 &&
+                        !_searching) ...[
                       const SizedBox(height: 4),
                       if (_searchResults.isEmpty)
                         Padding(
@@ -426,20 +476,23 @@ class _FriendsScreenState extends State<FriendsScreen> {
                         // (AMIGOS_CONVITE_POR_NOME.md §2, exceção escopada
                         // estritamente ao fluxo de convite).
                         ...[
-                          for (final result in _searchResults)
-                            ListTile(
-                              contentPadding: EdgeInsets.zero,
-                              leading: ProfilePhotoCircle(photoUrl: result['photo_url'] as String?),
-                              title: Text(
-                                (result['real_name'] as String?) ?? (result['nickname'] as String),
-                              ),
-                              subtitle: Text(
-                                l10n.levelLabel(result['level'] as int),
-                                style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 14),
-                              ),
-                              trailing: _buildSearchResultAction(result),
+                        for (final result in _searchResults)
+                          ListTile(
+                            contentPadding: EdgeInsets.zero,
+                            leading: ProfilePhotoCircle(
+                                photoUrl: result['photo_url'] as String?),
+                            title: Text(
+                              (result['real_name'] as String?) ??
+                                  (result['nickname'] as String),
                             ),
-                        ],
+                            subtitle: Text(
+                              l10n.levelLabel(result['level'] as int),
+                              style: AppTheme.technicalStyle(
+                                  color: AppColors.teal, fontSize: 14),
+                            ),
+                            trailing: _buildSearchResultAction(result),
+                          ),
+                      ],
                     ],
                     const SizedBox(height: 16),
                     Row(
@@ -447,7 +500,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
                         Expanded(
                           child: TextField(
                             controller: _codeController,
-                            decoration: InputDecoration(hintText: l10n.friendsAddFieldHint),
+                            decoration: InputDecoration(
+                                hintText: l10n.friendsAddFieldHint),
                           ),
                         ),
                         const SizedBox(width: 8),
@@ -474,7 +528,8 @@ class _FriendsScreenState extends State<FriendsScreen> {
                     ],
                     if (_friendRequests.isNotEmpty) ...[
                       const SizedBox(height: 24),
-                      Text(l10n.friendRequestsTitle, style: Theme.of(context).textTheme.titleMedium),
+                      Text(l10n.friendRequestsTitle,
+                          style: Theme.of(context).textTheme.titleMedium),
                       const SizedBox(height: 8),
                       for (final request in _friendRequests)
                         ListTile(
@@ -484,13 +539,19 @@ class _FriendsScreenState extends State<FriendsScreen> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               OutlinedButton(
-                                style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                                style: OutlinedButton.styleFrom(
+                                    minimumSize: Size.zero,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 12, vertical: 8)),
                                 onPressed: () => _declineRequest(request),
                                 child: Text(l10n.friendRequestDeclineButton),
                               ),
                               const SizedBox(width: 8),
                               FilledButton(
-                                style: FilledButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
+                                style: FilledButton.styleFrom(
+                                    minimumSize: Size.zero,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 12, vertical: 8)),
                                 onPressed: () => _acceptRequest(request),
                                 child: Text(l10n.friendRequestAcceptButton),
                               ),
@@ -507,14 +568,16 @@ class _FriendsScreenState extends State<FriendsScreen> {
                         ),
                     ],
                     const SizedBox(height: 24),
-                    Text(l10n.friendsListTitle, style: Theme.of(context).textTheme.titleMedium),
+                    Text(l10n.friendsListTitle,
+                        style: Theme.of(context).textTheme.titleMedium),
                     const SizedBox(height: 8),
                     Expanded(
                       child: _friends.isEmpty
                           ? Center(
                               child: Padding(
                                 padding: const EdgeInsets.all(16),
-                                child: Text(l10n.friendsEmptyMessage, textAlign: TextAlign.center),
+                                child: Text(l10n.friendsEmptyMessage,
+                                    textAlign: TextAlign.center),
                               ),
                             )
                           // Pedido de Rhoney (04/09/2026): pull-to-refresh
@@ -523,59 +586,85 @@ class _FriendsScreenState extends State<FriendsScreen> {
                               onRefresh: _load,
                               color: AppColors.gold,
                               child: ListView.builder(
-                              itemCount: _friends.length,
-                              itemBuilder: (context, index) {
-                                final friend = _friends[index];
-                                final realName = friend['real_name'] as String?;
-                                return ListTile(
-                                  // V4 item 1 — Perfil Público: toque na
-                                  // linha (fora dos botões de ação) abre o
-                                  // perfil público do amigo
-                                  // (PERFIL_PUBLICO_E_TORCIDA_V1.md §3).
-                                  onTap: () => Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (_) => PublicProfileScreen(client: widget.client, userId: friend['user_id'] as String)),
-                                  ),
-                                  leading: ProfilePhotoCircle(photoUrl: friend['photo_url'] as String?),
-                                  // Nome real substitui o apelido gerado
-                                  // pelo sistema assim que existir
-                                  // (29/08/2026, pedido de Rhoney).
-                                  title: Text(
-                                    realName != null && realName.isNotEmpty ? realName : friend['nickname'] as String,
-                                  ),
-                                  subtitle: Text(
-                                    '${friend['xp_total']} XP',
-                                    style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 14),
-                                  ),
-                                  trailing: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      OutlinedButton(
-                                        // Mesmo achado do bug de largura
-                                        // infinita já documentado nesta tela
-                                        // (AppTheme define minimumSize:
-                                        // Size.fromHeight(48), largura
-                                        // infinita) — aqui o problema é outro
-                                        // sintoma do mesmo bug: dentro de
-                                        // ListTile.trailing (não um Row
-                                        // solto), então a correção é reduzir
-                                        // o mínimo, não usar Flexible/Expanded.
-                                        style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
-                                        onPressed: () => _challengeFriend(friend),
-                                        child: Text(l10n.battleChallengeButton),
-                                      ),
-                                      IconButton(
-                                        tooltip: l10n.friendMoreOptionsTooltip,
-                                        icon: const Icon(Icons.more_vert, size: 20),
-                                        onPressed: () => _openReportBlockSheet(
-                                          userId: friend['user_id'] as String,
-                                          nickname: friend['nickname'] as String,
+                                itemCount: _friends.length,
+                                itemBuilder: (context, index) {
+                                  final friend = _friends[index];
+                                  final realName =
+                                      friend['real_name'] as String?;
+                                  return ListTile(
+                                    // V4 item 1 — Perfil Público: toque na
+                                    // linha (fora dos botões de ação) abre o
+                                    // perfil público do amigo
+                                    // (PERFIL_PUBLICO_E_TORCIDA_V1.md §3).
+                                    onTap: () => Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                          builder: (_) => PublicProfileScreen(
+                                              client: widget.client,
+                                              userId:
+                                                  friend['user_id'] as String)),
+                                    ),
+                                    leading: ProfilePhotoCircle(
+                                        photoUrl:
+                                            friend['photo_url'] as String?),
+                                    // Nome real substitui o apelido gerado
+                                    // pelo sistema assim que existir
+                                    // (29/08/2026, pedido de Rhoney).
+                                    title: Text(
+                                      realName != null && realName.isNotEmpty
+                                          ? realName
+                                          : friend['nickname'] as String,
+                                    ),
+                                    subtitle: Text(
+                                      '${friend['xp_total']} XP',
+                                      style: AppTheme.technicalStyle(
+                                          color: AppColors.teal, fontSize: 14),
+                                    ),
+                                    trailing: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        OutlinedButton(
+                                          // Mesmo achado do bug de largura
+                                          // infinita já documentado nesta tela
+                                          // (AppTheme define minimumSize:
+                                          // Size.fromHeight(48), largura
+                                          // infinita) — aqui o problema é outro
+                                          // sintoma do mesmo bug: dentro de
+                                          // ListTile.trailing (não um Row
+                                          // solto), então a correção é reduzir
+                                          // o mínimo, não usar Flexible/Expanded.
+                                          style: OutlinedButton.styleFrom(
+                                              minimumSize: Size.zero,
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 12,
+                                                      vertical: 8)),
+                                          onPressed: () =>
+                                              _challengeFriend(friend),
+                                          child:
+                                              Text(l10n.battleChallengeButton),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
-                            ),
+                                        IconButton(
+                                          tooltip:
+                                              l10n.friendMoreOptionsTooltip,
+                                          icon: const Icon(Icons.more_vert,
+                                              size: 20),
+                                          onPressed: () =>
+                                              _openReportBlockSheet(
+                                            userId: friend['user_id'] as String,
+                                            // Pedido de Rhoney (07/09/2026): nome
+                                            // real tem prioridade — mesmo `realName`
+                                            // já usado no título da linha acima.
+                                            nickname: realName != null &&
+                                                    realName.isNotEmpty
+                                                ? realName
+                                                : friend['nickname'] as String,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
                             ),
                     ),
                   ],
