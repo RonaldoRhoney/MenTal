@@ -255,6 +255,21 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryOceanoBrasil => 'Oceanos e o Brasil';
 
   @override
+  String get territoryEspacoUniverso => 'O Universo e o Sistema Solar';
+
+  @override
+  String get territoryEspacoPlanetas => 'Os Planetas';
+
+  @override
+  String get territoryEspacoEstrelas => 'Estrelas e Buracos Negros';
+
+  @override
+  String get territoryEspacoExploracao => 'Exploração Espacial';
+
+  @override
+  String get territoryEspacoBrasil => 'O Brasil no Espaço';
+
+  @override
   String get audioPlayButton => 'Tocar som';
 
   @override

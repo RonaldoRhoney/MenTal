@@ -75,6 +75,17 @@ WORLDS = [
     # Profundezas, Clima, Brasil). Conteúdo carregado de
     # content/oceanos_*.json (ver CHALLENGES abaixo).
     {"id": "oceanos", "name": "Mundo dos Oceanos", "display_order": 15},
+    # Mundo_Acima_de_Nos/README.md (07/09/2026) — "Mundo Acima de Nós
+    # (Espaço)" é o nome OFICIAL exibido (a pasta/id não têm acento nem
+    # parênteses, convenção de diretório). Mesma arquitetura de Valores/
+    # Trânsito/Gastronomia/Oceanos: "cápsula de texto + perguntas", 5
+    # territórios (Universo, Planetas, Estrelas, Exploração, Brasil no
+    # Espaço). Escala diferente do território "astronomia" já existente
+    # em Mundo_da_Descoberta. 1 prompt duplicado ENTRE dois blocos do
+    # próprio lote (Estrelas x Exploração, mesma pergunta sobre um voo
+    # histórico) foi detectado e excluído automaticamente na conversão
+    # (scripts/convert_espaco_content.py) — nunca duplicado no banco.
+    {"id": "espaco", "name": "Mundo Acima de Nós (Espaço)", "display_order": 16},
 ]
 
 # Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
@@ -308,6 +319,12 @@ TERRITORIES = [
     {"id": "oceano_profundezas", "challenge_type": "oceanos", "requires_subscription": True, "free_sample_count": 2, "display_order": 65, "world_id": "oceanos"},
     {"id": "oceano_clima", "challenge_type": "oceanos", "requires_subscription": True, "free_sample_count": 2, "display_order": 66, "world_id": "oceanos"},
     {"id": "oceano_brasil", "challenge_type": "oceanos", "requires_subscription": True, "free_sample_count": 2, "display_order": 67, "world_id": "oceanos"},
+    # Mundo_Acima_de_Nos/README.md (07/09/2026) — Mundo Acima de Nós (Espaço).
+    {"id": "espaco_universo", "challenge_type": "espaco", "requires_subscription": True, "free_sample_count": 2, "display_order": 68, "world_id": "espaco"},
+    {"id": "espaco_planetas", "challenge_type": "espaco", "requires_subscription": True, "free_sample_count": 2, "display_order": 69, "world_id": "espaco"},
+    {"id": "espaco_estrelas", "challenge_type": "espaco", "requires_subscription": True, "free_sample_count": 2, "display_order": 70, "world_id": "espaco"},
+    {"id": "espaco_exploracao", "challenge_type": "espaco", "requires_subscription": True, "free_sample_count": 2, "display_order": 71, "world_id": "espaco"},
+    {"id": "espaco_brasil", "challenge_type": "espaco", "requires_subscription": True, "free_sample_count": 2, "display_order": 72, "world_id": "espaco"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -5818,6 +5835,14 @@ for _path in sorted(_CONTENT_DIR.glob("gastronomia_*.json")):
 # territórios), mesmo formato "cápsula de texto + perguntas" de Valores/
 # Trânsito/Gastronomia, convertidos via scripts/convert_oceanos_content.py.
 for _path in sorted(_CONTENT_DIR.glob("oceanos_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
+# Mundo Acima de Nós/Espaço (07/09/2026): 119 desafios (24 por
+# território, exceto "exploracao" com 23 — 1 duplicata entre blocos
+# fonte foi excluída na conversão), mesmo formato "cápsula de texto +
+# perguntas" de Valores/Trânsito/Gastronomia/Oceanos, convertidos via
+# scripts/convert_espaco_content.py.
+for _path in sorted(_CONTENT_DIR.glob("espaco_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 

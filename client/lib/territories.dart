@@ -48,6 +48,13 @@ const Set<String> kNeverTimedTerritoryIds = {
   'oceano_profundezas',
   'oceano_clima',
   'oceano_brasil',
+  // Mundo Acima de Nós/Espaço (07/09/2026): mesmo formato "cápsula de
+  // texto + perguntas", mesmo motivo.
+  'espaco_universo',
+  'espaco_planetas',
+  'espaco_estrelas',
+  'espaco_exploracao',
+  'espaco_brasil',
 };
 
 /// Ids dos 4 territórios do V1 — compartilhado entre Home, Progress e
@@ -134,6 +141,12 @@ const List<String> kTerritoryIds = [
   'oceano_profundezas',
   'oceano_clima',
   'oceano_brasil',
+  // Mundo_Acima_de_Nos/README.md — Mundo Acima de Nós (Espaço).
+  'espaco_universo',
+  'espaco_planetas',
+  'espaco_estrelas',
+  'espaco_exploracao',
+  'espaco_brasil',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -270,6 +283,16 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryOceanoClima;
     case 'oceano_brasil':
       return l10n.territoryOceanoBrasil;
+    case 'espaco_universo':
+      return l10n.territoryEspacoUniverso;
+    case 'espaco_planetas':
+      return l10n.territoryEspacoPlanetas;
+    case 'espaco_estrelas':
+      return l10n.territoryEspacoEstrelas;
+    case 'espaco_exploracao':
+      return l10n.territoryEspacoExploracao;
+    case 'espaco_brasil':
+      return l10n.territoryEspacoBrasil;
     default:
       return territoryId;
   }

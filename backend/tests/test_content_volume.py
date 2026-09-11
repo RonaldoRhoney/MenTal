@@ -51,6 +51,9 @@ SINGLE_DIFFICULTY_TERRITORY_IDS = {
     # Mundo dos Oceanos: mesmo formato e mesmo raciocínio dos acima.
     "oceano_mundo", "oceano_vida_marinha", "oceano_profundezas",
     "oceano_clima", "oceano_brasil",
+    # Mundo Acima de Nós/Espaço: mesmo formato e mesmo raciocínio dos acima.
+    "espaco_universo", "espaco_planetas", "espaco_estrelas",
+    "espaco_exploracao", "espaco_brasil",
 }
 
 

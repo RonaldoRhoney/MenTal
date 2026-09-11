@@ -337,6 +337,26 @@
   "@territoryOceanoBrasil": {
     "description": "Territory display name"
   },
+  "territoryEspacoUniverso": "O Universo e o Sistema Solar",
+  "@territoryEspacoUniverso": {
+    "description": "Territory display name"
+  },
+  "territoryEspacoPlanetas": "Os Planetas",
+  "@territoryEspacoPlanetas": {
+    "description": "Territory display name"
+  },
+  "territoryEspacoEstrelas": "Estrelas e Buracos Negros",
+  "@territoryEspacoEstrelas": {
+    "description": "Territory display name"
+  },
+  "territoryEspacoExploracao": "Exploração Espacial",
+  "@territoryEspacoExploracao": {
+    "description": "Territory display name"
+  },
+  "territoryEspacoBrasil": "O Brasil no Espaço",
+  "@territoryEspacoBrasil": {
+    "description": "Territory display name"
+  },
   "audioPlayButton": "Tocar som",
   "@audioPlayButton": {
     "description": "Button that plays the challenge audio clip in Ouvido Afiado"

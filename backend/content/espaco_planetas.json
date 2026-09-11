@@ -1,0 +1,458 @@
+[
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Qual é a posição de Mercúrio em relação ao Sol e ao tamanho no Sistema Solar?",
+    "options": [
+      "É o mais próximo do Sol e o menor planeta",
+      "É o mais distante do Sol e o maior planeta",
+      "É o segundo mais próximo e o segundo menor",
+      "É o planeta central do Sistema Solar"
+    ],
+    "correct_answer": "É o mais próximo do Sol e o menor planeta",
+    "explanation": "Mercúrio é o planeta mais próximo do Sol e também o menor de todo o Sistema Solar, sem nenhuma lua e com atmosfera praticamente inexistente. Apesar de sua proximidade extrema com o Sol, Mercúrio não é o planeta mais quente do Sistema Solar — esse título pertence a Vênus, cuja atmosfera densa retém calor de forma muito mais eficiente. Por não ter atmosfera significativa para reter calor, Mercúrio apresenta uma variação extrema de temperatura entre o lado voltado para o Sol e o lado voltado para o espaço.",
+    "reading_passage": "Mercúrio é o planeta mais próximo do Sol e também o menor de todo o Sistema Solar, sem nenhuma lua e com atmosfera praticamente inexistente. Apesar de sua proximidade extrema com o Sol, Mercúrio não é o planeta mais quente do Sistema Solar — esse título pertence a Vênus, cuja atmosfera densa retém calor de forma muito mais eficiente. Por não ter atmosfera significativa para reter calor, Mercúrio apresenta uma variação extrema de temperatura entre o lado voltado para o Sol e o lado voltado para o espaço.",
+    "hints": [
+      "Releia 'Mercúrio: o menor, mas não o mais quente' — a resposta está no texto.",
+      "Começa com 'É'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Mercúrio é o planeta mais quente do Sistema Solar?",
+    "options": [
+      "Não, esse título pertence a Vênus",
+      "Sim, por ser o mais próximo do Sol",
+      "Sim, empatado com Vênus",
+      "Não, o mais quente é Marte"
+    ],
+    "correct_answer": "Não, esse título pertence a Vênus",
+    "explanation": "Mercúrio é o planeta mais próximo do Sol e também o menor de todo o Sistema Solar, sem nenhuma lua e com atmosfera praticamente inexistente. Apesar de sua proximidade extrema com o Sol, Mercúrio não é o planeta mais quente do Sistema Solar — esse título pertence a Vênus, cuja atmosfera densa retém calor de forma muito mais eficiente. Por não ter atmosfera significativa para reter calor, Mercúrio apresenta uma variação extrema de temperatura entre o lado voltado para o Sol e o lado voltado para o espaço.",
+    "reading_passage": "Mercúrio é o planeta mais próximo do Sol e também o menor de todo o Sistema Solar, sem nenhuma lua e com atmosfera praticamente inexistente. Apesar de sua proximidade extrema com o Sol, Mercúrio não é o planeta mais quente do Sistema Solar — esse título pertence a Vênus, cuja atmosfera densa retém calor de forma muito mais eficiente. Por não ter atmosfera significativa para reter calor, Mercúrio apresenta uma variação extrema de temperatura entre o lado voltado para o Sol e o lado voltado para o espaço.",
+    "hints": [
+      "Releia 'Mercúrio: o menor, mas não o mais quente' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Por que Mercúrio tem variação extrema de temperatura entre seus dois lados, segundo o texto?",
+    "options": [
+      "Por não ter atmosfera significativa para reter calor",
+      "Por girar rápido demais ao redor do próprio eixo",
+      "Por estar mais distante do Sol do que Vênus",
+      "Por ter várias luas que bloqueiam a luz solar"
+    ],
+    "correct_answer": "Por não ter atmosfera significativa para reter calor",
+    "explanation": "Mercúrio é o planeta mais próximo do Sol e também o menor de todo o Sistema Solar, sem nenhuma lua e com atmosfera praticamente inexistente. Apesar de sua proximidade extrema com o Sol, Mercúrio não é o planeta mais quente do Sistema Solar — esse título pertence a Vênus, cuja atmosfera densa retém calor de forma muito mais eficiente. Por não ter atmosfera significativa para reter calor, Mercúrio apresenta uma variação extrema de temperatura entre o lado voltado para o Sol e o lado voltado para o espaço.",
+    "reading_passage": "Mercúrio é o planeta mais próximo do Sol e também o menor de todo o Sistema Solar, sem nenhuma lua e com atmosfera praticamente inexistente. Apesar de sua proximidade extrema com o Sol, Mercúrio não é o planeta mais quente do Sistema Solar — esse título pertence a Vênus, cuja atmosfera densa retém calor de forma muito mais eficiente. Por não ter atmosfera significativa para reter calor, Mercúrio apresenta uma variação extrema de temperatura entre o lado voltado para o Sol e o lado voltado para o espaço.",
+    "hints": [
+      "Releia 'Mercúrio: o menor, mas não o mais quente' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Por que Vênus é o planeta mais quente do Sistema Solar, segundo o texto?",
+    "options": [
+      "Sua atmosfera espessa de dióxido de carbono retém calor intensamente",
+      "Por estar mais próximo do Sol do que Mercúrio",
+      "Por ter uma superfície coberta de metal",
+      "Por receber luz de duas estrelas diferentes"
+    ],
+    "correct_answer": "Sua atmosfera espessa de dióxido de carbono retém calor intensamente",
+    "explanation": "Vênus é o segundo planeta a partir do Sol e o mais quente de todo o Sistema Solar, com temperaturas superficiais que ultrapassam os 400°C, resultado de uma atmosfera espessa rica em dióxido de carbono que retém calor de forma intensa, um efeito estufa muito mais extremo do que o observado na Terra. Uma curiosidade notável de Vênus é sua rotação retrógrada: diferente da maioria dos outros planetas do Sistema Solar, Vênus gira no sentido oposto, e seu dia (o tempo de uma rotação completa) é, na verdade, mais longo do que seu próprio ano.",
+    "reading_passage": "Vênus é o segundo planeta a partir do Sol e o mais quente de todo o Sistema Solar, com temperaturas superficiais que ultrapassam os 400°C, resultado de uma atmosfera espessa rica em dióxido de carbono que retém calor de forma intensa, um efeito estufa muito mais extremo do que o observado na Terra. Uma curiosidade notável de Vênus é sua rotação retrógrada: diferente da maioria dos outros planetas do Sistema Solar, Vênus gira no sentido oposto, e seu dia (o tempo de uma rotação completa) é, na verdade, mais longo do que seu próprio ano.",
+    "hints": [
+      "Releia 'Vênus: o planeta que gira ao contrário' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que é a 'rotação retrógrada' de Vênus, segundo o texto?",
+    "options": [
+      "Vênus gira no sentido oposto à maioria dos outros planetas",
+      "Vênus não gira em torno do próprio eixo",
+      "Vênus gira mais rápido que qualquer outro planeta",
+      "Vênus muda de direção de rotação todos os anos"
+    ],
+    "correct_answer": "Vênus gira no sentido oposto à maioria dos outros planetas",
+    "explanation": "Vênus é o segundo planeta a partir do Sol e o mais quente de todo o Sistema Solar, com temperaturas superficiais que ultrapassam os 400°C, resultado de uma atmosfera espessa rica em dióxido de carbono que retém calor de forma intensa, um efeito estufa muito mais extremo do que o observado na Terra. Uma curiosidade notável de Vênus é sua rotação retrógrada: diferente da maioria dos outros planetas do Sistema Solar, Vênus gira no sentido oposto, e seu dia (o tempo de uma rotação completa) é, na verdade, mais longo do que seu próprio ano.",
+    "reading_passage": "Vênus é o segundo planeta a partir do Sol e o mais quente de todo o Sistema Solar, com temperaturas superficiais que ultrapassam os 400°C, resultado de uma atmosfera espessa rica em dióxido de carbono que retém calor de forma intensa, um efeito estufa muito mais extremo do que o observado na Terra. Uma curiosidade notável de Vênus é sua rotação retrógrada: diferente da maioria dos outros planetas do Sistema Solar, Vênus gira no sentido oposto, e seu dia (o tempo de uma rotação completa) é, na verdade, mais longo do que seu próprio ano.",
+    "hints": [
+      "Releia 'Vênus: o planeta que gira ao contrário' — a resposta está no texto.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que é mais longo em Vênus: o dia ou o ano?",
+    "options": [
+      "O dia é mais longo que o ano",
+      "O ano é mais longo que o dia",
+      "Ambos duram exatamente o mesmo tempo",
+      "Vênus não tem nem dia nem ano definidos"
+    ],
+    "correct_answer": "O dia é mais longo que o ano",
+    "explanation": "Vênus é o segundo planeta a partir do Sol e o mais quente de todo o Sistema Solar, com temperaturas superficiais que ultrapassam os 400°C, resultado de uma atmosfera espessa rica em dióxido de carbono que retém calor de forma intensa, um efeito estufa muito mais extremo do que o observado na Terra. Uma curiosidade notável de Vênus é sua rotação retrógrada: diferente da maioria dos outros planetas do Sistema Solar, Vênus gira no sentido oposto, e seu dia (o tempo de uma rotação completa) é, na verdade, mais longo do que seu próprio ano.",
+    "reading_passage": "Vênus é o segundo planeta a partir do Sol e o mais quente de todo o Sistema Solar, com temperaturas superficiais que ultrapassam os 400°C, resultado de uma atmosfera espessa rica em dióxido de carbono que retém calor de forma intensa, um efeito estufa muito mais extremo do que o observado na Terra. Uma curiosidade notável de Vênus é sua rotação retrógrada: diferente da maioria dos outros planetas do Sistema Solar, Vênus gira no sentido oposto, e seu dia (o tempo de uma rotação completa) é, na verdade, mais longo do que seu próprio ano.",
+    "hints": [
+      "Releia 'Vênus: o planeta que gira ao contrário' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Por que Marte é conhecido como 'o planeta vermelho'?",
+    "options": [
+      "Por causa da coloração de sua superfície rica em óxido de ferro",
+      "Por ter uma atmosfera avermelhada visível do espaço",
+      "Por refletir a luz do Sol de forma vermelha",
+      "Por ter sido descoberto durante um eclipse"
+    ],
+    "correct_answer": "Por causa da coloração de sua superfície rica em óxido de ferro",
+    "explanation": "Marte, conhecido popularmente como o planeta vermelho por causa da coloração de sua superfície rica em óxido de ferro, é hoje um mundo frio e árido, mas evidências científicas indicam que já teve água líquida correndo em sua superfície num passado distante. Marte também abriga o maior vulcão já identificado em todo o Sistema Solar, além de calotas polares e sinais de antigos leitos de rios secos — características que tornam o planeta um dos principais alvos de missões de exploração espacial e de estudos sobre possível vida passada fora da Terra.",
+    "reading_passage": "Marte, conhecido popularmente como o planeta vermelho por causa da coloração de sua superfície rica em óxido de ferro, é hoje um mundo frio e árido, mas evidências científicas indicam que já teve água líquida correndo em sua superfície num passado distante. Marte também abriga o maior vulcão já identificado em todo o Sistema Solar, além de calotas polares e sinais de antigos leitos de rios secos — características que tornam o planeta um dos principais alvos de missões de exploração espacial e de estudos sobre possível vida passada fora da Terra.",
+    "hints": [
+      "Releia 'Marte: o planeta vermelho e seus mistérios' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que evidências científicas indicam sobre o passado de Marte, segundo o texto?",
+    "options": [
+      "Já teve água líquida correndo em sua superfície",
+      "Sempre foi completamente seco, sem nenhuma água",
+      "Foi coberto por oceanos até os dias atuais",
+      "Nunca teve nenhuma atividade geológica"
+    ],
+    "correct_answer": "Já teve água líquida correndo em sua superfície",
+    "explanation": "Marte, conhecido popularmente como o planeta vermelho por causa da coloração de sua superfície rica em óxido de ferro, é hoje um mundo frio e árido, mas evidências científicas indicam que já teve água líquida correndo em sua superfície num passado distante. Marte também abriga o maior vulcão já identificado em todo o Sistema Solar, além de calotas polares e sinais de antigos leitos de rios secos — características que tornam o planeta um dos principais alvos de missões de exploração espacial e de estudos sobre possível vida passada fora da Terra.",
+    "reading_passage": "Marte, conhecido popularmente como o planeta vermelho por causa da coloração de sua superfície rica em óxido de ferro, é hoje um mundo frio e árido, mas evidências científicas indicam que já teve água líquida correndo em sua superfície num passado distante. Marte também abriga o maior vulcão já identificado em todo o Sistema Solar, além de calotas polares e sinais de antigos leitos de rios secos — características que tornam o planeta um dos principais alvos de missões de exploração espacial e de estudos sobre possível vida passada fora da Terra.",
+    "hints": [
+      "Releia 'Marte: o planeta vermelho e seus mistérios' — a resposta está no texto.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que Marte abriga, considerado o maior de todo o Sistema Solar, segundo o texto?",
+    "options": [
+      "O maior vulcão já identificado",
+      "O maior oceano líquido",
+      "A maior cratera de meteoro",
+      "O maior número de luas"
+    ],
+    "correct_answer": "O maior vulcão já identificado",
+    "explanation": "Marte, conhecido popularmente como o planeta vermelho por causa da coloração de sua superfície rica em óxido de ferro, é hoje um mundo frio e árido, mas evidências científicas indicam que já teve água líquida correndo em sua superfície num passado distante. Marte também abriga o maior vulcão já identificado em todo o Sistema Solar, além de calotas polares e sinais de antigos leitos de rios secos — características que tornam o planeta um dos principais alvos de missões de exploração espacial e de estudos sobre possível vida passada fora da Terra.",
+    "reading_passage": "Marte, conhecido popularmente como o planeta vermelho por causa da coloração de sua superfície rica em óxido de ferro, é hoje um mundo frio e árido, mas evidências científicas indicam que já teve água líquida correndo em sua superfície num passado distante. Marte também abriga o maior vulcão já identificado em todo o Sistema Solar, além de calotas polares e sinais de antigos leitos de rios secos — características que tornam o planeta um dos principais alvos de missões de exploração espacial e de estudos sobre possível vida passada fora da Terra.",
+    "hints": [
+      "Releia 'Marte: o planeta vermelho e seus mistérios' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que caracteriza Júpiter em relação aos demais planetas do Sistema Solar?",
+    "options": [
+      "É o maior planeta, um gigante gasoso sem superfície sólida definida",
+      "É o menor planeta, com superfície totalmente rochosa",
+      "É o único planeta com anéis visíveis",
+      "É o planeta mais próximo do Sol"
+    ],
+    "correct_answer": "É o maior planeta, um gigante gasoso sem superfície sólida definida",
+    "explanation": "Júpiter é o maior planeta do Sistema Solar, um gigante gasoso sem superfície sólida definida, composto majoritariamente por hidrogênio e hélio. Uma de suas características mais famosas é a Grande Mancha Vermelha, uma tempestade gigantesca que já dura séculos e é grande o suficiente para conter a própria Terra inteira dentro dela. Júpiter também possui um número muito grande de luas conhecidas, algumas delas maiores até do que o próprio planeta Mercúrio, formando praticamente um pequeno sistema planetário próprio ao redor de si mesmo.",
+    "reading_passage": "Júpiter é o maior planeta do Sistema Solar, um gigante gasoso sem superfície sólida definida, composto majoritariamente por hidrogênio e hélio. Uma de suas características mais famosas é a Grande Mancha Vermelha, uma tempestade gigantesca que já dura séculos e é grande o suficiente para conter a própria Terra inteira dentro dela. Júpiter também possui um número muito grande de luas conhecidas, algumas delas maiores até do que o próprio planeta Mercúrio, formando praticamente um pequeno sistema planetário próprio ao redor de si mesmo.",
+    "hints": [
+      "Releia 'Júpiter: o gigante com uma tempestade secular' — a resposta está no texto.",
+      "Começa com 'É'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que é a Grande Mancha Vermelha de Júpiter?",
+    "options": [
+      "Uma tempestade gigantesca que já dura séculos",
+      "Uma cratera formada por impacto de meteoro",
+      "Um oceano de lava na superfície do planeta",
+      "Uma ilusão óptica causada por telescópios antigos"
+    ],
+    "correct_answer": "Uma tempestade gigantesca que já dura séculos",
+    "explanation": "Júpiter é o maior planeta do Sistema Solar, um gigante gasoso sem superfície sólida definida, composto majoritariamente por hidrogênio e hélio. Uma de suas características mais famosas é a Grande Mancha Vermelha, uma tempestade gigantesca que já dura séculos e é grande o suficiente para conter a própria Terra inteira dentro dela. Júpiter também possui um número muito grande de luas conhecidas, algumas delas maiores até do que o próprio planeta Mercúrio, formando praticamente um pequeno sistema planetário próprio ao redor de si mesmo.",
+    "reading_passage": "Júpiter é o maior planeta do Sistema Solar, um gigante gasoso sem superfície sólida definida, composto majoritariamente por hidrogênio e hélio. Uma de suas características mais famosas é a Grande Mancha Vermelha, uma tempestade gigantesca que já dura séculos e é grande o suficiente para conter a própria Terra inteira dentro dela. Júpiter também possui um número muito grande de luas conhecidas, algumas delas maiores até do que o próprio planeta Mercúrio, formando praticamente um pequeno sistema planetário próprio ao redor de si mesmo.",
+    "hints": [
+      "Releia 'Júpiter: o gigante com uma tempestade secular' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que é dito sobre algumas luas de Júpiter, segundo o texto?",
+    "options": [
+      "Algumas são maiores até do que o planeta Mercúrio",
+      "Nenhuma delas foi descoberta até hoje",
+      "Todas são menores do que a Lua da Terra",
+      "Júpiter não possui nenhuma lua"
+    ],
+    "correct_answer": "Algumas são maiores até do que o planeta Mercúrio",
+    "explanation": "Júpiter é o maior planeta do Sistema Solar, um gigante gasoso sem superfície sólida definida, composto majoritariamente por hidrogênio e hélio. Uma de suas características mais famosas é a Grande Mancha Vermelha, uma tempestade gigantesca que já dura séculos e é grande o suficiente para conter a própria Terra inteira dentro dela. Júpiter também possui um número muito grande de luas conhecidas, algumas delas maiores até do que o próprio planeta Mercúrio, formando praticamente um pequeno sistema planetário próprio ao redor de si mesmo.",
+    "reading_passage": "Júpiter é o maior planeta do Sistema Solar, um gigante gasoso sem superfície sólida definida, composto majoritariamente por hidrogênio e hélio. Uma de suas características mais famosas é a Grande Mancha Vermelha, uma tempestade gigantesca que já dura séculos e é grande o suficiente para conter a própria Terra inteira dentro dela. Júpiter também possui um número muito grande de luas conhecidas, algumas delas maiores até do que o próprio planeta Mercúrio, formando praticamente um pequeno sistema planetário próprio ao redor de si mesmo.",
+    "hints": [
+      "Releia 'Júpiter: o gigante com uma tempestade secular' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Do que são formados principalmente os anéis de Saturno, segundo o texto?",
+    "options": [
+      "Partículas de gelo e rocha",
+      "Metal líquido derretido",
+      "Poeira vulcânica compactada",
+      "Fragmentos de vidro cósmico"
+    ],
+    "correct_answer": "Partículas de gelo e rocha",
+    "explanation": "Saturno é famoso por seu sistema de anéis, formado principalmente por partículas de gelo e rocha, e é, assim como Júpiter, um planeta gasoso composto majoritariamente por hidrogênio e hélio. Uma curiosidade notável é que Saturno tem densidade tão baixa que, hipoteticamente, se existisse uma banheira ou piscina cósmica grande o suficiente, o planeta inteiro flutuaria na água, em vez de afundar — uma propriedade rara entre os planetas do Sistema Solar. Saturno também possui uma quantidade grande de luas conhecidas, entre elas Titã, uma das maiores luas de todo o Sistema Solar.",
+    "reading_passage": "Saturno é famoso por seu sistema de anéis, formado principalmente por partículas de gelo e rocha, e é, assim como Júpiter, um planeta gasoso composto majoritariamente por hidrogênio e hélio. Uma curiosidade notável é que Saturno tem densidade tão baixa que, hipoteticamente, se existisse uma banheira ou piscina cósmica grande o suficiente, o planeta inteiro flutuaria na água, em vez de afundar — uma propriedade rara entre os planetas do Sistema Solar. Saturno também possui uma quantidade grande de luas conhecidas, entre elas Titã, uma das maiores luas de todo o Sistema Solar.",
+    "hints": [
+      "Releia 'Saturno: o planeta tão leve que boiaria na água' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que a baixa densidade de Saturno implicaria, hipoteticamente, segundo o texto?",
+    "options": [
+      "O planeta flutuaria na água em vez de afundar",
+      "O planeta afundaria imediatamente na água",
+      "O planeta explodiria ao tocar a água",
+      "Não haveria nenhuma diferença perceptível"
+    ],
+    "correct_answer": "O planeta flutuaria na água em vez de afundar",
+    "explanation": "Saturno é famoso por seu sistema de anéis, formado principalmente por partículas de gelo e rocha, e é, assim como Júpiter, um planeta gasoso composto majoritariamente por hidrogênio e hélio. Uma curiosidade notável é que Saturno tem densidade tão baixa que, hipoteticamente, se existisse uma banheira ou piscina cósmica grande o suficiente, o planeta inteiro flutuaria na água, em vez de afundar — uma propriedade rara entre os planetas do Sistema Solar. Saturno também possui uma quantidade grande de luas conhecidas, entre elas Titã, uma das maiores luas de todo o Sistema Solar.",
+    "reading_passage": "Saturno é famoso por seu sistema de anéis, formado principalmente por partículas de gelo e rocha, e é, assim como Júpiter, um planeta gasoso composto majoritariamente por hidrogênio e hélio. Uma curiosidade notável é que Saturno tem densidade tão baixa que, hipoteticamente, se existisse uma banheira ou piscina cósmica grande o suficiente, o planeta inteiro flutuaria na água, em vez de afundar — uma propriedade rara entre os planetas do Sistema Solar. Saturno também possui uma quantidade grande de luas conhecidas, entre elas Titã, uma das maiores luas de todo o Sistema Solar.",
+    "hints": [
+      "Releia 'Saturno: o planeta tão leve que boiaria na água' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome de uma das maiores luas de Saturno, mencionada no texto?",
+    "options": [
+      "Titã",
+      "Europa",
+      "Ganimedes",
+      "Fobos"
+    ],
+    "correct_answer": "Titã",
+    "explanation": "Saturno é famoso por seu sistema de anéis, formado principalmente por partículas de gelo e rocha, e é, assim como Júpiter, um planeta gasoso composto majoritariamente por hidrogênio e hélio. Uma curiosidade notável é que Saturno tem densidade tão baixa que, hipoteticamente, se existisse uma banheira ou piscina cósmica grande o suficiente, o planeta inteiro flutuaria na água, em vez de afundar — uma propriedade rara entre os planetas do Sistema Solar. Saturno também possui uma quantidade grande de luas conhecidas, entre elas Titã, uma das maiores luas de todo o Sistema Solar.",
+    "reading_passage": "Saturno é famoso por seu sistema de anéis, formado principalmente por partículas de gelo e rocha, e é, assim como Júpiter, um planeta gasoso composto majoritariamente por hidrogênio e hélio. Uma curiosidade notável é que Saturno tem densidade tão baixa que, hipoteticamente, se existisse uma banheira ou piscina cósmica grande o suficiente, o planeta inteiro flutuaria na água, em vez de afundar — uma propriedade rara entre os planetas do Sistema Solar. Saturno também possui uma quantidade grande de luas conhecidas, entre elas Titã, uma das maiores luas de todo o Sistema Solar.",
+    "hints": [
+      "Releia 'Saturno: o planeta tão leve que boiaria na água' — a resposta está no texto.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que torna a descoberta de Urano diferente da dos demais planetas clássicos, segundo o texto?",
+    "options": [
+      "Foi o primeiro planeta descoberto com o auxílio de um telescópio",
+      "Foi descoberto por uma sonda espacial não tripulada",
+      "Foi o único planeta descoberto no século XXI",
+      "Foi descoberto simultaneamente por dois países diferentes"
+    ],
+    "correct_answer": "Foi o primeiro planeta descoberto com o auxílio de um telescópio",
+    "explanation": "Urano foi o primeiro planeta descoberto com o auxílio de um telescópio, diferente dos demais, conhecidos desde a Antiguidade a olho nu. Uma característica única de Urano é a inclinação extrema de seu eixo de rotação: enquanto a maioria dos planetas gira de forma parecida com um pião, Urano gira praticamente 'deitado' de lado, o que gera estações do ano extremamente longas e incomuns em diferentes partes do planeta. Urano também possui um sistema de anéis, embora muito mais fino e discreto do que os famosos anéis de Saturno.",
+    "reading_passage": "Urano foi o primeiro planeta descoberto com o auxílio de um telescópio, diferente dos demais, conhecidos desde a Antiguidade a olho nu. Uma característica única de Urano é a inclinação extrema de seu eixo de rotação: enquanto a maioria dos planetas gira de forma parecida com um pião, Urano gira praticamente 'deitado' de lado, o que gera estações do ano extremamente longas e incomuns em diferentes partes do planeta. Urano também possui um sistema de anéis, embora muito mais fino e discreto do que os famosos anéis de Saturno.",
+    "hints": [
+      "Releia 'Urano: o planeta que gira deitado' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "O que é peculiar sobre a rotação de Urano?",
+    "options": [
+      "Gira praticamente 'deitado' de lado, devido à inclinação extrema do eixo",
+      "Gira exatamente na mesma posição que a Terra",
+      "Não gira em torno do próprio eixo",
+      "Gira mais rápido que qualquer outro planeta"
+    ],
+    "correct_answer": "Gira praticamente 'deitado' de lado, devido à inclinação extrema do eixo",
+    "explanation": "Urano foi o primeiro planeta descoberto com o auxílio de um telescópio, diferente dos demais, conhecidos desde a Antiguidade a olho nu. Uma característica única de Urano é a inclinação extrema de seu eixo de rotação: enquanto a maioria dos planetas gira de forma parecida com um pião, Urano gira praticamente 'deitado' de lado, o que gera estações do ano extremamente longas e incomuns em diferentes partes do planeta. Urano também possui um sistema de anéis, embora muito mais fino e discreto do que os famosos anéis de Saturno.",
+    "reading_passage": "Urano foi o primeiro planeta descoberto com o auxílio de um telescópio, diferente dos demais, conhecidos desde a Antiguidade a olho nu. Uma característica única de Urano é a inclinação extrema de seu eixo de rotação: enquanto a maioria dos planetas gira de forma parecida com um pião, Urano gira praticamente 'deitado' de lado, o que gera estações do ano extremamente longas e incomuns em diferentes partes do planeta. Urano também possui um sistema de anéis, embora muito mais fino e discreto do que os famosos anéis de Saturno.",
+    "hints": [
+      "Releia 'Urano: o planeta que gira deitado' — a resposta está no texto.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Urano também possui anéis. Como eles se comparam aos de Saturno, segundo o texto?",
+    "options": [
+      "São muito mais finos e discretos",
+      "São ainda maiores e mais visíveis",
+      "São feitos de um material completamente diferente e mais brilhante",
+      "Não existe nenhuma diferença entre eles"
+    ],
+    "correct_answer": "São muito mais finos e discretos",
+    "explanation": "Urano foi o primeiro planeta descoberto com o auxílio de um telescópio, diferente dos demais, conhecidos desde a Antiguidade a olho nu. Uma característica única de Urano é a inclinação extrema de seu eixo de rotação: enquanto a maioria dos planetas gira de forma parecida com um pião, Urano gira praticamente 'deitado' de lado, o que gera estações do ano extremamente longas e incomuns em diferentes partes do planeta. Urano também possui um sistema de anéis, embora muito mais fino e discreto do que os famosos anéis de Saturno.",
+    "reading_passage": "Urano foi o primeiro planeta descoberto com o auxílio de um telescópio, diferente dos demais, conhecidos desde a Antiguidade a olho nu. Uma característica única de Urano é a inclinação extrema de seu eixo de rotação: enquanto a maioria dos planetas gira de forma parecida com um pião, Urano gira praticamente 'deitado' de lado, o que gera estações do ano extremamente longas e incomuns em diferentes partes do planeta. Urano também possui um sistema de anéis, embora muito mais fino e discreto do que os famosos anéis de Saturno.",
+    "hints": [
+      "Releia 'Urano: o planeta que gira deitado' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Qual é a posição de Netuno em relação ao Sol, entre os planetas do Sistema Solar?",
+    "options": [
+      "É o mais distante do Sol",
+      "É o mais próximo do Sol",
+      "É o terceiro mais próximo",
+      "Ocupa uma posição variável, dependendo do ano"
+    ],
+    "correct_answer": "É o mais distante do Sol",
+    "explanation": "Netuno é o planeta mais distante do Sol no Sistema Solar, com brilho tão fraco que é impossível observá-lo a olho nu a partir da Terra, sendo necessário o uso de telescópios para sua identificação. Apesar da distância extrema do Sol, Netuno é conhecido por abrigar os ventos mais rápidos já registrados entre os planetas do Sistema Solar, atingindo velocidades muito superiores às de qualquer tempestade observada na Terra. Assim como Urano, Netuno é um planeta gasoso de coloração azulada, resultado da presença de metano em sua atmosfera.",
+    "reading_passage": "Netuno é o planeta mais distante do Sol no Sistema Solar, com brilho tão fraco que é impossível observá-lo a olho nu a partir da Terra, sendo necessário o uso de telescópios para sua identificação. Apesar da distância extrema do Sol, Netuno é conhecido por abrigar os ventos mais rápidos já registrados entre os planetas do Sistema Solar, atingindo velocidades muito superiores às de qualquer tempestade observada na Terra. Assim como Urano, Netuno é um planeta gasoso de coloração azulada, resultado da presença de metano em sua atmosfera.",
+    "hints": [
+      "Releia 'Netuno: o planeta dos ventos mais rápidos' — a resposta está no texto.",
+      "Começa com 'É'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Por que Netuno não pode ser observado a olho nu da Terra, segundo o texto?",
+    "options": [
+      "Seu brilho é fraco demais para isso",
+      "Ele está sempre escondido atrás de Urano",
+      "Ele só aparece durante eclipses solares",
+      "Sua atmosfera bloqueia toda a luz refletida"
+    ],
+    "correct_answer": "Seu brilho é fraco demais para isso",
+    "explanation": "Netuno é o planeta mais distante do Sol no Sistema Solar, com brilho tão fraco que é impossível observá-lo a olho nu a partir da Terra, sendo necessário o uso de telescópios para sua identificação. Apesar da distância extrema do Sol, Netuno é conhecido por abrigar os ventos mais rápidos já registrados entre os planetas do Sistema Solar, atingindo velocidades muito superiores às de qualquer tempestade observada na Terra. Assim como Urano, Netuno é um planeta gasoso de coloração azulada, resultado da presença de metano em sua atmosfera.",
+    "reading_passage": "Netuno é o planeta mais distante do Sol no Sistema Solar, com brilho tão fraco que é impossível observá-lo a olho nu a partir da Terra, sendo necessário o uso de telescópios para sua identificação. Apesar da distância extrema do Sol, Netuno é conhecido por abrigar os ventos mais rápidos já registrados entre os planetas do Sistema Solar, atingindo velocidades muito superiores às de qualquer tempestade observada na Terra. Assim como Urano, Netuno é um planeta gasoso de coloração azulada, resultado da presença de metano em sua atmosfera.",
+    "hints": [
+      "Releia 'Netuno: o planeta dos ventos mais rápidos' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Pelo que Netuno é especialmente conhecido, apesar de sua distância do Sol?",
+    "options": [
+      "Por abrigar os ventos mais rápidos já registrados entre os planetas",
+      "Por ser o planeta mais quente do Sistema Solar",
+      "Por não ter nenhuma atividade atmosférica",
+      "Por ser o único planeta sem nenhuma lua"
+    ],
+    "correct_answer": "Por abrigar os ventos mais rápidos já registrados entre os planetas",
+    "explanation": "Netuno é o planeta mais distante do Sol no Sistema Solar, com brilho tão fraco que é impossível observá-lo a olho nu a partir da Terra, sendo necessário o uso de telescópios para sua identificação. Apesar da distância extrema do Sol, Netuno é conhecido por abrigar os ventos mais rápidos já registrados entre os planetas do Sistema Solar, atingindo velocidades muito superiores às de qualquer tempestade observada na Terra. Assim como Urano, Netuno é um planeta gasoso de coloração azulada, resultado da presença de metano em sua atmosfera.",
+    "reading_passage": "Netuno é o planeta mais distante do Sol no Sistema Solar, com brilho tão fraco que é impossível observá-lo a olho nu a partir da Terra, sendo necessário o uso de telescópios para sua identificação. Apesar da distância extrema do Sol, Netuno é conhecido por abrigar os ventos mais rápidos já registrados entre os planetas do Sistema Solar, atingindo velocidades muito superiores às de qualquer tempestade observada na Terra. Assim como Urano, Netuno é um planeta gasoso de coloração azulada, resultado da presença de metano em sua atmosfera.",
+    "hints": [
+      "Releia 'Netuno: o planeta dos ventos mais rápidos' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "De onde vem a tradição de nomear a maioria dos planetas, segundo o texto?",
+    "options": [
+      "Da mitologia romana",
+      "Da mitologia egípcia",
+      "De cientistas modernos do século XX",
+      "De uma votação popular recente"
+    ],
+    "correct_answer": "Da mitologia romana",
+    "explanation": "A maioria dos planetas do Sistema Solar recebeu seus nomes em homenagem a divindades da mitologia romana, uma tradição que remonta à Antiguidade, quando os planetas visíveis a olho nu já eram associados a esses deuses. Mercúrio, por exemplo, foi nomeado em referência ao mensageiro veloz dos deuses, uma escolha que combina com sua órbita rápida ao redor do Sol; Marte recebeu o nome do deus da guerra, remetendo à sua coloração avermelhada; e Netuno foi batizado em homenagem ao deus do mar, possivelmente por sua coloração azulada intensa. A Terra é uma exceção notável a essa tradição, já que seu nome não tem origem mitológica, vindo de palavras antigas relacionadas simplesmente ao solo.",
+    "reading_passage": "A maioria dos planetas do Sistema Solar recebeu seus nomes em homenagem a divindades da mitologia romana, uma tradição que remonta à Antiguidade, quando os planetas visíveis a olho nu já eram associados a esses deuses. Mercúrio, por exemplo, foi nomeado em referência ao mensageiro veloz dos deuses, uma escolha que combina com sua órbita rápida ao redor do Sol; Marte recebeu o nome do deus da guerra, remetendo à sua coloração avermelhada; e Netuno foi batizado em homenagem ao deus do mar, possivelmente por sua coloração azulada intensa. A Terra é uma exceção notável a essa tradição, já que seu nome não tem origem mitológica, vindo de palavras antigas relacionadas simplesmente ao solo.",
+    "hints": [
+      "Releia 'Por que os planetas têm nomes de deuses romanos?' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Por que Mercúrio recebeu esse nome, segundo o texto?",
+    "options": [
+      "Em referência ao mensageiro veloz dos deuses, combinando com sua órbita rápida",
+      "Por ser o planeta mais frio do Sistema Solar",
+      "Por ter sido descoberto por um astrônomo chamado Mercúrio",
+      "Por sua cor prateada intensa"
+    ],
+    "correct_answer": "Em referência ao mensageiro veloz dos deuses, combinando com sua órbita rápida",
+    "explanation": "A maioria dos planetas do Sistema Solar recebeu seus nomes em homenagem a divindades da mitologia romana, uma tradição que remonta à Antiguidade, quando os planetas visíveis a olho nu já eram associados a esses deuses. Mercúrio, por exemplo, foi nomeado em referência ao mensageiro veloz dos deuses, uma escolha que combina com sua órbita rápida ao redor do Sol; Marte recebeu o nome do deus da guerra, remetendo à sua coloração avermelhada; e Netuno foi batizado em homenagem ao deus do mar, possivelmente por sua coloração azulada intensa. A Terra é uma exceção notável a essa tradição, já que seu nome não tem origem mitológica, vindo de palavras antigas relacionadas simplesmente ao solo.",
+    "reading_passage": "A maioria dos planetas do Sistema Solar recebeu seus nomes em homenagem a divindades da mitologia romana, uma tradição que remonta à Antiguidade, quando os planetas visíveis a olho nu já eram associados a esses deuses. Mercúrio, por exemplo, foi nomeado em referência ao mensageiro veloz dos deuses, uma escolha que combina com sua órbita rápida ao redor do Sol; Marte recebeu o nome do deus da guerra, remetendo à sua coloração avermelhada; e Netuno foi batizado em homenagem ao deus do mar, possivelmente por sua coloração azulada intensa. A Terra é uma exceção notável a essa tradição, já que seu nome não tem origem mitológica, vindo de palavras antigas relacionadas simplesmente ao solo.",
+    "hints": [
+      "Releia 'Por que os planetas têm nomes de deuses romanos?' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_planetas",
+    "difficulty_level": 1,
+    "prompt": "Por que a Terra é uma exceção a essa tradição de nomes, segundo o texto?",
+    "options": [
+      "Seu nome não tem origem mitológica, vindo de palavras relacionadas ao solo",
+      "Porque a Terra foi descoberta depois de todos os outros planetas",
+      "Porque a Terra não tem nenhuma divindade associada na cultura romana",
+      "Porque o nome Terra foi escolhido por votação recente"
+    ],
+    "correct_answer": "Seu nome não tem origem mitológica, vindo de palavras relacionadas ao solo",
+    "explanation": "A maioria dos planetas do Sistema Solar recebeu seus nomes em homenagem a divindades da mitologia romana, uma tradição que remonta à Antiguidade, quando os planetas visíveis a olho nu já eram associados a esses deuses. Mercúrio, por exemplo, foi nomeado em referência ao mensageiro veloz dos deuses, uma escolha que combina com sua órbita rápida ao redor do Sol; Marte recebeu o nome do deus da guerra, remetendo à sua coloração avermelhada; e Netuno foi batizado em homenagem ao deus do mar, possivelmente por sua coloração azulada intensa. A Terra é uma exceção notável a essa tradição, já que seu nome não tem origem mitológica, vindo de palavras antigas relacionadas simplesmente ao solo.",
+    "reading_passage": "A maioria dos planetas do Sistema Solar recebeu seus nomes em homenagem a divindades da mitologia romana, uma tradição que remonta à Antiguidade, quando os planetas visíveis a olho nu já eram associados a esses deuses. Mercúrio, por exemplo, foi nomeado em referência ao mensageiro veloz dos deuses, uma escolha que combina com sua órbita rápida ao redor do Sol; Marte recebeu o nome do deus da guerra, remetendo à sua coloração avermelhada; e Netuno foi batizado em homenagem ao deus do mar, possivelmente por sua coloração azulada intensa. A Terra é uma exceção notável a essa tradição, já que seu nome não tem origem mitológica, vindo de palavras antigas relacionadas simplesmente ao solo.",
+    "hints": [
+      "Releia 'Por que os planetas têm nomes de deuses romanos?' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  }
+]

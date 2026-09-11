@@ -1,0 +1,458 @@
+[
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que ano teve origem o programa espacial brasileiro, segundo o texto?",
+    "options": [
+      "1961",
+      "1983",
+      "1993",
+      "1957"
+    ],
+    "correct_answer": "1961",
+    "explanation": "O programa espacial brasileiro teve origem em 1961, ainda sob controle das Forças Armadas, num contexto histórico em que grandes potências mundiais já disputavam a exploração espacial. Nas décadas seguintes, o programa avançou de forma gradual, desenvolvendo tecnologia própria de foguetes de sondagem — veículos usados para pesquisas científicas em altitudes elevadas, sem a intenção de colocar cargas em órbita permanente — antes de evoluir para projetos mais ambiciosos ao longo do tempo.",
+    "reading_passage": "O programa espacial brasileiro teve origem em 1961, ainda sob controle das Forças Armadas, num contexto histórico em que grandes potências mundiais já disputavam a exploração espacial. Nas décadas seguintes, o programa avançou de forma gradual, desenvolvendo tecnologia própria de foguetes de sondagem — veículos usados para pesquisas científicas em altitudes elevadas, sem a intenção de colocar cargas em órbita permanente — antes de evoluir para projetos mais ambiciosos ao longo do tempo.",
+    "hints": [
+      "Releia 'As origens do programa espacial brasileiro' — a resposta está no texto.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Sob controle de qual instituição o programa espacial brasileiro começou, segundo o texto?",
+    "options": [
+      "Forças Armadas",
+      "Um consórcio de universidades privadas",
+      "Uma empresa multinacional estrangeira",
+      "A Organização das Nações Unidas"
+    ],
+    "correct_answer": "Forças Armadas",
+    "explanation": "O programa espacial brasileiro teve origem em 1961, ainda sob controle das Forças Armadas, num contexto histórico em que grandes potências mundiais já disputavam a exploração espacial. Nas décadas seguintes, o programa avançou de forma gradual, desenvolvendo tecnologia própria de foguetes de sondagem — veículos usados para pesquisas científicas em altitudes elevadas, sem a intenção de colocar cargas em órbita permanente — antes de evoluir para projetos mais ambiciosos ao longo do tempo.",
+    "reading_passage": "O programa espacial brasileiro teve origem em 1961, ainda sob controle das Forças Armadas, num contexto histórico em que grandes potências mundiais já disputavam a exploração espacial. Nas décadas seguintes, o programa avançou de forma gradual, desenvolvendo tecnologia própria de foguetes de sondagem — veículos usados para pesquisas científicas em altitudes elevadas, sem a intenção de colocar cargas em órbita permanente — antes de evoluir para projetos mais ambiciosos ao longo do tempo.",
+    "hints": [
+      "Releia 'As origens do programa espacial brasileiro' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que são foguetes de sondagem, mencionados no texto?",
+    "options": [
+      "Veículos usados para pesquisas científicas em altitudes elevadas, sem órbita permanente",
+      "Foguetes exclusivamente militares para uso bélico",
+      "Satélites de comunicação em órbita fixa",
+      "Naves tripuladas de longa duração"
+    ],
+    "correct_answer": "Veículos usados para pesquisas científicas em altitudes elevadas, sem órbita permanente",
+    "explanation": "O programa espacial brasileiro teve origem em 1961, ainda sob controle das Forças Armadas, num contexto histórico em que grandes potências mundiais já disputavam a exploração espacial. Nas décadas seguintes, o programa avançou de forma gradual, desenvolvendo tecnologia própria de foguetes de sondagem — veículos usados para pesquisas científicas em altitudes elevadas, sem a intenção de colocar cargas em órbita permanente — antes de evoluir para projetos mais ambiciosos ao longo do tempo.",
+    "reading_passage": "O programa espacial brasileiro teve origem em 1961, ainda sob controle das Forças Armadas, num contexto histórico em que grandes potências mundiais já disputavam a exploração espacial. Nas décadas seguintes, o programa avançou de forma gradual, desenvolvendo tecnologia própria de foguetes de sondagem — veículos usados para pesquisas científicas em altitudes elevadas, sem a intenção de colocar cargas em órbita permanente — antes de evoluir para projetos mais ambiciosos ao longo do tempo.",
+    "hints": [
+      "Releia 'As origens do programa espacial brasileiro' — a resposta está no texto.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que estado brasileiro está localizado o Centro de Lançamento da Barreira do Inferno?",
+    "options": [
+      "Rio Grande do Norte",
+      "Maranhão",
+      "São Paulo",
+      "Bahia"
+    ],
+    "correct_answer": "Rio Grande do Norte",
+    "explanation": "Inaugurado em 1965, no Rio Grande do Norte, próximo a Natal, o Centro de Lançamento da Barreira do Inferno foi o primeiro centro de lançamento de foguetes construído no Brasil. Foi ali, em dezembro de 1965, que aconteceu o primeiro lançamento de foguete já realizado em solo brasileiro, um foguete americano lançado em parceria com a NASA. Ao longo de sua história, a base já acumulou centenas de lançamentos, principalmente de foguetes de menor porte, e segue funcionando como apoio às operações do Centro de Lançamento de Alcântara.",
+    "reading_passage": "Inaugurado em 1965, no Rio Grande do Norte, próximo a Natal, o Centro de Lançamento da Barreira do Inferno foi o primeiro centro de lançamento de foguetes construído no Brasil. Foi ali, em dezembro de 1965, que aconteceu o primeiro lançamento de foguete já realizado em solo brasileiro, um foguete americano lançado em parceria com a NASA. Ao longo de sua história, a base já acumulou centenas de lançamentos, principalmente de foguetes de menor porte, e segue funcionando como apoio às operações do Centro de Lançamento de Alcântara.",
+    "hints": [
+      "Releia 'Barreira do Inferno: o primeiro centro de lançamento do Brasil' — a resposta está no texto.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que ano esse centro foi inaugurado, segundo o texto?",
+    "options": [
+      "1965",
+      "1983",
+      "1993",
+      "1961"
+    ],
+    "correct_answer": "1965",
+    "explanation": "Inaugurado em 1965, no Rio Grande do Norte, próximo a Natal, o Centro de Lançamento da Barreira do Inferno foi o primeiro centro de lançamento de foguetes construído no Brasil. Foi ali, em dezembro de 1965, que aconteceu o primeiro lançamento de foguete já realizado em solo brasileiro, um foguete americano lançado em parceria com a NASA. Ao longo de sua história, a base já acumulou centenas de lançamentos, principalmente de foguetes de menor porte, e segue funcionando como apoio às operações do Centro de Lançamento de Alcântara.",
+    "reading_passage": "Inaugurado em 1965, no Rio Grande do Norte, próximo a Natal, o Centro de Lançamento da Barreira do Inferno foi o primeiro centro de lançamento de foguetes construído no Brasil. Foi ali, em dezembro de 1965, que aconteceu o primeiro lançamento de foguete já realizado em solo brasileiro, um foguete americano lançado em parceria com a NASA. Ao longo de sua história, a base já acumulou centenas de lançamentos, principalmente de foguetes de menor porte, e segue funcionando como apoio às operações do Centro de Lançamento de Alcântara.",
+    "hints": [
+      "Releia 'Barreira do Inferno: o primeiro centro de lançamento do Brasil' — a resposta está no texto.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceu em dezembro de 1965 na Barreira do Inferno, segundo o texto?",
+    "options": [
+      "O primeiro lançamento de foguete já realizado em solo brasileiro",
+      "O primeiro voo tripulado da história do Brasil",
+      "A criação oficial da Agência Espacial Brasileira",
+      "O lançamento do primeiro satélite totalmente brasileiro"
+    ],
+    "correct_answer": "O primeiro lançamento de foguete já realizado em solo brasileiro",
+    "explanation": "Inaugurado em 1965, no Rio Grande do Norte, próximo a Natal, o Centro de Lançamento da Barreira do Inferno foi o primeiro centro de lançamento de foguetes construído no Brasil. Foi ali, em dezembro de 1965, que aconteceu o primeiro lançamento de foguete já realizado em solo brasileiro, um foguete americano lançado em parceria com a NASA. Ao longo de sua história, a base já acumulou centenas de lançamentos, principalmente de foguetes de menor porte, e segue funcionando como apoio às operações do Centro de Lançamento de Alcântara.",
+    "reading_passage": "Inaugurado em 1965, no Rio Grande do Norte, próximo a Natal, o Centro de Lançamento da Barreira do Inferno foi o primeiro centro de lançamento de foguetes construído no Brasil. Foi ali, em dezembro de 1965, que aconteceu o primeiro lançamento de foguete já realizado em solo brasileiro, um foguete americano lançado em parceria com a NASA. Ao longo de sua história, a base já acumulou centenas de lançamentos, principalmente de foguetes de menor porte, e segue funcionando como apoio às operações do Centro de Lançamento de Alcântara.",
+    "hints": [
+      "Releia 'Barreira do Inferno: o primeiro centro de lançamento do Brasil' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que estado brasileiro está localizado o Centro de Lançamento de Alcântara?",
+    "options": [
+      "Maranhão",
+      "Rio Grande do Norte",
+      "Pará",
+      "Amazonas"
+    ],
+    "correct_answer": "Maranhão",
+    "explanation": "O Centro de Lançamento de Alcântara, inaugurado em 1983 no estado do Maranhão, é considerado um dos locais mais vantajosos do mundo para lançamentos espaciais, graças à sua proximidade com a Linha do Equador. Essa localização permite que foguetes aproveitem melhor a rotação da Terra durante o lançamento, reduzindo o consumo de combustível necessário para colocar cargas em órbita — uma vantagem geográfica natural que desperta interesse internacional na base até os dias de hoje.",
+    "reading_passage": "O Centro de Lançamento de Alcântara, inaugurado em 1983 no estado do Maranhão, é considerado um dos locais mais vantajosos do mundo para lançamentos espaciais, graças à sua proximidade com a Linha do Equador. Essa localização permite que foguetes aproveitem melhor a rotação da Terra durante o lançamento, reduzindo o consumo de combustível necessário para colocar cargas em órbita — uma vantagem geográfica natural que desperta interesse internacional na base até os dias de hoje.",
+    "hints": [
+      "Releia 'Por que Alcântara é um dos melhores lugares do mundo para lançar foguetes?' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o Centro de Lançamento de Alcântara foi inaugurado?",
+    "options": [
+      "1983",
+      "1965",
+      "1993",
+      "1961"
+    ],
+    "correct_answer": "1983",
+    "explanation": "O Centro de Lançamento de Alcântara, inaugurado em 1983 no estado do Maranhão, é considerado um dos locais mais vantajosos do mundo para lançamentos espaciais, graças à sua proximidade com a Linha do Equador. Essa localização permite que foguetes aproveitem melhor a rotação da Terra durante o lançamento, reduzindo o consumo de combustível necessário para colocar cargas em órbita — uma vantagem geográfica natural que desperta interesse internacional na base até os dias de hoje.",
+    "reading_passage": "O Centro de Lançamento de Alcântara, inaugurado em 1983 no estado do Maranhão, é considerado um dos locais mais vantajosos do mundo para lançamentos espaciais, graças à sua proximidade com a Linha do Equador. Essa localização permite que foguetes aproveitem melhor a rotação da Terra durante o lançamento, reduzindo o consumo de combustível necessário para colocar cargas em órbita — uma vantagem geográfica natural que desperta interesse internacional na base até os dias de hoje.",
+    "hints": [
+      "Releia 'Por que Alcântara é um dos melhores lugares do mundo para lançar foguetes?' — a resposta está no texto.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Qual é a principal vantagem geográfica de Alcântara para lançamentos espaciais, segundo o texto?",
+    "options": [
+      "A proximidade com a Linha do Equador",
+      "A altitude elevada da região",
+      "O clima extremamente frio o ano todo",
+      "A distância do oceano"
+    ],
+    "correct_answer": "A proximidade com a Linha do Equador",
+    "explanation": "O Centro de Lançamento de Alcântara, inaugurado em 1983 no estado do Maranhão, é considerado um dos locais mais vantajosos do mundo para lançamentos espaciais, graças à sua proximidade com a Linha do Equador. Essa localização permite que foguetes aproveitem melhor a rotação da Terra durante o lançamento, reduzindo o consumo de combustível necessário para colocar cargas em órbita — uma vantagem geográfica natural que desperta interesse internacional na base até os dias de hoje.",
+    "reading_passage": "O Centro de Lançamento de Alcântara, inaugurado em 1983 no estado do Maranhão, é considerado um dos locais mais vantajosos do mundo para lançamentos espaciais, graças à sua proximidade com a Linha do Equador. Essa localização permite que foguetes aproveitem melhor a rotação da Terra durante o lançamento, reduzindo o consumo de combustível necessário para colocar cargas em órbita — uma vantagem geográfica natural que desperta interesse internacional na base até os dias de hoje.",
+    "hints": [
+      "Releia 'Por que Alcântara é um dos melhores lugares do mundo para lançar foguetes?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que data o Brasil lançou seu primeiro satélite construído integralmente em território nacional?",
+    "options": [
+      "9 de fevereiro de 1993",
+      "22 de agosto de 2003",
+      "20 de julho de 1969",
+      "4 de outubro de 1957"
+    ],
+    "correct_answer": "9 de fevereiro de 1993",
+    "explanation": "Em 9 de fevereiro de 1993, o Brasil lançou seu primeiro satélite construído integralmente em território nacional, um marco importante para a capacidade tecnológica do país na área espacial. O satélite foi lançado com o objetivo de realizar estudos científicos relacionados ao espaço, representando um passo relevante rumo a uma maior autonomia tecnológica brasileira nesse campo, historicamente dependente de parcerias e tecnologia estrangeira.",
+    "reading_passage": "Em 9 de fevereiro de 1993, o Brasil lançou seu primeiro satélite construído integralmente em território nacional, um marco importante para a capacidade tecnológica do país na área espacial. O satélite foi lançado com o objetivo de realizar estudos científicos relacionados ao espaço, representando um passo relevante rumo a uma maior autonomia tecnológica brasileira nesse campo, historicamente dependente de parcerias e tecnologia estrangeira.",
+    "hints": [
+      "Releia 'O primeiro satélite feito no Brasil' — a resposta está no texto.",
+      "Começa com '9'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que esse lançamento representou para o Brasil, segundo o texto?",
+    "options": [
+      "Um marco importante para a capacidade tecnológica do país",
+      "O fim total do programa espacial brasileiro",
+      "A primeira parceria internacional do país",
+      "A criação da primeira base de lançamento brasileira"
+    ],
+    "correct_answer": "Um marco importante para a capacidade tecnológica do país",
+    "explanation": "Em 9 de fevereiro de 1993, o Brasil lançou seu primeiro satélite construído integralmente em território nacional, um marco importante para a capacidade tecnológica do país na área espacial. O satélite foi lançado com o objetivo de realizar estudos científicos relacionados ao espaço, representando um passo relevante rumo a uma maior autonomia tecnológica brasileira nesse campo, historicamente dependente de parcerias e tecnologia estrangeira.",
+    "reading_passage": "Em 9 de fevereiro de 1993, o Brasil lançou seu primeiro satélite construído integralmente em território nacional, um marco importante para a capacidade tecnológica do país na área espacial. O satélite foi lançado com o objetivo de realizar estudos científicos relacionados ao espaço, representando um passo relevante rumo a uma maior autonomia tecnológica brasileira nesse campo, historicamente dependente de parcerias e tecnologia estrangeira.",
+    "hints": [
+      "Releia 'O primeiro satélite feito no Brasil' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "O programa espacial brasileiro era, historicamente, dependente de quê, segundo o texto?",
+    "options": [
+      "Parcerias e tecnologia estrangeira",
+      "Investimento exclusivamente privado",
+      "Tecnologia desenvolvida sem nenhuma ajuda externa desde o início",
+      "Financiamento apenas de outros países da América do Sul"
+    ],
+    "correct_answer": "Parcerias e tecnologia estrangeira",
+    "explanation": "Em 9 de fevereiro de 1993, o Brasil lançou seu primeiro satélite construído integralmente em território nacional, um marco importante para a capacidade tecnológica do país na área espacial. O satélite foi lançado com o objetivo de realizar estudos científicos relacionados ao espaço, representando um passo relevante rumo a uma maior autonomia tecnológica brasileira nesse campo, historicamente dependente de parcerias e tecnologia estrangeira.",
+    "reading_passage": "Em 9 de fevereiro de 1993, o Brasil lançou seu primeiro satélite construído integralmente em território nacional, um marco importante para a capacidade tecnológica do país na área espacial. O satélite foi lançado com o objetivo de realizar estudos científicos relacionados ao espaço, representando um passo relevante rumo a uma maior autonomia tecnológica brasileira nesse campo, historicamente dependente de parcerias e tecnologia estrangeira.",
+    "hints": [
+      "Releia 'O primeiro satélite feito no Brasil' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que ano foi criada a Agência Espacial Brasileira (AEB)?",
+    "options": [
+      "1994",
+      "1983",
+      "1965",
+      "1961"
+    ],
+    "correct_answer": "1994",
+    "explanation": "Em 10 de fevereiro de 1994, o programa espacial brasileiro passou por uma transformação institucional importante: deixou de ser administrado diretamente pelas Forças Armadas e passou a ser conduzido pela recém-criada Agência Espacial Brasileira (AEB), vinculada a área civil do governo. Essa mudança buscou dar ao programa espacial brasileiro uma estrutura de gestão mais alinhada ao modelo adotado por agências espaciais de outros países, com foco em pesquisa científica e desenvolvimento tecnológico.",
+    "reading_passage": "Em 10 de fevereiro de 1994, o programa espacial brasileiro passou por uma transformação institucional importante: deixou de ser administrado diretamente pelas Forças Armadas e passou a ser conduzido pela recém-criada Agência Espacial Brasileira (AEB), vinculada a área civil do governo. Essa mudança buscou dar ao programa espacial brasileiro uma estrutura de gestão mais alinhada ao modelo adotado por agências espaciais de outros países, com foco em pesquisa científica e desenvolvimento tecnológico.",
+    "hints": [
+      "Releia 'A criação da Agência Espacial Brasileira' — a resposta está no texto.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Quem administrava o programa espacial brasileiro antes da criação da AEB, segundo o texto?",
+    "options": [
+      "As Forças Armadas",
+      "Uma empresa privada estrangeira",
+      "A Organização das Nações Unidas",
+      "Universidades particulares"
+    ],
+    "correct_answer": "As Forças Armadas",
+    "explanation": "Em 10 de fevereiro de 1994, o programa espacial brasileiro passou por uma transformação institucional importante: deixou de ser administrado diretamente pelas Forças Armadas e passou a ser conduzido pela recém-criada Agência Espacial Brasileira (AEB), vinculada a área civil do governo. Essa mudança buscou dar ao programa espacial brasileiro uma estrutura de gestão mais alinhada ao modelo adotado por agências espaciais de outros países, com foco em pesquisa científica e desenvolvimento tecnológico.",
+    "reading_passage": "Em 10 de fevereiro de 1994, o programa espacial brasileiro passou por uma transformação institucional importante: deixou de ser administrado diretamente pelas Forças Armadas e passou a ser conduzido pela recém-criada Agência Espacial Brasileira (AEB), vinculada a área civil do governo. Essa mudança buscou dar ao programa espacial brasileiro uma estrutura de gestão mais alinhada ao modelo adotado por agências espaciais de outros países, com foco em pesquisa científica e desenvolvimento tecnológico.",
+    "hints": [
+      "Releia 'A criação da Agência Espacial Brasileira' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Qual foi o objetivo dessa mudança institucional, segundo o texto?",
+    "options": [
+      "Alinhar a gestão ao modelo de agências espaciais de outros países",
+      "Encerrar definitivamente o programa espacial brasileiro",
+      "Transferir o programa para controle militar de outro país",
+      "Eliminar toda pesquisa científica relacionada ao espaço"
+    ],
+    "correct_answer": "Alinhar a gestão ao modelo de agências espaciais de outros países",
+    "explanation": "Em 10 de fevereiro de 1994, o programa espacial brasileiro passou por uma transformação institucional importante: deixou de ser administrado diretamente pelas Forças Armadas e passou a ser conduzido pela recém-criada Agência Espacial Brasileira (AEB), vinculada a área civil do governo. Essa mudança buscou dar ao programa espacial brasileiro uma estrutura de gestão mais alinhada ao modelo adotado por agências espaciais de outros países, com foco em pesquisa científica e desenvolvimento tecnológico.",
+    "reading_passage": "Em 10 de fevereiro de 1994, o programa espacial brasileiro passou por uma transformação institucional importante: deixou de ser administrado diretamente pelas Forças Armadas e passou a ser conduzido pela recém-criada Agência Espacial Brasileira (AEB), vinculada a área civil do governo. Essa mudança buscou dar ao programa espacial brasileiro uma estrutura de gestão mais alinhada ao modelo adotado por agências espaciais de outros países, com foco em pesquisa científica e desenvolvimento tecnológico.",
+    "hints": [
+      "Releia 'A criação da Agência Espacial Brasileira' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Quem foi o primeiro astronauta brasileiro a viajar ao espaço?",
+    "options": [
+      "Marcos Pontes",
+      "Yuri Gagarin",
+      "Neil Armstrong",
+      "Carlos Moura"
+    ],
+    "correct_answer": "Marcos Pontes",
+    "explanation": "Em 2006, o tenente-coronel-aviador Marcos Pontes se tornou o primeiro brasileiro a viajar ao espaço, após passar por anos de treinamento, incluindo períodos na NASA e, posteriormente, na Rússia. Ele viajou a bordo da nave russa Soyuz até a Estação Espacial Internacional, numa missão que durou cerca de dez dias, levando consigo experimentos científicos desenvolvidos por instituições de pesquisa brasileiras, em áreas como bioquímica e cristalização de proteínas, a serem realizados em condições de microgravidade.",
+    "reading_passage": "Em 2006, o tenente-coronel-aviador Marcos Pontes se tornou o primeiro brasileiro a viajar ao espaço, após passar por anos de treinamento, incluindo períodos na NASA e, posteriormente, na Rússia. Ele viajou a bordo da nave russa Soyuz até a Estação Espacial Internacional, numa missão que durou cerca de dez dias, levando consigo experimentos científicos desenvolvidos por instituições de pesquisa brasileiras, em áreas como bioquímica e cristalização de proteínas, a serem realizados em condições de microgravidade.",
+    "hints": [
+      "Releia 'Marcos Pontes: o primeiro astronauta brasileiro' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que ano aconteceu essa viagem histórica?",
+    "options": [
+      "2006",
+      "1993",
+      "1983",
+      "1994"
+    ],
+    "correct_answer": "2006",
+    "explanation": "Em 2006, o tenente-coronel-aviador Marcos Pontes se tornou o primeiro brasileiro a viajar ao espaço, após passar por anos de treinamento, incluindo períodos na NASA e, posteriormente, na Rússia. Ele viajou a bordo da nave russa Soyuz até a Estação Espacial Internacional, numa missão que durou cerca de dez dias, levando consigo experimentos científicos desenvolvidos por instituições de pesquisa brasileiras, em áreas como bioquímica e cristalização de proteínas, a serem realizados em condições de microgravidade.",
+    "reading_passage": "Em 2006, o tenente-coronel-aviador Marcos Pontes se tornou o primeiro brasileiro a viajar ao espaço, após passar por anos de treinamento, incluindo períodos na NASA e, posteriormente, na Rússia. Ele viajou a bordo da nave russa Soyuz até a Estação Espacial Internacional, numa missão que durou cerca de dez dias, levando consigo experimentos científicos desenvolvidos por instituições de pesquisa brasileiras, em áreas como bioquímica e cristalização de proteínas, a serem realizados em condições de microgravidade.",
+    "hints": [
+      "Releia 'Marcos Pontes: o primeiro astronauta brasileiro' — a resposta está no texto.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em qual nave Marcos Pontes viajou até a Estação Espacial Internacional?",
+    "options": [
+      "Soyuz",
+      "Apollo 11",
+      "Vostok 1",
+      "Columbia"
+    ],
+    "correct_answer": "Soyuz",
+    "explanation": "Em 2006, o tenente-coronel-aviador Marcos Pontes se tornou o primeiro brasileiro a viajar ao espaço, após passar por anos de treinamento, incluindo períodos na NASA e, posteriormente, na Rússia. Ele viajou a bordo da nave russa Soyuz até a Estação Espacial Internacional, numa missão que durou cerca de dez dias, levando consigo experimentos científicos desenvolvidos por instituições de pesquisa brasileiras, em áreas como bioquímica e cristalização de proteínas, a serem realizados em condições de microgravidade.",
+    "reading_passage": "Em 2006, o tenente-coronel-aviador Marcos Pontes se tornou o primeiro brasileiro a viajar ao espaço, após passar por anos de treinamento, incluindo períodos na NASA e, posteriormente, na Rússia. Ele viajou a bordo da nave russa Soyuz até a Estação Espacial Internacional, numa missão que durou cerca de dez dias, levando consigo experimentos científicos desenvolvidos por instituições de pesquisa brasileiras, em áreas como bioquímica e cristalização de proteínas, a serem realizados em condições de microgravidade.",
+    "hints": [
+      "Releia 'Marcos Pontes: o primeiro astronauta brasileiro' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que data aconteceu o acidente mais grave da história do programa espacial brasileiro?",
+    "options": [
+      "22 de agosto de 2003",
+      "9 de fevereiro de 1993",
+      "10 de fevereiro de 1994",
+      "1º de março de 1983"
+    ],
+    "correct_answer": "22 de agosto de 2003",
+    "explanation": "Em 22 de agosto de 2003, o programa espacial brasileiro enfrentou seu momento mais difícil, quando um acidente durante a preparação de um foguete no Centro de Lançamento de Alcântara resultou na perda de 21 profissionais que trabalhavam no projeto. O episódio é hoje lembrado oficialmente pela Agência Espacial Brasileira como um marco de homenagem a esses profissionais, cujo trabalho e legado continuam sendo reconhecidos como parte importante da trajetória do programa espacial do país.",
+    "reading_passage": "Em 22 de agosto de 2003, o programa espacial brasileiro enfrentou seu momento mais difícil, quando um acidente durante a preparação de um foguete no Centro de Lançamento de Alcântara resultou na perda de 21 profissionais que trabalhavam no projeto. O episódio é hoje lembrado oficialmente pela Agência Espacial Brasileira como um marco de homenagem a esses profissionais, cujo trabalho e legado continuam sendo reconhecidos como parte importante da trajetória do programa espacial do país.",
+    "hints": [
+      "Releia 'Um momento difícil da história espacial brasileira' — a resposta está no texto.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Onde esse acidente aconteceu, segundo o texto?",
+    "options": [
+      "Centro de Lançamento de Alcântara",
+      "Centro de Lançamento da Barreira do Inferno",
+      "Sede da AEB em Brasília",
+      "Base espacial no Rio Grande do Sul"
+    ],
+    "correct_answer": "Centro de Lançamento de Alcântara",
+    "explanation": "Em 22 de agosto de 2003, o programa espacial brasileiro enfrentou seu momento mais difícil, quando um acidente durante a preparação de um foguete no Centro de Lançamento de Alcântara resultou na perda de 21 profissionais que trabalhavam no projeto. O episódio é hoje lembrado oficialmente pela Agência Espacial Brasileira como um marco de homenagem a esses profissionais, cujo trabalho e legado continuam sendo reconhecidos como parte importante da trajetória do programa espacial do país.",
+    "reading_passage": "Em 22 de agosto de 2003, o programa espacial brasileiro enfrentou seu momento mais difícil, quando um acidente durante a preparação de um foguete no Centro de Lançamento de Alcântara resultou na perda de 21 profissionais que trabalhavam no projeto. O episódio é hoje lembrado oficialmente pela Agência Espacial Brasileira como um marco de homenagem a esses profissionais, cujo trabalho e legado continuam sendo reconhecidos como parte importante da trajetória do programa espacial do país.",
+    "hints": [
+      "Releia 'Um momento difícil da história espacial brasileira' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Como esse episódio é lembrado hoje, segundo o texto?",
+    "options": [
+      "Como um marco de homenagem aos profissionais envolvidos",
+      "Como um evento que nunca é mencionado oficialmente",
+      "Como motivo para o encerramento total do programa espacial",
+      "Como um sucesso técnico sem nenhuma perda"
+    ],
+    "correct_answer": "Como um marco de homenagem aos profissionais envolvidos",
+    "explanation": "Em 22 de agosto de 2003, o programa espacial brasileiro enfrentou seu momento mais difícil, quando um acidente durante a preparação de um foguete no Centro de Lançamento de Alcântara resultou na perda de 21 profissionais que trabalhavam no projeto. O episódio é hoje lembrado oficialmente pela Agência Espacial Brasileira como um marco de homenagem a esses profissionais, cujo trabalho e legado continuam sendo reconhecidos como parte importante da trajetória do programa espacial do país.",
+    "reading_passage": "Em 22 de agosto de 2003, o programa espacial brasileiro enfrentou seu momento mais difícil, quando um acidente durante a preparação de um foguete no Centro de Lançamento de Alcântara resultou na perda de 21 profissionais que trabalhavam no projeto. O episódio é hoje lembrado oficialmente pela Agência Espacial Brasileira como um marco de homenagem a esses profissionais, cujo trabalho e legado continuam sendo reconhecidos como parte importante da trajetória do programa espacial do país.",
+    "hints": [
+      "Releia 'Um momento difícil da história espacial brasileira' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Que jornada de escala o texto descreve ao longo deste Mundo?",
+    "options": [
+      "Do universo inteiro até o programa espacial de um único país",
+      "Apenas da Terra até a Lua",
+      "Exclusivamente da história do Brasil",
+      "Somente da vida de um único astronauta"
+    ],
+    "correct_answer": "Do universo inteiro até o programa espacial de um único país",
+    "explanation": "Ao longo deste Mundo, viajamos desde a escala inimaginável do universo inteiro até o programa espacial de um único país, o Brasil, que segue construindo sua própria trajetória entre desafios e conquistas. Da explosão inicial que deu origem a tudo que existe até o voo de Marcos Pontes rumo à Estação Espacial Internacional, fica evidente que o espaço, por mais distante que pareça, também é uma história feita de esforço humano, curiosidade científica e a vontade contínua de entender o lugar que ocupamos dentro de um cosmos tão vasto.",
+    "reading_passage": "Ao longo deste Mundo, viajamos desde a escala inimaginável do universo inteiro até o programa espacial de um único país, o Brasil, que segue construindo sua própria trajetória entre desafios e conquistas. Da explosão inicial que deu origem a tudo que existe até o voo de Marcos Pontes rumo à Estação Espacial Internacional, fica evidente que o espaço, por mais distante que pareça, também é uma história feita de esforço humano, curiosidade científica e a vontade contínua de entender o lugar que ocupamos dentro de um cosmos tão vasto.",
+    "hints": [
+      "Releia 'Encerrando a jornada: o Brasil olhando para cima' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Qual evento brasileiro o texto usa como exemplo de conquista espacial?",
+    "options": [
+      "O voo de Marcos Pontes à Estação Espacial Internacional",
+      "O primeiro pouso na Lua",
+      "A descoberta do Big Bang",
+      "A criação do primeiro buraco negro artificial"
+    ],
+    "correct_answer": "O voo de Marcos Pontes à Estação Espacial Internacional",
+    "explanation": "Ao longo deste Mundo, viajamos desde a escala inimaginável do universo inteiro até o programa espacial de um único país, o Brasil, que segue construindo sua própria trajetória entre desafios e conquistas. Da explosão inicial que deu origem a tudo que existe até o voo de Marcos Pontes rumo à Estação Espacial Internacional, fica evidente que o espaço, por mais distante que pareça, também é uma história feita de esforço humano, curiosidade científica e a vontade contínua de entender o lugar que ocupamos dentro de um cosmos tão vasto.",
+    "reading_passage": "Ao longo deste Mundo, viajamos desde a escala inimaginável do universo inteiro até o programa espacial de um único país, o Brasil, que segue construindo sua própria trajetória entre desafios e conquistas. Da explosão inicial que deu origem a tudo que existe até o voo de Marcos Pontes rumo à Estação Espacial Internacional, fica evidente que o espaço, por mais distante que pareça, também é uma história feita de esforço humano, curiosidade científica e a vontade contínua de entender o lugar que ocupamos dentro de um cosmos tão vasto.",
+    "hints": [
+      "Releia 'Encerrando a jornada: o Brasil olhando para cima' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "espaco_brasil",
+    "difficulty_level": 1,
+    "prompt": "Com que ideia o texto encerra o Mundo Acima de Nós?",
+    "options": [
+      "Que o espaço é uma história de esforço humano e curiosidade científica",
+      "Que a exploração espacial já terminou por completo",
+      "Que o Brasil não tem mais nenhum interesse no espaço",
+      "Que o universo é pequeno e já totalmente compreendido"
+    ],
+    "correct_answer": "Que o espaço é uma história de esforço humano e curiosidade científica",
+    "explanation": "Ao longo deste Mundo, viajamos desde a escala inimaginável do universo inteiro até o programa espacial de um único país, o Brasil, que segue construindo sua própria trajetória entre desafios e conquistas. Da explosão inicial que deu origem a tudo que existe até o voo de Marcos Pontes rumo à Estação Espacial Internacional, fica evidente que o espaço, por mais distante que pareça, também é uma história feita de esforço humano, curiosidade científica e a vontade contínua de entender o lugar que ocupamos dentro de um cosmos tão vasto.",
+    "reading_passage": "Ao longo deste Mundo, viajamos desde a escala inimaginável do universo inteiro até o programa espacial de um único país, o Brasil, que segue construindo sua própria trajetória entre desafios e conquistas. Da explosão inicial que deu origem a tudo que existe até o voo de Marcos Pontes rumo à Estação Espacial Internacional, fica evidente que o espaço, por mais distante que pareça, também é uma história feita de esforço humano, curiosidade científica e a vontade contínua de entender o lugar que ocupamos dentro de um cosmos tão vasto.",
+    "hints": [
+      "Releia 'Encerrando a jornada: o Brasil olhando para cima' — a resposta está no texto.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  }
+]

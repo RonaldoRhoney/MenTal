@@ -426,6 +426,12 @@ class _HomeScreenState extends State<HomeScreen> {
   /// (nunca o nome usado em `_WorldDetailScreen`, Progresso ou qualquer
   /// outro lugar) mostra a versão curta.
   String _shortWorldTitle(String title) {
+    // "Mundo Acima de Nós (Espaço)" (07/09/2026) não segue o padrão
+    // "Mundo da/do/dos" — sem este caso especial, o card do carrossel
+    // mostraria o nome completo, comprido demais pra caber sem
+    // quebrar feio (mesmo achado real já documentado nos outros casos
+    // abaixo).
+    if (title == 'Mundo Acima de Nós (Espaço)') return 'Espaço';
     const prefixes = ['Mundo da ', 'Mundo do ', 'Mundo dos ', 'Mundo das '];
     for (final prefix in prefixes) {
       if (title.startsWith(prefix)) return title.substring(prefix.length);
@@ -470,6 +476,8 @@ class _HomeScreenState extends State<HomeScreen> {
         return Icons.restaurant_rounded;
       case 'oceanos':
         return Icons.waves_rounded;
+      case 'espaco':
+        return Icons.rocket_launch_rounded;
       default:
         return Icons.travel_explore_rounded;
     }

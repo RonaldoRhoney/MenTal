@@ -264,6 +264,10 @@ NEVER_TIMED_TERRITORY_IDS = {
     # perguntas", mesmo motivo.
     "oceano_mundo", "oceano_vida_marinha", "oceano_profundezas",
     "oceano_clima", "oceano_brasil",
+    # Mundo Acima de Nós/Espaço (07/09/2026): mesmo formato "cápsula de
+    # texto + perguntas", mesmo motivo.
+    "espaco_universo", "espaco_planetas", "espaco_estrelas",
+    "espaco_exploracao", "espaco_brasil",
 }
 # V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — o próprio doc descreve
 # a charada "no formato Relâmpago (timer curto, ~10 segundos)" como a
