@@ -15,3 +15,7 @@ repositório.
   decidir e aplicar a correção (ex.: limpar `push_token` inválido ao
   detectar esse erro) e confirmar separadamente a entrega dos lembretes
   24h/48h.
+- `REORGANIZACAO_MENUS_HOME_V1.md` — reorganização de menus e redução
+  de toques na Home (grid de atalhos, barra inferior, espaço próprio
+  pro Feed). **Implementado** (06/09/2026, em produção). Movido pra
+  esta pasta em 11/09/2026 (antes solto na raiz do repo).

@@ -1,7 +1,7 @@
 # Mundo da Cultura Geral
 
 **Status:** Em produção. Desmembrado em 07/09/2026
-(`DESMEMBRAMENTO_CULTURA_GERAL_V1.md`, raiz do repo) — reunia
+(`DESMEMBRAMENTO_CULTURA_GERAL_V1.md`, nesta pasta) — reunia
 territórios de naturezas muito diferentes num único balaio genérico.
 Territórios que **permanecem** aqui: `cultura_pop`, `filosofia`,
 `artes`, `saude_bemestar`, `curiosidade_relampago`, `caca_palavras`
@@ -35,6 +35,9 @@ ainda na V4 — ver aquela pasta.
 - `V3.4_LIBRAS.md` (V3, fase 5) — Libras, conteúdo rico + player de
   vídeo institucional.
 - `V3.5_CURIOSIDADE_RELAMPAGO.md` (V3) — bloco Curiosidade Relâmpago.
+- `DESMEMBRAMENTO_CULTURA_GERAL_V1.md` (07/09/2026) — spec e execução
+  do desmembramento em 6 Mundos temáticos descrito acima. Movido pra
+  esta pasta em 11/09/2026 (antes solto na raiz do repo).
 
 Conteúdo de produção (`backend/content/`) e migrations
 (`backend/migrations/`) permanecem nos diretórios padrão do backend —
