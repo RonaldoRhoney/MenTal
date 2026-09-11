@@ -73,7 +73,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryEsportes => 'Esportes';
 
   @override
-  String get territoryRegioes => 'Regiões';
+  String get territoryRegioes => 'Gírias e Expressões';
 
   @override
   String get territoryCulturaPop => 'Cultura Pop';

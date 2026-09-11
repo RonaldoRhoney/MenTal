@@ -1,6 +1,6 @@
 # MENTAL — Desmembramento do Mundo da Cultura Geral
 
-**Status:** Aprovado para implementação.
+**Status:** Implementado (07/09/2026) — ver seção 9. Pendência residual: curadoria dos 5 territórios de região (§3).
 **Origem:** Mundo da Cultura Geral hoje reúne territórios de naturezas muito diferentes num único balaio genérico. Esta especificação desmembra esse Mundo em Mundos temáticos dedicados, e move dois territórios para Mundos já existentes que combinam melhor com eles.
 
 ---
@@ -62,3 +62,18 @@ Antes de mover qualquer coisa, Claude Code deve confirmar e reportar:
 - Mundo da Cultura Geral permanece existindo, contendo apenas o que não foi explicitamente movido por este documento.
 - Nenhum progresso, XP ou estatística de usuário é perdido em nenhum dos territórios movidos.
 - Mundo das Regiões do Brasil está estruturalmente pronto para receber as cinco regiões como territórios internos, mesmo que a curadoria de conteúdo completa de cada região seja tratada em etapa posterior.
+
+## 8. Investigação (seção 5) — resultado
+
+- **Vínculo território↔Mundo**: campo `world_id` em cada entrada de `TERRITORIES` (`backend/app/seed.py`), espelhado em `mental.territories.world_id` no banco (migrations). "Bloco" (`block_id`) é agrupamento visual de menu independente do Mundo — não precisou ser tocado nesta reorganização.
+- **"Regiões do Brasil" já existia?** Não como pensado no documento. O território `regioes` (15 perguntas) é sobre **gírias e expressões regionais** (cada pergunta mistura várias regiões), não conteúdo dividido por região. Decisão de Rhoney (AskUserQuestion, 07/09/2026): manter essas 15 perguntas como território próprio, renomeado "Gírias e Expressões", dentro do novo Mundo — os 5 territórios de região ficam como pendência de curadoria (ver `Mundo_das_Regioes_do_Brasil/README.md`).
+- **Outras referências a "Cultura Geral" por nome**: nenhuma fora de `backend/app/seed.py` (definição) e `client/lib/screens/home_screen.dart` (ícone do carrossel, `case 'cultura_geral':`) — nada em Admin Dashboard, notificações ou deep links. Badges de "Mundo completo" são sempre derivados na hora (nunca armazenados), então a divisão não tem efeito colateral em progresso/conquista já registrada.
+
+## 9. Implementação (07/09/2026)
+
+- `backend/app/seed.py`: 6 novos Mundos adicionados a `WORLDS` (display_order 8-13); `world_id` atualizado nos territórios movidos (ver seção 2).
+- `backend/migrations/067_desmembramento_cultura_geral.sql`: insere os 6 Mundos e faz o `UPDATE` de `world_id` em produção — precisa rodar manualmente (mesmo fluxo já usado nas migrations anteriores).
+- `client/lib/screens/home_screen.dart`: ícone de identidade no carrossel pros 6 novos Mundos (`_worldIcon`).
+- `client/lib/l10n/app_pt.arb`: rótulo do território `regioes` trocado de "Regiões" pra "Gírias e Expressões".
+- READMEs criados: `Mundo_dos_Esportes/`, `Mundo_da_Mitologia/`, `Mundo_do_ENEM/`, `Mundo_dos_Concursos/`, `Mundo_da_Tecnologia/`, `Mundo_das_Regioes_do_Brasil/` (este último documenta a pendência de curadoria das 5 regiões). `Mundo_da_Cultura_Geral/`, `Mundo_dos_Idiomas/` e `Mundo_dos_Valores/` atualizados para refletir a nova composição.
+- Testes: `backend/tests/test_worlds.py` (`test_progress_groups_territories_into_the_approved_worlds`) reescrito pra refletir os 13 Mundos. Suíte completa: 376/376 backend, 146/146 client — nenhum outro teste dependia da composição antiga de Cultura Geral.

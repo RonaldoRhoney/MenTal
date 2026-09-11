@@ -92,9 +92,9 @@
   "@territoryEsportes": {
     "description": "Territory display name"
   },
-  "territoryRegioes": "Regiões",
+  "territoryRegioes": "Gírias e Expressões",
   "@territoryRegioes": {
-    "description": "Territory display name"
+    "description": "Territory display name — renomeado 07/09/2026 (DESMEMBRAMENTO_CULTURA_GERAL_V1.md): este território migrou pro Mundo das Regiões do Brasil, mas suas 15 perguntas são sobre gírias/expressões regionais (não divididas por região), então ganhou nome próprio pra não colidir com o nome do Mundo"
   },
   "territoryCulturaPop": "Cultura Pop",
   "@territoryCulturaPop": {

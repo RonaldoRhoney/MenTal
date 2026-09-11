@@ -54,20 +54,41 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     # (aprovado): os 5 territórios novos da V4 saem de Cultura Geral
     # (que ficou extenso demais) e ganham Mundo da Descoberta próprio —
     # pura reorganização de agrupamento, nunca afeta XP/progresso.
-    assert set(worlds.keys()) == {"linguagem", "mente_logica", "cultura_geral", "descoberta", "idiomas", "valores", "transito"}
+    #
+    # DESMEMBRAMENTO_CULTURA_GERAL_V1.md (07/09/2026, aprovado): Cultura
+    # Geral desmembrada em 6 Mundos temáticos (esportes/mitologia/enem/
+    # concursos/tecnologia/regioes_brasil) + Libras migra pra Idiomas e
+    # Finanças Pessoais pra Valores — mesma reorganização pura de
+    # agrupamento, sem afetar XP/progresso.
+    assert set(worlds.keys()) == {
+        "linguagem", "mente_logica", "cultura_geral", "descoberta", "idiomas", "valores", "transito",
+        "esportes", "mitologia", "enem", "concursos", "tecnologia", "regioes_brasil",
+    }
     assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas", "redacao"}
     assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento", "cores"}
     assert set(worlds["cultura_geral"]["territory_ids"]) == {
-        "esportes", "regioes", "cultura_pop",
-        "mitologia_grega", "mitologia_nordica", "mitologia_indigena",
-        "enem_linguagens", "enem_humanas", "enem_natureza", "enem_matematica",
-        "concursos_portugues", "concursos_raciocinio", "concursos_direito",
-        "tecnologia_fundamentos", "tecnologia_programacao", "tecnologia_seguranca", "tecnologia_fronteira",
-        "financas_pessoais", "filosofia", "artes", "saude_bemestar",
+        "cultura_pop", "filosofia", "artes", "saude_bemestar",
         "curiosidade_relampago",
-        "libras",
         "caca_palavras",
     }
+    assert set(worlds["esportes"]["territory_ids"]) == {"esportes"}
+    assert set(worlds["mitologia"]["territory_ids"]) == {
+        "mitologia_grega", "mitologia_nordica", "mitologia_indigena",
+    }
+    assert set(worlds["enem"]["territory_ids"]) == {
+        "enem_linguagens", "enem_humanas", "enem_natureza", "enem_matematica",
+    }
+    assert set(worlds["concursos"]["territory_ids"]) == {
+        "concursos_portugues", "concursos_raciocinio", "concursos_direito",
+    }
+    assert set(worlds["tecnologia"]["territory_ids"]) == {
+        "tecnologia_fundamentos", "tecnologia_programacao", "tecnologia_seguranca", "tecnologia_fronteira",
+    }
+    # §3 do documento: "regioes" (15 perguntas de gírias regionais, que
+    # não se dividem por região) migra pra cá como território próprio —
+    # ainda o único território do Mundo (as 5 regiões em si ficam pra
+    # uma etapa posterior de curadoria, registrado como pendência).
+    assert set(worlds["regioes_brasil"]["territory_ids"]) == {"regioes"}
     assert set(worlds["descoberta"]["territory_ids"]) == {
         "invencoes",
         "veiculos",
@@ -79,21 +100,18 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "ingles_basico", "ingles_intermediario", "ingles_avancado",
         "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
         "frances_basico", "frances_intermediario", "frances_avancado",
+        "libras",
     }
     assert set(worlds["valores"]["territory_ids"]) == {
         "bolsa", "criptomoedas", "cenario_global", "financas_dia_a_dia",
+        "financas_pessoais",
     }
     assert set(worlds["transito"]["territory_ids"]) == {
         "educacao_legislacao", "historia_curiosidades", "transportes_terrestres",
         "economia_transito", "prevencao_seguranca",
     }
-    assert worlds["linguagem"]["completed"] is False
-    assert worlds["mente_logica"]["completed"] is False
-    assert worlds["cultura_geral"]["completed"] is False
-    assert worlds["descoberta"]["completed"] is False
-    assert worlds["idiomas"]["completed"] is False
-    assert worlds["valores"]["completed"] is False
-    assert worlds["transito"]["completed"] is False
+    for world_id in worlds:
+        assert worlds[world_id]["completed"] is False
 
 
 def test_world_just_completed_fires_once_at_the_exact_last_territory(client, monkeypatch):

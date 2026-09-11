@@ -41,6 +41,28 @@ WORLDS = [
     # perguntas" do Mundo dos Valores (reading_passage, nunca
     # cronometrado) — conteúdo carregado de content/transito_*.json.
     {"id": "transito", "name": "Mundo do Trânsito", "display_order": 7},
+    # DESMEMBRAMENTO_CULTURA_GERAL_V1.md (07/09/2026, aprovado) — Mundo
+    # da Cultura Geral reunia territórios de naturezas muito diferentes
+    # num único balaio genérico. Desmembrado em Mundos temáticos
+    # dedicados — pura reorganização de agrupamento (world_id do
+    # território muda, nada de conteúdo é alterado/removido, XP e
+    # progresso preservados, "mundo completo" é sempre derivado, nunca
+    # armazenado). Libras (→ idiomas) e Finanças Pessoais (→ valores)
+    # migram pra Mundos já existentes que combinam melhor com eles.
+    {"id": "esportes", "name": "Mundo dos Esportes", "display_order": 8},
+    {"id": "mitologia", "name": "Mundo da Mitologia", "display_order": 9},
+    {"id": "enem", "name": "Mundo do ENEM", "display_order": 10},
+    {"id": "concursos", "name": "Mundo dos Concursos", "display_order": 11},
+    {"id": "tecnologia", "name": "Mundo da Tecnologia", "display_order": 12},
+    # §3 do documento: diferente dos demais, as 5 regiões do Brasil
+    # passam a ser o contexto organizador (um território por região) —
+    # ainda não curadas (pendência registrada em Mundo_das_Regioes_do_
+    # Brasil/README.md), a estrutura do Mundo já nasce pronta pra
+    # recebê-las. O território "regioes" já existente (15 perguntas de
+    # gírias regionais, que não se dividem numa região só) migra pra cá
+    # como território próprio, renomeado "Gírias e Expressões" — decisão
+    # de Rhoney (07/09/2026): nenhum conteúdo perdido.
+    {"id": "regioes_brasil", "name": "Mundo das Regiões do Brasil", "display_order": 13},
 ]
 
 # Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
@@ -139,8 +161,8 @@ TERRITORIES = [
     # campo/UI novo no client). "regioes" usa o bloco de menu já
     # existente com o mesmo id (BLOCOS_MENUS.md); esportes/cultura_pop
     # ficam soltos no Mundo, sem bloco, como visual/conhecimento hoje.
-    {"id": "esportes", "challenge_type": "esportes", "requires_subscription": True, "free_sample_count": 2, "display_order": 8, "world_id": "cultura_geral"},
-    {"id": "regioes", "challenge_type": "regioes", "requires_subscription": True, "free_sample_count": 2, "display_order": 9, "world_id": "cultura_geral", "block_id": "regioes"},
+    {"id": "esportes", "challenge_type": "esportes", "requires_subscription": True, "free_sample_count": 2, "display_order": 8, "world_id": "esportes"},
+    {"id": "regioes", "challenge_type": "regioes", "requires_subscription": True, "free_sample_count": 2, "display_order": 9, "world_id": "regioes_brasil", "block_id": "regioes"},
     {"id": "cultura_pop", "challenge_type": "cultura_pop", "requires_subscription": True, "free_sample_count": 2, "display_order": 10, "world_id": "cultura_geral"},
     # V3.0.1 (V3.0.1_DESAFIO_CORES.md, aprovado 29/08/2026) — desafio de
     # atenção/velocidade de leitura (Stroop simplificado, sem
@@ -162,41 +184,41 @@ TERRITORIES = [
     # mais nichado) vira 3 territórios sob o bloco "mitologia", em vez de
     # cadência de dificuldade dentro de um único território — mesmo
     # padrão de "regioes" (um bloco pode ter 1+ território).
-    {"id": "mitologia_grega", "challenge_type": "mitologia_grega", "requires_subscription": True, "free_sample_count": 2, "display_order": 12, "world_id": "cultura_geral", "block_id": "mitologia"},
-    {"id": "mitologia_nordica", "challenge_type": "mitologia_nordica", "requires_subscription": True, "free_sample_count": 2, "display_order": 13, "world_id": "cultura_geral", "block_id": "mitologia"},
-    {"id": "mitologia_indigena", "challenge_type": "mitologia_indigena", "requires_subscription": True, "free_sample_count": 2, "display_order": 14, "world_id": "cultura_geral", "block_id": "mitologia"},
+    {"id": "mitologia_grega", "challenge_type": "mitologia_grega", "requires_subscription": True, "free_sample_count": 2, "display_order": 12, "world_id": "mitologia", "block_id": "mitologia"},
+    {"id": "mitologia_nordica", "challenge_type": "mitologia_nordica", "requires_subscription": True, "free_sample_count": 2, "display_order": 13, "world_id": "mitologia", "block_id": "mitologia"},
+    {"id": "mitologia_indigena", "challenge_type": "mitologia_indigena", "requires_subscription": True, "free_sample_count": 2, "display_order": 14, "world_id": "mitologia", "block_id": "mitologia"},
     # ENEM — "dividido por matéria" (doc §3), Redação fica de fora
     # (V3.4). 4 territórios sob o bloco "enem" (já existia vazio em
     # BLOCKS desde BLOCOS_MENUS.md).
-    {"id": "enem_linguagens", "challenge_type": "enem_linguagens", "requires_subscription": True, "free_sample_count": 2, "display_order": 15, "world_id": "cultura_geral", "block_id": "enem"},
-    {"id": "enem_humanas", "challenge_type": "enem_humanas", "requires_subscription": True, "free_sample_count": 2, "display_order": 16, "world_id": "cultura_geral", "block_id": "enem"},
-    {"id": "enem_natureza", "challenge_type": "enem_natureza", "requires_subscription": True, "free_sample_count": 2, "display_order": 17, "world_id": "cultura_geral", "block_id": "enem"},
-    {"id": "enem_matematica", "challenge_type": "enem_matematica", "requires_subscription": True, "free_sample_count": 2, "display_order": 18, "world_id": "cultura_geral", "block_id": "enem"},
+    {"id": "enem_linguagens", "challenge_type": "enem_linguagens", "requires_subscription": True, "free_sample_count": 2, "display_order": 15, "world_id": "enem", "block_id": "enem"},
+    {"id": "enem_humanas", "challenge_type": "enem_humanas", "requires_subscription": True, "free_sample_count": 2, "display_order": 16, "world_id": "enem", "block_id": "enem"},
+    {"id": "enem_natureza", "challenge_type": "enem_natureza", "requires_subscription": True, "free_sample_count": 2, "display_order": 17, "world_id": "enem", "block_id": "enem"},
+    {"id": "enem_matematica", "challenge_type": "enem_matematica", "requires_subscription": True, "free_sample_count": 2, "display_order": 18, "world_id": "enem", "block_id": "enem"},
     # Concursos (doc §4) — Português, Raciocínio Lógico, Direito/
     # Cidadania básica. "Atualidades" fica de fora por enquanto (doc:
     # "somente com filtro forte pra fatos consolidados" — decisão de
     # incluir ou não fica com Rhoney na hora de curar, não é um
     # território à parte aqui). 3 territórios sob o bloco "concursos"
     # (já existia vazio em BLOCKS).
-    {"id": "concursos_portugues", "challenge_type": "concursos_portugues", "requires_subscription": True, "free_sample_count": 2, "display_order": 19, "world_id": "cultura_geral", "block_id": "concursos"},
-    {"id": "concursos_raciocinio", "challenge_type": "concursos_raciocinio", "requires_subscription": True, "free_sample_count": 2, "display_order": 20, "world_id": "cultura_geral", "block_id": "concursos"},
-    {"id": "concursos_direito", "challenge_type": "concursos_direito", "requires_subscription": True, "free_sample_count": 2, "display_order": 21, "world_id": "cultura_geral", "block_id": "concursos"},
+    {"id": "concursos_portugues", "challenge_type": "concursos_portugues", "requires_subscription": True, "free_sample_count": 2, "display_order": 19, "world_id": "concursos", "block_id": "concursos"},
+    {"id": "concursos_raciocinio", "challenge_type": "concursos_raciocinio", "requires_subscription": True, "free_sample_count": 2, "display_order": 20, "world_id": "concursos", "block_id": "concursos"},
+    {"id": "concursos_direito", "challenge_type": "concursos_direito", "requires_subscription": True, "free_sample_count": 2, "display_order": 21, "world_id": "concursos", "block_id": "concursos"},
     # V3.2 (V3.2_TECNOLOGIA.md, aprovado) — só estrutura; conteúdo
     # (Relâmpago e Pausa para Aprender) é curadoria manual de Rhoney via
     # backend/content/*.json (RISKS_AND_OPEN_DECISIONS.md §2). Ordem de
     # apresentação já reflete a cadência do doc (§2): Fundamentos →
     # Programação/Lógica → Segurança Digital → Fronteira (avançado).
-    {"id": "tecnologia_fundamentos", "challenge_type": "tecnologia_fundamentos", "requires_subscription": True, "free_sample_count": 2, "display_order": 22, "world_id": "cultura_geral", "block_id": "tecnologia"},
-    {"id": "tecnologia_programacao", "challenge_type": "tecnologia_programacao", "requires_subscription": True, "free_sample_count": 2, "display_order": 23, "world_id": "cultura_geral", "block_id": "tecnologia"},
-    {"id": "tecnologia_seguranca", "challenge_type": "tecnologia_seguranca", "requires_subscription": True, "free_sample_count": 2, "display_order": 24, "world_id": "cultura_geral", "block_id": "tecnologia"},
-    {"id": "tecnologia_fronteira", "challenge_type": "tecnologia_fronteira", "requires_subscription": True, "free_sample_count": 2, "display_order": 25, "world_id": "cultura_geral", "block_id": "tecnologia"},
+    {"id": "tecnologia_fundamentos", "challenge_type": "tecnologia_fundamentos", "requires_subscription": True, "free_sample_count": 2, "display_order": 22, "world_id": "tecnologia", "block_id": "tecnologia"},
+    {"id": "tecnologia_programacao", "challenge_type": "tecnologia_programacao", "requires_subscription": True, "free_sample_count": 2, "display_order": 23, "world_id": "tecnologia", "block_id": "tecnologia"},
+    {"id": "tecnologia_seguranca", "challenge_type": "tecnologia_seguranca", "requires_subscription": True, "free_sample_count": 2, "display_order": 24, "world_id": "tecnologia", "block_id": "tecnologia"},
+    {"id": "tecnologia_fronteira", "challenge_type": "tecnologia_fronteira", "requires_subscription": True, "free_sample_count": 2, "display_order": 25, "world_id": "tecnologia", "block_id": "tecnologia"},
     # V3.3 (V3.3_VIDA_PRATICA_PENSAMENTO.md, aprovado) — só estrutura;
     # conteúdo é curadoria manual de Rhoney via backend/content/*.json
     # (RISKS_AND_OPEN_DECISIONS.md §2). Saúde e Bem-estar pede "cautela
     # redobrada" (§5 do doc) — sem orientação prescritiva de dieta/
     # exercício/saúde, só curiosidade factual; isso é responsabilidade de
     # quem curar, não uma trava técnica aqui.
-    {"id": "financas_pessoais", "challenge_type": "financas_pessoais", "requires_subscription": True, "free_sample_count": 2, "display_order": 26, "world_id": "cultura_geral", "block_id": "financas_pessoais"},
+    {"id": "financas_pessoais", "challenge_type": "financas_pessoais", "requires_subscription": True, "free_sample_count": 2, "display_order": 26, "world_id": "valores", "block_id": "financas_pessoais"},
     {"id": "filosofia", "challenge_type": "filosofia", "requires_subscription": True, "free_sample_count": 2, "display_order": 27, "world_id": "cultura_geral", "block_id": "filosofia"},
     {"id": "artes", "challenge_type": "artes", "requires_subscription": True, "free_sample_count": 2, "display_order": 28, "world_id": "cultura_geral", "block_id": "artes"},
     {"id": "saude_bemestar", "challenge_type": "saude_bemestar", "requires_subscription": True, "free_sample_count": 2, "display_order": 29, "world_id": "cultura_geral", "block_id": "saude_bemestar"},
@@ -205,7 +227,7 @@ TERRITORIES = [
     # seguindo os 4 testes de qualidade do doc (óbvio/revelação/
     # familiaridade/sem ambiguidade) antes de qualquer charada entrar.
     {"id": "curiosidade_relampago", "challenge_type": "curiosidade_relampago", "requires_subscription": True, "free_sample_count": 2, "display_order": 30, "world_id": "cultura_geral", "block_id": "curiosidade_relampago"},
-    {"id": "libras", "challenge_type": "libras", "requires_subscription": True, "free_sample_count": 2, "display_order": 31, "world_id": "cultura_geral", "block_id": "libras"},
+    {"id": "libras", "challenge_type": "libras", "requires_subscription": True, "free_sample_count": 2, "display_order": 31, "world_id": "idiomas", "block_id": "libras"},
     {"id": "caca_palavras", "challenge_type": "caca_palavras", "requires_subscription": True, "free_sample_count": 1, "display_order": 32, "world_id": "cultura_geral", "block_id": "jogos_de_palavras"},
     # V4 — Invenções, Grandes Construções e Como Surge uma Ideia
     # (V4/V4_NOVOS_TERRITORIOS.md §1). Primeiro dos 5 territórios novos

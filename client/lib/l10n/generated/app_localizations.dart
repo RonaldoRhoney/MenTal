@@ -208,10 +208,10 @@ abstract class AppLocalizations {
   /// **'Esportes'**
   String get territoryEsportes;
 
-  /// Territory display name
+  /// Territory display name — renomeado 07/09/2026 (DESMEMBRAMENTO_CULTURA_GERAL_V1.md): este território migrou pro Mundo das Regiões do Brasil, mas suas 15 perguntas são sobre gírias/expressões regionais (não divididas por região), então ganhou nome próprio pra não colidir com o nome do Mundo
   ///
   /// In pt, this message translates to:
-  /// **'Regiões'**
+  /// **'Gírias e Expressões'**
   String get territoryRegioes;
 
   /// Territory display name

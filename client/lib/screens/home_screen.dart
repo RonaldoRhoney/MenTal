@@ -453,6 +453,19 @@ class _HomeScreenState extends State<HomeScreen> {
         return Icons.volunteer_activism_rounded;
       case 'transito':
         return Icons.traffic_rounded;
+      // DESMEMBRAMENTO_CULTURA_GERAL_V1.md (07/09/2026).
+      case 'esportes':
+        return Icons.sports_soccer_rounded;
+      case 'mitologia':
+        return Icons.castle_rounded;
+      case 'enem':
+        return Icons.school_rounded;
+      case 'concursos':
+        return Icons.gavel_rounded;
+      case 'tecnologia':
+        return Icons.memory_rounded;
+      case 'regioes_brasil':
+        return Icons.map_rounded;
       default:
         return Icons.travel_explore_rounded;
     }

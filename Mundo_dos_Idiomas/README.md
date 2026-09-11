@@ -5,6 +5,12 @@ migração aplicada, 520 desafios carregados, backend deployado, testado
 no dispositivo real (pergunta de vocabulário + desafio de tradução com
 `accepted_answers`, XP concedido corretamente, sem crash).
 
+**Atualização 07/09/2026** (`DESMEMBRAMENTO_CULTURA_GERAL_V1.md`): o
+território `libras` migrou pra cá, vindo do Mundo da Cultura Geral —
+combina melhor aqui (Idiomas) do que no balaio genérico de Cultura
+Geral. Pura reorganização de agrupamento, conteúdo/progresso
+inalterados.
+
 ## Mundo dos Idiomas — arquitetura implementada em 04/09/2026
 
 - 9 territórios (não um só "idiomas" com sub-navegação): `ingles_basico`,

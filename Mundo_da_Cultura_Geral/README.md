@@ -1,13 +1,20 @@
 # Mundo da Cultura Geral
 
-**Status:** Em produção. Territórios: `esportes`, `regioes`, `cultura_pop`,
-`mitologia_grega`, `mitologia_nordica`, `mitologia_indigena`,
-`enem_linguagens`, `enem_humanas`, `enem_natureza`, `enem_matematica`,
-`concursos_portugues`, `concursos_raciocinio`, `concursos_direito`,
-`tecnologia_fundamentos`, `tecnologia_programacao`,
-`tecnologia_seguranca`, `tecnologia_fronteira`, `financas_pessoais`,
-`filosofia`, `artes`, `saude_bemestar`, `curiosidade_relampago`,
-`libras`, `caca_palavras` (`app/seed.py`, World `cultura_geral`).
+**Status:** Em produção. Desmembrado em 07/09/2026
+(`DESMEMBRAMENTO_CULTURA_GERAL_V1.md`, raiz do repo) — reunia
+territórios de naturezas muito diferentes num único balaio genérico.
+Territórios que **permanecem** aqui: `cultura_pop`, `filosofia`,
+`artes`, `saude_bemestar`, `curiosidade_relampago`, `caca_palavras`
+(`app/seed.py`, World `cultura_geral`).
+
+Territórios que **migraram** pra Mundos próprios: `esportes` →
+`Mundo_dos_Esportes/`, `regioes` → `Mundo_das_Regioes_do_Brasil/`,
+mitologia (3 territórios) → `Mundo_da_Mitologia/`, ENEM (4) →
+`Mundo_do_ENEM/`, Concursos (3) → `Mundo_dos_Concursos/`, Tecnologia
+(4) → `Mundo_da_Tecnologia/`. `libras` migrou pra `Mundo_dos_Idiomas/`
+e `financas_pessoais` pra `Mundo_dos_Valores/` (Mundos já existentes
+que combinam melhor com eles). Pura reorganização de agrupamento —
+nenhum conteúdo foi alterado/removido, nenhum XP/progresso afetado.
 
 Docs de conteúdo/arquitetura movidos pra esta pasta em 06/09/2026
 (pedido de Rhoney) — antes soltos em V3, organização espelhando os

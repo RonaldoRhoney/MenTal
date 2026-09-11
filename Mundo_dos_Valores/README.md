@@ -5,6 +5,13 @@ educação financeira/economia, nunca aconselhamento de investimento (ver
 `FOUNDATION/POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md` e o campo
 `meta.principio` de cada arquivo `mundo_dos_valores_*.json` desta pasta).
 
+**Atualização 07/09/2026** (`DESMEMBRAMENTO_CULTURA_GERAL_V1.md`): o
+território `financas_pessoais` migrou pra cá, vindo do Mundo da
+Cultura Geral — combina melhor aqui (Valores) do que no balaio
+genérico de Cultura Geral. Coexiste com `financas_dia_a_dia`
+(território já existente aqui, foco diferente) sem conflito. Pura
+reorganização de agrupamento, conteúdo/progresso inalterados.
+
 ## Arquitetura implementada em 05/09/2026
 
 Decisão confirmada com Rhoney: o formato "cápsula de texto + perguntas"
