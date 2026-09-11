@@ -395,9 +395,20 @@ RATE_LIMIT_BATTLE_MY_CHALLENGE = (20, 60.0)
 RATE_LIMIT_MOVEMENT_COLLECT = (30, 60.0)
 RATE_LIMIT_WORD_PUZZLE_COMPLETE = (10, 60.0)
 RATE_LIMIT_LEARNING_PAUSE_COMPLETE = (10, 60.0)
+# Achados 2.1/2.2 da AUDITORIA_COMPLETA_PRE_PRODUCAO_V1.md (11/09/2026):
+# /social/report e /profile/{id}/follow não tinham nenhum limite —
+# flood de denúncia contra um alvo, ou de solicitações de follow.
+RATE_LIMIT_REPORT = (10, 60.0)
+RATE_LIMIT_FOLLOW = (30, 60.0)
 
 TORCIDA_DAILY_LIMIT_PER_TARGET = 10
 TORCIDA_REACTION_TYPES = ("vibracao", "balao", "coracao", "joinha")
+
+# Achado 2.1 da auditoria (11/09/2026): mesmo raciocínio de teto diário
+# por (denunciante, denunciado) já usado em Torcida — sem isso, um
+# usuário sozinho pode fazer a fila de GET /admin/reports virar ruído
+# só denunciando a mesma pessoa repetidamente.
+REPORT_DAILY_LIMIT_PER_TARGET = 5
 
 # Pedido de Rhoney (05/09/2026) — convite pra ligar o Movimento, mesma
 # área do Perfil Público. Teto BEM mais baixo que Torcida de propósito:

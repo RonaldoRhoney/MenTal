@@ -52,6 +52,12 @@ def follow_user(db: Session, follower_id: str, followed_id: str) -> models.Follo
         return None
     if is_blocked_either_way(db, follower_id, followed_id):
         return None
+    # Achado de auditoria de segurança 2.2 (11/09/2026): sem essa
+    # checagem, POST /profile/{id}/follow aceitava qualquer uuid como
+    # alvo (a tabela mental.follows não tinha FK até a migration 071),
+    # permitindo poluir a tabela com follows pra usuários inexistentes.
+    if db.get(models.Profile, followed_id) is None:
+        return None
     existing = db.execute(
         select(models.Follow).where(
             models.Follow.follower_user_id == follower_id,

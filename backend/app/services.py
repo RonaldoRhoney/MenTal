@@ -1423,6 +1423,23 @@ def delete_account(db: Session, user_id: str) -> bool:
 
 
 def create_report(db: Session, reporter_user_id: str, reported_user_id: str, reason: str) -> models.Report:
+    """Achado de auditoria de segurança 2.1 (11/09/2026): sem teto,
+    /social/report permitia flood de denúncias contra um único alvo —
+    mesmo raciocínio de limite diário por (remetente, destinatário) já
+    usado em Torcida (config.TORCIDA_DAILY_LIMIT_PER_TARGET)."""
+    today_start = naive(datetime.combine(utcnow().date(), datetime.min.time()))
+    reported_today = db.execute(
+        select(func.count())
+        .select_from(models.Report)
+        .where(
+            models.Report.reporter_user_id == reporter_user_id,
+            models.Report.reported_user_id == reported_user_id,
+            models.Report.created_at >= today_start,
+        )
+    ).scalar_one()
+    if reported_today >= config.REPORT_DAILY_LIMIT_PER_TARGET:
+        raise PublicProfileError("REPORT_DAILY_LIMIT_REACHED", "Limite diário de denúncia pra esta pessoa atingido.")
+
     report = models.Report(reporter_user_id=reporter_user_id, reported_user_id=reported_user_id, reason=reason)
     db.add(report)
     db.commit()

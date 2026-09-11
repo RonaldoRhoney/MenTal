@@ -11,6 +11,8 @@ certo (e só nesse momento — nunca repetido/prematuro).
 import uuid
 from datetime import date, timedelta
 
+from sqlalchemy import select
+
 from app import config, models
 from app.db import SessionLocal
 from app.seed import CHALLENGES
@@ -77,6 +79,33 @@ def test_unfollow_is_free_and_does_not_notify(client):
 
     profile = client.get(f"/profile/{b}/public", headers=headers_a).json()
     assert profile["is_following_by_me"] is False
+
+
+def test_follow_nonexistent_user_does_not_create_a_row(client):
+    """Achado de auditoria de segurança 2.2 (11/09/2026): sem essa
+    checagem, POST /profile/{id}/follow inseria uma linha em
+    mental.follows pra qualquer uuid, mesmo sem Profile correspondente —
+    vetor barato de poluição da tabela."""
+    from app import models
+    from app.db import SessionLocal
+
+    a = str(uuid.uuid4())
+    nonexistent = str(uuid.uuid4())
+    headers_a = auth_header(a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+
+    resp = client.post(f"/profile/{nonexistent}/follow", headers=headers_a)
+    assert resp.status_code == 200
+    assert resp.json()["following"] is False
+
+    with SessionLocal() as db:
+        row = db.execute(
+            select(models.Follow).where(
+                models.Follow.follower_user_id == a,
+                models.Follow.followed_user_id == nonexistent,
+            )
+        ).scalar_one_or_none()
+        assert row is None
 
 
 def test_block_prevents_new_follow_and_removes_existing_follow_both_ways(client):

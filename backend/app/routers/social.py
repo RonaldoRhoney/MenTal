@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import mentalcoins, models, schemas, services
+from .. import config, mentalcoins, models, schemas, services
 from ..auth import get_current_user_id, require_age_confirmed_user_id
 from ..db import get_db
 
@@ -261,7 +261,11 @@ def report_user(
 ):
     if body.reported_user_id == user_id:
         raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_REPORT_SELF", "message": "Não é possível se autodenunciar."}})
-    services.create_report(db, reporter_user_id=user_id, reported_user_id=body.reported_user_id, reason=body.reason)
+    services.enforce_rate_limit("social_report", user_id, max_calls=config.RATE_LIMIT_REPORT[0], window_seconds=config.RATE_LIMIT_REPORT[1])
+    try:
+        services.create_report(db, reporter_user_id=user_id, reported_user_id=body.reported_user_id, reason=body.reason)
+    except services.PublicProfileError as e:
+        raise HTTPException(status_code=429, detail={"error": {"code": e.code, "message": e.message}})
     return {"status": "reported"}
 
 

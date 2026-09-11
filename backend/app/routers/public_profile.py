@@ -16,7 +16,7 @@ existe pra convite de amigo e tem sua própria restrição dedicada.
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from .. import schemas, services
+from .. import config, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 
@@ -80,6 +80,7 @@ def follow_user(
     princípio não-revelador já usado em USER_NOT_FOUND de bloqueio no
     perfil público) — já seguir também cai aqui (idempotente pro
     resultado que o client vê: seguindo=true)."""
+    services.enforce_rate_limit("profile_follow", user_id, max_calls=config.RATE_LIMIT_FOLLOW[0], window_seconds=config.RATE_LIMIT_FOLLOW[1])
     services.follow_user(db, follower_id=user_id, followed_id=target_user_id)
     return schemas.FollowResponse(
         following=services.is_following(db, user_id, target_user_id),

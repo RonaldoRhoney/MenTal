@@ -53,6 +53,35 @@ def test_cannot_report_self(client):
     assert resp.json()["error"]["code"] == "CANNOT_REPORT_SELF"
 
 
+def test_report_daily_limit_per_target_is_enforced(client):
+    """Achado de auditoria de segurança 2.1 (11/09/2026): sem teto,
+    a mesma pessoa podia ser denunciada repetidas vezes pelo mesmo
+    denunciante, virando ruído na fila de GET /admin/reports."""
+    from app import config
+
+    reporter = str(uuid.uuid4())
+    reported = str(uuid.uuid4())
+    reporter_headers = auth_header(reporter)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=reporter_headers)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=auth_header(reported))
+
+    for _ in range(config.REPORT_DAILY_LIMIT_PER_TARGET):
+        resp = client.post(
+            "/social/report",
+            json={"reported_user_id": reported, "reason": "teste"},
+            headers=reporter_headers,
+        )
+        assert resp.status_code == 200
+
+    resp = client.post(
+        "/social/report",
+        json={"reported_user_id": reported, "reason": "mais um"},
+        headers=reporter_headers,
+    )
+    assert resp.status_code == 429
+    assert resp.json()["error"]["code"] == "REPORT_DAILY_LIMIT_REACHED"
+
+
 def test_admin_reports_endpoint_requires_admin_role(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
