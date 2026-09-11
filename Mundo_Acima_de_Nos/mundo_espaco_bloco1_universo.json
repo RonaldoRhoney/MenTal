@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "bloco": "mundo_acima_de_nos",
+    "tema": "o_universo_e_o_sistema_solar",
+    "fase": "V-Espaco",
+    "numero_bloco": 1,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "estrutura_geral_do_mundo": "5 blocos: 1) O Universo e o Sistema Solar, 2) Os Planetas, 3) Estrelas Buracos Negros e Fenomenos Extremos, 4) Exploracao Espacial, 5) O Brasil no Espaco",
+    "checagem_direitos_autorais": "Fontes consultadas antes da redacao (Big Bang, idade do universo, numero de galaxias, ano-luz, colisao Via Lactea-Andromeda, origem dos elementos quimicos). Todo o texto foi reescrito integralmente com palavras proprias - nenhuma reproducao literal de nenhuma fonte.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo cientifico neutro."
+  },
+  "capsulas": [
+    {
+      "id": "espaco-universo-01",
+      "titulo": "O que é o Big Bang?",
+      "texto": "O Big Bang é a teoria científica mais amplamente aceita para explicar a origem do universo, segundo a qual tudo que existe hoje começou a partir de um estado extremamente denso e quente, que passou por uma expansão acelerada. A partir desse momento inicial, o universo continuou se expandindo e esfriando ao longo de bilhões de anos, permitindo o surgimento gradual dos primeiros elementos químicos, depois das primeiras estrelas, e eventualmente das galáxias que observamos hoje.",
+      "perguntas": [
+        {
+          "pergunta": "O que é o Big Bang, segundo o texto?",
+          "opcoes": [
+            "A teoria mais aceita para explicar a origem do universo",
+            "Um evento que aconteceu apenas na Via Láctea",
+            "Uma explosão que ainda está ocorrendo hoje na Terra",
+            "Um fenômeno observado apenas em outros sistemas solares"
+          ],
+          "resposta_correta": "A teoria mais aceita para explicar a origem do universo"
+        },
+        {
+          "pergunta": "Como era o estado inicial do universo, segundo a teoria do Big Bang?",
+          "opcoes": [
+            "Extremamente denso e quente",
+            "Frio e vazio, sem nenhuma matéria",
+            "Já organizado em galáxias completas",
+            "Idêntico ao universo atual"
+          ],
+          "resposta_correta": "Extremamente denso e quente"
+        },
+        {
+          "pergunta": "O que aconteceu com o universo ao longo de bilhões de anos após esse momento inicial, segundo o texto?",
+          "opcoes": [
+            "Continuou se expandindo e esfriando, permitindo o surgimento de estrelas e galáxias",
+            "Parou de se expandir imediatamente",
+            "Voltou a se contrair até desaparecer",
+            "Permaneceu exatamente do mesmo tamanho"
+          ],
+          "resposta_correta": "Continuou se expandindo e esfriando, permitindo o surgimento de estrelas e galáxias"
+        }
+      ]
+    },
+    {
+      "id": "espaco-universo-02",
+      "titulo": "Qual é a idade do universo?",
+      "texto": "Com base em observações astronômicas e cálculos sobre a taxa de expansão do cosmos, cientistas estimam que o universo tenha aproximadamente 13,8 bilhões de anos. Essa estimativa é obtida através de diferentes métodos independentes, incluindo a análise da luz mais antiga já detectada (um tipo de radiação remanescente do próprio universo primitivo) e o estudo de como as galáxias se afastam umas das outras ao longo do tempo — o fato de métodos diferentes chegarem a números próximos reforça a confiança dos cientistas nessa estimativa.",
+      "perguntas": [
+        {
+          "pergunta": "Qual é a idade estimada do universo, segundo o texto?",
+          "opcoes": [
+            "Aproximadamente 13,8 bilhões de anos",
+            "Aproximadamente 1 milhão de anos",
+            "Aproximadamente 500 mil anos",
+            "Aproximadamente 100 bilhões de anos"
+          ],
+          "resposta_correta": "Aproximadamente 13,8 bilhões de anos"
+        },
+        {
+          "pergunta": "Cite um dos métodos usados para estimar a idade do universo, segundo o texto.",
+          "opcoes": [
+            "Análise da luz mais antiga já detectada",
+            "Contagem manual de estrelas visíveis a olho nu",
+            "Medição da temperatura da Lua",
+            "Análise de rochas encontradas na Terra"
+          ],
+          "resposta_correta": "Análise da luz mais antiga já detectada"
+        },
+        {
+          "pergunta": "O que reforça a confiança dos cientistas nessa estimativa de idade, segundo o texto?",
+          "opcoes": [
+            "Métodos independentes diferentes chegam a números próximos",
+            "Apenas um único cientista já calculou esse valor",
+            "A estimativa nunca foi verificada de nenhuma forma",
+            "Todos os métodos usados são exatamente idênticos entre si"
+          ],
+          "resposta_correta": "Métodos independentes diferentes chegam a números próximos"
+        }
+      ]
+    },
+    {
+      "id": "espaco-universo-03",
+      "titulo": "Quantas galáxias existem no universo?",
+      "texto": "Estimativas baseadas em observações de telescópios espaciais, como o Telescópio Espacial Hubble, sugerem que o universo observável pode conter mais de um trilhão de galáxias, cada uma composta por bilhões de estrelas. Esse número, embora impressionante, se refere apenas à parte do universo que conseguimos observar a partir da Terra — a chamada 'universo observável' — já que a luz de regiões mais distantes ainda não teve tempo suficiente para chegar até nós desde o início do universo.",
+      "perguntas": [
+        {
+          "pergunta": "Quantas galáxias, aproximadamente, estimativas recentes sugerem que existam no universo observável?",
+          "opcoes": [
+            "Mais de um trilhão",
+            "Apenas cerca de mil",
+            "Exatamente cem",
+            "Menos de dez mil"
+          ],
+          "resposta_correta": "Mais de um trilhão"
+        },
+        {
+          "pergunta": "Qual telescópio é mencionado no texto como base para essas estimativas?",
+          "opcoes": [
+            "Telescópio Espacial Hubble",
+            "Telescópio de Galileu",
+            "Radiotelescópio de Arecibo",
+            "Telescópio óptico terrestre comum"
+          ],
+          "resposta_correta": "Telescópio Espacial Hubble"
+        },
+        {
+          "pergunta": "Por que o número de galáxias se refere apenas ao 'universo observável', segundo o texto?",
+          "opcoes": [
+            "A luz de regiões mais distantes ainda não teve tempo de chegar até nós",
+            "Porque o restante do universo simplesmente não existe",
+            "Porque telescópios não conseguem captar nenhuma luz",
+            "Porque as demais galáxias já deixaram de existir"
+          ],
+          "resposta_correta": "A luz de regiões mais distantes ainda não teve tempo de chegar até nós"
+        }
+      ]
+    },
+    {
+      "id": "espaco-universo-04",
+      "titulo": "O universo tem um centro?",
+      "texto": "Embora possa parecer, observando galáxias se afastando em todas as direções, que a Terra estaria no centro do universo, essa mesma observação seria feita de qualquer outro ponto do universo — um efeito comparável ao de pontos desenhados na superfície de um balão sendo inflado, que se afastam uns dos outros sem que nenhum ponto específico seja o 'centro' da expansão. Por isso, cientistas afirmam que o universo, da forma como é observado, não possui um centro nem uma borda identificável.",
+      "perguntas": [
+        {
+          "pergunta": "A Terra está de fato no centro do universo, segundo o texto?",
+          "opcoes": [
+            "Não, a mesma observação seria feita de qualquer outro ponto do universo",
+            "Sim, é uma posição cientificamente comprovada",
+            "Sim, mas apenas durante certas épocas do ano",
+            "Não, o centro real está na Via Láctea"
+          ],
+          "resposta_correta": "Não, a mesma observação seria feita de qualquer outro ponto do universo"
+        },
+        {
+          "pergunta": "A que efeito o texto compara a expansão do universo?",
+          "opcoes": [
+            "Pontos desenhados na superfície de um balão sendo inflado",
+            "Uma pedra jogada num lago parado",
+            "Um trem se movendo em linha reta",
+            "Um relógio marcando as horas"
+          ],
+          "resposta_correta": "Pontos desenhados na superfície de um balão sendo inflado"
+        },
+        {
+          "pergunta": "O que cientistas afirmam sobre o universo, segundo o texto?",
+          "opcoes": [
+            "Não possui um centro nem uma borda identificável",
+            "Tem um centro exato já localizado por satélites",
+            "Possui uma borda física visível a telescópios comuns",
+            "É menor do que o próprio Sistema Solar"
+          ],
+          "resposta_correta": "Não possui um centro nem uma borda identificável"
+        }
+      ]
+    },
+    {
+      "id": "espaco-universo-05",
+      "titulo": "O Sistema Solar em perspectiva de escala",
+      "texto": "O Sistema Solar é formado pelo Sol e por todos os corpos celestes que giram ao seu redor por influência de sua gravidade, incluindo planetas, luas, asteroides e cometas. Apesar de parecer imenso em termos humanos, o Sistema Solar é extremamente pequeno em comparação com a própria galáxia em que está inserido, a Via Láctea, que por sua vez é apenas uma entre bilhões de galáxias espalhadas por todo o universo observável — uma sequência de escalas que ajuda a dimensionar o tamanho real do cosmos.",
+      "perguntas": [
+        {
+          "pergunta": "Do que o Sistema Solar é formado, segundo o texto?",
+          "opcoes": [
+            "O Sol e todos os corpos celestes que giram ao seu redor por gravidade",
+            "Apenas os oito planetas, sem mais nenhum corpo celeste",
+            "Exclusivamente estrelas visíveis a olho nu",
+            "Somente a Terra e a Lua"
+          ],
+          "resposta_correta": "O Sol e todos os corpos celestes que giram ao seu redor por gravidade"
+        },
+        {
+          "pergunta": "Como o Sistema Solar se compara em tamanho à Via Láctea, segundo o texto?",
+          "opcoes": [
+            "É extremamente pequeno em comparação",
+            "É praticamente do mesmo tamanho",
+            "É maior do que a própria galáxia",
+            "Não existe nenhuma relação de escala entre os dois"
+          ],
+          "resposta_correta": "É extremamente pequeno em comparação"
+        },
+        {
+          "pergunta": "O que a Via Láctea representa dentro do universo observável, segundo o texto?",
+          "opcoes": [
+            "Apenas uma entre bilhões de galáxias",
+            "A única galáxia existente no universo",
+            "O centro absoluto de todo o universo",
+            "Uma exceção sem nenhuma outra galáxia parecida"
+          ],
+          "resposta_correta": "Apenas uma entre bilhões de galáxias"
+        }
+      ]
+    },
+    {
+      "id": "espaco-universo-06",
+      "titulo": "O que é um ano-luz?",
+      "texto": "Ano-luz é uma unidade de medida de distância, não de tempo, usada para descrever distâncias astronômicas muito grandes. Um ano-luz corresponde à distância que a luz percorre viajando durante um ano inteiro, considerando que a luz se desloca a uma velocidade extremamente alta e constante. Usar quilômetros para medir distâncias entre estrelas ou galáxias resultaria em números tão grandes que se tornariam pouco práticos, por isso os astrônomos preferem o ano-luz como unidade de referência para essas escalas.",
+      "perguntas": [
+        {
+          "pergunta": "O ano-luz é uma unidade de medida de quê, segundo o texto?",
+          "opcoes": [
+            "Distância, não de tempo",
+            "Tempo, não de distância",
+            "Temperatura de estrelas",
+            "Massa de planetas"
+          ],
+          "resposta_correta": "Distância, não de tempo"
+        },
+        {
+          "pergunta": "A que corresponde um ano-luz, segundo o texto?",
+          "opcoes": [
+            "À distância que a luz percorre viajando durante um ano inteiro",
+            "Ao tempo que um planeta leva para orbitar o Sol",
+            "À distância entre a Terra e a Lua",
+            "Ao tempo de vida médio de uma estrela"
+          ],
+          "resposta_correta": "À distância que a luz percorre viajando durante um ano inteiro"
+        },
+        {
+          "pergunta": "Por que os astrônomos preferem usar o ano-luz em vez de quilômetros para grandes distâncias, segundo o texto?",
+          "opcoes": [
+            "Porque em quilômetros os números seriam pouco práticos de trabalhar",
+            "Porque o quilômetro não é uma unidade reconhecida internacionalmente",
+            "Porque a luz não pode ser medida em quilômetros",
+            "Porque o ano-luz é uma unidade de tempo mais simples"
+          ],
+          "resposta_correta": "Porque em quilômetros os números seriam pouco práticos de trabalhar"
+        }
+      ]
+    },
+    {
+      "id": "espaco-universo-07",
+      "titulo": "A Via Láctea e sua rota de colisão futura",
+      "texto": "A Via Láctea, nossa galáxia, está em processo contínuo de interação gravitacional com galáxias vizinhas, incluindo a incorporação gradual de uma pequena galáxia próxima. Além disso, astrônomos estimam que, daqui a bilhões de anos, a Via Láctea deve colidir e eventualmente se fundir com a galáxia de Andrômeda, sua vizinha espiral mais próxima de tamanho comparável — um evento cósmico de escala imensa, mas que ocorre numa linha do tempo tão longa que não representa nenhum tipo de preocupação imediata.",
+      "perguntas": [
+        {
+          "pergunta": "Com qual galáxia a Via Láctea está prevista para colidir no futuro distante, segundo o texto?",
+          "opcoes": [
+            "Galáxia de Andrômeda",
+            "Galáxia do Triângulo",
+            "Nuvem de Magalhães",
+            "Galáxia do Sombrero"
+          ],
+          "resposta_correta": "Galáxia de Andrômeda"
+        },
+        {
+          "pergunta": "Em que escala de tempo essa colisão está prevista para ocorrer, segundo o texto?",
+          "opcoes": [
+            "Daqui a bilhões de anos",
+            "Nos próximos cem anos",
+            "Já está acontecendo neste exato momento de forma perceptível",
+            "Nunca vai acontecer, segundo consenso científico"
+          ],
+          "resposta_correta": "Daqui a bilhões de anos"
+        },
+        {
+          "pergunta": "O que o texto diz sobre a preocupação imediata em relação a esse evento?",
+          "opcoes": [
+            "Não representa nenhum tipo de preocupação imediata",
+            "É uma ameaça iminente para a humanidade atual",
+            "Já está causando efeitos visíveis na Terra",
+            "Deve acontecer dentro dos próximos dez anos"
+          ],
+          "resposta_correta": "Não representa nenhum tipo de preocupação imediata"
+        }
+      ]
+    },
+    {
+      "id": "espaco-universo-08",
+      "titulo": "De que os elementos do universo são feitos, originalmente?",
+      "texto": "Nos primeiros instantes após o Big Bang, o universo era composto principalmente por dois elementos químicos simples: hidrogênio e hélio, os mais leves e abundantes de toda a tabela periódica. Elementos mais pesados, como o carbono, o oxigênio e o ferro — essenciais, inclusive, para a formação de planetas e da própria vida como a conhecemos — só surgiram bilhões de anos depois, forjados no interior de estrelas ao longo de suas vidas e espalhados pelo espaço quando essas estrelas eventualmente explodiram.",
+      "perguntas": [
+        {
+          "pergunta": "Quais eram os dois elementos químicos principais logo após o Big Bang, segundo o texto?",
+          "opcoes": [
+            "Hidrogênio e hélio",
+            "Carbono e oxigênio",
+            "Ferro e ouro",
+            "Nitrogênio e enxofre"
+          ],
+          "resposta_correta": "Hidrogênio e hélio"
+        },
+        {
+          "pergunta": "Onde elementos mais pesados, como carbono e ferro, foram forjados, segundo o texto?",
+          "opcoes": [
+            "No interior de estrelas",
+            "Apenas na superfície de planetas rochosos",
+            "Exclusivamente na Terra",
+            "Em nuvens de poeira interestelar frias"
+          ],
+          "resposta_correta": "No interior de estrelas"
+        },
+        {
+          "pergunta": "Como esses elementos mais pesados foram espalhados pelo espaço, segundo o texto?",
+          "opcoes": [
+            "Quando as estrelas eventualmente explodiram",
+            "Através de meteoros que caíram na Terra",
+            "Por meio de radiação solar constante",
+            "Eles nunca saíram do interior das estrelas"
+          ],
+          "resposta_correta": "Quando as estrelas eventualmente explodiram"
+        }
+      ]
+    }
+  ]
+}

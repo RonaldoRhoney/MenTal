@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_acima_de_nos",
+    "tema": "exploracao_espacial",
+    "fase": "V-Espaco",
+    "numero_bloco": 4,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "checagem_direitos_autorais": "Fontes consultadas antes da redacao (Sputnik, Gagarin, Tereshkova, Apollo 11, onibus espacial, ISS, missoes a Marte, testes com animais). Todo o texto foi reescrito integralmente com palavras proprias - nenhuma reproducao literal de nenhuma fonte.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico factual; mencao a animais em testes espaciais tratada de forma factual e sem detalhe grafico de sofrimento."
+  },
+  "capsulas": [
+    {
+      "id": "espaco-exploracao-01",
+      "titulo": "O Sputnik e o início da Corrida Espacial",
+      "texto": "Em 4 de outubro de 1957, a União Soviética lançou o Sputnik 1, o primeiro satélite artificial da história a ser colocado em órbita ao redor da Terra. Apesar de sua função ser relativamente simples — basicamente emitir um sinal de rádio periódico —, o feito surpreendeu o mundo e marcou o início oficial da chamada Corrida Espacial, uma disputa tecnológica e política entre União Soviética e Estados Unidos que se estenderia por décadas, no contexto mais amplo da Guerra Fria.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano o Sputnik 1 foi lançado?",
+          "opcoes": [
+            "1957",
+            "1961",
+            "1969",
+            "1945"
+          ],
+          "resposta_correta": "1957"
+        },
+        {
+          "pergunta": "O que o Sputnik 1 representou na história da exploração espacial?",
+          "opcoes": [
+            "O primeiro satélite artificial colocado em órbita ao redor da Terra",
+            "A primeira nave tripulada enviada ao espaço",
+            "O primeiro pouso bem-sucedido na Lua",
+            "A primeira estação espacial permanente"
+          ],
+          "resposta_correta": "O primeiro satélite artificial colocado em órbita ao redor da Terra"
+        },
+        {
+          "pergunta": "O lançamento do Sputnik marcou o início oficial de qual disputa histórica, segundo o texto?",
+          "opcoes": [
+            "A Corrida Espacial entre União Soviética e Estados Unidos",
+            "A Segunda Guerra Mundial",
+            "A criação da União Europeia",
+            "A Revolução Industrial"
+          ],
+          "resposta_correta": "A Corrida Espacial entre União Soviética e Estados Unidos"
+        }
+      ]
+    },
+    {
+      "id": "espaco-exploracao-02",
+      "titulo": "Yuri Gagarin: o primeiro ser humano no espaço",
+      "texto": "Em 12 de abril de 1961, o cosmonauta soviético Yuri Gagarin se tornou o primeiro ser humano a viajar ao espaço, completando uma órbita ao redor da Terra a bordo da espaçonave Vostok 1, num voo que durou cerca de 108 minutos. Esse feito representou um marco histórico decisivo na Corrida Espacial, consolidando, naquele momento, uma vantagem soviética sobre os Estados Unidos, que conseguiriam colocar seu primeiro astronauta no espaço poucas semanas depois.",
+      "perguntas": [
+        {
+          "pergunta": "Quem foi o primeiro ser humano a viajar ao espaço?",
+          "opcoes": [
+            "Yuri Gagarin",
+            "Neil Armstrong",
+            "Alan Shepard",
+            "Buzz Aldrin"
+          ],
+          "resposta_correta": "Yuri Gagarin"
+        },
+        {
+          "pergunta": "Em que ano aconteceu esse voo histórico?",
+          "opcoes": [
+            "1961",
+            "1957",
+            "1969",
+            "1975"
+          ],
+          "resposta_correta": "1961"
+        },
+        {
+          "pergunta": "Qual foi o nome da espaçonave usada por Gagarin nesse voo?",
+          "opcoes": [
+            "Vostok 1",
+            "Apollo 11",
+            "Sputnik 1",
+            "Soyuz 1"
+          ],
+          "resposta_correta": "Vostok 1"
+        }
+      ]
+    },
+    {
+      "id": "espaco-exploracao-03",
+      "titulo": "Valentina Tereshkova: a primeira mulher no espaço",
+      "texto": "Em 1963, a cosmonauta soviética Valentina Tereshkova se tornou a primeira mulher a viajar ao espaço, marcando outro momento histórico da Corrida Espacial. Apesar desse feito pioneiro, levaria ainda cerca de duas décadas até que outra mulher fosse enviada ao espaço, o que reflete como, durante boa parte da história inicial da exploração espacial, os programas de ambos os países eram compostos majoritariamente por homens.",
+      "perguntas": [
+        {
+          "pergunta": "Quem foi a primeira mulher a viajar ao espaço?",
+          "opcoes": [
+            "Valentina Tereshkova",
+            "Sally Ride",
+            "Laika",
+            "Mae Jemison"
+          ],
+          "resposta_correta": "Valentina Tereshkova"
+        },
+        {
+          "pergunta": "Em que ano aconteceu esse voo histórico?",
+          "opcoes": [
+            "1963",
+            "1957",
+            "1969",
+            "1980"
+          ],
+          "resposta_correta": "1963"
+        },
+        {
+          "pergunta": "O que o texto destaca sobre o tempo até a próxima mulher ir ao espaço?",
+          "opcoes": [
+            "Levou cerca de duas décadas",
+            "Aconteceu no ano seguinte",
+            "Nunca mais aconteceu depois disso",
+            "Aconteceu na mesma semana"
+          ],
+          "resposta_correta": "Levou cerca de duas décadas"
+        }
+      ]
+    },
+    {
+      "id": "espaco-exploracao-04",
+      "titulo": "Apollo 11: o primeiro pouso humano na Lua",
+      "texto": "Em 20 de julho de 1969, a missão Apollo 11, da agência espacial americana NASA, realizou o primeiro pouso tripulado bem-sucedido na Lua. Neil Armstrong e Buzz Aldrin caminharam sobre a superfície lunar, enquanto Michael Collins permanecia em órbita lunar no módulo de comando. O feito foi transmitido ao vivo para uma audiência global estimada em centenas de milhões de pessoas, representando o ápice simbólico da Corrida Espacial e cumprindo uma meta estabelecida anos antes pelo governo americano.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano a missão Apollo 11 pousou na Lua?",
+          "opcoes": [
+            "1969",
+            "1961",
+            "1957",
+            "1975"
+          ],
+          "resposta_correta": "1969"
+        },
+        {
+          "pergunta": "Quais dois astronautas caminharam sobre a superfície lunar durante a Apollo 11?",
+          "opcoes": [
+            "Neil Armstrong e Buzz Aldrin",
+            "Yuri Gagarin e Alan Shepard",
+            "Michael Collins e Neil Armstrong",
+            "John Glenn e Buzz Aldrin"
+          ],
+          "resposta_correta": "Neil Armstrong e Buzz Aldrin"
+        },
+        {
+          "pergunta": "Quem permaneceu em órbita lunar durante a missão, sem descer à superfície?",
+          "opcoes": [
+            "Michael Collins",
+            "Buzz Aldrin",
+            "Yuri Gagarin",
+            "Alan Shepard"
+          ],
+          "resposta_correta": "Michael Collins"
+        }
+      ]
+    },
+    {
+      "id": "espaco-exploracao-05",
+      "titulo": "O programa do ônibus espacial americano",
+      "texto": "Em 1981, os Estados Unidos lançaram o Columbia, primeira espaçonave reutilizável do programa de ônibus espaciais da NASA, um avanço significativo em relação às cápsulas de uso único utilizadas em missões anteriores. Ao longo de décadas de operação, o programa contou com outras naves, como Challenger, Discovery, Atlantis e Endeavour, sendo fundamental para a construção e manutenção de estações espaciais em órbita, até ser oficialmente encerrado em 2011.",
+      "perguntas": [
+        {
+          "pergunta": "Qual foi a primeira espaçonave reutilizável do programa de ônibus espaciais da NASA?",
+          "opcoes": [
+            "Columbia",
+            "Discovery",
+            "Atlantis",
+            "Endeavour"
+          ],
+          "resposta_correta": "Columbia"
+        },
+        {
+          "pergunta": "Em que ano aconteceu o primeiro voo desse programa, segundo o texto?",
+          "opcoes": [
+            "1981",
+            "1969",
+            "1957",
+            "2000"
+          ],
+          "resposta_correta": "1981"
+        },
+        {
+          "pergunta": "Em que ano o programa de ônibus espaciais foi oficialmente encerrado, segundo o texto?",
+          "opcoes": [
+            "2011",
+            "1990",
+            "2020",
+            "2001"
+          ],
+          "resposta_correta": "2011"
+        }
+      ]
+    },
+    {
+      "id": "espaco-exploracao-06",
+      "titulo": "A Estação Espacial Internacional: cooperação acima da Terra",
+      "texto": "A Estação Espacial Internacional (ISS) é um laboratório orbital que resulta da cooperação entre diversos países, incluindo Estados Unidos, Rússia e nações da Europa, entre outros parceiros internacionais. Mantida continuamente ocupada por tripulações que se revezam ao longo de meses, a ISS permite a realização de experimentos científicos impossíveis de reproduzir na Terra, aproveitando as condições únicas de microgravidade, e é frequentemente citada como um exemplo de colaboração internacional bem-sucedida, mesmo entre países que historicamente tiveram relações políticas tensas.",
+      "perguntas": [
+        {
+          "pergunta": "O que é a Estação Espacial Internacional (ISS)?",
+          "opcoes": [
+            "Um laboratório orbital que resulta da cooperação entre diversos países",
+            "Um satélite de comunicação sem tripulação",
+            "Um telescópio espacial gigante",
+            "Uma base permanente na superfície da Lua"
+          ],
+          "resposta_correta": "Um laboratório orbital que resulta da cooperação entre diversos países"
+        },
+        {
+          "pergunta": "Cite dois países mencionados no texto como parceiros da ISS.",
+          "opcoes": [
+            "Estados Unidos e Rússia",
+            "Brasil e Argentina",
+            "China e Índia",
+            "Japão e Coreia do Sul"
+          ],
+          "resposta_correta": "Estados Unidos e Rússia"
+        },
+        {
+          "pergunta": "Por que a ISS é frequentemente citada como exemplo positivo, segundo o texto?",
+          "opcoes": [
+            "Representa colaboração internacional bem-sucedida, mesmo entre países com relações tensas",
+            "Porque nunca teve nenhum astronauta a bordo",
+            "Porque foi construída por um único país isoladamente",
+            "Porque não realiza nenhum tipo de experimento científico"
+          ],
+          "resposta_correta": "Representa colaboração internacional bem-sucedida, mesmo entre países com relações tensas"
+        }
+      ]
+    },
+    {
+      "id": "espaco-exploracao-07",
+      "titulo": "Robôs exploradores em Marte",
+      "texto": "Desde a chegada bem-sucedida da sonda americana Viking 1 à superfície de Marte, em 1976, dezenas de missões já foram enviadas ao planeta vermelho, embora mais da metade delas tenha enfrentado algum tipo de falha ao longo da história. Rovers (veículos robóticos que se movimentam pela superfície) como Opportunity e Curiosity permitiram estudar o solo e a atmosfera marcianos por anos seguidos, coletando dados que ajudaram a confirmar, por exemplo, evidências de água líquida na história antiga do planeta.",
+      "perguntas": [
+        {
+          "pergunta": "Qual foi a primeira sonda a pousar com sucesso em Marte, segundo o texto?",
+          "opcoes": [
+            "Viking 1",
+            "Sputnik 1",
+            "Apollo 11",
+            "Voyager 1"
+          ],
+          "resposta_correta": "Viking 1"
+        },
+        {
+          "pergunta": "Em que ano aconteceu esse pouso bem-sucedido em Marte?",
+          "opcoes": [
+            "1976",
+            "1961",
+            "1957",
+            "2004"
+          ],
+          "resposta_correta": "1976"
+        },
+        {
+          "pergunta": "O que rovers como Opportunity e Curiosity permitiram estudar, segundo o texto?",
+          "opcoes": [
+            "O solo e a atmosfera marcianos",
+            "Apenas a temperatura do Sol",
+            "A composição da Lua",
+            "Exclusivamente o clima da Terra"
+          ],
+          "resposta_correta": "O solo e a atmosfera marcianos"
+        }
+      ]
+    },
+    {
+      "id": "espaco-exploracao-08",
+      "titulo": "Animais que abriram caminho para a exploração espacial humana",
+      "texto": "Antes de enviar seres humanos ao espaço, tanto americanos quanto soviéticos utilizaram animais em testes espaciais, como forma de avaliar os efeitos de um voo orbital sobre organismos vivos antes de arriscar vidas humanas. Insetos, macacos e cães foram enviados em diferentes missões ao longo da década de 1950 e início de 1960, sendo esses testes fundamentais para o desenvolvimento de tecnologias de suporte à vida posteriormente aplicadas às missões tripuladas.",
+      "perguntas": [
+        {
+          "pergunta": "Por que animais foram enviados ao espaço antes de seres humanos, segundo o texto?",
+          "opcoes": [
+            "Para avaliar os efeitos de um voo orbital sobre organismos vivos",
+            "Porque não havia astronautas humanos disponíveis",
+            "Como forma de entretenimento público",
+            "Para testar apenas equipamentos de comunicação"
+          ],
+          "resposta_correta": "Para avaliar os efeitos de um voo orbital sobre organismos vivos"
+        },
+        {
+          "pergunta": "Cite um tipo de animal mencionado no texto como usado em testes espaciais.",
+          "opcoes": [
+            "Cães",
+            "Elefantes",
+            "Golfinhos",
+            "Águias"
+          ],
+          "resposta_correta": "Cães"
+        },
+        {
+          "pergunta": "Qual foi a contribuição desses testes com animais, segundo o texto?",
+          "opcoes": [
+            "Foram fundamentais para o desenvolvimento de tecnologias de suporte à vida",
+            "Não tiveram nenhuma utilidade prática posterior",
+            "Serviram apenas para fins de entretenimento",
+            "Impediram o avanço das missões tripuladas"
+          ],
+          "resposta_correta": "Foram fundamentais para o desenvolvimento de tecnologias de suporte à vida"
+        }
+      ]
+    }
+  ]
+}

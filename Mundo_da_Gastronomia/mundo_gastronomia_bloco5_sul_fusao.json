@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "bloco": "mundo_da_gastronomia",
+    "tema": "gastronomia_sul_e_fusao_regional",
+    "fase": "V-Gastronomia",
+    "numero_bloco": 5,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "status": "Bloco final do Mundo da Gastronomia - fecha os 5 blocos planejados (Mundo, Brasil, Norte+Nordeste, Centro-Oeste+Sudeste, Sul+fusao)",
+    "checagem_direitos_autorais": "Todo o texto foi escrito originalmente com base em conhecimento cultural/historico geral, sem reproducao de nenhuma fonte externa.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo cultural neutro."
+  },
+  "capsulas": [
+    {
+      "id": "gastro-sul-fusao-01",
+      "titulo": "O chimarrão e o ritual de compartilhar",
+      "texto": "O chimarrão, bebida feita a partir da erva-mate, é um dos símbolos culturais mais fortes do Sul do Brasil, especialmente do Rio Grande do Sul. Mais do que uma bebida, o chimarrão carrega um forte componente ritualístico: é tradicionalmente compartilhado numa única cuia, passada de mão em mão entre um grupo de pessoas, com a mesma bomba (canudo metálico) usada por todos, reforçando um sentido de coletividade e confiança entre quem participa da roda.",
+      "perguntas": [
+        {
+          "pergunta": "De que planta é feito o chimarrão?",
+          "opcoes": [
+            "Erva-mate",
+            "Folha de hortelã",
+            "Semente de café",
+            "Casca de guaraná"
+          ],
+          "resposta_correta": "Erva-mate"
+        },
+        {
+          "pergunta": "Como o chimarrão é tradicionalmente compartilhado, segundo o texto?",
+          "opcoes": [
+            "Numa única cuia, passada de mão em mão entre o grupo",
+            "Cada pessoa prepara sua própria cuia individual",
+            "É vendido apenas em copos descartáveis",
+            "É consumido exclusivamente sozinho, nunca em grupo"
+          ],
+          "resposta_correta": "Numa única cuia, passada de mão em mão entre o grupo"
+        },
+        {
+          "pergunta": "O que esse modo de compartilhar reforça, segundo o texto?",
+          "opcoes": [
+            "Um sentido de coletividade e confiança entre os participantes",
+            "Uma competição de quem bebe mais rápido",
+            "Uma hierarquia rígida entre quem participa",
+            "A necessidade de silêncio absoluto durante o consumo"
+          ],
+          "resposta_correta": "Um sentido de coletividade e confiança entre os participantes"
+        }
+      ]
+    },
+    {
+      "id": "gastro-sul-fusao-02",
+      "titulo": "A influência alemã e italiana na culinária do Sul",
+      "texto": "O Sul do Brasil recebeu, ao longo do século XIX e início do XX, grande fluxo de imigrantes alemães e italianos, o que deixou marcas visíveis na culinária regional. Da tradição alemã vieram práticas como a produção de embutidos e cucas (um tipo de bolo com cobertura farofada), especialmente fortes em Santa Catarina, enquanto da tradição italiana vieram técnicas de produção de vinho e massas artesanais, muito presentes na Serra Gaúcha, região que se tornou um dos principais polos vinícolas do país.",
+      "perguntas": [
+        {
+          "pergunta": "Quais dois grupos de imigrantes o texto cita como influentes na culinária do Sul?",
+          "opcoes": [
+            "Alemães e italianos",
+            "Japoneses e coreanos",
+            "Franceses e espanhóis",
+            "Portugueses e holandeses"
+          ],
+          "resposta_correta": "Alemães e italianos"
+        },
+        {
+          "pergunta": "O que é a 'cuca', mencionada como tradição alemã no texto?",
+          "opcoes": [
+            "Um tipo de bolo com cobertura farofada",
+            "Um tipo de embutido picante",
+            "Uma bebida fermentada à base de uva",
+            "Um prato salgado à base de peixe"
+          ],
+          "resposta_correta": "Um tipo de bolo com cobertura farofada"
+        },
+        {
+          "pergunta": "Qual região se tornou um dos principais polos vinícolas do país, associada à imigração italiana?",
+          "opcoes": [
+            "Serra Gaúcha",
+            "Litoral catarinense",
+            "Planalto paranaense",
+            "Pampa gaúcho"
+          ],
+          "resposta_correta": "Serra Gaúcha"
+        }
+      ]
+    },
+    {
+      "id": "gastro-sul-fusao-03",
+      "titulo": "O barreado e a tradição litorânea do Paraná",
+      "texto": "O barreado é um prato tradicional do litoral paranaense, preparado com carne bovina cozida lentamente, por muitas horas, numa panela de barro selada com uma mistura de farinha e água — método que dá origem ao nome do prato. Historicamente associado às festividades de Carnaval na região, o barreado é servido acompanhado de farinha de mandioca e banana, sendo considerado uma das principais expressões da identidade culinária do litoral do Paraná.",
+      "perguntas": [
+        {
+          "pergunta": "Em que utensílio o barreado é tradicionalmente preparado?",
+          "opcoes": [
+            "Panela de barro selada",
+            "Panela de pressão moderna",
+            "Forno a lenha aberto",
+            "Churrasqueira a carvão"
+          ],
+          "resposta_correta": "Panela de barro selada"
+        },
+        {
+          "pergunta": "A que festividade o barreado está historicamente associado, segundo o texto?",
+          "opcoes": [
+            "Carnaval",
+            "Festa junina",
+            "Natal",
+            "Páscoa"
+          ],
+          "resposta_correta": "Carnaval"
+        },
+        {
+          "pergunta": "Com o que o barreado costuma ser servido, segundo o texto?",
+          "opcoes": [
+            "Farinha de mandioca e banana",
+            "Arroz branco e feijão preto",
+            "Batata frita e maionese",
+            "Pão francês e manteiga"
+          ],
+          "resposta_correta": "Farinha de mandioca e banana"
+        }
+      ]
+    },
+    {
+      "id": "gastro-sul-fusao-04",
+      "titulo": "O que é a 'cozinha de fusão' e por que ela cresce no Brasil?",
+      "texto": "Cozinha de fusão é o termo usado para descrever pratos que combinam técnicas ou ingredientes de tradições culinárias diferentes, criando algo novo a partir dessa mistura. No Brasil, esse tipo de cozinha tem espaço particularmente fértil, dado o próprio caráter multicultural da formação do país, discutido nos blocos anteriores deste Mundo — chefs contemporâneos frequentemente combinam, por exemplo, técnicas europeias de preparo com ingredientes nativos brasileiros, criando pratos que não pertencem inteiramente a nenhuma tradição isolada.",
+      "perguntas": [
+        {
+          "pergunta": "O que é 'cozinha de fusão'?",
+          "opcoes": [
+            "Pratos que combinam técnicas ou ingredientes de tradições diferentes",
+            "Um prato específico da culinária japonesa",
+            "Uma técnica exclusiva de conservação de alimentos",
+            "Um tipo de restaurante que serve apenas um prato"
+          ],
+          "resposta_correta": "Pratos que combinam técnicas ou ingredientes de tradições diferentes"
+        },
+        {
+          "pergunta": "Por que o Brasil é citado como espaço fértil para a cozinha de fusão, segundo o texto?",
+          "opcoes": [
+            "Devido ao próprio caráter multicultural da formação do país",
+            "Porque o Brasil não tem nenhuma tradição culinária própria",
+            "Porque é proibido cozinhar de forma tradicional no país",
+            "Porque todos os ingredientes brasileiros são importados"
+          ],
+          "resposta_correta": "Devido ao próprio caráter multicultural da formação do país"
+        },
+        {
+          "pergunta": "O que chefs contemporâneos frequentemente fazem, segundo o texto, na cozinha de fusão?",
+          "opcoes": [
+            "Combinam técnicas europeias com ingredientes nativos brasileiros",
+            "Usam exclusivamente ingredientes importados e caros",
+            "Eliminam totalmente qualquer técnica tradicional",
+            "Reproduzem exatamente receitas antigas sem nenhuma alteração"
+          ],
+          "resposta_correta": "Combinam técnicas europeias com ingredientes nativos brasileiros"
+        }
+      ]
+    },
+    {
+      "id": "gastro-sul-fusao-05",
+      "titulo": "O arroz carreteiro e a praticidade das lidas do campo",
+      "texto": "O arroz carreteiro é um prato tradicional gaúcho que combina arroz e carne-seca desfiada, cozidos juntos numa mesma panela. Assim como o feijão tropeiro em Minas Gerais, sua origem está associada a trabalhadores que percorriam longas distâncias — nesse caso, os carreteiros, responsáveis pelo transporte de mercadorias em carroças no Sul do Brasil — que precisavam de refeições práticas, nutritivas e fáceis de preparar durante as longas jornadas de trabalho no campo.",
+      "perguntas": [
+        {
+          "pergunta": "Quais são os dois ingredientes principais do arroz carreteiro?",
+          "opcoes": [
+            "Arroz e carne-seca desfiada",
+            "Feijão e linguiça",
+            "Milho e queijo coalho",
+            "Batata e frango desfiado"
+          ],
+          "resposta_correta": "Arroz e carne-seca desfiada"
+        },
+        {
+          "pergunta": "A que grupo de trabalhadores a origem do prato está associada, segundo o texto?",
+          "opcoes": [
+            "Carreteiros, responsáveis pelo transporte em carroças",
+            "Pescadores do litoral sul",
+            "Mineradores de carvão",
+            "Vaqueiros do sertão nordestino"
+          ],
+          "resposta_correta": "Carreteiros, responsáveis pelo transporte em carroças"
+        },
+        {
+          "pergunta": "A que outro prato brasileiro o texto compara a origem do arroz carreteiro?",
+          "opcoes": [
+            "Feijão tropeiro",
+            "Acarajé",
+            "Moqueca capixaba",
+            "Pão de queijo"
+          ],
+          "resposta_correta": "Feijão tropeiro"
+        }
+      ]
+    },
+    {
+      "id": "gastro-sul-fusao-06",
+      "titulo": "A erva-mate além do chimarrão",
+      "texto": "Embora o chimarrão seja o uso mais conhecido da erva-mate, essa planta nativa da região Sul também é utilizada de outras formas, como o tereré, bebida gelada popular especialmente no Centro-Oeste e no Paraguai, e chás quentes consumidos de maneira mais próxima ao hábito ocidental de tomar chá. Essa variedade de usos mostra como uma mesma matéria-prima pode gerar tradições de consumo bastante diferentes dependendo da região e do clima local.",
+      "perguntas": [
+        {
+          "pergunta": "Além do chimarrão, que outra bebida à base de erva-mate é citada no texto?",
+          "opcoes": [
+            "Tereré",
+            "Cappuccino",
+            "Guaraná natural",
+            "Suco de caju"
+          ],
+          "resposta_correta": "Tereré"
+        },
+        {
+          "pergunta": "Em quais regiões o tereré é especialmente popular, segundo o texto?",
+          "opcoes": [
+            "Centro-Oeste e Paraguai",
+            "Litoral nordestino e Bahia",
+            "Amazônia e Roraima",
+            "Rio de Janeiro e Espírito Santo"
+          ],
+          "resposta_correta": "Centro-Oeste e Paraguai"
+        },
+        {
+          "pergunta": "O que a variedade de usos da erva-mate demonstra, segundo o texto?",
+          "opcoes": [
+            "Como uma mesma matéria-prima pode gerar tradições diferentes conforme a região",
+            "Que a erva-mate só pode ser consumida de uma única forma",
+            "Que o clima não tem nenhuma influência no consumo de alimentos",
+            "Que a erva-mate é exclusiva do Rio Grande do Sul"
+          ],
+          "resposta_correta": "Como uma mesma matéria-prima pode gerar tradições diferentes conforme a região"
+        }
+      ]
+    },
+    {
+      "id": "gastro-sul-fusao-07",
+      "titulo": "A gastronomia como ponte entre gerações",
+      "texto": "Muitas receitas tradicionais brasileiras, discutidas ao longo deste Mundo, foram transmitidas de geração em geração de forma oral e prática, muitas vezes sem receitas escritas formalmente, aprendidas observando e ajudando familiares mais velhos na cozinha. Esse tipo de transmissão cultural, embora vulnerável ao desaparecimento se não for registrado ou passado adiante, é uma das formas mais antigas de preservação de identidade cultural entre gerações de uma mesma família ou comunidade.",
+      "perguntas": [
+        {
+          "pergunta": "Como muitas receitas tradicionais brasileiras foram transmitidas, segundo o texto?",
+          "opcoes": [
+            "De forma oral e prática, entre gerações",
+            "Exclusivamente através de livros publicados",
+            "Apenas em cursos formais de culinária",
+            "Somente através de programas de televisão"
+          ],
+          "resposta_correta": "De forma oral e prática, entre gerações"
+        },
+        {
+          "pergunta": "Por que esse tipo de transmissão é considerado vulnerável, segundo o texto?",
+          "opcoes": [
+            "Pode desaparecer se não for registrado ou passado adiante",
+            "Porque é proibido por lei em algumas regiões",
+            "Porque exige equipamentos muito caros",
+            "Porque as receitas mudam completamente a cada geração"
+          ],
+          "resposta_correta": "Pode desaparecer se não for registrado ou passado adiante"
+        },
+        {
+          "pergunta": "O que esse tipo de transmissão representa, segundo o texto?",
+          "opcoes": [
+            "Uma das formas mais antigas de preservação de identidade cultural",
+            "Uma prática recente, criada nas últimas décadas",
+            "Uma tradição exclusiva de restaurantes profissionais",
+            "Um método científico de nutrição"
+          ],
+          "resposta_correta": "Uma das formas mais antigas de preservação de identidade cultural"
+        }
+      ]
+    },
+    {
+      "id": "gastro-sul-fusao-08",
+      "titulo": "Encerrando a jornada: da mesa do mundo à mesa de casa",
+      "texto": "Ao longo deste Mundo, foi possível perceber como a gastronomia funciona como um espelho da história de um lugar — cada prato carrega, dentro de si, marcas de migração, adaptação, geografia e encontro entre culturas diferentes. Do sushi japonês ao pequi do Cerrado, da pizza napolitana ao chimarrão gaúcho, cada tradição culinária conta uma história maior do que o próprio alimento, revelando como comida e identidade estão profundamente entrelaçadas em qualquer parte do mundo.",
+      "perguntas": [
+        {
+          "pergunta": "Como a gastronomia é descrita no texto, em relação à história de um lugar?",
+          "opcoes": [
+            "Como um espelho da história de um lugar",
+            "Como algo completamente desconectado da cultura",
+            "Como um assunto exclusivamente científico",
+            "Como um tema irrelevante para entender um povo"
+          ],
+          "resposta_correta": "Como um espelho da história de um lugar"
+        },
+        {
+          "pergunta": "Segundo o texto, o que cada prato carrega dentro de si?",
+          "opcoes": [
+            "Marcas de migração, adaptação, geografia e encontro entre culturas",
+            "Apenas informações nutricionais padronizadas",
+            "Nenhuma relação histórica real",
+            "Somente o nome do chef que o criou"
+          ],
+          "resposta_correta": "Marcas de migração, adaptação, geografia e encontro entre culturas"
+        },
+        {
+          "pergunta": "O que o texto conclui sobre a relação entre comida e identidade?",
+          "opcoes": [
+            "Estão profundamente entrelaçadas em qualquer parte do mundo",
+            "Não têm nenhuma relação uma com a outra",
+            "Só existem em culturas muito antigas",
+            "São conceitos exclusivos da culinária brasileira"
+          ],
+          "resposta_correta": "Estão profundamente entrelaçadas em qualquer parte do mundo"
+        }
+      ]
+    }
+  ]
+}

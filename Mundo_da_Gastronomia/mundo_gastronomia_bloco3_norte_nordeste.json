@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_da_gastronomia",
+    "tema": "gastronomia_norte_e_nordeste",
+    "fase": "V-Gastronomia",
+    "numero_bloco": 3,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "checagem_direitos_autorais": "Todo o texto foi escrito originalmente com base em conhecimento cultural/historico geral, sem reproducao de nenhuma fonte externa.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo cultural neutro e respeitoso."
+  },
+  "capsulas": [
+    {
+      "id": "gastro-nortenordeste-01",
+      "titulo": "O açaí antes de ser tendência global",
+      "texto": "Antes de se popularizar mundialmente como alimento associado a academias e dietas saudáveis, o açaí já era um alimento básico e cotidiano para populações da região amazônica, consumido de forma salgada, acompanhando peixe e farinha de mandioca — uma combinação bem diferente da versão doce, batida com xarope de guaraná e frutas, que se tornou popular no restante do Brasil e no exterior. Essa diferença de preparo mostra como um mesmo ingrediente pode assumir identidades culinárias completamente distintas dependendo do contexto regional.",
+      "perguntas": [
+        {
+          "pergunta": "Como o açaí era tradicionalmente consumido na região amazônica, segundo o texto?",
+          "opcoes": [
+            "De forma salgada, acompanhando peixe e farinha de mandioca",
+            "Sempre doce, com adição de chocolate",
+            "Misturado apenas com leite condensado",
+            "Exclusivamente como sobremesa gelada"
+          ],
+          "resposta_correta": "De forma salgada, acompanhando peixe e farinha de mandioca"
+        },
+        {
+          "pergunta": "Como o açaí passou a ser consumido no restante do Brasil e no exterior?",
+          "opcoes": [
+            "De forma doce, batido com xarope de guaraná e frutas",
+            "Da mesma forma salgada da tradição amazônica",
+            "Apenas em cápsulas de suplemento alimentar",
+            "Somente como ingrediente de bebidas alcoólicas"
+          ],
+          "resposta_correta": "De forma doce, batido com xarope de guaraná e frutas"
+        },
+        {
+          "pergunta": "O que a diferença de preparo do açaí demonstra, segundo o texto?",
+          "opcoes": [
+            "Como um mesmo ingrediente pode assumir identidades culinárias distintas",
+            "Que existe apenas uma forma correta de consumir açaí",
+            "Que o açaí perdeu totalmente sua tradição original",
+            "Que a versão amazônica desapareceu por completo"
+          ],
+          "resposta_correta": "Como um mesmo ingrediente pode assumir identidades culinárias distintas"
+        }
+      ]
+    },
+    {
+      "id": "gastro-nortenordeste-02",
+      "titulo": "O tacacá e a influência indígena na Amazônia",
+      "texto": "O tacacá é um prato tradicional da região Norte que reúne fortes raízes indígenas, preparado com tucupi (líquido extraído da mandioca brava), goma, camarão seco e jambu — uma erva que provoca uma sensação característica de leve dormência na boca. O jambu, em particular, é um ingrediente que ilustra bem como a culinária amazônica preserva usos de plantas nativas pouco conhecidas fora da região, mas profundamente enraizadas no dia a dia local.",
+      "perguntas": [
+        {
+          "pergunta": "De onde vem o tucupi, ingrediente do tacacá?",
+          "opcoes": [
+            "É extraído da mandioca brava",
+            "É um tipo de peixe amazônico",
+            "É um fruto seco processado",
+            "É extraído do açaí"
+          ],
+          "resposta_correta": "É extraído da mandioca brava"
+        },
+        {
+          "pergunta": "Qual efeito característico o jambu provoca na boca, segundo o texto?",
+          "opcoes": [
+            "Uma leve sensação de dormência",
+            "Um sabor extremamente doce",
+            "Uma sensação de ardência intensa",
+            "Nenhum efeito perceptível"
+          ],
+          "resposta_correta": "Uma leve sensação de dormência"
+        },
+        {
+          "pergunta": "O que o jambu ilustra sobre a culinária amazônica, segundo o texto?",
+          "opcoes": [
+            "Como a região preserva usos de plantas nativas pouco conhecidas fora dali",
+            "Que a culinária amazônica não tem nenhuma característica própria",
+            "Que todos os ingredientes amazônicos são conhecidos mundialmente",
+            "Que o tacacá é um prato de origem europeia"
+          ],
+          "resposta_correta": "Como a região preserva usos de plantas nativas pouco conhecidas fora dali"
+        }
+      ]
+    },
+    {
+      "id": "gastro-nortenordeste-03",
+      "titulo": "A moqueca e suas duas tradições distintas",
+      "texto": "A moqueca é um prato de peixe ou frutos do mar cozido em molho, mas existem duas tradições regionais bem distintas dentro do Nordeste e do Sudeste: a moqueca baiana, que leva azeite de dendê e leite de coco, com forte influência africana, e a moqueca capixaba, do Espírito Santo, preparada sem esses dois ingredientes, com uma base mais simples de tomate, cebola e coentro. As duas versões geram, inclusive, uma disputa cultural amistosa sobre qual seria a moqueca 'original' ou mais representativa.",
+      "perguntas": [
+        {
+          "pergunta": "Quais são as duas tradições regionais de moqueca citadas no texto?",
+          "opcoes": [
+            "Moqueca baiana e moqueca capixaba",
+            "Moqueca amazônica e moqueca gaúcha",
+            "Moqueca paulista e moqueca mineira",
+            "Moqueca cearense e moqueca paraense"
+          ],
+          "resposta_correta": "Moqueca baiana e moqueca capixaba"
+        },
+        {
+          "pergunta": "Quais ingredientes a moqueca baiana leva, que a capixaba não leva?",
+          "opcoes": [
+            "Azeite de dendê e leite de coco",
+            "Tomate e cebola",
+            "Farinha de mandioca e limão",
+            "Pimenta e alho apenas"
+          ],
+          "resposta_correta": "Azeite de dendê e leite de coco"
+        },
+        {
+          "pergunta": "O que existe entre as duas tradições de moqueca, segundo o texto?",
+          "opcoes": [
+            "Uma disputa cultural amistosa sobre qual seria a mais representativa",
+            "Uma proibição legal de uma das duas versões",
+            "Nenhuma diferença real entre elas",
+            "Uma fusão completa das duas receitas"
+          ],
+          "resposta_correta": "Uma disputa cultural amistosa sobre qual seria a mais representativa"
+        }
+      ]
+    },
+    {
+      "id": "gastro-nortenordeste-04",
+      "titulo": "A carne de sol e a adaptação ao clima nordestino",
+      "texto": "A carne de sol é uma técnica tradicional de conservação de carne bovina, desenvolvida como adaptação às condições do sertão nordestino, região historicamente marcada por longos períodos de seca. A carne é salgada e exposta a um processo de secagem parcial, o que permite conservá-la por mais tempo mesmo sem refrigeração — uma solução prática desenvolvida em resposta direta às dificuldades de armazenamento de alimentos numa região de clima seco e quente.",
+      "perguntas": [
+        {
+          "pergunta": "Onde a técnica da carne de sol foi desenvolvida como adaptação, segundo o texto?",
+          "opcoes": [
+            "No sertão nordestino",
+            "No litoral do Nordeste",
+            "Na região amazônica",
+            "No pantanal do Centro-Oeste"
+          ],
+          "resposta_correta": "No sertão nordestino"
+        },
+        {
+          "pergunta": "Qual é o processo usado na preparação da carne de sol?",
+          "opcoes": [
+            "Salga e secagem parcial",
+            "Congelamento imediato",
+            "Cozimento prolongado em água",
+            "Fermentação em barris de madeira"
+          ],
+          "resposta_correta": "Salga e secagem parcial"
+        },
+        {
+          "pergunta": "Qual problema essa técnica ajudava a resolver, segundo o texto?",
+          "opcoes": [
+            "A dificuldade de armazenamento de alimentos sem refrigeração",
+            "A falta de sal na região nordestina",
+            "O excesso de chuva na região",
+            "A ausência de gado na região"
+          ],
+          "resposta_correta": "A dificuldade de armazenamento de alimentos sem refrigeração"
+        }
+      ]
+    },
+    {
+      "id": "gastro-nortenordeste-05",
+      "titulo": "O acarajé como patrimônio cultural",
+      "texto": "O acarajé, bolinho frito feito de feijão-fradinho e temperado com camarão seco e pimenta, é um prato fortemente associado à Bahia e à cultura afro-brasileira, tradicionalmente vendido nas ruas por baianas vestidas com trajes característicos. Em 2004, o ofício das baianas de acarajé foi reconhecido oficialmente como patrimônio cultural imaterial do Brasil, reforçando a importância histórica e cultural dessa tradição culinária, muito além do valor apenas gastronômico do prato em si.",
+      "perguntas": [
+        {
+          "pergunta": "De qual ingrediente principal o acarajé é feito?",
+          "opcoes": [
+            "Feijão-fradinho",
+            "Milho verde",
+            "Mandioca",
+            "Arroz"
+          ],
+          "resposta_correta": "Feijão-fradinho"
+        },
+        {
+          "pergunta": "Em que ano o ofício das baianas de acarajé foi reconhecido como patrimônio cultural imaterial do Brasil?",
+          "opcoes": [
+            "2004",
+            "1988",
+            "2015",
+            "1970"
+          ],
+          "resposta_correta": "2004"
+        },
+        {
+          "pergunta": "O que esse reconhecimento reforça, segundo o texto?",
+          "opcoes": [
+            "A importância histórica e cultural da tradição, além do valor gastronômico",
+            "Que o acarajé deixou de ser vendido nas ruas",
+            "Que apenas restaurantes podem preparar o prato",
+            "Que o prato perdeu sua ligação com a Bahia"
+          ],
+          "resposta_correta": "A importância histórica e cultural da tradição, além do valor gastronômico"
+        }
+      ]
+    },
+    {
+      "id": "gastro-nortenordeste-06",
+      "titulo": "A castanha-do-pará e a economia extrativista amazônica",
+      "texto": "A castanha-do-pará, também conhecida em outros países como 'Brazil nut', é um exemplo de produto extrativista da floresta amazônica — ou seja, coletado diretamente da natureza, sem cultivo em plantação convencional, já que a árvore que a produz depende de um ecossistema florestal complexo para se reproduzir naturalmente. Essa característica faz da castanha-do-pará um produto frequentemente citado em discussões sobre como a economia da floresta em pé pode gerar renda sem depender do desmatamento.",
+      "perguntas": [
+        {
+          "pergunta": "Como a castanha-do-pará é obtida, segundo o texto?",
+          "opcoes": [
+            "Coletada diretamente da natureza, de forma extrativista",
+            "Cultivada em grandes plantações convencionais",
+            "Importada exclusivamente de outros países",
+            "Produzida em ambiente totalmente artificial"
+          ],
+          "resposta_correta": "Coletada diretamente da natureza, de forma extrativista"
+        },
+        {
+          "pergunta": "Como a castanha-do-pará é conhecida em outros países, segundo o texto?",
+          "opcoes": [
+            "'Brazil nut'",
+            "'Amazon fruit'",
+            "'Forest bean'",
+            "'Green nut'"
+          ],
+          "resposta_correta": "'Brazil nut'"
+        },
+        {
+          "pergunta": "Em que tipo de discussão a castanha-do-pará é frequentemente citada, segundo o texto?",
+          "opcoes": [
+            "Sobre como a economia da floresta em pé pode gerar renda sem desmatamento",
+            "Sobre a proibição total de exportação de alimentos",
+            "Sobre a criação de novas espécies de árvores",
+            "Sobre o fim do consumo de castanhas no mundo"
+          ],
+          "resposta_correta": "Sobre como a economia da floresta em pé pode gerar renda sem desmatamento"
+        }
+      ]
+    },
+    {
+      "id": "gastro-nortenordeste-07",
+      "titulo": "O baião de dois e a combinação nutritiva do sertão",
+      "texto": "O baião de dois é um prato tradicional nordestino que combina arroz e feijão-de-corda (também chamado feijão-macassar), geralmente temperado com queijo coalho e carne-de-sol. Além do valor cultural, a combinação de arroz com esse tipo de feijão é nutricionalmente complementar, unindo diferentes nutrientes essenciais numa refeição simples e historicamente acessível às populações do semiárido nordestino.",
+      "perguntas": [
+        {
+          "pergunta": "Quais são os dois ingredientes principais do baião de dois?",
+          "opcoes": [
+            "Arroz e feijão-de-corda",
+            "Milho e mandioca",
+            "Batata e carne moída",
+            "Macarrão e queijo"
+          ],
+          "resposta_correta": "Arroz e feijão-de-corda"
+        },
+        {
+          "pergunta": "Que tipo de queijo é frequentemente usado no preparo do baião de dois?",
+          "opcoes": [
+            "Queijo coalho",
+            "Queijo parmesão",
+            "Queijo minas frescal",
+            "Queijo gorgonzola"
+          ],
+          "resposta_correta": "Queijo coalho"
+        },
+        {
+          "pergunta": "Qual é o benefício nutricional citado no texto sobre a combinação de arroz e feijão?",
+          "opcoes": [
+            "São nutricionalmente complementares entre si",
+            "Não têm nenhum valor nutricional relevante",
+            "Servem apenas como fonte de sabor, sem nutrientes",
+            "Substituem totalmente a necessidade de outros alimentos"
+          ],
+          "resposta_correta": "São nutricionalmente complementares entre si"
+        }
+      ]
+    },
+    {
+      "id": "gastro-nortenordeste-08",
+      "titulo": "A cultura das feiras livres no Nordeste",
+      "texto": "As feiras livres têm papel histórico e cultural importante em muitas cidades nordestinas, funcionando não apenas como espaço de comércio de alimentos frescos, mas também como ponto de encontro social, onde tradições orais, música regional e outras manifestações culturais frequentemente acontecem simultaneamente à venda de produtos. Esse caráter múltiplo diferencia as feiras nordestinas de simples mercados de compra e venda, atribuindo a elas um valor social que vai além da função comercial.",
+      "perguntas": [
+        {
+          "pergunta": "Além do comércio de alimentos, que outra função as feiras livres nordestinas costumam ter, segundo o texto?",
+          "opcoes": [
+            "Ponto de encontro social e espaço para manifestações culturais",
+            "Espaço exclusivo para negociações empresariais",
+            "Local reservado apenas para turistas estrangeiros",
+            "Um centro administrativo do governo local"
+          ],
+          "resposta_correta": "Ponto de encontro social e espaço para manifestações culturais"
+        },
+        {
+          "pergunta": "Que tipo de manifestação cultural pode acontecer simultaneamente à venda de produtos nas feiras, segundo o texto?",
+          "opcoes": [
+            "Tradições orais e música regional",
+            "Apresentações de teatro internacional",
+            "Exposições de arte contemporânea europeia",
+            "Competições esportivas oficiais"
+          ],
+          "resposta_correta": "Tradições orais e música regional"
+        },
+        {
+          "pergunta": "O que diferencia as feiras nordestinas de simples mercados, segundo o texto?",
+          "opcoes": [
+            "Um valor social que vai além da função comercial",
+            "O fato de venderem apenas produtos importados",
+            "A ausência total de alimentos frescos",
+            "A proibição de música no local"
+          ],
+          "resposta_correta": "Um valor social que vai além da função comercial"
+        }
+      ]
+    }
+  ]
+}

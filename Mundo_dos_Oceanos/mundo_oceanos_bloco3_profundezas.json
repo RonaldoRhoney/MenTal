@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_dos_oceanos",
+    "tema": "profundezas_e_misterios",
+    "fase": "V-Oceanos",
+    "numero_bloco": 3,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "checagem_direitos_autorais": "Fontes consultadas antes da redacao (zonas oceanicas, zona hadal, fontes hidrotermais, gigantismo abissal, fenomeno The Bloop, mineracao no fundo do mar). Todo o texto foi reescrito integralmente com palavras proprias - nenhuma reproducao literal de nenhuma fonte.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo cientifico neutro, sem sensacionalismo indevido."
+  },
+  "capsulas": [
+    {
+      "id": "oceano-prof-01",
+      "titulo": "As cinco camadas de profundidade do oceano",
+      "texto": "Os cientistas costumam dividir o oceano em cinco zonas de acordo com a profundidade e a quantidade de luz solar que alcança cada uma. A zona epipelágica vai da superfície até cerca de 200 metros, onde a luz ainda permite fotossíntese. Em seguida vem a zona mesopelágica (até cerca de 1.000 metros), a batipelágica (até cerca de 4.000 metros), a abissopelágica (até cerca de 6.000 metros) e, por fim, a zona hadal, que cobre as regiões mais profundas de todas, encontradas apenas dentro de fossas oceânicas estreitas como a Fossa das Marianas.",
+      "perguntas": [
+        {
+          "pergunta": "Até qual profundidade aproximada vai a zona epipelágica, onde ainda há fotossíntese?",
+          "opcoes": [
+            "Cerca de 200 metros",
+            "Cerca de 1.000 metros",
+            "Cerca de 6.000 metros",
+            "Cerca de 50 metros"
+          ],
+          "resposta_correta": "Cerca de 200 metros"
+        },
+        {
+          "pergunta": "Qual é a zona mais profunda entre as cinco citadas no texto?",
+          "opcoes": [
+            "Zona hadal",
+            "Zona epipelágica",
+            "Zona mesopelágica",
+            "Zona batipelágica"
+          ],
+          "resposta_correta": "Zona hadal"
+        },
+        {
+          "pergunta": "Onde a zona hadal é encontrada, segundo o texto?",
+          "opcoes": [
+            "Apenas dentro de fossas oceânicas estreitas",
+            "Em toda a extensão de qualquer oceano",
+            "Somente próxima à costa dos continentes",
+            "Exclusivamente no Oceano Atlântico"
+          ],
+          "resposta_correta": "Apenas dentro de fossas oceânicas estreitas"
+        }
+      ]
+    },
+    {
+      "id": "oceano-prof-02",
+      "titulo": "Por que a zona mais profunda leva o nome de um deus grego?",
+      "texto": "A zona hadal recebe esse nome em referência a Hades, o deus grego associado ao mundo dos mortos e ao submundo. A escolha do nome remete à natureza extrema e quase inóspita dessa região: escuridão total, temperaturas próximas ao congelamento e pressão hidrostática centenas de vezes maior do que na superfície, condições que por muito tempo levaram cientistas a supor que pouca ou nenhuma vida poderia sobreviver ali.",
+      "perguntas": [
+        {
+          "pergunta": "A que figura mitológica o nome da zona hadal faz referência?",
+          "opcoes": [
+            "Hades, deus grego do submundo",
+            "Poseidon, deus grego dos mares",
+            "Netuno, deus romano dos oceanos",
+            "Caronte, o barqueiro dos mortos"
+          ],
+          "resposta_correta": "Hades, deus grego do submundo"
+        },
+        {
+          "pergunta": "Cite uma condição extrema da zona hadal mencionada no texto.",
+          "opcoes": [
+            "Pressão hidrostática centenas de vezes maior que na superfície",
+            "Temperatura extremamente alta, próxima à fervura",
+            "Luz solar direta e intensa",
+            "Ausência total de água líquida"
+          ],
+          "resposta_correta": "Pressão hidrostática centenas de vezes maior que na superfície"
+        },
+        {
+          "pergunta": "O que cientistas supunham, por muito tempo, sobre a vida na zona hadal?",
+          "opcoes": [
+            "Que pouca ou nenhuma vida poderia sobreviver ali",
+            "Que era a região com maior biodiversidade do planeta",
+            "Que só existiam plantas naquela profundidade",
+            "Que era impossível qualquer forma de exploração"
+          ],
+          "resposta_correta": "Que pouca ou nenhuma vida poderia sobreviver ali"
+        }
+      ]
+    },
+    {
+      "id": "oceano-prof-03",
+      "titulo": "Vida sem luz do sol: o que são fontes hidrotermais?",
+      "texto": "Fontes hidrotermais são aberturas no fundo do oceano por onde escapa água aquecida pelo calor interno da Terra, rica em minerais e gases dissolvidos. Ao redor dessas fontes, cientistas descobriram ecossistemas inteiros que não dependem da luz solar para existir — em vez de fotossíntese, esses ecossistemas se baseiam num processo chamado quimiossíntese, no qual determinados microrganismos convertem compostos químicos liberados pelas fontes em energia utilizável, servindo de base alimentar para outras formas de vida ao redor.",
+      "perguntas": [
+        {
+          "pergunta": "O que são fontes hidrotermais?",
+          "opcoes": [
+            "Aberturas no fundo do oceano por onde escapa água aquecida pelo calor interno da Terra",
+            "Correntes marítimas muito frias e rápidas",
+            "Vulcões extintos que nunca mais entraram em atividade",
+            "Áreas onde a água do mar é completamente doce"
+          ],
+          "resposta_correta": "Aberturas no fundo do oceano por onde escapa água aquecida pelo calor interno da Terra"
+        },
+        {
+          "pergunta": "Que processo substitui a fotossíntese nos ecossistemas ao redor dessas fontes?",
+          "opcoes": [
+            "Quimiossíntese",
+            "Fermentação bacteriana",
+            "Osmose reversa",
+            "Bioluminescência"
+          ],
+          "resposta_correta": "Quimiossíntese"
+        },
+        {
+          "pergunta": "O que microrganismos fazem na quimiossíntese, segundo o texto?",
+          "opcoes": [
+            "Convertem compostos químicos das fontes em energia utilizável",
+            "Absorvem luz solar residual das profundezas",
+            "Produzem oxigênio puro a partir de água salgada",
+            "Se alimentam exclusivamente de plâncton"
+          ],
+          "resposta_correta": "Convertem compostos químicos das fontes em energia utilizável"
+        }
+      ]
+    },
+    {
+      "id": "oceano-prof-04",
+      "titulo": "Os vermes tubulares gigantes das fontes hidrotermais",
+      "texto": "Entre os organismos mais estudados ao redor das fontes hidrotermais estão os vermes tubulares gigantes, conhecidos cientificamente como Riftia pachyptila, encontrados em profundidades que variam de aproximadamente 1.500 a 4.000 metros. Esses vermes não possuem sistema digestivo funcional na fase adulta — em vez disso, abrigam dentro do próprio corpo bactérias que realizam a quimiossíntese, numa relação de dependência mútua que permite ao verme obter energia sem precisar se alimentar da forma convencional.",
+      "perguntas": [
+        {
+          "pergunta": "Qual é o nome científico dos vermes tubulares gigantes encontrados em fontes hidrotermais?",
+          "opcoes": [
+            "Riftia pachyptila",
+            "Octopus vulgaris",
+            "Architeuthis dux",
+            "Chimaera monstrosa"
+          ],
+          "resposta_correta": "Riftia pachyptila"
+        },
+        {
+          "pergunta": "Em que faixa de profundidade esses vermes costumam ser encontrados, segundo o texto?",
+          "opcoes": [
+            "Entre aproximadamente 1.500 e 4.000 metros",
+            "Entre 0 e 50 metros",
+            "Apenas acima de 10.000 metros",
+            "Somente na superfície do oceano"
+          ],
+          "resposta_correta": "Entre aproximadamente 1.500 e 4.000 metros"
+        },
+        {
+          "pergunta": "Como esses vermes obtêm energia, sem sistema digestivo funcional?",
+          "opcoes": [
+            "Abrigam bactérias que realizam quimiossíntese dentro do próprio corpo",
+            "Absorvem nutrientes diretamente da água do mar",
+            "Se alimentam de outros vermes menores",
+            "Praticam fotossíntese através da pele"
+          ],
+          "resposta_correta": "Abrigam bactérias que realizam quimiossíntese dentro do próprio corpo"
+        }
+      ]
+    },
+    {
+      "id": "oceano-prof-05",
+      "titulo": "Gigantismo abissal: por que algumas criaturas do fundo do mar são enormes?",
+      "texto": "Gigantismo abissal (ou gigantismo de mar profundo) é o nome dado ao fenômeno em que certas espécies de águas profundas atingem tamanhos muito maiores do que parentes próximos que vivem em águas rasas. Exemplos conhecidos incluem certos tipos de lulas e crustáceos gigantes. Os cientistas ainda debatem as causas exatas desse fenômeno, mas hipóteses comuns incluem a temperatura mais baixa da água (que pode desacelerar o metabolismo e prolongar o crescimento) e a menor pressão de predadores em certos ambientes profundos.",
+      "perguntas": [
+        {
+          "pergunta": "O que é gigantismo abissal?",
+          "opcoes": [
+            "O fenômeno em que espécies de águas profundas atingem tamanhos muito maiores que parentes de águas rasas",
+            "Um tipo de doença que afeta peixes de superfície",
+            "O crescimento acelerado de corais em recifes rasos",
+            "Uma técnica de pesca usada em grandes profundidades"
+          ],
+          "resposta_correta": "O fenômeno em que espécies de águas profundas atingem tamanhos muito maiores que parentes de águas rasas"
+        },
+        {
+          "pergunta": "Cite um exemplo de criatura associada ao gigantismo abissal, segundo o texto.",
+          "opcoes": [
+            "Certos tipos de lulas gigantes",
+            "Peixes-palhaço",
+            "Tartarugas marinhas",
+            "Golfinhos comuns"
+          ],
+          "resposta_correta": "Certos tipos de lulas gigantes"
+        },
+        {
+          "pergunta": "Cite uma hipótese mencionada no texto para explicar o gigantismo abissal.",
+          "opcoes": [
+            "Temperatura mais baixa da água, que pode desacelerar o metabolismo",
+            "Excesso de luz solar nas profundezas",
+            "Abundância extrema de alimento disponível",
+            "Ausência total de água na região"
+          ],
+          "resposta_correta": "Temperatura mais baixa da água, que pode desacelerar o metabolismo"
+        }
+      ]
+    },
+    {
+      "id": "oceano-prof-06",
+      "titulo": "Quanto do oceano profundo já exploramos de fato?",
+      "texto": "Estimativas indicam que apenas uma pequena fração do oceano profundo já foi explorada diretamente por seres humanos, com números frequentemente citados girando em torno de 5% do total. O chamado 'mar profundo' — regiões abaixo de aproximadamente 200 metros de profundidade — corresponde à maior parte do volume total dos oceanos, e estima-se que uma parcela significativa de todas as espécies de peixes do planeta viva justamente nessas áreas ainda pouco estudadas.",
+      "perguntas": [
+        {
+          "pergunta": "Aproximadamente que porcentagem do oceano profundo já foi explorada, segundo estimativas citadas no texto?",
+          "opcoes": [
+            "Cerca de 5%",
+            "Cerca de 50%",
+            "Cerca de 90%",
+            "Praticamente 100%"
+          ],
+          "resposta_correta": "Cerca de 5%"
+        },
+        {
+          "pergunta": "A partir de que profundidade aproximada começa o chamado 'mar profundo', segundo o texto?",
+          "opcoes": [
+            "Cerca de 200 metros",
+            "Cerca de 10 metros",
+            "Cerca de 5.000 metros",
+            "Cerca de 50 metros"
+          ],
+          "resposta_correta": "Cerca de 200 metros"
+        },
+        {
+          "pergunta": "O que se estima sobre as espécies de peixes do planeta, segundo o texto?",
+          "opcoes": [
+            "Uma parcela significativa vive nas áreas profundas ainda pouco estudadas",
+            "Nenhuma espécie de peixe vive em águas profundas",
+            "Todas as espécies já foram catalogadas nessas áreas",
+            "Peixes só existem em águas rasas e costeiras"
+          ],
+          "resposta_correta": "Uma parcela significativa vive nas áreas profundas ainda pouco estudadas"
+        }
+      ]
+    },
+    {
+      "id": "oceano-prof-07",
+      "titulo": "O mistério do som 'The Bloop'",
+      "texto": "Em 1997, sensores subaquáticos usados por uma agência oceanográfica americana captaram um som extremamente potente e de origem desconhecida no Oceano Pacífico, que ficou conhecido informalmente como 'The Bloop'. Por anos, o som gerou especulação, incluindo teorias sobre criaturas marinhas desconhecidas de tamanho descomunal. Anos depois, pesquisadores concluíram que o som era, na verdade, compatível com o barulho produzido por grandes rachaduras em blocos de gelo na Antártida — um fenômeno natural, porém raro de ser registrado com tamanha intensidade.",
+      "perguntas": [
+        {
+          "pergunta": "Em que ano o som conhecido como 'The Bloop' foi captado, segundo o texto?",
+          "opcoes": [
+            "1997",
+            "1960",
+            "2010",
+            "1889"
+          ],
+          "resposta_correta": "1997"
+        },
+        {
+          "pergunta": "Que tipo de teoria o som gerou inicialmente, segundo o texto?",
+          "opcoes": [
+            "Especulação sobre criaturas marinhas desconhecidas de tamanho descomunal",
+            "Que era um sinal de comunicação alienígena",
+            "Que era um erro de calibração dos sensores",
+            "Que era o som de um navio afundando"
+          ],
+          "resposta_correta": "Especulação sobre criaturas marinhas desconhecidas de tamanho descomunal"
+        },
+        {
+          "pergunta": "Qual foi a explicação posterior encontrada pelos pesquisadores?",
+          "opcoes": [
+            "Era compatível com rachaduras em blocos de gelo na Antártida",
+            "Era, de fato, o som de uma criatura marinha gigante",
+            "Nunca foi encontrada nenhuma explicação até hoje",
+            "Era um som produzido por um submarino militar"
+          ],
+          "resposta_correta": "Era compatível com rachaduras em blocos de gelo na Antártida"
+        }
+      ]
+    },
+    {
+      "id": "oceano-prof-08",
+      "titulo": "Mineração no fundo do mar: uma fronteira em debate",
+      "texto": "Com o avanço tecnológico, empresas e países começaram a demonstrar interesse em explorar depósitos minerais encontrados no fundo do oceano profundo, incluindo nódulos ricos em metais usados em baterias e equipamentos eletrônicos. Essa possibilidade gerou debate significativo entre cientistas e ambientalistas, já que os ecossistemas de grande profundidade são pouco estudados, e há preocupação de que a mineração possa causar danos irreversíveis antes mesmo de conhecermos totalmente a vida que existe nessas regiões.",
+      "perguntas": [
+        {
+          "pergunta": "O que empresas e países demonstraram interesse em explorar no fundo do oceano, segundo o texto?",
+          "opcoes": [
+            "Depósitos minerais, incluindo nódulos ricos em metais",
+            "Reservas de água potável",
+            "Campos de petróleo já esgotados em terra",
+            "Áreas para construção de cidades submersas"
+          ],
+          "resposta_correta": "Depósitos minerais, incluindo nódulos ricos em metais"
+        },
+        {
+          "pergunta": "Para que esses metais são frequentemente usados, segundo o texto?",
+          "opcoes": [
+            "Baterias e equipamentos eletrônicos",
+            "Produção exclusiva de joias",
+            "Construção de estradas",
+            "Fabricação de papel"
+          ],
+          "resposta_correta": "Baterias e equipamentos eletrônicos"
+        },
+        {
+          "pergunta": "Qual é a principal preocupação de cientistas e ambientalistas sobre essa mineração, segundo o texto?",
+          "opcoes": [
+            "Possíveis danos irreversíveis a ecossistemas ainda pouco estudados",
+            "O aumento do preço dos eletrônicos",
+            "A redução do número de navios cargueiros",
+            "A criação de novas espécies artificiais"
+          ],
+          "resposta_correta": "Possíveis danos irreversíveis a ecossistemas ainda pouco estudados"
+        }
+      ]
+    }
+  ]
+}

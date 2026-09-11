@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_da_gastronomia",
+    "tema": "gastronomia_do_brasil",
+    "fase": "V-Gastronomia",
+    "numero_bloco": 2,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "checagem_direitos_autorais": "Todo o texto foi escrito originalmente com base em conhecimento historico geral, sem reproducao de nenhuma fonte externa.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - a mencao a escravidao e tratada de forma factual e respeitosa, sem detalhe grafico, dentro do contexto historico da formacao da culinaria brasileira."
+  },
+  "capsulas": [
+    {
+      "id": "gastro-brasil-01",
+      "titulo": "A feijoada e sua origem debatida",
+      "texto": "A feijoada é frequentemente apontada como um dos pratos mais representativos da culinária brasileira, combinando feijão preto com diferentes cortes de carne suína. Existe uma narrativa popular de que o prato teria surgido a partir do aproveitamento de partes do porco descartadas pelos senhores durante o período da escravidão no Brasil. Historiadores da gastronomia, no entanto, apontam que pratos parecidos, combinando feijão e carne de porco, já existiam em Portugal antes da colonização, sugerindo que a feijoada brasileira é resultado de uma adaptação e mistura de tradições culinárias ao longo do tempo, não de uma origem única e simples.",
+      "perguntas": [
+        {
+          "pergunta": "O que a feijoada combina, segundo o texto?",
+          "opcoes": [
+            "Feijão preto com diferentes cortes de carne suína",
+            "Arroz com frango grelhado",
+            "Peixe com legumes variados",
+            "Milho com queijo derretido"
+          ],
+          "resposta_correta": "Feijão preto com diferentes cortes de carne suína"
+        },
+        {
+          "pergunta": "O que historiadores da gastronomia apontam sobre a origem da feijoada?",
+          "opcoes": [
+            "Pratos parecidos já existiam em Portugal antes da colonização",
+            "A feijoada foi inventada exclusivamente no século XX",
+            "Não existe nenhuma relação com a culinária portuguesa",
+            "A feijoada surgiu originalmente na Espanha"
+          ],
+          "resposta_correta": "Pratos parecidos já existiam em Portugal antes da colonização"
+        },
+        {
+          "pergunta": "Segundo o texto, a feijoada brasileira é resultado de quê?",
+          "opcoes": [
+            "Uma adaptação e mistura de tradições culinárias ao longo do tempo",
+            "Uma criação totalmente moderna, sem nenhuma influência histórica",
+            "Uma receita trazida diretamente da África sem nenhuma alteração",
+            "Uma invenção recente de um único chef brasileiro"
+          ],
+          "resposta_correta": "Uma adaptação e mistura de tradições culinárias ao longo do tempo"
+        }
+      ]
+    },
+    {
+      "id": "gastro-brasil-02",
+      "titulo": "O café e sua importância histórica para o Brasil",
+      "texto": "O café, hoje uma das bebidas mais consumidas no cotidiano brasileiro, teve papel central na economia do país entre o século XIX e o início do século XX, período em que o Brasil se tornou o maior produtor mundial do grão. A expansão da cafeicultura, especialmente na região Sudeste, teve impacto direto na formação de cidades, na construção de ferrovias voltadas ao escoamento da produção, e até na atração de imigrantes europeus para trabalhar nas lavouras, moldando parte significativa da história econômica e social do país.",
+      "perguntas": [
+        {
+          "pergunta": "Em que período o café teve papel central na economia brasileira, segundo o texto?",
+          "opcoes": [
+            "Entre o século XIX e o início do século XX",
+            "Apenas durante o período colonial",
+            "Somente a partir da década de 1990",
+            "Exclusivamente no século XVIII"
+          ],
+          "resposta_correta": "Entre o século XIX e o início do século XX"
+        },
+        {
+          "pergunta": "Em qual região a cafeicultura teve especial expansão, segundo o texto?",
+          "opcoes": [
+            "Sudeste",
+            "Norte",
+            "Centro-Oeste",
+            "Sul"
+          ],
+          "resposta_correta": "Sudeste"
+        },
+        {
+          "pergunta": "Que tipo de impacto social a expansão do café teve, segundo o texto?",
+          "opcoes": [
+            "Atraiu imigrantes europeus para trabalhar nas lavouras",
+            "Reduziu drasticamente a população das cidades",
+            "Impediu a construção de ferrovias no país",
+            "Eliminou a necessidade de mão de obra agrícola"
+          ],
+          "resposta_correta": "Atraiu imigrantes europeus para trabalhar nas lavouras"
+        }
+      ]
+    },
+    {
+      "id": "gastro-brasil-03",
+      "titulo": "A influência indígena na base da alimentação brasileira",
+      "texto": "Muitos ingredientes hoje considerados básicos na culinária brasileira, como a mandioca e o milho, têm origem no cultivo indígena, praticado no território que hoje corresponde ao Brasil muito antes da chegada dos colonizadores europeus. A mandioca, em particular, deu origem a diversos subprodutos ainda amplamente usados, como a farinha de mandioca e o polvilho, que se tornaram parte fundamental de pratos regionais por todo o país, mostrando como a base alimentar indígena permanece presente na cozinha brasileira contemporânea.",
+      "perguntas": [
+        {
+          "pergunta": "Quais ingredientes o texto cita como originários do cultivo indígena?",
+          "opcoes": [
+            "Mandioca e milho",
+            "Trigo e arroz",
+            "Café e cacau",
+            "Uva e azeitona"
+          ],
+          "resposta_correta": "Mandioca e milho"
+        },
+        {
+          "pergunta": "Cite um subproduto da mandioca mencionado no texto.",
+          "opcoes": [
+            "Farinha de mandioca",
+            "Leite condensado",
+            "Açúcar refinado",
+            "Manteiga de garrafa"
+          ],
+          "resposta_correta": "Farinha de mandioca"
+        },
+        {
+          "pergunta": "O que o texto conclui sobre a base alimentar indígena?",
+          "opcoes": [
+            "Permanece presente na cozinha brasileira contemporânea",
+            "Desapareceu completamente após a colonização",
+            "Nunca teve nenhuma influência na culinária atual",
+            "Só é encontrada em museus históricos"
+          ],
+          "resposta_correta": "Permanece presente na cozinha brasileira contemporânea"
+        }
+      ]
+    },
+    {
+      "id": "gastro-brasil-04",
+      "titulo": "O churrasco como tradição de encontro social",
+      "texto": "Mais do que uma técnica de preparo de carne, o churrasco é, no Brasil, uma prática social associada a momentos de reunião entre família e amigos. Embora esteja fortemente associado à cultura gaúcha, no Rio Grande do Sul, o hábito de assar carnes em brasas se espalhou e ganhou variações por todo o país, incorporando diferentes cortes de carne e acompanhamentos conforme a região, mas mantendo em comum o caráter de celebração e convívio em torno da comida.",
+      "perguntas": [
+        {
+          "pergunta": "Além de uma técnica de preparo, o que o churrasco representa no Brasil, segundo o texto?",
+          "opcoes": [
+            "Uma prática social associada a momentos de reunião",
+            "Um prato exclusivo de restaurantes de luxo",
+            "Uma receita usada apenas em datas religiosas específicas",
+            "Um método de conservação de alimentos"
+          ],
+          "resposta_correta": "Uma prática social associada a momentos de reunião"
+        },
+        {
+          "pergunta": "A que cultura regional o churrasco está fortemente associado, segundo o texto?",
+          "opcoes": [
+            "Cultura gaúcha, do Rio Grande do Sul",
+            "Cultura amazônica",
+            "Cultura nordestina",
+            "Cultura mineira"
+          ],
+          "resposta_correta": "Cultura gaúcha, do Rio Grande do Sul"
+        },
+        {
+          "pergunta": "O que se mantém em comum entre as variações regionais do churrasco, segundo o texto?",
+          "opcoes": [
+            "O caráter de celebração e convívio em torno da comida",
+            "O uso exclusivo de um único tipo de carne",
+            "A proibição de acompanhamentos variados",
+            "A necessidade de ser preparado apenas em restaurantes"
+          ],
+          "resposta_correta": "O caráter de celebração e convívio em torno da comida"
+        }
+      ]
+    },
+    {
+      "id": "gastro-brasil-05",
+      "titulo": "O pão de queijo e sua ligação com Minas Gerais",
+      "texto": "O pão de queijo é um dos símbolos gastronômicos mais reconhecidos de Minas Gerais, estado onde a tradição leiteira e a produção de queijos artesanais têm papel histórico importante. A receita, à base de polvilho e queijo, tem raízes que remontam à combinação entre a mandioca (de origem indígena) e o queijo (trazido pela colonização europeia), sendo um exemplo de como a culinária brasileira frequentemente combina influências de diferentes origens num mesmo prato.",
+      "perguntas": [
+        {
+          "pergunta": "A qual estado brasileiro o pão de queijo está fortemente associado?",
+          "opcoes": [
+            "Minas Gerais",
+            "Bahia",
+            "São Paulo",
+            "Rio Grande do Sul"
+          ],
+          "resposta_correta": "Minas Gerais"
+        },
+        {
+          "pergunta": "Quais são os dois ingredientes principais do pão de queijo, segundo o texto?",
+          "opcoes": [
+            "Polvilho e queijo",
+            "Farinha de trigo e leite",
+            "Milho e manteiga",
+            "Arroz e ovos"
+          ],
+          "resposta_correta": "Polvilho e queijo"
+        },
+        {
+          "pergunta": "O que a origem do pão de queijo exemplifica, segundo o texto?",
+          "opcoes": [
+            "Como a culinária brasileira combina influências de diferentes origens",
+            "Que a receita é totalmente europeia, sem nenhuma influência indígena",
+            "Que o prato nunca mudou desde sua criação original",
+            "Que é exclusivo de restaurantes de alta gastronomia"
+          ],
+          "resposta_correta": "Como a culinária brasileira combina influências de diferentes origens"
+        }
+      ]
+    },
+    {
+      "id": "gastro-brasil-06",
+      "titulo": "A influência africana na culinária brasileira",
+      "texto": "A culinária brasileira carrega forte influência da tradição culinária africana, trazida ao país durante o período da escravidão. Ingredientes como o azeite de dendê, o quiabo e diversas técnicas de preparo com pimenta têm origem africana e se tornaram parte central de pratos hoje associados especialmente à Bahia, como o acarajé e o vatapá. Essa influência se mistura, na cozinha brasileira, tanto com ingredientes indígenas quanto com técnicas trazidas pelos colonizadores europeus, formando uma culinária de múltiplas origens combinadas.",
+      "perguntas": [
+        {
+          "pergunta": "De onde vem a tradição culinária que trouxe o azeite de dendê ao Brasil?",
+          "opcoes": [
+            "África",
+            "Europa",
+            "Ásia",
+            "América do Norte"
+          ],
+          "resposta_correta": "África"
+        },
+        {
+          "pergunta": "A que região brasileira estão associados pratos como acarajé e vatapá?",
+          "opcoes": [
+            "Bahia",
+            "Rio Grande do Sul",
+            "Amazonas",
+            "São Paulo"
+          ],
+          "resposta_correta": "Bahia"
+        },
+        {
+          "pergunta": "Como a influência africana se relaciona com as demais influências na cozinha brasileira, segundo o texto?",
+          "opcoes": [
+            "Se mistura com ingredientes indígenas e técnicas europeias",
+            "Substitui completamente qualquer outra influência",
+            "Não tem nenhuma relação com outras tradições culinárias",
+            "É encontrada exclusivamente fora do Brasil"
+          ],
+          "resposta_correta": "Se mistura com ingredientes indígenas e técnicas europeias"
+        }
+      ]
+    },
+    {
+      "id": "gastro-brasil-07",
+      "titulo": "A imigração italiana e a pizza no Brasil",
+      "texto": "A pizza, embora de origem italiana, ganhou características próprias no Brasil, especialmente em São Paulo, cidade que recebeu grande fluxo de imigrantes italianos a partir do final do século XIX. Ao longo do tempo, a pizza brasileira incorporou ingredientes e combinações não encontradas na tradição italiana original, como coberturas doces e misturas específicas de queijos, tornando-se um exemplo de como um prato importado pode ganhar identidade própria no novo contexto cultural.",
+      "perguntas": [
+        {
+          "pergunta": "Qual cidade brasileira é especialmente associada à forte presença da pizza, segundo o texto?",
+          "opcoes": [
+            "São Paulo",
+            "Salvador",
+            "Recife",
+            "Belém"
+          ],
+          "resposta_correta": "São Paulo"
+        },
+        {
+          "pergunta": "Que grupo de imigrantes teve grande fluxo para essa cidade a partir do final do século XIX?",
+          "opcoes": [
+            "Italianos",
+            "Japoneses",
+            "Alemães",
+            "Espanhóis"
+          ],
+          "resposta_correta": "Italianos"
+        },
+        {
+          "pergunta": "O que a pizza brasileira incorporou, diferente da tradição italiana original?",
+          "opcoes": [
+            "Coberturas doces e misturas específicas de queijos",
+            "Apenas ingredientes vegetarianos",
+            "Exclusivamente frutos do mar",
+            "Nenhuma alteração, é idêntica à italiana"
+          ],
+          "resposta_correta": "Coberturas doces e misturas específicas de queijos"
+        }
+      ]
+    },
+    {
+      "id": "gastro-brasil-08",
+      "titulo": "A diversidade como marca da culinária brasileira",
+      "texto": "Diferente de países com uma tradição culinária mais unificada, o Brasil se caracteriza por uma diversidade gastronômica muito grande entre suas regiões, resultado direto de diferenças históricas de colonização, imigração e disponibilidade de ingredientes locais em cada parte do território. Essa diversidade faz com que, muitas vezes, seja mais preciso falar em 'culinárias brasileiras', no plural, do que numa única culinária nacional homogênea — cada região desenvolveu identidade própria, que será explorada em detalhe nos próximos blocos deste Mundo.",
+      "perguntas": [
+        {
+          "pergunta": "O que caracteriza a culinária brasileira, segundo o texto, em comparação a países com tradição mais unificada?",
+          "opcoes": [
+            "Uma diversidade gastronômica muito grande entre regiões",
+            "Uma receita única seguida em todo o território",
+            "A ausência total de influências históricas",
+            "Um cardápio idêntico em todas as regiões"
+          ],
+          "resposta_correta": "Uma diversidade gastronômica muito grande entre regiões"
+        },
+        {
+          "pergunta": "A que fatores o texto atribui essa diversidade regional?",
+          "opcoes": [
+            "Diferenças históricas de colonização, imigração e ingredientes locais",
+            "Apenas ao clima do país, sem nenhum outro fator",
+            "A uma lei federal que exige variação regional",
+            "Exclusivamente ao tamanho do território"
+          ],
+          "resposta_correta": "Diferenças históricas de colonização, imigração e ingredientes locais"
+        },
+        {
+          "pergunta": "Por que o texto sugere falar em 'culinárias brasileiras', no plural?",
+          "opcoes": [
+            "Porque cada região desenvolveu identidade culinária própria",
+            "Porque não existe nenhuma culinária brasileira de fato",
+            "Porque cada casa tem uma receita completamente diferente",
+            "Porque o termo no singular é proibido por lei"
+          ],
+          "resposta_correta": "Porque cada região desenvolveu identidade culinária própria"
+        }
+      ]
+    }
+  ]
+}

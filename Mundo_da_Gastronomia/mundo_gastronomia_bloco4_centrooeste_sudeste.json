@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "bloco": "mundo_da_gastronomia",
+    "tema": "gastronomia_centro_oeste_e_sudeste",
+    "fase": "V-Gastronomia",
+    "numero_bloco": 4,
+    "formato": "capsula_texto_mais_perguntas (sem timer, sem penalidade de velocidade)",
+    "checagem_direitos_autorais": "Todo o texto foi escrito originalmente com base em conhecimento cultural/historico geral, sem reproducao de nenhuma fonte externa.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo cultural neutro; topico de agronegocio tratado de forma factual e equilibrada, sem viés politico."
+  },
+  "capsulas": [
+    {
+      "id": "gastro-co-sudeste-01",
+      "titulo": "O pequi e sua relação delicada com o Cerrado",
+      "texto": "O pequi é um fruto típico do Cerrado, bioma predominante em boa parte do Centro-Oeste brasileiro, muito usado em pratos regionais como arroz com pequi e frango com pequi. O fruto é conhecido por conter espinhos internos que exigem cuidado especial ao ser consumido, mas seu sabor forte e característico o tornou um símbolo culinário da região, além de estar associado a debates sobre a preservação do próprio Cerrado, bioma historicamente menos protegido do que a Amazônia.",
+      "perguntas": [
+        {
+          "pergunta": "A qual bioma o pequi está associado, segundo o texto?",
+          "opcoes": [
+            "Cerrado",
+            "Amazônia",
+            "Mata Atlântica",
+            "Pantanal"
+          ],
+          "resposta_correta": "Cerrado"
+        },
+        {
+          "pergunta": "Qual cuidado especial o consumo do pequi exige, segundo o texto?",
+          "opcoes": [
+            "Atenção aos espinhos internos do fruto",
+            "Consumo apenas cru, nunca cozido",
+            "Refrigeração por mais de uma semana",
+            "Combinação obrigatória com frutos do mar"
+          ],
+          "resposta_correta": "Atenção aos espinhos internos do fruto"
+        },
+        {
+          "pergunta": "A que debate o pequi está associado, além do valor culinário, segundo o texto?",
+          "opcoes": [
+            "A preservação do Cerrado, bioma historicamente menos protegido",
+            "A proibição total de consumo de frutas nativas",
+            "A criação de uma nova espécie geneticamente modificada",
+            "O fim da agricultura familiar no Centro-Oeste"
+          ],
+          "resposta_correta": "A preservação do Cerrado, bioma historicamente menos protegido"
+        }
+      ]
+    },
+    {
+      "id": "gastro-co-sudeste-02",
+      "titulo": "O peixe pintado e a tradição pantaneira",
+      "texto": "No Pantanal, região que se estende por parte do Centro-Oeste, a pesca tem papel histórico tanto na subsistência quanto na cultura local, com destaque para peixes como o pintado, frequentemente preparado grelhado ou em caldos regionais. A relação da população pantaneira com os ciclos de cheia e vazante do rio influencia diretamente a disponibilidade de peixe ao longo do ano, moldando tanto hábitos alimentares quanto tradições culturais ligadas à pesca na região.",
+      "perguntas": [
+        {
+          "pergunta": "A qual região o texto associa a tradição de pesca do peixe pintado?",
+          "opcoes": [
+            "Pantanal",
+            "Litoral nordestino",
+            "Amazônia central",
+            "Serra gaúcha"
+          ],
+          "resposta_correta": "Pantanal"
+        },
+        {
+          "pergunta": "O que influencia diretamente a disponibilidade de peixe na região, segundo o texto?",
+          "opcoes": [
+            "Os ciclos de cheia e vazante do rio",
+            "A importação de peixes de outros países",
+            "O preço do combustível na região",
+            "A quantidade de turistas na época"
+          ],
+          "resposta_correta": "Os ciclos de cheia e vazante do rio"
+        },
+        {
+          "pergunta": "Como o peixe pintado é frequentemente preparado, segundo o texto?",
+          "opcoes": [
+            "Grelhado ou em caldos regionais",
+            "Exclusivamente cru, como sashimi",
+            "Apenas defumado por semanas",
+            "Somente enlatado industrialmente"
+          ],
+          "resposta_correta": "Grelhado ou em caldos regionais"
+        }
+      ]
+    },
+    {
+      "id": "gastro-co-sudeste-03",
+      "titulo": "A culinária mineira e a tradição do fogão a lenha",
+      "texto": "A culinária de Minas Gerais é frequentemente associada a uma tradição de cozimento lento, historicamente feito em fogão a lenha, o que resultou em pratos como o tutu de feijão, o frango com quiabo e a couve refogada, muitas vezes preparados em grandes panelas de ferro que ajudam a distribuir o calor de forma uniforme. Essa tradição de cozimento lento é frequentemente associada à hospitalidade mineira, já que muitos pratos ficam prontos ao longo de horas, coincidindo com o tempo de reunião e conversa entre os presentes.",
+      "perguntas": [
+        {
+          "pergunta": "A que tipo de cozimento a culinária mineira é frequentemente associada?",
+          "opcoes": [
+            "Cozimento lento, historicamente em fogão a lenha",
+            "Cozimento ultrarrápido em micro-ondas",
+            "Preparo exclusivamente cru dos alimentos",
+            "Fritura rápida em óleo quente"
+          ],
+          "resposta_correta": "Cozimento lento, historicamente em fogão a lenha"
+        },
+        {
+          "pergunta": "Que tipo de panela é frequentemente citada no preparo de pratos mineiros?",
+          "opcoes": [
+            "Panelas de ferro",
+            "Panelas de vidro temperado",
+            "Panelas de plástico resistente",
+            "Panelas de bambu"
+          ],
+          "resposta_correta": "Panelas de ferro"
+        },
+        {
+          "pergunta": "A que valor cultural o cozimento lento mineiro é frequentemente associado, segundo o texto?",
+          "opcoes": [
+            "A hospitalidade mineira",
+            "A pressa do dia a dia moderno",
+            "A rejeição a visitas na cozinha",
+            "A ausência de tradição familiar"
+          ],
+          "resposta_correta": "A hospitalidade mineira"
+        }
+      ]
+    },
+    {
+      "id": "gastro-co-sudeste-04",
+      "titulo": "São Paulo e a maior diversidade gastronômica do país",
+      "texto": "A cidade de São Paulo é frequentemente descrita como um dos maiores polos de diversidade gastronômica do Brasil, resultado direto de sucessivas ondas de imigração ao longo do século XX, vindas da Itália, do Japão, do Líbano e de diversos outros países. Essa mistura permitiu que a cidade desenvolvesse, por exemplo, uma das maiores comunidades de culinária japonesa fora do próprio Japão, concentrada especialmente no bairro da Liberdade, além de forte presença de culinária árabe e italiana em diferentes regiões da cidade.",
+      "perguntas": [
+        {
+          "pergunta": "A que fator o texto atribui a grande diversidade gastronômica de São Paulo?",
+          "opcoes": [
+            "Sucessivas ondas de imigração ao longo do século XX",
+            "A proibição de restaurantes estrangeiros em outras cidades",
+            "Um decreto municipal que exige variedade culinária",
+            "A ausência total de culinária regional brasileira"
+          ],
+          "resposta_correta": "Sucessivas ondas de imigração ao longo do século XX"
+        },
+        {
+          "pergunta": "Em qual bairro de São Paulo se concentra forte presença da culinária japonesa, segundo o texto?",
+          "opcoes": [
+            "Liberdade",
+            "Moema",
+            "Pinheiros",
+            "Vila Madalena"
+          ],
+          "resposta_correta": "Liberdade"
+        },
+        {
+          "pergunta": "Além da japonesa, quais outras culinárias o texto cita com forte presença na cidade?",
+          "opcoes": [
+            "Árabe e italiana",
+            "Escandinava e russa",
+            "Australiana e canadense",
+            "Egípcia e marroquina"
+          ],
+          "resposta_correta": "Árabe e italiana"
+        }
+      ]
+    },
+    {
+      "id": "gastro-co-sudeste-05",
+      "titulo": "O feijão tropeiro e sua origem prática",
+      "texto": "O feijão tropeiro é um prato de origem mineira que combina feijão, farinha de mandioca, ovos, linguiça e couve, e tem sua criação associada aos antigos tropeiros — comerciantes que percorriam longas distâncias transportando mercadorias a cavalo ou em mulas, entre os séculos XVIII e XIX. O prato foi desenvolvido como uma refeição prática e nutritiva, fácil de transportar e preparar durante as longas viagens, unindo ingredientes que se conservavam bem ao longo do trajeto.",
+      "perguntas": [
+        {
+          "pergunta": "A que grupo histórico a criação do feijão tropeiro está associada?",
+          "opcoes": [
+            "Aos tropeiros, comerciantes que percorriam longas distâncias",
+            "Aos garimpeiros de ouro do período colonial",
+            "Aos pescadores do litoral sudeste",
+            "Aos imigrantes japoneses do século XX"
+          ],
+          "resposta_correta": "Aos tropeiros, comerciantes que percorriam longas distâncias"
+        },
+        {
+          "pergunta": "Como os tropeiros transportavam suas mercadorias, segundo o texto?",
+          "opcoes": [
+            "A cavalo ou em mulas",
+            "Em carroças puxadas por bois",
+            "Em pequenos barcos fluviais",
+            "A pé, carregando tudo nas costas"
+          ],
+          "resposta_correta": "A cavalo ou em mulas"
+        },
+        {
+          "pergunta": "Por que o feijão tropeiro foi desenvolvido, segundo o texto?",
+          "opcoes": [
+            "Como refeição prática e nutritiva para longas viagens",
+            "Como prato exclusivo de festas religiosas",
+            "Como sobremesa para ocasiões especiais",
+            "Como alimento reservado apenas à nobreza colonial"
+          ],
+          "resposta_correta": "Como refeição prática e nutritiva para longas viagens"
+        }
+      ]
+    },
+    {
+      "id": "gastro-co-sudeste-06",
+      "titulo": "A culinária carioca e a praia como cenário gastronômico",
+      "texto": "A culinária do Rio de Janeiro tem forte relação com o estilo de vida praiano da cidade, o que ajuda a explicar a popularidade histórica de itens como água de coco, biscoitos vendidos nas areias das praias e petiscos leves, muitas vezes consumidos ao ar livre. Além disso, o boteco carioca, com pratos como bolinho de bacalhau e outros petiscos tradicionais, tornou-se parte importante da vida social da cidade, funcionando como ponto de encontro informal entre amigos após o expediente de trabalho.",
+      "perguntas": [
+        {
+          "pergunta": "A que estilo de vida a culinária carioca está fortemente associada, segundo o texto?",
+          "opcoes": [
+            "Estilo de vida praiano",
+            "Estilo de vida rural isolado",
+            "Estilo de vida exclusivamente noturno",
+            "Estilo de vida voltado à montanha"
+          ],
+          "resposta_correta": "Estilo de vida praiano"
+        },
+        {
+          "pergunta": "Cite um petisco tradicional citado no texto associado ao boteco carioca.",
+          "opcoes": [
+            "Bolinho de bacalhau",
+            "Sushi tradicional",
+            "Fondue de queijo",
+            "Croissant recheado"
+          ],
+          "resposta_correta": "Bolinho de bacalhau"
+        },
+        {
+          "pergunta": "Que função social o boteco carioca cumpre, segundo o texto?",
+          "opcoes": [
+            "Ponto de encontro informal entre amigos após o trabalho",
+            "Local exclusivo para reuniões empresariais formais",
+            "Espaço reservado apenas para turistas estrangeiros",
+            "Um tipo de mercado de venda de peixes"
+          ],
+          "resposta_correta": "Ponto de encontro informal entre amigos após o trabalho"
+        }
+      ]
+    },
+    {
+      "id": "gastro-co-sudeste-07",
+      "titulo": "A pamonha e a tradição das festas juninas",
+      "texto": "A pamonha, feita de milho verde ralado e cozido dentro da própria palha, é um prato fortemente associado às festas juninas em diversas regiões do Centro-Oeste e Sudeste, período em que a colheita do milho tradicionalmente acontece no Brasil. Existem versões doces e salgadas da pamonha, e sua preparação, embora trabalhosa, costuma ser feita coletivamente em algumas famílias e comunidades, reforçando um caráter social em torno do preparo do prato, não apenas do seu consumo.",
+      "perguntas": [
+        {
+          "pergunta": "De que ingrediente principal a pamonha é feita?",
+          "opcoes": [
+            "Milho verde ralado",
+            "Farinha de trigo",
+            "Batata-doce",
+            "Arroz cozido"
+          ],
+          "resposta_correta": "Milho verde ralado"
+        },
+        {
+          "pergunta": "A que celebração a pamonha está fortemente associada no Brasil?",
+          "opcoes": [
+            "Festas juninas",
+            "Carnaval",
+            "Réveillon",
+            "Semana Santa"
+          ],
+          "resposta_correta": "Festas juninas"
+        },
+        {
+          "pergunta": "Que caráter social o preparo da pamonha pode ter, segundo o texto?",
+          "opcoes": [
+            "É feito coletivamente em algumas famílias e comunidades",
+            "É proibido ser feito em grupo",
+            "É sempre produzido apenas industrialmente",
+            "É consumido exclusivamente sozinho"
+          ],
+          "resposta_correta": "É feito coletivamente em algumas famílias e comunidades"
+        }
+      ]
+    },
+    {
+      "id": "gastro-co-sudeste-08",
+      "titulo": "A soja e a transformação do agronegócio no Centro-Oeste",
+      "texto": "Embora não seja tradicionalmente um alimento de consumo direto tão presente na mesa brasileira quanto o feijão ou o arroz, a soja se tornou um dos produtos agrícolas mais importantes do Centro-Oeste brasileiro, impulsionando transformações econômicas profundas na região a partir da segunda metade do século XX. A expansão da soja também gerou debates relevantes sobre uso da terra, impacto ambiental e o papel do Brasil como um dos maiores produtores mundiais desse grão, usado majoritariamente para ração animal e óleo, não para consumo humano direto.",
+      "perguntas": [
+        {
+          "pergunta": "A partir de quando a soja impulsionou transformações econômicas profundas no Centro-Oeste, segundo o texto?",
+          "opcoes": [
+            "A partir da segunda metade do século XX",
+            "Desde o período colonial brasileiro",
+            "Apenas nos últimos cinco anos",
+            "Desde a chegada dos primeiros portugueses"
+          ],
+          "resposta_correta": "A partir da segunda metade do século XX"
+        },
+        {
+          "pergunta": "Para que a soja é usada majoritariamente, segundo o texto?",
+          "opcoes": [
+            "Ração animal e óleo",
+            "Consumo humano direto, como o feijão",
+            "Produção exclusiva de tecidos",
+            "Fabricação de combustível para aviões"
+          ],
+          "resposta_correta": "Ração animal e óleo"
+        },
+        {
+          "pergunta": "Que tipo de debate a expansão da soja gerou, segundo o texto?",
+          "opcoes": [
+            "Sobre uso da terra e impacto ambiental",
+            "Sobre a proibição total do cultivo de milho",
+            "Sobre a criação de uma nova capital federal",
+            "Sobre o fim da pecuária no Brasil"
+          ],
+          "resposta_correta": "Sobre uso da terra e impacto ambiental"
+        }
+      ]
+    }
+  ]
+}
