@@ -576,6 +576,10 @@
   "@roundReviewBadgeLabel": {
     "description": "Small label shown while answering a question during the round-review phase, making clear it won't award XP"
   },
+  "newChallengeBadgeLabel": "Novo",
+  "@newChallengeBadgeLabel": {
+    "description": "Small pill badge shown on a challenge whose content was added recently (ChallengeOut.is_new, config.NEW_CONTENT_BADGE_WINDOW_DAYS) — pedido de Rhoney 07/09/2026"
+  },
   "roundReviewRemainingMessage": "{count, plural, one{Falta 1 revisão.} other{Faltam {count} revisões.}}",
   "@roundReviewRemainingMessage": {
     "description": "Shown after answering a review question, when there are still more wrong answers left to review",
@@ -1868,6 +1872,10 @@
   "@homeSearchHint": {
     "description": "Placeholder text for the search field on Home, above Mundo da Linguagem"
   },
+  "homeAllTerritoriesFallbackLabel": "Territórios",
+  "@homeAllTerritoriesFallbackLabel": {
+    "description": "REORGANIZACAO_MENUS_HOME_V1.md (06/09/2026): single carousel card label used only when GET /progress hasn't returned world grouping yet (fallback listing all territories flat)"
+  },
   "homeSearchNotFoundMessage": "Não encontramos nada para \"{query}\".",
   "@homeSearchNotFoundMessage": {
     "description": "Shown when the Home search finds no matching theme, phrase or word",
@@ -1885,9 +1893,13 @@
   "@homeSearchSuggestionRegisteredMessage": {
     "description": "Confirmation snackbar after the user taps homeSearchSuggestButton"
   },
-  "homeMoreCardLabel": "Mais",
-  "@homeMoreCardLabel": {
-    "description": "Label for the 5th quick-action card on Home (HOME_REDESIGN_V2_MINIMALISMO.md), merging the share and theme-toggle icons"
+  "settingsShareAndAppearanceSectionTitle": "Compartilhar e Aparência",
+  "@settingsShareAndAppearanceSectionTitle": {
+    "description": "Section title in Settings for share-app and theme toggle (REORGANIZACAO_MENUS_HOME_V1.md §2)"
+  },
+  "settingsThemeModeLabel": "Tema escuro",
+  "@settingsThemeModeLabel": {
+    "description": "Label for the dark/light theme toggle switch in Settings"
   },
   "friendsInviteShareButton": "Indicar",
   "@friendsInviteShareButton": {

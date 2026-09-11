@@ -42,9 +42,36 @@ class _FakeApiClient extends ApiClient {
     preferences = body;
     return body;
   }
+
+  // REORGANIZACAO_MENUS_HOME_V1.md §2 (06/09/2026): compartilhar
+  // (movido do card "Mais" da Home) agora vive aqui.
+  int rewardAppInviteShareCalls = 0;
+
+  @override
+  Future<Map<String, dynamic>> rewardAppInviteShare() async {
+    rewardAppInviteShareCalls++;
+    return {'xp_awarded': 20, 'mentalcoins_awarded': 5, 'coin_milestone_reached': false};
+  }
 }
 
 void main() {
+  // REORGANIZACAO_MENUS_HOME_V1.md §2 (06/09/2026): a nova seção
+  // "Compartilhar e Aparência" no topo da tela empurrou o resto do
+  // conteúdo pra baixo — achado real rodando os testes já existentes:
+  // no viewport padrão de teste (800x600), ListView(children: [...])
+  // só constrói a extensão visível + cache extent, então widgets mais
+  // abaixo (ex.: toggle de "Ranking", botão "Sair") deixavam de ser
+  // encontrados por find.text/find.widgetWithText. Mesmo helper já usado
+  // em home_screen_test.dart.
+  Future<void> pumpTall(WidgetTester tester, Widget child) async {
+    tester.view.physicalSize = const Size(800, 2400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(child);
+    await tester.pumpAndSettle();
+  }
+
   testWidgets('SettingsScreen carrega preferências reais do backend e persiste mudança via PUT', (tester) async {
     // Achado real: sem isto, FeedbackService.ensureLoaded() trava para
     // sempre esperando SharedPreferences.getInstance() (o plugin de
@@ -52,7 +79,8 @@ void main() {
     // documentada em widget_test.dart) — pumpAndSettle() nunca retorna.
     SharedPreferences.setMockInitialValues({});
     final client = _FakeApiClient();
-    await tester.pumpWidget(
+    await pumpTall(
+      tester,
       MaterialApp(
         localizationsDelegates: const [
           AppLocalizations.delegate,
@@ -64,7 +92,6 @@ void main() {
         home: SettingsScreen(client: client),
       ),
     );
-    await tester.pumpAndSettle();
 
     // Estado inicial vem do backend fake: reengajamento ligado, social desligado.
     final reengagementSwitch = tester.widget<SwitchListTile>(
@@ -82,6 +109,42 @@ void main() {
     expect(client.updateCalls.single, {'reengagement_enabled': true, 'social_enabled': true});
   });
 
+  testWidgets('REORGANIZACAO_MENUS_HOME_V1.md §2: compartilhar e tema aparecem em Ajuste, tocar não trava a tela', (tester) async {
+    // O card "Mais" saiu do grid da Home (ver home_screen_test.dart) —
+    // suas duas funções migraram pra cá. Share sheet nativo não existe
+    // no ambiente de widget test (mesmo achado já documentado no antigo
+    // teste da Home): tocar no compartilhar só precisa não lançar
+    // exceção não tratada, nunca precisa concluir de fato o share.
+    SharedPreferences.setMockInitialValues({});
+    final client = _FakeApiClient();
+    await pumpTall(
+      tester,
+      MaterialApp(
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: SettingsScreen(client: client),
+      ),
+    );
+
+    expect(find.text('Compartilhar e Aparência'), findsOneWidget);
+    expect(find.text('Convidar amigos para o MENTAL'), findsOneWidget);
+    expect(find.text('Tema escuro'), findsOneWidget);
+
+    await tester.tap(find.text('Convidar amigos para o MENTAL'));
+    await tester.pumpAndSettle();
+
+    final themeSwitch = tester.widget<SwitchListTile>(find.widgetWithText(SwitchListTile, 'Tema escuro'));
+    await tester.tap(find.widgetWithText(SwitchListTile, 'Tema escuro'));
+    await tester.pumpAndSettle();
+    final themeSwitchAfter = tester.widget<SwitchListTile>(find.widgetWithText(SwitchListTile, 'Tema escuro'));
+    expect(themeSwitchAfter.value, isNot(equals(themeSwitch.value)));
+  });
+
   testWidgets('"Sair" esvazia a pilha de navegação, revelando a tela por baixo (regressão)', (tester) async {
     // Achado real (2026-08-26): SettingsScreen chega via Navigator.push
     // a partir da Home — sem esvaziar a pilha antes do signOut, ela (ou
@@ -92,7 +155,8 @@ void main() {
     final client = _FakeApiClient();
     var signOutCalled = false;
 
-    await tester.pumpWidget(
+    await pumpTall(
+      tester,
       MaterialApp(
         localizationsDelegates: const [
           AppLocalizations.delegate,
@@ -120,7 +184,6 @@ void main() {
         ),
       ),
     );
-    await tester.pumpAndSettle();
 
     await tester.tap(find.text('abrir configurações'));
     await tester.pumpAndSettle();

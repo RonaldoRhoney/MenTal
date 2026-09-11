@@ -9,17 +9,15 @@ import '../l10n/generated/app_localizations.dart';
 import '../services/app_version_service.dart';
 import '../services/feed_activity_service.dart';
 import '../services/movement_service.dart';
-import '../services/share_service.dart';
-import '../services/theme_mode_service.dart';
 import '../territories.dart';
 import '../theme/app_theme.dart';
-import '../widgets/coins_rise_overlay.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
 import '../widgets/update_available_dialog.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
+import 'feed_screen.dart';
 import 'feedback_screen.dart';
 import 'friends_screen.dart';
 import 'mentalcoins_screen.dart';
@@ -28,10 +26,6 @@ import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
 import 'word_search_screen.dart';
-
-/// Link oficial da ficha do MENTAL na Google Play — usado pelo botão de
-/// convidar amigos (ao lado do nome do usuário, no card de progresso).
-const String kPlayStoreUrl = 'https://play.google.com/store/apps/details?id=com.rhoneyinc.mental';
 
 /// Home: um CTA primário claro por território, conforme Princípio de
 /// Clareza Imediata (PRODUCT_PRINCIPLES.md §1) — nada compete visualmente
@@ -77,46 +71,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _loadMentalCoinsBalance() async {
     try {
       final balance = await widget.client.getMentalCoinsBalance();
-      if (mounted) setState(() => _mentalCoinsBalance = balance['balance'] as int);
+      if (mounted)
+        setState(() => _mentalCoinsBalance = balance['balance'] as int);
     } on ApiException catch (_) {}
   }
 
   Future<void> _openMentalCoins() async {
     await Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => MentalCoinsScreen(client: widget.client)),
+      MaterialPageRoute(
+          builder: (_) => MentalCoinsScreen(client: widget.client)),
     );
     _loadMentalCoinsBalance();
-  }
-
-  /// Convidar amigos pra baixar o app (pedido de Rhoney, ao lado do
-  /// wordmark "MENTAL" no topo) — usa o share sheet nativo do SO e, se o
-  /// jogador de fato compartilhou, tenta a recompensa diária PRÓPRIA
-  /// deste botão (POST /social/share-app-reward: 20 XP + 5 MentalCoins,
-  /// teto de 1x/dia — nunca a mesma chamada/teto de ShareAchievementButton,
-  /// que é sobre compartilhar uma conquista, não convidar gente nova).
-  Future<void> _shareApp() async {
-    final l10n = AppLocalizations.of(context)!;
-    final shared = await ShareService.share(l10n.shareAppInviteMessage(kPlayStoreUrl));
-    if (!shared) return;
-    try {
-      final result = await widget.client.rewardAppInviteShare();
-      final xpAwarded = result['xp_awarded'] as int? ?? 0;
-      final mentalCoinsAwarded = result['mentalcoins_awarded'] as int? ?? 0;
-      final coinMilestoneReached = result['coin_milestone_reached'] as bool? ?? false;
-      if (xpAwarded > 0 && mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.shareAppXpAndCoinsRewardedMessage(xpAwarded, mentalCoinsAwarded))),
-        );
-      }
-      if (coinMilestoneReached && mounted && !MediaQuery.of(context).disableAnimations) {
-        _coinsRise.play();
-      }
-      if (mentalCoinsAwarded > 0) _loadMentalCoinsBalance();
-      if (xpAwarded > 0) _loadProgress();
-    } catch (_) {
-      // Reforço opcional — falha ao pedir a recompensa não pode
-      // interromper o fluxo de compartilhamento já concluído.
-    }
   }
 
   // V2 item 9 — badge de passos ainda não coletados junto ao ícone de
@@ -128,22 +93,16 @@ class _HomeScreenState extends State<HomeScreen> {
   String? _movementCycleId;
   StreamSubscription<int>? _movementStepSub;
 
-  // FEED_SOCIAL_V1.md — badge discreto no card "Amigos" (decisão de
-  // Rhoney, 06/09/2026: nunca um atalho novo na Home pro Feed, um
-  // recurso social secundário) — contagem de eventos novos desde a
-  // última vez que o jogador abriu a tela de Feed.
+  // FEED_SOCIAL_V1.md — badge discreto no card "Feed" do grid de
+  // atalhos (REORGANIZACAO_MENUS_HOME_V1.md §3, 06/09/2026: Feed ganhou
+  // entrada própria na posição liberada pelo card "Mais") — contagem de
+  // eventos novos desde a última vez que o jogador abriu a tela de Feed.
   int? _feedUnseenCount;
 
   Future<void> _loadFeedBadge() async {
     final count = await FeedActivityService.unseenCount(widget.client);
     if (mounted) setState(() => _feedUnseenCount = count);
   }
-
-  // Pedido de Rhoney (2026-09-02): moedas sobem na tela ao cruzar 100 XP
-  // ou 50 MentalCoins ao convidar amigos (services.crossed_coin_milestone
-  // via POST /social/share-app-reward) — mesmo controller/widget usado em
-  // ChallengeScreen para o mesmo marco.
-  final _coinsRise = CoinsRiseController();
 
   // Busca na Home (pedido de Rhoney, 2026-09-03; estilo revisado
   // 2026-09-03 — "nível profissional", campo de sugestão em destaque em
@@ -161,30 +120,6 @@ class _HomeScreenState extends State<HomeScreen> {
   String? _notFoundQuery;
   bool _suggestionSending = false;
   bool _suggestionSent = false;
-
-  // Seta indicando "há mais Mundos abaixo" (pedido de Rhoney, 05/09/2026,
-  // ao ver a lista com 6 Mundos sem nenhuma pista visual de rolagem) —
-  // some assim que o jogador já rolou perto do fim da lista, evitando
-  // poluir a tela pra quem já sabe que há mais conteúdo.
-  final ScrollController _worldsScrollController = ScrollController();
-  bool _showMoreWorldsHint = false;
-
-  void _onWorldsScroll() {
-    if (!_worldsScrollController.hasClients) return;
-    final position = _worldsScrollController.position;
-    final hasMoreBelow = position.maxScrollExtent - position.pixels > 24;
-    if (hasMoreBelow != _showMoreWorldsHint) {
-      setState(() => _showMoreWorldsHint = hasMoreBelow);
-    }
-  }
-
-  void _checkWorldsOverflow() {
-    if (!_worldsScrollController.hasClients) return;
-    final hasMoreBelow = _worldsScrollController.position.maxScrollExtent > 24;
-    if (hasMoreBelow != _showMoreWorldsHint) {
-      setState(() => _showMoreWorldsHint = hasMoreBelow);
-    }
-  }
 
   Future<void> _handleSearch(String rawQuery) async {
     final query = rawQuery.trim();
@@ -237,7 +172,9 @@ class _HomeScreenState extends State<HomeScreen> {
         });
       }
     } on ApiException catch (e) {
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+      if (mounted)
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text(e.message)));
     } finally {
       if (mounted) setState(() => _searching = false);
     }
@@ -253,7 +190,8 @@ class _HomeScreenState extends State<HomeScreen> {
       // da confirmação, tempo suficiente só pra o texto "Sugestão
       // registrada!" ser lido.
       await Future.delayed(const Duration(milliseconds: 1400));
-      if (mounted && _notFoundQuery == query) setState(() => _notFoundQuery = null);
+      if (mounted && _notFoundQuery == query)
+        setState(() => _notFoundQuery = null);
     } on ApiException catch (_) {
       // Sugestão é reforço opcional — falha ao registrar não pode
       // quebrar o fluxo de busca já concluído (mesmo princípio de
@@ -268,7 +206,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _worldsScrollController.addListener(_onWorldsScroll);
     _loadProgress();
     _loadMovementBadge();
     _loadProfileHeader();
@@ -284,7 +221,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _checkAppVersion() async {
     final result = await AppVersionService.check(widget.client);
     if (!mounted || result.status == AppUpdateStatus.upToDate) return;
-    showUpdateAvailableDialog(context, required: result.status == AppUpdateStatus.updateRequired);
+    showUpdateAvailableDialog(context,
+        required: result.status == AppUpdateStatus.updateRequired);
   }
 
   // Pedido de Rhoney (04/09/2026): "pull to refresh" em qualquer tela do
@@ -326,10 +264,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void dispose() {
     _movementStepSub?.cancel();
-    _coinsRise.dispose();
     _searchController.dispose();
     _searchFocusNode.dispose();
-    _worldsScrollController.dispose();
     super.dispose();
   }
 
@@ -337,7 +273,6 @@ class _HomeScreenState extends State<HomeScreen> {
     try {
       final progress = await widget.client.progress();
       if (mounted) setState(() => _progress = progress);
-      WidgetsBinding.instance.addPostFrameCallback((_) => _checkWorldsOverflow());
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
     }
@@ -359,16 +294,21 @@ class _HomeScreenState extends State<HomeScreen> {
       await MovementService.instance.ensureBaselineFor(cycleId);
       final cachedLast = await MovementService.instance.lastKnownRawSteps();
       if (cachedLast != null) {
-        final delta = await MovementService.instance.pendingDeltaFor(cycleId, cachedLast);
-        if (mounted) setState(() => _movementPendingSteps = delta.uncollectedSteps);
+        final delta =
+            await MovementService.instance.pendingDeltaFor(cycleId, cachedLast);
+        if (mounted)
+          setState(() => _movementPendingSteps = delta.uncollectedSteps);
       }
 
       if (_movementCycleId != cycleId) {
         _movementCycleId = cycleId;
         _movementStepSub?.cancel();
-        _movementStepSub = MovementService.instance.stepCountStream().listen((steps) async {
-          final delta = await MovementService.instance.pendingDeltaFor(cycleId, steps);
-          if (mounted) setState(() => _movementPendingSteps = delta.uncollectedSteps);
+        _movementStepSub =
+            MovementService.instance.stepCountStream().listen((steps) async {
+          final delta =
+              await MovementService.instance.pendingDeltaFor(cycleId, steps);
+          if (mounted)
+            setState(() => _movementPendingSteps = delta.uncollectedSteps);
         });
       }
     } on ApiException catch (_) {
@@ -391,12 +331,14 @@ class _HomeScreenState extends State<HomeScreen> {
   // Territórios sem bloco (block_id null) continuam soltos direto no
   // Mundo, sem sub-cabeçalho, como sempre foram.
   Map<String, String> _blockNameByTerritory() {
-    final blocks = (_progress?['blocks'] as List?)?.cast<Map<String, dynamic>>();
+    final blocks =
+        (_progress?['blocks'] as List?)?.cast<Map<String, dynamic>>();
     if (blocks == null) return const {};
     final map = <String, String>{};
     for (final block in blocks) {
       final name = block['name'] as String;
-      for (final territoryId in (block['territory_ids'] as List).cast<String>()) {
+      for (final territoryId
+          in (block['territory_ids'] as List).cast<String>()) {
         map[territoryId] = name;
       }
     }
@@ -407,37 +349,131 @@ class _HomeScreenState extends State<HomeScreen> {
   // agrupamento (GET /progress já devolve os territórios de cada mundo
   // e se está completo) — a Home só organiza visualmente, nunca decide
   // sozinha quais territórios pertencem a qual mundo.
-  List<Widget> _buildWorldSections(AppLocalizations l10n) {
-    final worlds = (_progress?['worlds'] as List?)?.cast<Map<String, dynamic>>();
-    if (worlds == null || worlds.isEmpty) {
-      return [_WorldSection(children: _territoryGroups(l10n, kTerritoryIds, const {}))];
-    }
-
+  //
+  /// REORGANIZACAO_MENUS_HOME_V1.md §5/§7/§8 (06/09/2026): substitui a
+  /// lista vertical de Mundos (ExpansionTile empilhados, exigia rolagem
+  /// extensa) por um carrossel horizontal compacto — critério de aceite
+  /// §8 explícito: "Lista de Mundos não obriga mais rolagem vertical
+  /// extensa pra ser vista por completo". Cada card abre uma tela
+  /// dedicada com os territórios daquele Mundo (_WorldDetailScreen),
+  /// nunca expande in-place (decisão tomada com Rhoney: manter a Home
+  /// enxuta, sem nada crescendo embaixo do carrossel).
+  Widget _buildWorldCarousel(AppLocalizations l10n) {
+    final worlds =
+        (_progress?['worlds'] as List?)?.cast<Map<String, dynamic>>();
     final blockNameByTerritory = _blockNameByTerritory();
-    final sections = <Widget>[];
-    for (final world in worlds) {
-      final territoryIds = (world['territory_ids'] as List).cast<String>();
-      final completed = world['completed'] as bool;
-      sections.add(
-        _WorldSection(
-          title: world['name'] as String,
-          completed: completed,
-          children: _territoryGroups(l10n, territoryIds, blockNameByTerritory),
-        ),
-      );
+
+    final items = worlds == null || worlds.isEmpty
+        ? [
+            (
+              title: l10n.homeAllTerritoriesFallbackLabel,
+              icon: Icons.travel_explore_rounded,
+              completed: false,
+              territoryIds: kTerritoryIds,
+            ),
+          ]
+        : [
+            for (final world in worlds)
+              (
+                title: world['name'] as String,
+                icon: _worldIcon(world['world_id'] as String),
+                completed: world['completed'] as bool,
+                territoryIds: (world['territory_ids'] as List).cast<String>(),
+              ),
+          ];
+
+    return SizedBox(
+      height: 124,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: items.length,
+        separatorBuilder: (_, __) => const SizedBox(width: 12),
+        itemBuilder: (context, index) {
+          final item = items[index];
+          return _WorldCarouselCard(
+            title: _shortWorldTitle(item.title),
+            icon: item.icon,
+            completed: item.completed,
+            onTap: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => _WorldDetailScreen(
+                    title: item.title,
+                    completed: item.completed,
+                    refreshProgress: _loadProgress,
+                    buildChildren: (onReturned) => _territoryGroups(
+                      l10n,
+                      item.territoryIds,
+                      blockNameByTerritory,
+                      onReturned: onReturned,
+                    ),
+                  ),
+                ),
+              );
+              _loadProgress();
+            },
+          );
+        },
+      ),
+    );
+  }
+
+  /// Achado real testando no dispositivo (06/09/2026): o nome completo
+  /// ("Mundo da Linguagem", "Mundo da Mente Lógica"...) não cabe em 2
+  /// linhas num card de carrossel estreito — cortava no meio da palavra
+  /// ("Mundo da Linguag..."). O prefixo "Mundo da/do/dos" é redundante
+  /// dentro de um carrossel que já É a lista de Mundos, então só o card
+  /// (nunca o nome usado em `_WorldDetailScreen`, Progresso ou qualquer
+  /// outro lugar) mostra a versão curta.
+  String _shortWorldTitle(String title) {
+    const prefixes = ['Mundo da ', 'Mundo do ', 'Mundo dos ', 'Mundo das '];
+    for (final prefix in prefixes) {
+      if (title.startsWith(prefix)) return title.substring(prefix.length);
     }
-    return sections;
+    return title;
+  }
+
+  /// Ícone de identidade por Mundo (novo no carrossel — a lista vertical
+  /// anterior não precisava disso, só o nome). Mundo desconhecido (ainda
+  /// não lançado no client, ex.: Gastronomia/Oceanos/Espaço em curadoria)
+  /// cai num ícone genérico de "explorar", nunca quebra o carrossel.
+  IconData _worldIcon(String worldId) {
+    switch (worldId) {
+      case 'linguagem':
+        return Icons.menu_book_rounded;
+      case 'mente_logica':
+        return Icons.psychology_rounded;
+      case 'cultura_geral':
+        return Icons.public_rounded;
+      case 'descoberta':
+        return Icons.explore_rounded;
+      case 'idiomas':
+        return Icons.translate_rounded;
+      case 'valores':
+        return Icons.volunteer_activism_rounded;
+      case 'transito':
+        return Icons.traffic_rounded;
+      default:
+        return Icons.travel_explore_rounded;
+    }
   }
 
   /// Agrupa territórios consecutivos do mesmo bloco (ou sem bloco) numa
   /// mesma "linha" de grid — cada grupo vira um título opcional (nome do
   /// bloco) seguido de um Wrap em 2 colunas com os cards de território
-  /// daquele grupo.
+  /// daquele grupo. `onReturned` sobrepõe o padrão (`_loadProgress`,
+  /// que só atualiza o estado da Home) quando os cards são exibidos
+  /// dentro de `_WorldDetailScreen` — lá o retorno de um desafio
+  /// precisa, além de atualizar a Home por baixo, reconstruir a própria
+  /// tela empilhada, senão a barra de progresso do território ficaria
+  /// visualmente desatualizada até o jogador voltar pra Home e reabrir
+  /// o Mundo.
   List<Widget> _territoryGroups(
     AppLocalizations l10n,
     List<String> territoryIds,
-    Map<String, String> blockNameByTerritory,
-  ) {
+    Map<String, String> blockNameByTerritory, {
+    VoidCallback? onReturned,
+  }) {
     final groups = <Widget>[];
     String? currentBlock;
     List<String> currentIds = [];
@@ -451,7 +487,7 @@ class _HomeScreenState extends State<HomeScreen> {
           l10n: l10n,
           territoryProgressOf: _territoryProgress,
           client: widget.client,
-          onReturned: _loadProgress,
+          onReturned: onReturned ?? _loadProgress,
         ),
       );
       currentIds = [];
@@ -476,168 +512,224 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       body: SafeArea(
-        child: CoinsRiseOverlay(
-          controller: _coinsRise,
-          child: Stack(
-            children: [
-              // HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — "MENTAL" some como
-              // bloco de texto de destaque (já aparece na Splash, repetir
-              // aqui era redundância pura) e vira marca d'água: opacidade
-              // muito baixa, camada de fundo, NUNCA recebe toque
-              // (IgnorePointer) — os cards acima continuam 100% clicáveis.
-              const Positioned.fill(child: _MentalWatermark()),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const SizedBox(height: 16),
-                    // §3.3 — grid de 5 cards (Progresso/Ranking/Amigos/
-                    // Movimento/Mais), todos com o mesmo tamanho. O 5º
-                    // card ("Mais") reaproveita os handlers de
-                    // compartilhar e alternar tema que antes ficavam
-                    // soltos no cabeçalho.
-                    _QuickActionsRow(
-                      client: widget.client,
-                      movementPendingSteps: _movementPendingSteps,
-                      feedUnseenCount: _feedUnseenCount,
-                      onReturnFromProgress: _loadProgress,
-                      onReturnFromMovement: _loadMovementBadge,
-                      onReturnFromFriends: _loadFeedBadge,
-                      onShareApp: _shareApp,
-                    ),
-                    const SizedBox(height: 20),
-              if (progress != null)
-                _ProgressCard(
-                  progress: progress,
-                  photoUrl: _photoUrl,
-                  realName: _realName,
-                  mentalCoinsBalance: _mentalCoinsBalance,
-                  l10n: l10n,
-                  onTapPhoto: _openProfile,
-                  onTapMentalCoins: _openMentalCoins,
-                ),
-              if (_error != null) ...[
-                const SizedBox(height: 8),
-                Text(_error!, style: TextStyle(color: AppColors.error)),
-              ],
-              const SizedBox(height: 16),
-              // Busca na Home (pedido de Rhoney, 2026-09-03; estilo
-              // revisado 2026-09-03 — "nível profissional, com o devido
-              // destaque") — "acima de Mundo da Linguagem", logo antes
-              // da lista de Mundos. Mesma linguagem visual dos cards de
-              // atalho (_QuickActionCard) abaixo: fundo bg2, cantos bem
-              // arredondados, borda de destaque na cor de acento — aqui
-              // dourado, por ser uma ação de "descobrir/encontrar algo
-              // novo", distinta do teal usado nos atalhos de navegação.
-              Container(
-                decoration: BoxDecoration(
-                  color: AppColors.bg2.withValues(alpha: 0.92),
-                  borderRadius: BorderRadius.circular(28),
-                  border: Border.all(color: AppColors.gold.withValues(alpha: 0.45)),
-                ),
-                child: TextField(
-                  controller: _searchController,
-                  focusNode: _searchFocusNode,
-                  textInputAction: TextInputAction.search,
-                  onSubmitted: _handleSearch,
-                  style: TextStyle(color: AppColors.bone),
-                  decoration: InputDecoration(
-                    hintText: l10n.homeSearchHint,
-                    hintStyle: TextStyle(color: AppColors.muted),
-                    border: InputBorder.none,
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    contentPadding: const EdgeInsets.symmetric(vertical: 14),
-                    prefixIcon: Icon(Icons.search_rounded, color: AppColors.gold),
-                    suffixIcon: _searching
-                        ? Padding(
-                            padding: const EdgeInsets.all(14),
-                            child: SizedBox(
-                              width: 18,
-                              height: 18,
-                              child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.gold),
+        child: Stack(
+          children: [
+            // HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — "MENTAL" some como
+            // bloco de texto de destaque (já aparece na Splash, repetir
+            // aqui era redundância pura) e vira marca d'água: opacidade
+            // muito baixa, camada de fundo, NUNCA recebe toque
+            // (IgnorePointer) — os cards acima continuam 100% clicáveis.
+            const Positioned.fill(child: _MentalWatermark()),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              // REORGANIZACAO_MENUS_HOME_V1.md §5/§8 (06/09/2026): a
+              // lista de Mundos virou um carrossel horizontal de altura
+              // fixa (não mais Expanded+ListView próprio) — a página
+              // inteira agora é UMA única área rolável (pull-to-refresh
+              // continua funcionando, RefreshIndicator só precisa de
+              // algum Scrollable descendente, não importa qual).
+              //
+              // Achado real testando no dispositivo (06/09/2026): sem o
+              // Expanded de antes preenchendo o resto da tela, sobrava um
+              // vão vazio grande entre o carrossel e a bottom nav em
+              // telas altas. LayoutBuilder + ConstrainedBox(minHeight)
+              // + Column centralizada resolve isso — quando o conteúdo é
+              // mais baixo que a tela, distribui o espaço sobrando de
+              // forma equilibrada (em vez de jogar tudo pro rodapé);
+              // quando o conteúdo cresce (mais Mundos, erro visível
+              // etc.) e passa da altura da tela, volta a rolar
+              // normalmente, sem cortar nada.
+              child: RefreshIndicator(
+                onRefresh: _refreshAll,
+                color: AppColors.gold,
+                child: LayoutBuilder(
+                  builder: (context, constraints) => SingleChildScrollView(
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    child: ConstrainedBox(
+                      constraints:
+                          BoxConstraints(minHeight: constraints.maxHeight),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          const SizedBox(height: 8),
+                          // Pedido de Rhoney (06/09/2026): com a Home
+                          // ganhando espaço vertical sobrando (§5/§8 do
+                          // carrossel de Mundos), volta a mostrar o
+                          // wordmark + slogan no topo — mesmo texto e
+                          // estilo do Login (l10n.loginTitle/loginSlogan),
+                          // pra manter uma única fonte de verdade da marca
+                          // (BRAND.md §1: o nome nunca aparece sozinho, sem
+                          // o slogan por perto). Diferente da marca d'água
+                          // de fundo (_MentalWatermark, sempre presente,
+                          // opacidade baixíssima), este é um bloco de
+                          // texto normal, visível, no fluxo do conteúdo.
+                          Text(
+                            l10n.loginTitle,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.headlineSmall,
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            l10n.loginSlogan,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall
+                                ?.copyWith(color: AppColors.muted),
+                          ),
+                          const SizedBox(height: 16),
+                          // §3.3 — grid de 5 cards (Progresso/Ranking/Amigos/
+                          // Movimento/Feed), todos com o mesmo tamanho.
+                          // REORGANIZACAO_MENUS_HOME_V1.md (06/09/2026): o 5º
+                          // card era "Mais" (compartilhar+tema, agora dentro
+                          // de Ajuste) — vira o Feed, que ganha entrada
+                          // própria em vez de só um ícone dentro de Amigos.
+                          _QuickActionsRow(
+                            client: widget.client,
+                            movementPendingSteps: _movementPendingSteps,
+                            feedUnseenCount: _feedUnseenCount,
+                            onReturnFromProgress: _loadProgress,
+                            onReturnFromMovement: _loadMovementBadge,
+                            onReturnFromFeed: _loadFeedBadge,
+                          ),
+                          const SizedBox(height: 20),
+                          if (progress != null)
+                            _ProgressCard(
+                              progress: progress,
+                              photoUrl: _photoUrl,
+                              realName: _realName,
+                              mentalCoinsBalance: _mentalCoinsBalance,
+                              l10n: l10n,
+                              onTapPhoto: _openProfile,
+                              onTapMentalCoins: _openMentalCoins,
                             ),
-                          )
-                        : AnimatedBuilder(
-                            animation: _searchController,
-                            builder: (context, _) => _searchController.text.isEmpty
-                                ? IconButton(
-                                    icon: Icon(Icons.arrow_forward_rounded, color: AppColors.gold),
-                                    onPressed: () => _handleSearch(_searchController.text),
-                                  )
-                                : IconButton(
-                                    icon: Icon(Icons.close_rounded, color: AppColors.muted),
-                                    onPressed: () {
-                                      _searchController.clear();
-                                      setState(() => _notFoundQuery = null);
-                                    },
+                          if (_error != null) ...[
+                            const SizedBox(height: 8),
+                            Text(_error!,
+                                style: TextStyle(color: AppColors.error)),
+                          ],
+                          const SizedBox(height: 16),
+                          // Busca na Home (pedido de Rhoney, 2026-09-03; estilo
+                          // revisado 2026-09-03 — "nível profissional, com o devido
+                          // destaque") — "acima de Mundo da Linguagem", logo antes
+                          // da lista de Mundos. Mesma linguagem visual dos cards de
+                          // atalho (_QuickActionCard) abaixo: fundo bg2, cantos bem
+                          // arredondados, borda de destaque na cor de acento — aqui
+                          // dourado, por ser uma ação de "descobrir/encontrar algo
+                          // novo", distinta do teal usado nos atalhos de navegação.
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.bg2.withValues(alpha: 0.92),
+                              borderRadius: BorderRadius.circular(28),
+                              border: Border.all(
+                                  color:
+                                      AppColors.gold.withValues(alpha: 0.45)),
+                            ),
+                            child: TextField(
+                              controller: _searchController,
+                              focusNode: _searchFocusNode,
+                              textInputAction: TextInputAction.search,
+                              onSubmitted: _handleSearch,
+                              style: TextStyle(color: AppColors.bone),
+                              decoration: InputDecoration(
+                                hintText: l10n.homeSearchHint,
+                                hintStyle: TextStyle(color: AppColors.muted),
+                                border: InputBorder.none,
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                contentPadding:
+                                    const EdgeInsets.symmetric(vertical: 14),
+                                prefixIcon: Icon(Icons.search_rounded,
+                                    color: AppColors.gold),
+                                suffixIcon: _searching
+                                    ? Padding(
+                                        padding: const EdgeInsets.all(14),
+                                        child: SizedBox(
+                                          width: 18,
+                                          height: 18,
+                                          child: CircularProgressIndicator(
+                                              strokeWidth: 2,
+                                              color: AppColors.gold),
+                                        ),
+                                      )
+                                    : AnimatedBuilder(
+                                        animation: _searchController,
+                                        builder: (context, _) =>
+                                            _searchController.text.isEmpty
+                                                ? IconButton(
+                                                    icon: Icon(
+                                                        Icons
+                                                            .arrow_forward_rounded,
+                                                        color: AppColors.gold),
+                                                    onPressed: () =>
+                                                        _handleSearch(
+                                                            _searchController
+                                                                .text),
+                                                  )
+                                                : IconButton(
+                                                    icon: Icon(
+                                                        Icons.close_rounded,
+                                                        color: AppColors.muted),
+                                                    onPressed: () {
+                                                      _searchController.clear();
+                                                      setState(() =>
+                                                          _notFoundQuery =
+                                                              null);
+                                                    },
+                                                  ),
+                                      ),
+                              ),
+                            ),
+                          ),
+                          // "Não encontramos / sugerir esse conteúdo" — card em
+                          // destaque em vez de SnackBar (pedido de Rhoney, revisão
+                          // 2026-09-03): um SnackBar some rápido demais pra um
+                          // convite de ação que exige leitura + decisão; o card fica
+                          // até o usuário decidir (sugerir, fechar, ou buscar de
+                          // novo, que já limpa o estado em _handleSearch).
+                          AnimatedSize(
+                            duration: const Duration(milliseconds: 220),
+                            curve: Curves.easeOut,
+                            alignment: Alignment.topCenter,
+                            child: _notFoundQuery == null
+                                ? const SizedBox(width: double.infinity)
+                                : Padding(
+                                    padding: const EdgeInsets.only(top: 10),
+                                    child: _ContentSuggestionCard(
+                                      query: _notFoundQuery!,
+                                      sending: _suggestionSending,
+                                      sent: _suggestionSent,
+                                      onSuggest: () => _submitContentSuggestion(
+                                          _notFoundQuery!),
+                                      onDismiss: () =>
+                                          setState(() => _notFoundQuery = null),
+                                    ),
                                   ),
                           ),
+                          const SizedBox(height: 16),
+                          // Achado real (29/08/2026, pedido de Rhoney: "há um
+                          // estouro de todo conteúdo na tela e depois a tela
+                          // aparece como deve ser"): antes de `_progress` chegar,
+                          // o carrossel cairia no fallback de "sem mundos" —
+                          // mostrar o spinner enquanto progress==null evita esse
+                          // flash de conteúdo bruto antes do layout final assumir.
+                          progress == null
+                              ? const Padding(
+                                  padding: EdgeInsets.only(top: 40),
+                                  child: Center(
+                                      child: CircularProgressIndicator()),
+                                )
+                              : _buildWorldCarousel(l10n),
+                          const SizedBox(height: 24),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
-              // "Não encontramos / sugerir esse conteúdo" — card em
-              // destaque em vez de SnackBar (pedido de Rhoney, revisão
-              // 2026-09-03): um SnackBar some rápido demais pra um
-              // convite de ação que exige leitura + decisão; o card fica
-              // até o usuário decidir (sugerir, fechar, ou buscar de
-              // novo, que já limpa o estado em _handleSearch).
-              AnimatedSize(
-                duration: const Duration(milliseconds: 220),
-                curve: Curves.easeOut,
-                alignment: Alignment.topCenter,
-                child: _notFoundQuery == null
-                    ? const SizedBox(width: double.infinity)
-                    : Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: _ContentSuggestionCard(
-                          query: _notFoundQuery!,
-                          sending: _suggestionSending,
-                          sent: _suggestionSent,
-                          onSuggest: () => _submitContentSuggestion(_notFoundQuery!),
-                          onDismiss: () => setState(() => _notFoundQuery = null),
-                        ),
-                      ),
-              ),
-              const SizedBox(height: 16),
-              Expanded(
-                // Achado real (29/08/2026, pedido de Rhoney: "há um
-                // estouro de todo conteúdo na tela e depois a tela
-                // aparece como deve ser"): antes de `_progress` chegar,
-                // _buildWorldSections caía no fallback de "sem mundos"
-                // e desenhava os 10 territórios soltos, sem agrupar nem
-                // colapsar — um frame inteiro de conteúdo bruto antes
-                // do layout final (Mundos colapsados) assumir. Mostrar
-                // o spinner enquanto progress==null evita esse flash.
-                child: progress == null
-                    ? const Center(child: CircularProgressIndicator())
-                    : Stack(
-                        alignment: Alignment.bottomCenter,
-                        children: [
-                          RefreshIndicator(
-                            onRefresh: _refreshAll,
-                            color: AppColors.gold,
-                            child: ListView(
-                              controller: _worldsScrollController,
-                              children: _buildWorldSections(l10n),
-                            ),
-                          ),
-                          IgnorePointer(
-                            child: AnimatedOpacity(
-                              duration: const Duration(milliseconds: 220),
-                              opacity: _showMoreWorldsHint ? 1 : 0,
-                              child: const _MoreWorldsBelowHint(),
-                            ),
-                          ),
-                        ],
-                      ),
-              ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       // Bottom nav (pedido de Rhoney, 2026-08-26): Home/Perfil/Config/
@@ -653,24 +745,36 @@ class _HomeScreenState extends State<HomeScreen> {
               await _openProfile();
             case 2:
               await Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => SettingsScreen(client: widget.client)),
+                MaterialPageRoute(
+                    builder: (_) => SettingsScreen(client: widget.client)),
               );
             case 3:
               await Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => BattlesScreen(client: widget.client)),
+                MaterialPageRoute(
+                    builder: (_) => BattlesScreen(client: widget.client)),
               );
             case 4:
               await Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => FeedbackScreen(client: widget.client)),
+                MaterialPageRoute(
+                    builder: (_) => FeedbackScreen(client: widget.client)),
               );
           }
         },
         destinations: [
-          NavigationDestination(icon: const Icon(Icons.home_rounded), label: l10n.homeNavLabel),
-          NavigationDestination(icon: const Icon(Icons.person_outline_rounded), label: l10n.profileTooltip),
-          NavigationDestination(icon: const Icon(Icons.settings_outlined), label: l10n.settingsTooltip),
-          NavigationDestination(icon: const Icon(Icons.sports_martial_arts_outlined), label: l10n.battlesTooltip),
-          NavigationDestination(icon: const Icon(Icons.feedback_outlined), label: l10n.feedbackMenuTooltip),
+          NavigationDestination(
+              icon: const Icon(Icons.home_rounded), label: l10n.homeNavLabel),
+          NavigationDestination(
+              icon: const Icon(Icons.person_outline_rounded),
+              label: l10n.profileTooltip),
+          NavigationDestination(
+              icon: const Icon(Icons.settings_outlined),
+              label: l10n.settingsTooltip),
+          NavigationDestination(
+              icon: const Icon(Icons.sports_martial_arts_outlined),
+              label: l10n.battlesTooltip),
+          NavigationDestination(
+              icon: const Icon(Icons.feedback_outlined),
+              label: l10n.feedbackMenuTooltip),
         ],
       ),
     );
@@ -710,41 +814,6 @@ class _MentalWatermark extends StatelessWidget {
   }
 }
 
-/// Seta flutuante "há mais Mundos abaixo" (pedido de Rhoney, 05/09/2026)
-/// — some assim que o jogador rola perto do fim da lista
-/// (`_onWorldsScroll`), pra não virar poluição visual permanente.
-class _MoreWorldsBelowHint extends StatelessWidget {
-  const _MoreWorldsBelowHint();
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 6),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppColors.bg.withValues(alpha: 0),
-              AppColors.bg.withValues(alpha: 0.95),
-            ],
-          ),
-        ),
-        child: Container(
-          decoration: BoxDecoration(
-            color: AppColors.gold.withValues(alpha: 0.92),
-            shape: BoxShape.circle,
-          ),
-          padding: const EdgeInsets.all(4),
-          child: Icon(Icons.keyboard_arrow_down_rounded, color: AppColors.bg, size: 20),
-        ),
-      ),
-    );
-  }
-}
-
 /// HOME_REDESIGN_V2_MINIMALISMO.md §3.2 — o banner "Colete seus bônus
 /// de Movimento" saiu da Home (removido daqui, 03/09/2026): o badge
 /// numérico no ícone de Movimento do grid de atalhos já sinaliza "há
@@ -763,8 +832,7 @@ class _QuickActionsRow extends StatelessWidget {
     required this.feedUnseenCount,
     required this.onReturnFromProgress,
     required this.onReturnFromMovement,
-    required this.onReturnFromFriends,
-    required this.onShareApp,
+    required this.onReturnFromFeed,
   });
 
   final ApiClient client;
@@ -772,8 +840,7 @@ class _QuickActionsRow extends StatelessWidget {
   final int? feedUnseenCount;
   final VoidCallback onReturnFromProgress;
   final VoidCallback onReturnFromMovement;
-  final VoidCallback onReturnFromFriends;
-  final VoidCallback onShareApp;
+  final VoidCallback onReturnFromFeed;
 
   @override
   Widget build(BuildContext context) {
@@ -787,7 +854,8 @@ class _QuickActionsRow extends StatelessWidget {
             color: AppColors.teal,
             onTap: () async {
               await Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => ProgressScreen(client: client)),
+                MaterialPageRoute(
+                    builder: (_) => ProgressScreen(client: client)),
               );
               onReturnFromProgress();
             },
@@ -810,17 +878,9 @@ class _QuickActionsRow extends StatelessWidget {
             icon: Icons.people_outline_rounded,
             label: l10n.friendsTooltip,
             color: AppColors.teal,
-            // FEED_SOCIAL_V1.md — badge de atividade nova do Feed
-            // aparece aqui (não um atalho novo na Home): Amigos é a
-            // tela onde o Feed já vive (ícone na AppBar), então o
-            // sinal de "tem coisa nova" pertence a este card.
-            badgeCount: feedUnseenCount,
-            onTap: () async {
-              await Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => FriendsScreen(client: client)),
-              );
-              onReturnFromFriends();
-            },
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => FriendsScreen(client: client)),
+            ),
           ),
         ),
         const SizedBox(width: 8),
@@ -832,148 +892,34 @@ class _QuickActionsRow extends StatelessWidget {
             badgeCount: movementPendingSteps,
             onTap: () async {
               await Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => MovementScreen(client: client)),
+                MaterialPageRoute(
+                    builder: (_) => MovementScreen(client: client)),
               );
               onReturnFromMovement();
             },
           ),
         ),
         const SizedBox(width: 8),
-        // HOME_REDESIGN_V2_MINIMALISMO.md §3.3 — 5º card, MESMO tamanho
-        // dos outros 4 (Expanded igual), consolidando compartilhar +
-        // alternar tema (antes soltos no cabeçalho da Home).
+        // REORGANIZACAO_MENUS_HOME_V1.md §3 (06/09/2026): 5º card deixa
+        // de ser "Mais" (compartilhar+tema, movidos pro Ajuste, §2) e
+        // passa a ser o Feed — ganha entrada própria e visível na
+        // navegação principal, sem precisar mais ser descoberto por
+        // acaso (antes só existia como ícone dentro de Amigos).
         Expanded(
-          child: _MergedActionCard(
-            label: l10n.homeMoreCardLabel,
-            onShareTap: onShareApp,
+          child: _QuickActionCard(
+            icon: Icons.dynamic_feed_rounded,
+            label: l10n.feedScreenTitle,
+            color: AppColors.purple,
+            badgeCount: feedUnseenCount,
+            onTap: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => FeedScreen(client: client)),
+              );
+              onReturnFromFeed();
+            },
           ),
         ),
       ],
-    );
-  }
-}
-
-/// HOME_REDESIGN_V2_MINIMALISMO.md §3.3 — 5º card do grid de atalhos,
-/// mesmo container/padding/estrutura de _QuickActionCard, mas com DOIS
-/// ícones lado a lado (compartilhar + tema) em vez de um só, separados
-/// por um divisor fino. Cada ícone mantém sua própria área de toque —
-/// o card inteiro não é um único InkWell (doc §5: "não é preciso que o
-/// card inteiro dispare as duas ações ao mesmo tempo").
-class _MergedActionCard extends StatelessWidget {
-  const _MergedActionCard({required this.label, required this.onShareTap});
-
-  final String label;
-  final VoidCallback onShareTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 6),
-      decoration: BoxDecoration(
-        color: AppColors.bg2.withValues(alpha: 0.92),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppColors.gold.withValues(alpha: 0.4)),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          // Achado real (05/09/2026, banner de debug "RIGHT OVERFLOWED"):
-          // em telas mais estreitas os dois ícones + divisor não cabem
-          // na largura do card (mesma largura dos outros 4 cards do
-          // grid) — FittedBox encolhe o conteúdo pra caber sempre, em
-          // vez de depender de um cálculo de padding/tamanho frágil a
-          // qualquer mudança de fonte/idioma/tela.
-          FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                _MiniIconAction(
-                  icon: Icons.share_outlined,
-                  tooltip: l10n.shareAppButtonTooltip,
-                  onTap: onShareTap,
-                ),
-                Container(
-                  width: 1,
-                  height: 20,
-                  margin: const EdgeInsets.symmetric(horizontal: 2),
-                  color: AppColors.muted.withValues(alpha: 0.3),
-                ),
-                const _ThemeModeMiniToggle(),
-              ],
-            ),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            label,
-            textAlign: TextAlign.center,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.bone, fontWeight: FontWeight.w600, fontSize: 12, height: 1.15),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-/// Ícone pequeno com área de toque própria (usado dentro de
-/// _MergedActionCard) — CircleBorder pra feedback de toque redondo,
-/// consistente com o resto do app (InkWell/Material já usado em
-/// _QuickActionCard).
-class _MiniIconAction extends StatelessWidget {
-  const _MiniIconAction({required this.icon, required this.tooltip, required this.onTap});
-
-  final IconData icon;
-  final String tooltip;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Semantics(
-      button: true,
-      label: tooltip,
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          customBorder: const CircleBorder(),
-          onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.all(3),
-            // Achado real no aparelho (03/09/2026, pedido de Rhoney:
-            // "ajuste as proporções... trabalhe o espaçamento"): 18px
-            // ficava visivelmente menor que os 28px do ícone único dos
-            // outros 4 cards do grid — 22px aproxima o peso visual sem
-            // estourar a coluna estreita (2 ícones + divisor no mesmo
-            // espaço de 1 ícone dos demais cards).
-            child: Icon(icon, color: AppColors.gold, size: 22),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-/// Versão compacta de _ThemeModeToggleButton pra caber lado a lado com
-/// o ícone de compartilhar dentro do mesmo card pequeno (o IconButton
-/// original tem alvo de toque de 48dp, largo demais pros dois ícones
-/// juntos no espaço de uma única coluna do grid).
-class _ThemeModeMiniToggle extends StatelessWidget {
-  const _ThemeModeMiniToggle();
-
-  @override
-  Widget build(BuildContext context) {
-    return ListenableBuilder(
-      listenable: ThemeModeService.instance,
-      builder: (context, _) {
-        final isDark = ThemeModeService.instance.isDark;
-        return _MiniIconAction(
-          icon: isDark ? Icons.light_mode_rounded : Icons.dark_mode_rounded,
-          tooltip: isDark ? 'Ativar tom claro' : 'Ativar tom escuro',
-          onTap: () => ThemeModeService.instance.toggle(),
-        );
-      },
     );
   }
 }
@@ -1017,12 +963,16 @@ class _ContentSuggestionCard extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.travel_explore_rounded, color: AppColors.gold, size: 22),
+              Icon(Icons.travel_explore_rounded,
+                  color: AppColors.gold, size: 22),
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
                   l10n.homeSearchNotFoundMessage(query),
-                  style: TextStyle(color: AppColors.bone, fontWeight: FontWeight.w600, height: 1.3),
+                  style: TextStyle(
+                      color: AppColors.bone,
+                      fontWeight: FontWeight.w600,
+                      height: 1.3),
                 ),
               ),
               SizedBox(
@@ -1030,7 +980,8 @@ class _ContentSuggestionCard extends StatelessWidget {
                 height: 32,
                 child: IconButton(
                   padding: EdgeInsets.zero,
-                  icon: Icon(Icons.close_rounded, color: AppColors.muted, size: 18),
+                  icon: Icon(Icons.close_rounded,
+                      color: AppColors.muted, size: 18),
                   onPressed: onDismiss,
                 ),
               ),
@@ -1040,12 +991,16 @@ class _ContentSuggestionCard extends StatelessWidget {
           if (sent)
             Row(
               children: [
-                Icon(Icons.check_circle_rounded, color: AppColors.victory, size: 18),
+                Icon(Icons.check_circle_rounded,
+                    color: AppColors.victory, size: 18),
                 const SizedBox(width: 6),
                 Expanded(
                   child: Text(
                     l10n.homeSearchSuggestionRegisteredMessage,
-                    style: TextStyle(color: AppColors.victory, fontWeight: FontWeight.w600, fontSize: 13),
+                    style: TextStyle(
+                        color: AppColors.victory,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 13),
                   ),
                 ),
               ],
@@ -1059,11 +1014,14 @@ class _ContentSuggestionCard extends StatelessWidget {
                     ? SizedBox(
                         width: 14,
                         height: 14,
-                        child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.bg),
+                        child: CircularProgressIndicator(
+                            strokeWidth: 2, color: AppColors.bg),
                       )
                     : const Icon(Icons.lightbulb_outline_rounded, size: 18),
                 label: Text(l10n.homeSearchSuggestButton),
-                style: FilledButton.styleFrom(minimumSize: const Size(0, 40), padding: const EdgeInsets.symmetric(horizontal: 16)),
+                style: FilledButton.styleFrom(
+                    minimumSize: const Size(0, 40),
+                    padding: const EdgeInsets.symmetric(horizontal: 16)),
               ),
             ),
         ],
@@ -1103,7 +1061,9 @@ class _QuickActionCard extends StatelessWidget {
           // Rhoney: "estão dimidamente quase na mesma tonalidade do
           // fundo") — o card sozinho (bg2) quase não se distinguia do
           // fundo da tela (bg); a borda colorida dá contorno próprio.
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(14), border: Border.all(color: color.withValues(alpha: 0.4))),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(color: color.withValues(alpha: 0.4))),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -1130,7 +1090,11 @@ class _QuickActionCard extends StatelessWidget {
                   // Cor clara (bone) em vez do "muted" padrão do
                   // bodySmall (29/08/2026) — o cinza discreto ficava
                   // quase invisível contra o fundo escuro.
-                  style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.bone, fontWeight: FontWeight.w600, fontSize: 12, height: 1.15),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: AppColors.bone,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      height: 1.15),
                 ),
               ),
             ],
@@ -1141,57 +1105,131 @@ class _QuickActionCard extends StatelessWidget {
   }
 }
 
-/// Seção de um Mundo — colapsável (pedido de Rhoney, 2026-08-26: "não
-/// quero tudo na tela"): só o cabeçalho fica visível por padrão, os
-/// territórios daquele Mundo (grid 2 colunas) só aparecem ao tocar nele
-/// e expandir. Cada Mundo é visualmente separado do próximo por um card
-/// com fundo levemente elevado.
-class _WorldSection extends StatelessWidget {
-  const _WorldSection({this.title, this.completed = false, required this.children});
+/// REORGANIZACAO_MENUS_HOME_V1.md §5 (06/09/2026) — um card do carrossel
+/// horizontal de Mundos: ícone + nome, sem expandir nada in-place (ver
+/// `_buildWorldCarousel`). Substitui a antiga `_WorldSection`
+/// (ExpansionTile empilhado verticalmente).
+class _WorldCarouselCard extends StatelessWidget {
+  const _WorldCarouselCard({
+    required this.title,
+    required this.icon,
+    required this.completed,
+    required this.onTap,
+  });
 
-  final String? title;
+  final String title;
+  final IconData icon;
   final bool completed;
-  final List<Widget> children;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    // Destaque leve quando o Mundo está 100% concluído (29/08/2026,
-    // pedido de Rhoney) — só decorativo, nunca trava: o jogador pode
-    // refazer os territórios do Mundo quantas vezes quiser, o card
-    // simplesmente reflete "já bati esse Mundo" com uma borda dourada
-    // sutil, além do check que já existia no título.
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: Material(
-        // HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — leve transparência pra
-        // marca d'água "respirar" através dos itens de Mundo.
-        color: AppColors.bg2.withValues(alpha: 0.92),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-          side: BorderSide(color: completed ? AppColors.gold.withValues(alpha: 0.35) : Colors.transparent),
-        ),
-        clipBehavior: Clip.antiAlias,
-        child: title == null
-            ? Padding(padding: const EdgeInsets.all(16), child: Column(children: children))
-            : Theme(
-                data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-                child: ExpansionTile(
-                  tilePadding: const EdgeInsets.symmetric(horizontal: 16),
-                  childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                  iconColor: AppColors.gold,
-                  collapsedIconColor: AppColors.muted,
-                  title: Row(
-                    children: [
-                      Expanded(child: Text(title!, style: Theme.of(context).textTheme.titleLarge)),
-                      if (completed) ...[
-                        Icon(Icons.check_circle, color: AppColors.gold, size: 20),
-                        const SizedBox(width: 8),
-                      ],
-                    ],
-                  ),
-                  children: children,
-                ),
+    return Material(
+      // HOME_REDESIGN_V2_MINIMALISMO.md §3.1 — leve transparência pra
+      // marca d'água "respirar" através dos cards.
+      color: AppColors.bg2.withValues(alpha: 0.92),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        // Destaque leve quando o Mundo está 100% concluído (29/08/2026,
+        // pedido de Rhoney) — só decorativo, nunca trava: o jogador pode
+        // refazer os territórios do Mundo quantas vezes quiser.
+        side: BorderSide(
+            color: completed
+                ? AppColors.gold.withValues(alpha: 0.5)
+                : Colors.transparent),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          // Achado real testando no dispositivo (06/09/2026): 104 era
+          // estreito demais pra uma palavra só de 9-10 letras
+          // ("Linguagem", "Descoberta") — quebrava no meio da palavra
+          // ("Linguage"/"m") em vez de caber numa linha ou quebrar num
+          // ponto natural.
+          width: 118,
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, color: AppColors.gold, size: 32),
+              const SizedBox(height: 8),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall
+                    ?.copyWith(fontWeight: FontWeight.w600),
               ),
+              if (completed) ...[
+                const SizedBox(height: 4),
+                Icon(Icons.check_circle, color: AppColors.gold, size: 14),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// REORGANIZACAO_MENUS_HOME_V1.md §5 (06/09/2026) — tela dedicada de um
+/// Mundo, aberta ao tocar num card do carrossel da Home: mostra só os
+/// territórios daquele Mundo (mesmo grid de sempre), decisão tomada com
+/// Rhoney de não expandir nada in-place na Home. `refreshProgress`
+/// atualiza o estado da Home por baixo (mesmo papel de `_loadProgress`);
+/// como isso sozinho não reconstrói ESTA tela (Navigator empilha uma
+/// State própria, alheia ao setState da Home), `_handleReturned` espera
+/// o refresh terminar e só então reconstrói localmente — sem isso, a
+/// barra de progresso do território respondido ficaria visualmente
+/// desatualizada até o jogador voltar pra Home e reabrir o Mundo.
+class _WorldDetailScreen extends StatefulWidget {
+  const _WorldDetailScreen({
+    required this.title,
+    required this.completed,
+    required this.refreshProgress,
+    required this.buildChildren,
+  });
+
+  final String title;
+  final bool completed;
+  final Future<void> Function() refreshProgress;
+  final List<Widget> Function(VoidCallback onReturned) buildChildren;
+
+  @override
+  State<_WorldDetailScreen> createState() => _WorldDetailScreenState();
+}
+
+class _WorldDetailScreenState extends State<_WorldDetailScreen> {
+  Future<void> _handleReturned() async {
+    await widget.refreshProgress();
+    if (mounted) setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Flexible(
+                child: Text(widget.title, overflow: TextOverflow.ellipsis)),
+            if (widget.completed) ...[
+              const SizedBox(width: 8),
+              Icon(Icons.check_circle, color: AppColors.gold, size: 20),
+            ],
+          ],
+        ),
+      ),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(16),
+          children: widget.buildChildren(_handleReturned),
+        ),
       ),
     );
   }
@@ -1226,7 +1264,9 @@ class _TerritoryGroup extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           if (blockName != null) ...[
-            Text(blockName!, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12)),
+            Text(blockName!,
+                style: AppTheme.technicalStyle(
+                    color: AppColors.muted, fontSize: 12)),
             const SizedBox(height: 8),
           ],
           LayoutBuilder(
@@ -1287,8 +1327,10 @@ class _TerritoryCard extends StatelessWidget {
     // "vermelho leve" pedido já é o próprio tom padrão de erro do app.
     final xpInTerritory = progress?['xp_in_territory'] as int? ?? 0;
     final conquestThreshold = progress?['conquest_threshold'] as int? ?? 200;
-    final progressFraction = (xpInTerritory / conquestThreshold).clamp(0.0, 1.0);
-    final progressColor = Color.lerp(AppColors.error, AppColors.victory, progressFraction)!;
+    final progressFraction =
+        (xpInTerritory / conquestThreshold).clamp(0.0, 1.0);
+    final progressColor =
+        Color.lerp(AppColors.error, AppColors.victory, progressFraction)!;
     // V2 item 13 — Disputa territorial (TERRITORY_DISPUTE.md). Sempre
     // relativo a você + amigos confirmados (nunca global) — o backend
     // já filtra isso, a Home só exibe o que vem pronto.
@@ -1312,7 +1354,11 @@ class _TerritoryCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           onTap: () async {
             await Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => WordSearchScreen(client: client, territoryId: territoryId, territoryLabel: label)),
+              MaterialPageRoute(
+                  builder: (_) => WordSearchScreen(
+                      client: client,
+                      territoryId: territoryId,
+                      territoryLabel: label)),
             );
             onReturned();
           },
@@ -1331,7 +1377,10 @@ class _TerritoryCard extends StatelessWidget {
                     l10n.newChallengeButton(label),
                     textAlign: TextAlign.center,
                     maxLines: 1,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),
               ],
@@ -1359,7 +1408,10 @@ class _TerritoryCard extends StatelessWidget {
             onTap: () async {
               await Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => ChallengeScreen(client: client, territoryId: territoryId, territoryLabel: label),
+                  builder: (_) => ChallengeScreen(
+                      client: client,
+                      territoryId: territoryId,
+                      territoryLabel: label),
                 ),
               );
               onReturned();
@@ -1384,16 +1436,21 @@ class _TerritoryCard extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         if (isMysteryBlock) ...[
-                          Icon(Icons.auto_awesome, size: 14, color: AppColors.mystery),
+                          Icon(Icons.auto_awesome,
+                              size: 14, color: AppColors.mystery),
                           const SizedBox(width: 4),
                         ],
                         Text(
                           l10n.newChallengeButton(label),
                           textAlign: TextAlign.center,
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
                                 fontWeight: FontWeight.w600,
-                                color: isMysteryBlock ? AppColors.mystery : null,
+                                color:
+                                    isMysteryBlock ? AppColors.mystery : null,
                               ),
                         ),
                       ],
@@ -1407,7 +1464,9 @@ class _TerritoryCard extends StatelessWidget {
         if (detentorNickname != null) ...[
           const SizedBox(height: 4),
           Text(
-            isDetentor ? l10n.territoryDetentorIsMeLabel : l10n.territoryDetentorLabel(detentorNickname),
+            isDetentor
+                ? l10n.territoryDetentorIsMeLabel
+                : l10n.territoryDetentorLabel(detentorNickname),
             textAlign: TextAlign.center,
             style: AppTheme.technicalStyle(
               color: isDetentor ? AppColors.gold : AppColors.muted,
@@ -1429,10 +1488,12 @@ class _TerritoryCard extends StatelessWidget {
         // do botão normal é redundante e confuso, já que os dois abrem
         // exatamente o mesmo formato (a única diferença real, um piso
         // de dificuldade mínima, é invisível pro jogador).
-        if (!kAlwaysTimedTerritoryIds.contains(territoryId) && !kNeverTimedTerritoryIds.contains(territoryId)) ...[
+        if (!kAlwaysTimedTerritoryIds.contains(territoryId) &&
+            !kNeverTimedTerritoryIds.contains(territoryId)) ...[
           const SizedBox(height: 8),
           OutlinedButton(
-            style: OutlinedButton.styleFrom(side: BorderSide(color: progressColor.withValues(alpha: 0.6))),
+            style: OutlinedButton.styleFrom(
+                side: BorderSide(color: progressColor.withValues(alpha: 0.6))),
             onPressed: () async {
               await Navigator.of(context).push(
                 MaterialPageRoute(
@@ -1448,7 +1509,8 @@ class _TerritoryCard extends StatelessWidget {
             },
             child: FittedBox(
               fit: BoxFit.scaleDown,
-              child: Text(l10n.relampagoModeLabel, textAlign: TextAlign.center, maxLines: 1),
+              child: Text(l10n.relampagoModeLabel,
+                  textAlign: TextAlign.center, maxLines: 1),
             ),
           ),
         ],
@@ -1507,7 +1569,8 @@ class _ProgressCard extends StatelessWidget {
           // sem prejudicar a legibilidade do conteúdo por cima.
           colors: [
             AppColors.bg2.withValues(alpha: 0.92),
-            Color.lerp(AppColors.bg2, AppColors.purple, 0.08)!.withValues(alpha: 0.92),
+            Color.lerp(AppColors.bg2, AppColors.purple, 0.08)!
+                .withValues(alpha: 0.92),
           ],
         ),
         borderRadius: BorderRadius.circular(18),
@@ -1524,7 +1587,8 @@ class _ProgressCard extends StatelessWidget {
                 child: Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    ProfilePhotoCircle(photoUrl: photoUrl, size: 44, highlighted: true),
+                    ProfilePhotoCircle(
+                        photoUrl: photoUrl, size: 44, highlighted: true),
                     Positioned(
                       right: -2,
                       bottom: -2,
@@ -1537,7 +1601,10 @@ class _ProgressCard extends StatelessWidget {
                           color: AppColors.teal,
                           border: Border.all(color: AppColors.bg2, width: 2),
                         ),
-                        child: Text('$level', style: AppTheme.technicalStyle(color: AppColors.bg, fontSize: 10).copyWith(fontWeight: FontWeight.w700)),
+                        child: Text('$level',
+                            style: AppTheme.technicalStyle(
+                                    color: AppColors.bg, fontSize: 10)
+                                .copyWith(fontWeight: FontWeight.w700)),
                       ),
                     ),
                   ],
@@ -1552,8 +1619,13 @@ class _ProgressCard extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     if (realName != null && realName!.isNotEmpty)
-                      Text(realName!, style: Theme.of(context).textTheme.titleLarge, overflow: TextOverflow.ellipsis, maxLines: 1),
-                    Text('Nível $level', style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 12)),
+                      Text(realName!,
+                          style: Theme.of(context).textTheme.titleLarge,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1),
+                    Text('Nível $level',
+                        style: AppTheme.technicalStyle(
+                            color: AppColors.teal, fontSize: 12)),
                   ],
                 ),
               ),
@@ -1562,18 +1634,23 @@ class _ProgressCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 onTap: onTapMentalCoins,
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                   decoration: BoxDecoration(
                     color: AppColors.gold.withValues(alpha: 0.14),
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: AppColors.gold.withValues(alpha: 0.4)),
+                    border: Border.all(
+                        color: AppColors.gold.withValues(alpha: 0.4)),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const MentalCoin(size: 18),
                       const SizedBox(width: 6),
-                      Text('${mentalCoinsBalance ?? 0}', style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
+                      Text('${mentalCoinsBalance ?? 0}',
+                          style: AppTheme.technicalStyle(
+                                  color: AppColors.gold, fontSize: 13)
+                              .copyWith(fontWeight: FontWeight.w700)),
                     ],
                   ),
                 ),
@@ -1597,7 +1674,13 @@ class _ProgressCard extends StatelessWidget {
                           curve: Curves.easeOutCubic,
                           builder: (context, value, _) => FractionallySizedBox(
                             widthFactor: value,
-                            child: Container(decoration: BoxDecoration(gradient: LinearGradient(colors: [AppColors.victory, AppColors.purple, AppColors.gold]))),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                    gradient: LinearGradient(colors: [
+                              AppColors.victory,
+                              AppColors.purple,
+                              AppColors.gold
+                            ]))),
                           ),
                         ),
                       ],
@@ -1606,15 +1689,34 @@ class _ProgressCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 8),
-              Text('$xpIntoLevel/$_xpPerLevel XP', style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
+              Text('$xpIntoLevel/$_xpPerLevel XP',
+                  style: AppTheme.technicalStyle(
+                      color: AppColors.muted, fontSize: 11)),
             ],
           ),
           const SizedBox(height: 10),
           Row(
             children: [
-              Expanded(child: _MetaStat(icon: Icons.bolt_rounded, color: AppColors.gold, value: '$xpTotal', label: 'XP total')),
-              Expanded(child: _MetaStat(icon: Icons.public_rounded, color: AppColors.purple, value: worldsCompleted != null ? '$worldsCompleted/${worlds!.length}' : '—', label: 'Mundos')),
-              Expanded(child: _MetaStat(icon: Icons.local_fire_department_rounded, color: AppColors.victory, value: '$streakDays', label: l10n.streakSectionTitle)),
+              Expanded(
+                  child: _MetaStat(
+                      icon: Icons.bolt_rounded,
+                      color: AppColors.gold,
+                      value: '$xpTotal',
+                      label: 'XP total')),
+              Expanded(
+                  child: _MetaStat(
+                      icon: Icons.public_rounded,
+                      color: AppColors.purple,
+                      value: worldsCompleted != null
+                          ? '$worldsCompleted/${worlds!.length}'
+                          : '—',
+                      label: 'Mundos')),
+              Expanded(
+                  child: _MetaStat(
+                      icon: Icons.local_fire_department_rounded,
+                      color: AppColors.victory,
+                      value: '$streakDays',
+                      label: l10n.streakSectionTitle)),
             ],
           ),
         ],
@@ -1630,7 +1732,11 @@ class _ProgressCard extends StatelessWidget {
 /// resto do card) e o valor cresce de tamanho, em vez de tudo em
 /// texto monocromático neutro.
 class _MetaStat extends StatelessWidget {
-  const _MetaStat({required this.icon, required this.color, required this.value, required this.label});
+  const _MetaStat(
+      {required this.icon,
+      required this.color,
+      required this.value,
+      required this.label});
 
   final IconData icon;
   final Color color;
@@ -1658,10 +1764,15 @@ class _MetaStat extends StatelessWidget {
             // dimidamente quase na mesma tonalidade do fundo") — rótulo
             // pequeno já era proposital, mas precisa de contraste real
             // pra ser lido, não só tamanho reduzido.
-            Text(label.toUpperCase(), style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 10).copyWith(fontWeight: FontWeight.w600)),
+            Text(label.toUpperCase(),
+                style:
+                    AppTheme.technicalStyle(color: AppColors.bone, fontSize: 10)
+                        .copyWith(fontWeight: FontWeight.w600)),
           ],
         ),
-        Text(value, style: AppTheme.technicalStyle(color: color, fontSize: 17).copyWith(fontWeight: FontWeight.w800)),
+        Text(value,
+            style: AppTheme.technicalStyle(color: color, fontSize: 17)
+                .copyWith(fontWeight: FontWeight.w800)),
       ],
     );
   }

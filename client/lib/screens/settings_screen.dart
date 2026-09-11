@@ -6,9 +6,17 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
+import '../services/share_service.dart';
+import '../services/theme_mode_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/coins_rise_overlay.dart';
 import 'admin_metrics_screen.dart';
 import 'onboarding_tutorial_screen.dart';
+
+/// Link oficial da ficha do MENTAL na Google Play — usado pelo botão de
+/// convidar amigos.
+const String kPlayStoreUrl =
+    'https://play.google.com/store/apps/details?id=com.rhoneyinc.mental';
 
 /// Tela de Configurações — controle do usuário sobre som
 /// (AUDIO_FEEDBACK.md §3, requisito não-negociável): toggle on/off e
@@ -24,7 +32,8 @@ import 'onboarding_tutorial_screen.dart';
 /// os toggles já funcionam (a preferência é salva e respeitada), só não
 /// há token pra receber notificação de fato.
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({super.key, required this.client, this.signOut = _defaultSignOut});
+  const SettingsScreen(
+      {super.key, required this.client, this.signOut = _defaultSignOut});
 
   final ApiClient client;
   // Injeção só pra teste (evita a chamada de rede real do Supabase SDK,
@@ -32,7 +41,8 @@ class SettingsScreen extends StatefulWidget {
   // em produção sempre usa o signOut real do Supabase Auth.
   final Future<void> Function() signOut;
 
-  static Future<void> _defaultSignOut() => Supabase.instance.client.auth.signOut();
+  static Future<void> _defaultSignOut() =>
+      Supabase.instance.client.auth.signOut();
 
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
@@ -52,10 +62,60 @@ class _SettingsScreenState extends State<SettingsScreen> {
   // sempre no backend, isto aqui só decide o que aparece na UI.
   bool _isAdmin = false;
 
+  // REORGANIZACAO_MENUS_HOME_V1.md §2 (06/09/2026): compartilhar/convidar
+  // e alternar tema saem do card "Mais" da Home (removido) e passam a
+  // viver aqui — são configurações do app por natureza, não ações de
+  // jogo, mesmo espírito de "abrir o menu do navegador e achar isso ali".
+  // _coinsRise mantém o mesmo reforço visual (moedas subindo ao cruzar
+  // marco de XP/MentalCoins) que já existia na Home.
+  final _coinsRise = CoinsRiseController();
+
   @override
   void initState() {
     super.initState();
     _load();
+  }
+
+  @override
+  void dispose() {
+    _coinsRise.dispose();
+    super.dispose();
+  }
+
+  /// Convidar amigos pra baixar o app (movido do card "Mais" da Home,
+  /// 06/09/2026) — usa o share sheet nativo do SO e, se o jogador de
+  /// fato compartilhou, tenta a recompensa diária PRÓPRIA deste botão
+  /// (POST /social/share-app-reward: 20 XP + 5 MentalCoins, teto de
+  /// 1x/dia). Ajuste não mostra XP/saldo em nenhum outro lugar da tela,
+  /// então a recompensa só aparece via snackbar + moedas subindo —
+  /// nunca precisa recarregar nada nesta tela.
+  Future<void> _shareApp() async {
+    final l10n = AppLocalizations.of(context)!;
+    final shared =
+        await ShareService.share(l10n.shareAppInviteMessage(kPlayStoreUrl));
+    if (!shared) return;
+    try {
+      final result = await widget.client.rewardAppInviteShare();
+      final xpAwarded = result['xp_awarded'] as int? ?? 0;
+      final mentalCoinsAwarded = result['mentalcoins_awarded'] as int? ?? 0;
+      final coinMilestoneReached =
+          result['coin_milestone_reached'] as bool? ?? false;
+      if (xpAwarded > 0 && mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+              content: Text(l10n.shareAppXpAndCoinsRewardedMessage(
+                  xpAwarded, mentalCoinsAwarded))),
+        );
+      }
+      if (coinMilestoneReached &&
+          mounted &&
+          !MediaQuery.of(context).disableAnimations) {
+        _coinsRise.play();
+      }
+    } catch (_) {
+      // Reforço opcional — falha ao pedir a recompensa não pode
+      // interromper o fluxo de compartilhamento já concluído.
+    }
   }
 
   Future<void> _load() async {
@@ -69,7 +129,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
     List<Map<String, dynamic>> blocked = [];
     try {
       final blockedResponse = await widget.client.getBlockedUsers();
-      blocked = (blockedResponse['blocked'] as List).cast<Map<String, dynamic>>();
+      blocked =
+          (blockedResponse['blocked'] as List).cast<Map<String, dynamic>>();
     } on ApiException catch (_) {
       // Não bloqueia o resto da tela — lista de bloqueados fica vazia.
     }
@@ -100,9 +161,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Future<void> _unblockUser(String userId) async {
     try {
       await widget.client.unblockUser(userId);
-      if (mounted) setState(() => _blockedUsers.removeWhere((u) => u['user_id'] == userId));
+      if (mounted)
+        setState(
+            () => _blockedUsers.removeWhere((u) => u['user_id'] == userId));
     } on ApiException catch (e) {
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+      if (mounted)
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text(e.message)));
     }
   }
 
@@ -153,8 +218,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
       unawaited(widget.signOut().catchError((_) {}));
     } on ApiException catch (e) {
       if (!mounted) return;
-      final message = e.code == 'ACCOUNT_DELETION_UNAVAILABLE' ? l10n.settingsDeleteAccountUnavailableError : e.message;
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+      final message = e.code == 'ACCOUNT_DELETION_UNAVAILABLE'
+          ? l10n.settingsDeleteAccountUnavailableError
+          : e.message;
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(message)));
       setState(() => _deletingAccount = false);
     }
   }
@@ -166,156 +234,215 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settingsScreenTitle)),
       body: SafeArea(
-        child: _loading
-            ? const Center(child: CircularProgressIndicator())
-            // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
-            // tela do app.
-            : RefreshIndicator(
-                onRefresh: _load,
-                color: AppColors.gold,
-                child: ListView(
-                padding: const EdgeInsets.all(16),
-                children: [
-                  Text(l10n.soundSectionTitle, style: Theme.of(context).textTheme.titleLarge),
-                  const SizedBox(height: 8),
-                  SwitchListTile(
-                    contentPadding: EdgeInsets.zero,
-                    title: Text(l10n.soundToggleLabel),
-                    value: _soundEnabled,
-                    onChanged: (value) async {
-                      setState(() => _soundEnabled = value);
-                      await FeedbackService.instance.setEnabled(value);
-                    },
-                  ),
-                  const SizedBox(height: 8),
-                  Text(l10n.soundVolumeLabel),
-                  Slider(
-                    value: _volume,
-                    onChanged: _soundEnabled
-                        ? (value) async {
-                            setState(() => _volume = value);
-                            await FeedbackService.instance.setVolume(value);
-                          }
-                        : null,
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    l10n.soundSilencedNote,
-                    style: TextStyle(color: AppColors.muted, fontSize: 13),
-                  ),
-                  const SizedBox(height: 20),
-                  // "Como usar o MENTAL" (29/08/2026, pedido de Rhoney:
-                  // "dê melhor destaque") — card com cor própria em vez
-                  // de ListTile solto, mesma linguagem visual dos outros
-                  // destaques do app (borda + fundo tintado). Sempre
-                  // disponível pra rever, sem mexer na flag de "já visto"
-                  // que controla a exibição automática após o splash
-                  // (main.dart).
-                  _HighlightedSettingsTile(
-                    icon: Icons.help_outline_rounded,
-                    color: AppColors.teal,
-                    label: l10n.tutorialMenuLabel,
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => OnboardingTutorialScreen(onDone: () => Navigator.of(context).pop())),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(l10n.notificationsSectionTitle, style: Theme.of(context).textTheme.titleLarge),
-                  const SizedBox(height: 8),
-                  SwitchListTile(
-                    contentPadding: EdgeInsets.zero,
-                    title: Text(l10n.notifReengagementLabel),
-                    subtitle: Text(l10n.notifReengagementDescription),
-                    value: _reengagementEnabled,
-                    onChanged: (value) {
-                      setState(() => _reengagementEnabled = value);
-                      _updateNotificationPreferences();
-                    },
-                  ),
-                  SwitchListTile(
-                    contentPadding: EdgeInsets.zero,
-                    title: Text(l10n.notifSocialLabel),
-                    subtitle: Text(l10n.notifSocialDescription),
-                    value: _socialEnabled,
-                    onChanged: (value) {
-                      setState(() => _socialEnabled = value);
-                      _updateNotificationPreferences();
-                    },
-                  ),
-                  if (_notificationsError != null) ...[
-                    const SizedBox(height: 8),
-                    Text(_notificationsError!, style: TextStyle(color: AppColors.error)),
-                  ],
-                  if (_blockedUsers.isNotEmpty) ...[
-                    const SizedBox(height: 28),
-                    Text(l10n.blockedUsersSectionTitle, style: Theme.of(context).textTheme.titleLarge),
-                    const SizedBox(height: 8),
-                    for (final user in _blockedUsers)
+        child: CoinsRiseOverlay(
+          controller: _coinsRise,
+          child: _loading
+              ? const Center(child: CircularProgressIndicator())
+              // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
+              // tela do app.
+              : RefreshIndicator(
+                  onRefresh: _load,
+                  color: AppColors.gold,
+                  child: ListView(
+                    padding: const EdgeInsets.all(16),
+                    children: [
+                      // REORGANIZACAO_MENUS_HOME_V1.md §2 (06/09/2026):
+                      // compartilhar/convidar e tema saem do card "Mais" da
+                      // Home — primeira seção da tela, mesma prominência que
+                      // tinham antes.
+                      Text(l10n.settingsShareAndAppearanceSectionTitle,
+                          style: Theme.of(context).textTheme.titleLarge),
+                      const SizedBox(height: 8),
                       ListTile(
                         contentPadding: EdgeInsets.zero,
-                        // Nome real substitui o apelido gerado pelo
-                        // sistema assim que existir (29/08/2026, pedido
-                        // de Rhoney).
-                        title: Text(() {
-                          final realName = user['real_name'] as String?;
-                          return realName != null && realName.isNotEmpty ? realName : user['nickname'] as String;
-                        }()),
-                        trailing: OutlinedButton(
-                          style: OutlinedButton.styleFrom(minimumSize: Size.zero, padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
-                          onPressed: () => _unblockUser(user['user_id'] as String),
-                          child: Text(l10n.unblockUserButton),
+                        leading:
+                            Icon(Icons.share_outlined, color: AppColors.gold),
+                        title: Text(l10n.shareAppButtonTooltip),
+                        trailing: Icon(Icons.chevron_right_rounded,
+                            color: AppColors.muted),
+                        onTap: _shareApp,
+                      ),
+                      ListenableBuilder(
+                        listenable: ThemeModeService.instance,
+                        builder: (context, _) {
+                          final isDark = ThemeModeService.instance.isDark;
+                          return SwitchListTile(
+                            contentPadding: EdgeInsets.zero,
+                            secondary: Icon(
+                                isDark
+                                    ? Icons.dark_mode_rounded
+                                    : Icons.light_mode_rounded,
+                                color: AppColors.gold),
+                            title: Text(l10n.settingsThemeModeLabel),
+                            value: isDark,
+                            onChanged: (_) =>
+                                ThemeModeService.instance.toggle(),
+                          );
+                        },
+                      ),
+                      const SizedBox(height: 20),
+                      Text(l10n.soundSectionTitle,
+                          style: Theme.of(context).textTheme.titleLarge),
+                      const SizedBox(height: 8),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(l10n.soundToggleLabel),
+                        value: _soundEnabled,
+                        onChanged: (value) async {
+                          setState(() => _soundEnabled = value);
+                          await FeedbackService.instance.setEnabled(value);
+                        },
+                      ),
+                      const SizedBox(height: 8),
+                      Text(l10n.soundVolumeLabel),
+                      Slider(
+                        value: _volume,
+                        onChanged: _soundEnabled
+                            ? (value) async {
+                                setState(() => _volume = value);
+                                await FeedbackService.instance.setVolume(value);
+                              }
+                            : null,
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        l10n.soundSilencedNote,
+                        style: TextStyle(color: AppColors.muted, fontSize: 13),
+                      ),
+                      const SizedBox(height: 20),
+                      // "Como usar o MENTAL" (29/08/2026, pedido de Rhoney:
+                      // "dê melhor destaque") — card com cor própria em vez
+                      // de ListTile solto, mesma linguagem visual dos outros
+                      // destaques do app (borda + fundo tintado). Sempre
+                      // disponível pra rever, sem mexer na flag de "já visto"
+                      // que controla a exibição automática após o splash
+                      // (main.dart).
+                      _HighlightedSettingsTile(
+                        icon: Icons.help_outline_rounded,
+                        color: AppColors.teal,
+                        label: l10n.tutorialMenuLabel,
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (_) => OnboardingTutorialScreen(
+                                  onDone: () => Navigator.of(context).pop())),
                         ),
                       ),
-                  ],
-                  if (_isAdmin) ...[
-                    const SizedBox(height: 28),
-                    // U.I/ADMIN_PAINEL_IN_APP_V1.md §2: "ponto de entrada
-                    // sugerido... ou menu de Configurações" — só aparece
-                    // pra role=admin, usuário comum nunca vê nem sabe que
-                    // essa tela existe.
-                    _HighlightedSettingsTile(
-                      icon: Icons.admin_panel_settings_outlined,
-                      color: AppColors.gold,
-                      label: l10n.adminMetricsMenuLabel,
-                      onTap: () => Navigator.of(context).push(
-                        MaterialPageRoute(builder: (_) => AdminMetricsScreen(client: widget.client)),
+                      const SizedBox(height: 8),
+                      Text(l10n.notificationsSectionTitle,
+                          style: Theme.of(context).textTheme.titleLarge),
+                      const SizedBox(height: 8),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(l10n.notifReengagementLabel),
+                        subtitle: Text(l10n.notifReengagementDescription),
+                        value: _reengagementEnabled,
+                        onChanged: (value) {
+                          setState(() => _reengagementEnabled = value);
+                          _updateNotificationPreferences();
+                        },
                       ),
-                    ),
-                  ],
-                  const SizedBox(height: 28),
-                  // Login real via Supabase Auth — main.dart
-                  // (authStateChanges) já reconstrói a raiz pra LoginScreen
-                  // sozinho quando a sessão cai. Mas essa tela chegou aqui
-                  // via Navigator.push (empilhada por cima da raiz) —
-                  // achado real (2026-08-26): sem o popUntil, essa tela
-                  // (e qualquer outra empilhada, ex.: veio de dentro de um
-                  // desafio) continuava visível por cima, escondendo a
-                  // transição — o usuário só via o Login depois de voltar
-                  // manualmente. Esvazia a pilha primeiro pra revelar a
-                  // raiz, então encerra a sessão.
-                  OutlinedButton(
-                    onPressed: () {
-                      Navigator.of(context).popUntil((route) => route.isFirst);
-                      // Fire-and-forget: a navegação já aconteceu acima,
-                      // não precisa esperar a resposta de rede do signOut
-                      // (main.dart já limpa a sessão local assim que o
-                      // evento de auth chega, mesmo que a chamada de
-                      // logout no servidor demore ou falhe).
-                      unawaited(widget.signOut().catchError((_) {}));
-                    },
-                    child: Text(l10n.settingsSignOutButton),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(l10n.notifSocialLabel),
+                        subtitle: Text(l10n.notifSocialDescription),
+                        value: _socialEnabled,
+                        onChanged: (value) {
+                          setState(() => _socialEnabled = value);
+                          _updateNotificationPreferences();
+                        },
+                      ),
+                      if (_notificationsError != null) ...[
+                        const SizedBox(height: 8),
+                        Text(_notificationsError!,
+                            style: TextStyle(color: AppColors.error)),
+                      ],
+                      if (_blockedUsers.isNotEmpty) ...[
+                        const SizedBox(height: 28),
+                        Text(l10n.blockedUsersSectionTitle,
+                            style: Theme.of(context).textTheme.titleLarge),
+                        const SizedBox(height: 8),
+                        for (final user in _blockedUsers)
+                          ListTile(
+                            contentPadding: EdgeInsets.zero,
+                            // Nome real substitui o apelido gerado pelo
+                            // sistema assim que existir (29/08/2026, pedido
+                            // de Rhoney).
+                            title: Text(() {
+                              final realName = user['real_name'] as String?;
+                              return realName != null && realName.isNotEmpty
+                                  ? realName
+                                  : user['nickname'] as String;
+                            }()),
+                            trailing: OutlinedButton(
+                              style: OutlinedButton.styleFrom(
+                                  minimumSize: Size.zero,
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 8)),
+                              onPressed: () =>
+                                  _unblockUser(user['user_id'] as String),
+                              child: Text(l10n.unblockUserButton),
+                            ),
+                          ),
+                      ],
+                      if (_isAdmin) ...[
+                        const SizedBox(height: 28),
+                        // U.I/ADMIN_PAINEL_IN_APP_V1.md §2: "ponto de entrada
+                        // sugerido... ou menu de Configurações" — só aparece
+                        // pra role=admin, usuário comum nunca vê nem sabe que
+                        // essa tela existe.
+                        _HighlightedSettingsTile(
+                          icon: Icons.admin_panel_settings_outlined,
+                          color: AppColors.gold,
+                          label: l10n.adminMetricsMenuLabel,
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (_) =>
+                                    AdminMetricsScreen(client: widget.client)),
+                          ),
+                        ),
+                      ],
+                      const SizedBox(height: 28),
+                      // Login real via Supabase Auth — main.dart
+                      // (authStateChanges) já reconstrói a raiz pra LoginScreen
+                      // sozinho quando a sessão cai. Mas essa tela chegou aqui
+                      // via Navigator.push (empilhada por cima da raiz) —
+                      // achado real (2026-08-26): sem o popUntil, essa tela
+                      // (e qualquer outra empilhada, ex.: veio de dentro de um
+                      // desafio) continuava visível por cima, escondendo a
+                      // transição — o usuário só via o Login depois de voltar
+                      // manualmente. Esvazia a pilha primeiro pra revelar a
+                      // raiz, então encerra a sessão.
+                      OutlinedButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .popUntil((route) => route.isFirst);
+                          // Fire-and-forget: a navegação já aconteceu acima,
+                          // não precisa esperar a resposta de rede do signOut
+                          // (main.dart já limpa a sessão local assim que o
+                          // evento de auth chega, mesmo que a chamada de
+                          // logout no servidor demore ou falhe).
+                          unawaited(widget.signOut().catchError((_) {}));
+                        },
+                        child: Text(l10n.settingsSignOutButton),
+                      ),
+                      const SizedBox(height: 12),
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                            foregroundColor: AppColors.error,
+                            side: BorderSide(color: AppColors.error)),
+                        onPressed: _deletingAccount ? null : _deleteAccount,
+                        child: _deletingAccount
+                            ? const SizedBox(
+                                width: 16,
+                                height: 16,
+                                child:
+                                    CircularProgressIndicator(strokeWidth: 2))
+                            : Text(l10n.settingsDeleteAccountButton),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 12),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(foregroundColor: AppColors.error, side: BorderSide(color: AppColors.error)),
-                    onPressed: _deletingAccount ? null : _deleteAccount,
-                    child: _deletingAccount
-                        ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))
-                        : Text(l10n.settingsDeleteAccountButton),
-                  ),
-                ],
-              ),
                 ),
+        ),
       ),
     );
   }
@@ -327,7 +454,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
 /// + borda na cor do ícone), em vez de um ListTile solto igual aos
 /// toggles de som/notificação ao redor.
 class _HighlightedSettingsTile extends StatelessWidget {
-  const _HighlightedSettingsTile({required this.icon, required this.color, required this.label, required this.onTap});
+  const _HighlightedSettingsTile(
+      {required this.icon,
+      required this.color,
+      required this.label,
+      required this.onTap});
 
   final IconData icon;
   final Color color;
@@ -344,15 +475,22 @@ class _HighlightedSettingsTile extends StatelessWidget {
         onTap: onTap,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(14), border: Border.all(color: color.withValues(alpha: 0.4))),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(color: color.withValues(alpha: 0.4))),
           child: Row(
             children: [
               Icon(icon, color: color),
               const SizedBox(width: 12),
               Expanded(
-                child: Text(label, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w700, color: color)),
+                child: Text(label,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(fontWeight: FontWeight.w700, color: color)),
               ),
-              Icon(Icons.chevron_right_rounded, color: color.withValues(alpha: 0.7)),
+              Icon(Icons.chevron_right_rounded,
+                  color: color.withValues(alpha: 0.7)),
             ],
           ),
         ),

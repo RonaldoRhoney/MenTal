@@ -159,82 +159,74 @@ void main() {
         home: HomeScreen(client: client),
       );
 
-  testWidgets('agrupa territórios por mundo e mostra selo de mundo completo', (tester) async {
+  testWidgets('carrossel de Mundos mostra selo de mundo completo e abre tela dedicada ao tocar', (tester) async {
+    // REORGANIZACAO_MENUS_HOME_V1.md §5/§8 (06/09/2026): a lista vertical
+    // colapsável virou um carrossel horizontal — tocar num Mundo não
+    // expande mais in-place, abre uma tela dedicada (_WorldDetailScreen)
+    // só com os territórios daquele Mundo.
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
-    expect(find.text('Mundo da Linguagem'), findsOneWidget);
-    // Redesign 2026-08-26 (pedido de Rhoney: "não quero tudo na tela"):
-    // Mundo colapsado por padrão — o território não deve estar visível
-    // ainda, só o cabeçalho.
+    // Achado real testando no dispositivo (06/09/2026): o card do
+    // carrossel mostra o nome CURTO (sem o prefixo redundante "Mundo
+    // da/do/dos"), só a tela dedicada (_WorldDetailScreen) mostra o
+    // nome completo — ver `_shortWorldTitle` em home_screen.dart.
+    expect(find.text('Linguagem'), findsOneWidget);
+    expect(find.text('Mente Lógica'), findsOneWidget);
+    // O território não aparece na Home antes de abrir a tela do Mundo.
     expect(find.text('Desafio Palavras'), findsNothing);
-    expect(find.text('Mundo da Mente Lógica'), findsOneWidget);
 
-    // Ao expandir, os territórios daquele Mundo aparecem.
-    await tester.tap(find.text('Mundo da Linguagem'));
+    // Selo de completo (ícone) já aparece no card do carrossel, só no
+    // Mundo com completed=true — o backend decide isso, não a Home.
+    expect(find.byIcon(Icons.check_circle), findsOneWidget);
+
+    // Ao tocar, abre a tela dedicada (nome completo) com os territórios
+    // daquele Mundo.
+    await tester.tap(find.text('Linguagem'));
     await tester.pumpAndSettle();
+    expect(find.text('Mundo da Linguagem'), findsOneWidget);
     expect(find.text('Desafio Palavras'), findsOneWidget);
-
-    // Selo de completo (ícone) aparece uma vez, só no mundo com
-    // completed=true — o backend decide isso, não a Home.
-    expect(find.byIcon(Icons.check_circle), findsWidgets);
   });
 
-  testWidgets('botão de convidar amigos existe no 5º card ("Mais") e não trava a tela ao tocar', (tester) async {
-    // HOME_REDESIGN_V2_MINIMALISMO.md §3.3 (03/09/2026) — o ícone de
-    // compartilhar saiu do cabeçalho (removido junto do wordmark) e
-    // agora mora dentro do 5º card do grid de atalhos, ao lado do
-    // alternador de tema. Achado testando: o share sheet nativo não
-    // existe no ambiente de widget test — o mesmo princípio de
-    // ShareAchievementButton se aplica aqui (compartilhar é reforço,
-    // nunca pode lançar exceção não tratada), então este teste prova só
-    // isso: o botão existe e tocar nele não derruba a tela.
+  testWidgets('HOME_REDESIGN_V2: wordmark/slogan de volta no topo, banner de Movimento removido, grid com 5 cards', (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
-    expect(find.byIcon(Icons.share_outlined), findsOneWidget);
-
-    await tester.tap(find.byIcon(Icons.share_outlined));
-    await tester.pumpAndSettle();
-  });
-
-  testWidgets('HOME_REDESIGN_V2: sem wordmark/slogan de destaque, banner de Movimento removido, grid com 5 cards', (tester) async {
-    SharedPreferences.setMockInitialValues({});
-    await pumpTall(tester, homeApp(_FakeApiClient()));
-
-    // §2/§3.1 — o slogan (só existia junto do bloco de texto de
-    // destaque) não aparece mais na Home; "MENTAL" só sobrevive como
-    // marca d'água de fundo (widget dedicado, sem interceptar toque).
-    expect(find.text('Mental é quem conquista com a mente.'), findsNothing);
+    // Pedido de Rhoney (06/09/2026), depois que o carrossel de Mundos
+    // liberou espaço vertical na Home (REORGANIZACAO_MENUS_HOME_V1.md
+    // §5/§8): wordmark + slogan voltam a aparecer como bloco de texto
+    // normal no topo (mesmo texto do Login, l10n.loginTitle/loginSlogan)
+    // — além da marca d'água de fundo (_MentalWatermark), que continua
+    // existindo sem receber toque.
+    // findsWidgets (não findsOneWidget): a marca d'água de fundo
+    // (_MentalWatermark) também é um Text('MENTAL') separado, sempre
+    // presente — o texto normal do wordmark se soma a ele, não o
+    // substitui.
+    expect(find.text('MENTAL'), findsWidgets);
+    expect(find.text('Mental é quem conquista com a mente.'), findsOneWidget);
 
     // §3.2 — o banner de bônus de Movimento não existe mais na Home,
     // em nenhuma circunstância (a lógica foi removida, não só ocultada).
     expect(find.text('Colete seus bônus de Movimento'), findsNothing);
 
-    // §3.3 — grid de 5 cards com tamanho idêntico: os 4 de sempre + o
-    // novo "Mais", que consolida compartilhar + tema.
+    // REORGANIZACAO_MENUS_HOME_V1.md §2/§3 (06/09/2026) — o card "Mais"
+    // (compartilhar + tema) saiu do grid, essas duas funções mudaram
+    // pra tela de Ajuste (ver settings_screen_test.dart); Feed ocupa a
+    // posição liberada, sem mudar a contagem total de 5 cards.
     expect(find.text('Progresso'), findsOneWidget);
     expect(find.text('Ranking'), findsOneWidget);
     expect(find.text('Amigos'), findsOneWidget);
     expect(find.text('Movimento'), findsOneWidget);
-    expect(find.text('Mais'), findsOneWidget);
-
-    // Os dois ícones do card "Mais" continuam funcionando, cada um com
-    // sua própria área de toque.
-    expect(find.byIcon(Icons.share_outlined), findsOneWidget);
-    final themeIcon = find.byIcon(Icons.dark_mode_rounded).evaluate().isNotEmpty
-        ? find.byIcon(Icons.dark_mode_rounded)
-        : find.byIcon(Icons.light_mode_rounded);
-    expect(themeIcon, findsOneWidget);
-    await tester.tap(themeIcon);
-    await tester.pumpAndSettle();
+    expect(find.text('Feed'), findsOneWidget);
+    expect(find.text('Mais'), findsNothing);
   });
 
   testWidgets('card de Curiosidade Relâmpago mostra o ícone de identidade índigo, outros territórios não', (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClientWithMysteryBlock()));
 
-    await tester.tap(find.text('Mundo da Cultura Geral'));
+    // Nome curto no card do carrossel — ver `_shortWorldTitle`.
+    await tester.tap(find.text('Cultura Geral'));
     await tester.pumpAndSettle();
 
     expect(find.byIcon(Icons.auto_awesome), findsOneWidget);
@@ -317,9 +309,10 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
-    // Redesign 2026-08-26: cada Mundo agora é colapsável ("não quero
-    // tudo na tela") — precisa expandir antes de ver os territórios.
-    await tester.tap(find.text('Mundo da Linguagem'));
+    // REORGANIZACAO_MENUS_HOME_V1.md §5: o carrossel abre a tela
+    // dedicada do Mundo (nome curto no card — `_shortWorldTitle`) antes
+    // de ver os territórios.
+    await tester.tap(find.text('Linguagem'));
     await tester.pumpAndSettle();
 
     expect(find.text('Detentor: Fulano'), findsOneWidget);
@@ -330,10 +323,10 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
-    // Redesign 2026-08-26: Mundo colapsável — expande "Mundo da Mente
+    // REORGANIZACAO_MENUS_HOME_V1.md §5: abre a tela dedicada de "Mente
     // Lógica" (onde numeros/logica/visual/conhecimento vivem) antes de
     // procurar pelos territórios/blocos internos.
-    await tester.tap(find.text('Mundo da Mente Lógica'));
+    await tester.tap(find.text('Mente Lógica'));
     await tester.pumpAndSettle();
 
     // Aparece uma única vez (agrupa numeros+logica sob o mesmo bloco,

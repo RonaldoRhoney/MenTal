@@ -1,8 +1,8 @@
 # Mundo do Trânsito (V7)
 
-**Status:** Implementado no código (06/09/2026) — ver "Arquitetura
-implementada" abaixo. Falta rodar a migration e carregar o conteúdo em
-produção (ver "Pendências").
+**Status:** Implementado e em produção (06/09/2026) — código, migration
+065, carga de conteúdo e deploy confirmados por Rhoney. Falta só o
+ícone/cor de identidade visual na Home (ver "Pendências").
 
 ## Arquitetura implementada em 06/09/2026
 
@@ -43,17 +43,20 @@ mecânica nova.
 
 ## Pendências
 
-- Rodar `migrations/065_mundo_transito.sql` em produção (Supabase SQL
-  Editor).
-- Rodar `scripts/append_production_content.py` com os 5 arquivos
-  `content/transito_*.json` em produção (mesmo fluxo já usado pra
-  idiomas/valores).
-- Testar no dispositivo real antes de considerar o Mundo do Trânsito
-  concluído.
-- Ícone/cor de identidade visual do Mundo do Trânsito na Home (ainda
-  não decidido).
+- ~~Rodar `migrations/065_mundo_transito.sql` em produção~~ — feito,
+  confirmado por Rhoney.
+- ~~Rodar `scripts/append_production_content.py` com os 5 arquivos
+  `content/transito_*.json` em produção~~ — feito, confirmado por
+  Rhoney ("deploy ok").
+- ~~Ícone/cor de identidade visual do Mundo do Trânsito na Home~~ —
+  decidido junto da implementação do carrossel de Mundos
+  (REORGANIZACAO_MENUS_HOME_V1.md §9, 06/09/2026): `Icons.traffic_rounded`,
+  cor dourada padrão dos cards de Mundo (`_worldIcon` em
+  `client/lib/screens/home_screen.dart`).
+- Testar no dispositivo real (visual do card do carrossel + conteúdo)
+  antes de considerar o Mundo do Trânsito 100% fechado.
 
 ## Próximo passo
 
-Confirmar com Rhoney o deploy em produção (migration + carga de
-conteúdo) e validar visualmente no app antes de fechar esta etapa.
+Validar visualmente no app real (device de teste) antes de fechar esta
+etapa por completo.

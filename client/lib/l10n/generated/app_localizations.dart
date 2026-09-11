@@ -850,6 +850,12 @@ abstract class AppLocalizations {
   /// **'Modo revisão · sem XP'**
   String get roundReviewBadgeLabel;
 
+  /// Small pill badge shown on a challenge whose content was added recently (ChallengeOut.is_new, config.NEW_CONTENT_BADGE_WINDOW_DAYS) — pedido de Rhoney 07/09/2026
+  ///
+  /// In pt, this message translates to:
+  /// **'Novo'**
+  String get newChallengeBadgeLabel;
+
   /// Shown after answering a review question, when there are still more wrong answers left to review
   ///
   /// In pt, this message translates to:
@@ -2278,6 +2284,12 @@ abstract class AppLocalizations {
   /// **'Buscar tema, frase ou palavra...'**
   String get homeSearchHint;
 
+  /// REORGANIZACAO_MENUS_HOME_V1.md (06/09/2026): single carousel card label used only when GET /progress hasn't returned world grouping yet (fallback listing all territories flat)
+  ///
+  /// In pt, this message translates to:
+  /// **'Territórios'**
+  String get homeAllTerritoriesFallbackLabel;
+
   /// Shown when the Home search finds no matching theme, phrase or word
   ///
   /// In pt, this message translates to:
@@ -2296,11 +2308,17 @@ abstract class AppLocalizations {
   /// **'Sugestão registrada! Um agente vai avaliar esse conteúdo.'**
   String get homeSearchSuggestionRegisteredMessage;
 
-  /// Label for the 5th quick-action card on Home (HOME_REDESIGN_V2_MINIMALISMO.md), merging the share and theme-toggle icons
+  /// Section title in Settings for share-app and theme toggle (REORGANIZACAO_MENUS_HOME_V1.md §2)
   ///
   /// In pt, this message translates to:
-  /// **'Mais'**
-  String get homeMoreCardLabel;
+  /// **'Compartilhar e Aparência'**
+  String get settingsShareAndAppearanceSectionTitle;
+
+  /// Label for the dark/light theme toggle switch in Settings
+  ///
+  /// In pt, this message translates to:
+  /// **'Tema escuro'**
+  String get settingsThemeModeLabel;
 
   /// Button to share the invite code via WhatsApp/social apps
   ///

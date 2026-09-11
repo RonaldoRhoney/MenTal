@@ -433,6 +433,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get roundReviewBadgeLabel => 'Modo revisão · sem XP';
 
   @override
+  String get newChallengeBadgeLabel => 'Novo';
+
+  @override
   String roundReviewRemainingMessage(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
@@ -1336,6 +1339,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get homeSearchHint => 'Buscar tema, frase ou palavra...';
 
   @override
+  String get homeAllTerritoriesFallbackLabel => 'Territórios';
+
+  @override
   String homeSearchNotFoundMessage(String query) {
     return 'Não encontramos nada para \"$query\".';
   }
@@ -1348,7 +1354,11 @@ class AppLocalizationsPt extends AppLocalizations {
       'Sugestão registrada! Um agente vai avaliar esse conteúdo.';
 
   @override
-  String get homeMoreCardLabel => 'Mais';
+  String get settingsShareAndAppearanceSectionTitle =>
+      'Compartilhar e Aparência';
+
+  @override
+  String get settingsThemeModeLabel => 'Tema escuro';
 
   @override
   String get friendsInviteShareButton => 'Indicar';
