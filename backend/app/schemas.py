@@ -141,6 +141,12 @@ class ChallengeOut(BaseModel):
     # mesmo espírito de clues/audio_url acima. None em todo o resto do
     # app.
     reading_passage: str | None = None
+    # Selo "Novo" (06/09/2026, pedido de Rhoney) — True só dentro da
+    # janela de destaque de config.NEW_CONTENT_BADGE_WINDOW_DAYS a partir
+    # de Challenge.created_at (services.is_challenge_new). False em todo
+    # conteúdo antigo (created_at NULL) e em qualquer desafio de batalha
+    # (o selo não se aplica ao modo competitivo).
+    is_new: bool = False
 
 
 class ChallengeSearchResponse(BaseModel):

@@ -659,6 +659,17 @@ def shuffled_options(options: list[str]) -> list[str]:
     return shuffled
 
 
+def is_challenge_new(challenge: models.Challenge) -> bool:
+    """Selo "Novo" (06/09/2026, pedido de Rhoney) — só True dentro da
+    janela de destaque (config.NEW_CONTENT_BADGE_WINDOW_DAYS) a partir de
+    Challenge.created_at. created_at é NULL em todo conteúdo anterior à
+    migration 066 (nunca marcado como novo) — a autoridade é sempre o
+    servidor, o client nunca decide isso sozinho."""
+    if challenge.created_at is None:
+        return False
+    return (utcnow() - challenge.created_at) <= timedelta(days=config.NEW_CONTENT_BADGE_WINDOW_DAYS)
+
+
 def find_challenge_by_search(db: Session, language_code: str, query_text: str) -> models.Challenge | None:
     """
     Busca na Home (pedido de Rhoney, 2026-09-03): "buscar por tema,

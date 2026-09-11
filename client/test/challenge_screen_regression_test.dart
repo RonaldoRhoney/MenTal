@@ -31,6 +31,26 @@ class _FakeApiClient extends ApiClient {
   }
 }
 
+/// Selo "Novo" (07/09/2026, pedido de Rhoney): ChallengeOut.is_new
+/// decide, no servidor, se este badge aparece — a tela só reflete o que
+/// veio pronto, nunca calcula "é novo" sozinha.
+class _NewChallengeFakeApiClient extends ApiClient {
+  _NewChallengeFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+    return {
+      'challenge_id': 'fake-challenge-id-new',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': 'Pergunta de um desafio recém-adicionado.',
+      'options': ['A', 'B', 'C', 'D'],
+      'hints_available': 0,
+      'is_new': true,
+    };
+  }
+}
+
 /// CONHECIMENTO_EXPANSAO_GERAL.md (aprovado 2026-08-22): em Conhecimento
 /// o formato com tempo é OBRIGATÓRIO, então o servidor manda
 /// time_limit_seconds mesmo com mode="normal" (nenhum botão dedicado
@@ -335,6 +355,56 @@ void main() {
         isNotNull,
         reason: 'ao digitar, o botão deve habilitar imediatamente — sem precisar de outra ação (ex.: pedir dica)',
       );
+    },
+  );
+
+  testWidgets(
+    'selo "Novo" aparece quando o backend manda is_new=true, some quando ausente',
+    (tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: ChallengeScreen(
+            client: _NewChallengeFakeApiClient(),
+            territoryId: 'palavras',
+            territoryLabel: 'Palavras',
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('Novo'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    'selo "Novo" não aparece quando o backend não manda is_new (padrão false)',
+    (tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: ChallengeScreen(
+            client: _FakeApiClient(),
+            territoryId: 'palavras',
+            territoryLabel: 'Palavras',
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('Novo'), findsNothing);
     },
   );
 

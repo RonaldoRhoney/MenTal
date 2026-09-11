@@ -82,7 +82,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   String? _feedbackAction;
   String? _feedbackDifficulty;
   bool _feedbackHandled = false;
-  final TextEditingController _feedbackCommentController = TextEditingController();
+  final TextEditingController _feedbackCommentController =
+      TextEditingController();
 
   // V2 item 15 — Palavras Relâmpago. Contagem regressiva controlada
   // aqui (não no backend) — o backend só recebe o tempo de resposta em
@@ -175,14 +176,22 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final isCorrect = result['is_correct'] as bool;
     final timedOut = result['timed_out'] as bool? ?? false;
     final levelUp = result['level_up'] as bool? ?? false;
-    final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
-    final territoryDetentorGained = result['territory_detentor_gained'] as bool? ?? false;
+    final territoryJustConquered =
+        result['territory_just_conquered'] as bool? ?? false;
+    final territoryDetentorGained =
+        result['territory_detentor_gained'] as bool? ?? false;
     final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
-    final newlyAwardedBadges = (result['newly_awarded_badges'] as List?) ?? const [];
+    final newlyAwardedBadges =
+        (result['newly_awarded_badges'] as List?) ?? const [];
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
-    final coinMilestoneReached = result['coin_milestone_reached'] as bool? ?? false;
+    final coinMilestoneReached =
+        result['coin_milestone_reached'] as bool? ?? false;
 
-    final isStrongEvent = levelUp || territoryJustConquered || territoryDetentorGained || worldJustCompleted || newlyAwardedBadges.isNotEmpty;
+    final isStrongEvent = levelUp ||
+        territoryJustConquered ||
+        territoryDetentorGained ||
+        worldJustCompleted ||
+        newlyAwardedBadges.isNotEmpty;
 
     if (coinMilestoneReached && !MediaQuery.of(context).disableAnimations) {
       _coinsRise.play();
@@ -234,14 +243,15 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     });
     unawaited(_audioPlayer.stop());
     try {
-      final challenge = (widget.prefetchedChallenge != null && !_prefetchedConsumed)
-          ? widget.prefetchedChallenge!
-          : widget.battleId != null
-              ? await widget.client.getMyBattleChallenge(widget.battleId!)
-              : await widget.client.nextChallenge(
-                  widget.territoryId,
-                  mode: widget.relampago ? 'relampago' : 'normal',
-                );
+      final challenge =
+          (widget.prefetchedChallenge != null && !_prefetchedConsumed)
+              ? widget.prefetchedChallenge!
+              : widget.battleId != null
+                  ? await widget.client.getMyBattleChallenge(widget.battleId!)
+                  : await widget.client.nextChallenge(
+                      widget.territoryId,
+                      mode: widget.relampago ? 'relampago' : 'normal',
+                    );
       _prefetchedConsumed = true;
       if (mounted) {
         final clues = (challenge['clues'] as List?)?.cast<String>();
@@ -291,12 +301,14 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     _remainingMsTick.value = _timeLimitMs!;
     _challengeShownAt = DateTime.now();
     _countdownTimer?.cancel();
-    _countdownTimer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
+    _countdownTimer =
+        Timer.periodic(const Duration(milliseconds: 100), (timer) {
       if (!mounted || _submitted) {
         timer.cancel();
         return;
       }
-      final elapsed = DateTime.now().difference(_challengeShownAt!).inMilliseconds;
+      final elapsed =
+          DateTime.now().difference(_challengeShownAt!).inMilliseconds;
       final remaining = _timeLimitMs! - elapsed;
       if (remaining <= 0) {
         timer.cancel();
@@ -331,7 +343,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       'TERRITORY_LOCKED' => l10n.territoryLockedMessage,
       _ => e.message,
     };
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 
   /// V2 item 15 — no modo relâmpago, tocar numa opção já submete na
@@ -417,7 +430,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final attemptId = _attemptId;
     if (challenge == null || attemptId == null) return;
     try {
-      final hint = await widget.client.requestHint(challenge['challenge_id'], attemptId);
+      final hint =
+          await widget.client.requestHint(challenge['challenge_id'], attemptId);
       setState(() => _hintsShown = [..._hintsShown, hint['content'] as String]);
     } on ApiException catch (e) {
       // NO_MORE_HINTS não é um erro que trava a tela — o jogador só não
@@ -461,7 +475,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
 
     setState(() => _loading = true);
     try {
-      final result = await widget.client.submitAnswer(challenge['challenge_id'], attemptId, answer);
+      final result = await widget.client
+          .submitAnswer(challenge['challenge_id'], attemptId, answer);
       if (mounted) {
         setState(() {
           _result = result;
@@ -602,7 +617,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   /// melhor esforço: uma falha de rede aqui não deve travar a navegação
   /// do jogador (é coleta de opinião, não uma ação crítica do core loop).
   void _maybeSubmitLevelFeedback() {
-    if (_feedbackHandled || _feedbackAction == null || _feedbackDifficulty == null) return;
+    if (_feedbackHandled ||
+        _feedbackAction == null ||
+        _feedbackDifficulty == null) return;
     _feedbackHandled = true;
 
     final challengeId = _challenge?['challenge_id'] as String?;
@@ -697,7 +714,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       // falsa; achado testando no celular real. Só oferece retry de
       // verdade para erros que podem mesmo ter sido transitórios (rede,
       // backend acordando de cold start).
-      final isPermanentForToday = _errorCode == 'DAILY_LIMIT_REACHED' || _errorCode == 'TERRITORY_LOCKED';
+      final isPermanentForToday = _errorCode == 'DAILY_LIMIT_REACHED' ||
+          _errorCode == 'TERRITORY_LOCKED';
       return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -716,7 +734,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 child: Text(l10n.backToHomeButton),
               )
             else
-              FilledButton(onPressed: _loadNextChallenge, child: Text(l10n.tryAgainButton)),
+              FilledButton(
+                  onPressed: _loadNextChallenge,
+                  child: Text(l10n.tryAgainButton)),
           ],
         ),
       );
@@ -747,7 +767,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         return SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(minHeight: constraints.maxHeight),
-            child: Center(child: SizedBox(width: double.infinity, child: child)),
+            child:
+                Center(child: SizedBox(width: double.infinity, child: child)),
           ),
         );
       },
@@ -776,7 +797,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 for (final (index, clue) in revealed.indexed) ...[
                   Text(
                     l10n.detectiveClueLabel(index + 1),
-                    style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 14),
+                    style: AppTheme.technicalStyle(
+                        color: AppColors.muted, fontSize: 14),
                   ),
                   const SizedBox(height: 4),
                   Text(clue, style: Theme.of(context).textTheme.headlineSmall),
@@ -791,7 +813,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           onPressed: isLastClueRevealed
               ? _revealQuestion
               : () => setState(() => _cluesRevealedCount++),
-          child: Text(isLastClueRevealed ? l10n.detectiveRevealQuestionButton : l10n.detectiveNextClueButton),
+          child: Text(isLastClueRevealed
+              ? l10n.detectiveRevealQuestionButton
+              : l10n.detectiveNextClueButton),
         ),
       ],
     );
@@ -808,18 +832,22 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         FilledButton.icon(
           onPressed: _audioPlaying ? null : () => _playChallengeAudio(audioUrl),
           icon: Icon(_audioHasPlayedOnce ? Icons.replay : Icons.play_arrow),
-          label: Text(_audioHasPlayedOnce ? l10n.audioReplayButton : l10n.audioPlayButton),
+          label: Text(_audioHasPlayedOnce
+              ? l10n.audioReplayButton
+              : l10n.audioPlayButton),
         ),
         if (_audioLoadFailed) ...[
           const SizedBox(height: 8),
-          Text(l10n.audioLoadErrorMessage, style: TextStyle(color: AppColors.error)),
+          Text(l10n.audioLoadErrorMessage,
+              style: TextStyle(color: AppColors.error)),
         ],
         if (sourceName != null) ...[
           const SizedBox(height: 8),
           Text(
             l10n.audioSourceCreditLabel(sourceName),
             textAlign: TextAlign.center,
-            style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+            style:
+                AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
           ),
         ],
         const SizedBox(height: 24),
@@ -864,11 +892,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 if (challenge['prompt_image'] != null) ...[
-                  Text(challenge['prompt_image'] as String, style: const TextStyle(fontSize: 56)),
+                  Text(challenge['prompt_image'] as String,
+                      style: const TextStyle(fontSize: 56)),
                   const SizedBox(height: 12),
                 ],
                 if (challenge['audio_url'] != null)
-                  _buildAudioPlayerSection(challenge['audio_url'] as String, challenge['audio_source_name'] as String?),
+                  _buildAudioPlayerSection(challenge['audio_url'] as String,
+                      challenge['audio_source_name'] as String?),
                 // V6 — Mundo dos Valores (05/09/2026): texto lido ANTES
                 // da pergunta, mesmo espírito de prompt_image/audio_url
                 // acima. Nunca cronometrado (config.NEVER_TIMED_
@@ -888,12 +918,16 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     constraints: const BoxConstraints(maxHeight: 180),
                     child: Container(
                       padding: const EdgeInsets.all(14),
-                      decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+                      decoration: BoxDecoration(
+                          color: AppColors.bg2,
+                          borderRadius: BorderRadius.circular(14)),
                       child: Scrollbar(
                         child: SingleChildScrollView(
                           child: Text(
                             challenge['reading_passage'] as String,
-                            style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 14).copyWith(height: 1.5),
+                            style: AppTheme.technicalStyle(
+                                    color: AppColors.bone, fontSize: 14)
+                                .copyWith(height: 1.5),
                           ),
                         ),
                       ),
@@ -908,41 +942,53 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 // respondido.
                 if (_inRoundReview) ...[
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     decoration: BoxDecoration(
                       color: AppColors.teal.withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(100),
-                      border: Border.all(color: AppColors.teal.withValues(alpha: 0.4)),
+                      border: Border.all(
+                          color: AppColors.teal.withValues(alpha: 0.4)),
                     ),
                     child: Text(
                       l10n.roundReviewBadgeLabel,
-                      style: AppTheme.technicalStyle(color: AppColors.teal, fontSize: 11),
+                      style: AppTheme.technicalStyle(
+                          color: AppColors.teal, fontSize: 11),
                     ),
                   ),
                   const SizedBox(height: 12),
                 ],
-                Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
+                if (challenge['is_new'] == true) ...[
+                  _NewChallengeBadge(label: l10n.newChallengeBadgeLabel),
+                  const SizedBox(height: 12),
+                ],
+                Text(challenge['prompt'] as String,
+                    style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'visual' && options != null)
                   _buildVisualOptions(options)
                 else if (options != null)
                   RadioGroup<String>(
                     groupValue: _selectedOption,
-                    onChanged: (value) => setState(() => _selectedOption = value),
+                    onChanged: (value) =>
+                        setState(() => _selectedOption = value),
                     child: Column(
                       children: options
-                          .map((option) => RadioListTile<String>(title: Text(option), value: option))
+                          .map((option) => RadioListTile<String>(
+                              title: Text(option), value: option))
                           .toList(),
                     ),
                   )
                 else
                   TextField(
-                    decoration: InputDecoration(labelText: l10n.yourAnswerLabel),
+                    decoration:
+                        InputDecoration(labelText: l10n.yourAnswerLabel),
                     // Bug achado testando no celular real: sem setState aqui, o
                     // botão "Confirmar resposta" (que depende de
                     // _selectedOption != null) não reavaliava ao digitar — só
                     // reabilitava quando algum outro evento forçava rebuild.
-                    onChanged: (value) => setState(() => _selectedOption = value.trim().isEmpty ? null : value),
+                    onChanged: (value) => setState(() =>
+                        _selectedOption = value.trim().isEmpty ? null : value),
                   ),
                 const SizedBox(height: 16),
                 ..._hintsShown.map(
@@ -950,7 +996,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     padding: const EdgeInsets.only(bottom: 8),
                     child: Text(
                       l10n.hintPrefix(hint),
-                      style: TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: AppColors.muted),
                     ),
                   ),
                 ),
@@ -959,11 +1006,14 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     padding: const EdgeInsets.only(bottom: 8),
                     child: Text(
                       l10n.noMoreHintsMessage,
-                      style: TextStyle(fontStyle: FontStyle.italic, color: AppColors.muted),
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: AppColors.muted),
                     ),
                   )
                 else
-                  TextButton(onPressed: _requestHint, child: Text(l10n.requestHintButton)),
+                  TextButton(
+                      onPressed: _requestHint,
+                      child: Text(l10n.requestHintButton)),
               ],
             ),
           ),
@@ -981,7 +1031,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   /// opção submete na hora (_submitOption), sem passo de "Confirmar
   /// resposta" — é reação rápida, não escolha deliberada. Sem UI de
   /// dica (não faz sentido dentro de uma contagem regressiva curta).
-  Widget _buildRelampagoChallenge(Map<String, dynamic> challenge, List<String> options) {
+  Widget _buildRelampagoChallenge(
+      Map<String, dynamic> challenge, List<String> options) {
     final l10n = AppLocalizations.of(context)!;
     final timeLimitMs = _timeLimitMs ?? 1;
 
@@ -1034,12 +1085,19 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 if (challenge['prompt_image'] != null) ...[
-                  Text(challenge['prompt_image'] as String, style: const TextStyle(fontSize: 56)),
+                  Text(challenge['prompt_image'] as String,
+                      style: const TextStyle(fontSize: 56)),
                   const SizedBox(height: 12),
                 ],
                 if (challenge['audio_url'] != null)
-                  _buildAudioPlayerSection(challenge['audio_url'] as String, challenge['audio_source_name'] as String?),
-                Text(challenge['prompt'] as String, style: Theme.of(context).textTheme.headlineSmall),
+                  _buildAudioPlayerSection(challenge['audio_url'] as String,
+                      challenge['audio_source_name'] as String?),
+                if (challenge['is_new'] == true) ...[
+                  _NewChallengeBadge(label: l10n.newChallengeBadgeLabel),
+                  const SizedBox(height: 12),
+                ],
+                Text(challenge['prompt'] as String,
+                    style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'cores') ...[
                   // Efeito Stroop clássico (pedido de Rhoney, 2026-09-03,
@@ -1049,20 +1107,27 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   // nenhuma caixa mostra a cor que ela mesma nomeia, e a
                   // cor pedida no enunciado sempre aparece em alguma
                   // caixa ERRADA (confusão deliberada). Só acerta lendo.
-                  for (final indexed in deriveOptionBoxColors(challenge['prompt'] as String, options).asMap().entries) ...[
+                  for (final indexed in deriveOptionBoxColors(
+                          challenge['prompt'] as String, options)
+                      .asMap()
+                      .entries) ...[
                     Material(
                       color: indexed.value,
                       borderRadius: BorderRadius.circular(28),
                       child: InkWell(
                         borderRadius: BorderRadius.circular(28),
-                        onTap: _submitted ? null : () => _submitOption(options[indexed.key]),
+                        onTap: _submitted
+                            ? null
+                            : () => _submitOption(options[indexed.key]),
                         child: Container(
                           width: double.infinity,
                           padding: const EdgeInsets.symmetric(vertical: 14),
                           alignment: Alignment.center,
                           child: Text(
                             options[indexed.key],
-                            style: TextStyle(color: readableTextColorOn(indexed.value), fontWeight: FontWeight.w800),
+                            style: TextStyle(
+                                color: readableTextColorOn(indexed.value),
+                                fontWeight: FontWeight.w800),
                           ),
                         ),
                       ),
@@ -1072,7 +1137,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 ] else
                   for (final option in options) ...[
                     OutlinedButton(
-                      onPressed: _submitted ? null : () => _submitOption(option),
+                      onPressed:
+                          _submitted ? null : () => _submitOption(option),
                       child: Text(option),
                     ),
                     const SizedBox(height: 12),
@@ -1142,15 +1208,20 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final speedBonusXp = result['speed_bonus_xp'] as int? ?? 0;
     final levelUp = result['level_up'] as bool? ?? false;
     final newLevel = result['new_level'] as int?;
-    final territoryJustConquered = result['territory_just_conquered'] as bool? ?? false;
-    final territoryDetentorGained = result['territory_detentor_gained'] as bool? ?? false;
+    final territoryJustConquered =
+        result['territory_just_conquered'] as bool? ?? false;
+    final territoryDetentorGained =
+        result['territory_detentor_gained'] as bool? ?? false;
     final worldJustCompleted = result['world_just_completed'] as bool? ?? false;
     final completedWorldName = result['completed_world_name'] as String?;
-    final worldCompletionBonusXp = result['world_completion_bonus_xp'] as int? ?? 0;
-    final newlyAwardedBadges = ((result['newly_awarded_badges'] as List?) ?? const [])
-        .cast<Map<String, dynamic>>();
+    final worldCompletionBonusXp =
+        result['world_completion_bonus_xp'] as int? ?? 0;
+    final newlyAwardedBadges =
+        ((result['newly_awarded_badges'] as List?) ?? const [])
+            .cast<Map<String, dynamic>>();
     final streakJustExtended = result['streak_just_extended'] as bool? ?? false;
-    final currentStreak = (result['streak'] as Map<String, dynamic>)['current_streak'] as int;
+    final currentStreak =
+        (result['streak'] as Map<String, dynamic>)['current_streak'] as int;
     // BUG_PERGUNTAS_REPETINDO_SEQUENCIA.md §2.3 — este era o último item
     // do lote sem repetição deste território+dificuldade: não existe
     // "próximo" real até o backend reembaralhar, então a tela volta à
@@ -1164,11 +1235,15 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final feedbackText = Text(
       timedOut
           ? l10n.relampagoTimedOutFeedback
-          : (isCorrect ? l10n.correctAnswerFeedback : l10n.incorrectAnswerFeedback),
+          : (isCorrect
+              ? l10n.correctAnswerFeedback
+              : l10n.incorrectAnswerFeedback),
       // Celebração em teal (acerto) vs. terracota suave (erro, nunca
       // vermelho vivo) — DESIGN_SYSTEM.md §4.
       style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-            color: timedOut ? AppColors.muted : (isCorrect ? AppColors.success : AppColors.error),
+            color: timedOut
+                ? AppColors.muted
+                : (isCorrect ? AppColors.success : AppColors.error),
           ),
     );
 
@@ -1184,7 +1259,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 // nenhuma celebração" — texto de erro fica estático).
                 isCorrect ? PulseIn(child: feedbackText) : feedbackText,
                 const SizedBox(height: 8),
-                Text(l10n.correctAnswerLabel(_displayAnswer(result['correct_answer'] as String))),
+                Text(l10n.correctAnswerLabel(
+                    _displayAnswer(result['correct_answer'] as String))),
                 const SizedBox(height: 12),
                 Text(result['explanation'] as String),
                 const SizedBox(height: 12),
@@ -1194,7 +1270,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     result['xp_base'] as int,
                     result['hints_used'] as int,
                   ),
-                  style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 14),
+                  style: AppTheme.technicalStyle(
+                      color: AppColors.gold, fontSize: 14),
                 ),
                 if (speedBonusXp > 0) ...[
                   const SizedBox(height: 8),
@@ -1202,7 +1279,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.relampagoSpeedBonusMessage(speedBonusXp),
-                      style: TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          color: AppColors.teal, fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],
@@ -1215,7 +1293,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.streakExtendedCelebrationMessage(currentStreak),
-                      style: TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          color: AppColors.teal, fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],
@@ -1225,10 +1304,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.levelUpMessage(newLevel),
-                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareLevelUpMessage(newLevel), client: widget.client),
+                  ShareAchievementButton(
+                      message: l10n.shareLevelUpMessage(newLevel),
+                      client: widget.client),
                 ],
                 if (territoryJustConquered) ...[
                   const SizedBox(height: 16),
@@ -1236,43 +1318,62 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     intensity: 0.3,
                     child: Text(
                       l10n.territoryConqueredCelebrationMessage,
-                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareTerritoryConqueredMessage(widget.territoryLabel), client: widget.client),
+                  ShareAchievementButton(
+                      message: l10n.shareTerritoryConqueredMessage(
+                          widget.territoryLabel),
+                      client: widget.client),
                 ],
                 if (territoryDetentorGained) ...[
                   const SizedBox(height: 16),
                   PulseIn(
                     intensity: 0.3,
                     child: Text(
-                      l10n.territoryDetentorGainedMessage(widget.territoryLabel),
-                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      l10n.territoryDetentorGainedMessage(
+                          widget.territoryLabel),
+                      style: TextStyle(
+                          color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareTerritoryDetentorMessage(widget.territoryLabel), client: widget.client),
+                  ShareAchievementButton(
+                      message: l10n
+                          .shareTerritoryDetentorMessage(widget.territoryLabel),
+                      client: widget.client),
                 ],
                 if (worldJustCompleted && completedWorldName != null) ...[
                   const SizedBox(height: 16),
                   PulseIn(
                     intensity: 0.3,
                     child: Text(
-                      l10n.worldCompletedCelebrationMessage(completedWorldName, worldCompletionBonusXp),
-                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      l10n.worldCompletedCelebrationMessage(
+                          completedWorldName, worldCompletionBonusXp),
+                      style: TextStyle(
+                          color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareWorldCompletedMessage(completedWorldName), client: widget.client),
+                  ShareAchievementButton(
+                      message:
+                          l10n.shareWorldCompletedMessage(completedWorldName),
+                      client: widget.client),
                 ],
                 for (final badge in newlyAwardedBadges) ...[
                   const SizedBox(height: 16),
                   PulseIn(
                     intensity: 0.3,
                     child: Text(
-                      l10n.badgeUnlockedCelebrationMessage(badge['name'] as String),
-                      style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+                      l10n.badgeUnlockedCelebrationMessage(
+                          badge['name'] as String),
+                      style: TextStyle(
+                          color: AppColors.gold, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  ShareAchievementButton(message: l10n.shareBadgeUnlockedMessage(badge['name'] as String), client: widget.client),
+                  ShareAchievementButton(
+                      message: l10n
+                          .shareBadgeUnlockedMessage(badge['name'] as String),
+                      client: widget.client),
                 ],
               ],
             ),
@@ -1285,7 +1386,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         // feedback (que fala em "nível", conceito que não existe numa
         // batalha pontual entre dois jogadores).
         if (widget.battleId != null)
-          FilledButton(onPressed: () => Navigator.of(context).pop(), child: Text(l10n.backButton))
+          FilledButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text(l10n.backButton))
         // REGRA_REVISAO_ERROS_FIM_RODADA.md §3 — enquanto o jogador está
         // na etapa de revisão, o rodapé é sempre "próxima revisão" ou
         // "revisão concluída", nunca o fluxo normal de fim de lote (que
@@ -1303,7 +1406,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             onPressed: _reviewQueue.isEmpty
                 ? () => Navigator.of(context).popUntil((route) => route.isFirst)
                 : _loadNextReviewChallenge,
-            child: Text(_reviewQueue.isEmpty ? l10n.batchCompletedBackToHomeButton : l10n.roundReviewNextButton),
+            child: Text(_reviewQueue.isEmpty
+                ? l10n.batchCompletedBackToHomeButton
+                : l10n.roundReviewNextButton),
           ),
         ] else if (batchExhausted && _roundErrorChallengeIds.isNotEmpty) ...[
           // §3 — fim da rodada normal, mas com pelo menos um erro
@@ -1340,7 +1445,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           ),
           const SizedBox(height: 12),
           FilledButton(
-            onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
+            onPressed: () =>
+                Navigator.of(context).popUntil((route) => route.isFirst),
             child: Text(l10n.batchCompletedBackToHomeButton),
           ),
         ] else if (levelUp)
@@ -1353,7 +1459,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           // pra decidir a celebração; reaproveita o mesmo sinal aqui.
           _buildLevelFeedback()
         else
-          FilledButton(onPressed: _loadNextChallenge, child: Text(l10n.nextChallengeButton)),
+          FilledButton(
+              onPressed: _loadNextChallenge,
+              child: Text(l10n.nextChallengeButton)),
       ],
     );
   }
@@ -1373,8 +1481,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 4),
           child: OutlinedButton(
             style: OutlinedButton.styleFrom(
-              backgroundColor: selected ? AppColors.gold.withValues(alpha: 0.15) : null,
-              side: BorderSide(color: selected ? AppColors.gold : AppColors.muted),
+              backgroundColor:
+                  selected ? AppColors.gold.withValues(alpha: 0.15) : null,
+              side: BorderSide(
+                  color: selected ? AppColors.gold : AppColors.muted),
             ),
             onPressed: () {
               setState(() => _feedbackAction = value);
@@ -1424,7 +1534,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             difficultyChip('facil', l10n.levelFeedbackDifficultyFacil),
             difficultyChip('medio', l10n.levelFeedbackDifficultyMedio),
             difficultyChip('dificil', l10n.levelFeedbackDifficultyDificil),
-            difficultyChip('muito_dificil', l10n.levelFeedbackDifficultyMuitoDificil),
+            difficultyChip(
+                'muito_dificil', l10n.levelFeedbackDifficultyMuitoDificil),
           ],
         ),
         const SizedBox(height: 12),
@@ -1435,6 +1546,34 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           maxLines: 3,
         ),
       ],
+    );
+  }
+}
+
+/// Selo "Novo" (07/09/2026, pedido de Rhoney): ChallengeOut.is_new
+/// (backend, dentro da janela de config.NEW_CONTENT_BADGE_WINDOW_DAYS a
+/// partir de Challenge.created_at) — mesma linguagem visual do badge de
+/// "Modo revisão" logo acima (pill arredondado, cor de destaque em vez
+/// de texto solto), só trocando a cor teal por dourada (reforço
+/// positivo/novidade, não um aviso neutro).
+class _NewChallengeBadge extends StatelessWidget {
+  const _NewChallengeBadge({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      decoration: BoxDecoration(
+        color: AppColors.gold.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(100),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.4)),
+      ),
+      child: Text(
+        label,
+        style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 11),
+      ),
     );
   }
 }

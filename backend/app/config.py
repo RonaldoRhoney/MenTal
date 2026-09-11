@@ -217,6 +217,12 @@ TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 20, 2: 20, 3: 20}
 # incluindo fácil, porque ali o formato é obrigatório, não opcional.
 PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL = 2
 
+# Selo "Novo" em desafios (06/09/2026, pedido de Rhoney) — quantos dias
+# depois de Challenge.created_at o desafio ainda é considerado "novo" e
+# ganha destaque na tela de desafio (services.is_challenge_new). Depois
+# desse prazo, vira conteúdo normal — nunca "novo" para sempre.
+NEW_CONTENT_BADGE_WINDOW_DAYS = 30
+
 # V3.2 (V3/V3.2_TECNOLOGIA.md §3.4) — Pausa para Aprender: "quantidade
 # pequena e FIXA de XP por leitura concluída... não deve ser um atalho
 # de XP fácil". Fixo e único (não varia por dificuldade/território) —

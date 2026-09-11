@@ -335,6 +335,15 @@ class Challenge(Base):
     # `clues`/`audio_url` acima — reaproveita o Challenge normal em vez
     # de criar mecânica nova. None em todo o resto do app.
     reading_passage: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # Selo "Novo" (06/09/2026, pedido de Rhoney): NULL em todo conteúdo
+    # pré-existente à migration 066 (nunca marcado como novo) — daqui pra
+    # frente, preenchido automaticamente pelo default do ORM em toda
+    # inserção nova (seed.py, append_production_content.py, testes),
+    # sem precisar tocar em nenhum desses scripts. `services.
+    # is_challenge_new` decide, a partir daqui, se ainda está dentro da
+    # janela de destaque (config.NEW_CONTENT_BADGE_WINDOW_DAYS) — nunca
+    # "novo" pra sempre.
+    created_at: Mapped[datetime | None] = mapped_column(DateTime, default=utcnow, nullable=True)
 
 
 class ChallengeHint(Base):

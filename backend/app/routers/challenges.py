@@ -152,6 +152,7 @@ def next_challenge(
         audio_source_name=challenge.audio_source_name,
         audio_source_url=challenge.audio_source_url,
         reading_passage=challenge.reading_passage,
+        is_new=services.is_challenge_new(challenge),
     )
 
 
@@ -223,6 +224,7 @@ def search_challenges(
             audio_source_name=challenge.audio_source_name,
             audio_source_url=challenge.audio_source_url,
             reading_passage=challenge.reading_passage,
+            is_new=services.is_challenge_new(challenge),
         ),
     )
 
@@ -303,6 +305,7 @@ def reattempt_challenge(
         audio_source_name=challenge.audio_source_name,
         audio_source_url=challenge.audio_source_url,
         reading_passage=challenge.reading_passage,
+        is_new=services.is_challenge_new(challenge),
     )
 
 
