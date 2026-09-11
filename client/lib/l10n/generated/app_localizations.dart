@@ -508,6 +508,36 @@ abstract class AppLocalizations {
   /// **'Prevenção e Segurança'**
   String get territoryPrevencaoSeguranca;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Gastronomia pelo Mundo'**
+  String get territoryGastroMundo;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Gastronomia do Brasil'**
+  String get territoryGastroBrasil;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Norte e Nordeste'**
+  String get territoryGastroNorteNordeste;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Centro-Oeste e Sudeste'**
+  String get territoryGastroCentrooesteSudeste;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Sul e Fusão Regional'**
+  String get territoryGastroSulFusao;
+
   /// Button that plays the challenge audio clip in Ouvido Afiado
   ///
   /// In pt, this message translates to:

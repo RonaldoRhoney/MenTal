@@ -63,6 +63,12 @@ WORLDS = [
     # como território próprio, renomeado "Gírias e Expressões" — decisão
     # de Rhoney (07/09/2026): nenhum conteúdo perdido.
     {"id": "regioes_brasil", "name": "Mundo das Regiões do Brasil", "display_order": 13},
+    # Mundo_da_Gastronomia/README.md (07/09/2026) — mesma arquitetura de
+    # Valores/Trânsito: "cápsula de texto + perguntas", 5 territórios
+    # (do todo pro específico: Mundo, Brasil, Norte+Nordeste,
+    # Centro-Oeste+Sudeste, Sul+fusão regional). Conteúdo carregado de
+    # content/gastronomia_*.json (ver CHALLENGES abaixo).
+    {"id": "gastronomia", "name": "Mundo da Gastronomia", "display_order": 14},
 ]
 
 # Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
@@ -284,6 +290,12 @@ TERRITORIES = [
     {"id": "transportes_terrestres", "challenge_type": "transito", "requires_subscription": True, "free_sample_count": 2, "display_order": 55, "world_id": "transito"},
     {"id": "economia_transito", "challenge_type": "transito", "requires_subscription": True, "free_sample_count": 2, "display_order": 56, "world_id": "transito"},
     {"id": "prevencao_seguranca", "challenge_type": "transito", "requires_subscription": True, "free_sample_count": 2, "display_order": 57, "world_id": "transito"},
+    # Mundo_da_Gastronomia/README.md (07/09/2026).
+    {"id": "gastro_mundo", "challenge_type": "gastronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 58, "world_id": "gastronomia"},
+    {"id": "gastro_brasil", "challenge_type": "gastronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 59, "world_id": "gastronomia"},
+    {"id": "gastro_norte_nordeste", "challenge_type": "gastronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 60, "world_id": "gastronomia"},
+    {"id": "gastro_centrooeste_sudeste", "challenge_type": "gastronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 61, "world_id": "gastronomia"},
+    {"id": "gastro_sul_fusao", "challenge_type": "gastronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 62, "world_id": "gastronomia"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -5782,6 +5794,12 @@ for _path in sorted(_CONTENT_DIR.glob("linguagem_*.json")):
 # 5 territórios), mesmo formato "cápsula de texto + perguntas" do Mundo
 # dos Valores, convertidos via scripts/convert_transito_content.py.
 for _path in sorted(_CONTENT_DIR.glob("transito_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
+# Mundo da Gastronomia (07/09/2026): 120 desafios (24 por território, 5
+# territórios), mesmo formato "cápsula de texto + perguntas" de Valores/
+# Trânsito, convertidos via scripts/convert_gastronomia_content.py.
+for _path in sorted(_CONTENT_DIR.glob("gastronomia_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 

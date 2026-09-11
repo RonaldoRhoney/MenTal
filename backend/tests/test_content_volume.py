@@ -43,6 +43,11 @@ SINGLE_DIFFICULTY_TERRITORY_IDS = {
     # trilha de maestria por dificuldade.
     "educacao_legislacao", "historia_curiosidades", "transportes_terrestres",
     "economia_transito", "prevencao_seguranca",
+    # Mundo da Gastronomia: mesmo formato e mesmo raciocínio dos dois
+    # acima — checagem de compreensão de leitura, não trilha de
+    # maestria por dificuldade.
+    "gastro_mundo", "gastro_brasil", "gastro_norte_nordeste",
+    "gastro_centrooeste_sudeste", "gastro_sul_fusao",
 }
 
 

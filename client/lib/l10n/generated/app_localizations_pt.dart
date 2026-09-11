@@ -225,6 +225,21 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryPrevencaoSeguranca => 'Prevenção e Segurança';
 
   @override
+  String get territoryGastroMundo => 'Gastronomia pelo Mundo';
+
+  @override
+  String get territoryGastroBrasil => 'Gastronomia do Brasil';
+
+  @override
+  String get territoryGastroNorteNordeste => 'Norte e Nordeste';
+
+  @override
+  String get territoryGastroCentrooesteSudeste => 'Centro-Oeste e Sudeste';
+
+  @override
+  String get territoryGastroSulFusao => 'Sul e Fusão Regional';
+
+  @override
   String get audioPlayButton => 'Tocar som';
 
   @override

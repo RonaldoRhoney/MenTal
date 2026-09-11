@@ -297,6 +297,26 @@
   "@territoryPrevencaoSeguranca": {
     "description": "Territory display name"
   },
+  "territoryGastroMundo": "Gastronomia pelo Mundo",
+  "@territoryGastroMundo": {
+    "description": "Territory display name"
+  },
+  "territoryGastroBrasil": "Gastronomia do Brasil",
+  "@territoryGastroBrasil": {
+    "description": "Territory display name"
+  },
+  "territoryGastroNorteNordeste": "Norte e Nordeste",
+  "@territoryGastroNorteNordeste": {
+    "description": "Territory display name"
+  },
+  "territoryGastroCentrooesteSudeste": "Centro-Oeste e Sudeste",
+  "@territoryGastroCentrooesteSudeste": {
+    "description": "Territory display name"
+  },
+  "territoryGastroSulFusao": "Sul e Fusão Regional",
+  "@territoryGastroSulFusao": {
+    "description": "Territory display name"
+  },
   "audioPlayButton": "Tocar som",
   "@audioPlayButton": {
     "description": "Button that plays the challenge audio clip in Ouvido Afiado"

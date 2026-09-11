@@ -256,6 +256,10 @@ NEVER_TIMED_TERRITORY_IDS = {
     # velocidade (fonte do conteúdo curado, ver Mundo_do_Transito/*.json).
     "educacao_legislacao", "historia_curiosidades", "transportes_terrestres",
     "economia_transito", "prevencao_seguranca",
+    # Mundo da Gastronomia (07/09/2026): mesmo formato "cápsula de texto
+    # + perguntas", mesmo motivo.
+    "gastro_mundo", "gastro_brasil", "gastro_norte_nordeste",
+    "gastro_centrooeste_sudeste", "gastro_sul_fusao",
 }
 # V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — o próprio doc descreve
 # a charada "no formato Relâmpago (timer curto, ~10 segundos)" como a

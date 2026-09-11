@@ -1,0 +1,458 @@
+[
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Segundo a tradição popular, quem teria criado a pizza Margherita em 1889?",
+    "options": [
+      "O pizzaiolo Raffaele Esposito",
+      "A própria rainha Margherita",
+      "Um chef francês contratado pela realeza",
+      "Um grupo de pizzaiolos anônimos"
+    ],
+    "correct_answer": "O pizzaiolo Raffaele Esposito",
+    "explanation": "Uma das histórias mais contadas sobre a origem da pizza envolve a rainha Margherita de Saboia. Segundo a tradição popular, em 1889 o pizzaiolo napolitano Raffaele Esposito teria criado uma pizza especial em homenagem à rainha, usando tomate, mussarela e manjericão — ingredientes que remetiam às cores da bandeira italiana: vermelho, branco e verde. A combinação teria agradado tanto a rainha que a pizza passou a levar seu nome. Vale registrar que alguns historiadores questionam a autenticidade dessa história, já que a principal evidência é uma carta cuja veracidade já foi contestada — mas a lenda, verdadeira ou não, ajudou a consolidar a Margherita como um dos sabores mais tradicionais do mundo.",
+    "reading_passage": "Uma das histórias mais contadas sobre a origem da pizza envolve a rainha Margherita de Saboia. Segundo a tradição popular, em 1889 o pizzaiolo napolitano Raffaele Esposito teria criado uma pizza especial em homenagem à rainha, usando tomate, mussarela e manjericão — ingredientes que remetiam às cores da bandeira italiana: vermelho, branco e verde. A combinação teria agradado tanto a rainha que a pizza passou a levar seu nome. Vale registrar que alguns historiadores questionam a autenticidade dessa história, já que a principal evidência é uma carta cuja veracidade já foi contestada — mas a lenda, verdadeira ou não, ajudou a consolidar a Margherita como um dos sabores mais tradicionais do mundo.",
+    "hints": [
+      "Releia 'A lenda por trás da pizza Margherita' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Quais ingredientes formam a pizza Margherita, remetendo à bandeira italiana?",
+    "options": [
+      "Tomate, mussarela e manjericão",
+      "Presunto, queijo e azeitona",
+      "Cebola, calabresa e orégano",
+      "Atum, milho e catupiry"
+    ],
+    "correct_answer": "Tomate, mussarela e manjericão",
+    "explanation": "Uma das histórias mais contadas sobre a origem da pizza envolve a rainha Margherita de Saboia. Segundo a tradição popular, em 1889 o pizzaiolo napolitano Raffaele Esposito teria criado uma pizza especial em homenagem à rainha, usando tomate, mussarela e manjericão — ingredientes que remetiam às cores da bandeira italiana: vermelho, branco e verde. A combinação teria agradado tanto a rainha que a pizza passou a levar seu nome. Vale registrar que alguns historiadores questionam a autenticidade dessa história, já que a principal evidência é uma carta cuja veracidade já foi contestada — mas a lenda, verdadeira ou não, ajudou a consolidar a Margherita como um dos sabores mais tradicionais do mundo.",
+    "reading_passage": "Uma das histórias mais contadas sobre a origem da pizza envolve a rainha Margherita de Saboia. Segundo a tradição popular, em 1889 o pizzaiolo napolitano Raffaele Esposito teria criado uma pizza especial em homenagem à rainha, usando tomate, mussarela e manjericão — ingredientes que remetiam às cores da bandeira italiana: vermelho, branco e verde. A combinação teria agradado tanto a rainha que a pizza passou a levar seu nome. Vale registrar que alguns historiadores questionam a autenticidade dessa história, já que a principal evidência é uma carta cuja veracidade já foi contestada — mas a lenda, verdadeira ou não, ajudou a consolidar a Margherita como um dos sabores mais tradicionais do mundo.",
+    "hints": [
+      "Releia 'A lenda por trás da pizza Margherita' — a resposta está no texto.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "A história da criação da pizza Margherita é unanimemente confirmada pelos historiadores?",
+    "options": [
+      "Não, alguns historiadores questionam a autenticidade da principal evidência",
+      "Sim, é um fato histórico totalmente comprovado",
+      "Não, a história é considerada completamente inventada",
+      "Sim, existem múltiplos documentos que confirmam sem dúvida"
+    ],
+    "correct_answer": "Não, alguns historiadores questionam a autenticidade da principal evidência",
+    "explanation": "Uma das histórias mais contadas sobre a origem da pizza envolve a rainha Margherita de Saboia. Segundo a tradição popular, em 1889 o pizzaiolo napolitano Raffaele Esposito teria criado uma pizza especial em homenagem à rainha, usando tomate, mussarela e manjericão — ingredientes que remetiam às cores da bandeira italiana: vermelho, branco e verde. A combinação teria agradado tanto a rainha que a pizza passou a levar seu nome. Vale registrar que alguns historiadores questionam a autenticidade dessa história, já que a principal evidência é uma carta cuja veracidade já foi contestada — mas a lenda, verdadeira ou não, ajudou a consolidar a Margherita como um dos sabores mais tradicionais do mundo.",
+    "reading_passage": "Uma das histórias mais contadas sobre a origem da pizza envolve a rainha Margherita de Saboia. Segundo a tradição popular, em 1889 o pizzaiolo napolitano Raffaele Esposito teria criado uma pizza especial em homenagem à rainha, usando tomate, mussarela e manjericão — ingredientes que remetiam às cores da bandeira italiana: vermelho, branco e verde. A combinação teria agradado tanto a rainha que a pizza passou a levar seu nome. Vale registrar que alguns historiadores questionam a autenticidade dessa história, já que a principal evidência é uma carta cuja veracidade já foi contestada — mas a lenda, verdadeira ou não, ajudou a consolidar a Margherita como um dos sabores mais tradicionais do mundo.",
+    "hints": [
+      "Releia 'A lenda por trás da pizza Margherita' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Onde está a origem mais remota da técnica que deu origem ao sushi?",
+    "options": [
+      "No Sudeste Asiático",
+      "No Japão",
+      "Na China",
+      "Na Coreia"
+    ],
+    "correct_answer": "No Sudeste Asiático",
+    "explanation": "Embora o sushi seja fortemente associado ao Japão, sua origem mais remota está ligada a uma técnica de conservação de peixe surgida no Sudeste Asiático, na qual o peixe era fermentado junto com arroz para prolongar sua durabilidade — o arroz, nesse método antigo, era descartado, e não consumido. Foi no Japão, ao longo dos séculos, que a receita evoluiu até chegar ao formato mais conhecido hoje, com arroz temperado e consumido junto ao peixe, geralmente fresco, em vez de fermentado por longos períodos.",
+    "reading_passage": "Embora o sushi seja fortemente associado ao Japão, sua origem mais remota está ligada a uma técnica de conservação de peixe surgida no Sudeste Asiático, na qual o peixe era fermentado junto com arroz para prolongar sua durabilidade — o arroz, nesse método antigo, era descartado, e não consumido. Foi no Japão, ao longo dos séculos, que a receita evoluiu até chegar ao formato mais conhecido hoje, com arroz temperado e consumido junto ao peixe, geralmente fresco, em vez de fermentado por longos períodos.",
+    "hints": [
+      "Releia 'Sushi: uma origem diferente do que se imagina' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "No método antigo de conservação, o que acontecia com o arroz usado junto ao peixe?",
+    "options": [
+      "Era descartado, não consumido",
+      "Era a parte principal do prato",
+      "Era vendido separadamente",
+      "Era usado para fazer outro prato"
+    ],
+    "correct_answer": "Era descartado, não consumido",
+    "explanation": "Embora o sushi seja fortemente associado ao Japão, sua origem mais remota está ligada a uma técnica de conservação de peixe surgida no Sudeste Asiático, na qual o peixe era fermentado junto com arroz para prolongar sua durabilidade — o arroz, nesse método antigo, era descartado, e não consumido. Foi no Japão, ao longo dos séculos, que a receita evoluiu até chegar ao formato mais conhecido hoje, com arroz temperado e consumido junto ao peixe, geralmente fresco, em vez de fermentado por longos períodos.",
+    "reading_passage": "Embora o sushi seja fortemente associado ao Japão, sua origem mais remota está ligada a uma técnica de conservação de peixe surgida no Sudeste Asiático, na qual o peixe era fermentado junto com arroz para prolongar sua durabilidade — o arroz, nesse método antigo, era descartado, e não consumido. Foi no Japão, ao longo dos séculos, que a receita evoluiu até chegar ao formato mais conhecido hoje, com arroz temperado e consumido junto ao peixe, geralmente fresco, em vez de fermentado por longos períodos.",
+    "hints": [
+      "Releia 'Sushi: uma origem diferente do que se imagina' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceu com a receita ao longo dos séculos no Japão?",
+    "options": [
+      "Evoluiu até o formato mais conhecido hoje, com arroz temperado e peixe fresco",
+      "Permaneceu exatamente igual à versão original",
+      "Deixou de usar peixe completamente",
+      "Passou a ser feita exclusivamente com carne"
+    ],
+    "correct_answer": "Evoluiu até o formato mais conhecido hoje, com arroz temperado e peixe fresco",
+    "explanation": "Embora o sushi seja fortemente associado ao Japão, sua origem mais remota está ligada a uma técnica de conservação de peixe surgida no Sudeste Asiático, na qual o peixe era fermentado junto com arroz para prolongar sua durabilidade — o arroz, nesse método antigo, era descartado, e não consumido. Foi no Japão, ao longo dos séculos, que a receita evoluiu até chegar ao formato mais conhecido hoje, com arroz temperado e consumido junto ao peixe, geralmente fresco, em vez de fermentado por longos períodos.",
+    "reading_passage": "Embora o sushi seja fortemente associado ao Japão, sua origem mais remota está ligada a uma técnica de conservação de peixe surgida no Sudeste Asiático, na qual o peixe era fermentado junto com arroz para prolongar sua durabilidade — o arroz, nesse método antigo, era descartado, e não consumido. Foi no Japão, ao longo dos séculos, que a receita evoluiu até chegar ao formato mais conhecido hoje, com arroz temperado e consumido junto ao peixe, geralmente fresco, em vez de fermentado por longos períodos.",
+    "hints": [
+      "Releia 'Sushi: uma origem diferente do que se imagina' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Em qual região está a origem do cacau, matéria-prima do chocolate?",
+    "options": [
+      "Mesoamérica",
+      "África Ocidental",
+      "Sudeste Asiático",
+      "Europa Mediterrânea"
+    ],
+    "correct_answer": "Mesoamérica",
+    "explanation": "O cacau, matéria-prima do chocolate, tem origem na Mesoamérica, região que hoje corresponde a partes do México e da América Central, onde civilizações como os maias e os astecas já consumiam uma bebida feita a partir das sementes de cacau, geralmente amarga e temperada com especiarias, bem diferente do chocolate doce mais comum atualmente. O cacau só chegou à Europa depois da colonização espanhola das Américas, e foi lá que, com a adição de açúcar, a bebida foi adaptada ao paladar europeu, dando início ao caminho que levaria ao chocolate como conhecemos hoje.",
+    "reading_passage": "O cacau, matéria-prima do chocolate, tem origem na Mesoamérica, região que hoje corresponde a partes do México e da América Central, onde civilizações como os maias e os astecas já consumiam uma bebida feita a partir das sementes de cacau, geralmente amarga e temperada com especiarias, bem diferente do chocolate doce mais comum atualmente. O cacau só chegou à Europa depois da colonização espanhola das Américas, e foi lá que, com a adição de açúcar, a bebida foi adaptada ao paladar europeu, dando início ao caminho que levaria ao chocolate como conhecemos hoje.",
+    "hints": [
+      "Releia 'De onde vem o chocolate?' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Como era a bebida de cacau consumida por maias e astecas, segundo o texto?",
+    "options": [
+      "Geralmente amarga e temperada com especiarias",
+      "Doce e cremosa, parecida com o chocolate atual",
+      "Servida gelada com gelo",
+      "Misturada exclusivamente com leite"
+    ],
+    "correct_answer": "Geralmente amarga e temperada com especiarias",
+    "explanation": "O cacau, matéria-prima do chocolate, tem origem na Mesoamérica, região que hoje corresponde a partes do México e da América Central, onde civilizações como os maias e os astecas já consumiam uma bebida feita a partir das sementes de cacau, geralmente amarga e temperada com especiarias, bem diferente do chocolate doce mais comum atualmente. O cacau só chegou à Europa depois da colonização espanhola das Américas, e foi lá que, com a adição de açúcar, a bebida foi adaptada ao paladar europeu, dando início ao caminho que levaria ao chocolate como conhecemos hoje.",
+    "reading_passage": "O cacau, matéria-prima do chocolate, tem origem na Mesoamérica, região que hoje corresponde a partes do México e da América Central, onde civilizações como os maias e os astecas já consumiam uma bebida feita a partir das sementes de cacau, geralmente amarga e temperada com especiarias, bem diferente do chocolate doce mais comum atualmente. O cacau só chegou à Europa depois da colonização espanhola das Américas, e foi lá que, com a adição de açúcar, a bebida foi adaptada ao paladar europeu, dando início ao caminho que levaria ao chocolate como conhecemos hoje.",
+    "hints": [
+      "Releia 'De onde vem o chocolate?' — a resposta está no texto.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceu com o cacau depois de chegar à Europa?",
+    "options": [
+      "Recebeu adição de açúcar, sendo adaptado ao paladar europeu",
+      "Foi imediatamente proibido pelas autoridades europeias",
+      "Permaneceu amargo, sem nenhuma alteração",
+      "Deixou de ser consumido como bebida"
+    ],
+    "correct_answer": "Recebeu adição de açúcar, sendo adaptado ao paladar europeu",
+    "explanation": "O cacau, matéria-prima do chocolate, tem origem na Mesoamérica, região que hoje corresponde a partes do México e da América Central, onde civilizações como os maias e os astecas já consumiam uma bebida feita a partir das sementes de cacau, geralmente amarga e temperada com especiarias, bem diferente do chocolate doce mais comum atualmente. O cacau só chegou à Europa depois da colonização espanhola das Américas, e foi lá que, com a adição de açúcar, a bebida foi adaptada ao paladar europeu, dando início ao caminho que levaria ao chocolate como conhecemos hoje.",
+    "reading_passage": "O cacau, matéria-prima do chocolate, tem origem na Mesoamérica, região que hoje corresponde a partes do México e da América Central, onde civilizações como os maias e os astecas já consumiam uma bebida feita a partir das sementes de cacau, geralmente amarga e temperada com especiarias, bem diferente do chocolate doce mais comum atualmente. O cacau só chegou à Europa depois da colonização espanhola das Américas, e foi lá que, com a adição de açúcar, a bebida foi adaptada ao paladar europeu, dando início ao caminho que levaria ao chocolate como conhecemos hoje.",
+    "hints": [
+      "Releia 'De onde vem o chocolate?' — a resposta está no texto.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "A que país o croissant tem sua origem mais remota associada, segundo o texto?",
+    "options": [
+      "Áustria",
+      "Itália",
+      "Bélgica",
+      "Alemanha"
+    ],
+    "correct_answer": "Áustria",
+    "explanation": "Apesar de ser um símbolo da culinária francesa, o croissant tem origem associada à Áustria, mais especificamente a um tipo de pão em formato de meia-lua chamado kipferl, que já existia antes de o croissant se popularizar na França. A introdução dessa receita na França é frequentemente associada a uma rainha austríaca que se casou com um rei francês, embora os detalhes exatos dessa transição histórica sejam debatidos entre pesquisadores. O croissant como é feito hoje, com massa folhada amanteigada, é considerado um desenvolvimento francês posterior sobre essa base original austríaca.",
+    "reading_passage": "Apesar de ser um símbolo da culinária francesa, o croissant tem origem associada à Áustria, mais especificamente a um tipo de pão em formato de meia-lua chamado kipferl, que já existia antes de o croissant se popularizar na França. A introdução dessa receita na França é frequentemente associada a uma rainha austríaca que se casou com um rei francês, embora os detalhes exatos dessa transição histórica sejam debatidos entre pesquisadores. O croissant como é feito hoje, com massa folhada amanteigada, é considerado um desenvolvimento francês posterior sobre essa base original austríaca.",
+    "hints": [
+      "Releia 'O croissant é mesmo francês?' — a resposta está no texto.",
+      "Começa com 'Á'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Como se chama o pão em formato de meia-lua que antecede o croissant?",
+    "options": [
+      "Kipferl",
+      "Baguete",
+      "Brioche",
+      "Focaccia"
+    ],
+    "correct_answer": "Kipferl",
+    "explanation": "Apesar de ser um símbolo da culinária francesa, o croissant tem origem associada à Áustria, mais especificamente a um tipo de pão em formato de meia-lua chamado kipferl, que já existia antes de o croissant se popularizar na França. A introdução dessa receita na França é frequentemente associada a uma rainha austríaca que se casou com um rei francês, embora os detalhes exatos dessa transição histórica sejam debatidos entre pesquisadores. O croissant como é feito hoje, com massa folhada amanteigada, é considerado um desenvolvimento francês posterior sobre essa base original austríaca.",
+    "reading_passage": "Apesar de ser um símbolo da culinária francesa, o croissant tem origem associada à Áustria, mais especificamente a um tipo de pão em formato de meia-lua chamado kipferl, que já existia antes de o croissant se popularizar na França. A introdução dessa receita na França é frequentemente associada a uma rainha austríaca que se casou com um rei francês, embora os detalhes exatos dessa transição histórica sejam debatidos entre pesquisadores. O croissant como é feito hoje, com massa folhada amanteigada, é considerado um desenvolvimento francês posterior sobre essa base original austríaca.",
+    "hints": [
+      "Releia 'O croissant é mesmo francês?' — a resposta está no texto.",
+      "Começa com 'K'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que é considerado um desenvolvimento francês posterior à receita original?",
+    "options": [
+      "A massa folhada amanteigada do croissant atual",
+      "O próprio formato de meia-lua",
+      "O uso de farinha na receita",
+      "O nome 'croissant' em si"
+    ],
+    "correct_answer": "A massa folhada amanteigada do croissant atual",
+    "explanation": "Apesar de ser um símbolo da culinária francesa, o croissant tem origem associada à Áustria, mais especificamente a um tipo de pão em formato de meia-lua chamado kipferl, que já existia antes de o croissant se popularizar na França. A introdução dessa receita na França é frequentemente associada a uma rainha austríaca que se casou com um rei francês, embora os detalhes exatos dessa transição histórica sejam debatidos entre pesquisadores. O croissant como é feito hoje, com massa folhada amanteigada, é considerado um desenvolvimento francês posterior sobre essa base original austríaca.",
+    "reading_passage": "Apesar de ser um símbolo da culinária francesa, o croissant tem origem associada à Áustria, mais especificamente a um tipo de pão em formato de meia-lua chamado kipferl, que já existia antes de o croissant se popularizar na França. A introdução dessa receita na França é frequentemente associada a uma rainha austríaca que se casou com um rei francês, embora os detalhes exatos dessa transição histórica sejam debatidos entre pesquisadores. O croissant como é feito hoje, com massa folhada amanteigada, é considerado um desenvolvimento francês posterior sobre essa base original austríaca.",
+    "hints": [
+      "Releia 'O croissant é mesmo francês?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Qual é a história popularmente contada sobre a origem do macarrão na Itália?",
+    "options": [
+      "Que Marco Polo o trouxe da China no século XIII",
+      "Que foi inventado por um chef francês",
+      "Que surgiu originalmente no Egito Antigo",
+      "Que foi criado por comerciantes espanhóis"
+    ],
+    "correct_answer": "Que Marco Polo o trouxe da China no século XIII",
+    "explanation": "É comum ouvir que Marco Polo teria trazido o macarrão da China para a Itália no século XIII, popularizando a massa no continente europeu. No entanto, há registros de consumo de massas semelhantes ao macarrão na região do Mediterrâneo antes mesmo da viagem de Marco Polo, o que enfraquece essa versão simplificada da história. É mais provável que tanto a China quanto regiões do Mediterrâneo tenham desenvolvido, de forma independente, técnicas parecidas de preparo de massas à base de farinha e água ao longo do tempo.",
+    "reading_passage": "É comum ouvir que Marco Polo teria trazido o macarrão da China para a Itália no século XIII, popularizando a massa no continente europeu. No entanto, há registros de consumo de massas semelhantes ao macarrão na região do Mediterrâneo antes mesmo da viagem de Marco Polo, o que enfraquece essa versão simplificada da história. É mais provável que tanto a China quanto regiões do Mediterrâneo tenham desenvolvido, de forma independente, técnicas parecidas de preparo de massas à base de farinha e água ao longo do tempo.",
+    "hints": [
+      "Releia 'O mito da origem chinesa do macarrão' — a resposta está no texto.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que enfraquece essa versão simplificada da história, segundo o texto?",
+    "options": [
+      "Há registros de massas semelhantes no Mediterrâneo antes da viagem de Marco Polo",
+      "Marco Polo nunca esteve na China de fato",
+      "O macarrão nunca existiu na China antiga",
+      "A Itália proibiu o consumo de macarrão por séculos"
+    ],
+    "correct_answer": "Há registros de massas semelhantes no Mediterrâneo antes da viagem de Marco Polo",
+    "explanation": "É comum ouvir que Marco Polo teria trazido o macarrão da China para a Itália no século XIII, popularizando a massa no continente europeu. No entanto, há registros de consumo de massas semelhantes ao macarrão na região do Mediterrâneo antes mesmo da viagem de Marco Polo, o que enfraquece essa versão simplificada da história. É mais provável que tanto a China quanto regiões do Mediterrâneo tenham desenvolvido, de forma independente, técnicas parecidas de preparo de massas à base de farinha e água ao longo do tempo.",
+    "reading_passage": "É comum ouvir que Marco Polo teria trazido o macarrão da China para a Itália no século XIII, popularizando a massa no continente europeu. No entanto, há registros de consumo de massas semelhantes ao macarrão na região do Mediterrâneo antes mesmo da viagem de Marco Polo, o que enfraquece essa versão simplificada da história. É mais provável que tanto a China quanto regiões do Mediterrâneo tenham desenvolvido, de forma independente, técnicas parecidas de preparo de massas à base de farinha e água ao longo do tempo.",
+    "hints": [
+      "Releia 'O mito da origem chinesa do macarrão' — a resposta está no texto.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Qual é a explicação mais provável, segundo o texto, sobre a origem do macarrão?",
+    "options": [
+      "China e Mediterrâneo desenvolveram técnicas parecidas de forma independente",
+      "O macarrão surgiu simultaneamente em toda a Europa por decreto real",
+      "Apenas a China é a verdadeira origem, sem nenhuma dúvida",
+      "O macarrão foi inventado nos Estados Unidos"
+    ],
+    "correct_answer": "China e Mediterrâneo desenvolveram técnicas parecidas de forma independente",
+    "explanation": "É comum ouvir que Marco Polo teria trazido o macarrão da China para a Itália no século XIII, popularizando a massa no continente europeu. No entanto, há registros de consumo de massas semelhantes ao macarrão na região do Mediterrâneo antes mesmo da viagem de Marco Polo, o que enfraquece essa versão simplificada da história. É mais provável que tanto a China quanto regiões do Mediterrâneo tenham desenvolvido, de forma independente, técnicas parecidas de preparo de massas à base de farinha e água ao longo do tempo.",
+    "reading_passage": "É comum ouvir que Marco Polo teria trazido o macarrão da China para a Itália no século XIII, popularizando a massa no continente europeu. No entanto, há registros de consumo de massas semelhantes ao macarrão na região do Mediterrâneo antes mesmo da viagem de Marco Polo, o que enfraquece essa versão simplificada da história. É mais provável que tanto a China quanto regiões do Mediterrâneo tenham desenvolvido, de forma independente, técnicas parecidas de preparo de massas à base de farinha e água ao longo do tempo.",
+    "hints": [
+      "Releia 'O mito da origem chinesa do macarrão' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que 'curry' realmente representa, segundo o texto?",
+    "options": [
+      "Um termo para uma ampla variedade de misturas de especiarias",
+      "Um único tempero específico e padronizado",
+      "Uma marca comercial registrada na Índia",
+      "Um prato específico servido apenas em restaurantes"
+    ],
+    "correct_answer": "Um termo para uma ampla variedade de misturas de especiarias",
+    "explanation": "Diferente do que muitos pensam, 'curry' não é um único tempero específico, mas um termo usado, principalmente fora da Índia, para descrever uma ampla variedade de misturas de especiarias usadas na culinária indiana e do sul asiático. Cada região da Índia tem suas próprias combinações tradicionais, variando de acordo com ingredientes locais e pratos específicos — não existe uma receita única de 'curry' seguida por todo o subcontinente indiano, ao contrário da percepção comum em países ocidentais.",
+    "reading_passage": "Diferente do que muitos pensam, 'curry' não é um único tempero específico, mas um termo usado, principalmente fora da Índia, para descrever uma ampla variedade de misturas de especiarias usadas na culinária indiana e do sul asiático. Cada região da Índia tem suas próprias combinações tradicionais, variando de acordo com ingredientes locais e pratos específicos — não existe uma receita única de 'curry' seguida por todo o subcontinente indiano, ao contrário da percepção comum em países ocidentais.",
+    "hints": [
+      "Releia 'O que é curry, afinal?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "As combinações de especiarias chamadas de curry são as mesmas em toda a Índia?",
+    "options": [
+      "Não, cada região tem suas próprias combinações tradicionais",
+      "Sim, existe uma única receita seguida em todo o país",
+      "Sim, mas apenas nas grandes cidades indianas",
+      "Não, mas variam apenas entre dois tipos possíveis"
+    ],
+    "correct_answer": "Não, cada região tem suas próprias combinações tradicionais",
+    "explanation": "Diferente do que muitos pensam, 'curry' não é um único tempero específico, mas um termo usado, principalmente fora da Índia, para descrever uma ampla variedade de misturas de especiarias usadas na culinária indiana e do sul asiático. Cada região da Índia tem suas próprias combinações tradicionais, variando de acordo com ingredientes locais e pratos específicos — não existe uma receita única de 'curry' seguida por todo o subcontinente indiano, ao contrário da percepção comum em países ocidentais.",
+    "reading_passage": "Diferente do que muitos pensam, 'curry' não é um único tempero específico, mas um termo usado, principalmente fora da Índia, para descrever uma ampla variedade de misturas de especiarias usadas na culinária indiana e do sul asiático. Cada região da Índia tem suas próprias combinações tradicionais, variando de acordo com ingredientes locais e pratos específicos — não existe uma receita única de 'curry' seguida por todo o subcontinente indiano, ao contrário da percepção comum em países ocidentais.",
+    "hints": [
+      "Releia 'O que é curry, afinal?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Onde o termo 'curry' é mais usado como uma categoria única, segundo o texto?",
+    "options": [
+      "Principalmente fora da Índia",
+      "Exclusivamente dentro da Índia",
+      "Apenas em restaurantes chineses",
+      "Somente em livros de culinária europeus"
+    ],
+    "correct_answer": "Principalmente fora da Índia",
+    "explanation": "Diferente do que muitos pensam, 'curry' não é um único tempero específico, mas um termo usado, principalmente fora da Índia, para descrever uma ampla variedade de misturas de especiarias usadas na culinária indiana e do sul asiático. Cada região da Índia tem suas próprias combinações tradicionais, variando de acordo com ingredientes locais e pratos específicos — não existe uma receita única de 'curry' seguida por todo o subcontinente indiano, ao contrário da percepção comum em países ocidentais.",
+    "reading_passage": "Diferente do que muitos pensam, 'curry' não é um único tempero específico, mas um termo usado, principalmente fora da Índia, para descrever uma ampla variedade de misturas de especiarias usadas na culinária indiana e do sul asiático. Cada região da Índia tem suas próprias combinações tradicionais, variando de acordo com ingredientes locais e pratos específicos — não existe uma receita única de 'curry' seguida por todo o subcontinente indiano, ao contrário da percepção comum em países ocidentais.",
+    "hints": [
+      "Releia 'O que é curry, afinal?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Em qual país está a origem do consumo de chá, segundo o texto?",
+    "options": [
+      "China",
+      "Índia",
+      "Inglaterra",
+      "Japão"
+    ],
+    "correct_answer": "China",
+    "explanation": "O consumo de chá tem origem na China, onde é cultivado e consumido há milhares de anos, inicialmente por suas propriedades medicinais antes de se tornar uma bebida social e cotidiana. A expansão do chá para outras partes do mundo, especialmente para a Europa, aconteceu principalmente através de rotas comerciais estabelecidas entre a Ásia e o Ocidente, ganhando popularidade crescente a partir do século XVII, especialmente na Inglaterra, país que viria a desenvolver sua própria cultura em torno do hábito de tomar chá.",
+    "reading_passage": "O consumo de chá tem origem na China, onde é cultivado e consumido há milhares de anos, inicialmente por suas propriedades medicinais antes de se tornar uma bebida social e cotidiana. A expansão do chá para outras partes do mundo, especialmente para a Europa, aconteceu principalmente através de rotas comerciais estabelecidas entre a Ásia e o Ocidente, ganhando popularidade crescente a partir do século XVII, especialmente na Inglaterra, país que viria a desenvolver sua própria cultura em torno do hábito de tomar chá.",
+    "hints": [
+      "Releia 'Como o chá se espalhou pelo mundo?' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Qual era o uso inicial do chá antes de se tornar uma bebida social?",
+    "options": [
+      "Propriedades medicinais",
+      "Uso religioso exclusivo",
+      "Moeda de troca comercial",
+      "Perfume e cosmético"
+    ],
+    "correct_answer": "Propriedades medicinais",
+    "explanation": "O consumo de chá tem origem na China, onde é cultivado e consumido há milhares de anos, inicialmente por suas propriedades medicinais antes de se tornar uma bebida social e cotidiana. A expansão do chá para outras partes do mundo, especialmente para a Europa, aconteceu principalmente através de rotas comerciais estabelecidas entre a Ásia e o Ocidente, ganhando popularidade crescente a partir do século XVII, especialmente na Inglaterra, país que viria a desenvolver sua própria cultura em torno do hábito de tomar chá.",
+    "reading_passage": "O consumo de chá tem origem na China, onde é cultivado e consumido há milhares de anos, inicialmente por suas propriedades medicinais antes de se tornar uma bebida social e cotidiana. A expansão do chá para outras partes do mundo, especialmente para a Europa, aconteceu principalmente através de rotas comerciais estabelecidas entre a Ásia e o Ocidente, ganhando popularidade crescente a partir do século XVII, especialmente na Inglaterra, país que viria a desenvolver sua própria cultura em torno do hábito de tomar chá.",
+    "hints": [
+      "Releia 'Como o chá se espalhou pelo mundo?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "A partir de que século o chá ganhou popularidade crescente na Inglaterra, segundo o texto?",
+    "options": [
+      "Século XVII",
+      "Século XI",
+      "Século XX",
+      "Século XIV"
+    ],
+    "correct_answer": "Século XVII",
+    "explanation": "O consumo de chá tem origem na China, onde é cultivado e consumido há milhares de anos, inicialmente por suas propriedades medicinais antes de se tornar uma bebida social e cotidiana. A expansão do chá para outras partes do mundo, especialmente para a Europa, aconteceu principalmente através de rotas comerciais estabelecidas entre a Ásia e o Ocidente, ganhando popularidade crescente a partir do século XVII, especialmente na Inglaterra, país que viria a desenvolver sua própria cultura em torno do hábito de tomar chá.",
+    "reading_passage": "O consumo de chá tem origem na China, onde é cultivado e consumido há milhares de anos, inicialmente por suas propriedades medicinais antes de se tornar uma bebida social e cotidiana. A expansão do chá para outras partes do mundo, especialmente para a Europa, aconteceu principalmente através de rotas comerciais estabelecidas entre a Ásia e o Ocidente, ganhando popularidade crescente a partir do século XVII, especialmente na Inglaterra, país que viria a desenvolver sua própria cultura em torno do hábito de tomar chá.",
+    "hints": [
+      "Releia 'Como o chá se espalhou pelo mundo?' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Cite uma especiaria mencionada no texto como extremamente valiosa historicamente.",
+    "options": [
+      "Pimenta",
+      "Sal comum",
+      "Açúcar refinado",
+      "Arroz branco"
+    ],
+    "correct_answer": "Pimenta",
+    "explanation": "Durante séculos, especiarias como pimenta, canela, cravo e noz-moscada eram extremamente valiosas e disputadas no comércio internacional, movimentando rotas comerciais inteiras entre a Ásia e a Europa — período conhecido como a era das especiarias. A busca por rotas alternativas para acessar essas especiarias, evitando intermediários que encareciam o produto, foi inclusive um dos motivos que impulsionaram as Grandes Navegações europeias, incluindo viagens que levaram à chegada de europeus às Américas.",
+    "reading_passage": "Durante séculos, especiarias como pimenta, canela, cravo e noz-moscada eram extremamente valiosas e disputadas no comércio internacional, movimentando rotas comerciais inteiras entre a Ásia e a Europa — período conhecido como a era das especiarias. A busca por rotas alternativas para acessar essas especiarias, evitando intermediários que encareciam o produto, foi inclusive um dos motivos que impulsionaram as Grandes Navegações europeias, incluindo viagens que levaram à chegada de europeus às Américas.",
+    "hints": [
+      "Releia 'A Rota das Especiarias e seu impacto na gastronomia mundial' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que a busca por rotas alternativas de especiarias ajudou a impulsionar, segundo o texto?",
+    "options": [
+      "As Grandes Navegações europeias",
+      "A Revolução Industrial",
+      "A criação da União Europeia",
+      "A independência de colônias americanas"
+    ],
+    "correct_answer": "As Grandes Navegações europeias",
+    "explanation": "Durante séculos, especiarias como pimenta, canela, cravo e noz-moscada eram extremamente valiosas e disputadas no comércio internacional, movimentando rotas comerciais inteiras entre a Ásia e a Europa — período conhecido como a era das especiarias. A busca por rotas alternativas para acessar essas especiarias, evitando intermediários que encareciam o produto, foi inclusive um dos motivos que impulsionaram as Grandes Navegações europeias, incluindo viagens que levaram à chegada de europeus às Américas.",
+    "reading_passage": "Durante séculos, especiarias como pimenta, canela, cravo e noz-moscada eram extremamente valiosas e disputadas no comércio internacional, movimentando rotas comerciais inteiras entre a Ásia e a Europa — período conhecido como a era das especiarias. A busca por rotas alternativas para acessar essas especiarias, evitando intermediários que encareciam o produto, foi inclusive um dos motivos que impulsionaram as Grandes Navegações europeias, incluindo viagens que levaram à chegada de europeus às Américas.",
+    "hints": [
+      "Releia 'A Rota das Especiarias e seu impacto na gastronomia mundial' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "gastro_mundo",
+    "difficulty_level": 1,
+    "prompt": "Por que buscar rotas alternativas era importante, segundo o texto?",
+    "options": [
+      "Para evitar intermediários que encareciam o produto",
+      "Para eliminar totalmente o comércio de especiarias",
+      "Para proibir o uso de especiarias na Europa",
+      "Para criar um novo tipo de especiaria artificial"
+    ],
+    "correct_answer": "Para evitar intermediários que encareciam o produto",
+    "explanation": "Durante séculos, especiarias como pimenta, canela, cravo e noz-moscada eram extremamente valiosas e disputadas no comércio internacional, movimentando rotas comerciais inteiras entre a Ásia e a Europa — período conhecido como a era das especiarias. A busca por rotas alternativas para acessar essas especiarias, evitando intermediários que encareciam o produto, foi inclusive um dos motivos que impulsionaram as Grandes Navegações europeias, incluindo viagens que levaram à chegada de europeus às Américas.",
+    "reading_passage": "Durante séculos, especiarias como pimenta, canela, cravo e noz-moscada eram extremamente valiosas e disputadas no comércio internacional, movimentando rotas comerciais inteiras entre a Ásia e a Europa — período conhecido como a era das especiarias. A busca por rotas alternativas para acessar essas especiarias, evitando intermediários que encareciam o produto, foi inclusive um dos motivos que impulsionaram as Grandes Navegações europeias, incluindo viagens que levaram à chegada de europeus às Américas.",
+    "hints": [
+      "Releia 'A Rota das Especiarias e seu impacto na gastronomia mundial' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  }
+]

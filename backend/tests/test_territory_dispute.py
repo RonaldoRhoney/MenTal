@@ -155,9 +155,19 @@ def test_detentor_photo_url_present_only_when_approved_and_never_for_self(client
 
     client.put("/profile", json={"photo_path": f"{user_b}/photo.jpg"}, headers=headers_b)
 
-    _answer_until_correct(client, headers_b)
-    progress_a = client.get("/progress", headers=headers_a).json()
-    palavras_a = next(t for t in progress_a["territories"] if t["territory_id"] == "palavras")
+    # Uma única resposta correta não garante ultrapassar o XP de user_a
+    # nesse território (mesmo achado já documentado em
+    # test_friend_with_more_xp_becomes_detentor_and_dethrones_previous)
+    # — repete até user_b assumir o território.
+    dethroned = False
+    for _ in range(10):
+        _answer_until_correct(client, headers_b)
+        progress_a = client.get("/progress", headers=headers_a).json()
+        palavras_a = next(t for t in progress_a["territories"] if t["territory_id"] == "palavras")
+        if palavras_a["is_detentor"] is False:
+            dethroned = True
+            break
+    assert dethroned, "user_b deveria ter assumido o território de user_a em algum momento"
     assert palavras_a["detentor_photo_url"] is None, "pendente de moderação nunca aparece pra outros"
 
     with SessionLocal() as db:

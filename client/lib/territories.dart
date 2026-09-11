@@ -34,6 +34,13 @@ const Set<String> kNeverTimedTerritoryIds = {
   'transportes_terrestres',
   'economia_transito',
   'prevencao_seguranca',
+  // Mundo da Gastronomia (07/09/2026): mesmo formato "cápsula de texto
+  // + perguntas", mesmo motivo.
+  'gastro_mundo',
+  'gastro_brasil',
+  'gastro_norte_nordeste',
+  'gastro_centrooeste_sudeste',
+  'gastro_sul_fusao',
 };
 
 /// Ids dos 4 territórios do V1 — compartilhado entre Home, Progress e
@@ -108,6 +115,12 @@ const List<String> kTerritoryIds = [
   'transportes_terrestres',
   'economia_transito',
   'prevencao_seguranca',
+  // Mundo_da_Gastronomia/README.md — Mundo da Gastronomia.
+  'gastro_mundo',
+  'gastro_brasil',
+  'gastro_norte_nordeste',
+  'gastro_centrooeste_sudeste',
+  'gastro_sul_fusao',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -224,6 +237,16 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryEconomiaTransito;
     case 'prevencao_seguranca':
       return l10n.territoryPrevencaoSeguranca;
+    case 'gastro_mundo':
+      return l10n.territoryGastroMundo;
+    case 'gastro_brasil':
+      return l10n.territoryGastroBrasil;
+    case 'gastro_norte_nordeste':
+      return l10n.territoryGastroNorteNordeste;
+    case 'gastro_centrooeste_sudeste':
+      return l10n.territoryGastroCentrooesteSudeste;
+    case 'gastro_sul_fusao':
+      return l10n.territoryGastroSulFusao;
     default:
       return territoryId;
   }
