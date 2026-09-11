@@ -78,12 +78,11 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   // FEEDBACK_POS_NIVEL.md (aprovado) — coleta pura de opinião pós-nível,
   // nunca afeta hint_penalty_factor nem qualquer mecânica adaptativa.
   // _feedbackHandled evita disparo duplo (ex.: dois taps rápidos nos
-  // blocos) já navegando/enviando de novo.
+  // blocos) já navegando/enviando de novo. Campo de comentário livre
+  // removido (07/09/2026, pedido de Rhoney) — só ação + dificuldade.
   String? _feedbackAction;
   String? _feedbackDifficulty;
   bool _feedbackHandled = false;
-  final TextEditingController _feedbackCommentController =
-      TextEditingController();
 
   // V2 item 15 — Palavras Relâmpago. Contagem regressiva controlada
   // aqui (não no backend) — o backend só recebe o tempo de resposta em
@@ -162,7 +161,6 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     _remainingMsTick.dispose();
     _celebration.dispose();
     _coinsRise.dispose();
-    _feedbackCommentController.dispose();
     _audioPlayer.dispose();
     super.dispose();
   }
@@ -234,7 +232,6 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _feedbackAction = null;
       _feedbackDifficulty = null;
       _feedbackHandled = false;
-      _feedbackCommentController.clear();
       _cluesRevealedCount = 0;
       _showingQuestion = false;
       _audioPlaying = false;
@@ -586,7 +583,6 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _feedbackAction = null;
       _feedbackDifficulty = null;
       _feedbackHandled = false;
-      _feedbackCommentController.clear();
       _cluesRevealedCount = (clues != null && clues.isNotEmpty) ? 1 : 0;
       _showingQuestion = false;
       _audioPlaying = false;
@@ -612,10 +608,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
 
   /// Dispara assim que os dois blocos obrigatórios (ação + dificuldade)
   /// estiverem escolhidos — 1 toque por bloco, sem passo extra de
-  /// "confirmar" (FEEDBACK_POS_NIVEL.md §3, "sem fricção"). O comentário
-  /// livre é opcional e nunca bloqueia esse disparo. Envio ao backend é
-  /// melhor esforço: uma falha de rede aqui não deve travar a navegação
-  /// do jogador (é coleta de opinião, não uma ação crítica do core loop).
+  /// "confirmar" (FEEDBACK_POS_NIVEL.md §3, "sem fricção"). Campo de
+  /// comentário livre removido (07/09/2026, pedido de Rhoney) — API
+  /// mantém o parâmetro opcional (nunca quebra o contrato), só o client
+  /// deixou de coletar. Envio ao backend é melhor esforço: uma falha de
+  /// rede aqui não deve travar a navegação do jogador (é coleta de
+  /// opinião, não uma ação crítica do core loop).
   void _maybeSubmitLevelFeedback() {
     if (_feedbackHandled ||
         _feedbackAction == null ||
@@ -625,7 +623,6 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final challengeId = _challenge?['challenge_id'] as String?;
     final action = _feedbackAction!;
     final difficulty = _feedbackDifficulty!;
-    final comment = _feedbackCommentController.text.trim();
     if (challengeId != null) {
       unawaited(
         widget.client
@@ -633,7 +630,6 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               challengeId: challengeId,
               action: action,
               difficultyRating: difficulty,
-              comment: comment.isEmpty ? null : comment,
             )
             .catchError((_) => <String, dynamic>{}),
       );
@@ -1537,13 +1533,6 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             difficultyChip(
                 'muito_dificil', l10n.levelFeedbackDifficultyMuitoDificil),
           ],
-        ),
-        const SizedBox(height: 12),
-        TextField(
-          controller: _feedbackCommentController,
-          decoration: InputDecoration(hintText: l10n.levelFeedbackCommentHint),
-          minLines: 1,
-          maxLines: 3,
         ),
       ],
     );

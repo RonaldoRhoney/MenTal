@@ -916,12 +916,6 @@ abstract class AppLocalizations {
   /// **'Muito difícil'**
   String get levelFeedbackDifficultyMuitoDificil;
 
-  /// FEEDBACK_POS_NIVEL.md — optional free-text comment field hint
-  ///
-  /// In pt, this message translates to:
-  /// **'Comentário (opcional)'**
-  String get levelFeedbackCommentHint;
-
   /// Home app bar icon tooltip, opens Progress screen
   ///
   /// In pt, this message translates to:

@@ -1,6 +1,6 @@
 # MENTAL — BUG CRÍTICO: Desafio não avança após resposta
 
-**Status:** Prioridade máxima — bloqueia o uso normal do app, reportado por testadores no teste fechado.
+**Status:** ENCERRADO — causa raiz confirmada e corrigida (28/08/2026), validado de novo ao vivo em dispositivo real (07/09/2026).
 **Tipo:** Correção de bug, não é feature nova.
 
 ---
@@ -39,3 +39,15 @@ Antes de dar como resolvido, validar manualmente (não só testes automatizados)
 ## 5. Observação
 
 Por favor, ao identificar a causa raiz, me explique brevemente o que causou o problema antes de aplicar a correção — preciso entender se foi uma regressão da mudança do Feedback Pós-Nível ou algo não relacionado, para eu avaliar se há outros pontos do app que merecem revisão pelo mesmo motivo.
+
+## 6. Causa raiz confirmada e correção aplicada (28/08/2026)
+
+**Não foi uma regressão do Feedback Pós-Nível** (hipótese 3 da seção 2) — a lógica de "só mostra o bloco de feedback quando `level_up` é verdadeiro" já estava correta. A causa real foi a hipótese 4 ("erro silencioso"):
+
+`_submitOption`/`_submitTimedOut`/`_requestHint`/`_submitAnswer` (client/lib/screens/challenge_screen.dart) tratavam qualquer erro da API de resposta escrevendo em `_error` — mas esse campo só é renderizado na tela quando `_challenge == null` (o estado de erro FATAL, usado quando falha ao CARREGAR um desafio novo). No meio de uma resposta, `_challenge` já está preenchido, então a mensagem de erro nunca aparecia: a tela ficava parada, sem nenhum aviso visível, indistinguível de "travou".
+
+Ficou mais fácil de reproduzir depois de uma correção de segurança que passou a checar o limite diário também em `POST /answer` (antes só `GET /next` checava) — um erro que antes praticamente não acontecia nesse ponto do fluxo passou a acontecer de verdade.
+
+**Correção**: `_showAnswerApiError(ApiException e)` — mostra a mensagem via `SnackBar` (transiente, sempre visível independente do estado de `_challenge`), aplicado nos 4 pontos de submissão. Usuário pode tentar de novo imediatamente, nunca fica preso.
+
+**Validado ao vivo em dispositivo real (07/09/2026)**: respondido um desafio corretamente (Mundo da Linguagem, subiu de nível), fluxo completo do Feedback Pós-Nível ("Seguir em frente" + avaliação de dificuldade) testado, avançou corretamente pro próximo desafio sem travar.

@@ -756,7 +756,7 @@ void main() {
       expect(client.feedbackSubmissions.single['difficulty_rating'], 'dificil');
     });
 
-    testWidgets('comentário opcional em branco não bloqueia o envio', (tester) async {
+    testWidgets('sem campo de comentário livre, o envio manda comment=null (campo removido 07/09/2026)', (tester) async {
       final client = await pumpAndAnswer(tester);
 
       await tester.tap(find.text('Seguir em frente'));

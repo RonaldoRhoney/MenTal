@@ -625,10 +625,6 @@
   "@levelFeedbackDifficultyMuitoDificil": {
     "description": "FEEDBACK_POS_NIVEL.md — difficulty rating option"
   },
-  "levelFeedbackCommentHint": "Comentário (opcional)",
-  "@levelFeedbackCommentHint": {
-    "description": "FEEDBACK_POS_NIVEL.md — optional free-text comment field hint"
-  },
   "progressTooltip": "Progresso",
   "@progressTooltip": {
     "description": "Home app bar icon tooltip, opens Progress screen"

@@ -474,9 +474,6 @@ class AppLocalizationsPt extends AppLocalizations {
   String get levelFeedbackDifficultyMuitoDificil => 'Muito difícil';
 
   @override
-  String get levelFeedbackCommentHint => 'Comentário (opcional)';
-
-  @override
   String get progressTooltip => 'Progresso';
 
   @override
