@@ -468,6 +468,15 @@ class _EmptyRow extends StatelessWidget {
       );
 }
 
+// NOME_REAL_E_FOTO_EM_TODO_LUGAR_V1.md (11/09/2026): nome real tem
+// prioridade sobre o apelido em qualquer exibição pra terceiros,
+// inclusive no Painel Admin — reaproveitado por toda linha desta tela
+// que exiba identificação de usuário.
+String _displayName(Map<String, dynamic> item) {
+  final realName = item['real_name'] as String?;
+  return realName != null && realName.isNotEmpty ? realName : item['nickname'] as String;
+}
+
 class _TopProgressorTile extends StatelessWidget {
   const _TopProgressorTile({required this.progressor});
 
@@ -475,8 +484,7 @@ class _TopProgressorTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final realName = progressor['real_name'] as String?;
-    final displayName = realName != null && realName.isNotEmpty ? realName : progressor['nickname'] as String;
+    final displayName = _displayName(progressor);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Row(
@@ -557,7 +565,7 @@ class _PendingPhotoRow extends StatelessWidget {
           ProfilePhotoCircle(photoUrl: item['photo_url'] as String?, size: 40),
           const SizedBox(width: 10),
           Expanded(
-            child: Text(item['nickname'] as String, style: TextStyle(color: AppColors.bone)),
+            child: Text(_displayName(item), style: TextStyle(color: AppColors.bone)),
           ),
           if (moderating)
             const Padding(

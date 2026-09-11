@@ -40,7 +40,11 @@ def test_admin_lists_only_pending_photos_with_a_photo_set(client):
     client.post("/age-gate", json={"age_confirmed": True}, headers=auth_header(user_without_photo))
     _promote_to_admin(admin)
 
-    client.put("/profile", json={"photo_path": f"{user_with_photo}/photo.jpg"}, headers=auth_header(user_with_photo))
+    client.put(
+        "/profile",
+        json={"photo_path": f"{user_with_photo}/photo.jpg", "real_name": "João Silva"},
+        headers=auth_header(user_with_photo),
+    )
 
     resp = client.get("/admin/profile-photos", headers=admin_headers)
     assert resp.status_code == 200
@@ -48,6 +52,12 @@ def test_admin_lists_only_pending_photos_with_a_photo_set(client):
     pending_user_ids = {item["user_id"] for item in items}
     assert user_with_photo in pending_user_ids
     assert user_without_photo not in pending_user_ids
+
+    # NOME_REAL_E_FOTO_EM_TODO_LUGAR_V1.md (11/09/2026): o Painel Admin
+    # precisa do nome real, não só do apelido, pra manter o mesmo padrão
+    # já aplicado no restante do app.
+    item = next(i for i in items if i["user_id"] == user_with_photo)
+    assert item["real_name"] == "João Silva"
 
 
 def test_admin_approves_a_pending_photo_and_it_becomes_visible_to_others(client, monkeypatch):

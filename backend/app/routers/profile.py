@@ -148,7 +148,7 @@ def list_pending_profile_photos(user_id: str = Depends(get_current_user_id), db:
         .all()
     )
     items = [
-        schemas.AdminPendingPhotoItem(user_id=row.user_id, nickname=row.nickname, photo_url=services.own_photo_url(row))
+        schemas.AdminPendingPhotoItem(user_id=row.user_id, nickname=row.nickname, real_name=row.real_name, photo_url=services.own_photo_url(row))
         for row in rows
         if row.photo_url is not None
     ]

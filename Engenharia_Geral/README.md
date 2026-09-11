@@ -19,3 +19,8 @@ repositório.
   de toques na Home (grid de atalhos, barra inferior, espaço próprio
   pro Feed). **Implementado** (06/09/2026, em produção). Movido pra
   esta pasta em 11/09/2026 (antes solto na raiz do repo).
+- `NOME_REAL_E_FOTO_EM_TODO_LUGAR_V1.md` — estende a preferência por
+  nome real (em vez de apelido) a todo o app: notificações push
+  (Batalha, Torcida, Movimento, território), Painel Admin (moderação de
+  foto) e política de privacidade. **Implementado** (11/09/2026, ver
+  seção 7 do próprio documento).

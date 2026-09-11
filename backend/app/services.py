@@ -992,7 +992,7 @@ def create_battle(
         territory_label = notification_copy.TERRITORY_NAMES.get(territory_id, territory_id)
         title = notification_copy.BATTLE_CHALLENGE_RECEIVED_TITLE
         body = notification_copy.BATTLE_CHALLENGE_RECEIVED_BODY_TEMPLATE.format(
-            nickname=challenger_profile.nickname if challenger_profile else "Um amigo",
+            nickname=(challenger_profile.real_name or challenger_profile.nickname) if challenger_profile else "Um amigo",
             territory=territory_label,
         )
         push.send_push_notification(db, opponent_profile, title, body)
@@ -1119,7 +1119,7 @@ def notify_territory_dethroned(db: Session, new_detentor_profile: "models.Profil
         db,
         previous_detentor_profile,
         notification_copy.TERRITORY_DETENTOR_LOST_TITLE,
-        notification_copy.TERRITORY_DETENTOR_LOST_BODY_TEMPLATE.format(nickname=new_detentor_profile.nickname, territory=territory_label),
+        notification_copy.TERRITORY_DETENTOR_LOST_BODY_TEMPLATE.format(nickname=new_detentor_profile.real_name or new_detentor_profile.nickname, territory=territory_label),
     )
 
 
@@ -1127,7 +1127,7 @@ def _notify_battle_result(db: Session, challenger_profile: "models.Profile", opp
     for me, other in ((challenger_profile, opponent_profile), (opponent_profile, challenger_profile)):
         if not (me and me.notif_social_enabled and me.push_token):
             continue
-        other_nickname = other.nickname if other else "seu amigo"
+        other_nickname = (other.real_name or other.nickname) if other else "seu amigo"
         if winner_user_id is None:
             title, body = notification_copy.BATTLE_RESULT_TIE_TITLE, notification_copy.BATTLE_RESULT_TIE_BODY_TEMPLATE.format(nickname=other_nickname)
         elif winner_user_id == me.user_id:
@@ -1310,7 +1310,7 @@ def send_torcida(db: Session, from_user_id: str, to_user_id: str, reaction_type:
         from_profile = db.get(models.Profile, from_user_id)
         emoji = notification_copy.TORCIDA_EMOJI_BY_TYPE.get(reaction_type, "🎉")
         body = notification_copy.TORCIDA_RECEIVED_BODY_TEMPLATE.format(
-            nickname=from_profile.nickname if from_profile else "Alguém",
+            nickname=(from_profile.real_name or from_profile.nickname) if from_profile else "Alguém",
             emoji=emoji,
         )
         push.send_push_notification(db, target_profile, notification_copy.TORCIDA_RECEIVED_TITLE, body)
@@ -1356,7 +1356,7 @@ def send_movement_invite(db: Session, from_user_id: str, to_user_id: str) -> int
     if target_profile.notif_social_enabled and target_profile.push_token:
         from_profile = db.get(models.Profile, from_user_id)
         body = notification_copy.MOVEMENT_INVITE_RECEIVED_BODY_TEMPLATE.format(
-            nickname=from_profile.nickname if from_profile else "Alguém",
+            nickname=(from_profile.real_name or from_profile.nickname) if from_profile else "Alguém",
         )
         push.send_push_notification(
             db,

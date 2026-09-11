@@ -94,6 +94,16 @@ void main() {
     expect(find.text('joao123'), findsOneWidget);
   });
 
+  testWidgets('mostra nome real em vez do apelido quando disponível (NOME_REAL_E_FOTO_EM_TODO_LUGAR_V1.md)', (tester) async {
+    final client = _FakeApiClient(pendingPhotos: [
+      {'user_id': 'user-1', 'nickname': 'joao123', 'real_name': 'João Silva', 'photo_url': null},
+    ]);
+    await _pump(tester, client);
+
+    expect(find.text('João Silva'), findsOneWidget);
+    expect(find.text('joao123'), findsNothing);
+  });
+
   testWidgets('sem fotos pendentes mostra estado vazio', (tester) async {
     final client = _FakeApiClient(pendingPhotos: []);
     await _pump(tester, client);

@@ -891,6 +891,11 @@ class ModerateProfilePhotoRequest(BaseModel):
 class AdminPendingPhotoItem(BaseModel):
     user_id: str
     nickname: str
+    # NOME_REAL_E_FOTO_EM_TODO_LUGAR_V1.md (11/09/2026): nome real tem
+    # prioridade sobre o apelido em qualquer exibição pra terceiros,
+    # incluindo o Painel Admin — real_name pode ser None (usuário ainda
+    # não preencheu), cabendo ao consumidor cair pro nickname.
+    real_name: str | None = None
     # URL assinada de curta duração (services.own_photo_url) — o admin
     # precisa conseguir VER a foto pra moderar, mesmo o bucket sendo
     # privado.
