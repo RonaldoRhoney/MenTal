@@ -138,7 +138,7 @@ def update_profile(
     return _profile_out(profile)
 
 
-@router.get("/admin/profile-photos", response_model=list[schemas.AdminPendingPhotoItem])
+@router.get("/admin/profile-photos", response_model=schemas.AdminPendingPhotoListResponse)
 def list_pending_profile_photos(user_id: str = Depends(get_current_user_id), db: Session = Depends(get_db)):
     services.require_admin(db, user_id)
 
@@ -147,11 +147,12 @@ def list_pending_profile_photos(user_id: str = Depends(get_current_user_id), db:
         .scalars()
         .all()
     )
-    return [
+    items = [
         schemas.AdminPendingPhotoItem(user_id=row.user_id, nickname=row.nickname, photo_url=services.own_photo_url(row))
         for row in rows
         if row.photo_url is not None
     ]
+    return schemas.AdminPendingPhotoListResponse(items=items)
 
 
 @router.post("/admin/profile-photos/{target_user_id}/moderate")

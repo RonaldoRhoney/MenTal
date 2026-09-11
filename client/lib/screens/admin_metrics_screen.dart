@@ -31,11 +31,21 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
   // mesmo _error das métricas.
   List<Map<String, dynamic>>? _contentSuggestions;
 
+  // Achado real (07/09/2026, pedido de Rhoney: "nome e foto devem ser
+  // visíveis"): fotos de outros usuários ficavam presas em "pending"
+  // pra sempre porque não havia UI de moderação em lugar nenhum — os
+  // endpoints já existiam no backend desde 28/08/2026. _moderatingUserIds
+  // desabilita os botões só da linha em andamento, nunca a seção
+  // inteira, enquanto o pedido de aprovar/rejeitar está em voo.
+  List<Map<String, dynamic>>? _pendingPhotos;
+  final Set<String> _moderatingUserIds = {};
+
   @override
   void initState() {
     super.initState();
     _load();
     _loadContentSuggestions();
+    _loadPendingPhotos();
   }
 
   Future<void> _load() async {
@@ -64,6 +74,35 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
     }
   }
 
+  Future<void> _loadPendingPhotos() async {
+    try {
+      final result = await widget.client.getAdminPendingProfilePhotos();
+      final items = (result['items'] as List).cast<Map<String, dynamic>>();
+      if (mounted) setState(() => _pendingPhotos = items);
+    } on ApiException catch (_) {
+      // Reforço secundário do painel — falha aqui não impede o resto
+      // das métricas de aparecer normalmente.
+    }
+  }
+
+  Future<void> _moderatePhoto(String userId, bool approved) async {
+    setState(() => _moderatingUserIds.add(userId));
+    try {
+      await widget.client.moderateProfilePhoto(userId: userId, approved: approved);
+      if (mounted) {
+        setState(() {
+          _pendingPhotos = _pendingPhotos?.where((p) => p['user_id'] != userId).toList();
+        });
+      }
+    } on ApiException catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+      }
+    } finally {
+      if (mounted) setState(() => _moderatingUserIds.remove(userId));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +115,7 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
       ),
       body: SafeArea(
         child: RefreshIndicator(
-          onRefresh: () => Future.wait([_load(), _loadContentSuggestions()]),
+          onRefresh: () => Future.wait([_load(), _loadContentSuggestions(), _loadPendingPhotos()]),
           color: AppColors.gold,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
@@ -183,6 +222,37 @@ class _AdminMetricsScreenState extends State<AdminMetricsScreen> {
                                 _ContentSuggestionRow(item: s),
                               if (_contentSuggestions != null && _contentSuggestions!.isEmpty) const _EmptyRow(),
                               if (_contentSuggestions == null)
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 6),
+                                  child: SizedBox(
+                                    height: 16,
+                                    width: 16,
+                                    child: CircularProgressIndicator(strokeWidth: 2),
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                        _SectionTitle('Fotos de perfil pendentes de moderação', icon: Icons.image_search_rounded),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Só depois de aprovada a foto passa a aparecer pra outros usuários (Ranking, Amigos, Feed).',
+                          style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+                        ),
+                        const SizedBox(height: 10),
+                        _Card(
+                          child: Column(
+                            children: [
+                              for (final p in (_pendingPhotos ?? const []))
+                                _PendingPhotoRow(
+                                  item: p,
+                                  moderating: _moderatingUserIds.contains(p['user_id']),
+                                  onApprove: () => _moderatePhoto(p['user_id'] as String, true),
+                                  onReject: () => _moderatePhoto(p['user_id'] as String, false),
+                                ),
+                              if (_pendingPhotos != null && _pendingPhotos!.isEmpty) const _EmptyRow(),
+                              if (_pendingPhotos == null)
                                 const Padding(
                                   padding: EdgeInsets.symmetric(vertical: 6),
                                   child: SizedBox(
@@ -455,6 +525,57 @@ class _ContentSuggestionRow extends StatelessWidget {
           Expanded(
             child: Text('"${item['query_text']}"', style: TextStyle(color: AppColors.bone)),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Moderação de foto de perfil (07/09/2026, pedido de Rhoney: "nome e
+/// foto devem ser visíveis"). photo_url aqui vem de services.
+/// own_photo_url (não public_photo_url) — o admin precisa VER a foto
+/// pendente pra decidir, mesmo antes de aprovada.
+class _PendingPhotoRow extends StatelessWidget {
+  const _PendingPhotoRow({
+    required this.item,
+    required this.moderating,
+    required this.onApprove,
+    required this.onReject,
+  });
+
+  final Map<String, dynamic> item;
+  final bool moderating;
+  final VoidCallback onApprove;
+  final VoidCallback onReject;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6),
+      child: Row(
+        children: [
+          ProfilePhotoCircle(photoUrl: item['photo_url'] as String?, size: 40),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(item['nickname'] as String, style: TextStyle(color: AppColors.bone)),
+          ),
+          if (moderating)
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8),
+              child: SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2)),
+            )
+          else ...[
+            IconButton(
+              tooltip: 'Rejeitar',
+              icon: Icon(Icons.close_rounded, color: AppColors.error),
+              onPressed: onReject,
+            ),
+            IconButton(
+              tooltip: 'Aprovar',
+              icon: Icon(Icons.check_rounded, color: AppColors.victory),
+              onPressed: onApprove,
+            ),
+          ],
         ],
       ),
     );

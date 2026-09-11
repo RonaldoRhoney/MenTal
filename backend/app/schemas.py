@@ -897,6 +897,10 @@ class AdminPendingPhotoItem(BaseModel):
     photo_url: str | None = None
 
 
+class AdminPendingPhotoListResponse(BaseModel):
+    items: list[AdminPendingPhotoItem]
+
+
 class ReportUserRequest(BaseModel):
     reported_user_id: str
     reason: str = Field(max_length=500)

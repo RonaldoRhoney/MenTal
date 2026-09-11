@@ -593,6 +593,24 @@ class ApiClient {
     return _get(_uri('/admin/content-suggestions'), headers: _headers);
   }
 
+  // Achado real (07/09/2026, pedido de Rhoney: "nome e foto devem ser
+  // visíveis"): o backend já tinha os endpoints de moderação de foto
+  // (fail-closed, services.public_photo_url só mostra a foto de outra
+  // pessoa depois de aprovada) desde 28/08/2026, mas nenhuma tela do
+  // client os usava — fotos enviadas ficavam presas em "pending" pra
+  // sempre, sem ninguém conseguir aprovar.
+  Future<Map<String, dynamic>> getAdminPendingProfilePhotos() async {
+    return _get(_uri('/admin/profile-photos'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> moderateProfilePhoto({required String userId, required bool approved}) async {
+    return _post(
+      _uri('/admin/profile-photos/$userId/moderate'),
+      headers: _headers,
+      body: jsonEncode({'approved': approved}),
+    );
+  }
+
   // Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5, LGPD.
   Future<Map<String, dynamic>> deleteAccount() async {
     return _delete(_uri('/profile'), headers: _headers);
