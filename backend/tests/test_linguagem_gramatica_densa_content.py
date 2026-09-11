@@ -3,8 +3,9 @@ Mundo_da_Linguagem/README.md — 30 desafios de regência, crase,
 concordância, pares confusos, pontuação e ortografia, carregados de
 content/linguagem_gramatica_densa.json (app/seed.py) no território
 "palavras" já existente. Cobre o que é próprio desta leva — volume e a
-trava de difficulty_level=1 (ver comentário em app/seed.py) — não repete
-o critério geral de volume já coberto por test_content_volume.py.
+redistribuição de difficulty_level 1/2/3 (BUG_LINGUAGEM_NAO_APARECE, ver
+comentário em app/seed.py) — não repete o critério geral de volume já
+coberto por test_content_volume.py.
 """
 
 import uuid
@@ -23,14 +24,12 @@ def test_thirty_new_dense_grammar_challenges_are_loaded():
     assert len(items) == 30
     for item in items:
         assert item["territory_id"] == "palavras"
-        # Achado real ao integrar (06/09/2026, ver comentário em
-        # app/seed.py): este lote precisa ficar em difficulty_level=1
-        # de propósito — as respostas são frases completas específicas
-        # de cada pergunta, incompatíveis com a síntese de alternativas
-        # do Palavras Relâmpago (que reaproveita correct_answer de
-        # QUALQUER outro desafio do mesmo nível, assumindo respostas
-        # curtas e intercambiáveis). Nível 1 nunca entra no Relâmpago.
-        assert item["difficulty_level"] == 1
+        # BUG_LINGUAGEM_NAO_APARECE (ver app/seed.py): options sempre
+        # curadas (nunca None) neste lote, então não há risco de síntese
+        # de alternativas do Palavras Relâmpago em nenhum nível — o lote
+        # foi redistribuído entre 1/2/3, igual a qualquer outro conteúdo
+        # de "palavras", pra não ficar preso a jogadores iniciantes.
+        assert item["difficulty_level"] in {1, 2, 3}
         assert len(item["options"]) == 4
         assert item["correct_answer"] in item["options"]
 
@@ -41,25 +40,32 @@ def test_thirty_new_dense_grammar_challenges_are_loaded():
         assert item["prompt"] in loaded_prompts
 
 
-def test_relampago_never_serves_the_dense_content_since_it_targets_level_2_and_3(client):
-    """Regressão do achado real: o lote novo é 100% difficulty_level=1,
-    e o Palavras Relâmpago tem piso em nível 2 (PALAVRAS_RELAMPAGO_
-    MIN_DIFFICULTY_LEVEL) — nunca deveria aparecer no modo relâmpago."""
+def test_relampago_serves_level_2_and_3_dense_grammar_items_with_their_own_curated_options(client):
+    """BUG_LINGUAGEM_NAO_APARECE: como este lote sempre teve options
+    curadas (nunca None), o modo Relâmpago nunca sintetiza nada pra ele
+    — só reaproveita as 4 opções reais, embaralhadas (routers/
+    challenges.py: `else: options = shuffled_options(challenge.options)`).
+    Os itens de nível 2/3 do lote devem aparecer normalmente no Relâmpago."""
     import json
     from pathlib import Path
 
     content_path = Path(__file__).resolve().parent.parent / "content" / "linguagem_gramatica_densa.json"
-    dense_prompts = {item["prompt"] for item in json.loads(content_path.read_text(encoding="utf-8"))}
+    dense_by_prompt = {item["prompt"]: item for item in json.loads(content_path.read_text(encoding="utf-8"))}
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    for _ in range(15):
+    for _ in range(40):
         resp = client.get(
             "/challenges/next", params={"territory_id": "palavras", "mode": "relampago"}, headers=headers
         )
-        assert resp.json()["prompt"] not in dense_prompts
+        candidate = resp.json()
+        item = dense_by_prompt.get(candidate["prompt"])
+        if item is None:
+            continue
+        assert item["difficulty_level"] >= 2
+        assert set(candidate["options"]) == set(item["options"])
 
 
 def test_answering_a_dense_grammar_challenge_correctly_works_like_any_normal_challenge(client):

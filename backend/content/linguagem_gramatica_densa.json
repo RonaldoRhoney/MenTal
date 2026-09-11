@@ -19,7 +19,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Qual das frases está de acordo com a regência culta do verbo 'namorar' (transitivo direto, sem preposição)?",
     "options": [
       "Pedro namora com Ana.",
@@ -37,7 +37,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "De acordo com a regência culta, qual frase usa corretamente o verbo 'chegar'?",
     "options": [
       "Cheguei em casa cedo.",
@@ -73,7 +73,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O verbo 'visar', quando seguido de um verbo no infinitivo (ex.: 'visar resolver um problema'), normalmente é usado:",
     "options": [
       "sem preposição antes do infinitivo",
@@ -91,7 +91,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Em qual frase o uso da crase está correto?",
     "options": [
       "Fui à padaria comprar pão.",
@@ -127,7 +127,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "As locuções adverbiais femininas de modo, como 'à francesa', 'à vontade' e 'à moda antiga', seguem qual regra de crase?",
     "options": [
       "Nunca levam crase",
@@ -145,7 +145,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Em 'Ela mora a duas quadras daqui', por que não existe crase antes de 'duas'?",
     "options": [
       "Porque 'quadras' é uma palavra masculina",
@@ -181,7 +181,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Com a expressão 'a maioria dos alunos', qual concordância verbal a norma culta aceita?",
     "options": [
       "Só no singular, concordando com 'maioria'",
@@ -199,7 +199,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Em 'O pai e o filho ___ ao mercado', com o sujeito composto antes do verbo, a concordância correta é:",
     "options": [
       "saiu (singular)",
@@ -235,7 +235,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Em 'Faz dois anos que ele se mudou', por que o verbo 'fazer' fica no singular mesmo com 'dois anos' no plural?",
     "options": [
       "Porque 'fazer' indicando tempo decorrido é impessoal, sem sujeito",
@@ -253,7 +253,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Em 'Ele foi um dos alunos que mais ___ no torneio', qual preenchimento segue a concordância culta?",
     "options": [
       "se destacou",
@@ -289,7 +289,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Qual opção completa corretamente: 'Cheguei atrasado ___ perdi o ônibus.' (explicando o motivo)",
     "options": [
       "porque",
@@ -307,7 +307,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Qual opção completa corretamente: 'Ninguém sabe o ___ da sua decisão.' (substantivo, precedido do artigo 'o')",
     "options": [
       "porque",
@@ -343,7 +343,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Qual frase usa corretamente 'senão' (= 'do contrário') e 'se não' (condicional, separado)?",
     "options": [
       "Estude, se não vai reprovar.",
@@ -361,7 +361,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Qual frase usa corretamente 'há' (verbo haver, tempo passado) e 'a' (preposição, tempo futuro)?",
     "options": [
       "Ele viajou a dois dias e volta há uma semana.",
@@ -397,7 +397,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Em uma lista simples como 'Comprei pão, leite e queijo', por que não se usa vírgula antes do 'e' final?",
     "options": [
       "Porque 'e' já liga os dois últimos elementos, tornando a vírgula redundante",
@@ -415,7 +415,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Em 'Ele estudou bastante, e ela nem abriu o caderno', a vírgula antes de 'e' é aceita porque:",
     "options": [
       "A frase tem sujeitos diferentes em cada oração ('ele' e 'ela')",
@@ -451,7 +451,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Qual frase está correta quanto ao uso de 'mim' e 'eu'?",
     "options": [
       "Compraram um presente para mim levar.",
@@ -469,7 +469,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Qual frase segue a distinção entre 'onde' (permanência/lugar fixo) e 'aonde' (movimento, com verbos como 'ir')?",
     "options": [
       "Aonde você mora?",
@@ -505,7 +505,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "'Seção', 'sessão' e 'cessão' têm sentidos diferentes. Qual frase usa a palavra correta?",
     "options": [
       "Fomos à seção de cinema às 20h.",
@@ -523,7 +523,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Qual é a diferença correta entre 'conserto' e 'concerto'?",
     "options": [
       "'Conserto' é reparo; 'concerto' é espetáculo musical",

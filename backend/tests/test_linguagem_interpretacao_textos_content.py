@@ -29,7 +29,9 @@ def test_hundred_text_interpretation_challenges_are_loaded():
     assert len(items) == 100
     for item in items:
         assert item["territory_id"] == "textos"
-        assert item["difficulty_level"] == 1
+        # BUG_LINGUAGEM_NAO_APARECE (ver app/seed.py): redistribuído
+        # entre 1/2/3 pra não ficar preso a jogadores iniciantes.
+        assert item["difficulty_level"] in {1, 2, 3}
         assert len(item["options"]) == 4
         assert item["correct_answer"] in item["options"]
         # O texto-base entra dentro do próprio prompt (mesmo padrão já

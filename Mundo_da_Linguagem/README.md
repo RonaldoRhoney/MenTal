@@ -65,22 +65,30 @@ Carregado de `backend/content/linguagem_gramatica_densa.json` via
 `app/seed.py` (mesmo padrão de idiomas/valores — nunca duplicado
 inline). Validado com `scripts/validate_content.py` antes de integrar.
 
-**Achado real durante a integração**: todo o lote nasce em
-`difficulty_level=1`, de propósito — não por serem fáceis (a
-"densidade" pedida está no raciocínio exigido pela regra, não no nível
-declarado), mas porque o modo Palavras Relâmpago (território
-"palavras", nível ≥ 2) sintetiza alternativas erradas a partir do
-`correct_answer` de QUALQUER outro desafio do mesmo nível, assumindo
-respostas curtas e intercambiáveis (antônimos, anagramas). As respostas
-deste lote são frases completas específicas de cada pergunta —
-apareceriam sem nexo nenhum como alternativa de uma pergunta
-completamente diferente se entrassem em nível 2/3. Ver comentário
-detalhado em `app/seed.py` e `tests/test_linguagem_gramatica_densa_content.py`
-(regressão que garante que o lote nunca é servido no modo Relâmpago).
+**Achado real durante a integração (06/09/2026)**: o lote nasceu em
+`difficulty_level=1` fixo, por um receio infundado de que o modo
+Palavras Relâmpago sintetizasse alternativas erradas a partir do
+`correct_answer` de outro desafio do mesmo nível
+(`services.generate_relampago_options`) — mas essa síntese só é
+acionada quando `challenge.options is None` (`routers/challenges.py`),
+e este lote sempre teve as 4 opções curadas preenchidas. O pin nunca
+protegia nada.
+
+**BUG_LINGUAGEM_NAO_APARECE (corrigido em 06/09/2026)**: efeito
+colateral real do pin: `/challenges/next` só cai pro nível calculado
+adaptativamente pro jogador, e só usa "qualquer nível" como fallback
+quando não existe NENHUM desafio no nível calculado — como "palavras"
+já tinha conteúdo antigo nos níveis 2 e 3, qualquer jogador além do
+nível 1 nunca recebia este lote (nem os dois seguintes, mesmo pin).
+Corrigido redistribuindo (round-robin por índice) os 30 itens entre os
+níveis 1/2/3, igual a qualquer outro conteúdo de "palavras" — os itens
+de nível 2/3 aparecem normalmente no Relâmpago agora, sempre com suas
+próprias opções reais (nunca sintetizadas). Ver `scripts/
+fix_linguagem_difficulty_levels.py` (UPDATE em produção, idempotente).
 
 Testes: `tests/test_linguagem_gramatica_densa_content.py` (volume,
-difficulty_level=1, nunca servido no Relâmpago, fluxo de resposta
-normal).
+difficulty_level em {1,2,3}, Relâmpago serve nível 2/3 com opções
+reais, fluxo de resposta normal).
 
 ### 7.1 Segundo lote: vocabulário avançado/jargão (100 palavras)
 
@@ -98,14 +106,14 @@ sem citar a palavra, com palavras candidatas como alternativas — o
 contexto vira parte do próprio campo `prompt` (mesmo padrão já usado no
 território "textos", sem campo novo), porque a pergunta sozinha ("A
 palavra é:") se repete em todo item formato B e violaria a unicidade de
-prompt por território. Mesma trava de `difficulty_level=1` do primeiro
-lote e pelo mesmo motivo (respostas do formato A são definições
-completas, incompatíveis com a síntese de alternativas do Palavras
-Relâmpago).
+prompt por território. Mesmo achado e mesma correção do primeiro lote
+(BUG_LINGUAGEM_NAO_APARECE, seção 7 acima): options sempre curadas
+(nunca None), então redistribuído entre níveis 1/2/3 via `scripts/
+fix_linguagem_difficulty_levels.py`.
 
 Testes: `tests/test_linguagem_vocabulario_avancado_content.py` (volume,
-difficulty_level=1, nunca servido no Relâmpago, fluxo de resposta
-normal).
+difficulty_level em {1,2,3}, Relâmpago serve nível 2/3 com opções
+reais, fluxo de resposta normal).
 
 ### 7.2 Terceiro lote: interpretação de texto (100 textos originais)
 

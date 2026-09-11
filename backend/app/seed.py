@@ -5739,21 +5739,20 @@ for _path in sorted(_CONTENT_DIR.glob("valores_*.json")):
 # que o restante do território). Mesmo padrão de carregar de content/
 # em vez de duplicar inline.
 #
-# Achado real ao integrar (06/09/2026): todo o lote nasce em
-# difficulty_level=1 de propósito, mesmo sendo conteúdo mais difícil em
-# esforço de raciocínio (não em nível de vocabulário — critério da
-# própria spec, §2.3). Motivo: o modo Palavras Relâmpago (options=None)
-# sintetiza alternativas erradas a partir do correct_answer de QUALQUER
-# outro desafio de "palavras" no mesmo difficulty_level
-# (services.generate_relampago_options), assumindo que essas respostas
-# são todas curtas e intercambiáveis entre perguntas (antônimos,
-# anagramas). As respostas deste lote são frases completas específicas
-# de cada pergunta — se entrassem em nível 2/3 (elegível pro Relâmpago),
-# apareceriam como alternativa sem nexo nenhum em perguntas totalmente
-# diferentes. difficulty_level=1 nunca entra no Relâmpago
-# (PALAVRAS_RELAMPAGO_MIN_DIFFICULTY_LEVEL=2), então o problema nem
-# chega a existir pra este lote — sem tocar na lógica compartilhada do
-# Relâmpago nem em nenhum outro território.
+# Correção de achado real (06/09/2026, BUG_LINGUAGEM_NAO_APARECE): este
+# lote nasceu com difficulty_level=1 fixo por engano, achando que
+# protegia o Palavras Relâmpago (services.generate_relampago_options só
+# sintetiza distratores quando challenge.options is None). Mas as 3
+# planilhas deste lote sempre tiveram options 100% curadas (nunca None)
+# — a síntese nunca seria acionada em nenhum nível, então o pin não
+# protegia nada. Efeito colateral real: /challenges/next só cai pro
+# nível 1 quando o jogador ainda está nesse nível OU quando não existe
+# NENHUM desafio no nível calculado (routers/challenges.py) — como
+# "palavras"/"textos" já tinham conteúdo antigo nos níveis 2 e 3,
+# qualquer jogador além do nível 1 nunca recebia este lote. Redistribuído
+# (round-robin por índice) entre os níveis 1/2/3, igual a qualquer outro
+# conteúdo desses territórios — sem risco de síntese porque options
+# nunca é None aqui.
 for _path in sorted(_CONTENT_DIR.glob("linguagem_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 

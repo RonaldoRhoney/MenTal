@@ -5,9 +5,9 @@ Rhoney (palavras_dificeis_bloco{1..4}.json, pasta Mundo_da_Linguagem/), converti
 por scripts/convert_palavras_dificeis_content.py em
 content/linguagem_vocabulario_avancado.json e carregados no território
 "palavras" via app/seed.py. Cobre o que é próprio desta leva — mesma
-trava de difficulty_level=1 do lote de gramática densa (ver comentário
-em app/seed.py) — não repete o critério geral de volume já coberto por
-test_content_volume.py.
+redistribuição de difficulty_level 1/2/3 do lote de gramática densa
+(BUG_LINGUAGEM_NAO_APARECE, ver comentário em app/seed.py) — não repete
+o critério geral de volume já coberto por test_content_volume.py.
 """
 
 import json
@@ -30,10 +30,12 @@ def test_hundred_vocabulary_challenges_are_loaded():
     assert len(items) == 100
     for item in items:
         assert item["territory_id"] == "palavras"
-        # Mesmo motivo do lote de gramática densa (ver app/seed.py):
-        # respostas de formato A são definições completas, incompatíveis
-        # com a síntese de alternativas do Palavras Relâmpago.
-        assert item["difficulty_level"] == 1
+        # BUG_LINGUAGEM_NAO_APARECE (ver app/seed.py): options sempre
+        # curadas (nunca None) neste lote, então não há risco de síntese
+        # de alternativas do Palavras Relâmpago em nenhum nível — o lote
+        # foi redistribuído entre 1/2/3, igual a qualquer outro conteúdo
+        # de "palavras", pra não ficar preso a jogadores iniciantes.
+        assert item["difficulty_level"] in {1, 2, 3}
         assert len(item["options"]) == 4
         assert item["correct_answer"] in item["options"]
 
@@ -42,18 +44,28 @@ def test_hundred_vocabulary_challenges_are_loaded():
         assert item["prompt"] in loaded_prompts
 
 
-def test_relampago_never_serves_the_vocabulary_batch_since_it_targets_level_2_and_3(client):
-    dense_prompts = {item["prompt"] for item in _load_content()}
+def test_relampago_serves_level_2_and_3_vocabulary_items_with_their_own_curated_options(client):
+    """BUG_LINGUAGEM_NAO_APARECE: como este lote sempre teve options
+    curadas (nunca None), o modo Relâmpago nunca sintetiza nada pra ele
+    — só reaproveita as 4 opções reais, embaralhadas (routers/
+    challenges.py: `else: options = shuffled_options(challenge.options)`).
+    Os itens de nível 2/3 do lote devem aparecer normalmente no Relâmpago."""
+    vocab_by_prompt = {item["prompt"]: item for item in _load_content()}
 
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    for _ in range(15):
+    for _ in range(80):
         resp = client.get(
             "/challenges/next", params={"territory_id": "palavras", "mode": "relampago"}, headers=headers
         )
-        assert resp.json()["prompt"] not in dense_prompts
+        candidate = resp.json()
+        item = vocab_by_prompt.get(candidate["prompt"])
+        if item is None:
+            continue
+        assert item["difficulty_level"] >= 2
+        assert set(candidate["options"]) == set(item["options"])
 
 
 def test_answering_a_vocabulary_challenge_correctly_works_like_any_normal_challenge(client):

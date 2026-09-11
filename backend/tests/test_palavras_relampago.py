@@ -16,7 +16,7 @@ from app.timeutil import utcnow
 from .conftest import auth_header
 
 
-def test_relampago_mode_returns_three_options_and_time_limit(client):
+def test_relampago_mode_returns_three_options_when_synthesized_and_time_limit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -27,7 +27,13 @@ def test_relampago_mode_returns_three_options_and_time_limit(client):
     body = resp.json()
 
     assert resp.status_code == 200
-    assert len(body["options"]) == 3
+    # BUG_LINGUAGEM_NAO_APARECE (06/09/2026): desde a redistribuição de
+    # difficulty_level, "palavras" também tem itens com options curadas
+    # (nunca sintetizadas) em nível 2/3 — só o conteúdo com options=None
+    # no seed (o "palavras" original) passa pela síntese de 3 opções
+    # (correta + 2 distratores reais). Curado reaproveita a própria
+    # contagem de opções (normalmente 4).
+    assert len(body["options"]) in (3, 4)
     assert "correct_answer" not in body  # API_CONTRACT.md §3 continua valendo no modo relâmpago
     assert body["difficulty_level"] in (2, 3)  # nunca fácil, mesmo começando do nível 1
     assert body["time_limit_seconds"] == config.TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS[body["difficulty_level"]]
@@ -88,13 +94,25 @@ def test_relampago_options_include_correct_answer_from_seed(client):
     ]
     assert len(matching) == 1
     assert matching[0]["correct_answer"] in body["options"]
-    # As outras 2 opções são respostas REAIS de outros desafios do
-    # mesmo nível — nunca texto inventado.
-    same_level_answers = {
-        c["correct_answer"] for c in CHALLENGES
-        if c["territory_id"] == "palavras" and c["difficulty_level"] == body["difficulty_level"]
-    }
-    assert set(body["options"]).issubset(same_level_answers)
+
+    # BUG_LINGUAGEM_NAO_APARECE (06/09/2026, Mundo_da_Linguagem/README.md
+    # §7/§7.1): desde a redistribuição de difficulty_level, "palavras"
+    # também tem itens (gramática densa, vocabulário avançado) com
+    # options SEMPRE curadas (nunca None) podendo cair em nível 2/3 —
+    # esses reaproveitam as próprias opções reais (routers/challenges.py
+    # `else: shuffled_options`), nunca sintetizam a partir de outro
+    # desafio. Só os itens com options=None no seed (o "palavras"
+    # original) passam pela síntese (services.generate_relampago_options)
+    # e têm as outras opções como correct_answer REAL de outro desafio do
+    # mesmo nível — daí o subset-check só se aplica a esse caso.
+    if matching[0]["options"] is None:
+        same_level_answers = {
+            c["correct_answer"] for c in CHALLENGES
+            if c["territory_id"] == "palavras" and c["difficulty_level"] == body["difficulty_level"]
+        }
+        assert set(body["options"]).issubset(same_level_answers)
+    else:
+        assert set(body["options"]) == set(matching[0]["options"])
 
 
 def test_relampago_generalized_to_other_territories_with_curated_options(client):

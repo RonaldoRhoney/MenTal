@@ -19,7 +19,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Processo político e jurídico pelo qual uma autoridade eleita pode ser afastada do cargo antes do fim do mandato, mediante acusação formal e julgamento por órgão competente.\n\nA palavra é:",
     "options": [
       "Impeachment",
@@ -37,7 +37,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'usucapião'?",
     "options": [
       "Modo de adquirir propriedade pela posse prolongada e ininterrupta de um bem",
@@ -73,7 +73,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'entrementes'?",
     "options": [
       "Enquanto isso, nesse meio tempo",
@@ -91,7 +91,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Consulta popular realizada antes da criação de uma lei ou de uma decisão política relevante, para que os cidadãos se manifestem previamente sobre o tema.\n\nA palavra é:",
     "options": [
       "Plebiscito",
@@ -127,7 +127,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Termo usado no mercado financeiro para descrever a diferença entre a taxa de juros que um banco paga para captar dinheiro e a taxa que cobra para emprestá-lo.\n\nA palavra é:",
     "options": [
       "Spread",
@@ -145,7 +145,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'lapidar' (como adjetivo, referindo-se a uma frase ou texto)?",
     "options": [
       "Perfeito, bem elaborado, digno de nota",
@@ -181,7 +181,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'litígio'?",
     "options": [
       "Disputa ou conflito levado à Justiça para ser resolvido",
@@ -199,7 +199,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Modelo de negócio em que uma empresa permite que outras pessoas usem sua marca e seu método de operação já estabelecido, mediante pagamento de taxas.\n\nA palavra é:",
     "options": [
       "Franquia",
@@ -235,7 +235,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Medida legal que perdoa determinados crimes ou infrações cometidas até certa data, geralmente aplicada de forma ampla a um grupo de pessoas, não a um caso individual.\n\nA palavra é:",
     "options": [
       "Anistia",
@@ -253,7 +253,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'fidúcia'?",
     "options": [
       "Confiança depositada em alguém ou em algo",
@@ -289,7 +289,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'contumaz'?",
     "options": [
       "Que insiste ou reincide constantemente em determinado comportamento",
@@ -307,7 +307,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Valor pago a mais do que o preço original de um bem ou título, geralmente porque a demanda por ele é maior do que a oferta disponível no momento.\n\nA palavra é:",
     "options": [
       "Ágio",
@@ -343,7 +343,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Termo usado para descrever um sistema legislativo dividido em duas casas distintas, como acontece no Congresso Nacional do Brasil, formado por Câmara dos Deputados e Senado Federal.\n\nA palavra é:",
     "options": [
       "Bicameral",
@@ -361,7 +361,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'inócuo'?",
     "options": [
       "Que não causa dano ou efeito relevante",
@@ -397,7 +397,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'peremptório', referindo-se a um prazo?",
     "options": [
       "Que não pode ser prorrogado ou adiado",
@@ -415,7 +415,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Sistema de governo em que o chefe de governo é indicado pelo parlamento e depende de sua confiança para permanecer no cargo, diferente de sistemas em que o chefe de governo é eleito diretamente pela população.\n\nA palavra é:",
     "options": [
       "Parlamentarismo",
@@ -451,7 +451,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'exegese'?",
     "options": [
       "Interpretação e explicação detalhada de um texto, especialmente jurídico ou religioso",
@@ -469,7 +469,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Forma de organização de um Estado em que o poder é dividido entre um governo central e governos regionais (como estados ou províncias), cada um com autonomia em determinadas áreas.\n\nA palavra é:",
     "options": [
       "Federalismo",
@@ -505,7 +505,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Que existe de forma instável, provisória ou sem garantias sólidas, podendo ser interrompido ou revogado a qualquer momento, sem estabilidade duradoura.\n\nA palavra é:",
     "options": [
       "Precário",
@@ -523,7 +523,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa um ato 'discricionário' da administração pública?",
     "options": [
       "Aquele em que a autoridade tem certa margem de escolha, dentro dos limites da lei",
@@ -559,7 +559,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'assíduo'?",
     "options": [
       "Que comparece ou participa com frequência e regularidade",
@@ -577,7 +577,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Direito de votar em eleições, garantido aos cidadãos de um país como forma de participação no processo democrático de escolha de representantes.\n\nA palavra é:",
     "options": [
       "Sufrágio",
@@ -613,7 +613,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Medida que perdoa ou reduz a pena de uma pessoa já condenada judicialmente, concedida geralmente pelo chefe do Poder Executivo, aplicada a casos específicos ou a grupos determinados de condenados.\n\nA palavra é:",
     "options": [
       "Indulto",
@@ -631,7 +631,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'deliberar'?",
     "options": [
       "Decidir após reflexão ou discussão sobre um assunto",
@@ -667,7 +667,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "No mercado financeiro, o que significa 'rating' de crédito?",
     "options": [
       "Uma nota que avalia a capacidade de pagamento de uma dívida por um governo ou empresa",
@@ -685,7 +685,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Situação em que uma pessoa que cometeu uma infração ou crime não recebe nenhuma punição correspondente por aquele ato.\n\nA palavra é:",
     "options": [
       "Impune",
@@ -721,7 +721,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Benefício previsto em lei que permite a suspensão condicional da execução de uma pena, sob determinadas condições impostas pelo juiz, sem que o condenado precise cumpri-la de imediato.\n\nA palavra é:",
     "options": [
       "Sursis",
@@ -739,7 +739,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'idôneo'?",
     "options": [
       "Que possui boa reputação, confiável, apto para determinado fim",
@@ -775,7 +775,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "No contexto eleitoral, o que significa 'coligação' entre partidos?",
     "options": [
       "União temporária entre partidos políticos para disputar uma eleição juntos",
@@ -793,7 +793,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Situação financeira em que uma pessoa ou empresa não possui recursos suficientes para pagar as dívidas que já venceram, o que pode levar a processos judiciais específicos, como falência.\n\nA palavra é:",
     "options": [
       "Insolvência",
@@ -829,7 +829,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Ato pelo qual um chefe do Poder Executivo rejeita, total ou parcialmente, um projeto de lei já aprovado pelo Poder Legislativo, podendo ainda ser derrubado pelos parlamentares em determinadas condições.\n\nA palavra é:",
     "options": [
       "Veto",
@@ -847,7 +847,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "No contexto jurídico/administrativo, o que significa 'diligência'?",
     "options": [
       "Ato ou procedimento realizado para apurar ou verificar algo com cuidado",
@@ -883,7 +883,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'prolixo'?",
     "options": [
       "Excessivamente longo, cheio de detalhes desnecessários",
@@ -901,7 +901,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'efêmero'?",
     "options": [
       "Que dura pouco tempo, passageiro",
@@ -937,7 +937,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "No contexto financeiro, o que significa dar um 'aval'?",
     "options": [
       "Assumir a responsabilidade de pagar uma dívida caso o devedor original não pague",
@@ -955,7 +955,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Pessoa que está cumprindo pena em regime fechado dentro de um estabelecimento prisional, sem liberdade para circular fora dali.\n\nA palavra é:",
     "options": [
       "Recluso",
@@ -991,7 +991,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Proposta de alteração apresentada por um parlamentar para modificar o texto original de um projeto de lei em tramitação no Poder Legislativo.\n\nA palavra é:",
     "options": [
       "Emenda",
@@ -1009,7 +1009,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "No contexto financeiro, o que significa 'amortização' de uma dívida?",
     "options": [
       "Pagamento gradual de uma dívida ao longo do tempo, reduzindo o saldo devedor",
@@ -1045,7 +1045,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'circunspecto'?",
     "options": [
       "Cauteloso, prudente, que age com discrição",
@@ -1063,7 +1063,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Conjunto de partidos ou parlamentares que discordam e fiscalizam as ações do governo em exercício, sem fazer parte da base que sustenta as decisões do Poder Executivo.\n\nA palavra é:",
     "options": [
       "Oposição",
@@ -1099,7 +1099,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Pessoa que comete uma nova infração ou crime depois de já ter sido condenada anteriormente por outro ato semelhante, o que pode agravar a pena numa nova condenação.\n\nA palavra é:",
     "options": [
       "Reincidente",
@@ -1117,7 +1117,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'iminente'?",
     "options": [
       "Que está prestes a acontecer, muito próximo no tempo",
@@ -1153,7 +1153,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "No contexto financeiro, o que significa 'alavancagem'?",
     "options": [
       "Uso de recursos de terceiros (como empréstimos) para ampliar o potencial de retorno de um investimento",
@@ -1171,7 +1171,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Espaço físico onde os parlamentares se reúnem para debater e votar projetos de lei em conjunto, representando a atuação coletiva de uma casa legislativa.\n\nA palavra é:",
     "options": [
       "Plenário",
@@ -1207,7 +1207,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Grupo menor de parlamentares, formado dentro do Poder Legislativo, responsável por analisar em detalhe um tema ou projeto de lei específico antes de ele seguir para votação mais ampla.\n\nA palavra é:",
     "options": [
       "Comissão",
@@ -1225,7 +1225,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa estar 'inadimplente'?",
     "options": [
       "Estar em atraso no cumprimento de uma obrigação, geralmente de pagamento",
@@ -1261,7 +1261,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'recôndito'?",
     "options": [
       "Escondido, de difícil acesso ou pouco conhecido",
@@ -1279,7 +1279,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Pessoa que responde a um processo judicial por ser acusada de ter cometido determinada infração ou de dever algo à parte que iniciou aquela ação.\n\nA palavra é:",
     "options": [
       "Réu",
@@ -1315,7 +1315,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Na esfera judicial, é a pessoa ou parte que inicia um processo, apresentando uma demanda ou pedido formal contra outra parte perante a Justiça.\n\nA palavra é:",
     "options": [
       "Autor",
@@ -1333,7 +1333,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'longevo'?",
     "options": [
       "Que tem vida longa, que dura muito tempo",
@@ -1369,7 +1369,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Espaço de trabalho reservado a uma autoridade pública, como um parlamentar, onde ficam sua equipe e a estrutura de apoio para o exercício do mandato.\n\nA palavra é:",
     "options": [
       "Gabinete",
@@ -1387,7 +1387,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'sagaz'?",
     "options": [
       "Perspicaz, esperto, que percebe as coisas com rapidez e inteligência",
@@ -1423,7 +1423,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'auditoria', no contexto empresarial?",
     "options": [
       "Exame independente das contas e processos de uma empresa, para verificar sua conformidade e precisão",
@@ -1441,7 +1441,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Número mínimo de participantes presentes exigido para que uma reunião, votação ou sessão legislativa seja considerada válida e possa tomar decisões oficiais.\n\nA palavra é:",
     "options": [
       "Quórum",
@@ -1477,7 +1477,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Dispositivo da Constituição de um país considerado tão fundamental que não pode ser alterado ou eliminado nem mesmo por emenda constitucional, servindo como proteção permanente de determinados princípios.\n\nA palavra é:",
     "options": [
       "Cláusula pétrea",
@@ -1495,7 +1495,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa, no uso comum, ter 'estoicismo' diante de uma dificuldade?",
     "options": [
       "Manter a calma e a serenidade mesmo diante de adversidades",
@@ -1531,7 +1531,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O que significa 'impasse'?",
     "options": [
       "Situação sem solução aparente, em que nenhuma das partes consegue avançar",
@@ -1549,7 +1549,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Na contabilidade, é o valor que resulta da diferença entre tudo que uma empresa ou pessoa possui e tudo que ela deve, representando a riqueza real acumulada.\n\nA palavra é:",
     "options": [
       "Patrimônio líquido",
@@ -1585,7 +1585,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Conjunto de decisões judiciais anteriores sobre um mesmo tema, que passam a servir de referência e orientação para julgamentos futuros de casos semelhantes.\n\nA palavra é:",
     "options": [
       "Jurisprudência",
@@ -1603,7 +1603,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "No contexto jurídico, o que significa 'doutrina'?",
     "options": [
       "Conjunto de estudos e opiniões de especialistas do Direito sobre determinado tema",
@@ -1639,7 +1639,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "No contexto jurídico, o que é uma 'petição'?",
     "options": [
       "Documento formal apresentado por uma parte para solicitar algo à Justiça",
@@ -1657,7 +1657,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Que caiu em desuso, ultrapassado, substituído por algo mais moderno ou eficiente, deixando de ser utilizado com a mesma frequência de antes.\n\nA palavra é:",
     "options": [
       "Obsoleto",
@@ -1693,7 +1693,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Conjunto de leis vigentes num país ou região, criadas pelo Poder Legislativo, que regulam o comportamento e as relações entre pessoas, empresas e o próprio Estado.\n\nA palavra é:",
     "options": [
       "Legislação",
@@ -1711,7 +1711,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O que significa 'meticuloso'?",
     "options": [
       "Extremamente cuidadoso e detalhista na realização de algo",
@@ -1747,7 +1747,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "No contexto jurídico, o que significa 'cerceamento de defesa'?",
     "options": [
       "Limitação indevida do direito de uma parte se defender num processo",
@@ -1765,7 +1765,7 @@
   },
   {
     "territory_id": "palavras",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Direito ou privilégio especial concedido a determinada pessoa ou cargo, geralmente em razão da função exercida, que não se estende automaticamente a todos os demais cidadãos.\n\nA palavra é:",
     "options": [
       "Prerrogativa",

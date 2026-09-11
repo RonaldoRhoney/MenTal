@@ -19,7 +19,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O uso excessivo de embalagens plásticas tem preocupado especialistas em meio ambiente. Ainda assim, muitas empresas argumentam que a substituição por materiais alternativos aumentaria os custos de produção, o que tornaria os produtos mais caros para o consumidor final.\n\nSegundo o texto, qual é o argumento das empresas contra a substituição do plástico?",
     "options": [
       "A substituição aumentaria os custos e o preço final dos produtos",
@@ -37,7 +37,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Depois de anos treinando sozinho num campo improvisado no bairro, o jovem atleta finalmente foi convidado para um teste numa equipe profissional. Ele hesitou por alguns dias antes de aceitar, com medo de não estar preparado, mas o incentivo da família fez toda a diferença em sua decisão.\n\nO que fez o jovem atleta decidir aceitar o convite?",
     "options": [
       "O incentivo da família",
@@ -73,7 +73,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Antes de decidir abrir o próprio negócio, Ricardo passou dois anos trabalhando como funcionário numa padaria, aprendendo desde a produção até o atendimento ao cliente. Segundo ele, essa experiência prévia foi essencial para evitar erros comuns que via outros donos de padaria cometerem.\n\nPor que a experiência prévia de Ricardo foi importante, segundo o texto?",
     "options": [
       "Ajudou a evitar erros comuns cometidos por outros donos de padaria",
@@ -91,7 +91,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Embora a cidade tenha investido em novos parques nos últimos anos, moradores de bairros mais afastados do centro reclamam que essas áreas de lazer continuam concentradas nas regiões mais centrais, deixando periferias com poucas opções de espaço público de qualidade.\n\nQual é a reclamação dos moradores de bairros afastados, segundo o texto?",
     "options": [
       "Os novos parques estão concentrados nas regiões mais centrais",
@@ -127,7 +127,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O relatório apontou uma queda no número de reclamações registradas contra a empresa de telefonia ao longo do último ano. Segundo a própria empresa, essa melhora está relacionada a um novo sistema de atendimento, que resolve boa parte dos problemas já no primeiro contato do cliente.\n\nA que a empresa atribui a queda no número de reclamações?",
     "options": [
       "A um novo sistema de atendimento que resolve problemas no primeiro contato",
@@ -145,7 +145,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Mesmo sabendo que o caminho mais curto passava por uma rua sem iluminação, Camila preferiu fazer um trajeto mais longo, mas por vias movimentadas e bem iluminadas, principalmente porque estava voltando para casa já tarde da noite.\n\nPor que Camila escolheu o trajeto mais longo?",
     "options": [
       "Porque as vias eram mais movimentadas e iluminadas, e ela voltava tarde",
@@ -181,7 +181,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Depois de meses testando diferentes formatos, o podcast finalmente encontrou um público fiel ao mudar o foco de notícias gerais para histórias reais contadas pelos próprios ouvintes. Segundo os apresentadores, esse formato mais pessoal criou uma conexão que o conteúdo anterior não conseguia gerar.\n\nO que fez o podcast conquistar um público fiel, segundo o texto?",
     "options": [
       "A mudança para histórias reais contadas pelos próprios ouvintes",
@@ -199,7 +199,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O agricultor decidiu investir num sistema de irrigação por gotejamento depois de perceber que o método antigo, por aspersão, desperdiçava muita água em dias de vento forte. Apesar do investimento inicial mais alto, ele calcula que a economia de água vai compensar o custo em poucos anos.\n\nPor que o agricultor trocou o método de irrigação?",
     "options": [
       "O método antigo desperdiçava muita água em dias de vento forte",
@@ -235,7 +235,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A biblioteca do bairro passou por uma reforma completa e reabriu com um espaço específico para crianças, além de um horário estendido nos finais de semana. A frequência de visitantes praticamente dobrou nos primeiros três meses após a reabertura.\n\nO que aconteceu com a frequência de visitantes após a reforma da biblioteca?",
     "options": [
       "Praticamente dobrou nos primeiros três meses",
@@ -253,7 +253,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O time perdeu os três primeiros jogos do campeonato, mas o técnico resistiu à pressão para trocar toda a estratégia de jogo, argumentando que o elenco só precisava de tempo para se adaptar às novas táticas. Nas rodadas seguintes, o time venceu quatro partidas consecutivas.\n\nQual foi a justificativa do técnico para não mudar a estratégia?",
     "options": [
       "O elenco só precisava de tempo para se adaptar às novas táticas",
@@ -289,7 +289,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Mesmo com a previsão de chuva forte para o fim de semana, os organizadores do festival decidiram manter o evento ao ar livre, apostando numa cobertura parcial do espaço e num plano alternativo de realocar as atrações para uma tenda maior, caso fosse necessário.\n\nQual foi a decisão dos organizadores diante da previsão de chuva?",
     "options": [
       "Manter o evento, com um plano alternativo de realocação para uma tenda",
@@ -307,7 +307,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O motorista de aplicativo relatou que, depois de anos dirigindo em período integral, decidiu reduzir a carga de trabalho para apenas as manhãs, priorizando o tempo livre à tarde para cuidar da própria saúde e reduzir o cansaço acumulado ao longo dos anos.\n\nPor que o motorista decidiu reduzir sua carga de trabalho?",
     "options": [
       "Para priorizar a própria saúde e reduzir o cansaço acumulado",
@@ -343,7 +343,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Depois de perder o emprego numa grande empresa, Fernanda decidiu usar a experiência acumulada para abrir uma consultoria própria, atendendo especificamente pequenos negócios que não tinham orçamento para contratar profissionais das grandes consultorias do mercado.\n\nQual público Fernanda decidiu atender com sua consultoria?",
     "options": [
       "Pequenos negócios que não tinham orçamento para grandes consultorias",
@@ -361,7 +361,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O museu decidiu digitalizar todo o acervo histórico depois de um incidente que danificou parte dos documentos originais. Agora, pesquisadores de qualquer lugar do mundo podem acessar cópias digitais de alta qualidade sem precisar manusear diretamente os documentos físicos, mais frágeis.\n\nO que motivou o museu a digitalizar o acervo, segundo o texto?",
     "options": [
       "Um incidente que danificou parte dos documentos originais",
@@ -397,7 +397,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O pequeno produtor de queijos artesanais relutou em vender seu produto pela internet por anos, achando que o contato pessoal na feira era insubstituível. Quando finalmente aceitou tentar, percebeu que conseguia alcançar clientes de cidades vizinhas que nunca teriam ido até a feira local.\n\nQual foi o benefício que o produtor percebeu ao vender pela internet?",
     "options": [
       "Conseguiu alcançar clientes de cidades vizinhas que não iam à feira",
@@ -415,7 +415,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A equipe de resgate levou mais tempo do que o previsto para localizar os trilheiros perdidos, já que a névoa densa na região dificultava tanto a visibilidade quanto o uso de equipamentos aéreos de busca. Ainda assim, todos foram encontrados em segurança antes do anoitecer.\n\nO que dificultou o trabalho da equipe de resgate, segundo o texto?",
     "options": [
       "A névoa densa na região",
@@ -451,7 +451,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O pequeno mercado de bairro decidiu manter os preços dos produtos básicos congelados por três meses, mesmo com o aumento de custos dos fornecedores, numa tentativa de reter os clientes fiéis que moravam nas redondezas e evitar que migrassem para os supermercados maiores da região.\n\nPor que o mercado decidiu congelar os preços mesmo com custo maior?",
     "options": [
       "Para reter os clientes fiéis e evitar que migrassem para supermercados maiores",
@@ -469,7 +469,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Depois de sofrer uma lesão que o afastou dos treinos por seis meses, o nadador precisou reaprender alguns movimentos básicos junto com o fisioterapeuta, antes de voltar a competir. Segundo ele, esse período serviu também para reavaliar sua rotina de treino, que estava mais intensa do que o corpo suportava.\n\nO que o período de afastamento serviu para o nadador, além da recuperação física?",
     "options": [
       "Reavaliar a rotina de treino, que estava mais intensa do que o corpo suportava",
@@ -505,7 +505,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Ao perceber que muitos clientes abandonavam o carrinho de compras antes de finalizar a compra online, a loja resolveu simplificar o processo de pagamento, reduzindo de seis para três o número de etapas necessárias. Nos meses seguintes, a taxa de conclusão de compra aumentou consideravelmente.\n\nO que a loja fez para reduzir o abandono de carrinho, segundo o texto?",
     "options": [
       "Reduziu o número de etapas do processo de pagamento",
@@ -523,7 +523,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O professor notou que a turma tinha mais facilidade em entender o conteúdo de matemática quando os exemplos eram relacionados a situações do dia a dia dos próprios alunos, como cálculo de troco ou divisão de contas entre amigos, em vez de apenas exercícios abstratos no quadro.\n\nO que o professor percebeu sobre o aprendizado da turma?",
     "options": [
       "A turma entendia melhor com exemplos relacionados ao dia a dia dos alunos",
@@ -559,7 +559,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A pequena vinícola familiar decidiu investir em turismo rural como forma de diversificar a renda, oferecendo visitas guiadas e degustação aos fins de semana. Em pouco tempo, essa nova atividade passou a representar quase um terço do faturamento total do negócio.\n\nQual foi o resultado da nova atividade de turismo rural para a vinícola?",
     "options": [
       "Passou a representar quase um terço do faturamento total",
@@ -577,7 +577,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O grupo de amigos planejava uma viagem de carro para o litoral, mas, ao verificar a previsão de forte chuva na estrada, decidiu adiar a partida em um dia, esperando que as condições melhorassem, em vez de arriscar dirigir sob chuva intensa por horas.\n\nPor que o grupo decidiu adiar a viagem em um dia?",
     "options": [
       "Para evitar dirigir sob chuva intensa por horas",
@@ -613,7 +613,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Mesmo tendo recebido diversas críticas nas primeiras apresentações, a jovem cantora decidiu manter seu estilo autoral em vez de seguir as fórmulas mais populares do momento. Anos depois, seu trabalho passou a ser reconhecido justamente pela originalidade que antes havia sido motivo de crítica.\n\nO que a cantora manteve, apesar das críticas iniciais?",
     "options": [
       "Seu estilo autoral, em vez de seguir fórmulas populares",
@@ -631,7 +631,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O condomínio decidiu instalar painéis solares nas áreas comuns depois de comparar o investimento inicial com a economia projetada na conta de energia ao longo dos anos seguintes. Segundo os cálculos apresentados na assembleia, o valor investido seria recuperado em pouco mais de quatro anos.\n\nO que os cálculos apresentados na assembleia indicavam, segundo o texto?",
     "options": [
       "O investimento seria recuperado em pouco mais de quatro anos",
@@ -667,7 +667,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Depois de anos vendendo apenas em feiras livres, o artesão resolveu criar um perfil em rede social para divulgar suas peças. No início, teve dificuldade em fotografar bem os produtos, mas, com o tempo, aprendeu técnicas simples de iluminação que melhoraram bastante a apresentação visual dos itens.\n\nQual dificuldade inicial o artesão teve ao divulgar seu trabalho online?",
     "options": [
       "Dificuldade em fotografar bem os produtos",
@@ -685,7 +685,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A equipe de engenheiros precisou refazer parte do projeto da ponte depois que um estudo geológico mais detalhado revelou que o solo da região era menos firme do que o inicialmente previsto, exigindo uma fundação mais profunda para garantir a segurança da estrutura.\n\nPor que a equipe precisou refazer parte do projeto da ponte?",
     "options": [
       "Um estudo revelou que o solo era menos firme do que o previsto",
@@ -721,7 +721,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Ao notar que grande parte dos acidentes de trabalho na fábrica acontecia no início do turno da manhã, a gestão de segurança decidiu implementar uma pausa de alongamento obrigatória de cinco minutos antes do início das atividades, o que reduziu significativamente os incidentes registrados.\n\nO que a gestão de segurança implementou após identificar o padrão de acidentes?",
     "options": [
       "Uma pausa de alongamento obrigatória antes do início das atividades",
@@ -739,7 +739,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A cooperativa de pescadores decidiu adotar um período de defeso mais rigoroso do que o exigido por lei, com o objetivo de preservar a reprodução de uma espécie de peixe que vinha sendo capturada em excesso nos últimos anos, mesmo sabendo que isso reduziria a renda no curto prazo.\n\nPor que a cooperativa adotou um período de defeso mais rigoroso do que o exigido?",
     "options": [
       "Para preservar a reprodução de uma espécie capturada em excesso",
@@ -775,7 +775,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A startup de tecnologia decidiu adiar o lançamento do aplicativo em duas semanas depois que os testes internos identificaram uma falha de segurança que poderia expor dados dos usuários. Apesar da pressão para lançar na data original, a equipe considerou que corrigir o problema era prioridade.\n\nPor que a startup adiou o lançamento do aplicativo?",
     "options": [
       "Os testes identificaram uma falha de segurança que poderia expor dados",
@@ -793,7 +793,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O grupo de teatro amador, formado majoritariamente por moradores do bairro, conseguiu financiar sua primeira peça própria através de uma campanha de arrecadação coletiva online, depois de anos apresentando apenas adaptações de textos já conhecidos por falta de recursos para produções originais.\n\nComo o grupo de teatro conseguiu financiar sua primeira peça original?",
     "options": [
       "Através de uma campanha de arrecadação coletiva online",
@@ -829,7 +829,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O motorista de caminhão relatou que, após anos fazendo a mesma rota entre duas capitais, decidiu investir num curso de direção econômica, que ensina técnicas para reduzir o consumo de combustível. Segundo ele, a economia mensal gerada compensou rapidamente o valor pago pelo curso.\n\nO que o curso de direção econômica ensinava, segundo o texto?",
     "options": [
       "Técnicas para reduzir o consumo de combustível",
@@ -847,7 +847,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Apesar de a empresa de logística ter investido pesado em automação de estoque, os gestores perceberam que ainda era necessário manter uma equipe humana para lidar com situações imprevistas, como produtos com embalagens danificadas, que o sistema automatizado não conseguia identificar sozinho.\n\nPor que a empresa manteve uma equipe humana mesmo após investir em automação?",
     "options": [
       "Para lidar com situações imprevistas que o sistema não identificava sozinho",
@@ -883,7 +883,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O casal de aposentados decidiu transformar parte do quintal de casa numa horta comunitária aberta aos vizinhos, depois de perceber que muitas famílias próximas não tinham espaço próprio para cultivar hortaliças. A iniciativa, além de fortalecer laços entre vizinhos, ajudou a reduzir o gasto mensal com alimentação de várias famílias.\n\nQual foi um dos benefícios da horta comunitária, segundo o texto?",
     "options": [
       "Ajudou a reduzir o gasto mensal com alimentação de várias famílias",
@@ -901,7 +901,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O laboratório universitário conseguiu reduzir o tempo de análise de amostras de dias para poucas horas depois de automatizar uma etapa que antes era feita manualmente por técnicos. Isso permitiu que a equipe atendesse um número muito maior de pesquisas simultâneas ao longo do semestre.\n\nO que a automação permitiu ao laboratório, segundo o texto?",
     "options": [
       "Atender um número muito maior de pesquisas simultâneas",
@@ -937,7 +937,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A cidade litorânea investiu na recuperação de dunas de areia que haviam sido degradadas por décadas de ocupação irregular. Além do benefício ambiental, técnicos apontaram que as dunas recuperadas também funcionam como barreira natural contra o avanço do mar em dias de ressaca mais forte.\n\nQual função adicional as dunas recuperadas passaram a cumprir, segundo o texto?",
     "options": [
       "Funcionar como barreira natural contra o avanço do mar",
@@ -955,7 +955,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O pequeno estúdio de animação, formado por apenas três pessoas, decidiu focar em curtas-metragens autorais em vez de aceitar contratos maiores de publicidade, mesmo sabendo que isso significaria uma receita mensal menos previsível no curto prazo.\n\nQual escolha o estúdio de animação fez, segundo o texto?",
     "options": [
       "Focar em curtas-metragens autorais em vez de contratos de publicidade",
@@ -991,7 +991,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O grupo de pesquisadores precisou revisar sua hipótese inicial depois que os dados coletados em campo mostraram um padrão diferente do esperado. Em vez de descartar o estudo, a equipe decidiu investigar essa divergência mais a fundo, o que acabou levando a uma descoberta não planejada originalmente.\n\nO que a divergência nos dados levou a equipe a fazer?",
     "options": [
       "Investigar mais a fundo, levando a uma descoberta não planejada",
@@ -1009,7 +1009,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O pequeno hotel de montanha, tradicionalmente aberto apenas no verão, decidiu funcionar também no inverno depois de perceber uma demanda crescente por turismo de neve na região. A mudança exigiu investimento em aquecimento e isolamento térmico dos quartos, mas os primeiros resultados foram considerados positivos pelos donos.\n\nO que motivou o hotel a funcionar também no inverno?",
     "options": [
       "Uma demanda crescente por turismo de neve na região",
@@ -1045,7 +1045,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O grupo de teatro infantil decidiu incluir intérpretes de língua de sinais em todas as apresentações, depois de receber sugestões de famílias de crianças surdas que frequentavam o espaço cultural. A iniciativa foi bem recebida e passou a ser adotada também por outros grupos da mesma região.\n\nO que motivou o grupo de teatro a incluir intérpretes de língua de sinais?",
     "options": [
       "Sugestões de famílias de crianças surdas que frequentavam o espaço",
@@ -1063,7 +1063,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O pequeno produtor de café decidiu certificar sua produção como orgânica, processo que levou quase três anos entre adaptações no cultivo e auditorias externas. Apesar do tempo e custo envolvidos, ele relata que conseguiu vender o produto a um preço melhor depois de obter o selo.\n\nO que o produtor conseguiu depois de obter a certificação orgânica?",
     "options": [
       "Vender o produto a um preço melhor",
@@ -1099,7 +1099,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Depois de anos ministrando aulas apenas presenciais, a professora de música decidiu gravar videoaulas gratuitas sobre teoria musical básica, disponibilizando o material online. Embora não gerasse renda direta, ela relata que essa iniciativa aumentou significativamente a procura por suas aulas particulares presenciais.\n\nQual foi o efeito das videoaulas gratuitas sobre as aulas particulares da professora?",
     "options": [
       "Aumentou significativamente a procura por suas aulas particulares",
@@ -1117,7 +1117,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O condomínio decidiu instalar câmeras de segurança adicionais na garagem depois de dois furtos registrados em poucos meses. Alguns moradores questionaram o custo da instalação, mas a maioria concordou, na assembleia seguinte, que a medida era necessária diante do histórico recente de ocorrências.\n\nO que motivou a instalação de câmeras adicionais no condomínio?",
     "options": [
       "Dois furtos registrados na garagem em poucos meses",
@@ -1153,7 +1153,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A fábrica de móveis passou a utilizar madeira certificada, proveniente de manejo florestal sustentável, depois de perceber uma mudança na preferência de parte dos clientes corporativos, que passaram a exigir esse tipo de comprovação em suas licitações de compra.\n\nPor que a fábrica passou a usar madeira certificada?",
     "options": [
       "Clientes corporativos passaram a exigir esse tipo de comprovação",
@@ -1171,7 +1171,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O grupo de corredores amadores, que se reunia informalmente aos sábados, decidiu formalizar um clube com regras básicas de organização depois que o número de participantes cresceu de cinco para mais de cinquenta pessoas, tornando inviável continuar sem nenhuma estrutura mínima.\n\nPor que o grupo decidiu se formalizar como clube?",
     "options": [
       "O número de participantes cresceu, tornando inviável continuar sem estrutura",
@@ -1207,7 +1207,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A pequena confeitaria, conhecida por um único tipo de bolo, resistiu por anos à pressão de clientes para expandir o cardápio, temendo perder a qualidade que a diferenciava. Quando finalmente decidiu adicionar apenas mais duas opções, manteve o mesmo padrão de qualidade que já era reconhecido pelos clientes.\n\nO que a confeitaria temia ao considerar expandir o cardápio?",
     "options": [
       "Perder a qualidade que a diferenciava dos concorrentes",
@@ -1225,7 +1225,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O técnico de manutenção elétrica relatou que, depois de anos atuando sozinho, decidiu formar uma pequena equipe para atender mais clientes simultaneamente. A mudança exigiu que ele aprendesse também a gerenciar pessoas, uma habilidade que não fazia parte de sua formação técnica original.\n\nQual nova habilidade o técnico precisou desenvolver, segundo o texto?",
     "options": [
       "Gerenciar pessoas",
@@ -1261,7 +1261,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O casal de designers gráficos, ao abrir o próprio escritório, decidiu recusar propostas de clientes que exigiam prazos considerados irreais, mesmo com receio inicial de perder receita, priorizando entregar um trabalho de qualidade dentro de prazos que consideravam factíveis.\n\nQue tipo de proposta o casal decidiu recusar?",
     "options": [
       "Propostas com prazos considerados irreais",
@@ -1279,7 +1279,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "Depois de perceber que boa parte dos turistas visitava a cidade histórica apenas por um dia, sem pernoitar, a associação de comércio local criou um roteiro noturno com atividades culturais, na tentativa de incentivar uma permanência mais longa e, consequentemente, maior gasto na região.\n\nQual foi o objetivo da associação de comércio ao criar o roteiro noturno?",
     "options": [
       "Incentivar uma permanência mais longa dos turistas na cidade",
@@ -1315,7 +1315,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A escola de samba, tradicional no bairro há décadas, decidiu abrir as portas dos ensaios para visitantes de fora da comunidade, como forma de gerar renda extra através da venda de ingressos, sem perder o caráter comunitário que sempre marcou a agremiação.\n\nQual foi o motivo de a escola de samba abrir os ensaios para visitantes externos?",
     "options": [
       "Gerar renda extra através da venda de ingressos",
@@ -1333,7 +1333,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O aplicativo de caronas compartilhadas passou a oferecer um desconto para quem agendasse a corrida com pelo menos duas horas de antecedência, incentivando os usuários a planejar melhor os deslocamentos e ajudando a empresa a organizar melhor a distribuição de motoristas disponíveis na região.\n\nQual foi o benefício do desconto por agendamento antecipado para a própria empresa, segundo o texto?",
     "options": [
       "Ajudou a organizar melhor a distribuição de motoristas disponíveis",
@@ -1369,7 +1369,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A pequena editora independente decidiu apostar em autores estreantes da própria região, em vez de disputar direitos de tradução de livros estrangeiros já consagrados, como forma de reduzir custos e ao mesmo tempo dar visibilidade a talentos locais ainda desconhecidos do público.\n\nQual foi a estratégia adotada pela editora, segundo o texto?",
     "options": [
       "Apostar em autores estreantes da própria região",
@@ -1387,7 +1387,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O posto de saúde do bairro passou a oferecer atendimento noturno duas vezes por semana, depois de identificar que muitos moradores que trabalhavam durante o dia inteiro tinham dificuldade em conseguir consultas dentro do horário comercial tradicional.\n\nO que motivou o posto de saúde a oferecer atendimento noturno?",
     "options": [
       "Moradores que trabalhavam o dia inteiro tinham dificuldade em conseguir consultas",
@@ -1423,7 +1423,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O grupo de músicos de rua, depois de anos tocando apenas no centro da cidade, decidiu se apresentar também em bairros mais afastados, alternando os pontos a cada semana. Segundo eles, essa mudança ajudou a alcançar um público que nunca tinha visto o grupo tocar antes.\n\nQual foi o resultado de o grupo passar a se apresentar em bairros afastados?",
     "options": [
       "Ajudou a alcançar um público que nunca tinha visto o grupo tocar",
@@ -1441,7 +1441,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A cooperativa agrícola decidiu investir em um sistema de previsão climática mais preciso, voltado especificamente para a região onde os produtores atuavam, depois de registrar perdas significativas em safras anteriores causadas por geadas que não haviam sido previstas com antecedência suficiente.\n\nPor que a cooperativa investiu num sistema de previsão climática mais preciso?",
     "options": [
       "Registrou perdas em safras anteriores causadas por geadas não previstas",
@@ -1477,7 +1477,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "Depois de anos utilizando apenas fertilizantes químicos, o produtor rural começou a intercalar o uso com adubos orgânicos produzidos na própria propriedade, a partir de restos de colheita, numa tentativa de reduzir custos e melhorar a qualidade do solo a longo prazo.\n\nQual foi o objetivo do produtor ao intercalar fertilizantes químicos com adubo orgânico?",
     "options": [
       "Reduzir custos e melhorar a qualidade do solo a longo prazo",
@@ -1495,7 +1495,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A rádio comunitária, mantida havia anos apenas por doações voluntárias dos ouvintes, passou a oferecer espaços publicitários para pequenos comércios locais, o que garantiu uma receita mais estável para cobrir os custos fixos mensais de manutenção do equipamento.\n\nO que a rádio comunitária passou a fazer para ter uma receita mais estável?",
     "options": [
       "Oferecer espaços publicitários para pequenos comércios locais",
@@ -1531,7 +1531,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "A gráfica familiar, tradicionalmente especializada em cartões de visita e panfletos, decidiu investir em equipamentos para impressão de tecido depois de identificar uma demanda crescente por camisetas personalizadas entre pequenos empreendedores da região.\n\nO que motivou a gráfica a investir em impressão de tecido?",
     "options": [
       "Uma demanda crescente por camisetas personalizadas entre pequenos empreendedores",
@@ -1549,7 +1549,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "O grupo de estudantes de arquitetura decidiu desenvolver, como projeto de conclusão de curso, um modelo de casa popular de baixo custo utilizando materiais reaproveitados de demolições, buscando provar que era possível unir sustentabilidade e economia numa construção habitacional real.\n\nQual foi o objetivo do projeto de conclusão de curso, segundo o texto?",
     "options": [
       "Provar que era possível unir sustentabilidade e economia numa construção real",
@@ -1585,7 +1585,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O motorista de ônibus urbano, depois de anos de experiência, passou a orientar informalmente novos colegas sobre pontos de atenção específicos de cada linha, como cruzamentos mais perigosos ou horários de maior movimento, compartilhando um conhecimento que só havia adquirido com o tempo.\n\nO que o motorista experiente passou a compartilhar com os colegas mais novos?",
     "options": [
       "Pontos de atenção específicos de cada linha, adquiridos com a experiência",
@@ -1603,7 +1603,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A associação de moradores decidiu organizar um mutirão de limpeza no rio que cortava o bairro, depois de perceber que o acúmulo de lixo estava causando enchentes mais frequentes em dias de chuva forte, mesmo em períodos que antes não costumavam registrar esse tipo de problema.\n\nPor que a associação de moradores organizou o mutirão de limpeza?",
     "options": [
       "O acúmulo de lixo estava causando enchentes mais frequentes",
@@ -1639,7 +1639,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O centro de reabilitação decidiu incluir sessões de musicoterapia na rotina dos pacientes em recuperação, depois de observar, em estudos preliminares, uma melhora no engajamento e na disposição para outras atividades terapêuticas nos dias em que essa prática era realizada.\n\nO que foi observado nos estudos preliminares mencionados no texto?",
     "options": [
       "Melhora no engajamento e disposição para outras atividades terapêuticas",
@@ -1657,7 +1657,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A fábrica de calçados decidiu reduzir o número de modelos produzidos simultaneamente, concentrando esforços em uma linha mais enxuta, mas com maior controle de qualidade, depois de perceber que a dispersão em muitos modelos diferentes estava gerando falhas recorrentes na produção.\n\nPor que a fábrica reduziu o número de modelos produzidos simultaneamente?",
     "options": [
       "A dispersão em muitos modelos estava gerando falhas recorrentes na produção",
@@ -1693,7 +1693,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O posto de combustíveis da estrada decidiu instalar pontos de recarga para carros elétricos, mesmo sendo ainda poucos os veículos desse tipo circulando na região, apostando que a demanda cresceria nos próximos anos e que sair na frente traria vantagem competitiva sobre os concorrentes.\n\nQual foi a aposta do posto de combustíveis ao instalar os pontos de recarga?",
     "options": [
       "Que a demanda cresceria e sair na frente traria vantagem competitiva",
@@ -1711,7 +1711,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A pequena escola de dança decidiu criar uma turma específica para adultos iniciantes, depois de perceber que muitos interessados desistiam ao serem colocados em turmas mistas com crianças e adolescentes, por sentirem vergonha de aprender os passos básicos junto com alunos mais jovens.\n\nPor que muitos adultos desistiam das aulas antes da criação da turma específica?",
     "options": [
       "Sentiam vergonha de aprender junto com alunos mais jovens",
@@ -1747,7 +1747,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 2,
     "prompt": "O grupo de teatro de bonecos, tradicional em festas juninas do interior, decidiu registrar em vídeo suas apresentações mais antigas antes que os poucos integrantes que ainda dominavam a técnica original se aposentassem, buscando preservar esse conhecimento para futuras gerações.\n\nPor que o grupo decidiu registrar em vídeo suas apresentações mais antigas?",
     "options": [
       "Para preservar o conhecimento antes que os integrantes se aposentassem",
@@ -1765,7 +1765,7 @@
   },
   {
     "territory_id": "textos",
-    "difficulty_level": 1,
+    "difficulty_level": 3,
     "prompt": "A cooperativa de reciclagem decidiu investir em uma prensa mais moderna para compactar materiais, depois de calcular que o transporte de cargas mais compactas para os compradores finais reduziria significativamente o custo com frete, mesmo com o investimento inicial elevado no equipamento.\n\nQual foi o cálculo que motivou o investimento na prensa mais moderna?",
     "options": [
       "Cargas mais compactas reduziriam significativamente o custo com frete",
