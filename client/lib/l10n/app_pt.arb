@@ -1648,6 +1648,23 @@
       }
     }
   },
+  "feedDateHeaderToday": "Hoje",
+  "@feedDateHeaderToday": {
+    "description": "Feed date group header for events from today (07/09/2026, pedido de Rhoney: agrupar por data como um feed profissional)"
+  },
+  "feedDateHeaderYesterday": "Ontem",
+  "@feedDateHeaderYesterday": {
+    "description": "Feed date group header for events from yesterday"
+  },
+  "feedDateHeaderOlder": "{date}",
+  "@feedDateHeaderOlder": {
+    "description": "Feed date group header for events older than yesterday — date is already formatted as dd/MM/yyyy by the client",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "friendsHelpTitle": "Amigos — como funciona",
   "@friendsHelpTitle": {
     "description": "Title of the Friends help sheet"

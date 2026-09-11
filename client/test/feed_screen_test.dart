@@ -162,4 +162,63 @@ void main() {
     expect(_findRichTextContaining('Segunda página'), findsOneWidget);
     expect(find.text('Carregar mais'), findsNothing);
   });
+
+  testWidgets('agrupa eventos por data com cabeçalhos Hoje/Ontem/data numérica', (tester) async {
+    // Pedido de Rhoney (07/09/2026): "organize de forma profissional...
+    // todas as características de Feed" — datas relativas ao momento do
+    // teste (nunca uma data fixa no passado), senão o teste quebraria
+    // sozinho conforme o tempo passasse.
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day, 9);
+    final yesterday = today.subtract(const Duration(days: 1));
+    final threeDaysAgo = today.subtract(const Duration(days: 3));
+    final expectedOlderLabel =
+        '${threeDaysAgo.day.toString().padLeft(2, '0')}/${threeDaysAgo.month.toString().padLeft(2, '0')}/${threeDaysAgo.year}';
+
+    final client = _FakeApiClient(pages: [
+      {
+        'events': [
+          {
+            'id': 'evt-today',
+            'user_id': 'user-1',
+            'nickname': 'joao123',
+            'photo_url': null,
+            'event_type': 'level_up_milestone',
+            'text': 'Evento de hoje',
+            'created_at': today.toIso8601String(),
+          },
+          {
+            'id': 'evt-yesterday',
+            'user_id': 'user-2',
+            'nickname': 'maria456',
+            'photo_url': null,
+            'event_type': 'level_up_milestone',
+            'text': 'Evento de ontem',
+            'created_at': yesterday.toIso8601String(),
+          },
+          {
+            'id': 'evt-older',
+            'user_id': 'user-3',
+            'nickname': 'ana789',
+            'photo_url': null,
+            'event_type': 'level_up_milestone',
+            'text': 'Evento antigo',
+            'created_at': threeDaysAgo.toIso8601String(),
+          },
+        ],
+        'next_cursor': null,
+      },
+    ]);
+    await _pump(tester, client);
+
+    expect(find.text('Hoje'), findsOneWidget);
+    expect(find.text('Ontem'), findsOneWidget);
+    expect(find.text(expectedOlderLabel), findsOneWidget);
+
+    // Ordem de leitura: cabeçalho "Hoje" vem antes do cabeçalho "Ontem"
+    // na árvore (mesma ordem em que os eventos chegam do servidor).
+    final todayHeaderY = tester.getTopLeft(find.text('Hoje')).dy;
+    final yesterdayHeaderY = tester.getTopLeft(find.text('Ontem')).dy;
+    expect(todayHeaderY, lessThan(yesterdayHeaderY));
+  });
 }

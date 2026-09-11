@@ -2020,6 +2020,24 @@ abstract class AppLocalizations {
   /// **'{days, plural, =1{há 1 dia} other{há {days} dias}}'**
   String feedTimeDaysAgo(int days);
 
+  /// Feed date group header for events from today (07/09/2026, pedido de Rhoney: agrupar por data como um feed profissional)
+  ///
+  /// In pt, this message translates to:
+  /// **'Hoje'**
+  String get feedDateHeaderToday;
+
+  /// Feed date group header for events from yesterday
+  ///
+  /// In pt, this message translates to:
+  /// **'Ontem'**
+  String get feedDateHeaderYesterday;
+
+  /// Feed date group header for events older than yesterday — date is already formatted as dd/MM/yyyy by the client
+  ///
+  /// In pt, this message translates to:
+  /// **'{date}'**
+  String feedDateHeaderOlder(String date);
+
   /// Title of the Friends help sheet
   ///
   /// In pt, this message translates to:

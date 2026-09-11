@@ -1179,6 +1179,17 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get feedDateHeaderToday => 'Hoje';
+
+  @override
+  String get feedDateHeaderYesterday => 'Ontem';
+
+  @override
+  String feedDateHeaderOlder(String date) {
+    return '$date';
+  }
+
+  @override
   String get friendsHelpTitle => 'Amigos — como funciona';
 
   @override
