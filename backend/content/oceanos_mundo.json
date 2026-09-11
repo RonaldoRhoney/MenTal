@@ -1,0 +1,458 @@
+[
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Tecnicamente, quantos oceanos existem no planeta, segundo o texto?",
+    "options": [
+      "Um único Oceano Global",
+      "Exatamente cinco oceanos separados fisicamente",
+      "Dez oceanos distintos",
+      "Três oceanos principais"
+    ],
+    "correct_answer": "Um único Oceano Global",
+    "explanation": "Tecnicamente, existe um único Oceano Global, já que todas as águas oceânicas do planeta estão interligadas, sem barreiras físicas reais entre elas. Na prática, porém, a comunidade científica e a maioria dos países costumam reconhecer cinco divisões geográficas dentro desse oceano global: Pacífico, Atlântico, Índico, Ártico e Antártico. Essas divisões foram estabelecidas por convenção, para fins de estudo e navegação, e não porque exista de fato uma fronteira natural separando um oceano do outro.",
+    "reading_passage": "Tecnicamente, existe um único Oceano Global, já que todas as águas oceânicas do planeta estão interligadas, sem barreiras físicas reais entre elas. Na prática, porém, a comunidade científica e a maioria dos países costumam reconhecer cinco divisões geográficas dentro desse oceano global: Pacífico, Atlântico, Índico, Ártico e Antártico. Essas divisões foram estabelecidas por convenção, para fins de estudo e navegação, e não porque exista de fato uma fronteira natural separando um oceano do outro.",
+    "hints": [
+      "Releia 'Quantos oceanos existem, afinal?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Quais são as cinco divisões geográficas comumente reconhecidas dentro do oceano global?",
+    "options": [
+      "Pacífico, Atlântico, Índico, Ártico e Antártico",
+      "Norte, Sul, Leste, Oeste e Central",
+      "Tropical, Temperado, Polar, Equatorial e Costeiro",
+      "Profundo, Raso, Médio, Alto e Baixo"
+    ],
+    "correct_answer": "Pacífico, Atlântico, Índico, Ártico e Antártico",
+    "explanation": "Tecnicamente, existe um único Oceano Global, já que todas as águas oceânicas do planeta estão interligadas, sem barreiras físicas reais entre elas. Na prática, porém, a comunidade científica e a maioria dos países costumam reconhecer cinco divisões geográficas dentro desse oceano global: Pacífico, Atlântico, Índico, Ártico e Antártico. Essas divisões foram estabelecidas por convenção, para fins de estudo e navegação, e não porque exista de fato uma fronteira natural separando um oceano do outro.",
+    "reading_passage": "Tecnicamente, existe um único Oceano Global, já que todas as águas oceânicas do planeta estão interligadas, sem barreiras físicas reais entre elas. Na prática, porém, a comunidade científica e a maioria dos países costumam reconhecer cinco divisões geográficas dentro desse oceano global: Pacífico, Atlântico, Índico, Ártico e Antártico. Essas divisões foram estabelecidas por convenção, para fins de estudo e navegação, e não porque exista de fato uma fronteira natural separando um oceano do outro.",
+    "hints": [
+      "Releia 'Quantos oceanos existem, afinal?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Por que essas divisões foram estabelecidas, segundo o texto?",
+    "options": [
+      "Por convenção, para fins de estudo e navegação",
+      "Porque existem fronteiras físicas naturais entre elas",
+      "Por exigência de um tratado internacional único",
+      "Porque a água de cada oceano tem composição química diferente"
+    ],
+    "correct_answer": "Por convenção, para fins de estudo e navegação",
+    "explanation": "Tecnicamente, existe um único Oceano Global, já que todas as águas oceânicas do planeta estão interligadas, sem barreiras físicas reais entre elas. Na prática, porém, a comunidade científica e a maioria dos países costumam reconhecer cinco divisões geográficas dentro desse oceano global: Pacífico, Atlântico, Índico, Ártico e Antártico. Essas divisões foram estabelecidas por convenção, para fins de estudo e navegação, e não porque exista de fato uma fronteira natural separando um oceano do outro.",
+    "reading_passage": "Tecnicamente, existe um único Oceano Global, já que todas as águas oceânicas do planeta estão interligadas, sem barreiras físicas reais entre elas. Na prática, porém, a comunidade científica e a maioria dos países costumam reconhecer cinco divisões geográficas dentro desse oceano global: Pacífico, Atlântico, Índico, Ártico e Antártico. Essas divisões foram estabelecidas por convenção, para fins de estudo e navegação, e não porque exista de fato uma fronteira natural separando um oceano do outro.",
+    "hints": [
+      "Releia 'Quantos oceanos existem, afinal?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Qual é o maior e mais profundo dos cinco oceanos?",
+    "options": [
+      "Pacífico",
+      "Atlântico",
+      "Índico",
+      "Ártico"
+    ],
+    "correct_answer": "Pacífico",
+    "explanation": "O Oceano Pacífico é o maior e mais profundo dos cinco, cobrindo uma área tão extensa que, sozinho, é responsável por cobrir cerca de um terço de toda a superfície da Terra. O nome 'Pacífico' foi dado pelo navegador Fernão de Magalhães, no início do século XVI, ao encontrar aquelas águas relativamente calmas durante parte de sua viagem — uma impressão que não reflete todo o comportamento do oceano, que também é palco de tempestades tropicais extremamente intensas em outras regiões e períodos.",
+    "reading_passage": "O Oceano Pacífico é o maior e mais profundo dos cinco, cobrindo uma área tão extensa que, sozinho, é responsável por cobrir cerca de um terço de toda a superfície da Terra. O nome 'Pacífico' foi dado pelo navegador Fernão de Magalhães, no início do século XVI, ao encontrar aquelas águas relativamente calmas durante parte de sua viagem — uma impressão que não reflete todo o comportamento do oceano, que também é palco de tempestades tropicais extremamente intensas em outras regiões e períodos.",
+    "hints": [
+      "Releia 'O Oceano Pacífico e sua escala descomunal' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Quem deu o nome 'Pacífico' a esse oceano, segundo o texto?",
+    "options": [
+      "Fernão de Magalhães",
+      "Cristóvão Colombo",
+      "Vasco da Gama",
+      "James Cook"
+    ],
+    "correct_answer": "Fernão de Magalhães",
+    "explanation": "O Oceano Pacífico é o maior e mais profundo dos cinco, cobrindo uma área tão extensa que, sozinho, é responsável por cobrir cerca de um terço de toda a superfície da Terra. O nome 'Pacífico' foi dado pelo navegador Fernão de Magalhães, no início do século XVI, ao encontrar aquelas águas relativamente calmas durante parte de sua viagem — uma impressão que não reflete todo o comportamento do oceano, que também é palco de tempestades tropicais extremamente intensas em outras regiões e períodos.",
+    "reading_passage": "O Oceano Pacífico é o maior e mais profundo dos cinco, cobrindo uma área tão extensa que, sozinho, é responsável por cobrir cerca de um terço de toda a superfície da Terra. O nome 'Pacífico' foi dado pelo navegador Fernão de Magalhães, no início do século XVI, ao encontrar aquelas águas relativamente calmas durante parte de sua viagem — uma impressão que não reflete todo o comportamento do oceano, que também é palco de tempestades tropicais extremamente intensas em outras regiões e períodos.",
+    "hints": [
+      "Releia 'O Oceano Pacífico e sua escala descomunal' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Por que o nome 'Pacífico' não reflete todo o comportamento do oceano, segundo o texto?",
+    "options": [
+      "Ele também é palco de tempestades tropicais extremamente intensas",
+      "Porque o oceano nunca tem ondas em nenhuma região",
+      "Porque o nome foi definido por sorteio, sem relação com o mar",
+      "Porque o Pacífico é o oceano mais raso de todos"
+    ],
+    "correct_answer": "Ele também é palco de tempestades tropicais extremamente intensas",
+    "explanation": "O Oceano Pacífico é o maior e mais profundo dos cinco, cobrindo uma área tão extensa que, sozinho, é responsável por cobrir cerca de um terço de toda a superfície da Terra. O nome 'Pacífico' foi dado pelo navegador Fernão de Magalhães, no início do século XVI, ao encontrar aquelas águas relativamente calmas durante parte de sua viagem — uma impressão que não reflete todo o comportamento do oceano, que também é palco de tempestades tropicais extremamente intensas em outras regiões e períodos.",
+    "reading_passage": "O Oceano Pacífico é o maior e mais profundo dos cinco, cobrindo uma área tão extensa que, sozinho, é responsável por cobrir cerca de um terço de toda a superfície da Terra. O nome 'Pacífico' foi dado pelo navegador Fernão de Magalhães, no início do século XVI, ao encontrar aquelas águas relativamente calmas durante parte de sua viagem — uma impressão que não reflete todo o comportamento do oceano, que também é palco de tempestades tropicais extremamente intensas em outras regiões e períodos.",
+    "hints": [
+      "Releia 'O Oceano Pacífico e sua escala descomunal' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Onde está localizada a Fossa das Marianas?",
+    "options": [
+      "Oceano Pacífico",
+      "Oceano Atlântico",
+      "Oceano Índico",
+      "Oceano Ártico"
+    ],
+    "correct_answer": "Oceano Pacífico",
+    "explanation": "A Fossa das Marianas, localizada no Oceano Pacífico, abriga o ponto mais profundo já registrado nos oceanos: a Depressão Challenger, com pouco mais de 10.900 metros de profundidade — uma distância maior do que a altura do Monte Everest, a montanha mais alta do planeta. A primeira descida documentada a esse ponto extremo aconteceu em 1960, usando um veículo submersível especialmente projetado para resistir à pressão imensa encontrada naquela profundidade.",
+    "reading_passage": "A Fossa das Marianas, localizada no Oceano Pacífico, abriga o ponto mais profundo já registrado nos oceanos: a Depressão Challenger, com pouco mais de 10.900 metros de profundidade — uma distância maior do que a altura do Monte Everest, a montanha mais alta do planeta. A primeira descida documentada a esse ponto extremo aconteceu em 1960, usando um veículo submersível especialmente projetado para resistir à pressão imensa encontrada naquela profundidade.",
+    "hints": [
+      "Releia 'A Fossa das Marianas: o ponto mais profundo do planeta' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Como se chama o ponto mais profundo da Fossa das Marianas?",
+    "options": [
+      "Depressão Challenger",
+      "Vale do Abismo",
+      "Fenda Oceânica",
+      "Poço das Profundezas"
+    ],
+    "correct_answer": "Depressão Challenger",
+    "explanation": "A Fossa das Marianas, localizada no Oceano Pacífico, abriga o ponto mais profundo já registrado nos oceanos: a Depressão Challenger, com pouco mais de 10.900 metros de profundidade — uma distância maior do que a altura do Monte Everest, a montanha mais alta do planeta. A primeira descida documentada a esse ponto extremo aconteceu em 1960, usando um veículo submersível especialmente projetado para resistir à pressão imensa encontrada naquela profundidade.",
+    "reading_passage": "A Fossa das Marianas, localizada no Oceano Pacífico, abriga o ponto mais profundo já registrado nos oceanos: a Depressão Challenger, com pouco mais de 10.900 metros de profundidade — uma distância maior do que a altura do Monte Everest, a montanha mais alta do planeta. A primeira descida documentada a esse ponto extremo aconteceu em 1960, usando um veículo submersível especialmente projetado para resistir à pressão imensa encontrada naquela profundidade.",
+    "hints": [
+      "Releia 'A Fossa das Marianas: o ponto mais profundo do planeta' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Em que ano aconteceu a primeira descida documentada a esse ponto extremo?",
+    "options": [
+      "1960",
+      "1900",
+      "2000",
+      "1985"
+    ],
+    "correct_answer": "1960",
+    "explanation": "A Fossa das Marianas, localizada no Oceano Pacífico, abriga o ponto mais profundo já registrado nos oceanos: a Depressão Challenger, com pouco mais de 10.900 metros de profundidade — uma distância maior do que a altura do Monte Everest, a montanha mais alta do planeta. A primeira descida documentada a esse ponto extremo aconteceu em 1960, usando um veículo submersível especialmente projetado para resistir à pressão imensa encontrada naquela profundidade.",
+    "reading_passage": "A Fossa das Marianas, localizada no Oceano Pacífico, abriga o ponto mais profundo já registrado nos oceanos: a Depressão Challenger, com pouco mais de 10.900 metros de profundidade — uma distância maior do que a altura do Monte Everest, a montanha mais alta do planeta. A primeira descida documentada a esse ponto extremo aconteceu em 1960, usando um veículo submersível especialmente projetado para resistir à pressão imensa encontrada naquela profundidade.",
+    "hints": [
+      "Releia 'A Fossa das Marianas: o ponto mais profundo do planeta' — a resposta está no texto.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que é comum se dizer sobre o conhecimento humano do fundo do oceano, segundo o texto?",
+    "options": [
+      "Que conhecemos melhor a superfície da Lua do que o fundo dos oceanos",
+      "Que já mapeamos completamente todo o fundo do mar",
+      "Que o oceano é mais fácil de explorar do que o espaço",
+      "Que ninguém nunca tentou explorar o fundo do mar"
+    ],
+    "correct_answer": "Que conhecemos melhor a superfície da Lua do que o fundo dos oceanos",
+    "explanation": "É comum ouvir que a humanidade conhece melhor a superfície da Lua do que o fundo dos próprios oceanos da Terra — uma afirmação exagerada, mas que reflete uma realidade real: até poucos anos atrás, apenas uma fração relativamente pequena do leito oceânico havia sido mapeada com boa qualidade de detalhe. A dificuldade de explorar as profundezas do oceano se deve a fatores como a pressão extrema da água, a ausência total de luz solar e as temperaturas muito baixas encontradas a grandes profundidades.",
+    "reading_passage": "É comum ouvir que a humanidade conhece melhor a superfície da Lua do que o fundo dos próprios oceanos da Terra — uma afirmação exagerada, mas que reflete uma realidade real: até poucos anos atrás, apenas uma fração relativamente pequena do leito oceânico havia sido mapeada com boa qualidade de detalhe. A dificuldade de explorar as profundezas do oceano se deve a fatores como a pressão extrema da água, a ausência total de luz solar e as temperaturas muito baixas encontradas a grandes profundidades.",
+    "hints": [
+      "Releia 'Por que conhecemos mais o espaço do que o fundo do oceano?' — a resposta está no texto.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Cite um fator que dificulta a exploração das profundezas oceânicas, segundo o texto.",
+    "options": [
+      "A pressão extrema da água",
+      "O excesso de luz solar",
+      "A temperatura muito alta da água",
+      "A falta de água suficiente"
+    ],
+    "correct_answer": "A pressão extrema da água",
+    "explanation": "É comum ouvir que a humanidade conhece melhor a superfície da Lua do que o fundo dos próprios oceanos da Terra — uma afirmação exagerada, mas que reflete uma realidade real: até poucos anos atrás, apenas uma fração relativamente pequena do leito oceânico havia sido mapeada com boa qualidade de detalhe. A dificuldade de explorar as profundezas do oceano se deve a fatores como a pressão extrema da água, a ausência total de luz solar e as temperaturas muito baixas encontradas a grandes profundidades.",
+    "reading_passage": "É comum ouvir que a humanidade conhece melhor a superfície da Lua do que o fundo dos próprios oceanos da Terra — uma afirmação exagerada, mas que reflete uma realidade real: até poucos anos atrás, apenas uma fração relativamente pequena do leito oceânico havia sido mapeada com boa qualidade de detalhe. A dificuldade de explorar as profundezas do oceano se deve a fatores como a pressão extrema da água, a ausência total de luz solar e as temperaturas muito baixas encontradas a grandes profundidades.",
+    "hints": [
+      "Releia 'Por que conhecemos mais o espaço do que o fundo do oceano?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "A afirmação de que conhecemos mais a Lua do que o oceano é totalmente precisa, segundo o texto?",
+    "options": [
+      "Não, é exagerada, mas reflete uma dificuldade real de exploração",
+      "Sim, é uma medição científica exata",
+      "Não, é completamente falsa e sem nenhum fundamento",
+      "Sim, comprovada por satélites"
+    ],
+    "correct_answer": "Não, é exagerada, mas reflete uma dificuldade real de exploração",
+    "explanation": "É comum ouvir que a humanidade conhece melhor a superfície da Lua do que o fundo dos próprios oceanos da Terra — uma afirmação exagerada, mas que reflete uma realidade real: até poucos anos atrás, apenas uma fração relativamente pequena do leito oceânico havia sido mapeada com boa qualidade de detalhe. A dificuldade de explorar as profundezas do oceano se deve a fatores como a pressão extrema da água, a ausência total de luz solar e as temperaturas muito baixas encontradas a grandes profundidades.",
+    "reading_passage": "É comum ouvir que a humanidade conhece melhor a superfície da Lua do que o fundo dos próprios oceanos da Terra — uma afirmação exagerada, mas que reflete uma realidade real: até poucos anos atrás, apenas uma fração relativamente pequena do leito oceânico havia sido mapeada com boa qualidade de detalhe. A dificuldade de explorar as profundezas do oceano se deve a fatores como a pressão extrema da água, a ausência total de luz solar e as temperaturas muito baixas encontradas a grandes profundidades.",
+    "hints": [
+      "Releia 'Por que conhecemos mais o espaço do que o fundo do oceano?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Qual papel fundamental os oceanos desempenham, segundo o texto?",
+    "options": [
+      "Regulação do clima do planeta",
+      "Produção de toda a água doce do mundo",
+      "Controle exclusivo das marés lunares",
+      "Geração de toda a energia elétrica mundial"
+    ],
+    "correct_answer": "Regulação do clima do planeta",
+    "explanation": "Os oceanos desempenham papel fundamental na regulação do clima do planeta, absorvendo grande parte do calor e do dióxido de carbono presentes na atmosfera. Correntes marítimas, movimentos de água que circulam por todo o globo, ajudam a redistribuir calor entre diferentes regiões, influenciando padrões climáticos que afetam até áreas terrestres distantes da costa. Sem esse papel regulador dos oceanos, o clima da Terra seria significativamente mais instável e extremo do que é hoje.",
+    "reading_passage": "Os oceanos desempenham papel fundamental na regulação do clima do planeta, absorvendo grande parte do calor e do dióxido de carbono presentes na atmosfera. Correntes marítimas, movimentos de água que circulam por todo o globo, ajudam a redistribuir calor entre diferentes regiões, influenciando padrões climáticos que afetam até áreas terrestres distantes da costa. Sem esse papel regulador dos oceanos, o clima da Terra seria significativamente mais instável e extremo do que é hoje.",
+    "hints": [
+      "Releia 'O papel dos oceanos na regulação do clima' — a resposta está no texto.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que as correntes marítimas ajudam a fazer, segundo o texto?",
+    "options": [
+      "Redistribuir calor entre diferentes regiões do globo",
+      "Impedir totalmente a formação de furacões",
+      "Eliminar o dióxido de carbono da atmosfera por completo",
+      "Controlar o horário das marés em todo o mundo"
+    ],
+    "correct_answer": "Redistribuir calor entre diferentes regiões do globo",
+    "explanation": "Os oceanos desempenham papel fundamental na regulação do clima do planeta, absorvendo grande parte do calor e do dióxido de carbono presentes na atmosfera. Correntes marítimas, movimentos de água que circulam por todo o globo, ajudam a redistribuir calor entre diferentes regiões, influenciando padrões climáticos que afetam até áreas terrestres distantes da costa. Sem esse papel regulador dos oceanos, o clima da Terra seria significativamente mais instável e extremo do que é hoje.",
+    "reading_passage": "Os oceanos desempenham papel fundamental na regulação do clima do planeta, absorvendo grande parte do calor e do dióxido de carbono presentes na atmosfera. Correntes marítimas, movimentos de água que circulam por todo o globo, ajudam a redistribuir calor entre diferentes regiões, influenciando padrões climáticos que afetam até áreas terrestres distantes da costa. Sem esse papel regulador dos oceanos, o clima da Terra seria significativamente mais instável e extremo do que é hoje.",
+    "hints": [
+      "Releia 'O papel dos oceanos na regulação do clima' — a resposta está no texto.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceria sem o papel regulador dos oceanos, segundo o texto?",
+    "options": [
+      "O clima da Terra seria significativamente mais instável e extremo",
+      "O clima seria exatamente igual ao de hoje",
+      "As estações do ano deixariam de existir",
+      "A temperatura da Terra cairia a zero graus"
+    ],
+    "correct_answer": "O clima da Terra seria significativamente mais instável e extremo",
+    "explanation": "Os oceanos desempenham papel fundamental na regulação do clima do planeta, absorvendo grande parte do calor e do dióxido de carbono presentes na atmosfera. Correntes marítimas, movimentos de água que circulam por todo o globo, ajudam a redistribuir calor entre diferentes regiões, influenciando padrões climáticos que afetam até áreas terrestres distantes da costa. Sem esse papel regulador dos oceanos, o clima da Terra seria significativamente mais instável e extremo do que é hoje.",
+    "reading_passage": "Os oceanos desempenham papel fundamental na regulação do clima do planeta, absorvendo grande parte do calor e do dióxido de carbono presentes na atmosfera. Correntes marítimas, movimentos de água que circulam por todo o globo, ajudam a redistribuir calor entre diferentes regiões, influenciando padrões climáticos que afetam até áreas terrestres distantes da costa. Sem esse papel regulador dos oceanos, o clima da Terra seria significativamente mais instável e extremo do que é hoje.",
+    "hints": [
+      "Releia 'O papel dos oceanos na regulação do clima' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "O número de espécies marinhas já catalogadas representa o total real existente, segundo o texto?",
+    "options": [
+      "Não, é apenas uma fração do total real estimado",
+      "Sim, já catalogamos absolutamente todas as espécies",
+      "Sim, mas apenas nas águas rasas",
+      "Não, catalogamos menos de 1% de qualquer estimativa"
+    ],
+    "correct_answer": "Não, é apenas uma fração do total real estimado",
+    "explanation": "Estima-se que existam centenas de milhares de espécies marinhas já catalogadas pela ciência, mas pesquisadores acreditam que esse número represente apenas uma fração do total real de espécies existentes nos oceanos — possivelmente, ainda restam milhões de espécies não descobertas ou não formalmente descritas, especialmente nas regiões mais profundas e menos exploradas. Esse dado reforça a ideia de que os oceanos ainda guardam uma quantidade imensa de conhecimento biológico por descobrir.",
+    "reading_passage": "Estima-se que existam centenas de milhares de espécies marinhas já catalogadas pela ciência, mas pesquisadores acreditam que esse número represente apenas uma fração do total real de espécies existentes nos oceanos — possivelmente, ainda restam milhões de espécies não descobertas ou não formalmente descritas, especialmente nas regiões mais profundas e menos exploradas. Esse dado reforça a ideia de que os oceanos ainda guardam uma quantidade imensa de conhecimento biológico por descobrir.",
+    "hints": [
+      "Releia 'Quantas espécies marinhas ainda não conhecemos?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Onde estão concentradas as espécies ainda não descobertas, segundo o texto?",
+    "options": [
+      "Nas regiões mais profundas e menos exploradas",
+      "Exclusivamente em rios de água doce",
+      "Apenas em praias muito visitadas",
+      "Somente em aquários de pesquisa"
+    ],
+    "correct_answer": "Nas regiões mais profundas e menos exploradas",
+    "explanation": "Estima-se que existam centenas de milhares de espécies marinhas já catalogadas pela ciência, mas pesquisadores acreditam que esse número represente apenas uma fração do total real de espécies existentes nos oceanos — possivelmente, ainda restam milhões de espécies não descobertas ou não formalmente descritas, especialmente nas regiões mais profundas e menos exploradas. Esse dado reforça a ideia de que os oceanos ainda guardam uma quantidade imensa de conhecimento biológico por descobrir.",
+    "reading_passage": "Estima-se que existam centenas de milhares de espécies marinhas já catalogadas pela ciência, mas pesquisadores acreditam que esse número represente apenas uma fração do total real de espécies existentes nos oceanos — possivelmente, ainda restam milhões de espécies não descobertas ou não formalmente descritas, especialmente nas regiões mais profundas e menos exploradas. Esse dado reforça a ideia de que os oceanos ainda guardam uma quantidade imensa de conhecimento biológico por descobrir.",
+    "hints": [
+      "Releia 'Quantas espécies marinhas ainda não conhecemos?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que esse dado reforça, segundo o texto?",
+    "options": [
+      "Que os oceanos ainda guardam uma quantidade imensa de conhecimento biológico por descobrir",
+      "Que não existe mais nada a descobrir nos oceanos",
+      "Que todas as espécies marinhas já foram extintas",
+      "Que a vida marinha é mais simples do que a terrestre"
+    ],
+    "correct_answer": "Que os oceanos ainda guardam uma quantidade imensa de conhecimento biológico por descobrir",
+    "explanation": "Estima-se que existam centenas de milhares de espécies marinhas já catalogadas pela ciência, mas pesquisadores acreditam que esse número represente apenas uma fração do total real de espécies existentes nos oceanos — possivelmente, ainda restam milhões de espécies não descobertas ou não formalmente descritas, especialmente nas regiões mais profundas e menos exploradas. Esse dado reforça a ideia de que os oceanos ainda guardam uma quantidade imensa de conhecimento biológico por descobrir.",
+    "reading_passage": "Estima-se que existam centenas de milhares de espécies marinhas já catalogadas pela ciência, mas pesquisadores acreditam que esse número represente apenas uma fração do total real de espécies existentes nos oceanos — possivelmente, ainda restam milhões de espécies não descobertas ou não formalmente descritas, especialmente nas regiões mais profundas e menos exploradas. Esse dado reforça a ideia de que os oceanos ainda guardam uma quantidade imensa de conhecimento biológico por descobrir.",
+    "hints": [
+      "Releia 'Quantas espécies marinhas ainda não conhecemos?' — a resposta está no texto.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "O fundo do oceano tem relevo variado, semelhante à superfície terrestre?",
+    "options": [
+      "Sim, incluindo montanhas submersas, planícies e fossas",
+      "Não, o fundo do mar é sempre completamente plano",
+      "Sim, mas apenas em um único oceano do mundo",
+      "Não, o relevo marinho não existe de fato"
+    ],
+    "correct_answer": "Sim, incluindo montanhas submersas, planícies e fossas",
+    "explanation": "Assim como a superfície terrestre tem montanhas, vales e planícies, o fundo do oceano também apresenta um relevo bastante variado, incluindo cadeias de montanhas submersas (formadas pelo movimento de placas tectônicas), vastas planícies abissais e fossas profundas, como a própria Fossa das Marianas. Esse relevo submerso é resultado dos mesmos processos geológicos que moldam os continentes, só que acontecendo debaixo d'água, longe da observação direta e cotidiana das pessoas.",
+    "reading_passage": "Assim como a superfície terrestre tem montanhas, vales e planícies, o fundo do oceano também apresenta um relevo bastante variado, incluindo cadeias de montanhas submersas (formadas pelo movimento de placas tectônicas), vastas planícies abissais e fossas profundas, como a própria Fossa das Marianas. Esse relevo submerso é resultado dos mesmos processos geológicos que moldam os continentes, só que acontecendo debaixo d'água, longe da observação direta e cotidiana das pessoas.",
+    "hints": [
+      "Releia 'O relevo escondido no fundo do mar' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "O que forma as cadeias de montanhas submersas, segundo o texto?",
+    "options": [
+      "O movimento de placas tectônicas",
+      "A ação exclusiva de correntes marítimas",
+      "O derretimento de icebergs polares",
+      "A atividade de organismos marinhos"
+    ],
+    "correct_answer": "O movimento de placas tectônicas",
+    "explanation": "Assim como a superfície terrestre tem montanhas, vales e planícies, o fundo do oceano também apresenta um relevo bastante variado, incluindo cadeias de montanhas submersas (formadas pelo movimento de placas tectônicas), vastas planícies abissais e fossas profundas, como a própria Fossa das Marianas. Esse relevo submerso é resultado dos mesmos processos geológicos que moldam os continentes, só que acontecendo debaixo d'água, longe da observação direta e cotidiana das pessoas.",
+    "reading_passage": "Assim como a superfície terrestre tem montanhas, vales e planícies, o fundo do oceano também apresenta um relevo bastante variado, incluindo cadeias de montanhas submersas (formadas pelo movimento de placas tectônicas), vastas planícies abissais e fossas profundas, como a própria Fossa das Marianas. Esse relevo submerso é resultado dos mesmos processos geológicos que moldam os continentes, só que acontecendo debaixo d'água, longe da observação direta e cotidiana das pessoas.",
+    "hints": [
+      "Releia 'O relevo escondido no fundo do mar' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "O relevo do fundo do mar é resultado de quê, segundo o texto?",
+    "options": [
+      "Dos mesmos processos geológicos que moldam os continentes",
+      "De processos completamente diferentes dos continentais",
+      "Exclusivamente da ação humana",
+      "De fenômenos que ainda não têm nenhuma explicação científica"
+    ],
+    "correct_answer": "Dos mesmos processos geológicos que moldam os continentes",
+    "explanation": "Assim como a superfície terrestre tem montanhas, vales e planícies, o fundo do oceano também apresenta um relevo bastante variado, incluindo cadeias de montanhas submersas (formadas pelo movimento de placas tectônicas), vastas planícies abissais e fossas profundas, como a própria Fossa das Marianas. Esse relevo submerso é resultado dos mesmos processos geológicos que moldam os continentes, só que acontecendo debaixo d'água, longe da observação direta e cotidiana das pessoas.",
+    "reading_passage": "Assim como a superfície terrestre tem montanhas, vales e planícies, o fundo do oceano também apresenta um relevo bastante variado, incluindo cadeias de montanhas submersas (formadas pelo movimento de placas tectônicas), vastas planícies abissais e fossas profundas, como a própria Fossa das Marianas. Esse relevo submerso é resultado dos mesmos processos geológicos que moldam os continentes, só que acontecendo debaixo d'água, longe da observação direta e cotidiana das pessoas.",
+    "hints": [
+      "Releia 'O relevo escondido no fundo do mar' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Que tipo de condições extremas são encontradas na Fossa das Marianas, segundo o texto?",
+    "options": [
+      "Escuridão total, temperaturas baixas e pressão extrema",
+      "Calor intenso e luz solar direta constante",
+      "Ventos fortes e chuva constante",
+      "Ausência total de água líquida"
+    ],
+    "correct_answer": "Escuridão total, temperaturas baixas e pressão extrema",
+    "explanation": "Mesmo em condições consideradas hostis à maioria das formas de vida conhecidas — escuridão total, temperaturas próximas ao congelamento e pressão centenas de vezes maior do que na superfície — expedições científicas já registraram organismos vivos adaptados a esse ambiente extremo na Fossa das Marianas, incluindo microrganismos resistentes à alta pressão e criaturas como pepinos-do-mar e certos tipos de peixes adaptados à escuridão. Esse tipo de descoberta desperta interesse até entre cientistas que estudam a possibilidade de vida em outros planetas, já que as condições extremas do fundo do oceano lembram, em alguns aspectos, ambientes hostis encontrados fora da Terra.",
+    "reading_passage": "Mesmo em condições consideradas hostis à maioria das formas de vida conhecidas — escuridão total, temperaturas próximas ao congelamento e pressão centenas de vezes maior do que na superfície — expedições científicas já registraram organismos vivos adaptados a esse ambiente extremo na Fossa das Marianas, incluindo microrganismos resistentes à alta pressão e criaturas como pepinos-do-mar e certos tipos de peixes adaptados à escuridão. Esse tipo de descoberta desperta interesse até entre cientistas que estudam a possibilidade de vida em outros planetas, já que as condições extremas do fundo do oceano lembram, em alguns aspectos, ambientes hostis encontrados fora da Terra.",
+    "hints": [
+      "Releia 'Vida em condições extremas: os organismos da Fossa das Marianas' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Cite um organismo mencionado no texto como encontrado nessas condições extremas.",
+    "options": [
+      "Pepino-do-mar",
+      "Tubarão-branco",
+      "Golfinho comum",
+      "Baleia-azul"
+    ],
+    "correct_answer": "Pepino-do-mar",
+    "explanation": "Mesmo em condições consideradas hostis à maioria das formas de vida conhecidas — escuridão total, temperaturas próximas ao congelamento e pressão centenas de vezes maior do que na superfície — expedições científicas já registraram organismos vivos adaptados a esse ambiente extremo na Fossa das Marianas, incluindo microrganismos resistentes à alta pressão e criaturas como pepinos-do-mar e certos tipos de peixes adaptados à escuridão. Esse tipo de descoberta desperta interesse até entre cientistas que estudam a possibilidade de vida em outros planetas, já que as condições extremas do fundo do oceano lembram, em alguns aspectos, ambientes hostis encontrados fora da Terra.",
+    "reading_passage": "Mesmo em condições consideradas hostis à maioria das formas de vida conhecidas — escuridão total, temperaturas próximas ao congelamento e pressão centenas de vezes maior do que na superfície — expedições científicas já registraram organismos vivos adaptados a esse ambiente extremo na Fossa das Marianas, incluindo microrganismos resistentes à alta pressão e criaturas como pepinos-do-mar e certos tipos de peixes adaptados à escuridão. Esse tipo de descoberta desperta interesse até entre cientistas que estudam a possibilidade de vida em outros planetas, já que as condições extremas do fundo do oceano lembram, em alguns aspectos, ambientes hostis encontrados fora da Terra.",
+    "hints": [
+      "Releia 'Vida em condições extremas: os organismos da Fossa das Marianas' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_mundo",
+    "difficulty_level": 1,
+    "prompt": "Por que essas descobertas interessam também a cientistas que estudam outros planetas, segundo o texto?",
+    "options": [
+      "As condições extremas do fundo do oceano lembram ambientes hostis fora da Terra",
+      "Porque esses organismos já foram enviados ao espaço",
+      "Porque esses cientistas só estudam o oceano, não outros planetas",
+      "Porque não existe nenhuma relação real entre os dois campos"
+    ],
+    "correct_answer": "As condições extremas do fundo do oceano lembram ambientes hostis fora da Terra",
+    "explanation": "Mesmo em condições consideradas hostis à maioria das formas de vida conhecidas — escuridão total, temperaturas próximas ao congelamento e pressão centenas de vezes maior do que na superfície — expedições científicas já registraram organismos vivos adaptados a esse ambiente extremo na Fossa das Marianas, incluindo microrganismos resistentes à alta pressão e criaturas como pepinos-do-mar e certos tipos de peixes adaptados à escuridão. Esse tipo de descoberta desperta interesse até entre cientistas que estudam a possibilidade de vida em outros planetas, já que as condições extremas do fundo do oceano lembram, em alguns aspectos, ambientes hostis encontrados fora da Terra.",
+    "reading_passage": "Mesmo em condições consideradas hostis à maioria das formas de vida conhecidas — escuridão total, temperaturas próximas ao congelamento e pressão centenas de vezes maior do que na superfície — expedições científicas já registraram organismos vivos adaptados a esse ambiente extremo na Fossa das Marianas, incluindo microrganismos resistentes à alta pressão e criaturas como pepinos-do-mar e certos tipos de peixes adaptados à escuridão. Esse tipo de descoberta desperta interesse até entre cientistas que estudam a possibilidade de vida em outros planetas, já que as condições extremas do fundo do oceano lembram, em alguns aspectos, ambientes hostis encontrados fora da Terra.",
+    "hints": [
+      "Releia 'Vida em condições extremas: os organismos da Fossa das Marianas' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  }
+]

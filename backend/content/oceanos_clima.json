@@ -1,0 +1,458 @@
+[
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que são correntes oceânicas?",
+    "options": [
+      "Grandes deslocamentos de água que se movem pelos oceanos em direções específicas",
+      "Pequenas ondas formadas apenas perto da costa",
+      "Áreas paradas do oceano sem nenhum movimento",
+      "Um tipo de tempestade exclusiva de regiões polares"
+    ],
+    "correct_answer": "Grandes deslocamentos de água que se movem pelos oceanos em direções específicas",
+    "explanation": "Correntes oceânicas são grandes deslocamentos de água que se movem por todos os oceanos em direções específicas, influenciados por fatores como ventos, a rotação da Terra, e diferenças de temperatura e salinidade da água. De forma geral, correntes quentes nascem em regiões tropicais e se deslocam em direção aos polos, enquanto correntes frias fazem o caminho inverso, das regiões polares em direção ao equador. Esse movimento constante de água tem influência direta sobre o clima de regiões inteiras, além de afetar diretamente a atividade pesqueira em diferentes partes do mundo.",
+    "reading_passage": "Correntes oceânicas são grandes deslocamentos de água que se movem por todos os oceanos em direções específicas, influenciados por fatores como ventos, a rotação da Terra, e diferenças de temperatura e salinidade da água. De forma geral, correntes quentes nascem em regiões tropicais e se deslocam em direção aos polos, enquanto correntes frias fazem o caminho inverso, das regiões polares em direção ao equador. Esse movimento constante de água tem influência direta sobre o clima de regiões inteiras, além de afetar diretamente a atividade pesqueira em diferentes partes do mundo.",
+    "hints": [
+      "Releia 'O que são correntes oceânicas?' — a resposta está no texto.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Para onde costumam se deslocar as correntes quentes, segundo o texto?",
+    "options": [
+      "Das regiões tropicais em direção aos polos",
+      "Dos polos em direção ao equador",
+      "Sempre para o fundo do oceano",
+      "Apenas dentro do mesmo oceano, sem cruzar regiões"
+    ],
+    "correct_answer": "Das regiões tropicais em direção aos polos",
+    "explanation": "Correntes oceânicas são grandes deslocamentos de água que se movem por todos os oceanos em direções específicas, influenciados por fatores como ventos, a rotação da Terra, e diferenças de temperatura e salinidade da água. De forma geral, correntes quentes nascem em regiões tropicais e se deslocam em direção aos polos, enquanto correntes frias fazem o caminho inverso, das regiões polares em direção ao equador. Esse movimento constante de água tem influência direta sobre o clima de regiões inteiras, além de afetar diretamente a atividade pesqueira em diferentes partes do mundo.",
+    "reading_passage": "Correntes oceânicas são grandes deslocamentos de água que se movem por todos os oceanos em direções específicas, influenciados por fatores como ventos, a rotação da Terra, e diferenças de temperatura e salinidade da água. De forma geral, correntes quentes nascem em regiões tropicais e se deslocam em direção aos polos, enquanto correntes frias fazem o caminho inverso, das regiões polares em direção ao equador. Esse movimento constante de água tem influência direta sobre o clima de regiões inteiras, além de afetar diretamente a atividade pesqueira em diferentes partes do mundo.",
+    "hints": [
+      "Releia 'O que são correntes oceânicas?' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Além do clima, o que mais as correntes oceânicas afetam diretamente, segundo o texto?",
+    "options": [
+      "A atividade pesqueira",
+      "O horário das marés altas",
+      "A cor do céu durante o dia",
+      "O número de vulcões ativos"
+    ],
+    "correct_answer": "A atividade pesqueira",
+    "explanation": "Correntes oceânicas são grandes deslocamentos de água que se movem por todos os oceanos em direções específicas, influenciados por fatores como ventos, a rotação da Terra, e diferenças de temperatura e salinidade da água. De forma geral, correntes quentes nascem em regiões tropicais e se deslocam em direção aos polos, enquanto correntes frias fazem o caminho inverso, das regiões polares em direção ao equador. Esse movimento constante de água tem influência direta sobre o clima de regiões inteiras, além de afetar diretamente a atividade pesqueira em diferentes partes do mundo.",
+    "reading_passage": "Correntes oceânicas são grandes deslocamentos de água que se movem por todos os oceanos em direções específicas, influenciados por fatores como ventos, a rotação da Terra, e diferenças de temperatura e salinidade da água. De forma geral, correntes quentes nascem em regiões tropicais e se deslocam em direção aos polos, enquanto correntes frias fazem o caminho inverso, das regiões polares em direção ao equador. Esse movimento constante de água tem influência direta sobre o clima de regiões inteiras, além de afetar diretamente a atividade pesqueira em diferentes partes do mundo.",
+    "hints": [
+      "Releia 'O que são correntes oceânicas?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Onde a Corrente do Golfo tem sua origem, segundo o texto?",
+    "options": [
+      "Próxima ao Golfo do México",
+      "Próxima à Antártida",
+      "No Oceano Índico",
+      "No Ártico"
+    ],
+    "correct_answer": "Próxima ao Golfo do México",
+    "explanation": "A Corrente do Golfo é uma das correntes oceânicas mais conhecidas e estudadas do mundo, surgindo próxima ao Golfo do México e seguindo em direção à Europa, carregando um volume de água muito maior do que todos os rios do planeta somados. Essa corrente quente é responsável por manter boa parte do norte da Europa com um clima significativamente mais ameno do que o esperado para regiões situadas em latitudes tão altas — sem essa influência, países como a Noruega provavelmente teriam invernos muito mais rigorosos do que os registrados atualmente.",
+    "reading_passage": "A Corrente do Golfo é uma das correntes oceânicas mais conhecidas e estudadas do mundo, surgindo próxima ao Golfo do México e seguindo em direção à Europa, carregando um volume de água muito maior do que todos os rios do planeta somados. Essa corrente quente é responsável por manter boa parte do norte da Europa com um clima significativamente mais ameno do que o esperado para regiões situadas em latitudes tão altas — sem essa influência, países como a Noruega provavelmente teriam invernos muito mais rigorosos do que os registrados atualmente.",
+    "hints": [
+      "Releia 'A Corrente do Golfo e seu impacto no clima europeu' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Qual é o efeito da Corrente do Golfo sobre o clima do norte da Europa?",
+    "options": [
+      "Mantém o clima significativamente mais ameno do que o esperado",
+      "Torna o clima extremamente mais frio",
+      "Não tem nenhuma influência real no clima europeu",
+      "Causa secas prolongadas na região"
+    ],
+    "correct_answer": "Mantém o clima significativamente mais ameno do que o esperado",
+    "explanation": "A Corrente do Golfo é uma das correntes oceânicas mais conhecidas e estudadas do mundo, surgindo próxima ao Golfo do México e seguindo em direção à Europa, carregando um volume de água muito maior do que todos os rios do planeta somados. Essa corrente quente é responsável por manter boa parte do norte da Europa com um clima significativamente mais ameno do que o esperado para regiões situadas em latitudes tão altas — sem essa influência, países como a Noruega provavelmente teriam invernos muito mais rigorosos do que os registrados atualmente.",
+    "reading_passage": "A Corrente do Golfo é uma das correntes oceânicas mais conhecidas e estudadas do mundo, surgindo próxima ao Golfo do México e seguindo em direção à Europa, carregando um volume de água muito maior do que todos os rios do planeta somados. Essa corrente quente é responsável por manter boa parte do norte da Europa com um clima significativamente mais ameno do que o esperado para regiões situadas em latitudes tão altas — sem essa influência, países como a Noruega provavelmente teriam invernos muito mais rigorosos do que os registrados atualmente.",
+    "hints": [
+      "Releia 'A Corrente do Golfo e seu impacto no clima europeu' — a resposta está no texto.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceria com países como a Noruega sem essa influência, segundo o texto?",
+    "options": [
+      "Provavelmente teriam invernos muito mais rigorosos",
+      "Teriam verões mais quentes do que hoje",
+      "Não sofreriam nenhuma mudança perceptível",
+      "Se tornariam desertos áridos"
+    ],
+    "correct_answer": "Provavelmente teriam invernos muito mais rigorosos",
+    "explanation": "A Corrente do Golfo é uma das correntes oceânicas mais conhecidas e estudadas do mundo, surgindo próxima ao Golfo do México e seguindo em direção à Europa, carregando um volume de água muito maior do que todos os rios do planeta somados. Essa corrente quente é responsável por manter boa parte do norte da Europa com um clima significativamente mais ameno do que o esperado para regiões situadas em latitudes tão altas — sem essa influência, países como a Noruega provavelmente teriam invernos muito mais rigorosos do que os registrados atualmente.",
+    "reading_passage": "A Corrente do Golfo é uma das correntes oceânicas mais conhecidas e estudadas do mundo, surgindo próxima ao Golfo do México e seguindo em direção à Europa, carregando um volume de água muito maior do que todos os rios do planeta somados. Essa corrente quente é responsável por manter boa parte do norte da Europa com um clima significativamente mais ameno do que o esperado para regiões situadas em latitudes tão altas — sem essa influência, países como a Noruega provavelmente teriam invernos muito mais rigorosos do que os registrados atualmente.",
+    "hints": [
+      "Releia 'A Corrente do Golfo e seu impacto no clima europeu' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que impulsiona as correntes oceânicas profundas, segundo o texto?",
+    "options": [
+      "Diferenças de temperatura e salinidade da água",
+      "Exclusivamente a força do vento",
+      "O calor emitido por vulcões submarinos",
+      "A luz solar direta na superfície"
+    ],
+    "correct_answer": "Diferenças de temperatura e salinidade da água",
+    "explanation": "Além das correntes superficiais, movidas principalmente pelo vento, existem correntes oceânicas profundas, impulsionadas por diferenças de temperatura e salinidade da água — fenômeno chamado de circulação termohalina (termo que combina as palavras relacionadas a temperatura e a sal). Quando a água do mar congela nas regiões polares, o sal presente nela permanece na água ao redor, tornando-a mais densa e salgada; essa água densa afunda, dando início a um movimento contínuo de correntes profundas que circulam por todos os oceanos do planeta.",
+    "reading_passage": "Além das correntes superficiais, movidas principalmente pelo vento, existem correntes oceânicas profundas, impulsionadas por diferenças de temperatura e salinidade da água — fenômeno chamado de circulação termohalina (termo que combina as palavras relacionadas a temperatura e a sal). Quando a água do mar congela nas regiões polares, o sal presente nela permanece na água ao redor, tornando-a mais densa e salgada; essa água densa afunda, dando início a um movimento contínuo de correntes profundas que circulam por todos os oceanos do planeta.",
+    "hints": [
+      "Releia 'Circulação termohalina: o motor das correntes profundas' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que acontece com o sal quando a água do mar congela nas regiões polares?",
+    "options": [
+      "Permanece na água ao redor, tornando-a mais densa e salgada",
+      "Evapora junto com a água congelada",
+      "Desaparece completamente do oceano",
+      "Se transforma em gelo junto com a água"
+    ],
+    "correct_answer": "Permanece na água ao redor, tornando-a mais densa e salgada",
+    "explanation": "Além das correntes superficiais, movidas principalmente pelo vento, existem correntes oceânicas profundas, impulsionadas por diferenças de temperatura e salinidade da água — fenômeno chamado de circulação termohalina (termo que combina as palavras relacionadas a temperatura e a sal). Quando a água do mar congela nas regiões polares, o sal presente nela permanece na água ao redor, tornando-a mais densa e salgada; essa água densa afunda, dando início a um movimento contínuo de correntes profundas que circulam por todos os oceanos do planeta.",
+    "reading_passage": "Além das correntes superficiais, movidas principalmente pelo vento, existem correntes oceânicas profundas, impulsionadas por diferenças de temperatura e salinidade da água — fenômeno chamado de circulação termohalina (termo que combina as palavras relacionadas a temperatura e a sal). Quando a água do mar congela nas regiões polares, o sal presente nela permanece na água ao redor, tornando-a mais densa e salgada; essa água densa afunda, dando início a um movimento contínuo de correntes profundas que circulam por todos os oceanos do planeta.",
+    "hints": [
+      "Releia 'Circulação termohalina: o motor das correntes profundas' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que acontece com a água mais densa e salgada formada nesse processo?",
+    "options": [
+      "Afunda, dando início a correntes profundas",
+      "Sobe imediatamente à superfície",
+      "Permanece completamente parada",
+      "Se transforma em vapor instantaneamente"
+    ],
+    "correct_answer": "Afunda, dando início a correntes profundas",
+    "explanation": "Além das correntes superficiais, movidas principalmente pelo vento, existem correntes oceânicas profundas, impulsionadas por diferenças de temperatura e salinidade da água — fenômeno chamado de circulação termohalina (termo que combina as palavras relacionadas a temperatura e a sal). Quando a água do mar congela nas regiões polares, o sal presente nela permanece na água ao redor, tornando-a mais densa e salgada; essa água densa afunda, dando início a um movimento contínuo de correntes profundas que circulam por todos os oceanos do planeta.",
+    "reading_passage": "Além das correntes superficiais, movidas principalmente pelo vento, existem correntes oceânicas profundas, impulsionadas por diferenças de temperatura e salinidade da água — fenômeno chamado de circulação termohalina (termo que combina as palavras relacionadas a temperatura e a sal). Quando a água do mar congela nas regiões polares, o sal presente nela permanece na água ao redor, tornando-a mais densa e salgada; essa água densa afunda, dando início a um movimento contínuo de correntes profundas que circulam por todos os oceanos do planeta.",
+    "hints": [
+      "Releia 'Circulação termohalina: o motor das correntes profundas' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que caracteriza o fenômeno El Niño?",
+    "options": [
+      "Aquecimento anormal das águas superficiais do Pacífico Equatorial",
+      "Resfriamento intenso do Oceano Atlântico",
+      "Aumento do nível do mar em todo o planeta",
+      "Formação de furacões exclusivamente no Caribe"
+    ],
+    "correct_answer": "Aquecimento anormal das águas superficiais do Pacífico Equatorial",
+    "explanation": "El Niño é o nome dado a um fenômeno climático caracterizado pelo aquecimento anormal das águas superficiais do Oceano Pacífico Equatorial, principalmente na região próxima à costa oeste da América do Sul. Esse aquecimento altera padrões atmosféricos normais, afetando o regime de chuvas em diferentes partes do mundo — em algumas regiões causando chuvas mais intensas do que o habitual, e em outras contribuindo para períodos de seca mais prolongados do que o esperado.",
+    "reading_passage": "El Niño é o nome dado a um fenômeno climático caracterizado pelo aquecimento anormal das águas superficiais do Oceano Pacífico Equatorial, principalmente na região próxima à costa oeste da América do Sul. Esse aquecimento altera padrões atmosféricos normais, afetando o regime de chuvas em diferentes partes do mundo — em algumas regiões causando chuvas mais intensas do que o habitual, e em outras contribuindo para períodos de seca mais prolongados do que o esperado.",
+    "hints": [
+      "Releia 'O que é o fenômeno El Niño?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Próximo a que região o aquecimento do El Niño costuma ser mais notado, segundo o texto?",
+    "options": [
+      "Costa oeste da América do Sul",
+      "Costa leste da África",
+      "Norte da Europa",
+      "Sudeste Asiático"
+    ],
+    "correct_answer": "Costa oeste da América do Sul",
+    "explanation": "El Niño é o nome dado a um fenômeno climático caracterizado pelo aquecimento anormal das águas superficiais do Oceano Pacífico Equatorial, principalmente na região próxima à costa oeste da América do Sul. Esse aquecimento altera padrões atmosféricos normais, afetando o regime de chuvas em diferentes partes do mundo — em algumas regiões causando chuvas mais intensas do que o habitual, e em outras contribuindo para períodos de seca mais prolongados do que o esperado.",
+    "reading_passage": "El Niño é o nome dado a um fenômeno climático caracterizado pelo aquecimento anormal das águas superficiais do Oceano Pacífico Equatorial, principalmente na região próxima à costa oeste da América do Sul. Esse aquecimento altera padrões atmosféricos normais, afetando o regime de chuvas em diferentes partes do mundo — em algumas regiões causando chuvas mais intensas do que o habitual, e em outras contribuindo para períodos de seca mais prolongados do que o esperado.",
+    "hints": [
+      "Releia 'O que é o fenômeno El Niño?' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que o El Niño pode causar em diferentes regiões do mundo, segundo o texto?",
+    "options": [
+      "Chuvas mais intensas em algumas regiões e seca em outras",
+      "O mesmo efeito climático idêntico em todo o planeta",
+      "Nenhuma alteração perceptível no clima",
+      "Apenas mudanças na temperatura do ar, sem afetar chuvas"
+    ],
+    "correct_answer": "Chuvas mais intensas em algumas regiões e seca em outras",
+    "explanation": "El Niño é o nome dado a um fenômeno climático caracterizado pelo aquecimento anormal das águas superficiais do Oceano Pacífico Equatorial, principalmente na região próxima à costa oeste da América do Sul. Esse aquecimento altera padrões atmosféricos normais, afetando o regime de chuvas em diferentes partes do mundo — em algumas regiões causando chuvas mais intensas do que o habitual, e em outras contribuindo para períodos de seca mais prolongados do que o esperado.",
+    "reading_passage": "El Niño é o nome dado a um fenômeno climático caracterizado pelo aquecimento anormal das águas superficiais do Oceano Pacífico Equatorial, principalmente na região próxima à costa oeste da América do Sul. Esse aquecimento altera padrões atmosféricos normais, afetando o regime de chuvas em diferentes partes do mundo — em algumas regiões causando chuvas mais intensas do que o habitual, e em outras contribuindo para períodos de seca mais prolongados do que o esperado.",
+    "hints": [
+      "Releia 'O que é o fenômeno El Niño?' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que caracteriza o fenômeno La Niña, segundo o texto?",
+    "options": [
+      "Resfriamento das águas superficiais do Pacífico Equatorial abaixo da média",
+      "Aquecimento intenso das águas do Atlântico Sul",
+      "Aumento da atividade vulcânica no Pacífico",
+      "Redução do nível do mar em todo o mundo"
+    ],
+    "correct_answer": "Resfriamento das águas superficiais do Pacífico Equatorial abaixo da média",
+    "explanation": "La Niña é o fenômeno climático oposto ao El Niño, caracterizado pelo resfriamento das águas superficiais do Oceano Pacífico Equatorial Central e Oriental, abaixo da média histórica esperada para a região. Assim como o El Niño, o La Niña também altera padrões climáticos globais, mas com efeitos frequentemente distintos — no Brasil, por exemplo, o fenômeno costuma estar associado a chuvas mais intensas em partes do Norte e Nordeste, e à passagem mais rápida de frentes frias na região Sul.",
+    "reading_passage": "La Niña é o fenômeno climático oposto ao El Niño, caracterizado pelo resfriamento das águas superficiais do Oceano Pacífico Equatorial Central e Oriental, abaixo da média histórica esperada para a região. Assim como o El Niño, o La Niña também altera padrões climáticos globais, mas com efeitos frequentemente distintos — no Brasil, por exemplo, o fenômeno costuma estar associado a chuvas mais intensas em partes do Norte e Nordeste, e à passagem mais rápida de frentes frias na região Sul.",
+    "hints": [
+      "Releia 'O que é La Niña, o fenômeno oposto ao El Niño?' — a resposta está no texto.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O La Niña é o fenômeno oposto a qual outro citado no texto?",
+    "options": [
+      "El Niño",
+      "Corrente do Golfo",
+      "Circulação termohalina",
+      "Corrente Circumpolar Antártica"
+    ],
+    "correct_answer": "El Niño",
+    "explanation": "La Niña é o fenômeno climático oposto ao El Niño, caracterizado pelo resfriamento das águas superficiais do Oceano Pacífico Equatorial Central e Oriental, abaixo da média histórica esperada para a região. Assim como o El Niño, o La Niña também altera padrões climáticos globais, mas com efeitos frequentemente distintos — no Brasil, por exemplo, o fenômeno costuma estar associado a chuvas mais intensas em partes do Norte e Nordeste, e à passagem mais rápida de frentes frias na região Sul.",
+    "reading_passage": "La Niña é o fenômeno climático oposto ao El Niño, caracterizado pelo resfriamento das águas superficiais do Oceano Pacífico Equatorial Central e Oriental, abaixo da média histórica esperada para a região. Assim como o El Niño, o La Niña também altera padrões climáticos globais, mas com efeitos frequentemente distintos — no Brasil, por exemplo, o fenômeno costuma estar associado a chuvas mais intensas em partes do Norte e Nordeste, e à passagem mais rápida de frentes frias na região Sul.",
+    "hints": [
+      "Releia 'O que é La Niña, o fenômeno oposto ao El Niño?' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Que efeito o La Niña costuma ter na região Sul do Brasil, segundo o texto?",
+    "options": [
+      "Passagem mais rápida de frentes frias",
+      "Seca extrema e prolongada",
+      "Aumento da temperatura média anual",
+      "Nenhum efeito perceptível"
+    ],
+    "correct_answer": "Passagem mais rápida de frentes frias",
+    "explanation": "La Niña é o fenômeno climático oposto ao El Niño, caracterizado pelo resfriamento das águas superficiais do Oceano Pacífico Equatorial Central e Oriental, abaixo da média histórica esperada para a região. Assim como o El Niño, o La Niña também altera padrões climáticos globais, mas com efeitos frequentemente distintos — no Brasil, por exemplo, o fenômeno costuma estar associado a chuvas mais intensas em partes do Norte e Nordeste, e à passagem mais rápida de frentes frias na região Sul.",
+    "reading_passage": "La Niña é o fenômeno climático oposto ao El Niño, caracterizado pelo resfriamento das águas superficiais do Oceano Pacífico Equatorial Central e Oriental, abaixo da média histórica esperada para a região. Assim como o El Niño, o La Niña também altera padrões climáticos globais, mas com efeitos frequentemente distintos — no Brasil, por exemplo, o fenômeno costuma estar associado a chuvas mais intensas em partes do Norte e Nordeste, e à passagem mais rápida de frentes frias na região Sul.",
+    "hints": [
+      "Releia 'O que é La Niña, o fenômeno oposto ao El Niño?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "El Niño e La Niña seguem um calendário fixo e regular de ocorrência?",
+    "options": [
+      "Não, alternam em ciclos que não seguem um calendário fixo",
+      "Sim, ocorrem exatamente a cada dois anos, sem exceção",
+      "Sim, sempre no mesmo mês de cada ano",
+      "Não, ocorrem apenas uma vez a cada século"
+    ],
+    "correct_answer": "Não, alternam em ciclos que não seguem um calendário fixo",
+    "explanation": "El Niño e La Niña fazem parte de um mesmo padrão climático-oceânico maior, que alterna entre fases de aquecimento e resfriamento do Pacífico Equatorial ao longo de ciclos que não seguem um calendário fixo e regular. Justamente por afetarem o clima em escala global, esses dois fenômenos são monitorados de perto por meteorologistas e usados como base importante para previsões climáticas de médio e longo prazo, ajudando, por exemplo, agricultores e gestores públicos a se prepararem para períodos de seca ou chuva mais intensos em suas regiões.",
+    "reading_passage": "El Niño e La Niña fazem parte de um mesmo padrão climático-oceânico maior, que alterna entre fases de aquecimento e resfriamento do Pacífico Equatorial ao longo de ciclos que não seguem um calendário fixo e regular. Justamente por afetarem o clima em escala global, esses dois fenômenos são monitorados de perto por meteorologistas e usados como base importante para previsões climáticas de médio e longo prazo, ajudando, por exemplo, agricultores e gestores públicos a se prepararem para períodos de seca ou chuva mais intensos em suas regiões.",
+    "hints": [
+      "Releia 'Por que El Niño e La Niña importam tanto para previsões climáticas?' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Por que esses fenômenos são monitorados de perto por meteorologistas, segundo o texto?",
+    "options": [
+      "Porque afetam o clima em escala global",
+      "Porque causam terremotos em todo o mundo",
+      "Porque só afetam um único país por vez",
+      "Porque são fenômenos raros e sem nenhuma relevância prática"
+    ],
+    "correct_answer": "Porque afetam o clima em escala global",
+    "explanation": "El Niño e La Niña fazem parte de um mesmo padrão climático-oceânico maior, que alterna entre fases de aquecimento e resfriamento do Pacífico Equatorial ao longo de ciclos que não seguem um calendário fixo e regular. Justamente por afetarem o clima em escala global, esses dois fenômenos são monitorados de perto por meteorologistas e usados como base importante para previsões climáticas de médio e longo prazo, ajudando, por exemplo, agricultores e gestores públicos a se prepararem para períodos de seca ou chuva mais intensos em suas regiões.",
+    "reading_passage": "El Niño e La Niña fazem parte de um mesmo padrão climático-oceânico maior, que alterna entre fases de aquecimento e resfriamento do Pacífico Equatorial ao longo de ciclos que não seguem um calendário fixo e regular. Justamente por afetarem o clima em escala global, esses dois fenômenos são monitorados de perto por meteorologistas e usados como base importante para previsões climáticas de médio e longo prazo, ajudando, por exemplo, agricultores e gestores públicos a se prepararem para períodos de seca ou chuva mais intensos em suas regiões.",
+    "hints": [
+      "Releia 'Por que El Niño e La Niña importam tanto para previsões climáticas?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Quem pode se beneficiar das previsões baseadas nesses fenômenos, segundo o texto?",
+    "options": [
+      "Agricultores e gestores públicos",
+      "Apenas pilotos de avião",
+      "Somente empresas de turismo",
+      "Exclusivamente pescadores de água doce"
+    ],
+    "correct_answer": "Agricultores e gestores públicos",
+    "explanation": "El Niño e La Niña fazem parte de um mesmo padrão climático-oceânico maior, que alterna entre fases de aquecimento e resfriamento do Pacífico Equatorial ao longo de ciclos que não seguem um calendário fixo e regular. Justamente por afetarem o clima em escala global, esses dois fenômenos são monitorados de perto por meteorologistas e usados como base importante para previsões climáticas de médio e longo prazo, ajudando, por exemplo, agricultores e gestores públicos a se prepararem para períodos de seca ou chuva mais intensos em suas regiões.",
+    "reading_passage": "El Niño e La Niña fazem parte de um mesmo padrão climático-oceânico maior, que alterna entre fases de aquecimento e resfriamento do Pacífico Equatorial ao longo de ciclos que não seguem um calendário fixo e regular. Justamente por afetarem o clima em escala global, esses dois fenômenos são monitorados de perto por meteorologistas e usados como base importante para previsões climáticas de médio e longo prazo, ajudando, por exemplo, agricultores e gestores públicos a se prepararem para períodos de seca ou chuva mais intensos em suas regiões.",
+    "hints": [
+      "Releia 'Por que El Niño e La Niña importam tanto para previsões climáticas?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que é acidificação dos oceanos?",
+    "options": [
+      "O processo pelo qual a água do mar se torna gradualmente mais ácida",
+      "O aumento da temperatura da água do mar",
+      "A formação de correntes oceânicas mais fortes",
+      "A redução do nível do mar ao longo do tempo"
+    ],
+    "correct_answer": "O processo pelo qual a água do mar se torna gradualmente mais ácida",
+    "explanation": "Acidificação dos oceanos é o processo pelo qual a água do mar se torna gradualmente mais ácida, principalmente devido à absorção de dióxido de carbono presente na atmosfera. Os oceanos absorvem uma parcela significativa do dióxido de carbono emitido, o que ajuda a reduzir a concentração desse gás no ar, mas gera, como consequência, uma alteração química na própria água do mar, com potencial de afetar organismos marinhos que dependem de conchas ou esqueletos calcários, como corais e certos moluscos.",
+    "reading_passage": "Acidificação dos oceanos é o processo pelo qual a água do mar se torna gradualmente mais ácida, principalmente devido à absorção de dióxido de carbono presente na atmosfera. Os oceanos absorvem uma parcela significativa do dióxido de carbono emitido, o que ajuda a reduzir a concentração desse gás no ar, mas gera, como consequência, uma alteração química na própria água do mar, com potencial de afetar organismos marinhos que dependem de conchas ou esqueletos calcários, como corais e certos moluscos.",
+    "hints": [
+      "Releia 'O que é a acidificação dos oceanos?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Qual é a principal causa da acidificação dos oceanos, segundo o texto?",
+    "options": [
+      "A absorção de dióxido de carbono da atmosfera",
+      "O derretimento de icebergs polares",
+      "O aumento da salinidade natural da água",
+      "A atividade vulcânica submarina constante"
+    ],
+    "correct_answer": "A absorção de dióxido de carbono da atmosfera",
+    "explanation": "Acidificação dos oceanos é o processo pelo qual a água do mar se torna gradualmente mais ácida, principalmente devido à absorção de dióxido de carbono presente na atmosfera. Os oceanos absorvem uma parcela significativa do dióxido de carbono emitido, o que ajuda a reduzir a concentração desse gás no ar, mas gera, como consequência, uma alteração química na própria água do mar, com potencial de afetar organismos marinhos que dependem de conchas ou esqueletos calcários, como corais e certos moluscos.",
+    "reading_passage": "Acidificação dos oceanos é o processo pelo qual a água do mar se torna gradualmente mais ácida, principalmente devido à absorção de dióxido de carbono presente na atmosfera. Os oceanos absorvem uma parcela significativa do dióxido de carbono emitido, o que ajuda a reduzir a concentração desse gás no ar, mas gera, como consequência, uma alteração química na própria água do mar, com potencial de afetar organismos marinhos que dependem de conchas ou esqueletos calcários, como corais e certos moluscos.",
+    "hints": [
+      "Releia 'O que é a acidificação dos oceanos?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Que tipo de organismo marinho pode ser especialmente afetado pela acidificação, segundo o texto?",
+    "options": [
+      "Organismos com conchas ou esqueletos calcários, como corais",
+      "Organismos que vivem exclusivamente em água doce",
+      "Apenas mamíferos marinhos de grande porte",
+      "Somente peixes de águas muito profundas"
+    ],
+    "correct_answer": "Organismos com conchas ou esqueletos calcários, como corais",
+    "explanation": "Acidificação dos oceanos é o processo pelo qual a água do mar se torna gradualmente mais ácida, principalmente devido à absorção de dióxido de carbono presente na atmosfera. Os oceanos absorvem uma parcela significativa do dióxido de carbono emitido, o que ajuda a reduzir a concentração desse gás no ar, mas gera, como consequência, uma alteração química na própria água do mar, com potencial de afetar organismos marinhos que dependem de conchas ou esqueletos calcários, como corais e certos moluscos.",
+    "reading_passage": "Acidificação dos oceanos é o processo pelo qual a água do mar se torna gradualmente mais ácida, principalmente devido à absorção de dióxido de carbono presente na atmosfera. Os oceanos absorvem uma parcela significativa do dióxido de carbono emitido, o que ajuda a reduzir a concentração desse gás no ar, mas gera, como consequência, uma alteração química na própria água do mar, com potencial de afetar organismos marinhos que dependem de conchas ou esqueletos calcários, como corais e certos moluscos.",
+    "hints": [
+      "Releia 'O que é a acidificação dos oceanos?' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que é branqueamento de corais?",
+    "options": [
+      "Um fenômeno em que corais expulsam microorganismos essenciais sob estresse ambiental",
+      "O crescimento acelerado de corais em águas frias",
+      "A cor natural de nascimento de todo coral jovem",
+      "Uma técnica usada para limpar recifes poluídos"
+    ],
+    "correct_answer": "Um fenômeno em que corais expulsam microorganismos essenciais sob estresse ambiental",
+    "explanation": "Branqueamento de corais é um fenômeno em que corais, sob condições de estresse ambiental — frequentemente relacionado ao aumento da temperatura da água — expulsam microorganismos que vivem em simbiose com eles e que são responsáveis por boa parte de sua coloração e de sua fonte de energia. Sem esses microorganismos, o coral fica com aparência esbranquiçada e mais vulnerável, podendo morrer caso as condições de estresse persistam por tempo prolongado, o que representa uma ameaça direta aos ecossistemas de recife discutidos anteriormente neste Mundo.",
+    "reading_passage": "Branqueamento de corais é um fenômeno em que corais, sob condições de estresse ambiental — frequentemente relacionado ao aumento da temperatura da água — expulsam microorganismos que vivem em simbiose com eles e que são responsáveis por boa parte de sua coloração e de sua fonte de energia. Sem esses microorganismos, o coral fica com aparência esbranquiçada e mais vulnerável, podendo morrer caso as condições de estresse persistam por tempo prolongado, o que representa uma ameaça direta aos ecossistemas de recife discutidos anteriormente neste Mundo.",
+    "hints": [
+      "Releia 'O que é o branqueamento de corais?' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "Qual fator é frequentemente relacionado ao branqueamento de corais, segundo o texto?",
+    "options": [
+      "Aumento da temperatura da água",
+      "Diminuição da salinidade do oceano",
+      "Excesso de luz lunar durante a noite",
+      "Aumento da profundidade do recife"
+    ],
+    "correct_answer": "Aumento da temperatura da água",
+    "explanation": "Branqueamento de corais é um fenômeno em que corais, sob condições de estresse ambiental — frequentemente relacionado ao aumento da temperatura da água — expulsam microorganismos que vivem em simbiose com eles e que são responsáveis por boa parte de sua coloração e de sua fonte de energia. Sem esses microorganismos, o coral fica com aparência esbranquiçada e mais vulnerável, podendo morrer caso as condições de estresse persistam por tempo prolongado, o que representa uma ameaça direta aos ecossistemas de recife discutidos anteriormente neste Mundo.",
+    "reading_passage": "Branqueamento de corais é um fenômeno em que corais, sob condições de estresse ambiental — frequentemente relacionado ao aumento da temperatura da água — expulsam microorganismos que vivem em simbiose com eles e que são responsáveis por boa parte de sua coloração e de sua fonte de energia. Sem esses microorganismos, o coral fica com aparência esbranquiçada e mais vulnerável, podendo morrer caso as condições de estresse persistam por tempo prolongado, o que representa uma ameaça direta aos ecossistemas de recife discutidos anteriormente neste Mundo.",
+    "hints": [
+      "Releia 'O que é o branqueamento de corais?' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_clima",
+    "difficulty_level": 1,
+    "prompt": "O que pode acontecer ao coral se as condições de estresse persistirem, segundo o texto?",
+    "options": [
+      "Pode morrer",
+      "Recupera a cor imediatamente sem nenhum risco",
+      "Se transforma em outra espécie de coral",
+      "Aumenta de tamanho rapidamente"
+    ],
+    "correct_answer": "Pode morrer",
+    "explanation": "Branqueamento de corais é um fenômeno em que corais, sob condições de estresse ambiental — frequentemente relacionado ao aumento da temperatura da água — expulsam microorganismos que vivem em simbiose com eles e que são responsáveis por boa parte de sua coloração e de sua fonte de energia. Sem esses microorganismos, o coral fica com aparência esbranquiçada e mais vulnerável, podendo morrer caso as condições de estresse persistam por tempo prolongado, o que representa uma ameaça direta aos ecossistemas de recife discutidos anteriormente neste Mundo.",
+    "reading_passage": "Branqueamento de corais é um fenômeno em que corais, sob condições de estresse ambiental — frequentemente relacionado ao aumento da temperatura da água — expulsam microorganismos que vivem em simbiose com eles e que são responsáveis por boa parte de sua coloração e de sua fonte de energia. Sem esses microorganismos, o coral fica com aparência esbranquiçada e mais vulnerável, podendo morrer caso as condições de estresse persistam por tempo prolongado, o que representa uma ameaça direta aos ecossistemas de recife discutidos anteriormente neste Mundo.",
+    "hints": [
+      "Releia 'O que é o branqueamento de corais?' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  }
+]

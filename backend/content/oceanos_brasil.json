@@ -1,0 +1,458 @@
+[
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o Parque Nacional Marinho dos Abrolhos foi criado?",
+    "options": [
+      "1983",
+      "1970",
+      "2000",
+      "1950"
+    ],
+    "correct_answer": "1983",
+    "explanation": "O Parque Nacional Marinho dos Abrolhos, criado em 1983, foi a primeira área marinha protegida do Brasil, localizado no litoral extremo sul da Bahia. A região abriga a maior e mais importante formação de recifes de coral do Atlântico Sul, sendo um dos poucos lugares do mundo onde é possível encontrar, num único mergulho, praticamente todas as espécies de corais típicas dessa parte do oceano — muitas delas exclusivas do litoral brasileiro, o que confere à região relevância que vai muito além das fronteiras do país.",
+    "reading_passage": "O Parque Nacional Marinho dos Abrolhos, criado em 1983, foi a primeira área marinha protegida do Brasil, localizado no litoral extremo sul da Bahia. A região abriga a maior e mais importante formação de recifes de coral do Atlântico Sul, sendo um dos poucos lugares do mundo onde é possível encontrar, num único mergulho, praticamente todas as espécies de corais típicas dessa parte do oceano — muitas delas exclusivas do litoral brasileiro, o que confere à região relevância que vai muito além das fronteiras do país.",
+    "hints": [
+      "Releia 'Abrolhos: o primeiro parque marinho do Brasil' — a resposta está no texto.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Em qual estado está localizado o litoral onde fica Abrolhos, segundo o texto?",
+    "options": [
+      "Bahia",
+      "Espírito Santo",
+      "Rio de Janeiro",
+      "Pernambuco"
+    ],
+    "correct_answer": "Bahia",
+    "explanation": "O Parque Nacional Marinho dos Abrolhos, criado em 1983, foi a primeira área marinha protegida do Brasil, localizado no litoral extremo sul da Bahia. A região abriga a maior e mais importante formação de recifes de coral do Atlântico Sul, sendo um dos poucos lugares do mundo onde é possível encontrar, num único mergulho, praticamente todas as espécies de corais típicas dessa parte do oceano — muitas delas exclusivas do litoral brasileiro, o que confere à região relevância que vai muito além das fronteiras do país.",
+    "reading_passage": "O Parque Nacional Marinho dos Abrolhos, criado em 1983, foi a primeira área marinha protegida do Brasil, localizado no litoral extremo sul da Bahia. A região abriga a maior e mais importante formação de recifes de coral do Atlântico Sul, sendo um dos poucos lugares do mundo onde é possível encontrar, num único mergulho, praticamente todas as espécies de corais típicas dessa parte do oceano — muitas delas exclusivas do litoral brasileiro, o que confere à região relevância que vai muito além das fronteiras do país.",
+    "hints": [
+      "Releia 'Abrolhos: o primeiro parque marinho do Brasil' — a resposta está no texto.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que torna Abrolhos especialmente relevante em escala mundial, segundo o texto?",
+    "options": [
+      "Abriga a maior formação de recifes de coral do Atlântico Sul, com espécies exclusivas do Brasil",
+      "É o único lugar do mundo com água salgada",
+      "Foi o primeiro parque terrestre criado no Brasil",
+      "Não tem nenhuma relevância além do turismo local"
+    ],
+    "correct_answer": "Abriga a maior formação de recifes de coral do Atlântico Sul, com espécies exclusivas do Brasil",
+    "explanation": "O Parque Nacional Marinho dos Abrolhos, criado em 1983, foi a primeira área marinha protegida do Brasil, localizado no litoral extremo sul da Bahia. A região abriga a maior e mais importante formação de recifes de coral do Atlântico Sul, sendo um dos poucos lugares do mundo onde é possível encontrar, num único mergulho, praticamente todas as espécies de corais típicas dessa parte do oceano — muitas delas exclusivas do litoral brasileiro, o que confere à região relevância que vai muito além das fronteiras do país.",
+    "reading_passage": "O Parque Nacional Marinho dos Abrolhos, criado em 1983, foi a primeira área marinha protegida do Brasil, localizado no litoral extremo sul da Bahia. A região abriga a maior e mais importante formação de recifes de coral do Atlântico Sul, sendo um dos poucos lugares do mundo onde é possível encontrar, num único mergulho, praticamente todas as espécies de corais típicas dessa parte do oceano — muitas delas exclusivas do litoral brasileiro, o que confere à região relevância que vai muito além das fronteiras do país.",
+    "hints": [
+      "Releia 'Abrolhos: o primeiro parque marinho do Brasil' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Quem alertou a comunidade científica sobre recifes mais profundos em Abrolhos, no ano 2000?",
+    "options": [
+      "Pescadores locais",
+      "Um satélite de monitoramento",
+      "Turistas estrangeiros",
+      "Um grupo de mergulhadores esportivos"
+    ],
+    "correct_answer": "Pescadores locais",
+    "explanation": "Por muito tempo, pesquisadores acreditavam conhecer bem toda a extensão dos recifes de Abrolhos, até que, no ano 2000, pescadores locais informaram à comunidade científica sobre a existência de recifes mais profundos, que ainda não constavam nos mapas oficiais da região. A investigação dessa informação levou à descoberta de que a área de recifes conhecida em Abrolhos era, na realidade, cerca do dobro do que se pensava anteriormente — um exemplo de como o conhecimento tradicional de comunidades pesqueiras locais pode complementar de forma valiosa a pesquisa científica formal.",
+    "reading_passage": "Por muito tempo, pesquisadores acreditavam conhecer bem toda a extensão dos recifes de Abrolhos, até que, no ano 2000, pescadores locais informaram à comunidade científica sobre a existência de recifes mais profundos, que ainda não constavam nos mapas oficiais da região. A investigação dessa informação levou à descoberta de que a área de recifes conhecida em Abrolhos era, na realidade, cerca do dobro do que se pensava anteriormente — um exemplo de como o conhecimento tradicional de comunidades pesqueiras locais pode complementar de forma valiosa a pesquisa científica formal.",
+    "hints": [
+      "Releia 'Uma descoberta que dobrou o tamanho conhecido de Abrolhos' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que a investigação dessa informação revelou sobre a área de recifes de Abrolhos?",
+    "options": [
+      "Era cerca do dobro do que se pensava anteriormente",
+      "Era muito menor do que se imaginava",
+      "Não havia nenhum recife adicional além do já conhecido",
+      "A área havia desaparecido completamente"
+    ],
+    "correct_answer": "Era cerca do dobro do que se pensava anteriormente",
+    "explanation": "Por muito tempo, pesquisadores acreditavam conhecer bem toda a extensão dos recifes de Abrolhos, até que, no ano 2000, pescadores locais informaram à comunidade científica sobre a existência de recifes mais profundos, que ainda não constavam nos mapas oficiais da região. A investigação dessa informação levou à descoberta de que a área de recifes conhecida em Abrolhos era, na realidade, cerca do dobro do que se pensava anteriormente — um exemplo de como o conhecimento tradicional de comunidades pesqueiras locais pode complementar de forma valiosa a pesquisa científica formal.",
+    "reading_passage": "Por muito tempo, pesquisadores acreditavam conhecer bem toda a extensão dos recifes de Abrolhos, até que, no ano 2000, pescadores locais informaram à comunidade científica sobre a existência de recifes mais profundos, que ainda não constavam nos mapas oficiais da região. A investigação dessa informação levou à descoberta de que a área de recifes conhecida em Abrolhos era, na realidade, cerca do dobro do que se pensava anteriormente — um exemplo de como o conhecimento tradicional de comunidades pesqueiras locais pode complementar de forma valiosa a pesquisa científica formal.",
+    "hints": [
+      "Releia 'Uma descoberta que dobrou o tamanho conhecido de Abrolhos' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que esse episódio exemplifica, segundo o texto?",
+    "options": [
+      "Como o conhecimento tradicional de comunidades pesqueiras pode complementar a pesquisa científica",
+      "Que pescadores nunca contribuem para a ciência",
+      "Que os mapas oficiais nunca precisam de atualização",
+      "Que Abrolhos não tem nenhum valor científico real"
+    ],
+    "correct_answer": "Como o conhecimento tradicional de comunidades pesqueiras pode complementar a pesquisa científica",
+    "explanation": "Por muito tempo, pesquisadores acreditavam conhecer bem toda a extensão dos recifes de Abrolhos, até que, no ano 2000, pescadores locais informaram à comunidade científica sobre a existência de recifes mais profundos, que ainda não constavam nos mapas oficiais da região. A investigação dessa informação levou à descoberta de que a área de recifes conhecida em Abrolhos era, na realidade, cerca do dobro do que se pensava anteriormente — um exemplo de como o conhecimento tradicional de comunidades pesqueiras locais pode complementar de forma valiosa a pesquisa científica formal.",
+    "reading_passage": "Por muito tempo, pesquisadores acreditavam conhecer bem toda a extensão dos recifes de Abrolhos, até que, no ano 2000, pescadores locais informaram à comunidade científica sobre a existência de recifes mais profundos, que ainda não constavam nos mapas oficiais da região. A investigação dessa informação levou à descoberta de que a área de recifes conhecida em Abrolhos era, na realidade, cerca do dobro do que se pensava anteriormente — um exemplo de como o conhecimento tradicional de comunidades pesqueiras locais pode complementar de forma valiosa a pesquisa científica formal.",
+    "hints": [
+      "Releia 'Uma descoberta que dobrou o tamanho conhecido de Abrolhos' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Qual valor os recifes de coral brasileiros são estimados em gerar de economia relacionada à proteção costeira, segundo estudos citados no texto?",
+    "options": [
+      "Cerca de R$ 160 bilhões",
+      "Cerca de R$ 1 milhão",
+      "Cerca de R$ 5 bilhões",
+      "Nenhum valor econômico mensurável"
+    ],
+    "correct_answer": "Cerca de R$ 160 bilhões",
+    "explanation": "Estudos recentes estimam que os recifes de coral do litoral brasileiro geram um valor equivalente a cerca de R$ 160 bilhões em economia relacionada à proteção costeira, já que essas estruturas funcionam como barreiras naturais que reduzem o impacto de ondas fortes, erosão e inundações nas regiões próximas à costa. Esse tipo de estudo ajuda a demonstrar, em termos econômicos concretos, por que a conservação de ecossistemas marinhos não deve ser vista apenas como uma pauta ambiental, mas também como uma estratégia de proteção de infraestrutura e patrimônio costeiro.",
+    "reading_passage": "Estudos recentes estimam que os recifes de coral do litoral brasileiro geram um valor equivalente a cerca de R$ 160 bilhões em economia relacionada à proteção costeira, já que essas estruturas funcionam como barreiras naturais que reduzem o impacto de ondas fortes, erosão e inundações nas regiões próximas à costa. Esse tipo de estudo ajuda a demonstrar, em termos econômicos concretos, por que a conservação de ecossistemas marinhos não deve ser vista apenas como uma pauta ambiental, mas também como uma estratégia de proteção de infraestrutura e patrimônio costeiro.",
+    "hints": [
+      "Releia 'O valor econômico da proteção costeira dos recifes brasileiros' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Como os recifes ajudam na proteção costeira, segundo o texto?",
+    "options": [
+      "Funcionam como barreiras naturais que reduzem impacto de ondas, erosão e inundações",
+      "Absorvem toda a poluição do oceano automaticamente",
+      "Impedem totalmente a formação de qualquer onda no mar",
+      "Aumentam artificialmente o tamanho da costa"
+    ],
+    "correct_answer": "Funcionam como barreiras naturais que reduzem impacto de ondas, erosão e inundações",
+    "explanation": "Estudos recentes estimam que os recifes de coral do litoral brasileiro geram um valor equivalente a cerca de R$ 160 bilhões em economia relacionada à proteção costeira, já que essas estruturas funcionam como barreiras naturais que reduzem o impacto de ondas fortes, erosão e inundações nas regiões próximas à costa. Esse tipo de estudo ajuda a demonstrar, em termos econômicos concretos, por que a conservação de ecossistemas marinhos não deve ser vista apenas como uma pauta ambiental, mas também como uma estratégia de proteção de infraestrutura e patrimônio costeiro.",
+    "reading_passage": "Estudos recentes estimam que os recifes de coral do litoral brasileiro geram um valor equivalente a cerca de R$ 160 bilhões em economia relacionada à proteção costeira, já que essas estruturas funcionam como barreiras naturais que reduzem o impacto de ondas fortes, erosão e inundações nas regiões próximas à costa. Esse tipo de estudo ajuda a demonstrar, em termos econômicos concretos, por que a conservação de ecossistemas marinhos não deve ser vista apenas como uma pauta ambiental, mas também como uma estratégia de proteção de infraestrutura e patrimônio costeiro.",
+    "hints": [
+      "Releia 'O valor econômico da proteção costeira dos recifes brasileiros' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que esse tipo de estudo ajuda a demonstrar, segundo o texto?",
+    "options": [
+      "Que a conservação marinha também é uma estratégia econômica de proteção de infraestrutura",
+      "Que recifes de coral não têm nenhuma utilidade prática",
+      "Que o turismo é a única razão para proteger recifes",
+      "Que recifes só existem para fins estéticos"
+    ],
+    "correct_answer": "Que a conservação marinha também é uma estratégia econômica de proteção de infraestrutura",
+    "explanation": "Estudos recentes estimam que os recifes de coral do litoral brasileiro geram um valor equivalente a cerca de R$ 160 bilhões em economia relacionada à proteção costeira, já que essas estruturas funcionam como barreiras naturais que reduzem o impacto de ondas fortes, erosão e inundações nas regiões próximas à costa. Esse tipo de estudo ajuda a demonstrar, em termos econômicos concretos, por que a conservação de ecossistemas marinhos não deve ser vista apenas como uma pauta ambiental, mas também como uma estratégia de proteção de infraestrutura e patrimônio costeiro.",
+    "reading_passage": "Estudos recentes estimam que os recifes de coral do litoral brasileiro geram um valor equivalente a cerca de R$ 160 bilhões em economia relacionada à proteção costeira, já que essas estruturas funcionam como barreiras naturais que reduzem o impacto de ondas fortes, erosão e inundações nas regiões próximas à costa. Esse tipo de estudo ajuda a demonstrar, em termos econômicos concretos, por que a conservação de ecossistemas marinhos não deve ser vista apenas como uma pauta ambiental, mas também como uma estratégia de proteção de infraestrutura e patrimônio costeiro.",
+    "hints": [
+      "Releia 'O valor econômico da proteção costeira dos recifes brasileiros' — a resposta está no texto.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Aproximadamente quanto a área de recifes em Abrolhos encolheu nos últimos 160 anos, segundo o estudo citado no texto?",
+    "options": [
+      "Cerca de 28%",
+      "Cerca de 5%",
+      "Cerca de 90%",
+      "Não houve nenhuma redução"
+    ],
+    "correct_answer": "Cerca de 28%",
+    "explanation": "Um estudo que analisou cartas náuticas antigas, relatos históricos de naturalistas e imagens de satélite mais recentes constatou que a área de recifes no arquipélago de Abrolhos encolheu, em média, cerca de 28% ao longo dos últimos 160 anos. Entre as causas apontadas para essa redução estão a extração histórica de corais (usados no passado para produção de calcário) e o aumento da sedimentação costeira ao longo do tempo, mostrando que a degradação de ecossistemas marinhos pode ser um processo lento, mas significativo, quando observado ao longo de décadas.",
+    "reading_passage": "Um estudo que analisou cartas náuticas antigas, relatos históricos de naturalistas e imagens de satélite mais recentes constatou que a área de recifes no arquipélago de Abrolhos encolheu, em média, cerca de 28% ao longo dos últimos 160 anos. Entre as causas apontadas para essa redução estão a extração histórica de corais (usados no passado para produção de calcário) e o aumento da sedimentação costeira ao longo do tempo, mostrando que a degradação de ecossistemas marinhos pode ser um processo lento, mas significativo, quando observado ao longo de décadas.",
+    "hints": [
+      "Releia 'Uma ameaça de longo prazo: a redução histórica dos recifes de Abrolhos' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Cite uma causa apontada para essa redução, segundo o texto.",
+    "options": [
+      "Extração histórica de corais para produção de calcário",
+      "Excesso de chuva na região",
+      "Ausência total de turismo na área",
+      "Aumento da profundidade do oceano"
+    ],
+    "correct_answer": "Extração histórica de corais para produção de calcário",
+    "explanation": "Um estudo que analisou cartas náuticas antigas, relatos históricos de naturalistas e imagens de satélite mais recentes constatou que a área de recifes no arquipélago de Abrolhos encolheu, em média, cerca de 28% ao longo dos últimos 160 anos. Entre as causas apontadas para essa redução estão a extração histórica de corais (usados no passado para produção de calcário) e o aumento da sedimentação costeira ao longo do tempo, mostrando que a degradação de ecossistemas marinhos pode ser um processo lento, mas significativo, quando observado ao longo de décadas.",
+    "reading_passage": "Um estudo que analisou cartas náuticas antigas, relatos históricos de naturalistas e imagens de satélite mais recentes constatou que a área de recifes no arquipélago de Abrolhos encolheu, em média, cerca de 28% ao longo dos últimos 160 anos. Entre as causas apontadas para essa redução estão a extração histórica de corais (usados no passado para produção de calcário) e o aumento da sedimentação costeira ao longo do tempo, mostrando que a degradação de ecossistemas marinhos pode ser um processo lento, mas significativo, quando observado ao longo de décadas.",
+    "hints": [
+      "Releia 'Uma ameaça de longo prazo: a redução histórica dos recifes de Abrolhos' — a resposta está no texto.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que esse estudo demonstra sobre a degradação de ecossistemas marinhos, segundo o texto?",
+    "options": [
+      "Pode ser um processo lento, mas significativo ao longo de décadas",
+      "Sempre acontece de forma repentina e imediata",
+      "Nunca acontece em recifes protegidos por lei",
+      "É impossível de ser medida cientificamente"
+    ],
+    "correct_answer": "Pode ser um processo lento, mas significativo ao longo de décadas",
+    "explanation": "Um estudo que analisou cartas náuticas antigas, relatos históricos de naturalistas e imagens de satélite mais recentes constatou que a área de recifes no arquipélago de Abrolhos encolheu, em média, cerca de 28% ao longo dos últimos 160 anos. Entre as causas apontadas para essa redução estão a extração histórica de corais (usados no passado para produção de calcário) e o aumento da sedimentação costeira ao longo do tempo, mostrando que a degradação de ecossistemas marinhos pode ser um processo lento, mas significativo, quando observado ao longo de décadas.",
+    "reading_passage": "Um estudo que analisou cartas náuticas antigas, relatos históricos de naturalistas e imagens de satélite mais recentes constatou que a área de recifes no arquipélago de Abrolhos encolheu, em média, cerca de 28% ao longo dos últimos 160 anos. Entre as causas apontadas para essa redução estão a extração histórica de corais (usados no passado para produção de calcário) e o aumento da sedimentação costeira ao longo do tempo, mostrando que a degradação de ecossistemas marinhos pode ser um processo lento, mas significativo, quando observado ao longo de décadas.",
+    "hints": [
+      "Releia 'Uma ameaça de longo prazo: a redução histórica dos recifes de Abrolhos' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Quais duas atividades econômicas o texto cita como importantes para as comunidades de Abrolhos?",
+    "options": [
+      "Pesca artesanal e turismo sustentável",
+      "Mineração e agricultura intensiva",
+      "Indústria pesada e mineração de petróleo",
+      "Exportação de gado e soja"
+    ],
+    "correct_answer": "Pesca artesanal e turismo sustentável",
+    "explanation": "Além do valor ecológico, a região de Abrolhos tem peso econômico real para as comunidades locais, combinando atividades de pesca artesanal e turismo sustentável. Levantamentos recentes indicam que essas atividades, somadas à gestão das áreas de conservação da região, movimentam a economia local de forma significativa, respondendo por parcela relevante dos empregos gerados na área — um exemplo prático de como proteger um ecossistema marinho pode caminhar junto com geração de renda para quem vive próximo a ele, em vez de necessariamente competir com esse objetivo.",
+    "reading_passage": "Além do valor ecológico, a região de Abrolhos tem peso econômico real para as comunidades locais, combinando atividades de pesca artesanal e turismo sustentável. Levantamentos recentes indicam que essas atividades, somadas à gestão das áreas de conservação da região, movimentam a economia local de forma significativa, respondendo por parcela relevante dos empregos gerados na área — um exemplo prático de como proteger um ecossistema marinho pode caminhar junto com geração de renda para quem vive próximo a ele, em vez de necessariamente competir com esse objetivo.",
+    "hints": [
+      "Releia 'Turismo e pesca: a economia das comunidades costeiras em Abrolhos' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que essas atividades, somadas à gestão das áreas de conservação, respondem localmente, segundo o texto?",
+    "options": [
+      "Parcela relevante dos empregos gerados na área",
+      "Nenhuma parcela relevante da economia local",
+      "Apenas empregos temporários de baixa relevância",
+      "Exclusivamente empregos públicos administrativos"
+    ],
+    "correct_answer": "Parcela relevante dos empregos gerados na área",
+    "explanation": "Além do valor ecológico, a região de Abrolhos tem peso econômico real para as comunidades locais, combinando atividades de pesca artesanal e turismo sustentável. Levantamentos recentes indicam que essas atividades, somadas à gestão das áreas de conservação da região, movimentam a economia local de forma significativa, respondendo por parcela relevante dos empregos gerados na área — um exemplo prático de como proteger um ecossistema marinho pode caminhar junto com geração de renda para quem vive próximo a ele, em vez de necessariamente competir com esse objetivo.",
+    "reading_passage": "Além do valor ecológico, a região de Abrolhos tem peso econômico real para as comunidades locais, combinando atividades de pesca artesanal e turismo sustentável. Levantamentos recentes indicam que essas atividades, somadas à gestão das áreas de conservação da região, movimentam a economia local de forma significativa, respondendo por parcela relevante dos empregos gerados na área — um exemplo prático de como proteger um ecossistema marinho pode caminhar junto com geração de renda para quem vive próximo a ele, em vez de necessariamente competir com esse objetivo.",
+    "hints": [
+      "Releia 'Turismo e pesca: a economia das comunidades costeiras em Abrolhos' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que esse exemplo demonstra, segundo o texto?",
+    "options": [
+      "Proteger um ecossistema pode caminhar junto com geração de renda local",
+      "Conservação ambiental sempre prejudica a economia local",
+      "Pesca e turismo nunca podem coexistir na mesma região",
+      "Comunidades costeiras não têm nenhuma relação com o oceano"
+    ],
+    "correct_answer": "Proteger um ecossistema pode caminhar junto com geração de renda local",
+    "explanation": "Além do valor ecológico, a região de Abrolhos tem peso econômico real para as comunidades locais, combinando atividades de pesca artesanal e turismo sustentável. Levantamentos recentes indicam que essas atividades, somadas à gestão das áreas de conservação da região, movimentam a economia local de forma significativa, respondendo por parcela relevante dos empregos gerados na área — um exemplo prático de como proteger um ecossistema marinho pode caminhar junto com geração de renda para quem vive próximo a ele, em vez de necessariamente competir com esse objetivo.",
+    "reading_passage": "Além do valor ecológico, a região de Abrolhos tem peso econômico real para as comunidades locais, combinando atividades de pesca artesanal e turismo sustentável. Levantamentos recentes indicam que essas atividades, somadas à gestão das áreas de conservação da região, movimentam a economia local de forma significativa, respondendo por parcela relevante dos empregos gerados na área — um exemplo prático de como proteger um ecossistema marinho pode caminhar junto com geração de renda para quem vive próximo a ele, em vez de necessariamente competir com esse objetivo.",
+    "hints": [
+      "Releia 'Turismo e pesca: a economia das comunidades costeiras em Abrolhos' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Por que os corais do gênero Mussismilia são popularmente chamados de corais-cérebro?",
+    "options": [
+      "Devido ao formato característico de sua superfície",
+      "Porque foram descobertos por um neurocientista",
+      "Porque têm capacidade de pensar como um cérebro",
+      "Porque vivem apenas próximo a hospitais costeiros"
+    ],
+    "correct_answer": "Devido ao formato característico de sua superfície",
+    "explanation": "Os corais do gênero Mussismilia, popularmente conhecidos como corais-cérebro devido ao formato característico de sua superfície, são os principais construtores dos recifes de Abrolhos e considerados espécies-relíquia, com linhagens que remontam a milhões de anos de história evolutiva. Por sobreviverem hoje apenas em alguns pontos específicos da costa brasileira, esses corais são endêmicos do país — ou seja, não são encontrados naturalmente em nenhum outro lugar do mundo, o que reforça a responsabilidade específica do Brasil na conservação dessa espécie.",
+    "reading_passage": "Os corais do gênero Mussismilia, popularmente conhecidos como corais-cérebro devido ao formato característico de sua superfície, são os principais construtores dos recifes de Abrolhos e considerados espécies-relíquia, com linhagens que remontam a milhões de anos de história evolutiva. Por sobreviverem hoje apenas em alguns pontos específicos da costa brasileira, esses corais são endêmicos do país — ou seja, não são encontrados naturalmente em nenhum outro lugar do mundo, o que reforça a responsabilidade específica do Brasil na conservação dessa espécie.",
+    "hints": [
+      "Releia 'O coral-cérebro: uma relíquia viva do litoral brasileiro' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que significa dizer que esses corais são 'endêmicos' do Brasil?",
+    "options": [
+      "Não são encontrados naturalmente em nenhum outro lugar do mundo",
+      "São encontrados em todos os oceanos do planeta",
+      "Foram introduzidos artificialmente no Brasil recentemente",
+      "Só existem em aquários, nunca na natureza"
+    ],
+    "correct_answer": "Não são encontrados naturalmente em nenhum outro lugar do mundo",
+    "explanation": "Os corais do gênero Mussismilia, popularmente conhecidos como corais-cérebro devido ao formato característico de sua superfície, são os principais construtores dos recifes de Abrolhos e considerados espécies-relíquia, com linhagens que remontam a milhões de anos de história evolutiva. Por sobreviverem hoje apenas em alguns pontos específicos da costa brasileira, esses corais são endêmicos do país — ou seja, não são encontrados naturalmente em nenhum outro lugar do mundo, o que reforça a responsabilidade específica do Brasil na conservação dessa espécie.",
+    "reading_passage": "Os corais do gênero Mussismilia, popularmente conhecidos como corais-cérebro devido ao formato característico de sua superfície, são os principais construtores dos recifes de Abrolhos e considerados espécies-relíquia, com linhagens que remontam a milhões de anos de história evolutiva. Por sobreviverem hoje apenas em alguns pontos específicos da costa brasileira, esses corais são endêmicos do país — ou seja, não são encontrados naturalmente em nenhum outro lugar do mundo, o que reforça a responsabilidade específica do Brasil na conservação dessa espécie.",
+    "hints": [
+      "Releia 'O coral-cérebro: uma relíquia viva do litoral brasileiro' — a resposta está no texto.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que o caráter endêmico desses corais reforça, segundo o texto?",
+    "options": [
+      "A responsabilidade específica do Brasil na conservação dessa espécie",
+      "Que a espécie não precisa de nenhuma proteção especial",
+      "Que outros países devem cuidar dela em vez do Brasil",
+      "Que a espécie já está extinta atualmente"
+    ],
+    "correct_answer": "A responsabilidade específica do Brasil na conservação dessa espécie",
+    "explanation": "Os corais do gênero Mussismilia, popularmente conhecidos como corais-cérebro devido ao formato característico de sua superfície, são os principais construtores dos recifes de Abrolhos e considerados espécies-relíquia, com linhagens que remontam a milhões de anos de história evolutiva. Por sobreviverem hoje apenas em alguns pontos específicos da costa brasileira, esses corais são endêmicos do país — ou seja, não são encontrados naturalmente em nenhum outro lugar do mundo, o que reforça a responsabilidade específica do Brasil na conservação dessa espécie.",
+    "reading_passage": "Os corais do gênero Mussismilia, popularmente conhecidos como corais-cérebro devido ao formato característico de sua superfície, são os principais construtores dos recifes de Abrolhos e considerados espécies-relíquia, com linhagens que remontam a milhões de anos de história evolutiva. Por sobreviverem hoje apenas em alguns pontos específicos da costa brasileira, esses corais são endêmicos do país — ou seja, não são encontrados naturalmente em nenhum outro lugar do mundo, o que reforça a responsabilidade específica do Brasil na conservação dessa espécie.",
+    "hints": [
+      "Releia 'O coral-cérebro: uma relíquia viva do litoral brasileiro' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "A que fenômeno os corais brasileiros também estão vulneráveis, segundo o texto?",
+    "options": [
+      "Branqueamento causado pelo aumento da temperatura da água",
+      "Congelamento total da água do mar",
+      "Aumento da profundidade do oceano",
+      "Redução da salinidade da água costeira"
+    ],
+    "correct_answer": "Branqueamento causado pelo aumento da temperatura da água",
+    "explanation": "Assim como recifes em outras partes do mundo, os corais do litoral brasileiro também estão vulneráveis ao branqueamento causado pelo aumento da temperatura da água do oceano, fenômeno já discutido em bloco anterior deste Mundo. Pesquisas específicas sobre Abrolhos e outras áreas de recife do Brasil identificam a atividade humana, de forma geral, como o principal fator por trás da degradação desses ecossistemas ao longo do tempo, reforçando que a conservação de recifes brasileiros está diretamente conectada a discussões mais amplas sobre clima e impacto ambiental global.",
+    "reading_passage": "Assim como recifes em outras partes do mundo, os corais do litoral brasileiro também estão vulneráveis ao branqueamento causado pelo aumento da temperatura da água do oceano, fenômeno já discutido em bloco anterior deste Mundo. Pesquisas específicas sobre Abrolhos e outras áreas de recife do Brasil identificam a atividade humana, de forma geral, como o principal fator por trás da degradação desses ecossistemas ao longo do tempo, reforçando que a conservação de recifes brasileiros está diretamente conectada a discussões mais amplas sobre clima e impacto ambiental global.",
+    "hints": [
+      "Releia 'Como as mudanças climáticas ameaçam os recifes brasileiros' — a resposta está no texto.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "O que pesquisas sobre Abrolhos identificam como principal fator de degradação dos recifes, segundo o texto?",
+    "options": [
+      "A atividade humana, de forma geral",
+      "Exclusivamente fenômenos naturais sem nenhuma influência humana",
+      "A presença de turistas, isoladamente",
+      "A pesca artesanal tradicional"
+    ],
+    "correct_answer": "A atividade humana, de forma geral",
+    "explanation": "Assim como recifes em outras partes do mundo, os corais do litoral brasileiro também estão vulneráveis ao branqueamento causado pelo aumento da temperatura da água do oceano, fenômeno já discutido em bloco anterior deste Mundo. Pesquisas específicas sobre Abrolhos e outras áreas de recife do Brasil identificam a atividade humana, de forma geral, como o principal fator por trás da degradação desses ecossistemas ao longo do tempo, reforçando que a conservação de recifes brasileiros está diretamente conectada a discussões mais amplas sobre clima e impacto ambiental global.",
+    "reading_passage": "Assim como recifes em outras partes do mundo, os corais do litoral brasileiro também estão vulneráveis ao branqueamento causado pelo aumento da temperatura da água do oceano, fenômeno já discutido em bloco anterior deste Mundo. Pesquisas específicas sobre Abrolhos e outras áreas de recife do Brasil identificam a atividade humana, de forma geral, como o principal fator por trás da degradação desses ecossistemas ao longo do tempo, reforçando que a conservação de recifes brasileiros está diretamente conectada a discussões mais amplas sobre clima e impacto ambiental global.",
+    "hints": [
+      "Releia 'Como as mudanças climáticas ameaçam os recifes brasileiros' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "A que a conservação de recifes brasileiros está diretamente conectada, segundo o texto?",
+    "options": [
+      "Discussões mais amplas sobre clima e impacto ambiental global",
+      "Apenas a decisões administrativas locais, sem relação com o clima",
+      "Exclusivamente ao turismo internacional",
+      "A nenhum fator externo ao Brasil"
+    ],
+    "correct_answer": "Discussões mais amplas sobre clima e impacto ambiental global",
+    "explanation": "Assim como recifes em outras partes do mundo, os corais do litoral brasileiro também estão vulneráveis ao branqueamento causado pelo aumento da temperatura da água do oceano, fenômeno já discutido em bloco anterior deste Mundo. Pesquisas específicas sobre Abrolhos e outras áreas de recife do Brasil identificam a atividade humana, de forma geral, como o principal fator por trás da degradação desses ecossistemas ao longo do tempo, reforçando que a conservação de recifes brasileiros está diretamente conectada a discussões mais amplas sobre clima e impacto ambiental global.",
+    "reading_passage": "Assim como recifes em outras partes do mundo, os corais do litoral brasileiro também estão vulneráveis ao branqueamento causado pelo aumento da temperatura da água do oceano, fenômeno já discutido em bloco anterior deste Mundo. Pesquisas específicas sobre Abrolhos e outras áreas de recife do Brasil identificam a atividade humana, de forma geral, como o principal fator por trás da degradação desses ecossistemas ao longo do tempo, reforçando que a conservação de recifes brasileiros está diretamente conectada a discussões mais amplas sobre clima e impacto ambiental global.",
+    "hints": [
+      "Releia 'Como as mudanças climáticas ameaçam os recifes brasileiros' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Como o oceano é descrito no texto de encerramento, em termos de sua importância?",
+    "options": [
+      "Fonte de fascínio científico, regulador do clima e patrimônio econômico e cultural",
+      "Apenas uma grande quantidade de água sem nenhuma relevância prática",
+      "Um território já completamente explorado e compreendido",
+      "Um assunto irrelevante para países com litoral extenso"
+    ],
+    "correct_answer": "Fonte de fascínio científico, regulador do clima e patrimônio econômico e cultural",
+    "explanation": "Ao longo deste Mundo, foi possível perceber como o oceano é, ao mesmo tempo, uma fonte de fascínio científico, um regulador essencial do clima global e um patrimônio econômico e cultural de grande valor para países com extenso litoral, como o Brasil. Da Fossa das Marianas aos recifes de Abrolhos, da bioluminescência das profundezas às correntes que moldam o clima de continentes inteiros, o oceano se revela como um dos territórios mais ricos e ainda menos compreendidos do planeta — um convite permanente à curiosidade e à responsabilidade compartilhada por sua preservação.",
+    "reading_passage": "Ao longo deste Mundo, foi possível perceber como o oceano é, ao mesmo tempo, uma fonte de fascínio científico, um regulador essencial do clima global e um patrimônio econômico e cultural de grande valor para países com extenso litoral, como o Brasil. Da Fossa das Marianas aos recifes de Abrolhos, da bioluminescência das profundezas às correntes que moldam o clima de continentes inteiros, o oceano se revela como um dos territórios mais ricos e ainda menos compreendidos do planeta — um convite permanente à curiosidade e à responsabilidade compartilhada por sua preservação.",
+    "hints": [
+      "Releia 'Encerrando a jornada: o Brasil e sua relação com o oceano' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Que dois exemplos específicos do Mundo o texto usa para ilustrar a riqueza do oceano?",
+    "options": [
+      "Fossa das Marianas e recifes de Abrolhos",
+      "Deserto do Saara e Floresta Amazônica",
+      "Monte Everest e Polo Norte",
+      "Grande Muralha da China e Coliseu"
+    ],
+    "correct_answer": "Fossa das Marianas e recifes de Abrolhos",
+    "explanation": "Ao longo deste Mundo, foi possível perceber como o oceano é, ao mesmo tempo, uma fonte de fascínio científico, um regulador essencial do clima global e um patrimônio econômico e cultural de grande valor para países com extenso litoral, como o Brasil. Da Fossa das Marianas aos recifes de Abrolhos, da bioluminescência das profundezas às correntes que moldam o clima de continentes inteiros, o oceano se revela como um dos territórios mais ricos e ainda menos compreendidos do planeta — um convite permanente à curiosidade e à responsabilidade compartilhada por sua preservação.",
+    "reading_passage": "Ao longo deste Mundo, foi possível perceber como o oceano é, ao mesmo tempo, uma fonte de fascínio científico, um regulador essencial do clima global e um patrimônio econômico e cultural de grande valor para países com extenso litoral, como o Brasil. Da Fossa das Marianas aos recifes de Abrolhos, da bioluminescência das profundezas às correntes que moldam o clima de continentes inteiros, o oceano se revela como um dos territórios mais ricos e ainda menos compreendidos do planeta — um convite permanente à curiosidade e à responsabilidade compartilhada por sua preservação.",
+    "hints": [
+      "Releia 'Encerrando a jornada: o Brasil e sua relação com o oceano' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_brasil",
+    "difficulty_level": 1,
+    "prompt": "Com que tipo de convite o texto encerra o Mundo dos Oceanos?",
+    "options": [
+      "Um convite à curiosidade e à responsabilidade compartilhada pela preservação",
+      "Um convite para parar de estudar o assunto",
+      "Um convite exclusivo para cientistas profissionais",
+      "Um convite para evitar qualquer contato com o mar"
+    ],
+    "correct_answer": "Um convite à curiosidade e à responsabilidade compartilhada pela preservação",
+    "explanation": "Ao longo deste Mundo, foi possível perceber como o oceano é, ao mesmo tempo, uma fonte de fascínio científico, um regulador essencial do clima global e um patrimônio econômico e cultural de grande valor para países com extenso litoral, como o Brasil. Da Fossa das Marianas aos recifes de Abrolhos, da bioluminescência das profundezas às correntes que moldam o clima de continentes inteiros, o oceano se revela como um dos territórios mais ricos e ainda menos compreendidos do planeta — um convite permanente à curiosidade e à responsabilidade compartilhada por sua preservação.",
+    "reading_passage": "Ao longo deste Mundo, foi possível perceber como o oceano é, ao mesmo tempo, uma fonte de fascínio científico, um regulador essencial do clima global e um patrimônio econômico e cultural de grande valor para países com extenso litoral, como o Brasil. Da Fossa das Marianas aos recifes de Abrolhos, da bioluminescência das profundezas às correntes que moldam o clima de continentes inteiros, o oceano se revela como um dos territórios mais ricos e ainda menos compreendidos do planeta — um convite permanente à curiosidade e à responsabilidade compartilhada por sua preservação.",
+    "hints": [
+      "Releia 'Encerrando a jornada: o Brasil e sua relação com o oceano' — a resposta está no texto.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  }
+]

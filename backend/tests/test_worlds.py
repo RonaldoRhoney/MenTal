@@ -63,7 +63,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     assert set(worlds.keys()) == {
         "linguagem", "mente_logica", "cultura_geral", "descoberta", "idiomas", "valores", "transito",
         "esportes", "mitologia", "enem", "concursos", "tecnologia", "regioes_brasil",
-        "gastronomia",
+        "gastronomia", "oceanos",
     }
     assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas", "redacao"}
     assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento", "cores"}
@@ -93,6 +93,10 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     assert set(worlds["gastronomia"]["territory_ids"]) == {
         "gastro_mundo", "gastro_brasil", "gastro_norte_nordeste",
         "gastro_centrooeste_sudeste", "gastro_sul_fusao",
+    }
+    assert set(worlds["oceanos"]["territory_ids"]) == {
+        "oceano_mundo", "oceano_vida_marinha", "oceano_profundezas",
+        "oceano_clima", "oceano_brasil",
     }
     assert set(worlds["descoberta"]["territory_ids"]) == {
         "invencoes",

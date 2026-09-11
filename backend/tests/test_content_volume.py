@@ -48,6 +48,9 @@ SINGLE_DIFFICULTY_TERRITORY_IDS = {
     # maestria por dificuldade.
     "gastro_mundo", "gastro_brasil", "gastro_norte_nordeste",
     "gastro_centrooeste_sudeste", "gastro_sul_fusao",
+    # Mundo dos Oceanos: mesmo formato e mesmo raciocínio dos acima.
+    "oceano_mundo", "oceano_vida_marinha", "oceano_profundezas",
+    "oceano_clima", "oceano_brasil",
 }
 
 

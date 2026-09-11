@@ -538,6 +538,36 @@ abstract class AppLocalizations {
   /// **'Sul e Fusão Regional'**
   String get territoryGastroSulFusao;
 
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Os Oceanos do Mundo'**
+  String get territoryOceanoMundo;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Vida Marinha'**
+  String get territoryOceanoVidaMarinha;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Profundezas e Mistérios'**
+  String get territoryOceanoProfundezas;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Oceano e Clima'**
+  String get territoryOceanoClima;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Oceanos e o Brasil'**
+  String get territoryOceanoBrasil;
+
   /// Button that plays the challenge audio clip in Ouvido Afiado
   ///
   /// In pt, this message translates to:

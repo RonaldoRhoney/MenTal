@@ -240,6 +240,21 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryGastroSulFusao => 'Sul e Fusão Regional';
 
   @override
+  String get territoryOceanoMundo => 'Os Oceanos do Mundo';
+
+  @override
+  String get territoryOceanoVidaMarinha => 'Vida Marinha';
+
+  @override
+  String get territoryOceanoProfundezas => 'Profundezas e Mistérios';
+
+  @override
+  String get territoryOceanoClima => 'Oceano e Clima';
+
+  @override
+  String get territoryOceanoBrasil => 'Oceanos e o Brasil';
+
+  @override
   String get audioPlayButton => 'Tocar som';
 
   @override

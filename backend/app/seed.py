@@ -69,6 +69,12 @@ WORLDS = [
     # Centro-Oeste+Sudeste, Sul+fusão regional). Conteúdo carregado de
     # content/gastronomia_*.json (ver CHALLENGES abaixo).
     {"id": "gastronomia", "name": "Mundo da Gastronomia", "display_order": 14},
+    # Mundo_dos_Oceanos/README.md (07/09/2026) — mesma arquitetura de
+    # Valores/Trânsito/Gastronomia: "cápsula de texto + perguntas", 5
+    # territórios (do todo pro específico: Mundo, Vida Marinha,
+    # Profundezas, Clima, Brasil). Conteúdo carregado de
+    # content/oceanos_*.json (ver CHALLENGES abaixo).
+    {"id": "oceanos", "name": "Mundo dos Oceanos", "display_order": 15},
 ]
 
 # Blocos (BLOCOS_MENUS.md, aprovado 2026-08-23) — puramente organização
@@ -296,6 +302,12 @@ TERRITORIES = [
     {"id": "gastro_norte_nordeste", "challenge_type": "gastronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 60, "world_id": "gastronomia"},
     {"id": "gastro_centrooeste_sudeste", "challenge_type": "gastronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 61, "world_id": "gastronomia"},
     {"id": "gastro_sul_fusao", "challenge_type": "gastronomia", "requires_subscription": True, "free_sample_count": 2, "display_order": 62, "world_id": "gastronomia"},
+    # Mundo_dos_Oceanos/README.md (07/09/2026).
+    {"id": "oceano_mundo", "challenge_type": "oceanos", "requires_subscription": True, "free_sample_count": 2, "display_order": 63, "world_id": "oceanos"},
+    {"id": "oceano_vida_marinha", "challenge_type": "oceanos", "requires_subscription": True, "free_sample_count": 2, "display_order": 64, "world_id": "oceanos"},
+    {"id": "oceano_profundezas", "challenge_type": "oceanos", "requires_subscription": True, "free_sample_count": 2, "display_order": 65, "world_id": "oceanos"},
+    {"id": "oceano_clima", "challenge_type": "oceanos", "requires_subscription": True, "free_sample_count": 2, "display_order": 66, "world_id": "oceanos"},
+    {"id": "oceano_brasil", "challenge_type": "oceanos", "requires_subscription": True, "free_sample_count": 2, "display_order": 67, "world_id": "oceanos"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -5800,6 +5812,12 @@ for _path in sorted(_CONTENT_DIR.glob("transito_*.json")):
 # territórios), mesmo formato "cápsula de texto + perguntas" de Valores/
 # Trânsito, convertidos via scripts/convert_gastronomia_content.py.
 for _path in sorted(_CONTENT_DIR.glob("gastronomia_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
+# Mundo dos Oceanos (07/09/2026): 120 desafios (24 por território, 5
+# territórios), mesmo formato "cápsula de texto + perguntas" de Valores/
+# Trânsito/Gastronomia, convertidos via scripts/convert_oceanos_content.py.
+for _path in sorted(_CONTENT_DIR.glob("oceanos_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 

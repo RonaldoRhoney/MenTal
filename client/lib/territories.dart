@@ -41,6 +41,13 @@ const Set<String> kNeverTimedTerritoryIds = {
   'gastro_norte_nordeste',
   'gastro_centrooeste_sudeste',
   'gastro_sul_fusao',
+  // Mundo dos Oceanos (07/09/2026): mesmo formato "cápsula de texto +
+  // perguntas", mesmo motivo.
+  'oceano_mundo',
+  'oceano_vida_marinha',
+  'oceano_profundezas',
+  'oceano_clima',
+  'oceano_brasil',
 };
 
 /// Ids dos 4 territórios do V1 — compartilhado entre Home, Progress e
@@ -121,6 +128,12 @@ const List<String> kTerritoryIds = [
   'gastro_norte_nordeste',
   'gastro_centrooeste_sudeste',
   'gastro_sul_fusao',
+  // Mundo_dos_Oceanos/README.md — Mundo dos Oceanos.
+  'oceano_mundo',
+  'oceano_vida_marinha',
+  'oceano_profundezas',
+  'oceano_clima',
+  'oceano_brasil',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -247,6 +260,16 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryGastroCentrooesteSudeste;
     case 'gastro_sul_fusao':
       return l10n.territoryGastroSulFusao;
+    case 'oceano_mundo':
+      return l10n.territoryOceanoMundo;
+    case 'oceano_vida_marinha':
+      return l10n.territoryOceanoVidaMarinha;
+    case 'oceano_profundezas':
+      return l10n.territoryOceanoProfundezas;
+    case 'oceano_clima':
+      return l10n.territoryOceanoClima;
+    case 'oceano_brasil':
+      return l10n.territoryOceanoBrasil;
     default:
       return territoryId;
   }

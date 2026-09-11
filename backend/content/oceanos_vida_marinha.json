@@ -1,0 +1,458 @@
+[
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "A baleia-azul é considerada o quê, segundo o texto?",
+    "options": [
+      "O maior animal já registrado na história da vida na Terra",
+      "O animal marinho mais rápido do oceano",
+      "O predador mais agressivo dos oceanos",
+      "O animal com maior expectativa de vida do planeta"
+    ],
+    "correct_answer": "O maior animal já registrado na história da vida na Terra",
+    "explanation": "A baleia-azul é considerada o maior animal já registrado na história da vida na Terra, superando em tamanho até os maiores dinossauros conhecidos pelos registros fósseis. Apesar do tamanho descomunal, a baleia-azul se alimenta principalmente de krill, pequenos crustáceos que filtra da água em grande quantidade através de estruturas especiais na boca chamadas barbatanas filtrantes, em vez de caçar presas grandes como muitos imaginam ao pensar num animal desse porte.",
+    "reading_passage": "A baleia-azul é considerada o maior animal já registrado na história da vida na Terra, superando em tamanho até os maiores dinossauros conhecidos pelos registros fósseis. Apesar do tamanho descomunal, a baleia-azul se alimenta principalmente de krill, pequenos crustáceos que filtra da água em grande quantidade através de estruturas especiais na boca chamadas barbatanas filtrantes, em vez de caçar presas grandes como muitos imaginam ao pensar num animal desse porte.",
+    "hints": [
+      "Releia 'A baleia-azul: o maior animal que já existiu' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Do que a baleia-azul se alimenta principalmente, segundo o texto?",
+    "options": [
+      "Krill, pequenos crustáceos",
+      "Grandes peixes e tubarões",
+      "Outras baleias menores",
+      "Plantas marinhas exclusivamente"
+    ],
+    "correct_answer": "Krill, pequenos crustáceos",
+    "explanation": "A baleia-azul é considerada o maior animal já registrado na história da vida na Terra, superando em tamanho até os maiores dinossauros conhecidos pelos registros fósseis. Apesar do tamanho descomunal, a baleia-azul se alimenta principalmente de krill, pequenos crustáceos que filtra da água em grande quantidade através de estruturas especiais na boca chamadas barbatanas filtrantes, em vez de caçar presas grandes como muitos imaginam ao pensar num animal desse porte.",
+    "reading_passage": "A baleia-azul é considerada o maior animal já registrado na história da vida na Terra, superando em tamanho até os maiores dinossauros conhecidos pelos registros fósseis. Apesar do tamanho descomunal, a baleia-azul se alimenta principalmente de krill, pequenos crustáceos que filtra da água em grande quantidade através de estruturas especiais na boca chamadas barbatanas filtrantes, em vez de caçar presas grandes como muitos imaginam ao pensar num animal desse porte.",
+    "hints": [
+      "Releia 'A baleia-azul: o maior animal que já existiu' — a resposta está no texto.",
+      "Começa com 'K'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Como a baleia-azul captura seu alimento, segundo o texto?",
+    "options": [
+      "Filtrando a água através de barbatanas filtrantes especiais",
+      "Perseguindo e mordendo presas individuais grandes",
+      "Usando ferrão venenoso na cauda",
+      "Sugando areia do fundo do mar"
+    ],
+    "correct_answer": "Filtrando a água através de barbatanas filtrantes especiais",
+    "explanation": "A baleia-azul é considerada o maior animal já registrado na história da vida na Terra, superando em tamanho até os maiores dinossauros conhecidos pelos registros fósseis. Apesar do tamanho descomunal, a baleia-azul se alimenta principalmente de krill, pequenos crustáceos que filtra da água em grande quantidade através de estruturas especiais na boca chamadas barbatanas filtrantes, em vez de caçar presas grandes como muitos imaginam ao pensar num animal desse porte.",
+    "reading_passage": "A baleia-azul é considerada o maior animal já registrado na história da vida na Terra, superando em tamanho até os maiores dinossauros conhecidos pelos registros fósseis. Apesar do tamanho descomunal, a baleia-azul se alimenta principalmente de krill, pequenos crustáceos que filtra da água em grande quantidade através de estruturas especiais na boca chamadas barbatanas filtrantes, em vez de caçar presas grandes como muitos imaginam ao pensar num animal desse porte.",
+    "hints": [
+      "Releia 'A baleia-azul: o maior animal que já existiu' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "O que é bioluminescência?",
+    "options": [
+      "A capacidade de produzir luz própria através de reações químicas internas",
+      "A capacidade de nadar em altíssima velocidade",
+      "Um tipo de camuflagem baseada em cor",
+      "A capacidade de respirar fora da água"
+    ],
+    "correct_answer": "A capacidade de produzir luz própria através de reações químicas internas",
+    "explanation": "Bioluminescência é a capacidade que alguns organismos têm de produzir luz própria através de reações químicas internas, um fenômeno bastante comum entre criaturas do fundo do oceano, onde a luz solar não alcança. Essa luz própria cumpre diferentes funções conforme a espécie: pode servir para atrair presas, como no caso do peixe-abissal conhecido como peixe-pescador, para confundir predadores, ou até para atrair parceiros durante o período reprodutivo.",
+    "reading_passage": "Bioluminescência é a capacidade que alguns organismos têm de produzir luz própria através de reações químicas internas, um fenômeno bastante comum entre criaturas do fundo do oceano, onde a luz solar não alcança. Essa luz própria cumpre diferentes funções conforme a espécie: pode servir para atrair presas, como no caso do peixe-abissal conhecido como peixe-pescador, para confundir predadores, ou até para atrair parceiros durante o período reprodutivo.",
+    "hints": [
+      "Releia 'Bioluminescência: a luz própria dos seres marinhos' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Por que a bioluminescência é comum em criaturas do fundo do oceano, segundo o texto?",
+    "options": [
+      "Porque a luz solar não alcança essas profundidades",
+      "Porque a água ali é mais transparente",
+      "Porque a pressão favorece a produção de luz",
+      "Porque não existe nenhuma outra forma de comunicação ali"
+    ],
+    "correct_answer": "Porque a luz solar não alcança essas profundidades",
+    "explanation": "Bioluminescência é a capacidade que alguns organismos têm de produzir luz própria através de reações químicas internas, um fenômeno bastante comum entre criaturas do fundo do oceano, onde a luz solar não alcança. Essa luz própria cumpre diferentes funções conforme a espécie: pode servir para atrair presas, como no caso do peixe-abissal conhecido como peixe-pescador, para confundir predadores, ou até para atrair parceiros durante o período reprodutivo.",
+    "reading_passage": "Bioluminescência é a capacidade que alguns organismos têm de produzir luz própria através de reações químicas internas, um fenômeno bastante comum entre criaturas do fundo do oceano, onde a luz solar não alcança. Essa luz própria cumpre diferentes funções conforme a espécie: pode servir para atrair presas, como no caso do peixe-abissal conhecido como peixe-pescador, para confundir predadores, ou até para atrair parceiros durante o período reprodutivo.",
+    "hints": [
+      "Releia 'Bioluminescência: a luz própria dos seres marinhos' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Cite uma função da bioluminescência mencionada no texto.",
+    "options": [
+      "Atrair presas",
+      "Aumentar a velocidade de natação",
+      "Regular a temperatura corporal",
+      "Produzir oxigênio para respiração"
+    ],
+    "correct_answer": "Atrair presas",
+    "explanation": "Bioluminescência é a capacidade que alguns organismos têm de produzir luz própria através de reações químicas internas, um fenômeno bastante comum entre criaturas do fundo do oceano, onde a luz solar não alcança. Essa luz própria cumpre diferentes funções conforme a espécie: pode servir para atrair presas, como no caso do peixe-abissal conhecido como peixe-pescador, para confundir predadores, ou até para atrair parceiros durante o período reprodutivo.",
+    "reading_passage": "Bioluminescência é a capacidade que alguns organismos têm de produzir luz própria através de reações químicas internas, um fenômeno bastante comum entre criaturas do fundo do oceano, onde a luz solar não alcança. Essa luz própria cumpre diferentes funções conforme a espécie: pode servir para atrair presas, como no caso do peixe-abissal conhecido como peixe-pescador, para confundir predadores, ou até para atrair parceiros durante o período reprodutivo.",
+    "hints": [
+      "Releia 'Bioluminescência: a luz própria dos seres marinhos' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Por quem os recifes de coral são formados, segundo o texto?",
+    "options": [
+      "Colônias de pequenos animais chamados pólipos de coral",
+      "Grandes rochas vulcânicas submersas",
+      "Algas gigantes de crescimento rápido",
+      "Cardumes de peixes que se fixam no fundo"
+    ],
+    "correct_answer": "Colônias de pequenos animais chamados pólipos de coral",
+    "explanation": "Os recifes de coral são formados por colônias de pequenos animais chamados pólipos de coral, que constroem estruturas de carbonato de cálcio ao longo de gerações, criando um ambiente físico que serve de lar para uma quantidade enorme de outras espécies marinhas. Embora cubram uma parcela pequena da área total dos oceanos, os recifes de coral abrigam uma proporção desproporcionalmente alta da biodiversidade marinha conhecida, funcionando como verdadeiros centros urbanos de vida no fundo do mar.",
+    "reading_passage": "Os recifes de coral são formados por colônias de pequenos animais chamados pólipos de coral, que constroem estruturas de carbonato de cálcio ao longo de gerações, criando um ambiente físico que serve de lar para uma quantidade enorme de outras espécies marinhas. Embora cubram uma parcela pequena da área total dos oceanos, os recifes de coral abrigam uma proporção desproporcionalmente alta da biodiversidade marinha conhecida, funcionando como verdadeiros centros urbanos de vida no fundo do mar.",
+    "hints": [
+      "Releia 'Recifes de coral: cidades vivas debaixo d'água' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "De que material os pólipos constroem as estruturas dos recifes?",
+    "options": [
+      "Carbonato de cálcio",
+      "Sílica marinha",
+      "Ferro oxidado",
+      "Matéria orgânica em decomposição"
+    ],
+    "correct_answer": "Carbonato de cálcio",
+    "explanation": "Os recifes de coral são formados por colônias de pequenos animais chamados pólipos de coral, que constroem estruturas de carbonato de cálcio ao longo de gerações, criando um ambiente físico que serve de lar para uma quantidade enorme de outras espécies marinhas. Embora cubram uma parcela pequena da área total dos oceanos, os recifes de coral abrigam uma proporção desproporcionalmente alta da biodiversidade marinha conhecida, funcionando como verdadeiros centros urbanos de vida no fundo do mar.",
+    "reading_passage": "Os recifes de coral são formados por colônias de pequenos animais chamados pólipos de coral, que constroem estruturas de carbonato de cálcio ao longo de gerações, criando um ambiente físico que serve de lar para uma quantidade enorme de outras espécies marinhas. Embora cubram uma parcela pequena da área total dos oceanos, os recifes de coral abrigam uma proporção desproporcionalmente alta da biodiversidade marinha conhecida, funcionando como verdadeiros centros urbanos de vida no fundo do mar.",
+    "hints": [
+      "Releia 'Recifes de coral: cidades vivas debaixo d'água' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "O que caracteriza os recifes de coral em relação à biodiversidade, segundo o texto?",
+    "options": [
+      "Abrigam uma proporção desproporcionalmente alta da biodiversidade marinha",
+      "Têm biodiversidade praticamente nula",
+      "Só abrigam uma única espécie de peixe",
+      "São os ambientes marinhos menos diversos que existem"
+    ],
+    "correct_answer": "Abrigam uma proporção desproporcionalmente alta da biodiversidade marinha",
+    "explanation": "Os recifes de coral são formados por colônias de pequenos animais chamados pólipos de coral, que constroem estruturas de carbonato de cálcio ao longo de gerações, criando um ambiente físico que serve de lar para uma quantidade enorme de outras espécies marinhas. Embora cubram uma parcela pequena da área total dos oceanos, os recifes de coral abrigam uma proporção desproporcionalmente alta da biodiversidade marinha conhecida, funcionando como verdadeiros centros urbanos de vida no fundo do mar.",
+    "reading_passage": "Os recifes de coral são formados por colônias de pequenos animais chamados pólipos de coral, que constroem estruturas de carbonato de cálcio ao longo de gerações, criando um ambiente físico que serve de lar para uma quantidade enorme de outras espécies marinhas. Embora cubram uma parcela pequena da área total dos oceanos, os recifes de coral abrigam uma proporção desproporcionalmente alta da biodiversidade marinha conhecida, funcionando como verdadeiros centros urbanos de vida no fundo do mar.",
+    "hints": [
+      "Releia 'Recifes de coral: cidades vivas debaixo d'água' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Como o polvo é reconhecido entre os cientistas, segundo o texto?",
+    "options": [
+      "Como um dos invertebrados mais inteligentes conhecidos",
+      "Como o animal marinho mais lento que existe",
+      "Como uma espécie extremamente rara e quase extinta",
+      "Como o único invertebrado capaz de voar"
+    ],
+    "correct_answer": "Como um dos invertebrados mais inteligentes conhecidos",
+    "explanation": "O polvo é amplamente reconhecido entre os cientistas como um dos invertebrados mais inteligentes conhecidos, capaz de resolver problemas complexos, como abrir potes para alcançar comida, e de demonstrar comportamentos de aprendizado por observação. Parte dessa capacidade cognitiva está relacionada à estrutura única do sistema nervoso do polvo, que tem uma distribuição de neurônios bastante diferente da maioria dos outros animais, com boa parte deles concentrados nos próprios braços, não apenas no cérebro central.",
+    "reading_passage": "O polvo é amplamente reconhecido entre os cientistas como um dos invertebrados mais inteligentes conhecidos, capaz de resolver problemas complexos, como abrir potes para alcançar comida, e de demonstrar comportamentos de aprendizado por observação. Parte dessa capacidade cognitiva está relacionada à estrutura única do sistema nervoso do polvo, que tem uma distribuição de neurônios bastante diferente da maioria dos outros animais, com boa parte deles concentrados nos próprios braços, não apenas no cérebro central.",
+    "hints": [
+      "Releia 'O polvo e sua inteligência surpreendente' — a resposta está no texto.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Cite um comportamento inteligente do polvo mencionado no texto.",
+    "options": [
+      "Abrir potes para alcançar comida",
+      "Construir ninhos em árvores",
+      "Cantar para atrair parceiros",
+      "Migrar milhares de quilômetros anualmente"
+    ],
+    "correct_answer": "Abrir potes para alcançar comida",
+    "explanation": "O polvo é amplamente reconhecido entre os cientistas como um dos invertebrados mais inteligentes conhecidos, capaz de resolver problemas complexos, como abrir potes para alcançar comida, e de demonstrar comportamentos de aprendizado por observação. Parte dessa capacidade cognitiva está relacionada à estrutura única do sistema nervoso do polvo, que tem uma distribuição de neurônios bastante diferente da maioria dos outros animais, com boa parte deles concentrados nos próprios braços, não apenas no cérebro central.",
+    "reading_passage": "O polvo é amplamente reconhecido entre os cientistas como um dos invertebrados mais inteligentes conhecidos, capaz de resolver problemas complexos, como abrir potes para alcançar comida, e de demonstrar comportamentos de aprendizado por observação. Parte dessa capacidade cognitiva está relacionada à estrutura única do sistema nervoso do polvo, que tem uma distribuição de neurônios bastante diferente da maioria dos outros animais, com boa parte deles concentrados nos próprios braços, não apenas no cérebro central.",
+    "hints": [
+      "Releia 'O polvo e sua inteligência surpreendente' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "O que é peculiar no sistema nervoso do polvo, segundo o texto?",
+    "options": [
+      "Boa parte dos neurônios está concentrada nos próprios braços",
+      "Ele não possui nenhum tipo de sistema nervoso",
+      "Todos os neurônios ficam exclusivamente nos olhos",
+      "Ele tem o mesmo sistema nervoso dos peixes comuns"
+    ],
+    "correct_answer": "Boa parte dos neurônios está concentrada nos próprios braços",
+    "explanation": "O polvo é amplamente reconhecido entre os cientistas como um dos invertebrados mais inteligentes conhecidos, capaz de resolver problemas complexos, como abrir potes para alcançar comida, e de demonstrar comportamentos de aprendizado por observação. Parte dessa capacidade cognitiva está relacionada à estrutura única do sistema nervoso do polvo, que tem uma distribuição de neurônios bastante diferente da maioria dos outros animais, com boa parte deles concentrados nos próprios braços, não apenas no cérebro central.",
+    "reading_passage": "O polvo é amplamente reconhecido entre os cientistas como um dos invertebrados mais inteligentes conhecidos, capaz de resolver problemas complexos, como abrir potes para alcançar comida, e de demonstrar comportamentos de aprendizado por observação. Parte dessa capacidade cognitiva está relacionada à estrutura única do sistema nervoso do polvo, que tem uma distribuição de neurônios bastante diferente da maioria dos outros animais, com boa parte deles concentrados nos próprios braços, não apenas no cérebro central.",
+    "hints": [
+      "Releia 'O polvo e sua inteligência surpreendente' — a resposta está no texto.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Que tipo de relação o peixe-palhaço mantém com a anêmona-do-mar?",
+    "options": [
+      "Simbiose, com benefício mútuo entre as espécies",
+      "Competição direta por território",
+      "Predação, onde um caça o outro",
+      "Nenhuma relação real, apenas convivência acidental"
+    ],
+    "correct_answer": "Simbiose, com benefício mútuo entre as espécies",
+    "explanation": "O peixe-palhaço e a anêmona-do-mar mantêm uma relação de simbiose, ou seja, uma parceria em que ambas as espécies se beneficiam mutuamente. O peixe-palhaço vive protegido entre os tentáculos urticantes da anêmona, aos quais desenvolveu resistência natural, ficando protegido de predadores que não têm essa mesma resistência. Em troca, o peixe-palhaço ajuda a afastar outros peixes que poderiam se alimentar da anêmona, além de contribuir com nutrientes através de seus próprios resíduos.",
+    "reading_passage": "O peixe-palhaço e a anêmona-do-mar mantêm uma relação de simbiose, ou seja, uma parceria em que ambas as espécies se beneficiam mutuamente. O peixe-palhaço vive protegido entre os tentáculos urticantes da anêmona, aos quais desenvolveu resistência natural, ficando protegido de predadores que não têm essa mesma resistência. Em troca, o peixe-palhaço ajuda a afastar outros peixes que poderiam se alimentar da anêmona, além de contribuir com nutrientes através de seus próprios resíduos.",
+    "hints": [
+      "Releia 'A parceria entre o peixe-palhaço e a anêmona-do-mar' — a resposta está no texto.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Por que o peixe-palhaço consegue viver entre os tentáculos da anêmona sem ser ferido?",
+    "options": [
+      "Desenvolveu resistência natural aos tentáculos urticantes",
+      "Os tentáculos da anêmona não têm nenhum efeito em nenhum animal",
+      "O peixe-palhaço nunca toca nos tentáculos",
+      "A anêmona retira seus tentáculos quando o peixe se aproxima"
+    ],
+    "correct_answer": "Desenvolveu resistência natural aos tentáculos urticantes",
+    "explanation": "O peixe-palhaço e a anêmona-do-mar mantêm uma relação de simbiose, ou seja, uma parceria em que ambas as espécies se beneficiam mutuamente. O peixe-palhaço vive protegido entre os tentáculos urticantes da anêmona, aos quais desenvolveu resistência natural, ficando protegido de predadores que não têm essa mesma resistência. Em troca, o peixe-palhaço ajuda a afastar outros peixes que poderiam se alimentar da anêmona, além de contribuir com nutrientes através de seus próprios resíduos.",
+    "reading_passage": "O peixe-palhaço e a anêmona-do-mar mantêm uma relação de simbiose, ou seja, uma parceria em que ambas as espécies se beneficiam mutuamente. O peixe-palhaço vive protegido entre os tentáculos urticantes da anêmona, aos quais desenvolveu resistência natural, ficando protegido de predadores que não têm essa mesma resistência. Em troca, o peixe-palhaço ajuda a afastar outros peixes que poderiam se alimentar da anêmona, além de contribuir com nutrientes através de seus próprios resíduos.",
+    "hints": [
+      "Releia 'A parceria entre o peixe-palhaço e a anêmona-do-mar' — a resposta está no texto.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "O que o peixe-palhaço oferece em troca à anêmona, segundo o texto?",
+    "options": [
+      "Ajuda a afastar predadores da anêmona e contribui com nutrientes",
+      "Constrói um abrigo físico para a anêmona",
+      "Caça alimento e entrega diretamente à anêmona",
+      "Nada, a relação beneficia apenas o peixe"
+    ],
+    "correct_answer": "Ajuda a afastar predadores da anêmona e contribui com nutrientes",
+    "explanation": "O peixe-palhaço e a anêmona-do-mar mantêm uma relação de simbiose, ou seja, uma parceria em que ambas as espécies se beneficiam mutuamente. O peixe-palhaço vive protegido entre os tentáculos urticantes da anêmona, aos quais desenvolveu resistência natural, ficando protegido de predadores que não têm essa mesma resistência. Em troca, o peixe-palhaço ajuda a afastar outros peixes que poderiam se alimentar da anêmona, além de contribuir com nutrientes através de seus próprios resíduos.",
+    "reading_passage": "O peixe-palhaço e a anêmona-do-mar mantêm uma relação de simbiose, ou seja, uma parceria em que ambas as espécies se beneficiam mutuamente. O peixe-palhaço vive protegido entre os tentáculos urticantes da anêmona, aos quais desenvolveu resistência natural, ficando protegido de predadores que não têm essa mesma resistência. Em troca, o peixe-palhaço ajuda a afastar outros peixes que poderiam se alimentar da anêmona, além de contribuir com nutrientes através de seus próprios resíduos.",
+    "hints": [
+      "Releia 'A parceria entre o peixe-palhaço e a anêmona-do-mar' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "O que caracteriza a migração das tartarugas marinhas, segundo o texto?",
+    "options": [
+      "Longas jornadas entre áreas de alimentação e praias de reprodução",
+      "Deslocamentos curtos, de poucos metros por vida",
+      "Permanência fixa num único local a vida toda",
+      "Migração exclusivamente em direção aos polos"
+    ],
+    "correct_answer": "Longas jornadas entre áreas de alimentação e praias de reprodução",
+    "explanation": "Tartarugas marinhas são conhecidas por realizar longas migrações entre áreas de alimentação e praias específicas de reprodução, percorrendo às vezes milhares de quilômetros ao longo da vida. Um dos aspectos mais estudados desse comportamento é a capacidade de fêmeas retornarem, décadas depois, à mesma praia onde nasceram para desovar seus próprios ovos — fenômeno que os cientistas associam à percepção do campo magnético terrestre pelas tartarugas, embora o mecanismo exato ainda não seja completamente compreendido.",
+    "reading_passage": "Tartarugas marinhas são conhecidas por realizar longas migrações entre áreas de alimentação e praias específicas de reprodução, percorrendo às vezes milhares de quilômetros ao longo da vida. Um dos aspectos mais estudados desse comportamento é a capacidade de fêmeas retornarem, décadas depois, à mesma praia onde nasceram para desovar seus próprios ovos — fenômeno que os cientistas associam à percepção do campo magnético terrestre pelas tartarugas, embora o mecanismo exato ainda não seja completamente compreendido.",
+    "hints": [
+      "Releia 'A extraordinária jornada das tartarugas marinhas' — a resposta está no texto.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "O que fêmeas de tartaruga marinha costumam fazer décadas depois de nascer, segundo o texto?",
+    "options": [
+      "Retornar à mesma praia onde nasceram para desovar",
+      "Nunca mais retornar a nenhuma praia",
+      "Trocar de espécie ao longo da vida",
+      "Parar de se reproduzir completamente"
+    ],
+    "correct_answer": "Retornar à mesma praia onde nasceram para desovar",
+    "explanation": "Tartarugas marinhas são conhecidas por realizar longas migrações entre áreas de alimentação e praias específicas de reprodução, percorrendo às vezes milhares de quilômetros ao longo da vida. Um dos aspectos mais estudados desse comportamento é a capacidade de fêmeas retornarem, décadas depois, à mesma praia onde nasceram para desovar seus próprios ovos — fenômeno que os cientistas associam à percepção do campo magnético terrestre pelas tartarugas, embora o mecanismo exato ainda não seja completamente compreendido.",
+    "reading_passage": "Tartarugas marinhas são conhecidas por realizar longas migrações entre áreas de alimentação e praias específicas de reprodução, percorrendo às vezes milhares de quilômetros ao longo da vida. Um dos aspectos mais estudados desse comportamento é a capacidade de fêmeas retornarem, décadas depois, à mesma praia onde nasceram para desovar seus próprios ovos — fenômeno que os cientistas associam à percepção do campo magnético terrestre pelas tartarugas, embora o mecanismo exato ainda não seja completamente compreendido.",
+    "hints": [
+      "Releia 'A extraordinária jornada das tartarugas marinhas' — a resposta está no texto.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "A que os cientistas associam essa capacidade de retorno, segundo o texto?",
+    "options": [
+      "À percepção do campo magnético terrestre",
+      "Ao uso de marcas visuais na areia",
+      "A um sistema de comunicação sonora entre tartarugas",
+      "A um instinto totalmente inexplicável e sem nenhuma hipótese científica"
+    ],
+    "correct_answer": "À percepção do campo magnético terrestre",
+    "explanation": "Tartarugas marinhas são conhecidas por realizar longas migrações entre áreas de alimentação e praias específicas de reprodução, percorrendo às vezes milhares de quilômetros ao longo da vida. Um dos aspectos mais estudados desse comportamento é a capacidade de fêmeas retornarem, décadas depois, à mesma praia onde nasceram para desovar seus próprios ovos — fenômeno que os cientistas associam à percepção do campo magnético terrestre pelas tartarugas, embora o mecanismo exato ainda não seja completamente compreendido.",
+    "reading_passage": "Tartarugas marinhas são conhecidas por realizar longas migrações entre áreas de alimentação e praias específicas de reprodução, percorrendo às vezes milhares de quilômetros ao longo da vida. Um dos aspectos mais estudados desse comportamento é a capacidade de fêmeas retornarem, décadas depois, à mesma praia onde nasceram para desovar seus próprios ovos — fenômeno que os cientistas associam à percepção do campo magnético terrestre pelas tartarugas, embora o mecanismo exato ainda não seja completamente compreendido.",
+    "hints": [
+      "Releia 'A extraordinária jornada das tartarugas marinhas' — a resposta está no texto.",
+      "Começa com 'À'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Por que peixes de grandes profundidades precisam de adaptações específicas, segundo o texto?",
+    "options": [
+      "Para suportar a pressão extrema encontrada nesses ambientes",
+      "Para conseguir respirar fora da água",
+      "Para resistir a temperaturas extremamente altas",
+      "Para se alimentar exclusivamente de plantas"
+    ],
+    "correct_answer": "Para suportar a pressão extrema encontrada nesses ambientes",
+    "explanation": "Peixes que vivem em grandes profundidades desenvolveram adaptações específicas para suportar a pressão extrema encontrada nesses ambientes, muito maior do que a pressão na superfície. Uma das principais adaptações está relacionada à composição de seus tecidos corporais e à ausência, em muitas espécies, de estruturas rígidas como a bexiga natatória cheia de gás — presente em peixes de águas rasas, mas que se tornaria um problema sob pressão tão intensa nas profundezas.",
+    "reading_passage": "Peixes que vivem em grandes profundidades desenvolveram adaptações específicas para suportar a pressão extrema encontrada nesses ambientes, muito maior do que a pressão na superfície. Uma das principais adaptações está relacionada à composição de seus tecidos corporais e à ausência, em muitas espécies, de estruturas rígidas como a bexiga natatória cheia de gás — presente em peixes de águas rasas, mas que se tornaria um problema sob pressão tão intensa nas profundezas.",
+    "hints": [
+      "Releia 'Como peixes sobrevivem à pressão das grandes profundidades' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Que estrutura, comum em peixes de águas rasas, é frequentemente ausente em peixes de grande profundidade?",
+    "options": [
+      "Bexiga natatória cheia de gás",
+      "Nadadeiras peitorais",
+      "Escamas protetoras",
+      "Brânquias respiratórias"
+    ],
+    "correct_answer": "Bexiga natatória cheia de gás",
+    "explanation": "Peixes que vivem em grandes profundidades desenvolveram adaptações específicas para suportar a pressão extrema encontrada nesses ambientes, muito maior do que a pressão na superfície. Uma das principais adaptações está relacionada à composição de seus tecidos corporais e à ausência, em muitas espécies, de estruturas rígidas como a bexiga natatória cheia de gás — presente em peixes de águas rasas, mas que se tornaria um problema sob pressão tão intensa nas profundezas.",
+    "reading_passage": "Peixes que vivem em grandes profundidades desenvolveram adaptações específicas para suportar a pressão extrema encontrada nesses ambientes, muito maior do que a pressão na superfície. Uma das principais adaptações está relacionada à composição de seus tecidos corporais e à ausência, em muitas espécies, de estruturas rígidas como a bexiga natatória cheia de gás — presente em peixes de águas rasas, mas que se tornaria um problema sob pressão tão intensa nas profundezas.",
+    "hints": [
+      "Releia 'Como peixes sobrevivem à pressão das grandes profundidades' — a resposta está no texto.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Por que essa estrutura se tornaria um problema nas profundezas, segundo o texto?",
+    "options": [
+      "Por causa da pressão intensa encontrada nessas profundidades",
+      "Porque ela emite luz que atrairia predadores",
+      "Porque ela consome muito oxigênio",
+      "Porque ela impede o peixe de nadar rapidamente"
+    ],
+    "correct_answer": "Por causa da pressão intensa encontrada nessas profundidades",
+    "explanation": "Peixes que vivem em grandes profundidades desenvolveram adaptações específicas para suportar a pressão extrema encontrada nesses ambientes, muito maior do que a pressão na superfície. Uma das principais adaptações está relacionada à composição de seus tecidos corporais e à ausência, em muitas espécies, de estruturas rígidas como a bexiga natatória cheia de gás — presente em peixes de águas rasas, mas que se tornaria um problema sob pressão tão intensa nas profundezas.",
+    "reading_passage": "Peixes que vivem em grandes profundidades desenvolveram adaptações específicas para suportar a pressão extrema encontrada nesses ambientes, muito maior do que a pressão na superfície. Uma das principais adaptações está relacionada à composição de seus tecidos corporais e à ausência, em muitas espécies, de estruturas rígidas como a bexiga natatória cheia de gás — presente em peixes de águas rasas, mas que se tornaria um problema sob pressão tão intensa nas profundezas.",
+    "hints": [
+      "Releia 'Como peixes sobrevivem à pressão das grandes profundidades' — a resposta está no texto.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "O que é o plâncton, segundo o texto?",
+    "options": [
+      "Organismos geralmente microscópicos que flutuam na água",
+      "Grandes algas fixadas no fundo do mar",
+      "Um tipo específico de peixe pequeno",
+      "Restos de coral já mortos"
+    ],
+    "correct_answer": "Organismos geralmente microscópicos que flutuam na água",
+    "explanation": "O plâncton é o conjunto de organismos, geralmente microscópicos, que flutuam livremente na água, movidos principalmente pelas correntes marítimas, sem capacidade de nadar contra elas com força suficiente. Apesar do tamanho minúsculo, o plâncton forma a base de praticamente toda a cadeia alimentar marinha, servindo de alimento direto ou indireto para uma imensa variedade de espécies, das menores criaturas até os maiores animais do oceano, como a própria baleia-azul.",
+    "reading_passage": "O plâncton é o conjunto de organismos, geralmente microscópicos, que flutuam livremente na água, movidos principalmente pelas correntes marítimas, sem capacidade de nadar contra elas com força suficiente. Apesar do tamanho minúsculo, o plâncton forma a base de praticamente toda a cadeia alimentar marinha, servindo de alimento direto ou indireto para uma imensa variedade de espécies, das menores criaturas até os maiores animais do oceano, como a própria baleia-azul.",
+    "hints": [
+      "Releia 'O plâncton: a base invisível da vida marinha' — a resposta está no texto.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "O que move principalmente o plâncton pela água, segundo o texto?",
+    "options": [
+      "As correntes marítimas",
+      "Sua própria capacidade de natação forte",
+      "O vento na superfície do mar",
+      "Impulsos elétricos próprios"
+    ],
+    "correct_answer": "As correntes marítimas",
+    "explanation": "O plâncton é o conjunto de organismos, geralmente microscópicos, que flutuam livremente na água, movidos principalmente pelas correntes marítimas, sem capacidade de nadar contra elas com força suficiente. Apesar do tamanho minúsculo, o plâncton forma a base de praticamente toda a cadeia alimentar marinha, servindo de alimento direto ou indireto para uma imensa variedade de espécies, das menores criaturas até os maiores animais do oceano, como a própria baleia-azul.",
+    "reading_passage": "O plâncton é o conjunto de organismos, geralmente microscópicos, que flutuam livremente na água, movidos principalmente pelas correntes marítimas, sem capacidade de nadar contra elas com força suficiente. Apesar do tamanho minúsculo, o plâncton forma a base de praticamente toda a cadeia alimentar marinha, servindo de alimento direto ou indireto para uma imensa variedade de espécies, das menores criaturas até os maiores animais do oceano, como a própria baleia-azul.",
+    "hints": [
+      "Releia 'O plâncton: a base invisível da vida marinha' — a resposta está no texto.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "oceano_vida_marinha",
+    "difficulty_level": 1,
+    "prompt": "Qual é a importância do plâncton para a vida marinha, segundo o texto?",
+    "options": [
+      "Forma a base de praticamente toda a cadeia alimentar marinha",
+      "Não tem nenhuma relevância para outras espécies",
+      "Serve apenas de alimento para aves marinhas",
+      "É prejudicial à maioria dos animais do oceano"
+    ],
+    "correct_answer": "Forma a base de praticamente toda a cadeia alimentar marinha",
+    "explanation": "O plâncton é o conjunto de organismos, geralmente microscópicos, que flutuam livremente na água, movidos principalmente pelas correntes marítimas, sem capacidade de nadar contra elas com força suficiente. Apesar do tamanho minúsculo, o plâncton forma a base de praticamente toda a cadeia alimentar marinha, servindo de alimento direto ou indireto para uma imensa variedade de espécies, das menores criaturas até os maiores animais do oceano, como a própria baleia-azul.",
+    "reading_passage": "O plâncton é o conjunto de organismos, geralmente microscópicos, que flutuam livremente na água, movidos principalmente pelas correntes marítimas, sem capacidade de nadar contra elas com força suficiente. Apesar do tamanho minúsculo, o plâncton forma a base de praticamente toda a cadeia alimentar marinha, servindo de alimento direto ou indireto para uma imensa variedade de espécies, das menores criaturas até os maiores animais do oceano, como a própria baleia-azul.",
+    "hints": [
+      "Releia 'O plâncton: a base invisível da vida marinha' — a resposta está no texto.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  }
+]

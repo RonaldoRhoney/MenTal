@@ -317,6 +317,26 @@
   "@territoryGastroSulFusao": {
     "description": "Territory display name"
   },
+  "territoryOceanoMundo": "Os Oceanos do Mundo",
+  "@territoryOceanoMundo": {
+    "description": "Territory display name"
+  },
+  "territoryOceanoVidaMarinha": "Vida Marinha",
+  "@territoryOceanoVidaMarinha": {
+    "description": "Territory display name"
+  },
+  "territoryOceanoProfundezas": "Profundezas e Mistérios",
+  "@territoryOceanoProfundezas": {
+    "description": "Territory display name"
+  },
+  "territoryOceanoClima": "Oceano e Clima",
+  "@territoryOceanoClima": {
+    "description": "Territory display name"
+  },
+  "territoryOceanoBrasil": "Oceanos e o Brasil",
+  "@territoryOceanoBrasil": {
+    "description": "Territory display name"
+  },
   "audioPlayButton": "Tocar som",
   "@audioPlayButton": {
     "description": "Button that plays the challenge audio clip in Ouvido Afiado"

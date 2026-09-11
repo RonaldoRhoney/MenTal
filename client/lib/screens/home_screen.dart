@@ -468,6 +468,8 @@ class _HomeScreenState extends State<HomeScreen> {
         return Icons.map_rounded;
       case 'gastronomia':
         return Icons.restaurant_rounded;
+      case 'oceanos':
+        return Icons.waves_rounded;
       default:
         return Icons.travel_explore_rounded;
     }
