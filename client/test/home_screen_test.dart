@@ -17,6 +17,7 @@ class _FakeApiClient extends ApiClient {
   @override
   Future<Map<String, dynamic>> progress() async => {
         'xp_total': 130,
+        'xp_per_level': 100,
         'level': 2,
         'streak': {'current_streak': 3, 'freeze_available': true},
         'territories': [
@@ -105,6 +106,7 @@ class _FakeApiClientWithMysteryBlock extends ApiClient {
   @override
   Future<Map<String, dynamic>> progress() async => {
         'xp_total': 0,
+        'xp_per_level': 100,
         'level': 1,
         'streak': {'current_streak': 0, 'freeze_available': true},
         'territories': [

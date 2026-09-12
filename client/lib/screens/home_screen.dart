@@ -1588,15 +1588,19 @@ class _ProgressCard extends StatelessWidget {
   final VoidCallback onTapPhoto;
   final VoidCallback onTapMentalCoins;
 
-  static const _xpPerLevel = 100;
-
   @override
   Widget build(BuildContext context) {
     final level = progress['level'] as int;
     final xpTotal = progress['xp_total'] as int;
+    // Achado de auditoria de qualidade 3.1 (11/09/2026): o backend já é
+    // a fonte de verdade (config.XP_PER_LEVEL) e já envia esse valor em
+    // GET /progress — consumir daqui em vez de duplicar a constante
+    // evita as duas telas ficarem erradas silenciosamente se o backend
+    // mudar o valor.
+    final xpPerLevel = progress['xp_per_level'] as int;
     final streakDays = progress['streak']['current_streak'] as int;
-    final xpIntoLevel = xpTotal % _xpPerLevel;
-    final fraction = (xpIntoLevel / _xpPerLevel).clamp(0.0, 1.0);
+    final xpIntoLevel = xpTotal % xpPerLevel;
+    final fraction = (xpIntoLevel / xpPerLevel).clamp(0.0, 1.0);
     final worlds = (progress['worlds'] as List?)?.cast<Map<String, dynamic>>();
     final worldsCompleted = worlds?.where((w) => w['completed'] as bool).length;
 
@@ -1731,7 +1735,7 @@ class _ProgressCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 8),
-              Text('$xpIntoLevel/$_xpPerLevel XP',
+              Text('$xpIntoLevel/$xpPerLevel XP',
                   style: AppTheme.technicalStyle(
                       color: AppColors.muted, fontSize: 11)),
             ],

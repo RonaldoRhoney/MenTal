@@ -13,8 +13,10 @@ plugins {
 
 // Keystore de release real (android/key.properties, NUNCA commitado — ver
 // .gitignore). Sem esse arquivo (ex.: checkout novo sem a keystore), o
-// build de release cai pra assinatura de debug — nunca falha o build,
-// só não produz um artefato publicável.
+// build de release FALHA explicitamente (ver signingConfig abaixo, achado
+// M5 de 05/09/2026) — não cai mais silenciosamente pra assinatura de
+// debug. Achado 2.3 da auditoria (11/09/2026): este comentário descrevia
+// o comportamento antigo, já eliminado.
 val keystorePropertiesFile = rootProject.file("key.properties")
 val keystoreProperties = Properties()
 if (keystorePropertiesFile.exists()) {

@@ -4,9 +4,10 @@ import '../theme/app_theme.dart';
 
 /// Barra de XP — DESIGN_SYSTEM.md §4: "sempre visível no topo da Home,
 /// gradiente gold→teal, nunca cor sólida neutra (progresso deve parecer
-/// vivo)". Progresso dentro do nível atual — decisão de implementação:
-/// usa 100 XP/nível espelhando `backend/app/config.py::XP_PER_LEVEL`
-/// (só para o visual; o nível em si sempre vem pronto do backend).
+/// vivo)". Progresso dentro do nível atual — `xpPerLevel` vem de
+/// GET /progress (config.XP_PER_LEVEL no backend, fonte de verdade),
+/// nunca duplicado aqui como constante local (achado de auditoria 3.1,
+/// 11/09/2026).
 ///
 /// Reforço de gamificação (pedido de Rhoney, 29/08/2026): barra mais alta
 /// e animada (cresce da esquerda pra direita a cada carregamento, em vez
@@ -14,17 +15,21 @@ import '../theme/app_theme.dart';
 /// roxo → dourado) pra reforçar a sensação de progresso/conquista. Nível
 /// virou um badge circular ao lado do texto, não só texto solto.
 class XpBar extends StatelessWidget {
-  const XpBar({super.key, required this.xpTotal, required this.level});
+  const XpBar({super.key, required this.xpTotal, required this.level, required this.xpPerLevel});
 
   final int xpTotal;
   final int level;
-
-  static const _xpPerLevel = 100;
+  // Achado de auditoria de qualidade 3.1 (11/09/2026): antes hardcoded
+  // aqui e duplicado em home_screen.dart — o backend já é a fonte de
+  // verdade (config.XP_PER_LEVEL) e já envia o valor em GET /progress,
+  // então este widget passou a recebê-lo do chamador em vez de duplicar
+  // a constante.
+  final int xpPerLevel;
 
   @override
   Widget build(BuildContext context) {
-    final xpIntoLevel = xpTotal % _xpPerLevel;
-    final fraction = (xpIntoLevel / _xpPerLevel).clamp(0.0, 1.0);
+    final xpIntoLevel = xpTotal % xpPerLevel;
+    final fraction = (xpIntoLevel / xpPerLevel).clamp(0.0, 1.0);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +85,7 @@ class XpBar extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          '$xpIntoLevel / $_xpPerLevel XP',
+          '$xpIntoLevel / $xpPerLevel XP',
           style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 13),
         ),
       ],

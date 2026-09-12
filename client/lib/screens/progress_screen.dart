@@ -71,7 +71,11 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 child: ListView(
                 padding: const EdgeInsets.all(16),
                 children: [
-                  XpBar(xpTotal: progress['xp_total'] as int, level: progress['level'] as int),
+                  XpBar(
+                    xpTotal: progress['xp_total'] as int,
+                    level: progress['level'] as int,
+                    xpPerLevel: progress['xp_per_level'] as int,
+                  ),
                   const SizedBox(height: 32),
                   Text(l10n.streakSectionTitle, style: Theme.of(context).textTheme.titleLarge),
                   const SizedBox(height: 8),
