@@ -108,6 +108,28 @@ def test_follow_nonexistent_user_does_not_create_a_row(client):
         assert row is None
 
 
+def test_follow_rate_limit_is_enforced(client):
+    """Achado do agente MentalQA (11/09/2026, seção 5 da auditoria): a
+    correção do achado 2.2 adicionou RATE_LIMIT_FOLLOW, mas nenhum teste
+    de fato acionava o teto — só validava alvo inexistente. Aqui o alvo
+    nem precisa existir: enforce_rate_limit roda antes da checagem de
+    existência, então basta bater no mesmo endpoint N+1 vezes."""
+    from app import config
+
+    a = str(uuid.uuid4())
+    headers_a = auth_header(a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+
+    max_calls, _ = config.RATE_LIMIT_FOLLOW
+    for i in range(max_calls):
+        resp = client.post(f"/profile/{uuid.uuid4()}/follow", headers=headers_a)
+        assert resp.status_code == 200, f"deveria permitir a chamada {i + 1}/{max_calls}"
+
+    over_limit = client.post(f"/profile/{uuid.uuid4()}/follow", headers=headers_a)
+    assert over_limit.status_code == 429
+    assert over_limit.json()["error"]["code"] == "RATE_LIMIT_EXCEEDED"
+
+
 def test_block_prevents_new_follow_and_removes_existing_follow_both_ways(client):
     a, b = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a, headers_b = auth_header(a), auth_header(b)

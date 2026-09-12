@@ -200,8 +200,11 @@ TERRITORIES = [
     # manual de Rhoney via backend/content/*.json + append_production_
     # content.py (backend/content/README.md, RISKS_AND_OPEN_DECISIONS.md
     # §2: "nunca gerado/validado por IA") — nenhuma pergunta é adicionada
-    # aqui. Mesmo tier avançado dos demais territórios de trivia, mesmo
-    # Mundo (Cultura Geral) de esportes/regiões/cultura_pop.
+    # aqui. Mesmo tier avançado dos demais territórios de trivia.
+    # (Nota de 11/09/2026: na V3.1 estes territórios nasceram dentro do
+    # Mundo da Cultura Geral, junto de esportes/regiões/cultura_pop —
+    # DESMEMBRAMENTO_CULTURA_GERAL_V1.md, 07/09/2026, deu a Mitologia seu
+    # próprio Mundo, ver world_id abaixo.)
     #
     # Mitologia — "nessa ordem de introdução" do doc (mais conhecido →
     # mais nichado) vira 3 territórios sob o bloco "mitologia", em vez de
