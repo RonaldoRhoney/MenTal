@@ -25,6 +25,7 @@ class _FakeApiClient extends ApiClient {
       'photo_moderation_status': photoModerationStatus ?? 'none',
       'location_state': null,
       'location_country': null,
+      'city': null,
       'location_public': false,
     };
   }
@@ -67,6 +68,14 @@ class _FakeApiClient extends ApiClient {
 }
 
 Future<void> _pumpProfileScreen(WidgetTester tester, ApiClient client) async {
+  // Cidade (12/09/2026) empurrou o conteúdo além dos 600px padrão de
+  // teste — mesmo padrão de viewport alto já usado em outras telas
+  // longas do projeto (ex: admin_metrics_screen_test.dart).
+  tester.view.physicalSize = const Size(800, 1400);
+  tester.view.devicePixelRatio = 1.0;
+  addTearDown(tester.view.resetPhysicalSize);
+  addTearDown(tester.view.resetDevicePixelRatio);
+
   await tester.pumpWidget(
     MaterialApp(
       theme: AppTheme.themeData,
@@ -96,15 +105,17 @@ void main() {
     await _pumpProfileScreen(tester, client);
 
     await tester.enterText(find.widgetWithText(TextField, 'Nome real'), 'Fulano de Tal');
-    // Estado (12/09/2026) deixou de ser TextField — agora é um dropdown
-    // com as 27 UFs (client/lib/brazil_states.dart). Usa o primeiro item
-    // da lista (Acre) — itens mais abaixo na lista de 27 não ficam
-    // garantidamente construídos no menu popup sem rolar.
+    // Ordem pedida por Rhoney (12/09/2026): País → Estado → Cidade.
+    await tester.enterText(find.widgetWithText(TextField, 'País'), 'Brasil');
+    // Estado deixou de ser TextField — agora é um dropdown com as 27
+    // UFs (client/lib/brazil_states.dart). Usa o primeiro item da lista
+    // (Acre) — itens mais abaixo na lista de 27 não ficam garantidamente
+    // construídos no menu popup sem rolar.
     await tester.tap(find.byType(DropdownButtonFormField<String>));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Acre (AC)').last);
     await tester.pumpAndSettle();
-    await tester.enterText(find.widgetWithText(TextField, 'País'), 'Brasil');
+    await tester.enterText(find.widgetWithText(TextField, 'Cidade'), 'Rio Branco');
     await tester.tap(find.byType(Switch));
     await tester.tap(find.widgetWithText(FilledButton, 'Salvar'));
     await tester.pumpAndSettle();
@@ -115,7 +126,7 @@ void main() {
       'location_state': 'AC',
       'location_country': 'Brasil',
       'location_public': true,
-      'city': null,
+      'city': 'Rio Branco',
       'gender': null,
       'age_range': null,
     });

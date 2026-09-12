@@ -6,6 +6,7 @@ import '../brazil_states.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/photo_picker_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/city_autocomplete_field.dart';
 import '../widgets/profile_photo.dart';
 
 /// USER_PROFILE.md (aprovado). Nome real/localização são opcionais aqui
@@ -42,6 +43,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   // valor fora da lista, garantido pelo dropdown).
   String? _selectedStateUf;
   final _countryController = TextEditingController();
+  final _cityController = TextEditingController();
   bool _locationPublic = false;
 
   @override
@@ -54,6 +56,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   void dispose() {
     _realNameController.dispose();
     _countryController.dispose();
+    _cityController.dispose();
     super.dispose();
   }
 
@@ -72,6 +75,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           final existingState = profile['location_state'] as String?;
           _selectedStateUf = kBrazilStates.any((s) => s.uf == existingState) ? existingState : null;
           _countryController.text = profile['location_country'] as String? ?? '';
+          _cityController.text = profile['city'] as String? ?? '';
           _locationPublic = profile['location_public'] as bool? ?? false;
         });
       }
@@ -146,6 +150,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         photoPath: path,
         locationState: _selectedStateUf,
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
+        city: _cityController.text.trim().isEmpty ? null : _cityController.text.trim(),
         locationPublic: _locationPublic,
       );
       if (mounted) {
@@ -177,6 +182,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         // na validação do backend.
         locationState: _selectedStateUf,
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
+        city: _cityController.text.trim().isEmpty ? null : _cityController.text.trim(),
         locationPublic: _locationPublic,
       );
       if (mounted) {
@@ -257,6 +263,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const SizedBox(height: 24),
                   Text(l10n.profileLocationSectionTitle, style: Theme.of(context).textTheme.titleLarge),
                   const SizedBox(height: 12),
+                  // Ordem pedida por Rhoney (12/09/2026): País → Estado →
+                  // Cidade — mesma ordem já usada no onboarding
+                  // obrigatório (mandatory_onboarding_screen.dart).
+                  TextField(
+                    controller: _countryController,
+                    decoration: InputDecoration(labelText: l10n.profileLocationCountryLabel),
+                  ),
+                  const SizedBox(height: 12),
                   DropdownButtonFormField<String>(
                     initialValue: _selectedStateUf,
                     decoration: InputDecoration(labelText: l10n.profileLocationStateLabel),
@@ -268,10 +282,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     onChanged: (value) => setState(() => _selectedStateUf = value),
                   ),
                   const SizedBox(height: 12),
-                  TextField(
-                    controller: _countryController,
-                    decoration: InputDecoration(labelText: l10n.profileLocationCountryLabel),
+                  CityAutocompleteField(
+                    stateUf: _selectedStateUf,
+                    controller: _cityController,
+                    labelText: l10n.onboardingCityLabel,
                   ),
+                  const SizedBox(height: 12),
                   SwitchListTile(
                     contentPadding: EdgeInsets.zero,
                     title: Text(l10n.profileLocationPublicLabel),
