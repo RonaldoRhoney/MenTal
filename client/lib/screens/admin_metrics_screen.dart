@@ -4,7 +4,7 @@ import '../api/api_client.dart';
 import '../theme/app_theme.dart';
 import '../widgets/profile_photo.dart';
 
-/// U.I/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, DENTRO
+/// Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, DENTRO
 /// do app Flutter, só pra role=admin (autorização real fica 100% no
 /// backend — GET /admin/metrics/summary já rejeita não-admin com 403;
 /// esta tela só aparece na navegação pra quem já é admin, ver

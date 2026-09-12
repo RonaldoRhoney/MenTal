@@ -1,5 +1,5 @@
 """
-MentalCoins — moeda de prestígio semanal (U.I/MENTALCOINS_V1.md).
+MentalCoins — moeda de prestígio semanal (MentalCoins/MENTALCOINS_V1.md).
 Saldo/histórico/Hall da Fama são só leitura pelo client; o resgate de
 item é a única escrita disponível ao jogador. A apuração semanal em si
 roda pelo agendador (app/scheduler.py); o endpoint admin aqui só serve

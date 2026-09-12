@@ -1,5 +1,5 @@
 """
-MentalCoins — moeda de prestígio semanal (U.I/MENTALCOINS_V1.md).
+MentalCoins — moeda de prestígio semanal (MentalCoins/MENTALCOINS_V1.md).
 
 Não é criptomoeda real, não tem valor monetário, não é comprável com
 dinheiro nem convertível em dinheiro (§1). Saldo e histórico são 100%

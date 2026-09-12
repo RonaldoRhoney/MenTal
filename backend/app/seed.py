@@ -10,7 +10,7 @@ from . import models
 WORLDS = [
     {"id": "linguagem", "name": "Mundo da Linguagem", "display_order": 1},
     {"id": "mente_logica", "name": "Mundo da Mente Lógica", "display_order": 2},
-    # V3.0 (U.I/../V3/V3.0_ESPORTES_REGIOES_CULTURA_POP.md, aprovado) —
+    # V3.0 (V3/V3.0_ESPORTES_REGIOES_CULTURA_POP.md, aprovado) —
     # primeira fase de conteúdo novo pós-teste fechado. Trivia geral,
     # mesmo tier avançado de "conhecimento" (requires_subscription).
     {"id": "cultura_geral", "name": "Mundo da Cultura Geral", "display_order": 3},
@@ -374,8 +374,8 @@ BADGES = [
     },
 ]
 
-# Catálogo de itens cosméticos resgatáveis com MentalCoins (U.I/
-# MENTALCOINS_V1.md §4/§7) — preços ilustrativos, a calibrar depois do
+# Catálogo de itens cosméticos resgatáveis com MentalCoins
+# (MentalCoins/MENTALCOINS_V1.md §4/§7) — preços ilustrativos, a calibrar depois do
 # lançamento com base na velocidade real de acúmulo. Espelha
 # migrations/032_mentalcoins.sql para o banco de produção (Postgres);
 # aqui só popula o SQLite local de dev/teste.

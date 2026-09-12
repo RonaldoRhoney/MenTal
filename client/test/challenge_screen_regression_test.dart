@@ -224,7 +224,7 @@ class _FeedbackTrackingFakeApiClient extends ApiClient {
   }
 }
 
-/// Regressão para U.I/BUG_DESAFIO_NAO_AVANCA.md (28/08/2026).
+/// Regressão para Engenharia_Geral/BUG_DESAFIO_NAO_AVANCA.md (28/08/2026).
 ///
 /// Causa raiz confirmada: _submitAnswer/_submitOption/_submitTimedOut/
 /// _requestHint escreviam o erro da API em `_error`, mas esse campo só é
@@ -804,7 +804,7 @@ void main() {
     });
   });
 
-  group('U.I/BUG_DESAFIO_NAO_AVANCA.md (regressão)', () {
+  group('Engenharia_Geral/BUG_DESAFIO_NAO_AVANCA.md (regressão)', () {
     testWidgets('erro ao responder mostra SnackBar e deixa o usuário tentar de novo, em vez de travar em silêncio', (tester) async {
       final client = _AnswerFailsFakeApiClient();
       await tester.pumpWidget(

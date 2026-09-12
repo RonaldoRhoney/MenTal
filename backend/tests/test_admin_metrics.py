@@ -1,5 +1,5 @@
 """
-U.I/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, dentro do
+Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, dentro do
 app. Somente leitura, restrito a role=admin.
 """
 

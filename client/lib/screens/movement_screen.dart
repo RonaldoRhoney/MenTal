@@ -26,7 +26,7 @@ const _monthNamePt = [
 /// esta tela só lê o sensor local para saber QUANTOS passos ainda não
 /// foram enviados, nunca decide o bônus sozinha.
 ///
-/// Redesign (U.I/MOVIMENTO_REDESIGN_V1.md, 29/08/2026): bloco Hero
+/// Redesign (Movimento/MOVIMENTO_REDESIGN_V1.md, 29/08/2026): bloco Hero
 /// compacto (anel + estatísticas de Passos/XP/MentalCoins lado a lado),
 /// regra "100 passos = +2 XP" sempre visível, seletor de meta diária em
 /// chips + meta customizada com confirmação via botão "Go" (pedido de
@@ -177,7 +177,7 @@ class _MovementScreenState extends State<MovementScreen> {
       if (mounted) setState(() => _loading = false);
     }
     // Chip de streak no header + saldo de MentalCoins no Hero
-    // (U.I/MOVIMENTO_REDESIGN_V1.md §3, pedido de Rhoney 29/08/2026:
+    // (Movimento/MOVIMENTO_REDESIGN_V1.md §3, pedido de Rhoney 29/08/2026:
     // "dê maior destaque aos passos, XP, MentalCoins") — reforço visual,
     // nunca bloqueia a tela se falhar.
     try {
@@ -488,7 +488,7 @@ class _MovementScreenState extends State<MovementScreen> {
     }
 
     final currentCycle = _currentCycle;
-    // Coluna sem SingleChildScrollView (U.I/MOVIMENTO_REDESIGN_V1.md §8:
+    // Coluna sem SingleChildScrollView (Movimento/MOVIMENTO_REDESIGN_V1.md §8:
     // "requisito funcional, não só estético") — cada seção tem altura
     // compacta e fixa, os dois gráficos dividem o espaço restante via
     // Expanded, proporcionalmente ao conteúdo de cada um.
@@ -561,7 +561,7 @@ class _MovementScreenState extends State<MovementScreen> {
           _HeroBlock(
             // Anel + número precisam refletir o total AO VIVO (badge
             // "LIVE" promete "atualiza em tempo real conforme o usuário
-            // anda" — U.I/MOVIMENTO_REDESIGN_V1.md §4), não só o que já
+            // anda" — Movimento/MOVIMENTO_REDESIGN_V1.md §4), não só o que já
             // foi coletado no servidor. Achado real (29/08/2026,
             // caminhada de teste com meta 15k): sem somar o delta local
             // ainda não coletado, o valor fica parado em 0 até o
@@ -784,14 +784,14 @@ class _SummaryCard extends StatelessWidget {
   }
 }
 
-/// Bloco Hero (U.I/MOVIMENTO_REDESIGN_V1.md §4) — anel de progresso +
+/// Bloco Hero (Movimento/MOVIMENTO_REDESIGN_V1.md §4) — anel de progresso +
 /// estatísticas de Passos/XP/MentalCoins lado a lado num único card
 /// compacto. A regra de conversão "100 passos = +2 XP" fica sempre
 /// visível aqui, nunca implícita. MentalCoins adicionado (29/08/2026,
 /// pedido de Rhoney: "dê maior destaque aos passos, XP, MentalCoins") —
 /// reforça a ligação entre passos e a moeda de prestígio semanal
 /// (campeão/recordista de passos ganham MentalCoins, ver
-/// U.I/MENTALCOINS_V1.md §3.2).
+/// MentalCoins/MENTALCOINS_V1.md §3.2).
 class _HeroBlock extends StatelessWidget {
   const _HeroBlock({required this.stepsCollected, required this.xpAwarded, required this.mentalCoinsBalance, required this.goal});
 
@@ -877,7 +877,7 @@ class _HeroStat extends StatelessWidget {
   }
 }
 
-/// Anel de progresso compacto (~78px, U.I/MOVIMENTO_REDESIGN_V1.md §4)
+/// Anel de progresso compacto (~78px, Movimento/MOVIMENTO_REDESIGN_V1.md §4)
 /// com badge "AO VIVO" pulsante — versão reduzida do donut anterior
 /// (148px), agora ao lado das estatísticas em vez de sozinho centralizado.
 class _ProgressRing extends StatelessWidget {

@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
   String? _photoUrl;
   String? _realName;
 
-  // MentalCoins (U.I/MENTALCOINS_V1.md) — reforço visual de gamificação
+  // MentalCoins (MentalCoins/MENTALCOINS_V1.md) — reforço visual de gamificação
   // pedido junto do redesign da Home. Falha silenciosa igual ao resto
   // dos indicadores secundários: nunca bloqueia a Home carregar.
   int? _mentalCoinsBalance;
@@ -1561,7 +1561,7 @@ class _TerritoryCard extends StatelessWidget {
   }
 }
 
-/// Card de identidade do usuário (U.I/HOME_REDESIGN_V1.md §3, reajustado
+/// Card de identidade do usuário (Home/HOME_REDESIGN_V1.md §3, reajustado
 /// 29/08/2026 a pedido de Rhoney: "está tomando muito espaço, diminua de
 /// forma a aproveitar todo o card de forma estruturada"). Substitui o
 /// avatar grande + XpBar completa + chips separados por uma estrutura de

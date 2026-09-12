@@ -943,7 +943,7 @@ class Follow(Base):
 
 class MentalCoinsBalance(Base):
     """
-    Saldo de MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio
+    Saldo de MentalCoins (MentalCoins/MENTALCOINS_V1.md) — moeda de prestígio
     semanal, sem valor monetário. Autoridade 100% do backend: nunca
     calculado ou decidido pelo client, só exibido.
     """

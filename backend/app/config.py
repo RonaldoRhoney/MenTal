@@ -438,7 +438,7 @@ FEED_STREAK_MILESTONES = (30, 60, 100)
 FEED_LIST_DEFAULT_LIMIT = 20
 FEED_LIST_MAX_LIMIT = 50
 
-# MentalCoins — moeda de prestígio semanal (U.I/MENTALCOINS_V1.md).
+# MentalCoins — moeda de prestígio semanal (MentalCoins/MENTALCOINS_V1.md).
 # Ciclo: segunda-feira 08:00 até domingo 23:59:59, horário de Brasília.
 # Apuração roda no fechamento via o mesmo agendador em background já
 # usado para notificações (app/scheduler.py) — nenhum serviço novo de

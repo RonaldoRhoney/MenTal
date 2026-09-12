@@ -283,7 +283,7 @@ class ApiClient {
     );
   }
 
-  // MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio semanal,
+  // MentalCoins (MentalCoins/MENTALCOINS_V1.md) — moeda de prestígio semanal,
   // sem valor monetário. Saldo/apuração são 100% autoridade do backend;
   // o client nunca calcula, só exibe o que a API devolve.
   Future<Map<String, dynamic>> getMentalCoinsBalance() async {
@@ -571,7 +571,7 @@ class ApiClient {
     );
   }
 
-  // U.I/ADMIN_PAINEL_IN_APP_V1.md — só retorna dado de verdade pra
+  // Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md — só retorna dado de verdade pra
   // role=admin (backend rejeita com 403 pra qualquer outro usuário).
   // SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md §2 — endpoint público
   // (sem auth no backend), mas os headers padrão não fazem mal enviar.

@@ -6,7 +6,7 @@ import '../theme/app_theme.dart';
 import '../widgets/mentalcoin.dart';
 import 'public_profile_screen.dart';
 
-/// Tela de MentalCoins (U.I/MENTALCOINS_V1.md) — moeda de prestígio
+/// Tela de MentalCoins (MentalCoins/MENTALCOINS_V1.md) — moeda de prestígio
 /// semanal, sem valor monetário, não compravel com dinheiro real (§1).
 /// Saldo/Hall da Fama/catálogo vêm 100% prontos do backend — esta tela
 /// só exibe, nunca calcula (mesmo princípio de autoridade única já

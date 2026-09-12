@@ -62,7 +62,7 @@ class AppColors {
 
   // Ponto de "profundidade" do gradiente radial de fundo
   // (widgets/game_background.dart) — no escuro é o roxo original
-  // (U.I/MOVIMENTO_REDESIGN_V1.md §2); no claro vira um dourado bem
+  // (Movimento/MOVIMENTO_REDESIGN_V1.md §2); no claro vira um dourado bem
   // suave (achado real testando o toggle, 29/08/2026: deixar o roxo
   // escuro fixo criava uma mancha escura estranha no topo da tela clara).
   static Color get bgGlow => _isDark ? const Color(0xFF241640) : const Color(0xFFF3E7CE);

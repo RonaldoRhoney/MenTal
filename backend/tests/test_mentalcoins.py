@@ -1,5 +1,5 @@
 """
-MentalCoins — moeda de prestígio semanal (U.I/MENTALCOINS_V1.md).
+MentalCoins — moeda de prestígio semanal (MentalCoins/MENTALCOINS_V1.md).
 Autoridade 100% do backend: saldo/apuração nunca calculados pelo client.
 Attempt/MovementCycle são criados direto no banco (não via fluxo HTTP
 completo) para controlar precisamente XP/passos de cada dia — SQLite de

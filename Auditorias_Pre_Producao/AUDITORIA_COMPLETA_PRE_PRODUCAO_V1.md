@@ -1,6 +1,16 @@
 # MENTAL — Auditoria Completa Pré-Produção (Solicitação de Acesso à Produção)
 
-**Status:** Aprovado para execução imediata.
+**Status:** Concluída (11/09/2026) — as 6 seções foram cobertas e todos
+os achados aplicáveis corrigidos: seções 1-4 (idade 18+, segurança,
+regras de negócio, RLS) pelo agente `mental-security`; seção 5
+(agentes de IA) pelo agente `mental-testing` (MentalQA) + revisão
+direta do MentalGuard; seção 6 (documentação/nomenclatura) por revisão
+direta. Achados corrigidos: schema `mental` verificado como não-exposto
+ao PostgREST; FK de LGPD em 4 tabelas (migration 071); Política de
+Privacidade atualizada; rate limit em `/social/report` e
+`/profile/{id}/follow`; nome real em 5 notificações push + Painel
+Admin; `XP_PER_LEVEL` duplicado eliminado; comentários desatualizados
+em `seed.py` e no agente `mental-security`.
 **Contexto:** O período de teste fechado terminou e Rhoney vai solicitar o acesso à produção no Google Play Console. Esta é a última checagem ampla antes de o app ficar disponível para o público em geral — deve ser tratada com o mesmo rigor da auditoria de segurança pré-AAB já realizada, mas com escopo mais amplo, cobrindo política, segurança, regras de negócio, RLS, agentes de IA e documentação.
 **Tipo:** Auditoria/investigação — não é para corrigir nada automaticamente. Reportar tudo encontrado, propor correção, aguardar aprovação antes de aplicar qualquer mudança, mesmo padrão já usado em auditorias anteriores.
 

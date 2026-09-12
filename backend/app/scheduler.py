@@ -69,7 +69,7 @@ def start_scheduler() -> None:
         )
         logger.info("Agendador de convite de Movimento iniciado (diário 07:30 %s)", config.MENTALCOINS_TIMEZONE)
     if config.MENTALCOINS_SCHEDULER_ENABLED:
-        # U.I/MENTALCOINS_V1.md §2: fecha domingo 23:59:59, apura e
+        # MentalCoins/MENTALCOINS_V1.md §2: fecha domingo 23:59:59, apura e
         # distribui na segunda-feira 08:00, horário de Brasília.
         _scheduler.add_job(
             _run_mentalcoins_job, "cron", day_of_week="mon", hour=8, minute=0, timezone=config.MENTALCOINS_TIMEZONE

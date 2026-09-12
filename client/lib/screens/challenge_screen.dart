@@ -321,7 +321,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     });
   }
 
-  /// Achado de investigação de bug (28/08/2026, U.I/BUG_DESAFIO_NAO_AVANCA.md):
+  /// Achado de investigação de bug (28/08/2026, Engenharia_Geral/BUG_DESAFIO_NAO_AVANCA.md):
   /// _submitOption/_submitTimedOut/_requestHint/_submitAnswer tratavam erro
   /// da API escrevendo em `_error`, mas esse campo só é exibido quando
   /// `_challenge == null` (tela de erro fatal, ex.: falha ao CARREGAR um

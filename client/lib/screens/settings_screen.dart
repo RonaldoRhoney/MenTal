@@ -57,7 +57,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   String? _notificationsError;
   bool _deletingAccount = false;
   List<Map<String, dynamic>> _blockedUsers = [];
-  // U.I/ADMIN_PAINEL_IN_APP_V1.md — mesmo padrão já usado em
+  // Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md — mesmo padrão já usado em
   // feedback_screen.dart (profile['role']): autorização de verdade
   // sempre no backend, isto aqui só decide o que aparece na UI.
   bool _isAdmin = false;
@@ -386,7 +386,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ],
                       if (_isAdmin) ...[
                         const SizedBox(height: 28),
-                        // U.I/ADMIN_PAINEL_IN_APP_V1.md §2: "ponto de entrada
+                        // Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md §2: "ponto de entrada
                         // sugerido... ou menu de Configurações" — só aparece
                         // pra role=admin, usuário comum nunca vê nem sabe que
                         // essa tela existe.

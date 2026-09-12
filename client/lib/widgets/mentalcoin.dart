@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Moeda MentalCoins (U.I/MENTALCOINS_V1.md §5) — design circular
+/// Moeda MentalCoins (MentalCoins/MENTALCOINS_V1.md §5) — design circular
 /// dourado com acabamento metálico simulado via múltiplas camadas de
 /// gradiente radial + "M" em relevo. Reprodução em Flutter puro (sem
 /// asset de imagem) do protótipo mental-mentalcoins.html: borda externa,

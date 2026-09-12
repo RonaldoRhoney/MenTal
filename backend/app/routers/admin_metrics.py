@@ -1,5 +1,5 @@
 """
-U.I/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, dentro do
+Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, dentro do
 próprio app Flutter, visível só pra role=admin (mesma checagem já usada
 em /admin/profile-photos, /admin/reports etc.). Somente leitura — nunca
 edita dado de jogador (mesma regra do painel externo, ADMIN_DASHBOARD_
@@ -164,7 +164,7 @@ def get_metrics_summary(
     movement_average_steps = round(movement_total_steps / len(movement_active_users)) if movement_active_users else 0
 
     # Metas fixas (5k/10k/15k) viram bucket próprio; qualquer outro
-    # valor é meta personalizada (U.I/MOVIMENTO_REDESIGN_V1.md §3, "o
+    # valor é meta personalizada (Movimento/MOVIMENTO_REDESIGN_V1.md §3, "o
     # último card deve ser editável") — agrupado sob um único rótulo pra
     # não espalhar a distribuição em dezenas de buckets de 1 usuário.
     goal_rows = db.execute(

@@ -69,13 +69,13 @@ const List<String> kTerritoryIds = [
   // V4 item 3 (V4/V3_ENCERRAMENTO_PENDENCIAS_PARA_V4.md §2.1).
   'redacao',
   'visual',
-  // V3.0 (U.I/../V3/V3.0_ESPORTES_REGIOES_CULTURA_POP.md).
+  // V3.0 (V3/V3.0_ESPORTES_REGIOES_CULTURA_POP.md).
   'esportes',
   'regioes',
   'cultura_pop',
-  // V3.0.1 (U.I/../V3/V3.0.1_DESAFIO_CORES.md).
+  // V3.0.1 (V3/V3.0.1_DESAFIO_CORES.md).
   'cores',
-  // V3.1 (U.I/../V3/V3.1_MITOLOGIA_ENEM_CONCURSOS.md).
+  // V3.1 (V3/V3.1_MITOLOGIA_ENEM_CONCURSOS.md).
   'mitologia_grega',
   'mitologia_nordica',
   'mitologia_indigena',
@@ -86,19 +86,19 @@ const List<String> kTerritoryIds = [
   'concursos_portugues',
   'concursos_raciocinio',
   'concursos_direito',
-  // V3.2 (U.I/../V3/V3.2_TECNOLOGIA.md).
+  // V3.2 (V3/V3.2_TECNOLOGIA.md).
   'tecnologia_fundamentos',
   'tecnologia_programacao',
   'tecnologia_seguranca',
   'tecnologia_fronteira',
-  // V3.3 (U.I/../V3/V3.3_VIDA_PRATICA_PENSAMENTO.md).
+  // V3.3 (V3/V3.3_VIDA_PRATICA_PENSAMENTO.md).
   'financas_pessoais',
   'filosofia',
   'artes',
   'saude_bemestar',
-  // V3.5 (U.I/../V3/V3.5_CURIOSIDADE_RELAMPAGO.md).
+  // V3.5 (V3/V3.5_CURIOSIDADE_RELAMPAGO.md).
   'curiosidade_relampago',
-  // V3.4 (U.I/../V3/V3.4_LIBRAS.md).
+  // V3.4 (V3/V3.4_LIBRAS.md).
   'libras',
   // V3.3 §6 (V3.3_VIDA_PRATICA_PENSAMENTO.md) — Jogos de Palavras.
   'caca_palavras',

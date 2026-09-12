@@ -34,7 +34,8 @@ já consumido por um upload anterior no Play Console — corrigido para
   grandes demais) fica registrado como pendência de limpeza pós-
   lançamento, não bloqueante. Suíte backend: 327/327.
 - `MOVIMENTO_GRAFICOS_RICOS_V1.md` — reformulação da tela Movimento em
-  4 abas (Dia/Semana/Mês/Ano), protótipo em `U.I/movimento_rico.html`.
+  4 abas (Dia/Semana/Mês/Ano), protótipo em `Movimento/movimento_rico.html`
+  (pasta reorganizada em 11/09/2026 — antes `U.I/`).
   **Concluído e em produção (05/09/2026)**: tela unificada
   `movement_reports_screen.dart` substituindo as 3 telas antigas de
   detalhe, histórico próprio por período (`GET /movement/history?period=`),

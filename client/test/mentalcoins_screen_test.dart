@@ -6,7 +6,7 @@ import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/mentalcoins_screen.dart';
 
-/// MentalCoins (U.I/MENTALCOINS_V1.md) — saldo/Hall da Fama/catálogo são
+/// MentalCoins (MentalCoins/MENTALCOINS_V1.md) — saldo/Hall da Fama/catálogo são
 /// 100% autoridade do backend; esta tela só exibe o que a API devolve.
 class _FakeApiClient extends ApiClient {
   _FakeApiClient({this.balance = 0}) : super(baseUrl: 'http://fake', accessToken: 'fake-token');
