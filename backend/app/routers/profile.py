@@ -124,13 +124,16 @@ def update_profile(
         profile.photo_moderation_status = "pending"
 
     # Revisão 28/08/2026 (decisão de Rhoney): gênero passa a ser
-    # OPCIONAL — cadastro mínimo obrigatório agora é nome, país, cidade,
-    # faixa etária e foto de perfil. profile.photo_url (não body.
-    # photo_path) porque a foto pode ter sido enviada numa chamada
-    # anterior — igual ao resto dos campos, o que importa é o estado
-    # final do profile, não se ESTA chamada especificamente mandou o
-    # campo.
-    mandatory_fields = [body.real_name, body.location_country, body.city, body.age_range, profile.photo_url]
+    # OPCIONAL — cadastro mínimo obrigatório agora é nome, país, estado,
+    # cidade, faixa etária e foto de perfil. Estado entrou em 12/09/2026
+    # (BRAZIL_STATE_UF acima) — client já valida no onboarding
+    # (mandatory_onboarding_screen.dart), mas a checagem real de "o
+    # cadastro está completo" é sempre aqui, nunca só na UI.
+    # profile.photo_url (não body.photo_path) porque a foto pode ter
+    # sido enviada numa chamada anterior — igual ao resto dos campos, o
+    # que importa é o estado final do profile, não se ESTA chamada
+    # especificamente mandou o campo.
+    mandatory_fields = [body.real_name, body.location_country, body.location_state, body.city, body.age_range, profile.photo_url]
     if profile.onboarding_completed_at is None and all(f is not None and f != "" for f in mandatory_fields):
         profile.onboarding_completed_at = utcnow()
 

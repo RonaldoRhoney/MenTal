@@ -30,6 +30,26 @@ def test_new_profile_has_all_optional_fields_empty(client):
     assert body["onboarding_completed_at"] is None
 
 
+def test_update_profile_rejects_invalid_state_uf(client):
+    """Pedido de Rhoney (12/09/2026): Estado deixou de ser texto livre —
+    testadores digitando variações ("Belém-PA", "pará", etc.) geravam
+    buckets diferentes pro mesmo estado no Painel Admin. Só as 27 siglas
+    de UF são aceitas agora."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    resp = client.put("/profile", json={"location_state": "Pará"}, headers=headers)
+    assert resp.status_code == 422
+
+    resp = client.put("/profile", json={"location_state": "XX"}, headers=headers)
+    assert resp.status_code == 422
+
+    resp = client.put("/profile", json={"location_state": "MA"}, headers=headers)
+    assert resp.status_code == 200
+    assert resp.json()["location_state"] == "MA"
+
+
 def test_update_profile_persists_all_fields(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
@@ -172,12 +192,15 @@ def test_photo_path_traversal_to_another_users_folder_is_rejected(client):
         assert resp.json()["error"]["code"] == "INVALID_PHOTO_URL", payload
 
 
-def test_onboarding_stays_incomplete_until_all_5_mandatory_fields_filled(client):
+def test_onboarding_stays_incomplete_until_all_6_mandatory_fields_filled(client):
     """
-    Cadastro mínimo obrigatório (26/08/2026, revisado 28/08/2026): nome,
-    país, cidade, faixa etária e foto de perfil — gênero passou a ser
-    OPCIONAL nessa revisão, e foto entrou no lugar dele.
-    onboarding_completed_at só é marcado quando os 5 chegam preenchidos
+    Cadastro mínimo obrigatório (26/08/2026, revisado 28/08/2026,
+    12/09/2026): nome, país, estado, cidade, faixa etária e foto de
+    perfil — gênero passou a ser OPCIONAL na revisão de 28/08, e Estado
+    entrou em 12/09 (antes só existia opcional na tela de Perfil,
+    desacoplado da Cidade obrigatória daqui — gerava cadastros com
+    Cidade preenchida e Estado nunca preenchido).
+    onboarding_completed_at só é marcado quando os 6 chegam preenchidos
     JUNTOS (numa mesma chamada ou acumulados por chamadas anteriores) —
     nunca por decisão do client, sempre calculado pelo backend.
     """
@@ -185,7 +208,7 @@ def test_onboarding_stays_incomplete_until_all_5_mandatory_fields_filled(client)
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    # Só 3 dos 5 campos (falta faixa etária e foto) — ainda incompleto.
+    # Só 3 dos 6 campos (falta estado, faixa etária e foto) — ainda incompleto.
     resp = client.put(
         "/profile",
         json={
@@ -197,14 +220,7 @@ def test_onboarding_stays_incomplete_until_all_5_mandatory_fields_filled(client)
     )
     assert resp.json()["onboarding_completed_at"] is None
 
-
-def test_onboarding_completes_when_all_5_mandatory_fields_filled(client):
-    """Gênero de propósito NUNCA enviado neste teste — prova que não é
-    mais exigido pra completar o onboarding (revisão 28/08/2026)."""
-    user = str(uuid.uuid4())
-    headers = auth_header(user)
-    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
-
+    # Os outros 5, faltando só Estado — ainda incompleto.
     resp = client.put(
         "/profile",
         json={
@@ -216,9 +232,32 @@ def test_onboarding_completes_when_all_5_mandatory_fields_filled(client):
         },
         headers=headers,
     )
+    assert resp.json()["onboarding_completed_at"] is None
+
+
+def test_onboarding_completes_when_all_6_mandatory_fields_filled(client):
+    """Gênero de propósito NUNCA enviado neste teste — prova que não é
+    mais exigido pra completar o onboarding (revisão 28/08/2026)."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    resp = client.put(
+        "/profile",
+        json={
+            "real_name": "Maria Silva",
+            "location_country": "Brasil",
+            "location_state": "PA",
+            "city": "Belém",
+            "age_range": "26-35",
+            "photo_path": f"{user}/photo.jpg",
+        },
+        headers=headers,
+    )
     body = resp.json()
     assert resp.status_code == 200
     assert body["city"] == "Belém"
+    assert body["location_state"] == "PA"
     assert body["gender"] is None
     assert body["age_range"] == "26-35"
     assert body["onboarding_completed_at"] is not None

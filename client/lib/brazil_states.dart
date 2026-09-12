@@ -1,0 +1,39 @@
+/// Pedido de Rhoney (12/09/2026): Estado deixou de ser texto livre no
+/// Perfil — testadores digitando variações ("Belém-PA", "pará", etc.)
+/// geravam buckets diferentes pro mesmo estado no Painel Admin
+/// ("amarra o cadastro e evita essa certa mistura"). Sigla salva no
+/// banco (`app/schemas.py::BRAZIL_STATE_UF`); nome completo só pra
+/// exibição. Cidade continua texto livre — não existe lista fechada de
+/// municípios, só o Estado precisa ser validado.
+const List<({String uf, String name})> kBrazilStates = [
+  (uf: 'AC', name: 'Acre'),
+  (uf: 'AL', name: 'Alagoas'),
+  (uf: 'AP', name: 'Amapá'),
+  (uf: 'AM', name: 'Amazonas'),
+  (uf: 'BA', name: 'Bahia'),
+  (uf: 'CE', name: 'Ceará'),
+  (uf: 'DF', name: 'Distrito Federal'),
+  (uf: 'ES', name: 'Espírito Santo'),
+  (uf: 'GO', name: 'Goiás'),
+  (uf: 'MA', name: 'Maranhão'),
+  (uf: 'MT', name: 'Mato Grosso'),
+  (uf: 'MS', name: 'Mato Grosso do Sul'),
+  (uf: 'MG', name: 'Minas Gerais'),
+  (uf: 'PA', name: 'Pará'),
+  (uf: 'PB', name: 'Paraíba'),
+  (uf: 'PR', name: 'Paraná'),
+  (uf: 'PE', name: 'Pernambuco'),
+  (uf: 'PI', name: 'Piauí'),
+  (uf: 'RJ', name: 'Rio de Janeiro'),
+  (uf: 'RN', name: 'Rio Grande do Norte'),
+  (uf: 'RS', name: 'Rio Grande do Sul'),
+  (uf: 'RO', name: 'Rondônia'),
+  (uf: 'RR', name: 'Roraima'),
+  (uf: 'SC', name: 'Santa Catarina'),
+  (uf: 'SP', name: 'São Paulo'),
+  (uf: 'SE', name: 'Sergipe'),
+  (uf: 'TO', name: 'Tocantins'),
+];
+
+String brazilStateName(String uf) =>
+    kBrazilStates.firstWhere((s) => s.uf == uf, orElse: () => (uf: uf, name: uf)).name;

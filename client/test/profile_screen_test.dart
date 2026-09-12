@@ -96,7 +96,14 @@ void main() {
     await _pumpProfileScreen(tester, client);
 
     await tester.enterText(find.widgetWithText(TextField, 'Nome real'), 'Fulano de Tal');
-    await tester.enterText(find.widgetWithText(TextField, 'Estado'), 'SP');
+    // Estado (12/09/2026) deixou de ser TextField — agora é um dropdown
+    // com as 27 UFs (client/lib/brazil_states.dart). Usa o primeiro item
+    // da lista (Acre) — itens mais abaixo na lista de 27 não ficam
+    // garantidamente construídos no menu popup sem rolar.
+    await tester.tap(find.byType(DropdownButtonFormField<String>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Acre (AC)').last);
+    await tester.pumpAndSettle();
     await tester.enterText(find.widgetWithText(TextField, 'País'), 'Brasil');
     await tester.tap(find.byType(Switch));
     await tester.tap(find.widgetWithText(FilledButton, 'Salvar'));
@@ -105,7 +112,7 @@ void main() {
     expect(client.lastUpdate, {
       'real_name': 'Fulano de Tal',
       'photo_path': null,
-      'location_state': 'SP',
+      'location_state': 'AC',
       'location_country': 'Brasil',
       'location_public': true,
       'city': null,

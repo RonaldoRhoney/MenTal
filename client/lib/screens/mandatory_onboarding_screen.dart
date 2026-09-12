@@ -2,15 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../api/api_client.dart';
+import '../brazil_states.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/photo_picker_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/city_autocomplete_field.dart';
 import '../widgets/profile_photo.dart';
 
 /// Cadastro mínimo obrigatório (decisão de Rhoney, 26/08/2026, revisado
-/// 28/08/2026): nome, país, cidade, faixa etária e foto de perfil são
-/// exigidos antes de liberar o jogo — gênero passou a ser OPCIONAL
-/// nessa revisão. Mostrada uma única vez por conta — main.dart checa
+/// 28/08/2026, 12/09/2026): nome, país, estado, cidade, faixa etária e
+/// foto de perfil são exigidos antes de liberar o jogo — gênero passou
+/// a ser OPCIONAL nessa revisão. Estado entrou em 12/09/2026 (mesma
+/// lista fixa de 27 UFs de profile_screen.dart, ver
+/// client/lib/brazil_states.dart) — antes só existia na tela de Perfil,
+/// opcional e desacoplada da Cidade obrigatória daqui, o que gerava
+/// cadastros com Cidade preenchida e Estado nunca preenchido. Mostrada
+/// uma única vez por conta — main.dart checa
 /// GET /profile (campo onboarding_completed_at) e só exibe esta tela
 /// quando ainda não preenchido. USER_PROFILE.md §1/§3 tratava nome/
 /// localização como 100% opcional (e bloqueava especificamente "cidade
@@ -63,6 +70,7 @@ class MandatoryOnboardingScreen extends StatefulWidget {
 class _MandatoryOnboardingScreenState extends State<MandatoryOnboardingScreen> {
   final _nameController = TextEditingController();
   final _countryController = TextEditingController();
+  String? _selectedStateUf;
   final _cityController = TextEditingController();
   String? _gender;
   String? _ageRange;
@@ -87,6 +95,7 @@ class _MandatoryOnboardingScreenState extends State<MandatoryOnboardingScreen> {
   bool get _canContinue =>
       _nameController.text.trim().isNotEmpty &&
       _countryController.text.trim().isNotEmpty &&
+      _selectedStateUf != null &&
       _cityController.text.trim().isNotEmpty &&
       _ageRange != null &&
       _photoPath != null;
@@ -123,6 +132,7 @@ class _MandatoryOnboardingScreenState extends State<MandatoryOnboardingScreen> {
       await widget.client.updateProfile(
         realName: _nameController.text.trim(),
         locationCountry: _countryController.text.trim(),
+        locationState: _selectedStateUf,
         city: _cityController.text.trim(),
         gender: _gender,
         ageRange: _ageRange,
@@ -192,9 +202,21 @@ class _MandatoryOnboardingScreenState extends State<MandatoryOnboardingScreen> {
               onChanged: (_) => setState(() {}),
             ),
             const SizedBox(height: 16),
-            TextField(
+            DropdownButtonFormField<String>(
+              initialValue: _selectedStateUf,
+              decoration: InputDecoration(labelText: l10n.profileLocationStateLabel),
+              isExpanded: true,
+              items: [
+                for (final state in kBrazilStates)
+                  DropdownMenuItem(value: state.uf, child: Text('${state.name} (${state.uf})')),
+              ],
+              onChanged: (value) => setState(() => _selectedStateUf = value),
+            ),
+            const SizedBox(height: 16),
+            CityAutocompleteField(
+              stateUf: _selectedStateUf,
               controller: _cityController,
-              decoration: InputDecoration(labelText: l10n.onboardingCityLabel),
+              labelText: l10n.onboardingCityLabel,
               onChanged: (_) => setState(() {}),
             ),
             const SizedBox(height: 24),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../api/api_client.dart';
+import '../brazil_states.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/photo_picker_service.dart';
 import '../theme/app_theme.dart';
@@ -36,7 +37,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
   String? _photoUrl;
   String? _photoModerationStatus;
   final _realNameController = TextEditingController();
-  final _stateController = TextEditingController();
+  // Pedido de Rhoney (12/09/2026): Estado deixou de ser texto livre —
+  // ver client/lib/brazil_states.dart. Sigla de UF ou null (nunca um
+  // valor fora da lista, garantido pelo dropdown).
+  String? _selectedStateUf;
   final _countryController = TextEditingController();
   bool _locationPublic = false;
 
@@ -49,7 +53,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void dispose() {
     _realNameController.dispose();
-    _stateController.dispose();
     _countryController.dispose();
     super.dispose();
   }
@@ -63,7 +66,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
           _photoUrl = profile['photo_url'] as String?;
           _photoModerationStatus = profile['photo_moderation_status'] as String?;
           _realNameController.text = profile['real_name'] as String? ?? '';
-          _stateController.text = profile['location_state'] as String? ?? '';
+          // Dado legado gravado como texto livre (antes desta mudança)
+          // pode não bater com nenhuma sigla válida — nesse caso fica
+          // sem seleção em vez de arriscar mapear errado.
+          final existingState = profile['location_state'] as String?;
+          _selectedStateUf = kBrazilStates.any((s) => s.uf == existingState) ? existingState : null;
           _countryController.text = profile['location_country'] as String? ?? '';
           _locationPublic = profile['location_public'] as bool? ?? false;
         });
@@ -137,7 +144,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       final updated = await widget.client.updateProfile(
         realName: _realNameController.text.trim().isEmpty ? null : _realNameController.text.trim(),
         photoPath: path,
-        locationState: _stateController.text.trim().isEmpty ? null : _stateController.text.trim(),
+        locationState: _selectedStateUf,
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
         locationPublic: _locationPublic,
       );
@@ -168,7 +175,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         // _pickAndUploadPhoto — reenviar _photoUrl aqui mandaria a URL
         // assinada de exibição como se fosse um path, o que falharia
         // na validação do backend.
-        locationState: _stateController.text.trim().isEmpty ? null : _stateController.text.trim(),
+        locationState: _selectedStateUf,
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
         locationPublic: _locationPublic,
       );
@@ -250,9 +257,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const SizedBox(height: 24),
                   Text(l10n.profileLocationSectionTitle, style: Theme.of(context).textTheme.titleLarge),
                   const SizedBox(height: 12),
-                  TextField(
-                    controller: _stateController,
+                  DropdownButtonFormField<String>(
+                    initialValue: _selectedStateUf,
                     decoration: InputDecoration(labelText: l10n.profileLocationStateLabel),
+                    isExpanded: true,
+                    items: [
+                      for (final state in kBrazilStates)
+                        DropdownMenuItem(value: state.uf, child: Text('${state.name} (${state.uf})')),
+                    ],
+                    onChanged: (value) => setState(() => _selectedStateUf = value),
                   ),
                   const SizedBox(height: 12),
                   TextField(

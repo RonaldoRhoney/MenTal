@@ -818,6 +818,20 @@ GenderValue = Literal["masculino", "feminino", "nao_binario", "prefiro_nao_infor
 # faixas em vez das 5 anteriores (18-25/26-30/31-45/46-50/51+).
 AgeRangeValue = Literal["18-25", "26-35", "36-45", "46+"]
 
+# Pedido de Rhoney (12/09/2026): Estado deixa de ser texto livre — o
+# Painel Admin agrupava por string exata e testadores digitando
+# "Belém-PA"/"pará"/etc geravam buckets diferentes pro mesmo estado
+# ("amarra o cadastro e evita essa certa mistura"). Sigla (não nome
+# completo) por decisão explícita: mais compacta pras telas (Ranking) e
+# mais fácil de agrupar/filtrar sem normalização. Cidade continua texto
+# livre — não existe lista fechada de municípios, só o Estado precisa
+# ser validado.
+BRAZIL_STATE_UF = Literal[
+    "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS",
+    "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC",
+    "SP", "SE", "TO",
+]
+
 
 class ProfileOut(BaseModel):
     nickname: str
@@ -869,7 +883,7 @@ class UpdateProfileRequest(BaseModel):
     # solução hoje), mas fecha o caso mais barato de abuso (payload
     # gigante/spam longo).
     real_name: str | None = Field(default=None, max_length=100)
-    location_state: str | None = Field(default=None, max_length=100)
+    location_state: BRAZIL_STATE_UF | None = None
     location_country: str | None = Field(default=None, max_length=100)
     location_public: bool = False
     city: str | None = Field(default=None, max_length=100)
@@ -984,7 +998,7 @@ class MentalCoinsCatalogResponse(BaseModel):
     items: list[MentalCoinsCatalogItemOut]
 
 
-# U.I/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, dentro do
+# Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md — painel administrativo leve, dentro do
 # próprio app Flutter (visível só pra role=admin). Métricas listadas na
 # seção 3 do documento; deliberadamente mais enxuto que o painel externo
 # maior (ADMIN_DASHBOARD_V1.md, ainda não implementado).

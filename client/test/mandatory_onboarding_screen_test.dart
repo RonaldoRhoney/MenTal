@@ -6,9 +6,12 @@ import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/mandatory_onboarding_screen.dart';
 
-/// Cadastro mínimo obrigatório (26/08/2026, revisado 28/08/2026) —
-/// nome, país, cidade, faixa etária e foto de perfil, exigidos antes de
-/// liberar o jogo. Gênero passou a ser OPCIONAL nessa revisão.
+/// Cadastro mínimo obrigatório (26/08/2026, revisado 28/08/2026,
+/// 12/09/2026) — nome, país, estado, cidade, faixa etária e foto de
+/// perfil, exigidos antes de liberar o jogo. Gênero passou a ser
+/// OPCIONAL na revisão de 28/08; Estado entrou em 12/09 (antes só
+/// existia opcional na tela de Perfil, desacoplado da Cidade
+/// obrigatória daqui).
 class _FakeApiClient extends ApiClient {
   _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
@@ -29,6 +32,7 @@ class _FakeApiClient extends ApiClient {
     lastUpdate = {
       'real_name': realName,
       'photo_path': photoPath,
+      'location_state': locationState,
       'location_country': locationCountry,
       'city': city,
       'gender': gender,
@@ -87,6 +91,13 @@ void main() {
 
     await tester.enterText(find.widgetWithText(TextField, 'Nome'), 'Maria Silva');
     await tester.enterText(find.widgetWithText(TextField, 'País'), 'Brasil');
+    await tester.pump();
+    expect(continueButton().onPressed, isNull, reason: 'ainda faltam estado, cidade, faixa etária e foto');
+
+    await tester.tap(find.byType(DropdownButtonFormField<String>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Acre (AC)').last);
+    await tester.pumpAndSettle();
     await tester.enterText(find.widgetWithText(TextField, 'Cidade'), 'Belém');
     await tester.pump();
     expect(continueButton().onPressed, isNull, reason: 'ainda faltam faixa etária e foto');
@@ -108,6 +119,10 @@ void main() {
 
     await tester.enterText(find.widgetWithText(TextField, 'Nome'), 'Maria Silva');
     await tester.enterText(find.widgetWithText(TextField, 'País'), 'Brasil');
+    await tester.tap(find.byType(DropdownButtonFormField<String>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Acre (AC)').last);
+    await tester.pumpAndSettle();
     await tester.enterText(find.widgetWithText(TextField, 'Cidade'), 'Belém');
     await tester.tap(find.text('26-35'));
     await tester.tap(find.text('Escolher foto'));
@@ -119,6 +134,7 @@ void main() {
     expect(client.lastUpdate, {
       'real_name': 'Maria Silva',
       'photo_path': 'fake-user-id/photo.jpg',
+      'location_state': 'AC',
       'location_country': 'Brasil',
       'city': 'Belém',
       'gender': null,
@@ -133,6 +149,10 @@ void main() {
 
     await tester.enterText(find.widgetWithText(TextField, 'Nome'), 'Maria Silva');
     await tester.enterText(find.widgetWithText(TextField, 'País'), 'Brasil');
+    await tester.tap(find.byType(DropdownButtonFormField<String>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Acre (AC)').last);
+    await tester.pumpAndSettle();
     await tester.enterText(find.widgetWithText(TextField, 'Cidade'), 'Belém');
     await tester.tap(find.text('Feminino'));
     await tester.tap(find.text('26-35'));

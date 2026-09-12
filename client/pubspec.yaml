@@ -63,3 +63,4 @@ flutter:
   generate: true
   assets:
     - assets/audio/
+    - assets/data/
