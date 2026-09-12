@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="ic_launcher_background">#111013</color>
+    <!-- PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026) — mesmo
+         valor de AppColors.bg claro (app_theme.dart), pra combinar com
+         OpeningExperienceScreen assim que o Flutter assume a tela.
+         Overriden em values-night/ pro equivalente escuro. -->
+    <color name="launch_background_color">#FAF7F0</color>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026) — mesmo
+         valor de AppColors.bg escuro (app_theme.dart). Antes não existia
+         drawable-night nenhum, então o launch_background.xml branco
+         padrão do template Flutter era usado mesmo em tema escuro do
+         sistema — o flash branco que este redesign elimina. -->
+    <color name="launch_background_color">#111013</color>
+</resources>

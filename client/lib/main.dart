@@ -15,8 +15,7 @@ import 'screens/login_screen.dart';
 import 'screens/mandatory_onboarding_screen.dart';
 import 'screens/movement_screen.dart';
 import 'screens/onboarding_tutorial_screen.dart';
-import 'screens/splash_screen.dart';
-import 'screens/welcome_splash_screen.dart';
+import 'screens/opening_experience_screen.dart';
 import 'services/onboarding_tutorial_service.dart';
 import 'services/push_service.dart';
 import 'services/theme_mode_service.dart';
@@ -153,10 +152,6 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   // Cadastro mínimo obrigatório (26/08/2026) — mesmo tri-state e mesma
   // chamada GET /profile do age gate, checando onboarding_completed_at.
   bool? _onboardingCompleted;
-  // Splash de boas-vindas: uma vez por sessão de login, nunca de novo
-  // enquanto a mesma sessão continuar ativa (ex.: navegar entre telas,
-  // voltar do background).
-  bool _welcomeSplashDone = false;
   bool _splashDone = false;
   // "Como usar o MENTAL" (29/08/2026, pedido de Rhoney): aparece uma
   // vez, logo após o splash, ANTES do login — não depende de conta nem
@@ -253,7 +248,6 @@ class _AppEntryPointState extends State<AppEntryPoint> {
       _ageConfirmed = null;
       _ageCheckError = null;
       _onboardingCompleted = null;
-      _welcomeSplashDone = false;
     });
     if (accessToken != null) {
       // Fire-and-forget: registro de push nunca deve atrasar a navegação
@@ -286,11 +280,13 @@ class _AppEntryPointState extends State<AppEntryPoint> {
 
   @override
   Widget build(BuildContext context) {
-    // BRAND.md §3: sequência de splash (wordmark → slogan) sempre roda
-    // primeiro, uma única vez por abertura do app — antes de qualquer
-    // decisão de Login/Age Gate/Home.
+    // PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026): uma única
+    // experiência de abertura, uma única vez por processo (cold start),
+    // antes de qualquer decisão de Login/Age Gate/Home — substitui os
+    // dois splashes sequenciais anteriores (SplashScreen +
+    // WelcomeSplashScreen, removido do fluxo pós-onboarding abaixo).
     if (!_splashDone) {
-      return SplashScreen(onDone: () => setState(() => _splashDone = true));
+      return OpeningExperienceScreen(onDone: () => setState(() => _splashDone = true));
     }
     if (_tutorialSeen == null) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
@@ -395,10 +391,6 @@ class _AppEntryPointState extends State<AppEntryPoint> {
             client: client,
             onDone: () => setState(() => _onboardingCompleted = true),
           );
-        }
-
-        if (!_welcomeSplashDone) {
-          return WelcomeSplashScreen(onDone: () => setState(() => _welcomeSplashDone = true));
         }
 
         return HomeScreen(client: client);

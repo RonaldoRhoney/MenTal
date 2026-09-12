@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026) — Android
+         12+ (API 31) mostra sua PRÓPRIA SplashScreen do sistema antes de
+         repassar controle à Activity, ignorando windowBackground do tema
+         normal; sem esta configuração ela cai num fundo branco padrão do
+         SO, mesmo com launch_background.xml customizado (confirmado ao
+         vivo: flash branco real medido em dispositivo Android 12, apesar
+         da cor de launch_background.xml já estar correta). Estes 3
+         atributos são a forma oficial de configurar essa splash nativa
+         (mesma técnica usada pelo pacote flutter_native_splash) —
+         windowSplashScreenAnimatedIcon reaproveita o ícone real do
+         launcher (nunca um ícone novo). -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/launch_background_color</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+    </style>
+</resources>
