@@ -1,10 +1,12 @@
 # Política de Privacidade — MENTAL
 
-**Última atualização:** 22 de agosto de 2026
+**Última atualização:** 12 de setembro de 2026
 
 Esta Política de Privacidade descreve como o aplicativo **MENTAL**, desenvolvido por **RhoneyInc**, coleta, usa e protege as informações dos usuários.
 
-O MENTAL é um aplicativo de desafios cognitivos gamificados, destinado a um público misto (crianças, adolescentes, adultos e idosos). Por isso, esta política segue com rigor as exigências da **Política para Famílias do Google Play** e da **Lei Geral de Proteção de Dados (LGPD)**.
+O MENTAL é um aplicativo de desafios cognitivos gamificados, destinado **exclusivamente a maiores de 18 anos** (MENTAL-DIR-001). O acesso exige confirmação de maioridade antes de qualquer outro uso do app. Esta política segue as exigências da **Lei Geral de Proteção de Dados (LGPD)**.
+
+Este é o texto-fonte deste documento; a versão hospedada e vinculada dentro do app está em `store_assets/mental-privacidade.html`, publicada em https://ronaldorhoney.github.io/MenTal/ — as duas devem ser mantidas idênticas em conteúdo.
 
 ---
 
@@ -21,30 +23,45 @@ O MENTAL é desenvolvido e mantido por **RhoneyInc**, estúdio de produtos digit
 ### 2.1 Dados obrigatórios (necessários para o funcionamento do app)
 - **E-mail** — usado para criação de conta, login e recuperação de acesso (via Supabase Auth).
 - **Nickname (apelido)** — usado para identificação do jogador dentro do app (ranking, amigos, badges).
-- **Confirmação de faixa etária** — coletada através de uma tela neutra de verificação de idade, exigida antes de qualquer outra coleta de dado. Usada exclusivamente para ativar o modo de proteção infantil (`child_safe_mode`) quando aplicável.
+- **Confirmação de maioridade** — o usuário confirma ter 18 anos ou mais antes de qualquer outro uso do app. O MENTAL não é destinado a menores de idade.
+- **Nome real** — obrigatório para liberar o jogo. Como o MENTAL é exclusivo para maiores de 18 anos, o nome real é **exibido publicamente** ao lado da foto de perfil em telas sociais do app (Amigos, Ranking, Batalhas), reforçando a seriedade da comunidade.
+- **Foto de perfil** — obrigatória para liberar o jogo. É uma foto real enviada pelo próprio usuário (câmera ou galeria), **não um avatar ilustrado**. Toda foto passa por moderação antes de ficar visível para outros usuários (moderação "fail-closed": em caso de dúvida, a foto permanece invisível pra terceiros).
+- **País e cidade** — obrigatórios para liberar o jogo. Não coletamos localização geográfica precisa (GPS); são campos de texto informados pelo próprio usuário.
+- **Faixa etária** — obrigatória para liberar o jogo (faixas amplas: 18-25, 26-35, 36-45, 46+). Não coletamos data de nascimento nem documento de identidade — a confirmação de idade é autodeclarada.
 
 ### 2.2 Dados opcionais (o usuário escolhe se preenche)
-- **Avatar** — escolhido entre ilustrações pré-definidas oferecidas pelo app. O MENTAL **não permite upload de fotos reais** como avatar.
-- **Nome real** — campo opcional, usado apenas para fins internos (ex.: contato/suporte). **Nunca é exibido publicamente** em nenhuma tela do app (ranking, amigos, badges).
-- **Estado/país** — campo opcional e de granularidade intencionalmente ampla. O MENTAL **não coleta cidade exata nem localização geográfica precisa (GPS)**. A exibição pública desse dado depende de escolha explícita do usuário.
+- **Gênero** — campo opcional (masculino, feminino, não-binário, prefiro não informar).
+- **Estado** — campo opcional adicional, complementar a país/cidade.
 
 ### 2.3 Dados de progresso e uso do jogo
 - Pontuação (XP), nível, territórios conquistados, badges/conquistas, estatísticas de desempenho (acertos, erros, sequência de dias jogados).
 - Contagem de passos (via sensor de hardware do dispositivo, `TYPE_STEP_COUNTER`) — coletada apenas se o usuário conceder a permissão correspondente, usada exclusivamente para a funcionalidade de gamificação por movimento dentro do app. **Não coletamos dados de localização GPS associados aos passos.**
 - Preferências de notificação (quais tipos de notificação o usuário optou por receber).
+- **Comentários de feedback** — mensagens que o usuário opta por enviar na tela de Feedback do app são **públicas**, visíveis a todos os usuários junto com o nome real de quem enviou (ou o apelido, se o nome real ainda não tiver sido preenchido), e outros usuários podem reagir a elas (curtir/amei).
 
 ### 2.4 Dados de autenticação social (opcional)
-- Se o usuário optar por entrar com **Google**, recebemos apenas as informações básicas de identificação fornecidas pelo provedor (e-mail e identificador de conta), conforme autorizado pelo usuário no momento do login.
+- Se o usuário optar por entrar com **Google** ou **Facebook**, recebemos apenas as informações básicas de identificação fornecidas pelo provedor (e-mail e identificador de conta), conforme autorizado pelo usuário no momento do login.
+
+### 2.5 Perfil Público e funcionalidades sociais
+
+O MENTAL tem um conjunto de funcionalidades sociais que tornam parte do seu perfil visível para outros usuários do app, **independente de vínculo de amizade prévio**:
+
+- **Perfil Público** — nome real, foto de perfil (já aprovada pela moderação), nível, XP total, badges/conquistas, sequência de dias jogados (streak), progresso nos Mundos e número de "fãs" (seguidores) ficam visíveis a **qualquer usuário autenticado no app** que acesse seu perfil — por exemplo, ao tocar em um nome no Ranking. Não é preciso ser seu amigo para ver essas informações.
+- **Seguir / Fã** — qualquer usuário pode optar por "seguir" outro dentro do app, sem necessidade de aceite da pessoa seguida. Quem segue passa a ver os eventos de conquista dessa pessoa no Feed.
+- **Feed de conquistas** — exibe eventos gerados automaticamente pelo sistema (ex.: subida de nível, sequência de dias, recorde pessoal) para quem você segue. Esses eventos nunca contêm texto livre digitado pelo usuário.
+- **Torcida** — outros usuários podem enviar reações de incentivo ("torcida") para o seu perfil, dentro de limites diários por pessoa.
+- **MentalCoins** — moeda virtual interna do app, obtida jogando (a partir de XP e passos), resgatável apenas por itens cosméticos dentro do próprio MENTAL. Não tem valor monetário, não pode ser comprada, convertida em dinheiro real nem sacada.
+
+Você pode bloquear outro usuário a qualquer momento; o bloqueio impede o acesso ao seu Perfil Público, desfaz relações de amizade e de Seguir/Fã existentes entre as duas contas, e impede o envio de Torcida.
 
 ---
 
 ## 3. O que NÃO coletamos
 
-- **Não coletamos Identificador de Publicidade (AAID)** de usuários com idade não confirmada ou confirmada como criança.
 - **Não coletamos número de telefone.**
 - **Não coletamos localização GPS/geolocalização precisa.**
-- **Não solicitamos upload de fotos reais** de perfil.
-- **Não exibimos publicidade personalizada** para usuários com idade não confirmada ou confirmada como criança — atualmente, o MENTAL **não exibe nenhum tipo de publicidade** (aplicativo 100% gratuito).
+- **Não coletamos data de nascimento nem documento de identidade** — a confirmação de maioridade é autodeclarada.
+- **Não exibimos publicidade personalizada** — atualmente, o MENTAL **não exibe nenhum tipo de publicidade** (aplicativo 100% gratuito).
 
 ---
 
@@ -54,21 +71,22 @@ Os dados são usados exclusivamente para:
 - Autenticar o usuário e manter sua conta segura.
 - Exibir seu progresso, conquistas e desempenho dentro do app.
 - Personalizar a dificuldade dos desafios de acordo com o desempenho individual.
-- Enviar notificações que o usuário optou por receber (reengajamento, atividade social entre amigos).
-- Viabilizar funcionalidades sociais entre amigos (ranking entre amigos, desafios assíncronos) — sempre restritas a conexões que o próprio usuário estabeleceu.
+- Enviar notificações que o usuário optou por receber.
+- Viabilizar as funcionalidades sociais do app: ranking, amigos, desafios assíncronos, Perfil Público, Feed de conquistas, Seguir/Fã, Torcida e MentalCoins — ver o detalhamento de visibilidade de cada uma na seção 2.5.
 
 **Não vendemos, alugamos ou compartilhamos dados pessoais com terceiros para fins de publicidade.**
 
 ---
 
-## 5. Proteção especial para crianças
+## 5. Restrição de idade e conteúdo gerado por usuários
 
-O MENTAL segue o princípio de que, até que a idade do usuário seja confirmada, ele é tratado como se fosse uma criança:
+O MENTAL é destinado exclusivamente a usuários com 18 anos ou mais:
+- O acesso ao app exige confirmação de maioridade antes de qualquer outro uso.
+- O MENTAL não coleta, nem tenta coletar, dados de usuários que não confirmem ter 18 anos ou mais.
 
-- Nenhum identificador de publicidade é transmitido antes da confirmação de idade adulta.
-- Nenhum SDK de terceiros (analytics, publicidade) é inicializado fora do modo de proteção infantil por padrão.
-- Perfis em modo de proteção infantil (`child_safe_mode`) têm identidade sempre anonimizada em qualquer contexto social (ranking, disputas, notificações) — nome real nunca é exibido, e comparações com outros jogadores nunca identificam o outro usuário nominalmente.
-- Não existe conteúdo gerado por usuários (UGC) nem upload de imagens por usuários no MENTAL atualmente.
+O MENTAL tem conteúdo gerado por usuários (UGC): foto de perfil e comentários públicos de feedback. Para manter esse conteúdo seguro:
+- Toda foto de perfil passa por moderação antes de ficar visível para outros usuários (moderação "fail-closed": em caso de dúvida, a foto permanece invisível pra terceiros).
+- Usuários podem denunciar perfis ou conteúdo impróprio diretamente no app; denúncias são revisadas pela equipe do MENTAL.
 
 ---
 
@@ -76,7 +94,7 @@ O MENTAL segue o princípio de que, até que a idade do usuário seja confirmada
 
 Utilizamos os seguintes serviços de terceiros para operar o aplicativo, cada um recebendo apenas o dado estritamente necessário para sua função técnica:
 
-- **Supabase** — armazenamento de dados de conta e progresso do jogo, autenticação.
+- **Supabase** — armazenamento de dados de conta e progresso do jogo, autenticação, e armazenamento das fotos de perfil enviadas.
 - **Google Firebase Cloud Messaging (FCM)** — exclusivamente para entrega de notificações push; não é utilizado como banco de dados nem para fins de publicidade.
 - **Google Sign-In** — autenticação opcional via conta Google, apenas quando o usuário escolhe esse método de login.
 
@@ -87,8 +105,8 @@ Nenhum desses serviços recebe dados além do estritamente necessário para sua 
 ## 7. Retenção e exclusão de dados
 
 - Os dados do usuário são mantidos enquanto a conta estiver ativa.
-- O usuário pode solicitar a exclusão completa de sua conta e de todos os dados associados a qualquer momento, entrando em contato através do e-mail informado na seção 1.
-- Após solicitação de exclusão, os dados são removidos permanentemente de nossos sistemas em prazo razoável, conforme exigido pela LGPD.
+- Para solicitar a exclusão completa da sua conta e de todos os dados associados, o usuário envia um e-mail para **rhoneyinc@gmail.com** a partir do endereço cadastrado no app, com o assunto "Exclusão de conta MENTAL".
+- A exclusão remove permanentemente: e-mail, apelido, nome real, foto de perfil, dados de localização (país/cidade/estado), gênero, faixa etária, progresso/XP, badges, amigos, histórico de desafios, relações de Seguir/Fã, eventos do Feed, convites de Movimento e MentalCoins. **Exceção:** comentários de feedback e sugestões de conteúdo enviados pelo usuário não são apagados — são **anonimizados** (desvinculados da sua identidade) e permanecem no mural público/painel administrativo sem nenhuma associação com o usuário, preservando seu valor como registro de melhoria do app. O prazo de remoção definitiva é de até 30 dias após a solicitação, conforme exigido pela LGPD.
 
 ---
 
@@ -120,7 +138,3 @@ Esta Política de Privacidade pode ser atualizada periodicamente para refletir m
 ## 11. Contato
 
 Dúvidas, solicitações de acesso, correção ou exclusão de dados podem ser enviadas para: **rhoneyinc@gmail.com**
-
----
-
-*Este documento foi elaborado com base nos princípios já estabelecidos em FAMILY_SAFETY.md e USER_PROFILE.md do projeto MENTAL. Campos entre colchetes [ ] precisam ser preenchidos por Rhoney antes da publicação final (e-mail de contato, data de publicação).*

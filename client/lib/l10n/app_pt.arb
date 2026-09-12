@@ -16,13 +16,13 @@
   "@ageGateCheckboxLabel": {
     "description": "MENTAL-POL-002 §3.1 — mandatory majority confirmation checkbox"
   },
-  "ageGateTermsLinkPrefix": "Ao continuar, você concorda com os ",
+  "ageGateTermsLinkPrefix": "Ao continuar, você concorda com a ",
   "@ageGateTermsLinkPrefix": {
-    "description": "Text before the Terms/Privacy Policy link"
+    "description": "Text before the Privacy Policy link"
   },
-  "ageGateTermsLinkText": "Termos de Uso e a Política de Privacidade",
+  "ageGateTermsLinkText": "Política de Privacidade",
   "@ageGateTermsLinkText": {
-    "description": "Tappable Terms of Use / Privacy Policy link text"
+    "description": "Tappable Privacy Policy link text — não há documento de Termos de Uso separado hoje; não prometer o que kPrivacyPolicyUrl não entrega"
   },
   "ageGateContinueButton": "Continuar",
   "@ageGateContinueButton": {
@@ -2244,7 +2244,7 @@
   "@loginTitle": {
     "description": "Login screen title (brand wordmark)"
   },
-  "loginSlogan": "Mental é quem conquista com a mente.",
+  "loginSlogan": "Gamefique seus conhecimentos!",
   "@loginSlogan": {
     "description": "Brand slogan, BRAND.md §2 — always near the name on first contact"
   },

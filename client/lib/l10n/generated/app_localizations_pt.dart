@@ -23,11 +23,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get ageGateCheckboxLabel => 'Confirmo que tenho 18 anos ou mais.';
 
   @override
-  String get ageGateTermsLinkPrefix => 'Ao continuar, você concorda com os ';
+  String get ageGateTermsLinkPrefix => 'Ao continuar, você concorda com a ';
 
   @override
-  String get ageGateTermsLinkText =>
-      'Termos de Uso e a Política de Privacidade';
+  String get ageGateTermsLinkText => 'Política de Privacidade';
 
   @override
   String get ageGateContinueButton => 'Continuar';
@@ -1611,7 +1610,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get loginTitle => 'MENTAL';
 
   @override
-  String get loginSlogan => 'Mental é quem conquista com a mente.';
+  String get loginSlogan => 'Gamefique seus conhecimentos!';
 
   @override
   String get loginEmailLabel => 'E-mail';

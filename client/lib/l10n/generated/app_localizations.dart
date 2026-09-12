@@ -118,16 +118,16 @@ abstract class AppLocalizations {
   /// **'Confirmo que tenho 18 anos ou mais.'**
   String get ageGateCheckboxLabel;
 
-  /// Text before the Terms/Privacy Policy link
+  /// Text before the Privacy Policy link
   ///
   /// In pt, this message translates to:
-  /// **'Ao continuar, você concorda com os '**
+  /// **'Ao continuar, você concorda com a '**
   String get ageGateTermsLinkPrefix;
 
-  /// Tappable Terms of Use / Privacy Policy link text
+  /// Tappable Privacy Policy link text — não há documento de Termos de Uso separado hoje; não prometer o que kPrivacyPolicyUrl não entrega
   ///
   /// In pt, this message translates to:
-  /// **'Termos de Uso e a Política de Privacidade'**
+  /// **'Política de Privacidade'**
   String get ageGateTermsLinkText;
 
   /// Single continue button, enabled only when checkbox is checked
@@ -2755,7 +2755,7 @@ abstract class AppLocalizations {
   /// Brand slogan, BRAND.md §2 — always near the name on first contact
   ///
   /// In pt, this message translates to:
-  /// **'Mental é quem conquista com a mente.'**
+  /// **'Gamefique seus conhecimentos!'**
   String get loginSlogan;
 
   /// Email field label
