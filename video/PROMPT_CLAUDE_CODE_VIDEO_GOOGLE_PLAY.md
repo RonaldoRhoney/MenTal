@@ -1,6 +1,8 @@
 # MENTAL — Vídeo de Orientação de Uso para a Ficha do Google Play
 
-**Status:** Aprovado para implementação.
+**Status:** Implementado (12/09/2026) — ver seção 7. Vídeo pronto em
+`video/mental_video_instrucao_uso_v1.mp4`, falta só Rhoney subir ao
+YouTube e vincular na ficha do Play Console (seção 2 abaixo).
 **Documento separado e independente** de REORGANIZACAO_MENUS_HOME_V1.md — não deve ser combinado com aquele documento.
 **Referência visual:** as 13 capturas de tela reais do app já compartilhadas (Home, Feed, Movimento nos 4 períodos, Amigos, Ranking, Batalhas, Meu Perfil), mostrando o fluxo real de navegação a ser roteirizado.
 
@@ -50,3 +52,33 @@ O vídeo deve seguir uma jornada lógica de apresentação, não uma sequência 
 - Dados de exemplo usados na gravação são realistas e visualmente representativos do app em uso real, não telas vazias.
 - Identidade visual do app preservada durante toda a gravação, sem elementos externos que destoem do restante da marca.
 - Vídeo entregue como arquivo pronto para upload manual ao YouTube por Rhoney — esta entrega não inclui a publicação na ficha da Google Play em si, conforme ressalva da seção 2.
+
+## 7. Implementação (12/09/2026)
+
+Arquivo final: `video/mental_video_instrucao_uso_v1.mp4` (33 segundos,
+720x1600, ~490KB).
+
+- **Conta usada**: a própria conta de produção do Rhoney, em vez de uma
+  conta de teste sintética — já tinha dados reais e visualmente ricos
+  (Nível 200, XP 19.944, sequência de 20 dias, 555 MentalCoins, 4/16
+  Mundos completos, 1 amigo com histórico de 7 Batalhas, Feed com
+  conquistas de outro jogador seguido). Mais simples e mais autêntico
+  que popular uma conta do zero.
+- **Gravação**: `adb shell screenrecord` por segmento (Home, Mundos,
+  Ranking, Movimento/Semana, Amigos+Desafiar, Batalhas, Feed,
+  encerramento em Home), seguindo exatamente a ordem da seção 3.
+  Achado técnico: rodar `screenrecord` em background (`&`) enquanto
+  outro comando `adb shell input` interage com a tela produz vídeos
+  ocasionalmente corrompidos ou com conteúdo trocado (um segmento
+  chegou a mostrar a tela errada) — corrigido gravando cada trecho em
+  primeiro plano, sempre com a tela já no estado desejado antes de
+  iniciar a gravação.
+- **Edição**: `ffmpeg` (binário portátil via `imageio-ffmpeg`, baixado
+  num venv temporário — sem precisar de `sudo` nem alterar o sistema),
+  cortando cada segmento pro tempo certo e concatenando com
+  `filter_complex concat`, sem cortes/transições externas — só corte
+  seco entre telas, preservando 100% a identidade visual do app.
+- **Sem legendas/texto de apoio** nesta versão — o roteiro por si só já
+  comunica a jornada; pode ser adicionado depois se Rhoney preferir.
+- **Pendente**: upload manual ao YouTube e vinculação na ficha do Play
+  Console (Rhoney).
