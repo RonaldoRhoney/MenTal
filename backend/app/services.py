@@ -1076,7 +1076,7 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
         # nunca empate (winner_user_id é None nesse caso).
         if winner_user_id:
             loser_profile = opponent_profile if winner_user_id == battle.challenger_user_id else challenger_profile
-            create_feed_event(db, winner_user_id, "battle_won", {"opponent_nickname": loser_profile.nickname})
+            create_feed_event(db, winner_user_id, "battle_won", {"opponent_nickname": loser_profile.real_name or loser_profile.nickname})
 
     db.commit()
 

@@ -330,6 +330,11 @@ def test_level_up_that_does_not_cross_a_multiple_of_ten_creates_no_event(client)
 def test_battle_won_creates_feed_event_for_winner_only(client):
     winner, loser = str(uuid.uuid4()), str(uuid.uuid4())
     headers_winner, headers_loser = _make_friends(client, winner, loser)
+    # ADENDO_NOTIFICACAO_RANKING_NOME_REAL.md (12/09/2026): varredura
+    # ampla encontrou este payload gravando o apelido cru do perdedor,
+    # exibido depois no texto do Feed ("... venceu uma Batalha contra
+    # {opponent_nickname}").
+    client.put("/profile", json={"real_name": "Perdedor Real"}, headers=headers_loser)
 
     created = client.post(
         "/battles",
@@ -345,7 +350,7 @@ def test_battle_won_creates_feed_event_for_winner_only(client):
 
     winner_events = _feed_events_for(winner, "battle_won")
     assert len(winner_events) == 1
-    assert winner_events[0].payload["opponent_nickname"]
+    assert winner_events[0].payload["opponent_nickname"] == "Perdedor Real"
     assert _feed_events_for(loser, "battle_won") == []
 
 

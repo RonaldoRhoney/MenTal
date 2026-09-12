@@ -143,6 +143,10 @@ def test_social_overtake_fires_with_nickname_for_adult(client, monkeypatch):
     client.post("/age-gate", json={"age_confirmed": True}, headers=winner_headers)
     _register_token(client, loser_headers, "loser-token")
     _register_token(client, winner_headers, "winner-token")
+    # ADENDO_NOTIFICACAO_RANKING_NOME_REAL.md (12/09/2026): achado real
+    # em produção — esta notificação usava o apelido gerado
+    # ("Jogador-XXXXX") em vez do nome real de quem ultrapassou.
+    client.put("/profile", json={"real_name": "Fulano Vencedor"}, headers=winner_headers)
 
     def _answer(headers):
         ch = client.get("/challenges/next", params={"territory_id": "numeros"}, headers=headers).json()
@@ -178,6 +182,8 @@ def test_social_overtake_fires_with_nickname_for_adult(client, monkeypatch):
     loser_events = [e for e in sent_log if e["push_token"] == "loser-token"]
     assert len(loser_events) == 1
     assert "passou você no ranking" in loser_events[0]["body"]
+    assert "Fulano Vencedor" in loser_events[0]["body"]
+    assert "Jogador-" not in loser_events[0]["body"]
 
 
 # test_social_overtake_is_anonymized_for_child_safe_mode removido

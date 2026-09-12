@@ -89,6 +89,10 @@ def test_dispute_is_scoped_to_friends_never_global_strangers(client):
 def test_friend_with_more_xp_becomes_detentor_and_dethrones_previous(client):
     user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a, headers_b = _make_friends(client, user_a, user_b)
+    # ADENDO_NOTIFICACAO_RANKING_NOME_REAL.md (12/09/2026): varredura
+    # ampla encontrou dethroned_nickname usando o apelido cru de quem
+    # perdeu o território, sem preferir o nome real.
+    client.put("/profile", json={"real_name": "Detentor A Real"}, headers=headers_a)
 
     _answer_until_correct(client, headers_a)  # A vira detentor primeiro
 
@@ -101,7 +105,7 @@ def test_friend_with_more_xp_becomes_detentor_and_dethrones_previous(client):
         result = _answer_until_correct(client, headers_b)
         if result["territory_detentor_gained"]:
             dethroned = True
-            assert result["dethroned_nickname"] is not None
+            assert result["dethroned_nickname"] == "Detentor A Real"
             break
 
     assert dethroned, "B deveria ter assumido o território de A em algum momento"

@@ -95,7 +95,7 @@ def _check_social_overtakes(db: Session, now: datetime) -> int:
             overtaker_index = previous_rank - 1  # 0-indexado: quem ocupa sua posição antiga agora
             overtaker_user_id = rows[overtaker_index][0] if overtaker_index < len(rows) else None
             overtaker_profile = db.get(models.Profile, overtaker_user_id) if overtaker_user_id else None
-            nickname = overtaker_profile.nickname if overtaker_profile else "Alguém"
+            nickname = (overtaker_profile.real_name or overtaker_profile.nickname) if overtaker_profile else "Alguém"
             title = notification_copy.SOCIAL_OVERTAKE_GENERIC_TITLE
             body = notification_copy.SOCIAL_OVERTAKE_NAMED_BODY_TEMPLATE.format(nickname=nickname)
 

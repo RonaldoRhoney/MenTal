@@ -327,7 +327,7 @@ def list_reports(user_id: str = Depends(get_current_user_id), db: Session = Depe
                 id=report.id,
                 reporter_user_id=report.reporter_user_id,
                 reported_user_id=report.reported_user_id,
-                reported_nickname=reported_profile.nickname if reported_profile else "???",
+                reported_nickname=(reported_profile.real_name or reported_profile.nickname) if reported_profile else "???",
                 reported_photo_url=services.own_photo_url(reported_profile) if reported_profile else None,
                 reason=report.reason,
                 created_at=report.created_at,

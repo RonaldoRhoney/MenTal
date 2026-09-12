@@ -25,6 +25,12 @@ repositório.
   corrigida em 28/08/2026, revalidado ao vivo em 07/09/2026). Movido
   pra esta pasta em 11/09/2026 (reorganização por funcionalidade, antes
   em `U.I/`).
+- `ADENDO_NOTIFICACAO_RANKING_NOME_REAL.md` — eleva a correção de nome
+  real (documento acima) de lista pontual pra **regra geral permanente**,
+  após uma 6ª ocorrência real em produção (notificação "O ranking
+  mudou" mostrando apelido genérico). **Implementado** (12/09/2026) —
+  varredura ampla achou e corrigiu mais 4 pontos, regra documentada como
+  checklist permanente no agente `mental-security`.
 
 **Reorganização de 11/09/2026:** `REORGANIZACAO_MENUS_HOME_V1.md` saiu
 daqui e foi pra `Home/` (junto dos demais documentos de redesign da

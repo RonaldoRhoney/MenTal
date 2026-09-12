@@ -539,7 +539,7 @@ def submit_answer(
     if detentor_after and detentor_after.user_id == user_id and (detentor_before is None or detentor_before.user_id != user_id):
         territory_detentor_gained = True
         if detentor_before is not None:
-            dethroned_nickname = detentor_before.nickname
+            dethroned_nickname = detentor_before.real_name or detentor_before.nickname
             services.notify_territory_dethroned(db, profile, detentor_before, challenge.territory_id)
 
     territory_just_conquered = bool(territory_progress and territory_progress.conquered_at and not was_conquered_before)
