@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 2,
+    "tema_desafio": "Redes Sociais e a Era dos Influenciadores",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas recentes (abril 2025). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: o primeiro vídeo já publicado no YouTube, 'Me at the zoo', tem menos de 20 segundos e mostra apenas um dos fundadores comentando casualmente sobre as trombas dos elefantes — nada de efeitos especiais, roteiro ou produção elaborada. Duas décadas depois, esse vídeo simples já soma mais de 300 milhões de visualizações e continua sendo o único já postado pelo canal de seu criador.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Como se chama o primeiro vídeo já publicado no YouTube?",
+      "opcoes": [
+        "'Me at the zoo'",
+        "'Hello World'",
+        "'First Upload'",
+        "'Welcome to YouTube'"
+      ],
+      "resposta_correta": "'Me at the zoo'"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que data exata esse primeiro vídeo foi publicado?",
+      "opcoes": [
+        "23 de abril de 2005",
+        "24 de outubro de 2006",
+        "1º de janeiro de 2005",
+        "15 de novembro de 2005"
+      ],
+      "resposta_correta": "23 de abril de 2005"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem apareceu nesse vídeo, diante de qual animal, num zoológico específico?",
+      "opcoes": [
+        "Jawed Karim, diante de elefantes, no Zoológico de San Diego",
+        "Steve Chen, diante de leões, no Zoológico do Bronx",
+        "Chad Hurley, diante de girafas, num zoológico de Chicago",
+        "Um funcionário anônimo, diante de macacos"
+      ],
+      "resposta_correta": "Jawed Karim, diante de elefantes, no Zoológico de San Diego"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quantos segundos durava esse primeiro vídeo, segundo a maioria das fontes?",
+      "opcoes": [
+        "Cerca de 18 a 19 segundos",
+        "Cerca de 5 minutos",
+        "Cerca de 1 hora",
+        "Cerca de 2 segundos"
+      ],
+      "resposta_correta": "Cerca de 18 a 19 segundos"
+    },
+    {
+      "n": 5,
+      "pergunta": "Jawed Karim publicou outros vídeos em seu canal após 'Me at the zoo'?",
+      "opcoes": [
+        "Não, esse continua sendo o único vídeo do canal dele",
+        "Sim, ele publica regularmente até hoje",
+        "Sim, mas apenas um vídeo adicional",
+        "Não há informação disponível sobre isso"
+      ],
+      "resposta_correta": "Não, esse continua sendo o único vídeo do canal dele"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma fonte, existem versões divergentes sobre a ideia original por trás do YouTube. Qual era a proposta inicial de Karim, segundo ele mesmo?",
+      "opcoes": [
+        "Uma solução para permitir upload de vídeos relacionados a leilões online",
+        "Uma plataforma de streaming de música",
+        "Um site de namoro em vídeo",
+        "Uma ferramenta de videoconferência corporativa"
+      ],
+      "resposta_correta": "Uma solução para permitir upload de vídeos relacionados a leilões online"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo outra versão, contada por Chen e Hurley, de onde surgiu a inspiração original para o YouTube?",
+      "opcoes": [
+        "De um jantar em que se gravaram e depois tiveram dificuldade de compartilhar o material",
+        "De uma aula de faculdade sobre tecnologia de vídeo",
+        "De uma reunião formal de investidores",
+        "De um pedido direto de um cliente da PayPal"
+      ],
+      "resposta_correta": "De um jantar em que se gravaram e depois tiveram dificuldade de compartilhar o material"
+    },
+    {
+      "n": 8,
+      "pergunta": "Na divisão de ações da venda ao Google, por que Jawed Karim recebeu uma quantidade menor de ações em relação a Chen e Hurley, segundo uma fonte?",
+      "opcoes": [
+        "Por ter um papel menor na gestão do projeto, comparado aos outros dois",
+        "Porque ele havia saído da empresa antes da venda",
+        "Porque ele processou os outros dois fundadores",
+        "Não há explicação disponível para essa diferença"
+      ],
+      "resposta_correta": "Por ter um papel menor na gestão do projeto, comparado aos outros dois"
+    },
+    {
+      "n": 9,
+      "pergunta": "Embora criado em fevereiro de 2005, quando o YouTube efetivamente foi lançado ao público em geral, saindo da fase beta?",
+      "opcoes": [
+        "Novembro de 2005",
+        "Abril de 2005",
+        "Outubro de 2006",
+        "Janeiro de 2005"
+      ],
+      "resposta_correta": "Novembro de 2005"
+    },
+    {
+      "n": 10,
+      "pergunta": "De onde vem o nome 'YouTube', segundo uma explicação etimológica?",
+      "opcoes": [
+        "Da junção de 'you' (você) com 'tube', gíria da época para televisão",
+        "De uma sigla técnica sem significado",
+        "Do sobrenome de um dos fundadores",
+        "De uma cidade americana chamada Tube City"
+      ],
+      "resposta_correta": "Da junção de 'you' (você) com 'tube', gíria da época para televisão"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano o YouTube introduziu opções de monetização para criadores de conteúdo?",
+      "opcoes": [
+        "2007",
+        "2005",
+        "2006",
+        "2012"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que ano o YouTube alcançou a marca de mais de 1 bilhão de usuários mensais ativos?",
+      "opcoes": [
+        "2012",
+        "2005",
+        "2007",
+        "2020"
+      ],
+      "resposta_correta": "2012"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que ano o YouTube lançou o serviço de assinatura 'YouTube Red' (posteriormente renomeado)?",
+      "opcoes": [
+        "2015",
+        "2005",
+        "2007",
+        "2012"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma fonte recente, aproximadamente qual receita anual o YouTube gera em publicidade?",
+      "opcoes": [
+        "Mais de 35 bilhões de dólares",
+        "1,65 bilhão de dólares",
+        "165 milhões de dólares",
+        "3,5 bilhões de dólares"
+      ],
+      "resposta_correta": "Mais de 35 bilhões de dólares"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma fonte de 2025, o YouTube é a segunda rede social mais usada do mundo, atrás apenas de qual outra plataforma?",
+      "opcoes": [
+        "WhatsApp",
+        "TikTok",
+        "Instagram",
+        "Facebook"
+      ],
+      "resposta_correta": "WhatsApp"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma retrospectiva, quais críticas o YouTube enfrentou ao longo de sua história de 20 anos?",
+      "opcoes": [
+        "Desinformação, conteúdo impróprio e políticas de monetização controversas",
+        "Nenhuma crítica relevante em duas décadas de existência",
+        "Apenas reclamações sobre a qualidade de vídeo",
+        "Exclusivamente problemas de tradução de legendas"
+      ],
+      "resposta_correta": "Desinformação, conteúdo impróprio e políticas de monetização controversas"
+    },
+    {
+      "n": 17,
+      "pergunta": "Que formato de vídeo, no qual o criador fala diretamente para a câmera em primeira pessoa, é destacado como o mesmo formato que ajudaria a tornar o YouTube tão popular, mesmo já presente no primeiro vídeo da plataforma?",
+      "opcoes": [
+        "Vlog",
+        "Documentário longo",
+        "Videoclipe musical",
+        "Transmissão ao vivo de esportes"
+      ],
+      "resposta_correta": "Vlog"
+    },
+    {
+      "n": 18,
+      "pergunta": "O que aconteceu com o vídeo 'Me at the zoo' em termos de reconhecimento simbólico do próprio zoológico onde foi filmado?",
+      "opcoes": [
+        "O zoológico deixou um comentário celebrando ter sido palco do primeiro vídeo do YouTube",
+        "O zoológico processou o YouTube por uso não autorizado de imagem",
+        "O zoológico nunca reconheceu ou comentou sobre o vídeo",
+        "O zoológico fechou pouco depois da gravação"
+      ],
+      "resposta_correta": "O zoológico deixou um comentário celebrando ter sido palco do primeiro vídeo do YouTube"
+    },
+    {
+      "n": 19,
+      "pergunta": "Quantos inscritos o canal de Jawed Karim tinha, segundo fontes de 2025, mesmo sem nenhuma atividade recente além do vídeo original?",
+      "opcoes": [
+        "Mais de 5 milhões",
+        "Cerca de 100",
+        "Cerca de 5 mil",
+        "Nenhum inscrito registrado"
+      ],
+      "resposta_correta": "Mais de 5 milhões"
+    },
+    {
+      "n": 20,
+      "pergunta": "Quantas visualizações o vídeo 'Me at the zoo' já acumulou, segundo fontes recentes?",
+      "opcoes": [
+        "Mais de 300 milhões",
+        "Cerca de mil",
+        "Cerca de 1 milhão",
+        "Menos de 100"
+      ],
+      "resposta_correta": "Mais de 300 milhões"
+    }
+  ]
+}

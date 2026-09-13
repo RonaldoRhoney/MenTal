@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 1,
+    "tema_desafio": "Windows e Bill Gates",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Todo o texto foi escrito originalmente - nenhuma reproducao literal de nenhuma fonte consultada.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro, sem viés a favor ou contra a empresa/pessoa."
+  },
+  "saiba_mais": "Curiosidade: o primeiro produto que a Microsoft realmente vendeu não foi um sistema operacional nem um programa de escritório — foi um interpretador da linguagem de programação BASIC, criado por Gates e Allen para rodar no Altair 8800, um dos primeiros microcomputadores já vendidos ao público.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem fundou a Microsoft?",
+      "opcoes": [
+        "Bill Gates e Paul Allen",
+        "Bill Gates e Steve Jobs",
+        "Paul Allen e Steve Ballmer",
+        "Bill Gates sozinho"
+      ],
+      "resposta_correta": "Bill Gates e Paul Allen"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a Microsoft foi fundada?",
+      "opcoes": [
+        "1975",
+        "1985",
+        "1969",
+        "1991"
+      ],
+      "resposta_correta": "1975"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano a primeira versão do Windows foi lançada?",
+      "opcoes": [
+        "1985",
+        "1975",
+        "1995",
+        "1980"
+      ],
+      "resposta_correta": "1985"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual foi o primeiro produto lançado pela Microsoft, antes do Windows?",
+      "opcoes": [
+        "Um interpretador da linguagem BASIC",
+        "O Word",
+        "O MS-DOS",
+        "O Excel"
+      ],
+      "resposta_correta": "Um interpretador da linguagem BASIC"
+    },
+    {
+      "n": 5,
+      "pergunta": "Para qual computador a Microsoft desenvolveu seu primeiro produto de software?",
+      "opcoes": [
+        "Altair 8800",
+        "IBM PC",
+        "Apple Macintosh",
+        "Commodore 64"
+      ],
+      "resposta_correta": "Altair 8800"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que universidade Bill Gates estudou antes de deixar os estudos para focar na Microsoft?",
+      "opcoes": [
+        "Harvard",
+        "MIT",
+        "Stanford",
+        "Yale"
+      ],
+      "resposta_correta": "Harvard"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual sistema operacional a Microsoft desenvolveu para o primeiro computador pessoal da IBM?",
+      "opcoes": [
+        "MS-DOS",
+        "Windows 95",
+        "Unix",
+        "Linux"
+      ],
+      "resposta_correta": "MS-DOS"
+    },
+    {
+      "n": 8,
+      "pergunta": "O MS-DOS usava que tipo de interface, diferente da interface gráfica do Windows?",
+      "opcoes": [
+        "Interface de linha de comando",
+        "Interface por toque na tela",
+        "Interface por comando de voz",
+        "Interface por gestos com mouse"
+      ],
+      "resposta_correta": "Interface de linha de comando"
+    },
+    {
+      "n": 9,
+      "pergunta": "Quem sucedeu Bill Gates como CEO da Microsoft em 2000?",
+      "opcoes": [
+        "Steve Ballmer",
+        "Paul Allen",
+        "Satya Nadella",
+        "Steve Jobs"
+      ],
+      "resposta_correta": "Steve Ballmer"
+    },
+    {
+      "n": 10,
+      "pergunta": "Quem é o CEO atual da Microsoft, segundo registros recentes?",
+      "opcoes": [
+        "Satya Nadella",
+        "Steve Ballmer",
+        "Bill Gates",
+        "Paul Allen"
+      ],
+      "resposta_correta": "Satya Nadella"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que escola Bill Gates e Paul Allen se conheceram e tiveram seu primeiro contato com programação?",
+      "opcoes": [
+        "Lakeside School",
+        "Universidade de Harvard",
+        "Universidade de Washington",
+        "MIT"
+      ],
+      "resposta_correta": "Lakeside School"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual foi um dos primeiros programas que Gates e Allen criaram juntos, ainda na escola?",
+      "opcoes": [
+        "Um programa para organizar horários escolares",
+        "Um jogo de videogame",
+        "Um sistema de e-mail",
+        "Um navegador de internet"
+      ],
+      "resposta_correta": "Um programa para organizar horários escolares"
+    },
+    {
+      "n": 13,
+      "pergunta": "Por que Paul Allen se afastou da Microsoft em 1983?",
+      "opcoes": [
+        "Foi diagnosticado com linfoma de Hodgkin",
+        "Decidiu abrir uma empresa concorrente",
+        "Foi demitido por Bill Gates",
+        "Se aposentou por escolha própria"
+      ],
+      "resposta_correta": "Foi diagnosticado com linfoma de Hodgkin"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que cidade a Microsoft foi originalmente fundada?",
+      "opcoes": [
+        "Albuquerque, Novo México",
+        "Seattle, Washington",
+        "San Francisco, Califórnia",
+        "Nova York"
+      ],
+      "resposta_correta": "Albuquerque, Novo México"
+    },
+    {
+      "n": 15,
+      "pergunta": "Para onde a Microsoft se mudou, após crescer nos primeiros anos?",
+      "opcoes": [
+        "Washington",
+        "Califórnia",
+        "Texas",
+        "Nova York"
+      ],
+      "resposta_correta": "Washington"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual programa de escritório famoso da Microsoft foi lançado antes mesmo do Windows 1.0?",
+      "opcoes": [
+        "Word",
+        "Excel",
+        "PowerPoint",
+        "Access"
+      ],
+      "resposta_correta": "Word"
+    },
+    {
+      "n": 17,
+      "pergunta": "Que lançamento de outra empresa é frequentemente citado como uma das inspirações para o Windows ter interface gráfica?",
+      "opcoes": [
+        "Apple Macintosh",
+        "IBM PC original",
+        "Atari 2600",
+        "Commodore 64"
+      ],
+      "resposta_correta": "Apple Macintosh"
+    },
+    {
+      "n": 18,
+      "pergunta": "A que instituição filantrópica Bill Gates dedica boa parte de seu trabalho atualmente?",
+      "opcoes": [
+        "Fundação Bill e Melinda Gates",
+        "Cruz Vermelha",
+        "UNICEF",
+        "Fundação Rockefeller"
+      ],
+      "resposta_correta": "Fundação Bill e Melinda Gates"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em que ano a Microsoft se tornou uma empresa de capital aberto (foi à bolsa)?",
+      "opcoes": [
+        "1987",
+        "1975",
+        "1985",
+        "1995"
+      ],
+      "resposta_correta": "1987"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual versão do Windows é frequentemente descrita como um verdadeiro evento cultural, com grande campanha de marketing?",
+      "opcoes": [
+        "Windows 95",
+        "Windows 1.0",
+        "Windows Vista",
+        "Windows ME"
+      ],
+      "resposta_correta": "Windows 95"
+    }
+  ]
+}

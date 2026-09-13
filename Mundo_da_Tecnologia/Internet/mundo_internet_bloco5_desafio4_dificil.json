@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 4,
+    "tema_desafio": "Blockchain e Criptomoedas",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Christie's e Ethereum.org. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - hack tratado de forma factual e tecnica, sem nenhum detalhe replicavel sobre exploracao de vulnerabilidades; nenhuma orientacao de investimento fornecida."
+  },
+  "saiba_mais": "Curiosidade: o hack do DAO, em 2016, colocou a comunidade Ethereum diante de um dilema filosófico e técnico — reverter as transações para devolver o dinheiro roubado significava sacrificar um dos princípios mais sagrados da tecnologia blockchain: a imutabilidade. A decisão de seguir em frente com a reversão dividiu a comunidade e literalmente 'bifurcou' a rede em dois caminhos diferentes, o Ethereum que conhecemos hoje e o Ethereum Classic, que preferiu manter o histórico original intacto, mesmo com o roubo registrado nele para sempre.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "O que era 'The DAO', projeto lançado em 2016 na rede Ethereum?",
+      "opcoes": [
+        "Um fundo de investimento coletivo autônomo e descentralizado",
+        "Um tipo específico de criptomoeda independente",
+        "Um navegador de internet especializado em blockchain",
+        "Um jogo eletrônico baseado em NFTs"
+      ],
+      "resposta_correta": "Um fundo de investimento coletivo autônomo e descentralizado"
+    },
+    {
+      "n": 2,
+      "pergunta": "Aproximadamente qual porcentagem de todo o Ether em circulação na época o DAO chegou a arrecadar?",
+      "opcoes": [
+        "Cerca de 14%",
+        "Cerca de 1%",
+        "Cerca de 90%",
+        "Cerca de 50%"
+      ],
+      "resposta_correta": "Cerca de 14%"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual linguagem de programação o contrato inteligente do DAO foi escrito?",
+      "opcoes": [
+        "Solidity",
+        "Python",
+        "JavaScript",
+        "C++"
+      ],
+      "resposta_correta": "Solidity"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que data específica de 2016 uma vulnerabilidade no código do DAO foi explorada, resultando num dos maiores roubos digitais da história cripto?",
+      "opcoes": [
+        "13 de junho de 2016",
+        "30 de julho de 2015",
+        "31 de outubro de 2008",
+        "1º de janeiro de 2017"
+      ],
+      "resposta_correta": "13 de junho de 2016"
+    },
+    {
+      "n": 5,
+      "pergunta": "Aproximadamente quantos Ether o(s) atacante(s) conseguiram drenar do fundo do DAO?",
+      "opcoes": [
+        "7,2 milhões de Ether (cerca de 55% do total do DAO)",
+        "7,2 mil Ether",
+        "72 milhões de Ether",
+        "Apenas 7 Ether"
+      ],
+      "resposta_correta": "7,2 milhões de Ether (cerca de 55% do total do DAO)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual foi a decisão controversa tomada pela comunidade Ethereum, aprovada por cerca de 86% dos votos, para tentar reverter o dano do ataque?",
+      "opcoes": [
+        "Reescrever a blockchain através de um 'hard fork'",
+        "Encerrar totalmente o Ethereum, sem nenhuma continuidade",
+        "Processar judicialmente o atacante identificado",
+        "Devolver o dinheiro através de doações voluntárias apenas"
+      ],
+      "resposta_correta": "Reescrever a blockchain através de um 'hard fork'"
+    },
+    {
+      "n": 7,
+      "pergunta": "Como se chamou a versão da blockchain que manteve o histórico original, incluindo o ataque, sem reverter nada?",
+      "opcoes": [
+        "Ethereum Classic (ETC)",
+        "Ethereum Prime",
+        "Ethereum Legacy",
+        "Ethereum Original"
+      ],
+      "resposta_correta": "Ethereum Classic (ETC)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Como se chamou a nova versão da blockchain, que reverteu o histórico para desfazer o roubo, e manteve o nome principal do projeto?",
+      "opcoes": [
+        "Ethereum (ETH)",
+        "Ethereum Classic",
+        "Ethereum Legacy",
+        "Bitcoin Cash"
+      ],
+      "resposta_correta": "Ethereum (ETH)"
+    },
+    {
+      "n": 9,
+      "pergunta": "Essa divisão em duas blockchains diferentes, uma mantendo o histórico e outra revertendo, é chamada tecnicamente de quê?",
+      "opcoes": [
+        "Hard fork",
+        "Soft launch",
+        "Genesis split",
+        "Chain merge"
+      ],
+      "resposta_correta": "Hard fork"
+    },
+    {
+      "n": 10,
+      "pergunta": "O que essa decisão de reverter transações sacrificou, do ponto de vista de um dos princípios fundamentais da tecnologia blockchain?",
+      "opcoes": [
+        "A imutabilidade (o princípio de que registros na blockchain nunca deveriam ser alterados)",
+        "A velocidade das transações",
+        "O anonimato dos usuários",
+        "O custo das taxas de transação"
+      ],
+      "resposta_correta": "A imutabilidade (o princípio de que registros na blockchain nunca deveriam ser alterados)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que mês de 2017 o projeto CryptoPunks foi lançado, um dos primeiros NFTs já criados na blockchain Ethereum?",
+      "opcoes": [
+        "Junho de 2017",
+        "Junho de 2016",
+        "Janeiro de 2015",
+        "Dezembro de 2018"
+      ],
+      "resposta_correta": "Junho de 2017"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quem são os dois desenvolvedores da equipe Larva Labs, responsável pelo CryptoPunks?",
+      "opcoes": [
+        "Matt Hall e John Watkinson",
+        "Vitalik Buterin e Nick Szabo",
+        "Satoshi Nakamoto e Adam Back",
+        "Matt Furie e Tim Buckley"
+      ],
+      "resposta_correta": "Matt Hall e John Watkinson"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quantos personagens únicos e pixelados compõem a coleção original do CryptoPunks?",
+      "opcoes": [
+        "10.000",
+        "100",
+        "1.000",
+        "100.000"
+      ],
+      "resposta_correta": "10.000"
+    },
+    {
+      "n": 14,
+      "pergunta": "No lançamento original, quantos CryptoPunks foram distribuídos gratuitamente, e quantos a própria Larva Labs reteve?",
+      "opcoes": [
+        "9.000 gratuitos, 1.000 retidos pela empresa",
+        "5.000 gratuitos, 5.000 retidos",
+        "Todos os 10.000 foram vendidos, nenhum gratuito",
+        "Nenhum foi gratuito, todos precisaram ser comprados desde o início"
+      ],
+      "resposta_correta": "9.000 gratuitos, 1.000 retidos pela empresa"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual padrão técnico da Ethereum, criado em janeiro de 2018, o CryptoPunks ajudou a inspirar, tornando-se referência para NFTs?",
+      "opcoes": [
+        "ERC-721",
+        "ERC-20",
+        "Solidity 2.0",
+        "Bitcoin Standard"
+      ],
+      "resposta_correta": "ERC-721"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo relatos, quais categorias de personagens compõem o universo visual do CryptoPunks, além de humanos?",
+      "opcoes": [
+        "Aliens, macacos e zumbis",
+        "Robôs, dragões e fadas",
+        "Fantasmas, bruxas e vampiros",
+        "Dinossauros, piratas e cavaleiros"
+      ],
+      "resposta_correta": "Aliens, macacos e zumbis"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que torna alguns CryptoPunks mais raros do que outros, segundo uma descrição da coleção?",
+      "opcoes": [
+        "Certos acessórios/características (como cachimbo ou óculos 3D) aparecem com menor frequência",
+        "Todos os Punks são exatamente idênticos, sem nenhuma variação",
+        "A raridade é definida apenas pela ordem de criação",
+        "Não existe nenhum conceito de raridade na coleção"
+      ],
+      "resposta_correta": "Certos acessórios/características (como cachimbo ou óculos 3D) aparecem com menor frequência"
+    },
+    {
+      "n": 18,
+      "pergunta": "Depois de sua criação em 2017, os CryptoPunks eventualmente se tornaram o quê, em termos de relevância histórica no mercado de arte digital?",
+      "opcoes": [
+        "Um dos projetos de arte cripto mais bem-sucedidos já criados, exibido inclusive em casas de leilão renomadas",
+        "Um projeto rapidamente esquecido, sem nenhum impacto duradouro",
+        "Um projeto considerado ilegal em vários países",
+        "Um experimento acadêmico sem nenhuma repercussão comercial"
+      ],
+      "resposta_correta": "Um projeto de arte cripto mais bem-sucedidos já criados, exibido inclusive em casas de leilão renomadas"
+    },
+    {
+      "n": 19,
+      "pergunta": "Cite uma casa de leilão tradicional citada como tendo exibido/vendido CryptoPunks, mostrando a entrada da arte digital no mercado tradicional.",
+      "opcoes": [
+        "Christie's",
+        "Sotheby's exclusivamente sem mais nenhuma",
+        "Nenhuma casa de leilão tradicional se envolveu com NFTs",
+        "Apenas leiloeiras online desconhecidas participaram"
+      ],
+      "resposta_correta": "Christie's"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando o hack do DAO e o sucesso posterior do CryptoPunks, ambos em 2016-2017, o que essa sequência de eventos sugere sobre o amadurecimento da tecnologia blockchain?",
+      "opcoes": [
+        "Que a tecnologia enfrentou desafios sérios de segurança, mas também floresceu com inovações criativas logo em seguida",
+        "Que a blockchain nunca mais teve nenhum uso relevante após o hack do DAO",
+        "Que apenas falhas de segurança caracterizam toda a história da blockchain",
+        "Que o CryptoPunks foi criado como resposta direta ao hack do DAO, sem nenhuma relação temporal apenas"
+      ],
+      "resposta_correta": "Que a tecnologia enfrentou desafios sérios de segurança, mas também floresceu com inovações criativas logo em seguida"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 1,
+    "tema_desafio": "Google, Larry Page e Sergey Brin",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro."
+  },
+  "saiba_mais": "Curiosidade: antes mesmo de o Google existir oficialmente como empresa, Larry Page e Sergey Brin já tinham na mão um cheque de 100 mil dólares — dado por Andy Bechtolsheim, cofundador da Sun Microsystems, depois de apenas uma reunião. O problema é que o cheque estava nominal a 'Google, Inc.', uma empresa que ainda não existia no papel, obrigando a dupla a correr para formalizar a companhia só para poder depositá-lo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem fundou o Google?",
+      "opcoes": [
+        "Larry Page e Sergey Brin",
+        "Bill Gates e Paul Allen",
+        "Steve Jobs e Steve Wozniak",
+        "Andy Rubin e outros"
+      ],
+      "resposta_correta": "Larry Page e Sergey Brin"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Google foi fundado oficialmente?",
+      "opcoes": [
+        "1998",
+        "1991",
+        "2003",
+        "1985"
+      ],
+      "resposta_correta": "1998"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual universidade Larry Page e Sergey Brin se conheceram?",
+      "opcoes": [
+        "Stanford",
+        "Harvard",
+        "MIT",
+        "Universidade de Helsinki"
+      ],
+      "resposta_correta": "Stanford"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual era o nome original do projeto que se tornaria o Google?",
+      "opcoes": [
+        "BackRub",
+        "SearchIt",
+        "WebFinder",
+        "PageIt"
+      ],
+      "resposta_correta": "BackRub"
+    },
+    {
+      "n": 5,
+      "pergunta": "De onde vem o nome 'Google'?",
+      "opcoes": [
+        "De uma alusão à palavra 'googol' (o número 1 seguido de 100 zeros)",
+        "É uma sigla técnica sem significado",
+        "Vem do nome de uma cidade americana",
+        "É uma homenagem a um professor de Stanford"
+      ],
+      "resposta_correta": "De uma alusão à palavra 'googol' (o número 1 seguido de 100 zeros)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual é o nome do algoritmo criado por Page e Brin para classificar páginas da internet por relevância?",
+      "opcoes": [
+        "PageRank",
+        "SearchRank",
+        "LinkScore",
+        "WebIndex"
+      ],
+      "resposta_correta": "PageRank"
+    },
+    {
+      "n": 7,
+      "pergunta": "O PageRank avaliava a relevância de uma página com base em quê, principalmente?",
+      "opcoes": [
+        "A quantidade e qualidade de links que apontavam para ela",
+        "Apenas a quantidade de vezes que uma palavra aparecia no texto",
+        "O tamanho do arquivo da página",
+        "A data de criação da página"
+      ],
+      "resposta_correta": "A quantidade e qualidade de links que apontavam para ela"
+    },
+    {
+      "n": 8,
+      "pergunta": "Onde o Google foi oficialmente fundado, em setembro de 1998?",
+      "opcoes": [
+        "Numa garagem em Menlo Park, Califórnia",
+        "Num escritório em Nova York",
+        "Num prédio comercial em Seattle",
+        "Numa sala de aula em Stanford"
+      ],
+      "resposta_correta": "Numa garagem em Menlo Park, Califórnia"
+    },
+    {
+      "n": 9,
+      "pergunta": "Antes de fundar a empresa, Page e Brin chegaram a considerar o quê em relação ao próprio projeto de busca?",
+      "opcoes": [
+        "Vender o negócio para outras empresas",
+        "Doar o projeto gratuitamente ao governo",
+        "Transformá-lo num jogo eletrônico",
+        "Fechá-lo por falta de interesse pessoal"
+      ],
+      "resposta_correta": "Vender o negócio para outras empresas"
+    },
+    {
+      "n": 10,
+      "pergunta": "Larry Page suspendeu qual etapa de seus estudos para se dedicar ao Google?",
+      "opcoes": [
+        "O doutorado",
+        "O ensino médio",
+        "A graduação",
+        "Um curso técnico"
+      ],
+      "resposta_correta": "O doutorado"
+    },
+    {
+      "n": 11,
+      "pergunta": "Quem foi o primeiro CEO oficial do Google?",
+      "opcoes": [
+        "Larry Page",
+        "Sergey Brin",
+        "Eric Schmidt",
+        "Susan Wojcicki"
+      ],
+      "resposta_correta": "Larry Page"
+    },
+    {
+      "n": 12,
+      "pergunta": "Anos depois da fundação, quem foi contratado como CEO para profissionalizar a gestão da empresa?",
+      "opcoes": [
+        "Eric Schmidt",
+        "Andy Bechtolsheim",
+        "Tim Cook",
+        "Steve Ballmer"
+      ],
+      "resposta_correta": "Eric Schmidt"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em Moscou, país de origem de qual dos dois fundadores do Google?",
+      "opcoes": [
+        "Sergey Brin",
+        "Larry Page",
+        "Ambos nasceram na Rússia",
+        "Nenhum dos dois nasceu na Rússia"
+      ],
+      "resposta_correta": "Sergey Brin"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que estado americano Larry Page nasceu?",
+      "opcoes": [
+        "Michigan",
+        "Califórnia",
+        "Nova York",
+        "Texas"
+      ],
+      "resposta_correta": "Michigan"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual das opções abaixo é hoje a empresa controladora (holding) do Google?",
+      "opcoes": [
+        "Alphabet Inc.",
+        "Meta Platforms",
+        "Berkshire Hathaway",
+        "Tesla Inc."
+      ],
+      "resposta_correta": "Alphabet Inc."
+    },
+    {
+      "n": 16,
+      "pergunta": "Cite uma plataforma que passou a fazer parte do grupo do Google/Alphabet, mencionada como supervisionada por Sergey Brin.",
+      "opcoes": [
+        "YouTube",
+        "Instagram",
+        "TikTok",
+        "WhatsApp"
+      ],
+      "resposta_correta": "YouTube"
+    },
+    {
+      "n": 17,
+      "pergunta": "Antes de PageRank, como os principais buscadores da época costumavam ranquear resultados de pesquisa?",
+      "opcoes": [
+        "Pela quantidade de vezes que o termo buscado aparecia no texto",
+        "Por sorteio aleatório",
+        "Por ordem alfabética do nome do site",
+        "Pela data de criação do site"
+      ],
+      "resposta_correta": "Pela quantidade de vezes que o termo buscado aparecia no texto"
+    },
+    {
+      "n": 18,
+      "pergunta": "Aproximadamente quantas buscas diárias o Google recebia em 1998, quando ainda estava hospedado nos servidores de Stanford?",
+      "opcoes": [
+        "Cerca de 10 mil",
+        "Cerca de 1 milhão",
+        "Cerca de 100",
+        "Cerca de 1 bilhão"
+      ],
+      "resposta_correta": "Cerca de 10 mil"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em que ano o domínio do Google foi registrado oficialmente, antes mesmo da fundação formal da empresa?",
+      "opcoes": [
+        "1997",
+        "1998",
+        "1995",
+        "2000"
+      ],
+      "resposta_correta": "1997"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual data específica é registrada como a fundação formal do Google, em 1998?",
+      "opcoes": [
+        "4 de setembro",
+        "1º de janeiro",
+        "25 de dezembro",
+        "15 de março"
+      ],
+      "resposta_correta": "4 de setembro"
+    }
+  ]
+}

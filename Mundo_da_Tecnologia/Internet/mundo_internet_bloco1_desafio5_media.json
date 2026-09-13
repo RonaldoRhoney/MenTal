@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 5,
+    "tema_desafio": "1994: O Ano que Mudou Tudo (comércio, publicidade e diretórios)",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: antes mesmo de existir qualquer software de bloqueio de anúncios, os usuários do serviço Prodigy já tinham criado sua própria solução caseira contra a publicidade incômoda — um simples pedaço de plástico colado na parte de baixo do monitor, cobrindo fisicamente os banners que apareciam ali. O primeiro 'ad blocker' da história era, literalmente, feito de plástico.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que data exata de outubro de 1994 o site HotWired foi ao ar com os primeiros banners de publicidade?",
+      "opcoes": [
+        "27 de outubro de 1994",
+        "1º de novembro de 1994",
+        "15 de setembro de 1994",
+        "5 de dezembro de 1994"
+      ],
+      "resposta_correta": "27 de outubro de 1994"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quantos anunciantes diferentes, aproximadamente, publicaram banners simultaneamente no lançamento do HotWired, segundo uma fonte?",
+      "opcoes": [
+        "12 marcas diferentes",
+        "Apenas a AT&T",
+        "50 marcas diferentes",
+        "2 marcas diferentes"
+      ],
+      "resposta_correta": "12 marcas diferentes"
+    },
+    {
+      "n": 3,
+      "pergunta": "Para que tela específica os primeiros banners de publicidade foram projetados, segundo um dos criadores?",
+      "opcoes": [
+        "Uma tela de 13 polegadas em preto e branco",
+        "Uma tela colorida de alta resolução moderna",
+        "Uma televisão de tubo grande",
+        "Um monitor ultrawide"
+      ],
+      "resposta_correta": "Uma tela de 13 polegadas em preto e branco"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual serviço da web anterior ao HotWired também havia usado banners publicitários, embora posicionados de forma diferente?",
+      "opcoes": [
+        "Prodigy",
+        "AOL",
+        "CompuServe",
+        "NetMarket"
+      ],
+      "resposta_correta": "Prodigy"
+    },
+    {
+      "n": 5,
+      "pergunta": "Onde o Prodigy costumava posicionar seus banners na tela, diferente do HotWired?",
+      "opcoes": [
+        "Na parte inferior da tela",
+        "No centro exato da tela",
+        "Sobre o próprio texto do conteúdo",
+        "Numa janela pop-up separada"
+      ],
+      "resposta_correta": "Na parte inferior da tela"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma fonte, o que surgiu como uma solução bem-humorada e física para bloquear os banners do Prodigy?",
+      "opcoes": [
+        "Um pedaço de plástico colado na parte inferior do monitor",
+        "Um software de bloqueio de anúncios",
+        "Uma configuração especial do navegador",
+        "Um filtro de tela vendido separadamente"
+      ],
+      "resposta_correta": "Um pedaço de plástico colado na parte inferior do monitor"
+    },
+    {
+      "n": 7,
+      "pergunta": "Como as pessoas costumavam descobrir novos sites em 1994, antes de mecanismos de busca e diretórios como o Yahoo se popularizarem?",
+      "opcoes": [
+        "Através de recomendações do tipo 'site do dia'",
+        "Através de anúncios de TV exclusivamente",
+        "Através de catálogos impressos vendidos em bancas",
+        "Através de aplicativos de celular, já existentes na época"
+      ],
+      "resposta_correta": "Através de recomendações do tipo 'site do dia'"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que mês de 1994 o site que se tornaria o Yahoo! foi renomeado de seu nome original mais longo?",
+      "opcoes": [
+        "Abril de 1994",
+        "Janeiro de 1994",
+        "Outubro de 1994",
+        "Dezembro de 1994"
+      ],
+      "resposta_correta": "Abril de 1994"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que data específica o Yahoo! foi oficialmente incorporado como empresa?",
+      "opcoes": [
+        "2 de março de 1995",
+        "Janeiro de 1994",
+        "Outubro de 1994",
+        "Abril de 1994"
+      ],
+      "resposta_correta": "2 de março de 1995"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual capitalista de risco de renome apresentou Yang e Filo à Sequoia Capital, ajudando a viabilizar o primeiro investimento no Yahoo?",
+      "opcoes": [
+        "Randy Adams",
+        "Andy Bechtolsheim",
+        "Vinod Khosla",
+        "David Cheriton"
+      ],
+      "resposta_correta": "Randy Adams"
+    },
+    {
+      "n": 11,
+      "pergunta": "Aproximadamente quanto a Sequoia Capital investiu no Yahoo! em 1995, através de duas rodadas?",
+      "opcoes": [
+        "Cerca de 3 milhões de dólares",
+        "Cerca de 25 milhões de dólares",
+        "Cerca de 300 mil dólares",
+        "Cerca de 100 milhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 3 milhões de dólares"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que universidade David Filo obteve seu diploma de graduação, antes do mestrado em Stanford?",
+      "opcoes": [
+        "Tulane University",
+        "Harvard",
+        "MIT",
+        "Universidade de Illinois"
+      ],
+      "resposta_correta": "Tulane University"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que estado americano David Filo nasceu?",
+      "opcoes": [
+        "Wisconsin",
+        "Califórnia",
+        "Nova York",
+        "Texas"
+      ],
+      "resposta_correta": "Wisconsin"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual foi o programa técnico escrito por David Filo, em linguagem C, usado para servir páginas dinâmicas nas primeiras versões do site do Yahoo?",
+      "opcoes": [
+        "Filo Server Program",
+        "YahooScript",
+        "DavidNet",
+        "WebServe C"
+      ],
+      "resposta_correta": "Filo Server Program"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quem investiu, em novembro de 1995, inicialmente 2 milhões de dólares no Yahoo!, expandindo depois para 105 milhões por uma fatia de 33% da empresa?",
+      "opcoes": [
+        "Masayoshi Son",
+        "Michael Moritz",
+        "Jeff Bezos",
+        "Marc Andreessen"
+      ],
+      "resposta_correta": "Masayoshi Son"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que estado, além de Wisconsin, David Filo foi criado?",
+      "opcoes": [
+        "Louisiana",
+        "Califórnia",
+        "Nova York",
+        "Flórida"
+      ],
+      "resposta_correta": "Louisiana"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo uma fonte, de onde vem originalmente o termo 'Yahoo', escolhido para o site?",
+      "opcoes": [
+        "De uma interjeição comum em inglês, expressando entusiasmo",
+        "De uma sigla técnica sem significado",
+        "Do sobrenome de um dos fundadores",
+        "De uma cidade dos Estados Unidos"
+      ],
+      "resposta_correta": "De uma interjeição comum em inglês, expressando entusiasmo"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma fonte sobre o primeiro banner, o que os viewers viam ao clicar no anúncio da AT&T?",
+      "opcoes": [
+        "Um tour por sete dos melhores museus de arte do mundo",
+        "Uma página de compra direta de produtos AT&T",
+        "Um vídeo institucional da empresa",
+        "Um formulário de cadastro de e-mail"
+      ],
+      "resposta_correta": "Um tour por sete dos melhores museus de arte do mundo"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo o criador do anúncio da AT&T, a campanha buscava demonstrar o quê sobre a tecnologia da internet?",
+      "opcoes": [
+        "Como ela poderia transportar pessoas através do espaço e do tempo",
+        "Apenas o preço dos planos telefônicos da AT&T",
+        "A velocidade da conexão discada",
+        "A segurança dos dados pessoais"
+      ],
+      "resposta_correta": "Como ela poderia transportar pessoas através do espaço e do tempo"
+    },
+    {
+      "n": 20,
+      "pergunta": "A que eventos de cem anos antes o criador do anúncio comparou essa nova capacidade tecnológica da internet?",
+      "opcoes": [
+        "À criação da primeira rede telefônica de longa distância",
+        "À invenção da lâmpada elétrica",
+        "À construção das primeiras ferrovias",
+        "Ao lançamento do primeiro jornal impresso"
+      ],
+      "resposta_correta": "À criação da primeira rede telefônica de longa distância"
+    }
+  ]
+}

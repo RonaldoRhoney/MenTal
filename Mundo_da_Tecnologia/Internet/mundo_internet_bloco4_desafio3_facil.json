@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 3,
+    "tema_desafio": "Emojis e Gírias da Internet",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo MoMA e TechTudo. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: Shigetaka Kurita, o criador dos emojis, nunca recebeu royalties pela sua invenção — mesmo com bilhões de pessoas usando emojis diariamente no mundo inteiro hoje, ele optou por não registrar patente sobre a criação, deixando o recurso livre para ser adotado e expandido por qualquer empresa de tecnologia.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem criou o primeiro emoticon da internet, o famoso ':-)'",
+      "opcoes": [
+        "Scott Fahlman",
+        "Shigetaka Kurita",
+        "Richard Dawkins",
+        "Mike Godwin"
+      ],
+      "resposta_correta": "Scott Fahlman"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o emoticon ':-)' foi criado?",
+      "opcoes": [
+        "1982",
+        "1999",
+        "1976",
+        "2010"
+      ],
+      "resposta_correta": "1982"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual universidade Scott Fahlman postou o primeiro emoticon?",
+      "opcoes": [
+        "Carnegie Mellon University",
+        "Stanford",
+        "Harvard",
+        "MIT"
+      ],
+      "resposta_correta": "Carnegie Mellon University"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem criou os emojis, imagens muito diferentes dos emoticons simples de texto?",
+      "opcoes": [
+        "Shigetaka Kurita",
+        "Scott Fahlman",
+        "Mark Zuckerberg",
+        "Tim Berners-Lee"
+      ],
+      "resposta_correta": "Shigetaka Kurita"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que país os emojis foram criados?",
+      "opcoes": [
+        "Japão",
+        "Estados Unidos",
+        "Coreia do Sul",
+        "China"
+      ],
+      "resposta_correta": "Japão"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano o primeiro conjunto de emojis foi lançado?",
+      "opcoes": [
+        "1999",
+        "1982",
+        "1976",
+        "2010"
+      ],
+      "resposta_correta": "1999"
+    },
+    {
+      "n": 7,
+      "pergunta": "Para qual empresa de telecomunicações japonesa Kurita trabalhava ao criar os emojis?",
+      "opcoes": [
+        "NTT DoCoMo",
+        "Sony",
+        "Panasonic",
+        "SoftBank"
+      ],
+      "resposta_correta": "NTT DoCoMo"
+    },
+    {
+      "n": 8,
+      "pergunta": "De quais palavras japonesas vem o termo 'emoji'?",
+      "opcoes": [
+        "'E' (imagem) e 'moji' (caractere)",
+        "'Emo' (emoção) e 'ji' (japonês)",
+        "É uma sigla em inglês, sem origem japonesa",
+        "Vem do nome do próprio Kurita"
+      ],
+      "resposta_correta": "'E' (imagem) e 'moji' (caractere)"
+    },
+    {
+      "n": 9,
+      "pergunta": "Quantos pictogramas formavam o primeiro conjunto de emojis criado por Kurita?",
+      "opcoes": [
+        "176",
+        "10",
+        "1.000",
+        "2.789"
+      ],
+      "resposta_correta": "176"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em qual formato de grade de pixels os primeiros emojis foram desenhados?",
+      "opcoes": [
+        "12x12 pixels",
+        "1080x1080 pixels",
+        "4x4 pixels",
+        "100x100 pixels"
+      ],
+      "resposta_correta": "12x12 pixels"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano os emojis foram incorporados ao padrão Unicode, permitindo uso mais amplo em diferentes dispositivos?",
+      "opcoes": [
+        "2010",
+        "1999",
+        "1982",
+        "2020"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual empresa estrangeira foi a primeira a adotar os emojis em seus dispositivos, ajudando a popularizá-los globalmente?",
+      "opcoes": [
+        "Apple",
+        "Samsung",
+        "Nokia",
+        "BlackBerry"
+      ],
+      "resposta_correta": "Apple"
+    },
+    {
+      "n": 13,
+      "pergunta": "O que é um 'kaomoji', outro tipo de expressão facial feita com caracteres, popular no Japão?",
+      "opcoes": [
+        "Um emoticon mais elaborado, usando símbolos como estrelas e traços diferentes",
+        "Um sinônimo direto de emoji",
+        "Um tipo de vírus de computador japonês",
+        "Uma marca registrada da NTT DoCoMo"
+      ],
+      "resposta_correta": "Um emoticon mais elaborado, usando símbolos como estrelas e traços diferentes"
+    },
+    {
+      "n": 14,
+      "pergunta": "O que significa a gíria de internet 'LOL'?",
+      "opcoes": [
+        "'Laughing Out Loud' (rindo alto)",
+        "'Lots of Love' (muito amor)",
+        "'Look Over Left'",
+        "'List of Links'"
+      ],
+      "resposta_correta": "'Laughing Out Loud' (rindo alto)"
+    },
+    {
+      "n": 15,
+      "pergunta": "O que significa a gíria 'BRB', comum em conversas online?",
+      "opcoes": [
+        "'Be Right Back' (já volto)",
+        "'Better Read Books'",
+        "'Bring Real Bread'",
+        "'Big Round Ball'"
+      ],
+      "resposta_correta": "'Be Right Back' (já volto)"
+    },
+    {
+      "n": 16,
+      "pergunta": "O que significa a sigla 'AFK', usada especialmente em jogos online?",
+      "opcoes": [
+        "'Away From Keyboard' (longe do teclado)",
+        "'Always Feeling Kind'",
+        "'Ask For Kindness'",
+        "'All For Knowledge'"
+      ],
+      "resposta_correta": "'Away From Keyboard' (longe do teclado)"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que significa a gíria 'IMO' ou 'IMHO', comum em discussões online?",
+      "opcoes": [
+        "'In My (Humble) Opinion' (na minha opinião)",
+        "'I Made Only'",
+        "'Internet Multi-Option'",
+        "'It's My Own'"
+      ],
+      "resposta_correta": "'In My (Humble) Opinion' (na minha opinião)"
+    },
+    {
+      "n": 18,
+      "pergunta": "Quantos emojis, aproximadamente, estão cadastrados no padrão Unicode atualmente?",
+      "opcoes": [
+        "Mais de 2.700",
+        "Apenas 176",
+        "Cerca de 10",
+        "Cerca de 100 mil"
+      ],
+      "resposta_correta": "Mais de 2.700"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual sistema operacional móvel foi um dos primeiros a incorporar emojis de forma ampla, junto com a Apple?",
+      "opcoes": [
+        "Android",
+        "Windows Phone exclusivamente",
+        "Symbian",
+        "Palm OS"
+      ],
+      "resposta_correta": "Android"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual foi, segundo Kurita, seu emoji favorito entre todos que ele criou?",
+      "opcoes": [
+        "O emoji de coração",
+        "O emoji de coco",
+        "O emoji de sol",
+        "O emoji de lâmpada"
+      ],
+      "resposta_correta": "O emoji de coração"
+    }
+  ]
+}

@@ -30,8 +30,12 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
         if territory_id not in known_territory_ids:
             errors.append(f"{prefix}: territory_id {territory_id!r} não existe (veja app/seed.py TERRITORIES)")
 
-        if item["difficulty_level"] not in (1, 2, 3):
-            errors.append(f"{prefix}: difficulty_level precisa ser 1, 2 ou 3 (veio {item['difficulty_level']!r})")
+        # Mundo da Internet (V6) é o 1º conteúdo curado a usar o 4º nível
+        # (config.XP_BASE_BY_DIFFICULTY e ADAPTIVE_DIFFICULTY_MAX_LEVEL já
+        # suportavam até 5 desde a fórmula adaptativa — só este validador
+        # de conteúdo curado manualmente ainda estava preso em 1-3).
+        if item["difficulty_level"] not in (1, 2, 3, 4):
+            errors.append(f"{prefix}: difficulty_level precisa ser 1, 2, 3 ou 4 (veio {item['difficulty_level']!r})")
 
         # V5 — Mundo dos Idiomas: desafio de tradução em texto livre
         # (options=None) é o 2º precedente do app, depois do anagrama de

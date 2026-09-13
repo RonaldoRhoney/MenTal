@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 5,
+    "tema_desafio": "Outros Sistemas Operacionais e Curiosidades Esquecidas",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Wikipedia e Computer History Museum. Texto escrito originalmente. A lenda da recusa de Kildall foi apresentada com a devida ressalva de incerteza historica.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: por décadas, circulou a lenda de que Gary Kildall teria perdido o contrato histórico com a IBM porque preferiu sair voando de avião no dia da reunião, em vez de negociar. Fontes mais recentes, porém, questionam essa versão simplificada — o que de fato aconteceu naquele dia de 1980 envolve negociações mais complexas sobre pagamento e prazos, e segue sendo debatido por historiadores da tecnologia até hoje.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem criou o sistema operacional CP/M, considerado o primeiro sistema operacional comercialmente bem-sucedido para computadores pessoais?",
+      "opcoes": [
+        "Gary Kildall",
+        "Bill Gates",
+        "Steve Jobs",
+        "Dennis Ritchie"
+      ],
+      "resposta_correta": "Gary Kildall"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano Gary Kildall demonstrou publicamente o CP/M pela primeira vez, segundo registros históricos?",
+      "opcoes": [
+        "1974",
+        "1980",
+        "1969",
+        "1985"
+      ],
+      "resposta_correta": "1974"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual empresa Gary Kildall fundou para comercializar o CP/M?",
+      "opcoes": [
+        "Digital Research",
+        "Microsoft",
+        "Apple Computer",
+        "IBM"
+      ],
+      "resposta_correta": "Digital Research"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em 1980, por sugestão de quem a IBM procurou a Digital Research para negociar o uso do CP/M em seu novo computador pessoal?",
+      "opcoes": [
+        "Bill Gates",
+        "Steve Jobs",
+        "Paul Allen",
+        "Steve Wozniak"
+      ],
+      "resposta_correta": "Bill Gates"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo relatos, quem participou das negociações iniciais com a IBM no lugar de Gary Kildall, num momento crucial dessas tratativas?",
+      "opcoes": [
+        "Dorothy, esposa de Kildall",
+        "Um advogado externo contratado por acaso",
+        "Bill Gates, representando a Digital Research",
+        "Ninguém, a reunião foi cancelada por completo"
+      ],
+      "resposta_correta": "Dorothy, esposa de Kildall"
+    },
+    {
+      "n": 6,
+      "pergunta": "Que tipo de acordo de pagamento a Digital Research teria hesitado em aceitar da IBM, segundo uma das versões da história?",
+      "opcoes": [
+        "Um pagamento único, em vez do sistema tradicional de royalties",
+        "Um pagamento em ações da IBM",
+        "Nenhum pagamento, apenas prestígio de marca",
+        "Um pagamento anual fixo por 50 anos"
+      ],
+      "resposta_correta": "Um pagamento único, em vez do sistema tradicional de royalties"
+    },
+    {
+      "n": 7,
+      "pergunta": "De qual empresa a Microsoft comprou o sistema QDOS, que se tornaria base para o MS-DOS oferecido à IBM?",
+      "opcoes": [
+        "Seattle Computer Products (o sistema criado por Tim Paterson)",
+        "Digital Research",
+        "IBM diretamente",
+        "Apple"
+      ],
+      "resposta_correta": "Seattle Computer Products (o sistema criado por Tim Paterson)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Aproximadamente quanto a Microsoft pagou pelo QDOS, segundo registros?",
+      "opcoes": [
+        "50 mil dólares",
+        "5 mil dólares",
+        "5 milhões de dólares",
+        "500 mil dólares"
+      ],
+      "resposta_correta": "50 mil dólares"
+    },
+    {
+      "n": 9,
+      "pergunta": "Gary Kildall acusou a IBM e a Microsoft de terem feito o quê, ao perceber a semelhança entre CP/M e o sistema oferecido pela IBM?",
+      "opcoes": [
+        "De terem copiado o CP/M, sem uma base jurídica sólida na época para provar isso",
+        "De terem roubado fisicamente o código-fonte de seu escritório",
+        "De terem plagiado apenas o nome do produto",
+        "De nada — ele nunca fez nenhuma acusação"
+      ],
+      "resposta_correta": "De terem copiado o CP/M, sem uma base jurídica sólida na época para provar isso"
+    },
+    {
+      "n": 10,
+      "pergunta": "No acordo final entre IBM e Digital Research, qual sistema saía mais caro para o consumidor final: o CP/M-86 ou o PC-DOS da Microsoft?",
+      "opcoes": [
+        "O CP/M-86, bem mais caro que o PC-DOS",
+        "O PC-DOS, mais caro que o CP/M-86",
+        "Ambos custavam exatamente o mesmo valor",
+        "Nenhum dos dois tinha custo para o consumidor"
+      ],
+      "resposta_correta": "O CP/M-86, bem mais caro que o PC-DOS"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual conceito de compatibilidade de hardware Gary Kildall é creditado por ter pioneirado, permitindo que o CP/M rodasse em diferentes computadores sem modificação?",
+      "opcoes": [
+        "O BIOS",
+        "O kernel modular",
+        "A máquina virtual",
+        "O sistema de arquivos multi-thread"
+      ],
+      "resposta_correta": "O BIOS"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que computador popular, um clone do Altair 8800, o CP/M foi licenciado logo no início de sua trajetória?",
+      "opcoes": [
+        "IMSAI 8080",
+        "TRS-80",
+        "Commodore PET",
+        "Apple I"
+      ],
+      "resposta_correta": "IMSAI 8080"
+    },
+    {
+      "n": 13,
+      "pergunta": "No auge de sua popularidade, por volta de 1981, em quantos modelos diferentes de computador o CP/M rodava, segundo registros?",
+      "opcoes": [
+        "3.000 modelos diferentes",
+        "300 modelos",
+        "30.000 modelos",
+        "30 modelos"
+      ],
+      "resposta_correta": "3.000 modelos diferentes"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual foi, aproximadamente, a receita anual da Digital Research nesse mesmo período de auge?",
+      "opcoes": [
+        "5,4 milhões de dólares",
+        "54 mil dólares",
+        "540 milhões de dólares",
+        "5,4 bilhões de dólares"
+      ],
+      "resposta_correta": "5,4 milhões de dólares"
+    },
+    {
+      "n": 15,
+      "pergunta": "Além do CP/M, cite outro sistema desenvolvido pela Digital Research, sucessor voltado a compatibilidade com o MS-DOS.",
+      "opcoes": [
+        "DR DOS",
+        "GEOS",
+        "AmigaOS",
+        "BeOS"
+      ],
+      "resposta_correta": "DR DOS"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual ambiente gráfico (interface visual), também desenvolvido pela Digital Research, é citado entre seus produtos?",
+      "opcoes": [
+        "GEM (Graphics Environment Manager)",
+        "Windows Aero",
+        "Aqua",
+        "GNOME"
+      ],
+      "resposta_correta": "GEM (Graphics Environment Manager)"
+    },
+    {
+      "n": 17,
+      "pergunta": "Gary Kildall nasceu em qual cidade dos Estados Unidos?",
+      "opcoes": [
+        "Seattle, Washington",
+        "Nova York",
+        "Los Angeles",
+        "Chicago"
+      ],
+      "resposta_correta": "Seattle, Washington"
+    },
+    {
+      "n": 18,
+      "pergunta": "Kildall se qualificou para entrar na universidade com base em qual experiência prévia, não exatamente suas notas escolares?",
+      "opcoes": [
+        "Experiência de ensino na escola náutica de sua família",
+        "Um prêmio de matemática internacional",
+        "Um estágio prévio na IBM",
+        "Serviço militar obrigatório"
+      ],
+      "resposta_correta": "Experiência de ensino na escola náutica de sua família"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo uma fonte, uma das razões possíveis para o fracasso do acordo com a IBM foi a preocupação da Digital Research sobre o quê, além do tipo de pagamento?",
+      "opcoes": [
+        "Se a IBM cumpriria o prazo de entrega proposto",
+        "Se a IBM iria revender o produto para a Apple",
+        "Se o produto seria usado apenas em outro país",
+        "Se o nome CP/M seria alterado sem consulta prévia"
+      ],
+      "resposta_correta": "Se a IBM cumpriria o prazo de entrega proposto"
+    },
+    {
+      "n": 20,
+      "pergunta": "A história de que Kildall teria se recusado a negociar por estar 'voando de avião' no dia da reunião com a IBM é tratada, segundo fontes mais recentes, como quê?",
+      "opcoes": [
+        "Uma lenda não totalmente confirmada, com versões divergentes sobre o que realmente aconteceu",
+        "Um fato totalmente comprovado e documentado sem nenhuma dúvida",
+        "Uma invenção completa sem nenhuma base em qualquer relato da época",
+        "Uma declaração feita pelo próprio Kildall em entrevista, sem contestação"
+      ],
+      "resposta_correta": "Uma lenda não totalmente confirmada, com versões divergentes sobre o que realmente aconteceu"
+    }
+  ]
+}

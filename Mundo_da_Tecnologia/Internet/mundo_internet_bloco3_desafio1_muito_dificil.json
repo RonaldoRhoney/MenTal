@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 1,
+    "tema_desafio": "Google, Larry Page e Sergey Brin",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo o site oficial doodles.google. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: o primeiro Google Doodle da história é, tecnicamente, mais antigo que a própria empresa Google Inc. — o desenho do bonequinho do Burning Man foi publicado dias antes da fundação oficial da companhia, o que faz da tradição dos Doodles um fenômeno que, no papel, existe há mais tempo que o próprio Google.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que evento os fundadores do Google estavam indo participar quando criaram o primeiro 'Google Doodle', em 1998?",
+      "opcoes": [
+        "Burning Man",
+        "Comic-Con",
+        "South by Southwest",
+        "CES"
+      ],
+      "resposta_correta": "Burning Man"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual era o objetivo prático original do primeiro Doodle, além de qualquer intenção artística?",
+      "opcoes": [
+        "Avisar os usuários que os fundadores estariam ausentes, caso os servidores travassem",
+        "Anunciar oficialmente a fundação da empresa",
+        "Comemorar o primeiro milhão de buscas diárias",
+        "Testar uma nova tecnologia de design gráfico"
+      ],
+      "resposta_correta": "Avisar os usuários que os fundadores estariam ausentes, caso os servidores travassem"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que data exata o primeiro Google Doodle foi publicado, segundo uma das fontes mais específicas?",
+      "opcoes": [
+        "30 de agosto de 1998",
+        "4 de setembro de 1998",
+        "19 de agosto de 2004",
+        "7 de junho de 1999"
+      ],
+      "resposta_correta": "30 de agosto de 1998"
+    },
+    {
+      "n": 4,
+      "pergunta": "Comparando as datas, o primeiro Doodle foi publicado antes ou depois da fundação oficial do Google como empresa?",
+      "opcoes": [
+        "Antes — o Doodle é mais antigo que o próprio Google Inc.",
+        "Depois — a empresa já existia havia meses",
+        "No mesmo dia exato da fundação",
+        "Não há relação cronológica entre os dois eventos"
+      ],
+      "resposta_correta": "Antes — o Doodle é mais antigo que o próprio Google Inc."
+    },
+    {
+      "n": 5,
+      "pergunta": "Onde exatamente, na palavra 'Google', o desenho do boneco do Burning Man foi posicionado no primeiro Doodle?",
+      "opcoes": [
+        "Atrás do segundo 'O'",
+        "No lugar do 'G'",
+        "Abaixo de toda a palavra",
+        "Substituindo o 'L'"
+      ],
+      "resposta_correta": "Atrás do segundo 'O'"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual funcionária de marketing dos primeiros tempos do Google é creditada por liderar o desenvolvimento dos Doodles seguintes, incluindo um alienígena pousando sobre o logo?",
+      "opcoes": [
+        "Susan Wojcicki",
+        "Sheryl Sandberg",
+        "Marissa Mayer",
+        "Diane Greene"
+      ],
+      "resposta_correta": "Susan Wojcicki"
+    },
+    {
+      "n": 7,
+      "pergunta": "Essa mesma pessoa é conhecida por qual outro papel fundamental na história inicial do Google, relacionado a imóveis?",
+      "opcoes": [
+        "Alugou sua garagem para os fundadores em 1998",
+        "Foi a primeira investidora externa da empresa",
+        "Vendeu o primeiro servidor usado pela empresa",
+        "Registrou o domínio google.com originalmente"
+      ],
+      "resposta_correta": "Alugou sua garagem para os fundadores em 1998"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano foi lançado o primeiro Doodle internacional do Google, celebrando o Dia da Bastilha na França?",
+      "opcoes": [
+        "2000",
+        "1998",
+        "2004",
+        "2010"
+      ],
+      "resposta_correta": "2000"
+    },
+    {
+      "n": 9,
+      "pergunta": "Quem foi o estagiário do Google, na época, que criou o Doodle do Dia da Bastilha a pedido de Page e Brin?",
+      "opcoes": [
+        "Dennis Hwang",
+        "Susan Wojcicki",
+        "Sundar Pichai",
+        "Eric Schmidt"
+      ],
+      "resposta_correta": "Dennis Hwang"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual Doodle de 2000 é citado como o primeiro a introduzir animação como elemento central, com abóboras de Halloween piscando?",
+      "opcoes": [
+        "O Doodle de Halloween",
+        "O Doodle do Dia da Bastilha",
+        "O Doodle do Burning Man",
+        "O Doodle do aniversário de Newton"
+      ],
+      "resposta_correta": "O Doodle de Halloween"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano foi lançado o primeiro Doodle verdadeiramente animado, em homenagem ao aniversário de Isaac Newton, marcando uma virada estética?",
+      "opcoes": [
+        "2010",
+        "1998",
+        "2000",
+        "2004"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 12,
+      "pergunta": "Aproximadamente quantos Doodles a equipe do Google já criou ao longo das décadas, segundo uma fonte recente?",
+      "opcoes": [
+        "Mais de 5.000",
+        "Cerca de 50",
+        "Cerca de 500",
+        "Menos de 10"
+      ],
+      "resposta_correta": "Mais de 5.000"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual concurso o Google mantém, convidando estudantes do ensino básico (K-12) a desenhar seus próprios Doodles?",
+      "opcoes": [
+        "'Doodle for Google'",
+        "'Design the Logo'",
+        "'Young Artists Challenge'",
+        "'Google Kids Draw'"
+      ],
+      "resposta_correta": "'Doodle for Google'"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma fonte, o primeiro Doodle 'no mesmo dia' de um acontecimento real (não uma data comemorativa fixa) celebrou qual descoberta científica, em 2009?",
+      "opcoes": [
+        "A descoberta de água na Lua",
+        "A descoberta de um novo planeta",
+        "A cura de uma doença",
+        "O nascimento do primeiro clone animal"
+      ],
+      "resposta_correta": "A descoberta de água na Lua"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual jogo eletrônico clássico teve seu 30º aniversário celebrado com um Doodle jogável, em 2010?",
+      "opcoes": [
+        "Pac-Man",
+        "Tetris",
+        "Space Invaders",
+        "Super Mario Bros"
+      ],
+      "resposta_correta": "Pac-Man"
+    },
+    {
+      "n": 16,
+      "pergunta": "Existe alguma controvérsia registrada sobre a data 'oficial' de aniversário do Google, segundo fontes divergentes?",
+      "opcoes": [
+        "Sim, algumas fontes citam 27 de setembro, enquanto outras citam 4 de setembro",
+        "Não, todas as fontes concordam exatamente na mesma data",
+        "Sim, mas a divergência é sobre o ano, não o dia",
+        "Não há nenhum registro de comemoração de aniversário pela empresa"
+      ],
+      "resposta_correta": "Sim, algumas fontes citam 27 de setembro, enquanto outras citam 4 de setembro"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que data específica de 2025, segundo um registro recente, o Google alterou temporariamente seu logo para a versão de 1998, celebrando seu aniversário?",
+      "opcoes": [
+        "27 de setembro",
+        "4 de setembro",
+        "30 de agosto",
+        "19 de agosto"
+      ],
+      "resposta_correta": "27 de setembro"
+    },
+    {
+      "n": 18,
+      "pergunta": "O primeiro Doodle propriamente dito era, segundo descrições detalhadas, apenas o quê visualmente, sem nenhum outro elemento?",
+      "opcoes": [
+        "Um boneco palito simples desenhado atrás do segundo 'o'",
+        "Uma animação complexa com múltiplas cores",
+        "Um vídeo curto incorporado à página",
+        "Um jogo interativo completo"
+      ],
+      "resposta_correta": "Um boneco palito simples desenhado atrás do segundo 'o'"
+    },
+    {
+      "n": 19,
+      "pergunta": "Antes da mudança estética de 2010, os primeiros Doodles tinham qual limitação funcional comum, segundo uma fonte?",
+      "opcoes": [
+        "Eram apenas imagens estáticas, sem nenhum link para a data comemorada",
+        "Eram sempre animados desde o início",
+        "Só podiam ser vistos fora dos Estados Unidos",
+        "Exigiam login para serem visualizados"
+      ],
+      "resposta_correta": "Eram apenas imagens estáticas, sem nenhum link para a data comemorada"
+    },
+    {
+      "n": 20,
+      "pergunta": "A primeira 'série' de Doodles contava uma história sobre o quê, segundo uma fonte específica sobre a evolução do projeto?",
+      "opcoes": [
+        "Alienígenas encontrando o logo do Google e o levando para Marte",
+        "A fundação da própria empresa",
+        "A vida de Larry Page e Sergey Brin",
+        "A invenção da internet"
+      ],
+      "resposta_correta": "Alienígenas encontrando o logo do Google e o levando para Marte"
+    }
+  ]
+}

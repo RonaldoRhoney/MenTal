@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 3,
+    "tema_desafio": "Linux e Linus Torvalds",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: o gato de estimação de Linus Torvalds se chama Randi, uma abreviação carinhosa de Mithrandir — o nome élfico do mago Gandalf, de 'O Senhor dos Anéis'. Uma referência bem-humorada de quem passou a vida criando um dos softwares mais influentes da história da tecnologia.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Que prêmio, entregue pela Reed College, Linus Torvalds recebeu em 2005?",
+      "opcoes": [
+        "Vollum Award",
+        "Takeda Award",
+        "Turing Award",
+        "ACM Software System Award"
+      ],
+      "resposta_correta": "Vollum Award"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano Torvalds dividiu o Takeda Award de Bem-Estar Social e Econômico com outros dois homenageados?",
+      "opcoes": [
+        "2001",
+        "1991",
+        "2010",
+        "1995"
+      ],
+      "resposta_correta": "2001"
+    },
+    {
+      "n": 3,
+      "pergunta": "Além de Torvalds, quem mais dividiu o Takeda Award nessa ocasião?",
+      "opcoes": [
+        "Richard Stallman e Ken Sakamura",
+        "Bill Gates e Steve Jobs",
+        "Andrew Tanenbaum e Dennis Ritchie",
+        "Tim Berners-Lee e Robert Cailliau"
+      ],
+      "resposta_correta": "Richard Stallman e Ken Sakamura"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que ano Linus Torvalds se tornou cidadão dos Estados Unidos, segundo registros?",
+      "opcoes": [
+        "2010",
+        "1991",
+        "2000",
+        "1985"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual é uma das funções centrais que um kernel, como o Linux, desempenha num sistema operacional?",
+      "opcoes": [
+        "Controlar recursos de hardware e otimizar sua utilização",
+        "Desenhar a interface visual do sistema",
+        "Reproduzir arquivos de áudio e vídeo",
+        "Gerenciar exclusivamente conexões de internet"
+      ],
+      "resposta_correta": "Controlar recursos de hardware e otimizar sua utilização"
+    },
+    {
+      "n": 6,
+      "pergunta": "Como se chama o gato de estimação de Linus Torvalds, segundo curiosidades biográficas registradas?",
+      "opcoes": [
+        "Randi",
+        "Tux",
+        "Pixel",
+        "Kernel"
+      ],
+      "resposta_correta": "Randi"
+    },
+    {
+      "n": 7,
+      "pergunta": "De onde vem o nome do gato de Torvalds, segundo a mesma fonte?",
+      "opcoes": [
+        "É uma abreviação de Mithrandir, nome de Gandalf na língua dos elfos",
+        "É uma homenagem a um colega de trabalho",
+        "Vem do nome de uma distribuição Linux",
+        "É uma sigla técnica de programação"
+      ],
+      "resposta_correta": "É uma abreviação de Mithrandir, nome de Gandalf na língua dos elfos"
+    },
+    {
+      "n": 8,
+      "pergunta": "Quantos asteroides, segundo registros, foram batizados em homenagem a Linus Torvalds?",
+      "opcoes": [
+        "Dois",
+        "Nenhum",
+        "Dez",
+        "Cem"
+      ],
+      "resposta_correta": "Dois"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo uma fonte, qual é o número de um dos asteroides nomeados em homenagem a Torvalds?",
+      "opcoes": [
+        "9793 (Torvalds)",
+        "1991 (Linux)",
+        "42 (Freax)",
+        "2001 (Kernel)"
+      ],
+      "resposta_correta": "9793 (Torvalds)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Antes de criar o Linux, sob qual sistema Torvalds inicialmente pretendia rodar seu novo kernel?",
+      "opcoes": [
+        "MINIX",
+        "GNU Hurd",
+        "Windows",
+        "Mac OS"
+      ],
+      "resposta_correta": "MINIX"
+    },
+    {
+      "n": 11,
+      "pergunta": "O nome 'Freax', preterido por Torvalds, era uma combinação de quais duas palavras/conceitos?",
+      "opcoes": [
+        "'Free' (livre) e 'Unix'",
+        "'Fast' (rápido) e 'X' (variável)",
+        "'Freak' (excêntrico) e 'Fax'",
+        "'Free' e 'Fax' (transmissão)"
+      ],
+      "resposta_correta": "'Free' (livre) e 'Unix'"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que universidade específica de Reed College (não confundir com onde Torvalds estudou) Steve Jobs também estudou brevemente, criando uma coincidência histórica na tecnologia?",
+      "opcoes": [
+        "Reed College, no Oregon, EUA",
+        "Reed College, na Finlândia",
+        "Reed College, no Canadá",
+        "Não existe essa coincidência — são universidades diferentes sem relação"
+      ],
+      "resposta_correta": "Reed College, no Oregon, EUA"
+    },
+    {
+      "n": 13,
+      "pergunta": "A GPL (GNU General Public License) foi escrita pela primeira vez em que ano, segundo linha do tempo histórica?",
+      "opcoes": [
+        "1989",
+        "1983",
+        "1991",
+        "2000"
+      ],
+      "resposta_correta": "1989"
+    },
+    {
+      "n": 14,
+      "pergunta": "Quantas 'liberdades' fundamentais a filosofia da GPL/FSF costuma listar como princípios do software livre?",
+      "opcoes": [
+        "Quatro liberdades (numeradas de zero a três)",
+        "Duas liberdades",
+        "Dez liberdades",
+        "Uma única liberdade central"
+      ],
+      "resposta_correta": "Quatro liberdades (numeradas de zero a três)"
+    },
+    {
+      "n": 15,
+      "pergunta": "O projeto GNU, segundo uma das fontes, já havia basicamente reescrito o quê até 1991, mesmo sem ter um kernel funcional?",
+      "opcoes": [
+        "Praticamente todo o Unix, em termos de ferramentas equivalentes",
+        "O próprio hardware dos computadores da época",
+        "O sistema Windows inteiro",
+        "A internet como um todo"
+      ],
+      "resposta_correta": "Praticamente todo o Unix, em termos de ferramentas equivalentes"
+    },
+    {
+      "n": 16,
+      "pergunta": "O Linux, ao crescer, passou de que tipo de licença comercial restritiva para a licença GPL aberta?",
+      "opcoes": [
+        "Uma licença proibitiva de distribuição comercial",
+        "Uma licença já totalmente aberta desde o primeiro dia",
+        "Uma licença compartilhada com a Microsoft",
+        "Nenhuma licença formal antes da GPL"
+      ],
+      "resposta_correta": "Uma licença proibitiva de distribuição comercial"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que tipo de dispositivos mais modernos e específicos o Linux hoje também está presente, além de servidores tradicionais?",
+      "opcoes": [
+        "Carros autônomos, smart TVs e naves espaciais",
+        "Apenas relógios de parede analógicos",
+        "Exclusivamente máquinas de escrever",
+        "Somente telefones fixos antigos"
+      ],
+      "resposta_correta": "Carros autônomos, smart TVs e naves espaciais"
+    },
+    {
+      "n": 18,
+      "pergunta": "O envolvimento de Torvalds no projeto combinado com o GNU teve como foco principal qual componente específico do sistema operacional final?",
+      "opcoes": [
+        "O kernel, que seria acoplado às ferramentas já existentes do projeto GNU",
+        "A interface gráfica de usuário",
+        "O sistema de arquivos de armazenamento em nuvem",
+        "Os drivers de impressora exclusivamente"
+      ],
+      "resposta_correta": "O kernel, que seria acoplado às ferramentas já existentes do projeto GNU"
+    },
+    {
+      "n": 19,
+      "pergunta": "Antes de existir a licença GPL aplicada ao Linux, softwares comerciais da época costumavam ter que tipo de restrição comum, segundo o texto histórico?",
+      "opcoes": [
+        "Usuários tinham que pagar para usar e não podiam modificar o código",
+        "Eram sempre totalmente gratuitos e sem restrição alguma",
+        "Só podiam ser usados por governos",
+        "Eram distribuídos exclusivamente em disquetes grátis"
+      ],
+      "resposta_correta": "Usuários tinham que pagar para usar e não podiam modificar o código"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual foi a motivação pessoal original de Torvalds, segundo relatos, para começar a desenvolver seu próprio kernel?",
+      "opcoes": [
+        "A necessidade de estudar melhor sistemas operacionais por conta própria",
+        "Ganhar dinheiro rapidamente com o projeto",
+        "Competir diretamente contra a Microsoft desde o início",
+        "Um pedido formal de sua universidade"
+      ],
+      "resposta_correta": "A necessidade de estudar melhor sistemas operacionais por conta própria"
+    }
+  ]
+}

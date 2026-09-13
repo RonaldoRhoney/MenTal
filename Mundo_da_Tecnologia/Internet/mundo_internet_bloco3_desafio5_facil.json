@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 5,
+    "tema_desafio": "Outros Gigantes: Twitter/X, Wikipedia e TikTok",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: o Twitter quase nasceu com outro nome — a equipe da Odeo batizou o projeto inicial de 'twttr', numa tentativa de comparar as mensagens curtas ao canto dos pássaros (em inglês, 'tweet' significa justamente o piar de um passarinho). O nome definitivo só veio depois, mas a ideia de curtas mensagens 'piadas' pela internet permaneceu até hoje na identidade da plataforma.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem criou o Twitter?",
+      "opcoes": [
+        "Jack Dorsey, Evan Williams, Biz Stone e Noah Glass",
+        "Mark Zuckerberg e Eduardo Saverin",
+        "Larry Page e Sergey Brin",
+        "Reed Hastings e Marc Randolph"
+      ],
+      "resposta_correta": "Jack Dorsey, Evan Williams, Biz Stone e Noah Glass"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Twitter foi criado?",
+      "opcoes": [
+        "2006",
+        "1997",
+        "2004",
+        "2010"
+      ],
+      "resposta_correta": "2006"
+    },
+    {
+      "n": 3,
+      "pergunta": "De qual empresa de podcasting o Twitter surgiu como projeto paralelo?",
+      "opcoes": [
+        "Odeo",
+        "Napster",
+        "Spotify",
+        "SoundCloud"
+      ],
+      "resposta_correta": "Odeo"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual foi o primeiro tweet da história, publicado por Jack Dorsey?",
+      "opcoes": [
+        "'apenas configurando meu twttr'",
+        "'olá mundo!'",
+        "'primeiro tweet oficial'",
+        "'testando o sistema'"
+      ],
+      "resposta_correta": "'apenas configurando meu twttr'"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual era o nome original do Twitter, antes de virar 'Twitter'?",
+      "opcoes": [
+        "Twttr",
+        "Chirp",
+        "ShortMsg",
+        "Statusly"
+      ],
+      "resposta_correta": "Twttr"
+    },
+    {
+      "n": 6,
+      "pergunta": "Quem criou a Wikipedia?",
+      "opcoes": [
+        "Jimmy Wales e Larry Sanger",
+        "Jack Dorsey e Evan Williams",
+        "Mark Zuckerberg",
+        "Reed Hastings"
+      ],
+      "resposta_correta": "Jimmy Wales e Larry Sanger"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que ano a Wikipedia foi criada?",
+      "opcoes": [
+        "2001",
+        "2006",
+        "1997",
+        "2010"
+      ],
+      "resposta_correta": "2001"
+    },
+    {
+      "n": 8,
+      "pergunta": "O que torna a Wikipedia diferente de uma enciclopédia tradicional?",
+      "opcoes": [
+        "Qualquer pessoa pode editar seus artigos",
+        "É escrita exclusivamente por especialistas contratados",
+        "É paga por assinatura",
+        "Não permite nenhuma edição, apenas leitura"
+      ],
+      "resposta_correta": "Qualquer pessoa pode editar seus artigos"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em quantos idiomas, aproximadamente, a Wikipedia está disponível hoje?",
+      "opcoes": [
+        "Mais de 300",
+        "Apenas 5",
+        "10",
+        "50"
+      ],
+      "resposta_correta": "Mais de 300"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual empresa criou o TikTok?",
+      "opcoes": [
+        "ByteDance",
+        "Meta",
+        "Google",
+        "Twitter"
+      ],
+      "resposta_correta": "ByteDance"
+    },
+    {
+      "n": 11,
+      "pergunta": "De qual país é a empresa criadora do TikTok?",
+      "opcoes": [
+        "China",
+        "Estados Unidos",
+        "Japão",
+        "Coreia do Sul"
+      ],
+      "resposta_correta": "China"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que ano o TikTok foi lançado internacionalmente, sob esse nome?",
+      "opcoes": [
+        "2017",
+        "2006",
+        "2001",
+        "2020"
+      ],
+      "resposta_correta": "2017"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual era o nome da versão do aplicativo lançada originalmente na China, antes da expansão internacional?",
+      "opcoes": [
+        "Douyin",
+        "TikTok China",
+        "ByteApp",
+        "ShortVid"
+      ],
+      "resposta_correta": "Douyin"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual aplicativo de vídeos curtos a ByteDance comprou em 2018, fundindo-o ao TikTok para expandir nos Estados Unidos?",
+      "opcoes": [
+        "Musical.ly",
+        "Vine",
+        "Snapchat",
+        "Periscope"
+      ],
+      "resposta_correta": "Musical.ly"
+    },
+    {
+      "n": 15,
+      "pergunta": "O TikTok é conhecido principalmente por qual tipo de conteúdo?",
+      "opcoes": [
+        "Vídeos curtos",
+        "Artigos de texto longo",
+        "Podcasts de áudio",
+        "Fóruns de discussão escrita"
+      ],
+      "resposta_correta": "Vídeos curtos"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que ano o Twitter foi comprado por Elon Musk?",
+      "opcoes": [
+        "2022",
+        "2006",
+        "2013",
+        "2018"
+      ],
+      "resposta_correta": "2022"
+    },
+    {
+      "n": 17,
+      "pergunta": "Após a compra por Elon Musk, para qual novo nome o Twitter passou a se chamar?",
+      "opcoes": [
+        "X",
+        "Twttr novamente",
+        "Chirp",
+        "Tweetly"
+      ],
+      "resposta_correta": "X"
+    },
+    {
+      "n": 18,
+      "pergunta": "Em que ano o Twitter abriu seu capital na bolsa (IPO)?",
+      "opcoes": [
+        "2013",
+        "2006",
+        "2010",
+        "2018"
+      ],
+      "resposta_correta": "2013"
+    },
+    {
+      "n": 19,
+      "pergunta": "Quem inventou o conceito de 'hashtag' (o símbolo #) usado para agrupar mensagens sobre um mesmo assunto?",
+      "opcoes": [
+        "Chris Messina",
+        "Jack Dorsey",
+        "Jimmy Wales",
+        "Evan Williams"
+      ],
+      "resposta_correta": "Chris Messina"
+    },
+    {
+      "n": 20,
+      "pergunta": "Em que ano o conceito de hashtag foi proposto por Chris Messina no Twitter?",
+      "opcoes": [
+        "2007",
+        "2006",
+        "2013",
+        "2001"
+      ],
+      "resposta_correta": "2007"
+    }
+  ]
+}

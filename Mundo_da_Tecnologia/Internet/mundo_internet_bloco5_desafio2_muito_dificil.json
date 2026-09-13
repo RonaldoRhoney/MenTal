@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 2,
+    "tema_desafio": "Inteligência Artificial e o Futuro da Internet",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas e tecnicas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - a propria Anthropic tratada com o mesmo padrao factual e neutro de qualquer outra empresa do setor.",
+    "status": "Fecha o Desafio 2 do Bloco 5 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: numa demonstração técnica apelidada de 'Golden Gate Claude', pesquisadores conseguiram identificar e amplificar um único conceito específico dentro do funcionamento interno de um modelo de IA — fazendo com que o assistente passasse a mencionar a Golden Gate Bridge (Ponte Golden Gate) em praticamente qualquer resposta, mesmo em conversas sem nenhuma relação com pontes ou São Francisco. O experimento ajudou a demonstrar como pesquisadores estão começando a entender, e até direcionar, o que acontece 'por dentro' desses sistemas complexos de IA.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo uma fonte de 2025, qual foi o valor de avaliação da Anthropic após uma rodada de investimento recente (Série F)?",
+      "opcoes": [
+        "183 bilhões de dólares",
+        "18,3 milhões de dólares",
+        "1,83 bilhão de dólares",
+        "18,3 bilhões de dólares"
+      ],
+      "resposta_correta": "183 bilhões de dólares"
+    },
+    {
+      "n": 2,
+      "pergunta": "Aproximadamente quanto a Anthropic havia arrecadado nessa rodada específica de investimento, segundo a mesma fonte?",
+      "opcoes": [
+        "13 bilhões de dólares",
+        "1,3 milhão de dólares",
+        "130 milhões de dólares",
+        "1,3 bilhão de dólares"
+      ],
+      "resposta_correta": "13 bilhões de dólares"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual era a avaliação da empresa poucos meses antes dessa rodada, em março de 2025, segundo a mesma fonte?",
+      "opcoes": [
+        "61,5 bilhões de dólares",
+        "6,15 milhões de dólares",
+        "615 milhões de dólares",
+        "6,15 bilhões de dólares"
+      ],
+      "resposta_correta": "61,5 bilhões de dólares"
+    },
+    {
+      "n": 4,
+      "pergunta": "Isso representa, aproximadamente, quantas vezes de crescimento na avaliação da empresa nesse curto período?",
+      "opcoes": [
+        "Uma triplicação do valor",
+        "Nenhum crescimento perceptível",
+        "Apenas um aumento de 10%",
+        "Uma redução do valor original"
+      ],
+      "resposta_correta": "Uma triplicação do valor"
+    },
+    {
+      "n": 5,
+      "pergunta": "Cite duas outras empresas, além de Amazon e Google, citadas como investidoras relevantes da Anthropic.",
+      "opcoes": [
+        "Zoom Video Communications e Salesforce",
+        "Netflix e Spotify",
+        "IBM e Oracle",
+        "Nenhuma outra empresa investiu na Anthropic"
+      ],
+      "resposta_correta": "Zoom Video Communications e Salesforce"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo um relato de demonstração técnica da Anthropic, o que o experimento apelidado de 'Golden Gate Claude' demonstrou sobre o funcionamento interno dos modelos de IA?",
+      "opcoes": [
+        "Que era possível direcionar diretamente o comportamento da IA amplificando um único conceito interno do modelo",
+        "Que o modelo não tinha nenhum tipo de estrutura interna analisável",
+        "Que era impossível entender qualquer aspecto do funcionamento de um modelo de IA",
+        "Que a IA não conseguia processar nenhum tipo de conceito abstrato"
+      ],
+      "resposta_correta": "Que era possível direcionar diretamente o comportamento da IA amplificando um único conceito interno do modelo"
+    },
+    {
+      "n": 7,
+      "pergunta": "A que campo de pesquisa mais amplo esse tipo de experimento (analisar e manipular conceitos internos de um modelo) pertence?",
+      "opcoes": [
+        "Interpretabilidade mecanicista",
+        "Design gráfico de interfaces",
+        "Marketing de produto",
+        "Segurança física de data centers"
+      ],
+      "resposta_correta": "Interpretabilidade mecanicista"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo um artigo técnico de Dario Amodei, publicado em 2016 em colaboração com pesquisadores do Google, qual era o tema central da discussão sobre riscos de IA?",
+      "opcoes": [
+        "A imprevisibilidade inerente a modelos de IA em larga escala ('Concrete Problems in AI Safety')",
+        "Exclusivamente questões de hardware e velocidade de processamento",
+        "Apenas o custo financeiro de treinar modelos grandes",
+        "Questões de direitos autorais de conteúdo gerado por IA"
+      ],
+      "resposta_correta": "A imprevisibilidade inerente a modelos de IA em larga escala ('Concrete Problems in AI Safety')"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo Dario Amodei, em entrevista à Fortune, quais duas crenças fortes o grupo já tinha dentro da OpenAI, após o desenvolvimento do GPT-2 e GPT-3?",
+      "opcoes": [
+        "Que mais poder computacional melhoraria os modelos continuamente, e que alinhamento/segurança era necessário além da escala",
+        "Que a IA nunca teria nenhuma aplicação comercial relevante",
+        "Que modelos de linguagem eram tecnicamente impossíveis de escalar",
+        "Que segurança em IA era um tema irrelevante para o desenvolvimento"
+      ],
+      "resposta_correta": "Que mais poder computacional melhoraria os modelos continuamente, e que alinhamento/segurança era necessário além da escala"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo o relato de Amodei, como era tradicionalmente feito o processo de 'alinhamento' de modelos de IA através de avaliação humana, antes da IA Constitucional?",
+      "opcoes": [
+        "Humanos avaliavam e classificavam qual resposta do modelo era melhor que outra",
+        "O processo era feito inteiramente por outro modelo de IA, sem nenhuma participação humana",
+        "Não existia nenhum processo formal de alinhamento antes disso",
+        "O processo dependia exclusivamente de testes automatizados de código"
+      ],
+      "resposta_correta": "Humanos avaliavam e classificavam qual resposta do modelo era melhor que outra"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo uma descrição de produto, o Claude foi apresentado por Dario Amodei com qual capacidade notável de processamento de texto?",
+      "opcoes": [
+        "Capacidade de ler um romance inteiro em menos de um minuto",
+        "Capacidade de traduzir apenas uma palavra por vez",
+        "Nenhuma capacidade de leitura de texto longo foi mencionada",
+        "Capacidade limitada a mensagens de até 10 palavras"
+      ],
+      "resposta_correta": "Capacidade de ler um romance inteiro em menos de um minuto"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que ano a Anthropic lançou o Claude ao público em geral, após meses de testes, incluindo uma versão mais leve chamada 'Claude Instant'?",
+      "opcoes": [
+        "2023",
+        "2021",
+        "2017",
+        "2015"
+      ],
+      "resposta_correta": "2023"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma fonte, quais eram os dois objetivos declarados no treinamento do Claude, além de ser útil (helpful)?",
+      "opcoes": [
+        "Ser honesto (honest) e inofensivo (harmless)",
+        "Ser rápido e barato, sem outros critérios",
+        "Ser exclusivamente divertido e engraçado",
+        "Ser silencioso e sem nenhuma resposta textual"
+      ],
+      "resposta_correta": "Ser honesto (honest) e inofensivo (harmless)"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma fonte, quantos princípios orientadores compõem o conjunto de regras da IA Constitucional da Anthropic, segundo uma descrição específica?",
+      "opcoes": [
+        "10 princípios",
+        "1 princípio único",
+        "100 princípios",
+        "1.000 princípios"
+      ],
+      "resposta_correta": "10 princípios"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que estrutura jurídica específica dos Estados Unidos (além de Public Benefit Corporation) a Anthropic também está registrada, segundo uma fonte técnica?",
+      "opcoes": [
+        "Delaware Certified B Corporation",
+        "Uma cooperativa sem fins lucrativos na Califórnia",
+        "Uma sociedade limitada em Nova York",
+        "Uma fundação familiar no Texas"
+      ],
+      "resposta_correta": "Delaware Certified B Corporation"
+    },
+    {
+      "n": 16,
+      "pergunta": "Considerando toda a linha do tempo discutida neste desafio — de Turing em 1939 à Anthropic em 2021 — quantos anos, aproximadamente, separam esses dois marcos?",
+      "opcoes": [
+        "Cerca de 82 anos",
+        "Cerca de 10 anos",
+        "Cerca de 200 anos",
+        "Cerca de 30 anos"
+      ],
+      "resposta_correta": "Cerca de 82 anos"
+    },
+    {
+      "n": 17,
+      "pergunta": "Comparando a filosofia declarada da Anthropic (segurança em primeiro lugar) com a motivação original da Conferência de Dartmouth (reproduzir capacidades humanas), o que essa comparação sugere sobre a evolução das preocupações no campo da IA?",
+      "opcoes": [
+        "Que o foco evoluiu de 'será que é possível criar IA' para também incluir 'como criar IA de forma seletiva e segura'",
+        "Que nenhuma preocupação com segurança jamais existiu no campo da IA",
+        "Que a segurança em IA é um tema completamente novo, sem nenhuma relação com a história do campo",
+        "Que a Conferência de Dartmouth já tratava exclusivamente de segurança, sem nenhum outro foco"
+      ],
+      "resposta_correta": "Que o foco evoluiu de 'será que é possível criar IA' para também incluir 'como criar IA de forma seletiva e segura'"
+    },
+    {
+      "n": 18,
+      "pergunta": "O que a rápida valorização de empresas de IA, como a Anthropic (de dezenas para centenas de bilhões de dólares em poucos anos), sugere sobre o momento atual desse setor?",
+      "opcoes": [
+        "Que investidores globais estão apostando fortemente no crescimento contínuo e transformador da inteligência artificial",
+        "Que o mercado de IA está em declínio acentuado",
+        "Que nenhuma empresa de IA recebe investimento relevante atualmente",
+        "Que apenas empresas muito antigas conseguem atrair investimento em tecnologia"
+      ],
+      "resposta_correta": "Que investidores globais estão apostando fortemente no crescimento contínuo e transformador da inteligência artificial"
+    },
+    {
+      "n": 19,
+      "pergunta": "Encerrando este desafio sobre IA e o futuro da internet, o que a combinação de pesquisa acadêmica de décadas, investimento bilionário recente e debates ativos sobre segurança melhor representa para o futuro da tecnologia?",
+      "opcoes": [
+        "Um momento de transformação acelerada, onde inovação técnica e responsabilidade ética caminham lado a lado como desafios centrais",
+        "Um campo tecnológico já completamente estabilizado, sem nenhuma mudança futura esperada",
+        "Uma área de pesquisa irrelevante para o futuro da internet",
+        "Um tema exclusivamente acadêmico, sem nenhum impacto prático real"
+      ],
+      "resposta_correta": "Um momento de transformação acelerada, onde inovação técnica e responsabilidade ética caminham lado a lado como desafios centrais"
+    },
+    {
+      "n": 20,
+      "pergunta": "Voltando ao início deste Mundo da Internet — do 'LO' truncado da ARPANET em 1969 à inteligência artificial capaz de conversas complexas em 2025 — o que essa jornada completa melhor resume sobre o ritmo da inovação tecnológica?",
+      "opcoes": [
+        "Que a velocidade de transformação tecnológica tem se acelerado dramaticamente ao longo das últimas décadas",
+        "Que a tecnologia praticamente não mudou desde os anos 1960",
+        "Que apenas um único avanço tecnológico ocorreu em todo esse período",
+        "Que o ritmo de inovação tecnológica sempre foi constante, sem nenhuma aceleração perceptível"
+      ],
+      "resposta_correta": "Que a velocidade de transformação tecnológica tem se acelerado dramaticamente ao longo das últimas décadas"
+    }
+  ]
+}

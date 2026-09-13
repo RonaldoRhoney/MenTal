@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 4,
+    "tema_desafio": "Desafios Virais e Fenômenos de Internet",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Wikipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - mencao a briga tratada de forma factual e breve, sem detalhe grafico de violencia."
+  },
+  "saiba_mais": "Curiosidade: a frase 'do the Harlem Shake', usada na música que deu origem ao meme viral de 2013, na verdade vem de uma amostra de uma música de 2001 do grupo Plastic Little — e, segundo relatos, a linha original foi escrita depois que um integrante do grupo venceu uma briga com um rival grafiteiro e, ao se levantar, fez a dança Harlem Shake em comemoração. Uma origem bem específica para uma frase que, mais de uma década depois, viraria sinônimo de um dos maiores fenômenos virais da história da internet.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual é o nome real de Baauer, o produtor da música 'Harlem Shake'?",
+      "opcoes": [
+        "Harry Rodrigues",
+        "George Miller",
+        "Jayson Musson",
+        "Scott McCoskery"
+      ],
+      "resposta_correta": "Harry Rodrigues"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que cidade Baauer é baseado como produtor musical?",
+      "opcoes": [
+        "Brooklyn, Nova York",
+        "Los Angeles",
+        "Miami",
+        "Chicago"
+      ],
+      "resposta_correta": "Brooklyn, Nova York"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que data a música 'Harlem Shake' foi originalmente lançada no YouTube por Baauer?",
+      "opcoes": [
+        "23 de agosto de 2012",
+        "30 de janeiro de 2013",
+        "2 de fevereiro de 2013",
+        "1º de janeiro de 2013"
+      ],
+      "resposta_correta": "23 de agosto de 2012"
+    },
+    {
+      "n": 4,
+      "pergunta": "Sob qual selo (sub-selo da gravadora de Diplo) a música foi lançada como download gratuito?",
+      "opcoes": [
+        "Jeffrees, sub-selo da Mad Decent",
+        "Universal Music",
+        "Sony Music",
+        "Warner Records"
+      ],
+      "resposta_correta": "Jeffrees, sub-selo da Mad Decent"
+    },
+    {
+      "n": 5,
+      "pergunta": "A frase 'do the Harlem Shake' na música é uma amostra (sample) de qual música anterior, de 2001?",
+      "opcoes": [
+        "'Miller Time', do grupo Plastic Little",
+        "Uma música de Michael Jackson",
+        "Uma música tradicional folclórica",
+        "Uma música de outro DJ de trap"
+      ],
+      "resposta_correta": "'Miller Time', do grupo Plastic Little"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma fonte, a frase original em 'Miller Time' se referia a qual evento real, vivido pelo integrante do Plastic Little?",
+      "opcoes": [
+        "Uma briga com um rival grafiteiro",
+        "Uma festa de formatura",
+        "Uma competição de dança",
+        "Um show ao vivo"
+      ],
+      "resposta_correta": "Uma briga com um rival grafiteiro"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quem publicou o vídeo, em 30 de janeiro de 2013, que deu origem ao formato viral do Harlem Shake?",
+      "opcoes": [
+        "George Miller (conhecido como Filthy Frank)",
+        "Cinco jovens australianos anônimos",
+        "O próprio Baauer",
+        "Um funcionário do YouTube"
+      ],
+      "resposta_correta": "George Miller (conhecido como Filthy Frank)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Sob qual personagem/persona George Miller aparecia nesse vídeo original?",
+      "opcoes": [
+        "Pink Guy",
+        "Filthy Frank (sem fantasia)",
+        "Um personagem sem nome específico",
+        "Joji (nome artístico posterior de Miller)"
+      ],
+      "resposta_correta": "Pink Guy"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo o próprio George Miller, ele já era fã da música de Baauer antes de fazer o vídeo?",
+      "opcoes": [
+        "Não, foi provavelmente a primeira música dele que ele ouviu",
+        "Sim, já acompanhava o trabalho de Baauer há anos",
+        "Sim, mas apenas de forma superficial",
+        "Não há declaração dele sobre isso"
+      ],
+      "resposta_correta": "Não, foi provavelmente a primeira música dele que ele ouviu"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em quantos dias, aproximadamente, o formato de vídeo Harlem Shake atingiu 40 mil uploads e mais de 700 milhões de visualizações, segundo uma fonte?",
+      "opcoes": [
+        "Cerca de duas semanas",
+        "Cerca de um único dia",
+        "Cerca de um ano",
+        "Cerca de seis meses"
+      ],
+      "resposta_correta": "Cerca de duas semanas"
+    },
+    {
+      "n": 11,
+      "pergunta": "O fenômeno Harlem Shake chegou a forçar qual mudança prática na forma como uma parada musical famosa calcula seu ranking?",
+      "opcoes": [
+        "A Billboard Hot 100 precisou mudar sua metodologia de cálculo",
+        "O Grammy mudou suas categorias de premiação",
+        "A MTV encerrou uma de suas premiações",
+        "O Spotify mudou seu algoritmo de recomendação"
+      ],
+      "resposta_correta": "A Billboard Hot 100 precisou mudar sua metodologia de cálculo"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma fonte, o meme do Harlem Shake também foi usado como ferramenta em qual contexto mais sério, em países como Egito e Tunísia?",
+      "opcoes": [
+        "Como forma de protesto político",
+        "Como campanha eleitoral oficial",
+        "Como propaganda governamental",
+        "Como treinamento militar"
+      ],
+      "resposta_correta": "Como forma de protesto político"
+    },
+    {
+      "n": 13,
+      "pergunta": "A dança original chamada 'Harlem Shake', criada em Harlem nos anos 1980, tem relação direta com a coreografia caótica do meme viral de 2013?",
+      "opcoes": [
+        "Não, apenas o nome foi aproveitado — as coreografias são completamente diferentes",
+        "Sim, é exatamente a mesma dança, sem nenhuma diferença",
+        "Sim, mas com pequenas variações regionais apenas",
+        "Não há nenhuma dança original chamada Harlem Shake"
+      ],
+      "resposta_correta": "Não, apenas o nome foi aproveitado — as coreografias são completamente diferentes"
+    },
+    {
+      "n": 14,
+      "pergunta": "A dança original de Harlem, segundo uma fonte, seria descendente de qual dança tradicional africana?",
+      "opcoes": [
+        "Eskista, da Etiópia",
+        "Uma dança nigeriana tradicional",
+        "Uma dança sul-africana",
+        "Uma dança marroquina"
+      ],
+      "resposta_correta": "Eskista, da Etiópia"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma fonte curiosa, um grupo de dançarinos realizou o Harlem Shake em qual local incomum, gerando investigações federais de segurança?",
+      "opcoes": [
+        "A bordo de um avião em pleno voo",
+        "No topo de um prédio histórico",
+        "Dentro de um museu nacional",
+        "Em uma base militar restrita"
+      ],
+      "resposta_correta": "A bordo de um avião em pleno voo"
+    },
+    {
+      "n": 16,
+      "pergunta": "Quem publicou o vídeo considerado, por algumas fontes, o primeiro a replicar exatamente o formato de 30 segundos que se tornaria padrão do meme?",
+      "opcoes": [
+        "Cinco jovens australianos conhecidos como The Sunny Coast Skate",
+        "O próprio Baauer",
+        "George Miller (Filthy Frank)",
+        "Um grupo de estudantes universitários americanos"
+      ],
+      "resposta_correta": "Cinco jovens australianos conhecidos como The Sunny Coast Skate"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que geralmente acontecia visualmente nos primeiros 15 segundos de um vídeo típico de Harlem Shake?",
+      "opcoes": [
+        "Uma pessoa mascarada dançava sozinha, ignorada pelas demais ao redor",
+        "Todo o grupo já dançava freneticamente desde o início",
+        "A tela ficava completamente preta",
+        "Nenhuma pessoa aparecia, apenas texto explicativo"
+      ],
+      "resposta_correta": "Uma pessoa mascarada dançava sozinha, ignorada pelas demais ao redor"
+    },
+    {
+      "n": 18,
+      "pergunta": "O que acontecia no vídeo no momento do 'beat drop' (quebra do ritmo) da música?",
+      "opcoes": [
+        "Todo o grupo passava a dançar de forma caótica e frenética",
+        "A música parava completamente",
+        "O vídeo era cortado abruptamente",
+        "Nada mudava visualmente"
+      ],
+      "resposta_correta": "Todo o grupo passava a dançar de forma caótica e frenética"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo uma fonte, quantas versões de Harlem Shake chegaram a ser publicadas por dia, no auge do fenômeno?",
+      "opcoes": [
+        "Cerca de 4.000 vídeos por dia",
+        "Cerca de 4 vídeos por dia",
+        "Cerca de 400.000 vídeos por dia",
+        "Cerca de 40 vídeos por dia"
+      ],
+      "resposta_correta": "Cerca de 4.000 vídeos por dia"
+    },
+    {
+      "n": 20,
+      "pergunta": "Que tipo de organizações e marcas, além de universidades e grupos de amigos, também criaram suas próprias versões do Harlem Shake, segundo registros?",
+      "opcoes": [
+        "Empresas comerciais e até forças militares",
+        "Apenas emissoras de televisão",
+        "Exclusivamente órgãos governamentais",
+        "Somente clubes esportivos profissionais"
+      ],
+      "resposta_correta": "Empresas comerciais e até forças militares"
+    }
+  ]
+}

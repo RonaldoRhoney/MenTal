@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 2,
+    "tema_desafio": "Redes Sociais e a Era dos Influenciadores",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas recentes (Forbes Brasil, Canaltech, Meio e Mensagem). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Desafio 2 do Bloco 4 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: em menos de duas décadas, o simples ato de gravar um vídeo caseiro e publicar na internet evoluiu para uma indústria bilionária — a chamada 'creator economy' já movimenta cerca de 250 bilhões de dólares no mundo, com projeções de dobrar esse valor até 2027, segundo estimativas do banco Goldman Sachs. Um caminho e tanto para um fenômeno que começou com 18 segundos de um rapaz comentando sobre as trombas de elefantes num zoológico.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual é o nome verdadeiro de MrBeast, o criador de conteúdo com o maior canal do YouTube?",
+      "opcoes": [
+        "Jimmy Donaldson",
+        "Khaby Lame",
+        "Chad Hurley",
+        "Jawed Karim"
+      ],
+      "resposta_correta": "Jimmy Donaldson"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo uma fonte de 2024, aproximadamente quantos inscritos o canal de MrBeast já havia atingido, tornando-se o maior canal do mundo?",
+      "opcoes": [
+        "Mais de 270 milhões (chegando a 324 milhões, segundo outra fonte)",
+        "Cerca de 1 milhão",
+        "Cerca de 10 milhões",
+        "Cerca de 100 mil"
+      ],
+      "resposta_correta": "Mais de 270 milhões (chegando a 324 milhões, segundo outra fonte)"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo uma fonte, qual foi o faturamento estimado de MrBeast em 12 meses, colocando-o no topo dos criadores mais lucrativos do mundo?",
+      "opcoes": [
+        "Entre 82 e 85 milhões de dólares",
+        "8,2 mil dólares",
+        "820 mil dólares",
+        "8,2 bilhões de dólares"
+      ],
+      "resposta_correta": "Entre 82 e 85 milhões de dólares"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem é o criador de conteúdo conhecido por vídeos silenciosos de comédia, reagindo a situações cotidianas, e é o mais seguido do TikTok?",
+      "opcoes": [
+        "Khaby Lame",
+        "MrBeast",
+        "Dhar Mann",
+        "Matt Rife"
+      ],
+      "resposta_correta": "Khaby Lame"
+    },
+    {
+      "n": 5,
+      "pergunta": "Aproximadamente quantos seguidores Khaby Lame tinha no TikTok, segundo uma fonte de 2024?",
+      "opcoes": [
+        "163 milhões",
+        "1,6 milhão",
+        "16 milhões",
+        "1,6 bilhão"
+      ],
+      "resposta_correta": "163 milhões"
+    },
+    {
+      "n": 6,
+      "pergunta": "Com quais duas marcas Khaby Lame fez parcerias comerciais lançando produtos próprios, segundo uma fonte?",
+      "opcoes": [
+        "Hugo Boss e Walmart",
+        "Nike e Adidas",
+        "Coca-Cola e Pepsi",
+        "Apple e Samsung"
+      ],
+      "resposta_correta": "Hugo Boss e Walmart"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo estimativas de 2024, qual era o valor aproximado da indústria global de influenciadores?",
+      "opcoes": [
+        "Cerca de 250 bilhões de dólares",
+        "Cerca de 25 milhões de dólares",
+        "Cerca de 2,5 bilhões de dólares",
+        "Cerca de 25 bilhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 250 bilhões de dólares"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo projeções do banco Goldman Sachs, para qual valor esse mercado deve crescer até 2027?",
+      "opcoes": [
+        "Cerca de 500 bilhões de dólares (ou 480 bilhões, segundo outra fonte)",
+        "Cerca de 5 bilhões de dólares",
+        "Cerca de 50 milhões de dólares",
+        "Cerca de 5 milhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 500 bilhões de dólares (ou 480 bilhões, segundo outra fonte)"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo uma fonte, quanto as empresas gastaram globalmente em marketing de criadores em 2023?",
+      "opcoes": [
+        "Mais de 21 bilhões de dólares",
+        "2,1 milhões de dólares",
+        "210 milhões de dólares",
+        "2,1 bilhões de dólares"
+      ],
+      "resposta_correta": "Mais de 21 bilhões de dólares"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo essa mesma fonte, quanto esse mercado movimentava, aproximadamente, sete anos antes (por volta de 2016/2017)?",
+      "opcoes": [
+        "Cerca de 1,6 bilhão de dólares",
+        "Cerca de 21 bilhões de dólares",
+        "Cerca de 160 mil dólares",
+        "Cerca de 160 bilhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 1,6 bilhão de dólares"
+    },
+    {
+      "n": 11,
+      "pergunta": "Quantos criadores de conteúdo profissionais existiam globalmente, segundo uma estimativa de 2024?",
+      "opcoes": [
+        "50 milhões",
+        "500 mil",
+        "5 milhões",
+        "500 milhões"
+      ],
+      "resposta_correta": "50 milhões"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma retrospectiva de mercado brasileiro de 2023/2024, quantas interações, aproximadamente, foram geradas em publicações patrocinadas (#publis) no período analisado?",
+      "opcoes": [
+        "Mais de 228 bilhões",
+        "2,28 milhões",
+        "228 mil",
+        "22,8 bilhões"
+      ],
+      "resposta_correta": "Mais de 228 bilhões"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo a mesma retrospectiva brasileira, qual formato de conteúdo obteve o maior engajamento médio entre os analisados?",
+      "opcoes": [
+        "Reels",
+        "Fotos estáticas",
+        "Carrossel",
+        "Stories"
+      ],
+      "resposta_correta": "Reels"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma pesquisa de 2024, qual porcentagem das empresas brasileiras afirmou que aumentaria o investimento em marketing de influência naquele ano?",
+      "opcoes": [
+        "Cerca de 70%",
+        "Cerca de 5%",
+        "Cerca de 20%",
+        "Cerca de 100%"
+      ],
+      "resposta_correta": "Cerca de 70%"
+    },
+    {
+      "n": 15,
+      "pergunta": "Cite uma influenciadora brasileira citada entre os perfis mais buscados por marcas no início de 2024, segundo uma pesquisa do setor.",
+      "opcoes": [
+        "Camila Coutinho",
+        "Zoe Roth",
+        "Laina Morris",
+        "Tabatha Bundesen"
+      ],
+      "resposta_correta": "Camila Coutinho"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo a mesma pesquisa, qual influenciadora brasileira aparecia com cerca de 22,1 milhões de seguidores entre os perfis mais procurados?",
+      "opcoes": [
+        "Jade Picon",
+        "Camila Coutinho",
+        "Vanessa Rozan",
+        "Maísa"
+      ],
+      "resposta_correta": "Jade Picon"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo essa pesquisa, entre os 20 perfis mais buscados no início de 2024, qual era a proporção de mulheres?",
+      "opcoes": [
+        "19 em 20 (a grande maioria)",
+        "Metade, exatamente 10 em 20",
+        "Apenas 2 em 20",
+        "Nenhuma mulher entre os mais buscados"
+      ],
+      "resposta_correta": "19 em 20 (a grande maioria)"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma fonte de 2023, qual segmento de conteúdo é citado especificamente como recorrente entre influenciadores, ao lado de saúde mental e inspiração?",
+      "opcoes": [
+        "Dicas para superar desafios",
+        "Exclusivamente moda de luxo",
+        "Apenas culinária vegana",
+        "Somente viagens internacionais"
+      ],
+      "resposta_correta": "Dicas para superar desafios"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo uma projeção de mercado, até o final de 2024, o investimento global em publicidade (não só influenciadores) deveria superar qual marca?",
+      "opcoes": [
+        "1 trilhão de dólares",
+        "1 bilhão de dólares",
+        "100 bilhões de dólares",
+        "10 trilhões de dólares"
+      ],
+      "resposta_correta": "1 trilhão de dólares"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando toda a evolução discutida neste desafio — de 'Me at the zoo' em 2005 a uma indústria de centenas de bilhões de dólares — o que essa trajetória melhor demonstra sobre a economia digital?",
+      "opcoes": [
+        "Como um formato simples de compartilhamento de vídeo pode evoluir para um setor econômico global de proporções massivas",
+        "Que a criação de conteúdo online nunca teve relevância econômica real",
+        "Que apenas grandes estúdios de cinema conseguem gerar receita relevante com vídeo",
+        "Que o mercado de influenciadores é uma tendência passageira sem crescimento real"
+      ],
+      "resposta_correta": "Como um formato simples de compartilhamento de vídeo pode evoluir para um setor econômico global de proporções massivas"
+    }
+  ]
+}

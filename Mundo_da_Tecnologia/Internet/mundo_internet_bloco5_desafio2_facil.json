@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 2,
+    "tema_desafio": "Inteligência Artificial e o Futuro da Internet",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo MIT Technology Review Brasil. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - empresas de IA mencionadas de forma factual e equilibrada, sem promocao ou viés a favor de nenhuma marca especifica, incluindo a propria Anthropic tratada apenas como fato do panorama do mercado."
+  },
+  "saiba_mais": "Curiosidade: a inteligência artificial não nasceu em 2022, como muita gente imagina — suas raízes remontam a 1939, quando Alan Turing ajudava a decifrar códigos nazistas durante a Segunda Guerra Mundial, e o próprio termo 'Inteligência Artificial' só foi criado em 1956, décadas antes de qualquer chatbot popular existir. O ChatGPT não inventou a IA: ele apenas foi o primeiro a colocá-la, de forma acessível, direto nas mãos do público.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem cunhou oficialmente o termo 'Inteligência Artificial', em 1956?",
+      "opcoes": [
+        "John McCarthy",
+        "Alan Turing",
+        "Sam Altman",
+        "Bill Gates"
+      ],
+      "resposta_correta": "John McCarthy"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual evento específico o termo 'Inteligência Artificial' foi cunhado?",
+      "opcoes": [
+        "A Conferência de Dartmouth",
+        "A WWDC da Apple",
+        "O CES",
+        "A Conferência de Stanford"
+      ],
+      "resposta_correta": "A Conferência de Dartmouth"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem propôs, em 1950, o famoso 'Teste de Turing', questionando se máquinas podem 'pensar'?",
+      "opcoes": [
+        "Alan Turing",
+        "John McCarthy",
+        "Marvin Minsky",
+        "Claude Shannon"
+      ],
+      "resposta_correta": "Alan Turing"
+    },
+    {
+      "n": 4,
+      "pergunta": "O que o Teste de Turing avalia, de forma simplificada?",
+      "opcoes": [
+        "Se uma máquina consegue exibir comportamento indistinguível do de um ser humano numa conversa",
+        "A velocidade de processamento de um computador",
+        "A capacidade de armazenamento de um servidor",
+        "A resistência física de um hardware"
+      ],
+      "resposta_correta": "Se uma máquina consegue exibir comportamento indistinguível do de um ser humano numa conversa"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual empresa lançou o ChatGPT?",
+      "opcoes": [
+        "OpenAI",
+        "Google",
+        "Microsoft",
+        "Meta"
+      ],
+      "resposta_correta": "OpenAI"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que data exata o ChatGPT foi lançado ao público?",
+      "opcoes": [
+        "30 de novembro de 2022",
+        "1956",
+        "1950",
+        "2017"
+      ],
+      "resposta_correta": "30 de novembro de 2022"
+    },
+    {
+      "n": 7,
+      "pergunta": "O que mudou fundamentalmente com o lançamento do ChatGPT, em relação à IA que já existia antes?",
+      "opcoes": [
+        "O acesso: uma IA generativa sofisticada chegou diretamente ao público em geral, sem exigir conhecimento técnico",
+        "A inteligência artificial foi inventada pela primeira vez naquele momento",
+        "Foi a primeira vez que qualquer computador processou dados",
+        "Nada mudou de fato, foi apenas um anúncio de marketing"
+      ],
+      "resposta_correta": "O acesso: uma IA generativa sofisticada chegou diretamente ao público em geral, sem exigir conhecimento técnico"
+    },
+    {
+      "n": 8,
+      "pergunta": "Cite outra grande empresa de tecnologia, além da OpenAI, que lançou seu próprio produto de IA generativa concorrente.",
+      "opcoes": [
+        "Google (Gemini)",
+        "Netflix",
+        "Spotify",
+        "Airbnb"
+      ],
+      "resposta_correta": "Google (Gemini)"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual empresa criou o assistente de IA chamado Claude?",
+      "opcoes": [
+        "Anthropic",
+        "OpenAI",
+        "Meta",
+        "Amazon"
+      ],
+      "resposta_correta": "Anthropic"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual empresa de tecnologia investiu bilhões de dólares na OpenAI logo após o sucesso do ChatGPT?",
+      "opcoes": [
+        "Microsoft",
+        "Apple",
+        "Amazon",
+        "Meta"
+      ],
+      "resposta_correta": "Microsoft"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano os primeiros modelos matemáticos de 'neurônios artificiais' foram criados, base para o aprendizado de máquina?",
+      "opcoes": [
+        "1943",
+        "1956",
+        "2022",
+        "2017"
+      ],
+      "resposta_correta": "1943"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quais dois pesquisadores criaram esse primeiro modelo de neurônio artificial?",
+      "opcoes": [
+        "Warren McCulloch e Walter Pitts",
+        "Alan Turing e John McCarthy",
+        "Marvin Minsky e Claude Shannon",
+        "Sam Altman e Elon Musk"
+      ],
+      "resposta_correta": "Warren McCulloch e Walter Pitts"
+    },
+    {
+      "n": 13,
+      "pergunta": "O que é 'IA generativa', termo usado para descrever ferramentas como o ChatGPT?",
+      "opcoes": [
+        "Um tipo de IA capaz de criar textos, imagens ou outros conteúdos originais",
+        "Um tipo de IA usada apenas para cálculos matemáticos simples",
+        "Um sinônimo de qualquer programa de computador",
+        "Um tipo de vírus de computador"
+      ],
+      "resposta_correta": "Um tipo de IA capaz de criar textos, imagens ou outros conteúdos originais"
+    },
+    {
+      "n": 14,
+      "pergunta": "O que a IA das primeiras décadas (antes de 2022) fazia, de forma mais restrita, em comparação com a IA generativa atual?",
+      "opcoes": [
+        "Era restrita a laboratórios, empresas e aplicações específicas, sem acesso amplo do público",
+        "Já era usada livremente por qualquer pessoa desde os anos 1950",
+        "Não existia nenhuma aplicação prática antes de 2022",
+        "Era usada exclusivamente para entretenimento doméstico"
+      ],
+      "resposta_correta": "Era restrita a laboratórios, empresas e aplicações específicas, sem acesso amplo do público"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quais quatro tipos de IA são citados numa classificação recente do campo?",
+      "opcoes": [
+        "Preditiva, Generativa, Agêntica e Física",
+        "Rápida, Lenta, Cara e Barata",
+        "Grande, Pequena, Nova e Antiga",
+        "Boa, Ruim, Neutra e Indefinida"
+      ],
+      "resposta_correta": "Preditiva, Generativa, Agêntica e Física"
+    },
+    {
+      "n": 16,
+      "pergunta": "Que artigo técnico de 2017, chamado 'Attention Is All You Need', é considerado um marco tecnológico fundamental para a IA generativa moderna?",
+      "opcoes": [
+        "O artigo que introduziu a arquitetura Transformer",
+        "O artigo original do Teste de Turing",
+        "O manifesto da Conferência de Dartmouth",
+        "Um artigo sobre redes sociais"
+      ],
+      "resposta_correta": "O artigo que introduziu a arquitetura Transformer"
+    },
+    {
+      "n": 17,
+      "pergunta": "Quais dois períodos ficaram conhecidos como 'invernos da IA', marcados por menor investimento e interesse na área?",
+      "opcoes": [
+        "1974-1980 e 1987-1993",
+        "1950-1956 e 2000-2010",
+        "2022-2023 apenas",
+        "Não houve nenhum período de baixa na história da IA"
+      ],
+      "resposta_correta": "1974-1980 e 1987-1993"
+    },
+    {
+      "n": 18,
+      "pergunta": "Em que ano um avanço técnico chamado AlexNet marcou um grande salto no chamado 'aprendizado profundo' (deep learning)?",
+      "opcoes": [
+        "2012",
+        "1956",
+        "1943",
+        "2022"
+      ],
+      "resposta_correta": "2012"
+    },
+    {
+      "n": 19,
+      "pergunta": "Além de textos, quais outros tipos de conteúdo as ferramentas modernas de IA generativa também conseguem produzir?",
+      "opcoes": [
+        "Imagens, entre outros formatos",
+        "Apenas números aleatórios",
+        "Exclusivamente sons de alarme",
+        "Somente códigos de barras"
+      ],
+      "resposta_correta": "Imagens, entre outros formatos"
+    },
+    {
+      "n": 20,
+      "pergunta": "Antes de cunhar o termo IA, o que Alan Turing já havia feito de historicamente relevante, durante a Segunda Guerra Mundial?",
+      "opcoes": [
+        "Ajudou a decifrar códigos da máquina alemã Enigma",
+        "Inventou a internet",
+        "Criou o primeiro navegador de internet",
+        "Fundou uma das primeiras universidades de tecnologia"
+      ],
+      "resposta_correta": "Ajudou a decifrar códigos da máquina alemã Enigma"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 2,
+    "tema_desafio": "Redes Sociais e a Era dos Influenciadores",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Canaltech e TechTudo. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: o Orkut, criado por um engenheiro do Google, nunca fez tanto sucesso nos Estados Unidos quanto fez no Brasil e na Índia — o Brasil, em especial, adotou a rede com tanta força que ela se tornou praticamente sinônimo de 'internet social' para toda uma geração de brasileiros, décadas antes do Instagram e do TikTok existirem.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual é considerada a primeira rede social da história?",
+      "opcoes": [
+        "Six Degrees",
+        "Facebook",
+        "Orkut",
+        "MySpace"
+      ],
+      "resposta_correta": "Six Degrees"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Six Degrees foi lançado?",
+      "opcoes": [
+        "1997",
+        "2002",
+        "2004",
+        "1994"
+      ],
+      "resposta_correta": "1997"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem fundou o Six Degrees?",
+      "opcoes": [
+        "Andrew Weinreich",
+        "Mark Zuckerberg",
+        "Tom Anderson",
+        "Orkut Büyükkökten"
+      ],
+      "resposta_correta": "Andrew Weinreich"
+    },
+    {
+      "n": 4,
+      "pergunta": "De onde vem o nome 'Six Degrees'?",
+      "opcoes": [
+        "Da teoria dos 'seis graus de separação'",
+        "De uma sigla técnica sem significado",
+        "Do número de fundadores da empresa",
+        "De uma temperatura específica"
+      ],
+      "resposta_correta": "Da teoria dos 'seis graus de separação'"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano o Friendster foi lançado?",
+      "opcoes": [
+        "2002",
+        "1997",
+        "2004",
+        "2003"
+      ],
+      "resposta_correta": "2002"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano o MySpace foi lançado?",
+      "opcoes": [
+        "2003",
+        "1997",
+        "2002",
+        "2004"
+      ],
+      "resposta_correta": "2003"
+    },
+    {
+      "n": 7,
+      "pergunta": "O MySpace era focado principalmente em qual tema, além de conexões sociais?",
+      "opcoes": [
+        "Música e cultura jovem",
+        "Notícias corporativas",
+        "Vendas de produtos",
+        "Currículos profissionais"
+      ],
+      "resposta_correta": "Música e cultura jovem"
+    },
+    {
+      "n": 8,
+      "pergunta": "Quem criou o Orkut, rede social extremamente popular no Brasil?",
+      "opcoes": [
+        "Orkut Büyükkökten, engenheiro do Google",
+        "Mark Zuckerberg",
+        "Andrew Weinreich",
+        "Tom Anderson"
+      ],
+      "resposta_correta": "Orkut Büyükkökten, engenheiro do Google"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano o Orkut foi lançado?",
+      "opcoes": [
+        "2004",
+        "1997",
+        "2002",
+        "2010"
+      ],
+      "resposta_correta": "2004"
+    },
+    {
+      "n": 10,
+      "pergunta": "Além do Brasil, em qual outro país o Orkut fez muito sucesso?",
+      "opcoes": [
+        "Índia",
+        "Estados Unidos",
+        "Reino Unido",
+        "Japão"
+      ],
+      "resposta_correta": "Índia"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual recurso característico do Orkut permitia que amigos escrevessem elogios ou mensagens públicas no perfil uns dos outros?",
+      "opcoes": [
+        "Depoimentos",
+        "Stories",
+        "Reels",
+        "Tweets"
+      ],
+      "resposta_correta": "Depoimentos"
+    },
+    {
+      "n": 12,
+      "pergunta": "O que é um 'influenciador digital'?",
+      "opcoes": [
+        "Uma pessoa que usa redes sociais para influenciar opiniões, comportamentos ou decisões de compra de seu público",
+        "Um programador que cria redes sociais",
+        "Um funcionário de empresas de tecnologia",
+        "Um tipo de vírus de computador"
+      ],
+      "resposta_correta": "Uma pessoa que usa redes sociais para influenciar opiniões, comportamentos ou decisões de compra de seu público"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que ano o Instagram foi lançado?",
+      "opcoes": [
+        "2010",
+        "2004",
+        "2006",
+        "2016"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual recurso do Instagram, inspirado no Snapchat, se tornou extremamente popular entre criadores de conteúdo?",
+      "opcoes": [
+        "Stories",
+        "Reels",
+        "IGTV",
+        "Direct"
+      ],
+      "resposta_correta": "Stories"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que ano o YouTube foi fundado?",
+      "opcoes": [
+        "2005",
+        "1997",
+        "2010",
+        "2004"
+      ],
+      "resposta_correta": "2005"
+    },
+    {
+      "n": 16,
+      "pergunta": "O YouTube ajudou a popularizar qual tipo de criador de conteúdo, hoje central na cultura de influenciadores?",
+      "opcoes": [
+        "Youtubers",
+        "Blogueiros exclusivamente de texto",
+        "Radialistas tradicionais",
+        "Jornalistas de TV"
+      ],
+      "resposta_correta": "Youtubers"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual empresa comprou o YouTube em 2006, um ano após sua fundação?",
+      "opcoes": [
+        "Google",
+        "Facebook",
+        "Microsoft",
+        "Amazon"
+      ],
+      "resposta_correta": "Google"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual plataforma de vídeos curtos revolucionou a cultura de influenciadores a partir de 2017/2018?",
+      "opcoes": [
+        "TikTok",
+        "MySpace",
+        "Orkut",
+        "Six Degrees"
+      ],
+      "resposta_correta": "TikTok"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em quantos meses o Friendster, em seu lançamento, conseguiu reunir cerca de 3 milhões de usuários, segundo uma fonte?",
+      "opcoes": [
+        "Três meses",
+        "Um dia",
+        "Dez anos",
+        "Uma semana"
+      ],
+      "resposta_correta": "Três meses"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual proposta de compra o Google fez ao Friendster, recusada pela empresa, segundo uma fonte?",
+      "opcoes": [
+        "30 milhões de dólares",
+        "3 mil dólares",
+        "3 bilhões de dólares",
+        "300 mil dólares"
+      ],
+      "resposta_correta": "30 milhões de dólares"
+    }
+  ]
+}

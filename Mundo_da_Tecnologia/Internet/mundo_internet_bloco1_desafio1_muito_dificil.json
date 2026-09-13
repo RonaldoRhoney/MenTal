@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 1,
+    "tema_desafio": "ARPANET e o nascimento da World Wide Web",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Todo o texto foi escrito originalmente - nenhuma reproducao literal de nenhuma fonte consultada.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro."
+  },
+  "saiba_mais": "Curiosidade: décadas antes da ARPANET sequer existir, o escritor de ficção científica Arthur C. Clarke já havia previsto, em 1970, um dispositivo capaz de trazer 'o conhecimento acumulado do mundo às pontas dos dedos' — uma descrição quase profética do que a internet e os smartphones se tornariam décadas depois.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual instituto de pesquisa de Stanford recebeu a primeira mensagem da ARPANET, sediado especificamente na cidade de qual estado americano no registro histórico?",
+      "opcoes": [
+        "Stanford Research Institute, em San Jose/Menlo Park, Califórnia",
+        "MIT, em Cambridge, Massachusetts",
+        "Bell Labs, em Nova Jersey",
+        "Xerox PARC, no Texas"
+      ],
+      "resposta_correta": "Stanford Research Institute, em San Jose/Menlo Park, Califórnia"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual foi o protocolo de exchange verbal usado por Charley Kline para confirmar cada letra transmitida durante o teste histórico, segundo relatos?",
+      "opcoes": [
+        "Ele confirmava por telefone cada letra recebida com a equipe de Stanford",
+        "Ele usava um segundo computador para validar",
+        "Ele enviava um e-mail de confirmação",
+        "Não havia nenhum tipo de confirmação em tempo real"
+      ],
+      "resposta_correta": "Ele confirmava por telefone cada letra recebida com a equipe de Stanford"
+    },
+    {
+      "n": 3,
+      "pergunta": "O primeiro navegador de Berners-Lee, batizado WorldWideWeb, foi posteriormente renomeado para evitar confusão com o próprio conceito da Web. Qual foi o novo nome?",
+      "opcoes": [
+        "Nexus",
+        "CERN Browser",
+        "Line Mode",
+        "HyperCard"
+      ],
+      "resposta_correta": "Nexus"
+    },
+    {
+      "n": 4,
+      "pergunta": "O manuscrito original da proposta de março de 1989 de Berners-Lee recebeu um comentário específico de seu superior no CERN, Mike Sendall. O que ele escreveu?",
+      "opcoes": [
+        "'Vago, mas empolgante' ('Vague, but exciting')",
+        "'Rejeitado por falta de clareza'",
+        "'Aprovado sem ressalvas'",
+        "'Necessita revisão completa'"
+      ],
+      "resposta_correta": "'Vago, mas empolgante' ('Vague, but exciting')"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem comprou o computador NeXT usado por Berners-Lee para desenvolver o protótipo da Web, entregando-o a ele para avaliação?",
+      "opcoes": [
+        "Mike Sendall",
+        "Robert Cailliau",
+        "Steve Jobs",
+        "Vint Cerf"
+      ],
+      "resposta_correta": "Mike Sendall"
+    },
+    {
+      "n": 6,
+      "pergunta": "O conceito de hipertexto usado como base da proposta de Berners-Lee já existia em um sistema anterior dele mesmo, criado ainda nos anos 1980. Qual era o nome desse sistema?",
+      "opcoes": [
+        "ENQUIRE",
+        "Xanadu",
+        "Memex",
+        "HyperCard"
+      ],
+      "resposta_correta": "ENQUIRE"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual foi a profissão original de Tim Berners-Lee antes de se tornar cientista da computação, segundo sua formação?",
+      "opcoes": [
+        "Físico",
+        "Engenheiro mecânico",
+        "Matemático puro",
+        "Bioquímico"
+      ],
+      "resposta_correta": "Físico"
+    },
+    {
+      "n": 8,
+      "pergunta": "O termo 'web' (teia), escolhido por Berners-Lee, remete a que ideia central da proposta original de 1989?",
+      "opcoes": [
+        "Documentos conectados como uma rede/teia de nós que o usuário pode navegar livremente",
+        "Uma teia de aranha literal desenhada no logo original",
+        "Um sistema de segurança em camadas",
+        "Uma metáfora sobre a estrutura do CERN"
+      ],
+      "resposta_correta": "Documentos conectados como uma rede/teia de nós que o usuário pode navegar livremente"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que revista de 1970, décadas antes da ARPANET evoluir para a internet moderna, o autor Arthur C. Clarke já previa algo parecido com o acesso à informação global?",
+      "opcoes": [
+        "Popular Science",
+        "Scientific American",
+        "National Geographic",
+        "Wired"
+      ],
+      "resposta_correta": "Popular Science"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual conceito Arthur C. Clarke previu, combinando funcionalidades de fotocopiadora, telefone, televisão e um pequeno computador?",
+      "opcoes": [
+        "Um console capaz de trazer o conhecimento acumulado do mundo 'às pontas dos dedos'",
+        "Um robô doméstico universal",
+        "Uma rede neural artificial",
+        "Um satélite de comunicação militar"
+      ],
+      "resposta_correta": "Um console capaz de trazer o conhecimento acumulado do mundo 'às pontas dos dedos'"
+    },
+    {
+      "n": 11,
+      "pergunta": "O primeiro servidor Web (CERN httpd) e o primeiro navegador rodavam exclusivamente em qual limitação de hardware, o que motivou a criação de uma versão alternativa?",
+      "opcoes": [
+        "Rodavam apenas em computadores NeXT, motivando a criação do Line Mode Browser para outras máquinas",
+        "Rodavam apenas em máquinas com Windows",
+        "Exigiam conexão de fibra óptica, inexistente na época",
+        "Precisavam de mais de 1 GB de memória RAM"
+      ],
+      "resposta_correta": "Rodavam apenas em computadores NeXT, motivando a criação do Line Mode Browser para outras máquinas"
+    },
+    {
+      "n": 12,
+      "pergunta": "Durante seu trabalho no CSAIL do MIT, a que cadeira de pesquisa sênior Tim Berners-Lee esteve vinculado?",
+      "opcoes": [
+        "Cadeira 3Com",
+        "Cadeira Turing",
+        "Cadeira Einstein",
+        "Cadeira Rockefeller"
+      ],
+      "resposta_correta": "Cadeira 3Com"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual foi o resultado prático imediato da Conferência Europeia de Tecnologia de Hipertexto de 1990, em relação a investidores?",
+      "opcoes": [
+        "Berners-Lee e Cailliau não encontraram investidores interessados na ideia na época",
+        "Conseguiram financiamento imediato de uma grande empresa de tecnologia",
+        "O CERN decidiu encerrar o projeto após a conferência",
+        "A proposta foi imediatamente patenteada por um investidor"
+      ],
+      "resposta_correta": "Berners-Lee e Cailliau não encontraram investidores interessados na ideia na época"
+    },
+    {
+      "n": 14,
+      "pergunta": "O texto do primeiro site (info.cern.ch) incluía links respondendo a que tipo de pergunta característica, segundo registros?",
+      "opcoes": [
+        "Perguntas como 'o que existe por aí?' e 'como posso ajudar?'",
+        "Perguntas sobre física de partículas exclusivamente",
+        "Um formulário de contato para jornalistas",
+        "Instruções de como comprar um computador NeXT"
+      ],
+      "resposta_correta": "Perguntas como 'o que existe por aí?' e 'como posso ajudar?'"
+    },
+    {
+      "n": 15,
+      "pergunta": "A proposta formal de novembro de 1990 (WorldWideWeb: Proposal for a HyperText Project) foi, na verdade, uma reescrita de uma versão anterior. Quem reescreveu essa versão publicada em maio de 1990?",
+      "opcoes": [
+        "Robert Cailliau",
+        "Nicola Pellow",
+        "Mike Sendall",
+        "Bill Duval"
+      ],
+      "resposta_correta": "Robert Cailliau"
+    },
+    {
+      "n": 16,
+      "pergunta": "Charley Kline, autor da primeira mensagem da ARPANET, atuava sob supervisão de Leonard Kleinrock em que papel acadêmico específico na época?",
+      "opcoes": [
+        "Estudante de graduação/pesquisa na UCLA",
+        "Professor titular de física",
+        "Diretor do departamento de engenharia",
+        "Funcionário administrativo do governo"
+      ],
+      "resposta_correta": "Estudante de graduação/pesquisa na UCLA"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que caracteriza a diferença entre a ARPANET (1969) e a internet moderna, segundo o consenso histórico?",
+      "opcoes": [
+        "A ARPANET era uma rede experimental e não a internet como usamos hoje, mas forneceu tecnologias decisivas para seu surgimento posterior",
+        "A ARPANET e a internet moderna são exatamente a mesma rede, sem nenhuma diferença técnica",
+        "A ARPANET já incluía a World Wide Web desde 1969",
+        "A ARPANET nunca teve nenhuma relação com o desenvolvimento da internet"
+      ],
+      "resposta_correta": "A ARPANET era uma rede experimental e não a internet como usamos hoje, mas forneceu tecnologias decisivas para seu surgimento posterior"
+    },
+    {
+      "n": 18,
+      "pergunta": "O nome da agência 'ARPA' remonta a qual contexto histórico mais amplo da Guerra Fria, segundo análises históricas do projeto?",
+      "opcoes": [
+        "Resposta estratégica ao avanço tecnológico soviético simbolizado pelo Sputnik",
+        "Um acordo comercial entre EUA e União Soviética",
+        "Um tratado de desarmamento nuclear",
+        "Uma parceria acadêmica sem relação com defesa militar"
+      ],
+      "resposta_correta": "Resposta estratégica ao avanço tecnológico soviético simbolizado pelo Sputnik"
+    },
+    {
+      "n": 19,
+      "pergunta": "Um dos objetivos de design da comutação de pacotes, ligado ao contexto militar da Guerra Fria, era tornar a rede resiliente a quê?",
+      "opcoes": [
+        "Possíveis ataques catastróficos que destruíssem parte da infraestrutura",
+        "Falta de eletricidade em zonas rurais",
+        "Ataques de vírus de computador",
+        "Excesso de usuários simultâneos"
+      ],
+      "resposta_correta": "Possíveis ataques catastróficos que destruíssem parte da infraestrutura"
+    },
+    {
+      "n": 20,
+      "pergunta": "Em termos de datas históricas exatas, quantos meses separam o comunicado de imprensa da UCLA (julho de 1969) do teste histórico com Stanford (outubro de 1969)?",
+      "opcoes": [
+        "Cerca de 3 a 4 meses",
+        "Cerca de 1 mês",
+        "Cerca de 1 ano",
+        "Cerca de 6 meses"
+      ],
+      "resposta_correta": "Cerca de 3 a 4 meses"
+    }
+  ]
+}

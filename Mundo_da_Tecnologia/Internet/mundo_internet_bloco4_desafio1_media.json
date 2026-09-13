@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 1,
+    "tema_desafio": "Memes e a Propagação da Cultura Digital",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - Pepe the Frog tratado apenas em sua origem de quadrinho e cultura de meme, sem abordar controversias posteriores nesta etapa."
+  },
+  "saiba_mais": "Curiosidade: quando as primeiras fotos de Tardar Sauce (a futura 'Grumpy Cat') viralizaram no Reddit em 2012, muita gente achou que a expressão emburrada da gata era resultado de edição digital — o irmão de sua dona precisou gravar e postar vídeos no mesmo dia só para provar que aquela cara mal-humorada era completamente real.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual era o nome verdadeiro da gata por trás do meme 'Grumpy Cat'?",
+      "opcoes": [
+        "Tardar Sauce",
+        "Whiskers",
+        "Mittens",
+        "Salem"
+      ],
+      "resposta_correta": "Tardar Sauce"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que estado americano Tardar Sauce nasceu?",
+      "opcoes": [
+        "Arizona",
+        "Califórnia",
+        "Texas",
+        "Nova York"
+      ],
+      "resposta_correta": "Arizona"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano Tardar Sauce nasceu?",
+      "opcoes": [
+        "2012",
+        "2007",
+        "1996",
+        "2010"
+      ],
+      "resposta_correta": "2012"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual condição física explicava a expressão permanentemente emburrada de Tardar Sauce, segundo seus donos?",
+      "opcoes": [
+        "Nanismo felino e um problema de mordida (underbite)",
+        "Ela era treinada para posar daquele jeito",
+        "Uma cirurgia estética",
+        "Maquiagem aplicada nas fotos"
+      ],
+      "resposta_correta": "Nanismo felino e um problema de mordida (underbite)"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em qual plataforma as fotos de Tardar Sauce foram publicadas pela primeira vez, em setembro de 2012?",
+      "opcoes": [
+        "Reddit",
+        "Instagram",
+        "TikTok",
+        "Twitter"
+      ],
+      "resposta_correta": "Reddit"
+    },
+    {
+      "n": 6,
+      "pergunta": "Quem publicou as fotos originais que deram início ao fenômeno Grumpy Cat?",
+      "opcoes": [
+        "Bryan Bundesen, irmão da dona da gata",
+        "A própria Tabatha Bundesen, dona da gata",
+        "Um fotógrafo profissional contratado",
+        "Um usuário anônimo desconhecido"
+      ],
+      "resposta_correta": "Bryan Bundesen, irmão da dona da gata"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quantos upvotes o post original recebeu nas primeiras 24 horas no Reddit, segundo registros?",
+      "opcoes": [
+        "Mais de 25 mil",
+        "Cerca de 100",
+        "Cerca de 1.000",
+        "Mais de 1 milhão"
+      ],
+      "resposta_correta": "Mais de 25 mil"
+    },
+    {
+      "n": 8,
+      "pergunta": "Por que Bryan Bundesen precisou postar vídeos adicionais no YouTube no mesmo dia?",
+      "opcoes": [
+        "Para provar que a expressão da gata era real, já que alguns duvidavam da autenticidade das fotos",
+        "Porque as fotos originais foram removidas por engano",
+        "Para responder críticas sobre maus-tratos ao animal",
+        "Porque o Reddit exigia um formato de vídeo obrigatório"
+      ],
+      "resposta_correta": "Para provar que a expressão da gata era real, já que alguns duvidavam da autenticidade das fotos"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual foi a legenda mais icônica associada ao Grumpy Cat, segundo registros?",
+      "opcoes": [
+        "'Eu me diverti uma vez. Foi horrível.' ('I had fun once. It was awful.')",
+        "'A vida é bela'",
+        "'Adoro segundas-feiras'",
+        "'Sempre sorrindo'"
+      ],
+      "resposta_correta": "'Eu me diverti uma vez. Foi horrível.' ('I had fun once. It was awful.')"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano Tardar Sauce faleceu, aos sete anos de idade?",
+      "opcoes": [
+        "2019",
+        "2012",
+        "2015",
+        "2020"
+      ],
+      "resposta_correta": "2019"
+    },
+    {
+      "n": 11,
+      "pergunta": "O fenômeno Grumpy Cat gerou um império de licenciamento e produtos avaliado em quanto, segundo estimativas?",
+      "opcoes": [
+        "Centenas de milhares de dólares",
+        "Apenas alguns milhares de dólares",
+        "Um valor insignificante",
+        "Não gerou nenhum valor comercial"
+      ],
+      "resposta_correta": "Centenas de milhares de dólares"
+    },
+    {
+      "n": 12,
+      "pergunta": "O nome 'Grumpy Cat' foi totalmente original, ou já existiam memes parecidos de gatos emburrados antes?",
+      "opcoes": [
+        "Já existiam séries anteriores de LOLcat com gatos de expressão parecida",
+        "Foi um nome totalmente inédito, sem nenhum precedente",
+        "O nome veio de um concurso público de sugestões",
+        "Não há informação sobre precedentes"
+      ],
+      "resposta_correta": "Já existiam séries anteriores de LOLcat com gatos de expressão parecida"
+    },
+    {
+      "n": 13,
+      "pergunta": "O que é um 'Rickroll'?",
+      "opcoes": [
+        "Uma prática de enganar alguém com um link que leva ao clipe musical de Rick Astley",
+        "Um tipo de dança viral no TikTok",
+        "Um formato de vídeo curto do YouTube",
+        "Um gênero musical específico"
+      ],
+      "resposta_correta": "Uma prática de enganar alguém com um link que leva ao clipe musical de Rick Astley"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual música de Rick Astley é usada no clássico 'Rickroll'?",
+      "opcoes": [
+        "'Never Gonna Give You Up'",
+        "'Wake Me Up Before You Go-Go'",
+        "'Take On Me'",
+        "'Everybody Wants to Rule the World'"
+      ],
+      "resposta_correta": "'Never Gonna Give You Up'"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que ano o fenômeno do Rickroll começou a se espalhar pela internet?",
+      "opcoes": [
+        "2007",
+        "1996",
+        "2012",
+        "2001"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em qual comunidade online o Rickroll é frequentemente citado como tendo se originado?",
+      "opcoes": [
+        "4chan",
+        "Reddit",
+        "Facebook",
+        "Instagram"
+      ],
+      "resposta_correta": "4chan"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual personagem de rã, criado em quadrinhos em 2005, se tornou posteriormente um dos memes mais versáteis e discutidos da internet?",
+      "opcoes": [
+        "Pepe the Frog",
+        "Kermit",
+        "Froggy",
+        "Rana Ribbit"
+      ],
+      "resposta_correta": "Pepe the Frog"
+    },
+    {
+      "n": 18,
+      "pergunta": "Quem é o criador original de Pepe the Frog?",
+      "opcoes": [
+        "Matt Furie",
+        "Bryan Bundesen",
+        "Rick Astley",
+        "Mike Godwin"
+      ],
+      "resposta_correta": "Matt Furie"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em qual quadrinho Pepe the Frog apareceu pela primeira vez?",
+      "opcoes": [
+        "'Boy's Club'",
+        "'Frog Tales'",
+        "'Green Adventures'",
+        "'Pond Life'"
+      ],
+      "resposta_correta": "'Boy's Club'"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual era a frase-catchphrase original associada a Pepe the Frog, antes de suas inúmeras variações?",
+      "opcoes": [
+        "'Feels good, man'",
+        "'Never gonna give you up'",
+        "'I had fun once'",
+        "'Hello world'"
+      ],
+      "resposta_correta": "'Feels good, man'"
+    }
+  ]
+}

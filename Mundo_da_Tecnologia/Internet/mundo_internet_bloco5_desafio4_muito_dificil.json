@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 4,
+    "tema_desafio": "Blockchain e Criptomoedas",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Ethereum.org oficial. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Desafio 4 do Bloco 5 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: durante a crise do hack do DAO, em 2016, formou-se uma espécie de 'corrida contra o tempo' digital — um grupo apelidado informalmente de 'Robin Hood' conseguiu convencer grandes investidores a doarem seus próprios tokens, na tentativa de extrair fundos mais rápido do que o atacante original e assim 'salvar' parte do dinheiro antes que fosse perdido de vez. Uma verdadeira corrida armamentista dentro da própria blockchain, em tempo real, diante dos olhos de toda a comunidade.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo um relato detalhado do episódio, quem foi a primeira pessoa a identificar publicamente falhas preocupantes no código do DAO, meses antes do ataque?",
+      "opcoes": [
+        "Um professor de ciência da computação da Universidade Cornell",
+        "O próprio Vitalik Buterin",
+        "Um funcionário anônimo da Ethereum Foundation",
+        "Um jornalista especializado em tecnologia"
+      ],
+      "resposta_correta": "Um professor de ciência da computação da Universidade Cornell"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo esse mesmo relato, o que esse professor já vinha defendendo, meses antes do ataque efetivamente acontecer?",
+      "opcoes": [
+        "Que o projeto do DAO fosse pausado, por acreditar em falhas que colocariam tudo em risco",
+        "Que o projeto fosse imediatamente encerrado sem nenhuma investigação adicional",
+        "Que mais investidores fossem atraídos rapidamente ao projeto",
+        "Que o código fosse totalmente reescrito do zero antes mesmo do lançamento"
+      ],
+      "resposta_correta": "Que o projeto do DAO fosse pausado, por acreditar em falhas que colocariam tudo em risco"
+    },
+    {
+      "n": 3,
+      "pergunta": "Durante a crise, um grupo de indivíduos formou uma contraofensiva apelidada informalmente de quê, ao tentar 'salvar' fundos antes que o atacante principal os obtivesse?",
+      "opcoes": [
+        "'Robin Hood' (referência à figura que tomava dos ricos para dar aos pobres)",
+        "'Guardian Squad'",
+        "'DAO Defenders'",
+        "'Ether Shield'"
+      ],
+      "resposta_correta": "'Robin Hood' (referência à figura que tomava dos ricos para dar aos pobres)"
+    },
+    {
+      "n": 4,
+      "pergunta": "Como essa equipe conseguiu reunir tokens suficientes para acelerar sua própria extração de Ether, ficando à frente do atacante?",
+      "opcoes": [
+        "Contataram grandes investidores ('whales'), que doaram seus tokens do DAO para a causa",
+        "Compraram os tokens diretamente do próprio atacante",
+        "Receberam os tokens automaticamente sem nenhuma negociação",
+        "Roubaram os tokens de outros investidores menores"
+      ],
+      "resposta_correta": "Contataram grandes investidores ('whales'), que doaram seus tokens do DAO para a causa"
+    },
+    {
+      "n": 5,
+      "pergunta": "Após a extração de fundos por ambos os lados (atacante e 'Robin Hood'), o dinheiro do fundo original do DAO ficou dividido entre o quê, segundo o relato técnico do episódio?",
+      "opcoes": [
+        "Vários 'DAOs filhos' (child DAOs), incluindo um 'white-hat DAO' e um 'dark DAO'",
+        "Uma única conta bancária tradicional controlada pela Ethereum Foundation",
+        "Nenhuma divisão ocorreu, todo o valor permaneceu num único lugar",
+        "O dinheiro foi imediatamente devolvido a todos os investidores automaticamente"
+      ],
+      "resposta_correta": "Vários 'DAOs filhos' (child DAOs), incluindo um 'white-hat DAO' e um 'dark DAO'"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em agosto de 2014, quando o projeto Solidity (linguagem usada para escrever o contrato do DAO) foi originalmente proposto, quanto tempo de uso prático essa linguagem realmente tinha até o hack de 2016?",
+      "opcoes": [
+        "Poucos meses de uso real e testado, tornando a tecnologia ainda imatura",
+        "Mais de dez anos de testes extensivos",
+        "Nenhum tempo de uso, foi utilizada imediatamente sem nenhum teste prévio",
+        "A linguagem já existia desde os anos 1990"
+      ],
+      "resposta_correta": "Poucos meses de uso real e testado, tornando a tecnologia ainda imatura"
+    },
+    {
+      "n": 7,
+      "pergunta": "Depois do hard fork, quais dois 'soft forks' adicionais (Tangerine Whistle e Spurious Dragon) o Ethereum precisou implementar para se proteger de outro tipo de ataque?",
+      "opcoes": [
+        "Ataques de negação de serviço (DoS)",
+        "Ataques de phishing por e-mail",
+        "Ataques físicos a servidores",
+        "Ataques de engenharia social a funcionários"
+      ],
+      "resposta_correta": "Ataques de negação de serviço (DoS)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em 2017, após a rede Ethereum recuperar a confiança dos usuários, quais dois exemplos de projetos são citados como tendo realizado suas ofertas iniciais de moedas (ICOs) com sucesso?",
+      "opcoes": [
+        "Bancor e Status",
+        "The DAO novamente e Ethereum Classic",
+        "CryptoPunks e Larva Labs",
+        "Bitcoin e Ethereum Foundation"
+      ],
+      "resposta_correta": "Bancor e Status"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo o mesmo relato, o que aconteceu com a rede Ethereum como consequência do enorme sucesso e entusiasmo gerado por essas ICOs em 2017?",
+      "opcoes": [
+        "A rede ficou saturada, com tempo de transação aumentando exponencialmente até ficar quase inutilizável",
+        "Nenhum efeito colateral relevante foi registrado",
+        "A rede se tornou instantaneamente mais rápida",
+        "O Ethereum foi imediatamente descontinuado por excesso de uso"
+      ],
+      "resposta_correta": "A rede ficou saturada, com tempo de transação aumentando exponencialmente até ficar quase inutilizável"
+    },
+    {
+      "n": 10,
+      "pergunta": "Foi justamente nesse contexto de rede saturada, em meados de 2017, que qual projeto surgiu para 'reinjetar' entusiasmo na blockchain Ethereum?",
+      "opcoes": [
+        "O CryptoPunks, da Larva Labs",
+        "Um novo hard fork corretivo",
+        "O relançamento do próprio DAO original",
+        "O lançamento oficial do Bitcoin na rede Ethereum"
+      ],
+      "resposta_correta": "O CryptoPunks, da Larva Labs"
+    },
+    {
+      "n": 11,
+      "pergunta": "No lançamento do CryptoPunks, quem tinha conhecimento inicial do projeto, segundo um relato sobre sua divulgação original?",
+      "opcoes": [
+        "Apenas um pequeno grupo de colecionadores experientes",
+        "Milhões de pessoas em todo o mundo simultaneamente",
+        "Nenhuma pessoa fora da própria Larva Labs",
+        "Exclusivamente investidores institucionais de grande porte"
+      ],
+      "resposta_correta": "Apenas um pequeno grupo de colecionadores experientes"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo a própria Larva Labs, qual era a ideia central por trás do projeto CryptoPunks, em termos de design generativo?",
+      "opcoes": [
+        "Que cada personagem deveria ser único, com o processo gerando resultados surpreendentes mesmo para os próprios criadores",
+        "Que todos os personagens deveriam ser idênticos entre si",
+        "Que o design deveria ser completamente aleatório, sem nenhuma lógica de raridade",
+        "Que apenas um único personagem seria criado no total"
+      ],
+      "resposta_correta": "Que cada personagem deveria ser único, com o processo gerando resultados surpreendentes mesmo para os próprios criadores"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que ano a Larva Labs, estúdio criador do CryptoPunks, foi originalmente fundada, antes mesmo de entrar no universo cripto?",
+      "opcoes": [
+        "2005",
+        "2017",
+        "2016",
+        "2013"
+      ],
+      "resposta_correta": "2005"
+    },
+    {
+      "n": 14,
+      "pergunta": "Cite outra coleção de NFTs famosa, criada por outro estúdio (Yuga Labs, fundado em 2021), que também apareceu em leilões ao lado de CryptoPunks.",
+      "opcoes": [
+        "Bored Ape Yacht Club",
+        "Fidenza",
+        "Meebits (também da própria Larva Labs, vale notar)",
+        "Nyan Cat"
+      ],
+      "resposta_correta": "Bored Ape Yacht Club"
+    },
+    {
+      "n": 15,
+      "pergunta": "Comparando as datas de fundação das duas empresas por trás dessas coleções (Larva Labs em 2005 e Yuga Labs em 2021), qual diferença de anos aproximada existe entre suas fundações?",
+      "opcoes": [
+        "Cerca de 16 anos",
+        "Cerca de 1 ano",
+        "Cerca de 5 anos",
+        "Nenhuma diferença, foram fundadas no mesmo ano"
+      ],
+      "resposta_correta": "Cerca de 16 anos"
+    },
+    {
+      "n": 16,
+      "pergunta": "O que a rejeição da comunidade Ethereum Classic ao hard fork (preferindo manter o histórico original intacto) revela sobre diferentes filosofias dentro do mesmo ecossistema tecnológico?",
+      "opcoes": [
+        "Que princípios técnicos, como imutabilidade, podem gerar divergências filosóficas profundas mesmo dentro de uma mesma comunidade",
+        "Que não existe nenhuma diferença real de opinião dentro de comunidades de blockchain",
+        "Que apenas questões financeiras, sem nenhum componente filosófico, motivaram a divisão",
+        "Que a divisão foi puramente técnica, sem nenhuma dimensão de valores ou princípios"
+      ],
+      "resposta_correta": "Que princípios técnicos, como imutabilidade, podem gerar divergências filosóficas profundas mesmo dentro de uma mesma comunidade"
+    },
+    {
+      "n": 17,
+      "pergunta": "Considerando tudo discutido neste desafio — de Nakamoto ao DAO hack e CryptoPunks — o que essa jornada da tecnologia blockchain melhor ilustra sobre inovação tecnológica em geral?",
+      "opcoes": [
+        "Que tecnologias emergentes frequentemente combinam avanços genuínos, riscos reais de segurança e aplicações criativas inesperadas",
+        "Que a tecnologia blockchain nunca enfrentou nenhum desafio real desde sua criação",
+        "Que apenas aspectos financeiros são relevantes para entender essa tecnologia",
+        "Que blockchain é uma tecnologia isolada, sem nenhuma conexão com desafios mais amplos de segurança digital"
+      ],
+      "resposta_correta": "Que tecnologias emergentes frequentemente combinam avanços genuínos, riscos reais de segurança e aplicações criativas inesperadas"
+    },
+    {
+      "n": 18,
+      "pergunta": "Encerrando este desafio, ao conectar Bitcoin (dinheiro descentralizado), Ethereum (contratos programáveis) e NFTs (propriedade digital única), o que esse trio representa em conjunto para a evolução da internet?",
+      "opcoes": [
+        "Uma tentativa contínua de repensar conceitos como dinheiro, contratos e propriedade num ambiente totalmente digital",
+        "Três tecnologias completamente independentes, sem nenhuma relação conceitual entre si",
+        "Um fenômeno isolado sem nenhuma relevância para o futuro da internet",
+        "Apenas uma moda passageira sem nenhum impacto duradouro na tecnologia"
+      ],
+      "resposta_correta": "Uma tentativa contínua de repensar conceitos como dinheiro, contratos e propriedade num ambiente totalmente digital"
+    },
+    {
+      "n": 19,
+      "pergunta": "Voltando ao início deste Mundo — do 'LO' truncado da ARPANET em 1969 à criação de ativos digitais únicos via blockchain em 2017 — o que essa amplitude de quase cinco décadas representa sobre a natureza da inovação tecnológica?",
+      "opcoes": [
+        "Que cada nova camada tecnológica se constrói sobre avanços anteriores, criando possibilidades que seriam impensáveis décadas antes",
+        "Que a tecnologia sempre avançou de forma completamente desconectada de avanços anteriores",
+        "Que apenas um único avanço tecnológico foi relevante em todo esse período",
+        "Que a inovação tecnológica é sempre previsível e planejada com décadas de antecedência"
+      ],
+      "resposta_correta": "Que cada nova camada tecnológica se constrói sobre avanços anteriores, criando possibilidades que seriam impensáveis décadas antes"
+    },
+    {
+      "n": 20,
+      "pergunta": "Faltando apenas o último Desafio deste Mundo da Internet, que tema você esperaria que fechasse essa jornada completa, unindo passado, presente e as tendências emergentes discutidas até aqui?",
+      "opcoes": [
+        "Uma reflexão final sobre o futuro da internet e para onde a tecnologia caminha a partir de agora",
+        "Um retorno ao tema de memes de internet, já coberto anteriormente",
+        "Uma repetição do conteúdo já visto sobre sistemas operacionais",
+        "Um desafio sem nenhuma relação com os temas já discutidos no Mundo"
+      ],
+      "resposta_correta": "Uma reflexão final sobre o futuro da internet e para onde a tecnologia caminha a partir de agora"
+    }
+  ]
+}

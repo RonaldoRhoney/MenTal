@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 3,
+    "tema_desafio": "Segurança Digital e Cibersegurança",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas de epoca (Voice of America, Wired, arquivos ISN). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - caso judicial tratado de forma factual e neutra, sem nenhum detalhe tecnico replicavel sobre criacao de malware."
+  },
+  "saiba_mais": "Curiosidade: apesar de ter causado até 10 bilhões de dólares em prejuízos globais, Onel de Guzman, criador do ILOVEYOU, nunca foi condenado por nenhum crime — as Filipinas simplesmente não tinham, em maio de 2000, nenhuma lei que tipificasse o que ele havia feito. A lei anti-hacking do país só foi aprovada semanas depois do ataque, e leis não podem ser aplicadas retroativamente — um vácuo legal que se tornou um marco na discussão mundial sobre a necessidade de legislação específica para crimes digitais.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Por que Onel de Guzman, criador do ILOVEYOU, acabou não sendo condenado criminalmente pelo ataque, apesar do prejuízo bilionário?",
+      "opcoes": [
+        "As Filipinas não tinham, na época, nenhuma lei específica que tipificasse crimes cibernéticos",
+        "Ele conseguiu provar sua inocência completa em julgamento",
+        "O caso nunca foi investigado formalmente",
+        "Ele fugiu do país antes de qualquer investigação"
+      ],
+      "resposta_correta": "As Filipinas não tinham, na época, nenhuma lei específica que tipificasse crimes cibernéticos"
+    },
+    {
+      "n": 2,
+      "pergunta": "Sob quais duas acusações alternativas os promotores tentaram enquadrar de Guzman, na ausência de uma lei cibernética específica?",
+      "opcoes": [
+        "Furto e violação de uma lei sobre fraude de cartão de crédito",
+        "Terrorismo e espionagem internacional",
+        "Sabotagem industrial e extorsão",
+        "Nenhuma acusação alternativa foi tentada"
+      ],
+      "resposta_correta": "Furto e violação de uma lei sobre fraude de cartão de crédito"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que instituição de ensino de Guzman teve sua proposta de trabalho de conclusão de curso rejeitada, por ser considerada antiética?",
+      "opcoes": [
+        "AMA Computer College",
+        "Universidade de Manila",
+        "Instituto de Tecnologia das Filipinas",
+        "Universidade Ateneo"
+      ],
+      "resposta_correta": "AMA Computer College"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual era o tema original dessa proposta de trabalho rejeitada, segundo relatos?",
+      "opcoes": [
+        "Um programa para roubar senhas de acesso à internet de vizinhos",
+        "Um sistema de defesa contra vírus",
+        "Um aplicativo de mensagens instantâneas",
+        "Um jogo eletrônico educativo"
+      ],
+      "resposta_correta": "Um programa para roubar senhas de acesso à internet de vizinhos"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo um relato, qual justificativa de Guzman teria dado para querer criar esse programa, relacionada a uma visão sobre acesso à internet?",
+      "opcoes": [
+        "Que via o acesso à internet como um direito humano necessário para melhorar a qualidade de vida das pessoas",
+        "Que queria apenas ganhar dinheiro rapidamente",
+        "Que estava fazendo isso a pedido de uma empresa",
+        "Que queria prejudicar especificamente seus professores"
+      ],
+      "resposta_correta": "Que via o acesso à internet como um direito humano necessário para melhorar a qualidade de vida das pessoas"
+    },
+    {
+      "n": 6,
+      "pergunta": "Como as autoridades filipinas rastrearam a origem do vírus até de Guzman, segundo relatos?",
+      "opcoes": [
+        "Provedores de internet rastrearam o vírus até uma linha telefônica em seu apartamento",
+        "Ele se entregou voluntariamente às autoridades",
+        "Foi identificado através de câmeras de segurança",
+        "Um colega o denunciou anonimamente"
+      ],
+      "resposta_correta": "Provedores de internet rastrearam o vírus até uma linha telefônica em seu apartamento"
+    },
+    {
+      "n": 7,
+      "pergunta": "O que os investigadores apreenderam no apartamento de de Guzman, segundo um relato específico?",
+      "opcoes": [
+        "17 disquetes de computador, telefones e acessórios, mas nenhum computador ou modem",
+        "Um computador completo com todas as evidências",
+        "Nenhum item relevante foi encontrado",
+        "Apenas documentos em papel, sem nenhum item eletrônico"
+      ],
+      "resposta_correta": "17 disquetes de computador, telefones e acessórios, mas nenhum computador ou modem"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual pena máxima de prisão de Guzman chegaria a enfrentar, segundo a acusação formal apresentada em junho de 2000?",
+      "opcoes": [
+        "20 anos",
+        "2 anos",
+        "200 anos",
+        "Nenhuma pena de prisão era prevista"
+      ],
+      "resposta_correta": "20 anos"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que mês a lei anti-hacking das Filipinas foi finalmente aprovada, semanas depois do ataque do ILOVEYOU já ter ocorrido?",
+      "opcoes": [
+        "Junho de 2000",
+        "Maio de 2000",
+        "Janeiro de 2001",
+        "Dezembro de 1999"
+      ],
+      "resposta_correta": "Junho de 2000"
+    },
+    {
+      "n": 10,
+      "pergunta": "Por que essa nova lei, mesmo aprovada, não pôde ser usada para condenar de Guzman?",
+      "opcoes": [
+        "Porque leis não podem ser aplicadas retroativamente a atos cometidos antes de sua aprovação",
+        "Porque a lei era considerada inconstitucional",
+        "Porque de Guzman já havia deixado o país",
+        "Porque não havia mais nenhuma evidência disponível"
+      ],
+      "resposta_correta": "Porque leis não podem ser aplicadas retroativamente a atos cometidos antes de sua aprovação"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo um relato, o que aconteceu profissionalmente com de Guzman meses depois do caso, de forma inesperada?",
+      "opcoes": [
+        "Recebeu diversas ofertas de emprego, do próprio país e do exterior",
+        "Foi banido de qualquer atividade relacionada à tecnologia",
+        "Precisou fugir para outro país por segurança",
+        "Permaneceu completamente anônimo e sem nenhum contato público"
+      ],
+      "resposta_correta": "Recebeu diversas ofertas de emprego, do próprio país e do exterior"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual grupo underground de programadores e estudantes, ao qual de Guzman pertencia, apareceu mencionado dentro do próprio código do vírus?",
+      "opcoes": [
+        "GRAMMERSoft",
+        "Anonymous",
+        "Lazarus Group",
+        "The Shadow Brokers"
+      ],
+      "resposta_correta": "GRAMMERSoft"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quais instituições e empresas de alto perfil foram citadas como afetadas pelo ILOVEYOU, segundo registros da época?",
+      "opcoes": [
+        "O Pentágono, o Parlamento britânico e empresas como Ford e Lucent",
+        "Apenas pequenas empresas locais nas Filipinas",
+        "Nenhuma instituição de grande porte foi afetada",
+        "Exclusivamente universidades filipinas"
+      ],
+      "resposta_correta": "O Pentágono, o Parlamento britânico e empresas como Ford e Lucent"
+    },
+    {
+      "n": 14,
+      "pergunta": "Quem foi Marcus Hutchins, o pesquisador de segurança que interrompeu a propagação inicial do WannaCry?",
+      "opcoes": [
+        "Um especialista britânico em segurança digital",
+        "Um estudante filipino",
+        "Um funcionário da Microsoft",
+        "Um agente da NSA"
+      ],
+      "resposta_correta": "Um especialista britânico em segurança digital"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma retrospectiva sobre segurança digital, o que aconteceu com muitas versões posteriores do WannaCry, depois que o 'botão de desligamento' original foi descoberto?",
+      "opcoes": [
+        "Novas versões continuaram circulando, mas sem o mesmo botão de emergência",
+        "O ransomware desapareceu completamente e nunca mais foi visto",
+        "Todas as versões futuras foram automaticamente neutralizadas",
+        "Nenhuma nova versão surgiu depois disso"
+      ],
+      "resposta_correta": "Novas versões continuaram circulando, mas sem o mesmo botão de emergência"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo dados citados sobre a evolução do ransomware, quantos novos ataques foram detectados apenas no primeiro trimestre de 2012?",
+      "opcoes": [
+        "Cerca de 200 mil",
+        "Cerca de 20",
+        "Cerca de 2 milhões",
+        "Cerca de 200"
+      ],
+      "resposta_correta": "Cerca de 200 mil"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo uma fonte sobre estatísticas de ransomware, quanto os ataques globais aumentaram entre 2019 e 2020?",
+      "opcoes": [
+        "Mais de 60%",
+        "Cerca de 5%",
+        "Cerca de 600%",
+        "Nenhum crescimento foi registrado"
+      ],
+      "resposta_correta": "Mais de 60%"
+    },
+    {
+      "n": 18,
+      "pergunta": "Cite duas empresas/organizações que sofreram ataques cibernéticos significativos em 2021, segundo uma retrospectiva.",
+      "opcoes": [
+        "Colonial Pipeline e JBS",
+        "Ford e Lucent",
+        "AMA Computer College e GRAMMERSoft",
+        "Nenhuma organização relevante foi afetada em 2021"
+      ],
+      "resposta_correta": "Colonial Pipeline e JBS"
+    },
+    {
+      "n": 19,
+      "pergunta": "Comparando os casos de ILOVEYOU (2000) e WannaCry (2017), o que ambos demonstram sobre a evolução da cibersegurança ao longo do tempo?",
+      "opcoes": [
+        "Como a legislação e a resposta institucional a ameaças digitais tiveram que evoluir junto com a própria sofisticação dos ataques",
+        "Que nenhum dos dois casos teve impacto relevante fora de seu próprio país",
+        "Que ataques cibernéticos deixaram de representar risco depois de 2000",
+        "Que a legislação sobre crimes cibernéticos nunca mudou desde então"
+      ],
+      "resposta_correta": "Como a legislação e a resposta institucional a ameaças digitais tiveram que evoluir junto com a própria sofisticação dos ataques"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a lacuna legal enfrentada pelas Filipinas em 2000 (sem lei cibernética específica) sugere sobre o desafio contínuo de regular tecnologia?",
+      "opcoes": [
+        "Que a legislação frequentemente corre atrás da velocidade de inovação tecnológica, gerando lacunas temporárias de responsabilização",
+        "Que leis nunca precisam ser atualizadas para acompanhar avanços tecnológicos",
+        "Que apenas países desenvolvidos enfrentam esse tipo de desafio legal",
+        "Que crimes cibernéticos nunca geraram nenhum tipo de discussão legislativa em nenhum país"
+      ],
+      "resposta_correta": "Que a legislação frequentemente corre atrás da velocidade de inovação tecnológica, gerando lacunas temporárias de responsabilização"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 2,
+    "tema_desafio": "E-mail e os Primeiros Serviços da Internet",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada, incluindo Wikipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - falecimento de Jim Ellis mencionado apenas como fato biografico factual, sem detalhe adicional sobre a doenca."
+  },
+  "saiba_mais": "Curiosidade: antes de ajudar a criar a Usenet, uma das primeiras grandes redes de discussão da história da internet, Tom Truscott já disputava torneios internacionais de xadrez computacional — chegando ao segundo lugar em Toronto, em 1977, e ao terceiro em Linz, na Áustria, em 1980. Um trajeto pouco convencional para quem ajudaria a moldar a forma como pessoas discutem ideias online até hoje.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que cidade Jim Ellis, cocriador da Usenet, nasceu?",
+      "opcoes": [
+        "Nashville, Tennessee",
+        "Durham, Carolina do Norte",
+        "Boston, Massachusetts",
+        "Chicago, Illinois"
+      ],
+      "resposta_correta": "Nashville, Tennessee"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual cidade Jim Ellis cresceu, antes de ingressar em Duke?",
+      "opcoes": [
+        "Orlando, Flórida",
+        "Nashville, Tennessee",
+        "Chapel Hill, Carolina do Norte",
+        "Atlanta, Geórgia"
+      ],
+      "resposta_correta": "Orlando, Flórida"
+    },
+    {
+      "n": 3,
+      "pergunta": "Após se formar, em qual centro de pesquisa da Carolina do Norte Jim Ellis foi trabalhar?",
+      "opcoes": [
+        "Microelectronics Center of North Carolina, no Research Triangle Park",
+        "Duke University, como professor",
+        "Bell Labs",
+        "IBM Research"
+      ],
+      "resposta_correta": "Microelectronics Center of North Carolina, no Research Triangle Park"
+    },
+    {
+      "n": 4,
+      "pergunta": "Jim Ellis trabalhou como consultor de segurança na internet para qual empresa de tecnologia?",
+      "opcoes": [
+        "Sun Microsystems",
+        "Google",
+        "Microsoft",
+        "IBM"
+      ],
+      "resposta_correta": "Sun Microsystems"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que organização voltada a resposta a incidentes de segurança Ellis foi gerente de desenvolvimento técnico?",
+      "opcoes": [
+        "CERT Coordination Center",
+        "FBI Cyber Division",
+        "NSA",
+        "Interpol"
+      ],
+      "resposta_correta": "CERT Coordination Center"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano Jim Ellis faleceu, segundo registros biográficos?",
+      "opcoes": [
+        "2001",
+        "1979",
+        "1987",
+        "2010"
+      ],
+      "resposta_correta": "2001"
+    },
+    {
+      "n": 7,
+      "pergunta": "Aos quantos anos, aproximadamente, Jim Ellis faleceu?",
+      "opcoes": [
+        "45 anos",
+        "60 anos",
+        "30 anos",
+        "75 anos"
+      ],
+      "resposta_correta": "45 anos"
+    },
+    {
+      "n": 8,
+      "pergunta": "Tom Truscott, além de criar a Usenet, também teve envolvimento com qual outro tipo de projeto de computação, segundo registros?",
+      "opcoes": [
+        "Um programa de xadrez computacional",
+        "Um sistema de reconhecimento de voz",
+        "Um simulador de voo",
+        "Um editor de imagens"
+      ],
+      "resposta_correta": "Um programa de xadrez computacional"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que torneio de xadrez computacional de 1977 o programa de Truscott ficou em segundo lugar?",
+      "opcoes": [
+        "Torneio de Toronto",
+        "Torneio de Nova York",
+        "Torneio de Londres",
+        "Torneio de Moscou"
+      ],
+      "resposta_correta": "Torneio de Toronto"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que outro torneio, realizado em Linz em 1980, o mesmo programa de xadrez de Truscott ficou em terceiro lugar?",
+      "opcoes": [
+        "Torneio de Linz",
+        "Torneio de Berlim",
+        "Torneio de Genebra",
+        "Torneio de Praga"
+      ],
+      "resposta_correta": "Torneio de Linz"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em qual laboratório de pesquisa famoso Tom Truscott trabalhou depois, num projeto de otimização global para a linguagem C?",
+      "opcoes": [
+        "Bell Labs",
+        "Xerox PARC",
+        "IBM Research",
+        "MIT Media Lab"
+      ],
+      "resposta_correta": "Bell Labs"
+    },
+    {
+      "n": 12,
+      "pergunta": "Atualmente, segundo registros, para qual empresa de software Tom Truscott trabalha, atuando com análise de software?",
+      "opcoes": [
+        "SAS Institute",
+        "Microsoft",
+        "Oracle",
+        "SAP"
+      ],
+      "resposta_correta": "SAS Institute"
+    },
+    {
+      "n": 13,
+      "pergunta": "Além do USENIX Lifetime Achievement Award, de quais outras duas organizações profissionais de tecnologia Tom Truscott é membro, segundo registros?",
+      "opcoes": [
+        "ACM e IEEE (além de Sigma Xi)",
+        "FIFA e COI",
+        "ONU e UNESCO",
+        "OMS e Cruz Vermelha"
+      ],
+      "resposta_correta": "ACM e IEEE (além de Sigma Xi)"
+    },
+    {
+      "n": 14,
+      "pergunta": "Truscott foi coautor de um livro publicado em 1997 sobre a história e o impacto da Usenet e da internet. Qual é o título desse livro?",
+      "opcoes": [
+        "'Netizens: On the History and Impact of Usenet and the Internet'",
+        "'The Cathedral and the Bazaar'",
+        "'Where Wizards Stay Up Late'",
+        "'In the Plex'"
+      ],
+      "resposta_correta": "'Netizens: On the History and Impact of Usenet and the Internet'"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quais são os dois outros coautores desse livro, ao lado de Tom Truscott?",
+      "opcoes": [
+        "Michael Hauben e Ronda Hauben",
+        "Larry Page e Sergey Brin",
+        "Tim Berners-Lee e Robert Cailliau",
+        "Vint Cerf e Bob Kahn"
+      ],
+      "resposta_correta": "Michael Hauben e Ronda Hauben"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que ano Duke University publicou uma notícia anunciando o encerramento do servidor Usenet original da instituição?",
+      "opcoes": [
+        "2010",
+        "1980",
+        "1987",
+        "2001"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 17,
+      "pergunta": "Comparando as datas de nascimento e falecimento, quantos anos, aproximadamente, se passaram entre o nascimento de Jim Ellis (1956) e a criação da Usenet (1979)?",
+      "opcoes": [
+        "Cerca de 23 anos",
+        "Cerca de 10 anos",
+        "Cerca de 40 anos",
+        "Cerca de 5 anos"
+      ],
+      "resposta_correta": "Cerca de 23 anos"
+    },
+    {
+      "n": 18,
+      "pergunta": "Jim Ellis é creditado por ter inventado especificamente o quê, além da própria rede Usenet, segundo um registro biográfico?",
+      "opcoes": [
+        "A própria palavra 'Usenet'",
+        "O símbolo @ usado em e-mails",
+        "O protocolo TCP/IP",
+        "O conceito de hipertexto"
+      ],
+      "resposta_correta": "A própria palavra 'Usenet'"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em que cidade da Pensilvânia Jim Ellis faleceu, segundo registros biográficos?",
+      "opcoes": [
+        "Harmony",
+        "Philadelphia",
+        "Pittsburgh",
+        "Allentown"
+      ],
+      "resposta_correta": "Harmony"
+    },
+    {
+      "n": 20,
+      "pergunta": "Comparando os dois cocriadores, qual deles é registrado como tendo continuado ativo profissionalmente em tecnologia por mais tempo, segundo as fontes consultadas?",
+      "opcoes": [
+        "Tom Truscott, que segue atuando profissionalmente hoje",
+        "Jim Ellis, que se aposentou muito jovem",
+        "Nenhum dos dois continuou na área de tecnologia",
+        "Ambos pararam de trabalhar na mesma época"
+      ],
+      "resposta_correta": "Tom Truscott, que segue atuando profissionalmente hoje"
+    }
+  ]
+}

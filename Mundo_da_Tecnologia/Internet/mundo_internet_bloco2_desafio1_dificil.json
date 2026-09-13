@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 1,
+    "tema_desafio": "Windows e Bill Gates",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em fontes juridicas e jornalisticas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - caso judicial tratado de forma estritamente factual e neutra, sem juizo de valor sobre culpa/inocencia."
+  },
+  "saiba_mais": "Curiosidade: o processo antitruste 'United States v. Microsoft' inspirou até Hollywood — o filme 'Antitrust', de 2001, apresenta uma empresa fictícia chamada NURV que, segundo muitos críticos da época, seria uma versão dramatizada e ficcional da própria Microsoft e da disputa real que a empresa enfrentava nos tribunais.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano o Departamento de Justiça dos EUA e um grupo de estados processaram a Microsoft por violação de leis antitruste?",
+      "opcoes": [
+        "1998",
+        "1985",
+        "2001",
+        "1975"
+      ],
+      "resposta_correta": "1998"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual navegador da Microsoft foi o centro das acusações no processo antitruste 'United States v. Microsoft'?",
+      "opcoes": [
+        "Internet Explorer",
+        "Edge",
+        "Netscape Navigator",
+        "Mosaic"
+      ],
+      "resposta_correta": "Internet Explorer"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual navegador concorrente a Microsoft foi acusada de tentar suplantar de forma anticompetitiva?",
+      "opcoes": [
+        "Netscape Navigator",
+        "Google Chrome",
+        "Firefox",
+        "Opera"
+      ],
+      "resposta_correta": "Netscape Navigator"
+    },
+    {
+      "n": 4,
+      "pergunta": "Sob qual lei americana o processo antitruste contra a Microsoft foi movido?",
+      "opcoes": [
+        "Sherman Antitrust Act",
+        "Digital Millennium Copyright Act",
+        "Clayton Act",
+        "Lei de Patentes dos EUA"
+      ],
+      "resposta_correta": "Sherman Antitrust Act"
+    },
+    {
+      "n": 5,
+      "pergunta": "O que significa 'tying' (vinculação), uma das práticas centrais alegadas no processo?",
+      "opcoes": [
+        "Vincular/empacotar o Internet Explorer junto ao sistema Windows",
+        "Assinar contratos exclusivos com fornecedores de hardware",
+        "Comprar ações de empresas concorrentes",
+        "Registrar patentes sobre tecnologias já existentes"
+      ],
+      "resposta_correta": "Vincular/empacotar o Internet Explorer junto ao sistema Windows"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual foi a decisão inicial do juiz de primeira instância em relação à estrutura da Microsoft, em 2000?",
+      "opcoes": [
+        "Ordenou a divisão da empresa em duas companhias separadas",
+        "Determinou o fechamento total da empresa",
+        "Aplicou apenas uma multa financeira, sem outras medidas",
+        "Absolveu a Microsoft de todas as acusações"
+      ],
+      "resposta_correta": "Ordenou a divisão da empresa em duas companhias separadas"
+    },
+    {
+      "n": 7,
+      "pergunta": "Como as duas empresas resultantes da divisão proposta seriam divididas, segundo a decisão original?",
+      "opcoes": [
+        "Uma com o sistema operacional, outra com os demais produtos",
+        "Uma para os EUA, outra para o resto do mundo",
+        "Uma para hardware, outra para software",
+        "Uma para consumidores, outra para empresas"
+      ],
+      "resposta_correta": "Uma com o sistema operacional, outra com os demais produtos"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual tribunal revisou o recurso da Microsoft contra a decisão de divisão da empresa?",
+      "opcoes": [
+        "Tribunal de Apelações do Circuito de Columbia (D.C. Circuit)",
+        "Suprema Corte dos Estados Unidos",
+        "Tribunal Federal de Nova York",
+        "Tribunal de Comércio Internacional"
+      ],
+      "resposta_correta": "Tribunal de Apelações do Circuito de Columbia (D.C. Circuit)"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano o Tribunal de Apelações emitiu sua decisão revisando o caso?",
+      "opcoes": [
+        "2001",
+        "1998",
+        "1995",
+        "2005"
+      ],
+      "resposta_correta": "2001"
+    },
+    {
+      "n": 10,
+      "pergunta": "A decisão de 2001 do Tribunal de Apelações manteve a ordem de divisão da empresa em duas?",
+      "opcoes": [
+        "Não, reverteu especificamente a constatação de tentativa de monopólio no mercado de navegadores",
+        "Sim, manteve integralmente a decisão original",
+        "Sim, e ainda ampliou a divisão para três empresas",
+        "Não, absolveu completamente a Microsoft de qualquer acusação"
+      ],
+      "resposta_correta": "Não, reverteu especificamente a constatação de tentativa de monopólio no mercado de navegadores"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual foi o percentual de participação de mercado do Windows em sistemas operacionais baseados em processadores Intel, citado como argumento no processo?",
+      "opcoes": [
+        "Cerca de 95%",
+        "Cerca de 50%",
+        "Cerca de 30%",
+        "Cerca de 10%"
+      ],
+      "resposta_correta": "Cerca de 95%"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quem foi o promotor principal (lead prosecutor) do caso movido pelo Departamento de Justiça?",
+      "opcoes": [
+        "Joel I. Klein",
+        "Thomas Penfield Jackson",
+        "Bill Gates",
+        "Steve Ballmer"
+      ],
+      "resposta_correta": "Joel I. Klein"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quantos estados americanos participaram como parte no processo original de 1998, além do governo federal?",
+      "opcoes": [
+        "20 estados",
+        "5 estados",
+        "50 estados",
+        "Nenhum estado, apenas o governo federal"
+      ],
+      "resposta_correta": "20 estados"
+    },
+    {
+      "n": 14,
+      "pergunta": "Que linguagem de programação, criada pela Sun Microsystems e embutida no navegador concorrente, era vista como ameaça potencial ao domínio do Windows?",
+      "opcoes": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript"
+      ],
+      "resposta_correta": "Java"
+    },
+    {
+      "n": 15,
+      "pergunta": "Por que a linguagem citada na questão anterior era vista como ameaça ao Windows, segundo a teoria da acusação?",
+      "opcoes": [
+        "Permitia que aplicações rodassem em qualquer sistema operacional subjacente",
+        "Era exclusiva de computadores Apple",
+        "Substituía completamente a necessidade de qualquer sistema operacional",
+        "Só funcionava dentro do próprio Internet Explorer"
+      ],
+      "resposta_correta": "Permitia que aplicações rodassem em qualquer sistema operacional subjacente"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual empresa acabou adquirindo a Netscape durante o período do processo, fator que reduziu o interesse dessa parte em seguir com o litígio?",
+      "opcoes": [
+        "America Online (AOL)",
+        "Sun Microsystems",
+        "Oracle",
+        "IBM"
+      ],
+      "resposta_correta": "America Online (AOL)"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em outubro de 1997, o Departamento de Justiça alegou que a Microsoft havia violado um acordo anterior (consent decree) de que ano?",
+      "opcoes": [
+        "1995",
+        "1990",
+        "1998",
+        "2000"
+      ],
+      "resposta_correta": "1995"
+    },
+    {
+      "n": 18,
+      "pergunta": "O que o juiz Thomas Penfield Jackson determinou em dezembro de 1997, antes mesmo do processo principal de 1998?",
+      "opcoes": [
+        "Uma liminar proibindo o empacotamento do Internet Explorer com o Windows",
+        "O encerramento definitivo da Microsoft",
+        "Uma multa bilionária imediata",
+        "A criação de uma comissão de fiscalização permanente"
+      ],
+      "resposta_correta": "Uma liminar proibindo o empacotamento do Internet Explorer com o Windows"
+    },
+    {
+      "n": 19,
+      "pergunta": "O Tribunal de Apelações, em maio de 1998, tomou qual decisão em relação a essa liminar anterior?",
+      "opcoes": [
+        "Anulou a liminar preliminar de 1997",
+        "Confirmou integralmente a liminar",
+        "Ampliou a liminar para todos os produtos da Microsoft",
+        "Não se pronunciou sobre o assunto"
+      ],
+      "resposta_correta": "Anulou a liminar preliminar de 1997"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual argumento de defesa a Microsoft usou em relação às restrições de licença impostas a fabricantes de computadores?",
+      "opcoes": [
+        "Alegou estar exercendo direitos legítimos como detentora de direitos autorais válidos",
+        "Alegou que as restrições eram exigidas por lei federal",
+        "Alegou que as restrições beneficiavam diretamente a Netscape",
+        "Alegou que não existia nenhuma restrição de licença"
+      ],
+      "resposta_correta": "Alegou estar exercendo direitos legítimos como detentora de direitos autorais válidos"
+    }
+  ]
+}

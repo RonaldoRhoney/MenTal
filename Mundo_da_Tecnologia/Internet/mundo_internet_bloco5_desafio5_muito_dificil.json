@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 5,
+    "tema_desafio": "O Futuro da Internet: Tendências e Especulações",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "FECHA O DESAFIO 5, O BLOCO 5 E O SUBMUNDO DA INTERNET COMPLETO (5/5 blocos, 25/25 desafios, 2000/2000 perguntas)."
+  },
+  "saiba_mais": "Curiosidade final: este Mundo (agora SubMundo da Internet, dentro do Mundo da Tecnologia) percorreu mais de meio século de história — de um simples erro de digitação transmitido entre dois computadores em 1969 até previsões de computação quântica e redes 6G para os próximos anos. Ao todo, foram 2.000 perguntas, 25 desafios e 5 blocos temáticos, todos construídos sobre o mesmo princípio: pesquisar fatos reais antes de escrever, e contar essa história extraordinária com as próprias palavras, do início ao fim. Obrigado por essa jornada completa pela internet — do 'LO' de 1969 até aqui.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo uma análise técnica, entre quais anos aproximados se considera, retrospectivamente, o período da 'Web 1.0'?",
+      "opcoes": [
+        "De 1991 a 2004, aproximadamente",
+        "De 1969 a 1971",
+        "De 2010 a 2020",
+        "De 1956 a 1969"
+      ],
+      "resposta_correta": "De 1991 a 2004, aproximadamente"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo essa mesma análise, qual serviço de hospedagem gratuita de páginas estáticas é citado como exemplo característico da era Web 1.0?",
+      "opcoes": [
+        "GeoCities",
+        "AWS S3",
+        "Google Cloud",
+        "Netlify"
+      ],
+      "resposta_correta": "GeoCities"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quais protocolos técnicos fundamentais, já discutidos em blocos anteriores deste Mundo, são citados como tendo sido desenhados ainda nas décadas de 1970-1980, sustentando a internet até hoje?",
+      "opcoes": [
+        "TCP, IP, SMTP e HTTP",
+        "Apenas o Bitcoin e o Ethereum",
+        "Exclusivamente redes sociais modernas",
+        "Somente protocolos de realidade virtual"
+      ],
+      "resposta_correta": "TCP, IP, SMTP e HTTP"
+    },
+    {
+      "n": 4,
+      "pergunta": "Considerando a linha do tempo completa deste Mundo — do 'LO' truncado de 1969 às previsões de 6G para 2026 — quantos anos, aproximadamente, essa jornada histórica abrange?",
+      "opcoes": [
+        "Cerca de 57 anos",
+        "Cerca de 10 anos",
+        "Cerca de 100 anos",
+        "Cerca de 5 anos"
+      ],
+      "resposta_correta": "Cerca de 57 anos"
+    },
+    {
+      "n": 5,
+      "pergunta": "Ao longo dos cinco Blocos deste Mundo, quantas grandes empresas de tecnologia tiveram sua origem detalhadamente estudada (Google, Amazon, Meta, Netflix, e outros gigantes menores)?",
+      "opcoes": [
+        "Pelo menos cinco grandes empresas, além de várias outras menores",
+        "Apenas uma única empresa",
+        "Nenhuma empresa específica foi estudada em detalhe",
+        "Exatamente cem empresas diferentes"
+      ],
+      "resposta_correta": "Pelo menos cinco grandes empresas, além de várias outras menores"
+    },
+    {
+      "n": 6,
+      "pergunta": "Comparando o Bloco 1 (Origens) e o Bloco 5 (Futuro) deste Mundo, qual princípio de investigação foi mantido consistentemente em ambos, segundo a metodologia usada ao longo de toda a curadoria?",
+      "opcoes": [
+        "A pesquisa e verificação de fontes reais antes da redação de qualquer conteúdo",
+        "Nenhum princípio metodológico foi mantido entre os blocos",
+        "Apenas opiniões pessoais, sem nenhuma pesquisa",
+        "Uso exclusivo de fontes de ficção, sem nenhuma verificação factual"
+      ],
+      "resposta_correta": "A pesquisa e verificação de fontes reais antes da redação de qualquer conteúdo"
+    },
+    {
+      "n": 7,
+      "pergunta": "Ao longo dos cinco Blocos, quantos temas sensíveis (dark web, disputas judiciais, ciberataques, símbolos controversos) foram tratados com ressalvas específicas de neutralidade e cuidado editorial?",
+      "opcoes": [
+        "Múltiplos temas sensíveis, todos tratados com o mesmo cuidado factual e equilibrado",
+        "Nenhum tema sensível foi abordado em nenhum momento",
+        "Apenas um único tema sensível, em todo o Mundo",
+        "Todos os temas foram tratados de forma sensacionalista, sem nenhum cuidado"
+      ],
+      "resposta_correta": "Múltiplos temas sensíveis, todos tratados com o mesmo cuidado factual e equilibrado"
+    },
+    {
+      "n": 8,
+      "pergunta": "Comparando a escala de usuários de internet discutida no Bloco 4 (bilhões conectados hoje) com o início do Bloco 1 (poucos computadores conectados na ARPANET em 1969), o que essa comparação melhor representa?",
+      "opcoes": [
+        "Uma das transformações de escala mais dramáticas da história tecnológica humana",
+        "Nenhuma mudança significativa de escala ocorreu no período",
+        "Uma redução no número de pessoas conectadas ao longo do tempo",
+        "Uma escala que permaneceu sempre constante desde o início"
+      ],
+      "resposta_correta": "Uma das transformações de escala mais dramáticas da história tecnológica humana"
+    },
+    {
+      "n": 9,
+      "pergunta": "Ao conectar os temas do Bloco 5 (dark web, IA, cibersegurança, blockchain, futuro), qual fio condutor único melhor une todos esses assuntos aparentemente distintos?",
+      "opcoes": [
+        "Como tecnologias emergentes trazem simultaneamente oportunidades genuínas e novos desafios éticos, legais e sociais",
+        "Que todos os temas do bloco são completamente desconectados entre si",
+        "Que apenas questões financeiras conectam os cinco desafios",
+        "Que nenhum desses temas tem relevância real para o futuro da internet"
+      ],
+      "resposta_correta": "Como tecnologias emergentes trazem simultaneamente oportunidades genuínas e novos desafios éticos, legais e sociais"
+    },
+    {
+      "n": 10,
+      "pergunta": "Considerando toda a jornada dos cinco Blocos deste Mundo — origens, sistemas operacionais, gigantes corporativos, cultura de internet e passado/presente/futuro — qual eixo temático amplo melhor descreve o conjunto completo?",
+      "opcoes": [
+        "A história completa de como a internet transformou tecnologia, cultura, economia e sociedade ao longo de mais de meio século",
+        "Apenas um conjunto aleatório de curiosidades sem nenhuma conexão temática",
+        "Exclusivamente um manual técnico de programação",
+        "Um relato focado unicamente em entretenimento, sem nenhuma dimensão histórica real"
+      ],
+      "resposta_correta": "A história completa de como a internet transformou tecnologia, cultura, economia e sociedade ao longo de mais de meio século"
+    },
+    {
+      "n": 11,
+      "pergunta": "Ao longo de toda a curadoria deste Mundo, qual prática consistente foi seguida em relação a casos judiciais e situações controversas (antitruste, Silk Road, ILOVEYOU, Web 3.0)?",
+      "opcoes": [
+        "Apresentação factual e equilibrada, sem tomar partido nem emitir opinião própria sobre culpa, inocência ou valor de mercado",
+        "Defesa explícita de um dos lados em cada caso discutido",
+        "Omissão completa de qualquer caso controverso",
+        "Apresentação apenas da versão de uma única fonte, sem verificação cruzada"
+      ],
+      "resposta_correta": "Apresentação factual e equilibrada, sem tomar partido nem emitir opinião própria sobre culpa, inocência ou valor de mercado"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo o padrão estabelecido em cada 'Saiba mais' deste Mundo, qual foi a função consistente desse elemento ao longo de todos os 25 desafios?",
+      "opcoes": [
+        "Apresentar uma curiosidade adicional, contextualizando e enriquecendo o tema do desafio correspondente",
+        "Repetir exatamente a mesma pergunta já feita no desafio",
+        "Apresentar exclusivamente opiniões pessoais sem nenhuma base factual",
+        "Servir apenas como propaganda de produtos comerciais"
+      ],
+      "resposta_correta": "Apresentar uma curiosidade adicional, contextualizando e enriquecendo o tema do desafio correspondente"
+    },
+    {
+      "n": 13,
+      "pergunta": "Comparando a estrutura de dificuldade (Fácil, Média, Difícil, Muito Difícil) usada consistentemente em todos os 25 desafios, qual foi o princípio geral de progressão entre os níveis?",
+      "opcoes": [
+        "De fatos amplamente conhecidos até detalhes extremamente específicos, datas exatas e conexões entre eventos históricos",
+        "Nenhuma progressão real de dificuldade foi aplicada entre os niveis",
+        "Do mais difícil para o mais fácil, invertendo a ordem esperada",
+        "Apenas um único nível de dificuldade foi usado em todo o Mundo"
+      ],
+      "resposta_correta": "De fatos amplamente conhecidos até detalhes extremamente específicos, datas exatas e conexões entre eventos históricos"
+    },
+    {
+      "n": 14,
+      "pergunta": "Ao todo, quantas perguntas foram cuidadosamente pesquisadas e escritas ao longo deste Mundo completo (5 blocos × 5 desafios × 4 níveis × 20 perguntas)?",
+      "opcoes": [
+        "2.000 perguntas",
+        "200 perguntas",
+        "20.000 perguntas",
+        "20 perguntas"
+      ],
+      "resposta_correta": "2.000 perguntas"
+    },
+    {
+      "n": 15,
+      "pergunta": "Considerando a decisão arquitetural discutida durante a criação deste conteúdo, sob qual categoria maior este Mundo da Internet passou a ser posicionado dentro do aplicativo?",
+      "opcoes": [
+        "Como um SubMundo dentro do Mundo da Tecnologia",
+        "Como um Mundo isolado e completamente independente de qualquer outro tema",
+        "Como parte do Mundo dos Valores financeiros",
+        "Como parte do Mundo da Gastronomia"
+      ],
+      "resposta_correta": "Como um SubMundo dentro do Mundo da Tecnologia"
+    },
+    {
+      "n": 16,
+      "pergunta": "Por que essa reclassificação estrutural fazia sentido taxonômico, segundo a lógica adotada durante o planejamento deste conteúdo?",
+      "opcoes": [
+        "Porque a internet é, por natureza, um subconjunto de tecnologia, não um domínio paralelo e desconectado dela",
+        "Porque não havia nenhuma relação lógica entre os dois temas",
+        "Porque essa era a única forma tecnicamente possível de organizar o conteúdo",
+        "Porque o Mundo da Tecnologia já estava completo antes deste conteúdo existir"
+      ],
+      "resposta_correta": "Porque a internet é, por natureza, um subconjunto de tecnologia, não um domínio paralelo e desconectado dela"
+    },
+    {
+      "n": 17,
+      "pergunta": "Ao encerrar esta jornada de mais de meio século de história — de um erro de digitação em 1969 a previsões de computação quântica para o futuro próximo — que reflexão final melhor resume o espírito de todo este Mundo/SubMundo?",
+      "opcoes": [
+        "Que a internet nasceu de experimentos pequenos e imperfeitos, e se tornou uma das forças mais transformadoras já criadas pela humanidade",
+        "Que a internet sempre foi um projeto perfeitamente planejado, sem nenhum erro ou acaso em sua trajetória",
+        "Que a internet é um fenômeno isolado, sem nenhuma conexão com a história humana mais ampla",
+        "Que a jornada da internet já terminou completamente, sem nenhum desenvolvimento futuro esperado"
+      ],
+      "resposta_correta": "Que a internet nasceu de experimentos pequenos e imperfeitos, e se tornou uma das forças mais transformadoras já criadas pela humanidade"
+    },
+    {
+      "n": 18,
+      "pergunta": "Voltando à primeira pergunta já respondida no Bloco 1 deste Mundo (sobre ARPANET e a primeira mensagem 'LO'), o que essa 'volta ao início' simboliza ao fechar todo o SubMundo da Internet?",
+      "opcoes": [
+        "Um círculo completo da narrativa, do primeiro experimento técnico até as fronteiras mais avançadas de hoje",
+        "Uma repetição desnecessária de conteúdo, sem nenhum propósito narrativo",
+        "Uma contradição interna entre o início e o fim do Mundo",
+        "Nenhuma conexão relevante existe entre o início e o fim do conteúdo"
+      ],
+      "resposta_correta": "Um círculo completo da narrativa, do primeiro experimento técnico até as fronteiras mais avançadas de hoje"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual foi o compromisso editorial mantido do primeiro ao último dos 2.000 itens deste Mundo, independentemente do tema abordado?",
+      "opcoes": [
+        "Verificação de fatos reais através de pesquisa, seguida de redação totalmente original, sem reprodução literal de nenhuma fonte",
+        "Uso de opiniões pessoais sem nenhuma base factual",
+        "Cópia direta de trechos de artigos e enciclopédias online",
+        "Ausência total de qualquer processo de verificação de fatos"
+      ],
+      "resposta_correta": "Verificação de fatos reais através de pesquisa, seguida de redação totalmente original, sem reprodução literal de nenhuma fonte"
+    },
+    {
+      "n": 20,
+      "pergunta": "Com este último item, o SubMundo da Internet chega ao fim de sua curadoria completa. Que sentimento este encerramento busca transmitir a quem percorreu toda a jornada, dos primórdios da ARPANET às fronteiras tecnológicas de hoje?",
+      "opcoes": [
+        "A sensação de ter percorrido, de ponta a ponta, uma das histórias mais fascinantes e transformadoras da tecnologia humana moderna",
+        "Indiferença total diante de uma sequência de fatos desconexos",
+        "Confusão, por falta de qualquer conexão entre os temas abordados",
+        "Tédio, por se tratar de um conteúdo repetitivo e sem valor real"
+      ],
+      "resposta_correta": "A sensação de ter percorrido, de ponta a ponta, uma das histórias mais fascinantes e transformadoras da tecnologia humana moderna"
+    }
+  ]
+}

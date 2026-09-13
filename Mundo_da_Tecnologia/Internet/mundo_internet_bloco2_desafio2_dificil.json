@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 2,
+    "tema_desafio": "Mac e Steve Jobs",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - mencao a saude tratada de forma factual e respeitosa."
+  },
+  "saiba_mais": "Curiosidade: o computador NeXT, criado pela empresa de Steve Jobs depois que ele deixou a Apple, teve um destino inesperado na história da tecnologia — foi exatamente numa máquina NeXT que Tim Berners-Lee construiu o primeiro servidor e navegador da World Wide Web, em 1990, no CERN. Duas histórias de tecnologia que pareciam separadas se cruzaram silenciosamente.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual foi o principal produto inicial da NeXT, empresa fundada por Jobs em 1985?",
+      "opcoes": [
+        "Estações de trabalho (workstations) para os mercados de educação superior e negócios",
+        "Smartphones para o público geral",
+        "Videogames portáteis",
+        "Impressoras a laser domésticas"
+      ],
+      "resposta_correta": "Estações de trabalho (workstations) para os mercados de educação superior e negócios"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a NeXT lançou seu primeiro produto, o NeXT Computer?",
+      "opcoes": [
+        "1988",
+        "1985",
+        "1990",
+        "1996"
+      ],
+      "resposta_correta": "1988"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual era o nome do sistema operacional desenvolvido pela NeXT, usado no computador que mais tarde serviria de base ao primeiro servidor Web do CERN?",
+      "opcoes": [
+        "NeXTSTEP",
+        "OpenStep",
+        "WebObjects",
+        "NeXTMail"
+      ],
+      "resposta_correta": "NeXTSTEP"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que cidade a NeXT tinha sua sede?",
+      "opcoes": [
+        "Redwood City, Califórnia",
+        "Cupertino, Califórnia",
+        "San Francisco, Califórnia",
+        "Palo Alto, Califórnia"
+      ],
+      "resposta_correta": "Redwood City, Califórnia"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual empresário político/empresarial norte-americano, conhecido por concorrer à presidência dos EUA, foi diretor da NeXT?",
+      "opcoes": [
+        "Ross Perot",
+        "Al Gore",
+        "Michael Bloomberg",
+        "Mitt Romney"
+      ],
+      "resposta_correta": "Ross Perot"
+    },
+    {
+      "n": 6,
+      "pergunta": "Quantos funcionários a NeXT tinha registrados em 1993, segundo dados históricos da empresa?",
+      "opcoes": [
+        "530 funcionários",
+        "50 funcionários",
+        "5.000 funcionários",
+        "10 funcionários"
+      ],
+      "resposta_correta": "530 funcionários"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quem projetou o logotipo corporativo da NeXT?",
+      "opcoes": [
+        "Paul Rand",
+        "Jony Ive",
+        "Rob Janoff (criador do logo da Apple)",
+        "Susan Kare"
+      ],
+      "resposta_correta": "Paul Rand"
+    },
+    {
+      "n": 8,
+      "pergunta": "A NeXT eventualmente mudou o foco de seus produtos de hardware para qual área?",
+      "opcoes": [
+        "Software",
+        "Serviços financeiros",
+        "Educação online",
+        "Telecomunicações"
+      ],
+      "resposta_correta": "Software"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual foi o valor aproximado do investimento inicial de Jobs ao adquirir a divisão que se tornaria a Pixar?",
+      "opcoes": [
+        "10 milhões de dólares",
+        "1 milhão de dólares",
+        "100 milhões de dólares",
+        "500 mil dólares"
+      ],
+      "resposta_correta": "10 milhões de dólares"
+    },
+    {
+      "n": 10,
+      "pergunta": "De qual estúdio de cinema a divisão de computação gráfica que originou a Pixar foi desmembrada (spin-off)?",
+      "opcoes": [
+        "Lucasfilm",
+        "Walt Disney Studios",
+        "Warner Bros",
+        "Universal Pictures"
+      ],
+      "resposta_correta": "Lucasfilm"
+    },
+    {
+      "n": 11,
+      "pergunta": "Que cargo específico Jobs ocupou na Pixar, além de principal investidor?",
+      "opcoes": [
+        "Presidente do conselho (chairman) e, eventualmente, CEO",
+        "Diretor de efeitos visuais",
+        "Roteirista principal",
+        "Diretor de fotografia"
+      ],
+      "resposta_correta": "Presidente do conselho (chairman) e, eventualmente, CEO"
+    },
+    {
+      "n": 12,
+      "pergunta": "Até que ano Jobs permaneceu como principal acionista/presidente da Pixar, segundo registros?",
+      "opcoes": [
+        "2007",
+        "1995",
+        "2006",
+        "1986"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual foi o crédito específico de Jobs em Toy Story (1995), o primeiro longa totalmente digital da Pixar?",
+      "opcoes": [
+        "Produtor executivo",
+        "Diretor",
+        "Roteirista",
+        "Animador principal"
+      ],
+      "resposta_correta": "Produtor executivo"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual computador de negócios da Apple, lançado em 1983 e vindo antes do Macintosh, também foi redesenhado a partir das ideias vistas na Xerox PARC?",
+      "opcoes": [
+        "Lisa",
+        "Apple III",
+        "Newton",
+        "PowerBook"
+      ],
+      "resposta_correta": "Lisa"
+    },
+    {
+      "n": 15,
+      "pergunta": "Jobs inicialmente trabalhava no projeto do Lisa, mas depois se voltou para liderar um grupo menor, construindo um computador de custo mais baixo. Qual computador resultou desse grupo menor?",
+      "opcoes": [
+        "Macintosh",
+        "Apple II",
+        "NeXT Computer",
+        "iMac"
+      ],
+      "resposta_correta": "Macintosh"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo análises de biógrafos, as vendas iniciais do Macintosh, em seu lançamento, corresponderam a quê em relação às expectativas?",
+      "opcoes": [
+        "Venderam abaixo das expectativas iniciais",
+        "Superaram amplamente as expectativas",
+        "Ficaram exatamente dentro do esperado",
+        "Foram um fracasso total imediato, sem nenhuma venda"
+      ],
+      "resposta_correta": "Venderam abaixo das expectativas iniciais"
+    },
+    {
+      "n": 17,
+      "pergunta": "Jobs recebeu qual honraria em 1985, mesmo ano em que deixou a Apple?",
+      "opcoes": [
+        "Medalha Nacional de Tecnologia dos EUA",
+        "Prêmio Nobel de Economia",
+        "Medalha Fields",
+        "Ordem do Mérito Britânico"
+      ],
+      "resposta_correta": "Medalha Nacional de Tecnologia dos EUA"
+    },
+    {
+      "n": 18,
+      "pergunta": "Steve Jobs recebeu um transplante de qual órgão, em meio ao tratamento de sua doença?",
+      "opcoes": [
+        "Fígado",
+        "Rim",
+        "Pâncreas",
+        "Coração"
+      ],
+      "resposta_correta": "Fígado"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual empresa de tecnologia, na década de 1970, empregava Steve Wozniak antes da fundação da Apple?",
+      "opcoes": [
+        "Hewlett-Packard",
+        "IBM",
+        "Xerox",
+        "Intel"
+      ],
+      "resposta_correta": "Hewlett-Packard"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual era a especialidade técnica de Steve Wozniak dentro da parceria com Jobs, segundo análises da dinâmica entre os dois?",
+      "opcoes": [
+        "Engenharia técnica (o 'gênio técnico' da dupla)",
+        "Marketing e vendas",
+        "Design visual de produtos",
+        "Gestão financeira da empresa"
+      ],
+      "resposta_correta": "Engenharia técnica (o 'gênio técnico' da dupla)"
+    }
+  ]
+}

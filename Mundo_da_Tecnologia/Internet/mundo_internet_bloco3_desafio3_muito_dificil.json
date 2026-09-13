@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 3,
+    "tema_desafio": "Facebook e Mark Zuckerberg",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas internacionais. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - saidas executivas tratadas de forma factual e neutra, sem especulacao indevida.",
+    "status": "Fecha o Desafio 3 do Bloco 3 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: tanto os fundadores do Instagram quanto os do WhatsApp acabaram deixando a Meta anos depois de venderem suas empresas — Jan Koum, do WhatsApp, chegou a declarar publicamente que dedicaria seu tempo livre a colecionar carros Porsche refrigerados a ar, um hobby bem específico para quem ajudou a criar um dos aplicativos de mensagens mais usados do mundo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que universidade Kevin Systrom e Mike Krieger, fundadores do Instagram, se conheceram?",
+      "opcoes": [
+        "Universidade de Stanford",
+        "Harvard",
+        "MIT",
+        "Universidade de Illinois"
+      ],
+      "resposta_correta": "Universidade de Stanford"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano Systrom e Krieger fundaram o Instagram?",
+      "opcoes": [
+        "2010",
+        "2004",
+        "2012",
+        "2014"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 3,
+      "pergunta": "Com quantos funcionários o Instagram operava no momento em que foi comprado pelo Facebook, em 2012?",
+      "opcoes": [
+        "13 pessoas",
+        "1.000 pessoas",
+        "100 pessoas",
+        "Nenhum funcionário além dos fundadores"
+      ],
+      "resposta_correta": "13 pessoas"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que ano Systrom e Krieger anunciaram sua saída da empresa, seis anos após a aquisição?",
+      "opcoes": [
+        "2018",
+        "2012",
+        "2014",
+        "2021"
+      ],
+      "resposta_correta": "2018"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo o comunicado oficial de despedida, qual foi a razão declarada por Systrom para a saída?",
+      "opcoes": [
+        "Explorar a curiosidade e criatividade novamente",
+        "Um conflito público e explícito com Zuckerberg",
+        "Problemas de saúde pessoais",
+        "Uma oferta de emprego em outra grande empresa de tecnologia"
+      ],
+      "resposta_correta": "Explorar a curiosidade e criatividade novamente"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo fontes jornalísticas (não confirmado oficialmente pelos fundadores), a que se atribuía a saída de Systrom e Krieger?",
+      "opcoes": [
+        "Divergências de visão sobre o futuro do Instagram com a liderança do Facebook",
+        "Uma disputa judicial pública sobre direitos autorais",
+        "A falência iminente do Instagram",
+        "Uma fusão com outra rede social concorrente"
+      ],
+      "resposta_correta": "Divergências de visão sobre o futuro do Instagram com a liderança do Facebook"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo relatos, a qual decisão específica do Facebook os fundadores do Instagram teriam se oposto, ligada a um recurso copiado do Snapchat?",
+      "opcoes": [
+        "A criação dos 'Stories', inspirados nos Stories do Snapchat",
+        "A introdução de anúncios pagos no feed",
+        "A mudança do algoritmo cronológico",
+        "A remoção do recurso de filtros de foto"
+      ],
+      "resposta_correta": "A criação dos 'Stories', inspirados nos Stories do Snapchat"
+    },
+    {
+      "n": 8,
+      "pergunta": "Quem são os dois cofundadores do WhatsApp?",
+      "opcoes": [
+        "Jan Koum e Brian Acton",
+        "Kevin Systrom e Mike Krieger",
+        "Mark Zuckerberg e Eduardo Saverin",
+        "Larry Page e Sergey Brin"
+      ],
+      "resposta_correta": "Jan Koum e Brian Acton"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano o WhatsApp foi fundado, cinco anos antes de ser vendido ao Facebook?",
+      "opcoes": [
+        "2009",
+        "2004",
+        "2012",
+        "2014"
+      ],
+      "resposta_correta": "2009"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que mês de 2018 Jan Koum, CEO do WhatsApp, anunciou sua saída da empresa?",
+      "opcoes": [
+        "Abril",
+        "Janeiro",
+        "Setembro",
+        "Dezembro"
+      ],
+      "resposta_correta": "Abril"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo relatos jornalísticos, sobre quais dois temas específicos Jan Koum teria discordado abertamente da direção do Facebook?",
+      "opcoes": [
+        "Privacidade dos usuários e monetização/publicidade",
+        "Design visual do aplicativo e escolha de cores",
+        "Localização da sede da empresa e nome do produto",
+        "Contratação de novos funcionários e política de férias"
+      ],
+      "resposta_correta": "Privacidade dos usuários e monetização/publicidade"
+    },
+    {
+      "n": 12,
+      "pergunta": "Num post de blog escrito no momento da aquisição pelo Facebook em 2014, o que Jan Koum declarou sobre os princípios centrais do WhatsApp?",
+      "opcoes": [
+        "Que o acordo não teria acontecido se exigisse comprometer os princípios centrais que sempre definiriam a empresa",
+        "Que ele nunca teve nenhuma preocupação sobre o futuro do WhatsApp",
+        "Que a venda foi motivada exclusivamente pelo valor financeiro oferecido",
+        "Que o WhatsApp deixaria de existir como marca em poucos anos"
+      ],
+      "resposta_correta": "Que o acordo não teria acontecido se exigisse comprometer os princípios centrais que sempre definiriam a empresa"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma fonte, para qual hobby pessoal Jan Koum declarou que dedicaria parte de seu tempo livre após deixar a empresa?",
+      "opcoes": [
+        "Colecionar Porsches refrigerados a ar",
+        "Aprender a tocar piano profissionalmente",
+        "Viajar por todos os continentes",
+        "Escrever um livro de memórias"
+      ],
+      "resposta_correta": "Colecionar Porsches refrigerados a ar"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma fonte, o Instagram se tornou a quarta plataforma da Meta a ultrapassar qual marco de usuários?",
+      "opcoes": [
+        "Um bilhão de usuários",
+        "Cem milhões de usuários",
+        "Dez milhões de usuários",
+        "Cinco bilhões de usuários"
+      ],
+      "resposta_correta": "Um bilhão de usuários"
+    },
+    {
+      "n": 15,
+      "pergunta": "Além do Instagram, quais outras duas plataformas da Meta também haviam ultrapassado a marca de um bilhão de usuários, segundo essa mesma fonte?",
+      "opcoes": [
+        "O próprio Facebook e o WhatsApp",
+        "YouTube e TikTok",
+        "Twitter e LinkedIn",
+        "Snapchat e Pinterest"
+      ],
+      "resposta_correta": "O próprio Facebook e o WhatsApp"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma análise financeira, apesar do valor alto pago pelo Instagram em 2012, como esse investimento se provou ao longo do tempo?",
+      "opcoes": [
+        "Extremamente rentável, com o valor da empresa multiplicado dezenas de vezes",
+        "Um fracasso total de investimento",
+        "Neutro, sem crescimento nem perda perceptível",
+        "Impossível de avaliar, por falta de dados disponíveis"
+      ],
+      "resposta_correta": "Extremamente rentável, com o valor da empresa multiplicado dezenas de vezes"
+    },
+    {
+      "n": 17,
+      "pergunta": "Quantos anos, aproximadamente, separaram a fundação do Instagram (2010) da saída de seus fundadores da empresa (2018)?",
+      "opcoes": [
+        "Oito anos",
+        "Dois anos",
+        "Vinte anos",
+        "Um ano"
+      ],
+      "resposta_correta": "Oito anos"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma retrospectiva, o que a saída simultânea dos fundadores de Instagram e WhatsApp da Meta, em anos próximos um do outro, pode sugerir sobre grandes aquisições de tecnologia?",
+      "opcoes": [
+        "Tensões possíveis entre a visão original dos fundadores e a direção da empresa controladora",
+        "Que aquisições de tecnologia nunca geram nenhum tipo de atrito",
+        "Que os fundadores sempre permanecem nas empresas compradas indefinidamente",
+        "Que essas saídas não têm nenhuma relação entre si"
+      ],
+      "resposta_correta": "Tensões possíveis entre a visão original dos fundadores e a direção da empresa controladora"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo o próprio Zuckerberg, ao comentar a saída dos fundadores do Instagram, o que ele destacou sobre a contribuição deles?",
+      "opcoes": [
+        "Que Instagram refletia os talentos criativos combinados dos dois fundadores",
+        "Que a saída deles não teve nenhum impacto relevante",
+        "Que ele nunca trabalhou diretamente com eles",
+        "Que a aquisição do Instagram foi um erro estratégico"
+      ],
+      "resposta_correta": "Que Instagram refletia os talentos criativos combinados dos dois fundadores"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando toda a trajetória da Meta discutida neste desafio — de TheFacebook em 2004 até a empresa multibilionária de hoje — o que essa história melhor ilustra sobre o crescimento de gigantes de tecnologia?",
+      "opcoes": [
+        "Como um projeto universitário simples pode se transformar, através de aquisições estratégicas, num conglomerado global",
+        "Que redes sociais nunca enfrentam desafios de gestão ou saída de fundadores",
+        "Que apenas empresas nascidas fora de universidades conseguem crescer globalmente",
+        "Que aquisições bilionárias são sempre isentas de qualquer tensão interna"
+      ],
+      "resposta_correta": "Como um projeto universitário simples pode se transformar, através de aquisições estratégicas, num conglomerado global"
+    }
+  ]
+}

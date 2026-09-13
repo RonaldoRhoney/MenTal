@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 2,
+    "tema_desafio": "AWS e a Expansão da Amazon",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Britannica e AWS oficial. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: a AWS nasceu de um problema interno da própria Amazon — a equipe de tecnologia, de tanto lidar com os desafios de escalar o site de vendas, acabou se tornando especialista mundial em operar infraestrutura de computação barata e confiável. Foi esse conhecimento, originalmente pensado só para uso próprio, que virou um negócio à parte, hoje usado por gigantes como Netflix, Airbnb e Dropbox.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "O que é a AWS (Amazon Web Services)?",
+      "opcoes": [
+        "Um serviço de computação em nuvem da Amazon",
+        "Uma loja de livros digitais",
+        "Um serviço de streaming de vídeo",
+        "Um sistema operacional para celulares"
+      ],
+      "resposta_correta": "Um serviço de computação em nuvem da Amazon"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a AWS foi lançada oficialmente?",
+      "opcoes": [
+        "2006",
+        "1994",
+        "2000",
+        "2015"
+      ],
+      "resposta_correta": "2006"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual foi o primeiro serviço lançado pela AWS, em março de 2006?",
+      "opcoes": [
+        "Amazon S3 (armazenamento)",
+        "Amazon EC2",
+        "Amazon Prime",
+        "Kindle"
+      ],
+      "resposta_correta": "Amazon S3 (armazenamento)"
+    },
+    {
+      "n": 4,
+      "pergunta": "O que a sigla S3 significa, no contexto da AWS?",
+      "opcoes": [
+        "Simple Storage Service",
+        "Super Speed Server",
+        "Secure Software System",
+        "Standard Search Service"
+      ],
+      "resposta_correta": "Simple Storage Service"
+    },
+    {
+      "n": 5,
+      "pergunta": "Poucos meses depois do S3, qual outro serviço importante a AWS lançou, oferecendo poder de processamento sob demanda?",
+      "opcoes": [
+        "EC2 (Elastic Compute Cloud)",
+        "Amazon Prime",
+        "Kindle",
+        "Alexa"
+      ],
+      "resposta_correta": "EC2 (Elastic Compute Cloud)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Quem liderou a criação da AWS dentro da Amazon?",
+      "opcoes": [
+        "Andy Jassy",
+        "Jeff Bezos sozinho",
+        "MacKenzie Bezos",
+        "Shel Kaphan"
+      ],
+      "resposta_correta": "Andy Jassy"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que ano o Amazon Prime, o programa de assinatura com frete grátis, foi lançado?",
+      "opcoes": [
+        "2005",
+        "1995",
+        "2006",
+        "2010"
+      ],
+      "resposta_correta": "2005"
+    },
+    {
+      "n": 8,
+      "pergunta": "Além de frete grátis, que outros benefícios o Amazon Prime oferece hoje?",
+      "opcoes": [
+        "Streaming de vídeo e música",
+        "Apenas descontos em livros",
+        "Exclusivamente seguro de vida",
+        "Somente acesso a jogos eletrônicos"
+      ],
+      "resposta_correta": "Streaming de vídeo e música"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano a Amazon lançou o Kindle, seu leitor de e-books?",
+      "opcoes": [
+        "2007",
+        "1994",
+        "2006",
+        "2015"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano a Amazon começou a vender produtos além de livros, como eletrônicos e brinquedos?",
+      "opcoes": [
+        "1999",
+        "1994",
+        "2006",
+        "2010"
+      ],
+      "resposta_correta": "1999"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual assistente de voz da Amazon está integrado aos dispositivos Echo?",
+      "opcoes": [
+        "Alexa",
+        "Siri",
+        "Cortana",
+        "Google Assistant"
+      ],
+      "resposta_correta": "Alexa"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual plataforma de streaming de jogos e transmissões ao vivo pertence à Amazon?",
+      "opcoes": [
+        "Twitch",
+        "YouTube Gaming",
+        "Discord",
+        "Steam"
+      ],
+      "resposta_correta": "Twitch"
+    },
+    {
+      "n": 13,
+      "pergunta": "Cite uma grande empresa de tecnologia que usa a infraestrutura da AWS para funcionar.",
+      "opcoes": [
+        "Netflix",
+        "Apple",
+        "Microsoft",
+        "Google"
+      ],
+      "resposta_correta": "Netflix"
+    },
+    {
+      "n": 14,
+      "pergunta": "Aproximadamente quantos membros o programa Amazon Prime tem hoje, segundo estimativas recentes?",
+      "opcoes": [
+        "Mais de 200 milhões",
+        "Cerca de 1 milhão",
+        "Cerca de 10 mil",
+        "Cerca de 50 milhões"
+      ],
+      "resposta_correta": "Mais de 200 milhões"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual foi a motivação original que levou a Amazon a criar a AWS?",
+      "opcoes": [
+        "Resolver problemas internos de infraestrutura de tecnologia da própria empresa",
+        "Uma exigência do governo americano",
+        "Uma parceria obrigatória com a Microsoft",
+        "O desejo de competir diretamente com o Google desde o início"
+      ],
+      "resposta_correta": "Resolver problemas internos de infraestrutura de tecnologia da própria empresa"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que ano Andy Jassy se tornou CEO da própria Amazon (não só da AWS)?",
+      "opcoes": [
+        "2021",
+        "2006",
+        "1994",
+        "2015"
+      ],
+      "resposta_correta": "2021"
+    },
+    {
+      "n": 17,
+      "pergunta": "Cite outro tablet ou dispositivo de hardware da linha própria da Amazon.",
+      "opcoes": [
+        "Fire (tablet)",
+        "iPad",
+        "Surface",
+        "Galaxy Tab"
+      ],
+      "resposta_correta": "Fire (tablet)"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual projeto da Amazon busca oferecer internet via satélite, mencionado como iniciativa mais recente da empresa?",
+      "opcoes": [
+        "Projeto Kuiper",
+        "Projeto Loon",
+        "Starlink",
+        "Projeto Fiber"
+      ],
+      "resposta_correta": "Projeto Kuiper"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual projeto de entrega por drone a Amazon também vem desenvolvendo?",
+      "opcoes": [
+        "Scout",
+        "Prime Air Express",
+        "SkyDrop",
+        "FastWing"
+      ],
+      "resposta_correta": "Scout"
+    },
+    {
+      "n": 20,
+      "pergunta": "De uma pequena livraria online em 1994, no que a Amazon se tornou décadas depois, segundo uma retrospectiva recente?",
+      "opcoes": [
+        "Uma potência global muito além do varejo",
+        "Uma empresa exclusivamente de livros até hoje",
+        "Uma empresa que encerrou as atividades",
+        "Uma pequena empresa regional nos EUA"
+      ],
+      "resposta_correta": "Uma potência global muito além do varejo"
+    }
+  ]
+}

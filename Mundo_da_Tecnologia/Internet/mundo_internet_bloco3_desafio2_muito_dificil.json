@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 2,
+    "tema_desafio": "AWS e a Expansão da Amazon",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: Andy Jassy se tornou oficialmente CEO da Amazon em 5 de julho de 2021 — exatamente a mesma data em que Jeff Bezos havia fundado a empresa, quase três décadas antes, em 1994. Uma coincidência de calendário que muitos observadores da empresa consideram um dos detalhes mais simbólicos da longa trajetória de Jassy dentro da companhia, que começou literalmente como 'a sombra' do próprio fundador.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que data exata de nascimento Andy Jassy nasceu?",
+      "opcoes": [
+        "13 de janeiro de 1968",
+        "5 de julho de 1968",
+        "1º de maio de 1997",
+        "16 de julho de 1970"
+      ],
+      "resposta_correta": "13 de janeiro de 1968"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual cidade Andy Jassy nasceu?",
+      "opcoes": [
+        "Scarsdale, Nova York",
+        "Seattle, Washington",
+        "Boston, Massachusetts",
+        "Cambridge, Massachusetts"
+      ],
+      "resposta_correta": "Scarsdale, Nova York"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual profissão o pai de Andy Jassy exercia?",
+      "opcoes": [
+        "Sócio de uma firma de advocacia",
+        "Engenheiro de software",
+        "Professor universitário",
+        "Médico"
+      ],
+      "resposta_correta": "Sócio de uma firma de advocacia"
+    },
+    {
+      "n": 4,
+      "pergunta": "Por quantos meses Andy Jassy exerceu o chamado 'shadow role' (papel de assistente técnico/sombra) de Jeff Bezos?",
+      "opcoes": [
+        "18 meses",
+        "6 meses",
+        "5 anos",
+        "3 meses"
+      ],
+      "resposta_correta": "18 meses"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo o próprio Jassy, em que consistia sua rotina nesse papel de 'sombra' de Bezos?",
+      "opcoes": [
+        "Participar de todas as reuniões dele, incluindo conversas individuais (one-on-ones)",
+        "Apenas revisar relatórios financeiros semanais",
+        "Cuidar exclusivamente da agenda de viagens de Bezos",
+        "Substituir Bezos em decisões operacionais menores"
+      ],
+      "resposta_correta": "Participar de todas as reuniões dele, incluindo conversas individuais (one-on-ones)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo o próprio Jassy, em qual data específica ele fez sua última prova em Harvard antes de começar na Amazon na segunda-feira seguinte?",
+      "opcoes": [
+        "Na primeira sexta-feira de maio de 1997",
+        "No último dia de dezembro de 1996",
+        "Na primeira segunda-feira de janeiro de 1997",
+        "No último dia de agosto de 1997"
+      ],
+      "resposta_correta": "Na primeira sexta-feira de maio de 1997"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quantas semanas antes da abertura de capital (IPO) da Amazon Jassy começou a trabalhar na empresa, segundo uma fonte?",
+      "opcoes": [
+        "Três semanas antes",
+        "Um ano antes",
+        "No mesmo dia do IPO",
+        "Seis meses antes"
+      ],
+      "resposta_correta": "Três semanas antes"
+    },
+    {
+      "n": 8,
+      "pergunta": "Antes da Amazon, Jassy trabalhou como gerente de projetos numa empresa especializada em qual tipo de produto?",
+      "opcoes": [
+        "Artigos colecionáveis (memorabilia esportiva)",
+        "Softwares educacionais",
+        "Equipamentos médicos",
+        "Instrumentos musicais"
+      ],
+      "resposta_correta": "Artigos colecionáveis (memorabilia esportiva)"
+    },
+    {
+      "n": 9,
+      "pergunta": "Antes da Amazon, Jassy também cofundou uma startup com um amigo/colega que não deu certo. Segundo suas próprias palavras, por que o projeto foi encerrado?",
+      "opcoes": [
+        "Perceberam que aquilo não era o que ambos queriam fazer para sempre",
+        "Faltou totalmente capital para continuar",
+        "Um processo judicial encerrou a empresa",
+        "Um dos dois sócios faleceu"
+      ],
+      "resposta_correta": "Perceberam que aquilo não era o que ambos queriam fazer para sempre"
+    },
+    {
+      "n": 10,
+      "pergunta": "Com quantas pessoas a equipe original da AWS começou, sob liderança de Jassy?",
+      "opcoes": [
+        "57 pessoas",
+        "5 pessoas",
+        "570 pessoas",
+        "1 pessoa, apenas o próprio Jassy"
+      ],
+      "resposta_correta": "57 pessoas"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em 2016, Andy Jassy foi eleito 'Pessoa do Ano' por qual veículo de imprensa financeira?",
+      "opcoes": [
+        "Financial Times",
+        "The Wall Street Journal",
+        "Forbes",
+        "Bloomberg"
+      ],
+      "resposta_correta": "Financial Times"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma fonte, quanto Andy Jassy ganhou em remuneração total naquele mesmo ano de 2016?",
+      "opcoes": [
+        "36,6 milhões de dólares",
+        "175 mil dólares",
+        "3,6 milhões de dólares",
+        "366 mil dólares"
+      ],
+      "resposta_correta": "36,6 milhões de dólares"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que data exata Jassy formalmente assumiu o cargo de CEO da Amazon, coincidindo com outra data histórica da empresa?",
+      "opcoes": [
+        "5 de julho de 2021, o mesmo dia em que Bezos fundou a empresa em 1994",
+        "1º de janeiro de 2021",
+        "16 de julho de 2021",
+        "13 de janeiro de 2021"
+      ],
+      "resposta_correta": "5 de julho de 2021, o mesmo dia em que Bezos fundou a empresa em 1994"
+    },
+    {
+      "n": 14,
+      "pergunta": "Além de sua carreira na Amazon, de qual franquia esportiva de hóquei no gelo de Seattle Jassy é copropietário minoritário?",
+      "opcoes": [
+        "Seattle Kraken",
+        "Seattle Seahawks",
+        "Seattle Mariners",
+        "Seattle Sounders"
+      ],
+      "resposta_correta": "Seattle Kraken"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que ano específico Bezos formalmente anunciou Jassy como seu sucessor, durante um relatório trimestral de resultados?",
+      "opcoes": [
+        "Fevereiro de 2021",
+        "Julho de 2021",
+        "2016",
+        "2006"
+      ],
+      "resposta_correta": "Fevereiro de 2021"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual outro executivo, chefe do negócio de consumo da Amazon, também era considerado potencial sucessor de Bezos, segundo uma fonte?",
+      "opcoes": [
+        "Jeff Wilke",
+        "Jeff Holden",
+        "Shel Kaphan",
+        "David Shaw"
+      ],
+      "resposta_correta": "Jeff Wilke"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que ano Andy Jassy se casou com sua esposa, Elana Caplan, coincidindo com o mesmo ano em que entrou na Amazon?",
+      "opcoes": [
+        "1997",
+        "2003",
+        "2006",
+        "2021"
+      ],
+      "resposta_correta": "1997"
+    },
+    {
+      "n": 18,
+      "pergunta": "Além da AWS, Andy Jassy também é creditado como fundador de qual outro serviço da Amazon, ligado a música?",
+      "opcoes": [
+        "Amazon Music",
+        "Amazon Prime Video",
+        "Twitch",
+        "Amazon Fresh"
+      ],
+      "resposta_correta": "Amazon Music"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo estimativas, qual era o patrimônio líquido aproximado de Andy Jassy em 2023?",
+      "opcoes": [
+        "Cerca de 400 milhões de dólares",
+        "Cerca de 4 milhões de dólares",
+        "Cerca de 4 bilhões de dólares",
+        "Cerca de 40 mil dólares"
+      ],
+      "resposta_correta": "Cerca de 400 milhões de dólares"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando toda a trajetória de Jassy — do papel de 'sombra' de Bezos até se tornar CEO — o que essa história melhor ilustra sobre carreiras dentro de grandes empresas de tecnologia?",
+      "opcoes": [
+        "Como proximidade estratégica e execução consistente ao longo de décadas podem levar à liderança máxima de uma empresa",
+        "Que só é possível chegar a CEO fundando a própria empresa do zero",
+        "Que carreiras de sucesso sempre exigem trocar de empresa constantemente",
+        "Que apenas familiares dos fundadores podem assumir a liderança"
+      ],
+      "resposta_correta": "Como proximidade estratégica e execução consistente ao longo de décadas podem levar à liderança máxima de uma empresa"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 1,
+    "tema_desafio": "Memes e a Propagação da Cultura Digital",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Wikipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - tema sensivel (simbolo de odio) tratado de forma estritamente factual, breve e neutra, sem detalhar ideologias ou reproduzir conteudo ofensivo, focando na dimensao historica/cultural do fenomeno de meme."
+  },
+  "saiba_mais": "Curiosidade: o mesmo meme pode ganhar significados opostos em contextos diferentes do mundo. Pepe the Frog, criado como um simples personagem de quadrinhos relaxado em 2005, acabou associado a discurso de ódio nos Estados Unidos por volta de 2016 — mas, poucos anos depois, foi ressignificado como símbolo de manifestantes pró-democracia em Hong Kong, mostrando como um mesmo símbolo pode carregar mensagens completamente diferentes dependendo de quem o usa e onde.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "A partir de 2008, em quais duas plataformas a popularidade de Pepe the Frog cresceu significativamente, segundo registros?",
+      "opcoes": [
+        "Myspace e 4chan (além do Gaia Online)",
+        "Instagram e TikTok",
+        "LinkedIn e Pinterest",
+        "Netflix e Spotify"
+      ],
+      "resposta_correta": "Myspace e 4chan (além do Gaia Online)"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano, segundo registros, Pepe the Frog foi identificado como um dos memes mais populares do Tumblr?",
+      "opcoes": [
+        "2015",
+        "2005",
+        "2008",
+        "2019"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano associações negativas específicas levaram a Liga Antidifamação (ADL) a listar Pepe the Frog em seu banco de dados de símbolos de ódio, segundo registros factuais do próprio caso?",
+      "opcoes": [
+        "2016",
+        "2005",
+        "2008",
+        "2019"
+      ],
+      "resposta_correta": "2016"
+    },
+    {
+      "n": 4,
+      "pergunta": "Diante dessa situação, que tipo de ação legal Matt Furie, o criador original do personagem, passou a mover?",
+      "opcoes": [
+        "Processos por violação de direitos autorais contra usos associados a discurso de ódio",
+        "Nenhuma ação, ele decidiu abandonar totalmente o personagem",
+        "Um processo para banir o personagem de toda a internet",
+        "Uma parceria comercial com grupos extremistas para 'reeducar' o símbolo"
+      ],
+      "resposta_correta": "Processos por violação de direitos autorais contra usos associados a discurso de ódio"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual foi o objetivo declarado de Furie ao mover essas ações, segundo relatos?",
+      "opcoes": [
+        "'Reclamar' o personagem, reafirmando seu significado original",
+        "Lucrar financeiramente com os processos",
+        "Impedir qualquer uso do personagem, mesmo positivo",
+        "Vender os direitos autorais para uma grande empresa"
+      ],
+      "resposta_correta": "'Reclamar' o personagem, reafirmando seu significado original"
+    },
+    {
+      "n": 6,
+      "pergunta": "Anos depois, em protestos em Hong Kong, Pepe the Frog foi ressignificado de que forma, segundo registros jornalísticos daquele contexto específico?",
+      "opcoes": [
+        "Como símbolo de manifestantes pró-democracia, distante do uso anterior associado a grupos de extrema-direita nos EUA",
+        "Continuou exclusivamente com o mesmo significado anterior, sem nenhuma mudança",
+        "Foi banido totalmente da região",
+        "Nunca chegou a aparecer em nenhum contexto asiático"
+      ],
+      "resposta_correta": "Como símbolo de manifestantes pró-democracia, distante do uso anterior associado a grupos de extrema-direita nos EUA"
+    },
+    {
+      "n": 7,
+      "pergunta": "O que essa diferença de uso do mesmo meme, em contextos completamente diferentes, ilustra bem sobre a cultura de internet?",
+      "opcoes": [
+        "Como o significado de um símbolo pode variar radicalmente conforme o contexto cultural e político em que é usado",
+        "Que memes sempre mantêm exatamente o mesmo significado em qualquer lugar do mundo",
+        "Que apenas memes de origem americana podem ser reapropriados",
+        "Que memes nunca mudam de significado ao longo do tempo"
+      ],
+      "resposta_correta": "Como o significado de um símbolo pode variar radicalmente conforme o contexto cultural e político em que é usado"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual outro personagem de meme, associado a rostos rabiscados de forma simples expressando malícia, é citado como criado por Carlos Ramirez, por volta de 2008?",
+      "opcoes": [
+        "Trollface",
+        "Doge",
+        "Success Kid",
+        "Bad Luck Brian"
+      ],
+      "resposta_correta": "Trollface"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual raça de cachorro está associada ao meme 'Doge', popularizado a partir de 2010?",
+      "opcoes": [
+        "Shiba Inu",
+        "Labrador",
+        "Poodle",
+        "Pastor Alemão"
+      ],
+      "resposta_correta": "Shiba Inu"
+    },
+    {
+      "n": 10,
+      "pergunta": "Como se chamava a cadela Shiba Inu que originou o meme Doge?",
+      "opcoes": [
+        "Kabosu",
+        "Tardar Sauce",
+        "Grumpy",
+        "Mochi"
+      ],
+      "resposta_correta": "Kabosu"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano a criptomoeda Dogecoin, inspirada nesse meme, foi lançada?",
+      "opcoes": [
+        "2013",
+        "2010",
+        "2007",
+        "2019"
+      ],
+      "resposta_correta": "2013"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual meme de imagem de bebê, associado a uma expressão de determinação/vitória, ficou popular a partir de 2010?",
+      "opcoes": [
+        "Success Kid",
+        "Bad Luck Brian",
+        "Grumpy Cat",
+        "Trollface"
+      ],
+      "resposta_correta": "Success Kid"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual meme de tradução mal feita de um jogo japonês (Zero Wing), de 2001, é considerado um dos primeiros memes virais de texto/imagem da internet?",
+      "opcoes": [
+        "'All Your Base Are Belong to Us'",
+        "'O RLY?'",
+        "'Y U No Guy'",
+        "'Forever Alone'"
+      ],
+      "resposta_correta": "'All Your Base Are Belong to Us'"
+    },
+    {
+      "n": 14,
+      "pergunta": "O meme do 'LOLcat', com fotos de gatos e legendas em inglês incorreto propositalmente, ganhou grande popularidade a partir de que ano, com a criação de um site dedicado ao formato?",
+      "opcoes": [
+        "2007",
+        "1996",
+        "2010",
+        "2012"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual banco de dados online, criado em 2008, se tornou referência para documentar a origem e evolução histórica de memes de internet?",
+      "opcoes": [
+        "Know Your Meme",
+        "MemeArchive",
+        "InternetHistory.org",
+        "ViralTracker"
+      ],
+      "resposta_correta": "Know Your Meme"
+    },
+    {
+      "n": 16,
+      "pergunta": "Cite o meme viral de 2017 baseado numa foto de banco de imagens (stock photo) de um homem olhando para outra mulher enquanto sua namorada observa reprovadoramente.",
+      "opcoes": [
+        "'Distracted Boyfriend'",
+        "'Success Kid'",
+        "'Doge'",
+        "'Trollface'"
+      ],
+      "resposta_correta": "'Distracted Boyfriend'"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual formato de meme, popularizado a partir de 2015, usa um cantor/rapper em dois quadrinhos reagindo com desaprovação e aprovação a diferentes situações?",
+      "opcoes": [
+        "'Drake Hotline Bling'",
+        "'Trollface'",
+        "'Success Kid'",
+        "'Grumpy Cat'"
+      ],
+      "resposta_correta": "'Drake Hotline Bling'"
+    },
+    {
+      "n": 18,
+      "pergunta": "O meme de quadrinhos 'Loss.jpg', de 2008, teve origem em qual webcomic específico?",
+      "opcoes": [
+        "'Ctrl+Alt+Del'",
+        "'Boy's Club'",
+        "'xkcd'",
+        "'Penny Arcade'"
+      ],
+      "resposta_correta": "'Ctrl+Alt+Del'"
+    },
+    {
+      "n": 19,
+      "pergunta": "Quem criou o webcomic 'Ctrl+Alt+Del', de onde surgiu o meme 'Loss.jpg'?",
+      "opcoes": [
+        "Tim Buckley",
+        "Matt Furie",
+        "Carlos Ramirez",
+        "Rick Astley"
+      ],
+      "resposta_correta": "Tim Buckley"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando toda a evolução dos memes discutida — de conceito acadêmico em 1976 a fenômenos financeiros como o Dogecoin — o que essa trajetória melhor ilustra sobre cultura de internet?",
+      "opcoes": [
+        "Como ideias simples podem se transformar e ganhar valor cultural, social e até econômico inesperado",
+        "Que memes sempre tiveram exatamente o mesmo formato desde sua criação original",
+        "Que apenas conteúdo profissional e bem produzido consegue viralizar",
+        "Que memes nunca têm nenhum impacto além do entretenimento passageiro"
+      ],
+      "resposta_correta": "Como ideias simples podem se transformar e ganhar valor cultural, social e até econômico inesperado"
+    }
+  ]
+}

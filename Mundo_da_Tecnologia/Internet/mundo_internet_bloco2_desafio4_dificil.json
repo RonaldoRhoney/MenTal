@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 4,
+    "tema_desafio": "Android e a evolução dos sistemas móveis",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: mesmo depois de abandonar publicamente os nomes de sobremesas a partir do Android 10, o Google continuou usando codinomes doces internamente para o desenvolvimento — incluindo nomes criativos como 'Red Velvet Cake', 'Tiramisu' e até 'Baklava', mantendo viva a tradição só para quem trabalha por trás das cortinas do sistema.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "A partir de qual versão do Android o Google começou a tradição de nomear versões com sobremesas?",
+      "opcoes": [
+        "1.5, batizada de Cupcake",
+        "1.0, batizada de Donut",
+        "2.0, batizada de Eclair",
+        "3.0, batizada de Honeycomb"
+      ],
+      "resposta_correta": "1.5, batizada de Cupcake"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que mês e ano o Cupcake (Android 1.5) foi lançado?",
+      "opcoes": [
+        "Abril de 2009",
+        "Setembro de 2008",
+        "Janeiro de 2010",
+        "Dezembro de 2011"
+      ],
+      "resposta_correta": "Abril de 2009"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual foi o primeiro recurso de destaque trazido pelo Cupcake, segundo registros?",
+      "opcoes": [
+        "Suporte a teclados virtuais de terceiros",
+        "Reconhecimento facial",
+        "Câmera com zoom óptico",
+        "Suporte a impressão sem fio"
+      ],
+      "resposta_correta": "Suporte a teclados virtuais de terceiros"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual foi o único caso em que duas versões diferentes do Android receberam o mesmo nome de doce, segundo uma fonte?",
+      "opcoes": [
+        "O 'donut'",
+        "O 'eclair'",
+        "O 'cupcake'",
+        "Nunca houve repetição de nomes"
+      ],
+      "resposta_correta": "O 'donut'"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual smartphone foi o primeiro a trazer o Android para o Brasil, segundo registros?",
+      "opcoes": [
+        "Motorola Milestone",
+        "HTC Dream",
+        "Samsung Galaxy S",
+        "Nexus One"
+      ],
+      "resposta_correta": "Motorola Milestone"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual versão do Android trouxe suporte a contas de e-mail corporativas via Microsoft Exchange, abrindo portas ao mercado empresarial?",
+      "opcoes": [
+        "Eclair",
+        "Cupcake",
+        "Donut",
+        "Froyo"
+      ],
+      "resposta_correta": "Eclair"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual versão do Android ficou conhecida como 'FroYo', abreviação de qual sobremesa gelada?",
+      "opcoes": [
+        "Frozen Yogurt (iogurte congelado)",
+        "Fruit Yogurt (iogurte de fruta)",
+        "Frozen Yolk (gema congelada)",
+        "Free Yogurt (iogurte grátis)"
+      ],
+      "resposta_correta": "Frozen Yogurt (iogurte congelado)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual versão específica do Android foi desenvolvida exclusivamente para tablets, lançada em 2011?",
+      "opcoes": [
+        "Honeycomb",
+        "Gingerbread",
+        "Ice Cream Sandwich",
+        "Jelly Bean"
+      ],
+      "resposta_correta": "Honeycomb"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano o Google decidiu encerrar a tradição de nomear versões do Android com sobremesas, adotando apenas números?",
+      "opcoes": [
+        "2019 (a partir do Android 10)",
+        "2009",
+        "2015",
+        "2008"
+      ],
+      "resposta_correta": "2019 (a partir do Android 10)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual foi um dos principais motivos citados para o fim da nomenclatura com sobremesas?",
+      "opcoes": [
+        "Desafios de globalização, já que muitos doces eram desconhecidos em certos mercados",
+        "Falta de doces novos com todas as letras do alfabeto",
+        "Uma reclamação formal de fabricantes de sobremesas",
+        "Uma decisão exclusivamente estética, sem outro motivo"
+      ],
+      "resposta_correta": "Desafios de globalização, já que muitos doces eram desconhecidos em certos mercados"
+    },
+    {
+      "n": 11,
+      "pergunta": "O que a Google costuma colocar em sua sede a cada lançamento de nova versão do Android, com o nome da respectiva sobremesa?",
+      "opcoes": [
+        "Uma estátua com o robô do Android e o doce correspondente",
+        "Uma placa apenas com o número da versão",
+        "Um mural pintado à mão",
+        "Uma réplica em miniatura do primeiro celular Android"
+      ],
+      "resposta_correta": "Uma estátua com o robô do Android e o doce correspondente"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo o histórico técnico, sobre qual versão do kernel Linux o Android 1.6 (Donut) foi baseado?",
+      "opcoes": [
+        "Linux Kernel 2.6.29",
+        "Linux Kernel 5.0",
+        "Linux Kernel 1.0",
+        "Linux Kernel 3.10"
+      ],
+      "resposta_correta": "Linux Kernel 2.6.29"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual foi a primeira versão 'alpha' do Android, lançada antes mesmo da versão comercial 1.0, segundo linha do tempo técnica?",
+      "opcoes": [
+        "Uma versão alpha lançada em novembro de 2007",
+        "A própria versão 1.0, sem nenhuma alpha anterior",
+        "Uma versão beta lançada em 2005",
+        "Não existiu nenhuma versão alpha registrada"
+      ],
+      "resposta_correta": "Uma versão alpha lançada em novembro de 2007"
+    },
+    {
+      "n": 14,
+      "pergunta": "Comparado a outros sistemas com codinomes internos, a que outro sistema operacional famoso o texto compara a tradição de nomear versões (usando grandes felinos)?",
+      "opcoes": [
+        "Mac OS (com nomes como Leopard, Tiger, Lion)",
+        "Windows (com nomes de cidades)",
+        "Linux (com nomes de animais aquáticos)",
+        "iOS (com nomes de constelações)"
+      ],
+      "resposta_correta": "Mac OS (com nomes como Leopard, Tiger, Lion)"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual versão do Android trouxe recurso de síntese de voz, permitindo que os aplicativos 'falassem' com o usuário?",
+      "opcoes": [
+        "Donut",
+        "Cupcake",
+        "Eclair",
+        "Ice Cream Sandwich"
+      ],
+      "resposta_correta": "Donut"
+    },
+    {
+      "n": 16,
+      "pergunta": "Que melhoria específica de navegação o Google Maps ganhou na versão Eclair do Android, pela primeira vez?",
+      "opcoes": [
+        "Navegação por rota entre dois pontos",
+        "Visualização em 3D das ruas",
+        "Modo noturno automático",
+        "Integração com redes sociais"
+      ],
+      "resposta_correta": "Navegação por rota entre dois pontos"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo uma fonte, quantos meses, aproximadamente, separaram o lançamento do Cupcake e do Donut?",
+      "opcoes": [
+        "Cerca de 5 meses",
+        "Cerca de 1 ano",
+        "Cerca de 1 mês",
+        "Cerca de 2 anos"
+      ],
+      "resposta_correta": "Cerca de 5 meses"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual desafio de idioma específico é citado como problemático na convenção alfabética de nomes de sobremesas do Android?",
+      "opcoes": [
+        "Confusão em línguas como o japonês",
+        "Falta de tradução para o espanhol",
+        "Problemas exclusivos com o alfabeto cirílico",
+        "Nenhum problema de idioma foi identificado"
+      ],
+      "resposta_correta": "Confusão em línguas como o japonês"
+    },
+    {
+      "n": 19,
+      "pergunta": "Após o fim da nomenclatura com sobremesas em público, o Google continuou usando nomes internos de sobremesas para desenvolvimento?",
+      "opcoes": [
+        "Sim, segundo registros, versões internas continuaram recebendo nomes como Red Velvet Cake, Tiramisu e Baklava",
+        "Não, o uso de qualquer nome de sobremesa foi completamente abandonado",
+        "Sim, mas apenas com nomes de frutas, nunca sobremesas",
+        "Não há informação disponível sobre isso"
+      ],
+      "resposta_correta": "Sim, segundo registros, versões internas continuaram recebendo nomes como Red Velvet Cake, Tiramisu e Baklava"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual versão específica do Android trouxe o nome 'Gingerbread', lançada em dezembro de 2011 segundo um dos registros consultados?",
+      "opcoes": [
+        "2.3",
+        "1.6",
+        "3.0",
+        "4.0"
+      ],
+      "resposta_correta": "2.3"
+    }
+  ]
+}

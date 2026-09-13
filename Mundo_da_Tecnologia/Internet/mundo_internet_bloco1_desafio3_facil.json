@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 3,
+    "tema_desafio": "Navegadores e a Guerra dos Browsers",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - disputa comercial tratada de forma factual e neutra."
+  },
+  "saiba_mais": "Curiosidade: em 1997, no auge da Guerra dos Navegadores, a equipe da Microsoft construiu um enorme 'e' (o símbolo do Internet Explorer) e o colocou, de surpresa, no gramado da própria sede da Netscape — uma provocação e tanto entre duas empresas disputando o controle da web.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual foi o primeiro navegador gráfico a se tornar popular mundialmente?",
+      "opcoes": [
+        "Mosaic",
+        "Netscape Navigator",
+        "Internet Explorer",
+        "WorldWideWeb"
+      ],
+      "resposta_correta": "Mosaic"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Mosaic foi lançado?",
+      "opcoes": [
+        "1993",
+        "1990",
+        "1998",
+        "1985"
+      ],
+      "resposta_correta": "1993"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual centro de pesquisa o Mosaic foi desenvolvido?",
+      "opcoes": [
+        "NCSA (Centro Nacional de Aplicações de Supercomputação)",
+        "CERN",
+        "MIT Media Lab",
+        "Bell Labs"
+      ],
+      "resposta_correta": "NCSA (Centro Nacional de Aplicações de Supercomputação)"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem liderou o desenvolvimento do Mosaic?",
+      "opcoes": [
+        "Marc Andreessen",
+        "Tim Berners-Lee",
+        "Bill Gates",
+        "Jim Clark"
+      ],
+      "resposta_correta": "Marc Andreessen"
+    },
+    {
+      "n": 5,
+      "pergunta": "Que empresa Marc Andreessen fundou depois de sair da NCSA?",
+      "opcoes": [
+        "Netscape Communications",
+        "Microsoft",
+        "Google",
+        "Apple"
+      ],
+      "resposta_correta": "Netscape Communications"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual foi o navegador de sucesso lançado pela Netscape em 1994?",
+      "opcoes": [
+        "Netscape Navigator",
+        "Internet Explorer",
+        "Chrome",
+        "Firefox"
+      ],
+      "resposta_correta": "Netscape Navigator"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual empresa lançou o Internet Explorer para competir com a Netscape?",
+      "opcoes": [
+        "Microsoft",
+        "Apple",
+        "IBM",
+        "Google"
+      ],
+      "resposta_correta": "Microsoft"
+    },
+    {
+      "n": 8,
+      "pergunta": "Como ficou conhecida a disputa comercial entre Netscape e Microsoft pelo domínio do mercado de navegadores?",
+      "opcoes": [
+        "Guerra dos Navegadores",
+        "Guerra dos Sistemas",
+        "Guerra da Internet",
+        "Batalha do Código"
+      ],
+      "resposta_correta": "Guerra dos Navegadores"
+    },
+    {
+      "n": 9,
+      "pergunta": "Aproximadamente em que período histórico ocorreu a Guerra dos Navegadores?",
+      "opcoes": [
+        "De 1995 a 1999",
+        "De 1970 a 1980",
+        "De 2000 a 2010",
+        "De 1985 a 1990"
+      ],
+      "resposta_correta": "De 1995 a 1999"
+    },
+    {
+      "n": 10,
+      "pergunta": "Diferente do Netscape, que precisava vender seu produto, como a Microsoft distribuía o Internet Explorer?",
+      "opcoes": [
+        "Gratuitamente, embutido junto com o Windows",
+        "Cobrando o dobro do preço da Netscape",
+        "Apenas para empresas, nunca para o público comum",
+        "Exclusivamente por assinatura mensal"
+      ],
+      "resposta_correta": "Gratuitamente, embutido junto com o Windows"
+    },
+    {
+      "n": 11,
+      "pergunta": "Quem, além de Marc Andreessen, desenvolveu o Mosaic junto com ele na NCSA?",
+      "opcoes": [
+        "Eric Bina",
+        "Jim Clark",
+        "Bill Gates",
+        "Tim Berners-Lee"
+      ],
+      "resposta_correta": "Eric Bina"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em qual universidade Marc Andreessen e Eric Bina desenvolveram o Mosaic?",
+      "opcoes": [
+        "Universidade de Illinois",
+        "Stanford",
+        "Harvard",
+        "MIT"
+      ],
+      "resposta_correta": "Universidade de Illinois"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quem se juntou a Marc Andreessen para fundar a empresa que se tornaria a Netscape?",
+      "opcoes": [
+        "Jim Clark, fundador da Silicon Graphics",
+        "Bill Gates",
+        "Steve Jobs",
+        "Linus Torvalds"
+      ],
+      "resposta_correta": "Jim Clark, fundador da Silicon Graphics"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que ano o Mosaic foi finalmente descontinuado, já perdendo espaço para a Netscape?",
+      "opcoes": [
+        "1997",
+        "1993",
+        "1995",
+        "2000"
+      ],
+      "resposta_correta": "1997"
+    },
+    {
+      "n": 15,
+      "pergunta": "Que recurso importante o Netscape trouxe, melhorando a usabilidade em relação ao Mosaic?",
+      "opcoes": [
+        "Exibir páginas conforme elas eram carregadas",
+        "Ser o primeiro a suportar imagens coloridas",
+        "Ser o único a funcionar sem internet",
+        "Permitir jogos dentro do navegador"
+      ],
+      "resposta_correta": "Exibir páginas conforme elas eram carregadas"
+    },
+    {
+      "n": 16,
+      "pergunta": "Aproximadamente qual fatia do mercado de navegadores a Netscape chegou a controlar em 1995?",
+      "opcoes": [
+        "Entre 75% e 80%",
+        "Menos de 5%",
+        "Exatamente 50%",
+        "100%, sem nenhuma concorrência"
+      ],
+      "resposta_correta": "Entre 75% e 80%"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual linguagem de programação a Netscape criou, dando às páginas web capacidades computacionais mais avançadas?",
+      "opcoes": [
+        "JavaScript",
+        "Python",
+        "C++",
+        "PHP"
+      ],
+      "resposta_correta": "JavaScript"
+    },
+    {
+      "n": 18,
+      "pergunta": "Como resposta ao JavaScript, qual tecnologia a Microsoft ajudou a popularizar, tornando-se padrão para o design de páginas web?",
+      "opcoes": [
+        "CSS (Cascading Style Sheets)",
+        "HTML5",
+        "Flash",
+        "XML"
+      ],
+      "resposta_correta": "CSS (Cascading Style Sheets)"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em que ano específico o Internet Explorer foi lançado pela primeira vez, segundo uma das fontes?",
+      "opcoes": [
+        "1995",
+        "1993",
+        "1998",
+        "1990"
+      ],
+      "resposta_correta": "1995"
+    },
+    {
+      "n": 20,
+      "pergunta": "De qual empresa a Microsoft licenciou tecnologia para criar sua primeira versão do Internet Explorer?",
+      "opcoes": [
+        "Spyglass Inc.",
+        "Netscape diretamente",
+        "NCSA diretamente",
+        "IBM"
+      ],
+      "resposta_correta": "Spyglass Inc."
+    }
+  ]
+}

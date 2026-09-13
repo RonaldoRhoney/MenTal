@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 2,
+    "tema_desafio": "Inteligência Artificial e o Futuro da Internet",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: entre a criação do termo 'Inteligência Artificial', em 1956, e o lançamento do ChatGPT, em 2022, o campo passou por dois períodos conhecidos como 'invernos da IA' — fases de baixo investimento e interesse, entre 1974-1980 e 1987-1993, quando muitos pesquisadores duvidavam que a tecnologia algum dia cumpriria suas promessas mais ambiciosas. A explosão de interesse que vemos hoje é, na verdade, o resultado de décadas de altos e baixos.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Além de John McCarthy, quais outros três pesquisadores organizaram a Conferência de Dartmouth de 1956?",
+      "opcoes": [
+        "Marvin Minsky, Nathaniel Rochester e Claude Shannon",
+        "Alan Turing, Sam Altman e Elon Musk",
+        "Warren McCulloch, Walter Pitts e Frank Rosenblatt",
+        "Roger Dingledine, Nick Mathewson e Paul Syverson"
+      ],
+      "resposta_correta": "Marvin Minsky, Nathaniel Rochester e Claude Shannon"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual foi considerado o primeiro software de IA funcional, criado no mesmo ano da Conferência de Dartmouth?",
+      "opcoes": [
+        "Logic Theorist",
+        "ChatGPT",
+        "AlexNet",
+        "Perceptron"
+      ],
+      "resposta_correta": "Logic Theorist"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quais três pesquisadores criaram o Logic Theorist?",
+      "opcoes": [
+        "Allen Newell, J.C. Shaw e Herbert Simon",
+        "John McCarthy, Marvin Minsky e Claude Shannon",
+        "Warren McCulloch, Walter Pitts e Alan Turing",
+        "Frank Rosenblatt sozinho"
+      ],
+      "resposta_correta": "Allen Newell, J.C. Shaw e Herbert Simon"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem desenvolveu o Perceptron, na década de 1960, um modelo de rede neural que aprendia por tentativa e erro?",
+      "opcoes": [
+        "Frank Rosenblatt",
+        "John McCarthy",
+        "Alan Turing",
+        "Herbert Simon"
+      ],
+      "resposta_correta": "Frank Rosenblatt"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual livro de 1969, escrito por Marvin Minsky e Seymour Papert, desencorajou temporariamente o interesse em redes neurais?",
+      "opcoes": [
+        "'Perceptrons'",
+        "'Inteligência Artificial: Uma Abordagem Moderna'",
+        "'Computing Machinery and Intelligence'",
+        "'The Society of Mind'"
+      ],
+      "resposta_correta": "'Perceptrons'"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que década ocorreu o ressurgimento das redes neurais, impulsionado pelo algoritmo de retropropagação (backpropagation)?",
+      "opcoes": [
+        "Década de 1980",
+        "Década de 1950",
+        "Década de 2010",
+        "Década de 1940"
+      ],
+      "resposta_correta": "Década de 1980"
+    },
+    {
+      "n": 7,
+      "pergunta": "O que a técnica de retropropagação permitiu, tecnicamente, em relação às redes neurais?",
+      "opcoes": [
+        "Que redes mais profundas fossem treinadas de forma mais eficiente",
+        "Que computadores fossem fisicamente menores",
+        "Que a internet se tornasse mais rápida",
+        "Que emails fossem enviados com mais segurança"
+      ],
+      "resposta_correta": "Que redes mais profundas fossem treinadas de forma mais eficiente"
+    },
+    {
+      "n": 8,
+      "pergunta": "Que avanço técnico específico, em 2012, é citado como grande demonstração do potencial do aprendizado profundo (deep learning)?",
+      "opcoes": [
+        "AlexNet",
+        "ChatGPT",
+        "Logic Theorist",
+        "Perceptron"
+      ],
+      "resposta_correta": "AlexNet"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em qual artigo técnico de 2017 foi apresentada a arquitetura Transformer, base fundamental para os modelos de linguagem atuais?",
+      "opcoes": [
+        "'Attention Is All You Need'",
+        "'Perceptrons'",
+        "'Computing Machinery and Intelligence'",
+        "'A Mathematical Theory of Communication'"
+      ],
+      "resposta_correta": "'Attention Is All You Need'"
+    },
+    {
+      "n": 10,
+      "pergunta": "A arquitetura Transformer, do artigo de 2017, é considerada fundamental para qual tipo de IA amplamente usada hoje?",
+      "opcoes": [
+        "Grandes Modelos de Linguagem (LLMs), como os usados em chatbots modernos",
+        "Exclusivamente jogos eletrônicos",
+        "Apenas sistemas de segurança bancária",
+        "Somente softwares de edição de imagem tradicional"
+      ],
+      "resposta_correta": "Grandes Modelos de Linguagem (LLMs), como os usados em chatbots modernos"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em janeiro de 2023, pouco depois do lançamento do ChatGPT, qual decisão a Microsoft tomou em relação à OpenAI?",
+      "opcoes": [
+        "Investiu um novo aporte de 10 bilhões de dólares na empresa",
+        "Comprou totalmente a empresa, encerrando sua independência",
+        "Processou a OpenAI por concorrência desleal",
+        "Não tomou nenhuma decisão relevante"
+      ],
+      "resposta_correta": "Investiu um novo aporte de 10 bilhões de dólares na empresa"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma fonte técnica, com quantos terabytes de texto o modelo GPT-3.5 foi pré-treinado, exigindo capacidade computacional imensa?",
+      "opcoes": [
+        "45 TB",
+        "4,5 GB",
+        "450 KB",
+        "4,5 TB"
+      ],
+      "resposta_correta": "45 TB"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual infraestrutura de computação a Microsoft disponibilizou para viabilizar esse treinamento, segundo a mesma fonte?",
+      "opcoes": [
+        "Um dos computadores mais potentes do mundo, com milhares de CPUs e GPUs",
+        "Um único notebook comum",
+        "Nenhuma infraestrutura extra foi necessária",
+        "Apenas servidores de e-mail padrão"
+      ],
+      "resposta_correta": "Um dos computadores mais potentes do mundo, com milhares de CPUs e GPUs"
+    },
+    {
+      "n": 14,
+      "pergunta": "Para muitas pessoas, segundo uma retrospectiva, o ChatGPT representou o quê em relação ao contato com IA?",
+      "opcoes": [
+        "O primeiro contato real delas com uma inteligência artificial",
+        "Apenas mais um aplicativo sem nenhuma relevância especial",
+        "Uma ferramenta exclusiva para grandes empresas",
+        "Um produto que já existia identicamente há décadas"
+      ],
+      "resposta_correta": "O primeiro contato real delas com uma inteligência artificial"
+    },
+    {
+      "n": 15,
+      "pergunta": "No contexto empresarial, para que tipo de aplicação prática a IA moderna costuma ser usada, segundo uma retrospectiva?",
+      "opcoes": [
+        "Automação de processos, análise preditiva e personalização de experiências",
+        "Exclusivamente entretenimento sem nenhuma aplicação séria",
+        "Apenas jogos eletrônicos",
+        "Somente decoração de interiores"
+      ],
+      "resposta_correta": "Automação de processos, análise preditiva e personalização de experiências"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma retrospectiva sobre o impacto educacional, o que se discutiu amplamente ao longo de 2023, em instituições de ensino, sobre a chegada do ChatGPT?",
+      "opcoes": [
+        "Os impactos dessa inovação tanto na educação superior quanto na educação básica",
+        "Nenhum debate relevante ocorreu no campo educacional",
+        "Apenas debates sobre preço de equipamentos escolares",
+        "Discussões exclusivamente sobre transporte escolar"
+      ],
+      "resposta_correta": "Os impactos dessa inovação tanto na educação superior quanto na educação básica"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo uma fonte, apesar da popularização recente da IA, o que ainda é pouco compreendido pela maioria das pessoas, mesmo após a explosão de uso do ChatGPT?",
+      "opcoes": [
+        "O entendimento sobre o que é IA para além das áreas específicas de pesquisa, e a própria história de seu desenvolvimento",
+        "As pessoas já entendem perfeitamente todos os aspectos técnicos da IA",
+        "Não existe nenhuma lacuna de compreensão sobre o tema",
+        "Apenas o preço das ferramentas de IA é desconhecido"
+      ],
+      "resposta_correta": "O entendimento sobre o que é IA para além das áreas específicas de pesquisa, e a própria história de seu desenvolvimento"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual foi a motivação inicial dos participantes da Conferência de Dartmouth de 1956, segundo os registros do evento?",
+      "opcoes": [
+        "Discutir a possibilidade de criar máquinas inteligentes, capazes de reproduzir capacidades humanas",
+        "Debater exclusivamente políticas de patentes de tecnologia",
+        "Planejar a criação da internet comercial",
+        "Organizar competições de xadrez entre computadores"
+      ],
+      "resposta_correta": "Discutir a possibilidade de criar máquinas inteligentes, capazes de reproduzir capacidades humanas"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo uma retrospectiva de linha do tempo, quantas décadas de pesquisa, aproximadamente, antecederam a popularização comercial da IA generativa em 2022?",
+      "opcoes": [
+        "Cerca de oito décadas",
+        "Cerca de uma década",
+        "Cerca de duas décadas",
+        "Nenhuma pesquisa relevante antecedeu o ChatGPT"
+      ],
+      "resposta_correta": "Cerca de oito décadas"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a longa jornada da IA — de Turing decifrando códigos nazistas a chatbots de conversação em 2022 — melhor ilustra sobre inovações tecnológicas de grande impacto?",
+      "opcoes": [
+        "Que rupturas tecnológicas aparentemente repentinas costumam ser resultado de décadas de pesquisa cumulativa",
+        "Que toda inovação tecnológica surge de forma instantânea, sem nenhuma base histórica anterior",
+        "Que a IA foi inventada exclusivamente em 2022, sem nenhuma pesquisa prévia relevante",
+        "Que apenas uma única pessoa é responsável por toda a história da inteligência artificial"
+      ],
+      "resposta_correta": "Que rupturas tecnológicas aparentemente repentinas costumam ser resultado de décadas de pesquisa cumulativa"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 3,
+    "tema_desafio": "Navegadores e a Guerra dos Browsers",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: décadas depois da Guerra dos Navegadores que colocou Netscape contra Microsoft, nenhuma das duas empresas terminou como líder do mercado de navegadores — foi o Google Chrome, lançado só em 2008, que acabou dominando essa disputa no longo prazo, mostrando como batalhas tecnológicas vencidas num momento podem ser completamente redesenhadas décadas depois.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Após demitir a maior parte da equipe da Netscape em 2003, para qual empresa canadense a AOL terceirizou versões posteriores do navegador Netscape?",
+      "opcoes": [
+        "Mercurial Communications",
+        "Nokia Software",
+        "BlackBerry Labs",
+        "Corel Corporation"
+      ],
+      "resposta_correta": "Mercurial Communications"
+    },
+    {
+      "n": 2,
+      "pergunta": "Sob qual novo nome o antigo aplicativo web da Netscape foi rebatizado, já usando o Firefox como base tecnológica?",
+      "opcoes": [
+        "Netscape Browser",
+        "Netscape Prime",
+        "Netscape Reborn",
+        "Netscape Advance"
+      ],
+      "resposta_correta": "Netscape Browser"
+    },
+    {
+      "n": 3,
+      "pergunta": "Até que ano, segundo uma fonte recente, o nome 'Netscape' ainda era usado pela AOL, num pacote de internet de nicho com navegador próprio?",
+      "opcoes": [
+        "2025",
+        "2008",
+        "2010",
+        "1998"
+      ],
+      "resposta_correta": "2025"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual versão renovada do Firefox é citada como tendo ajudado a Mozilla a recuperar parte de sua fatia de mercado perdida?",
+      "opcoes": [
+        "Firefox Quantum",
+        "Firefox Classic",
+        "Firefox Ultra",
+        "Firefox Prime"
+      ],
+      "resposta_correta": "Firefox Quantum"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo uma análise, o Firefox conseguiu conquistar aproximadamente qual fatia do mercado, mesmo diante do domínio da Microsoft, em determinado momento de sua trajetória?",
+      "opcoes": [
+        "Cerca de 30%",
+        "Cerca de 90%",
+        "Menos de 1%",
+        "Exatamente 50%"
+      ],
+      "resposta_correta": "Cerca de 30%"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma retrospectiva, a luta contra o domínio de mercado de qual empresa é citada como uma das motivações culturais para o uso do Firefox, mesmo anos depois da guerra original?",
+      "opcoes": [
+        "Microsoft",
+        "Apple",
+        "Google",
+        "IBM"
+      ],
+      "resposta_correta": "Microsoft"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual foi a reação bem-humorada da Netscape à provocação da Microsoft do 'e' gigante colocado em seu gramado, segundo uma fonte?",
+      "opcoes": [
+        "Colocar seu próprio mascote em cima de um logotipo derrubado do Internet Explorer",
+        "Processar a Microsoft judicialmente pelo ato",
+        "Ignorar completamente o ocorrido",
+        "Retaliar construindo um logotipo ainda maior na sede da Microsoft"
+      ],
+      "resposta_correta": "Colocar seu próprio mascote em cima de um logotipo derrubado do Internet Explorer"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo o histórico do caso antitruste (conectado à Guerra dos Navegadores), em que verão específico o Internet Explorer finalmente ultrapassou o Netscape em uso, segundo uma fonte?",
+      "opcoes": [
+        "No verão de 1998",
+        "No verão de 1995",
+        "No verão de 2000",
+        "No verão de 1993"
+      ],
+      "resposta_correta": "No verão de 1998"
+    },
+    {
+      "n": 9,
+      "pergunta": "O anúncio de código aberto de janeiro de 1998, segundo uma análise, teve qual efeito colateral não intencional sobre o desenvolvimento do próprio navegador da Netscape naquele ano?",
+      "opcoes": [
+        "Atrasou o desenvolvimento da plataforma, dando à Microsoft a vantagem que faltava",
+        "Acelerou tanto o desenvolvimento que a Netscape recuperou a liderança imediatamente",
+        "Não teve nenhum efeito relevante sobre o cronograma",
+        "Fez a Microsoft desistir da concorrência"
+      ],
+      "resposta_correta": "Atrasou o desenvolvimento da plataforma, dando à Microsoft a vantagem que faltava"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual mecanismo de renderização (layout engine) o Firefox usa até hoje para exibir páginas web, resultado direto da reescrita de 1998?",
+      "opcoes": [
+        "Gecko",
+        "WebKit",
+        "Blink",
+        "Trident"
+      ],
+      "resposta_correta": "Gecko"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo um relato mais recente (2026), quando a batalha comercial já estava consolidada como derrota, que decisão rara para a época a Netscape tomou, em janeiro de 1998?",
+      "opcoes": [
+        "Disponibilizar o código-fonte do navegador, com desenvolvimento futuro por outro grupo",
+        "Fechar as portas da empresa imediatamente",
+        "Processar todos os seus concorrentes diretos",
+        "Comprar a Microsoft por completo"
+      ],
+      "resposta_correta": "Disponibilizar o código-fonte do navegador, com desenvolvimento futuro por outro grupo"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo essa mesma fonte, qual foi o 'lado positivo' desse movimento de abertura de código, apesar da derrota comercial da empresa?",
+      "opcoes": [
+        "A criação da Mozilla e, por consequência, do navegador Firefox",
+        "A recuperação imediata da liderança de mercado",
+        "A falência evitada da Microsoft",
+        "A criação do primeiro smartphone do mundo"
+      ],
+      "resposta_correta": "A criação da Mozilla e, por consequência, do navegador Firefox"
+    },
+    {
+      "n": 13,
+      "pergunta": "Cite uma tecnologia da web moderna, além do JavaScript, que teve origem ou popularização ligada à Netscape, segundo uma retrospectiva.",
+      "opcoes": [
+        "Cookies (usados para sessões e personalização)",
+        "O protocolo TCP/IP",
+        "O conceito de hipertexto em si",
+        "O padrão Unicode"
+      ],
+      "resposta_correta": "Cookies (usados para sessões e personalização)"
+    },
+    {
+      "n": 14,
+      "pergunta": "Além de cookies e JavaScript, qual protocolo de segurança essencial para praticamente todos os sites atuais também é associado à herança da Netscape?",
+      "opcoes": [
+        "SSL/TLS",
+        "FTP",
+        "SMTP",
+        "UUCP"
+      ],
+      "resposta_correta": "SSL/TLS"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma retrospectiva, mesmo perdendo a batalha comercial, a Netscape acabou influenciando a Web de forma duradoura através de quê?",
+      "opcoes": [
+        "Do software livre, através do legado deixado pelo projeto Mozilla",
+        "Exclusivamente de patentes registradas e nunca usadas",
+        "De processos judiciais vencidos contra a Microsoft",
+        "De uma fusão nunca concretizada com a Apple"
+      ],
+      "resposta_correta": "Do software livre, através do legado deixado pelo projeto Mozilla"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo um resumo cronológico mais recente, em que ano o Netscape 7 foi lançado, já tarde demais para reverter a situação de mercado?",
+      "opcoes": [
+        "2002",
+        "1998",
+        "2000",
+        "2008"
+      ],
+      "resposta_correta": "2002"
+    },
+    {
+      "n": 17,
+      "pergunta": "O termo 'cultura da Web aberta', citado numa retrospectiva sobre o legado do Netscape, se refere a quê, de forma geral?",
+      "opcoes": [
+        "Ao conjunto de padrões e práticas que ajudaram a moldar a internet como plataforma aberta",
+        "A uma lei específica aprovada pelo governo americano",
+        "A um evento único realizado apenas uma vez",
+        "A uma empresa específica fundada em 2002"
+      ],
+      "resposta_correta": "Ao conjunto de padrões e práticas que ajudaram a moldar a internet como plataforma aberta"
+    },
+    {
+      "n": 18,
+      "pergunta": "Comparando as datas, quantos anos, aproximadamente, se passaram entre o lançamento do Netscape Navigator (1994) e o encerramento total do suporte a produtos Netscape (2008)?",
+      "opcoes": [
+        "Cerca de 14 anos",
+        "Cerca de 5 anos",
+        "Cerca de 25 anos",
+        "Cerca de 2 anos"
+      ],
+      "resposta_correta": "Cerca de 14 anos"
+    },
+    {
+      "n": 19,
+      "pergunta": "O codinome inicial do Firefox, 'Phoenix', remete a que ideia simbólica, tipicamente associada a essa ave mitológica?",
+      "opcoes": [
+        "Renascimento a partir das cinzas — nesse caso, do legado da própria Netscape",
+        "Velocidade extrema de carregamento de páginas",
+        "Cor vermelha do logotipo original",
+        "Nenhuma relação simbólica, foi escolhido por acaso"
+      ],
+      "resposta_correta": "Renascimento a partir das cinzas — nesse caso, do legado da própria Netscape"
+    },
+    {
+      "n": 20,
+      "pergunta": "No fim das contas, qual empresa acabou se tornando, décadas depois da Guerra dos Navegadores original, a nova líder dominante do mercado de navegadores, superando inclusive o Internet Explorer/Edge?",
+      "opcoes": [
+        "Google, com o Chrome",
+        "Apple, com o Safari",
+        "Mozilla, com o Firefox",
+        "A Microsoft continua líder até hoje, sem interrupção"
+      ],
+      "resposta_correta": "Google, com o Chrome"
+    }
+  ]
+}

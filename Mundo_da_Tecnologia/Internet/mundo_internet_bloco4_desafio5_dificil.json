@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 5,
+    "tema_desafio": "Como a Internet Nos Afeta no Dia a Dia",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes oficiais, incluindo IBGE/PNAD Continua. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - dados de exclusao digital tratados de forma factual e estatistica, sem viés politico."
+  },
+  "saiba_mais": "Curiosidade: mesmo com o Brasil avançando rapidamente na inclusão digital — de 66,1% de acesso à internet em 2016 para quase 90% em 2024 — os números escondem uma desigualdade importante: entre os idosos ainda desconectados, mais de dois terços dizem simplesmente não saber usar a tecnologia, mostrando que ampliar o acesso à internet é só metade do desafio; a outra metade é ensinar as pessoas a usá-la de verdade.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo o IBGE, aproximadamente quantos brasileiros com 10 anos ou mais ainda não usavam internet em 2023?",
+      "opcoes": [
+        "22,4 milhões",
+        "2,24 milhões",
+        "224 milhões",
+        "224 mil"
+      ],
+      "resposta_correta": "22,4 milhões"
+    },
+    {
+      "n": 2,
+      "pergunta": "Isso representava, em 2023, aproximadamente qual porcentagem da população brasileira nessa faixa etária?",
+      "opcoes": [
+        "Cerca de 12%",
+        "Cerca de 50%",
+        "Cerca de 1%",
+        "Cerca de 90%"
+      ],
+      "resposta_correta": "Cerca de 12%"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo essa pesquisa, qual porcentagem das pessoas sem acesso à internet não tinha instrução ou tinha apenas ensino fundamental incompleto?",
+      "opcoes": [
+        "75,5%",
+        "10%",
+        "50%",
+        "99%"
+      ],
+      "resposta_correta": "75,5%"
+    },
+    {
+      "n": 4,
+      "pergunta": "Que faixa etária representava mais da metade das pessoas sem acesso à internet, segundo o levantamento?",
+      "opcoes": [
+        "Idosos com 60 anos ou mais",
+        "Crianças de 0 a 10 anos",
+        "Jovens de 15 a 24 anos",
+        "Adultos de 30 a 40 anos"
+      ],
+      "resposta_correta": "Idosos com 60 anos ou mais"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual foi o principal motivo citado pelos desconectados para não usar a internet?",
+      "opcoes": [
+        "Falta de conhecimento sobre como usar a tecnologia",
+        "Falta de interesse total no assunto",
+        "Proibição legal em algumas regiões",
+        "Ausência completa de qualquer infraestrutura no país"
+      ],
+      "resposta_correta": "Falta de conhecimento sobre como usar a tecnologia"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma fonte, quantos brasileiros estavam sem acesso à internet em 2016, no início da série histórica dessa pesquisa?",
+      "opcoes": [
+        "59,7 milhões",
+        "5,9 milhões",
+        "597 mil",
+        "5,97 milhões"
+      ],
+      "resposta_correta": "59,7 milhões"
+    },
+    {
+      "n": 7,
+      "pergunta": "Comparando 2016 e 2023, em quantos pontos percentuais aproximados cresceu o acesso à internet entre idosos?",
+      "opcoes": [
+        "Cerca de 41,3 pontos percentuais (de 24,7% para 66%)",
+        "Cerca de 1 ponto percentual",
+        "Cerca de 90 pontos percentuais",
+        "Nenhum crescimento foi registrado"
+      ],
+      "resposta_correta": "Cerca de 41,3 pontos percentuais (de 24,7% para 66%)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo dados de 2023, qual foi o meio de acesso à internet mais usado pela população conectada no Brasil?",
+      "opcoes": [
+        "Telefone celular",
+        "Microcomputador",
+        "Tablet",
+        "Televisão"
+      ],
+      "resposta_correta": "Telefone celular"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo a mesma fonte, o acesso à internet via microcomputador teve qual tendência entre 2016 e 2023?",
+      "opcoes": [
+        "Recuou de 63,2% para 34,2%",
+        "Cresceu de 34,2% para 63,2%",
+        "Permaneceu exatamente estável",
+        "Chegou a 100% dos usuários"
+      ],
+      "resposta_correta": "Recuou de 63,2% para 34,2%"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo dados de 2024, quantas pessoas ainda estavam sem acesso à internet no Brasil, uma leve redução em relação ao ano anterior?",
+      "opcoes": [
+        "20,5 milhões",
+        "2,05 milhões",
+        "205 milhões",
+        "205 mil"
+      ],
+      "resposta_correta": "20,5 milhões"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo dados de 2024, aproximadamente quantas pessoas usavam a internet no Brasil, correspondendo a 89,1% da população de 10 anos ou mais?",
+      "opcoes": [
+        "168 milhões",
+        "16,8 milhões",
+        "1,68 milhão",
+        "1,68 bilhão"
+      ],
+      "resposta_correta": "168 milhões"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo dados de 2024, entre os idosos que não acessavam a internet, qual porcentagem citou não saber usá-la como motivo?",
+      "opcoes": [
+        "66,1%",
+        "10%",
+        "30%",
+        "99%"
+      ],
+      "resposta_correta": "66,1%"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo a mesma pesquisa de 2024, como evoluíram os motivos econômicos (custo do serviço/equipamento) para exclusão digital, entre 2022 e 2024?",
+      "opcoes": [
+        "Perderam relevância, caindo de 16,2% para 10,9%",
+        "Aumentaram significativamente no período",
+        "Permaneceram exatamente estáveis",
+        "Se tornaram o motivo mais citado, superando todos os outros"
+      ],
+      "resposta_correta": "Perderam relevância, caindo de 16,2% para 10,9%"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo um estudo global citado numa fonte técnica, aproximadamente quantas pessoas no mundo ainda vivem sem acesso à eletricidade?",
+      "opcoes": [
+        "Cerca de 675 milhões",
+        "Cerca de 6,75 milhões",
+        "Cerca de 67,5 bilhões",
+        "Cerca de 675 mil"
+      ],
+      "resposta_correta": "Cerca de 675 milhões"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo a mesma fonte, aproximadamente quantas pessoas no mundo ainda vivem sem acesso à internet?",
+      "opcoes": [
+        "Cerca de 2,7 bilhões",
+        "Cerca de 27 milhões",
+        "Cerca de 270 mil",
+        "Cerca de 27 bilhões"
+      ],
+      "resposta_correta": "Cerca de 2,7 bilhões"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo a UNICEF, citada nessa mesma fonte, qual fração das crianças em idade escolar no mundo não tem acesso à internet em casa?",
+      "opcoes": [
+        "Cerca de dois terços",
+        "Cerca de um décimo",
+        "Praticamente nenhuma criança",
+        "Todas as crianças têm acesso garantido"
+      ],
+      "resposta_correta": "Cerca de dois terços"
+    },
+    {
+      "n": 17,
+      "pergunta": "Além do acesso em si, que outro conceito é citado como relevante para entender a exclusão digital, indo além de apenas 'ter' ou 'não ter' internet?",
+      "opcoes": [
+        "Dificuldades no uso significativo da tecnologia, mesmo com acesso disponível",
+        "Apenas o preço do equipamento eletrônico",
+        "Somente a velocidade da conexão",
+        "Exclusivamente a marca do celular utilizado"
+      ],
+      "resposta_correta": "Dificuldades no uso significativo da tecnologia, mesmo com acesso disponível"
+    },
+    {
+      "n": 18,
+      "pergunta": "Quais fatores adicionais, além de renda e educação, são citados como influentes na exclusão digital, segundo uma análise acadêmica?",
+      "opcoes": [
+        "Questões culturais, de gênero e de raça",
+        "Apenas fatores climáticos regionais",
+        "Somente a idade do usuário",
+        "Exclusivamente o tipo de conexão de internet"
+      ],
+      "resposta_correta": "Questões culturais, de gênero e de raça"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo uma associação de saúde digital, quantas teleconsultas foram estimadas apenas em 2022, exemplificando um uso prático da conectividade?",
+      "opcoes": [
+        "Mais de 30 milhões",
+        "Cerca de 3 mil",
+        "Cerca de 300",
+        "Cerca de 3 bilhões"
+      ],
+      "resposta_correta": "Mais de 30 milhões"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo uma análise, o que é apontado como uma das ferramentas mais poderosas no combate à desigualdade social na era digital?",
+      "opcoes": [
+        "A capacitação/letramento digital da população",
+        "Exclusivamente a distribuição gratuita de celulares",
+        "Apenas a redução do preço da internet",
+        "Somente investimentos em infraestrutura física de estradas"
+      ],
+      "resposta_correta": "A capacitação/letramento digital da população"
+    }
+  ]
+}

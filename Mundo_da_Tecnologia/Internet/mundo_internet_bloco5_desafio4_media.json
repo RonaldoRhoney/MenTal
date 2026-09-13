@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 4,
+    "tema_desafio": "Blockchain e Criptomoedas",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Decrypt e Fortune. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - nenhuma orientacao de investimento fornecida; posicionamento sobre conflito geopolitico mencionado apenas como fato historico factual, sem opiniao propria."
+  },
+  "saiba_mais": "Curiosidade: Vitalik Buterin escreveu o whitepaper original do Ethereum com apenas 19 anos, e um ano depois recebeu 100 mil dólares de um programa de bolsas com uma condição incomum: abandonar a universidade para se dedicar ao projeto em tempo integral. A aposta valeu a pena — décadas depois, o Ethereum se tornaria a base técnica para boa parte do mercado de finanças descentralizadas e NFTs do mundo todo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem criou o Ethereum, a segunda maior criptomoeda do mundo por valor de mercado?",
+      "opcoes": [
+        "Vitalik Buterin",
+        "Satoshi Nakamoto",
+        "Nick Szabo",
+        "Adam Back"
+      ],
+      "resposta_correta": "Vitalik Buterin"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano Vitalik Buterin nasceu?",
+      "opcoes": [
+        "1994",
+        "1971",
+        "1985",
+        "2000"
+      ],
+      "resposta_correta": "1994"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual país Vitalik Buterin nasceu, antes de se mudar para o Canadá ainda criança?",
+      "opcoes": [
+        "Rússia",
+        "Estados Unidos",
+        "Reino Unido",
+        "China"
+      ],
+      "resposta_correta": "Rússia"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que ano Buterin publicou o whitepaper original do Ethereum?",
+      "opcoes": [
+        "2013",
+        "2008",
+        "2015",
+        "2020"
+      ],
+      "resposta_correta": "2013"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano o Ethereum foi oficialmente lançado?",
+      "opcoes": [
+        "2015",
+        "2013",
+        "2008",
+        "2020"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que data exata de 2015 aconteceu esse lançamento inicial, conhecido como 'Frontier'?",
+      "opcoes": [
+        "30 de julho de 2015",
+        "1º de janeiro de 2013",
+        "31 de outubro de 2008",
+        "3 de janeiro de 2009"
+      ],
+      "resposta_correta": "30 de julho de 2015"
+    },
+    {
+      "n": 7,
+      "pergunta": "O que são 'contratos inteligentes' (smart contracts), inovação central trazida pelo Ethereum?",
+      "opcoes": [
+        "Contratos autoexecutáveis, com os termos escritos diretamente em código",
+        "Contratos em papel assinados digitalmente",
+        "Um tipo de e-mail criptografado",
+        "Um sinônimo simples de 'transação bancária comum'"
+      ],
+      "resposta_correta": "Contratos autoexecutáveis, com os termos escritos diretamente em código"
+    },
+    {
+      "n": 8,
+      "pergunta": "Diferente do Bitcoin, focado principalmente em transações financeiras, para que o Ethereum foi projetado desde o início?",
+      "opcoes": [
+        "Para suportar aplicações descentralizadas mais amplas, além de moeda digital",
+        "Exclusivamente para armazenar fotos",
+        "Apenas para envio de mensagens de texto",
+        "Somente para uso governamental restrito"
+      ],
+      "resposta_correta": "Para suportar aplicações descentralizadas mais amplas, além de moeda digital"
+    },
+    {
+      "n": 9,
+      "pergunta": "Antes de fundar o Ethereum, de qual publicação sobre criptomoedas Buterin foi cofundador, em 2011?",
+      "opcoes": [
+        "Bitcoin Magazine",
+        "CoinDesk",
+        "CryptoNews",
+        "Decrypt"
+      ],
+      "resposta_correta": "Bitcoin Magazine"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual programa de bolsas, financiado pelo investidor Peter Thiel, concedeu 100 mil dólares a Buterin em 2014 para se dedicar ao Ethereum?",
+      "opcoes": [
+        "Thiel Fellowship",
+        "Y Combinator",
+        "Sequoia Capital Grant",
+        "Bitcoin Foundation Award"
+      ],
+      "resposta_correta": "Thiel Fellowship"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em troca dessa bolsa, o que Buterin precisou fazer, segundo a condição do programa?",
+      "opcoes": [
+        "Abandonar a universidade",
+        "Doar metade de seu patrimônio futuro",
+        "Mudar-se permanentemente para os Estados Unidos",
+        "Trabalhar exclusivamente para o fundo de Thiel"
+      ],
+      "resposta_correta": "Abandonar a universidade"
+    },
+    {
+      "n": 12,
+      "pergunta": "Aproximadamente quanto o Ethereum arrecadou em sua venda inicial de tokens (ICO) em 2014?",
+      "opcoes": [
+        "Cerca de 18 milhões de dólares em Bitcoin",
+        "Cerca de 18 mil dólares",
+        "Cerca de 1,8 bilhão de dólares",
+        "Cerca de 180 dólares"
+      ],
+      "resposta_correta": "Cerca de 18 milhões de dólares em Bitcoin"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual organização foi criada para supervisionar o desenvolvimento contínuo do Ethereum, após essa arrecadação inicial?",
+      "opcoes": [
+        "Ethereum Foundation",
+        "Bitcoin Foundation",
+        "Blockchain Institute",
+        "Crypto Alliance"
+      ],
+      "resposta_correta": "Ethereum Foundation"
+    },
+    {
+      "n": 14,
+      "pergunta": "O que são NFTs (tokens não-fungíveis), popularizados especialmente através da rede Ethereum?",
+      "opcoes": [
+        "Ativos digitais únicos baseados em blockchain, que podem representar arte digital, música e outros conteúdos",
+        "Um sinônimo simples de criptomoeda comum",
+        "Um tipo de vírus de computador",
+        "Um formato de arquivo de imagem tradicional"
+      ],
+      "resposta_correta": "Ativos digitais únicos baseados em blockchain, que podem representar arte digital, música e outros conteúdos"
+    },
+    {
+      "n": 15,
+      "pergunta": "O que significa a sigla DeFi, ecossistema financeiro que floresceu principalmente na rede Ethereum?",
+      "opcoes": [
+        "Finanças Descentralizadas (Decentralized Finance)",
+        "Depósito Fixo Internacional",
+        "Dinheiro Eletrônico Federal",
+        "Distribuição Financeira Imediata"
+      ],
+      "resposta_correta": "Finanças Descentralizadas (Decentralized Finance)"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo dados de 2023, aproximadamente qual fração do valor total travado em DeFi era baseada em protocolos construídos sobre a rede Ethereum?",
+      "opcoes": [
+        "Cerca de 90%",
+        "Cerca de 10%",
+        "Cerca de 1%",
+        "Cerca de 50%"
+      ],
+      "resposta_correta": "Cerca de 90%"
+    },
+    {
+      "n": 17,
+      "pergunta": "Como a imprensa costuma descrever Vitalik Buterin, em termos de nacionalidade combinada?",
+      "opcoes": [
+        "Programador e escritor russo-canadense",
+        "Empresário exclusivamente americano",
+        "Cientista britânico-alemão",
+        "Engenheiro japonês-brasileiro"
+      ],
+      "resposta_correta": "Programador e escritor russo-canadense"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma reportagem de 2022, por qual título Buterin ficou conhecido, relacionado à sua fortuna acumulada em criptomoedas?",
+      "opcoes": [
+        "'O bilionário mais jovem do mundo cripto'",
+        "'O inventor do dinheiro físico'",
+        "'O maior banqueiro tradicional do mundo'",
+        "'O criador do primeiro cartão de crédito'"
+      ],
+      "resposta_correta": "'O bilionário mais jovem do mundo cripto'"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em 2022, Buterin se posicionou publicamente sobre qual conflito geopolítico, criticando a invasão russa?",
+      "opcoes": [
+        "A invasão da Ucrânia",
+        "A Guerra do Golfo",
+        "O conflito na Síria",
+        "A Guerra das Malvinas"
+      ],
+      "resposta_correta": "A invasão da Ucrânia"
+    },
+    {
+      "n": 20,
+      "pergunta": "Naquele mesmo período, Buterin também criticou publicamente qual coleção famosa de NFTs, por considerá-la incentivadora de desigualdade dentro do próprio espaço cripto?",
+      "opcoes": [
+        "Bored Ape Yacht Club",
+        "CryptoPunks",
+        "Fidenza",
+        "Nyan Cat"
+      ],
+      "resposta_correta": "Bored Ape Yacht Club"
+    }
+  ]
+}

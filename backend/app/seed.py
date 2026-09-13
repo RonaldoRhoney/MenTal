@@ -143,6 +143,14 @@ BLOCKS = [
     # mecanismo Relâmpago — ver models.WordPuzzle). Cruzadas fica pra
     # uma Fase 2 separada, ainda não desenhada.
     {"id": "jogos_de_palavras", "name": "Jogos de Palavras", "display_order": 14},
+    # ARQUITETURA_SUBMUNDOS_V1.md (13/09/2026, aprovado): "Internet" é
+    # SubMundo de "Tecnologia" — mesmo Mundo (world_id="tecnologia"),
+    # Bloco próprio pra aparecer com subcabeçalho separado dos 4
+    # territórios "clássicos" de Tecnologia (que já usam o bloco
+    # "tecnologia" acima). Reaproveita o mecanismo de Bloco já existente
+    # em vez de criar uma entidade "SubMundo" nova — mesmo resultado de
+    # navegação (Seção 3 do documento), zero mudança de schema/client.
+    {"id": "internet", "name": "Internet", "display_order": 15},
 ]
 
 TERRITORIES = [
@@ -328,6 +336,13 @@ TERRITORIES = [
     {"id": "espaco_estrelas", "challenge_type": "espaco", "requires_subscription": True, "free_sample_count": 2, "display_order": 70, "world_id": "espaco"},
     {"id": "espaco_exploracao", "challenge_type": "espaco", "requires_subscription": True, "free_sample_count": 2, "display_order": 71, "world_id": "espaco"},
     {"id": "espaco_brasil", "challenge_type": "espaco", "requires_subscription": True, "free_sample_count": 2, "display_order": 72, "world_id": "espaco"},
+    # Mundo_da_Tecnologia/Internet/README.md (13/09/2026) — SubMundo de
+    # Tecnologia (ARQUITETURA_SUBMUNDOS_V1.md), não Mundo próprio: mesmo
+    # world_id="tecnologia" dos 4 territórios clássicos, block_id
+    # "internet" (em vez de "tecnologia") pra aparecer sob subcabeçalho
+    # separado na tela do Mundo. 1 bloco curado = 1 território.
+    {"id": "internet_origens", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 73, "world_id": "tecnologia", "block_id": "internet"},
+    {"id": "internet_sistemas_operacionais", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 74, "world_id": "tecnologia", "block_id": "internet"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -5846,6 +5861,13 @@ for _path in sorted(_CONTENT_DIR.glob("oceanos_*.json")):
 # perguntas" de Valores/Trânsito/Gastronomia/Oceanos, convertidos via
 # scripts/convert_espaco_content.py.
 for _path in sorted(_CONTENT_DIR.glob("espaco_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
+# Mundo da Internet (12/09/2026): trilha por dificuldade (1/2/3/4,
+# diferente do formato "cápsula" de Valores/Trânsito/Gastronomia/
+# Oceanos/Espaço acima) — 1 bloco curado = 1 território, convertido via
+# scripts/convert_internet_content.py.
+for _path in sorted(_CONTENT_DIR.glob("internet_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 

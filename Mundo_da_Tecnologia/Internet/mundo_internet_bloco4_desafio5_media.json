@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 5,
+    "tema_desafio": "Como a Internet Nos Afeta no Dia a Dia",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Ipea, IBGE e Forbes Brasil. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - tema de desigualdade social tratado de forma factual e estatistica, sem viés politico."
+  },
+  "saiba_mais": "Curiosidade: enquanto o trabalho remoto se popularizou rapidamente durante a pandemia, os dados mostram uma realidade desigual — apenas 0,6% dos trabalhadores da agricultura conseguiram trabalhar de casa, contra mais da metade dos profissionais da educação privada. Um lembrete de que a transformação digital do trabalho, embora real e significativa, não chegou da mesma forma a todos os setores da economia.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo um estudo de 2020, quanto o e-commerce e o ensino à distância deveriam crescer no Brasil após a pandemia, respectivamente?",
+      "opcoes": [
+        "30% e 100%",
+        "5% e 10%",
+        "100% e 30%",
+        "1% e 2%"
+      ],
+      "resposta_correta": "30% e 100%"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo dados do IBGE, quanto cresceu o trabalho em casa ou em espaços de coworking entre 2017 e 2018, antes mesmo da pandemia?",
+      "opcoes": [
+        "21,1%",
+        "2,1%",
+        "211%",
+        "0,1%"
+      ],
+      "resposta_correta": "21,1%"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo um estudo do Ipea, qual porcentagem da população ocupada no Brasil trabalhou de forma remota entre maio e novembro de 2020?",
+      "opcoes": [
+        "11%",
+        "50%",
+        "1%",
+        "90%"
+      ],
+      "resposta_correta": "11%"
+    },
+    {
+      "n": 4,
+      "pergunta": "Isso representava quantas pessoas, aproximadamente, do total de 74 milhões de trabalhadores ocupados?",
+      "opcoes": [
+        "8,2 milhões",
+        "820 mil",
+        "82 milhões",
+        "82 mil"
+      ],
+      "resposta_correta": "8,2 milhões"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo esse mesmo estudo, qual perfil predominava entre os trabalhadores em home office durante a pandemia, em termos de gênero?",
+      "opcoes": [
+        "Maioria mulheres (56,1%)",
+        "Maioria homens (90%)",
+        "Distribuição exatamente igual entre homens e mulheres",
+        "Não há dados disponíveis sobre gênero"
+      ],
+      "resposta_correta": "Maioria mulheres (56,1%)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo o mesmo estudo, qual porcentagem dos trabalhadores em home office tinha nível superior completo?",
+      "opcoes": [
+        "74,6%",
+        "10%",
+        "30%",
+        "99%"
+      ],
+      "resposta_correta": "74,6%"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual região do Brasil concentrou o maior contingente de trabalhadores remotos em 2020, segundo o estudo?",
+      "opcoes": [
+        "Sudeste",
+        "Norte",
+        "Centro-Oeste",
+        "Nordeste"
+      ],
+      "resposta_correta": "Sudeste"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual região teve a menor representatividade de trabalhadores em home office, segundo o mesmo levantamento?",
+      "opcoes": [
+        "Norte",
+        "Sudeste",
+        "Sul",
+        "Centro-Oeste"
+      ],
+      "resposta_correta": "Norte"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo um levantamento de mercado, quanto cresceram as vagas de emprego em home office no Brasil durante 2020?",
+      "opcoes": [
+        "309%",
+        "30%",
+        "3%",
+        "3.000%"
+      ],
+      "resposta_correta": "309%"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual setor foi o principal responsável por essas novas vagas de home office em 2020?",
+      "opcoes": [
+        "Tecnologia",
+        "Agricultura",
+        "Construção civil",
+        "Turismo"
+      ],
+      "resposta_correta": "Tecnologia"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo um artigo de opinião de 2020, o home office é descrito como o quê, em relação à desigualdade social no Brasil?",
+      "opcoes": [
+        "Um privilégio disponível a poucos, evidenciando desigualdades na digitalização do trabalho",
+        "Um direito garantido igualmente a toda a população",
+        "Uma prática já totalmente universalizada antes da pandemia",
+        "Uma modalidade sem nenhuma relação com desigualdade social"
+      ],
+      "resposta_correta": "Um privilégio disponível a poucos, evidenciando desigualdades na digitalização do trabalho"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo um levantamento, aproximadamente qual porcentagem dos profissionais de agricultura estava em trabalho remoto durante a pandemia, ilustrando essa desigualdade setorial?",
+      "opcoes": [
+        "Apenas 0,6%",
+        "Cerca de 50%",
+        "Cerca de 90%",
+        "Cerca de 30%"
+      ],
+      "resposta_correta": "Apenas 0,6%"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em contraste, qual setor apresentou uma das maiores porcentagens de trabalho remoto, segundo o mesmo levantamento?",
+      "opcoes": [
+        "Educação privada (cerca de 51%)",
+        "Logística (cerca de 90%)",
+        "Alimentação (cerca de 80%)",
+        "Segurança pública (cerca de 70%)"
+      ],
+      "resposta_correta": "Educação privada (cerca de 51%)"
+    },
+    {
+      "n": 14,
+      "pergunta": "Cite duas ferramentas de videoconferência que se popularizaram amplamente durante a pandemia, além de aplicativos de mensagens já existentes.",
+      "opcoes": [
+        "Zoom e Skype",
+        "Orkut e MySpace",
+        "Napster e LimeWire",
+        "ICQ e ninguém mais"
+      ],
+      "resposta_correta": "Zoom e Skype"
+    },
+    {
+      "n": 15,
+      "pergunta": "Além de ferramentas dedicadas, quais outros aplicativos de mensagens passaram a oferecer função de videochamada em massa durante esse período?",
+      "opcoes": [
+        "WhatsApp, Messenger e Teams",
+        "Apenas o Instagram",
+        "Somente o TikTok",
+        "Exclusivamente o LinkedIn"
+      ],
+      "resposta_correta": "WhatsApp, Messenger e Teams"
+    },
+    {
+      "n": 16,
+      "pergunta": "Além do ambiente corporativo, que outro tipo de uso as videochamadas ganharam durante a pandemia, segundo uma retrospectiva?",
+      "opcoes": [
+        "Contatos familiares e celebrações à distância",
+        "Nenhum uso além do corporativo foi registrado",
+        "Apenas uso governamental oficial",
+        "Exclusivamente uso militar"
+      ],
+      "resposta_correta": "Contatos familiares e celebrações à distância"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual desafio de segurança digital ficou mais evidente durante a transição em massa para o home office, segundo uma retrospectiva?",
+      "opcoes": [
+        "Riscos à proteção da informação digital corporativa",
+        "Nenhum risco relevante foi identificado",
+        "Apenas problemas de qualidade de áudio em chamadas",
+        "Exclusivamente problemas de conexão lenta"
+      ],
+      "resposta_correta": "Riscos à proteção da informação digital corporativa"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma pesquisa citada, qual porcentagem de profissionais desejava continuar trabalhando de casa mais vezes, mesmo após o fim mais crítico da pandemia?",
+      "opcoes": [
+        "86%",
+        "10%",
+        "50%",
+        "5%"
+      ],
+      "resposta_correta": "86%"
+    },
+    {
+      "n": 19,
+      "pergunta": "Que efeito colateral também foi observado em alguns trabalhadores, após um longo período de distanciamento social durante a pandemia?",
+      "opcoes": [
+        "Desejo de retornar ao ambiente corporativo presencial por falta de contato humano",
+        "Rejeição total e permanente a qualquer contato presencial futuro",
+        "Nenhum efeito colateral foi observado",
+        "Aumento exclusivo da produtividade sem nenhuma outra mudança comportamental"
+      ],
+      "resposta_correta": "Desejo de retornar ao ambiente corporativo presencial por falta de contato humano"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a combinação de dados discutidos — crescimento de vagas remotas, mas concentração em setores/regiões específicas — melhor ilustra sobre a transformação digital do trabalho no Brasil?",
+      "opcoes": [
+        "Que essa transformação trouxe benefícios reais, mas distribuídos de forma desigual entre diferentes grupos e regiões",
+        "Que a transformação digital do trabalho beneficiou igualmente todos os setores e regiões do país",
+        "Que o home office nunca teve nenhum impacto relevante no Brasil",
+        "Que apenas profissionais sem educação superior se beneficiaram do home office"
+      ],
+      "resposta_correta": "Que essa transformação trouxe benefícios reais, mas distribuídos de forma desigual entre diferentes grupos e regiões"
+    }
+  ]
+}

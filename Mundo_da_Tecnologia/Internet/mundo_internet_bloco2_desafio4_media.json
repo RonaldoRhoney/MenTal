@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 4,
+    "tema_desafio": "Android e a evolução dos sistemas móveis",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: antes de virar o sistema operacional mais usado do mundo em smartphones, uma das primeiras versões internas do Android, ainda em desenvolvimento dentro do Google, tinha o codinome 'R2-D2' — uma clara homenagem ao droid de Star Wars, num sinal de que a cultura pop sempre esteve presente nos bastidores da tecnologia.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que cidade dos Estados Unidos Andy Rubin nasceu?",
+      "opcoes": [
+        "Chappaqua, Nova York",
+        "Palo Alto, Califórnia",
+        "Seattle, Washington",
+        "Cupertino, Califórnia"
+      ],
+      "resposta_correta": "Chappaqua, Nova York"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual universidade Andy Rubin se formou em Ciências da Computação?",
+      "opcoes": [
+        "Utica College",
+        "Harvard",
+        "Stanford",
+        "MIT"
+      ],
+      "resposta_correta": "Utica College"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual foi o primeiro emprego formal de Andy Rubin, segundo registros biográficos?",
+      "opcoes": [
+        "Engenheiro de software especializado em robótica, na Carl Zeiss X-ray Microscopy",
+        "Programador de videogames na Atari",
+        "Vendedor de computadores pessoais",
+        "Professor universitário de ciência da computação"
+      ],
+      "resposta_correta": "Engenheiro de software especializado em robótica, na Carl Zeiss X-ray Microscopy"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que país Andy Rubin trabalhou na empresa Société Genevoise d'Instruments de Physique?",
+      "opcoes": [
+        "Suíça",
+        "França",
+        "Alemanha",
+        "Reino Unido"
+      ],
+      "resposta_correta": "Suíça"
+    },
+    {
+      "n": 5,
+      "pergunta": "Onde Andy Rubin teve um encontro casual, em 1989, que resultou num emprego numa grande empresa do Vale do Silício?",
+      "opcoes": [
+        "Ilhas Cayman",
+        "Nova York",
+        "Genebra",
+        "Tóquio"
+      ],
+      "resposta_correta": "Ilhas Cayman"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual engenheiro da Apple Andy Rubin conheceu nesse encontro casual?",
+      "opcoes": [
+        "Bill Caswell",
+        "Steve Wozniak",
+        "Jony Ive",
+        "Bill Atkinson"
+      ],
+      "resposta_correta": "Bill Caswell"
+    },
+    {
+      "n": 7,
+      "pergunta": "Além da Apple, em quais outras duas grandes empresas de tecnologia Andy Rubin trabalhou antes de fundar a Android Inc.?",
+      "opcoes": [
+        "WebTV e Microsoft",
+        "IBM e Intel",
+        "Sony e Nokia",
+        "Dell e HP"
+      ],
+      "resposta_correta": "WebTV e Microsoft"
+    },
+    {
+      "n": 8,
+      "pergunta": "Quais são os nomes dos outros três cofundadores da Android Inc., além de Andy Rubin?",
+      "opcoes": [
+        "Rich Miner, Nick Sears e Chris White",
+        "Larry Page, Sergey Brin e Eric Schmidt",
+        "Steve Jobs, Bill Gates e Linus Torvalds",
+        "Jony Ive, Tim Cook e Craig Federighi"
+      ],
+      "resposta_correta": "Rich Miner, Nick Sears e Chris White"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que cidade da Califórnia a Android Inc. foi originalmente fundada?",
+      "opcoes": [
+        "Palo Alto",
+        "Cupertino",
+        "San Francisco",
+        "San Jose"
+      ],
+      "resposta_correta": "Palo Alto"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo uma fonte, qual era a citação de Andy Rubin sobre a visão original do Android, referente a dispositivos móveis?",
+      "opcoes": [
+        "Dispositivos móveis mais inteligentes e cientes das preferências e localização do dono",
+        "Dispositivos que substituiriam totalmente os computadores pessoais",
+        "Dispositivos exclusivamente para uso militar",
+        "Dispositivos voltados apenas para jogos eletrônicos"
+      ],
+      "resposta_correta": "Dispositivos móveis mais inteligentes e cientes das preferências e localização do dono"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual cargo Andy Rubin assumiu dentro do Google, após a aquisição da Android Inc. em 2005?",
+      "opcoes": [
+        "Vice-presidente de Conteúdo Móvel e Digital",
+        "CEO global do Google",
+        "Diretor financeiro",
+        "Chefe do departamento jurídico"
+      ],
+      "resposta_correta": "Vice-presidente de Conteúdo Móvel e Digital"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual codinome interno teve uma das primeiras versões do Android desenvolvidas internamente no Google, antes do lançamento público?",
+      "opcoes": [
+        "R2-D2",
+        "C-3PO",
+        "HAL 9000",
+        "T-800"
+      ],
+      "resposta_correta": "R2-D2"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual era o codinome de um dos primeiros protótipos de hardware do Android, antes da mudança de rumo motivada pelo iPhone?",
+      "opcoes": [
+        "Sooner",
+        "Nexus One",
+        "Pixel Zero",
+        "Dream Machine"
+      ],
+      "resposta_correta": "Sooner"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que data específica Steve Jobs anunciou o primeiro iPhone, evento que influenciou diretamente os rumos do projeto Android?",
+      "opcoes": [
+        "29 de junho de 2007",
+        "23 de setembro de 2008",
+        "22 de outubro de 2008",
+        "1º de janeiro de 2007"
+      ],
+      "resposta_correta": "29 de junho de 2007"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quantas empresas/fabricantes de hardware são citadas como parte do consórcio Open Handset Alliance, além do próprio Google?",
+      "opcoes": [
+        "Várias, incluindo Samsung, Sony, HTC, LG, Qualcomm e Texas Instruments",
+        "Apenas uma, a Samsung",
+        "Nenhuma, era um projeto solo do Google",
+        "Duas, Apple e Microsoft"
+      ],
+      "resposta_correta": "Várias, incluindo Samsung, Sony, HTC, LG, Qualcomm e Texas Instruments"
+    },
+    {
+      "n": 16,
+      "pergunta": "Quais duas operadoras americanas fizeram parte do consórcio formado em 2007 para impulsionar o Android?",
+      "opcoes": [
+        "Sprint Nextel e T-Mobile",
+        "AT&T e Verizon",
+        "Claro e Vivo",
+        "T-Mobile e Vodafone"
+      ],
+      "resposta_correta": "Sprint Nextel e T-Mobile"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual quantia o Google teria oferecido a desenvolvedores para criar os melhores aplicativos para a primeira versão pública do Android, segundo registros?",
+      "opcoes": [
+        "10 milhões de dólares",
+        "1 milhão de dólares",
+        "100 mil dólares",
+        "1 bilhão de dólares"
+      ],
+      "resposta_correta": "10 milhões de dólares"
+    },
+    {
+      "n": 18,
+      "pergunta": "Em que data exata, segundo uma das fontes, o Android 'nasceu publicamente' junto com o lançamento do primeiro smartphone equipado com ele?",
+      "opcoes": [
+        "23 de setembro de 2008",
+        "22 de outubro de 2008",
+        "29 de junho de 2007",
+        "1º de janeiro de 2005"
+      ],
+      "resposta_correta": "23 de setembro de 2008"
+    },
+    {
+      "n": 19,
+      "pergunta": "Com qual nome o HTC Dream foi lançado especificamente na Europa?",
+      "opcoes": [
+        "HTC Dream (mesmo nome, mas diferente do T-Mobile G1 usado nos EUA)",
+        "Nexus One",
+        "Galaxy S",
+        "Pixel 1"
+      ],
+      "resposta_correta": "HTC Dream (mesmo nome, mas diferente do T-Mobile G1 usado nos EUA)"
+    },
+    {
+      "n": 20,
+      "pergunta": "O valor pago pelo Google na aquisição da Android Inc., em 2005, foi oficialmente divulgado publicamente?",
+      "opcoes": [
+        "Não, o valor exato nunca foi divulgado oficialmente, apenas estimado",
+        "Sim, foi anunciado publicamente em coletiva de imprensa",
+        "Sim, foi divulgado anos depois em relatório financeiro detalhado",
+        "Não houve nenhum pagamento, foi uma fusão sem custo"
+      ],
+      "resposta_correta": "Não, o valor exato nunca foi divulgado oficialmente, apenas estimado"
+    }
+  ]
+}

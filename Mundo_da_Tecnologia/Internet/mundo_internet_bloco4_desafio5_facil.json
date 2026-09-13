@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 5,
+    "tema_desafio": "Como a Internet Nos Afeta no Dia a Dia",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Jornal da USP e DataReportal. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - dados de uso de tela apresentados de forma factual e estatistica, sem diagnostico ou julgamento sobre habitos individuais."
+  },
+  "saiba_mais": "Curiosidade: segundo um levantamento de 2023, os brasileiros ficam, em média, cerca de 9 horas por dia em frente a telas — mais da metade do tempo em que ficam acordados. Isso coloca o Brasil na segunda posição mundial nesse ranking, atrás apenas da África do Sul, enquanto o Japão, apesar de ser um dos países mais tecnológicos do mundo, aparece surpreendentemente na última posição.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo um levantamento de 2023, o Brasil ficou em qual posição entre os países com mais tempo de tela por dia?",
+      "opcoes": [
+        "2º lugar",
+        "1º lugar",
+        "10º lugar",
+        "Último lugar"
+      ],
+      "resposta_correta": "2º lugar"
+    },
+    {
+      "n": 2,
+      "pergunta": "Aproximadamente quantas horas por dia os brasileiros passam em frente a telas, segundo esse mesmo levantamento?",
+      "opcoes": [
+        "Cerca de 9 horas",
+        "Cerca de 1 hora",
+        "Cerca de 20 horas",
+        "Cerca de 3 horas"
+      ],
+      "resposta_correta": "Cerca de 9 horas"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual país aparece em primeiro lugar nesse ranking de tempo de tela, à frente do Brasil?",
+      "opcoes": [
+        "África do Sul",
+        "Estados Unidos",
+        "Japão",
+        "China"
+      ],
+      "resposta_correta": "África do Sul"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual país, apesar de ser altamente tecnológico, ficou em último lugar nesse mesmo ranking de tempo de tela?",
+      "opcoes": [
+        "Japão",
+        "Brasil",
+        "África do Sul",
+        "Índia"
+      ],
+      "resposta_correta": "Japão"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo o levantamento, qual porcentagem de usuários brasileiros de smartphone são assinantes de serviços de streaming?",
+      "opcoes": [
+        "Cerca de 64%",
+        "Cerca de 10%",
+        "Cerca de 90%",
+        "Cerca de 30%"
+      ],
+      "resposta_correta": "Cerca de 64%"
+    },
+    {
+      "n": 6,
+      "pergunta": "De quantos usuários a internet mundial cresceu desde 1991 até os dias atuais, segundo um relatório recente?",
+      "opcoes": [
+        "De 4,2 milhões para mais de 5 bilhões",
+        "De 1 milhão para 10 milhões",
+        "De 100 mil para 1 milhão",
+        "De 5 bilhões para 10 bilhões"
+      ],
+      "resposta_correta": "De 4,2 milhões para mais de 5 bilhões"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo dados de 2021 da União Internacional de Telecomunicações, qual porcentagem da população mundial já tinha acesso à internet?",
+      "opcoes": [
+        "Cerca de 63%",
+        "Cerca de 10%",
+        "Cerca de 99%",
+        "Cerca de 30%"
+      ],
+      "resposta_correta": "Cerca de 63%"
+    },
+    {
+      "n": 8,
+      "pergunta": "Que tipo de assistentes de tecnologia, citados como parte do cotidiano atual, respondem a comandos de voz?",
+      "opcoes": [
+        "Assistentes virtuais como Alexa e Siri",
+        "Exclusivamente calculadoras digitais",
+        "Apenas videogames tradicionais",
+        "Somente rádios AM/FM"
+      ],
+      "resposta_correta": "Assistentes virtuais como Alexa e Siri"
+    },
+    {
+      "n": 9,
+      "pergunta": "Quais tipos de dispositivos são citados como evolução do acesso à internet, além de computadores e celulares?",
+      "opcoes": [
+        "Dispositivos vestíveis, como relógios inteligentes",
+        "Exclusivamente máquinas de escrever",
+        "Apenas rádios antigos",
+        "Somente televisores sem conexão à internet"
+      ],
+      "resposta_correta": "Dispositivos vestíveis, como relógios inteligentes"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano se celebra o 'Dia da Internet', segundo uma fonte?",
+      "opcoes": [
+        "17 de maio",
+        "1º de janeiro",
+        "25 de dezembro",
+        "4 de julho"
+      ],
+      "resposta_correta": "17 de maio"
+    },
+    {
+      "n": 11,
+      "pergunta": "O que a 'internet das coisas' (IoT) representa, de forma geral?",
+      "opcoes": [
+        "A conexão de diversos objetos do dia a dia à internet, além de computadores e celulares",
+        "Um tipo específico de rede social",
+        "Um sistema exclusivo de e-mail corporativo",
+        "Um formato de vídeo curto"
+      ],
+      "resposta_correta": "A conexão de diversos objetos do dia a dia à internet, além de computadores e celulares"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma pesquisa, quantas horas por dia, em média, o brasileiro passa conectado à internet?",
+      "opcoes": [
+        "Quase 10 horas",
+        "1 hora",
+        "20 horas",
+        "3 horas"
+      ],
+      "resposta_correta": "Quase 10 horas"
+    },
+    {
+      "n": 13,
+      "pergunta": "Que tecnologia de conexão sem fio mais recente, citada entre os avanços de infraestrutura, permite maior velocidade de dados móveis?",
+      "opcoes": [
+        "Redes 5G",
+        "Bluetooth",
+        "Infravermelho",
+        "Rádio AM"
+      ],
+      "resposta_correta": "Redes 5G"
+    },
+    {
+      "n": 14,
+      "pergunta": "Antigamente, antes da internet ampla, quais eram algumas formas de comunicação hoje muito menos usadas, substituídas por dispositivos conectados?",
+      "opcoes": [
+        "Telegramas, telefones fixos e listas telefônicas impressas",
+        "Redes sociais modernas",
+        "Videochamadas em alta definição",
+        "Mensagens de texto por celular"
+      ],
+      "resposta_correta": "Telegramas, telefones fixos e listas telefônicas impressas"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que ano surgiu o primeiro smartphone, marco citado como transformador da forma de acesso à internet?",
+      "opcoes": [
+        "2007",
+        "1991",
+        "2000",
+        "2015"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual empresa é citada como responsável pelo lançamento desse primeiro smartphone amplamente popularizado?",
+      "opcoes": [
+        "Apple",
+        "Nokia",
+        "Samsung",
+        "Motorola"
+      ],
+      "resposta_correta": "Apple"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo uma pesquisa de final de 2025, qual porcentagem dos usuários de celular no Brasil tinha como meta reduzir o uso de telas em 2026?",
+      "opcoes": [
+        "Cerca de 30%",
+        "Cerca de 90%",
+        "Cerca de 1%",
+        "Cerca de 60%"
+      ],
+      "resposta_correta": "Cerca de 30%"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma fonte, aproximadamente qual porcentagem de brasileiros utiliza a internet atualmente?",
+      "opcoes": [
+        "Cerca de 89,6%",
+        "Cerca de 20%",
+        "Cerca de 50%",
+        "Cerca de 99,9%"
+      ],
+      "resposta_correta": "Cerca de 89,6%"
+    },
+    {
+      "n": 19,
+      "pergunta": "O que as abreviações, emojis e novas formas de expressão digital têm em comum, segundo uma análise sobre comunicação online?",
+      "opcoes": [
+        "Economizam tempo e tornam a comunicação mais ágil",
+        "Tornam a comunicação mais lenta e formal",
+        "Substituem completamente qualquer linguagem verbal",
+        "São usadas apenas em contextos acadêmicos"
+      ],
+      "resposta_correta": "Economizam tempo e tornam a comunicação mais ágil"
+    },
+    {
+      "n": 20,
+      "pergunta": "Cite dois temas frequentemente debatidos como desafios trazidos pela revolução da internet, segundo uma retrospectiva.",
+      "opcoes": [
+        "Cibersegurança e privacidade de dados",
+        "Exclusivamente questões de trânsito urbano",
+        "Apenas problemas de abastecimento de água",
+        "Somente questões de transporte público"
+      ],
+      "resposta_correta": "Cibersegurança e privacidade de dados"
+    }
+  ]
+}

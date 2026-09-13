@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 1,
+    "tema_desafio": "Windows e Bill Gates",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em fontes juridicas e jornalisticas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - caso judicial tratado de forma estritamente factual e neutra."
+  },
+  "saiba_mais": "Curiosidade: a rivalidade entre Microsoft e Netscape, no centro do processo antitruste dos anos 1990, ficou conhecida como a 'guerra dos navegadores' — e, décadas depois, o próprio Internet Explorer, vencedor daquela disputa, acabou descontinuado pela Microsoft, cedendo lugar a um navegador totalmente novo, o Edge.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual foi a data exata em que os EUA e um grupo de estados apresentaram as queixas consolidadas contra a Microsoft?",
+      "opcoes": [
+        "18 de maio de 1998",
+        "20 de outubro de 1997",
+        "11 de dezembro de 1997",
+        "23 de junho de 1998"
+      ],
+      "resposta_correta": "18 de maio de 1998"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quantas violações distintas da Sherman Act foram alegadas pelos autores do processo, relacionadas aos esforços contra a Netscape?",
+      "opcoes": [
+        "Quatro violações distintas",
+        "Duas violações",
+        "Seis violações",
+        "Uma única violação"
+      ],
+      "resposta_correta": "Quatro violações distintas"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quais são as quatro categorias de violação alegadas no processo, segundo a petição original?",
+      "opcoes": [
+        "Negociação exclusiva ilegal, vinculação ilegal do IE, manutenção ilegal de monopólio, e tentativa de monopolização",
+        "Sonegação fiscal, fraude contábil, lavagem de dinheiro e evasão de divisas",
+        "Violação de patente, plágio de código, espionagem industrial e suborno",
+        "Discriminação de preço, dumping, cartel e concorrência desleal genérica"
+      ],
+      "resposta_correta": "Negociação exclusiva ilegal, vinculação ilegal do IE, manutenção ilegal de monopólio, e tentativa de monopolização"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em 23 de junho de 1998, o Tribunal de Apelações decidiu que o acordo (consent decree) de 1995 não se aplicava a qual versão do Windows?",
+      "opcoes": [
+        "Windows 98",
+        "Windows 95",
+        "Windows 3.0",
+        "Windows XP"
+      ],
+      "resposta_correta": "Windows 98"
+    },
+    {
+      "n": 5,
+      "pergunta": "A decisão final do Tribunal de Apelações de 2001 recebeu o registro de citação jurídica 253 F.3d 34. A que tribunal esse registro corresponde?",
+      "opcoes": [
+        "D.C. Circuit (Tribunal de Apelações do Circuito de Columbia)",
+        "Suprema Corte dos EUA",
+        "Segundo Circuito de Nova York",
+        "Nono Circuito da Califórnia"
+      ],
+      "resposta_correta": "D.C. Circuit (Tribunal de Apelações do Circuito de Columbia)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Quantos dias, aproximadamente, se passaram entre a decisão de divisão da empresa (2000) e um novo desdobramento do caso mencionado como 'menos de um mês depois'?",
+      "opcoes": [
+        "Menos de 30 dias",
+        "Cerca de um ano",
+        "Cerca de seis meses",
+        "Mais de dois anos"
+      ],
+      "resposta_correta": "Menos de 30 dias"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual foi um dos argumentos específicos de defesa da Microsoft quanto às restrições de licença impostas à Netscape, descrito como 'beirando o frívolo' por um dos tribunais?",
+      "opcoes": [
+        "Que as restrições não prejudicavam indevidamente as oportunidades da Netscape de distribuir seu navegador",
+        "Que a Netscape nunca existiu de fato como empresa",
+        "Que a Microsoft nunca assinou nenhum contrato com fabricantes",
+        "Que o Internet Explorer nunca foi distribuído com o Windows"
+      ],
+      "resposta_correta": "Que as restrições não prejudicavam indevidamente as oportunidades da Netscape de distribuir seu navegador"
+    },
+    {
+      "n": 8,
+      "pergunta": "O economista Frederick Warren-Boulton atuou nesse processo em qual papel específico?",
+      "opcoes": [
+        "Especialista/perito econômico do lado da acusação, veterano em casos antitruste",
+        "Juiz responsável pelo julgamento original",
+        "Advogado de defesa da Microsoft",
+        "CEO de uma empresa concorrente"
+      ],
+      "resposta_correta": "Especialista/perito econômico do lado da acusação, veterano em casos antitruste"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo uma das teorias apresentadas no processo, por que a Microsoft teria reagido de forma agressiva à distribuição do Netscape Navigator?",
+      "opcoes": [
+        "Temia que a disseminação da linguagem Java tornasse o monopólio do Windows irrelevante",
+        "Queria eliminar completamente qualquer concorrência no mercado de impressoras",
+        "Buscava impedir a venda de computadores da Apple",
+        "Queria proteger exclusivamente seu software de contabilidade"
+      ],
+      "resposta_correta": "Temia que a disseminação da linguagem Java tornasse o monopólio do Windows irrelevante"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que formato de mídia a deposição em vídeo de Bill Gates, de 27 de agosto de 1998, ficou disponibilizada publicamente, segundo registros?",
+      "opcoes": [
+        "Formatos como Windows Media, Ogg Theora e Ogg Vorbis",
+        "Apenas em fita VHS física",
+        "Exclusivamente em áudio, sem vídeo",
+        "Em um formato proprietário nunca liberado ao público"
+      ],
+      "resposta_correta": "Formatos como Windows Media, Ogg Theora e Ogg Vorbis"
+    },
+    {
+      "n": 11,
+      "pergunta": "O que a Microsoft argumentou, em nota pública, sobre a origem das ações antitruste movidas contra ela?",
+      "opcoes": [
+        "Que consumidores não pediram essas ações — foram empresas rivais que as motivaram",
+        "Que o próprio governo dos EUA havia solicitado voluntariamente",
+        "Que a Netscape nunca apresentou nenhuma reclamação formal",
+        "Que o processo havia sido criado por engano administrativo"
+      ],
+      "resposta_correta": "Que consumidores não pediram essas ações — foram empresas rivais que as motivaram"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quais empresas formaram uma coalizão informal fazendo lobby por ação antitruste contra a Microsoft, segundo análises do caso?",
+      "opcoes": [
+        "Sun Microsystems, Oracle, IBM, Netscape e Novell",
+        "Apple, Google e Amazon",
+        "Toyota, Ford e General Motors",
+        "Coca-Cola e Pepsi"
+      ],
+      "resposta_correta": "Sun Microsystems, Oracle, IBM, Netscape e Novell"
+    },
+    {
+      "n": 13,
+      "pergunta": "O caso 'Traf-O-Data', empresa fundada por Gates e Allen na adolescência, tinha qual objetivo específico?",
+      "opcoes": [
+        "Processar dados de tráfego urbano usando um microprocessador",
+        "Vender software de contabilidade para pequenas empresas",
+        "Criar jogos eletrônicos para arcades",
+        "Desenvolver sistemas de segurança residencial"
+      ],
+      "resposta_correta": "Processar dados de tráfego urbano usando um microprocessador"
+    },
+    {
+      "n": 14,
+      "pergunta": "Bill Gates e Paul Allen se reconectaram, após seguirem faculdades diferentes, motivados pelo lançamento de qual produto específico?",
+      "opcoes": [
+        "O microcomputador Altair 8800",
+        "O IBM PC",
+        "O Apple Macintosh",
+        "O videogame Atari 2600"
+      ],
+      "resposta_correta": "O microcomputador Altair 8800"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma fonte, Paul Allen viu a notícia sobre o Altair 8800 em que tipo de publicação?",
+      "opcoes": [
+        "A capa de uma revista",
+        "Um jornal diário local",
+        "Um panfleto publicitário",
+        "Um catálogo de vendas por correio"
+      ],
+      "resposta_correta": "A capa de uma revista"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual foi o resultado prático da cláusula de exclusividade do acordo Microsoft-IBM de 1980, em termos financeiros para os fundadores?",
+      "opcoes": [
+        "Tornou Gates e Allen ricos, segundo análises do acordo",
+        "Não gerou nenhum benefício financeiro direto imediato",
+        "Beneficiou exclusivamente a IBM, não a Microsoft",
+        "Foi revertida judicialmente poucos anos depois"
+      ],
+      "resposta_correta": "Tornou Gates e Allen ricos, segundo análises do acordo"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que ano, especificamente, o MS-DOS é registrado como tendo sido adotado como padrão para computadores compatíveis com IBM, segundo linha do tempo técnica?",
+      "opcoes": [
+        "Agosto de 1981",
+        "Abril de 1975",
+        "Janeiro de 1985",
+        "Novembro de 1990"
+      ],
+      "resposta_correta": "Agosto de 1981"
+    },
+    {
+      "n": 18,
+      "pergunta": "O Windows já teve, ao longo de sua história, quantas 'versões principais' (major versions) registradas até uma contagem de referência técnica antiga (anterior ao Windows 10/11)?",
+      "opcoes": [
+        "9 versões principais",
+        "3 versões principais",
+        "20 versões principais",
+        "50 versões principais"
+      ],
+      "resposta_correta": "9 versões principais"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual mudança de paradigma de interação humano-computador é citada como remodelando o Windows nos anos mais recentes de sua evolução, além do teclado e mouse tradicionais?",
+      "opcoes": [
+        "A mudança para telas sensíveis ao toque (touchscreen)",
+        "A eliminação total de qualquer tela",
+        "O controle exclusivo por comando de voz",
+        "O uso obrigatório de realidade virtual"
+      ],
+      "resposta_correta": "A mudança para telas sensíveis ao toque (touchscreen)"
+    },
+    {
+      "n": 20,
+      "pergunta": "Sob qual novo CEO a Microsoft passou por essa evolução mais recente mencionada na questão anterior, segundo registros de linha do tempo?",
+      "opcoes": [
+        "Satya Nadella",
+        "Bill Gates",
+        "Steve Ballmer",
+        "Paul Allen"
+      ],
+      "resposta_correta": "Satya Nadella"
+    }
+  ]
+}

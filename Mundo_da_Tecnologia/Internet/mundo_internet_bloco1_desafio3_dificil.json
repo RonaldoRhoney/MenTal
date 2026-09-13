@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 3,
+    "tema_desafio": "Navegadores e a Guerra dos Browsers",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - disputa comercial tratada de forma factual e neutra."
+  },
+  "saiba_mais": "Curiosidade: o nome 'Mozilla' nasceu de uma brincadeira interna da Netscape — era uma junção de 'Mosaic' (o navegador que Marc Andreessen ajudou a criar antes) com 'Godzilla', o famoso monstro do cinema japonês. Um apelido bem-humorado que, décadas depois, se tornou o nome de uma das maiores organizações de software livre do mundo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que data a Netscape anunciou que o Netscape Communicator seria gratuito e teria código-fonte aberto?",
+      "opcoes": [
+        "23 de janeiro de 1998",
+        "22 de abril de 1993",
+        "23 de agosto de 1995",
+        "1º de novembro de 1998"
+      ],
+      "resposta_correta": "23 de janeiro de 1998"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quem registrou o domínio mozilla.org, um dia após esse anúncio?",
+      "opcoes": [
+        "Jamie Zawinski",
+        "Marc Andreessen",
+        "Jim Clark",
+        "Eric Bina"
+      ],
+      "resposta_correta": "Jamie Zawinski"
+    },
+    {
+      "n": 3,
+      "pergunta": "De onde vem o nome 'Mozilla', segundo o próprio Jamie Zawinski?",
+      "opcoes": [
+        "Uma junção de 'Mosaic' e 'Godzilla'",
+        "Uma sigla técnica sem significado",
+        "O nome de um professor de Berkeley",
+        "Uma homenagem a uma cidade italiana"
+      ],
+      "resposta_correta": "Uma junção de 'Mosaic' e 'Godzilla'"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que empresa Zawinski trabalhava quando escolheu esse nome, num encontro de equipe?",
+      "opcoes": [
+        "Netscape",
+        "Microsoft",
+        "NCSA",
+        "AOL"
+      ],
+      "resposta_correta": "Netscape"
+    },
+    {
+      "n": 5,
+      "pergunta": "Por que o código do Netscape Communicator 4.0 se mostrou difícil de aproveitar diretamente pela nova Organização Mozilla?",
+      "opcoes": [
+        "Era muito grande e complexo, além de ter partes sob acordos de licenciamento com terceiros",
+        "O código havia sido perdido acidentalmente",
+        "Nunca existiu de fato um código a ser aberto",
+        "O código era escrito numa linguagem que ninguém mais sabia usar"
+      ],
+      "resposta_correta": "Era muito grande e complexo, além de ter partes sob acordos de licenciamento com terceiros"
+    },
+    {
+      "n": 6,
+      "pergunta": "Diante dessa dificuldade, o que a equipe decidiu fazer com o navegador?",
+      "opcoes": [
+        "Reescrevê-lo do zero, usando um novo motor de renderização chamado Gecko",
+        "Desistir completamente do projeto de código aberto",
+        "Comprar o código de outra empresa concorrente",
+        "Continuar usando exatamente o código antigo, sem alterações"
+      ],
+      "resposta_correta": "Reescrevê-lo do zero, usando um novo motor de renderização chamado Gecko"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que mês e ano a AOL adquiriu a Netscape?",
+      "opcoes": [
+        "Novembro de 1998",
+        "Janeiro de 1998",
+        "Junho de 2002",
+        "Março de 2008"
+      ],
+      "resposta_correta": "Novembro de 1998"
+    },
+    {
+      "n": 8,
+      "pergunta": "Por qual valor aproximado a AOL comprou a Netscape?",
+      "opcoes": [
+        "4,2 bilhões de dólares (em troca de ações)",
+        "4,2 milhões de dólares",
+        "42 bilhões de dólares",
+        "420 mil dólares"
+      ],
+      "resposta_correta": "4,2 bilhões de dólares (em troca de ações)"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em junho de 2002, qual navegador surgiu do projeto Mozilla, inicialmente apelidado de 'Phoenix'?",
+      "opcoes": [
+        "Firefox",
+        "Netscape 7",
+        "Chrome",
+        "Opera"
+      ],
+      "resposta_correta": "Firefox"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em quais sistemas operacionais o Firefox original já funcionava, além do Windows?",
+      "opcoes": [
+        "Linux, Mac OS e Solaris",
+        "Apenas em Windows",
+        "Apenas em dispositivos móveis",
+        "Somente em servidores Unix corporativos"
+      ],
+      "resposta_correta": "Linux, Mac OS e Solaris"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano a AOL anunciou o encerramento do desenvolvimento interno do navegador Netscape, mantendo o Firefox como base?",
+      "opcoes": [
+        "2003",
+        "1998",
+        "2008",
+        "2010"
+      ],
+      "resposta_correta": "2003"
+    },
+    {
+      "n": 12,
+      "pergunta": "Após esse anúncio, qual organização foi criada para cuidar das marcas registradas e do financiamento do projeto Mozilla?",
+      "opcoes": [
+        "Mozilla Foundation",
+        "Netscape Trust",
+        "Open Source Alliance",
+        "Web Standards Group"
+      ],
+      "resposta_correta": "Mozilla Foundation"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que data específica todo o suporte a produtos e navegadores Netscape foi oficialmente encerrado?",
+      "opcoes": [
+        "1º de março de 2008",
+        "23 de janeiro de 1998",
+        "1º de novembro de 1998",
+        "22 de abril de 1993"
+      ],
+      "resposta_correta": "1º de março de 2008"
+    },
+    {
+      "n": 14,
+      "pergunta": "De um pico de mais de 90% de participação de mercado em meados dos anos 1990, para que fatia a participação do Netscape caiu por volta de 2006?",
+      "opcoes": [
+        "Menos de 1%",
+        "Cerca de 50%",
+        "Cerca de 30%",
+        "Cerca de 10%"
+      ],
+      "resposta_correta": "Menos de 1%"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma análise crítica, a que se atribui a queda do Netscape na 'primeira guerra dos navegadores'?",
+      "opcoes": [
+        "À prática anticompetitiva da Microsoft de empacotar o Internet Explorer com o Windows",
+        "À falta total de qualidade técnica do Netscape desde o início",
+        "A um incêndio que destruiu os servidores da Netscape",
+        "À proibição judicial do uso do Netscape nos Estados Unidos"
+      ],
+      "resposta_correta": "À prática anticompetitiva da Microsoft de empacotar o Internet Explorer com o Windows"
+    },
+    {
+      "n": 16,
+      "pergunta": "O Netscape 6, um marco baseado na tecnologia mais nova da Mozilla, foi lançado em que mês e ano?",
+      "opcoes": [
+        "Abril de 2000",
+        "Janeiro de 1998",
+        "Novembro de 1998",
+        "Junho de 2002"
+      ],
+      "resposta_correta": "Abril de 2000"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual foi a última versão numerada do navegador Netscape antes de seu fim, segundo uma fonte?",
+      "opcoes": [
+        "Netscape 9",
+        "Netscape 6",
+        "Netscape 4.5",
+        "Netscape 2"
+      ],
+      "resposta_correta": "Netscape 9"
+    },
+    {
+      "n": 18,
+      "pergunta": "Depois de a AOL reduzir bastante seu envolvimento com a Mozilla em 2003, o que a organização decidiu fazer com o pacote original de aplicativos (Mozilla Suite)?",
+      "opcoes": [
+        "Descontinuá-lo em favor de aplicativos independentes, como Firefox e Thunderbird",
+        "Vendê-lo para a Microsoft",
+        "Mantê-lo exatamente como estava, sem nenhuma mudança",
+        "Transformá-lo num sistema operacional completo"
+      ],
+      "resposta_correta": "Descontinuá-lo em favor de aplicativos independentes, como Firefox e Thunderbird"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual cliente de e-mail também é um produto atual mantido pela Mozilla, além do Firefox?",
+      "opcoes": [
+        "Thunderbird",
+        "Outlook",
+        "Gmail",
+        "Apple Mail"
+      ],
+      "resposta_correta": "Thunderbird"
+    },
+    {
+      "n": 20,
+      "pergunta": "Além do Firefox e do Thunderbird, cite outro produto/sistema mantido pela comunidade Mozilla, usado para rastrear bugs de software.",
+      "opcoes": [
+        "Bugzilla",
+        "Jira",
+        "Trello",
+        "GitHub Issues"
+      ],
+      "resposta_correta": "Bugzilla"
+    }
+  ]
+}

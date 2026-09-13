@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 3,
+    "tema_desafio": "Navegadores e a Guerra dos Browsers",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: o crescimento do Mosaic foi tão explosivo que, em cerca de nove meses, ele passou de um teste com apenas 12 pessoas para mais de 1 milhão de usuários — um ritmo de adoção impressionante mesmo para os padrões atuais, e ainda mais notável para uma tecnologia dos anos 1990.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que data exata, segundo uma fonte específica, a versão 1.0 do Mosaic foi lançada?",
+      "opcoes": [
+        "22 de abril de 1993",
+        "23 de agosto de 1995",
+        "4 de outubro de 1994",
+        "1º de janeiro de 1990"
+      ],
+      "resposta_correta": "22 de abril de 1993"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo um jornalista da revista Wired em outubro de 1994, o Mosaic estava a caminho de se tornar o quê?",
+      "opcoes": [
+        "A interface padrão do mundo",
+        "Um produto obsoleto e esquecido",
+        "Exclusivo apenas para acadêmicos",
+        "Proibido em vários países"
+      ],
+      "resposta_correta": "A interface padrão do mundo"
+    },
+    {
+      "n": 3,
+      "pergunta": "Cite duas empresas que licenciaram o código do Mosaic para criar seus próprios navegadores comerciais.",
+      "opcoes": [
+        "AirMosaic e Spyglass Mosaic",
+        "Netscape e Microsoft diretamente",
+        "Apple e IBM",
+        "Google e Yahoo"
+      ],
+      "resposta_correta": "AirMosaic e Spyglass Mosaic"
+    },
+    {
+      "n": 4,
+      "pergunta": "Por que razão legal a empresa de Andreessen precisou trocar de nome, de Mosaic Communications para Netscape Communications?",
+      "opcoes": [
+        "Para resolver problemas legais relacionados ao nome com a NCSA",
+        "Por exigência do governo americano",
+        "Porque o nome já pertencia à Apple",
+        "Não houve nenhum motivo legal, foi apenas marketing"
+      ],
+      "resposta_correta": "Para resolver problemas legais relacionados ao nome com a NCSA"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem desenvolveu uma versão do Mosaic específica para o Macintosh, meses após a versão original?",
+      "opcoes": [
+        "Aleks Totic",
+        "Eric Bina",
+        "Jim Clark",
+        "Marc Andreessen"
+      ],
+      "resposta_correta": "Aleks Totic"
+    },
+    {
+      "n": 6,
+      "pergunta": "Cite outros dois navegadores lançados em 1993, junto com o Mosaic, mas que não tiveram o mesmo sucesso.",
+      "opcoes": [
+        "Cello e Lynx",
+        "Chrome e Firefox",
+        "Safari e Opera",
+        "Edge e Brave"
+      ],
+      "resposta_correta": "Cello e Lynx"
+    },
+    {
+      "n": 7,
+      "pergunta": "Cite um dos primeiros funcionários recrutados por Andreessen e Clark para formar a equipe original da Netscape.",
+      "opcoes": [
+        "Lou Montulli",
+        "Steve Jobs",
+        "Bill Gates",
+        "Tim Berners-Lee"
+      ],
+      "resposta_correta": "Lou Montulli"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em fevereiro de 1994, Andreessen recebeu um e-mail de quem, convidando-o a montar uma empresa juntos?",
+      "opcoes": [
+        "Jim Clark",
+        "Bill Gates",
+        "Eric Bina",
+        "Rob McCool"
+      ],
+      "resposta_correta": "Jim Clark"
+    },
+    {
+      "n": 9,
+      "pergunta": "Antes de fundar a Netscape com Andreessen, Jim Clark já havia fundado qual outra empresa de tecnologia?",
+      "opcoes": [
+        "Silicon Graphics, Inc. (SGI)",
+        "Sun Microsystems",
+        "Apple",
+        "Cisco"
+      ],
+      "resposta_correta": "Silicon Graphics, Inc. (SGI)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Antes de deixar a NCSA, como Andreessen testou inicialmente o Mosaic beta, segundo relatos?",
+      "opcoes": [
+        "Publicou um pedido num grupo de notícias, recebendo 12 respostas iniciais",
+        "Contratou uma empresa de testes profissional",
+        "Testou sozinho, sem ajuda externa",
+        "Distribuiu fisicamente disquetes em universidades"
+      ],
+      "resposta_correta": "Publicou um pedido num grupo de notícias, recebendo 12 respostas iniciais"
+    },
+    {
+      "n": 11,
+      "pergunta": "Aproximadamente em quantos meses o número de usuários do Mosaic cresceu de poucas dezenas para 1 milhão, segundo um relato?",
+      "opcoes": [
+        "Cerca de 9 meses",
+        "Cerca de 1 mês",
+        "Cerca de 5 anos",
+        "Cerca de 1 semana"
+      ],
+      "resposta_correta": "Cerca de 9 meses"
+    },
+    {
+      "n": 12,
+      "pergunta": "O Internet Explorer 1.0 foi lançado como parte de qual pacote adicional do Windows 95, em agosto de 1995?",
+      "opcoes": [
+        "Windows 95 Plus",
+        "Windows 95 Ultimate",
+        "Windows 95 Pro",
+        "Windows 95 Enterprise"
+      ],
+      "resposta_correta": "Windows 95 Plus"
+    },
+    {
+      "n": 13,
+      "pergunta": "Cite outro navegador concorrente lançado em 1995, além do Internet Explorer, que também competia com a Netscape.",
+      "opcoes": [
+        "OmniWeb",
+        "Chrome",
+        "Firefox",
+        "Safari"
+      ],
+      "resposta_correta": "OmniWeb"
+    },
+    {
+      "n": 14,
+      "pergunta": "Além do Mosaic, cite outro navegador lançado em 1994, também de menor sucesso comercial.",
+      "opcoes": [
+        "IBM Web Explorer",
+        "Google Chrome",
+        "Mozilla Firefox",
+        "Opera"
+      ],
+      "resposta_correta": "IBM Web Explorer"
+    },
+    {
+      "n": 15,
+      "pergunta": "Uma das primeiras versões do World Wide Web (o navegador original de Berners-Lee) foi renomeada para evitar confusão com a própria rede. Qual foi o novo nome?",
+      "opcoes": [
+        "Nexus",
+        "Cello",
+        "Arena",
+        "tkWWW"
+      ],
+      "resposta_correta": "Nexus"
+    },
+    {
+      "n": 16,
+      "pergunta": "O protocolo HTTP em qual versão específica já era suportado pelo Mosaic desde seu lançamento inicial?",
+      "opcoes": [
+        "HTTP/1.0",
+        "HTTP/2.0",
+        "HTTP/3.0",
+        "HTTPS exclusivamente"
+      ],
+      "resposta_correta": "HTTP/1.0"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual foi um dos primeiros recursos visuais que o Mosaic trouxe, tornando a internet mais acessível ao público geral?",
+      "opcoes": [
+        "Exibir texto e imagens juntos na mesma página",
+        "Suporte a vídeos em alta definição",
+        "Reprodução de música em tempo real",
+        "Chamadas de vídeo integradas"
+      ],
+      "resposta_correta": "Exibir texto e imagens juntos na mesma página"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma fonte, a tag HTML '<blink>', considerada polêmica pelo excesso de uso, foi criada por qual empresa?",
+      "opcoes": [
+        "Netscape",
+        "Microsoft",
+        "NCSA",
+        "IBM"
+      ],
+      "resposta_correta": "Netscape"
+    },
+    {
+      "n": 19,
+      "pergunta": "Quantos estudantes/funcionários formados pela Universidade de Illinois, além de Andreessen, ajudaram a fundar a Mosaic Communications Corporation, segundo uma fonte?",
+      "opcoes": [
+        "Quatro",
+        "Nenhum, apenas Andreessen e Clark",
+        "Dez",
+        "Vinte"
+      ],
+      "resposta_correta": "Quatro"
+    },
+    {
+      "n": 20,
+      "pergunta": "Antes de a internet se tornar pública, qual era seu propósito original, segundo uma das fontes analisadas (mesmo que de forma simplificada)?",
+      "opcoes": [
+        "Ser uma rede de informações entre militares e instituições de pesquisa americanas",
+        "Ser uma plataforma comercial de vendas desde o início",
+        "Ser exclusivamente um sistema de entretenimento",
+        "Ser um projeto acadêmico sem nenhuma relação militar"
+      ],
+      "resposta_correta": "Ser uma rede de informações entre militares e instituições de pesquisa americanas"
+    }
+  ]
+}

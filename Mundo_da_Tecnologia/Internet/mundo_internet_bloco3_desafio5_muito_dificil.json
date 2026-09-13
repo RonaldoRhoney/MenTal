@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 5,
+    "tema_desafio": "Outros Gigantes: Twitter/X, Wikipedia e TikTok",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - eventos de moderacao de conteudo e suspensao judicial tratados de forma factual e neutra, sem juizo de valor politico.",
+    "status": "Fecha o Desafio 5 e o Bloco 3 completo (5/5 desafios)."
+  },
+  "saiba_mais": "Curiosidade: o primeiríssimo tweet da história, escrito por Jack Dorsey em 2006, virou também um marco do mundo digital anos depois — em março de 2021, ele foi vendido como NFT (token não-fungível) por cerca de 2,9 milhões de dólares, transformando uma simples mensagem de teste, 'apenas configurando meu twttr', num dos objetos digitais mais valiosos já negociados publicamente.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Após o lançamento do Twitter, Dorsey e Williams compraram a Odeo e a transformaram em qual nova empresa?",
+      "opcoes": [
+        "The Obvious Corporation",
+        "Twitter Holdings",
+        "Chirp Inc.",
+        "ShortMsg Corp."
+      ],
+      "resposta_correta": "The Obvious Corporation"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo um relato, uma disputa de poder interna se desenrolou entre quais dois fundadores do Twitter, após Evan Williams decidir se dedicar à empresa em tempo integral?",
+      "opcoes": [
+        "Evan Williams e Jack Dorsey",
+        "Jack Dorsey e Biz Stone",
+        "Noah Glass e Evan Williams",
+        "Biz Stone e Noah Glass"
+      ],
+      "resposta_correta": "Evan Williams e Jack Dorsey"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano Jack Dorsey deixou o cargo de CEO do Twitter pela primeira vez, antes de retornar anos depois?",
+      "opcoes": [
+        "2008",
+        "2006",
+        "2013",
+        "2015"
+      ],
+      "resposta_correta": "2008"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que ano Jack Dorsey retornou ao cargo de CEO do Twitter, quase uma década após sua saída original?",
+      "opcoes": [
+        "2015",
+        "2008",
+        "2006",
+        "2022"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo um relato biográfico, qual gesto físico Jack Dorsey fez ao assumir formalmente o comando do Twitter em seus primeiros anos, para 'parecer mais maduro'?",
+      "opcoes": [
+        "Retirou seu piercing de nariz",
+        "Raspou a cabeça completamente",
+        "Passou a usar terno todos os dias",
+        "Cortou a barba que usava"
+      ],
+      "resposta_correta": "Retirou seu piercing de nariz"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual foi a posição numérica da conta pessoal de Jack Dorsey (@jack) entre as contas criadas no Twitter?",
+      "opcoes": [
+        "A 12ª conta criada, mas considerada a primeira 'oficial' (as 11 anteriores eram testes)",
+        "A primeira conta absoluta, sem nenhuma exceção",
+        "A centésima conta criada na rede",
+        "Não há registro sobre a posição numérica dessa conta"
+      ],
+      "resposta_correta": "A 12ª conta criada, mas considerada a primeira 'oficial' (as 11 anteriores eram testes)"
+    },
+    {
+      "n": 7,
+      "pergunta": "Por qual valor os fundadores compraram o domínio da empresa antes do lançamento oficial do Twitter, segundo um relato?",
+      "opcoes": [
+        "7 mil dólares",
+        "700 dólares",
+        "70 mil dólares",
+        "700 mil dólares"
+      ],
+      "resposta_correta": "7 mil dólares"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em março de 2021, o primeiro tweet da história (de Jack Dorsey) foi vendido como NFT. Por aproximadamente quanto?",
+      "opcoes": [
+        "Cerca de 2,9 milhões de dólares",
+        "Cerca de 29 mil dólares",
+        "Cerca de 290 milhões de dólares",
+        "Cerca de 2.900 dólares"
+      ],
+      "resposta_correta": "Cerca de 2,9 milhões de dólares"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que site de leilões de arte digital essa venda do primeiro tweet como NFT foi realizada?",
+      "opcoes": [
+        "Valuables",
+        "OpenSea",
+        "SuperRare",
+        "Christie's Digital"
+      ],
+      "resposta_correta": "Valuables"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo uma fonte, quantos escritórios em quantos países diferentes o Twitter mantinha, refletindo sua escala global antes das mudanças recentes?",
+      "opcoes": [
+        "38 escritórios em 23 países",
+        "5 escritórios em 3 países",
+        "100 escritórios em 50 países",
+        "1 escritório único, apenas nos EUA"
+      ],
+      "resposta_correta": "38 escritórios em 23 países"
+    },
+    {
+      "n": 11,
+      "pergunta": "Além de comprar o Twitter, quais decisões controversas de gestão levaram usuários e anunciantes a questionar o futuro da rede, segundo uma fonte recente?",
+      "opcoes": [
+        "Diversas crises de gestão após a aquisição por Elon Musk",
+        "Nenhuma controvérsia relevante ocorreu após a aquisição",
+        "Apenas uma simples mudança de logotipo, sem outras alterações",
+        "Exclusivamente uma disputa de marca registrada nos tribunais"
+      ],
+      "resposta_correta": "Diversas crises de gestão após a aquisição por Elon Musk"
+    },
+    {
+      "n": 12,
+      "pergunta": "Um episódio controverso, ainda no fim de 2020, envolveu o Twitter bloqueando qual tipo de conteúdo de um jornal específico, gerando debate sobre moderação de conteúdo?",
+      "opcoes": [
+        "Um artigo do New York Post com acusações sem provas comprovadas na época",
+        "Um artigo do próprio New York Times sobre esportes",
+        "Um comunicado oficial do governo dos EUA",
+        "Um post de humor sem nenhuma relação política"
+      ],
+      "resposta_correta": "Um artigo do New York Post com acusações sem provas comprovadas na época"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma fonte, Jack Dorsey foi intimado a prestar esclarecimentos em qual instância do governo americano, relacionado à moderação de conteúdo de um usuário ilustre?",
+      "opcoes": [
+        "O Congresso americano",
+        "A Suprema Corte",
+        "O Departamento de Justiça exclusivamente",
+        "As Nações Unidas"
+      ],
+      "resposta_correta": "O Congresso americano"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma fonte, qual rotina pessoal excêntrica de Jack Dorsey é frequentemente destacada, incluindo jejuns e banhos de gelo?",
+      "opcoes": [
+        "Um estilo de vida com jejuns longos, banhos de gelo intercalados com sauna e meditação",
+        "Uma rotina totalmente convencional, sem nenhuma particularidade",
+        "Uma dieta baseada exclusivamente em fast food",
+        "Uma rotina de trabalho remoto permanente, sem nenhum outro hábito citado"
+      ],
+      "resposta_correta": "Um estilo de vida com jejuns longos, banhos de gelo intercalados com sauna e meditação"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma fonte, em 2018 o Twitter implementou uma mudança significativa na quantidade de caracteres permitidos por mensagem, e também alterou qual outro aspecto da plataforma?",
+      "opcoes": [
+        "Todo o layout visual, tornando-o mais moderno",
+        "O nome da empresa, já naquele ano",
+        "A remoção completa de imagens",
+        "A proibição de contas anônimas"
+      ],
+      "resposta_correta": "Todo o layout visual, tornando-o mais moderno"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma fonte, o Twitter foi suspenso judicialmente em qual país específico, num episódio recente de sua história?",
+      "opcoes": [
+        "Brasil",
+        "Estados Unidos",
+        "Reino Unido",
+        "Canadá"
+      ],
+      "resposta_correta": "Brasil"
+    },
+    {
+      "n": 17,
+      "pergunta": "Considerando a linha do tempo de fundação da Wikipedia (2001) e do TikTok internacional (2017), qual desses dois gigantes de internet é mais antigo?",
+      "opcoes": [
+        "A Wikipedia",
+        "O TikTok",
+        "Ambos foram fundados no mesmo ano",
+        "Não é possível determinar com as informações disponíveis"
+      ],
+      "resposta_correta": "A Wikipedia"
+    },
+    {
+      "n": 18,
+      "pergunta": "Comparando as datas de fundação do Twitter (2006) e da ByteDance, empresa-mãe do TikTok (2012), qual diferença de anos aproximada existe entre elas?",
+      "opcoes": [
+        "Cerca de seis anos",
+        "Cerca de um ano",
+        "Cerca de vinte anos",
+        "Nenhuma diferença, foram fundadas no mesmo ano"
+      ],
+      "resposta_correta": "Cerca de seis anos"
+    },
+    {
+      "n": 19,
+      "pergunta": "Considerando todos os gigantes estudados neste Mundo — Google, Amazon/AWS, Meta, Netflix, e agora Twitter/Wikipedia/TikTok — o que suas trajetórias combinadas melhor ilustram sobre a evolução da internet?",
+      "opcoes": [
+        "Como diferentes modelos de negócio (busca, nuvem, redes sociais, streaming, enciclopédia colaborativa, vídeos curtos) moldaram a experiência digital do mundo",
+        "Que apenas empresas americanas conseguiram ter sucesso global na internet",
+        "Que todas essas empresas seguiram exatamente o mesmo modelo de negócio",
+        "Que nenhuma dessas empresas jamais enfrentou desafios ou controvérsias"
+      ],
+      "resposta_correta": "Como diferentes modelos de negócio (busca, nuvem, redes sociais, streaming, enciclopédia colaborativa, vídeos curtos) moldaram a experiência digital do mundo"
+    },
+    {
+      "n": 20,
+      "pergunta": "Encerrando este Bloco sobre os Gigantes da Internet, o que a diversidade de origens dessas empresas (garagens, universidades, projetos paralelos que quase fracassaram) melhor demonstra?",
+      "opcoes": [
+        "Que grandes transformações tecnológicas muitas vezes nascem de tentativas modestas, e não de planejamento grandioso desde o início",
+        "Que só é possível criar uma gigante de tecnologia com investimento bilionário inicial",
+        "Que apenas ideias planejadas com precisão desde o primeiro dia se tornam bem-sucedidas",
+        "Que nenhuma dessas empresas teve origem em projetos pequenos ou paralelos"
+      ],
+      "resposta_correta": "Que grandes transformações tecnológicas muitas vezes nascem de tentativas modestas, e não de planejamento grandioso desde o início"
+    }
+  ]
+}

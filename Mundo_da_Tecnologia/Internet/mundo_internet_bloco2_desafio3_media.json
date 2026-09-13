@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 3,
+    "tema_desafio": "Linux e Linus Torvalds",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: o Linux só existe hoje graças a uma combinação de dois projetos que nasceram separados — o kernel de Linus Torvalds e as ferramentas do Projeto GNU, de Richard Stallman, que já estavam quase prontas, mas sem um núcleo funcional. Por isso, o nome tecnicamente mais correto do sistema completo é 'GNU/Linux', embora a maioria das pessoas simplesmente diga 'Linux'.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em qual grupo de discussão (newsgroup) da internet Linus Torvalds anunciou publicamente seu projeto pela primeira vez, em agosto de 1991?",
+      "opcoes": [
+        "comp.os.minix",
+        "alt.hypertext",
+        "comp.linux.announce",
+        "sci.tech.linux"
+      ],
+      "resposta_correta": "comp.os.minix"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que data exata de agosto de 1991 esse anúncio inicial foi feito, segundo registros históricos?",
+      "opcoes": [
+        "25 de agosto de 1991",
+        "5 de outubro de 1991",
+        "1º de setembro de 1991",
+        "15 de julho de 1991"
+      ],
+      "resposta_correta": "25 de agosto de 1991"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual sistema operacional educacional, baseado em Unix, inspirou inicialmente Torvalds antes de ele criar seu próprio kernel?",
+      "opcoes": [
+        "MINIX",
+        "GNU HURD",
+        "BSD",
+        "CP/M"
+      ],
+      "resposta_correta": "MINIX"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem criou o sistema operacional MINIX?",
+      "opcoes": [
+        "Andrew Tanenbaum",
+        "Richard Stallman",
+        "Dennis Ritchie",
+        "Ken Thompson"
+      ],
+      "resposta_correta": "Andrew Tanenbaum"
+    },
+    {
+      "n": 5,
+      "pergunta": "Por que Torvalds ficou insatisfeito com o licenciamento do MINIX, segundo relatos?",
+      "opcoes": [
+        "Era voltado exclusivamente para uso educacional",
+        "Era completamente gratuito, sem nenhuma restrição",
+        "Não permitia nenhum tipo de instalação",
+        "Exigia hardware muito caro para funcionar"
+      ],
+      "resposta_correta": "Era voltado exclusivamente para uso educacional"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que data foi lançada a primeira versão oficial do Linux, a versão 0.02, segundo um dos registros históricos?",
+      "opcoes": [
+        "5 de outubro de 1991",
+        "25 de agosto de 1991",
+        "1º de janeiro de 1992",
+        "3 de julho de 1991"
+      ],
+      "resposta_correta": "5 de outubro de 1991"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que ano a GPL (GNU General Public License) foi oficialmente adotada pelo Linux, segundo registros?",
+      "opcoes": [
+        "1992",
+        "1991",
+        "1989",
+        "2000"
+      ],
+      "resposta_correta": "1992"
+    },
+    {
+      "n": 8,
+      "pergunta": "Antes de adotar a GPL, que tipo de licença própria Torvalds havia aplicado inicialmente ao Linux?",
+      "opcoes": [
+        "Uma licença própria com restrições para uso comercial",
+        "A mesma licença do MINIX, sem alterações",
+        "Nenhuma licença, deixando o software em domínio público total desde o início",
+        "Uma licença idêntica à do Windows"
+      ],
+      "resposta_correta": "Uma licença própria com restrições para uso comercial"
+    },
+    {
+      "n": 9,
+      "pergunta": "Quais dois pesquisadores da Bell Labs são creditados pela criação original do Unix, em 1969?",
+      "opcoes": [
+        "Ken Thompson e Dennis Ritchie",
+        "Linus Torvalds e Richard Stallman",
+        "Andrew Tanenbaum e Linus Torvalds",
+        "Bill Gates e Paul Allen"
+      ],
+      "resposta_correta": "Ken Thompson e Dennis Ritchie"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual organização sem fins lucrativos, fundada por Richard Stallman, criou a licença GPL?",
+      "opcoes": [
+        "Free Software Foundation (FSF)",
+        "Apache Software Foundation",
+        "Linux Foundation",
+        "Open Source Initiative"
+      ],
+      "resposta_correta": "Free Software Foundation (FSF)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual editor de texto famoso foi um dos primeiros projetos criados por Richard Stallman dentro do movimento de software livre?",
+      "opcoes": [
+        "Emacs",
+        "Vim",
+        "Notepad",
+        "Word"
+      ],
+      "resposta_correta": "Emacs"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual compilador, também criado no âmbito do Projeto GNU, se tornou uma ferramenta fundamental para desenvolvedores?",
+      "opcoes": [
+        "GCC",
+        "MSVC",
+        "Clang",
+        "Turbo Pascal"
+      ],
+      "resposta_correta": "GCC"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual era o nome do kernel que o Projeto GNU tentava desenvolver, mas que avançava lentamente antes do surgimento do Linux?",
+      "opcoes": [
+        "GNU Hurd",
+        "GNU Kernel-X",
+        "Mach-GNU",
+        "FreeBSD"
+      ],
+      "resposta_correta": "GNU Hurd"
+    },
+    {
+      "n": 14,
+      "pergunta": "Por que o Linux acabou preenchendo uma lacuna importante para o Projeto GNU, segundo a história combinada dos dois projetos?",
+      "opcoes": [
+        "O GNU já tinha quase todas as ferramentas prontas, mas faltava um kernel funcional, que o Linux forneceu",
+        "O GNU nunca teve nenhuma relação com o Linux",
+        "O Linux substituiu completamente todas as ferramentas do GNU",
+        "O GNU foi criado depois do Linux, como resposta a ele"
+      ],
+      "resposta_correta": "O GNU já tinha quase todas as ferramentas prontas, mas faltava um kernel funcional, que o Linux forneceu"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual distribuição Linux, criada em 1993, é conhecida por seu sistema de gerenciamento de pacotes chamado APT?",
+      "opcoes": [
+        "Debian",
+        "Red Hat",
+        "Ubuntu",
+        "Fedora"
+      ],
+      "resposta_correta": "Debian"
+    },
+    {
+      "n": 16,
+      "pergunta": "Como se chamava o programador que sugeriu a Torvalds colocar o projeto num servidor, e acabou batizando a pasta de 'linux'?",
+      "opcoes": [
+        "Ari Lemmke",
+        "Andrew Tanenbaum",
+        "Richard Stallman",
+        "Bob Metcalfe"
+      ],
+      "resposta_correta": "Ari Lemmke"
+    },
+    {
+      "n": 17,
+      "pergunta": "O nome que Torvalds originalmente preferia para seu projeto, antes de 'Linux' pegar, era considerado por ele mesmo como quê?",
+      "opcoes": [
+        "Um nome egoísta ('Freax')",
+        "Um nome muito comprido",
+        "Um nome já usado por outro projeto",
+        "Um nome sem nenhum significado"
+      ],
+      "resposta_correta": "Um nome egoísta ('Freax')"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual das quatro 'liberdades' fundamentais defendidas pela GPL/FSF é descrita como 'liberdade zero'?",
+      "opcoes": [
+        "Liberdade de executar o programa para qualquer propósito",
+        "Liberdade de vender o programa por qualquer preço",
+        "Liberdade de impedir que outros usem o programa",
+        "Liberdade de remover o código-fonte publicamente"
+      ],
+      "resposta_correta": "Liberdade de executar o programa para qualquer propósito"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo registros de crescimento do projeto, de quantos arquivos simples em linguagem C o Linux evoluiu até ultrapassar 370 megabytes de código-fonte?",
+      "opcoes": [
+        "De um pequeno grupo de arquivos, em 1991",
+        "De mais de 1 milhão de arquivos já em 1991",
+        "De um único arquivo de texto",
+        "De uma base de código idêntica à do Windows"
+      ],
+      "resposta_correta": "De um pequeno grupo de arquivos, em 1991"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que o kernel Linux era, tecnicamente, na sua primeira concepção, antes de evoluir para um sistema mais completo?",
+      "opcoes": [
+        "Um emulador de terminal",
+        "Um navegador de internet completo",
+        "Um processador de texto",
+        "Um jogo eletrônico simples"
+      ],
+      "resposta_correta": "Um emulador de terminal"
+    }
+  ]
+}

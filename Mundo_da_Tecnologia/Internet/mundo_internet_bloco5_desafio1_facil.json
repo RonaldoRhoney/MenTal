@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 1,
+    "tema_desafio": "Deep Web e Dark Web",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Kaspersky e Tecnoblog. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo estritamente educacional/historico sobre o que e a tecnologia, sem nenhuma instrucao de acesso ou promocao de atividade ilegal; usos legitimos (jornalismo, ativismo) e existencia de atividade ilicita mencionados de forma factual e equilibrada."
+  },
+  "saiba_mais": "Curiosidade: apesar da fama sombria, a tecnologia por trás da dark web nasceu dentro do próprio governo dos Estados Unidos — foi desenvolvida pelo Laboratório de Pesquisa Naval americano para proteger comunicações de agentes de inteligência. Só depois, em 2004, o governo decidiu abrir o código-fonte ao público, argumentando que essa tecnologia de anonimato não deveria ficar restrita apenas a fins militares.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "O que é a 'surface web' (web de superfície)?",
+      "opcoes": [
+        "A parte da internet indexada por buscadores, acessível a qualquer pessoa",
+        "Uma rede exclusiva para uso militar",
+        "Um tipo de vírus de computador",
+        "Uma tecnologia de armazenamento em nuvem"
+      ],
+      "resposta_correta": "A parte da internet indexada por buscadores, acessível a qualquer pessoa"
+    },
+    {
+      "n": 2,
+      "pergunta": "O que é a 'deep web'?",
+      "opcoes": [
+        "Conteúdo da internet não indexado por buscadores comuns, como e-mails e dados bancários",
+        "Um tipo específico de vírus",
+        "Uma rede social muito popular",
+        "O nome antigo da World Wide Web"
+      ],
+      "resposta_correta": "Conteúdo da internet não indexado por buscadores comuns, como e-mails e dados bancários"
+    },
+    {
+      "n": 3,
+      "pergunta": "A que analogia visual a diferença entre surface web e deep web costuma ser comparada?",
+      "opcoes": [
+        "Um iceberg, com a ponta visível e a maior parte submersa",
+        "Uma árvore, com raízes e galhos",
+        "Um rio, com nascente e foz",
+        "Uma montanha, com base e cume"
+      ],
+      "resposta_correta": "Um iceberg, com a ponta visível e a maior parte submersa"
+    },
+    {
+      "n": 4,
+      "pergunta": "O que é a 'dark web'?",
+      "opcoes": [
+        "Uma subcamada da deep web, intencionalmente oculta, acessível apenas por softwares específicos",
+        "Sinônimo exato de deep web, sem nenhuma diferença",
+        "A parte mais indexada e visível da internet",
+        "Um tipo de rede social exclusiva de empresas"
+      ],
+      "resposta_correta": "Uma subcamada da deep web, intencionalmente oculta, acessível apenas por softwares específicos"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual é o principal navegador/tecnologia usada para acessar a dark web?",
+      "opcoes": [
+        "Tor (The Onion Router)",
+        "Google Chrome comum",
+        "Internet Explorer",
+        "Safari padrão"
+      ],
+      "resposta_correta": "Tor (The Onion Router)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual domínio de internet é característico de sites da dark web?",
+      "opcoes": [
+        ".onion",
+        ".com",
+        ".net",
+        ".org"
+      ],
+      "resposta_correta": ".onion"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual instituição desenvolveu originalmente a tecnologia por trás do Tor?",
+      "opcoes": [
+        "Laboratório de Pesquisa Naval dos EUA",
+        "Google",
+        "Uma universidade britânica",
+        "Uma empresa privada de segurança digital"
+      ],
+      "resposta_correta": "Laboratório de Pesquisa Naval dos EUA"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano o navegador Tor foi lançado publicamente?",
+      "opcoes": [
+        "2002",
+        "1969",
+        "2010",
+        "1995"
+      ],
+      "resposta_correta": "2002"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano o governo dos EUA tornou o Tor um software de código aberto?",
+      "opcoes": [
+        "2004",
+        "2002",
+        "1969",
+        "2010"
+      ],
+      "resposta_correta": "2004"
+    },
+    {
+      "n": 10,
+      "pergunta": "Que organização sem fins lucrativos foi criada para financiar e manter o Tor a partir de então?",
+      "opcoes": [
+        "Tor Project",
+        "Mozilla Foundation",
+        "Electronic Frontier Alliance",
+        "Wikimedia Foundation"
+      ],
+      "resposta_correta": "Tor Project"
+    },
+    {
+      "n": 11,
+      "pergunta": "Cite um grupo de usuários que usa legitimamente a tecnologia por trás da dark web para proteção e privacidade.",
+      "opcoes": [
+        "Jornalistas e ativistas",
+        "Exclusivamente criminosos",
+        "Somente órgãos governamentais",
+        "Apenas empresas de publicidade"
+      ],
+      "resposta_correta": "Jornalistas e ativistas"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo estimativas, aproximadamente qual fração da internet é composta pela deep web, incluindo a dark web?",
+      "opcoes": [
+        "A maior parte, cerca de 90%",
+        "Apenas 1%",
+        "Exatamente 50%",
+        "Menos de 0,1%"
+      ],
+      "resposta_correta": "A maior parte, cerca de 90%"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma estimativa, aproximadamente qual fração do conteúdo total da internet a dark web representa, especificamente?",
+      "opcoes": [
+        "Uma fração pequena, em torno de 6%",
+        "Mais da metade do conteúdo total",
+        "Praticamente 100%",
+        "Zero, ela não existe de fato"
+      ],
+      "resposta_correta": "Uma fração pequena, em torno de 6%"
+    },
+    {
+      "n": 14,
+      "pergunta": "A dark web, em si, é considerada ilegal apenas por existir?",
+      "opcoes": [
+        "Não, a legalidade depende de como o usuário a utiliza",
+        "Sim, qualquer acesso já é considerado crime em todos os países",
+        "Sim, mas apenas em países específicos",
+        "Não existe nenhuma discussão sobre legalidade nesse tema"
+      ],
+      "resposta_correta": "Não, a legalidade depende de como o usuário a utiliza"
+    },
+    {
+      "n": 15,
+      "pergunta": "Cite uma emissora de notícias respeitável que criou um site na dark web para ajudar pessoas em países com censura.",
+      "opcoes": [
+        "BBC",
+        "CNN Internacional exclusivamente",
+        "Nenhuma emissora fez isso",
+        "Apenas emissoras de países autoritários"
+      ],
+      "resposta_correta": "BBC"
+    },
+    {
+      "n": 16,
+      "pergunta": "Que tipo de dado pessoal comum, como e-mails privados e informações bancárias online, costuma fazer parte da deep web (não indexada)?",
+      "opcoes": [
+        "Dados privados protegidos por login/senha",
+        "Apenas fotos públicas de redes sociais",
+        "Somente vídeos do YouTube",
+        "Exclusivamente notícias de jornais"
+      ],
+      "resposta_correta": "Dados privados protegidos por login/senha"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que caracteriza a forma como a rede Tor protege o anonimato do usuário, tecnicamente?",
+      "opcoes": [
+        "A conexão passa por vários servidores intermediários, cada um sabendo apenas parte do caminho",
+        "A conexão é feita de forma direta e única, sem intermediários",
+        "Não há nenhuma criptografia envolvida no processo",
+        "O usuário precisa se identificar formalmente antes de navegar"
+      ],
+      "resposta_correta": "A conexão passa por vários servidores intermediários, cada um sabendo apenas parte do caminho"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual outro software, além do Tor, é citado como alternativa para acessar redes anônimas semelhantes à dark web?",
+      "opcoes": [
+        "I2P (Invisible Internet Project)",
+        "Adobe Flash Player",
+        "Microsoft Excel",
+        "WinRAR"
+      ],
+      "resposta_correta": "I2P (Invisible Internet Project)"
+    },
+    {
+      "n": 19,
+      "pergunta": "Que tipo de sistema traduz o nome de um site (como 'exemplo.com') para o endereço IP correspondente, na internet comum?",
+      "opcoes": [
+        "DNS (Domain Name System)",
+        "HTTP",
+        "FTP",
+        "SMTP"
+      ],
+      "resposta_correta": "DNS (Domain Name System)"
+    },
+    {
+      "n": 20,
+      "pergunta": "A que período histórico remonta, de forma ampla, a tecnologia de origem militar que mais tarde influenciou sistemas como o Tor?",
+      "opcoes": [
+        "Aos tempos da ARPANET, no final dos anos 1960",
+        "Aos anos 2000, com a popularização das redes sociais",
+        "Aos anos 1990, com a chegada da World Wide Web",
+        "Ao século XIX, antes de qualquer rede de computadores"
+      ],
+      "resposta_correta": "Aos tempos da ARPANET, no final dos anos 1960"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 5,
+    "tema_desafio": "O Futuro da Internet: Tendências e Especulações",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes especializadas em tecnologia (Futurecom, Google Cloud). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo prospectivo tratado com a devida ressalva epistemica de que sao tendencias/previsoes, nao fatos consumados."
+  },
+  "saiba_mais": "Nota sobre este desafio: diferente dos demais blocos deste Mundo, que tratam de fatos históricos já confirmados, este desafio aborda tendências e previsões para o futuro da internet — informações baseadas em análises de especialistas do setor, mas que, por natureza, ainda não são fatos consumados. Vale acompanhar essas tendências com curiosidade, sabendo que o futuro real pode confirmar, superar ou até desviar do que hoje parece mais provável.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "O que a tecnologia 6G promete, em termos de velocidade, segundo estimativas do setor?",
+      "opcoes": [
+        "Ser até 100 vezes mais rápida que o 5G",
+        "Ser exatamente igual ao 5G em velocidade",
+        "Ser mais lenta que o 4G",
+        "Não ter nenhuma diferença de velocidade relevante"
+      ],
+      "resposta_correta": "Ser até 100 vezes mais rápida que o 5G"
+    },
+    {
+      "n": 2,
+      "pergunta": "O que significa a sigla IoT, tendência que deve se expandir ainda mais no futuro da internet?",
+      "opcoes": [
+        "Internet das Coisas (Internet of Things)",
+        "Internet de Transmissão",
+        "Interconexão de Terminais",
+        "Instalação de Tecnologia"
+      ],
+      "resposta_correta": "Internet das Coisas (Internet of Things)"
+    },
+    {
+      "n": 3,
+      "pergunta": "O que a Internet das Coisas propõe, de forma geral?",
+      "opcoes": [
+        "Conectar diversos objetos do dia a dia à internet, além de computadores e celulares",
+        "Substituir totalmente o uso de smartphones",
+        "Eliminar a necessidade de qualquer conexão à internet",
+        "Criar uma nova linguagem de programação exclusiva"
+      ],
+      "resposta_correta": "Conectar diversos objetos do dia a dia à internet, além de computadores e celulares"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual tecnologia de rede sem fio doméstica, prevista para se popularizar até 2026, promete conexões mais rápidas e inteligentes?",
+      "opcoes": [
+        "Wi-Fi 7",
+        "Wi-Fi 1",
+        "Bluetooth 2.0",
+        "3G"
+      ],
+      "resposta_correta": "Wi-Fi 7"
+    },
+    {
+      "n": 5,
+      "pergunta": "O que é computação quântica, área emergente citada como tendência futura?",
+      "opcoes": [
+        "Uma área que usa princípios da física quântica para realizar cálculos complexos em velocidades muito altas",
+        "Um sinônimo simples de internet mais rápida",
+        "Um tipo de rede social do futuro",
+        "Um novo formato de arquivo de imagem"
+      ],
+      "resposta_correta": "Uma área que usa princípios da física quântica para realizar cálculos complexos em velocidades muito altas"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em quais áreas a computação quântica tem potencial de revolucionar, segundo especialistas?",
+      "opcoes": [
+        "Medicina, desenvolvimento de materiais e segurança cibernética, entre outras",
+        "Exclusivamente jogos eletrônicos",
+        "Apenas redes sociais",
+        "Somente entretenimento audiovisual"
+      ],
+      "resposta_correta": "Medicina, desenvolvimento de materiais e segurança cibernética, entre outras"
+    },
+    {
+      "n": 7,
+      "pergunta": "O que a fibra óptica continua sendo, segundo especialistas, mesmo com o avanço de novas tecnologias de conexão?",
+      "opcoes": [
+        "A base da infraestrutura de telecomunicações, oferecendo alta velocidade e baixa latência",
+        "Uma tecnologia já completamente obsoleta",
+        "Um recurso exclusivo de zonas rurais",
+        "Uma tecnologia mais lenta que conexões discadas"
+      ],
+      "resposta_correta": "A base da infraestrutura de telecomunicações, oferecendo alta velocidade e baixa latência"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em regiões rurais, onde a fibra óptica ainda não chegou, qual tecnologia de conexão continua sendo relevante, segundo uma análise?",
+      "opcoes": [
+        "Internet via rádio",
+        "Conexão exclusivamente por cabo submarino",
+        "Apenas conexão via linha telefônica fixa tradicional",
+        "Nenhuma conexão é possível nessas regiões"
+      ],
+      "resposta_correta": "Internet via rádio"
+    },
+    {
+      "n": 9,
+      "pergunta": "O que é 'computação descentralizada na web', tendência associada ao conceito de Web 3.0?",
+      "opcoes": [
+        "Uma rede sem servidores centrais, onde dados operam por sistemas ponto a ponto",
+        "Um sinônimo simples de rede social tradicional",
+        "Um tipo de vírus de computador",
+        "Uma tecnologia exclusiva de jogos eletrônicos"
+      ],
+      "resposta_correta": "Uma rede sem servidores centrais, onde dados operam por sistemas ponto a ponto"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual tecnologia, já discutida em desafio anterior deste Mundo, é citada como caminhando junto com o conceito de Web 3.0 e computação descentralizada?",
+      "opcoes": [
+        "Blockchain",
+        "Dial-up (conexão discada)",
+        "Fax",
+        "Pager"
+      ],
+      "resposta_correta": "Blockchain"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo previsões de cibersegurança para 2026, o que os adversários digitais devem usar cada vez mais para tornar ataques mais rápidos?",
+      "opcoes": [
+        "Inteligência artificial",
+        "Apenas métodos manuais tradicionais",
+        "Exclusivamente ataques físicos a servidores",
+        "Cartas e correspondências físicas"
+      ],
+      "resposta_correta": "Inteligência artificial"
+    },
+    {
+      "n": 12,
+      "pergunta": "O que continua sendo apontado, segundo previsões recentes de cibersegurança, como a principal ameaça financeira digital?",
+      "opcoes": [
+        "Ransomware e roubo de dados",
+        "Apenas spam de e-mail comum",
+        "Exclusivamente vírus dos anos 1990",
+        "Golpes exclusivamente por telefone fixo"
+      ],
+      "resposta_correta": "Ransomware e roubo de dados"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual outra tecnologia sem fio, baseada em luz visível, é citada como possível alternativa futura ao Wi-Fi tradicional?",
+      "opcoes": [
+        "Li-Fi",
+        "Bluetooth",
+        "NFC",
+        "Infravermelho tradicional"
+      ],
+      "resposta_correta": "Li-Fi"
+    },
+    {
+      "n": 14,
+      "pergunta": "O que a expressão 'internet quântica' se refere, num cenário futuro descrito por especialistas?",
+      "opcoes": [
+        "Uma arquitetura digital combinando computação descentralizada e princípios quânticos, respondendo em tempo real",
+        "Um sinônimo simples de internet 5G comum",
+        "Um tipo específico de rede social",
+        "Uma tecnologia já totalmente implementada e comum hoje"
+      ],
+      "resposta_correta": "Uma arquitetura digital combinando computação descentralizada e princípios quânticos, respondendo em tempo real"
+    },
+    {
+      "n": 15,
+      "pergunta": "Que tipo de dispositivos domésticos, segundo tendências de IoT, devem ficar cada vez mais 'permanentemente online'?",
+      "opcoes": [
+        "Geladeiras, câmeras e até carros",
+        "Exclusivamente computadores de mesa antigos",
+        "Apenas rádios AM tradicionais",
+        "Somente telefones fixos com fio"
+      ],
+      "resposta_correta": "Geladeiras, câmeras e até carros"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma tendência apontada para 2026, o que se espera cada vez mais das próprias redes de internet, em termos de autogerenciamento?",
+      "opcoes": [
+        "Que sejam capazes de identificar gargalos e corrigir falhas automaticamente, com ajuda de IA",
+        "Que dependam exclusivamente de intervenção manual humana",
+        "Que se tornem completamente incapazes de qualquer automação",
+        "Que percam toda capacidade de conexão remota"
+      ],
+      "resposta_correta": "Que sejam capazes de identificar gargalos e corrigir falhas automaticamente, com ajuda de IA"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que se espera, segundo tendências recentes, sobre o futuro da internet em relação à sustentabilidade?",
+      "opcoes": [
+        "Que se torne mais 'verde', com maior preocupação ambiental na infraestrutura",
+        "Que a sustentabilidade seja completamente irrelevante para o setor",
+        "Que o consumo de energia deixe de ser um tema discutido",
+        "Que apenas países ricos precisem se preocupar com o tema"
+      ],
+      "resposta_correta": "Que se torne mais 'verde', com maior preocupação ambiental na infraestrutura"
+    },
+    {
+      "n": 18,
+      "pergunta": "Além de comunicação quântica, qual outro conceito tecnológico (réplicas digitais de sistemas físicos) é citado como parte da exploração do 6G?",
+      "opcoes": [
+        "Gêmeos digitais (digital twins)",
+        "Espelhos mágicos",
+        "Hologramas holísticos",
+        "Nenhum conceito adicional é mencionado"
+      ],
+      "resposta_correta": "Gêmeos digitais (digital twins)"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo uma análise, qual tecnologia atual (5G) é vista como base experimental e evolutiva para o desenvolvimento do 6G?",
+      "opcoes": [
+        "O próprio 5G, com suas aplicações em automação e realidade aumentada",
+        "Apenas o Wi-Fi doméstico comum",
+        "Exclusivamente conexões discadas antigas",
+        "O Bluetooth tradicional"
+      ],
+      "resposta_correta": "O próprio 5G, com suas aplicações em automação e realidade aumentada"
+    },
+    {
+      "n": 20,
+      "pergunta": "De forma geral, o que todas essas tendências futuras (6G, IA, blockchain, computação quântica) têm em comum, segundo uma visão de conjunto?",
+      "opcoes": [
+        "Buscam tornar a internet mais rápida, inteligente, segura e distribuída",
+        "Não têm nenhuma relação entre si",
+        "Visam exclusivamente reduzir a velocidade da internet atual",
+        "Buscam eliminar completamente o uso da internet no futuro"
+      ],
+      "resposta_correta": "Buscam tornar a internet mais rápida, inteligente, segura e distribuída"
+    }
+  ]
+}

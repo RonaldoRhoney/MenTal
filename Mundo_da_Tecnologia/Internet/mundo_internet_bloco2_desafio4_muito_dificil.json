@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 4,
+    "tema_desafio": "Android e a evolução dos sistemas móveis",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - disputa de marca tratada de forma factual e neutra."
+  },
+  "saiba_mais": "Curiosidade: quando a Apple decidiu renomear o 'iPhone OS' para 'iOS', em 2010, descobriu que o nome já pertencia à Cisco havia mais de dez anos, usado nos roteadores da empresa. Em vez de brigar na justiça — como já haviam feito antes pela marca 'iPhone' — a Apple simplesmente licenciou o nome da própria concorrente, numa solução tão pragmática quanto inusitada para duas gigantes da tecnologia.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Antes de se chamar 'iOS', qual era o nome oficial do sistema operacional do iPhone?",
+      "opcoes": [
+        "iPhone OS",
+        "Apple Mobile",
+        "MacTouch OS",
+        "iSystem"
+      ],
+      "resposta_correta": "iPhone OS"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a Apple renomeou o 'iPhone OS' para 'iOS'?",
+      "opcoes": [
+        "2010",
+        "2007",
+        "2008",
+        "2012"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual empresa já detinha o registro da marca 'IOS' havia mais de uma década, para uso em seus roteadores?",
+      "opcoes": [
+        "Cisco",
+        "Nokia",
+        "Samsung",
+        "Motorola"
+      ],
+      "resposta_correta": "Cisco"
+    },
+    {
+      "n": 4,
+      "pergunta": "O que a sigla IOS significava originalmente, no contexto dos produtos da Cisco?",
+      "opcoes": [
+        "Internetwork Operating System",
+        "International Operating Software",
+        "Internal Optimization System",
+        "Integrated Output Service"
+      ],
+      "resposta_correta": "Internetwork Operating System"
+    },
+    {
+      "n": 5,
+      "pergunta": "Como a Apple resolveu a questão do nome já registrado pela Cisco, evitando um processo judicial?",
+      "opcoes": [
+        "Licenciou o uso da marca 'iOS' diretamente da Cisco",
+        "Comprou a Cisco por completo",
+        "Processou a Cisco e venceu na justiça",
+        "Criou um nome totalmente diferente, abandonando 'iOS'"
+      ],
+      "resposta_correta": "Licenciou o uso da marca 'iOS' diretamente da Cisco"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo o comunicado da Cisco sobre esse licenciamento, o que exatamente foi licenciado à Apple?",
+      "opcoes": [
+        "Apenas o uso da marca registrada, não nenhuma tecnologia",
+        "Toda a tecnologia interna dos roteadores Cisco",
+        "Uma parceria de desenvolvimento conjunto de software",
+        "O direito exclusivo de usar a marca em qualquer produto futuro"
+      ],
+      "resposta_correta": "Apenas o uso da marca registrada, não nenhuma tecnologia"
+    },
+    {
+      "n": 7,
+      "pergunta": "Antes do episódio do nome 'iOS', a Apple já havia enfrentado disputa parecida com a Cisco sobre qual outra marca?",
+      "opcoes": [
+        "'iPhone'",
+        "'iPad'",
+        "'iPod'",
+        "'Macintosh'"
+      ],
+      "resposta_correta": "'iPhone'"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano esse acordo anterior sobre a marca 'iPhone' entre Apple e Cisco foi firmado?",
+      "opcoes": [
+        "2007",
+        "2010",
+        "2005",
+        "2001"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 9,
+      "pergunta": "Além da disputa com a Cisco, com qual outra empresa a Apple teve de negociar os direitos do nome 'iPad'?",
+      "opcoes": [
+        "Fujitsu",
+        "Samsung",
+        "Sony",
+        "LG"
+      ],
+      "resposta_correta": "Fujitsu"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que evento a Apple anunciou oficialmente a mudança de nome de 'iPhone OS' para 'iOS', em junho de 2010?",
+      "opcoes": [
+        "A Worldwide Developer Conference (WWDC)",
+        "A Macworld Expo",
+        "O CES (Consumer Electronics Show)",
+        "O lançamento exclusivo do iPad"
+      ],
+      "resposta_correta": "A Worldwide Developer Conference (WWDC)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Por que a Apple sentiu necessidade de abandonar o nome 'iPhone OS' e adotar um nome mais genérico como 'iOS'?",
+      "opcoes": [
+        "O sistema já rodava também no iPod touch e no iPad, não apenas no iPhone",
+        "Uma exigência legal obrigatória",
+        "Um pedido direto dos desenvolvedores externos",
+        "O nome 'iPhone OS' havia sido banido em alguns países"
+      ],
+      "resposta_correta": "O sistema já rodava também no iPod touch e no iPad, não apenas no iPhone"
+    },
+    {
+      "n": 12,
+      "pergunta": "Antes mesmo de ter um nome oficial de sistema operacional, como a Apple descrevia inicialmente o software que rodava no primeiro iPhone, em 2007?",
+      "opcoes": [
+        "Apenas dizendo que 'o iPhone roda OS X'",
+        "Como um sistema totalmente novo sem nenhuma relação com outros produtos Apple",
+        "Como uma versão do Windows Mobile adaptada",
+        "Como um sistema baseado em Linux, sem qualquer ligação com a Apple"
+      ],
+      "resposta_correta": "Apenas dizendo que 'o iPhone roda OS X'"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que data específica a Apple lançou o primeiro beta do sistema, já sob o nome 'iPhone OS', antes da mudança para 'iOS'?",
+      "opcoes": [
+        "6 de março de 2008",
+        "9 de janeiro de 2007",
+        "27 de janeiro de 2010",
+        "7 de junho de 2010"
+      ],
+      "resposta_correta": "6 de março de 2008"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que evento a Apple anunciou originalmente o iPhone e seu sistema, em janeiro de 2007?",
+      "opcoes": [
+        "Macworld Conference & Expo",
+        "WWDC",
+        "CES",
+        "E3"
+      ],
+      "resposta_correta": "Macworld Conference & Expo"
+    },
+    {
+      "n": 15,
+      "pergunta": "Comparando com a linha do tempo do Android, quantos anos, aproximadamente, separam o lançamento inicial do iPhone (2007) e do primeiro celular Android comercial (2008)?",
+      "opcoes": [
+        "Cerca de 1 ano",
+        "Cerca de 5 anos",
+        "Cerca de 10 anos",
+        "Nenhum, foram lançados no mesmo mês"
+      ],
+      "resposta_correta": "Cerca de 1 ano"
+    },
+    {
+      "n": 16,
+      "pergunta": "O sistema iOS é tecnicamente derivado de qual outro sistema operacional da própria Apple, compartilhando a mesma base (Darwin)?",
+      "opcoes": [
+        "Mac OS X",
+        "Windows NT",
+        "Linux puro",
+        "Palm OS"
+      ],
+      "resposta_correta": "Mac OS X"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual conceito de interface é citado como base do design do iOS, usando gestos multitoque?",
+      "opcoes": [
+        "Manipulação direta (direct manipulation)",
+        "Comando por linha de texto",
+        "Interface baseada exclusivamente em voz",
+        "Interface controlada por caneta digital obrigatória"
+      ],
+      "resposta_correta": "Manipulação direta (direct manipulation)"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual versão específica do iOS é citada como a primeira a ser uma atualização gratuita para usuários de iPod touch, diferente de versões anteriores pagas?",
+      "opcoes": [
+        "iOS 4",
+        "iOS 1",
+        "iOS 6",
+        "iPhone OS 2"
+      ],
+      "resposta_correta": "iOS 4"
+    },
+    {
+      "n": 19,
+      "pergunta": "Quanto a Apple chegava a cobrar por atualizações anteriores do sistema para usuários de iPod touch, antes dessa mudança?",
+      "opcoes": [
+        "9,99 dólares",
+        "99 dólares",
+        "1,99 dólares",
+        "49,99 dólares"
+      ],
+      "resposta_correta": "9,99 dólares"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo comentaristas da época, o acordo de licenciamento do nome 'iOS' beneficiou a Cisco de que forma, além do aspecto financeiro do contrato?",
+      "opcoes": [
+        "Deu publicidade e visibilidade à própria marca IOS da Cisco",
+        "Não trouxe nenhum benefício adicional à Cisco",
+        "Obrigou a Apple a usar roteadores Cisco exclusivamente",
+        "Deu à Cisco participação acionária na Apple"
+      ],
+      "resposta_correta": "Deu publicidade e visibilidade à própria marca IOS da Cisco"
+    }
+  ]
+}

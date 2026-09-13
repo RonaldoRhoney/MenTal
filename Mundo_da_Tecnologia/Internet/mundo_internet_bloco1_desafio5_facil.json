@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 5,
+    "tema_desafio": "1994: O Ano que Mudou Tudo (comércio, publicidade e diretórios)",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Digiday e Wikipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: o primeiro banner de publicidade da internet, em 1994, teve uma taxa de cliques de 44% — um número praticamente inimaginável hoje, quando a média de cliques em banners costuma ficar em torno de apenas 0,05%. A novidade da publicidade online, somada à curiosidade genuína das pessoas com aquela tecnologia recém-chegada, ajuda a explicar esse resultado tão fora da curva.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual empresa comprou o primeiro banner de publicidade da história da internet?",
+      "opcoes": [
+        "AT&T",
+        "Coca-Cola",
+        "Apple",
+        "Ford"
+      ],
+      "resposta_correta": "AT&T"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que site apareceu o primeiro banner de publicidade da internet?",
+      "opcoes": [
+        "HotWired (site da revista Wired)",
+        "Yahoo",
+        "Google",
+        "Amazon"
+      ],
+      "resposta_correta": "HotWired (site da revista Wired)"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano apareceu o primeiro banner de publicidade da internet?",
+      "opcoes": [
+        "1994",
+        "1990",
+        "2000",
+        "1985"
+      ],
+      "resposta_correta": "1994"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual frase de destaque aparecia no primeiro banner de publicidade da história?",
+      "opcoes": [
+        "'Have you ever clicked your mouse right HERE? YOU WILL'",
+        "'Click here to win a prize'",
+        "'The future is now'",
+        "'Buy now, pay later'"
+      ],
+      "resposta_correta": "'Have you ever clicked your mouse right HERE? YOU WILL'"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem fundou o Yahoo!?",
+      "opcoes": [
+        "Jerry Yang e David Filo",
+        "Larry Page e Sergey Brin",
+        "Jeff Bezos sozinho",
+        "Bill Gates e Paul Allen"
+      ],
+      "resposta_correta": "Jerry Yang e David Filo"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano o Yahoo! foi criado?",
+      "opcoes": [
+        "1994",
+        "1998",
+        "1991",
+        "2000"
+      ],
+      "resposta_correta": "1994"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em qual universidade Jerry Yang e David Filo se conheceram?",
+      "opcoes": [
+        "Stanford",
+        "Harvard",
+        "MIT",
+        "Yale"
+      ],
+      "resposta_correta": "Stanford"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual era o nome original do site que depois se tornaria o Yahoo!?",
+      "opcoes": [
+        "'Jerry and David's Guide to the World Wide Web'",
+        "'WebFinder Pro'",
+        "'Internet Directory'",
+        "'SearchNet 1994'"
+      ],
+      "resposta_correta": "'Jerry and David's Guide to the World Wide Web'"
+    },
+    {
+      "n": 9,
+      "pergunta": "O Yahoo! original funcionava como o quê, diferente de um mecanismo de busca por palavra-chave?",
+      "opcoes": [
+        "Um diretório de sites organizado em hierarquia de categorias",
+        "Um serviço de e-mail exclusivo",
+        "Uma loja de comércio eletrônico",
+        "Uma rede social de contatos"
+      ],
+      "resposta_correta": "Um diretório de sites organizado em hierarquia de categorias"
+    },
+    {
+      "n": 10,
+      "pergunta": "Quem fundou a Amazon?",
+      "opcoes": [
+        "Jeff Bezos",
+        "Jerry Yang",
+        "David Filo",
+        "Marc Andreessen"
+      ],
+      "resposta_correta": "Jeff Bezos"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano a Amazon foi fundada?",
+      "opcoes": [
+        "1994",
+        "1998",
+        "1991",
+        "2000"
+      ],
+      "resposta_correta": "1994"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual era o nome original da empresa antes de ser renomeada para Amazon?",
+      "opcoes": [
+        "Cadabra, Inc.",
+        "BookWorld",
+        "ReadNow",
+        "PageTurn"
+      ],
+      "resposta_correta": "Cadabra, Inc."
+    },
+    {
+      "n": 13,
+      "pergunta": "O que a Amazon vendia originalmente, antes de se expandir para outras categorias?",
+      "opcoes": [
+        "Livros",
+        "Eletrônicos",
+        "Roupas",
+        "Alimentos"
+      ],
+      "resposta_correta": "Livros"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que dia específico de 1994 ocorreu a primeira transação de comércio eletrônico na web aberta, segundo registros?",
+      "opcoes": [
+        "11 de agosto",
+        "27 de outubro",
+        "5 de julho",
+        "1º de janeiro"
+      ],
+      "resposta_correta": "11 de agosto"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em qual plataforma essa primeira transação de e-commerce ocorreu?",
+      "opcoes": [
+        "NetMarket",
+        "Amazon",
+        "eBay",
+        "Yahoo Store"
+      ],
+      "resposta_correta": "NetMarket"
+    },
+    {
+      "n": 16,
+      "pergunta": "Aproximadamente que porcentagem de pessoas que viram o primeiro banner de publicidade clicaram nele, segundo registros?",
+      "opcoes": [
+        "44%",
+        "0,05%",
+        "5%",
+        "90%"
+      ],
+      "resposta_correta": "44%"
+    },
+    {
+      "n": 17,
+      "pergunta": "Comparando com hoje, essa taxa de cliques do primeiro banner era muito maior ou muito menor do que a taxa média atual?",
+      "opcoes": [
+        "Muito maior",
+        "Muito menor",
+        "Praticamente idêntica",
+        "Não é possível comparar"
+      ],
+      "resposta_correta": "Muito maior"
+    },
+    {
+      "n": 18,
+      "pergunta": "Em que ano o eBay começou a leiloar produtos entre usuários comuns (peer-to-peer)?",
+      "opcoes": [
+        "1995",
+        "1994",
+        "2000",
+        "1998"
+      ],
+      "resposta_correta": "1995"
+    },
+    {
+      "n": 19,
+      "pergunta": "Quem criou a linguagem JavaScript, em apenas 10 dias, trabalhando na Netscape?",
+      "opcoes": [
+        "Brendan Eich",
+        "Marc Andreessen",
+        "Jim Clark",
+        "Tim Berners-Lee"
+      ],
+      "resposta_correta": "Brendan Eich"
+    },
+    {
+      "n": 20,
+      "pergunta": "Em que ano específico o domínio 'google.com' foi registrado?",
+      "opcoes": [
+        "1997",
+        "1994",
+        "1998",
+        "2000"
+      ],
+      "resposta_correta": "1997"
+    }
+  ]
+}

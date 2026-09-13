@@ -23,6 +23,28 @@ def test_progress_includes_matematica_block_with_numeros_e_logica(client):
     assert blocks["matematica"]["name"] == "Matemática"
 
 
+def test_internet_block_groups_its_2_territories_under_tecnologia_world(client):
+    """ARQUITETURA_SUBMUNDOS_V1.md (13/09/2026, aprovado): "Internet" é
+    SubMundo de "Tecnologia" — implementado reaproveitando o mecanismo
+    de Bloco já existente, em vez de uma entidade "SubMundo" nova.
+    world_id continua "tecnologia" pros 2 territórios; block_id
+    "internet" (diferente do block_id "tecnologia" dos 4 territórios
+    clássicos) é o que cria o subcabeçalho separado na tela do Mundo."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    body = client.get("/progress", headers=headers).json()
+    blocks = {b["block_id"]: b for b in body["blocks"]}
+
+    assert "internet" in blocks
+    assert sorted(blocks["internet"]["territory_ids"]) == ["internet_origens", "internet_sistemas_operacionais"]
+    assert blocks["internet"]["name"] == "Internet"
+
+    worlds = {w["world_id"]: w for w in body["worlds"]}
+    assert {"internet_origens", "internet_sistemas_operacionais"}.issubset(set(worlds["tecnologia"]["territory_ids"]))
+
+
 def test_blocks_without_any_territory_are_not_returned(client):
     """"Mundo" existe como linha (BLOCOS_MENUS.md §3, conteúdo por curar)
     mas não tem território ainda — não deve aparecer na resposta pra não
@@ -41,7 +63,7 @@ def test_blocks_without_any_territory_are_not_returned(client):
     assert block_ids == {
         "matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia",
         "financas_pessoais", "filosofia", "artes", "saude_bemestar", "curiosidade_relampago", "libras",
-        "jogos_de_palavras",
+        "jogos_de_palavras", "internet",
     }
 
 

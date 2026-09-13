@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 2,
+    "tema_desafio": "Mac e Steve Jobs",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo biografico factual e respeitoso."
+  },
+  "saiba_mais": "Curiosidade: quando Steve Jobs deixou a Apple em 1985, ele vendeu praticamente todas as suas ações da empresa, exceto uma única ação simbólica — como se, mesmo afastado, quisesse manter um fio de ligação formal com a companhia que havia cofundado quase uma década antes.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem eram os pais biológicos de Steve Jobs, que o entregaram para adoção pouco após o nascimento?",
+      "opcoes": [
+        "Joanne Schieble e Abdul Jandali",
+        "Paul e Clara Jobs",
+        "John Sculley e sua esposa",
+        "Não há registro biográfico amplamente divulgado sobre esse fato"
+      ],
+      "resposta_correta": "Joanne Schieble e Abdul Jandali"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quais eram os nomes dos pais adotivos de Steve Jobs?",
+      "opcoes": [
+        "Paul e Clara Jobs",
+        "Joanne Schieble e Abdul Jandali",
+        "Ross Perot e sua esposa",
+        "Steve e Alice Wozniak"
+      ],
+      "resposta_correta": "Paul e Clara Jobs"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que data exata Steve Jobs nasceu?",
+      "opcoes": [
+        "24 de fevereiro de 1955",
+        "5 de outubro de 1955",
+        "16 de setembro de 1955",
+        "1º de abril de 1955"
+      ],
+      "resposta_correta": "24 de fevereiro de 1955"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que série de entrevistas televisivas dos anos 1990 Jobs relatou pessoalmente sua reação à visita à Xerox PARC?",
+      "opcoes": [
+        "'Triumph of the Nerds' (PBS)",
+        "'60 Minutes'",
+        "'Larry King Live'",
+        "'The Oprah Winfrey Show'"
+      ],
+      "resposta_correta": "'Triumph of the Nerds' (PBS)"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem criou a linguagem de programação orientada a objetos Smalltalk, uma das tecnologias mostradas a Jobs na Xerox PARC?",
+      "opcoes": [
+        "Alan Kay e outros pesquisadores",
+        "Steve Wozniak",
+        "Tim Berners-Lee",
+        "Bill Gates"
+      ],
+      "resposta_correta": "Alan Kay e outros pesquisadores"
+    },
+    {
+      "n": 6,
+      "pergunta": "Quem é creditado com o desenvolvimento da tecnologia Ethernet, usada para conectar os computadores Xerox Alto vistos por Jobs?",
+      "opcoes": [
+        "Bob Metcalfe",
+        "Alan Kay",
+        "Vint Cerf",
+        "Robert Cailliau"
+      ],
+      "resposta_correta": "Bob Metcalfe"
+    },
+    {
+      "n": 7,
+      "pergunta": "Aproximadamente quantos computadores Xerox Alto estavam conectados em rede na demonstração vista por Jobs?",
+      "opcoes": [
+        "Mais de 100",
+        "Apenas 2",
+        "Cerca de 10",
+        "Mais de mil"
+      ],
+      "resposta_correta": "Mais de 100"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano exato a Pixar foi oficialmente desmembrada da divisão de computação gráfica da Lucasfilm?",
+      "opcoes": [
+        "1986",
+        "1976",
+        "1995",
+        "2006"
+      ],
+      "resposta_correta": "1986"
+    },
+    {
+      "n": 9,
+      "pergunta": "Após deixar a Apple em 1985, Jobs vendeu ações da empresa, mantendo apenas uma única ação simbólica. O que essa atitude simbolizava, segundo biógrafos?",
+      "opcoes": [
+        "Manter vínculo simbólico com a empresa que havia cofundado, apesar do afastamento",
+        "Uma exigência legal do processo de saída",
+        "Uma estratégia fiscal para reduzir impostos",
+        "Um pedido direto do conselho da Apple"
+      ],
+      "resposta_correta": "Manter vínculo simbólico com a empresa que havia cofundado, apesar do afastamento"
+    },
+    {
+      "n": 10,
+      "pergunta": "Que cargo específico Jobs assumiu ao retornar à Apple em 1997, antes de ser efetivado como CEO em 2000?",
+      "opcoes": [
+        "CEO interino (interim CEO)",
+        "Diretor de marketing",
+        "Presidente do conselho, sem função executiva",
+        "Consultor externo sem cargo formal"
+      ],
+      "resposta_correta": "CEO interino (interim CEO)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que revista/veículo a Apple divulgou oficialmente a mudança de cargo de Jobs em determinado momento de sua trajetória de retorno?",
+      "opcoes": [
+        "No próprio site de imprensa (newsroom) da Apple",
+        "Exclusivamente em jornais impressos",
+        "Em um comunicado de rádio nacional",
+        "Não há registro de divulgação oficial disponível"
+      ],
+      "resposta_correta": "No próprio site de imprensa (newsroom) da Apple"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quantos anos, aproximadamente, separaram a saída de Jobs da Apple (1985) do ano em que a Apple adquiriu a NeXT (1996)?",
+      "opcoes": [
+        "Cerca de 11 anos",
+        "Cerca de 5 anos",
+        "Cerca de 20 anos",
+        "Cerca de 2 anos"
+      ],
+      "resposta_correta": "Cerca de 11 anos"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que evento cultural específico, ligado ao lançamento de um produto icônico, Jobs relembrou publicamente os momentos em que a Apple havia revolucionado a tecnologia, citando o Macintosh como o primeiro deles?",
+      "opcoes": [
+        "O evento de lançamento do primeiro iPhone",
+        "O funeral de Steve Wozniak (nunca ocorreu, pois Wozniak segue vivo)",
+        "A cerimônia de premiação da Macworld de 1984",
+        "O anúncio da fusão com a NeXT"
+      ],
+      "resposta_correta": "O evento de lançamento do primeiro iPhone"
+    },
+    {
+      "n": 14,
+      "pergunta": "Jobs se tornou membro do conselho de administração de qual grande estúdio/empresa de entretenimento em 2006, como parte do acordo de aquisição da Pixar?",
+      "opcoes": [
+        "The Walt Disney Company",
+        "Warner Bros Discovery",
+        "Universal Pictures",
+        "Sony Pictures"
+      ],
+      "resposta_correta": "The Walt Disney Company"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual foi o cargo específico de John Sculley antes de ser recrutado por Jobs para a Apple, segundo registros históricos?",
+      "opcoes": [
+        "Executivo da PepsiCo",
+        "Executivo da IBM",
+        "Fundador de uma startup de software",
+        "Professor universitário de administração"
+      ],
+      "resposta_correta": "Executivo da PepsiCo"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que mês e ano exatos aconteceu a disputa de poder no conselho da Apple entre Jobs e Sculley, que resultou na saída de Jobs?",
+      "opcoes": [
+        "Maio de 1985",
+        "Setembro de 1985",
+        "Janeiro de 1984",
+        "Dezembro de 1983"
+      ],
+      "resposta_correta": "Maio de 1985"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual cargo específico dentro da Apple Jobs perdeu antes de deixar oficialmente a empresa em 1985?",
+      "opcoes": [
+        "Gerente geral da divisão Macintosh",
+        "CEO da empresa inteira",
+        "Diretor financeiro",
+        "Chefe do departamento jurídico"
+      ],
+      "resposta_correta": "Gerente geral da divisão Macintosh"
+    },
+    {
+      "n": 18,
+      "pergunta": "Que vice-presidente de engenharia da NeXT, posteriormente, seguiu para a Apple no acordo de aquisição de 1996, tendo papel técnico relevante depois?",
+      "opcoes": [
+        "Avie Tevanian",
+        "Jony Ive",
+        "Bud Tribble (também citado, mas em outro cargo)",
+        "Ross Perot"
+      ],
+      "resposta_correta": "Avie Tevanian"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo o próprio relato de Jobs, a demonstração da Xerox PARC continha 'três coisas' mostradas a ele. Quantas delas ele reconheceu ter realmente absorvido naquele momento, segundo sua própria fala?",
+      "opcoes": [
+        "Apenas uma (a interface gráfica), ficando 'cego' para as outras duas",
+        "As três igualmente",
+        "Nenhuma das três, apenas via depoimentos posteriores",
+        "Duas das três, ignorando só uma"
+      ],
+      "resposta_correta": "Apenas uma (a interface gráfica), ficando 'cego' para as outras duas"
+    },
+    {
+      "n": 20,
+      "pergunta": "Em que ano a Apple se tornou, segundo registros de mercado, a empresa de capital aberto mais valiosa do mundo, culminando o período de retomada liderado por Jobs?",
+      "opcoes": [
+        "2011",
+        "1997",
+        "2000",
+        "1984"
+      ],
+      "resposta_correta": "2011"
+    }
+  ]
+}

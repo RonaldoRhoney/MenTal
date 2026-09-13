@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 3,
+    "tema_desafio": "Segurança Digital e Cibersegurança",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo TechTudo e Canaltech. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo estritamente historico/educacional sobre malware, sem nenhum detalhe tecnico de criacao ou funcionamento que pudesse ser replicado."
+  },
+  "saiba_mais": "Curiosidade: o mesmo ano de 1971 guarda uma coincidência e tanto na história da tecnologia — foi quando surgiram, quase ao mesmo tempo, o primeiro vírus de computador (Creeper), o primeiro antivírus (Reaper) e o próprio e-mail, todos ligados à ARPANET. E ainda por cima, o criador do Reaper foi ninguém menos que Ray Tomlinson, a mesma pessoa que, naquele mesmo ano, inventou o e-mail como o conhecemos.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual é considerado o primeiro vírus de computador da história?",
+      "opcoes": [
+        "Creeper",
+        "Morris Worm",
+        "Melissa",
+        "MyDoom"
+      ],
+      "resposta_correta": "Creeper"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Creeper foi criado?",
+      "opcoes": [
+        "1971",
+        "1988",
+        "1999",
+        "1956"
+      ],
+      "resposta_correta": "1971"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem criou o Creeper?",
+      "opcoes": [
+        "Bob Thomas",
+        "Ray Tomlinson",
+        "Robert Morris",
+        "John McCarthy"
+      ],
+      "resposta_correta": "Bob Thomas"
+    },
+    {
+      "n": 4,
+      "pergunta": "Para qual empresa Bob Thomas trabalhava ao criar o Creeper?",
+      "opcoes": [
+        "BBN Technologies",
+        "IBM",
+        "Microsoft",
+        "Apple"
+      ],
+      "resposta_correta": "BBN Technologies"
+    },
+    {
+      "n": 5,
+      "pergunta": "O Creeper foi criado com intenção maliciosa de causar danos?",
+      "opcoes": [
+        "Não, era um experimento/teste de conceito, sem intenção maliciosa",
+        "Sim, foi criado especificamente para roubar dados",
+        "Sim, foi criado para destruir arquivos",
+        "Não há informação sobre a intenção original"
+      ],
+      "resposta_correta": "Não, era um experimento/teste de conceito, sem intenção maliciosa"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual mensagem o Creeper exibia nos computadores infectados?",
+      "opcoes": [
+        "'I'M THE CREEPER: CATCH ME IF YOU CAN!'",
+        "'Seu computador foi invadido'",
+        "'Pague um resgate para continuar'",
+        "'Sistema comprometido, contate o suporte'"
+      ],
+      "resposta_correta": "'I'M THE CREEPER: CATCH ME IF YOU CAN!'"
+    },
+    {
+      "n": 7,
+      "pergunta": "Como se chama o programa criado logo depois, considerado o primeiro 'antivírus' da história, feito para eliminar o Creeper?",
+      "opcoes": [
+        "Reaper",
+        "Guardian",
+        "Shield",
+        "Defender"
+      ],
+      "resposta_correta": "Reaper"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano o Reaper foi criado?",
+      "opcoes": [
+        "1972",
+        "1971",
+        "1988",
+        "1999"
+      ],
+      "resposta_correta": "1972"
+    },
+    {
+      "n": 9,
+      "pergunta": "Quem é creditado por ter criado o Reaper, segundo a maioria das fontes?",
+      "opcoes": [
+        "Ray Tomlinson",
+        "Bob Thomas",
+        "Robert Morris",
+        "Kevin Mitnick"
+      ],
+      "resposta_correta": "Ray Tomlinson"
+    },
+    {
+      "n": 10,
+      "pergunta": "Ray Tomlinson, criador do Reaper, também é conhecido por qual outra invenção histórica da internet?",
+      "opcoes": [
+        "O e-mail",
+        "O primeiro navegador",
+        "O primeiro mecanismo de busca",
+        "O primeiro vírus"
+      ],
+      "resposta_correta": "O e-mail"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que rede o Creeper e o Reaper se espalhavam?",
+      "opcoes": [
+        "ARPANET",
+        "World Wide Web",
+        "Uma rede social moderna",
+        "Uma rede exclusivamente comercial"
+      ],
+      "resposta_correta": "ARPANET"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual é considerado o primeiro vírus criado especificamente para computadores pessoais (PCs)?",
+      "opcoes": [
+        "Brain",
+        "Creeper",
+        "Morris Worm",
+        "Melissa"
+      ],
+      "resposta_correta": "Brain"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que ano o vírus Brain surgiu?",
+      "opcoes": [
+        "1986",
+        "1971",
+        "1999",
+        "1956"
+      ],
+      "resposta_correta": "1986"
+    },
+    {
+      "n": 14,
+      "pergunta": "Quem criou o vírus Brain?",
+      "opcoes": [
+        "Dois irmãos paquistaneses, Basit e Amjad Farooq Alvi",
+        "Um estudante americano de pós-graduação",
+        "Um funcionário da IBM",
+        "Um grupo anônimo europeu"
+      ],
+      "resposta_correta": "Dois irmãos paquistaneses, Basit e Amjad Farooq Alvi"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual era a motivação original dos criadores do Brain, segundo relatos?",
+      "opcoes": [
+        "Tentar proteger seus próprios programas contra cópias piratas",
+        "Roubar dados bancários de usuários",
+        "Vandalizar sistemas de outras empresas por rivalidade comercial",
+        "Testar exclusivamente por curiosidade acadêmica, sem nenhum motivo comercial"
+      ],
+      "resposta_correta": "Tentar proteger seus próprios programas contra cópias piratas"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual é considerado o primeiro 'worm' (verme) distribuído amplamente pela internet?",
+      "opcoes": [
+        "Morris Worm",
+        "Creeper",
+        "Brain",
+        "Melissa"
+      ],
+      "resposta_correta": "Morris Worm"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que ano o Morris Worm foi lançado?",
+      "opcoes": [
+        "1988",
+        "1971",
+        "1999",
+        "1956"
+      ],
+      "resposta_correta": "1988"
+    },
+    {
+      "n": 18,
+      "pergunta": "Quem criou o Morris Worm?",
+      "opcoes": [
+        "Robert Tappan Morris",
+        "Bob Thomas",
+        "Ray Tomlinson",
+        "Kevin Mitnick"
+      ],
+      "resposta_correta": "Robert Tappan Morris"
+    },
+    {
+      "n": 19,
+      "pergunta": "Aproximadamente qual fração dos servidores existentes na época o Morris Worm chegou a contaminar?",
+      "opcoes": [
+        "Cerca de 10%",
+        "Cerca de 0,1%",
+        "Praticamente 100%",
+        "Menos de 0,001%"
+      ],
+      "resposta_correta": "Cerca de 10%"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual foi a consequência legal enfrentada pelo criador do Morris Worm, tornando-se um marco jurídico?",
+      "opcoes": [
+        "Foi a primeira pessoa condenada por fraude relacionada a computadores nos EUA",
+        "Nenhuma consequência legal foi registrada",
+        "Recebeu apenas um aviso informal, sem processo judicial",
+        "Foi condenado por um crime completamente diferente, sem relação com o worm"
+      ],
+      "resposta_correta": "Foi a primeira pessoa condenada por fraude relacionada a computadores nos EUA"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 3,
+    "tema_desafio": "Facebook e Mark Zuckerberg",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo National Geographic e Tecnoblog. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: um brasileiro está entre os cofundadores do Facebook! Eduardo Saverin, colega de quarto de Mark Zuckerberg em Harvard, atuou como diretor financeiro e gerente de negócios nos primeiros meses da empresa, tendo status oficial de cofundador ao lado de Zuckerberg — um detalhe pouco lembrado sobre a origem de uma das maiores redes sociais do mundo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem fundou o Facebook?",
+      "opcoes": [
+        "Mark Zuckerberg",
+        "Larry Page",
+        "Jeff Bezos",
+        "Bill Gates"
+      ],
+      "resposta_correta": "Mark Zuckerberg"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Facebook foi criado?",
+      "opcoes": [
+        "2004",
+        "1998",
+        "1994",
+        "2010"
+      ],
+      "resposta_correta": "2004"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual universidade o Facebook foi criado?",
+      "opcoes": [
+        "Harvard",
+        "Stanford",
+        "MIT",
+        "Yale"
+      ],
+      "resposta_correta": "Harvard"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual era o nome original do Facebook, em seu lançamento?",
+      "opcoes": [
+        "TheFacebook",
+        "Facemash",
+        "MyBook",
+        "Connect"
+      ],
+      "resposta_correta": "TheFacebook"
+    },
+    {
+      "n": 5,
+      "pergunta": "De onde vem o nome 'Facebook'?",
+      "opcoes": [
+        "De anuários acadêmicos com fotos e nomes de alunos",
+        "De uma sigla técnica sem significado",
+        "Do sobrenome de um dos fundadores",
+        "De uma cidade americana"
+      ],
+      "resposta_correta": "De anuários acadêmicos com fotos e nomes de alunos"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual foi o projeto anterior ao Facebook, criado por Zuckerberg em 2003, que causou polêmica em Harvard?",
+      "opcoes": [
+        "Facemash",
+        "MySpace",
+        "Friendster",
+        "Orkut"
+      ],
+      "resposta_correta": "Facemash"
+    },
+    {
+      "n": 7,
+      "pergunta": "Cite um cofundador do Facebook além de Zuckerberg.",
+      "opcoes": [
+        "Eduardo Saverin",
+        "Larry Page",
+        "Jeff Bezos",
+        "Bill Gates"
+      ],
+      "resposta_correta": "Eduardo Saverin"
+    },
+    {
+      "n": 8,
+      "pergunta": "De qual país é o cofundador Eduardo Saverin?",
+      "opcoes": [
+        "Brasil",
+        "Estados Unidos",
+        "Reino Unido",
+        "Canadá"
+      ],
+      "resposta_correta": "Brasil"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano o 'The' foi removido do nome, passando a ser apenas 'Facebook'?",
+      "opcoes": [
+        "2005",
+        "2004",
+        "2008",
+        "2010"
+      ],
+      "resposta_correta": "2005"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano o Facebook se abriu para qualquer pessoa, não só estudantes universitários?",
+      "opcoes": [
+        "2006",
+        "2004",
+        "2005",
+        "2010"
+      ],
+      "resposta_correta": "2006"
+    },
+    {
+      "n": 11,
+      "pergunta": "Para quais outras três universidades o Facebook se expandiu logo após Harvard, em 2004?",
+      "opcoes": [
+        "Yale, Columbia e Stanford",
+        "MIT, Princeton e Cornell",
+        "Berkeley, UCLA e USC",
+        "Oxford, Cambridge e Duke"
+      ],
+      "resposta_correta": "Yale, Columbia e Stanford"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que ano a empresa mudou seu nome corporativo de 'Facebook Inc.' para 'Meta Platforms Inc.'?",
+      "opcoes": [
+        "2021",
+        "2004",
+        "2010",
+        "2015"
+      ],
+      "resposta_correta": "2021"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual outra grande plataforma de mensagens pertence à Meta, além do Facebook e Instagram?",
+      "opcoes": [
+        "WhatsApp",
+        "Telegram",
+        "Snapchat",
+        "Discord"
+      ],
+      "resposta_correta": "WhatsApp"
+    },
+    {
+      "n": 14,
+      "pergunta": "Com quem Mark Zuckerberg é casado desde 2012?",
+      "opcoes": [
+        "Priscilla Chan",
+        "Sheryl Sandberg",
+        "MacKenzie Scott",
+        "Melinda Gates"
+      ],
+      "resposta_correta": "Priscilla Chan"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual iniciativa filantrópica Zuckerberg e sua esposa anunciaram em 2015?",
+      "opcoes": [
+        "Chan Zuckerberg Initiative",
+        "Fundação Bill e Melinda Gates",
+        "Fundação Bezos",
+        "Fundação Sergey Brin"
+      ],
+      "resposta_correta": "Chan Zuckerberg Initiative"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que estado americano Mark Zuckerberg nasceu?",
+      "opcoes": [
+        "Nova York",
+        "Califórnia",
+        "Massachusetts",
+        "Washington"
+      ],
+      "resposta_correta": "Nova York"
+    },
+    {
+      "n": 17,
+      "pergunta": "Quais duas áreas Mark Zuckerberg estudava em Harvard?",
+      "opcoes": [
+        "Psicologia e Ciências da Computação",
+        "Direito e Economia",
+        "Física e Matemática",
+        "Medicina e Biologia"
+      ],
+      "resposta_correta": "Psicologia e Ciências da Computação"
+    },
+    {
+      "n": 18,
+      "pergunta": "Antes de Harvard, quais duas empresas tentaram comprar um projeto anterior de Zuckerberg e também contratá-lo?",
+      "opcoes": [
+        "Microsoft e AOL",
+        "Google e Apple",
+        "IBM e Yahoo",
+        "Amazon e Netflix"
+      ],
+      "resposta_correta": "Microsoft e AOL"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em que ano o Facebook chegou ao Brasil, ficando disponível para acessos brasileiros?",
+      "opcoes": [
+        "2006",
+        "2004",
+        "2008",
+        "2010"
+      ],
+      "resposta_correta": "2006"
+    },
+    {
+      "n": 20,
+      "pergunta": "Aproximadamente em que ano o Facebook se popularizou de fato no Brasil, após o lançamento do app e da versão em português?",
+      "opcoes": [
+        "2008",
+        "2004",
+        "2006",
+        "2015"
+      ],
+      "resposta_correta": "2008"
+    }
+  ]
+}

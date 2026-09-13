@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 2,
+    "tema_desafio": "E-mail e os Primeiros Serviços da Internet",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - mencao ao falecimento de Tomlinson tratada apenas como fato biografico factual."
+  },
+  "saiba_mais": "Curiosidade: a primeira mensagem de e-mail da história não tinha absolutamente nenhum significado — Ray Tomlinson só queria testar se o sistema funcionava, e digitou algo parecido com 'qwertyuiop', a sequência de teclas da fileira superior do teclado. Um começo bem pouco poético para uma tecnologia que mudaria a comunicação do mundo inteiro.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem é geralmente reconhecido como o criador do e-mail em rede?",
+      "opcoes": [
+        "Ray Tomlinson",
+        "Tim Berners-Lee",
+        "Vint Cerf",
+        "Bill Gates"
+      ],
+      "resposta_correta": "Ray Tomlinson"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o primeiro e-mail foi enviado?",
+      "opcoes": [
+        "1971",
+        "1991",
+        "1969",
+        "1998"
+      ],
+      "resposta_correta": "1971"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual rede o primeiro e-mail foi enviado?",
+      "opcoes": [
+        "ARPANET",
+        "Internet comercial moderna",
+        "World Wide Web",
+        "Usenet"
+      ],
+      "resposta_correta": "ARPANET"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual símbolo Ray Tomlinson escolheu para separar o nome do usuário do endereço do servidor?",
+      "opcoes": [
+        "@ (arroba)",
+        "# (jogo da velha)",
+        "& (e comercial)",
+        "% (porcentagem)"
+      ],
+      "resposta_correta": "@ (arroba)"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que empresa Ray Tomlinson trabalhava quando criou o e-mail?",
+      "opcoes": [
+        "Bolt Beranek and Newman (BBN)",
+        "IBM",
+        "Microsoft",
+        "Google"
+      ],
+      "resposta_correta": "Bolt Beranek and Newman (BBN)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual foi, aproximadamente, o conteúdo da primeira mensagem de e-mail enviada por Tomlinson?",
+      "opcoes": [
+        "Uma sequência aleatória de letras do teclado, para teste",
+        "Uma mensagem de boas-vindas formal",
+        "O primeiro relatório técnico da ARPANET",
+        "Uma piada interna entre programadores"
+      ],
+      "resposta_correta": "Uma sequência aleatória de letras do teclado, para teste"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual era a distância aproximada entre os dois computadores usados no primeiro teste de e-mail?",
+      "opcoes": [
+        "Cerca de três metros, na mesma sala",
+        "Milhares de quilômetros, entre dois países",
+        "Toda a extensão dos Estados Unidos",
+        "Não havia distância, era o mesmo computador"
+      ],
+      "resposta_correta": "Cerca de três metros, na mesma sala"
+    },
+    {
+      "n": 8,
+      "pergunta": "O símbolo @ foi inventado por Ray Tomlinson especificamente para o e-mail?",
+      "opcoes": [
+        "Não, o símbolo já existia antes, usado no comércio",
+        "Sim, ele criou o símbolo do zero",
+        "Sim, mas apenas para uso interno da ARPANET",
+        "Não se sabe ao certo se o símbolo já existia"
+      ],
+      "resposta_correta": "Não, o símbolo já existia antes, usado no comércio"
+    },
+    {
+      "n": 9,
+      "pergunta": "Antes de ser usado em e-mails, o símbolo @ era usado para indicar o quê no comércio?",
+      "opcoes": [
+        "Preço de mercadorias (ex.: 10 camisas @ R$ 50)",
+        "Data de validade de produtos",
+        "Nome de empresas registradas",
+        "Código postal de endereços"
+      ],
+      "resposta_correta": "Preço de mercadorias (ex.: 10 camisas @ R$ 50)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual sistema Tomlinson modificou para conseguir enviar mensagens entre computadores diferentes?",
+      "opcoes": [
+        "SNDMSG",
+        "Windows Mail",
+        "Outlook",
+        "Gmail"
+      ],
+      "resposta_correta": "SNDMSG"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que instituição Ray Tomlinson obteve seu mestrado em engenharia elétrica?",
+      "opcoes": [
+        "MIT",
+        "Stanford",
+        "Harvard",
+        "Yale"
+      ],
+      "resposta_correta": "MIT"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo o próprio Tomlinson, por que as pessoas se interessaram pela ideia de deixar mensagens no computador?",
+      "opcoes": [
+        "O telefone exigia que alguém estivesse disponível para atender a ligação",
+        "O telefone era muito mais caro que o computador",
+        "Não existia telefone disponível na época",
+        "Ninguém sabia usar telefone naquela época"
+      ],
+      "resposta_correta": "O telefone exigia que alguém estivesse disponível para atender a ligação"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que ano Ray Tomlinson faleceu, segundo registros?",
+      "opcoes": [
+        "2016",
+        "1998",
+        "2001",
+        "1971"
+      ],
+      "resposta_correta": "2016"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual protocolo, especificado em 1972 por Abhay Bhushan, permitia transferência de arquivos na ARPANET?",
+      "opcoes": [
+        "FTP (File Transfer Protocol)",
+        "HTTP",
+        "SMTP",
+        "TCP/IP"
+      ],
+      "resposta_correta": "FTP (File Transfer Protocol)"
+    },
+    {
+      "n": 15,
+      "pergunta": "O que a sigla FTP significa?",
+      "opcoes": [
+        "File Transfer Protocol",
+        "Fast Text Processor",
+        "Free Type Print",
+        "Formal Transmission Package"
+      ],
+      "resposta_correta": "File Transfer Protocol"
+    },
+    {
+      "n": 16,
+      "pergunta": "O e-mail, décadas depois de criado, se tornou tão comum quanto qual outra tecnologia de comunicação, segundo análises históricas?",
+      "opcoes": [
+        "O telefone",
+        "O telégrafo",
+        "O rádio",
+        "A televisão"
+      ],
+      "resposta_correta": "O telefone"
+    },
+    {
+      "n": 17,
+      "pergunta": "Além de comunicação, para que o e-mail ainda é usado hoje em dia, segundo o texto?",
+      "opcoes": [
+        "Como identidade digital e pré-requisito para cadastros online",
+        "Exclusivamente para envio de fotos",
+        "Apenas para uso governamental",
+        "Somente para comunicação militar"
+      ],
+      "resposta_correta": "Como identidade digital e pré-requisito para cadastros online"
+    },
+    {
+      "n": 18,
+      "pergunta": "O primeiro e-mail foi enviado entre dois computadores de qual fabricante específico, segundo registros técnicos?",
+      "opcoes": [
+        "Digital Equipment Corporation (PDP-10)",
+        "IBM",
+        "Apple",
+        "Commodore"
+      ],
+      "resposta_correta": "Digital Equipment Corporation (PDP-10)"
+    },
+    {
+      "n": 19,
+      "pergunta": "Tomlinson costumava descrever o símbolo @ com uma comparação gramatical curiosa. Qual era ela?",
+      "opcoes": [
+        "Que era a única preposição do teclado",
+        "Que era o único substantivo do teclado",
+        "Que era a única vogal disfarçada do teclado",
+        "Que era o único verbo do teclado"
+      ],
+      "resposta_correta": "Que era a única preposição do teclado"
+    },
+    {
+      "n": 20,
+      "pergunta": "Por que o símbolo @ foi considerado uma boa escolha para separar nome de usuário e servidor, segundo uma fonte?",
+      "opcoes": [
+        "Ninguém costumava ter esse símbolo no próprio nome, evitando confusão",
+        "Era o símbolo mais bonito visualmente disponível",
+        "Era o único símbolo disponível no teclado da época",
+        "Foi escolhido por sorteio entre a equipe"
+      ],
+      "resposta_correta": "Ninguém costumava ter esse símbolo no próprio nome, evitando confusão"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 3,
+    "tema_desafio": "Emojis e Gírias da Internet",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Oxford Dictionaries e Emojipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: em 2015, pela primeira vez na história do prêmio, a Palavra do Ano do renomado Dicionário Oxford não foi uma palavra de verdade — foi um emoji, o 'Rosto Chorando de Rir'. A escolha simbolizou o quanto os pictogramas já haviam se tornado parte essencial da forma como as pessoas se comunicam no dia a dia, cruzando até barreiras de idioma que a escrita tradicional nem sempre consegue superar com a mesma rapidez.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano o Dicionário Oxford elegeu, pela primeira vez, um emoji como 'Palavra do Ano', em vez de uma palavra tradicional?",
+      "opcoes": [
+        "2015",
+        "1999",
+        "1982",
+        "2010"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual emoji específico foi escolhido como 'Palavra do Ano' de 2015?",
+      "opcoes": [
+        "'Rosto Chorando de Rir' (Face with Tears of Joy)",
+        "'Coração'",
+        "'Polegar para cima'",
+        "'Fogo'"
+      ],
+      "resposta_correta": "'Rosto Chorando de Rir' (Face with Tears of Joy)"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo a Oxford, esse emoji foi escolhido por refletir melhor o quê sobre o ano de 2015?",
+      "opcoes": [
+        "O 'ethos', humor e preocupações daquele ano",
+        "Apenas uma tendência de moda passageira",
+        "Uma decisão aleatória sem nenhum critério",
+        "Um evento político específico"
+      ],
+      "resposta_correta": "O 'ethos', humor e preocupações daquele ano"
+    },
+    {
+      "n": 4,
+      "pergunta": "Com qual empresa de tecnologia móvel a Oxford fez parceria para levantar dados de frequência de uso de emojis?",
+      "opcoes": [
+        "SwiftKey",
+        "Apple",
+        "Google",
+        "Samsung"
+      ],
+      "resposta_correta": "SwiftKey"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo esses dados, esse emoji representava qual porcentagem de todos os emojis usados no Reino Unido em 2015?",
+      "opcoes": [
+        "Cerca de 20%",
+        "Cerca de 2%",
+        "Cerca de 50%",
+        "Cerca de 90%"
+      ],
+      "resposta_correta": "Cerca de 20%"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano esse mesmo emoji foi originalmente adicionado ao padrão Unicode, antes de virar Palavra do Ano?",
+      "opcoes": [
+        "2010",
+        "1999",
+        "2015",
+        "1982"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 7,
+      "pergunta": "Entre 2011 e 2021, esse emoji foi descrito como o quê, em todas as plataformas?",
+      "opcoes": [
+        "O emoji mais usado do período",
+        "O emoji menos usado do período",
+        "Um emoji banido em algumas plataformas",
+        "Um emoji exclusivo do Twitter"
+      ],
+      "resposta_correta": "O emoji mais usado do período"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em 2021, qual outro emoji chegou a ultrapassar brevemente o 'Rosto Chorando de Rir' como principal no Twitter?",
+      "opcoes": [
+        "'Rosto Chorando aos Berros'",
+        "'Rosto com Coração'",
+        "'Polegar para Baixo'",
+        "'Rosto Zangado'"
+      ],
+      "resposta_correta": "'Rosto Chorando aos Berros'"
+    },
+    {
+      "n": 9,
+      "pergunta": "Cite dois finalistas concorrentes ao título de Palavra do Ano de 2015, que perderam para o emoji.",
+      "opcoes": [
+        "'On fleek' e 'refugee'",
+        "'Selfie' e 'vape'",
+        "'Meme' e 'LOL'",
+        "'Hashtag' e 'streaming'"
+      ],
+      "resposta_correta": "'On fleek' e 'refugee'"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual foi a Palavra do Ano da Oxford no ano anterior, em 2014?",
+      "opcoes": [
+        "'Vape'",
+        "'Selfie'",
+        "'Emoji'",
+        "'Meme'"
+      ],
+      "resposta_correta": "'Vape'"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual foi a Palavra do Ano da Oxford em 2013, também relacionada à cultura digital?",
+      "opcoes": [
+        "'Selfie'",
+        "'Vape'",
+        "'Emoji'",
+        "'Streaming'"
+      ],
+      "resposta_correta": "'Selfie'"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma fonte, qual termo tecnológico foi escolhido Palavra do Ano de 2024 pela Oxford, relacionado a excesso de conteúdo de baixo valor nas redes?",
+      "opcoes": [
+        "'Brain rot' (apodrecimento cerebral)",
+        "'Rage bait'",
+        "'Doomscrolling'",
+        "'Cringe'"
+      ],
+      "resposta_correta": "'Brain rot' (apodrecimento cerebral)"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual termo foi escolhido Palavra do Ano de 2025 pela Oxford, referente a conteúdo criado propositalmente para gerar raiva e engajamento?",
+      "opcoes": [
+        "'Rage bait' (isca de raiva)",
+        "'Brain rot'",
+        "'Emoji'",
+        "'Selfie'"
+      ],
+      "resposta_correta": "'Rage bait' (isca de raiva)"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo a Oxford, desde quando a palavra 'emoji' já aparecia esporadicamente em conversas em inglês, mesmo antes de sua explosão de uso em 2015?",
+      "opcoes": [
+        "Desde 1997",
+        "Desde 1982",
+        "Desde 2010",
+        "Desde 2005"
+      ],
+      "resposta_correta": "Desde 1997"
+    },
+    {
+      "n": 15,
+      "pergunta": "O emoji 'Rosto Chorando de Rir' costuma ser usado como alternativa digital a qual gíria de internet mais antiga?",
+      "opcoes": [
+        "LOL",
+        "BRB",
+        "AFK",
+        "IMO"
+      ],
+      "resposta_correta": "LOL"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma retrospectiva, quantas vezes o uso da palavra 'emoji' aumentou apenas em 2015, comparado ao ano anterior?",
+      "opcoes": [
+        "Mais que triplicou",
+        "Permaneceu exatamente igual",
+        "Diminuiu pela metade",
+        "Dobrou exatamente"
+      ],
+      "resposta_correta": "Mais que triplicou"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que a escolha recorrente de termos ligados à tecnologia como Palavra do Ano da Oxford, ao longo de vários anos, demonstra?",
+      "opcoes": [
+        "Como a cultura digital tem influência crescente sobre a linguagem cotidiana",
+        "Que a tecnologia nunca influencia a linguagem formal",
+        "Que apenas o inglês é afetado por essas mudanças linguísticas",
+        "Que a Oxford para de escolher palavras relacionadas à internet desde 2015"
+      ],
+      "resposta_correta": "Como a cultura digital tem influência crescente sobre a linguagem cotidiana"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual expressão de gíria de internet, popular por volta de 2014, também foi finalista de Palavra do Ano da Oxford em 2015, descrevendo algo 'no ponto' ou 'perfeito'?",
+      "opcoes": [
+        "'On fleek'",
+        "'Cringe'",
+        "'Lit'",
+        "'Salty'"
+      ],
+      "resposta_correta": "'On fleek'"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo a Oxford, qual foi a justificativa central para reconhecer o emoji como uma forma legítima de expressão linguística?",
+      "opcoes": [
+        "Ser uma forma de expressão que pode cruzar barreiras de idioma",
+        "Ser mais fácil de digitar do que palavras tradicionais",
+        "Ser exclusivo de um único idioma específico",
+        "Ser usado apenas por adolescentes"
+      ],
+      "resposta_correta": "Ser uma forma de expressão que pode cruzar barreiras de idioma"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a escrita alfabética tradicional, segundo um dos dirigentes da Oxford, tem enfrentado dificuldade em atender, no contexto da comunicação do século XXI?",
+      "opcoes": [
+        "As demandas de uma comunicação rápida e centrada no visual",
+        "A necessidade de formalidade em documentos oficiais",
+        "A tradução para múltiplos idiomas",
+        "O uso em ambientes acadêmicos"
+      ],
+      "resposta_correta": "As demandas de uma comunicação rápida e centrada no visual"
+    }
+  ]
+}

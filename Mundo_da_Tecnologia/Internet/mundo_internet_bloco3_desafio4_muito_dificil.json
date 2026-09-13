@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 4,
+    "tema_desafio": "Netflix e a Revolução do Streaming",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas e academicas (Yale School of Management case study). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Desafio 4 do Bloco 3 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: o contraste de vestimenta na histórica reunião entre Netflix e Blockbuster, em 2000, virou parte do folclore do Vale do Silício — enquanto os executivos da Netflix apareceram de shorts, chinelos e camiseta tie-dye, o CEO da Blockbuster usava sapatos italianos impecáveis. Um detalhe simbólico de como as duas empresas, à época, pareciam viver em mundos completamente diferentes.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo o relato detalhado de Marc Randolph sobre a reunião com a Blockbuster em 2000, o que ele próprio estava vestindo?",
+      "opcoes": [
+        "Shorts, camiseta tie-dye e chinelos",
+        "Um terno formal completo",
+        "Um uniforme corporativo padrão",
+        "Uma roupa idêntica à de John Antioco"
+      ],
+      "resposta_correta": "Shorts, camiseta tie-dye e chinelos"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo o mesmo relato, o que Reed Hastings vestia nessa reunião?",
+      "opcoes": [
+        "Uma camiseta, ainda que bem passada",
+        "Um terno com gravata",
+        "Uma camisa havaiana",
+        "Um moletom com capuz"
+      ],
+      "resposta_correta": "Uma camiseta, ainda que bem passada"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo o relato, quem estava com a camisa havaiana naquela reunião?",
+      "opcoes": [
+        "Barry, outro executivo do grupo da Netflix",
+        "John Antioco, CEO da Blockbuster",
+        "Reed Hastings",
+        "O advogado geral da Blockbuster"
+      ],
+      "resposta_correta": "Barry, outro executivo do grupo da Netflix"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem era o advogado-geral da Blockbuster presente naquela reunião, ao lado de Antioco?",
+      "opcoes": [
+        "Ed Stead",
+        "Carl Icahn",
+        "Barry McCarthy",
+        "Ted Sarandos"
+      ],
+      "resposta_correta": "Ed Stead"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo Randolph, a Netflix na época tinha cerca de quantos funcionários, no outono (hemisfério norte) de 2000?",
+      "opcoes": [
+        "Cerca de 50 funcionários",
+        "Cerca de 500 funcionários",
+        "Cerca de 5 funcionários",
+        "Cerca de 5.000 funcionários"
+      ],
+      "resposta_correta": "Cerca de 50 funcionários"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual era a projeção de vendas da Netflix para aquele ano de 2000, segundo Randolph?",
+      "opcoes": [
+        "Cerca de 3 milhões de dólares",
+        "Cerca de 300 milhões de dólares",
+        "Cerca de 30 mil dólares",
+        "Cerca de 3 bilhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 3 milhões de dólares"
+    },
+    {
+      "n": 7,
+      "pergunta": "Mais preocupante que as vendas, qual era a projeção de prejuízo da Netflix naquele mesmo ano, segundo Randolph?",
+      "opcoes": [
+        "Cerca de 50 milhões de dólares",
+        "Cerca de 5 milhões de dólares",
+        "Cerca de 500 milhões de dólares",
+        "Nenhum prejuízo, a empresa já era lucrativa"
+      ],
+      "resposta_correta": "Cerca de 50 milhões de dólares"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo Randolph, por que 2000 era um momento especialmente ruim para estar perdendo esse tipo de dinheiro?",
+      "opcoes": [
+        "Era logo após a quebra das empresas 'ponto com', dificultando levantar capital",
+        "Era um ano de recessão mundial generalizada",
+        "Havia uma proibição legal de prejuízo para empresas de internet",
+        "Não havia nenhum motivo especial, foi apenas uma coincidência"
+      ],
+      "resposta_correta": "Era logo após a quebra das empresas 'ponto com', dificultando levantar capital"
+    },
+    {
+      "n": 9,
+      "pergunta": "Antes de conseguir uma reunião real com a Blockbuster, o que aconteceu nas tentativas iniciais de contato da Netflix?",
+      "opcoes": [
+        "A Blockbuster nem sequer retornava as ligações",
+        "A reunião foi marcada imediatamente, sem dificuldade",
+        "A Blockbuster propôs a reunião primeiro",
+        "Um intermediário jurídico bloqueou qualquer contato"
+      ],
+      "resposta_correta": "A Blockbuster nem sequer retornava as ligações"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em qual prédio específico de Dallas, Texas, ficava a sede da Blockbuster na época dessa negociação?",
+      "opcoes": [
+        "A torre Renaissance",
+        "O Reunion Tower",
+        "O Bank of America Plaza",
+        "O Trammell Crow Center"
+      ],
+      "resposta_correta": "A torre Renaissance"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual era a projeção de vendas da própria Blockbuster naquele mesmo período, segundo Randolph, evidenciando a disparidade entre as duas empresas?",
+      "opcoes": [
+        "Cerca de 6 bilhões de dólares",
+        "Cerca de 50 milhões de dólares",
+        "Cerca de 600 milhões de dólares",
+        "Cerca de 6 milhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 6 bilhões de dólares"
+    },
+    {
+      "n": 12,
+      "pergunta": "Aproximadamente quantos funcionários a Blockbuster tinha nessa mesma época, segundo a mesma fonte?",
+      "opcoes": [
+        "60.000 funcionários",
+        "50 funcionários",
+        "600 funcionários",
+        "6.000 funcionários"
+      ],
+      "resposta_correta": "60.000 funcionários"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo o estudo de caso de Yale sobre o episódio da Qwikster, quantos assinantes a Netflix tinha ao final de 2010?",
+      "opcoes": [
+        "20 milhões",
+        "1 milhão",
+        "200 milhões",
+        "2 milhões"
+      ],
+      "resposta_correta": "20 milhões"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo esse mesmo estudo de caso, qual era a receita da Netflix em 2010?",
+      "opcoes": [
+        "Mais de 2,1 bilhões de dólares",
+        "21 milhões de dólares",
+        "210 milhões de dólares",
+        "21 bilhões de dólares"
+      ],
+      "resposta_correta": "Mais de 2,1 bilhões de dólares"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual era o lucro líquido da Netflix nesse mesmo ano de 2010, segundo o estudo?",
+      "opcoes": [
+        "160 milhões de dólares",
+        "16 milhões de dólares",
+        "1,6 bilhão de dólares",
+        "Nenhum lucro, a empresa operava no prejuízo"
+      ],
+      "resposta_correta": "160 milhões de dólares"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo o mesmo estudo, como Reed Hastings passou a descrever cada vez mais a própria Netflix, refletindo sua visão estratégica?",
+      "opcoes": [
+        "'Uma empresa de streaming, que também oferece DVD pelo correio'",
+        "'Uma locadora de vídeos tradicional com toque digital'",
+        "'Uma produtora de cinema, primariamente'",
+        "'Uma empresa de tecnologia sem relação com entretenimento'"
+      ],
+      "resposta_correta": "'Uma empresa de streaming, que também oferece DVD pelo correio'"
+    },
+    {
+      "n": 17,
+      "pergunta": "A qual valor específico a ação da Netflix havia chegado no início de julho de 2011, pouco antes da crise da Qwikster, segundo o estudo de Yale?",
+      "opcoes": [
+        "304 dólares por ação",
+        "1 dólar por ação (valor do IPO de 2002)",
+        "50 dólares por ação",
+        "1.000 dólares por ação"
+      ],
+      "resposta_correta": "304 dólares por ação"
+    },
+    {
+      "n": 18,
+      "pergunta": "Esse preço de ação dava à Netflix, em julho de 2011, uma capitalização de mercado de aproximadamente quanto?",
+      "opcoes": [
+        "Mais de 16 bilhões de dólares",
+        "50 milhões de dólares",
+        "163 bilhões de dólares",
+        "1 bilhão de dólares"
+      ],
+      "resposta_correta": "Mais de 16 bilhões de dólares"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo o estudo de Yale, um ano depois do episódio da Qwikster, a Netflix havia conseguido convencer plenamente os investidores de que sabia o caminho a seguir?",
+      "opcoes": [
+        "Não, a empresa ainda não havia conseguido essa confiança plena um ano depois",
+        "Sim, a recuperação foi total e imediata",
+        "Sim, mas apenas parcialmente, sem detalhes disponíveis",
+        "O estudo não aborda esse ponto específico"
+      ],
+      "resposta_correta": "Não, a empresa ainda não havia conseguido essa confiança plena um ano depois"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando toda a história contada neste desafio — da rejeição da Blockbuster ao fiasco da Qwikster — o que essa trajetória da Netflix melhor ilustra sobre grandes empresas de tecnologia?",
+      "opcoes": [
+        "Que mesmo empresas eventualmente muito bem-sucedidas passam por decisões arriscadas e quase fatais no caminho",
+        "Que o sucesso de uma empresa é sempre linear e sem nenhum tropeço",
+        "Que apenas empresas nunca rejeitadas por concorrentes conseguem crescer",
+        "Que decisões estratégicas malsucedidas sempre acabam em falência definitiva"
+      ],
+      "resposta_correta": "Que mesmo empresas eventualmente muito bem-sucedidas passam por decisões arriscadas e quase fatais no caminho"
+    }
+  ]
+}

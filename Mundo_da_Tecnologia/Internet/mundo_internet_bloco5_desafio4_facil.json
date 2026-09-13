@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 4,
+    "tema_desafio": "Blockchain e Criptomoedas",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Mercado Bitcoin e artigos academicos. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - teorias sobre identidade de Nakamoto apresentadas como especulacao nao confirmada, sem afirmar nenhuma delas como fato; nenhuma orientacao de investimento fornecida, apenas fatos historicos."
+  },
+  "saiba_mais": "Curiosidade: até hoje, ninguém sabe com certeza quem é Satoshi Nakamoto — pode ser uma única pessoa ou até um grupo de pessoas usando um pseudônimo coletivo. Estima-se que Nakamoto possua cerca de 1,1 milhão de bitcoins, guardados sem nunca terem sido movimentados, o que — dependendo da cotação do momento — pode representar dezenas de bilhões de dólares parados numa carteira digital cujo dono verdadeiro nunca se revelou.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual é o nome (pseudônimo) do criador do Bitcoin?",
+      "opcoes": [
+        "Satoshi Nakamoto",
+        "Nick Szabo",
+        "Vitalik Buterin",
+        "Adam Back"
+      ],
+      "resposta_correta": "Satoshi Nakamoto"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o documento (whitepaper) que descreveu o Bitcoin foi publicado?",
+      "opcoes": [
+        "2008",
+        "1971",
+        "1999",
+        "2013"
+      ],
+      "resposta_correta": "2008"
+    },
+    {
+      "n": 3,
+      "pergunta": "Como se chama o documento técnico que apresentou o Bitcoin ao mundo?",
+      "opcoes": [
+        "'Bitcoin: A Peer-to-Peer Electronic Cash System'",
+        "'The Selfish Gene'",
+        "'Computing Machinery and Intelligence'",
+        "'Attention Is All You Need'"
+      ],
+      "resposta_correta": "'Bitcoin: A Peer-to-Peer Electronic Cash System'"
+    },
+    {
+      "n": 4,
+      "pergunta": "A verdadeira identidade de Satoshi Nakamoto já foi confirmada oficialmente?",
+      "opcoes": [
+        "Não, permanece um mistério até hoje",
+        "Sim, é oficialmente conhecida e documentada",
+        "Sim, mas mantida em sigilo contratual",
+        "Não há nenhuma discussão sobre esse tema"
+      ],
+      "resposta_correta": "Não, permanece um mistério até hoje"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que mês e ano específicos Nakamoto minerou o 'bloco gênese', o primeiro bloco da blockchain do Bitcoin?",
+      "opcoes": [
+        "Janeiro de 2009",
+        "Outubro de 2008",
+        "2013",
+        "2017"
+      ],
+      "resposta_correta": "Janeiro de 2009"
+    },
+    {
+      "n": 6,
+      "pergunta": "Que tipo de mensagem estava embutida nesse primeiro bloco, referenciando uma manchete de jornal da época?",
+      "opcoes": [
+        "Uma manchete sobre um resgate bancário do governo britânico",
+        "Uma saudação simples de boas-vindas",
+        "O nome completo de Satoshi Nakamoto",
+        "Uma piada interna sem relação com finanças"
+      ],
+      "resposta_correta": "Uma manchete sobre um resgate bancário do governo britânico"
+    },
+    {
+      "n": 7,
+      "pergunta": "O que essa mensagem embutida no bloco gênese é interpretada como sendo?",
+      "opcoes": [
+        "Uma crítica ao sistema bancário centralizado e aos resgates financeiros de 2008",
+        "Um elogio ao sistema bancário tradicional",
+        "Uma mensagem sem nenhum significado especial",
+        "Um anúncio publicitário disfarçado"
+      ],
+      "resposta_correta": "Uma crítica ao sistema bancário centralizado e aos resgates financeiros de 2008"
+    },
+    {
+      "n": 8,
+      "pergunta": "O que é 'blockchain', a tecnologia por trás do Bitcoin?",
+      "opcoes": [
+        "Um registro distribuído (banco de dados) de transações, mantido por uma rede de computadores",
+        "Um tipo específico de vírus de computador",
+        "Uma rede social exclusiva de investidores",
+        "Um navegador de internet especializado"
+      ],
+      "resposta_correta": "Um registro distribuído (banco de dados) de transações, mantido por uma rede de computadores"
+    },
+    {
+      "n": 9,
+      "pergunta": "O que caracteriza o Bitcoin como uma moeda 'descentralizada'?",
+      "opcoes": [
+        "Não depende de um governo ou instituição central para funcionar",
+        "É controlada exclusivamente por um único banco",
+        "É emitida apenas por um governo específico",
+        "Depende inteiramente de uma única empresa privada"
+      ],
+      "resposta_correta": "Não depende de um governo ou instituição central para funcionar"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano Satoshi Nakamoto desapareceu das interações online com a comunidade que ele havia ajudado a criar?",
+      "opcoes": [
+        "2010",
+        "2008",
+        "2013",
+        "2017"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 11,
+      "pergunta": "Antes de desaparecer, o que Nakamoto fez com os direitos autorais do software do Bitcoin, segundo relatos?",
+      "opcoes": [
+        "Removeu seu nome, deixando o código para os demais desenvolvedores",
+        "Registrou uma patente exclusiva em seu próprio nome",
+        "Vendeu os direitos para uma grande empresa",
+        "Nunca abriu mão de nenhum controle sobre o projeto"
+      ],
+      "resposta_correta": "Removeu seu nome, deixando o código para os demais desenvolvedores"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em 2014, qual revista americana publicou uma reportagem alegando identificar um homem específico como Satoshi Nakamoto?",
+      "opcoes": [
+        "Newsweek",
+        "Time",
+        "Forbes",
+        "The Economist"
+      ],
+      "resposta_correta": "Newsweek"
+    },
+    {
+      "n": 13,
+      "pergunta": "Cite um dos nomes já especulados publicamente como possível Satoshi Nakamoto, ligado à criação de 'contratos inteligentes' (smart contracts).",
+      "opcoes": [
+        "Nick Szabo",
+        "Ray Tomlinson",
+        "Bob Thomas",
+        "Robert Morris"
+      ],
+      "resposta_correta": "Nick Szabo"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual moeda digital anterior ao Bitcoin, criada por Nick Szabo, é considerada uma precursora conceitual?",
+      "opcoes": [
+        "Bit Gold",
+        "Ethereum",
+        "Dogecoin",
+        "Litecoin"
+      ],
+      "resposta_correta": "Bit Gold"
+    },
+    {
+      "n": 15,
+      "pergunta": "Aproximadamente quanto valia um Bitcoin, em dólares, durante seus primeiros anos, antes de disparar de valor?",
+      "opcoes": [
+        "Menos de 10 dólares",
+        "Mais de 100 mil dólares",
+        "Exatamente 1.000 dólares",
+        "Mais de 1 milhão de dólares"
+      ],
+      "resposta_correta": "Menos de 10 dólares"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em 2013, o preço do Bitcoin ultrapassou qual marco significativo pela primeira vez, segundo registros?",
+      "opcoes": [
+        "100 dólares (e depois 1.000 dólares no mesmo ano)",
+        "1 milhão de dólares",
+        "10 centavos de dólar",
+        "1 dólar"
+      ],
+      "resposta_correta": "100 dólares (e depois 1.000 dólares no mesmo ano)"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que uma 'moeda digital descentralizada', como o Bitcoin, elimina da necessidade de uma transação financeira tradicional?",
+      "opcoes": [
+        "Um terceiro de confiança (como um banco) intermediando a transação",
+        "A necessidade de qualquer tipo de internet",
+        "A necessidade de identificação pessoal em qualquer circunstância",
+        "A necessidade de qualquer tipo de segurança digital"
+      ],
+      "resposta_correta": "Um terceiro de confiança (como um banco) intermediando a transação"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma fonte, quem controla o Bitcoin, já que ele não tem uma autoridade central única?",
+      "opcoes": [
+        "Ninguém individualmente, a menos que controle a maioria do poder computacional da rede",
+        "O governo dos Estados Unidos exclusivamente",
+        "Um único banco central mundial",
+        "A própria pessoa/grupo Satoshi Nakamoto até hoje"
+      ],
+      "resposta_correta": "Ninguém individualmente, a menos que controle a maioria do poder computacional da rede"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em qual plataforma técnica Satoshi Nakamoto lançou a primeira versão do software do Bitcoin, em janeiro de 2009?",
+      "opcoes": [
+        "Sourceforge",
+        "GitHub",
+        "Google Drive",
+        "Um site próprio exclusivo"
+      ],
+      "resposta_correta": "Sourceforge"
+    },
+    {
+      "n": 20,
+      "pergunta": "O mistério sobre a identidade de Satoshi Nakamoto é considerado, por muitos, parte de que aspecto essencial da própria filosofia do Bitcoin?",
+      "opcoes": [
+        "O valor dado ao anonimato e à descentralização",
+        "A necessidade de forte regulamentação governamental",
+        "A importância de marcas registradas fortes",
+        "A centralização total do controle financeiro"
+      ],
+      "resposta_correta": "O valor dado ao anonimato e à descentralização"
+    }
+  ]
+}

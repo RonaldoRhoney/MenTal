@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 2,
+    "tema_desafio": "AWS e a Expansão da Amazon",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: dentro da Amazon, existe uma expressão interna curiosa para descrever tarefas de infraestrutura repetitivas e pouco inovadoras: 'undifferentiated heavy lifting' (algo como 'trabalho pesado sem diferencial'). Foi justamente a vontade de livrar outras empresas desse tipo de trabalho — deixando-as livres para focar no que realmente importa — que motivou a criação da própria AWS.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual expressão interna, atribuída à liderança da Amazon (incluindo Jeff Bezos), descreve o trabalho repetitivo de infraestrutura que não gera diferencial competitivo?",
+      "opcoes": [
+        "'Undifferentiated heavy lifting'",
+        "'Day one thinking'",
+        "'Working backwards'",
+        "'Two-pizza team'"
+      ],
+      "resposta_correta": "'Undifferentiated heavy lifting'"
+    },
+    {
+      "n": 2,
+      "pergunta": "O que esse termo descreve, na prática, segundo o contexto da criação da AWS?",
+      "opcoes": [
+        "Trabalho essencial mas repetitivo, que consumia recursos sem gerar inovação direta ao cliente",
+        "Um tipo de exercício físico obrigatório na empresa",
+        "O transporte pesado de servidores entre data centers",
+        "Uma categoria de produto vendida pela Amazon"
+      ],
+      "resposta_correta": "Trabalho essencial mas repetitivo, que consumia recursos sem gerar inovação direta ao cliente"
+    },
+    {
+      "n": 3,
+      "pergunta": "Antes de liderar a criação da AWS, que cargo próximo a Jeff Bezos Andy Jassy ocupou?",
+      "opcoes": [
+        "Assistente técnico (shadow) de Bezos",
+        "Diretor financeiro da Amazon",
+        "CEO da divisão de livros",
+        "Chefe do departamento jurídico"
+      ],
+      "resposta_correta": "Assistente técnico (shadow) de Bezos"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em 2001, antes de se envolver com a AWS, em qual projeto específico da Amazon Andy Jassy trabalhou?",
+      "opcoes": [
+        "Comercialização de CDs de música pela internet",
+        "O lançamento do Kindle",
+        "A criação do Amazon Prime",
+        "O desenvolvimento do assistente Alexa"
+      ],
+      "resposta_correta": "Comercialização de CDs de música pela internet"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano Andy Jassy assumiu formalmente o cargo de CEO da AWS?",
+      "opcoes": [
+        "2016",
+        "2006",
+        "2003",
+        "2021"
+      ],
+      "resposta_correta": "2016"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano Andy Jassy se tornou CEO de toda a Amazon, sucedendo Jeff Bezos?",
+      "opcoes": [
+        "2021",
+        "2016",
+        "2006",
+        "2015"
+      ],
+      "resposta_correta": "2021"
+    },
+    {
+      "n": 7,
+      "pergunta": "Através de que meio de comunicação interno Jeff Bezos anunciou oficialmente a transição de liderança para Jassy?",
+      "opcoes": [
+        "Um e-mail intitulado 'Companheiros da Amazon' enviado aos colaboradores",
+        "Uma coletiva de imprensa presencial",
+        "Um vídeo publicado nas redes sociais da empresa",
+        "Uma carta física enviada a acionistas"
+      ],
+      "resposta_correta": "Um e-mail intitulado 'Companheiros da Amazon' enviado aos colaboradores"
+    },
+    {
+      "n": 8,
+      "pergunta": "Por quantos anos, aproximadamente, Jeff Bezos esteve à frente da Amazon como CEO, desde a fundação em 1994?",
+      "opcoes": [
+        "26 anos",
+        "10 anos",
+        "5 anos",
+        "50 anos"
+      ],
+      "resposta_correta": "26 anos"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo o CEO da Snowflake, Frank Slootman (ao mesmo tempo cliente e concorrente da AWS), o que Andy Jassy fez sozinho, segundo declaração à Forbes?",
+      "opcoes": [
+        "Mudou a cara da computação",
+        "Inventou a internet",
+        "Criou o primeiro banco de dados do mundo",
+        "Fundou a própria Snowflake"
+      ],
+      "resposta_correta": "Mudou a cara da computação"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano foi lançada a primeira edição da conferência AWS re:Invent?",
+      "opcoes": [
+        "2012",
+        "2006",
+        "2003",
+        "2000"
+      ],
+      "resposta_correta": "2012"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que cidade a AWS re:Invent costuma ser realizada?",
+      "opcoes": [
+        "Las Vegas, Nevada",
+        "Seattle, Washington",
+        "Nova York",
+        "San Francisco"
+      ],
+      "resposta_correta": "Las Vegas, Nevada"
+    },
+    {
+      "n": 12,
+      "pergunta": "Aproximadamente quantos participantes a edição de 2013 do re:Invent já reunia, segundo registros?",
+      "opcoes": [
+        "Mais de 8.000",
+        "Cerca de 100",
+        "Cerca de 500",
+        "Mais de 100.000"
+      ],
+      "resposta_correta": "Mais de 8.000"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma fonte, quantos participantes uma edição recente do re:Invent chegou a reunir, mostrando o crescimento do evento?",
+      "opcoes": [
+        "Mais de 60 mil",
+        "Cerca de 8 mil",
+        "Cerca de 500",
+        "Mais de 1 milhão"
+      ],
+      "resposta_correta": "Mais de 60 mil"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma fonte de 2020, quantos novos recursos Andy Jassy anunciou logo no primeiro dia daquela edição do re:Invent?",
+      "opcoes": [
+        "24 novos recursos",
+        "2 novos recursos",
+        "200 novos recursos",
+        "Nenhum recurso novo foi anunciado"
+      ],
+      "resposta_correta": "24 novos recursos"
+    },
+    {
+      "n": 15,
+      "pergunta": "Cite duas grandes empresas, fora do setor de tecnologia pura, que se tornaram clientes da AWS ao longo do tempo, segundo uma fonte.",
+      "opcoes": [
+        "McDonald's e Pfizer",
+        "Coca-Cola e Nike exclusivamente",
+        "Ford e General Motors",
+        "Nenhuma empresa fora do setor de tecnologia usa AWS"
+      ],
+      "resposta_correta": "McDonald's e Pfizer"
+    },
+    {
+      "n": 16,
+      "pergunta": "Desde o início, como ficou estabelecido que a AWS operaria internamente, em relação à própria Amazon?",
+      "opcoes": [
+        "Como uma unidade independente, atendendo a própria Amazon como atenderia qualquer outro cliente",
+        "Como um departamento subordinado diretamente ao setor de livros",
+        "Sem nenhuma relação formal com o restante da empresa",
+        "Como uma empresa totalmente separada, sem nenhuma conexão acionária"
+      ],
+      "resposta_correta": "Como uma unidade independente, atendendo a própria Amazon como atenderia qualquer outro cliente"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo o CEO da AWS numa entrevista de 2021, havia que tipo de reação das pessoas quando a empresa começou a explicar o conceito de computação em nuvem, 15 anos antes?",
+      "opcoes": [
+        "Olhares perplexos, já que o conceito mal existia",
+        "Entusiasmo imediato e unânime",
+        "Total desinteresse, sem nenhuma reação notável",
+        "Rejeição hostil e processos judiciais"
+      ],
+      "resposta_correta": "Olhares perplexos, já que o conceito mal existia"
+    },
+    {
+      "n": 18,
+      "pergunta": "Durante aproximadamente quantos anos iniciais a AWS praticamente não enfrentou concorrência significativa, segundo uma retrospectiva?",
+      "opcoes": [
+        "Cerca de sete anos",
+        "Cerca de um ano",
+        "Cerca de vinte anos",
+        "Nunca enfrentou concorrência, mesmo até hoje"
+      ],
+      "resposta_correta": "Cerca de sete anos"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo uma citação atribuída a um empreendedor do Vale do Silício, o que a infraestrutura de nuvem como a AWS representa para o mercado?",
+      "opcoes": [
+        "O ativo mais poderoso dos grandes players, que ajuda a nivelar o jogo para empresas menores",
+        "Um risco desnecessário para pequenas empresas",
+        "Uma tecnologia irrelevante fora dos Estados Unidos",
+        "Um monopólio que impede qualquer concorrência"
+      ],
+      "resposta_correta": "O ativo mais poderoso dos grandes players, que ajuda a nivelar o jogo para empresas menores"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo Andy Jassy, qual é o desejo declarado da Amazon em relação à sua própria cultura de trabalho, mesmo sendo uma gigante?",
+      "opcoes": [
+        "Operar como as maiores startups do mundo, com foco em inovação e decisões rápidas",
+        "Reduzir ao máximo qualquer tipo de inovação para focar só em lucro",
+        "Copiar exatamente o modelo de outras big techs",
+        "Abandonar completamente o foco em startups parceiras"
+      ],
+      "resposta_correta": "Operar como as maiores startups do mundo, com foco em inovação e decisões rápidas"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 5,
+    "tema_desafio": "O Futuro da Internet: Tendências e Especulações",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes especializadas (Futurecom, Google Cloud, Intellitechs). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo prospectivo tratado com ressalva epistemica; atribuicoes geopoliticas de ameacas ciberneticas apresentadas como analise de previsao de mercado, sem juizo de valor politico proprio."
+  },
+  "saiba_mais": "Nota sobre este desafio: as previsões de cibersegurança para 2026 já apontam para uma verdadeira 'corrida armamentista' entre atacantes e defensores, ambos usando inteligência artificial cada vez mais sofisticada — atacantes para agir mais rápido, e equipes de segurança respondendo com o que especialistas chamam de 'SOC agêntico' (centros de operação de segurança também potencializados por IA). Um lembrete de que, conforme a tecnologia avança, a disputa entre proteção e ameaça avança junto.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo estimativas do setor de telecomunicações, para quantos gigabits por segundo (Gbps) as novas gerações de Wi-Fi doméstico devem evoluir, segundo uma fonte?",
+      "opcoes": [
+        "Superiores a 10 Gbps",
+        "Apenas 1 Mbps",
+        "100 Gbps exatos, sem variação",
+        "Menos de 1 Gbps"
+      ],
+      "resposta_correta": "Superiores a 10 Gbps"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo uma fonte específica sobre 6G, quais duas tecnologias habilitadoras, além de IA e redes cognitivas, são exploradas ativamente pelo setor?",
+      "opcoes": [
+        "Gêmeos digitais e comunicação quântica",
+        "Fax e telégrafo modernizados",
+        "Discos rígidos e fitas magnéticas",
+        "Rádio AM e televisão analógica"
+      ],
+      "resposta_correta": "Gêmeos digitais e comunicação quântica"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual associação/instituto brasileiro é citado como promotor de workshops sobre 6G no país, como o 'Brazil 6G'?",
+      "opcoes": [
+        "Inatel",
+        "USP exclusivamente",
+        "Uma universidade americana",
+        "Nenhuma instituição brasileira participa dessas discussões"
+      ],
+      "resposta_correta": "Inatel"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo uma análise sobre infraestrutura, qual desafio específico a expansão da fibra óptica enfrenta em regiões de baixa densidade populacional?",
+      "opcoes": [
+        "Demanda maior investimento para viabilizar sua chegada até essas áreas",
+        "Nenhum desafio relevante é enfrentado nessas regiões",
+        "É proibida por lei nessas áreas",
+        "Já está 100% implementada em todo o mundo rural"
+      ],
+      "resposta_correta": "Demanda maior investimento para viabilizar sua chegada até essas áreas"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo essa mesma análise, quais aplicações agrícolas específicas a internet via rádio pode ajudar a viabilizar em áreas rurais?",
+      "opcoes": [
+        "Sensores de clima, rastreamento de animais e controle de pragas",
+        "Exclusivamente jogos eletrônicos online",
+        "Apenas redes sociais para lazer",
+        "Serviços bancários presenciais tradicionais"
+      ],
+      "resposta_correta": "Sensores de clima, rastreamento de animais e controle de pragas"
+    },
+    {
+      "n": 6,
+      "pergunta": "O conceito de 'Web 4.0', mencionado ao lado de IA, blockchain e 6G nas tendências futuras, sugere qual tipo de evolução em relação às webs anteriores?",
+      "opcoes": [
+        "Uma internet ainda mais integrada, inteligente e conectada a diferentes tecnologias emergentes",
+        "Um retrocesso total às tecnologias dos anos 1990",
+        "Uma internet completamente desconectada de qualquer rede",
+        "Uma versão idêntica à Web 1.0 original, sem nenhuma mudança"
+      ],
+      "resposta_correta": "Uma internet ainda mais integrada, inteligente e conectada a diferentes tecnologias emergentes"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo uma previsão de cibersegurança para 2026, o conceito de 'SOC agêntico' é citado como resposta a qual tipo de ameaça crescente?",
+      "opcoes": [
+        "Ataques que utilizam inteligência artificial para se tornarem mais rápidos",
+        "Ameaças exclusivamente físicas a data centers",
+        "Apenas fraudes bancárias tradicionais por telefone",
+        "Roubo de equipamentos de hardware"
+      ],
+      "resposta_correta": "Ataques que utilizam inteligência artificial para se tornarem mais rápidas"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo essa mesma previsão, quais táticas os atacantes de ransomware devem continuar usando para burlar sistemas de segurança?",
+      "opcoes": [
+        "Táticas para contornar a autenticação multifator",
+        "Exclusivamente cartas físicas fraudulentas",
+        "Apenas ligações telefônicas sem nenhuma tecnologia digital",
+        "Métodos idênticos aos usados nos anos 1970"
+      ],
+      "resposta_correta": "Táticas para contornar a autenticação multifator"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo essa previsão, qual camada de infraestrutura tecnológica é citada como um 'ponto cego crescente', cada vez mais visada por invasores?",
+      "opcoes": [
+        "Infraestrutura de virtualização",
+        "Apenas cabos telefônicos tradicionais",
+        "Exclusivamente impressoras domésticas",
+        "Rádios AM antigos"
+      ],
+      "resposta_correta": "Infraestrutura de virtualização"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo a mesma previsão, quais países/regiões são citados especificamente em relação a estratégias cibernéticas de longo prazo de Estados-nação?",
+      "opcoes": [
+        "Rússia, China, Irã e Coreia do Norte",
+        "Apenas países da América do Sul",
+        "Exclusivamente nações europeias",
+        "Nenhum país específico é mencionado"
+      ],
+      "resposta_correta": "Rússia, China, Irã e Coreia do Norte"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo uma análise sobre IoT em 2026, qual será o 'grande diferencial' citado para empresas que adotam essa tecnologia, em termos de gestão de dispositivos?",
+      "opcoes": [
+        "A orquestração de dispositivos distribuídos através de plataformas unificadas",
+        "A eliminação total de qualquer dispositivo conectado",
+        "O uso exclusivo de dispositivos analógicos",
+        "A proibição de qualquer automação"
+      ],
+      "resposta_correta": "A orquestração de dispositivos distribuídos através de plataformas unificadas"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quais três setores são citados como exemplos de adoção de IoT para otimizar processos e criar novas experiências digitais?",
+      "opcoes": [
+        "Manufatura, saúde e varejo",
+        "Exclusivamente entretenimento",
+        "Apenas o setor bancário tradicional",
+        "Somente agricultura de subsistência"
+      ],
+      "resposta_correta": "Manufatura, saúde e varejo"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma análise, o que a integração entre 5G e redes domésticas deve viabilizar de forma mais ampla no futuro próximo?",
+      "opcoes": [
+        "Uma revolução na conectividade doméstica cotidiana",
+        "O fim total de qualquer conexão à internet",
+        "A eliminação completa do uso de smartphones",
+        "Um retorno generalizado à conexão discada"
+      ],
+      "resposta_correta": "Uma revolução na conectividade doméstica cotidiana"
+    },
+    {
+      "n": 14,
+      "pergunta": "A computação quântica, segundo especialistas, tem potencial de impactar significativamente qual campo relacionado à proteção de dados?",
+      "opcoes": [
+        "Segurança cibernética",
+        "Exclusivamente moda e vestuário",
+        "Apenas culinária",
+        "Somente artes visuais"
+      ],
+      "resposta_correta": "Segurança cibernética"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma retrospectiva sobre infraestrutura, qual tecnologia de conexão continua sendo citada como fundamental para viabilizar aplicações exigentes, como jogos online e realidade virtual?",
+      "opcoes": [
+        "Fibra óptica",
+        "Conexão discada tradicional",
+        "Telégrafo modernizado",
+        "Rádio AM exclusivamente"
+      ],
+      "resposta_correta": "Fibra óptica"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma análise sobre o crescimento das cidades, qual cenário urbano é citado como ganhando relevância junto com a evolução da conectividade digital?",
+      "opcoes": [
+        "O crescimento urbano acelerado, que demanda respostas em tempo real de infraestrutura digital",
+        "A completa estagnação do crescimento das cidades",
+        "O abandono total das áreas urbanas",
+        "A eliminação de qualquer infraestrutura urbana digital"
+      ],
+      "resposta_correta": "O crescimento urbano acelerado, que demanda respostas em tempo real de infraestrutura digital"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual associação da indústria eletroeletrônica brasileira é citada como envolvida em pesquisas sobre 6G no país?",
+      "opcoes": [
+        "ABINEE (através do IPD Eletron)",
+        "Uma associação exclusiva de agricultura",
+        "Uma entidade de comércio varejista apenas",
+        "Nenhuma associação brasileira participa dessas pesquisas"
+      ],
+      "resposta_correta": "ABINEE (através do IPD Eletron)"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo tendências tecnológicas apontadas para 2026, quais habilidades profissionais são citadas como necessárias para empresas se manterem competitivas?",
+      "opcoes": [
+        "Investir em novas habilidades, ferramentas emergentes e cultura de inovação",
+        "Nenhuma nova habilidade é necessária, tudo permanece igual",
+        "Apenas habilidades manuais tradicionais, sem nenhuma relação com tecnologia",
+        "Exclusivamente conhecimentos de décadas passadas, sem nenhuma atualização"
+      ],
+      "resposta_correta": "Investir em novas habilidades, ferramentas emergentes e cultura de inovação"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo uma análise sobre transformação digital, o que esse processo envolve, além da adoção de novas ferramentas tecnológicas?",
+      "opcoes": [
+        "Reengenharia de fluxos de trabalho e adoção de metodologias ágeis",
+        "Apenas a compra de novos equipamentos, sem mudança de processos",
+        "Nenhuma mudança organizacional é necessária",
+        "Exclusivamente treinamento de curta duração, sem nenhuma outra mudança"
+      ],
+      "resposta_correta": "Reengenharia de fluxos de trabalho e adoção de metodologias ágeis"
+    },
+    {
+      "n": 20,
+      "pergunta": "De forma geral, o que a combinação de todas essas tendências (6G, IA, quântica, IoT, blockchain) sugere sobre a próxima década da internet, segundo uma análise de conjunto?",
+      "opcoes": [
+        "Um período de inovação acelerada, exigindo adaptação contínua de empresas e indivíduos",
+        "Um período de estagnação tecnológica total",
+        "O fim definitivo de qualquer avanço tecnológico relevante",
+        "Uma repetição exata das tendências já vistas nas décadas anteriores"
+      ],
+      "resposta_correta": "Um período de inovação acelerada, exigindo adaptação contínua de empresas e indivíduos"
+    }
+  ]
+}

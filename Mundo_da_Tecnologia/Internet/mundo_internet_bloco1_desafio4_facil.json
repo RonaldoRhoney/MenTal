@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 4,
+    "tema_desafio": "Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Britannica e Smithsonian. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: em determinado momento dos anos 1990, cerca de 50% de todos os CDs fabricados no mundo inteiro eram discos de teste gratuito da AOL — enviados pelo correio, distribuídos em revistas, lojas e até dentro de caixas de cereal, numa das campanhas de marketing mais agressivas da história da tecnologia.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Para muitos usuários dos anos 1990, qual serviço praticamente 'era' a internet?",
+      "opcoes": [
+        "AOL (America Online)",
+        "Google",
+        "Facebook",
+        "Yahoo"
+      ],
+      "resposta_correta": "AOL (America Online)"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual frase de alerta de e-mail se tornou extremamente famosa na cultura popular através da AOL?",
+      "opcoes": [
+        "'You've got mail' ('Você tem correspondência')",
+        "'Mensagem enviada com sucesso'",
+        "'Bem-vindo à internet'",
+        "'Nova notificação recebida'"
+      ],
+      "resposta_correta": "'You've got mail' ('Você tem correspondência')"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual filme de Hollywood, de 1998, foi inspirado nessa famosa frase da AOL?",
+      "opcoes": [
+        "'Mensagem para Você' ('You've Got Mail')",
+        "'A Rede Social'",
+        "'Jogos de Guerra'",
+        "'Matrix'"
+      ],
+      "resposta_correta": "'Mensagem para Você' ('You've Got Mail')"
+    },
+    {
+      "n": 4,
+      "pergunta": "Como as pessoas costumavam se conectar à internet através da AOL, nos anos 1990?",
+      "opcoes": [
+        "Por conexão discada (dial-up), usando a linha telefônica",
+        "Por conexão de fibra óptica",
+        "Por conexão via satélite",
+        "Por conexão sem fio (Wi-Fi)"
+      ],
+      "resposta_correta": "Por conexão discada (dial-up), usando a linha telefônica"
+    },
+    {
+      "n": 5,
+      "pergunta": "O que podia acontecer se alguém da casa atendesse o telefone enquanto a conexão discada estava ativa?",
+      "opcoes": [
+        "A conexão à internet caía",
+        "Nada acontecia, os dois funcionavam ao mesmo tempo sem problema",
+        "O computador desligava sozinho",
+        "A velocidade da internet aumentava"
+      ],
+      "resposta_correta": "A conexão à internet caía"
+    },
+    {
+      "n": 6,
+      "pergunta": "Como a AOL distribuía seus discos de teste gratuito para milhões de casas?",
+      "opcoes": [
+        "Enviando pelo correio, em revistas, e distribuindo em lojas",
+        "Apenas vendendo em lojas de eletrônicos",
+        "Somente através de download pela própria internet",
+        "Exclusivamente em feiras de tecnologia"
+      ],
+      "resposta_correta": "Enviando pelo correio, em revistas, e distribuindo em lojas"
+    },
+    {
+      "n": 7,
+      "pergunta": "Aproximadamente quantos discos de teste gratuito a AOL chegou a distribuir ao longo dos anos 1990, segundo estimativas?",
+      "opcoes": [
+        "Mais de 1 bilhão",
+        "Cerca de mil",
+        "Cerca de 1 milhão",
+        "Cerca de 100 mil"
+      ],
+      "resposta_correta": "Mais de 1 bilhão"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano a AOL adotou uma tarifa fixa mensal de 19,95 dólares, consolidando seu domínio de mercado?",
+      "opcoes": [
+        "1996",
+        "1985",
+        "2000",
+        "1991"
+      ],
+      "resposta_correta": "1996"
+    },
+    {
+      "n": 9,
+      "pergunta": "Além de e-mail, quais outros recursos sociais a AOL oferecia dentro de sua plataforma?",
+      "opcoes": [
+        "Salas de bate-papo e um sistema de mensagens instantâneas (AIM)",
+        "Apenas jogos offline, sem nenhuma interação social",
+        "Somente notícias, sem nenhum recurso de comunicação",
+        "Exclusivamente chamadas de vídeo"
+      ],
+      "resposta_correta": "Salas de bate-papo e um sistema de mensagens instantâneas (AIM)"
+    },
+    {
+      "n": 10,
+      "pergunta": "O que significa a sigla AIM, o sistema de mensagens instantâneas da AOL?",
+      "opcoes": [
+        "AOL Instant Messenger",
+        "American Internet Mail",
+        "Automatic Internet Messaging",
+        "AOL Interactive Media"
+      ],
+      "resposta_correta": "AOL Instant Messenger"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano o AIM foi lançado?",
+      "opcoes": [
+        "1997",
+        "1985",
+        "2000",
+        "1991"
+      ],
+      "resposta_correta": "1997"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que ano o AIM foi definitivamente encerrado?",
+      "opcoes": [
+        "2017",
+        "2000",
+        "2010",
+        "1998"
+      ],
+      "resposta_correta": "2017"
+    },
+    {
+      "n": 13,
+      "pergunta": "Sob qual nome a AOL começou originalmente, em 1985, antes de ser rebatizada?",
+      "opcoes": [
+        "Quantum Computer Services",
+        "Quantum Link",
+        "AOL Prime",
+        "America Digital"
+      ],
+      "resposta_correta": "Quantum Computer Services"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em qual cidade americana a Quantum Computer Services foi originalmente fundada?",
+      "opcoes": [
+        "Vienna, Virgínia",
+        "Nova York",
+        "San Francisco, Califórnia",
+        "Seattle, Washington"
+      ],
+      "resposta_correta": "Vienna, Virgínia"
+    },
+    {
+      "n": 15,
+      "pergunta": "Para quais usuários de computador a empresa era voltada inicialmente, antes de expandir para o Windows?",
+      "opcoes": [
+        "Usuários de Apple II e Macintosh",
+        "Usuários exclusivos de Linux",
+        "Usuários de computadores IBM apenas",
+        "Usuários de videogames Atari"
+      ],
+      "resposta_correta": "Usuários de Apple II e Macintosh"
+    },
+    {
+      "n": 16,
+      "pergunta": "Aproximadamente qual era a velocidade média de conexão discada da AOL, muito mais lenta que a internet de hoje?",
+      "opcoes": [
+        "Cerca de 56 kilobits por segundo",
+        "Cerca de 1 gigabit por segundo",
+        "Cerca de 500 megabits por segundo",
+        "Cerca de 10 megabits por segundo"
+      ],
+      "resposta_correta": "Cerca de 56 kilobits por segundo"
+    },
+    {
+      "n": 17,
+      "pergunta": "Quantos assinantes, aproximadamente, a AOL tinha em seu auge, no início dos anos 2000?",
+      "opcoes": [
+        "Mais de 30 milhões",
+        "Cerca de 100 mil",
+        "Cerca de 1 milhão",
+        "Cerca de 500 mil"
+      ],
+      "resposta_correta": "Mais de 30 milhões"
+    },
+    {
+      "n": 18,
+      "pergunta": "O que gradualmente reduziu a base de assinantes da AOL, ao longo do tempo?",
+      "opcoes": [
+        "A transição para internet banda larga e sem fio",
+        "Uma proibição judicial do serviço",
+        "O fim total da internet nos EUA",
+        "A falência repentina da empresa"
+      ],
+      "resposta_correta": "A transição para internet banda larga e sem fio"
+    },
+    {
+      "n": 19,
+      "pergunta": "Como as pessoas navegavam pelo conteúdo da AOL, usando um sistema simples de atalhos?",
+      "opcoes": [
+        "Através de 'Keywords' (palavras-chave)",
+        "Através de comandos de voz",
+        "Através de reconhecimento facial",
+        "Através de códigos de barra"
+      ],
+      "resposta_correta": "Através de 'Keywords' (palavras-chave)"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a AOL costumava incluir, junto com o software de instalação nos discos, para facilitar a adesão de novos usuários?",
+      "opcoes": [
+        "Horas gratuitas de acesso à internet",
+        "Um computador completo grátis",
+        "Uma linha telefônica gratuita vitalícia",
+        "Um curso presencial obrigatório de informática"
+      ],
+      "resposta_correta": "Horas gratuitas de acesso à internet"
+    }
+  ]
+}

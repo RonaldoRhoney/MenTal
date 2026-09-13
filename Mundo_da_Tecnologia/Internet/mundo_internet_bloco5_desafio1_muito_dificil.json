@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 1,
+    "tema_desafio": "Deep Web e Dark Web",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas e juridicas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - caso judicial tratado de forma factual e neutra, sem nenhum detalhe operacional sobre atividades ilegais.",
+    "status": "Fecha o Desafio 1 do Bloco 5 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: um dos detalhes mais irônicos do caso Silk Road é o local exato onde Ross Ulbricht foi finalmente capturado pelo FBI — sentado justamente na seção de ficção científica de uma biblioteca pública de San Francisco. Um cenário que, segundo relatos da época, parecia tirado de um roteiro de filme, encerrando de forma quase cinematográfica um dos casos mais complexos já ligados à dark web.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Durante o julgamento, a defesa de Ulbricht tentou atribuir a administração real do Silk Road a outra pessoa. Quem foi essa pessoa apontada, em determinado momento da defesa?",
+      "opcoes": [
+        "Mark Karpeles, fundador da corretora de Bitcoin Mt. Gox",
+        "Um agente do FBI infiltrado",
+        "Satoshi Nakamoto",
+        "Um ex-sócio nunca identificado publicamente"
+      ],
+      "resposta_correta": "Mark Karpeles, fundador da corretora de Bitcoin Mt. Gox"
+    },
+    {
+      "n": 2,
+      "pergunta": "Além das acusações principais de tráfico e lavagem de dinheiro, Ulbricht também enfrentou, em julgamento separado em Baltimore, acusações relacionadas a que tipo de crime muito mais grave?",
+      "opcoes": [
+        "Tentativa de contratar um assassinato (murder-for-hire)",
+        "Espionagem internacional",
+        "Fraude eleitoral",
+        "Sequestro"
+      ],
+      "resposta_correta": "Tentativa de contratar um assassinato (murder-for-hire)"
+    },
+    {
+      "n": 3,
+      "pergunta": "Aproximadamente quanto em bitcoins o FBI apreendeu ao fechar os servidores do Silk Road, em valor da época?",
+      "opcoes": [
+        "3,6 milhões de dólares",
+        "3,6 mil dólares",
+        "36 milhões de dólares",
+        "360 mil dólares"
+      ],
+      "resposta_correta": "3,6 milhões de dólares"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo o procurador federal de Manhattan responsável pelo caso, qual frase resumiu a mensagem da condenação sobre o suposto anonimato da dark web?",
+      "opcoes": [
+        "'O suposto anonimato da dark web não é um escudo protetor contra prisão e acusação'",
+        "'A dark web é completamente segura para qualquer atividade'",
+        "'Ninguém jamais será pego usando a dark web'",
+        "Não houve nenhuma declaração pública após o veredito"
+      ],
+      "resposta_correta": "'O suposto anonimato da dark web não é um escudo protetor contra prisão e acusação'"
+    },
+    {
+      "n": 5,
+      "pergunta": "Além da prisão perpétua, qual multa financeira específica foi imposta a Ulbricht em sua sentença de maio de 2015?",
+      "opcoes": [
+        "183.961.921 dólares",
+        "1.839 dólares",
+        "18,3 milhões de dólares",
+        "Nenhuma multa foi imposta, apenas a pena de prisão"
+      ],
+      "resposta_correta": "183.961.921 dólares"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma fonte, a sentença final combinada de Ulbricht chegou a ser descrita como equivalente a quê, incluindo a soma de diferentes penas?",
+      "opcoes": [
+        "Duas prisões perpétuas mais 40 anos adicionais",
+        "Apenas cinco anos de prisão",
+        "Liberdade condicional imediata",
+        "Uma multa sem nenhuma pena de prisão"
+      ],
+      "resposta_correta": "Duas prisões perpétuas mais 40 anos adicionais"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em quantos condados/acusações específicas (counts) o júri considerou Ulbricht culpado, ao todo?",
+      "opcoes": [
+        "Sete acusações",
+        "Uma única acusação",
+        "Vinte acusações",
+        "Três acusações"
+      ],
+      "resposta_correta": "Sete acusações"
+    },
+    {
+      "n": 8,
+      "pergunta": "Quantas horas, aproximadamente, o júri de Manhattan levou para decidir pela culpa de Ulbricht?",
+      "opcoes": [
+        "Cerca de três horas e meia",
+        "Cerca de uma semana inteira",
+        "Cerca de 30 minutos",
+        "Cerca de um mês"
+      ],
+      "resposta_correta": "Cerca de três horas e meia"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em qual seção específica de uma biblioteca de San Francisco os agentes do FBI monitoravam Ulbricht antes de prendê-lo, segundo um relato irônico?",
+      "opcoes": [
+        "A seção de ficção científica",
+        "A seção de direito penal",
+        "A seção infantil",
+        "A seção de história militar"
+      ],
+      "resposta_correta": "A seção de ficção científica"
+    },
+    {
+      "n": 10,
+      "pergunta": "Por que essa localização específica (seção de ficção científica) foi descrita como irônica, segundo o mesmo relato jornalístico?",
+      "opcoes": [
+        "Porque a história real do caso parecia tirada de um roteiro de ficção",
+        "Não havia nenhuma ironia relevante mencionada",
+        "Porque Ulbricht trabalhava como bibliotecário",
+        "Porque a seção estava fechada ao público"
+      ],
+      "resposta_correta": "Porque a história real do caso parecia tirada de um roteiro de ficção"
+    },
+    {
+      "n": 11,
+      "pergunta": "Que tipo específico de evidência digital foi encontrado no laptop de Ulbricht, além de logs de conversas privadas?",
+      "opcoes": [
+        "Um diário pessoal e registros de log detalhados",
+        "Nenhuma evidência relevante foi encontrada no dispositivo",
+        "Apenas fotos pessoais, sem relação com o caso",
+        "Somente arquivos de música e vídeo"
+      ],
+      "resposta_correta": "Um diário pessoal e registros de log detalhados"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual teria sido o risco técnico para a investigação, caso os agentes não conseguissem capturar o laptop de Ulbricht já aberto e desbloqueado?",
+      "opcoes": [
+        "O dispositivo provavelmente ficaria travado num estado criptografado, dificultando ou impedindo o acesso aos dados",
+        "Não haveria nenhum risco relevante para o caso",
+        "O laptop se autodestruiria automaticamente",
+        "Os dados seriam enviados automaticamente para um servidor externo"
+      ],
+      "resposta_correta": "O dispositivo provavelmente ficaria travado num estado criptografado, dificultando ou impedindo o acesso aos dados"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que estado americano Ross Ulbricht nasceu, segundo registros biográficos?",
+      "opcoes": [
+        "Texas",
+        "Califórnia",
+        "Nova York",
+        "Flórida"
+      ],
+      "resposta_correta": "Texas"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que instituição Ulbricht obteve seu mestrado (MS), além da graduação na Universidade do Texas em Dallas?",
+      "opcoes": [
+        "Pennsylvania State University",
+        "Harvard",
+        "MIT",
+        "Stanford"
+      ],
+      "resposta_correta": "Pennsylvania State University"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quais eram alguns dos outros nomes/codinomes usados por Ulbricht, além de 'Dread Pirate Roberts', segundo registros formais do caso?",
+      "opcoes": [
+        "'Frosty' e 'Altoid'",
+        "'Satoshi' e 'Nakamoto'",
+        "'Roger' e 'Mathewson'",
+        "'Syverson' e 'Goldschlag'"
+      ],
+      "resposta_correta": "'Frosty' e 'Altoid'"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em qual instituição penitenciária federal Ross Ulbricht cumpriu sua pena, segundo registros formais?",
+      "opcoes": [
+        "United States Penitentiary, em Tucson",
+        "Alcatraz",
+        "Uma prisão estadual da Califórnia",
+        "Nenhuma penitenciária específica é mencionada em registros"
+      ],
+      "resposta_correta": "United States Penitentiary, em Tucson"
+    },
+    {
+      "n": 17,
+      "pergunta": "Comparando a idade de Ulbricht ao lançar o Silk Road (26 anos, segundo uma fonte) com a data de sua prisão (2013), quantos anos, aproximadamente, ele operou a plataforma até ser capturado?",
+      "opcoes": [
+        "Cerca de dois anos e meio",
+        "Cerca de dez anos",
+        "Cerca de seis meses",
+        "Cerca de vinte anos"
+      ],
+      "resposta_correta": "Cerca de dois anos e meio"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma fonte, a que rotas comerciais históricas o nome 'Silk Road' (Rota da Seda) fazia referência, ao batizar a plataforma?",
+      "opcoes": [
+        "Antigas rotas de comércio conectando a Ásia à Europa",
+        "Rotas marítimas modernas do século XX",
+        "Rotas aéreas comerciais contemporâneas",
+        "Rotas ferroviárias americanas do século XIX"
+      ],
+      "resposta_correta": "Antigas rotas de comércio conectando a Ásia à Europa"
+    },
+    {
+      "n": 19,
+      "pergunta": "Considerando toda a jornada deste desafio — da pesquisa naval dos anos 1990 ao perdão presidencial décadas depois — o que essa trajetória completa melhor ilustra sobre a relação entre tecnologia, lei e sociedade?",
+      "opcoes": [
+        "Como uma mesma tecnologia pode gerar debates profundos e duradouros sobre segurança, liberdade individual e os limites da lei",
+        "Que tecnologias de privacidade sempre permanecem sem nenhuma controvérsia legal",
+        "Que casos judiciais relacionados à tecnologia nunca geram debate público relevante",
+        "Que apenas questões técnicas são relevantes nesse tipo de história, sem nenhuma dimensão social ou legal"
+      ],
+      "resposta_correta": "Como uma mesma tecnologia pode gerar debates profundos e duradouros sobre segurança, liberdade individual e os limites da lei"
+    },
+    {
+      "n": 20,
+      "pergunta": "Encerrando este primeiro desafio do Bloco 5 (Passado, Presente e Futuro), o que a combinação de tecnologia militar, ativismo legítimo e crime organizado em torno do Tor e da dark web representa para o futuro da internet?",
+      "opcoes": [
+        "Um lembrete de que ferramentas de anonimato continuarão gerando debates complexos entre privacidade individual e segurança pública",
+        "Uma questão já completamente resolvida, sem nenhuma relevância futura",
+        "Um tema exclusivamente técnico, sem nenhuma dimensão ética ou social",
+        "Uma tecnologia que deixará de existir em pouco tempo, sem nenhum impacto duradouro"
+      ],
+      "resposta_correta": "Um lembrete de que ferramentas de anonimato continuarão gerando debates complexos entre privacidade individual e segurança pública"
+    }
+  ]
+}

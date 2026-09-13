@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 4,
+    "tema_desafio": "Desafios Virais e Fenômenos de Internet",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - riscos de seguranca (quedas fatais) mencionados apenas como fato historico factual e breve, sem detalhar metodo ou incentivar replicacao.",
+    "status": "Fecha o Desafio 4 do Bloco 4 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: entre todos os desafios virais deste desafio, o Ice Bucket Challenge se destaca por unir diversão e causa social de forma genuína — enquanto o Harlem Shake e o planking nasceram de brincadeiras despretensiosas, e o In My Feelings Challenge acabou gerando alertas de segurança, o desafio do balde de gelo conseguiu transformar um gesto simples em mais de 100 milhões de dólares para pesquisa sobre uma doença até então pouco conhecida do público.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em qual cidade inglesa específica os criadores do 'Lying Down Game' começaram a brincadeira?",
+      "opcoes": [
+        "Taunton, Somerset",
+        "Londres",
+        "Manchester",
+        "Liverpool"
+      ],
+      "resposta_correta": "Taunton, Somerset"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo um relato, onde exatamente Clarkson e Langdon começaram a praticar a pose, antes de espalhar a brincadeira para amigos?",
+      "opcoes": [
+        "Em bares e clubes, tentando confundir as pessoas ao redor",
+        "Exclusivamente em suas próprias casas",
+        "Apenas em ambiente escolar formal",
+        "Em estádios de futebol durante jogos"
+      ],
+      "resposta_correta": "Em bares e clubes, tentando confundir as pessoas ao redor"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quando a mídia britânica noticiou o 'Lying Down Game' em julho de 2009, de quanto para quanto pulou o número de membros do grupo no Facebook, segundo registros?",
+      "opcoes": [
+        "De 8 mil para 35 mil",
+        "De 8 para 35",
+        "De 800 mil para 3,5 milhões",
+        "De 80 para 350"
+      ],
+      "resposta_correta": "De 8 mil para 35 mil"
+    },
+    {
+      "n": 4,
+      "pergunta": "Além do Reino Unido e Coreia do Sul, em qual site de arte francês, de 2004, uma prática parecida de poses bizarras (deitado de bruços) também surgiu de forma independente?",
+      "opcoes": [
+        "'A plat ventre'",
+        "'Le Monde Étrange'",
+        "'Pose Française'",
+        "'Art Bizarre'"
+      ],
+      "resposta_correta": "'A plat ventre'"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo um fórum de discussão da época, quais eram dois 'sucessores' bem-humorados do planking, com nomes derivados de personagens ou profissões?",
+      "opcoes": [
+        "'Batmanning' e 'Plumbking'",
+        "'Supermaning' e 'Doctoring'",
+        "'Spidermaning' e 'Teachering'",
+        "'Hulking' e 'Nursing'"
+      ],
+      "resposta_correta": "'Batmanning' e 'Plumbking'"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo esse mesmo fórum, qual foi um relato preocupante sobre planking em locais extremamente arriscados, como varandas de andares altos?",
+      "opcoes": [
+        "Casos de pessoas caindo e morrendo ao tentar poses perigosas",
+        "Nenhum caso preocupante foi relatado",
+        "Apenas ferimentos leves, sem gravidade",
+        "Casos isolados sem nenhuma repercussão pública"
+      ],
+      "resposta_correta": "Casos de pessoas caindo e morrendo ao tentar poses perigosas"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual jogador de rúgbi profissional é creditado por ter ajudado a popularizar o planking na Austrália, em março de 2011?",
+      "opcoes": [
+        "David 'Wolfman' Williams",
+        "Sam Weckert",
+        "Paul Carran",
+        "Chris Kennedy"
+      ],
+      "resposta_correta": "David 'Wolfman' Williams"
+    },
+    {
+      "n": 8,
+      "pergunta": "Independentemente da versão britânica, quem é creditado por ter começado uma prática parecida na Austrália, por volta de 2008-2009, em pistas de dança e sobre objetos baixos?",
+      "opcoes": [
+        "Sam Weckert e amigos",
+        "David Williams",
+        "Gary Clarkson",
+        "Daniel Hoppin"
+      ],
+      "resposta_correta": "Sam Weckert e amigos"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo o título do vídeo publicado por Tom Green em 2011, como ele batizou seu próprio segmento de 1994, alegando ser uma versão pioneira do planking?",
+      "opcoes": [
+        "'Dead Guy'",
+        "'Lying Down Man'",
+        "'Frozen Body'",
+        "'Still Life'"
+      ],
+      "resposta_correta": "'Dead Guy'"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em qual emissora/formato de TV canadense esse segmento original de Tom Green teria sido exibido?",
+      "opcoes": [
+        "Um programa de TV local (acesso comunitário) no Canadá",
+        "Uma rede de televisão nacional americana",
+        "Um late night show britânico",
+        "Um canal a cabo exclusivo de comédia"
+      ],
+      "resposta_correta": "Um programa de TV local (acesso comunitário) no Canadá"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo um relato, Tom Green precisou contatar qual empresa de TV a cabo canadense para conseguir recuperar e comprovar esse vídeo antigo?",
+      "opcoes": [
+        "Rogers Cable",
+        "Bell Canada",
+        "CBC",
+        "CTV"
+      ],
+      "resposta_correta": "Rogers Cable"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quais locais específicos são citados como os mais comuns 'palcos' do planking, além de varandas, segundo uma fonte detalhada?",
+      "opcoes": [
+        "Bancos de parque, carros de polícia, carrinhos de compras e caixas de correio",
+        "Exclusivamente dentro de museus",
+        "Apenas em piscinas públicas",
+        "Somente em salas de aula"
+      ],
+      "resposta_correta": "Bancos de parque, carros de polícia, carrinhos de compras e caixas de correio"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo essa mesma fonte, quais eram as regras específicas de postura exigidas para um planking 'correto'?",
+      "opcoes": [
+        "Corpo reto e rígido, braços colados ao corpo, dedos esticados e pés apontados para o chão",
+        "Corpo curvado, braços abertos e pernas cruzadas",
+        "Postura livre, sem nenhuma regra específica",
+        "Corpo de lado, com um braço levantado"
+      ],
+      "resposta_correta": "Corpo reto e rígido, braços colados ao corpo, dedos esticados e pés apontados para o chão"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma fonte, quantos anos, aproximadamente, separaram a criação original do 'Lying Down Game' (por volta de 2000) e o pico do planking como fenômeno global (2011)?",
+      "opcoes": [
+        "Cerca de 11 anos",
+        "Cerca de 1 ano",
+        "Cerca de 30 anos",
+        "Cerca de 5 anos"
+      ],
+      "resposta_correta": "Cerca de 11 anos"
+    },
+    {
+      "n": 15,
+      "pergunta": "Comparando a origem do Harlem Shake (sample de uma briga real de 2001) com a origem do planking ('coisa aleatória e boba' de adolescentes), o que ambas as histórias sugerem sobre memes virais?",
+      "opcoes": [
+        "Que memes virais frequentemente nascem de eventos pequenos e despretensiosos, sem intenção de viralizar",
+        "Que todo meme viral é resultado de planejamento estratégico cuidadoso",
+        "Que apenas eventos dramáticos podem gerar memes de sucesso",
+        "Que memes virais nunca têm relação com eventos reais da vida cotidiana"
+      ],
+      "resposta_correta": "Que memes virais frequentemente nascem de eventos pequenos e despretensiosos, sem intenção de viralizar"
+    },
+    {
+      "n": 16,
+      "pergunta": "No 'In My Feelings Challenge', qual gesto específico Shiggy fazia com os braços na parte da música que menciona o nome 'Kiki'?",
+      "opcoes": [
+        "Formava um coração com os braços",
+        "Fazia sinal de positivo",
+        "Cruzava os braços no peito",
+        "Levantava os dois braços para cima"
+      ],
+      "resposta_correta": "Formava um coração com os braços"
+    },
+    {
+      "n": 17,
+      "pergunta": "Diferente da maioria dos participantes posteriores, como Shiggy originalmente dançava em seu vídeo, sem o elemento de risco que tornaria o desafio perigoso depois?",
+      "opcoes": [
+        "Ele dançava simplesmente na rua, sem pular de um carro em movimento",
+        "Ele já pulava de um carro, exatamente como os imitadores depois",
+        "Ele dançava dentro de casa, sem nenhum carro envolvido",
+        "Ele dançava em cima do próprio carro parado"
+      ],
+      "resposta_correta": "Ele dançava simplesmente na rua, sem pular de um carro em movimento"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual celebridade específica, citada como exemplo de participante famoso do desafio, publicou um vídeo do 'In My Feelings Challenge' descrito como 'arriscado'?",
+      "opcoes": [
+        "Will Smith",
+        "Drake",
+        "Mark Zuckerberg",
+        "Bill Gates"
+      ],
+      "resposta_correta": "Will Smith"
+    },
+    {
+      "n": 19,
+      "pergunta": "Considerando todos os desafios virais discutidos neste desafio — Ice Bucket, Harlem Shake, Planking, In My Feelings — qual deles teve o propósito mais claramente ligado a uma causa social/beneficente, diferente dos demais, focados em entretenimento?",
+      "opcoes": [
+        "Ice Bucket Challenge",
+        "Harlem Shake",
+        "Planking",
+        "In My Feelings Challenge"
+      ],
+      "resposta_correta": "Ice Bucket Challenge"
+    },
+    {
+      "n": 20,
+      "pergunta": "Encerrando este desafio sobre fenômenos virais, o que a diversidade de propósitos (arrecadação de fundos, dança bem-humorada, poses absurdas, desafios arriscados) melhor demonstra sobre a cultura de internet como um todo?",
+      "opcoes": [
+        "Que os desafios virais podem servir a objetivos muito diferentes, do beneficente ao puramente lúdico, às vezes com riscos reais envolvidos",
+        "Que todo desafio viral tem exatamente o mesmo propósito e nível de risco",
+        "Que apenas desafios beneficentes conseguem viralizar de verdade",
+        "Que desafios virais são sempre completamente seguros e sem nenhuma consequência"
+      ],
+      "resposta_correta": "Que os desafios virais podem servir a objetivos muito diferentes, do beneficente ao puramente lúdico, às vezes com riscos reais envolvidos"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 1,
+    "tema_desafio": "Google, Larry Page e Sergey Brin",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo corporativo tratado de forma factual e neutra."
+  },
+  "saiba_mais": "Curiosidade: a sede do Google, apelidada de 'Googleplex', não foi construída do zero pela empresa — o complexo em Mountain View pertencia originalmente à Silicon Graphics, outra gigante da computação da época, antes de ser arrendado e se tornar o símbolo visual mais conhecido do Google no mundo todo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano o Google abriu seu capital na bolsa (IPO), tornando-se uma empresa de capital aberto?",
+      "opcoes": [
+        "2004",
+        "1998",
+        "2010",
+        "2015"
+      ],
+      "resposta_correta": "2004"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual foi o lema informal adotado pelo Google, resumindo seu código de conduta corporativo por muitos anos?",
+      "opcoes": [
+        "'Don't be evil' ('Não seja mau')",
+        "'Think Different'",
+        "'Just Do It'",
+        "'Move Fast and Break Things'"
+      ],
+      "resposta_correta": "'Don't be evil' ('Não seja mau')"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano o Google adquiriu o YouTube?",
+      "opcoes": [
+        "2006",
+        "1998",
+        "2010",
+        "2015"
+      ],
+      "resposta_correta": "2006"
+    },
+    {
+      "n": 4,
+      "pergunta": "Aproximadamente por qual valor o Google comprou o YouTube, segundo registros?",
+      "opcoes": [
+        "Mais de 1,6 bilhão de dólares",
+        "50 milhões de dólares",
+        "12,5 bilhões de dólares",
+        "100 mil dólares"
+      ],
+      "resposta_correta": "Mais de 1,6 bilhão de dólares"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual foi, segundo registros, a aquisição mais cara já feita pelo Google, em 2011?",
+      "opcoes": [
+        "Motorola, por 12,5 bilhões de dólares",
+        "YouTube, por 1,6 bilhão de dólares",
+        "Android Inc., por 50 milhões de dólares",
+        "Doubleclick, por 3 bilhões de dólares"
+      ],
+      "resposta_correta": "Motorola, por 12,5 bilhões de dólares"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano o Google se reorganizou numa holding chamada Alphabet Inc.?",
+      "opcoes": [
+        "2015",
+        "2004",
+        "1998",
+        "2019"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quem foi promovido a CEO do Google como parte dessa reestruturação de 2015?",
+      "opcoes": [
+        "Sundar Pichai",
+        "Larry Page",
+        "Sergey Brin",
+        "Eric Schmidt"
+      ],
+      "resposta_correta": "Sundar Pichai"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano Sundar Pichai ingressou originalmente no Google, antes de se tornar CEO?",
+      "opcoes": [
+        "2004",
+        "1998",
+        "2015",
+        "2011"
+      ],
+      "resposta_correta": "2004"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual navegador Sundar Pichai ajudou a liderar o desenvolvimento, que se tornou o mais usado do mundo?",
+      "opcoes": [
+        "Google Chrome",
+        "Internet Explorer",
+        "Safari",
+        "Firefox"
+      ],
+      "resposta_correta": "Google Chrome"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano Sundar Pichai também se tornou CEO da própria Alphabet (holding), além do Google?",
+      "opcoes": [
+        "2019",
+        "2015",
+        "2004",
+        "2011"
+      ],
+      "resposta_correta": "2019"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em qual endereço específico fica a sede do Google, em Mountain View, Califórnia, conhecida informalmente como 'Googleplex'?",
+      "opcoes": [
+        "1600 Amphitheatre Parkway",
+        "1 Infinite Loop",
+        "One Microsoft Way",
+        "410 Terry Avenue"
+      ],
+      "resposta_correta": "1600 Amphitheatre Parkway"
+    },
+    {
+      "n": 12,
+      "pergunta": "O complexo que hoje é a sede do Google pertencia originalmente a qual outra empresa de tecnologia?",
+      "opcoes": [
+        "Silicon Graphics",
+        "Sun Microsystems",
+        "Netscape",
+        "IBM"
+      ],
+      "resposta_correta": "Silicon Graphics"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo relatos, quem cunhou internamente a frase 'Don't be evil', por volta de 2001?",
+      "opcoes": [
+        "O engenheiro Paul Buchheit",
+        "Larry Page",
+        "Sergey Brin",
+        "Eric Schmidt"
+      ],
+      "resposta_correta": "O engenheiro Paul Buchheit"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que documento oficial de 2004 os fundadores explicaram publicamente o significado da frase 'Don't be evil'?",
+      "opcoes": [
+        "No arquivo S-1 de abertura de capital (IPO)",
+        "Num comunicado de imprensa isolado",
+        "Em uma entrevista de televisão",
+        "No próprio contrato de fundação da empresa, em 1998"
+      ],
+      "resposta_correta": "No arquivo S-1 de abertura de capital (IPO)"
+    },
+    {
+      "n": 15,
+      "pergunta": "Após a reestruturação para Alphabet em 2015, para qual frase o antigo lema foi essencialmente atualizado?",
+      "opcoes": [
+        "'Do the right thing' ('Faça a coisa certa')",
+        "'Move fast, think slow'",
+        "'Innovate without limits'",
+        "'Search everything'"
+      ],
+      "resposta_correta": "'Do the right thing' ('Faça a coisa certa')"
+    },
+    {
+      "n": 16,
+      "pergunta": "Que outra empresa de inteligência artificial o Google adquiriu, tornando-se um nome de peso nessa área?",
+      "opcoes": [
+        "DeepMind",
+        "OpenAI",
+        "IBM Watson",
+        "Palantir"
+      ],
+      "resposta_correta": "DeepMind"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual ferramenta publicitária o Google adquiriu, essencial para seu ecossistema de anúncios online?",
+      "opcoes": [
+        "DoubleClick",
+        "AdBlock",
+        "MediaMath",
+        "Criteo"
+      ],
+      "resposta_correta": "DoubleClick"
+    },
+    {
+      "n": 18,
+      "pergunta": "Quantos produtos o Sundar Pichai passou a liderar em 2014, um ano antes de se tornar CEO, segundo registros?",
+      "opcoes": [
+        "Todos os produtos e engenharia do Google (Search, Maps, Android, Chrome, Gmail, entre outros)",
+        "Apenas o Gmail",
+        "Somente o YouTube",
+        "Exclusivamente o Google Maps"
+      ],
+      "resposta_correta": "Todos os produtos e engenharia do Google (Search, Maps, Android, Chrome, Gmail, entre outros)"
+    },
+    {
+      "n": 19,
+      "pergunta": "O que motivou críticas de veículos como o New York Times, ao longo dos anos, em relação ao lema original do Google?",
+      "opcoes": [
+        "A sugestão de que a empresa teria perdido sua filosofia anticorporativa original",
+        "A alegação de que o lema nunca existiu de fato",
+        "Uma disputa judicial sobre os direitos da frase",
+        "Uma crítica exclusivamente sobre a tipografia usada no lema"
+      ],
+      "resposta_correta": "A sugestão de que a empresa teria perdido sua filosofia anticorporativa original"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo Sundar Pichai, no aniversário de 25 anos do Google, qual tecnologia ele acredita que trará uma revolução ainda maior do que a própria chegada da internet?",
+      "opcoes": [
+        "Inteligência artificial",
+        "Realidade virtual",
+        "Computação quântica",
+        "Blockchain"
+      ],
+      "resposta_correta": "Inteligência artificial"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 1,
+    "tema_desafio": "Deep Web e Dark Web",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas e juridicas (Wikipedia, PBS, The Hacker News). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - caso judicial tratado de forma estritamente factual e neutra, sem nenhum detalhe operacional sobre como acessar ou usar mercados ilegais; perdao presidencial mencionado como fato historico recente, sem juizo de valor politico."
+  },
+  "saiba_mais": "Curiosidade: o momento da prisão de Ross Ulbricht foi cuidadosamente planejado pelo FBI — os agentes precisavam capturá-lo com o laptop aberto e desbloqueado, já que, uma vez fechado, o computador ficaria criptografado e praticamente impossível de acessar. A operação, realizada numa biblioteca pública de San Francisco, foi decisiva para reunir as provas que levaram à condenação do criador do Silk Road.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Como se chamava o mercado ilegal mais conhecido já operado na dark web, considerado o primeiro grande mercado desse tipo?",
+      "opcoes": [
+        "Silk Road",
+        "Dark Market",
+        "Shadow Trade",
+        "Onion Exchange"
+      ],
+      "resposta_correta": "Silk Road"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Silk Road foi lançado?",
+      "opcoes": [
+        "2011",
+        "2002",
+        "2004",
+        "2013"
+      ],
+      "resposta_correta": "2011"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem criou o Silk Road?",
+      "opcoes": [
+        "Ross Ulbricht",
+        "Satoshi Nakamoto",
+        "Mark Karpeles",
+        "Um grupo anônimo nunca identificado"
+      ],
+      "resposta_correta": "Ross Ulbricht"
+    },
+    {
+      "n": 4,
+      "pergunta": "Sob qual pseudônimo Ross Ulbricht administrava o Silk Road?",
+      "opcoes": [
+        "Dread Pirate Roberts",
+        "Satoshi Nakamoto",
+        "The Onion King",
+        "Shadow Admin"
+      ],
+      "resposta_correta": "Dread Pirate Roberts"
+    },
+    {
+      "n": 5,
+      "pergunta": "De qual filme veio a inspiração para esse pseudônimo?",
+      "opcoes": [
+        "'A Princesa Prometida' ('The Princess Bride')",
+        "'Piratas do Caribe'",
+        "'Matrix'",
+        "'O Poderoso Chefão'"
+      ],
+      "resposta_correta": "'A Princesa Prometida' ('The Princess Bride')"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual moeda digital era usada nas transações do Silk Road, para dificultar rastreamento?",
+      "opcoes": [
+        "Bitcoin",
+        "Dogecoin",
+        "Dinheiro em espécie enviado pelo correio",
+        "Cartão de crédito comum"
+      ],
+      "resposta_correta": "Bitcoin"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que mês e ano o FBI encerrou as operações do Silk Road e prendeu Ross Ulbricht?",
+      "opcoes": [
+        "Outubro de 2013",
+        "Fevereiro de 2011",
+        "Fevereiro de 2015",
+        "Janeiro de 2025"
+      ],
+      "resposta_correta": "Outubro de 2013"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que local específico Ross Ulbricht foi preso pelo FBI?",
+      "opcoes": [
+        "Uma biblioteca pública em San Francisco",
+        "Sua própria residência",
+        "Um aeroporto internacional",
+        "Um escritório corporativo"
+      ],
+      "resposta_correta": "Uma biblioteca pública em San Francisco"
+    },
+    {
+      "n": 9,
+      "pergunta": "Por que o momento exato da prisão foi tecnicamente crucial para o caso, segundo relatos?",
+      "opcoes": [
+        "Os agentes precisavam capturar o laptop de Ulbricht aberto e desbloqueado, antes que ele o fechasse",
+        "A prisão precisava ocorrer exatamente ao meio-dia por exigência legal",
+        "Ulbricht estava prestes a viajar para outro país",
+        "Não havia nenhuma urgência especial no momento da prisão"
+      ],
+      "resposta_correta": "Os agentes precisavam capturar o laptop de Ulbricht aberto e desbloqueado, antes que ele o fechasse"
+    },
+    {
+      "n": 10,
+      "pergunta": "Aproximadamente quantas contas de compradores o Silk Road havia acumulado até seu fechamento, segundo registros?",
+      "opcoes": [
+        "Mais de 100 mil",
+        "Cerca de 100",
+        "Cerca de 1.000",
+        "Mais de 10 milhões"
+      ],
+      "resposta_correta": "Mais de 100 mil"
+    },
+    {
+      "n": 11,
+      "pergunta": "Aproximadamente quanto em vendas totais o Silk Road já havia gerado até seu fechamento, segundo estimativas?",
+      "opcoes": [
+        "Cerca de 214 milhões de dólares",
+        "Cerca de 214 mil dólares",
+        "Cerca de 2,14 bilhões de dólares",
+        "Cerca de 21,4 milhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 214 milhões de dólares"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que ano Ross Ulbricht foi condenado formalmente pelo júri?",
+      "opcoes": [
+        "2015",
+        "2011",
+        "2013",
+        "2025"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual foi a pena original imposta a Ulbricht, em sua sentença de 2015?",
+      "opcoes": [
+        "Prisão perpétua, sem possibilidade de liberdade condicional",
+        "Cinco anos de prisão",
+        "Apenas multa financeira, sem prisão",
+        "Liberdade condicional imediata"
+      ],
+      "resposta_correta": "Prisão perpétua, sem possibilidade de liberdade condicional"
+    },
+    {
+      "n": 14,
+      "pergunta": "Quais foram algumas das acusações formais contra Ulbricht, segundo registros do processo?",
+      "opcoes": [
+        "Lavagem de dinheiro, tráfico de drogas e invasão de sistemas de computador",
+        "Apenas evasão fiscal simples",
+        "Exclusivamente violação de direitos autorais",
+        "Somente fraude de cartão de crédito"
+      ],
+      "resposta_correta": "Lavagem de dinheiro, tráfico de drogas e invasão de sistemas de computador"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual desdobramento posterior e recente é registrado sobre a pena de Ulbricht, décadas após sua condenação original?",
+      "opcoes": [
+        "Recebeu um perdão presidencial dos Estados Unidos",
+        "A pena foi mantida integralmente sem nenhuma alteração",
+        "Ele faleceu na prisão antes de qualquer recurso",
+        "Sua condenação foi anulada por vício processual"
+      ],
+      "resposta_correta": "Recebeu um perdão presidencial dos Estados Unidos"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo declarações associadas ao caso, qual foi a justificativa citada para esse perdão presidencial?",
+      "opcoes": [
+        "A alegação de que a sentença original era desproporcional ao crime cometido",
+        "A comprovação de inocência total do acusado",
+        "Um erro processual reconhecido pelos tribunais",
+        "Motivos exclusivamente de saúde do condenado"
+      ],
+      "resposta_correta": "A alegação de que a sentença original era desproporcional ao crime cometido"
+    },
+    {
+      "n": 17,
+      "pergunta": "O Silk Road 2.0, sucessor criado após o fechamento do original, foi encerrado em que ano?",
+      "opcoes": [
+        "2014",
+        "2011",
+        "2013",
+        "2025"
+      ],
+      "resposta_correta": "2014"
+    },
+    {
+      "n": 18,
+      "pergunta": "Quais duas agências trabalharam juntas no fechamento do Silk Road 2.0?",
+      "opcoes": [
+        "FBI e Europol",
+        "CIA e MI6",
+        "Interpol e ONU",
+        "NSA e KGB"
+      ],
+      "resposta_correta": "FBI e Europol"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em qual universidade Ross Ulbricht obteve seu diploma de graduação (bacharelado)?",
+      "opcoes": [
+        "Universidade do Texas em Dallas",
+        "Universidade de Stanford",
+        "Harvard",
+        "MIT"
+      ],
+      "resposta_correta": "Universidade do Texas em Dallas"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo os próprios escritos de Ulbricht sobre o projeto, qual filosofia ele afirmava seguir ao criar o Silk Road?",
+      "opcoes": [
+        "Uma visão libertária de mercado livre e privacidade econômica",
+        "Uma ideologia exclusivamente socialista de Estado",
+        "Nenhuma filosofia declarada, apenas objetivo financeiro",
+        "Uma missão religiosa específica"
+      ],
+      "resposta_correta": "Uma visão libertária de mercado livre e privacidade econômica"
+    }
+  ]
+}

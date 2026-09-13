@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 5,
+    "tema_desafio": "Outros Gigantes: Twitter/X, Wikipedia e TikTok",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: durante os primeiros testes do Twitter, a própria equipe de desenvolvedores acumulava contas telefônicas salgadas — cada mensagem de teste enviada e recebida gerava cobranças reais de SMS em seus celulares pessoais, já que o sistema original funcionava justamente simulando o envio de texto por celular, antes de a plataforma ganhar vida própria na internet.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que data exata de 2006 o primeiro tweet foi publicado?",
+      "opcoes": [
+        "21 de março de 2006",
+        "1º de julho de 2006",
+        "25 de dezembro de 2006",
+        "15 de agosto de 2006"
+      ],
+      "resposta_correta": "21 de março de 2006"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual era o objetivo original de Jack Dorsey ao imaginar o Twitter, baseado em qual outra tecnologia de comunicação?",
+      "opcoes": [
+        "SMS (mensagens de texto por celular)",
+        "E-mail corporativo",
+        "Chamadas de vídeo",
+        "Rádio amador"
+      ],
+      "resposta_correta": "SMS (mensagens de texto por celular)"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual era o número curto para o qual as pessoas enviariam mensagens de texto no conceito original do Twitter?",
+      "opcoes": [
+        "40404",
+        "12345",
+        "99999",
+        "00000"
+      ],
+      "resposta_correta": "40404"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem apresentou a ideia original do Twitter ao restante da equipe da Odeo, em fevereiro de 2006, além de Dorsey?",
+      "opcoes": [
+        "Noah Glass e Florian Weber",
+        "Evan Williams e Biz Stone",
+        "Larry Page e Sergey Brin",
+        "Reed Hastings e Marc Randolph"
+      ],
+      "resposta_correta": "Noah Glass e Florian Weber"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem é creditado por ter inventado o nome 'Twttr'?",
+      "opcoes": [
+        "Noah Glass",
+        "Jack Dorsey",
+        "Evan Williams",
+        "Biz Stone"
+      ],
+      "resposta_correta": "Noah Glass"
+    },
+    {
+      "n": 6,
+      "pergunta": "Durante o desenvolvimento inicial, a equipe do Twitter acumulava despesas em suas contas telefônicas pessoais por causa de quê?",
+      "opcoes": [
+        "Cobranças por envio de SMS",
+        "Compra de equipamentos de servidor",
+        "Ligações internacionais para investidores",
+        "Assinaturas de aplicativos concorrentes"
+      ],
+      "resposta_correta": "Cobranças por envio de SMS"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que evento de 2007, em Austin, no Texas, o Twitter ganhou grande visibilidade pública?",
+      "opcoes": [
+        "South by Southwest (SXSW)",
+        "Comic-Con",
+        "CES",
+        "TED Talks"
+      ],
+      "resposta_correta": "South by Southwest (SXSW)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano o Twitter abriu seu capital na bolsa (IPO)?",
+      "opcoes": [
+        "2013",
+        "2006",
+        "2007",
+        "2022"
+      ],
+      "resposta_correta": "2013"
+    },
+    {
+      "n": 9,
+      "pergunta": "Com qual avaliação de mercado o Twitter estreou na bolsa, segundo uma fonte?",
+      "opcoes": [
+        "31 bilhões de dólares",
+        "20 milhões de dólares",
+        "1 bilhão de dólares",
+        "44 bilhões de dólares"
+      ],
+      "resposta_correta": "31 bilhões de dólares"
+    },
+    {
+      "n": 10,
+      "pergunta": "Por aproximadamente quanto Elon Musk comprou o Twitter em 2022?",
+      "opcoes": [
+        "44 bilhões de dólares",
+        "31 bilhões de dólares",
+        "20 milhões de dólares",
+        "1 bilhão de dólares"
+      ],
+      "resposta_correta": "44 bilhões de dólares"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo uma fonte, quem foi encarregado de liderar o projeto do Twitter dentro da Odeo, logo após a apresentação inicial da ideia?",
+      "opcoes": [
+        "Noah Glass",
+        "Evan Williams",
+        "Jack Dorsey",
+        "Biz Stone"
+      ],
+      "resposta_correta": "Noah Glass"
+    },
+    {
+      "n": 12,
+      "pergunta": "Antes de o Twitter ser lançado, Evan Williams inicialmente teve qual reação à ideia, segundo um relato?",
+      "opcoes": [
+        "Ceticismo em relação ao potencial do projeto",
+        "Entusiasmo imediato e investimento pessoal alto",
+        "Recusa total em permitir o desenvolvimento",
+        "Indiferença completa, sem opinião formada"
+      ],
+      "resposta_correta": "Ceticismo em relação ao potencial do projeto"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quem foram os dois fundadores da Wikipedia, criada em 2001?",
+      "opcoes": [
+        "Jimmy Wales e Larry Sanger",
+        "Jack Dorsey e Evan Williams",
+        "Reed Hastings e Marc Randolph",
+        "Mark Zuckerberg e Eduardo Saverin"
+      ],
+      "resposta_correta": "Jimmy Wales e Larry Sanger"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual projeto de enciclopédia online, com revisão mais tradicional por especialistas, precedeu a criação da Wikipedia?",
+      "opcoes": [
+        "Nupedia",
+        "Encarta",
+        "Britannica Online",
+        "Encyclopedia.com"
+      ],
+      "resposta_correta": "Nupedia"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual tipo de tecnologia colaborativa a Wikipedia usa como base técnica, permitindo edição coletiva?",
+      "opcoes": [
+        "Wiki (software de edição colaborativa)",
+        "Blockchain",
+        "Rede social tradicional",
+        "Fórum de mensagens simples"
+      ],
+      "resposta_correta": "Wiki (software de edição colaborativa)"
+    },
+    {
+      "n": 16,
+      "pergunta": "Sob qual tipo de organização (sem fins lucrativos) a Wikipedia opera atualmente?",
+      "opcoes": [
+        "Wikimedia Foundation",
+        "OpenAI Foundation",
+        "Creative Commons Inc.",
+        "Mozilla Corporation"
+      ],
+      "resposta_correta": "Wikimedia Foundation"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que ano a ByteDance foi fundada, empresa-mãe do TikTok?",
+      "opcoes": [
+        "2012",
+        "2001",
+        "2006",
+        "2017"
+      ],
+      "resposta_correta": "2012"
+    },
+    {
+      "n": 18,
+      "pergunta": "Quem fundou a ByteDance?",
+      "opcoes": [
+        "Zhang Yiming",
+        "Jack Ma",
+        "Pony Ma",
+        "Robin Li"
+      ],
+      "resposta_correta": "Zhang Yiming"
+    },
+    {
+      "n": 19,
+      "pergunta": "Por aproximadamente quanto a ByteDance adquiriu o Musical.ly, em 2017, antes de fundi-lo ao TikTok?",
+      "opcoes": [
+        "Cerca de 1 bilhão de dólares",
+        "Cerca de 100 mil dólares",
+        "Cerca de 10 milhões de dólares",
+        "Cerca de 10 bilhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 1 bilhão de dólares"
+    },
+    {
+      "n": 20,
+      "pergunta": "O TikTok se tornou especialmente popular por conta de qual tipo de algoritmo, personalizando a página inicial ('Para Você') de cada usuário?",
+      "opcoes": [
+        "Um algoritmo de recomendação altamente personalizado",
+        "Um sistema de busca por palavra-chave tradicional",
+        "Uma lista cronológica simples de vídeos",
+        "Um sistema baseado exclusivamente em quem o usuário segue"
+      ],
+      "resposta_correta": "Um algoritmo de recomendação altamente personalizado"
+    }
+  ]
+}

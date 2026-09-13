@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 1,
+    "tema_desafio": "ARPANET e o nascimento da World Wide Web",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Todo o texto foi escrito originalmente - nenhuma reproducao literal de nenhuma fonte consultada.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro."
+  },
+  "saiba_mais": "Curiosidade: a primeira mensagem da história da internet foi, na prática, um acidente de trajeto! A equipe pretendia digitar 'LOGIN', mas o computador travou logo depois do 'L' e do 'O' — fazendo da falha, e não do sucesso, o primeiro registro histórico da comunicação em rede que décadas depois se tornaria a internet como conhecemos.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual foi a primeira mensagem efetivamente transmitida entre computadores pela ARPANET, em 1969?",
+      "opcoes": [
+        "'LO' (a palavra 'LOGIN' foi truncada por uma pane)",
+        "'Hello World'",
+        "'Merry Christmas'",
+        "A palavra completa 'LOGIN', sem falhas"
+      ],
+      "resposta_correta": "'LO' (a palavra 'LOGIN' foi truncada por uma pane)"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que data exata aconteceu essa primeira transmissão da ARPANET?",
+      "opcoes": [
+        "29 de outubro de 1969",
+        "3 de julho de 1969",
+        "5 de dezembro de 1969",
+        "1º de janeiro de 1970"
+      ],
+      "resposta_correta": "29 de outubro de 1969"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual estudante da UCLA foi responsável por digitar a primeira mensagem da ARPANET?",
+      "opcoes": [
+        "Charley Kline",
+        "Leonard Kleinrock",
+        "Vint Cerf",
+        "Bill Duval"
+      ],
+      "resposta_correta": "Charley Kline"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem era o pesquisador de Stanford que recebeu a primeira mensagem da ARPANET?",
+      "opcoes": [
+        "Bill Duval",
+        "Robert Kahn",
+        "Stephen Crocker",
+        "Paul Baran"
+      ],
+      "resposta_correta": "Bill Duval"
+    },
+    {
+      "n": 5,
+      "pergunta": "Sob supervisão de qual professor Charley Kline realizou o teste histórico?",
+      "opcoes": [
+        "Leonard Kleinrock",
+        "Tim Berners-Lee",
+        "Vint Cerf",
+        "Robert Cailliau"
+      ],
+      "resposta_correta": "Leonard Kleinrock"
+    },
+    {
+      "n": 6,
+      "pergunta": "Quais duas universidades foram conectadas na primeira transmissão da ARPANET?",
+      "opcoes": [
+        "UCLA e Stanford Research Institute (SRI)",
+        "MIT e Harvard",
+        "Berkeley e Caltech",
+        "Yale e Princeton"
+      ],
+      "resposta_correta": "UCLA e Stanford Research Institute (SRI)"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quantas letras a equipe conseguiu digitar antes do sistema travar, ao tentar enviar 'LOGIN'?",
+      "opcoes": [
+        "Duas letras (L e O)",
+        "Uma letra (L)",
+        "Três letras (L, O e G)",
+        "Quatro letras (L, O, G e I)"
+      ],
+      "resposta_correta": "Duas letras (L e O)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Aproximadamente quanto tempo depois da falha a palavra completa 'login' foi enviada com sucesso?",
+      "opcoes": [
+        "Cerca de uma hora depois",
+        "Alguns segundos depois",
+        "No dia seguinte",
+        "Uma semana depois"
+      ],
+      "resposta_correta": "Cerca de uma hora depois"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual equipamento foi criado especificamente para encaminhar dados entre os nós da ARPANET, funcionando como precursor dos roteadores atuais?",
+      "opcoes": [
+        "Interface Message Processor (IMP)",
+        "Modem telefônico",
+        "Servidor NeXT",
+        "Protocolo TCP/IP"
+      ],
+      "resposta_correta": "Interface Message Processor (IMP)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Quais dois pesquisadores desenvolveram, de forma independente, o conceito de comutação de pacotes usado pela ARPANET?",
+      "opcoes": [
+        "Paul Baran e Donald Davies",
+        "Tim Berners-Lee e Robert Cailliau",
+        "Vint Cerf e Bob Kahn",
+        "Charley Kline e Bill Duval"
+      ],
+      "resposta_correta": "Paul Baran e Donald Davies"
+    },
+    {
+      "n": 11,
+      "pergunta": "O que é 'comutação de pacotes', tecnologia introduzida pela ARPANET?",
+      "opcoes": [
+        "Dividir dados em pequenos pedaços, enviá-los por rotas diferentes e remontá-los no destino",
+        "Enviar todos os dados de uma só vez por um único cabo",
+        "Um sistema de criptografia de mensagens",
+        "Um tipo de tela usada nos primeiros computadores"
+      ],
+      "resposta_correta": "Dividir dados em pequenos pedaços, enviá-los por rotas diferentes e remontá-los no destino"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual evento histórico/geopolítico é frequentemente citado como motivação estratégica por trás da criação da ARPANET?",
+      "opcoes": [
+        "O lançamento do satélite soviético Sputnik",
+        "O fim da Segunda Guerra Mundial",
+        "A crise do petróleo de 1973",
+        "A queda do Muro de Berlim"
+      ],
+      "resposta_correta": "O lançamento do satélite soviético Sputnik"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual era a agência responsável pela criação da ARPANET, hoje conhecida por outra sigla?",
+      "opcoes": [
+        "ARPA (hoje DARPA), do Departamento de Defesa dos EUA",
+        "NASA",
+        "CERN",
+        "IBM Research"
+      ],
+      "resposta_correta": "ARPA (hoje DARPA), do Departamento de Defesa dos EUA"
+    },
+    {
+      "n": 14,
+      "pergunta": "Além de UCLA e SRI, quais outras duas universidades formaram a rede original de 4 nós da ARPANET até dezembro de 1969?",
+      "opcoes": [
+        "Universidade de Utah e UC Santa Bárbara",
+        "Harvard e MIT",
+        "Yale e Princeton",
+        "Berkeley e Caltech"
+      ],
+      "resposta_correta": "Universidade de Utah e UC Santa Bárbara"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que ano aconteceu o 'crash da ARPANET', considerado o primeiro grande apagão de uma rede de computadores em larga escala?",
+      "opcoes": [
+        "1980",
+        "1969",
+        "1991",
+        "1975"
+      ],
+      "resposta_correta": "1980"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que data a UCLA anunciou publicamente, por comunicado de imprensa, que se tornaria a primeira estação da ARPANET?",
+      "opcoes": [
+        "3 de julho de 1969",
+        "29 de outubro de 1969",
+        "1º de setembro de 1969",
+        "25 de dezembro de 1969"
+      ],
+      "resposta_correta": "3 de julho de 1969"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual era o principal objetivo técnico da comutação de pacotes, em termos de resiliência de rede?",
+      "opcoes": [
+        "Se um caminho estivesse bloqueado, os dados encontrariam outra rota automaticamente",
+        "Impedir que qualquer pessoa não autorizada acessasse a rede",
+        "Reduzir o custo de eletricidade dos computadores",
+        "Aumentar a velocidade de digitação dos operadores"
+      ],
+      "resposta_correta": "Se um caminho estivesse bloqueado, os dados encontrariam outra rota automaticamente"
+    },
+    {
+      "n": 18,
+      "pergunta": "Em que prédio da UCLA a equipe de Charley Kline realizou o teste histórico de outubro de 1969?",
+      "opcoes": [
+        "3420 Boelter Hall",
+        "Edifício Central de Engenharia",
+        "Laboratório Principal do CERN",
+        "Pavilhão de Tecnologia"
+      ],
+      "resposta_correta": "3420 Boelter Hall"
+    },
+    {
+      "n": 19,
+      "pergunta": "A ARPANET, quando criada, tinha como objetivo permitir o quê entre computadores distantes?",
+      "opcoes": [
+        "Que se comunicassem entre si",
+        "Que assistissem vídeos em tempo real",
+        "Que jogassem games multiplayer",
+        "Que enviassem fotos coloridas"
+      ],
+      "resposta_correta": "Que se comunicassem entre si"
+    },
+    {
+      "n": 20,
+      "pergunta": "Em qual evento de 2019, celebrando 50 anos do 'LO', pioneiros da internet como Vint Cerf e Robert Kahn deram um relato detalhado desse período histórico?",
+      "opcoes": [
+        "Um simpósio na conferência AAAS",
+        "A Conferência Internacional da Web no CERN",
+        "O lançamento do primeiro iPhone",
+        "A cerimônia do Prêmio Turing"
+      ],
+      "resposta_correta": "Um simpósio na conferência AAAS"
+    }
+  ]
+}

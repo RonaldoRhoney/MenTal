@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 2,
+    "tema_desafio": "Inteligência Artificial e o Futuro da Internet",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas (Fortune, Worth, DataScientest). Texto escrito originalmente. A propria Anthropic (criadora deste conteudo) foi tratada com o mesmo padrao factual e neutro aplicado a qualquer outra empresa do setor, sem promocao.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: a Anthropic nasceu de uma reunião bastante informal — segundo relatos, o grupo de fundadores apresentou a ideia da empresa a investidores, incluindo o ex-CEO do Google Eric Schmidt, durante um encontro no próprio quintal de Dario Amodei, em meio a uma tempestade. Um começo despretensioso para uma empresa que, poucos anos depois, se tornaria uma das mais relevantes no debate sobre o futuro seguro da inteligência artificial.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano a empresa Anthropic, criadora do assistente de IA Claude, foi fundada?",
+      "opcoes": [
+        "2021",
+        "2015",
+        "2022",
+        "2017"
+      ],
+      "resposta_correta": "2021"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quem são os dois irmãos que cofundaram a Anthropic?",
+      "opcoes": [
+        "Dario Amodei e Daniela Amodei",
+        "Sam Altman e Elon Musk",
+        "Larry Page e Sergey Brin",
+        "John McCarthy e Alan Turing"
+      ],
+      "resposta_correta": "Dario Amodei e Daniela Amodei"
+    },
+    {
+      "n": 3,
+      "pergunta": "De qual outra empresa de IA os fundadores da Anthropic vieram antes de fundar a nova companhia?",
+      "opcoes": [
+        "OpenAI",
+        "Google",
+        "Meta",
+        "Microsoft"
+      ],
+      "resposta_correta": "OpenAI"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo um relato, em que ocasião curiosa o grupo apresentou a ideia da nova empresa a investidores, incluindo o ex-CEO do Google?",
+      "opcoes": [
+        "Numa reunião no quintal de Dario, durante uma tempestade",
+        "Numa conferência formal em Nova York",
+        "Durante um jantar corporativo em Londres",
+        "Numa entrevista de emprego tradicional"
+      ],
+      "resposta_correta": "Numa reunião no quintal de Dario, durante uma tempestade"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual ex-CEO do Google é citado como um dos investidores presentes nessa apresentação inicial?",
+      "opcoes": [
+        "Eric Schmidt",
+        "Sundar Pichai",
+        "Larry Page",
+        "Sergey Brin"
+      ],
+      "resposta_correta": "Eric Schmidt"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual formação acadêmica Dario Amodei tem, antes de se tornar pesquisador de IA?",
+      "opcoes": [
+        "Neurociência",
+        "Direito",
+        "Economia",
+        "Medicina"
+      ],
+      "resposta_correta": "Neurociência"
+    },
+    {
+      "n": 7,
+      "pergunta": "Antes da OpenAI, em quais outras duas organizações relacionadas a IA Dario Amodei trabalhou?",
+      "opcoes": [
+        "Google Brain e Baidu (com Andrew Ng)",
+        "Apple e Amazon",
+        "IBM e Microsoft",
+        "Netflix e Spotify"
+      ],
+      "resposta_correta": "Google Brain e Baidu (com Andrew Ng)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual tipo de formação acadêmica Daniela Amodei teve, antes de trabalhar com segurança e política de IA?",
+      "opcoes": [
+        "Graduação em Letras (Inglês)",
+        "Doutorado em Ciência da Computação",
+        "Formação exclusivamente em Direito",
+        "Formação em Engenharia Mecânica"
+      ],
+      "resposta_correta": "Graduação em Letras (Inglês)"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual foi o cargo de Daniela Amodei na OpenAI, antes de cofundar a Anthropic?",
+      "opcoes": [
+        "Chefe de segurança e política",
+        "Diretora financeira",
+        "Chefe de marketing",
+        "Diretora de vendas"
+      ],
+      "resposta_correta": "Chefe de segurança e política"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual tipo específico de estrutura jurídica corporativa a Anthropic adotou, incorporando compromisso social junto ao objetivo de lucro?",
+      "opcoes": [
+        "Public Benefit Corporation (empresa de benefício público)",
+        "Fundação sem fins lucrativos exclusivamente",
+        "Cooperativa de trabalhadores",
+        "Sociedade anônima tradicional, sem cláusulas sociais"
+      ],
+      "resposta_correta": "Public Benefit Corporation (empresa de benefício público)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Que mecanismo incomum de governança a Anthropic criou para supervisionar a direção ética da empresa a longo prazo?",
+      "opcoes": [
+        "Um 'Long-Term Benefit Trust' (Fundo de Benefício de Longo Prazo)",
+        "Um conselho consultivo exclusivamente de investidores",
+        "Nenhum mecanismo especial foi criado",
+        "Uma auditoria trimestral obrigatória do governo"
+      ],
+      "resposta_correta": "Um 'Long-Term Benefit Trust' (Fundo de Benefício de Longo Prazo)"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual bilionário cofundador do Skype foi citado como um dos primeiros grandes investidores da Anthropic?",
+      "opcoes": [
+        "Jaan Tallinn",
+        "Elon Musk",
+        "Bill Gates",
+        "Mark Zuckerberg"
+      ],
+      "resposta_correta": "Jaan Tallinn"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quais duas grandes empresas de tecnologia fizeram investimentos bilionários na Anthropic ao longo de sua trajetória?",
+      "opcoes": [
+        "Amazon e Google",
+        "Apple e Microsoft",
+        "Meta e Netflix",
+        "IBM e Oracle"
+      ],
+      "resposta_correta": "Amazon e Google"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual metodologia de treinamento a Anthropic desenvolveu, usando um conjunto de princípios escritos para orientar o comportamento da IA?",
+      "opcoes": [
+        "IA Constitucional (Constitutional AI)",
+        "Aprendizado Federado",
+        "Rede Neural Convolucional",
+        "Programação Genética"
+      ],
+      "resposta_correta": "IA Constitucional (Constitutional AI)"
+    },
+    {
+      "n": 15,
+      "pergunta": "Como essa metodologia funciona, de forma simplificada, segundo uma descrição técnica?",
+      "opcoes": [
+        "O sistema de IA se autocritica e revisa suas próprias respostas com base num conjunto codificado de princípios",
+        "Depende exclusivamente de avaliação humana em tempo real, sem nenhuma autocrítica do sistema",
+        "Usa apenas regras fixas, sem nenhum aprendizado envolvido",
+        "Não existe nenhuma metodologia específica documentada"
+      ],
+      "resposta_correta": "O sistema de IA se autocritica e revisa suas próprias respostas com base num conjunto codificado de princípios"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que ano essa metodologia de treinamento foi introduzida pela Anthropic?",
+      "opcoes": [
+        "2022",
+        "2021",
+        "2017",
+        "2015"
+      ],
+      "resposta_correta": "2022"
+    },
+    {
+      "n": 17,
+      "pergunta": "Além da IA Constitucional, qual outro protocolo técnico a Anthropic é citada como tendo criado, padronizando a conexão entre modelos de linguagem e ferramentas externas?",
+      "opcoes": [
+        "Model Context Protocol (MCP)",
+        "Transformer Protocol",
+        "Neural Link Standard",
+        "Deep Connect API"
+      ],
+      "resposta_correta": "Model Context Protocol (MCP)"
+    },
+    {
+      "n": 18,
+      "pergunta": "A que campo de pesquisa a Anthropic também é associada, focado em entender como os modelos de IA 'pensam' internamente?",
+      "opcoes": [
+        "Interpretabilidade mecanicista",
+        "Marketing digital",
+        "Segurança de rede tradicional",
+        "Design de interface gráfica"
+      ],
+      "resposta_correta": "Interpretabilidade mecanicista"
+    },
+    {
+      "n": 19,
+      "pergunta": "Perante qual órgão do governo dos EUA a Anthropic já prestou depoimento sobre regulação de modelos de fundação de IA?",
+      "opcoes": [
+        "Subcomitê Judiciário do Senado sobre Privacidade, Tecnologia e Lei",
+        "A Suprema Corte diretamente",
+        "O Congresso Nacional do Brasil",
+        "As Nações Unidas"
+      ],
+      "resposta_correta": "Subcomitê Judiciário do Senado sobre Privacidade, Tecnologia e Lei"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a existência de empresas concorrentes com diferentes filosofias (algumas priorizando velocidade, outras priorizando segurança) demonstra sobre o momento atual da inteligência artificial?",
+      "opcoes": [
+        "Que há debates legítimos e ativos sobre como equilibrar inovação rápida e desenvolvimento responsável de IA",
+        "Que todas as empresas de IA seguem exatamente a mesma filosofia, sem nenhuma diferença real",
+        "Que não existe nenhum debate relevante sobre segurança em IA atualmente",
+        "Que apenas uma única empresa é responsável por todo o desenvolvimento de IA no mundo"
+      ],
+      "resposta_correta": "Que há debates legítimos e ativos sobre como equilibrar inovação rápida e desenvolvimento responsável de IA"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 5,
+    "tema_desafio": "1994: O Ano que Mudou Tudo (comércio, publicidade e diretórios)",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente. Processo judicial Barnes and Noble tratado de forma factual e neutra.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: a Amazon quase se chamou 'Cadabra' — inspirado na palavra mágica 'abracadabra' — até que um advogado de Jeff Bezos, ao ouvir o nome por telefone, entendeu como 'cadáver'. Diante do risco de associação nada auspiciosa para uma nova empresa, Bezos voltou ao dicionário em busca de um nome melhor, e assim nasceu 'Amazon', inspirado no maior rio do mundo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual foi o nome original da empresa de Jeff Bezos, antes de ser renomeada para Amazon?",
+      "opcoes": [
+        "Cadabra, Inc.",
+        "Relentless.com",
+        "Bookmall.com",
+        "MakeItSo.com"
+      ],
+      "resposta_correta": "Cadabra, Inc."
+    },
+    {
+      "n": 2,
+      "pergunta": "Por que o nome 'Cadabra' foi abandonado, segundo relatos?",
+      "opcoes": [
+        "Um advogado de Bezos entendeu o nome, ao telefone, como 'cadáver'",
+        "O nome já era usado por outra empresa registrada",
+        "O nome foi considerado ofensivo por investidores",
+        "Não havia disponibilidade do domínio na internet"
+      ],
+      "resposta_correta": "Um advogado de Bezos entendeu o nome, ao telefone, como 'cadáver'"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual outro nome, significando 'implacável', Bezos também considerou antes de escolher Amazon?",
+      "opcoes": [
+        "Relentless",
+        "Awake",
+        "Browse",
+        "MakeItSo"
+      ],
+      "resposta_correta": "Relentless"
+    },
+    {
+      "n": 4,
+      "pergunta": "O domínio relentless.com, registrado por Bezos, redireciona para onde até hoje?",
+      "opcoes": [
+        "Para o site da Amazon",
+        "Para uma página de erro",
+        "Para o site pessoal de Bezos",
+        "Para a Blue Origin"
+      ],
+      "resposta_correta": "Para o site da Amazon"
+    },
+    {
+      "n": 5,
+      "pergunta": "Por quais dois motivos Bezos escolheu o nome 'Amazon', inspirado no rio?",
+      "opcoes": [
+        "Sugerir escala (a maior livraria do mundo) e favorecer listagem alfabética dos sites da época",
+        "Homenagear uma viagem pessoal ao Brasil",
+        "Uma sugestão direta de sua esposa MacKenzie",
+        "Um pedido de investidores institucionais"
+      ],
+      "resposta_correta": "Sugerir escala (a maior livraria do mundo) e favorecer listagem alfabética dos sites da época"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que data exata o site da Amazon foi lançado ao público, em 1995?",
+      "opcoes": [
+        "16 de julho de 1995",
+        "5 de julho de 1994",
+        "1º de outubro de 1994",
+        "12 de maio de 1997"
+      ],
+      "resposta_correta": "16 de julho de 1995"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual foi o primeiro livro vendido pela Amazon, segundo o próprio site da empresa?",
+      "opcoes": [
+        "'Fluid Concepts and Creative Analogies', de Douglas Hofstadter",
+        "'Guerra e Paz', de Liev Tolstói",
+        "Um livro infantil sem título especificado",
+        "Um dicionário de língua inglesa"
+      ],
+      "resposta_correta": "'Fluid Concepts and Creative Analogies', de Douglas Hofstadter"
+    },
+    {
+      "n": 8,
+      "pergunta": "Quantas pessoas foram convidadas para testar a Amazon antes do lançamento oficial ao público, segundo um relato?",
+      "opcoes": [
+        "300 pessoas",
+        "3 pessoas",
+        "3.000 pessoas",
+        "30 pessoas"
+      ],
+      "resposta_correta": "300 pessoas"
+    },
+    {
+      "n": 9,
+      "pergunta": "Um sino era programado para tocar a cada venda realizada nos primeiros meses da Amazon. Por que ele precisou ser desativado, em setembro de 1995?",
+      "opcoes": [
+        "O volume de vendas (20 mil dólares por semana) tornou o sino impraticável",
+        "O sino quebrou e nunca foi consertado",
+        "Reclamações de vizinhos levaram à remoção",
+        "Foi uma exigência legal do governo"
+      ],
+      "resposta_correta": "O volume de vendas (20 mil dólares por semana) tornou o sino impraticável"
+    },
+    {
+      "n": 10,
+      "pergunta": "Com que material as primeiras mesas de trabalho da Amazon foram improvisadas, segundo um relato?",
+      "opcoes": [
+        "Portas comuns, compradas por cerca de 60 dólares cada",
+        "Móveis de escritório de luxo",
+        "Mesas emprestadas de uma universidade próxima",
+        "Caixotes de madeira reaproveitados de livrarias"
+      ],
+      "resposta_correta": "Portas comuns, compradas por cerca de 60 dólares cada"
+    },
+    {
+      "n": 11,
+      "pergunta": "Onde as reuniões da equipe inicial da Amazon costumavam acontecer, segundo um relato?",
+      "opcoes": [
+        "Numa livraria local da rede Barnes & Noble",
+        "Na sede corporativa da Microsoft",
+        "Num restaurante popular de Seattle",
+        "Na própria garagem, sem sair de lá"
+      ],
+      "resposta_correta": "Numa livraria local da rede Barnes & Noble"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que data a Amazon abriu seu capital na bolsa Nasdaq (IPO)?",
+      "opcoes": [
+        "15 de maio de 1997",
+        "16 de julho de 1995",
+        "12 de maio de 1997",
+        "5 de julho de 1994"
+      ],
+      "resposta_correta": "15 de maio de 1997"
+    },
+    {
+      "n": 13,
+      "pergunta": "Aproximadamente quanto a Amazon arrecadou em seu IPO?",
+      "opcoes": [
+        "54 milhões de dólares",
+        "460 bilhões de dólares",
+        "5,4 bilhões de dólares",
+        "540 mil dólares"
+      ],
+      "resposta_correta": "54 milhões de dólares"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual era o valor de mercado estimado da Amazon logo após seu IPO?",
+      "opcoes": [
+        "438 milhões de dólares",
+        "54 milhões de dólares",
+        "460 bilhões de dólares",
+        "1 milhão de dólares"
+      ],
+      "resposta_correta": "438 milhões de dólares"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em maio de 1997, a rede Barnes & Noble processou a Amazon por qual motivo específico?",
+      "opcoes": [
+        "Por Bezos alegar que a Amazon era a 'maior livraria do mundo'",
+        "Por violação direta de patente tecnológica",
+        "Por roubo de funcionários da concorrente",
+        "Por cópia integral do design do site"
+      ],
+      "resposta_correta": "Por Bezos alegar que a Amazon era a 'maior livraria do mundo'"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual foi o efeito paradoxal desse processo judicial sobre a própria Amazon, segundo uma análise?",
+      "opcoes": [
+        "Gerou ainda mais atenção pública para a empresa, justamente durante seu processo de abertura de capital",
+        "Encerrou definitivamente as operações da Amazon",
+        "Fez a Amazon perder todos os seus investidores",
+        "Não teve nenhum efeito relevante sobre o público"
+      ],
+      "resposta_correta": "Gerou ainda mais atenção pública para a empresa, justamente durante seu processo de abertura de capital"
+    },
+    {
+      "n": 17,
+      "pergunta": "Aproximadamente quanto a receita da Amazon cresceu em 1997, segundo um relato?",
+      "opcoes": [
+        "Mais de 900%",
+        "Cerca de 10%",
+        "Cerca de 50%",
+        "Menos de 5%"
+      ],
+      "resposta_correta": "Mais de 900%"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual empresa de venda de livros pessoal Bezos tentou lançar antes da Amazon, sem sucesso, segundo um relato?",
+      "opcoes": [
+        "Uma empresa de envio de newsletters em formato de fax",
+        "Uma rede de lojas físicas de livros usados",
+        "Um serviço de biblioteca por assinatura",
+        "Uma editora especializada em ficção científica"
+      ],
+      "resposta_correta": "Uma empresa de envio de newsletters em formato de fax"
+    },
+    {
+      "n": 19,
+      "pergunta": "Antes de fundar a Amazon, em qual setor financeiro Bezos trabalhava?",
+      "opcoes": [
+        "Wall Street",
+        "Setor imobiliário",
+        "Setor de seguros",
+        "Contabilidade tributária"
+      ],
+      "resposta_correta": "Wall Street"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual foi o formato de curso rápido que Bezos fez sobre venda de livros, antes de lançar a empresa, segundo um relato?",
+      "opcoes": [
+        "Um curso de três dias",
+        "Um curso de um ano inteiro",
+        "Um curso de uma semana",
+        "Nenhum curso, ele já era especialista prévio no setor"
+      ],
+      "resposta_correta": "Um curso de três dias"
+    }
+  ]
+}

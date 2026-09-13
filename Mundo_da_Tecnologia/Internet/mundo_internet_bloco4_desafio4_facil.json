@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 4,
+    "tema_desafio": "Desafios Virais e Fenômenos de Internet",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Wikipedia e TechTudo. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - tema de ELA tratado com respeito, focando em conscientizacao e arrecadacao de fundos, sem detalhar sintomas ou sofrimento associado a doenca; mencao a alerta de seguranca do Cold Water Challenge feita de forma factual e protetiva."
+  },
+  "saiba_mais": "Curiosidade: o momento mais comentado do Ice Bucket Challenge, em 2014, foi quando Mark Zuckerberg desafiou Bill Gates a participar — e o próprio criador da Microsoft topou o desafio na hora. O episódio ajudou a levar a campanha a um patamar ainda maior de visibilidade global, contribuindo para os mais de 100 milhões de dólares arrecadados naquele ano para pesquisas sobre a ELA.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "O que é o 'Ice Bucket Challenge' (Desafio do Balde de Gelo)?",
+      "opcoes": [
+        "Um desafio viral de jogar água gelada sobre a cabeça para arrecadar fundos e conscientizar sobre a ELA",
+        "Uma dança popular do TikTok",
+        "Um jogo eletrônico multiplayer",
+        "Um tipo de meme de imagem estática"
+      ],
+      "resposta_correta": "Um desafio viral de jogar água gelada sobre a cabeça para arrecadar fundos e conscientizar sobre a ELA"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Ice Bucket Challenge viralizou globalmente?",
+      "opcoes": [
+        "2014",
+        "2007",
+        "2016",
+        "2020"
+      ],
+      "resposta_correta": "2014"
+    },
+    {
+      "n": 3,
+      "pergunta": "O que a sigla ELA (ou ALS, em inglês) representa?",
+      "opcoes": [
+        "Esclerose Lateral Amiotrófica",
+        "Estudo de Linguagem Aplicada",
+        "Empresa de Logística Avançada",
+        "Escola de Línguas Aplicadas"
+      ],
+      "resposta_correta": "Esclerose Lateral Amiotrófica"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual era o mecanismo do desafio: o que acontecia se a pessoa desafiada não quisesse jogar água gelada sobre si mesma?",
+      "opcoes": [
+        "Ela poderia optar por fazer uma doação para a causa",
+        "Não havia nenhuma alternativa possível",
+        "A pessoa era automaticamente removida das redes sociais",
+        "Ela precisava pagar uma multa ao desafiante"
+      ],
+      "resposta_correta": "Ela poderia optar por fazer uma doação para a causa"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quais dois ativistas são creditados como cofundadores do desafio em sua forma associada à ELA?",
+      "opcoes": [
+        "Pat Quinn e Pete Frates",
+        "Chris Kennedy e Bill Gates",
+        "Mark Zuckerberg e Bill Gates",
+        "Lady Gaga e Neymar"
+      ],
+      "resposta_correta": "Pat Quinn e Pete Frates"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual foi um dos momentos mais comentados da campanha, quando o fundador do Facebook desafiou o fundador da Microsoft?",
+      "opcoes": [
+        "Mark Zuckerberg desafiando Bill Gates",
+        "Jeff Bezos desafiando Larry Page",
+        "Steve Jobs desafiando Bill Gates",
+        "Elon Musk desafiando Mark Zuckerberg"
+      ],
+      "resposta_correta": "Mark Zuckerberg desafiando Bill Gates"
+    },
+    {
+      "n": 7,
+      "pergunta": "Aproximadamente quanto dinheiro o Ice Bucket Challenge arrecadou para pesquisa sobre ELA, apenas em 2014?",
+      "opcoes": [
+        "Mais de 100 milhões de dólares",
+        "Cerca de 1.000 dólares",
+        "Cerca de 1 milhão de dólares",
+        "Cerca de 10 mil dólares"
+      ],
+      "resposta_correta": "Mais de 100 milhões de dólares"
+    },
+    {
+      "n": 8,
+      "pergunta": "O que é o 'Harlem Shake', outro fenômeno viral anterior ao Ice Bucket Challenge?",
+      "opcoes": [
+        "Uma dança caótica que se popularizou em vídeos curtos",
+        "Um tipo de comida viral",
+        "Um desafio de arrecadação de fundos",
+        "Um jogo eletrônico popular"
+      ],
+      "resposta_correta": "Uma dança caótica que se popularizou em vídeos curtos"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano o Harlem Shake viralizou como fenômeno de internet?",
+      "opcoes": [
+        "2013",
+        "2007",
+        "2014",
+        "2016"
+      ],
+      "resposta_correta": "2013"
+    },
+    {
+      "n": 10,
+      "pergunta": "O que é o 'planking' ('deitar-se'), outro desafio viral de internet?",
+      "opcoes": [
+        "Deitar-se de bruços, geralmente em locais incomuns, e fotografar",
+        "Uma dança coreografada",
+        "Um desafio de comer alimentos apimentados",
+        "Um jogo de perguntas e respostas"
+      ],
+      "resposta_correta": "Deitar-se de bruços, geralmente em locais incomuns, e fotografar"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que década o planking teria se originado, segundo registros mais antigos, muito antes de viralizar globalmente?",
+      "opcoes": [
+        "Anos 1980",
+        "Anos 1970",
+        "Anos 2000",
+        "Anos 2010"
+      ],
+      "resposta_correta": "Anos 1980"
+    },
+    {
+      "n": 12,
+      "pergunta": "O que é o 'Bottle Flip Challenge', popular por volta de 2016?",
+      "opcoes": [
+        "Tentar fazer uma garrafa de água girar no ar e pousar em pé",
+        "Um desafio de dança específica",
+        "Um desafio de arrecadação para caridade",
+        "Um jogo de perguntas virais"
+      ],
+      "resposta_correta": "Tentar fazer uma garrafa de água girar no ar e pousar em pé"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual desafio brasileiro de dança, citado entre os fenômenos virais nacionais, também é mencionado ao lado do Harlem Shake e Ice Bucket Challenge?",
+      "opcoes": [
+        "Passinho do Romano",
+        "Funk das Antigas",
+        "Dança do Créu",
+        "Vai Malandra"
+      ],
+      "resposta_correta": "Passinho do Romano"
+    },
+    {
+      "n": 14,
+      "pergunta": "Cite uma celebridade brasileira que participou do Ice Bucket Challenge, segundo registros.",
+      "opcoes": [
+        "Neymar",
+        "Ronaldinho Gaúcho",
+        "Gisele Bündchen (nascida no Brasil, mas citada internacionalmente)",
+        "Ambas as opções anteriores estão corretas"
+      ],
+      "resposta_correta": "Ambas as opções anteriores estão corretas"
+    },
+    {
+      "n": 15,
+      "pergunta": "O que 'viralizar', termo comum na cultura de internet, significa?",
+      "opcoes": [
+        "Se espalhar rapidamente entre muitas pessoas, de forma parecida com um vírus",
+        "Ser removido de uma plataforma por violação de regras",
+        "Ganhar dinheiro através de publicidade online",
+        "Ser transformado em produto físico para venda"
+      ],
+      "resposta_correta": "Se espalhar rapidamente entre muitas pessoas, de forma parecida com um vírus"
+    },
+    {
+      "n": 16,
+      "pergunta": "Antes do TikTok se consolidar como referência de coreografias virais, em qual outra plataforma de vídeos curtos, hoje descontinuada, muitos desafios também se popularizavam?",
+      "opcoes": [
+        "Vine",
+        "Snapchat",
+        "MySpace",
+        "Orkut"
+      ],
+      "resposta_correta": "Vine"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual plataforma se tornou, a partir de 2017/2018, a principal referência de desafios de dança e coreografias virais?",
+      "opcoes": [
+        "TikTok",
+        "Vine",
+        "Orkut",
+        "MySpace"
+      ],
+      "resposta_correta": "TikTok"
+    },
+    {
+      "n": 18,
+      "pergunta": "O que caracteriza, de forma geral, um 'desafio' (challenge) viral de internet?",
+      "opcoes": [
+        "Uma atividade que as pessoas replicam e compartilham em vídeo, geralmente nomeando outras pessoas para participar também",
+        "Um jogo eletrônico com premiação em dinheiro",
+        "Um teste de conhecimento acadêmico formal",
+        "Uma competição exclusiva entre empresas"
+      ],
+      "resposta_correta": "Uma atividade que as pessoas replicam e compartilham em vídeo, geralmente nomeando outras pessoas para participar também"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo registros, o desafio conhecido como 'Cold Water Challenge' gerou alertas por qual motivo?",
+      "opcoes": [
+        "Preocupações de segurança relacionadas à exposição a água muito fria",
+        "Ser considerado ofensivo culturalmente",
+        "Violar direitos autorais de uma marca",
+        "Ser proibido por lei em vários países"
+      ],
+      "resposta_correta": "Preocupações de segurança relacionadas à exposição a água muito fria"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a combinação de desafios de humor (Harlem Shake) com desafios de causa social (Ice Bucket Challenge) demonstra sobre a cultura de desafios virais?",
+      "opcoes": [
+        "Que os desafios virais podem servir tanto para entretenimento quanto para mobilização social significativa",
+        "Que todo desafio viral é exclusivamente para fins de entretenimento",
+        "Que desafios virais nunca têm nenhum impacto social real",
+        "Que apenas causas de saúde geram desafios virais"
+      ],
+      "resposta_correta": "Que os desafios virais podem servir tanto para entretenimento quanto para mobilização social significativa"
+    }
+  ]
+}

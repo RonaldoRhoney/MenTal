@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 5,
+    "tema_desafio": "Outros Sistemas Operacionais e Curiosidades Esquecidas",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro."
+  },
+  "saiba_mais": "Curiosidade: a Apple quase comprou a Be Inc., criadora do BeOS, em 1995 — mas a negociação travou porque a empresa pedia 200 milhões de dólares e a Apple só oferecia 125 milhões. No fim, a Apple decidiu comprar a NeXT, de Steve Jobs, em vez disso — uma escolha que, com o tempo, trouxe Jobs de volta à própria Apple e mudou os rumos da empresa para sempre.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual empresa criou o sistema operacional AmigaOS, lançado em 1985?",
+      "opcoes": [
+        "Commodore",
+        "IBM",
+        "Microsoft",
+        "Apple"
+      ],
+      "resposta_correta": "Commodore"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quais duas empresas se uniram para criar o sistema operacional OS/2, em 1985?",
+      "opcoes": [
+        "Microsoft e IBM",
+        "Apple e Commodore",
+        "Google e Samsung",
+        "Sony e Nokia"
+      ],
+      "resposta_correta": "Microsoft e IBM"
+    },
+    {
+      "n": 3,
+      "pergunta": "Por que a parceria entre Microsoft e IBM no OS/2 chegou ao fim, por volta de 1990?",
+      "opcoes": [
+        "O Windows 3 se tornou um sucesso enorme por conta própria",
+        "A IBM faliu completamente",
+        "Um processo judicial encerrou a parceria",
+        "A Microsoft nunca chegou a lançar o produto"
+      ],
+      "resposta_correta": "O Windows 3 se tornou um sucesso enorme por conta própria"
+    },
+    {
+      "n": 4,
+      "pergunta": "Mesmo sem grande sucesso nos computadores pessoais, onde o OS/2 continuou sendo usado por muito tempo?",
+      "opcoes": [
+        "Em caixas eletrônicos (ATMs)",
+        "Em consoles de videogame",
+        "Em smartphones modernos",
+        "Em relógios inteligentes"
+      ],
+      "resposta_correta": "Em caixas eletrônicos (ATMs)"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual empresa criou o sistema operacional BeOS?",
+      "opcoes": [
+        "Be Inc.",
+        "IBM",
+        "Commodore",
+        "Nokia"
+      ],
+      "resposta_correta": "Be Inc."
+    },
+    {
+      "n": 6,
+      "pergunta": "Em vez de comprar a Be Inc., qual outra empresa Steve Jobs decidiu adquirir para trazer nova tecnologia à Apple?",
+      "opcoes": [
+        "NeXT",
+        "IBM",
+        "Commodore",
+        "Palm"
+      ],
+      "resposta_correta": "NeXT"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual empresa acabou comprando os ativos da Be Inc., em 2001?",
+      "opcoes": [
+        "Palm",
+        "Apple",
+        "Microsoft",
+        "Nokia"
+      ],
+      "resposta_correta": "Palm"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual sistema operacional móvel foi um dos mais populares do mundo antes de ser progressivamente abandonado pela Nokia?",
+      "opcoes": [
+        "Symbian",
+        "BlackBerry OS",
+        "Windows Mobile",
+        "Palm OS"
+      ],
+      "resposta_correta": "Symbian"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em favor de qual sistema a Nokia decidiu abandonar o Symbian?",
+      "opcoes": [
+        "Windows Phone",
+        "Android",
+        "iOS",
+        "BlackBerry OS"
+      ],
+      "resposta_correta": "Windows Phone"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano o Symbian efetivamente chegou ao fim, segundo registros?",
+      "opcoes": [
+        "2013",
+        "1995",
+        "2001",
+        "2020"
+      ],
+      "resposta_correta": "2013"
+    },
+    {
+      "n": 11,
+      "pergunta": "O que caracterizava o computador Amiga em termos de recursos gráficos e sonoros, para a época de seu lançamento?",
+      "opcoes": [
+        "Tela colorida avançada e quatro canais de som estéreo",
+        "Apenas texto em preto e branco",
+        "Nenhum recurso de som",
+        "Suporte apenas a impressoras"
+      ],
+      "resposta_correta": "Tela colorida avançada e quatro canais de som estéreo"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual empresário/CEO da Apple é citado como tendo ficado preocupado com a concorrência do Amiga, segundo relatos históricos?",
+      "opcoes": [
+        "Steve Jobs",
+        "Tim Cook",
+        "John Sculley",
+        "Bill Gates"
+      ],
+      "resposta_correta": "Steve Jobs"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quantos anos, aproximadamente, o OS/2 sobreviveu em caixas eletrônicos após deixar de ter suporte comercial dos computadores pessoais, segundo uma linha do tempo?",
+      "opcoes": [
+        "Muitos anos, até ser descontinuado pela IBM em 2001, com suporte até 2006",
+        "Apenas alguns meses",
+        "Nunca foi usado em caixas eletrônicos",
+        "Ainda está em uso hoje sem nenhuma descontinuação"
+      ],
+      "resposta_correta": "Muitos anos, até ser descontinuado pela IBM em 2001, com suporte até 2006"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual sistema é citado como usado por dispositivos de segurança executiva, de forma parecida com o BlackBerry?",
+      "opcoes": [
+        "Um sistema lançado pela BAE Systems em 1992",
+        "O Windows 95",
+        "O Symbian",
+        "O AmigaOS"
+      ],
+      "resposta_correta": "Um sistema lançado pela BAE Systems em 1992"
+    },
+    {
+      "n": 15,
+      "pergunta": "O que a expressão 'guerra dos sistemas operacionais' costuma descrever, segundo o contexto histórico?",
+      "opcoes": [
+        "A disputa comercial e tecnológica entre diferentes sistemas ao longo do tempo",
+        "Um conflito militar real envolvendo empresas de tecnologia",
+        "Um evento único que aconteceu apenas uma vez, em 2010",
+        "Uma disputa exclusivamente entre Windows e Mac OS, sem mais nenhum sistema envolvido"
+      ],
+      "resposta_correta": "A disputa comercial e tecnológica entre diferentes sistemas ao longo do tempo"
+    },
+    {
+      "n": 16,
+      "pergunta": "Antes de existir apenas iOS e Android dominando o mercado móvel, que outros sistemas também disputavam espaço?",
+      "opcoes": [
+        "Symbian e BlackBerry OS, entre outros",
+        "Apenas o Windows 95",
+        "Nenhum outro sistema móvel existiu antes",
+        "Apenas o MS-DOS"
+      ],
+      "resposta_correta": "Symbian e BlackBerry OS, entre outros"
+    },
+    {
+      "n": 17,
+      "pergunta": "O sistema GEOS, usado numa versão reformulada de um computador da Commodore em 1986, seguia o estilo visual de qual outro sistema famoso?",
+      "opcoes": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "Unix"
+      ],
+      "resposta_correta": "Mac"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual empresa desenvolveu o sistema operacional GEOS mencionado na questão anterior?",
+      "opcoes": [
+        "Berkeley Softworks",
+        "IBM",
+        "Microsoft",
+        "Apple"
+      ],
+      "resposta_correta": "Berkeley Softworks"
+    },
+    {
+      "n": 19,
+      "pergunta": "Cite um recurso funcional que fazia o Amiga ser considerado avançado para sua época.",
+      "opcoes": [
+        "Função multitarefa",
+        "Tela sensível ao toque",
+        "Conexão sem fio à internet",
+        "Reconhecimento de voz"
+      ],
+      "resposta_correta": "Função multitarefa"
+    },
+    {
+      "n": 20,
+      "pergunta": "Sistemas como AmigaOS e BeOS, embora tenham saído de uso comercial, inspiraram projetos recriados posteriormente por entusiastas. Cite um exemplo desses projetos.",
+      "opcoes": [
+        "Haiku (recriação do BeOS)",
+        "Windows 11",
+        "macOS Sonoma",
+        "iOS 17"
+      ],
+      "resposta_correta": "Haiku (recriação do BeOS)"
+    }
+  ]
+}

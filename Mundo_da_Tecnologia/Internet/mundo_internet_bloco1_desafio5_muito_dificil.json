@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 5,
+    "tema_desafio": "1994: O Ano que Mudou Tudo (comércio, publicidade e diretórios)",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Ultimo desafio do Bloco 1 - fecha o bloco 'As Origens da Internet' por completo (5 de 5 desafios)."
+  },
+  "saiba_mais": "Curiosidade: a Amazon tem uma conexão surpreendente com o Brasil, além da inspiração no próprio Rio Amazonas — o primeiro mecanismo de renderização web da empresa se chamava 'Obidos', uma homenagem direta à cidade paraense de Óbidos, conhecida como 'a garganta do Rio Amazonas' por ser o ponto onde o rio se torna mais estreito e profundo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual era o nome do primeiro mecanismo de renderização web da Amazon, escrito em C++?",
+      "opcoes": [
+        "Obidos",
+        "Cadabra Engine",
+        "AmazonCore",
+        "RiverEngine"
+      ],
+      "resposta_correta": "Obidos"
+    },
+    {
+      "n": 2,
+      "pergunta": "A qual cidade brasileira o nome dessa infraestrutura web faz homenagem?",
+      "opcoes": [
+        "Óbidos, no Pará",
+        "Manaus, no Amazonas",
+        "Belém, no Pará",
+        "Santarém, no Pará"
+      ],
+      "resposta_correta": "Óbidos, no Pará"
+    },
+    {
+      "n": 3,
+      "pergunta": "Por que Óbidos é conhecida como 'a garganta do Rio Amazonas', segundo uma fonte?",
+      "opcoes": [
+        "É o ponto onde as margens do rio se tornam mais estreitas e o canal mais profundo",
+        "É a cidade onde o rio nasce oficialmente",
+        "É o único ponto navegável do rio inteiro",
+        "É a foz do rio no oceano Atlântico"
+      ],
+      "resposta_correta": "É o ponto onde as margens do rio se tornam mais estreitas e o canal mais profundo"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que empresa de investimentos Jeff Bezos trabalhava antes de fundar a Amazon, de onde também recrutou parte da equipe inicial?",
+      "opcoes": [
+        "D.E. Shaw & Co. (fundo de David Shaw)",
+        "Goldman Sachs",
+        "Morgan Stanley",
+        "Merrill Lynch"
+      ],
+      "resposta_correta": "D.E. Shaw & Co. (fundo de David Shaw)"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem foi um dos primeiros engenheiros veteranos de startups convidados por Bezos a se juntar à equipe original da Amazon?",
+      "opcoes": [
+        "Shel Kaphan",
+        "Jeff Holden",
+        "David Shaw",
+        "Douglas Hofstadter"
+      ],
+      "resposta_correta": "Shel Kaphan"
+    },
+    {
+      "n": 6,
+      "pergunta": "Por que Jeff Holden, também recrutado por Bezos, só passou a colaborar efetivamente dois anos depois?",
+      "opcoes": [
+        "Ainda estava sob contrato com David Shaw",
+        "Estava concluindo estudos universitários",
+        "Morava em outro país na época",
+        "Recusou o convite inicialmente e mudou de ideia depois"
+      ],
+      "resposta_correta": "Ainda estava sob contrato com David Shaw"
+    },
+    {
+      "n": 7,
+      "pergunta": "Como Bezos conheceu a mulher que se tornaria sua esposa, segundo um relato sobre os primórdios da Amazon?",
+      "opcoes": [
+        "Como recrutador na D.E. Shaw, onde ela também trabalhava",
+        "Em uma livraria da Barnes & Noble",
+        "Em uma conferência de tecnologia",
+        "Através de um amigo em comum em Wall Street"
+      ],
+      "resposta_correta": "Como recrutador na D.E. Shaw, onde ela também trabalhava"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que cidade americana a Amazon foi fundada, na garagem da casa de Bezos, coincidentemente a mesma cidade de outra gigante da tecnologia?",
+      "opcoes": [
+        "Seattle, mesma cidade da Microsoft",
+        "Palo Alto, mesma cidade do Google",
+        "Cupertino, mesma cidade da Apple",
+        "Nova York, mesma cidade da IBM"
+      ],
+      "resposta_correta": "Seattle, mesma cidade da Microsoft"
+    },
+    {
+      "n": 9,
+      "pergunta": "O logotipo da Amazon tem uma seta amarela que vai de qual letra a qual letra, representando a variedade de produtos vendidos?",
+      "opcoes": [
+        "De 'A' até 'Z'",
+        "De 'A' até 'M'",
+        "De 'B' até 'Z'",
+        "Não há nenhuma seta no logo, apenas o nome"
+      ],
+      "resposta_correta": "De 'A' até 'Z'"
+    },
+    {
+      "n": 10,
+      "pergunta": "Além de indicar a variedade de A a Z, que outra forma essa seta amarela do logo sugere visualmente?",
+      "opcoes": [
+        "Um sorriso",
+        "Um rio sinuoso",
+        "Uma seta de navegação de site",
+        "Uma onda do oceano"
+      ],
+      "resposta_correta": "Um sorriso"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em quantos estados americanos a Amazon já havia enviado encomendas de livros, apenas um mês após o lançamento em 1995?",
+      "opcoes": [
+        "Todos os 50 estados",
+        "Apenas 5 estados",
+        "10 estados",
+        "25 estados"
+      ],
+      "resposta_correta": "Todos os 50 estados"
+    },
+    {
+      "n": 12,
+      "pergunta": "Além dos Estados Unidos, para quantos países estrangeiros a Amazon já havia enviado encomendas nesse mesmo primeiro mês?",
+      "opcoes": [
+        "45 países",
+        "5 países",
+        "100 países",
+        "Nenhum país estrangeiro ainda"
+      ],
+      "resposta_correta": "45 países"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma fonte, quais eram, aproximadamente, as vendas anuais da Barnes & Noble em 1996, quando comparadas aos 16 milhões de dólares da recém-nascida Amazon?",
+      "opcoes": [
+        "Cerca de 2 bilhões de dólares",
+        "Cerca de 20 milhões de dólares",
+        "Cerca de 200 milhões de dólares",
+        "Cerca de 2 milhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 2 bilhões de dólares"
+    },
+    {
+      "n": 14,
+      "pergunta": "Apesar dessa disparidade gigantesca de tamanho em 1996, como os donos da Barnes & Noble percebiam a Amazon, segundo uma fonte?",
+      "opcoes": [
+        "Como uma ameaça real ao seu negócio",
+        "Como uma empresa irrelevante, sem nenhuma atenção especial",
+        "Como uma potencial parceira comercial",
+        "Como uma empresa fadada ao fracasso rápido"
+      ],
+      "resposta_correta": "Como uma ameaça real ao seu negócio"
+    },
+    {
+      "n": 15,
+      "pergunta": "Antes de 'Óbidos', qual outra homenagem geográfica brasileira também aparece de forma indireta na própria escolha do nome da empresa?",
+      "opcoes": [
+        "O próprio Rio Amazonas, que atravessa o Brasil",
+        "A cidade de Manaus, capital do Amazonas",
+        "A Floresta Amazônica como um todo, sem cidade específica",
+        "Nenhuma outra homenagem geográfica brasileira existe"
+      ],
+      "resposta_correta": "O próprio Rio Amazonas, que atravessa o Brasil"
+    },
+    {
+      "n": 16,
+      "pergunta": "Por que, segundo uma fonte, o desenvolvimento web em linguagem C++ era mais comum nos primórdios da internet, como no caso da Amazon?",
+      "opcoes": [
+        "Era mais barato para as empresas na época",
+        "Era a única linguagem que existia então",
+        "Era exigência legal do governo americano",
+        "Não havia nenhuma vantagem, foi escolha aleatória"
+      ],
+      "resposta_correta": "Era mais barato para as empresas na época"
+    },
+    {
+      "n": 17,
+      "pergunta": "Além da Amazon, qual outra empresa fundada por Jeff Bezos NÃO é uma subsidiária da Amazon, mas sim independente?",
+      "opcoes": [
+        "Blue Origin",
+        "Whole Foods",
+        "Zappos",
+        "Twitch"
+      ],
+      "resposta_correta": "Blue Origin"
+    },
+    {
+      "n": 18,
+      "pergunta": "O livro 'Fluid Concepts and Creative Analogies', primeiro item vendido pela Amazon, trata de qual área do conhecimento, pelo autor Douglas Hofstadter?",
+      "opcoes": [
+        "Modelos computacionais dos mecanismos fundamentais do pensamento",
+        "Culinária tradicional americana",
+        "História da Segunda Guerra Mundial",
+        "Poesia contemporânea"
+      ],
+      "resposta_correta": "Modelos computacionais dos mecanismos fundamentais do pensamento"
+    },
+    {
+      "n": 19,
+      "pergunta": "Douglas Hofstadter, autor do primeiro livro vendido pela Amazon, é mais conhecido por qual outra obra premiada?",
+      "opcoes": [
+        "'Gödel, Escher, Bach'",
+        "'Breve História do Tempo'",
+        "'Sapiens'",
+        "'O Mundo de Sofia'"
+      ],
+      "resposta_correta": "'Gödel, Escher, Bach'"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando tudo que foi discutido, o que a origem da Amazon (garagem, mesas de porta, sino de vendas) melhor ilustra sobre grandes empresas de tecnologia?",
+      "opcoes": [
+        "Que muitas gigantes atuais começaram de forma extremamente modesta e improvisada",
+        "Que só é possível criar uma grande empresa com investimento inicial bilionário",
+        "Que garagens são um requisito legal para abrir empresas de tecnologia",
+        "Que o sucesso imediato é sempre garantido em negócios de internet"
+      ],
+      "resposta_correta": "Que muitas gigantes atuais começaram de forma extremamente modesta e improvisada"
+    }
+  ]
+}

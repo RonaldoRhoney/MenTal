@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 4,
+    "tema_desafio": "Netflix e a Revolução do Streaming",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas e academicas (Yale Case). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - decisoes corporativas tratadas de forma factual e neutra."
+  },
+  "saiba_mais": "Curiosidade: em 2000, a Netflix — então uma pequena empresa perdendo dinheiro — ofereceu se vender para a Blockbuster por apenas 50 milhões de dólares. A gigante das locadoras recusou a proposta, considerando que a Netflix não valia o suficiente. Anos depois, a Blockbuster faliu, enquanto a Netflix se tornou uma das maiores empresas de entretenimento do mundo — um dos exemplos mais citados de negócio recusado na história corporativa.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano Netflix ofereceu se vender para a Blockbuster?",
+      "opcoes": [
+        "2000",
+        "1997",
+        "2007",
+        "2011"
+      ],
+      "resposta_correta": "2000"
+    },
+    {
+      "n": 2,
+      "pergunta": "Por qual valor aproximado a Netflix se ofereceu para ser vendida à Blockbuster?",
+      "opcoes": [
+        "50 milhões de dólares",
+        "5 milhões de dólares",
+        "500 milhões de dólares",
+        "5 bilhões de dólares"
+      ],
+      "resposta_correta": "50 milhões de dólares"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual era o CEO da Blockbuster que recebeu a proposta de Randolph e Hastings?",
+      "opcoes": [
+        "John Antioco",
+        "Reed Hastings",
+        "Marc Randolph",
+        "Barry McCarthy"
+      ],
+      "resposta_correta": "John Antioco"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo o relato de Randolph sobre a reunião, o que ele descreveu sentir diante da postura da Blockbuster?",
+      "opcoes": [
+        "Intimidação, inclusive pela diferença visível de vestimenta entre as equipes",
+        "Total confiança e superioridade",
+        "Indiferença completa ao resultado",
+        "Raiva imediata pela recusa"
+      ],
+      "resposta_correta": "Intimidação, inclusive pela diferença visível de vestimenta entre as equipes"
+    },
+    {
+      "n": 5,
+      "pergunta": "Aproximadamente quantas lojas físicas a Blockbuster tinha pelo mundo, na época dessa oferta rejeitada?",
+      "opcoes": [
+        "Cerca de 9.000 lojas (chegando a 60 mil no auge posterior)",
+        "Cerca de 50 lojas",
+        "Cerca de 500 lojas",
+        "Nenhuma loja física, era só online"
+      ],
+      "resposta_correta": "Cerca de 9.000 lojas (chegando a 60 mil no auge posterior)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma fonte, a Blockbuster recusou repetidamente propostas da Netflix, incluindo uma tentativa em que ano mais tardio?",
+      "opcoes": [
+        "2007",
+        "2000",
+        "2011",
+        "1997"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual empresa de energia, posteriormente envolvida em escândalo, teve uma parceria fracassada com a Blockbuster para entrega de vídeo sob demanda?",
+      "opcoes": [
+        "Enron",
+        "General Electric",
+        "ExxonMobil",
+        "Duke Energy"
+      ],
+      "resposta_correta": "Enron"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual investidor ativista removeu o CEO John Antioco da Blockbuster, em 2007?",
+      "opcoes": [
+        "Carl Icahn",
+        "Warren Buffett",
+        "George Soros",
+        "Bill Ackman"
+      ],
+      "resposta_correta": "Carl Icahn"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano a Blockbuster decretou falência, anos depois de rejeitar a Netflix?",
+      "opcoes": [
+        "2010",
+        "2000",
+        "2007",
+        "2020"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que mês de 2011 a Netflix anunciou o polêmico aumento de preço combinado com a criação da Qwikster?",
+      "opcoes": [
+        "Julho",
+        "Janeiro",
+        "Dezembro",
+        "Março"
+      ],
+      "resposta_correta": "Julho"
+    },
+    {
+      "n": 11,
+      "pergunta": "Aproximadamente qual percentual de aumento de preço a Netflix aplicou nesse anúncio de 2011?",
+      "opcoes": [
+        "60%",
+        "10%",
+        "100%",
+        "5%"
+      ],
+      "resposta_correta": "60%"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual era o propósito da divisão em duas empresas (Netflix e Qwikster) anunciada em 2011?",
+      "opcoes": [
+        "Separar o negócio de streaming do negócio de DVD por correio",
+        "Criar uma empresa exclusiva para o mercado internacional",
+        "Dividir a empresa entre conteúdo original e licenciado",
+        "Separar operações nos EUA e no exterior"
+      ],
+      "resposta_correta": "Separar o negócio de streaming do negócio de DVD por correio"
+    },
+    {
+      "n": 13,
+      "pergunta": "O que essa divisão exigiria, na prática, dos assinantes que usassem os dois serviços?",
+      "opcoes": [
+        "Gerenciar duas contas, duas cobranças de cartão e dois sites diferentes",
+        "Nenhuma mudança perceptível no dia a dia",
+        "Pagar apenas uma taxa única simplificada",
+        "Usar um aplicativo unificado sem nenhuma complicação"
+      ],
+      "resposta_correta": "Gerenciar duas contas, duas cobranças de cartão e dois sites diferentes"
+    },
+    {
+      "n": 14,
+      "pergunta": "Quantos assinantes a Netflix perdeu durante esse episódio, segundo uma das fontes?",
+      "opcoes": [
+        "Mais de 1 milhão (chegando a 2 milhões segundo outra fonte)",
+        "Cerca de 100",
+        "Nenhum assinante foi perdido",
+        "Cerca de 10 mil"
+      ],
+      "resposta_correta": "Mais de 1 milhão (chegando a 2 milhões segundo outra fonte)"
+    },
+    {
+      "n": 15,
+      "pergunta": "Aproximadamente quanto as ações da Netflix caíram durante esse período turbulento?",
+      "opcoes": [
+        "Cerca de 75%",
+        "Cerca de 5%",
+        "Cerca de 20%",
+        "Nenhuma queda foi registrada"
+      ],
+      "resposta_correta": "Cerca de 75%"
+    },
+    {
+      "n": 16,
+      "pergunta": "Quantas semanas após o anúncio a Netflix recuou e cancelou o plano da Qwikster?",
+      "opcoes": [
+        "Cerca de duas a quatro semanas",
+        "Um ano inteiro",
+        "Cinco anos",
+        "No mesmo dia do anúncio"
+      ],
+      "resposta_correta": "Cerca de duas a quatro semanas"
+    },
+    {
+      "n": 17,
+      "pergunta": "O aumento de preço em si foi revertido junto com o cancelamento da Qwikster?",
+      "opcoes": [
+        "Não, o aumento de preço foi mantido mesmo após o recuo da Qwikster",
+        "Sim, tudo foi revertido por completo",
+        "Sim, mas apenas parcialmente",
+        "Não há informação clara sobre isso"
+      ],
+      "resposta_correta": "Não, o aumento de preço foi mantido mesmo após o recuo da Qwikster"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo o próprio Reed Hastings, em uma conferência posterior, como ele avaliou a decisão da Qwikster?",
+      "opcoes": [
+        "Como uma falta de bom senso, reconhecendo o erro publicamente",
+        "Como uma decisão perfeitamente acertada, sem nenhum arrependimento",
+        "Como culpa exclusiva de outro executivo",
+        "Como um erro causado por fatores externos incontroláveis"
+      ],
+      "resposta_correta": "Como uma falta de bom senso, reconhecendo o erro publicamente"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual era, aproximadamente, o valor de mercado da Netflix em julho de 2011, pouco antes do início dessa crise?",
+      "opcoes": [
+        "Mais de 16 bilhões de dólares",
+        "50 milhões de dólares",
+        "1 bilhão de dólares",
+        "163 bilhões de dólares"
+      ],
+      "resposta_correta": "Mais de 16 bilhões de dólares"
+    },
+    {
+      "n": 20,
+      "pergunta": "Comparando o valor de mercado atual da Netflix com o valor de mercado que a Blockbuster tinha quando rejeitou a proposta em 2000, o que essa comparação revela?",
+      "opcoes": [
+        "Uma reviravolta completa de fortunas entre as duas empresas ao longo das décadas",
+        "Que as duas empresas mantiveram valores praticamente idênticos",
+        "Que a Blockbuster segue mais valiosa até hoje",
+        "Que nenhuma comparação é possível entre as duas épocas"
+      ],
+      "resposta_correta": "Uma reviravolta completa de fortunas entre as duas empresas ao longo das décadas"
+    }
+  ]
+}

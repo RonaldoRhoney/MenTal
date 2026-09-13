@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 4,
+    "tema_desafio": "Desafios Virais e Fenômenos de Internet",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Wikipedia e Know Your Meme. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - riscos de seguranca mencionados apenas de forma factual e de alerta, sem detalhar metodos ou incentivar replicacao de comportamento perigoso."
+  },
+  "saiba_mais": "Curiosidade: o planking, que parecia uma brincadeira inofensiva de deitar-se em lugares estranhos, teve origem numa dupla de adolescentes ingleses que, segundo um deles, fazia aquilo só porque era 'uma coisa aleatória e boba de se fazer' — sem imaginar que, mais de uma década depois, a ideia se espalharia pelo mundo todo, gerando até alertas de segurança quando as pessoas começaram a se arriscar em locais cada vez mais perigosos para conseguir a foto perfeita.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país o 'Lying Down Game' (precursor do planking) foi criado por dois adolescentes, por volta de 1997/2000?",
+      "opcoes": [
+        "Inglaterra",
+        "Estados Unidos",
+        "Austrália",
+        "Nova Zelândia"
+      ],
+      "resposta_correta": "Inglaterra"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quem são os dois criadores originais do 'Lying Down Game', segundo registros?",
+      "opcoes": [
+        "Gary Clarkson e Christian Langdon",
+        "Sam Weckert e Paul Carran",
+        "Tom Green e Daniel Hoppin",
+        "David Williams e Chris Kennedy"
+      ],
+      "resposta_correta": "Gary Clarkson e Christian Langdon"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano um amigo dos criadores levou o 'Lying Down Game' para o Facebook, criando uma página dedicada?",
+      "opcoes": [
+        "2007",
+        "1997",
+        "2011",
+        "2000"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem é creditado por ter cunhado especificamente o termo 'planking', na Austrália, em 2008?",
+      "opcoes": [
+        "Paul Carran",
+        "Gary Clarkson",
+        "Tom Green",
+        "Sam Weckert"
+      ],
+      "resposta_correta": "Paul Carran"
+    },
+    {
+      "n": 5,
+      "pergunta": "O que motivou grande aumento de atenção midiática ao 'Lying Down Game' em setembro de 2009, no Reino Unido?",
+      "opcoes": [
+        "Sete funcionários de um hospital foram suspensos por praticar o jogo durante o expediente",
+        "Uma celebridade global aderiu à brincadeira",
+        "Um recorde mundial foi estabelecido",
+        "Uma marca comercial patrocinou o desafio oficialmente"
+      ],
+      "resposta_correta": "Sete funcionários de um hospital foram suspensos por praticar o jogo durante o expediente"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em março de 2011, qual evento esportivo específico ajudou a impulsionar o planking na Austrália, quando um jogador profissional de rúgbi 'plancou' após marcar um ponto?",
+      "opcoes": [
+        "Uma partida entre Manly-Warringah Sea Eagles e Newcastle Knights",
+        "Uma final de futebol americano",
+        "Uma partida de críquete internacional",
+        "Uma corrida de Fórmula 1"
+      ],
+      "resposta_correta": "Uma partida entre Manly-Warringah Sea Eagles e Newcastle Knights"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em julho de 2011, o comediante Tom Green publicou um vídeo alegando ter criado uma versão do planking em que ano anterior?",
+      "opcoes": [
+        "1994",
+        "1997",
+        "2007",
+        "2000"
+      ],
+      "resposta_correta": "1994"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo registros, além do Reino Unido, em qual outro país práticas parecidas de poses fotográficas bizarras também surgiram de forma independente, por volta de 2003?",
+      "opcoes": [
+        "Coreia do Sul, com o fenômeno 'Playing Dead'",
+        "Alemanha",
+        "México",
+        "Índia"
+      ],
+      "resposta_correta": "Coreia do Sul, com o fenômeno 'Playing Dead'"
+    },
+    {
+      "n": 9,
+      "pergunta": "Quantos fãs, aproximadamente, a página oficial do Planking no Facebook chegou a ter em seu auge?",
+      "opcoes": [
+        "Mais de 130 mil",
+        "Cerca de mil",
+        "Cerca de 13 milhões",
+        "Cerca de 100"
+      ],
+      "resposta_correta": "Mais de 130 mil"
+    },
+    {
+      "n": 10,
+      "pergunta": "Que tipo de preocupação séria de segurança surgiu com a popularização do planking, segundo registros públicos da época?",
+      "opcoes": [
+        "Pessoas se machucando gravemente ao praticar a pose em locais perigosos e elevados",
+        "Nenhuma preocupação relevante foi registrada",
+        "Apenas preocupações estéticas sobre as fotos",
+        "Preocupações exclusivamente de direitos autorais"
+      ],
+      "resposta_correta": "Pessoas se machucando gravemente ao praticar a pose em locais perigosos e elevados"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual foi a origem do 'In My Feelings Challenge' (também chamado 'Kiki Challenge'), popular em 2018?",
+      "opcoes": [
+        "Um vídeo do comediante do Instagram conhecido como Shiggy, dançando ao som de uma música de Drake",
+        "Uma campanha oficial de marketing da gravadora de Drake",
+        "Um desafio criado por uma emissora de televisão",
+        "Uma dança tradicional reaproveitada"
+      ],
+      "resposta_correta": "Um vídeo do comediante do Instagram conhecido como Shiggy, dançando ao som de uma música de Drake"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual música específica de Drake deu origem a esse desafio?",
+      "opcoes": [
+        "'In My Feelings'",
+        "'Hotline Bling'",
+        "'God's Plan'",
+        "'One Dance'"
+      ],
+      "resposta_correta": "'In My Feelings'"
+    },
+    {
+      "n": 13,
+      "pergunta": "Como Drake reagiu ao ver o vídeo original de Shiggy, segundo registros?",
+      "opcoes": [
+        "Agradeceu publicamente, dando ainda mais visibilidade ao vídeo",
+        "Ignorou completamente o vídeo",
+        "Processou Shiggy por uso não autorizado da música",
+        "Pediu a remoção do vídeo das plataformas"
+      ],
+      "resposta_correta": "Agradeceu publicamente, dando ainda mais visibilidade ao vídeo"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual foi o principal problema de segurança gerado pela versão mais popular (e arriscada) desse desafio, em que muitos participantes se filmavam?",
+      "opcoes": [
+        "Saltar de carros em movimento para dançar ao lado deles",
+        "Nadar em águas muito frias",
+        "Comer alimentos extremamente apimentados",
+        "Escalar prédios sem equipamento de segurança"
+      ],
+      "resposta_correta": "Saltar de carros em movimento para dançar ao lado deles"
+    },
+    {
+      "n": 15,
+      "pergunta": "Diante desses riscos, autoridades de trânsito em vários países tomaram qual tipo de ação em relação a esse desafio?",
+      "opcoes": [
+        "Emitiram alertas públicos de segurança contra a prática",
+        "Endossaram oficialmente o desafio como seguro",
+        "Não tomaram nenhuma ação, considerando irrelevante",
+        "Criaram uma versão oficial mais segura do desafio"
+      ],
+      "resposta_correta": "Emitiram alertas públicos de segurança contra a prática"
+    },
+    {
+      "n": 16,
+      "pergunta": "Cite outros dois desafios virais mencionados como exemplos de tendências arriscadas ('dumm-gefährlich', ou 'estupidamente perigosas'), ao lado do 'In My Feelings Challenge'.",
+      "opcoes": [
+        "'Tide Pod Challenge' e 'Fire Challenge'",
+        "'Ice Bucket Challenge' e 'Harlem Shake'",
+        "'Planking' e 'Bottle Flip'",
+        "'Mannequin Challenge' e 'Cinnamon Challenge' exclusivamente, sem mais nenhum"
+      ],
+      "resposta_correta": "'Tide Pod Challenge' e 'Fire Challenge'"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que caracterizava o 'Mannequin Challenge', outro fenômeno viral citado ao lado dos demais?",
+      "opcoes": [
+        "Grupos de pessoas ficando completamente paradas, como manequins, enquanto a câmera se movia ao redor",
+        "Pessoas dançando freneticamente em grupo",
+        "Pessoas jogando água gelada sobre si mesmas",
+        "Pessoas fazendo poses deitadas em locais estranhos"
+      ],
+      "resposta_correta": "Grupos de pessoas ficando completamente paradas, como manequins, enquanto a câmera se movia ao redor"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma retrospectiva, o que os desafios de risco (como 'Tide Pod' e 'Fire Challenge') têm em comum, do ponto de vista de segurança pública?",
+      "opcoes": [
+        "Envolvem atividades genuinamente perigosas à saúde dos participantes, gerando alertas oficiais",
+        "São sempre completamente seguros, apesar da aparência",
+        "Nunca geraram nenhuma preocupação de autoridades",
+        "São exclusivamente atividades esportivas profissionais supervisionadas"
+      ],
+      "resposta_correta": "Envolvem atividades genuinamente perigosas à saúde dos participantes, gerando alertas oficiais"
+    },
+    {
+      "n": 19,
+      "pergunta": "Comparando planking (2011) e In My Feelings Challenge (2018), o que os dois casos têm em comum quanto a riscos de segurança?",
+      "opcoes": [
+        "Ambos geraram preocupação pública por ferimentos sofridos por participantes",
+        "Nenhum dos dois teve qualquer registro de acidente",
+        "Ambos foram considerados totalmente seguros pelas autoridades",
+        "Apenas o planking teve qualquer registro de risco"
+      ],
+      "resposta_correta": "Ambos geraram preocupação pública por ferimentos sofridos por participantes"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a recorrência de desafios virais arriscados ao longo dos anos sugere sobre a dinâmica da cultura de internet?",
+      "opcoes": [
+        "Que a busca por viralização às vezes leva pessoas a ignorar riscos reais à própria segurança",
+        "Que desafios virais nunca envolvem nenhum tipo de risco",
+        "Que apenas jovens participam desse tipo de desafio",
+        "Que autoridades nunca se posicionam sobre esses fenômenos"
+      ],
+      "resposta_correta": "Que a busca por viralização às vezes leva pessoas a ignorar riscos reais à própria segurança"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 1,
+    "tema_desafio": "Google, Larry Page e Sergey Brin",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo corporativo/financeiro factual e neutro."
+  },
+  "saiba_mais": "Curiosidade: em 1999, Larry Page e Sergey Brin tentaram vender o próprio Google — na época ainda um projeto acadêmico — para a Excite, um dos maiores portais da internet daquela era, por apenas 1 milhão de dólares. O CEO da Excite recusou a oferta. Anos depois, o Google se tornaria uma das empresas mais valiosas do mundo, avaliada em bilhões já em seu IPO.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em 1999, Page e Brin tentaram vender o próprio mecanismo de busca para qual empresa, então uma gigante da web?",
+      "opcoes": [
+        "Excite",
+        "Yahoo",
+        "AOL",
+        "Microsoft"
+      ],
+      "resposta_correta": "Excite"
+    },
+    {
+      "n": 2,
+      "pergunta": "Por qual valor Page e Brin ofereceram vender o Google ao CEO da Excite?",
+      "opcoes": [
+        "1 milhão de dólares",
+        "100 mil dólares",
+        "25 milhões de dólares",
+        "1 bilhão de dólares"
+      ],
+      "resposta_correta": "1 milhão de dólares"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual foi a resposta do CEO da Excite, George Bell, à oferta?",
+      "opcoes": [
+        "Rejeitou a oferta",
+        "Aceitou imediatamente",
+        "Contra-ofertou um valor maior",
+        "Pediu mais tempo para decidir, sem nunca responder"
+      ],
+      "resposta_correta": "Rejeitou a oferta"
+    },
+    {
+      "n": 4,
+      "pergunta": "Após a negociação com a Excite, o CEO George Bell criticou publicamente qual outra pessoa envolvida nas tratativas?",
+      "opcoes": [
+        "Vinod Khosla, um dos capitalistas de risco da própria Excite",
+        "Larry Page diretamente",
+        "Sergey Brin diretamente",
+        "Andy Bechtolsheim"
+      ],
+      "resposta_correta": "Vinod Khosla, um dos capitalistas de risco da própria Excite"
+    },
+    {
+      "n": 5,
+      "pergunta": "Para qual valor Vinod Khosla teria negociado a oferta original de Page e Brin para baixo, segundo relatos?",
+      "opcoes": [
+        "750 mil dólares",
+        "500 mil dólares",
+        "2 milhões de dólares",
+        "50 mil dólares"
+      ],
+      "resposta_correta": "750 mil dólares"
+    },
+    {
+      "n": 6,
+      "pergunta": "Além de Andy Bechtolsheim, cite outro investidor-anjo que também aportou recursos iniciais no Google em 1998, segundo registros.",
+      "opcoes": [
+        "Jeff Bezos, fundador da Amazon",
+        "Bill Gates",
+        "Steve Jobs",
+        "Mark Zuckerberg"
+      ],
+      "resposta_correta": "Jeff Bezos, fundador da Amazon"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual professor de Stanford também é citado como um dos primeiros investidores-anjo do Google?",
+      "opcoes": [
+        "David Cheriton",
+        "Terry Winograd",
+        "John Hennessy",
+        "Vint Cerf"
+      ],
+      "resposta_correta": "David Cheriton"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que data exata a rodada de financiamento de 25 milhões de dólares foi formalmente anunciada, em 1999?",
+      "opcoes": [
+        "7 de junho de 1999",
+        "4 de setembro de 1998",
+        "19 de agosto de 2004",
+        "1º de janeiro de 1999"
+      ],
+      "resposta_correta": "7 de junho de 1999"
+    },
+    {
+      "n": 9,
+      "pergunta": "Quais duas firmas de capital de risco lideraram essa rodada de 25 milhões de dólares?",
+      "opcoes": [
+        "Kleiner Perkins Caufield & Byers e Sequoia Capital",
+        "SoftBank e Andreessen Horowitz",
+        "Y Combinator e Accel Partners",
+        "Goldman Sachs e Morgan Stanley"
+      ],
+      "resposta_correta": "Kleiner Perkins Caufield & Byers e Sequoia Capital"
+    },
+    {
+      "n": 10,
+      "pergunta": "A Sequoia Capital, após emprestar os 25 milhões de dólares, exigiu que Page e Brin fizessem o quê, sob risco de reaver parte do dinheiro?",
+      "opcoes": [
+        "Contratar um CEO experiente para a empresa",
+        "Vender a empresa por completo",
+        "Mudar o nome da empresa",
+        "Abrir capital imediatamente na bolsa"
+      ],
+      "resposta_correta": "Contratar um CEO experiente para a empresa"
+    },
+    {
+      "n": 11,
+      "pergunta": "Quem foi contratado como o primeiro CEO 'externo' do Google, em março de 2001, atendendo a essa exigência dos investidores?",
+      "opcoes": [
+        "Eric Schmidt",
+        "Sundar Pichai",
+        "Larry Page (ele mesmo)",
+        "Sheryl Sandberg"
+      ],
+      "resposta_correta": "Eric Schmidt"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em outubro de 2003, qual gigante de tecnologia abordou o Google para uma possível parceria ou fusão, que nunca se concretizou?",
+      "opcoes": [
+        "Microsoft",
+        "Apple",
+        "Yahoo",
+        "Amazon"
+      ],
+      "resposta_correta": "Microsoft"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quais dois bancos de investimento foram contratados pelo Google, em janeiro de 2004, para organizar sua oferta pública inicial (IPO)?",
+      "opcoes": [
+        "Morgan Stanley e Goldman Sachs Group",
+        "JP Morgan e Citibank",
+        "Bank of America e Wells Fargo",
+        "Credit Suisse e UBS"
+      ],
+      "resposta_correta": "Morgan Stanley e Goldman Sachs Group"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que data exata ocorreu o IPO do Google?",
+      "opcoes": [
+        "19 de agosto de 2004",
+        "7 de junho de 1999",
+        "4 de setembro de 1998",
+        "10 de agosto de 2015"
+      ],
+      "resposta_correta": "19 de agosto de 2004"
+    },
+    {
+      "n": 15,
+      "pergunta": "Aproximadamente quanto o IPO do Google arrecadou, segundo registros?",
+      "opcoes": [
+        "1,67 bilhão de dólares",
+        "25 milhões de dólares",
+        "100 mil dólares",
+        "12,5 bilhões de dólares"
+      ],
+      "resposta_correta": "1,67 bilhão de dólares"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual foi, aproximadamente, o valor de mercado do Google logo após seu IPO, segundo registros?",
+      "opcoes": [
+        "Mais de 23 bilhões de dólares",
+        "1 milhão de dólares",
+        "100 milhões de dólares",
+        "1 trilhão de dólares"
+      ],
+      "resposta_correta": "Mais de 23 bilhões de dólares"
+    },
+    {
+      "n": 17,
+      "pergunta": "O IPO do Google teve um efeito imediato notável sobre muitos funcionários da empresa. Qual foi esse efeito?",
+      "opcoes": [
+        "Tornaram-se milionários 'no papel' quase da noite para o dia",
+        "Perderam todo o valor de suas ações imediatamente",
+        "Foram todos demitidos como parte da reestruturação",
+        "Nenhum efeito relevante foi registrado"
+      ],
+      "resposta_correta": "Tornaram-se milionários 'no papel' quase da noite para o dia"
+    },
+    {
+      "n": 18,
+      "pergunta": "Por que a página inicial do Google, em seus primórdios, tinha um design tão simples, segundo uma das fontes consultadas?",
+      "opcoes": [
+        "Os fundadores não tinham muita experiência em HTML na época",
+        "Foi uma decisão de marketing deliberada e cara",
+        "Faltava capacidade de servidor para qualquer elemento visual",
+        "Era uma exigência legal da universidade de Stanford"
+      ],
+      "resposta_correta": "Os fundadores não tinham muita experiência em HTML na época"
+    },
+    {
+      "n": 19,
+      "pergunta": "Para onde a empresa se mudou logo após a rodada de investimento de 1999, quando ainda tinha poucos funcionários?",
+      "opcoes": [
+        "165 University Avenue, em Palo Alto",
+        "1600 Amphitheatre Parkway, em Mountain View",
+        "One Infinite Loop, em Cupertino",
+        "Menlo Park, na garagem de Susan Wojcicki"
+      ],
+      "resposta_correta": "165 University Avenue, em Palo Alto"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo um relato de 1999, qual foi a primeira contratação 'não técnica' curiosa feita pela empresa logo depois dessa mudança de endereço?",
+      "opcoes": [
+        "Um chef de cozinha",
+        "Um advogado corporativo",
+        "Um designer gráfico",
+        "Um segurança"
+      ],
+      "resposta_correta": "Um chef de cozinha"
+    }
+  ]
+}

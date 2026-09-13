@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 3,
+    "tema_desafio": "Segurança Digital e Cibersegurança",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas de epoca. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - caso judicial tratado de forma factual e neutra; atribuicao do WannaCry a grupo norte-coreano apresentada como indiciamento sem condenacao, conforme registro formal, sem juizo de valor politico.",
+    "status": "Fecha o Desafio 3 do Bloco 5 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: mesmo depois de a polícia encontrar disquetes escondidos que comprovavam sua autoria do ILOVEYOU, Onel de Guzman nunca admitiu abertamente ter agido com intenção maliciosa — em tribunal, ele confirmou ter escrito o código, mas manteve que a liberação do vírus 'poderia' ter sido acidental. Décadas depois, o verdadeiro motivo por trás de um dos ataques mais custosos da história da internet continua, em parte, um mistério.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem foi detido inicialmente pelas autoridades filipinas, sob suspeita de ser o 'criador' do vírus, antes de ser liberado por falta de provas?",
+      "opcoes": [
+        "Reonel Ramones, companheiro da irmã de de Guzman",
+        "Michael Buen, colega de faculdade de de Guzman",
+        "Um professor da AMA Computer College",
+        "Um funcionário da Microsoft"
+      ],
+      "resposta_correta": "Reonel Ramones, companheiro da irmã de de Guzman"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo um relato da imprensa filipina, qual outro estudante da AMA teve uma proposta de tese parecida, possivelmente combinada à de Guzman para formar o 'Love Bug'?",
+      "opcoes": [
+        "Michael Buen",
+        "Reonel Ramones",
+        "Irene de Guzman",
+        "Rolando Quimbo"
+      ],
+      "resposta_correta": "Michael Buen"
+    },
+    {
+      "n": 3,
+      "pergunta": "Como se chamava o advogado que representou de Guzman durante o caso?",
+      "opcoes": [
+        "Rolando (ou Ronaldo) Quimbo",
+        "Federico Opinion",
+        "Manuel Abad",
+        "Efren Meneses"
+      ],
+      "resposta_correta": "Rolando (ou Ronaldo) Quimbo"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo uma reportagem do New York Times da época, com qual expressão o jornal descreveu a cultura online das Filipinas naquele contexto?",
+      "opcoes": [
+        "'Subcultura de furto proletário' ('subculture of proletarian larceny')",
+        "'Paraíso da inovação tecnológica'",
+        "'Modelo de segurança digital'",
+        "'Ausência total de qualquer atividade online'"
+      ],
+      "resposta_correta": "'Subcultura de furto proletário' ('subculture of proletarian larceny')"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo essa mesma reportagem, qual porcentagem estimada do software usado nas Filipinas, na época, era pirata?",
+      "opcoes": [
+        "Cerca de 77%",
+        "Cerca de 7%",
+        "Cerca de 100%",
+        "Cerca de 27%"
+      ],
+      "resposta_correta": "Cerca de 77%"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo um relato jornalístico da época, como era descrito o bairro onde o vírus foi supostamente 'gestado', na periferia de Manila?",
+      "opcoes": [
+        "Um bairro barulhento no centro da cidade, com telhados de aço corrugado, onde moradores criavam galos de briga nos quintais",
+        "Um condomínio de luxo na zona nobre da cidade",
+        "Uma área totalmente rural, distante de qualquer cidade",
+        "Um distrito comercial exclusivamente empresarial"
+      ],
+      "resposta_correta": "Um bairro barulhento no centro da cidade, com telhados de aço corrugado, onde moradores criavam galos de briga nos quintais"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo um detetive de Manila citado pelo New York Times, o que ele declarou preferir enfrentar em vez do caso do 'Love Bug'?",
+      "opcoes": [
+        "Terroristas armados num beco escuro",
+        "Um assalto a banco em andamento",
+        "Um sequestro internacional",
+        "Nenhuma declaração foi registrada sobre o assunto"
+      ],
+      "resposta_correta": "Terroristas armados num beco escuro"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo um relato específico, a mãe de de Guzman tentou fazer o quê para proteger o filho, antes de a polícia encontrar evidências mesmo assim?",
+      "opcoes": [
+        "Escondeu o computador dele",
+        "Destruiu todos os disquetes existentes na casa",
+        "Contratou um advogado internacional imediatamente",
+        "Enviou o filho para fora do país"
+      ],
+      "resposta_correta": "Escondeu o computador dele"
+    },
+    {
+      "n": 9,
+      "pergunta": "Apesar de a mãe ter escondido o computador, o que a polícia encontrou no quarto de de Guzman que confirmou sua autoria do worm?",
+      "opcoes": [
+        "Disquetes escondidos contendo cópias do worm",
+        "Um diário detalhado do plano de ataque",
+        "Uma confissão escrita e assinada",
+        "Nenhuma evidência adicional foi encontrada além do computador"
+      ],
+      "resposta_correta": "Disquetes escondidos contendo cópias do worm"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo um relato, de Guzman posteriormente confirmou em tribunal ter feito o quê, mesmo sem admitir intenção maliciosa?",
+      "opcoes": [
+        "Confirmou ter escrito o script do vírus",
+        "Negou completamente qualquer envolvimento",
+        "Confessou intenção maliciosa plena",
+        "Recusou-se a comparecer a qualquer audiência"
+      ],
+      "resposta_correta": "Confirmou ter escrito o script do vírus"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo um relato, por que o julgamento concluiu que de Guzman não havia violado nenhuma lei aplicável na época?",
+      "opcoes": [
+        "Porque ele não roubou propriedade física nem violou a única lei relacionada a crimes de computador existente (fraude de cartão de crédito)",
+        "Porque as evidências foram consideradas inválidas por vício processual",
+        "Porque ele provou estar fora do país no momento do ataque",
+        "Porque a acusação retirou formalmente todas as queixas antes do julgamento"
+      ],
+      "resposta_correta": "Porque ele não roubou propriedade física nem violou a única lei relacionada a crimes de computador existente (fraude de cartão de crédito)"
+    },
+    {
+      "n": 12,
+      "pergunta": "Que dia específico é destacado como simbólico no lançamento do vírus, coincidindo com um evento importante da própria faculdade de de Guzman?",
+      "opcoes": [
+        "O dia anterior à cerimônia de formatura da faculdade",
+        "O aniversário de fundação da faculdade",
+        "O dia do vestibular de admissão",
+        "Não há nenhuma coincidência de data mencionada"
+      ],
+      "resposta_correta": "O dia anterior à cerimônia de formatura da faculdade"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo um comentário de um colega de classe de de Guzman, citado num relato jornalístico, como o ato foi descrito de forma informal?",
+      "opcoes": [
+        "Como algo 'legal' ('cool'), refletindo certa admiração entre colegas",
+        "Como um ato completamente condenado por todos os colegas",
+        "Como algo sem nenhuma repercussão entre os estudantes",
+        "Como motivo de expulsão imediata de todos os envolvidos"
+      ],
+      "resposta_correta": "Como algo 'legal' ('cool'), refletindo certa admiração entre colegas"
+    },
+    {
+      "n": 14,
+      "pergunta": "Décadas depois do WannaCry, dois indivíduos de qual país foram formalmente indiciados nos EUA por supostamente estarem ligados ao ataque, sem que uma condenação tenha sido obtida?",
+      "opcoes": [
+        "Coreia do Norte",
+        "Rússia",
+        "China",
+        "Filipinas"
+      ],
+      "resposta_correta": "Coreia do Norte"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo registros formais do incidente WannaCry, em qual cidade específica haveria a origem apontada do grupo suspeito por trás do ataque?",
+      "opcoes": [
+        "Pyongyang",
+        "Manila",
+        "Moscou",
+        "Pequim"
+      ],
+      "resposta_correta": "Pyongyang"
+    },
+    {
+      "n": 16,
+      "pergunta": "Comparando os dois casos analisados neste desafio (ILOVEYOU e WannaCry), qual semelhança estrutural existe entre a resposta institucional a ambos, mesmo com quase duas décadas de diferença?",
+      "opcoes": [
+        "Em ambos os casos, identificar e responsabilizar formalmente os responsáveis se mostrou juridicamente complexo",
+        "Em ambos os casos, os responsáveis foram condenados rapidamente sem nenhuma dificuldade",
+        "Não existe nenhuma semelhança relevante entre os dois casos",
+        "Ambos os casos foram resolvidos no mesmo dia do ataque"
+      ],
+      "resposta_correta": "Em ambos os casos, identificar e responsabilizar formalmente os responsáveis se mostrou juridicamente complexo"
+    },
+    {
+      "n": 17,
+      "pergunta": "O caso de Onel de Guzman é hoje citado, décadas depois, como precedente relevante para qual tipo de discussão internacional contínua?",
+      "opcoes": [
+        "A necessidade de legislação de crimes cibernéticos acompanhar a velocidade da inovação tecnológica",
+        "Discussões exclusivamente sobre direitos autorais musicais",
+        "Debates sobre regulamentação de trânsito urbano",
+        "Nenhuma discussão relevante decorreu desse caso"
+      ],
+      "resposta_correta": "A necessidade de legislação de crimes cibernéticos acompanhar a velocidade da inovação tecnológica"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo o relato mais detalhado sobre a motivação de de Guzman, ele considerava o acesso à internet como equivalente a quê, em termos de importância social?",
+      "opcoes": [
+        "Um direito humano necessário para acessar o conhecimento acumulado da humanidade",
+        "Um privilégio reservado apenas a poucos, sem nenhuma preocupação social",
+        "Um produto puramente comercial sem nenhuma relevância social",
+        "Uma questão irrelevante para a vida das pessoas"
+      ],
+      "resposta_correta": "Um direito humano necessário para acessar o conhecimento acumulado da humanidade"
+    },
+    {
+      "n": 19,
+      "pergunta": "Encerrando este desafio sobre segurança digital, o que a jornada completa — do Creeper inofensivo de 1971 ao WannaCry devastador de 2017 — melhor ilustra sobre a evolução das ameaças cibernéticas?",
+      "opcoes": [
+        "Como experimentos técnicos despretensiosos evoluíram para ferramentas capazes de causar bilhões de dólares em danos e afetar infraestrutura crítica global",
+        "Que as ameaças cibernéticas nunca mudaram significativamente ao longo de cinco décadas",
+        "Que apenas o Creeper representou algum risco real à segurança digital",
+        "Que a cibersegurança é um tema irrelevante para a sociedade contemporânea"
+      ],
+      "resposta_correta": "Como experimentos técnicos despretensiosos evoluíram para ferramentas capazes de causar bilhões de dólares em danos e afetar infraestrutura crítica global"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando toda a trajetória discutida neste Bloco 5 até aqui (dark web, IA e cibersegurança), qual reflexão final melhor conecta os três temas?",
+      "opcoes": [
+        "Que o avanço tecnológico frequentemente cria simultaneamente oportunidades legítimas e novos riscos, exigindo respostas legais e éticas contínuas",
+        "Que tecnologia e segurança nunca têm nenhuma relação entre si",
+        "Que apenas um dos três temas discutidos tem relevância real para o futuro da internet",
+        "Que todos os avanços tecnológicos discutidos neste bloco já estão completamente resolvidos, sem nenhum desafio remanescente"
+      ],
+      "resposta_correta": "Que o avanço tecnológico frequentemente cria simultaneamente oportunidades legítimas e novos riscos, exigindo respostas legais e éticas contínuas"
+    }
+  ]
+}

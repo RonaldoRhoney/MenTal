@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 1,
+    "tema_desafio": "ARPANET e o nascimento da World Wide Web",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes (CERN oficial, Wikipedia, veiculos de tecnologia). Todo o texto das perguntas e respostas foi escrito originalmente - nenhuma reproducao literal de nenhuma fonte consultada.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro."
+  },
+  "saiba_mais": "Curiosidade: Robert Cailliau queria batizar o projeto com um nome vindo da mitologia grega, mas foi voto vencido — Tim Berners-Lee sugeriu 'World-Wide Web', e Cailliau só concordou apontando uma ironia: o nome seria difícil de pronunciar em francês! Mesmo assim, o nome pegou e hoje é conhecido no mundo inteiro pela sigla WWW.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual foi o título formal da proposta que Tim Berners-Lee e Robert Cailliau submeteram em novembro de 1990?",
+      "opcoes": [
+        "'WorldWideWeb: Proposal for a HyperText Project'",
+        "'Internet: The Next Generation'",
+        "'Global Network Initiative'",
+        "'CERN Data Sharing Protocol'"
+      ],
+      "resposta_correta": "'WorldWideWeb: Proposal for a HyperText Project'"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quais três tecnologias fundamentais Tim Berners-Lee já havia definido até o Natal de 1990?",
+      "opcoes": [
+        "HTML, HTTP e URL",
+        "TCP/IP, DNS e FTP",
+        "Java, CSS e XML",
+        "Wi-Fi, Bluetooth e USB"
+      ],
+      "resposta_correta": "HTML, HTTP e URL"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que mês de 1991 o navegador simplificado 'Line Mode Browser' ficou disponível para usuários do CERN?",
+      "opcoes": [
+        "Março de 1991",
+        "Janeiro de 1991",
+        "Junho de 1991",
+        "Outubro de 1991"
+      ],
+      "resposta_correta": "Março de 1991"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual era a principal vantagem do Line Mode Browser em relação ao navegador original de Berners-Lee?",
+      "opcoes": [
+        "Podia rodar em uma variedade maior de computadores",
+        "Era mais rápido para carregar imagens",
+        "Tinha suporte a cores",
+        "Permitia edição de vídeo"
+      ],
+      "resposta_correta": "Podia rodar em uma variedade maior de computadores"
+    },
+    {
+      "n": 5,
+      "pergunta": "Antes de colaborar com Berners-Lee na Web, o que Robert Cailliau já havia proposto para o CERN, em 1987?",
+      "opcoes": [
+        "Um sistema de hipertexto anterior à própria Web",
+        "O primeiro computador pessoal do CERN",
+        "Um satélite de comunicação",
+        "O primeiro sistema de e-mail do mundo"
+      ],
+      "resposta_correta": "Um sistema de hipertexto anterior à própria Web"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que universidade Robert Cailliau se formou, além da Universidade de Ghent?",
+      "opcoes": [
+        "Universidade de Michigan",
+        "Universidade de Oxford",
+        "MIT",
+        "Universidade de Stanford"
+      ],
+      "resposta_correta": "Universidade de Michigan"
+    },
+    {
+      "n": 7,
+      "pergunta": "Por qual prêmio conjunto Tim Berners-Lee e Robert Cailliau foram reconhecidos por seu trabalho na Web?",
+      "opcoes": [
+        "ACM Software System Award",
+        "Prêmio Turing",
+        "Nobel de Física",
+        "Medalha Fields"
+      ],
+      "resposta_correta": "ACM Software System Award"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual foi o nome considerado por Robert Cailliau antes de aceitarem 'World-Wide Web' como nome do projeto?",
+      "opcoes": [
+        "Um nome vindo da mitologia grega",
+        "Um nome em latim",
+        "Um acrônimo técnico",
+        "O nome do próprio CERN"
+      ],
+      "resposta_correta": "Um nome vindo da mitologia grega"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual sistema operacional/plataforma de desenvolvimento do computador NeXT ajudou Berners-Lee a criar o protótipo da Web rapidamente?",
+      "opcoes": [
+        "NeXTStep",
+        "Unix tradicional",
+        "MS-DOS",
+        "Windows 3.0"
+      ],
+      "resposta_correta": "NeXTStep"
+    },
+    {
+      "n": 10,
+      "pergunta": "O primeiro navegador de Berners-Lee tinha uma função extra, além de exibir páginas. Qual?",
+      "opcoes": [
+        "Também servia como editor de páginas (navegação/autoria)",
+        "Também funcionava como calculadora",
+        "Também reproduzia música",
+        "Também servia como processador de texto offline"
+      ],
+      "resposta_correta": "Também servia como editor de páginas (navegação/autoria)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Além de páginas Web, a que outros dois tipos de conteúdo o navegador original de Berners-Lee conseguia acessar?",
+      "opcoes": [
+        "Grupos de notícias e arquivos FTP",
+        "E-mails e agendas",
+        "Vídeos e imagens em alta resolução",
+        "Jogos e planilhas"
+      ],
+      "resposta_correta": "Grupos de notícias e arquivos FTP"
+    },
+    {
+      "n": 12,
+      "pergunta": "Por que Tim Berners-Lee decidiu não patentear nem comercializar a World Wide Web?",
+      "opcoes": [
+        "Acreditava que qualquer um poderia ter feito o que ele fez, e queria que se espalhasse livremente",
+        "Porque o CERN proibiu qualquer patente de seus funcionários",
+        "Porque não tinha recursos financeiros para registrar a patente",
+        "Porque um concorrente já havia registrado uma patente parecida"
+      ],
+      "resposta_correta": "Acreditava que qualquer um poderia ter feito o que ele fez, e queria que se espalhasse livremente"
+    },
+    {
+      "n": 13,
+      "pergunta": "A que Berners-Lee comparou a ideia de lançar a Web livremente ao mundo?",
+      "opcoes": [
+        "A jogar um palito de fósforo aceso num celeiro cheio de palha",
+        "A plantar uma semente num deserto",
+        "A construir uma ponte sem fundação",
+        "A soltar um pássaro de uma gaiola"
+      ],
+      "resposta_correta": "A jogar um palito de fósforo aceso num celeiro cheio de palha"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que evento de 1990 Berners-Lee e Cailliau apresentaram suas ideias, sem conseguir investidores interessados na época?",
+      "opcoes": [
+        "Conferência Europeia de Tecnologia de Hipertexto",
+        "Feira Mundial de Tecnologia",
+        "Congresso Internacional de Física",
+        "Simpósio de Redes de Computadores"
+      ],
+      "resposta_correta": "Conferência Europeia de Tecnologia de Hipertexto"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual foi o objetivo prático original que motivou a criação da proposta da Web em 1989?",
+      "opcoes": [
+        "Ajudar cientistas de mais de 100 países a compartilhar informações entre si",
+        "Criar um sistema de entretenimento para o CERN",
+        "Vender produtos online para o público em geral",
+        "Substituir o sistema de telefonia do CERN"
+      ],
+      "resposta_correta": "Ajudar cientistas de mais de 100 países a compartilhar informações entre si"
+    },
+    {
+      "n": 16,
+      "pergunta": "O que a expressão 'aniversário da Web' costuma considerar como marco mais antigo, segundo registros históricos?",
+      "opcoes": [
+        "Março de 1989, quando a proposta original foi entregue",
+        "O ano de nascimento de Tim Berners-Lee",
+        "A fundação do CERN",
+        "A criação da ARPANET"
+      ],
+      "resposta_correta": "Março de 1989, quando a proposta original foi entregue"
+    },
+    {
+      "n": 17,
+      "pergunta": "Quantos anos, aproximadamente, separam a proposta original (1989) da disponibilização gratuita ao público (1993)?",
+      "opcoes": [
+        "Cerca de 4 anos",
+        "Cerca de 10 anos",
+        "Cerca de 1 ano",
+        "Cerca de 20 anos"
+      ],
+      "resposta_correta": "Cerca de 4 anos"
+    },
+    {
+      "n": 18,
+      "pergunta": "O primeiro site (info.cern.ch) descrevia o quê, especificamente?",
+      "opcoes": [
+        "O próprio projeto da World Wide Web",
+        "Notícias do CERN sobre física de partículas",
+        "Um catálogo de produtos",
+        "Uma lista de contatos de cientistas"
+      ],
+      "resposta_correta": "O próprio projeto da World Wide Web"
+    },
+    {
+      "n": 19,
+      "pergunta": "O que torna o marco de dezembro de 1990 tecnicamente diferente do marco de agosto de 1991?",
+      "opcoes": [
+        "Dezembro de 1990 foi quando a Web foi criada tecnicamente; agosto de 1991 foi o anúncio público",
+        "Dezembro de 1990 foi o anúncio público; agosto de 1991 foi a criação técnica",
+        "Não há diferença real entre as duas datas",
+        "Dezembro de 1990 se refere à ARPANET, não à Web"
+      ],
+      "resposta_correta": "Dezembro de 1990 foi quando a Web foi criada tecnicamente; agosto de 1991 foi o anúncio público"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual cargo posterior Tim Berners-Lee ocupou no MIT, além de dirigir o W3C?",
+      "opcoes": [
+        "Pesquisador sênior e titular da cadeira 3Com no CSAIL",
+        "Reitor da instituição",
+        "Professor de física nuclear",
+        "Diretor do departamento de economia"
+      ],
+      "resposta_correta": "Pesquisador sênior e titular da cadeira 3Com no CSAIL"
+    }
+  ]
+}

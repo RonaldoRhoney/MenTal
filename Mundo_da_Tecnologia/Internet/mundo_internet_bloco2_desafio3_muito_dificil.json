@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 3,
+    "tema_desafio": "Linux e Linus Torvalds",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente; a citacao direta do post historico foi mantida abaixo do limite de 15 palavras e usada uma unica vez, conforme diretriz de direitos autorais.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: quando Linus Torvalds anunciou seu projeto em 1991, ele mesmo insistiu que aquilo era só um hobby e que jamais chegaria a ser 'grande e profissional' como o GNU. Décadas depois, o Linux passou a rodar boa parte da nuvem pública mundial, bilhões de celulares Android e até o software de voo dos foguetes Falcon 9, da SpaceX — talvez a subestimação mais famosa da história da tecnologia.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual foi o título (subject) exato do post histórico de Torvalds no comp.os.minix, em 25 de agosto de 1991?",
+      "opcoes": [
+        "'What would you like to see most in minix?'",
+        "'Announcing a new operating system'",
+        "'My hobby project: Linux'",
+        "'Help me test my new kernel'"
+      ],
+      "resposta_correta": "'What would you like to see most in minix?'"
+    },
+    {
+      "n": 2,
+      "pergunta": "Na frase mais famosa desse post, Torvalds descreveu seu projeto como um hobby que não seria grande e profissional como qual outro projeto?",
+      "opcoes": [
+        "O GNU",
+        "O Windows",
+        "O MINIX",
+        "O Unix original"
+      ],
+      "resposta_correta": "O GNU"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo o próprio post, desde quando o projeto vinha sendo desenvolvido ('brewing'), antes do anúncio de agosto?",
+      "opcoes": [
+        "Desde abril (do mesmo ano)",
+        "Desde o ano anterior",
+        "Desde o dia anterior ao post",
+        "Desde a infância de Torvalds"
+      ],
+      "resposta_correta": "Desde abril (do mesmo ano)"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quais dois softwares Torvalds mencionou já ter portado ('ported') para seu novo sistema, no mesmo post?",
+      "opcoes": [
+        "Bash e GCC",
+        "Word e Excel",
+        "Windows e MS-DOS",
+        "Netscape e Internet Explorer"
+      ],
+      "resposta_correta": "Bash e GCC"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual versão específica do bash Torvalds mencionou ter portado, segundo o texto do post original?",
+      "opcoes": [
+        "1.08",
+        "0.02",
+        "3.0",
+        "9.1"
+      ],
+      "resposta_correta": "1.08"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual versão específica do GCC Torvalds mencionou ter portado, no mesmo post?",
+      "opcoes": [
+        "1.40",
+        "1.08",
+        "2.0",
+        "10.5"
+      ],
+      "resposta_correta": "1.40"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo o post original, o novo sistema de Torvalds era 'portável' para outros tipos de hardware além do AT/386?",
+      "opcoes": [
+        "Não, ele afirmou explicitamente que não era portável",
+        "Sim, funcionava em qualquer hardware da época",
+        "Sim, mas apenas em Macintosh",
+        "O post não menciona nada sobre portabilidade"
+      ],
+      "resposta_correta": "Não, ele afirmou explicitamente que não era portável"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual era o endereço de e-mail usado por Torvalds para enviar o post histórico?",
+      "opcoes": [
+        "torvalds@klaava.Helsinki.FI",
+        "linus@gnu.org",
+        "torvalds@minix.com",
+        "linus.torvalds@helsinki.edu"
+      ],
+      "resposta_correta": "torvalds@klaava.Helsinki.FI"
+    },
+    {
+      "n": 9,
+      "pergunta": "Aproximadamente quanto custou, em moeda finlandesa da época, o computador 386 que Torvalds usou para escrever a primeira versão do Linux?",
+      "opcoes": [
+        "18.000 marcos finlandeses (markka)",
+        "1.800 marcos finlandeses",
+        "180.000 marcos finlandeses",
+        "Ele não pagou nada, o computador foi doado"
+      ],
+      "resposta_correta": "18.000 marcos finlandeses (markka)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Como Torvalds pagou por esse computador, segundo o relato histórico?",
+      "opcoes": [
+        "Em parcelas (paid in installments)",
+        "À vista, em dinheiro",
+        "Trocou por outro equipamento",
+        "Ganhou como prêmio universitário"
+      ],
+      "resposta_correta": "Em parcelas (paid in installments)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Quais foram os dois primeiros pequenos programas que Torvalds escreveu ao começar a explorar a alternância de modos do processador 386?",
+      "opcoes": [
+        "Um que imprimia 'AAAA' infinitamente e outro que imprimia 'BBBB'",
+        "Uma calculadora e um editor de texto simples",
+        "Um jogo de tabuleiro digital e um cronômetro",
+        "Um gerador de senhas e um antivírus básico"
+      ],
+      "resposta_correta": "Um que imprimia 'AAAA' infinitamente e outro que imprimia 'BBBB'"
+    },
+    {
+      "n": 12,
+      "pergunta": "O que Torvalds conseguiu quando fez esses dois pequenos programas alternarem de forma organizada entre si?",
+      "opcoes": [
+        "Algo próximo a um sistema básico de troca de tarefas (task switching)",
+        "Um navegador de internet funcional",
+        "Um sistema de arquivos completo",
+        "Uma interface gráfica rudimentar"
+      ],
+      "resposta_correta": "Algo próximo a um sistema básico de troca de tarefas (task switching)"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo estimativas mais recentes citadas em retrospectivas, o kernel Linux passou a rodar que fração aproximada das cargas de trabalho de nuvem pública no mundo?",
+      "opcoes": [
+        "Uma parcela substancial dessas cargas de trabalho",
+        "Menos de 1%",
+        "Exatamente 50%, nem mais nem menos",
+        "Nenhuma parcela relevante até hoje"
+      ],
+      "resposta_correta": "Uma parcela substancial dessas cargas de trabalho"
+    },
+    {
+      "n": 14,
+      "pergunta": "Além de servidores de nuvem, em qual sistema operacional móvel extremamente popular o núcleo Linux está presente, segundo análises técnicas?",
+      "opcoes": [
+        "Android",
+        "iOS",
+        "Windows Phone (descontinuado)",
+        "BlackBerry OS"
+      ],
+      "resposta_correta": "Android"
+    },
+    {
+      "n": 15,
+      "pergunta": "O Linux é citado como presente na maioria de qual tipo de lista de computadores extremamente poderosos?",
+      "opcoes": [
+        "A lista TOP500 de supercomputadores",
+        "A lista Forbes de bilionários",
+        "A lista de best-sellers de livros técnicos",
+        "A lista de smartphones mais vendidos"
+      ],
+      "resposta_correta": "A lista TOP500 de supercomputadores"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma retrospectiva recente, o Linux também roda em software de voo de qual tipo específico de veículo espacial da SpaceX?",
+      "opcoes": [
+        "Foguetes Falcon 9",
+        "Ônibus espaciais da NASA",
+        "Sondas enviadas a Marte pela NASA",
+        "Satélites meteorológicos europeus"
+      ],
+      "resposta_correta": "Foguetes Falcon 9"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que ano de faculdade (curso) Torvalds estava, na Universidade de Helsinki, quando fez o anúncio histórico?",
+      "opcoes": [
+        "Segundo ano do curso de ciência da computação",
+        "Recém-formado, no primeiro emprego",
+        "Quarto e último ano da faculdade",
+        "Ainda no ensino médio, antes de entrar na universidade"
+      ],
+      "resposta_correta": "Segundo ano do curso de ciência da computação"
+    },
+    {
+      "n": 18,
+      "pergunta": "O sistema de arquivos que Torvalds descreveu em seu OS inicial tinha qual característica específica, segundo o próprio post?",
+      "opcoes": [
+        "Era multi-threaded (multitarefa)",
+        "Não tinha nenhum sistema de arquivos",
+        "Era idêntico ao do Windows",
+        "Funcionava apenas com disquetes de 5 polegadas"
+      ],
+      "resposta_correta": "Era multi-threaded (multitarefa)"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo o próprio post original, o layout físico do sistema de arquivos do novo OS se parecia com o de qual outro sistema, por razões práticas?",
+      "opcoes": [
+        "MINIX",
+        "Windows",
+        "Mac OS",
+        "Unix da AT&T diretamente, sem relação com o MINIX"
+      ],
+      "resposta_correta": "MINIX"
+    },
+    {
+      "n": 20,
+      "pergunta": "O post original de Torvalds terminava pedindo sugestões, mas com qual ressalva bem-humorada sobre implementá-las?",
+      "opcoes": [
+        "Disse que não prometia implementar todas as sugestões recebidas",
+        "Disse que pagaria por cada sugestão útil",
+        "Disse que só aceitaria sugestões em finlandês",
+        "Disse que ignoraria completamente qualquer sugestão"
+      ],
+      "resposta_correta": "Disse que não prometia implementar todas as sugestões recebidas"
+    }
+  ]
+}

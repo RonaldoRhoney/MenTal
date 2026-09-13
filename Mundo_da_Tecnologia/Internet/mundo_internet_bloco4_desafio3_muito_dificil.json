@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 3,
+    "tema_desafio": "Emojis e Gírias da Internet",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Desafio 3 do Bloco 4 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: assim como Shigetaka Kurita nunca cobrou royalties pela criação dos emojis, a Hormel Foods também acabou aceitando o uso popular da palavra 'spam' na internet — pedindo apenas que o termo fosse escrito em minúsculas, para diferenciar do nome oficial do produto, em maiúsculas. Duas histórias diferentes, mas com uma lição em comum: às vezes, uma ideia se torna tão popular que seu próprio criador precisa aprender a dividi-la com o mundo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem submeteu o nome vencedor 'SPAM' num concurso realizado pela Hormel Foods, em 1937?",
+      "opcoes": [
+        "Kenneth Daigneau, irmão de um vice-presidente da Hormel",
+        "Um funcionário anônimo da fábrica",
+        "O próprio fundador da Hormel Foods",
+        "Um consumidor comum selecionado por sorteio"
+      ],
+      "resposta_correta": "Kenneth Daigneau, irmão de um vice-presidente da Hormel"
+    },
+    {
+      "n": 2,
+      "pergunta": "A Hormel Foods já confirmou oficialmente o que a sigla 'SPAM' significa?",
+      "opcoes": [
+        "Não, a empresa nunca confirmou oficialmente, embora 'spiced ham' seja uma teoria comum",
+        "Sim, confirmou que significa exatamente 'spiced ham'",
+        "Sim, mas o significado real é mantido em segredo contratual",
+        "A empresa afirma que não é uma sigla, apenas um nome inventado sem significado"
+      ],
+      "resposta_correta": "Não, a empresa nunca confirmou oficialmente, embora 'spiced ham' seja uma teoria comum"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que cidade americana fica sediada a Hormel Foods, fabricante do SPAM?",
+      "opcoes": [
+        "Austin, Minnesota",
+        "Chicago, Illinois",
+        "Seattle, Washington",
+        "Nova York"
+      ],
+      "resposta_correta": "Austin, Minnesota"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que data exata de 1970 o famoso quadro do Monty Python sobre SPAM foi exibido pela primeira vez?",
+      "opcoes": [
+        "15 de dezembro de 1970",
+        "1º de janeiro de 1970",
+        "4 de julho de 1970",
+        "25 de dezembro de 1970"
+      ],
+      "resposta_correta": "15 de dezembro de 1970"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em qual programa de televisão britânico esse quadro foi exibido?",
+      "opcoes": [
+        "Monty Python's Flying Circus",
+        "Saturday Night Live",
+        "The Two Ronnies",
+        "Fawlty Towers"
+      ],
+      "resposta_correta": "Monty Python's Flying Circus"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma fonte específica, quais eram os principais ingredientes do produto SPAM, além da carne de porco?",
+      "opcoes": [
+        "Ombro de porco e presunto, principalmente",
+        "Frango e peru",
+        "Peixe enlatado",
+        "Carne bovina exclusivamente"
+      ],
+      "resposta_correta": "Ombro de porco e presunto, principalmente"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo um relato específico, quem primeiro documentou publicamente, em 1995, uma discussão sobre a origem do termo 'spam' na internet, citando fontes como o 'New Hacker's Dictionary'?",
+      "opcoes": [
+        "Um participante identificado como Vicki Rosenzweig, numa lista de discussão sobre dialetos americanos",
+        "O próprio criador do Monty Python",
+        "Um executivo da Hormel Foods",
+        "Tim Berners-Lee"
+      ],
+      "resposta_correta": "Um participante identificado como Vicki Rosenzweig, numa lista de discussão sobre dialetos americanos"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo essa mesma fonte de 1995, de onde a pessoa acreditava que o termo poderia ter vindo antes de se popularizar na internet, além do próprio Monty Python?",
+      "opcoes": [
+        "Possivelmente através de fãs de ficção científica ('science fiction fandom')",
+        "Diretamente de manuais técnicos militares",
+        "De um livro de receitas culinárias",
+        "De um jogo de tabuleiro popular"
+      ],
+      "resposta_correta": "Possivelmente através de fãs de ficção científica ('science fiction fandom')"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo uma fonte técnica, qual foi o mecanismo específico usado em um dos primeiros 'spams' de brincadeira, décadas antes do termo se popularizar comercialmente?",
+      "opcoes": [
+        "Um programa simples que imprimia a palavra SPAM repetidamente, num loop infinito",
+        "Um vírus que apagava arquivos do computador",
+        "Um e-mail com anexo malicioso",
+        "Uma mensagem de texto enviada por celular"
+      ],
+      "resposta_correta": "Um programa simples que imprimia a palavra SPAM repetidamente, num loop infinito"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo uma fonte, por volta de que ano o termo 'spam' já era considerado gíria de programadores para qualquer coisa indesejada na internet, antes mesmo de virar sinônimo específico de e-mail em massa?",
+      "opcoes": [
+        "Por volta de 1990",
+        "Por volta de 1937",
+        "Por volta de 1970",
+        "Apenas depois de 2000"
+      ],
+      "resposta_correta": "Por volta de 1990"
+    },
+    {
+      "n": 11,
+      "pergunta": "Sobre quem, segundo um jornal, o termo 'spam' teria sido usado pela primeira vez no sentido conhecido atualmente, cerca de 15 anos antes de uma reportagem de aniversário do termo?",
+      "opcoes": [
+        "Joel Furr, administrador de fóruns da Usenet",
+        "Kenneth Daigneau",
+        "Laurence Canter",
+        "Martha Siegel"
+      ],
+      "resposta_correta": "Joel Furr, administrador de fóruns da Usenet"
+    },
+    {
+      "n": 12,
+      "pergunta": "A gíria 'pwned', segundo uma teoria alternativa citada, também poderia ter origem em qual jogo de tabuleiro/estratégia, através de uma anotação abreviada de jogada?",
+      "opcoes": [
+        "Xadrez, com jogadores anotando jogadas como 'pawn to knight'",
+        "Dama",
+        "Banco Imobiliário",
+        "Dominó"
+      ],
+      "resposta_correta": "Xadrez, com jogadores anotando jogadas como 'pawn to knight'"
+    },
+    {
+      "n": 13,
+      "pergunta": "Considerando as duas teorias sobre a origem de 'pwned' (erro de digitação e anotação de xadrez), o que isso demonstra sobre a etimologia de muitas gírias de internet?",
+      "opcoes": [
+        "Que a origem exata de muitos termos de internet é incerta, com múltiplas explicações plausíveis concorrendo entre si",
+        "Que toda gíria de internet tem uma origem única e perfeitamente documentada",
+        "Que gírias de internet nunca têm nenhuma teoria alternativa sobre sua origem",
+        "Que apenas fontes oficiais de dicionários determinam a origem de gírias"
+      ],
+      "resposta_correta": "Que a origem exata de muitos termos de internet é incerta, com múltiplas explicações plausíveis concorrendo entre si"
+    },
+    {
+      "n": 14,
+      "pergunta": "O programa de rádio dos anos 1940 que deu origem à sigla 'FYI' tratava de que assunto específico, segundo uma fonte?",
+      "opcoes": [
+        "Esforços para conter sabotagem nos Estados Unidos",
+        "Previsão do tempo diária",
+        "Notícias esportivas",
+        "Culinária doméstica"
+      ],
+      "resposta_correta": "Esforços para conter sabotagem nos Estados Unidos"
+    },
+    {
+      "n": 15,
+      "pergunta": "Comparando as datas de origem discutidas neste desafio, qual gíria/termo tem a origem mais antiga: 'spam' (produto de 1937) ou o emoticon ':-)' (1982)?",
+      "opcoes": [
+        "'Spam', como produto alimentício, é bem mais antigo",
+        "O emoticon é mais antigo em qualquer uma de suas formas",
+        "Ambos têm exatamente a mesma data de origem",
+        "Não é possível comparar as duas origens de forma alguma"
+      ],
+      "resposta_correta": "'Spam', como produto alimentício, é bem mais antigo"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo o relato mais detalhado sobre a origem do 'spam' de internet, o comportamento de inundar canais com mensagens repetitivas era comparado a que elemento específico do quadro do Monty Python?",
+      "opcoes": [
+        "Ao canto cada vez mais alto dos vikings, que abafava toda a conversa legítima",
+        "Ao garçom que anotava os pedidos",
+        "À cliente que reclamava do cardápio",
+        "Ao dono do restaurante que aparecia no final"
+      ],
+      "resposta_correta": "Ao canto cada vez mais alto dos vikings, que abafava toda a conversa legítima"
+    },
+    {
+      "n": 17,
+      "pergunta": "Encerrando este desafio sobre emojis e gírias, o que a combinação de histórias discutidas — de Kurita não patenteando os emojis a 'spam' vindo de uma piada sobre carne enlatada — melhor ilustra sobre a linguagem da internet?",
+      "opcoes": [
+        "Que a linguagem digital muitas vezes nasce de origens inesperadas, informais e não planejadas",
+        "Que toda gíria de internet é criada por comitês formais de linguistas",
+        "Que a linguagem da internet é sempre inventada do zero, sem nenhuma raiz cultural anterior",
+        "Que apenas engenheiros de software criam novos termos de internet"
+      ],
+      "resposta_correta": "Que a linguagem digital muitas vezes nasce de origens inesperadas, informais e não planejadas"
+    },
+    {
+      "n": 18,
+      "pergunta": "Comparando a atitude de Shigetaka Kurita (não patentear os emojis) com a atitude da Hormel Foods em relação ao termo 'spam' (aceitar o uso, com condições), o que essas duas histórias têm em comum?",
+      "opcoes": [
+        "Ambas mostram criadores/detentores de marca cedendo controle total sobre um termo que se popularizou de forma orgânica",
+        "Ambas envolvem processos judiciais vencidos pelos criadores originais",
+        "Nenhuma relação existe entre as duas histórias",
+        "Ambas resultaram no banimento total do uso popular do termo"
+      ],
+      "resposta_correta": "Ambas mostram criadores/detentores de marca cedendo controle total sobre um termo que se popularizou de forma orgânica"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual das gírias discutidas neste desafio tem relação mais direta com jogos online multiplayer, tanto em sua origem quanto em seu uso mais comum?",
+      "opcoes": [
+        "'Pwned' e 'AFK'",
+        "'FYI' e 'NSFW'",
+        "'Spam' exclusivamente",
+        "'LOL' exclusivamente"
+      ],
+      "resposta_correta": "'Pwned' e 'AFK'"
+    },
+    {
+      "n": 20,
+      "pergunta": "Considerando toda a jornada deste Bloco 4 até aqui (memes, redes sociais, influenciadores, emojis e gírias), o que fica evidente sobre a 'cultura de internet' como um todo?",
+      "opcoes": [
+        "Que ela é formada por uma combinação orgânica e imprevisível de acasos históricos, criatividade coletiva e adaptação cultural",
+        "Que ela segue sempre um planejamento rígido definido por grandes empresas de tecnologia",
+        "Que ela é um fenômeno recente sem nenhuma raiz em décadas anteriores de comunicação",
+        "Que ela é irrelevante para entender a sociedade contemporânea"
+      ],
+      "resposta_correta": "Que ela é formada por uma combinação orgânica e imprevisível de acasos históricos, criatividade coletiva e adaptação cultural"
+    }
+  ]
+}

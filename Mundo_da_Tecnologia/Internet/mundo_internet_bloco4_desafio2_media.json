@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 2,
+    "tema_desafio": "Redes Sociais e a Era dos Influenciadores",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: quando o MySpace estava no auge, todo usuário novo já 'nascia' com um amigo: Tom, o cofundador da plataforma, aparecia automaticamente como o primeiro contato de qualquer perfil criado. Para toda uma geração de usuários dos anos 2000, 'Tom do MySpace' foi literalmente a primeira pessoa que 'conheceram' na internet social.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Como se chamava a figura que aparecia automaticamente como o primeiro 'amigo' de todo novo usuário do MySpace?",
+      "opcoes": [
+        "Tom (Tom Anderson, cofundador da plataforma)",
+        "Max",
+        "Sam",
+        "Jerry"
+      ],
+      "resposta_correta": "Tom (Tom Anderson, cofundador da plataforma)"
+    },
+    {
+      "n": 2,
+      "pergunta": "Até que ano, aproximadamente, o MySpace foi considerado a rede social dominante, antes de perder espaço para o Facebook?",
+      "opcoes": [
+        "2008",
+        "1997",
+        "2004",
+        "2010"
+      ],
+      "resposta_correta": "2008"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano o Fotolog, plataforma focada em fotos com legendas, foi lançado, sendo considerado um precursor do Instagram?",
+      "opcoes": [
+        "2002",
+        "1997",
+        "2010",
+        "2004"
+      ],
+      "resposta_correta": "2002"
+    },
+    {
+      "n": 4,
+      "pergunta": "Aproximadamente quantos perfis o Fotolog ainda mantinha, segundo uma fonte, mesmo anos depois de seu auge?",
+      "opcoes": [
+        "Cerca de 32 milhões",
+        "Cerca de 3 mil",
+        "Cerca de 300",
+        "Cerca de 3 milhões"
+      ],
+      "resposta_correta": "Cerca de 32 milhões"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano a rede social Six Degrees encerrou suas operações, por dificuldades financeiras?",
+      "opcoes": [
+        "2001",
+        "1997",
+        "2004",
+        "2010"
+      ],
+      "resposta_correta": "2001"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em 2016, ao analisar a base de usuários do Facebook, Mark Zuckerberg concluiu que as pessoas estavam conectadas por quantos graus de separação, em média?",
+      "opcoes": [
+        "3,5 graus",
+        "6 graus",
+        "1 grau",
+        "10 graus"
+      ],
+      "resposta_correta": "3,5 graus"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quantos usuários ativos o Facebook tinha, aproximadamente, na época dessa análise de 2016 sobre graus de separação?",
+      "opcoes": [
+        "1,59 bilhão",
+        "3 milhões",
+        "30 milhões",
+        "159 milhões"
+      ],
+      "resposta_correta": "1,59 bilhão"
+    },
+    {
+      "n": 8,
+      "pergunta": "Cite dois movimentos sociais que ganharam força e visibilidade global através das redes sociais, segundo uma retrospectiva.",
+      "opcoes": [
+        "Black Lives Matter e #MeToo",
+        "Nenhum movimento social relevante usou redes sociais",
+        "Apenas movimentos exclusivamente locais e sem alcance internacional",
+        "Movimentos restritos apenas a fóruns acadêmicos"
+      ],
+      "resposta_correta": "Black Lives Matter e #MeToo"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo uma retrospectiva, quais são alguns dos desafios enfrentados pelas redes sociais atualmente?",
+      "opcoes": [
+        "Privacidade de dados, desinformação e polarização política",
+        "Nenhum desafio relevante, o sistema é considerado perfeito",
+        "Apenas questões de design visual das interfaces",
+        "Exclusivamente problemas de conexão de internet"
+      ],
+      "resposta_correta": "Privacidade de dados, desinformação e polarização política"
+    },
+    {
+      "n": 10,
+      "pergunta": "O conceito de 'grafo social' (rede estendida de amigos de amigos), hoje usado por Facebook, Instagram e TikTok, teve origem em qual rede social pioneira?",
+      "opcoes": [
+        "Six Degrees",
+        "MySpace",
+        "TikTok",
+        "Facebook diretamente, sem influência anterior"
+      ],
+      "resposta_correta": "Six Degrees"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual foi um dos motivos técnicos que prejudicaram o crescimento contínuo do Friendster, apesar do sucesso inicial?",
+      "opcoes": [
+        "Servidores que não suportavam o volume crescente de novos usuários",
+        "Falta total de qualquer usuário interessado desde o início",
+        "Uma proibição judicial de expansão",
+        "Ausência completa de qualquer tipo de perfil de usuário"
+      ],
+      "resposta_correta": "Servidores que não suportavam o volume crescente de novos usuários"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma fonte, a conexão de internet lenta e instável dos anos 1990 foi citada como um dos motivos do quê, em relação ao Six Degrees?",
+      "opcoes": [
+        "Da baixa retenção de usuários ativos na plataforma",
+        "Do sucesso imediato e duradouro da rede",
+        "Da criação de uma versão mais rápida do site",
+        "Da expansão internacional acelerada"
+      ],
+      "resposta_correta": "Da baixa retenção de usuários ativos na plataforma"
+    },
+    {
+      "n": 13,
+      "pergunta": "O YouTube foi fundado por três ex-funcionários de qual empresa de pagamentos online?",
+      "opcoes": [
+        "PayPal",
+        "Visa",
+        "Mastercard",
+        "American Express"
+      ],
+      "resposta_correta": "PayPal"
+    },
+    {
+      "n": 14,
+      "pergunta": "Quais são os três cofundadores do YouTube?",
+      "opcoes": [
+        "Chad Hurley, Steve Chen e Jawed Karim",
+        "Mark Zuckerberg e mais dois colegas de Harvard",
+        "Larry Page, Sergey Brin e um terceiro sócio",
+        "Reed Hastings e dois cofundadores adicionais"
+      ],
+      "resposta_correta": "Chad Hurley, Steve Chen e Jawed Karim"
+    },
+    {
+      "n": 15,
+      "pergunta": "Aproximadamente por quanto o Google comprou o YouTube em 2006?",
+      "opcoes": [
+        "1,65 bilhão de dólares",
+        "165 milhões de dólares",
+        "16,5 bilhões de dólares",
+        "1,65 milhão de dólares"
+      ],
+      "resposta_correta": "1,65 bilhão de dólares"
+    },
+    {
+      "n": 16,
+      "pergunta": "Que tipo de conteúdo patrocinado se tornou o principal modelo de monetização de influenciadores digitais, além dos anúncios tradicionais de plataforma?",
+      "opcoes": [
+        "Publicidade paga por marcas dentro do próprio conteúdo do criador",
+        "Exclusivamente vendas diretas de produtos físicos",
+        "Apenas doações voluntárias de seguidores",
+        "Nenhum modelo de monetização existe para influenciadores"
+      ],
+      "resposta_correta": "Publicidade paga por marcas dentro do próprio conteúdo do criador"
+    },
+    {
+      "n": 17,
+      "pergunta": "Nos Estados Unidos, qual órgão regulador passou a exigir que influenciadores divulguem claramente quando um conteúdo é patrocinado por uma marca?",
+      "opcoes": [
+        "FTC (Federal Trade Commission)",
+        "FBI",
+        "SEC",
+        "FCC"
+      ],
+      "resposta_correta": "FTC (Federal Trade Commission)"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual termo é usado quando um influenciador informa publicamente que um conteúdo é uma parceria paga, geralmente através de hashtags como '#publi' ou '#ad'?",
+      "opcoes": [
+        "Divulgação de publicidade (disclosure)",
+        "Bloqueio de conteúdo",
+        "Moderação automática",
+        "Verificação de identidade"
+      ],
+      "resposta_correta": "Divulgação de publicidade (disclosure)"
+    },
+    {
+      "n": 19,
+      "pergunta": "O modelo de negócio dos influenciadores digitais é frequentemente comparado a qual conceito tradicional de publicidade, adaptado para a era digital?",
+      "opcoes": [
+        "Marketing boca a boca, potencializado por alcance digital massivo",
+        "Publicidade exclusivamente impressa em jornais",
+        "Comerciais de rádio tradicionais",
+        "Outdoors publicitários físicos"
+      ],
+      "resposta_correta": "Marketing boca a boca, potencializado por alcance digital massivo"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo uma retrospectiva, as redes sociais estão evoluindo para incorporar quais tecnologias emergentes, prometendo experiências mais imersivas?",
+      "opcoes": [
+        "Realidade virtual e o metaverso",
+        "Exclusivamente inteligência artificial de texto",
+        "Apenas melhorias visuais de design de interface",
+        "Nenhuma tecnologia nova está sendo incorporada"
+      ],
+      "resposta_correta": "Realidade virtual e o metaverso"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 2,
+    "tema_desafio": "E-mail e os Primeiros Serviços da Internet",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente. Controversia sobre autoria do email apresentada de forma neutra, sem tomar partido.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: existe uma disputa histórica sobre quem 'realmente' inventou o e-mail — enquanto Ray Tomlinson é amplamente reconhecido por seu trabalho pioneiro de 1971 na ARPANET, o programador Shiva Ayyadurai alega ter criado, em 1978, um sistema separado que também merece o título. A maioria dos historiadores de tecnologia, porém, considera Tomlinson o criador do e-mail em rede como o conhecemos.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem alega ter criado, em 1978, um sistema que seria o 'verdadeiro' primeiro e-mail, gerando controvérsia histórica?",
+      "opcoes": [
+        "Shiva Ayyadurai",
+        "Vint Cerf",
+        "Robert Kahn",
+        "Abhay Bhushan"
+      ],
+      "resposta_correta": "Shiva Ayyadurai"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual instituição Shiva Ayyadurai alega ter criado seu sistema de e-mail?",
+      "opcoes": [
+        "Universidade de Nova Jersey",
+        "MIT",
+        "Stanford",
+        "Harvard"
+      ],
+      "resposta_correta": "Universidade de Nova Jersey"
+    },
+    {
+      "n": 3,
+      "pergunta": "O que o sistema de Ayyadurai alegadamente emulava, segundo sua própria versão da história?",
+      "opcoes": [
+        "O sistema de troca de mensagens de um escritório, via redes locais",
+        "A ARPANET inteira",
+        "O primeiro navegador de internet",
+        "Um sistema de telefonia digital"
+      ],
+      "resposta_correta": "O sistema de troca de mensagens de um escritório, via redes locais"
+    },
+    {
+      "n": 4,
+      "pergunta": "A reivindicação de Ayyadurai sobre ter criado o 'verdadeiro' e-mail é um consenso aceito pela maioria dos historiadores da tecnologia?",
+      "opcoes": [
+        "Não, é uma reivindicação contestada, com Tomlinson mais amplamente reconhecido",
+        "Sim, é hoje o consenso histórico predominante",
+        "Sim, mas apenas fora dos Estados Unidos",
+        "Não há nenhuma disputa registrada sobre o tema"
+      ],
+      "resposta_correta": "Não, é uma reivindicação contestada, com Tomlinson mais amplamente reconhecido"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo uma teoria histórica sobre a origem mais antiga do símbolo @, de onde ele teria surgido na Europa medieval?",
+      "opcoes": [
+        "Como abreviação usada por monges copistas",
+        "Como símbolo religioso oficial da Igreja",
+        "Como marca de identificação de nobres",
+        "Como símbolo matemático de infinito"
+      ],
+      "resposta_correta": "Como abreviação usada por monges copistas"
+    },
+    {
+      "n": 6,
+      "pergunta": "Além da Arpanet e do e-mail, qual outro sistema de mensagens é citado como tendo se generalizado para oferecer 'notas pessoais' em agosto de 1971, quase ao mesmo tempo do trabalho de Tomlinson?",
+      "opcoes": [
+        "PLATO IV Notes",
+        "Usenet",
+        "IRC",
+        "BBS"
+      ],
+      "resposta_correta": "PLATO IV Notes"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual empresa desenvolveu um sistema interno primitivo de automação de escritório entre 1970 e 1972, substituído depois pelo OFS (Office System)?",
+      "opcoes": [
+        "IBM",
+        "Microsoft",
+        "Xerox",
+        "Bell Labs"
+      ],
+      "resposta_correta": "IBM"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano o sistema IBM OFS, com transferência de mensagens entre indivíduos, foi instalado pela primeira vez?",
+      "opcoes": [
+        "1974",
+        "1971",
+        "1980",
+        "1969"
+      ],
+      "resposta_correta": "1974"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual era o nome do sistema de time-sharing (compartilhamento de tempo de computador) em que Tomlinson trabalhava quando desenvolveu o e-mail?",
+      "opcoes": [
+        "TENEX",
+        "MINIX",
+        "Unix",
+        "CP/M"
+      ],
+      "resposta_correta": "TENEX"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual programa Tomlinson analisou, que permitia enviar e receber arquivos entre computadores conectados à ARPANET, antes de criar o e-mail?",
+      "opcoes": [
+        "CPYNET",
+        "SNDMSG (sozinho, sem outra referência)",
+        "FTP moderno",
+        "TCP/IP"
+      ],
+      "resposta_correta": "CPYNET"
+    },
+    {
+      "n": 11,
+      "pergunta": "Tomlinson criou um programa companheiro ao SNDMSG, que permitia ler as mensagens recebidas. Como se chamava esse programa?",
+      "opcoes": [
+        "READMAIL",
+        "INBOX",
+        "MailViewer",
+        "GetMail"
+      ],
+      "resposta_correta": "READMAIL"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em qual mês(es) aproximado(s) de 1971 Tomlinson testou pela primeira vez seu sistema de e-mail, segundo uma fonte específica?",
+      "opcoes": [
+        "Novembro ou dezembro",
+        "Janeiro ou fevereiro",
+        "Junho ou julho",
+        "Agosto exclusivamente"
+      ],
+      "resposta_correta": "Novembro ou dezembro"
+    },
+    {
+      "n": 13,
+      "pergunta": "Um porta-voz da empresa onde Tomlinson trabalhou descreveu-o, após seu falecimento, com quais duas qualidades pessoais?",
+      "opcoes": [
+        "Humilde e modesto",
+        "Ambicioso e competitivo",
+        "Reservado e distante",
+        "Extrovertido e falante"
+      ],
+      "resposta_correta": "Humilde e modesto"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo o mesmo porta-voz, desenvolver o e-mail foi, para Tomlinson, uma tarefa formalmente designada por seus superiores?",
+      "opcoes": [
+        "Não, ele estava apenas explorando possibilidades por conta própria com a ARPANET",
+        "Sim, foi um projeto oficial encomendado pelo governo dos EUA",
+        "Sim, foi uma exigência contratual específica",
+        "Não há informação sobre isso"
+      ],
+      "resposta_correta": "Não, ele estava apenas explorando possibilidades por conta própria com a ARPANET"
+    },
+    {
+      "n": 15,
+      "pergunta": "Tomlinson foi incluído em qual tipo de reconhecimento internacional relacionado à história da internet, além de prêmios técnicos?",
+      "opcoes": [
+        "O Internet Hall of Fame (Hall da Fama da Internet)",
+        "O Prêmio Nobel de Física",
+        "A Medalha Fields",
+        "O Oscar de tecnologia (categoria fictícia, não existe)"
+      ],
+      "resposta_correta": "O Internet Hall of Fame (Hall da Fama da Internet)"
+    },
+    {
+      "n": 16,
+      "pergunta": "Depois da BBN, Tomlinson continuou atuando como cientista em qual empresa, que acabou incorporando a BBN mais tarde?",
+      "opcoes": [
+        "Raytheon Co.",
+        "IBM",
+        "Google",
+        "Microsoft"
+      ],
+      "resposta_correta": "Raytheon Co."
+    },
+    {
+      "n": 17,
+      "pergunta": "O uso do símbolo @ em máquinas de escrever, antes de chegar aos computadores, é atribuído a qual grupo de usuários, segundo uma fonte?",
+      "opcoes": [
+        "Comerciantes, que o usavam para indicar preços e quantidades",
+        "Exclusivamente professores universitários",
+        "Somente jornalistas",
+        "Apenas engenheiros de telecomunicação"
+      ],
+      "resposta_correta": "Comerciantes, que o usavam para indicar preços e quantidades"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma fonte, o e-mail, décadas após sua criação, se tornou parte de que tipo de rotina para mais da metade dos americanos, no início do século XXI?",
+      "opcoes": [
+        "Uso diário de pelo menos meia hora por dia",
+        "Uso exclusivo em ambientes corporativos formais",
+        "Uso apenas uma vez por mês",
+        "Uso restrito apenas a universidades"
+      ],
+      "resposta_correta": "Uso diário de pelo menos meia hora por dia"
+    },
+    {
+      "n": 19,
+      "pergunta": "Onde Ray Tomlinson nasceu, segundo registros biográficos?",
+      "opcoes": [
+        "Nova York",
+        "Massachusetts",
+        "Califórnia",
+        "Texas"
+      ],
+      "resposta_correta": "Nova York"
+    },
+    {
+      "n": 20,
+      "pergunta": "Em que instituição Ray Tomlinson obteve seu bacharelado em engenharia elétrica, antes do mestrado no MIT?",
+      "opcoes": [
+        "Rensselaer Polytechnic Institute",
+        "Universidade de Stanford",
+        "Harvard",
+        "Universidade de Michigan"
+      ],
+      "resposta_correta": "Rensselaer Polytechnic Institute"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 1,
+    "tema_desafio": "Memes e a Propagação da Cultura Digital",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Desafio 1 do Bloco 4 (4/4 niveis)."
+  },
+  "saiba_mais": "Curiosidade: memes que nasceram como fotos espontâneas e sem nenhuma intenção comercial acabaram gerando fortunas reais décadas depois — a garota do 'Disaster Girl', fotografada aos 4 anos em 2005, vendeu a imagem original como NFT por cerca de 500 mil dólares em 2021, usando o dinheiro para pagar seus empréstimos estudantis. Um final e tanto para uma foto tirada por acaso durante uma queima controlada de bombeiros.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em fevereiro de 2021, qual meme icônico teve seu NFT original leiloado, iniciando uma onda de vendas de memes clássicos como colecionáveis digitais?",
+      "opcoes": [
+        "Nyan Cat",
+        "Disaster Girl",
+        "Grumpy Cat",
+        "Bad Luck Brian"
+      ],
+      "resposta_correta": "Nyan Cat"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quem é o criador do Nyan Cat, que vendeu o NFT do gato colorido por cerca de 600 mil dólares?",
+      "opcoes": [
+        "Chris Torres",
+        "Matt Furie",
+        "Bryan Bundesen",
+        "Tim Buckley"
+      ],
+      "resposta_correta": "Chris Torres"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em abril de 2021, a imagem original do meme 'Disaster Girl' foi vendida como NFT por aproximadamente quanto?",
+      "opcoes": [
+        "500 mil dólares",
+        "36 mil dólares",
+        "5 mil dólares",
+        "5 milhões de dólares"
+      ],
+      "resposta_correta": "500 mil dólares"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual é o nome verdadeiro da garota por trás do meme 'Disaster Girl'?",
+      "opcoes": [
+        "Zoe Roth",
+        "Laina Morris",
+        "Kyle Craven",
+        "Tardar Sauce"
+      ],
+      "resposta_correta": "Zoe Roth"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano a fotografia original de Disaster Girl foi tirada, anos antes de se tornar meme?",
+      "opcoes": [
+        "2005",
+        "2008",
+        "2012",
+        "1996"
+      ],
+      "resposta_correta": "2005"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo relatos, a casa em chamas ao fundo da foto de Disaster Girl era, na verdade, o quê?",
+      "opcoes": [
+        "Uma queima controlada, feita por bombeiros locais para limpar o terreno",
+        "Um incêndio criminoso real",
+        "Um efeito digital adicionado posteriormente",
+        "Um incêndio acidental não intencional"
+      ],
+      "resposta_correta": "Uma queima controlada, feita por bombeiros locais para limpar o terreno"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quem tirou a fotografia original que deu origem ao meme Disaster Girl?",
+      "opcoes": [
+        "Dave Roth, pai de Zoe",
+        "Um fotojornalista profissional contratado",
+        "A própria Zoe, com autorretrato",
+        "Um vizinho anônimo"
+      ],
+      "resposta_correta": "Dave Roth, pai de Zoe"
+    },
+    {
+      "n": 8,
+      "pergunta": "Para quais dois fins Zoe Roth declarou que usaria o dinheiro da venda do NFT?",
+      "opcoes": [
+        "Pagar empréstimos estudantis e doar para caridade",
+        "Comprar uma casa e um carro novo",
+        "Investir integralmente em outras criptomoedas",
+        "Financiar um filme sobre sua própria vida"
+      ],
+      "resposta_correta": "Pagar empréstimos estudantis e doar para caridade"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual empresa, sediada em Dubai, se tornou compradora frequente de NFTs de memes famosos, incluindo Disaster Girl?",
+      "opcoes": [
+        "3F Music",
+        "Foundation Corp",
+        "MemeVault",
+        "Crypto Legends"
+      ],
+      "resposta_correta": "3F Music"
+    },
+    {
+      "n": 10,
+      "pergunta": "Além de Disaster Girl, qual outro meme, protagonizado por Laina Morris, essa mesma empresa comprou por cerca de 411 mil dólares?",
+      "opcoes": [
+        "'Overly Attached Girlfriend'",
+        "'Bad Luck Brian'",
+        "'Success Kid'",
+        "'Trollface'"
+      ],
+      "resposta_correta": "'Overly Attached Girlfriend'"
+    },
+    {
+      "n": 11,
+      "pergunta": "Quem é conhecido como o protagonista real do meme 'Bad Luck Brian'?",
+      "opcoes": [
+        "Kyle Craven",
+        "Chris Torres",
+        "Dave Roth",
+        "Zoe Roth"
+      ],
+      "resposta_correta": "Kyle Craven"
+    },
+    {
+      "n": 12,
+      "pergunta": "Por aproximadamente quanto o meme 'Bad Luck Brian' foi vendido como NFT em março de 2021?",
+      "opcoes": [
+        "36 mil dólares",
+        "500 mil dólares",
+        "5 mil dólares",
+        "5 milhões de dólares"
+      ],
+      "resposta_correta": "36 mil dólares"
+    },
+    {
+      "n": 13,
+      "pergunta": "Como parte do acordo de venda de NFT de meme, o que geralmente acontece com os direitos autorais da imagem original, segundo o padrão observado nesses casos?",
+      "opcoes": [
+        "A família ou criador original costuma manter os direitos autorais e receber uma porcentagem de vendas futuras",
+        "Os direitos autorais são transferidos totalmente e irrevogavelmente ao comprador",
+        "Não existe nenhum tipo de acordo sobre direitos autorais nesses casos",
+        "Os direitos autorais deixam de existir após a venda como NFT"
+      ],
+      "resposta_correta": "A família ou criador original costuma manter os direitos autorais e receber uma porcentagem de vendas futuras"
+    },
+    {
+      "n": 14,
+      "pergunta": "Quais dois criadores são creditados pela invenção do Dogecoin, a criptomoeda baseada no meme Doge?",
+      "opcoes": [
+        "Billy Markus e Jackson Palmer",
+        "Chris Torres e Kyle Craven",
+        "Matt Furie e Tim Buckley",
+        "Rick Astley e Carlos Ramirez"
+      ],
+      "resposta_correta": "Billy Markus e Jackson Palmer"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo o próprio conceito original, o Dogecoin foi criado com qual intenção, ao contrário de outras criptomoedas mais 'sérias' da época?",
+      "opcoes": [
+        "Como uma piada/brincadeira sobre o mundo das criptomoedas",
+        "Como um projeto sério de substituição total do sistema bancário",
+        "Como uma ferramenta exclusiva para governos",
+        "Como um produto vendido apenas para investidores institucionais"
+      ],
+      "resposta_correta": "Como uma piada/brincadeira sobre o mundo das criptomoedas"
+    },
+    {
+      "n": 16,
+      "pergunta": "O interesse de Rick Astley pela cultura do 'Rickroll', anos após o fenômeno original, foi descrito, segundo entrevistas, com qual tom geral?",
+      "opcoes": [
+        "Bem-humorado, aceitando o fenômeno como parte curiosa de sua carreira",
+        "De extrema irritação e processos judiciais constantes",
+        "De total desconhecimento do fenômeno até hoje",
+        "De tentativa constante de banir o uso da música"
+      ],
+      "resposta_correta": "Bem-humorado, aceitando o fenômeno como parte curiosa de sua carreira"
+    },
+    {
+      "n": 17,
+      "pergunta": "Considerando o valor de venda comparativo entre os NFTs mencionados neste desafio (Nyan Cat, Disaster Girl, Bad Luck Brian), qual desses teve o maior valor de venda registrado?",
+      "opcoes": [
+        "Disaster Girl (cerca de 500 mil dólares)",
+        "Bad Luck Brian (36 mil dólares)",
+        "Nyan Cat (600 mil dólares, o maior entre os citados)",
+        "Todos tiveram exatamente o mesmo valor"
+      ],
+      "resposta_correta": "Nyan Cat (600 mil dólares, o maior entre os citados)"
+    },
+    {
+      "n": 18,
+      "pergunta": "O fenômeno de vender memes clássicos como NFTs, concentrado principalmente em que ano, segundo as fontes consultadas?",
+      "opcoes": [
+        "2021",
+        "1996",
+        "2008",
+        "2013"
+      ],
+      "resposta_correta": "2021"
+    },
+    {
+      "n": 19,
+      "pergunta": "O que essa onda de vendas de memes como NFTs demonstra sobre a relação entre cultura de internet e valor econômico?",
+      "opcoes": [
+        "Como conteúdo criado de forma espontânea e não comercial pode, décadas depois, gerar valor financeiro real para seus protagonistas",
+        "Que memes nunca têm nenhum valor comercial real",
+        "Que apenas empresas grandes podem lucrar com cultura de internet",
+        "Que NFTs são a única forma possível de monetizar um meme"
+      ],
+      "resposta_correta": "Como conteúdo criado de forma espontânea e não comercial pode, décadas depois, gerar valor financeiro real para seus protagonistas"
+    },
+    {
+      "n": 20,
+      "pergunta": "Encerrando este desafio sobre memes — do conceito acadêmico de Dawkins em 1976 até NFTs multimilionários em 2021 — o que essa longa trajetória melhor resume sobre a cultura digital?",
+      "opcoes": [
+        "Como uma ideia simples sobre a propagação cultural pode evoluir de forma totalmente imprevisível ao longo de décadas",
+        "Que memes são um fenômeno recente, surgido apenas com as redes sociais modernas",
+        "Que todos os memes acabam se tornando produtos financeiros valiosos",
+        "Que a cultura de memes é irrelevante para entender a internet"
+      ],
+      "resposta_correta": "Como uma ideia simples sobre a propagação cultural pode evoluir de forma totalmente imprevisível ao longo de décadas"
+    }
+  ]
+}

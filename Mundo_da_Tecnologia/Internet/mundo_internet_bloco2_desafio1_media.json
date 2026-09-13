@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 1,
+    "tema_desafio": "Windows e Bill Gates",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: antes mesmo de fundar a Microsoft, Bill Gates e Paul Allen já haviam se aventurado juntos numa pequena empresa chamada Traf-O-Data, criada ainda na adolescência para processar dados de tráfego urbano usando um dos primeiros microprocessadores disponíveis — um sinal precoce da parceria que, poucos anos depois, mudaria a computação pessoal para sempre.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "De qual empresa a Microsoft adquiriu os direitos do sistema que se tornaria a base do MS-DOS?",
+      "opcoes": [
+        "Seattle Computer Products",
+        "IBM",
+        "Apple",
+        "Xerox"
+      ],
+      "resposta_correta": "Seattle Computer Products"
+    },
+    {
+      "n": 2,
+      "pergunta": "Como era chamado o sistema original comprado pela Microsoft antes de ser aprimorado e virar o MS-DOS?",
+      "opcoes": [
+        "Q-DOS (também conhecido como 86-DOS)",
+        "CP/M",
+        "Unix",
+        "BASIC-OS"
+      ],
+      "resposta_correta": "Q-DOS (também conhecido como 86-DOS)"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano a Microsoft fechou o acordo com a IBM para desenvolver o sistema operacional do primeiro PC da IBM?",
+      "opcoes": [
+        "1980",
+        "1975",
+        "1985",
+        "1990"
+      ],
+      "resposta_correta": "1980"
+    },
+    {
+      "n": 4,
+      "pergunta": "O que tornou o acordo entre Microsoft e IBM especialmente lucrativo para Gates e Allen, segundo registros históricos?",
+      "opcoes": [
+        "Uma cláusula de exclusividade que beneficiava a Microsoft nos computadores IBM",
+        "A IBM pagou um valor único e definitivo pelo software",
+        "A Microsoft recebeu ações da própria IBM",
+        "O acordo não tinha nenhuma cláusula especial"
+      ],
+      "resposta_correta": "Uma cláusula de exclusividade que beneficiava a Microsoft nos computadores IBM"
+    },
+    {
+      "n": 5,
+      "pergunta": "A que sistema operacional concorrente o MS-DOS original se assemelhava, segundo análises da época?",
+      "opcoes": [
+        "CP/M",
+        "Unix",
+        "Mac OS",
+        "Linux"
+      ],
+      "resposta_correta": "CP/M"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que faculdade Paul Allen estudava antes de se juntar a Gates para fundar a Microsoft?",
+      "opcoes": [
+        "Universidade Estadual de Washington",
+        "Harvard",
+        "MIT",
+        "Stanford"
+      ],
+      "resposta_correta": "Universidade Estadual de Washington"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual foi o nome de uma empresa embrionária que Gates e Allen chegaram a fundar ainda na adolescência, antes da Microsoft, para processar dados de tráfego?",
+      "opcoes": [
+        "Uma empresa não formalmente nomeada nos registros mais comuns, focada em dados de tráfego urbano",
+        "Traf-O-Data",
+        "DataFlow Inc.",
+        "TrafficSoft"
+      ],
+      "resposta_correta": "Traf-O-Data"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual versão do Windows é considerada o verdadeiro ponto de inflexão rumo à popularização da interface gráfica, antes do sucesso do Windows 95?",
+      "opcoes": [
+        "Windows 3.0 (1990)",
+        "Windows 1.0 (1985)",
+        "Windows ME",
+        "Windows CE"
+      ],
+      "resposta_correta": "Windows 3.0 (1990)"
+    },
+    {
+      "n": 9,
+      "pergunta": "As primeiras versões do Windows funcionavam de que forma em relação ao MS-DOS?",
+      "opcoes": [
+        "Como uma camada gráfica rodando sobre o MS-DOS",
+        "Como um sistema totalmente independente do MS-DOS",
+        "Substituíam completamente o MS-DOS desde o início",
+        "Não tinham nenhuma relação com o MS-DOS"
+      ],
+      "resposta_correta": "Como uma camada gráfica rodando sobre o MS-DOS"
+    },
+    {
+      "n": 10,
+      "pergunta": "Quanto custava o Windows 1.0 em seu lançamento, segundo registros?",
+      "opcoes": [
+        "99 dólares",
+        "9,99 dólares",
+        "999 dólares",
+        "Era gratuito"
+      ],
+      "resposta_correta": "99 dólares"
+    },
+    {
+      "n": 11,
+      "pergunta": "Que tipo de processo jurídico a Microsoft enfrentou repetidamente ao longo das décadas de 1980 e 1990?",
+      "opcoes": [
+        "Ações antitruste (concorrência desleal)",
+        "Processos trabalhistas em massa",
+        "Disputas de patente com a IBM",
+        "Processos por violação ambiental"
+      ],
+      "resposta_correta": "Ações antitruste (concorrência desleal)"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que ano, aproximadamente, as vendas da Microsoft superaram a marca de 1 milhão de dólares pela primeira vez?",
+      "opcoes": [
+        "1978",
+        "1975",
+        "1985",
+        "1990"
+      ],
+      "resposta_correta": "1978"
+    },
+    {
+      "n": 13,
+      "pergunta": "Bill Gates obteve uma pontuação notável em qual exame antes de entrar em Harvard?",
+      "opcoes": [
+        "SAT (teste de aptidão), com 1590 de 1600 pontos",
+        "Um exame de programação avançada",
+        "O vestibular do MIT",
+        "Um teste de QI padronizado"
+      ],
+      "resposta_correta": "SAT (teste de aptidão), com 1590 de 1600 pontos"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual curso Bill Gates escolheu inicialmente ao entrar em Harvard, antes de migrar para matemática e ciência da computação?",
+      "opcoes": [
+        "Direito",
+        "Medicina",
+        "Economia",
+        "Engenharia"
+      ],
+      "resposta_correta": "Direito"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quem Bill Gates conheceu durante seu período em Harvard, que viria a se tornar CEO da Microsoft anos depois?",
+      "opcoes": [
+        "Steve Ballmer",
+        "Satya Nadella",
+        "Paul Allen (já eram amigos antes)",
+        "Steve Jobs"
+      ],
+      "resposta_correta": "Steve Ballmer"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que ano Bill Gates oficialmente se retirou do dia a dia da Microsoft, embora mantendo posição de conselheiro?",
+      "opcoes": [
+        "2008",
+        "2000",
+        "1995",
+        "2014"
+      ],
+      "resposta_correta": "2008"
+    },
+    {
+      "n": 17,
+      "pergunta": "Que laboratório de pesquisa é frequentemente citado como uma das influências técnicas por trás da interface gráfica adotada pelo Windows?",
+      "opcoes": [
+        "Xerox PARC",
+        "Bell Labs",
+        "IBM Research",
+        "MIT Media Lab"
+      ],
+      "resposta_correta": "Xerox PARC"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual foi, aproximadamente, o valor de mercado estimado da Microsoft ao completar 45 anos, em 2020?",
+      "opcoes": [
+        "Cerca de 412,5 bilhões de dólares",
+        "Cerca de 1 milhão de dólares",
+        "Cerca de 2 trilhões de dólares",
+        "Cerca de 10 bilhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 412,5 bilhões de dólares"
+    },
+    {
+      "n": 19,
+      "pergunta": "Depois de sair da Microsoft em 1983, em quais outras empresas Paul Allen esteve envolvido, segundo registros?",
+      "opcoes": [
+        "Ticketmaster e Charter Communications",
+        "Apple e IBM",
+        "Google e Yahoo",
+        "Sony e Nintendo"
+      ],
+      "resposta_correta": "Ticketmaster e Charter Communications"
+    },
+    {
+      "n": 20,
+      "pergunta": "Em que ano Paul Allen faleceu, segundo registros históricos?",
+      "opcoes": [
+        "2018",
+        "2008",
+        "2000",
+        "2020"
+      ],
+      "resposta_correta": "2018"
+    }
+  ]
+}

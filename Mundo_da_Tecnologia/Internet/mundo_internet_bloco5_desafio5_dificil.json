@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 5,
+    "tema_desafio": "O Futuro da Internet: Tendências e Especulações",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo TecMundo e ComputerWeekly Brasil. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - opinioes de figuras publicas (Musk, Wood) apresentadas como opinioes atribuidas, nao como fatos ou posicionamento proprio; debate sobre Web 3.0 tratado de forma equilibrada, apresentando visoes divergentes."
+  },
+  "saiba_mais": "Curiosidade: o termo 'metaverso', hoje associado a gigantes de tecnologia investindo bilhões de dólares, nasceu bem antes disso — foi criado em 1992, na ficção científica do livro 'Snow Crash', do escritor Neal Stephenson, décadas antes de qualquer empresa real tentar construir algo parecido de verdade. Mais um exemplo de como a ficção científica frequentemente antecipa, com anos ou décadas de antecedência, conceitos que a tecnologia real só viria a perseguir depois.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que livro de ficção científica, de 1992, o termo 'metaverso' foi originalmente criado?",
+      "opcoes": [
+        "'Snow Crash' ('Nevasca'), de Neal Stephenson",
+        "'1984', de George Orwell",
+        "'Neuromancer', de William Gibson",
+        "'Admirável Mundo Novo', de Aldous Huxley"
+      ],
+      "resposta_correta": "'Snow Crash' ('Nevasca'), de Neal Stephenson"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo uma descrição, o termo 'metaverso' passou a ser usado popularmente para descrever quais espaços virtuais mais antigos?",
+      "opcoes": [
+        "Second Life e World of Warcraft",
+        "Apenas o próprio Facebook original",
+        "Exclusivamente jogos de tabuleiro digitais",
+        "Somente fóruns de texto simples"
+      ],
+      "resposta_correta": "Second Life e World of Warcraft"
+    },
+    {
+      "n": 3,
+      "pergunta": "Cite duas plataformas mais contemporâneas também associadas ao conceito de metaverso, segundo uma análise.",
+      "opcoes": [
+        "Decentraland e The Sandbox",
+        "Orkut e MySpace",
+        "ARPANET e Usenet",
+        "ILOVEYOU e WannaCry"
+      ],
+      "resposta_correta": "Decentraland e The Sandbox"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quais são consideradas, segundo uma análise, as 'sete camadas' conceituais do metaverso, começando pela 'Experiência'?",
+      "opcoes": [
+        "Experiência, Descoberta, Creator Economy, Spatial Computing, Descentralização, Interface Humana e Infraestrutura",
+        "Apenas duas camadas: hardware e software",
+        "Uma única camada, sem nenhuma subdivisão",
+        "Dez camadas técnicas exclusivamente de programação"
+      ],
+      "resposta_correta": "Experiência, Descoberta, Creator Economy, Spatial Computing, Descentralização, Interface Humana e Infraestrutura"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo uma opinião pública de Elon Musk, como ele descreveu o conceito de Web 3.0, de forma crítica?",
+      "opcoes": [
+        "Como algo que parece 'mais marketing do que realidade'",
+        "Como a solução definitiva para todos os problemas da internet",
+        "Como uma tecnologia já totalmente comprovada e sem nenhuma controvérsia",
+        "Como um projeto que ele mesmo lidera integralmente"
+      ],
+      "resposta_correta": "Como algo que parece 'mais marketing do que realidade'"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo essa mesma opinião, o que Musk afirmou acreditar sobre o efeito real da descentralização proposta pela Web 3.0?",
+      "opcoes": [
+        "Que não democratizaria a internet, apenas trocaria quem está no poder",
+        "Que resolveria definitivamente todos os problemas de desigualdade digital",
+        "Que eliminaria completamente qualquer empresa de tecnologia",
+        "Que não teria absolutamente nenhum efeito prático"
+      ],
+      "resposta_correta": "Que não democratizaria a internet, apenas trocaria quem está no poder"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual empresa Elon Musk ajudou a fundar, especializada em interfaces cérebro-computador, citada como alternativa ao metaverso tradicional?",
+      "opcoes": [
+        "Neuralink",
+        "OpenAI",
+        "SpaceX",
+        "Tesla exclusivamente"
+      ],
+      "resposta_correta": "Neuralink"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo Musk, o que essa tecnologia poderia viabilizar, a longo prazo, em relação à realidade virtual?",
+      "opcoes": [
+        "Colocar uma pessoa 'totalmente' numa realidade virtual, sem a necessidade de óculos de VR",
+        "Substituir completamente qualquer necessidade de internet",
+        "Eliminar toda forma de comunicação digital existente",
+        "Nenhuma aplicação prática foi sugerida por ele"
+      ],
+      "resposta_correta": "Colocar uma pessoa 'totalmente' numa realidade virtual, sem a necessidade de óculos de VR"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo uma definição técnica, o que caracterizava a chamada 'Web 1.0' (também chamada de 'Web Estática')?",
+      "opcoes": [
+        "Sites funcionavam como panfletos digitais, com pouca interação e usuários como consumidores passivos",
+        "Total interatividade e conteúdo gerado majoritariamente pelos usuários",
+        "Uso extensivo de blockchain desde o início",
+        "Presença de inteligência artificial avançada em todas as páginas"
+      ],
+      "resposta_correta": "Sites funcionavam como panfletos digitais, com pouca interação e usuários como consumidores passivos"
+    },
+    {
+      "n": 10,
+      "pergunta": "O que caracterizou a transição para a chamada 'Web 2.0', segundo a mesma análise?",
+      "opcoes": [
+        "Usuários passaram a criar e compartilhar conteúdo, com redes sociais e plataformas colaborativas",
+        "Um retrocesso a páginas totalmente estáticas",
+        "O fim completo de qualquer interação entre usuários",
+        "A eliminação total do uso de HTML"
+      ],
+      "resposta_correta": "Usuários passaram a criar e compartilhar conteúdo, com redes sociais e plataformas colaborativas"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo uma análise técnica sobre Web 2.0, qual foi o modelo de negócio principal que surgiu a partir da coleta ampla de dados pessoais dos usuários?",
+      "opcoes": [
+        "Publicidade mais personalizada, gerando mais cliques e receita para as empresas",
+        "Cobrança direta obrigatória por cada acesso a qualquer site",
+        "Nenhum modelo de negócio relevante surgiu dessa mudança",
+        "Venda exclusiva de hardware físico"
+      ],
+      "resposta_correta": "Publicidade mais personalizada, gerando mais cliques e receita para as empresas"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma definição técnica, quais características são citadas como fundamentais da proposta de 'Web 3.0'?",
+      "opcoes": [
+        "Verificável, sem necessidade de confiança centralizada (trustless), autogovernada e distribuída",
+        "Idêntica em tudo à Web 1.0 original",
+        "Baseada exclusivamente em conexão discada",
+        "Sem nenhuma relação com tecnologia blockchain"
+      ],
+      "resposta_correta": "Verificável, sem necessidade de confiança centralizada (trustless), autogovernada e distribuída"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quem é o cofundador do Ethereum citado como tendo descrito a Web 3.0 como base para a liberdade individual contra o excesso de autoridade de grandes poderes?",
+      "opcoes": [
+        "Gavin Wood",
+        "Vitalik Buterin (o mais conhecido, mas não o citado nesta descrição específica)",
+        "Satoshi Nakamoto",
+        "Nick Szabo"
+      ],
+      "resposta_correta": "Gavin Wood"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo essa descrição, a quem especificamente essa visão de 'liberdade' contra 'tiranos' se refere, no contexto de tecnologia?",
+      "opcoes": [
+        "Tanto a grandes empresas de tecnologia quanto a governos que poderiam restringir o acesso à internet",
+        "Exclusivamente a um único governo específico, sem generalização",
+        "A nenhuma entidade concreta, apenas uma metáfora vazia",
+        "Apenas a pequenas empresas iniciantes de tecnologia"
+      ],
+      "resposta_correta": "Tanto a grandes empresas de tecnologia quanto a governos que poderiam restringir o acesso à internet"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo a mesma fonte técnica, qual é, honestamente, o consenso sobre quando a Web 3.0 vai 'de fato' se concretizar plenamente?",
+      "opcoes": [
+        "Ainda é uma resposta vaga e incerta, sem data definida",
+        "Já está 100% implementada e finalizada globalmente",
+        "Tem uma data exata e amplamente acordada entre especialistas",
+        "Nunca será implementada, segundo consenso técnico unânime"
+      ],
+      "resposta_correta": "Ainda é uma resposta vaga e incerta, sem data definida"
+    },
+    {
+      "n": 16,
+      "pergunta": "Quem definiu originalmente, em 1989, o conceito daquilo que viria a ser chamado retroativamente de 'primeira geração' da web?",
+      "opcoes": [
+        "Tim Berners-Lee",
+        "Elon Musk",
+        "Vitalik Buterin",
+        "Satoshi Nakamoto"
+      ],
+      "resposta_correta": "Tim Berners-Lee"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual navegador é citado como o primeiro navegador 'moderno' que permitiu ao público em geral visualizar facilmente páginas da web, já discutido em outro Bloco deste Mundo?",
+      "opcoes": [
+        "NCSA Mosaic",
+        "Netscape Navigator",
+        "Internet Explorer",
+        "Google Chrome"
+      ],
+      "resposta_correta": "NCSA Mosaic"
+    },
+    {
+      "n": 18,
+      "pergunta": "Um autor de análise sobre metaverso e Web 3.0 expressou opinião pessoal sobre 'separar a web em versões'. Qual foi essa opinião?",
+      "opcoes": [
+        "Que prefere ver a web como uma única entidade evoluindo aos poucos, não versões separadas e distintas",
+        "Que as versões da web são categorias absolutamente rígidas e bem definidas",
+        "Que não existe nenhuma diferença real entre as versões da web",
+        "Que apenas engenheiros deveriam opinar sobre esse tema"
+      ],
+      "resposta_correta": "Que prefere ver a web como uma única entidade evoluindo aos poucos, não versões separadas e distintas"
+    },
+    {
+      "n": 19,
+      "pergunta": "Considerando as opiniões divergentes de figuras como Elon Musk e Gavin Wood sobre Web 3.0, o que essa divergência sugere sobre o debate atual em torno dessa tecnologia?",
+      "opcoes": [
+        "Que existe um debate legítimo e ativo entre especialistas sobre o real potencial e limitações da Web 3.0",
+        "Que não existe absolutamente nenhuma controvérsia sobre o tema",
+        "Que apenas uma única visão sobre Web 3.0 é considerada válida por toda a indústria",
+        "Que a Web 3.0 já é consenso total entre todos os especialistas do setor"
+      ],
+      "resposta_correta": "Que existe um debate legítimo e ativo entre especialistas sobre o real potencial e limitações da Web 3.0"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a evolução conceitual de Web 1.0 (estática) para Web 2.0 (colaborativa) e Web 3.0 (proposta descentralizada) melhor ilustra sobre a trajetória da internet como um todo?",
+      "opcoes": [
+        "Como a relação entre usuários e a própria estrutura da internet tem mudado continuamente ao longo das décadas",
+        "Que a internet permaneceu completamente estática desde sua criação",
+        "Que apenas uma única mudança relevante ocorreu em toda a história da web",
+        "Que essas mudanças não têm nenhuma relação com o comportamento real dos usuários"
+      ],
+      "resposta_correta": "Como a relação entre usuários e a própria estrutura da internet tem mudado continuamente ao longo das décadas"
+    }
+  ]
+}

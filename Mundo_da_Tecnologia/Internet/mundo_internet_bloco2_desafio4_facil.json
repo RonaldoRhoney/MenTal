@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 4,
+    "tema_desafio": "Android e a evolução dos sistemas móveis",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro."
+  },
+  "saiba_mais": "Curiosidade: até o anúncio do primeiro iPhone, em 2007, o Android estava sendo desenvolvido numa direção completamente diferente, sem tela sensível ao toque como foco principal. Ao assistir à apresentação de Steve Jobs, o próprio Andy Rubin teria reagido percebendo que o projeto precisava mudar de rumo — e, em pouco tempo, o Android passou a se aproximar bem mais da experiência de toque que conhecemos hoje.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem fundou a empresa Android Inc.?",
+      "opcoes": [
+        "Andy Rubin e outros três empresários de tecnologia",
+        "Bill Gates e Paul Allen",
+        "Steve Jobs e Steve Wozniak",
+        "Linus Torvalds sozinho"
+      ],
+      "resposta_correta": "Andy Rubin e outros três empresários de tecnologia"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a Android Inc. foi fundada?",
+      "opcoes": [
+        "2003",
+        "1991",
+        "2008",
+        "1998"
+      ],
+      "resposta_correta": "2003"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual empresa comprou a Android Inc. em 2005?",
+      "opcoes": [
+        "Google",
+        "Apple",
+        "Microsoft",
+        "Samsung"
+      ],
+      "resposta_correta": "Google"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual foi o foco original da Android Inc., antes de mudar para celulares?",
+      "opcoes": [
+        "Sistemas operacionais para câmeras digitais",
+        "Videogames portáteis",
+        "Impressoras domésticas",
+        "Televisores inteligentes"
+      ],
+      "resposta_correta": "Sistemas operacionais para câmeras digitais"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano o primeiro celular com Android foi lançado comercialmente?",
+      "opcoes": [
+        "2008",
+        "2003",
+        "2005",
+        "2010"
+      ],
+      "resposta_correta": "2008"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual foi o nome do primeiro celular Android lançado comercialmente?",
+      "opcoes": [
+        "HTC Dream (T-Mobile G1)",
+        "iPhone",
+        "Nokia 3310",
+        "Samsung Galaxy S"
+      ],
+      "resposta_correta": "HTC Dream (T-Mobile G1)"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual fabricante produziu o primeiro celular Android?",
+      "opcoes": [
+        "HTC",
+        "Samsung",
+        "Apple",
+        "Nokia"
+      ],
+      "resposta_correta": "HTC"
+    },
+    {
+      "n": 8,
+      "pergunta": "O sistema Android é baseado em qual outro sistema operacional?",
+      "opcoes": [
+        "Linux",
+        "Windows",
+        "MS-DOS",
+        "Mac OS"
+      ],
+      "resposta_correta": "Linux"
+    },
+    {
+      "n": 9,
+      "pergunta": "O Android é um sistema de código aberto ou fechado?",
+      "opcoes": [
+        "Código aberto",
+        "Totalmente fechado e proprietário",
+        "Metade aberto, metade fechado sem definição clara",
+        "Não existe informação sobre isso"
+      ],
+      "resposta_correta": "Código aberto"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual é a origem do nome 'Android', segundo relatos sobre seu criador?",
+      "opcoes": [
+        "Vem da palavra 'andróide' e também do apelido de Andy Rubin, ligado à sua paixão por robótica",
+        "É uma sigla técnica sem nenhum significado",
+        "Foi escolhido por sorteio entre os fundadores",
+        "Vem do nome de uma cidade japonesa"
+      ],
+      "resposta_correta": "Vem da palavra 'andróide' e também do apelido de Andy Rubin, ligado à sua paixão por robótica"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual consórcio de empresas, formado em 2007, ajudou a impulsionar o desenvolvimento do Android como plataforma aberta?",
+      "opcoes": [
+        "Open Handset Alliance",
+        "World Wide Web Consortium",
+        "Alliance for Open Media",
+        "Linux Foundation"
+      ],
+      "resposta_correta": "Open Handset Alliance"
+    },
+    {
+      "n": 12,
+      "pergunta": "Cite uma empresa que fez parte do consórcio formado para impulsionar o Android.",
+      "opcoes": [
+        "Samsung",
+        "Nokia (concorrente na época)",
+        "Sony Ericsson exclusivamente",
+        "Nenhuma empresa participou, foi só o Google"
+      ],
+      "resposta_correta": "Samsung"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual sistema operacional de celular dominava o mercado antes da chegada do Android?",
+      "opcoes": [
+        "Symbian, da Nokia",
+        "iOS",
+        "Windows Phone",
+        "BlackBerry OS"
+      ],
+      "resposta_correta": "Symbian, da Nokia"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual lançamento de outra empresa é citado como tendo influenciado diretamente a mudança de rumo do projeto Android, pouco antes de seu lançamento?",
+      "opcoes": [
+        "O anúncio do primeiro iPhone",
+        "O lançamento do Windows Vista",
+        "A criação do Facebook",
+        "O lançamento do primeiro Kindle"
+      ],
+      "resposta_correta": "O anúncio do primeiro iPhone"
+    },
+    {
+      "n": 15,
+      "pergunta": "Aproximadamente qual porcentagem dos smartphones ativos no mundo usa Android atualmente, segundo dados citados?",
+      "opcoes": [
+        "Mais de 70%",
+        "Cerca de 10%",
+        "Exatamente 50%",
+        "Menos de 5%"
+      ],
+      "resposta_correta": "Mais de 70%"
+    },
+    {
+      "n": 16,
+      "pergunta": "Além de celulares, em quais outros tipos de dispositivo o Android também está presente hoje?",
+      "opcoes": [
+        "Tablets, TVs e relógios inteligentes",
+        "Apenas em geladeiras",
+        "Somente em consoles de videogame antigos",
+        "Exclusivamente em máquinas de café"
+      ],
+      "resposta_correta": "Tablets, TVs e relógios inteligentes"
+    },
+    {
+      "n": 17,
+      "pergunta": "Que operadora tinha exclusividade sobre o primeiro celular Android nos Estados Unidos?",
+      "opcoes": [
+        "T-Mobile",
+        "AT&T",
+        "Verizon",
+        "Sprint"
+      ],
+      "resposta_correta": "T-Mobile"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual empresa concorrente tinha exclusividade sobre o iPhone, de forma parecida com a T-Mobile e o Android?",
+      "opcoes": [
+        "AT&T",
+        "T-Mobile",
+        "Sprint",
+        "Vivo"
+      ],
+      "resposta_correta": "AT&T"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em que ano a produção do primeiro celular Android (HTC Dream) foi encerrada pela fabricante?",
+      "opcoes": [
+        "2010",
+        "2008",
+        "2005",
+        "2015"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 20,
+      "pergunta": "A divisão criada dentro do Google após a compra da Android Inc. recebeu qual nome?",
+      "opcoes": [
+        "Google Mobile Division",
+        "Google Hardware Labs",
+        "Alphabet Mobile",
+        "Google X"
+      ],
+      "resposta_correta": "Google Mobile Division"
+    }
+  ]
+}

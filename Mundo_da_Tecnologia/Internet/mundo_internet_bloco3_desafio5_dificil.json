@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 5,
+    "tema_desafio": "Outros Gigantes: Twitter/X, Wikipedia e TikTok",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - tema geopolitico do banimento do TikTok tratado de forma estritamente factual e neutra, apresentando argumentos de ambos os lados (seguranca nacional e liberdade de expressao) sem tomar partido politico."
+  },
+  "saiba_mais": "Curiosidade: Jimmy Wales e Larry Sanger, cofundadores da Wikipedia, discordam publicamente até hoje sobre como cada um deveria ser lembrado na história do projeto — uma disputa que, décadas depois da criação da enciclopédia mais usada do mundo, ainda gera debate e até situações constrangedoras em entrevistas públicas.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Jimmy Wales e Larry Sanger criaram, antes da Wikipedia, um projeto de enciclopédia com revisão mais tradicional. Qual era esse projeto?",
+      "opcoes": [
+        "Nupedia",
+        "Britannica Digital",
+        "Encarta Web",
+        "OpenEncyclo"
+      ],
+      "resposta_correta": "Nupedia"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano Larry Sanger deixou o projeto da Wikipedia, um ano depois de sua criação?",
+      "opcoes": [
+        "2002",
+        "2001",
+        "2006",
+        "2010"
+      ],
+      "resposta_correta": "2002"
+    },
+    {
+      "n": 3,
+      "pergunta": "Existe consenso total entre Wales e Sanger sobre quem deveria ser chamado de 'fundador' da Wikipedia?",
+      "opcoes": [
+        "Não, há divergência pública sobre esse ponto entre os dois",
+        "Sim, ambos concordam plenamente sobre os créditos",
+        "Não há nenhum registro de discussão sobre o tema",
+        "Sim, mas apenas em entrevistas antigas"
+      ],
+      "resposta_correta": "Não, há divergência pública sobre esse ponto entre os dois"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo relatos, Larry Sanger passou a criticar a Wikipedia por quais dois motivos, após deixar o projeto?",
+      "opcoes": [
+        "Alegadas imprecisões e viés político",
+        "Problemas técnicos de servidor e lentidão",
+        "Excesso de anúncios publicitários e cobrança de taxas",
+        "Falta de suporte a múltiplos idiomas"
+      ],
+      "resposta_correta": "Alegadas imprecisões e viés político"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que empresa anterior à Wikipedia Jimmy Wales trabalhava, ligada a portais de busca e conteúdo adulto, que ajudou a financiar os primeiros anos do projeto?",
+      "opcoes": [
+        "Bomis",
+        "Yahoo",
+        "AOL",
+        "Excite"
+      ],
+      "resposta_correta": "Bomis"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano o governo dos Estados Unidos aprovou uma lei federal exigindo que a ByteDance vendesse o TikTok, sob pena de banimento no país?",
+      "opcoes": [
+        "2024",
+        "2017",
+        "2020",
+        "2012"
+      ],
+      "resposta_correta": "2024"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual foi a justificativa oficial mais recorrente dada pelo governo americano para pressionar a venda ou banimento do TikTok?",
+      "opcoes": [
+        "Preocupações de segurança nacional relacionadas ao acesso chinês a dados de usuários",
+        "Uma disputa exclusivamente sobre direitos autorais de música",
+        "Reclamações de excesso de anúncios no aplicativo",
+        "Uma disputa trabalhista com funcionários americanos"
+      ],
+      "resposta_correta": "Preocupações de segurança nacional relacionadas ao acesso chinês a dados de usuários"
+    },
+    {
+      "n": 8,
+      "pergunta": "Como o TikTok respondeu, oficialmente, às alegações de ameaça à segurança nacional?",
+      "opcoes": [
+        "Negou as acusações, afirmando não censurar conteúdo nem dar acesso de dados ao governo chinês",
+        "Confirmou publicamente todas as acusações feitas",
+        "Não emitiu nenhuma resposta oficial sobre o tema",
+        "Concordou em encerrar operações imediatamente, sem contestação"
+      ],
+      "resposta_correta": "Negou as acusações, afirmando não censurar conteúdo nem dar acesso de dados ao governo chinês"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em 2020, durante seu primeiro mandato, qual foi a postura inicial de Donald Trump em relação ao TikTok?",
+      "opcoes": [
+        "Tentou banir o aplicativo, citando segurança nacional",
+        "Elogiou publicamente o aplicativo sem nenhuma ressalva",
+        "Ignorou completamente o tema durante todo o mandato",
+        "Anunciou parceria comercial direta com a ByteDance"
+      ],
+      "resposta_correta": "Tentou banir o aplicativo, citando segurança nacional"
+    },
+    {
+      "n": 10,
+      "pergunta": "Antes das eleições de novembro daquele mesmo ciclo eleitoral posterior, qual mudança de postura Trump sinalizou em relação ao TikTok, segundo uma fonte?",
+      "opcoes": [
+        "Garantiu que não proibiria a rede social",
+        "Reafirmou ainda mais fortemente a intenção de banir",
+        "Anunciou a compra pessoal do aplicativo",
+        "Não houve nenhuma mudança de postura registrada"
+      ],
+      "resposta_correta": "Garantiu que não proibiria a rede social"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo um tribunal de recurso dos EUA, que tipo de ameaça o TikTok representaria, na visão do próprio tribunal?",
+      "opcoes": [
+        "Uma 'ameaça comercial híbrida' à segurança nacional",
+        "Nenhuma ameaça, o tribunal considerou o app seguro",
+        "Uma ameaça exclusivamente econômica, sem relação com segurança",
+        "Uma ameaça apenas à indústria de entretenimento americana"
+      ],
+      "resposta_correta": "Uma 'ameaça comercial híbrida' à segurança nacional"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quantos usuários ativos mensais o TikTok tinha nos Estados Unidos, segundo uma fonte de 2024/2025, no contexto dessa disputa?",
+      "opcoes": [
+        "Mais de 170 milhões",
+        "Cerca de 1 milhão",
+        "Cerca de 10 milhões",
+        "Mais de 800 milhões (número global, não apenas dos EUA)"
+      ],
+      "resposta_correta": "Mais de 170 milhões"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma fonte, quantos usuários ativos mensais o TikTok tinha globalmente, em outro contexto de reportagem sobre a disputa?",
+      "opcoes": [
+        "Mais de 800 milhões",
+        "170 milhões",
+        "1 milhão",
+        "50 milhões"
+      ],
+      "resposta_correta": "Mais de 800 milhões"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual foi a decisão final da Suprema Corte dos Estados Unidos, mencionada numa fonte, em relação à lei que poderia banir o TikTok?",
+      "opcoes": [
+        "Rejeitou o recurso e manteve a lei que poderia banir o aplicativo",
+        "Declarou a lei inconstitucional por completo",
+        "Determinou a venda obrigatória imediata sem possibilidade de recurso",
+        "Não chegou a analisar o caso"
+      ],
+      "resposta_correta": "Rejeitou o recurso e manteve a lei que poderia banir o aplicativo"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quais dois estados americanos são citados como pioneiros em banir o TikTok de dispositivos governamentais estaduais, por preocupação de segurança?",
+      "opcoes": [
+        "Alabama e Utah",
+        "Califórnia e Nova York",
+        "Texas e Flórida",
+        "Havaí e Alasca"
+      ],
+      "resposta_correta": "Alabama e Utah"
+    },
+    {
+      "n": 16,
+      "pergunta": "Segundo uma fonte, qual autoridade federal americana havia alertado sobre a coleta de dados pelo TikTok, influenciando decisões estaduais?",
+      "opcoes": [
+        "O diretor do FBI",
+        "O presidente da Suprema Corte",
+        "O secretário de Educação",
+        "O prefeito de Nova York"
+      ],
+      "resposta_correta": "O diretor do FBI"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo uma análise, a China também restringe o acesso a quais grandes plataformas ocidentais em seu próprio território, por motivos similares de segurança alegados pelo próprio governo chinês?",
+      "opcoes": [
+        "Google, Facebook e Instagram",
+        "Nenhuma plataforma ocidental, todas são livres na China",
+        "Apenas o Twitter/X",
+        "Apenas serviços de streaming de vídeo"
+      ],
+      "resposta_correta": "Google, Facebook e Instagram"
+    },
+    {
+      "n": 18,
+      "pergunta": "Esse tipo de restrição mútua entre China e Estados Unidos, aplicada a diferentes plataformas de cada lado, é descrito por uma análise como parte de qual dinâmica geopolítica mais ampla?",
+      "opcoes": [
+        "Uma disputa tecnológica frequentemente comparada a uma 'nova Guerra Fria'",
+        "Uma cooperação total e irrestrita entre os dois países",
+        "Um acordo comercial sem nenhuma tensão",
+        "Uma disputa restrita apenas ao setor agrícola"
+      ],
+      "resposta_correta": "Uma disputa tecnológica frequentemente comparada a uma 'nova Guerra Fria'"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo o TikTok, em documento apresentado à justiça americana, qual argumento constitucional a empresa usou contra a proibição?",
+      "opcoes": [
+        "Que a medida violava a tradição americana de defender uma internet aberta e a liberdade de expressão",
+        "Que a lei não se aplicava a empresas de tecnologia",
+        "Que o Congresso não tinha autoridade para legislar sobre internet",
+        "Que a decisão deveria ser tomada exclusivamente por tribunais estaduais"
+      ],
+      "resposta_correta": "Que a medida violava a tradição americana de defender uma internet aberta e a liberdade de expressão"
+    },
+    {
+      "n": 20,
+      "pergunta": "Este tema (banimento do TikTok) envolve, ao mesmo tempo, argumentos de segurança nacional e de liberdade de expressão — o que isso demonstra sobre debates de regulação de tecnologia?",
+      "opcoes": [
+        "Que esses debates frequentemente envolvem valores legítimos e conflitantes, sem uma resposta simples e consensual",
+        "Que só existe um lado correto nesse tipo de debate, sem nenhuma nuance",
+        "Que segurança nacional nunca é um argumento legítimo em nenhum contexto",
+        "Que liberdade de expressão nunca é relevante em decisões de tecnologia"
+      ],
+      "resposta_correta": "Que esses debates frequentemente envolvem valores legítimos e conflitantes, sem uma resposta simples e consensual"
+    }
+  ]
+}

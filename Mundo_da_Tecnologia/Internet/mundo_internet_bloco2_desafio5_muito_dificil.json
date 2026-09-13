@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 5,
+    "tema_desafio": "Outros Sistemas Operacionais e Curiosidades Esquecidas",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Computer History Museum e Wikipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - data de falecimento de Kildall mencionada apenas como fato biografico factual, sem nenhum detalhe adicional."
+  },
+  "saiba_mais": "Curiosidade: décadas antes de existirem discos rígidos como conhecemos hoje, o CP/M de Gary Kildall já rodava em mais de 3 mil modelos diferentes de computador, gerando milhões de dólares por ano para sua empresa. Ainda assim, um único encontro perdido com a IBM, em 1980, mudou o rumo da história da computação pessoal — e ajudou a construir, em vez disso, o império que se tornaria a Microsoft.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que data Gary Kildall nasceu, segundo registros biográficos?",
+      "opcoes": [
+        "19 de maio de 1942",
+        "11 de julho de 1994",
+        "1º de janeiro de 1950",
+        "25 de dezembro de 1940"
+      ],
+      "resposta_correta": "19 de maio de 1942"
+    },
+    {
+      "n": 2,
+      "pergunta": "Kildall se casou com Dorothy McEwen, sua namorada do colégio, em que ano?",
+      "opcoes": [
+        "1963",
+        "1980",
+        "1974",
+        "1955"
+      ],
+      "resposta_correta": "1963"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo o Computer History Museum, Kildall demonstrou o CP/M pela primeira vez em qual cidade da Califórnia?",
+      "opcoes": [
+        "Pacific Grove",
+        "Cupertino",
+        "Palo Alto",
+        "San Jose"
+      ],
+      "resposta_correta": "Pacific Grove"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual foi um dos motivos pelos quais Kildall demorou a atualizar o CP/M para acompanhar novidades de hardware, como discos rígidos?",
+      "opcoes": [
+        "O sucesso rápido do CP/M o pegou de surpresa",
+        "Ele decidiu se aposentar precocemente",
+        "A Digital Research faliu antes de poder atualizar o sistema",
+        "Um processo judicial impediu qualquer atualização"
+      ],
+      "resposta_correta": "O sucesso rápido do CP/M o pegou de surpresa"
+    },
+    {
+      "n": 5,
+      "pergunta": "Diante da ameaça de concorrentes criando um sistema rival, que projeto interno Kildall iniciou às pressas?",
+      "opcoes": [
+        "O desenvolvimento do CP/M 2",
+        "A criação do primeiro navegador de internet",
+        "A fundação de uma nova empresa concorrente à IBM",
+        "A criação do primeiro mouse comercial"
+      ],
+      "resposta_correta": "O desenvolvimento do CP/M 2"
+    },
+    {
+      "n": 6,
+      "pergunta": "Entre 1983 e 1984, a Digital Research ofereceu aplicações de negócios e educacionais para o IBM PC através de qual formato específico?",
+      "opcoes": [
+        "Disquetes inicializáveis (bootable), com uma versão reduzida do CP/M-86",
+        "Cartões perfurados",
+        "Fitas cassete",
+        "Download direto pela internet"
+      ],
+      "resposta_correta": "Disquetes inicializáveis (bootable), com uma versão reduzida do CP/M-86"
+    },
+    {
+      "n": 7,
+      "pergunta": "Como se chamava essa versão reduzida do CP/M-86, usada como ambiente de execução (runtime) nesses disquetes?",
+      "opcoes": [
+        "SpeedStart CP/M",
+        "QuickBoot DOS",
+        "FastRun CP/M",
+        "MiniCP/M"
+      ],
+      "resposta_correta": "SpeedStart CP/M"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano Gary Kildall faleceu, segundo registros biográficos?",
+      "opcoes": [
+        "1994",
+        "2001",
+        "1985",
+        "2010"
+      ],
+      "resposta_correta": "1994"
+    },
+    {
+      "n": 9,
+      "pergunta": "O sistema ITS (Incompatible Timesharing System), desenvolvido no MIT, era escrito em qual tipo de linguagem?",
+      "opcoes": [
+        "Linguagem assembly (de baixo nível)",
+        "Java",
+        "Python",
+        "C++ moderno"
+      ],
+      "resposta_correta": "Linguagem assembly (de baixo nível)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Quantos caracteres por nome de arquivo o sistema ITS suportava, segundo uma retrospectiva crítica?",
+      "opcoes": [
+        "Apenas 6 caracteres",
+        "255 caracteres",
+        "Sem limite algum",
+        "12 caracteres"
+      ],
+      "resposta_correta": "Apenas 6 caracteres"
+    },
+    {
+      "n": 11,
+      "pergunta": "O ITS foi criado, em parte, como reação a que tipo de recurso que seus criadores rejeitavam em outros sistemas da época?",
+      "opcoes": [
+        "Um sistema de segurança considerado excessivamente restritivo",
+        "Falta total de qualquer interface gráfica",
+        "Excesso de cores na tela",
+        "Ausência de suporte a múltiplos usuários"
+      ],
+      "resposta_correta": "Um sistema de segurança considerado excessivamente restritivo"
+    },
+    {
+      "n": 12,
+      "pergunta": "O SCO Open Desktop, de 1989, foi pioneiro por ser a primeira versão de qual tipo específico de sistema com interface gráfica de 32 bits?",
+      "opcoes": [
+        "Unix",
+        "Windows",
+        "Mac OS",
+        "AmigaOS"
+      ],
+      "resposta_correta": "Unix"
+    },
+    {
+      "n": 13,
+      "pergunta": "Que problema técnico recorrente motivou o apelido irônico 'Open Deathtrap' dado ao SCO Open Desktop?",
+      "opcoes": [
+        "Editores travavam e o sistema sofria travamentos completos (core dumps)",
+        "O sistema nunca conseguia inicializar",
+        "A tela ficava permanentemente preta",
+        "O sistema apagava arquivos aleatoriamente sem aviso"
+      ],
+      "resposta_correta": "Editores travavam e o sistema sofria travamentos completos (core dumps)"
+    },
+    {
+      "n": 14,
+      "pergunta": "O chamado 'JavaOS', de 1996, tinha qual limitação prática que impediu maior relevância no mercado, segundo análises críticas da época?",
+      "opcoes": [
+        "Desempenho lento, já que a linguagem Java da época não era otimizada para isso",
+        "Preço extremamente alto para qualquer consumidor",
+        "Incompatibilidade total com qualquer tipo de teclado",
+        "Exigência de conexão permanente à internet, inexistente na época"
+      ],
+      "resposta_correta": "Desempenho lento, já que a linguagem Java da época não era otimizada para isso"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma retrospectiva crítica de sistemas operacionais, qual versão do Windows, lançada nos anos 2000, também é citada ao lado do Vista como decepção do público?",
+      "opcoes": [
+        "Windows Millennium (ME)",
+        "Windows 95",
+        "Windows XP",
+        "Windows 7"
+      ],
+      "resposta_correta": "Windows Millennium (ME)"
+    },
+    {
+      "n": 16,
+      "pergunta": "O IBM OS/360, de 1964, foi originalmente projetado para ocupar quantos kilobytes de memória, segundo uma retrospectiva histórica?",
+      "opcoes": [
+        "Apenas 6 KB (posteriormente estendido a 64 KB)",
+        "1 GB desde o início",
+        "64 MB",
+        "256 bytes"
+      ],
+      "resposta_correta": "Apenas 6 KB (posteriormente estendido a 64 KB)"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo essa mesma retrospectiva, quais problemas específicos marcaram o desenvolvimento do OS/360?",
+      "opcoes": [
+        "Atraso na entrega, falhas no controle de programas e exigência de mais memória que o planejado",
+        "Nenhum problema relevante, foi um sucesso desde o lançamento",
+        "Apenas um problema estético na interface",
+        "Um único bug de segurança sem maiores consequências"
+      ],
+      "resposta_correta": "Atraso na entrega, falhas no controle de programas e exigência de mais memória que o planejado"
+    },
+    {
+      "n": 18,
+      "pergunta": "O livro 'The Mythical Man-Month', de Fred Brooks, discute principalmente qual tema relacionado a desenvolvimento de software?",
+      "opcoes": [
+        "Como falhas de gestão e planejamento afetam o desenvolvimento de software",
+        "Como programar em linguagem assembly",
+        "A história da internet",
+        "Técnicas de design gráfico para interfaces"
+      ],
+      "resposta_correta": "Como falhas de gestão e planejamento afetam o desenvolvimento de software"
+    },
+    {
+      "n": 19,
+      "pergunta": "O acordo final entre CP/M-86 e PC-DOS, do ponto de vista de custo ao consumidor, é descrito por uma fonte como tendo qual desfecho para a Digital Research?",
+      "opcoes": [
+        "Um desfecho pouco brilhante, já que o preço mais alto do CP/M-86 afastava compradores",
+        "Um grande sucesso comercial imediato para a Digital Research",
+        "Um empate técnico perfeito entre os dois sistemas",
+        "A eliminação completa do PC-DOS do mercado"
+      ],
+      "resposta_correta": "Um desfecho pouco brilhante, já que o preço mais alto do CP/M-86 afastava compradores"
+    },
+    {
+      "n": 20,
+      "pergunta": "Ao constatar que o PC-DOS era muito semelhante ao CP/M, o que Kildall chegou a ameaçar fazer contra a IBM, segundo relatos?",
+      "opcoes": [
+        "Processá-la judicialmente",
+        "Comprar a IBM por completo",
+        "Denunciar o caso publicamente na televisão nacional",
+        "Nada, ele nunca reagiu de forma alguma"
+      ],
+      "resposta_correta": "Processá-la judicialmente"
+    }
+  ]
+}

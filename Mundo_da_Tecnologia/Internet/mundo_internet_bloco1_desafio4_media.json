@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 4,
+    "tema_desafio": "Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - fusao corporativa tratada de forma factual e neutra."
+  },
+  "saiba_mais": "Curiosidade: a icônica frase 'You've got mail' foi gravada por Elwood Edwards em condições bem mais simples do que se imagina — direto da sala de estar de sua própria casa, nos anos 1980. Décadas depois, aquela gravação caseira se tornaria um dos sons mais reconhecíveis da história da internet, e ainda inspiraria o título de um filme de sucesso de Hollywood.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem é a voz por trás da famosa saudação 'You've got mail' da AOL?",
+      "opcoes": [
+        "Elwood Edwards",
+        "Steve Case",
+        "Jan Brandt",
+        "Marc Andreessen"
+      ],
+      "resposta_correta": "Elwood Edwards"
+    },
+    {
+      "n": 2,
+      "pergunta": "Onde Elwood Edwards gravou essa famosa frase, nos anos 1980?",
+      "opcoes": [
+        "Na própria sala de estar de sua casa",
+        "Em um estúdio profissional de Hollywood",
+        "Na sede da AOL em Virgínia",
+        "Em uma emissora de rádio nacional"
+      ],
+      "resposta_correta": "Na própria sala de estar de sua casa"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem se tornou Diretora de Marketing (CMO) da AOL em 1993, liderando a estratégia agressiva dos discos de teste?",
+      "opcoes": [
+        "Jan Brandt",
+        "Elwood Edwards",
+        "Meg Ryan",
+        "Nora Ephron"
+      ],
+      "resposta_correta": "Jan Brandt"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo registros do Smithsonian, qual foi a taxa de adesão da primeira campanha de mala direta da AOL, considerada excepcional para a época?",
+      "opcoes": [
+        "Mais de 10% dos destinatários se cadastraram",
+        "Menos de 0,1% dos destinatários",
+        "Exatamente 50% dos destinatários",
+        "100% dos destinatários"
+      ],
+      "resposta_correta": "Mais de 10% dos destinatários se cadastraram"
+    },
+    {
+      "n": 5,
+      "pergunta": "Como ficou conhecida essa estratégia agressiva de distribuição massiva de discos da AOL?",
+      "opcoes": [
+        "'Carpet bombing' ('bombardeio em tapete')",
+        "'Guerrilla marketing'",
+        "'Viral spread'",
+        "'Silent rollout'"
+      ],
+      "resposta_correta": "'Carpet bombing' ('bombardeio em tapete')"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano específico a AOL abriu seu gateway de e-mail para o restante da internet, um marco importante em sua história?",
+      "opcoes": [
+        "1993",
+        "1985",
+        "1998",
+        "1991"
+      ],
+      "resposta_correta": "1993"
+    },
+    {
+      "n": 7,
+      "pergunta": "Antes de ser rebatizada como AOL em 1991, a empresa também era conhecida por qual outro nome, associado a um serviço para usuários de Commodore 64?",
+      "opcoes": [
+        "Quantum Link",
+        "AOL Prime",
+        "Netscape Link",
+        "American Digital"
+      ],
+      "resposta_correta": "Quantum Link"
+    },
+    {
+      "n": 8,
+      "pergunta": "Aproximadamente quantos usuários a AOL tinha em 1996, segundo uma fonte específica?",
+      "opcoes": [
+        "Cerca de 8 milhões",
+        "Cerca de 100 mil",
+        "Cerca de 1 milhão",
+        "Cerca de 500 mil"
+      ],
+      "resposta_correta": "Cerca de 8 milhões"
+    },
+    {
+      "n": 9,
+      "pergunta": "Aproximadamente quantos usuários a AOL tinha em 1998, dois anos depois?",
+      "opcoes": [
+        "Mais de 18 milhões",
+        "Cerca de 8 milhões",
+        "Cerca de 1 milhão",
+        "Cerca de 100 mil"
+      ],
+      "resposta_correta": "Mais de 18 milhões"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano específico a AOL se fundiu com a Time Warner, formando uma das maiores fusões da história corporativa?",
+      "opcoes": [
+        "2000",
+        "1996",
+        "1991",
+        "1985"
+      ],
+      "resposta_correta": "2000"
+    },
+    {
+      "n": 11,
+      "pergunta": "Aproximadamente por qual valor a fusão entre AOL e Time Warner foi avaliada?",
+      "opcoes": [
+        "165 bilhões de dólares",
+        "16,5 milhões de dólares",
+        "1,65 bilhão de dólares",
+        "165 milhões de dólares"
+      ],
+      "resposta_correta": "165 bilhões de dólares"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quem era o CEO da AOL por trás da visão de 'sinergia' que motivou essa fusão?",
+      "opcoes": [
+        "Steve Case",
+        "Jan Brandt",
+        "Elwood Edwards",
+        "Marc Andreessen"
+      ],
+      "resposta_correta": "Steve Case"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quais marcas de mídia importantes a Time Warner trazia para essa fusão, segundo uma análise histórica?",
+      "opcoes": [
+        "CNN, Warner Bros. e HBO",
+        "Disney, Pixar e ABC",
+        "NBC, Universal e Fox",
+        "Netflix, Amazon e Hulu"
+      ],
+      "resposta_correta": "CNN, Warner Bros. e HBO"
+    },
+    {
+      "n": 14,
+      "pergunta": "O que, segundo uma análise crítica, escondia-se por trás do entusiasmo inicial com a fusão AOL-Time Warner?",
+      "opcoes": [
+        "Sinais da bolha das empresas de internet ('dot-com'), com o crescimento da AOL estagnando",
+        "Uma fraude contábil já descoberta na época",
+        "A falência iminente de ambas as empresas",
+        "Um processo judicial que impediria a fusão"
+      ],
+      "resposta_correta": "Sinais da bolha das empresas de internet ('dot-com'), com o crescimento da AOL estagnando"
+    },
+    {
+      "n": 15,
+      "pergunta": "Que tipo de tecnologia de internet mais rápida ameaçava o modelo de negócio da AOL, segundo o mesmo contexto histórico?",
+      "opcoes": [
+        "Banda larga, como DSL e modem a cabo",
+        "Conexão via pombo-correio",
+        "Internet via rádio AM",
+        "Conexão exclusiva por satélite militar"
+      ],
+      "resposta_correta": "Banda larga, como DSL e modem a cabo"
+    },
+    {
+      "n": 16,
+      "pergunta": "Antes da internet ampla se popularizar, o que muitos usuários de computador precisavam enfrentar para se conectar, segundo um relato histórico?",
+      "opcoes": [
+        "Prompts de comando complexos e sistemas de quadro de avisos (BBS)",
+        "Nenhuma dificuldade, a conexão já era simples desde o início",
+        "Apenas um clique único, sem nenhuma configuração",
+        "Reconhecimento facial obrigatório"
+      ],
+      "resposta_correta": "Prompts de comando complexos e sistemas de quadro de avisos (BBS)"
+    },
+    {
+      "n": 17,
+      "pergunta": "O que a AOL simplificava, tornando o processo de configuração de e-mail mais fácil para o usuário comum, segundo uma fonte?",
+      "opcoes": [
+        "Endereços de servidor POP3, configurações SMTP e DNS, tudo automatizado",
+        "A necessidade de comprar um computador novo",
+        "O preço da linha telefônica",
+        "A necessidade de aprender uma nova linguagem de programação"
+      ],
+      "resposta_correta": "Endereços de servidor POP3, configurações SMTP e DNS, tudo automatizado"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo um historiador de tecnologia da Universidade da Califórnia em Santa Barbara, o que caracterizava a experiência de som do dial-up da AOL?",
+      "opcoes": [
+        "Um som que definiu a era inicial da internet para toda uma geração",
+        "Um som idêntico ao de uma campainha comum",
+        "Nenhum som característico, era completamente silencioso",
+        "Um som associado apenas a falhas técnicas"
+      ],
+      "resposta_correta": "Um som que definiu a era inicial da internet para toda uma geração"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em determinado ano, aproximadamente quantos assinantes a AOL tinha no pico de seu serviço de discagem, segundo uma fonte?",
+      "opcoes": [
+        "25 milhões",
+        "8 milhões",
+        "165 milhões",
+        "1 milhão"
+      ],
+      "resposta_correta": "25 milhões"
+    },
+    {
+      "n": 20,
+      "pergunta": "A AOL fez uma expansão internacional em determinado momento, incluindo qual região da Europa, segundo um relato histórico?",
+      "opcoes": [
+        "Europa Oriental, incluindo a Bulgária, após a abertura pós-1989",
+        "Exclusivamente o Reino Unido",
+        "Apenas países de língua espanhola",
+        "Nenhuma expansão internacional ocorreu"
+      ],
+      "resposta_correta": "Europa Oriental, incluindo a Bulgária, após a abertura pós-1989"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 5,
+    "tema_desafio": "Como a Internet Nos Afeta no Dia a Dia",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes oficiais (IBGE) e academicas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Desafio 5 e o Bloco 4 completo (5/5 desafios)."
+  },
+  "saiba_mais": "Curiosidade: a jornada da internet, contada ao longo deste Mundo, começou com uma falha técnica — a palavra 'LO', truncada de 'LOGIN', transmitida entre dois computadores em 1969. Mais de cinquenta anos depois, essa mesma tecnologia conecta bilhões de pessoas, movimenta trilhões de dólares e molda a cultura global — mas, como os dados de exclusão digital lembram, ainda há um caminho a percorrer até que essa revolução chegue verdadeiramente a todos.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo a PNAD Contínua de 2023, quantos domicílios brasileiros tinham acesso à internet, um aumento significativo em relação a 2016?",
+      "opcoes": [
+        "72,5 milhões (contra 47,8 milhões em 2016)",
+        "7,25 milhões",
+        "725 milhões",
+        "7.250 domicílios"
+      ],
+      "resposta_correta": "72,5 milhões (contra 47,8 milhões em 2016)"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo dados mais recentes, o Brasil chegou a quantos internautas totais, com um crescimento acumulado ao longo de 8 anos?",
+      "opcoes": [
+        "164,5 milhões",
+        "16,45 milhões",
+        "1,645 milhão",
+        "1,645 bilhão"
+      ],
+      "resposta_correta": "164,5 milhões"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo essa mesma fonte, em quanto (em pontos percentuais) foi reduzido o contingente de excluídos digitais desde 2016?",
+      "opcoes": [
+        "62,5%",
+        "6,25%",
+        "6,25 pontos percentuais apenas",
+        "Nenhuma redução foi registrada"
+      ],
+      "resposta_correta": "62,5%"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo dados de um estado específico do Brasil (Bahia), quantas pessoas ainda permaneciam desconectadas em levantamento recente, equivalendo a 1 em cada 10 habitantes do estado?",
+      "opcoes": [
+        "1,358 milhão",
+        "13,58 milhões",
+        "135,8 mil",
+        "13.580"
+      ],
+      "resposta_correta": "1,358 milhão"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo essa mesma fonte estadual, qual porcentagem da população baiana com 10 anos ou mais utilizava a internet?",
+      "opcoes": [
+        "89,5%",
+        "50%",
+        "10%",
+        "99,9%"
+      ],
+      "resposta_correta": "89,5%"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo essa fonte, a Bahia registrou o quê em termos de crescimento absoluto de usuários, comparado a outros estados brasileiros?",
+      "opcoes": [
+        "O terceiro maior crescimento absoluto do país, com quase 195 mil novos usuários em um ano",
+        "O menor crescimento absoluto entre todos os estados",
+        "Nenhum crescimento perceptível no período",
+        "O maior crescimento absoluto do país, superando todos os demais"
+      ],
+      "resposta_correta": "O terceiro maior crescimento absoluto do país, com quase 195 mil novos usuários em um ano"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo uma análise mais antiga (baseada na PNAD de 2005), qual era a relação entre acesso à internet e nível educacional/renda no Brasil?",
+      "opcoes": [
+        "O acesso à internet tinha relação diretamente proporcional aos níveis de educação e renda",
+        "Não havia nenhuma relação identificável entre essas variáveis",
+        "A relação era inversamente proporcional, com mais acesso entre os mais pobres",
+        "A renda não tinha nenhuma influência, apenas a idade importava"
+      ],
+      "resposta_correta": "O acesso à internet tinha relação diretamente proporcional aos níveis de educação e renda"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo essa mesma análise histórica, qual faixa etária apresentava maior uso de internet no Brasil daquele período (2000-2005)?",
+      "opcoes": [
+        "Jovens entre 15 e 24 anos, especialmente de escolas privadas",
+        "Idosos acima de 60 anos",
+        "Crianças abaixo de 10 anos",
+        "Adultos entre 40 e 50 anos"
+      ],
+      "resposta_correta": "Jovens entre 15 e 24 anos, especialmente de escolas privadas"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo essa análise de 2005, quanto o acesso à internet havia crescido no Brasil entre 2000 e 2005, mesmo com baixa parcela geral da população conectada?",
+      "opcoes": [
+        "Mais de 150%",
+        "Cerca de 5%",
+        "Cerca de 1.500%",
+        "Nenhum crescimento relevante"
+      ],
+      "resposta_correta": "Mais de 150%"
+    },
+    {
+      "n": 10,
+      "pergunta": "Considerando o crescimento de acesso via celular e o declínio via microcomputador (2016-2023) discutido anteriormente, o que essa mudança de padrão de acesso sugere sobre a evolução tecnológica no Brasil?",
+      "opcoes": [
+        "Que o smartphone se tornou o principal (e muitas vezes único) dispositivo de acesso à internet para grande parte da população",
+        "Que os microcomputadores se tornaram mais populares que os celulares",
+        "Que o acesso via televisão desapareceu completamente",
+        "Que nenhuma mudança de padrão foi observada no período"
+      ],
+      "resposta_correta": "Que o smartphone se tornou o principal (e muitas vezes único) dispositivo de acesso à internet para grande parte da população"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo uma fonte técnica, o conceito que vai além da simples falta de acesso, referindo-se a dificuldades de uso significativo mesmo com tecnologia disponível, é chamado de quê?",
+      "opcoes": [
+        "Um tipo de exclusão digital mais ampla, ligada a fatores socioeconômicos e culturais",
+        "Apenas 'lentidão de internet', sem nenhum termo técnico específico",
+        "Um problema exclusivamente de hardware, sem relação social",
+        "Um termo que não existe na literatura sobre o tema"
+      ],
+      "resposta_correta": "Um tipo de exclusão digital mais ampla, ligada a fatores socioeconômicos e culturais"
+    },
+    {
+      "n": 12,
+      "pergunta": "Considerando tudo o que foi discutido ao longo do Bloco 4 (memes, redes sociais, emojis, desafios virais, impacto no dia a dia), qual fio condutor conecta esses cinco temas?",
+      "opcoes": [
+        "Como a internet criou novas formas de cultura, comunicação e comportamento coletivo, com efeitos que vão do bem-humorado ao socialmente significativo",
+        "Que todos os temas tratam exclusivamente de entretenimento sem nenhuma relevância social",
+        "Que nenhum desses temas tem relação entre si",
+        "Que apenas questões técnicas de infraestrutura conectam os cinco temas"
+      ],
+      "resposta_correta": "Como a internet criou novas formas de cultura, comunicação e comportamento coletivo, com efeitos que vão do bem-humorado ao socialmente significativo"
+    },
+    {
+      "n": 13,
+      "pergunta": "Comparando os dados de exclusão digital do Brasil (cerca de 20 milhões) com os dados globais de acesso à internet (2,7 bilhões sem acesso), o que essa comparação sugere?",
+      "opcoes": [
+        "Que a exclusão digital brasileira, embora significativa, é proporcionalmente menor do que o desafio de conectividade em escala global",
+        "Que o Brasil tem o maior número absoluto de pessoas desconectadas do mundo",
+        "Que a exclusão digital não existe em nenhum lugar além do Brasil",
+        "Que os dois números são exatamente equivalentes em proporção"
+      ],
+      "resposta_correta": "Que a exclusão digital brasileira, embora significativa, é proporcionalmente menor do que o desafio de conectividade em escala global"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo o que foi discutido sobre a pandemia, qual foi o principal 'acelerador' que forçou a adoção em massa de ferramentas digitais de trabalho e comunicação, mesmo em setores que resistiam antes?",
+      "opcoes": [
+        "A necessidade de distanciamento social imposta pela pandemia de Covid-19",
+        "Uma decisão espontânea coletiva sem nenhuma causa externa",
+        "Uma exigência legal aprovada anos antes da pandemia",
+        "Um avanço tecnológico completamente independente de fatores sociais"
+      ],
+      "resposta_correta": "A necessidade de distanciamento social imposta pela pandemia de Covid-19"
+    },
+    {
+      "n": 15,
+      "pergunta": "Considerando a jornada completa deste Bloco — de memes bem-humorados a estatísticas sérias de exclusão digital — o que essa amplitude de temas demonstra sobre a 'cultura de internet' como campo de estudo?",
+      "opcoes": [
+        "Que é um campo amplo, que vai do entretenimento cotidiano a questões estruturais de desigualdade social",
+        "Que se resume exclusivamente a conteúdo de entretenimento sem nenhuma dimensão social",
+        "Que trata apenas de questões técnicas de infraestrutura, sem relação com comportamento humano",
+        "Que é um campo irrelevante para entender a sociedade contemporânea"
+      ],
+      "resposta_correta": "Que é um campo amplo, que vai do entretenimento cotidiano a questões estruturais de desigualdade social"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual foi, aproximadamente, o crescimento de vagas de emprego em home office no Brasil durante 2020, marco discutido anteriormente neste desafio?",
+      "opcoes": [
+        "309%",
+        "30%",
+        "3.000%",
+        "3%"
+      ],
+      "resposta_correta": "309%"
+    },
+    {
+      "n": 17,
+      "pergunta": "Que porcentagem dos brasileiros excluídos digitalmente em 2024 citou 'falta de necessidade' como motivo para não usar a internet, uma categoria diferente de dificuldade técnica ou financeira?",
+      "opcoes": [
+        "28,5%",
+        "90%",
+        "5%",
+        "0,5%"
+      ],
+      "resposta_correta": "28,5%"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo os dados discutidos, o motivo econômico (custo do serviço ou equipamento) para não usar internet, embora tenha perdido relevância entre 2022 e 2024, ainda representava qual porcentagem em 2024?",
+      "opcoes": [
+        "10,9%",
+        "50%",
+        "1%",
+        "90%"
+      ],
+      "resposta_correta": "10,9%"
+    },
+    {
+      "n": 19,
+      "pergunta": "Encerrando este Bloco 4 sobre Cultura de Internet, o que a jornada completa — memes que viralizam por acaso, redes sociais que geram bilhões, emojis criados sem patente, desafios que arrecadam milhões e ainda milhões de pessoas desconectadas — melhor resume sobre o impacto da internet na sociedade?",
+      "opcoes": [
+        "Que a internet transformou profundamente a cultura e a economia global, mas seus benefícios e desafios ainda não chegam de forma igual a todos",
+        "Que a internet beneficiou igualmente toda a população mundial, sem exceção",
+        "Que a internet é, no fim das contas, irrelevante para a vida cotidiana da maioria das pessoas",
+        "Que todos os aspectos discutidos neste Bloco são completamente desconectados uns dos outros"
+      ],
+      "resposta_correta": "Que a internet transformou profundamente a cultura e a economia global, mas seus benefícios e desafios ainda não chegam de forma igual a todos"
+    },
+    {
+      "n": 20,
+      "pergunta": "Voltando ao início da jornada deste Mundo — do primeiro 'LO' transmitido pela ARPANET em 1969 até os bilhões de pessoas conectadas hoje — o que essa trajetória de mais de cinco décadas melhor representa?",
+      "opcoes": [
+        "Uma das transformações tecnológicas e sociais mais rápidas e abrangentes da história humana",
+        "Um processo lento e sem nenhum impacto relevante na vida das pessoas",
+        "Uma tecnologia que permaneceu praticamente inalterada desde sua criação",
+        "Um fenômeno restrito exclusivamente a especialistas em tecnologia, sem alcance popular"
+      ],
+      "resposta_correta": "Uma das transformações tecnológicas e sociais mais rápidas e abrangentes da história humana"
+    }
+  ]
+}

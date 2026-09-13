@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 1,
+    "tema_desafio": "ARPANET e o nascimento da World Wide Web",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes (CERN oficial, Wikipedia, veiculos de tecnologia). Todo o texto das perguntas e respostas foi escrito originalmente - nenhuma reproducao literal de nenhuma fonte consultada.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro."
+  },
+  "saiba_mais": "Curiosidade: o primeiro site da história ainda está no ar até hoje! Você pode visitar info.cern.ch e ver exatamente como era a internet em seus primeiros anos — uma página de texto simples, sem cores, sem imagens, sem JavaScript. O CERN preservou o site como parte da história da tecnologia mundial.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem é considerado o criador da World Wide Web?",
+      "opcoes": [
+        "Tim Berners-Lee",
+        "Bill Gates",
+        "Steve Jobs",
+        "Robert Cailliau"
+      ],
+      "resposta_correta": "Tim Berners-Lee"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que instituição de pesquisa a World Wide Web foi criada?",
+      "opcoes": [
+        "CERN",
+        "NASA",
+        "MIT",
+        "IBM"
+      ],
+      "resposta_correta": "CERN"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano Tim Berners-Lee apresentou a primeira proposta que originaria a Web?",
+      "opcoes": [
+        "1989",
+        "1995",
+        "1969",
+        "2000"
+      ],
+      "resposta_correta": "1989"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem colaborou diretamente com Tim Berners-Lee na formalização da proposta da Web em 1990?",
+      "opcoes": [
+        "Robert Cailliau",
+        "Bill Gates",
+        "Linus Torvalds",
+        "Larry Page"
+      ],
+      "resposta_correta": "Robert Cailliau"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que computador rodava o primeiro servidor Web da história?",
+      "opcoes": [
+        "Um computador NeXT",
+        "Um IBM PC",
+        "Um Macintosh",
+        "Um Commodore 64"
+      ],
+      "resposta_correta": "Um computador NeXT"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual era o endereço do primeiro site e servidor Web do mundo?",
+      "opcoes": [
+        "info.cern.ch",
+        "www.web.com",
+        "primeirosite.org",
+        "cern.net"
+      ],
+      "resposta_correta": "info.cern.ch"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual empresa fabricou o computador NeXT usado como primeiro servidor Web?",
+      "opcoes": [
+        "NeXT, fundada por Steve Jobs",
+        "Apple",
+        "Microsoft",
+        "IBM"
+      ],
+      "resposta_correta": "NeXT, fundada por Steve Jobs"
+    },
+    {
+      "n": 8,
+      "pergunta": "O que estava escrito no bilhete colado no computador que servia como primeiro servidor Web?",
+      "opcoes": [
+        "Um aviso para não desligar a máquina",
+        "O nome de todos os cientistas do CERN",
+        "As instruções de uso do navegador",
+        "A senha de acesso ao servidor"
+      ],
+      "resposta_correta": "Um aviso para não desligar a máquina"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que mês e ano o primeiro servidor e navegador Web ficaram prontos, segundo registros históricos?",
+      "opcoes": [
+        "Dezembro de 1990",
+        "Agosto de 1991",
+        "Janeiro de 1989",
+        "Março de 1993"
+      ],
+      "resposta_correta": "Dezembro de 1990"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que data o projeto da World Wide Web foi anunciado publicamente pela primeira vez?",
+      "opcoes": [
+        "6 de agosto de 1991",
+        "25 de dezembro de 1990",
+        "1º de janeiro de 1989",
+        "30 de abril de 1993"
+      ],
+      "resposta_correta": "6 de agosto de 1991"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que grupo de discussão da internet Tim Berners-Lee anunciou publicamente o projeto da Web?",
+      "opcoes": [
+        "alt.hypertext",
+        "comp.internet",
+        "web.discussion",
+        "cern.public"
+      ],
+      "resposta_correta": "alt.hypertext"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual das opções abaixo NÃO foi criada por Tim Berners-Lee como base da Web?",
+      "opcoes": [
+        "O microprocessador",
+        "O HTML",
+        "O HTTP",
+        "O primeiro navegador"
+      ],
+      "resposta_correta": "O microprocessador"
+    },
+    {
+      "n": 13,
+      "pergunta": "Como se chamava o primeiro navegador criado por Tim Berners-Lee?",
+      "opcoes": [
+        "WorldWideWeb",
+        "Internet Explorer",
+        "Mosaic",
+        "Netscape"
+      ],
+      "resposta_correta": "WorldWideWeb"
+    },
+    {
+      "n": 14,
+      "pergunta": "Quem criou uma versão simplificada de navegador (Line Mode Browser) que rodava em mais computadores?",
+      "opcoes": [
+        "Nicola Pellow",
+        "Robert Cailliau",
+        "Bill Gates",
+        "Marc Andreessen"
+      ],
+      "resposta_correta": "Nicola Pellow"
+    },
+    {
+      "n": 15,
+      "pergunta": "Tim Berners-Lee inventou a internet em si?",
+      "opcoes": [
+        "Não, a internet já existia antes da Web",
+        "Sim, foi ele quem criou a internet",
+        "Sim, junto com Robert Cailliau",
+        "Não, foi a NASA quem criou a internet"
+      ],
+      "resposta_correta": "Não, a internet já existia antes da Web"
+    },
+    {
+      "n": 16,
+      "pergunta": "Em que data o CERN organizou a primeira Conferência Internacional da World Wide Web?",
+      "opcoes": [
+        "Maio de 1994",
+        "Agosto de 1991",
+        "Dezembro de 1990",
+        "Março de 1989"
+      ],
+      "resposta_correta": "Maio de 1994"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que data o CERN disponibilizou a tecnologia da Web gratuitamente para uso público?",
+      "opcoes": [
+        "30 de abril de 1993",
+        "6 de agosto de 1991",
+        "25 de dezembro de 1990",
+        "1º de janeiro de 2000"
+      ],
+      "resposta_correta": "30 de abril de 1993"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual era a nacionalidade de Robert Cailliau, colaborador de Berners-Lee?",
+      "opcoes": [
+        "Belga",
+        "Francesa",
+        "Americana",
+        "Alemã"
+      ],
+      "resposta_correta": "Belga"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual organização Tim Berners-Lee fundou posteriormente para supervisionar o desenvolvimento contínuo da Web?",
+      "opcoes": [
+        "W3C (World Wide Web Consortium)",
+        "ICANN",
+        "IEEE",
+        "ISO"
+      ],
+      "resposta_correta": "W3C (World Wide Web Consortium)"
+    },
+    {
+      "n": 20,
+      "pergunta": "Como era, em termos visuais, o primeiro site da história?",
+      "opcoes": [
+        "Texto simples com links, sem imagens ou estilização",
+        "Colorido, com fotos e vídeos",
+        "Uma animação em Flash",
+        "Um jogo interativo"
+      ],
+      "resposta_correta": "Texto simples com links, sem imagens ou estilização"
+    }
+  ]
+}

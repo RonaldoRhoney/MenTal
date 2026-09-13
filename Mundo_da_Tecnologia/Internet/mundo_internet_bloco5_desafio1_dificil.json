@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 1,
+    "tema_desafio": "Deep Web e Dark Web",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes tecnicas, incluindo Tor Project oficial e Wikipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo estritamente historico/tecnico sobre origem da tecnologia, sem nenhuma instrucao de uso."
+  },
+  "saiba_mais": "Curiosidade: o nome 'Tor' nasceu de uma necessidade prática, não de um plano de marketing — Roger Dingledine batizou o projeto assim (sigla de 'The Onion Routing') simplesmente para diferenciar seu trabalho original no Laboratório Naval de outros esforços parecidos de roteamento onion que começavam a surgir em paralelo, no início dos anos 2000. Décadas depois, essa sigla técnica se tornaria sinônimo mundial de navegação anônima na internet.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quais três pesquisadores do Laboratório de Pesquisa Naval dos EUA criaram os primeiros protótipos de roteamento onion, em 1995?",
+      "opcoes": [
+        "David Goldschlag, Mike Reed e Paul Syverson",
+        "Roger Dingledine, Nick Mathewson e Paul Syverson",
+        "Ross Ulbricht e dois colaboradores anônimos",
+        "Satoshi Nakamoto e dois pesquisadores do MIT"
+      ],
+      "resposta_correta": "David Goldschlag, Mike Reed e Paul Syverson"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual pergunta central esses pesquisadores se fizeram, segundo o próprio Tor Project, ao criar a tecnologia?",
+      "opcoes": [
+        "Se havia uma forma de criar conexões à internet que não revelassem quem conversava com quem, mesmo sob monitoramento",
+        "Se era possível aumentar a velocidade da internet discada",
+        "Se dava para criar um novo mecanismo de busca",
+        "Se era viável enviar e-mails sem usar o símbolo arroba"
+      ],
+      "resposta_correta": "Se havia uma forma de criar conexões à internet que não revelassem quem conversava com quem, mesmo sob monitoramento"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano a Marinha americana patenteou a tecnologia de roteamento onion, após refinamento pela DARPA?",
+      "opcoes": [
+        "1998",
+        "1995",
+        "2002",
+        "2006"
+      ],
+      "resposta_correta": "1998"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em qual publicação científica os pesquisadores tornaram o método público em 1998, através de um artigo técnico?",
+      "opcoes": [
+        "IEEE Journal on Selected Areas in Communications",
+        "Nature",
+        "Scientific American",
+        "MIT Technology Review"
+      ],
+      "resposta_correta": "IEEE Journal on Selected Areas in Communications"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem se juntou a Paul Syverson em 2002 para desenvolver a implementação que se tornaria o projeto Tor propriamente dito?",
+      "opcoes": [
+        "Roger Dingledine e Nick Mathewson",
+        "David Goldschlag e Mike Reed",
+        "Ross Ulbricht e um colega da NSA",
+        "Satoshi Nakamoto e um pesquisador do MIT"
+      ],
+      "resposta_correta": "Roger Dingledine e Nick Mathewson"
+    },
+    {
+      "n": 6,
+      "pergunta": "De qual universidade Roger Dingledine era recém-formado quando começou a trabalhar no projeto de roteamento onion?",
+      "opcoes": [
+        "MIT",
+        "Stanford",
+        "Harvard",
+        "Universidade do Texas"
+      ],
+      "resposta_correta": "MIT"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual era a relação entre Roger Dingledine e Nick Mathewson antes de trabalharem juntos no Tor?",
+      "opcoes": [
+        "Eram colegas de turma no MIT",
+        "Eram irmãos",
+        "Nunca haviam se encontrado antes do projeto",
+        "Eram professores um do outro"
+      ],
+      "resposta_correta": "Eram colegas de turma no MIT"
+    },
+    {
+      "n": 8,
+      "pergunta": "Por que Dingledine deu especificamente o nome 'Tor' ao projeto original dentro do laboratório naval?",
+      "opcoes": [
+        "Para diferenciar esse trabalho original de outros esforços de roteamento onion que começavam a surgir em outros lugares",
+        "Porque era uma exigência formal do Laboratório Naval",
+        "Porque era uma homenagem a um professor específico",
+        "Não há explicação registrada sobre a escolha do nome"
+      ],
+      "resposta_correta": "Para diferenciar esse trabalho original de outros esforços de roteamento onion que começavam a surgir em outros lugares"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual organização deu apoio financeiro para a fundação do Tor Project como entidade sem fins lucrativos, em 2006?",
+      "opcoes": [
+        "Electronic Frontier Foundation (EFF)",
+        "Google",
+        "Microsoft",
+        "Departamento de Defesa dos EUA, diretamente"
+      ],
+      "resposta_correta": "Electronic Frontier Foundation (EFF)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Quantas pessoas, ao todo, fundaram formalmente o Tor Project como organização sem fins lucrativos, incluindo Dingledine e Mathewson?",
+      "opcoes": [
+        "Sete pessoas (Dingledine, Mathewson e mais cinco)",
+        "Apenas duas pessoas",
+        "Cinquenta pessoas",
+        "Uma única pessoa"
+      ],
+      "resposta_correta": "Sete pessoas (Dingledine, Mathewson e mais cinco)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Tecnicamente, como o roteamento onion funciona, em termos de camadas de criptografia, segundo uma explicação técnica?",
+      "opcoes": [
+        "As mensagens são encapsuladas em múltiplas camadas de criptografia, cada nó 'descascando' uma camada por vez",
+        "Toda a mensagem é criptografada uma única vez, sem múltiplas camadas",
+        "Não há nenhuma criptografia envolvida, apenas troca de servidores",
+        "A criptografia acontece apenas no destino final, não durante o trajeto"
+      ],
+      "resposta_correta": "As mensagens são encapsuladas em múltiplas camadas de criptografia, cada nó 'descascando' uma camada por vez"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual técnica é citada como um dos poucos métodos capazes de comprometer o anonimato do roteamento onion?",
+      "opcoes": [
+        "Análise de tempo (timing analysis)",
+        "Força bruta de senha",
+        "Phishing direto",
+        "Nenhum método consegue comprometer o sistema"
+      ],
+      "resposta_correta": "Análise de tempo (timing analysis)"
+    },
+    {
+      "n": 13,
+      "pergunta": "Desde sua concepção nos anos 1990, o roteamento onion foi projetado para depender de que tipo de estrutura de rede?",
+      "opcoes": [
+        "Uma rede descentralizada, operada por entidades diversas",
+        "Um único servidor central controlado por um governo",
+        "Uma rede exclusivamente comercial e paga",
+        "Uma estrutura hierárquica rígida com um único administrador"
+      ],
+      "resposta_correta": "Uma rede descentralizada, operada por entidades diversas"
+    },
+    {
+      "n": 14,
+      "pergunta": "Por que a decentralização e o código aberto eram considerados fundamentais para o projeto, desde o início, segundo o próprio Tor Project?",
+      "opcoes": [
+        "Para maximizar a transparência e evitar que uma única entidade controlasse toda a rede",
+        "Para reduzir custos de manutenção exclusivamente",
+        "Para facilitar a venda comercial da tecnologia",
+        "Não havia nenhuma razão declarada para essas escolhas"
+      ],
+      "resposta_correta": "Para maximizar a transparência e evitar que uma única entidade controlasse toda a rede"
+    },
+    {
+      "n": 15,
+      "pergunta": "Antes de se tornar uma organização sem fins lucrativos formal, sob qual tipo de licença a Marinha liberou o código do Tor?",
+      "opcoes": [
+        "Uma licença livre (free license)",
+        "Uma licença comercial fechada e proprietária",
+        "Nenhuma licença, o código permaneceu secreto",
+        "Uma licença exclusiva para uso militar apenas"
+      ],
+      "resposta_correta": "Uma licença livre (free license)"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual crença comum é citada pelo Tor Project como unindo todos os desenvolvedores, pesquisadores e fundadores envolvidos no projeto?",
+      "opcoes": [
+        "Que usuários da internet deveriam ter acesso privado a uma web sem censura",
+        "Que toda comunicação online deveria ser obrigatoriamente pública",
+        "Que apenas governos deveriam ter acesso a ferramentas de anonimato",
+        "Que a internet deveria ser inteiramente comercial"
+      ],
+      "resposta_correta": "Que usuários da internet deveriam ter acesso privado a uma web sem censura"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em qual categoria fiscal específica dos Estados Unidos o Tor Project se enquadra como organização sem fins lucrativos?",
+      "opcoes": [
+        "501(c)(3)",
+        "501(c)(4)",
+        "401(k)",
+        "1040-EZ"
+      ],
+      "resposta_correta": "501(c)(3)"
+    },
+    {
+      "n": 18,
+      "pergunta": "Quantos anos, aproximadamente, separam os primeiros protótipos de roteamento onion (1995) da fundação formal do Tor Project como organização (2006)?",
+      "opcoes": [
+        "Cerca de 11 anos",
+        "Cerca de 1 ano",
+        "Cerca de 30 anos",
+        "Cerca de 5 anos"
+      ],
+      "resposta_correta": "Cerca de 11 anos"
+    },
+    {
+      "n": 19,
+      "pergunta": "Comparando as origens do Tor (pesquisa militar de segurança) e do Silk Road (mercado ilegal que usou essa tecnologia), o que essa relação demonstra sobre ferramentas de anonimato online?",
+      "opcoes": [
+        "Que a mesma tecnologia pode ser usada tanto para fins legítimos de segurança/privacidade quanto para atividades ilegais",
+        "Que toda tecnologia militar é inevitavelmente usada apenas para crimes",
+        "Que não existe nenhuma relação entre as duas histórias",
+        "Que apenas criminosos desenvolvem tecnologias de anonimato"
+      ],
+      "resposta_correta": "Que a mesma tecnologia pode ser usada tanto para fins legítimos de segurança/privacidade quanto para atividades ilegais"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a jornada do Tor — de pesquisa militar secreta a ferramenta de código aberto usada por jornalistas, ativistas e, infelizmente, também criminosos — melhor ilustra sobre tecnologias de segurança digital?",
+      "opcoes": [
+        "Como uma mesma ferramenta pode ter usos muito diferentes dependendo de quem a utiliza e com qual propósito",
+        "Que toda tecnologia militar deveria permanecer sempre secreta",
+        "Que ferramentas de privacidade só deveriam existir para uso exclusivamente criminoso",
+        "Que não há nenhuma relação entre o propósito original de uma tecnologia e seus usos posteriores"
+      ],
+      "resposta_correta": "Como uma mesma ferramenta pode ter usos muito diferentes dependendo de quem a utiliza e com qual propósito"
+    }
+  ]
+}

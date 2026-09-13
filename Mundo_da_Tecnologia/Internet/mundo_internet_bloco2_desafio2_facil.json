@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 2,
+    "tema_desafio": "Mac e Steve Jobs",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico neutro, sem viés a favor ou contra a empresa/pessoa."
+  },
+  "saiba_mais": "Curiosidade: o icônico comercial '1984' quase não foi ao ar! A diretoria da Apple, insegura sobre a peça, chegou a instruir a agência de publicidade a revender os espaços comprados no Super Bowl — mas um diretor da agência resistiu silenciosamente à ordem, e Steve Wozniak até se ofereceu para pagar metade do custo do próprio bolso. O comercial acabou exibido, e entrou para a história da publicidade.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem cofundou a Apple ao lado de Steve Jobs?",
+      "opcoes": [
+        "Steve Wozniak",
+        "Bill Gates",
+        "Paul Allen",
+        "Tim Berners-Lee"
+      ],
+      "resposta_correta": "Steve Wozniak"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a Apple foi fundada?",
+      "opcoes": [
+        "1976",
+        "1985",
+        "1969",
+        "1984"
+      ],
+      "resposta_correta": "1976"
+    },
+    {
+      "n": 3,
+      "pergunta": "Onde a Apple foi fundada?",
+      "opcoes": [
+        "Numa garagem na Califórnia",
+        "Num escritório em Nova York",
+        "Numa universidade de Boston",
+        "Numa fábrica no Texas"
+      ],
+      "resposta_correta": "Numa garagem na Califórnia"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual foi o primeiro produto da Apple?",
+      "opcoes": [
+        "Apple I",
+        "Macintosh",
+        "Apple II",
+        "iPhone"
+      ],
+      "resposta_correta": "Apple I"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual computador da Apple, lançado em 1977, se tornou um grande sucesso comercial?",
+      "opcoes": [
+        "Apple II",
+        "Apple I",
+        "Macintosh",
+        "Lisa"
+      ],
+      "resposta_correta": "Apple II"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em que ano o Macintosh foi lançado?",
+      "opcoes": [
+        "1984",
+        "1976",
+        "1977",
+        "1990"
+      ],
+      "resposta_correta": "1984"
+    },
+    {
+      "n": 7,
+      "pergunta": "O Macintosh foi pioneiro em popularizar qual tipo de interação com o computador?",
+      "opcoes": [
+        "Interface gráfica com ícones e mouse",
+        "Comando de voz",
+        "Tela sensível ao toque",
+        "Reconhecimento facial"
+      ],
+      "resposta_correta": "Interface gráfica com ícones e mouse"
+    },
+    {
+      "n": 8,
+      "pergunta": "Durante que evento esportivo famoso o comercial de lançamento do Macintosh foi exibido?",
+      "opcoes": [
+        "Super Bowl",
+        "Copa do Mundo",
+        "Olimpíadas",
+        "World Series"
+      ],
+      "resposta_correta": "Super Bowl"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano Steve Jobs deixou a Apple, após conflitos internos?",
+      "opcoes": [
+        "1985",
+        "1976",
+        "1984",
+        "2000"
+      ],
+      "resposta_correta": "1985"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual empresa de animação Steve Jobs adquiriu depois de sair da Apple?",
+      "opcoes": [
+        "Pixar",
+        "DreamWorks",
+        "Disney",
+        "Warner Bros"
+      ],
+      "resposta_correta": "Pixar"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual foi o primeiro longa-metragem totalmente digital produzido pela empresa que Jobs financiou?",
+      "opcoes": [
+        "Toy Story",
+        "Shrek",
+        "Procurando Nemo",
+        "Vida de Inseto"
+      ],
+      "resposta_correta": "Toy Story"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual foi o apelido informal dado ao Macintosh original, por causa do formato e do calor que gerava?",
+      "opcoes": [
+        "'Torradeira bege'",
+        "'Caixa de sapato'",
+        "'Tijolo cinza'",
+        "'Cubo de gelo'"
+      ],
+      "resposta_correta": "'Torradeira bege'"
+    },
+    {
+      "n": 13,
+      "pergunta": "O Macintosh original era compatível com computadores da IBM?",
+      "opcoes": [
+        "Não, não era compatível",
+        "Sim, totalmente compatível",
+        "Parcialmente, apenas para arquivos de texto",
+        "Sim, mas só depois de uma atualização"
+      ],
+      "resposta_correta": "Não, não era compatível"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual computador, lançado em 1983 e batizado com o nome da filha de Steve Jobs, foi descontinuado dois anos depois?",
+      "opcoes": [
+        "Lisa",
+        "Macintosh",
+        "Apple III",
+        "Newton"
+      ],
+      "resposta_correta": "Lisa"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quem assumiu o cargo de CEO da Apple em 1983, vindo da PepsiCo?",
+      "opcoes": [
+        "John Sculley",
+        "Tim Cook",
+        "Steve Ballmer",
+        "Bill Gates"
+      ],
+      "resposta_correta": "John Sculley"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual foi o slogan famoso lançado pela Apple em 1997?",
+      "opcoes": [
+        "'Think Different'",
+        "'Just Do It'",
+        "'I'm Lovin' It'",
+        "'Think Big'"
+      ],
+      "resposta_correta": "'Think Different'"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual diretor de cinema famoso dirigiu o icônico comercial '1984' do Macintosh?",
+      "opcoes": [
+        "Ridley Scott",
+        "Steven Spielberg",
+        "James Cameron",
+        "Martin Scorsese"
+      ],
+      "resposta_correta": "Ridley Scott"
+    },
+    {
+      "n": 18,
+      "pergunta": "O comercial '1984' foi inspirado em qual obra literária?",
+      "opcoes": [
+        "'1984', de George Orwell",
+        "'Admirável Mundo Novo', de Aldous Huxley",
+        "'Fahrenheit 451', de Ray Bradbury",
+        "'Neuromancer', de William Gibson"
+      ],
+      "resposta_correta": "'1984', de George Orwell"
+    },
+    {
+      "n": 19,
+      "pergunta": "Antes do Macintosh, como as pessoas costumavam interagir com a maioria dos computadores pessoais?",
+      "opcoes": [
+        "Digitando comandos de texto em telas pretas",
+        "Usando apenas controles remotos",
+        "Através de comando de voz",
+        "Usando canetas ópticas em todas as telas"
+      ],
+      "resposta_correta": "Digitando comandos de texto em telas pretas"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual terceiro cofundador, além de Jobs e Wozniak, vendeu sua parte na Apple poucos dias após a fundação?",
+      "opcoes": [
+        "Ronald Wayne",
+        "John Sculley",
+        "Tim Cook",
+        "Bill Gates"
+      ],
+      "resposta_correta": "Ronald Wayne"
+    }
+  ]
+}

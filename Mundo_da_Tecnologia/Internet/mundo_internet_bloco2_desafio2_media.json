@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 2,
+    "tema_desafio": "Mac e Steve Jobs",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - mencao a doenca e falecimento tratada de forma factual e respeitosa, sem detalhe grafico."
+  },
+  "saiba_mais": "Curiosidade: Steve Jobs deixou e retornou à Apple exatamente na mesma data do calendário, 16 de setembro, em anos diferentes (1985 e 1997) — uma coincidência de datas que muitos fãs da empresa consideram um dos detalhes mais curiosos de toda a sua trajetória.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que empresa Steve Jobs fez uma visita histórica em 1979 que o expôs à interface gráfica de usuário?",
+      "opcoes": [
+        "Xerox PARC",
+        "IBM",
+        "Bell Labs",
+        "MIT Media Lab"
+      ],
+      "resposta_correta": "Xerox PARC"
+    },
+    {
+      "n": 2,
+      "pergunta": "Além da interface gráfica, que outras duas tecnologias foram mostradas a Jobs na mesma visita, segundo relato dele próprio?",
+      "opcoes": [
+        "A linguagem Smalltalk e uma rede Ethernet conectando computadores",
+        "O primeiro mouse sem fio e a primeira impressora colorida",
+        "O primeiro disco rígido e a primeira placa de som",
+        "O primeiro modem e o primeiro scanner"
+      ],
+      "resposta_correta": "A linguagem Smalltalk e uma rede Ethernet conectando computadores"
+    },
+    {
+      "n": 3,
+      "pergunta": "Segundo o próprio Jobs, por que ele não prestou atenção às outras duas tecnologias mostradas na visita à Xerox PARC?",
+      "opcoes": [
+        "Ficou tão impressionado com a interface gráfica que quase não notou o resto",
+        "As outras tecnologias eram consideradas irrelevantes pela própria Xerox",
+        "Ele já conhecia as outras duas tecnologias previamente",
+        "A demonstração das outras tecnologias foi cancelada"
+      ],
+      "resposta_correta": "Ficou tão impressionado com a interface gráfica que quase não notou o resto"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que data exata, e em dois anos diferentes, Steve Jobs tanto deixou quanto retornou à Apple, segundo um curioso registro histórico?",
+      "opcoes": [
+        "16 de setembro (1985 e 1997)",
+        "1º de janeiro (1984 e 1996)",
+        "24 de fevereiro (1985 e 1997)",
+        "5 de outubro (1985 e 1997)"
+      ],
+      "resposta_correta": "16 de setembro (1985 e 1997)"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual conflito interno específico levou à saída de Jobs em 1985?",
+      "opcoes": [
+        "Uma disputa de poder com o CEO John Sculley, que ele mesmo havia recrutado",
+        "Uma disputa judicial sobre patentes com a Microsoft",
+        "Uma investigação de fraude contábil",
+        "Um desentendimento público com Steve Wozniak"
+      ],
+      "resposta_correta": "Uma disputa de poder com o CEO John Sculley, que ele mesmo havia recrutado"
+    },
+    {
+      "n": 6,
+      "pergunta": "Qual empresa Steve Jobs fundou imediatamente após deixar a Apple em 1985?",
+      "opcoes": [
+        "NeXT",
+        "Pixar",
+        "Microsoft",
+        "Adobe"
+      ],
+      "resposta_correta": "NeXT"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que ano a Apple adquiriu a NeXT, marcando o caminho de volta de Jobs?",
+      "opcoes": [
+        "1996",
+        "1985",
+        "1990",
+        "2000"
+      ],
+      "resposta_correta": "1996"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano Steve Jobs foi oficialmente nomeado CEO da Apple, após seu retorno?",
+      "opcoes": [
+        "2000",
+        "1996",
+        "1997",
+        "1985"
+      ],
+      "resposta_correta": "2000"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual designer britânico trabalhou de perto com Jobs no desenvolvimento de produtos icônicos da Apple após seu retorno?",
+      "opcoes": [
+        "Jony Ive",
+        "Jonathan Sculley",
+        "Jef Raskin",
+        "Bill Atkinson"
+      ],
+      "resposta_correta": "Jony Ive"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual computador da Apple, lançado logo após o retorno de Jobs, ajudou a reerguer financeiramente a empresa?",
+      "opcoes": [
+        "iMac",
+        "Apple II",
+        "Lisa",
+        "Newton"
+      ],
+      "resposta_correta": "iMac"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano a Apple lançou o primeiro iPhone?",
+      "opcoes": [
+        "2007",
+        "1997",
+        "2001",
+        "2010"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 12,
+      "pergunta": "Qual produto de reprodução de música da Apple, lançado em 2001, se tornou extremamente popular?",
+      "opcoes": [
+        "iPod",
+        "iTunes Radio",
+        "AirPods",
+        "HomePod"
+      ],
+      "resposta_correta": "iPod"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que ano a Disney adquiriu a Pixar, empresa que Jobs havia comprado anos antes?",
+      "opcoes": [
+        "2006",
+        "1986",
+        "1995",
+        "2011"
+      ],
+      "resposta_correta": "2006"
+    },
+    {
+      "n": 14,
+      "pergunta": "Que doença Steve Jobs foi diagnosticado em 2003?",
+      "opcoes": [
+        "Um tumor neuroendócrino pancreático",
+        "Um problema cardíaco congênito",
+        "Diabetes tipo 1",
+        "Uma doença autoimune rara"
+      ],
+      "resposta_correta": "Um tumor neuroendócrino pancreático"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que ano Steve Jobs renunciou ao cargo de CEO da Apple, pouco antes de falecer?",
+      "opcoes": [
+        "2011",
+        "2007",
+        "2005",
+        "2000"
+      ],
+      "resposta_correta": "2011"
+    },
+    {
+      "n": 16,
+      "pergunta": "Onde Steve Jobs faleceu, em outubro de 2011?",
+      "opcoes": [
+        "Palo Alto, Califórnia",
+        "São Francisco, Califórnia",
+        "Nova York",
+        "Cupertino, Califórnia"
+      ],
+      "resposta_correta": "Palo Alto, Califórnia"
+    },
+    {
+      "n": 17,
+      "pergunta": "Onde Steve Jobs cursou parte de sua educação superior, antes de abandonar os estudos formais?",
+      "opcoes": [
+        "Reed College",
+        "Harvard",
+        "Stanford",
+        "MIT"
+      ],
+      "resposta_correta": "Reed College"
+    },
+    {
+      "n": 18,
+      "pergunta": "Para qual país Steve Jobs viajou em 1974, em busca de uma jornada espiritual?",
+      "opcoes": [
+        "Índia",
+        "Japão",
+        "Tibete",
+        "Nepal"
+      ],
+      "resposta_correta": "Índia"
+    },
+    {
+      "n": 19,
+      "pergunta": "Que tradição religiosa/filosófica Jobs passou a estudar após essa viagem?",
+      "opcoes": [
+        "Budismo Zen",
+        "Hinduísmo tradicional",
+        "Sufismo",
+        "Taoísmo"
+      ],
+      "resposta_correta": "Budismo Zen"
+    },
+    {
+      "n": 20,
+      "pergunta": "Além da Apple, de qual outra grande empresa Steve Jobs fez parte do conselho de administração entre 1999 e 2002?",
+      "opcoes": [
+        "Gap Inc.",
+        "Disney",
+        "Coca-Cola",
+        "Nike"
+      ],
+      "resposta_correta": "Gap Inc."
+    }
+  ]
+}

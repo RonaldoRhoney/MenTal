@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 4,
+    "tema_desafio": "Netflix e a Revolução do Streaming",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Britannica. Texto escrito originalmente. Historia da multa da Apollo 13 apresentada com ressalva de incerteza historica.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: uma das histórias mais contadas sobre a origem da Netflix é que Reed Hastings teria tido a ideia depois de pagar uma multa de 40 dólares por atrasar a devolução do filme 'Apollo 13' numa locadora. Vale registrar que alguns historiadores questionam se essa história aconteceu exatamente assim — mas ela se tornou parte fundamental do mito de origem da empresa que revolucionou a forma de assistir filmes e séries.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem fundou a Netflix?",
+      "opcoes": [
+        "Reed Hastings e Marc Randolph",
+        "Jeff Bezos e MacKenzie Scott",
+        "Mark Zuckerberg e Eduardo Saverin",
+        "Larry Page e Sergey Brin"
+      ],
+      "resposta_correta": "Reed Hastings e Marc Randolph"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a Netflix foi fundada?",
+      "opcoes": [
+        "1997",
+        "1994",
+        "2007",
+        "2004"
+      ],
+      "resposta_correta": "1997"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que cidade da Califórnia a Netflix foi fundada?",
+      "opcoes": [
+        "Scotts Valley",
+        "Palo Alto",
+        "Cupertino",
+        "San Francisco"
+      ],
+      "resposta_correta": "Scotts Valley"
+    },
+    {
+      "n": 4,
+      "pergunta": "Como a Netflix funcionava originalmente, antes do streaming?",
+      "opcoes": [
+        "Como um serviço de aluguel de DVDs pelo correio",
+        "Como uma rede social de resenhas de filmes",
+        "Como um cinema virtual ao vivo",
+        "Como uma loja física de vídeos"
+      ],
+      "resposta_correta": "Como um serviço de aluguel de DVDs pelo correio"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano a Netflix lançou seu serviço de streaming?",
+      "opcoes": [
+        "2007",
+        "1997",
+        "2002",
+        "2013"
+      ],
+      "resposta_correta": "2007"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma história frequentemente contada (embora questionada por alguns), o que teria motivado Reed Hastings a pensar na ideia da Netflix?",
+      "opcoes": [
+        "Uma multa alta por atraso na devolução de uma fita de vídeo",
+        "Uma viagem de férias ao Havaí",
+        "Um curso universitário sobre cinema",
+        "Uma aposta com um amigo"
+      ],
+      "resposta_correta": "Uma multa alta por atraso na devolução de uma fita de vídeo"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual grande diferencial a Netflix oferecia em relação a locadoras físicas tradicionais, como a Blockbuster?",
+      "opcoes": [
+        "Ausência de multas por atraso",
+        "Preços muito mais altos",
+        "Menor variedade de filmes",
+        "Necessidade de ir fisicamente à loja"
+      ],
+      "resposta_correta": "Ausência de multas por atraso"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano a Netflix abriu seu capital na bolsa (IPO)?",
+      "opcoes": [
+        "2002",
+        "1997",
+        "2007",
+        "2013"
+      ],
+      "resposta_correta": "2002"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano a Netflix ultrapassou a marca de 1 milhão de assinantes?",
+      "opcoes": [
+        "2003",
+        "1997",
+        "2007",
+        "2000"
+      ],
+      "resposta_correta": "2003"
+    },
+    {
+      "n": 10,
+      "pergunta": "Em que ano a Netflix lançou sua primeira produção original de destaque, a série House of Cards?",
+      "opcoes": [
+        "2013",
+        "2007",
+        "1997",
+        "2020"
+      ],
+      "resposta_correta": "2013"
+    },
+    {
+      "n": 11,
+      "pergunta": "Aproximadamente quantos assinantes pagos a Netflix tem hoje, segundo estimativas recentes?",
+      "opcoes": [
+        "Mais de 230 milhões",
+        "Cerca de 1 milhão",
+        "Cerca de 5 milhões",
+        "Cerca de 100 mil"
+      ],
+      "resposta_correta": "Mais de 230 milhões"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em quantos países, aproximadamente, a Netflix está disponível atualmente?",
+      "opcoes": [
+        "Mais de 190 países",
+        "Apenas nos Estados Unidos",
+        "Cerca de 10 países",
+        "Cerca de 50 países"
+      ],
+      "resposta_correta": "Mais de 190 países"
+    },
+    {
+      "n": 13,
+      "pergunta": "Qual sistema é frequentemente citado como um diferencial técnico da Netflix, ajudando a sugerir filmes e séries aos usuários?",
+      "opcoes": [
+        "Sistema de recomendação baseado em avaliações e histórico",
+        "Sistema de busca por voz exclusivo",
+        "Sistema de tradução automática",
+        "Sistema de pagamento por criptomoeda"
+      ],
+      "resposta_correta": "Sistema de recomendação baseado em avaliações e histórico"
+    },
+    {
+      "n": 14,
+      "pergunta": "Em que ano a Netflix introduziu esse sistema de recomendação baseado nas avaliações dos usuários?",
+      "opcoes": [
+        "2000",
+        "1997",
+        "2007",
+        "2013"
+      ],
+      "resposta_correta": "2000"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que ano a Netflix registrou uma patente relacionada ao seu modelo de negócio de aluguel por assinatura?",
+      "opcoes": [
+        "2003",
+        "1997",
+        "2007",
+        "2000"
+      ],
+      "resposta_correta": "2003"
+    },
+    {
+      "n": 16,
+      "pergunta": "Além de filmes e séries, para qual outra categoria de entretenimento a Netflix se expandiu mais recentemente?",
+      "opcoes": [
+        "Publicação de jogos eletrônicos",
+        "Venda de eletrônicos",
+        "Entrega de comida",
+        "Turismo e viagens"
+      ],
+      "resposta_correta": "Publicação de jogos eletrônicos"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em 2022, aproximadamente qual fração da biblioteca de conteúdo da Netflix nos Estados Unidos já era formada por produções originais?",
+      "opcoes": [
+        "Metade da biblioteca",
+        "Menos de 1%",
+        "Toda a biblioteca",
+        "Cerca de 10%"
+      ],
+      "resposta_correta": "Metade da biblioteca"
+    },
+    {
+      "n": 18,
+      "pergunta": "Em que data específica de 2007 a Netflix comemorou 1 bilhão de DVDs alugados, coincidindo com o lançamento do streaming?",
+      "opcoes": [
+        "25 de fevereiro de 2007",
+        "16 de janeiro de 2007",
+        "29 de agosto de 1997",
+        "1º de janeiro de 2000"
+      ],
+      "resposta_correta": "25 de fevereiro de 2007"
+    },
+    {
+      "n": 19,
+      "pergunta": "Com quantos filmes em acervo e quantos funcionários a Netflix começou suas operações iniciais, segundo um relato?",
+      "opcoes": [
+        "925 filmes e 30 funcionários",
+        "10 filmes e 2 funcionários",
+        "10.000 filmes e 500 funcionários",
+        "100 filmes e 100 funcionários"
+      ],
+      "resposta_correta": "925 filmes e 30 funcionários"
+    },
+    {
+      "n": 20,
+      "pergunta": "Que tipo de modelo de assinatura a Netflix introduziu em 1999, mudando de cobrança por aluguel individual para taxa fixa mensal?",
+      "opcoes": [
+        "Aluguel ilimitado de DVDs por assinatura mensal",
+        "Cobrança por hora de uso",
+        "Modelo totalmente gratuito com anúncios",
+        "Modelo de compra vitalícia por filme"
+      ],
+      "resposta_correta": "Aluguel ilimitado de DVDs por assinatura mensal"
+    }
+  ]
+}

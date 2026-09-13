@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 5,
+    "tema_bloco": "Passado, Presente e Futuro",
+    "desafio": 3,
+    "tema_desafio": "Segurança Digital e Cibersegurança",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas, incluindo TecMundo e Malwarebytes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo estritamente historico sobre incidentes de ciberseguranca ja publicos, sem nenhum detalhe tecnico replicavel; atribuicao de autoria de ataques apresentada com a devida ressalva de nao confirmacao definitiva."
+  },
+  "saiba_mais": "Curiosidade: o ransomware, hoje uma das maiores ameaças da cibersegurança mundial, tem uma origem surpreendentemente antiga — o primeiro caso já registrado aconteceu em 1989, quando um biólogo distribuiu 20 mil disquetes infectados numa conferência sobre AIDS, disfarçados de material informativo sobre a doença. O golpe já seguia a mesma lógica usada até hoje: criptografar os dados da vítima e cobrar um resgate para liberá-los.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual vírus de e-mail, disseminado em maio de 2000, é considerado um dos ataques mais danosos da história da internet?",
+      "opcoes": [
+        "ILOVEYOU (Love Bug)",
+        "Morris Worm",
+        "Creeper",
+        "WannaCry"
+      ],
+      "resposta_correta": "ILOVEYOU (Love Bug)"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que data exata o vírus ILOVEYOU começou a circular?",
+      "opcoes": [
+        "4 de maio de 2000",
+        "12 de maio de 2017",
+        "2 de novembro de 1988",
+        "1º de janeiro de 1999"
+      ],
+      "resposta_correta": "4 de maio de 2000"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual era o assunto do e-mail usado para disseminar o vírus ILOVEYOU?",
+      "opcoes": [
+        "'I LOVE YOU'",
+        "'Você ganhou um prêmio'",
+        "'Atualização urgente do sistema'",
+        "'Fatura em atraso'"
+      ],
+      "resposta_correta": "'I LOVE YOU'"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem criou o vírus ILOVEYOU?",
+      "opcoes": [
+        "Onel de Guzmán",
+        "Robert Morris",
+        "Bob Thomas",
+        "Ray Tomlinson"
+      ],
+      "resposta_correta": "Onel de Guzmán"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que país o criador do ILOVEYOU vivia?",
+      "opcoes": [
+        "Filipinas",
+        "Estados Unidos",
+        "Paquistão",
+        "Reino Unido"
+      ],
+      "resposta_correta": "Filipinas"
+    },
+    {
+      "n": 6,
+      "pergunta": "O ILOVEYOU foi originalmente proposto por Onel de Guzmán como projeto para qual finalidade acadêmica?",
+      "opcoes": [
+        "Um trabalho de conclusão de curso universitário",
+        "Uma pesquisa financiada pelo governo",
+        "Um projeto de doutorado",
+        "Uma feira de ciências do ensino médio"
+      ],
+      "resposta_correta": "Um trabalho de conclusão de curso universitário"
+    },
+    {
+      "n": 7,
+      "pergunta": "Aproximadamente quantas máquinas o ILOVEYOU chegou a infectar em dez dias, segundo uma fonte?",
+      "opcoes": [
+        "45 milhões",
+        "45 mil",
+        "4,5 milhões",
+        "450 mil"
+      ],
+      "resposta_correta": "45 milhões"
+    },
+    {
+      "n": 8,
+      "pergunta": "Aproximadamente quanto em prejuízo o ILOVEYOU chegou a gerar globalmente, segundo estimativas?",
+      "opcoes": [
+        "Até 10 bilhões de dólares",
+        "10 mil dólares",
+        "1 bilhão de dólares",
+        "100 mil dólares"
+      ],
+      "resposta_correta": "Até 10 bilhões de dólares"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em qual linguagem de programação o código do ILOVEYOU foi escrito?",
+      "opcoes": [
+        "Visual Basic",
+        "Python",
+        "Java",
+        "C++"
+      ],
+      "resposta_correta": "Visual Basic"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual era a extensão real do arquivo anexado ao e-mail do ILOVEYOU, disfarçada como se fosse um arquivo de texto simples?",
+      "opcoes": [
+        ".vbs",
+        ".txt",
+        ".exe apenas",
+        ".pdf"
+      ],
+      "resposta_correta": ".vbs"
+    },
+    {
+      "n": 11,
+      "pergunta": "Quais dois vírus anteriores ao ILOVEYOU, de 1998 e 1999, já eram considerados extremamente destrutivos, antes de o ILOVEYOU superar todos os recordes?",
+      "opcoes": [
+        "CIH e Melissa",
+        "Creeper e Brain",
+        "Morris Worm e Reaper",
+        "WannaCry e MyDoom"
+      ],
+      "resposta_correta": "CIH e Melissa"
+    },
+    {
+      "n": 12,
+      "pergunta": "Como o WannaCry, ransomware de 2017, tecnicamente se propagava entre computadores?",
+      "opcoes": [
+        "Explorando uma vulnerabilidade do Windows chamada EternalBlue",
+        "Exclusivamente por pen-drives infectados",
+        "Apenas por download manual em sites suspeitos",
+        "Por meio de ligações telefônicas fraudulentas"
+      ],
+      "resposta_correta": "Explorando uma vulnerabilidade do Windows chamada EternalBlue"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo registros, de onde teria vindo originalmente a ferramenta EternalBlue, explorada pelo WannaCry?",
+      "opcoes": [
+        "Foi desenvolvida pela NSA (Agência de Segurança Nacional dos EUA) e depois vazada",
+        "Foi criada por um estudante universitário isolado",
+        "Foi desenvolvida pela Microsoft intencionalmente para fins comerciais",
+        "Não há nenhuma origem conhecida para a ferramenta"
+      ],
+      "resposta_correta": "Foi desenvolvida pela NSA (Agência de Segurança Nacional dos EUA) e depois vazada"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual grupo de hackers vazou a ferramenta EternalBlue, cerca de um mês antes do ataque do WannaCry?",
+      "opcoes": [
+        "The Shadow Brokers",
+        "Anonymous",
+        "Lazarus Group diretamente",
+        "LulzSec"
+      ],
+      "resposta_correta": "The Shadow Brokers"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em maio de 2017, quantos computadores o WannaCry infectou em apenas alguns dias, segundo registros?",
+      "opcoes": [
+        "Mais de 200 mil computadores em cerca de 150 países",
+        "Apenas mil computadores em um único país",
+        "Cerca de 50 computadores no total",
+        "Mais de 1 bilhão de computadores"
+      ],
+      "resposta_correta": "Mais de 200 mil computadores em cerca de 150 países"
+    },
+    {
+      "n": 16,
+      "pergunta": "Quanto o WannaCry exigia inicialmente, em Bitcoin, como resgate por computador infectado?",
+      "opcoes": [
+        "300 dólares, posteriormente aumentando para 600 dólares",
+        "3 dólares",
+        "30 mil dólares",
+        "Nenhum resgate era exigido"
+      ],
+      "resposta_correta": "300 dólares, posteriormente aumentando para 600 dólares"
+    },
+    {
+      "n": 17,
+      "pergunta": "Quem descobriu o 'botão de desligamento' (kill switch) que interrompeu a propagação inicial do WannaCry?",
+      "opcoes": [
+        "Marcus Hutchins",
+        "Onel de Guzmán",
+        "Robert Morris",
+        "Ray Tomlinson"
+      ],
+      "resposta_correta": "Marcus Hutchins"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual serviço público britânico foi significativamente afetado pelo ataque do WannaCry?",
+      "opcoes": [
+        "O Serviço Nacional de Saúde (NHS) do Reino Unido",
+        "O metrô de Londres",
+        "A rede elétrica nacional",
+        "O correio britânico"
+      ],
+      "resposta_correta": "O Serviço Nacional de Saúde (NHS) do Reino Unido"
+    },
+    {
+      "n": 19,
+      "pergunta": "Segundo investigações, a qual grupo (sem confirmação definitiva) o ataque WannaCry foi atribuído?",
+      "opcoes": [
+        "Lazarus Group",
+        "Anonymous",
+        "The Shadow Brokers",
+        "Um grupo brasileiro nunca identificado"
+      ],
+      "resposta_correta": "Lazarus Group"
+    },
+    {
+      "n": 20,
+      "pergunta": "Qual foi um dos primeiros casos históricos de 'ransomware' já registrados, distribuído em disquetes em 1989, décadas antes do WannaCry?",
+      "opcoes": [
+        "Trojan AIDS (distribuído pelo Dr. Joseph Popp)",
+        "ILOVEYOU",
+        "Creeper",
+        "Morris Worm"
+      ],
+      "resposta_correta": "Trojan AIDS (distribuído pelo Dr. Joseph Popp)"
+    }
+  ]
+}

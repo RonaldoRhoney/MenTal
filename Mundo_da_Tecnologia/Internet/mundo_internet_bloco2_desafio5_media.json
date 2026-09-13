@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 5,
+    "tema_desafio": "Outros Sistemas Operacionais e Curiosidades Esquecidas",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: mesmo depois de praticamente desaparecerem do mercado comercial, sistemas como o AmigaOS e o BeOS ganharam vida nova nas mãos de comunidades de entusiastas — o AROS recria o AmigaOS, e o Haiku recria o BeOS, ambos rodando hoje em processadores Intel modernos, décadas depois de seus originais terem saído de linha.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "O Symbian OS foi construído, em grande parte, em qual linguagem de programação, ainda relativamente nova nos anos 1990?",
+      "opcoes": [
+        "C++",
+        "Java",
+        "Python",
+        "Assembly"
+      ],
+      "resposta_correta": "C++"
+    },
+    {
+      "n": 2,
+      "pergunta": "Como se chamava o microkernel em tempo real que o Symbian evoluiu para usar, projetado por Dennis May?",
+      "opcoes": [
+        "EKA2",
+        "NT Kernel",
+        "XNU",
+        "Mach"
+      ],
+      "resposta_correta": "EKA2"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano a Nokia adquiriu a empresa desenvolvedora do Symbian, tornando-o sua plataforma oficial?",
+      "opcoes": [
+        "2008",
+        "1995",
+        "2013",
+        "2001"
+      ],
+      "resposta_correta": "2008"
+    },
+    {
+      "n": 4,
+      "pergunta": "Sobre qual outro sistema o Symbian foi posteriormente disponibilizado como código aberto, antes de ser abandonado?",
+      "opcoes": [
+        "Foi publicado no GitHub",
+        "Foi vendido exclusivamente à Apple",
+        "Nunca foi disponibilizado publicamente",
+        "Foi incorporado permanentemente ao Android"
+      ],
+      "resposta_correta": "Foi publicado no GitHub"
+    },
+    {
+      "n": 5,
+      "pergunta": "Sobre quais duas tecnologias o sistema operacional BB10, do BlackBerry, foi construído?",
+      "opcoes": [
+        "QNX e Qt",
+        "Linux e GNOME",
+        "Windows NT e .NET",
+        "Unix e X11"
+      ],
+      "resposta_correta": "QNX e Qt"
+    },
+    {
+      "n": 6,
+      "pergunta": "O WebOS, originalmente da Palm, acabou encontrando um novo lar em qual tipo de produto da LG?",
+      "opcoes": [
+        "Smart TVs",
+        "Smartphones",
+        "Notebooks",
+        "Fones de ouvido"
+      ],
+      "resposta_correta": "Smart TVs"
+    },
+    {
+      "n": 7,
+      "pergunta": "O que estava por trás (na camada mais profunda) do WebOS usado nas smart TVs da LG, segundo análises técnicas?",
+      "opcoes": [
+        "Linux",
+        "Windows",
+        "Unix da AT&T",
+        "MS-DOS"
+      ],
+      "resposta_correta": "Linux"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual sistema, recriação moderna do AmigaOS feita por entusiastas, também roda em processadores Intel atualmente?",
+      "opcoes": [
+        "AROS",
+        "Haiku",
+        "ReactOS",
+        "FreeBSD"
+      ],
+      "resposta_correta": "AROS"
+    },
+    {
+      "n": 9,
+      "pergunta": "Qual sistema é a recriação moderna do BeOS, feita por uma comunidade de entusiastas?",
+      "opcoes": [
+        "Haiku",
+        "AROS",
+        "MINIX 3",
+        "Plan 9"
+      ],
+      "resposta_correta": "Haiku"
+    },
+    {
+      "n": 10,
+      "pergunta": "A Palm chegou a considerar basear uma versão de seu sistema em qual outra plataforma móvel concorrente, sem que o acordo prosperasse?",
+      "opcoes": [
+        "Symbian",
+        "iOS",
+        "Android",
+        "BlackBerry OS"
+      ],
+      "resposta_correta": "Symbian"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual foi o sistema operacional considerado um dos primeiros grandes fracassos da história da computação, lançado pela IBM em 1964?",
+      "opcoes": [
+        "OS/360",
+        "OS/2",
+        "MS-DOS",
+        "Unix"
+      ],
+      "resposta_correta": "OS/360"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quem escreveu o livro 'The Mythical Man-Month', inspirado nos problemas de desenvolvimento do projeto OS/360?",
+      "opcoes": [
+        "Fred Brooks",
+        "Linus Torvalds",
+        "Dennis Ritchie",
+        "Ken Thompson"
+      ],
+      "resposta_correta": "Fred Brooks"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que instituição de ensino o sistema ITS (Incompatible Timesharing System) foi desenvolvido, no final dos anos 1960?",
+      "opcoes": [
+        "MIT",
+        "Stanford",
+        "Harvard",
+        "Berkeley"
+      ],
+      "resposta_correta": "MIT"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual apelido irônico ('Open Deathtrap') foi dado a uma versão de sistema Unix com interface gráfica, lançada em 1989?",
+      "opcoes": [
+        "SCO Open Desktop",
+        "OS/2 Warp",
+        "Symbian UI",
+        "Windows 3.0"
+      ],
+      "resposta_correta": "SCO Open Desktop"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que linguagem de programação o chamado 'JavaOS', de 1996, foi desenvolvido, o que prejudicou seu desempenho para a época?",
+      "opcoes": [
+        "Java",
+        "C++",
+        "Assembly",
+        "Python"
+      ],
+      "resposta_correta": "Java"
+    },
+    {
+      "n": 16,
+      "pergunta": "Qual foi a intenção original de mercado para o JavaOS, segundo registros da época?",
+      "opcoes": [
+        "Ser o sistema favorito em equipamentos de bolso (dispositivos portáteis)",
+        "Substituir totalmente o Windows em computadores de mesa",
+        "Rodar exclusivamente em supercomputadores",
+        "Ser usado apenas em servidores web"
+      ],
+      "resposta_correta": "Ser o sistema favorito em equipamentos de bolso (dispositivos portáteis)"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo uma retrospectiva de sistemas mal avaliados, qual versão específica do Windows é frequentemente citada ao lado do Windows Millennium (ME) como um dos piores lançamentos da história?",
+      "opcoes": [
+        "Windows Vista",
+        "Windows 95",
+        "Windows XP",
+        "Windows 7"
+      ],
+      "resposta_correta": "Windows Vista"
+    },
+    {
+      "n": 18,
+      "pergunta": "Que tipo de problema comum era relatado pelo DR-DOS e por versões anteriores do MS-DOS, segundo relatos de usuários da época?",
+      "opcoes": [
+        "Programas paravam de funcionar sem explicação lógica aparente",
+        "Excesso de cores na tela, incomodando os usuários",
+        "Bateria descarregava rápido demais",
+        "Falta total de qualquer tipo de tela"
+      ],
+      "resposta_correta": "Programas paravam de funcionar sem explicação lógica aparente"
+    },
+    {
+      "n": 19,
+      "pergunta": "Séries de artigos sobre a 'história secreta' e as 'guerras de interface' de qual sistema operacional específico foram publicadas por um veículo de tecnologia, segundo uma fonte?",
+      "opcoes": [
+        "Symbian",
+        "Windows",
+        "Mac OS",
+        "Linux"
+      ],
+      "resposta_correta": "Symbian"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo uma retrospectiva, o EKA2 (microkernel do Symbian) conseguia executar simultaneamente que tipo de sistemas dentro de si?",
+      "opcoes": [
+        "Tanto um RTOS (sistema em tempo real) quanto outro ambiente, numa mesma base de kernel",
+        "Apenas jogos eletrônicos simples",
+        "Somente aplicativos de calculadora",
+        "Nenhum outro sistema, era isolado por completo"
+      ],
+      "resposta_correta": "Tanto um RTOS (sistema em tempo real) quanto outro ambiente, numa mesma base de kernel"
+    }
+  ]
+}

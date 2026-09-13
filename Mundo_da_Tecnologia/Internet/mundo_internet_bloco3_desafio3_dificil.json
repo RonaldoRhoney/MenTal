@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 3,
+    "tema_desafio": "Facebook e Mark Zuckerberg",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Forbes Brasil e Tecnoblog. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - temas regulatorios tratados de forma factual e neutra, sem opiniao politica."
+  },
+  "saiba_mais": "Curiosidade: antes de criar a Meta como nome corporativo em 2021, o Facebook já havia tentado, anos antes, uma renomeação bem mais simples de seus aplicativos — a ideia era chamar o Instagram e o WhatsApp de 'Instagram from Facebook' e 'WhatsApp from Facebook', deixando claro quem era o dono por trás dos apps mais usados do mundo.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que data exata o Facebook abriu seu capital na bolsa (IPO)?",
+      "opcoes": [
+        "18 de maio de 2012",
+        "4 de fevereiro de 2004",
+        "28 de outubro de 2021",
+        "9 de fevereiro de 2014"
+      ],
+      "resposta_correta": "18 de maio de 2012"
+    },
+    {
+      "n": 2,
+      "pergunta": "Aproximadamente quanto o Facebook arrecadou nesse IPO?",
+      "opcoes": [
+        "16 bilhões de dólares",
+        "1 bilhão de dólares",
+        "160 milhões de dólares",
+        "1,7 trilhão de dólares"
+      ],
+      "resposta_correta": "16 bilhões de dólares"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual foi, aproximadamente, o valor de mercado do Facebook logo após esse IPO?",
+      "opcoes": [
+        "Mais de 100 bilhões de dólares",
+        "16 bilhões de dólares",
+        "1 bilhão de dólares",
+        "1,7 trilhão de dólares"
+      ],
+      "resposta_correta": "Mais de 100 bilhões de dólares"
+    },
+    {
+      "n": 4,
+      "pergunta": "Por aproximadamente quanto o Facebook comprou o Instagram em 2012?",
+      "opcoes": [
+        "1 bilhão de dólares",
+        "19 bilhões de dólares",
+        "2 bilhões de dólares",
+        "100 mil dólares"
+      ],
+      "resposta_correta": "1 bilhão de dólares"
+    },
+    {
+      "n": 5,
+      "pergunta": "Por aproximadamente quanto o Facebook comprou o WhatsApp em 2014?",
+      "opcoes": [
+        "19 bilhões de dólares",
+        "1 bilhão de dólares",
+        "2 bilhões de dólares",
+        "100 milhões de dólares"
+      ],
+      "resposta_correta": "19 bilhões de dólares"
+    },
+    {
+      "n": 6,
+      "pergunta": "Considerando a valorização das ações no fechamento do negócio, a que valor a aquisição do WhatsApp chegou a ser estimada?",
+      "opcoes": [
+        "Cerca de 22 bilhões de dólares",
+        "Cerca de 1 bilhão de dólares",
+        "Cerca de 100 bilhões de dólares",
+        "Cerca de 5 bilhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 22 bilhões de dólares"
+    },
+    {
+      "n": 7,
+      "pergunta": "Por aproximadamente quanto o Facebook adquiriu a Oculus, empresa de realidade virtual, também em 2014?",
+      "opcoes": [
+        "Cerca de 2 bilhões de dólares",
+        "Cerca de 19 bilhões de dólares",
+        "Cerca de 100 milhões de dólares",
+        "Cerca de 500 milhões de dólares"
+      ],
+      "resposta_correta": "Cerca de 2 bilhões de dólares"
+    },
+    {
+      "n": 8,
+      "pergunta": "Qual produto de realidade virtual a Oculus lançou, tornando-se um dos principais gadgets de VR do mercado?",
+      "opcoes": [
+        "Oculus Rift",
+        "Meta Quest Pro",
+        "PlayStation VR",
+        "HTC Vive"
+      ],
+      "resposta_correta": "Oculus Rift"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em outubro de 2021, o Facebook anunciou a mudança de nome corporativo para Meta durante qual tipo de evento?",
+      "opcoes": [
+        "Um evento virtual focado em realidade aumentada e virtual (Connect)",
+        "Uma coletiva de imprensa presencial em Washington",
+        "Uma assembleia geral de acionistas",
+        "Um comunicado apenas por rede social"
+      ],
+      "resposta_correta": "Um evento virtual focado em realidade aumentada e virtual (Connect)"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo Zuckerberg, por que a empresa decidiu adotar um novo nome corporativo distinto do Facebook?",
+      "opcoes": [
+        "Para refletir que a empresa passava a relatar seus negócios em duas frentes: apps e futuras plataformas",
+        "Porque o nome Facebook havia sido proibido judicialmente",
+        "Porque o domínio facebook.com havia expirado",
+        "Por uma exigência de reguladores antitruste"
+      ],
+      "resposta_correta": "Para refletir que a empresa passava a relatar seus negócios em duas frentes: apps e futuras plataformas"
+    },
+    {
+      "n": 11,
+      "pergunta": "Os nomes dos aplicativos individuais (Facebook, Instagram, WhatsApp) mudaram junto com o nome da empresa controladora, em 2021?",
+      "opcoes": [
+        "Não, os nomes dos próprios aplicativos permaneceram os mesmos",
+        "Sim, todos passaram a se chamar 'Meta [nome do app]'",
+        "Sim, mas apenas o Instagram mudou de nome",
+        "Não há informação sobre isso"
+      ],
+      "resposta_correta": "Não, os nomes dos próprios aplicativos permaneceram os mesmos"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em determinado momento antes do rebranding para Meta, a empresa já havia tentado adicionar seu nome aos apps. Como ficariam os nomes propostos do Instagram e do WhatsApp nessa tentativa anterior?",
+      "opcoes": [
+        "'Instagram from Facebook' e 'WhatsApp from Facebook'",
+        "'Meta Instagram' e 'Meta WhatsApp'",
+        "'FB Instagram' e 'FB WhatsApp'",
+        "Nenhuma tentativa anterior de renomear os apps aconteceu"
+      ],
+      "resposta_correta": "'Instagram from Facebook' e 'WhatsApp from Facebook'"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma fonte, qual foi uma das motivações internas alegadas para essa tentativa anterior de renomeação dos apps?",
+      "opcoes": [
+        "A sensação de que o Facebook não recebia crédito suficiente pelo sucesso do Instagram e WhatsApp",
+        "Uma exigência técnica dos servidores da empresa",
+        "Uma decisão exclusivamente de investidores externos",
+        "Uma imposição legal de reguladores europeus"
+      ],
+      "resposta_correta": "A sensação de que o Facebook não recebia crédito suficiente pelo sucesso do Instagram e WhatsApp"
+    },
+    {
+      "n": 14,
+      "pergunta": "Segundo uma fonte, quanto o Facebook precisou pagar em penalidade civil, num acordo relacionado ao uso de dados de usuários?",
+      "opcoes": [
+        "5 bilhões de dólares",
+        "16 bilhões de dólares",
+        "1 bilhão de dólares",
+        "100 milhões de dólares"
+      ],
+      "resposta_correta": "5 bilhões de dólares"
+    },
+    {
+      "n": 15,
+      "pergunta": "Qual projeto da Meta busca levar conexão à internet para regiões precárias e desconectadas do mundo?",
+      "opcoes": [
+        "Internet.org",
+        "Free Basics Direct",
+        "ConnectWorld",
+        "GlobalNet Meta"
+      ],
+      "resposta_correta": "Internet.org"
+    },
+    {
+      "n": 16,
+      "pergunta": "No início de 2025, Zuckerberg anunciou o fim de qual sistema usado nas plataformas da Meta?",
+      "opcoes": [
+        "O sistema de checagem de fatos (fact-checking)",
+        "O algoritmo de recomendação de conteúdo",
+        "O sistema de anúncios pagos",
+        "O aplicativo Messenger"
+      ],
+      "resposta_correta": "O sistema de checagem de fatos (fact-checking)"
+    },
+    {
+      "n": 17,
+      "pergunta": "Também em 2025, a Meta anunciou um investimento de quanto em infraestrutura de inteligência artificial, segundo uma fonte?",
+      "opcoes": [
+        "65 bilhões de dólares",
+        "5 bilhões de dólares",
+        "1 bilhão de dólares",
+        "16 bilhões de dólares"
+      ],
+      "resposta_correta": "65 bilhões de dólares"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma fonte de 2025, aproximadamente qual era o valor de mercado da Meta?",
+      "opcoes": [
+        "Mais de 1,7 trilhão de dólares",
+        "100 bilhões de dólares",
+        "16 bilhões de dólares",
+        "1 bilhão de dólares"
+      ],
+      "resposta_correta": "Mais de 1,7 trilhão de dólares"
+    },
+    {
+      "n": 19,
+      "pergunta": "Aproximadamente quantos usuários o Facebook, como plataforma isolada, tinha em 2025, segundo uma fonte?",
+      "opcoes": [
+        "Mais de 3 bilhões",
+        "1 milhão",
+        "100 milhões",
+        "500 milhões"
+      ],
+      "resposta_correta": "Mais de 3 bilhões"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo uma retrospectiva, a aposta da Meta no conceito de metaverso, que motivou parte do rebranding de 2021, teve qual resultado inicial, segundo a mesma fonte?",
+      "opcoes": [
+        "Não decolou como esperado",
+        "Foi um sucesso imediato e total",
+        "Substituiu completamente o Facebook original",
+        "Foi abandonada no mesmo ano de seu anúncio"
+      ],
+      "resposta_correta": "Não decolou como esperado"
+    }
+  ]
+}

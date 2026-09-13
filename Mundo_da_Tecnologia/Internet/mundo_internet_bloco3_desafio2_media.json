@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 2,
+    "tema_desafio": "AWS e a Expansão da Amazon",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: por muitos anos, a Amazon escondeu, digamos assim, seu maior tesouro à vista de todos — os números financeiros da AWS ficavam misturados com os do varejo nos relatórios da empresa. Só em 2015 o mercado descobriu, com a divulgação separada, que a AWS já era mais lucrativa do que toda a operação de vendas que deu origem à Amazon.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano, tecnicamente, a Amazon já operava um serviço de web services em formato mais limitado, antes do lançamento em nuvem de 2006?",
+      "opcoes": [
+        "2002",
+        "1994",
+        "2006",
+        "1999"
+      ],
+      "resposta_correta": "2002"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano específico ocorreu um encontro estratégico na casa de Jeff Bezos que deu origem ao projeto da AWS?",
+      "opcoes": [
+        "2003",
+        "2006",
+        "1999",
+        "1994"
+      ],
+      "resposta_correta": "2003"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em 2005, antes do lançamento público, a AWS já operava de forma limitada. Como esse período prévio é chamado, segundo uma linha do tempo oficial?",
+      "opcoes": [
+        "'Prelude' (prelúdio)",
+        "'Beta público'",
+        "'Fase alpha'",
+        "'Soft launch'"
+      ],
+      "resposta_correta": "'Prelude' (prelúdio)"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que data exata de 2006 o Amazon SQS (Simple Queue Service) foi lançado em produção, apesar de existir desde 2004?",
+      "opcoes": [
+        "13 de julho de 2006",
+        "14 de março de 2006",
+        "25 de agosto de 2006",
+        "1º de janeiro de 2006"
+      ],
+      "resposta_correta": "13 de julho de 2006"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que data exata de 2006 o EC2 foi lançado, segundo uma linha do tempo oficial?",
+      "opcoes": [
+        "25 de agosto de 2006",
+        "14 de março de 2006",
+        "13 de julho de 2006",
+        "1º de dezembro de 2006"
+      ],
+      "resposta_correta": "25 de agosto de 2006"
+    },
+    {
+      "n": 6,
+      "pergunta": "Segundo uma análise de mercado, em que ano a Microsoft lançou seu concorrente direto à AWS, o Azure?",
+      "opcoes": [
+        "2010",
+        "2006",
+        "2013",
+        "2000"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que ano o Google Cloud Platform, outro concorrente da AWS, foi lançado?",
+      "opcoes": [
+        "2013",
+        "2006",
+        "2010",
+        "2000"
+      ],
+      "resposta_correta": "2013"
+    },
+    {
+      "n": 8,
+      "pergunta": "Quantos anos de vantagem competitiva a AWS teve, praticamente sozinha no mercado, antes da chegada desses concorrentes?",
+      "opcoes": [
+        "Pelo menos quatro anos",
+        "Apenas seis meses",
+        "Mais de vinte anos",
+        "Nenhuma vantagem real, os concorrentes chegaram juntos"
+      ],
+      "resposta_correta": "Pelo menos quatro anos"
+    },
+    {
+      "n": 9,
+      "pergunta": "Em que ano a Amazon revelou publicamente que a AWS já era mais lucrativa do que o próprio negócio de varejo?",
+      "opcoes": [
+        "2015",
+        "2006",
+        "2021",
+        "2000"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 10,
+      "pergunta": "Antes dessa revelação de 2015, como a Amazon tratava os números financeiros da AWS em seus relatórios?",
+      "opcoes": [
+        "Misturados junto com os números do varejo, sem divulgação separada",
+        "Divulgava a cada trimestre, separadamente, desde o início",
+        "Nunca divulgava nenhum número relacionado à AWS",
+        "Divulgava apenas para investidores selecionados, em reuniões privadas"
+      ],
+      "resposta_correta": "Misturados junto com os números do varejo, sem divulgação separada"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que ano a região sa-east-1 da AWS, localizada no Brasil, foi lançada?",
+      "opcoes": [
+        "2011",
+        "2006",
+        "2000",
+        "2015"
+      ],
+      "resposta_correta": "2011"
+    },
+    {
+      "n": 12,
+      "pergunta": "O que a chegada dessa região no Brasil viabilizou, segundo uma análise?",
+      "opcoes": [
+        "A adoção massiva da AWS por startups e corporações brasileiras",
+        "O fim total da AWS fora dos Estados Unidos",
+        "A proibição do uso da AWS no Brasil",
+        "Nenhuma mudança relevante para o mercado brasileiro"
+      ],
+      "resposta_correta": "A adoção massiva da AWS por startups e corporações brasileiras"
+    },
+    {
+      "n": 13,
+      "pergunta": "Aproximadamente qual receita a AWS gerou apenas no primeiro trimestre de 2025, segundo uma fonte recente?",
+      "opcoes": [
+        "Mais de 29 bilhões de dólares",
+        "29 milhões de dólares",
+        "2,9 bilhões de dólares",
+        "290 mil dólares"
+      ],
+      "resposta_correta": "Mais de 29 bilhões de dólares"
+    },
+    {
+      "n": 14,
+      "pergunta": "Aproximadamente qual fatia do mercado global de infraestrutura de nuvem a AWS ainda detém, segundo uma retrospectiva recente?",
+      "opcoes": [
+        "Cerca de 30%",
+        "Cerca de 90%",
+        "Cerca de 5%",
+        "Cerca de 1%"
+      ],
+      "resposta_correta": "Cerca de 30%"
+    },
+    {
+      "n": 15,
+      "pergunta": "Quantos serviços diferentes a AWS oferece atualmente, segundo uma estimativa recente?",
+      "opcoes": [
+        "Mais de 200 serviços",
+        "Apenas 2 serviços (S3 e EC2)",
+        "Cerca de 10 serviços",
+        "Cerca de 50 serviços"
+      ],
+      "resposta_correta": "Mais de 200 serviços"
+    },
+    {
+      "n": 16,
+      "pergunta": "Cite um serviço de banco de dados gerenciado da AWS, lançado depois do S3 e EC2.",
+      "opcoes": [
+        "RDS",
+        "S3",
+        "EC2",
+        "Prime"
+      ],
+      "resposta_correta": "RDS"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual serviço da AWS funciona como rede de entrega de conteúdo (CDN)?",
+      "opcoes": [
+        "CloudFront",
+        "Lambda",
+        "RDS",
+        "S3"
+      ],
+      "resposta_correta": "CloudFront"
+    },
+    {
+      "n": 18,
+      "pergunta": "Qual serviço da AWS permite executar código sem gerenciar servidores diretamente (computação 'serverless')?",
+      "opcoes": [
+        "Lambda",
+        "CloudFront",
+        "RDS",
+        "EC2"
+      ],
+      "resposta_correta": "Lambda"
+    },
+    {
+      "n": 19,
+      "pergunta": "Entre 1996 e 1997, segundo uma fonte, qual foi o crescimento percentual das vendas da Amazon?",
+      "opcoes": [
+        "880%",
+        "10%",
+        "50%",
+        "5%"
+      ],
+      "resposta_correta": "880%"
+    },
+    {
+      "n": 20,
+      "pergunta": "Em que ano Jeff Bezos foi eleito Pessoa do Ano pela revista Time, refletindo o auge inicial do sucesso da Amazon?",
+      "opcoes": [
+        "1999",
+        "1994",
+        "2006",
+        "2015"
+      ],
+      "resposta_correta": "1999"
+    }
+  ]
+}

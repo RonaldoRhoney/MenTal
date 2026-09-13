@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 3,
+    "tema_desafio": "Emojis e Gírias da Internet",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Mental Floss. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: a palavra 'spam' percorreu um caminho e tanto até chegar ao significado que conhecemos hoje — começou como o nome de uma carne enlatada da Hormel Foods, em 1937, virou piada de um quadro de comédia do Monty Python em 1970 (onde vikings repetiam a palavra até abafar toda a conversa), e só nos anos 1990 passou a descrever mensagens indesejadas na internet, numa das trajetórias etimológicas mais curiosas da linguagem digital.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "De onde vem originalmente a palavra 'spam', usada hoje para mensagens indesejadas na internet?",
+      "opcoes": [
+        "De um produto de carne enlatada da Hormel Foods",
+        "De uma sigla técnica de e-mail",
+        "Do nome de um vírus de computador antigo",
+        "De uma marca de software antivírus"
+      ],
+      "resposta_correta": "De um produto de carne enlatada da Hormel Foods"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a Hormel Foods lançou originalmente o produto SPAM?",
+      "opcoes": [
+        "1937",
+        "1970",
+        "1993",
+        "1982"
+      ],
+      "resposta_correta": "1937"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual grupo de humor britânico é creditado por popularizar a palavra 'spam' de forma repetitiva, num famoso quadro de comédia de 1970?",
+      "opcoes": [
+        "Monty Python",
+        "The Beatles",
+        "Rolling Stones",
+        "Saturday Night Live"
+      ],
+      "resposta_correta": "Monty Python"
+    },
+    {
+      "n": 4,
+      "pergunta": "No famoso quadro, quem repete a palavra 'SPAM' de forma cada vez mais alta, abafando a conversa dos outros personagens?",
+      "opcoes": [
+        "Um grupo de vikings numa mesa vizinha",
+        "Um garçom",
+        "Um cliente irritado",
+        "A dona do restaurante"
+      ],
+      "resposta_correta": "Um grupo de vikings numa mesa vizinha"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual é a piada central desse quadro, segundo uma análise etimológica, que se tornou relevante para o significado atual da palavra na internet?",
+      "opcoes": [
+        "A ideia de que o SPAM está tão presente que abafa/domina tudo o mais",
+        "Uma crítica à qualidade da comida enlatada",
+        "Uma sátira sobre restaurantes caros",
+        "Uma piada sobre a Segunda Guerra Mundial"
+      ],
+      "resposta_correta": "A ideia de que o SPAM está tão presente que abafa/domina tudo o mais"
+    },
+    {
+      "n": 6,
+      "pergunta": "Em quais dois ambientes de internet dos anos 1980/1990 o termo começou a ser usado para descrever mensagens repetitivas indesejadas?",
+      "opcoes": [
+        "MUDs (jogos online baseados em texto) e grupos da Usenet",
+        "Redes sociais modernas como Instagram e TikTok",
+        "Aplicativos de mensagens instantâneas atuais",
+        "Apenas em e-mails corporativos formais"
+      ],
+      "resposta_correta": "MUDs (jogos online baseados em texto) e grupos da Usenet"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em 1994, qual ato específico é amplamente considerado o primeiro grande caso de spam comercial em massa na internet?",
+      "opcoes": [
+        "Advogados postando um anúncio de serviços de imigração em todos os grupos da Usenet simultaneamente",
+        "O primeiro e-mail em massa enviado pelo governo americano",
+        "Uma campanha publicitária da Coca-Cola",
+        "O primeiro vírus de computador distribuído por e-mail"
+      ],
+      "resposta_correta": "Advogados postando um anúncio de serviços de imigração em todos os grupos da Usenet simultaneamente"
+    },
+    {
+      "n": 8,
+      "pergunta": "Como se chamavam os dois advogados responsáveis por esse ato de 1994?",
+      "opcoes": [
+        "Laurence Canter e Martha Siegel",
+        "Scott Fahlman e Mike Godwin",
+        "Shigetaka Kurita e Richard Dawkins",
+        "Tom Anderson e Andrew Weinreich"
+      ],
+      "resposta_correta": "Laurence Canter e Martha Siegel"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo uma fonte, a Hormel Foods (dona da marca SPAM) inicialmente resistiu ao uso do termo na internet, mas depois aceitou sob qual condição?",
+      "opcoes": [
+        "Que o termo de internet fosse escrito em minúsculas ('spam'), diferente do produto ('SPAM')",
+        "Que a empresa recebesse royalties por cada uso do termo",
+        "Que o termo nunca fosse usado publicamente",
+        "Que apenas empresas americanas pudessem usar a palavra"
+      ],
+      "resposta_correta": "Que o termo de internet fosse escrito em minúsculas ('spam'), diferente do produto ('SPAM')"
+    },
+    {
+      "n": 10,
+      "pergunta": "Segundo uma teoria sobre a origem da gíria 'pwned' (usada para dizer que alguém foi 'dominado' num jogo), de onde ela pode ter surgido?",
+      "opcoes": [
+        "De um erro de digitação, trocando a letra 'o' pela vizinha 'p' no teclado, ao digitar 'owned'",
+        "De uma sigla militar americana",
+        "Do nome de um personagem de videogame",
+        "De uma palavra em outro idioma sem relação com 'owned'"
+      ],
+      "resposta_correta": "De um erro de digitação, trocando a letra 'o' pela vizinha 'p' no teclado, ao digitar 'owned'"
+    },
+    {
+      "n": 11,
+      "pergunta": "O que significa a sigla 'NSFW', usada para avisar sobre conteúdo impróprio?",
+      "opcoes": [
+        "'Not Safe For Work' (não seguro para o trabalho)",
+        "'New Software For Web'",
+        "'Never Send For Work'",
+        "'Not Sure For Whom'"
+      ],
+      "resposta_correta": "'Not Safe For Work' (não seguro para o trabalho)"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma fonte, a partir de que período a sigla NSFW começou a ganhar uso relevante?",
+      "opcoes": [
+        "Depois dos anos 2000, quando mais pessoas passaram a acessar a internet no trabalho",
+        "Já nos anos 1970, antes mesmo da internet popular",
+        "Apenas a partir de 2010",
+        "Desde os primeiros dias da Usenet, nos anos 1980"
+      ],
+      "resposta_correta": "Depois dos anos 2000, quando mais pessoas passaram a acessar a internet no trabalho"
+    },
+    {
+      "n": 13,
+      "pergunta": "A sigla 'FYI' ('For Your Information'), hoje comum em e-mails e mensagens, já existia antes da internet. De onde ela vem originalmente, segundo uma fonte?",
+      "opcoes": [
+        "De um programa de rádio dos anos 1940",
+        "De um manual técnico militar",
+        "De uma revista de tecnologia dos anos 1990",
+        "Não tem nenhuma origem anterior à internet"
+      ],
+      "resposta_correta": "De um programa de rádio dos anos 1940"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual sigla de internet, popular em jogos online, significa 'longe do teclado' e é usada quando alguém vai se ausentar temporariamente?",
+      "opcoes": [
+        "AFK",
+        "NSFW",
+        "FYI",
+        "IMO"
+      ],
+      "resposta_correta": "AFK"
+    },
+    {
+      "n": 15,
+      "pergunta": "O termo 'troll', usado para descrever alguém que provoca conflitos deliberadamente online, tem alguma relação de origem com a criatura mitológica escandinava do mesmo nome?",
+      "opcoes": [
+        "A relação é debatida, mas o uso na internet vem mais diretamente da técnica de pesca chamada 'trolling'",
+        "Sim, é uma referência direta e comprovada à criatura mitológica",
+        "Não tem absolutamente nenhuma relação com nenhum dos dois",
+        "É uma sigla sem relação com a palavra 'troll' comum"
+      ],
+      "resposta_correta": "A relação é debatida, mas o uso na internet vem mais diretamente da técnica de pesca chamada 'trolling'"
+    },
+    {
+      "n": 16,
+      "pergunta": "A gíria 'noob' (ou 'newb'), usada para descrever um iniciante em jogos ou fóruns online, é uma abreviação de qual palavra em inglês?",
+      "opcoes": [
+        "'Newbie' (novato)",
+        "'Nobody' (ninguém)",
+        "'Normal' (normal)",
+        "'North' (norte)"
+      ],
+      "resposta_correta": "'Newbie' (novato)"
+    },
+    {
+      "n": 17,
+      "pergunta": "Estima-se que qual porcentagem de todos os e-mails enviados no mundo hoje seja spam, segundo uma fonte?",
+      "opcoes": [
+        "Até 97%",
+        "Cerca de 5%",
+        "Cerca de 20%",
+        "Cerca de 50%"
+      ],
+      "resposta_correta": "Até 97%"
+    },
+    {
+      "n": 18,
+      "pergunta": "Além do e-mail, em que outros dois contextos o termo 'spam' também é usado hoje, segundo uma fonte?",
+      "opcoes": [
+        "Fóruns online e redes sociais",
+        "Exclusivamente em jogos de tabuleiro físicos",
+        "Apenas em ligações telefônicas",
+        "Somente em cartas físicas pelo correio"
+      ],
+      "resposta_correta": "Fóruns online e redes sociais"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual das duas grafias abaixo se refere ao produto alimentício da Hormel, e qual ao termo de internet, segundo a convenção aceita pela própria empresa?",
+      "opcoes": [
+        "'SPAM' (produto, maiúsculas) e 'spam' (internet, minúsculas)",
+        "'Spam' (produto) e 'SPAM' (internet) — o oposto do padrão comum",
+        "Ambos são escritos exatamente da mesma forma, sem distinção",
+        "Não existe nenhuma convenção sobre isso"
+      ],
+      "resposta_correta": "'SPAM' (produto, maiúsculas) e 'spam' (internet, minúsculas)"
+    },
+    {
+      "n": 20,
+      "pergunta": "O que a trajetória da palavra 'spam' — de carne enlatada, a piada de TV, a termo técnico de internet — melhor ilustra sobre a evolução da linguagem digital?",
+      "opcoes": [
+        "Como palavras cotidianas podem ganhar significados completamente novos ao migrar para o contexto da internet",
+        "Que toda gíria de internet é sempre criada do zero, sem nenhuma origem anterior",
+        "Que apenas termos técnicos complexos sobrevivem na cultura de internet",
+        "Que a linguagem da internet nunca se conecta com a cultura popular mais ampla"
+      ],
+      "resposta_correta": "Como palavras cotidianas podem ganhar significados completamente novos ao migrar para o contexto da internet"
+    }
+  ]
+}

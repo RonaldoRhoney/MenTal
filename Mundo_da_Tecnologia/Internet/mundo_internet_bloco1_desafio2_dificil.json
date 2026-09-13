@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 2,
+    "tema_desafio": "E-mail e os Primeiros Serviços da Internet",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Britannica e Wikipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: quando Tom Truscott e Jim Ellis criaram a Usenet, em 1979, eles simplesmente queriam resolver um problema prático de comunicação entre universidades — nem de longe imaginavam que estavam plantando a semente dos fóruns de discussão online que, décadas depois, ainda moldam a forma como as pessoas trocam ideias na internet.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem criou a Usenet, em 1979?",
+      "opcoes": [
+        "Tom Truscott e Jim Ellis",
+        "Ray Tomlinson e Vint Cerf",
+        "Tim Berners-Lee e Robert Cailliau",
+        "Larry Page e Sergey Brin"
+      ],
+      "resposta_correta": "Tom Truscott e Jim Ellis"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual universidade Truscott e Ellis estudavam quando criaram a Usenet?",
+      "opcoes": [
+        "Duke University",
+        "Stanford",
+        "Harvard",
+        "MIT"
+      ],
+      "resposta_correta": "Duke University"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual protocolo foi usado para trocar as primeiras mensagens da Usenet entre computadores diferentes?",
+      "opcoes": [
+        "UUCP (Unix-to-Unix Copy Protocol)",
+        "TCP/IP",
+        "HTTP",
+        "FTP"
+      ],
+      "resposta_correta": "UUCP (Unix-to-Unix Copy Protocol)"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem escreveu os scripts que implementaram tecnicamente essa primeira versão da Usenet?",
+      "opcoes": [
+        "Steve Bellovin",
+        "Tom Truscott",
+        "Jim Ellis",
+        "Nenhum dos três, foi escrito por um professor"
+      ],
+      "resposta_correta": "Steve Bellovin"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em qual universidade Steve Bellovin estudava quando ajudou a implementar a Usenet?",
+      "opcoes": [
+        "Universidade da Carolina do Norte em Chapel Hill (UNC)",
+        "Duke University",
+        "Stanford",
+        "MIT"
+      ],
+      "resposta_correta": "Universidade da Carolina do Norte em Chapel Hill (UNC)"
+    },
+    {
+      "n": 6,
+      "pergunta": "Entre quais duas instituições ocorreu a primeira comunicação real da Usenet, em 1980?",
+      "opcoes": [
+        "Duke e a Universidade da Carolina do Norte em Chapel Hill",
+        "Duke e Stanford",
+        "MIT e Harvard",
+        "UCLA e Stanford"
+      ],
+      "resposta_correta": "Duke e a Universidade da Carolina do Norte em Chapel Hill"
+    },
+    {
+      "n": 7,
+      "pergunta": "Diferente da ARPANET, restrita a instituições financiadas pelo governo, qual era o objetivo de acesso pretendido pela Usenet?",
+      "opcoes": [
+        "Ser aberta a qualquer pessoa com acesso a uma máquina Unix",
+        "Ser exclusiva para uso militar",
+        "Ser restrita apenas a universidades da Ivy League",
+        "Ser paga e disponível apenas a assinantes"
+      ],
+      "resposta_correta": "Ser aberta a qualquer pessoa com acesso a uma máquina Unix"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que evento a Usenet foi anunciada publicamente, em janeiro de 1980?",
+      "opcoes": [
+        "A conferência USENIX",
+        "A Macworld Expo",
+        "A Conferência Europeia de Hipertexto",
+        "O CES (Consumer Electronics Show)"
+      ],
+      "resposta_correta": "A conferência USENIX"
+    },
+    {
+      "n": 9,
+      "pergunta": "O que motivou tecnicamente Truscott e Ellis a buscar uma alternativa ao software local de anúncios do departamento de ciência da computação de Duke?",
+      "opcoes": [
+        "Uma atualização recente do sistema operacional havia tornado o software antigo obsoleto",
+        "O software antigo nunca havia funcionado corretamente",
+        "Uma decisão administrativa da universidade exigiu a mudança",
+        "Não havia nenhum motivo técnico, foi apenas um experimento aleatório"
+      ],
+      "resposta_correta": "Uma atualização recente do sistema operacional havia tornado o software antigo obsoleto"
+    },
+    {
+      "n": 10,
+      "pergunta": "Antes da Usenet, como a colaboração entre diferentes universidades costumava acontecer, segundo o contexto histórico?",
+      "opcoes": [
+        "Através de ligações telefônicas caras e boletins postais esporádicos",
+        "Através de videoconferências regulares",
+        "Através de e-mails, já bem estabelecidos na época",
+        "Não havia nenhum tipo de colaboração entre universidades"
+      ],
+      "resposta_correta": "Através de ligações telefônicas caras e boletins postais esporádicos"
+    },
+    {
+      "n": 11,
+      "pergunta": "Qual foi o nome do software original usado para transmitir as primeiras mensagens da Usenet, antes de ser substituído por uma versão mais robusta?",
+      "opcoes": [
+        "'A-news'",
+        "'B-news'",
+        "NNTP",
+        "Netnews Pro"
+      ],
+      "resposta_correta": "'A-news'"
+    },
+    {
+      "n": 12,
+      "pergunta": "Quem escreveu o 'B-news', software que substituiu o 'A-news' para lidar com o tráfego crescente da Usenet?",
+      "opcoes": [
+        "Matt Glickman e Mark Horton",
+        "Tom Truscott e Jim Ellis",
+        "Steve Bellovin sozinho",
+        "Ray Tomlinson"
+      ],
+      "resposta_correta": "Matt Glickman e Mark Horton"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que ano os nomes caóticos dos grupos de discussão da Usenet foram reorganizados no sistema hierárquico ainda usado hoje (comp.*, sci.*, rec.*, etc.)?",
+      "opcoes": [
+        "1987",
+        "1979",
+        "1980",
+        "2000"
+      ],
+      "resposta_correta": "1987"
+    },
+    {
+      "n": 14,
+      "pergunta": "Qual protocolo mais eficiente, criado depois do UUCP, passou a ser usado para distribuir mensagens entre servidores da Usenet?",
+      "opcoes": [
+        "NNTP (Network News Transfer Protocol)",
+        "SMTP",
+        "HTTP",
+        "IMAP"
+      ],
+      "resposta_correta": "NNTP (Network News Transfer Protocol)"
+    },
+    {
+      "n": 15,
+      "pergunta": "A Usenet é descrita como uma rede descentralizada. O que isso significa na prática, segundo o texto?",
+      "opcoes": [
+        "Não existe um único servidor central controlando todas as mensagens",
+        "Todas as mensagens passam obrigatoriamente por um único servidor",
+        "É controlada exclusivamente pelo governo americano",
+        "Funciona apenas dentro de uma única universidade"
+      ],
+      "resposta_correta": "Não existe um único servidor central controlando todas as mensagens"
+    },
+    {
+      "n": 16,
+      "pergunta": "Que vantagem prática essa descentralização trazia à Usenet, segundo uma análise?",
+      "opcoes": [
+        "Tornava a rede mais resistente a censura e interferência externa",
+        "Tornava a rede mais lenta em qualquer situação",
+        "Impedia completamente qualquer tipo de spam",
+        "Exigia menos servidores no total"
+      ],
+      "resposta_correta": "Tornava a rede mais resistente a censura e interferência externa"
+    },
+    {
+      "n": 17,
+      "pergunta": "Que tipo de conteúdo indesejado é citado como uma desvantagem histórica enfrentada pela Usenet?",
+      "opcoes": [
+        "Spam e mensagens indesejadas inundando os grupos",
+        "Apenas problemas de conexão com a internet",
+        "Cobrança excessiva de mensalidade",
+        "Falta total de qualquer usuário interessado"
+      ],
+      "resposta_correta": "Spam e mensagens indesejadas inundando os grupos"
+    },
+    {
+      "n": 18,
+      "pergunta": "Em que ano Duke University encerrou seu servidor Usenet original, que havia sido o lar dos primeiros grupos de discussão eletrônicos?",
+      "opcoes": [
+        "2010",
+        "1980",
+        "1987",
+        "2001"
+      ],
+      "resposta_correta": "2010"
+    },
+    {
+      "n": 19,
+      "pergunta": "Qual prêmio de reconhecimento Truscott e Ellis receberam pela criação da Usenet, em 1995?",
+      "opcoes": [
+        "USENIX Lifetime Achievement Award",
+        "Prêmio Turing",
+        "ACM Software System Award",
+        "Medalha Nacional de Tecnologia dos EUA"
+      ],
+      "resposta_correta": "USENIX Lifetime Achievement Award"
+    },
+    {
+      "n": 20,
+      "pergunta": "Além de Truscott e Ellis, quem mais é geralmente creditado, junto aos dois, como criador da Usenet, dado seu papel na implementação técnica inicial?",
+      "opcoes": [
+        "Steve Bellovin",
+        "Ray Tomlinson",
+        "Vint Cerf",
+        "Linus Torvalds"
+      ],
+      "resposta_correta": "Steve Bellovin"
+    }
+  ]
+}

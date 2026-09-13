@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 4,
+    "tema_desafio": "Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)",
+    "nivel_dificuldade": "Muito Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em fontes jornalisticas recentes (2025). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: mesmo depois do fim oficial do dial-up da AOL, em 2025, ainda existem entusiastas dispostos a recriar a experiência por conta própria — bastando, segundo sugestões de fóruns online, um pequeno computador como o Raspberry Pi, uma porta serial e um modem antigo. Uma prova de que, para alguns nostálgicos, o som característico da conexão discada nunca deixará de ter seu charme.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo uma fonte jornalística específica, quantos clientes a AOL tinha 'em meados dos anos 1990', descrito como um marco de crescimento?",
+      "opcoes": [
+        "10 milhões de clientes",
+        "1 milhão de clientes",
+        "100 mil clientes",
+        "25 milhões de clientes"
+      ],
+      "resposta_correta": "10 milhões de clientes"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo uma reportagem da BBC, quantas pessoas ainda usavam internet discada em 2023, um número diferente do citado por outras fontes?",
+      "opcoes": [
+        "300 mil pessoas",
+        "163 mil pessoas",
+        "2,1 milhões de pessoas",
+        "10 milhões de pessoas"
+      ],
+      "resposta_correta": "300 mil pessoas"
+    },
+    {
+      "n": 3,
+      "pergunta": "Comparando com a velocidade de fibra óptica moderna, a conexão discada de 56 kilobits por segundo é descrita como quantas vezes mais lenta, aproximadamente, que a banda larga atual?",
+      "opcoes": [
+        "Milhares de vezes mais lenta",
+        "Apenas duas vezes mais lenta",
+        "Dez vezes mais lenta",
+        "Praticamente na mesma velocidade"
+      ],
+      "resposta_correta": "Milhares de vezes mais lenta"
+    },
+    {
+      "n": 4,
+      "pergunta": "Um usuário de fórum online sugeriu, de forma bem-humorada, montar um provedor de dial-up caseiro usando qual tipo específico de computador de placa única, popular entre entusiastas?",
+      "opcoes": [
+        "Raspberry Pi",
+        "Arduino Uno",
+        "Nvidia Jetson",
+        "BeagleBone"
+      ],
+      "resposta_correta": "Raspberry Pi"
+    },
+    {
+      "n": 5,
+      "pergunta": "Segundo essa mesma sugestão, além do computador, quais outros dois componentes seriam necessários para montar essa conexão amadora?",
+      "opcoes": [
+        "Uma porta serial (ou conversor USB) e um modem",
+        "Um roteador 5G e uma antena parabólica",
+        "Uma placa de vídeo potente e um monitor 4K",
+        "Um cabo de fibra óptica e um switch gerenciável"
+      ],
+      "resposta_correta": "Uma porta serial (ou conversor USB) e um modem"
+    },
+    {
+      "n": 6,
+      "pergunta": "Um modelo específico de modem de alto desempenho antigo, hoje considerado barato de se encontrar, é citado por esse mesmo usuário. Qual é ele?",
+      "opcoes": [
+        "Courier v.Everything",
+        "USRobotics 3000X",
+        "Hayes SmartModem Pro",
+        "Zoom TeleCom V.92"
+      ],
+      "resposta_correta": "Courier v.Everything"
+    },
+    {
+      "n": 7,
+      "pergunta": "Segundo uma retrospectiva, em que série de TV famosa, além do filme 'You've Got Mail', a AOL também apareceu como parte da cultura pop dos anos 1990/2000?",
+      "opcoes": [
+        "'Sex and the City'",
+        "'Friends'",
+        "'Seinfeld'",
+        "'The Office'"
+      ],
+      "resposta_correta": "'Sex and the City'"
+    },
+    {
+      "n": 8,
+      "pergunta": "Segundo uma fonte, em qual mês específico de 2025 a AOL formalmente anunciou o fim do dial-up, antes do desligamento efetivo em setembro?",
+      "opcoes": [
+        "Em um anúncio de verão (Northern Hemisphere), poucas semanas antes do desligamento final",
+        "Em janeiro de 2025, com dez meses de antecedência",
+        "Sem nenhum aviso prévio, de forma repentina",
+        "Em 2020, cinco anos antes do desligamento"
+      ],
+      "resposta_correta": "Em um anúncio de verão (Northern Hemisphere), poucas semanas antes do desligamento final"
+    },
+    {
+      "n": 9,
+      "pergunta": "Segundo uma fonte, a forma como a AOL comunicou o fim do dial-up foi descrita de que maneira, sugerindo baixo perfil da notícia?",
+      "opcoes": [
+        "Apenas uma breve nota de suporte, sem grande alarde da empresa",
+        "Um grande evento de imprensa internacional",
+        "Uma campanha publicitária massiva de despedida",
+        "Um comunicado direto do CEO em rede nacional de TV"
+      ],
+      "resposta_correta": "Apenas uma breve nota de suporte, sem grande alarde da empresa"
+    },
+    {
+      "n": 10,
+      "pergunta": "Apesar do fim do dial-up, quais dois serviços a AOL continua oferecendo até hoje, segundo fontes recentes?",
+      "opcoes": [
+        "E-mail gratuito e assinaturas de proteção de identidade/suporte técnico",
+        "Apenas jogos eletrônicos online",
+        "Somente hospedagem de sites",
+        "Exclusivamente venda de hardware"
+      ],
+      "resposta_correta": "E-mail gratuito e assinaturas de proteção de identidade/suporte técnico"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo uma fonte, o endereço de suporte ao dial-up da AOL (getonline.aol.com/dialup) passou a redirecionar para onde, após o desligamento do serviço?",
+      "opcoes": [
+        "Para a página inicial (homepage) da AOL",
+        "Para uma página de erro 404 permanente",
+        "Para o site do Yahoo diretamente",
+        "Para um comunicado de despedida em vídeo"
+      ],
+      "resposta_correta": "Para a página inicial (homepage) da AOL"
+    },
+    {
+      "n": 12,
+      "pergunta": "Um jornalista, ao noticiar o fim do serviço, descreveu o evento com qual expressão poética relacionada ao som do modem?",
+      "opcoes": [
+        "'O último suspiro do modem' ('the modem's last gasp')",
+        "'O silêncio eterno da internet'",
+        "'A morte súbita da conexão'",
+        "'O apagar das luzes digitais'"
+      ],
+      "resposta_correta": "'O último suspiro do modem' ('the modem's last gasp')"
+    },
+    {
+      "n": 13,
+      "pergunta": "Segundo uma fonte, por quanto tempo total (em décadas, aproximadamente) a AOL manteve seu serviço de dial-up em operação, do lançamento até o fim definitivo?",
+      "opcoes": [
+        "Mais de 30 anos",
+        "Cerca de 10 anos",
+        "Cerca de 5 anos",
+        "Menos de 1 ano"
+      ],
+      "resposta_correta": "Mais de 30 anos"
+    },
+    {
+      "n": 14,
+      "pergunta": "Comparando as duas fontes, existe uma pequena divergência sobre o valor exato da fusão AOL-Time Warner. Quais são os dois valores citados por fontes diferentes?",
+      "opcoes": [
+        "165 bilhões de dólares e 350 bilhões de dólares (valor combinado das empresas)",
+        "5 bilhões e 10 bilhões de dólares",
+        "1 milhão e 2 milhões de dólares",
+        "Não existe nenhuma divergência entre as fontes"
+      ],
+      "resposta_correta": "165 bilhões de dólares e 350 bilhões de dólares (valor combinado das empresas)"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma fonte, o AOL Instant Messenger (AIM), quando foi fundado em 1997, chegou a ser elogiado como o quê, em termos de inovação de comunicação online?",
+      "opcoes": [
+        "A maior tendência em comunicação online desde o próprio e-mail",
+        "Uma inovação sem nenhuma relevância prática",
+        "Apenas uma cópia direta de outro serviço já existente",
+        "Um projeto que nunca decolou comercialmente"
+      ],
+      "resposta_correta": "A maior tendência em comunicação online desde o próprio e-mail"
+    },
+    {
+      "n": 16,
+      "pergunta": "O que eventualmente prejudicou o AIM, levando ao seu encerramento em 2017, segundo uma análise retrospectiva?",
+      "opcoes": [
+        "A dificuldade de competir com serviços rivais mais modernos de mensagens",
+        "Uma decisão judicial que proibiu seu uso",
+        "A falta total de qualquer usuário desde o lançamento",
+        "Um ataque de segurança que destruiu todos os dados da empresa"
+      ],
+      "resposta_correta": "A dificuldade de competir com serviços rivais mais modernos de mensagens"
+    },
+    {
+      "n": 17,
+      "pergunta": "Segundo uma fonte, a AOL era conhecida por unir, além de dial-up e mensagens instantâneas, qual frase específica que se tornou parte da cultura popular?",
+      "opcoes": [
+        "'You've got mail'",
+        "'Welcome to the future'",
+        "'Stay connected'",
+        "'Speed matters'"
+      ],
+      "resposta_correta": "'You've got mail'"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo os relatos mais recentes, quantos anos, aproximadamente, se passaram entre a fundação da Quantum Computer Services (1985) e o desligamento final do dial-up (2025)?",
+      "opcoes": [
+        "40 anos",
+        "10 anos",
+        "60 anos",
+        "20 anos"
+      ],
+      "resposta_correta": "40 anos"
+    },
+    {
+      "n": 19,
+      "pergunta": "Um analista financeiro é citado lamentando o fim do dial-up com qual expressão sobre o legado da tecnologia?",
+      "opcoes": [
+        "Uma referência ao 'último gemido' do modem, em tom nostálgico",
+        "Uma crítica dura sobre a obsolescência tecnológica",
+        "Uma comemoração alegre pelo avanço tecnológico",
+        "Nenhuma opinião pessoal foi expressa sobre o fato"
+      ],
+      "resposta_correta": "Uma referência ao 'último gemido' do modem, em tom nostálgico"
+    },
+    {
+      "n": 20,
+      "pergunta": "No conjunto de tudo que foi discutido, o que a trajetória da AOL — do auge de dominância à venda por fração do valor original — melhor ilustra sobre a história da tecnologia?",
+      "opcoes": [
+        "Como até gigantes tecnológicos podem perder relevância diante de novas tecnologias mais rápidas",
+        "Que empresas de tecnologia nunca enfrentam declínio",
+        "Que a internet discada continua sendo a tecnologia dominante hoje",
+        "Que fusões corporativas sempre garantem sucesso duradouro"
+      ],
+      "resposta_correta": "Como até gigantes tecnológicos podem perder relevância diante de novas tecnologias mais rápidas"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 2,
+    "tema_bloco": "Sistemas Operacionais e seus Criadores",
+    "desafio": 3,
+    "tema_desafio": "Linux e Linus Torvalds",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/tecnico neutro."
+  },
+  "saiba_mais": "Curiosidade: o nome 'Linux' quase não existiu! Linus Torvalds queria batizar seu projeto de 'Freax' (uma mistura de 'free' e 'Unix'), mas um colega que ajudou a hospedar o código num servidor não gostou do nome e criou, em vez disso, uma pasta chamada 'linux' — mistura de 'Linus' com 'Unix'. O nome pegou, e o resto é história.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem criou o Linux?",
+      "opcoes": [
+        "Linus Torvalds",
+        "Richard Stallman",
+        "Bill Gates",
+        "Steve Jobs"
+      ],
+      "resposta_correta": "Linus Torvalds"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano o Linux foi criado?",
+      "opcoes": [
+        "1991",
+        "1975",
+        "1984",
+        "2001"
+      ],
+      "resposta_correta": "1991"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que país Linus Torvalds nasceu e estudava quando criou o Linux?",
+      "opcoes": [
+        "Finlândia",
+        "Suécia",
+        "Noruega",
+        "Alemanha"
+      ],
+      "resposta_correta": "Finlândia"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que universidade Linus Torvalds estudava ao criar o Linux?",
+      "opcoes": [
+        "Universidade de Helsinki",
+        "MIT",
+        "Stanford",
+        "Harvard"
+      ],
+      "resposta_correta": "Universidade de Helsinki"
+    },
+    {
+      "n": 5,
+      "pergunta": "O Linux é um exemplo de que tipo de software, em termos de licenciamento?",
+      "opcoes": [
+        "Software livre / de código aberto",
+        "Software proprietário e pago",
+        "Software exclusivo para empresas",
+        "Software vendido apenas em lojas físicas"
+      ],
+      "resposta_correta": "Software livre / de código aberto"
+    },
+    {
+      "n": 6,
+      "pergunta": "O que é, tecnicamente, o Linux?",
+      "opcoes": [
+        "Um kernel (núcleo de sistema operacional)",
+        "Um navegador de internet",
+        "Um editor de texto",
+        "Um antivírus"
+      ],
+      "resposta_correta": "Um kernel (núcleo de sistema operacional)"
+    },
+    {
+      "n": 7,
+      "pergunta": "Quem fundou o Projeto GNU, movimento de software livre anterior ao Linux?",
+      "opcoes": [
+        "Richard Stallman",
+        "Linus Torvalds",
+        "Ken Thompson",
+        "Dennis Ritchie"
+      ],
+      "resposta_correta": "Richard Stallman"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em que ano o Projeto GNU foi iniciado?",
+      "opcoes": [
+        "1983 ou 1984 (fontes variam)",
+        "1991",
+        "1969",
+        "2000"
+      ],
+      "resposta_correta": "1983 ou 1984 (fontes variam)"
+    },
+    {
+      "n": 9,
+      "pergunta": "O que a sigla GNU significa?",
+      "opcoes": [
+        "'GNU is Not Unix'",
+        "'Global Network Unit'",
+        "'General New Utility'",
+        "'Graphic Network User'"
+      ],
+      "resposta_correta": "'GNU is Not Unix'"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual sistema operacional mais antigo serviu de inspiração/base conceitual para o Linux?",
+      "opcoes": [
+        "Unix",
+        "Windows",
+        "Mac OS",
+        "MS-DOS"
+      ],
+      "resposta_correta": "Unix"
+    },
+    {
+      "n": 11,
+      "pergunta": "Em que empresa/laboratório o Unix foi originalmente criado?",
+      "opcoes": [
+        "Bell Labs (AT&T)",
+        "IBM",
+        "Xerox PARC",
+        "Microsoft"
+      ],
+      "resposta_correta": "Bell Labs (AT&T)"
+    },
+    {
+      "n": 12,
+      "pergunta": "Que tipo de licença o Linux passou a usar, adotada oficialmente em 1992?",
+      "opcoes": [
+        "GPL (GNU General Public License)",
+        "Licença comercial fechada",
+        "Creative Commons",
+        "Licença MIT"
+      ],
+      "resposta_correta": "GPL (GNU General Public License)"
+    },
+    {
+      "n": 13,
+      "pergunta": "O que é uma 'distribuição' (distro) do Linux?",
+      "opcoes": [
+        "Uma versão organizada do sistema, com um conjunto específico de programas e configurações",
+        "Um vírus de computador",
+        "Um tipo de hardware específico para rodar Linux",
+        "Uma loja online de venda de sistemas"
+      ],
+      "resposta_correta": "Uma versão organizada do sistema, com um conjunto específico de programas e configurações"
+    },
+    {
+      "n": 14,
+      "pergunta": "Cite o nome de uma distribuição popular de Linux.",
+      "opcoes": [
+        "Ubuntu",
+        "Windows 11",
+        "macOS Sonoma",
+        "iOS"
+      ],
+      "resposta_correta": "Ubuntu"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em quais tipos de dispositivo o Linux é amplamente utilizado atualmente, além de computadores pessoais?",
+      "opcoes": [
+        "Servidores, supercomputadores e dispositivos embarcados",
+        "Apenas em relógios analógicos",
+        "Somente em máquinas de escrever antigas",
+        "Exclusivamente em consoles de videogame retrô"
+      ],
+      "resposta_correta": "Servidores, supercomputadores e dispositivos embarcados"
+    },
+    {
+      "n": 16,
+      "pergunta": "O Linux é geralmente usado sozinho ou combinado a outro conjunto de ferramentas para formar um sistema completo?",
+      "opcoes": [
+        "Combinado com ferramentas do projeto GNU, formando o chamado 'GNU/Linux'",
+        "Sempre sozinho, sem nenhuma outra ferramenta",
+        "Combinado exclusivamente com o Windows",
+        "Combinado apenas com softwares da Apple"
+      ],
+      "resposta_correta": "Combinado com ferramentas do projeto GNU, formando o chamado 'GNU/Linux'"
+    },
+    {
+      "n": 17,
+      "pergunta": "Quantos anos Linus Torvalds tinha quando anunciou publicamente o núcleo do Linux, segundo registros?",
+      "opcoes": [
+        "21 anos",
+        "18 anos",
+        "30 anos",
+        "45 anos"
+      ],
+      "resposta_correta": "21 anos"
+    },
+    {
+      "n": 18,
+      "pergunta": "O Linux é mais associado a que característica em relação aos sistemas Windows e Mac OS?",
+      "opcoes": [
+        "Ser modular, com todas as partes configuráveis manualmente",
+        "Ser fechado e não configurável",
+        "Ser exclusivo para jogos",
+        "Não permitir nenhum tipo de personalização"
+      ],
+      "resposta_correta": "Ser modular, com todas as partes configuráveis manualmente"
+    },
+    {
+      "n": 19,
+      "pergunta": "O criador do Linux se tornou cidadão de qual país, anos depois da criação do sistema?",
+      "opcoes": [
+        "Estados Unidos",
+        "Reino Unido",
+        "Alemanha",
+        "Canadá"
+      ],
+      "resposta_correta": "Estados Unidos"
+    },
+    {
+      "n": 20,
+      "pergunta": "Aproximadamente quantas distribuições ativas de Linux existem hoje, segundo estimativas?",
+      "opcoes": [
+        "Mais de 200",
+        "Apenas 5",
+        "Exatamente 10",
+        "Mais de 10 mil"
+      ],
+      "resposta_correta": "Mais de 200"
+    }
+  ]
+}
