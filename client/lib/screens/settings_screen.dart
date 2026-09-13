@@ -246,77 +246,80 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   child: ListView(
                     padding: const EdgeInsets.all(16),
                     children: [
+                      // Redesign 13/09/2026 (mesmo padrão de cartão de
+                      // profile_screen.dart), compactado em seguida pra
+                      // caber sem rolar (mesmo pedido já feito lá): 4
+                      // cartões/blocos viram 3, toggles perdem o
+                      // subtítulo de 2 linhas (título já é
+                      // autoexplicativo), espaçamento reduzido.
                       // REORGANIZACAO_MENUS_HOME_V1.md §2 (06/09/2026):
                       // compartilhar/convidar e tema saem do card "Mais" da
                       // Home — primeira seção da tela, mesma prominência que
                       // tinham antes.
-                      Text(l10n.settingsShareAndAppearanceSectionTitle,
-                          style: Theme.of(context).textTheme.titleLarge),
-                      const SizedBox(height: 8),
-                      ListTile(
-                        contentPadding: EdgeInsets.zero,
-                        leading:
-                            Icon(Icons.share_outlined, color: AppColors.gold),
-                        title: Text(l10n.shareAppButtonTooltip),
-                        trailing: Icon(Icons.chevron_right_rounded,
-                            color: AppColors.muted),
-                        onTap: _shareApp,
+                      _SettingsSectionCard(
+                        icon: Icons.tune_rounded,
+                        title: l10n.settingsShareAndAppearanceSectionTitle,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            ListTile(
+                              dense: true,
+                              contentPadding: EdgeInsets.zero,
+                              leading: Icon(Icons.share_outlined,
+                                  color: AppColors.gold),
+                              title: Text(l10n.shareAppButtonTooltip),
+                              trailing: Icon(Icons.chevron_right_rounded,
+                                  color: AppColors.muted),
+                              onTap: _shareApp,
+                            ),
+                            ListenableBuilder(
+                              listenable: ThemeModeService.instance,
+                              builder: (context, _) {
+                                final isDark = ThemeModeService.instance.isDark;
+                                return _CompactSwitchRow(
+                                  icon: isDark
+                                      ? Icons.dark_mode_rounded
+                                      : Icons.light_mode_rounded,
+                                  title: l10n.settingsThemeModeLabel,
+                                  value: isDark,
+                                  onChanged: (_) =>
+                                      ThemeModeService.instance.toggle(),
+                                );
+                              },
+                            ),
+                            _CompactSwitchRow(
+                              icon: Icons.volume_up_outlined,
+                              title: l10n.soundToggleLabel,
+                              value: _soundEnabled,
+                              onChanged: (value) async {
+                                setState(() => _soundEnabled = value);
+                                await FeedbackService.instance
+                                    .setEnabled(value);
+                              },
+                            ),
+                            Slider(
+                              value: _volume,
+                              onChanged: _soundEnabled
+                                  ? (value) async {
+                                      setState(() => _volume = value);
+                                      await FeedbackService.instance
+                                          .setVolume(value);
+                                    }
+                                  : null,
+                            ),
+                          ],
+                        ),
                       ),
-                      ListenableBuilder(
-                        listenable: ThemeModeService.instance,
-                        builder: (context, _) {
-                          final isDark = ThemeModeService.instance.isDark;
-                          return SwitchListTile(
-                            contentPadding: EdgeInsets.zero,
-                            secondary: Icon(
-                                isDark
-                                    ? Icons.dark_mode_rounded
-                                    : Icons.light_mode_rounded,
-                                color: AppColors.gold),
-                            title: Text(l10n.settingsThemeModeLabel),
-                            value: isDark,
-                            onChanged: (_) =>
-                                ThemeModeService.instance.toggle(),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 20),
-                      Text(l10n.soundSectionTitle,
-                          style: Theme.of(context).textTheme.titleLarge),
-                      const SizedBox(height: 8),
-                      SwitchListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(l10n.soundToggleLabel),
-                        value: _soundEnabled,
-                        onChanged: (value) async {
-                          setState(() => _soundEnabled = value);
-                          await FeedbackService.instance.setEnabled(value);
-                        },
-                      ),
-                      const SizedBox(height: 8),
-                      Text(l10n.soundVolumeLabel),
-                      Slider(
-                        value: _volume,
-                        onChanged: _soundEnabled
-                            ? (value) async {
-                                setState(() => _volume = value);
-                                await FeedbackService.instance.setVolume(value);
-                              }
-                            : null,
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        l10n.soundSilencedNote,
-                        style: TextStyle(color: AppColors.muted, fontSize: 13),
-                      ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 10),
                       // "Como usar o MENTAL" (29/08/2026, pedido de Rhoney:
                       // "dê melhor destaque") — card com cor própria em vez
                       // de ListTile solto, mesma linguagem visual dos outros
                       // destaques do app (borda + fundo tintado). Sempre
                       // disponível pra rever, sem mexer na flag de "já visto"
                       // que controla a exibição automática após o splash
-                      // (main.dart).
+                      // (main.dart). Mantido fora do padrão de cartão
+                      // dourado de propósito — já tinha destaque visual
+                      // próprio antes desta redesign, não precisa mudar.
                       _HighlightedSettingsTile(
                         icon: Icons.help_outline_rounded,
                         color: AppColors.teal,
@@ -327,65 +330,75 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                   onDone: () => Navigator.of(context).pop())),
                         ),
                       ),
-                      const SizedBox(height: 8),
-                      Text(l10n.notificationsSectionTitle,
-                          style: Theme.of(context).textTheme.titleLarge),
-                      const SizedBox(height: 8),
-                      SwitchListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(l10n.notifReengagementLabel),
-                        subtitle: Text(l10n.notifReengagementDescription),
-                        value: _reengagementEnabled,
-                        onChanged: (value) {
-                          setState(() => _reengagementEnabled = value);
-                          _updateNotificationPreferences();
-                        },
-                      ),
-                      SwitchListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(l10n.notifSocialLabel),
-                        subtitle: Text(l10n.notifSocialDescription),
-                        value: _socialEnabled,
-                        onChanged: (value) {
-                          setState(() => _socialEnabled = value);
-                          _updateNotificationPreferences();
-                        },
-                      ),
-                      if (_notificationsError != null) ...[
-                        const SizedBox(height: 8),
-                        Text(_notificationsError!,
-                            style: TextStyle(color: AppColors.error)),
-                      ],
-                      if (_blockedUsers.isNotEmpty) ...[
-                        const SizedBox(height: 28),
-                        Text(l10n.blockedUsersSectionTitle,
-                            style: Theme.of(context).textTheme.titleLarge),
-                        const SizedBox(height: 8),
-                        for (final user in _blockedUsers)
-                          ListTile(
-                            contentPadding: EdgeInsets.zero,
-                            // Nome real substitui o apelido gerado pelo
-                            // sistema assim que existir (29/08/2026, pedido
-                            // de Rhoney).
-                            title: Text(() {
-                              final realName = user['real_name'] as String?;
-                              return realName != null && realName.isNotEmpty
-                                  ? realName
-                                  : user['nickname'] as String;
-                            }()),
-                            trailing: OutlinedButton(
-                              style: OutlinedButton.styleFrom(
-                                  minimumSize: Size.zero,
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 12, vertical: 8)),
-                              onPressed: () =>
-                                  _unblockUser(user['user_id'] as String),
-                              child: Text(l10n.unblockUserButton),
+                      const SizedBox(height: 10),
+                      _SettingsSectionCard(
+                        icon: Icons.notifications_outlined,
+                        title: l10n.notificationsSectionTitle,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            _CompactSwitchRow(
+                              title: l10n.notifReengagementLabel,
+                              value: _reengagementEnabled,
+                              onChanged: (value) {
+                                setState(() => _reengagementEnabled = value);
+                                _updateNotificationPreferences();
+                              },
                             ),
+                            _CompactSwitchRow(
+                              title: l10n.notifSocialLabel,
+                              value: _socialEnabled,
+                              onChanged: (value) {
+                                setState(() => _socialEnabled = value);
+                                _updateNotificationPreferences();
+                              },
+                            ),
+                            if (_notificationsError != null) ...[
+                              const SizedBox(height: 8),
+                              Text(_notificationsError!,
+                                  style: TextStyle(color: AppColors.error)),
+                            ],
+                          ],
+                        ),
+                      ),
+                      if (_blockedUsers.isNotEmpty) ...[
+                        const SizedBox(height: 10),
+                        _SettingsSectionCard(
+                          icon: Icons.block_outlined,
+                          title: l10n.blockedUsersSectionTitle,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              for (final user in _blockedUsers)
+                                ListTile(
+                                  contentPadding: EdgeInsets.zero,
+                                  // Nome real substitui o apelido gerado pelo
+                                  // sistema assim que existir (29/08/2026, pedido
+                                  // de Rhoney).
+                                  title: Text(() {
+                                    final realName =
+                                        user['real_name'] as String?;
+                                    return realName != null &&
+                                            realName.isNotEmpty
+                                        ? realName
+                                        : user['nickname'] as String;
+                                  }()),
+                                  trailing: OutlinedButton(
+                                    style: OutlinedButton.styleFrom(
+                                        minimumSize: Size.zero,
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 12, vertical: 8)),
+                                    onPressed: () =>
+                                        _unblockUser(user['user_id'] as String),
+                                    child: Text(l10n.unblockUserButton),
+                                  ),
+                                ),
+                            ],
                           ),
+                        ),
                       ],
                       if (_isAdmin) ...[
-                        const SizedBox(height: 28),
+                        const SizedBox(height: 10),
                         // Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md §2: "ponto de entrada
                         // sugerido... ou menu de Configurações" — só aparece
                         // pra role=admin, usuário comum nunca vê nem sabe que
@@ -401,7 +414,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                         ),
                       ],
-                      const SizedBox(height: 28),
+                      const SizedBox(height: 14),
                       // Login real via Supabase Auth — main.dart
                       // (authStateChanges) já reconstrói a raiz pra LoginScreen
                       // sozinho quando a sessão cai. Mas essa tela chegou aqui
@@ -425,7 +438,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         },
                         child: Text(l10n.settingsSignOutButton),
                       ),
-                      const SizedBox(height: 12),
+                      const SizedBox(height: 8),
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(
                             foregroundColor: AppColors.error,
@@ -442,6 +455,53 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ],
                   ),
                 ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Cartão de seção reutilizado nas áreas de Ajuste (Compartilhar/
+/// Aparência, Som, Notificações, Usuários bloqueados) — mesmo padrão
+/// visual de profile_screen.dart.
+class _SettingsSectionCard extends StatelessWidget {
+  const _SettingsSectionCard(
+      {required this.icon, required this.title, required this.child});
+
+  final IconData icon;
+  final String title;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+      ),
+      // Material(transparency) evita o aviso do framework sobre o ink
+      // splash dos Switch/ListTile ficar invisível atrás do Container
+      // colorido (mesmo ajuste já feito em profile_screen.dart).
+      child: Material(
+        type: MaterialType.transparency,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                Icon(icon, color: AppColors.gold, size: 22),
+                const SizedBox(width: 10),
+                Expanded(
+                    child: Text(title,
+                        style: Theme.of(context).textTheme.titleLarge)),
+              ],
+            ),
+            const SizedBox(height: 4),
+            child,
+          ],
         ),
       ),
     );
@@ -493,6 +553,46 @@ class _HighlightedSettingsTile extends StatelessWidget {
                   color: color.withValues(alpha: 0.7)),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Linha de toggle compacta (1 linha, sem subtítulo explicativo) — mesmo
+/// widget usado em profile_screen.dart, parte do ajuste pra caber a
+/// tela de Ajuste inteira sem rolar (pedido de Rhoney, 13/09/2026). O
+/// título de cada toggle já é autoexplicativo o bastante sem o texto de
+/// apoio de 2 linhas que existia antes.
+class _CompactSwitchRow extends StatelessWidget {
+  const _CompactSwitchRow(
+      {this.icon,
+      required this.title,
+      required this.value,
+      required this.onChanged});
+
+  final IconData? icon;
+  final String title;
+  final bool value;
+  final ValueChanged<bool> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => onChanged(!value),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        child: Row(
+          children: [
+            if (icon != null) ...[
+              Icon(icon, color: AppColors.gold, size: 20),
+              const SizedBox(width: 12),
+            ],
+            Expanded(
+                child:
+                    Text(title, style: Theme.of(context).textTheme.bodyMedium)),
+            Switch(value: value, onChanged: onChanged),
+          ],
         ),
       ),
     );

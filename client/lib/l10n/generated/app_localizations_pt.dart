@@ -1132,6 +1132,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get friendsScreenTitle => 'Amigos';
 
   @override
+  String get friendsAddSectionTitle => 'Adicionar amigos';
+
+  @override
   String friendsInviteCodeLabel(String code) {
     return 'Seu código: $code';
   }
@@ -1674,6 +1677,12 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get onboardingTitle => 'Antes de começar';
+
+  @override
+  String get onboardingLocationSectionTitle => 'Localização';
+
+  @override
+  String get onboardingAboutYouSectionTitle => 'Sobre você';
 
   @override
   String get onboardingSubtitle =>

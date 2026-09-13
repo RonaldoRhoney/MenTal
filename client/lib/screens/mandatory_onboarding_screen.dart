@@ -24,7 +24,11 @@ import '../widgets/profile_photo.dart';
 /// exata" por risco de localizar um menor) — restrição que deixou de
 /// fazer sentido com o MENTAL exclusivo pra 18+ desde a DIR-001.
 class MandatoryOnboardingScreen extends StatefulWidget {
-  const MandatoryOnboardingScreen({super.key, required this.client, required this.onDone, this.pickAndUploadPhoto = _defaultPickAndUploadPhoto});
+  const MandatoryOnboardingScreen(
+      {super.key,
+      required this.client,
+      required this.onDone,
+      this.pickAndUploadPhoto = _defaultPickAndUploadPhoto});
 
   final ApiClient client;
   final VoidCallback onDone;
@@ -39,7 +43,8 @@ class MandatoryOnboardingScreen extends StatefulWidget {
   // escolher da galeria, e recortar antes de salvar — PhotoPickerService
   // cobre fonte + recorte 1:1; aqui só o upload em si, igual a
   // profile_screen.dart.
-  static Future<String?> _defaultPickAndUploadPhoto(BuildContext context) async {
+  static Future<String?> _defaultPickAndUploadPhoto(
+      BuildContext context) async {
     final croppedFile = await PhotoPickerService.pickAndCrop(context);
     if (croppedFile == null) return null;
 
@@ -51,7 +56,9 @@ class MandatoryOnboardingScreen extends StatefulWidget {
     // devolver um path SEM extensão reconhecível — sem esse fallback, o
     // backend rejeitava o path (_is_valid_photo_path exige uma extensão
     // permitida), quebrando o onboarding obrigatório silenciosamente.
-    final rawExt = croppedFile.path.contains('.') ? croppedFile.path.split('.').last.toLowerCase() : '';
+    final rawExt = croppedFile.path.contains('.')
+        ? croppedFile.path.split('.').last.toLowerCase()
+        : '';
     const allowedExtensions = {'jpg', 'jpeg', 'png', 'webp'};
     final ext = allowedExtensions.contains(rawExt) ? rawExt : 'jpg';
     final path = '$userId/photo.$ext';
@@ -64,7 +71,8 @@ class MandatoryOnboardingScreen extends StatefulWidget {
   }
 
   @override
-  State<MandatoryOnboardingScreen> createState() => _MandatoryOnboardingScreenState();
+  State<MandatoryOnboardingScreen> createState() =>
+      _MandatoryOnboardingScreenState();
 }
 
 class _MandatoryOnboardingScreenState extends State<MandatoryOnboardingScreen> {
@@ -79,7 +87,12 @@ class _MandatoryOnboardingScreenState extends State<MandatoryOnboardingScreen> {
   bool _saving = false;
   String? _error;
 
-  static const _genderValues = ['masculino', 'feminino', 'nao_binario', 'prefiro_nao_informar'];
+  static const _genderValues = [
+    'masculino',
+    'feminino',
+    'nao_binario',
+    'prefiro_nao_informar'
+  ];
   // Revisão 28/08/2026 (decisão de Rhoney): 4 faixas em vez das 5
   // anteriores (18-25/26-30/31-45/46-50/51+).
   static const _ageRangeValues = ['18-25', '26-35', '36-45', '46+'];
@@ -165,107 +178,201 @@ class _MandatoryOnboardingScreenState extends State<MandatoryOnboardingScreen> {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       body: SafeArea(
+        // Redesign 13/09/2026 (mesmo padrão de cartão de
+        // profile_screen.dart) — 3 cartões (Foto e nome / Localização /
+        // Sobre você) em vez da lista corrida de campos soltos que
+        // existia antes.
         child: ListView(
           padding: const EdgeInsets.all(24),
           children: [
             const SizedBox(height: 24),
-            Text(l10n.onboardingTitle, style: Theme.of(context).textTheme.headlineSmall),
+            Text(l10n.onboardingTitle,
+                style: Theme.of(context).textTheme.headlineSmall),
             const SizedBox(height: 8),
-            Text(l10n.onboardingSubtitle, style: Theme.of(context).textTheme.bodySmall),
-            const SizedBox(height: 32),
-            Text(l10n.onboardingPhotoTitle, style: Theme.of(context).textTheme.titleLarge),
-            const SizedBox(height: 12),
-            Row(
-              children: [
-                const ProfilePhotoCircle(photoUrl: null, size: 64),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: OutlinedButton(
-                    onPressed: _uploadingPhoto ? null : _pickAndUploadPhoto,
-                    child: _uploadingPhoto
-                        ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))
-                        : Text(_photoPath == null ? l10n.profilePhotoChangeButton : l10n.onboardingPhotoChosenLabel),
+            Text(l10n.onboardingSubtitle,
+                style: Theme.of(context).textTheme.bodySmall),
+            const SizedBox(height: 28),
+            _OnboardingSectionCard(
+              icon: Icons.person_outline_rounded,
+              title: l10n.onboardingPhotoTitle,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Row(
+                    children: [
+                      const ProfilePhotoCircle(photoUrl: null, size: 64),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed:
+                              _uploadingPhoto ? null : _pickAndUploadPhoto,
+                          child: _uploadingPhoto
+                              ? const SizedBox(
+                                  width: 16,
+                                  height: 16,
+                                  child:
+                                      CircularProgressIndicator(strokeWidth: 2))
+                              : Text(_photoPath == null
+                                  ? l10n.profilePhotoChangeButton
+                                  : l10n.onboardingPhotoChosenLabel),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 24),
-            TextField(
-              controller: _nameController,
-              decoration: InputDecoration(labelText: l10n.onboardingNameLabel),
-              onChanged: (_) => setState(() {}),
-            ),
-            const SizedBox(height: 16),
-            TextField(
-              controller: _countryController,
-              decoration: InputDecoration(labelText: l10n.onboardingCountryLabel),
-              onChanged: (_) => setState(() {}),
-            ),
-            const SizedBox(height: 16),
-            DropdownButtonFormField<String>(
-              initialValue: _selectedStateUf,
-              decoration: InputDecoration(labelText: l10n.profileLocationStateLabel),
-              isExpanded: true,
-              items: [
-                for (final state in kBrazilStates)
-                  DropdownMenuItem(value: state.uf, child: Text('${state.name} (${state.uf})')),
-              ],
-              onChanged: (value) => setState(() => _selectedStateUf = value),
-            ),
-            const SizedBox(height: 16),
-            CityAutocompleteField(
-              stateUf: _selectedStateUf,
-              controller: _cityController,
-              labelText: l10n.onboardingCityLabel,
-              onChanged: (_) => setState(() {}),
-            ),
-            const SizedBox(height: 24),
-            // Revisão 28/08/2026: gênero agora é OPCIONAL — título indica
-            // isso, e não entra em _canContinue.
-            Text(l10n.onboardingGenderOptionalTitle, style: Theme.of(context).textTheme.titleLarge),
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final value in _genderValues)
-                  ChoiceChip(
-                    label: Text(_genderLabel(l10n, value)),
-                    selected: _gender == value,
-                    selectedColor: AppColors.teal.withValues(alpha: 0.25),
-                    side: BorderSide(color: _gender == value ? AppColors.teal : AppColors.muted),
-                    onSelected: (_) => setState(() => _gender = _gender == value ? null : value),
+                  const SizedBox(height: 16),
+                  TextField(
+                    controller: _nameController,
+                    decoration:
+                        InputDecoration(labelText: l10n.onboardingNameLabel),
+                    onChanged: (_) => setState(() {}),
                   ),
-              ],
+                ],
+              ),
             ),
-            const SizedBox(height: 24),
-            Text(l10n.onboardingAgeRangeTitle, style: Theme.of(context).textTheme.titleLarge),
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final value in _ageRangeValues)
-                  ChoiceChip(
-                    label: Text(value),
-                    selected: _ageRange == value,
-                    selectedColor: AppColors.gold.withValues(alpha: 0.25),
-                    side: BorderSide(color: _ageRange == value ? AppColors.gold : AppColors.muted),
-                    onSelected: (_) => setState(() => _ageRange = value),
+            const SizedBox(height: 20),
+            _OnboardingSectionCard(
+              icon: Icons.location_on_outlined,
+              title: l10n.onboardingLocationSectionTitle,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  TextField(
+                    controller: _countryController,
+                    decoration:
+                        InputDecoration(labelText: l10n.onboardingCountryLabel),
+                    onChanged: (_) => setState(() {}),
                   ),
-              ],
+                  const SizedBox(height: 16),
+                  DropdownButtonFormField<String>(
+                    initialValue: _selectedStateUf,
+                    decoration: InputDecoration(
+                        labelText: l10n.profileLocationStateLabel),
+                    isExpanded: true,
+                    items: [
+                      for (final state in kBrazilStates)
+                        DropdownMenuItem(
+                            value: state.uf,
+                            child: Text('${state.name} (${state.uf})')),
+                    ],
+                    onChanged: (value) =>
+                        setState(() => _selectedStateUf = value),
+                  ),
+                  const SizedBox(height: 16),
+                  CityAutocompleteField(
+                    stateUf: _selectedStateUf,
+                    controller: _cityController,
+                    labelText: l10n.onboardingCityLabel,
+                    onChanged: (_) => setState(() {}),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            _OnboardingSectionCard(
+              icon: Icons.badge_outlined,
+              title: l10n.onboardingAboutYouSectionTitle,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(l10n.onboardingAgeRangeTitle,
+                      style: Theme.of(context).textTheme.titleMedium),
+                  const SizedBox(height: 12),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      for (final value in _ageRangeValues)
+                        ChoiceChip(
+                          label: Text(value),
+                          selected: _ageRange == value,
+                          selectedColor: AppColors.gold.withValues(alpha: 0.25),
+                          side: BorderSide(
+                              color: _ageRange == value
+                                  ? AppColors.gold
+                                  : AppColors.muted),
+                          onSelected: (_) => setState(() => _ageRange = value),
+                        ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  // Revisão 28/08/2026: gênero agora é OPCIONAL — título
+                  // indica isso, e não entra em _canContinue.
+                  Text(l10n.onboardingGenderOptionalTitle,
+                      style: Theme.of(context).textTheme.titleMedium),
+                  const SizedBox(height: 12),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      for (final value in _genderValues)
+                        ChoiceChip(
+                          label: Text(_genderLabel(l10n, value)),
+                          selected: _gender == value,
+                          selectedColor: AppColors.teal.withValues(alpha: 0.25),
+                          side: BorderSide(
+                              color: _gender == value
+                                  ? AppColors.teal
+                                  : AppColors.muted),
+                          onSelected: (_) => setState(
+                              () => _gender = _gender == value ? null : value),
+                        ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             if (_error != null) ...[
               const SizedBox(height: 16),
               Text(_error!, style: TextStyle(color: AppColors.error)),
             ],
-            const SizedBox(height: 32),
+            const SizedBox(height: 28),
             FilledButton(
               onPressed: (_canContinue && !_saving) ? _submit : null,
               child: Text(l10n.onboardingContinueButton),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// Cartão de seção reutilizado nas 3 áreas do cadastro obrigatório
+/// (Foto e nome / Localização / Sobre você) — mesmo padrão visual de
+/// profile_screen.dart.
+class _OnboardingSectionCard extends StatelessWidget {
+  const _OnboardingSectionCard(
+      {required this.icon, required this.title, required this.child});
+
+  final IconData icon;
+  final String title;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Icon(icon, color: AppColors.gold, size: 22),
+              const SizedBox(width: 10),
+              Expanded(
+                  child: Text(title,
+                      style: Theme.of(context).textTheme.titleLarge)),
+            ],
+          ),
+          const SizedBox(height: 12),
+          child,
+        ],
       ),
     );
   }

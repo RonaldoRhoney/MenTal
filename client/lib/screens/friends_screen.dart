@@ -409,171 +409,209 @@ class _FriendsScreenState extends State<FriendsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    if (_inviteCode != null) ...[
-                      Text(
-                        l10n.friendsInviteCodeLabel(_inviteCode!),
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                      const SizedBox(height: 8),
-                      // Dois botões lado a lado: Expanded nos dois evita o
-                      // bug real já achado nesta tela (minimumSize:
-                      // Size.fromHeight(48) do tema força largura infinita
-                      // em OutlinedButton/FilledButton dentro de um Row sem
-                      // constraint — Expanded distribui a largura igual
-                      // pros dois, sem esse risco).
-                      Row(
+                    // Redesign 13/09/2026 (mesmo padrão de cartão de
+                    // profile_screen.dart) — convidar/buscar/adicionar
+                    // viram um cartão só ("Adicionar amigos"), já que são
+                    // 3 caminhos pro mesmo objetivo; convidar é o
+                    // primeiro por ser o mais divulgado (funciona fora
+                    // do app).
+                    _FriendsSectionCard(
+                      icon: Icons.person_add_alt_1_outlined,
+                      title: l10n.friendsAddSectionTitle,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Expanded(
-                            child: OutlinedButton(
-                              onPressed: _copyCode,
-                              child: Text(l10n.friendsCopyCodeButton),
+                          if (_inviteCode != null) ...[
+                            Text(
+                              l10n.friendsInviteCodeLabel(_inviteCode!),
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                            const SizedBox(height: 8),
+                            // Dois botões lado a lado: Expanded nos dois evita o
+                            // bug real já achado nesta tela (minimumSize:
+                            // Size.fromHeight(48) do tema força largura infinita
+                            // em OutlinedButton/FilledButton dentro de um Row sem
+                            // constraint — Expanded distribui a largura igual
+                            // pros dois, sem esse risco).
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: OutlinedButton(
+                                    onPressed: _copyCode,
+                                    child: Text(l10n.friendsCopyCodeButton),
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                Expanded(
+                                  child: FilledButton.icon(
+                                    onPressed: _shareInvite,
+                                    icon: const Icon(Icons.share_outlined,
+                                        size: 18),
+                                    label: Text(l10n.friendsInviteShareButton),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 16),
+                          ],
+                          TextField(
+                            controller: _searchController,
+                            decoration: InputDecoration(
+                              hintText: l10n.friendsSearchFieldHint,
+                              prefixIcon: const Icon(Icons.search),
+                              suffixIcon: _searching
+                                  ? const Padding(
+                                      padding: EdgeInsets.all(12),
+                                      child: SizedBox(
+                                        width: 16,
+                                        height: 16,
+                                        child: CircularProgressIndicator(
+                                            strokeWidth: 2),
+                                      ),
+                                    )
+                                  : null,
                             ),
                           ),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: FilledButton.icon(
-                              onPressed: _shareInvite,
-                              icon: const Icon(Icons.share_outlined, size: 18),
-                              label: Text(l10n.friendsInviteShareButton),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                    const SizedBox(height: 24),
-                    TextField(
-                      controller: _searchController,
-                      decoration: InputDecoration(
-                        hintText: l10n.friendsSearchFieldHint,
-                        prefixIcon: const Icon(Icons.search),
-                        suffixIcon: _searching
-                            ? const Padding(
-                                padding: EdgeInsets.all(12),
-                                child: SizedBox(
-                                  width: 16,
-                                  height: 16,
-                                  child:
-                                      CircularProgressIndicator(strokeWidth: 2),
+                          if (_searchController.text.trim().length >= 3 &&
+                              !_searching) ...[
+                            const SizedBox(height: 4),
+                            if (_searchResults.isEmpty)
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 8),
+                                child: Text(
+                                  l10n.friendsSearchEmptyMessage,
+                                  style: Theme.of(context).textTheme.bodySmall,
                                 ),
                               )
-                            : null,
-                      ),
-                    ),
-                    if (_searchController.text.trim().length >= 3 &&
-                        !_searching) ...[
-                      const SizedBox(height: 4),
-                      if (_searchResults.isEmpty)
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8),
-                          child: Text(
-                            l10n.friendsSearchEmptyMessage,
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
-                        )
-                      else
-                        // Resultado leva direto à ação de convite — nunca
-                        // abre o perfil público completo a partir daqui
-                        // (AMIGOS_CONVITE_POR_NOME.md §2, exceção escopada
-                        // estritamente ao fluxo de convite).
-                        ...[
-                        for (final result in _searchResults)
-                          ListTile(
-                            contentPadding: EdgeInsets.zero,
-                            leading: ProfilePhotoCircle(
-                                photoUrl: result['photo_url'] as String?),
-                            title: Text(
-                              (result['real_name'] as String?) ??
-                                  (result['nickname'] as String),
-                            ),
-                            subtitle: Text(
-                              l10n.levelLabel(result['level'] as int),
-                              style: AppTheme.technicalStyle(
-                                  color: AppColors.teal, fontSize: 14),
-                            ),
-                            trailing: _buildSearchResultAction(result),
-                          ),
-                      ],
-                    ],
-                    const SizedBox(height: 16),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: TextField(
-                            controller: _codeController,
-                            decoration: InputDecoration(
-                                hintText: l10n.friendsAddFieldHint),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        // Achado real (2026-08-22): AppTheme define
-                        // minimumSize: Size.fromHeight(48) pro FilledButton
-                        // (largura infinita mínima, pensado pros CTAs de
-                        // largura cheia em Column — "Novo desafio", "Ativar
-                        // contador" etc.). Isso quebra com "BoxConstraints
-                        // forces an infinite width" sempre que o botão vai
-                        // direto num Row sem Flexible/Expanded — Flexible dá
-                        // a constraint limitada que falta, sem esticar o
-                        // botão como o TextField ao lado.
-                        Flexible(
-                          child: FilledButton(
-                            onPressed: _adding ? null : _addFriend,
-                            child: Text(l10n.friendsAddButton),
-                          ),
-                        ),
-                      ],
-                    ),
-                    if (_error != null) ...[
-                      const SizedBox(height: 8),
-                      Text(_error!, style: TextStyle(color: AppColors.error)),
-                    ],
-                    if (_friendRequests.isNotEmpty) ...[
-                      const SizedBox(height: 24),
-                      Text(l10n.friendRequestsTitle,
-                          style: Theme.of(context).textTheme.titleMedium),
-                      const SizedBox(height: 8),
-                      for (final request in _friendRequests)
-                        ListTile(
-                          contentPadding: EdgeInsets.zero,
-                          // Pedido de Rhoney (07/09/2026): "agora que os
-                          // nomes aparecem em qualquer tela, ponha as
-                          // fotos também" — mesmo widget já usado na
-                          // lista de amigos e no resultado de busca.
-                          leading: ProfilePhotoCircle(
-                              photoUrl: request['from_photo_url'] as String?),
-                          title: Text(request['from_nickname'] as String),
-                          trailing: Row(
-                            mainAxisSize: MainAxisSize.min,
+                            else
+                              // Resultado leva direto à ação de convite — nunca
+                              // abre o perfil público completo a partir daqui
+                              // (AMIGOS_CONVITE_POR_NOME.md §2, exceção escopada
+                              // estritamente ao fluxo de convite).
+                              ...[
+                              for (final result in _searchResults)
+                                ListTile(
+                                  contentPadding: EdgeInsets.zero,
+                                  leading: ProfilePhotoCircle(
+                                      photoUrl: result['photo_url'] as String?),
+                                  title: Text(
+                                    (result['real_name'] as String?) ??
+                                        (result['nickname'] as String),
+                                  ),
+                                  subtitle: Text(
+                                    l10n.levelLabel(result['level'] as int),
+                                    style: AppTheme.technicalStyle(
+                                        color: AppColors.teal, fontSize: 14),
+                                  ),
+                                  trailing: _buildSearchResultAction(result),
+                                ),
+                            ],
+                          ],
+                          const SizedBox(height: 16),
+                          Row(
                             children: [
-                              OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                    minimumSize: Size.zero,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 12, vertical: 8)),
-                                onPressed: () => _declineRequest(request),
-                                child: Text(l10n.friendRequestDeclineButton),
+                              Expanded(
+                                child: TextField(
+                                  controller: _codeController,
+                                  decoration: InputDecoration(
+                                      hintText: l10n.friendsAddFieldHint),
+                                ),
                               ),
                               const SizedBox(width: 8),
-                              FilledButton(
-                                style: FilledButton.styleFrom(
-                                    minimumSize: Size.zero,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 12, vertical: 8)),
-                                onPressed: () => _acceptRequest(request),
-                                child: Text(l10n.friendRequestAcceptButton),
-                              ),
-                              IconButton(
-                                tooltip: l10n.friendMoreOptionsTooltip,
-                                icon: const Icon(Icons.more_vert, size: 20),
-                                onPressed: () => _openReportBlockSheet(
-                                  userId: request['from_user_id'] as String,
-                                  nickname: request['from_nickname'] as String,
+                              // Achado real (2026-08-22): AppTheme define
+                              // minimumSize: Size.fromHeight(48) pro FilledButton
+                              // (largura infinita mínima, pensado pros CTAs de
+                              // largura cheia em Column — "Novo desafio", "Ativar
+                              // contador" etc.). Isso quebra com "BoxConstraints
+                              // forces an infinite width" sempre que o botão vai
+                              // direto num Row sem Flexible/Expanded — Flexible dá
+                              // a constraint limitada que falta, sem esticar o
+                              // botão como o TextField ao lado.
+                              Flexible(
+                                child: FilledButton(
+                                  onPressed: _adding ? null : _addFriend,
+                                  child: Text(l10n.friendsAddButton),
                                 ),
                               ),
                             ],
                           ),
+                          if (_error != null) ...[
+                            const SizedBox(height: 8),
+                            Text(_error!,
+                                style: TextStyle(color: AppColors.error)),
+                          ],
+                        ],
+                      ),
+                    ),
+                    if (_friendRequests.isNotEmpty) ...[
+                      const SizedBox(height: 20),
+                      Text(l10n.friendRequestsTitle,
+                          style: Theme.of(context).textTheme.titleMedium),
+                      const SizedBox(height: 8),
+                      for (final request in _friendRequests)
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 12),
+                          decoration: BoxDecoration(
+                            color: AppColors.bg2,
+                            borderRadius: BorderRadius.circular(18),
+                            border: Border.all(
+                                color: AppColors.gold.withValues(alpha: 0.3)),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(18),
+                            child: Material(
+                              type: MaterialType.transparency,
+                              child: ListTile(
+                                // Pedido de Rhoney (07/09/2026): "agora que os
+                                // nomes aparecem em qualquer tela, ponha as
+                                // fotos também" — mesmo widget já usado na
+                                // lista de amigos e no resultado de busca.
+                                leading: ProfilePhotoCircle(
+                                    photoUrl:
+                                        request['from_photo_url'] as String?),
+                                title: Text(request['from_nickname'] as String),
+                                trailing: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    OutlinedButton(
+                                      style: OutlinedButton.styleFrom(
+                                          minimumSize: Size.zero,
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 12, vertical: 8)),
+                                      onPressed: () => _declineRequest(request),
+                                      child:
+                                          Text(l10n.friendRequestDeclineButton),
+                                    ),
+                                    const SizedBox(width: 8),
+                                    FilledButton(
+                                      style: FilledButton.styleFrom(
+                                          minimumSize: Size.zero,
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 12, vertical: 8)),
+                                      onPressed: () => _acceptRequest(request),
+                                      child:
+                                          Text(l10n.friendRequestAcceptButton),
+                                    ),
+                                    IconButton(
+                                      tooltip: l10n.friendMoreOptionsTooltip,
+                                      icon:
+                                          const Icon(Icons.more_vert, size: 20),
+                                      onPressed: () => _openReportBlockSheet(
+                                        userId:
+                                            request['from_user_id'] as String,
+                                        nickname:
+                                            request['from_nickname'] as String,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                     ],
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 20),
                     Text(l10n.friendsListTitle,
                         style: Theme.of(context).textTheme.titleMedium),
                     const SizedBox(height: 8),
@@ -597,76 +635,103 @@ class _FriendsScreenState extends State<FriendsScreen> {
                                   final friend = _friends[index];
                                   final realName =
                                       friend['real_name'] as String?;
-                                  return ListTile(
-                                    // V4 item 1 — Perfil Público: toque na
-                                    // linha (fora dos botões de ação) abre o
-                                    // perfil público do amigo
-                                    // (PERFIL_PUBLICO_E_TORCIDA_V1.md §3).
-                                    onTap: () => Navigator.of(context).push(
-                                      MaterialPageRoute(
-                                          builder: (_) => PublicProfileScreen(
-                                              client: widget.client,
-                                              userId:
-                                                  friend['user_id'] as String)),
+                                  // Redesign 13/09/2026 (mesmo padrão de
+                                  // cartão) — cada amigo vira um cartão
+                                  // próprio em vez de ListTile solto.
+                                  return Container(
+                                    margin: const EdgeInsets.only(bottom: 12),
+                                    decoration: BoxDecoration(
+                                      color: AppColors.bg2,
+                                      borderRadius: BorderRadius.circular(18),
+                                      border: Border.all(
+                                          color: AppColors.gold
+                                              .withValues(alpha: 0.3)),
                                     ),
-                                    leading: ProfilePhotoCircle(
-                                        photoUrl:
-                                            friend['photo_url'] as String?),
-                                    // Nome real substitui o apelido gerado
-                                    // pelo sistema assim que existir
-                                    // (29/08/2026, pedido de Rhoney).
-                                    title: Text(
-                                      realName != null && realName.isNotEmpty
-                                          ? realName
-                                          : friend['nickname'] as String,
-                                    ),
-                                    subtitle: Text(
-                                      '${friend['xp_total']} XP',
-                                      style: AppTheme.technicalStyle(
-                                          color: AppColors.teal, fontSize: 14),
-                                    ),
-                                    trailing: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        OutlinedButton(
-                                          // Mesmo achado do bug de largura
-                                          // infinita já documentado nesta tela
-                                          // (AppTheme define minimumSize:
-                                          // Size.fromHeight(48), largura
-                                          // infinita) — aqui o problema é outro
-                                          // sintoma do mesmo bug: dentro de
-                                          // ListTile.trailing (não um Row
-                                          // solto), então a correção é reduzir
-                                          // o mínimo, não usar Flexible/Expanded.
-                                          style: OutlinedButton.styleFrom(
-                                              minimumSize: Size.zero,
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 12,
-                                                      vertical: 8)),
-                                          onPressed: () =>
-                                              _challengeFriend(friend),
-                                          child:
-                                              Text(l10n.battleChallengeButton),
-                                        ),
-                                        IconButton(
-                                          tooltip:
-                                              l10n.friendMoreOptionsTooltip,
-                                          icon: const Icon(Icons.more_vert,
-                                              size: 20),
-                                          onPressed: () =>
-                                              _openReportBlockSheet(
-                                            userId: friend['user_id'] as String,
-                                            // Pedido de Rhoney (07/09/2026): nome
-                                            // real tem prioridade — mesmo `realName`
-                                            // já usado no título da linha acima.
-                                            nickname: realName != null &&
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(18),
+                                      child: Material(
+                                        type: MaterialType.transparency,
+                                        child: ListTile(
+                                          // V4 item 1 — Perfil Público: toque na
+                                          // linha (fora dos botões de ação) abre o
+                                          // perfil público do amigo
+                                          // (PERFIL_PUBLICO_E_TORCIDA_V1.md §3).
+                                          onTap: () =>
+                                              Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (_) =>
+                                                    PublicProfileScreen(
+                                                        client: widget.client,
+                                                        userId:
+                                                            friend['user_id']
+                                                                as String)),
+                                          ),
+                                          leading: ProfilePhotoCircle(
+                                              photoUrl: friend['photo_url']
+                                                  as String?),
+                                          // Nome real substitui o apelido gerado
+                                          // pelo sistema assim que existir
+                                          // (29/08/2026, pedido de Rhoney).
+                                          title: Text(
+                                            realName != null &&
                                                     realName.isNotEmpty
                                                 ? realName
                                                 : friend['nickname'] as String,
                                           ),
+                                          subtitle: Text(
+                                            '${friend['xp_total']} XP',
+                                            style: AppTheme.technicalStyle(
+                                                color: AppColors.teal,
+                                                fontSize: 14),
+                                          ),
+                                          trailing: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              OutlinedButton(
+                                                // Mesmo achado do bug de largura
+                                                // infinita já documentado nesta tela
+                                                // (AppTheme define minimumSize:
+                                                // Size.fromHeight(48), largura
+                                                // infinita) — aqui o problema é outro
+                                                // sintoma do mesmo bug: dentro de
+                                                // ListTile.trailing (não um Row
+                                                // solto), então a correção é reduzir
+                                                // o mínimo, não usar Flexible/Expanded.
+                                                style: OutlinedButton.styleFrom(
+                                                    minimumSize: Size.zero,
+                                                    padding: const EdgeInsets
+                                                        .symmetric(
+                                                        horizontal: 12,
+                                                        vertical: 8)),
+                                                onPressed: () =>
+                                                    _challengeFriend(friend),
+                                                child: Text(
+                                                    l10n.battleChallengeButton),
+                                              ),
+                                              IconButton(
+                                                tooltip: l10n
+                                                    .friendMoreOptionsTooltip,
+                                                icon: const Icon(
+                                                    Icons.more_vert,
+                                                    size: 20),
+                                                onPressed: () =>
+                                                    _openReportBlockSheet(
+                                                  userId: friend['user_id']
+                                                      as String,
+                                                  // Pedido de Rhoney (07/09/2026): nome
+                                                  // real tem prioridade — mesmo `realName`
+                                                  // já usado no título da linha acima.
+                                                  nickname: realName != null &&
+                                                          realName.isNotEmpty
+                                                      ? realName
+                                                      : friend['nickname']
+                                                          as String,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   );
                                 },
@@ -676,6 +741,49 @@ class _FriendsScreenState extends State<FriendsScreen> {
                   ],
                 ),
               ),
+      ),
+    );
+  }
+}
+
+/// Cartão de seção reutilizado no topo da tela (Convidar/Buscar/
+/// Adicionar amigos) — mesmo padrão visual de profile_screen.dart.
+class _FriendsSectionCard extends StatelessWidget {
+  const _FriendsSectionCard(
+      {required this.icon, required this.title, required this.child});
+
+  final IconData icon;
+  final String title;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+      ),
+      child: Material(
+        type: MaterialType.transparency,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                Icon(icon, color: AppColors.gold, size: 22),
+                const SizedBox(width: 10),
+                Expanded(
+                    child: Text(title,
+                        style: Theme.of(context).textTheme.titleLarge)),
+              ],
+            ),
+            const SizedBox(height: 12),
+            child,
+          ],
+        ),
       ),
     );
   }

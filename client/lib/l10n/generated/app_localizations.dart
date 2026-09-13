@@ -1984,6 +1984,12 @@ abstract class AppLocalizations {
   /// **'Amigos'**
   String get friendsScreenTitle;
 
+  /// Card title grouping invite code, search and add-by-code
+  ///
+  /// In pt, this message translates to:
+  /// **'Adicionar amigos'**
+  String get friendsAddSectionTitle;
+
   /// Shows the user's own invite code to share with friends
   ///
   /// In pt, this message translates to:
@@ -2877,6 +2883,18 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Antes de começar'**
   String get onboardingTitle;
+
+  /// Card title grouping country/state/city fields
+  ///
+  /// In pt, this message translates to:
+  /// **'Localização'**
+  String get onboardingLocationSectionTitle;
+
+  /// Card title grouping age range and optional gender
+  ///
+  /// In pt, this message translates to:
+  /// **'Sobre você'**
+  String get onboardingAboutYouSectionTitle;
 
   /// Mandatory onboarding screen subtitle
   ///

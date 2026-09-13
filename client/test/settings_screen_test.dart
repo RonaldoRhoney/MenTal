@@ -7,6 +7,16 @@ import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/settings_screen.dart';
 
+/// Redesign 13/09/2026: os toggles de Ajuste deixaram de ser
+/// SwitchListTile e viraram _CompactSwitchRow (privado a
+/// settings_screen.dart, parte do ajuste pra caber sem rolar) — um Row
+/// simples com Text + Switch. Acha o Switch mais próximo do texto do
+/// título via o Row ancestral comum, já que não dá pra referenciar o
+/// tipo privado direto num teste externo.
+Finder _switchRowNear(String label) => find.descendant(
+    of: find.ancestor(of: find.text(label), matching: find.byType(Row)).first,
+    matching: find.byType(Switch));
+
 /// V2 item 8 — Notificações. Ao contrário do toggle de som (local), a
 /// preferência de notificação vive no backend — este teste prova que a
 /// tela carrega o estado real de GET /notifications/preferences e que
@@ -15,7 +25,10 @@ import 'package:mental/screens/settings_screen.dart';
 class _FakeApiClient extends ApiClient {
   _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
-  Map<String, dynamic> preferences = {'reengagement_enabled': true, 'social_enabled': false};
+  Map<String, dynamic> preferences = {
+    'reengagement_enabled': true,
+    'social_enabled': false
+  };
   final List<Map<String, dynamic>> updateCalls = [];
 
   // Achado de auditoria de segurança (28/08/2026) — DIR-001 item 5, LGPD.
@@ -30,14 +43,18 @@ class _FakeApiClient extends ApiClient {
   }
 
   @override
-  Future<Map<String, dynamic>> getNotificationPreferences() async => preferences;
+  Future<Map<String, dynamic>> getNotificationPreferences() async =>
+      preferences;
 
   @override
   Future<Map<String, dynamic>> updateNotificationPreferences({
     required bool reengagementEnabled,
     required bool socialEnabled,
   }) async {
-    final body = {'reengagement_enabled': reengagementEnabled, 'social_enabled': socialEnabled};
+    final body = {
+      'reengagement_enabled': reengagementEnabled,
+      'social_enabled': socialEnabled
+    };
     updateCalls.add(body);
     preferences = body;
     return body;
@@ -50,7 +67,11 @@ class _FakeApiClient extends ApiClient {
   @override
   Future<Map<String, dynamic>> rewardAppInviteShare() async {
     rewardAppInviteShareCalls++;
-    return {'xp_awarded': 20, 'mentalcoins_awarded': 5, 'coin_milestone_reached': false};
+    return {
+      'xp_awarded': 20,
+      'mentalcoins_awarded': 5,
+      'coin_milestone_reached': false
+    };
   }
 }
 
@@ -72,7 +93,9 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('SettingsScreen carrega preferências reais do backend e persiste mudança via PUT', (tester) async {
+  testWidgets(
+      'SettingsScreen carrega preferências reais do backend e persiste mudança via PUT',
+      (tester) async {
     // Achado real: sem isto, FeedbackService.ensureLoaded() trava para
     // sempre esperando SharedPreferences.getInstance() (o plugin de
     // teste precisa de valores mock explícitos, mesma exigência já
@@ -94,22 +117,24 @@ void main() {
     );
 
     // Estado inicial vem do backend fake: reengajamento ligado, social desligado.
-    final reengagementSwitch = tester.widget<SwitchListTile>(
-      find.widgetWithText(SwitchListTile, 'Lembretes diários'),
-    );
-    final socialSwitch = tester.widget<SwitchListTile>(find.widgetWithText(SwitchListTile, 'Ranking'));
+    final reengagementSwitch =
+        tester.widget<Switch>(_switchRowNear('Lembretes diários'));
+    final socialSwitch = tester.widget<Switch>(_switchRowNear('Ranking'));
     expect(reengagementSwitch.value, isTrue);
     expect(socialSwitch.value, isFalse);
 
     // Liga o toggle de ranking — deve chamar PUT com os dois valores.
-    await tester.tap(find.widgetWithText(SwitchListTile, 'Ranking'));
+    await tester.tap(_switchRowNear('Ranking'));
     await tester.pump();
 
     expect(client.updateCalls, hasLength(1));
-    expect(client.updateCalls.single, {'reengagement_enabled': true, 'social_enabled': true});
+    expect(client.updateCalls.single,
+        {'reengagement_enabled': true, 'social_enabled': true});
   });
 
-  testWidgets('REORGANIZACAO_MENUS_HOME_V1.md §2: compartilhar e tema aparecem em Ajuste, tocar não trava a tela', (tester) async {
+  testWidgets(
+      'REORGANIZACAO_MENUS_HOME_V1.md §2: compartilhar e tema aparecem em Ajuste, tocar não trava a tela',
+      (tester) async {
     // O card "Mais" saiu do grid da Home (ver home_screen_test.dart) —
     // suas duas funções migraram pra cá. Share sheet nativo não existe
     // no ambiente de widget test (mesmo achado já documentado no antigo
@@ -138,14 +163,17 @@ void main() {
     await tester.tap(find.text('Convidar amigos para o MENTAL'));
     await tester.pumpAndSettle();
 
-    final themeSwitch = tester.widget<SwitchListTile>(find.widgetWithText(SwitchListTile, 'Tema escuro'));
-    await tester.tap(find.widgetWithText(SwitchListTile, 'Tema escuro'));
+    final themeSwitch = tester.widget<Switch>(_switchRowNear('Tema escuro'));
+    await tester.tap(_switchRowNear('Tema escuro'));
     await tester.pumpAndSettle();
-    final themeSwitchAfter = tester.widget<SwitchListTile>(find.widgetWithText(SwitchListTile, 'Tema escuro'));
+    final themeSwitchAfter =
+        tester.widget<Switch>(_switchRowNear('Tema escuro'));
     expect(themeSwitchAfter.value, isNot(equals(themeSwitch.value)));
   });
 
-  testWidgets('"Sair" esvazia a pilha de navegação, revelando a tela por baixo (regressão)', (tester) async {
+  testWidgets(
+      '"Sair" esvazia a pilha de navegação, revelando a tela por baixo (regressão)',
+      (tester) async {
     // Achado real (2026-08-26): SettingsScreen chega via Navigator.push
     // a partir da Home — sem esvaziar a pilha antes do signOut, ela (ou
     // qualquer outra tela empilhada) continuava visível por cima mesmo
@@ -194,7 +222,8 @@ void main() {
 
     expect(signOutCalled, isTrue);
 
-    expect(find.text('abrir configurações'), findsOneWidget, reason: 'a pilha deve voltar pra raiz, revelando a tela de baixo');
+    expect(find.text('abrir configurações'), findsOneWidget,
+        reason: 'a pilha deve voltar pra raiz, revelando a tela de baixo');
     expect(find.text('Sair'), findsNothing);
   });
 
@@ -206,7 +235,8 @@ void main() {
   // CircularProgressIndicator do botão de exclusão continua girando
   // pra sempre — pumpAndSettle() nunca retorna. Mesmo princípio já
   // documentado no teste de "Sair" logo acima.
-  Future<void> pumpSettingsScreenPushed(WidgetTester tester, ApiClient client, {Future<void> Function()? signOut}) async {
+  Future<void> pumpSettingsScreenPushed(WidgetTester tester, ApiClient client,
+      {Future<void> Function()? signOut}) async {
     SharedPreferences.setMockInitialValues({});
     await tester.pumpWidget(
       MaterialApp(
@@ -223,7 +253,8 @@ void main() {
               child: FilledButton(
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => SettingsScreen(client: client, signOut: signOut ?? () async {}),
+                    builder: (_) => SettingsScreen(
+                        client: client, signOut: signOut ?? () async {}),
                   ),
                 ),
                 child: const Text('abrir configurações'),
@@ -238,10 +269,13 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('excluir conta pede confirmação e, ao confirmar, chama a API e encerra a sessão', (tester) async {
+  testWidgets(
+      'excluir conta pede confirmação e, ao confirmar, chama a API e encerra a sessão',
+      (tester) async {
     final client = _FakeApiClient();
     var signOutCalled = false;
-    await pumpSettingsScreenPushed(tester, client, signOut: () async => signOutCalled = true);
+    await pumpSettingsScreenPushed(tester, client,
+        signOut: () async => signOutCalled = true);
 
     await tester.scrollUntilVisible(find.text('Excluir minha conta'), 100);
     await tester.ensureVisible(find.text('Excluir minha conta'));
@@ -277,9 +311,14 @@ void main() {
     expect(find.text('Excluir sua conta?'), findsNothing);
   });
 
-  testWidgets('exclusão indisponível mostra mensagem amigável, sem travar a tela', (tester) async {
+  testWidgets(
+      'exclusão indisponível mostra mensagem amigável, sem travar a tela',
+      (tester) async {
     final client = _FakeApiClient()
-      ..deleteAccountError = ApiException(statusCode: 501, code: 'ACCOUNT_DELETION_UNAVAILABLE', message: 'unavailable');
+      ..deleteAccountError = ApiException(
+          statusCode: 501,
+          code: 'ACCOUNT_DELETION_UNAVAILABLE',
+          message: 'unavailable');
     await pumpSettingsScreenPushed(tester, client);
 
     await tester.scrollUntilVisible(find.text('Excluir minha conta'), 100);
@@ -292,6 +331,7 @@ void main() {
 
     expect(find.textContaining('indisponível'), findsOneWidget);
     // A tela continua utilizável — o botão volta a ficar habilitado.
-    expect(find.widgetWithText(OutlinedButton, 'Excluir minha conta'), findsOneWidget);
+    expect(find.widgetWithText(OutlinedButton, 'Excluir minha conta'),
+        findsOneWidget);
   });
 }

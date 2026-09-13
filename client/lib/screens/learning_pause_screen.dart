@@ -15,7 +15,11 @@ import '../widgets/institutional_video_player.dart';
 /// Sem celebração grande (confete/fogos) de propósito — §3.4: "não deve
 /// ser um atalho de XP fácil". Só um retorno discreto de XP.
 class LearningPauseScreen extends StatefulWidget {
-  const LearningPauseScreen({super.key, required this.client, required this.territoryId, required this.territoryLabel});
+  const LearningPauseScreen(
+      {super.key,
+      required this.client,
+      required this.territoryId,
+      required this.territoryLabel});
 
   final ApiClient client;
   final String territoryId;
@@ -115,7 +119,9 @@ class _LearningPauseScreenState extends State<LearningPauseScreen> {
 
     if (_notFound) {
       return Center(
-        child: Text(l10n.learningPauseEmptyMessage, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodyMedium),
+        child: Text(l10n.learningPauseEmptyMessage,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodyMedium),
       );
     }
 
@@ -133,45 +139,71 @@ class _LearningPauseScreenState extends State<LearningPauseScreen> {
             onRefresh: _load,
             color: AppColors.gold,
             child: SingleChildScrollView(
-            physics: const AlwaysScrollableScrollPhysics(),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if (_promptImage != null) ...[
-                  Text(_promptImage!, style: const TextStyle(fontSize: 40)),
-                  const SizedBox(height: 12),
-                ],
-                Text(_text ?? '', style: Theme.of(context).textTheme.bodyLarge?.copyWith(height: 1.5)),
-                if (_videoUrl != null) ...[
-                  const SizedBox(height: 16),
-                  OutlinedButton.icon(
-                    onPressed: () => showInstitutionalVideo(
-                      context,
-                      videoUrl: _videoUrl!,
-                      sourceName: _sourceName ?? '',
-                      sourceUrl: _sourceUrl ?? '',
-                    ),
-                    icon: const Icon(Icons.play_circle_outline),
-                    label: Text(l10n.learningPauseWatchVideoButton),
-                  ),
-                ],
-              ],
+              physics: const AlwaysScrollableScrollPhysics(),
+              // Redesign 13/09/2026 (mesmo padrão de cartão de
+              // profile_screen.dart) — o texto de leitura vira um
+              // cartão único, mantendo a simplicidade pedida no
+              // documento original (§3.4: "não deve ser um atalho de
+              // XP fácil") — só um cartão, sem ícone/título extra
+              // competindo com a leitura em si.
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: AppColors.bg2,
+                  borderRadius: BorderRadius.circular(18),
+                  border:
+                      Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    if (_promptImage != null) ...[
+                      Text(_promptImage!, style: const TextStyle(fontSize: 40)),
+                      const SizedBox(height: 12),
+                    ],
+                    Text(_text ?? '',
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge
+                            ?.copyWith(height: 1.5)),
+                    if (_videoUrl != null) ...[
+                      const SizedBox(height: 16),
+                      OutlinedButton.icon(
+                        onPressed: () => showInstitutionalVideo(
+                          context,
+                          videoUrl: _videoUrl!,
+                          sourceName: _sourceName ?? '',
+                          sourceUrl: _sourceUrl ?? '',
+                        ),
+                        icon: const Icon(Icons.play_circle_outline),
+                        label: Text(l10n.learningPauseWatchVideoButton),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
             ),
-          ),
           ),
         ),
         const SizedBox(height: 16),
         if (_completed)
           Text(
-            (_xpAwarded ?? 0) > 0 ? l10n.learningPauseXpAwardedMessage(_xpAwarded!) : l10n.learningPauseAlreadyReadMessage,
+            (_xpAwarded ?? 0) > 0
+                ? l10n.learningPauseXpAwardedMessage(_xpAwarded!)
+                : l10n.learningPauseAlreadyReadMessage,
             textAlign: TextAlign.center,
-            style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700),
+            style:
+                TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700),
           )
         else
           FilledButton(
             onPressed: _busy ? null : _complete,
             child: _busy
-                ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator(strokeWidth: 2))
+                ? const SizedBox(
+                    height: 20,
+                    width: 20,
+                    child: CircularProgressIndicator(strokeWidth: 2))
                 : Text(l10n.learningPauseCompleteButton),
           ),
       ],

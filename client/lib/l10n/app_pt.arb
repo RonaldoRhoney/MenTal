@@ -1604,6 +1604,10 @@
   "@friendsScreenTitle": {
     "description": "Friends screen app bar title"
   },
+  "friendsAddSectionTitle": "Adicionar amigos",
+  "@friendsAddSectionTitle": {
+    "description": "Card title grouping invite code, search and add-by-code"
+  },
   "friendsInviteCodeLabel": "Seu código: {code}",
   "@friendsInviteCodeLabel": {
     "description": "Shows the user's own invite code to share with friends",
@@ -2327,6 +2331,14 @@
   "onboardingTitle": "Antes de começar",
   "@onboardingTitle": {
     "description": "Mandatory onboarding screen title"
+  },
+  "onboardingLocationSectionTitle": "Localização",
+  "@onboardingLocationSectionTitle": {
+    "description": "Card title grouping country/state/city fields"
+  },
+  "onboardingAboutYouSectionTitle": "Sobre você",
+  "@onboardingAboutYouSectionTitle": {
+    "description": "Card title grouping age range and optional gender"
   },
   "onboardingSubtitle": "Só algumas informações básicas — leva menos de um minuto.",
   "@onboardingSubtitle": {
