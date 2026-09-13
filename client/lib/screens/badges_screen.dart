@@ -63,53 +63,83 @@ class _BadgesScreenState extends State<BadgesScreen> {
                 onRefresh: _load,
                 color: AppColors.gold,
                 child: ListView(
-                padding: const EdgeInsets.all(16),
-                children: (data['badges'] as List).cast<Map<String, dynamic>>().map((badge) {
-                  final earned = badge['earned'] as bool;
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(
-                          earned ? Icons.emoji_events : Icons.lock_outline,
-                          color: earned ? AppColors.gold : AppColors.muted,
-                          size: 32,
+                  padding: const EdgeInsets.all(16),
+                  children: (data['badges'] as List)
+                      .cast<Map<String, dynamic>>()
+                      .map((badge) {
+                    final earned = badge['earned'] as bool;
+                    // Redesign 13/09/2026 (mesmo padrão de cartão de
+                    // profile_screen.dart) — cada conquista vira um
+                    // cartão próprio em vez de uma linha solta separada
+                    // só por espaço em branco. Borda mais apagada
+                    // quando bloqueada (Princípio de Não-Humilhação,
+                    // DESIGN_SYSTEM.md §1 — bloqueado nunca é punitivo,
+                    // só visualmente menos destacado que conquistado).
+                    return Container(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: AppColors.bg2,
+                        borderRadius: BorderRadius.circular(18),
+                        border: Border.all(
+                          color: (earned ? AppColors.gold : AppColors.muted)
+                              .withValues(alpha: earned ? 0.3 : 0.15),
                         ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                badge['name'] as String,
-                                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                                      color: earned ? AppColors.bone : AppColors.muted,
-                                    ),
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                badge['description'] as String,
-                                style: TextStyle(color: earned ? AppColors.bone : AppColors.muted),
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                earned ? l10n.badgeEarnedLabel : l10n.badgeLockedLabel,
-                                style: TextStyle(
-                                  color: earned ? AppColors.success : AppColors.muted,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 13,
-                                ),
-                              ),
-                            ],
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            earned ? Icons.emoji_events : Icons.lock_outline,
+                            color: earned ? AppColors.gold : AppColors.muted,
+                            size: 32,
                           ),
-                        ),
-                      ],
-                    ),
-                  );
-                }).toList(),
-              ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  badge['name'] as String,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleLarge
+                                      ?.copyWith(
+                                        color: earned
+                                            ? AppColors.bone
+                                            : AppColors.muted,
+                                      ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  badge['description'] as String,
+                                  style: TextStyle(
+                                      color: earned
+                                          ? AppColors.bone
+                                          : AppColors.muted),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  earned
+                                      ? l10n.badgeEarnedLabel
+                                      : l10n.badgeLockedLabel,
+                                  style: TextStyle(
+                                    color: earned
+                                        ? AppColors.success
+                                        : AppColors.muted,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 13,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }).toList(),
                 ),
+              ),
       ),
     );
   }

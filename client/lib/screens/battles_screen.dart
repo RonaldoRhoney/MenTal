@@ -163,6 +163,7 @@ class _BattlesScreenState extends State<BattlesScreen> {
                         onRefresh: _load,
                         color: AppColors.gold,
                         child: ListView.builder(
+                          padding: const EdgeInsets.all(16),
                           itemCount: _battles.length,
                           itemBuilder: (context, index) {
                             final battle = _battles[index];
@@ -177,47 +178,80 @@ class _BattlesScreenState extends State<BattlesScreen> {
                                     opponentRealName.isNotEmpty
                                 ? opponentRealName
                                 : battle['opponent_nickname'];
-                            return ListTile(
-                              // V4 item 1 — Perfil Público: só quando a
-                              // batalha NÃO exige resposta agora (senão o
-                              // toque na linha continuaria sendo a ação
-                              // principal de responder, via botão em
-                              // trailing) — PERFIL_PUBLICO_E_TORCIDA_V1.md
-                              // §3, Batalha é ponto de entrada aprovado.
-                              onTap: canAnswer
-                                  ? null
-                                  : () => Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (_) => PublicProfileScreen(
-                                                client: widget.client,
-                                                userId:
-                                                    battle['opponent_user_id']
-                                                        as String)),
-                                      ),
-                              leading: ProfilePhotoCircle(
-                                  photoUrl:
-                                      battle['opponent_photo_url'] as String?),
-                              title: Text(
-                                '${territoryLabel(l10n, battle['territory_id'] as String)} · $opponentLabel',
+                            // Redesign 13/09/2026 (mesmo padrão de cartão
+                            // de profile_screen.dart/badges_screen.dart)
+                            // — cada batalha vira um cartão próprio em
+                            // vez de um ListTile solto direto na lista.
+                            // ClipRRect corta o ripple do ListTile nos
+                            // mesmos cantos arredondados do cartão;
+                            // Material(transparency) evita o aviso do
+                            // framework sobre o ink splash ficar
+                            // invisível atrás do Container colorido.
+                            return Container(
+                              margin: const EdgeInsets.only(bottom: 12),
+                              decoration: BoxDecoration(
+                                color: AppColors.bg2,
+                                borderRadius: BorderRadius.circular(18),
+                                border: Border.all(
+                                    color:
+                                        AppColors.gold.withValues(alpha: 0.3)),
                               ),
-                              subtitle: _statusLine(l10n, battle),
-                              // AppTheme define minimumSize: Size.fromHeight(48)
-                              // (largura infinita) pro FilledButton — dentro de
-                              // ListTile.trailing isso quebra o layout do
-                              // tile inteiro (achado já documentado em
-                              // friends_screen.dart), corrigido reduzindo o
-                              // mínimo em vez de usar Flexible/Expanded (que
-                              // não existem aqui, é ListTile, não Row).
-                              trailing: canAnswer
-                                  ? FilledButton(
-                                      style: FilledButton.styleFrom(
-                                          minimumSize: Size.zero,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 12, vertical: 8)),
-                                      onPressed: () => _answer(battle),
-                                      child: Text(l10n.battleAnswerButton),
-                                    )
-                                  : null,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(18),
+                                child: Material(
+                                  type: MaterialType.transparency,
+                                  child: ListTile(
+                                    // V4 item 1 — Perfil Público: só
+                                    // quando a batalha NÃO exige resposta
+                                    // agora (senão o toque na linha
+                                    // continuaria sendo a ação principal
+                                    // de responder, via botão em
+                                    // trailing) —
+                                    // PERFIL_PUBLICO_E_TORCIDA_V1.md §3,
+                                    // Batalha é ponto de entrada aprovado.
+                                    onTap: canAnswer
+                                        ? null
+                                        : () => Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      PublicProfileScreen(
+                                                          client: widget.client,
+                                                          userId: battle[
+                                                                  'opponent_user_id']
+                                                              as String)),
+                                            ),
+                                    leading: ProfilePhotoCircle(
+                                        photoUrl: battle['opponent_photo_url']
+                                            as String?),
+                                    title: Text(
+                                      '${territoryLabel(l10n, battle['territory_id'] as String)} · $opponentLabel',
+                                    ),
+                                    subtitle: _statusLine(l10n, battle),
+                                    // AppTheme define minimumSize:
+                                    // Size.fromHeight(48) (largura
+                                    // infinita) pro FilledButton — dentro
+                                    // de ListTile.trailing isso quebra o
+                                    // layout do tile inteiro (achado já
+                                    // documentado em friends_screen.dart),
+                                    // corrigido reduzindo o mínimo em vez
+                                    // de usar Flexible/Expanded (que não
+                                    // existem aqui, é ListTile, não Row).
+                                    trailing: canAnswer
+                                        ? FilledButton(
+                                            style: FilledButton.styleFrom(
+                                                minimumSize: Size.zero,
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 12,
+                                                        vertical: 8)),
+                                            onPressed: () => _answer(battle),
+                                            child:
+                                                Text(l10n.battleAnswerButton),
+                                          )
+                                        : null,
+                                  ),
+                                ),
+                              ),
                             );
                           },
                         ),
