@@ -2192,13 +2192,17 @@
   "@profilePhotoChangeButton": {
     "description": "Button to pick a new profile photo"
   },
-  "profilePhotoPendingLabel": "Sua foto está em análise — só fica visível pra outros usuários depois de aprovada.",
-  "@profilePhotoPendingLabel": {
-    "description": "Shown while the uploaded photo awaits moderation"
-  },
-  "profilePhotoRejectedLabel": "Sua foto foi rejeitada na moderação. Envie outra.",
+  "profilePhotoRejectedLabel": "Sua foto foi ocultada pela nossa equipe após uma denúncia. Envie outra.",
   "@profilePhotoRejectedLabel": {
-    "description": "Shown when the uploaded photo was rejected by moderation"
+    "description": "Shown when the uploaded photo was force-hidden by an admin in response to a report"
+  },
+  "profilePhotoPublicToggleLabel": "Foto pública",
+  "@profilePhotoPublicToggleLabel": {
+    "description": "Toggle label — user controls whether their profile photo is visible to others"
+  },
+  "profilePhotoPublicToggleHelper": "Visível pra outros usuários no Ranking, Amigos e Batalhas. Você pode mudar isso quando quiser.",
+  "@profilePhotoPublicToggleHelper": {
+    "description": "Helper text under the photo visibility toggle"
   },
   "profilePhotoUploadError": "Não foi possível enviar a foto. Tente novamente.",
   "@profilePhotoUploadError": {

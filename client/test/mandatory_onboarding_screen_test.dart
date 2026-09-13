@@ -22,6 +22,7 @@ class _FakeApiClient extends ApiClient {
     String? avatarId,
     String? realName,
     String? photoPath,
+    bool photoIsPublic = true,
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
@@ -32,6 +33,7 @@ class _FakeApiClient extends ApiClient {
     lastUpdate = {
       'real_name': realName,
       'photo_path': photoPath,
+      'photo_is_public': photoIsPublic,
       'location_state': locationState,
       'location_country': locationCountry,
       'city': city,
@@ -134,6 +136,7 @@ void main() {
     expect(client.lastUpdate, {
       'real_name': 'Maria Silva',
       'photo_path': 'fake-user-id/photo.jpg',
+      'photo_is_public': true,
       'location_state': 'AC',
       'location_country': 'Brasil',
       'city': 'Belém',

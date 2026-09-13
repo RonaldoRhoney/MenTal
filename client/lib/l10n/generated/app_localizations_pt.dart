@@ -1566,12 +1566,15 @@ class AppLocalizationsPt extends AppLocalizations {
   String get profilePhotoChangeButton => 'Escolher foto';
 
   @override
-  String get profilePhotoPendingLabel =>
-      'Sua foto está em análise — só fica visível pra outros usuários depois de aprovada.';
+  String get profilePhotoRejectedLabel =>
+      'Sua foto foi ocultada pela nossa equipe após uma denúncia. Envie outra.';
 
   @override
-  String get profilePhotoRejectedLabel =>
-      'Sua foto foi rejeitada na moderação. Envie outra.';
+  String get profilePhotoPublicToggleLabel => 'Foto pública';
+
+  @override
+  String get profilePhotoPublicToggleHelper =>
+      'Visível pra outros usuários no Ranking, Amigos e Batalhas. Você pode mudar isso quando quiser.';
 
   @override
   String get profilePhotoUploadError =>

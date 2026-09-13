@@ -849,6 +849,10 @@ class ProfileOut(BaseModel):
     # 'approved' — USER_PROFILE.md §3.1, fail-closed.
     photo_url: str | None
     photo_moderation_status: str
+    # Revisão 13/09/2026: o dono controla isso — ligar/desligar na tela
+    # de Perfil decide se photo_url some pra outros usuários (services.
+    # public_photo_url), sem depender de aprovação de admin.
+    photo_is_public: bool
     location_state: str | None
     location_country: str | None
     location_public: bool
@@ -893,9 +897,12 @@ class UpdateProfileRequest(BaseModel):
     # pro Supabase Storage e manda aqui o PATH resultante dentro do
     # bucket (ex.: "{user_id}/photo.jpg"), nunca uma URL — bucket
     # privado desde 28/08/2026 (DIR-001/POL-002), então uma URL pública
-    # fixa não faria mais sentido nem funcionaria pra leitura. Um path
-    # novo (diferente do já salvo) reseta a moderação pra 'pending'.
+    # fixa não faria mais sentido nem funcionaria pra leitura.
     photo_path: str | None = None
+    # Revisão 13/09/2026: controle de visibilidade passa a ser do
+    # usuário — default True porque foto já é obrigatória pra liberar o
+    # jogo (quem já enviou uma claramente pretendia usá-la).
+    photo_is_public: bool = True
 
 
 class ModerateProfilePhotoRequest(BaseModel):

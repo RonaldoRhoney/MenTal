@@ -137,13 +137,19 @@ class Profile(Base):
     # battles) — reverte a regra anterior de "nunca exibido
     # publicamente", registrada em USER_PROFILE.md.
     real_name: Mapped[str | None] = mapped_column(String, nullable=True)
-    # Upload de foto real (26/08/2026) substitui os avatares emoji —
-    # USER_PROFILE.md §3.1 exige moderação (fail-closed) antes de
-    # aparecer pra outros usuários: todo upload novo nasce 'pending',
-    # só fica visível quando 'approved'. Hoje só a camada manual (admin/
-    # Rhoney, via /admin/profile-photos) está implementada.
+    # Upload de foto real (26/08/2026) substitui os avatares emoji.
+    # Revisão 13/09/2026 (decisão de Rhoney): visibilidade deixa de
+    # depender de aprovação do admin (fila de moderação virou backlog
+    # de semanas) e passa a ser escolha do próprio usuário —
+    # photo_is_public, ligado/desligado a qualquer momento no Perfil.
+    # photo_moderation_status é mantida como override administrativo
+    # (ex.: 'rejected' numa foto reportada força invisível mesmo que o
+    # dono marque pública de novo) — uploads novos já nascem 'approved'
+    # (migrations/073_photo_user_controlled_visibility.sql), 'pending'
+    # não é mais usado.
     photo_url: Mapped[str | None] = mapped_column(String, nullable=True)
-    photo_moderation_status: Mapped[str] = mapped_column(String, default="none")  # none|pending|approved|rejected
+    photo_moderation_status: Mapped[str] = mapped_column(String, default="approved")  # none|approved|rejected (pending: legado)
+    photo_is_public: Mapped[bool] = mapped_column(Boolean, default=True)
     # Estado é opcional (detalhe extra); location_public controla exibição
     # pública de ambos — preencher não é o mesmo que exibir.
     location_state: Mapped[str | None] = mapped_column(String, nullable=True)

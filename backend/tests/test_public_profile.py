@@ -53,10 +53,10 @@ def test_public_profile_exposes_only_the_allowed_fields(client):
     assert "location_country" not in body
 
 
-def test_public_profile_photo_only_shown_when_approved(client, monkeypatch):
+def test_public_profile_photo_shown_by_default_hidden_when_marked_private(client, monkeypatch):
+    """Revisão 13/09/2026: visibilidade é escolha do usuário
+    (photo_is_public, default True), não mais aprovação de admin."""
     from app import supabase_admin
-    from app.db import SessionLocal
-    from app import models
 
     monkeypatch.setattr(supabase_admin, "create_signed_photo_url", lambda path, expires_in_seconds=3600: f"https://signed.example/{path}")
 
@@ -69,17 +69,13 @@ def test_public_profile_photo_only_shown_when_approved(client, monkeypatch):
     viewer_headers = auth_header(viewer)
     client.post("/age-gate", json={"age_confirmed": True}, headers=viewer_headers)
 
-    # Ainda 'pending' — não deve aparecer pra outro usuário.
     body = client.get(f"/profile/{target}/public", headers=viewer_headers).json()
-    assert body["photo_url"] is None
+    assert body["photo_url"] == f"https://signed.example/{target}/photo.jpg", "pública por padrão"
 
-    with SessionLocal() as db:
-        profile = db.get(models.Profile, target)
-        profile.photo_moderation_status = "approved"
-        db.commit()
+    client.put("/profile", json={"photo_path": f"{target}/photo.jpg", "photo_is_public": False}, headers=target_headers)
 
     body_after = client.get(f"/profile/{target}/public", headers=viewer_headers).json()
-    assert body_after["photo_url"] == f"https://signed.example/{target}/photo.jpg"
+    assert body_after["photo_url"] is None, "usuário marcou como privada"
 
 
 def test_public_profile_shows_only_earned_badges_and_best_territory(client):

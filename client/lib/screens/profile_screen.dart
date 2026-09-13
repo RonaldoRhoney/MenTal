@@ -16,11 +16,13 @@ import '../widgets/profile_photo.dart';
 ///
 /// Upload de foto real (revisão 27/08/2026 — USER_PROFILE.md §3.1)
 /// substitui o antigo picker de avatar emoji: a imagem sobe direto pro
-/// Supabase Storage (bucket público `profile-photos`, RLS restringe
-/// escrita ao próprio dono via auth.uid()), e só a URL pública resultante
-/// é enviada ao backend em PUT /profile — o backend nunca recebe bytes de
-/// imagem, só valida a forma da URL. Toda foto nova nasce 'pending'
-/// (fail-closed) até um admin aprovar.
+/// Supabase Storage (bucket privado `profile-photos` desde 28/08/2026),
+/// e só o PATH resultante é enviado ao backend em PUT /profile — o
+/// backend nunca recebe bytes de imagem, só valida a forma do path.
+///
+/// Revisão 13/09/2026 (decisão de Rhoney): visibilidade pra outros
+/// usuários é escolha do próprio dono (photoIsPublic, toggle nesta
+/// tela), não mais aprovação de admin.
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key, required this.client});
 
@@ -37,6 +39,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   String? _error;
   String? _photoUrl;
   String? _photoModerationStatus;
+  // Revisão 13/09/2026 (decisão de Rhoney): visibilidade da foto passa a
+  // ser escolha do usuário, não mais aprovação de admin.
+  bool _photoIsPublic = true;
   final _realNameController = TextEditingController();
   // Pedido de Rhoney (12/09/2026): Estado deixou de ser texto livre —
   // ver client/lib/brazil_states.dart. Sigla de UF ou null (nunca um
@@ -68,6 +73,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         setState(() {
           _photoUrl = profile['photo_url'] as String?;
           _photoModerationStatus = profile['photo_moderation_status'] as String?;
+          _photoIsPublic = profile['photo_is_public'] as bool? ?? true;
           _realNameController.text = profile['real_name'] as String? ?? '';
           // Dado legado gravado como texto livre (antes desta mudança)
           // pode não bater com nenhuma sigla válida — nesse caso fica
@@ -148,6 +154,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       final updated = await widget.client.updateProfile(
         realName: _realNameController.text.trim().isEmpty ? null : _realNameController.text.trim(),
         photoPath: path,
+        photoIsPublic: _photoIsPublic,
         locationState: _selectedStateUf,
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
         city: _cityController.text.trim().isEmpty ? null : _cityController.text.trim(),
@@ -157,6 +164,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         setState(() {
           _photoUrl = updated['photo_url'] as String?;
           _photoModerationStatus = updated['photo_moderation_status'] as String?;
+          _photoIsPublic = updated['photo_is_public'] as bool? ?? true;
         });
       }
     } on ApiException catch (e) {
@@ -179,7 +187,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         // nome/localização. A foto é enviada separadamente em
         // _pickAndUploadPhoto — reenviar _photoUrl aqui mandaria a URL
         // assinada de exibição como se fosse um path, o que falharia
-        // na validação do backend.
+        // na validação do backend. photoIsPublic vai mesmo sem foto
+        // nova: é o toggle de visibilidade da foto já existente.
+        photoIsPublic: _photoIsPublic,
         locationState: _selectedStateUf,
         locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
         city: _cityController.text.trim().isEmpty ? null : _cityController.text.trim(),
@@ -233,13 +243,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     )
                                   : Text(l10n.profilePhotoChangeButton),
                             ),
-                            if (_photoModerationStatus == 'pending') ...[
-                              const SizedBox(height: 8),
-                              Text(
-                                l10n.profilePhotoPendingLabel,
-                                style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 13),
-                              ),
-                            ] else if (_photoModerationStatus == 'rejected') ...[
+                            if (_photoModerationStatus == 'rejected') ...[
                               const SizedBox(height: 8),
                               Text(
                                 l10n.profilePhotoRejectedLabel,
@@ -251,6 +255,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ],
                   ),
+                  // Revisão 13/09/2026 (decisão de Rhoney): visibilidade
+                  // da foto é escolha do usuário, não mais aprovação de
+                  // admin — some quando 'rejected' (override do admin
+                  // em resposta a denúncia), já que nesse caso a escolha
+                  // do usuário não tem efeito mesmo.
+                  if (_photoModerationStatus != 'rejected')
+                    SwitchListTile(
+                      contentPadding: EdgeInsets.zero,
+                      title: Text(l10n.profilePhotoPublicToggleLabel),
+                      subtitle: Text(l10n.profilePhotoPublicToggleHelper),
+                      value: _photoIsPublic,
+                      onChanged: (value) => setState(() => _photoIsPublic = value),
+                    ),
                   const SizedBox(height: 24),
                   TextField(
                     controller: _realNameController,

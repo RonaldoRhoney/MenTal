@@ -2674,17 +2674,23 @@ abstract class AppLocalizations {
   /// **'Escolher foto'**
   String get profilePhotoChangeButton;
 
-  /// Shown while the uploaded photo awaits moderation
+  /// Shown when the uploaded photo was force-hidden by an admin in response to a report
   ///
   /// In pt, this message translates to:
-  /// **'Sua foto está em análise — só fica visível pra outros usuários depois de aprovada.'**
-  String get profilePhotoPendingLabel;
-
-  /// Shown when the uploaded photo was rejected by moderation
-  ///
-  /// In pt, this message translates to:
-  /// **'Sua foto foi rejeitada na moderação. Envie outra.'**
+  /// **'Sua foto foi ocultada pela nossa equipe após uma denúncia. Envie outra.'**
   String get profilePhotoRejectedLabel;
+
+  /// Toggle label — user controls whether their profile photo is visible to others
+  ///
+  /// In pt, this message translates to:
+  /// **'Foto pública'**
+  String get profilePhotoPublicToggleLabel;
+
+  /// Helper text under the photo visibility toggle
+  ///
+  /// In pt, this message translates to:
+  /// **'Visível pra outros usuários no Ranking, Amigos e Batalhas. Você pode mudar isso quando quiser.'**
+  String get profilePhotoPublicToggleHelper;
 
   /// Generic error message when photo upload fails
   ///

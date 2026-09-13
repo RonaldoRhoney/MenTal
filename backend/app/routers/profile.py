@@ -16,11 +16,17 @@ preenchidos juntos — mesmo princípio de "backend é sempre autoridade"
 já usado em todo o resto do MENTAL.
 
 Upload de foto real (revisão 26/08/2026): substitui os avatares emoji.
-real_name e photo_url (só se aprovada) agora aparecem publicamente em
+real_name e photo_url (quando pública) agora aparecem publicamente em
 FriendOut/RankingEntry/BattleOut (services.py) — reversão explícita da
-regra anterior de "nome real nunca público". Toda foto nova nasce
-'pending' (fail-closed, USER_PROFILE.md §3.1) até um admin aprovar via
-/admin/profile-photos.
+regra anterior de "nome real nunca público".
+
+Revisão 13/09/2026 (decisão de Rhoney): visibilidade da foto deixou de
+depender de aprovação do admin (USER_PROFILE.md §3.1 original virou um
+backlog de semanas na fila de /admin/profile-photos) — agora é
+photo_is_public, controlado pelo próprio usuário a qualquer momento.
+/admin/profile-photos e .../moderate continuam existindo como override
+administrativo (ex.: 'rejected' força invisível numa foto reportada),
+não mais como portão de pré-publicação.
 """
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -73,6 +79,7 @@ def _profile_out(profile: models.Profile) -> schemas.ProfileOut:
         real_name=profile.real_name,
         photo_url=services.own_photo_url(profile),
         photo_moderation_status=profile.photo_moderation_status,
+        photo_is_public=profile.photo_is_public,
         location_state=profile.location_state,
         location_country=profile.location_country,
         location_public=profile.location_public,
@@ -121,7 +128,15 @@ def update_profile(
                 detail={"error": {"code": "INVALID_PHOTO_URL", "message": "Caminho de foto inválido"}},
             )
         profile.photo_url = body.photo_path
-        profile.photo_moderation_status = "pending"
+        # Revisão 13/09/2026: visibilidade não depende mais de admin
+        # aprovar (ver services.public_photo_url) — nasce 'approved',
+        # só photo_is_public (abaixo) decide se aparece pra terceiros.
+        profile.photo_moderation_status = "approved"
+
+    # photo_is_public é sempre enviado pelo client (default True no
+    # schema) — permite ligar/desligar a visibilidade sem reenviar uma
+    # foto nova, ex.: usuário só quer esconder a foto atual.
+    profile.photo_is_public = body.photo_is_public
 
     # Revisão 28/08/2026 (decisão de Rhoney): gênero passa a ser
     # OPCIONAL — cadastro mínimo obrigatório agora é nome, país, estado,

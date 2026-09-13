@@ -1,6 +1,6 @@
 # Política de Privacidade — MENTAL
 
-**Última atualização:** 12 de setembro de 2026
+**Última atualização:** 13 de setembro de 2026
 
 Esta Política de Privacidade descreve como o aplicativo **MENTAL**, desenvolvido por **RhoneyInc**, coleta, usa e protege as informações dos usuários.
 
@@ -25,7 +25,7 @@ O MENTAL é desenvolvido e mantido por **RhoneyInc**, estúdio de produtos digit
 - **Nickname (apelido)** — usado para identificação do jogador dentro do app (ranking, amigos, badges).
 - **Confirmação de maioridade** — o usuário confirma ter 18 anos ou mais antes de qualquer outro uso do app. O MENTAL não é destinado a menores de idade.
 - **Nome real** — obrigatório para liberar o jogo. Como o MENTAL é exclusivo para maiores de 18 anos, o nome real é **exibido publicamente** ao lado da foto de perfil em telas sociais do app (Amigos, Ranking, Batalhas), reforçando a seriedade da comunidade.
-- **Foto de perfil** — obrigatória para liberar o jogo. É uma foto real enviada pelo próprio usuário (câmera ou galeria), **não um avatar ilustrado**. Toda foto passa por moderação antes de ficar visível para outros usuários (moderação "fail-closed": em caso de dúvida, a foto permanece invisível pra terceiros).
+- **Foto de perfil** — obrigatória para liberar o jogo. É uma foto real enviada pelo próprio usuário (câmera ou galeria), **não um avatar ilustrado**. Você decide se sua foto fica pública (visível para outros usuários) ou privada, e pode mudar essa escolha a qualquer momento na tela de Perfil.
 - **País e cidade** — obrigatórios para liberar o jogo. Não coletamos localização geográfica precisa (GPS); são campos de texto informados pelo próprio usuário.
 - **Faixa etária** — obrigatória para liberar o jogo (faixas amplas: 18-25, 26-35, 36-45, 46+). Não coletamos data de nascimento nem documento de identidade — a confirmação de idade é autodeclarada.
 
@@ -46,7 +46,7 @@ O MENTAL é desenvolvido e mantido por **RhoneyInc**, estúdio de produtos digit
 
 O MENTAL tem um conjunto de funcionalidades sociais que tornam parte do seu perfil visível para outros usuários do app, **independente de vínculo de amizade prévio**:
 
-- **Perfil Público** — nome real, foto de perfil (já aprovada pela moderação), nível, XP total, badges/conquistas, sequência de dias jogados (streak), progresso nos Mundos e número de "fãs" (seguidores) ficam visíveis a **qualquer usuário autenticado no app** que acesse seu perfil — por exemplo, ao tocar em um nome no Ranking. Não é preciso ser seu amigo para ver essas informações.
+- **Perfil Público** — nome real, foto de perfil (se você a mantiver pública), nível, XP total, badges/conquistas, sequência de dias jogados (streak), progresso nos Mundos e número de "fãs" (seguidores) ficam visíveis a **qualquer usuário autenticado no app** que acesse seu perfil — por exemplo, ao tocar em um nome no Ranking. Não é preciso ser seu amigo para ver essas informações.
 - **Seguir / Fã** — qualquer usuário pode optar por "seguir" outro dentro do app, sem necessidade de aceite da pessoa seguida. Quem segue passa a ver os eventos de conquista dessa pessoa no Feed.
 - **Feed de conquistas** — exibe eventos gerados automaticamente pelo sistema (ex.: subida de nível, sequência de dias, recorde pessoal) para quem você segue. Esses eventos nunca contêm texto livre digitado pelo usuário.
 - **Torcida** — outros usuários podem enviar reações de incentivo ("torcida") para o seu perfil, dentro de limites diários por pessoa.
@@ -85,8 +85,8 @@ O MENTAL é destinado exclusivamente a usuários com 18 anos ou mais:
 - O MENTAL não coleta, nem tenta coletar, dados de usuários que não confirmem ter 18 anos ou mais.
 
 O MENTAL tem conteúdo gerado por usuários (UGC): foto de perfil e comentários públicos de feedback. Para manter esse conteúdo seguro:
-- Toda foto de perfil passa por moderação antes de ficar visível para outros usuários (moderação "fail-closed": em caso de dúvida, a foto permanece invisível pra terceiros).
-- Usuários podem denunciar perfis ou conteúdo impróprio diretamente no app; denúncias são revisadas pela equipe do MENTAL.
+- A visibilidade da foto de perfil (pública ou privada) é escolhida pelo próprio usuário, mudável a qualquer momento.
+- Usuários podem denunciar perfis ou conteúdo impróprio diretamente no app; denúncias são revisadas pela equipe do MENTAL, que pode ocultar uma foto ou conteúdo em resposta a uma denúncia procedente.
 
 ---
 

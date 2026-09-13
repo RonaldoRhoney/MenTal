@@ -16,13 +16,14 @@ import 'package:mental/theme/app_theme.dart';
 /// controla diretamente (campos de texto, botão Salvar, indicador de
 /// moderação).
 class _FakeApiClient extends ApiClient {
-  _FakeApiClient({String? photoModerationStatus})
+  _FakeApiClient({String? photoModerationStatus, bool photoIsPublic = true})
       : super(baseUrl: 'http://fake', accessToken: 'fake-token') {
     profile = {
       'nickname': 'Lontra-Sabida',
       'real_name': null,
       'photo_url': null,
       'photo_moderation_status': photoModerationStatus ?? 'none',
+      'photo_is_public': photoIsPublic,
       'location_state': null,
       'location_country': null,
       'city': null,
@@ -41,6 +42,7 @@ class _FakeApiClient extends ApiClient {
     String? avatarId,
     String? realName,
     String? photoPath,
+    bool photoIsPublic = true,
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
@@ -51,6 +53,7 @@ class _FakeApiClient extends ApiClient {
     lastUpdate = {
       'real_name': realName,
       'photo_path': photoPath,
+      'photo_is_public': photoIsPublic,
       'location_state': locationState,
       'location_country': locationCountry,
       'location_public': locationPublic,
@@ -116,13 +119,16 @@ void main() {
     await tester.tap(find.text('Acre (AC)').last);
     await tester.pumpAndSettle();
     await tester.enterText(find.widgetWithText(TextField, 'Cidade'), 'Rio Branco');
-    await tester.tap(find.byType(Switch));
+    // Dois switches agora (foto pública + localização pública) — o de
+    // localização é o último na árvore (seção de foto vem primeiro).
+    await tester.tap(find.byType(Switch).last);
     await tester.tap(find.widgetWithText(FilledButton, 'Salvar'));
     await tester.pumpAndSettle();
 
     expect(client.lastUpdate, {
       'real_name': 'Fulano de Tal',
       'photo_path': null,
+      'photo_is_public': true,
       'location_state': 'AC',
       'location_country': 'Brasil',
       'location_public': true,
@@ -138,13 +144,16 @@ void main() {
     expect(find.textContaining('Aparece publicamente'), findsOneWidget);
   });
 
-  testWidgets('foto pendente mostra aviso de moderação', (tester) async {
-    await _pumpProfileScreen(tester, _FakeApiClient(photoModerationStatus: 'pending'));
-    expect(find.textContaining('em análise'), findsOneWidget);
+  testWidgets('toggle de foto pública aparece e reflete o estado atual', (tester) async {
+    await _pumpProfileScreen(tester, _FakeApiClient(photoIsPublic: true));
+    final toggle = tester.widget<SwitchListTile>(find.byType(SwitchListTile).first);
+    expect(toggle.value, isTrue);
   });
 
-  testWidgets('foto rejeitada mostra aviso pra reenviar', (tester) async {
+  testWidgets('foto ocultada por override do admin mostra aviso pra reenviar, sem toggle', (tester) async {
     await _pumpProfileScreen(tester, _FakeApiClient(photoModerationStatus: 'rejected'));
-    expect(find.textContaining('rejeitada'), findsOneWidget);
+    expect(find.textContaining('ocultada'), findsOneWidget);
+    // Toggle de localização continua existindo — só o de foto some.
+    expect(find.byType(SwitchListTile), findsOneWidget);
   });
 }

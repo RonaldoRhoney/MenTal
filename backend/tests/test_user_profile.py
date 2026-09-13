@@ -7,9 +7,6 @@ moderação) — reversão da regra anterior de "nunca exposto".
 
 import uuid
 
-from app import config, models
-from app.db import SessionLocal
-
 from .conftest import auth_header
 
 
@@ -101,19 +98,19 @@ def test_real_name_appears_publicly_in_friends_list(client):
     assert friends[0]["avatar_id"] == "fox"
 
 
-def test_photo_url_only_appears_publicly_after_admin_approval(client, monkeypatch):
+def test_photo_url_appears_publicly_by_default_and_hides_when_user_marks_private(client, monkeypatch):
     """
-    USER_PROFILE.md §3.1 — fail-closed: foto pendente/rejeitada nunca
-    aparece pra outros usuários, só depois de aprovada por um admin.
+    Revisão 13/09/2026 (decisão de Rhoney): visibilidade da foto deixou
+    de depender de aprovação de admin (USER_PROFILE.md §3.1 original
+    virou um backlog real de semanas) — agora é photo_is_public,
+    controlado pelo próprio usuário, default True.
 
-    Revisão 28/08/2026 (bucket privado): photo_url na resposta agora é
-    sempre uma URL ASSINADA gerada por services.own_photo_url/
-    public_photo_url via supabase_admin — sem SUPABASE_SERVICE_ROLE_KEY
-    configurado (ambiente de teste local), essa chamada real ao
-    Supabase não existe, então o teste monkeypatcha
-    create_signed_photo_url pra simular a assinatura sem precisar de
-    rede/credencial real, mantendo o foco no que este teste prova de
-    verdade: a transição pending → approved.
+    Revisão 28/08/2026 (bucket privado): photo_url na resposta é sempre
+    uma URL ASSINADA gerada por services.own_photo_url/public_photo_url
+    via supabase_admin — sem SUPABASE_SERVICE_ROLE_KEY configurado
+    (ambiente de teste local), essa chamada real ao Supabase não
+    existe, então o teste monkeypatcha create_signed_photo_url pra
+    simular a assinatura sem precisar de rede/credencial real.
     """
     from app import supabase_admin
 
@@ -133,16 +130,12 @@ def test_photo_url_only_appears_publicly_after_admin_approval(client, monkeypatc
     friendship_id = client.get("/social/friend-requests", headers=headers_a).json()["requests"][0]["friendship_id"]
     client.post(f"/social/friend-requests/{friendship_id}/accept", headers=headers_a)
 
-    friends_before = client.get("/social/friends", headers=headers_a).json()["friends"]
-    assert friends_before[0]["photo_url"] is None, "pendente não deve aparecer pra outros ainda"
+    friends = client.get("/social/friends", headers=headers_a).json()["friends"]
+    assert friends[0]["photo_url"] == f"https://signed.example/{photo_path}", "pública por padrão, sem depender de admin"
 
-    with SessionLocal() as db:
-        profile_b = db.get(models.Profile, user_b)
-        profile_b.photo_moderation_status = "approved"
-        db.commit()
-
-    friends_after = client.get("/social/friends", headers=headers_a).json()["friends"]
-    assert friends_after[0]["photo_url"] == f"https://signed.example/{photo_path}"
+    client.put("/profile", json={"photo_path": photo_path, "photo_is_public": False}, headers=headers_b)
+    friends = client.get("/social/friends", headers=headers_a).json()["friends"]
+    assert friends[0]["photo_url"] is None, "usuário marcou como privada — não deve aparecer pra outros"
 
 
 def test_photo_path_pointing_to_another_users_folder_is_rejected(client):

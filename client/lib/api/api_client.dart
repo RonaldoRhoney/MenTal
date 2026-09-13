@@ -412,6 +412,10 @@ class ApiClient {
     // PATH dentro do bucket (ex.: "{user_id}/photo.jpg"), nunca mais a
     // URL pública completa (que nem funcionaria pra leitura).
     String? photoPath,
+    // Revisão 13/09/2026: visibilidade da foto é escolha do usuário
+    // (default true, igual ao backend) — não depende mais de aprovação
+    // de admin.
+    bool photoIsPublic = true,
     String? locationState,
     String? locationCountry,
     required bool locationPublic,
@@ -426,6 +430,7 @@ class ApiClient {
         'avatar_id': avatarId,
         'real_name': realName,
         'photo_path': photoPath,
+        'photo_is_public': photoIsPublic,
         'location_state': locationState,
         'location_country': locationCountry,
         'location_public': locationPublic,

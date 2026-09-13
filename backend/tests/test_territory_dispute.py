@@ -139,12 +139,12 @@ def test_detentor_nickname_field_prefers_real_name_when_set(client):
     assert palavras_a["detentor_nickname"] == "Beltrano da Silva"
 
 
-def test_detentor_photo_url_present_only_when_approved_and_never_for_self(client, monkeypatch):
+def test_detentor_photo_url_present_by_default_hidden_when_private_and_never_for_self(client, monkeypatch):
     """Pedido de Rhoney (07/09/2026): "agora que os nomes aparecem em
-    qualquer tela, ponha as fotos também" — mesma regra fail-closed de
-    moderação de qualquer outra foto exibida a terceiros."""
-    from app import models, supabase_admin
-    from app.db import SessionLocal
+    qualquer tela, ponha as fotos também". Revisão 13/09/2026: foto é
+    pública por padrão (photo_is_public, escolha do próprio usuário),
+    não depende mais de aprovação de admin."""
+    from app import supabase_admin
 
     monkeypatch.setattr(supabase_admin, "create_signed_photo_url", lambda path, expires_in_seconds=3600: f"https://signed.example/{path}")
 
@@ -172,16 +172,13 @@ def test_detentor_photo_url_present_only_when_approved_and_never_for_self(client
             dethroned = True
             break
     assert dethroned, "user_b deveria ter assumido o território de user_a em algum momento"
-    assert palavras_a["detentor_photo_url"] is None, "pendente de moderação nunca aparece pra outros"
+    assert palavras_a["detentor_photo_url"] is not None, "pública por padrão, sem depender de admin"
 
-    with SessionLocal() as db:
-        profile_b = db.get(models.Profile, user_b)
-        profile_b.photo_moderation_status = "approved"
-        db.commit()
+    client.put("/profile", json={"photo_path": f"{user_b}/photo.jpg", "photo_is_public": False}, headers=headers_b)
 
     progress_a_after = client.get("/progress", headers=headers_a).json()
     palavras_a_after = next(t for t in progress_a_after["territories"] if t["territory_id"] == "palavras")
-    assert palavras_a_after["detentor_photo_url"] is not None
+    assert palavras_a_after["detentor_photo_url"] is None, "user_b marcou a foto como privada"
 
 
 def test_no_dethroned_nickname_on_first_ever_detentor(client):

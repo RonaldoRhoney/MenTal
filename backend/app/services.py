@@ -1155,13 +1155,16 @@ def extract_photo_storage_path(stored_value: str) -> str:
 def public_photo_url(profile: models.Profile) -> str | None:
     """
     Foto de perfil só é exibida pra OUTROS usuários (friends/ranking/
-    battles) quando aprovada na moderação (USER_PROFILE.md §3.1,
-    fail-closed) — pendente ou rejeitada nunca vaza pra fora do próprio
-    dono (que vê o status real via GET /profile). Bucket privado desde
-    28/08/2026: a "URL" agora é sempre uma URL assinada de curta
-    duração, gerada sob demanda — nunca mais a URL pública fixa.
+    battles) quando o PRÓPRIO usuário marcou como pública
+    (photo_is_public — decisão de Rhoney, 13/09/2026, revisão de
+    USER_PROFILE.md §3.1: antes exigia aprovação do admin, virou
+    backlog de semanas). photo_moderation_status == 'rejected' continua
+    forçando invisível mesmo com photo_is_public=True — override
+    administrativo em resposta a denúncia (routers/social.py). Bucket
+    privado desde 28/08/2026: a "URL" é sempre assinada de curta
+    duração, gerada sob demanda — nunca a URL pública fixa.
     """
-    if profile.photo_moderation_status != "approved" or not profile.photo_url:
+    if not profile.photo_is_public or profile.photo_moderation_status == "rejected" or not profile.photo_url:
         return None
     return supabase_admin.create_signed_photo_url(extract_photo_storage_path(profile.photo_url))
 
