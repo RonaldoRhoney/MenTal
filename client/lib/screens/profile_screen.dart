@@ -72,15 +72,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
       if (mounted) {
         setState(() {
           _photoUrl = profile['photo_url'] as String?;
-          _photoModerationStatus = profile['photo_moderation_status'] as String?;
+          _photoModerationStatus =
+              profile['photo_moderation_status'] as String?;
           _photoIsPublic = profile['photo_is_public'] as bool? ?? true;
           _realNameController.text = profile['real_name'] as String? ?? '';
           // Dado legado gravado como texto livre (antes desta mudança)
           // pode não bater com nenhuma sigla válida — nesse caso fica
           // sem seleção em vez de arriscar mapear errado.
           final existingState = profile['location_state'] as String?;
-          _selectedStateUf = kBrazilStates.any((s) => s.uf == existingState) ? existingState : null;
-          _countryController.text = profile['location_country'] as String? ?? '';
+          _selectedStateUf = kBrazilStates.any((s) => s.uf == existingState)
+              ? existingState
+              : null;
+          _countryController.text =
+              profile['location_country'] as String? ?? '';
           _cityController.text = profile['city'] as String? ?? '';
           _locationPublic = profile['location_public'] as bool? ?? false;
         });
@@ -120,7 +124,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     // sempre uma extensão válida aqui — mas mantém o fallback por
     // segurança caso o path do arquivo recortado não tenha extensão
     // reconhecível por algum motivo específico de plataforma.
-    final rawExt = croppedFile.path.contains('.') ? croppedFile.path.split('.').last.toLowerCase() : '';
+    final rawExt = croppedFile.path.contains('.')
+        ? croppedFile.path.split('.').last.toLowerCase()
+        : '';
     const allowedExtensions = {'jpg', 'jpeg', 'png', 'webp'};
     final ext = allowedExtensions.contains(rawExt) ? rawExt : 'jpg';
     final path = '$userId/photo.$ext';
@@ -152,23 +158,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
       // precisa mais de cache-busting manual, já que o token da URL
       // assinada muda a cada chamada.
       final updated = await widget.client.updateProfile(
-        realName: _realNameController.text.trim().isEmpty ? null : _realNameController.text.trim(),
+        realName: _realNameController.text.trim().isEmpty
+            ? null
+            : _realNameController.text.trim(),
         photoPath: path,
         photoIsPublic: _photoIsPublic,
         locationState: _selectedStateUf,
-        locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
-        city: _cityController.text.trim().isEmpty ? null : _cityController.text.trim(),
+        locationCountry: _countryController.text.trim().isEmpty
+            ? null
+            : _countryController.text.trim(),
+        city: _cityController.text.trim().isEmpty
+            ? null
+            : _cityController.text.trim(),
         locationPublic: _locationPublic,
       );
       if (mounted) {
         setState(() {
           _photoUrl = updated['photo_url'] as String?;
-          _photoModerationStatus = updated['photo_moderation_status'] as String?;
+          _photoModerationStatus =
+              updated['photo_moderation_status'] as String?;
           _photoIsPublic = updated['photo_is_public'] as bool? ?? true;
         });
       }
     } on ApiException catch (e) {
-      debugPrint('MENTAL: falha ao salvar o path da foto no perfil: ${e.code} — ${e.message}');
+      debugPrint(
+          'MENTAL: falha ao salvar o path da foto no perfil: ${e.code} — ${e.message}');
       if (mounted) setState(() => _error = e.message);
     } finally {
       if (mounted) setState(() => _uploadingPhoto = false);
@@ -182,7 +196,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     });
     try {
       await widget.client.updateProfile(
-        realName: _realNameController.text.trim().isEmpty ? null : _realNameController.text.trim(),
+        realName: _realNameController.text.trim().isEmpty
+            ? null
+            : _realNameController.text.trim(),
         // photoPath fica de fora aqui de propósito: este botão só salva
         // nome/localização. A foto é enviada separadamente em
         // _pickAndUploadPhoto — reenviar _photoUrl aqui mandaria a URL
@@ -191,13 +207,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
         // nova: é o toggle de visibilidade da foto já existente.
         photoIsPublic: _photoIsPublic,
         locationState: _selectedStateUf,
-        locationCountry: _countryController.text.trim().isEmpty ? null : _countryController.text.trim(),
-        city: _cityController.text.trim().isEmpty ? null : _cityController.text.trim(),
+        locationCountry: _countryController.text.trim().isEmpty
+            ? null
+            : _countryController.text.trim(),
+        city: _cityController.text.trim().isEmpty
+            ? null
+            : _cityController.text.trim(),
         locationPublic: _locationPublic,
       );
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(AppLocalizations.of(context)!.profileSavedMessage)),
+          SnackBar(
+              content: Text(AppLocalizations.of(context)!.profileSavedMessage)),
         );
       }
     } on ApiException catch (e) {
@@ -220,109 +241,263 @@ class _ProfileScreenState extends State<ProfileScreen> {
             : RefreshIndicator(
                 onRefresh: _load,
                 color: AppColors.gold,
-                child: ListView(
-                padding: const EdgeInsets.all(16),
-                children: [
-                  Text(l10n.profilePhotoSectionTitle, style: Theme.of(context).textTheme.titleLarge),
-                  const SizedBox(height: 12),
-                  Row(
+                // Redesign 13/09/2026 (pedido de Rhoney: "mais elegante,
+                // profissional, proporções mais amigáveis", depois
+                // ajustado pra caber tudo numa tela só sem rolar em
+                // dispositivos como o Moto G22 testado ao vivo) — 2
+                // cartões (Seu perfil / Localização) em vez de 3, espaço
+                // reduzido entre eles e dentro deles, textos de apoio
+                // encurtados pra 1 linha, País+Estado lado a lado.
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
+                  child: Column(
                     children: [
-                      ProfilePhotoCircle(photoUrl: _photoUrl, size: 72),
-                      const SizedBox(width: 16),
-                      Expanded(
+                      _ProfileSectionCard(
+                        icon: Icons.person_outline_rounded,
+                        title: l10n.profilePhotoSectionTitle,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            OutlinedButton(
-                              onPressed: _uploadingPhoto ? null : _pickAndUploadPhoto,
-                              child: _uploadingPhoto
-                                  ? const SizedBox(
-                                      width: 16,
-                                      height: 16,
-                                      child: CircularProgressIndicator(strokeWidth: 2),
-                                    )
-                                  : Text(l10n.profilePhotoChangeButton),
+                            Row(
+                              children: [
+                                ProfilePhotoCircle(
+                                    photoUrl: _photoUrl, size: 64),
+                                const SizedBox(width: 14),
+                                Expanded(
+                                  child: OutlinedButton(
+                                    onPressed: _uploadingPhoto
+                                        ? null
+                                        : _pickAndUploadPhoto,
+                                    style: OutlinedButton.styleFrom(
+                                        minimumSize: const Size.fromHeight(40)),
+                                    child: _uploadingPhoto
+                                        ? const SizedBox(
+                                            width: 16,
+                                            height: 16,
+                                            child: CircularProgressIndicator(
+                                                strokeWidth: 2),
+                                          )
+                                        : Text(l10n.profilePhotoChangeButton),
+                                  ),
+                                ),
+                              ],
                             ),
                             if (_photoModerationStatus == 'rejected') ...[
                               const SizedBox(height: 8),
                               Text(
                                 l10n.profilePhotoRejectedLabel,
-                                style: TextStyle(color: AppColors.error, fontSize: 13),
+                                style: TextStyle(
+                                    color: AppColors.error, fontSize: 12),
                               ),
                             ],
+                            // Revisão 13/09/2026 (decisão de
+                            // Rhoney): visibilidade da foto é
+                            // escolha do usuário, não mais
+                            // aprovação de admin — some quando
+                            // 'rejected' (override do admin em
+                            // resposta a denúncia), já que nesse
+                            // caso a escolha do usuário não tem
+                            // efeito mesmo.
+                            if (_photoModerationStatus != 'rejected')
+                              _CompactSwitchRow(
+                                title: l10n.profilePhotoPublicToggleLabel,
+                                value: _photoIsPublic,
+                                onChanged: (value) =>
+                                    setState(() => _photoIsPublic = value),
+                              ),
+                            const SizedBox(height: 4),
+                            TextField(
+                              controller: _realNameController,
+                              decoration: InputDecoration(
+                                labelText: l10n.profileRealNameLabel,
+                                helperText: l10n.profileRealNameHelperText,
+                                helperMaxLines: 2,
+                              ),
+                            ),
                           ],
                         ),
                       ),
+                      const SizedBox(height: 10),
+                      _ProfileSectionCard(
+                        icon: Icons.location_on_outlined,
+                        title: l10n.profileLocationSectionTitle,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Ordem pedida por Rhoney (12/09/2026):
+                            // País → Estado → Cidade — mesma ordem
+                            // já usada no onboarding obrigatório
+                            // (mandatory_onboarding_screen.dart).
+                            // País+Estado lado a lado economiza uma
+                            // linha inteira de altura.
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  flex: 3,
+                                  child: TextField(
+                                    controller: _countryController,
+                                    decoration: InputDecoration(
+                                        labelText:
+                                            l10n.profileLocationCountryLabel),
+                                  ),
+                                ),
+                                const SizedBox(width: 10),
+                                Expanded(
+                                  flex: 2,
+                                  child: DropdownButtonFormField<String>(
+                                    initialValue: _selectedStateUf,
+                                    decoration: InputDecoration(
+                                        labelText:
+                                            l10n.profileLocationStateLabel),
+                                    isExpanded: true,
+                                    items: [
+                                      for (final state in kBrazilStates)
+                                        DropdownMenuItem(
+                                          value: state.uf,
+                                          // Nome completo no popup (fácil
+                                          // de reconhecer ao escolher);
+                                          // selectedItemBuilder abaixo
+                                          // mostra só a sigla no campo
+                                          // fechado, que é onde o espaço é
+                                          // realmente apertado (Row
+                                          // dividida com País).
+                                          child: Text(
+                                              '${state.name} (${state.uf})'),
+                                        ),
+                                    ],
+                                    selectedItemBuilder: (context) => [
+                                      for (final state in kBrazilStates)
+                                        Text(state.uf),
+                                    ],
+                                    onChanged: (value) => setState(
+                                        () => _selectedStateUf = value),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+                            CityAutocompleteField(
+                              stateUf: _selectedStateUf,
+                              controller: _cityController,
+                              labelText: l10n.onboardingCityLabel,
+                            ),
+                            _CompactSwitchRow(
+                              title: l10n.profileLocationPublicLabel,
+                              value: _locationPublic,
+                              onChanged: (value) =>
+                                  setState(() => _locationPublic = value),
+                            ),
+                          ],
+                        ),
+                      ),
+                      if (_error != null) ...[
+                        const SizedBox(height: 10),
+                        Text(_error!,
+                            style: TextStyle(color: AppColors.error),
+                            textAlign: TextAlign.center),
+                      ],
+                      const SizedBox(height: 14),
+                      FilledButton(
+                        onPressed: _saving ? null : _save,
+                        style: FilledButton.styleFrom(
+                            minimumSize: const Size.fromHeight(44)),
+                        child: _saving
+                            ? const SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: CircularProgressIndicator(
+                                    strokeWidth: 2, color: Colors.white),
+                              )
+                            : Text(l10n.profileSaveButton),
+                      ),
                     ],
                   ),
-                  // Revisão 13/09/2026 (decisão de Rhoney): visibilidade
-                  // da foto é escolha do usuário, não mais aprovação de
-                  // admin — some quando 'rejected' (override do admin
-                  // em resposta a denúncia), já que nesse caso a escolha
-                  // do usuário não tem efeito mesmo.
-                  if (_photoModerationStatus != 'rejected')
-                    SwitchListTile(
-                      contentPadding: EdgeInsets.zero,
-                      title: Text(l10n.profilePhotoPublicToggleLabel),
-                      subtitle: Text(l10n.profilePhotoPublicToggleHelper),
-                      value: _photoIsPublic,
-                      onChanged: (value) => setState(() => _photoIsPublic = value),
-                    ),
-                  const SizedBox(height: 24),
-                  TextField(
-                    controller: _realNameController,
-                    decoration: InputDecoration(
-                      labelText: l10n.profileRealNameLabel,
-                      helperText: l10n.profileRealNameHelperText,
-                      helperMaxLines: 3,
-                    ),
-                  ),
-                  const SizedBox(height: 24),
-                  Text(l10n.profileLocationSectionTitle, style: Theme.of(context).textTheme.titleLarge),
-                  const SizedBox(height: 12),
-                  // Ordem pedida por Rhoney (12/09/2026): País → Estado →
-                  // Cidade — mesma ordem já usada no onboarding
-                  // obrigatório (mandatory_onboarding_screen.dart).
-                  TextField(
-                    controller: _countryController,
-                    decoration: InputDecoration(labelText: l10n.profileLocationCountryLabel),
-                  ),
-                  const SizedBox(height: 12),
-                  DropdownButtonFormField<String>(
-                    initialValue: _selectedStateUf,
-                    decoration: InputDecoration(labelText: l10n.profileLocationStateLabel),
-                    isExpanded: true,
-                    items: [
-                      for (final state in kBrazilStates)
-                        DropdownMenuItem(value: state.uf, child: Text('${state.name} (${state.uf})')),
-                    ],
-                    onChanged: (value) => setState(() => _selectedStateUf = value),
-                  ),
-                  const SizedBox(height: 12),
-                  CityAutocompleteField(
-                    stateUf: _selectedStateUf,
-                    controller: _cityController,
-                    labelText: l10n.onboardingCityLabel,
-                  ),
-                  const SizedBox(height: 12),
-                  SwitchListTile(
-                    contentPadding: EdgeInsets.zero,
-                    title: Text(l10n.profileLocationPublicLabel),
-                    value: _locationPublic,
-                    onChanged: (value) => setState(() => _locationPublic = value),
-                  ),
-                  if (_error != null) ...[
-                    const SizedBox(height: 8),
-                    Text(_error!, style: TextStyle(color: AppColors.error)),
-                  ],
-                  const SizedBox(height: 16),
-                  FilledButton(
-                    onPressed: _saving ? null : _save,
-                    child: Text(l10n.profileSaveButton),
-                  ),
-                ],
-              ),
                 ),
+              ),
+      ),
+    );
+  }
+}
+
+/// Cartão de seção reutilizado nas 3 áreas da tela (Foto/Nome/Localização)
+/// — mesmo padrão visual já estabelecido no card de Progresso da Home
+/// (AppColors.bg2 + borda dourada suave, radius 18), pra dar hierarquia
+/// e "respiro" entre seções em vez da lista corrida de campos soltos
+/// que existia antes (pedido de Rhoney, 13/09/2026: "mais elegante,
+/// profissional, proporções mais amigáveis").
+class _ProfileSectionCard extends StatelessWidget {
+  const _ProfileSectionCard(
+      {required this.icon, required this.title, required this.child});
+
+  final IconData icon;
+  final String title;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+      ),
+      // Material(transparency) evita o aviso do framework de que o
+      // SwitchListTile dentro do card (Foto pública/Localização
+      // pública) perderia o ink splash por causa do Container colorido
+      // logo acima na árvore — sem mudar nada visualmente.
+      child: Material(
+        type: MaterialType.transparency,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(icon, color: AppColors.gold, size: 22),
+                const SizedBox(width: 10),
+                Expanded(
+                    child: Text(title,
+                        style: Theme.of(context).textTheme.titleLarge)),
+              ],
+            ),
+            const SizedBox(height: 10),
+            child,
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Linha de toggle compacta (1 linha, sem subtítulo explicativo) — troca
+/// o SwitchListTile de 3 linhas usado antes, parte do ajuste pra caber
+/// a tela de Perfil inteira sem rolar (pedido de Rhoney, 13/09/2026). O
+/// título de cada toggle já é autoexplicativo o bastante sem o texto de
+/// apoio.
+class _CompactSwitchRow extends StatelessWidget {
+  const _CompactSwitchRow(
+      {required this.title, required this.value, required this.onChanged});
+
+  final String title;
+  final bool value;
+  final ValueChanged<bool> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => onChanged(!value),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 2),
+        child: Row(
+          children: [
+            Expanded(
+                child:
+                    Text(title, style: Theme.of(context).textTheme.bodyMedium)),
+            Switch(value: value, onChanged: onChanged),
+          ],
+        ),
       ),
     );
   }

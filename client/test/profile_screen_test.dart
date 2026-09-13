@@ -146,7 +146,10 @@ void main() {
 
   testWidgets('toggle de foto pública aparece e reflete o estado atual', (tester) async {
     await _pumpProfileScreen(tester, _FakeApiClient(photoIsPublic: true));
-    final toggle = tester.widget<SwitchListTile>(find.byType(SwitchListTile).first);
+    // _CompactSwitchRow (redesign 13/09/2026, tela sem rolagem) usa
+    // Switch puro em vez de SwitchListTile — o de foto é o primeiro na
+    // árvore (card "Seu perfil" vem antes de "Localização").
+    final toggle = tester.widget<Switch>(find.byType(Switch).first);
     expect(toggle.value, isTrue);
   });
 
@@ -154,6 +157,6 @@ void main() {
     await _pumpProfileScreen(tester, _FakeApiClient(photoModerationStatus: 'rejected'));
     expect(find.textContaining('ocultada'), findsOneWidget);
     // Toggle de localização continua existindo — só o de foto some.
-    expect(find.byType(SwitchListTile), findsOneWidget);
+    expect(find.byType(Switch), findsOneWidget);
   });
 }
