@@ -20,9 +20,12 @@ void main() {
     await tester.pumpWidget(const MentalApp());
     await tester.pump();
 
-    // BRAND.md §3: splash (wordmark → slogan) roda primeiro — avança o
-    // tempo pra passar da sequência antes de checar a tela de login.
-    await tester.pump(const Duration(milliseconds: 2300));
+    // PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026):
+    // OpeningExperienceScreen roda primeiro (2400ms) — avança o tempo
+    // pra passar da sequência antes de checar a tela de login. Margem
+    // de 100ms além da duração exata pra não cair bem na borda do
+    // AnimationController.
+    await tester.pump(const Duration(milliseconds: 2500));
     await tester.pump();
 
     // Tutorial "Como usar o MENTAL" (29/08/2026) aparece uma vez, logo
@@ -38,7 +41,7 @@ void main() {
     // MENTAL (BRAND.md §1: nome nunca aparece sozinho, sem o slogan por
     // perto, em nenhum primeiro contato) e o formulário de e-mail/senha.
     expect(find.text('MENTAL'), findsOneWidget);
-    expect(find.text('Mental é quem conquista com a mente.'), findsOneWidget);
+    expect(find.text('Gamefique seus conhecimentos!'), findsOneWidget);
     expect(find.text('E-mail'), findsOneWidget);
     expect(find.text('Senha'), findsOneWidget);
   });

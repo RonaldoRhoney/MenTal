@@ -37,7 +37,7 @@ void main() {
   testWidgets('BRAND.md §1: nome nunca aparece sem o slogan por perto', (tester) async {
     await _pumpLoginScreen(tester);
     expect(find.text('MENTAL'), findsOneWidget);
-    expect(find.text('Mental é quem conquista com a mente.'), findsOneWidget);
+    expect(find.text('Gamefique seus conhecimentos!'), findsOneWidget);
   });
 
   testWidgets('modo padrão é entrar, com link pra alternar pra criar conta', (tester) async {

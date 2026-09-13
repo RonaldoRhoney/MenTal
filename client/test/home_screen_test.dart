@@ -205,7 +205,7 @@ void main() {
     // presente — o texto normal do wordmark se soma a ele, não o
     // substitui.
     expect(find.text('MENTAL'), findsWidgets);
-    expect(find.text('Mental é quem conquista com a mente.'), findsOneWidget);
+    expect(find.text('Gamefique seus conhecimentos!'), findsOneWidget);
 
     // §3.2 — o banner de bônus de Movimento não existe mais na Home,
     // em nenhuma circunstância (a lógica foi removida, não só ocultada).
