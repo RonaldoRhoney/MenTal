@@ -23,13 +23,14 @@ def test_progress_includes_matematica_block_with_numeros_e_logica(client):
     assert blocks["matematica"]["name"] == "Matemática"
 
 
-def test_internet_block_groups_its_2_territories_under_tecnologia_world(client):
+def test_internet_block_groups_its_5_territories_under_tecnologia_world(client):
     """ARQUITETURA_SUBMUNDOS_V1.md (13/09/2026, aprovado): "Internet" é
     SubMundo de "Tecnologia" — implementado reaproveitando o mecanismo
     de Bloco já existente, em vez de uma entidade "SubMundo" nova.
-    world_id continua "tecnologia" pros 2 territórios; block_id
-    "internet" (diferente do block_id "tecnologia" dos 4 territórios
-    clássicos) é o que cria o subcabeçalho separado na tela do Mundo."""
+    world_id continua "tecnologia" pros territórios; block_id "internet"
+    (diferente do block_id "tecnologia" dos 4 territórios clássicos) é
+    o que cria o subcabeçalho separado na tela do Mundo. 5 territórios,
+    1 por bloco curado — curadoria completa em 13/09/2026."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -38,11 +39,15 @@ def test_internet_block_groups_its_2_territories_under_tecnologia_world(client):
     blocks = {b["block_id"]: b for b in body["blocks"]}
 
     assert "internet" in blocks
-    assert sorted(blocks["internet"]["territory_ids"]) == ["internet_origens", "internet_sistemas_operacionais"]
+    assert sorted(blocks["internet"]["territory_ids"]) == [
+        "internet_cultura", "internet_futuro", "internet_gigantes", "internet_origens", "internet_sistemas_operacionais",
+    ]
     assert blocks["internet"]["name"] == "Internet"
 
     worlds = {w["world_id"]: w for w in body["worlds"]}
-    assert {"internet_origens", "internet_sistemas_operacionais"}.issubset(set(worlds["tecnologia"]["territory_ids"]))
+    assert {
+        "internet_origens", "internet_sistemas_operacionais", "internet_gigantes", "internet_cultura", "internet_futuro",
+    }.issubset(set(worlds["tecnologia"]["territory_ids"]))
 
 
 def test_blocks_without_any_territory_are_not_returned(client):

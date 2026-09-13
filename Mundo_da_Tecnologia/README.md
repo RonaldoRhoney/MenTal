@@ -28,9 +28,11 @@ têm `world_id="tecnologia"` (mesmo Mundo) e `block_id="internet"`
 (bloco próprio, diferente do `block_id="tecnologia"` dos 4 territórios
 clássicos) — isso já basta pra aparecerem sob um subcabeçalho "Internet"
 separado dentro da tela do Mundo Tecnologia (`home_screen.dart`, sem
-nenhuma mudança de client). Territórios prontos hoje:
-`internet_origens`, `internet_sistemas_operacionais`
-(`scripts/convert_internet_content.py` BLOCO_TO_TERRITORY) — os demais
-blocos curados (Os Gigantes da Internet, Cultura de Internet, Passado/
-Presente/Futuro) entram como territórios novos assim que a curadoria de
-cada um terminar.
+nenhuma mudança de client). Os 5 blocos curados viraram território
+(`scripts/convert_internet_content.py` BLOCO_TO_TERRITORY):
+`internet_origens`, `internet_sistemas_operacionais`,
+`internet_gigantes`, `internet_cultura`, `internet_futuro`.
+
+**Curadoria completa em 13/09/2026** — 1.997 desafios (3 excluídos por
+inconsistência real nos dados: resposta correta não batia com nenhuma
+das opções).

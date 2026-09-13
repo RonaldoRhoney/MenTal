@@ -88,7 +88,7 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     # de SubMundo em vez de criar uma entidade nova.
     assert set(worlds["tecnologia"]["territory_ids"]) == {
         "tecnologia_fundamentos", "tecnologia_programacao", "tecnologia_seguranca", "tecnologia_fronteira",
-        "internet_origens", "internet_sistemas_operacionais",
+        "internet_origens", "internet_sistemas_operacionais", "internet_gigantes", "internet_cultura", "internet_futuro",
     }
     # §3 do documento: "regioes" (15 perguntas de gírias regionais, que
     # não se dividem por região) migra pra cá como território próprio —

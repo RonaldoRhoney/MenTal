@@ -55,6 +55,9 @@ NIVEL_TO_DIFFICULTY = {
 BLOCO_TO_TERRITORY = {
     1: "internet_origens",
     2: "internet_sistemas_operacionais",
+    3: "internet_gigantes",
+    4: "internet_cultura",
+    5: "internet_futuro",
 }
 
 

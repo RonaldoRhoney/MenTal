@@ -26,16 +26,16 @@ on conflict (id) do nothing;
 
 insert into mental.territories (id, challenge_type, requires_subscription, free_sample_count, display_order, world_id, block_id) values
     ('internet_origens', 'internet', true, 2, 73, 'tecnologia', 'internet'),
-    ('internet_sistemas_operacionais', 'internet', true, 2, 74, 'tecnologia', 'internet')
+    ('internet_sistemas_operacionais', 'internet', true, 2, 74, 'tecnologia', 'internet'),
+    ('internet_gigantes', 'internet', true, 2, 75, 'tecnologia', 'internet'),
+    ('internet_cultura', 'internet', true, 2, 76, 'tecnologia', 'internet'),
+    ('internet_futuro', 'internet', true, 2, 77, 'tecnologia', 'internet')
 on conflict (id) do nothing;
 
 -- Conteúdo em si é carregado DEPOIS desta migração, via
 -- scripts/append_production_content.py (mesmo padrão de todos os
 -- Mundos anteriores), a partir de backend/content/internet_*.json
--- (gerados por scripts/convert_internet_content.py). Novos territórios
--- (novos blocos curados: hoje só origens/sistemas_operacionais estão
--- prontos — Os Gigantes da Internet, Cultura de Internet e Passado/
--- Presente/Futuro ainda têm desafios incompletos, ver
--- scripts/convert_internet_content.py BLOCO_TO_TERRITORY) entram em
--- migrações/rodadas incrementais futuras, conforme a curadoria avançar
--- e Rhoney confirmar cada bloco pronto.
+-- (gerados por scripts/convert_internet_content.py). Curadoria dos 5
+-- blocos completa em 13/09/2026 (1.997 desafios, 3 excluídos por
+-- inconsistência real nos dados — resposta correta não batia com
+-- nenhuma das opções).

@@ -4321,6 +4321,366 @@
   },
   {
     "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Em que ano a Time Warner vendeu a AOL, encerrando um dos capítulos mais turbulentos da fusão de 2000?",
+    "options": [
+      "2009",
+      "2000",
+      "2015",
+      "1998"
+    ],
+    "correct_answer": "2009",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Em que ano a Verizon comprou a AOL?",
+    "options": [
+      "2015",
+      "2009",
+      "2000",
+      "2021"
+    ],
+    "correct_answer": "2015",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Aproximadamente quantos usuários de dial-up a AOL ainda tinha quando a Verizon a comprou em 2015?",
+    "options": [
+      "2,1 milhões",
+      "25 milhões",
+      "163 mil",
+      "10 milhões"
+    ],
+    "correct_answer": "2,1 milhões",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Em que ano a Verizon vendeu a AOL e o Yahoo, juntos, para uma empresa de private equity?",
+    "options": [
+      "2021",
+      "2015",
+      "2009",
+      "2025"
+    ],
+    "correct_answer": "2021",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Qual empresa de private equity adquiriu a AOL e o Yahoo da Verizon?",
+    "options": [
+      "Apollo Global Management",
+      "Blackstone",
+      "KKR",
+      "Carlyle Group"
+    ],
+    "correct_answer": "Apollo Global Management",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Por qual valor aproximado a Apollo adquiriu esses ativos da Verizon?",
+    "options": [
+      "5 bilhões de dólares",
+      "165 bilhões de dólares",
+      "500 milhões de dólares",
+      "50 bilhões de dólares"
+    ],
+    "correct_answer": "5 bilhões de dólares",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '5'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Em que data exata, em 2025, a AOL finalmente encerrou seu serviço de internet discada, depois de mais de 30 anos?",
+    "options": [
+      "30 de setembro de 2025",
+      "1º de janeiro de 2025",
+      "25 de dezembro de 2024",
+      "4 de julho de 2025"
+    ],
+    "correct_answer": "30 de setembro de 2025",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '3'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Além do serviço de dial-up em si, quais outros dois produtos associados foram descontinuados junto com ele?",
+    "options": [
+      "O software AOL Dialer e o navegador AOL Shield",
+      "O AOL Instant Messenger e o e-mail da AOL",
+      "O Netscape Navigator e o Internet Explorer",
+      "O Windows 95 e o MS-DOS"
+    ],
+    "correct_answer": "O software AOL Dialer e o navegador AOL Shield",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Aproximadamente quantos domicílios americanos ainda usavam exclusivamente conexão discada em 2023, segundo dados do Censo dos EUA?",
+    "options": [
+      "Cerca de 163 mil",
+      "Cerca de 25 milhões",
+      "Cerca de 2 milhões",
+      "Cerca de 500"
+    ],
+    "correct_answer": "Cerca de 163 mil",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Isso representava aproximadamente qual fração de todos os domicílios americanos com assinatura de internet?",
+    "options": [
+      "Cerca de 0,13%",
+      "Cerca de 50%",
+      "Cerca de 10%",
+      "Cerca de 1%"
+    ],
+    "correct_answer": "Cerca de 0,13%",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Segundo o Censo americano de 2019, quantas pessoas usavam exclusivamente internet discada naquele ano?",
+    "options": [
+      "265.331 pessoas",
+      "163.000 pessoas",
+      "2,1 milhões de pessoas",
+      "25 milhões de pessoas"
+    ],
+    "correct_answer": "265.331 pessoas",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Segundo uma tecnologia de origem mais antiga, a conexão discada foi originalmente desenvolvida a partir de qual outra tecnologia dos anos 1970, segundo uma fonte?",
+    "options": [
+      "Usenet",
+      "ARPANET diretamente",
+      "TCP/IP",
+      "World Wide Web"
+    ],
+    "correct_answer": "Usenet",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Em que ano a America Online mudou oficialmente seu nome comercial para simplesmente 'AOL'?",
+    "options": [
+      "2006",
+      "1991",
+      "1985",
+      "2015"
+    ],
+    "correct_answer": "2006",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Aproximadamente qual foi o valor de mercado da AOL no auge da bolha das empresas 'ponto com', em 2000?",
+    "options": [
+      "Quase 164 bilhões de dólares",
+      "5 bilhões de dólares",
+      "1 bilhão de dólares",
+      "20 bilhões de dólares"
+    ],
+    "correct_answer": "Quase 164 bilhões de dólares",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'Q'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Segundo uma fonte, quantos usuários a AOL tinha nos anos finais do serviço de dial-up, em 2015 (na venda para a Apollo)?",
+    "options": [
+      "Poucos milhares",
+      "2,1 milhões",
+      "25 milhões",
+      "163 mil"
+    ],
+    "correct_answer": "Poucos milhares",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Que outro serviço de tecnologia da Microsoft, ligado a videochamadas, também foi encerrado no mesmo ano em que a AOL parou o dial-up?",
+    "options": [
+      "Skype",
+      "Teams",
+      "Outlook",
+      "Bing"
+    ],
+    "correct_answer": "Skype",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Em que ano o Internet Explorer foi oficialmente aposentado pela Microsoft, citado como outro 'relíquia' da internet antiga?",
+    "options": [
+      "2022",
+      "2015",
+      "2025",
+      "1998"
+    ],
+    "correct_answer": "2022",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Sob qual nome de marca maior a AOL opera atualmente, segundo registros mais recentes?",
+    "options": [
+      "Yahoo",
+      "Verizon Media",
+      "Apollo Networks",
+      "Time Warner Digital"
+    ],
+    "correct_answer": "Yahoo",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'Y'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Que tipo de usuário mais nichado, segundo relatos recentes, ainda demonstra alguma nostalgia ou interesse pela conexão discada, mesmo após seu fim comercial?",
+    "options": [
+      "Retrogamers e entusiastas de nostalgia tecnológica",
+      "Empresas de tecnologia de ponta exclusivamente",
+      "Governos que ainda dependem dessa tecnologia",
+      "Nenhum grupo demonstra qualquer interesse"
+    ],
+    "correct_answer": "Retrogamers e entusiastas de nostalgia tecnológica",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
+    "difficulty_level": 3,
+    "prompt": "Segundo uma sugestão bem-humorada encontrada num fórum online, o que seria necessário para 'montar seu próprio' provedor de dial-up hoje, de forma amadora?",
+    "options": [
+      "Um computador Linux, uma porta serial e um modem antigo",
+      "Apenas um roteador Wi-Fi moderno",
+      "Um satélite de comunicação próprio",
+      "Nenhum equipamento, apenas um aplicativo de celular"
+    ],
+    "correct_answer": "Um computador Linux, uma porta serial e um modem antigo",
+    "explanation": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+    "hints": [
+      "Pense no tema: 'Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "internet_origens",
     "difficulty_level": 1,
     "prompt": "Para muitos usuários dos anos 1990, qual serviço praticamente 'era' a internet?",
     "options": [

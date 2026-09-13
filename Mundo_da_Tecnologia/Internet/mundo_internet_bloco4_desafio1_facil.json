@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 4,
+    "tema_bloco": "Cultura de Internet",
+    "desafio": 1,
+    "tema_desafio": "Memes e a Propagação da Cultura Digital",
+    "nivel_dificuldade": "Facil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Britannica e Wikipedia. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - identidade da pessoa real por tras do meme mencionada apenas pelo apelido publico ja amplamente divulgado, sem expor dados pessoais adicionais."
+  },
+  "saiba_mais": "Curiosidade: a palavra 'meme' é bem mais antiga do que a internet popular! Ela foi criada em 1976 pelo biólogo Richard Dawkins, muito antes de imagens engraçadas de gatos ou bebês dançando existirem — ele queria descrever como ideias e comportamentos se espalham de pessoa para pessoa, de forma parecida com a propagação de genes. Só décadas depois a internet 'adotou' a palavra para o sentido que conhecemos hoje.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem criou o termo 'meme', muito antes da internet popular existir?",
+      "opcoes": [
+        "Richard Dawkins",
+        "Mark Zuckerberg",
+        "Tim Berners-Lee",
+        "Jack Dorsey"
+      ],
+      "resposta_correta": "Richard Dawkins"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano Richard Dawkins criou o termo 'meme'?",
+      "opcoes": [
+        "1976",
+        "1991",
+        "2006",
+        "1998"
+      ],
+      "resposta_correta": "1976"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual livro Dawkins apresentou o termo 'meme' pela primeira vez?",
+      "opcoes": [
+        "'O Gene Egoísta' ('The Selfish Gene')",
+        "'A Origem das Espécies'",
+        "'Breve História do Tempo'",
+        "'Sapiens'"
+      ],
+      "resposta_correta": "'O Gene Egoísta' ('The Selfish Gene')"
+    },
+    {
+      "n": 4,
+      "pergunta": "De qual palavra grega Dawkins derivou o termo 'meme'?",
+      "opcoes": [
+        "'Mimema' (coisa imitada)",
+        "'Genos' (origem)",
+        "'Bios' (vida)",
+        "'Logos' (palavra)"
+      ],
+      "resposta_correta": "'Mimema' (coisa imitada)"
+    },
+    {
+      "n": 5,
+      "pergunta": "O que Dawkins originalmente queria descrever com o termo 'meme'?",
+      "opcoes": [
+        "Ideias, comportamentos e costumes que se espalham entre pessoas, como genes",
+        "Exclusivamente imagens engraçadas da internet",
+        "Um tipo específico de vírus de computador",
+        "Uma técnica de programação"
+      ],
+      "resposta_correta": "Ideias, comportamentos e costumes que se espalham entre pessoas, como genes"
+    },
+    {
+      "n": 6,
+      "pergunta": "Quem cunhou especificamente o termo 'meme de internet', em 1993?",
+      "opcoes": [
+        "Mike Godwin",
+        "Richard Dawkins",
+        "Tim Berners-Lee",
+        "Scott Fahlman"
+      ],
+      "resposta_correta": "Mike Godwin"
+    },
+    {
+      "n": 7,
+      "pergunta": "Qual é considerado um dos primeiros memes de imagem da internet, viral em 1996?",
+      "opcoes": [
+        "'Dancing Baby'",
+        "'Grumpy Cat'",
+        "'Distracted Boyfriend'",
+        "'Doge'"
+      ],
+      "resposta_correta": "'Dancing Baby'"
+    },
+    {
+      "n": 8,
+      "pergunta": "O 'Dancing Baby' era, tecnicamente, o quê?",
+      "opcoes": [
+        "Uma animação 3D de um bebê dançando",
+        "Uma foto real de um bebê",
+        "Um vídeo filmado com câmera comum",
+        "Um desenho feito à mão"
+      ],
+      "resposta_correta": "Uma animação 3D de um bebê dançando"
+    },
+    {
+      "n": 9,
+      "pergunta": "Através de que meio o 'Dancing Baby' se espalhou principalmente nos anos 1990?",
+      "opcoes": [
+        "Correntes de e-mail",
+        "Redes sociais modernas como Instagram",
+        "Aplicativos de mensagens instantâneas",
+        "Vídeos do YouTube"
+      ],
+      "resposta_correta": "Correntes de e-mail"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual criptomoeda foi originalmente criada como uma piada baseada no meme 'Doge'?",
+      "opcoes": [
+        "Dogecoin",
+        "Bitcoin",
+        "Ethereum",
+        "Litecoin"
+      ],
+      "resposta_correta": "Dogecoin"
+    },
+    {
+      "n": 11,
+      "pergunta": "Quem criou o emoticon sorridente ':-)', considerado um dos primeiros exemplos de meme de internet?",
+      "opcoes": [
+        "Scott Fahlman",
+        "Richard Dawkins",
+        "Mike Godwin",
+        "Tim Berners-Lee"
+      ],
+      "resposta_correta": "Scott Fahlman"
+    },
+    {
+      "n": 12,
+      "pergunta": "Em que ano o emoticon ':-)' foi introduzido por Scott Fahlman?",
+      "opcoes": [
+        "1982",
+        "1976",
+        "1993",
+        "1996"
+      ],
+      "resposta_correta": "1982"
+    },
+    {
+      "n": 13,
+      "pergunta": "O meme conhecido como o 'nerd gordinho dos memes' é baseado em uma pessoa real?",
+      "opcoes": [
+        "Sim, um homem finlandês conhecido pelo apelido KimmoKM",
+        "Não, é um personagem gerado por computador",
+        "Não, é uma ilustração desenhada especialmente para memes",
+        "Sim, mas a identidade nunca foi revelada"
+      ],
+      "resposta_correta": "Sim, um homem finlandês conhecido pelo apelido KimmoKM"
+    },
+    {
+      "n": 14,
+      "pergunta": "Onde a foto que originou esse meme apareceu inicialmente, segundo relatos?",
+      "opcoes": [
+        "Um fórum de imagens (imageboard) finlandês",
+        "Um jornal impresso",
+        "Um programa de televisão ao vivo",
+        "Uma revista de moda"
+      ],
+      "resposta_correta": "Um fórum de imagens (imageboard) finlandês"
+    },
+    {
+      "n": 15,
+      "pergunta": "Cite um exemplo de meme baseado numa foto de banco de imagens (stock photo), reaproveitada com novos significados por usuários.",
+      "opcoes": [
+        "'Distracted Boyfriend' (Namorado Distraído)",
+        "'Dancing Baby'",
+        "'Grumpy Cat'",
+        "'Doge'"
+      ],
+      "resposta_correta": "'Distracted Boyfriend' (Namorado Distraído)"
+    },
+    {
+      "n": 16,
+      "pergunta": "O que os LOLcats (fotos de gatos com legendas engraçadas) são citados como sendo, em relação à evolução dos memes?",
+      "opcoes": [
+        "Um dos primeiros exemplos do formato de meme como conhecemos hoje",
+        "Uma invenção recente, sem relação com a história antiga dos memes",
+        "Um formato exclusivo de vídeos, não imagens",
+        "Um tipo de meme banido pela maioria das redes sociais"
+      ],
+      "resposta_correta": "Um dos primeiros exemplos do formato de meme como conhecemos hoje"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que ano o termo 'meme' foi oficialmente incluído no dicionário Merriam-Webster?",
+      "opcoes": [
+        "1998",
+        "1976",
+        "1993",
+        "2006"
+      ],
+      "resposta_correta": "1998"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo o próprio Dawkins, em entrevista de 2013, o significado atual de 'meme' (internet) está distante do significado original que ele criou?",
+      "opcoes": [
+        "Não muito distante — ele descreveu memes de internet como algo que 'viraliza'",
+        "Sim, totalmente diferente e sem nenhuma relação",
+        "Sim, ele nunca reconheceu nenhuma relação entre os dois usos",
+        "Não há registro de opinião de Dawkins sobre o tema"
+      ],
+      "resposta_correta": "Não muito distante — ele descreveu memes de internet como algo que 'viraliza'"
+    },
+    {
+      "n": 19,
+      "pergunta": "Em qual metáfora, já presente no capítulo final de seu próprio livro de 1976, Dawkins relacionou a propagação de memes?",
+      "opcoes": [
+        "A metáfora de um vírus",
+        "A metáfora de uma árvore",
+        "A metáfora de um oceano",
+        "A metáfora de uma montanha"
+      ],
+      "resposta_correta": "A metáfora de um vírus"
+    },
+    {
+      "n": 20,
+      "pergunta": "O formato mais comum de meme hoje costuma combinar quais dois elementos?",
+      "opcoes": [
+        "Uma imagem com texto sobreposto",
+        "Apenas som, sem nenhuma imagem",
+        "Apenas texto, sem nenhuma imagem",
+        "Um vídeo sem nenhum texto ou legenda"
+      ],
+      "resposta_correta": "Uma imagem com texto sobreposto"
+    }
+  ]
+}

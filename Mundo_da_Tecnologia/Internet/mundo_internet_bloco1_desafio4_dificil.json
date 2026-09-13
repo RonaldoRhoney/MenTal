@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 1,
+    "tema_bloco": "As Origens da Internet",
+    "desafio": 4,
+    "tema_desafio": "Marcos e Curiosidades dos Anos 1990 (AOL e a popularização)",
+    "nivel_dificuldade": "Dificil",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em fontes jornalisticas recentes (2025). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - fusoes e vendas corporativas tratadas de forma factual e neutra."
+  },
+  "saiba_mais": "Curiosidade: a AOL só encerrou de vez seu serviço de internet discada em 30 de setembro de 2025 — muito mais recente do que a maioria das pessoas imagina. Mais de três décadas depois de ter apresentado milhões de pessoas à internet pela primeira vez, o icônico som de conexão da AOL finalmente saiu de cena, encerrando oficialmente uma era.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano a Time Warner vendeu a AOL, encerrando um dos capítulos mais turbulentos da fusão de 2000?",
+      "opcoes": [
+        "2009",
+        "2000",
+        "2015",
+        "1998"
+      ],
+      "resposta_correta": "2009"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a Verizon comprou a AOL?",
+      "opcoes": [
+        "2015",
+        "2009",
+        "2000",
+        "2021"
+      ],
+      "resposta_correta": "2015"
+    },
+    {
+      "n": 3,
+      "pergunta": "Aproximadamente quantos usuários de dial-up a AOL ainda tinha quando a Verizon a comprou em 2015?",
+      "opcoes": [
+        "2,1 milhões",
+        "25 milhões",
+        "163 mil",
+        "10 milhões"
+      ],
+      "resposta_correta": "2,1 milhões"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que ano a Verizon vendeu a AOL e o Yahoo, juntos, para uma empresa de private equity?",
+      "opcoes": [
+        "2021",
+        "2015",
+        "2009",
+        "2025"
+      ],
+      "resposta_correta": "2021"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual empresa de private equity adquiriu a AOL e o Yahoo da Verizon?",
+      "opcoes": [
+        "Apollo Global Management",
+        "Blackstone",
+        "KKR",
+        "Carlyle Group"
+      ],
+      "resposta_correta": "Apollo Global Management"
+    },
+    {
+      "n": 6,
+      "pergunta": "Por qual valor aproximado a Apollo adquiriu esses ativos da Verizon?",
+      "opcoes": [
+        "5 bilhões de dólares",
+        "165 bilhões de dólares",
+        "500 milhões de dólares",
+        "50 bilhões de dólares"
+      ],
+      "resposta_correta": "5 bilhões de dólares"
+    },
+    {
+      "n": 7,
+      "pergunta": "Em que data exata, em 2025, a AOL finalmente encerrou seu serviço de internet discada, depois de mais de 30 anos?",
+      "opcoes": [
+        "30 de setembro de 2025",
+        "1º de janeiro de 2025",
+        "25 de dezembro de 2024",
+        "4 de julho de 2025"
+      ],
+      "resposta_correta": "30 de setembro de 2025"
+    },
+    {
+      "n": 8,
+      "pergunta": "Além do serviço de dial-up em si, quais outros dois produtos associados foram descontinuados junto com ele?",
+      "opcoes": [
+        "O software AOL Dialer e o navegador AOL Shield",
+        "O AOL Instant Messenger e o e-mail da AOL",
+        "O Netscape Navigator e o Internet Explorer",
+        "O Windows 95 e o MS-DOS"
+      ],
+      "resposta_correta": "O software AOL Dialer e o navegador AOL Shield"
+    },
+    {
+      "n": 9,
+      "pergunta": "Aproximadamente quantos domicílios americanos ainda usavam exclusivamente conexão discada em 2023, segundo dados do Censo dos EUA?",
+      "opcoes": [
+        "Cerca de 163 mil",
+        "Cerca de 25 milhões",
+        "Cerca de 2 milhões",
+        "Cerca de 500"
+      ],
+      "resposta_correta": "Cerca de 163 mil"
+    },
+    {
+      "n": 10,
+      "pergunta": "Isso representava aproximadamente qual fração de todos os domicílios americanos com assinatura de internet?",
+      "opcoes": [
+        "Cerca de 0,13%",
+        "Cerca de 50%",
+        "Cerca de 10%",
+        "Cerca de 1%"
+      ],
+      "resposta_correta": "Cerca de 0,13%"
+    },
+    {
+      "n": 11,
+      "pergunta": "Segundo o Censo americano de 2019, quantas pessoas usavam exclusivamente internet discada naquele ano?",
+      "opcoes": [
+        "265.331 pessoas",
+        "163.000 pessoas",
+        "2,1 milhões de pessoas",
+        "25 milhões de pessoas"
+      ],
+      "resposta_correta": "265.331 pessoas"
+    },
+    {
+      "n": 12,
+      "pergunta": "Segundo uma tecnologia de origem mais antiga, a conexão discada foi originalmente desenvolvida a partir de qual outra tecnologia dos anos 1970, segundo uma fonte?",
+      "opcoes": [
+        "Usenet",
+        "ARPANET diretamente",
+        "TCP/IP",
+        "World Wide Web"
+      ],
+      "resposta_correta": "Usenet"
+    },
+    {
+      "n": 13,
+      "pergunta": "Em que ano a America Online mudou oficialmente seu nome comercial para simplesmente 'AOL'?",
+      "opcoes": [
+        "2006",
+        "1991",
+        "1985",
+        "2015"
+      ],
+      "resposta_correta": "2006"
+    },
+    {
+      "n": 14,
+      "pergunta": "Aproximadamente qual foi o valor de mercado da AOL no auge da bolha das empresas 'ponto com', em 2000?",
+      "opcoes": [
+        "Quase 164 bilhões de dólares",
+        "5 bilhões de dólares",
+        "1 bilhão de dólares",
+        "20 bilhões de dólares"
+      ],
+      "resposta_correta": "Quase 164 bilhões de dólares"
+    },
+    {
+      "n": 15,
+      "pergunta": "Segundo uma fonte, quantos usuários a AOL tinha nos anos finais do serviço de dial-up, em 2015 (na venda para a Apollo)?",
+      "opcoes": [
+        "Poucos milhares",
+        "2,1 milhões",
+        "25 milhões",
+        "163 mil"
+      ],
+      "resposta_correta": "Poucos milhares"
+    },
+    {
+      "n": 16,
+      "pergunta": "Que outro serviço de tecnologia da Microsoft, ligado a videochamadas, também foi encerrado no mesmo ano em que a AOL parou o dial-up?",
+      "opcoes": [
+        "Skype",
+        "Teams",
+        "Outlook",
+        "Bing"
+      ],
+      "resposta_correta": "Skype"
+    },
+    {
+      "n": 17,
+      "pergunta": "Em que ano o Internet Explorer foi oficialmente aposentado pela Microsoft, citado como outro 'relíquia' da internet antiga?",
+      "opcoes": [
+        "2022",
+        "2015",
+        "2025",
+        "1998"
+      ],
+      "resposta_correta": "2022"
+    },
+    {
+      "n": 18,
+      "pergunta": "Sob qual nome de marca maior a AOL opera atualmente, segundo registros mais recentes?",
+      "opcoes": [
+        "Yahoo",
+        "Verizon Media",
+        "Apollo Networks",
+        "Time Warner Digital"
+      ],
+      "resposta_correta": "Yahoo"
+    },
+    {
+      "n": 19,
+      "pergunta": "Que tipo de usuário mais nichado, segundo relatos recentes, ainda demonstra alguma nostalgia ou interesse pela conexão discada, mesmo após seu fim comercial?",
+      "opcoes": [
+        "Retrogamers e entusiastas de nostalgia tecnológica",
+        "Empresas de tecnologia de ponta exclusivamente",
+        "Governos que ainda dependem dessa tecnologia",
+        "Nenhum grupo demonstra qualquer interesse"
+      ],
+      "resposta_correta": "Retrogamers e entusiastas de nostalgia tecnológica"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo uma sugestão bem-humorada encontrada num fórum online, o que seria necessário para 'montar seu próprio' provedor de dial-up hoje, de forma amadora?",
+      "opcoes": [
+        "Um computador Linux, uma porta serial e um modem antigo",
+        "Apenas um roteador Wi-Fi moderno",
+        "Um satélite de comunicação próprio",
+        "Nenhum equipamento, apenas um aplicativo de celular"
+      ],
+      "resposta_correta": "Um computador Linux, uma porta serial e um modem antigo"
+    }
+  ]
+}

@@ -343,6 +343,9 @@ TERRITORIES = [
     # separado na tela do Mundo. 1 bloco curado = 1 território.
     {"id": "internet_origens", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 73, "world_id": "tecnologia", "block_id": "internet"},
     {"id": "internet_sistemas_operacionais", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 74, "world_id": "tecnologia", "block_id": "internet"},
+    {"id": "internet_gigantes", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 75, "world_id": "tecnologia", "block_id": "internet"},
+    {"id": "internet_cultura", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 76, "world_id": "tecnologia", "block_id": "internet"},
+    {"id": "internet_futuro", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 77, "world_id": "tecnologia", "block_id": "internet"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à

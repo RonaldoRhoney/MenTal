@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "bloco": "mundo_da_internet",
+    "numero_bloco": 3,
+    "tema_bloco": "Os Gigantes da Internet",
+    "desafio": 4,
+    "tema_desafio": "Netflix e a Revolução do Streaming",
+    "nivel_dificuldade": "Media",
+    "total_perguntas": 20,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "saiba_mais": "Curiosidade: antes de fundar a Netflix, Reed Hastings serviu no Corpo da Paz como professor de matemática do ensino médio na Suazilândia (hoje Essuatíni), na África — uma experiência bem distante do mundo da tecnologia, mas que antecedeu uma das trajetórias mais influentes da história do entretenimento digital.",
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que data exata de 1997 a Netflix foi oficialmente fundada?",
+      "opcoes": [
+        "29 de agosto de 1997",
+        "16 de janeiro de 2007",
+        "25 de fevereiro de 2007",
+        "1º de janeiro de 1997"
+      ],
+      "resposta_correta": "29 de agosto de 1997"
+    },
+    {
+      "n": 2,
+      "pergunta": "Segundo o relato mais detalhado da origem da empresa, Reed Hastings desconhecia inicialmente a existência de qual formato de mídia?",
+      "opcoes": [
+        "O DVD",
+        "O videocassete (VHS)",
+        "O CD de música",
+        "O Blu-ray"
+      ],
+      "resposta_correta": "O DVD"
+    },
+    {
+      "n": 3,
+      "pergunta": "Como Hastings testou se a ideia de enviar discos pelo correio seria viável, segundo o relato?",
+      "opcoes": [
+        "Comprou alguns discos e os enviou para si mesmo pelo correio",
+        "Contratou uma empresa de consultoria para testar",
+        "Pediu a um amigo para testar em outra cidade",
+        "Fez uma pesquisa de mercado formal antes de qualquer teste"
+      ],
+      "resposta_correta": "Comprou alguns discos e os enviou para si mesmo pelo correio"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em quanto tempo os discos chegaram em perfeitas condições nesse teste inicial?",
+      "opcoes": [
+        "Cerca de 24 horas",
+        "Uma semana",
+        "Um mês",
+        "Alguns minutos"
+      ],
+      "resposta_correta": "Cerca de 24 horas"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano específico a Netflix lançou o Netflix.com, descrito como o primeiro site de aluguel e venda de DVDs?",
+      "opcoes": [
+        "1998",
+        "1997",
+        "2000",
+        "2002"
+      ],
+      "resposta_correta": "1998"
+    },
+    {
+      "n": 6,
+      "pergunta": "Por qual preço por ação a Netflix realizou seu IPO em 2002, sob o código NFLX na Nasdaq?",
+      "opcoes": [
+        "1 dólar por ação",
+        "100 dólares por ação",
+        "10 centavos por ação",
+        "1.000 dólares por ação"
+      ],
+      "resposta_correta": "1 dólar por ação"
+    },
+    {
+      "n": 7,
+      "pergunta": "Que formação acadêmica Reed Hastings obteve na Bowdoin College, em 1983?",
+      "opcoes": [
+        "Bacharelado (BA)",
+        "Doutorado em economia",
+        "Mestrado em administração",
+        "Diploma técnico em eletrônica"
+      ],
+      "resposta_correta": "Bacharelado (BA)"
+    },
+    {
+      "n": 8,
+      "pergunta": "Em qual universidade Reed Hastings obteve seu mestrado em ciência da computação, com foco em inteligência artificial, em 1988?",
+      "opcoes": [
+        "Stanford",
+        "Harvard",
+        "MIT",
+        "Yale"
+      ],
+      "resposta_correta": "Stanford"
+    },
+    {
+      "n": 9,
+      "pergunta": "Entre a graduação e o mestrado, em qual organização de voluntariado internacional Hastings serviu como professor de matemática no ensino médio?",
+      "opcoes": [
+        "Corpo da Paz (Peace Corps), no Suazilândia",
+        "Médicos Sem Fronteiras",
+        "Cruz Vermelha Internacional",
+        "UNICEF"
+      ],
+      "resposta_correta": "Corpo da Paz (Peace Corps), no Suazilândia"
+    },
+    {
+      "n": 10,
+      "pergunta": "Qual empresa de software Reed Hastings fundou antes da Netflix, adquirida pela Rational Software em 1997?",
+      "opcoes": [
+        "Pure Software (ou Pure Atria)",
+        "Netscape",
+        "Yahoo",
+        "AOL"
+      ],
+      "resposta_correta": "Pure Software (ou Pure Atria)"
+    },
+    {
+      "n": 11,
+      "pergunta": "Que tipo de profissão Marc Randolph exercia antes de cofundar a Netflix, segundo uma descrição de sua trajetória?",
+      "opcoes": [
+        "Executivo de marketing",
+        "Advogado corporativo",
+        "Professor universitário",
+        "Engenheiro mecânico"
+      ],
+      "resposta_correta": "Executivo de marketing"
+    },
+    {
+      "n": 12,
+      "pergunta": "Até que ano Marc Randolph permaneceu no conselho de administração da Netflix, antes de se aposentar da empresa?",
+      "opcoes": [
+        "2003",
+        "1997",
+        "2007",
+        "2013"
+      ],
+      "resposta_correta": "2003"
+    },
+    {
+      "n": 13,
+      "pergunta": "Quantos assinantes a Netflix já tinha alcançado em 2006, um ano antes do lançamento do streaming?",
+      "opcoes": [
+        "5 milhões",
+        "1 milhão",
+        "100 mil",
+        "50 milhões"
+      ],
+      "resposta_correta": "5 milhões"
+    },
+    {
+      "n": 14,
+      "pergunta": "Como se chamava o recurso de streaming lançado pela Netflix em janeiro de 2007?",
+      "opcoes": [
+        "'Watch Now'",
+        "'Netflix Live'",
+        "'StreamPlay'",
+        "'InstantView'"
+      ],
+      "resposta_correta": "'Watch Now'"
+    },
+    {
+      "n": 15,
+      "pergunta": "Em que ano específico a Netflix lançou a funcionalidade de perfis (profiles), permitindo múltiplas contas dentro de uma assinatura?",
+      "opcoes": [
+        "2005",
+        "1997",
+        "2007",
+        "2000"
+      ],
+      "resposta_correta": "2005"
+    },
+    {
+      "n": 16,
+      "pergunta": "Reed Hastings atualmente atua como filantropo educacional, participando de qual órgão relacionado à educação pública?",
+      "opcoes": [
+        "Conselho Estadual de Educação da Califórnia",
+        "Ministério da Educação dos EUA",
+        "Conselho de Harvard",
+        "Fundação Nacional de Ciências"
+      ],
+      "resposta_correta": "Conselho Estadual de Educação da Califórnia"
+    },
+    {
+      "n": 17,
+      "pergunta": "Qual competidor tradicional de locação física é frequentemente citado em comparação com a ausência de multas por atraso da Netflix?",
+      "opcoes": [
+        "Blockbuster",
+        "Best Buy",
+        "Toys 'R' Us",
+        "Circuit City"
+      ],
+      "resposta_correta": "Blockbuster"
+    },
+    {
+      "n": 18,
+      "pergunta": "Segundo uma retrospectiva, quais desafios a Netflix enfrentou ao investir pesadamente em conteúdo original e expansão internacional?",
+      "opcoes": [
+        "Acúmulo de grandes quantidades de dívida",
+        "Nenhum desafio relevante foi enfrentado",
+        "Proibição judicial em vários países",
+        "Falta total de conteúdo disponível"
+      ],
+      "resposta_correta": "Acúmulo de grandes quantidades de dívida"
+    },
+    {
+      "n": 19,
+      "pergunta": "Aproximadamente quantos anos se passaram entre a fundação da Netflix (1997) e o lançamento do streaming (2007)?",
+      "opcoes": [
+        "Dez anos",
+        "Um ano",
+        "Vinte anos",
+        "Cinco anos"
+      ],
+      "resposta_correta": "Dez anos"
+    },
+    {
+      "n": 20,
+      "pergunta": "Segundo uma retrospectiva, o modelo de negócio inicial de aluguel de DVDs pelo correio funcionava especialmente bem para qual tipo de consumidor?",
+      "opcoes": [
+        "Quem não tinha uma locadora de vídeo por perto",
+        "Apenas moradores de grandes centros urbanos",
+        "Exclusivamente famílias com renda muito alta",
+        "Somente estudantes universitários"
+      ],
+      "resposta_correta": "Quem não tinha uma locadora de vídeo por perto"
+    }
+  ]
+}
