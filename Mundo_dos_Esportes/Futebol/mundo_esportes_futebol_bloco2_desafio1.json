@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 2,
+    "tema_bloco": "Grandes Nomes e Recordes",
+    "desafio": 1,
+    "tema_desafio": "Pelé — O Rei do Futebol",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual é o nome de batismo de Pelé?",
+      "opcoes": [
+        "Edson Arantes do Nascimento",
+        "Edson Cholbi Nascimento",
+        "Arantes Edson do Nascimento",
+        "Edson do Nascimento Arantes"
+      ],
+      "resposta_correta": "Edson Arantes do Nascimento"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual cidade brasileira Pelé nasceu?",
+      "opcoes": [
+        "Três Corações, Minas Gerais",
+        "Santos, São Paulo",
+        "Rio de Janeiro",
+        "Bauru, São Paulo"
+      ],
+      "resposta_correta": "Três Corações, Minas Gerais"
+    },
+    {
+      "n": 3,
+      "pergunta": "Por qual único clube brasileiro Pelé jogou ao longo de quase toda sua carreira?",
+      "opcoes": [
+        "Santos",
+        "Corinthians",
+        "Flamengo",
+        "São Paulo"
+      ],
+      "resposta_correta": "Santos"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quantas Copas do Mundo Pelé conquistou com a seleção brasileira, um recorde nunca igualado?",
+      "opcoes": [
+        "Três (1958, 1962 e 1970)",
+        "Duas (1958 e 1962)",
+        "Quatro",
+        "Uma"
+      ],
+      "resposta_correta": "Três (1958, 1962 e 1970)"
+    },
+    {
+      "n": 5,
+      "pergunta": "Para qual clube dos Estados Unidos Pelé se transferiu no fim de sua carreira?",
+      "opcoes": [
+        "New York Cosmos",
+        "LA Galaxy",
+        "Chicago Fire",
+        "Inter Miami"
+      ],
+      "resposta_correta": "New York Cosmos"
+    }
+  ]
+}

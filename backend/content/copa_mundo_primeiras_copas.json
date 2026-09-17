@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi realizada a primeira Copa do Mundo da história, em 1930?",
+    "options": [
+      "Uruguai",
+      "Brasil",
+      "Itália",
+      "França"
+    ],
+    "correct_answer": "Uruguai",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 1930 no Uruguai'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Por que o Uruguai foi escolhido como sede dessa primeira edição?",
+    "options": [
+      "Para celebrar o centenário de sua independência, além de ser bicampeão olímpico de futebol",
+      "Por ser o único país que se candidatou",
+      "Por sorteio entre os países-membros da FIFA",
+      "Por ter o maior estádio do mundo na época"
+    ],
+    "correct_answer": "Para celebrar o centenário de sua independência, além de ser bicampeão olímpico de futebol",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 1930 no Uruguai'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção foi a campeã dessa primeira Copa do Mundo?",
+    "options": [
+      "Uruguai",
+      "Argentina",
+      "Brasil",
+      "França"
+    ],
+    "correct_answer": "Uruguai",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 1930 no Uruguai'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção o Uruguai venceu a final da Copa de 1930?",
+    "options": [
+      "Argentina",
+      "Brasil",
+      "França",
+      "México"
+    ],
+    "correct_answer": "Argentina",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 1930 no Uruguai'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Quantas seleções participaram dessa primeira Copa do Mundo?",
+    "options": [
+      "13",
+      "32",
+      "24",
+      "4"
+    ],
+    "correct_answer": "13",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 1930 no Uruguai'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção foi bicampeã mundial nas Copas de 1934 e 1938?",
+    "options": [
+      "Itália",
+      "Uruguai",
+      "Brasil",
+      "Alemanha"
+    ],
+    "correct_answer": "Itália",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Copas de 1934 e 1938'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual líder político italiano usou a Copa de 1934, sediada em seu país, como ferramenta de propaganda de seu regime?",
+    "options": [
+      "Benito Mussolini",
+      "Adolf Hitler",
+      "Jules Rimet",
+      "Vittorio Pozzo"
+    ],
+    "correct_answer": "Benito Mussolini",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Copas de 1934 e 1938'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção não pôde participar da Copa de 1938, na França, por causa de uma guerra civil em seu próprio país?",
+    "options": [
+      "Espanha",
+      "Áustria",
+      "Alemanha",
+      "Portugal"
+    ],
+    "correct_answer": "Espanha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Copas de 1934 e 1938'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção a Itália venceu a final da Copa de 1938?",
+    "options": [
+      "Hungria",
+      "Brasil",
+      "França",
+      "Tchecoslováquia"
+    ],
+    "correct_answer": "Hungria",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Copas de 1934 e 1938'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual jogador brasileiro se destacou na Copa de 1938, tornando-se artilheiro da competição?",
+    "options": [
+      "Leônidas da Silva",
+      "Pelé",
+      "Garrincha",
+      "Zico"
+    ],
+    "correct_answer": "Leônidas da Silva",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Copas de 1934 e 1938'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Como ficou conhecida a derrota do Brasil para o Uruguai na final da Copa do Mundo de 1950?",
+    "options": [
+      "Maracanazo",
+      "Copa da Zebra",
+      "Tragédia do Rio",
+      "Final Fatídica"
+    ],
+    "correct_answer": "Maracanazo",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Maracanazo — Copa de 1950 no Brasil'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Em qual estádio, recém-construído para a ocasião, foi disputada essa partida?",
+    "options": [
+      "Maracanã",
+      "Wembley",
+      "Centenário",
+      "Camp Nou"
+    ],
+    "correct_answer": "Maracanã",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Maracanazo — Copa de 1950 no Brasil'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual foi o placar final da partida entre Brasil e Uruguai?",
+    "options": [
+      "2 a 1 para o Uruguai",
+      "1 a 0 para o Brasil",
+      "3 a 2 para o Uruguai",
+      "2 a 2, com pênaltis"
+    ],
+    "correct_answer": "2 a 1 para o Uruguai",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Maracanazo — Copa de 1950 no Brasil'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "O Brasil precisava apenas de qual resultado para ser campeão daquela Copa?",
+    "options": [
+      "Um empate",
+      "Uma vitória por qualquer placar",
+      "Uma vitória por dois gols de diferença",
+      "Não precisava jogar essa partida"
+    ],
+    "correct_answer": "Um empate",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Maracanazo — Copa de 1950 no Brasil'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Quem marcou o gol decisivo da virada uruguaia, tornando-se um nome eternizado nessa história?",
+    "options": [
+      "Alcides Ghiggia",
+      "Juan Schiaffino",
+      "Friaça",
+      "Obdulio Varela"
+    ],
+    "correct_answer": "Alcides Ghiggia",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Maracanazo — Copa de 1950 no Brasil'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi realizada a Copa do Mundo de 1954?",
+    "options": [
+      "Suíça",
+      "Alemanha",
+      "Hungria",
+      "Brasil"
+    ],
+    "correct_answer": "Suíça",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Suíça 1954 e o Milagre de Berna'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção venceu a final de 1954, batizada de 'Milagre de Berna'?",
+    "options": [
+      "Alemanha Ocidental",
+      "Hungria",
+      "Uruguai",
+      "Brasil"
+    ],
+    "correct_answer": "Alemanha Ocidental",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Suíça 1954 e o Milagre de Berna'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção era amplamente favorita ao título de 1954, chegando invicta havia quatro anos, mas acabou vice-campeã?",
+    "options": [
+      "Hungria",
+      "Alemanha",
+      "Uruguai",
+      "Áustria"
+    ],
+    "correct_answer": "Hungria",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Suíça 1954 e o Milagre de Berna'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual craque húngaro, um dos maiores nomes do futebol daquela época, jogou a final mesmo lesionado?",
+    "options": [
+      "Ferenc Puskás",
+      "Sándor Kocsis",
+      "Helmut Rahn",
+      "Fritz Walter"
+    ],
+    "correct_answer": "Ferenc Puskás",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Suíça 1954 e o Milagre de Berna'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "A Copa de 1954 é lembrada até hoje por qual recorde estatístico, nunca mais igualado?",
+    "options": [
+      "A maior média de gols por jogo da história das Copas",
+      "O maior número de seleções participantes",
+      "O menor número de gols já registrado",
+      "A final mais demorada da história"
+    ],
+    "correct_answer": "A maior média de gols por jogo da história das Copas",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Suíça 1954 e o Milagre de Berna'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o Brasil conquistou seu primeiro título de Copa do Mundo?",
+    "options": [
+      "1958",
+      "1950",
+      "1930",
+      "1970"
+    ],
+    "correct_answer": "1958",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Suécia 1958 — A Estreia de Pelé e o Primeiro Título Brasileiro'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Em qual país foi disputada essa Copa?",
+    "options": [
+      "Suécia",
+      "Suíça",
+      "Uruguai",
+      "Itália"
+    ],
+    "correct_answer": "Suécia",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Suécia 1958 — A Estreia de Pelé e o Primeiro Título Brasileiro'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Com quantos anos Pelé disputou e venceu essa Copa, marcando dois gols na final?",
+    "options": [
+      "17 anos",
+      "21 anos",
+      "15 anos",
+      "25 anos"
+    ],
+    "correct_answer": "17 anos",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Suécia 1958 — A Estreia de Pelé e o Primeiro Título Brasileiro'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção o Brasil venceu a final de 1958, pelo placar de 5 a 2?",
+    "options": [
+      "Suécia",
+      "Hungria",
+      "Alemanha",
+      "Uruguai"
+    ],
+    "correct_answer": "Suécia",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Suécia 1958 — A Estreia de Pelé e o Primeiro Título Brasileiro'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "difficulty_level": 1,
+    "prompt": "Qual outro craque brasileiro, conhecido pelo apelido de 'Anjo das Pernas Tortas', também brilhou nessa conquista ao lado de Pelé?",
+    "options": [
+      "Garrincha",
+      "Vavá",
+      "Didi",
+      "Bellini"
+    ],
+    "correct_answer": "Garrincha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Suécia 1958 — A Estreia de Pelé e o Primeiro Título Brasileiro'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  }
+]

@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 1962?",
+    "options": [
+      "Chile",
+      "Suécia",
+      "Uruguai",
+      "Brasil"
+    ],
+    "correct_answer": "Chile",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Chile 1962 e o Bicampeonato Brasileiro'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou o bicampeonato mundial nessa Copa?",
+    "options": [
+      "Brasil",
+      "Uruguai",
+      "Itália",
+      "Argentina"
+    ],
+    "correct_answer": "Brasil",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Chile 1962 e o Bicampeonato Brasileiro'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Qual craque brasileiro se lesionou logo na segunda partida da fase de grupos, desfalcando a seleção pelo restante do torneio?",
+    "options": [
+      "Pelé",
+      "Garrincha",
+      "Didi",
+      "Vavá"
+    ],
+    "correct_answer": "Pelé",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Chile 1962 e o Bicampeonato Brasileiro'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Quem assumiu o protagonismo do time na ausência desse craque, tornando-se o grande destaque da Copa?",
+    "options": [
+      "Garrincha",
+      "Amarildo",
+      "Zagallo",
+      "Djalma Santos"
+    ],
+    "correct_answer": "Garrincha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Chile 1962 e o Bicampeonato Brasileiro'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção o Brasil venceu a final da Copa de 1962?",
+    "options": [
+      "Tchecoslováquia",
+      "Suécia",
+      "Uruguai",
+      "Inglaterra"
+    ],
+    "correct_answer": "Tchecoslováquia",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Chile 1962 e o Bicampeonato Brasileiro'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 1966?",
+    "options": [
+      "Inglaterra",
+      "Alemanha",
+      "Chile",
+      "Suécia"
+    ],
+    "correct_answer": "Inglaterra",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Inglaterra 1966 e o Gol Fantasma'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu único título mundial até hoje nessa edição?",
+    "options": [
+      "Inglaterra",
+      "Alemanha",
+      "Portugal",
+      "Argentina"
+    ],
+    "correct_answer": "Inglaterra",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Inglaterra 1966 e o Gol Fantasma'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção a Inglaterra venceu a polêmica final de 1966, por 4 a 2?",
+    "options": [
+      "Alemanha Ocidental",
+      "Brasil",
+      "Portugal",
+      "Argentina"
+    ],
+    "correct_answer": "Alemanha Ocidental",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Inglaterra 1966 e o Gol Fantasma'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Como ficou conhecido o gol decisivo e controverso marcado por Geoff Hurst na prorrogação daquela final?",
+    "options": [
+      "Gol fantasma",
+      "Gol de placa",
+      "Gol relâmpago",
+      "Gol de ouro"
+    ],
+    "correct_answer": "Gol fantasma",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Inglaterra 1966 e o Gol Fantasma'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Qual craque inglês, principal figura daquela conquista, marcou dois gols na semifinal contra Portugal e faleceu em 2023?",
+    "options": [
+      "Bobby Charlton",
+      "Geoff Hurst",
+      "Bobby Moore",
+      "Martin Peters"
+    ],
+    "correct_answer": "Bobby Charlton",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Inglaterra 1966 e o Gol Fantasma'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 1970?",
+    "options": [
+      "México",
+      "Brasil",
+      "Alemanha",
+      "Chile"
+    ],
+    "correct_answer": "México",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'México 1970 e o Tricampeonato Brasileiro'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Ao vencer essa Copa, o Brasil se tornou o primeiro tricampeão mundial e ganhou definitivamente qual taça?",
+    "options": [
+      "A Taça Jules Rimet",
+      "A Taça FIFA atual",
+      "A Taça Vitória",
+      "A Taça Centenário"
+    ],
+    "correct_answer": "A Taça Jules Rimet",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'México 1970 e o Tricampeonato Brasileiro'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção o Brasil venceu a final de 1970, por 4 a 1?",
+    "options": [
+      "Itália",
+      "Alemanha Ocidental",
+      "Inglaterra",
+      "Uruguai"
+    ],
+    "correct_answer": "Itália",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'México 1970 e o Tricampeonato Brasileiro'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Quem marcou o quarto e último gol dessa final, num lance considerado um dos mais bonitos da história do futebol, após passe de Pelé?",
+    "options": [
+      "Carlos Alberto Torres",
+      "Jairzinho",
+      "Gérson",
+      "Rivellino"
+    ],
+    "correct_answer": "Carlos Alberto Torres",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'México 1970 e o Tricampeonato Brasileiro'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Qual atacante brasileiro conseguiu o feito histórico de marcar gol em todos os jogos que disputou nessa Copa?",
+    "options": [
+      "Jairzinho",
+      "Pelé",
+      "Tostão",
+      "Rivellino"
+    ],
+    "correct_answer": "Jairzinho",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'México 1970 e o Tricampeonato Brasileiro'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 1978, na qual o anfitrião conquistou seu primeiro título mundial?",
+    "options": [
+      "Argentina",
+      "Itália",
+      "Espanha",
+      "Brasil"
+    ],
+    "correct_answer": "Argentina",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Argentina 1978 e Espanha 1982'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção a Argentina venceu a final de 1978, após prorrogação?",
+    "options": [
+      "Holanda",
+      "Alemanha Ocidental",
+      "Brasil",
+      "Itália"
+    ],
+    "correct_answer": "Holanda",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Argentina 1978 e Espanha 1982'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Em qual estádio de Buenos Aires foi disputada essa final de 1978?",
+    "options": [
+      "Monumental de Núñez",
+      "Maracanã",
+      "Azteca",
+      "Wembley"
+    ],
+    "correct_answer": "Monumental de Núñez",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Argentina 1978 e Espanha 1982'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 1982?",
+    "options": [
+      "Espanha",
+      "Argentina",
+      "Itália",
+      "México"
+    ],
+    "correct_answer": "Espanha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Argentina 1978 e Espanha 1982'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu terceiro título mundial na Copa de 1982, disputada na Espanha?",
+    "options": [
+      "Itália",
+      "Alemanha Ocidental",
+      "Brasil",
+      "Argentina"
+    ],
+    "correct_answer": "Itália",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Argentina 1978 e Espanha 1982'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 1990?",
+    "options": [
+      "Itália",
+      "Alemanha",
+      "Espanha",
+      "Estados Unidos"
+    ],
+    "correct_answer": "Itália",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Itália 1990 e o Tetracampeonato Brasileiro em 1994'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu tricampeonato mundial na Copa de 1990, vencendo a Argentina na final?",
+    "options": [
+      "Alemanha Ocidental",
+      "Itália",
+      "Brasil",
+      "Uruguai"
+    ],
+    "correct_answer": "Alemanha Ocidental",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Itália 1990 e o Tetracampeonato Brasileiro em 1994'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 1994, marcando o tetracampeonato brasileiro?",
+    "options": [
+      "Estados Unidos",
+      "Itália",
+      "Alemanha",
+      "México"
+    ],
+    "correct_answer": "Estados Unidos",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Itália 1990 e o Tetracampeonato Brasileiro em 1994'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Como a final de 1994 entre Brasil e Itália foi decidida, após empate em 0 a 0 no tempo normal e na prorrogação?",
+    "options": [
+      "Disputa de pênaltis",
+      "Gol de ouro",
+      "Sorteio",
+      "Novo jogo, em outra data"
+    ],
+    "correct_answer": "Disputa de pênaltis",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Itália 1990 e o Tetracampeonato Brasileiro em 1994'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "difficulty_level": 1,
+    "prompt": "Qual atacante brasileiro foi eleito o melhor jogador da Copa de 1994?",
+    "options": [
+      "Romário",
+      "Bebeto",
+      "Dunga",
+      "Taffarel"
+    ],
+    "correct_answer": "Romário",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Itália 1990 e o Tetracampeonato Brasileiro em 1994'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  }
+]

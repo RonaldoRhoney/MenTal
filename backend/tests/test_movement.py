@@ -292,7 +292,7 @@ def test_previous_cycle_collectible_within_grace_then_expires(client):
 
 def test_movement_cycle_report_fires_once_per_cycle(client, monkeypatch):
     sent_log = []
-    monkeypatch.setattr("app.notifications.push.send_push_notification", _fake_sender(sent_log))
+    monkeypatch.setattr("app.push.send_push_notification", _fake_sender(sent_log))
 
     user = str(uuid.uuid4())
     headers = auth_header(user)

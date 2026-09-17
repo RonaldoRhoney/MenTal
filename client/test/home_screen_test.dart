@@ -95,6 +95,19 @@ class _FakeApiClient extends ApiClient {
     submittedSuggestions.add(queryText);
     return {'ok': true};
   }
+
+  // Auditoria de testes pré-lançamento mundial (17/09/2026) — badges
+  // novos da Home (sino de notificações, batalhas pendentes) não
+  // tinham nenhuma cobertura. Configuráveis por teste; default sem
+  // pendência nenhuma (badge escondido).
+  int unreadNotificationCount = 0;
+  List<Map<String, dynamic>> battles = const [];
+
+  @override
+  Future<int> getUnreadNotificationCount() async => unreadNotificationCount;
+
+  @override
+  Future<Map<String, dynamic>> listBattles() async => {'battles': battles};
 }
 
 /// V4 — cor de identidade do bloco Curiosidade Relâmpago (item movido
@@ -372,5 +385,53 @@ void main() {
     expect(find.text('Ajuste'), findsOneWidget);
     expect(find.text('Batalhas'), findsOneWidget);
     expect(find.text('Feedback'), findsOneWidget);
+  });
+
+  // Badge widget guarda o Text do rótulo na árvore mesmo com
+  // isLabelVisible=false (só fica invisível visualmente) — comparar
+  // find.text() diretamente colide com outros números já na tela (ex.:
+  // sequência de dias) e não distingue "escondido" de "não existe".
+  // Este helper acha o Badge certo pelo ícone filho e lê a propriedade
+  // real do widget.
+  Badge _badgeWithIcon(WidgetTester tester, IconData icon) {
+    return tester.widget<Badge>(
+      find.ancestor(of: find.byIcon(icon), matching: find.byType(Badge)).first,
+    );
+  }
+
+  testWidgets('CENTRAL_DE_NOTIFICACOES_HOME_V1.md: sino no canto mostra badge só quando há não lidas', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final withUnread = _FakeApiClient()..unreadNotificationCount = 3;
+    await pumpTall(tester, homeApp(withUnread));
+
+    final badge = _badgeWithIcon(tester, Icons.notifications_rounded);
+    expect(badge.isLabelVisible, isTrue);
+    expect((badge.label as Text).data, '3');
+  });
+
+  testWidgets('sino não mostra badge quando não há notificações não lidas', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(tester, homeApp(_FakeApiClient()));
+
+    final badge = _badgeWithIcon(tester, Icons.notifications_rounded);
+    expect(badge.isLabelVisible, isFalse);
+  });
+
+  testWidgets('BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md: badge de batalhas pendentes conta só status pending com i_answered false', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final client = _FakeApiClient()
+      ..battles = [
+        {'battle_id': '1', 'status': 'pending', 'i_answered': false},
+        {'battle_id': '2', 'status': 'pending', 'i_answered': true},
+        {'battle_id': '3', 'status': 'resolved', 'i_answered': false},
+        {'battle_id': '4', 'status': 'pending', 'i_answered': false},
+      ];
+    await pumpTall(tester, homeApp(client));
+
+    // Só as batalhas #1 e #4 contam (pending E ainda não respondida) —
+    // #2 já foi respondida por mim, #3 não está mais pending.
+    final badge = _badgeWithIcon(tester, Icons.sports_martial_arts_outlined);
+    expect(badge.isLabelVisible, isTrue);
+    expect((badge.label as Text).data, '2');
   });
 }

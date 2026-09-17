@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 4,
+    "tema_bloco": "Presente e Formatos Atuais",
+    "desafio": 5,
+    "tema_desafio": "O Crescimento do Futebol Feminino",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Bloco 4 e o SubMundo Futebol completo (4/4 blocos, 20/20 desafios, 100/100 perguntas)."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano aconteceu a primeira Copa do Mundo de futebol feminino?",
+      "opcoes": [
+        "1991",
+        "1930",
+        "1970",
+        "2007"
+      ],
+      "resposta_correta": "1991"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que país foi disputada essa primeira Copa do Mundo feminina?",
+      "opcoes": [
+        "China",
+        "Estados Unidos",
+        "Brasil",
+        "Suécia"
+      ],
+      "resposta_correta": "China"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual jogadora brasileira é considerada uma das maiores da história do futebol feminino mundial, com múltiplos prêmios de melhor do mundo?",
+      "opcoes": [
+        "Marta",
+        "Cristiane",
+        "Formiga",
+        "Pia Sundhage"
+      ],
+      "resposta_correta": "Marta"
+    },
+    {
+      "n": 4,
+      "pergunta": "Marta detém o recorde de maior artilheira da história das Copas do Mundo, considerando futebol masculino e feminino juntos?",
+      "opcoes": [
+        "Sim, ela é a maior artilheira de Copas do Mundo, independentemente de gênero",
+        "Não, esse recorde pertence a um jogador do futebol masculino",
+        "Não, esse dado não é mencionado em nenhuma fonte",
+        "Sim, mas apenas considerando exclusivamente o futebol feminino"
+      ],
+      "resposta_correta": "Sim, ela é a maior artilheira de Copas do Mundo, independentemente de gênero"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que país está prevista a Copa do Mundo feminina de 2027, marcando a primeira vez que a competição adulta será sediada na América do Sul?",
+      "opcoes": [
+        "Brasil",
+        "Estados Unidos",
+        "China",
+        "Austrália"
+      ],
+      "resposta_correta": "Brasil"
+    }
+  ]
+}

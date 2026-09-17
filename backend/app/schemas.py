@@ -562,7 +562,11 @@ class StatsResponse(BaseModel):
 
 
 class PushTokenRequest(BaseModel):
-    push_token: str
+    # Auditoria de segurança pré-lançamento mundial (17/09/2026, achado
+    # B2): único campo de texto livre do app sem teto — token FCM real
+    # fica bem abaixo de 512 chars, generoso o bastante pra nunca
+    # rejeitar um token legítimo.
+    push_token: str = Field(max_length=512)
 
 
 class NotificationPreferencesRequest(BaseModel):
@@ -573,6 +577,25 @@ class NotificationPreferencesRequest(BaseModel):
 class NotificationPreferencesResponse(BaseModel):
     reengagement_enabled: bool
     social_enabled: bool
+
+
+class NotificationOut(BaseModel):
+    """CENTRAL_DE_NOTIFICACOES_HOME_V1.md — uma linha do histórico. `data`
+    carrega o mesmo payload de navegação do push (chave "navigate")."""
+
+    id: str
+    type: str
+    title: str
+    body: str
+    data: dict | None
+    read: bool
+    created_at: datetime
+
+
+class NotificationsResponse(BaseModel):
+    notifications: list[NotificationOut]
+    unread_count: int
+    next_cursor: str | None
 
 
 class MovementSnapshotOut(BaseModel):

@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 4,
+    "tema_bloco": "Curiosidades e Recordes da Copa",
+    "desafio": 5,
+    "tema_desafio": "A Copa de 2026 e o Bicampeonato Espanhol",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas recentes (julho de 2026). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Bloco 4 e o SubMundo Copa do Mundo completo (4/4 blocos, 20/20 desafios, 100/100 perguntas)."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual seleção conquistou o título da Copa do Mundo de 2026?",
+      "opcoes": [
+        "Espanha",
+        "Argentina",
+        "França",
+        "Brasil"
+      ],
+      "resposta_correta": "Espanha"
+    },
+    {
+      "n": 2,
+      "pergunta": "Contra qual seleção a Espanha venceu a final de 2026, por 1 a 0?",
+      "opcoes": [
+        "Argentina",
+        "França",
+        "Alemanha",
+        "Brasil"
+      ],
+      "resposta_correta": "Argentina"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual estádio, na região de Nova York/Nova Jersey, foi disputada essa final?",
+      "opcoes": [
+        "MetLife Stadium",
+        "Estádio Azteca",
+        "SoFi Stadium",
+        "Mercedes-Benz Stadium"
+      ],
+      "resposta_correta": "MetLife Stadium"
+    },
+    {
+      "n": 4,
+      "pergunta": "Com essa conquista, a Espanha se tornou bicampeã mundial, repetindo qual título anterior?",
+      "opcoes": [
+        "O título de 2010, na África do Sul",
+        "O título de 1998, na França",
+        "O título de 1970, no México",
+        "O título de 2002, no Japão/Coreia"
+      ],
+      "resposta_correta": "O título de 2010, na África do Sul"
+    },
+    {
+      "n": 5,
+      "pergunta": "Com o bicampeonato de 2026, a Espanha se juntou a quais outras duas seleções no grupo de países com exatamente dois títulos mundiais?",
+      "opcoes": [
+        "França e Uruguai",
+        "Alemanha e Itália",
+        "Brasil e Argentina",
+        "Inglaterra e Portugal"
+      ],
+      "resposta_correta": "França e Uruguai"
+    }
+  ]
+}

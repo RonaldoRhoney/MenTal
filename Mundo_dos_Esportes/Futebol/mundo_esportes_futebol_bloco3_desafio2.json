@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 3,
+    "tema_bloco": "Regras, Curiosidades Técnicas e Eventos Marcantes",
+    "desafio": 2,
+    "tema_desafio": "A Chegada do VAR",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "O que significa a sigla VAR, usada no futebol moderno?",
+      "opcoes": [
+        "Video Assistant Referee (Árbitro Assistente de Vídeo)",
+        "Verified Automatic Review",
+        "Video Analysis Rule",
+        "Virtual Arbitration Referee"
+      ],
+      "resposta_correta": "Video Assistant Referee (Árbitro Assistente de Vídeo)"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que Copa do Mundo o VAR foi usado oficialmente pela primeira vez?",
+      "opcoes": [
+        "2018, na Rússia",
+        "2014, no Brasil",
+        "2022, no Catar",
+        "2010, na África do Sul"
+      ],
+      "resposta_correta": "2018, na Rússia"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano a tecnologia do VAR começou a ser testada pela FIFA, antes de sua estreia oficial em Copa?",
+      "opcoes": [
+        "2016",
+        "2010",
+        "2018, sem testes anteriores",
+        "2005"
+      ],
+      "resposta_correta": "2016"
+    },
+    {
+      "n": 4,
+      "pergunta": "Segundo dados divulgados pela FIFA, qual foi o efeito do VAR na taxa de acerto das decisões arbitrais?",
+      "opcoes": [
+        "Aumentou de 93% para 99% de acerto",
+        "Não teve nenhum efeito mensurável",
+        "Diminuiu a taxa de acerto",
+        "Dobrou o tempo médio de cada partida sem melhorar decisões"
+      ],
+      "resposta_correta": "Aumentou de 93% para 99% de acerto"
+    },
+    {
+      "n": 5,
+      "pergunta": "Na Copa do Mundo de 2022, qual novidade tecnológica foi introduzida junto ao VAR, agilizando a marcação de impedimentos?",
+      "opcoes": [
+        "O impedimento semiautomático",
+        "A eliminação total da regra do impedimento",
+        "A substituição do árbitro principal por um robô",
+        "O uso exclusivo de replay em preto e branco"
+      ],
+      "resposta_correta": "O impedimento semiautomático"
+    }
+  ]
+}

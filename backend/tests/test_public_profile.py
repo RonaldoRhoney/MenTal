@@ -313,3 +313,24 @@ def test_send_movement_invite_notifies_recipient_with_deep_link_data(client, mon
     token, title, body, data = sent_notifications[0]
     assert token == "target-device-token"
     assert data == {"navigate": "movement"}
+
+
+def test_public_profile_view_rate_limit_is_enforced(client):
+    """Auditoria de segurança pré-lançamento mundial (17/09/2026,
+    achado M4): leitura de perfil público nunca teve teto — combinado
+    com GET /social/users/search, dava pra coletar dado público de um
+    número arbitrário de contas em sequência."""
+    from app import config
+
+    viewer = str(uuid.uuid4())
+    headers = auth_header(viewer)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    max_calls, _ = config.RATE_LIMIT_PUBLIC_PROFILE_VIEW
+    for i in range(max_calls):
+        resp = client.get(f"/profile/{uuid.uuid4()}/public", headers=headers)
+        assert resp.status_code == 404, f"chamada {i + 1}/{max_calls} deveria passar do rate limit (404 = alvo inexistente, não 429)"
+
+    over_limit = client.get(f"/profile/{uuid.uuid4()}/public", headers=headers)
+    assert over_limit.status_code == 429
+    assert over_limit.json()["error"]["code"] == "RATE_LIMIT_EXCEEDED"

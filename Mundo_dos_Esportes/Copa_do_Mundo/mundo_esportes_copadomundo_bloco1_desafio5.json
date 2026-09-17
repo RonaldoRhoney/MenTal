@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 1,
+    "tema_bloco": "As Primeiras Copas (1930-1958)",
+    "desafio": 5,
+    "tema_desafio": "Suécia 1958 — A Estreia de Pelé e o Primeiro Título Brasileiro",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md. Falecimento de Pele (mencionado em fontes) omitido do conteudo, mantendo foco no feito esportivo de 1958.",
+    "status": "Fecha o Bloco 1 do SubMundo Copa do Mundo (5/5 desafios)."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano o Brasil conquistou seu primeiro título de Copa do Mundo?",
+      "opcoes": [
+        "1958",
+        "1950",
+        "1930",
+        "1970"
+      ],
+      "resposta_correta": "1958"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual país foi disputada essa Copa?",
+      "opcoes": [
+        "Suécia",
+        "Suíça",
+        "Uruguai",
+        "Itália"
+      ],
+      "resposta_correta": "Suécia"
+    },
+    {
+      "n": 3,
+      "pergunta": "Com quantos anos Pelé disputou e venceu essa Copa, marcando dois gols na final?",
+      "opcoes": [
+        "17 anos",
+        "21 anos",
+        "15 anos",
+        "25 anos"
+      ],
+      "resposta_correta": "17 anos"
+    },
+    {
+      "n": 4,
+      "pergunta": "Contra qual seleção o Brasil venceu a final de 1958, pelo placar de 5 a 2?",
+      "opcoes": [
+        "Suécia",
+        "Hungria",
+        "Alemanha",
+        "Uruguai"
+      ],
+      "resposta_correta": "Suécia"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual outro craque brasileiro, conhecido pelo apelido de 'Anjo das Pernas Tortas', também brilhou nessa conquista ao lado de Pelé?",
+      "opcoes": [
+        "Garrincha",
+        "Vavá",
+        "Didi",
+        "Bellini"
+      ],
+      "resposta_correta": "Garrincha"
+    }
+  ]
+}

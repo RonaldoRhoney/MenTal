@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 1,
+    "tema_bloco": "Origens e História do Futebol",
+    "desafio": 5,
+    "tema_desafio": "Curiosidades e Marcos das Primeiras Décadas",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Bloco 1 do SubMundo Futebol (5/5 desafios)."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano a regra do impedimento passou a considerar apenas dois defensores entre o atacante e o gol, em vez de três?",
+      "opcoes": [
+        "1925",
+        "1863",
+        "1990",
+        "1866"
+      ],
+      "resposta_correta": "1925"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual foi o efeito prático dessa mudança na regra do impedimento, segundo registros da época?",
+      "opcoes": [
+        "A média de gols por jogo na liga inglesa aumentou significativamente",
+        "O número de gols diminuiu ainda mais",
+        "Nenhum efeito perceptível foi registrado",
+        "O impedimento foi completamente abolido"
+      ],
+      "resposta_correta": "A média de gols por jogo na liga inglesa aumentou significativamente"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano ocorreu a primeira transmissão de uma Copa do Mundo pelo rádio, gerando grande aglomeração de torcedores no Brasil?",
+      "opcoes": [
+        "1938",
+        "1930",
+        "1970",
+        "1925"
+      ],
+      "resposta_correta": "1938"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem é considerado o criador da narração de futebol 'em cima do lance', em sua primeira transmissão esportiva no Brasil, em 1931?",
+      "opcoes": [
+        "Nicolau Tuma",
+        "Ary Barroso",
+        "Charles Miller",
+        "Teófilo Vasconcelos"
+      ],
+      "resposta_correta": "Nicolau Tuma"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em que ano aconteceu a primeira transmissão de uma Copa do Mundo ao vivo e em cores pela televisão brasileira?",
+      "opcoes": [
+        "1970",
+        "1938",
+        "1930",
+        "1925"
+      ],
+      "resposta_correta": "1970"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from . import config, models, movement, notification_copy, push
+from . import config, models, movement, notification_copy, services
 from .timeutil import naive, utcnow
 
 
@@ -55,7 +55,7 @@ def _check_reengagement(db: Session, now: datetime) -> int:
             title = notification_copy.REENGAGEMENT_48H_TITLE
             body = notification_copy.REENGAGEMENT_48H_BODY_TEMPLATE.format(level=profile.level)
 
-        if push.send_push_notification(db, profile, title, body):
+        if services.create_notification(db, profile, "system", title, body, send_push=True):
             profile.last_reengagement_notified_window = target_window
             sent += 1
 
@@ -99,7 +99,7 @@ def _check_social_overtakes(db: Session, now: datetime) -> int:
             title = notification_copy.SOCIAL_OVERTAKE_GENERIC_TITLE
             body = notification_copy.SOCIAL_OVERTAKE_NAMED_BODY_TEMPLATE.format(nickname=nickname)
 
-            if push.send_push_notification(db, profile, title, body):
+            if services.create_notification(db, profile, "system", title, body, send_push=True):
                 sent += 1
 
         profile.last_known_weekly_rank = idx
@@ -142,7 +142,18 @@ def _check_movement_reports(db: Session, now: datetime) -> int:
 
         title = notification_copy.MOVEMENT_CYCLE_REPORT_TITLE
         body = notification_copy.MOVEMENT_CYCLE_REPORT_BODY_TEMPLATE.format(steps=cycle.steps_collected)
-        if push.send_push_notification(db, profile, title, body):
+        # Auditoria de segurança pré-lançamento mundial (17/09/2026):
+        # este disparador ignorava notif_social_enabled — usuário que
+        # desligava notificações em Configurações continuava recebendo
+        # o relatório de ciclo. Mesmo toggle já usado pra Batalha/
+        # Torcida/convite de Movimento (create_notification em
+        # services.py), única preferência que existe além de
+        # reengajamento 24h/48h.
+        if services.create_notification(
+            db, profile, "movement_report", title, body,
+            data={"navigate": "movement"},
+            send_push=profile.notif_social_enabled,
+        ):
             cycle.report_sent = True
             sent += 1
 
@@ -173,11 +184,22 @@ def _check_movement_activation_invite(db: Session, now: datetime) -> int:
     )
 
     for profile in profiles:
-        if push.send_push_notification(
+        # Auditoria de segurança pré-lançamento mundial (17/09/2026):
+        # este disparador ignorava qualquer preferência — usuário que
+        # desligava "Lembretes diários" continuava recebendo o convite
+        # de Movimento toda manhã. notif_reengagement_enabled é o
+        # encaixe certo (convite não-solicitado pra voltar a usar uma
+        # feature, mesmo espírito dos lembretes 24h/48h), não
+        # notif_social_enabled (que é sobre eventos de OUTROS
+        # jogadores).
+        if services.create_notification(
             db,
             profile,
+            "movement_activation_invite",
             notification_copy.MOVEMENT_ACTIVATION_INVITE_TITLE,
             notification_copy.MOVEMENT_ACTIVATION_INVITE_BODY,
+            data={"navigate": "movement"},
+            send_push=profile.notif_reengagement_enabled,
         ):
             sent += 1
 

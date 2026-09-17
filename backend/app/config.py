@@ -389,6 +389,14 @@ REVIEW_REATTEMPT_MAX_AGE_HOURS = 6
 RATE_LIMIT_ANSWER_SUBMIT = (30, 60.0)
 RATE_LIMIT_REATTEMPT = (10, 60.0)
 RATE_LIMIT_SEARCH = (20, 60.0)
+# Auditoria de segurança pré-lançamento mundial (17/09/2026, achado
+# M4): busca de usuário por nome e leitura de perfil público nunca
+# tiveram teto — dava pra varrer prefixos automaticamente e coletar
+# user_id/nome real/foto/nível em massa. Mesma janela de RATE_LIMIT_
+# SEARCH (busca de conteúdo), generosa o bastante pro uso normal (um
+# usuário digitando/corrigindo um nome).
+RATE_LIMIT_USER_SEARCH = (20, 60.0)
+RATE_LIMIT_PUBLIC_PROFILE_VIEW = (30, 60.0)
 RATE_LIMIT_HINT = (30, 60.0)
 RATE_LIMIT_BATTLE_CREATE = (10, 60.0)
 RATE_LIMIT_BATTLE_MY_CHALLENGE = (20, 60.0)
@@ -400,6 +408,15 @@ RATE_LIMIT_LEARNING_PAUSE_COMPLETE = (10, 60.0)
 # flood de denúncia contra um alvo, ou de solicitações de follow.
 RATE_LIMIT_REPORT = (10, 60.0)
 RATE_LIMIT_FOLLOW = (30, 60.0)
+# Auditoria de segurança pré-lançamento mundial (17/09/2026): pedido de
+# amizade por user_id (busca por nome) nunca teve limite — diferente de
+# Torcida/Batalha/convite de Movimento, que já tinham teto diário por
+# alvo. Sem isso, um usuário podia varrer resultados de busca e
+# disparar pedido (cada um gera push pro alvo) pra um número
+# arbitrário de estranhos em sequência. Mesma janela de FOLLOW acima,
+# ação de mesma natureza (social, sem aceite prévio necessário pra
+# notificar o alvo).
+RATE_LIMIT_FRIEND_REQUEST = (30, 60.0)
 
 TORCIDA_DAILY_LIMIT_PER_TARGET = 10
 TORCIDA_REACTION_TYPES = ("vibracao", "balao", "coracao", "joinha")
@@ -437,6 +454,14 @@ FEED_STREAK_MILESTONES = (30, 60, 100)
 
 FEED_LIST_DEFAULT_LIMIT = 20
 FEED_LIST_MAX_LIMIT = 50
+
+# CENTRAL_DE_NOTIFICACOES_HOME_V1.md §3 — "prazo técnico razoável (ex.:
+# 30 dias)", proposto por Claude Code e implementado exatamente como
+# sugerido no próprio documento; ajustável aqui se Rhoney pedir outro
+# valor depois de ver em produção.
+NOTIFICATION_RETENTION_DAYS = 30
+NOTIFICATION_LIST_DEFAULT_LIMIT = 20
+NOTIFICATION_LIST_MAX_LIMIT = 50
 
 # MentalCoins — moeda de prestígio semanal (MentalCoins/MENTALCOINS_V1.md).
 # Ciclo: segunda-feira 08:00 até domingo 23:59:59, horário de Brasília.

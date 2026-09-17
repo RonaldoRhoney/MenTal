@@ -50,6 +50,21 @@ def _run_movement_invite_job() -> None:
             logger.exception("Falha no convite diário de ativação de Movimento")
 
 
+def _run_notifications_purge_job() -> None:
+    # Auditoria de segurança pré-lançamento mundial (17/09/2026, achado
+    # A2): CENTRAL_DE_NOTIFICACOES_HOME_V1.md §3 promete retenção de 30
+    # dias — antes disso só existia como filtro de leitura, nada
+    # apagava de fato.
+    from . import services
+
+    with SessionLocal() as db:
+        try:
+            deleted = services.purge_old_notifications(db)
+            logger.info("Limpeza de notificações além da retenção: %s linha(s) removida(s)", deleted)
+        except Exception:
+            logger.exception("Falha na limpeza diária de notificações")
+
+
 def start_scheduler() -> None:
     global _scheduler
     if not config.NOTIFICATION_SCHEDULER_ENABLED and not config.MENTALCOINS_SCHEDULER_ENABLED:
@@ -68,6 +83,12 @@ def start_scheduler() -> None:
             _run_movement_invite_job, "cron", hour=7, minute=30, timezone=config.MENTALCOINS_TIMEZONE
         )
         logger.info("Agendador de convite de Movimento iniciado (diário 07:30 %s)", config.MENTALCOINS_TIMEZONE)
+        # Limpeza de notificações além da retenção (achado A2) — horário
+        # de baixo tráfego, mesmo fuso dos outros crons diários.
+        _scheduler.add_job(
+            _run_notifications_purge_job, "cron", hour=4, minute=0, timezone=config.MENTALCOINS_TIMEZONE
+        )
+        logger.info("Agendador de limpeza de notificações iniciado (diário 04:00 %s)", config.MENTALCOINS_TIMEZONE)
     if config.MENTALCOINS_SCHEDULER_ENABLED:
         # MentalCoins/MENTALCOINS_V1.md §2: fecha domingo 23:59:59, apura e
         # distribui na segunda-feira 08:00, horário de Brasília.

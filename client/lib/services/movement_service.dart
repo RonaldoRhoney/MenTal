@@ -310,4 +310,39 @@ class MovementService {
       }
     } catch (_) {}
   }
+
+  // Mesma proporção de app/config.py MOVEMENT_STEPS_PER_MENTALCOIN/
+  // MOVEMENT_MENTALCOINS_PER_MILESTONE (backend é a única autoridade
+  // sobre a recompensa REAL — este valor só formata a prévia exibida
+  // aqui, nunca credita nada por conta própria). Conversão flat/linear,
+  // diferente do XP (que tem faixas — MOVEMENT_STEP_TIERS — por isso o
+  // XP da prévia usa sempre o xp_awarded que já veio do backend, nunca
+  // um cálculo local).
+  static const int _kStepsPerMentalCoin = 1000;
+  static const int _kMentalCoinsPerMilestone = 5;
+
+  /// NOTIFICACAO_MOVIMENTO_PREVIA_V1.md — atualiza o texto da notificação
+  /// persistente do Movimento com a prévia do que já foi ganho HOJE
+  /// (stepsCollected/xpAwarded vêm sempre de MovementCycle.current_cycle,
+  /// já creditado pelo backend — nunca do delta local ainda não
+  /// coletado, pra nunca mostrar um número que pode não virar XP/
+  /// MentalCoins de verdade). Chamado nos mesmos pontos que já buscam
+  /// GET /movement/status (Home e tela Movimento) — sem chamada de rede
+  /// extra só pra isso. Sem-efeito se o serviço não estiver rodando
+  /// (Movimento desativado, ou plataforma sem foreground service).
+  Future<void> updateNotificationPreview({required int stepsCollected, required int xpAwarded}) async {
+    try {
+      if (!await FlutterForegroundTask.isRunningService) return;
+      final mentalCoinsToday = (stepsCollected ~/ _kStepsPerMentalCoin) * _kMentalCoinsPerMilestone;
+      await FlutterForegroundTask.updateService(
+        notificationTitle: 'MENTAL — Movimento ativo',
+        // Pedido de Rhoney (14/09/2026): passos também visíveis, não só
+        // os dois contadores derivados.
+        notificationText: '🚶 $stepsCollected passos · 🪙 $mentalCoinsToday MentalCoins · ⚡ $xpAwarded XP hoje',
+      );
+    } catch (_) {
+      // Mesmo princípio de startForegroundTracking/stopForegroundTracking
+      // acima — a prévia é só reforço visual, nunca pode derrubar o app.
+    }
+  }
 }

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 2,
+    "tema_bloco": "As Copas de 1962 a 1994",
+    "desafio": 3,
+    "tema_desafio": "México 1970 e o Tricampeonato Brasileiro",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 1970?",
+      "opcoes": [
+        "México",
+        "Brasil",
+        "Alemanha",
+        "Chile"
+      ],
+      "resposta_correta": "México"
+    },
+    {
+      "n": 2,
+      "pergunta": "Ao vencer essa Copa, o Brasil se tornou o primeiro tricampeão mundial e ganhou definitivamente qual taça?",
+      "opcoes": [
+        "A Taça Jules Rimet",
+        "A Taça FIFA atual",
+        "A Taça Vitória",
+        "A Taça Centenário"
+      ],
+      "resposta_correta": "A Taça Jules Rimet"
+    },
+    {
+      "n": 3,
+      "pergunta": "Contra qual seleção o Brasil venceu a final de 1970, por 4 a 1?",
+      "opcoes": [
+        "Itália",
+        "Alemanha Ocidental",
+        "Inglaterra",
+        "Uruguai"
+      ],
+      "resposta_correta": "Itália"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem marcou o quarto e último gol dessa final, num lance considerado um dos mais bonitos da história do futebol, após passe de Pelé?",
+      "opcoes": [
+        "Carlos Alberto Torres",
+        "Jairzinho",
+        "Gérson",
+        "Rivellino"
+      ],
+      "resposta_correta": "Carlos Alberto Torres"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual atacante brasileiro conseguiu o feito histórico de marcar gol em todos os jogos que disputou nessa Copa?",
+      "opcoes": [
+        "Jairzinho",
+        "Pelé",
+        "Tostão",
+        "Rivellino"
+      ],
+      "resposta_correta": "Jairzinho"
+    }
+  ]
+}

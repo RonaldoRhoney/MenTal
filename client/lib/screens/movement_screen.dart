@@ -155,6 +155,10 @@ class _MovementScreenState extends State<MovementScreen> {
           .toList();
       if (_movementEnabled && _currentCycle != null) {
         final cycleId = _currentCycle!['id'] as String;
+        unawaited(MovementService.instance.updateNotificationPreview(
+          stepsCollected: _currentCycle!['steps_collected'] as int,
+          xpAwarded: _currentCycle!['xp_awarded'] as int,
+        ));
         await MovementService.instance.ensureBaselineFor(cycleId);
         final cachedLast = await MovementService.instance.lastKnownRawSteps();
         if (cachedLast != null) {
@@ -252,6 +256,10 @@ class _MovementScreenState extends State<MovementScreen> {
       final result = await widget.client.collectMovementSteps(steps: localDelta, cycleId: cycleId);
       final updatedCycle = result['cycle'] as Map<String, dynamic>;
       await _handleCollectResponse(result, cycleId, updatedCycle['steps_collected'] as int);
+      unawaited(MovementService.instance.updateNotificationPreview(
+        stepsCollected: updatedCycle['steps_collected'] as int,
+        xpAwarded: updatedCycle['xp_awarded'] as int,
+      ));
       if (mounted) {
         setState(() {
           _currentCycle = updatedCycle;

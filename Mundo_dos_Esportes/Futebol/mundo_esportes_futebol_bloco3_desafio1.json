@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 3,
+    "tema_bloco": "Regras, Curiosidades Técnicas e Eventos Marcantes",
+    "desafio": 1,
+    "tema_desafio": "A Origem dos Cartões Amarelo e Vermelho",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem é creditado por criar o sistema de cartões amarelo e vermelho no futebol?",
+      "opcoes": [
+        "Ken Aston",
+        "Antonio Rattín",
+        "Jules Rimet",
+        "Ebenezer Cobb Morley"
+      ],
+      "resposta_correta": "Ken Aston"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual objeto do cotidiano Ken Aston se inspirou para criar os cartões coloridos?",
+      "opcoes": [
+        "Um semáforo de trânsito",
+        "Uma bandeira nacional",
+        "Um relógio de parede",
+        "Um jogo de cartas comum"
+      ],
+      "resposta_correta": "Um semáforo de trânsito"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual episódio na Copa do Mundo de 1966 expôs a necessidade de um sistema visual e universal de punição?",
+      "opcoes": [
+        "A expulsão conturbada do argentino Antonio Rattín, que não entendia o árbitro alemão",
+        "Um gol anulado sem explicação clara",
+        "Uma disputa de pênaltis confusa",
+        "A ausência de um árbitro principal na partida"
+      ],
+      "resposta_correta": "A expulsão conturbada do argentino Antonio Rattín, que não entendia o árbitro alemão"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em qual Copa do Mundo os cartões amarelo e vermelho foram oficialmente utilizados pela primeira vez?",
+      "opcoes": [
+        "Copa de 1970, no México",
+        "Copa de 1966, na Inglaterra",
+        "Copa de 1974, na Alemanha",
+        "Copa de 1978, na Argentina"
+      ],
+      "resposta_correta": "Copa de 1970, no México"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual problema prático de comunicação internacional os cartões vieram resolver, segundo relatos históricos?",
+      "opcoes": [
+        "A dificuldade de árbitros e jogadores de países diferentes se entenderem durante decisões disciplinares",
+        "A falta de iluminação nos estádios à noite",
+        "A ausência de um sistema de pontuação claro",
+        "A dificuldade de contar o tempo de jogo"
+      ],
+      "resposta_correta": "A dificuldade de árbitros e jogadores de países diferentes se entenderem durante decisões disciplinares"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 4,
+    "tema_bloco": "Presente e Formatos Atuais",
+    "desafio": 4,
+    "tema_desafio": "O Campeonato Brasileiro",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano foi disputada a primeira edição oficialmente chamada de Campeonato Brasileiro?",
+      "opcoes": [
+        "1971",
+        "1959",
+        "1989",
+        "2003"
+      ],
+      "resposta_correta": "1971"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual clube foi o primeiro campeão do Campeonato Brasileiro, em 1971?",
+      "opcoes": [
+        "Atlético-MG",
+        "Palmeiras",
+        "Santos",
+        "Flamengo"
+      ],
+      "resposta_correta": "Atlético-MG"
+    },
+    {
+      "n": 3,
+      "pergunta": "A partir de que ano o Brasileirão passou a ser disputado no formato de pontos corridos, usado até hoje?",
+      "opcoes": [
+        "2003",
+        "1971",
+        "1989",
+        "1959"
+      ],
+      "resposta_correta": "2003"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual clube é o maior campeão da história do Brasileirão?",
+      "opcoes": [
+        "Palmeiras",
+        "Santos",
+        "Flamengo",
+        "Corinthians"
+      ],
+      "resposta_correta": "Palmeiras"
+    },
+    {
+      "n": 5,
+      "pergunta": "Em quantas rodadas o Campeonato Brasileiro da Série A é disputado atualmente, no formato de turno e returno?",
+      "opcoes": [
+        "38 rodadas",
+        "20 rodadas",
+        "10 rodadas",
+        "50 rodadas"
+      ],
+      "resposta_correta": "38 rodadas"
+    }
+  ]
+}

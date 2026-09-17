@@ -4,7 +4,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 
-from sqlalchemy import func, select
+from sqlalchemy import delete, func, select, update
 from sqlalchemy.orm import Session
 
 from . import config, mentalcoins, models, notification_copy, push, scoring, supabase_admin
@@ -183,11 +183,52 @@ def pick_difficulty_for(db: Session, user_id: str, territory_id: str) -> int:
         elif avg_mastery < config.ADAPTIVE_DIFFICULTY_DOWN_THRESHOLD:
             current_level -= 1
 
-    return max(config.ADAPTIVE_DIFFICULTY_MIN_LEVEL, min(config.ADAPTIVE_DIFFICULTY_MAX_LEVEL, current_level))
+    current_level = max(config.ADAPTIVE_DIFFICULTY_MIN_LEVEL, min(config.ADAPTIVE_DIFFICULTY_MAX_LEVEL, current_level))
+
+    # CORRECAO_REPETICAO_PERGUNTAS_V1.md — achado de causa raiz
+    # (14/09/2026): territórios "flat" (curadoria num único nível, ex.:
+    # a maioria dos Mundos mais recentes, só difficulty_level=1) não têm
+    # conteúdo no nível pro qual a dificuldade adaptativa sobe quando o
+    # jogador vai bem (ex.: nível 2 sem nenhum desafio curado). Isso
+    # fazia GET /challenges/next cair no fallback "território inteiro,
+    # qualquer dificuldade" (routers/challenges.py) MAS gravar o
+    # progresso do lote (ChallengeBatchProgress) na chave do nível
+    # inexistente — cada subida de nível abria uma fila NOVA sobre o
+    # MESMO conjunto de perguntas, reembaralhando do zero e repetindo
+    # itens já vistos minutos antes. Trava aqui, na origem: nunca
+    # recomenda um nível sem conteúdo curado pra este território — cai
+    # pro nível curado mais próximo (o maior <= o calculado, ou o menor
+    # disponível se todos forem maiores), mantendo a MESMA chave de lote
+    # estável durante toda a sessão.
+    available_levels = sorted(
+        db.execute(
+            select(models.Challenge.difficulty_level)
+            .where(models.Challenge.territory_id == territory_id)
+            .distinct()
+        ).scalars().all()
+    )
+    if available_levels and current_level not in available_levels:
+        not_above = [level for level in available_levels if level <= current_level]
+        current_level = max(not_above) if not_above else min(available_levels)
+
+    return current_level
 
 
-def get_or_create_profile(db: Session, user_id: str) -> models.Profile:
-    profile = db.get(models.Profile, user_id)
+def get_or_create_profile(db: Session, user_id: str, for_update: bool = False) -> models.Profile:
+    """
+    `for_update=True` (auditoria de segurança pré-lançamento mundial,
+    17/09/2026, achado A3) trava a linha (`SELECT ... FOR UPDATE`) até o
+    fim da transação — usado no ÚNICO ponto que soma xp_total
+    (routers/challenges.py::submit_answer), pra fechar a janela de
+    corrida em que duas respostas concorrentes do MESMO usuário liam o
+    mesmo xp_total ANTES de qualquer commit e uma das somas se perdia
+    (lost update). Default False em todo o resto do código — não faz
+    sentido travar a linha num GET, e travar sem necessidade só cria
+    contenção à toa. No SQLite (testes) o dialeto ignora a cláusula
+    silenciosamente, sem erro — o lock só existe de fato no Postgres de
+    produção.
+    """
+    profile = db.get(models.Profile, user_id, with_for_update=True) if for_update else db.get(models.Profile, user_id)
     if profile is None:
         profile = models.Profile(user_id=user_id, nickname=generate_anonymous_nickname())
         db.add(profile)
@@ -956,6 +997,164 @@ def pick_two_distinct_challenges(db: Session, territory_id: str, difficulty_leve
     return a, b
 
 
+def create_notification(
+    db: Session,
+    profile: "models.Profile",
+    notif_type: str,
+    title: str,
+    body: str,
+    data: dict | None = None,
+    send_push: bool = False,
+) -> bool:
+    """
+    Retorna se o push foi de fato ENVIADO (False se send_push=False ou se
+    o envio falhou) — preserva, pros chamadores que dependem disso (ex.:
+    `_check_reengagement`, que só marca a janela como notificada quando
+    a entrega realmente aconteceu, permitindo nova tentativa senão), o
+    mesmo contrato que `if push.send_push_notification(...):` já tinha
+    antes desta função existir. A linha da Central é criada de qualquer
+    forma, independente do retorno.
+
+    CENTRAL_DE_NOTIFICACOES_HOME_V1.md — ponto único que alimenta a
+    Central (mental.notifications) E, opcionalmente, dispara o push —
+    substitui as chamadas diretas e isoladas a push.send_push_notification
+    que existiam espalhadas por services.py/notifications.py (doc §4:
+    "unificar as origens de notificação já existentes... em vez de cada
+    uma ter sua lógica isolada").
+
+    A linha da Central é criada SEMPRE, incondicionalmente — mesmo que
+    `send_push` seja False (preferência de push desligada, ou sem token).
+    A Central não depende do FCM: é consultada só quando o usuário abre
+    o app e toca no sino, então continua útil mesmo pra quem desativou
+    push ou não tinha token no momento do evento (doc §1: "mesmo que já
+    tenha dispensado o push original ou estivesse com o app fechado").
+
+    `send_push` é decidido pelo CHAMADOR (mesma condição que cada site já
+    calculava antes, ex.: `profile.notif_social_enabled and
+    profile.push_token`) — nunca reavaliado aqui, pra não duplicar a
+    regra de qual preferência vale pra qual tipo de notificação.
+    """
+    db.add(
+        models.Notification(
+            user_id=profile.user_id,
+            type=notif_type,
+            title=title,
+            body=body,
+            data=data,
+        )
+    )
+    db.commit()
+    if send_push:
+        return push.send_push_notification(db, profile, title, body, data)
+    return False
+
+
+def list_notifications(db: Session, user_id: str, limit: int, before: datetime | None = None) -> list["models.Notification"]:
+    """
+    CENTRAL_DE_NOTIFICACOES_HOME_V1.md §3 — histórico limitado à janela
+    de retenção (config.NOTIFICATION_RETENTION_DAYS), mais recente
+    primeiro, paginado por cursor (mesmo padrão de list_feed) — mais
+    estável que offset numa tabela que só cresce.
+    """
+    retention_cutoff = utcnow() - timedelta(days=config.NOTIFICATION_RETENTION_DAYS)
+    query = select(models.Notification).where(models.Notification.user_id == user_id).where(models.Notification.created_at >= retention_cutoff)
+    if before is not None:
+        query = query.where(models.Notification.created_at < before)
+    query = query.order_by(models.Notification.created_at.desc()).limit(limit)
+    return list(db.execute(query).scalars().all())
+
+
+def count_unread_notifications(db: Session, user_id: str) -> int:
+    retention_cutoff = utcnow() - timedelta(days=config.NOTIFICATION_RETENTION_DAYS)
+    return db.execute(
+        select(func.count())
+        .select_from(models.Notification)
+        .where(models.Notification.user_id == user_id)
+        .where(models.Notification.read_at.is_(None))
+        .where(models.Notification.created_at >= retention_cutoff)
+    ).scalar_one()
+
+
+def mark_notification_read(db: Session, user_id: str, notification_id: str) -> "models.Notification | None":
+    notification = db.get(models.Notification, notification_id)
+    if notification is None or notification.user_id != user_id:
+        return None
+    if notification.read_at is None:
+        notification.read_at = utcnow()
+        db.commit()
+    return notification
+
+
+def mark_all_notifications_read(db: Session, user_id: str) -> int:
+    result = db.execute(
+        update(models.Notification)
+        .where(models.Notification.user_id == user_id)
+        .where(models.Notification.read_at.is_(None))
+        .values(read_at=utcnow())
+    )
+    db.commit()
+    return result.rowcount
+
+
+def purge_old_notifications(db: Session) -> int:
+    """
+    CENTRAL_DE_NOTIFICACOES_HOME_V1.md §3 — a retenção de 30 dias era só
+    um filtro de LEITURA (list_notifications/count_unread_notifications
+    já ignoram linhas fora da janela), nada apagava de fato: achado da
+    auditoria de segurança pré-lançamento mundial (17/09/2026, A2). Sem
+    isso, `mental.notifications` cresce sem limite pra sempre — inclui
+    `_check_movement_activation_invite` gravando 1 linha por dia pra
+    TODO usuário com Movimento desligado, então o crescimento não é nem
+    lento. Chamado por um job diário dedicado (app/scheduler.py), nunca
+    pelo job de 30 em 30 minutos.
+    """
+    retention_cutoff = utcnow() - timedelta(days=config.NOTIFICATION_RETENTION_DAYS)
+    result = db.execute(delete(models.Notification).where(models.Notification.created_at < retention_cutoff))
+    db.commit()
+    return result.rowcount
+
+
+def notify_friend_request_received(db: Session, requester_user_id: str, target_user_id: str) -> None:
+    """
+    CENTRAL_DE_NOTIFICACOES_HOME_V1.md — pedido de amizade nunca teve
+    nenhum aviso antes (nem push, nem registro): quem recebia só
+    descobria abrindo a tela de Amigos por conta própria. Vive aqui (não
+    em social.py) porque social.py é deliberadamente livre de qualquer
+    dependência de services.py (ver cabeçalho do módulo, extração B4)
+    para nunca criar import circular — o router chama esta função
+    depois de social.request_friendship confirmar que um pedido novo de
+    verdade foi criado (nunca em cima de um retorno None de duplicata/
+    bloqueio).
+    """
+    target_profile = db.get(models.Profile, target_user_id)
+    requester_profile = db.get(models.Profile, requester_user_id)
+    if target_profile is None:
+        return
+    nickname = (requester_profile.real_name or requester_profile.nickname) if requester_profile else "Alguém"
+    create_notification(
+        db, target_profile, "friend_request",
+        notification_copy.FRIEND_REQUEST_RECEIVED_TITLE,
+        notification_copy.FRIEND_REQUEST_RECEIVED_BODY_TEMPLATE.format(nickname=nickname),
+        data={"navigate": "friends"},
+        send_push=target_profile.notif_social_enabled and bool(target_profile.push_token),
+    )
+
+
+def notify_friend_request_accepted(db: Session, accepter_user_id: str, original_requester_user_id: str) -> None:
+    requester_profile = db.get(models.Profile, original_requester_user_id)
+    accepter_profile = db.get(models.Profile, accepter_user_id)
+    if requester_profile is None:
+        return
+    nickname = (accepter_profile.real_name or accepter_profile.nickname) if accepter_profile else "Alguém"
+    create_notification(
+        db, requester_profile, "friend_accepted",
+        notification_copy.FRIEND_REQUEST_ACCEPTED_TITLE,
+        notification_copy.FRIEND_REQUEST_ACCEPTED_BODY_TEMPLATE.format(nickname=nickname),
+        data={"navigate": "friends"},
+        send_push=requester_profile.notif_social_enabled and bool(requester_profile.push_token),
+    )
+
+
 def create_battle(
     db: Session,
     challenger_user_id: str,
@@ -988,14 +1187,18 @@ def create_battle(
 
     challenger_profile = db.get(models.Profile, challenger_user_id)
     opponent_profile = db.get(models.Profile, opponent_user_id)
-    if opponent_profile and opponent_profile.notif_social_enabled and opponent_profile.push_token:
+    if opponent_profile:
         territory_label = notification_copy.TERRITORY_NAMES.get(territory_id, territory_id)
         title = notification_copy.BATTLE_CHALLENGE_RECEIVED_TITLE
         body = notification_copy.BATTLE_CHALLENGE_RECEIVED_BODY_TEMPLATE.format(
             nickname=(challenger_profile.real_name or challenger_profile.nickname) if challenger_profile else "Um amigo",
             territory=territory_label,
         )
-        push.send_push_notification(db, opponent_profile, title, body)
+        create_notification(
+            db, opponent_profile, "battle_challenge", title, body,
+            data={"navigate": "battles"},
+            send_push=opponent_profile.notif_social_enabled and bool(opponent_profile.push_token),
+        )
 
     return battle
 
@@ -1056,6 +1259,39 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
     else:
         return  # este lado já tinha respondido (reenvio idempotente do attempt) — não reprocessa
 
+    # BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md §2.2 — "notificação push
+    # explícita quando o adversário joga sua rodada, convidando o
+    # usuário a 'contra-responder agora'". Só dispara quando é o
+    # OPONENTE quem acabou de responder e o desafiante ainda não jogou:
+    # o caminho comum (desafiante cria a batalha e responde a própria
+    # rodada em seguida, ver friends_screen.dart) já notifica o
+    # oponente na criação (BATTLE_CHALLENGE_RECEIVED, create_battle) —
+    # notificar de novo aqui duplicaria esse aviso. O caminho raro (o
+    # oponente responde antes do desafiante) é o único em que o
+    # desafiante nunca foi avisado que já é a vez dele — esse é o gap
+    # real que faltava cobrir.
+    if (
+        battle.opponent_user_id == user_id
+        and battle.challenger_is_correct is None
+        and battle.opponent_is_correct is not None
+    ):
+        challenger_profile = db.get(models.Profile, battle.challenger_user_id)
+        opponent_profile = db.get(models.Profile, battle.opponent_user_id)
+        if challenger_profile:
+            territory_label = notification_copy.TERRITORY_NAMES.get(battle.territory_id, battle.territory_id)
+            create_notification(
+                db,
+                challenger_profile,
+                "battle_turn",
+                notification_copy.BATTLE_OPPONENT_ANSWERED_TITLE,
+                notification_copy.BATTLE_OPPONENT_ANSWERED_BODY_TEMPLATE.format(
+                    nickname=(opponent_profile.real_name or opponent_profile.nickname) if opponent_profile else "Seu adversário",
+                    territory=territory_label,
+                ),
+                data={"navigate": "battles"},
+                send_push=challenger_profile.notif_social_enabled and bool(challenger_profile.push_token),
+            )
+
     if battle.challenger_is_correct is not None and battle.opponent_is_correct is not None:
         battle.status = "resolved"
         battle.resolved_at = now
@@ -1112,20 +1348,21 @@ def get_territory_detentor(db: Session, user_id: str, territory_id: str) -> "mod
 
 
 def notify_territory_dethroned(db: Session, new_detentor_profile: "models.Profile", previous_detentor_profile: "models.Profile", territory_id: str) -> None:
-    if not (previous_detentor_profile.notif_social_enabled and previous_detentor_profile.push_token):
-        return
     territory_label = notification_copy.TERRITORY_NAMES.get(territory_id, territory_id)
-    push.send_push_notification(
+    create_notification(
         db,
         previous_detentor_profile,
+        "territory_dethroned",
         notification_copy.TERRITORY_DETENTOR_LOST_TITLE,
         notification_copy.TERRITORY_DETENTOR_LOST_BODY_TEMPLATE.format(nickname=new_detentor_profile.real_name or new_detentor_profile.nickname, territory=territory_label),
+        data={"navigate": "progress"},
+        send_push=previous_detentor_profile.notif_social_enabled and bool(previous_detentor_profile.push_token),
     )
 
 
 def _notify_battle_result(db: Session, challenger_profile: "models.Profile", opponent_profile: "models.Profile", winner_user_id: str | None) -> None:
     for me, other in ((challenger_profile, opponent_profile), (opponent_profile, challenger_profile)):
-        if not (me and me.notif_social_enabled and me.push_token):
+        if not me:
             continue
         other_nickname = (other.real_name or other.nickname) if other else "seu amigo"
         if winner_user_id is None:
@@ -1134,7 +1371,11 @@ def _notify_battle_result(db: Session, challenger_profile: "models.Profile", opp
             title, body = notification_copy.BATTLE_RESULT_WIN_TITLE, notification_copy.BATTLE_RESULT_WIN_BODY_TEMPLATE.format(nickname=other_nickname)
         else:
             title, body = notification_copy.BATTLE_RESULT_LOSS_TITLE, notification_copy.BATTLE_RESULT_LOSS_BODY_TEMPLATE.format(nickname=other_nickname)
-        push.send_push_notification(db, me, title, body)
+        create_notification(
+            db, me, "battle_result", title, body,
+            data={"navigate": "battles"},
+            send_push=me.notif_social_enabled and bool(me.push_token),
+        )
 
 
 def extract_photo_storage_path(stored_value: str) -> str:
@@ -1309,14 +1550,17 @@ def send_torcida(db: Session, from_user_id: str, to_user_id: str, reaction_type:
     db.add(models.TorcidaReaction(from_user_id=from_user_id, to_user_id=to_user_id, reaction_type=reaction_type))
     db.commit()
 
-    if target_profile.notif_social_enabled and target_profile.push_token:
-        from_profile = db.get(models.Profile, from_user_id)
-        emoji = notification_copy.TORCIDA_EMOJI_BY_TYPE.get(reaction_type, "🎉")
-        body = notification_copy.TORCIDA_RECEIVED_BODY_TEMPLATE.format(
-            nickname=(from_profile.real_name or from_profile.nickname) if from_profile else "Alguém",
-            emoji=emoji,
-        )
-        push.send_push_notification(db, target_profile, notification_copy.TORCIDA_RECEIVED_TITLE, body)
+    from_profile = db.get(models.Profile, from_user_id)
+    emoji = notification_copy.TORCIDA_EMOJI_BY_TYPE.get(reaction_type, "🎉")
+    body = notification_copy.TORCIDA_RECEIVED_BODY_TEMPLATE.format(
+        nickname=(from_profile.real_name or from_profile.nickname) if from_profile else "Alguém",
+        emoji=emoji,
+    )
+    create_notification(
+        db, target_profile, "torcida", notification_copy.TORCIDA_RECEIVED_TITLE, body,
+        data={"navigate": "public_profile", "user_id": from_user_id},
+        send_push=target_profile.notif_social_enabled and bool(target_profile.push_token),
+    )
 
     return sent_today + 1
 
@@ -1356,18 +1600,19 @@ def send_movement_invite(db: Session, from_user_id: str, to_user_id: str) -> int
     db.add(models.MovementInvite(from_user_id=from_user_id, to_user_id=to_user_id))
     db.commit()
 
-    if target_profile.notif_social_enabled and target_profile.push_token:
-        from_profile = db.get(models.Profile, from_user_id)
-        body = notification_copy.MOVEMENT_INVITE_RECEIVED_BODY_TEMPLATE.format(
-            nickname=(from_profile.real_name or from_profile.nickname) if from_profile else "Alguém",
-        )
-        push.send_push_notification(
-            db,
-            target_profile,
-            notification_copy.MOVEMENT_INVITE_RECEIVED_TITLE,
-            body,
-            data={"navigate": "movement"},
-        )
+    from_profile = db.get(models.Profile, from_user_id)
+    body = notification_copy.MOVEMENT_INVITE_RECEIVED_BODY_TEMPLATE.format(
+        nickname=(from_profile.real_name or from_profile.nickname) if from_profile else "Alguém",
+    )
+    create_notification(
+        db,
+        target_profile,
+        "movement_invite",
+        notification_copy.MOVEMENT_INVITE_RECEIVED_TITLE,
+        body,
+        data={"navigate": "movement"},
+        send_push=target_profile.notif_social_enabled and bool(target_profile.push_token),
+    )
 
     return sent_today + 1
 

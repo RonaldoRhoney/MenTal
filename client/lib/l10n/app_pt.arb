@@ -160,6 +160,58 @@
   "@territoryTecnologiaFronteira": {
     "description": "Territory display name"
   },
+  "territoryInternetOrigens": "Internet: Origens",
+  "@territoryInternetOrigens": {
+    "description": "Territory display name — SubMundo Internet, ARQUITETURA_SUBMUNDOS_V1.md. Achado desta sessão (14/09/2026): os 5 territórios internet_* já estavam em produção sem entrada aqui, mostrando o id bruto na tela (territoryLabel cai no default) — corrigido junto da implantação de Copa do Mundo."
+  },
+  "territoryInternetSistemasOperacionais": "Internet: Sistemas Operacionais",
+  "@territoryInternetSistemasOperacionais": {
+    "description": "Territory display name"
+  },
+  "territoryInternetGigantes": "Internet: Gigantes da Web",
+  "@territoryInternetGigantes": {
+    "description": "Territory display name"
+  },
+  "territoryInternetCultura": "Internet: Cultura",
+  "@territoryInternetCultura": {
+    "description": "Territory display name"
+  },
+  "territoryInternetFuturo": "Internet: Futuro",
+  "@territoryInternetFuturo": {
+    "description": "Territory display name"
+  },
+  "territoryCopaMundoPrimeirasCopas": "Copa do Mundo: 1930-1950",
+  "@territoryCopaMundoPrimeirasCopas": {
+    "description": "Territory display name — SubMundo Copa do Mundo, Mundo dos Esportes (MUNDO_ESPORTES_ARQUITETURA_V1.md)"
+  },
+  "territoryCopaMundoExpansao": "Copa do Mundo: 1962-1994",
+  "@territoryCopaMundoExpansao": {
+    "description": "Territory display name"
+  },
+  "territoryCopaMundoEraModerna": "Copa do Mundo: 1998-2022",
+  "@territoryCopaMundoEraModerna": {
+    "description": "Territory display name"
+  },
+  "territoryCopaMundoCuriosidades": "Copa do Mundo: Curiosidades e Recordes",
+  "@territoryCopaMundoCuriosidades": {
+    "description": "Territory display name"
+  },
+  "territoryFutebolOrigens": "Futebol: Origens e História",
+  "@territoryFutebolOrigens": {
+    "description": "Territory display name — SubMundo Futebol, Mundo dos Esportes (MUNDO_ESPORTES_ARQUITETURA_V1.md)"
+  },
+  "territoryFutebolGrandesNomes": "Futebol: Grandes Nomes e Recordes",
+  "@territoryFutebolGrandesNomes": {
+    "description": "Territory display name"
+  },
+  "territoryFutebolRegrasCuriosidades": "Futebol: Regras e Curiosidades",
+  "@territoryFutebolRegrasCuriosidades": {
+    "description": "Territory display name"
+  },
+  "territoryFutebolAtualidade": "Futebol: Presente e Formatos Atuais",
+  "@territoryFutebolAtualidade": {
+    "description": "Territory display name"
+  },
   "territoryFinancasPessoais": "Finanças Pessoais",
   "@territoryFinancasPessoais": {
     "description": "Territory display name"
@@ -1669,6 +1721,47 @@
   "@feedScreenTitle": {
     "description": "Feed screen title"
   },
+  "notificationsScreenTitle": "Notificações",
+  "@notificationsScreenTitle": {
+    "description": "CENTRAL_DE_NOTIFICACOES_HOME_V1.md — NotificationsScreen app bar title"
+  },
+  "notificationsMarkAllReadButton": "Marcar todas como lidas",
+  "@notificationsMarkAllReadButton": {
+    "description": "Button in the app bar, shown only when there is at least one unread notification"
+  },
+  "notificationsEmptyMessage": "Nenhuma notificação por aqui ainda.",
+  "@notificationsEmptyMessage": {
+    "description": "Shown when the notification history is empty"
+  },
+  "notificationsTimeJustNow": "agora",
+  "@notificationsTimeJustNow": {
+    "description": "Relative timestamp for a notification created less than a minute ago"
+  },
+  "notificationsTimeMinutes": "{minutes}min",
+  "@notificationsTimeMinutes": {
+    "description": "Relative timestamp in minutes",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+  "notificationsTimeHours": "{hours}h",
+  "@notificationsTimeHours": {
+    "description": "Relative timestamp in hours",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+  "notificationsTimeDays": "{days}d",
+  "@notificationsTimeDays": {
+    "description": "Relative timestamp in days",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+  "notificationsBellTooltip": "Notificações",
+  "@notificationsBellTooltip": {
+    "description": "Tooltip for the bell icon in the top-right corner of the Home screen"
+  },
   "feedEmptyState": "Nada por aqui ainda. Conquistas de amigos e de quem você segue vão aparecer neste feed.",
   "@feedEmptyState": {
     "description": "Shown when the feed has no events yet"
@@ -2327,6 +2420,70 @@
   "loginOrDivider": "ou",
   "@loginOrDivider": {
     "description": "Divider text between OAuth buttons and email/password form"
+  },
+  "loginForgotPasswordLink": "Esqueci minha senha",
+  "@loginForgotPasswordLink": {
+    "description": "RECUPERACAO_DE_SENHA_E_LOGIN_V1.md — link on the login screen (sign-in mode only) that opens ForgotPasswordScreen"
+  },
+  "forgotPasswordTitle": "Esqueci minha senha",
+  "@forgotPasswordTitle": {
+    "description": "ForgotPasswordScreen app bar title"
+  },
+  "forgotPasswordInstructions": "Informe o e-mail da sua conta. Se ele estiver cadastrado, você receberá um link para redefinir sua senha.",
+  "@forgotPasswordInstructions": {
+    "description": "ForgotPasswordScreen body text, explaining the flow before the email field"
+  },
+  "forgotPasswordSendButton": "Enviar link de redefinição",
+  "@forgotPasswordSendButton": {
+    "description": "ForgotPasswordScreen submit button"
+  },
+  "forgotPasswordMissingEmailError": "Informe seu e-mail.",
+  "@forgotPasswordMissingEmailError": {
+    "description": "Validation error when the email field is empty"
+  },
+  "forgotPasswordConfirmationMessage": "Se esse e-mail estiver cadastrado, você receberá um link para redefinir sua senha em instantes. Confira também a caixa de spam.",
+  "@forgotPasswordConfirmationMessage": {
+    "description": "Neutral confirmation shown after submitting — never reveals whether the email exists, same wording regardless of outcome (RECUPERACAO_DE_SENHA_E_LOGIN_V1.md §2.1)"
+  },
+  "forgotPasswordBackToLoginButton": "Voltar para o login",
+  "@forgotPasswordBackToLoginButton": {
+    "description": "Button shown after the confirmation message, returning to LoginScreen"
+  },
+  "resetPasswordTitle": "Nova senha",
+  "@resetPasswordTitle": {
+    "description": "ResetPasswordScreen app bar title — shown after the user taps the password-reset email link"
+  },
+  "resetPasswordInstructions": "Defina uma nova senha para sua conta.",
+  "@resetPasswordInstructions": {
+    "description": "ResetPasswordScreen body text"
+  },
+  "resetPasswordNewPasswordLabel": "Nova senha",
+  "@resetPasswordNewPasswordLabel": {
+    "description": "New password field label"
+  },
+  "resetPasswordConfirmPasswordLabel": "Confirme a nova senha",
+  "@resetPasswordConfirmPasswordLabel": {
+    "description": "Confirm new password field label"
+  },
+  "resetPasswordMismatchError": "As senhas não coincidem.",
+  "@resetPasswordMismatchError": {
+    "description": "Validation error when the two password fields differ"
+  },
+  "resetPasswordTooShortError": "A senha precisa ter pelo menos 6 caracteres.",
+  "@resetPasswordTooShortError": {
+    "description": "Validation error when the new password is too short — same minimum Supabase Auth already enforces server-side"
+  },
+  "resetPasswordSubmitButton": "Salvar nova senha",
+  "@resetPasswordSubmitButton": {
+    "description": "ResetPasswordScreen submit button"
+  },
+  "resetPasswordSuccessMessage": "Senha alterada com sucesso! Entre novamente com sua nova senha.",
+  "@resetPasswordSuccessMessage": {
+    "description": "Shown after a successful password update, before returning to LoginScreen"
+  },
+  "resetPasswordExpiredLinkError": "Este link expirou ou já foi usado. Solicite um novo link em \"Esqueci minha senha\".",
+  "@resetPasswordExpiredLinkError": {
+    "description": "Shown when updateUser fails because the recovery session/token is no longer valid"
   },
   "onboardingTitle": "Antes de começar",
   "@onboardingTitle": {

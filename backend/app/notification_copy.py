@@ -44,6 +44,9 @@ MOVEMENT_ACTIVATION_INVITE_BODY = "Ative o contador de Movimento e transforme su
 BATTLE_CHALLENGE_RECEIVED_TITLE = "Você foi desafiado!"
 BATTLE_CHALLENGE_RECEIVED_BODY_TEMPLATE = "{nickname} te desafiou em {territory}! Bora responder? 🎯"
 
+BATTLE_OPPONENT_ANSWERED_TITLE = "Sua vez de jogar! ⚔️"
+BATTLE_OPPONENT_ANSWERED_BODY_TEMPLATE = "{nickname} já respondeu a batalha em {territory}! Contra-responda agora 🎯"
+
 BATTLE_RESULT_WIN_TITLE = "Você venceu a batalha! 🏆"
 BATTLE_RESULT_WIN_BODY_TEMPLATE = "Você venceu a batalha contra {nickname}! 🏆"
 
@@ -83,6 +86,14 @@ TORCIDA_RECEIVED_BODY_TEMPLATE = "{nickname} te mandou um {emoji}!"
 # ver push.send_push_notification).
 MOVEMENT_INVITE_RECEIVED_TITLE = "Bora se mexer? 🚶"
 MOVEMENT_INVITE_RECEIVED_BODY_TEMPLATE = "{nickname} te convidou a ligar o Movimento e contar seus passos!"
+
+# CENTRAL_DE_NOTIFICACOES_HOME_V1.md (14/09/2026) — pedido/aceite de
+# amizade nunca tinham push nem registro nenhum antes desta leva
+# (achado ao mapear as origens pra unificar na Central, doc §4).
+FRIEND_REQUEST_RECEIVED_TITLE = "Novo pedido de amizade"
+FRIEND_REQUEST_RECEIVED_BODY_TEMPLATE = "{nickname} quer ser seu amigo no MENTAL!"
+FRIEND_REQUEST_ACCEPTED_TITLE = "Pedido de amizade aceito! 🤝"
+FRIEND_REQUEST_ACCEPTED_BODY_TEMPLATE = "{nickname} aceitou seu pedido de amizade!"
 
 # FEED_SOCIAL_V1.md §2 — texto de exibição de cada evento automático do
 # Feed, montado no servidor (feed.build_feed_event_text) a partir do

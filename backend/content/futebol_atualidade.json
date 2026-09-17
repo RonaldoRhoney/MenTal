@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em que ano foi criada a Copa dos Campeões Europeus, hoje conhecida como Champions League?",
+    "options": [
+      "1955",
+      "1930",
+      "1992",
+      "1970"
+    ],
+    "correct_answer": "1955",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A UEFA Champions League'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Qual clube venceu as cinco primeiras edições da competição, ainda na década de 1950?",
+    "options": [
+      "Real Madrid",
+      "Milan",
+      "Liverpool",
+      "Bayern de Munique"
+    ],
+    "correct_answer": "Real Madrid",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A UEFA Champions League'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em que temporada o torneio foi rebatizado oficialmente para 'UEFA Champions League', com novo formato de fase de grupos?",
+    "options": [
+      "1992-93",
+      "1955-56",
+      "2024-25",
+      "1970-71"
+    ],
+    "correct_answer": "1992-93",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A UEFA Champions League'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Qual clube é o maior campeão da história da competição?",
+    "options": [
+      "Real Madrid",
+      "Milan",
+      "Bayern de Munique",
+      "Liverpool"
+    ],
+    "correct_answer": "Real Madrid",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A UEFA Champions League'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "A partir de qual temporada a Champions League passou a adotar um novo formato, com 36 clubes disputando jogos contra adversários diferentes antes das oitavas de final?",
+    "options": [
+      "2024-25",
+      "1992-93",
+      "1955-56",
+      "2010-11"
+    ],
+    "correct_answer": "2024-25",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A UEFA Champions League'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em que ano foi disputada a primeira edição da Copa Libertadores da América?",
+    "options": [
+      "1960",
+      "1955",
+      "1930",
+      "1970"
+    ],
+    "correct_answer": "1960",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa Libertadores da América'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Qual clube foi o primeiro campeão da história da Libertadores?",
+    "options": [
+      "Peñarol",
+      "Independiente",
+      "Boca Juniors",
+      "Santos"
+    ],
+    "correct_answer": "Peñarol",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa Libertadores da América'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em homenagem a quem a competição recebeu o nome 'Libertadores', a partir de 1965?",
+    "options": [
+      "Líderes da independência das nações sul-americanas",
+      "Os primeiros campeões do torneio",
+      "Fundadores da CONMEBOL",
+      "Jogadores lendários da época"
+    ],
+    "correct_answer": "Líderes da independência das nações sul-americanas",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa Libertadores da América'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Qual clube é o maior campeão da história da Libertadores, com sete títulos?",
+    "options": [
+      "Independiente",
+      "Peñarol",
+      "Boca Juniors",
+      "River Plate"
+    ],
+    "correct_answer": "Independiente",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa Libertadores da América'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Qual país tem o maior número de clubes diferentes já campeões da Libertadores?",
+    "options": [
+      "Brasil",
+      "Argentina",
+      "Uruguai",
+      "Colômbia"
+    ],
+    "correct_answer": "Brasil",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa Libertadores da América'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em que ano estreou o novo formato expandido do Mundial de Clubes da FIFA, com 32 equipes?",
+    "options": [
+      "2025",
+      "2000",
+      "2018, mesmo ano da Copa do Mundo",
+      "2010"
+    ],
+    "correct_answer": "2025",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Novo Mundial de Clubes FIFA'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em qual país foi realizada essa primeira edição expandida do Mundial de Clubes?",
+    "options": [
+      "Estados Unidos",
+      "Brasil",
+      "Catar",
+      "Rússia"
+    ],
+    "correct_answer": "Estados Unidos",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Novo Mundial de Clubes FIFA'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Antes da expansão, com quantas equipes o Mundial de Clubes costumava ser disputado anualmente?",
+    "options": [
+      "Sete equipes",
+      "32 equipes",
+      "16 equipes",
+      "4 equipes"
+    ],
+    "correct_answer": "Sete equipes",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Novo Mundial de Clubes FIFA'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "A partir de 2025, com que frequência o novo Mundial de Clubes passou a ser disputado?",
+    "options": [
+      "A cada quatro anos",
+      "Todo ano",
+      "A cada dois anos",
+      "A cada dez anos"
+    ],
+    "correct_answer": "A cada quatro anos",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Novo Mundial de Clubes FIFA'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Quantas vagas foram destinadas à América do Sul (CONMEBOL) nessa primeira edição expandida do torneio?",
+    "options": [
+      "Seis vagas",
+      "Uma vaga",
+      "Doze vagas",
+      "Trinta e duas vagas"
+    ],
+    "correct_answer": "Seis vagas",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Novo Mundial de Clubes FIFA'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em que ano foi disputada a primeira edição oficialmente chamada de Campeonato Brasileiro?",
+    "options": [
+      "1971",
+      "1959",
+      "1989",
+      "2003"
+    ],
+    "correct_answer": "1971",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Campeonato Brasileiro'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Qual clube foi o primeiro campeão do Campeonato Brasileiro, em 1971?",
+    "options": [
+      "Atlético-MG",
+      "Palmeiras",
+      "Santos",
+      "Flamengo"
+    ],
+    "correct_answer": "Atlético-MG",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Campeonato Brasileiro'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "A partir de que ano o Brasileirão passou a ser disputado no formato de pontos corridos, usado até hoje?",
+    "options": [
+      "2003",
+      "1971",
+      "1989",
+      "1959"
+    ],
+    "correct_answer": "2003",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Campeonato Brasileiro'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Qual clube é o maior campeão da história do Brasileirão?",
+    "options": [
+      "Palmeiras",
+      "Santos",
+      "Flamengo",
+      "Corinthians"
+    ],
+    "correct_answer": "Palmeiras",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Campeonato Brasileiro'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em quantas rodadas o Campeonato Brasileiro da Série A é disputado atualmente, no formato de turno e returno?",
+    "options": [
+      "38 rodadas",
+      "20 rodadas",
+      "10 rodadas",
+      "50 rodadas"
+    ],
+    "correct_answer": "38 rodadas",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Campeonato Brasileiro'.",
+      "Começa com '3'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em que ano aconteceu a primeira Copa do Mundo de futebol feminino?",
+    "options": [
+      "1991",
+      "1930",
+      "1970",
+      "2007"
+    ],
+    "correct_answer": "1991",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Crescimento do Futebol Feminino'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada essa primeira Copa do Mundo feminina?",
+    "options": [
+      "China",
+      "Estados Unidos",
+      "Brasil",
+      "Suécia"
+    ],
+    "correct_answer": "China",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Crescimento do Futebol Feminino'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Qual jogadora brasileira é considerada uma das maiores da história do futebol feminino mundial, com múltiplos prêmios de melhor do mundo?",
+    "options": [
+      "Marta",
+      "Cristiane",
+      "Formiga",
+      "Pia Sundhage"
+    ],
+    "correct_answer": "Marta",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Crescimento do Futebol Feminino'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Marta detém o recorde de maior artilheira da história das Copas do Mundo, considerando futebol masculino e feminino juntos?",
+    "options": [
+      "Sim, ela é a maior artilheira de Copas do Mundo, independentemente de gênero",
+      "Não, esse recorde pertence a um jogador do futebol masculino",
+      "Não, esse dado não é mencionado em nenhuma fonte",
+      "Sim, mas apenas considerando exclusivamente o futebol feminino"
+    ],
+    "correct_answer": "Sim, ela é a maior artilheira de Copas do Mundo, independentemente de gênero",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Crescimento do Futebol Feminino'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_atualidade",
+    "difficulty_level": 1,
+    "prompt": "Em que país está prevista a Copa do Mundo feminina de 2027, marcando a primeira vez que a competição adulta será sediada na América do Sul?",
+    "options": [
+      "Brasil",
+      "Estados Unidos",
+      "China",
+      "Austrália"
+    ],
+    "correct_answer": "Brasil",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Crescimento do Futebol Feminino'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  }
+]

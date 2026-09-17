@@ -37,6 +37,7 @@ O MENTAL é desenvolvido e mantido por **RhoneyInc**, estúdio de produtos digit
 - Pontuação (XP), nível, territórios conquistados, badges/conquistas, estatísticas de desempenho (acertos, erros, sequência de dias jogados).
 - Contagem de passos (via sensor de hardware do dispositivo, `TYPE_STEP_COUNTER`) — coletada apenas se o usuário conceder a permissão correspondente, usada exclusivamente para a funcionalidade de gamificação por movimento dentro do app. **Não coletamos dados de localização GPS associados aos passos.**
 - Preferências de notificação (quais tipos de notificação o usuário optou por receber).
+- **Histórico de notificações** — a Central de Notificações do app guarda, por até 30 dias, o conteúdo das notificações recebidas (ex.: "Fulano te desafiou para uma Batalha", "Fulano te mandou uma torcida"), com estado de lida/não lida. Visível só para o próprio destinatário, nunca para outros usuários.
 - **Comentários de feedback** — mensagens que o usuário opta por enviar na tela de Feedback do app são **públicas**, visíveis a todos os usuários junto com o nome real de quem enviou (ou o apelido, se o nome real ainda não tiver sido preenchido), e outros usuários podem reagir a elas (curtir/amei).
 
 ### 2.4 Dados de autenticação social (opcional)

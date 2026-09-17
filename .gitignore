@@ -1,3 +1,10 @@
+# Segredos — nunca commitar (auditoria pré-lançamento mundial, 17/09/2026:
+# nenhum .env foi commitado até aqui, mas não havia regra protegendo contra
+# isso acontecer por acidente).
+.env
+.env.*
+!.env.example
+
 # Backend
 backend/.venv/
 backend/__pycache__/

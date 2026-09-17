@@ -50,6 +50,51 @@ def test_internet_block_groups_its_5_territories_under_tecnologia_world(client):
     }.issubset(set(worlds["tecnologia"]["territory_ids"]))
 
 
+def test_copa_do_mundo_block_groups_its_4_curated_territories_under_esportes_world(client):
+    """MUNDO_ESPORTES_ARQUITETURA_V1.md — mesmo padrão do SubMundo
+    Internet: os 4 blocos do SubMundo Copa do Mundo, curadoria completa
+    em 14/09/2026."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    body = client.get("/progress", headers=headers).json()
+    blocks = {b["block_id"]: b for b in body["blocks"]}
+
+    assert "copa_do_mundo" in blocks
+    assert sorted(blocks["copa_do_mundo"]["territory_ids"]) == [
+        "copa_mundo_curiosidades", "copa_mundo_era_moderna", "copa_mundo_expansao", "copa_mundo_primeiras_copas",
+    ]
+    assert blocks["copa_do_mundo"]["name"] == "Copa do Mundo"
+
+    worlds = {w["world_id"]: w for w in body["worlds"]}
+    assert {
+        "copa_mundo_primeiras_copas", "copa_mundo_expansao", "copa_mundo_era_moderna", "copa_mundo_curiosidades",
+    }.issubset(set(worlds["esportes"]["territory_ids"]))
+
+
+def test_futebol_block_groups_its_4_curated_territories_under_esportes_world(client):
+    """MUNDO_ESPORTES_ARQUITETURA_V1.md — SubMundo Futebol, curadoria
+    completa em 14/09/2026 (mesmo padrão de Copa do Mundo acima)."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    body = client.get("/progress", headers=headers).json()
+    blocks = {b["block_id"]: b for b in body["blocks"]}
+
+    assert "futebol" in blocks
+    assert sorted(blocks["futebol"]["territory_ids"]) == [
+        "futebol_atualidade", "futebol_grandes_nomes", "futebol_origens", "futebol_regras_curiosidades",
+    ]
+    assert blocks["futebol"]["name"] == "Futebol"
+
+    worlds = {w["world_id"]: w for w in body["worlds"]}
+    assert {
+        "futebol_origens", "futebol_grandes_nomes", "futebol_regras_curiosidades", "futebol_atualidade",
+    }.issubset(set(worlds["esportes"]["territory_ids"]))
+
+
 def test_blocks_without_any_territory_are_not_returned(client):
     """"Mundo" existe como linha (BLOCOS_MENUS.md §3, conteúdo por curar)
     mas não tem território ainda — não deve aparecer na resposta pra não
@@ -68,7 +113,7 @@ def test_blocks_without_any_territory_are_not_returned(client):
     assert block_ids == {
         "matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia",
         "financas_pessoais", "filosofia", "artes", "saude_bemestar", "curiosidade_relampago", "libras",
-        "jogos_de_palavras", "internet",
+        "jogos_de_palavras", "internet", "copa_do_mundo", "futebol",
     }
 
 

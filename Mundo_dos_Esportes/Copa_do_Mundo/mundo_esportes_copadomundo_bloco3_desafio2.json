@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 3,
+    "tema_bloco": "As Copas de 1998 a 2022",
+    "desafio": 2,
+    "tema_desafio": "Coreia/Japão 2002 e o Pentacampeonato Brasileiro",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em quais dois países foi disputada a Copa do Mundo de 2002, a primeira sediada conjuntamente por duas nações?",
+      "opcoes": [
+        "Coreia do Sul e Japão",
+        "Brasil e Argentina",
+        "Alemanha e França",
+        "Itália e Espanha"
+      ],
+      "resposta_correta": "Coreia do Sul e Japão"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual seleção conquistou seu pentacampeonato mundial nessa edição?",
+      "opcoes": [
+        "Brasil",
+        "Alemanha",
+        "Itália",
+        "França"
+      ],
+      "resposta_correta": "Brasil"
+    },
+    {
+      "n": 3,
+      "pergunta": "Contra qual seleção o Brasil venceu a final de 2002, por 2 a 0?",
+      "opcoes": [
+        "Alemanha",
+        "Turquia",
+        "Coreia do Sul",
+        "Espanha"
+      ],
+      "resposta_correta": "Alemanha"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual atacante brasileiro foi artilheiro da Copa de 2002, com oito gols, incluindo os dois da final?",
+      "opcoes": [
+        "Ronaldo Fenômeno",
+        "Rivaldo",
+        "Ronaldinho Gaúcho",
+        "Ronaldo Guiaro"
+      ],
+      "resposta_correta": "Ronaldo Fenômeno"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual goleiro alemão foi eleito o melhor jogador da competição, mesmo com a derrota na final?",
+      "opcoes": [
+        "Oliver Kahn",
+        "Manuel Neuer",
+        "Jens Lehmann",
+        "Sepp Maier"
+      ],
+      "resposta_correta": "Oliver Kahn"
+    }
+  ]
+}

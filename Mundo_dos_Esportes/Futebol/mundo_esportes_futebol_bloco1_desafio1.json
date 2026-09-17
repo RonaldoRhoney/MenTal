@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 1,
+    "tema_bloco": "Origens e História do Futebol",
+    "desafio": 1,
+    "tema_desafio": "A Origem do Futebol Moderno",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo Wikipedia e Lance!. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo historico/esportivo neutro."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano o futebol moderno foi oficialmente padronizado, com a fundação da Football Association?",
+      "opcoes": [
+        "1863",
+        "1904",
+        "1930",
+        "1857"
+      ],
+      "resposta_correta": "1863"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual cidade a Football Association (FA) foi fundada?",
+      "opcoes": [
+        "Londres",
+        "Manchester",
+        "Liverpool",
+        "Sheffield"
+      ],
+      "resposta_correta": "Londres"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem é frequentemente chamado de 'pai do futebol moderno', por redigir a versão original das regras da FA?",
+      "opcoes": [
+        "Ebenezer Cobb Morley",
+        "Jules Rimet",
+        "Charles Miller",
+        "William McGregor"
+      ],
+      "resposta_correta": "Ebenezer Cobb Morley"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual conjunto de regras, elaborado por estudantes da Universidade de Cambridge em 1848, é considerado uma base importante para a unificação posterior do futebol?",
+      "opcoes": [
+        "As Regras de Cambridge",
+        "As Regras de Sheffield",
+        "As Leis do Jogo da FIFA",
+        "O Código de Londres"
+      ],
+      "resposta_correta": "As Regras de Cambridge"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual clube, fundado em 1857, é hoje reconhecido como o clube de futebol mais antigo do mundo?",
+      "opcoes": [
+        "Sheffield FC",
+        "Manchester United",
+        "Liverpool FC",
+        "Barnes FC"
+      ],
+      "resposta_correta": "Sheffield FC"
+    }
+  ]
+}

@@ -77,13 +77,16 @@ def add_friend(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit("friend_request", user_id, max_calls=config.RATE_LIMIT_FRIEND_REQUEST[0], window_seconds=config.RATE_LIMIT_FRIEND_REQUEST[1])
     invite = db.execute(select(models.Invite).where(models.Invite.invite_code == body.invite_code)).scalars().first()
     if invite is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "INVITE_NOT_FOUND", "message": "Código de convite não encontrado."}})
     if invite.inviter_user_id == user_id:
         raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_FRIEND_SELF", "message": "Não é possível adicionar a si mesmo como amigo."}})
 
-    services.request_friendship(db, user_id, invite.inviter_user_id)
+    friendship = services.request_friendship(db, user_id, invite.inviter_user_id)
+    if friendship is not None:
+        services.notify_friend_request_received(db, requester_user_id=user_id, target_user_id=invite.inviter_user_id)
     return {"status": "pending"}
 
 
@@ -99,12 +102,15 @@ def send_friend_request(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit("friend_request", user_id, max_calls=config.RATE_LIMIT_FRIEND_REQUEST[0], window_seconds=config.RATE_LIMIT_FRIEND_REQUEST[1])
     if body.to_user_id == user_id:
         raise HTTPException(status_code=400, detail={"error": {"code": "CANNOT_FRIEND_SELF", "message": "Não é possível adicionar a si mesmo como amigo."}})
     target = db.get(models.Profile, body.to_user_id)
     if target is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "USER_NOT_FOUND", "message": "Usuário não encontrado."}})
-    services.request_friendship(db, user_id, body.to_user_id)
+    friendship = services.request_friendship(db, user_id, body.to_user_id)
+    if friendship is not None:
+        services.notify_friend_request_received(db, requester_user_id=user_id, target_user_id=body.to_user_id)
     return {"status": "pending"}
 
 
@@ -136,6 +142,9 @@ def accept_friend_request(
     friendship = services.accept_friend_request(db, friendship_id, user_id)
     if friendship is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "FRIEND_REQUEST_NOT_FOUND", "message": friendship_id}})
+    # Notifica quem MANDOU o pedido original (requested_by) — quem
+    # aceitou (user_id, o usuário logado aqui) já sabe, foi ação dele.
+    services.notify_friend_request_accepted(db, accepter_user_id=user_id, original_requester_user_id=friendship.requested_by)
     return {"status": "accepted"}
 
 
@@ -184,6 +193,7 @@ def search_users(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit("user_search", user_id, max_calls=config.RATE_LIMIT_USER_SEARCH[0], window_seconds=config.RATE_LIMIT_USER_SEARCH[1])
     query = q.strip()
     if len(query) < 3:
         return schemas.UserSearchResponse(results=[])
@@ -210,7 +220,11 @@ def search_users(
 # conclusão real do compartilhamento no SO.
 @router.post("/social/share-reward", response_model=schemas.ShareRewardResponse)
 def reward_share(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
-    profile = db.get(models.Profile, user_id)
+    # with_for_update (auditoria de segurança pré-lançamento mundial,
+    # 17/09/2026, achado A3): trava a linha até o commit de
+    # award_share_reward, fechando a corrida de duas chamadas
+    # concorrentes lendo last_share_reward_date != hoje ao mesmo tempo.
+    profile = db.get(models.Profile, user_id, with_for_update=True)
     if profile is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "PROFILE_NOT_FOUND", "message": "Perfil não encontrado."}})
 
@@ -228,7 +242,8 @@ def reward_share(user_id: str = Depends(require_age_confirmed_user_id), db: Sess
 # distintos de /social/share-reward acima (compartilhar conquista).
 @router.post("/social/share-app-reward", response_model=schemas.AppInviteShareRewardResponse)
 def reward_app_invite_share(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
-    profile = db.get(models.Profile, user_id)
+    # with_for_update: mesmo raciocínio de reward_share acima.
+    profile = db.get(models.Profile, user_id, with_for_update=True)
     if profile is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "PROFILE_NOT_FOUND", "message": "Perfil não encontrado."}})
 

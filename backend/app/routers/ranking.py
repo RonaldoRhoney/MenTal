@@ -2,7 +2,7 @@ from collections import Counter
 from datetime import timedelta
 
 from fastapi import APIRouter, Depends
-from sqlalchemy import select, func
+from sqlalchemy import select, func, or_
 from sqlalchemy.orm import Session
 
 from .. import models, services
@@ -112,27 +112,42 @@ def get_ranking(
         # problema em register_play_for_streak produzia "sequência mais
         # longa" menor que "sequência atual" — logicamente impossível.
         since = utcnow() - timedelta(days=7)
-        query = (
-            select(models.Attempt.user_id, func.sum(models.Attempt.xp_awarded).label("xp"))
+        base = (
+            select(models.Attempt.user_id.label("user_id"), func.sum(models.Attempt.xp_awarded).label("xp"))
             .where(models.Attempt.created_at >= since)
             .where(models.Attempt.is_correct.is_(True))
         )
         if allowed_user_ids is not None:
-            query = query.where(models.Attempt.user_id.in_(allowed_user_ids))
-        query = query.group_by(models.Attempt.user_id).order_by(func.sum(models.Attempt.xp_awarded).desc())
-        rows = db.execute(query).all()
+            base = base.where(models.Attempt.user_id.in_(allowed_user_ids))
+        base = base.group_by(models.Attempt.user_id).subquery()
     else:
-        query = select(models.Profile.user_id, models.Profile.xp_total.label("xp"))
+        base = select(models.Profile.user_id.label("user_id"), models.Profile.xp_total.label("xp"))
         if allowed_user_ids is not None:
-            query = query.where(models.Profile.user_id.in_(allowed_user_ids))
-        query = query.order_by(models.Profile.xp_total.desc())
-        rows = db.execute(query).all()
+            base = base.where(models.Profile.user_id.in_(allowed_user_ids))
+        base = base.subquery()
+
+    # Auditoria de segurança pré-lançamento mundial (17/09/2026): antes,
+    # `rows = db.execute(query).all()` trazia TODA a base pro Python só
+    # pra numerar posição via enumerate() e descartar tudo fora do
+    # top 50 — com a base de usuários mundial isso vira o endpoint que
+    # derruba a instância primeiro. row_number() calcula o rank NO
+    # BANCO, e o WHERE já filtra pra só trazer o top 50 + a própria
+    # linha do usuário (se estiver fora do top 50) — nunca a tabela
+    # inteira.
+    ranked = select(
+        base.c.user_id,
+        base.c.xp,
+        func.row_number().over(order_by=base.c.xp.desc()).label("rank"),
+    ).subquery()
+    rows = db.execute(
+        select(ranked.c.rank, ranked.c.user_id, ranked.c.xp).where(or_(ranked.c.rank <= 50, ranked.c.user_id == user_id))
+    ).all()
 
     # Só busca os extras (streak/mundos/badges/coins/passos) pra quem
     # REALMENTE vai aparecer na resposta (top 50 + "eu", se estiver fora
     # do top 50) — nunca para os até milhares de outras linhas do
     # ranking global inteiro.
-    ranked_rows = list(enumerate(rows, start=1))
+    ranked_rows = [(row.rank, (row.user_id, row.xp)) for row in rows]
     relevant_user_ids = [row_user_id for idx, (row_user_id, _xp) in ranked_rows if idx <= 50 or row_user_id == user_id]
     extras_by_user = _batched_ranking_extras(db, relevant_user_ids)
 

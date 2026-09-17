@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 1,
+    "tema_bloco": "As Primeiras Copas (1930-1950)",
+    "desafio": 2,
+    "tema_desafio": "As Copas de 1934 e 1938",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas e academicas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - contexto historico do fascismo tratado como fato historico factual, sem detalhamento de simbologia ou ideologia."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual seleção foi bicampeã mundial nas Copas de 1934 e 1938?",
+      "opcoes": [
+        "Itália",
+        "Uruguai",
+        "Brasil",
+        "Alemanha"
+      ],
+      "resposta_correta": "Itália"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual líder político italiano usou a Copa de 1934, sediada em seu país, como ferramenta de propaganda de seu regime?",
+      "opcoes": [
+        "Benito Mussolini",
+        "Adolf Hitler",
+        "Jules Rimet",
+        "Vittorio Pozzo"
+      ],
+      "resposta_correta": "Benito Mussolini"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual seleção não pôde participar da Copa de 1938, na França, por causa de uma guerra civil em seu próprio país?",
+      "opcoes": [
+        "Espanha",
+        "Áustria",
+        "Alemanha",
+        "Portugal"
+      ],
+      "resposta_correta": "Espanha"
+    },
+    {
+      "n": 4,
+      "pergunta": "Contra qual seleção a Itália venceu a final da Copa de 1938?",
+      "opcoes": [
+        "Hungria",
+        "Brasil",
+        "França",
+        "Tchecoslováquia"
+      ],
+      "resposta_correta": "Hungria"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual jogador brasileiro se destacou na Copa de 1938, tornando-se artilheiro da competição?",
+      "opcoes": [
+        "Leônidas da Silva",
+        "Pelé",
+        "Garrincha",
+        "Zico"
+      ],
+      "resposta_correta": "Leônidas da Silva"
+    }
+  ]
+}

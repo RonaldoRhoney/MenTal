@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 1,
+    "tema_bloco": "As Primeiras Copas (1930-1950)",
+    "desafio": 4,
+    "tema_desafio": "A Suíça 1954 e o Milagre de Berna",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi realizada a Copa do Mundo de 1954?",
+      "opcoes": [
+        "Suíça",
+        "Alemanha",
+        "Hungria",
+        "Brasil"
+      ],
+      "resposta_correta": "Suíça"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual seleção venceu a final de 1954, batizada de 'Milagre de Berna'?",
+      "opcoes": [
+        "Alemanha Ocidental",
+        "Hungria",
+        "Uruguai",
+        "Brasil"
+      ],
+      "resposta_correta": "Alemanha Ocidental"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual seleção era amplamente favorita ao título de 1954, chegando invicta havia quatro anos, mas acabou vice-campeã?",
+      "opcoes": [
+        "Hungria",
+        "Alemanha",
+        "Uruguai",
+        "Áustria"
+      ],
+      "resposta_correta": "Hungria"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual craque húngaro, um dos maiores nomes do futebol daquela época, jogou a final mesmo lesionado?",
+      "opcoes": [
+        "Ferenc Puskás",
+        "Sándor Kocsis",
+        "Helmut Rahn",
+        "Fritz Walter"
+      ],
+      "resposta_correta": "Ferenc Puskás"
+    },
+    {
+      "n": 5,
+      "pergunta": "A Copa de 1954 é lembrada até hoje por qual recorde estatístico, nunca mais igualado?",
+      "opcoes": [
+        "A maior média de gols por jogo da história das Copas",
+        "O maior número de seleções participantes",
+        "O menor número de gols já registrado",
+        "A final mais demorada da história"
+      ],
+      "resposta_correta": "A maior média de gols por jogo da história das Copas"
+    }
+  ]
+}

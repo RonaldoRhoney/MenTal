@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Qual é o nome de batismo de Pelé?",
+    "options": [
+      "Edson Arantes do Nascimento",
+      "Edson Cholbi Nascimento",
+      "Arantes Edson do Nascimento",
+      "Edson do Nascimento Arantes"
+    ],
+    "correct_answer": "Edson Arantes do Nascimento",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Pelé — O Rei do Futebol'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em qual cidade brasileira Pelé nasceu?",
+    "options": [
+      "Três Corações, Minas Gerais",
+      "Santos, São Paulo",
+      "Rio de Janeiro",
+      "Bauru, São Paulo"
+    ],
+    "correct_answer": "Três Corações, Minas Gerais",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Pelé — O Rei do Futebol'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Por qual único clube brasileiro Pelé jogou ao longo de quase toda sua carreira?",
+    "options": [
+      "Santos",
+      "Corinthians",
+      "Flamengo",
+      "São Paulo"
+    ],
+    "correct_answer": "Santos",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Pelé — O Rei do Futebol'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Quantas Copas do Mundo Pelé conquistou com a seleção brasileira, um recorde nunca igualado?",
+    "options": [
+      "Três (1958, 1962 e 1970)",
+      "Duas (1958 e 1962)",
+      "Quatro",
+      "Uma"
+    ],
+    "correct_answer": "Três (1958, 1962 e 1970)",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Pelé — O Rei do Futebol'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Para qual clube dos Estados Unidos Pelé se transferiu no fim de sua carreira?",
+    "options": [
+      "New York Cosmos",
+      "LA Galaxy",
+      "Chicago Fire",
+      "Inter Miami"
+    ],
+    "correct_answer": "New York Cosmos",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Pelé — O Rei do Futebol'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "De qual país é o lendário jogador Diego Maradona?",
+    "options": [
+      "Argentina",
+      "Brasil",
+      "Uruguai",
+      "Itália"
+    ],
+    "correct_answer": "Argentina",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Diego Maradona'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em que Copa do Mundo Maradona liderou a Argentina ao título, marcando os famosos gols 'Mão de Deus' e 'Gol do Século'?",
+    "options": [
+      "1986",
+      "1990",
+      "1978",
+      "1994"
+    ],
+    "correct_answer": "1986",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Diego Maradona'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção Maradona marcou esses dois gols históricos na Copa de 1986?",
+    "options": [
+      "Inglaterra",
+      "Brasil",
+      "Alemanha",
+      "Itália"
+    ],
+    "correct_answer": "Inglaterra",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Diego Maradona'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em qual clube italiano Maradona se tornou um ídolo absoluto, ajudando a conquistar títulos históricos para a equipe?",
+    "options": [
+      "Napoli",
+      "Juventus",
+      "Milan",
+      "Roma"
+    ],
+    "correct_answer": "Napoli",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Diego Maradona'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Qual clube argentino é considerado o 'time do coração' de Maradona, onde jogou em duas passagens de sua carreira?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "Racing Club",
+      "Independiente"
+    ],
+    "correct_answer": "Boca Juniors",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Diego Maradona'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Quem é o maior artilheiro da história das Copas do Mundo, com 16 gols?",
+    "options": [
+      "Miroslav Klose",
+      "Pelé",
+      "Ronaldo Fenômeno",
+      "Just Fontaine"
+    ],
+    "correct_answer": "Miroslav Klose",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes e Artilheiros de Copas do Mundo'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Por qual seleção Miroslav Klose jogou?",
+    "options": [
+      "Alemanha",
+      "Polônia",
+      "França",
+      "Brasil"
+    ],
+    "correct_answer": "Alemanha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes e Artilheiros de Copas do Mundo'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Quem Klose superou para se tornar o maior artilheiro da história das Copas, na partida de 7 a 1 em 2014?",
+    "options": [
+      "Ronaldo Fenômeno",
+      "Gerd Müller",
+      "Pelé",
+      "Just Fontaine"
+    ],
+    "correct_answer": "Ronaldo Fenômeno",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes e Artilheiros de Copas do Mundo'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Qual jogador francês detém o recorde de mais gols em uma única edição de Copa do Mundo, com 13 gols em 1958, um marco nunca superado?",
+    "options": [
+      "Just Fontaine",
+      "Kylian Mbappé",
+      "Zinedine Zidane",
+      "Michel Platini"
+    ],
+    "correct_answer": "Just Fontaine",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes e Artilheiros de Copas do Mundo'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção é a única que participou de todas as edições da Copa do Mundo já disputadas?",
+    "options": [
+      "Brasil",
+      "Alemanha",
+      "Argentina",
+      "Itália"
+    ],
+    "correct_answer": "Brasil",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes e Artilheiros de Copas do Mundo'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em qual cidade argentina Lionel Messi nasceu?",
+    "options": [
+      "Rosário",
+      "Buenos Aires",
+      "Córdoba",
+      "Lanús"
+    ],
+    "correct_answer": "Rosário",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Lionel Messi e a Era Moderna'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em qual clube espanhol Messi construiu a maior parte de sua carreira, tornando-se o maior artilheiro da história do time?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Atlético de Madrid",
+      "Sevilla"
+    ],
+    "correct_answer": "Barcelona",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Lionel Messi e a Era Moderna'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em que Copa do Mundo Messi finalmente conquistou o título com a Argentina?",
+    "options": [
+      "2022",
+      "2014",
+      "2018",
+      "2010"
+    ],
+    "correct_answer": "2022",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Lionel Messi e a Era Moderna'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Qual prêmio individual, entregue ao melhor jogador do mundo, Messi já venceu diversas vezes ao longo da carreira?",
+    "options": [
+      "Bola de Ouro",
+      "Chuteira de Prata",
+      "Prêmio Puskás exclusivamente",
+      "Medalha Olímpica de Futebol"
+    ],
+    "correct_answer": "Bola de Ouro",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Lionel Messi e a Era Moderna'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Para qual clube dos Estados Unidos Messi se transferiu após deixar o futebol europeu?",
+    "options": [
+      "Inter Miami",
+      "LA Galaxy",
+      "New York City FC",
+      "Atlanta United"
+    ],
+    "correct_answer": "Inter Miami",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Lionel Messi e a Era Moderna'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em qual cidade portuguesa Cristiano Ronaldo nasceu?",
+    "options": [
+      "Funchal, na Ilha da Madeira",
+      "Lisboa",
+      "Porto",
+      "Coimbra"
+    ],
+    "correct_answer": "Funchal, na Ilha da Madeira",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Cristiano Ronaldo e a Rivalidade Histórica'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em qual clube português Cristiano Ronaldo iniciou sua carreira profissional, antes de se transferir para a Inglaterra?",
+    "options": [
+      "Sporting Lisboa",
+      "Benfica",
+      "Porto",
+      "Braga"
+    ],
+    "correct_answer": "Sporting Lisboa",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Cristiano Ronaldo e a Rivalidade Histórica'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Para qual clube inglês Ronaldo se transferiu em 2003, iniciando sua ascensão internacional?",
+    "options": [
+      "Manchester United",
+      "Chelsea",
+      "Liverpool",
+      "Arsenal"
+    ],
+    "correct_answer": "Manchester United",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Cristiano Ronaldo e a Rivalidade Histórica'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Em qual clube espanhol Cristiano Ronaldo se tornou o maior artilheiro da história, com centenas de gols?",
+    "options": [
+      "Real Madrid",
+      "Barcelona",
+      "Atlético de Madrid",
+      "Valencia"
+    ],
+    "correct_answer": "Real Madrid",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Cristiano Ronaldo e a Rivalidade Histórica'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_grandes_nomes",
+    "difficulty_level": 1,
+    "prompt": "Cristiano Ronaldo e Lionel Messi protagonizaram, ao longo de mais de uma década, uma das maiores rivalidades da história de qual competição individual?",
+    "options": [
+      "A disputa pela Bola de Ouro",
+      "A disputa pela artilharia da Copa América",
+      "A disputa pelo título de melhor técnico",
+      "A disputa por medalhas olímpicas"
+    ],
+    "correct_answer": "A disputa pela Bola de Ouro",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Cristiano Ronaldo e a Rivalidade Histórica'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  }
+]

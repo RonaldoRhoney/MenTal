@@ -151,6 +151,15 @@ BLOCKS = [
     # em vez de criar uma entidade "SubMundo" nova — mesmo resultado de
     # navegação (Seção 3 do documento), zero mudança de schema/client.
     {"id": "internet", "name": "Internet", "display_order": 15},
+    # MUNDO_ESPORTES_ARQUITETURA_V1.md (aprovado): Mundo dos Esportes
+    # ganha 9 SubMundos, um por categoria esportiva — mesmo mecanismo de
+    # Bloco reaproveitado do SubMundo Internet acima (world_id="esportes"
+    # já existe desde V3.0, cada SubMundo é um Bloco próprio dentro dele).
+    # "Copa do Mundo" é o primeiro a ter curadoria completa o bastante
+    # pra implantar; os demais 8 entram aqui só quando Rhoney confirmar
+    # cada um pronto.
+    {"id": "copa_do_mundo", "name": "Copa do Mundo", "display_order": 16},
+    {"id": "futebol", "name": "Futebol", "display_order": 17},
 ]
 
 TERRITORIES = [
@@ -346,6 +355,22 @@ TERRITORIES = [
     {"id": "internet_gigantes", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 75, "world_id": "tecnologia", "block_id": "internet"},
     {"id": "internet_cultura", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 76, "world_id": "tecnologia", "block_id": "internet"},
     {"id": "internet_futuro", "challenge_type": "internet", "requires_subscription": True, "free_sample_count": 2, "display_order": 77, "world_id": "tecnologia", "block_id": "internet"},
+    # MUNDO_ESPORTES_ARQUITETURA_V1.md (aprovado) — SubMundo "Copa do
+    # Mundo" dentro de Mundo dos Esportes: mesmo padrão do SubMundo
+    # Internet acima, 1 bloco curado (dos 4 do SubMundo) = 1 território.
+    # Curadoria completa em 14/09/2026 (bloco2_desafio2 chegou por
+    # último) — os 4 blocos entram juntos aqui.
+    {"id": "copa_mundo_primeiras_copas", "challenge_type": "copa_do_mundo", "requires_subscription": True, "free_sample_count": 2, "display_order": 78, "world_id": "esportes", "block_id": "copa_do_mundo"},
+    {"id": "copa_mundo_expansao", "challenge_type": "copa_do_mundo", "requires_subscription": True, "free_sample_count": 2, "display_order": 79, "world_id": "esportes", "block_id": "copa_do_mundo"},
+    {"id": "copa_mundo_era_moderna", "challenge_type": "copa_do_mundo", "requires_subscription": True, "free_sample_count": 2, "display_order": 80, "world_id": "esportes", "block_id": "copa_do_mundo"},
+    {"id": "copa_mundo_curiosidades", "challenge_type": "copa_do_mundo", "requires_subscription": True, "free_sample_count": 2, "display_order": 81, "world_id": "esportes", "block_id": "copa_do_mundo"},
+    # MUNDO_ESPORTES_ARQUITETURA_V1.md — SubMundo "Futebol", curadoria
+    # completa em 14/09/2026 (20/20 desafios), mesmo padrão de Copa do
+    # Mundo acima.
+    {"id": "futebol_origens", "challenge_type": "futebol", "requires_subscription": True, "free_sample_count": 2, "display_order": 82, "world_id": "esportes", "block_id": "futebol"},
+    {"id": "futebol_grandes_nomes", "challenge_type": "futebol", "requires_subscription": True, "free_sample_count": 2, "display_order": 83, "world_id": "esportes", "block_id": "futebol"},
+    {"id": "futebol_regras_curiosidades", "challenge_type": "futebol", "requires_subscription": True, "free_sample_count": 2, "display_order": 84, "world_id": "esportes", "block_id": "futebol"},
+    {"id": "futebol_atualidade", "challenge_type": "futebol", "requires_subscription": True, "free_sample_count": 2, "display_order": 85, "world_id": "esportes", "block_id": "futebol"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
@@ -5871,6 +5896,15 @@ for _path in sorted(_CONTENT_DIR.glob("espaco_*.json")):
 # Oceanos/Espaço acima) — 1 bloco curado = 1 território, convertido via
 # scripts/convert_internet_content.py.
 for _path in sorted(_CONTENT_DIR.glob("internet_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
+# Mundo dos Esportes / SubMundos Copa do Mundo e Futebol (14/09/2026):
+# sem trilha de dificuldade (MUNDO_ESPORTES_ARQUITETURA_V1.md §2,
+# difficulty_level fixo em 1) — 1 bloco curado = 1 território,
+# convertido via scripts/convert_esportes_content.py.
+for _path in sorted(_CONTENT_DIR.glob("copa_mundo_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+for _path in sorted(_CONTENT_DIR.glob("futebol_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 

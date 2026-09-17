@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 2,
+    "tema_bloco": "Grandes Nomes e Recordes",
+    "desafio": 5,
+    "tema_desafio": "Cristiano Ronaldo e a Rivalidade Histórica",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Bloco 2 do SubMundo Futebol (5/5 desafios)."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em qual cidade portuguesa Cristiano Ronaldo nasceu?",
+      "opcoes": [
+        "Funchal, na Ilha da Madeira",
+        "Lisboa",
+        "Porto",
+        "Coimbra"
+      ],
+      "resposta_correta": "Funchal, na Ilha da Madeira"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual clube português Cristiano Ronaldo iniciou sua carreira profissional, antes de se transferir para a Inglaterra?",
+      "opcoes": [
+        "Sporting Lisboa",
+        "Benfica",
+        "Porto",
+        "Braga"
+      ],
+      "resposta_correta": "Sporting Lisboa"
+    },
+    {
+      "n": 3,
+      "pergunta": "Para qual clube inglês Ronaldo se transferiu em 2003, iniciando sua ascensão internacional?",
+      "opcoes": [
+        "Manchester United",
+        "Chelsea",
+        "Liverpool",
+        "Arsenal"
+      ],
+      "resposta_correta": "Manchester United"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em qual clube espanhol Cristiano Ronaldo se tornou o maior artilheiro da história, com centenas de gols?",
+      "opcoes": [
+        "Real Madrid",
+        "Barcelona",
+        "Atlético de Madrid",
+        "Valencia"
+      ],
+      "resposta_correta": "Real Madrid"
+    },
+    {
+      "n": 5,
+      "pergunta": "Cristiano Ronaldo e Lionel Messi protagonizaram, ao longo de mais de uma década, uma das maiores rivalidades da história de qual competição individual?",
+      "opcoes": [
+        "A disputa pela Bola de Ouro",
+        "A disputa pela artilharia da Copa América",
+        "A disputa pelo título de melhor técnico",
+        "A disputa por medalhas olímpicas"
+      ],
+      "resposta_correta": "A disputa pela Bola de Ouro"
+    }
+  ]
+}

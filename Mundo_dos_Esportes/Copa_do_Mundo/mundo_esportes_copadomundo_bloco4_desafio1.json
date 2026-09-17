@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 4,
+    "tema_bloco": "Curiosidades e Recordes da Copa",
+    "desafio": 1,
+    "tema_desafio": "Os Mascotes das Copas do Mundo",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que Copa do Mundo surgiu a primeira mascote oficial da história do torneio?",
+      "opcoes": [
+        "Inglaterra 1966",
+        "México 1970",
+        "Brasil 2014",
+        "Catar 2022"
+      ],
+      "resposta_correta": "Inglaterra 1966"
+    },
+    {
+      "n": 2,
+      "pergunta": "Como se chamava e qual animal representava essa primeira mascote da Copa?",
+      "opcoes": [
+        "World Cup Willie, um leão",
+        "Juanito, um menino",
+        "Fuleco, um tatu-bola",
+        "Zakumi, um leopardo"
+      ],
+      "resposta_correta": "World Cup Willie, um leão"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual foi a mascote oficial da Copa do Mundo de 2014, realizada no Brasil?",
+      "opcoes": [
+        "Fuleco, um tatu-bola",
+        "Zakumi, um leopardo",
+        "Juanito, um menino",
+        "La'eeb, um personagem árabe"
+      ],
+      "resposta_correta": "Fuleco, um tatu-bola"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual foi a mascote da Copa do Mundo de 2010, disputada na África do Sul?",
+      "opcoes": [
+        "Zakumi, um leopardo",
+        "Fuleco, um tatu-bola",
+        "Juanito, um menino",
+        "Willie, um leão"
+      ],
+      "resposta_correta": "Zakumi, um leopardo"
+    },
+    {
+      "n": 5,
+      "pergunta": "O que significa, em árabe, o nome La'eeb, mascote da Copa do Catar em 2022?",
+      "opcoes": [
+        "'Jogador super habilidoso'",
+        "'Campeão eterno'",
+        "'Amigo da torcida'",
+        "'Guerreiro do deserto'"
+      ],
+      "resposta_correta": "'Jogador super habilidoso'"
+    }
+  ]
+}

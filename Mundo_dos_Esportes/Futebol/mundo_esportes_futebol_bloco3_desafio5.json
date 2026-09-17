@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 3,
+    "tema_bloco": "Regras, Curiosidades Técnicas e Eventos Marcantes",
+    "desafio": 5,
+    "tema_desafio": "Recordes de Transferências e o Mercado da Bola",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Bloco 3 do SubMundo Futebol (5/5 desafios)."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual é considerada a transferência mais cara da história do futebol?",
+      "opcoes": [
+        "Neymar, do Barcelona para o PSG",
+        "Cristiano Ronaldo, para o Real Madrid",
+        "Kylian Mbappé, para o PSG",
+        "Messi, para o PSG"
+      ],
+      "resposta_correta": "Neymar, do Barcelona para o PSG"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano essa transferência recorde de Neymar aconteceu?",
+      "opcoes": [
+        "2017",
+        "2013",
+        "2022",
+        "2010"
+      ],
+      "resposta_correta": "2017"
+    },
+    {
+      "n": 3,
+      "pergunta": "Aproximadamente por qual valor o PSG pagou pela contratação de Neymar?",
+      "opcoes": [
+        "222 milhões de euros",
+        "22 milhões de euros",
+        "2,2 bilhões de euros",
+        "2,2 milhões de euros"
+      ],
+      "resposta_correta": "222 milhões de euros"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual jogador francês, também contratado pelo PSG em 2017, se tornou a segunda transferência mais cara da história?",
+      "opcoes": [
+        "Kylian Mbappé",
+        "Antoine Griezmann",
+        "Paul Pogba",
+        "Ousmane Dembélé"
+      ],
+      "resposta_correta": "Kylian Mbappé"
+    },
+    {
+      "n": 5,
+      "pergunta": "De qual clube o PSG contratou Neymar, em 2017?",
+      "opcoes": [
+        "Barcelona",
+        "Real Madrid",
+        "Santos",
+        "Manchester United"
+      ],
+      "resposta_correta": "Barcelona"
+    }
+  ]
+}

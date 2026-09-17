@@ -108,14 +108,31 @@ class _BattlesScreenState extends State<BattlesScreen> {
         : battle['opponent_nickname'] as String;
 
     if (status == 'resolved') {
-      return Text(
-        switch (winner) {
-          'me' => l10n.battleStatusWon(battle['win_bonus_xp'] as int),
-          'tie' => l10n.battleStatusTie,
-          _ => l10n.battleStatusLost(nickname),
-        },
-        style:
-            TextStyle(color: winner == 'me' ? AppColors.gold : AppColors.muted),
+      // BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md §2.2 — "resultado final
+      // exibido de forma mais rica visualmente (não só texto)", mesmo
+      // ícone de conquista já usado em Ranking/Feed/Badges
+      // (emoji_events_rounded), reforçando a sensação de disputa.
+      final (icon, color) = switch (winner) {
+        'me' => (Icons.emoji_events_rounded, AppColors.gold),
+        'tie' => (Icons.handshake_outlined, AppColors.muted),
+        _ => (Icons.emoji_events_outlined, AppColors.muted),
+      };
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, size: 16, color: color),
+          const SizedBox(width: 4),
+          Flexible(
+            child: Text(
+              switch (winner) {
+                'me' => l10n.battleStatusWon(battle['win_bonus_xp'] as int),
+                'tie' => l10n.battleStatusTie,
+                _ => l10n.battleStatusLost(nickname),
+              },
+              style: TextStyle(color: color),
+            ),
+          ),
+        ],
       );
     }
     return Text(

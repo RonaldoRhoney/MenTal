@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 4,
+    "tema_bloco": "Curiosidades e Recordes da Copa",
+    "desafio": 3,
+    "tema_desafio": "O Brasil e seus Recordes na Copa do Mundo",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo levantamento da FIFA e CNN Brasil. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "O Brasil é o único país a ter participado de todas as edições da Copa do Mundo desde qual ano?",
+      "opcoes": [
+        "1930",
+        "1950",
+        "1958",
+        "1970"
+      ],
+      "resposta_correta": "1930"
+    },
+    {
+      "n": 2,
+      "pergunta": "Quantos títulos mundiais o Brasil conquistou até 2002, tornando-se o maior campeão da história da Copa?",
+      "opcoes": [
+        "Cinco",
+        "Três",
+        "Sete",
+        "Dois"
+      ],
+      "resposta_correta": "Cinco"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual foi a maior goleada já aplicada pelo Brasil em uma Copa do Mundo, contra a Suécia em 1950?",
+      "opcoes": [
+        "7 a 1",
+        "5 a 0",
+        "3 a 0",
+        "10 a 0"
+      ],
+      "resposta_correta": "7 a 1"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem é a única pessoa na história a conquistar quatro títulos de Copa do Mundo, somando as conquistas como jogador, técnico e auxiliar técnico?",
+      "opcoes": [
+        "Mário Jorge Lobo Zagallo",
+        "Pelé",
+        "Carlos Alberto Parreira",
+        "Felipão"
+      ],
+      "resposta_correta": "Mário Jorge Lobo Zagallo"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual jogador brasileiro é o único a disputar três finais consecutivas de Copa do Mundo?",
+      "opcoes": [
+        "Cafu",
+        "Ronaldo Fenômeno",
+        "Pelé",
+        "Romário"
+      ],
+      "resposta_correta": "Cafu"
+    }
+  ]
+}

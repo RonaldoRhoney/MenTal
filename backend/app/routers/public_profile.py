@@ -29,6 +29,11 @@ def get_public_profile(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    # Auditoria de segurança pré-lançamento mundial (17/09/2026, achado
+    # M4): sem teto, dava pra combinar com GET /social/users/search pra
+    # coletar user_id + dado público de um número arbitrário de contas
+    # em sequência.
+    services.enforce_rate_limit("public_profile_view", user_id, max_calls=config.RATE_LIMIT_PUBLIC_PROFILE_VIEW[0], window_seconds=config.RATE_LIMIT_PUBLIC_PROFILE_VIEW[1])
     result = services.get_public_profile(db, viewer_user_id=user_id, target_user_id=target_user_id)
     if result is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "USER_NOT_FOUND", "message": target_user_id}})

@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Quem é creditado por criar o sistema de cartões amarelo e vermelho no futebol?",
+    "options": [
+      "Ken Aston",
+      "Antonio Rattín",
+      "Jules Rimet",
+      "Ebenezer Cobb Morley"
+    ],
+    "correct_answer": "Ken Aston",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem dos Cartões Amarelo e Vermelho'.",
+      "Começa com 'K'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em qual objeto do cotidiano Ken Aston se inspirou para criar os cartões coloridos?",
+    "options": [
+      "Um semáforo de trânsito",
+      "Uma bandeira nacional",
+      "Um relógio de parede",
+      "Um jogo de cartas comum"
+    ],
+    "correct_answer": "Um semáforo de trânsito",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem dos Cartões Amarelo e Vermelho'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual episódio na Copa do Mundo de 1966 expôs a necessidade de um sistema visual e universal de punição?",
+    "options": [
+      "A expulsão conturbada do argentino Antonio Rattín, que não entendia o árbitro alemão",
+      "Um gol anulado sem explicação clara",
+      "Uma disputa de pênaltis confusa",
+      "A ausência de um árbitro principal na partida"
+    ],
+    "correct_answer": "A expulsão conturbada do argentino Antonio Rattín, que não entendia o árbitro alemão",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem dos Cartões Amarelo e Vermelho'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em qual Copa do Mundo os cartões amarelo e vermelho foram oficialmente utilizados pela primeira vez?",
+    "options": [
+      "Copa de 1970, no México",
+      "Copa de 1966, na Inglaterra",
+      "Copa de 1974, na Alemanha",
+      "Copa de 1978, na Argentina"
+    ],
+    "correct_answer": "Copa de 1970, no México",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem dos Cartões Amarelo e Vermelho'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual problema prático de comunicação internacional os cartões vieram resolver, segundo relatos históricos?",
+    "options": [
+      "A dificuldade de árbitros e jogadores de países diferentes se entenderem durante decisões disciplinares",
+      "A falta de iluminação nos estádios à noite",
+      "A ausência de um sistema de pontuação claro",
+      "A dificuldade de contar o tempo de jogo"
+    ],
+    "correct_answer": "A dificuldade de árbitros e jogadores de países diferentes se entenderem durante decisões disciplinares",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem dos Cartões Amarelo e Vermelho'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "O que significa a sigla VAR, usada no futebol moderno?",
+    "options": [
+      "Video Assistant Referee (Árbitro Assistente de Vídeo)",
+      "Verified Automatic Review",
+      "Video Analysis Rule",
+      "Virtual Arbitration Referee"
+    ],
+    "correct_answer": "Video Assistant Referee (Árbitro Assistente de Vídeo)",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do VAR'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em que Copa do Mundo o VAR foi usado oficialmente pela primeira vez?",
+    "options": [
+      "2018, na Rússia",
+      "2014, no Brasil",
+      "2022, no Catar",
+      "2010, na África do Sul"
+    ],
+    "correct_answer": "2018, na Rússia",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do VAR'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em que ano a tecnologia do VAR começou a ser testada pela FIFA, antes de sua estreia oficial em Copa?",
+    "options": [
+      "2016",
+      "2010",
+      "2018, sem testes anteriores",
+      "2005"
+    ],
+    "correct_answer": "2016",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do VAR'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Segundo dados divulgados pela FIFA, qual foi o efeito do VAR na taxa de acerto das decisões arbitrais?",
+    "options": [
+      "Aumentou de 93% para 99% de acerto",
+      "Não teve nenhum efeito mensurável",
+      "Diminuiu a taxa de acerto",
+      "Dobrou o tempo médio de cada partida sem melhorar decisões"
+    ],
+    "correct_answer": "Aumentou de 93% para 99% de acerto",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do VAR'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Na Copa do Mundo de 2022, qual novidade tecnológica foi introduzida junto ao VAR, agilizando a marcação de impedimentos?",
+    "options": [
+      "O impedimento semiautomático",
+      "A eliminação total da regra do impedimento",
+      "A substituição do árbitro principal por um robô",
+      "O uso exclusivo de replay em preto e branco"
+    ],
+    "correct_answer": "O impedimento semiautomático",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do VAR'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Como se chamava originalmente a taça entregue ao campeão da Copa do Mundo, antes de ser rebatizada em 1946?",
+    "options": [
+      "Vitória",
+      "Niké",
+      "Glória",
+      "Ouro"
+    ],
+    "correct_answer": "Vitória",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A História da Taça Jules Rimet'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em homenagem a quem essa taça foi rebatizada de 'Jules Rimet'?",
+    "options": [
+      "O dirigente que presidiu a FIFA de 1921 a 1954",
+      "O escultor que a criou",
+      "O primeiro capitão campeão do mundo",
+      "Um rei inglês da época"
+    ],
+    "correct_answer": "O dirigente que presidiu a FIFA de 1921 a 1954",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A História da Taça Jules Rimet'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em 1966, a Taça Jules Rimet foi roubada durante uma exposição em Londres. Quem a encontrou, dias depois, escondida sob um arbusto?",
+    "options": [
+      "Um cachorro chamado Pickles",
+      "Um policial disfarçado",
+      "Um jornalista investigativo",
+      "Um jogador da seleção inglesa"
+    ],
+    "correct_answer": "Um cachorro chamado Pickles",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A História da Taça Jules Rimet'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o Brasil conquistou definitivamente a posse da Taça Jules Rimet, por ser o primeiro tricampeão mundial?",
+    "options": [
+      "1970",
+      "1966",
+      "1958, com o primeiro título",
+      "1962"
+    ],
+    "correct_answer": "1970",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A História da Taça Jules Rimet'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceu com a Taça Jules Rimet em 1983, enquanto estava sob a guarda da Confederação Brasileira de Futebol?",
+    "options": [
+      "Foi roubada e nunca mais recuperada",
+      "Foi doada a um museu internacional",
+      "Foi vendida em leilão",
+      "Foi destruída em um incêndio"
+    ],
+    "correct_answer": "Foi roubada e nunca mais recuperada",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A História da Taça Jules Rimet'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o Estádio do Maracanã foi inaugurado?",
+    "options": [
+      "1950",
+      "1930",
+      "1970",
+      "1966"
+    ],
+    "correct_answer": "1950",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Público e o Maracanã'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual é o maior público já registrado em uma partida de futebol, na final da Copa de 1950 no Maracanã?",
+    "options": [
+      "Cerca de 199 mil espectadores",
+      "Cerca de 50 mil espectadores",
+      "Cerca de 10 mil espectadores",
+      "Cerca de 500 mil espectadores"
+    ],
+    "correct_answer": "Cerca de 199 mil espectadores",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Público e o Maracanã'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual era a capacidade original de projeto do Maracanã, tornando-o o maior estádio do mundo em sua inauguração?",
+    "options": [
+      "Cerca de 200 mil pessoas",
+      "Cerca de 20 mil pessoas",
+      "Cerca de 2 mil pessoas",
+      "Cerca de 2 milhões de pessoas"
+    ],
+    "correct_answer": "Cerca de 200 mil pessoas",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Público e o Maracanã'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Após reformas para atender a padrões de segurança modernos, para quantos espectadores é a capacidade atual do Maracanã?",
+    "options": [
+      "Cerca de 78 mil pessoas",
+      "Cerca de 200 mil pessoas",
+      "Cerca de 10 mil pessoas",
+      "Cerca de 500 mil pessoas"
+    ],
+    "correct_answer": "Cerca de 78 mil pessoas",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Público e o Maracanã'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Por que o recorde de público de 1950 é considerado praticamente impossível de ser quebrado no futebol atual?",
+    "options": [
+      "As normas modernas de segurança e assentos individuais reduziram drasticamente a capacidade dos estádios",
+      "Porque o futebol perdeu popularidade ao longo do tempo",
+      "Porque não existem mais estádios grandes no mundo",
+      "Porque as partidas atuais têm menos importância histórica"
+    ],
+    "correct_answer": "As normas modernas de segurança e assentos individuais reduziram drasticamente a capacidade dos estádios",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Público e o Maracanã'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual é considerada a transferência mais cara da história do futebol?",
+    "options": [
+      "Neymar, do Barcelona para o PSG",
+      "Cristiano Ronaldo, para o Real Madrid",
+      "Kylian Mbappé, para o PSG",
+      "Messi, para o PSG"
+    ],
+    "correct_answer": "Neymar, do Barcelona para o PSG",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Transferências e o Mercado da Bola'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em que ano essa transferência recorde de Neymar aconteceu?",
+    "options": [
+      "2017",
+      "2013",
+      "2022",
+      "2010"
+    ],
+    "correct_answer": "2017",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Transferências e o Mercado da Bola'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Aproximadamente por qual valor o PSG pagou pela contratação de Neymar?",
+    "options": [
+      "222 milhões de euros",
+      "22 milhões de euros",
+      "2,2 bilhões de euros",
+      "2,2 milhões de euros"
+    ],
+    "correct_answer": "222 milhões de euros",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Transferências e o Mercado da Bola'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual jogador francês, também contratado pelo PSG em 2017, se tornou a segunda transferência mais cara da história?",
+    "options": [
+      "Kylian Mbappé",
+      "Antoine Griezmann",
+      "Paul Pogba",
+      "Ousmane Dembélé"
+    ],
+    "correct_answer": "Kylian Mbappé",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Transferências e o Mercado da Bola'.",
+      "Começa com 'K'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_regras_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "De qual clube o PSG contratou Neymar, em 2017?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Santos",
+      "Manchester United"
+    ],
+    "correct_answer": "Barcelona",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Recordes de Transferências e o Mercado da Bola'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  }
+]

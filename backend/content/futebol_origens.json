@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o futebol moderno foi oficialmente padronizado, com a fundação da Football Association?",
+    "options": [
+      "1863",
+      "1904",
+      "1930",
+      "1857"
+    ],
+    "correct_answer": "1863",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem do Futebol Moderno'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em qual cidade a Football Association (FA) foi fundada?",
+    "options": [
+      "Londres",
+      "Manchester",
+      "Liverpool",
+      "Sheffield"
+    ],
+    "correct_answer": "Londres",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem do Futebol Moderno'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Quem é frequentemente chamado de 'pai do futebol moderno', por redigir a versão original das regras da FA?",
+    "options": [
+      "Ebenezer Cobb Morley",
+      "Jules Rimet",
+      "Charles Miller",
+      "William McGregor"
+    ],
+    "correct_answer": "Ebenezer Cobb Morley",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem do Futebol Moderno'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Qual conjunto de regras, elaborado por estudantes da Universidade de Cambridge em 1848, é considerado uma base importante para a unificação posterior do futebol?",
+    "options": [
+      "As Regras de Cambridge",
+      "As Regras de Sheffield",
+      "As Leis do Jogo da FIFA",
+      "O Código de Londres"
+    ],
+    "correct_answer": "As Regras de Cambridge",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem do Futebol Moderno'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Qual clube, fundado em 1857, é hoje reconhecido como o clube de futebol mais antigo do mundo?",
+    "options": [
+      "Sheffield FC",
+      "Manchester United",
+      "Liverpool FC",
+      "Barnes FC"
+    ],
+    "correct_answer": "Sheffield FC",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Origem do Futebol Moderno'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Quem é considerado o responsável por trazer o futebol ao Brasil?",
+    "options": [
+      "Charles Miller",
+      "Jules Rimet",
+      "Ebenezer Cobb Morley",
+      "Victor Serpa"
+    ],
+    "correct_answer": "Charles Miller",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do Futebol ao Brasil'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que ano Charles Miller retornou ao Brasil trazendo bolas e um manual de regras da Inglaterra?",
+    "options": [
+      "1894",
+      "1863",
+      "1930",
+      "1904"
+    ],
+    "correct_answer": "1894",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do Futebol ao Brasil'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que data ocorreu a primeira partida de futebol no Brasil, na região do Brás, em São Paulo?",
+    "options": [
+      "14 de abril de 1895",
+      "24 de novembro de 1874",
+      "18 de fevereiro de 1894",
+      "1º de janeiro de 1888"
+    ],
+    "correct_answer": "14 de abril de 1895",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do Futebol ao Brasil'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Entre quais dois times ocorreu essa primeira partida oficial de futebol no Brasil?",
+    "options": [
+      "Funcionários da São Paulo Railway e da Companhia de Gás",
+      "São Paulo Athletic Club e Sport Club Rio Grande",
+      "Flamengo e Fluminense",
+      "Corinthians e Palmeiras"
+    ],
+    "correct_answer": "Funcionários da São Paulo Railway e da Companhia de Gás",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do Futebol ao Brasil'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Qual clube, fundado por Charles Miller, é apontado como um dos primeiros times de futebol organizados do Brasil?",
+    "options": [
+      "São Paulo Athletic Club (SPAC)",
+      "Sport Club Rio Grande",
+      "Nacional Atlético Clube",
+      "Corinthians"
+    ],
+    "correct_answer": "São Paulo Athletic Club (SPAC)",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Chegada do Futebol ao Brasil'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que ano a FIFA foi fundada?",
+    "options": [
+      "1904",
+      "1863",
+      "1930",
+      "1921"
+    ],
+    "correct_answer": "1904",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Fundação da FIFA e a Primeira Copa do Mundo'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em qual cidade a FIFA foi fundada?",
+    "options": [
+      "Paris",
+      "Londres",
+      "Zurique",
+      "Montevidéu"
+    ],
+    "correct_answer": "Paris",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Fundação da FIFA e a Primeira Copa do Mundo'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Quem foi o presidente da FIFA responsável por organizar a primeira Copa do Mundo?",
+    "options": [
+      "Jules Rimet",
+      "Robert Guerin",
+      "João Havelange",
+      "Daniel Burley Woolfall"
+    ],
+    "correct_answer": "Jules Rimet",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Fundação da FIFA e a Primeira Copa do Mundo'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi realizada a primeira Copa do Mundo, em 1930?",
+    "options": [
+      "Uruguai",
+      "Brasil",
+      "Inglaterra",
+      "Itália"
+    ],
+    "correct_answer": "Uruguai",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Fundação da FIFA e a Primeira Copa do Mundo'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Quantas seleções participaram dessa primeira edição da Copa do Mundo?",
+    "options": [
+      "13",
+      "32",
+      "4",
+      "24"
+    ],
+    "correct_answer": "13",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Fundação da FIFA e a Primeira Copa do Mundo'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Quem foi o idealizador da primeira liga de futebol nacional do mundo, a Football League, criada na Inglaterra em 1888?",
+    "options": [
+      "William McGregor",
+      "Ebenezer Cobb Morley",
+      "Jules Rimet",
+      "Charles Miller"
+    ],
+    "correct_answer": "William McGregor",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Profissionalização do Futebol'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que ano a Football Association (FA) da Inglaterra suspendeu a proibição ao profissionalismo, permitindo pagar jogadores?",
+    "options": [
+      "1885",
+      "1863",
+      "1930",
+      "1904"
+    ],
+    "correct_answer": "1885",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Profissionalização do Futebol'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o futebol se tornou oficialmente profissional no Brasil, com clubes se organizando em entidades privadas de gestão?",
+    "options": [
+      "1933",
+      "1895",
+      "1904",
+      "1930"
+    ],
+    "correct_answer": "1933",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Profissionalização do Futebol'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Antes dessa profissionalização oficial, em que ano a seleção brasileira disputou sua primeira Copa do Mundo, ainda em regime amador?",
+    "options": [
+      "1930",
+      "1933",
+      "1904",
+      "1950"
+    ],
+    "correct_answer": "1930",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Profissionalização do Futebol'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Qual entidade, criada em 1914, era responsável pela seleção brasileira antes da profissionalização, e teve atrito com dirigentes paulistas na Copa de 1930?",
+    "options": [
+      "Confederação Brasileira de Desportos (CBD)",
+      "São Paulo Athletic Club",
+      "Football League",
+      "Football Association"
+    ],
+    "correct_answer": "Confederação Brasileira de Desportos (CBD)",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Profissionalização do Futebol'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que ano a regra do impedimento passou a considerar apenas dois defensores entre o atacante e o gol, em vez de três?",
+    "options": [
+      "1925",
+      "1863",
+      "1990",
+      "1866"
+    ],
+    "correct_answer": "1925",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Curiosidades e Marcos das Primeiras Décadas'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Qual foi o efeito prático dessa mudança na regra do impedimento, segundo registros da época?",
+    "options": [
+      "A média de gols por jogo na liga inglesa aumentou significativamente",
+      "O número de gols diminuiu ainda mais",
+      "Nenhum efeito perceptível foi registrado",
+      "O impedimento foi completamente abolido"
+    ],
+    "correct_answer": "A média de gols por jogo na liga inglesa aumentou significativamente",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Curiosidades e Marcos das Primeiras Décadas'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que ano ocorreu a primeira transmissão de uma Copa do Mundo pelo rádio, gerando grande aglomeração de torcedores no Brasil?",
+    "options": [
+      "1938",
+      "1930",
+      "1970",
+      "1925"
+    ],
+    "correct_answer": "1938",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Curiosidades e Marcos das Primeiras Décadas'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Quem é considerado o criador da narração de futebol 'em cima do lance', em sua primeira transmissão esportiva no Brasil, em 1931?",
+    "options": [
+      "Nicolau Tuma",
+      "Ary Barroso",
+      "Charles Miller",
+      "Teófilo Vasconcelos"
+    ],
+    "correct_answer": "Nicolau Tuma",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Curiosidades e Marcos das Primeiras Décadas'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "futebol_origens",
+    "difficulty_level": 1,
+    "prompt": "Em que ano aconteceu a primeira transmissão de uma Copa do Mundo ao vivo e em cores pela televisão brasileira?",
+    "options": [
+      "1970",
+      "1938",
+      "1930",
+      "1925"
+    ],
+    "correct_answer": "1970",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Curiosidades e Marcos das Primeiras Décadas'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 4,
+    "tema_bloco": "Presente e Formatos Atuais",
+    "desafio": 1,
+    "tema_desafio": "A UEFA Champions League",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano foi criada a Copa dos Campeões Europeus, hoje conhecida como Champions League?",
+      "opcoes": [
+        "1955",
+        "1930",
+        "1992",
+        "1970"
+      ],
+      "resposta_correta": "1955"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual clube venceu as cinco primeiras edições da competição, ainda na década de 1950?",
+      "opcoes": [
+        "Real Madrid",
+        "Milan",
+        "Liverpool",
+        "Bayern de Munique"
+      ],
+      "resposta_correta": "Real Madrid"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que temporada o torneio foi rebatizado oficialmente para 'UEFA Champions League', com novo formato de fase de grupos?",
+      "opcoes": [
+        "1992-93",
+        "1955-56",
+        "2024-25",
+        "1970-71"
+      ],
+      "resposta_correta": "1992-93"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual clube é o maior campeão da história da competição?",
+      "opcoes": [
+        "Real Madrid",
+        "Milan",
+        "Bayern de Munique",
+        "Liverpool"
+      ],
+      "resposta_correta": "Real Madrid"
+    },
+    {
+      "n": 5,
+      "pergunta": "A partir de qual temporada a Champions League passou a adotar um novo formato, com 36 clubes disputando jogos contra adversários diferentes antes das oitavas de final?",
+      "opcoes": [
+        "2024-25",
+        "1992-93",
+        "1955-56",
+        "2010-11"
+      ],
+      "resposta_correta": "2024-25"
+    }
+  ]
+}

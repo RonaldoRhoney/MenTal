@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 4,
+    "tema_bloco": "Curiosidades e Recordes da Copa",
+    "desafio": 4,
+    "tema_desafio": "A Evolução do Formato — de 13 a 48 Seleções",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas recentes (2026). Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Com quantas seleções foi disputada a primeira Copa do Mundo, em 1930?",
+      "opcoes": [
+        "13",
+        "32",
+        "48",
+        "24"
+      ],
+      "resposta_correta": "13"
+    },
+    {
+      "n": 2,
+      "pergunta": "A partir de que Copa o formato de 32 seleções passou a ser adotado, permanecendo assim por décadas?",
+      "opcoes": [
+        "1998",
+        "1930",
+        "1970",
+        "2002"
+      ],
+      "resposta_correta": "1998"
+    },
+    {
+      "n": 3,
+      "pergunta": "A Copa do Mundo de 2026 estreou um novo recorde de seleções participantes. Quantas equipes passaram a disputar o torneio?",
+      "opcoes": [
+        "48",
+        "32",
+        "24",
+        "64"
+      ],
+      "resposta_correta": "48"
+    },
+    {
+      "n": 4,
+      "pergunta": "A Copa de 2026 também marcou um ineditismo geográfico. Qual foi essa novidade?",
+      "opcoes": [
+        "Foi a primeira Copa sediada simultaneamente por três países",
+        "Foi a primeira Copa disputada fora do hemisfério norte",
+        "Foi a primeira Copa sem nenhum país europeu classificado",
+        "Foi a primeira Copa disputada em apenas uma cidade"
+      ],
+      "resposta_correta": "Foi a primeira Copa sediada simultaneamente por três países"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quais três países sediaram conjuntamente a Copa do Mundo de 2026?",
+      "opcoes": [
+        "Estados Unidos, México e Canadá",
+        "Brasil, Argentina e Uruguai",
+        "Alemanha, França e Espanha",
+        "Catar, Arábia Saudita e Emirados Árabes"
+      ],
+      "resposta_correta": "Estados Unidos, México e Canadá"
+    }
+  ]
+}

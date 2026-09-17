@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 3,
+    "tema_bloco": "As Copas de 1998 a 2022",
+    "desafio": 3,
+    "tema_desafio": "Alemanha 2006 e a Estreia Espanhola em 2010",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Qual seleção conquistou seu quarto título mundial na Copa de 2006, disputada na Alemanha?",
+      "opcoes": [
+        "Itália",
+        "França",
+        "Brasil",
+        "Alemanha"
+      ],
+      "resposta_correta": "Itália"
+    },
+    {
+      "n": 2,
+      "pergunta": "Como foi decidida a final da Copa de 2006, entre Itália e França, após empate no tempo normal e na prorrogação?",
+      "opcoes": [
+        "Disputa de pênaltis",
+        "Gol de ouro",
+        "Novo jogo em outra data",
+        "Sorteio"
+      ],
+      "resposta_correta": "Disputa de pênaltis"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual país foi disputada a Copa do Mundo de 2010, a primeira realizada no continente africano?",
+      "opcoes": [
+        "África do Sul",
+        "Alemanha",
+        "Brasil",
+        "Argélia"
+      ],
+      "resposta_correta": "África do Sul"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual seleção conquistou seu primeiro título mundial na Copa de 2010?",
+      "opcoes": [
+        "Espanha",
+        "Holanda",
+        "Alemanha",
+        "Portugal"
+      ],
+      "resposta_correta": "Espanha"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem marcou o gol do título espanhol na final de 2010, contra a Holanda, já na prorrogação?",
+      "opcoes": [
+        "Andrés Iniesta",
+        "David Villa",
+        "Xavi Hernández",
+        "Fernando Torres"
+      ],
+      "resposta_correta": "Andrés Iniesta"
+    }
+  ]
+}

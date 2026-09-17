@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 4,
+    "tema_bloco": "Presente e Formatos Atuais",
+    "desafio": 2,
+    "tema_desafio": "A Copa Libertadores da América",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano foi disputada a primeira edição da Copa Libertadores da América?",
+      "opcoes": [
+        "1960",
+        "1955",
+        "1930",
+        "1970"
+      ],
+      "resposta_correta": "1960"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual clube foi o primeiro campeão da história da Libertadores?",
+      "opcoes": [
+        "Peñarol",
+        "Independiente",
+        "Boca Juniors",
+        "Santos"
+      ],
+      "resposta_correta": "Peñarol"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em homenagem a quem a competição recebeu o nome 'Libertadores', a partir de 1965?",
+      "opcoes": [
+        "Líderes da independência das nações sul-americanas",
+        "Os primeiros campeões do torneio",
+        "Fundadores da CONMEBOL",
+        "Jogadores lendários da época"
+      ],
+      "resposta_correta": "Líderes da independência das nações sul-americanas"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual clube é o maior campeão da história da Libertadores, com sete títulos?",
+      "opcoes": [
+        "Independiente",
+        "Peñarol",
+        "Boca Juniors",
+        "River Plate"
+      ],
+      "resposta_correta": "Independiente"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual país tem o maior número de clubes diferentes já campeões da Libertadores?",
+      "opcoes": [
+        "Brasil",
+        "Argentina",
+        "Uruguai",
+        "Colômbia"
+      ],
+      "resposta_correta": "Brasil"
+    }
+  ]
+}

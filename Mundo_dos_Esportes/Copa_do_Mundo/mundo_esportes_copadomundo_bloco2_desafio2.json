@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 2,
+    "tema_bloco": "As Copas de 1962 a 1994",
+    "desafio": 2,
+    "tema_desafio": "Inglaterra 1966 e o Gol Fantasma",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - falecimento de Bobby Charlton mencionado apenas como fato biografico factual."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 1966?",
+      "opcoes": [
+        "Inglaterra",
+        "Alemanha",
+        "Chile",
+        "Suécia"
+      ],
+      "resposta_correta": "Inglaterra"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual seleção conquistou seu único título mundial até hoje nessa edição?",
+      "opcoes": [
+        "Inglaterra",
+        "Alemanha",
+        "Portugal",
+        "Argentina"
+      ],
+      "resposta_correta": "Inglaterra"
+    },
+    {
+      "n": 3,
+      "pergunta": "Contra qual seleção a Inglaterra venceu a polêmica final de 1966, por 4 a 2?",
+      "opcoes": [
+        "Alemanha Ocidental",
+        "Brasil",
+        "Portugal",
+        "Argentina"
+      ],
+      "resposta_correta": "Alemanha Ocidental"
+    },
+    {
+      "n": 4,
+      "pergunta": "Como ficou conhecido o gol decisivo e controverso marcado por Geoff Hurst na prorrogação daquela final?",
+      "opcoes": [
+        "Gol fantasma",
+        "Gol de placa",
+        "Gol relâmpago",
+        "Gol de ouro"
+      ],
+      "resposta_correta": "Gol fantasma"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual craque inglês, principal figura daquela conquista, marcou dois gols na semifinal contra Portugal e faleceu em 2023?",
+      "opcoes": [
+        "Bobby Charlton",
+        "Geoff Hurst",
+        "Bobby Moore",
+        "Martin Peters"
+      ],
+      "resposta_correta": "Bobby Charlton"
+    }
+  ]
+}

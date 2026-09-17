@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 4,
+    "tema_bloco": "Presente e Formatos Atuais",
+    "desafio": 3,
+    "tema_desafio": "O Novo Mundial de Clubes FIFA",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano estreou o novo formato expandido do Mundial de Clubes da FIFA, com 32 equipes?",
+      "opcoes": [
+        "2025",
+        "2000",
+        "2018, mesmo ano da Copa do Mundo",
+        "2010"
+      ],
+      "resposta_correta": "2025"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual país foi realizada essa primeira edição expandida do Mundial de Clubes?",
+      "opcoes": [
+        "Estados Unidos",
+        "Brasil",
+        "Catar",
+        "Rússia"
+      ],
+      "resposta_correta": "Estados Unidos"
+    },
+    {
+      "n": 3,
+      "pergunta": "Antes da expansão, com quantas equipes o Mundial de Clubes costumava ser disputado anualmente?",
+      "opcoes": [
+        "Sete equipes",
+        "32 equipes",
+        "16 equipes",
+        "4 equipes"
+      ],
+      "resposta_correta": "Sete equipes"
+    },
+    {
+      "n": 4,
+      "pergunta": "A partir de 2025, com que frequência o novo Mundial de Clubes passou a ser disputado?",
+      "opcoes": [
+        "A cada quatro anos",
+        "Todo ano",
+        "A cada dois anos",
+        "A cada dez anos"
+      ],
+      "resposta_correta": "A cada quatro anos"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quantas vagas foram destinadas à América do Sul (CONMEBOL) nessa primeira edição expandida do torneio?",
+      "opcoes": [
+        "Seis vagas",
+        "Uma vaga",
+        "Doze vagas",
+        "Trinta e duas vagas"
+      ],
+      "resposta_correta": "Seis vagas"
+    }
+  ]
+}

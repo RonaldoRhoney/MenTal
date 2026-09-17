@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 2,
+    "tema_bloco": "As Copas de 1962 a 1994",
+    "desafio": 1,
+    "tema_desafio": "Chile 1962 e o Bicampeonato Brasileiro",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - lesao esportiva mencionada de forma factual e breve."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 1962?",
+      "opcoes": [
+        "Chile",
+        "Suécia",
+        "Uruguai",
+        "Brasil"
+      ],
+      "resposta_correta": "Chile"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual seleção conquistou o bicampeonato mundial nessa Copa?",
+      "opcoes": [
+        "Brasil",
+        "Uruguai",
+        "Itália",
+        "Argentina"
+      ],
+      "resposta_correta": "Brasil"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual craque brasileiro se lesionou logo na segunda partida da fase de grupos, desfalcando a seleção pelo restante do torneio?",
+      "opcoes": [
+        "Pelé",
+        "Garrincha",
+        "Didi",
+        "Vavá"
+      ],
+      "resposta_correta": "Pelé"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem assumiu o protagonismo do time na ausência desse craque, tornando-se o grande destaque da Copa?",
+      "opcoes": [
+        "Garrincha",
+        "Amarildo",
+        "Zagallo",
+        "Djalma Santos"
+      ],
+      "resposta_correta": "Garrincha"
+    },
+    {
+      "n": 5,
+      "pergunta": "Contra qual seleção o Brasil venceu a final da Copa de 1962?",
+      "opcoes": [
+        "Tchecoslováquia",
+        "Suécia",
+        "Uruguai",
+        "Inglaterra"
+      ],
+      "resposta_correta": "Tchecoslováquia"
+    }
+  ]
+}

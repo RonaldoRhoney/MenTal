@@ -9,6 +9,7 @@ import uuid
 
 from app import models, services
 from app.db import SessionLocal
+from app.seed import CHALLENGES
 
 from .conftest import auth_header
 
@@ -88,3 +89,43 @@ def test_answer_response_reports_batch_exhausted(client):
 
     assert flags[:-1] == [False] * (batch_size - 1)
     assert flags[-1] is True
+
+
+def test_flat_territory_never_repeats_even_when_player_performs_well(client):
+    """
+    CORRECAO_REPETICAO_PERGUNTAS_V1.md — causa raiz encontrada
+    14/09/2026: territórios "flat" (curadoria só em difficulty_level=1,
+    ex.: oceano_mundo) não tinham conteúdo no nível pra onde a
+    dificuldade adaptativa sobe quando o jogador acerta bem (nível 2+).
+    Isso fazia GET /challenges/next cair no fallback "território
+    inteiro" mas gravar o progresso do lote na chave do nível
+    inexistente — cada subida de nível abria uma fila NOVA sobre o
+    MESMO conjunto de perguntas, repetindo itens já vistos. A correção
+    trava pick_difficulty_for pra nunca recomendar um nível sem
+    conteúdo curado; este teste joga um território flat inteiro
+    acertando tudo (justamente o que dispara a subida de nível) e
+    confirma que nenhuma pergunta se repete antes do lote esgotar.
+    """
+    territory_id = "oceano_mundo"
+    total = sum(1 for c in CHALLENGES if c["territory_id"] == territory_id)
+    assert total >= 4, "teste assume um território flat com volume suficiente pra expor a subida de nível"
+
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    seen_challenge_ids = []
+    for _ in range(total):
+        challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
+        assert challenge["difficulty_level"] == 1, "território flat: dificuldade nunca deveria sair do único nível curado"
+        assert challenge["challenge_id"] not in seen_challenge_ids, "repetiu pergunta antes do lote esgotar"
+        seen_challenge_ids.append(challenge["challenge_id"])
+
+        correct = next(c["correct_answer"] for c in CHALLENGES if c["territory_id"] == territory_id and c["prompt"] == challenge["prompt"])
+        client.post(
+            f"/challenges/{challenge['challenge_id']}/answer",
+            json={"attempt_id": challenge["attempt_id"], "submitted_answer": correct},
+            headers=headers,
+        )
+
+    assert len(set(seen_challenge_ids)) == total

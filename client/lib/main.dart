@@ -16,6 +16,7 @@ import 'screens/mandatory_onboarding_screen.dart';
 import 'screens/movement_screen.dart';
 import 'screens/onboarding_tutorial_screen.dart';
 import 'screens/opening_experience_screen.dart';
+import 'screens/reset_password_screen.dart';
 import 'services/onboarding_tutorial_service.dart';
 import 'services/push_service.dart';
 import 'services/theme_mode_service.dart';
@@ -162,11 +163,25 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   late final Stream<AuthState> _authStateStream;
   String? _lastAccessToken;
   StreamSubscription<RemoteMessage>? _pushOpenedSubscription;
+  // RECUPERACAO_DE_SENHA_E_LOGIN_V1.md §2.1 — o Supabase entrega
+  // AuthChangeEvent.passwordRecovery com uma sessão VÁLIDA (accessToken
+  // não nulo), mas essa sessão só serve pra trocar a senha (auth.
+  // updateUser), nunca deve navegar pra Home/Age Gate como um login
+  // normal. Uma assinatura própria (além do StreamBuilder do
+  // _authStateStream abaixo) detecta esse evento específico ANTES de
+  // _updateClientFromSession tratar a sessão como login.
+  StreamSubscription<AuthState>? _passwordRecoverySub;
+  bool _passwordRecoveryPending = false;
 
   @override
   void initState() {
     super.initState();
     _authStateStream = Supabase.instance.client.auth.onAuthStateChange;
+    _passwordRecoverySub = _authStateStream.listen((state) {
+      if (state.event == AuthChangeEvent.passwordRecovery && mounted) {
+        setState(() => _passwordRecoveryPending = true);
+      }
+    });
     _updateClientFromSession(Supabase.instance.client.auth.currentSession);
     OnboardingTutorialService.hasSeen().then((seen) {
       if (mounted) setState(() => _tutorialSeen = seen);
@@ -222,6 +237,7 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   void dispose() {
     FlutterForegroundTask.removeTaskDataCallback(_onForegroundTaskData);
     _pushOpenedSubscription?.cancel();
+    _passwordRecoverySub?.cancel();
     super.dispose();
   }
 
@@ -240,6 +256,13 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   // saturando o pool de conexões do banco e travando outras requisições
   // (ex.: /challenges/next) por falta de conexão livre.
   void _updateClientFromSession(Session? session) {
+    // A sessão de recuperação de senha nunca deve virar um ApiClient
+    // real nem disparar registro de push/checagem de perfil — build()
+    // já desvia pra ResetPasswordScreen enquanto _passwordRecoveryPending
+    // for true; esta função só existe como proteção redundante contra
+    // uma chamada fora de ordem (ex.: postFrameCallback já enfileirado
+    // antes do listener de passwordRecovery rodar).
+    if (_passwordRecoveryPending) return;
     final accessToken = session?.accessToken;
     if (accessToken == _lastAccessToken) return;
     _lastAccessToken = accessToken;
@@ -296,6 +319,13 @@ class _AppEntryPointState extends State<AppEntryPoint> {
         onDone: () {
           OnboardingTutorialService.markSeen();
           setState(() => _tutorialSeen = true);
+        },
+      );
+    }
+    if (_passwordRecoveryPending) {
+      return ResetPasswordScreen(
+        onDone: () {
+          if (mounted) setState(() => _passwordRecoveryPending = false);
         },
       );
     }

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 1,
+    "tema_bloco": "As Primeiras Copas (1930-1950)",
+    "desafio": 1,
+    "tema_desafio": "A Copa de 1930 no Uruguai",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi realizada a primeira Copa do Mundo da história, em 1930?",
+      "opcoes": [
+        "Uruguai",
+        "Brasil",
+        "Itália",
+        "França"
+      ],
+      "resposta_correta": "Uruguai"
+    },
+    {
+      "n": 2,
+      "pergunta": "Por que o Uruguai foi escolhido como sede dessa primeira edição?",
+      "opcoes": [
+        "Para celebrar o centenário de sua independência, além de ser bicampeão olímpico de futebol",
+        "Por ser o único país que se candidatou",
+        "Por sorteio entre os países-membros da FIFA",
+        "Por ter o maior estádio do mundo na época"
+      ],
+      "resposta_correta": "Para celebrar o centenário de sua independência, além de ser bicampeão olímpico de futebol"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual seleção foi a campeã dessa primeira Copa do Mundo?",
+      "opcoes": [
+        "Uruguai",
+        "Argentina",
+        "Brasil",
+        "França"
+      ],
+      "resposta_correta": "Uruguai"
+    },
+    {
+      "n": 4,
+      "pergunta": "Contra qual seleção o Uruguai venceu a final da Copa de 1930?",
+      "opcoes": [
+        "Argentina",
+        "Brasil",
+        "França",
+        "México"
+      ],
+      "resposta_correta": "Argentina"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quantas seleções participaram dessa primeira Copa do Mundo?",
+      "opcoes": [
+        "13",
+        "32",
+        "24",
+        "4"
+      ],
+      "resposta_correta": "13"
+    }
+  ]
+}

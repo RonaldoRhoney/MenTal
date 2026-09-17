@@ -125,3 +125,24 @@ def test_search_does_not_expose_unapproved_photo(client):
     resp = client.get("/social/users/search", params={"q": "Juliana"}, headers=searcher_headers)
     match = next(r for r in resp.json()["results"] if r["user_id"] == target)
     assert match["photo_url"] is None
+
+
+def test_user_search_rate_limit_is_enforced(client):
+    """Auditoria de segurança pré-lançamento mundial (17/09/2026,
+    achado M4): busca de usuário por nome nunca teve teto — dava pra
+    varrer prefixos automaticamente e coletar user_id/nome real/foto/
+    nível em massa."""
+    from app import config
+
+    searcher = str(uuid.uuid4())
+    headers = auth_header(searcher)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    max_calls, _ = config.RATE_LIMIT_USER_SEARCH
+    for i in range(max_calls):
+        resp = client.get("/social/users/search", params={"q": "abc"}, headers=headers)
+        assert resp.status_code == 200, f"deveria permitir a chamada {i + 1}/{max_calls}"
+
+    over_limit = client.get("/social/users/search", params={"q": "abc"}, headers=headers)
+    assert over_limit.status_code == 429
+    assert over_limit.json()["error"]["code"] == "RATE_LIMIT_EXCEEDED"

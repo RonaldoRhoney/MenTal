@@ -122,14 +122,22 @@ def _cycle_window_for(now: datetime) -> tuple[datetime, datetime]:
 
 
 def _get_or_create_cycle_for_window(
-    db: Session, user_id: str, cycle_start: datetime, cycle_end: datetime
+    db: Session, user_id: str, cycle_start: datetime, cycle_end: datetime, for_update: bool = False
 ) -> models.MovementCycle:
-    cycle = db.execute(
-        select(models.MovementCycle).where(
-            models.MovementCycle.user_id == user_id,
-            models.MovementCycle.cycle_start_at == cycle_start,
-        )
-    ).scalar_one_or_none()
+    # `for_update=True` (auditoria de segurança pré-lançamento mundial,
+    # 17/09/2026, achado A3): trava a linha até o commit de
+    # collect_steps, fechando a corrida de duas coletas concorrentes
+    # (auto-coleta + coleta manual, por exemplo) lendo o mesmo
+    # steps_collected/goal_bonus_awarded antes de qualquer commit.
+    # Default False — quem só LÊ o ciclo (relatório de fim de ciclo,
+    # tela de Movimento) não precisa travar nada.
+    query = select(models.MovementCycle).where(
+        models.MovementCycle.user_id == user_id,
+        models.MovementCycle.cycle_start_at == cycle_start,
+    )
+    if for_update:
+        query = query.with_for_update()
+    cycle = db.execute(query).scalar_one_or_none()
     if cycle is None:
         cycle = models.MovementCycle(user_id=user_id, cycle_start_at=cycle_start, cycle_end_at=cycle_end)
         db.add(cycle)
@@ -138,10 +146,12 @@ def _get_or_create_cycle_for_window(
     return cycle
 
 
-def get_current_cycle(db: Session, profile: models.Profile, now: datetime | None = None) -> models.MovementCycle:
+def get_current_cycle(
+    db: Session, profile: models.Profile, now: datetime | None = None, for_update: bool = False
+) -> models.MovementCycle:
     now = now or utcnow()
     cycle_start, cycle_end = _cycle_window_for(now)
-    return _get_or_create_cycle_for_window(db, profile.user_id, cycle_start, cycle_end)
+    return _get_or_create_cycle_for_window(db, profile.user_id, cycle_start, cycle_end, for_update=for_update)
 
 
 def get_pending_report_cycle(
@@ -189,9 +199,9 @@ def collect_steps(
         raise MovementError("INVALID_STEPS", "Quantidade de passos inválida.")
 
     if cycle_id is None:
-        cycle = get_current_cycle(db, profile, now)
+        cycle = get_current_cycle(db, profile, now, for_update=True)
     else:
-        cycle = db.get(models.MovementCycle, cycle_id)
+        cycle = db.get(models.MovementCycle, cycle_id, with_for_update=True)
         if cycle is None or cycle.user_id != user_id:
             raise MovementError("CYCLE_NOT_FOUND", "Ciclo de movimento não encontrado.")
         grace_deadline = naive(cycle.cycle_end_at) + timedelta(hours=config.MOVEMENT_COLLECTION_GRACE_HOURS)

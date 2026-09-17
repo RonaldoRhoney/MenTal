@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em que Copa do Mundo surgiu a primeira mascote oficial da história do torneio?",
+    "options": [
+      "Inglaterra 1966",
+      "México 1970",
+      "Brasil 2014",
+      "Catar 2022"
+    ],
+    "correct_answer": "Inglaterra 1966",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Os Mascotes das Copas do Mundo'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Como se chamava e qual animal representava essa primeira mascote da Copa?",
+    "options": [
+      "World Cup Willie, um leão",
+      "Juanito, um menino",
+      "Fuleco, um tatu-bola",
+      "Zakumi, um leopardo"
+    ],
+    "correct_answer": "World Cup Willie, um leão",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Os Mascotes das Copas do Mundo'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual foi a mascote oficial da Copa do Mundo de 2014, realizada no Brasil?",
+    "options": [
+      "Fuleco, um tatu-bola",
+      "Zakumi, um leopardo",
+      "Juanito, um menino",
+      "La'eeb, um personagem árabe"
+    ],
+    "correct_answer": "Fuleco, um tatu-bola",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Os Mascotes das Copas do Mundo'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual foi a mascote da Copa do Mundo de 2010, disputada na África do Sul?",
+    "options": [
+      "Zakumi, um leopardo",
+      "Fuleco, um tatu-bola",
+      "Juanito, um menino",
+      "Willie, um leão"
+    ],
+    "correct_answer": "Zakumi, um leopardo",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Os Mascotes das Copas do Mundo'.",
+      "Começa com 'Z'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "O que significa, em árabe, o nome La'eeb, mascote da Copa do Catar em 2022?",
+    "options": [
+      "'Jogador super habilidoso'",
+      "'Campeão eterno'",
+      "'Amigo da torcida'",
+      "'Guerreiro do deserto'"
+    ],
+    "correct_answer": "'Jogador super habilidoso'",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Os Mascotes das Copas do Mundo'.",
+      "Começa com '''."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Segundo um estudo da Nielsen Gracenote, qual é considerada a maior zebra da história das Copas do Mundo?",
+    "options": [
+      "Arábia Saudita 2 x 1 Argentina, em 2022",
+      "Estados Unidos 1 x 0 Inglaterra, em 1950",
+      "Coreia do Norte 1 x 0 Itália, em 1966",
+      "Camarões 1 x 0 Argentina, em 1990"
+    ],
+    "correct_answer": "Arábia Saudita 2 x 1 Argentina, em 2022",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Maiores Zebras da História das Copas'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Antes dessa zebra de 2022, qual resultado era considerado a maior surpresa da história das Copas, ocorrido no Brasil em 1950?",
+    "options": [
+      "Estados Unidos 1 x 0 Inglaterra",
+      "Coreia do Norte 1 x 0 Itália",
+      "Camarões 1 x 0 Argentina",
+      "Senegal 1 x 0 França"
+    ],
+    "correct_answer": "Estados Unidos 1 x 0 Inglaterra",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Maiores Zebras da História das Copas'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em que cidade brasileira ocorreu essa histórica vitória dos Estados Unidos sobre a Inglaterra, em 1950?",
+    "options": [
+      "Belo Horizonte",
+      "Rio de Janeiro",
+      "São Paulo",
+      "Recife"
+    ],
+    "correct_answer": "Belo Horizonte",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Maiores Zebras da História das Copas'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção asiática, estreante em Copas do Mundo, eliminou a Itália na fase de grupos da Copa de 1966?",
+    "options": [
+      "Coreia do Norte",
+      "Japão",
+      "Coreia do Sul",
+      "China"
+    ],
+    "correct_answer": "Coreia do Norte",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Maiores Zebras da História das Copas'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Quem cunhou a expressão 'zebra' no futebol brasileiro, ainda nos anos 1960?",
+    "options": [
+      "O técnico Gentil Cardoso",
+      "Um jornalista esportivo anônimo",
+      "Pelé",
+      "Um comentarista de televisão"
+    ],
+    "correct_answer": "O técnico Gentil Cardoso",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'As Maiores Zebras da História das Copas'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "O Brasil é o único país a ter participado de todas as edições da Copa do Mundo desde qual ano?",
+    "options": [
+      "1930",
+      "1950",
+      "1958",
+      "1970"
+    ],
+    "correct_answer": "1930",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Brasil e seus Recordes na Copa do Mundo'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Quantos títulos mundiais o Brasil conquistou até 2002, tornando-se o maior campeão da história da Copa?",
+    "options": [
+      "Cinco",
+      "Três",
+      "Sete",
+      "Dois"
+    ],
+    "correct_answer": "Cinco",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Brasil e seus Recordes na Copa do Mundo'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual foi a maior goleada já aplicada pelo Brasil em uma Copa do Mundo, contra a Suécia em 1950?",
+    "options": [
+      "7 a 1",
+      "5 a 0",
+      "3 a 0",
+      "10 a 0"
+    ],
+    "correct_answer": "7 a 1",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Brasil e seus Recordes na Copa do Mundo'.",
+      "Começa com '7'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Quem é a única pessoa na história a conquistar quatro títulos de Copa do Mundo, somando as conquistas como jogador, técnico e auxiliar técnico?",
+    "options": [
+      "Mário Jorge Lobo Zagallo",
+      "Pelé",
+      "Carlos Alberto Parreira",
+      "Felipão"
+    ],
+    "correct_answer": "Mário Jorge Lobo Zagallo",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Brasil e seus Recordes na Copa do Mundo'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual jogador brasileiro é o único a disputar três finais consecutivas de Copa do Mundo?",
+    "options": [
+      "Cafu",
+      "Ronaldo Fenômeno",
+      "Pelé",
+      "Romário"
+    ],
+    "correct_answer": "Cafu",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'O Brasil e seus Recordes na Copa do Mundo'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Com quantas seleções foi disputada a primeira Copa do Mundo, em 1930?",
+    "options": [
+      "13",
+      "32",
+      "48",
+      "24"
+    ],
+    "correct_answer": "13",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Evolução do Formato — de 13 a 48 Seleções'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "A partir de que Copa o formato de 32 seleções passou a ser adotado, permanecendo assim por décadas?",
+    "options": [
+      "1998",
+      "1930",
+      "1970",
+      "2002"
+    ],
+    "correct_answer": "1998",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Evolução do Formato — de 13 a 48 Seleções'.",
+      "Começa com '1'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "A Copa do Mundo de 2026 estreou um novo recorde de seleções participantes. Quantas equipes passaram a disputar o torneio?",
+    "options": [
+      "48",
+      "32",
+      "24",
+      "64"
+    ],
+    "correct_answer": "48",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Evolução do Formato — de 13 a 48 Seleções'.",
+      "Começa com '4'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "A Copa de 2026 também marcou um ineditismo geográfico. Qual foi essa novidade?",
+    "options": [
+      "Foi a primeira Copa sediada simultaneamente por três países",
+      "Foi a primeira Copa disputada fora do hemisfério norte",
+      "Foi a primeira Copa sem nenhum país europeu classificado",
+      "Foi a primeira Copa disputada em apenas uma cidade"
+    ],
+    "correct_answer": "Foi a primeira Copa sediada simultaneamente por três países",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Evolução do Formato — de 13 a 48 Seleções'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Quais três países sediaram conjuntamente a Copa do Mundo de 2026?",
+    "options": [
+      "Estados Unidos, México e Canadá",
+      "Brasil, Argentina e Uruguai",
+      "Alemanha, França e Espanha",
+      "Catar, Arábia Saudita e Emirados Árabes"
+    ],
+    "correct_answer": "Estados Unidos, México e Canadá",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Evolução do Formato — de 13 a 48 Seleções'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou o título da Copa do Mundo de 2026?",
+    "options": [
+      "Espanha",
+      "Argentina",
+      "França",
+      "Brasil"
+    ],
+    "correct_answer": "Espanha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 2026 e o Bicampeonato Espanhol'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção a Espanha venceu a final de 2026, por 1 a 0?",
+    "options": [
+      "Argentina",
+      "França",
+      "Alemanha",
+      "Brasil"
+    ],
+    "correct_answer": "Argentina",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 2026 e o Bicampeonato Espanhol'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Em qual estádio, na região de Nova York/Nova Jersey, foi disputada essa final?",
+    "options": [
+      "MetLife Stadium",
+      "Estádio Azteca",
+      "SoFi Stadium",
+      "Mercedes-Benz Stadium"
+    ],
+    "correct_answer": "MetLife Stadium",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 2026 e o Bicampeonato Espanhol'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Com essa conquista, a Espanha se tornou bicampeã mundial, repetindo qual título anterior?",
+    "options": [
+      "O título de 2010, na África do Sul",
+      "O título de 1998, na França",
+      "O título de 1970, no México",
+      "O título de 2002, no Japão/Coreia"
+    ],
+    "correct_answer": "O título de 2010, na África do Sul",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 2026 e o Bicampeonato Espanhol'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_curiosidades",
+    "difficulty_level": 1,
+    "prompt": "Com o bicampeonato de 2026, a Espanha se juntou a quais outras duas seleções no grupo de países com exatamente dois títulos mundiais?",
+    "options": [
+      "França e Uruguai",
+      "Alemanha e Itália",
+      "Brasil e Argentina",
+      "Inglaterra e Portugal"
+    ],
+    "correct_answer": "França e Uruguai",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'A Copa de 2026 e o Bicampeonato Espanhol'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  }
+]

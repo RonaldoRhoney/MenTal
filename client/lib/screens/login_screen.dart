@@ -3,6 +3,16 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
+import 'forgot_password_screen.dart';
+
+/// Deep link de callback já registrado em AndroidManifest.xml (scheme
+/// com.rhoneyinc.mental, host login-callback) e em Supabase Dashboard →
+/// Authentication → URL Configuration → Redirect URLs. O intent-filter
+/// casa pelo host, então serve tanto pro retorno de OAuth (usado aqui
+/// embaixo) quanto pro link de redefinição de senha (usado em
+/// forgot_password_screen.dart) — nenhuma configuração nova precisa ser
+/// cadastrada no Supabase Dashboard pra RECUPERACAO_DE_SENHA_E_LOGIN_V1.md.
+const kMentalAuthRedirect = 'com.rhoneyinc.mental://login-callback';
 
 /// Login real via Supabase Auth (docs/02_IMPLEMENTATION/SUPABASE_SETUP.md
 /// §5). Ordem decidida por Rhoney em 24/08/2026: Google, Facebook,
@@ -42,8 +52,6 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  static const _oauthRedirect = 'com.rhoneyinc.mental://login-callback';
-
   Future<void> _signInWithProvider(OAuthProvider provider) async {
     setState(() {
       _loading = true;
@@ -57,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
       // main.dart navega sozinho quando a sessão chegar.
       await Supabase.instance.client.auth.signInWithOAuth(
         provider,
-        redirectTo: _oauthRedirect,
+        redirectTo: kMentalAuthRedirect,
       );
     } on AuthException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -191,6 +199,18 @@ class _LoginScreenState extends State<LoginScreen> {
                           }),
                   child: Text(_signUpMode ? l10n.loginToggleToSignIn : l10n.loginToggleToSignUp),
                 ),
+                // RECUPERACAO_DE_SENHA_E_LOGIN_V1.md — só faz sentido no
+                // modo de entrar (quem está criando conta ainda não tem
+                // senha esquecida pra recuperar).
+                if (!_signUpMode)
+                  TextButton(
+                    onPressed: _loading
+                        ? null
+                        : () => Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => const ForgotPasswordScreen()),
+                            ),
+                    child: Text(l10n.loginForgotPasswordLink),
+                  ),
                 if (_error != null) ...[
                   const SizedBox(height: 8),
                   Text(_error!, style: TextStyle(color: AppColors.error), textAlign: TextAlign.center),

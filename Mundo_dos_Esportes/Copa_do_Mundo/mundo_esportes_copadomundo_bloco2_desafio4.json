@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 2,
+    "tema_bloco": "As Copas de 1962 a 1994",
+    "desafio": 4,
+    "tema_desafio": "Argentina 1978 e Espanha 1982",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - contexto politico de 1978 (ditadura militar argentina) nao aprofundado nesta etapa, foco no fato esportivo."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 1978, na qual o anfitrião conquistou seu primeiro título mundial?",
+      "opcoes": [
+        "Argentina",
+        "Itália",
+        "Espanha",
+        "Brasil"
+      ],
+      "resposta_correta": "Argentina"
+    },
+    {
+      "n": 2,
+      "pergunta": "Contra qual seleção a Argentina venceu a final de 1978, após prorrogação?",
+      "opcoes": [
+        "Holanda",
+        "Alemanha Ocidental",
+        "Brasil",
+        "Itália"
+      ],
+      "resposta_correta": "Holanda"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual estádio de Buenos Aires foi disputada essa final de 1978?",
+      "opcoes": [
+        "Monumental de Núñez",
+        "Maracanã",
+        "Azteca",
+        "Wembley"
+      ],
+      "resposta_correta": "Monumental de Núñez"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 1982?",
+      "opcoes": [
+        "Espanha",
+        "Argentina",
+        "Itália",
+        "México"
+      ],
+      "resposta_correta": "Espanha"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual seleção conquistou seu terceiro título mundial na Copa de 1982, disputada na Espanha?",
+      "opcoes": [
+        "Itália",
+        "Alemanha Ocidental",
+        "Brasil",
+        "Argentina"
+      ],
+      "resposta_correta": "Itália"
+    }
+  ]
+}

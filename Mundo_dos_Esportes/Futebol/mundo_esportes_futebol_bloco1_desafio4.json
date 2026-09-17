@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 1,
+    "tema_bloco": "Origens e História do Futebol",
+    "desafio": 4,
+    "tema_desafio": "A Profissionalização do Futebol",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes academicas e jornalisticas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem foi o idealizador da primeira liga de futebol nacional do mundo, a Football League, criada na Inglaterra em 1888?",
+      "opcoes": [
+        "William McGregor",
+        "Ebenezer Cobb Morley",
+        "Jules Rimet",
+        "Charles Miller"
+      ],
+      "resposta_correta": "William McGregor"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano a Football Association (FA) da Inglaterra suspendeu a proibição ao profissionalismo, permitindo pagar jogadores?",
+      "opcoes": [
+        "1885",
+        "1863",
+        "1930",
+        "1904"
+      ],
+      "resposta_correta": "1885"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que ano o futebol se tornou oficialmente profissional no Brasil, com clubes se organizando em entidades privadas de gestão?",
+      "opcoes": [
+        "1933",
+        "1895",
+        "1904",
+        "1930"
+      ],
+      "resposta_correta": "1933"
+    },
+    {
+      "n": 4,
+      "pergunta": "Antes dessa profissionalização oficial, em que ano a seleção brasileira disputou sua primeira Copa do Mundo, ainda em regime amador?",
+      "opcoes": [
+        "1930",
+        "1933",
+        "1904",
+        "1950"
+      ],
+      "resposta_correta": "1930"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual entidade, criada em 1914, era responsável pela seleção brasileira antes da profissionalização, e teve atrito com dirigentes paulistas na Copa de 1930?",
+      "opcoes": [
+        "Confederação Brasileira de Desportos (CBD)",
+        "São Paulo Athletic Club",
+        "Football League",
+        "Football Association"
+      ],
+      "resposta_correta": "Confederação Brasileira de Desportos (CBD)"
+    }
+  ]
+}

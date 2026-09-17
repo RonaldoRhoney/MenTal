@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 2,
+    "tema_bloco": "Grandes Nomes e Recordes",
+    "desafio": 4,
+    "tema_desafio": "Lionel Messi e a Era Moderna",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em qual cidade argentina Lionel Messi nasceu?",
+      "opcoes": [
+        "Rosário",
+        "Buenos Aires",
+        "Córdoba",
+        "Lanús"
+      ],
+      "resposta_correta": "Rosário"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual clube espanhol Messi construiu a maior parte de sua carreira, tornando-se o maior artilheiro da história do time?",
+      "opcoes": [
+        "Barcelona",
+        "Real Madrid",
+        "Atlético de Madrid",
+        "Sevilla"
+      ],
+      "resposta_correta": "Barcelona"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que Copa do Mundo Messi finalmente conquistou o título com a Argentina?",
+      "opcoes": [
+        "2022",
+        "2014",
+        "2018",
+        "2010"
+      ],
+      "resposta_correta": "2022"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual prêmio individual, entregue ao melhor jogador do mundo, Messi já venceu diversas vezes ao longo da carreira?",
+      "opcoes": [
+        "Bola de Ouro",
+        "Chuteira de Prata",
+        "Prêmio Puskás exclusivamente",
+        "Medalha Olímpica de Futebol"
+      ],
+      "resposta_correta": "Bola de Ouro"
+    },
+    {
+      "n": 5,
+      "pergunta": "Para qual clube dos Estados Unidos Messi se transferiu após deixar o futebol europeu?",
+      "opcoes": [
+        "Inter Miami",
+        "LA Galaxy",
+        "New York City FC",
+        "Atlanta United"
+      ],
+      "resposta_correta": "Inter Miami"
+    }
+  ]
+}

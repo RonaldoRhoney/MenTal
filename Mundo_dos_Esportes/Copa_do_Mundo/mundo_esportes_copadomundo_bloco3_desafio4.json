@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 3,
+    "tema_bloco": "As Copas de 1998 a 2022",
+    "desafio": 4,
+    "tema_desafio": "Brasil 2014 e o Mineiraço",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano o Brasil sediou a Copa do Mundo pela segunda vez em sua história?",
+      "opcoes": [
+        "2014",
+        "1950",
+        "1970",
+        "2002"
+      ],
+      "resposta_correta": "2014"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual seleção aplicou uma histórica goleada de 7 a 1 sobre o Brasil na semifinal dessa Copa?",
+      "opcoes": [
+        "Alemanha",
+        "Argentina",
+        "Holanda",
+        "Itália"
+      ],
+      "resposta_correta": "Alemanha"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em qual estádio foi disputada essa partida, que ficou conhecida como 'Mineiraço'?",
+      "opcoes": [
+        "Mineirão, em Belo Horizonte",
+        "Maracanã, no Rio de Janeiro",
+        "Arena Corinthians, em São Paulo",
+        "Estádio Nacional, em Brasília"
+      ],
+      "resposta_correta": "Mineirão, em Belo Horizonte"
+    },
+    {
+      "n": 4,
+      "pergunta": "Quem marcou o gol decisivo da final entre Alemanha e Argentina, garantindo o tetracampeonato alemão?",
+      "opcoes": [
+        "Mario Götze",
+        "Thomas Müller",
+        "Miroslav Klose",
+        "Philipp Lahm"
+      ],
+      "resposta_correta": "Mario Götze"
+    },
+    {
+      "n": 5,
+      "pergunta": "Contra qual seleção o Brasil também foi derrotado, na disputa pelo terceiro lugar daquela Copa?",
+      "opcoes": [
+        "Holanda",
+        "Argentina",
+        "Colômbia",
+        "Bélgica"
+      ],
+      "resposta_correta": "Holanda"
+    }
+  ]
+}

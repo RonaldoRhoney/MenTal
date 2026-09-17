@@ -123,6 +123,50 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryTecnologiaFronteira => 'Tecnologia: Fronteira';
 
   @override
+  String get territoryInternetOrigens => 'Internet: Origens';
+
+  @override
+  String get territoryInternetSistemasOperacionais =>
+      'Internet: Sistemas Operacionais';
+
+  @override
+  String get territoryInternetGigantes => 'Internet: Gigantes da Web';
+
+  @override
+  String get territoryInternetCultura => 'Internet: Cultura';
+
+  @override
+  String get territoryInternetFuturo => 'Internet: Futuro';
+
+  @override
+  String get territoryCopaMundoPrimeirasCopas => 'Copa do Mundo: 1930-1950';
+
+  @override
+  String get territoryCopaMundoExpansao => 'Copa do Mundo: 1962-1994';
+
+  @override
+  String get territoryCopaMundoEraModerna => 'Copa do Mundo: 1998-2022';
+
+  @override
+  String get territoryCopaMundoCuriosidades =>
+      'Copa do Mundo: Curiosidades e Recordes';
+
+  @override
+  String get territoryFutebolOrigens => 'Futebol: Origens e História';
+
+  @override
+  String get territoryFutebolGrandesNomes =>
+      'Futebol: Grandes Nomes e Recordes';
+
+  @override
+  String get territoryFutebolRegrasCuriosidades =>
+      'Futebol: Regras e Curiosidades';
+
+  @override
+  String get territoryFutebolAtualidade =>
+      'Futebol: Presente e Formatos Atuais';
+
+  @override
   String get territoryFinancasPessoais => 'Finanças Pessoais';
 
   @override
@@ -1180,6 +1224,36 @@ class AppLocalizationsPt extends AppLocalizations {
   String get feedScreenTitle => 'Feed';
 
   @override
+  String get notificationsScreenTitle => 'Notificações';
+
+  @override
+  String get notificationsMarkAllReadButton => 'Marcar todas como lidas';
+
+  @override
+  String get notificationsEmptyMessage => 'Nenhuma notificação por aqui ainda.';
+
+  @override
+  String get notificationsTimeJustNow => 'agora';
+
+  @override
+  String notificationsTimeMinutes(int minutes) {
+    return '${minutes}min';
+  }
+
+  @override
+  String notificationsTimeHours(int hours) {
+    return '${hours}h';
+  }
+
+  @override
+  String notificationsTimeDays(int days) {
+    return '${days}d';
+  }
+
+  @override
+  String get notificationsBellTooltip => 'Notificações';
+
+  @override
   String get feedEmptyState =>
       'Nada por aqui ainda. Conquistas de amigos e de quem você segue vão aparecer neste feed.';
 
@@ -1674,6 +1748,60 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get loginOrDivider => 'ou';
+
+  @override
+  String get loginForgotPasswordLink => 'Esqueci minha senha';
+
+  @override
+  String get forgotPasswordTitle => 'Esqueci minha senha';
+
+  @override
+  String get forgotPasswordInstructions =>
+      'Informe o e-mail da sua conta. Se ele estiver cadastrado, você receberá um link para redefinir sua senha.';
+
+  @override
+  String get forgotPasswordSendButton => 'Enviar link de redefinição';
+
+  @override
+  String get forgotPasswordMissingEmailError => 'Informe seu e-mail.';
+
+  @override
+  String get forgotPasswordConfirmationMessage =>
+      'Se esse e-mail estiver cadastrado, você receberá um link para redefinir sua senha em instantes. Confira também a caixa de spam.';
+
+  @override
+  String get forgotPasswordBackToLoginButton => 'Voltar para o login';
+
+  @override
+  String get resetPasswordTitle => 'Nova senha';
+
+  @override
+  String get resetPasswordInstructions =>
+      'Defina uma nova senha para sua conta.';
+
+  @override
+  String get resetPasswordNewPasswordLabel => 'Nova senha';
+
+  @override
+  String get resetPasswordConfirmPasswordLabel => 'Confirme a nova senha';
+
+  @override
+  String get resetPasswordMismatchError => 'As senhas não coincidem.';
+
+  @override
+  String get resetPasswordTooShortError =>
+      'A senha precisa ter pelo menos 6 caracteres.';
+
+  @override
+  String get resetPasswordSubmitButton => 'Salvar nova senha';
+
+  @override
+  String get resetPasswordSuccessMessage =>
+      'Senha alterada com sucesso! Entre novamente com sua nova senha.';
+
+  @override
+  String get resetPasswordExpiredLinkError =>
+      'Este link expirou ou já foi usado. Solicite um novo link em \"Esqueci minha senha\".';
 
   @override
   String get onboardingTitle => 'Antes de começar';

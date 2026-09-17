@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 2,
+    "tema_bloco": "Grandes Nomes e Recordes",
+    "desafio": 3,
+    "tema_desafio": "Recordes e Artilheiros de Copas do Mundo",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem é o maior artilheiro da história das Copas do Mundo, com 16 gols?",
+      "opcoes": [
+        "Miroslav Klose",
+        "Pelé",
+        "Ronaldo Fenômeno",
+        "Just Fontaine"
+      ],
+      "resposta_correta": "Miroslav Klose"
+    },
+    {
+      "n": 2,
+      "pergunta": "Por qual seleção Miroslav Klose jogou?",
+      "opcoes": [
+        "Alemanha",
+        "Polônia",
+        "França",
+        "Brasil"
+      ],
+      "resposta_correta": "Alemanha"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem Klose superou para se tornar o maior artilheiro da história das Copas, na partida de 7 a 1 em 2014?",
+      "opcoes": [
+        "Ronaldo Fenômeno",
+        "Gerd Müller",
+        "Pelé",
+        "Just Fontaine"
+      ],
+      "resposta_correta": "Ronaldo Fenômeno"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual jogador francês detém o recorde de mais gols em uma única edição de Copa do Mundo, com 13 gols em 1958, um marco nunca superado?",
+      "opcoes": [
+        "Just Fontaine",
+        "Kylian Mbappé",
+        "Zinedine Zidane",
+        "Michel Platini"
+      ],
+      "resposta_correta": "Just Fontaine"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual seleção é a única que participou de todas as edições da Copa do Mundo já disputadas?",
+      "opcoes": [
+        "Brasil",
+        "Alemanha",
+        "Argentina",
+        "Itália"
+      ],
+      "resposta_correta": "Brasil"
+    }
+  ]
+}

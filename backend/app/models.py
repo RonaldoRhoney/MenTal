@@ -1026,3 +1026,38 @@ class MentalCoinsRedemption(Base):
     user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
     item_id: Mapped[str] = mapped_column(String, ForeignKey("mentalcoins_items.id"), primary_key=True)
     redeemed_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class Notification(Base):
+    """
+    CENTRAL_DE_NOTIFICACOES_HOME_V1.md — histórico persistente e
+    centralizado de notificações dentro do app, complementar ao push
+    (nunca substitui: o push continua disparando normalmente em
+    paralelo, ver services.create_notification). Diferente do push
+    (efêmero, exige token válido e o app fechado/em segundo plano pra
+    fazer sentido), esta linha é criada SEMPRE que um evento notificável
+    acontece — mesmo se o push falhar, o usuário não tiver token, ou
+    tiver desativado a preferência de push daquele tipo — porque a
+    Central é um canal próprio, consultado só quando o usuário abre o
+    app e toca no sino, nunca depende do FCM.
+
+    `type` identifica a origem (battle_challenge, battle_turn,
+    battle_result, torcida, movement_invite, movement_report,
+    territory_dethroned, friend_request, friend_accepted, system) — usado
+    pelo client só pra escolher ícone/cor, nunca pra lógica de negócio.
+    `data` carrega o mesmo payload de navegação já usado no push (chave
+    "navigate", mesma convenção de PushService/MovementTaskHandler no
+    client) — permite abrir a tela certa ao tocar na notificação na
+    Central, igual ao toque na notificação push.
+    """
+
+    __tablename__ = "notifications"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    type: Mapped[str] = mapped_column(String)
+    title: Mapped[str] = mapped_column(String)
+    body: Mapped[str] = mapped_column(Text)
+    data: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    read_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)

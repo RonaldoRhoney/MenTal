@@ -72,7 +72,10 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "curiosidade_relampago",
         "caca_palavras",
     }
-    assert set(worlds["esportes"]["territory_ids"]) == {"esportes"}
+    assert set(worlds["esportes"]["territory_ids"]) == {
+        "esportes", "copa_mundo_primeiras_copas", "copa_mundo_expansao", "copa_mundo_era_moderna", "copa_mundo_curiosidades",
+        "futebol_origens", "futebol_grandes_nomes", "futebol_regras_curiosidades", "futebol_atualidade",
+    }
     assert set(worlds["mitologia"]["territory_ids"]) == {
         "mitologia_grega", "mitologia_nordica", "mitologia_indigena",
     }

@@ -403,6 +403,27 @@ class ApiClient {
     return _get(_uri('/feed', params), headers: _headers);
   }
 
+  // CENTRAL_DE_NOTIFICACOES_HOME_V1.md — histórico persistente dentro
+  // do app, complementar ao push. `before` é o cursor (created_at ISO
+  // da última notificação da página anterior), mesmo padrão de getFeed.
+  Future<Map<String, dynamic>> getNotifications({String? before}) async {
+    final params = before != null ? {'before': before} : null;
+    return _get(_uri('/notifications', params), headers: _headers);
+  }
+
+  Future<int> getUnreadNotificationCount() async {
+    final result = await _get(_uri('/notifications/unread-count'), headers: _headers);
+    return result['unread_count'] as int;
+  }
+
+  Future<void> markNotificationRead(String notificationId) async {
+    await _post(_uri('/notifications/$notificationId/read'), headers: _headers);
+  }
+
+  Future<void> markAllNotificationsRead() async {
+    await _post(_uri('/notifications/mark-all-read'), headers: _headers);
+  }
+
   Future<Map<String, dynamic>> updateProfile({
     String? avatarId,
     String? realName,

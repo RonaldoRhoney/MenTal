@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 1998?",
+    "options": [
+      "França",
+      "Brasil",
+      "Itália",
+      "Estados Unidos"
+    ],
+    "correct_answer": "França",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'França 1998 e a Consagração de Zidane'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu primeiro título mundial nessa edição, jogando em casa?",
+    "options": [
+      "França",
+      "Brasil",
+      "Holanda",
+      "Croácia"
+    ],
+    "correct_answer": "França",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'França 1998 e a Consagração de Zidane'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Quem foi o grande destaque da final de 1998, marcando dois gols de cabeça?",
+    "options": [
+      "Zinedine Zidane",
+      "Ronaldo Fenômeno",
+      "Emmanuel Petit",
+      "Rivaldo"
+    ],
+    "correct_answer": "Zinedine Zidane",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'França 1998 e a Consagração de Zidane'.",
+      "Começa com 'Z'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual foi o placar final da partida entre França e Brasil?",
+    "options": [
+      "3 a 0 para a França",
+      "2 a 1 para a França",
+      "1 a 0 para o Brasil",
+      "4 a 2 para a França"
+    ],
+    "correct_answer": "3 a 0 para a França",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'França 1998 e a Consagração de Zidane'.",
+      "Começa com '3'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "A Copa de 1998 marcou uma mudança importante no formato do torneio. Qual foi essa mudança?",
+    "options": [
+      "A ampliação para 32 seleções participantes",
+      "A redução para apenas 8 seleções",
+      "O fim da fase de grupos",
+      "A eliminação da disputa de pênaltis"
+    ],
+    "correct_answer": "A ampliação para 32 seleções participantes",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'França 1998 e a Consagração de Zidane'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Em quais dois países foi disputada a Copa do Mundo de 2002, a primeira sediada conjuntamente por duas nações?",
+    "options": [
+      "Coreia do Sul e Japão",
+      "Brasil e Argentina",
+      "Alemanha e França",
+      "Itália e Espanha"
+    ],
+    "correct_answer": "Coreia do Sul e Japão",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Coreia/Japão 2002 e o Pentacampeonato Brasileiro'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu pentacampeonato mundial nessa edição?",
+    "options": [
+      "Brasil",
+      "Alemanha",
+      "Itália",
+      "França"
+    ],
+    "correct_answer": "Brasil",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Coreia/Japão 2002 e o Pentacampeonato Brasileiro'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção o Brasil venceu a final de 2002, por 2 a 0?",
+    "options": [
+      "Alemanha",
+      "Turquia",
+      "Coreia do Sul",
+      "Espanha"
+    ],
+    "correct_answer": "Alemanha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Coreia/Japão 2002 e o Pentacampeonato Brasileiro'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual atacante brasileiro foi artilheiro da Copa de 2002, com oito gols, incluindo os dois da final?",
+    "options": [
+      "Ronaldo Fenômeno",
+      "Rivaldo",
+      "Ronaldinho Gaúcho",
+      "Ronaldo Guiaro"
+    ],
+    "correct_answer": "Ronaldo Fenômeno",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Coreia/Japão 2002 e o Pentacampeonato Brasileiro'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual goleiro alemão foi eleito o melhor jogador da competição, mesmo com a derrota na final?",
+    "options": [
+      "Oliver Kahn",
+      "Manuel Neuer",
+      "Jens Lehmann",
+      "Sepp Maier"
+    ],
+    "correct_answer": "Oliver Kahn",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Coreia/Japão 2002 e o Pentacampeonato Brasileiro'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu quarto título mundial na Copa de 2006, disputada na Alemanha?",
+    "options": [
+      "Itália",
+      "França",
+      "Brasil",
+      "Alemanha"
+    ],
+    "correct_answer": "Itália",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Alemanha 2006 e a Estreia Espanhola em 2010'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Como foi decidida a final da Copa de 2006, entre Itália e França, após empate no tempo normal e na prorrogação?",
+    "options": [
+      "Disputa de pênaltis",
+      "Gol de ouro",
+      "Novo jogo em outra data",
+      "Sorteio"
+    ],
+    "correct_answer": "Disputa de pênaltis",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Alemanha 2006 e a Estreia Espanhola em 2010'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Em qual país foi disputada a Copa do Mundo de 2010, a primeira realizada no continente africano?",
+    "options": [
+      "África do Sul",
+      "Alemanha",
+      "Brasil",
+      "Argélia"
+    ],
+    "correct_answer": "África do Sul",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Alemanha 2006 e a Estreia Espanhola em 2010'.",
+      "Começa com 'Á'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu primeiro título mundial na Copa de 2010?",
+    "options": [
+      "Espanha",
+      "Holanda",
+      "Alemanha",
+      "Portugal"
+    ],
+    "correct_answer": "Espanha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Alemanha 2006 e a Estreia Espanhola em 2010'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Quem marcou o gol do título espanhol na final de 2010, contra a Holanda, já na prorrogação?",
+    "options": [
+      "Andrés Iniesta",
+      "David Villa",
+      "Xavi Hernández",
+      "Fernando Torres"
+    ],
+    "correct_answer": "Andrés Iniesta",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Alemanha 2006 e a Estreia Espanhola em 2010'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Em que ano o Brasil sediou a Copa do Mundo pela segunda vez em sua história?",
+    "options": [
+      "2014",
+      "1950",
+      "1970",
+      "2002"
+    ],
+    "correct_answer": "2014",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Brasil 2014 e o Mineiraço'.",
+      "Começa com '2'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção aplicou uma histórica goleada de 7 a 1 sobre o Brasil na semifinal dessa Copa?",
+    "options": [
+      "Alemanha",
+      "Argentina",
+      "Holanda",
+      "Itália"
+    ],
+    "correct_answer": "Alemanha",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Brasil 2014 e o Mineiraço'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Em qual estádio foi disputada essa partida, que ficou conhecida como 'Mineiraço'?",
+    "options": [
+      "Mineirão, em Belo Horizonte",
+      "Maracanã, no Rio de Janeiro",
+      "Arena Corinthians, em São Paulo",
+      "Estádio Nacional, em Brasília"
+    ],
+    "correct_answer": "Mineirão, em Belo Horizonte",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Brasil 2014 e o Mineiraço'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Quem marcou o gol decisivo da final entre Alemanha e Argentina, garantindo o tetracampeonato alemão?",
+    "options": [
+      "Mario Götze",
+      "Thomas Müller",
+      "Miroslav Klose",
+      "Philipp Lahm"
+    ],
+    "correct_answer": "Mario Götze",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Brasil 2014 e o Mineiraço'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Contra qual seleção o Brasil também foi derrotado, na disputa pelo terceiro lugar daquela Copa?",
+    "options": [
+      "Holanda",
+      "Argentina",
+      "Colômbia",
+      "Bélgica"
+    ],
+    "correct_answer": "Holanda",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Brasil 2014 e o Mineiraço'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 2018?",
+    "options": [
+      "Rússia",
+      "Catar",
+      "Brasil",
+      "Alemanha"
+    ],
+    "correct_answer": "Rússia",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Rússia 2018 e o Título Histórico de Messi no Catar 2022'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu bicampeonato mundial nessa edição, vencendo a Croácia na final?",
+    "options": [
+      "França",
+      "Argentina",
+      "Bélgica",
+      "Inglaterra"
+    ],
+    "correct_answer": "França",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Rússia 2018 e o Título Histórico de Messi no Catar 2022'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Em que país foi disputada a Copa do Mundo de 2022, a primeira realizada no Oriente Médio?",
+    "options": [
+      "Catar",
+      "Rússia",
+      "Arábia Saudita",
+      "Emirados Árabes Unidos"
+    ],
+    "correct_answer": "Catar",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Rússia 2018 e o Título Histórico de Messi no Catar 2022'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual seleção conquistou seu terceiro título mundial na Copa de 2022, decidido nos pênaltis contra a França?",
+    "options": [
+      "Argentina",
+      "Brasil",
+      "Croácia",
+      "Marrocos"
+    ],
+    "correct_answer": "Argentina",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Rússia 2018 e o Título Histórico de Messi no Catar 2022'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "difficulty_level": 1,
+    "prompt": "Qual craque argentino finalmente conquistou seu título de Copa do Mundo nessa edição de 2022, coroando sua carreira?",
+    "options": [
+      "Lionel Messi",
+      "Kylian Mbappé",
+      "Ángel Di María",
+      "Diego Maradona"
+    ],
+    "correct_answer": "Lionel Messi",
+    "explanation": "",
+    "hints": [
+      "Pense no tema: 'Rússia 2018 e o Título Histórico de Messi no Catar 2022'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  }
+]

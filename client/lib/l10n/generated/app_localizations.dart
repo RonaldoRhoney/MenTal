@@ -310,6 +310,84 @@ abstract class AppLocalizations {
   /// **'Tecnologia: Fronteira'**
   String get territoryTecnologiaFronteira;
 
+  /// Territory display name — SubMundo Internet, ARQUITETURA_SUBMUNDOS_V1.md. Achado desta sessão (14/09/2026): os 5 territórios internet_* já estavam em produção sem entrada aqui, mostrando o id bruto na tela (territoryLabel cai no default) — corrigido junto da implantação de Copa do Mundo.
+  ///
+  /// In pt, this message translates to:
+  /// **'Internet: Origens'**
+  String get territoryInternetOrigens;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Internet: Sistemas Operacionais'**
+  String get territoryInternetSistemasOperacionais;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Internet: Gigantes da Web'**
+  String get territoryInternetGigantes;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Internet: Cultura'**
+  String get territoryInternetCultura;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Internet: Futuro'**
+  String get territoryInternetFuturo;
+
+  /// Territory display name — SubMundo Copa do Mundo, Mundo dos Esportes (MUNDO_ESPORTES_ARQUITETURA_V1.md)
+  ///
+  /// In pt, this message translates to:
+  /// **'Copa do Mundo: 1930-1950'**
+  String get territoryCopaMundoPrimeirasCopas;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Copa do Mundo: 1962-1994'**
+  String get territoryCopaMundoExpansao;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Copa do Mundo: 1998-2022'**
+  String get territoryCopaMundoEraModerna;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Copa do Mundo: Curiosidades e Recordes'**
+  String get territoryCopaMundoCuriosidades;
+
+  /// Territory display name — SubMundo Futebol, Mundo dos Esportes (MUNDO_ESPORTES_ARQUITETURA_V1.md)
+  ///
+  /// In pt, this message translates to:
+  /// **'Futebol: Origens e História'**
+  String get territoryFutebolOrigens;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Futebol: Grandes Nomes e Recordes'**
+  String get territoryFutebolGrandesNomes;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Futebol: Regras e Curiosidades'**
+  String get territoryFutebolRegrasCuriosidades;
+
+  /// Territory display name
+  ///
+  /// In pt, this message translates to:
+  /// **'Futebol: Presente e Formatos Atuais'**
+  String get territoryFutebolAtualidade;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:
@@ -2074,6 +2152,54 @@ abstract class AppLocalizations {
   /// **'Feed'**
   String get feedScreenTitle;
 
+  /// CENTRAL_DE_NOTIFICACOES_HOME_V1.md — NotificationsScreen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Notificações'**
+  String get notificationsScreenTitle;
+
+  /// Button in the app bar, shown only when there is at least one unread notification
+  ///
+  /// In pt, this message translates to:
+  /// **'Marcar todas como lidas'**
+  String get notificationsMarkAllReadButton;
+
+  /// Shown when the notification history is empty
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhuma notificação por aqui ainda.'**
+  String get notificationsEmptyMessage;
+
+  /// Relative timestamp for a notification created less than a minute ago
+  ///
+  /// In pt, this message translates to:
+  /// **'agora'**
+  String get notificationsTimeJustNow;
+
+  /// Relative timestamp in minutes
+  ///
+  /// In pt, this message translates to:
+  /// **'{minutes}min'**
+  String notificationsTimeMinutes(int minutes);
+
+  /// Relative timestamp in hours
+  ///
+  /// In pt, this message translates to:
+  /// **'{hours}h'**
+  String notificationsTimeHours(int hours);
+
+  /// Relative timestamp in days
+  ///
+  /// In pt, this message translates to:
+  /// **'{days}d'**
+  String notificationsTimeDays(int days);
+
+  /// Tooltip for the bell icon in the top-right corner of the Home screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Notificações'**
+  String get notificationsBellTooltip;
+
   /// Shown when the feed has no events yet
   ///
   /// In pt, this message translates to:
@@ -2877,6 +3003,102 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'ou'**
   String get loginOrDivider;
+
+  /// RECUPERACAO_DE_SENHA_E_LOGIN_V1.md — link on the login screen (sign-in mode only) that opens ForgotPasswordScreen
+  ///
+  /// In pt, this message translates to:
+  /// **'Esqueci minha senha'**
+  String get loginForgotPasswordLink;
+
+  /// ForgotPasswordScreen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Esqueci minha senha'**
+  String get forgotPasswordTitle;
+
+  /// ForgotPasswordScreen body text, explaining the flow before the email field
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe o e-mail da sua conta. Se ele estiver cadastrado, você receberá um link para redefinir sua senha.'**
+  String get forgotPasswordInstructions;
+
+  /// ForgotPasswordScreen submit button
+  ///
+  /// In pt, this message translates to:
+  /// **'Enviar link de redefinição'**
+  String get forgotPasswordSendButton;
+
+  /// Validation error when the email field is empty
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe seu e-mail.'**
+  String get forgotPasswordMissingEmailError;
+
+  /// Neutral confirmation shown after submitting — never reveals whether the email exists, same wording regardless of outcome (RECUPERACAO_DE_SENHA_E_LOGIN_V1.md §2.1)
+  ///
+  /// In pt, this message translates to:
+  /// **'Se esse e-mail estiver cadastrado, você receberá um link para redefinir sua senha em instantes. Confira também a caixa de spam.'**
+  String get forgotPasswordConfirmationMessage;
+
+  /// Button shown after the confirmation message, returning to LoginScreen
+  ///
+  /// In pt, this message translates to:
+  /// **'Voltar para o login'**
+  String get forgotPasswordBackToLoginButton;
+
+  /// ResetPasswordScreen app bar title — shown after the user taps the password-reset email link
+  ///
+  /// In pt, this message translates to:
+  /// **'Nova senha'**
+  String get resetPasswordTitle;
+
+  /// ResetPasswordScreen body text
+  ///
+  /// In pt, this message translates to:
+  /// **'Defina uma nova senha para sua conta.'**
+  String get resetPasswordInstructions;
+
+  /// New password field label
+  ///
+  /// In pt, this message translates to:
+  /// **'Nova senha'**
+  String get resetPasswordNewPasswordLabel;
+
+  /// Confirm new password field label
+  ///
+  /// In pt, this message translates to:
+  /// **'Confirme a nova senha'**
+  String get resetPasswordConfirmPasswordLabel;
+
+  /// Validation error when the two password fields differ
+  ///
+  /// In pt, this message translates to:
+  /// **'As senhas não coincidem.'**
+  String get resetPasswordMismatchError;
+
+  /// Validation error when the new password is too short — same minimum Supabase Auth already enforces server-side
+  ///
+  /// In pt, this message translates to:
+  /// **'A senha precisa ter pelo menos 6 caracteres.'**
+  String get resetPasswordTooShortError;
+
+  /// ResetPasswordScreen submit button
+  ///
+  /// In pt, this message translates to:
+  /// **'Salvar nova senha'**
+  String get resetPasswordSubmitButton;
+
+  /// Shown after a successful password update, before returning to LoginScreen
+  ///
+  /// In pt, this message translates to:
+  /// **'Senha alterada com sucesso! Entre novamente com sua nova senha.'**
+  String get resetPasswordSuccessMessage;
+
+  /// Shown when updateUser fails because the recovery session/token is no longer valid
+  ///
+  /// In pt, this message translates to:
+  /// **'Este link expirou ou já foi usado. Solicite um novo link em \"Esqueci minha senha\".'**
+  String get resetPasswordExpiredLinkError;
 
   /// Mandatory onboarding screen title
   ///

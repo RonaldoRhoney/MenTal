@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 2,
+    "tema_bloco": "As Copas de 1962 a 1994",
+    "desafio": 5,
+    "tema_desafio": "Itália 1990 e o Tetracampeonato Brasileiro em 1994",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Bloco 2 do SubMundo Copa do Mundo (5/5 desafios)."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 1990?",
+      "opcoes": [
+        "Itália",
+        "Alemanha",
+        "Espanha",
+        "Estados Unidos"
+      ],
+      "resposta_correta": "Itália"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual seleção conquistou seu tricampeonato mundial na Copa de 1990, vencendo a Argentina na final?",
+      "opcoes": [
+        "Alemanha Ocidental",
+        "Itália",
+        "Brasil",
+        "Uruguai"
+      ],
+      "resposta_correta": "Alemanha Ocidental"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 1994, marcando o tetracampeonato brasileiro?",
+      "opcoes": [
+        "Estados Unidos",
+        "Itália",
+        "Alemanha",
+        "México"
+      ],
+      "resposta_correta": "Estados Unidos"
+    },
+    {
+      "n": 4,
+      "pergunta": "Como a final de 1994 entre Brasil e Itália foi decidida, após empate em 0 a 0 no tempo normal e na prorrogação?",
+      "opcoes": [
+        "Disputa de pênaltis",
+        "Gol de ouro",
+        "Sorteio",
+        "Novo jogo, em outra data"
+      ],
+      "resposta_correta": "Disputa de pênaltis"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual atacante brasileiro foi eleito o melhor jogador da Copa de 1994?",
+      "opcoes": [
+        "Romário",
+        "Bebeto",
+        "Dunga",
+        "Taffarel"
+      ],
+      "resposta_correta": "Romário"
+    }
+  ]
+}

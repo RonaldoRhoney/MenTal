@@ -193,6 +193,49 @@ def test_battle_challenge_attempt_id_is_server_generated_and_farm_is_blocked(cli
     assert farm_attempt.json()["error"]["code"] == "ATTEMPT_NOT_FOUND"
 
 
+def test_opponent_answering_first_notifies_challenger_to_counter_answer(client, monkeypatch):
+    """
+    BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md §2.2 — quando o OPONENTE
+    responde antes do desafiante (caminho raro, mas real: o desafiante
+    pode ter fechado o app logo após criar a batalha), o desafiante
+    precisa ser avisado por push que já é a vez dele de "contra-
+    responder" — antes desta mudança, nenhuma notificação cobria esse
+    caso (só a de criação, que vai pro oponente, e a de resultado
+    final, que só dispara quando os dois já responderam).
+    """
+    from app import models, push
+    from app.db import SessionLocal
+
+    sent = []
+    monkeypatch.setattr(
+        push,
+        "send_push_notification",
+        lambda db, profile, title, body, data=None: sent.append((profile.user_id, title)),
+    )
+
+    user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
+    headers_a, headers_b = _make_friends(client, user_a, user_b)
+    with SessionLocal() as db:
+        for uid in (user_a, user_b):
+            profile = db.get(models.Profile, uid)
+            profile.push_token = f"token-{uid}"
+        db.commit()
+
+    created = client.post(
+        "/battles",
+        json={"opponent_user_id": user_b, "territory_id": "palavras", "difficulty_level": 1},
+        headers=headers_a,
+    ).json()
+    battle_id = created["battle_id"]
+    opponent_challenge = client.get(f"/battles/{battle_id}/my-challenge", headers=headers_b).json()
+
+    sent.clear()  # descarta a notificação de criação (BATTLE_CHALLENGE_RECEIVED), já coberta noutro teste
+    _answer(client, headers_b, opponent_challenge, "resposta qualquer")
+
+    assert (user_a, "Sua vez de jogar! ⚔️") in sent
+    assert user_b not in [uid for uid, _ in sent], "oponente não deve receber notificação duplicada da própria resposta"
+
+
 def test_battle_stays_pending_until_both_answer(client):
     user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a, headers_b = _make_friends(client, user_a, user_b)

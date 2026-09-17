@@ -52,6 +52,18 @@ void main() {
     expect(find.text('Já tem conta? Entrar'), findsOneWidget);
   });
 
+  testWidgets(
+    'RECUPERACAO_DE_SENHA_E_LOGIN_V1.md: link "Esqueci minha senha" só aparece no modo entrar',
+    (tester) async {
+      await _pumpLoginScreen(tester);
+      expect(find.text('Esqueci minha senha'), findsOneWidget);
+
+      await tester.tap(find.text('Ainda não tem conta? Criar uma'));
+      await tester.pump();
+      expect(find.text('Esqueci minha senha'), findsNothing);
+    },
+  );
+
   testWidgets('campos vazios mostram erro de validação sem tentar rede', (tester) async {
     await _pumpLoginScreen(tester);
     await tester.tap(find.widgetWithText(FilledButton, 'Entrar'));

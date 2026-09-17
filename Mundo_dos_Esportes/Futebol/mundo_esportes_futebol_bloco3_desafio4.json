@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 3,
+    "tema_bloco": "Regras, Curiosidades Técnicas e Eventos Marcantes",
+    "desafio": 4,
+    "tema_desafio": "Recordes de Público e o Maracanã",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano o Estádio do Maracanã foi inaugurado?",
+      "opcoes": [
+        "1950",
+        "1930",
+        "1970",
+        "1966"
+      ],
+      "resposta_correta": "1950"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual é o maior público já registrado em uma partida de futebol, na final da Copa de 1950 no Maracanã?",
+      "opcoes": [
+        "Cerca de 199 mil espectadores",
+        "Cerca de 50 mil espectadores",
+        "Cerca de 10 mil espectadores",
+        "Cerca de 500 mil espectadores"
+      ],
+      "resposta_correta": "Cerca de 199 mil espectadores"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual era a capacidade original de projeto do Maracanã, tornando-o o maior estádio do mundo em sua inauguração?",
+      "opcoes": [
+        "Cerca de 200 mil pessoas",
+        "Cerca de 20 mil pessoas",
+        "Cerca de 2 mil pessoas",
+        "Cerca de 2 milhões de pessoas"
+      ],
+      "resposta_correta": "Cerca de 200 mil pessoas"
+    },
+    {
+      "n": 4,
+      "pergunta": "Após reformas para atender a padrões de segurança modernos, para quantos espectadores é a capacidade atual do Maracanã?",
+      "opcoes": [
+        "Cerca de 78 mil pessoas",
+        "Cerca de 200 mil pessoas",
+        "Cerca de 10 mil pessoas",
+        "Cerca de 500 mil pessoas"
+      ],
+      "resposta_correta": "Cerca de 78 mil pessoas"
+    },
+    {
+      "n": 5,
+      "pergunta": "Por que o recorde de público de 1950 é considerado praticamente impossível de ser quebrado no futebol atual?",
+      "opcoes": [
+        "As normas modernas de segurança e assentos individuais reduziram drasticamente a capacidade dos estádios",
+        "Porque o futebol perdeu popularidade ao longo do tempo",
+        "Porque não existem mais estádios grandes no mundo",
+        "Porque as partidas atuais têm menos importância histórica"
+      ],
+      "resposta_correta": "As normas modernas de segurança e assentos individuais reduziram drasticamente a capacidade dos estádios"
+    }
+  ]
+}

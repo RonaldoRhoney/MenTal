@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 3,
+    "tema_bloco": "Regras, Curiosidades Técnicas e Eventos Marcantes",
+    "desafio": 3,
+    "tema_desafio": "A História da Taça Jules Rimet",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - roubo tratado como fato historico factual, sem detalhamento de metodo criminoso."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Como se chamava originalmente a taça entregue ao campeão da Copa do Mundo, antes de ser rebatizada em 1946?",
+      "opcoes": [
+        "Vitória",
+        "Niké",
+        "Glória",
+        "Ouro"
+      ],
+      "resposta_correta": "Vitória"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em homenagem a quem essa taça foi rebatizada de 'Jules Rimet'?",
+      "opcoes": [
+        "O dirigente que presidiu a FIFA de 1921 a 1954",
+        "O escultor que a criou",
+        "O primeiro capitão campeão do mundo",
+        "Um rei inglês da época"
+      ],
+      "resposta_correta": "O dirigente que presidiu a FIFA de 1921 a 1954"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em 1966, a Taça Jules Rimet foi roubada durante uma exposição em Londres. Quem a encontrou, dias depois, escondida sob um arbusto?",
+      "opcoes": [
+        "Um cachorro chamado Pickles",
+        "Um policial disfarçado",
+        "Um jornalista investigativo",
+        "Um jogador da seleção inglesa"
+      ],
+      "resposta_correta": "Um cachorro chamado Pickles"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que ano o Brasil conquistou definitivamente a posse da Taça Jules Rimet, por ser o primeiro tricampeão mundial?",
+      "opcoes": [
+        "1970",
+        "1966",
+        "1958, com o primeiro título",
+        "1962"
+      ],
+      "resposta_correta": "1970"
+    },
+    {
+      "n": 5,
+      "pergunta": "O que aconteceu com a Taça Jules Rimet em 1983, enquanto estava sob a guarda da Confederação Brasileira de Futebol?",
+      "opcoes": [
+        "Foi roubada e nunca mais recuperada",
+        "Foi doada a um museu internacional",
+        "Foi vendida em leilão",
+        "Foi destruída em um incêndio"
+      ],
+      "resposta_correta": "Foi roubada e nunca mais recuperada"
+    }
+  ]
+}

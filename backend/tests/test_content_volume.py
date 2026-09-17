@@ -54,6 +54,13 @@ SINGLE_DIFFICULTY_TERRITORY_IDS = {
     # Mundo Acima de Nós/Espaço: mesmo formato e mesmo raciocínio dos acima.
     "espaco_universo", "espaco_planetas", "espaco_estrelas",
     "espaco_exploracao", "espaco_brasil",
+    # Mundo dos Esportes / SubMundo Copa do Mundo
+    # (MUNDO_ESPORTES_ARQUITETURA_V1.md §2): sem trilha de dificuldade
+    # neste Mundo — todo desafio nasce em difficulty_level=1 de
+    # propósito, mesmo raciocínio das cápsulas de texto acima (embora
+    # aqui não seja cápsula, é o mesmo "sem níveis").
+    "copa_mundo_primeiras_copas", "copa_mundo_expansao", "copa_mundo_era_moderna", "copa_mundo_curiosidades",
+    "futebol_origens", "futebol_grandes_nomes", "futebol_regras_curiosidades", "futebol_atualidade",
 }
 
 

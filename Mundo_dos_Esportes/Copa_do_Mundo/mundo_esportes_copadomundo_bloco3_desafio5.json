@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 3,
+    "tema_bloco": "As Copas de 1998 a 2022",
+    "desafio": 5,
+    "tema_desafio": "Rússia 2018 e o Título Histórico de Messi no Catar 2022",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md.",
+    "status": "Fecha o Bloco 3 do SubMundo Copa do Mundo (5/5 desafios)."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 2018?",
+      "opcoes": [
+        "Rússia",
+        "Catar",
+        "Brasil",
+        "Alemanha"
+      ],
+      "resposta_correta": "Rússia"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual seleção conquistou seu bicampeonato mundial nessa edição, vencendo a Croácia na final?",
+      "opcoes": [
+        "França",
+        "Argentina",
+        "Bélgica",
+        "Inglaterra"
+      ],
+      "resposta_correta": "França"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 2022, a primeira realizada no Oriente Médio?",
+      "opcoes": [
+        "Catar",
+        "Rússia",
+        "Arábia Saudita",
+        "Emirados Árabes Unidos"
+      ],
+      "resposta_correta": "Catar"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual seleção conquistou seu terceiro título mundial na Copa de 2022, decidido nos pênaltis contra a França?",
+      "opcoes": [
+        "Argentina",
+        "Brasil",
+        "Croácia",
+        "Marrocos"
+      ],
+      "resposta_correta": "Argentina"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual craque argentino finalmente conquistou seu título de Copa do Mundo nessa edição de 2022, coroando sua carreira?",
+      "opcoes": [
+        "Lionel Messi",
+        "Kylian Mbappé",
+        "Ángel Di María",
+        "Diego Maradona"
+      ],
+      "resposta_correta": "Lionel Messi"
+    }
+  ]
+}

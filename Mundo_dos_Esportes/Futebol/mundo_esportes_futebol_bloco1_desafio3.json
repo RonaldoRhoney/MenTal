@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 1,
+    "tema_bloco": "Origens e História do Futebol",
+    "desafio": 3,
+    "tema_desafio": "A Fundação da FIFA e a Primeira Copa do Mundo",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que ano a FIFA foi fundada?",
+      "opcoes": [
+        "1904",
+        "1863",
+        "1930",
+        "1921"
+      ],
+      "resposta_correta": "1904"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual cidade a FIFA foi fundada?",
+      "opcoes": [
+        "Paris",
+        "Londres",
+        "Zurique",
+        "Montevidéu"
+      ],
+      "resposta_correta": "Paris"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem foi o presidente da FIFA responsável por organizar a primeira Copa do Mundo?",
+      "opcoes": [
+        "Jules Rimet",
+        "Robert Guerin",
+        "João Havelange",
+        "Daniel Burley Woolfall"
+      ],
+      "resposta_correta": "Jules Rimet"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em que país foi realizada a primeira Copa do Mundo, em 1930?",
+      "opcoes": [
+        "Uruguai",
+        "Brasil",
+        "Inglaterra",
+        "Itália"
+      ],
+      "resposta_correta": "Uruguai"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quantas seleções participaram dessa primeira edição da Copa do Mundo?",
+      "opcoes": [
+        "13",
+        "32",
+        "4",
+        "24"
+      ],
+      "resposta_correta": "13"
+    }
+  ]
+}

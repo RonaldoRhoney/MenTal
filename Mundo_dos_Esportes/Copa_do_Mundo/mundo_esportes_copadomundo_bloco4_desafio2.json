@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 4,
+    "tema_bloco": "Curiosidades e Recordes da Copa",
+    "desafio": 2,
+    "tema_desafio": "As Maiores Zebras da História das Copas",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes, incluindo estudo da Nielsen Gracenote. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Segundo um estudo da Nielsen Gracenote, qual é considerada a maior zebra da história das Copas do Mundo?",
+      "opcoes": [
+        "Arábia Saudita 2 x 1 Argentina, em 2022",
+        "Estados Unidos 1 x 0 Inglaterra, em 1950",
+        "Coreia do Norte 1 x 0 Itália, em 1966",
+        "Camarões 1 x 0 Argentina, em 1990"
+      ],
+      "resposta_correta": "Arábia Saudita 2 x 1 Argentina, em 2022"
+    },
+    {
+      "n": 2,
+      "pergunta": "Antes dessa zebra de 2022, qual resultado era considerado a maior surpresa da história das Copas, ocorrido no Brasil em 1950?",
+      "opcoes": [
+        "Estados Unidos 1 x 0 Inglaterra",
+        "Coreia do Norte 1 x 0 Itália",
+        "Camarões 1 x 0 Argentina",
+        "Senegal 1 x 0 França"
+      ],
+      "resposta_correta": "Estados Unidos 1 x 0 Inglaterra"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que cidade brasileira ocorreu essa histórica vitória dos Estados Unidos sobre a Inglaterra, em 1950?",
+      "opcoes": [
+        "Belo Horizonte",
+        "Rio de Janeiro",
+        "São Paulo",
+        "Recife"
+      ],
+      "resposta_correta": "Belo Horizonte"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual seleção asiática, estreante em Copas do Mundo, eliminou a Itália na fase de grupos da Copa de 1966?",
+      "opcoes": [
+        "Coreia do Norte",
+        "Japão",
+        "Coreia do Sul",
+        "China"
+      ],
+      "resposta_correta": "Coreia do Norte"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem cunhou a expressão 'zebra' no futebol brasileiro, ainda nos anos 1960?",
+      "opcoes": [
+        "O técnico Gentil Cardoso",
+        "Um jornalista esportivo anônimo",
+        "Pelé",
+        "Um comentarista de televisão"
+      ],
+      "resposta_correta": "O técnico Gentil Cardoso"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 1,
+    "tema_bloco": "Origens e História do Futebol",
+    "desafio": 2,
+    "tema_desafio": "A Chegada do Futebol ao Brasil",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Quem é considerado o responsável por trazer o futebol ao Brasil?",
+      "opcoes": [
+        "Charles Miller",
+        "Jules Rimet",
+        "Ebenezer Cobb Morley",
+        "Victor Serpa"
+      ],
+      "resposta_correta": "Charles Miller"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que ano Charles Miller retornou ao Brasil trazendo bolas e um manual de regras da Inglaterra?",
+      "opcoes": [
+        "1894",
+        "1863",
+        "1930",
+        "1904"
+      ],
+      "resposta_correta": "1894"
+    },
+    {
+      "n": 3,
+      "pergunta": "Em que data ocorreu a primeira partida de futebol no Brasil, na região do Brás, em São Paulo?",
+      "opcoes": [
+        "14 de abril de 1895",
+        "24 de novembro de 1874",
+        "18 de fevereiro de 1894",
+        "1º de janeiro de 1888"
+      ],
+      "resposta_correta": "14 de abril de 1895"
+    },
+    {
+      "n": 4,
+      "pergunta": "Entre quais dois times ocorreu essa primeira partida oficial de futebol no Brasil?",
+      "opcoes": [
+        "Funcionários da São Paulo Railway e da Companhia de Gás",
+        "São Paulo Athletic Club e Sport Club Rio Grande",
+        "Flamengo e Fluminense",
+        "Corinthians e Palmeiras"
+      ],
+      "resposta_correta": "Funcionários da São Paulo Railway e da Companhia de Gás"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual clube, fundado por Charles Miller, é apontado como um dos primeiros times de futebol organizados do Brasil?",
+      "opcoes": [
+        "São Paulo Athletic Club (SPAC)",
+        "Sport Club Rio Grande",
+        "Nacional Atlético Clube",
+        "Corinthians"
+      ],
+      "resposta_correta": "São Paulo Athletic Club (SPAC)"
+    }
+  ]
+}

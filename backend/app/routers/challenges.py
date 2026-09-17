@@ -309,8 +309,15 @@ def reattempt_challenge(
     )
 
 
-def _get_or_create_pending_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str) -> models.Attempt:
-    attempt = db.get(models.Attempt, attempt_id)
+def _get_or_create_pending_attempt(db: Session, attempt_id: str, user_id: str, challenge_id: str, for_update: bool = False) -> models.Attempt:
+    # `for_update=True` (auditoria de segurança pré-lançamento mundial,
+    # 17/09/2026, achado A3) — travar a linha do Attempt fecha a
+    # corrida em que duas requisições concorrentes com o MESMO
+    # attempt_id liam `is_correct is None` antes de qualquer commit e
+    # as duas creditavam XP pra uma resposta só. Só submit_answer usa
+    # isso (é o único caminho que credita XP); /hint continua sem
+    # travar.
+    attempt = db.get(models.Attempt, attempt_id, with_for_update=True) if for_update else db.get(models.Attempt, attempt_id)
     if attempt is not None:
         # Achado de auditoria de segurança (28/08/2026): antes disso, um
         # attempt_id de OUTRO usuário (ou de outro desafio) era aceito sem
@@ -392,7 +399,7 @@ def submit_answer(
     if challenge is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})
 
-    attempt = _get_or_create_pending_attempt(db, body.attempt_id, user_id, challenge_id)
+    attempt = _get_or_create_pending_attempt(db, body.attempt_id, user_id, challenge_id, for_update=True)
 
     if attempt.is_correct is not None:
         # Idempotência: reenvio do mesmo attempt_id retorna o resultado já
@@ -508,7 +515,12 @@ def submit_answer(
     attempt.speed_bonus_xp = speed_bonus_xp
     db.commit()
 
-    profile = services.get_or_create_profile(db, user_id)
+    # for_update=True (auditoria de segurança pré-lançamento mundial,
+    # 17/09/2026, achado A3): trava a linha até o fim da transação —
+    # fecha a corrida em que duas respostas concorrentes do mesmo
+    # usuário (desafios DIFERENTES, então o lock do Attempt acima não
+    # cobre) liam o mesmo xp_total antes de qualquer commit.
+    profile = services.get_or_create_profile(db, user_id, for_update=True)
     # MICROINTERACTIONS.md + achados reais de 22/08 e 02/09/2026: tudo
     # aqui detecta a TRANSIÇÃO exata (nível subiu / território ou mundo
     # acabou de fechar / marco de XP-MentalCoins cruzado / detentor

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 3,
+    "tema_bloco": "As Copas de 1998 a 2022",
+    "desafio": 1,
+    "tema_desafio": "França 1998 e a Consagração de Zidane",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - foco exclusivo no resultado esportivo, sem abordar o episodio de saude de um jogador antes da partida."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Em que país foi disputada a Copa do Mundo de 1998?",
+      "opcoes": [
+        "França",
+        "Brasil",
+        "Itália",
+        "Estados Unidos"
+      ],
+      "resposta_correta": "França"
+    },
+    {
+      "n": 2,
+      "pergunta": "Qual seleção conquistou seu primeiro título mundial nessa edição, jogando em casa?",
+      "opcoes": [
+        "França",
+        "Brasil",
+        "Holanda",
+        "Croácia"
+      ],
+      "resposta_correta": "França"
+    },
+    {
+      "n": 3,
+      "pergunta": "Quem foi o grande destaque da final de 1998, marcando dois gols de cabeça?",
+      "opcoes": [
+        "Zinedine Zidane",
+        "Ronaldo Fenômeno",
+        "Emmanuel Petit",
+        "Rivaldo"
+      ],
+      "resposta_correta": "Zinedine Zidane"
+    },
+    {
+      "n": 4,
+      "pergunta": "Qual foi o placar final da partida entre França e Brasil?",
+      "opcoes": [
+        "3 a 0 para a França",
+        "2 a 1 para a França",
+        "1 a 0 para o Brasil",
+        "4 a 2 para a França"
+      ],
+      "resposta_correta": "3 a 0 para a França"
+    },
+    {
+      "n": 5,
+      "pergunta": "A Copa de 1998 marcou uma mudança importante no formato do torneio. Qual foi essa mudança?",
+      "opcoes": [
+        "A ampliação para 32 seleções participantes",
+        "A redução para apenas 8 seleções",
+        "O fim da fase de grupos",
+        "A eliminação da disputa de pênaltis"
+      ],
+      "resposta_correta": "A ampliação para 32 seleções participantes"
+    }
+  ]
+}

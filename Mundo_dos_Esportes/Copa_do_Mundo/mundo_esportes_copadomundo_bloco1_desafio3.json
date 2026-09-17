@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "copa_do_mundo",
+    "numero_bloco": 1,
+    "tema_bloco": "As Primeiras Copas (1930-1950)",
+    "desafio": 3,
+    "tema_desafio": "O Maracanazo — Copa de 1950 no Brasil",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes jornalisticas. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "Como ficou conhecida a derrota do Brasil para o Uruguai na final da Copa do Mundo de 1950?",
+      "opcoes": [
+        "Maracanazo",
+        "Copa da Zebra",
+        "Tragédia do Rio",
+        "Final Fatídica"
+      ],
+      "resposta_correta": "Maracanazo"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em qual estádio, recém-construído para a ocasião, foi disputada essa partida?",
+      "opcoes": [
+        "Maracanã",
+        "Wembley",
+        "Centenário",
+        "Camp Nou"
+      ],
+      "resposta_correta": "Maracanã"
+    },
+    {
+      "n": 3,
+      "pergunta": "Qual foi o placar final da partida entre Brasil e Uruguai?",
+      "opcoes": [
+        "2 a 1 para o Uruguai",
+        "1 a 0 para o Brasil",
+        "3 a 2 para o Uruguai",
+        "2 a 2, com pênaltis"
+      ],
+      "resposta_correta": "2 a 1 para o Uruguai"
+    },
+    {
+      "n": 4,
+      "pergunta": "O Brasil precisava apenas de qual resultado para ser campeão daquela Copa?",
+      "opcoes": [
+        "Um empate",
+        "Uma vitória por qualquer placar",
+        "Uma vitória por dois gols de diferença",
+        "Não precisava jogar essa partida"
+      ],
+      "resposta_correta": "Um empate"
+    },
+    {
+      "n": 5,
+      "pergunta": "Quem marcou o gol decisivo da virada uruguaia, tornando-se um nome eternizado nessa história?",
+      "opcoes": [
+        "Alcides Ghiggia",
+        "Juan Schiaffino",
+        "Friaça",
+        "Obdulio Varela"
+      ],
+      "resposta_correta": "Alcides Ghiggia"
+    }
+  ]
+}

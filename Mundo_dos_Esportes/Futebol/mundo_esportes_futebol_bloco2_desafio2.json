@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "mundo": "mundo_dos_esportes",
+    "submundo": "futebol",
+    "numero_bloco": 2,
+    "tema_bloco": "Grandes Nomes e Recordes",
+    "desafio": 2,
+    "tema_desafio": "Diego Maradona",
+    "total_perguntas": 5,
+    "checagem_direitos_autorais": "Fatos verificados via pesquisa cruzada em multiplas fontes. Texto escrito originalmente.",
+    "checagem_seguranca": "Revisado contra POLITICA_CONTEUDO_SEGURO_QUALQUER_IDADE.md - conteudo focado na carreira esportiva, sem detalhamento de questoes de saude/dependencia."
+  },
+  "perguntas": [
+    {
+      "n": 1,
+      "pergunta": "De qual país é o lendário jogador Diego Maradona?",
+      "opcoes": [
+        "Argentina",
+        "Brasil",
+        "Uruguai",
+        "Itália"
+      ],
+      "resposta_correta": "Argentina"
+    },
+    {
+      "n": 2,
+      "pergunta": "Em que Copa do Mundo Maradona liderou a Argentina ao título, marcando os famosos gols 'Mão de Deus' e 'Gol do Século'?",
+      "opcoes": [
+        "1986",
+        "1990",
+        "1978",
+        "1994"
+      ],
+      "resposta_correta": "1986"
+    },
+    {
+      "n": 3,
+      "pergunta": "Contra qual seleção Maradona marcou esses dois gols históricos na Copa de 1986?",
+      "opcoes": [
+        "Inglaterra",
+        "Brasil",
+        "Alemanha",
+        "Itália"
+      ],
+      "resposta_correta": "Inglaterra"
+    },
+    {
+      "n": 4,
+      "pergunta": "Em qual clube italiano Maradona se tornou um ídolo absoluto, ajudando a conquistar títulos históricos para a equipe?",
+      "opcoes": [
+        "Napoli",
+        "Juventus",
+        "Milan",
+        "Roma"
+      ],
+      "resposta_correta": "Napoli"
+    },
+    {
+      "n": 5,
+      "pergunta": "Qual clube argentino é considerado o 'time do coração' de Maradona, onde jogou em duas passagens de sua carreira?",
+      "opcoes": [
+        "Boca Juniors",
+        "River Plate",
+        "Racing Club",
+        "Independiente"
+      ],
+      "resposta_correta": "Boca Juniors"
+    }
+  ]
+}

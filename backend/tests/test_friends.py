@@ -255,3 +255,28 @@ def test_ranking_scope_friends_filters_to_friends_and_self(client):
 # (MENTAL-DIR-001, 24/08/2026): MENTAL passa a ser exclusivo pra
 # maiores de 18 anos — não existe mais child_safe_mode nem nickname
 # anonimizado por faixa etária.
+
+
+def test_friend_request_by_user_id_rate_limit_is_enforced(client):
+    """Auditoria de segurança pré-lançamento mundial (17/09/2026):
+    diferente de Torcida/Batalha/convite de Movimento (teto diário por
+    alvo), pedido de amizade por busca de nome nunca teve limite nenhum
+    — dava pra varrer resultados de busca e disparar pedido (cada um
+    gera push pro alvo) pra um número arbitrário de estranhos em
+    sequência. Alvo nem precisa existir de verdade: enforce_rate_limit
+    roda antes da checagem de existência (mesmo padrão já provado em
+    test_feed_social.py::test_follow_rate_limit_is_enforced)."""
+    from app import config
+
+    a = str(uuid.uuid4())
+    headers_a = auth_header(a)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers_a)
+
+    max_calls, _ = config.RATE_LIMIT_FRIEND_REQUEST
+    for i in range(max_calls):
+        resp = client.post("/social/friend-requests", json={"to_user_id": str(uuid.uuid4())}, headers=headers_a)
+        assert resp.status_code == 404, f"chamada {i + 1}/{max_calls} deveria passar do rate limit (404 = alvo inexistente, não 429)"
+
+    over_limit = client.post("/social/friend-requests", json={"to_user_id": str(uuid.uuid4())}, headers=headers_a)
+    assert over_limit.status_code == 429
+    assert over_limit.json()["error"]["code"] == "RATE_LIMIT_EXCEEDED"

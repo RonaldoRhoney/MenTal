@@ -22,6 +22,7 @@ import 'feedback_screen.dart';
 import 'friends_screen.dart';
 import 'mentalcoins_screen.dart';
 import 'movement_screen.dart';
+import 'notifications_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
@@ -102,6 +103,47 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _loadFeedBadge() async {
     final count = await FeedActivityService.unseenCount(widget.client);
     if (mounted) setState(() => _feedUnseenCount = count);
+  }
+
+  // CENTRAL_DE_NOTIFICACOES_HOME_V1.md — sino no canto superior da Home
+  // (pedido de Rhoney, 14/09/2026), badge com a contagem de não lidas.
+  // Endpoint dedicado e leve (GET /notifications/unread-count), mesmo
+  // raciocínio de _loadFeedBadge/_loadBattlesBadge acima.
+  int? _unreadNotificationCount;
+
+  Future<void> _loadNotificationBadge() async {
+    try {
+      final count = await widget.client.getUnreadNotificationCount();
+      if (mounted) setState(() => _unreadNotificationCount = count);
+    } on ApiException catch (_) {}
+  }
+
+  Future<void> _openNotifications() async {
+    await Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => NotificationsScreen(client: widget.client)),
+    );
+    _loadNotificationBadge();
+  }
+
+  // BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md §2.2 — "indicador de 'é a sua
+  // vez' bem destacado... na Home ou na barra inferior", pra reduzir a
+  // chance de o usuário esquecer que tem uma Batalha pendente. Conta só
+  // batalhas com status pending e i_answered==false (minha vez), mesmo
+  // critério já usado por BattlesScreen._answer/canAnswer.
+  int? _pendingBattlesCount;
+
+  Future<void> _loadBattlesBadge() async {
+    try {
+      final result = await widget.client.listBattles();
+      final battles = (result['battles'] as List).cast<Map<String, dynamic>>();
+      final pending = battles
+          .where((b) => b['status'] == 'pending' && b['i_answered'] == false)
+          .length;
+      if (mounted) setState(() => _pendingBattlesCount = pending);
+    } on ApiException catch (_) {
+      // Badge é reforço visual, mesmo princípio de _loadMovementBadge/
+      // _loadFeedBadge acima — nunca bloqueia a Home por causa disso.
+    }
   }
 
   // Busca na Home (pedido de Rhoney, 2026-09-03; estilo revisado
@@ -211,6 +253,8 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadProfileHeader();
     _loadMentalCoinsBalance();
     _loadFeedBadge();
+    _loadBattlesBadge();
+    _loadNotificationBadge();
     _checkAppVersion();
   }
 
@@ -237,6 +281,8 @@ class _HomeScreenState extends State<HomeScreen> {
       _loadProfileHeader(),
       _loadMentalCoinsBalance(),
       _loadFeedBadge(),
+      _loadBattlesBadge(),
+      _loadNotificationBadge(),
     ]);
   }
 
@@ -291,6 +337,10 @@ class _HomeScreenState extends State<HomeScreen> {
       }
 
       final cycleId = cycle['id'] as String;
+      unawaited(MovementService.instance.updateNotificationPreview(
+        stepsCollected: cycle['steps_collected'] as int,
+        xpAwarded: cycle['xp_awarded'] as int,
+      ));
       await MovementService.instance.ensureBaselineFor(cycleId);
       final cachedLast = await MovementService.instance.lastKnownRawSteps();
       if (cachedLast != null) {
@@ -545,6 +595,24 @@ class _HomeScreenState extends State<HomeScreen> {
             // muito baixa, camada de fundo, NUNCA recebe toque
             // (IgnorePointer) — os cards acima continuam 100% clicáveis.
             const Positioned.fill(child: _MentalWatermark()),
+            // CENTRAL_DE_NOTIFICACOES_HOME_V1.md — "botão na Home... no
+            // canto" (pedido de Rhoney, 14/09/2026): fixo no canto
+            // superior direito, sempre visível independente da rolagem
+            // (Positioned dentro do mesmo Stack do watermark, por cima
+            // do conteúdo rolável).
+            Positioned(
+              top: 4,
+              right: 8,
+              child: IconButton(
+                tooltip: l10n.notificationsBellTooltip,
+                onPressed: _openNotifications,
+                icon: Badge(
+                  isLabelVisible: (_unreadNotificationCount ?? 0) > 0,
+                  label: Text('$_unreadNotificationCount'),
+                  child: const Icon(Icons.notifications_rounded),
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               // REORGANIZACAO_MENUS_HOME_V1.md §5/§8 (06/09/2026): a
@@ -778,6 +846,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 MaterialPageRoute(
                     builder: (_) => BattlesScreen(client: widget.client)),
               );
+              _loadBattlesBadge();
             case 4:
               await Navigator.of(context).push(
                 MaterialPageRoute(
@@ -795,7 +864,11 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: const Icon(Icons.settings_outlined),
               label: l10n.settingsTooltip),
           NavigationDestination(
-              icon: const Icon(Icons.sports_martial_arts_outlined),
+              icon: Badge(
+                isLabelVisible: (_pendingBattlesCount ?? 0) > 0,
+                label: Text('$_pendingBattlesCount'),
+                child: const Icon(Icons.sports_martial_arts_outlined),
+              ),
               label: l10n.battlesTooltip),
           NavigationDestination(
               icon: const Icon(Icons.feedback_outlined),

@@ -147,6 +147,30 @@ const List<String> kTerritoryIds = [
   'espaco_estrelas',
   'espaco_exploracao',
   'espaco_brasil',
+  // ARQUITETURA_SUBMUNDOS_V1.md — SubMundo Internet (Mundo da
+  // Tecnologia). Achado real (14/09/2026, teste no celular): os 5
+  // territórios já estavam em produção desde 13/09/2026 mas nunca
+  // apareciam no carrossel de Mundos da Home nem no seletor de Batalha
+  // — home_screen.dart/friends_screen.dart usam esta lista, não a
+  // resposta do backend, pra decidir quais territórios existem.
+  'internet_origens',
+  'internet_sistemas_operacionais',
+  'internet_gigantes',
+  'internet_cultura',
+  'internet_futuro',
+  // MUNDO_ESPORTES_ARQUITETURA_V1.md — SubMundo Copa do Mundo (Mundo
+  // dos Esportes), mesmo gap do Internet acima corrigido nesta mesma
+  // leva.
+  'copa_mundo_primeiras_copas',
+  'copa_mundo_expansao',
+  'copa_mundo_era_moderna',
+  'copa_mundo_curiosidades',
+  // SubMundo Futebol (mesmo Mundo dos Esportes), curadoria completa em
+  // 14/09/2026.
+  'futebol_origens',
+  'futebol_grandes_nomes',
+  'futebol_regras_curiosidades',
+  'futebol_atualidade',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -203,6 +227,32 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryTecnologiaSeguranca;
     case 'tecnologia_fronteira':
       return l10n.territoryTecnologiaFronteira;
+    case 'internet_origens':
+      return l10n.territoryInternetOrigens;
+    case 'internet_sistemas_operacionais':
+      return l10n.territoryInternetSistemasOperacionais;
+    case 'internet_gigantes':
+      return l10n.territoryInternetGigantes;
+    case 'internet_cultura':
+      return l10n.territoryInternetCultura;
+    case 'internet_futuro':
+      return l10n.territoryInternetFuturo;
+    case 'copa_mundo_primeiras_copas':
+      return l10n.territoryCopaMundoPrimeirasCopas;
+    case 'copa_mundo_expansao':
+      return l10n.territoryCopaMundoExpansao;
+    case 'copa_mundo_era_moderna':
+      return l10n.territoryCopaMundoEraModerna;
+    case 'copa_mundo_curiosidades':
+      return l10n.territoryCopaMundoCuriosidades;
+    case 'futebol_origens':
+      return l10n.territoryFutebolOrigens;
+    case 'futebol_grandes_nomes':
+      return l10n.territoryFutebolGrandesNomes;
+    case 'futebol_regras_curiosidades':
+      return l10n.territoryFutebolRegrasCuriosidades;
+    case 'futebol_atualidade':
+      return l10n.territoryFutebolAtualidade;
     case 'financas_pessoais':
       return l10n.territoryFinancasPessoais;
     case 'filosofia':
