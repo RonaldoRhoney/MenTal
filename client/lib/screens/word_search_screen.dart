@@ -35,6 +35,24 @@ class _CellPos {
   int get hashCode => row * 1000 + col;
 }
 
+/// Paleta curada pra "cor própria por palavra encontrada"
+/// (CACA_PALAVRAS_BUG_E_VISUAL_V1.md §2) — mesma família de tons já
+/// usada no Mapa de Trajetória (identidade visual consistente entre
+/// telas), nunca cor aleatória. Cicla por índice se a sessão tiver mais
+/// palavras que cores (raro: o maior tema hoje tem 14 palavras).
+List<Color> get _kWordColors => [
+      AppColors.gold,
+      AppColors.teal,
+      AppColors.purple,
+      const Color(0xFFF0997B), // coral/laranja
+      const Color(0xFFED93B1), // rosa
+      AppColors.victory,
+      const Color(0xFF6FD8E0), // ciano
+      const Color(0xFFB7A6F0), // lilás
+      const Color(0xFFA8D98A), // verde-claro
+      const Color(0xFF85B7EB), // azul
+    ];
+
 class _WordSearchScreenState extends State<WordSearchScreen> {
   bool _loading = true;
   String? _error;
@@ -48,7 +66,15 @@ class _WordSearchScreenState extends State<WordSearchScreen> {
 
   final Set<String> _foundWords = {};
   List<_CellPos> _currentSelection = [];
-  final Set<_CellPos> _foundCells = {};
+  // CACA_PALAVRAS_BUG_E_VISUAL_V1.md §2 (18/09/2026, pedido de Rhoney):
+  // cada palavra encontrada precisa de cor própria, não um verde
+  // uniforme — por isso o mapa vai de célula pra PALAVRA (não só um
+  // Set), pra cada célula saber de quem ela é na hora de escolher a cor.
+  final Map<_CellPos, String> _foundCells = {};
+  // Células que acabaram de ser encontradas AGORA MESMO — usado só pra
+  // disparar o "pulso" de destaque (AnimatedScale) uma única vez por
+  // descoberta; removidas logo depois que a animação termina.
+  final Set<_CellPos> _justFoundCells = {};
   _CellPos? _dragStart;
   (int, int)? _dragDirection;
 
@@ -94,6 +120,7 @@ class _WordSearchScreenState extends State<WordSearchScreen> {
         _theme = result['theme'] as String;
         _foundWords.clear();
         _foundCells.clear();
+        _justFoundCells.clear();
         _completed = false;
         _xpAwarded = null;
         _speedBonusXp = null;
@@ -118,6 +145,12 @@ class _WordSearchScreenState extends State<WordSearchScreen> {
   }
 
   String _letterAt(_CellPos pos) => _grid[pos.row][pos.col];
+
+  Color _colorForWord(String word) {
+    final palette = _kWordColors;
+    final index = _words.indexOf(word);
+    return palette[(index < 0 ? 0 : index) % palette.length];
+  }
 
   _CellPos? _cellFromLocalPosition(Offset local, double cellSize) {
     final col = (local.dx / cellSize).floor();
@@ -181,9 +214,17 @@ class _WordSearchScreenState extends State<WordSearchScreen> {
       );
       if (match.isNotEmpty) {
         FeedbackService.instance.play(FeedbackSound.correct);
+        final foundNow = List<_CellPos>.from(_currentSelection);
         setState(() {
           _foundWords.add(match);
-          _foundCells.addAll(_currentSelection);
+          for (final cell in foundNow) {
+            _foundCells[cell] = match;
+          }
+          _justFoundCells.addAll(foundNow);
+        });
+        Future.delayed(const Duration(milliseconds: 260), () {
+          if (!mounted) return;
+          setState(() => _justFoundCells.removeAll(foundNow));
         });
       }
     }
@@ -286,20 +327,35 @@ class _WordSearchScreenState extends State<WordSearchScreen> {
                     itemCount: _gridSize * _gridSize,
                     itemBuilder: (context, index) {
                       final pos = _CellPos(index ~/ _gridSize, index % _gridSize);
-                      final isFound = _foundCells.contains(pos);
+                      final foundWord = _foundCells[pos];
                       final isSelected = _currentSelection.contains(pos);
-                      return Container(
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: isFound
-                              ? AppColors.victory.withValues(alpha: 0.35)
-                              : isSelected
-                                  ? AppColors.gold.withValues(alpha: 0.35)
-                                  : null,
-                        ),
-                        child: Text(
-                          _letterAt(pos),
-                          style: AppTheme.technicalStyle(color: AppColors.bone, fontSize: 14).copyWith(fontWeight: FontWeight.w700),
+                      final wordColor = foundWord != null ? _colorForWord(foundWord) : null;
+                      // Pulso curto (AnimatedScale) só no instante da
+                      // descoberta — _justFoundCells esvazia sozinho
+                      // depois de ~260ms (ver _onPanEnd), então a célula
+                      // "estufa" e volta ao tamanho normal uma vez só.
+                      final justFound = _justFoundCells.contains(pos);
+                      return AnimatedScale(
+                        scale: justFound ? 1.28 : 1.0,
+                        duration: const Duration(milliseconds: 220),
+                        curve: Curves.easeOut,
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 260),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: wordColor != null
+                                ? wordColor.withValues(alpha: 0.38)
+                                : isSelected
+                                    ? AppColors.gold.withValues(alpha: 0.35)
+                                    : null,
+                          ),
+                          child: Text(
+                            _letterAt(pos),
+                            style: AppTheme.technicalStyle(
+                              color: wordColor ?? AppColors.bone,
+                              fontSize: 14,
+                            ).copyWith(fontWeight: FontWeight.w700),
+                          ),
                         ),
                       );
                     },
@@ -317,16 +373,31 @@ class _WordSearchScreenState extends State<WordSearchScreen> {
               runSpacing: 8,
               children: [
                 for (final word in _words)
-                  Chip(
-                    label: Text(
-                      word,
-                      style: TextStyle(
-                        decoration: _foundWords.contains(word) ? TextDecoration.lineThrough : null,
-                        color: _foundWords.contains(word) ? AppColors.muted : AppColors.bone,
+                  Builder(builder: (context) {
+                    final found = _foundWords.contains(word);
+                    final color = _colorForWord(word);
+                    // Acessibilidade (§3 do doc): a distinção nunca
+                    // depende só da cor — o risco (strikethrough) e o
+                    // ícone de check continuam sendo o sinal principal
+                    // de "encontrada"; a cor é reforço, não a única pista.
+                    return AnimatedContainer(
+                      duration: const Duration(milliseconds: 260),
+                      child: Chip(
+                        avatar: found ? Icon(Icons.check_circle_rounded, color: color, size: 18) : null,
+                        label: Text(
+                          word,
+                          style: TextStyle(
+                            decoration: found ? TextDecoration.lineThrough : null,
+                            decorationColor: color,
+                            color: found ? color : AppColors.bone,
+                            fontWeight: found ? FontWeight.w600 : FontWeight.normal,
+                          ),
+                        ),
+                        backgroundColor: found ? color.withValues(alpha: 0.14) : AppColors.bg2,
+                        side: BorderSide(color: found ? color.withValues(alpha: 0.6) : AppColors.muted.withValues(alpha: 0.3)),
                       ),
-                    ),
-                    backgroundColor: _foundWords.contains(word) ? AppColors.bg : AppColors.bg2,
-                  ),
+                    );
+                  }),
               ],
             ),
           ),
