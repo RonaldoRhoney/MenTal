@@ -200,17 +200,24 @@ MOVEMENT_MAX_STEPS_PER_CYCLE = 60_000
 # propósito — não é mais um recurso de um território só.
 #
 # RELAMPAGO_TEMPO_20S_UNIVERSAL.md (aprovado, 02/09/2026): janela ÚNICA
-# de 20s pra TODO desafio Relâmpago, substituindo os valores variados
-# por nível (antes: mais difícil = menos tempo, 12/10/7s) — o volume de
-# conteúdo curado nas fases V3.1-V3.5 gerou perguntas mais longas do
-# que o tempo original comportava pra leitura, mesmo sabendo a
-# resposta. Continua um dict por nível (não um int solto) só pra não
-# quebrar a assinatura de quem já usa `.get(difficulty_level)` — mas os
-# 3 valores agora são idênticos de propósito. A fórmula de bônus de
-# velocidade (compute_speed_bonus_xp) é baseada em FRAÇÃO do tempo, não
-# em segundos absolutos — recalibra sozinha pra escala nova, nenhuma
-# mudança de fórmula foi necessária.
-TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 20, 2: 20, 3: 20}
+# pra TODO desafio Relâmpago, substituindo os valores variados por nível
+# (antes: mais difícil = menos tempo, 12/10/7s). Continua um dict por
+# nível (não um int solto) só pra não quebrar a assinatura de quem já
+# usa `.get(difficulty_level)` — mas os 3 valores continuam idênticos de
+# propósito. A fórmula de bônus de velocidade (compute_speed_bonus_xp) é
+# baseada em FRAÇÃO do tempo, não em segundos absolutos — recalibra
+# sozinha pra qualquer escala, nenhuma mudança de fórmula é necessária
+# quando esse valor muda.
+#
+# 20s → 60s (pedido de Rhoney, 18/09/2026): mesmo com a janela única de
+# 20s, o volume de conteúdo curado (V3.1-V3.5, Curiosidade Relâmpago
+# incluída) já tinha perguntas longas demais pra ler com atenção e
+# responder com conhecimento real nesse tempo — 20s ainda empurrava o
+# jogador pra "suposição desesperada" em vez de leitura+compreensão da
+# pergunta antes de responder. Um minuto decrescente resolve isso sem
+# abandonar o formato cronometrado (que continua existindo de propósito,
+# só deixa de ser hostil ao próprio conteúdo que o app já cura).
+TIMED_MULTIPLE_CHOICE_TIME_LIMIT_SECONDS = {1: 60, 2: 60, 3: 60}
 # Só se aplica ao modo OPCIONAL de Palavras (mode=relampago) — nível
 # fácil nunca entra nesse modo lá, decisão fechada na spec original.
 # Conhecimento não tem esse piso: todo nível já usa o formato com tempo,
