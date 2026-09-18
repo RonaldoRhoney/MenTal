@@ -993,6 +993,42 @@
   "@viewBadgesButton": {
     "description": "Button on Progress screen linking to Badges screen"
   },
+  "trajectoryMapScreenTitle": "Mapa de Trajetória",
+  "@trajectoryMapScreenTitle": {
+    "description": "TrajectoryMapScreen app bar title"
+  },
+  "trajectoryMapEmptyMessage": "Nenhum Mundo disponível ainda.",
+  "@trajectoryMapEmptyMessage": {
+    "description": "Shown when the trajectory map has no nodes"
+  },
+  "trajectoryMapSubmundoLabel": "SubMundo",
+  "@trajectoryMapSubmundoLabel": {
+    "description": "Small label/chip marking a node as a SubMundo (not a first-level World)"
+  },
+  "trajectoryMapUniverseLabel": "Seu universo",
+  "@trajectoryMapUniverseLabel": {
+    "description": "Header title of the galaxy-style trajectory map"
+  },
+  "trajectoryMapWorldsCount": "{explored} de {total} Mundos",
+  "@trajectoryMapWorldsCount": {
+    "description": "Counter chip showing how many Worlds the player has already started exploring out of the total",
+    "placeholders": {
+      "explored": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "trajectoryStatusNotStarted": "Não iniciado",
+  "@trajectoryStatusNotStarted": {
+    "description": "Trajectory map node status: no progress yet"
+  },
+  "trajectoryStatusInProgress": "Em andamento",
+  "@trajectoryStatusInProgress": {
+    "description": "Trajectory map node status: some progress, not complete"
+  },
+  "trajectoryStatusCompleted": "Conquistado",
+  "@trajectoryStatusCompleted": {
+    "description": "Trajectory map node status: 100% complete"
+  },
   "badgeEarnedLabel": "Conquistado",
   "@badgeEarnedLabel": {
     "description": "Badge earned status"

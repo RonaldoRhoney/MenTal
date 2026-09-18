@@ -62,3 +62,13 @@ def get_progress(user_id: str = Depends(require_age_confirmed_user_id), db: Sess
         blocks=blocks,
         streak=schemas.StreakOut(current_streak=streak.current_streak, freeze_available=streak.freeze_available),
     )
+
+
+# MAPA_TRAJETORIA_MUNDOS_V1.md — endpoint dedicado, separado de GET
+# /progress de propósito: só é chamado quando o jogador de fato abre a
+# tela do mapa (dentro de Progresso), não em toda carga da Home, já
+# que soma XP por território de novo pra cada Mundo/SubMundo.
+@router.get("/progress/trajectory-map", response_model=schemas.TrajectoryMapResponse)
+def get_trajectory_map(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
+    nodes = [schemas.TrajectoryMapNodeOut(**node) for node in services.get_trajectory_map(db, user_id)]
+    return schemas.TrajectoryMapResponse(nodes=nodes)

@@ -23,6 +23,7 @@ import 'friends_screen.dart';
 import 'mentalcoins_screen.dart';
 import 'movement_screen.dart';
 import 'notifications_screen.dart';
+import 'trajectory_map_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
 import 'settings_screen.dart';
@@ -83,6 +84,16 @@ class _HomeScreenState extends State<HomeScreen> {
           builder: (_) => MentalCoinsScreen(client: widget.client)),
     );
     _loadMentalCoinsBalance();
+  }
+
+  // MAPA_TRAJETORIA_MUNDOS_V1.md (18/09/2026, pedido de Rhoney): o acesso
+  // ao mapa muda de um botão dentro de Progresso pra um ícone ao lado do
+  // nome do usuário, direto na Home — mais visível, sem precisar entrar
+  // em outra tela primeiro.
+  void _openTrajectoryMap() {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => TrajectoryMapScreen(client: widget.client)),
+    );
   }
 
   // V2 item 9 — badge de passos ainda não coletados junto ao ícone de
@@ -696,6 +707,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               l10n: l10n,
                               onTapPhoto: _openProfile,
                               onTapMentalCoins: _openMentalCoins,
+                              onTapTrajectoryMap: _openTrajectoryMap,
                             ),
                           if (_error != null) ...[
                             const SizedBox(height: 8),
@@ -1651,6 +1663,7 @@ class _ProgressCard extends StatelessWidget {
     required this.l10n,
     required this.onTapPhoto,
     required this.onTapMentalCoins,
+    required this.onTapTrajectoryMap,
   });
 
   final Map<String, dynamic> progress;
@@ -1660,6 +1673,7 @@ class _ProgressCard extends StatelessWidget {
   final AppLocalizations l10n;
   final VoidCallback onTapPhoto;
   final VoidCallback onTapMentalCoins;
+  final VoidCallback onTapTrajectoryMap;
 
   @override
   Widget build(BuildContext context) {
@@ -1746,6 +1760,20 @@ class _ProgressCard extends StatelessWidget {
                         style: AppTheme.technicalStyle(
                             color: AppColors.teal, fontSize: 12)),
                   ],
+                ),
+              ),
+              const SizedBox(width: 4),
+              InkWell(
+                borderRadius: BorderRadius.circular(20),
+                onTap: onTapTrajectoryMap,
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: AppColors.purple.withValues(alpha: 0.14),
+                    shape: BoxShape.circle,
+                    border: Border.all(color: AppColors.purple.withValues(alpha: 0.4)),
+                  ),
+                  child: Icon(Icons.auto_awesome_rounded, color: AppColors.purple, size: 18),
                 ),
               ),
               const SizedBox(width: 8),

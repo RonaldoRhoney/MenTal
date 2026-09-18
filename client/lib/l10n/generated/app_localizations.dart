@@ -1354,6 +1354,54 @@ abstract class AppLocalizations {
   /// **'Ver conquistas'**
   String get viewBadgesButton;
 
+  /// TrajectoryMapScreen app bar title
+  ///
+  /// In pt, this message translates to:
+  /// **'Mapa de Trajetória'**
+  String get trajectoryMapScreenTitle;
+
+  /// Shown when the trajectory map has no nodes
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum Mundo disponível ainda.'**
+  String get trajectoryMapEmptyMessage;
+
+  /// Small label/chip marking a node as a SubMundo (not a first-level World)
+  ///
+  /// In pt, this message translates to:
+  /// **'SubMundo'**
+  String get trajectoryMapSubmundoLabel;
+
+  /// Header title of the galaxy-style trajectory map
+  ///
+  /// In pt, this message translates to:
+  /// **'Seu universo'**
+  String get trajectoryMapUniverseLabel;
+
+  /// Counter chip showing how many Worlds the player has already started exploring out of the total
+  ///
+  /// In pt, this message translates to:
+  /// **'{explored} de {total} Mundos'**
+  String trajectoryMapWorldsCount(int explored, int total);
+
+  /// Trajectory map node status: no progress yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Não iniciado'**
+  String get trajectoryStatusNotStarted;
+
+  /// Trajectory map node status: some progress, not complete
+  ///
+  /// In pt, this message translates to:
+  /// **'Em andamento'**
+  String get trajectoryStatusInProgress;
+
+  /// Trajectory map node status: 100% complete
+  ///
+  /// In pt, this message translates to:
+  /// **'Conquistado'**
+  String get trajectoryStatusCompleted;
+
   /// Badge earned status
   ///
   /// In pt, this message translates to:

@@ -739,6 +739,32 @@ class AppLocalizationsPt extends AppLocalizations {
   String get viewBadgesButton => 'Ver conquistas';
 
   @override
+  String get trajectoryMapScreenTitle => 'Mapa de Trajetória';
+
+  @override
+  String get trajectoryMapEmptyMessage => 'Nenhum Mundo disponível ainda.';
+
+  @override
+  String get trajectoryMapSubmundoLabel => 'SubMundo';
+
+  @override
+  String get trajectoryMapUniverseLabel => 'Seu universo';
+
+  @override
+  String trajectoryMapWorldsCount(int explored, int total) {
+    return '$explored de $total Mundos';
+  }
+
+  @override
+  String get trajectoryStatusNotStarted => 'Não iniciado';
+
+  @override
+  String get trajectoryStatusInProgress => 'Em andamento';
+
+  @override
+  String get trajectoryStatusCompleted => 'Conquistado';
+
+  @override
   String get badgeEarnedLabel => 'Conquistado';
 
   @override

@@ -370,6 +370,30 @@ class WorldProgressOut(BaseModel):
     completed: bool
 
 
+class TrajectoryMapNodeOut(BaseModel):
+    """MAPA_TRAJETORIA_MUNDOS_V1.md — um "planeta" do mapa: um Mundo de
+    primeiro nível, ou um SubMundo confirmado (services.
+    SUBMUNDO_BLOCK_IDS). `id` é o world_id pro tipo "world", ou
+    "{world_id}:{block_id}" pro tipo "submundo" — único em toda a
+    resposta. `parent_id` é o world_id pai só pra submundo, None pro
+    Mundo de primeiro nível."""
+
+    id: str
+    type: str
+    parent_id: str | None
+    name: str
+    territory_ids: list[str]
+    xp_earned: int
+    xp_total: int
+    percent: float
+    status: str
+    stars: int
+
+
+class TrajectoryMapResponse(BaseModel):
+    nodes: list[TrajectoryMapNodeOut]
+
+
 class BlockOut(BaseModel):
     """Bloco (BLOCOS_MENUS.md) — puramente organização de menu, sem
     estado de progressão (diferente de WorldProgressOut, que tem

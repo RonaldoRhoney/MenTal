@@ -469,6 +469,141 @@ def get_worlds_progress(db: Session, user_id: str) -> list[dict]:
     return out
 
 
+# MAPA_TRAJETORIA_MUNDOS_V1.md (17/09/2026, decisões de Rhoney na rodada
+# de perguntas em aberto) — só estes Blocos representam SubMundos de
+# verdade (ganham planeta próprio no mapa). Blocos "clássicos" (ex.:
+# "tecnologia" pros territórios nativos de Tecnologia, "mitologia",
+# "matematica") são só agrupamento de menu dentro do próprio Mundo
+# (BLOCOS_MENUS.md) — nunca viram planeta separado. Adicionar aqui
+# manualmente sempre que um SubMundo novo ganhar arquitetura própria
+# confirmada com Rhoney (mesmo espírito de BLOCO_TO_TERRITORY nos
+# scripts de conversão de conteúdo — registro explícito, nunca
+# inferido sozinho da estrutura de dados).
+SUBMUNDO_BLOCK_IDS = {"internet", "copa_do_mundo", "futebol"}
+
+
+def _trajectory_progress_fraction(db: Session, user_id: str, territory_ids: list[str]) -> tuple[int, int]:
+    """(xp_conquistado, xp_total_possível) somando min(xp_in_territory,
+    CONQUEST_XP_THRESHOLD) por território — mesmo teto já usado pra
+    decidir "território conquistado", nunca uma fórmula nova."""
+    if not territory_ids:
+        return 0, 0
+    rows = db.execute(
+        select(models.UserTerritoryProgress.territory_id, models.UserTerritoryProgress.xp_in_territory)
+        .where(models.UserTerritoryProgress.user_id == user_id)
+        .where(models.UserTerritoryProgress.territory_id.in_(territory_ids))
+    ).all()
+    xp_by_territory = {territory_id: xp for territory_id, xp in rows}
+    earned = sum(min(xp_by_territory.get(territory_id, 0), config.CONQUEST_XP_THRESHOLD) for territory_id in territory_ids)
+    total = len(territory_ids) * config.CONQUEST_XP_THRESHOLD
+    return earned, total
+
+
+def _trajectory_status(percent: float) -> str:
+    if percent >= 100:
+        return "completed"
+    if percent > 0:
+        return "in_progress"
+    return "not_started"
+
+
+def _trajectory_stars(percent: float) -> int:
+    """MAPA_TRAJETORIA_MUNDOS_V1.md — 3 estrelas por marco de %, o mesmo
+    valor que também alimenta o efeito de "planeta desbloqueado
+    progressivo" (Fase 1 é só dado; não é medida de desempenho/streak —
+    se Rhoney quiser estrela ligada a qualidade de resposta em vez de %
+    de progresso, é uma revisão de escopo pra tratar na Fase 3, arte)."""
+    if percent >= 100:
+        return 3
+    if percent >= 66:
+        return 2
+    if percent >= 33:
+        return 1
+    return 0
+
+
+def get_trajectory_map(db: Session, user_id: str) -> list[dict]:
+    """
+    MAPA_TRAJETORIA_MUNDOS_V1.md — Fase 1 (dados). Um "planeta" por
+    Mundo de primeiro nível, MAIS um planeta extra por SubMundo
+    confirmado (SUBMUNDO_BLOCK_IDS) — decisão de Rhoney (17/09/2026):
+    "Mundos + SubMundos no mapa". Os territórios do Mundo "pai" excluem
+    os que já pertencem a um SubMundo dele (senão contariam nos dois
+    planetas ao mesmo tempo). Ordem: World.display_order (mesma do
+    carrossel da Home hoje, decisão de Rhoney) — SubMundos entram logo
+    depois do Mundo pai, na ordem do próprio Block.display_order.
+    Mundo sem NENHUM território (nem próprio nem de SubMundo) fica de
+    fora — mesmo princípio já usado em get_blocks (bloco vazio não
+    aparece), nunca um planeta sem nada pra abrir.
+    """
+    worlds = db.execute(select(models.World).order_by(models.World.display_order)).scalars().all()
+    blocks_by_id = {block.id: block for block in db.execute(select(models.Block)).scalars().all()}
+
+    submundo_blocks_by_world: dict[str, list[models.Block]] = {}
+    for block_id in SUBMUNDO_BLOCK_IDS:
+        block = blocks_by_id.get(block_id)
+        if block is None:
+            continue
+        parent_world_ids = db.execute(
+            select(models.Territory.world_id).where(models.Territory.block_id == block_id).distinct()
+        ).scalars().all()
+        for world_id in parent_world_ids:
+            submundo_blocks_by_world.setdefault(world_id, []).append(block)
+
+    out = []
+    for world in worlds:
+        submundo_blocks = sorted(submundo_blocks_by_world.get(world.id, []), key=lambda b: b.display_order)
+        submundo_block_ids = {block.id for block in submundo_blocks}
+
+        world_territories = db.execute(
+            select(models.Territory.id, models.Territory.block_id).where(models.Territory.world_id == world.id)
+        ).all()
+        own_territory_ids = [territory_id for territory_id, block_id in world_territories if block_id not in submundo_block_ids]
+
+        if not own_territory_ids and not submundo_blocks:
+            continue  # Mundo sem território nenhum ainda — não vira planeta vazio.
+
+        own_earned, own_total = _trajectory_progress_fraction(db, user_id, own_territory_ids)
+        own_percent = round(own_earned / own_total * 100, 1) if own_total else 0.0
+        out.append(
+            {
+                "id": world.id,
+                "type": "world",
+                "parent_id": None,
+                "name": world.name,
+                "territory_ids": own_territory_ids,
+                "xp_earned": own_earned,
+                "xp_total": own_total,
+                "percent": own_percent,
+                "status": _trajectory_status(own_percent),
+                "stars": _trajectory_stars(own_percent),
+            }
+        )
+
+        for block in submundo_blocks:
+            sub_territory_ids = db.execute(
+                select(models.Territory.id).where(models.Territory.block_id == block.id)
+            ).scalars().all()
+            earned, total = _trajectory_progress_fraction(db, user_id, sub_territory_ids)
+            percent = round(earned / total * 100, 1) if total else 0.0
+            out.append(
+                {
+                    "id": f"{world.id}:{block.id}",
+                    "type": "submundo",
+                    "parent_id": world.id,
+                    "name": block.name,
+                    "territory_ids": sub_territory_ids,
+                    "xp_earned": earned,
+                    "xp_total": total,
+                    "percent": percent,
+                    "status": _trajectory_status(percent),
+                    "stars": _trajectory_stars(percent),
+                }
+            )
+
+    return out
+
+
 # V2 item 12 — Amigos (V2_KICKOFF.md §6A). Par sempre canônico
 # (user_id_a < user_id_b como string) — quem chama nunca precisa saber
 # de que lado da linha o próprio user_id está.

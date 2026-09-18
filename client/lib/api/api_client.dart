@@ -242,6 +242,12 @@ class ApiClient {
     return _get(_uri('/progress'), headers: _headers);
   }
 
+  // MAPA_TRAJETORIA_MUNDOS_V1.md — endpoint dedicado, só chamado quando
+  // o jogador abre a tela do mapa (não em toda carga de Progresso).
+  Future<Map<String, dynamic>> trajectoryMap() async {
+    return _get(_uri('/progress/trajectory-map'), headers: _headers);
+  }
+
   Future<Map<String, dynamic>> ranking({String scope = 'global', String window = 'weekly'}) async {
     return _get(
       _uri('/ranking', {'scope': scope, 'window': window}),
