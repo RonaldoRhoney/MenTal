@@ -1,0 +1,129 @@
+# MENTAL — Regra Oficial de Gamificação
+
+**Status:** OFICIAL como fonte da verdade de REGRA (documento aprovado). **Implementação NÃO iniciada** — §10 pede explicitamente "auditar o código atual e reportar toda divergência... antes de implementar qualquer correção", e o gap encontrado é grande demais (ver seção abaixo) pra decidir prioridade sozinho. Levantamento entregue em 18/09/2026, usando como base o levantamento já feito em `LEVANTAMENTO_REGRAS_GAMIFICACAO_V1.md` (mesmo dia). Aguardando Rhoney decidir prioridade/fases antes de qualquer código ser alterado.
+
+## Divergência entre este documento e o código real (levantamento §10, antes de implementar)
+
+| # | Regra deste documento | Código hoje | Situação |
+|---|---|---|---|
+| 1.1 | Conquista de território: 200 XP | `CONQUEST_XP_THRESHOLD = 200` | ✅ Já bate, nenhuma mudança necessária |
+| 1.2 | Resposta correta por dificuldade: 3/5/7/10 (Fácil/Média/Difícil/Muito Difícil — 4 categorias) | `XP_BASE_BY_DIFFICULTY = {1:10, 2:20, 3:30, 4:40, 5:50}` (5 níveis numéricos) + fórmula multiplicativa de dica (`1-0,25×dicas`) + bônus de velocidade no Relâmpago | ⚠️ Divergência grande — escala totalmente diferente, e o código tem 5 níveis numéricos contra 4 categorias nomeadas no documento. **Precisa de decisão de Rhoney**: qual nível numérico vira qual categoria (existe um "nível 5" sem categoria correspondente?), e se as fórmulas de penalidade por dica/bônus de velocidade continuam existindo sobre esse novo valor-base ou são descartadas |
+| 1.3 | Finalizar um Desafio inteiro: +3 XP bônus | Não existe — XP é só por resposta individual, não há conceito de "bônus por completar o desafio todo" | 🆕 Mecânica nova a construir |
+| 1.4 | Desafio perfeito (100%, zero dicas): +5 XP extra | Não existe como bônus de XP — só existe o badge `no_help_needed` (10 respostas certas sem dica, acumulado, não por desafio) | 🆕 Mecânica nova |
+| 1.5 | Vencer Batalha: +2 XP | `BATTLE_WIN_BONUS_XP = 30` | ⚠️ Divergência grande (redução de 15x) |
+| 2.1 | Movimento — a cada 1.000 passos: +1 MentalCoin | `MOVEMENT_STEPS_PER_MENTALCOIN=1000` × `MOVEMENT_MENTALCOINS_PER_MILESTONE=5` = **+5** coins a cada 1000 passos | ⚠️ Divergência (redução de 5x). Além disso, o código hoje também paga **XP** de Movimento (base 20 × multiplicador de faixa até ×4, bônus de meta +50 XP, bônus de checkpoint) — nada disso aparece no documento. **Precisa de decisão**: o XP de Movimento é removido, ou o documento está incompleto? |
+| 2.2 | 7 dias consecutivos de Movimento ativo: +10 MentalCoins extras | Não existe streak específico de Movimento hoje (só o streak geral de uso do app) | 🆕 Mecânica nova — precisa definir o que conta como "dia de Movimento ativo" |
+| 3.1 | Interação diária com amigos por 7 dias seguidos: +10 XP | Não existe — "interação diária com amigos" não é uma ação rastreada hoje | 🆕 Mecânica nova — precisa definir o que conta como "interação" (mensagem? Torcida? Batalha?) |
+| 3.2 | Marco de 5 amigos confirmados: +1 XP | Não existe recompensa por marco de amizades | 🆕 Mecânica nova |
+| 3.3 | Torcer por amigo: +1 XP (1x/dia) | Torcida hoje **não gera XP nem MentalCoins** — é só notificação social | ⚠️ Divergência total (de zero pra recompensado) |
+| 3.4 | Compartilhar vitória no Feed: +2 XP (1x/dia) | `SHARE_XP_REWARD = 15` (mecanismo existente: `POST /social/share-reward`, `ShareAchievementButton`) | ⚠️ Divergência de valor (redução de ~7,5x) — a ação em si já existe, é só o valor que diverge |
+| 4.1 | Login diário: +1 XP e +0,5 MentalCoin | Não existe recompensa por login | 🆕 Mecânica nova — MentalCoins fracionário (0,5) também é uma decisão nova (hoje o saldo é sempre inteiro) |
+| 4.2 | Compartilhar o App (fora do Feed): +2 XP e +1 MentalCoin | `APP_INVITE_XP_REWARD=20` + `APP_INVITE_MENTALCOINS_REWARD=5` (ação existente: convidar amigo pro app, 1x/dia) | ⚠️ Divergência de valor (redução de 10x em XP, 5x em MentalCoins) — mesma ação, valores diferentes |
+| 4.3 | Enviar feedback: +5 XP (1x/semana) | Canal de Feedback existe, mas não paga XP hoje | 🆕 Mecânica nova |
+| 5.x | Streak geral: 7d→+15XP, 15d→+30XP, 30d→+75 coins+distintivo, 100d→+250 coins+distintivo raro | Hoje: badge `iron_streak` em 7 dias (sem XP), marcos de Feed em 30/60/100 dias (só celebração visual, sem recompensa). **15 dias não é rastreado como marco hoje.** | ⚠️ Divergência grande — nenhum dos 4 marcos paga o que o documento pede hoje |
+| 6 | Teto diário de 150 XP de respostas corretas (Desafio+Relâmpago), sem bloquear progresso/estatística | Não existe teto de XP diário. O que existe (`DAILY_FREE_CHALLENGE_LIMIT=24`) é um limite de **quantidade de desafios grátis por dia**, mecanismo diferente (bloqueia acesso a desafio novo, não zera XP mantendo acesso) | 🆕 Mecânica nova, precisa ser construída do zero — não é o mesmo sistema que já existe |
+| 7.1 | Item de destaque de perfil (custo variável, a definir) | Catálogo de resgate já existe e é funcional (`POST /mentalcoins/catalog/redeem`), hoje com 2 molduras de foto de perfil (80/150 coins) | ✅ Infraestrutura já existe, serve de base — só falta definir os itens/preços finais (o próprio documento já marca isso como pendente em §8) |
+| 7.2 | Reparar streak quebrada: 50 MentalCoins | Não existe — hoje a única forma de "salvar" o streak é o freeze automático gratuito (1x/semana, sem custo) | 🆕 Mecânica nova de compra |
+| 7.3 | Boost de +20% XP por 24h: 80 MentalCoins | Não existe nenhum conceito de boost temporário de XP | 🆕 Mecânica nova, mexe na fórmula de cálculo de XP em qualquer resposta durante a janela ativa |
+
+### Resumo executivo
+De ~20 regras do documento, **1 já bate exatamente** (conquista de território), **6 têm a ação já existente mas com valor diferente** (divergência de calibração), e **~13 são mecânicas que não existem hoje** (precisam ser construídas do zero, incluindo um sistema de teto diário de XP e uma loja de itens consumíveis). Isso é um projeto grande — reescreve a escala de XP inteira, adiciona ~10 gatilhos de recompensa novos, e cria 2 itens de compra novos com efeito em runtime (reparo de streak, boost de XP). Não é um ajuste pontual.
+
+### Perguntas que precisam de decisão de Rhoney antes de qualquer código
+1. Mapeamento dos 5 níveis numéricos de dificuldade pra as 4 categorias nomeadas (item 1.2) — existe um 5º nível "acima de Muito Difícil"?
+2. A fórmula de penalidade por dica e o bônus de velocidade do Relâmpago continuam existindo sobre os novos valores-base, ou são descartados na troca?
+3. Movimento: o XP (base + faixas + meta + checkpoint) que já existe hoje é removido, ou o documento está incompleto e deveria manter algum XP além do MentalCoin por passo?
+4. Definição operacional de "interação diária com amigos" (3.1) — qual ação conta?
+5. "Compartilhar vitória no Feed" (3.4) é a mesma ação de `ShareAchievementButton`/`SHARE_XP_REWARD`, só com valor novo, ou é uma ação distinta a criar?
+6. "Compartilhar o App" (4.2) é a mesma ação de convidar amigo (`APP_INVITE_XP_REWARD`), só com valor novo, ou é distinta?
+7. MentalCoins fracionário (0,5 no login diário) é aceitável, ou o saldo precisa continuar sempre inteiro (arredondar pra cima/baixo)?
+8. Prioridade/fases: dado o tamanho do gap, sugiro dividir em fases (ex.: Fase 1 = recalibrar valores de ações que já existem; Fase 2 = mecânicas novas de recompensa; Fase 3 = loja/teto de XP) — mas quem decide a ordem é Rhoney.
+
+**Nenhuma linha de código foi alterada para implementar este documento — só o levantamento acima.**
+
+**Base de referência:** elaborado a partir de pesquisa sobre mecânicas de gamificação de apps líderes (Duolingo, Khan Academy) e da estrutura já existente do MENTAL, com validação e ajustes de Rhoney.
+
+---
+
+## 1. Progressão e Desafios
+
+| Ação | Recompensa | Observação |
+|---|---|---|
+| Conquista de território/Mundo | **200 XP** | Regra histórica, mantida sem alteração |
+| Resposta correta — nível Fácil | +3 XP | |
+| Resposta correta — nível Média | +5 XP | Valor de referência central |
+| Resposta correta — nível Difícil | +7 XP | |
+| Resposta correta — nível Muito Difícil | +10 XP | |
+| Finalizar um Desafio inteiro (todas as perguntas) | +3 XP (bônus) | Cumulativo com o XP das respostas individuais |
+| Desafio perfeito (100% de acerto, zero dicas usadas) | +5 XP extra | Bônus adicional, reconhece domínio real |
+| Vencer uma Batalha contra outro usuário | +2 XP | Distinto do XP de resposta correta |
+
+## 2. Movimento
+
+| Ação | Recompensa |
+|---|---|
+| A cada 1.000 passos | +1 MentalCoin |
+| 7 dias consecutivos de Movimento ativo | +10 MentalCoins extras |
+
+## 3. Social
+
+| Ação | Recompensa | Observação |
+|---|---|---|
+| Interação diária com amigos, por 7 dias seguidos | +10 XP | Não importa a quantidade de interações no dia, apenas a ocorrência diária |
+| A cada marco de 5 amigos confirmados na rede (5, 10, 15, 20...) | +1 XP | Evento único por marco atingido |
+| Torcer por um amigo | +1 XP | Limite: primeira torcida do dia gera XP; torcidas adicionais no mesmo dia não geram XP extra |
+| Compartilhar uma vitória no Feed | +2 XP | Limite: primeira vez no dia |
+
+## 4. Engajamento
+
+| Ação | Recompensa |
+|---|---|
+| Login diário | +1 XP e +0,5 MentalCoin |
+| Compartilhar o App (fora do Feed, ex.: redes sociais externas) | +2 XP e +1 MentalCoin |
+| Enviar feedback pelo canal Feedback | +5 XP | Limite: uma vez por semana |
+
+## 5. Streak Geral (sequência de uso do app)
+
+| Marco | Recompensa |
+|---|---|
+| 7 dias consecutivos | +15 XP bônus |
+| 15 dias consecutivos | +30 XP bônus |
+| 30 dias consecutivos | +75 MentalCoins + distintivo de perfil |
+| 100 dias consecutivos | +250 MentalCoins + distintivo raro de perfil |
+
+Streak geral é distinto do streak específico de Movimento (seção 2) — cada um tem sua própria lógica e recompensa.
+
+## 6. Limites Anti-Farming (regra de equilíbrio econômico)
+
+| Regra | Valor |
+|---|---|
+| Teto diário de XP proveniente de respostas corretas (Desafio + Relâmpago somados) | **150 XP/dia** |
+| Comportamento ao atingir o teto | Respostas continuam contando para progresso e estatísticas do usuário, mas deixam de gerar XP adicional naquele dia |
+| MentalCoins de passos (Movimento) | Sem teto artificial — autolimitado pelo esforço físico real do usuário |
+
+Este limite é considerado **estrutural** para a integridade do sistema de gamificação — não deve ser removido sem nova decisão explícita e documentada.
+
+## 7. Destinos de Gasto dos MentalCoins (sink)
+
+| Uso | Custo |
+|---|---|
+| Item de destaque exibido no perfil (raridade a definir em fase de design visual) | Variável, a definir |
+| Reparar uma sequência (streak) quebrada | 50 MentalCoins |
+| Boost temporário de +20% XP por 24 horas | 80 MentalCoins |
+
+## 8. Itens Pendentes de Detalhamento Futuro
+
+- **Design visual dos itens de destaque de perfil**: recomenda-se sistema de raridade (não apenas ligar/desligar um selo único), com níveis visuais crescentes conforme o valor gasto ou o marco atingido.
+- Novos destinos de gasto de MentalCoins podem ser adicionados no futuro, desde que documentados como revisão formal deste documento.
+
+## 9. Regra de Governança deste Documento
+
+Qualquer alteração de valor, adição de nova mecânica, ou remoção de regra existente deve ser feita através de **nova versão formal deste documento**, aprovada por Rhoney, nunca por ajuste direto e não documentado no código. Isso garante que este documento permaneça, de fato, a fonte única da verdade sobre gamificação no MENTAL.
+
+## 10. Escopo técnico (a validar por Claude Code)
+
+- Auditar o código atual e reportar toda divergência encontrada entre o comportamento real do app e as regras deste documento, antes de implementar qualquer correção.
+- Implementar o teto diário de XP (seção 6), incluindo o comportamento correto de continuar registrando progresso sem gerar XP após o limite.
+- Implementar os marcos de streak geral (seção 5), com os distintivos de perfil correspondentes (mesmo que em versão visual simples inicialmente, a refinar depois conforme seção 8).
+- Implementar os dois novos destinos de gasto de MentalCoins (reparo de streak e boost de XP), incluindo a lógica de consumo do saldo do usuário.
+- Confirmar que Torcida, Feed (compartilhamento de vitória) e canal de Feedback já existem tecnicamente no app para receber essas novas regras de recompensa — caso alguma dessas funcionalidades ainda não esteja implementada, reportar a Rhoney antes de tentar recompensar uma ação que não existe.
