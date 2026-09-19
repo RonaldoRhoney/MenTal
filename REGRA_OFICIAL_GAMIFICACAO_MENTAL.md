@@ -1,6 +1,20 @@
 # MENTAL — Regra Oficial de Gamificação
 
-**Status:** OFICIAL como fonte da verdade de REGRA (documento aprovado). **Implementação NÃO iniciada** — §10 pede explicitamente "auditar o código atual e reportar toda divergência... antes de implementar qualquer correção", e o gap encontrado é grande demais (ver seção abaixo) pra decidir prioridade sozinho. Levantamento entregue em 18/09/2026, usando como base o levantamento já feito em `LEVANTAMENTO_REGRAS_GAMIFICACAO_V1.md` (mesmo dia). Aguardando Rhoney decidir prioridade/fases antes de qualquer código ser alterado.
+**Status:** OFICIAL como fonte da verdade de REGRA (documento aprovado). **Fase 1 IMPLEMENTADA (19/09/2026)** — recalibração dos valores de ações que já existiam no código (itens 1.2, 1.5, 2.1, 3.4, 4.2). Fases 2 (mecânicas novas de recompensa) e 3 (teto diário de XP + loja) aguardam Rhoney decidir a próxima prioridade.
+
+## Fase 1 — recalibração de valores (19/09/2026, decisões confirmadas com Rhoney)
+
+- Item 1.2: os 5 níveis numéricos de dificuldade (1-5) mapeiam 1:1 aos 4 nomeados do documento — nível 5 paga o mesmo valor de "Muito Difícil". A fórmula de penalidade por dica e o bônus de velocidade do Relâmpago continuam aplicando sobre o novo valor-base, sem mudança de lógica. `config.XP_BASE_BY_DIFFICULTY = {1: 3, 2: 5, 3: 7, 4: 10, 5: 10}` (era `{1:10, 2:20, 3:30, 4:40, 5:50}`), `XP_BASE_DEFAULT = 5` (era 20).
+- Item 1.5: `config.BATTLE_WIN_BONUS_XP = 2` (era 30).
+- Item 2.1: `config.MOVEMENT_MENTALCOINS_PER_MILESTONE = 1` (era 5) — mesma regra de 1000 passos por marco. XP de Movimento (faixas/meta/checkpoint) mantido como está, decisão explícita de Rhoney (o documento só recalibra o MentalCoin).
+- Item 3.4/4.2: mesmas ações já existentes, só valor novo — `config.SHARE_XP_REWARD = 2` (era 15), `config.APP_INVITE_XP_REWARD = 2` (era 20), `config.APP_INVITE_MENTALCOINS_REWARD = 1` (era 5).
+- Item 1.1 (conquista de território, 200 XP) já batia, nenhuma mudança.
+- Testes: suíte completa do backend (441/441) — 7 testes que assumiam a escala antiga de XP (loops com teto de tentativas insuficiente pra nova escala menor) foram ajustados, nunca a regra de negócio em si.
+- **Achado a reportar**: com a nova escala, conquistar 1 território sozinho (200 XP) agora exige ~23 respostas corretas mesmo com a dificuldade adaptativa no teto máximo — perto do limite diário gratuito de 24 desafios/dia (`DAILY_FREE_CHALLENGE_LIMIT`). Vale considerar se esse teto também precisa de revisão numa fase futura, já que a Fase 1 não alterou `DAILY_FREE_CHALLENGE_LIMIT`.
+
+## Pendente — Fases 2 e 3 (não implementadas, aguardando Rhoney)
+
+Mecânicas totalmente novas (login diário, marco de amigos, Torcida gerando XP, streak geral com distintivos, teto diário de 150 XP, loja de reparo de streak/boost de XP) — ver tabela de divergência abaixo, itens marcados 🆕. Perguntas 1, 4 e 7 do levantamento original (mapeamento de dificuldade e fórmulas, definição de "interação diária com amigos", MentalCoins fracionário) seguem em aberto pras fases que ainda não têm decisão.
 
 ## Divergência entre este documento e o código real (levantamento §10, antes de implementar)
 

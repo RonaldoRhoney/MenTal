@@ -9,7 +9,7 @@ múltiplo".
 
 import uuid
 
-from app import models, services
+from app import config, models, services
 from app.db import SessionLocal
 
 from .conftest import auth_header
@@ -33,12 +33,15 @@ def test_answer_response_flags_coin_milestone_only_on_the_crossing_response(clie
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    # Deixa o jogador a 5 XP do marco de 100 (mesma técnica de setup direto
+    # Deixa o jogador a 1 XP do marco de 100 (mesma técnica de setup direto
     # no banco já usada nas demais suítes do MENTAL para forçar um estado
-    # específico sem depender de dezenas de respostas reais).
+    # específico sem depender de dezenas de respostas reais). 99, não 95:
+    # REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 1.2 (19/09/2026, Fase 1)
+    # recalibrou XP_BASE_BY_DIFFICULTY pra 3-10 — 99 garante cruzar o
+    # marco de 100 com qualquer nível de dificuldade servido.
     db = SessionLocal()
     profile = services.get_or_create_profile(db, user)
-    profile.xp_total = 95
+    profile.xp_total = 99
     profile.level = 1
     db.commit()
     db.close()
@@ -101,14 +104,17 @@ def test_app_invite_share_reward_flags_coin_milestone_when_it_crosses_50_mentalc
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
+    # REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 4.2 (19/09/2026, Fase 1):
+    # APP_INVITE_MENTALCOINS_REWARD recalibrado de 5 pra 1 — 49, não 47,
+    # garante cruzar o marco de 50 com o novo valor.
     db = SessionLocal()
     profile = services.get_or_create_profile(db, user)
-    balance = models.MentalCoinsBalance(user_id=user, balance=47)
+    balance = models.MentalCoinsBalance(user_id=user, balance=49)
     db.add(balance)
     db.commit()
     db.close()
 
     result = client.post("/social/share-app-reward", headers=headers).json()
 
-    assert result["mentalcoins_balance"] == 52
+    assert result["mentalcoins_balance"] == 49 + config.APP_INVITE_MENTALCOINS_REWARD
     assert result["coin_milestone_reached"] is True

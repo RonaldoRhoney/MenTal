@@ -28,7 +28,12 @@ def _answer_correctly(client, headers, territory_id):
     ).json()
 
 
-def _conquer_territory(client, headers, territory_id, max_iterations=30):
+def _conquer_territory(client, headers, territory_id, max_iterations=40):
+    # REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 1.2 (19/09/2026, Fase 1):
+    # XP_BASE_BY_DIFFICULTY recalibrado (3-10, era 10-50) — conquistar um
+    # território agora precisa de ~23 respostas mesmo com a dificuldade
+    # adaptativa no teto máximo, então o teto anterior de 30 ficou curto
+    # demais em alguns casos.
     for _ in range(max_iterations):
         progress = client.get("/progress", headers=headers).json()
         territory = next(t for t in progress["territories"] if t["territory_id"] == territory_id)
@@ -173,7 +178,7 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client, mon
     # nessa resposta, nunca antes.
     world_completed_events = []
     completing_result = None
-    for _ in range(30):
+    for _ in range(40):
         progress = client.get("/progress", headers=headers).json()
         enigmas = next(t for t in progress["territories"] if t["territory_id"] == "enigmas")
         if enigmas["conquered"]:

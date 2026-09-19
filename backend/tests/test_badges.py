@@ -42,14 +42,20 @@ def test_badges_catalog_starts_unearned(client):
     assert all(b["earned"] is False and b["earned_at"] is None for b in badges)
 
 
-def test_first_conquest_badge_awarded_when_territory_conquered(client):
+def test_first_conquest_badge_awarded_when_territory_conquered(client, monkeypatch):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
     # CONQUEST_XP_THRESHOLD=200, XP base varia por dificuldade — repete até
-    # conquistar (teto de 20 tentativas, bem acima do necessário na prática).
-    for _ in range(20):
+    # conquistar. REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 1.2 (19/09/2026,
+    # Fase 1) recalibrou XP_BASE_BY_DIFFICULTY (3-10, era 10-50): agora
+    # precisa de ~30 respostas, perto demais do DAILY_FREE_CHALLENGE_
+    # LIMIT=24 sem assinatura E do teto de abuso de RATE_LIMIT_ANSWER_
+    # SUBMIT — mesmo padrão já usado em test_worlds.py pra esse cenário.
+    client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
+    monkeypatch.setattr(config, "RATE_LIMIT_ANSWER_SUBMIT", (10_000, 60.0))
+    for _ in range(40):
         progress = client.get("/progress", headers=headers).json()
         palavras = next(t for t in progress["territories"] if t["territory_id"] == "palavras")
         if palavras["conquered"]:

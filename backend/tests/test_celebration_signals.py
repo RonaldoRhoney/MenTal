@@ -9,6 +9,8 @@ o estado absoluto.
 
 import uuid
 
+from app import config
+
 from .conftest import auth_header
 
 
@@ -39,13 +41,20 @@ def test_streak_just_extended_only_on_first_play_of_the_day(client):
     assert second["streak_just_extended"] is False
 
 
-def test_territory_just_conquered_fires_once_at_the_exact_threshold(client):
+def test_territory_just_conquered_fires_once_at_the_exact_threshold(client, monkeypatch):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    # REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 1.2 (19/09/2026, Fase 1):
+    # XP_BASE_BY_DIFFICULTY recalibrado (3-10, era 10-50) — conquistar um
+    # território agora precisa de ~30 respostas, perto demais tanto do
+    # DAILY_FREE_CHALLENGE_LIMIT=24 sem assinatura quanto do teto de
+    # abuso de RATE_LIMIT_ANSWER_SUBMIT (mesmo padrão de test_worlds.py).
+    client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
+    monkeypatch.setattr(config, "RATE_LIMIT_ANSWER_SUBMIT", (10_000, 60.0))
 
     conquered_events = []
-    for _ in range(20):
+    for _ in range(40):
         progress = client.get("/progress", headers=headers).json()
         palavras = next(t for t in progress["territories"] if t["territory_id"] == "palavras")
         if palavras["conquered"]:
@@ -117,10 +126,14 @@ def test_level_up_true_only_on_the_answer_that_crosses_the_level_boundary(client
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     # Bypassa o limite diário pra viabilizar XP suficiente pra subir de
     # nível (XP_PER_LEVEL=100) sem depender da regra de negócio do limite.
+    # REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 1.2 (19/09/2026, Fase 1):
+    # XP_BASE_BY_DIFFICULTY recalibrado (3-10, era 10-50) — precisa de
+    # mais respostas pra acumular o mesmo XP, cap de 15 não é mais
+    # suficiente.
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 
     level_up_events = []
-    for _ in range(15):
+    for _ in range(25):
         progress = client.get("/progress", headers=headers).json()
         if progress["level"] >= 2:
             break
@@ -136,7 +149,7 @@ def test_new_level_only_populated_when_level_up_is_true(client):
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 
-    for _ in range(15):
+    for _ in range(25):
         progress = client.get("/progress", headers=headers).json()
         if progress["level"] >= 2:
             break

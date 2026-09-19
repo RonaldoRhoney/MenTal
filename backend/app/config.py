@@ -88,8 +88,16 @@ CONQUEST_XP_THRESHOLD = 200
 # inteiro é um feito maior que fechar um território isolado.
 WORLD_COMPLETION_BONUS_XP = 100
 XP_PER_LEVEL = 100
-XP_BASE_BY_DIFFICULTY = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50}
-XP_BASE_DEFAULT = 20
+# REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 1.2 (19/09/2026, Fase 1 —
+# recalibração de ações que já existem, aprovado por Rhoney): mapeia os
+# 4 níveis nomeados do documento (Fácil/Média/Difícil/Muito Difícil) aos
+# 5 níveis numéricos já existentes — 1:1 até o nível 4, e o nível 5
+# (sem categoria própria no documento) paga o mesmo valor de "Muito
+# Difícil". A fórmula de penalidade por dica (scoring.py, -25%/dica) e o
+# bônus de velocidade do Relâmpago continuam aplicando sobre este
+# valor-base, sem mudança de lógica — só a escala mudou.
+XP_BASE_BY_DIFFICULTY = {1: 3, 2: 5, 3: 7, 4: 10, 5: 10}
+XP_BASE_DEFAULT = 5
 
 # Dificuldade adaptativa (ADAPTIVE_DIFFICULTY.md §6, fórmula em aberto na
 # Foundation): janela de tentativas recentes observada e limiares de
@@ -343,8 +351,12 @@ WORD_PUZZLE_MIN_COMPLETION_SECONDS = 3
 # MentalCoins por passo (29/08/2026, pedido de Rhoney): "a cada 1000
 # passos = 5 MentalCoins" — por marco cruzado dentro do ciclo (app/
 # movement.py), independente da faixa de XP acima.
+# REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 2.1 (19/09/2026, Fase 1,
+# aprovado): recalibrado de 5 pra 1 MentalCoin por marco de 1000 passos.
+# XP de Movimento (faixas/meta/checkpoint abaixo) mantido como está —
+# decisão explícita de Rhoney, o documento só recalibra o MentalCoin.
 MOVEMENT_STEPS_PER_MENTALCOIN = 1000
-MOVEMENT_MENTALCOINS_PER_MILESTONE = 5
+MOVEMENT_MENTALCOINS_PER_MILESTONE = 1
 
 MOVEMENT_GOAL_BONUS_XP = 50
 # Achado de auditoria de segurança (28/08/2026): só validava "maior que
@@ -370,18 +382,20 @@ MOVEMENT_CHECKPOINT_PARTS = 4
 # compartilhamento via OS share sheet foi concluído (share_plus só
 # confirma que o sheet foi aberto sem erro), então o valor precisa ser
 # pequeno o bastante para não valer a pena "farmar" mesmo num cenário de
-# falso positivo. Comparação: um acerto simples de nível fácil já paga
-# 10 XP (scoring.xp_base_for) — este bônus fica na mesma ordem de
-# grandeza de UM acerto, nunca de vários, e só uma vez por dia.
-SHARE_XP_REWARD = 15
+# falso positivo. REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 3.4
+# (19/09/2026, Fase 1, aprovado): recalibrado de 15 pra 2 — mesma ação,
+# a nova escala de XP_BASE_BY_DIFFICULTY (3-10) tornou 15 desproporcional.
+SHARE_XP_REWARD = 2
 
 # Recompensa do botão de convidar amigos pra baixar o app (pedido de
 # Rhoney), distinta da recompensa de compartilhar conquista acima —
 # maior que SHARE_XP_REWARD e paga também em MentalCoins, de propósito:
 # convidar gente nova pro app é um ato de valor diferente (crescimento
 # de base de jogadores) do que compartilhar a própria conquista.
-APP_INVITE_XP_REWARD = 20
-APP_INVITE_MENTALCOINS_REWARD = 5
+# REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 4.2 (19/09/2026, Fase 1,
+# aprovado): recalibrado de 20→2 XP e 5→1 MentalCoin, mesma ação.
+APP_INVITE_XP_REWARD = 2
+APP_INVITE_MENTALCOINS_REWARD = 1
 
 # V2 item 14 — Batalha assíncrona (ASYNC_BATTLE.md §3/§4, aprovado
 # 2026-08-22). Limite é sobre desafios ENVIADOS por dia (não recebidos),
@@ -463,7 +477,10 @@ REPORT_DAILY_LIMIT_PER_TARGET = 5
 # é um convite pessoal e mais "pesado" que uma reação rápida, não faz
 # sentido mandar várias vezes no mesmo dia pro mesmo alvo.
 MOVEMENT_INVITE_DAILY_LIMIT_PER_TARGET = 1
-BATTLE_WIN_BONUS_XP = 30
+# REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 1.5 (19/09/2026, Fase 1,
+# aprovado): recalibrado de 30 pra 2 — vencer Batalha volta a ser um
+# bônus distinto do XP de resposta correta, não maior que ele.
+BATTLE_WIN_BONUS_XP = 2
 
 # FEED_SOCIAL_V1.md §2 — eventos automáticos aceitos no Feed (piloto).
 # Nenhum evento fora desta lista pode ser criado (feed.create_feed_event
