@@ -391,16 +391,17 @@ class _HomeScreenState extends State<HomeScreen> {
   // dentro de um Mundo — puramente visual, sem afetar XP/conquista.
   // Territórios sem bloco (block_id null) continuam soltos direto no
   // Mundo, sem sub-cabeçalho, como sempre foram.
-  Map<String, String> _blockNameByTerritory() {
+  Map<String, ({String id, String name})> _blockNameByTerritory() {
     final blocks =
         (_progress?['blocks'] as List?)?.cast<Map<String, dynamic>>();
     if (blocks == null) return const {};
-    final map = <String, String>{};
+    final map = <String, ({String id, String name})>{};
     for (final block in blocks) {
+      final id = block['block_id'] as String;
       final name = block['name'] as String;
       for (final territoryId
           in (block['territory_ids'] as List).cast<String>()) {
-        map[territoryId] = name;
+        map[territoryId] = (id: id, name: name);
       }
     }
     return map;
@@ -557,18 +558,19 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> _territoryGroups(
     AppLocalizations l10n,
     List<String> territoryIds,
-    Map<String, String> blockNameByTerritory, {
+    Map<String, ({String id, String name})> blockNameByTerritory, {
     VoidCallback? onReturned,
   }) {
     final groups = <Widget>[];
-    String? currentBlock;
+    ({String id, String name})? currentBlock;
     List<String> currentIds = [];
 
     void flush() {
       if (currentIds.isEmpty) return;
       groups.add(
         _TerritoryGroup(
-          blockName: currentBlock,
+          blockId: currentBlock?.id,
+          blockName: currentBlock?.name,
           territoryIds: List.of(currentIds),
           l10n: l10n,
           territoryProgressOf: _territoryProgress,
@@ -580,10 +582,10 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     for (final territoryId in territoryIds) {
-      final blockName = blockNameByTerritory[territoryId];
-      if (blockName != currentBlock) {
+      final block = blockNameByTerritory[territoryId];
+      if (block != currentBlock) {
         flush();
-        currentBlock = blockName;
+        currentBlock = block;
       }
       currentIds.add(territoryId);
     }
@@ -1351,6 +1353,7 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
 /// forem adicionados na V3.
 class _TerritoryGroup extends StatelessWidget {
   const _TerritoryGroup({
+    required this.blockId,
     required this.blockName,
     required this.territoryIds,
     required this.l10n,
@@ -1359,6 +1362,7 @@ class _TerritoryGroup extends StatelessWidget {
     required this.onReturned,
   });
 
+  final String? blockId;
   final String? blockName;
   final List<String> territoryIds;
   final AppLocalizations l10n;
@@ -1374,10 +1378,8 @@ class _TerritoryGroup extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           if (blockName != null) ...[
-            Text(blockName!,
-                style: AppTheme.technicalStyle(
-                    color: AppColors.muted, fontSize: 12)),
-            const SizedBox(height: 8),
+            _SectionHeader(blockId: blockId!, name: blockName!),
+            const SizedBox(height: 12),
           ],
           LayoutBuilder(
             builder: (context, constraints) {
@@ -1405,6 +1407,85 @@ class _TerritoryGroup extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+// ORGANIZACAO_VISUAL_POR_SECAO_TODOS_MUNDOS_V1.md §2.1.1 (19/09/2026,
+// aprovado) — registro explícito de ícone temático por block_id, mesmo
+// padrão de outros registros hand-curated do projeto (SUBMUNDO_BLOCK_
+// IDS, IDIOMA_TERRITORY_IDS): nunca inferido do nome, sempre uma
+// entrada por bloco conhecido. Bloco sem entrada aqui cai no ícone
+// genérico — nunca quebra, só fica menos temático até alguém adicionar.
+const Map<String, IconData> _kSectionIcons = {
+  'ingles': Icons.flag_rounded,
+  'espanhol': Icons.flag_rounded,
+  'frances': Icons.flag_rounded,
+  'libras': Icons.front_hand_rounded,
+  'internet': Icons.public_rounded,
+  'futebol': Icons.sports_soccer_rounded,
+  'copa_do_mundo': Icons.emoji_events_rounded,
+  'tecnologia': Icons.memory_rounded,
+  'matematica': Icons.calculate_rounded,
+  'enem': Icons.school_rounded,
+  'concursos': Icons.gavel_rounded,
+  'regioes': Icons.map_rounded,
+  'mitologia': Icons.auto_stories_rounded,
+  'financas_pessoais': Icons.savings_rounded,
+  'filosofia': Icons.psychology_rounded,
+  'artes': Icons.palette_rounded,
+  'saude_bemestar': Icons.favorite_rounded,
+  'curiosidade_relampago': Icons.bolt_rounded,
+  'jogos_de_palavras': Icons.extension_rounded,
+};
+
+/// Cabeçalho de seção reutilizável — usado por qualquer Bloco/SubMundo
+/// em qualquer Mundo do app (ORGANIZACAO_VISUAL_POR_SECAO_TODOS_MUNDOS_
+/// V1.md §4: "um componente reutilizável ... evitando implementação
+/// repetida e inconsistente"). Substitui o antigo rótulo cinza pequeno
+/// por tipografia maior, ícone temático e uma linha de destaque em
+/// gradiente — mesmo cuidado de acabamento já pedido pro Caça-palavras
+/// e pro ícone do Mapa de Trajetória.
+class _SectionHeader extends StatelessWidget {
+  const _SectionHeader({required this.blockId, required this.name});
+
+  final String blockId;
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    final icon = _kSectionIcons[blockId] ?? Icons.category_rounded;
+    return Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(6),
+          decoration: BoxDecoration(
+            color: AppColors.gold.withValues(alpha: 0.16),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Icon(icon, color: AppColors.gold, size: 18),
+        ),
+        const SizedBox(width: 10),
+        Text(
+          name,
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                color: AppColors.bone,
+                fontWeight: FontWeight.w700,
+              ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Container(
+            height: 2,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(1),
+              gradient: LinearGradient(
+                colors: [AppColors.gold.withValues(alpha: 0.5), Colors.transparent],
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

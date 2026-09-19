@@ -160,6 +160,14 @@ BLOCKS = [
     # cada um pronto.
     {"id": "copa_do_mundo", "name": "Copa do Mundo", "display_order": 16},
     {"id": "futebol", "name": "Futebol", "display_order": 17},
+    # ORGANIZACAO_VISUAL_POR_SECAO_TODOS_MUNDOS_V1.md (19/09/2026,
+    # aprovado): levantamento mostrou que Inglês/Espanhol/Francês eram os
+    # únicos territórios de Idiomas sem block_id — apareciam numa grade
+    # misturada, ao contrário de Libras (bloco "libras" acima). Mesmo
+    # mecanismo de Bloco reaproveitado, migrations/080_blocos_idiomas.sql.
+    {"id": "ingles", "name": "Inglês", "display_order": 18},
+    {"id": "espanhol", "name": "Espanhol", "display_order": 19},
+    {"id": "frances", "name": "Francês", "display_order": 20},
 ]
 
 TERRITORIES = [
@@ -309,15 +317,15 @@ TERRITORIES = [
     # território "idiomas" com sub-navegação) — mesmo padrão de progresso
     # independente (XP/conquista por território) já usado em todo o resto
     # do app, sem precisar de um conceito novo de "sub-território".
-    {"id": "ingles_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 40, "world_id": "idiomas"},
-    {"id": "ingles_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 41, "world_id": "idiomas"},
-    {"id": "ingles_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 42, "world_id": "idiomas"},
-    {"id": "espanhol_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 43, "world_id": "idiomas"},
-    {"id": "espanhol_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 44, "world_id": "idiomas"},
-    {"id": "espanhol_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 45, "world_id": "idiomas"},
-    {"id": "frances_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 46, "world_id": "idiomas"},
-    {"id": "frances_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 47, "world_id": "idiomas"},
-    {"id": "frances_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 48, "world_id": "idiomas"},
+    {"id": "ingles_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 40, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 41, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 42, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "espanhol_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 43, "world_id": "idiomas", "block_id": "espanhol"},
+    {"id": "espanhol_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 44, "world_id": "idiomas", "block_id": "espanhol"},
+    {"id": "espanhol_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 45, "world_id": "idiomas", "block_id": "espanhol"},
+    {"id": "frances_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 46, "world_id": "idiomas", "block_id": "frances"},
+    {"id": "frances_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 47, "world_id": "idiomas", "block_id": "frances"},
+    {"id": "frances_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 48, "world_id": "idiomas", "block_id": "frances"},
     {"id": "bolsa", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 49, "world_id": "valores"},
     {"id": "criptomoedas", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 50, "world_id": "valores"},
     {"id": "cenario_global", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 51, "world_id": "valores"},

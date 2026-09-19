@@ -113,8 +113,36 @@ def test_blocks_without_any_territory_are_not_returned(client):
     assert block_ids == {
         "matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia",
         "financas_pessoais", "filosofia", "artes", "saude_bemestar", "curiosidade_relampago", "libras",
-        "jogos_de_palavras", "internet", "copa_do_mundo", "futebol",
+        "jogos_de_palavras", "internet", "copa_do_mundo", "futebol", "ingles", "espanhol", "frances",
     }
+
+
+def test_idiomas_ingles_espanhol_frances_blocks_group_their_3_territories_each(client):
+    """ORGANIZACAO_VISUAL_POR_SECAO_TODOS_MUNDOS_V1.md (19/09/2026,
+    aprovado) — levantamento mostrou que Inglês/Espanhol/Francês eram os
+    únicos territórios do Mundo dos Idiomas sem block_id, misturados
+    numa grade sem separação (diferente de Libras, já bloco próprio
+    desde sempre). migrations/080_blocos_idiomas.sql."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    body = client.get("/progress", headers=headers).json()
+    blocks = {b["block_id"]: b for b in body["blocks"]}
+
+    assert sorted(blocks["ingles"]["territory_ids"]) == ["ingles_avancado", "ingles_basico", "ingles_intermediario"]
+    assert sorted(blocks["espanhol"]["territory_ids"]) == ["espanhol_avancado", "espanhol_basico", "espanhol_intermediario"]
+    assert sorted(blocks["frances"]["territory_ids"]) == ["frances_avancado", "frances_basico", "frances_intermediario"]
+    assert blocks["ingles"]["name"] == "Inglês"
+    assert blocks["espanhol"]["name"] == "Espanhol"
+    assert blocks["frances"]["name"] == "Francês"
+
+    worlds = {w["world_id"]: w for w in body["worlds"]}
+    assert {
+        "ingles_basico", "ingles_intermediario", "ingles_avancado",
+        "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
+        "frances_basico", "frances_intermediario", "frances_avancado",
+    }.issubset(set(worlds["idiomas"]["territory_ids"]))
 
 
 def test_territories_without_block_are_not_grouped_into_any_block(client):
