@@ -656,3 +656,49 @@ def submit_answer(
         batch_exhausted=attempt.was_last_of_batch,
         coin_milestone_reached=coin_milestone_reached,
     )
+
+
+# MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md — etapa complementar
+# automática ao final de todo Desafio do Mundo dos Idiomas. Só
+# territórios em config.IDIOMA_TERRITORY_IDS (registro explícito, nunca
+# inferido) — Libras e o resto do app não têm essa etapa.
+@router.get("/challenges/{challenge_id}/word-constellation", response_model=schemas.WordConstellationRoundOut)
+def get_word_constellation(
+    challenge_id: str,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    challenge = db.get(models.Challenge, challenge_id)
+    if challenge is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})
+    if challenge.territory_id not in config.IDIOMA_TERRITORY_IDS:
+        raise HTTPException(
+            status_code=404,
+            detail={"error": {"code": "NOT_IDIOMA_TERRITORY", "message": "Constelação de Palavras só existe no Mundo dos Idiomas."}},
+        )
+    try:
+        round_data = services.generate_word_constellation_round(db, challenge)
+    except services.WordConstellationError as e:
+        raise HTTPException(status_code=422, detail={"error": {"code": e.code, "message": e.message}})
+    return schemas.WordConstellationRoundOut(**round_data)
+
+
+@router.post("/challenges/{challenge_id}/word-constellation/complete", response_model=schemas.WordConstellationCompleteResponse)
+def complete_word_constellation(
+    challenge_id: str,
+    body: schemas.WordConstellationCompleteRequest,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    challenge = db.get(models.Challenge, challenge_id)
+    if challenge is None:
+        raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})
+    if challenge.territory_id not in config.IDIOMA_TERRITORY_IDS:
+        raise HTTPException(
+            status_code=404,
+            detail={"error": {"code": "NOT_IDIOMA_TERRITORY", "message": "Constelação de Palavras só existe no Mundo dos Idiomas."}},
+        )
+    correct, xp_awarded = services.complete_word_constellation(
+        db, user_id, challenge, body.submitted_order, body.submitted_meaning
+    )
+    return schemas.WordConstellationCompleteResponse(correct=correct, xp_awarded=xp_awarded)

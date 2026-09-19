@@ -444,6 +444,23 @@ class LearningPauseServe(Base):
     served_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class WordConstellationCompletion(Base):
+    """
+    MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md (19/09/2026) — etapa
+    complementar automática ao final de todo Desafio do Mundo dos
+    Idiomas. Mesmo princípio anti-farm de LearningPauseRead: XP
+    (config.WORD_CONSTELLATION_XP_REWARD) só na PRIMEIRA conclusão
+    correta por (usuário, desafio) — repetir o mesmo desafio depois não
+    paga de novo, mas a rodada em si nunca é bloqueada.
+    """
+
+    __tablename__ = "word_constellation_completions"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id"), primary_key=True)
+    completed_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class Attempt(Base):
     __tablename__ = "attempts"
 

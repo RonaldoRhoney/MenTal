@@ -242,6 +242,30 @@ LEARNING_PAUSE_XP_REWARD = 5
 # instantânea de script.
 LEARNING_PAUSE_MIN_READ_SECONDS = 3
 
+# MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md (19/09/2026) — etapa
+# complementar automática ao final de todo Desafio do Mundo dos
+# Idiomas. Valor validado com Rhoney: igual a uma resposta correta de
+# dificuldade Média (XP_BASE_BY_DIFFICULTY[2]=20 — mas aqui é um valor
+# FIXO e próprio, não reaproveita a fórmula de dificuldade, mesmo
+# espírito de LEARNING_PAUSE_XP_REWARD acima), só na 1ª conclusão
+# correta por (usuário, desafio) — nunca atalho de XP fácil repetindo o
+# mesmo desafio. NÃO respeita nenhum teto diário agregado: o teto de
+# 150 XP/dia da Regra Oficial (REGRA_OFICIAL_GAMIFICACAO_MENTAL.md
+# item 6) ainda não existe como mecanismo no código — construir isso
+# fica fora do escopo desta mecânica específica.
+WORD_CONSTELLATION_XP_REWARD = 5
+
+# Territórios do Mundo dos Idiomas que usam TTS (idioma_voices.dart, no
+# client, é o espelho desta lista) — registro explícito, nunca inferido
+# do texto do prompt, mesmo espírito de SUBMUNDO_BLOCK_IDS/ALWAYS_TIMED_
+# TERRITORIES já usados no projeto. Libras fica de fora de propósito:
+# não tem TTS nem "palavra escrita" pra reconstruir por peças.
+IDIOMA_TERRITORY_IDS = {
+    "ingles_basico", "ingles_intermediario", "ingles_avancado",
+    "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
+    "frances_basico", "frances_intermediario", "frances_avancado",
+}
+
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
 # depende de mode=relampago) — Conhecimento (CONHECIMENTO_EXPANSAO_
 # GERAL.md) e agora Cores (V3.0.1_DESAFIO_CORES.md, 29/08/2026): um

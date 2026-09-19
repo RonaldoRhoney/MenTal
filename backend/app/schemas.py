@@ -171,6 +171,30 @@ class ChallengeSearchResponse(BaseModel):
     challenge: ChallengeOut | None = None
 
 
+class WordConstellationRoundOut(BaseModel):
+    """MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md §4 — `kind` decide qual
+    campo vem preenchido: "pieces" usa `tiles` (reconstrução por
+    peças, §4.1), "meaning" usa `options` (reconhecimento de
+    significado, §4.2). O outro fica None — nunca os dois juntos."""
+
+    challenge_id: str
+    territory_id: str
+    kind: str
+    prompt_text: str
+    tiles: list[str] | None = None
+    options: list[str] | None = None
+
+
+class WordConstellationCompleteRequest(BaseModel):
+    submitted_order: list[str] | None = None
+    submitted_meaning: str | None = None
+
+
+class WordConstellationCompleteResponse(BaseModel):
+    correct: bool
+    xp_awarded: int
+
+
 class ContentSuggestionRequest(BaseModel):
     query_text: str = Field(min_length=1, max_length=200)
 

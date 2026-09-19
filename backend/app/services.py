@@ -1,4 +1,5 @@
 import random
+import re
 import time
 from collections import defaultdict
 from dataclasses import dataclass
@@ -1834,3 +1835,151 @@ def list_unresolved_reports(db: Session) -> list[models.Report]:
     return db.execute(
         select(models.Report).where(models.Report.resolved.is_(False)).order_by(models.Report.created_at.desc())
     ).scalars().all()
+
+
+# MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md (19/09/2026) — etapa
+# complementar automática ao final de todo Desafio do Mundo dos
+# Idiomas, gerada a partir do próprio conteúdo do Desafio (§3 do
+# documento: "extraídos do próprio conteúdo do Desafio que o usuário
+# acabou de completar"), sem curadoria manual por item. 100% dos
+# prompts de Idiomas seguem 2 templates fixos (confirmado por
+# levantamento no conteúdo real, 19/09/2026) — casam com um dos dois
+# regex abaixo sempre, nunca precisou de fallback "não extraído".
+_WORD_CONSTELLATION_TRADUZA_RE = re.compile(r"^Traduza para o \w+: '(.+)'$")
+_WORD_CONSTELLATION_COMO_SE_ESCREVE_RE = re.compile(r"^Como se escreve '(.+)' em \w+\?$")
+
+
+def extract_portuguese_meaning(prompt: str) -> str | None:
+    """Extrai o texto em português entre aspas do prompt de um Desafio
+    de Idiomas — usado como "significado correto" na etapa de
+    reconhecimento de significado (§4.2 do documento)."""
+    m = _WORD_CONSTELLATION_TRADUZA_RE.match(prompt)
+    if m:
+        return m.group(1)
+    m = _WORD_CONSTELLATION_COMO_SE_ESCREVE_RE.match(prompt)
+    if m:
+        return m.group(1)
+    return None
+
+
+class WordConstellationError(Exception):
+    def __init__(self, code: str, message: str):
+        self.code = code
+        self.message = message
+
+
+def generate_word_constellation_round(db: Session, challenge: models.Challenge) -> dict:
+    """§4 do documento — regra de seleção validada com Rhoney (19/09/2026):
+    correct_answer com espaço vira reconstrução por peças (§4.1, existem
+    múltiplas palavras pra montar); sem espaço vira reconhecimento de
+    significado (§4.2, uma palavra só não rende reconstrução por peças).
+    Distratores vêm de outros Desafios do MESMO território (mesmo
+    idioma/registro), nunca inventados. Sem estado persistido: a
+    correção (validate_word_constellation_answer) sempre deriva de novo
+    do Challenge.correct_answer/prompt, nunca do que foi mostrado nesta
+    chamada — não há como "trapacear" guardando a rodada.
+    """
+    correct_answer = challenge.correct_answer.strip()
+    siblings = db.execute(
+        select(models.Challenge).where(
+            models.Challenge.territory_id == challenge.territory_id,
+            models.Challenge.id != challenge.id,
+        )
+    ).scalars().all()
+
+    if " " in correct_answer:
+        correct_words = correct_answer.split()
+        correct_set_lower = {w.lower() for w in correct_words}
+        pool = []
+        seen = set(correct_set_lower)
+        for sib in siblings:
+            for w in sib.correct_answer.split():
+                wl = w.lower()
+                if wl not in seen:
+                    pool.append(w)
+                    seen.add(wl)
+        random.shuffle(pool)
+        distractors = pool[:4]
+        tiles = correct_words + distractors
+        random.shuffle(tiles)
+        return {
+            "challenge_id": challenge.id,
+            "territory_id": challenge.territory_id,
+            "kind": "pieces",
+            "prompt_text": correct_answer,
+            "tiles": tiles,
+            "options": None,
+        }
+
+    correct_meaning = extract_portuguese_meaning(challenge.prompt)
+    if correct_meaning is None:
+        raise WordConstellationError(
+            "MEANING_NOT_EXTRACTABLE",
+            "Não foi possível extrair o significado em português deste desafio.",
+        )
+    pool = []
+    seen = {correct_meaning.lower()}
+    for sib in siblings:
+        if " " in sib.correct_answer.strip():
+            continue
+        meaning = extract_portuguese_meaning(sib.prompt)
+        if meaning is None or meaning.lower() in seen:
+            continue
+        pool.append(meaning)
+        seen.add(meaning.lower())
+    random.shuffle(pool)
+    options = [correct_meaning] + pool[:3]
+    random.shuffle(options)
+    return {
+        "challenge_id": challenge.id,
+        "territory_id": challenge.territory_id,
+        "kind": "meaning",
+        "prompt_text": correct_answer,
+        "tiles": None,
+        "options": options,
+    }
+
+
+def validate_word_constellation_answer(
+    challenge: models.Challenge, submitted_order: list[str] | None, submitted_meaning: str | None
+) -> bool:
+    correct_answer = challenge.correct_answer.strip()
+    if " " in correct_answer:
+        if not submitted_order:
+            return False
+        return " ".join(submitted_order).strip().lower() == correct_answer.lower()
+    correct_meaning = extract_portuguese_meaning(challenge.prompt)
+    if correct_meaning is None or not submitted_meaning:
+        return False
+    return submitted_meaning.strip().lower() == correct_meaning.strip().lower()
+
+
+def complete_word_constellation(
+    db: Session, user_id: str, challenge: models.Challenge, submitted_order: list[str] | None, submitted_meaning: str | None
+) -> tuple[bool, int]:
+    """Retorna (correct, xp_awarded). XP só na primeira conclusão CORRETA
+    por (usuário, desafio) — mesmo padrão anti-farm de
+    LearningPauseRead/Caça-palavras: repetir nunca paga de novo, mas
+    nunca bloqueia a rodada em si."""
+    correct = validate_word_constellation_answer(challenge, submitted_order, submitted_meaning)
+    if not correct:
+        return False, 0
+
+    already_completed = db.get(models.WordConstellationCompletion, (user_id, challenge.id))
+    if already_completed is not None:
+        return True, 0
+
+    db.add(models.WordConstellationCompletion(user_id=user_id, challenge_id=challenge.id))
+    xp_awarded = config.WORD_CONSTELLATION_XP_REWARD
+
+    # Mesmo par de escritas do fluxo normal de resposta
+    # (routers/challenges.py submit_answer): xp_total/level do perfil E
+    # progresso do território, nunca só um dos dois — senão o XP fica
+    # invisível no nível/perfil mesmo contando pro território.
+    profile = db.get(models.Profile, user_id)
+    if profile is not None:
+        profile.xp_total += xp_awarded
+        profile.level = scoring.level_from_xp(profile.xp_total)
+    apply_xp_to_territory(db, user_id, challenge.territory_id, xp_awarded)
+    db.commit()
+    return True, xp_awarded
