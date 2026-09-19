@@ -328,6 +328,7 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
                   filled: true,
                   onTap: () => _removeTile(indexed.key),
                   onSpeak: () => _speakTile(indexed.value),
+                  onRemove: () => _removeTile(indexed.key),
                 ),
             ],
           ),
@@ -419,6 +420,7 @@ class _ConstellationTile extends StatelessWidget {
     required this.onTap,
     this.expand = false,
     this.onSpeak,
+    this.onRemove,
   });
 
   final String label;
@@ -428,6 +430,10 @@ class _ConstellationTile extends StatelessWidget {
   // Só as PEÇAS (idioma estranho) recebem isto — as opções de
   // significado (português) nunca, mesma voz errada de sempre.
   final VoidCallback? onSpeak;
+  // Pedido de Rhoney (19/09/2026, teste real): peça já montada precisa
+  // de um "x" explícito pra remover — tocar na própria peça já
+  // removia, mas não era óbvio o bastante como affordance.
+  final VoidCallback? onRemove;
 
   @override
   Widget build(BuildContext context) {
@@ -439,7 +445,7 @@ class _ConstellationTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
         onTap: onTap,
         child: Container(
-          padding: EdgeInsets.only(left: 16, right: onSpeak != null ? 6 : 16, top: 8, bottom: 8),
+          padding: EdgeInsets.only(left: 16, right: (onSpeak != null || onRemove != null) ? 6 : 16, top: 8, bottom: 8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
             border: Border.all(color: color.withValues(alpha: 0.6)),
@@ -455,6 +461,10 @@ class _ConstellationTile extends StatelessWidget {
               if (onSpeak != null) ...[
                 const SizedBox(width: 4),
                 _MiniSpeakerButton(onTap: onSpeak!),
+              ],
+              if (onRemove != null) ...[
+                const SizedBox(width: 4),
+                _MiniRemoveButton(onTap: onRemove!),
               ],
             ],
           ),
@@ -482,6 +492,31 @@ class _MiniSpeakerButton extends StatelessWidget {
         child: const Padding(
           padding: EdgeInsets.all(6),
           child: Icon(Icons.volume_up_rounded, color: Colors.white, size: 14),
+        ),
+      ),
+    );
+  }
+}
+
+/// Botão "x" explícito pra remover uma peça já montada — pedido de
+/// Rhoney (19/09/2026, teste real): tocar na peça já removia, mas
+/// faltava um affordance claro de "isso aqui tira a peça".
+class _MiniRemoveButton extends StatelessWidget {
+  const _MiniRemoveButton({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: AppColors.error,
+      shape: const CircleBorder(),
+      child: InkWell(
+        customBorder: const CircleBorder(),
+        onTap: onTap,
+        child: const Padding(
+          padding: EdgeInsets.all(6),
+          child: Icon(Icons.close_rounded, color: Colors.white, size: 14),
         ),
       ),
     );

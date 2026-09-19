@@ -95,6 +95,22 @@ void main() {
     expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(6));
   });
 
+  testWidgets('rodada "pieces": peça na área de montagem tem um "x" explícito pra remover (pedido de Rhoney, 19/09/2026)', (tester) async {
+    await _pump(tester, _PiecesFakeApiClient());
+
+    expect(find.byIcon(Icons.close_rounded), findsNothing);
+
+    await tester.tap(find.text('The'));
+    await tester.pump();
+    expect(find.byIcon(Icons.close_rounded), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.close_rounded));
+    await tester.pump();
+    expect(find.byIcon(Icons.close_rounded), findsNothing);
+    // Voltou pra área de disponíveis.
+    expect(find.text('The'), findsOneWidget);
+  });
+
   testWidgets('rodada "meaning": opções (em português) NÃO têm botão de áudio próprio', (tester) async {
     await _pump(tester, _MeaningFakeApiClient());
 
