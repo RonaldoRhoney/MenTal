@@ -323,6 +323,18 @@ class AppLocalizationsPt extends AppLocalizations {
       'Não foi possível carregar o áudio. Tente de novo.';
 
   @override
+  String get vocabMediaWatchSignButton => 'Ver o sinal';
+
+  @override
+  String get ttsSpeedNormalLabel => 'Normal';
+
+  @override
+  String get ttsSpeedFastLabel => 'Rápido';
+
+  @override
+  String get ttsSpeedVeryFastLabel => 'Acelerado';
+
+  @override
   String audioSourceCreditLabel(String source) {
     return 'Fonte: $source';
   }

@@ -328,6 +328,23 @@ class Challenge(Base):
     audio_url: Mapped[str | None] = mapped_column(String, nullable=True)
     audio_source_name: Mapped[str | None] = mapped_column(String, nullable=True)
     audio_source_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    # MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §3 (unificado com a spec anterior
+    # MUNDO_IDIOMAS_BIBLIOTECA_VISUAL_V1.md, conforme pedido no próprio
+    # documento) — reforço visual (foto/GIF) pra idiomas falados, e o
+    # PRÓPRIO conteúdo do sinal (vídeo/GIF) pra Libras, onde não existe
+    # "pronúncia falada" alternativa. Schema agnóstico de idioma de
+    # propósito (§2 da spec de biblioteca visual): mesmos 4 campos servem
+    # pros dois casos, só o `vocab_media_type` muda. Tudo-ou-nada (mesma
+    # disciplina de audio_url acima): url só existe com type/source_name/
+    # source_url preenchidos — nunca mídia sem atribuição rastreável de
+    # licença. None em todo o resto do app; None também em Libras/idiomas
+    # enquanto a curadoria (fase 1/2 da biblioteca visual) não chegar
+    # naquele item — ausência de mídia nunca quebra a exibição do
+    # desafio (critério de aceite §7 da spec de biblioteca visual).
+    vocab_media_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    vocab_media_type: Mapped[str | None] = mapped_column(String, nullable=True)
+    vocab_media_source_name: Mapped[str | None] = mapped_column(String, nullable=True)
+    vocab_media_source_url: Mapped[str | None] = mapped_column(String, nullable=True)
     # V5 — Mundo dos Idiomas: desafio de tradução em texto livre
     # (options=None) tem mais de uma resposta correta possível (ex.:
     # "The house is big" e "The house is big." e "the house is big").

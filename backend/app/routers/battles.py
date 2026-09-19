@@ -72,6 +72,10 @@ def create_battle(
             audio_url=challenger_challenge.audio_url,
             audio_source_name=challenger_challenge.audio_source_name,
             audio_source_url=challenger_challenge.audio_source_url,
+            vocab_media_url=challenger_challenge.vocab_media_url,
+            vocab_media_type=challenger_challenge.vocab_media_type,
+            vocab_media_source_name=challenger_challenge.vocab_media_source_name,
+            vocab_media_source_url=challenger_challenge.vocab_media_source_url,
             reading_passage=challenger_challenge.reading_passage,
         ),
     )
@@ -117,6 +121,10 @@ def get_my_battle_challenge(
         audio_url=challenge.audio_url,
         audio_source_name=challenge.audio_source_name,
         audio_source_url=challenge.audio_source_url,
+        vocab_media_url=challenge.vocab_media_url,
+        vocab_media_type=challenge.vocab_media_type,
+        vocab_media_source_name=challenge.vocab_media_source_name,
+        vocab_media_source_url=challenge.vocab_media_source_url,
         reading_passage=challenge.reading_passage,
     )
 

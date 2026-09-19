@@ -46,6 +46,7 @@ dependencies:
   # baixo, é o sucessor mantido pela mesma equipe (pod_learning), com
   # suporte mais atual e melhor compatibilidade entre plataformas.
   youtube_player_iframe: ^5.2.1
+  flutter_edge_tts: ^0.0.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

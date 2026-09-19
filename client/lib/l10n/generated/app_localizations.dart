@@ -694,6 +694,30 @@ abstract class AppLocalizations {
   /// **'Não foi possível carregar o áudio. Tente de novo.'**
   String get audioLoadErrorMessage;
 
+  /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — button that opens the sign-language reference video (vocab_media_type == 'video')
+  ///
+  /// In pt, this message translates to:
+  /// **'Ver o sinal'**
+  String get vocabMediaWatchSignButton;
+
+  /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — TTS playback speed option: normal speed
+  ///
+  /// In pt, this message translates to:
+  /// **'Normal'**
+  String get ttsSpeedNormalLabel;
+
+  /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — TTS playback speed option: fast
+  ///
+  /// In pt, this message translates to:
+  /// **'Rápido'**
+  String get ttsSpeedFastLabel;
+
+  /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — TTS playback speed option: very fast
+  ///
+  /// In pt, this message translates to:
+  /// **'Acelerado'**
+  String get ttsSpeedVeryFastLabel;
+
   /// Attribution caption shown under the audio player, e.g. 'Fonte: Author — CC BY 4.0 — Wikimedia Commons'
   ///
   /// In pt, this message translates to:

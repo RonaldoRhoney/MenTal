@@ -116,6 +116,26 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
         if audio_url is not None and not (isinstance(audio_url, str) and audio_url.startswith("https://")):
             errors.append(f"{prefix}: audio_url, quando presente, precisa ser uma URL https válida")
 
+        # MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §3 / MUNDO_IDIOMAS_BIBLIOTECA_
+        # VISUAL_V1.md — mesma disciplina tudo-ou-nada de audio_url acima:
+        # vocab_media_url só existe com type/source_name/source_url
+        # preenchidos. Opcional em todo território (None é o normal
+        # enquanto a curadoria não chegou naquele item — nunca obrigatório
+        # aqui, diferente de audio_url em ouvido_afiado).
+        vocab_media_url = item.get("vocab_media_url")
+        vocab_media_type = item.get("vocab_media_type")
+        vocab_media_source_name = item.get("vocab_media_source_name")
+        vocab_media_source_url = item.get("vocab_media_source_url")
+        if vocab_media_url is not None:
+            if not (isinstance(vocab_media_url, str) and vocab_media_url.startswith("https://")):
+                errors.append(f"{prefix}: vocab_media_url, quando presente, precisa ser uma URL https válida")
+            if vocab_media_type not in ("image", "gif", "video"):
+                errors.append(f"{prefix}: vocab_media_type precisa ser 'image', 'gif' ou 'video' quando vocab_media_url está presente")
+            if not vocab_media_source_name or not vocab_media_source_url:
+                errors.append(f"{prefix}: vocab_media_url presente exige vocab_media_source_name e vocab_media_source_url (atribuição de licença)")
+        elif vocab_media_type or vocab_media_source_name or vocab_media_source_url:
+            errors.append(f"{prefix}: vocab_media_type/source_name/source_url presentes sem vocab_media_url — tudo-ou-nada")
+
         key = (territory_id, item["prompt"])
         if key in existing_prompts:
             errors.append(f"{prefix}: já existe um desafio com esse prompt nesse território (em app/seed.py ou já carregado no banco)")

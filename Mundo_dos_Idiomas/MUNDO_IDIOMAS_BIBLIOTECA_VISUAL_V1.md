@@ -1,6 +1,6 @@
 # MENTAL — Mundo dos Idiomas: Biblioteca Visual (Foto/GIF) para Todos os Idiomas
 
-**Status:** Aprovado para implementação (retomado após pausa combinada — app já publicado).
+**Status:** Estrutura de dado/interface IMPLEMENTADA (18/09/2026, junto com MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — ver esse documento pros detalhes técnicos: `Challenge.vocab_media_url/type/source_name/source_url`). Curadoria de conteúdo (Fase 1/piloto em diante, seção 5 abaixo) ainda NÃO iniciada — nenhuma foto/GIF/vídeo foi cadastrada, é trabalho de conteúdo separado.
 **Escopo:** Generaliza a especificação original de Libras (vídeo/GIF do sinal) para uma estrutura extensível que cobre todos os idiomas do Mundo dos Idiomas (Inglês, Espanhol, Francês, Libras, e idiomas futuros).
 **Documento relacionado:** MUNDO_IDIOMAS_AUDIO_PRONUNCIA_V1.md (já aprovado — TTS de pronúncia ao tocar na resposta, para idiomas falados). Este documento trata do **reforço visual** (imagem/GIF), complementar ao áudio, não uma substituição dele.
 

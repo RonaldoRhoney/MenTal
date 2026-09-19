@@ -421,6 +421,22 @@
   "@audioLoadErrorMessage": {
     "description": "Shown when the challenge audio clip fails to load or play"
   },
+  "vocabMediaWatchSignButton": "Ver o sinal",
+  "@vocabMediaWatchSignButton": {
+    "description": "MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — button that opens the sign-language reference video (vocab_media_type == 'video')"
+  },
+  "ttsSpeedNormalLabel": "Normal",
+  "@ttsSpeedNormalLabel": {
+    "description": "MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — TTS playback speed option: normal speed"
+  },
+  "ttsSpeedFastLabel": "Rápido",
+  "@ttsSpeedFastLabel": {
+    "description": "MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — TTS playback speed option: fast"
+  },
+  "ttsSpeedVeryFastLabel": "Acelerado",
+  "@ttsSpeedVeryFastLabel": {
+    "description": "MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — TTS playback speed option: very fast"
+  },
   "audioSourceCreditLabel": "Fonte: {source}",
   "@audioSourceCreditLabel": {
     "description": "Attribution caption shown under the audio player, e.g. 'Fonte: Author — CC BY 4.0 — Wikimedia Commons'",

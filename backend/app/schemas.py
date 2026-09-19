@@ -137,6 +137,14 @@ class ChallengeOut(BaseModel):
     audio_url: str | None = None
     audio_source_name: str | None = None
     audio_source_url: str | None = None
+    # MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §3 — reforço visual (idiomas
+    # falados) / conteúdo do sinal (Libras), tudo-ou-nada como audio_url
+    # acima. None na grande maioria dos desafios até a curadoria chegar
+    # naquele item (biblioteca visual em fases).
+    vocab_media_url: str | None = None
+    vocab_media_type: str | None = None
+    vocab_media_source_name: str | None = None
+    vocab_media_source_url: str | None = None
     # V6 — Mundo dos Valores (05/09/2026). Texto lido ANTES da pergunta,
     # mesmo espírito de clues/audio_url acima. None em todo o resto do
     # app.

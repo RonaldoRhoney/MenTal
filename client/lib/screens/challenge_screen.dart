@@ -6,13 +6,16 @@ import 'package:uuid/uuid.dart';
 
 import '../api/api_client.dart';
 import '../color_challenge.dart';
+import '../idioma_voices.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
+import '../services/tts_service.dart';
 import '../theme/app_theme.dart';
 import '../visual_options.dart';
 import 'learning_pause_screen.dart';
 import '../widgets/celebration_overlay.dart';
 import '../widgets/coins_rise_overlay.dart';
+import '../widgets/institutional_video_player.dart';
 import '../widgets/pulse_in.dart';
 import '../widgets/share_achievement_button.dart';
 
@@ -119,6 +122,14 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   bool _audioPlaying = false;
   bool _audioLoadFailed = false;
   bool _audioHasPlayedOnce = false;
+
+  // MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2 — velocidade escolhida pelo
+  // jogador (normal/rápido/acelerado), visível junto ao botão de áudio,
+  // nunca escondida em configurações. Vale pra qualquer palavra tocada
+  // nesta tela, não por opção individual (evitaria repetir o seletor 4x).
+  TtsSpeed _ttsSpeed = TtsSpeed.normal;
+  bool _ttsSpeaking = false;
+  bool _ttsFailed = false;
 
   // REGRA_REVISAO_ERROS_FIM_RODADA.md — erros da rodada atual (só
   // challenge_id, o suficiente pra reapresentar via GET /challenges/
@@ -461,6 +472,25 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       if (mounted) setState(() => _audioLoadFailed = true);
     } finally {
       if (mounted) setState(() => _audioPlaying = false);
+    }
+  }
+
+  /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2 — sempre sob demanda (nunca
+  /// automático), nunca trava a tela numa falha (mesmo espírito de
+  /// _playChallengeAudio acima). `voice` vem de idioma_voices.dart —
+  /// nunca hardcoded aqui.
+  Future<void> _speakOption(String text, String voice) async {
+    if (_ttsSpeaking) return;
+    setState(() {
+      _ttsSpeaking = true;
+      _ttsFailed = false;
+    });
+    final ok = await TtsService.instance.speak(text, voice: voice, speed: _ttsSpeed);
+    if (mounted) {
+      setState(() {
+        _ttsSpeaking = false;
+        _ttsFailed = !ok;
+      });
     }
   }
 
@@ -851,6 +881,57 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     );
   }
 
+  /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §3/§4 — reforço visual (foto/GIF
+  /// nos idiomas falados) ou o próprio conteúdo do sinal (vídeo/GIF em
+  /// Libras). 'image'/'gif' renderizam inline (o reforço complementa o
+  /// texto, não some dele); 'video' abre como overlay reaproveitando
+  /// showInstitutionalVideo (mesmo player já usado na Pausa para
+  /// Aprender de Libras — nunca um 2º player de vídeo no app). Falha de
+  /// carregamento de imagem nunca quebra o resto da tela (errorBuilder),
+  /// mesmo princípio de _playChallengeAudio/_audioLoadFailed acima.
+  Widget _buildVocabMediaSection({
+    required String mediaUrl,
+    required String mediaType,
+    String? sourceName,
+    String? sourceUrl,
+  }) {
+    final l10n = AppLocalizations.of(context)!;
+    return Column(
+      children: [
+        if (mediaType == 'video')
+          OutlinedButton.icon(
+            onPressed: () => showInstitutionalVideo(
+              context,
+              videoUrl: mediaUrl,
+              sourceName: sourceName ?? '',
+              sourceUrl: sourceUrl ?? '',
+            ),
+            icon: const Icon(Icons.play_circle_outline),
+            label: Text(l10n.vocabMediaWatchSignButton),
+          )
+        else
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.network(
+              mediaUrl,
+              height: 160,
+              fit: BoxFit.cover,
+              errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+            ),
+          ),
+        if (sourceName != null) ...[
+          const SizedBox(height: 8),
+          Text(
+            l10n.audioSourceCreditLabel(sourceName),
+            textAlign: TextAlign.center,
+            style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+          ),
+        ],
+        const SizedBox(height: 16),
+      ],
+    );
+  }
+
   Widget _buildChallenge() {
     final l10n = AppLocalizations.of(context)!;
     final challenge = _challenge!;
@@ -895,6 +976,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 if (challenge['audio_url'] != null)
                   _buildAudioPlayerSection(challenge['audio_url'] as String,
                       challenge['audio_source_name'] as String?),
+                if (challenge['vocab_media_url'] != null)
+                  _buildVocabMediaSection(
+                    mediaUrl: challenge['vocab_media_url'] as String,
+                    mediaType: challenge['vocab_media_type'] as String,
+                    sourceName: challenge['vocab_media_source_name'] as String?,
+                    sourceUrl: challenge['vocab_media_source_url'] as String?,
+                  ),
                 // V6 — Mundo dos Valores (05/09/2026): texto lido ANTES
                 // da pergunta, mesmo espírito de prompt_image/audio_url
                 // acima. Nunca cronometrado (config.NEVER_TIMED_
@@ -963,19 +1051,54 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'visual' && options != null)
                   _buildVisualOptions(options)
-                else if (options != null)
-                  RadioGroup<String>(
-                    groupValue: _selectedOption,
-                    onChanged: (value) =>
-                        setState(() => _selectedOption = value),
-                    child: Column(
-                      children: options
-                          .map((option) => RadioListTile<String>(
-                              title: Text(option), value: option))
-                          .toList(),
+                else if (options != null) ...[
+                  // MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2 — voz não-nula
+                  // só pra territórios de idioma falado (idioma_voices.
+                  // dart); Libras e todo o resto do app não mostra nada
+                  // aqui, comportamento idêntico ao de antes.
+                  if (voiceForTerritory(widget.territoryId) case final voice?) ...[
+                    _TtsSpeedSelector(
+                      speed: _ttsSpeed,
+                      onChanged: (speed) => setState(() => _ttsSpeed = speed),
                     ),
-                  )
-                else
+                    if (_ttsFailed) ...[
+                      const SizedBox(height: 6),
+                      Text(l10n.audioLoadErrorMessage, style: TextStyle(color: AppColors.error)),
+                    ],
+                    const SizedBox(height: 8),
+                    RadioGroup<String>(
+                      groupValue: _selectedOption,
+                      onChanged: (value) => setState(() => _selectedOption = value),
+                      child: Column(
+                        children: options
+                            .map((option) => RadioListTile<String>(
+                                  title: Text(option),
+                                  value: option,
+                                  secondary: IconButton(
+                                    tooltip: l10n.audioPlayButton,
+                                    onPressed: _ttsSpeaking ? null : () => _speakOption(option, voice),
+                                    icon: Icon(
+                                      _ttsSpeaking ? Icons.hourglass_top_rounded : Icons.volume_up_rounded,
+                                      color: AppColors.teal,
+                                    ),
+                                  ),
+                                ))
+                            .toList(),
+                      ),
+                    ),
+                  ] else
+                    RadioGroup<String>(
+                      groupValue: _selectedOption,
+                      onChanged: (value) =>
+                          setState(() => _selectedOption = value),
+                      child: Column(
+                        children: options
+                            .map((option) => RadioListTile<String>(
+                                title: Text(option), value: option))
+                            .toList(),
+                      ),
+                    ),
+                ] else
                   TextField(
                     decoration:
                         InputDecoration(labelText: l10n.yourAnswerLabel),
@@ -1563,6 +1686,43 @@ class _NewChallengeBadge extends StatelessWidget {
         label,
         style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 11),
       ),
+    );
+  }
+}
+
+/// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2 — "o controle de velocidade
+/// deve ser visível e acessível junto ao botão de reprodução, não
+/// escondido em configurações". 3 chips sempre visíveis, uma única
+/// escolha vale pra qualquer palavra tocada na tela (evita repetir o
+/// seletor por opção).
+class _TtsSpeedSelector extends StatelessWidget {
+  const _TtsSpeedSelector({required this.speed, required this.onChanged});
+
+  final TtsSpeed speed;
+  final ValueChanged<TtsSpeed> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    Widget chip(TtsSpeed value, String label) {
+      final selected = speed == value;
+      return ChoiceChip(
+        label: Text(label),
+        selected: selected,
+        onSelected: (_) => onChanged(value),
+        selectedColor: AppColors.teal.withValues(alpha: 0.25),
+        labelStyle: TextStyle(color: selected ? AppColors.teal : AppColors.muted, fontSize: 12),
+        side: BorderSide(color: selected ? AppColors.teal : AppColors.muted.withValues(alpha: 0.3)),
+      );
+    }
+
+    return Wrap(
+      spacing: 8,
+      children: [
+        chip(TtsSpeed.normal, l10n.ttsSpeedNormalLabel),
+        chip(TtsSpeed.fast, l10n.ttsSpeedFastLabel),
+        chip(TtsSpeed.veryFast, l10n.ttsSpeedVeryFastLabel),
+      ],
     );
   }
 }
