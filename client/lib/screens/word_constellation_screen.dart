@@ -17,11 +17,25 @@ import '../widgets/pulse_in.dart';
 /// (`kind`), decididas pelo SERVIDOR, nunca aqui: "pieces" (reconstrução
 /// por peças) ou "meaning" (reconhecimento de significado).
 class WordConstellationScreen extends StatefulWidget {
-  const WordConstellationScreen({super.key, required this.client, required this.challengeId, required this.territoryId});
+  const WordConstellationScreen({
+    super.key,
+    required this.client,
+    required this.challengeId,
+    required this.territoryId,
+    this.difficultyLevel,
+  });
 
   final ApiClient client;
   final String challengeId;
   final String territoryId;
+  // MUNDO_IDIOMAS_IMERSAO_PROGRESSIVA_V1.md §5: a partir do nível
+  // Difícil (avancado, difficulty_level 3) o texto de instrução em
+  // português some — o Desafio de origem já foi 100% no idioma-alvo,
+  // e esta etapa não pode "regredir" para português. null (não
+  // propagado) equivale a Fácil, mantém a instrução.
+  final int? difficultyLevel;
+
+  bool get _immersaoTotal => (difficultyLevel ?? 0) >= 3;
 
   @override
   State<WordConstellationScreen> createState() => _WordConstellationScreenState();
@@ -65,6 +79,7 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
             ..addAll((round['tiles'] as List).cast<String>());
         }
       });
+      _preloadTts(round);
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
     } finally {
@@ -73,6 +88,21 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
   }
 
   String? get _voice => voiceForTerritory(widget.territoryId);
+
+  // Pedido de Rhoney (19/09/2026): "o áudio ... está com uma certa
+  // demora, ajuste para que seja ao toque" — pré-sintetiza (sem tocar)
+  // assim que a rodada carrega, pra que o toque real no botão já
+  // encontre o áudio em cache (TtsService.preload).
+  void _preloadTts(Map<String, dynamic> round) {
+    final voice = _voice;
+    if (voice == null) return;
+    TtsService.instance.preload(round['prompt_text'] as String, voice: voice, speed: _ttsSpeed);
+    if (round['kind'] == 'pieces') {
+      for (final tile in (round['tiles'] as List).cast<String>()) {
+        TtsService.instance.preload(tile, voice: voice, speed: _ttsSpeed);
+      }
+    }
+  }
 
   Future<void> _speak() async {
     final round = _round;
@@ -181,8 +211,10 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(l10n.wordConstellationInstructionLabel, style: TextStyle(color: AppColors.muted, fontSize: 13)),
-        const SizedBox(height: 16),
+        if (!widget._immersaoTotal) ...[
+          Text(l10n.wordConstellationInstructionLabel, style: TextStyle(color: AppColors.muted, fontSize: 13)),
+          const SizedBox(height: 16),
+        ],
         Center(
           child: _DuolingoSpeakerButtonLarge(
             speaking: _ttsSpeaking,

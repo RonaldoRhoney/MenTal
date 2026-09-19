@@ -59,7 +59,7 @@ class _MeaningFakeApiClient extends ApiClient {
   }
 }
 
-Future<void> _pump(WidgetTester tester, ApiClient client) async {
+Future<void> _pump(WidgetTester tester, ApiClient client, {int? difficultyLevel}) async {
   await tester.pumpWidget(
     MaterialApp(
       localizationsDelegates: const [
@@ -69,7 +69,12 @@ Future<void> _pump(WidgetTester tester, ApiClient client) async {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: WordConstellationScreen(client: client, challengeId: 'fake-id', territoryId: 'ingles_basico'),
+      home: WordConstellationScreen(
+        client: client,
+        challengeId: 'fake-id',
+        territoryId: 'ingles_basico',
+        difficultyLevel: difficultyLevel,
+      ),
     ),
   );
   await tester.pumpAndSettle();
@@ -135,6 +140,16 @@ void main() {
     await tester.tap(find.text('Tentar de novo'));
     await tester.pump();
     expect(find.text('Verificar'), findsOneWidget);
+  });
+
+  testWidgets('difficultyLevel < 3 (basico/intermediario): instrução em português aparece (MUNDO_IDIOMAS_IMERSAO_PROGRESSIVA_V1.md)', (tester) async {
+    await _pump(tester, _PiecesFakeApiClient(), difficultyLevel: 2);
+    expect(find.text('Toque para ouvir e monte a resposta'), findsOneWidget);
+  });
+
+  testWidgets('difficultyLevel 3 (avancado/Difícil): instrução em português some — imersão total', (tester) async {
+    await _pump(tester, _PiecesFakeApiClient(), difficultyLevel: 3);
+    expect(find.text('Toque para ouvir e monte a resposta'), findsNothing);
   });
 
   testWidgets('rodada "meaning": escolher a opção certa mostra acerto', (tester) async {

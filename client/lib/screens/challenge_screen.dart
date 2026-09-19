@@ -247,6 +247,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             client: widget.client,
             challengeId: justCompletedChallenge['challenge_id'] as String,
             territoryId: widget.territoryId,
+            difficultyLevel: justCompletedChallenge['difficulty_level'] as int?,
           ),
         ),
       );
@@ -311,6 +312,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         if (timeLimitSeconds != null && (clues == null || clues.isEmpty)) {
           _startCountdown(timeLimitSeconds);
         }
+        _preloadTtsForChallenge(challenge);
       }
     } on ApiException catch (e) {
       if (mounted) {
@@ -519,6 +521,23 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         _ttsSpeaking = false;
         _ttsFailed = !ok;
       });
+    }
+  }
+
+  // Pedido de Rhoney (19/09/2026): "o áudio ... está com uma certa
+  // demora, ajuste para que seja ao toque" — pré-sintetiza enunciado e
+  // alternativas assim que o desafio carrega (nunca toca nada aqui), pra
+  // que o toque real no botão de áudio já encontre o som em cache.
+  void _preloadTtsForChallenge(Map<String, dynamic> challenge) {
+    final voice = voiceForTerritory(widget.territoryId);
+    if (voice == null) return;
+    final prompt = challenge['prompt'] as String?;
+    if (prompt != null) TtsService.instance.preload(prompt, voice: voice, speed: _ttsSpeed);
+    final options = (challenge['options'] as List?)?.cast<String>();
+    if (options != null) {
+      for (final option in options) {
+        TtsService.instance.preload(option, voice: voice, speed: _ttsSpeed);
+      }
     }
   }
 
@@ -1094,9 +1113,17 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       Text(l10n.audioLoadErrorMessage, style: TextStyle(color: AppColors.error)),
                     ],
                     const SizedBox(height: 8),
+                    // MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2.1 (ajuste de
+                    // UX, 19/09/2026): selecionar a alternativa já toca o
+                    // áudio na mesma ação (antes eram 2 toques
+                    // separados). O ícone continua existindo só pra
+                    // replay, sem alterar a seleção já feita.
                     RadioGroup<String>(
                       groupValue: _selectedOption,
-                      onChanged: (value) => setState(() => _selectedOption = value),
+                      onChanged: (value) {
+                        setState(() => _selectedOption = value);
+                        if (value != null && !_ttsSpeaking) _speakOption(value, voice);
+                      },
                       child: Column(
                         children: options
                             .map((option) => RadioListTile<String>(
