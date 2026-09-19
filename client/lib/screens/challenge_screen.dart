@@ -1306,14 +1306,37 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     const SizedBox(height: 12),
                   ],
                 ] else
-                  for (final option in options) ...[
-                    OutlinedButton(
-                      onPressed:
-                          _submitted ? null : () => _submitOption(option),
-                      child: Text(option),
-                    ),
-                    const SizedBox(height: 12),
-                  ],
+                  // MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — pedido de Rhoney
+                  // (19/09/2026, teste real): o Relâmpago também precisa
+                  // de áudio nas alternativas de idioma falado, mesmo
+                  // território que já tem áudio no modo normal. Sem
+                  // botão de seletor de velocidade aqui (tempo é curto)
+                  // — toca sempre na velocidade normal, sem atrasar o
+                  // tempo de resposta (nunca aguarda o áudio terminar
+                  // antes de confirmar a resposta).
+                  if (voiceForTerritory(widget.territoryId) case final voice?)
+                    for (final option in options) ...[
+                      OutlinedButton.icon(
+                        onPressed: _submitted
+                            ? null
+                            : () {
+                                unawaited(TtsService.instance.speak(option, voice: voice));
+                                _submitOption(option);
+                              },
+                        icon: const Icon(Icons.volume_up_rounded, size: 18),
+                        label: Text(option),
+                      ),
+                      const SizedBox(height: 12),
+                    ]
+                  else
+                    for (final option in options) ...[
+                      OutlinedButton(
+                        onPressed:
+                            _submitted ? null : () => _submitOption(option),
+                        child: Text(option),
+                      ),
+                      const SizedBox(height: 12),
+                    ],
               ],
             ),
           ),

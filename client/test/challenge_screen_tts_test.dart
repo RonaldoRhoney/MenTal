@@ -29,6 +29,36 @@ class _IdiomasFakeApiClient extends ApiClient {
   }
 }
 
+class _IdiomasRelampagoFakeApiClient extends ApiClient {
+  _IdiomasRelampagoFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+    return {
+      'challenge_id': 'fake-ingles-id',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': "Como se escreve 'casa' em inglês?",
+      'options': ['House', 'Horse', 'Hoase', 'Hose'],
+      'hints_available': 2,
+      'time_limit_seconds': 10,
+    };
+  }
+
+  @override
+  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
+    return {
+      'is_correct': submittedAnswer == 'House',
+      'correct_answer': 'House',
+      'explanation': 'x',
+      'xp_awarded': 3,
+      'xp_base': 3,
+      'hints_used': 0,
+      'streak': {'current_streak': 1, 'freeze_available': true},
+    };
+  }
+}
+
 class _OuvidoAfiadoFakeApiClient extends ApiClient {
   _OuvidoAfiadoFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
@@ -45,7 +75,7 @@ class _OuvidoAfiadoFakeApiClient extends ApiClient {
   }
 }
 
-Future<void> _pump(WidgetTester tester, ApiClient client, String territoryId) async {
+Future<void> _pump(WidgetTester tester, ApiClient client, String territoryId, {bool relampago = false}) async {
   await tester.pumpWidget(
     MaterialApp(
       localizationsDelegates: const [
@@ -55,7 +85,7 @@ Future<void> _pump(WidgetTester tester, ApiClient client, String territoryId) as
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: ChallengeScreen(client: client, territoryId: territoryId, territoryLabel: 'Inglês Básico'),
+      home: ChallengeScreen(client: client, territoryId: territoryId, territoryLabel: 'Inglês Básico', relampago: relampago),
     ),
   );
   await tester.pumpAndSettle();
@@ -76,6 +106,18 @@ void main() {
 
     expect(find.byIcon(Icons.volume_up_rounded), findsNothing);
     expect(find.text('Rápido'), findsNothing);
+  });
+
+  testWidgets('Relâmpago em território de idioma falado também mostra botão de áudio por opção (pedido de Rhoney, 19/09/2026)', (tester) async {
+    await _pump(tester, _IdiomasRelampagoFakeApiClient(), 'ingles_basico', relampago: true);
+
+    expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(4));
+
+    // Responder no Relâmpago continua funcionando normalmente mesmo com
+    // o áudio wireado na mesma ação (nunca espera o áudio terminar nem
+    // lança exceção).
+    await tester.tap(find.text('House'));
+    await tester.pumpAndSettle();
   });
 
   testWidgets('trocar a velocidade não afeta o resto da tela (Confirmar resposta continua funcionando)', (tester) async {
