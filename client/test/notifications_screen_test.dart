@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/notifications_screen.dart';
+import 'package:mental/territories.dart';
 
 /// CENTRAL_DE_NOTIFICACOES_HOME_V1.md — prova que a tela só exibe o
 /// que GET /notifications já devolve pronto (nenhum texto montado no
@@ -30,6 +31,18 @@ class _FakeApiClient extends ApiClient {
   @override
   Future<void> markAllNotificationsRead() async {
     markAllReadCalled = true;
+  }
+
+  @override
+  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+    return {
+      'challenge_id': 'fake-id',
+      'territory_id': territoryId,
+      'difficulty_level': 1,
+      'prompt': 'Pergunta qualquer',
+      'options': ['A', 'B'],
+      'hints_available': 0,
+    };
   }
 }
 
@@ -116,5 +129,26 @@ void main() {
 
     expect(client.markAllReadCalled, isTrue);
     expect(find.text('Marcar todas como lidas'), findsNothing);
+  });
+
+  testWidgets('NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md — tocar notificação de conteúdo leva direto ao território', (tester) async {
+    final client = _FakeApiClient(notifications: [
+      {
+        'id': 'n1',
+        'type': 'content_updated',
+        'title': 'Novidade no conteúdo! ✨',
+        'body': 'Mundo dos Idiomas foi atualizado — dá uma olhada!',
+        'data': {'navigate': 'territory', 'territory_id': 'ingles_basico'},
+        'read': false,
+        'created_at': DateTime.now().toUtc().toIso8601String(),
+      },
+    ]);
+    await _pump(tester, client);
+
+    await tester.tap(find.text('Novidade no conteúdo! ✨'));
+    await tester.pumpAndSettle();
+
+    final l10n = await AppLocalizations.delegate.load(const Locale('pt'));
+    expect(find.text(territoryLabel(l10n, 'ingles_basico')), findsOneWidget);
   });
 }

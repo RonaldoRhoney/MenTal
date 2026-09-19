@@ -95,6 +95,15 @@ FRIEND_REQUEST_RECEIVED_BODY_TEMPLATE = "{nickname} quer ser seu amigo no MENTAL
 FRIEND_REQUEST_ACCEPTED_TITLE = "Pedido de amizade aceito! 🤝"
 FRIEND_REQUEST_ACCEPTED_BODY_TEMPLATE = "{nickname} aceitou seu pedido de amizade!"
 
+# NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md (19/09/2026, aprovado) — dispara
+# no primeiro GET /progress após publicação de conteúdo novo/corrigido
+# (services.notify_content_updated_if_needed). Corpo sempre nomeia os
+# Mundos afetados, nunca um Desafio individual (evita enxurrada quando
+# uma correção em massa toca muitos itens de uma vez).
+CONTENT_UPDATED_TITLE = "Novidade no conteúdo! ✨"
+CONTENT_UPDATED_SINGLE_BODY_TEMPLATE = "{territory} foi atualizado — dá uma olhada!"
+CONTENT_UPDATED_MULTIPLE_BODY_TEMPLATE = "Novidades em: {worlds} — dá uma olhada!"
+
 # FEED_SOCIAL_V1.md §2 — texto de exibição de cada evento automático do
 # Feed, montado no servidor (feed.build_feed_event_text) a partir do
 # `payload` do FeedEvent. Nunca texto livre do usuário — só interpolação

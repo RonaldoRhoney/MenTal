@@ -12,6 +12,10 @@ router = APIRouter()
 @router.get("/progress", response_model=schemas.ProgressResponse)
 def get_progress(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
     profile = services.get_or_create_profile(db, user_id)
+    # NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md — precisa rodar ANTES de
+    # update_last_seen, enquanto profile.last_seen_at ainda é o valor
+    # antigo (é contra ele que a comparação é feita).
+    services.notify_content_updated_if_needed(db, profile)
     # V2 item 8 — Notificações: GET /progress é chamado toda vez que a
     # Home carrega, então é o sinal mais confiável de "o jogador de fato
     # abriu o app agora" — usado pelo job de reengajamento pra saber há

@@ -19,7 +19,7 @@ import sys
 
 sys.path.insert(0, ".")
 
-from app import models  # noqa: E402
+from app import models, services  # noqa: E402
 from app.content_validation import validate_content  # noqa: E402
 from app.db import SessionLocal  # noqa: E402
 from app.seed import TERRITORIES  # noqa: E402
@@ -54,6 +54,7 @@ def main() -> None:
 
         inserted = 0
         skipped = 0
+        touched_territory_ids: set[str] = set()
         for item in items:
             key = (item["territory_id"], item["prompt"])
             if key in existing_prompts:
@@ -84,7 +85,13 @@ def main() -> None:
                 db.add(models.ChallengeHint(challenge_id=challenge.id, hint_level=level, content=content))
             db.commit()
             existing_prompts.add(key)
+            touched_territory_ids.add(item["territory_id"])
             inserted += 1
+
+        # NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md — único gatilho real de
+        # "conteúdo novo publicado" pra Idiomas/etc. carregado por este
+        # script; territórios sem inserção nenhuma não são tocados.
+        services.touch_territory_content_updated(db, sorted(touched_territory_ids))
 
         print(f"✅ {inserted} desafio(s) novo(s) inserido(s), {skipped} já existiam (pulado(s)).")
         if inserted:

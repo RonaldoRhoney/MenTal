@@ -1185,6 +1185,78 @@ def create_notification(
     return False
 
 
+def touch_territory_content_updated(db: Session, territory_ids: list[str]) -> None:
+    """
+    NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md (19/09/2026, aprovado) — único
+    ponto que grava Territory.content_updated_at. Chamado pelos scripts
+    de carga/correção de conteúdo (append_production_content.py,
+    apply_content_audit_fixes.py, etc.) ao fim de cada rodada, só pros
+    territórios de fato tocados. Decisão de Rhoney: não retroagir —
+    conteúdo já corrigido antes desta feature fica com o campo null,
+    nunca dispara notificação pra quem já tinha visto esse conteúdo.
+    """
+    if not territory_ids:
+        return
+    db.execute(
+        update(models.Territory)
+        .where(models.Territory.id.in_(territory_ids))
+        .values(content_updated_at=utcnow())
+    )
+    db.commit()
+
+
+def notify_content_updated_if_needed(db: Session, profile: "models.Profile") -> None:
+    """
+    NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md — chamada em GET /progress
+    ANTES de update_last_seen sobrescrever profile.last_seen_at (o
+    valor lido aqui ainda é o antigo, é o que importa pra achar "o que
+    mudou desde a última vez"). Nunca dispara pra quem nunca logou
+    antes (last_seen_at None) — evita inundar todo usuário existente
+    com "atualizações" acumuladas desde sempre no primeiro login após
+    esta feature ir ao ar.
+
+    Sem estado de dedup extra: como last_seen_at avança a cada chamada
+    de GET /progress, a janela [last_seen_at antigo, agora] nunca se
+    repete — a próxima chamada já não encontra nada de novo. Corpo
+    sempre nomeia Mundos (nunca um Desafio individual), decisão de
+    Rhoney pra nunca virar uma enxurrada de notificações quando uma
+    correção em massa toca muitos itens de uma vez só.
+    """
+    if profile.last_seen_at is None:
+        return
+    updated = db.execute(
+        select(models.Territory.id, models.Territory.world_id)
+        .where(models.Territory.content_updated_at.isnot(None))
+        .where(models.Territory.content_updated_at > profile.last_seen_at)
+    ).all()
+    if not updated:
+        return
+
+    if len(updated) == 1:
+        territory_id, world_id = updated[0]
+        world = db.get(models.World, world_id) if world_id else None
+        body = notification_copy.CONTENT_UPDATED_SINGLE_BODY_TEMPLATE.format(
+            territory=world.name if world else territory_id
+        )
+        data = {"navigate": "territory", "territory_id": territory_id}
+    else:
+        world_ids = {world_id for _, world_id in updated if world_id}
+        worlds = db.execute(select(models.World).where(models.World.id.in_(world_ids))).scalars().all()
+        world_names = sorted({w.name for w in worlds}) or [territory_id for territory_id, _ in updated]
+        body = notification_copy.CONTENT_UPDATED_MULTIPLE_BODY_TEMPLATE.format(worlds=", ".join(world_names))
+        data = {"navigate": "progress"}
+
+    # Só Central por enquanto — não existe preferência de push dedicada
+    # pra conteúdo (notif_reengagement_enabled/notif_social_enabled não
+    # se aplicam aqui), e o doc não pede push explicitamente (§3: "mesmo
+    # comportamento já definido pra Central"). O sino já é suficiente.
+    create_notification(
+        db, profile, "content_updated", notification_copy.CONTENT_UPDATED_TITLE, body,
+        data=data,
+        send_push=False,
+    )
+
+
 def list_notifications(db: Session, user_id: str, limit: int, before: datetime | None = None) -> list["models.Notification"]:
     """
     CENTRAL_DE_NOTIFICACOES_HOME_V1.md §3 — histórico limitado à janela

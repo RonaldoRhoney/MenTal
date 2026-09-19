@@ -25,7 +25,7 @@ import sys
 
 sys.path.insert(0, ".")
 
-from app import models  # noqa: E402
+from app import models, services  # noqa: E402
 from app.db import SessionLocal  # noqa: E402
 
 
@@ -37,6 +37,7 @@ def main() -> None:
     explanation_updated = 0
     hint_updated = 0
     not_found = 0
+    touched_territory_ids: set[str] = set()
 
     with SessionLocal() as db:
         for path in sys.argv[1:]:
@@ -61,6 +62,7 @@ def main() -> None:
                 if new_explanation and challenge.explanation != new_explanation:
                     challenge.explanation = new_explanation
                     explanation_updated += 1
+                    touched_territory_ids.add(item["territory_id"])
 
                 new_hints = item.get("hints") or []
                 if new_hints:
@@ -75,9 +77,16 @@ def main() -> None:
                     if first_hint is not None and first_hint.content != new_hints[0]:
                         first_hint.content = new_hints[0]
                         hint_updated += 1
+                        touched_territory_ids.add(item["territory_id"])
 
             db.commit()
             print(f"✅ {path}: processado")
+
+        # NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md — só territórios com
+        # correção de fato aplicada nesta rodada, nunca retroativo (uma
+        # rodada anterior já rodada antes desta feature existir não
+        # deve gerar notificação pra ninguém).
+        services.touch_territory_content_updated(db, sorted(touched_territory_ids))
 
     print(f"\nexplanation atualizada: {explanation_updated}")
     print(f"hints[0] atualizado: {hint_updated}")

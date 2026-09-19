@@ -276,6 +276,16 @@ class Territory(Base):
     # em nenhum Bloco ainda continuam acessíveis normalmente, fora de
     # qualquer agrupamento de menu extra.
     block_id: Mapped[str | None] = mapped_column(String, ForeignKey("blocks.id"), nullable=True)
+    # NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md (19/09/2026, aprovado) —
+    # null pra todo território existente hoje, por decisão explícita de
+    # Rhoney (não retroagir a auditoria de conteúdo já feita nesta
+    # sessão pra notificação de usuário real). services.
+    # touch_territory_content_updated() é o único ponto que grava aqui,
+    # chamado pelos scripts de carga/correção de conteúdo a partir de
+    # agora. GET /progress compara contra o last_seen_at antigo do
+    # usuário pra decidir se notifica — nunca dispara pra quem nunca
+    # logou antes (last_seen_at null).
+    content_updated_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 
 class UserTerritoryProgress(Base):

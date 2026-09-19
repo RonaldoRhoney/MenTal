@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../territories.dart';
 import '../theme/app_theme.dart';
 import 'battles_screen.dart';
+import 'challenge_screen.dart';
 import 'friends_screen.dart';
 import 'movement_screen.dart';
 import 'progress_screen.dart';
@@ -128,6 +130,24 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         await Navigator.of(context).push(MaterialPageRoute(builder: (_) => FriendsScreen(client: widget.client)));
       case 'progress':
         await Navigator.of(context).push(MaterialPageRoute(builder: (_) => ProgressScreen(client: widget.client)));
+      case 'territory':
+        // NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md — quando só 1 território
+        // mudou desde o último login, leva direto pra ele (não pro
+        // Mundos genérico), mesmo padrão de abertura de _TerritoryCard
+        // em home_screen.dart.
+        final territoryId = data?['territory_id'] as String?;
+        if (territoryId != null) {
+          final l10n = AppLocalizations.of(context)!;
+          await Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => ChallengeScreen(
+                client: widget.client,
+                territoryId: territoryId,
+                territoryLabel: territoryLabel(l10n, territoryId),
+              ),
+            ),
+          );
+        }
       case 'public_profile':
         final userId = data?['user_id'] as String?;
         if (userId != null) {
