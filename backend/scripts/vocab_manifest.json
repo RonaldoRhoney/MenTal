@@ -1,0 +1,2000 @@
+{
+  "ingles_basico": [
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'casa' em inglês?",
+      "correct_answer": "House",
+      "pt_meaning": "casa"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'porta' em inglês?",
+      "correct_answer": "Door",
+      "pt_meaning": "porta"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'janela' em inglês?",
+      "correct_answer": "Window",
+      "pt_meaning": "janela"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'mesa' em inglês?",
+      "correct_answer": "Table",
+      "pt_meaning": "mesa"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'grande' em inglês?",
+      "correct_answer": "Big",
+      "pt_meaning": "grande"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'maçã' em inglês?",
+      "correct_answer": "Apple",
+      "pt_meaning": "maçã"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'água' em inglês?",
+      "correct_answer": "Water",
+      "pt_meaning": "água"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'pão' em inglês?",
+      "correct_answer": "Bread",
+      "pt_meaning": "pão"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'gostar/gostoso' em inglês?",
+      "correct_answer": "Like",
+      "pt_meaning": "gostar/gostoso"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'eu' em inglês?",
+      "correct_answer": "I",
+      "pt_meaning": "eu"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'mãe' em inglês?",
+      "correct_answer": "Mother",
+      "pt_meaning": "mãe"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'pai' em inglês?",
+      "correct_answer": "Father",
+      "pt_meaning": "pai"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'irmão' em inglês?",
+      "correct_answer": "Brother",
+      "pt_meaning": "irmão"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'ter' em inglês?",
+      "correct_answer": "Have",
+      "pt_meaning": "ter"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'dois' em inglês?",
+      "correct_answer": "Two",
+      "pt_meaning": "dois"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'vermelho' em inglês?",
+      "correct_answer": "Red",
+      "pt_meaning": "vermelho"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'azul' em inglês?",
+      "correct_answer": "Blue",
+      "pt_meaning": "azul"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'camisa' em inglês?",
+      "correct_answer": "Shirt",
+      "pt_meaning": "camisa"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'meu' em inglês?",
+      "correct_answer": "My",
+      "pt_meaning": "meu"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'é/está' (ele/ela) em inglês?",
+      "correct_answer": "Is",
+      "pt_meaning": "é/está"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'cachorro' em inglês?",
+      "correct_answer": "Dog",
+      "pt_meaning": "cachorro"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'gato' em inglês?",
+      "correct_answer": "Cat",
+      "pt_meaning": "gato"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'pequeno' em inglês?",
+      "correct_answer": "Small",
+      "pt_meaning": "pequeno"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'e' (conectivo) em inglês?",
+      "correct_answer": "And",
+      "pt_meaning": "e"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'são/estão' (eles) em inglês?",
+      "correct_answer": "Are",
+      "pt_meaning": "são/estão"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'três' em inglês?",
+      "correct_answer": "Three",
+      "pt_meaning": "três"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'hoje' em inglês?",
+      "correct_answer": "Today",
+      "pt_meaning": "hoje"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'horas' em inglês?",
+      "correct_answer": "Hours",
+      "pt_meaning": "horas"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'escola' em inglês?",
+      "correct_answer": "School",
+      "pt_meaning": "escola"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'livro' em inglês?",
+      "correct_answer": "Book",
+      "pt_meaning": "livro"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'professor(a)' em inglês?",
+      "correct_answer": "Teacher",
+      "pt_meaning": "professor(a)"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'ler' em inglês?",
+      "correct_answer": "Read",
+      "pt_meaning": "ler"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'carro' em inglês?",
+      "correct_answer": "Car",
+      "pt_meaning": "carro"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'rua' em inglês?",
+      "correct_answer": "Street",
+      "pt_meaning": "rua"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'rápido' em inglês?",
+      "correct_answer": "Fast",
+      "pt_meaning": "rápido"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'dirigir' em inglês?",
+      "correct_answer": "Drive",
+      "pt_meaning": "dirigir"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'muito' (intensificador) em inglês?",
+      "correct_answer": "Very",
+      "pt_meaning": "muito"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'feliz' em inglês?",
+      "correct_answer": "Happy",
+      "pt_meaning": "feliz"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'triste' em inglês?",
+      "correct_answer": "Sad",
+      "pt_meaning": "triste"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'porque' em inglês?",
+      "correct_answer": "Because",
+      "pt_meaning": "porque"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'hoje' novamente para fixar (dia) em inglês?",
+      "correct_answer": "Today",
+      "pt_meaning": "hoje"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'estou' (eu) em inglês?",
+      "correct_answer": "Am",
+      "pt_meaning": "estou"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'por favor' em inglês?",
+      "correct_answer": "Please",
+      "pt_meaning": "por favor"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'amigo(a)' em inglês?",
+      "correct_answer": "Friend",
+      "pt_meaning": "amigo(a)"
+    },
+    {
+      "territory_id": "ingles_basico",
+      "prompt": "Como se escreve 'você' em inglês?",
+      "correct_answer": "You",
+      "pt_meaning": "você"
+    }
+  ],
+  "ingles_intermediario": [
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'reunião' em inglês?",
+      "correct_answer": "Meeting",
+      "pt_meaning": "reunião"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'ocupado(a)' em inglês?",
+      "correct_answer": "Busy",
+      "pt_meaning": "ocupado(a)"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'terminar' em inglês?",
+      "correct_answer": "Finish",
+      "pt_meaning": "terminar"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'antes de' em inglês?",
+      "correct_answer": "Before",
+      "pt_meaning": "antes de"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'preciso' (necessidade) em inglês?",
+      "correct_answer": "Need",
+      "pt_meaning": "preciso"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'aeroporto' em inglês?",
+      "correct_answer": "Airport",
+      "pt_meaning": "aeroporto"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'mala' em inglês?",
+      "correct_answer": "Suitcase",
+      "pt_meaning": "mala"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'atrasado(a)' em inglês?",
+      "correct_answer": "Late",
+      "pt_meaning": "atrasado(a)"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'já' em inglês?",
+      "correct_answer": "Already",
+      "pt_meaning": "já"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'esquecer' em inglês?",
+      "correct_answer": "Forget",
+      "pt_meaning": "esquecer"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'doente' em inglês?",
+      "correct_answer": "Sick",
+      "pt_meaning": "doente"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'médico(a)' em inglês?",
+      "correct_answer": "Doctor",
+      "pt_meaning": "médico(a)"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'dor' em inglês?",
+      "correct_answer": "Pain",
+      "pt_meaning": "dor"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'deveria' em inglês?",
+      "correct_answer": "Should",
+      "pt_meaning": "deveria"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'descansar' em inglês?",
+      "correct_answer": "Rest",
+      "pt_meaning": "descansar"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'caro(a)' em inglês?",
+      "correct_answer": "Expensive",
+      "pt_meaning": "caro(a)"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'barato(a)' em inglês?",
+      "correct_answer": "Cheap",
+      "pt_meaning": "barato(a)"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'trocar/devolver' em inglês?",
+      "correct_answer": "Return",
+      "pt_meaning": "trocar/devolver"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'do que' (comparação) em inglês?",
+      "correct_answer": "Than",
+      "pt_meaning": "do que"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'esperava' em inglês?",
+      "correct_answer": "Expected",
+      "pt_meaning": "esperava"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'provavelmente' em inglês?",
+      "correct_answer": "Probably",
+      "pt_meaning": "provavelmente"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'chuva' em inglês?",
+      "correct_answer": "Rain",
+      "pt_meaning": "chuva"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'cancelar' em inglês?",
+      "correct_answer": "Cancel",
+      "pt_meaning": "cancelar"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'para' (com objetivo) em inglês?",
+      "correct_answer": "To",
+      "pt_meaning": "para"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'quebrado(a)' em inglês?",
+      "correct_answer": "Broken",
+      "pt_meaning": "quebrado(a)"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'consertar' em inglês?",
+      "correct_answer": "Fix",
+      "pt_meaning": "consertar"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'senha' em inglês?",
+      "correct_answer": "Password",
+      "pt_meaning": "senha"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'de novo' em inglês?",
+      "correct_answer": "Again",
+      "pt_meaning": "de novo"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'difícil' em inglês?",
+      "correct_answer": "Difficult",
+      "pt_meaning": "difícil"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'explicar' em inglês?",
+      "correct_answer": "Explain",
+      "pt_meaning": "explicar"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'de novo/outra vez' (pedir) em inglês?",
+      "correct_answer": "Again",
+      "pt_meaning": "de novo/outra vez"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'poderia' (pedido educado) em inglês?",
+      "correct_answer": "Could",
+      "pt_meaning": "poderia"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'surpreso(a)' em inglês?",
+      "correct_answer": "Surprised",
+      "pt_meaning": "surpreso(a)"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'na verdade' em inglês?",
+      "correct_answer": "Actually",
+      "pt_meaning": "na verdade"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'esperava (que algo fosse diferente)' em inglês?",
+      "correct_answer": "Expected",
+      "pt_meaning": "esperava (que algo fosse diferente)"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'melhor' em inglês?",
+      "correct_answer": "Better",
+      "pt_meaning": "melhor"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'planejar' em inglês?",
+      "correct_answer": "Plan",
+      "pt_meaning": "planejar"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'antes que' em inglês?",
+      "correct_answer": "Before",
+      "pt_meaning": "antes que"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'embora/apesar de' em inglês?",
+      "correct_answer": "Although",
+      "pt_meaning": "embora/apesar de"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'conseguir/gerenciar' em inglês?",
+      "correct_answer": "Manage",
+      "pt_meaning": "conseguir/gerenciar"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'ainda' em inglês?",
+      "correct_answer": "Still",
+      "pt_meaning": "ainda"
+    },
+    {
+      "territory_id": "ingles_intermediario",
+      "prompt": "Como se escreve 'orgulhoso(a)' em inglês?",
+      "correct_answer": "Proud",
+      "pt_meaning": "orgulhoso(a)"
+    }
+  ],
+  "ingles_avancado": [
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'negociar' em inglês?",
+      "correct_answer": "Negotiate",
+      "pt_meaning": "negociar"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'acordo' em inglês?",
+      "correct_answer": "Agreement",
+      "pt_meaning": "acordo"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'a menos que' em inglês?",
+      "correct_answer": "Unless",
+      "pt_meaning": "a menos que"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'assinado(a)' em inglês?",
+      "correct_answer": "Signed",
+      "pt_meaning": "assinado(a)"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'até' (prazo) em inglês?",
+      "correct_answer": "By",
+      "pt_meaning": "até"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'diferente' em inglês?",
+      "correct_answer": "Different",
+      "pt_meaning": "diferente"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'aviso' em inglês?",
+      "correct_answer": "Warning",
+      "pt_meaning": "aviso"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'fontes' (informação) em inglês?",
+      "correct_answer": "Sources",
+      "pt_meaning": "fontes"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'adiado(a)' em inglês?",
+      "correct_answer": "Postponed",
+      "pt_meaning": "adiado(a)"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'decidiu' em inglês?",
+      "correct_answer": "Decided",
+      "pt_meaning": "decidiu"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'apesar de' em inglês?",
+      "correct_answer": "Despite",
+      "pt_meaning": "apesar de"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'evidência' em inglês?",
+      "correct_answer": "Evidence",
+      "pt_meaning": "evidência"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'descoberto(a)' em inglês?",
+      "correct_answer": "Discovered",
+      "pt_meaning": "descoberto(a)"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'estudo' (pesquisa) em inglês?",
+      "correct_answer": "Study",
+      "pt_meaning": "estudo"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'demonstrou' em inglês?",
+      "correct_answer": "Demonstrated",
+      "pt_meaning": "demonstrou"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'confirmar' em inglês?",
+      "correct_answer": "Confirm",
+      "pt_meaning": "confirmar"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'mal-entendido' em inglês?",
+      "correct_answer": "Misunderstanding",
+      "pt_meaning": "mal-entendido"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'esclarecer' em inglês?",
+      "correct_answer": "Clarify",
+      "pt_meaning": "esclarecer"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'sem querer' em inglês?",
+      "correct_answer": "Unintentionally",
+      "pt_meaning": "sem querer"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'ofendido(a)' em inglês?",
+      "correct_answer": "Offended",
+      "pt_meaning": "ofendido(a)"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'pretendia' em inglês?",
+      "correct_answer": "Intended",
+      "pt_meaning": "pretendia"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'sustentável' em inglês?",
+      "correct_answer": "Sustainable",
+      "pt_meaning": "sustentável"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'a menos que' novamente para fixar (condicional) em inglês?",
+      "correct_answer": "Unless",
+      "pt_meaning": "a menos que"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'reduzir' em inglês?",
+      "correct_answer": "Reduce",
+      "pt_meaning": "reduzir"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'consequências' em inglês?",
+      "correct_answer": "Consequences",
+      "pt_meaning": "consequências"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'irreversível' em inglês?",
+      "correct_answer": "Irreversible",
+      "pt_meaning": "irreversível"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'de qualquer forma' em inglês?",
+      "correct_answer": "Anyway",
+      "pt_meaning": "de qualquer forma"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'crescimento' em inglês?",
+      "correct_answer": "Growth",
+      "pt_meaning": "crescimento"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'no entanto' em inglês?",
+      "correct_answer": "However",
+      "pt_meaning": "no entanto"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'inegavelmente' em inglês?",
+      "correct_answer": "Undeniably",
+      "pt_meaning": "inegavelmente"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'permanece' em inglês?",
+      "correct_answer": "Remains",
+      "pt_meaning": "permanece"
+    },
+    {
+      "territory_id": "ingles_avancado",
+      "prompt": "Como se escreve 'incerto(a)' em inglês?",
+      "correct_answer": "Uncertain",
+      "pt_meaning": "incerto(a)"
+    }
+  ],
+  "espanhol_basico": [
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'casa' em espanhol?",
+      "correct_answer": "Casa",
+      "pt_meaning": "casa"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'porta' em espanhol?",
+      "correct_answer": "Puerta",
+      "pt_meaning": "porta"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'mesa' em espanhol?",
+      "correct_answer": "Mesa",
+      "pt_meaning": "mesa"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'grande' em espanhol?",
+      "correct_answer": "Grande",
+      "pt_meaning": "grande"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'maçã' em espanhol?",
+      "correct_answer": "Manzana",
+      "pt_meaning": "maçã"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'água' em espanhol?",
+      "correct_answer": "Agua",
+      "pt_meaning": "água"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'pão' em espanhol?",
+      "correct_answer": "Pan",
+      "pt_meaning": "pão"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'gostar' em espanhol?",
+      "correct_answer": "Gustar",
+      "pt_meaning": "gostar"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'eu' em espanhol?",
+      "correct_answer": "Yo",
+      "pt_meaning": "eu"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'mãe' em espanhol?",
+      "correct_answer": "Madre",
+      "pt_meaning": "mãe"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'pai' em espanhol?",
+      "correct_answer": "Padre",
+      "pt_meaning": "pai"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'irmão' em espanhol?",
+      "correct_answer": "Hermano",
+      "pt_meaning": "irmão"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'dois' em espanhol?",
+      "correct_answer": "Dos",
+      "pt_meaning": "dois"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'vermelho' em espanhol?",
+      "correct_answer": "Rojo",
+      "pt_meaning": "vermelho"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'azul' em espanhol?",
+      "correct_answer": "Azul",
+      "pt_meaning": "azul"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'camisa' em espanhol?",
+      "correct_answer": "Camisa",
+      "pt_meaning": "camisa"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'meu(minha)' em espanhol?",
+      "correct_answer": "Mi",
+      "pt_meaning": "meu(minha)"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'é/está' (ele/ela) em espanhol?",
+      "correct_answer": "Es",
+      "pt_meaning": "é/está"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'gato' em espanhol?",
+      "correct_answer": "Gato",
+      "pt_meaning": "gato"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'pequeno' em espanhol?",
+      "correct_answer": "Pequeño",
+      "pt_meaning": "pequeno"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'e' (conectivo) em espanhol?",
+      "correct_answer": "Y",
+      "pt_meaning": "e"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'são/estão' (eles) em espanhol?",
+      "correct_answer": "Son",
+      "pt_meaning": "são/estão"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'hoje' em espanhol?",
+      "correct_answer": "Hoy",
+      "pt_meaning": "hoje"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'trabalhar' em espanhol?",
+      "correct_answer": "Trabajar",
+      "pt_meaning": "trabalhar"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'horas' em espanhol?",
+      "correct_answer": "Horas",
+      "pt_meaning": "horas"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'livro' em espanhol?",
+      "correct_answer": "Libro",
+      "pt_meaning": "livro"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'professor(a)' em espanhol?",
+      "correct_answer": "Profesor",
+      "pt_meaning": "professor(a)"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'ler' em espanhol?",
+      "correct_answer": "Leer",
+      "pt_meaning": "ler"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'carro' em espanhol?",
+      "correct_answer": "Carro",
+      "pt_meaning": "carro"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'rua' em espanhol?",
+      "correct_answer": "Calle",
+      "pt_meaning": "rua"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'rápido' em espanhol?",
+      "correct_answer": "Rápido",
+      "pt_meaning": "rápido"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'dirigir' em espanhol?",
+      "correct_answer": "Conducir",
+      "pt_meaning": "dirigir"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'muito' (intensificador) em espanhol?",
+      "correct_answer": "Muy",
+      "pt_meaning": "muito"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'feliz' em espanhol?",
+      "correct_answer": "Feliz",
+      "pt_meaning": "feliz"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'triste' em espanhol?",
+      "correct_answer": "Triste",
+      "pt_meaning": "triste"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'porque' em espanhol?",
+      "correct_answer": "Porque",
+      "pt_meaning": "porque"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'hoje' novamente para fixar em espanhol?",
+      "correct_answer": "Hoy",
+      "pt_meaning": "hoje"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'estou' (eu) em espanhol?",
+      "correct_answer": "Estoy",
+      "pt_meaning": "estou"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'obrigado(a)' em espanhol?",
+      "correct_answer": "Gracias",
+      "pt_meaning": "obrigado(a)"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'amigo(a)' em espanhol?",
+      "correct_answer": "Amigo",
+      "pt_meaning": "amigo(a)"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'bom(a)' em espanhol?",
+      "correct_answer": "Bueno",
+      "pt_meaning": "bom(a)"
+    },
+    {
+      "territory_id": "espanhol_basico",
+      "prompt": "Como se escreve 'você' em espanhol?",
+      "correct_answer": "Tú",
+      "pt_meaning": "você"
+    }
+  ],
+  "espanhol_intermediario": [
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'reunião' em espanhol?",
+      "correct_answer": "Reunión",
+      "pt_meaning": "reunião"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'ocupado(a)' em espanhol?",
+      "correct_answer": "Ocupado",
+      "pt_meaning": "ocupado(a)"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'terminar' em espanhol?",
+      "correct_answer": "Terminar",
+      "pt_meaning": "terminar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'mala' em espanhol?",
+      "correct_answer": "Maleta",
+      "pt_meaning": "mala"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'atrasado(a)' em espanhol?",
+      "correct_answer": "Retrasado",
+      "pt_meaning": "atrasado(a)"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'já' em espanhol?",
+      "correct_answer": "Ya",
+      "pt_meaning": "já"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'esquecer' em espanhol?",
+      "correct_answer": "Olvidar",
+      "pt_meaning": "esquecer"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'doente' em espanhol?",
+      "correct_answer": "Enfermo",
+      "pt_meaning": "doente"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'médico(a)' em espanhol?",
+      "correct_answer": "Médico",
+      "pt_meaning": "médico(a)"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'dor' em espanhol?",
+      "correct_answer": "Dolor",
+      "pt_meaning": "dor"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'deveria' em espanhol?",
+      "correct_answer": "Debería",
+      "pt_meaning": "deveria"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'descansar' em espanhol?",
+      "correct_answer": "Descansar",
+      "pt_meaning": "descansar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'caro(a)' em espanhol?",
+      "correct_answer": "Caro",
+      "pt_meaning": "caro(a)"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'barato(a)' em espanhol?",
+      "correct_answer": "Barato",
+      "pt_meaning": "barato(a)"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'devolver' em espanhol?",
+      "correct_answer": "Devolver",
+      "pt_meaning": "devolver"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'que' (comparação) em espanhol?",
+      "correct_answer": "Que",
+      "pt_meaning": "que"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'esperava' em espanhol?",
+      "correct_answer": "Esperaba",
+      "pt_meaning": "esperava"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'chuva' em espanhol?",
+      "correct_answer": "Lluvia",
+      "pt_meaning": "chuva"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'cancelar' em espanhol?",
+      "correct_answer": "Cancelar",
+      "pt_meaning": "cancelar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'parar' (chuva) em espanhol?",
+      "correct_answer": "Parar",
+      "pt_meaning": "parar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'quebrado(a)' em espanhol?",
+      "correct_answer": "Roto",
+      "pt_meaning": "quebrado(a)"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'consertar' em espanhol?",
+      "correct_answer": "Arreglar",
+      "pt_meaning": "consertar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'senha' em espanhol?",
+      "correct_answer": "Contraseña",
+      "pt_meaning": "senha"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'tentar' em espanhol?",
+      "correct_answer": "Intentar",
+      "pt_meaning": "tentar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'difícil' em espanhol?",
+      "correct_answer": "Difícil",
+      "pt_meaning": "difícil"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'entender' em espanhol?",
+      "correct_answer": "Entender",
+      "pt_meaning": "entender"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'explicar' em espanhol?",
+      "correct_answer": "Explicar",
+      "pt_meaning": "explicar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'poderia' (pedido educado) em espanhol?",
+      "correct_answer": "Podría",
+      "pt_meaning": "poderia"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'surpreso(a)' em espanhol?",
+      "correct_answer": "Sorprendido",
+      "pt_meaning": "surpreso(a)"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'esperava (algo diferente)' em espanhol?",
+      "correct_answer": "Esperaba",
+      "pt_meaning": "esperava (algo diferente)"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'melhor' em espanhol?",
+      "correct_answer": "Mejor",
+      "pt_meaning": "melhor"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'planejar' em espanhol?",
+      "correct_answer": "Planear",
+      "pt_meaning": "planejar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'economizar' em espanhol?",
+      "correct_answer": "Ahorrar",
+      "pt_meaning": "economizar"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'embora/apesar de' em espanhol?",
+      "correct_answer": "Aunque",
+      "pt_meaning": "embora/apesar de"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'conseguir' em espanhol?",
+      "correct_answer": "Lograr",
+      "pt_meaning": "conseguir"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'ainda' em espanhol?",
+      "correct_answer": "Todavía",
+      "pt_meaning": "ainda"
+    },
+    {
+      "territory_id": "espanhol_intermediario",
+      "prompt": "Como se escreve 'orgulhoso(a)' em espanhol?",
+      "correct_answer": "Orgulloso",
+      "pt_meaning": "orgulhoso(a)"
+    }
+  ],
+  "espanhol_avancado": [
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'negociar' em espanhol?",
+      "correct_answer": "Negociar",
+      "pt_meaning": "negociar"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'acordo' em espanhol?",
+      "correct_answer": "Acuerdo",
+      "pt_meaning": "acordo"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'assinado(a)' em espanhol?",
+      "correct_answer": "Firmado",
+      "pt_meaning": "assinado(a)"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'diferente' em espanhol?",
+      "correct_answer": "Diferente",
+      "pt_meaning": "diferente"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'aviso' em espanhol?",
+      "correct_answer": "Aviso",
+      "pt_meaning": "aviso"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'fontes' (informação) em espanhol?",
+      "correct_answer": "Fuentes",
+      "pt_meaning": "fontes"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'adiado(a)' em espanhol?",
+      "correct_answer": "Aplazado",
+      "pt_meaning": "adiado(a)"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'desistir' em espanhol?",
+      "correct_answer": "Rendirse",
+      "pt_meaning": "desistir"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'adiar' em espanhol?",
+      "correct_answer": "Postergar",
+      "pt_meaning": "adiar"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'decidiu' em espanhol?",
+      "correct_answer": "Decidió",
+      "pt_meaning": "decidiu"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'sugerem' em espanhol?",
+      "correct_answer": "Sugieren",
+      "pt_meaning": "sugerem"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'descoberto(a)' em espanhol?",
+      "correct_answer": "Descubierto",
+      "pt_meaning": "descoberto(a)"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'estudo' (pesquisa) em espanhol?",
+      "correct_answer": "Estudio",
+      "pt_meaning": "estudo"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'demonstrou' em espanhol?",
+      "correct_answer": "Demostró",
+      "pt_meaning": "demonstrou"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'confirmar' em espanhol?",
+      "correct_answer": "Confirmar",
+      "pt_meaning": "confirmar"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'mal-entendido' em espanhol?",
+      "correct_answer": "Malentendido",
+      "pt_meaning": "mal-entendido"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'esclarecer' em espanhol?",
+      "correct_answer": "Aclarar",
+      "pt_meaning": "esclarecer"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'ofendido(a)' em espanhol?",
+      "correct_answer": "Ofendido",
+      "pt_meaning": "ofendido(a)"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'pretendia' em espanhol?",
+      "correct_answer": "Pretendía",
+      "pt_meaning": "pretendia"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'sustentável' em espanhol?",
+      "correct_answer": "Sostenible",
+      "pt_meaning": "sustentável"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'reduzir' em espanhol?",
+      "correct_answer": "Reducir",
+      "pt_meaning": "reduzir"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'consequências' em espanhol?",
+      "correct_answer": "Consecuencias",
+      "pt_meaning": "consequências"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'irreversível' em espanhol?",
+      "correct_answer": "Irreversible",
+      "pt_meaning": "irreversível"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'crescimento' em espanhol?",
+      "correct_answer": "Crecimiento",
+      "pt_meaning": "crescimento"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'inegavelmente' em espanhol?",
+      "correct_answer": "Innegablemente",
+      "pt_meaning": "inegavelmente"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'permanece' em espanhol?",
+      "correct_answer": "Permanece",
+      "pt_meaning": "permanece"
+    },
+    {
+      "territory_id": "espanhol_avancado",
+      "prompt": "Como se escreve 'incerto(a)' em espanhol?",
+      "correct_answer": "Incierto",
+      "pt_meaning": "incerto(a)"
+    }
+  ],
+  "frances_basico": [
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'casa' em francês?",
+      "correct_answer": "Maison",
+      "pt_meaning": "casa"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'porta' em francês?",
+      "correct_answer": "Porte",
+      "pt_meaning": "porta"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'janela' em francês?",
+      "correct_answer": "Fenêtre",
+      "pt_meaning": "janela"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'mesa' em francês?",
+      "correct_answer": "Table",
+      "pt_meaning": "mesa"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'grande' em francês?",
+      "correct_answer": "Grand",
+      "pt_meaning": "grande"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'maçã' em francês?",
+      "correct_answer": "Pomme",
+      "pt_meaning": "maçã"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'água' em francês?",
+      "correct_answer": "Eau",
+      "pt_meaning": "água"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'pão' em francês?",
+      "correct_answer": "Pain",
+      "pt_meaning": "pão"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'gostar' em francês?",
+      "correct_answer": "Aimer",
+      "pt_meaning": "gostar"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'eu' em francês?",
+      "correct_answer": "Je",
+      "pt_meaning": "eu"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'pai' em francês?",
+      "correct_answer": "Père",
+      "pt_meaning": "pai"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'ter' em francês?",
+      "correct_answer": "Avoir",
+      "pt_meaning": "ter"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'dois' em francês?",
+      "correct_answer": "Deux",
+      "pt_meaning": "dois"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'azul' em francês?",
+      "correct_answer": "Bleu",
+      "pt_meaning": "azul"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'camisa' em francês?",
+      "correct_answer": "Chemise",
+      "pt_meaning": "camisa"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'meu(minha)' em francês?",
+      "correct_answer": "Mon/Ma",
+      "pt_meaning": "meu(minha)"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'é/está' em francês?",
+      "correct_answer": "Est",
+      "pt_meaning": "é/está"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'cachorro' em francês?",
+      "correct_answer": "Chien",
+      "pt_meaning": "cachorro"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'gato' em francês?",
+      "correct_answer": "Chat",
+      "pt_meaning": "gato"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'pequeno' em francês?",
+      "correct_answer": "Petit",
+      "pt_meaning": "pequeno"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'e' (conectivo) em francês?",
+      "correct_answer": "Et",
+      "pt_meaning": "e"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'são/estão' (eles) em francês?",
+      "correct_answer": "Sont",
+      "pt_meaning": "são/estão"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'três' em francês?",
+      "correct_answer": "Trois",
+      "pt_meaning": "três"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'hoje' em francês?",
+      "correct_answer": "Aujourd'hui",
+      "pt_meaning": "hoje"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'trabalhar' em francês?",
+      "correct_answer": "Travailler",
+      "pt_meaning": "trabalhar"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'horas' em francês?",
+      "correct_answer": "Heures",
+      "pt_meaning": "horas"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'escola' em francês?",
+      "correct_answer": "École",
+      "pt_meaning": "escola"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'livro' em francês?",
+      "correct_answer": "Livre",
+      "pt_meaning": "livro"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'professor(a)' em francês?",
+      "correct_answer": "Professeur",
+      "pt_meaning": "professor(a)"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'ler' em francês?",
+      "correct_answer": "Lire",
+      "pt_meaning": "ler"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'carro' em francês?",
+      "correct_answer": "Voiture",
+      "pt_meaning": "carro"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'rua' em francês?",
+      "correct_answer": "Rue",
+      "pt_meaning": "rua"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'rápido' em francês?",
+      "correct_answer": "Vite",
+      "pt_meaning": "rápido"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'dirigir' em francês?",
+      "correct_answer": "Conduire",
+      "pt_meaning": "dirigir"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'muito' (intensificador) em francês?",
+      "correct_answer": "Très",
+      "pt_meaning": "muito"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'feliz' em francês?",
+      "correct_answer": "Heureux",
+      "pt_meaning": "feliz"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'triste' em francês?",
+      "correct_answer": "Triste",
+      "pt_meaning": "triste"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'hoje' novamente para fixar em francês?",
+      "correct_answer": "Aujourd'hui",
+      "pt_meaning": "hoje"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'obrigado(a)' em francês?",
+      "correct_answer": "Merci",
+      "pt_meaning": "obrigado(a)"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'amigo(a)' em francês?",
+      "correct_answer": "Ami(e)",
+      "pt_meaning": "amigo(a)"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'bom(a)' em francês?",
+      "correct_answer": "Bon(ne)",
+      "pt_meaning": "bom(a)"
+    },
+    {
+      "territory_id": "frances_basico",
+      "prompt": "Como se escreve 'você' em francês?",
+      "correct_answer": "Tu/Vous",
+      "pt_meaning": "você"
+    }
+  ],
+  "frances_intermediario": [
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'reunião' em francês?",
+      "correct_answer": "Réunion",
+      "pt_meaning": "reunião"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'ocupado(a)' em francês?",
+      "correct_answer": "Occupé(e)",
+      "pt_meaning": "ocupado(a)"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'terminar' em francês?",
+      "correct_answer": "Finir",
+      "pt_meaning": "terminar"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'aeroporto' em francês?",
+      "correct_answer": "Aéroport",
+      "pt_meaning": "aeroporto"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'mala' em francês?",
+      "correct_answer": "Valise",
+      "pt_meaning": "mala"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'já' em francês?",
+      "correct_answer": "Déjà",
+      "pt_meaning": "já"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'esquecer' em francês?",
+      "correct_answer": "Oublier",
+      "pt_meaning": "esquecer"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'doente' em francês?",
+      "correct_answer": "Malade",
+      "pt_meaning": "doente"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'médico(a)' em francês?",
+      "correct_answer": "Médecin",
+      "pt_meaning": "médico(a)"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'dor' em francês?",
+      "correct_answer": "Douleur",
+      "pt_meaning": "dor"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'deveria' em francês?",
+      "correct_answer": "Devrait",
+      "pt_meaning": "deveria"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'caro(a)' em francês?",
+      "correct_answer": "Cher/Chère",
+      "pt_meaning": "caro(a)"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'devolver' em francês?",
+      "correct_answer": "Rendre",
+      "pt_meaning": "devolver"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'que' (comparação) em francês?",
+      "correct_answer": "Que",
+      "pt_meaning": "que"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'esperava' em francês?",
+      "correct_answer": "J'espérais",
+      "pt_meaning": "esperava"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'provavelmente' em francês?",
+      "correct_answer": "Probablement",
+      "pt_meaning": "provavelmente"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'chuva' em francês?",
+      "correct_answer": "Pluie",
+      "pt_meaning": "chuva"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'cancelar' em francês?",
+      "correct_answer": "Annuler",
+      "pt_meaning": "cancelar"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'parar' (chuva) em francês?",
+      "correct_answer": "S'arrêter",
+      "pt_meaning": "parar"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'quebrado(a)' em francês?",
+      "correct_answer": "Cassé(e)",
+      "pt_meaning": "quebrado(a)"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'consertar' em francês?",
+      "correct_answer": "Réparer",
+      "pt_meaning": "consertar"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'tentar' em francês?",
+      "correct_answer": "Essayer",
+      "pt_meaning": "tentar"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'difícil' em francês?",
+      "correct_answer": "Difficile",
+      "pt_meaning": "difícil"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'entender' em francês?",
+      "correct_answer": "Comprendre",
+      "pt_meaning": "entender"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'explicar' em francês?",
+      "correct_answer": "Expliquer",
+      "pt_meaning": "explicar"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'poderia' (pedido educado) em francês?",
+      "correct_answer": "Pourriez-vous",
+      "pt_meaning": "poderia"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'surpreso(a)' em francês?",
+      "correct_answer": "Surpris(e)",
+      "pt_meaning": "surpreso(a)"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'esperava (algo diferente)' em francês?",
+      "correct_answer": "J'espérais",
+      "pt_meaning": "esperava (algo diferente)"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'melhor' em francês?",
+      "correct_answer": "Meilleur",
+      "pt_meaning": "melhor"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'planejar' em francês?",
+      "correct_answer": "Planifier",
+      "pt_meaning": "planejar"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'economizar' em francês?",
+      "correct_answer": "Économiser",
+      "pt_meaning": "economizar"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'conseguir' em francês?",
+      "correct_answer": "Réussir",
+      "pt_meaning": "conseguir"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'ainda' em francês?",
+      "correct_answer": "Encore",
+      "pt_meaning": "ainda"
+    },
+    {
+      "territory_id": "frances_intermediario",
+      "prompt": "Como se escreve 'orgulhoso(a)' em francês?",
+      "correct_answer": "Fier/Fière",
+      "pt_meaning": "orgulhoso(a)"
+    }
+  ],
+  "frances_avancado": [
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'negociar' em francês?",
+      "correct_answer": "Négocier",
+      "pt_meaning": "negociar"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'acordo' em francês?",
+      "correct_answer": "Accord",
+      "pt_meaning": "acordo"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'assinado(a)' em francês?",
+      "correct_answer": "Signé(e)",
+      "pt_meaning": "assinado(a)"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'antes de' (prazo) em francês?",
+      "correct_answer": "Avant",
+      "pt_meaning": "antes de"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'diferente' em francês?",
+      "correct_answer": "Différent(e)",
+      "pt_meaning": "diferente"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'aviso' em francês?",
+      "correct_answer": "Avertissement",
+      "pt_meaning": "aviso"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'de acordo com' em francês?",
+      "correct_answer": "Selon",
+      "pt_meaning": "de acordo com"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'fontes' (informação) em francês?",
+      "correct_answer": "Sources",
+      "pt_meaning": "fontes"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'adiado(a)' em francês?",
+      "correct_answer": "Reporté(e)",
+      "pt_meaning": "adiado(a)"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'desistir' em francês?",
+      "correct_answer": "Abandonner",
+      "pt_meaning": "desistir"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'adiar' em francês?",
+      "correct_answer": "Reporter",
+      "pt_meaning": "adiar"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'apesar de' em francês?",
+      "correct_answer": "Malgré",
+      "pt_meaning": "apesar de"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'evidência' em francês?",
+      "correct_answer": "Preuve",
+      "pt_meaning": "evidência"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'sugerem' em francês?",
+      "correct_answer": "Suggèrent",
+      "pt_meaning": "sugerem"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'descoberto(a)' em francês?",
+      "correct_answer": "Découvert(e)",
+      "pt_meaning": "descoberto(a)"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'estudo' (pesquisa) em francês?",
+      "correct_answer": "Étude",
+      "pt_meaning": "estudo"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'confirmar' em francês?",
+      "correct_answer": "Confirmer",
+      "pt_meaning": "confirmar"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'mal-entendido' em francês?",
+      "correct_answer": "Malentendu",
+      "pt_meaning": "mal-entendido"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'esclarecer' em francês?",
+      "correct_answer": "Clarifier",
+      "pt_meaning": "esclarecer"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'ofendido(a)' em francês?",
+      "correct_answer": "Offensé(e)",
+      "pt_meaning": "ofendido(a)"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'sustentável' em francês?",
+      "correct_answer": "Durable",
+      "pt_meaning": "sustentável"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'reduzir' em francês?",
+      "correct_answer": "Réduire",
+      "pt_meaning": "reduzir"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'consequências' em francês?",
+      "correct_answer": "Conséquences",
+      "pt_meaning": "consequências"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'irreversível' em francês?",
+      "correct_answer": "Irréversible",
+      "pt_meaning": "irreversível"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'crescimento' em francês?",
+      "correct_answer": "Croissance",
+      "pt_meaning": "crescimento"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'no entanto' em francês?",
+      "correct_answer": "Cependant",
+      "pt_meaning": "no entanto"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'inegavelmente' em francês?",
+      "correct_answer": "Indéniablement",
+      "pt_meaning": "inegavelmente"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'permanece' em francês?",
+      "correct_answer": "Reste",
+      "pt_meaning": "permanece"
+    },
+    {
+      "territory_id": "frances_avancado",
+      "prompt": "Como se escreve 'incerto(a)' em francês?",
+      "correct_answer": "Incertain(e)",
+      "pt_meaning": "incerto(a)"
+    }
+  ]
+}
