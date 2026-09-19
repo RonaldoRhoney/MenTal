@@ -338,11 +338,26 @@ class MovementService {
         notificationTitle: 'MENTAL — Movimento ativo',
         // Pedido de Rhoney (14/09/2026): passos também visíveis, não só
         // os dois contadores derivados.
-        notificationText: '🚶 $stepsCollected passos · 🪙 $mentalCoinsToday MentalCoins · ⚡ $xpAwarded XP hoje',
+        notificationText: '🚶 ${formatSteps(stepsCollected)} passos · 🪙 $mentalCoinsToday MentalCoins · ⚡ $xpAwarded XP hoje',
       );
     } catch (_) {
       // Mesmo princípio de startForegroundTracking/stopForegroundTracking
       // acima — a prévia é só reforço visual, nunca pode derrubar o app.
     }
+  }
+
+  /// Pedido de Rhoney (18/09/2026): a partir de 1000 passos, mostra
+  /// forma compacta ("1k", "1.5k") em vez do número cheio — só a notificação
+  /// persistente (prévia visual), nunca o valor real enviado ao backend.
+  /// Um dígito decimal, omitido quando é redondo (1000 → "1k", não "1.0k").
+  /// Público (sem `_`) só pra ficar testável direto, sem infraestrutura
+  /// de mock pro foreground service inteiro.
+  static String formatSteps(int steps) {
+    if (steps < 1000) return '$steps';
+    final thousands = steps / 1000;
+    final rounded = (thousands * 10).round() / 10;
+    final isWhole = rounded == rounded.roundToDouble();
+    final formatted = isWhole ? rounded.toInt().toString() : rounded.toStringAsFixed(1);
+    return '${formatted}k';
   }
 }
