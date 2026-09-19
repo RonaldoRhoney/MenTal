@@ -83,7 +83,18 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
       });
       _preloadTts(round);
     } on ApiException catch (e) {
-      if (mounted) setState(() => _error = e.message);
+      if (!mounted) return;
+      // Achado real em dispositivo (19/09/2026): nem todo prompt de
+      // Idiomas bate 100% com os 2 templates fixos assumidos na
+      // extração de significado (extract_portuguese_meaning) — quando
+      // isso acontece, a etapa é só PULADA (fecha sozinha), nunca vira
+      // um beco sem saída pro jogador. Constelação é reforço, nunca
+      // pode travar o fluxo principal do Desafio.
+      if (e.code == 'MEANING_NOT_EXTRACTABLE') {
+        Navigator.of(context).pop();
+        return;
+      }
+      setState(() => _error = e.message);
     } finally {
       if (mounted) setState(() => _loading = false);
     }

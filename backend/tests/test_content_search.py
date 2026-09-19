@@ -61,6 +61,25 @@ def test_search_found_challenge_can_be_answered_like_any_other(client):
     assert result["is_correct"] is True
 
 
+def test_search_finds_a_challenge_by_the_correct_answer_ignoring_case_and_spaces(client):
+    """Pedido de Rhoney (19/09/2026): buscar "drive" precisa achar o
+    Desafio de Idiomas cuja resposta correta é "Drive" (conteúdo sempre
+    capitaliza a 1ª letra da palavra-alvo) — mesmo o usuário digitando
+    tudo minúsculo, com espaço extra antes/depois."""
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    sample = next(c for c in CHALLENGES if c["territory_id"] == "ingles_basico")
+
+    resp = client.get("/challenges/search", params={"q": f"  {sample['correct_answer'].lower()}  "}, headers=headers)
+    body = resp.json()
+
+    assert resp.status_code == 200
+    assert body["found"] is True
+    assert body["challenge"]["prompt"] == sample["prompt"]
+
+
 def test_search_with_no_match_returns_found_false_not_an_error(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)

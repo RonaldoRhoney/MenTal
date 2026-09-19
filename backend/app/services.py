@@ -5,7 +5,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 
-from sqlalchemy import delete, func, select, update
+from sqlalchemy import delete, func, or_, select, update
 from sqlalchemy.orm import Session
 
 from . import config, mentalcoins, models, notification_copy, push, scoring, supabase_admin
@@ -855,8 +855,14 @@ def find_challenge_by_search(db: Session, language_code: str, query_text: str) -
     mapa id→label localizado, então bater "tema" contra a label é mais
     barato e correto ali do que duplicar tradução aqui. Esta função só
     cobre "frase"/"palavra": trecho literal (case-insensitive) dentro
-    do prompt de algum desafio já curado. Retorna sempre o primeiro
-    match — não há ranking de relevância nesta v1.
+    do prompt OU da resposta correta de algum desafio já curado — pedido
+    de Rhoney (19/09/2026): buscar "drive" precisa achar o Desafio cuja
+    resposta é "Drive" (Mundo dos Idiomas sempre capitaliza a 1ª letra
+    da palavra-alvo), mesmo o usuário digitando com espaço extra ou tudo
+    minúsculo. `ilike` + `.strip()` já cobrem isso, sem mudança de
+    convenção de conteúdo (continua sempre capitalizado ao curar).
+    Retorna sempre o primeiro match — não há ranking de relevância nesta
+    v1.
     """
     query_text = query_text.strip()
     if not query_text:
@@ -867,10 +873,11 @@ def find_challenge_by_search(db: Session, language_code: str, query_text: str) -
     # full scan em challenges.prompt — mesmo escape já correto em
     # search_users_by_name.
     escaped = query_text.replace("\\", "\\\\").replace("%", r"\%").replace("_", r"\_")
+    pattern = f"%{escaped}%"
     return db.execute(
         select(models.Challenge)
         .where(models.Challenge.language_code == language_code)
-        .where(models.Challenge.prompt.ilike(f"%{escaped}%"))
+        .where(or_(models.Challenge.prompt.ilike(pattern), models.Challenge.correct_answer.ilike(pattern)))
         .limit(1)
     ).scalars().first()
 
@@ -1918,7 +1925,14 @@ def list_unresolved_reports(db: Session) -> list[models.Report]:
 # levantamento no conteúdo real, 19/09/2026) — casam com um dos dois
 # regex abaixo sempre, nunca precisou de fallback "não extraído".
 _WORD_CONSTELLATION_TRADUZA_RE = re.compile(r"^Traduza para o \w+: '(.+)'$")
-_WORD_CONSTELLATION_COMO_SE_ESCREVE_RE = re.compile(r"^Como se escreve '(.+)' em \w+\?$")
+# Achado real em produção (19/09/2026): o levantamento original ("100%
+# dos prompts seguem só 2 templates fixos") não cobria variações reais
+# do template "Como se escreve" — ~55 itens têm um esclarecimento entre
+# a palavra e "em <idioma>" (ex.: "'preciso' (necessidade) em inglês?",
+# "'de novo' novamente para fixar em francês?"). `.+?` não-guloso captura
+# só a palavra entre as aspas; o `.*` qualquer coisa depois absorve
+# qualquer esclarecimento sem quebrar a extração.
+_WORD_CONSTELLATION_COMO_SE_ESCREVE_RE = re.compile(r"^Como se escreve '(.+?)'.* em \w+\?$")
 
 
 def extract_portuguese_meaning(prompt: str) -> str | None:

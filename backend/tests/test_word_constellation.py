@@ -74,6 +74,26 @@ def test_word_constellation_meaning_for_single_word_correct_answer(client):
     assert len(body["options"]) >= 2
 
 
+def test_word_constellation_meaning_extracts_word_with_parenthetical_clarifier(client):
+    """Achado real em produção (19/09/2026): ~55 prompts reais de
+    Idiomas têm um esclarecimento entre a palavra e "em <idioma>"
+    (ex.: "'preciso' (necessidade) em inglês?"), quebrando a suposição
+    original de "100% dos prompts seguem 2 templates fixos". Antes desta
+    correção, esses Desafios travavam a Constelação de Palavras com
+    MEANING_NOT_EXTRACTABLE — nunca devem quebrar a extração."""
+    _seed_siblings()
+    challenge_id = _seed_idiomas_challenge("Como se escreve 'preciso' (necessidade) em inglês?", "Need")
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    resp = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers)
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["kind"] == "meaning"
+    assert "preciso" in body["options"]
+
+
 def test_word_constellation_complete_correct_awards_xp_only_once(client):
     _seed_siblings()
     challenge_id = _seed_idiomas_challenge("Como se escreve 'casa' em inglês?", "House")
