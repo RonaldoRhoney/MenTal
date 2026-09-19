@@ -1,6 +1,39 @@
 # MENTAL — Auditoria Global de Perguntas e Respostas em Todos os Mundos
 
-**Status:** Fase 1 (levantamento) CONCLUÍDA (19/09/2026), executada pelo agente `mental-content-consistency` (formalizado nesta mesma rodada, conforme §4.1 abaixo pedia). **Nenhuma correção foi aplicada** — o relatório abaixo aguarda revisão e priorização de Rhoney antes de qualquer mudança em `seed.py`/`content/*.json`.
+**Status:** Fase 1 (levantamento) CONCLUÍDA (19/09/2026). Fase 2 (correção), itens 1, 2 e 3 de 3, IMPLEMENTADOS (19/09/2026) — ver seção "Fase 2" abaixo.
+
+## Fase 2 — o que foi corrigido (19/09/2026)
+
+**Item 1 — 200 `explanation` vazias (Copa do Mundo/Futebol):** todas reescritas, fatos verificados (WebSearch quando necessário, inclusive Copa 2026). Nenhum item ficou sem verificação confiável.
+
+**Item 2 — 624 `hints[0]` fantasma (23 territórios `reading_passage`):** trocados por dica genérica que não cita nenhum título fora da tela.
+
+**Item 3 — bloco Internet (5 arquivos, 1.997 itens):** escopo decidido com Rhoney — **só `explanation`** reescrita (nunca `prompt`/`options`/`correct_answer`/`hints`, pra não mexer na chave que identifica o item já em produção). Todas as 1.997 explanations revisadas; a maioria reescrita para responder diretamente à pergunta específica (não mais curiosidade lateral do lote); **7 itens mantidos com a explanation antiga**, de propósito, por suspeita de que o próprio `correct_answer` esteja errado (ver tabela abaixo) — decisão de manter a explicação genérica em vez de confirmar um fato duvidoso.
+
+### ⚠️ 7 itens de `internet_gigantes.json` com suspeita de `correct_answer` incorreto (não alterados — decisão de Rhoney)
+
+| Índice | Pergunta | `correct_answer` no arquivo | O que a verificação encontrou |
+|---|---|---|---|
+| 91 | Participantes do re:Invent 2013 | "mais de 8.000" | Não confirmado por fonte confiável; 2012 teve ~6.000 |
+| 93 | Recursos anunciados por Jassy no 1º dia (fonte de 2020) | "24" | Fontes indicam 28-30+ lançamentos |
+| 138 | Crescimento das vendas da Amazon 1996-1997 | "880%" | Fonte oficial/imprensa documenta **838%** |
+| 146 | Semanas antes do IPO que Jassy começou na Amazon | "três semanas" | CNBC/HBS/Fortune dizem **uma semana** |
+| 157 | Serviço de música atribuído a Jassy como fundador | "Amazon Music" | Jassy escreveu o plano inicial, mas foi preterido pra liderar essa área — não é creditado como fundador |
+| 199 | Ano em que o Facebook se popularizou no Brasil | "2008" | Facebook só ultrapassou o Orkut no Brasil em **2011** |
+| 294 | Ano de lançamento de perfis (profiles) na Netflix | "2005" | Recurso lançado em **2013** |
+
+**Recomendação:** revisar esses 7 itens manualmente antes da próxima curadoria — se os fatos acima estiverem certos, o `correct_answer` (e possivelmente `options`) precisa mudar, o que é uma decisão de conteúdo, não uma correção mecânica de explanation.
+
+### Aplicar em produção
+Os 32 arquivos do item 1+2 já têm commit com `backend/scripts/apply_content_audit_fixes.py` pronto pra rodar. Os 5 arquivos do bloco Internet (item 3) usam o mesmo script — depois do commit deste item, rodar:
+```bash
+export MENTAL_DATABASE_URL="postgresql+psycopg://..."
+cd backend && python3 scripts/apply_content_audit_fixes.py content/internet_origens.json content/internet_sistemas_operacionais.json content/internet_gigantes.json content/internet_cultura.json content/internet_futuro.json
+```
+
+**Validação:** `content_validation.validate_content`: 0 erros nos 5 arquivos (1.997 itens), 0 `explanation` vazia. Suíte completa de testes do backend rodada depois de todas as mudanças de conteúdo, sem regressão.
+
+---
 
 ## Relatório da Fase 1
 
