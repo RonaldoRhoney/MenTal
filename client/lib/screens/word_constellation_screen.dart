@@ -83,6 +83,18 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
     if (mounted) setState(() => _ttsSpeaking = false);
   }
 
+  // Pedido de Rhoney (19/09/2026): cada peça também precisa de áudio
+  // próprio, não só o texto inteiro no botão do topo — só faz sentido
+  // nas PEÇAS (idioma estranho), nunca nas opções de significado
+  // (português, voz errada pra elas).
+  Future<void> _speakTile(String tile) async {
+    final voice = _voice;
+    if (voice == null || _ttsSpeaking) return;
+    setState(() => _ttsSpeaking = true);
+    await TtsService.instance.speak(tile, voice: voice, speed: _ttsSpeed);
+    if (mounted) setState(() => _ttsSpeaking = false);
+  }
+
   void _addTile(String tile) {
     setState(() {
       _availableTiles.remove(tile);
@@ -228,6 +240,7 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
                   label: indexed.value,
                   filled: true,
                   onTap: () => _removeTile(indexed.key),
+                  onSpeak: () => _speakTile(indexed.value),
                 ),
             ],
           ),
@@ -239,7 +252,12 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
           alignment: WrapAlignment.center,
           children: [
             for (final tile in _availableTiles)
-              _ConstellationTile(label: tile, filled: false, onTap: () => _addTile(tile)),
+              _ConstellationTile(
+                label: tile,
+                filled: false,
+                onTap: () => _addTile(tile),
+                onSpeak: () => _speakTile(tile),
+              ),
           ],
         ),
       ],
@@ -308,12 +326,21 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
 /// pra reconhecimento de significado (mesmo componente visual, §5:
 /// "pastilhas com brilho sutil").
 class _ConstellationTile extends StatelessWidget {
-  const _ConstellationTile({required this.label, required this.filled, required this.onTap, this.expand = false});
+  const _ConstellationTile({
+    required this.label,
+    required this.filled,
+    required this.onTap,
+    this.expand = false,
+    this.onSpeak,
+  });
 
   final String label;
   final bool filled;
   final VoidCallback onTap;
   final bool expand;
+  // Só as PEÇAS (idioma estranho) recebem isto — as opções de
+  // significado (português) nunca, mesma voz errada de sempre.
+  final VoidCallback? onSpeak;
 
   @override
   Widget build(BuildContext context) {
@@ -325,20 +352,52 @@ class _ConstellationTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          padding: EdgeInsets.only(left: 16, right: onSpeak != null ? 6 : 16, top: 8, bottom: 8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
             border: Border.all(color: color.withValues(alpha: 0.6)),
           ),
-          child: Text(
-            label,
-            textAlign: TextAlign.center,
-            style: TextStyle(color: AppColors.bone, fontWeight: FontWeight.w600),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                label,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: AppColors.bone, fontWeight: FontWeight.w600),
+              ),
+              if (onSpeak != null) ...[
+                const SizedBox(width: 4),
+                _MiniSpeakerButton(onTap: onSpeak!),
+              ],
+            ],
           ),
         ),
       ),
     );
     return expand ? SizedBox(width: double.infinity, child: child) : child;
+  }
+}
+
+/// Versão pequena do botão Duolingo-style, cabe dentro de uma peça.
+class _MiniSpeakerButton extends StatelessWidget {
+  const _MiniSpeakerButton({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: AppColors.teal,
+      shape: const CircleBorder(),
+      child: InkWell(
+        customBorder: const CircleBorder(),
+        onTap: onTap,
+        child: const Padding(
+          padding: EdgeInsets.all(6),
+          child: Icon(Icons.volume_up_rounded, color: Colors.white, size: 14),
+        ),
+      ),
+    );
   }
 }
 

@@ -76,6 +76,28 @@ Future<void> _pump(WidgetTester tester, ApiClient client) async {
 }
 
 void main() {
+  testWidgets('rodada "pieces": cada peça tem o próprio botão de áudio (pedido de Rhoney, 19/09/2026)', (tester) async {
+    await _pump(tester, _PiecesFakeApiClient());
+
+    // 1 botão grande (frase inteira) + 5 peças disponíveis (is/The/big/
+    // house/cat), nenhuma ainda escolhida — 6 ícones de alto-falante.
+    expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(6));
+
+    await tester.tap(find.text('The'));
+    await tester.pump();
+    // Peça movida pra área de montagem continua com o próprio áudio —
+    // still 6 (1 grande + 4 disponíveis + 1 escolhida).
+    expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(6));
+  });
+
+  testWidgets('rodada "meaning": opções (em português) NÃO têm botão de áudio próprio', (tester) async {
+    await _pump(tester, _MeaningFakeApiClient());
+
+    // Só o botão grande do topo — as 3 opções de significado nunca
+    // ganham áudio individual (seria a voz errada, em português).
+    expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
+  });
+
   testWidgets('rodada "pieces": montar na ordem certa mostra acerto + XP', (tester) async {
     await _pump(tester, _PiecesFakeApiClient());
 
