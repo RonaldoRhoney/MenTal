@@ -1,6 +1,6 @@
 # MENTAL — Mundo dos Idiomas: Mecânica Complementar "Constelação de Palavras"
 
-**Status:** Fase 1 (backend/dados) IMPLEMENTADA (19/09/2026). Fase 2 (tela/UI Flutter) ainda não iniciada. Nova mecânica de reforço prático, sequencial a cada Desafio do Mundo dos Idiomas — presente e futuro. Não é um modo isolado, é uma etapa complementar obrigatória ao final de cada Desafio dessa categoria.
+**Status:** Fases 1 (backend/dados) e 2 (tela Flutter) IMPLEMENTADAS (19/09/2026). Nova mecânica de reforço prático, sequencial a cada Desafio do Mundo dos Idiomas — presente e futuro. Não é um modo isolado, é uma etapa complementar obrigatória ao final de cada Desafio dessa categoria.
 
 ## Decisões confirmadas com Rhoney (19/09/2026)
 - Regra de seleção automática entre as 2 interações (§4): `correct_answer` com espaço → reconstrução por peças (§4.1); sem espaço → reconhecimento de significado (§4.2). Levantamento no conteúdo real confirmou 100% dos prompts de Idiomas seguem só 2 templates fixos ("Como se escreve 'X' em IDIOMA?" / "Traduza para o IDIOMA: 'X'"), permitindo extrair o significado em português por regex, sem ambiguidade.
@@ -14,9 +14,16 @@
 - `GET /challenges/{id}/word-constellation` e `POST /challenges/{id}/word-constellation/complete` — endpoints, gated a `IDIOMA_TERRITORY_IDS` (404 fora do Mundo dos Idiomas).
 - Testes: `backend/tests/test_word_constellation.py` (6 testes — peças vs. significado, XP só 1x, resposta errada nunca paga, validação de ordem de peças, 404 fora de Idiomas). Suíte completa do backend sem regressão.
 
+## Fase 2 — o que foi implementado (tela Flutter)
+- `client/lib/screens/word_constellation_screen.dart` — tema de constelação/galáxia (fundo de estrelas, peças/opções em "pastilha" dourada/teal), sem nenhum elemento copiado do Duolingo (§5). Reutiliza `TtsService`/`idioma_voices.dart` já existentes (botão de áudio no mesmo padrão Duolingo do resto do app) e a mesma estrutura de seletor de velocidade.
+- `client/lib/api/api_client.dart::wordConstellationRound/completeWordConstellation` — novos métodos.
+- **Integração automática**: `challenge_screen.dart::_loadNextChallenge` intercepta ANTES de buscar o próximo desafio — se o território é de idioma falado (`voiceForTerritory != null`) e o jogador acabou de responder algo (não é a primeira carga da tela), abre a Constelação de Palavras primeiro. Nunca dispara em Batalha nem Relâmpago. Único ponto de interceptação — nenhum botão/call site precisou saber que essa etapa existe.
+- Errar não bloqueia: "Tentar de novo" reseta a rodada; XP só é creditado na 1ª conclusão CORRETA (validado no backend).
+- Testes: `client/test/word_constellation_screen_test.dart` (3 testes — rodada "pieces" certa/errada, rodada "meaning"). Suíte completa do client sem regressão (184/184).
+
 ## Próximos passos
-- **Fase 2**: tela Flutter (componente de peças/estrelas arrastáveis ou tocáveis, tema de constelação/galáxia, reutilizando o TTS já existente). Aparece automaticamente ao final de cada Desafio do Mundo dos Idiomas.
-- Aplicar a migration 079 em produção antes da Fase 2 ir ao ar.
+- Aplicar a migration 079 em produção (feito — ver commit) e fazer o deploy do backend antes de testar em produção.
+- Próximo build/AAB do client pra essa etapa aparecer de verdade nas contas reais.
 
 ---
 

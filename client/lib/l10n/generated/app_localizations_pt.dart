@@ -326,6 +326,33 @@ class AppLocalizationsPt extends AppLocalizations {
   String get vocabMediaWatchSignButton => 'Ver o sinal';
 
   @override
+  String get wordConstellationScreenTitle => 'Constelação de Palavras';
+
+  @override
+  String get wordConstellationInstructionLabel =>
+      'Toque para ouvir e monte a resposta';
+
+  @override
+  String get wordConstellationCheckButton => 'Verificar';
+
+  @override
+  String get wordConstellationCorrectMessage => 'Isso mesmo!';
+
+  @override
+  String get wordConstellationIncorrectMessage => 'Quase — tente de novo.';
+
+  @override
+  String wordConstellationXpAwardedMessage(int xp) {
+    return '+$xp XP';
+  }
+
+  @override
+  String get wordConstellationContinueButton => 'Continuar';
+
+  @override
+  String get wordConstellationTryAgainButton => 'Tentar de novo';
+
+  @override
   String get ttsSpeedNormalLabel => 'Normal';
 
   @override

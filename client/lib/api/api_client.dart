@@ -173,6 +173,27 @@ class ApiClient {
     );
   }
 
+  // MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md — etapa complementar
+  // automática ao final de todo Desafio do Mundo dos Idiomas.
+  Future<Map<String, dynamic>> wordConstellationRound(String challengeId) async {
+    return _get(_uri('/challenges/$challengeId/word-constellation'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> completeWordConstellation(
+    String challengeId, {
+    List<String>? submittedOrder,
+    String? submittedMeaning,
+  }) async {
+    return _post(
+      _uri('/challenges/$challengeId/word-constellation/complete'),
+      headers: _headers,
+      body: jsonEncode({
+        'submitted_order': submittedOrder,
+        'submitted_meaning': submittedMeaning,
+      }),
+    );
+  }
+
   // REGRA_REVISAO_ERROS_FIM_RODADA.md — reapresenta um desafio já visto
   // nesta rodada pra revisão de erro. Nunca conta pro limite diário e a
   // resposta nunca gera XP/streak/badge (submit_answer detecta

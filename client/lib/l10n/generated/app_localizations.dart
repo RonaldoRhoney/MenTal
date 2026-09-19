@@ -700,6 +700,54 @@ abstract class AppLocalizations {
   /// **'Ver o sinal'**
   String get vocabMediaWatchSignButton;
 
+  /// MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md — app bar title of the complementary word-constellation screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Constelação de Palavras'**
+  String get wordConstellationScreenTitle;
+
+  /// Short instruction shown at the top of the word constellation screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Toque para ouvir e monte a resposta'**
+  String get wordConstellationInstructionLabel;
+
+  /// Button that submits the current word constellation answer
+  ///
+  /// In pt, this message translates to:
+  /// **'Verificar'**
+  String get wordConstellationCheckButton;
+
+  /// Shown when the word constellation answer is correct
+  ///
+  /// In pt, this message translates to:
+  /// **'Isso mesmo!'**
+  String get wordConstellationCorrectMessage;
+
+  /// Shown when the word constellation answer is wrong; never punitive in tone
+  ///
+  /// In pt, this message translates to:
+  /// **'Quase — tente de novo.'**
+  String get wordConstellationIncorrectMessage;
+
+  /// XP earned message on the word constellation screen
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP'**
+  String wordConstellationXpAwardedMessage(int xp);
+
+  /// Button after a correct word constellation answer, returns to the challenge flow
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar'**
+  String get wordConstellationContinueButton;
+
+  /// Button after a wrong word constellation answer, resets the round for another attempt
+  ///
+  /// In pt, this message translates to:
+  /// **'Tentar de novo'**
+  String get wordConstellationTryAgainButton;
+
   /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — TTS playback speed option: normal speed
   ///
   /// In pt, this message translates to:

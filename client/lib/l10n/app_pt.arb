@@ -425,6 +425,41 @@
   "@vocabMediaWatchSignButton": {
     "description": "MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — button that opens the sign-language reference video (vocab_media_type == 'video')"
   },
+  "wordConstellationScreenTitle": "Constelação de Palavras",
+  "@wordConstellationScreenTitle": {
+    "description": "MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md — app bar title of the complementary word-constellation screen"
+  },
+  "wordConstellationInstructionLabel": "Toque para ouvir e monte a resposta",
+  "@wordConstellationInstructionLabel": {
+    "description": "Short instruction shown at the top of the word constellation screen"
+  },
+  "wordConstellationCheckButton": "Verificar",
+  "@wordConstellationCheckButton": {
+    "description": "Button that submits the current word constellation answer"
+  },
+  "wordConstellationCorrectMessage": "Isso mesmo!",
+  "@wordConstellationCorrectMessage": {
+    "description": "Shown when the word constellation answer is correct"
+  },
+  "wordConstellationIncorrectMessage": "Quase — tente de novo.",
+  "@wordConstellationIncorrectMessage": {
+    "description": "Shown when the word constellation answer is wrong; never punitive in tone"
+  },
+  "wordConstellationXpAwardedMessage": "+{xp} XP",
+  "@wordConstellationXpAwardedMessage": {
+    "description": "XP earned message on the word constellation screen",
+    "placeholders": {
+      "xp": {"type": "int"}
+    }
+  },
+  "wordConstellationContinueButton": "Continuar",
+  "@wordConstellationContinueButton": {
+    "description": "Button after a correct word constellation answer, returns to the challenge flow"
+  },
+  "wordConstellationTryAgainButton": "Tentar de novo",
+  "@wordConstellationTryAgainButton": {
+    "description": "Button after a wrong word constellation answer, resets the round for another attempt"
+  },
   "ttsSpeedNormalLabel": "Normal",
   "@ttsSpeedNormalLabel": {
     "description": "MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — TTS playback speed option: normal speed"

@@ -13,6 +13,7 @@ import '../services/tts_service.dart';
 import '../theme/app_theme.dart';
 import '../visual_options.dart';
 import 'learning_pause_screen.dart';
+import 'word_constellation_screen.dart';
 import '../widgets/celebration_overlay.dart';
 import '../widgets/coins_rise_overlay.dart';
 import '../widgets/institutional_video_player.dart';
@@ -225,6 +226,33 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   }
 
   Future<void> _loadNextChallenge() async {
+    // MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md §3 — "aparece
+    // automaticamente como etapa final de cada Desafio já existente no
+    // Mundo dos Idiomas", nunca um modo à parte que o jogador escolhe.
+    // Único ponto de entrada de "próximo desafio" na tela inteira
+    // (_loadNextChallenge), então intercepta aqui em vez de em cada
+    // botão que chama isto — nenhum call site precisa saber que essa
+    // etapa existe. _challenge/_result não-nulos = acabou de responder
+    // algo (nunca dispara na primeira carga da tela). Nunca em Batalha
+    // (evento único, competitivo) nem Relâmpago (fluxo cronometrado).
+    final justCompletedChallenge = _challenge;
+    if (justCompletedChallenge != null &&
+        _result != null &&
+        widget.battleId == null &&
+        !widget.relampago &&
+        voiceForTerritory(widget.territoryId) != null) {
+      await Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (_) => WordConstellationScreen(
+            client: widget.client,
+            challengeId: justCompletedChallenge['challenge_id'] as String,
+            territoryId: widget.territoryId,
+          ),
+        ),
+      );
+      if (!mounted) return;
+    }
+
     _countdownTimer?.cancel();
     setState(() {
       _loading = true;
