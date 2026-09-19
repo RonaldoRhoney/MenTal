@@ -1074,13 +1074,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                             .map((option) => RadioListTile<String>(
                                   title: Text(option),
                                   value: option,
-                                  secondary: IconButton(
+                                  secondary: _DuolingoSpeakerButton(
                                     tooltip: l10n.audioPlayButton,
-                                    onPressed: _ttsSpeaking ? null : () => _speakOption(option, voice),
-                                    icon: Icon(
-                                      _ttsSpeaking ? Icons.hourglass_top_rounded : Icons.volume_up_rounded,
-                                      color: AppColors.teal,
-                                    ),
+                                    speaking: _ttsSpeaking,
+                                    onTap: _ttsSpeaking ? null : () => _speakOption(option, voice),
                                   ),
                                 ))
                             .toList(),
@@ -1695,6 +1692,40 @@ class _NewChallengeBadge extends StatelessWidget {
 /// escondido em configurações". 3 chips sempre visíveis, uma única
 /// escolha vale pra qualquer palavra tocada na tela (evita repetir o
 /// seletor por opção).
+/// Pedido de Rhoney (19/09/2026): "botão de ouvir o áudio no mesmo
+/// padrão do Duolingo" — círculo preenchido com o ícone de alto-falante
+/// (não um IconButton solto). Opacidade reduzida + sem toque enquanto
+/// está tocando (mesmo estado de _ttsSpeaking que já existia).
+class _DuolingoSpeakerButton extends StatelessWidget {
+  const _DuolingoSpeakerButton({required this.speaking, required this.onTap, required this.tooltip});
+
+  final bool speaking;
+  final VoidCallback? onTap;
+  final String tooltip;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: tooltip,
+      child: Opacity(
+        opacity: speaking ? 0.5 : 1,
+        child: Material(
+          color: AppColors.teal,
+          shape: const CircleBorder(),
+          child: InkWell(
+            customBorder: const CircleBorder(),
+            onTap: onTap,
+            child: const Padding(
+              padding: EdgeInsets.all(8),
+              child: Icon(Icons.volume_up_rounded, color: Colors.white, size: 20),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _TtsSpeedSelector extends StatelessWidget {
   const _TtsSpeedSelector({required this.speed, required this.onChanged});
 
