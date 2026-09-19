@@ -152,18 +152,28 @@ void main() {
     expect(find.text('Toque para ouvir e monte a resposta'), findsNothing);
   });
 
-  testWidgets('rodada "meaning": escolher a opção certa mostra acerto', (tester) async {
+  testWidgets('rodada "meaning": tocar na opção certa já responde e mostra acerto (sem botão Verificar)', (tester) async {
     await _pump(tester, _MeaningFakeApiClient());
 
     expect(find.text('House'), findsOneWidget);
     expect(find.text('casa'), findsOneWidget);
     expect(find.text('gato'), findsOneWidget);
+    // Pedido de Rhoney (19/09/2026): na rodada "meaning" tocar na opção
+    // já responde — nunca existe um botão "Verificar" separado aqui.
+    expect(find.text('Verificar'), findsNothing);
 
     await tester.tap(find.text('casa'));
-    await tester.pump();
-    await tester.tap(find.text('Verificar'));
     await tester.pumpAndSettle();
 
     expect(find.text('Isso mesmo!'), findsOneWidget);
+  });
+
+  testWidgets('rodada "meaning": tocar na opção errada já responde e mostra erro', (tester) async {
+    await _pump(tester, _MeaningFakeApiClient());
+
+    await tester.tap(find.text('gato'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Quase — tente de novo.'), findsOneWidget);
   });
 }

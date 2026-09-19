@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../api/api_client.dart';
 import '../idioma_voices.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../services/feedback_service.dart';
 import '../services/tts_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/pulse_in.dart';
@@ -148,8 +150,12 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
         submittedMeaning: _round!['kind'] == 'meaning' ? _selectedMeaning : null,
       );
       if (!mounted) return;
+      final correct = result['correct'] as bool;
+      // Pedido de Rhoney (19/09/2026, teste real): som de acerto/erro na
+      // própria resposta, mesmo padrão já usado em challenge_screen.dart.
+      unawaited(FeedbackService.instance.play(correct ? FeedbackSound.correct : FeedbackSound.incorrect));
       setState(() {
-        _correct = result['correct'] as bool;
+        _correct = correct;
         _xpAwarded = result['xp_awarded'] as int;
       });
     } on ApiException catch (e) {
@@ -157,6 +163,15 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
     } finally {
       if (mounted) setState(() => _submitting = false);
     }
+  }
+
+  // Pedido de Rhoney (19/09/2026, teste real no dispositivo): na rodada
+  // "meaning", tocar numa opção já vale como resposta — o som de
+  // acerto/erro (tocado dentro de _submit) acontece na própria palavra
+  // tocada, sem precisar de um botão "Verificar" separado.
+  void _selectMeaningAndSubmit(String option) {
+    setState(() => _selectedMeaning = option);
+    _submit();
   }
 
   void _retry() {
@@ -215,28 +230,57 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
           Text(l10n.wordConstellationInstructionLabel, style: TextStyle(color: AppColors.muted, fontSize: 13)),
           const SizedBox(height: 16),
         ],
-        Center(
-          child: _DuolingoSpeakerButtonLarge(
-            speaking: _ttsSpeaking,
-            onTap: _voice == null ? null : _speak,
+        // Pedido de Rhoney (19/09/2026, teste real): quando o Desafio de
+        // origem já tem uma ilustração de vocabulário (vocab_media_url,
+        // gerada via Canva — scripts/upload_vocab_media.py), ela
+        // substitui o cartão de texto+áudio do topo. Nunca fabricada
+        // aqui — só aparece se já existir. §4.3 (correção obrigatória,
+        // 19/09/2026): sem ilustração, o áudio da palavra/frase-alvo
+        // precisa estar vinculado ao próprio elemento textual clicável
+        // (mesmo princípio de MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2.2).
+        if (round['vocab_media_url'] != null) ...[
+          Center(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(18),
+              child: Image.network(
+                round['vocab_media_url'] as String,
+                height: 180,
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => _TargetPromptCard(
+                  text: round['prompt_text'] as String,
+                  speaking: _ttsSpeaking,
+                  onTap: _voice == null ? null : _speak,
+                ),
+              ),
+            ),
           ),
-        ),
-        const SizedBox(height: 12),
-        Center(
-          child: Text(round['prompt_text'] as String, style: Theme.of(context).textTheme.headlineSmall),
-        ),
-        const SizedBox(height: 12),
-        Center(child: _SpeedChips(speed: _ttsSpeed, onChanged: (s) => setState(() => _ttsSpeed = s))),
+          const SizedBox(height: 20),
+        ] else ...[
+          Center(
+            child: _TargetPromptCard(
+              text: round['prompt_text'] as String,
+              speaking: _ttsSpeaking,
+              onTap: _voice == null ? null : _speak,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Center(child: _SpeedChips(speed: _ttsSpeed, onChanged: (s) => setState(() => _ttsSpeed = s))),
+        ],
         const SizedBox(height: 24),
         Expanded(
           child: kind == 'pieces' ? _buildPiecesUi(l10n) : _buildMeaningUi(l10n),
         ),
-        FilledButton(
-          onPressed: _canSubmit() && !_submitting ? _submit : null,
-          child: _submitting
-              ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2))
-              : Text(l10n.wordConstellationCheckButton),
-        ),
+        // Pedido de Rhoney (19/09/2026, teste real): na rodada "meaning"
+        // tocar na opção já responde (§ acima, _selectMeaningAndSubmit)
+        // — o botão "Verificar" só faz sentido pra "pieces" (montagem de
+        // várias peças antes de poder conferir).
+        if (kind == 'pieces')
+          FilledButton(
+            onPressed: _canSubmit() && !_submitting ? _submit : null,
+            child: _submitting
+                ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2))
+                : Text(l10n.wordConstellationCheckButton),
+          ),
       ],
     );
   }
@@ -306,7 +350,7 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
             label: option,
             filled: _selectedMeaning == option,
             expand: true,
-            onTap: () => setState(() => _selectedMeaning = option),
+            onTap: _submitting ? () {} : () => _selectMeaningAndSubmit(option),
           ),
           const SizedBox(height: 12),
         ],
@@ -433,25 +477,46 @@ class _MiniSpeakerButton extends StatelessWidget {
   }
 }
 
-class _DuolingoSpeakerButtonLarge extends StatelessWidget {
-  const _DuolingoSpeakerButtonLarge({required this.speaking, required this.onTap});
+/// Palavra/frase-alvo + botão de áudio como UM elemento único e
+/// tocável — nunca um ícone solto separado do texto (§4.3, correção
+/// obrigatória de 19/09/2026). Pedido de Rhoney (19/09/2026, teste real
+/// no dispositivo): o ícone precisa estar colado NA palavra, mesmo
+/// padrão já usado nas peças (_ConstellationTile/_MiniSpeakerButton) —
+/// não um círculo grande e separado do texto, mesmo que dentro do
+/// mesmo cartão. Todo o cartão continua tocável, não só o ícone.
+class _TargetPromptCard extends StatelessWidget {
+  const _TargetPromptCard({required this.text, required this.speaking, required this.onTap});
 
+  final String text;
   final bool speaking;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Opacity(
-      opacity: speaking ? 0.5 : 1,
+      opacity: speaking ? 0.6 : 1,
       child: Material(
-        color: AppColors.teal,
-        shape: const CircleBorder(),
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(18),
         child: InkWell(
-          customBorder: const CircleBorder(),
+          borderRadius: BorderRadius.circular(18),
           onTap: onTap,
-          child: const Padding(
-            padding: EdgeInsets.all(18),
-            child: Icon(Icons.volume_up_rounded, color: Colors.white, size: 32),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(color: AppColors.teal.withValues(alpha: 0.5)),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Flexible(
+                  child: Text(text, style: Theme.of(context).textTheme.headlineSmall),
+                ),
+                const SizedBox(width: 10),
+                _MiniSpeakerButton(onTap: onTap ?? () {}),
+              ],
+            ),
           ),
         ),
       ),

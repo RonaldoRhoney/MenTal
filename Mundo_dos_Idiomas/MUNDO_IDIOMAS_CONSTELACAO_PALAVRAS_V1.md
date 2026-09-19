@@ -1,6 +1,19 @@
 # MENTAL — Mundo dos Idiomas: Mecânica Complementar "Constelação de Palavras"
 
-**Status:** Fases 1 (backend/dados) e 2 (tela Flutter) IMPLEMENTADAS (19/09/2026). Nova mecânica de reforço prático, sequencial a cada Desafio do Mundo dos Idiomas — presente e futuro. Não é um modo isolado, é uma etapa complementar obrigatória ao final de cada Desafio dessa categoria.
+**Status:** Fases 1 (backend/dados) e 2 (tela Flutter) IMPLEMENTADAS (19/09/2026). Correção obrigatória do §4.3 (áudio da palavra-alvo desconectado do texto) também aplicada (19/09/2026). Nova mecânica de reforço prático, sequencial a cada Desafio do Mundo dos Idiomas — presente e futuro. Não é um modo isolado, é uma etapa complementar obrigatória ao final de cada Desafio dessa categoria.
+
+## Correção §4.3 — áudio vinculado ao texto, não solto (19/09/2026)
+
+Rhoney reportou, testando no dispositivo real, que o botão de áudio da palavra/frase-alvo aparecia como um círculo grande centralizado, visualmente desconectado do texto abaixo dele — violando o mesmo princípio já estabelecido em MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2.2 (áudio sempre vinculado ao elemento textual clicável).
+
+Corrigido em `client/lib/screens/word_constellation_screen.dart`: o antigo par `_DuolingoSpeakerButtonLarge` (círculo isolado) + `Text` separado embaixo virou um único componente `_TargetPromptCard` — um cartão bordado (mesma linguagem visual do resto da tela) com o ícone de áudio e o texto lado a lado, ambos dentro da mesma área tocável. O botão antigo (`_DuolingoSpeakerButtonLarge`) foi removido por ficar sem uso. As peças individuais (§4.1, já corrigidas antes) e a regra de nunca dar áudio às opções de significado em português (§4.2) não mudaram. Ajuste seguinte (mesmo dia, teste real): ícone reposicionado pra ficar colado diretamente na palavra (mesmo padrão `_MiniSpeakerButton` das peças), não mais um ícone grande separado dentro do cartão.
+
+## Ilustração de vocabulário + resposta com som imediato (19/09/2026, pedido de Rhoney)
+
+- `Challenge.vocab_media_url` (quando `vocab_media_type == "image"`) agora é propagado pro round da Constelação (`WordConstellationRoundOut.vocab_media_url`) e, quando presente, substitui o cartão de texto+áudio do topo por uma ilustração — nunca fabricada automaticamente, só aparece se o Desafio de origem já tiver uma. Sem ilustração, o comportamento antigo (cartão texto+áudio) continua normalmente.
+- Ilustrações são **geradas via Canva** (estilo colorido, paleta dourado/teal/roxo da identidade do MENTAL) e sobem pro bucket público `vocab-media` do Supabase Storage via `backend/scripts/upload_vocab_media.py` (novo script, roda localmente com as credenciais de admin do Supabase) — nunca fotos licenciadas de terceiro, então a atribuição registrada é "Ilustração gerada via Canva AI (MENTAL)".
+- **Piloto**: 1 imagem pra "dirigir/Drive" (Mundo dos Idiomas, Inglês), aguardando validação visual de Rhoney no dispositivo antes de produção em massa (~500 palavras nos 9 territórios + estrutura pronta pra conteúdo futuro).
+- Na rodada "meaning", tocar numa opção agora já responde e toca som de acerto/erro na hora (`FeedbackService`, mesmo padrão de `challenge_screen.dart`) — sem precisar de um botão "Verificar" separado. O botão continua existindo só na rodada "pieces" (montagem de várias peças).
 
 ## Decisões confirmadas com Rhoney (19/09/2026)
 - Regra de seleção automática entre as 2 interações (§4): `correct_answer` com espaço → reconstrução por peças (§4.1); sem espaço → reconhecimento de significado (§4.2). Levantamento no conteúdo real confirmou 100% dos prompts de Idiomas seguem só 2 templates fixos ("Como se escreve 'X' em IDIOMA?" / "Traduza para o IDIOMA: 'X'"), permitindo extrair o significado em português por regex, sem ambiguidade.

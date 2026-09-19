@@ -94,6 +94,50 @@ def delete_photo_object(path: str) -> None:
         pass
 
 
+def ensure_public_bucket(bucket: str) -> None:
+    """
+    MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md (19/09/2026, pedido de
+    Rhoney) — imagens de vocabulário são conteúdo PÚBLICO gerado
+    (Canva), diferente de foto de perfil (privada, bucket
+    `profile-photos`). Idempotente — no-op se o bucket já existir.
+    """
+    headers = _admin_headers()
+    if headers is None:
+        return
+    try:
+        httpx.post(
+            f"{config.SUPABASE_URL}/storage/v1/bucket",
+            headers=headers,
+            json={"id": bucket, "name": bucket, "public": True},
+            timeout=_TIMEOUT,
+        )
+    except httpx.HTTPError:
+        pass
+
+
+def upload_public_object(bucket: str, path: str, content: bytes, content_type: str) -> str | None:
+    """
+    Upload pra um bucket PÚBLICO (diferente do fluxo de foto de perfil,
+    que é privado + signed URL). Retorna a URL pública final, ou None se
+    a credencial de admin não estiver configurada ou o upload falhar.
+    """
+    _reject_path_traversal(path)
+    headers = _admin_headers()
+    if headers is None:
+        return None
+    try:
+        resp = httpx.post(
+            f"{config.SUPABASE_URL}/storage/v1/object/{bucket}/{path}",
+            headers={**headers, "Content-Type": content_type, "x-upsert": "true"},
+            content=content,
+            timeout=_TIMEOUT,
+        )
+        resp.raise_for_status()
+        return f"{config.SUPABASE_URL}/storage/v1/object/public/{bucket}/{path}"
+    except httpx.HTTPError:
+        return None
+
+
 def delete_auth_user(user_id: str) -> bool:
     """
     Exclusão real da conta no Supabase Auth (auth.users) — todas as

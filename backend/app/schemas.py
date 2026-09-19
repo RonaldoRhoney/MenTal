@@ -183,6 +183,14 @@ class WordConstellationRoundOut(BaseModel):
     prompt_text: str
     tiles: list[str] | None = None
     options: list[str] | None = None
+    # Pedido de Rhoney (19/09/2026, teste real): mostrar uma ilustração
+    # relativa à palavra correta em vez do texto+áudio, quando o Desafio
+    # de origem já tiver uma — nunca fabricada aqui, só propagada se já
+    # existir. `vocab_media_url` (ilustração real, gerada via Canva,
+    # scripts/upload_vocab_media.py) tem prioridade sobre `prompt_image`
+    # (emoji, catálogo zero-custo já existente) quando os dois existirem.
+    vocab_media_url: str | None = None
+    prompt_image: str | None = None
 
 
 class WordConstellationCompleteRequest(BaseModel):

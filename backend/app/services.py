@@ -1981,6 +1981,8 @@ def generate_word_constellation_round(db: Session, challenge: models.Challenge) 
             "prompt_text": correct_answer,
             "tiles": tiles,
             "options": None,
+            "prompt_image": challenge.prompt_image,
+            "vocab_media_url": challenge.vocab_media_url if challenge.vocab_media_type == "image" else None,
         }
 
     correct_meaning = extract_portuguese_meaning(challenge.prompt)
@@ -2009,6 +2011,8 @@ def generate_word_constellation_round(db: Session, challenge: models.Challenge) 
         "prompt_text": correct_answer,
         "tiles": None,
         "options": options,
+        "prompt_image": challenge.prompt_image,
+        "vocab_media_url": challenge.vocab_media_url if challenge.vocab_media_type == "image" else None,
     }
 
 
