@@ -1378,6 +1378,12 @@ abstract class AppLocalizations {
   /// **'Seu universo'**
   String get trajectoryMapUniverseLabel;
 
+  /// DESTAQUE_ICONE_MAPA_TRAJETORIA_V1.md — label under the redesigned trajectory map launch button on Home's profile card
+  ///
+  /// In pt, this message translates to:
+  /// **'Trajetória'**
+  String get trajectoryMapQuickActionLabel;
+
   /// Counter chip showing how many Worlds the player has already started exploring out of the total
   ///
   /// In pt, this message translates to:

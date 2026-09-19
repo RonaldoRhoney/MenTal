@@ -751,6 +751,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get trajectoryMapUniverseLabel => 'Seu universo';
 
   @override
+  String get trajectoryMapQuickActionLabel => 'Trajetória';
+
+  @override
   String trajectoryMapWorldsCount(int explored, int total) {
     return '$explored de $total Mundos';
   }

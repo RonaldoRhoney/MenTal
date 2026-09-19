@@ -1654,6 +1654,95 @@ class _TerritoryCard extends StatelessWidget {
 /// duplicada: nível vira badge sobre o avatar (não repetido em texto),
 /// XP ganha uma linha própria fina, e XP total/Mundos/Streak dividem uma
 /// única linha de metadados em vez de cards separados.
+/// DESTAQUE_ICONE_MAPA_TRAJETORIA_V1.md (18/09/2026) — botão de acesso ao
+/// Mapa de Trajetória redesenhado: era um ícone genérico de "sparkles"
+/// (✨) pequeno e pouco perceptível, substituído por uma miniatura do
+/// próprio planeta/anel usado na tela de destino (mesma metáfora de
+/// Universo/Galáxia de trajectory_map_screen.dart — _RingPainter/gradiente
+/// radial replicados aqui em escala pequena, não reinventados), com
+/// rótulo abaixo no mesmo padrão dos atalhos da Home (ícone + texto).
+class _TrajectoryMapLaunchButton extends StatelessWidget {
+  const _TrajectoryMapLaunchButton({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return InkWell(
+      borderRadius: BorderRadius.circular(16),
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(
+              width: 40,
+              height: 40,
+              child: Stack(
+                alignment: Alignment.center,
+                clipBehavior: Clip.none,
+                children: [
+                  CustomPaint(size: const Size(40, 40), painter: _MiniRingPainter(color: AppColors.gold)),
+                  Container(
+                    width: 30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: RadialGradient(
+                        center: const Alignment(-0.35, -0.35),
+                        colors: [AppColors.purple, AppColors.ink],
+                      ),
+                      border: Border.all(color: AppColors.purple, width: 1.2),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 4),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                l10n.trajectoryMapQuickActionLabel,
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.bone, fontWeight: FontWeight.w600, fontSize: 12, height: 1.15),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Anel elíptico inclinado tipo Saturno, em escala mini — mesmo desenho
+/// de trajectory_map_screen.dart::_RingPainter, só sem depender daquele
+/// arquivo (evita acoplar a Home a uma tela de feature específica por
+/// causa de um detalhe puramente decorativo).
+class _MiniRingPainter extends CustomPainter {
+  _MiniRingPainter({required this.color});
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.4;
+    canvas.save();
+    canvas.translate(size.width / 2, size.height * 0.5);
+    canvas.rotate(-0.3);
+    canvas.drawOval(Rect.fromCenter(center: Offset.zero, width: size.width, height: size.height * 0.32), paint);
+    canvas.restore();
+  }
+
+  @override
+  bool shouldRepaint(covariant _MiniRingPainter oldDelegate) => oldDelegate.color != color;
+}
+
 class _ProgressCard extends StatelessWidget {
   const _ProgressCard({
     required this.progress,
@@ -1744,9 +1833,14 @@ class _ProgressCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12),
-              // Flexible com flex maior que os dois Spacer abaixo — o
-              // nome continua tendo prioridade de espaço (só encolhe/
+              // DESTAQUE_ICONE_MAPA_TRAJETORIA_V1.md (18/09/2026): nome e
+              // botão do mapa dividem o espaço livre entre o avatar e o
+              // chip de MentalCoins em ~50/50 (flex:1 cada), independente
+              // do tamanho do nome exibido — antes o nome tinha prioridade
+              // total (Expanded sozinho) e o botão do mapa era um ícone
+              // pequeno espremido no que sobrava.
               Expanded(
+                flex: 1,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
@@ -1762,19 +1856,9 @@ class _ProgressCard extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 4),
-              InkWell(
-                borderRadius: BorderRadius.circular(20),
-                onTap: onTapTrajectoryMap,
-                child: Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: AppColors.purple.withValues(alpha: 0.14),
-                    shape: BoxShape.circle,
-                    border: Border.all(color: AppColors.purple.withValues(alpha: 0.4)),
-                  ),
-                  child: Icon(Icons.auto_awesome_rounded, color: AppColors.purple, size: 18),
-                ),
+              Expanded(
+                flex: 1,
+                child: Center(child: _TrajectoryMapLaunchButton(onTap: onTapTrajectoryMap)),
               ),
               const SizedBox(width: 8),
               InkWell(

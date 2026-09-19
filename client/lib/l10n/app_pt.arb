@@ -1009,6 +1009,10 @@
   "@trajectoryMapUniverseLabel": {
     "description": "Header title of the galaxy-style trajectory map"
   },
+  "trajectoryMapQuickActionLabel": "Trajetória",
+  "@trajectoryMapQuickActionLabel": {
+    "description": "DESTAQUE_ICONE_MAPA_TRAJETORIA_V1.md — label under the redesigned trajectory map launch button on Home's profile card"
+  },
   "trajectoryMapWorldsCount": "{explored} de {total} Mundos",
   "@trajectoryMapWorldsCount": {
     "description": "Counter chip showing how many Worlds the player has already started exploring out of the total",
