@@ -22,15 +22,16 @@ const int kMovementMeaningfulPendingSteps = 100;
 /// o app tenha ficado fechado boa parte do tempo: basta guardar
 /// localmente qual era a leitura do sensor quando o ciclo começou (o
 /// "baseline") e subtrair da leitura atual sempre que o app reabrir.
-/// Único caso não coberto: reboot do aparelho no meio do ciclo zera o
-/// contador de hardware — limitação conhecida e aceitável para uma
-/// feature de bônus, não faz parte da autoridade de XP/score do jogo.
+/// Reboot do aparelho no meio do ciclo zera o contador de hardware: tratado em
+/// [_totalSoFar] (o que já tinha sido contado vira `carry` e a contagem
+/// recomeça de 0) — antes de 20/09/2026 isso travava a contagem em 0.
 ///
 /// O backend continua sendo a única autoridade sobre XP: este serviço só
 /// decide QUANTOS passos ainda não foram enviados (delta local), nunca
 /// decide o bônus — isso é sempre calculado em app/movement.py.
 class MovementLocalDelta {
-  MovementLocalDelta({required this.uncollectedSteps, required this.totalStepsInCycle});
+  MovementLocalDelta(
+      {required this.uncollectedSteps, required this.totalStepsInCycle});
 
   final int uncollectedSteps;
   final int totalStepsInCycle;
@@ -42,7 +43,8 @@ class MovementService {
 
   static const _kStateKey = 'movement_cycle_state_v1';
   static const _kLastKnownRawStepsKey = 'movement_last_known_raw_steps_v1';
-  static const _kAcknowledgedPendingKey = 'movement_acknowledged_pending_cycles_v1';
+  static const _kAcknowledgedPendingKey =
+      'movement_acknowledged_pending_cycles_v1';
 
   Map<String, dynamic> _state = {};
   bool _loaded = false;
@@ -150,23 +152,69 @@ class MovementService {
     await _persist();
   }
 
+  /// Total de passos do ciclo, robusto a REBOOT do aparelho (achado real,
+  /// 20/09/2026: o celular reiniciou às ~06:35 e o Movimento parou de contar).
+  /// O TYPE_STEP_COUNTER zera no boot; com o baseline de antes do reboot, a conta
+  /// `atual - baseline` ficava NEGATIVA e era travada em 0 — o jogador caminhava
+  /// e nada era contado até o contador superar a leitura antiga (milhares de
+  /// passos). Agora, quando a leitura atual é MENOR que a última vista (ou menor
+  /// que o baseline, em estado antigo sem `lastRaw`), entende-se que o contador
+  /// zerou: o que já tinha sido contado vira `carry` e a contagem recomeça de 0.
+  Future<int> _totalSoFar(
+      String cycleId, Map<String, dynamic> entry, int current) async {
+    var baseline = entry['baseline'] as int;
+    var carry = (entry['carry'] as int?) ?? 0;
+    final lastRaw = entry['lastRaw'] as int?;
+    var changed = false;
+    if (lastRaw != null && current < lastRaw) {
+      carry += lastRaw - baseline < 0 ? 0 : lastRaw - baseline;
+      baseline = 0;
+      changed = true;
+    } else if (lastRaw == null && current < baseline) {
+      // Estado anterior a esta correção: não sabemos o total pré-reboot;
+      // assume que o que foi enviado ao backend é o que valia.
+      carry = (entry['lastSubmittedTotal'] as int?) ?? 0;
+      baseline = 0;
+      changed = true;
+    }
+    if (changed) {
+      entry['carry'] = carry;
+      entry['baseline'] = baseline;
+    }
+    if (entry['lastRaw'] != current) {
+      entry['lastRaw'] = current;
+      changed = true;
+    }
+    if (changed) {
+      _state[cycleId] = entry;
+      await _persist();
+    }
+    return carry + (current - baseline);
+  }
+
   /// Calcula quantos passos deste ciclo ainda não foram submetidos ao
   /// backend. Na primeira vez que um `cycleId` é visto sem baseline
   /// ainda definido (nem por [ensureBaselineFor] nem por chamada
   /// anterior), grava a leitura atual como baseline e retorna delta 0.
-  Future<MovementLocalDelta> pendingDeltaFor(String cycleId, int currentStepsSinceBoot) async {
+  Future<MovementLocalDelta> pendingDeltaFor(
+      String cycleId, int currentStepsSinceBoot) async {
     await ensureLoaded();
     final entry = _state[cycleId] as Map<String, dynamic>?;
     if (entry == null) {
-      _state[cycleId] = {'baseline': currentStepsSinceBoot, 'lastSubmittedTotal': 0};
+      _state[cycleId] = {
+        'baseline': currentStepsSinceBoot,
+        'lastSubmittedTotal': 0
+      };
       await _persist();
       return MovementLocalDelta(uncollectedSteps: 0, totalStepsInCycle: 0);
     }
-    final baseline = entry['baseline'] as int;
     final lastSubmittedTotal = entry['lastSubmittedTotal'] as int;
-    final totalSoFar = currentStepsSinceBoot - baseline < 0 ? 0 : currentStepsSinceBoot - baseline;
-    final uncollected = totalSoFar - lastSubmittedTotal < 0 ? 0 : totalSoFar - lastSubmittedTotal;
-    return MovementLocalDelta(uncollectedSteps: uncollected, totalStepsInCycle: totalSoFar);
+    final totalSoFar = await _totalSoFar(cycleId, entry, currentStepsSinceBoot);
+    final uncollected = totalSoFar - lastSubmittedTotal < 0
+        ? 0
+        : totalSoFar - lastSubmittedTotal;
+    return MovementLocalDelta(
+        uncollectedSteps: uncollected, totalStepsInCycle: totalSoFar);
   }
 
   /// Igual a [pendingDeltaFor], mas para um ciclo JÁ FECHADO (o
@@ -185,15 +233,18 @@ class MovementService {
   /// daquele ciclo específico ainda falta enviar — retorna null para o
   /// chamador tratar como "nada a coletar a partir deste aparelho", em
   /// vez de inventar um delta.
-  Future<MovementLocalDelta?> pendingDeltaForClosedCycle(String cycleId, int currentStepsSinceBoot) async {
+  Future<MovementLocalDelta?> pendingDeltaForClosedCycle(
+      String cycleId, int currentStepsSinceBoot) async {
     await ensureLoaded();
     final entry = _state[cycleId] as Map<String, dynamic>?;
     if (entry == null) return null;
-    final baseline = entry['baseline'] as int;
     final lastSubmittedTotal = entry['lastSubmittedTotal'] as int;
-    final totalSoFar = currentStepsSinceBoot - baseline < 0 ? 0 : currentStepsSinceBoot - baseline;
-    final uncollected = totalSoFar - lastSubmittedTotal < 0 ? 0 : totalSoFar - lastSubmittedTotal;
-    return MovementLocalDelta(uncollectedSteps: uncollected, totalStepsInCycle: totalSoFar);
+    final totalSoFar = await _totalSoFar(cycleId, entry, currentStepsSinceBoot);
+    final uncollected = totalSoFar - lastSubmittedTotal < 0
+        ? 0
+        : totalSoFar - lastSubmittedTotal;
+    return MovementLocalDelta(
+        uncollectedSteps: uncollected, totalStepsInCycle: totalSoFar);
   }
 
   /// Chamado após uma coleta bem-sucedida no backend — registra que o
@@ -224,9 +275,11 @@ class MovementService {
   /// lista, mas limpa entradas de ciclos que não estão mais entre os
   /// `keepCycleIds` (o atual + o pendente de verdade) a cada chamada
   /// pra nunca crescer sem limite.
-  Future<void> acknowledgePendingCycle(String cycleId, {required Iterable<String> keepCycleIds}) async {
+  Future<void> acknowledgePendingCycle(String cycleId,
+      {required Iterable<String> keepCycleIds}) async {
     final prefs = await SharedPreferences.getInstance();
-    final acknowledged = (prefs.getStringList(_kAcknowledgedPendingKey) ?? <String>[]).toSet();
+    final acknowledged =
+        (prefs.getStringList(_kAcknowledgedPendingKey) ?? <String>[]).toSet();
     acknowledged.add(cycleId);
     acknowledged.retainWhere(keepCycleIds.contains);
     await prefs.setStringList(_kAcknowledgedPendingKey, acknowledged.toList());
@@ -234,7 +287,8 @@ class MovementService {
 
   Future<bool> isPendingCycleAcknowledged(String cycleId) async {
     final prefs = await SharedPreferences.getInstance();
-    return (prefs.getStringList(_kAcknowledgedPendingKey) ?? const <String>[]).contains(cycleId);
+    return (prefs.getStringList(_kAcknowledgedPendingKey) ?? const <String>[])
+        .contains(cycleId);
   }
 
   bool _foregroundTaskInitialized = false;
@@ -245,7 +299,8 @@ class MovementService {
       androidNotificationOptions: AndroidNotificationOptions(
         channelId: 'movement_tracking',
         channelName: 'Contagem de passos',
-        channelDescription: 'Mantém a contagem de passos ativa com o app em segundo plano.',
+        channelDescription:
+            'Mantém a contagem de passos ativa com o app em segundo plano.',
         onlyAlertOnce: true,
       ),
       iosNotificationOptions: const IOSNotificationOptions(),
@@ -289,7 +344,8 @@ class MovementService {
         // declarado em AndroidManifest.xml, que aponta pro drawable
         // ic_stat_mental (monocromático, gerado a partir do ícone
         // oficial do app).
-        notificationIcon: const NotificationIcon(metaDataName: 'com.rhoneyinc.mental.NOTIFICATION_ICON'),
+        notificationIcon: const NotificationIcon(
+            metaDataName: 'com.rhoneyinc.mental.NOTIFICATION_ICON'),
         callback: startMovementTaskCallback,
       );
       return result is ServiceRequestSuccess;
@@ -330,15 +386,18 @@ class MovementService {
   /// GET /movement/status (Home e tela Movimento) — sem chamada de rede
   /// extra só pra isso. Sem-efeito se o serviço não estiver rodando
   /// (Movimento desativado, ou plataforma sem foreground service).
-  Future<void> updateNotificationPreview({required int stepsCollected, required int xpAwarded}) async {
+  Future<void> updateNotificationPreview(
+      {required int stepsCollected, required int xpAwarded}) async {
     try {
       if (!await FlutterForegroundTask.isRunningService) return;
-      final mentalCoinsToday = (stepsCollected ~/ _kStepsPerMentalCoin) * _kMentalCoinsPerMilestone;
+      final mentalCoinsToday =
+          (stepsCollected ~/ _kStepsPerMentalCoin) * _kMentalCoinsPerMilestone;
       await FlutterForegroundTask.updateService(
         notificationTitle: 'MENTAL — Movimento ativo',
         // Pedido de Rhoney (14/09/2026): passos também visíveis, não só
         // os dois contadores derivados.
-        notificationText: '🚶 ${formatSteps(stepsCollected)} passos · 🪙 $mentalCoinsToday MentalCoins · ⚡ $xpAwarded XP hoje',
+        notificationText:
+            '🚶 ${formatSteps(stepsCollected)} passos · 🪙 $mentalCoinsToday MentalCoins · ⚡ $xpAwarded XP hoje',
       );
     } catch (_) {
       // Mesmo princípio de startForegroundTracking/stopForegroundTracking
@@ -357,7 +416,8 @@ class MovementService {
     final thousands = steps / 1000;
     final rounded = (thousands * 10).round() / 10;
     final isWhole = rounded == rounded.roundToDouble();
-    final formatted = isWhole ? rounded.toInt().toString() : rounded.toStringAsFixed(1);
+    final formatted =
+        isWhole ? rounded.toInt().toString() : rounded.toStringAsFixed(1);
     return '${formatted}k';
   }
 }
