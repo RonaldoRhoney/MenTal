@@ -39,7 +39,7 @@ import unicodedata
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SOURCE_DIR = REPO_ROOT / "Mundo_da_Tecnologia" / "Internet"
+SOURCE_DIR = REPO_ROOT / "MUNDO" / "Mundo_da_Tecnologia" / "Internet"
 OUTPUT_DIR = REPO_ROOT / "backend" / "content"
 
 NIVEL_TO_DIFFICULTY = {

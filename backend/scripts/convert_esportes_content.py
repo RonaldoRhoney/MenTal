@@ -35,7 +35,7 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SOURCE_DIR = REPO_ROOT / "Mundo_dos_Esportes"
+SOURCE_DIR = REPO_ROOT / "MUNDO" / "Mundo_dos_Esportes"
 OUTPUT_DIR = REPO_ROOT / "backend" / "content"
 
 DIFFICULTY_LEVEL = 1  # sem trilha de dificuldade neste Mundo

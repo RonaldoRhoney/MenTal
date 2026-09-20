@@ -23,7 +23,7 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SOURCE_DIR = REPO_ROOT / "Mundo_dos_Oceanos"
+SOURCE_DIR = REPO_ROOT / "MUNDO" / "Mundo_dos_Oceanos"
 OUTPUT_DIR = REPO_ROOT / "backend" / "content"
 
 # nome do arquivo fonte -> territory_id (migrations/069_mundo_oceanos.sql)

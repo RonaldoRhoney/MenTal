@@ -32,7 +32,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_PATH = REPO_ROOT / "backend" / "content" / "linguagem_interpretacao_textos.json"
 
 SOURCE_FILES = [
-    REPO_ROOT / "Mundo_da_Linguagem" / f"interpretacao_textos_bloco{n}.json" for n in (1, 2, 3, 4)
+    REPO_ROOT / "MUNDO" / "Mundo_da_Linguagem" / f"interpretacao_textos_bloco{n}.json" for n in (1, 2, 3, 4)
 ]
 
 TERRITORY_ID = "textos"

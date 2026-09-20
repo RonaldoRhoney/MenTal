@@ -23,7 +23,7 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SOURCE_DIR = REPO_ROOT / "Mundo_do_Transito"
+SOURCE_DIR = REPO_ROOT / "MUNDO" / "Mundo_do_Transito"
 OUTPUT_DIR = REPO_ROOT / "backend" / "content"
 
 # meta.tema (arquivo fonte) -> territory_id (migrations/065_mundo_transito.sql)
