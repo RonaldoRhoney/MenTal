@@ -3172,5 +3172,9 @@
   "territoryLinguagemInterpretacaoDeTexto": "Interpretação de Texto",
   "@territoryLinguagemInterpretacaoDeTexto": {
     "description": "Territory name — Linguagem grammar SubMundo: Interpretação de Texto"
+  },
+  "territoryLinguagemConcordanciaVerbal": "Concordância Verbal",
+  "@territoryLinguagemConcordanciaVerbal": {
+    "description": "Territory name — Linguagem grammar SubMundo: Concordância Verbal"
   }
 }

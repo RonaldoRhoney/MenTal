@@ -364,12 +364,43 @@ Future<void> _pumpChallengeScreen(
 }
 
 void main() {
-  test('explanationForResult tira "Correto!/Isso mesmo!" só quando o jogador ERROU', () {
-    expect(explanationForResult('Isso mesmo! Esse sinal representa casa.', false), 'Esse sinal representa casa.');
-    expect(explanationForResult('Correto! O YouTube é a segunda.', false), 'O YouTube é a segunda.');
-    expect(explanationForResult('Isso mesmo! Esse sinal representa casa.', true), 'Isso mesmo! Esse sinal representa casa.');
+  testWidgets(
+      'prompt com texto-base: o texto vira cartão de leitura e só a pergunta fica em destaque',
+      (tester) async {
+    final passage =
+        'Leia o texto:\n\n${'O ônibus partiu na frente de Rui pelo terceiro dia seguido. ' * 3}';
+    await tester.pumpWidget(MaterialApp(
+        home: Scaffold(
+            body: ChallengePromptText(
+                prompt: '$passage\n\nO que aconteceu com Rui?'))));
+    expect(find.byKey(const Key('prompt_passage')), findsOneWidget);
+    expect(find.byKey(const Key('prompt_question')), findsOneWidget);
+    expect(find.text('O que aconteceu com Rui?'), findsOneWidget);
+  });
+
+  testWidgets(
+      'prompt curto (sem texto-base) continua sendo só o enunciado em destaque',
+      (tester) async {
+    await tester.pumpWidget(const MaterialApp(
+        home: Scaffold(
+            body: ChallengePromptText(prompt: 'Quanto é 2 + 2?\n\nEscolha.'))));
+    expect(find.byKey(const Key('prompt_passage')), findsNothing);
+  });
+
+  test(
+      'explanationForResult tira "Correto!/Isso mesmo!" só quando o jogador ERROU',
+      () {
+    expect(
+        explanationForResult('Isso mesmo! Esse sinal representa casa.', false),
+        'Esse sinal representa casa.');
+    expect(explanationForResult('Correto! O YouTube é a segunda.', false),
+        'O YouTube é a segunda.');
+    expect(
+        explanationForResult('Isso mesmo! Esse sinal representa casa.', true),
+        'Isso mesmo! Esse sinal representa casa.');
     expect(explanationForResult('2 + 2 = 4.', false), '2 + 2 = 4.');
-    expect(explanationForResult('Correto!', false), 'Correto!'); // nunca deixa vazio
+    expect(explanationForResult('Correto!', false),
+        'Correto!'); // nunca deixa vazio
   });
 
   testWidgets(

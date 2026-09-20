@@ -3993,6 +3993,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Interpretação de Texto'**
   String get territoryLinguagemInterpretacaoDeTexto;
+
+  /// Territory name — Linguagem grammar SubMundo: Concordância Verbal
+  ///
+  /// In pt, this message translates to:
+  /// **'Concordância Verbal'**
+  String get territoryLinguagemConcordanciaVerbal;
 }
 
 class _AppLocalizationsDelegate

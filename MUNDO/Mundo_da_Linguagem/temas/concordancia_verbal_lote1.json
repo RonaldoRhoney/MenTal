@@ -1,0 +1,808 @@
+{
+  "tema": "Concordância Verbal",
+  "slug": "concordancia_verbal",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney. Todas as opções de cada 'Complete' estão no mesmo tempo verbal, para que só a concordância diferencie. Conferir 'Os Estados Unidos são' e 'nem eu nem você somos'.",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Os alunos ___ a prova. (fazer, presente)",
+      "options": [
+        "fazem",
+        "faz",
+        "fazemos",
+        "fazes"
+      ],
+      "correct_answer": "fazem",
+      "explanation": "O sujeito 'os alunos' é plural (3ª pessoa): o verbo vai para 'fazem'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: A menina ___ ao parque. (ir, presente)",
+      "options": [
+        "vai",
+        "vão",
+        "vamos",
+        "vais"
+      ],
+      "correct_answer": "vai",
+      "explanation": "'A menina' é singular (3ª pessoa): 'vai'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Nós ___ cedo ontem. (chegar, pretérito perfeito)",
+      "options": [
+        "chegamos",
+        "chegaram",
+        "chegou",
+        "chegaste"
+      ],
+      "correct_answer": "chegamos",
+      "explanation": "O sujeito 'nós' pede a 1ª pessoa do plural: 'chegamos'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Eu e você ___ amigos. (ser, presente)",
+      "options": [
+        "somos",
+        "são",
+        "sou",
+        "é"
+      ],
+      "correct_answer": "somos",
+      "explanation": "Sujeito composto com 'eu' (1ª pessoa): o verbo vai para a 1ª pessoa do plural, 'somos'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ela e ele ___ irmãos. (ser, presente)",
+      "options": [
+        "são",
+        "é",
+        "somos",
+        "sois"
+      ],
+      "correct_answer": "são",
+      "explanation": "Sujeito composto de 3ª pessoa ('ela e ele'): verbo no plural, 'são'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: As flores ___ bonitas. (estar, presente)",
+      "options": [
+        "estão",
+        "está",
+        "estamos",
+        "estás"
+      ],
+      "correct_answer": "estão",
+      "explanation": "'As flores' é plural: 'estão'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: O menino e a menina ___ na escola. (estudar, presente)",
+      "options": [
+        "estudam",
+        "estuda",
+        "estudamos",
+        "estudas"
+      ],
+      "correct_answer": "estudam",
+      "explanation": "Sujeito composto anteposto ao verbo ('o menino e a menina') vai para o plural: 'estudam'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Tu ___ muito. (falar, presente)",
+      "options": [
+        "falas",
+        "fala",
+        "falamos",
+        "falam"
+      ],
+      "correct_answer": "falas",
+      "explanation": "O pronome 'tu' pede a 2ª pessoa do singular: 'falas'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Vocês ___ atrasados. (estar, presente)",
+      "options": [
+        "estão",
+        "está",
+        "estamos",
+        "estás"
+      ],
+      "correct_answer": "estão",
+      "explanation": "'Vocês' é pronome de 2ª pessoa que leva o verbo na 3ª pessoa do plural: 'estão'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: ___ dois dias que ele viajou. (fazer, presente)",
+      "options": [
+        "Faz",
+        "Fazem",
+        "Fazemos",
+        "Fazes"
+      ],
+      "correct_answer": "Faz",
+      "explanation": "'Fazer' indicando tempo decorrido é impessoal: fica sempre na 3ª pessoa do singular ('Faz dois dias').",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: ___ muitos livros na estante. (haver, presente)",
+      "options": [
+        "Há",
+        "Hão",
+        "Havemos",
+        "Haveis"
+      ],
+      "correct_answer": "Há",
+      "explanation": "'Haver' no sentido de existir é impessoal: 'Há muitos livros'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ontem ___ muitas festas na cidade. (haver, pretérito imperfeito)",
+      "options": [
+        "havia",
+        "haviam",
+        "haveria",
+        "haverá"
+      ],
+      "correct_answer": "havia",
+      "explanation": "'Haver' com sentido de existir não se flexiona no plural: 'havia muitas festas'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Os pássaros ___ alto. (voar, presente)",
+      "options": [
+        "voam",
+        "voa",
+        "voamos",
+        "voas"
+      ],
+      "correct_answer": "voam",
+      "explanation": "'Os pássaros' é plural: 'voam'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: A turma ___ animada. (estar, presente)",
+      "options": [
+        "está",
+        "estão",
+        "estamos",
+        "estás"
+      ],
+      "correct_answer": "está",
+      "explanation": "'Turma' é substantivo coletivo no singular: o verbo fica no singular ('está').",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: O povo ___ nas ruas. (estar, presente)",
+      "options": [
+        "está",
+        "estão",
+        "estamos",
+        "estás"
+      ],
+      "correct_answer": "está",
+      "explanation": "'Povo' é coletivo no singular: 'está'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: O time ___ um gol. (marcar, pretérito perfeito)",
+      "options": [
+        "marcou",
+        "marcaram",
+        "marcamos",
+        "marcaste"
+      ],
+      "correct_answer": "marcou",
+      "explanation": "'O time' é singular: 'marcou'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Meu irmão e eu ___ ao cinema. (ir, presente)",
+      "options": [
+        "vamos",
+        "vão",
+        "vai",
+        "vais"
+      ],
+      "correct_answer": "vamos",
+      "explanation": "Sujeito composto que inclui 'eu' leva o verbo na 1ª pessoa do plural: 'vamos'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Você e ela ___ felizes. (ficar, pretérito perfeito)",
+      "options": [
+        "ficaram",
+        "ficou",
+        "ficamos",
+        "ficaste"
+      ],
+      "correct_answer": "ficaram",
+      "explanation": "Sujeito composto de 3ª pessoa ('você e ela'): plural, 'ficaram'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Tanto o pai quanto o filho ___ médicos. (ser, presente)",
+      "options": [
+        "são",
+        "é",
+        "somos",
+        "sois"
+      ],
+      "correct_answer": "são",
+      "explanation": "'Tanto... quanto' soma os dois sujeitos: verbo no plural, 'são'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: As crianças ___ na praça. (brincar, presente)",
+      "options": [
+        "brincam",
+        "brinca",
+        "brincamos",
+        "brincas"
+      ],
+      "correct_answer": "brincam",
+      "explanation": "'As crianças' é plural: 'brincam'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Nós ___ o dever. (fazer, pretérito perfeito)",
+      "options": [
+        "fizemos",
+        "fizeram",
+        "fez",
+        "fizeste"
+      ],
+      "correct_answer": "fizemos",
+      "explanation": "'Nós' pede 1ª pessoa do plural: 'fizemos'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Elas ___ o livro. (querer, presente)",
+      "options": [
+        "querem",
+        "quer",
+        "queremos",
+        "queres"
+      ],
+      "correct_answer": "querem",
+      "explanation": "'Elas' é 3ª pessoa do plural: 'querem'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: A professora e os alunos ___ ao museu. (ir, pretérito perfeito)",
+      "options": [
+        "foram",
+        "foi",
+        "fomos",
+        "foste"
+      ],
+      "correct_answer": "foram",
+      "explanation": "Sujeito composto de 3ª pessoa: verbo no plural, 'foram'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Tu e eu ___ juntos. (estar, presente)",
+      "options": [
+        "estamos",
+        "estão",
+        "estás",
+        "está"
+      ],
+      "correct_answer": "estamos",
+      "explanation": "'Tu e eu' inclui a 1ª pessoa: o verbo vai para 'estamos'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: As notícias ___ rápido. (correr, presente)",
+      "options": [
+        "correm",
+        "corre",
+        "corremos",
+        "corres"
+      ],
+      "correct_answer": "correm",
+      "explanation": "'As notícias' é plural: 'correm'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (verbo haver).",
+      "options": [
+        "Havia muitas pessoas na fila.",
+        "Haviam muitas pessoas na fila.",
+        "Houveram muitas pessoas na fila.",
+        "Existe muitas pessoas na fila."
+      ],
+      "correct_answer": "Havia muitas pessoas na fila.",
+      "explanation": "'Haver' com sentido de existir é impessoal (fica no singular): 'Havia muitas pessoas'. 'Existir' concordaria: 'Existem muitas pessoas'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Mais de um aluno ___ a prova. (esquecer, pretérito perfeito)",
+      "options": [
+        "esqueceu",
+        "esqueceram",
+        "esquecemos",
+        "esqueceste"
+      ],
+      "correct_answer": "esqueceu",
+      "explanation": "Com a expressão 'mais de um', o verbo fica no singular ('esqueceu').",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Ele é um dos que mais ___ na empresa. (trabalhar, presente)",
+      "options": [
+        "trabalham",
+        "trabalha",
+        "trabalhamos",
+        "trabalhas"
+      ],
+      "correct_answer": "trabalham",
+      "explanation": "Em 'um dos que', o pronome 'que' retoma o plural 'os que': o verbo vai para o plural, 'trabalham'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Somos nós que ___ a casa. (limpar, presente)",
+      "options": [
+        "limpamos",
+        "limpam",
+        "limpa",
+        "limpo"
+      ],
+      "correct_answer": "limpamos",
+      "explanation": "Com o pronome relativo 'que', o verbo concorda com o antecedente 'nós': 'limpamos'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (partícula se com verbo transitivo).",
+      "options": [
+        "Vendem-se casas.",
+        "Vende-se casas.",
+        "Vendemos-se casas.",
+        "Vendes-se casas."
+      ],
+      "correct_answer": "Vendem-se casas.",
+      "explanation": "Na voz passiva sintética o verbo concorda com o sujeito paciente: 'casas' (plural) → 'Vendem-se casas'.",
+      "hints": [
+        "Observe se o 'se' é partícula apassivadora (com verbo transitivo direto) ou índice de indeterminação (com verbo sem objeto direto).",
+        "Na voz passiva sintética, o verbo concorda com o sujeito que vem depois; com verbo preposicionado, fica no singular."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (partícula se com verbo preposicionado).",
+      "options": [
+        "Precisa-se de funcionários.",
+        "Precisam-se de funcionários.",
+        "Precisamos-se de funcionários.",
+        "Precisas-se de funcionários."
+      ],
+      "correct_answer": "Precisa-se de funcionários.",
+      "explanation": "'Precisar de' é verbo com preposição: o 'se' é índice de indeterminação e o verbo fica no singular.",
+      "hints": [
+        "Observe se o 'se' é partícula apassivadora (com verbo transitivo direto) ou índice de indeterminação (com verbo sem objeto direto).",
+        "Na voz passiva sintética, o verbo concorda com o sujeito que vem depois; com verbo preposicionado, fica no singular."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Já ___ duas horas. (ser, presente)",
+      "options": [
+        "são",
+        "é",
+        "sou",
+        "somos"
+      ],
+      "correct_answer": "são",
+      "explanation": "Para indicar horas, o verbo 'ser' concorda com o numeral: 'são duas horas'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Agora ___ meio-dia e meia. (ser, presente)",
+      "options": [
+        "é",
+        "são",
+        "sou",
+        "somos"
+      ],
+      "correct_answer": "é",
+      "explanation": "Com 'meio-dia' e 'meia-noite', usa-se o singular: 'é meio-dia e meia'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Um ou outro aluno ___ atrasado. (chegar, pretérito perfeito)",
+      "options": [
+        "chegou",
+        "chegaram",
+        "chegamos",
+        "chegaste"
+      ],
+      "correct_answer": "chegou",
+      "explanation": "'Um ou outro' pede o verbo no singular: 'chegou'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Cerca de mil pessoas ___ ao show. (ir, pretérito perfeito)",
+      "options": [
+        "foram",
+        "foi",
+        "fui",
+        "fomos"
+      ],
+      "correct_answer": "foram",
+      "explanation": "Depois de 'cerca de' + numeral plural, o verbo concorda com o numeral: 'foram'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Não ___ mais vagas. (haver, presente)",
+      "options": [
+        "há",
+        "hão",
+        "havemos",
+        "haveis"
+      ],
+      "correct_answer": "há",
+      "explanation": "'Haver' no sentido de existir é impessoal: 'Não há mais vagas'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Faz três anos que eles ___ aqui. (morar, presente)",
+      "options": [
+        "moram",
+        "mora",
+        "moramos",
+        "moras"
+      ],
+      "correct_answer": "moram",
+      "explanation": "'Faz' é impessoal (tempo decorrido), mas o verbo 'morar' concorda com o seu sujeito 'eles': 'moram'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Sou eu que ___ o café. (fazer, presente)",
+      "options": [
+        "faço",
+        "faz",
+        "fazes",
+        "fazem"
+      ],
+      "correct_answer": "faço",
+      "explanation": "Com 'que', o verbo concorda com o antecedente 'eu': 'faço'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (verbo auxiliar com haver).",
+      "options": [
+        "Deve haver muitos problemas.",
+        "Devem haver muitos problemas.",
+        "Devem haverem muitos problemas.",
+        "Deveriam haverem muitos problemas."
+      ],
+      "correct_answer": "Deve haver muitos problemas.",
+      "explanation": "O verbo auxiliar acompanha o impessoal 'haver' e fica no singular: 'Deve haver'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Vossa Excelência ___ cansado? (estar, presente)",
+      "options": [
+        "está",
+        "estás",
+        "estou",
+        "estão"
+      ],
+      "correct_answer": "está",
+      "explanation": "Pronomes de tratamento (Vossa Excelência) levam o verbo na 3ª pessoa: 'está'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (haver no sentido de existir).",
+      "options": [
+        "Houve muitas dúvidas sobre o tema.",
+        "Houveram muitas dúvidas sobre o tema.",
+        "Haviam muitas dúvidas sobre o tema.",
+        "Existe muitas dúvidas sobre o tema."
+      ],
+      "correct_answer": "Houve muitas dúvidas sobre o tema.",
+      "explanation": "'Haver' no sentido de existir é impessoal: 'houve'. 'Existe' erra por não concordar com 'dúvidas'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase INCORRETA quanto à concordância verbal.",
+      "options": [
+        "Alugam-se apartamentos.",
+        "Precisa-se de vendedores.",
+        "Houve muitos acidentes.",
+        "Fazem dois meses que ele viajou."
+      ],
+      "correct_answer": "Fazem dois meses que ele viajou.",
+      "explanation": "'Fazer' indicando tempo decorrido é impessoal: o correto é 'Faz dois meses'. As demais estão corretas.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: Os Estados Unidos ___ uma grande potência. (ser, presente)",
+      "options": [
+        "são",
+        "é",
+        "sou",
+        "somos"
+      ],
+      "correct_answer": "são",
+      "explanation": "Nomes próprios plurais com artigo levam o verbo no plural: 'Os Estados Unidos são'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (chover em sentido figurado).",
+      "options": [
+        "Choveram elogios ao trabalho.",
+        "Choveu elogios ao trabalho.",
+        "Choviam-se elogios ao trabalho.",
+        "Choveremos elogios ao trabalho."
+      ],
+      "correct_answer": "Choveram elogios ao trabalho.",
+      "explanation": "Em sentido figurado, 'chover' deixa de ser impessoal e concorda com o sujeito 'elogios': 'choveram'.",
+      "hints": [
+        "Analise cada alternativa procurando qual é o sujeito de cada verbo.",
+        "Elimine as alternativas em que o verbo não concorda com o sujeito ou em que um verbo impessoal foi flexionado."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (sujeito posposto).",
+      "options": [
+        "Bastam dois dias para terminar.",
+        "Basta dois dias para terminar.",
+        "Bastamos dois dias para terminar.",
+        "Bastas dois dias para terminar."
+      ],
+      "correct_answer": "Bastam dois dias para terminar.",
+      "explanation": "O sujeito é 'dois dias' (posposto ao verbo): o verbo concorda com ele, 'bastam'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (tratar-se de).",
+      "options": [
+        "Trata-se de assuntos sérios.",
+        "Tratam-se de assuntos sérios.",
+        "Tratam-se assuntos sérios.",
+        "Trata-se assuntos sérios."
+      ],
+      "correct_answer": "Trata-se de assuntos sérios.",
+      "explanation": "'Tratar-se de' é verbo sem sujeito (o 'se' indetermina): fica no singular, 'Trata-se de assuntos sérios'.",
+      "hints": [
+        "Observe se o 'se' é partícula apassivadora (com verbo transitivo direto) ou índice de indeterminação (com verbo sem objeto direto).",
+        "Na voz passiva sintética, o verbo concorda com o sujeito que vem depois; com verbo preposicionado, fica no singular."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (sujeito posposto com fazer parte).",
+      "options": [
+        "Fazem parte do time dez jogadores.",
+        "Faz parte do time dez jogadores.",
+        "Fazemos parte do time dez jogadores.",
+        "Fazes parte do time dez jogadores."
+      ],
+      "correct_answer": "Fazem parte do time dez jogadores.",
+      "explanation": "O sujeito ('dez jogadores') vem depois do verbo; 'fazem' concorda com ele.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto à concordância verbal (fazer indicando tempo).",
+      "options": [
+        "Deve fazer dois anos que nos conhecemos.",
+        "Devem fazer dois anos que nos conhecemos.",
+        "Devem fazerem dois anos que nos conhecemos.",
+        "Deve fazerem dois anos que nos conhecemos."
+      ],
+      "correct_answer": "Deve fazer dois anos que nos conhecemos.",
+      "explanation": "'Fazer' (tempo decorrido) é impessoal e transmite a impessoalidade ao auxiliar: 'Deve fazer'.",
+      "hints": [
+        "Verbos que indicam tempo decorrido ou existência não têm sujeito para concordar.",
+        "Pergunte-se: a palavra que vem depois é sujeito ou objeto do verbo?"
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: Tanto a professora quanto os alunos ___ presentes. (estar, pretérito imperfeito)",
+      "options": [
+        "estavam",
+        "estava",
+        "estávamos",
+        "estáveis"
+      ],
+      "correct_answer": "estavam",
+      "explanation": "'Tanto... quanto' forma sujeito composto de 3ª pessoa: verbo no plural, 'estavam'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: Nem eu nem você ___ culpados. (ser, presente)",
+      "options": [
+        "somos",
+        "são",
+        "é",
+        "sou"
+      ],
+      "correct_answer": "somos",
+      "explanation": "Sujeito composto com pessoas diferentes ('eu' e 'você'): prevalece a 1ª pessoa, no plural: 'somos'.",
+      "hints": [
+        "Identifique o sujeito da frase e pergunte-se se ele é singular ou plural.",
+        "O verbo concorda em número e pessoa com o sujeito, não com o termo que está mais perto dele."
+      ]
+    }
+  ]
+}

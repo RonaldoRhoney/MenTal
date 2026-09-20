@@ -34,6 +34,46 @@ String explanationForResult(String explanation, bool isCorrect) {
   return stripped.isEmpty ? explanation : stripped[0].toUpperCase() + stripped.substring(1);
 }
 
+/// Enunciado do desafio. Quando o prompt traz um TEXTO-BASE antes da pergunta
+/// (formato "texto\n\npergunta", usado em Interpretação de Texto e Textos), o
+/// texto vira um cartão em tamanho de leitura e só a pergunta fica em destaque
+/// — o texto inteiro em fonte de título ocupava a tela e empurrava as opções
+/// (achado em teste no aparelho, 20/09/2026).
+class ChallengePromptText extends StatelessWidget {
+  const ChallengePromptText({super.key, required this.prompt});
+
+  final String prompt;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context).textTheme;
+    final split = prompt.lastIndexOf('\n\n');
+    if (split == -1 || split < 120) {
+      return Text(prompt, style: theme.headlineSmall);
+    }
+    final passage = prompt.substring(0, split).trim();
+    final question = prompt.substring(split).trim();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          key: const Key('prompt_passage'),
+          width: double.infinity,
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: AppColors.bg2,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppColors.muted.withValues(alpha: 0.2)),
+          ),
+          child: Text(passage, style: theme.bodyLarge?.copyWith(height: 1.5)),
+        ),
+        const SizedBox(height: 16),
+        Text(question, key: const Key('prompt_question'), style: theme.titleLarge),
+      ],
+    );
+  }
+}
+
 class ChallengeScreen extends StatefulWidget {
   const ChallengeScreen({
     super.key,
@@ -1168,8 +1208,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   _NewChallengeBadge(label: l10n.newChallengeBadgeLabel),
                   const SizedBox(height: 12),
                 ],
-                Text(challenge['prompt'] as String,
-                    style: Theme.of(context).textTheme.headlineSmall),
+                ChallengePromptText(prompt: challenge['prompt'] as String),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'visual' && options != null)
                   _buildVisualOptions(options)
@@ -1342,8 +1381,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   _NewChallengeBadge(label: l10n.newChallengeBadgeLabel),
                   const SizedBox(height: 12),
                 ],
-                Text(challenge['prompt'] as String,
-                    style: Theme.of(context).textTheme.headlineSmall),
+                ChallengePromptText(prompt: challenge['prompt'] as String),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'cores') ...[
                   // Efeito Stroop clássico (pedido de Rhoney, 2026-09-03,

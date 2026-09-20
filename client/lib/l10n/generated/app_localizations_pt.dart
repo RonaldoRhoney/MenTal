@@ -2304,4 +2304,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get territoryLinguagemInterpretacaoDeTexto => 'Interpretação de Texto';
+
+  @override
+  String get territoryLinguagemConcordanciaVerbal => 'Concordância Verbal';
 }
