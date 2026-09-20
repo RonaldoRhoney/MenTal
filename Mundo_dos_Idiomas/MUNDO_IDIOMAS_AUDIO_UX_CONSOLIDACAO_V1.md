@@ -1,6 +1,6 @@
 # MENTAL — Mundo dos Idiomas: Áudio Fiel (TTS) e Reforço Visual em Libras
 
-**Status:** IMPLEMENTADO (19/09/2026) o ajuste de UX do §2.2.1 (consolidação seleção+áudio). Escopo do reconhecimento de fala do usuário (ver seção 5) fica explicitamente fora desta entrega — registrado como evolução futura, não implementar agora.
+**Status:** PARCIALMENTE IMPLEMENTADO (19/09/2026) — consolidação seleção+áudio do §2.2.1 feita; o destaque visual customizado de "bloco único" (fim do §2.2.1) NÃO foi feito, ver "Não implementado nesta rodada" abaixo. Escopo do reconhecimento de fala do usuário (ver seção 5) fica explicitamente fora desta entrega — registrado como evolução futura, não implementar agora.
 
 ## O que foi implementado nesta rodada (§2.2.1)
 

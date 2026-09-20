@@ -533,6 +533,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get nextChallengeButton => 'Próximo desafio';
 
   @override
+  String get relampagoRetryNowButton => 'Tentar de novo';
+
+  @override
   String get batchCompletedMessage =>
       'Você completou todos os desafios disponíveis aqui por agora!';
 

@@ -78,13 +78,13 @@ território, rate limiting, etc.), zero telas novas.
 
 ## Pendências
 
-- Ícone/cor de identidade visual do Mundo dos Valores na Home (ainda
-  não decidido).
+- Nenhuma. O ícone do Mundo dos Valores na Home já existe
+  (`client/lib/screens/home_screen.dart`, `case 'valores'` em `_worldIcon`).
 
 ## Próximo passo
 
 V6 considerada concluída (conteúdo em produção + validado em
-dispositivo real). Falta só decidir o ícone/cor do Mundo dos Valores.
+dispositivo real). Ícone do Mundo dos Valores já definido na Home.
 Conteúdo denso do Mundo da Linguagem (`Mundo_da_Linguagem/README.md`) e
 o Feed Social (`Engenharia_Geral/FEED_SOCIAL_V1.md`) já foram
 implementados — próxima prioridade a decidir com Rhoney: V7 (Mundo do

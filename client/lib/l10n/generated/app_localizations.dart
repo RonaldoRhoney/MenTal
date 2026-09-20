@@ -1054,6 +1054,12 @@ abstract class AppLocalizations {
   /// **'Próximo desafio'**
   String get nextChallengeButton;
 
+  /// Relampago: after a wrong answer, one immediate correction attempt (no XP)
+  ///
+  /// In pt, this message translates to:
+  /// **'Tentar de novo'**
+  String get relampagoRetryNowButton;
+
   /// Shown when the player has answered every available challenge in this territory/difficulty batch
   ///
   /// In pt, this message translates to:

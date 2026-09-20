@@ -1,6 +1,6 @@
 # MENTAL — Painel Administrativo (ADMIN_DASHBOARD_V1)
 
-**Status:** Aprovado para implementação.
+**Status:** Aprovado, mas ADIADO por decisão de Rhoney (ver `README.md` desta pasta) — a versão implementada e em produção é a in-app (`ADMIN_PAINEL_IN_APP_V1.md`). Este painel web externo continua não implementado.
 **Referência visual:** mental-admin-panel.html (protótipo estático em HTML/CSS — reproduzir estrutura, hierarquia, cores e layout abaixo; pode ser servido como frontend estático real ou reconstruído em framework leve, ver seção 2).
 **Documento relacionado:** ADMIN_PANEL_E_CREDITO_INSTITUCIONAL.md (decisão original que criou este item na Foundation — este documento substitui a Seção 1.4 daquele arquivo com o escopo detalhado, agora que a etapa foi formalmente priorizada).
 **Escopo:** Painel de leitura de métricas, fora do app do jogador. Não inclui edição de dado de jogador (XP, progresso, saldo) nesta fase — apenas visualização.

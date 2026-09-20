@@ -1,7 +1,7 @@
 # MENTAL — Documento Consolidado dos Agentes de IA (Funções, Contexto e Relação entre Si)
 
 **Status:** Aprovado. Documento vivo — atualizar sempre que um agente for implementado, ajustado de escopo, ou um novo agente for adicionado.
-**Documentos relacionados:** MENTAL_AI_AGENT_TEAM_V1.md (arquitetura original de motores e princípio de não-autonomia), AGENTE_MENTALFEEDAI.md, AGENTE_SAUDE_INFRAESTRUTURA.md, AGENTE_MODERACAO.md.
+**Documentos relacionados:** MENTAL_AI_AGENT_TEAM_V1.md (arquitetura original de motores e princípio de não-autonomia), AGENTE_MENTALFEEDAI.md, AGENTE_SAUDE_INFRAESTRUTURA.md, AGENTE_MODERACAO.md (estes três arquivos NÃO existem no repositório — só o resumo neste documento; achado da auditoria de documentos de 19/09/2026).
 **Propósito:** Reunir, num único lugar, a descrição contextualizada e a função de cada agente já nomeado — inclusive os já implementados — para servir de referência rápida sobre quem faz o quê, por que existe, e como os 9 trabalham em paralelo sem sobrepor responsabilidade.
 
 ---
@@ -147,10 +147,10 @@ Nenhum agente aplica ação em produção de forma autônoma. Todo agente gera r
 |---|---|---|---|---|
 | MentalGuard | A | Implementado | Sob demanda / release | Aplicar correção em produção |
 | MentalQA | A | Implementado | Cada mudança de código | Ignorar teste falhando |
-| MentalScout | B | Implementado (Motor B bloqueado) | Agendado | Publicar conteúdo sem aprovação |
+| MentalScout | B | Formalizado no documento; NÃO existe como agente em `.claude/agents/` nem fluxo agendado (n8n) — só a curadoria manual/por subagente pontual | Agendado | Publicar conteúdo sem aprovação |
 | MentalPulse | B | Formalizado | Contínuo (5-10 min) | Corrigir infraestrutura sozinho |
 | MentalComply | B | Candidato | Release + periódico | Alterar comportamento do app |
-| MentalAudit | B | Candidato | Após carga de conteúdo | Mover/corrigir item sozinho |
+| MentalAudit | B | Implementado como `mental-content-consistency` (`.claude/agents/`, 18/09/2026; sob demanda, ainda sem agendamento) | Após carga de conteúdo | Mover/corrigir item sozinho |
 | MentalGrowth | B | Candidato | Periódico | Decidir mudança de produto |
 | MentalFeedAI | Reativo | Formalizado | Novo feedback | Publicar resposta sem aprovação |
 | MentalShield | Reativo | Formalizado | Nova denúncia | Aplicar ação de moderação |

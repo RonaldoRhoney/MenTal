@@ -1,0 +1,26 @@
+[
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'casa' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/house.webp",
+    "source_url": "https://www.canva.com/d/111M0DljLS5bLS2"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'porta' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/door.webp",
+    "source_url": "https://www.canva.com/d/tHv-CopN6wyyZGE"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'janela' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/window.webp",
+    "source_url": "https://www.canva.com/d/JYFRwuRJTZvi3_N"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'mesa' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/table.webp",
+    "source_url": "https://www.canva.com/d/sh7A9TJ53bLNcZ3"
+  }
+]

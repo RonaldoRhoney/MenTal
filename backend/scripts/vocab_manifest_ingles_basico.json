@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'casa' em inglês?",
+    "correct_answer": "House",
+    "pt_meaning": "casa"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'porta' em inglês?",
+    "correct_answer": "Door",
+    "pt_meaning": "porta"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'janela' em inglês?",
+    "correct_answer": "Window",
+    "pt_meaning": "janela"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'mesa' em inglês?",
+    "correct_answer": "Table",
+    "pt_meaning": "mesa"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'grande' em inglês?",
+    "correct_answer": "Big",
+    "pt_meaning": "grande"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'maçã' em inglês?",
+    "correct_answer": "Apple",
+    "pt_meaning": "maçã"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'água' em inglês?",
+    "correct_answer": "Water",
+    "pt_meaning": "água"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'pão' em inglês?",
+    "correct_answer": "Bread",
+    "pt_meaning": "pão"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'gostar/gostoso' em inglês?",
+    "correct_answer": "Like",
+    "pt_meaning": "gostar/gostoso"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'eu' em inglês?",
+    "correct_answer": "I",
+    "pt_meaning": "eu"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'mãe' em inglês?",
+    "correct_answer": "Mother",
+    "pt_meaning": "mãe"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'pai' em inglês?",
+    "correct_answer": "Father",
+    "pt_meaning": "pai"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'irmão' em inglês?",
+    "correct_answer": "Brother",
+    "pt_meaning": "irmão"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'ter' em inglês?",
+    "correct_answer": "Have",
+    "pt_meaning": "ter"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'dois' em inglês?",
+    "correct_answer": "Two",
+    "pt_meaning": "dois"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'vermelho' em inglês?",
+    "correct_answer": "Red",
+    "pt_meaning": "vermelho"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'azul' em inglês?",
+    "correct_answer": "Blue",
+    "pt_meaning": "azul"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'camisa' em inglês?",
+    "correct_answer": "Shirt",
+    "pt_meaning": "camisa"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'meu' em inglês?",
+    "correct_answer": "My",
+    "pt_meaning": "meu"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'é/está' (ele/ela) em inglês?",
+    "correct_answer": "Is",
+    "pt_meaning": "é/está"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'cachorro' em inglês?",
+    "correct_answer": "Dog",
+    "pt_meaning": "cachorro"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'gato' em inglês?",
+    "correct_answer": "Cat",
+    "pt_meaning": "gato"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'pequeno' em inglês?",
+    "correct_answer": "Small",
+    "pt_meaning": "pequeno"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'e' (conectivo) em inglês?",
+    "correct_answer": "And",
+    "pt_meaning": "e"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'são/estão' (eles) em inglês?",
+    "correct_answer": "Are",
+    "pt_meaning": "são/estão"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'três' em inglês?",
+    "correct_answer": "Three",
+    "pt_meaning": "três"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'hoje' em inglês?",
+    "correct_answer": "Today",
+    "pt_meaning": "hoje"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'horas' em inglês?",
+    "correct_answer": "Hours",
+    "pt_meaning": "horas"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'escola' em inglês?",
+    "correct_answer": "School",
+    "pt_meaning": "escola"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'livro' em inglês?",
+    "correct_answer": "Book",
+    "pt_meaning": "livro"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'professor(a)' em inglês?",
+    "correct_answer": "Teacher",
+    "pt_meaning": "professor(a)"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'ler' em inglês?",
+    "correct_answer": "Read",
+    "pt_meaning": "ler"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'carro' em inglês?",
+    "correct_answer": "Car",
+    "pt_meaning": "carro"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'rua' em inglês?",
+    "correct_answer": "Street",
+    "pt_meaning": "rua"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'rápido' em inglês?",
+    "correct_answer": "Fast",
+    "pt_meaning": "rápido"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'dirigir' em inglês?",
+    "correct_answer": "Drive",
+    "pt_meaning": "dirigir"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'muito' (intensificador) em inglês?",
+    "correct_answer": "Very",
+    "pt_meaning": "muito"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'feliz' em inglês?",
+    "correct_answer": "Happy",
+    "pt_meaning": "feliz"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'triste' em inglês?",
+    "correct_answer": "Sad",
+    "pt_meaning": "triste"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'porque' em inglês?",
+    "correct_answer": "Because",
+    "pt_meaning": "porque"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'hoje' novamente para fixar (dia) em inglês?",
+    "correct_answer": "Today",
+    "pt_meaning": "hoje"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'estou' (eu) em inglês?",
+    "correct_answer": "Am",
+    "pt_meaning": "estou"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'por favor' em inglês?",
+    "correct_answer": "Please",
+    "pt_meaning": "por favor"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'amigo(a)' em inglês?",
+    "correct_answer": "Friend",
+    "pt_meaning": "amigo(a)"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'você' em inglês?",
+    "correct_answer": "You",
+    "pt_meaning": "você"
+  }
+]
