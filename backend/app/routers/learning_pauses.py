@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import config, models, schemas, scoring, services
+from .. import config, models, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
@@ -118,8 +118,7 @@ def complete_learning_pause(
         db.add(models.LearningPauseRead(user_id=user_id, learning_pause_id=learning_pause_id, read_at=utcnow()))
         profile = services.get_or_create_profile(db, user_id)
         xp_awarded = config.LEARNING_PAUSE_XP_REWARD
-        profile.xp_total += xp_awarded
-        profile.level = scoring.level_from_xp(profile.xp_total)
+        services.add_profile_xp(db, profile, xp_awarded)
 
     db.commit()
     return schemas.LearningPauseCompleteResponse(xp_awarded=xp_awarded, already_read_before=already_read)

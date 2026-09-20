@@ -2500,7 +2500,7 @@
   "@settingsDeleteAccountConfirmTitle": {
     "description": "Title of the account deletion confirmation dialog"
   },
-  "settingsDeleteAccountConfirmMessage": "Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Não é possível desfazer.",
+  "settingsDeleteAccountConfirmMessage": "Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Comentários de feedback já enviados permanecem, sem o seu nome. Não é possível desfazer.",
   "@settingsDeleteAccountConfirmMessage": {
     "description": "Body of the account deletion confirmation dialog"
   },
@@ -3104,5 +3104,13 @@
   "feedbackDailyLimitReached": "Você atingiu o limite de comentários de hoje. Volte amanhã!",
   "@feedbackDailyLimitReached": {
     "description": "Daily feedback limit message"
+  },
+  "settingsPrivacyPolicyLink": "Política de Privacidade",
+  "@settingsPrivacyPolicyLink": {
+    "description": "Permanent link to the privacy policy in Settings"
+  },
+  "loadingGeneric": "Carregando...",
+  "@loadingGeneric": {
+    "description": "Generic loading label for non-challenge screens (Progresso, Conquistas, Estatísticas, Ranking)"
   }
 }

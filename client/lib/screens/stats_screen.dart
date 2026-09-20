@@ -63,7 +63,7 @@ class _StatsScreenState extends State<StatsScreen> {
                         children: [
                           const CircularProgressIndicator(),
                           const SizedBox(height: 16),
-                          Text(l10n.preparingChallenge),
+                          Text(l10n.loadingGeneric),
                         ],
                       ),
               )

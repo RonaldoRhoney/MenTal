@@ -53,7 +53,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                         children: [
                           const CircularProgressIndicator(),
                           const SizedBox(height: 16),
-                          Text(l10n.preparingChallenge),
+                          Text(l10n.loadingGeneric),
                         ],
                       ),
               )

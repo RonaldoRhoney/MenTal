@@ -1210,9 +1210,18 @@ class _GoalSelectorState extends State<_GoalSelector> {
                 : SizedBox(
                     height: 40,
                     child: Center(
-                      child: Text(
-                        l10n.movementCurrentGoalLabel,
-                        style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+                      // Meta selecionada: o check deixa claro que é o estado atual
+                      // (antes o texto solto parecia um rótulo sem valor).
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(Icons.check_circle_outline_rounded, size: 14, color: AppColors.gold),
+                          const SizedBox(width: 4),
+                          Text(
+                            l10n.movementCurrentGoalLabel,
+                            style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 12),
+                          ),
+                        ],
                       ),
                     ),
                   ),

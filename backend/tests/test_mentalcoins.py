@@ -242,3 +242,31 @@ def test_admin_run_apuration_endpoint_requires_admin_role(client):
     resp = client.post("/admin/mentalcoins/run-apuration", headers=headers)
     assert resp.status_code == 403
     assert resp.json()["error"]["code"] == "ADMIN_ONLY"
+
+
+def test_last_closed_cycle_e_o_mesmo_em_qualquer_dia_da_semana():
+    # Achado M4: o job de recuperação precisa achar o MESMO ciclo fechado numa terça, sexta ou domingo.
+    from datetime import datetime
+
+    from app import mentalcoins
+
+    monday = mentalcoins.last_closed_cycle_bounds(datetime(2026, 9, 21, 8, 0))  # segunda
+    assert monday == mentalcoins.closed_cycle_bounds(datetime(2026, 9, 21, 8, 0))
+    for day in (22, 24, 27):  # terça, quinta, domingo
+        assert mentalcoins.last_closed_cycle_bounds(datetime(2026, 9, day, 12, 0)) == monday
+    assert monday == (date(2026, 9, 14), date(2026, 9, 20))
+
+
+def test_apuracao_repetida_nao_paga_de_novo(client):
+    from datetime import date
+
+    from app import mentalcoins
+    from app.db import SessionLocal
+
+    start, end = date(2020, 1, 6), date(2020, 1, 12)
+    with SessionLocal() as db:
+        first = mentalcoins.run_weekly_apuration(db, start, end)
+    with SessionLocal() as db:
+        second = mentalcoins.run_weekly_apuration(db, start, end)
+    assert first["already_processed"] is False
+    assert second["already_processed"] is True

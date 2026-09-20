@@ -41,6 +41,19 @@ def _run_mentalcoins_job() -> None:
             logger.exception("Falha na apuração semanal de MentalCoins")
 
 
+def _run_mentalcoins_catchup_job() -> None:
+    """Recuperação (achado M4, auditoria 20/09/2026): se o processo estava fora
+    do ar na segunda 08:00, apura o último ciclo fechado. Idempotente —
+    ciclo já processado não paga de novo."""
+    with SessionLocal() as db:
+        try:
+            cycle_start, cycle_end = mentalcoins.last_closed_cycle_bounds()
+            result = mentalcoins.run_weekly_apuration(db, cycle_start, cycle_end)
+            logger.info("Recuperação da apuração semanal de MentalCoins: %s", result)
+        except Exception:
+            logger.exception("Falha na recuperação da apuração semanal de MentalCoins")
+
+
 def _run_movement_invite_job() -> None:
     with SessionLocal() as db:
         try:
@@ -95,5 +108,10 @@ def start_scheduler() -> None:
         _scheduler.add_job(
             _run_mentalcoins_job, "cron", day_of_week="mon", hour=8, minute=0, timezone=config.MENTALCOINS_TIMEZONE
         )
-        logger.info("Agendador de MentalCoins iniciado (segundas 08:00 %s)", config.MENTALCOINS_TIMEZONE)
+        # Rede de segurança: todo dia 09:00 confere se o último ciclo fechado foi
+        # apurado (cobre redeploy/sono do Render na segunda 08:00).
+        _scheduler.add_job(
+            _run_mentalcoins_catchup_job, "cron", hour=9, minute=0, timezone=config.MENTALCOINS_TIMEZONE
+        )
+        logger.info("Agendador de MentalCoins iniciado (segundas 08:00 + recuperação diária 09:00 %s)", config.MENTALCOINS_TIMEZONE)
     _scheduler.start()

@@ -1799,7 +1799,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get settingsDeleteAccountConfirmMessage =>
-      'Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Não é possível desfazer.';
+      'Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Comentários de feedback já enviados permanecem, sem o seu nome. Não é possível desfazer.';
 
   @override
   String get settingsDeleteAccountConfirmButton => 'Excluir permanentemente';
@@ -2252,4 +2252,10 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get feedbackDailyLimitReached =>
       'Você atingiu o limite de comentários de hoje. Volte amanhã!';
+
+  @override
+  String get settingsPrivacyPolicyLink => 'Política de Privacidade';
+
+  @override
+  String get loadingGeneric => 'Carregando...';
 }

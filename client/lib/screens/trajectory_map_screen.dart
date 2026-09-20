@@ -89,7 +89,8 @@ const double _kCanvasWidth = 320;
 const double _kLeftX = 96;
 const double _kRightX = 224;
 const double _kWorldSpacing = 118;
-const double _kSubmundoSpacing = 92;
+// 132 (era 92): o rótulo de 2 linhas do Mundo vizinho invadia o SubMundo (achado UX 20/09/2026).
+const double _kSubmundoSpacing = 132;
 const double _kWorldRadius = 32;
 const double _kSubmundoRadius = 23;
 const double _kTopMargin = 56;

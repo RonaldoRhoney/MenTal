@@ -93,6 +93,26 @@ void main() {
     await tester.pumpAndSettle();
   }
 
+  testWidgets('Ajustes tem link permanente para a Política de Privacidade (auditoria A1, 20/09/2026)',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(
+      tester,
+      MaterialApp(
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: SettingsScreen(client: _FakeApiClient()),
+      ),
+    );
+    expect(find.byKey(const Key('settings_privacy_policy')), findsOneWidget);
+    expect(find.text('Política de Privacidade'), findsOneWidget);
+  });
+
   testWidgets(
       'SettingsScreen carrega preferências reais do backend e persiste mudança via PUT',
       (tester) async {

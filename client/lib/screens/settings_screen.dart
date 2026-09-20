@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../api/api_client.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../main.dart' show kPrivacyPolicyUrl;
 import '../services/feedback_service.dart';
 import '../services/share_service.dart';
 import '../services/theme_mode_service.dart';
@@ -397,6 +399,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                         ),
                       ],
+                      // Achado A1 (auditoria 20/09/2026): a política só era acessível
+                      // no age gate (uma vez). Play e LGPD pedem acesso permanente.
+                      const SizedBox(height: 10),
+                      _HighlightedSettingsTile(
+                        key: const Key('settings_privacy_policy'),
+                        icon: Icons.privacy_tip_outlined,
+                        color: AppColors.teal,
+                        label: l10n.settingsPrivacyPolicyLink,
+                        onTap: () => launchUrl(Uri.parse(kPrivacyPolicyUrl),
+                            mode: LaunchMode.externalApplication),
+                      ),
                       if (_isAdmin) ...[
                         const SizedBox(height: 10),
                         // Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md §2: "ponto de entrada
@@ -515,7 +528,8 @@ class _SettingsSectionCard extends StatelessWidget {
 /// toggles de som/notificação ao redor.
 class _HighlightedSettingsTile extends StatelessWidget {
   const _HighlightedSettingsTile(
-      {required this.icon,
+      {super.key,
+      required this.icon,
       required this.color,
       required this.label,
       required this.onTap});

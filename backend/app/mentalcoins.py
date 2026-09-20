@@ -21,6 +21,7 @@ datas compõem o ciclo usa UTC internamente.
 from datetime import date, datetime, timedelta
 
 from sqlalchemy import func, select
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from . import config, models
@@ -45,6 +46,9 @@ def get_or_create_balance(db: Session, user_id: str) -> models.MentalCoinsBalanc
 
 def credit(db: Session, user_id: str, amount: int, reason: str) -> None:
     balance = get_or_create_balance(db, user_id)
+    # Achado M1 (auditoria 20/09/2026): trava a linha antes de ler-modificar-gravar
+    # (dois créditos/resgates concorrentes não podem sobrescrever um ao outro).
+    db.refresh(balance, with_for_update=True)
     balance.balance += amount
     balance.updated_at = utcnow()
     db.add(models.MentalCoinsTransaction(user_id=user_id, amount=amount, reason=reason))
@@ -83,6 +87,16 @@ def closed_cycle_bounds(now: datetime | None = None) -> tuple[date, date]:
     return cycle_start, cycle_end
 
 
+def last_closed_cycle_bounds(now: datetime | None = None) -> tuple[date, date]:
+    """Último ciclo (segunda a domingo) já FECHADO, em qualquer dia da semana
+    — usado pelo job de recuperação: se o processo estava fora do ar na
+    segunda 08:00, o ciclo ainda é apurado no dia seguinte (achado M4 da
+    auditoria de 20/09/2026). Na segunda-feira coincide com closed_cycle_bounds."""
+    current_start, _ = current_cycle_bounds(now)
+    start = current_start - timedelta(days=7)
+    return start, start + timedelta(days=6)
+
+
 def _nickname_for(db: Session, user_id: str) -> str:
     profile = db.get(models.Profile, user_id)
     return profile.nickname if profile and profile.nickname else "?"
@@ -97,6 +111,16 @@ def run_weekly_apuration(db: Session, cycle_start: date, cycle_end: date) -> dic
     do processo, redeploy no meio do horário agendado).
     """
     if db.get(models.MentalCoinsProcessedCycle, cycle_start) is not None:
+        return {"already_processed": True, "cycle_start": cycle_start.isoformat(), "entries_created": 0}
+
+    # Achado M4: o marcador entra ANTES do pagamento (PK = cycle_start), na mesma
+    # transação — se outra instância apurar o mesmo ciclo ao mesmo tempo, uma delas
+    # falha aqui em vez de pagar em dobro.
+    db.add(models.MentalCoinsProcessedCycle(cycle_start=cycle_start, cycle_end=cycle_end))
+    try:
+        db.flush()
+    except IntegrityError:
+        db.rollback()
         return {"already_processed": True, "cycle_start": cycle_start.isoformat(), "entries_created": 0}
 
     entries_created = 0
@@ -197,7 +221,6 @@ def run_weekly_apuration(db: Session, cycle_start: date, cycle_end: date) -> dic
         )
         entries_created += 1
 
-    db.add(models.MentalCoinsProcessedCycle(cycle_start=cycle_start, cycle_end=cycle_end))
     db.commit()
     return {
         "already_processed": False,
@@ -246,6 +269,9 @@ def redeem_item(db: Session, user_id: str, item_id: str) -> models.MentalCoinsBa
         raise MentalCoinsError("ALREADY_REDEEMED", "Item já resgatado")
 
     balance = get_or_create_balance(db, user_id)
+    db.refresh(balance, with_for_update=True)  # M1: serializa resgates do mesmo usuário
+    if db.get(models.MentalCoinsRedemption, (user_id, item_id)) is not None:
+        raise MentalCoinsError("ALREADY_REDEEMED", "Item já resgatado")
     if balance.balance < item.cost:
         raise MentalCoinsError("INSUFFICIENT_BALANCE", "Saldo insuficiente")
 

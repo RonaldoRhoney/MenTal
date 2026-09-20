@@ -145,8 +145,7 @@ def complete_word_puzzle(
         xp_awarded = base_xp + speed_bonus_xp
 
         profile = services.get_or_create_profile(db, user_id)
-        profile.xp_total += xp_awarded
-        profile.level = scoring.level_from_xp(profile.xp_total)
+        services.add_profile_xp(db, profile, xp_awarded)
 
     result.completed_at = utcnow()
     result.elapsed_ms = elapsed_ms

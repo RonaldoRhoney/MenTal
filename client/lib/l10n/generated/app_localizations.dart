@@ -3097,7 +3097,7 @@ abstract class AppLocalizations {
   /// Body of the account deletion confirmation dialog
   ///
   /// In pt, this message translates to:
-  /// **'Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Não é possível desfazer.'**
+  /// **'Isso apaga permanentemente seu perfil, progresso, amigos e foto de perfil. Comentários de feedback já enviados permanecem, sem o seu nome. Não é possível desfazer.'**
   String get settingsDeleteAccountConfirmMessage;
 
   /// Confirm button inside the account deletion dialog
@@ -3891,6 +3891,18 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Você atingiu o limite de comentários de hoje. Volte amanhã!'**
   String get feedbackDailyLimitReached;
+
+  /// Permanent link to the privacy policy in Settings
+  ///
+  /// In pt, this message translates to:
+  /// **'Política de Privacidade'**
+  String get settingsPrivacyPolicyLink;
+
+  /// Generic loading label for non-challenge screens (Progresso, Conquistas, Estatísticas, Ranking)
+  ///
+  /// In pt, this message translates to:
+  /// **'Carregando...'**
+  String get loadingGeneric;
 }
 
 class _AppLocalizationsDelegate

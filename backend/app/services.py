@@ -290,6 +290,20 @@ def register_play_for_streak(db: Session, user_id: str, today: date) -> models.S
     return streak
 
 
+def add_profile_xp(db: Session, profile: models.Profile, amount: int) -> None:
+    """Soma XP ao perfil de forma ATÔMICA (UPDATE ... xp_total = xp_total + n)
+    e recalcula o nível a partir do valor recarregado — nunca lê-modifica-grava
+    em Python, então duas recompensas concorrentes não se sobrescrevem
+    (achado M1 da auditoria de 20/09/2026; antes cada ponto fazia
+    `profile.xp_total += n` sem trava). NÃO faz commit."""
+    if amount <= 0:
+        return
+    db.flush()  # grava mudanças pendentes do perfil (ex.: data da recompensa)
+    db.execute(update(models.Profile).where(models.Profile.user_id == profile.user_id).values(xp_total=models.Profile.xp_total + amount))
+    db.refresh(profile)
+    profile.level = scoring.level_from_xp(profile.xp_total)
+
+
 def check_daily_limit(db: Session, user_id: str, today: date) -> tuple[bool, int]:
     usage = db.get(models.DailyChallengeUsage, (user_id, today))
     consumed = usage.challenges_consumed if usage else 0
@@ -1063,8 +1077,7 @@ def award_share_reward(db: Session, profile: "models.Profile") -> tuple[int, boo
         return 0, True
 
     profile.last_share_reward_date = today
-    profile.xp_total += config.SHARE_XP_REWARD
-    profile.level = scoring.level_from_xp(profile.xp_total)
+    add_profile_xp(db, profile, config.SHARE_XP_REWARD)
     db.commit()
     return config.SHARE_XP_REWARD, False
 
@@ -1089,8 +1102,7 @@ def award_app_invite_reward(db: Session, profile: "models.Profile") -> tuple[int
         return 0, 0, True
 
     profile.last_app_invite_reward_date = today
-    profile.xp_total += config.APP_INVITE_XP_REWARD
-    profile.level = scoring.level_from_xp(profile.xp_total)
+    add_profile_xp(db, profile, config.APP_INVITE_XP_REWARD)
     db.commit()
     mentalcoins.credit(db, profile.user_id, config.APP_INVITE_MENTALCOINS_REWARD, "convite_app_compartilhado")
     return config.APP_INVITE_XP_REWARD, config.APP_INVITE_MENTALCOINS_REWARD, False
@@ -1522,8 +1534,7 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
 
         if winner_user_id:
             winner_profile = db.get(models.Profile, winner_user_id)
-            winner_profile.xp_total += config.BATTLE_WIN_BONUS_XP
-            winner_profile.level = scoring.level_from_xp(winner_profile.xp_total)
+            add_profile_xp(db, winner_profile, config.BATTLE_WIN_BONUS_XP)
 
         challenger_profile = db.get(models.Profile, battle.challenger_user_id)
         opponent_profile = db.get(models.Profile, battle.opponent_user_id)
@@ -2098,9 +2109,7 @@ def complete_word_constellation(
     profile = db.get(models.Profile, user_id)
     if profile is not None:
         # Achado B5: mesma trava FOR UPDATE do resto das escritas de XP.
-        db.refresh(profile, with_for_update=True)
-        profile.xp_total += xp_awarded
-        profile.level = scoring.level_from_xp(profile.xp_total)
+        add_profile_xp(db, profile, xp_awarded)
     apply_xp_to_territory(db, user_id, challenge.territory_id, xp_awarded)
     db.commit()
     return True, xp_awarded

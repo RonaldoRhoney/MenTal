@@ -1,20 +1,20 @@
 """
-Mundo_dos_Valores/README.md — Mundo dos Valores. Converte os 4 arquivos brutos de
-conteúdo (Mundo_dos_Valores/mundo_dos_valores_*.json, formato "cápsula de texto +
+MUNDO/Mundo_dos_Valores/README.md — Mundo dos Valores. Converte os 4 arquivos brutos de
+conteúdo (MUNDO/Mundo_dos_Valores/mundo_dos_valores_*.json, formato "cápsula de texto +
 perguntas") pro formato plano exigido por app/content_validation.py e
 scripts/append_production_content.py.
 
 Cada "pergunta" de uma cápsula vira um Challenge normal — decisão de
 arquitetura (05/09/2026): reaproveita 100% a infraestrutura já
 existente/auditada em vez de criar uma mecânica nova (ver
-Mundo_dos_Valores/README.md). O texto da cápsula alimenta DOIS campos: reading_passage
+MUNDO/Mundo_dos_Valores/README.md). O texto da cápsula alimenta DOIS campos: reading_passage
 (mostrado ANTES da pergunta, mesmo espírito de clues/audio_url) e
 explanation (reforça a leitura DEPOIS de responder — os arquivos fonte
 não têm um campo de explicação próprio, só o texto da cápsula).
 
 hints NÃO existem no arquivo bruto — gerados automaticamente aqui
 (mesmo padrão já usado em convert_idiomas_content.py: genéricos,
-nunca entregam a resposta), decisão registrada em Mundo_dos_Valores/README.md.
+nunca entregam a resposta), decisão registrada em MUNDO/Mundo_dos_Valores/README.md.
 
 Uso:
     cd backend && python3 scripts/convert_valores_content.py
@@ -24,7 +24,7 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SOURCE_DIR = REPO_ROOT / "V6"
+SOURCE_DIR = REPO_ROOT / "MUNDO" / "Mundo_dos_Valores"
 OUTPUT_DIR = REPO_ROOT / "backend" / "content"
 
 # meta.tema (arquivo fonte) -> territory_id (migrations/063_mundo_valores.sql)

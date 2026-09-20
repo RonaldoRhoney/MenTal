@@ -59,7 +59,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                         children: [
                           const CircularProgressIndicator(),
                           const SizedBox(height: 16),
-                          Text(l10n.preparingChallenge),
+                          Text(l10n.loadingGeneric),
                         ],
                       ),
               )
