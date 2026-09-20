@@ -1,0 +1,808 @@
+{
+  "tema": "Crase",
+  "slug": "crase",
+  "lote": 1,
+  "observacao": "Lote 1 (piloto) escrito por Claude Code para revisão de Rhoney — perguntas originais, sem cópia de fonte. Regras conferidas contra gramática normativa corrente; conferir casos facultativos.",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Fui ___ escola ontem.",
+      "options": [
+        "à",
+        "a",
+        "às",
+        "há"
+      ],
+      "correct_answer": "à",
+      "explanation": "Quem vai, vai A algum lugar (preposição 'a') e 'escola' aceita o artigo 'a': a + a = à. Teste: 'Fui ao colégio' — aparece 'ao', logo há crase.",
+      "hints": [
+        "Veja se a palavra que vem depois aceita o artigo feminino 'a' — a crase é a fusão da preposição 'a' com esse artigo.",
+        "Teste prático: troque a palavra por uma masculina; se aparecer 'ao', há crase no feminino."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Entreguei o livro ___ professora.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'Entregar' pede a preposição 'a' e 'professora' aceita o artigo feminino: a + a = à. Teste: 'entreguei ao professor'.",
+      "hints": [
+        "Veja se a palavra que vem depois aceita o artigo feminino 'a' — a crase é a fusão da preposição 'a' com esse artigo.",
+        "Teste prático: troque a palavra por uma masculina; se aparecer 'ao', há crase no feminino."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Prefiro café ___ chá.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "'Chá' é masculino e sem artigo ali: só existe a preposição 'a' (preferir uma coisa A outra). Não há crase antes de palavra masculina.",
+      "hints": [
+        "Observe o gênero da palavra que vem depois do 'a'.",
+        "A crase exige artigo feminino: palavra masculina não leva acento grave."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ele foi ___ pé até o mercado.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "'A pé' é locução com palavra masculina: só preposição, sem artigo. Não há crase.",
+      "hints": [
+        "Observe o gênero da palavra que vem depois do 'a'.",
+        "A crase exige artigo feminino: palavra masculina não leva acento grave."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Vamos ___ praia amanhã.",
+      "options": [
+        "à",
+        "a",
+        "às",
+        "ao"
+      ],
+      "correct_answer": "à",
+      "explanation": "'Ir' pede 'a' e 'praia' aceita artigo: a + a = à. Teste: 'Vamos ao clube'.",
+      "hints": [
+        "Veja se a palavra que vem depois aceita o artigo feminino 'a' — a crase é a fusão da preposição 'a' com esse artigo.",
+        "Teste prático: troque a palavra por uma masculina; se aparecer 'ao', há crase no feminino."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Assisti ___ um filme ontem.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "Antes de artigo indefinido ('um', 'uma') só há a preposição 'a': não existe artigo definido para se fundir. Não há crase.",
+      "hints": [
+        "Observe o gênero da palavra que vem depois do 'a'.",
+        "A crase exige artigo feminino: palavra masculina não leva acento grave."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Refiro-me ___ mulheres que chegaram primeiro.",
+      "options": [
+        "às",
+        "à",
+        "as",
+        "ás"
+      ],
+      "correct_answer": "às",
+      "explanation": "'Referir-se' pede 'a' e 'mulheres' aceita o artigo 'as': a + as = às (crase no plural).",
+      "hints": [
+        "Veja se a palavra que vem depois aceita o artigo feminino 'a' — a crase é a fusão da preposição 'a' com esse artigo.",
+        "Teste prático: troque a palavra por uma masculina; se aparecer 'ao', há crase no feminino."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Saímos ___ oito horas da manhã.",
+      "options": [
+        "às",
+        "à",
+        "as",
+        "a"
+      ],
+      "correct_answer": "às",
+      "explanation": "Diante de horas determinadas usa-se crase: 'às oito horas' (a + as). Teste: 'Saímos ao meio-dia'.",
+      "hints": [
+        "Pense em como se fala de horas determinadas.",
+        "Diante de horas, o artigo aparece no plural ou no singular: 'as oito horas', 'a uma hora'."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ela chegou ___ meia-noite.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "Horas determinadas levam crase: 'à meia-noite' (a + a meia-noite).",
+      "hints": [
+        "Pense em como se fala de horas determinadas.",
+        "Diante de horas, o artigo aparece no plural ou no singular: 'as oito horas', 'a uma hora'."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ele vive ___ custa dos pais.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À custa de' é locução prepositiva feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Andava ___ toa pela cidade.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À toa' é locução adverbial feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: O bolo foi feito ___ mão.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À mão' é locução adverbial feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Alguém bateu ___ porta.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'Bater' (no sentido de chamar) pede 'a' e 'porta' aceita artigo: a + a = à.",
+      "hints": [
+        "Veja se a palavra que vem depois aceita o artigo feminino 'a' — a crase é a fusão da preposição 'a' com esse artigo.",
+        "Teste prático: troque a palavra por uma masculina; se aparecer 'ao', há crase no feminino."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Sentamo-nos ___ mesa para almoçar.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'Sentar-se à mesa': a preposição 'a' + o artigo 'a' de 'mesa' = à.",
+      "hints": [
+        "Veja se a palavra que vem depois aceita o artigo feminino 'a' — a crase é a fusão da preposição 'a' com esse artigo.",
+        "Teste prático: troque a palavra por uma masculina; se aparecer 'ao', há crase no feminino."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: O aluno obedece ___ regras da escola.",
+      "options": [
+        "às",
+        "as",
+        "à",
+        "a"
+      ],
+      "correct_answer": "às",
+      "explanation": "'Obedecer' pede 'a' e 'regras' aceita o artigo 'as': a + as = às.",
+      "hints": [
+        "Veja se a palavra que vem depois aceita o artigo feminino 'a' — a crase é a fusão da preposição 'a' com esse artigo.",
+        "Teste prático: troque a palavra por uma masculina; se aparecer 'ao', há crase no feminino."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Prefiro trabalhar ___ estudar.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "Antes de verbo não há artigo, então não há crase: só a preposição 'a' (preferir uma coisa A outra).",
+      "hints": [
+        "Observe que classe de palavra vem logo depois do 'a'.",
+        "Artigo não acompanha verbo — sem artigo, não há o que se fundir com a preposição."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ela se dedica ___ leitura.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'Dedicar-se' pede 'a' e 'leitura' aceita artigo: a + a = à. Teste: 'dedica-se ao estudo'.",
+      "hints": [
+        "Veja se a palavra que vem depois aceita o artigo feminino 'a' — a crase é a fusão da preposição 'a' com esse artigo.",
+        "Teste prático: troque a palavra por uma masculina; se aparecer 'ao', há crase no feminino."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ficamos ___ espera do resultado.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À espera de' é locução prepositiva feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Estamos ___ procura de emprego.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À procura de' é locução prepositiva feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Trabalho ___ tarde na biblioteca.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À tarde' é locução adverbial de tempo feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ele chega atrasado ___ vezes.",
+      "options": [
+        "às",
+        "as",
+        "à",
+        "a"
+      ],
+      "correct_answer": "às",
+      "explanation": "'Às vezes' é locução adverbial feminina no plural: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: A farmácia fica ___ direita da praça.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À direita' (como 'à esquerda') é locução adverbial feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Sentei-me ___ frente do palco.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À frente de' é locução prepositiva feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: O jantar foi servido ___ luz de velas.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'À luz de' é locução prepositiva feminina: leva crase.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Contei tudo ___ ela.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "Pronomes pessoais (ela, ele, você) não aceitam artigo: só há a preposição 'a'. Não há crase.",
+      "hints": [
+        "Que tipo de palavra vem depois do 'a'?",
+        "Pronomes pessoais e de tratamento (exceto senhora, senhorita e dona) não aceitam artigo."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Viajarei ___ Roma no próximo verão.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "'Roma' não aceita artigo (dizemos 'venho de Roma'): só a preposição 'a'. Cidade sem artigo não tem crase.",
+      "hints": [
+        "Nem todo nome de lugar aceita artigo.",
+        "Teste: 'Venho de ...'. Se aparecer 'da', o nome tem artigo; se aparecer só 'de', não tem."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Vou ___ Bahia no fim do ano.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'Bahia' aceita artigo (dizemos 'venho da Bahia'): a + a = à.",
+      "hints": [
+        "Nem todo nome de lugar aceita artigo.",
+        "Teste: 'Venho de ...'. Se aparecer 'da', o nome tem artigo; se aparecer só 'de', não tem."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Retornaremos ___ França em maio.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'França' aceita artigo ('venho da França'): a + a = à.",
+      "hints": [
+        "Nem todo nome de lugar aceita artigo.",
+        "Teste: 'Venho de ...'. Se aparecer 'da', o nome tem artigo; se aparecer só 'de', não tem."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Nunca fui ___ Portugal.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "'Portugal' não é usado com artigo neste caso ('venho de Portugal'): só a preposição 'a'.",
+      "hints": [
+        "Nem todo nome de lugar aceita artigo.",
+        "Teste: 'Venho de ...'. Se aparecer 'da', o nome tem artigo; se aparecer só 'de', não tem."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Referi-me ___ rapaz de camisa azul.",
+      "options": [
+        "àquele",
+        "aquele",
+        "a aquele",
+        "à aquele"
+      ],
+      "correct_answer": "àquele",
+      "explanation": "'Referir-se' pede 'a' e o pronome demonstrativo 'aquele' começa por 'a': a + aquele = àquele (crase com pronome).",
+      "hints": [
+        "Retome a regra geral: crase = preposição 'a' + artigo 'a(s)' (ou pronome a/aquele).",
+        "Pense em quando o artigo é impossível: antes de verbo, pronome pessoal, masculino, palavras repetidas."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Assistimos ___ com espanto.",
+      "options": [
+        "àquilo",
+        "aquilo",
+        "a aquilo",
+        "à aquilo"
+      ],
+      "correct_answer": "àquilo",
+      "explanation": "'Assistir' (ver) pede 'a' e o pronome 'aquilo' começa por 'a': a + aquilo = àquilo.",
+      "hints": [
+        "Retome a regra geral: crase = preposição 'a' + artigo 'a(s)' (ou pronome a/aquele).",
+        "Pense em quando o artigo é impossível: antes de verbo, pronome pessoal, masculino, palavras repetidas."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: ___ que horas o filme termina?",
+      "options": [
+        "A",
+        "À",
+        "Às",
+        "Ao"
+      ],
+      "correct_answer": "A",
+      "explanation": "Antes do pronome interrogativo 'que' (e de 'quem', 'qual') há só a preposição 'a', sem artigo: 'A que horas...?'.",
+      "hints": [
+        "Retome a regra geral: crase = preposição 'a' + artigo 'a(s)' (ou pronome a/aquele).",
+        "Pense em quando o artigo é impossível: antes de verbo, pronome pessoal, masculino, palavras repetidas."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Não sei ___ quem devo entregar o convite.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "'Quem' é pronome interrogativo e não aceita artigo: só a preposição 'a'. Não há crase.",
+      "hints": [
+        "Que tipo de palavra vem depois do 'a'?",
+        "Pronomes pessoais e de tratamento (exceto senhora, senhorita e dona) não aceitam artigo."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Dirijo-me ___ Vossa Excelência com respeito.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "Pronomes de tratamento (Vossa Excelência, Vossa Senhoria) não aceitam artigo. Não há crase.",
+      "hints": [
+        "Que tipo de palavra vem depois do 'a'?",
+        "Pronomes pessoais e de tratamento (exceto senhora, senhorita e dona) não aceitam artigo."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Dirigi-me ___ senhora de vestido azul.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "Diante de 'senhora', 'senhorita' e 'dona' (com artigo) usa-se crase: 'à senhora'.",
+      "hints": [
+        "Que tipo de palavra vem depois do 'a'?",
+        "Pronomes pessoais e de tratamento (exceto senhora, senhorita e dona) não aceitam artigo."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Chegamos ___ casa às dez da noite.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "'Casa' sem adjunto (sem 'de Ana', 'dos meus pais' etc.) não leva artigo: 'venho de casa'. Não há crase.",
+      "hints": [
+        "Nem todo nome de lugar aceita artigo.",
+        "Teste: 'Venho de ...'. Se aparecer 'da', o nome tem artigo; se aparecer só 'de', não tem."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Chegamos ___ casa de Ana às dez da noite.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "Quando 'casa' vem determinada ('de Ana'), passa a aceitar o artigo: a + a = à.",
+      "hints": [
+        "Nem todo nome de lugar aceita artigo.",
+        "Teste: 'Venho de ...'. Se aparecer 'da', o nome tem artigo; se aparecer só 'de', não tem."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Depois de meses no mar, os marinheiros chegaram ___ terra.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "'Terra' no sentido de terra firme (oposta a bordo/mar) não leva artigo: 'voltar de terra'. Não há crase.",
+      "hints": [
+        "Nem todo nome de lugar aceita artigo.",
+        "Teste: 'Venho de ...'. Se aparecer 'da', o nome tem artigo; se aparecer só 'de', não tem."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em \"Entreguei o convite ___ minha irmã\", o uso da crase é:",
+      "options": [
+        "facultativo",
+        "obrigatório",
+        "proibido",
+        "inexistente"
+      ],
+      "correct_answer": "facultativo",
+      "explanation": "Antes de pronome possessivo feminino singular a crase é facultativa: 'à minha irmã' ou 'a minha irmã'.",
+      "hints": [
+        "Retome a regra geral: crase = preposição 'a' + artigo 'a(s)' (ou pronome a/aquele).",
+        "Pense em quando o artigo é impossível: antes de verbo, pronome pessoal, masculino, palavras repetidas."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em qual caso NUNCA ocorre crase?",
+      "options": [
+        "Antes de verbo no infinitivo",
+        "Antes de palavra feminina com artigo",
+        "Em locução adverbial feminina",
+        "Antes de hora determinada"
+      ],
+      "correct_answer": "Antes de verbo no infinitivo",
+      "explanation": "Verbo não aceita artigo, então não há fusão: nunca se usa crase antes de verbo.",
+      "hints": [
+        "Retome a regra geral: crase = preposição 'a' + artigo 'a(s)' (ou pronome a/aquele).",
+        "Pense em quando o artigo é impossível: antes de verbo, pronome pessoal, masculino, palavras repetidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto ao uso da crase.",
+      "options": [
+        "Fiz o pedido à uma amiga.",
+        "Viajamos à Roma no verão.",
+        "Referiu-se à moça que chegou.",
+        "Começou à falar de política."
+      ],
+      "correct_answer": "Referiu-se à moça que chegou.",
+      "explanation": "'Referir-se a' + artigo 'a' de 'moça' = à. As outras erram: 'a uma' (artigo indefinido), 'Roma' sem artigo e crase antes de verbo.",
+      "hints": [
+        "Analise cada alternativa separadamente, procurando o que vem depois do 'a'.",
+        "Elimine as que têm crase antes de masculino, verbo, pronome pessoal ou artigo indefinido."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto ao uso da crase.",
+      "options": [
+        "Fomos à cavalo até a fazenda.",
+        "Estamos à disposição para ajudar.",
+        "Começou à chover forte.",
+        "Falei à ele sobre o caso."
+      ],
+      "correct_answer": "Estamos à disposição para ajudar.",
+      "explanation": "'À disposição' é locução adverbial feminina. As outras erram: 'a cavalo' (masculino), 'a chover' (verbo) e 'a ele' (pronome pessoal).",
+      "hints": [
+        "Analise cada alternativa separadamente, procurando o que vem depois do 'a'.",
+        "Elimine as que têm crase antes de masculino, verbo, pronome pessoal ou artigo indefinido."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: A cidade ___ qual me refiro fica no Sul.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "'Referir-se' pede 'a' e 'a qual' tem o artigo 'a' (cidade é feminino): a + a qual = à qual.",
+      "hints": [
+        "Retome a regra geral: crase = preposição 'a' + artigo 'a(s)' (ou pronome a/aquele).",
+        "Pense em quando o artigo é impossível: antes de verbo, pronome pessoal, masculino, palavras repetidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: As regras ___ quais devemos obedecer são claras.",
+      "options": [
+        "às",
+        "as",
+        "à",
+        "a"
+      ],
+      "correct_answer": "às",
+      "explanation": "'Obedecer' pede 'a' e 'as quais' tem o artigo 'as' (regras é feminino plural): a + as quais = às quais.",
+      "hints": [
+        "Retome a regra geral: crase = preposição 'a' + artigo 'a(s)' (ou pronome a/aquele).",
+        "Pense em quando o artigo é impossível: antes de verbo, pronome pessoal, masculino, palavras repetidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: Voltarei ___ Curitiba da minha infância.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "Cidade sem artigo aceita artigo quando vem determinada ('da minha infância'): a + a = à.",
+      "hints": [
+        "Nem todo nome de lugar aceita artigo.",
+        "Teste: 'Venho de ...'. Se aparecer 'da', o nome tem artigo; se aparecer só 'de', não tem."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: Jantamos filé ___ parmegiana.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "Na expressão 'à moda de', a palavra 'moda' fica subentendida: 'filé à parmegiana' leva crase, mesmo antes de nome que pareça masculino.",
+      "hints": [
+        "Observe se a expressão é uma locução formada por palavra feminina.",
+        "Locuções adverbiais, prepositivas e conjuntivas femininas costumam levar crase."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: Ficaram cara ___ cara por horas.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "Em expressões com palavra repetida ('cara a cara', 'gota a gota', 'frente a frente') há só a preposição 'a', sem artigo. Não há crase.",
+      "hints": [
+        "Retome a regra geral: crase = preposição 'a' + artigo 'a(s)' (ou pronome a/aquele).",
+        "Pense em quando o artigo é impossível: antes de verbo, pronome pessoal, masculino, palavras repetidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: Ele mora ___ dois quilômetros daqui.",
+      "options": [
+        "a",
+        "à",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "a",
+      "explanation": "Antes de numeral que indica distância ('a dois quilômetros') há só a preposição 'a': 'quilômetros' é masculino. Não há crase.",
+      "hints": [
+        "Observe o gênero da palavra que vem depois do 'a'.",
+        "A crase exige artigo feminino: palavra masculina não leva acento grave."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Complete: Cheguei ___ uma da tarde.",
+      "options": [
+        "à",
+        "a",
+        "ao",
+        "às"
+      ],
+      "correct_answer": "à",
+      "explanation": "Horas determinadas levam crase: 'à uma hora' (singular) e 'às duas horas' (plural).",
+      "hints": [
+        "Pense em como se fala de horas determinadas.",
+        "Diante de horas, o artigo aparece no plural ou no singular: 'as oito horas', 'a uma hora'."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase INCORRETA quanto ao uso da crase.",
+      "options": [
+        "Cheguei à uma da tarde.",
+        "Vou à Bahia amanhã.",
+        "Refiro-me à Vossa Excelência.",
+        "Saímos às pressas."
+      ],
+      "correct_answer": "Refiro-me à Vossa Excelência.",
+      "explanation": "Pronomes de tratamento como 'Vossa Excelência' não aceitam artigo: o correto é 'a Vossa Excelência'. As demais estão corretas.",
+      "hints": [
+        "Analise cada alternativa separadamente, procurando o que vem depois do 'a'.",
+        "Elimine as que têm crase antes de masculino, verbo, pronome pessoal ou artigo indefinido."
+      ]
+    }
+  ]
+}
