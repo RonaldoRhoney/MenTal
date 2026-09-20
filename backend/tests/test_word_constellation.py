@@ -70,8 +70,12 @@ def test_word_constellation_meaning_for_single_word_correct_answer(client):
     body = resp.json()
     assert body["kind"] == "meaning"
     assert body["tiles"] is None
-    assert "casa" in body["options"]
-    assert len(body["options"]) >= 2
+    # Áudio nas opções (20/09/2026): enunciado em português, opções são
+    # palavras do idioma estudado (a correta + de outros Desafios).
+    assert body["prompt_text"] == "casa"
+    assert "House" in body["options"]
+    assert len(body["options"]) == 4
+    assert len(set(o.lower() for o in body["options"])) == 4  # sem repetidas
 
 
 def test_word_constellation_meaning_extracts_word_with_parenthetical_clarifier(client):
@@ -91,7 +95,8 @@ def test_word_constellation_meaning_extracts_word_with_parenthetical_clarifier(c
     assert resp.status_code == 200
     body = resp.json()
     assert body["kind"] == "meaning"
-    assert "preciso" in body["options"]
+    assert body["prompt_text"] == "preciso"
+    assert "Need" in body["options"]
 
 
 def test_word_constellation_complete_correct_awards_xp_only_once(client):
@@ -103,7 +108,7 @@ def test_word_constellation_complete_correct_awards_xp_only_once(client):
 
     resp1 = client.post(
         f"/challenges/{challenge_id}/word-constellation/complete",
-        json={"submitted_meaning": "casa"},
+        json={"submitted_meaning": "House"},
         headers=headers,
     )
     assert resp1.status_code == 200
@@ -114,7 +119,7 @@ def test_word_constellation_complete_correct_awards_xp_only_once(client):
     # Repetir a mesma rodada de novo — continua "correct", mas sem XP de novo.
     resp2 = client.post(
         f"/challenges/{challenge_id}/word-constellation/complete",
-        json={"submitted_meaning": "casa"},
+        json={"submitted_meaning": "House"},
         headers=headers,
     )
     assert resp2.status_code == 200
@@ -132,7 +137,7 @@ def test_word_constellation_complete_wrong_answer_never_awards_xp(client):
 
     resp = client.post(
         f"/challenges/{challenge_id}/word-constellation/complete",
-        json={"submitted_meaning": "gato"},
+        json={"submitted_meaning": "Cat"},
         headers=headers,
     )
     assert resp.status_code == 200
@@ -207,3 +212,19 @@ def test_word_constellation_round_exposes_image_and_credit(client):
     body = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers).json()
     assert body["vocab_media_url"].endswith("x.webp")
     assert body["vocab_media_source_name"] == "Twemoji (jdecked) — CC-BY 4.0"
+
+
+def test_word_constellation_meaning_options_never_include_synonyms(client):
+    # Sinônimo (mesmo significado em português) como distrator tornaria a
+    # rodada injusta — duas respostas certas. Ele nunca entra nas opções.
+    _seed_siblings()
+    _seed_idiomas_challenge("Como se escreve 'rápido' em inglês?", "Quick")
+    challenge_id = _seed_idiomas_challenge("Como se escreve 'rápido' em inglês?", "Fast")
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    for _ in range(8):  # distratores são sorteados
+        body = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers).json()
+        assert "Quick" not in body["options"]
+        assert "Fast" in body["options"]

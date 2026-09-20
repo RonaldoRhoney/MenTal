@@ -3825,6 +3825,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Boost +{percent}% até {time}'**
   String homeBoostChip(int percent, String time);
+
+  /// Instruction at top of the word constellation 'meaning' round (options are words with audio)
+  ///
+  /// In pt, this message translates to:
+  /// **'Toque na palavra que corresponde — você a ouve ao tocar'**
+  String get wordConstellationMeaningInstructionLabel;
 }
 
 class _AppLocalizationsDelegate

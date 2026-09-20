@@ -18,6 +18,10 @@ import '../widgets/pulse_in.dart';
 /// elementos copiados de outro app (sem mascote). Duas variações
 /// (`kind`), decididas pelo SERVIDOR, nunca aqui: "pieces" (reconstrução
 /// por peças) ou "meaning" (reconhecimento de significado).
+/// Pausa depois que a palavra da opção termina de tocar, antes do som de
+/// acerto/erro e da tela seguinte.
+const _kPauseAfterOptionAudio = Duration(milliseconds: 900);
+
 class WordConstellationScreen extends StatefulWidget {
   const WordConstellationScreen({
     super.key,
@@ -57,7 +61,7 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
   bool? _correct;
   int _xpAwarded = 0;
 
-  TtsSpeed _ttsSpeed = TtsSpeed.normal;
+  final TtsSpeed _ttsSpeed = TtsSpeed.normal;
   bool _ttsSpeaking = false;
 
   @override
@@ -111,23 +115,13 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
   void _preloadTts(Map<String, dynamic> round) {
     final voice = _voice;
     if (voice == null) return;
-    TtsService.instance.preload(round['prompt_text'] as String,
-        voice: voice, speed: _ttsSpeed);
-    if (round['kind'] == 'pieces') {
-      for (final tile in (round['tiles'] as List).cast<String>()) {
-        TtsService.instance.preload(tile, voice: voice, speed: _ttsSpeed);
-      }
+    // Pedido de Rhoney (20/09/2026): o áudio fica nas opções/peças, nunca
+    // no topo — só o que tem som é pré-sintetizado.
+    final spoken =
+        round['kind'] == 'pieces' ? round['tiles'] : round['options'];
+    for (final text in (spoken as List).cast<String>()) {
+      TtsService.instance.preload(text, voice: voice, speed: _ttsSpeed);
     }
-  }
-
-  Future<void> _speak() async {
-    final round = _round;
-    final voice = _voice;
-    if (round == null || voice == null || _ttsSpeaking) return;
-    setState(() => _ttsSpeaking = true);
-    await TtsService.instance
-        .speak(round['prompt_text'] as String, voice: voice, speed: _ttsSpeed);
-    if (mounted) setState(() => _ttsSpeaking = false);
   }
 
   // Pedido de Rhoney (19/09/2026): cada peça também precisa de áudio
@@ -186,9 +180,31 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
   // "meaning", tocar numa opção já vale como resposta — o som de
   // acerto/erro (tocado dentro de _submit) acontece na própria palavra
   // tocada, sem precisar de um botão "Verificar" separado.
-  void _selectMeaningAndSubmit(String option) {
-    setState(() => _selectedMeaning = option);
-    _submit();
+  // Pedido de Rhoney (20/09/2026): o áudio está NA opção — tocar nela fala
+  // a palavra e só então responde (som de acerto/erro + tela seguinte),
+  // um único toque. O alto-falante da opção só repete o som, sem responder.
+  Future<void> _selectMeaningAndSubmit(String option) async {
+    if (_submitting) return;
+    setState(() {
+      _selectedMeaning = option;
+      _submitting = true;
+    });
+    final voice = _voice;
+    if (voice != null) {
+      try {
+        final played = await TtsService.instance
+            .speakAndWait(option, voice: voice, speed: _ttsSpeed);
+        // Pedido de Rhoney (20/09/2026): dar um tempo pro áudio terminar
+        // de ser ouvido antes de trocar de tela — só quando o áudio
+        // realmente tocou (falha/áudio desligado nunca atrasa a resposta).
+        if (played) await Future<void>.delayed(_kPauseAfterOptionAudio);
+      } catch (_) {
+        // áudio é reforço: falhar nunca impede a resposta
+      }
+    }
+    if (!mounted) return;
+    setState(() => _submitting = false);
+    await _submit();
   }
 
   void _retry() {
@@ -245,18 +261,19 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         if (!widget._immersaoTotal) ...[
-          Text(l10n.wordConstellationInstructionLabel,
+          Text(
+              kind == 'meaning'
+                  ? l10n.wordConstellationMeaningInstructionLabel
+                  : l10n.wordConstellationInstructionLabel,
               style: TextStyle(color: AppColors.muted, fontSize: 13)),
           const SizedBox(height: 16),
         ],
-        // Pedido de Rhoney (19/09/2026, teste real): quando o Desafio de
-        // origem já tem uma ilustração de vocabulário (vocab_media_url,
-        // gerada via Canva — scripts/upload_vocab_media.py), ela
-        // substitui o cartão de texto+áudio do topo. Nunca fabricada
-        // aqui — só aparece se já existir. §4.3 (correção obrigatória,
-        // 19/09/2026): sem ilustração, o áudio da palavra/frase-alvo
-        // precisa estar vinculado ao próprio elemento textual clicável
-        // (mesmo princípio de MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2.2).
+        // Pedido de Rhoney (19/09/2026): quando o Desafio de origem já tem
+        // uma ilustração de vocabulário (vocab_media_url — scripts/
+        // upload_vocab_media.py), ela substitui o cartão de texto do topo.
+        // Nunca fabricada aqui. Pedido de Rhoney (20/09/2026): o topo NÃO
+        // tem som nem velocidades — o áudio fica nas opções/peças (menos
+        // cliques, mais rápido de assimilar).
         if (round['vocab_media_url'] != null) ...[
           Center(
             child: ClipRRect(
@@ -265,11 +282,8 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
                 round['vocab_media_url'] as String,
                 height: 180,
                 fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) => _TargetPromptCard(
-                  text: round['prompt_text'] as String,
-                  speaking: _ttsSpeaking,
-                  onTap: _voice == null ? null : _speak,
-                ),
+                errorBuilder: (_, __, ___) =>
+                    _TargetPromptCard(text: round['prompt_text'] as String),
               ),
             ),
           ),
@@ -283,21 +297,17 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
               ),
             ),
           ],
-          const SizedBox(height: 16),
-        ] else ...[
-          Center(
-            child: _TargetPromptCard(
-              text: round['prompt_text'] as String,
-              speaking: _ttsSpeaking,
-              onTap: _voice == null ? null : _speak,
+          if (kind == 'meaning') ...[
+            const SizedBox(height: 10),
+            Center(
+              child: Text(round['prompt_text'] as String,
+                  style: Theme.of(context).textTheme.headlineSmall),
             ),
-          ),
-          const SizedBox(height: 12),
+          ],
+          const SizedBox(height: 16),
+        ] else
           Center(
-              child: _SpeedChips(
-                  speed: _ttsSpeed,
-                  onChanged: (s) => setState(() => _ttsSpeed = s))),
-        ],
+              child: _TargetPromptCard(text: round['prompt_text'] as String)),
         const SizedBox(height: 24),
         Expanded(
           child:
@@ -387,6 +397,7 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
             label: option,
             filled: _selectedMeaning == option,
             expand: true,
+            onSpeak: _voice == null ? null : () => _speakTile(option),
             onTap: _submitting ? () {} : () => _selectMeaningAndSubmit(option),
           ),
           const SizedBox(height: 12),
@@ -454,8 +465,8 @@ class _ConstellationTile extends StatelessWidget {
   final bool filled;
   final VoidCallback onTap;
   final bool expand;
-  // Só as PEÇAS (idioma estranho) recebem isto — as opções de
-  // significado (português) nunca, mesma voz errada de sempre.
+  // Peças e opções de palavra (idioma estudado) recebem isto; texto em
+  // português nunca (voz errada).
   final VoidCallback? onSpeak;
   // Pedido de Rhoney (19/09/2026, teste real): peça já montada precisa
   // de um "x" explícito pra remover — tocar na própria peça já
@@ -563,80 +574,22 @@ class _MiniRemoveButton extends StatelessWidget {
 /// não um círculo grande e separado do texto, mesmo que dentro do
 /// mesmo cartão. Todo o cartão continua tocável, não só o ícone.
 class _TargetPromptCard extends StatelessWidget {
-  const _TargetPromptCard(
-      {required this.text, required this.speaking, required this.onTap});
+  const _TargetPromptCard({required this.text});
 
   final String text;
-  final bool speaking;
-  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Opacity(
-      opacity: speaking ? 0.6 : 1,
-      child: Material(
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+      decoration: BoxDecoration(
         color: AppColors.bg2,
         borderRadius: BorderRadius.circular(18),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(18),
-          onTap: onTap,
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18),
-              border: Border.all(color: AppColors.teal.withValues(alpha: 0.5)),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Flexible(
-                  child: Text(text,
-                      style: Theme.of(context).textTheme.headlineSmall),
-                ),
-                const SizedBox(width: 10),
-                _MiniSpeakerButton(onTap: onTap ?? () {}),
-              ],
-            ),
-          ),
-        ),
+        border: Border.all(color: AppColors.teal.withValues(alpha: 0.5)),
       ),
-    );
-  }
-}
-
-class _SpeedChips extends StatelessWidget {
-  const _SpeedChips({required this.speed, required this.onChanged});
-
-  final TtsSpeed speed;
-  final ValueChanged<TtsSpeed> onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    Widget chip(TtsSpeed value, String label) {
-      final selected = speed == value;
-      return ChoiceChip(
-        label: Text(label),
-        selected: selected,
-        onSelected: (_) => onChanged(value),
-        selectedColor: AppColors.teal.withValues(alpha: 0.25),
-        labelStyle: TextStyle(
-            color: selected ? AppColors.teal : AppColors.muted, fontSize: 12),
-        side: BorderSide(
-            color: selected
-                ? AppColors.teal
-                : AppColors.muted.withValues(alpha: 0.3)),
-      );
-    }
-
-    return Wrap(
-      spacing: 8,
-      alignment: WrapAlignment.center,
-      children: [
-        chip(TtsSpeed.normal, l10n.ttsSpeedNormalLabel),
-        chip(TtsSpeed.fast, l10n.ttsSpeedFastLabel),
-        chip(TtsSpeed.veryFast, l10n.ttsSpeedVeryFastLabel),
-      ],
+      child: Text(text,
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headlineSmall),
     );
   }
 }

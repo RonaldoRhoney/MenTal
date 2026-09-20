@@ -2024,24 +2024,31 @@ def generate_word_constellation_round(db: Session, challenge: models.Challenge) 
             "MEANING_NOT_EXTRACTABLE",
             "Não foi possível extrair o significado em português deste desafio.",
         )
+    # Pedido de Rhoney (20/09/2026, teste real): o áudio fica NAS OPÇÕES,
+    # não no topo — então a rodada inverte: o topo mostra o significado em
+    # português (ou a imagem) e as 4 opções são PALAVRAS do idioma
+    # estudado (a correta + palavras de outros Desafios do mesmo
+    # território), cada uma com som. Distratores nunca são sinônimos: sai
+    # quem tem o mesmo significado em português da resposta.
     pool = []
-    seen = {correct_meaning.lower()}
+    seen = {correct_answer.lower()}
     for sib in siblings:
-        if " " in sib.correct_answer.strip():
+        word = sib.correct_answer.strip()
+        if " " in word or word.lower() in seen:
             continue
-        meaning = extract_portuguese_meaning(sib.prompt)
-        if meaning is None or meaning.lower() in seen:
+        sib_meaning = extract_portuguese_meaning(sib.prompt)
+        if sib_meaning is not None and sib_meaning.lower() == correct_meaning.lower():
             continue
-        pool.append(meaning)
-        seen.add(meaning.lower())
+        pool.append(word)
+        seen.add(word.lower())
     random.shuffle(pool)
-    options = [correct_meaning] + pool[:3]
+    options = [correct_answer] + pool[:3]
     random.shuffle(options)
     return {
         "challenge_id": challenge.id,
         "territory_id": challenge.territory_id,
         "kind": "meaning",
-        "prompt_text": correct_answer,
+        "prompt_text": correct_meaning,
         "tiles": None,
         "options": options,
         "prompt_image": challenge.prompt_image,
@@ -2058,10 +2065,12 @@ def validate_word_constellation_answer(
         if not submitted_order:
             return False
         return " ".join(submitted_order).strip().lower() == correct_answer.lower()
-    correct_meaning = extract_portuguese_meaning(challenge.prompt)
-    if correct_meaning is None or not submitted_meaning:
+    # A rodada de "significado" agora pede a PALAVRA do idioma estudado
+    # (o significado em português é o enunciado) — ver
+    # generate_word_constellation_round.
+    if not submitted_meaning:
         return False
-    return submitted_meaning.strip().lower() == correct_meaning.strip().lower()
+    return submitted_meaning.strip().lower() == correct_answer.lower()
 
 
 def complete_word_constellation(

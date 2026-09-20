@@ -3050,5 +3050,9 @@
         "type": "String"
       }
     }
+  },
+  "wordConstellationMeaningInstructionLabel": "Toque na palavra que corresponde — você a ouve ao tocar",
+  "@wordConstellationMeaningInstructionLabel": {
+    "description": "Instruction at top of the word constellation 'meaning' round (options are words with audio)"
   }
 }

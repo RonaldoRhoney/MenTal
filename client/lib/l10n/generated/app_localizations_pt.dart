@@ -2201,4 +2201,8 @@ class AppLocalizationsPt extends AppLocalizations {
   String homeBoostChip(int percent, String time) {
     return 'Boost +$percent% até $time';
   }
+
+  @override
+  String get wordConstellationMeaningInstructionLabel =>
+      'Toque na palavra que corresponde — você a ouve ao tocar';
 }

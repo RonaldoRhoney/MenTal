@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/word_constellation_screen.dart';
+import 'package:mental/services/tts_service.dart';
 
 /// MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md — Fase 2. Prova que os dois
 /// tipos de rodada (`pieces`/`meaning`) renderizam e respondem
@@ -49,9 +50,11 @@ class _MeaningFakeApiClient extends ApiClient {
         'challenge_id': challengeId,
         'territory_id': 'ingles_basico',
         'kind': 'meaning',
-        'prompt_text': 'House',
+        // Áudio nas opções (20/09/2026): enunciado em português, opções
+        // são palavras do idioma estudado, cada uma com som.
+        'prompt_text': 'casa',
         'tiles': null,
-        'options': ['casa', 'gato', 'cachorro'],
+        'options': ['House', 'Cat', 'Dog'],
       };
 
   @override
@@ -60,7 +63,7 @@ class _MeaningFakeApiClient extends ApiClient {
     List<String>? submittedOrder,
     String? submittedMeaning,
   }) async {
-    final correct = submittedMeaning == 'casa';
+    final correct = submittedMeaning == 'House';
     return {'correct': correct, 'xp_awarded': correct ? 5 : 0};
   }
 }
@@ -99,6 +102,10 @@ Future<void> _pump(WidgetTester tester, ApiClient client,
 }
 
 void main() {
+  // Tocar numa opção agora fala a palavra antes de responder — no teste
+  // não há player de áudio real (mesma cautela de challenge_screen_tts_test).
+  setUpAll(() => TtsService.disabled = true);
+
   testWidgets(
       'imagem de vocabulário vem com o crédito da licença (CC-BY exige atribuição)',
       (tester) async {
@@ -117,15 +124,15 @@ void main() {
       (tester) async {
     await _pump(tester, _PiecesFakeApiClient());
 
-    // 1 botão grande (frase inteira) + 5 peças disponíveis (is/The/big/
-    // house/cat), nenhuma ainda escolhida — 6 ícones de alto-falante.
-    expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(6));
+    // Sem botão de som no topo (20/09/2026): só as 5 peças disponíveis
+    // (is/The/big/house/cat), nenhuma ainda escolhida — 5 alto-falantes.
+    expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(5));
 
     await tester.tap(find.text('The'));
     await tester.pump();
     // Peça movida pra área de montagem continua com o próprio áudio —
-    // still 6 (1 grande + 4 disponíveis + 1 escolhida).
-    expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(6));
+    // still 5 (4 disponíveis + 1 escolhida).
+    expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(5));
   });
 
   testWidgets(
@@ -147,13 +154,15 @@ void main() {
   });
 
   testWidgets(
-      'rodada "meaning": opções (em português) NÃO têm botão de áudio próprio',
+      'rodada "meaning": o som está nas opções (palavras), nunca no topo (pedido de Rhoney, 20/09/2026)',
       (tester) async {
     await _pump(tester, _MeaningFakeApiClient());
 
-    // Só o botão grande do topo — as 3 opções de significado nunca
-    // ganham áudio individual (seria a voz errada, em português).
-    expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
+    // 3 opções, 3 alto-falantes; o topo (significado em português) e as
+    // velocidades Normal/Rápido/Acelerado não existem mais.
+    expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(3));
+    expect(find.text('Normal'), findsNothing);
+    expect(find.text('casa'), findsOneWidget);
   });
 
   testWidgets('rodada "pieces": montar na ordem certa mostra acerto + XP',
@@ -216,14 +225,14 @@ void main() {
       (tester) async {
     await _pump(tester, _MeaningFakeApiClient());
 
-    expect(find.text('House'), findsOneWidget);
     expect(find.text('casa'), findsOneWidget);
-    expect(find.text('gato'), findsOneWidget);
+    expect(find.text('House'), findsOneWidget);
+    expect(find.text('Cat'), findsOneWidget);
     // Pedido de Rhoney (19/09/2026): na rodada "meaning" tocar na opção
     // já responde — nunca existe um botão "Verificar" separado aqui.
     expect(find.text('Verificar'), findsNothing);
 
-    await tester.tap(find.text('casa'));
+    await tester.tap(find.text('House'));
     await tester.pumpAndSettle();
 
     expect(find.text('Isso mesmo!'), findsOneWidget);
@@ -234,7 +243,7 @@ void main() {
       (tester) async {
     await _pump(tester, _MeaningFakeApiClient());
 
-    await tester.tap(find.text('gato'));
+    await tester.tap(find.text('Cat'));
     await tester.pumpAndSettle();
 
     expect(find.text('Quase — tente de novo.'), findsOneWidget);
