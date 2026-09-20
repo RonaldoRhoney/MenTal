@@ -140,6 +140,8 @@ De ~20 regras do documento, **1 já bate exatamente** (conquista de território)
 | 30 dias consecutivos | +75 MentalCoins + distintivo de perfil |
 | 100 dias consecutivos | +250 MentalCoins + distintivo raro de perfil |
 
+**Decisão de Rhoney (20/09/2026):** os marcos de sequência (7/15/30/100 dias) são pagos de novo a cada nova sequência — a pessoa que perde a sequência e chega ao marco outra vez recebe o prêmio outra vez (não é "uma vez na vida"). O anti-farm é por marco+dia, não por marco.
+
 Streak geral é distinto do streak específico de Movimento (seção 2) — cada um tem sua própria lógica e recompensa.
 
 ## 6. Limites Anti-Farming (regra de equilíbrio econômico)
