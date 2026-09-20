@@ -2,7 +2,7 @@
 
 Documentos de features/bugs transversais — não específicos de um único
 Mundo (que ficam em `Mundo_*/`) nem de uma fase de versão fechada
-(`V1`-`V4`). Pasta criada em 06/09/2026 (pedido de Rhoney) pra dar
+(`MUNDO/V1`–`MUNDO/V4`). Pasta criada em 06/09/2026 (pedido de Rhoney) pra dar
 destino a esse tipo de documento em vez de deixá-lo solto na raiz do
 repositório.
 
@@ -58,6 +58,11 @@ repositório.
   notificações, sino na Home. **Implementado** (14/09/2026), com
   correções de auditoria de segurança pré-lançamento mundial em
   17/09/2026 (FK de exclusão de conta + limpeza por retenção).
+
+- `REGRA_OFICIAL_GAMIFICACAO_MENTAL.md` — regra oficial de XP/MentalCoins/streak/teto/boost/reparo. **Fases 1–3 implementadas** (19–20/09/2026). Fonte da verdade de regra; valores em `backend/app/config.py`.
+- `LEVANTAMENTO_REGRAS_GAMIFICACAO_V1.md` — snapshot histórico de 18/09/2026 (superado pela Regra Oficial).
+- `NOTIFICACAO_CONTEUDO_ATUALIZADO_V1.md` e `ORGANIZACAO_VISUAL_POR_SECAO_TODOS_MUNDOS_V1.md` — **implementados** (19–20/09/2026).
+- `CACA_PALAVRAS_BUG_E_VISUAL_V1.md`, `DESTAQUE_ICONE_MAPA_TRAJETORIA_V1.md`, `MAPA_TRAJETORIA_MUNDOS_V1.md` — **implementados**.
 
 **Reorganização de 11/09/2026:** `REORGANIZACAO_MENUS_HOME_V1.md` saiu
 daqui e foi pra `Home/` (junto dos demais documentos de redesign da

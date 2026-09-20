@@ -1,6 +1,6 @@
 # MENTAL — Regra Oficial de Gamificação
 
-**Status:** OFICIAL como fonte da verdade de REGRA (documento aprovado). **Fase 1 IMPLEMENTADA (19/09/2026)** — recalibração dos valores de ações que já existiam (itens 1.2, 1.5, 2.1, 3.4, 4.2). **Fase 2 IMPLEMENTADA (19/09/2026, aguardando revisão de segurança + deploy)** — recompensas novas, ver seção abaixo. **Fase 3 IMPLEMENTADA (20/09/2026, aguardando migration 084 + deploy + teste no aparelho)** — teto diário de XP, reparo de streak e boost de XP, ver seção abaixo.
+**Status:** OFICIAL como fonte da verdade de REGRA (documento aprovado). **Fase 1 IMPLEMENTADA (19/09/2026)** — recalibração dos valores de ações que já existiam (itens 1.2, 1.5, 2.1, 3.4, 4.2). **Fase 2 IMPLEMENTADA (19/09/2026, aguardando revisão de segurança + deploy)** — recompensas novas, ver seção abaixo. **Fase 3 IMPLEMENTADA (20/09/2026, migrations até a 086 aplicadas e deploy manual pelo Rhoney; validada no aparelho em 20/09/2026)** — teto diário de XP, reparo de streak e boost de XP, ver seção abaixo.
 
 ## Fase 1 — recalibração de valores (19/09/2026, decisões confirmadas com Rhoney)
 
@@ -44,6 +44,8 @@ Decisões de Rhoney (20/09/2026) e como ficaram:
 - Código: `backend/app/economy.py`, `routers/economy.py` (`/economy/status`, `/economy/xp-boost`, `/economy/streak-repair`), migration `084_economia_teto_reparo_boost.sql`. Revisão do `mental-security` feita (achados A2/M2 e qualidade corrigidos).
 - **Em aberto**: os locks `FOR UPDATE` só são provados em Postgres real (SQLite dos testes ignora).
 
+> **Histórico (superado).** Tudo abaixo, incluindo a tabela "Divergência", descreve o levantamento de 19/09/2026 *antes* das Fases 1–3. Todas as divergências listadas foram resolvidas — ver Fases 1, 2 e 3 acima. Não usar para decidir valores atuais.
+
 ## (Histórico) Pendente antes da Fase 3
 
 Teto diário de 150 XP de respostas (decisão: só o XP de perfil para; o progresso do território segue contando), reparo de streak (50 moedas) e boost de +20% de XP por 24h (80 moedas). Itens abaixo eram os pendentes originais das Fases 2 e 3:
@@ -59,7 +61,7 @@ Mecânicas totalmente novas (login diário, marco de amigos, Torcida gerando XP,
 | 1.3 | Finalizar um Desafio inteiro: +3 XP bônus | Não existe — XP é só por resposta individual, não há conceito de "bônus por completar o desafio todo" | 🆕 Mecânica nova a construir |
 | 1.4 | Desafio perfeito (100%, zero dicas): +5 XP extra | Não existe como bônus de XP — só existe o badge `no_help_needed` (10 respostas certas sem dica, acumulado, não por desafio) | 🆕 Mecânica nova |
 | 1.5 | Vencer Batalha: +2 XP | `BATTLE_WIN_BONUS_XP = 30` | ⚠️ Divergência grande (redução de 15x) |
-| 1.6 | **Constelação de Palavras** (MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md, 19/09/2026): +5 XP por acerto — mesmo valor de uma resposta correta de dificuldade Média, sem criar faixa nova | 🆕 Mecânica nova a construir (ver documento próprio) — recompensa em 1ª conclusão por Desafio (mesmo padrão anti-farm já usado em Pausa para Aprender/Caça-palavras: XP só na 1ª vez, nunca em repetição). **Não implementa o teto diário de 150 XP** (item 6 abaixo) — essa infraestrutura ainda não existe no código (ver 🆕 no item 6), e não faz parte do escopo desta mecânica específica; fica valendo o mesmo teto/ausência de teto que já vale pra XP de resposta normal hoje |
+| 1.6 | **Constelação de Palavras** (MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md, 19/09/2026): +5 XP por acerto — mesmo valor de uma resposta correta de dificuldade Média, sem criar faixa nova | 🆕 Mecânica nova a construir (ver documento próprio) — recompensa em 1ª conclusão por Desafio (mesmo padrão anti-farm já usado em Pausa para Aprender/Caça-palavras: XP só na 1ª vez, nunca em repetição). O XP da Constelação é bônus e fica **fora** do teto diário de 150 XP (`economy.py`; decisão de Rhoney, 20/09/2026); segue o anti-farm de 1ª conclusão por Desafio|
 | 2.1 | Movimento — a cada 1.000 passos: +1 MentalCoin | `MOVEMENT_STEPS_PER_MENTALCOIN=1000` × `MOVEMENT_MENTALCOINS_PER_MILESTONE=5` = **+5** coins a cada 1000 passos | ⚠️ Divergência (redução de 5x). Além disso, o código hoje também paga **XP** de Movimento (base 20 × multiplicador de faixa até ×4, bônus de meta +50 XP, bônus de checkpoint) — nada disso aparece no documento. **Precisa de decisão**: o XP de Movimento é removido, ou o documento está incompleto? |
 | 2.2 | 7 dias consecutivos de Movimento ativo: +10 MentalCoins extras | Não existe streak específico de Movimento hoje (só o streak geral de uso do app) | 🆕 Mecânica nova — precisa definir o que conta como "dia de Movimento ativo" |
 | 3.1 | Interação diária com amigos por 7 dias seguidos: +10 XP | Não existe — "interação diária com amigos" não é uma ação rastreada hoje | 🆕 Mecânica nova — precisa definir o que conta como "interação" (mensagem? Torcida? Batalha?) |
@@ -150,7 +152,7 @@ Streak geral é distinto do streak específico de Movimento (seção 2) — cada
 |---|---|
 | Teto diário de XP proveniente de respostas corretas (Desafio + Relâmpago somados) | **150 XP/dia** |
 | Comportamento ao atingir o teto | Respostas continuam contando para progresso e estatísticas do usuário, mas deixam de gerar XP adicional naquele dia |
-| MentalCoins de passos (Movimento) | Sem teto artificial — autolimitado pelo esforço físico real do usuário |
+| MentalCoins de passos (Movimento) | Sem teto artificial de moedas por regra de negócio — autolimitado pelo esforço físico real; há apenas um teto de sanidade técnico de 60.000 passos por ciclo (`MOVEMENT_MAX_STEPS_PER_CYCLE`, anti-fraude) |
 
 Este limite é considerado **estrutural** para a integridade do sistema de gamificação — não deve ser removido sem nova decisão explícita e documentada.
 

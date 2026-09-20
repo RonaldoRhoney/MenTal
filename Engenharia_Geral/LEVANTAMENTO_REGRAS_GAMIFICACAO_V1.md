@@ -1,4 +1,5 @@
 # MENTAL — Levantamento e Documentação Consolidada das Regras de Gamificação
+> **SNAPSHOT DE 18/09/2026 — SUPERADO.** Os valores e regras abaixo foram alterados pelas Fases 1–3 da gamificação (19–20/09/2026). A fonte atual é `REGRA_OFICIAL_GAMIFICACAO_MENTAL.md` + `backend/app/config.py`. Este arquivo fica só como registro histórico do levantamento — não usar para decidir valores atuais.
 
 **Status:** CONCLUÍDO (18/09/2026). Levantamento puro — nenhuma regra foi alterada. Baseado em leitura direta do código-fonte atual (`backend/app/`), com citação `arquivo:linha` em cada item, conforme pedido em §3.
 
