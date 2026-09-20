@@ -3981,6 +3981,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Crase'**
   String get territoryLinguagemCrase;
+
+  /// Territory name — Linguagem grammar SubMundo: Morfologia
+  ///
+  /// In pt, this message translates to:
+  /// **'Morfologia'**
+  String get territoryLinguagemMorfologia;
 }
 
 class _AppLocalizationsDelegate

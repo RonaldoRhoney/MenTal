@@ -52,13 +52,15 @@ def test_cada_tema_ativo_tem_50_perguntas_25_15_10_e_estrutura_valida():
                 assert all(item["correct_answer"].lower() not in h.lower() for h in item["hints"]), item["prompt"]
 
 
-def test_crase_lote_fonte_bate_com_o_conteudo_convertido():
-    source = json.loads(
-        (Path(__file__).resolve().parents[2] / "MUNDO" / "Mundo_da_Linguagem" / "temas" / "crase_lote1.json").read_text(encoding="utf-8")
-    )
-    converted = json.loads((CONTENT_DIR / "linguagem_tema_crase.json").read_text(encoding="utf-8"))
-    assert [d["prompt"] for d in source["desafios"]] == [c["prompt"] for c in converted]
-    assert [d["correct_answer"] for d in source["desafios"]] == [c["correct_answer"] for c in converted]
+def test_lotes_fonte_batem_com_o_conteudo_convertido_de_cada_tema_ativo():
+    temas_dir = Path(__file__).resolve().parents[2] / "MUNDO" / "Mundo_da_Linguagem" / "temas"
+    for tema in ACTIVE:
+        source = []
+        for path in sorted(temas_dir.glob(f"{tema['slug']}_lote*.json")):
+            source.extend(json.loads(path.read_text(encoding="utf-8"))["desafios"])
+        converted = json.loads((CONTENT_DIR / f"linguagem_tema_{tema['slug']}.json").read_text(encoding="utf-8"))
+        assert [d["prompt"] for d in source] == [c["prompt"] for c in converted], tema["slug"]
+        assert [d["correct_answer"] for d in source] == [c["correct_answer"] for c in converted], tema["slug"]
 
 
 def test_crase_completar_lacuna_tem_uma_lacuna_e_resposta_certa_unica_nas_opcoes():

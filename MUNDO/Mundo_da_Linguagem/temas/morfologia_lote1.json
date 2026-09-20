@@ -1,0 +1,808 @@
+{
+  "tema": "Morfologia",
+  "slug": "morfologia",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney — perguntas originais, sem cópia de fonte. Conferir nomenclatura (NGB) e os casos de derivação.",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'A menina sorriu.', a palavra 'menina' é:",
+      "options": [
+        "substantivo",
+        "verbo",
+        "adjetivo",
+        "advérbio"
+      ],
+      "correct_answer": "substantivo",
+      "explanation": "Substantivo é a palavra que nomeia seres, lugares, coisas e ideias. 'Menina' nomeia um ser.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'Os alunos estudam muito.', a palavra 'estudam' é:",
+      "options": [
+        "verbo",
+        "substantivo",
+        "advérbio",
+        "preposição"
+      ],
+      "correct_answer": "verbo",
+      "explanation": "Verbo indica ação, estado ou fenômeno. 'Estudam' indica uma ação.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'O céu azul apareceu.', a palavra 'azul' é:",
+      "options": [
+        "adjetivo",
+        "substantivo",
+        "verbo",
+        "advérbio"
+      ],
+      "correct_answer": "adjetivo",
+      "explanation": "Adjetivo caracteriza o substantivo. 'Azul' caracteriza 'céu'.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'O livro caiu.', a palavra 'O' é:",
+      "options": [
+        "artigo definido",
+        "artigo indefinido",
+        "pronome pessoal",
+        "numeral"
+      ],
+      "correct_answer": "artigo definido",
+      "explanation": "Artigo acompanha o substantivo. 'O' determina 'livro' de modo definido; os indefinidos são um, uma, uns, umas.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'Ele chegou cedo.', a palavra 'cedo' é:",
+      "options": [
+        "advérbio",
+        "adjetivo",
+        "substantivo",
+        "preposição"
+      ],
+      "correct_answer": "advérbio",
+      "explanation": "Advérbio modifica um verbo, adjetivo ou outro advérbio. 'Cedo' modifica 'chegou' (tempo).",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'Fui de ônibus.', a palavra 'de' é:",
+      "options": [
+        "preposição",
+        "conjunção",
+        "artigo",
+        "pronome"
+      ],
+      "correct_answer": "preposição",
+      "explanation": "Preposição liga dois termos e estabelece relação entre eles. Aqui liga 'fui' a 'ônibus'.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'Estudei e passei.', a palavra 'e' é:",
+      "options": [
+        "conjunção",
+        "preposição",
+        "advérbio",
+        "interjeição"
+      ],
+      "correct_answer": "conjunção",
+      "explanation": "Conjunção liga orações ou termos de mesma função. Aqui liga as orações 'estudei' e 'passei'.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'Ufa! Terminei.', a palavra 'Ufa' é:",
+      "options": [
+        "interjeição",
+        "advérbio",
+        "substantivo",
+        "conjunção"
+      ],
+      "correct_answer": "interjeição",
+      "explanation": "Interjeição expressa emoção ou sentimento súbito (alívio, no caso).",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'Comprei três maçãs.', a palavra 'três' é:",
+      "options": [
+        "numeral",
+        "adjetivo",
+        "substantivo",
+        "pronome"
+      ],
+      "correct_answer": "numeral",
+      "explanation": "Numeral indica quantidade, ordem, multiplicação ou fração. 'Três' indica quantidade.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'Ela chegou.', a palavra 'Ela' é:",
+      "options": [
+        "pronome pessoal",
+        "artigo definido",
+        "substantivo",
+        "adjetivo"
+      ],
+      "correct_answer": "pronome pessoal",
+      "explanation": "Pronome pessoal representa as pessoas do discurso. 'Ela' (3ª pessoa) substitui um substantivo feminino.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o feminino de 'ator'?",
+      "options": [
+        "atriz",
+        "atora",
+        "atrisa",
+        "atoresa"
+      ],
+      "correct_answer": "atriz",
+      "explanation": "O feminino de 'ator' é 'atriz' (como imperador/imperatriz).",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o plural de 'pão'?",
+      "options": [
+        "pães",
+        "pãos",
+        "pões",
+        "pãozes"
+      ],
+      "correct_answer": "pães",
+      "explanation": "Substantivos terminados em -ão formam o plural de três modos: -ões, -ães ou -ãos. O plural de 'pão' é 'pães'.",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o plural de 'cidadão'?",
+      "options": [
+        "cidadãos",
+        "cidadões",
+        "cidadães",
+        "cidadãoes"
+      ],
+      "correct_answer": "cidadãos",
+      "explanation": "O plural de 'cidadão' é 'cidadãos' (como mão/mãos e irmão/irmãos).",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o diminutivo de 'casa'?",
+      "options": [
+        "casinha",
+        "casona",
+        "casarão",
+        "casebre"
+      ],
+      "correct_answer": "casinha",
+      "explanation": "'Casinha' é o diminutivo de 'casa'. 'Casona' e 'casarão' são aumentativos.",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o plural de 'animal'?",
+      "options": [
+        "animais",
+        "animales",
+        "animaes",
+        "animals"
+      ],
+      "correct_answer": "animais",
+      "explanation": "Substantivos terminados em -al trocam o -l por -is: animal → animais.",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o coletivo de 'cães'?",
+      "options": [
+        "matilha",
+        "rebanho",
+        "cardume",
+        "manada"
+      ],
+      "correct_answer": "matilha",
+      "explanation": "'Matilha' é o coletivo de cães.",
+      "hints": [
+        "Coletivo é a palavra que nomeia um conjunto de seres da mesma espécie.",
+        "Cada tipo de ser costuma ter o seu coletivo próprio."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o coletivo de 'abelhas'?",
+      "options": [
+        "enxame",
+        "cardume",
+        "manada",
+        "alcateia"
+      ],
+      "correct_answer": "enxame",
+      "explanation": "'Enxame' é o coletivo de abelhas.",
+      "hints": [
+        "Coletivo é a palavra que nomeia um conjunto de seres da mesma espécie.",
+        "Cada tipo de ser costuma ter o seu coletivo próprio."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o coletivo de 'peixes'?",
+      "options": [
+        "cardume",
+        "enxame",
+        "matilha",
+        "rebanho"
+      ],
+      "correct_answer": "cardume",
+      "explanation": "'Cardume' é o coletivo de peixes.",
+      "hints": [
+        "Coletivo é a palavra que nomeia um conjunto de seres da mesma espécie.",
+        "Cada tipo de ser costuma ter o seu coletivo próprio."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual das palavras é um substantivo próprio?",
+      "options": [
+        "Brasil",
+        "cidade",
+        "país",
+        "rio"
+      ],
+      "correct_answer": "Brasil",
+      "explanation": "Substantivo próprio nomeia um ser em particular e se escreve com inicial maiúscula. 'Brasil' é próprio; 'cidade', 'país' e 'rio' são comuns.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o prefixo da palavra 'infeliz'?",
+      "options": [
+        "in-",
+        "feliz",
+        "-liz",
+        "-z"
+      ],
+      "correct_answer": "in-",
+      "explanation": "'Infeliz' = in- (prefixo, ideia de negação) + feliz (radical).",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual é o sufixo da palavra 'felizmente'?",
+      "options": [
+        "-mente",
+        "feliz",
+        "-ente",
+        "-lizmente"
+      ],
+      "correct_answer": "-mente",
+      "explanation": "'Felizmente' = feliz (radical) + -mente (sufixo formador de advérbios).",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Em 'Eu cantei ontem.', o verbo 'cantei' está no:",
+      "options": [
+        "pretérito perfeito",
+        "presente",
+        "futuro do presente",
+        "pretérito imperfeito"
+      ],
+      "correct_answer": "pretérito perfeito",
+      "explanation": "O pretérito perfeito indica ação já concluída no passado ('ontem').",
+      "hints": [
+        "Observe em que momento a ação acontece em relação a agora.",
+        "Veja se a ação já terminou, está acontecendo ou ainda vai acontecer."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Em 'Nós comeremos amanhã.', o verbo 'comeremos' está no:",
+      "options": [
+        "futuro do presente",
+        "presente",
+        "pretérito perfeito",
+        "futuro do pretérito"
+      ],
+      "correct_answer": "futuro do presente",
+      "explanation": "O futuro do presente indica ação que ainda vai acontecer ('amanhã').",
+      "hints": [
+        "Observe em que momento a ação acontece em relação a agora.",
+        "Veja se a ação já terminou, está acontecendo ou ainda vai acontecer."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual das palavras é um adjetivo?",
+      "options": [
+        "bonito",
+        "correr",
+        "ontem",
+        "sobre"
+      ],
+      "correct_answer": "bonito",
+      "explanation": "'Bonito' caracteriza um substantivo (adjetivo). 'Correr' é verbo, 'ontem' é advérbio e 'sobre' é preposição.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Qual das palavras é um advérbio?",
+      "options": [
+        "rapidamente",
+        "rápido",
+        "rapidez",
+        "rapaz"
+      ],
+      "correct_answer": "rapidamente",
+      "explanation": "'Rapidamente' modifica o verbo (advérbio de modo). 'Rápido' é adjetivo; 'rapidez' e 'rapaz' são substantivos.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Qual é o feminino de 'galo'?",
+      "options": [
+        "galinha",
+        "gala",
+        "galoa",
+        "galesa"
+      ],
+      "correct_answer": "galinha",
+      "explanation": "'Galinha' é o feminino de 'galo' (forma diferente do masculino, como boi/vaca).",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Qual é o plural de 'guarda-chuva'?",
+      "options": [
+        "guarda-chuvas",
+        "guardas-chuvas",
+        "guardas-chuva",
+        "guarda-chuva"
+      ],
+      "correct_answer": "guarda-chuvas",
+      "explanation": "Em compostos de verbo + substantivo, só o segundo elemento varia: guarda-chuvas.",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Qual é o plural de 'couve-flor'?",
+      "options": [
+        "couves-flores",
+        "couves-flor",
+        "couve-flores",
+        "couve-flor"
+      ],
+      "correct_answer": "couves-flores",
+      "explanation": "Em compostos de substantivo + substantivo, os dois elementos variam: couves-flores.",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Ontem ele ___ o casaco na cadeira. (verbo pôr)",
+      "options": [
+        "pôs",
+        "pos",
+        "pôz",
+        "poz"
+      ],
+      "correct_answer": "pôs",
+      "explanation": "O verbo 'pôr' no pretérito perfeito faz 'ele pôs' (com acento circunflexo, para diferenciar de 'pos').",
+      "hints": [
+        "Observe em que momento a ação acontece em relação a agora.",
+        "Veja se a ação já terminou, está acontecendo ou ainda vai acontecer."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Se eu ___ tempo, viajaria mais. (verbo ter)",
+      "options": [
+        "tivesse",
+        "tiver",
+        "teria",
+        "tenha"
+      ],
+      "correct_answer": "tivesse",
+      "explanation": "Depois de 'se' com apódose no futuro do pretérito ('viajaria'), usa-se o pretérito imperfeito do subjuntivo: tivesse.",
+      "hints": [
+        "Observe em que momento a ação acontece em relação a agora.",
+        "Veja se a ação já terminou, está acontecendo ou ainda vai acontecer."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Qual é o superlativo absoluto sintético de 'fiel'?",
+      "options": [
+        "fidelíssimo",
+        "fielíssimo",
+        "fielzíssimo",
+        "fielésimo"
+      ],
+      "correct_answer": "fidelíssimo",
+      "explanation": "Adjetivos terminados em -el (fiel) recuperam o radical latino: fiel → fidelíssimo.",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Qual é o superlativo absoluto sintético de 'nobre'?",
+      "options": [
+        "nobilíssimo",
+        "nobríssimo",
+        "nobrezíssimo",
+        "nobreíssimo"
+      ],
+      "correct_answer": "nobilíssimo",
+      "explanation": "Alguns adjetivos usam o radical latino no superlativo: nobre → nobilíssimo (como fiel → fidelíssimo).",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Qual é o comparativo de superioridade sintético de 'bom'?",
+      "options": [
+        "melhor",
+        "mais bom",
+        "bem melhor",
+        "ótimo"
+      ],
+      "correct_answer": "melhor",
+      "explanation": "'Bom' tem forma própria de comparativo de superioridade: melhor ('mais bom' é incorreto; 'ótimo' é superlativo).",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Na frase 'Ela é mais alta que eu.', o adjetivo 'alta' está no grau:",
+      "options": [
+        "comparativo de superioridade",
+        "comparativo de igualdade",
+        "superlativo absoluto",
+        "normal"
+      ],
+      "correct_answer": "comparativo de superioridade",
+      "explanation": "'Mais ... que' estabelece comparação de superioridade entre dois seres.",
+      "hints": [
+        "Pense na regra de formação de gênero, número ou grau desse tipo de palavra.",
+        "Compare com outras palavras parecidas cuja forma você já conhece."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A palavra 'pontapé' foi formada por:",
+      "options": [
+        "composição por justaposição",
+        "composição por aglutinação",
+        "derivação prefixal",
+        "derivação sufixal"
+      ],
+      "correct_answer": "composição por justaposição",
+      "explanation": "'Ponta' + 'pé': duas palavras unidas sem perder nenhum fonema — justaposição.",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A palavra 'aguardente' foi formada por:",
+      "options": [
+        "composição por aglutinação",
+        "composição por justaposição",
+        "derivação prefixal",
+        "derivação sufixal"
+      ],
+      "correct_answer": "composição por aglutinação",
+      "explanation": "'Água' + 'ardente': na união, um dos elementos perdeu fonemas (água → agu-) — aglutinação.",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A palavra 'desleal' foi formada por derivação:",
+      "options": [
+        "prefixal",
+        "sufixal",
+        "parassintética",
+        "regressiva"
+      ],
+      "correct_answer": "prefixal",
+      "explanation": "'Des-' (prefixo) + 'leal': só se acrescentou prefixo — derivação prefixal.",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A palavra 'anoitecer' foi formada por derivação:",
+      "options": [
+        "parassintética",
+        "prefixal",
+        "sufixal",
+        "regressiva"
+      ],
+      "correct_answer": "parassintética",
+      "explanation": "A + noite + -ecer: prefixo e sufixo entram ao mesmo tempo; sem 'anoite' nem 'noitecer', é derivação parassintética.",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Qual das palavras é uma conjunção coordenativa adversativa?",
+      "options": [
+        "mas",
+        "porque",
+        "se",
+        "quando"
+      ],
+      "correct_answer": "mas",
+      "explanation": "'Mas' liga orações expressando oposição (adversativa). 'Porque' é causal ou explicativa, 'se' é condicional e 'quando' é temporal: nenhuma delas indica oposição.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Na frase 'O livro que li é ótimo.', a palavra 'que' é:",
+      "options": [
+        "pronome relativo",
+        "conjunção integrante",
+        "advérbio",
+        "preposição"
+      ],
+      "correct_answer": "pronome relativo",
+      "explanation": "'Que' retoma 'livro' (antecedente) e exerce função na oração ('li que'): pronome relativo.",
+      "hints": [
+        "Pergunte-se qual é a função da palavra na frase: nomear, indicar ação, caracterizar, ligar termos...",
+        "Tente trocar a palavra por outra que você já sabe classificar e veja se a frase continua fazendo sentido."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'O jantar estava pronto.', a palavra 'jantar' é um substantivo formado por derivação:",
+      "options": [
+        "imprópria",
+        "sufixal",
+        "prefixal",
+        "regressiva"
+      ],
+      "correct_answer": "imprópria",
+      "explanation": "O verbo 'jantar' passou a substantivo sem mudar de forma, só de classe: derivação imprópria (conversão).",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "A palavra 'infelizmente' foi formada por:",
+      "options": [
+        "derivação prefixal e sufixal",
+        "derivação parassintética",
+        "composição por justaposição",
+        "composição por aglutinação"
+      ],
+      "correct_answer": "derivação prefixal e sufixal",
+      "explanation": "in- + feliz + -mente: prefixo e sufixo entram em etapas separadas ('infeliz' e 'felizmente' existem), logo não é parassíntese.",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em qual frase a palavra 'meio' é advérbio?",
+      "options": [
+        "Ela ficou meio triste.",
+        "Ele mora no meio da rua.",
+        "O meio de transporte é o trem.",
+        "Estava no meio do caminho."
+      ],
+      "correct_answer": "Ela ficou meio triste.",
+      "explanation": "Em 'meio triste', 'meio' modifica o adjetivo com o sentido de 'um pouco': advérbio. Nas demais, 'meio' é substantivo.",
+      "hints": [
+        "Analise cada alternativa separadamente, classificando cada palavra.",
+        "Elimine as alternativas que trazem ao menos uma palavra de outra classe."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Qual frase traz um verbo no modo imperativo?",
+      "options": [
+        "Feche a porta.",
+        "Ele fechou a porta.",
+        "Se ele fechar a porta...",
+        "Fechando a porta, saiu."
+      ],
+      "correct_answer": "Feche a porta.",
+      "explanation": "O imperativo expressa ordem ou pedido: 'Feche a porta.' As demais estão no indicativo, no subjuntivo e no gerúndio.",
+      "hints": [
+        "Observe em que momento a ação acontece em relação a agora.",
+        "Veja se a ação já terminou, está acontecendo ou ainda vai acontecer."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Ele saiu sem dizer nada.', a forma verbal 'dizer' está no:",
+      "options": [
+        "infinitivo",
+        "gerúndio",
+        "particípio",
+        "imperativo"
+      ],
+      "correct_answer": "infinitivo",
+      "explanation": "Infinitivo é a forma nominal terminada em -r que nomeia a ação.",
+      "hints": [
+        "Observe em que momento a ação acontece em relação a agora.",
+        "Veja se a ação já terminou, está acontecendo ou ainda vai acontecer."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Estudando, aprendi muito.', a forma verbal 'estudando' é um:",
+      "options": [
+        "gerúndio",
+        "infinitivo",
+        "particípio",
+        "futuro do presente"
+      ],
+      "correct_answer": "gerúndio",
+      "explanation": "Gerúndio é a forma nominal terminada em -ndo e indica ação em curso.",
+      "hints": [
+        "Observe em que momento a ação acontece em relação a agora.",
+        "Veja se a ação já terminou, está acontecendo ou ainda vai acontecer."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'A porta foi fechada.', a forma verbal 'fechada' é um:",
+      "options": [
+        "particípio",
+        "gerúndio",
+        "infinitivo",
+        "imperativo"
+      ],
+      "correct_answer": "particípio",
+      "explanation": "'Fechada' é o particípio de 'fechar', usado com o auxiliar 'foi' na voz passiva.",
+      "hints": [
+        "Observe em que momento a ação acontece em relação a agora.",
+        "Veja se a ação já terminou, está acontecendo ou ainda vai acontecer."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Qual é o radical de 'florista'?",
+      "options": [
+        "flor",
+        "florist",
+        "-ista",
+        "floris"
+      ],
+      "correct_answer": "flor",
+      "explanation": "'Florista' = flor (radical) + -ista (sufixo que indica profissão).",
+      "hints": [
+        "Observe as partes que formam a palavra: prefixo, radical e sufixo.",
+        "Retire cada parte e veja o que sobra; pergunte se a palavra nasceu da união de outras."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Qual alternativa traz somente substantivos abstratos?",
+      "options": [
+        "beleza, coragem, alegria",
+        "mesa, livro, casa",
+        "gato, cão, rio",
+        "Brasil, Paris, Amazonas"
+      ],
+      "correct_answer": "beleza, coragem, alegria",
+      "explanation": "Substantivo abstrato nomeia qualidades, sentimentos e ações que só existem em outros seres: beleza, coragem, alegria. As demais trazem concretos e próprios.",
+      "hints": [
+        "Analise cada alternativa separadamente, classificando cada palavra.",
+        "Elimine as alternativas que trazem ao menos uma palavra de outra classe."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a alternativa em que TODAS as palavras são advérbios.",
+      "options": [
+        "hoje, aqui, talvez",
+        "hoje, casa, muito",
+        "bem, belo, mal",
+        "aqui, azul, ontem"
+      ],
+      "correct_answer": "hoje, aqui, talvez",
+      "explanation": "'Hoje' (tempo), 'aqui' (lugar) e 'talvez' (dúvida) são advérbios. Nas outras há substantivo ('casa') ou adjetivo ('belo', 'azul').",
+      "hints": [
+        "Analise cada alternativa separadamente, classificando cada palavra.",
+        "Elimine as alternativas que trazem ao menos uma palavra de outra classe."
+      ]
+    }
+  ]
+}

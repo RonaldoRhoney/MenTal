@@ -3164,5 +3164,9 @@
   "territoryLinguagemCrase": "Crase",
   "@territoryLinguagemCrase": {
     "description": "Territory name — Linguagem grammar SubMundo: Crase"
+  },
+  "territoryLinguagemMorfologia": "Morfologia",
+  "@territoryLinguagemMorfologia": {
+    "description": "Territory name — Linguagem grammar SubMundo: Morfologia"
   }
 }

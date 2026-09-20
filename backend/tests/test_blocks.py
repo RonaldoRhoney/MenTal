@@ -10,6 +10,18 @@ import uuid
 from .conftest import auth_header
 
 
+# Blocos dos SubMundos de gramática ativos (plano em content/plano_temas_linguagem.json): derivados
+# do plano pra novos temas entrarem sozinhos neste teste.
+import json as _json
+from pathlib import Path as _Path
+
+_LINGUAGEM_TEMA_BLOCKS = [
+    f"lg_{t['slug']}"
+    for t in _json.loads((_Path(__file__).resolve().parent.parent / "content" / "plano_temas_linguagem.json").read_text(encoding="utf-8"))["temas"]
+    if t["status"] == "ativo"
+]
+
+
 def test_progress_includes_matematica_block_with_numeros_e_logica(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
@@ -113,7 +125,7 @@ def test_blocks_without_any_territory_are_not_returned(client):
     assert block_ids == {
         "matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia",
         "financas_pessoais", "filosofia", "artes", "saude_bemestar", "curiosidade_relampago", "libras",
-        "jogos_de_palavras", "internet", "copa_do_mundo", "futebol", "ingles", "espanhol", "frances", "palavras_raras", "lg_crase",
+        "jogos_de_palavras", "internet", "copa_do_mundo", "futebol", "ingles", "espanhol", "frances", "palavras_raras", *_LINGUAGEM_TEMA_BLOCKS,
     }
 
 

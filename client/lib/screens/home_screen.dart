@@ -1534,6 +1534,7 @@ const Map<String, IconData> _kSectionIcons = {
   'jogos_de_palavras': Icons.extension_rounded,
   'palavras_raras': Icons.spellcheck_rounded,
   'lg_crase': Icons.text_fields_rounded,
+  'lg_morfologia': Icons.abc_rounded,
 };
 
 /// Cabeçalho de seção reutilizável — usado por qualquer Bloco/SubMundo

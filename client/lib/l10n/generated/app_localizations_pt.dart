@@ -2298,4 +2298,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get territoryLinguagemCrase => 'Crase';
+
+  @override
+  String get territoryLinguagemMorfologia => 'Morfologia';
 }
