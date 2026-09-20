@@ -3987,6 +3987,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Morfologia'**
   String get territoryLinguagemMorfologia;
+
+  /// Territory name — Linguagem grammar SubMundo: Interpretação de Texto
+  ///
+  /// In pt, this message translates to:
+  /// **'Interpretação de Texto'**
+  String get territoryLinguagemInterpretacaoDeTexto;
 }
 
 class _AppLocalizationsDelegate

@@ -185,6 +185,7 @@ const List<String> kTerritoryIds = [
   // SubMundos de gramática da Linguagem (só temas ativos), 20/09/2026.
   'linguagem_crase',
   'linguagem_morfologia',
+  'linguagem_interpretacao_de_texto',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -283,6 +284,8 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryLinguagemCrase;
     case 'linguagem_morfologia':
       return l10n.territoryLinguagemMorfologia;
+    case 'linguagem_interpretacao_de_texto':
+      return l10n.territoryLinguagemInterpretacaoDeTexto;
     case 'futebol_origens':
       return l10n.territoryFutebolOrigens;
     case 'futebol_grandes_nomes':

@@ -3168,5 +3168,9 @@
   "territoryLinguagemMorfologia": "Morfologia",
   "@territoryLinguagemMorfologia": {
     "description": "Territory name — Linguagem grammar SubMundo: Morfologia"
+  },
+  "territoryLinguagemInterpretacaoDeTexto": "Interpretação de Texto",
+  "@territoryLinguagemInterpretacaoDeTexto": {
+    "description": "Territory name — Linguagem grammar SubMundo: Interpretação de Texto"
   }
 }

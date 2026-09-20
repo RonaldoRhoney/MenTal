@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nA biblioteca do bairro Vila Nova reabriu na segunda-feira depois de três meses de reforma. O prédio ganhou rampas de acesso, novas estantes e uma sala de leitura para crianças. Segundo a bibliotecária Marta, o número de visitantes triplicou na primeira semana, embora o acervo ainda não esteja completo: faltam cerca de dois mil livros, que devem chegar por doação no próximo mês.\n\nQuanto tempo durou a reforma da biblioteca?",
+    "options": [
+      "três meses",
+      "uma semana",
+      "dois anos",
+      "seis meses"
+    ],
+    "correct_answer": "três meses",
+    "explanation": "O texto diz que a biblioteca reabriu \"depois de três meses de reforma\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nA biblioteca do bairro Vila Nova reabriu na segunda-feira depois de três meses de reforma. O prédio ganhou rampas de acesso, novas estantes e uma sala de leitura para crianças. Segundo a bibliotecária Marta, o número de visitantes triplicou na primeira semana, embora o acervo ainda não esteja completo: faltam cerca de dois mil livros, que devem chegar por doação no próximo mês.\n\nO que a biblioteca ganhou com a reforma?",
+    "options": [
+      "rampas de acesso, novas estantes e uma sala de leitura para crianças",
+      "um café, um auditório e um estacionamento",
+      "novos computadores e uma livraria",
+      "salas de cinema e uma quadra"
+    ],
+    "correct_answer": "rampas de acesso, novas estantes e uma sala de leitura para crianças",
+    "explanation": "O segundo período lista: rampas de acesso, novas estantes e uma sala de leitura para crianças.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nA biblioteca do bairro Vila Nova reabriu na segunda-feira depois de três meses de reforma. O prédio ganhou rampas de acesso, novas estantes e uma sala de leitura para crianças. Segundo a bibliotecária Marta, o número de visitantes triplicou na primeira semana, embora o acervo ainda não esteja completo: faltam cerca de dois mil livros, que devem chegar por doação no próximo mês.\n\nSegundo o texto, por que o acervo ainda não está completo?",
+    "options": [
+      "Faltam cerca de dois mil livros, que devem chegar por doação.",
+      "Os livros foram perdidos durante a reforma.",
+      "A bibliotecária Marta recusou as doações.",
+      "O prédio não comporta mais livros."
+    ],
+    "correct_answer": "Faltam cerca de dois mil livros, que devem chegar por doação.",
+    "explanation": "O texto afirma que \"faltam cerca de dois mil livros, que devem chegar por doação no próximo mês\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nA biblioteca do bairro Vila Nova reabriu na segunda-feira depois de três meses de reforma. O prédio ganhou rampas de acesso, novas estantes e uma sala de leitura para crianças. Segundo a bibliotecária Marta, o número de visitantes triplicou na primeira semana, embora o acervo ainda não esteja completo: faltam cerca de dois mil livros, que devem chegar por doação no próximo mês.\n\nNo trecho \"o número de visitantes triplicou\", o verbo \"triplicou\" indica que o número:",
+    "options": [
+      "ficou três vezes maior",
+      "caiu pela metade",
+      "dobrou",
+      "permaneceu igual"
+    ],
+    "correct_answer": "ficou três vezes maior",
+    "explanation": "'Triplicar' é multiplicar por três: o número de visitantes ficou três vezes maior.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nA biblioteca do bairro Vila Nova reabriu na segunda-feira depois de três meses de reforma. O prédio ganhou rampas de acesso, novas estantes e uma sala de leitura para crianças. Segundo a bibliotecária Marta, o número de visitantes triplicou na primeira semana, embora o acervo ainda não esteja completo: faltam cerca de dois mil livros, que devem chegar por doação no próximo mês.\n\nQual é a ideia central do texto?",
+    "options": [
+      "A reabertura da biblioteca reformada atraiu mais público, embora o acervo ainda esteja incompleto.",
+      "A biblioteca foi fechada por falta de leitores.",
+      "O bairro Vila Nova precisa de mais livros e menos reformas.",
+      "A bibliotecária Marta criticou a reforma do prédio."
+    ],
+    "correct_answer": "A reabertura da biblioteca reformada atraiu mais público, embora o acervo ainda esteja incompleto.",
+    "explanation": "O texto relata a reabertura, o aumento de visitantes e a ressalva sobre o acervo: essa é a ideia que reúne tudo.",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunte-se o que o autor quis fazer com o texto: informar, criticar, aconselhar...",
+      "Considere o texto inteiro, não apenas uma frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nNos dias de calor intenso, os gatos costumam dormir mais e procurar lugares frescos, como o chão de azulejo ou a sombra de móveis. Diferentemente dos cães, eles quase não ofegam para se refrescar; preferem poupar energia. Por isso, os veterinários recomendam deixar água fresca sempre à disposição e, se o animal parecer muito abatido, procurar ajuda profissional.\n\nOnde os gatos procuram se refrescar nos dias de calor?",
+    "options": [
+      "no chão de azulejo ou na sombra de móveis",
+      "dentro da geladeira",
+      "em cima de telhados",
+      "em locais úmidos da rua"
+    ],
+    "correct_answer": "no chão de azulejo ou na sombra de móveis",
+    "explanation": "O texto cita \"o chão de azulejo ou a sombra de móveis\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nNos dias de calor intenso, os gatos costumam dormir mais e procurar lugares frescos, como o chão de azulejo ou a sombra de móveis. Diferentemente dos cães, eles quase não ofegam para se refrescar; preferem poupar energia. Por isso, os veterinários recomendam deixar água fresca sempre à disposição e, se o animal parecer muito abatido, procurar ajuda profissional.\n\nO que os veterinários recomendam?",
+    "options": [
+      "deixar água fresca sempre à disposição e procurar ajuda se o gato estiver muito abatido",
+      "dar banho gelado nos gatos todos os dias",
+      "impedir que os gatos durmam",
+      "manter os gatos sempre ao sol"
+    ],
+    "correct_answer": "deixar água fresca sempre à disposição e procurar ajuda se o gato estiver muito abatido",
+    "explanation": "A recomendação está no último período do texto.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nNos dias de calor intenso, os gatos costumam dormir mais e procurar lugares frescos, como o chão de azulejo ou a sombra de móveis. Diferentemente dos cães, eles quase não ofegam para se refrescar; preferem poupar energia. Por isso, os veterinários recomendam deixar água fresca sempre à disposição e, se o animal parecer muito abatido, procurar ajuda profissional.\n\nNo trecho \"Diferentemente dos cães\", o texto estabelece uma relação de:",
+    "options": [
+      "contraste",
+      "causa",
+      "finalidade",
+      "tempo"
+    ],
+    "correct_answer": "contraste",
+    "explanation": "'Diferentemente de' opõe o comportamento dos gatos ao dos cães: contraste.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nNos dias de calor intenso, os gatos costumam dormir mais e procurar lugares frescos, como o chão de azulejo ou a sombra de móveis. Diferentemente dos cães, eles quase não ofegam para se refrescar; preferem poupar energia. Por isso, os veterinários recomendam deixar água fresca sempre à disposição e, se o animal parecer muito abatido, procurar ajuda profissional.\n\nA palavra \"abatido\", no texto, tem o sentido mais próximo de:",
+    "options": [
+      "desanimado e sem energia",
+      "machucado por um golpe",
+      "assustado",
+      "irritado"
+    ],
+    "correct_answer": "desanimado e sem energia",
+    "explanation": "No contexto (animal com calor que precisa de ajuda), 'abatido' indica falta de ânimo e de energia.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nNos dias de calor intenso, os gatos costumam dormir mais e procurar lugares frescos, como o chão de azulejo ou a sombra de móveis. Diferentemente dos cães, eles quase não ofegam para se refrescar; preferem poupar energia. Por isso, os veterinários recomendam deixar água fresca sempre à disposição e, se o animal parecer muito abatido, procurar ajuda profissional.\n\nPode-se concluir do texto que os gatos, ao contrário dos cães:",
+    "options": [
+      "dependem menos de ofegar para lidar com o calor",
+      "não sentem calor",
+      "bebem menos água que os cães",
+      "preferem lugares quentes"
+    ],
+    "correct_answer": "dependem menos de ofegar para lidar com o calor",
+    "explanation": "O texto diz que eles \"quase não ofegam\" e preferem poupar energia, ao contrário dos cães.",
+    "age_reviewed": true,
+    "hints": [
+      "Procure pistas no próprio texto, sem usar só o que você já sabe.",
+      "Elimine as alternativas que dizem algo que o texto não afirma nem permite concluir."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nDepois que a prefeitura criou novas ciclovias, o uso de bicicletas para ir ao trabalho cresceu 40% em dois anos. O ciclista Paulo, que antes gastava uma hora de ônibus, agora chega ao escritório em vinte e cinco minutos. Ele admite, porém, que a falta de bicicletários seguros ainda o preocupa, já que uma bicicleta sua foi furtada.\n\nEm quanto cresceu o uso de bicicletas para ir ao trabalho?",
+    "options": [
+      "40%",
+      "25%",
+      "60%",
+      "100%"
+    ],
+    "correct_answer": "40%",
+    "explanation": "O texto diz que o uso \"cresceu 40% em dois anos\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nDepois que a prefeitura criou novas ciclovias, o uso de bicicletas para ir ao trabalho cresceu 40% em dois anos. O ciclista Paulo, que antes gastava uma hora de ônibus, agora chega ao escritório em vinte e cinco minutos. Ele admite, porém, que a falta de bicicletários seguros ainda o preocupa, já que uma bicicleta sua foi furtada.\n\nQuanto tempo Paulo leva hoje para chegar ao escritório?",
+    "options": [
+      "vinte e cinco minutos",
+      "uma hora",
+      "quarenta minutos",
+      "dez minutos"
+    ],
+    "correct_answer": "vinte e cinco minutos",
+    "explanation": "Paulo \"agora chega ao escritório em vinte e cinco minutos\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nDepois que a prefeitura criou novas ciclovias, o uso de bicicletas para ir ao trabalho cresceu 40% em dois anos. O ciclista Paulo, que antes gastava uma hora de ônibus, agora chega ao escritório em vinte e cinco minutos. Ele admite, porém, que a falta de bicicletários seguros ainda o preocupa, já que uma bicicleta sua foi furtada.\n\nQual é a preocupação de Paulo?",
+    "options": [
+      "a falta de bicicletários seguros",
+      "o preço das bicicletas",
+      "o excesso de ciclovias",
+      "o tempo de viagem"
+    ],
+    "correct_answer": "a falta de bicicletários seguros",
+    "explanation": "Ele admite que \"a falta de bicicletários seguros ainda o preocupa\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nDepois que a prefeitura criou novas ciclovias, o uso de bicicletas para ir ao trabalho cresceu 40% em dois anos. O ciclista Paulo, que antes gastava uma hora de ônibus, agora chega ao escritório em vinte e cinco minutos. Ele admite, porém, que a falta de bicicletários seguros ainda o preocupa, já que uma bicicleta sua foi furtada.\n\nEm \"Ele admite, porém, que...\", a palavra \"porém\" indica:",
+    "options": [
+      "oposição ao que foi dito antes",
+      "causa do que foi dito",
+      "conclusão do que foi dito",
+      "explicação do que foi dito"
+    ],
+    "correct_answer": "oposição ao que foi dito antes",
+    "explanation": "'Porém' é conjunção adversativa: contrapõe a ressalva de Paulo aos benefícios já apresentados.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nDepois que a prefeitura criou novas ciclovias, o uso de bicicletas para ir ao trabalho cresceu 40% em dois anos. O ciclista Paulo, que antes gastava uma hora de ônibus, agora chega ao escritório em vinte e cinco minutos. Ele admite, porém, que a falta de bicicletários seguros ainda o preocupa, já que uma bicicleta sua foi furtada.\n\nQual é a função da ressalva de Paulo no final do texto?",
+    "options": [
+      "mostrar que, apesar do avanço, ainda há problemas de infraestrutura",
+      "criticar o uso de ônibus",
+      "convencer o leitor a comprar uma bicicleta",
+      "provar que as ciclovias foram inúteis"
+    ],
+    "correct_answer": "mostrar que, apesar do avanço, ainda há problemas de infraestrutura",
+    "explanation": "Depois de apresentar os ganhos, o texto acrescenta um problema que persiste (falta de bicicletários seguros).",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunte-se o que o autor quis fazer com o texto: informar, criticar, aconselhar...",
+      "Considere o texto inteiro, não apenas uma frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nO ipê-amarelo floresce no fim do inverno, quando a árvore perde as folhas e se cobre de flores douradas. A floração dura poucos dias, mas é intensa: em uma semana, o chão ao redor fica coberto de pétalas. Por causa dessa beleza passageira, a árvore virou símbolo nacional e inspira poemas e pinturas.\n\nQuando o ipê-amarelo floresce?",
+    "options": [
+      "no fim do inverno",
+      "no início do verão",
+      "em pleno outono",
+      "durante todo o ano"
+    ],
+    "correct_answer": "no fim do inverno",
+    "explanation": "O texto abre dizendo que ele floresce \"no fim do inverno\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nO ipê-amarelo floresce no fim do inverno, quando a árvore perde as folhas e se cobre de flores douradas. A floração dura poucos dias, mas é intensa: em uma semana, o chão ao redor fica coberto de pétalas. Por causa dessa beleza passageira, a árvore virou símbolo nacional e inspira poemas e pinturas.\n\nQuanto dura a floração do ipê?",
+    "options": [
+      "poucos dias",
+      "meses",
+      "um ano",
+      "uma estação inteira"
+    ],
+    "correct_answer": "poucos dias",
+    "explanation": "\"A floração dura poucos dias, mas é intensa\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nO ipê-amarelo floresce no fim do inverno, quando a árvore perde as folhas e se cobre de flores douradas. A floração dura poucos dias, mas é intensa: em uma semana, o chão ao redor fica coberto de pétalas. Por causa dessa beleza passageira, a árvore virou símbolo nacional e inspira poemas e pinturas.\n\nA expressão \"beleza passageira\" sugere que a beleza do ipê:",
+    "options": [
+      "dura pouco tempo",
+      "é falsa",
+      "é desprezada pelas pessoas",
+      "aparece só à noite"
+    ],
+    "correct_answer": "dura pouco tempo",
+    "explanation": "'Passageira' é o que passa depressa: a floração dura poucos dias.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nO ipê-amarelo floresce no fim do inverno, quando a árvore perde as folhas e se cobre de flores douradas. A floração dura poucos dias, mas é intensa: em uma semana, o chão ao redor fica coberto de pétalas. Por causa dessa beleza passageira, a árvore virou símbolo nacional e inspira poemas e pinturas.\n\nA palavra \"inspira\", no texto, significa:",
+    "options": [
+      "serve de motivo para a criação de obras",
+      "obriga a fazer",
+      "assusta",
+      "copia"
+    ],
+    "correct_answer": "serve de motivo para a criação de obras",
+    "explanation": "A árvore 'inspira poemas e pinturas': é fonte de inspiração para artistas.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nO ipê-amarelo floresce no fim do inverno, quando a árvore perde as folhas e se cobre de flores douradas. A floração dura poucos dias, mas é intensa: em uma semana, o chão ao redor fica coberto de pétalas. Por causa dessa beleza passageira, a árvore virou símbolo nacional e inspira poemas e pinturas.\n\nSegundo o texto, o que explica o fato de o ipê ser símbolo nacional?",
+    "options": [
+      "a beleza intensa e passageira de sua floração",
+      "o tamanho da árvore",
+      "o valor de sua madeira",
+      "o fato de florescer o ano todo"
+    ],
+    "correct_answer": "a beleza intensa e passageira de sua floração",
+    "explanation": "O texto liga o título de símbolo nacional à \"beleza passageira\" da floração.",
+    "age_reviewed": true,
+    "hints": [
+      "Procure pistas no próprio texto, sem usar só o que você já sabe.",
+      "Elimine as alternativas que dizem algo que o texto não afirma nem permite concluir."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nDormir menos de seis horas por noite prejudica a memória e o humor. Estudos mostram que quem dorme pouco tem mais dificuldade para aprender e fica mais irritado. Para melhorar o sono, especialistas sugerem evitar telas uma hora antes de deitar, manter o quarto escuro e dormir e acordar sempre nos mesmos horários.\n\nQual quantidade de sono o texto considera prejudicial?",
+    "options": [
+      "menos de seis horas por noite",
+      "mais de dez horas por noite",
+      "exatamente oito horas por noite",
+      "dormir durante o dia"
+    ],
+    "correct_answer": "menos de seis horas por noite",
+    "explanation": "O texto abre afirmando que dormir menos de seis horas por noite prejudica a memória e o humor.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nDormir menos de seis horas por noite prejudica a memória e o humor. Estudos mostram que quem dorme pouco tem mais dificuldade para aprender e fica mais irritado. Para melhorar o sono, especialistas sugerem evitar telas uma hora antes de deitar, manter o quarto escuro e dormir e acordar sempre nos mesmos horários.\n\nDormir pouco prejudica, segundo o texto:",
+    "options": [
+      "a memória e o humor",
+      "a visão e a audição",
+      "o apetite e o peso",
+      "a altura e a força"
+    ],
+    "correct_answer": "a memória e o humor",
+    "explanation": "A informação está no primeiro período.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nDormir menos de seis horas por noite prejudica a memória e o humor. Estudos mostram que quem dorme pouco tem mais dificuldade para aprender e fica mais irritado. Para melhorar o sono, especialistas sugerem evitar telas uma hora antes de deitar, manter o quarto escuro e dormir e acordar sempre nos mesmos horários.\n\nUma sugestão do texto para melhorar o sono é:",
+    "options": [
+      "evitar telas uma hora antes de deitar",
+      "tomar café à noite",
+      "dormir em horários diferentes",
+      "deixar o quarto iluminado"
+    ],
+    "correct_answer": "evitar telas uma hora antes de deitar",
+    "explanation": "Está no último período, junto com manter o quarto escuro e horários regulares.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nDormir menos de seis horas por noite prejudica a memória e o humor. Estudos mostram que quem dorme pouco tem mais dificuldade para aprender e fica mais irritado. Para melhorar o sono, especialistas sugerem evitar telas uma hora antes de deitar, manter o quarto escuro e dormir e acordar sempre nos mesmos horários.\n\nA palavra \"irritado\" pode ser substituída, sem mudar o sentido no texto, por:",
+    "options": [
+      "nervoso",
+      "cansado",
+      "feliz",
+      "distraído"
+    ],
+    "correct_answer": "nervoso",
+    "explanation": "'Irritado' aqui tem o sentido de facilmente aborrecido ou nervoso.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nDormir menos de seis horas por noite prejudica a memória e o humor. Estudos mostram que quem dorme pouco tem mais dificuldade para aprender e fica mais irritado. Para melhorar o sono, especialistas sugerem evitar telas uma hora antes de deitar, manter o quarto escuro e dormir e acordar sempre nos mesmos horários.\n\nA finalidade principal do texto é:",
+    "options": [
+      "informar sobre os efeitos do pouco sono e orientar como dormir melhor",
+      "vender um produto para dormir",
+      "contar a história de uma pessoa insone",
+      "criticar quem dorme demais"
+    ],
+    "correct_answer": "informar sobre os efeitos do pouco sono e orientar como dormir melhor",
+    "explanation": "O texto apresenta consequências do pouco sono e depois dá conselhos práticos.",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunte-se o que o autor quis fazer com o texto: informar, criticar, aconselhar...",
+      "Considere o texto inteiro, não apenas uma frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nA festa junina, celebrada em junho, mistura tradições portuguesas, indígenas e africanas. As comidas típicas, como pamonha e canjica, são feitas de milho, alimento cultivado no Brasil antes da chegada dos europeus. Já a quadrilha, dança em pares, veio da França e foi adaptada ao gosto popular.\n\nEm que mês se celebra a festa junina?",
+    "options": [
+      "junho",
+      "julho",
+      "dezembro",
+      "abril"
+    ],
+    "correct_answer": "junho",
+    "explanation": "O texto diz \"celebrada em junho\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nA festa junina, celebrada em junho, mistura tradições portuguesas, indígenas e africanas. As comidas típicas, como pamonha e canjica, são feitas de milho, alimento cultivado no Brasil antes da chegada dos europeus. Já a quadrilha, dança em pares, veio da França e foi adaptada ao gosto popular.\n\nDe onde veio a quadrilha, segundo o texto?",
+    "options": [
+      "da França",
+      "de Portugal",
+      "da África",
+      "dos povos indígenas"
+    ],
+    "correct_answer": "da França",
+    "explanation": "\"A quadrilha, dança em pares, veio da França\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nA festa junina, celebrada em junho, mistura tradições portuguesas, indígenas e africanas. As comidas típicas, como pamonha e canjica, são feitas de milho, alimento cultivado no Brasil antes da chegada dos europeus. Já a quadrilha, dança em pares, veio da França e foi adaptada ao gosto popular.\n\nNo primeiro período, o verbo \"mistura\" indica que a festa:",
+    "options": [
+      "reúne elementos de várias origens",
+      "exclui as tradições antigas",
+      "é só de origem portuguesa",
+      "nasceu no século passado"
+    ],
+    "correct_answer": "reúne elementos de várias origens",
+    "explanation": "A festa 'mistura' tradições portuguesas, indígenas e africanas.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nA festa junina, celebrada em junho, mistura tradições portuguesas, indígenas e africanas. As comidas típicas, como pamonha e canjica, são feitas de milho, alimento cultivado no Brasil antes da chegada dos europeus. Já a quadrilha, dança em pares, veio da França e foi adaptada ao gosto popular.\n\nNo trecho \"Já a quadrilha\", a palavra \"Já\" introduz:",
+    "options": [
+      "um novo exemplo, em contraste com o anterior",
+      "uma ideia de tempo passado",
+      "uma causa",
+      "uma conclusão"
+    ],
+    "correct_answer": "um novo exemplo, em contraste com o anterior",
+    "explanation": "Depois de falar das comidas (de origem local), o texto passa à quadrilha (de origem europeia): 'Já' marca essa mudança.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nA festa junina, celebrada em junho, mistura tradições portuguesas, indígenas e africanas. As comidas típicas, como pamonha e canjica, são feitas de milho, alimento cultivado no Brasil antes da chegada dos europeus. Já a quadrilha, dança em pares, veio da França e foi adaptada ao gosto popular.\n\nQue ideia o texto defende sobre a origem da festa junina?",
+    "options": [
+      "Ela resulta de várias influências culturais.",
+      "Ela é de origem exclusivamente europeia.",
+      "Ela nasceu de uma única tradição indígena.",
+      "Ela não tem relação com o milho."
+    ],
+    "correct_answer": "Ela resulta de várias influências culturais.",
+    "explanation": "O texto mostra elementos portugueses, indígenas, africanos e franceses, o que sustenta a ideia de múltiplas influências.",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunte-se o que o autor quis fazer com o texto: informar, criticar, aconselhar...",
+      "Considere o texto inteiro, não apenas uma frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nCresce o número de brasileiros que participam de corridas de rua. Em 2023, uma prova de dez quilômetros em Curitiba reuniu oito mil corredores, o dobro do registrado em 2019. Os organizadores atribuem o aumento ao custo baixo do esporte e à possibilidade de treinar em qualquer lugar, sem equipamentos caros.\n\nQuantos corredores participaram da prova de Curitiba em 2023?",
+    "options": [
+      "oito mil",
+      "quatro mil",
+      "dez mil",
+      "dois mil"
+    ],
+    "correct_answer": "oito mil",
+    "explanation": "O texto diz que a prova \"reuniu oito mil corredores\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nCresce o número de brasileiros que participam de corridas de rua. Em 2023, uma prova de dez quilômetros em Curitiba reuniu oito mil corredores, o dobro do registrado em 2019. Os organizadores atribuem o aumento ao custo baixo do esporte e à possibilidade de treinar em qualquer lugar, sem equipamentos caros.\n\nQual era a distância da prova citada?",
+    "options": [
+      "dez quilômetros",
+      "cinco quilômetros",
+      "vinte e um quilômetros",
+      "quarenta e dois quilômetros"
+    ],
+    "correct_answer": "dez quilômetros",
+    "explanation": "\"Uma prova de dez quilômetros em Curitiba\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nCresce o número de brasileiros que participam de corridas de rua. Em 2023, uma prova de dez quilômetros em Curitiba reuniu oito mil corredores, o dobro do registrado em 2019. Os organizadores atribuem o aumento ao custo baixo do esporte e à possibilidade de treinar em qualquer lugar, sem equipamentos caros.\n\nA que os organizadores atribuem o aumento de corredores?",
+    "options": [
+      "ao custo baixo do esporte e à possibilidade de treinar em qualquer lugar",
+      "ao apoio da prefeitura",
+      "a prêmios em dinheiro",
+      "à chegada de corredores estrangeiros"
+    ],
+    "correct_answer": "ao custo baixo do esporte e à possibilidade de treinar em qualquer lugar",
+    "explanation": "Está no último período do texto.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nCresce o número de brasileiros que participam de corridas de rua. Em 2023, uma prova de dez quilômetros em Curitiba reuniu oito mil corredores, o dobro do registrado em 2019. Os organizadores atribuem o aumento ao custo baixo do esporte e à possibilidade de treinar em qualquer lugar, sem equipamentos caros.\n\nQuantos corredores participaram da mesma prova em 2019?",
+    "options": [
+      "quatro mil",
+      "dezesseis mil",
+      "oito mil",
+      "seis mil"
+    ],
+    "correct_answer": "quatro mil",
+    "explanation": "Em 2023 foram oito mil, 'o dobro' de 2019: logo, em 2019 foram quatro mil.",
+    "age_reviewed": true,
+    "hints": [
+      "Procure pistas no próprio texto, sem usar só o que você já sabe.",
+      "Elimine as alternativas que dizem algo que o texto não afirma nem permite concluir."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nCresce o número de brasileiros que participam de corridas de rua. Em 2023, uma prova de dez quilômetros em Curitiba reuniu oito mil corredores, o dobro do registrado em 2019. Os organizadores atribuem o aumento ao custo baixo do esporte e à possibilidade de treinar em qualquer lugar, sem equipamentos caros.\n\nO texto apresenta o crescimento das corridas de rua como:",
+    "options": [
+      "um fenômeno crescente explicado por vantagens práticas do esporte",
+      "um modismo passageiro",
+      "um problema para as cidades",
+      "algo restrito a atletas profissionais"
+    ],
+    "correct_answer": "um fenômeno crescente explicado por vantagens práticas do esporte",
+    "explanation": "O texto informa o aumento e o explica pelo custo baixo e pela facilidade de treinar.",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunte-se o que o autor quis fazer com o texto: informar, criticar, aconselhar...",
+      "Considere o texto inteiro, não apenas uma frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nQuando Thomas Edison aperfeiçoou a lâmpada elétrica, no fim do século XIX, as cidades passaram a ter vida noturna mais ativa. Antes, o fim do dia obrigava as pessoas a recolher-se; com a luz elétrica, teatros, lojas e fábricas puderam funcionar até tarde. A invenção, portanto, mudou não só as casas, mas também o ritmo da sociedade.\n\nQuando Edison aperfeiçoou a lâmpada elétrica?",
+    "options": [
+      "no fim do século XIX",
+      "no início do século XX",
+      "no século XVII",
+      "no século XXI"
+    ],
+    "correct_answer": "no fim do século XIX",
+    "explanation": "O texto abre com \"no fim do século XIX\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nQuando Thomas Edison aperfeiçoou a lâmpada elétrica, no fim do século XIX, as cidades passaram a ter vida noturna mais ativa. Antes, o fim do dia obrigava as pessoas a recolher-se; com a luz elétrica, teatros, lojas e fábricas puderam funcionar até tarde. A invenção, portanto, mudou não só as casas, mas também o ritmo da sociedade.\n\nO que passou a funcionar até tarde com a luz elétrica?",
+    "options": [
+      "teatros, lojas e fábricas",
+      "escolas e igrejas",
+      "apenas as casas",
+      "somente as ruas"
+    ],
+    "correct_answer": "teatros, lojas e fábricas",
+    "explanation": "\"Teatros, lojas e fábricas puderam funcionar até tarde\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nQuando Thomas Edison aperfeiçoou a lâmpada elétrica, no fim do século XIX, as cidades passaram a ter vida noturna mais ativa. Antes, o fim do dia obrigava as pessoas a recolher-se; com a luz elétrica, teatros, lojas e fábricas puderam funcionar até tarde. A invenção, portanto, mudou não só as casas, mas também o ritmo da sociedade.\n\nA palavra \"portanto\" introduz, no texto, uma:",
+    "options": [
+      "conclusão",
+      "dúvida",
+      "oposição",
+      "condição"
+    ],
+    "correct_answer": "conclusão",
+    "explanation": "'Portanto' conclui a ideia desenvolvida nos períodos anteriores.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nQuando Thomas Edison aperfeiçoou a lâmpada elétrica, no fim do século XIX, as cidades passaram a ter vida noturna mais ativa. Antes, o fim do dia obrigava as pessoas a recolher-se; com a luz elétrica, teatros, lojas e fábricas puderam funcionar até tarde. A invenção, portanto, mudou não só as casas, mas também o ritmo da sociedade.\n\nEm \"Edison aperfeiçoou a lâmpada\", entende-se que ele:",
+    "options": [
+      "melhorou uma lâmpada que já existia",
+      "inventou a eletricidade",
+      "destruiu a lâmpada a gás",
+      "vendeu a lâmpada para as fábricas"
+    ],
+    "correct_answer": "melhorou uma lâmpada que já existia",
+    "explanation": "'Aperfeiçoar' é tornar melhor algo que já existe.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nQuando Thomas Edison aperfeiçoou a lâmpada elétrica, no fim do século XIX, as cidades passaram a ter vida noturna mais ativa. Antes, o fim do dia obrigava as pessoas a recolher-se; com a luz elétrica, teatros, lojas e fábricas puderam funcionar até tarde. A invenção, portanto, mudou não só as casas, mas também o ritmo da sociedade.\n\nA expressão \"não só as casas, mas também o ritmo da sociedade\" indica que a invenção:",
+    "options": [
+      "teve efeitos além do uso doméstico",
+      "só serviu para iluminar casas",
+      "atrasou a vida nas cidades",
+      "foi ignorada pela sociedade"
+    ],
+    "correct_answer": "teve efeitos além do uso doméstico",
+    "explanation": "'Não só... mas também' soma outro efeito: além das casas, a lâmpada mudou o ritmo da sociedade.",
+    "age_reviewed": true,
+    "hints": [
+      "Procure pistas no próprio texto, sem usar só o que você já sabe.",
+      "Elimine as alternativas que dizem algo que o texto não afirma nem permite concluir."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nTodo sábado, um grupo de estudantes visita um asilo para conversar com os moradores e ajudar em pequenas tarefas. A coordenadora, Helena, conta que os jovens costumam chegar tímidos e sair emocionados. Segundo ela, a troca de histórias ensina mais do que qualquer aula: os idosos ganham companhia e os estudantes, perspectiva de vida.\n\nEm que dia da semana os estudantes visitam o asilo?",
+    "options": [
+      "sábado",
+      "segunda-feira",
+      "domingo",
+      "sexta-feira"
+    ],
+    "correct_answer": "sábado",
+    "explanation": "O texto começa com \"Todo sábado\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nTodo sábado, um grupo de estudantes visita um asilo para conversar com os moradores e ajudar em pequenas tarefas. A coordenadora, Helena, conta que os jovens costumam chegar tímidos e sair emocionados. Segundo ela, a troca de histórias ensina mais do que qualquer aula: os idosos ganham companhia e os estudantes, perspectiva de vida.\n\nQuem é Helena?",
+    "options": [
+      "a coordenadora do grupo",
+      "uma moradora do asilo",
+      "uma professora da escola",
+      "a diretora do asilo"
+    ],
+    "correct_answer": "a coordenadora do grupo",
+    "explanation": "O texto diz \"A coordenadora, Helena\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\nTodo sábado, um grupo de estudantes visita um asilo para conversar com os moradores e ajudar em pequenas tarefas. A coordenadora, Helena, conta que os jovens costumam chegar tímidos e sair emocionados. Segundo ela, a troca de histórias ensina mais do que qualquer aula: os idosos ganham companhia e os estudantes, perspectiva de vida.\n\nComo os jovens costumam chegar, segundo Helena?",
+    "options": [
+      "tímidos",
+      "animados",
+      "irritados",
+      "cansados"
+    ],
+    "correct_answer": "tímidos",
+    "explanation": "\"Os jovens costumam chegar tímidos e sair emocionados\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\nTodo sábado, um grupo de estudantes visita um asilo para conversar com os moradores e ajudar em pequenas tarefas. A coordenadora, Helena, conta que os jovens costumam chegar tímidos e sair emocionados. Segundo ela, a troca de histórias ensina mais do que qualquer aula: os idosos ganham companhia e os estudantes, perspectiva de vida.\n\nA palavra \"perspectiva\", no final do texto, tem o sentido de:",
+    "options": [
+      "modo mais amplo de ver a vida",
+      "desenho em três dimensões",
+      "previsão do tempo",
+      "local de moradia"
+    ],
+    "correct_answer": "modo mais amplo de ver a vida",
+    "explanation": "No contexto, os estudantes ganham uma visão mais ampla da vida com a convivência.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia a frase em que a palavra aparece e observe o que vem antes e depois.",
+      "Troque a palavra por cada alternativa e veja qual mantém o sentido do trecho."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\nTodo sábado, um grupo de estudantes visita um asilo para conversar com os moradores e ajudar em pequenas tarefas. A coordenadora, Helena, conta que os jovens costumam chegar tímidos e sair emocionados. Segundo ela, a troca de histórias ensina mais do que qualquer aula: os idosos ganham companhia e os estudantes, perspectiva de vida.\n\nA afirmação de Helena de que a troca de histórias \"ensina mais do que qualquer aula\" revela:",
+    "options": [
+      "valorização da experiência vivida como forma de aprendizado",
+      "desprezo pela escola",
+      "crítica aos idosos",
+      "preocupação com tarefas"
+    ],
+    "correct_answer": "valorização da experiência vivida como forma de aprendizado",
+    "explanation": "Ela compara a convivência com a aula e a considera mais formadora.",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunte-se o que o autor quis fazer com o texto: informar, criticar, aconselhar...",
+      "Considere o texto inteiro, não apenas uma frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\n— Que sorte a minha! — resmungou Rui, ao ver o ônibus partir na sua frente pelo terceiro dia seguido. Ele tinha acordado cedo, ajustado o despertador e até corrido; mesmo assim, viu apenas a traseira do veículo. Sentou-se no ponto, olhou o relógio e riu: de que adiantava tanta pressa se o ônibus nunca respeitava horário?\n\nO que aconteceu com Rui no ponto de ônibus?",
+    "options": [
+      "Perdeu o ônibus pelo terceiro dia seguido.",
+      "Chegou cedo e embarcou.",
+      "Esqueceu o despertador em casa.",
+      "Discutiu com o motorista."
+    ],
+    "correct_answer": "Perdeu o ônibus pelo terceiro dia seguido.",
+    "explanation": "O texto diz que ele viu o ônibus partir \"pelo terceiro dia seguido\".",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 1,
+    "prompt": "Leia o texto:\n\n— Que sorte a minha! — resmungou Rui, ao ver o ônibus partir na sua frente pelo terceiro dia seguido. Ele tinha acordado cedo, ajustado o despertador e até corrido; mesmo assim, viu apenas a traseira do veículo. Sentou-se no ponto, olhou o relógio e riu: de que adiantava tanta pressa se o ônibus nunca respeitava horário?\n\nO que Rui fez ao final do texto?",
+    "options": [
+      "Sentou-se no ponto, olhou o relógio e riu.",
+      "Voltou para casa chorando.",
+      "Correu atrás do ônibus.",
+      "Ligou para o trabalho reclamando."
+    ],
+    "correct_answer": "Sentou-se no ponto, olhou o relógio e riu.",
+    "explanation": "A ação final está no último período.",
+    "age_reviewed": true,
+    "hints": [
+      "Releia o trecho do texto a que a pergunta se refere.",
+      "A resposta está dita de forma direta no texto: não precisa deduzir nada."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\n— Que sorte a minha! — resmungou Rui, ao ver o ônibus partir na sua frente pelo terceiro dia seguido. Ele tinha acordado cedo, ajustado o despertador e até corrido; mesmo assim, viu apenas a traseira do veículo. Sentou-se no ponto, olhou o relógio e riu: de que adiantava tanta pressa se o ônibus nunca respeitava horário?\n\nNa fala \"Que sorte a minha!\", Rui quer dizer, na verdade, que:",
+    "options": [
+      "teve azar",
+      "teve muita sorte",
+      "estava feliz com o ônibus",
+      "chegaria cedo ao trabalho"
+    ],
+    "correct_answer": "teve azar",
+    "explanation": "É uma ironia: ele diz o contrário do que sente, pois acabou de perder o ônibus.",
+    "age_reviewed": true,
+    "hints": [
+      "Procure pistas no próprio texto, sem usar só o que você já sabe.",
+      "Elimine as alternativas que dizem algo que o texto não afirma nem permite concluir."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 2,
+    "prompt": "Leia o texto:\n\n— Que sorte a minha! — resmungou Rui, ao ver o ônibus partir na sua frente pelo terceiro dia seguido. Ele tinha acordado cedo, ajustado o despertador e até corrido; mesmo assim, viu apenas a traseira do veículo. Sentou-se no ponto, olhou o relógio e riu: de que adiantava tanta pressa se o ônibus nunca respeitava horário?\n\nO trecho \"viu apenas a traseira do veículo\" significa que Rui:",
+    "options": [
+      "chegou tarde demais, quando o ônibus já partia",
+      "embarcou na traseira do ônibus",
+      "perdeu o ônibus de propósito",
+      "observou o ônibus quebrado"
+    ],
+    "correct_answer": "chegou tarde demais, quando o ônibus já partia",
+    "explanation": "Ver só a traseira é ver o ônibus indo embora.",
+    "age_reviewed": true,
+    "hints": [
+      "Procure pistas no próprio texto, sem usar só o que você já sabe.",
+      "Elimine as alternativas que dizem algo que o texto não afirma nem permite concluir."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interpretacao_de_texto",
+    "difficulty_level": 3,
+    "prompt": "Leia o texto:\n\n— Que sorte a minha! — resmungou Rui, ao ver o ônibus partir na sua frente pelo terceiro dia seguido. Ele tinha acordado cedo, ajustado o despertador e até corrido; mesmo assim, viu apenas a traseira do veículo. Sentou-se no ponto, olhou o relógio e riu: de que adiantava tanta pressa se o ônibus nunca respeitava horário?\n\nA pergunta final do texto (\"de que adiantava tanta pressa...?\") expressa:",
+    "options": [
+      "resignação bem-humorada diante do atraso constante do ônibus",
+      "raiva contra o motorista",
+      "arrependimento de ter acordado cedo",
+      "alegria por ter perdido o ônibus"
+    ],
+    "correct_answer": "resignação bem-humorada diante do atraso constante do ônibus",
+    "explanation": "Rui ri e conclui que a pressa é inútil se o ônibus não respeita horário: tom resignado e bem-humorado.",
+    "age_reviewed": true,
+    "hints": [
+      "Pergunte-se o que o autor quis fazer com o texto: informar, criticar, aconselhar...",
+      "Considere o texto inteiro, não apenas uma frase."
+    ]
+  }
+]
