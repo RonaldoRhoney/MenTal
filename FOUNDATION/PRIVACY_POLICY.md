@@ -1,6 +1,6 @@
 # Política de Privacidade — MENTAL
 
-**Última atualização:** 13 de setembro de 2026
+**Última atualização:** 20 de setembro de 2026
 
 Esta Política de Privacidade descreve como o aplicativo **MENTAL**, desenvolvido por **RhoneyInc**, coleta, usa e protege as informações dos usuários.
 
@@ -26,18 +26,23 @@ O MENTAL é desenvolvido e mantido por **RhoneyInc**, estúdio de produtos digit
 - **Confirmação de maioridade** — o usuário confirma ter 18 anos ou mais antes de qualquer outro uso do app. O MENTAL não é destinado a menores de idade.
 - **Nome real** — obrigatório para liberar o jogo. Como o MENTAL é exclusivo para maiores de 18 anos, o nome real é **exibido publicamente** ao lado da foto de perfil em telas sociais do app (Amigos, Ranking, Batalhas), reforçando a seriedade da comunidade.
 - **Foto de perfil** — obrigatória para liberar o jogo. É uma foto real enviada pelo próprio usuário (câmera ou galeria), **não um avatar ilustrado**. Você decide se sua foto fica pública (visível para outros usuários) ou privada, e pode mudar essa escolha a qualquer momento na tela de Perfil.
-- **País e cidade** — obrigatórios para liberar o jogo. Não coletamos localização geográfica precisa (GPS); são campos de texto informados pelo próprio usuário.
+- **País, estado e cidade** — obrigatórios para liberar o jogo. Não coletamos localização geográfica precisa (GPS); são campos de texto informados pelo próprio usuário.
 - **Faixa etária** — obrigatória para liberar o jogo (faixas amplas: 18-25, 26-35, 36-45, 46+). Não coletamos data de nascimento nem documento de identidade — a confirmação de idade é autodeclarada.
 
 ### 2.2 Dados opcionais (o usuário escolhe se preenche)
 - **Gênero** — campo opcional (masculino, feminino, não-binário, prefiro não informar).
-- **Estado** — campo opcional adicional, complementar a país/cidade.
 
 ### 2.3 Dados de progresso e uso do jogo
 - Pontuação (XP), nível, territórios conquistados, badges/conquistas, estatísticas de desempenho (acertos, erros, sequência de dias jogados).
 - Contagem de passos (via sensor de hardware do dispositivo, `TYPE_STEP_COUNTER`) — coletada apenas se o usuário conceder a permissão correspondente, usada exclusivamente para a funcionalidade de gamificação por movimento dentro do app. **Não coletamos dados de localização GPS associados aos passos.**
 - Preferências de notificação (quais tipos de notificação o usuário optou por receber).
 - **Histórico de notificações** — a Central de Notificações do app guarda, por até 30 dias, o conteúdo das notificações recebidas (ex.: "Fulano te desafiou para uma Batalha", "Fulano te mandou uma torcida"), com estado de lida/não lida. Visível só para o próprio destinatário, nunca para outros usuários.
+- **Token de notificação push (FCM)** — identificador técnico do aparelho, guardado no seu perfil para entregar notificações; removido quando expira ou quando a conta é excluída.
+- **Registro de uso** — a data em que você abre o app (bônus de login diário e sequência de dias), a última atividade, as respostas enviadas (acerto/erro, dicas usadas e tempo de resposta), as recompensas recebidas e o histórico de transações de MentalCoins. Usados para pontuação, sequência, ranking, dificuldade adaptativa e prevenção de fraude.
+- **Passos por dia** — o total de cada dia (ciclo de 24 horas, horário de Brasília) e a evolução ao longo do dia, enviados quando você ativa o Movimento.
+- **Amizades, bloqueios e denúncias** — sua lista de amigos, os usuários que você bloqueou e as denúncias que enviou (visíveis apenas à moderação).
+- **Sugestões** — termos pesquisados sem resultado (sugestão de conteúdo) e opiniões sobre níveis de dificuldade.
+- **Respostas no mural de feedback** — o mural é aberto: qualquer usuário comenta e responde. Comentários e respostas são **públicos** e mostram seu nome real; você pode apagar as suas respostas.
 - **Comentários de feedback** — mensagens que o usuário opta por enviar na tela de Feedback do app são **públicas**, visíveis a todos os usuários junto com o nome real de quem enviou (ou o apelido, se o nome real ainda não tiver sido preenchido), e outros usuários podem reagir a elas (curtir/amei).
 
 ### 2.4 Dados de autenticação social (opcional)
@@ -51,7 +56,7 @@ O MENTAL tem um conjunto de funcionalidades sociais que tornam parte do seu perf
 - **Seguir / Fã** — qualquer usuário pode optar por "seguir" outro dentro do app, sem necessidade de aceite da pessoa seguida. Quem segue passa a ver os eventos de conquista dessa pessoa no Feed.
 - **Feed de conquistas** — exibe eventos gerados automaticamente pelo sistema (ex.: subida de nível, sequência de dias, recorde pessoal) para quem você segue. Esses eventos nunca contêm texto livre digitado pelo usuário.
 - **Torcida** — outros usuários podem enviar reações de incentivo ("torcida") para o seu perfil, dentro de limites diários por pessoa.
-- **MentalCoins** — moeda virtual interna do app, obtida jogando (a partir de XP e passos), resgatável apenas por itens cosméticos dentro do próprio MENTAL. Não tem valor monetário, não pode ser comprada, convertida em dinheiro real nem sacada.
+- **MentalCoins** — moeda virtual interna do app, obtida jogando (ranking semanal de XP e passos, login diário, marcos de sequência de dias, dias ativos de Movimento, convites e outras ações) e usada dentro do MENTAL em itens cosméticos, boost temporário de XP e reparo de sequência. Não tem valor monetário, não pode ser comprada, convertida em dinheiro real nem sacada.
 
 Você pode bloquear outro usuário a qualquer momento; o bloqueio impede o acesso ao seu Perfil Público, desfaz relações de amizade e de Seguir/Fã existentes entre as duas contas, e impede o envio de Torcida.
 
@@ -98,6 +103,9 @@ Utilizamos os seguintes serviços de terceiros para operar o aplicativo, cada um
 - **Supabase** — armazenamento de dados de conta e progresso do jogo, autenticação, e armazenamento das fotos de perfil enviadas.
 - **Google Firebase Cloud Messaging (FCM)** — exclusivamente para entrega de notificações push; não é utilizado como banco de dados nem para fins de publicidade.
 - **Google Sign-In** — autenticação opcional via conta Google, apenas quando o usuário escolhe esse método de login.
+- **Render** — hospedagem do servidor da aplicação, que processa as requisições do app.
+- **Facebook Login** — autenticação opcional, apenas quando o usuário escolhe esse método de login.
+- **GitHub Pages** — hospeda esta página de política, sem receber dados do app.
 
 Nenhum desses serviços recebe dados além do estritamente necessário para sua função, e nenhum é utilizado para publicidade direcionada.
 
@@ -105,9 +113,10 @@ Nenhum desses serviços recebe dados além do estritamente necessário para sua 
 
 ## 7. Retenção e exclusão de dados
 
-- Os dados do usuário são mantidos enquanto a conta estiver ativa.
-- Para solicitar a exclusão completa da sua conta e de todos os dados associados, o usuário envia um e-mail para **rhoneyinc@gmail.com** a partir do endereço cadastrado no app, com o assunto "Exclusão de conta MENTAL".
-- A exclusão remove permanentemente: e-mail, apelido, nome real, foto de perfil, dados de localização (país/cidade/estado), gênero, faixa etária, progresso/XP, badges, amigos, histórico de desafios, relações de Seguir/Fã, eventos do Feed, convites de Movimento e MentalCoins. **Exceção:** comentários de feedback e sugestões de conteúdo enviados pelo usuário não são apagados — são **anonimizados** (desvinculados da sua identidade) e permanecem no mural público/painel administrativo sem nenhuma associação com o usuário, preservando seu valor como registro de melhoria do app. O prazo de remoção definitiva é de até 30 dias após a solicitação, conforme exigido pela LGPD.
+- Os dados do usuário são mantidos enquanto a conta estiver ativa. As notificações da Central são apagadas após 30 dias.
+- **Excluir pelo app (imediato):** Ajustes › "Excluir minha conta". A exclusão é definitiva.
+- **Excluir por e-mail:** envie para **rhoneyinc@gmail.com**, a partir do endereço cadastrado no app, com o assunto "Exclusão de conta MENTAL".
+- A exclusão remove permanentemente: e-mail de acesso, apelido, nome real, foto de perfil, localização (país/estado/cidade), gênero, faixa etária, progresso/XP, badges, amigos, bloqueios, denúncias enviadas, histórico de tentativas, registros de recompensas e de login diário, MentalCoins, passos e ciclos de Movimento, notificações, eventos do Feed, relações de Seguir/Fã, token de notificação, convites e as suas respostas no mural de feedback. **Exceção:** comentários de feedback, opiniões sobre níveis e sugestões de conteúdo enviados pelo usuário não são apagados — são **anonimizados** (desvinculados da sua identidade) e permanecem sem nenhuma associação com você, preservando seu valor como registro de melhoria do app.
 
 ---
 
