@@ -1964,6 +1964,18 @@ _WORD_CONSTELLATION_TRADUZA_RE = re.compile(r"^Traduza para o \w+: '(.+)'$")
 _WORD_CONSTELLATION_COMO_SE_ESCREVE_RE = re.compile(r"^Como se escreve '(.+?)'.* em \w+\?$")
 
 
+_WORD_CONSTELLATION_CLARIFIER_RE = re.compile(r"^Como se escreve '.+?'\s*(\([^)]+\))\s*.* em \w+\?$")
+
+
+def extract_portuguese_clarifier(prompt: str) -> str | None:
+    """Esclarecimento entre parênteses do prompt ("antes de (prazo)" -> "(prazo)").
+    Achado do agente de conteúdo (20/09/2026): 32 itens de Idiomas perdiam esse
+    contexto no enunciado da Constelação e ficavam ambíguos. Só parênteses —
+    trechos como "novamente para fixar" nunca entram."""
+    m = _WORD_CONSTELLATION_CLARIFIER_RE.match(prompt)
+    return m.group(1) if m else None
+
+
 def extract_portuguese_meaning(prompt: str) -> str | None:
     """Extrai o texto em português entre aspas do prompt de um Desafio
     de Idiomas — usado como "significado correto" na etapa de
@@ -2059,7 +2071,8 @@ def generate_word_constellation_round(db: Session, challenge: models.Challenge) 
         "challenge_id": challenge.id,
         "territory_id": challenge.territory_id,
         "kind": "meaning",
-        "prompt_text": correct_meaning,
+        # Enunciado com o esclarecimento entre parênteses, quando existe ("até (prazo)").
+        "prompt_text": (f"{correct_meaning} {clarifier}" if (clarifier := extract_portuguese_clarifier(challenge.prompt)) else correct_meaning),
         "tiles": None,
         "options": options,
         "prompt_image": challenge.prompt_image,

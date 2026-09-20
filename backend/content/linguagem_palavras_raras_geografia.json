@@ -1,0 +1,362 @@
+[
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Afloramento'?",
+    "options": [
+      "Planta adaptada a ambientes com elevada salinidade.",
+      "Medição da quantidade de precipitação atmosférica.",
+      "Exposição de rochas ou estruturas geológicas à superfície.",
+      "Sedimentos transportados e depositados pela água."
+    ],
+    "correct_answer": "Exposição de rochas ou estruturas geológicas à superfície.",
+    "explanation": "'Afloramento' significa: Exposição de rochas ou estruturas geológicas à superfície. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'A' e tem 11 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Exposição de rochas ou estruturas geológicas à superfície\"?",
+    "options": [
+      "Antrópico",
+      "Afloramento",
+      "Pluviometria",
+      "Laterização"
+    ],
+    "correct_answer": "Afloramento",
+    "explanation": "'Afloramento' significa: Exposição de rochas ou estruturas geológicas à superfície. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Aluvião'?",
+    "options": [
+      "Exposição de rochas ou estruturas geológicas à superfície.",
+      "Sedimentos transportados e depositados pela água.",
+      "Medição da quantidade de precipitação atmosférica.",
+      "Planta adaptada a ambientes com elevada salinidade."
+    ],
+    "correct_answer": "Sedimentos transportados e depositados pela água.",
+    "explanation": "'Aluvião' significa: Sedimentos transportados e depositados pela água. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'A' e tem 7 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Sedimentos transportados e depositados pela água\"?",
+    "options": [
+      "Laterização",
+      "Aluvião",
+      "Pluviometria",
+      "Afloramento"
+    ],
+    "correct_answer": "Aluvião",
+    "explanation": "'Aluvião' significa: Sedimentos transportados e depositados pela água. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Antrópico'?",
+    "options": [
+      "Planta adaptada a ambientes com elevada salinidade.",
+      "Relativo à ação humana ou resultante dela.",
+      "Sedimentos transportados e depositados pela água.",
+      "Planta adaptada a ambientes secos ou com pouca disponibilidade de água."
+    ],
+    "correct_answer": "Relativo à ação humana ou resultante dela.",
+    "explanation": "'Antrópico' significa: Relativo à ação humana ou resultante dela. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'A' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Relativo à ação humana ou resultante dela\"?",
+    "options": [
+      "Inselbergue",
+      "Carste",
+      "Afloramento",
+      "Antrópico"
+    ],
+    "correct_answer": "Antrópico",
+    "explanation": "'Antrópico' significa: Relativo à ação humana ou resultante dela. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Carste'?",
+    "options": [
+      "Elevação rochosa isolada que se destaca numa paisagem relativamente plana.",
+      "Planta adaptada a ambientes secos ou com pouca disponibilidade de água.",
+      "Exposição de rochas ou estruturas geológicas à superfície.",
+      "Relevo formado principalmente pela dissolução de rochas solúveis, como calcário."
+    ],
+    "correct_answer": "Relevo formado principalmente pela dissolução de rochas solúveis, como calcário.",
+    "explanation": "'Carste' significa: Relevo formado principalmente pela dissolução de rochas solúveis, como calcário. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'C' e tem 6 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Relevo formado principalmente pela dissolução de rochas solúveis, como calcário\"?",
+    "options": [
+      "Laterização",
+      "Aluvião",
+      "Inselbergue",
+      "Carste"
+    ],
+    "correct_answer": "Carste",
+    "explanation": "'Carste' significa: Relevo formado principalmente pela dissolução de rochas solúveis, como calcário. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'C'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Eutrofização'?",
+    "options": [
+      "Relevo formado principalmente pela dissolução de rochas solúveis, como calcário.",
+      "Planta adaptada a ambientes secos ou com pouca disponibilidade de água.",
+      "Exposição de rochas ou estruturas geológicas à superfície.",
+      "Enriquecimento de um ambiente aquático por nutrientes, que pode provocar desequilíbrios ecológicos."
+    ],
+    "correct_answer": "Enriquecimento de um ambiente aquático por nutrientes, que pode provocar desequilíbrios ecológicos.",
+    "explanation": "'Eutrofização' significa: Enriquecimento de um ambiente aquático por nutrientes, que pode provocar desequilíbrios ecológicos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'E' e tem 12 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Enriquecimento de um ambiente aquático por nutrientes, que pode provocar desequilíbrios ecológicos\"?",
+    "options": [
+      "Aluvião",
+      "Laterização",
+      "Afloramento",
+      "Eutrofização"
+    ],
+    "correct_answer": "Eutrofização",
+    "explanation": "'Eutrofização' significa: Enriquecimento de um ambiente aquático por nutrientes, que pode provocar desequilíbrios ecológicos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'E'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Halófita'?",
+    "options": [
+      "Relativo à ação humana ou resultante dela.",
+      "Planta adaptada a ambientes com elevada salinidade.",
+      "Sedimentos transportados e depositados pela água.",
+      "Exposição de rochas ou estruturas geológicas à superfície."
+    ],
+    "correct_answer": "Planta adaptada a ambientes com elevada salinidade.",
+    "explanation": "'Halófita' significa: Planta adaptada a ambientes com elevada salinidade. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'H' e tem 8 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Planta adaptada a ambientes com elevada salinidade\"?",
+    "options": [
+      "Halófita",
+      "Inselbergue",
+      "Antrópico",
+      "Afloramento"
+    ],
+    "correct_answer": "Halófita",
+    "explanation": "'Halófita' significa: Planta adaptada a ambientes com elevada salinidade. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'H'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Inselbergue'?",
+    "options": [
+      "Planta adaptada a ambientes secos ou com pouca disponibilidade de água.",
+      "Processo de alteração do solo ou da rocha associado à intensa lixiviação em condições específicas.",
+      "Elevação rochosa isolada que se destaca numa paisagem relativamente plana.",
+      "Exposição de rochas ou estruturas geológicas à superfície."
+    ],
+    "correct_answer": "Elevação rochosa isolada que se destaca numa paisagem relativamente plana.",
+    "explanation": "'Inselbergue' significa: Elevação rochosa isolada que se destaca numa paisagem relativamente plana. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'I' e tem 11 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Elevação rochosa isolada que se destaca numa paisagem relativamente plana\"?",
+    "options": [
+      "Antrópico",
+      "Inselbergue",
+      "Afloramento",
+      "Carste"
+    ],
+    "correct_answer": "Inselbergue",
+    "explanation": "'Inselbergue' significa: Elevação rochosa isolada que se destaca numa paisagem relativamente plana. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'I'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Laterização'?",
+    "options": [
+      "Processo de alteração do solo ou da rocha associado à intensa lixiviação em condições específicas.",
+      "Relevo formado principalmente pela dissolução de rochas solúveis, como calcário.",
+      "Exposição de rochas ou estruturas geológicas à superfície.",
+      "Enriquecimento de um ambiente aquático por nutrientes, que pode provocar desequilíbrios ecológicos."
+    ],
+    "correct_answer": "Processo de alteração do solo ou da rocha associado à intensa lixiviação em condições específicas.",
+    "explanation": "'Laterização' significa: Processo de alteração do solo ou da rocha associado à intensa lixiviação em condições específicas. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'L' e tem 11 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Processo de alteração do solo ou da rocha associado à intensa lixiviação em condições específicas\"?",
+    "options": [
+      "Laterização",
+      "Aluvião",
+      "Antrópico",
+      "Carste"
+    ],
+    "correct_answer": "Laterização",
+    "explanation": "'Laterização' significa: Processo de alteração do solo ou da rocha associado à intensa lixiviação em condições específicas. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'L'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Pluviometria'?",
+    "options": [
+      "Planta adaptada a ambientes secos ou com pouca disponibilidade de água.",
+      "Relativo à ação humana ou resultante dela.",
+      "Medição da quantidade de precipitação atmosférica.",
+      "Planta adaptada a ambientes com elevada salinidade."
+    ],
+    "correct_answer": "Medição da quantidade de precipitação atmosférica.",
+    "explanation": "'Pluviometria' significa: Medição da quantidade de precipitação atmosférica. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'P' e tem 12 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Medição da quantidade de precipitação atmosférica\"?",
+    "options": [
+      "Afloramento",
+      "Pluviometria",
+      "Laterização",
+      "Xerófita"
+    ],
+    "correct_answer": "Pluviometria",
+    "explanation": "'Pluviometria' significa: Medição da quantidade de precipitação atmosférica. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Xerófita'?",
+    "options": [
+      "Planta adaptada a ambientes secos ou com pouca disponibilidade de água.",
+      "Planta adaptada a ambientes com elevada salinidade.",
+      "Exposição de rochas ou estruturas geológicas à superfície.",
+      "Medição da quantidade de precipitação atmosférica."
+    ],
+    "correct_answer": "Planta adaptada a ambientes secos ou com pouca disponibilidade de água.",
+    "explanation": "'Xerófita' significa: Planta adaptada a ambientes secos ou com pouca disponibilidade de água. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra começa com 'X' e tem 8 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_geografia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Planta adaptada a ambientes secos ou com pouca disponibilidade de água\"?",
+    "options": [
+      "Eutrofização",
+      "Xerófita",
+      "Afloramento",
+      "Laterização"
+    ],
+    "correct_answer": "Xerófita",
+    "explanation": "'Xerófita' significa: Planta adaptada a ambientes secos ou com pouca disponibilidade de água. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de geografia, geologia e meio ambiente.",
+      "A palavra procurada começa com 'X'."
+    ]
+  }
+]

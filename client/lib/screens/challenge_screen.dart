@@ -24,6 +24,16 @@ import '../widgets/share_achievement_button.dart';
 /// Uma ação primária por vez (Clareza Imediata, PRODUCT_PRINCIPLES.md §1):
 /// enquanto o desafio está aberto, o CTA é "Confirmar resposta"; depois de
 /// respondido, vira "Próximo desafio". Dica é sempre secundária/opcional.
+/// Muitas explicações do conteúdo (Internet, Libras — ~2.000 itens) começam
+/// com "Correto!"/"Isso mesmo!", o que soava como parabéns numa resposta
+/// ERRADA. Só no erro, tira essa abertura (achado do agente de conteúdo, 20/09/2026).
+String explanationForResult(String explanation, bool isCorrect) {
+  if (isCorrect) return explanation;
+  final stripped = explanation.replaceFirst(
+      RegExp(r'^\s*(Correto|Isso mesmo|Muito bem|Exato|Certo)[!.]\s*', caseSensitive: false), '');
+  return stripped.isEmpty ? explanation : stripped[0].toUpperCase() + stripped.substring(1);
+}
+
 class ChallengeScreen extends StatefulWidget {
   const ChallengeScreen({
     super.key,
@@ -1518,7 +1528,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 Text(l10n.correctAnswerLabel(
                     _displayAnswer(result['correct_answer'] as String))),
                 const SizedBox(height: 12),
-                Text(result['explanation'] as String),
+                Text(explanationForResult(result['explanation'] as String, isCorrect)),
                 const SizedBox(height: 12),
                 Text(
                   l10n.xpEarnedLabel(

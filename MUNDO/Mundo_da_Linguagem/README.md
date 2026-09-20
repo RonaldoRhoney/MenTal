@@ -138,3 +138,20 @@ Testes: `tests/test_linguagem_interpretacao_textos_content.py` (volume,
 prompt inclui o texto-base, fluxo de resposta normal).
 
 **Suíte backend completa após os três lotes: 342/342.**
+
+---
+
+## 8. SubMundo "Palavras Raras" (20/09/2026, pedido de Rhoney)
+
+Fonte: `100_palavras_raras_portugues.json` (esta pasta) — 100 palavras raras/pouco usuais em 10 áreas de 10, com significado resumido (seleção temática, não um ranking estatístico; a própria fonte manda conferir a acepção em Priberam, Michaelis ou Caldas Aulete — a explicação de cada desafio traz esse aviso).
+
+**Estrutura** (mesmo mecanismo de Bloco do SubMundo Internet em Tecnologia, `ARQUITETURA_SUBMUNDOS_V1.md` — nenhuma entidade nova): Bloco `palavras_raras` ("Palavras Raras", subcabeçalho no Mundo da Linguagem) com **10 territórios**, um por área: `palavras_raras_filosofia`, `_psicologia`, `_medicina`, `_fisica_quimica`, `_matematica`, `_linguistica`, `_historia`, `_geografia`, `_direito`, `_eruditas` (display_order 86–95). Migration: `backend/migrations/087_submundo_palavras_raras_em_linguagem.sql`.
+
+**Conteúdo**: `scripts/convert_palavras_raras_content.py` gera `backend/content/linguagem_palavras_raras_<area>.json` — **200 desafios** (20 por território), todos `difficulty_level=3` (decisão de Rhoney), 2 dicas que não entregam a resposta, `options` sempre curadas (o Relâmpago usa as opções como estão, nada é sintetizado). Cada palavra vira duas perguntas:
+- (A) "Qual é o significado de 'X'?" — 4 significados: o certo + 3 de outras palavras da MESMA área, escolhidos entre os 5 de tamanho mais parecido (evita o viés "a opção mais longa é a certa");
+- (B) "Qual palavra corresponde a este significado: «…»?" — 4 palavras da mesma área.
+As duas direções existem também por exigência do critério de volume (≥ 15 itens por território, `test_content_volume.py`): 10 palavras por área não bastariam. Distratores nunca são inventados; sorteio com semente fixa (geração reproduzível).
+
+**Efeito colateral a saber**: os 10 territórios pertencem ao Mundo da Linguagem, então o Mundo só volta a contar como "completo" depois de conquistar também esses territórios (mesmo comportamento de quando os SubMundos foram adicionados a Tecnologia e Esportes).
+
+Testes: `tests/test_linguagem_palavras_raras_content.py` (estrutura, 200 desafios, duas direções conferidas contra o arquivo fonte, distratores só da mesma área, viés de tamanho) + `test_content_volume.py`, `test_blocks.py`, `test_worlds.py`.

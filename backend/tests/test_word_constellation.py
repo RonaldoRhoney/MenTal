@@ -106,7 +106,7 @@ def test_word_constellation_meaning_extracts_word_with_parenthetical_clarifier(c
     assert resp.status_code == 200
     body = resp.json()
     assert body["kind"] == "meaning"
-    assert body["prompt_text"] == "preciso"
+    assert body["prompt_text"] == "preciso (necessidade)"  # esclarecimento agora aparece no enunciado
     assert "Need" in body["options"]
 
 
@@ -301,3 +301,25 @@ def test_constelacao_entrada_tem_teto(client):
         headers=headers,
     )
     assert resp.status_code == 422
+
+
+def test_enunciado_da_constelacao_mostra_o_esclarecimento_entre_parenteses(client):
+    # Achado do agente de conteúdo: "até (prazo)" virava só "até" e ficava ambíguo.
+    _seed_siblings()
+    with_clarifier = _seed_idiomas_challenge("Como se escreve 'antes de' (prazo) em inglês?", "By")
+    plain = _seed_idiomas_challenge("Como se escreve 'sapato' em inglês?", "Shoe")
+    for cid, expected in ((with_clarifier, "antes de (prazo)"), (plain, "sapato")):
+        user = str(uuid.uuid4())
+        headers = auth_header(user)
+        client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+        _answered(user, cid)
+        body = client.get(f"/challenges/{cid}/word-constellation", headers=headers).json()
+        assert body["prompt_text"] == expected
+
+
+def test_clarifier_ignora_texto_que_nao_e_parentese():
+    from app.services import extract_portuguese_clarifier
+
+    assert extract_portuguese_clarifier("Como se escreve 'casa' novamente para fixar em inglês?") is None
+    assert extract_portuguese_clarifier("Como se escreve 'parar' (chuva) em francês?") == "(chuva)"
+    assert extract_portuguese_clarifier("Traduza para o inglês: 'A casa é grande.'") is None

@@ -3120,5 +3120,45 @@
   "feedbackReplyDeleteConfirmButton": "Apagar",
   "@feedbackReplyDeleteConfirmButton": {
     "description": "Confirm delete button"
+  },
+  "territoryPalavrasRarasFilosofia": "Palavras Raras: Filosofia",
+  "@territoryPalavrasRarasFilosofia": {
+    "description": "Territory name — Palavras Raras SubMundo, area Filosofia"
+  },
+  "territoryPalavrasRarasPsicologia": "Palavras Raras: Psicologia",
+  "@territoryPalavrasRarasPsicologia": {
+    "description": "Territory name — Palavras Raras SubMundo, area Psicologia"
+  },
+  "territoryPalavrasRarasMedicina": "Palavras Raras: Medicina",
+  "@territoryPalavrasRarasMedicina": {
+    "description": "Territory name — Palavras Raras SubMundo, area Medicina"
+  },
+  "territoryPalavrasRarasFisicaQuimica": "Palavras Raras: Física e Química",
+  "@territoryPalavrasRarasFisicaQuimica": {
+    "description": "Territory name — Palavras Raras SubMundo, area Física e Química"
+  },
+  "territoryPalavrasRarasMatematica": "Palavras Raras: Matemática",
+  "@territoryPalavrasRarasMatematica": {
+    "description": "Territory name — Palavras Raras SubMundo, area Matemática"
+  },
+  "territoryPalavrasRarasLinguistica": "Palavras Raras: Linguística",
+  "@territoryPalavrasRarasLinguistica": {
+    "description": "Territory name — Palavras Raras SubMundo, area Linguística"
+  },
+  "territoryPalavrasRarasHistoria": "Palavras Raras: História",
+  "@territoryPalavrasRarasHistoria": {
+    "description": "Territory name — Palavras Raras SubMundo, area História"
+  },
+  "territoryPalavrasRarasGeografia": "Palavras Raras: Geografia",
+  "@territoryPalavrasRarasGeografia": {
+    "description": "Territory name — Palavras Raras SubMundo, area Geografia"
+  },
+  "territoryPalavrasRarasDireito": "Palavras Raras: Direito",
+  "@territoryPalavrasRarasDireito": {
+    "description": "Territory name — Palavras Raras SubMundo, area Direito"
+  },
+  "territoryPalavrasRarasEruditas": "Palavras Raras: Eruditas",
+  "@territoryPalavrasRarasEruditas": {
+    "description": "Territory name — Palavras Raras SubMundo, area Eruditas"
   }
 }

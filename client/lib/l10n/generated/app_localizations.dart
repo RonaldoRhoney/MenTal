@@ -3915,6 +3915,66 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Apagar'**
   String get feedbackReplyDeleteConfirmButton;
+
+  /// Territory name — Palavras Raras SubMundo, area Filosofia
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Filosofia'**
+  String get territoryPalavrasRarasFilosofia;
+
+  /// Territory name — Palavras Raras SubMundo, area Psicologia
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Psicologia'**
+  String get territoryPalavrasRarasPsicologia;
+
+  /// Territory name — Palavras Raras SubMundo, area Medicina
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Medicina'**
+  String get territoryPalavrasRarasMedicina;
+
+  /// Territory name — Palavras Raras SubMundo, area Física e Química
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Física e Química'**
+  String get territoryPalavrasRarasFisicaQuimica;
+
+  /// Territory name — Palavras Raras SubMundo, area Matemática
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Matemática'**
+  String get territoryPalavrasRarasMatematica;
+
+  /// Territory name — Palavras Raras SubMundo, area Linguística
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Linguística'**
+  String get territoryPalavrasRarasLinguistica;
+
+  /// Territory name — Palavras Raras SubMundo, area História
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: História'**
+  String get territoryPalavrasRarasHistoria;
+
+  /// Territory name — Palavras Raras SubMundo, area Geografia
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Geografia'**
+  String get territoryPalavrasRarasGeografia;
+
+  /// Territory name — Palavras Raras SubMundo, area Direito
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Direito'**
+  String get territoryPalavrasRarasDireito;
+
+  /// Territory name — Palavras Raras SubMundo, area Eruditas
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Raras: Eruditas'**
+  String get territoryPalavrasRarasEruditas;
 }
 
 class _AppLocalizationsDelegate

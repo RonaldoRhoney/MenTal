@@ -364,6 +364,14 @@ Future<void> _pumpChallengeScreen(
 }
 
 void main() {
+  test('explanationForResult tira "Correto!/Isso mesmo!" só quando o jogador ERROU', () {
+    expect(explanationForResult('Isso mesmo! Esse sinal representa casa.', false), 'Esse sinal representa casa.');
+    expect(explanationForResult('Correto! O YouTube é a segunda.', false), 'O YouTube é a segunda.');
+    expect(explanationForResult('Isso mesmo! Esse sinal representa casa.', true), 'Isso mesmo! Esse sinal representa casa.');
+    expect(explanationForResult('2 + 2 = 4.', false), '2 + 2 = 4.');
+    expect(explanationForResult('Correto!', false), 'Correto!'); // nunca deixa vazio
+  });
+
   testWidgets(
     'botão "Confirmar resposta" habilita ao digitar, sem precisar de outra interação (regressão Bug 1)',
     (tester) async {

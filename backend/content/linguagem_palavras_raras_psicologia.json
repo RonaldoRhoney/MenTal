@@ -1,0 +1,362 @@
+[
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Alexitimia'?",
+    "options": [
+      "Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las.",
+      "Presença simultânea de sentimentos ou atitudes contraditórios.",
+      "Dificuldade de identificar ou descrever as próprias emoções.",
+      "Diminuição da iniciativa ou da vontade de agir."
+    ],
+    "correct_answer": "Dificuldade de identificar ou descrever as próprias emoções.",
+    "explanation": "'Alexitimia' significa: Dificuldade de identificar ou descrever as próprias emoções. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'A' e tem 10 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Dificuldade de identificar ou descrever as próprias emoções\"?",
+    "options": [
+      "Disforia",
+      "Eutimia",
+      "Alexitimia",
+      "Ambivalência"
+    ],
+    "correct_answer": "Alexitimia",
+    "explanation": "'Alexitimia' significa: Dificuldade de identificar ou descrever as próprias emoções. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Ambivalência'?",
+    "options": [
+      "Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las.",
+      "Diminuição da iniciativa ou da vontade de agir.",
+      "Presença simultânea de sentimentos ou atitudes contraditórios.",
+      "Diminuição ou perda da capacidade de sentir prazer."
+    ],
+    "correct_answer": "Presença simultânea de sentimentos ou atitudes contraditórios.",
+    "explanation": "'Ambivalência' significa: Presença simultânea de sentimentos ou atitudes contraditórios. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'A' e tem 12 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Presença simultânea de sentimentos ou atitudes contraditórios\"?",
+    "options": [
+      "Eutimia",
+      "Aprosódia",
+      "Ambivalência",
+      "Anedonia"
+    ],
+    "correct_answer": "Ambivalência",
+    "explanation": "'Ambivalência' significa: Presença simultânea de sentimentos ou atitudes contraditórios. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Anedonia'?",
+    "options": [
+      "Presença simultânea de sentimentos ou atitudes contraditórios.",
+      "Diminuição ou perda da capacidade de sentir prazer.",
+      "Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las.",
+      "Dificuldade de identificar ou descrever as próprias emoções."
+    ],
+    "correct_answer": "Diminuição ou perda da capacidade de sentir prazer.",
+    "explanation": "'Anedonia' significa: Diminuição ou perda da capacidade de sentir prazer. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'A' e tem 8 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Diminuição ou perda da capacidade de sentir prazer\"?",
+    "options": [
+      "Eutimia",
+      "Anedonia",
+      "Disforia",
+      "Labilidade"
+    ],
+    "correct_answer": "Anedonia",
+    "explanation": "'Anedonia' significa: Diminuição ou perda da capacidade de sentir prazer. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Aprosódia'?",
+    "options": [
+      "Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las.",
+      "Alteração da capacidade de expressar ou interpretar aspectos emocionais da fala, como entonação e ritmo.",
+      "Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional.",
+      "Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos."
+    ],
+    "correct_answer": "Alteração da capacidade de expressar ou interpretar aspectos emocionais da fala, como entonação e ritmo.",
+    "explanation": "'Aprosódia' significa: Alteração da capacidade de expressar ou interpretar aspectos emocionais da fala, como entonação e ritmo. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'A' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Alteração da capacidade de expressar ou interpretar aspectos emocionais da fala, como entonação e ritmo\"?",
+    "options": [
+      "Ambivalência",
+      "Procrastinação",
+      "Aprosódia",
+      "Alexitimia"
+    ],
+    "correct_answer": "Aprosódia",
+    "explanation": "'Aprosódia' significa: Alteração da capacidade de expressar ou interpretar aspectos emocionais da fala, como entonação e ritmo. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Catatimia'?",
+    "options": [
+      "Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos.",
+      "Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las.",
+      "Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional.",
+      "Influência dos estados emocionais sobre a percepção, o pensamento ou o julgamento."
+    ],
+    "correct_answer": "Influência dos estados emocionais sobre a percepção, o pensamento ou o julgamento.",
+    "explanation": "'Catatimia' significa: Influência dos estados emocionais sobre a percepção, o pensamento ou o julgamento. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'C' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Influência dos estados emocionais sobre a percepção, o pensamento ou o julgamento\"?",
+    "options": [
+      "Catatimia",
+      "Disforia",
+      "Ambivalência",
+      "Aprosódia"
+    ],
+    "correct_answer": "Catatimia",
+    "explanation": "'Catatimia' significa: Influência dos estados emocionais sobre a percepção, o pensamento ou o julgamento. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'C'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Disforia'?",
+    "options": [
+      "Presença simultânea de sentimentos ou atitudes contraditórios.",
+      "Estado de desconforto, insatisfação ou mal-estar emocional.",
+      "Diminuição ou perda da capacidade de sentir prazer.",
+      "Diminuição da iniciativa ou da vontade de agir."
+    ],
+    "correct_answer": "Estado de desconforto, insatisfação ou mal-estar emocional.",
+    "explanation": "'Disforia' significa: Estado de desconforto, insatisfação ou mal-estar emocional. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'D' e tem 8 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Estado de desconforto, insatisfação ou mal-estar emocional\"?",
+    "options": [
+      "Eutimia",
+      "Disforia",
+      "Catatimia",
+      "Hipobulia"
+    ],
+    "correct_answer": "Disforia",
+    "explanation": "'Disforia' significa: Estado de desconforto, insatisfação ou mal-estar emocional. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'D'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Eutimia'?",
+    "options": [
+      "Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional.",
+      "Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos.",
+      "Presença simultânea de sentimentos ou atitudes contraditórios.",
+      "Alteração da capacidade de expressar ou interpretar aspectos emocionais da fala, como entonação e ritmo."
+    ],
+    "correct_answer": "Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos.",
+    "explanation": "'Eutimia' significa: Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'E' e tem 7 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos\"?",
+    "options": [
+      "Ambivalência",
+      "Hipobulia",
+      "Labilidade",
+      "Eutimia"
+    ],
+    "correct_answer": "Eutimia",
+    "explanation": "'Eutimia' significa: Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'E'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Hipobulia'?",
+    "options": [
+      "Diminuição ou perda da capacidade de sentir prazer.",
+      "Diminuição da iniciativa ou da vontade de agir.",
+      "Estado de desconforto, insatisfação ou mal-estar emocional.",
+      "Dificuldade de identificar ou descrever as próprias emoções."
+    ],
+    "correct_answer": "Diminuição da iniciativa ou da vontade de agir.",
+    "explanation": "'Hipobulia' significa: Diminuição da iniciativa ou da vontade de agir. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'H' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Diminuição da iniciativa ou da vontade de agir\"?",
+    "options": [
+      "Eutimia",
+      "Disforia",
+      "Procrastinação",
+      "Hipobulia"
+    ],
+    "correct_answer": "Hipobulia",
+    "explanation": "'Hipobulia' significa: Diminuição da iniciativa ou da vontade de agir. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'H'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Labilidade'?",
+    "options": [
+      "Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional.",
+      "Presença simultânea de sentimentos ou atitudes contraditórios.",
+      "Influência dos estados emocionais sobre a percepção, o pensamento ou o julgamento.",
+      "Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos."
+    ],
+    "correct_answer": "Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional.",
+    "explanation": "'Labilidade' significa: Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'L' e tem 10 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional\"?",
+    "options": [
+      "Disforia",
+      "Alexitimia",
+      "Ambivalência",
+      "Labilidade"
+    ],
+    "correct_answer": "Labilidade",
+    "explanation": "'Labilidade' significa: Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'L'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Procrastinação'?",
+    "options": [
+      "Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional.",
+      "Presença simultânea de sentimentos ou atitudes contraditórios.",
+      "Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos.",
+      "Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las."
+    ],
+    "correct_answer": "Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las.",
+    "explanation": "'Procrastinação' significa: Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra começa com 'P' e tem 14 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_psicologia",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las\"?",
+    "options": [
+      "Ambivalência",
+      "Procrastinação",
+      "Alexitimia",
+      "Aprosódia"
+    ],
+    "correct_answer": "Procrastinação",
+    "explanation": "'Procrastinação' significa: Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de psicologia, emoções e relações humanas.",
+      "A palavra procurada começa com 'P'."
+    ]
+  }
+]

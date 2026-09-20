@@ -1,0 +1,362 @@
+[
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Acromegalia'?",
+    "options": [
+      "Doença associada à produção excessiva de hormônio do crescimento na vida adulta.",
+      "Passagem de células sanguíneas através da parede dos vasos.",
+      "Processo de formação das células do sangue.",
+      "Estrutura embrionária relacionada, entre outras funções, às trocas e ao desenvolvimento de determinados tecidos."
+    ],
+    "correct_answer": "Doença associada à produção excessiva de hormônio do crescimento na vida adulta.",
+    "explanation": "'Acromegalia' significa: Doença associada à produção excessiva de hormônio do crescimento na vida adulta. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'A' e tem 11 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Doença associada à produção excessiva de hormônio do crescimento na vida adulta\"?",
+    "options": [
+      "Acromegalia",
+      "Bradicinesia",
+      "Esplenomegalia",
+      "Taquipneia"
+    ],
+    "correct_answer": "Acromegalia",
+    "explanation": "'Acromegalia' significa: Doença associada à produção excessiva de hormônio do crescimento na vida adulta. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Alantoide'?",
+    "options": [
+      "Formação óssea que pode surgir nas proximidades das articulações.",
+      "Redução do número de leucócitos no sangue.",
+      "Estrutura embrionária relacionada, entre outras funções, às trocas e ao desenvolvimento de determinados tecidos.",
+      "Doença associada à produção excessiva de hormônio do crescimento na vida adulta."
+    ],
+    "correct_answer": "Estrutura embrionária relacionada, entre outras funções, às trocas e ao desenvolvimento de determinados tecidos.",
+    "explanation": "'Alantoide' significa: Estrutura embrionária relacionada, entre outras funções, às trocas e ao desenvolvimento de determinados tecidos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'A' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Estrutura embrionária relacionada, entre outras funções, às trocas e ao desenvolvimento de determinados tecidos\"?",
+    "options": [
+      "Esplenomegalia",
+      "Bradicinesia",
+      "Alantoide",
+      "Leucopenia"
+    ],
+    "correct_answer": "Alantoide",
+    "explanation": "'Alantoide' significa: Estrutura embrionária relacionada, entre outras funções, às trocas e ao desenvolvimento de determinados tecidos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Anisocoria'?",
+    "options": [
+      "Diferença no diâmetro das pupilas.",
+      "Processo de formação das células do sangue.",
+      "Redução do número de leucócitos no sangue.",
+      "Aumento da frequência respiratória."
+    ],
+    "correct_answer": "Diferença no diâmetro das pupilas.",
+    "explanation": "'Anisocoria' significa: Diferença no diâmetro das pupilas. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'A' e tem 10 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Diferença no diâmetro das pupilas\"?",
+    "options": [
+      "Anisocoria",
+      "Taquipneia",
+      "Diapedese",
+      "Osteófito"
+    ],
+    "correct_answer": "Anisocoria",
+    "explanation": "'Anisocoria' significa: Diferença no diâmetro das pupilas. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Bradicinesia'?",
+    "options": [
+      "Aumento da frequência respiratória.",
+      "Diferença no diâmetro das pupilas.",
+      "Lentidão dos movimentos voluntários.",
+      "Processo de formação das células do sangue."
+    ],
+    "correct_answer": "Lentidão dos movimentos voluntários.",
+    "explanation": "'Bradicinesia' significa: Lentidão dos movimentos voluntários. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'B' e tem 12 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Lentidão dos movimentos voluntários\"?",
+    "options": [
+      "Osteófito",
+      "Bradicinesia",
+      "Acromegalia",
+      "Leucopenia"
+    ],
+    "correct_answer": "Bradicinesia",
+    "explanation": "'Bradicinesia' significa: Lentidão dos movimentos voluntários. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'B'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Diapedese'?",
+    "options": [
+      "Passagem de células sanguíneas através da parede dos vasos.",
+      "Doença associada à produção excessiva de hormônio do crescimento na vida adulta.",
+      "Lentidão dos movimentos voluntários.",
+      "Formação óssea que pode surgir nas proximidades das articulações."
+    ],
+    "correct_answer": "Passagem de células sanguíneas através da parede dos vasos.",
+    "explanation": "'Diapedese' significa: Passagem de células sanguíneas através da parede dos vasos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'D' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Passagem de células sanguíneas através da parede dos vasos\"?",
+    "options": [
+      "Acromegalia",
+      "Diapedese",
+      "Osteófito",
+      "Bradicinesia"
+    ],
+    "correct_answer": "Diapedese",
+    "explanation": "'Diapedese' significa: Passagem de células sanguíneas através da parede dos vasos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'D'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Esplenomegalia'?",
+    "options": [
+      "Processo de formação das células do sangue.",
+      "Aumento da frequência respiratória.",
+      "Redução do número de leucócitos no sangue.",
+      "Aumento do baço."
+    ],
+    "correct_answer": "Aumento do baço.",
+    "explanation": "'Esplenomegalia' significa: Aumento do baço. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'E' e tem 14 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Aumento do baço\"?",
+    "options": [
+      "Esplenomegalia",
+      "Acromegalia",
+      "Osteófito",
+      "Anisocoria"
+    ],
+    "correct_answer": "Esplenomegalia",
+    "explanation": "'Esplenomegalia' significa: Aumento do baço. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'E'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Hematopoiese'?",
+    "options": [
+      "Lentidão dos movimentos voluntários.",
+      "Aumento da frequência respiratória.",
+      "Processo de formação das células do sangue.",
+      "Diferença no diâmetro das pupilas."
+    ],
+    "correct_answer": "Processo de formação das células do sangue.",
+    "explanation": "'Hematopoiese' significa: Processo de formação das células do sangue. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'H' e tem 12 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Processo de formação das células do sangue\"?",
+    "options": [
+      "Acromegalia",
+      "Alantoide",
+      "Hematopoiese",
+      "Taquipneia"
+    ],
+    "correct_answer": "Hematopoiese",
+    "explanation": "'Hematopoiese' significa: Processo de formação das células do sangue. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'H'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Leucopenia'?",
+    "options": [
+      "Aumento da frequência respiratória.",
+      "Lentidão dos movimentos voluntários.",
+      "Redução do número de leucócitos no sangue.",
+      "Processo de formação das células do sangue."
+    ],
+    "correct_answer": "Redução do número de leucócitos no sangue.",
+    "explanation": "'Leucopenia' significa: Redução do número de leucócitos no sangue. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'L' e tem 10 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Redução do número de leucócitos no sangue\"?",
+    "options": [
+      "Taquipneia",
+      "Osteófito",
+      "Leucopenia",
+      "Hematopoiese"
+    ],
+    "correct_answer": "Leucopenia",
+    "explanation": "'Leucopenia' significa: Redução do número de leucócitos no sangue. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'L'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Osteófito'?",
+    "options": [
+      "Doença associada à produção excessiva de hormônio do crescimento na vida adulta.",
+      "Lentidão dos movimentos voluntários.",
+      "Formação óssea que pode surgir nas proximidades das articulações.",
+      "Passagem de células sanguíneas através da parede dos vasos."
+    ],
+    "correct_answer": "Formação óssea que pode surgir nas proximidades das articulações.",
+    "explanation": "'Osteófito' significa: Formação óssea que pode surgir nas proximidades das articulações. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'O' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Formação óssea que pode surgir nas proximidades das articulações\"?",
+    "options": [
+      "Osteófito",
+      "Anisocoria",
+      "Diapedese",
+      "Esplenomegalia"
+    ],
+    "correct_answer": "Osteófito",
+    "explanation": "'Osteófito' significa: Formação óssea que pode surgir nas proximidades das articulações. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'O'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Taquipneia'?",
+    "options": [
+      "Aumento do baço.",
+      "Processo de formação das células do sangue.",
+      "Redução do número de leucócitos no sangue.",
+      "Aumento da frequência respiratória."
+    ],
+    "correct_answer": "Aumento da frequência respiratória.",
+    "explanation": "'Taquipneia' significa: Aumento da frequência respiratória. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra começa com 'T' e tem 10 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_medicina",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Aumento da frequência respiratória\"?",
+    "options": [
+      "Leucopenia",
+      "Taquipneia",
+      "Hematopoiese",
+      "Acromegalia"
+    ],
+    "correct_answer": "Taquipneia",
+    "explanation": "'Taquipneia' significa: Aumento da frequência respiratória. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de medicina, biologia e corpo humano.",
+      "A palavra procurada começa com 'T'."
+    ]
+  }
+]

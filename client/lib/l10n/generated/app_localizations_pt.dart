@@ -2264,4 +2264,35 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get feedbackReplyDeleteConfirmButton => 'Apagar';
+
+  @override
+  String get territoryPalavrasRarasFilosofia => 'Palavras Raras: Filosofia';
+
+  @override
+  String get territoryPalavrasRarasPsicologia => 'Palavras Raras: Psicologia';
+
+  @override
+  String get territoryPalavrasRarasMedicina => 'Palavras Raras: Medicina';
+
+  @override
+  String get territoryPalavrasRarasFisicaQuimica =>
+      'Palavras Raras: Física e Química';
+
+  @override
+  String get territoryPalavrasRarasMatematica => 'Palavras Raras: Matemática';
+
+  @override
+  String get territoryPalavrasRarasLinguistica => 'Palavras Raras: Linguística';
+
+  @override
+  String get territoryPalavrasRarasHistoria => 'Palavras Raras: História';
+
+  @override
+  String get territoryPalavrasRarasGeografia => 'Palavras Raras: Geografia';
+
+  @override
+  String get territoryPalavrasRarasDireito => 'Palavras Raras: Direito';
+
+  @override
+  String get territoryPalavrasRarasEruditas => 'Palavras Raras: Eruditas';
 }

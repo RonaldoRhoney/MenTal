@@ -1,0 +1,362 @@
+[
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Abscissa'?",
+    "options": [
+      "Coordenada horizontal de um ponto em um sistema cartesiano usual.",
+      "Divisão de um conjunto em duas partes ou categorias.",
+      "Medida estatística da dispersão dos valores em relação à média.",
+      "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa."
+    ],
+    "correct_answer": "Coordenada horizontal de um ponto em um sistema cartesiano usual.",
+    "explanation": "'Abscissa' significa: Coordenada horizontal de um ponto em um sistema cartesiano usual. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'A' e tem 8 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Coordenada horizontal de um ponto em um sistema cartesiano usual\"?",
+    "options": [
+      "Parâmetro",
+      "Combinatória",
+      "Abscissa",
+      "Convolução"
+    ],
+    "correct_answer": "Abscissa",
+    "explanation": "'Abscissa' significa: Coordenada horizontal de um ponto em um sistema cartesiano usual. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Algoritmo'?",
+    "options": [
+      "Área da matemática que estuda contagens, combinações e organizações de elementos.",
+      "Correspondência estrutural entre objetos matemáticos que preserva as relações relevantes.",
+      "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa.",
+      "Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta."
+    ],
+    "correct_answer": "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa.",
+    "explanation": "'Algoritmo' significa: Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'A' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa\"?",
+    "options": [
+      "Parâmetro",
+      "Combinatória",
+      "Convolução",
+      "Algoritmo"
+    ],
+    "correct_answer": "Algoritmo",
+    "explanation": "'Algoritmo' significa: Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Bijeção'?",
+    "options": [
+      "Correspondência que associa cada elemento de um conjunto a exatamente um elemento de outro, sem sobras em nenhum dos lados.",
+      "Operação matemática que combina duas funções ou sequências segundo uma regra específica.",
+      "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa.",
+      "Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta."
+    ],
+    "correct_answer": "Correspondência que associa cada elemento de um conjunto a exatamente um elemento de outro, sem sobras em nenhum dos lados.",
+    "explanation": "'Bijeção' significa: Correspondência que associa cada elemento de um conjunto a exatamente um elemento de outro, sem sobras em nenhum dos lados. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'B' e tem 7 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Correspondência que associa cada elemento de um conjunto a exatamente um elemento de outro, sem sobras em nenhum dos lados\"?",
+    "options": [
+      "Convolução",
+      "Bijeção",
+      "Variância",
+      "Heurística"
+    ],
+    "correct_answer": "Bijeção",
+    "explanation": "'Bijeção' significa: Correspondência que associa cada elemento de um conjunto a exatamente um elemento de outro, sem sobras em nenhum dos lados. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'B'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Combinatória'?",
+    "options": [
+      "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa.",
+      "Coordenada horizontal de um ponto em um sistema cartesiano usual.",
+      "Área da matemática que estuda contagens, combinações e organizações de elementos.",
+      "Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta."
+    ],
+    "correct_answer": "Área da matemática que estuda contagens, combinações e organizações de elementos.",
+    "explanation": "'Combinatória' significa: Área da matemática que estuda contagens, combinações e organizações de elementos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'C' e tem 12 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Área da matemática que estuda contagens, combinações e organizações de elementos\"?",
+    "options": [
+      "Convolução",
+      "Combinatória",
+      "Heurística",
+      "Variância"
+    ],
+    "correct_answer": "Combinatória",
+    "explanation": "'Combinatória' significa: Área da matemática que estuda contagens, combinações e organizações de elementos. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'C'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Convolução'?",
+    "options": [
+      "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa.",
+      "Área da matemática que estuda contagens, combinações e organizações de elementos.",
+      "Operação matemática que combina duas funções ou sequências segundo uma regra específica.",
+      "Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta."
+    ],
+    "correct_answer": "Operação matemática que combina duas funções ou sequências segundo uma regra específica.",
+    "explanation": "'Convolução' significa: Operação matemática que combina duas funções ou sequências segundo uma regra específica. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'C' e tem 10 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Operação matemática que combina duas funções ou sequências segundo uma regra específica\"?",
+    "options": [
+      "Isomorfismo",
+      "Abscissa",
+      "Convolução",
+      "Combinatória"
+    ],
+    "correct_answer": "Convolução",
+    "explanation": "'Convolução' significa: Operação matemática que combina duas funções ou sequências segundo uma regra específica. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'C'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Dicotomia'?",
+    "options": [
+      "Área da matemática que estuda contagens, combinações e organizações de elementos.",
+      "Divisão de um conjunto em duas partes ou categorias.",
+      "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa.",
+      "Quantidade que caracteriza ou controla um modelo ou sistema."
+    ],
+    "correct_answer": "Divisão de um conjunto em duas partes ou categorias.",
+    "explanation": "'Dicotomia' significa: Divisão de um conjunto em duas partes ou categorias. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'D' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Divisão de um conjunto em duas partes ou categorias\"?",
+    "options": [
+      "Abscissa",
+      "Dicotomia",
+      "Parâmetro",
+      "Variância"
+    ],
+    "correct_answer": "Dicotomia",
+    "explanation": "'Dicotomia' significa: Divisão de um conjunto em duas partes ou categorias. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'D'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Heurística'?",
+    "options": [
+      "Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta.",
+      "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa.",
+      "Correspondência estrutural entre objetos matemáticos que preserva as relações relevantes.",
+      "Operação matemática que combina duas funções ou sequências segundo uma regra específica."
+    ],
+    "correct_answer": "Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta.",
+    "explanation": "'Heurística' significa: Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'H' e tem 10 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta\"?",
+    "options": [
+      "Heurística",
+      "Combinatória",
+      "Algoritmo",
+      "Convolução"
+    ],
+    "correct_answer": "Heurística",
+    "explanation": "'Heurística' significa: Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'H'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Isomorfismo'?",
+    "options": [
+      "Coordenada horizontal de um ponto em um sistema cartesiano usual.",
+      "Correspondência estrutural entre objetos matemáticos que preserva as relações relevantes.",
+      "Operação matemática que combina duas funções ou sequências segundo uma regra específica.",
+      "Área da matemática que estuda contagens, combinações e organizações de elementos."
+    ],
+    "correct_answer": "Correspondência estrutural entre objetos matemáticos que preserva as relações relevantes.",
+    "explanation": "'Isomorfismo' significa: Correspondência estrutural entre objetos matemáticos que preserva as relações relevantes. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'I' e tem 11 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Correspondência estrutural entre objetos matemáticos que preserva as relações relevantes\"?",
+    "options": [
+      "Algoritmo",
+      "Variância",
+      "Isomorfismo",
+      "Convolução"
+    ],
+    "correct_answer": "Isomorfismo",
+    "explanation": "'Isomorfismo' significa: Correspondência estrutural entre objetos matemáticos que preserva as relações relevantes. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'I'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Parâmetro'?",
+    "options": [
+      "Divisão de um conjunto em duas partes ou categorias.",
+      "Coordenada horizontal de um ponto em um sistema cartesiano usual.",
+      "Medida estatística da dispersão dos valores em relação à média.",
+      "Quantidade que caracteriza ou controla um modelo ou sistema."
+    ],
+    "correct_answer": "Quantidade que caracteriza ou controla um modelo ou sistema.",
+    "explanation": "'Parâmetro' significa: Quantidade que caracteriza ou controla um modelo ou sistema. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'P' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Quantidade que caracteriza ou controla um modelo ou sistema\"?",
+    "options": [
+      "Parâmetro",
+      "Abscissa",
+      "Isomorfismo",
+      "Algoritmo"
+    ],
+    "correct_answer": "Parâmetro",
+    "explanation": "'Parâmetro' significa: Quantidade que caracteriza ou controla um modelo ou sistema. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Variância'?",
+    "options": [
+      "Medida estatística da dispersão dos valores em relação à média.",
+      "Quantidade que caracteriza ou controla um modelo ou sistema.",
+      "Divisão de um conjunto em duas partes ou categorias.",
+      "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa."
+    ],
+    "correct_answer": "Medida estatística da dispersão dos valores em relação à média.",
+    "explanation": "'Variância' significa: Medida estatística da dispersão dos valores em relação à média. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra começa com 'V' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_matematica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Medida estatística da dispersão dos valores em relação à média\"?",
+    "options": [
+      "Dicotomia",
+      "Combinatória",
+      "Variância",
+      "Heurística"
+    ],
+    "correct_answer": "Variância",
+    "explanation": "'Variância' significa: Medida estatística da dispersão dos valores em relação à média. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de matemática, lógica e estatística.",
+      "A palavra procurada começa com 'V'."
+    ]
+  }
+]

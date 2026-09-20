@@ -28,6 +28,23 @@ def _answer_correctly(client, headers, territory_id):
     ).json()
 
 
+PALAVRAS_RARAS_TERRITORIES = ['palavras_raras_filosofia', 'palavras_raras_psicologia', 'palavras_raras_medicina', 'palavras_raras_fisica_quimica', 'palavras_raras_matematica', 'palavras_raras_linguistica', 'palavras_raras_historia', 'palavras_raras_geografia', 'palavras_raras_direito', 'palavras_raras_eruditas']
+
+
+def _mark_conquered(user: str, territory_ids: list[str]) -> None:
+    """Conquista territórios direto no banco — infraestrutura de teste (conquistar
+    10 territórios extras por HTTP levaria centenas de respostas)."""
+    from datetime import datetime
+
+    from app import models
+    from app.db import SessionLocal
+
+    with SessionLocal() as db:
+        for territory_id in territory_ids:
+            db.add(models.UserTerritoryProgress(user_id=user, territory_id=territory_id, xp_in_territory=config.CONQUEST_XP_THRESHOLD, conquered_at=datetime(2026, 1, 1)))
+        db.commit()
+
+
 def _conquer_territory(client, headers, territory_id, max_iterations=40):
     # REGRA_OFICIAL_GAMIFICACAO_MENTAL.md item 1.2 (19/09/2026, Fase 1):
     # XP_BASE_BY_DIFFICULTY recalibrado (3-10, era 10-50) — conquistar um
@@ -70,7 +87,8 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "esportes", "mitologia", "enem", "concursos", "tecnologia", "regioes_brasil",
         "gastronomia", "oceanos", "espaco",
     }
-    assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas", "redacao"}
+    # + SubMundo Palavras Raras (20/09/2026): 10 territórios, um por área.
+    assert set(worlds["linguagem"]["territory_ids"]) == {"palavras", "textos", "enigmas", "redacao", *PALAVRAS_RARAS_TERRITORIES}
     assert set(worlds["mente_logica"]["territory_ids"]) == {"numeros", "logica", "visual", "conhecimento", "cores"}
     assert set(worlds["cultura_geral"]["territory_ids"]) == {
         "cultura_pop", "filosofia", "artes", "saude_bemestar",
@@ -155,6 +173,9 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client, mon
     # instantâneas pra conquistar 3 territórios estourariam o limite de
     # abuso, então o teste levanta o teto só pra si mesmo.
     monkeypatch.setattr(config, "RATE_LIMIT_ANSWER_SUBMIT", (10_000, 60.0))
+    # O SubMundo Palavras Raras (10 territórios) também é do Mundo da Linguagem:
+    # pré-conquistado no banco pra o teste continuar sobre os 4 territórios originais.
+    _mark_conquered(user, PALAVRAS_RARAS_TERRITORIES)
 
     # Mundo da Linguagem tem 4 territórios desde a V4 (palavras/textos/
     # enigmas/redacao, V4/V3_ENCERRAMENTO_PENDENCIAS_PARA_V4.md §2.1) —

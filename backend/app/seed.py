@@ -168,6 +168,10 @@ BLOCKS = [
     {"id": "ingles", "name": "Inglês", "display_order": 18},
     {"id": "espanhol", "name": "Espanhol", "display_order": 19},
     {"id": "frances", "name": "Francês", "display_order": 20},
+    # SubMundo "Palavras Raras" no Mundo da Linguagem (pedido de Rhoney,
+    # 20/09/2026) — mesmo mecanismo de Bloco do SubMundo Internet; 10
+    # territórios (um por área do arquivo 100_palavras_raras_portugues.json).
+    {"id": "palavras_raras", "name": "Palavras Raras", "display_order": 21},
 ]
 
 TERRITORIES = [
@@ -379,6 +383,17 @@ TERRITORIES = [
     {"id": "futebol_grandes_nomes", "challenge_type": "futebol", "requires_subscription": True, "free_sample_count": 2, "display_order": 83, "world_id": "esportes", "block_id": "futebol"},
     {"id": "futebol_regras_curiosidades", "challenge_type": "futebol", "requires_subscription": True, "free_sample_count": 2, "display_order": 84, "world_id": "esportes", "block_id": "futebol"},
     {"id": "futebol_atualidade", "challenge_type": "futebol", "requires_subscription": True, "free_sample_count": 2, "display_order": 85, "world_id": "esportes", "block_id": "futebol"},
+    # SubMundo Palavras Raras (Mundo da Linguagem) — ver BLOCKS acima.
+    {"id": "palavras_raras_filosofia", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 86, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_psicologia", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 87, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_medicina", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 88, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_fisica_quimica", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 89, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_matematica", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 90, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_linguistica", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 91, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_historia", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 92, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_geografia", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 93, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_direito", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 94, "world_id": "linguagem", "block_id": "palavras_raras"},
+    {"id": "palavras_raras_eruditas", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 95, "world_id": "linguagem", "block_id": "palavras_raras"},
 ]
 
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à

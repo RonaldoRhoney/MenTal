@@ -1,0 +1,362 @@
+[
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Anacoluto'?",
+    "options": [
+      "Quebra da estrutura sintática esperada de uma frase.",
+      "Estudo de uma língua ou fenômeno ao longo do tempo.",
+      "Interrupção intencional de uma frase, deixando o pensamento incompleto.",
+      "Omissão de um termo que pode ser recuperado pelo contexto."
+    ],
+    "correct_answer": "Quebra da estrutura sintática esperada de uma frase.",
+    "explanation": "'Anacoluto' significa: Quebra da estrutura sintática esperada de uma frase. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'A' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Quebra da estrutura sintática esperada de uma frase\"?",
+    "options": [
+      "Aposiopese",
+      "Anacoluto",
+      "Diacronia",
+      "Elipse"
+    ],
+    "correct_answer": "Anacoluto",
+    "explanation": "'Anacoluto' significa: Quebra da estrutura sintática esperada de uma frase. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Aposiopese'?",
+    "options": [
+      "Interrupção intencional de uma frase, deixando o pensamento incompleto.",
+      "Figura de linguagem que substitui um termo por outro associado a ele.",
+      "Omissão de um termo já mencionado ou facilmente recuperável na frase.",
+      "Forma ou expressão registrada uma única vez em determinado conjunto textual."
+    ],
+    "correct_answer": "Interrupção intencional de uma frase, deixando o pensamento incompleto.",
+    "explanation": "'Aposiopese' significa: Interrupção intencional de uma frase, deixando o pensamento incompleto. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'A' e tem 10 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Interrupção intencional de uma frase, deixando o pensamento incompleto\"?",
+    "options": [
+      "Aposiopese",
+      "Diacronia",
+      "Hápax legômenon",
+      "Elipse"
+    ],
+    "correct_answer": "Aposiopese",
+    "explanation": "'Aposiopese' significa: Interrupção intencional de uma frase, deixando o pensamento incompleto. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'A'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Diacronia'?",
+    "options": [
+      "Estudo de uma língua ou fenômeno ao longo do tempo.",
+      "Interrupção intencional de uma frase, deixando o pensamento incompleto.",
+      "Omissão de um termo que pode ser recuperado pelo contexto.",
+      "Omissão de um termo já mencionado ou facilmente recuperável na frase."
+    ],
+    "correct_answer": "Estudo de uma língua ou fenômeno ao longo do tempo.",
+    "explanation": "'Diacronia' significa: Estudo de uma língua ou fenômeno ao longo do tempo. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'D' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Estudo de uma língua ou fenômeno ao longo do tempo\"?",
+    "options": [
+      "Paronomásia",
+      "Diacronia",
+      "Zeugma",
+      "Hápax legômenon"
+    ],
+    "correct_answer": "Diacronia",
+    "explanation": "'Diacronia' significa: Estudo de uma língua ou fenômeno ao longo do tempo. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'D'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Elipse'?",
+    "options": [
+      "Omissão de um termo que pode ser recuperado pelo contexto.",
+      "Figura de linguagem que substitui um termo por outro associado a ele.",
+      "Estudo de uma língua ou fenômeno ao longo do tempo.",
+      "Omissão de um termo já mencionado ou facilmente recuperável na frase."
+    ],
+    "correct_answer": "Omissão de um termo que pode ser recuperado pelo contexto.",
+    "explanation": "'Elipse' significa: Omissão de um termo que pode ser recuperado pelo contexto. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'E' e tem 6 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Omissão de um termo que pode ser recuperado pelo contexto\"?",
+    "options": [
+      "Anacoluto",
+      "Prosopopeia",
+      "Elipse",
+      "Aposiopese"
+    ],
+    "correct_answer": "Elipse",
+    "explanation": "'Elipse' significa: Omissão de um termo que pode ser recuperado pelo contexto. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'E'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Hapax'?",
+    "options": [
+      "Forma ou expressão registrada uma única vez em determinado conjunto textual.",
+      "Omissão de um termo já mencionado ou facilmente recuperável na frase.",
+      "Palavra ou forma que aparece apenas uma vez em determinado corpus ou texto.",
+      "Aproximação de palavras de sons semelhantes, mas significados diferentes."
+    ],
+    "correct_answer": "Palavra ou forma que aparece apenas uma vez em determinado corpus ou texto.",
+    "explanation": "'Hapax' significa: Palavra ou forma que aparece apenas uma vez em determinado corpus ou texto. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'H' e tem 5 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Palavra ou forma que aparece apenas uma vez em determinado corpus ou texto\"?",
+    "options": [
+      "Hapax",
+      "Hápax legômenon",
+      "Diacronia",
+      "Aposiopese"
+    ],
+    "correct_answer": "Hapax",
+    "explanation": "'Hapax' significa: Palavra ou forma que aparece apenas uma vez em determinado corpus ou texto. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'H'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Metonímia'?",
+    "options": [
+      "Figura de linguagem que substitui um termo por outro associado a ele.",
+      "Forma ou expressão registrada uma única vez em determinado conjunto textual.",
+      "Interrupção intencional de uma frase, deixando o pensamento incompleto.",
+      "Omissão de um termo já mencionado ou facilmente recuperável na frase."
+    ],
+    "correct_answer": "Figura de linguagem que substitui um termo por outro associado a ele.",
+    "explanation": "'Metonímia' significa: Figura de linguagem que substitui um termo por outro associado a ele. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'M' e tem 9 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Figura de linguagem que substitui um termo por outro associado a ele\"?",
+    "options": [
+      "Prosopopeia",
+      "Aposiopese",
+      "Metonímia",
+      "Diacronia"
+    ],
+    "correct_answer": "Metonímia",
+    "explanation": "'Metonímia' significa: Figura de linguagem que substitui um termo por outro associado a ele. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'M'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Paronomásia'?",
+    "options": [
+      "Forma ou expressão registrada uma única vez em determinado conjunto textual.",
+      "Interrupção intencional de uma frase, deixando o pensamento incompleto.",
+      "Figura de linguagem que substitui um termo por outro associado a ele.",
+      "Aproximação de palavras de sons semelhantes, mas significados diferentes."
+    ],
+    "correct_answer": "Aproximação de palavras de sons semelhantes, mas significados diferentes.",
+    "explanation": "'Paronomásia' significa: Aproximação de palavras de sons semelhantes, mas significados diferentes. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'P' e tem 11 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Aproximação de palavras de sons semelhantes, mas significados diferentes\"?",
+    "options": [
+      "Hápax legômenon",
+      "Elipse",
+      "Paronomásia",
+      "Diacronia"
+    ],
+    "correct_answer": "Paronomásia",
+    "explanation": "'Paronomásia' significa: Aproximação de palavras de sons semelhantes, mas significados diferentes. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Prosopopeia'?",
+    "options": [
+      "Forma ou expressão registrada uma única vez em determinado conjunto textual.",
+      "Palavra ou forma que aparece apenas uma vez em determinado corpus ou texto.",
+      "Figura de linguagem que atribui características humanas a seres não humanos ou coisas.",
+      "Figura de linguagem que substitui um termo por outro associado a ele."
+    ],
+    "correct_answer": "Figura de linguagem que atribui características humanas a seres não humanos ou coisas.",
+    "explanation": "'Prosopopeia' significa: Figura de linguagem que atribui características humanas a seres não humanos ou coisas. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'P' e tem 11 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Figura de linguagem que atribui características humanas a seres não humanos ou coisas\"?",
+    "options": [
+      "Aposiopese",
+      "Hapax",
+      "Diacronia",
+      "Prosopopeia"
+    ],
+    "correct_answer": "Prosopopeia",
+    "explanation": "'Prosopopeia' significa: Figura de linguagem que atribui características humanas a seres não humanos ou coisas. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'P'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Zeugma'?",
+    "options": [
+      "Interrupção intencional de uma frase, deixando o pensamento incompleto.",
+      "Figura de linguagem que substitui um termo por outro associado a ele.",
+      "Omissão de um termo já mencionado ou facilmente recuperável na frase.",
+      "Aproximação de palavras de sons semelhantes, mas significados diferentes."
+    ],
+    "correct_answer": "Omissão de um termo já mencionado ou facilmente recuperável na frase.",
+    "explanation": "'Zeugma' significa: Omissão de um termo já mencionado ou facilmente recuperável na frase. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'Z' e tem 6 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Omissão de um termo já mencionado ou facilmente recuperável na frase\"?",
+    "options": [
+      "Anacoluto",
+      "Aposiopese",
+      "Hapax",
+      "Zeugma"
+    ],
+    "correct_answer": "Zeugma",
+    "explanation": "'Zeugma' significa: Omissão de um termo já mencionado ou facilmente recuperável na frase. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'Z'."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual é o significado de 'Hápax legômenon'?",
+    "options": [
+      "Omissão de um termo já mencionado ou facilmente recuperável na frase.",
+      "Forma ou expressão registrada uma única vez em determinado conjunto textual.",
+      "Figura de linguagem que substitui um termo por outro associado a ele.",
+      "Interrupção intencional de uma frase, deixando o pensamento incompleto."
+    ],
+    "correct_answer": "Forma ou expressão registrada uma única vez em determinado conjunto textual.",
+    "explanation": "'Hápax legômenon' significa: Forma ou expressão registrada uma única vez em determinado conjunto textual. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra começa com 'H' e tem 15 letras."
+    ]
+  },
+  {
+    "territory_id": "palavras_raras_linguistica",
+    "difficulty_level": 3,
+    "prompt": "Qual palavra corresponde a este significado: \"Forma ou expressão registrada uma única vez em determinado conjunto textual\"?",
+    "options": [
+      "Elipse",
+      "Anacoluto",
+      "Zeugma",
+      "Hápax legômenon"
+    ],
+    "correct_answer": "Hápax legômenon",
+    "explanation": "'Hápax legômenon' significa: Forma ou expressão registrada uma única vez em determinado conjunto textual. Confira a acepção em dicionários como Priberam, Michaelis ou Caldas Aulete.",
+    "age_reviewed": true,
+    "hints": [
+      "É um termo da área de linguística, gramática e literatura.",
+      "A palavra procurada começa com 'H'."
+    ]
+  }
+]

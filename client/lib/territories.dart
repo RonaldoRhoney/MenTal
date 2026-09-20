@@ -171,6 +171,17 @@ const List<String> kTerritoryIds = [
   'futebol_grandes_nomes',
   'futebol_regras_curiosidades',
   'futebol_atualidade',
+  // SubMundo Palavras Raras (Mundo da Linguagem), 20/09/2026.
+  'palavras_raras_filosofia',
+  'palavras_raras_psicologia',
+  'palavras_raras_medicina',
+  'palavras_raras_fisica_quimica',
+  'palavras_raras_matematica',
+  'palavras_raras_linguistica',
+  'palavras_raras_historia',
+  'palavras_raras_geografia',
+  'palavras_raras_direito',
+  'palavras_raras_eruditas',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -245,6 +256,26 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryCopaMundoEraModerna;
     case 'copa_mundo_curiosidades':
       return l10n.territoryCopaMundoCuriosidades;
+    case 'palavras_raras_filosofia':
+      return l10n.territoryPalavrasRarasFilosofia;
+    case 'palavras_raras_psicologia':
+      return l10n.territoryPalavrasRarasPsicologia;
+    case 'palavras_raras_medicina':
+      return l10n.territoryPalavrasRarasMedicina;
+    case 'palavras_raras_fisica_quimica':
+      return l10n.territoryPalavrasRarasFisicaQuimica;
+    case 'palavras_raras_matematica':
+      return l10n.territoryPalavrasRarasMatematica;
+    case 'palavras_raras_linguistica':
+      return l10n.territoryPalavrasRarasLinguistica;
+    case 'palavras_raras_historia':
+      return l10n.territoryPalavrasRarasHistoria;
+    case 'palavras_raras_geografia':
+      return l10n.territoryPalavrasRarasGeografia;
+    case 'palavras_raras_direito':
+      return l10n.territoryPalavrasRarasDireito;
+    case 'palavras_raras_eruditas':
+      return l10n.territoryPalavrasRarasEruditas;
     case 'futebol_origens':
       return l10n.territoryFutebolOrigens;
     case 'futebol_grandes_nomes':

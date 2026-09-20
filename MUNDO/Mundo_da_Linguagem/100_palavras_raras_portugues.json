@@ -1,0 +1,624 @@
+{
+  "titulo": "100 palavras raras e pouco conhecidas da língua portuguesa",
+  "descricao": "Seleção temática de palavras raras, especializadas ou pouco frequentes no cotidiano. Não representa um ranking estatístico de desconhecimento.",
+  "criterio": "Vocabulário organizado por áreas do conhecimento, com definições resumidas.",
+  "areas": [
+    {
+      "area": "Filosofia, pensamento e comportamento",
+      "palavras": [
+        {
+          "numero": 1,
+          "palavra": "Apodítico",
+          "significado": "Que é demonstrável como necessário ou incontestável dentro de determinado sistema lógico."
+        },
+        {
+          "numero": 2,
+          "palavra": "Ataraxia",
+          "significado": "Estado de tranquilidade interior, sem perturbação emocional."
+        },
+        {
+          "numero": 3,
+          "palavra": "Epifenômeno",
+          "significado": "Fenômeno secundário associado a outro, considerado principal."
+        },
+        {
+          "numero": 4,
+          "palavra": "Eudaimonia",
+          "significado": "Conceito filosófico de vida plena, florescimento humano ou felicidade duradoura."
+        },
+        {
+          "numero": 5,
+          "palavra": "Hermenêutica",
+          "significado": "Teoria e prática da interpretação de textos, discursos ou fenômenos."
+        },
+        {
+          "numero": 6,
+          "palavra": "Idiossincrasia",
+          "significado": "Característica peculiar de uma pessoa, grupo ou sistema."
+        },
+        {
+          "numero": 7,
+          "palavra": "Parresia",
+          "significado": "Falar com franqueza, especialmente ao dizer uma verdade que envolve riscos."
+        },
+        {
+          "numero": 8,
+          "palavra": "Prolegômeno",
+          "significado": "Introdução preliminar a um estudo ou tratado."
+        },
+        {
+          "numero": 9,
+          "palavra": "Teleologia",
+          "significado": "Estudo ou explicação dos fenômenos em função de seus fins ou propósitos."
+        },
+        {
+          "numero": 10,
+          "palavra": "Zetética",
+          "significado": "Abordagem investigativa baseada no questionamento e na busca contínua de conhecimento."
+        }
+      ]
+    },
+    {
+      "area": "Psicologia, emoções e relações humanas",
+      "palavras": [
+        {
+          "numero": 11,
+          "palavra": "Alexitimia",
+          "significado": "Dificuldade de identificar ou descrever as próprias emoções."
+        },
+        {
+          "numero": 12,
+          "palavra": "Ambivalência",
+          "significado": "Presença simultânea de sentimentos ou atitudes contraditórios."
+        },
+        {
+          "numero": 13,
+          "palavra": "Anedonia",
+          "significado": "Diminuição ou perda da capacidade de sentir prazer."
+        },
+        {
+          "numero": 14,
+          "palavra": "Aprosódia",
+          "significado": "Alteração da capacidade de expressar ou interpretar aspectos emocionais da fala, como entonação e ritmo."
+        },
+        {
+          "numero": 15,
+          "palavra": "Catatimia",
+          "significado": "Influência dos estados emocionais sobre a percepção, o pensamento ou o julgamento."
+        },
+        {
+          "numero": 16,
+          "palavra": "Disforia",
+          "significado": "Estado de desconforto, insatisfação ou mal-estar emocional."
+        },
+        {
+          "numero": 17,
+          "palavra": "Eutimia",
+          "significado": "Estado de humor relativamente estável e equilibrado, em determinados contextos clínicos."
+        },
+        {
+          "numero": 18,
+          "palavra": "Hipobulia",
+          "significado": "Diminuição da iniciativa ou da vontade de agir."
+        },
+        {
+          "numero": 19,
+          "palavra": "Labilidade",
+          "significado": "Facilidade ou rapidez com que algo muda; em psicologia, pode designar instabilidade emocional."
+        },
+        {
+          "numero": 20,
+          "palavra": "Procrastinação",
+          "significado": "Adiamento recorrente de tarefas ou decisões, apesar da intenção de realizá-las."
+        }
+      ]
+    },
+    {
+      "area": "Medicina, biologia e corpo humano",
+      "palavras": [
+        {
+          "numero": 21,
+          "palavra": "Acromegalia",
+          "significado": "Doença associada à produção excessiva de hormônio do crescimento na vida adulta."
+        },
+        {
+          "numero": 22,
+          "palavra": "Alantoide",
+          "significado": "Estrutura embrionária relacionada, entre outras funções, às trocas e ao desenvolvimento de determinados tecidos."
+        },
+        {
+          "numero": 23,
+          "palavra": "Anisocoria",
+          "significado": "Diferença no diâmetro das pupilas."
+        },
+        {
+          "numero": 24,
+          "palavra": "Bradicinesia",
+          "significado": "Lentidão dos movimentos voluntários."
+        },
+        {
+          "numero": 25,
+          "palavra": "Diapedese",
+          "significado": "Passagem de células sanguíneas através da parede dos vasos."
+        },
+        {
+          "numero": 26,
+          "palavra": "Esplenomegalia",
+          "significado": "Aumento do baço."
+        },
+        {
+          "numero": 27,
+          "palavra": "Hematopoiese",
+          "significado": "Processo de formação das células do sangue."
+        },
+        {
+          "numero": 28,
+          "palavra": "Leucopenia",
+          "significado": "Redução do número de leucócitos no sangue."
+        },
+        {
+          "numero": 29,
+          "palavra": "Osteófito",
+          "significado": "Formação óssea que pode surgir nas proximidades das articulações."
+        },
+        {
+          "numero": 30,
+          "palavra": "Taquipneia",
+          "significado": "Aumento da frequência respiratória."
+        }
+      ]
+    },
+    {
+      "area": "Física, química e astronomia",
+      "palavras": [
+        {
+          "numero": 31,
+          "palavra": "Albedo",
+          "significado": "Proporção da radiação incidente que uma superfície reflete."
+        },
+        {
+          "numero": 32,
+          "palavra": "Anisotropia",
+          "significado": "Propriedade de apresentar características diferentes conforme a direção considerada."
+        },
+        {
+          "numero": 33,
+          "palavra": "Barotropia",
+          "significado": "Condição em que a pressão depende essencialmente da densidade, em determinado modelo físico."
+        },
+        {
+          "numero": 34,
+          "palavra": "Criogenia",
+          "significado": "Área dedicada à produção e ao estudo de temperaturas muito baixas."
+        },
+        {
+          "numero": 35,
+          "palavra": "Entropia",
+          "significado": "Grandeza física relacionada à dispersão de energia e ao número de configurações possíveis de um sistema."
+        },
+        {
+          "numero": 36,
+          "palavra": "Isótopo",
+          "significado": "Átomo de um elemento químico com número de prótons igual e número de nêutrons diferente."
+        },
+        {
+          "numero": 37,
+          "palavra": "Luminância",
+          "significado": "Grandeza fotométrica relacionada à intensidade luminosa percebida numa determinada direção."
+        },
+        {
+          "numero": 38,
+          "palavra": "Nucleossíntese",
+          "significado": "Formação de núcleos atômicos por processos nucleares."
+        },
+        {
+          "numero": 39,
+          "palavra": "Periélio",
+          "significado": "Ponto da órbita em que um corpo celeste está mais próximo do Sol."
+        },
+        {
+          "numero": 40,
+          "palavra": "Sideral",
+          "significado": "Relativo às estrelas ou ao espaço celeste."
+        }
+      ]
+    },
+    {
+      "area": "Matemática, lógica e estatística",
+      "palavras": [
+        {
+          "numero": 41,
+          "palavra": "Abscissa",
+          "significado": "Coordenada horizontal de um ponto em um sistema cartesiano usual."
+        },
+        {
+          "numero": 42,
+          "palavra": "Algoritmo",
+          "significado": "Conjunto ordenado de instruções para resolver um problema ou executar uma tarefa."
+        },
+        {
+          "numero": 43,
+          "palavra": "Bijeção",
+          "significado": "Correspondência que associa cada elemento de um conjunto a exatamente um elemento de outro, sem sobras em nenhum dos lados."
+        },
+        {
+          "numero": 44,
+          "palavra": "Combinatória",
+          "significado": "Área da matemática que estuda contagens, combinações e organizações de elementos."
+        },
+        {
+          "numero": 45,
+          "palavra": "Convolução",
+          "significado": "Operação matemática que combina duas funções ou sequências segundo uma regra específica."
+        },
+        {
+          "numero": 46,
+          "palavra": "Dicotomia",
+          "significado": "Divisão de um conjunto em duas partes ou categorias."
+        },
+        {
+          "numero": 47,
+          "palavra": "Heurística",
+          "significado": "Estratégia prática que ajuda a encontrar soluções, sem garantir necessariamente a melhor resposta."
+        },
+        {
+          "numero": 48,
+          "palavra": "Isomorfismo",
+          "significado": "Correspondência estrutural entre objetos matemáticos que preserva as relações relevantes."
+        },
+        {
+          "numero": 49,
+          "palavra": "Parâmetro",
+          "significado": "Quantidade que caracteriza ou controla um modelo ou sistema."
+        },
+        {
+          "numero": 50,
+          "palavra": "Variância",
+          "significado": "Medida estatística da dispersão dos valores em relação à média."
+        }
+      ]
+    },
+    {
+      "area": "Linguística, gramática e literatura",
+      "palavras": [
+        {
+          "numero": 51,
+          "palavra": "Anacoluto",
+          "significado": "Quebra da estrutura sintática esperada de uma frase."
+        },
+        {
+          "numero": 52,
+          "palavra": "Aposiopese",
+          "significado": "Interrupção intencional de uma frase, deixando o pensamento incompleto."
+        },
+        {
+          "numero": 53,
+          "palavra": "Diacronia",
+          "significado": "Estudo de uma língua ou fenômeno ao longo do tempo."
+        },
+        {
+          "numero": 54,
+          "palavra": "Elipse",
+          "significado": "Omissão de um termo que pode ser recuperado pelo contexto."
+        },
+        {
+          "numero": 55,
+          "palavra": "Hapax",
+          "significado": "Palavra ou forma que aparece apenas uma vez em determinado corpus ou texto."
+        },
+        {
+          "numero": 56,
+          "palavra": "Metonímia",
+          "significado": "Figura de linguagem que substitui um termo por outro associado a ele."
+        },
+        {
+          "numero": 57,
+          "palavra": "Paronomásia",
+          "significado": "Aproximação de palavras de sons semelhantes, mas significados diferentes."
+        },
+        {
+          "numero": 58,
+          "palavra": "Prosopopeia",
+          "significado": "Figura de linguagem que atribui características humanas a seres não humanos ou coisas."
+        },
+        {
+          "numero": 59,
+          "palavra": "Zeugma",
+          "significado": "Omissão de um termo já mencionado ou facilmente recuperável na frase."
+        },
+        {
+          "numero": 60,
+          "palavra": "Hápax legômenon",
+          "significado": "Forma ou expressão registrada uma única vez em determinado conjunto textual."
+        }
+      ]
+    },
+    {
+      "area": "História, arqueologia e antropologia",
+      "palavras": [
+        {
+          "numero": 61,
+          "palavra": "Anacronismo",
+          "significado": "Colocação de algo em época diferente daquela a que pertence."
+        },
+        {
+          "numero": 62,
+          "palavra": "Arqueometria",
+          "significado": "Aplicação de métodos científicos e quantitativos ao estudo de materiais arqueológicos."
+        },
+        {
+          "numero": 63,
+          "palavra": "Diáspora",
+          "significado": "Dispersão de um povo ou comunidade para além de seu território de origem."
+        },
+        {
+          "numero": 64,
+          "palavra": "Etnogênese",
+          "significado": "Processo de formação ou transformação de uma identidade étnica."
+        },
+        {
+          "numero": 65,
+          "palavra": "Falanstério",
+          "significado": "Comunidade idealizada de organização coletiva, proposta por Charles Fourier."
+        },
+        {
+          "numero": 66,
+          "palavra": "Genealogia",
+          "significado": "Estudo da origem e das relações de descendência de pessoas, famílias ou ideias."
+        },
+        {
+          "numero": 67,
+          "palavra": "Hagiografia",
+          "significado": "Escrita da vida de santos; também pode designar relato excessivamente elogioso de alguém."
+        },
+        {
+          "numero": 68,
+          "palavra": "Paleografia",
+          "significado": "Estudo de escritas antigas e de sua interpretação."
+        },
+        {
+          "numero": 69,
+          "palavra": "Sincretismo",
+          "significado": "Combinação ou integração de elementos de diferentes tradições culturais ou religiosas."
+        },
+        {
+          "numero": 70,
+          "palavra": "Vestígio",
+          "significado": "Marca, resto ou indício que permite inferir a existência de algo passado."
+        }
+      ]
+    },
+    {
+      "area": "Geografia, geologia e meio ambiente",
+      "palavras": [
+        {
+          "numero": 71,
+          "palavra": "Afloramento",
+          "significado": "Exposição de rochas ou estruturas geológicas à superfície."
+        },
+        {
+          "numero": 72,
+          "palavra": "Aluvião",
+          "significado": "Sedimentos transportados e depositados pela água."
+        },
+        {
+          "numero": 73,
+          "palavra": "Antrópico",
+          "significado": "Relativo à ação humana ou resultante dela."
+        },
+        {
+          "numero": 74,
+          "palavra": "Carste",
+          "significado": "Relevo formado principalmente pela dissolução de rochas solúveis, como calcário."
+        },
+        {
+          "numero": 75,
+          "palavra": "Eutrofização",
+          "significado": "Enriquecimento de um ambiente aquático por nutrientes, que pode provocar desequilíbrios ecológicos."
+        },
+        {
+          "numero": 76,
+          "palavra": "Halófita",
+          "significado": "Planta adaptada a ambientes com elevada salinidade."
+        },
+        {
+          "numero": 77,
+          "palavra": "Inselbergue",
+          "significado": "Elevação rochosa isolada que se destaca numa paisagem relativamente plana."
+        },
+        {
+          "numero": 78,
+          "palavra": "Laterização",
+          "significado": "Processo de alteração do solo ou da rocha associado à intensa lixiviação em condições específicas."
+        },
+        {
+          "numero": 79,
+          "palavra": "Pluviometria",
+          "significado": "Medição da quantidade de precipitação atmosférica."
+        },
+        {
+          "numero": 80,
+          "palavra": "Xerófita",
+          "significado": "Planta adaptada a ambientes secos ou com pouca disponibilidade de água."
+        }
+      ]
+    },
+    {
+      "area": "Direito, política institucional e administração",
+      "palavras": [
+        {
+          "numero": 81,
+          "palavra": "Aditamento",
+          "significado": "Acréscimo feito a um documento, contrato ou ato."
+        },
+        {
+          "numero": 82,
+          "palavra": "Antinomia",
+          "significado": "Contradição entre normas ou princípios que parecem aplicáveis ao mesmo caso."
+        },
+        {
+          "numero": 83,
+          "palavra": "Cominação",
+          "significado": "Ameaça de aplicação de uma consequência jurídica prevista."
+        },
+        {
+          "numero": 84,
+          "palavra": "Deferimento",
+          "significado": "Ato de acolher ou conceder um pedido."
+        },
+        {
+          "numero": 85,
+          "palavra": "Exordial",
+          "significado": "Relativo ao início; no direito processual, pode designar a petição inicial."
+        },
+        {
+          "numero": 86,
+          "palavra": "Hermenêutica jurídica",
+          "significado": "Estudo dos métodos e princípios de interpretação do direito."
+        },
+        {
+          "numero": 87,
+          "palavra": "Isonomia",
+          "significado": "Princípio de igualdade de tratamento perante a lei, observadas as distinções juridicamente relevantes."
+        },
+        {
+          "numero": 88,
+          "palavra": "Litigância",
+          "significado": "Atividade de participar de um litígio ou processo judicial."
+        },
+        {
+          "numero": 89,
+          "palavra": "Preclusão",
+          "significado": "Perda da possibilidade de praticar determinado ato processual em razão de uma circunstância prevista em lei."
+        },
+        {
+          "numero": 90,
+          "palavra": "Subsidiariedade",
+          "significado": "Condição de algo que atua como complemento ou apoio, quando cabível."
+        }
+      ]
+    },
+    {
+      "area": "Palavras eruditas, abstratas e pouco usuais",
+      "palavras": [
+        {
+          "numero": 91,
+          "palavra": "Abstruso",
+          "significado": "Difícil de compreender; obscuro."
+        },
+        {
+          "numero": 92,
+          "palavra": "Alvíssaras",
+          "significado": "Expressão tradicional ligada ao anúncio de boas notícias; também pode significar recompensa por uma notícia."
+        },
+        {
+          "numero": 93,
+          "palavra": "Apedeutismo",
+          "significado": "Falta de instrução ou de formação cultural."
+        },
+        {
+          "numero": 94,
+          "palavra": "Cediço",
+          "significado": "Conhecido, sabido ou já estabelecido."
+        },
+        {
+          "numero": 95,
+          "palavra": "Escandir",
+          "significado": "Separar e analisar sílabas métricas de um verso."
+        },
+        {
+          "numero": 96,
+          "palavra": "Estólido",
+          "significado": "Que demonstra falta de discernimento; tolo."
+        },
+        {
+          "numero": 97,
+          "palavra": "Inópia",
+          "significado": "Escassez ou falta de recursos; pobreza."
+        },
+        {
+          "numero": 98,
+          "palavra": "Loquaz",
+          "significado": "Que fala muito; comunicativo."
+        },
+        {
+          "numero": 99,
+          "palavra": "Nefelibata",
+          "significado": "Pessoa que vive em devaneios ou parece alheia à realidade prática."
+        },
+        {
+          "numero": 100,
+          "palavra": "Pusilânime",
+          "significado": "Que demonstra falta de coragem ou firmeza diante de dificuldades."
+        }
+      ]
+    }
+  ],
+  "palavras_em_destaque": [
+    {
+      "numero": 1,
+      "palavra": "Ataraxia",
+      "significado": "Tranquilidade interior sem perturbação."
+    },
+    {
+      "numero": 2,
+      "palavra": "Eudaimonia",
+      "significado": "Vida plena ou florescimento humano."
+    },
+    {
+      "numero": 3,
+      "palavra": "Parresia",
+      "significado": "Franqueza ao dizer a verdade, mesmo sob risco."
+    },
+    {
+      "numero": 4,
+      "palavra": "Alexitimia",
+      "significado": "Dificuldade de identificar e descrever emoções."
+    },
+    {
+      "numero": 5,
+      "palavra": "Anisocoria",
+      "significado": "Diferença de tamanho entre as pupilas."
+    },
+    {
+      "numero": 6,
+      "palavra": "Anisotropia",
+      "significado": "Propriedades que variam conforme a direção."
+    },
+    {
+      "numero": 7,
+      "palavra": "Hápax legômenon",
+      "significado": "Forma registrada uma única vez em um corpus."
+    },
+    {
+      "numero": 8,
+      "palavra": "Etnogênese",
+      "significado": "Formação ou transformação de uma identidade étnica."
+    },
+    {
+      "numero": 9,
+      "palavra": "Inselbergue",
+      "significado": "Elevação rochosa isolada na paisagem."
+    },
+    {
+      "numero": 10,
+      "palavra": "Nefelibata",
+      "significado": "Pessoa que vive em devaneios ou distante da realidade prática."
+    }
+  ],
+  "fontes_para_conferencia": [
+    {
+      "nome": "Dicionário Priberam da Língua Portuguesa",
+      "url": "https://dicionario.priberam.org/"
+    },
+    {
+      "nome": "Dicionário Michaelis",
+      "url": "https://michaelis.uol.com.br/"
+    },
+    {
+      "nome": "Dicionário Caldas Aulete",
+      "url": "https://aulete.com.br/"
+    }
+  ],
+  "observacao": "Seleção temática; não é um ranking estatístico. Para uso acadêmico, confira cada acepção nas fontes lexicográficas e observe se o termo é técnico, histórico, regional ou de uso geral."
+}

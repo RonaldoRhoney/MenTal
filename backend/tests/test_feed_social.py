@@ -262,6 +262,10 @@ def test_world_completed_creates_a_feed_event(client, monkeypatch):
     client.post("/subscription/validate-receipt", json={"purchase_token": "TEST_TOKEN_VALID"}, headers=headers)
 
     assert _feed_events_for(user, "world_completed") == []
+    # SubMundo Palavras Raras (10 territórios do mesmo Mundo) pré-conquistado no banco.
+    from .test_worlds import PALAVRAS_RARAS_TERRITORIES, _mark_conquered
+
+    _mark_conquered(user, PALAVRAS_RARAS_TERRITORIES)
     for territory_id in ("palavras", "textos", "enigmas", "redacao"):
         _conquer_territory(client, headers, territory_id)
 

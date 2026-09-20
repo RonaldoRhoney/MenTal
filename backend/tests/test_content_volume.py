@@ -61,6 +61,10 @@ SINGLE_DIFFICULTY_TERRITORY_IDS = {
     # aqui não seja cápsula, é o mesmo "sem níveis").
     "copa_mundo_primeiras_copas", "copa_mundo_expansao", "copa_mundo_era_moderna", "copa_mundo_curiosidades",
     "futebol_origens", "futebol_grandes_nomes", "futebol_regras_curiosidades", "futebol_atualidade",
+    # SubMundo Palavras Raras (Mundo da Linguagem, 20/09/2026): tudo nível 3 por decisão de Rhoney.
+    "palavras_raras_filosofia", "palavras_raras_psicologia", "palavras_raras_medicina", "palavras_raras_fisica_quimica",
+    "palavras_raras_matematica", "palavras_raras_linguistica", "palavras_raras_historia", "palavras_raras_geografia",
+    "palavras_raras_direito", "palavras_raras_eruditas",
 }
 
 
