@@ -256,6 +256,8 @@ void main() {
     expect(find.byKey(const Key('home_repair_banner')), findsOneWidget);
     expect(find.textContaining('sequência de 8 dias quebrou'), findsOneWidget);
     expect(find.byKey(const Key('home_boost_chip')), findsOneWidget);
+    // 10:00 UTC = 07:00 em Brasília; o chip diz o período do dia.
+    expect(find.textContaining('07:00 da manhã'), findsOneWidget);
   });
 
   testWidgets(

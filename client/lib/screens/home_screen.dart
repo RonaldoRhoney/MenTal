@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../api/api_client.dart';
+import '../brasilia_time.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/app_version_service.dart';
 import '../services/feed_activity_service.dart';
@@ -444,11 +445,6 @@ class _HomeScreenState extends State<HomeScreen> {
     final repair = e['repair'] as Map<String, dynamic>?;
     final boostActive = e['boost_active'] == true;
     if (repair == null && !boostActive) return const SizedBox.shrink();
-    String hhmm(String iso) {
-      final t = DateTime.parse(iso.endsWith('Z') ? iso : '${iso}Z').toLocal();
-      return '${t.hour.toString().padLeft(2, '0')}:${t.minute.toString().padLeft(2, '0')}';
-    }
-
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Column(
@@ -461,8 +457,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 alignment: Alignment.centerLeft,
                 child: Chip(
                   key: const Key('home_boost_chip'),
-                  avatar: Icon(Icons.bolt_rounded, color: AppColors.gold, size: 18),
-                  label: Text(l10n.homeBoostChip(e['boost_percent'] as int, hhmm(e['boost_expires_at'] as String))),
+                  avatar:
+                      Icon(Icons.bolt_rounded, color: AppColors.gold, size: 18),
+                  label: Text(l10n.homeBoostChip(e['boost_percent'] as int,
+                      formatBrasiliaTime(e['boost_expires_at'] as String))),
                 ),
               ),
             ),
@@ -473,10 +471,15 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: _openMentalCoins,
               child: Container(
                 padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14), border: Border.all(color: AppColors.gold.withValues(alpha: 0.5))),
+                decoration: BoxDecoration(
+                    color: AppColors.bg2,
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                        color: AppColors.gold.withValues(alpha: 0.5))),
                 child: Row(
                   children: [
-                    Icon(Icons.local_fire_department_rounded, color: AppColors.gold),
+                    Icon(Icons.local_fire_department_rounded,
+                        color: AppColors.gold),
                     const SizedBox(width: 10),
                     Expanded(
                       child: Text(
@@ -484,14 +487,18 @@ class _HomeScreenState extends State<HomeScreen> {
                           repair['streak_to_restore'] as int,
                           repair['cost'] as int,
                           () {
-                            final p = (repair['expires_on'] as String).split('-');
+                            final p =
+                                (repair['expires_on'] as String).split('-');
                             return '${p[2]}/${p[1]}';
                           }(),
                         ),
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
                     ),
-                    Text(l10n.homeStreakRepairBannerAction, style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+                    Text(l10n.homeStreakRepairBannerAction,
+                        style: TextStyle(
+                            color: AppColors.gold,
+                            fontWeight: FontWeight.w700)),
                   ],
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
+import '../brasilia_time.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
 import '../widgets/mentalcoin.dart';
@@ -100,11 +101,6 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
     }
   }
 
-  String _hhmm(String iso) {
-    final t = DateTime.parse(iso.endsWith('Z') ? iso : '${iso}Z').toLocal();
-    return '${t.hour.toString().padLeft(2, '0')}:${t.minute.toString().padLeft(2, '0')}';
-  }
-
   String _ddmm(String isoDate) {
     final p = isoDate.split('-');
     return '${p[2]}/${p[1]}';
@@ -166,8 +162,8 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
         icon: Icons.bolt_rounded,
         name: l10n.economyBoostName,
         description: boostActive
-            ? l10n
-                .economyBoostActiveUntil(_hhmm(e['boost_expires_at'] as String))
+            ? l10n.economyBoostActiveUntil(
+                formatBrasiliaTime(e['boost_expires_at'] as String))
             : l10n.economyBoostDescription(e['boost_percent'] as int),
         warning:
             (!boostActive && capReached) ? l10n.economyBoostCapWarning : null,
