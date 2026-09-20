@@ -710,6 +710,10 @@
   "@nextChallengeButton": {
     "description": "Button to load the next challenge"
   },
+  "relampagoRetryNowButton": "Tentar de novo",
+  "@relampagoRetryNowButton": {
+    "description": "Relampago: after a wrong answer, one immediate correction attempt (no XP)"
+  },
   "batchCompletedMessage": "Você completou todos os desafios disponíveis aqui por agora!",
   "@batchCompletedMessage": {
     "description": "Shown when the player has answered every available challenge in this territory/difficulty batch"

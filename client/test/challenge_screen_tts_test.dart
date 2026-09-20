@@ -45,6 +45,23 @@ class _IdiomasRelampagoFakeApiClient extends ApiClient {
     };
   }
 
+  int reattemptCalls = 0;
+
+  @override
+  Future<Map<String, dynamic>> reattemptChallenge(String challengeId) async {
+    reattemptCalls++;
+    return {
+      'challenge_id': challengeId,
+      'territory_id': 'ingles_basico',
+      'difficulty_level': 1,
+      'prompt': "Como se escreve 'casa' em inglês?",
+      'options': ['House', 'Horse', 'Hoase', 'Hose'],
+      'hints_available': 2,
+      'time_limit_seconds': 10,
+      'attempt_id': 'reattempt-attempt-id',
+    };
+  }
+
   @override
   Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
     return {
@@ -118,6 +135,34 @@ void main() {
     // lança exceção).
     await tester.tap(find.text('House'));
     await tester.pumpAndSettle();
+  });
+
+  testWidgets('Relâmpago: errar oferece 1 correção imediata ("Tentar de novo", via reattempt); errar de novo não oferece outra', (tester) async {
+    final client = _IdiomasRelampagoFakeApiClient();
+    await _pump(tester, client, 'ingles_basico', relampago: true);
+
+    await tester.tap(find.text('Horse'));
+    await tester.pumpAndSettle();
+    expect(find.text('Tentar de novo'), findsOneWidget);
+    expect(find.text('Próximo desafio'), findsOneWidget);
+
+    await tester.tap(find.text('Tentar de novo'));
+    await tester.pumpAndSettle();
+    expect(client.reattemptCalls, 1);
+
+    // Errar de novo na correção: erro definitivo, sem 2ª correção.
+    await tester.tap(find.text('Hose'));
+    await tester.pumpAndSettle();
+    expect(find.text('Tentar de novo'), findsNothing);
+    expect(client.reattemptCalls, 1);
+  });
+
+  testWidgets('Relâmpago: acertar de primeira não oferece "Tentar de novo"', (tester) async {
+    await _pump(tester, _IdiomasRelampagoFakeApiClient(), 'ingles_basico', relampago: true);
+
+    await tester.tap(find.text('House'));
+    await tester.pumpAndSettle();
+    expect(find.text('Tentar de novo'), findsNothing);
   });
 
   testWidgets('trocar a velocidade não afeta o resto da tela (Confirmar resposta continua funcionando)', (tester) async {

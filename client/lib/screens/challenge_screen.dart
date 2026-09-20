@@ -146,6 +146,16 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   bool _inRoundReview = false;
   final List<String> _reviewQueue = [];
 
+  // Pedido de Rhoney (19/09/2026, teste real): no Relâmpago (todos os
+  // Mundos, não só Idiomas), errar permite 1 correção imediata (via
+  // GET /reattempt, mesmo mecanismo da revisão de fim de rodada acima —
+  // já sem XP por ser is_review=True no backend). Se errar de novo
+  // nessa correção, conta como erro definitivo — já rastreado em
+  // _roundErrorChallengeIds pela 1ª resposta errada, reoferecido no
+  // "Revisar erros" de fim de rodada como qualquer outro erro. Zera a
+  // cada desafio novo — só 1 correção imediata por desafio.
+  bool _relampagoRetriedThisChallenge = false;
+
   // MICROINTERACTIONS.md §3 — celebração forte (território/badge/level
   // up) usa confete + fogos + balões (pedido explícito: algo que remeta a
   // comemoração de verdade, não só confete); sons e o pulso sutil/
@@ -277,6 +287,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _audioPlaying = false;
       _audioLoadFailed = false;
       _audioHasPlayedOnce = false;
+      _relampagoRetriedThisChallenge = false;
     });
     unawaited(_audioPlayer.stop());
     try {
@@ -634,6 +645,48 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           _challenge = challenge;
           _attemptId = challenge['attempt_id'] as String?;
         });
+      }
+    } on ApiException catch (e) {
+      if (mounted) setState(() => _error = e.message);
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  /// Pedido de Rhoney (19/09/2026, teste real): correção imediata no
+  /// Relâmpago, 1 vez por desafio — reaproveita GET /reattempt (mesmo
+  /// endpoint/regra da revisão de fim de rodada: attempt novo real do
+  /// servidor, is_review=True, zero XP mesmo se acertar dessa vez).
+  /// Recomeça o cronômetro do zero pra essa tentativa, igual qualquer
+  /// desafio novo do Relâmpago.
+  Future<void> _retryRelampagoNow() async {
+    final challengeId = _challenge?['challenge_id'] as String?;
+    if (challengeId == null) return;
+    _countdownTimer?.cancel();
+    setState(() {
+      _loading = true;
+      _result = null;
+      _selectedOption = null;
+      _hintsShown = [];
+      _hintsExhausted = false;
+      _submitted = false;
+      _cluesRevealedCount = 0;
+      _showingQuestion = false;
+      _audioPlaying = false;
+      _audioLoadFailed = false;
+      _audioHasPlayedOnce = false;
+      _relampagoRetriedThisChallenge = true;
+    });
+    unawaited(_audioPlayer.stop());
+    try {
+      final challenge = await widget.client.reattemptChallenge(challengeId);
+      if (mounted) {
+        setState(() {
+          _challenge = challenge;
+          _attemptId = challenge['attempt_id'] as String?;
+        });
+        final timeLimitSeconds = challenge['time_limit_seconds'] as int?;
+        if (timeLimitSeconds != null) _startCountdown(timeLimitSeconds);
       }
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
@@ -1642,6 +1695,31 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             onPressed: () =>
                 Navigator.of(context).popUntil((route) => route.isFirst),
             child: Text(l10n.batchCompletedBackToHomeButton),
+          ),
+        ] else if (widget.relampago &&
+            !isCorrect &&
+            !timedOut &&
+            !_relampagoRetriedThisChallenge) ...[
+          // Pedido de Rhoney (19/09/2026, teste real): Relâmpago (todos
+          // os Mundos) permite 1 correção imediata sem XP — se errar de
+          // novo, o erro fica computado (já rastreado acima) e reoferecido
+          // no "Revisar erros" de fim de rodada, não aqui de novo.
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: _loadNextChallenge,
+                  child: Text(l10n.nextChallengeButton),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: FilledButton(
+                  onPressed: _retryRelampagoNow,
+                  child: Text(l10n.relampagoRetryNowButton),
+                ),
+              ),
+            ],
           ),
         ] else if (levelUp)
           // FEEDBACK_POS_NIVEL.md §3 — "aparece sempre que um nível é
