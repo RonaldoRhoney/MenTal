@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 from .. import config, economy, mentalcoins, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
-from ..timeutil import utcnow
+from ..timeutil import brasilia_today, utcnow
 
 router = APIRouter()
 
@@ -21,11 +21,11 @@ def _error(exc: mentalcoins.MentalCoinsError) -> HTTPException:
 
 @router.get("/economy/status", response_model=schemas.EconomyStatusOut)
 def get_status(user_id: str = Depends(require_age_confirmed_user_id), db: Session = Depends(get_db)):
-    today = utcnow().date()
+    today = utcnow().date()  # reparo de sequência segue o dia UTC do streak
     expires = economy.active_boost_expiry(db, user_id)
     offer = economy.streak_repair_offer(services.get_or_create_streak(db, user_id), today)
     return schemas.EconomyStatusOut(
-        daily_xp_earned=economy.daily_answer_xp_earned(db, user_id, today),
+        daily_xp_earned=economy.daily_answer_xp_earned(db, user_id, brasilia_today()),
         daily_xp_cap=config.DAILY_ANSWER_XP_CAP,
         boost_active=expires is not None,
         boost_expires_at=expires,

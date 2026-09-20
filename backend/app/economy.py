@@ -12,7 +12,8 @@ client):
   do teto — o teto vale sobre o valor final.
 - Gasto de moeda: saldo travado com FOR UPDATE, débito + efeito + registro
   no mesmo commit (2 compras concorrentes não gastam o mesmo saldo).
-Datas em UTC, mesma simplificação de mentalcoins.py.
+O dia do TETO é o dia civil de Brasília (timeutil.brasilia_today, decisão de
+Rhoney 20/09/2026); reparo de streak e o resto seguem o dia UTC já usado no app.
 """
 
 from dataclasses import dataclass

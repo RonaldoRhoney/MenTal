@@ -37,12 +37,12 @@ Constantes em `config.py`; testes em `backend/tests/test_rewards_fase2.py` (15, 
 ## Fase 3 — IMPLEMENTADA (20/09/2026)
 
 Decisões de Rhoney (20/09/2026) e como ficaram:
-- **Teto diário de 150 XP** (`config.DAILY_ANSWER_XP_CAP`): só o XP de PERFIL de resposta (Desafio + Relâmpago) para; o território segue contando o valor cheio. A última resposta que passa do teto paga só o que falta. Bônus (lote, login, streak, mundo, Movimento, Constelação…) ficam fora do teto. Dia = UTC (mesma simplificação do limite diário de desafios).
+- **Teto diário de 150 XP** (`config.DAILY_ANSWER_XP_CAP`): só o XP de PERFIL de resposta (Desafio + Relâmpago) para; o território segue contando o valor cheio. A última resposta que passa do teto paga só o que falta. Bônus (lote, login, streak, mundo, Movimento, Constelação…) ficam fora do teto. O dia do teto é o dia civil de **Brasília** (decisão de Rhoney, 20/09/2026 — zera à meia-noite dele, não às 21h); reparo de streak e limite diário de desafios seguem o dia UTC.
 - **Boost +20% por 24h (80 MentalCoins)**: só em XP de resposta, arredondado pra cima, calculado ANTES do teto (o teto vale sobre o valor final). Não empilha — comprar com boost ativo é bloqueado e não gasta moeda.
 - **Reparo de streak (50 MentalCoins)**: sequência de ≥ 2 dias; janela até o fim do dia seguinte à quebra (última jogada + 3 dias); a folga semanal grátis que já existia continua valendo primeiro. Reparar antes de jogar perdoa os dias sem jogar (a próxima jogada estende); reparar depois de recomeçar soma a sequência perdida. Marcos de streak alcançados pelo reparo são pagos.
 - **Interface**: seção "Turbinar e proteger" na tela de MentalCoins (boost + reparo + XP do dia), cartão de reparo e chip de boost na Home, e texto explicando teto/boost na resposta do desafio.
 - Código: `backend/app/economy.py`, `routers/economy.py` (`/economy/status`, `/economy/xp-boost`, `/economy/streak-repair`), migration `084_economia_teto_reparo_boost.sql`. Revisão do `mental-security` feita (achados A2/M2 e qualidade corrigidos).
-- **Em aberto**: teto em UTC vs. horário de Brasília (zera às 21h BRT) e os locks `FOR UPDATE` só são provados em Postgres real (SQLite dos testes ignora).
+- **Em aberto**: os locks `FOR UPDATE` só são provados em Postgres real (SQLite dos testes ignora).
 
 ## (Histórico) Pendente antes da Fase 3
 

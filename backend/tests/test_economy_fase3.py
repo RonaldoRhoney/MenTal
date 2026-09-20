@@ -8,7 +8,7 @@ duas vezes, não reparar fora da janela).
 import uuid
 from datetime import date, datetime, timedelta
 
-from app import config, economy, mentalcoins, models
+from app import config, economy, mentalcoins, models, timeutil
 from app.db import SessionLocal
 from app.timeutil import utcnow
 
@@ -231,3 +231,19 @@ def test_reparo_antes_de_jogar_avisa_que_o_efeito_vem_na_proxima_jogada(client):
     _set_streak(user, 8, utcnow().date() - timedelta(days=3))
     resp = client.post("/economy/streak-repair", headers=headers).json()
     assert resp["applied_immediately"] is False
+
+
+def test_dia_do_teto_e_o_dia_de_brasilia(client, monkeypatch):
+    # 01:00 UTC de 21/09 ainda é 22:00 de 20/09 em Brasília: o teto NÃO zera às 21h.
+    monkeypatch.setattr(timeutil, "utcnow", lambda: datetime(2026, 9, 21, 1, 0))
+    assert timeutil.brasilia_today() == date(2026, 9, 20)
+    monkeypatch.setattr(timeutil, "utcnow", lambda: datetime(2026, 9, 21, 3, 0))
+    assert timeutil.brasilia_today() == date(2026, 9, 21)  # meia-noite em Brasília
+
+
+def test_resposta_grava_o_contador_no_dia_de_brasilia(client):
+    user, headers = _new_user(client)
+    _answer_correctly(client, headers, "numeros")
+    with SessionLocal() as db:
+        row = db.get(models.DailyAnswerXp, (user, timeutil.brasilia_today()))
+        assert row is not None and row.xp_earned > 0

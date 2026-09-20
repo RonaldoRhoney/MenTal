@@ -40,3 +40,11 @@ def naive(dt: datetime | None) -> datetime | None:
 def week_anchor(d: date) -> date:
     """Segunda-feira da semana de `d` (âncora da folga semanal de streak)."""
     return d - timedelta(days=d.weekday())
+
+
+def brasilia_today() -> date:
+    """Data civil em Brasília (UTC-3 fixo — o Brasil não tem horário de
+    verão desde 2019). Usada só pelo teto diário de XP (Fase 3, decisão de
+    Rhoney 20/09/2026): o dia do jogador vira à meia-noite dele, não às
+    21h. O resto do app segue em UTC."""
+    return (utcnow() - timedelta(hours=3)).date()

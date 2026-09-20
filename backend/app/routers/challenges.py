@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from .. import config, economy, mentalcoins, models, rewards, schemas, scoring, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
-from ..timeutil import utcnow
+from ..timeutil import brasilia_today, utcnow
 
 router = APIRouter()
 
@@ -562,7 +562,7 @@ def submit_answer(
         # pode ter comitado (1ª resposta cria o saldo de moedas) e soltado
         # o lock — trava de novo antes de ler/gravar o teto e o XP.
         db.refresh(profile, with_for_update=True)
-        answer_xp = economy.apply_answer_xp(db, user_id, xp_final, today)
+        answer_xp = economy.apply_answer_xp(db, user_id, xp_final, brasilia_today())
         xp_cap_reached = answer_xp.cap_reached
         xp_boost_applied = answer_xp.boost_applied
         xp_final = answer_xp.profile_xp
