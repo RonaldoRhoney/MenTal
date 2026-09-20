@@ -32,6 +32,14 @@ def _seed_idiomas_challenge(prompt: str, correct_answer: str, territory_id: str 
         return challenge.id
 
 
+def _answered(user: str, challenge_id: str, correct: bool = True) -> None:
+    """A Constelação só abre DEPOIS de responder o Desafio (achado C1 da
+    auditoria de 20/09/2026) — simula essa resposta."""
+    with SessionLocal() as db:
+        db.add(models.Attempt(attempt_id=str(uuid.uuid4()), user_id=user, challenge_id=challenge_id, is_correct=correct))
+        db.commit()
+
+
 def _seed_siblings(territory_id: str = "ingles_basico") -> None:
     # Distratores — outras palavras/frases do mesmo território.
     _seed_idiomas_challenge("Como se escreve 'gato' em inglês?", "Cat", territory_id)
@@ -47,6 +55,7 @@ def test_word_constellation_pieces_for_multi_word_correct_answer(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
 
     resp = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers)
     assert resp.status_code == 200
@@ -64,6 +73,7 @@ def test_word_constellation_meaning_for_single_word_correct_answer(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
 
     resp = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers)
     assert resp.status_code == 200
@@ -90,6 +100,7 @@ def test_word_constellation_meaning_extracts_word_with_parenthetical_clarifier(c
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
 
     resp = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers)
     assert resp.status_code == 200
@@ -105,6 +116,7 @@ def test_word_constellation_complete_correct_awards_xp_only_once(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
 
     resp1 = client.post(
         f"/challenges/{challenge_id}/word-constellation/complete",
@@ -134,6 +146,7 @@ def test_word_constellation_complete_wrong_answer_never_awards_xp(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
 
     resp = client.post(
         f"/challenges/{challenge_id}/word-constellation/complete",
@@ -152,6 +165,7 @@ def test_word_constellation_pieces_complete_validates_word_order(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
 
     wrong_order = client.post(
         f"/challenges/{challenge_id}/word-constellation/complete",
@@ -208,6 +222,7 @@ def test_word_constellation_round_exposes_image_and_credit(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
 
     body = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers).json()
     assert body["vocab_media_url"].endswith("x.webp")
@@ -223,8 +238,66 @@ def test_word_constellation_meaning_options_never_include_synonyms(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
 
     for _ in range(8):  # distratores são sorteados
         body = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers).json()
         assert "Quick" not in body["options"]
         assert "Fast" in body["options"]
+
+
+def test_constelacao_nao_abre_antes_de_responder_o_desafio(client):
+    # Achado C1 (crítico): a rodada de peças devolve a resposta certa em
+    # prompt_text — sem ter respondido, nada de rodada nem de XP.
+    _seed_siblings()
+    challenge_id = _seed_idiomas_challenge("Traduza para o inglês: 'A casa é grande.'", "The house is big")
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    get = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers)
+    assert get.status_code == 403
+    assert get.json()["error"]["code"] == "CONSTELLATION_NOT_ALLOWED"
+    assert "The house is big" not in get.text
+    post = client.post(
+        f"/challenges/{challenge_id}/word-constellation/complete",
+        json={"submitted_order": ["The", "house", "is", "big"]},
+        headers=headers,
+    )
+    assert post.status_code == 403
+    assert client.get("/progress", headers=headers).json()["xp_total"] == config.LOGIN_DAILY_XP  # nenhum XP farmado
+
+    # tentativa só SERVIDA (sem resposta) também não libera
+    with SessionLocal() as db:
+        db.add(models.Attempt(attempt_id=str(uuid.uuid4()), user_id=user, challenge_id=challenge_id, is_correct=None))
+        db.commit()
+    assert client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers).status_code == 403
+
+    _answered(user, challenge_id)
+    assert client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers).status_code == 200
+
+
+def test_constelacao_resposta_de_outro_usuario_nao_libera(client):
+    _seed_siblings()
+    challenge_id = _seed_idiomas_challenge("Como se escreve 'casa' em inglês?", "House")
+    other = str(uuid.uuid4())
+    _answered(other, challenge_id)
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    assert client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers).status_code == 403
+
+
+def test_constelacao_entrada_tem_teto(client):
+    _seed_siblings()
+    challenge_id = _seed_idiomas_challenge("Como se escreve 'casa' em inglês?", "House")
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    _answered(user, challenge_id)
+    resp = client.post(
+        f"/challenges/{challenge_id}/word-constellation/complete",
+        json={"submitted_order": ["x"] * 31},
+        headers=headers,
+    )
+    assert resp.status_code == 422

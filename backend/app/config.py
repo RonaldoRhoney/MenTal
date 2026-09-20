@@ -602,3 +602,15 @@ XP_BOOST_PERCENT = 20
 XP_BOOST_HOURS = 24
 # Compras (boost/reparo): teto de tentativas por minuto.
 RATE_LIMIT_ECONOMY_BUY = (10, 60.0)
+
+# Mural de Feedback (decisão de Rhoney, 20/09/2026): TODOS comentam e TODOS
+# respondem — então precisa de freio contra flood (achado M1 da auditoria).
+# Limite por minuto + teto diário somando comentários e respostas do usuário.
+RATE_LIMIT_FEEDBACK_POST = (5, 60.0)
+APP_FEEDBACK_DAILY_LIMIT = 30
+
+# Achado C1 da auditoria (20/09/2026): a Constelação de Palavras só pode ser
+# aberta DEPOIS de responder o Desafio (é etapa complementar) — senão devolvia
+# a resposta certa de graça (oráculo). Janela em que a etapa ainda vale.
+WORD_CONSTELLATION_MAX_AGE_HOURS = 24
+RATE_LIMIT_WORD_CONSTELLATION = (30, 60.0)

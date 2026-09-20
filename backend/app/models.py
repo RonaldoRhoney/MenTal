@@ -689,6 +689,22 @@ class AppFeedback(Base):
     reply_read_by_user: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
+class AppFeedbackReply(Base):
+    """Resposta de QUALQUER usuário a um comentário do mural de feedback
+    (decisão de Rhoney, 20/09/2026: o mural é aberto — todos comentam e
+    respondem, não só o admin). Um nível de resposta (sem árvore). A
+    "Resposta da equipe" (AppFeedback.admin_reply) continua existindo como
+    resposta oficial destacada. Apagada junto com a conta (cascade)."""
+
+    __tablename__ = "app_feedback_replies"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    feedback_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("app_feedback.id"), index=True)
+    user_id: Mapped[str] = mapped_column(UUIDType, index=True)
+    comment: Mapped[str] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class ContentSuggestion(Base):
     """
     Busca na Home (pedido de Rhoney, 2026-09-03): quando o termo

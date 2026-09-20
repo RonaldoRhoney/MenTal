@@ -249,6 +249,21 @@ class ApiClient {
     return _get(_uri('/feedback'), headers: _headers);
   }
 
+  // Mural aberto (20/09/2026, decisão de Rhoney): QUALQUER usuário responde
+  // a um comentário; o autor (ou o admin) apaga a resposta.
+  Future<Map<String, dynamic>> replyToFeedback(
+      String feedbackId, String comment) async {
+    return _post(
+      _uri('/feedback/$feedbackId/replies'),
+      headers: _headers,
+      body: jsonEncode({'comment': comment}),
+    );
+  }
+
+  Future<Map<String, dynamic>> deleteFeedbackReply(String replyId) async {
+    return _delete(_uri('/feedback/replies/$replyId'), headers: _headers);
+  }
+
   Future<Map<String, dynamic>> reactToAppFeedback(
       String feedbackId, String reactionType) async {
     return _post(

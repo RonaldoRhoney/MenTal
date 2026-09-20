@@ -3511,7 +3511,7 @@ abstract class AppLocalizations {
   /// Button to reply to a feedback
   ///
   /// In pt, this message translates to:
-  /// **'Responder'**
+  /// **'Responder pela equipe'**
   String get adminFeedbackReplyButton;
 
   /// Button to edit an existing reply
@@ -3831,6 +3831,66 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Toque na palavra que corresponde — você a ouve ao tocar'**
   String get wordConstellationMeaningInstructionLabel;
+
+  /// Title of the compose card in the Feedback screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua opinião'**
+  String get feedbackComposerTitle;
+
+  /// Comments counter next to the community section header
+  ///
+  /// In pt, this message translates to:
+  /// **'{count, plural, =1{1 comentário} other{{count} comentários}}'**
+  String feedbackCommentsCount(int count);
+
+  /// Feedback wall load error
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar os comentários.'**
+  String get feedbackLoadError;
+
+  /// Retry button in Feedback wall error state
+  ///
+  /// In pt, this message translates to:
+  /// **'Tentar de novo'**
+  String get feedbackReloadButton;
+
+  /// Any user replies to a feedback comment
+  ///
+  /// In pt, this message translates to:
+  /// **'Responder'**
+  String get feedbackReplyButton;
+
+  /// Replies counter on a feedback comment
+  ///
+  /// In pt, this message translates to:
+  /// **'{count, plural, =1{1 resposta} other{{count} respostas}}'**
+  String feedbackRepliesCount(int count);
+
+  /// Reply field hint
+  ///
+  /// In pt, this message translates to:
+  /// **'Escreva uma resposta...'**
+  String get feedbackReplyHint;
+
+  /// Send reply button tooltip
+  ///
+  /// In pt, this message translates to:
+  /// **'Enviar resposta'**
+  String get feedbackReplySendButton;
+
+  /// Delete own reply tooltip
+  ///
+  /// In pt, this message translates to:
+  /// **'Apagar minha resposta'**
+  String get feedbackReplyDeleteTooltip;
+
+  /// Daily feedback limit message
+  ///
+  /// In pt, this message translates to:
+  /// **'Você atingiu o limite de comentários de hoje. Volte amanhã!'**
+  String get feedbackDailyLimitReached;
 }
 
 class _AppLocalizationsDelegate

@@ -2097,6 +2097,8 @@ def complete_word_constellation(
     # invisível no nível/perfil mesmo contando pro território.
     profile = db.get(models.Profile, user_id)
     if profile is not None:
+        # Achado B5: mesma trava FOR UPDATE do resto das escritas de XP.
+        db.refresh(profile, with_for_update=True)
         profile.xp_total += xp_awarded
         profile.level = scoring.level_from_xp(profile.xp_total)
     apply_xp_to_territory(db, user_id, challenge.territory_id, xp_awarded)

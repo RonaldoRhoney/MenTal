@@ -2784,7 +2784,7 @@
   "@adminFeedbackEmptyMessage": {
     "description": "Empty state for the public feedback wall"
   },
-  "adminFeedbackReplyButton": "Responder",
+  "adminFeedbackReplyButton": "Responder pela equipe",
   "@adminFeedbackReplyButton": {
     "description": "Button to reply to a feedback"
   },
@@ -3054,5 +3054,55 @@
   "wordConstellationMeaningInstructionLabel": "Toque na palavra que corresponde — você a ouve ao tocar",
   "@wordConstellationMeaningInstructionLabel": {
     "description": "Instruction at top of the word constellation 'meaning' round (options are words with audio)"
+  },
+  "feedbackComposerTitle": "Sua opinião",
+  "@feedbackComposerTitle": {
+    "description": "Title of the compose card in the Feedback screen"
+  },
+  "feedbackCommentsCount": "{count, plural, =1{1 comentário} other{{count} comentários}}",
+  "@feedbackCommentsCount": {
+    "description": "Comments counter next to the community section header",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "feedbackLoadError": "Não foi possível carregar os comentários.",
+  "@feedbackLoadError": {
+    "description": "Feedback wall load error"
+  },
+  "feedbackReloadButton": "Tentar de novo",
+  "@feedbackReloadButton": {
+    "description": "Retry button in Feedback wall error state"
+  },
+  "feedbackReplyButton": "Responder",
+  "@feedbackReplyButton": {
+    "description": "Any user replies to a feedback comment"
+  },
+  "feedbackRepliesCount": "{count, plural, =1{1 resposta} other{{count} respostas}}",
+  "@feedbackRepliesCount": {
+    "description": "Replies counter on a feedback comment",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "feedbackReplyHint": "Escreva uma resposta...",
+  "@feedbackReplyHint": {
+    "description": "Reply field hint"
+  },
+  "feedbackReplySendButton": "Enviar resposta",
+  "@feedbackReplySendButton": {
+    "description": "Send reply button tooltip"
+  },
+  "feedbackReplyDeleteTooltip": "Apagar minha resposta",
+  "@feedbackReplyDeleteTooltip": {
+    "description": "Delete own reply tooltip"
+  },
+  "feedbackDailyLimitReached": "Você atingiu o limite de comentários de hoje. Volte amanhã!",
+  "@feedbackDailyLimitReached": {
+    "description": "Daily feedback limit message"
   }
 }

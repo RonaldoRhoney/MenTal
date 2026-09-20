@@ -567,6 +567,9 @@ def submit_answer(
         xp_boost_applied = answer_xp.boost_applied
         xp_final = answer_xp.profile_xp
         attempt.xp_awarded = xp_final
+        # Achado M6: o bônus gravado nunca passa do XP realmente pago (o replay
+        # idempotente devolve este valor).
+        attempt.speed_bonus_xp = min(attempt.speed_bonus_xp or 0, xp_final)
         profile.xp_total += xp_final
         profile.level = scoring.level_from_xp(profile.xp_total)
         db.commit()
@@ -688,6 +691,34 @@ def submit_answer(
 # automática ao final de todo Desafio do Mundo dos Idiomas. Só
 # territórios em config.IDIOMA_TERRITORY_IDS (registro explícito, nunca
 # inferido) — Libras e o resto do app não têm essa etapa.
+def _require_answered_for_constellation(db: Session, user_id: str, challenge: models.Challenge) -> None:
+    """Achado C1 (auditoria 20/09/2026): a rodada devolve a resposta certa do
+    Desafio, então só existe DEPOIS de o usuário ter respondido esse Desafio
+    (mesmo padrão do reattempt) e com o território liberado."""
+    services.enforce_rate_limit(
+        "word_constellation", user_id, max_calls=config.RATE_LIMIT_WORD_CONSTELLATION[0], window_seconds=config.RATE_LIMIT_WORD_CONSTELLATION[1]
+    )
+    territory = db.get(models.Territory, challenge.territory_id)
+    if territory is None or not services.is_territory_unlocked(db, user_id, territory):
+        raise HTTPException(status_code=403, detail={"error": {"code": "TERRITORY_LOCKED", "message": "Requires active subscription"}})
+    min_created_at = utcnow() - timedelta(hours=config.WORD_CONSTELLATION_MAX_AGE_HOURS)
+    answered = db.execute(
+        select(models.Attempt.attempt_id)
+        .where(
+            models.Attempt.user_id == user_id,
+            models.Attempt.challenge_id == challenge.id,
+            models.Attempt.is_correct.isnot(None),
+            models.Attempt.created_at >= min_created_at,
+        )
+        .limit(1)
+    ).scalar_one_or_none()
+    if answered is None:
+        raise HTTPException(
+            status_code=403,
+            detail={"error": {"code": "CONSTELLATION_NOT_ALLOWED", "message": "A Constelação de Palavras vem depois de responder o Desafio."}},
+        )
+
+
 @router.get("/challenges/{challenge_id}/word-constellation", response_model=schemas.WordConstellationRoundOut)
 def get_word_constellation(
     challenge_id: str,
@@ -702,6 +733,7 @@ def get_word_constellation(
             status_code=404,
             detail={"error": {"code": "NOT_IDIOMA_TERRITORY", "message": "Constelação de Palavras só existe no Mundo dos Idiomas."}},
         )
+    _require_answered_for_constellation(db, user_id, challenge)
     try:
         round_data = services.generate_word_constellation_round(db, challenge)
     except services.WordConstellationError as e:
@@ -724,6 +756,7 @@ def complete_word_constellation(
             status_code=404,
             detail={"error": {"code": "NOT_IDIOMA_TERRITORY", "message": "Constelação de Palavras só existe no Mundo dos Idiomas."}},
         )
+    _require_answered_for_constellation(db, user_id, challenge)
     correct, xp_awarded = services.complete_word_constellation(
         db, user_id, challenge, body.submitted_order, body.submitted_meaning
     )

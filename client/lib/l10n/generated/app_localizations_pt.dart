@@ -2021,7 +2021,7 @@ class AppLocalizationsPt extends AppLocalizations {
       'Nenhum feedback ainda. Seja o primeiro a comentar!';
 
   @override
-  String get adminFeedbackReplyButton => 'Responder';
+  String get adminFeedbackReplyButton => 'Responder pela equipe';
 
   @override
   String get adminFeedbackEditReplyButton => 'Editar resposta';
@@ -2205,4 +2205,51 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get wordConstellationMeaningInstructionLabel =>
       'Toque na palavra que corresponde — você a ouve ao tocar';
+
+  @override
+  String get feedbackComposerTitle => 'Sua opinião';
+
+  @override
+  String feedbackCommentsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count comentários',
+      one: '1 comentário',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get feedbackLoadError => 'Não foi possível carregar os comentários.';
+
+  @override
+  String get feedbackReloadButton => 'Tentar de novo';
+
+  @override
+  String get feedbackReplyButton => 'Responder';
+
+  @override
+  String feedbackRepliesCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count respostas',
+      one: '1 resposta',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get feedbackReplyHint => 'Escreva uma resposta...';
+
+  @override
+  String get feedbackReplySendButton => 'Enviar resposta';
+
+  @override
+  String get feedbackReplyDeleteTooltip => 'Apagar minha resposta';
+
+  @override
+  String get feedbackDailyLimitReached =>
+      'Você atingiu o limite de comentários de hoje. Volte amanhã!';
 }

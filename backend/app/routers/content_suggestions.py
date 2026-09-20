@@ -11,7 +11,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import models, schemas, services
+from .. import config, models, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 
@@ -24,6 +24,10 @@ def submit_content_suggestion(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    # Achado M1 (auditoria 20/09/2026): escrita de texto livre sem freio.
+    services.enforce_rate_limit(
+        "content_suggestion", user_id, max_calls=config.RATE_LIMIT_FEEDBACK_POST[0], window_seconds=config.RATE_LIMIT_FEEDBACK_POST[1]
+    )
     query_text = body.query_text.strip()
     if not query_text:
         raise HTTPException(status_code=422, detail={"error": {"code": "EMPTY_QUERY", "message": "query_text cannot be blank"}})

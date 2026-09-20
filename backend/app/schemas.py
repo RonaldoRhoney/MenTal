@@ -1,7 +1,7 @@
 from datetime import date, datetime
-from typing import Literal
+from typing import Annotated, Literal
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, StringConstraints, field_validator
 
 from . import config
 
@@ -61,6 +61,22 @@ class AppFeedbackResponse(BaseModel):
     ok: bool = True
 
 
+class AppFeedbackReplyRequest(BaseModel):
+    """Resposta de qualquer usuário a um comentário do mural."""
+
+    comment: str = Field(min_length=1, max_length=1000)
+
+
+class PublicAppFeedbackReply(BaseModel):
+    id: str
+    user_id: str
+    user_nickname: str
+    user_real_name: str | None = None
+    comment: str
+    created_at: datetime
+    is_mine: bool = False
+
+
 class ReplyAppFeedbackRequest(BaseModel):
     reply: str = Field(min_length=1, max_length=2000)
 
@@ -95,6 +111,8 @@ class PublicAppFeedbackItem(BaseModel):
     like_count: int = 0
     love_count: int = 0
     my_reactions: list[str] = []
+    # Respostas de qualquer usuário (mais antigas primeiro).
+    replies: list[PublicAppFeedbackReply] = []
 
 
 class PublicAppFeedbackListResponse(BaseModel):
@@ -197,8 +215,9 @@ class WordConstellationRoundOut(BaseModel):
 
 
 class WordConstellationCompleteRequest(BaseModel):
-    submitted_order: list[str] | None = None
-    submitted_meaning: str | None = None
+    # Achado B4 (auditoria 20/09/2026): entrada com teto, como o resto da API.
+    submitted_order: list[Annotated[str, StringConstraints(max_length=100)]] | None = Field(default=None, max_length=30)
+    submitted_meaning: str | None = Field(default=None, max_length=100)
 
 
 class WordConstellationCompleteResponse(BaseModel):
