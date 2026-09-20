@@ -3112,5 +3112,13 @@
   "loadingGeneric": "Carregando...",
   "@loadingGeneric": {
     "description": "Generic loading label for non-challenge screens (Progresso, Conquistas, Estatísticas, Ranking)"
+  },
+  "feedbackReplyDeleteConfirmTitle": "Apagar esta resposta?",
+  "@feedbackReplyDeleteConfirmTitle": {
+    "description": "Confirm dialog title before deleting a reply"
+  },
+  "feedbackReplyDeleteConfirmButton": "Apagar",
+  "@feedbackReplyDeleteConfirmButton": {
+    "description": "Confirm delete button"
   }
 }

@@ -2258,4 +2258,10 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get loadingGeneric => 'Carregando...';
+
+  @override
+  String get feedbackReplyDeleteConfirmTitle => 'Apagar esta resposta?';
+
+  @override
+  String get feedbackReplyDeleteConfirmButton => 'Apagar';
 }

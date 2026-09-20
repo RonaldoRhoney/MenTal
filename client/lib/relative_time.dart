@@ -1,3 +1,4 @@
+import 'brasilia_time.dart';
 import 'l10n/generated/app_localizations.dart';
 
 /// "há 2 dias", "há 5 min"… a partir de um instante UTC vindo do servidor
@@ -5,7 +6,7 @@ import 'l10n/generated/app_localizations.dart';
 /// Feed de atividade (feedTime*).
 String formatRelativeTime(AppLocalizations l10n, String isoUtc,
     {DateTime? now}) {
-  final created = DateTime.parse(isoUtc.endsWith('Z') ? isoUtc : '${isoUtc}Z');
+  final created = parseServerUtc(isoUtc);
   final diff = (now ?? DateTime.now().toUtc()).difference(created);
   if (diff.inMinutes < 1) return l10n.feedTimeJustNow;
   if (diff.inHours < 1) return l10n.feedTimeMinutesAgo(diff.inMinutes);

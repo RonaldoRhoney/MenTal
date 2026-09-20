@@ -233,5 +233,5 @@ def test_reward_claims_referencia_o_usuario_com_cascade_na_migration():
     """Achado A1: LGPD — excluir a conta apaga o histórico de recompensas."""
     import pathlib
 
-    sql = pathlib.Path("migrations/082_reward_claims_e_badges_streak.sql").read_text(encoding="utf-8")
+    sql = (pathlib.Path(__file__).resolve().parents[1] / "migrations" / "082_reward_claims_e_badges_streak.sql").read_text(encoding="utf-8")
     assert "references auth.users(id) on delete cascade" in sql

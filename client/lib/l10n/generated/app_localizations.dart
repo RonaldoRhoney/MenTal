@@ -3903,6 +3903,18 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Carregando...'**
   String get loadingGeneric;
+
+  /// Confirm dialog title before deleting a reply
+  ///
+  /// In pt, this message translates to:
+  /// **'Apagar esta resposta?'**
+  String get feedbackReplyDeleteConfirmTitle;
+
+  /// Confirm delete button
+  ///
+  /// In pt, this message translates to:
+  /// **'Apagar'**
+  String get feedbackReplyDeleteConfirmButton;
 }
 
 class _AppLocalizationsDelegate

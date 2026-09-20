@@ -193,6 +193,11 @@ void main() {
 
     await tester.tap(find.byKey(const Key('reply_delete_minha')));
     await tester.pumpAndSettle();
+    expect(client.deletedReplyId,
+        isNull); // pede confirmação antes (ação destrutiva)
+    expect(find.text('Apagar esta resposta?'), findsOneWidget);
+    await tester.tap(find.text('Apagar'));
+    await tester.pumpAndSettle();
     expect(client.deletedReplyId, 'minha');
 
     final admin = _FakeApiClient(isAdmin: true)..feed = feed;

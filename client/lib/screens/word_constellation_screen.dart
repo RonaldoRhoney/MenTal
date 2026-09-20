@@ -248,8 +248,24 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
   Widget _buildBody(AppLocalizations l10n) {
     if (_loading) return const Center(child: CircularProgressIndicator());
     if (_error != null) {
+      // Nunca um beco sem saída (auditoria 20/09/2026): a Constelação é
+      // etapa complementar — o erro sempre oferece continuar.
       return Center(
-          child: Text(_error!, style: TextStyle(color: AppColors.error)));
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(_error!,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: AppColors.error)),
+            const SizedBox(height: 16),
+            FilledButton(
+              key: const Key('constellation_error_continue'),
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text(l10n.wordConstellationContinueButton),
+            ),
+          ],
+        ),
+      );
     }
     final round = _round;
     if (round == null) return const SizedBox.shrink();

@@ -86,7 +86,10 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
         _loadFeed();
       }
     } on ApiException catch (e) {
-      if (mounted) setState(() => _error = e.message);
+      if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
+        setState(() => _error = e.code == 'DAILY_FEEDBACK_LIMIT' ? l10n.feedbackDailyLimitReached : e.message);
+      }
     } finally {
       if (mounted) setState(() => _sending = false);
     }
@@ -113,6 +116,19 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
   }
 
   Future<void> _deleteReply(String replyId) async {
+    final l10n = AppLocalizations.of(context)!;
+    // Ação destrutiva: pede confirmação antes de apagar.
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Text(l10n.feedbackReplyDeleteConfirmTitle),
+        actions: [
+          TextButton(onPressed: () => Navigator.of(dialogContext).pop(false), child: Text(l10n.settingsDeleteAccountCancelButton)),
+          FilledButton(onPressed: () => Navigator.of(dialogContext).pop(true), child: Text(l10n.feedbackReplyDeleteConfirmButton)),
+        ],
+      ),
+    );
+    if (confirmed != true || !mounted) return;
     try {
       await widget.client.deleteFeedbackReply(replyId);
       if (mounted) _loadFeed();

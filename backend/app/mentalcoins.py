@@ -34,25 +34,33 @@ class MentalCoinsError(Exception):
         self.message = message
 
 
-def get_or_create_balance(db: Session, user_id: str) -> models.MentalCoinsBalance:
+def get_or_create_balance(db: Session, user_id: str, commit: bool = True) -> models.MentalCoinsBalance:
     balance = db.get(models.MentalCoinsBalance, user_id)
     if balance is None:
         balance = models.MentalCoinsBalance(user_id=user_id, balance=0)
         db.add(balance)
-        db.commit()
-        db.refresh(balance)
+        if commit:
+            db.commit()
+            db.refresh(balance)
+        else:
+            db.flush()  # dentro de uma transação maior (apuração semanal): não comita
     return balance
 
 
-def credit(db: Session, user_id: str, amount: int, reason: str) -> None:
-    balance = get_or_create_balance(db, user_id)
+def credit(db: Session, user_id: str, amount: int, reason: str, commit: bool = True) -> None:
+    """`commit=False` deixa o crédito dentro de uma transação maior — usado pela
+    apuração semanal, que precisa ser TUDO-OU-NADA (achado C4 do agente de
+    testes, 20/09/2026: um commit por crédito marcava o ciclo como apurado
+    com pagamento parcial se algo falhasse no meio)."""
+    balance = get_or_create_balance(db, user_id, commit=commit)
     # Achado M1 (auditoria 20/09/2026): trava a linha antes de ler-modificar-gravar
     # (dois créditos/resgates concorrentes não podem sobrescrever um ao outro).
     db.refresh(balance, with_for_update=True)
     balance.balance += amount
     balance.updated_at = utcnow()
     db.add(models.MentalCoinsTransaction(user_id=user_id, amount=amount, reason=reason))
-    db.commit()
+    if commit:
+        db.commit()
 
 
 def list_transactions(db: Session, user_id: str, limit: int = 30) -> list[models.MentalCoinsTransaction]:
@@ -123,6 +131,16 @@ def run_weekly_apuration(db: Session, cycle_start: date, cycle_end: date) -> dic
         db.rollback()
         return {"already_processed": True, "cycle_start": cycle_start.isoformat(), "entries_created": 0}
 
+    try:
+        return _apurar_ciclo(db, cycle_start, cycle_end)
+    except Exception:
+        # Tudo-ou-nada (achado C4): falha no meio desfaz créditos E o marcador —
+        # o job de recuperação tenta o ciclo de novo, nada fica pago pela metade.
+        db.rollback()
+        raise
+
+
+def _apurar_ciclo(db: Session, cycle_start: date, cycle_end: date) -> dict:
     entries_created = 0
 
     # §3.1 — ranking diário de XP, um top-3 por cada um dos 7 dias do ciclo.
@@ -139,7 +157,10 @@ def run_weekly_apuration(db: Session, cycle_start: date, cycle_end: date) -> dic
             select(models.Attempt.user_id, xp_expr.label("xp"))
             .where(models.Attempt.created_at >= day, models.Attempt.created_at < next_day)
             .group_by(models.Attempt.user_id)
-            .order_by(xp_expr.desc())
+            # Desempate determinístico (achado A1 do agente de testes): com o teto
+            # de 150 XP/dia vários jogadores empatam — vence quem terminou de
+            # jogar mais cedo no dia; depois, user_id (estável).
+            .order_by(xp_expr.desc(), func.max(models.Attempt.created_at).asc(), models.Attempt.user_id.asc())
             .limit(3)
         ).all()
         for rank, row in enumerate(rows, start=1):
@@ -147,7 +168,7 @@ def run_weekly_apuration(db: Session, cycle_start: date, cycle_end: date) -> dic
             if not xp or xp <= 0:
                 continue
             reward = config.MENTALCOINS_XP_DAILY_REWARDS[rank - 1]
-            credit(db, user_id, reward, f"Top {rank} de XP do dia {day.isoformat()}")
+            credit(db, user_id, reward, f"Top {rank} de XP do dia {day.isoformat()}", commit=False)
             db.add(
                 models.MentalCoinsHallOfFameEntry(
                     cycle_start=cycle_start,
@@ -177,7 +198,7 @@ def run_weekly_apuration(db: Session, cycle_start: date, cycle_end: date) -> dic
     ).first()
     if week_row and week_row[1]:
         user_id, total_steps = week_row[0], week_row[1]
-        credit(db, user_id, config.MENTALCOINS_STEPS_WEEK_CHAMPION_REWARD, "Campeão da semana em passos")
+        credit(db, user_id, config.MENTALCOINS_STEPS_WEEK_CHAMPION_REWARD, "Campeão da semana em passos", commit=False)
         db.add(
             models.MentalCoinsHallOfFameEntry(
                 cycle_start=cycle_start,
@@ -205,7 +226,7 @@ def run_weekly_apuration(db: Session, cycle_start: date, cycle_end: date) -> dic
     ).first()
     if day_row and day_row[2]:
         user_id, cycle_start_at, steps = day_row[0], day_row[1], day_row[2]
-        credit(db, user_id, config.MENTALCOINS_STEPS_DAY_RECORD_REWARD, "Recordista do dia em passos")
+        credit(db, user_id, config.MENTALCOINS_STEPS_DAY_RECORD_REWARD, "Recordista do dia em passos", commit=False)
         db.add(
             models.MentalCoinsHallOfFameEntry(
                 cycle_start=cycle_start,

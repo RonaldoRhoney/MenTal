@@ -101,7 +101,59 @@ Future<void> _pump(WidgetTester tester, ApiClient client,
   await tester.pumpAndSettle();
 }
 
+class _ErrorFakeApiClient extends ApiClient {
+  _ErrorFakeApiClient(this.code)
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+
+  final String code;
+
+  @override
+  Future<Map<String, dynamic>> wordConstellationRound(
+          String challengeId) async =>
+      throw ApiException(statusCode: 403, code: code, message: 'Erro de teste');
+}
+
 void main() {
+  testWidgets(
+      'MEANING_NOT_EXTRACTABLE fecha a tela sozinha, sem mostrar erro (etapa é só pulada)',
+      (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: Builder(
+        builder: (context) => Scaffold(
+          body: TextButton(
+            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => WordConstellationScreen(
+                  client: _ErrorFakeApiClient('MEANING_NOT_EXTRACTABLE'),
+                  challengeId: 'x',
+                  territoryId: 'ingles_basico'),
+            )),
+            child: const Text('abrir'),
+          ),
+        ),
+      ),
+    ));
+    await tester.tap(find.text('abrir'));
+    await tester.pumpAndSettle();
+    expect(find.text('abrir'), findsOneWidget); // voltou pra tela anterior
+    expect(find.text('Erro de teste'), findsNothing);
+  });
+
+  testWidgets(
+      'CONSTELLATION_NOT_ALLOWED mostra o erro com botão Continuar (sem beco sem saída)',
+      (tester) async {
+    await _pump(tester, _ErrorFakeApiClient('CONSTELLATION_NOT_ALLOWED'));
+    expect(find.text('Erro de teste'), findsOneWidget);
+    expect(
+        find.byKey(const Key('constellation_error_continue')), findsOneWidget);
+  });
+
   // Tocar numa opção agora fala a palavra antes de responder — no teste
   // não há player de áudio real (mesma cautela de challenge_screen_tts_test).
   setUpAll(() => TtsService.disabled = true);
