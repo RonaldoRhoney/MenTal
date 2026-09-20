@@ -13,7 +13,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import models, schemas, services
+from .. import models, rewards, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
@@ -33,6 +33,7 @@ def submit_app_feedback(
 
     db.add(models.AppFeedback(user_id=user_id, comment=comment))
     db.commit()
+    rewards.safely(rewards.on_feedback, db, user_id, comment, utcnow().date())
     return schemas.AppFeedbackResponse()
 
 

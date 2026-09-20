@@ -1,5 +1,7 @@
 import uuid
 
+from app import config
+
 from .conftest import auth_header
 
 
@@ -32,7 +34,9 @@ def test_full_core_loop_correct_answer(client):
     assert "explanation" in result
 
     progress = client.get("/progress", headers=headers).json()
-    assert progress["xp_total"] == 0
+    # Fase 2 (4.1): a 1ª abertura do dia já paga o XP de login — o que
+    # este teste prova é que a resposta ERRADA não somou nada além disso.
+    assert progress["xp_total"] == config.LOGIN_DAILY_XP
 
 
 def test_correct_answer_awards_xp_and_updates_territory_progress(client):
@@ -60,7 +64,7 @@ def test_correct_answer_awards_xp_and_updates_territory_progress(client):
     assert result["xp_awarded"] > 0
 
     progress = client.get("/progress", headers=headers).json()
-    assert progress["xp_total"] == result["xp_awarded"]
+    assert progress["xp_total"] == result["xp_awarded"] + config.LOGIN_DAILY_XP  # + XP do login diário (Fase 2)
     territory = next(t for t in progress["territories"] if t["territory_id"] == "numeros")
     assert territory["xp_in_territory"] == result["xp_awarded"]
 

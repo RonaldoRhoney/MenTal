@@ -540,3 +540,47 @@ MENTALCOINS_STEPS_DAY_RECORD_REWARD = 10
 # Rhoney, nunca automática).
 APP_LATEST_VERSION = os.environ.get("APP_LATEST_VERSION", "0.3.0")
 APP_MIN_REQUIRED_VERSION = os.environ.get("APP_MIN_REQUIRED_VERSION", "0.3.0")
+
+# REGRA_OFICIAL_GAMIFICACAO_MENTAL.md — Fase 2 (19/09/2026, aprovada por
+# Rhoney): recompensas novas. Todas passam por rewards.py (claim único por
+# período em mental.reward_claims — nunca pagam duas vezes).
+#
+# 4.1 Login diário: +1 XP e +0,5 MentalCoin. O saldo é sempre inteiro,
+# então 0,5 vira "1 moeda a cada 2 logins" (média exata, decisão de
+# Rhoney — sem migração de schema pra decimal).
+LOGIN_DAILY_XP = 1
+LOGIN_COIN_EVERY_N_LOGINS = 2
+LOGIN_COIN_AMOUNT = 1
+# 5 — marcos do streak geral: dias -> (tipo, valor). 30 e 100 dias também
+# dão distintivo (badges streak_30/streak_100, migrations/082).
+STREAK_MILESTONE_REWARDS = {
+    7: ("xp", 15),
+    15: ("xp", 30),
+    30: ("coins", 75),
+    100: ("coins", 250),
+}
+# 3.2 marco de amigos confirmados (5, 10, 15...): +1 XP, único por marco.
+FRIEND_MILESTONE_EVERY = 5
+FRIEND_MILESTONE_XP = 1
+# 3.3 Torcida a AMIGO confirmado: +1 XP, 1x por dia (só amigo — Torcida
+# está aberta a qualquer perfil, recompensar estranho viraria farm).
+TORCIDA_FRIEND_DAILY_XP = 1
+# 4.3 feedback: +5 XP, 1x por semana ISO; texto mínimo pra não pagar por
+# "a"/"." repetido.
+FEEDBACK_WEEKLY_XP = 5
+FEEDBACK_REWARD_MIN_CHARS = 10
+# 3.1 interação diária com amigos (Torcida, Batalha ou convite de
+# Movimento a amigo confirmado) por 7 dias seguidos: +10 XP.
+FRIEND_INTERACTION_STREAK_DAYS = 7
+FRIEND_INTERACTION_STREAK_XP = 10
+# 2.2 Movimento: dia ativo = ciclo com >= 2.000 passos (mesmo piso de
+# MOVEMENT_MIN_DAILY_GOAL_STEPS); 7 dias ativos seguidos: +10 MentalCoins.
+MOVEMENT_ACTIVE_DAY_MIN_STEPS = 2000
+MOVEMENT_ACTIVE_STREAK_DAYS = 7
+MOVEMENT_ACTIVE_STREAK_COINS = 10
+# 1.3/1.4 lote de perguntas (o "Desafio inteiro"): +3 XP ao terminar,
+# +5 XP extra se todas certas e sem dica (mínimo de respostas no lote
+# pra "perfeito" não valer por um lote trivial).
+BATCH_COMPLETE_BONUS_XP = 3
+BATCH_PERFECT_BONUS_XP = 5
+BATCH_PERFECT_MIN_ANSWERS = 2

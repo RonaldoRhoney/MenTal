@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import config, mentalcoins, models, schemas, scoring, services
+from .. import config, mentalcoins, models, rewards, schemas, scoring, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
@@ -585,6 +585,16 @@ def submit_answer(
     streak_count_before = services.get_or_create_streak(db, user_id).current_streak
     streak = services.register_play_for_streak(db, user_id, today)
     streak_just_extended = streak.current_streak > streak_count_before
+
+    # Fase 2 (REGRA_OFICIAL_GAMIFICACAO_MENTAL.md 5, 1.3, 1.4) — marcos do
+    # streak geral e bônus de lote. Antes do cálculo de coin_milestone
+    # abaixo, pra o XP/moedas novos já entrarem no sinal de celebração.
+    if streak_just_extended:
+        rewards.safely(rewards.on_streak_extended, db, profile, streak.current_streak, today)
+    rewards.safely(rewards.on_batch_completed, db, profile, attempt, challenge)
+    # Bônus de streak/lote podem cruzar a fronteira de nível — o sinal de
+    # celebração precisa refletir o XP FINAL desta resposta.
+    level_up = profile.level > level_before
 
     # V2 item 1 — Badges/Conquistas: avalia depois que XP/território/streak
     # já estão commitados, para os avaliadores lerem o estado final desta

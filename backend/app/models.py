@@ -454,6 +454,25 @@ class LearningPauseServe(Base):
     served_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class RewardClaim(Base):
+    """
+    REGRA_OFICIAL_GAMIFICACAO_MENTAL.md Fase 2 (19/09/2026) — anti-farm
+    genérico das recompensas novas (login diário, marco de amigos,
+    Torcida, feedback semanal, marcos de streak, sequências sociais e de
+    Movimento, bônus de lote). Uma linha = "esta recompensa, neste
+    período, já foi paga a este usuário". `claim_key` carrega o período
+    (ex.: "login:2026-09-19", "friends:10", "feedback:2026-W38"); a PK
+    composta garante que duas requisições concorrentes nunca paguem duas
+    vezes. Nunca apagada — é o registro de que já pagou.
+    """
+
+    __tablename__ = "reward_claims"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    claim_key: Mapped[str] = mapped_column(String, primary_key=True)
+    claimed_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class WordConstellationCompletion(Base):
     """
     MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md (19/09/2026) — etapa

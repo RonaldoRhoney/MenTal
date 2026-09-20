@@ -1,5 +1,7 @@
 import uuid
 
+from app import config
+
 from .conftest import auth_header
 
 
@@ -20,7 +22,7 @@ def test_resubmitting_same_attempt_id_does_not_duplicate_xp(client):
     first = client.post(f"/challenges/{challenge['challenge_id']}/answer", json=payload, headers=headers).json()
     assert first["is_correct"] is True
     xp_after_first = client.get("/progress", headers=headers).json()["xp_total"]
-    assert xp_after_first == first["xp_awarded"]
+    assert xp_after_first == first["xp_awarded"] + config.LOGIN_DAILY_XP  # + XP do login diário (Fase 2)
 
     # Reenvio exato do mesmo attempt_id (simulando retry de rede). O
     # resultado do jogo (XP, acerto, progresso) é idêntico — mas os sinais

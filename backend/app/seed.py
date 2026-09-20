@@ -400,6 +400,16 @@ BADGES = [
         "criteria_type": "streak_days", "criteria_value": 7, "display_order": 3,
     },
     {
+        "code": "streak_30", "name": "Mês de Foco",
+        "description": "Mantenha uma sequência de 30 dias seguidos.",
+        "criteria_type": "streak_days", "criteria_value": 30, "display_order": 8,
+    },
+    {
+        "code": "streak_100", "name": "Centenário da Sequência",
+        "description": "Mantenha uma sequência de 100 dias seguidos — distintivo raro.",
+        "criteria_type": "streak_days", "criteria_value": 100, "display_order": 9,
+    },
+    {
         "code": "sharp_mind", "name": "Mente Afiada",
         "description": "Responda corretamente 50 desafios no total.",
         "criteria_type": "total_correct_answers", "criteria_value": 50, "display_order": 4,

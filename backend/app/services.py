@@ -8,7 +8,7 @@ from datetime import date, datetime, timedelta
 from sqlalchemy import delete, func, or_, select, update
 from sqlalchemy.orm import Session
 
-from . import config, mentalcoins, models, notification_copy, push, scoring, supabase_admin
+from . import config, mentalcoins, models, notification_copy, push, rewards, scoring, supabase_admin
 from .nickname import generate_anonymous_nickname
 from .timeutil import naive, utcnow
 
@@ -1398,6 +1398,7 @@ def create_battle(
     # 01/09/2026, migration 047) — nunca mais inventado pelo client.
     create_served_attempt(db, challenger_attempt_id, challenger_user_id, challenger_challenge.id)
     db.commit()
+    rewards.safely(rewards.on_friend_action, db, challenger_user_id, opponent_user_id, utcnow().date())
     db.refresh(battle)
 
     challenger_profile = db.get(models.Profile, challenger_user_id)
@@ -1473,6 +1474,11 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
         battle.opponent_response_ms = int((now - served_at).total_seconds() * 1000)
     else:
         return  # este lado já tinha respondido (reenvio idempotente do attempt) — não reprocessa
+
+    # Fase 2 (3.1) — responder a Batalha de um amigo conta pra sequência
+    # social de 7 dias (Batalha só existe entre amigos confirmados).
+    other_user_id = battle.opponent_user_id if battle.challenger_user_id == user_id else battle.challenger_user_id
+    rewards.safely(rewards.on_friend_action, db, user_id, other_user_id, now.date())
 
     # BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md §2.2 — "notificação push
     # explícita quando o adversário joga sua rodada, convidando o
@@ -1764,6 +1770,9 @@ def send_torcida(db: Session, from_user_id: str, to_user_id: str, reaction_type:
 
     db.add(models.TorcidaReaction(from_user_id=from_user_id, to_user_id=to_user_id, reaction_type=reaction_type))
     db.commit()
+    # Fase 2 (REGRA_OFICIAL_GAMIFICACAO_MENTAL.md 3.3/3.1) — +1 XP/dia por
+    # Torcida a amigo confirmado e conta pra sequência social de 7 dias.
+    rewards.safely(rewards.on_torcida_sent, db, from_user_id, to_user_id, utcnow().date())
 
     from_profile = db.get(models.Profile, from_user_id)
     emoji = notification_copy.TORCIDA_EMOJI_BY_TYPE.get(reaction_type, "🎉")
@@ -1814,6 +1823,7 @@ def send_movement_invite(db: Session, from_user_id: str, to_user_id: str) -> int
 
     db.add(models.MovementInvite(from_user_id=from_user_id, to_user_id=to_user_id))
     db.commit()
+    rewards.safely(rewards.on_friend_action, db, from_user_id, to_user_id, utcnow().date())
 
     from_profile = db.get(models.Profile, from_user_id)
     body = notification_copy.MOVEMENT_INVITE_RECEIVED_BODY_TEMPLATE.format(

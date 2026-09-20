@@ -38,6 +38,9 @@ def test_badges_catalog_starts_unearned(client):
         "first_conquest", "collector", "iron_streak", "sharp_mind", "no_help_needed",
         # V2 item 11 — badges por mundo (V2_KICKOFF.md §6A).
         "world_master_linguagem", "world_master_mente_logica",
+        # REGRA_OFICIAL_GAMIFICACAO_MENTAL.md Fase 2 — distintivos dos
+        # marcos de streak de 30 e 100 dias (migration 082).
+        "streak_30", "streak_100",
     }
     assert all(b["earned"] is False and b["earned_at"] is None for b in badges)
 

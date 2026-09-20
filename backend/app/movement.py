@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from . import config, mentalcoins, models, scoring, services
+from . import config, mentalcoins, models, rewards, scoring, services
 from .timeutil import naive, utcnow
 
 # MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §4 — o ciclo
@@ -288,6 +288,10 @@ def collect_steps(
 
     db.commit()
     db.refresh(cycle)
+    # Fase 2 (2.2): o ciclo acabou de virar "dia ativo" (cruzou o piso de
+    # passos) — alimenta a sequência de 7 dias ativos (+10 MentalCoins).
+    if previous_total < config.MOVEMENT_ACTIVE_DAY_MIN_STEPS <= cycle.steps_collected:
+        rewards.safely(rewards.on_movement_active_day, db, user_id, naive(cycle.cycle_start_at).date())
     return cycle, xp_delta, level_up, (profile.level if level_up else None), goal_reached, checkpoints_reached, mentalcoins_awarded
 
 

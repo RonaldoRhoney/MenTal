@@ -1,6 +1,6 @@
 # MENTAL — Regra Oficial de Gamificação
 
-**Status:** OFICIAL como fonte da verdade de REGRA (documento aprovado). **Fase 1 IMPLEMENTADA (19/09/2026)** — recalibração dos valores de ações que já existiam no código (itens 1.2, 1.5, 2.1, 3.4, 4.2). Fases 2 (mecânicas novas de recompensa) e 3 (teto diário de XP + loja) aguardam Rhoney decidir a próxima prioridade.
+**Status:** OFICIAL como fonte da verdade de REGRA (documento aprovado). **Fase 1 IMPLEMENTADA (19/09/2026)** — recalibração dos valores de ações que já existiam (itens 1.2, 1.5, 2.1, 3.4, 4.2). **Fase 2 IMPLEMENTADA (19/09/2026, aguardando revisão de segurança + deploy)** — recompensas novas, ver seção abaixo. **Fase 3 (teto diário de XP + reparo de streak + boost de XP) ainda NÃO iniciada.**
 
 ## Fase 1 — recalibração de valores (19/09/2026, decisões confirmadas com Rhoney)
 
@@ -12,7 +12,31 @@
 - Testes: suíte completa do backend (441/441) — 7 testes que assumiam a escala antiga de XP (loops com teto de tentativas insuficiente pra nova escala menor) foram ajustados, nunca a regra de negócio em si.
 - **Achado a reportar**: com a nova escala, conquistar 1 território sozinho (200 XP) agora exige ~23 respostas corretas mesmo com a dificuldade adaptativa no teto máximo — perto do limite diário gratuito de 24 desafios/dia (`DAILY_FREE_CHALLENGE_LIMIT`). Vale considerar se esse teto também precisa de revisão numa fase futura, já que a Fase 1 não alterou `DAILY_FREE_CHALLENGE_LIMIT`.
 
-## Pendente — Fases 2 e 3 (não implementadas, aguardando Rhoney)
+## Fase 2 — recompensas novas (19/09/2026, decisões confirmadas com Rhoney)
+
+Decisões: meia moeda do login vira **1 moeda a cada 2 logins pagos** (saldo continua inteiro, sem migração de schema); "interação diária com amigos" = **Torcida, Batalha ou convite de Movimento a amigo confirmado**; entrega em duas fases (esta, depois a 3).
+
+Todas passam por `backend/app/rewards.py`, com anti-farm por **claim único** em `mental.reward_claims` (PK `(user_id, claim_key)`, migration `082`) — a chave carrega o período (`login:2026-09-19`, `friends:10`, `feedback:2026-W38`...). Falha numa recompensa nunca quebra o fluxo principal (`rewards.safely`).
+
+| Item | Regra | Onde dispara |
+|---|---|---|
+| 4.1 | Login diário: +1 XP; +1 moeda a cada 2º login | `GET /progress` |
+| 5 | Streak 7d +15 XP · 15d +30 XP · 30d +75 moedas + badge `streak_30` · 100d +250 moedas + badge raro `streak_100` | `POST /answer` (streak acabou de subir) |
+| 1.3 | Terminar o lote de perguntas: +3 XP | `POST /answer` (última do lote) |
+| 1.4 | Lote perfeito (todas certas, sem dica, mín. 2 respostas): +5 XP extra | idem |
+| 3.2 | A cada 5 amigos confirmados (5, 10, 15...): +1 XP, único por marco, pros dois lados | aceite de amizade |
+| 3.3 | Torcida a **amigo confirmado**: +1 XP, 1x/dia (a desconhecido não paga) | `POST /profile/{id}/torcida` |
+| 3.1 | Interação com amigo 7 dias seguidos: +10 XP (só repete numa nova sequência completa) | Torcida, criar/responder Batalha, convite de Movimento |
+| 4.3 | Feedback: +5 XP, 1x por semana ISO, texto mínimo de 10 caracteres | `POST /feedback` |
+| 2.2 | 7 dias ativos de Movimento (ciclo >= 2.000 passos): +10 moedas | `POST /movement/collect` |
+
+Interpretações registradas (não estavam no documento): um "Desafio inteiro" é o **lote de perguntas** do território/dificuldade (mesmo que dispara "Revisar erros"); "dia ativo" de Movimento = ciclo com >= 2.000 passos (`MOVEMENT_ACTIVE_DAY_MIN_STEPS`); marcos de streak reaproveitam o sistema de badges como "distintivo".
+
+Constantes em `config.py`; testes em `backend/tests/test_rewards_fase2.py` (15, cada um com o caso anti-farm). **Antes do deploy:** rodar a migration `082` e passar pelo agente `mental-security` (mexe em XP/MentalCoins).
+
+## Pendente — Fase 3 (não implementada)
+
+Teto diário de 150 XP de respostas (decisão: só o XP de perfil para; o progresso do território segue contando), reparo de streak (50 moedas) e boost de +20% de XP por 24h (80 moedas). Itens abaixo eram os pendentes originais das Fases 2 e 3:
 
 Mecânicas totalmente novas (login diário, marco de amigos, Torcida gerando XP, streak geral com distintivos, teto diário de 150 XP, loja de reparo de streak/boost de XP) — ver tabela de divergência abaixo, itens marcados 🆕. Perguntas 1, 4 e 7 do levantamento original (mapeamento de dificuldade e fórmulas, definição de "interação diária com amigos", MentalCoins fracionário) seguem em aberto pras fases que ainda não têm decisão.
 

@@ -2,9 +2,10 @@ from fastapi import APIRouter, Depends
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import config, models, schemas, services
+from .. import config, models, rewards, schemas, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
+from ..timeutil import utcnow
 
 router = APIRouter()
 
@@ -16,6 +17,9 @@ def get_progress(user_id: str = Depends(require_age_confirmed_user_id), db: Sess
     # update_last_seen, enquanto profile.last_seen_at ainda é o valor
     # antigo (é contra ele que a comparação é feita).
     services.notify_content_updated_if_needed(db, profile)
+    # Fase 2 (4.1): login diário — GET /progress é o sinal de "abri o app"; o
+    # claim por data garante 1 pagamento por dia mesmo com N chamadas.
+    rewards.safely(rewards.daily_login, db, profile, utcnow().date())
     # V2 item 8 — Notificações: GET /progress é chamado toda vez que a
     # Home carrega, então é o sinal mais confiável de "o jogador de fato
     # abriu o app agora" — usado pelo job de reengajamento pra saber há

@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import config, mentalcoins, models, schemas, services
+from .. import config, mentalcoins, models, rewards, schemas, services
 from ..auth import get_current_user_id, require_age_confirmed_user_id
 from ..db import get_db
 
@@ -145,6 +145,9 @@ def accept_friend_request(
     # Notifica quem MANDOU o pedido original (requested_by) — quem
     # aceitou (user_id, o usuário logado aqui) já sabe, foi ação dele.
     services.notify_friend_request_accepted(db, accepter_user_id=user_id, original_requester_user_id=friendship.requested_by)
+    # Fase 2 (3.2): marco de 5 amigos confirmados, pros DOIS lados.
+    rewards.safely(rewards.on_friend_added, db, user_id)
+    rewards.safely(rewards.on_friend_added, db, friendship.requested_by)
     return {"status": "accepted"}
 
 
