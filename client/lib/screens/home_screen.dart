@@ -92,7 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
   // em outra tela primeiro.
   void _openTrajectoryMap() {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => TrajectoryMapScreen(client: widget.client)),
+      MaterialPageRoute(
+          builder: (_) => TrajectoryMapScreen(client: widget.client)),
     );
   }
 
@@ -131,7 +132,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _openNotifications() async {
     await Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => NotificationsScreen(client: widget.client)),
+      MaterialPageRoute(
+          builder: (_) => NotificationsScreen(client: widget.client)),
     );
     _loadNotificationBadge();
   }
@@ -1384,7 +1386,9 @@ class _TerritoryGroup extends StatelessWidget {
           LayoutBuilder(
             builder: (context, constraints) {
               const spacing = 12.0;
-              final cardWidth = (constraints.maxWidth - spacing) / 2;
+              // Uma linha por território: "Desafio" e "Relâmpago" lado a lado
+              // dentro do próprio card (pedido de Rhoney, 19/09/2026).
+              final cardWidth = constraints.maxWidth;
               return Wrap(
                 spacing: spacing,
                 runSpacing: spacing,
@@ -1480,7 +1484,10 @@ class _SectionHeader extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(1),
               gradient: LinearGradient(
-                colors: [AppColors.gold.withValues(alpha: 0.5), Colors.transparent],
+                colors: [
+                  AppColors.gold.withValues(alpha: 0.5),
+                  Colors.transparent
+                ],
               ),
             ),
           ),
@@ -1582,77 +1589,118 @@ class _TerritoryCard extends StatelessWidget {
       );
     }
 
+    // Pedido de Rhoney (19/09/2026): "Desafio" e "Relâmpago" lado a lado,
+    // uma linha por território (como em Libras) — em vez de 2 colunas de
+    // cards empilhados, que deixava o 3º nível (Avançado) sozinho na 2ª
+    // linha e o Relâmpago longe do desafio ao qual pertence.
+    //
+    // V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md),
+    // generalizado pra todos os territórios (29/08/2026, pedido de
+    // Rhoney: "em todos os módulos tem que haver um relâmpago").
+    // Territórios em kAlwaysTimedTerritoryIds (Cores, Conhecimento,
+    // Curiosidade Relâmpago) já são SEMPRE cronometrados no backend —
+    // um segundo botão "Relâmpago" seria redundante (achado real,
+    // 2026-09-03); kNeverTimedTerritoryIds nunca têm Relâmpago.
+    final showRelampago = !kAlwaysTimedTerritoryIds.contains(territoryId) &&
+        !kNeverTimedTerritoryIds.contains(territoryId);
+    // Pedido de Rhoney (29/08/2026): o botão do desafio segue a MESMA
+    // linguagem visual do card do Mundo (fundo bg2, cantos arredondados,
+    // borda de progresso), consistente com os cards do MentalCoins.
+    final challengeCard = Material(
+      color: AppColors.bg2,
+      borderRadius: BorderRadius.circular(16),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: () async {
+          await Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => ChallengeScreen(
+                  client: client,
+                  territoryId: territoryId,
+                  territoryLabel: label),
+            ),
+          );
+          onReturned();
+        },
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: progressColor.withValues(alpha: 0.5)),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Pedido de Rhoney (29/08/2026): "Desafio X" numa linha
+              // só, nunca quebrando a palavra — FittedBox encolhe a
+              // fonte automaticamente quando o nome do território é
+              // mais longo (ex.: "Cultura Pop"), em vez de arriscar
+              // uma quebra de linha no meio da palavra.
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (isMysteryBlock) ...[
+                      Icon(Icons.auto_awesome,
+                          size: 14, color: AppColors.mystery),
+                      const SizedBox(width: 4),
+                    ],
+                    Text(
+                      l10n.newChallengeButton(label),
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: isMysteryBlock ? AppColors.mystery : null,
+                          ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+    final relampagoButton = OutlinedButton(
+      style: OutlinedButton.styleFrom(
+          side: BorderSide(color: progressColor.withValues(alpha: 0.6))),
+      onPressed: () async {
+        await Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => ChallengeScreen(
+              client: client,
+              territoryId: territoryId,
+              territoryLabel: label,
+              relampago: true,
+            ),
+          ),
+        );
+        onReturned();
+      },
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(l10n.relampagoModeLabel,
+            textAlign: TextAlign.center, maxLines: 1),
+      ),
+    );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        // Pedido de Rhoney (29/08/2026): "eles devem seguir as mesmas
-        // formatação do menu pai" — antes era um FilledButton dourado
-        // sólido, visualmente destoante do card do Mundo (fundo bg2 +
-        // borda sutil). Agora usa a MESMA linguagem visual (fundo bg2,
-        // cantos arredondados, borda com destaque suave — mais forte em
-        // dourado quando já conquistado), consistente também com os
-        // cards de recompensa do MentalCoins.
-        Material(
-          color: AppColors.bg2,
-          borderRadius: BorderRadius.circular(16),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(16),
-            onTap: () async {
-              await Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => ChallengeScreen(
-                      client: client,
-                      territoryId: territoryId,
-                      territoryLabel: label),
-                ),
-              );
-              onReturned();
-            },
-            child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: progressColor.withValues(alpha: 0.5)),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  // Pedido de Rhoney (29/08/2026): "Desafio X" numa linha
-                  // só, nunca quebrando a palavra — FittedBox encolhe a
-                  // fonte automaticamente quando o nome do território é
-                  // mais longo (ex.: "Cultura Pop"), em vez de arriscar
-                  // uma quebra de linha no meio da palavra.
-                  FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (isMysteryBlock) ...[
-                          Icon(Icons.auto_awesome,
-                              size: 14, color: AppColors.mystery),
-                          const SizedBox(width: 4),
-                        ],
-                        Text(
-                          l10n.newChallengeButton(label),
-                          textAlign: TextAlign.center,
-                          maxLines: 1,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium
-                              ?.copyWith(
-                                fontWeight: FontWeight.w600,
-                                color:
-                                    isMysteryBlock ? AppColors.mystery : null,
-                              ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+        if (showRelampago)
+          IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(flex: 3, child: challengeCard),
+                const SizedBox(width: 8),
+                Expanded(flex: 2, child: relampagoButton),
+              ],
             ),
-          ),
-        ),
+          )
+        else
+          challengeCard,
         if (detentorNickname != null) ...[
           const SizedBox(height: 4),
           Row(
@@ -1680,46 +1728,6 @@ class _TerritoryCard extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-        ],
-        // V2 item 15 — Palavras Relâmpago (PALAVRAS_RELAMPAGO.md),
-        // generalizado pra todos os territórios (29/08/2026, pedido de
-        // Rhoney: "em todos os módulos tem que haver um relâmpago") —
-        // backend já aceita mode=relampago em qualquer território
-        // (routers/challenges.py), nunca mais restrito a "palavras".
-        //
-        // Achado real (pedido de Rhoney, 2026-09-03: "busque erros...
-        // em Desafio de cores e relâmpago"): territórios em
-        // kAlwaysTimedTerritoryIds (Cores, Conhecimento, Curiosidade
-        // Relâmpago) já são SEMPRE cronometrados no backend, com ou sem
-        // mode=relampago — mostrar um segundo botão "Relâmpago" ao lado
-        // do botão normal é redundante e confuso, já que os dois abrem
-        // exatamente o mesmo formato (a única diferença real, um piso
-        // de dificuldade mínima, é invisível pro jogador).
-        if (!kAlwaysTimedTerritoryIds.contains(territoryId) &&
-            !kNeverTimedTerritoryIds.contains(territoryId)) ...[
-          const SizedBox(height: 8),
-          OutlinedButton(
-            style: OutlinedButton.styleFrom(
-                side: BorderSide(color: progressColor.withValues(alpha: 0.6))),
-            onPressed: () async {
-              await Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => ChallengeScreen(
-                    client: client,
-                    territoryId: territoryId,
-                    territoryLabel: label,
-                    relampago: true,
-                  ),
-                ),
-              );
-              onReturned();
-            },
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(l10n.relampagoModeLabel,
-                  textAlign: TextAlign.center, maxLines: 1),
-            ),
           ),
         ],
       ],
@@ -1765,7 +1773,9 @@ class _TrajectoryMapLaunchButton extends StatelessWidget {
                 alignment: Alignment.center,
                 clipBehavior: Clip.none,
                 children: [
-                  CustomPaint(size: const Size(40, 40), painter: _MiniRingPainter(color: AppColors.gold)),
+                  CustomPaint(
+                      size: const Size(40, 40),
+                      painter: _MiniRingPainter(color: AppColors.gold)),
                   Container(
                     width: 30,
                     height: 30,
@@ -1789,7 +1799,10 @@ class _TrajectoryMapLaunchButton extends StatelessWidget {
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: AppColors.bone, fontWeight: FontWeight.w600, fontSize: 12, height: 1.15),
+                    color: AppColors.bone,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 12,
+                    height: 1.15),
               ),
             ),
           ],
@@ -1816,12 +1829,16 @@ class _MiniRingPainter extends CustomPainter {
     canvas.save();
     canvas.translate(size.width / 2, size.height * 0.5);
     canvas.rotate(-0.3);
-    canvas.drawOval(Rect.fromCenter(center: Offset.zero, width: size.width, height: size.height * 0.32), paint);
+    canvas.drawOval(
+        Rect.fromCenter(
+            center: Offset.zero, width: size.width, height: size.height * 0.32),
+        paint);
     canvas.restore();
   }
 
   @override
-  bool shouldRepaint(covariant _MiniRingPainter oldDelegate) => oldDelegate.color != color;
+  bool shouldRepaint(covariant _MiniRingPainter oldDelegate) =>
+      oldDelegate.color != color;
 }
 
 class _ProgressCard extends StatelessWidget {
@@ -1939,7 +1956,9 @@ class _ProgressCard extends StatelessWidget {
               ),
               Expanded(
                 flex: 1,
-                child: Center(child: _TrajectoryMapLaunchButton(onTap: onTapTrajectoryMap)),
+                child: Center(
+                    child:
+                        _TrajectoryMapLaunchButton(onTap: onTapTrajectoryMap)),
               ),
               const SizedBox(width: 8),
               InkWell(
