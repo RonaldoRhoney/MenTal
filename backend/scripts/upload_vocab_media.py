@@ -18,7 +18,8 @@ Uso — lote (produção em massa por território):
 O manifesto de lote é uma lista JSON de objetos:
     [{"territory_id": "ingles_basico", "prompt": "Como se escreve 'casa' em inglês?",
       "image_path": "scripts/vocab_images/ingles_basico/casa.webp",
-      "source_url": "https://www.canva.com/d/..."}, ...]
+      "source_url": "https://www.canva.com/d/...",
+      "source_name": "(opcional) crédito exigido pela licença, ex.: Twemoji CC-BY 4.0"}, ...]
 
 `trecho_do_prompt`/`prompt` é uma busca parcial (ILIKE) — não precisa
 ser o prompt inteiro, mas precisa achar EXATAMENTE 1 Desafio (senão
@@ -44,7 +45,10 @@ def _content_type_for(path: str) -> str:
     return {"webp": "image/webp", "png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg"}.get(ext, "application/octet-stream")
 
 
-def _upload_one(db, territory_id: str, prompt_snippet: str, image_path: str, source_url: str) -> bool:
+DEFAULT_SOURCE_NAME = "Ilustração gerada via Canva AI (MENTAL)"
+
+
+def _upload_one(db, territory_id: str, prompt_snippet: str, image_path: str, source_url: str, source_name: str | None = None) -> bool:
     candidates = (
         db.query(models.Challenge)
         .filter(models.Challenge.territory_id == territory_id, models.Challenge.prompt.ilike(f"%{prompt_snippet}%"))
@@ -70,7 +74,7 @@ def _upload_one(db, territory_id: str, prompt_snippet: str, image_path: str, sou
 
     challenge.vocab_media_url = url
     challenge.vocab_media_type = "image"
-    challenge.vocab_media_source_name = "Ilustração gerada via Canva AI (MENTAL)"
+    challenge.vocab_media_source_name = source_name or DEFAULT_SOURCE_NAME
     challenge.vocab_media_source_url = source_url
     db.commit()
     print(f"✅ {territory_id} / {challenge.prompt!r} → {url}")
@@ -84,7 +88,7 @@ def main() -> None:
         ok = 0
         with SessionLocal() as db:
             for row in rows:
-                if _upload_one(db, row["territory_id"], row["prompt"], row["image_path"], row["source_url"]):
+                if _upload_one(db, row["territory_id"], row["prompt"], row["image_path"], row["source_url"], row.get("source_name")):
                     ok += 1
         print(f"\n{ok}/{len(rows)} imagens do lote gravadas com sucesso.")
         return

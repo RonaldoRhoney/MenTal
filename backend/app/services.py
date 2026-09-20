@@ -895,6 +895,7 @@ def create_served_attempt(
     timed: bool = False,
     was_last_of_batch: bool = False,
     is_review: bool = False,
+    is_search: bool = False,
 ) -> models.Attempt:
     """
     Cria a linha de Attempt no momento em que o desafio é de fato
@@ -920,6 +921,7 @@ def create_served_attempt(
         timed=timed,
         was_last_of_batch=was_last_of_batch,
         is_review=is_review,
+        is_search=is_search,
     )
     db.add(attempt)
     db.commit()
@@ -1475,11 +1477,6 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
     else:
         return  # este lado já tinha respondido (reenvio idempotente do attempt) — não reprocessa
 
-    # Fase 2 (3.1) — responder a Batalha de um amigo conta pra sequência
-    # social de 7 dias (Batalha só existe entre amigos confirmados).
-    other_user_id = battle.opponent_user_id if battle.challenger_user_id == user_id else battle.challenger_user_id
-    rewards.safely(rewards.on_friend_action, db, user_id, other_user_id, now.date())
-
     # BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md §2.2 — "notificação push
     # explícita quando o adversário joga sua rodada, convidando o
     # usuário a 'contra-responder agora'". Só dispara quando é o
@@ -1536,6 +1533,13 @@ def maybe_resolve_battle_side(db: Session, user_id: str, challenge_id: str, is_c
             create_feed_event(db, winner_user_id, "battle_won", {"opponent_nickname": loser_profile.real_name or loser_profile.nickname})
 
     db.commit()
+    # Fase 2 (3.1) — responder a Batalha de um amigo conta pra sequência
+    # social de 7 dias (Batalha só existe entre amigos confirmados). Só
+    # DEPOIS do commit final: rewards.safely faz rollback em falha, e não
+    # pode descartar o resultado da Batalha ainda não commitado (achado M4
+    # da revisão de segurança, 20/09/2026).
+    other_user_id = battle.opponent_user_id if battle.challenger_user_id == user_id else battle.challenger_user_id
+    rewards.safely(rewards.on_friend_action, db, user_id, other_user_id, now.date())
 
 
 def get_territory_detentor(db: Session, user_id: str, territory_id: str) -> "models.Profile | None":
@@ -2007,6 +2011,7 @@ def generate_word_constellation_round(db: Session, challenge: models.Challenge) 
             "options": None,
             "prompt_image": challenge.prompt_image,
             "vocab_media_url": challenge.vocab_media_url if challenge.vocab_media_type == "image" else None,
+            "vocab_media_source_name": challenge.vocab_media_source_name if challenge.vocab_media_type == "image" else None,
         }
 
     correct_meaning = extract_portuguese_meaning(challenge.prompt)
@@ -2037,6 +2042,7 @@ def generate_word_constellation_round(db: Session, challenge: models.Challenge) 
         "options": options,
         "prompt_image": challenge.prompt_image,
         "vocab_media_url": challenge.vocab_media_url if challenge.vocab_media_type == "image" else None,
+        "vocab_media_source_name": challenge.vocab_media_source_name if challenge.vocab_media_type == "image" else None,
     }
 
 

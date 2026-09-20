@@ -1,0 +1,170 @@
+[
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'casa' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/maison_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f3e0.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'porta' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/porte_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f6aa.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'janela' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/fenetre_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1fa9f.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'maçã' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/pomme_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f34e.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'água' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/eau_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4a7.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'pão' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/pain_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f35e.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'gostar' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/aimer_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f44d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'dois' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/deux_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/32-20e3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'azul' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/bleu_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f535.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'camisa' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/chemise_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f455.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'cachorro' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/chien_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f436.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'gato' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/chat_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f431.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'três' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/trois_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/33-20e3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'trabalhar' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/travailler_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4bc.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'horas' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/heures_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f550.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'escola' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/ecole_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f3eb.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'livro' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/livre_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4d6.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'professor(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/professeur_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-1f3eb.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'carro' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/voiture_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f697.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'feliz' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/heureux_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f600.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'triste' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/triste_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f622.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'obrigado(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/merci_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f64f.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'amigo(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/ami_e_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-1f91d-200d-1f9d1.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_basico",
+    "prompt": "Como se escreve 'bom(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_basico/bon_ne_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f44d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

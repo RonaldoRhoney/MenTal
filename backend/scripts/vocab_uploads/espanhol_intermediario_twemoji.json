@@ -1,0 +1,100 @@
+[
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'terminar' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/terminar_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/2705.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'mala' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/maleta_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'doente' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/enfermo_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f912.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'médico(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/medico_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-2695-fe0f.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'dor' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/dolor_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f915.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'descansar' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/descansar_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f634.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'devolver' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/devolver_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/21a9.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'chuva' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/lluvia_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f327.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'cancelar' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/cancelar_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/274c.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'parar' (chuva) em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/parar_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f6d1.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'consertar' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/arreglar_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f527.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'senha' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/contrasena_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f510.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'entender' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/entender_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4a1.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "prompt": "Como se escreve 'surpreso(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_intermediario/sorprendido_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f632.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'casa' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/casa_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f3e0.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'porta' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/puerta_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f6aa.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'maçã' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/manzana_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f34e.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'água' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/agua_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4a7.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'pão' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/pan_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f35e.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'gostar' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/gustar_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f44d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'dois' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/dos_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/32-20e3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'vermelho' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/rojo_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f534.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'azul' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/azul_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f535.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'camisa' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/camisa_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f455.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'gato' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/gato_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f431.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'trabalhar' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/trabajar_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4bc.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'horas' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/horas_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f550.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'livro' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/libro_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4d6.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'professor(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/profesor_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-1f3eb.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'carro' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/carro_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f697.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'feliz' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/feliz_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f600.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'triste' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/triste_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f622.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'obrigado(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/gracias_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f64f.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'amigo(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/amigo_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-1f91d-200d-1f9d1.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "prompt": "Como se escreve 'bom(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_basico/bueno_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f44d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

@@ -186,3 +186,24 @@ def test_word_constellation_404_outside_idiomas_territory(client):
 
     resp = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers)
     assert resp.status_code == 404
+
+
+def test_word_constellation_round_exposes_image_and_credit(client):
+    # Ilustração de vocabulário (Canva/Twemoji) só aparece com o crédito
+    # da licença junto — o cliente mostra como legenda (CC-BY exige).
+    _seed_siblings()
+    challenge_id = _seed_idiomas_challenge("Como se escreve 'maçã' em inglês?", "Apple")
+    with SessionLocal() as db:
+        challenge = db.get(models.Challenge, challenge_id)
+        challenge.vocab_media_url = "https://example.supabase.co/storage/v1/object/public/vocab-media/x.webp"
+        challenge.vocab_media_type = "image"
+        challenge.vocab_media_source_name = "Twemoji (jdecked) — CC-BY 4.0"
+        challenge.vocab_media_source_url = "https://github.com/jdecked/twemoji"
+        db.commit()
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    body = client.get(f"/challenges/{challenge_id}/word-constellation", headers=headers).json()
+    assert body["vocab_media_url"].endswith("x.webp")
+    assert body["vocab_media_source_name"] == "Twemoji (jdecked) — CC-BY 4.0"

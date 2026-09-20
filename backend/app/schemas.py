@@ -190,6 +190,9 @@ class WordConstellationRoundOut(BaseModel):
     # scripts/upload_vocab_media.py) tem prioridade sobre `prompt_image`
     # (emoji, catálogo zero-custo já existente) quando os dois existirem.
     vocab_media_url: str | None = None
+    # Crédito exigido pela licença da imagem (ex.: Twemoji CC-BY 4.0) —
+    # o cliente mostra como legenda pequena sob a ilustração.
+    vocab_media_source_name: str | None = None
     prompt_image: str | None = None
 
 

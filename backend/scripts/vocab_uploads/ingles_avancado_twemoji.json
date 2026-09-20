@@ -1,0 +1,72 @@
+[
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'acordo' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/agreement_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f91d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'assinado(a)' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/signed_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/270d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'aviso' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/warning_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/26a0.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'adiado(a)' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/postponed_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/23f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'evidência' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/evidence_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f50d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'estudo' (pesquisa) em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/study_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4da.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'sustentável' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/sustainable_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/267b.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'reduzir' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/reduce_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4c9.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'crescimento' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/growth_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4c8.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "prompt": "Como se escreve 'incerto(a)' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_avancado/uncertain_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/2753.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

@@ -547,6 +547,12 @@ class Attempt(Base):
     # usa isso pra pular XP/streak/badge/progresso — revisão é só
     # reforço de aprendizado, nunca uma segunda chance de pontuar.
     is_review: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Achado A2 da revisão de segurança (20/09/2026): GET /challenges/
+    # search serve com was_last_of_batch=True (não existe "próximo" num
+    # resultado de busca) — sem este marcador, TODA pergunta avulsa
+    # achada por busca pagaria o bônus de lote (+3 XP) da Regra Oficial.
+    # Gravado pelo servidor; o bônus de lote ignora estes attempts.
+    is_search: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
 class ChallengeBatchProgress(Base):

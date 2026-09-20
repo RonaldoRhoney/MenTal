@@ -1,0 +1,93 @@
+[
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'terminar' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/finir_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/2705.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'aeroporto' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/aeroport_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/2708.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'mala' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/valise_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'doente' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/malade_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f912.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'médico(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/medecin_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-2695-fe0f.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'dor' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/douleur_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f915.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'devolver' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/rendre_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/21a9.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'chuva' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/pluie_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f327.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'cancelar' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/annuler_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/274c.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'parar' (chuva) em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/s_arreter_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f6d1.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'consertar' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/reparer_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f527.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'entender' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/comprendre_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4a1.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_intermediario",
+    "prompt": "Como se escreve 'surpreso(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_intermediario/surpris_e_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f632.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

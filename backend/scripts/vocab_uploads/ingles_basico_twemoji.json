@@ -1,0 +1,135 @@
+[
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'maçã' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/apple_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f34e.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'água' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/water_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4a7.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'pão' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/bread_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f35e.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'gostar/gostoso' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/like_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f44d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'dois' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/two_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/32-20e3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'vermelho' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/red_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f534.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'azul' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/blue_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f535.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'camisa' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/shirt_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f455.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'cachorro' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/dog_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f436.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'gato' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/cat_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f431.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'três' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/three_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/33-20e3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'horas' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/hours_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f550.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'escola' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/school_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f3eb.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'livro' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/book_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4d6.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'professor(a)' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/teacher_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-1f3eb.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'carro' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/car_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f697.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'feliz' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/happy_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f600.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'triste' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/sad_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f622.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_basico",
+    "prompt": "Como se escreve 'amigo(a)' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_basico/friend_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-1f91d-200d-1f9d1.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

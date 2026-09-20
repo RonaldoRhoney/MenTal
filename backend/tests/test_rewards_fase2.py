@@ -202,3 +202,36 @@ def test_falha_numa_recompensa_nunca_propaga(client):
 
     with SessionLocal() as db:
         rewards.safely(boom, db)  # não levanta
+
+
+# --------------------------- achados da revisão de segurança (20/09/2026)
+def test_pergunta_achada_por_busca_nao_paga_bonus_de_lote(client):
+    """Achado A2: GET /challenges/search serve com was_last_of_batch=True
+    (não há 'próximo' num resultado de busca) — sem o marcador is_search,
+    toda pergunta avulsa pagaria +3 XP de lote."""
+    from app.seed import CHALLENGES
+
+    user, headers = _new_user(client)
+    sample = next(c for c in CHALLENGES if c["territory_id"] == "numeros")
+    base = _xp(client, headers)  # já inclui o XP do login
+
+    found = client.get("/challenges/search", params={"q": sample["prompt"][:20]}, headers=headers).json()["challenge"]
+    correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == found["prompt"])
+    result = client.post(
+        f"/challenges/{found['challenge_id']}/answer",
+        json={"attempt_id": found["attempt_id"], "submitted_answer": correct},
+        headers=headers,
+    ).json()
+
+    assert result["is_correct"] is True
+    assert _xp(client, headers) == base + result["xp_awarded"]  # sem +3 de lote
+    with SessionLocal() as db:
+        assert db.get(models.RewardClaim, (user, f"batch:{found['attempt_id']}")) is None
+
+
+def test_reward_claims_referencia_o_usuario_com_cascade_na_migration():
+    """Achado A1: LGPD — excluir a conta apaga o histórico de recompensas."""
+    import pathlib
+
+    sql = pathlib.Path("migrations/082_reward_claims_e_badges_streak.sql").read_text(encoding="utf-8")
+    assert "references auth.users(id) on delete cascade" in sql

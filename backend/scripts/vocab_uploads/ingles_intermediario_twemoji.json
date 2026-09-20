@@ -1,0 +1,93 @@
+[
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'terminar' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/finish_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/2705.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'aeroporto' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/airport_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/2708.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'mala' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/suitcase_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'doente' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/sick_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f912.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'médico(a)' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/doctor_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f9d1-200d-2695-fe0f.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'dor' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/pain_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f915.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'descansar' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/rest_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f634.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'trocar/devolver' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/return_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/21a9.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'chuva' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/rain_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f327.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'cancelar' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/cancel_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/274c.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'consertar' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/fix_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f527.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'senha' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/password_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f510.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "prompt": "Como se escreve 'surpreso(a)' em inglês?",
+    "image_path": "scripts/vocab_images/ingles_intermediario/surprised_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f632.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

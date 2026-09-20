@@ -69,6 +69,10 @@ def award_xp(db: Session, profile: models.Profile, amount: int) -> None:
     por share/app-invite/constelação, num ponto só."""
     if amount <= 0:
         return
+    # Achado M3 (revisão de segurança, 20/09/2026): o commit anterior solta
+    # o lock — recarrega com FOR UPDATE pra 2 recompensas concorrentes
+    # (ex.: login + lote) não perderem XP uma da outra.
+    db.refresh(profile, with_for_update=True)
     profile.xp_total += amount
     profile.level = scoring.level_from_xp(profile.xp_total)
     db.commit()
@@ -127,7 +131,7 @@ def on_batch_completed(db: Session, profile: models.Profile, attempt: models.Att
     """+3 XP ao terminar o lote de perguntas (o "Desafio inteiro"); +5 XP
     extra se TODAS as respostas do lote foram certas e sem dica. Só
     respostas normais (revisão nunca chega aqui) e uma vez por attempt."""
-    if not attempt.was_last_of_batch:
+    if not attempt.was_last_of_batch or attempt.is_search:
         return
     if not try_claim(db, profile.user_id, f"batch:{attempt.attempt_id}"):
         return
@@ -143,6 +147,7 @@ def on_batch_completed(db: Session, profile: models.Profile, attempt: models.Att
             models.Challenge.difficulty_level == challenge.difficulty_level,
             models.Attempt.timed == attempt.timed,
             models.Attempt.is_review.is_(False),
+            models.Attempt.is_search.is_(False),
             models.Attempt.is_correct.isnot(None),
         )
     )
@@ -155,6 +160,7 @@ def on_batch_completed(db: Session, profile: models.Profile, attempt: models.Att
             models.Challenge.difficulty_level == challenge.difficulty_level,
             models.Attempt.timed == attempt.timed,
             models.Attempt.is_review.is_(False),
+            models.Attempt.is_search.is_(False),
             models.Attempt.was_last_of_batch.is_(True),
             models.Attempt.attempt_id != attempt.attempt_id,
             models.Attempt.created_at < attempt.created_at,

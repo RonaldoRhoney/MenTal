@@ -209,7 +209,7 @@ def search_challenges(
     options = services.shuffled_options(challenge.options) if challenge.options else challenge.options
 
     attempt_id = models.new_uuid()
-    services.create_served_attempt(db, attempt_id, user_id, challenge.id, timed=False, was_last_of_batch=True)
+    services.create_served_attempt(db, attempt_id, user_id, challenge.id, timed=False, was_last_of_batch=True, is_search=True)
 
     return schemas.ChallengeSearchResponse(
         found=True,

@@ -12,10 +12,13 @@ import 'package:mental/screens/word_constellation_screen.dart';
 /// nunca é tocado no teste — mesma cautela já usada nos testes de
 /// challenge_screen_tts_test.dart).
 class _PiecesFakeApiClient extends ApiClient {
-  _PiecesFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _PiecesFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
-  Future<Map<String, dynamic>> wordConstellationRound(String challengeId) async => {
+  Future<Map<String, dynamic>> wordConstellationRound(
+          String challengeId) async =>
+      {
         'challenge_id': challengeId,
         'territory_id': 'ingles_basico',
         'kind': 'pieces',
@@ -36,10 +39,13 @@ class _PiecesFakeApiClient extends ApiClient {
 }
 
 class _MeaningFakeApiClient extends ApiClient {
-  _MeaningFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _MeaningFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
-  Future<Map<String, dynamic>> wordConstellationRound(String challengeId) async => {
+  Future<Map<String, dynamic>> wordConstellationRound(
+          String challengeId) async =>
+      {
         'challenge_id': challengeId,
         'territory_id': 'ingles_basico',
         'kind': 'meaning',
@@ -59,7 +65,19 @@ class _MeaningFakeApiClient extends ApiClient {
   }
 }
 
-Future<void> _pump(WidgetTester tester, ApiClient client, {int? difficultyLevel}) async {
+class _MeaningWithImageFakeApiClient extends _MeaningFakeApiClient {
+  @override
+  Future<Map<String, dynamic>> wordConstellationRound(
+          String challengeId) async =>
+      {
+        ...await super.wordConstellationRound(challengeId),
+        'vocab_media_url': 'https://example.invalid/house.webp',
+        'vocab_media_source_name': 'Twemoji (jdecked) — CC-BY 4.0',
+      };
+}
+
+Future<void> _pump(WidgetTester tester, ApiClient client,
+    {int? difficultyLevel}) async {
   await tester.pumpWidget(
     MaterialApp(
       localizationsDelegates: const [
@@ -81,7 +99,22 @@ Future<void> _pump(WidgetTester tester, ApiClient client, {int? difficultyLevel}
 }
 
 void main() {
-  testWidgets('rodada "pieces": cada peça tem o próprio botão de áudio (pedido de Rhoney, 19/09/2026)', (tester) async {
+  testWidgets(
+      'imagem de vocabulário vem com o crédito da licença (CC-BY exige atribuição)',
+      (tester) async {
+    await _pump(tester, _MeaningWithImageFakeApiClient());
+    expect(find.byKey(const Key('vocab_media_credit')), findsOneWidget);
+    expect(find.textContaining('CC-BY 4.0'), findsOneWidget);
+  });
+
+  testWidgets('sem imagem, sem legenda de crédito', (tester) async {
+    await _pump(tester, _MeaningFakeApiClient());
+    expect(find.byKey(const Key('vocab_media_credit')), findsNothing);
+  });
+
+  testWidgets(
+      'rodada "pieces": cada peça tem o próprio botão de áudio (pedido de Rhoney, 19/09/2026)',
+      (tester) async {
     await _pump(tester, _PiecesFakeApiClient());
 
     // 1 botão grande (frase inteira) + 5 peças disponíveis (is/The/big/
@@ -95,7 +128,9 @@ void main() {
     expect(find.byIcon(Icons.volume_up_rounded), findsNWidgets(6));
   });
 
-  testWidgets('rodada "pieces": peça na área de montagem tem um "x" explícito pra remover (pedido de Rhoney, 19/09/2026)', (tester) async {
+  testWidgets(
+      'rodada "pieces": peça na área de montagem tem um "x" explícito pra remover (pedido de Rhoney, 19/09/2026)',
+      (tester) async {
     await _pump(tester, _PiecesFakeApiClient());
 
     expect(find.byIcon(Icons.close_rounded), findsNothing);
@@ -111,7 +146,9 @@ void main() {
     expect(find.text('The'), findsOneWidget);
   });
 
-  testWidgets('rodada "meaning": opções (em português) NÃO têm botão de áudio próprio', (tester) async {
+  testWidgets(
+      'rodada "meaning": opções (em português) NÃO têm botão de áudio próprio',
+      (tester) async {
     await _pump(tester, _MeaningFakeApiClient());
 
     // Só o botão grande do topo — as 3 opções de significado nunca
@@ -119,7 +156,8 @@ void main() {
     expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
   });
 
-  testWidgets('rodada "pieces": montar na ordem certa mostra acerto + XP', (tester) async {
+  testWidgets('rodada "pieces": montar na ordem certa mostra acerto + XP',
+      (tester) async {
     await _pump(tester, _PiecesFakeApiClient());
 
     expect(find.text('The house is big'), findsOneWidget);
@@ -139,7 +177,8 @@ void main() {
     expect(find.text('+5 XP'), findsOneWidget);
   });
 
-  testWidgets('rodada "pieces": ordem errada permite tentar de novo, sem XP', (tester) async {
+  testWidgets('rodada "pieces": ordem errada permite tentar de novo, sem XP',
+      (tester) async {
     await _pump(tester, _PiecesFakeApiClient());
 
     await tester.tap(find.text('big'));
@@ -158,17 +197,23 @@ void main() {
     expect(find.text('Verificar'), findsOneWidget);
   });
 
-  testWidgets('difficultyLevel < 3 (basico/intermediario): instrução em português aparece (MUNDO_IDIOMAS_IMERSAO_PROGRESSIVA_V1.md)', (tester) async {
+  testWidgets(
+      'difficultyLevel < 3 (basico/intermediario): instrução em português aparece (MUNDO_IDIOMAS_IMERSAO_PROGRESSIVA_V1.md)',
+      (tester) async {
     await _pump(tester, _PiecesFakeApiClient(), difficultyLevel: 2);
     expect(find.text('Toque para ouvir e monte a resposta'), findsOneWidget);
   });
 
-  testWidgets('difficultyLevel 3 (avancado/Difícil): instrução em português some — imersão total', (tester) async {
+  testWidgets(
+      'difficultyLevel 3 (avancado/Difícil): instrução em português some — imersão total',
+      (tester) async {
     await _pump(tester, _PiecesFakeApiClient(), difficultyLevel: 3);
     expect(find.text('Toque para ouvir e monte a resposta'), findsNothing);
   });
 
-  testWidgets('rodada "meaning": tocar na opção certa já responde e mostra acerto (sem botão Verificar)', (tester) async {
+  testWidgets(
+      'rodada "meaning": tocar na opção certa já responde e mostra acerto (sem botão Verificar)',
+      (tester) async {
     await _pump(tester, _MeaningFakeApiClient());
 
     expect(find.text('House'), findsOneWidget);
@@ -184,7 +229,9 @@ void main() {
     expect(find.text('Isso mesmo!'), findsOneWidget);
   });
 
-  testWidgets('rodada "meaning": tocar na opção errada já responde e mostra erro', (tester) async {
+  testWidgets(
+      'rodada "meaning": tocar na opção errada já responde e mostra erro',
+      (tester) async {
     await _pump(tester, _MeaningFakeApiClient());
 
     await tester.tap(find.text('gato'));

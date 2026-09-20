@@ -1,0 +1,79 @@
+[
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'acordo' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/acuerdo_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f91d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'assinado(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/firmado_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/270d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'aviso' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/aviso_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/26a0.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'adiado(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/aplazado_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/23f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'desistir' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/rendirse_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f3f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'adiar' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/postergar_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/23f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'estudo' (pesquisa) em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/estudio_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4da.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'sustentável' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/sostenible_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/267b.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'reduzir' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/reducir_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4c9.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'crescimento' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/crecimiento_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4c8.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "prompt": "Como se escreve 'incerto(a)' em espanhol?",
+    "image_path": "scripts/vocab_images/espanhol_avancado/incierto_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/2753.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

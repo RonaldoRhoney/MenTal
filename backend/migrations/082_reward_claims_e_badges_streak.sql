@@ -3,7 +3,9 @@
 -- marcos de streak de 30 e 100 dias (o de 7 dias já existe: iron_streak).
 
 create table if not exists mental.reward_claims (
-    user_id uuid not null,
+    -- FK com cascade (achado A1 da revisão de segurança, 20/09/2026): excluir a
+    -- conta (LGPD) apaga também o histórico de recompensas, igual 048/071/077.
+    user_id uuid not null references auth.users(id) on delete cascade,
     claim_key text not null,
     claimed_at timestamp not null default now(),
     primary key (user_id, claim_key)

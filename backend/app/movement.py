@@ -290,7 +290,12 @@ def collect_steps(
     db.refresh(cycle)
     # Fase 2 (2.2): o ciclo acabou de virar "dia ativo" (cruzou o piso de
     # passos) — alimenta a sequência de 7 dias ativos (+10 MentalCoins).
-    if previous_total < config.MOVEMENT_ACTIVE_DAY_MIN_STEPS <= cycle.steps_collected:
+    # Só com o ciclo ainda aberto (não na janela de carência de coleta
+    # retroativa) — achado B6 da revisão de segurança, 20/09/2026.
+    if (
+        previous_total < config.MOVEMENT_ACTIVE_DAY_MIN_STEPS <= cycle.steps_collected
+        and naive(cycle.cycle_end_at) > now
+    ):
         rewards.safely(rewards.on_movement_active_day, db, user_id, naive(cycle.cycle_start_at).date())
     return cycle, xp_delta, level_up, (profile.level if level_up else None), goal_reached, checkpoints_reached, mentalcoins_awarded
 

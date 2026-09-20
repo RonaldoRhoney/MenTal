@@ -1,0 +1,86 @@
+[
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'acordo' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/accord_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f91d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'assinado(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/signe_e_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/270d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'aviso' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/avertissement_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/26a0.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'adiado(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/reporte_e_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/23f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'desistir' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/abandonner_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f3f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'adiar' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/reporter_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/23f3.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'evidência' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/preuve_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f50d.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'estudo' (pesquisa) em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/etude_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4da.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'sustentável' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/durable_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/267b.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'reduzir' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/reduire_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4c9.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'crescimento' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/croissance_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/1f4c8.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  },
+  {
+    "territory_id": "frances_avancado",
+    "prompt": "Como se escreve 'incerto(a)' em francês?",
+    "image_path": "scripts/vocab_images/frances_avancado/incertain_e_twemoji.webp",
+    "source_url": "https://github.com/jdecked/twemoji/blob/main/assets/svg/2753.svg",
+    "source_name": "Twemoji (jdecked) — CC-BY 4.0"
+  }
+]

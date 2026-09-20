@@ -40,7 +40,8 @@ class WordConstellationScreen extends StatefulWidget {
   bool get _immersaoTotal => (difficultyLevel ?? 0) >= 3;
 
   @override
-  State<WordConstellationScreen> createState() => _WordConstellationScreenState();
+  State<WordConstellationScreen> createState() =>
+      _WordConstellationScreenState();
 }
 
 class _WordConstellationScreenState extends State<WordConstellationScreen> {
@@ -71,7 +72,8 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
       _error = null;
     });
     try {
-      final round = await widget.client.wordConstellationRound(widget.challengeId);
+      final round =
+          await widget.client.wordConstellationRound(widget.challengeId);
       if (!mounted) return;
       setState(() {
         _round = round;
@@ -109,7 +111,8 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
   void _preloadTts(Map<String, dynamic> round) {
     final voice = _voice;
     if (voice == null) return;
-    TtsService.instance.preload(round['prompt_text'] as String, voice: voice, speed: _ttsSpeed);
+    TtsService.instance.preload(round['prompt_text'] as String,
+        voice: voice, speed: _ttsSpeed);
     if (round['kind'] == 'pieces') {
       for (final tile in (round['tiles'] as List).cast<String>()) {
         TtsService.instance.preload(tile, voice: voice, speed: _ttsSpeed);
@@ -122,7 +125,8 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
     final voice = _voice;
     if (round == null || voice == null || _ttsSpeaking) return;
     setState(() => _ttsSpeaking = true);
-    await TtsService.instance.speak(round['prompt_text'] as String, voice: voice, speed: _ttsSpeed);
+    await TtsService.instance
+        .speak(round['prompt_text'] as String, voice: voice, speed: _ttsSpeed);
     if (mounted) setState(() => _ttsSpeaking = false);
   }
 
@@ -158,13 +162,15 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
       final result = await widget.client.completeWordConstellation(
         widget.challengeId,
         submittedOrder: _round!['kind'] == 'pieces' ? _selectedTiles : null,
-        submittedMeaning: _round!['kind'] == 'meaning' ? _selectedMeaning : null,
+        submittedMeaning:
+            _round!['kind'] == 'meaning' ? _selectedMeaning : null,
       );
       if (!mounted) return;
       final correct = result['correct'] as bool;
       // Pedido de Rhoney (19/09/2026, teste real): som de acerto/erro na
       // própria resposta, mesmo padrão já usado em challenge_screen.dart.
-      unawaited(FeedbackService.instance.play(correct ? FeedbackSound.correct : FeedbackSound.incorrect));
+      unawaited(FeedbackService.instance
+          .play(correct ? FeedbackSound.correct : FeedbackSound.incorrect));
       setState(() {
         _correct = correct;
         _xpAwarded = result['xp_awarded'] as int;
@@ -226,7 +232,8 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
   Widget _buildBody(AppLocalizations l10n) {
     if (_loading) return const Center(child: CircularProgressIndicator());
     if (_error != null) {
-      return Center(child: Text(_error!, style: TextStyle(color: AppColors.error)));
+      return Center(
+          child: Text(_error!, style: TextStyle(color: AppColors.error)));
     }
     final round = _round;
     if (round == null) return const SizedBox.shrink();
@@ -238,7 +245,8 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         if (!widget._immersaoTotal) ...[
-          Text(l10n.wordConstellationInstructionLabel, style: TextStyle(color: AppColors.muted, fontSize: 13)),
+          Text(l10n.wordConstellationInstructionLabel,
+              style: TextStyle(color: AppColors.muted, fontSize: 13)),
           const SizedBox(height: 16),
         ],
         // Pedido de Rhoney (19/09/2026, teste real): quando o Desafio de
@@ -265,7 +273,17 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          if (round['vocab_media_source_name'] != null) ...[
+            const SizedBox(height: 4),
+            Center(
+              child: Text(
+                'Imagem: ${round['vocab_media_source_name']}',
+                key: const Key('vocab_media_credit'),
+                style: TextStyle(color: AppColors.muted, fontSize: 10),
+              ),
+            ),
+          ],
+          const SizedBox(height: 16),
         ] else ...[
           Center(
             child: _TargetPromptCard(
@@ -275,11 +293,15 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
             ),
           ),
           const SizedBox(height: 12),
-          Center(child: _SpeedChips(speed: _ttsSpeed, onChanged: (s) => setState(() => _ttsSpeed = s))),
+          Center(
+              child: _SpeedChips(
+                  speed: _ttsSpeed,
+                  onChanged: (s) => setState(() => _ttsSpeed = s))),
         ],
         const SizedBox(height: 24),
         Expanded(
-          child: kind == 'pieces' ? _buildPiecesUi(l10n) : _buildMeaningUi(l10n),
+          child:
+              kind == 'pieces' ? _buildPiecesUi(l10n) : _buildMeaningUi(l10n),
         ),
         // Pedido de Rhoney (19/09/2026, teste real): na rodada "meaning"
         // tocar na opção já responde (§ acima, _selectMeaningAndSubmit)
@@ -289,7 +311,10 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
           FilledButton(
             onPressed: _canSubmit() && !_submitting ? _submit : null,
             child: _submitting
-                ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2))
+                ? const SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(strokeWidth: 2))
                 : Text(l10n.wordConstellationCheckButton),
           ),
       ],
@@ -382,7 +407,9 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
         ),
         const SizedBox(height: 16),
         Text(
-          correct ? l10n.wordConstellationCorrectMessage : l10n.wordConstellationIncorrectMessage,
+          correct
+              ? l10n.wordConstellationCorrectMessage
+              : l10n.wordConstellationIncorrectMessage,
           style: Theme.of(context).textTheme.headlineSmall,
           textAlign: TextAlign.center,
         ),
@@ -445,7 +472,11 @@ class _ConstellationTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
         onTap: onTap,
         child: Container(
-          padding: EdgeInsets.only(left: 16, right: (onSpeak != null || onRemove != null) ? 6 : 16, top: 8, bottom: 8),
+          padding: EdgeInsets.only(
+              left: 16,
+              right: (onSpeak != null || onRemove != null) ? 6 : 16,
+              top: 8,
+              bottom: 8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
             border: Border.all(color: color.withValues(alpha: 0.6)),
@@ -456,7 +487,8 @@ class _ConstellationTile extends StatelessWidget {
               Text(
                 label,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: AppColors.bone, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    color: AppColors.bone, fontWeight: FontWeight.w600),
               ),
               if (onSpeak != null) ...[
                 const SizedBox(width: 4),
@@ -531,7 +563,8 @@ class _MiniRemoveButton extends StatelessWidget {
 /// não um círculo grande e separado do texto, mesmo que dentro do
 /// mesmo cartão. Todo o cartão continua tocável, não só o ícone.
 class _TargetPromptCard extends StatelessWidget {
-  const _TargetPromptCard({required this.text, required this.speaking, required this.onTap});
+  const _TargetPromptCard(
+      {required this.text, required this.speaking, required this.onTap});
 
   final String text;
   final bool speaking;
@@ -557,7 +590,8 @@ class _TargetPromptCard extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Flexible(
-                  child: Text(text, style: Theme.of(context).textTheme.headlineSmall),
+                  child: Text(text,
+                      style: Theme.of(context).textTheme.headlineSmall),
                 ),
                 const SizedBox(width: 10),
                 _MiniSpeakerButton(onTap: onTap ?? () {}),
@@ -586,8 +620,12 @@ class _SpeedChips extends StatelessWidget {
         selected: selected,
         onSelected: (_) => onChanged(value),
         selectedColor: AppColors.teal.withValues(alpha: 0.25),
-        labelStyle: TextStyle(color: selected ? AppColors.teal : AppColors.muted, fontSize: 12),
-        side: BorderSide(color: selected ? AppColors.teal : AppColors.muted.withValues(alpha: 0.3)),
+        labelStyle: TextStyle(
+            color: selected ? AppColors.teal : AppColors.muted, fontSize: 12),
+        side: BorderSide(
+            color: selected
+                ? AppColors.teal
+                : AppColors.muted.withValues(alpha: 0.3)),
       );
     }
 
