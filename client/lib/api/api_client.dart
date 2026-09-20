@@ -56,16 +56,20 @@ class ApiClient {
   Future<Map<String, dynamic>> _get(Uri uri, {Map<String, String>? headers}) =>
       _wrap(() => _client.get(uri, headers: headers));
 
-  Future<Map<String, dynamic>> _post(Uri uri, {Map<String, String>? headers, Object? body}) =>
+  Future<Map<String, dynamic>> _post(Uri uri,
+          {Map<String, String>? headers, Object? body}) =>
       _wrap(() => _client.post(uri, headers: headers, body: body));
 
-  Future<Map<String, dynamic>> _put(Uri uri, {Map<String, String>? headers, Object? body}) =>
+  Future<Map<String, dynamic>> _put(Uri uri,
+          {Map<String, String>? headers, Object? body}) =>
       _wrap(() => _client.put(uri, headers: headers, body: body));
 
-  Future<Map<String, dynamic>> _delete(Uri uri, {Map<String, String>? headers}) =>
+  Future<Map<String, dynamic>> _delete(Uri uri,
+          {Map<String, String>? headers}) =>
       _wrap(() => _client.delete(uri, headers: headers));
 
-  Future<Map<String, dynamic>> _wrap(Future<http.Response> Function() request) async {
+  Future<Map<String, dynamic>> _wrap(
+      Future<http.Response> Function() request) async {
     try {
       return await _attempt(request);
     } on _ConnectionRefused {
@@ -90,7 +94,8 @@ class ApiClient {
     }
   }
 
-  Future<Map<String, dynamic>> _attempt(Future<http.Response> Function() request) async {
+  Future<Map<String, dynamic>> _attempt(
+      Future<http.Response> Function() request) async {
     try {
       final resp = await request().timeout(_timeout);
       return _decode(resp);
@@ -123,7 +128,8 @@ class ApiClient {
     );
   }
 
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return _get(
       _uri('/challenges/next', {'territory_id': territoryId, 'mode': mode}),
       headers: _headers,
@@ -146,7 +152,8 @@ class ApiClient {
     );
   }
 
-  Future<Map<String, dynamic>> requestHint(String challengeId, String attemptId) async {
+  Future<Map<String, dynamic>> requestHint(
+      String challengeId, String attemptId) async {
     return _post(
       _uri('/challenges/$challengeId/hint'),
       headers: _headers,
@@ -175,8 +182,10 @@ class ApiClient {
 
   // MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md — etapa complementar
   // automática ao final de todo Desafio do Mundo dos Idiomas.
-  Future<Map<String, dynamic>> wordConstellationRound(String challengeId) async {
-    return _get(_uri('/challenges/$challengeId/word-constellation'), headers: _headers);
+  Future<Map<String, dynamic>> wordConstellationRound(
+      String challengeId) async {
+    return _get(_uri('/challenges/$challengeId/word-constellation'),
+        headers: _headers);
   }
 
   Future<Map<String, dynamic>> completeWordConstellation(
@@ -240,7 +249,8 @@ class ApiClient {
     return _get(_uri('/feedback'), headers: _headers);
   }
 
-  Future<Map<String, dynamic>> reactToAppFeedback(String feedbackId, String reactionType) async {
+  Future<Map<String, dynamic>> reactToAppFeedback(
+      String feedbackId, String reactionType) async {
     return _post(
       _uri('/feedback/$feedbackId/react'),
       headers: _headers,
@@ -251,7 +261,8 @@ class ApiClient {
   // Responder é a única interação exclusiva de quem tem role=admin no
   // backend (a checagem de autorização real é sempre do servidor; o
   // client só decide se MOSTRA o botão de responder).
-  Future<Map<String, dynamic>> replyAppFeedback(String feedbackId, String reply) async {
+  Future<Map<String, dynamic>> replyAppFeedback(
+      String feedbackId, String reply) async {
     return _post(
       _uri('/admin/feedback/$feedbackId/reply'),
       headers: _headers,
@@ -269,7 +280,8 @@ class ApiClient {
     return _get(_uri('/progress/trajectory-map'), headers: _headers);
   }
 
-  Future<Map<String, dynamic>> ranking({String scope = 'global', String window = 'weekly'}) async {
+  Future<Map<String, dynamic>> ranking(
+      {String scope = 'global', String window = 'weekly'}) async {
     return _get(
       _uri('/ranking', {'scope': scope, 'window': window}),
       headers: _headers,
@@ -337,6 +349,23 @@ class ApiClient {
     );
   }
 
+  // Fase 3 da REGRA_OFICIAL_GAMIFICACAO_MENTAL.md — teto diário de XP,
+  // boost de XP e reparo de streak. Preço, janela e efeito são 100%
+  // decididos pelo servidor; o client só exibe e pede a compra.
+  Future<Map<String, dynamic>> getEconomyStatus() async {
+    return _get(_uri('/economy/status'), headers: _headers);
+  }
+
+  Future<Map<String, dynamic>> buyXpBoost() async {
+    return _post(_uri('/economy/xp-boost'),
+        headers: _headers, body: jsonEncode({}));
+  }
+
+  Future<Map<String, dynamic>> repairStreak() async {
+    return _post(_uri('/economy/streak-repair'),
+        headers: _headers, body: jsonEncode({}));
+  }
+
   // Achado de auditoria de segurança (28/08/2026): resgatar o
   // invite_code não cria mais amizade direto, só um pedido pendente —
   // precisa do aceite explícito de quem convidou.
@@ -345,11 +374,13 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> acceptFriendRequest(String friendshipId) async {
-    return _post(_uri('/social/friend-requests/$friendshipId/accept'), headers: _headers);
+    return _post(_uri('/social/friend-requests/$friendshipId/accept'),
+        headers: _headers);
   }
 
   Future<Map<String, dynamic>> declineFriendRequest(String friendshipId) async {
-    return _post(_uri('/social/friend-requests/$friendshipId/decline'), headers: _headers);
+    return _post(_uri('/social/friend-requests/$friendshipId/decline'),
+        headers: _headers);
   }
 
   Future<Map<String, dynamic>> rewardShare() async {
@@ -398,7 +429,8 @@ class ApiClient {
   // V4 item 1 — Torcida (TORCIDA_MULTIPLA_V2.md). reactionType é sempre
   // um dos 4 valores fixos ('vibracao'|'balao'|'coracao'|'joinha') —
   // nunca texto livre. Limite diário é sempre validado no backend.
-  Future<Map<String, dynamic>> sendTorcida(String userId, String reactionType) async {
+  Future<Map<String, dynamic>> sendTorcida(
+      String userId, String reactionType) async {
     return _post(
       _uri('/profile/$userId/torcida'),
       headers: _headers,
@@ -439,7 +471,8 @@ class ApiClient {
   }
 
   Future<int> getUnreadNotificationCount() async {
-    final result = await _get(_uri('/notifications/unread-count'), headers: _headers);
+    final result =
+        await _get(_uri('/notifications/unread-count'), headers: _headers);
     return result['unread_count'] as int;
   }
 
@@ -516,7 +549,10 @@ class ApiClient {
     return _put(
       _uri('/notifications/preferences'),
       headers: _headers,
-      body: jsonEncode({'reengagement_enabled': reengagementEnabled, 'social_enabled': socialEnabled}),
+      body: jsonEncode({
+        'reengagement_enabled': reengagementEnabled,
+        'social_enabled': socialEnabled
+      }),
     );
   }
 
@@ -540,7 +576,8 @@ class ApiClient {
     );
   }
 
-  Future<Map<String, dynamic>> collectMovementSteps({required int steps, String? cycleId}) async {
+  Future<Map<String, dynamic>> collectMovementSteps(
+      {required int steps, String? cycleId}) async {
     return _post(
       _uri('/movement/collect'),
       headers: _headers,
@@ -568,25 +605,33 @@ class ApiClient {
   // hoje; cycleId pra ver um dia específico do histórico).
   Future<Map<String, dynamic>> getMovementDailyChart({String? cycleId}) async {
     return _get(
-      _uri('/movement/daily-chart', cycleId == null ? null : {'cycle_id': cycleId}),
+      _uri('/movement/daily-chart',
+          cycleId == null ? null : {'cycle_id': cycleId}),
       headers: _headers,
     );
   }
 
   // MOVIMENTO_GRAFICOS_RICOS_V1.md §5 — granularidade diária dentro de
   // um mês.
-  Future<Map<String, dynamic>> getMovementMonthlyChart({int? year, int? month}) async {
+  Future<Map<String, dynamic>> getMovementMonthlyChart(
+      {int? year, int? month}) async {
     return _get(
-      _uri('/movement/monthly-chart', year == null ? null : {'year': '$year', 'month': '$month'}),
+      _uri('/movement/monthly-chart',
+          year == null ? null : {'year': '$year', 'month': '$month'}),
       headers: _headers,
     );
   }
 
   // MOVIMENTO_GRAFICOS_RICOS_V1.md §7 — histórico completo dia a dia,
   // paginado (mais recente primeiro).
-  Future<Map<String, dynamic>> getMovementHistory({String period = 'day', String? before, int limit = 20}) async {
+  Future<Map<String, dynamic>> getMovementHistory(
+      {String period = 'day', String? before, int limit = 20}) async {
     return _get(
-      _uri('/movement/history', {'period': period, 'limit': '$limit', if (before != null) 'before': before}),
+      _uri('/movement/history', {
+        'period': period,
+        'limit': '$limit',
+        if (before != null) 'before': before
+      }),
       headers: _headers,
     );
   }
@@ -600,7 +645,8 @@ class ApiClient {
     );
   }
 
-  Future<Map<String, dynamic>> completeLearningPause(String learningPauseId) async {
+  Future<Map<String, dynamic>> completeLearningPause(
+      String learningPauseId) async {
     return _post(
       _uri('/learning-pauses/$learningPauseId/complete'),
       headers: _headers,
@@ -616,7 +662,8 @@ class ApiClient {
     );
   }
 
-  Future<Map<String, dynamic>> completeWordPuzzle({required String resultId, required List<String> foundWords}) async {
+  Future<Map<String, dynamic>> completeWordPuzzle(
+      {required String resultId, required List<String> foundWords}) async {
     return _post(
       _uri('/word-puzzles/$resultId/complete'),
       headers: _headers,
@@ -632,7 +679,8 @@ class ApiClient {
     return _get(_uri('/app/version'), headers: _headers);
   }
 
-  Future<Map<String, dynamic>> getAdminMetricsSummary({String period = '7d'}) async {
+  Future<Map<String, dynamic>> getAdminMetricsSummary(
+      {String period = '7d'}) async {
     return _get(
       _uri('/admin/metrics/summary', {'period': period}),
       headers: _headers,
@@ -656,7 +704,8 @@ class ApiClient {
     return _get(_uri('/admin/profile-photos'), headers: _headers);
   }
 
-  Future<Map<String, dynamic>> moderateProfilePhoto({required String userId, required bool approved}) async {
+  Future<Map<String, dynamic>> moderateProfilePhoto(
+      {required String userId, required bool approved}) async {
     return _post(
       _uri('/admin/profile-photos/$userId/moderate'),
       headers: _headers,
@@ -670,7 +719,8 @@ class ApiClient {
   }
 
   // Achado de auditoria de segurança (28/08/2026) — DIR-001 §4/POL-003 §2.4.
-  Future<Map<String, dynamic>> reportUser({required String reportedUserId, required String reason}) async {
+  Future<Map<String, dynamic>> reportUser(
+      {required String reportedUserId, required String reason}) async {
     return _post(
       _uri('/social/report'),
       headers: _headers,
@@ -682,11 +732,15 @@ class ApiClient {
   // complementa a denúncia: impede que a mesma pessoa continue mandando
   // pedido de amizade depois de bloqueada.
   Future<Map<String, dynamic>> blockUser(String blockedUserId) async {
-    return _post(_uri('/social/block'), headers: _headers, body: jsonEncode({'blocked_user_id': blockedUserId}));
+    return _post(_uri('/social/block'),
+        headers: _headers,
+        body: jsonEncode({'blocked_user_id': blockedUserId}));
   }
 
   Future<Map<String, dynamic>> unblockUser(String blockedUserId) async {
-    return _post(_uri('/social/unblock'), headers: _headers, body: jsonEncode({'blocked_user_id': blockedUserId}));
+    return _post(_uri('/social/unblock'),
+        headers: _headers,
+        body: jsonEncode({'blocked_user_id': blockedUserId}));
   }
 
   Future<Map<String, dynamic>> getBlockedUsers() async {
@@ -713,7 +767,8 @@ class ApiClient {
 class _ConnectionRefused implements Exception {}
 
 class ApiException implements Exception {
-  ApiException({required this.statusCode, required this.code, required this.message});
+  ApiException(
+      {required this.statusCode, required this.code, required this.message});
 
   final int statusCode;
   final String code;

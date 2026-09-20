@@ -39,11 +39,41 @@ class _FakeApiClient extends ApiClient {
             'detentor_nickname': 'Eu-Mesmo',
             'is_detentor': true,
           },
-          {'territory_id': 'enigmas', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
-          {'territory_id': 'numeros', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
-          {'territory_id': 'logica', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
-          {'territory_id': 'visual', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
-          {'territory_id': 'conhecimento', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
+          {
+            'territory_id': 'enigmas',
+            'xp_in_territory': 0,
+            'unlocked': true,
+            'conquered': false,
+            'conquest_threshold': 200
+          },
+          {
+            'territory_id': 'numeros',
+            'xp_in_territory': 0,
+            'unlocked': true,
+            'conquered': false,
+            'conquest_threshold': 200
+          },
+          {
+            'territory_id': 'logica',
+            'xp_in_territory': 0,
+            'unlocked': true,
+            'conquered': false,
+            'conquest_threshold': 200
+          },
+          {
+            'territory_id': 'visual',
+            'xp_in_territory': 0,
+            'unlocked': true,
+            'conquered': false,
+            'conquest_threshold': 200
+          },
+          {
+            'territory_id': 'conhecimento',
+            'xp_in_territory': 0,
+            'unlocked': true,
+            'conquered': false,
+            'conquest_threshold': 200
+          },
         ],
         'worlds': [
           {
@@ -86,7 +116,8 @@ class _FakeApiClient extends ApiClient {
 
   @override
   Future<Map<String, dynamic>> searchChallenges(String query) async {
-    if (searchResultChallenge == null) return {'found': false, 'challenge': null};
+    if (searchResultChallenge == null)
+      return {'found': false, 'challenge': null};
     return {'found': true, 'challenge': searchResultChallenge};
   }
 
@@ -102,6 +133,21 @@ class _FakeApiClient extends ApiClient {
   // pendência nenhuma (badge escondido).
   int unreadNotificationCount = 0;
   List<Map<String, dynamic>> battles = const [];
+  // Fase 3: oferta de reparo de sequência / boost ativo (default: nada).
+  Map<String, dynamic>? repairOffer;
+  String? boostExpiresAt;
+
+  @override
+  Future<Map<String, dynamic>> getEconomyStatus() async => {
+        'daily_xp_earned': 0,
+        'daily_xp_cap': 150,
+        'boost_active': boostExpiresAt != null,
+        'boost_expires_at': boostExpiresAt,
+        'boost_cost': 80,
+        'boost_percent': 20,
+        'repair': repairOffer,
+        'balance': 100,
+      };
 
   @override
   Future<int> getUnreadNotificationCount() async => unreadNotificationCount;
@@ -114,7 +160,8 @@ class _FakeApiClient extends ApiClient {
 /// da V3 pra V4, V3.5_CURIOSIDADE_RELAMPAGO.md §5). Só esse território
 /// ganha o ícone/tom índigo no card da Home, nenhum outro.
 class _FakeApiClientWithMysteryBlock extends ApiClient {
-  _FakeApiClientWithMysteryBlock() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _FakeApiClientWithMysteryBlock()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
   Future<Map<String, dynamic>> progress() async => {
@@ -123,8 +170,20 @@ class _FakeApiClientWithMysteryBlock extends ApiClient {
         'level': 1,
         'streak': {'current_streak': 0, 'freeze_available': true},
         'territories': [
-          {'territory_id': 'palavras', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
-          {'territory_id': 'curiosidade_relampago', 'xp_in_territory': 0, 'unlocked': true, 'conquered': false, 'conquest_threshold': 200},
+          {
+            'territory_id': 'palavras',
+            'xp_in_territory': 0,
+            'unlocked': true,
+            'conquered': false,
+            'conquest_threshold': 200
+          },
+          {
+            'territory_id': 'curiosidade_relampago',
+            'xp_in_territory': 0,
+            'unlocked': true,
+            'conquered': false,
+            'conquest_threshold': 200
+          },
         ],
         'worlds': [
           {
@@ -174,7 +233,34 @@ void main() {
         home: HomeScreen(client: client),
       );
 
-  testWidgets('carrossel de Mundos mostra selo de mundo completo e abre tela dedicada ao tocar', (tester) async {
+  testWidgets(
+      'Fase 3: Home oferece reparo de sequência e mostra o boost ativo; sem nada, some',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(tester, homeApp(_FakeApiClient()));
+    expect(find.byKey(const Key('home_repair_banner')), findsNothing);
+    expect(find.byKey(const Key('home_boost_chip')), findsNothing);
+  });
+
+  testWidgets('Fase 3: Home oferece reparo de sequência e mostra o boost ativo',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final client = _FakeApiClient()
+      ..repairOffer = {
+        'streak_to_restore': 8,
+        'expires_on': '2026-09-23',
+        'cost': 50
+      }
+      ..boostExpiresAt = '2099-01-01T10:00:00';
+    await pumpTall(tester, homeApp(client));
+    expect(find.byKey(const Key('home_repair_banner')), findsOneWidget);
+    expect(find.textContaining('sequência de 8 dias quebrou'), findsOneWidget);
+    expect(find.byKey(const Key('home_boost_chip')), findsOneWidget);
+  });
+
+  testWidgets(
+      'carrossel de Mundos mostra selo de mundo completo e abre tela dedicada ao tocar',
+      (tester) async {
     // REORGANIZACAO_MENUS_HOME_V1.md §5/§8 (06/09/2026): a lista vertical
     // colapsável virou um carrossel horizontal — tocar num Mundo não
     // expande mais in-place, abre uma tela dedicada (_WorldDetailScreen)
@@ -203,7 +289,9 @@ void main() {
     expect(find.text('Desafio Palavras'), findsOneWidget);
   });
 
-  testWidgets('HOME_REDESIGN_V2: wordmark/slogan de volta no topo, banner de Movimento removido, grid com 5 cards', (tester) async {
+  testWidgets(
+      'HOME_REDESIGN_V2: wordmark/slogan de volta no topo, banner de Movimento removido, grid com 5 cards',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
@@ -236,7 +324,9 @@ void main() {
     expect(find.text('Mais'), findsNothing);
   });
 
-  testWidgets('card de Curiosidade Relâmpago mostra o ícone de identidade índigo, outros territórios não', (tester) async {
+  testWidgets(
+      'card de Curiosidade Relâmpago mostra o ícone de identidade índigo, outros territórios não',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClientWithMysteryBlock()));
 
@@ -253,7 +343,9 @@ void main() {
     expect(find.text('⚡ Relâmpago'), findsOneWidget);
   });
 
-  testWidgets('busca por tema (nome de território) navega direto pro território, sem chamar o backend', (tester) async {
+  testWidgets(
+      'busca por tema (nome de território) navega direto pro território, sem chamar o backend',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     final client = _FakeApiClient();
     await pumpTall(tester, homeApp(client));
@@ -268,7 +360,9 @@ void main() {
     expect(client.submittedSuggestions, isEmpty);
   });
 
-  testWidgets('busca por frase/palavra encontrada no backend navega direto pro desafio', (tester) async {
+  testWidgets(
+      'busca por frase/palavra encontrada no backend navega direto pro desafio',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     final client = _FakeApiClient()
       ..searchResultChallenge = {
@@ -282,26 +376,34 @@ void main() {
       };
     await pumpTall(tester, homeApp(client));
 
-    await tester.enterText(find.byType(TextField), 'termo-que-nao-e-nome-de-territorio');
+    await tester.enterText(
+        find.byType(TextField), 'termo-que-nao-e-nome-de-territorio');
     await tester.testTextInput.receiveAction(TextInputAction.search);
     await tester.pumpAndSettle();
 
     expect(find.text('Quanto é 2 + 2?'), findsOneWidget);
   });
 
-  testWidgets('busca sem resultado oferece sugerir o conteúdo, e registrar não trava a tela', (tester) async {
+  testWidgets(
+      'busca sem resultado oferece sugerir o conteúdo, e registrar não trava a tela',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     final client = _FakeApiClient();
     await pumpTall(tester, homeApp(client));
 
-    await tester.enterText(find.byType(TextField), 'termo-sem-nenhum-resultado-xyz');
+    await tester.enterText(
+        find.byType(TextField), 'termo-sem-nenhum-resultado-xyz');
     await tester.testTextInput.receiveAction(TextInputAction.search);
     await tester.pumpAndSettle();
 
     // Revisão de estilo (2026-09-03): não é mais SnackBar — um card em
     // destaque fica visível até o usuário decidir (sugerir ou fechar).
-    expect(find.text('Não encontramos nada para "termo-sem-nenhum-resultado-xyz".'), findsOneWidget);
-    final suggestButtonFinder = find.widgetWithText(FilledButton, 'Sugerir esse conteúdo');
+    expect(
+        find.text(
+            'Não encontramos nada para "termo-sem-nenhum-resultado-xyz".'),
+        findsOneWidget);
+    final suggestButtonFinder =
+        find.widgetWithText(FilledButton, 'Sugerir esse conteúdo');
     expect(suggestButtonFinder, findsOneWidget);
 
     await tester.tap(suggestButtonFinder);
@@ -312,15 +414,20 @@ void main() {
     await tester.pump(const Duration(milliseconds: 100));
 
     expect(client.submittedSuggestions, ['termo-sem-nenhum-resultado-xyz']);
-    expect(find.text('Sugestão registrada! Um agente vai avaliar esse conteúdo.'), findsOneWidget);
+    expect(
+        find.text('Sugestão registrada! Um agente vai avaliar esse conteúdo.'),
+        findsOneWidget);
 
     // E depois do delay, o card some sozinho — sem precisar de toque no X.
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
-    expect(find.text('Sugestão registrada! Um agente vai avaliar esse conteúdo.'), findsNothing);
+    expect(
+        find.text('Sugestão registrada! Um agente vai avaliar esse conteúdo.'),
+        findsNothing);
   });
 
-  testWidgets('mostra o detentor do território entre amigos (V2 item 13)', (tester) async {
+  testWidgets('mostra o detentor do território entre amigos (V2 item 13)',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
@@ -334,7 +441,9 @@ void main() {
     expect(find.text('Você é o detentor'), findsOneWidget);
   });
 
-  testWidgets('BLOCOS_MENUS.md: mostra sub-cabeçalho "Matemática" agrupando numeros e lógica', (tester) async {
+  testWidgets(
+      'BLOCOS_MENUS.md: mostra sub-cabeçalho "Matemática" agrupando numeros e lógica',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
@@ -353,7 +462,9 @@ void main() {
     expect(find.textContaining('Visual'), findsWidgets);
   });
 
-  testWidgets('redesign 2026-08-26: acessos dinâmicos (Progresso/Ranking/Amigos/Movimento) + bottom nav', (tester) async {
+  testWidgets(
+      'redesign 2026-08-26: acessos dinâmicos (Progresso/Ranking/Amigos/Movimento) + bottom nav',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     await tester.pumpWidget(
       MaterialApp(
@@ -399,7 +510,9 @@ void main() {
     );
   }
 
-  testWidgets('CENTRAL_DE_NOTIFICACOES_HOME_V1.md: sino no canto mostra badge só quando há não lidas', (tester) async {
+  testWidgets(
+      'CENTRAL_DE_NOTIFICACOES_HOME_V1.md: sino no canto mostra badge só quando há não lidas',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     final withUnread = _FakeApiClient()..unreadNotificationCount = 3;
     await pumpTall(tester, homeApp(withUnread));
@@ -409,7 +522,8 @@ void main() {
     expect((badge.label as Text).data, '3');
   });
 
-  testWidgets('sino não mostra badge quando não há notificações não lidas', (tester) async {
+  testWidgets('sino não mostra badge quando não há notificações não lidas',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
 
@@ -417,7 +531,9 @@ void main() {
     expect(badge.isLabelVisible, isFalse);
   });
 
-  testWidgets('BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md: badge de batalhas pendentes conta só status pending com i_answered false', (tester) async {
+  testWidgets(
+      'BATALHAS_INTUITIVAS_E_TEMPO_REAL_V1.md: badge de batalhas pendentes conta só status pending com i_answered false',
+      (tester) async {
     SharedPreferences.setMockInitialValues({});
     final client = _FakeApiClient()
       ..battles = [

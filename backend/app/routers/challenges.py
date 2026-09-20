@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .. import config, mentalcoins, models, rewards, schemas, scoring, services
+from .. import config, economy, mentalcoins, models, rewards, schemas, scoring, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from ..timeutil import utcnow
@@ -551,11 +551,26 @@ def submit_answer(
     world_id = before.world_id
     was_world_completed_before = before.was_world_completed
     detentor_before = before.detentor
+    xp_cap_reached = False
+    xp_boost_applied = False
     if is_correct and xp_final > 0:
+        # Fase 3 (REGRA_OFICIAL 6/7.3): boost +20% e teto diário de 150 XP,
+        # decididos aqui pelo servidor com o perfil travado. Só o XP de
+        # PERFIL respeita o teto; o território recebe o valor cheio
+        # (com boost) e segue contando.
+        # Achado A2 (revisão de segurança, 20/09/2026): o snapshot acima
+        # pode ter comitado (1ª resposta cria o saldo de moedas) e soltado
+        # o lock — trava de novo antes de ler/gravar o teto e o XP.
+        db.refresh(profile, with_for_update=True)
+        answer_xp = economy.apply_answer_xp(db, user_id, xp_final, today)
+        xp_cap_reached = answer_xp.cap_reached
+        xp_boost_applied = answer_xp.boost_applied
+        xp_final = answer_xp.profile_xp
+        attempt.xp_awarded = xp_final
         profile.xp_total += xp_final
         profile.level = scoring.level_from_xp(profile.xp_total)
         db.commit()
-        territory_progress = services.apply_xp_to_territory(db, user_id, challenge.territory_id, xp_final)
+        territory_progress = services.apply_xp_to_territory(db, user_id, challenge.territory_id, answer_xp.territory_xp)
 
     territory_detentor_gained = False
     dethroned_nickname = None
@@ -580,7 +595,6 @@ def submit_answer(
 
     level_up = profile.level > level_before
 
-    today = utcnow().date()
     services.register_daily_usage(db, user_id, today)
     streak_count_before = services.get_or_create_streak(db, user_id).current_streak
     streak = services.register_play_for_streak(db, user_id, today)
@@ -660,7 +674,9 @@ def submit_answer(
         completed_world_name=completed_world_name,
         world_completion_bonus_xp=world_completion_bonus_xp,
         timed_out=body.timed_out,
-        speed_bonus_xp=speed_bonus_xp,
+        speed_bonus_xp=min(speed_bonus_xp, xp_final),
+        xp_cap_reached=xp_cap_reached,
+        xp_boost_applied=xp_boost_applied,
         territory_detentor_gained=territory_detentor_gained,
         dethroned_nickname=dethroned_nickname,
         batch_exhausted=attempt.was_last_of_batch,

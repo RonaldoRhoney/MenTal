@@ -12,7 +12,7 @@ todo o banco (colunas TIMESTAMPTZ) é uma decisão arquitetural maior,
 fora do escopo desta limpeza mecânica pré-lançamento.
 """
 
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 
 def utcnow() -> datetime:
@@ -35,3 +35,8 @@ def naive(dt: datetime | None) -> datetime | None:
     utcnow() e um datetime vindo do banco.
     """
     return dt.replace(tzinfo=None) if dt is not None and dt.tzinfo is not None else dt
+
+
+def week_anchor(d: date) -> date:
+    """Segunda-feira da semana de `d` (âncora da folga semanal de streak)."""
+    return d - timedelta(days=d.weekday())

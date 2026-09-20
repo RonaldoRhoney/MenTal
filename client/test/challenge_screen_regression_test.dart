@@ -19,7 +19,8 @@ class _FakeApiClient extends ApiClient {
   _FakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id',
       'territory_id': territoryId,
@@ -35,10 +36,12 @@ class _FakeApiClient extends ApiClient {
 /// decide, no servidor, se este badge aparece — a tela só reflete o que
 /// veio pronto, nunca calcula "é novo" sozinha.
 class _NewChallengeFakeApiClient extends ApiClient {
-  _NewChallengeFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _NewChallengeFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id-new',
       'territory_id': territoryId,
@@ -59,10 +62,12 @@ class _NewChallengeFakeApiClient extends ApiClient {
 /// flag local — prova a generalização de widget.relampago para
 /// _timeLimitMs != null em _buildChallenge.
 class _ConhecimentoFakeApiClient extends ApiClient {
-  _ConhecimentoFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _ConhecimentoFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id-conhecimento',
       'territory_id': territoryId,
@@ -79,18 +84,26 @@ class _ConhecimentoFakeApiClient extends ApiClient {
 /// V6 — Mundo dos Valores (05/09/2026): "cápsula de texto + perguntas",
 /// nunca cronometrado.
 class _ValoresFakeApiClient extends ApiClient {
-  _ValoresFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _ValoresFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id-valores',
       'territory_id': territoryId,
       'difficulty_level': 1,
       'prompt': 'O que é a B3?',
-      'options': ['A bolsa de valores oficial do Brasil', 'Um banco público', 'Uma empresa privada', 'Um imposto'],
+      'options': [
+        'A bolsa de valores oficial do Brasil',
+        'Um banco público',
+        'Uma empresa privada',
+        'Um imposto'
+      ],
       'hints_available': 2,
-      'reading_passage': 'A B3 é a bolsa de valores oficial do Brasil, criada em 2017.',
+      'reading_passage':
+          'A B3 é a bolsa de valores oficial do Brasil, criada em 2017.',
     };
   }
 }
@@ -100,15 +113,19 @@ class _ValoresFakeApiClient extends ApiClient {
 /// múltipla escolha, para provar que a tela não estoura (RenderFlex
 /// overflow) num viewport pequeno.
 class _LongPromptFakeApiClient extends ApiClient {
-  _LongPromptFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _LongPromptFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id-textos',
       'territory_id': territoryId,
       'difficulty_level': 1,
-      'prompt': List.filled(20, 'Um parágrafo bem longo para testar o scroll da tela de desafio.').join(' '),
+      'prompt': List.filled(20,
+              'Um parágrafo bem longo para testar o scroll da tela de desafio.')
+          .join(' '),
       'options': ['Opção A', 'Opção B', 'Opção C', 'Opção D'],
       'hints_available': 2,
     };
@@ -118,22 +135,31 @@ class _LongPromptFakeApiClient extends ApiClient {
 /// Simula um desafio do território "visual" (V2 item 4) — opções em
 /// formato "forma_preenchimento_cor_índice", sem nenhuma imagem real.
 class _VisualFakeApiClient extends ApiClient {
-  _VisualFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _VisualFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id-visual',
       'territory_id': territoryId,
       'difficulty_level': 1,
       'prompt': 'Qual figura é diferente das outras?',
-      'options': ['circle_filled_gold_1', 'circle_filled_gold_2', 'square_filled_gold_3', 'circle_filled_gold_4'],
+      'options': [
+        'circle_filled_gold_1',
+        'circle_filled_gold_2',
+        'square_filled_gold_3',
+        'circle_filled_gold_4'
+      ],
       'hints_available': 2,
     };
   }
 
   @override
-  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
+  Future<Map<String, dynamic>> submitAnswer(
+      String challengeId, String attemptId, String submittedAnswer,
+      {int? responseTimeMs, bool timedOut = false}) async {
     return {
       'is_correct': true,
       'correct_answer': 'square_filled_gold_3',
@@ -150,12 +176,14 @@ class _VisualFakeApiClient extends ApiClient {
 /// configuráveis (MICROINTERACTIONS.md) — o backend é a única autoridade
 /// sobre esses sinais, então o client só precisa saber renderizá-los.
 class _CelebrationFakeApiClient extends ApiClient {
-  _CelebrationFakeApiClient({required this.answerPayload}) : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _CelebrationFakeApiClient({required this.answerPayload})
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   final Map<String, dynamic> answerPayload;
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id',
       'territory_id': territoryId,
@@ -167,7 +195,9 @@ class _CelebrationFakeApiClient extends ApiClient {
   }
 
   @override
-  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
+  Future<Map<String, dynamic>> submitAnswer(
+      String challengeId, String attemptId, String submittedAnswer,
+      {int? responseTimeMs, bool timedOut = false}) async {
     return answerPayload;
   }
 }
@@ -176,13 +206,15 @@ class _CelebrationFakeApiClient extends ApiClient {
 /// pra provar que "Repetir este nível" NÃO busca um desafio novo (mesmo
 /// challenge_id) e "Seguir em frente" busca (comportamento já existente).
 class _FeedbackTrackingFakeApiClient extends ApiClient {
-  _FeedbackTrackingFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _FeedbackTrackingFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   int nextChallengeCalls = 0;
   final List<Map<String, dynamic>> feedbackSubmissions = [];
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     nextChallengeCalls++;
     return {
       'challenge_id': 'fake-challenge-id',
@@ -201,7 +233,9 @@ class _FeedbackTrackingFakeApiClient extends ApiClient {
   bool levelUpOnAnswer = true;
 
   @override
-  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
+  Future<Map<String, dynamic>> submitAnswer(
+      String challengeId, String attemptId, String submittedAnswer,
+      {int? responseTimeMs, bool timedOut = false}) async {
     return _baseAnswerPayload()
       ..['level_up'] = levelUpOnAnswer
       ..['new_level'] = levelUpOnAnswer ? 5 : null;
@@ -235,12 +269,14 @@ class _FeedbackTrackingFakeApiClient extends ApiClient {
 /// que passou a checar o limite diário também em POST /answer (antes só
 /// GET /next checava).
 class _AnswerFailsFakeApiClient extends ApiClient {
-  _AnswerFailsFakeApiClient() : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+  _AnswerFailsFakeApiClient()
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
 
   int submitAnswerCalls = 0;
 
   @override
-  Future<Map<String, dynamic>> nextChallenge(String territoryId, {String mode = 'normal'}) async {
+  Future<Map<String, dynamic>> nextChallenge(String territoryId,
+      {String mode = 'normal'}) async {
     return {
       'challenge_id': 'fake-challenge-id',
       'territory_id': territoryId,
@@ -252,10 +288,15 @@ class _AnswerFailsFakeApiClient extends ApiClient {
   }
 
   @override
-  Future<Map<String, dynamic>> submitAnswer(String challengeId, String attemptId, String submittedAnswer, {int? responseTimeMs, bool timedOut = false}) async {
+  Future<Map<String, dynamic>> submitAnswer(
+      String challengeId, String attemptId, String submittedAnswer,
+      {int? responseTimeMs, bool timedOut = false}) async {
     submitAnswerCalls++;
     if (submitAnswerCalls == 1) {
-      throw ApiException(statusCode: 429, code: 'DAILY_LIMIT_REACHED', message: 'Limite diário atingido');
+      throw ApiException(
+          statusCode: 429,
+          code: 'DAILY_LIMIT_REACHED',
+          message: 'Limite diário atingido');
     }
     return _baseAnswerPayload();
   }
@@ -291,7 +332,8 @@ Future<void> _pumpChallengeScreen(
       // que depende de um tamanho de tela real. fromView() preserva o
       // tamanho real do ambiente de teste, só sobrescrevendo o campo que
       // este teste de fato quer controlar.
-      data: MediaQueryData.fromView(tester.view).copyWith(disableAnimations: disableAnimations),
+      data: MediaQueryData.fromView(tester.view)
+          .copyWith(disableAnimations: disableAnimations),
       child: MaterialApp(
         localizationsDelegates: const [
           AppLocalizations.delegate,
@@ -300,7 +342,8 @@ Future<void> _pumpChallengeScreen(
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: AppLocalizations.supportedLocales,
-        home: ChallengeScreen(client: client, territoryId: 'numeros', territoryLabel: 'Números'),
+        home: ChallengeScreen(
+            client: client, territoryId: 'numeros', territoryLabel: 'Números'),
       ),
     ),
   );
@@ -342,10 +385,11 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      FilledButton confirmButton() =>
-          tester.widget<FilledButton>(find.widgetWithText(FilledButton, 'Confirmar resposta'));
+      FilledButton confirmButton() => tester.widget<FilledButton>(
+          find.widgetWithText(FilledButton, 'Confirmar resposta'));
 
-      expect(confirmButton().onPressed, isNull, reason: 'antes de digitar, deve estar desabilitado');
+      expect(confirmButton().onPressed, isNull,
+          reason: 'antes de digitar, deve estar desabilitado');
 
       await tester.enterText(find.byType(TextField), 'CASAL');
       await tester.pump();
@@ -353,7 +397,8 @@ void main() {
       expect(
         confirmButton().onPressed,
         isNotNull,
-        reason: 'ao digitar, o botão deve habilitar imediatamente — sem precisar de outra ação (ex.: pedir dica)',
+        reason:
+            'ao digitar, o botão deve habilitar imediatamente — sem precisar de outra ação (ex.: pedir dica)',
       );
     },
   );
@@ -442,9 +487,11 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(
-        errors.where((e) => e.exception.toString().contains('RenderFlex overflowed')),
+        errors.where(
+            (e) => e.exception.toString().contains('RenderFlex overflowed')),
         isEmpty,
-        reason: 'parágrafo-base longo não pode causar overflow — a área de conteúdo precisa ser rolável',
+        reason:
+            'parágrafo-base longo não pode causar overflow — a área de conteúdo precisa ser rolável',
       );
     },
   );
@@ -477,14 +524,16 @@ void main() {
       expect(find.byIcon(Icons.square), findsOneWidget);
       expect(find.text('circle_filled_gold_1'), findsNothing);
 
-      FilledButton confirmButton() =>
-          tester.widget<FilledButton>(find.widgetWithText(FilledButton, 'Confirmar resposta'));
-      expect(confirmButton().onPressed, isNull, reason: 'antes de tocar numa figura, deve estar desabilitado');
+      FilledButton confirmButton() => tester.widget<FilledButton>(
+          find.widgetWithText(FilledButton, 'Confirmar resposta'));
+      expect(confirmButton().onPressed, isNull,
+          reason: 'antes de tocar numa figura, deve estar desabilitado');
 
       await tester.tap(find.byIcon(Icons.square));
       await tester.pump();
 
-      expect(confirmButton().onPressed, isNotNull, reason: 'ao tocar numa figura, o botão deve habilitar');
+      expect(confirmButton().onPressed, isNotNull,
+          reason: 'ao tocar numa figura, o botão deve habilitar');
     },
   );
 
@@ -517,7 +566,8 @@ void main() {
       expect(
         find.textContaining('square_filled_gold_3'),
         findsNothing,
-        reason: 'o id interno da opção nunca deve aparecer cru na tela de resultado',
+        reason:
+            'o id interno da opção nunca deve aparecer cru na tela de resultado',
       );
       expect(find.textContaining('quadrado dourado'), findsOneWidget);
     },
@@ -546,14 +596,17 @@ void main() {
 
       expect(find.text('Qual é a capital do Brasil?'), findsOneWidget);
       expect(find.text('Brasília'), findsOneWidget);
-      expect(find.textContaining('12s'), findsOneWidget, reason: 'contagem regressiva do servidor deve aparecer mesmo sem relampago:true');
+      expect(find.textContaining('12s'), findsOneWidget,
+          reason:
+              'contagem regressiva do servidor deve aparecer mesmo sem relampago:true');
       // CONHECIMENTO_CONTEUDO_GERAL_E_IMAGEM.md §3 — prompt_image opcional
       // do servidor aparece junto com a pergunta, quando presente.
       expect(find.text('🏛️'), findsOneWidget);
       // Formato cronometrado usa OutlinedButton por opção, nunca o
       // TextField digitado nem o botão "Confirmar resposta" separado.
       expect(find.byType(TextField), findsNothing);
-      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'), findsNothing);
+      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'),
+          findsNothing);
     },
   );
 
@@ -578,12 +631,14 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      expect(find.textContaining('A B3 é a bolsa de valores oficial do Brasil'), findsOneWidget);
+      expect(find.textContaining('A B3 é a bolsa de valores oficial do Brasil'),
+          findsOneWidget);
       expect(find.text('O que é a B3?'), findsOneWidget);
       // Nunca cronometrado: usa RadioListTile + botão "Confirmar
       // resposta" separado, nunca o formato de OutlinedButton por opção
       // do Relâmpago.
-      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'), findsOneWidget);
+      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'),
+          findsOneWidget);
     },
   );
 
@@ -592,7 +647,8 @@ void main() {
       final payload = _baseAnswerPayload()
         ..['level_up'] = true
         ..['new_level'] = 3;
-      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+      await _pumpChallengeScreen(
+          tester, _CelebrationFakeApiClient(answerPayload: payload));
 
       expect(find.text('Nível 3 alcançado!'), findsOneWidget);
       // Celebração forte pedida: confete caindo + 2 "fogos" (explosão
@@ -600,11 +656,13 @@ void main() {
       expect(find.byType(ConfettiWidget), findsNWidgets(3));
     });
 
-    testWidgets('level_up mostra botão de compartilhar a conquista', (tester) async {
+    testWidgets('level_up mostra botão de compartilhar a conquista',
+        (tester) async {
       final payload = _baseAnswerPayload()
         ..['level_up'] = true
         ..['new_level'] = 3;
-      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+      await _pumpChallengeScreen(
+          tester, _CelebrationFakeApiClient(answerPayload: payload));
 
       expect(find.text('Compartilhar'), findsOneWidget);
       // Tocar não pode lançar exceção mesmo sem app de compartilhamento
@@ -614,44 +672,85 @@ void main() {
       await tester.pump();
     });
 
-    testWidgets('territory_just_conquered mostra "Território conquistado!"', (tester) async {
+    testWidgets(
+        'Fase 3: xp_cap_reached explica que o teto diário foi atingido (nunca "+0 XP" sem motivo)',
+        (tester) async {
+      final payload = _baseAnswerPayload()
+        ..['xp_awarded'] = 0
+        ..['xp_cap_reached'] = true;
+      await _pumpChallengeScreen(
+          tester, _CelebrationFakeApiClient(answerPayload: payload));
+
+      expect(find.byKey(const Key('xp_cap_message')), findsOneWidget);
+      expect(find.textContaining('Teto diário de XP atingido'), findsOneWidget);
+    });
+
+    testWidgets('Fase 3: xp_boost_applied mostra o boost ativo',
+        (tester) async {
+      final payload = _baseAnswerPayload()..['xp_boost_applied'] = true;
+      await _pumpChallengeScreen(
+          tester, _CelebrationFakeApiClient(answerPayload: payload));
+
+      expect(find.text('Boost de XP ativo: +20%'), findsOneWidget);
+      expect(find.byKey(const Key('xp_cap_message')), findsNothing);
+    });
+
+    testWidgets('territory_just_conquered mostra "Território conquistado!"',
+        (tester) async {
       final payload = _baseAnswerPayload()..['territory_just_conquered'] = true;
-      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+      await _pumpChallengeScreen(
+          tester, _CelebrationFakeApiClient(answerPayload: payload));
 
       expect(find.text('Território conquistado!'), findsOneWidget);
     });
 
-    testWidgets('world_just_completed mostra "{mundo} completo! +{xp} XP de bônus"', (tester) async {
+    testWidgets(
+        'world_just_completed mostra "{mundo} completo! +{xp} XP de bônus"',
+        (tester) async {
       final payload = _baseAnswerPayload()
         ..['world_just_completed'] = true
         ..['completed_world_name'] = 'Mundo da Linguagem'
         ..['world_completion_bonus_xp'] = 100;
-      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+      await _pumpChallengeScreen(
+          tester, _CelebrationFakeApiClient(answerPayload: payload));
 
-      expect(find.text('Mundo da Linguagem completo! +100 XP de bônus'), findsOneWidget);
+      expect(find.text('Mundo da Linguagem completo! +100 XP de bônus'),
+          findsOneWidget);
     });
 
-    testWidgets('newly_awarded_badges mostra "Nova conquista: {nome}!"', (tester) async {
+    testWidgets('newly_awarded_badges mostra "Nova conquista: {nome}!"',
+        (tester) async {
       final payload = _baseAnswerPayload()
         ..['newly_awarded_badges'] = [
-          {'code': 'first_conquest', 'name': 'Primeira Conquista', 'description': '...', 'earned': true, 'earned_at': '2026-01-01'},
+          {
+            'code': 'first_conquest',
+            'name': 'Primeira Conquista',
+            'description': '...',
+            'earned': true,
+            'earned_at': '2026-01-01'
+          },
         ];
-      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+      await _pumpChallengeScreen(
+          tester, _CelebrationFakeApiClient(answerPayload: payload));
 
       expect(find.text('Nova conquista: Primeira Conquista!'), findsOneWidget);
     });
 
-    testWidgets('streak_just_extended mostra "Sequência de X dias mantida!"', (tester) async {
+    testWidgets('streak_just_extended mostra "Sequência de X dias mantida!"',
+        (tester) async {
       final payload = _baseAnswerPayload()
         ..['streak_just_extended'] = true
         ..['streak'] = {'current_streak': 5, 'freeze_available': true};
-      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: payload));
+      await _pumpChallengeScreen(
+          tester, _CelebrationFakeApiClient(answerPayload: payload));
 
       expect(find.text('Sequência de 5 dias mantida!'), findsOneWidget);
     });
 
-    testWidgets('nenhum sinal ativo não mostra nenhum banner de celebração', (tester) async {
-      await _pumpChallengeScreen(tester, _CelebrationFakeApiClient(answerPayload: _baseAnswerPayload()));
+    testWidgets('nenhum sinal ativo não mostra nenhum banner de celebração',
+        (tester) async {
+      await _pumpChallengeScreen(tester,
+          _CelebrationFakeApiClient(answerPayload: _baseAnswerPayload()));
 
       expect(find.textContaining('alcançado!'), findsNothing);
       expect(find.textContaining('conquistado!'), findsNothing);
@@ -659,7 +758,9 @@ void main() {
       expect(find.textContaining('mantida!'), findsNothing);
     });
 
-    testWidgets('"reduzir movimento" ativado não quebra a tela de celebração forte', (tester) async {
+    testWidgets(
+        '"reduzir movimento" ativado não quebra a tela de celebração forte',
+        (tester) async {
       // Regressão: MediaQuery.of() dentro de PulseIn.initState() lançava
       // "dependOnInheritedWidgetOfExactType called before initState()
       // completed" — corrigido movendo a leitura para didChangeDependencies.
@@ -677,13 +778,16 @@ void main() {
         disableAnimations: true,
       );
 
-      expect(errors, isEmpty, reason: '"reduzir movimento" não pode causar exceção ao celebrar um evento forte');
+      expect(errors, isEmpty,
+          reason:
+              '"reduzir movimento" não pode causar exceção ao celebrar um evento forte');
       expect(find.text('Nível 2 alcançado!'), findsOneWidget);
     });
   });
 
   group('Feedback Pós-Nível (FEEDBACK_POS_NIVEL.md)', () {
-    Future<_FeedbackTrackingFakeApiClient> pumpAndAnswer(WidgetTester tester) async {
+    Future<_FeedbackTrackingFakeApiClient> pumpAndAnswer(
+        WidgetTester tester) async {
       final client = _FeedbackTrackingFakeApiClient();
       await tester.pumpWidget(
         MaterialApp(
@@ -694,7 +798,10 @@ void main() {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: AppLocalizations.supportedLocales,
-          home: ChallengeScreen(client: client, territoryId: 'numeros', territoryLabel: 'Números'),
+          home: ChallengeScreen(
+              client: client,
+              territoryId: 'numeros',
+              territoryLabel: 'Números'),
         ),
       );
       await tester.pumpAndSettle();
@@ -706,7 +813,9 @@ void main() {
       return client;
     }
 
-    testWidgets('tela de resultado mostra os blocos de ação e dificuldade em vez do botão "Próximo desafio"', (tester) async {
+    testWidgets(
+        'tela de resultado mostra os blocos de ação e dificuldade em vez do botão "Próximo desafio"',
+        (tester) async {
       await pumpAndAnswer(tester);
 
       expect(find.text('Como foi esse nível?'), findsOneWidget);
@@ -716,10 +825,13 @@ void main() {
       expect(find.text('Médio'), findsOneWidget);
       expect(find.text('Difícil'), findsOneWidget);
       expect(find.text('Muito difícil'), findsOneWidget);
-      expect(find.widgetWithText(FilledButton, 'Próximo desafio'), findsNothing);
+      expect(
+          find.widgetWithText(FilledButton, 'Próximo desafio'), findsNothing);
     });
 
-    testWidgets('"Repetir este nível" envia o feedback e NÃO busca um desafio novo', (tester) async {
+    testWidgets(
+        '"Repetir este nível" envia o feedback e NÃO busca um desafio novo',
+        (tester) async {
       final client = await pumpAndAnswer(tester);
       final callsBefore = client.nextChallengeCalls;
 
@@ -728,7 +840,8 @@ void main() {
       await tester.tap(find.text('Médio'));
       await tester.pump();
 
-      expect(client.nextChallengeCalls, callsBefore, reason: 'repetir não deve chamar /challenges/next de novo');
+      expect(client.nextChallengeCalls, callsBefore,
+          reason: 'repetir não deve chamar /challenges/next de novo');
       expect(client.feedbackSubmissions, hasLength(1));
       expect(client.feedbackSubmissions.single['action'], 'repeat');
       expect(client.feedbackSubmissions.single['difficulty_rating'], 'medio');
@@ -736,7 +849,8 @@ void main() {
       expect(find.text('Quanto é 2 + 2?'), findsOneWidget);
     });
 
-    testWidgets('"Seguir em frente" envia o feedback e busca o próximo desafio', (tester) async {
+    testWidgets('"Seguir em frente" envia o feedback e busca o próximo desafio',
+        (tester) async {
       final client = await pumpAndAnswer(tester);
       final callsBefore = client.nextChallengeCalls;
 
@@ -756,7 +870,9 @@ void main() {
       expect(client.feedbackSubmissions.single['difficulty_rating'], 'dificil');
     });
 
-    testWidgets('sem campo de comentário livre, o envio manda comment=null (campo removido 07/09/2026)', (tester) async {
+    testWidgets(
+        'sem campo de comentário livre, o envio manda comment=null (campo removido 07/09/2026)',
+        (tester) async {
       final client = await pumpAndAnswer(tester);
 
       await tester.tap(find.text('Seguir em frente'));
@@ -768,7 +884,9 @@ void main() {
       expect(client.feedbackSubmissions.single['comment'], isNull);
     });
 
-    testWidgets('regressão: SEM level_up, mostra "Próximo desafio" normal, não o bloco de feedback', (tester) async {
+    testWidgets(
+        'regressão: SEM level_up, mostra "Próximo desafio" normal, não o bloco de feedback',
+        (tester) async {
       final client = _FeedbackTrackingFakeApiClient()..levelUpOnAnswer = false;
       await tester.pumpWidget(
         MaterialApp(
@@ -779,7 +897,10 @@ void main() {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: AppLocalizations.supportedLocales,
-          home: ChallengeScreen(client: client, territoryId: 'numeros', territoryLabel: 'Números'),
+          home: ChallengeScreen(
+              client: client,
+              territoryId: 'numeros',
+              territoryLabel: 'Números'),
         ),
       );
       await tester.pumpAndSettle();
@@ -791,7 +912,8 @@ void main() {
 
       expect(find.text('Como foi esse nível?'), findsNothing);
       expect(find.text('Repetir este nível'), findsNothing);
-      expect(find.widgetWithText(FilledButton, 'Próximo desafio'), findsOneWidget);
+      expect(
+          find.widgetWithText(FilledButton, 'Próximo desafio'), findsOneWidget);
 
       // Achado real (2026-08-26): mostrar em toda resposta causava
       // fricção — este é o cenário que fazia isso acontecer antes da
@@ -805,7 +927,9 @@ void main() {
   });
 
   group('Engenharia_Geral/BUG_DESAFIO_NAO_AVANCA.md (regressão)', () {
-    testWidgets('erro ao responder mostra SnackBar e deixa o usuário tentar de novo, em vez de travar em silêncio', (tester) async {
+    testWidgets(
+        'erro ao responder mostra SnackBar e deixa o usuário tentar de novo, em vez de travar em silêncio',
+        (tester) async {
       final client = _AnswerFailsFakeApiClient();
       await tester.pumpWidget(
         MaterialApp(
@@ -816,7 +940,10 @@ void main() {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: AppLocalizations.supportedLocales,
-          home: ChallengeScreen(client: client, territoryId: 'numeros', territoryLabel: 'Números'),
+          home: ChallengeScreen(
+              client: client,
+              territoryId: 'numeros',
+              territoryLabel: 'Números'),
         ),
       );
       await tester.pumpAndSettle();
@@ -829,12 +956,17 @@ void main() {
 
       // Antes da correção: nada disso aparecia, e a tela ficava presa no
       // mesmo desafio sem nenhum aviso (indistinguível de "travou").
-      expect(find.text('Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.'), findsOneWidget);
-      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'), findsOneWidget);
+      expect(
+          find.text(
+              'Você mandou bem hoje! Volte amanhã para mais 24 desafios grátis.'),
+          findsOneWidget);
+      expect(find.widgetWithText(FilledButton, 'Confirmar resposta'),
+          findsOneWidget);
 
       // Dispensa o SnackBar explicitamente antes de tentar de novo — no
       // viewport pequeno do teste ele sobrepõe o botão embaixo dele.
-      ScaffoldMessenger.of(tester.element(find.byType(ChallengeScreen))).hideCurrentSnackBar();
+      ScaffoldMessenger.of(tester.element(find.byType(ChallengeScreen)))
+          .hideCurrentSnackBar();
       await tester.pumpAndSettle();
 
       // O usuário consegue tentar de novo — segunda tentativa (o fake
@@ -844,7 +976,8 @@ void main() {
       await tester.pump(const Duration(milliseconds: 100));
 
       expect(client.submitAnswerCalls, 2);
-      expect(find.widgetWithText(FilledButton, 'Próximo desafio'), findsOneWidget);
+      expect(
+          find.widgetWithText(FilledButton, 'Próximo desafio'), findsOneWidget);
     });
   });
 }

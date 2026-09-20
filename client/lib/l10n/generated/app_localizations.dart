@@ -3699,6 +3699,132 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Mais tarde'**
   String get updateLaterButton;
+
+  /// Section title in MentalCoins screen for boost/repair
+  ///
+  /// In pt, this message translates to:
+  /// **'Turbinar e proteger'**
+  String get economySectionTitle;
+
+  /// Boost item name
+  ///
+  /// In pt, this message translates to:
+  /// **'Boost de XP'**
+  String get economyBoostName;
+
+  /// Boost item description
+  ///
+  /// In pt, this message translates to:
+  /// **'+{percent}% de XP nas respostas por 24 horas.'**
+  String economyBoostDescription(int percent);
+
+  /// Boost active label
+  ///
+  /// In pt, this message translates to:
+  /// **'Ativo até {time}'**
+  String economyBoostActiveUntil(String time);
+
+  /// Buy button
+  ///
+  /// In pt, this message translates to:
+  /// **'Ativar'**
+  String get economyBoostBuyButton;
+
+  /// Error when boost already active
+  ///
+  /// In pt, this message translates to:
+  /// **'Você já tem um boost ativo.'**
+  String get economyBoostAlreadyActive;
+
+  /// Warning that boost is useless today
+  ///
+  /// In pt, this message translates to:
+  /// **'Você já atingiu o teto de XP de hoje — o boost só rende XP a partir de amanhã.'**
+  String get economyBoostCapWarning;
+
+  /// Snackbar after boost purchase
+  ///
+  /// In pt, this message translates to:
+  /// **'Boost ativado por 24 horas!'**
+  String get economyBoostSuccess;
+
+  /// Streak repair item name
+  ///
+  /// In pt, this message translates to:
+  /// **'Reparar sequência'**
+  String get economyRepairName;
+
+  /// Streak repair description
+  ///
+  /// In pt, this message translates to:
+  /// **'Recupere sua sequência de {days} dias até {date}.'**
+  String economyRepairDescription(int days, String date);
+
+  /// Streak repair unavailable
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhuma sequência quebrada para reparar.'**
+  String get economyRepairUnavailable;
+
+  /// Repair button
+  ///
+  /// In pt, this message translates to:
+  /// **'Reparar'**
+  String get economyRepairButton;
+
+  /// Repair success (immediate)
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência reparada! Agora são {days} dias.'**
+  String economyRepairSuccessNow(int days);
+
+  /// Repair success (on next play)
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência reparada! Ela volta assim que você jogar hoje.'**
+  String get economyRepairSuccessNextPlay;
+
+  /// Repair error
+  ///
+  /// In pt, this message translates to:
+  /// **'Nada para reparar agora.'**
+  String get economyRepairNothing;
+
+  /// Daily XP progress
+  ///
+  /// In pt, this message translates to:
+  /// **'XP de respostas hoje: {earned}/{cap}'**
+  String economyDailyXpLabel(int earned, int cap);
+
+  /// Shown in answer result when cap hit
+  ///
+  /// In pt, this message translates to:
+  /// **'Teto diário de XP atingido — seu progresso no território continua contando.'**
+  String get economyDailyCapReachedMessage;
+
+  /// Shown in answer result when boost applied
+  ///
+  /// In pt, this message translates to:
+  /// **'Boost de XP ativo: +{percent}%'**
+  String economyBoostAppliedMessage(int percent);
+
+  /// Home banner offering repair
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua sequência de {days} dias quebrou. Repare por {cost} MentalCoins até {date}.'**
+  String homeStreakRepairBanner(int days, int cost, String date);
+
+  /// Home banner action
+  ///
+  /// In pt, this message translates to:
+  /// **'Ver'**
+  String get homeStreakRepairBannerAction;
+
+  /// Home chip while boost active
+  ///
+  /// In pt, this message translates to:
+  /// **'Boost +{percent}% até {time}'**
+  String homeBoostChip(int percent, String time);
 }
 
 class _AppLocalizationsDelegate

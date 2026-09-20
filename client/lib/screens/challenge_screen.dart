@@ -1529,6 +1529,22 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   style: AppTheme.technicalStyle(
                       color: AppColors.gold, fontSize: 14),
                 ),
+                // Fase 3: teto diário / boost — sempre texto explicando por
+                // que o XP veio menor ou maior (nunca "+0 XP" sem motivo).
+                if (result['xp_cap_reached'] == true) ...[
+                  const SizedBox(height: 8),
+                  Text(
+                    l10n.economyDailyCapReachedMessage,
+                    key: const Key('xp_cap_message'),
+                    style: TextStyle(color: AppColors.muted, fontSize: 13),
+                  ),
+                ] else if (result['xp_boost_applied'] == true) ...[
+                  const SizedBox(height: 8),
+                  Text(
+                    l10n.economyBoostAppliedMessage(20),
+                    style: TextStyle(color: AppColors.teal, fontSize: 13),
+                  ),
+                ],
                 if (speedBonusXp > 0) ...[
                   const SizedBox(height: 8),
                   PulseIn(

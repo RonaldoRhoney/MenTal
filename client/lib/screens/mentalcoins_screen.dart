@@ -32,6 +32,8 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
   Map<String, dynamic>? _balance;
   List<Map<String, dynamic>>? _hallOfFame;
   List<Map<String, dynamic>>? _catalog;
+  Map<String, dynamic>? _economy;
+  bool _buyingEconomy = false;
   String? _error;
   String? _redeemingItemId;
 
@@ -51,11 +53,23 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
       if (!mounted) return;
       setState(() {
         _balance = results[0];
-        _hallOfFame = (results[1]['entries'] as List).cast<Map<String, dynamic>>();
+        _hallOfFame =
+            (results[1]['entries'] as List).cast<Map<String, dynamic>>();
         _catalog = (results[2]['items'] as List).cast<Map<String, dynamic>>();
       });
+      _loadEconomy();
     } on ApiException catch (e) {
       if (mounted) setState(() => _error = e.message);
+    }
+  }
+
+  // Fase 3: falha aqui nunca esconde o resto da loja.
+  Future<void> _loadEconomy() async {
+    try {
+      final economy = await widget.client.getEconomyStatus();
+      if (mounted) setState(() => _economy = economy);
+    } on ApiException {
+      // seção some, o resto da loja segue
     }
   }
 
@@ -67,16 +81,117 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
       if (!mounted) return;
       setState(() {
         _balance = balance;
-        _catalog = _catalog!.map((item) => item['id'] == itemId ? {...item, 'redeemed': true} : item).toList();
+        _catalog = _catalog!
+            .map((item) =>
+                item['id'] == itemId ? {...item, 'redeemed': true} : item)
+            .toList();
       });
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l10n.mentalCoinsRedeemSuccessMessage)));
+      ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.mentalCoinsRedeemSuccessMessage)));
     } on ApiException catch (e) {
       if (!mounted) return;
-      final message = e.code == 'INSUFFICIENT_BALANCE' ? l10n.mentalCoinsInsufficientBalanceError : e.message;
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+      final message = e.code == 'INSUFFICIENT_BALANCE'
+          ? l10n.mentalCoinsInsufficientBalanceError
+          : e.message;
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(message)));
     } finally {
       if (mounted) setState(() => _redeemingItemId = null);
     }
+  }
+
+  String _hhmm(String iso) {
+    final t = DateTime.parse(iso.endsWith('Z') ? iso : '${iso}Z').toLocal();
+    return '${t.hour.toString().padLeft(2, '0')}:${t.minute.toString().padLeft(2, '0')}';
+  }
+
+  String _ddmm(String isoDate) {
+    final p = isoDate.split('-');
+    return '${p[2]}/${p[1]}';
+  }
+
+  Future<void> _buyEconomy({required bool boost}) async {
+    final l10n = AppLocalizations.of(context)!;
+    setState(() => _buyingEconomy = true);
+    try {
+      String message;
+      if (boost) {
+        await widget.client.buyXpBoost();
+        message = l10n.economyBoostSuccess;
+      } else {
+        final result = await widget.client.repairStreak();
+        message = result['applied_immediately'] == true
+            ? l10n.economyRepairSuccessNow(result['current_streak'] as int)
+            : l10n.economyRepairSuccessNextPlay;
+      }
+      if (!mounted) return;
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(message)));
+      await _load();
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      final message = switch (e.code) {
+        'INSUFFICIENT_BALANCE' => l10n.mentalCoinsInsufficientBalanceError,
+        'BOOST_ALREADY_ACTIVE' => l10n.economyBoostAlreadyActive,
+        'NOTHING_TO_REPAIR' => l10n.economyRepairNothing,
+        _ => e.message,
+      };
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(message)));
+      await _load();
+    } finally {
+      if (mounted) setState(() => _buyingEconomy = false);
+    }
+  }
+
+  List<Widget> _buildEconomySection(AppLocalizations l10n, int coins) {
+    final e = _economy;
+    if (e == null) return const [];
+    final boostActive = e['boost_active'] as bool;
+    final boostCost = e['boost_cost'] as int;
+    final capReached =
+        (e['daily_xp_earned'] as int) >= (e['daily_xp_cap'] as int);
+    final repair = e['repair'] as Map<String, dynamic>?;
+    return [
+      const SizedBox(height: 20),
+      _SectionHeader(title: l10n.economySectionTitle),
+      const SizedBox(height: 10),
+      Text(
+        l10n.economyDailyXpLabel(
+            e['daily_xp_earned'] as int, e['daily_xp_cap'] as int),
+        style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+      ),
+      const SizedBox(height: 8),
+      _EconomyTile(
+        icon: Icons.bolt_rounded,
+        name: l10n.economyBoostName,
+        description: boostActive
+            ? l10n
+                .economyBoostActiveUntil(_hhmm(e['boost_expires_at'] as String))
+            : l10n.economyBoostDescription(e['boost_percent'] as int),
+        warning:
+            (!boostActive && capReached) ? l10n.economyBoostCapWarning : null,
+        cost: boostCost,
+        buttonLabel: l10n.economyBoostBuyButton,
+        enabled: !boostActive && coins >= boostCost && !_buyingEconomy,
+        onPressed: () => _buyEconomy(boost: true),
+      ),
+      const SizedBox(height: 8),
+      _EconomyTile(
+        icon: Icons.local_fire_department_rounded,
+        name: l10n.economyRepairName,
+        description: repair == null
+            ? l10n.economyRepairUnavailable
+            : l10n.economyRepairDescription(repair['streak_to_restore'] as int,
+                _ddmm(repair['expires_on'] as String)),
+        cost: repair?['cost'] as int? ?? 50,
+        buttonLabel: l10n.economyRepairButton,
+        enabled: repair != null &&
+            coins >= (repair['cost'] as int) &&
+            !_buyingEconomy,
+        onPressed: () => _buyEconomy(boost: false),
+      ),
+    ];
   }
 
   @override
@@ -90,7 +205,10 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
         child: balance == null
             ? Center(
                 child: _error != null
-                    ? Padding(padding: const EdgeInsets.all(24), child: Text(_error!, style: TextStyle(color: AppColors.error)))
+                    ? Padding(
+                        padding: const EdgeInsets.all(24),
+                        child: Text(_error!,
+                            style: TextStyle(color: AppColors.error)))
                     : const CircularProgressIndicator(),
               )
             // Pedido de Rhoney (04/09/2026): pull-to-refresh em qualquer
@@ -99,41 +217,60 @@ class _MentalCoinsScreenState extends State<MentalCoinsScreen> {
                 onRefresh: _load,
                 color: AppColors.gold,
                 child: ListView(
-                padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                children: [
-                  _BalanceCard(balance: balance['balance'] as int, cycleStart: balance['cycle_start'] as String, cycleEnd: balance['cycle_end'] as String),
-                  const SizedBox(height: 20),
-                  _SectionHeader(title: l10n.mentalCoinsHowToEarnTitle),
-                  const SizedBox(height: 10),
-                  _RewardTrackCard(icon: Icons.bolt_rounded, color: AppColors.gold, label: l10n.mentalCoinsXpDailyLabel, value: l10n.mentalCoinsXpDailyValue),
-                  const SizedBox(height: 8),
-                  _RewardTrackCard(icon: Icons.directions_walk_rounded, color: AppColors.victory, label: l10n.mentalCoinsStepsWeekLabel, value: l10n.mentalCoinsStepsWeekValue),
-                  const SizedBox(height: 8),
-                  _RewardTrackCard(icon: Icons.local_fire_department_rounded, color: AppColors.purple, label: l10n.mentalCoinsStepsDayLabel, value: l10n.mentalCoinsStepsDayValue),
-                  const SizedBox(height: 20),
-                  _SectionHeader(title: l10n.mentalCoinsHallOfFameTitle),
-                  const SizedBox(height: 10),
-                  if ((_hallOfFame ?? []).isEmpty)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 4),
-                      child: Text(l10n.mentalCoinsHallOfFameEmpty, style: Theme.of(context).textTheme.bodySmall),
-                    )
-                  else
-                    ..._hallOfFame!.map((entry) => _HallOfFameTile(client: widget.client, entry: entry)),
-                  const SizedBox(height: 20),
-                  _SectionHeader(title: l10n.mentalCoinsRedeemTitle),
-                  const SizedBox(height: 10),
-                  ...(_catalog ?? []).map(
-                    (item) => _CatalogTile(
-                      item: item,
-                      redeeming: _redeemingItemId == item['id'],
-                      currentBalance: balance['balance'] as int,
-                      onRedeem: () => _redeem(item['id'] as String),
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                  children: [
+                    _BalanceCard(
+                        balance: balance['balance'] as int,
+                        cycleStart: balance['cycle_start'] as String,
+                        cycleEnd: balance['cycle_end'] as String),
+                    const SizedBox(height: 20),
+                    _SectionHeader(title: l10n.mentalCoinsHowToEarnTitle),
+                    const SizedBox(height: 10),
+                    _RewardTrackCard(
+                        icon: Icons.bolt_rounded,
+                        color: AppColors.gold,
+                        label: l10n.mentalCoinsXpDailyLabel,
+                        value: l10n.mentalCoinsXpDailyValue),
+                    const SizedBox(height: 8),
+                    _RewardTrackCard(
+                        icon: Icons.directions_walk_rounded,
+                        color: AppColors.victory,
+                        label: l10n.mentalCoinsStepsWeekLabel,
+                        value: l10n.mentalCoinsStepsWeekValue),
+                    const SizedBox(height: 8),
+                    _RewardTrackCard(
+                        icon: Icons.local_fire_department_rounded,
+                        color: AppColors.purple,
+                        label: l10n.mentalCoinsStepsDayLabel,
+                        value: l10n.mentalCoinsStepsDayValue),
+                    const SizedBox(height: 20),
+                    _SectionHeader(title: l10n.mentalCoinsHallOfFameTitle),
+                    const SizedBox(height: 10),
+                    if ((_hallOfFame ?? []).isEmpty)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 4),
+                        child: Text(l10n.mentalCoinsHallOfFameEmpty,
+                            style: Theme.of(context).textTheme.bodySmall),
+                      )
+                    else
+                      ..._hallOfFame!.map((entry) =>
+                          _HallOfFameTile(client: widget.client, entry: entry)),
+                    const SizedBox(height: 20),
+                    ..._buildEconomySection(l10n, balance['balance'] as int),
+                    const SizedBox(height: 20),
+                    _SectionHeader(title: l10n.mentalCoinsRedeemTitle),
+                    const SizedBox(height: 10),
+                    ...(_catalog ?? []).map(
+                      (item) => _CatalogTile(
+                        item: item,
+                        redeeming: _redeemingItemId == item['id'],
+                        currentBalance: balance['balance'] as int,
+                        onRedeem: () => _redeem(item['id'] as String),
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
                 ),
+              ),
       ),
     );
   }
@@ -151,16 +288,25 @@ class _SectionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(width: 3, height: 16, decoration: BoxDecoration(color: AppColors.gold, borderRadius: BorderRadius.circular(2))),
+        Container(
+            width: 3,
+            height: 16,
+            decoration: BoxDecoration(
+                color: AppColors.gold, borderRadius: BorderRadius.circular(2))),
         const SizedBox(width: 8),
-        Text(title, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 17)),
+        Text(title,
+            style:
+                Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 17)),
       ],
     );
   }
 }
 
 class _BalanceCard extends StatelessWidget {
-  const _BalanceCard({required this.balance, required this.cycleStart, required this.cycleEnd});
+  const _BalanceCard(
+      {required this.balance,
+      required this.cycleStart,
+      required this.cycleEnd});
 
   final int balance;
   final String cycleStart;
@@ -184,7 +330,13 @@ class _BalanceCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
       decoration: BoxDecoration(
-        gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [AppColors.bg2, Color.lerp(AppColors.bg2, AppColors.gold, 0.1)!]),
+        gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColors.bg2,
+              Color.lerp(AppColors.bg2, AppColors.gold, 0.1)!
+            ]),
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: AppColors.gold.withValues(alpha: 0.35)),
       ),
@@ -197,11 +349,17 @@ class _BalanceCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('$balance', style: Theme.of(context).textTheme.headlineSmall?.copyWith(height: 1.1)),
+                Text('$balance',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall
+                        ?.copyWith(height: 1.1)),
                 const SizedBox(height: 2),
                 Text(
-                  l10n.mentalCoinsCycleNote(_shortDate(cycleEnd), _shortDate(cycleStart)),
-                  style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11),
+                  l10n.mentalCoinsCycleNote(
+                      _shortDate(cycleEnd), _shortDate(cycleStart)),
+                  style: AppTheme.technicalStyle(
+                      color: AppColors.muted, fontSize: 11),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                 ),
@@ -215,7 +373,11 @@ class _BalanceCard extends StatelessWidget {
 }
 
 class _RewardTrackCard extends StatelessWidget {
-  const _RewardTrackCard({required this.icon, required this.color, required this.label, required this.value});
+  const _RewardTrackCard(
+      {required this.icon,
+      required this.color,
+      required this.label,
+      required this.value});
 
   final IconData icon;
   final Color color;
@@ -226,7 +388,8 @@ class _RewardTrackCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-      decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+      decoration: BoxDecoration(
+          color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -234,15 +397,22 @@ class _RewardTrackCard extends StatelessWidget {
             width: 32,
             height: 32,
             alignment: Alignment.center,
-            decoration: BoxDecoration(shape: BoxShape.circle, color: color.withValues(alpha: 0.14)),
+            decoration: BoxDecoration(
+                shape: BoxShape.circle, color: color.withValues(alpha: 0.14)),
             child: Icon(icon, color: color, size: 17),
           ),
           const SizedBox(width: 12),
           Expanded(
-            child: Text(label, style: Theme.of(context).textTheme.bodyMedium, maxLines: 2, overflow: TextOverflow.ellipsis),
+            child: Text(label,
+                style: Theme.of(context).textTheme.bodyMedium,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis),
           ),
           const SizedBox(width: 10),
-          Text(value, style: AppTheme.technicalStyle(color: color, fontSize: 13).copyWith(fontWeight: FontWeight.w700), textAlign: TextAlign.right),
+          Text(value,
+              style: AppTheme.technicalStyle(color: color, fontSize: 13)
+                  .copyWith(fontWeight: FontWeight.w700),
+              textAlign: TextAlign.right),
         ],
       ),
     );
@@ -282,40 +452,53 @@ class _HallOfFameTile extends StatelessWidget {
           // aprovado (PERFIL_PUBLICO_E_TORCIDA_V1.md §3).
           borderRadius: BorderRadius.circular(14),
           onTap: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (_) => PublicProfileScreen(client: client, userId: entry['user_id'] as String)),
+            MaterialPageRoute(
+                builder: (_) => PublicProfileScreen(
+                    client: client, userId: entry['user_id'] as String)),
           ),
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),
-              border: isFirst ? Border.all(color: AppColors.gold.withValues(alpha: 0.4)) : null,
+              border: isFirst
+                  ? Border.all(color: AppColors.gold.withValues(alpha: 0.4))
+                  : null,
             ),
             child: Row(
-          children: [
-            Icon(Icons.emoji_events, color: isFirst ? AppColors.gold : AppColors.muted, size: 20),
-            const SizedBox(width: 10),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  // Nome real substitui o apelido gerado pelo sistema
-                  // assim que existir (29/08/2026, pedido de Rhoney).
-                  Text(
-                    () {
-                      final realName = entry['real_name'] as String?;
-                      return realName != null && realName.isNotEmpty ? realName : entry['nickname'] as String;
-                    }(),
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    overflow: TextOverflow.ellipsis,
+              children: [
+                Icon(Icons.emoji_events,
+                    color: isFirst ? AppColors.gold : AppColors.muted,
+                    size: 20),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // Nome real substitui o apelido gerado pelo sistema
+                      // assim que existir (29/08/2026, pedido de Rhoney).
+                      Text(
+                        () {
+                          final realName = entry['real_name'] as String?;
+                          return realName != null && realName.isNotEmpty
+                              ? realName
+                              : entry['nickname'] as String;
+                        }(),
+                        style: Theme.of(context).textTheme.bodyMedium,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(_categoryLabel(entry['category'] as String, rank),
+                          style: AppTheme.technicalStyle(
+                              color: AppColors.muted, fontSize: 11)),
+                    ],
                   ),
-                  Text(_categoryLabel(entry['category'] as String, rank), style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11)),
-                ],
-              ),
-            ),
-            const SizedBox(width: 8),
-            Text('+${entry['amount']}', style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 13).copyWith(fontWeight: FontWeight.w700)),
-          ],
+                ),
+                const SizedBox(width: 8),
+                Text('+${entry['amount']}',
+                    style: AppTheme.technicalStyle(
+                            color: AppColors.gold, fontSize: 13)
+                        .copyWith(fontWeight: FontWeight.w700)),
+              ],
             ),
           ),
         ),
@@ -325,7 +508,11 @@ class _HallOfFameTile extends StatelessWidget {
 }
 
 class _CatalogTile extends StatelessWidget {
-  const _CatalogTile({required this.item, required this.redeeming, required this.currentBalance, required this.onRedeem});
+  const _CatalogTile(
+      {required this.item,
+      required this.redeeming,
+      required this.currentBalance,
+      required this.onRedeem});
 
   final Map<String, dynamic> item;
   final bool redeeming;
@@ -343,7 +530,8 @@ class _CatalogTile extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 8),
       child: Container(
         padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+        decoration: BoxDecoration(
+            color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
         child: Row(
           children: [
             const MentalCoin(size: 30),
@@ -353,16 +541,26 @@ class _CatalogTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(item['name'] as String, style: Theme.of(context).textTheme.bodyLarge, overflow: TextOverflow.ellipsis),
-                  Text(item['description'] as String, style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 11), maxLines: 2, overflow: TextOverflow.ellipsis),
+                  Text(item['name'] as String,
+                      style: Theme.of(context).textTheme.bodyLarge,
+                      overflow: TextOverflow.ellipsis),
+                  Text(item['description'] as String,
+                      style: AppTheme.technicalStyle(
+                          color: AppColors.muted, fontSize: 11),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis),
                   const SizedBox(height: 3),
-                  Text('$cost MentalCoins', style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 12)),
+                  Text('$cost MentalCoins',
+                      style: AppTheme.technicalStyle(
+                          color: AppColors.gold, fontSize: 12)),
                 ],
               ),
             ),
             const SizedBox(width: 8),
             if (redeemed)
-              Text(l10n.mentalCoinsRedeemedLabel, style: AppTheme.technicalStyle(color: AppColors.victory, fontSize: 12))
+              Text(l10n.mentalCoinsRedeemedLabel,
+                  style: AppTheme.technicalStyle(
+                      color: AppColors.victory, fontSize: 12))
             else
               // Achado real em dispositivo (29/08/2026): o ThemeData global
               // dá minimumSize: Size.fromHeight(48) a todo FilledButton (ou
@@ -374,14 +572,94 @@ class _CatalogTile extends StatelessWidget {
               // Sobrescrever minimumSize aqui remove a exigência de largura
               // infinita só neste botão compacto.
               FilledButton(
-                style: FilledButton.styleFrom(minimumSize: const Size(0, 38), padding: const EdgeInsets.symmetric(horizontal: 14)),
+                style: FilledButton.styleFrom(
+                    minimumSize: const Size(0, 38),
+                    padding: const EdgeInsets.symmetric(horizontal: 14)),
                 onPressed: (redeeming || !canAfford) ? null : onRedeem,
                 child: redeeming
-                    ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))
-                    : Text(l10n.mentalCoinsRedeemButton, style: const TextStyle(fontSize: 13)),
+                    ? const SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(strokeWidth: 2))
+                    : Text(l10n.mentalCoinsRedeemButton,
+                        style: const TextStyle(fontSize: 13)),
               ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// Boost de XP / reparo de sequência (Fase 3) — mesmo visual do
+/// _CatalogTile, mas sem "resgatado": o item pode ser comprado de novo.
+class _EconomyTile extends StatelessWidget {
+  const _EconomyTile({
+    required this.icon,
+    required this.name,
+    required this.description,
+    required this.cost,
+    required this.buttonLabel,
+    required this.enabled,
+    required this.onPressed,
+    this.warning,
+  });
+
+  final IconData icon;
+  final String name;
+  final String description;
+  final String? warning;
+  final int cost;
+  final String buttonLabel;
+  final bool enabled;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+          color: AppColors.bg2, borderRadius: BorderRadius.circular(14)),
+      child: Row(
+        children: [
+          Icon(icon, color: AppColors.gold, size: 30),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(name,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    overflow: TextOverflow.ellipsis),
+                Text(description,
+                    style: AppTheme.technicalStyle(
+                        color: AppColors.muted, fontSize: 11),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis),
+                if (warning != null)
+                  Text(warning!,
+                      style: AppTheme.technicalStyle(
+                          color: AppColors.gold, fontSize: 11),
+                      maxLines: 3),
+                const SizedBox(height: 3),
+                Text('$cost MentalCoins',
+                    style: AppTheme.technicalStyle(
+                        color: AppColors.gold, fontSize: 12)),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          // minimumSize sobrescrito: o tema global dá largura mínima infinita
+          // ao FilledButton (ver comentário em _CatalogTile).
+          FilledButton(
+            style: FilledButton.styleFrom(
+                minimumSize: const Size(0, 38),
+                padding: const EdgeInsets.symmetric(horizontal: 14)),
+            onPressed: enabled ? onPressed : null,
+            child: Text(buttonLabel, style: const TextStyle(fontSize: 13)),
+          ),
+        ],
       ),
     );
   }

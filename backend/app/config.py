@@ -584,3 +584,21 @@ MOVEMENT_ACTIVE_STREAK_COINS = 10
 BATCH_COMPLETE_BONUS_XP = 3
 BATCH_PERFECT_BONUS_XP = 5
 BATCH_PERFECT_MIN_ANSWERS = 2
+
+# REGRA_OFICIAL_GAMIFICACAO_MENTAL.md Fase 3 (20/09/2026, decisões de
+# Rhoney): teto diário de XP de resposta (Desafio + Relâmpago), reparo de
+# streak e boost de XP — os dois últimos são os sinks de MentalCoins.
+# Teto: só o XP de PERFIL para; o progresso do território segue contando.
+DAILY_ANSWER_XP_CAP = 150
+# Reparo: streak de pelo menos 2 dias (reparar 1 dia não faz sentido);
+# a janela é até o fim do dia seguinte à quebra (última jogada + 3 dias).
+STREAK_REPAIR_COST = 50
+STREAK_REPAIR_MIN_STREAK = 2
+STREAK_REPAIR_WINDOW_DAYS = 3
+# Boost: +20% no XP de resposta por 24h; comprar com boost ativo é
+# bloqueado (não empilha, não gasta moeda).
+XP_BOOST_COST = 80
+XP_BOOST_PERCENT = 20
+XP_BOOST_HOURS = 24
+# Compras (boost/reparo): teto de tentativas por minuto.
+RATE_LIMIT_ECONOMY_BUY = (10, 60.0)

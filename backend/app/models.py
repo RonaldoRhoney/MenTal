@@ -734,6 +734,33 @@ class Streak(Base):
     freeze_available: Mapped[bool] = mapped_column(Boolean, default=True)
     freeze_used_this_week: Mapped[bool] = mapped_column(Boolean, default=False)
     week_anchor: Mapped[date | None] = mapped_column(Date, nullable=True)
+    # Fase 3 (reparo de streak, 20/09/2026): valor da sequência que acabou
+    # de quebrar e até quando dá pra repará-la (50 MentalCoins). Gravado
+    # pelo servidor no reset; limpo quando o reparo é feito.
+    lost_streak: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    repair_until: Mapped[date | None] = mapped_column(Date, nullable=True)
+
+
+class DailyAnswerXp(Base):
+    """Fase 3 — XP de perfil ganho em respostas (Desafio + Relâmpago) no
+    dia UTC; base do teto diário de 150 XP. Atualizada só com o Profile
+    travado (FOR UPDATE), então respostas concorrentes não furam o teto."""
+
+    __tablename__ = "daily_answer_xp"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    xp_date: Mapped[date] = mapped_column(Date, primary_key=True)
+    xp_earned: Mapped[int] = mapped_column(Integer, default=0)
+
+
+class XpBoost(Base):
+    """Fase 3 — boost de +20% de XP de resposta; 1 linha por usuário,
+    `expires_at` no futuro = ativo."""
+
+    __tablename__ = "xp_boosts"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    expires_at: Mapped[datetime] = mapped_column(DateTime)
 
 
 class Subscription(Base):

@@ -2118,4 +2118,87 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get updateLaterButton => 'Mais tarde';
+
+  @override
+  String get economySectionTitle => 'Turbinar e proteger';
+
+  @override
+  String get economyBoostName => 'Boost de XP';
+
+  @override
+  String economyBoostDescription(int percent) {
+    return '+$percent% de XP nas respostas por 24 horas.';
+  }
+
+  @override
+  String economyBoostActiveUntil(String time) {
+    return 'Ativo até $time';
+  }
+
+  @override
+  String get economyBoostBuyButton => 'Ativar';
+
+  @override
+  String get economyBoostAlreadyActive => 'Você já tem um boost ativo.';
+
+  @override
+  String get economyBoostCapWarning =>
+      'Você já atingiu o teto de XP de hoje — o boost só rende XP a partir de amanhã.';
+
+  @override
+  String get economyBoostSuccess => 'Boost ativado por 24 horas!';
+
+  @override
+  String get economyRepairName => 'Reparar sequência';
+
+  @override
+  String economyRepairDescription(int days, String date) {
+    return 'Recupere sua sequência de $days dias até $date.';
+  }
+
+  @override
+  String get economyRepairUnavailable =>
+      'Nenhuma sequência quebrada para reparar.';
+
+  @override
+  String get economyRepairButton => 'Reparar';
+
+  @override
+  String economyRepairSuccessNow(int days) {
+    return 'Sequência reparada! Agora são $days dias.';
+  }
+
+  @override
+  String get economyRepairSuccessNextPlay =>
+      'Sequência reparada! Ela volta assim que você jogar hoje.';
+
+  @override
+  String get economyRepairNothing => 'Nada para reparar agora.';
+
+  @override
+  String economyDailyXpLabel(int earned, int cap) {
+    return 'XP de respostas hoje: $earned/$cap';
+  }
+
+  @override
+  String get economyDailyCapReachedMessage =>
+      'Teto diário de XP atingido — seu progresso no território continua contando.';
+
+  @override
+  String economyBoostAppliedMessage(int percent) {
+    return 'Boost de XP ativo: +$percent%';
+  }
+
+  @override
+  String homeStreakRepairBanner(int days, int cost, String date) {
+    return 'Sua sequência de $days dias quebrou. Repare por $cost MentalCoins até $date.';
+  }
+
+  @override
+  String get homeStreakRepairBannerAction => 'Ver';
+
+  @override
+  String homeBoostChip(int percent, String time) {
+    return 'Boost +$percent% até $time';
+  }
 }

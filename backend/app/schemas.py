@@ -366,6 +366,10 @@ class AnswerResponse(BaseModel):
     # velocidade!").
     timed_out: bool = False
     speed_bonus_xp: int = 0
+    # Fase 3 (REGRA_OFICIAL 6/7.3): True quando o teto diário de XP cortou
+    # (parte de) o XP desta resposta; boost_applied quando o +20% valeu.
+    xp_cap_reached: bool = False
+    xp_boost_applied: bool = False
     # V2 item 13 — Disputa territorial (TERRITORY_DISPUTE.md, aprovado
     # 2026-08-22). True só na resposta exata em que você assume a
     # liderança de XP no território entre seus amigos (mesma regra de
@@ -1182,3 +1186,34 @@ class AppVersionOut(BaseModel):
 
     latest_version: str
     min_required_version: str
+
+
+# Fase 3 — economia (teto diário de XP, reparo de streak, boost de XP)
+class StreakRepairOfferOut(BaseModel):
+    streak_to_restore: int
+    expires_on: date
+    cost: int
+
+
+class EconomyStatusOut(BaseModel):
+    daily_xp_earned: int
+    daily_xp_cap: int
+    boost_active: bool
+    boost_expires_at: datetime | None = None
+    boost_cost: int
+    boost_percent: int
+    repair: StreakRepairOfferOut | None = None
+    balance: int
+
+
+class BuyBoostOut(BaseModel):
+    boost_expires_at: datetime
+    balance: int
+
+
+class RepairStreakOut(BaseModel):
+    current_streak: int
+    # False quando o reparo foi "antes de jogar": a sequência restaurada
+    # só aparece depois da próxima jogada.
+    applied_immediately: bool = False
+    balance: int

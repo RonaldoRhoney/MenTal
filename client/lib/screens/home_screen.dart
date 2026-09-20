@@ -69,6 +69,18 @@ class _HomeScreenState extends State<HomeScreen> {
   // pedido junto do redesign da Home. Falha silenciosa igual ao resto
   // dos indicadores secundários: nunca bloqueia a Home carregar.
   int? _mentalCoinsBalance;
+  // Fase 3: oferta de reparo de sequência + boost ativo. Reforço visual,
+  // falha silenciosa como os demais indicadores secundários.
+  Map<String, dynamic>? _economy;
+
+  Future<void> _loadEconomy() async {
+    try {
+      final economy = await widget.client.getEconomyStatus();
+      if (mounted) setState(() => _economy = economy);
+    } on ApiException {
+      // banner simplesmente não aparece
+    }
+  }
 
   Future<void> _loadMentalCoinsBalance() async {
     try {
@@ -84,6 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
           builder: (_) => MentalCoinsScreen(client: widget.client)),
     );
     _loadMentalCoinsBalance();
+    _loadEconomy();
   }
 
   // MAPA_TRAJETORIA_MUNDOS_V1.md (18/09/2026, pedido de Rhoney): o acesso
@@ -265,6 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadMovementBadge();
     _loadProfileHeader();
     _loadMentalCoinsBalance();
+    _loadEconomy();
     _loadFeedBadge();
     _loadBattlesBadge();
     _loadNotificationBadge();
@@ -293,6 +307,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _loadMovementBadge(),
       _loadProfileHeader(),
       _loadMentalCoinsBalance(),
+      _loadEconomy(),
       _loadFeedBadge(),
       _loadBattlesBadge(),
       _loadNotificationBadge(),
@@ -422,6 +437,70 @@ class _HomeScreenState extends State<HomeScreen> {
   /// dedicada com os territórios daquele Mundo (_WorldDetailScreen),
   /// nunca expande in-place (decisão tomada com Rhoney: manter a Home
   /// enxuta, sem nada crescendo embaixo do carrossel).
+  /// Fase 3: cartão de reparo de sequência (quando há) e chip de boost ativo.
+  Widget _buildEconomyBanner(AppLocalizations l10n) {
+    final e = _economy;
+    if (e == null) return const SizedBox.shrink();
+    final repair = e['repair'] as Map<String, dynamic>?;
+    final boostActive = e['boost_active'] == true;
+    if (repair == null && !boostActive) return const SizedBox.shrink();
+    String hhmm(String iso) {
+      final t = DateTime.parse(iso.endsWith('Z') ? iso : '${iso}Z').toLocal();
+      return '${t.hour.toString().padLeft(2, '0')}:${t.minute.toString().padLeft(2, '0')}';
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          if (boostActive)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Chip(
+                  key: const Key('home_boost_chip'),
+                  avatar: Icon(Icons.bolt_rounded, color: AppColors.gold, size: 18),
+                  label: Text(l10n.homeBoostChip(e['boost_percent'] as int, hhmm(e['boost_expires_at'] as String))),
+                ),
+              ),
+            ),
+          if (repair != null)
+            InkWell(
+              key: const Key('home_repair_banner'),
+              borderRadius: BorderRadius.circular(14),
+              onTap: _openMentalCoins,
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(14), border: Border.all(color: AppColors.gold.withValues(alpha: 0.5))),
+                child: Row(
+                  children: [
+                    Icon(Icons.local_fire_department_rounded, color: AppColors.gold),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        l10n.homeStreakRepairBanner(
+                          repair['streak_to_restore'] as int,
+                          repair['cost'] as int,
+                          () {
+                            final p = (repair['expires_on'] as String).split('-');
+                            return '${p[2]}/${p[1]}';
+                          }(),
+                        ),
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ),
+                    Text(l10n.homeStreakRepairBannerAction, style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+                  ],
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildWorldCarousel(AppLocalizations l10n) {
     final worlds =
         (_progress?['worlds'] as List?)?.cast<Map<String, dynamic>>();
@@ -829,7 +908,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Center(
                                       child: CircularProgressIndicator()),
                                 )
-                              : _buildWorldCarousel(l10n),
+                              : Column(
+                                  children: [
+                                    _buildEconomyBanner(l10n),
+                                    _buildWorldCarousel(l10n),
+                                  ],
+                                ),
                           const SizedBox(height: 24),
                         ],
                       ),

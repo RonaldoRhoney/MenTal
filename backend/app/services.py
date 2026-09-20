@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 
 from . import config, mentalcoins, models, notification_copy, push, rewards, scoring, supabase_admin
 from .nickname import generate_anonymous_nickname
-from .timeutil import naive, utcnow
+from .timeutil import naive, utcnow, week_anchor as _week_anchor
 
 # Achado de auditoria de qualidade B4 (05/09/2026): amizade/bloqueio/
 # busca por nome extraídos pra app/social.py (mesmo espírito de
@@ -248,10 +248,6 @@ def get_or_create_streak(db: Session, user_id: str) -> models.Streak:
     return streak
 
 
-def _week_anchor(d: date) -> date:
-    return d - timedelta(days=d.weekday())
-
-
 def register_play_for_streak(db: Session, user_id: str, today: date) -> models.Streak:
     streak = get_or_create_streak(db, user_id)
     anchor = _week_anchor(today)
@@ -278,6 +274,14 @@ def register_play_for_streak(db: Session, user_id: str, today: date) -> models.S
             streak.current_streak += 1
             streak.last_played_date = today
         else:
+            # Fase 3: guarda a sequência que quebrou pra dar chance de
+            # reparo (50 MentalCoins) até o fim do dia seguinte à quebra.
+            if (
+                streak.current_streak >= config.STREAK_REPAIR_MIN_STREAK
+                and gap_days <= config.STREAK_REPAIR_WINDOW_DAYS
+            ):
+                streak.lost_streak = streak.current_streak
+                streak.repair_until = streak.last_played_date + timedelta(days=config.STREAK_REPAIR_WINDOW_DAYS)
             streak.current_streak = 1
             streak.last_played_date = today
 

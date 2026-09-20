@@ -449,7 +449,9 @@
   "@wordConstellationXpAwardedMessage": {
     "description": "XP earned message on the word constellation screen",
     "placeholders": {
-      "xp": {"type": "int"}
+      "xp": {
+        "type": "int"
+      }
     }
   },
   "wordConstellationContinueButton": "Continuar",
@@ -1072,8 +1074,12 @@
   "@trajectoryMapWorldsCount": {
     "description": "Counter chip showing how many Worlds the player has already started exploring out of the total",
     "placeholders": {
-      "explored": {"type": "int"},
-      "total": {"type": "int"}
+      "explored": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "trajectoryStatusNotStarted": "Não iniciado",
@@ -1836,21 +1842,27 @@
   "@notificationsTimeMinutes": {
     "description": "Relative timestamp in minutes",
     "placeholders": {
-      "minutes": {"type": "int"}
+      "minutes": {
+        "type": "int"
+      }
     }
   },
   "notificationsTimeHours": "{hours}h",
   "@notificationsTimeHours": {
     "description": "Relative timestamp in hours",
     "placeholders": {
-      "hours": {"type": "int"}
+      "hours": {
+        "type": "int"
+      }
     }
   },
   "notificationsTimeDays": "{days}d",
   "@notificationsTimeDays": {
     "description": "Relative timestamp in days",
     "placeholders": {
-      "days": {"type": "int"}
+      "days": {
+        "type": "int"
+      }
     }
   },
   "notificationsBellTooltip": "Notificações",
@@ -2899,5 +2911,144 @@
   "updateLaterButton": "Mais tarde",
   "@updateLaterButton": {
     "description": "Button that dismisses the non-mandatory update dialog"
+  },
+  "economySectionTitle": "Turbinar e proteger",
+  "@economySectionTitle": {
+    "description": "Section title in MentalCoins screen for boost/repair"
+  },
+  "economyBoostName": "Boost de XP",
+  "@economyBoostName": {
+    "description": "Boost item name"
+  },
+  "economyBoostDescription": "+{percent}% de XP nas respostas por 24 horas.",
+  "@economyBoostDescription": {
+    "description": "Boost item description",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "economyBoostActiveUntil": "Ativo até {time}",
+  "@economyBoostActiveUntil": {
+    "description": "Boost active label",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "economyBoostBuyButton": "Ativar",
+  "@economyBoostBuyButton": {
+    "description": "Buy button"
+  },
+  "economyBoostAlreadyActive": "Você já tem um boost ativo.",
+  "@economyBoostAlreadyActive": {
+    "description": "Error when boost already active"
+  },
+  "economyBoostCapWarning": "Você já atingiu o teto de XP de hoje — o boost só rende XP a partir de amanhã.",
+  "@economyBoostCapWarning": {
+    "description": "Warning that boost is useless today"
+  },
+  "economyBoostSuccess": "Boost ativado por 24 horas!",
+  "@economyBoostSuccess": {
+    "description": "Snackbar after boost purchase"
+  },
+  "economyRepairName": "Reparar sequência",
+  "@economyRepairName": {
+    "description": "Streak repair item name"
+  },
+  "economyRepairDescription": "Recupere sua sequência de {days} dias até {date}.",
+  "@economyRepairDescription": {
+    "description": "Streak repair description",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "economyRepairUnavailable": "Nenhuma sequência quebrada para reparar.",
+  "@economyRepairUnavailable": {
+    "description": "Streak repair unavailable"
+  },
+  "economyRepairButton": "Reparar",
+  "@economyRepairButton": {
+    "description": "Repair button"
+  },
+  "economyRepairSuccessNow": "Sequência reparada! Agora são {days} dias.",
+  "@economyRepairSuccessNow": {
+    "description": "Repair success (immediate)",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "economyRepairSuccessNextPlay": "Sequência reparada! Ela volta assim que você jogar hoje.",
+  "@economyRepairSuccessNextPlay": {
+    "description": "Repair success (on next play)"
+  },
+  "economyRepairNothing": "Nada para reparar agora.",
+  "@economyRepairNothing": {
+    "description": "Repair error"
+  },
+  "economyDailyXpLabel": "XP de respostas hoje: {earned}/{cap}",
+  "@economyDailyXpLabel": {
+    "description": "Daily XP progress",
+    "placeholders": {
+      "earned": {
+        "type": "int"
+      },
+      "cap": {
+        "type": "int"
+      }
+    }
+  },
+  "economyDailyCapReachedMessage": "Teto diário de XP atingido — seu progresso no território continua contando.",
+  "@economyDailyCapReachedMessage": {
+    "description": "Shown in answer result when cap hit"
+  },
+  "economyBoostAppliedMessage": "Boost de XP ativo: +{percent}%",
+  "@economyBoostAppliedMessage": {
+    "description": "Shown in answer result when boost applied",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "homeStreakRepairBanner": "Sua sequência de {days} dias quebrou. Repare por {cost} MentalCoins até {date}.",
+  "@homeStreakRepairBanner": {
+    "description": "Home banner offering repair",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "cost": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "homeStreakRepairBannerAction": "Ver",
+  "@homeStreakRepairBannerAction": {
+    "description": "Home banner action"
+  },
+  "homeBoostChip": "Boost +{percent}% até {time}",
+  "@homeBoostChip": {
+    "description": "Home chip while boost active",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
   }
 }
