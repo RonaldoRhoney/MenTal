@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
 import 'package:mental/screens/challenge_screen.dart';
+import 'package:mental/services/tts_service.dart';
 
 /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2 — prova que o botão de áudio
 /// (TTS) + seletor de velocidade aparecem SÓ nos territórios de idioma
@@ -109,6 +110,10 @@ Future<void> _pump(WidgetTester tester, ApiClient client, String territoryId, {b
 }
 
 void main() {
+  // Síntese real de TTS usaria rede de verdade num widget test.
+  setUpAll(() => TtsService.disabled = true);
+  tearDownAll(() => TtsService.disabled = false);
+
   testWidgets('território de idioma falado mostra botão de áudio por opção + seletor de velocidade', (tester) async {
     await _pump(tester, _IdiomasFakeApiClient(), 'ingles_basico');
 

@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:collection';
-import 'dart:typed_data';
 
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_edge_tts/flutter_edge_tts.dart';
 
 /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md (18/09/2026) — áudio fiel de
@@ -88,6 +88,37 @@ class TtsService {
     );
   }
 
+  /// Só pra testes de widget: síntese real usaria rede de verdade.
+  @visibleForTesting
+  static bool disabled = false;
+
+  /// Toca e só devolve quando o áudio TERMINOU (ou após `maxWait`, ou
+  /// se a síntese/reprodução falhar) — pedido de Rhoney (19/09/2026):
+  /// no Relâmpago a tela seguinte só aparece depois do som. Nunca
+  /// trava: qualquer falha ou demora além do limite libera o fluxo.
+  Future<bool> speakAndWait(
+    String text, {
+    required String voice,
+    TtsSpeed speed = TtsSpeed.normal,
+    Duration maxWait = const Duration(seconds: 6),
+  }) async {
+    if (disabled) return false;
+    final completed = Completer<void>();
+    StreamSubscription<void>? sub;
+    try {
+      sub = _player.onPlayerComplete.listen((_) {
+        if (!completed.isCompleted) completed.complete();
+      });
+      final ok = await speak(text, voice: voice, speed: speed);
+      if (ok) await completed.future.timeout(maxWait, onTimeout: () {});
+      return ok;
+    } catch (_) {
+      return false;
+    } finally {
+      await sub?.cancel();
+    }
+  }
+
   /// `voice` é o nome curto da voz neural do Edge (ex.:
   /// "en-US-AriaNeural") — a estrutura é genérica por design (§2.3 do
   /// documento): quem chama decide idioma/voz, nada fica fixo aqui.
@@ -95,7 +126,7 @@ class TtsService {
   /// chama decide como comunicar isso ao usuário, este serviço nunca
   /// lança exceção pro chamador.
   Future<bool> speak(String text, {required String voice, TtsSpeed speed = TtsSpeed.normal}) async {
-    if (_speaking || text.trim().isEmpty) return false;
+    if (disabled || _speaking || text.trim().isEmpty) return false;
     _speaking = true;
     try {
       final key = _cacheKey(text, voice, speed);

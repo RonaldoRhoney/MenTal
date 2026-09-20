@@ -399,7 +399,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   /// V2 item 15 — no modo relâmpago, tocar numa opção já submete na
   /// hora (sem o passo separado de "Confirmar resposta" do formato
   /// digitado) — é uma reação rápida, não uma escolha deliberada.
-  Future<void> _submitOption(String option) async {
+  Future<void> _submitOption(String option, {String? speakVoice}) async {
     if (_submitted) return;
     final challenge = _challenge;
     final attemptId = _attemptId;
@@ -413,9 +413,21 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     setState(() {
       _submitted = true;
       _selectedOption = option;
-      _loading = true;
+      // Com áudio (Relâmpago de idioma falado), a tela de opções fica
+      // visível até o som terminar — só então vem a tela seguinte.
+      _loading = speakVoice == null;
     });
     try {
+      if (speakVoice != null) {
+        // Pedido de Rhoney (19/09/2026): tocar na resposta emite o
+        // áudio e SÓ ENTÃO aparece a tela seguinte. O tempo de
+        // resposta já foi capturado acima, no toque — o áudio nunca
+        // entra na conta do cronômetro. Espera limitada (falha/rede
+        // lenta nunca trava a resposta).
+        await TtsService.instance.speakAndWait(option, voice: speakVoice);
+        if (!mounted) return;
+        setState(() => _loading = true);
+      }
       final result = await widget.client.submitAnswer(
         challenge['challenge_id'],
         attemptId,
@@ -1372,10 +1384,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       OutlinedButton.icon(
                         onPressed: _submitted
                             ? null
-                            : () {
-                                unawaited(TtsService.instance.speak(option, voice: voice));
-                                _submitOption(option);
-                              },
+                            : () => _submitOption(option, speakVoice: voice),
                         icon: const Icon(Icons.volume_up_rounded, size: 18),
                         label: Text(option),
                       ),
