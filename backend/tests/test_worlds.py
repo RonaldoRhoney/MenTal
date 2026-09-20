@@ -28,7 +28,13 @@ def _answer_correctly(client, headers, territory_id):
     ).json()
 
 
-PALAVRAS_RARAS_TERRITORIES = ['palavras_raras_filosofia', 'palavras_raras_psicologia', 'palavras_raras_medicina', 'palavras_raras_fisica_quimica', 'palavras_raras_matematica', 'palavras_raras_linguistica', 'palavras_raras_historia', 'palavras_raras_geografia', 'palavras_raras_direito', 'palavras_raras_eruditas']
+# Territórios dos SubMundos do Mundo da Linguagem além dos 4 originais (Palavras Raras +
+# temas de gramática ativos) — derivado do seed pra novos temas entrarem sozinhos.
+from app.seed import TERRITORIES as _SEED_TERRITORIES  # noqa: E402
+
+PALAVRAS_RARAS_TERRITORIES = [
+    t["id"] for t in _SEED_TERRITORIES if t["world_id"] == "linguagem" and t["id"] not in {"palavras", "textos", "enigmas", "redacao"}
+]
 
 
 def _mark_conquered(user: str, territory_ids: list[str]) -> None:

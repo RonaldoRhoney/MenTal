@@ -155,3 +155,15 @@ As duas direções existem também por exigência do critério de volume (≥ 15
 **Efeito colateral a saber**: os 10 territórios pertencem ao Mundo da Linguagem, então o Mundo só volta a contar como "completo" depois de conquistar também esses territórios (mesmo comportamento de quando os SubMundos foram adicionados a Tecnologia e Esportes).
 
 Testes: `tests/test_linguagem_palavras_raras_content.py` (estrutura, 200 desafios, duas direções conferidas contra o arquivo fonte, distratores só da mesma área, viés de tamanho) + `test_content_volume.py`, `test_blocks.py`, `test_worlds.py`.
+
+---
+
+## 9. SubMundos de gramática (20/09/2026, pedido de Rhoney)
+
+Fonte da decisão: `MUNDO_LINGUAGEM_ARQUITETURA_V1.md` (19 temas: Crase, Preposição, Regência Verbal/Nominal, Concordância Verbal/Nominal, Colocação Pronominal, Pronomes, Pontuação, Ortografia, Acentuação Gráfica, Numerais, Interjeições, Morfologia, Sintaxe, Semântica, Orações Coordenadas e Subordinadas, Figuras de Linguagem, Interpretação de Texto).
+
+**Estrutura** (mesmo mecanismo de Bloco do SubMundo Internet): cada tema é um SubMundo (bloco `lg_<slug>`) com **1 território** `linguagem_<slug>` de 50 perguntas — 25 de nível 1, 15 de nível 2 e 10 de nível 3 (o Desafio serve todos os níveis; o Relâmpago só 2 e 3). O plano completo fica em `backend/content/plano_temas_linguagem.json`; **só temas com `status: "ativo"` são registrados** (seed, migration, app) — um território sem conteúdo aprovado daria erro no app.
+
+**Fluxo de um tema novo**: (1) lote curado em `MUNDO/Mundo_da_Linguagem/temas/<slug>_lote<N>.json` (perguntas originais, sem cópia de fonte; revisão obrigatória de Rhoney); (2) `python3 scripts/convert_linguagem_tema_content.py <slug>` gera `backend/content/linguagem_tema_<slug>.json`; (3) marcar o tema `ativo` no plano; (4) migration do bloco+território (modelo: `088_submundo_crase_em_linguagem.sql`); (5) `scripts/append_production_content.py`; (6) registrar o território no client (`territories.dart` + `app_pt.arb`); (7) AAB novo.
+
+**Lote 1 — Crase**: 50 perguntas originais (`temas/crase_lote1.json`), aguardando revisão de Rhoney. Migration `088`. Testes: `tests/test_linguagem_temas_content.py`.

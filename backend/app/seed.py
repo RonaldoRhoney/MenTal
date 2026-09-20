@@ -396,6 +396,30 @@ TERRITORIES = [
     {"id": "palavras_raras_eruditas", "challenge_type": "palavras_raras", "requires_subscription": True, "free_sample_count": 2, "display_order": 95, "world_id": "linguagem", "block_id": "palavras_raras"},
 ]
 
+# SubMundos de gramática do Mundo da Linguagem (MUNDO_LINGUAGEM_ARQUITETURA_V1.md,
+# 20/09/2026): 1 SubMundo (bloco lg_<slug>) por tema, com 1 território
+# linguagem_<slug>. O plano lista os 19 temas; só os de status "ativo" (conteúdo
+# aprovado por Rhoney) são registrados — território sem conteúdo daria erro no app.
+_LINGUAGEM_TEMAS_PLAN = json.loads(
+    (Path(__file__).resolve().parent.parent / "content" / "plano_temas_linguagem.json").read_text(encoding="utf-8")
+)["temas"]
+for _idx, _tema in enumerate(_LINGUAGEM_TEMAS_PLAN):
+    if _tema["status"] != "ativo":
+        continue
+    BLOCKS.append({"id": f"lg_{_tema['slug']}", "name": _tema["nome"], "display_order": 30 + _idx})
+    TERRITORIES.append(
+        {
+            "id": f"linguagem_{_tema['slug']}",
+            "challenge_type": "linguagem_tema",
+            "requires_subscription": True,
+            "free_sample_count": 2,
+            "display_order": 96 + _idx,
+            "world_id": "linguagem",
+            "block_id": f"lg_{_tema['slug']}",
+        }
+    )
+
+
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
 # mão, mesmo conteúdo espelhado em migrations/004_badges.sql.
 BADGES = [

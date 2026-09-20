@@ -646,7 +646,7 @@
     },
     {
       "difficulty_level": 3,
-      "prompt": "Assinale a frase correta quanto ao uso da crase.",
+      "prompt": "Assinale a frase correta quanto ao uso da crase (regras gerais).",
       "options": [
         "Fiz o pedido à uma amiga.",
         "Viajamos à Roma no verão.",
@@ -662,7 +662,7 @@
     },
     {
       "difficulty_level": 3,
-      "prompt": "Assinale a frase correta quanto ao uso da crase.",
+      "prompt": "Assinale a frase correta quanto ao uso da crase (locuções e verbos).",
       "options": [
         "Fomos à cavalo até a fazenda.",
         "Estamos à disposição para ajudar.",

@@ -1,0 +1,119 @@
+{
+  "_comentario": "Plano dos SubMundos de gramática do Mundo da Linguagem (MUNDO_LINGUAGEM_ARQUITETURA_V1.md). 1 SubMundo (bloco lg_<slug>) por tema, com 1 território linguagem_<slug> de 50 perguntas (25 nível 1 + 15 nível 2 + 10 nível 3). Só temas com status 'ativo' são registrados (seed/migration/app): um território sem conteúdo aprovado por Rhoney dá erro no app. Ordem de produção = seção 5 do documento.",
+  "temas": [
+    {
+      "slug": "morfologia",
+      "nome": "Morfologia",
+      "ordem_producao": 1,
+      "status": "planejado"
+    },
+    {
+      "slug": "interpretacao_de_texto",
+      "nome": "Interpretação de Texto",
+      "ordem_producao": 2,
+      "status": "planejado"
+    },
+    {
+      "slug": "concordancia_verbal",
+      "nome": "Concordância Verbal",
+      "ordem_producao": 3,
+      "status": "planejado"
+    },
+    {
+      "slug": "concordancia_nominal",
+      "nome": "Concordância Nominal",
+      "ordem_producao": 3,
+      "status": "planejado"
+    },
+    {
+      "slug": "regencia_verbal",
+      "nome": "Regência Verbal",
+      "ordem_producao": 4,
+      "status": "planejado"
+    },
+    {
+      "slug": "regencia_nominal",
+      "nome": "Regência Nominal",
+      "ordem_producao": 4,
+      "status": "planejado"
+    },
+    {
+      "slug": "crase",
+      "nome": "Crase",
+      "ordem_producao": 5,
+      "status": "ativo"
+    },
+    {
+      "slug": "preposicao",
+      "nome": "Preposição",
+      "ordem_producao": 5,
+      "status": "planejado"
+    },
+    {
+      "slug": "colocacao_pronominal",
+      "nome": "Colocação Pronominal",
+      "ordem_producao": 6,
+      "status": "planejado"
+    },
+    {
+      "slug": "pronomes",
+      "nome": "Pronomes",
+      "ordem_producao": 6,
+      "status": "planejado"
+    },
+    {
+      "slug": "pontuacao",
+      "nome": "Pontuação",
+      "ordem_producao": 7,
+      "status": "planejado"
+    },
+    {
+      "slug": "ortografia",
+      "nome": "Ortografia",
+      "ordem_producao": 7,
+      "status": "planejado"
+    },
+    {
+      "slug": "acentuacao_grafica",
+      "nome": "Acentuação Gráfica",
+      "ordem_producao": 7,
+      "status": "planejado"
+    },
+    {
+      "slug": "numerais",
+      "nome": "Numerais",
+      "ordem_producao": 8,
+      "status": "planejado"
+    },
+    {
+      "slug": "interjeicoes",
+      "nome": "Interjeições",
+      "ordem_producao": 8,
+      "status": "planejado"
+    },
+    {
+      "slug": "sintaxe",
+      "nome": "Sintaxe",
+      "ordem_producao": 9,
+      "status": "planejado"
+    },
+    {
+      "slug": "oracoes_coordenadas_e_subordinadas",
+      "nome": "Orações Coordenadas e Subordinadas",
+      "ordem_producao": 9,
+      "status": "planejado"
+    },
+    {
+      "slug": "semantica",
+      "nome": "Semântica",
+      "ordem_producao": 10,
+      "status": "planejado"
+    },
+    {
+      "slug": "figuras_de_linguagem",
+      "nome": "Figuras de Linguagem",
+      "ordem_producao": 10,
+      "status": "planejado"
+    }
+  ]
+}

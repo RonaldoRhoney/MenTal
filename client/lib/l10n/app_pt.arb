@@ -3160,5 +3160,9 @@
   "territoryPalavrasRarasEruditas": "Palavras Raras: Eruditas",
   "@territoryPalavrasRarasEruditas": {
     "description": "Territory name — Palavras Raras SubMundo, area Eruditas"
+  },
+  "territoryLinguagemCrase": "Crase",
+  "@territoryLinguagemCrase": {
+    "description": "Territory name — Linguagem grammar SubMundo: Crase"
   }
 }

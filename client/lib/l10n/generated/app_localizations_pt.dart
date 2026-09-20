@@ -2295,4 +2295,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get territoryPalavrasRarasEruditas => 'Palavras Raras: Eruditas';
+
+  @override
+  String get territoryLinguagemCrase => 'Crase';
 }

@@ -1533,6 +1533,7 @@ const Map<String, IconData> _kSectionIcons = {
   'curiosidade_relampago': Icons.bolt_rounded,
   'jogos_de_palavras': Icons.extension_rounded,
   'palavras_raras': Icons.spellcheck_rounded,
+  'lg_crase': Icons.text_fields_rounded,
 };
 
 /// Cabeçalho de seção reutilizável — usado por qualquer Bloco/SubMundo

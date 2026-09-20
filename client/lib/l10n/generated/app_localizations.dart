@@ -3975,6 +3975,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Palavras Raras: Eruditas'**
   String get territoryPalavrasRarasEruditas;
+
+  /// Territory name — Linguagem grammar SubMundo: Crase
+  ///
+  /// In pt, this message translates to:
+  /// **'Crase'**
+  String get territoryLinguagemCrase;
 }
 
 class _AppLocalizationsDelegate
