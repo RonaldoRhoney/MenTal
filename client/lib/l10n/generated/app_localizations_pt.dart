@@ -2310,4 +2310,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get territoryLinguagemConcordanciaNominal => 'Concordância Nominal';
+
+  @override
+  String get territoryLinguagemRegenciaVerbal => 'Regência Verbal';
 }

@@ -4005,6 +4005,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Concordância Nominal'**
   String get territoryLinguagemConcordanciaNominal;
+
+  /// Territory name — Linguagem grammar SubMundo: Regência Verbal
+  ///
+  /// In pt, this message translates to:
+  /// **'Regência Verbal'**
+  String get territoryLinguagemRegenciaVerbal;
 }
 
 class _AppLocalizationsDelegate

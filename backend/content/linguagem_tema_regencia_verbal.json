@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Todos devem obedecer ___ regras.",
+    "options": [
+      "às",
+      "as",
+      "de",
+      "em"
+    ],
+    "correct_answer": "às",
+    "explanation": "'Obedecer' pede a preposição 'a' (obedecer a alguém/algo): a + as = às.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Prefiro sorvete ___ bolo.",
+    "options": [
+      "a",
+      "do que",
+      "que",
+      "de"
+    ],
+    "correct_answer": "a",
+    "explanation": "'Preferir' pede a preposição 'a' (preferir uma coisa a outra), sem 'do que' nem 'que'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Cheguei ___ escola cedo.",
+    "options": [
+      "à",
+      "na",
+      "da",
+      "pela"
+    ],
+    "correct_answer": "à",
+    "explanation": "'Chegar' pede a preposição 'a' (chegar a um lugar): a + a = à.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Fui ___ cinema ontem.",
+    "options": [
+      "ao",
+      "no",
+      "do",
+      "pelo"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'Ir' pede a preposição 'a' (ir a um lugar): a + o = ao.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Moro ___ Belém.",
+    "options": [
+      "em",
+      "a",
+      "de",
+      "para"
+    ],
+    "correct_answer": "em",
+    "explanation": "'Morar' pede a preposição 'em' (morar em algum lugar).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele simpatiza ___ meu irmão.",
+    "options": [
+      "com",
+      "a",
+      "de",
+      "em"
+    ],
+    "correct_answer": "com",
+    "explanation": "'Simpatizar' pede a preposição 'com' (simpatizar com alguém).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela sonha ___ uma viagem.",
+    "options": [
+      "com",
+      "a",
+      "de",
+      "em"
+    ],
+    "correct_answer": "com",
+    "explanation": "'Sonhar' pede a preposição 'com' quando o complemento é um substantivo (sonhar com algo).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Agradeci ___ eles pelo presente.",
+    "options": [
+      "a",
+      "de",
+      "em",
+      "com"
+    ],
+    "correct_answer": "a",
+    "explanation": "'Agradecer' pede a preposição 'a' para a pessoa (agradecer a alguém).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Respondi ___ ele imediatamente.",
+    "options": [
+      "a",
+      "de",
+      "em",
+      "com"
+    ],
+    "correct_answer": "a",
+    "explanation": "'Responder' pede a preposição 'a' (responder a alguém/algo).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Confio ___ você.",
+    "options": [
+      "em",
+      "a",
+      "de",
+      "com"
+    ],
+    "correct_answer": "em",
+    "explanation": "'Confiar' pede a preposição 'em' (confiar em alguém).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Gosto ___ chocolate.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'Gostar' pede a preposição 'de' (gostar de algo).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Precisamos ___ ajuda.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'Precisar' pede a preposição 'de' (precisar de algo).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele insiste ___ ir.",
+    "options": [
+      "em",
+      "a",
+      "de",
+      "com"
+    ],
+    "correct_answer": "em",
+    "explanation": "'Insistir' pede a preposição 'em' (insistir em algo).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Concordo ___ você.",
+    "options": [
+      "com",
+      "a",
+      "de",
+      "em"
+    ],
+    "correct_answer": "com",
+    "explanation": "'Concordar' pede 'com' para a pessoa (concordar com alguém).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Duvido ___ sua honestidade.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'Duvidar' pede a preposição 'de' (duvidar de algo).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele desistiu ___ estudar.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'Desistir' pede a preposição 'de' (desistir de algo).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Casou-se ___ ela em maio.",
+    "options": [
+      "com",
+      "a",
+      "de",
+      "em"
+    ],
+    "correct_answer": "com",
+    "explanation": "'Casar-se' pede a preposição 'com' (casar-se com alguém).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele depende ___ ajuda dos pais.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'Depender' pede a preposição 'de' (depender de algo).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele reside ___ São Paulo.",
+    "options": [
+      "em",
+      "a",
+      "de",
+      "para"
+    ],
+    "correct_answer": "em",
+    "explanation": "'Residir' pede a preposição 'em' (residir em algum lugar).",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: O time venceu ___ adversário.",
+    "options": [
+      "o",
+      "ao",
+      "do",
+      "no"
+    ],
+    "correct_answer": "o",
+    "explanation": "'Vencer' é transitivo direto: não tem preposição ('venceu o adversário').",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela esqueceu ___ chaves.",
+    "options": [
+      "as",
+      "das",
+      "às",
+      "nas"
+    ],
+    "correct_answer": "as",
+    "explanation": "'Esquecer' (sem o 'se') é transitivo direto: 'esqueceu as chaves'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela se esqueceu ___ chaves.",
+    "options": [
+      "das",
+      "as",
+      "às",
+      "nas"
+    ],
+    "correct_answer": "das",
+    "explanation": "'Esquecer-se' (pronominal) pede a preposição 'de': 'esqueceu-se das chaves'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Lembrei-me ___ seu aniversário.",
+    "options": [
+      "do",
+      "o",
+      "ao",
+      "no"
+    ],
+    "correct_answer": "do",
+    "explanation": "'Lembrar-se' (pronominal) pede a preposição 'de': 'lembrei-me do aniversário'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Eu lembrei ___ seu aniversário.",
+    "options": [
+      "o",
+      "do",
+      "ao",
+      "no"
+    ],
+    "correct_answer": "o",
+    "explanation": "'Lembrar' (sem o 'se') é transitivo direto: 'lembrei o aniversário'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele aspira ___ ar puro da montanha.",
+    "options": [
+      "o",
+      "ao",
+      "do",
+      "no"
+    ],
+    "correct_answer": "o",
+    "explanation": "'Aspirar', no sentido de respirar/inalar, é transitivo direto: 'aspira o ar'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Assisto ___ jogos de futebol todo domingo. (ver)",
+    "options": [
+      "aos",
+      "os",
+      "dos",
+      "nos"
+    ],
+    "correct_answer": "aos",
+    "explanation": "'Assistir', no sentido de ver, pede a preposição 'a': a + os = aos.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele aspira ___ cargo de diretor. (deseja)",
+    "options": [
+      "ao",
+      "o",
+      "do",
+      "no"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'Aspirar', no sentido de desejar, pede a preposição 'a': 'aspira ao cargo'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Custou ___ aluno entender a matéria.",
+    "options": [
+      "ao",
+      "o",
+      "do",
+      "no"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'Custar' (ser difícil) tem como sujeito a oração ('entender a matéria') e pede 'a' para a pessoa: 'custou ao aluno'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Perdoei ___ ele a dívida.",
+    "options": [
+      "a",
+      "de",
+      "em",
+      "com"
+    ],
+    "correct_answer": "a",
+    "explanation": "'Perdoar' pede 'a' para a pessoa e complemento direto para a coisa: 'perdoei a dívida a ele'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Chamei ___ garçom.",
+    "options": [
+      "o",
+      "ao",
+      "do",
+      "no"
+    ],
+    "correct_answer": "o",
+    "explanation": "'Chamar' (solicitar a presença) é transitivo direto: 'chamei o garçom'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele referiu-se ___ problema com cuidado.",
+    "options": [
+      "ao",
+      "o",
+      "do",
+      "no"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'Referir-se' pede a preposição 'a': a + o = ao.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: O texto alude ___ mitologia grega.",
+    "options": [
+      "à",
+      "a",
+      "na",
+      "da"
+    ],
+    "correct_answer": "à",
+    "explanation": "'Aludir' pede a preposição 'a' (aludir a algo): a + a = à.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: A decisão implica ___ mudanças. (acarretar)",
+    "options": [
+      "as",
+      "às",
+      "nas",
+      "das"
+    ],
+    "correct_answer": "as",
+    "explanation": "'Implicar', no sentido de acarretar, é transitivo direto: 'implica mudanças'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele implica ___ o vizinho. (embirrar)",
+    "options": [
+      "com",
+      "a",
+      "de",
+      "em"
+    ],
+    "correct_answer": "com",
+    "explanation": "'Implicar', no sentido de ter implicância, pede a preposição 'com': 'implica com o vizinho'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Prefiro estudar ___ trabalhar.",
+    "options": [
+      "a",
+      "do que",
+      "que",
+      "de"
+    ],
+    "correct_answer": "a",
+    "explanation": "'Preferir' pede 'a': 'prefiro estudar a trabalhar', sem 'do que' nem 'que'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Os filhos devem obedecer ___ pais.",
+    "options": [
+      "aos",
+      "os",
+      "dos",
+      "nos"
+    ],
+    "correct_answer": "aos",
+    "explanation": "'Obedecer' pede 'a': a + os = aos.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Esqueci-me ___ prova de hoje.",
+    "options": [
+      "da",
+      "a",
+      "na",
+      "pela"
+    ],
+    "correct_answer": "da",
+    "explanation": "'Esquecer-se' pede 'de': de + a = da.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Este é o livro ___ qual me referi.",
+    "options": [
+      "ao",
+      "o",
+      "do",
+      "no"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'Referir-se' pede 'a'; antes do relativo 'o qual' a preposição aparece: 'ao qual'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete a preposição: Os documentos ___ que precisamos estão prontos.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'Precisar' pede 'de': a preposição vem antes do relativo, 'de que precisamos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 2,
+    "prompt": "Complete: A cidade ___ que moro é linda.",
+    "options": [
+      "em",
+      "a",
+      "de",
+      "para"
+    ],
+    "correct_answer": "em",
+    "explanation": "'Morar' pede 'em': a preposição vem antes do relativo, 'em que moro'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra o que o verbo pede: complemento com preposição ou sem preposição.",
+      "Teste trocando o complemento por um pronome: 'lhe' indica preposição 'a'; 'o/a' indica que não há preposição."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (assistir).",
+    "options": [
+      "Assistimos ao jogo ontem.",
+      "Assistimos o jogo ontem.",
+      "Assistimos no jogo ontem.",
+      "Assistimos do jogo ontem."
+    ],
+    "correct_answer": "Assistimos ao jogo ontem.",
+    "explanation": "'Assistir', no sentido de ver, pede a preposição 'a': 'assistimos ao jogo'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (preferir).",
+    "options": [
+      "Prefiro cinema a teatro.",
+      "Prefiro mais cinema do que teatro.",
+      "Prefiro cinema que teatro.",
+      "Prefiro mais cinema a teatro."
+    ],
+    "correct_answer": "Prefiro cinema a teatro.",
+    "explanation": "'Preferir' já traz a ideia de 'mais' e pede 'a': 'prefiro cinema a teatro'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (obedecer).",
+    "options": [
+      "Devemos obedecer às leis.",
+      "Devemos obedecer as leis.",
+      "Devemos obedecer de as leis.",
+      "Devemos obedecer nas leis."
+    ],
+    "correct_answer": "Devemos obedecer às leis.",
+    "explanation": "'Obedecer' pede a preposição 'a': 'obedecer às leis'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (esquecer-se).",
+    "options": [
+      "Esqueci-me do encontro.",
+      "Esqueci-me o encontro.",
+      "Esqueci-me ao encontro.",
+      "Esqueci-me no encontro."
+    ],
+    "correct_answer": "Esqueci-me do encontro.",
+    "explanation": "O verbo pronominal 'esquecer-se' pede 'de': 'esqueci-me do encontro'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (aspirar).",
+    "options": [
+      "Aspiro ao cargo de diretor.",
+      "Aspiro o cargo de diretor.",
+      "Aspiro no cargo de diretor.",
+      "Aspiro do cargo de diretor."
+    ],
+    "correct_answer": "Aspiro ao cargo de diretor.",
+    "explanation": "'Aspirar', no sentido de desejar, pede 'a': 'aspiro ao cargo'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (chegar).",
+    "options": [
+      "Cheguei a Belém ontem.",
+      "Cheguei em Belém ontem.",
+      "Cheguei de Belém ontem.",
+      "Cheguei por Belém ontem."
+    ],
+    "correct_answer": "Cheguei a Belém ontem.",
+    "explanation": "Na norma-padrão, 'chegar' pede a preposição 'a': 'cheguei a Belém'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (referir-se).",
+    "options": [
+      "O relatório refere-se ao mês passado.",
+      "O relatório refere o mês passado.",
+      "O relatório refere-se o mês passado.",
+      "O relatório refere ao mês passado."
+    ],
+    "correct_answer": "O relatório refere-se ao mês passado.",
+    "explanation": "'Referir-se' é pronominal e pede 'a': 'refere-se ao mês passado'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (simpatizar).",
+    "options": [
+      "Simpatizo com ela.",
+      "Simpatizo ela.",
+      "Simpatizo a ela.",
+      "Simpatizo de ela."
+    ],
+    "correct_answer": "Simpatizo com ela.",
+    "explanation": "'Simpatizar' pede a preposição 'com'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência verbal (morar).",
+    "options": [
+      "Moro na rua das Flores.",
+      "Moro à rua das Flores.",
+      "Moro para a rua das Flores.",
+      "Moro da rua das Flores."
+    ],
+    "correct_answer": "Moro na rua das Flores.",
+    "explanation": "'Morar' pede a preposição 'em': em + a = na.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_verbal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase INCORRETA quanto à regência verbal.",
+    "options": [
+      "Prefiro cinema a teatro.",
+      "Assisti ao filme.",
+      "Obedeço aos meus pais.",
+      "Aspiro o cargo de diretor."
+    ],
+    "correct_answer": "Aspiro o cargo de diretor.",
+    "explanation": "'Aspirar', no sentido de desejar, pede 'a': o correto é 'aspiro ao cargo'. As demais estão corretas.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o complemento do verbo e a preposição que ele exige.",
+      "Elimine as alternativas em que a preposição está errada, ausente ou sobrando."
+    ]
+  }
+]

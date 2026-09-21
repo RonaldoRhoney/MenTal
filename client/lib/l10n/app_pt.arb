@@ -3180,5 +3180,9 @@
   "territoryLinguagemConcordanciaNominal": "Concordância Nominal",
   "@territoryLinguagemConcordanciaNominal": {
     "description": "Territory name — Linguagem grammar SubMundo: Concordância Nominal"
+  },
+  "territoryLinguagemRegenciaVerbal": "Regência Verbal",
+  "@territoryLinguagemRegenciaVerbal": {
+    "description": "Territory name — Linguagem grammar SubMundo: Regência Verbal"
   }
 }
