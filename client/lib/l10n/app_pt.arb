@@ -3184,5 +3184,9 @@
   "territoryLinguagemRegenciaVerbal": "Regência Verbal",
   "@territoryLinguagemRegenciaVerbal": {
     "description": "Territory name — Linguagem grammar SubMundo: Regência Verbal"
+  },
+  "territoryLinguagemRegenciaNominal": "Regência Nominal",
+  "@territoryLinguagemRegenciaNominal": {
+    "description": "Territory name — Linguagem grammar SubMundo: Regência Nominal"
   }
 }

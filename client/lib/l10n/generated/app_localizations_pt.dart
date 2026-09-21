@@ -2313,4 +2313,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get territoryLinguagemRegenciaVerbal => 'Regência Verbal';
+
+  @override
+  String get territoryLinguagemRegenciaNominal => 'Regência Nominal';
 }

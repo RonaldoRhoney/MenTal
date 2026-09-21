@@ -4011,6 +4011,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Regência Verbal'**
   String get territoryLinguagemRegenciaVerbal;
+
+  /// Territory name — Linguagem grammar SubMundo: Regência Nominal
+  ///
+  /// In pt, this message translates to:
+  /// **'Regência Nominal'**
+  String get territoryLinguagemRegenciaNominal;
 }
 
 class _AppLocalizationsDelegate

@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Todos têm acesso ___ informação.",
+    "options": [
+      "à",
+      "da",
+      "na",
+      "pela"
+    ],
+    "correct_answer": "à",
+    "explanation": "'acesso' pede a preposição 'a': 'acesso à informação'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Sou favorável ___ proposta.",
+    "options": [
+      "à",
+      "da",
+      "na",
+      "pela"
+    ],
+    "correct_answer": "à",
+    "explanation": "'favorável' pede a preposição 'a': 'favorável à proposta'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele é contrário ___ mudança.",
+    "options": [
+      "à",
+      "da",
+      "na",
+      "pela"
+    ],
+    "correct_answer": "à",
+    "explanation": "'contrário' pede a preposição 'a': 'contrário à mudança'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela é fiel ___ seus princípios.",
+    "options": [
+      "aos",
+      "dos",
+      "nos",
+      "com os"
+    ],
+    "correct_answer": "aos",
+    "explanation": "'fiel' pede a preposição 'a': 'fiel aos princípios'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: O filme é impróprio ___ crianças.",
+    "options": [
+      "para",
+      "de",
+      "em",
+      "com"
+    ],
+    "correct_answer": "para",
+    "explanation": "'impróprio' pede a preposição 'para': 'impróprio para crianças'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele é capaz ___ vencer.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'capaz' pede a preposição 'de': 'capaz de vencer'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela é responsável ___ organização.",
+    "options": [
+      "pela",
+      "da",
+      "na",
+      "à"
+    ],
+    "correct_answer": "pela",
+    "explanation": "'responsável' pede a preposição 'por': 'responsável pela organização' (por + a = pela).",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Tenho medo ___ altura.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'medo' pede a preposição 'de': 'medo de altura'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Sou orgulhoso ___ meus filhos.",
+    "options": [
+      "dos",
+      "aos",
+      "nos",
+      "com os"
+    ],
+    "correct_answer": "dos",
+    "explanation": "'orgulhoso' pede a preposição 'de': 'orgulhoso dos filhos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele é suspeito ___ crime.",
+    "options": [
+      "do",
+      "ao",
+      "no",
+      "com o"
+    ],
+    "correct_answer": "do",
+    "explanation": "'suspeito' pede a preposição 'de': 'suspeito do crime'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela é diferente ___ irmã.",
+    "options": [
+      "da",
+      "à",
+      "na",
+      "com a"
+    ],
+    "correct_answer": "da",
+    "explanation": "'diferente' pede a preposição 'de': 'diferente da irmã'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Minha opinião é igual ___ sua.",
+    "options": [
+      "à",
+      "da",
+      "na",
+      "com a"
+    ],
+    "correct_answer": "à",
+    "explanation": "'igual' pede a preposição 'a': 'igual à sua'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele é semelhante ___ pai.",
+    "options": [
+      "ao",
+      "do",
+      "no",
+      "com o"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'semelhante' pede a preposição 'a': 'semelhante ao pai'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: O acidente foi anterior ___ chegada.",
+    "options": [
+      "à",
+      "da",
+      "na",
+      "pela"
+    ],
+    "correct_answer": "à",
+    "explanation": "'anterior' pede a preposição 'a': 'anterior à chegada'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: O resultado foi superior ___ esperado.",
+    "options": [
+      "ao",
+      "do",
+      "no",
+      "pelo"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'superior' pede a preposição 'a': 'superior ao esperado'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Estou cansado ___ esperar.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'cansado' pede a preposição 'de': 'cansado de esperar'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela tem vontade ___ viajar.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'vontade' pede a preposição 'de': 'vontade de viajar'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Estamos ansiosos ___ resultado.",
+    "options": [
+      "pelo",
+      "do",
+      "no",
+      "ao"
+    ],
+    "correct_answer": "pelo",
+    "explanation": "'ansioso' pede a preposição 'por': 'ansiosos pelo resultado' (por + o = pelo).",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele é apaixonado ___ música.",
+    "options": [
+      "pela",
+      "da",
+      "na",
+      "à"
+    ],
+    "correct_answer": "pela",
+    "explanation": "'apaixonado' pede a preposição 'por': 'apaixonado pela música' (por + a = pela).",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela é residente ___ Belém.",
+    "options": [
+      "em",
+      "a",
+      "de",
+      "para"
+    ],
+    "correct_answer": "em",
+    "explanation": "'residente' pede a preposição 'em': 'residente em Belém'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela é especialista ___ direito.",
+    "options": [
+      "em",
+      "a",
+      "de",
+      "com"
+    ],
+    "correct_answer": "em",
+    "explanation": "'especialista' pede a preposição 'em': 'especialista em direito'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele é grato ___ ela.",
+    "options": [
+      "a",
+      "de",
+      "em",
+      "com"
+    ],
+    "correct_answer": "a",
+    "explanation": "'grato' pede a preposição 'a': 'grato a ela' (para a pessoa).",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Estou grato ___ ajuda.",
+    "options": [
+      "pela",
+      "da",
+      "na",
+      "à"
+    ],
+    "correct_answer": "pela",
+    "explanation": "'grato' pede a preposição 'por': 'grato pela ajuda' (para a coisa: por + a = pela).",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: A empresa é obrigada ___ pagar.",
+    "options": [
+      "a",
+      "de",
+      "em",
+      "com"
+    ],
+    "correct_answer": "a",
+    "explanation": "'obrigado' pede a preposição 'a': 'obrigada a pagar'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Estamos habituados ___ frio.",
+    "options": [
+      "ao",
+      "do",
+      "no",
+      "pelo"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'habituado' pede a preposição 'a': 'habituados ao frio'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ela é propensa ___ resfriados.",
+    "options": [
+      "a",
+      "de",
+      "em",
+      "com"
+    ],
+    "correct_answer": "a",
+    "explanation": "'propenso' pede a preposição 'a': 'propensa a resfriados'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele é imune ___ vírus.",
+    "options": [
+      "ao",
+      "do",
+      "no",
+      "pelo"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'imune' pede a preposição 'a': 'imune ao vírus'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: O jogador é alheio ___ críticas.",
+    "options": [
+      "às",
+      "das",
+      "nas",
+      "pelas"
+    ],
+    "correct_answer": "às",
+    "explanation": "'alheio' pede a preposição 'a': 'alheio às críticas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele é dedicado ___ estudos.",
+    "options": [
+      "aos",
+      "dos",
+      "nos",
+      "pelos"
+    ],
+    "correct_answer": "aos",
+    "explanation": "'dedicado' pede a preposição 'a': 'dedicado aos estudos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: O time é inferior ___ adversário.",
+    "options": [
+      "ao",
+      "do",
+      "no",
+      "pelo"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'inferior' pede a preposição 'a': 'inferior ao adversário'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Este é um assunto paralelo ___ tema principal.",
+    "options": [
+      "ao",
+      "do",
+      "no",
+      "pelo"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'paralelo' pede a preposição 'a': 'paralelo ao tema principal'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Tenho necessidade ___ descanso.",
+    "options": [
+      "de",
+      "a",
+      "em",
+      "com"
+    ],
+    "correct_answer": "de",
+    "explanation": "'necessidade' pede a preposição 'de': 'necessidade de descanso'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele tem paixão ___ futebol.",
+    "options": [
+      "pelo",
+      "do",
+      "no",
+      "ao"
+    ],
+    "correct_answer": "pelo",
+    "explanation": "'paixão' pede a preposição 'por': 'paixão pelo futebol' (por + o = pelo).",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: A empresa é conhecida ___ qualidade.",
+    "options": [
+      "pela",
+      "da",
+      "na",
+      "à"
+    ],
+    "correct_answer": "pela",
+    "explanation": "'conhecida' pede a preposição 'por': 'conhecida pela qualidade' (por + a = pela).",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: O programa é compatível ___ o sistema.",
+    "options": [
+      "com",
+      "a",
+      "de",
+      "em"
+    ],
+    "correct_answer": "com",
+    "explanation": "'compatível' pede a preposição 'com': 'compatível com o sistema'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: O prazo é posterior ___ evento.",
+    "options": [
+      "ao",
+      "do",
+      "no",
+      "pelo"
+    ],
+    "correct_answer": "ao",
+    "explanation": "'posterior' pede a preposição 'a': 'posterior ao evento'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele é insensível ___ dor dos outros.",
+    "options": [
+      "à",
+      "da",
+      "na",
+      "pela"
+    ],
+    "correct_answer": "à",
+    "explanation": "'insensível' pede a preposição 'a': 'insensível à dor'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ela é generosa ___ todos.",
+    "options": [
+      "com",
+      "a",
+      "de",
+      "em"
+    ],
+    "correct_answer": "com",
+    "explanation": "'generosa' pede a preposição 'com': 'generosa com todos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele está pronto ___ tudo.",
+    "options": [
+      "para",
+      "de",
+      "em",
+      "com"
+    ],
+    "correct_answer": "para",
+    "explanation": "'pronto' pede a preposição 'para': 'pronto para tudo'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Eles são leais ___ amigos.",
+    "options": [
+      "aos",
+      "dos",
+      "nos",
+      "pelos"
+    ],
+    "correct_answer": "aos",
+    "explanation": "'leal' pede a preposição 'a': 'leais aos amigos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Regência nominal é a preposição que um substantivo ou adjetivo exige: descubra qual termo pede complemento.",
+      "Lembre a construção mais comum com essa palavra ('acesso a', 'capaz de', 'fiel a'...)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (acesso).",
+    "options": [
+      "Todos têm acesso à internet.",
+      "Todos têm acesso na internet.",
+      "Todos têm acesso da internet.",
+      "Todos têm acesso pela internet."
+    ],
+    "correct_answer": "Todos têm acesso à internet.",
+    "explanation": "'Acesso' pede a preposição 'a': 'acesso à internet'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (preferível).",
+    "options": [
+      "Ler é preferível a assistir.",
+      "Ler é preferível do que assistir.",
+      "Ler é preferível que assistir.",
+      "Ler é mais preferível a assistir."
+    ],
+    "correct_answer": "Ler é preferível a assistir.",
+    "explanation": "'Preferível' pede 'a' e já traz a ideia de comparação: sem 'do que', 'que' ou 'mais'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (necessidade).",
+    "options": [
+      "A empresa tem necessidade de novos funcionários.",
+      "A empresa tem necessidade em novos funcionários.",
+      "A empresa tem necessidade a novos funcionários.",
+      "A empresa tem necessidade com novos funcionários."
+    ],
+    "correct_answer": "A empresa tem necessidade de novos funcionários.",
+    "explanation": "'Necessidade' pede a preposição 'de'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (capaz).",
+    "options": [
+      "Ele é capaz de vencer.",
+      "Ele é capaz a vencer.",
+      "Ele é capaz em vencer.",
+      "Ele é capaz com vencer."
+    ],
+    "correct_answer": "Ele é capaz de vencer.",
+    "explanation": "'Capaz' pede a preposição 'de': 'capaz de vencer'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (igual).",
+    "options": [
+      "Sua opinião é igual à minha.",
+      "Sua opinião é igual da minha.",
+      "Sua opinião é igual com a minha.",
+      "Sua opinião é igual que a minha."
+    ],
+    "correct_answer": "Sua opinião é igual à minha.",
+    "explanation": "'Igual' pede 'a': a + a = à.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (diferente).",
+    "options": [
+      "Ele é diferente do irmão.",
+      "Ele é diferente ao irmão.",
+      "Ele é diferente que o irmão.",
+      "Ele é diferente com o irmão."
+    ],
+    "correct_answer": "Ele é diferente do irmão.",
+    "explanation": "'Diferente' pede a preposição 'de': de + o = do.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (fiel).",
+    "options": [
+      "Ela é fiel aos amigos.",
+      "Ela é fiel dos amigos.",
+      "Ela é fiel nos amigos.",
+      "Ela é fiel com os amigos."
+    ],
+    "correct_answer": "Ela é fiel aos amigos.",
+    "explanation": "'Fiel' pede a preposição 'a': a + os = aos.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (imune).",
+    "options": [
+      "O paciente ficou imune à doença.",
+      "O paciente ficou imune da doença.",
+      "O paciente ficou imune com a doença.",
+      "O paciente ficou imune pela doença."
+    ],
+    "correct_answer": "O paciente ficou imune à doença.",
+    "explanation": "'Imune' pede a preposição 'a': a + a = à.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à regência nominal (responsável).",
+    "options": [
+      "Ele é responsável pelo setor.",
+      "Ele é responsável ao setor.",
+      "Ele é responsável com o setor.",
+      "Ele é responsável no setor."
+    ],
+    "correct_answer": "Ele é responsável pelo setor.",
+    "explanation": "'Responsável' pede a preposição 'por': por + o = pelo.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_regencia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase INCORRETA quanto à regência nominal.",
+    "options": [
+      "Ela é fiel aos princípios.",
+      "Estou ansioso pelo resultado.",
+      "O time é superior ao adversário.",
+      "Ele é contrário da mudança."
+    ],
+    "correct_answer": "Ele é contrário da mudança.",
+    "explanation": "'Contrário' pede a preposição 'a': o correto é 'contrário à mudança'. As demais estão corretas.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o substantivo ou adjetivo e a preposição que o completa.",
+      "Elimine as alternativas em que a preposição não é a exigida pelo termo."
+    ]
+  }
+]
