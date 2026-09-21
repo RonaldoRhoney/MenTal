@@ -3176,5 +3176,9 @@
   "territoryLinguagemConcordanciaVerbal": "Concordância Verbal",
   "@territoryLinguagemConcordanciaVerbal": {
     "description": "Territory name — Linguagem grammar SubMundo: Concordância Verbal"
+  },
+  "territoryLinguagemConcordanciaNominal": "Concordância Nominal",
+  "@territoryLinguagemConcordanciaNominal": {
+    "description": "Territory name — Linguagem grammar SubMundo: Concordância Nominal"
   }
 }

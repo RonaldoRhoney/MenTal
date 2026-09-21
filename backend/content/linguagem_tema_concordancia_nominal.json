@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: As casas ___ são bonitas. (antigo)",
+    "options": [
+      "antigas",
+      "antigos",
+      "antiga",
+      "antigo"
+    ],
+    "correct_answer": "antigas",
+    "explanation": "'Casas' é feminino plural: o adjetivo vai para 'antigas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: O menino ___ chegou cedo. (cansado)",
+    "options": [
+      "cansado",
+      "cansada",
+      "cansados",
+      "cansadas"
+    ],
+    "correct_answer": "cansado",
+    "explanation": "'Menino' é masculino singular: 'cansado'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Minhas irmãs estão ___. (feliz)",
+    "options": [
+      "felizes",
+      "feliz",
+      "felizas",
+      "felizeses"
+    ],
+    "correct_answer": "felizes",
+    "explanation": "'Irmãs' é plural: o adjetivo 'feliz' faz 'felizes' (uniforme, igual nos dois gêneros).",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Os livros ___ caíram. (velho)",
+    "options": [
+      "velhos",
+      "velha",
+      "velhas",
+      "velho"
+    ],
+    "correct_answer": "velhos",
+    "explanation": "'Livros' é masculino plural: 'velhos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela é uma aluna ___. (dedicado)",
+    "options": [
+      "dedicada",
+      "dedicado",
+      "dedicadas",
+      "dedicados"
+    ],
+    "correct_answer": "dedicada",
+    "explanation": "'Aluna' é feminino singular: 'dedicada'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Comprei duas maçãs ___. (vermelho)",
+    "options": [
+      "vermelhas",
+      "vermelhos",
+      "vermelha",
+      "vermelho"
+    ],
+    "correct_answer": "vermelhas",
+    "explanation": "'Maçãs' é feminino plural: 'vermelhas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: ___ meninas chegaram. (o)",
+    "options": [
+      "As",
+      "O",
+      "Os",
+      "A"
+    ],
+    "correct_answer": "As",
+    "explanation": "O artigo concorda com 'meninas' (feminino plural): 'As'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: ___ problema foi resolvido. (um)",
+    "options": [
+      "Um",
+      "Uma",
+      "Uns",
+      "Umas"
+    ],
+    "correct_answer": "Um",
+    "explanation": "'Problema' é masculino singular (apesar da terminação em -a): 'Um problema'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Comprei ___ camisas novas. (dois)",
+    "options": [
+      "duas",
+      "dois",
+      "duos",
+      "dua"
+    ],
+    "correct_answer": "duas",
+    "explanation": "O numeral 'dois' varia em gênero: 'camisas' é feminino, logo 'duas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Os alunos ___ foram premiados. (inteligente)",
+    "options": [
+      "inteligentes",
+      "inteligente",
+      "inteligentas",
+      "inteligenta"
+    ],
+    "correct_answer": "inteligentes",
+    "explanation": "'Alunos' é plural: 'inteligentes' (adjetivo uniforme).",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: A mulher ___ saiu. (alto)",
+    "options": [
+      "alta",
+      "alto",
+      "altas",
+      "altos"
+    ],
+    "correct_answer": "alta",
+    "explanation": "'Mulher' é feminino singular: 'alta'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Preciso de ___ cadeira. (nenhum)",
+    "options": [
+      "nenhuma",
+      "nenhum",
+      "nenhumas",
+      "nenhuns"
+    ],
+    "correct_answer": "nenhuma",
+    "explanation": "'Cadeira' é feminino: o pronome fica 'nenhuma'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela comprou ___ blusa azul. (aquele)",
+    "options": [
+      "aquela",
+      "aquele",
+      "aqueles",
+      "aquelas"
+    ],
+    "correct_answer": "aquela",
+    "explanation": "O demonstrativo concorda com 'blusa': 'aquela'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Os pais estão ___. (orgulhoso)",
+    "options": [
+      "orgulhosos",
+      "orgulhoso",
+      "orgulhosa",
+      "orgulhosas"
+    ],
+    "correct_answer": "orgulhosos",
+    "explanation": "'Pais' é masculino plural: 'orgulhosos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: As crianças ficaram ___. (calado)",
+    "options": [
+      "caladas",
+      "calados",
+      "calada",
+      "calado"
+    ],
+    "correct_answer": "caladas",
+    "explanation": "'Crianças' é feminino plural: 'caladas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: O gato e o cachorro são ___. (amigo)",
+    "options": [
+      "amigos",
+      "amigo",
+      "amigas",
+      "amiga"
+    ],
+    "correct_answer": "amigos",
+    "explanation": "Dois substantivos masculinos: o adjetivo vai para o masculino plural, 'amigos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Quando há mais de um substantivo, veja se o masculino prevalece no plural.",
+      "Se houver substantivos de gêneros diferentes, o adjetivo vai para o masculino plural."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: A menina e a mãe estão ___. (contente)",
+    "options": [
+      "contentes",
+      "contente",
+      "contentas",
+      "contenta"
+    ],
+    "correct_answer": "contentes",
+    "explanation": "Dois substantivos no feminino, adjetivo uniforme: 'contentes'.",
+    "age_reviewed": true,
+    "hints": [
+      "Quando há mais de um substantivo, veja se o masculino prevalece no plural.",
+      "Se houver substantivos de gêneros diferentes, o adjetivo vai para o masculino plural."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: O pai e a mãe ficaram ___. (preocupado)",
+    "options": [
+      "preocupados",
+      "preocupadas",
+      "preocupado",
+      "preocupada"
+    ],
+    "correct_answer": "preocupados",
+    "explanation": "Com substantivos de gêneros diferentes, o adjetivo vai para o masculino plural: 'preocupados'.",
+    "age_reviewed": true,
+    "hints": [
+      "Quando há mais de um substantivo, veja se o masculino prevalece no plural.",
+      "Se houver substantivos de gêneros diferentes, o adjetivo vai para o masculino plural."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Vi muitas flores ___. (bonito)",
+    "options": [
+      "bonitas",
+      "bonitos",
+      "bonita",
+      "bonito"
+    ],
+    "correct_answer": "bonitas",
+    "explanation": "'Flores' é feminino plural: 'bonitas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele tem ___ amigos. (pouco)",
+    "options": [
+      "poucos",
+      "pouco",
+      "pouca",
+      "poucas"
+    ],
+    "correct_answer": "poucos",
+    "explanation": "O pronome 'pouco' concorda com 'amigos': 'poucos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Todas as ___ foram abertas. (janela)",
+    "options": [
+      "janelas",
+      "janela",
+      "janelos",
+      "janeles"
+    ],
+    "correct_answer": "janelas",
+    "explanation": "O plural de 'janela' é 'janelas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele bebeu ___ água. (muito)",
+    "options": [
+      "muita",
+      "muito",
+      "muitos",
+      "muitas"
+    ],
+    "correct_answer": "muita",
+    "explanation": "'Água' é feminino singular: o pronome 'muito' vira 'muita'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Os ___ são bonitos. (jardim)",
+    "options": [
+      "jardins",
+      "jardims",
+      "jardines",
+      "jardinos"
+    ],
+    "correct_answer": "jardins",
+    "explanation": "O plural de 'jardim' é 'jardins' (-m vira -ns).",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Os ___ chegaram. (animal)",
+    "options": [
+      "animais",
+      "animales",
+      "animaes",
+      "animals"
+    ],
+    "correct_answer": "animais",
+    "explanation": "O plural de 'animal' é 'animais' (-al vira -ais).",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 1,
+    "prompt": "Complete: Vi um homem e uma mulher ___. (elegante)",
+    "options": [
+      "elegantes",
+      "elegante",
+      "elegantas",
+      "elegantos"
+    ],
+    "correct_answer": "elegantes",
+    "explanation": "Substantivos de gêneros diferentes; adjetivo uniforme no plural: 'elegantes'.",
+    "age_reviewed": true,
+    "hints": [
+      "Quando há mais de um substantivo, veja se o masculino prevalece no plural.",
+      "Se houver substantivos de gêneros diferentes, o adjetivo vai para o masculino plural."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ela está ___ cansada. (meio/meia)",
+    "options": [
+      "meio",
+      "meia",
+      "meios",
+      "meias"
+    ],
+    "correct_answer": "meio",
+    "explanation": "Aqui 'meio' é advérbio (= um pouco) e não varia: 'meio cansada'.",
+    "age_reviewed": true,
+    "hints": [
+      "Algumas palavras podem funcionar como advérbio (e não variam) ou como adjetivo (e variam).",
+      "Pergunte-se: a palavra modifica um adjetivo/verbo (advérbio) ou um substantivo (adjetivo)?"
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Maria agradeceu: \"Muito ___!\" (obrigado)",
+    "options": [
+      "obrigada",
+      "obrigado",
+      "obrigadas",
+      "obrigados"
+    ],
+    "correct_answer": "obrigada",
+    "explanation": "'Obrigado' concorda com quem fala: uma mulher diz 'obrigada'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Seguem ___ os documentos. (anexo)",
+    "options": [
+      "anexos",
+      "anexo",
+      "anexas",
+      "anexa"
+    ],
+    "correct_answer": "anexos",
+    "explanation": "'Anexo' é adjetivo e concorda com o substantivo a que se refere: 'os documentos' → 'anexos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: As fotos vão ___ ao e-mail. (anexo)",
+    "options": [
+      "anexas",
+      "anexo",
+      "anexos",
+      "anexa"
+    ],
+    "correct_answer": "anexas",
+    "explanation": "'Anexo' concorda com 'fotos' (feminino plural): 'anexas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ela é ___ inteligente. (bastante)",
+    "options": [
+      "bastante",
+      "bastantes",
+      "bastanta",
+      "bastantas"
+    ],
+    "correct_answer": "bastante",
+    "explanation": "Modificando um adjetivo, 'bastante' é advérbio (= muito) e é invariável.",
+    "age_reviewed": true,
+    "hints": [
+      "Algumas palavras podem funcionar como advérbio (e não variam) ou como adjetivo (e variam).",
+      "Pergunte-se: a palavra modifica um adjetivo/verbo (advérbio) ou um substantivo (adjetivo)?"
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Havia ___ pessoas na sala. (bastante)",
+    "options": [
+      "bastantes",
+      "bastante",
+      "bastanta",
+      "bastantas"
+    ],
+    "correct_answer": "bastantes",
+    "explanation": "Modificando um substantivo, 'bastante' é pronome adjetivo (= muitas) e concorda: 'bastantes'.",
+    "age_reviewed": true,
+    "hints": [
+      "Algumas palavras podem funcionar como advérbio (e não variam) ou como adjetivo (e variam).",
+      "Pergunte-se: a palavra modifica um adjetivo/verbo (advérbio) ou um substantivo (adjetivo)?"
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Eles ___ fizeram o bolo. (mesmo)",
+    "options": [
+      "mesmos",
+      "mesmo",
+      "mesma",
+      "mesmas"
+    ],
+    "correct_answer": "mesmos",
+    "explanation": "'Mesmo' reforça o sujeito e concorda com ele: 'Eles mesmos fizeram'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Elas ___ escolheram o presente. (próprio)",
+    "options": [
+      "próprias",
+      "próprio",
+      "própria",
+      "próprios"
+    ],
+    "correct_answer": "próprias",
+    "explanation": "'Próprio' reforça o sujeito e concorda com ele: 'Elas próprias escolheram'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Havia ___ gente na festa. (menos)",
+    "options": [
+      "menos",
+      "menas",
+      "meno",
+      "menoses"
+    ],
+    "correct_answer": "menos",
+    "explanation": "'Menos' é invariável (advérbio ou pronome); 'menas' não existe na norma-padrão.",
+    "age_reviewed": true,
+    "hints": [
+      "Algumas palavras podem funcionar como advérbio (e não variam) ou como adjetivo (e variam).",
+      "Pergunte-se: a palavra modifica um adjetivo/verbo (advérbio) ou um substantivo (adjetivo)?"
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: As meninas saíram ___ de casa. (só = sozinhas)",
+    "options": [
+      "sós",
+      "só",
+      "sozinhos",
+      "sozinho"
+    ],
+    "correct_answer": "sós",
+    "explanation": "'Só' com sentido de 'sozinho' é adjetivo e vai para o plural: 'sós'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: As contas já estão ___. (quite)",
+    "options": [
+      "quites",
+      "quite",
+      "quita",
+      "quitas"
+    ],
+    "correct_answer": "quites",
+    "explanation": "'Quite' é adjetivo de dois gêneros e concorda no número: 'quites'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: É ___ a entrada de estranhos. (proibido)",
+    "options": [
+      "proibida",
+      "proibido",
+      "proibidas",
+      "proibidos"
+    ],
+    "correct_answer": "proibida",
+    "explanation": "Com artigo antes do substantivo ('a entrada'), 'proibido' concorda com ele: 'É proibida a entrada'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: É ___ entrada de estranhos. (proibido)",
+    "options": [
+      "proibido",
+      "proibida",
+      "proibidas",
+      "proibidos"
+    ],
+    "correct_answer": "proibido",
+    "explanation": "Sem artigo ou determinante antes do substantivo, a expressão é invariável: 'É proibido entrada de estranhos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ela leu ___ os livros da estante. (todo)",
+    "options": [
+      "todos",
+      "todo",
+      "toda",
+      "todas"
+    ],
+    "correct_answer": "todos",
+    "explanation": "'Todos os livros': o pronome concorda com 'livros' (masculino plural).",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele leu o livro ___ em uma noite. (todo = inteiro)",
+    "options": [
+      "todo",
+      "toda",
+      "todos",
+      "todas"
+    ],
+    "correct_answer": "todo",
+    "explanation": "'Todo' (= inteiro) concorda com 'livro': masculino singular.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a palavra a que o termo se refere: ele vai concordar com ela em gênero (masculino/feminino) e número (singular/plural).",
+      "Artigos, adjetivos, numerais e pronomes acompanham o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à concordância nominal (anexo).",
+    "options": [
+      "Seguem anexas as fotos.",
+      "Seguem anexo as fotos.",
+      "Seguem anexos as fotos.",
+      "Segue anexas as fotos."
+    ],
+    "correct_answer": "Seguem anexas as fotos.",
+    "explanation": "'Anexo' concorda com 'as fotos' (feminino plural): 'anexas'; e o verbo 'seguem' concorda com 'as fotos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando a palavra a que cada adjetivo se refere.",
+      "Elimine as alternativas em que o termo não concorda em gênero e número com o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à concordância nominal (é necessário).",
+    "options": [
+      "É necessária a coragem.",
+      "É necessário a coragem.",
+      "São necessário coragem.",
+      "É necessárias a coragem."
+    ],
+    "correct_answer": "É necessária a coragem.",
+    "explanation": "Com artigo antes do substantivo ('a coragem'), o adjetivo concorda com ele: 'É necessária a coragem'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando a palavra a que cada adjetivo se refere.",
+      "Elimine as alternativas em que o termo não concorda em gênero e número com o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à concordância nominal (meio).",
+    "options": [
+      "Ela ficou meio nervosa.",
+      "Ela ficou meia nervosa.",
+      "Ela ficou meios nervosa.",
+      "Ela ficou meias nervosas."
+    ],
+    "correct_answer": "Ela ficou meio nervosa.",
+    "explanation": "'Meio' modificando um adjetivo é advérbio (= um pouco): invariável.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando a palavra a que cada adjetivo se refere.",
+      "Elimine as alternativas em que o termo não concorda em gênero e número com o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Complete: As camisas ___ são novas. (verde-claro)",
+    "options": [
+      "verde-claras",
+      "verdes-claras",
+      "verde-claro",
+      "verdes-claros"
+    ],
+    "correct_answer": "verde-claras",
+    "explanation": "Em adjetivos compostos de adjetivo + adjetivo, só o último varia: 'verde-claras'.",
+    "age_reviewed": true,
+    "hints": [
+      "Quando há mais de um substantivo, veja se o masculino prevalece no plural.",
+      "Se houver substantivos de gêneros diferentes, o adjetivo vai para o masculino plural."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Complete: Comprei duas camisas ___. (azul-marinho)",
+    "options": [
+      "azul-marinho",
+      "azuis-marinhos",
+      "azul-marinhas",
+      "azuis-marinho"
+    ],
+    "correct_answer": "azul-marinho",
+    "explanation": "Quando o segundo elemento é um substantivo usado como cor (marinho), o composto é invariável: 'azul-marinho'.",
+    "age_reviewed": true,
+    "hints": [
+      "Quando há mais de um substantivo, veja se o masculino prevalece no plural.",
+      "Se houver substantivos de gêneros diferentes, o adjetivo vai para o masculino plural."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à concordância nominal (mesmo).",
+    "options": [
+      "Elas mesmas fizeram o trabalho.",
+      "Elas mesmo fizeram o trabalho.",
+      "Elas mesmos fizeram o trabalho.",
+      "Elas mesma fizeram o trabalho."
+    ],
+    "correct_answer": "Elas mesmas fizeram o trabalho.",
+    "explanation": "'Mesmo' reforça o sujeito e concorda com ele: 'elas' → 'mesmas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando a palavra a que cada adjetivo se refere.",
+      "Elimine as alternativas em que o termo não concorda em gênero e número com o substantivo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Complete: Falando com uma juíza: \"Vossa Excelência está ___.\" (cansado)",
+    "options": [
+      "cansada",
+      "cansado",
+      "cansadas",
+      "cansados"
+    ],
+    "correct_answer": "cansada",
+    "explanation": "Com pronomes de tratamento, o adjetivo concorda com o sexo da pessoa a quem se refere: uma juíza → 'cansada'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Complete: Os ___ aprendem Libras. (surdo-mudo)",
+    "options": [
+      "surdos-mudos",
+      "surdo-mudos",
+      "surdos-mudo",
+      "surdo-mudo"
+    ],
+    "correct_answer": "surdos-mudos",
+    "explanation": "Quando o composto é um substantivo formado por dois adjetivos ('surdo-mudo'), os dois elementos vão ao plural: 'surdos-mudos'.",
+    "age_reviewed": true,
+    "hints": [
+      "Quando há mais de um substantivo, veja se o masculino prevalece no plural.",
+      "Se houver substantivos de gêneros diferentes, o adjetivo vai para o masculino plural."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à concordância nominal (lesa).",
+    "options": [
+      "Cometeu crime de lesa-pátria.",
+      "Cometeu crime de leso-pátria.",
+      "Cometeu crime de lesos-pátria.",
+      "Cometeu crime de lesas-pátria."
+    ],
+    "correct_answer": "Cometeu crime de lesa-pátria.",
+    "explanation": "'Lesa' é forma feminina do adjetivo e concorda com 'pátria' (feminino): 'lesa-pátria'.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre a regra específica dessa palavra: em alguns casos há concordância, em outros ela é invariável.",
+      "Observe se há artigo ou determinante antes do substantivo, pois isso muda a concordância."
+    ]
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à concordância nominal (só).",
+    "options": [
+      "Elas estavam sós.",
+      "Elas estavam só.",
+      "Elas estavam sozinho.",
+      "Elas estavam sozinhos."
+    ],
+    "correct_answer": "Elas estavam sós.",
+    "explanation": "'Só' com sentido de 'sozinho' é adjetivo e vai ao plural: 'sós'. 'Sozinho(s)' estaria no masculino.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando a palavra a que cada adjetivo se refere.",
+      "Elimine as alternativas em que o termo não concorda em gênero e número com o substantivo."
+    ]
+  }
+]

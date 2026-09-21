@@ -3999,6 +3999,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Concordância Verbal'**
   String get territoryLinguagemConcordanciaVerbal;
+
+  /// Territory name — Linguagem grammar SubMundo: Concordância Nominal
+  ///
+  /// In pt, this message translates to:
+  /// **'Concordância Nominal'**
+  String get territoryLinguagemConcordanciaNominal;
 }
 
 class _AppLocalizationsDelegate

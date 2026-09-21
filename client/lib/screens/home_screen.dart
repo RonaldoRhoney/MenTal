@@ -1537,6 +1537,7 @@ const Map<String, IconData> _kSectionIcons = {
   'lg_morfologia': Icons.abc_rounded,
   'lg_interpretacao_de_texto': Icons.menu_book_rounded,
   'lg_concordancia_verbal': Icons.rule_rounded,
+  'lg_concordancia_nominal': Icons.link_rounded,
 };
 
 /// Cabeçalho de seção reutilizável — usado por qualquer Bloco/SubMundo

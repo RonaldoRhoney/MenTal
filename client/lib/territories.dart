@@ -187,6 +187,7 @@ const List<String> kTerritoryIds = [
   'linguagem_morfologia',
   'linguagem_interpretacao_de_texto',
   'linguagem_concordancia_verbal',
+  'linguagem_concordancia_nominal',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -289,6 +290,8 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryLinguagemInterpretacaoDeTexto;
     case 'linguagem_concordancia_verbal':
       return l10n.territoryLinguagemConcordanciaVerbal;
+    case 'linguagem_concordancia_nominal':
+      return l10n.territoryLinguagemConcordanciaNominal;
     case 'futebol_origens':
       return l10n.territoryFutebolOrigens;
     case 'futebol_grandes_nomes':
