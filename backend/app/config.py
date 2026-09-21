@@ -614,3 +614,6 @@ APP_FEEDBACK_DAILY_LIMIT = 30
 # a resposta certa de graça (oráculo). Janela em que a etapa ainda vale.
 WORD_CONSTELLATION_MAX_AGE_HOURS = 24
 RATE_LIMIT_WORD_CONSTELLATION = (30, 60.0)
+
+# My_Mental_AI (agente do usuário): 1 análise a cada poucos segundos é mais que suficiente.
+RATE_LIMIT_COACH = (20, 60.0)

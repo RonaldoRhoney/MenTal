@@ -1236,3 +1236,31 @@ class RepairStreakOut(BaseModel):
     # só aparece depois da próxima jogada.
     applied_immediately: bool = False
     balance: int
+
+
+# My_Mental_AI — agente do usuário (21/09/2026): dicas por regras sobre o desempenho do próprio usuário.
+class CoachCardOut(BaseModel):
+    id: str
+    priority: int
+    title: str
+    body: str
+    # {"type": "territory"|"movement"|"mentalcoins"|"ranking"|"friends", "territory_id"?, "relampago"?}
+    action: dict | None = None
+    territory_id: str | None = None
+
+
+class CoachSummaryOut(BaseModel):
+    total_answers: int
+    accuracy: float
+    weekly_xp: int
+    weekly_rank: int | None = None
+    streak: int
+    daily_xp: int
+    daily_xp_cap: int
+
+
+class CoachOut(BaseModel):
+    name: str
+    summary: CoachSummaryOut
+    daily_tip: CoachCardOut | None = None
+    cards: list[CoachCardOut]

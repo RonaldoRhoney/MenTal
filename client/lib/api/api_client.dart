@@ -364,6 +364,12 @@ class ApiClient {
     );
   }
 
+  // My_Mental_AI (agente do usuário, 21/09/2026): análise por regras do desempenho
+  // do próprio usuário — só leitura, sem IA paga.
+  Future<Map<String, dynamic>> getCoach() async {
+    return _get(_uri('/coach'), headers: _headers);
+  }
+
   // Fase 3 da REGRA_OFICIAL_GAMIFICACAO_MENTAL.md — teto diário de XP,
   // boost de XP e reparo de streak. Preço, janela e efeito são 100%
   // decididos pelo servidor; o client só exibe e pede a compra.

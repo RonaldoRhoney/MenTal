@@ -4017,6 +4017,54 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Regência Nominal'**
   String get territoryLinguagemRegenciaNominal;
+
+  /// My_Mental_AI subtitle
+  ///
+  /// In pt, this message translates to:
+  /// **'Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.'**
+  String get coachSubtitle;
+
+  /// My_Mental_AI load error
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar suas recomendações.'**
+  String get coachLoadError;
+
+  /// My_Mental_AI card action button
+  ///
+  /// In pt, this message translates to:
+  /// **'Ir agora'**
+  String get coachGoButton;
+
+  /// Summary chip: answers
+  ///
+  /// In pt, this message translates to:
+  /// **'{count, plural, =1{1 resposta} other{{count} respostas}}'**
+  String coachSummaryAnswers(int count);
+
+  /// Summary chip: accuracy
+  ///
+  /// In pt, this message translates to:
+  /// **'{percent}% de acerto'**
+  String coachSummaryAccuracy(int percent);
+
+  /// Summary chip: weekly XP
+  ///
+  /// In pt, this message translates to:
+  /// **'{xp} XP na semana'**
+  String coachSummaryWeekXp(int xp);
+
+  /// Summary chip: weekly rank
+  ///
+  /// In pt, this message translates to:
+  /// **'#{rank} na semana'**
+  String coachSummaryRank(int rank);
+
+  /// Home card label for the daily tip
+  ///
+  /// In pt, this message translates to:
+  /// **'Dica do My_Mental_AI'**
+  String get homeCoachCardLabel;
 }
 
 class _AppLocalizationsDelegate

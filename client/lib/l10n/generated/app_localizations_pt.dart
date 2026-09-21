@@ -2316,4 +2316,43 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get territoryLinguagemRegenciaNominal => 'Regência Nominal';
+
+  @override
+  String get coachSubtitle =>
+      'Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.';
+
+  @override
+  String get coachLoadError => 'Não foi possível carregar suas recomendações.';
+
+  @override
+  String get coachGoButton => 'Ir agora';
+
+  @override
+  String coachSummaryAnswers(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count respostas',
+      one: '1 resposta',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String coachSummaryAccuracy(int percent) {
+    return '$percent% de acerto';
+  }
+
+  @override
+  String coachSummaryWeekXp(int xp) {
+    return '$xp XP na semana';
+  }
+
+  @override
+  String coachSummaryRank(int rank) {
+    return '#$rank na semana';
+  }
+
+  @override
+  String get homeCoachCardLabel => 'Dica do My_Mental_AI';
 }

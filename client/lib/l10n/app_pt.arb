@@ -3188,5 +3188,57 @@
   "territoryLinguagemRegenciaNominal": "Regência Nominal",
   "@territoryLinguagemRegenciaNominal": {
     "description": "Territory name — Linguagem grammar SubMundo: Regência Nominal"
+  },
+  "coachSubtitle": "Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.",
+  "@coachSubtitle": {
+    "description": "My_Mental_AI subtitle"
+  },
+  "coachLoadError": "Não foi possível carregar suas recomendações.",
+  "@coachLoadError": {
+    "description": "My_Mental_AI load error"
+  },
+  "coachGoButton": "Ir agora",
+  "@coachGoButton": {
+    "description": "My_Mental_AI card action button"
+  },
+  "coachSummaryAnswers": "{count, plural, =1{1 resposta} other{{count} respostas}}",
+  "@coachSummaryAnswers": {
+    "description": "Summary chip: answers",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "coachSummaryAccuracy": "{percent}% de acerto",
+  "@coachSummaryAccuracy": {
+    "description": "Summary chip: accuracy",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "coachSummaryWeekXp": "{xp} XP na semana",
+  "@coachSummaryWeekXp": {
+    "description": "Summary chip: weekly XP",
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "coachSummaryRank": "#{rank} na semana",
+  "@coachSummaryRank": {
+    "description": "Summary chip: weekly rank",
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "homeCoachCardLabel": "Dica do My_Mental_AI",
+  "@homeCoachCardLabel": {
+    "description": "Home card label for the daily tip"
   }
 }

@@ -18,6 +18,7 @@ import '../widgets/update_available_dialog.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
+import 'coach_screen.dart';
 import 'feed_screen.dart';
 import 'feedback_screen.dart';
 import 'friends_screen.dart';
@@ -73,6 +74,18 @@ class _HomeScreenState extends State<HomeScreen> {
   // Fase 3: oferta de reparo de sequência + boost ativo. Reforço visual,
   // falha silenciosa como os demais indicadores secundários.
   Map<String, dynamic>? _economy;
+  // My_Mental_AI (21/09/2026): dica do dia. Reforço visual; falha silenciosa.
+  Map<String, dynamic>? _coachTip;
+
+  Future<void> _loadCoach() async {
+    try {
+      final coach = await widget.client.getCoach();
+      if (mounted)
+        setState(() => _coachTip = coach['daily_tip'] as Map<String, dynamic>?);
+    } on ApiException {
+      // o cartão simplesmente não aparece
+    }
+  }
 
   Future<void> _loadEconomy() async {
     try {
@@ -280,6 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadProfileHeader();
     _loadMentalCoinsBalance();
     _loadEconomy();
+    _loadCoach();
     _loadFeedBadge();
     _loadBattlesBadge();
     _loadNotificationBadge();
@@ -309,6 +323,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _loadProfileHeader(),
       _loadMentalCoinsBalance(),
       _loadEconomy(),
+      _loadCoach(),
       _loadFeedBadge(),
       _loadBattlesBadge(),
       _loadNotificationBadge(),
@@ -438,6 +453,62 @@ class _HomeScreenState extends State<HomeScreen> {
   /// dedicada com os territórios daquele Mundo (_WorldDetailScreen),
   /// nunca expande in-place (decisão tomada com Rhoney: manter a Home
   /// enxuta, sem nada crescendo embaixo do carrossel).
+  /// My_Mental_AI: a recomendação mais valiosa agora (calculada pelo servidor).
+  Widget _buildCoachCard(AppLocalizations l10n) {
+    final tip = _coachTip;
+    if (tip == null) return const SizedBox.shrink();
+    final territoryId = tip['territory_id'] as String?;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: InkWell(
+        key: const Key('home_coach_card'),
+        borderRadius: BorderRadius.circular(14),
+        onTap: () async {
+          await Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => CoachScreen(client: widget.client)));
+          _loadCoach();
+        },
+        child: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: AppColors.bg2,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppColors.teal.withValues(alpha: 0.45)),
+          ),
+          child: Row(
+            children: [
+              Icon(coachIcon(tip['id'] as String), color: AppColors.teal),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(l10n.homeCoachCardLabel,
+                        style: AppTheme.technicalStyle(
+                            color: AppColors.teal, fontSize: 11)),
+                    const SizedBox(height: 2),
+                    Text(coachText(l10n, tip['title'] as String, territoryId),
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge
+                            ?.copyWith(fontWeight: FontWeight.w600),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis),
+                    Text(coachText(l10n, tip['body'] as String, territoryId),
+                        style: Theme.of(context).textTheme.bodySmall,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis),
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right_rounded, color: AppColors.muted),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   /// Fase 3: cartão de reparo de sequência (quando há) e chip de boost ativo.
   Widget _buildEconomyBanner(AppLocalizations l10n) {
     final e = _economy;
@@ -918,6 +989,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               : Column(
                                   children: [
                                     _buildEconomyBanner(l10n),
+                                    _buildCoachCard(l10n),
                                     _buildWorldCarousel(l10n),
                                   ],
                                 ),
