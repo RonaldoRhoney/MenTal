@@ -1387,6 +1387,11 @@ class _WorldCarouselState extends State<_WorldCarousel> {
   Timer? _autoScrollTimer;
   Timer? _resumeTimer;
   bool _paused = false;
+  // Token da animação de "voltar pro início" em andamento (animateTo) —
+  // incrementado sempre que o usuário interrompe o auto-scroll, pra o
+  // `.then` de uma animação já cancelada não reativar o auto-scroll por
+  // engano (ver _pauseForInteraction).
+  int _bounceToken = 0;
   bool _canScrollLeft = false;
   bool _canScrollRight = false;
 
@@ -1427,12 +1432,16 @@ class _WorldCarouselState extends State<_WorldCarousel> {
       final next = _controller.offset + 0.8;
       if (next >= pos.maxScrollExtent) {
         _paused = true; // evita o timer competir com a animação de volta
+        final token = ++_bounceToken;
         _controller
             .animateTo(0,
                 duration: const Duration(milliseconds: 900),
                 curve: Curves.easeInOut)
             .then((_) {
-          if (mounted) _paused = false;
+          // Só retoma se nada interrompeu esta MESMA animação nesse meio
+          // tempo (ver _pauseForInteraction) — senão um toque durante a
+          // volta ao início reativaria o auto-scroll por engano.
+          if (mounted && token == _bounceToken) _paused = false;
         });
       } else {
         _controller.jumpTo(next);
@@ -1440,9 +1449,21 @@ class _WorldCarouselState extends State<_WorldCarousel> {
     });
   }
 
+  /// Pedido de Rhoney (23/09/2026): "assim que o usuário tocar a tela, o
+  /// carrossel deve parar imediatamente". `_paused = true` sozinho não
+  /// bastava quando a rolagem automática estava no meio da animação de
+  /// "voltar pro início" (animateTo) — a animação continuava até o fim
+  /// (até 900ms) mesmo com o toque. `jumpTo` pro offset atual cancela
+  /// qualquer activity em andamento no ScrollPosition (inclusive um
+  /// animateTo), então o carrossel trava exatamente onde estava, no
+  /// mesmo frame do toque.
   void _pauseForInteraction() {
     _paused = true;
+    _bounceToken++; // invalida o `.then` de uma animação em andamento
     _resumeTimer?.cancel();
+    if (_controller.hasClients) {
+      _controller.jumpTo(_controller.offset);
+    }
   }
 
   /// Retoma o auto-scroll um tempo depois do usuário soltar o dedo —
