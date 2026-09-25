@@ -390,7 +390,11 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   }
 
   Future<void> _handleResult(String text) async {
-    if (!mounted) return;
+    // O reconhecedor pode entregar um 2º resultado "final" (vazio) depois do
+    // primeiro — achado no teste real de Rhoney (25/09/2026): a mensagem
+    // "Não ouvi nada" aparecia junto da resposta. Só o 1º resultado, com a
+    // tela ainda em "Ouvindo", conta.
+    if (!mounted || _state != _LingoState.listening) return;
     if (text.trim().isEmpty) {
       setState(() {
         _state = _LingoState.error;
@@ -407,6 +411,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       if (!mounted) return;
       setState(() {
         _answer = result['answer_text'] as String;
+        _errorMessage = null;
         _state = _LingoState.answering;
       });
     } on ApiException catch (e) {
