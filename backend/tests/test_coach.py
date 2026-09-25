@@ -141,3 +141,49 @@ def test_rate_limit_e_exige_maioridade(client, monkeypatch):
     monkeypatch.setattr(config, "RATE_LIMIT_COACH", (2, 60.0))
     codes = [client.get("/coach", headers=headers).status_code for _ in range(4)]
     assert codes[:2] == [200, 200] and 429 in codes[2:]
+
+
+# --- My_Mental_AI dentro do Mundo: só fatos reais (pedido de Rhoney, 25/09/2026) ---
+
+
+def _world_of(territory: str) -> str:
+    with SessionLocal() as db:
+        return db.get(models.Territory, territory).world_id
+
+
+def _world_card(client, headers, world_id: str) -> dict:
+    resp = client.get(f"/coach/world/{world_id}", headers=headers)
+    assert resp.status_code == 200
+    return resp.json()["card"]
+
+
+def test_dica_do_mundo_sem_respostas_admite_que_nao_ha_analise(client):
+    _, headers = _new_user(client)
+    card = _world_card(client, headers, _world_of("palavras"))
+    assert card["id"] == "world_newcomer"
+    assert "não há análise possível" in card["body"]
+
+
+def test_dica_do_mundo_usa_os_numeros_reais_do_ponto_fraco(client):
+    user, headers = _new_user(client)
+    _attempts(user, "palavras", correct=3, wrong=9)
+    card = _world_card(client, headers, _world_of("palavras"))
+    assert card["id"] == "world_weakest"
+    assert "3 certas em 12 respostas (25%)" in card["body"]
+    assert "12 respostas, 3 certas (25%)" in card["body"]
+
+
+def test_dica_do_mundo_so_fala_de_dicas_quando_os_dados_mostram_uso_alto(client):
+    user, headers = _new_user(client)
+    _attempts(user, "palavras", correct=3, wrong=9, hints=0)
+    assert "dica" not in _world_card(client, headers, _world_of("palavras"))["body"].lower()
+    user2, headers2 = _new_user(client)
+    _attempts(user2, "palavras", correct=3, wrong=9, hints=1)
+    assert "dica" in _world_card(client, headers2, _world_of("palavras"))["body"].lower()
+
+
+def test_dica_do_mundo_com_amostra_pequena_nao_inventa_diagnostico(client):
+    user, headers = _new_user(client)
+    _attempts(user, "palavras", correct=2, wrong=1)
+    card = _world_card(client, headers, _world_of("palavras"))
+    assert card["id"] not in {"world_weakest", "world_strongest"}

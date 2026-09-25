@@ -35,14 +35,16 @@ def _territory_stats(db: Session, user_id: str) -> dict[str, dict]:
     """Respostas por território (uma consulta só): total, acertos, dicas."""
     stats: dict[str, dict] = {}
     attempts = db.execute(
-        select(models.Challenge.territory_id, models.Attempt.is_correct, models.Attempt.hints_used)
+        select(models.Challenge.territory_id, models.Attempt.is_correct, models.Attempt.hints_used, models.Attempt.created_at)
         .join(models.Attempt, models.Attempt.challenge_id == models.Challenge.id)
         .where(models.Attempt.user_id == user_id)
         .where(models.Attempt.is_correct.is_not(None))
         .where(models.Attempt.is_review.is_(False))
     ).all()
-    for territory_id, is_correct, hints in attempts:
-        s = stats.setdefault(territory_id, {"total": 0, "correct": 0, "hints": 0})
+    for territory_id, is_correct, hints, created_at in attempts:
+        s = stats.setdefault(territory_id, {"total": 0, "correct": 0, "hints": 0, "last": None})
+        if created_at is not None and (s["last"] is None or created_at > s["last"]):
+            s["last"] = created_at
         s["total"] += 1
         s["correct"] += 1 if is_correct else 0
         s["hints"] += hints or 0
@@ -103,52 +105,78 @@ def build_world_coach_tip(db: Session, user_id: str, world_id: str) -> dict | No
     threshold = config.CONQUEST_XP_THRESHOLD
     conquered = {tid for tid, p in progress.items() if p.conquered_at is not None}
 
-    # 1) Território perto de ser conquistado
+    # Fatos reais do desempenho neste Mundo (sempre exibidos no corpo da dica).
+    total_correct = sum(s["correct"] for s in stats.values())
+    total_hints = sum(s["hints"] for s in stats.values())
+    hint_rate = total_hints / total_attempts if total_attempts else 0.0
+    accuracy_pct = int(round(total_correct / total_attempts * 100)) if total_attempts else 0
+    facts = f"Neste Mundo: {total_attempts} respostas, {total_correct} certas ({accuracy_pct}%)."
+    last_dates = [s["last"] for s in stats.values() if s["last"] is not None]
+    days_idle = (utcnow() - max(last_dates)).days if last_dates else None
+    rated = [(s["correct"] / s["total"], tid, s["total"], s["correct"]) for tid, s in stats.items() if s["total"] >= MIN_ATTEMPTS_FOR_ACCURACY]
+    never_played = [tid for tid in sorted(territory_ids) if tid not in stats]
+    missing = len(territory_ids) - len(conquered)
+
+    # 1) Território perto de ser conquistado (números reais de XP)
     near = [(p.xp_in_territory, tid) for tid, p in progress.items() if p.conquered_at is None and p.xp_in_territory >= 0.6 * threshold]
     if near:
         xp, tid = max(near)
         return _card("world_close_to_conquest", 90, "Falta pouco para conquistar",
-                     f"Você tem {xp} de {threshold} XP em {{territory}}. Faltam {threshold - xp} XP para conquistar.",
+                     f"{facts} Você tem {xp} de {threshold} XP em {{territory}}; faltam {threshold - xp} XP para conquistar.",
                      {"type": "territory", "territory_id": tid}, tid)
 
-    # 2) Território mais fraco deste Mundo
-    rated = [(s["correct"] / s["total"], tid, s["total"]) for tid, s in stats.items() if s["total"] >= MIN_ATTEMPTS_FOR_ACCURACY]
+    # 2) Território mais fraco (taxa real < 60%, com amostra mínima)
     if rated:
         low = min(rated)
         if low[0] < 0.6:
-            return _card("world_weakest", 85, "Vale reforçar",
-                         f"Sua taxa de acerto em {{territory}} é {int(low[0] * 100)}% ({low[2]} respostas). Releia as explicações após errar e use as dicas com moderação.",
+            tip = " Você usa dica em boa parte das respostas — tente responder antes de pedir dica." if hint_rate >= 0.5 else ""
+            return _card("world_weakest", 85, "Ponto fraco neste Mundo",
+                         f"{facts} Seu pior território é {{territory}}: {low[3]} certas em {low[2]} respostas ({int(low[0] * 100)}%).{tip}",
                          {"type": "territory", "territory_id": low[1]}, low[1])
 
-    # 3) Progresso do Mundo (faltam N territórios)
-    missing = len(territory_ids) - len(conquered)
+    # 3) Dependência de dicas (cada dica reduz o XP)
+    if total_attempts >= MIN_ATTEMPTS_FOR_ACCURACY and hint_rate >= 0.8:
+        return _card("world_hints", 78, "Muitas dicas usadas",
+                     f"{facts} Você usou {total_hints} dicas em {total_attempts} respostas. Cada dica reduz o XP ganho.", None)
+
+    # 4) Território que você nunca respondeu
+    if never_played and total_attempts > 0:
+        return _card("world_unexplored", 74, "Território ainda não jogado",
+                     f"{facts} Você ainda não respondeu nada em {{territory}}.",
+                     {"type": "territory", "territory_id": never_played[0]}, never_played[0])
+
+    # 5) Progresso do Mundo (faltam N territórios)
     if missing > 0 and conquered:
         pick = max((tid for tid in territory_ids if tid not in conquered), key=lambda t: progress[t].xp_in_territory if t in progress else 0)
         pct = int(len(conquered) / len(territory_ids) * 100)
-        return _card("world_progress", 80, f"{world.name}: {pct}% conquistado",
-                     f"Faltam {missing} território(s) para completar o {world.name} (bônus de {config.WORLD_COMPLETION_BONUS_XP} XP e distintivo). Um bom próximo passo: {{territory}}.",
+        return _card("world_progress", 72, f"{world.name}: {pct}% conquistado",
+                     f"{facts} Faltam {missing} território(s) para completar (bônus de {config.WORLD_COMPLETION_BONUS_XP} XP e distintivo). Maior avanço entre os faltantes: {{territory}}.",
                      {"type": "territory", "territory_id": pick}, pick)
 
-    # 4) Território mais forte -> Relâmpago
+    # 6) Parado há muito tempo
+    if days_idle is not None and days_idle >= 14:
+        return _card("world_idle", 66, "Faz tempo que você não joga aqui",
+                     f"{facts} Sua última resposta neste Mundo foi há {days_idle} dias.", None)
+
+    # 7) Território mais forte
     if rated:
         high = max(rated)
         if high[0] >= 0.75:
-            return _card("world_strongest", 70, "Onde você vai melhor",
-                         f"Você acerta {int(high[0] * 100)}% em {{territory}} ({high[2]} respostas). Tente o Relâmpago aí: acertar rápido rende XP extra.",
+            return _card("world_strongest", 60, "Seu melhor território",
+                         f"{facts} Em {{territory}} você acertou {high[3]} de {high[2]} ({int(high[0] * 100)}%). O Relâmpago aí rende XP extra a quem acerta rápido.",
                          {"type": "territory", "territory_id": high[1], "relampago": True}, high[1])
 
-    # 5) Recém-chegado a este Mundo
-    if total_attempts < 10:
-        return _card("world_newcomer", 60, f"Explore o {world.name}",
-                     "Responda alguns desafios aqui: com 10 respostas em cada território eu consigo dizer onde você vai melhor e onde vale reforçar neste Mundo.", None)
-
-    # 6) Mundo já 100% conquistado
+    # 8) Mundo já 100% conquistado
     if missing == 0 and conquered:
-        return _card("world_completed", 50, f"{world.name} completo!",
-                     f"Você já conquistou todos os territórios do {world.name}. Pode refazê-los quando quiser para reforçar.", None)
+        return _card("world_completed", 50, f"{world.name} completo",
+                     f"{facts} Todos os territórios estão conquistados; refazê-los só serve para reforçar.", None)
 
-    return _card("world_generic", 40, f"Continue no {world.name}",
-                 f"Continue respondendo os territórios do {world.name} para eu conseguir dar dicas mais precisas sobre seu desempenho aqui.", None)
+    # 9) Sem dado suficiente — diz isso, sem inventar diagnóstico
+    if total_attempts == 0:
+        return _card("world_newcomer", 45, f"Sem dados em {world.name}",
+                     "Você ainda não respondeu nada aqui, então não há análise possível. Com 10 respostas em um território já dá para medir sua taxa de acerto.", None)
+    return _card("world_generic", 40, "Dados ainda insuficientes",
+                 f"{facts} Nenhum território tem as {MIN_ATTEMPTS_FOR_ACCURACY} respostas mínimas para apontar ponto forte ou fraco.", None)
 
 
 def build_coach(db: Session, user_id: str) -> dict:
@@ -225,18 +253,19 @@ def build_coach(db: Session, user_id: str) -> dict:
                            f"Faltam {missing} território(s) para completar o {world.name} (bônus de {config.WORLD_COMPLETION_BONUS_XP} XP e distintivo). Um bom próximo passo: {{territory}}.",
                            {"type": "territory", "territory_id": pick}, pick))
 
-    # 5) Onde reforçar / onde vai melhor
-    rated = [(s["correct"] / s["total"], tid, s["total"]) for tid, s in stats.items() if s["total"] >= MIN_ATTEMPTS_FOR_ACCURACY]
+    # 5) Onde reforçar / onde vai melhor (números reais; dica de "usar dicas" só se os dados mostram uso alto)
+    rated = [(s["correct"] / s["total"], tid, s["total"], s["correct"], s["hints"]) for tid, s in stats.items() if s["total"] >= MIN_ATTEMPTS_FOR_ACCURACY]
     if rated:
         low = min(rated)
         if low[0] < 0.6:
-            cards.append(_card("weakest", 72, "Vale reforçar",
-                               f"Sua taxa de acerto em {{territory}} é {int(low[0] * 100)}% ({low[2]} respostas). Releia as explicações após errar e use as dicas com moderação.",
+            tip = " Você usa dica em boa parte das respostas — tente responder antes de pedir dica." if low[4] / low[2] >= 0.5 else ""
+            cards.append(_card("weakest", 72, "Seu ponto mais fraco",
+                               f"Em {{territory}} você acertou {low[3]} de {low[2]} respostas ({int(low[0] * 100)}%).{tip}",
                                {"type": "territory", "territory_id": low[1]}, low[1]))
         high = max(rated)
         if high[0] >= 0.75 and high[1] != low[1]:
             cards.append(_card("strongest", 52, "Onde você vai melhor",
-                               f"Você acerta {int(high[0] * 100)}% em {{territory}} ({high[2]} respostas). Tente o Relâmpago aí: acertar rápido rende XP extra.",
+                               f"Em {{territory}} você acertou {high[3]} de {high[2]} respostas ({int(high[0] * 100)}%). O Relâmpago aí rende XP extra a quem acerta rápido.",
                                {"type": "territory", "territory_id": high[1], "relampago": True}, high[1]))
 
     # 6) Ranking semanal

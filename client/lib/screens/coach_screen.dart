@@ -43,6 +43,12 @@ IconData coachIcon(String cardId) {
       return Icons.star_rounded;
     case 'world_newcomer':
       return Icons.waving_hand_rounded;
+    case 'world_hints':
+      return Icons.lightbulb_outline_rounded;
+    case 'world_unexplored':
+      return Icons.explore_rounded;
+    case 'world_idle':
+      return Icons.schedule_rounded;
     case 'ranking':
       return Icons.leaderboard_rounded;
     case 'boost':
@@ -305,12 +311,12 @@ class MyMentalAiWorldCard extends StatelessWidget {
     final territoryId = card['territory_id'] as String?;
     final action = card['action'] as Map<String, dynamic>?;
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.only(bottom: 12),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
           key: const Key('world_coach_card'),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(16),
           onTap: () async {
             if (action != null) {
               await openCoachAction(context, client, action);
@@ -320,46 +326,54 @@ class MyMentalAiWorldCard extends StatelessWidget {
             onReturned();
           },
           child: Container(
-            padding: const EdgeInsets.all(14),
-            decoration: agentNeonDecoration(),
+            padding: const EdgeInsets.fromLTRB(10, 10, 8, 10),
+            decoration: agentNeonDecoration(radius: 16),
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  width: 42,
-                  height: 42,
+                  width: 34,
+                  height: 34,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: kAgentNavy,
-                    border: Border.all(color: kAgentCyan, width: 2),
-                    boxShadow: [BoxShadow(color: kAgentCyan.withValues(alpha: 0.35), blurRadius: 12)],
+                    border: Border.all(color: kAgentCyan, width: 1.6),
+                    boxShadow: [BoxShadow(color: kAgentCyan.withValues(alpha: 0.35), blurRadius: 10)],
                   ),
-                  child: Icon(coachIcon(card['id'] as String), color: Colors.white, size: 20),
+                  child: Icon(coachIcon(card['id'] as String), color: Colors.white, size: 17),
                 ),
-                const SizedBox(width: 12),
+                const SizedBox(width: 10),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const AgentNameText(),
-                      const SizedBox(height: 4),
-                      Text(coachText(l10n, card['title'] as String, territoryId),
-                          style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w700)),
-                      const SizedBox(height: 4),
-                      Text(coachText(l10n, card['body'] as String, territoryId),
-                          style: const TextStyle(color: kAgentSoftText, fontSize: 12.5, height: 1.3)),
-                      const SizedBox(height: 10),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-                          decoration: BoxDecoration(
-                            gradient: const LinearGradient(colors: [kAgentBlue, kAgentIndigo]),
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1.2),
+                      Row(
+                        children: [
+                          const Expanded(child: Align(alignment: Alignment.centerLeft, child: AgentNameText(fontSize: 11))),
+                          // Botão ao lado do nome (pedido de Rhoney, 25/09/2026): mantém o cartão compacto.
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(colors: [kAgentBlue, kAgentIndigo]),
+                              borderRadius: BorderRadius.circular(14),
+                              border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1),
+                            ),
+                            child: Text(action != null ? l10n.coachGoButton : 'Ver mais',
+                                style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.w700)),
                           ),
-                          child: Text(action != null ? l10n.coachGoButton : 'Ver mais dicas',
-                              style: const TextStyle(color: Colors.white, fontSize: 11.5, fontWeight: FontWeight.w700)),
+                        ],
+                      ),
+                      const SizedBox(height: 3),
+                      // Título e corpo no MESMO parágrafo: cartão compacto, texto completo.
+                      RichText(
+                        text: TextSpan(
+                          style: const TextStyle(color: kAgentSoftText, fontSize: 11.5, height: 1.25),
+                          children: [
+                            TextSpan(
+                                text: '${coachText(l10n, card['title'] as String, territoryId)}. ',
+                                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
+                            TextSpan(text: coachText(l10n, card['body'] as String, territoryId)),
+                          ],
                         ),
                       ),
                     ],
