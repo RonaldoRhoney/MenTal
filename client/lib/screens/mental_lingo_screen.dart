@@ -379,10 +379,13 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
             _accumulated.isEmpty) {
           _noResultTimer?.cancel();
           _noResultTimer = Timer(const Duration(milliseconds: 3000), () {
-            if (!mounted || _state != _LingoState.listening || _accumulated.isNotEmpty) return;
+            if (!mounted ||
+                _state != _LingoState.listening ||
+                _accumulated.isNotEmpty) return;
             setState(() {
               _state = _LingoState.error;
-              _errorMessage = 'Não ouvi nada. Toque no microfone e tente de novo.';
+              _errorMessage =
+                  'Não ouvi nada. Toque no microfone e tente de novo.';
             });
           });
         }
@@ -413,7 +416,8 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     _noResultTimer?.cancel();
     final piece = text.trim();
     if (piece.isNotEmpty) {
-      setState(() => _accumulated = _accumulated.isEmpty ? piece : '$_accumulated $piece');
+      setState(() =>
+          _accumulated = _accumulated.isEmpty ? piece : '$_accumulated $piece');
     }
     if (_accumulated.isEmpty) {
       setState(() {
@@ -654,43 +658,57 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              const SizedBox(height: 12),
-              _buildMicButton(),
-              const SizedBox(height: 18),
-              Text(_stateLabel(),
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleMedium),
-              const SizedBox(height: 20),
-              if (_state == _LingoState.listening && _accumulated.isNotEmpty)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: _buildBubble(
-                      label: 'Ouvindo…', text: _accumulated, key: const Key('mental_lingo_live_bubble')),
-                ),
-              if (_question != null)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: _buildBubble(
-                      label: 'Você perguntou',
-                      text: _question!,
-                      key: const Key('mental_lingo_question_bubble')),
-                ),
-              if (_answer != null)
-                _buildBubble(
-                    label: 'MENTAL LINGO',
-                    text: _answer!,
-                    key: const Key('mental_lingo_answer_bubble')),
-              if (_errorMessage != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 12),
-                  child: Text(
-                    _errorMessage!,
-                    key: const Key('mental_lingo_error_text'),
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: AppColors.error),
+              // Microfone no MEIO da tela (pedido de Rhoney, 25/09/2026); o conteúdo
+              // (pergunta/resposta/erro) desce junto e rola se for longo.
+              Expanded(
+                child: Center(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        _buildMicButton(),
+                        const SizedBox(height: 18),
+                        Text(_stateLabel(),
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.titleMedium),
+                        const SizedBox(height: 20),
+                        if (_state == _LingoState.listening &&
+                            _accumulated.isNotEmpty)
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 12),
+                            child: _buildBubble(
+                                label: 'Ouvindo…',
+                                text: _accumulated,
+                                key: const Key('mental_lingo_live_bubble')),
+                          ),
+                        if (_question != null)
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 12),
+                            child: _buildBubble(
+                                label: 'Você perguntou',
+                                text: _question!,
+                                key: const Key('mental_lingo_question_bubble')),
+                          ),
+                        if (_answer != null)
+                          _buildBubble(
+                              label: 'MENTAL LINGO',
+                              text: _answer!,
+                              key: const Key('mental_lingo_answer_bubble')),
+                        if (_errorMessage != null)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12),
+                            child: Text(
+                              _errorMessage!,
+                              key: const Key('mental_lingo_error_text'),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: AppColors.error),
+                            ),
+                          ),
+                      ],
+                    ),
                   ),
                 ),
-              const Spacer(),
+              ),
               _buildActions(),
               const SizedBox(height: 8),
             ],
