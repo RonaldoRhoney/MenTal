@@ -21,7 +21,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from . import config, economy, models, services
-from .timeutil import brasilia_today, utcnow
+from .timeutil import brasilia_today, naive, utcnow
 
 MIN_ATTEMPTS_FOR_ACCURACY = 10
 STREAK_MILESTONES = sorted(config.STREAK_MILESTONE_REWARDS)
@@ -43,6 +43,7 @@ def _territory_stats(db: Session, user_id: str) -> dict[str, dict]:
     ).all()
     for territory_id, is_correct, hints, created_at in attempts:
         s = stats.setdefault(territory_id, {"total": 0, "correct": 0, "hints": 0, "last": None})
+        created_at = naive(created_at)
         if created_at is not None and (s["last"] is None or created_at > s["last"]):
             s["last"] = created_at
         s["total"] += 1
@@ -112,7 +113,8 @@ def build_world_coach_tip(db: Session, user_id: str, world_id: str) -> dict | No
     accuracy_pct = int(round(total_correct / total_attempts * 100)) if total_attempts else 0
     facts = f"Neste Mundo: {total_attempts} respostas, {total_correct} certas ({accuracy_pct}%)."
     last_dates = [s["last"] for s in stats.values() if s["last"] is not None]
-    days_idle = (utcnow() - max(last_dates)).days if last_dates else None
+    # naive(): timestamptz volta aware do Postgres (ver timeutil.naive)
+    days_idle = (utcnow() - naive(max(last_dates))).days if last_dates else None
     rated = [(s["correct"] / s["total"], tid, s["total"], s["correct"]) for tid, s in stats.items() if s["total"] >= MIN_ATTEMPTS_FOR_ACCURACY]
     never_played = [tid for tid in sorted(territory_ids) if tid not in stats]
     missing = len(territory_ids) - len(conquered)
