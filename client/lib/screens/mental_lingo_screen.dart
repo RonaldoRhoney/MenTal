@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
@@ -345,6 +347,10 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   String? _answer;
   String? _errorMessage;
   bool _speakingAnswer = false;
+  // O status "notListening" chega ANTES do resultado final da fala (achado
+  // no teste real de Rhoney, 25/09/2026: pergunta falada virava "Não ouvi
+  // nada"). Só declara silêncio se, passado este prazo, nenhum resultado veio.
+  Timer? _noResultTimer;
 
   Future<void> _startListening() async {
     setState(() {
@@ -370,10 +376,13 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
         if ((status == 'notListening' || status == 'done') &&
             _state == _LingoState.listening &&
             _question == null) {
-          setState(() {
-            _state = _LingoState.error;
-            _errorMessage =
-                'Não ouvi nada. Toque no microfone e tente de novo.';
+          _noResultTimer?.cancel();
+          _noResultTimer = Timer(const Duration(milliseconds: 3000), () {
+            if (!mounted || _state != _LingoState.listening || _question != null) return;
+            setState(() {
+              _state = _LingoState.error;
+              _errorMessage = 'Não ouvi nada. Toque no microfone e tente de novo.';
+            });
           });
         }
       },
@@ -395,6 +404,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     // "Não ouvi nada" aparecia junto da resposta. Só o 1º resultado, com a
     // tela ainda em "Ouvindo", conta.
     if (!mounted || _state != _LingoState.listening) return;
+    _noResultTimer?.cancel();
     if (text.trim().isEmpty) {
       setState(() {
         _state = _LingoState.error;
@@ -447,6 +457,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 
   @override
   void dispose() {
+    _noResultTimer?.cancel();
     widget._service.cancel();
     super.dispose();
   }
