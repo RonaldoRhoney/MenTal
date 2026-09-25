@@ -82,3 +82,20 @@ def test_pergunta_so_com_espacos_nao_quebra(client):
     resp = _ask(client, "   ")
     assert resp.status_code == 200
     assert resp.json()["found"] is False
+
+
+def test_palavra_desconhecida_vira_lacuna_agregada_sem_usuario(client):
+    _ask(client, "Como se escreve sanfona em francês?")
+    _ask(client, "como se escreve sanfona em francês")
+    with SessionLocal() as db:
+        row = db.get(models.MentalLingoGap, ("sanfona", "frances"))
+        assert row is not None and row.times_asked == 2
+    # a tabela não tem coluna de usuário (privacidade)
+    assert "user_id" not in models.MentalLingoGap.__table__.columns
+
+
+def test_palavra_conhecida_nao_vira_lacuna(client):
+    _seed("Como se escreve 'lápis' em inglês?", "Pencil", "'lápis' se traduz como 'Pencil' em inglês.")
+    _ask(client, "como se escreve lápis em inglês")
+    with SessionLocal() as db:
+        assert db.get(models.MentalLingoGap, ("lápis", "ingles")) is None

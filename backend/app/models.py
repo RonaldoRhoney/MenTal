@@ -490,6 +490,26 @@ class WordConstellationCompletion(Base):
     completed_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class MentalLingoGap(Base):
+    """
+    MENTAL LINGO — fila de lacunas de vocabulário (aprovada por Rhoney,
+    25/09/2026, escolha "fila de lacunas p/ curadoria"). Palavra/frase que o
+    jogador perguntou por voz e o vocabulário curado ainda não tem. Só
+    agregado: nunca user_id, áudio ou a frase completa. As mais pedidas
+    (scripts/list_mental_lingo_gaps.py) viram conteúdo REVISADO — o sistema
+    "aprende" sem nunca guardar tradução não verificada.
+    """
+
+    __tablename__ = "mental_lingo_gaps"
+
+    word: Mapped[str] = mapped_column(String, primary_key=True)
+    # "" quando o jogador não disse o idioma ("o que significa X").
+    target_language: Mapped[str] = mapped_column(String, primary_key=True, default="")
+    times_asked: Mapped[int] = mapped_column(Integer, default=1)
+    first_asked_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    last_asked_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class Attempt(Base):
     __tablename__ = "attempts"
 

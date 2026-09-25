@@ -58,8 +58,8 @@ class MentalLingoService {
         partialResults: false,
         listenMode: stt.ListenMode.confirmation,
         localeId: 'pt_BR',
-        listenFor: const Duration(seconds: 15),
-        pauseFor: const Duration(seconds: 4),
+        listenFor: const Duration(seconds: 60),
+        pauseFor: const Duration(seconds: 8),
       ),
     );
   }

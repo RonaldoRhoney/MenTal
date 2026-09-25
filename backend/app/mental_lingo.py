@@ -31,6 +31,7 @@ from sqlalchemy.orm import Session
 
 from . import config, models
 from .services import extract_portuguese_meaning
+from .timeutil import utcnow
 
 _LANGUAGE_KEYWORDS: dict[str, tuple[str, ...]] = {
     "ingles": ("inglês", "ingles", "english"),
@@ -97,6 +98,27 @@ def _not_understood() -> dict:
     }
 
 
+MAX_GAP_WORD_LEN = 80
+
+
+def _record_gap(db: Session, word: str, target: str | None) -> None:
+    """Registra a lacuna (só agregado, sem usuário). Falha aqui nunca pode
+    derrubar a resposta ao jogador — é só telemetria de curadoria."""
+    key = word.strip().lower()[:MAX_GAP_WORD_LEN]
+    if not key:
+        return
+    try:
+        row = db.get(models.MentalLingoGap, (key, target or ""))
+        if row is None:
+            db.add(models.MentalLingoGap(word=key, target_language=target or ""))
+        else:
+            row.times_asked += 1
+            row.last_asked_at = utcnow()
+        db.commit()
+    except Exception:
+        db.rollback()
+
+
 def answer_question(db: Session, question: str) -> dict:
     question = (question or "").strip()
     if not question:
@@ -151,11 +173,12 @@ def answer_question(db: Session, question: str) -> dict:
                 "target_language": _language_of_territory(challenge.territory_id),
             }
 
+    _record_gap(db, word, target)
     return {
         "found": False,
         "answer_text": (
             f"Ainda não tenho '{word}' no vocabulário do Mundo dos Idiomas. "
-            "Tente outra palavra do território que você já está estudando."
+            "Anotei o pedido: as palavras mais procuradas entram no vocabulário depois de revisadas."
         ),
         "matched_word": word,
         "target_language": target,
