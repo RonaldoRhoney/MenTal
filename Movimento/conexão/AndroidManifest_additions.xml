@@ -1,0 +1,38 @@
+<!--
+  Adicionar dentro da tag <manifest> (permissões) e <application>
+  (serviço + intent de privacidade do Health Connect).
+-->
+
+<!-- Sensor de passos do celular -->
+<uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+<!-- Foreground service para a notificação persistente -->
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+<!-- Health Connect: leitura E escrita de passos -->
+<uses-permission android:name="android.permission.health.READ_STEPS" />
+<uses-permission android:name="android.permission.health.WRITE_STEPS" />
+
+<!-- Dentro de <application> -->
+<!-- Serviço do flutter_foreground_task -->
+<service
+    android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
+    android:foregroundServiceType="health"
+    android:exported="false" />
+
+<!--
+  Obrigatório a partir do Android 14 (API 34): uma Activity que responda ao
+  intent abaixo, exibindo a política de privacidade de uso dos dados de
+  saúde. Sem isso o app é rejeitado na revisão de permissões sensíveis do
+  Health Connect. Ver skill/documentação do pacote `health` para o template
+  de Activity + intent-filter correspondente.
+-->
+<!--
+<activity android:name=".PermissionsRationaleActivity" android:exported="true">
+    <intent-filter>
+        <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+    </intent-filter>
+</activity>
+-->

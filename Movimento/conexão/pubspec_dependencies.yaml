@@ -1,0 +1,11 @@
+# Adicionar em pubspec.yaml, dentro de "dependencies:"
+
+dependencies:
+  health: ^11.1.0                 # Health Connect (Android) / HealthKit (iOS)
+  pedometer: ^4.0.2               # Sensor nativo TYPE_STEP_COUNTER
+  flutter_foreground_task: ^8.17.0 # Foreground service + notificação ongoing
+  workmanager: ^0.5.2             # Sync de segurança periódico (15-30 min)
+
+# Observação: confira sempre a versão mais recente compatível com seu
+# Flutter/Dart SDK antes de travar no pubspec — este arquivo lista apenas
+# os pacotes necessários, não fixa versões definitivas de produção.
