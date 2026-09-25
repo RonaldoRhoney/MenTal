@@ -4036,6 +4036,24 @@ abstract class AppLocalizations {
   /// **'Preposição'**
   String get territoryLinguagemPreposicao;
 
+  /// Territory name — Linguagem grammar SubMundo: Pontuação
+  ///
+  /// In pt, this message translates to:
+  /// **'Pontuação'**
+  String get territoryLinguagemPontuacao;
+
+  /// Territory name — Linguagem grammar SubMundo: Ortografia
+  ///
+  /// In pt, this message translates to:
+  /// **'Ortografia'**
+  String get territoryLinguagemOrtografia;
+
+  /// Territory name — Linguagem grammar SubMundo: Acentuação Gráfica
+  ///
+  /// In pt, this message translates to:
+  /// **'Acentuação Gráfica'**
+  String get territoryLinguagemAcentuacaoGrafica;
+
   /// My_Mental_AI subtitle
   ///
   /// In pt, this message translates to:

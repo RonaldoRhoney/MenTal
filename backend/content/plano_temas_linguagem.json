@@ -65,19 +65,19 @@
       "slug": "pontuacao",
       "nome": "Pontuação",
       "ordem_producao": 7,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "ortografia",
       "nome": "Ortografia",
       "ordem_producao": 7,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "acentuacao_grafica",
       "nome": "Acentuação Gráfica",
       "ordem_producao": 7,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "numerais",

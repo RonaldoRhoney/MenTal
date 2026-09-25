@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “aquilo que foge à regra”.",
+    "options": [
+      "exceção",
+      "excessão",
+      "exeção",
+      "esceção"
+    ],
+    "correct_answer": "exceção",
+    "explanation": "'Exceção' vem de 'exceto', com 'xc' + 'ção'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “investigação feita para descobrir algo”.",
+    "options": [
+      "pesquiza",
+      "pesquisa",
+      "pesqisa",
+      "pezquisa"
+    ],
+    "correct_answer": "pesquisa",
+    "explanation": "Escreve-se 'pesquisa', com 's'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “vantagem concedida a alguém”.",
+    "options": [
+      "previlégio",
+      "privilejio",
+      "privilégio",
+      "previlejio"
+    ],
+    "correct_answer": "privilégio",
+    "explanation": "Escreve-se 'privilégio', com 'pri-' e 'g'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “obstáculo, aquilo que atrapalha”.",
+    "options": [
+      "impecilho",
+      "empecilio",
+      "impicilho",
+      "empecilho"
+    ],
+    "correct_answer": "empecilho",
+    "explanation": "Escreve-se 'empecilho', com 'em-' e 'lh'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “embutido fatiado usado em sanduíches”.",
+    "options": [
+      "mortadela",
+      "mortandela",
+      "mortadéla",
+      "mortadelha"
+    ],
+    "correct_answer": "mortadela",
+    "explanation": "Escreve-se 'mortadela', sem 'n' e sem 'lh'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “conjunto de pelos acima dos olhos”.",
+    "options": [
+      "sombrancelha",
+      "sobrancelha",
+      "sobrancelia",
+      "sobrancêlha"
+    ],
+    "correct_answer": "sobrancelha",
+    "explanation": "Escreve-se 'sobrancelha', com 'n' e 'lh'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “descobrir sem ter informações”.",
+    "options": [
+      "advinhar",
+      "adivinhár",
+      "adivinhar",
+      "adivinhal"
+    ],
+    "correct_answer": "adivinhar",
+    "explanation": "Escreve-se 'adivinhar', com 'i' depois do 'd' e 'nh'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “presença de quem acompanha alguém”.",
+    "options": [
+      "compania",
+      "companhía",
+      "conpanhia",
+      "companhia"
+    ],
+    "correct_answer": "companhia",
+    "explanation": "Escreve-se 'companhia', com 'm' e 'nh'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “aquilo de que não se pode prescindir”.",
+    "options": [
+      "necessário",
+      "nescessário",
+      "necesário",
+      "necessáreo"
+    ],
+    "correct_answer": "necessário",
+    "explanation": "Escreve-se 'necessário', com 'ss' e o sufixo '-ário'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “troca de argumentos; debate”.",
+    "options": [
+      "discução",
+      "discussão",
+      "discusão",
+      "discusssão"
+    ],
+    "correct_answer": "discussão",
+    "explanation": "Escreve-se 'discussão', com 'ss' (como 'discutir' → 'discussão').",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “ato de entender”.",
+    "options": [
+      "compreenção",
+      "comprensão",
+      "compreensão",
+      "compreenssão"
+    ],
+    "correct_answer": "compreensão",
+    "explanation": "Escreve-se 'compreensão', com 'ns' (de 'compreender').",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “esperança fundada em algo provável”.",
+    "options": [
+      "espectativa",
+      "exspectativa",
+      "expectatíva",
+      "expectativa"
+    ],
+    "correct_answer": "expectativa",
+    "explanation": "Escreve-se 'expectativa', com 'x'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “examinar em detalhes”.",
+    "options": [
+      "analisar",
+      "analizar",
+      "analiçar",
+      "analisár"
+    ],
+    "correct_answer": "analisar",
+    "explanation": "Escreve-se 'analisar', com 's' (de 'análise').",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “deixar sem movimento”.",
+    "options": [
+      "paralizar",
+      "paralisar",
+      "paraliçar",
+      "paralisár"
+    ],
+    "correct_answer": "paralisar",
+    "explanation": "Escreve-se 'paralisar', com 's' (de 'paralisia').",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “dor de cabeça forte e recorrente”.",
+    "options": [
+      "enchaqueca",
+      "enxaquéca",
+      "enxaqueca",
+      "ensaqueca"
+    ],
+    "correct_answer": "enxaqueca",
+    "explanation": "Escreve-se 'enxaqueca', com 'x'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “sinal gráfico em forma de estrela (*)”.",
+    "options": [
+      "asterístico",
+      "asterísco",
+      "asteristico",
+      "asterisco"
+    ],
+    "correct_answer": "asterisco",
+    "explanation": "Escreve-se 'asterisco', sem 't' depois do 's'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “tabuleiro usado para servir”.",
+    "options": [
+      "bandeja",
+      "bandeija",
+      "bandega",
+      "bandeiga"
+    ],
+    "correct_answer": "bandeja",
+    "explanation": "Escreve-se 'bandeja', com 'j'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “dominado por uma ideia fixa”.",
+    "options": [
+      "obsecado",
+      "obcecado",
+      "obicecado",
+      "abcecado"
+    ],
+    "correct_answer": "obcecado",
+    "explanation": "Escreve-se 'obcecado', com 'bc'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “forma de energia que move aparelhos”.",
+    "options": [
+      "eletrecidade",
+      "eletricidáde",
+      "eletricidade",
+      "eletrisidade"
+    ],
+    "correct_answer": "eletricidade",
+    "explanation": "Escreve-se 'eletricidade', com 'c' (como 'elétrico').",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “fruto grande e alaranjado”.",
+    "options": [
+      "abóbra",
+      "abobora",
+      "abobóra",
+      "abóbora"
+    ],
+    "correct_answer": "abóbora",
+    "explanation": "Escreve-se 'abóbora', com acento na antepenúltima sílaba.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “ciência que estuda o tempo atmosférico”.",
+    "options": [
+      "meteorologia",
+      "metereologia",
+      "meteorolojia",
+      "meterologia"
+    ],
+    "correct_answer": "meteorologia",
+    "explanation": "Escreve-se 'meteorologia' (de 'meteoro').",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “esticar, alongar”.",
+    "options": [
+      "extender",
+      "estender",
+      "estendêr",
+      "extendêr"
+    ],
+    "correct_answer": "estender",
+    "explanation": "Escreve-se 'estender', com 's' (e 'extensão', com 'x', vem de outra forma).",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “embutido fino e cozido”.",
+    "options": [
+      "salchicha",
+      "saucicha",
+      "salsicha",
+      "salsixa"
+    ],
+    "correct_answer": "salsicha",
+    "explanation": "Escreve-se 'salsicha', com 's' e 'ch'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “crustáceo de patas grandes e casco”.",
+    "options": [
+      "carangueijo",
+      "carangeijo",
+      "caranguego",
+      "caranguejo"
+    ],
+    "correct_answer": "caranguejo",
+    "explanation": "Escreve-se 'caranguejo', com 'gue' e 'j'.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 1,
+    "prompt": "Assinale a grafia correta da palavra que significa: “ideia fixa que domina a mente”.",
+    "options": [
+      "obsessão",
+      "obcessão",
+      "obsesão",
+      "obseção"
+    ],
+    "correct_answer": "obsessão",
+    "explanation": "Escreve-se 'obsessão', com 'ss' (de 'obsessivo').",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na família da palavra e na regra do grupo de letras (s, ss, ç, x, ch, g, j).",
+      "Se puder, lembre a forma da palavra de origem ou de outra da mesma família."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Estudei bastante, ___ não passei.",
+    "options": [
+      "mais",
+      "mas",
+      "más",
+      "mal"
+    ],
+    "correct_answer": "mas",
+    "explanation": "'Mas' é conjunção adversativa (= porém).",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Hoje estou ___ cansado que ontem.",
+    "options": [
+      "mas",
+      "mal",
+      "mais",
+      "mau"
+    ],
+    "correct_answer": "mais",
+    "explanation": "'Mais' indica intensidade/comparação (oposto de 'menos').",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele é um ___ aluno: não estuda nada.",
+    "options": [
+      "mal",
+      "mao",
+      "mais",
+      "mau"
+    ],
+    "correct_answer": "mau",
+    "explanation": "'Mau' é adjetivo (oposto de 'bom').",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele passou ___ e foi ao hospital.",
+    "options": [
+      "mal",
+      "mau",
+      "mais",
+      "mas"
+    ],
+    "correct_answer": "mal",
+    "explanation": "'Mal' é advérbio (oposto de 'bem'), ligado ao verbo.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Não sei ___ ele saiu.",
+    "options": [
+      "porque",
+      "por que",
+      "porquê",
+      "por quê"
+    ],
+    "correct_answer": "por que",
+    "explanation": "Em pergunta indireta, escreve-se 'por que' (= por qual motivo), separado e sem acento.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele saiu cedo ___ tinha um compromisso.",
+    "options": [
+      "por que",
+      "porquê",
+      "porque",
+      "por quê"
+    ],
+    "correct_answer": "porque",
+    "explanation": "'Porque' é conjunção causal (= pois).",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ela não veio e não explicou o ___.",
+    "options": [
+      "porque",
+      "por que",
+      "por quê",
+      "porquê"
+    ],
+    "correct_answer": "porquê",
+    "explanation": "'Porquê' é substantivo (= o motivo), com artigo antes e acento.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Você não vai? ___?",
+    "options": [
+      "Por quê",
+      "Porque",
+      "Por que",
+      "Porquê"
+    ],
+    "correct_answer": "Por quê",
+    "explanation": "No fim de frase, 'por quê' é separado e com acento.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: ___ você vai nas férias?",
+    "options": [
+      "Onde",
+      "Aonde",
+      "Donde",
+      "Anonde"
+    ],
+    "correct_answer": "Aonde",
+    "explanation": "'Aonde' indica movimento (ir a algum lugar).",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: ___ você mora?",
+    "options": [
+      "Aonde",
+      "Donde",
+      "Onde",
+      "Anonde"
+    ],
+    "correct_answer": "Onde",
+    "explanation": "'Onde' indica lugar em que se está.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: Conversamos ___ do projeto.",
+    "options": [
+      "a cerca",
+      "há cerca",
+      "à cerca",
+      "acerca"
+    ],
+    "correct_answer": "acerca",
+    "explanation": "'Acerca de' significa 'sobre'.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: A ___ de cinema começa às 20h.",
+    "options": [
+      "sessão",
+      "seção",
+      "cessão",
+      "sesão"
+    ],
+    "correct_answer": "sessão",
+    "explanation": "'Sessão' é o período de uma exibição ou reunião.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: O ___ de música foi lindo.",
+    "options": [
+      "conserto",
+      "concerto",
+      "consêrto",
+      "concêrto"
+    ],
+    "correct_answer": "concerto",
+    "explanation": "'Concerto' é apresentação musical; 'conserto' é reparo.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: O desabamento era ___.",
+    "options": [
+      "eminente",
+      "emenente",
+      "iminente",
+      "iminênte"
+    ],
+    "correct_answer": "iminente",
+    "explanation": "'Iminente' quer dizer 'prestes a acontecer'; 'eminente' é 'elevado, ilustre'.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 2,
+    "prompt": "Complete: O criminoso foi pego em ___ delito.",
+    "options": [
+      "fragrante",
+      "flagrânte",
+      "fragrânte",
+      "flagrante"
+    ],
+    "correct_answer": "flagrante",
+    "explanation": "'Em flagrante delito' = no momento do ato; 'fragrante' tem relação com aroma.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira: o sentido decide qual das palavras parecidas cabe no contexto.",
+      "Lembre que palavras parecidas na escrita ou no som têm significados diferentes."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (mau/mal).",
+    "options": [
+      "Ele se comportou mal porque é mau aluno.",
+      "Ele se comportou mau porque é mal aluno.",
+      "Ele se comportou mal porque é mal aluno.",
+      "Ele se comportou mau porque é mau aluno."
+    ],
+    "correct_answer": "Ele se comportou mal porque é mau aluno.",
+    "explanation": "'Mal' (advérbio) modifica o verbo; 'mau' (adjetivo) modifica o substantivo 'aluno'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (por que / porque).",
+    "options": [
+      "Não sei porque ele saiu, mas sei que saiu por que estava cansado.",
+      "Não sei por que ele saiu, mas sei que saiu porque estava cansado.",
+      "Não sei por quê ele saiu, mas sei que saiu porquê estava cansado.",
+      "Não sei porquê ele saiu, mas sei que saiu por quê estava cansado."
+    ],
+    "correct_answer": "Não sei por que ele saiu, mas sei que saiu porque estava cansado.",
+    "explanation": "Pergunta indireta: 'por que'; resposta causal: 'porque'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (onde/aonde).",
+    "options": [
+      "Onde vamos? Não sei aonde ele mora.",
+      "Aonde vamos? Não sei aonde ele mora.",
+      "Aonde vamos? Não sei onde ele mora.",
+      "Onde vamos? Não sei onde ele mora."
+    ],
+    "correct_answer": "Aonde vamos? Não sei onde ele mora.",
+    "explanation": "'Ir' pede 'aonde' (movimento); 'morar' pede 'onde' (lugar).",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (afim/a fim).",
+    "options": [
+      "Ele tem interesses a fins aos meus e veio afim de colaborar.",
+      "Ele tem interesses afins aos meus e veio afim de colaborar.",
+      "Ele tem interesses a fins aos meus e veio a fim de colaborar.",
+      "Ele tem interesses afins aos meus e veio a fim de colaborar."
+    ],
+    "correct_answer": "Ele tem interesses afins aos meus e veio a fim de colaborar.",
+    "explanation": "'Afim/afins' = semelhante; 'a fim de' = com o objetivo de.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (senão/se não).",
+    "options": [
+      "Corra, senão perderá o ônibus; se não chegar a tempo, avise.",
+      "Corra, se não perderá o ônibus; senão chegar a tempo, avise.",
+      "Corra, senão perderá o ônibus; senão chegar a tempo, avise.",
+      "Corra, se não perderá o ônibus; se não chegar a tempo, avise."
+    ],
+    "correct_answer": "Corra, senão perderá o ônibus; se não chegar a tempo, avise.",
+    "explanation": "'Senão' = caso contrário; 'se não' = condição negativa.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (traz/trás).",
+    "options": [
+      "Ele trás o livro e vai para traz do armário.",
+      "Ele traz o livro e vai para trás do armário.",
+      "Ele trás o livro e vai para trás do armário.",
+      "Ele traz o livro e vai para traz do armário."
+    ],
+    "correct_answer": "Ele traz o livro e vai para trás do armário.",
+    "explanation": "'Traz' é o verbo trazer; 'trás' é a preposição/advérbio 'atrás'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (mas/mais).",
+    "options": [
+      "Ele quer mas tempo, mais não faz nada.",
+      "Ele quer mais tempo, mais não faz nada.",
+      "Ele quer mais tempo, mas não faz nada.",
+      "Ele quer mas tempo, mas não faz nada."
+    ],
+    "correct_answer": "Ele quer mais tempo, mas não faz nada.",
+    "explanation": "'Mais' quantifica; 'mas' é conjunção adversativa.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (cesta/sexta/sesta).",
+    "options": [
+      "Na cesta, após a sexta, comprei uma sesta.",
+      "Na sesta, após a cesta, comprei uma sexta.",
+      "Na sexta, após a cesta, comprei uma sesta.",
+      "Na sexta, após a sesta, comprei uma cesta."
+    ],
+    "correct_answer": "Na sexta, após a sesta, comprei uma cesta.",
+    "explanation": "'Sexta' é dia da semana, 'sesta' é o descanso depois do almoço e 'cesta' é o recipiente.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Complete: Depois da tempestade, o sol ___ entre as nuvens (verbo que significa 'vir à tona').",
+    "options": [
+      "emergiu",
+      "imergiu",
+      "emerjiu",
+      "imerjiu"
+    ],
+    "correct_answer": "emergiu",
+    "explanation": "'Emergir' = vir à tona, aparecer; 'imergir' = mergulhar. O pretérito de emergir é 'emergiu' (com 'g').",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_ortografia",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase escrita corretamente (há/a).",
+    "options": [
+      "Daqui há pouco chegamos, pois saímos a duas horas.",
+      "Daqui a pouco chegamos, pois saímos há duas horas.",
+      "Daqui há pouco chegamos, pois saímos há duas horas.",
+      "Daqui a pouco chegamos, pois saímos a duas horas."
+    ],
+    "correct_answer": "Daqui a pouco chegamos, pois saímos há duas horas.",
+    "explanation": "'A' indica tempo futuro; 'há' indica tempo já passado.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada trecho da frase separadamente antes de julgar a frase toda.",
+      "Só uma alternativa acerta todos os pares de palavras parecidas ao mesmo tempo."
+    ]
+  }
+]

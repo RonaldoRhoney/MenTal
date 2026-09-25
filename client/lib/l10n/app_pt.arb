@@ -3201,6 +3201,18 @@
   "@territoryLinguagemPreposicao": {
     "description": "Territory name — Linguagem grammar SubMundo: Preposição"
   },
+  "territoryLinguagemPontuacao": "Pontuação",
+  "@territoryLinguagemPontuacao": {
+    "description": "Territory name — Linguagem grammar SubMundo: Pontuação"
+  },
+  "territoryLinguagemOrtografia": "Ortografia",
+  "@territoryLinguagemOrtografia": {
+    "description": "Territory name — Linguagem grammar SubMundo: Ortografia"
+  },
+  "territoryLinguagemAcentuacaoGrafica": "Acentuação Gráfica",
+  "@territoryLinguagemAcentuacaoGrafica": {
+    "description": "Territory name — Linguagem grammar SubMundo: Acentuação Gráfica"
+  },
   "coachSubtitle": "Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.",
   "@coachSubtitle": {
     "description": "My_Mental_AI subtitle"

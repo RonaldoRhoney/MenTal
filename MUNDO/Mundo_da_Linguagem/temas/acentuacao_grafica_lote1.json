@@ -1,0 +1,808 @@
+{
+  "tema": "Acentuação Gráfica",
+  "slug": "acentuacao_grafica",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney, seguindo o Acordo Ortográfico de 1990 (fim do trema, do acento em 'ideia'/'assembleia', 'voo', 'leem'/'veem', 'pelo'/'para' sem acento diferencial, mantendo 'pôr' e 'pôde'). Evitei os casos facultativos ('fôrma/forma', 'dêmos/demos').",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “planta de tronco e copa”.",
+      "options": [
+        "árvore",
+        "arvore",
+        "arvóre",
+        "árvóre"
+      ],
+      "correct_answer": "árvore",
+      "explanation": "Proparoxítona (ár-vo-re): toda proparoxítona é acentuada.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “aparelho que ilumina”.",
+      "options": [
+        "lampada",
+        "lâmpada",
+        "lâmpáda",
+        "lampáda"
+      ],
+      "correct_answer": "lâmpada",
+      "explanation": "Proparoxítona (lâm-pa-da): leva acento circunflexo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “profissional que trata doenças”.",
+      "options": [
+        "medico",
+        "médíco",
+        "médico",
+        "medicó"
+      ],
+      "correct_answer": "médico",
+      "explanation": "Proparoxítona (mé-di-co): sempre acentuada.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “bebida escura feita de grãos torrados”.",
+      "options": [
+        "cafe",
+        "cafê",
+        "cáfe",
+        "café"
+      ],
+      "correct_answer": "café",
+      "explanation": "Oxítona terminada em -e: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “móvel estofado para sentar”.",
+      "options": [
+        "sofá",
+        "sofa",
+        "sófa",
+        "sofâ"
+      ],
+      "correct_answer": "sofá",
+      "explanation": "Oxítona terminada em -a: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “pronome que trata a pessoa com quem se fala”.",
+      "options": [
+        "voce",
+        "você",
+        "vocé",
+        "vôce"
+      ],
+      "correct_answer": "você",
+      "explanation": "Oxítona terminada em -e: acento circunflexo (som fechado).",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “nação; território de um povo”.",
+      "options": [
+        "pais",
+        "paìs",
+        "país",
+        "páis"
+      ],
+      "correct_answer": "país",
+      "explanation": "O 'i' tônico do hiato 'a-í' recebe acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “estado de bem-estar físico”.",
+      "options": [
+        "saude",
+        "sáude",
+        "saudé",
+        "saúde"
+      ],
+      "correct_answer": "saúde",
+      "explanation": "O 'u' tônico do hiato 'a-ú' recebe acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “personagem admirado pela coragem”.",
+      "options": [
+        "herói",
+        "heroi",
+        "héroi",
+        "heróí"
+      ],
+      "correct_answer": "herói",
+      "explanation": "Ditongo aberto 'ói' em oxítona: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “folhas para escrever, no plural”.",
+      "options": [
+        "papeis",
+        "papéis",
+        "papeís",
+        "pápeis"
+      ],
+      "correct_answer": "papéis",
+      "explanation": "Ditongo aberto 'éi' em oxítona: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “aquilo que não é difícil”.",
+      "options": [
+        "facil",
+        "facíl",
+        "fácil",
+        "fácíl"
+      ],
+      "correct_answer": "fácil",
+      "explanation": "Paroxítona terminada em -l: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “aquilo que serve”.",
+      "options": [
+        "util",
+        "utíl",
+        "úthil",
+        "útil"
+      ],
+      "correct_answer": "útil",
+      "explanation": "Paroxítona terminada em -l: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “adoçante branco comum”.",
+      "options": [
+        "açúcar",
+        "acucar",
+        "açucar",
+        "áçucar"
+      ],
+      "correct_answer": "açúcar",
+      "explanation": "Paroxítona terminada em -r: acento agudo; o 'ç' também é obrigatório.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “carro de aluguel com motorista”.",
+      "options": [
+        "taxi",
+        "táxi",
+        "taxí",
+        "tacsi"
+      ],
+      "correct_answer": "táxi",
+      "explanation": "Paroxítona terminada em -i: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “criança sem pais”.",
+      "options": [
+        "orfão",
+        "orfao",
+        "órfão",
+        "órfao"
+      ],
+      "correct_answer": "órfão",
+      "explanation": "Paroxítona terminada em -ão: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “parte do corpo com função específica”.",
+      "options": [
+        "orgão",
+        "orgao",
+        "órgao",
+        "órgão"
+      ],
+      "correct_answer": "órgão",
+      "explanation": "Paroxítona terminada em -ão: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “conjunto de fatos do passado”.",
+      "options": [
+        "história",
+        "historia",
+        "histôria",
+        "histórea"
+      ],
+      "correct_answer": "história",
+      "explanation": "Paroxítona terminada em ditongo crescente (-ia): acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “lesão no dente”.",
+      "options": [
+        "carie",
+        "cárie",
+        "cárié",
+        "cáríe"
+      ],
+      "correct_answer": "cárie",
+      "explanation": "Paroxítona terminada em ditongo crescente (-ie): acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “veículo coletivo grande”.",
+      "options": [
+        "onibus",
+        "ônibús",
+        "ônibus",
+        "onibús"
+      ],
+      "correct_answer": "ônibus",
+      "explanation": "Paroxítona terminada em -us: acento circunflexo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “símbolo que indica quantidade”.",
+      "options": [
+        "numero",
+        "númêro",
+        "nümero",
+        "número"
+      ],
+      "correct_answer": "número",
+      "explanation": "Proparoxítona (nú-me-ro): sempre acentuada.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “instrumento de escrever com grafite”.",
+      "options": [
+        "lápis",
+        "lapis",
+        "lápís",
+        "lapís"
+      ],
+      "correct_answer": "lápis",
+      "explanation": "Paroxítona terminada em -is: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “cada um dos doze períodos do ano”.",
+      "options": [
+        "mes",
+        "mês",
+        "més",
+        "mêz"
+      ],
+      "correct_answer": "mês",
+      "explanation": "Monossílabo tônico terminado em -es: acento circunflexo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “parte do corpo onde se apoia ao andar”.",
+      "options": [
+        "pe",
+        "pê",
+        "pé",
+        "pè"
+      ],
+      "correct_answer": "pé",
+      "explanation": "Monossílabo tônico terminado em -e: acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “disposição, vontade de agir”.",
+      "options": [
+        "animo",
+        "ânimó",
+        "áimo",
+        "ânimo"
+      ],
+      "correct_answer": "ânimo",
+      "explanation": "Proparoxítona (â-ni-mo): sempre acentuada.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa: “substância estimulante do café”.",
+      "options": [
+        "cafeína",
+        "cafeina",
+        "cáfeina",
+        "cafêina"
+      ],
+      "correct_answer": "cafeína",
+      "explanation": "O 'i' tônico do hiato 'e-í' recebe acento agudo.",
+      "hints": [
+        "Separe a palavra em sílabas e descubra qual é a tônica; depois veja a terminação.",
+        "Lembre as regras: todas as proparoxítonas são acentuadas; as demais dependem da terminação."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “pensamento, noção” (após o Acordo Ortográfico).",
+      "options": [
+        "idéia",
+        "ideia",
+        "ideía",
+        "idêia"
+      ],
+      "correct_answer": "ideia",
+      "explanation": "Depois do Acordo, ditongo aberto 'ei' em paroxítona perdeu o acento.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “reunião de pessoas” (após o Acordo Ortográfico).",
+      "options": [
+        "assembléia",
+        "assemblêia",
+        "assembleia",
+        "asembleia"
+      ],
+      "correct_answer": "assembleia",
+      "explanation": "Ditongo aberto 'ei' em paroxítona perdeu o acento.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “cobra grande” (após o Acordo Ortográfico).",
+      "options": [
+        "jibóia",
+        "jiboía",
+        "jibôia",
+        "jiboia"
+      ],
+      "correct_answer": "jiboia",
+      "explanation": "Ditongo aberto 'oi' em paroxítona perdeu o acento.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “deslocamento de ave ou avião” (após o Acordo Ortográfico).",
+      "options": [
+        "voo",
+        "vôo",
+        "voô",
+        "vóo"
+      ],
+      "correct_answer": "voo",
+      "explanation": "Hiato 'oo' perdeu o acento circunflexo.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “3ª pessoa do plural de 'ler'” (após o Acordo Ortográfico).",
+      "options": [
+        "lêem",
+        "leem",
+        "lem",
+        "leêm"
+      ],
+      "correct_answer": "leem",
+      "explanation": "Hiato 'ee' perdeu o acento circunflexo.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “3ª pessoa do plural de 'ver'” (após o Acordo Ortográfico).",
+      "options": [
+        "vêem",
+        "vem",
+        "veem",
+        "veêm"
+      ],
+      "correct_answer": "veem",
+      "explanation": "Hiato 'ee' perdeu o acento circunflexo.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Ontem ele ___ sair mais cedo.",
+      "options": [
+        "pode",
+        "pòde",
+        "pôdê",
+        "pôde"
+      ],
+      "correct_answer": "pôde",
+      "explanation": "O acento diferencial em 'pôde' (passado) permanece para distinguir de 'pode' (presente).",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Vou ___ o livro na mesa.",
+      "options": [
+        "pôr",
+        "por",
+        "pór",
+        "põr"
+      ],
+      "correct_answer": "pôr",
+      "explanation": "O verbo 'pôr' mantém o acento circunflexo para diferenciar da preposição 'por'.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “peça que cobre a cabeça” (após o Acordo Ortográfico).",
+      "options": [
+        "chapeu",
+        "chapéu",
+        "chapêu",
+        "chapéo"
+      ],
+      "correct_answer": "chapéu",
+      "explanation": "Ditongo aberto 'éu' em oxítona: acento agudo.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “plural de 'hotel'” (após o Acordo Ortográfico).",
+      "options": [
+        "hoteis",
+        "hotêis",
+        "hotéis",
+        "hótéis"
+      ],
+      "correct_answer": "hotéis",
+      "explanation": "Oxítona com ditongo aberto 'éis': acento agudo.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “plural de 'túnel'” (após o Acordo Ortográfico).",
+      "options": [
+        "tuneis",
+        "túnéis",
+        "tunéis",
+        "túneis"
+      ],
+      "correct_answer": "túneis",
+      "explanation": "Paroxítona terminada em ditongo (-eis): acento agudo.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “plural de 'amável'” (após o Acordo Ortográfico).",
+      "options": [
+        "amáveis",
+        "amaveis",
+        "amávéis",
+        "amavéis"
+      ],
+      "correct_answer": "amáveis",
+      "explanation": "Paroxítona terminada em ditongo (-eis): acento agudo na sílaba tônica.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “livro para fotos ou figurinhas” (após o Acordo Ortográfico).",
+      "options": [
+        "album",
+        "álbum",
+        "albúm",
+        "álbun"
+      ],
+      "correct_answer": "álbum",
+      "explanation": "Paroxítona terminada em -um: acento agudo.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “plural de 'órgão'” (após o Acordo Ortográfico).",
+      "options": [
+        "orgãos",
+        "órgaos",
+        "órgãos",
+        "orgaos"
+      ],
+      "correct_answer": "órgãos",
+      "explanation": "Paroxítona terminada em -ãos: acento agudo e til.",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a grafia correta da palavra que significa: “pai do pai ou da mãe” (após o Acordo Ortográfico).",
+      "options": [
+        "avó",
+        "avo",
+        "avõ",
+        "avô"
+      ],
+      "correct_answer": "avô",
+      "explanation": "Oxítona terminada em -o: acento circunflexo (avó, com acento agudo, é a mulher).",
+      "hints": [
+        "Compare a forma nova (Acordo de 1990) com a antiga: alguns acentos deixaram de existir.",
+        "Observe se há hiato, ditongo aberto ou terminação que exige acento."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'saída', o acento gráfico justifica-se por:",
+      "options": [
+        "hiato com 'i' tônico",
+        "paroxítona terminada em -a",
+        "oxítona terminada em -a",
+        "proparoxítona"
+      ],
+      "correct_answer": "hiato com 'i' tônico",
+      "explanation": "O 'i' é tônico e forma hiato com o 'a' anterior (sa-í-da): recebe acento.",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Feiura' não recebe acento porque:",
+      "options": [
+        "é uma proparoxítona",
+        "o 'i' tônico vem depois de ditongo",
+        "é oxítona terminada em -a",
+        "tem hiato com 'u'"
+      ],
+      "correct_answer": "o 'i' tônico vem depois de ditongo",
+      "explanation": "Depois do ditongo 'ei', o 'i' tônico de paroxítona não é acentuado (fei-u-ra).",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Alguém' recebe acento porque é:",
+      "options": [
+        "paroxítona terminada em -m",
+        "proparoxítona",
+        "oxítona terminada em -em",
+        "monossílabo tônico"
+      ],
+      "correct_answer": "oxítona terminada em -em",
+      "explanation": "Oxítonas terminadas em -a(s), -e(s), -o(s), -em(ns) são acentuadas.",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Cadáver' recebe acento porque é:",
+      "options": [
+        "oxítona terminada em -r",
+        "proparoxítona",
+        "oxítona terminada em -a",
+        "paroxítona terminada em -r"
+      ],
+      "correct_answer": "paroxítona terminada em -r",
+      "explanation": "Paroxítonas terminadas em -l, -r, -x, -n, -ps e -i(s) são acentuadas.",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Táxi' recebe acento porque é:",
+      "options": [
+        "paroxítona terminada em -i",
+        "oxítona terminada em -i",
+        "proparoxítona",
+        "monossílabo tônico"
+      ],
+      "correct_answer": "paroxítona terminada em -i",
+      "explanation": "Paroxítona terminada em -i ou -is leva acento.",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Lápis' recebe acento porque é:",
+      "options": [
+        "oxítona terminada em -is",
+        "paroxítona terminada em -is",
+        "proparoxítona",
+        "monossílabo tônico"
+      ],
+      "correct_answer": "paroxítona terminada em -is",
+      "explanation": "Paroxítona terminada em -is leva acento.",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Órfão' recebe acento porque é:",
+      "options": [
+        "oxítona terminada em -ão",
+        "proparoxítona",
+        "paroxítona terminada em -ão",
+        "monossílabo tônico"
+      ],
+      "correct_answer": "paroxítona terminada em -ão",
+      "explanation": "Paroxítona terminada em -ão(s) leva acento.",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Pôde' recebe acento circunflexo porque:",
+      "options": [
+        "é proparoxítona",
+        "é oxítona terminada em -e",
+        "tem hiato",
+        "é acento diferencial de 'pode'"
+      ],
+      "correct_answer": "é acento diferencial de 'pode'",
+      "explanation": "O acento diferencial distingue 'pôde' (passado) de 'pode' (presente).",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Vocês' recebe acento porque é:",
+      "options": [
+        "oxítona terminada em -es",
+        "paroxítona terminada em -s",
+        "proparoxítona",
+        "monossílabo tônico"
+      ],
+      "correct_answer": "oxítona terminada em -es",
+      "explanation": "Oxítona terminada em -e(s) leva acento: você, vocês.",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "'Polícia' recebe acento porque é:",
+      "options": [
+        "oxítona terminada em -a",
+        "paroxítona terminada em ditongo",
+        "proparoxítona",
+        "monossílabo tônico"
+      ],
+      "correct_answer": "paroxítona terminada em ditongo",
+      "explanation": "O final '-ia' é ditongo crescente: paroxítona terminada em ditongo leva acento.",
+      "hints": [
+        "Classifique a palavra pela sílaba tônica e observe a terminação para identificar a regra.",
+        "Descarte as regras que não combinam com a posição da sílaba tônica."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,808 @@
+{
+  "tema": "Pontuação",
+  "slug": "pontuacao",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney. Evitei vírgulas facultativas (adjunto adverbial curto, oração subordinada posposta, vírgula antes de 'e' com sujeitos diferentes), pois as gramáticas divergem.",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (vocativo no início).",
+      "options": [
+        "Ana, venha jantar.",
+        "Ana venha, jantar.",
+        "Ana venha jantar,",
+        "Ana, venha, jantar."
+      ],
+      "correct_answer": "Ana, venha jantar.",
+      "explanation": "O vocativo (Ana) é isolado por vírgula.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (vocativo no fim).",
+      "options": [
+        "Venha, jantar Ana.",
+        "Venha jantar, Ana.",
+        "Venha jantar Ana.",
+        "Venha jantar; Ana."
+      ],
+      "correct_answer": "Venha jantar, Ana.",
+      "explanation": "O vocativo no fim é separado por vírgula.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (enumeração simples).",
+      "options": [
+        "Comprei pão leite e queijo.",
+        "Comprei pão, leite, e queijo.",
+        "Comprei pão, leite e queijo.",
+        "Comprei, pão, leite e queijo."
+      ],
+      "correct_answer": "Comprei pão, leite e queijo.",
+      "explanation": "Vírgulas separam os itens; antes do 'e' final não se usa vírgula.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (enumeração de adjetivos).",
+      "options": [
+        "A casa era grande clara e arejada.",
+        "A casa era grande, clara, e arejada.",
+        "A casa, era grande, clara e arejada.",
+        "A casa era grande, clara e arejada."
+      ],
+      "correct_answer": "A casa era grande, clara e arejada.",
+      "explanation": "Vírgulas separam os termos da enumeração; antes do 'e' final, não.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (aposto explicativo).",
+      "options": [
+        "Recife, capital de Pernambuco, é linda.",
+        "Recife capital de Pernambuco é linda.",
+        "Recife, capital de Pernambuco é linda.",
+        "Recife capital, de Pernambuco, é linda."
+      ],
+      "correct_answer": "Recife, capital de Pernambuco, é linda.",
+      "explanation": "O aposto explicativo é isolado por vírgulas nos dois lados.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (aposto no fim).",
+      "options": [
+        "Conheci Ana a nova diretora.",
+        "Conheci Ana, a nova diretora.",
+        "Conheci, Ana a nova diretora.",
+        "Conheci Ana a nova, diretora."
+      ],
+      "correct_answer": "Conheci Ana, a nova diretora.",
+      "explanation": "O aposto no fim da frase vem depois de vírgula.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (sujeito e verbo).",
+      "options": [
+        "Os alunos, chegaram cedo.",
+        "Os alunos chegaram, cedo.",
+        "Os alunos chegaram cedo.",
+        "Os, alunos chegaram cedo."
+      ],
+      "correct_answer": "Os alunos chegaram cedo.",
+      "explanation": "Não se separa o sujeito do verbo por vírgula.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (verbo e complemento).",
+      "options": [
+        "Maria deu, o livro ao irmão.",
+        "Maria deu o livro, ao irmão.",
+        "Maria, deu o livro ao irmão.",
+        "Maria deu o livro ao irmão."
+      ],
+      "correct_answer": "Maria deu o livro ao irmão.",
+      "explanation": "Não se separa o verbo de seus complementos por vírgula.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (conjunção adversativa).",
+      "options": [
+        "Estudei muito, mas não passei.",
+        "Estudei muito mas, não passei.",
+        "Estudei, muito mas não passei.",
+        "Estudei muito mas não, passei."
+      ],
+      "correct_answer": "Estudei muito, mas não passei.",
+      "explanation": "A vírgula vem antes da conjunção adversativa 'mas'.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (conjunção adversativa 'porém').",
+      "options": [
+        "Queria sair porém, estava chovendo.",
+        "Queria sair, porém estava chovendo.",
+        "Queria, sair porém estava chovendo.",
+        "Queria sair porém estava, chovendo."
+      ],
+      "correct_answer": "Queria sair, porém estava chovendo.",
+      "explanation": "A vírgula vem antes da adversativa 'porém' quando ela inicia a oração.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (oração conclusiva).",
+      "options": [
+        "Penso logo, existo.",
+        "Penso logo existo,",
+        "Penso, logo existo.",
+        "Penso logo existo."
+      ],
+      "correct_answer": "Penso, logo existo.",
+      "explanation": "A vírgula separa as orações coordenadas; 'logo' introduz a conclusão.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (data).",
+      "options": [
+        "Recife 25 de setembro de 2026.",
+        "Recife, 25, de setembro de 2026.",
+        "Recife; 25 de setembro de 2026.",
+        "Recife, 25 de setembro de 2026."
+      ],
+      "correct_answer": "Recife, 25 de setembro de 2026.",
+      "explanation": "Depois do local, coloca-se vírgula antes da data.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (pergunta).",
+      "options": [
+        "Você vem à festa?",
+        "Você vem à festa,?",
+        "Você vem à festa;",
+        "Você, vem à festa?"
+      ],
+      "correct_answer": "Você vem à festa?",
+      "explanation": "Pergunta direta termina em ponto de interrogação.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (exclamação).",
+      "options": [
+        "Que dia lindo?",
+        "Que dia lindo!",
+        "Que dia lindo;",
+        "Que, dia lindo."
+      ],
+      "correct_answer": "Que dia lindo!",
+      "explanation": "A exclamação termina em ponto de exclamação.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (declaração).",
+      "options": [
+        "Ela chegou cedo?",
+        "Ela chegou cedo;",
+        "Ela chegou cedo.",
+        "Ela chegou, cedo,"
+      ],
+      "correct_answer": "Ela chegou cedo.",
+      "explanation": "Frase declarativa termina em ponto final.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (dois-pontos antes de enumeração).",
+      "options": [
+        "Trouxe três frutas, maçã: pera e uva.",
+        "Trouxe: três frutas maçã, pera e uva.",
+        "Trouxe três: frutas maçã, pera e uva.",
+        "Trouxe três frutas: maçã, pera e uva."
+      ],
+      "correct_answer": "Trouxe três frutas: maçã, pera e uva.",
+      "explanation": "Dois-pontos anunciam a enumeração que explica o termo anterior.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (dois-pontos antes de explicação).",
+      "options": [
+        "Só faltava uma coisa: coragem.",
+        "Só faltava: uma coisa coragem.",
+        "Só faltava uma coisa, coragem:",
+        "Só: faltava uma coisa coragem."
+      ],
+      "correct_answer": "Só faltava uma coisa: coragem.",
+      "explanation": "Dois-pontos anunciam o esclarecimento.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (diálogo com travessão).",
+      "options": [
+        "— Onde você vai — perguntou ela?",
+        "— Onde você vai? — perguntou ela.",
+        "— Onde você vai perguntou ela?",
+        "— Onde você vai?, perguntou ela."
+      ],
+      "correct_answer": "— Onde você vai? — perguntou ela.",
+      "explanation": "A pergunta fecha com '?' antes do travessão que introduz o verbo de fala.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (reticências).",
+      "options": [
+        "Ele hesitou e disse: — Bem,,, acho que sim.",
+        "Ele hesitou e disse: — Bem;;; acho que sim.",
+        "Ele hesitou e disse: — Bem... acho que sim.",
+        "Ele hesitou e disse: — Bem.. acho que sim."
+      ],
+      "correct_answer": "Ele hesitou e disse: — Bem... acho que sim.",
+      "explanation": "As reticências têm exatamente três pontos e indicam hesitação.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (interjeição).",
+      "options": [
+        "Ufa, Consegui terminar!",
+        "Ufa? Consegui terminar.",
+        "Ufa; consegui terminar!",
+        "Ufa! Consegui terminar."
+      ],
+      "correct_answer": "Ufa! Consegui terminar.",
+      "explanation": "A interjeição vem seguida de ponto de exclamação e nova frase.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (oração adjetiva restritiva).",
+      "options": [
+        "O aluno que estudou passou.",
+        "O aluno, que estudou passou.",
+        "O aluno que estudou, passou.",
+        "O aluno que, estudou passou."
+      ],
+      "correct_answer": "O aluno que estudou passou.",
+      "explanation": "Oração restritiva não usa vírgula, nem separa o sujeito do verbo.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (local e data em carta).",
+      "options": [
+        "São Paulo 3 de maio.",
+        "São Paulo, 3 de maio.",
+        "São, Paulo 3 de maio.",
+        "São Paulo: 3, de maio."
+      ],
+      "correct_answer": "São Paulo, 3 de maio.",
+      "explanation": "Local e data se separam por vírgula.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (vocativo no meio).",
+      "options": [
+        "Quero Maria, que você venha.",
+        "Quero, Maria que você venha.",
+        "Quero, Maria, que você venha.",
+        "Quero Maria que, você venha."
+      ],
+      "correct_answer": "Quero, Maria, que você venha.",
+      "explanation": "O vocativo no meio é isolado por vírgulas dos dois lados.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (enumeração de verbos).",
+      "options": [
+        "Cheguei vi, venci.",
+        "Cheguei, vi venci.",
+        "Cheguei, vi, venci,",
+        "Cheguei, vi, venci."
+      ],
+      "correct_answer": "Cheguei, vi, venci.",
+      "explanation": "Orações curtas em sequência (assíndeto) se separam por vírgulas.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase pontuada corretamente (pergunta com vocativo).",
+      "options": [
+        "Ana, você vem à festa?",
+        "Ana você vem à festa?",
+        "Ana, você vem, à festa?",
+        "Ana; você vem à festa?"
+      ],
+      "correct_answer": "Ana, você vem à festa?",
+      "explanation": "O vocativo (Ana) é separado por vírgula e a pergunta termina em interrogação.",
+      "hints": [
+        "Leia a frase em voz alta e veja onde a fala faz pausa natural ou onde o sentido muda.",
+        "Lembre: não se separa por vírgula o sujeito do verbo nem o verbo do complemento."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (oração adjetiva explicativa).",
+      "options": [
+        "Os alunos que estudaram, foram aprovados.",
+        "Os alunos, que estudaram, foram aprovados.",
+        "Os alunos, que estudaram foram aprovados.",
+        "Os alunos que, estudaram foram aprovados."
+      ],
+      "correct_answer": "Os alunos, que estudaram, foram aprovados.",
+      "explanation": "A oração explicativa vem isolada por vírgulas nos dois lados: todos estudaram.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (oração adjetiva restritiva, sentido: só alguns).",
+      "options": [
+        "Os alunos, que estudaram foram aprovados.",
+        "Os alunos que estudaram, foram aprovados.",
+        "Os alunos que estudaram foram aprovados.",
+        "Os alunos, que estudaram, foram, aprovados."
+      ],
+      "correct_answer": "Os alunos que estudaram foram aprovados.",
+      "explanation": "Sem vírgulas, a oração restringe o sentido: só os que estudaram foram aprovados.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (adjunto adverbial longo deslocado).",
+      "options": [
+        "Na manhã de segunda-feira passada o diretor, anunciou a mudança.",
+        "Na manhã de segunda-feira, passada o diretor anunciou a mudança.",
+        "Na manhã de segunda-feira passada o diretor anunciou, a mudança.",
+        "Na manhã de segunda-feira passada, o diretor anunciou a mudança."
+      ],
+      "correct_answer": "Na manhã de segunda-feira passada, o diretor anunciou a mudança.",
+      "explanation": "Adjunto adverbial longo antes do sujeito vem seguido de vírgula.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (elipse do verbo).",
+      "options": [
+        "Eu gosto de café; ela, de chá.",
+        "Eu gosto de café; ela de, chá.",
+        "Eu gosto de café ela, de chá.",
+        "Eu gosto de café; ela de chá,."
+      ],
+      "correct_answer": "Eu gosto de café; ela, de chá.",
+      "explanation": "A vírgula marca a omissão do verbo 'gosta' (elipse).",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (conjunção explicativa).",
+      "options": [
+        "Estude pois, a prova é difícil.",
+        "Estude, pois a prova é difícil.",
+        "Estude; pois a prova é, difícil.",
+        "Estude pois a prova é difícil,"
+      ],
+      "correct_answer": "Estude, pois a prova é difícil.",
+      "explanation": "Vírgula antes de 'pois' com valor explicativo.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (expressão explicativa).",
+      "options": [
+        "O exame isto é, a prova final será amanhã.",
+        "O exame, isto é a prova final, será amanhã.",
+        "O exame, isto é, a prova final, será amanhã.",
+        "O exame isto é a prova final, será amanhã."
+      ],
+      "correct_answer": "O exame, isto é, a prova final, será amanhã.",
+      "explanation": "'Isto é' e o trecho explicativo ficam isolados por vírgulas.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (conjunção adversativa no meio).",
+      "options": [
+        "Ele tentou; não conseguiu porém, terminar.",
+        "Ele tentou, não conseguiu porém terminar.",
+        "Ele tentou; não, conseguiu porém terminar.",
+        "Ele tentou; não conseguiu, porém, terminar."
+      ],
+      "correct_answer": "Ele tentou; não conseguiu, porém, terminar.",
+      "explanation": "'Porém' no meio da oração vem entre vírgulas.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (dois-pontos e enumeração).",
+      "options": [
+        "Faltam três coisas: tempo, dinheiro e vontade.",
+        "Faltam: três coisas tempo, dinheiro e vontade.",
+        "Faltam três coisas, tempo: dinheiro e vontade.",
+        "Faltam três: coisas tempo, dinheiro e vontade."
+      ],
+      "correct_answer": "Faltam três coisas: tempo, dinheiro e vontade.",
+      "explanation": "Dois-pontos anunciam a enumeração; vírgulas separam os itens.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (vocativo e imperativo).",
+      "options": [
+        "Pedro feche a porta, por favor.",
+        "Pedro, feche a porta, por favor.",
+        "Pedro, feche a porta por, favor.",
+        "Pedro feche, a porta por favor."
+      ],
+      "correct_answer": "Pedro, feche a porta, por favor.",
+      "explanation": "O vocativo e a expressão 'por favor' são separados por vírgulas.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (sujeito longo).",
+      "options": [
+        "Os candidatos aprovados no concurso de 2025, tomaram posse.",
+        "Os candidatos, aprovados no concurso de 2025 tomaram posse.",
+        "Os candidatos aprovados no concurso de 2025 tomaram posse.",
+        "Os candidatos aprovados, no concurso de 2025 tomaram posse."
+      ],
+      "correct_answer": "Os candidatos aprovados no concurso de 2025 tomaram posse.",
+      "explanation": "Mesmo com sujeito longo, não se separa o sujeito do verbo por vírgula.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (orações assindéticas).",
+      "options": [
+        "Chegou sentou, comeu e saiu.",
+        "Chegou, sentou, comeu, e saiu.",
+        "Chegou, sentou comeu e saiu.",
+        "Chegou, sentou, comeu e saiu."
+      ],
+      "correct_answer": "Chegou, sentou, comeu e saiu.",
+      "explanation": "Vírgulas entre as orações; antes do 'e' final não se usa.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (expressão 'por exemplo').",
+      "options": [
+        "Frutas, por exemplo, maçã e pera, são saudáveis.",
+        "Frutas por exemplo, maçã e pera são saudáveis.",
+        "Frutas, por exemplo maçã e pera, são saudáveis.",
+        "Frutas por exemplo maçã e pera são, saudáveis."
+      ],
+      "correct_answer": "Frutas, por exemplo, maçã e pera, são saudáveis.",
+      "explanation": "'Por exemplo' e os exemplos ficam isolados por vírgulas.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (aposto com nome).",
+      "options": [
+        "Machado de Assis escritor brasileiro, nasceu no Rio.",
+        "Machado de Assis, escritor brasileiro, nasceu no Rio.",
+        "Machado de Assis, escritor brasileiro nasceu no Rio.",
+        "Machado de Assis escritor, brasileiro, nasceu no Rio."
+      ],
+      "correct_answer": "Machado de Assis, escritor brasileiro, nasceu no Rio.",
+      "explanation": "O aposto explicativo é isolado por vírgulas dos dois lados.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (interrogativa indireta).",
+      "options": [
+        "Perguntei se ele vinha?",
+        "Perguntei, se ele vinha?",
+        "Perguntei se ele vinha.",
+        "Perguntei se ele vinha!"
+      ],
+      "correct_answer": "Perguntei se ele vinha.",
+      "explanation": "Pergunta indireta termina em ponto final, não em interrogação.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase pontuada corretamente (vocativo depois de interjeição).",
+      "options": [
+        "Ei você aí venha cá!",
+        "Ei, você aí venha cá!",
+        "Ei você, aí, venha cá!",
+        "Ei, você aí, venha cá!"
+      ],
+      "correct_answer": "Ei, você aí, venha cá!",
+      "explanation": "Interjeição e vocativo ficam isolados por vírgulas.",
+      "hints": [
+        "Verifique se o trecho isolado pode ser retirado sem quebrar a frase: se puder, costuma vir entre vírgulas.",
+        "Confira também se há vírgula sobrando entre termos que precisam ficar juntos."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Para que a frase signifique um convite às crianças, a pontuação correta é:",
+      "options": [
+        "Vamos comer, crianças!",
+        "Vamos comer crianças!",
+        "Vamos, comer crianças!",
+        "Vamos comer crianças, !"
+      ],
+      "correct_answer": "Vamos comer, crianças!",
+      "explanation": "A vírgula isola o vocativo 'crianças'; sem ela, 'crianças' seria o objeto de 'comer'.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Os alunos, que estudaram, foram aprovados', a oração destacada é:",
+      "options": [
+        "adjetiva restritiva",
+        "adjetiva explicativa",
+        "substantiva subjetiva",
+        "adverbial causal"
+      ],
+      "correct_answer": "adjetiva explicativa",
+      "explanation": "Entre vírgulas, não restringe o sentido: refere-se a todos os alunos.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Os alunos que estudaram foram aprovados', a oração destacada é:",
+      "options": [
+        "adjetiva explicativa",
+        "substantiva objetiva direta",
+        "adjetiva restritiva",
+        "adverbial temporal"
+      ],
+      "correct_answer": "adjetiva restritiva",
+      "explanation": "Sem vírgulas, restringe o sentido: só os alunos que estudaram.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "As vírgulas em 'Maria, minha amiga, chegou' isolam um:",
+      "options": [
+        "vocativo",
+        "adjunto adverbial",
+        "predicativo do sujeito",
+        "aposto"
+      ],
+      "correct_answer": "aposto",
+      "explanation": "'Minha amiga' explica o termo 'Maria': aposto explicativo.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "As vírgulas em 'Ouça, Pedro, com atenção' isolam um:",
+      "options": [
+        "vocativo",
+        "aposto",
+        "adjunto adnominal",
+        "objeto direto"
+      ],
+      "correct_answer": "vocativo",
+      "explanation": "'Pedro' é o interlocutor chamado: vocativo.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Eu gosto de café; ela, de chá', a vírgula depois de 'ela' indica:",
+      "options": [
+        "separação entre sujeito e verbo",
+        "omissão do verbo (elipse)",
+        "isolamento de aposto",
+        "início de citação"
+      ],
+      "correct_answer": "omissão do verbo (elipse)",
+      "explanation": "O verbo 'gosta' não se repete; a vírgula marca a elipse.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "O ponto e vírgula em 'A mesa era de mogno, cara; a cadeira, de pinho, barata' separa:",
+      "options": [
+        "sujeito de predicado",
+        "vocativo de aposto",
+        "orações que já contêm vírgulas",
+        "citação de fala"
+      ],
+      "correct_answer": "orações que já contêm vírgulas",
+      "explanation": "Como cada parte já tem vírgulas internas, o ponto e vírgula organiza a leitura.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase pontuada corretamente (discurso direto).",
+      "options": [
+        "— Estou com pressa — disse ele, mas espero.",
+        "— Estou com pressa, — disse ele — mas espero.",
+        "— Estou com pressa disse ele, — mas espero.",
+        "— Estou com pressa — disse ele —, mas espero."
+      ],
+      "correct_answer": "— Estou com pressa — disse ele —, mas espero.",
+      "explanation": "O trecho 'disse ele' fica entre travessões e a vírgula que continuaria a fala vem depois do segundo travessão.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase pontuada corretamente (adversativa deslocada).",
+      "options": [
+        "Ele é rico; é, porém, infeliz.",
+        "Ele é rico é porém, infeliz.",
+        "Ele é rico, é porém infeliz.",
+        "Ele é rico; é porém, infeliz."
+      ],
+      "correct_answer": "Ele é rico; é, porém, infeliz.",
+      "explanation": "'Porém' entre vírgulas no meio da oração, depois do ponto e vírgula.",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase sem erro de pontuação (vários casos).",
+      "options": [
+        "Pedro meu vizinho, comprou pão, leite, e ovos.",
+        "Pedro, meu vizinho, comprou pão, leite e ovos.",
+        "Pedro, meu vizinho comprou, pão, leite e ovos.",
+        "Pedro, meu vizinho, comprou pão leite e ovos."
+      ],
+      "correct_answer": "Pedro, meu vizinho, comprou pão, leite e ovos.",
+      "explanation": "Aposto entre vírgulas e itens da enumeração separados por vírgulas (sem vírgula antes do 'e').",
+      "hints": [
+        "Pergunte o que cada sinal faz na frase: isolar, enumerar, indicar fala ou mudar o sentido.",
+        "Elimine as alternativas com sinal faltando, sobrando ou trocado por outro de função diferente."
+      ]
+    }
+  ]
+}

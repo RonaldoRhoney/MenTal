@@ -1817,6 +1817,9 @@ const Map<String, IconData> _kSectionIcons = {
   'lg_colocacao_pronominal': Icons.swap_horiz_rounded,
   'lg_pronomes': Icons.person_pin_rounded,
   'lg_preposicao': Icons.compare_arrows_rounded,
+  'lg_pontuacao': Icons.more_horiz_rounded,
+  'lg_ortografia': Icons.edit_note_rounded,
+  'lg_acentuacao_grafica': Icons.format_size_rounded,
 };
 
 /// Cabeçalho de seção reutilizável — usado por qualquer Bloco/SubMundo
