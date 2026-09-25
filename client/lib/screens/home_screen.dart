@@ -761,35 +761,64 @@ class _HomeScreenState extends State<HomeScreen> {
                                 .bodySmall
                                 ?.copyWith(color: AppColors.muted),
                           ),
-                          const SizedBox(height: 6),
-                          // Pedido de Rhoney (23/09/2026): a dica do
-                          // My_Mental_AI saiu da Home como card (poluía a
-                          // tela) — só o NOME fica no topo, clicável, abrindo
-                          // a CoachScreen (dicas gerais). Dica focada por
-                          // Mundo mora dentro de cada Mundo (_WorldDetailScreen).
+                          const SizedBox(height: 10),
+                          // Pedido de Rhoney (23/09/2026, revisado no mesmo
+                          // dia: "deixe-o profissional, ajuste melhor o
+                          // design"): a dica do My_Mental_AI saiu da Home
+                          // como card (poluía a tela) — só o NOME fica no
+                          // topo, clicável, abrindo a CoachScreen (dicas
+                          // gerais). Selo compacto (não um botão genérico
+                          // nem texto solto), mesma linguagem visual dos
+                          // cartões do app (borda de acento sobre bg2), pra
+                          // ler como identidade do agente, não como aviso.
+                          // Dica focada por Mundo mora dentro de cada Mundo
+                          // (_WorldDetailScreen).
                           Align(
                             alignment: Alignment.center,
-                            child: InkWell(
-                              key: const Key('home_coach_name'),
-                              borderRadius: BorderRadius.circular(20),
-                              onTap: () => Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (_) =>
-                                          CoachScreen(client: widget.client))),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 4),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Icon(Icons.tips_and_updates_rounded,
-                                        size: 14, color: AppColors.teal),
-                                    const SizedBox(width: 4),
-                                    Text(kCoachName,
-                                        style: AppTheme.technicalStyle(
-                                            color: AppColors.teal,
-                                            fontSize: 12)),
-                                  ],
+                            child: Material(
+                              color: Colors.transparent,
+                              child: InkWell(
+                                key: const Key('home_coach_name'),
+                                borderRadius: BorderRadius.circular(24),
+                                onTap: () => Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (_) => CoachScreen(
+                                            client: widget.client))),
+                                child: Container(
+                                  padding: const EdgeInsets.fromLTRB(
+                                      6, 6, 14, 6),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.bg2.withValues(alpha: 0.7),
+                                    borderRadius: BorderRadius.circular(24),
+                                    border: Border.all(
+                                        color: AppColors.teal
+                                            .withValues(alpha: 0.4)),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.all(4),
+                                        decoration: BoxDecoration(
+                                          color: AppColors.teal
+                                              .withValues(alpha: 0.15),
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Icon(
+                                            Icons.auto_awesome_rounded,
+                                            size: 12,
+                                            color: AppColors.teal),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      Text(kCoachName,
+                                          style: AppTheme.technicalStyle(
+                                              color: AppColors.teal,
+                                              fontSize: 12)),
+                                      const SizedBox(width: 2),
+                                      Icon(Icons.chevron_right_rounded,
+                                          size: 16, color: AppColors.teal),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
