@@ -53,13 +53,13 @@
       "slug": "colocacao_pronominal",
       "nome": "Colocação Pronominal",
       "ordem_producao": 6,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "pronomes",
       "nome": "Pronomes",
       "ordem_producao": 6,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "pontuacao",

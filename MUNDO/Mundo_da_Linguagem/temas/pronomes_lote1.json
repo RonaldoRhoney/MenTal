@@ -1,0 +1,808 @@
+{
+  "tema": "Pronomes",
+  "slug": "pronomes",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney. Evitei casos com mais de uma forma aceita (ex.: 'a que' x 'a quem' foi tratado excluindo a variante concorrente das alternativas).",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Isso é para ___ fazer.",
+      "options": [
+        "eu",
+        "mim",
+        "me",
+        "comigo"
+      ],
+      "correct_answer": "eu",
+      "explanation": "'Eu' é o sujeito de 'fazer': depois de preposição, o sujeito de infinitivo usa o pronome reto — 'para eu fazer'.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Entre ___ e você, não há segredos.",
+      "options": [
+        "eu",
+        "mim",
+        "me",
+        "si"
+      ],
+      "correct_answer": "mim",
+      "explanation": "Depois de preposição ('entre') usa-se o pronome oblíquo tônico: 'entre mim e você'.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ela sempre leva o guarda-chuva ___ . (refere-se a ela mesma)",
+      "options": [
+        "contigo",
+        "comigo",
+        "consigo",
+        "conosco"
+      ],
+      "correct_answer": "consigo",
+      "explanation": "'Consigo' refere-se ao sujeito de 3ª pessoa: ela leva o guarda-chuva consigo.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Vem ___ ao mercado, eu preciso de ajuda. (a mim)",
+      "options": [
+        "conosco",
+        "contigo",
+        "com mim",
+        "comigo"
+      ],
+      "correct_answer": "comigo",
+      "explanation": "Com + mim = comigo.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Eu perdi ___ chaves.",
+      "options": [
+        "minhas",
+        "meus",
+        "minha",
+        "meu"
+      ],
+      "correct_answer": "minhas",
+      "explanation": "O possessivo concorda com a coisa possuída: 'chaves' é feminino plural, 'minhas'.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: ___ livro que estou segurando é meu.",
+      "options": [
+        "Esse",
+        "Este",
+        "Aquele",
+        "Aquilo"
+      ],
+      "correct_answer": "Este",
+      "explanation": "'Este' indica o que está perto de quem fala.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: ___ livro, aí perto de você, é seu?",
+      "options": [
+        "Este",
+        "Aquele",
+        "Esse",
+        "Isto"
+      ],
+      "correct_answer": "Esse",
+      "explanation": "'Esse' indica o que está perto de quem ouve.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: ___ prédio, lá longe, é a escola.",
+      "options": [
+        "Este",
+        "Esse",
+        "Isto",
+        "Aquele"
+      ],
+      "correct_answer": "Aquele",
+      "explanation": "'Aquele' indica o que está longe de quem fala e de quem ouve.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: A casa ___ moro é antiga.",
+      "options": [
+        "onde",
+        "cujo",
+        "quem",
+        "o qual"
+      ],
+      "correct_answer": "onde",
+      "explanation": "'Onde' é relativo de lugar: 'a casa onde moro' (= em que).",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: O aluno ___ mãe chegou já saiu.",
+      "options": [
+        "que",
+        "cuja",
+        "quem",
+        "onde"
+      ],
+      "correct_answer": "cuja",
+      "explanation": "'Cuja' expressa posse e concorda com o termo seguinte: 'cuja mãe'.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: A pessoa a ___ me refiro é gentil.",
+      "options": [
+        "cuja",
+        "onde",
+        "quem",
+        "quanto"
+      ],
+      "correct_answer": "quem",
+      "explanation": "Com preposição e antecedente pessoa, usa-se 'quem': 'a quem me refiro'.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale o pronome indefinido (pronomes).",
+      "options": [
+        "meu",
+        "este",
+        "cujo",
+        "algum"
+      ],
+      "correct_answer": "algum",
+      "explanation": "'Algum' indica quantidade/pessoa de modo vago: pronome indefinido.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'Quem chegou primeiro?', a palavra 'quem' é pronome:",
+      "options": [
+        "interrogativo",
+        "relativo",
+        "possessivo",
+        "demonstrativo"
+      ],
+      "correct_answer": "interrogativo",
+      "explanation": "Introduz uma pergunta: pronome interrogativo.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na frase 'O livro que comprei é caro', a palavra 'que' é pronome:",
+      "options": [
+        "interrogativo",
+        "relativo",
+        "possessivo",
+        "demonstrativo"
+      ],
+      "correct_answer": "relativo",
+      "explanation": "Retoma 'livro' e liga duas orações: pronome relativo.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Em 'Ele se machucou', a palavra 'se' é pronome:",
+      "options": [
+        "reto",
+        "possessivo",
+        "oblíquo reflexivo",
+        "demonstrativo"
+      ],
+      "correct_answer": "oblíquo reflexivo",
+      "explanation": "O sujeito pratica e sofre a ação: pronome oblíquo reflexivo.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O pronome 'nós' pertence ao caso:",
+      "options": [
+        "oblíquo átono",
+        "oblíquo tônico",
+        "possessivo",
+        "reto"
+      ],
+      "correct_answer": "reto",
+      "explanation": "'Nós' funciona como sujeito: pronome pessoal do caso reto.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Em 'Ninguém viu o acidente', a palavra 'ninguém' é pronome:",
+      "options": [
+        "indefinido",
+        "possessivo",
+        "demonstrativo",
+        "relativo"
+      ],
+      "correct_answer": "indefinido",
+      "explanation": "Refere-se a pessoa de modo vago: pronome indefinido.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Em 'Meu carro quebrou', a palavra 'meu' é pronome:",
+      "options": [
+        "demonstrativo",
+        "possessivo",
+        "indefinido",
+        "relativo"
+      ],
+      "correct_answer": "possessivo",
+      "explanation": "Indica posse: pronome possessivo.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Em 'Isto é importante', a palavra 'isto' é pronome:",
+      "options": [
+        "possessivo",
+        "indefinido",
+        "demonstrativo",
+        "interrogativo"
+      ],
+      "correct_answer": "demonstrativo",
+      "explanation": "Aponta algo no espaço ou no discurso: pronome demonstrativo.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Ao se dirigir a um rei, usa-se o pronome de tratamento:",
+      "options": [
+        "Vossa Santidade",
+        "Vossa Excelência",
+        "Vossa Reverendíssima",
+        "Vossa Majestade"
+      ],
+      "correct_answer": "Vossa Majestade",
+      "explanation": "'Vossa Majestade' é o tratamento de reis e imperadores.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Ao se dirigir ao Papa, usa-se o pronome de tratamento:",
+      "options": [
+        "Vossa Santidade",
+        "Vossa Majestade",
+        "Vossa Excelência",
+        "Vossa Alteza"
+      ],
+      "correct_answer": "Vossa Santidade",
+      "explanation": "'Vossa Santidade' é o tratamento do Papa.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Nunca ___ vi antes. (a ele)",
+      "options": [
+        "lhe",
+        "o",
+        "ele",
+        "se"
+      ],
+      "correct_answer": "o",
+      "explanation": "'Ver' pede objeto direto: usa-se 'o', não 'lhe'.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Entreguei o livro a ela; entreguei-___ o livro.",
+      "options": [
+        "o",
+        "a",
+        "lhe",
+        "se"
+      ],
+      "correct_answer": "lhe",
+      "explanation": "'Entregar' pede objeto indireto (a ela): 'lhe'.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ele ___ deu um presente. (a mim)",
+      "options": [
+        "mim",
+        "eu",
+        "comigo",
+        "me"
+      ],
+      "correct_answer": "me",
+      "explanation": "Objeto indireto de 1ª pessoa: pronome oblíquo átono 'me'.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: Ele foi ___ ao cinema. (com + nós)",
+      "options": [
+        "conosco",
+        "com nós",
+        "com nos",
+        "connosco"
+      ],
+      "correct_answer": "conosco",
+      "explanation": "Com + nós = conosco.",
+      "hints": [
+        "Identifique a função da palavra na frase: quem pratica a ação, quem recebe ou a que se refere.",
+        "Lembre a regra da classe do pronome antes de escolher."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Não há segredos entre ___ e ti.",
+      "options": [
+        "eu",
+        "mim",
+        "me",
+        "si"
+      ],
+      "correct_answer": "mim",
+      "explanation": "Depois de preposição, o oblíquo tônico: 'entre mim e ti'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Ele trouxe o livro para ___ ler.",
+      "options": [
+        "mim",
+        "me",
+        "eu",
+        "comigo"
+      ],
+      "correct_answer": "eu",
+      "explanation": "'Eu' é sujeito de 'ler': depois de preposição, o reto — 'para eu ler'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Ele diz que não confia em ___ mesmo.",
+      "options": [
+        "ele",
+        "lhe",
+        "se",
+        "si"
+      ],
+      "correct_answer": "si",
+      "explanation": "Refere-se ao próprio sujeito: reflexivo tônico, 'em si mesmo'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Este é o autor ___ obra li.",
+      "options": [
+        "cuja",
+        "cujo",
+        "a qual",
+        "que"
+      ],
+      "correct_answer": "cuja",
+      "explanation": "'Cujo' concorda com o termo seguinte: 'obra' é feminino, 'cuja'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: O livro ___ falei é ótimo.",
+      "options": [
+        "que",
+        "de que",
+        "o qual",
+        "cujo"
+      ],
+      "correct_answer": "de que",
+      "explanation": "'Falar' rege a preposição 'de': 'de que falei' (sem preposição, a frase ficaria incorreta).",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Os amigos com ___ viajei são cariocas.",
+      "options": [
+        "cujos",
+        "onde",
+        "quem",
+        "quanto"
+      ],
+      "correct_answer": "quem",
+      "explanation": "Com preposição e antecedente pessoa: 'com quem viajei'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Hoje é dia 25; ___ mês termina em cinco dias.",
+      "options": [
+        "esse",
+        "aquele",
+        "aquilo",
+        "este"
+      ],
+      "correct_answer": "este",
+      "explanation": "'Este' indica o tempo presente, em que se está.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Pedro e Ana chegaram: ___ de carro e ela a pé. (o primeiro citado)",
+      "options": [
+        "aquele",
+        "este",
+        "esse",
+        "aquilo"
+      ],
+      "correct_answer": "aquele",
+      "explanation": "'Aquele' retoma o termo mais distante (o primeiro citado); 'este' retomaria o último.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Ela ___ viu no espelho. (viu a si mesma)",
+      "options": [
+        "a",
+        "se",
+        "lhe",
+        "si"
+      ],
+      "correct_answer": "se",
+      "explanation": "Objeto direto reflexivo de 3ª pessoa: 'se'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: Não vi ___ pessoa na sala.",
+      "options": [
+        "nenhum",
+        "nenhumas",
+        "nenhuma",
+        "algum"
+      ],
+      "correct_answer": "nenhuma",
+      "explanation": "O indefinido concorda com 'pessoa' (feminino singular): 'nenhuma'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Complete: ___ de nós sabe a resposta. (ninguém)",
+      "options": [
+        "Nenhuma",
+        "Nenhuns",
+        "Ninguém",
+        "Nenhum"
+      ],
+      "correct_answer": "Nenhum",
+      "explanation": "Com 'de nós', usa-se o indefinido variável: 'Nenhum de nós' (não 'ninguém de nós').",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O pronome 'lhe' exerce, geralmente, a função de:",
+      "options": [
+        "objeto indireto",
+        "objeto direto",
+        "sujeito",
+        "predicativo"
+      ],
+      "correct_answer": "objeto indireto",
+      "explanation": "'Lhe' substitui complemento com preposição 'a/para': objeto indireto.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O pronome 'o' em 'Vi-o ontem' exerce a função de:",
+      "options": [
+        "objeto indireto",
+        "objeto direto",
+        "sujeito",
+        "adjunto adnominal"
+      ],
+      "correct_answer": "objeto direto",
+      "explanation": "'Ver' pede complemento sem preposição: 'o' é objeto direto.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase correta quanto ao uso de eu/mim.",
+      "options": [
+        "Ele trouxe o livro para mim ler.",
+        "Entre eu e você não há dúvida.",
+        "Ele trouxe o livro para eu ler.",
+        "Isso é para mim fazer."
+      ],
+      "correct_answer": "Ele trouxe o livro para eu ler.",
+      "explanation": "Sujeito de infinitivo usa o reto ('para eu ler'); depois de 'entre' usa-se 'mim'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a frase correta quanto ao uso do relativo 'cujo'.",
+      "options": [
+        "O médico que o filho dele se formou é meu vizinho.",
+        "O médico cujo o filho se formou é meu vizinho.",
+        "O médico onde o filho se formou é meu vizinho.",
+        "O médico cujo filho se formou é meu vizinho."
+      ],
+      "correct_answer": "O médico cujo filho se formou é meu vizinho.",
+      "explanation": "'Cujo' já une possuidor e possuído, sem artigo depois: 'cujo filho'.",
+      "hints": [
+        "Pergunte qual termo o pronome retoma ou substitui e que preposição a frase exige.",
+        "Verifique caso reto (sujeito) x oblíquo (complemento) e a concordância com o termo referido."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase em que 'cujo' está usado corretamente.",
+      "options": [
+        "O país cujas fronteiras visitei é lindo.",
+        "O país cujo as fronteiras visitei é lindo.",
+        "O país que suas fronteiras visitei é lindo.",
+        "O país cujas as fronteiras visitei é lindo."
+      ],
+      "correct_answer": "O país cujas fronteiras visitei é lindo.",
+      "explanation": "'Cujas' concorda com 'fronteiras' e não admite artigo logo depois.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Falando SOBRE o ministro (e não com ele), a forma correta é:",
+      "options": [
+        "Vossa Excelência assinou o decreto.",
+        "Sua Excelência assinou o decreto.",
+        "Seu Excelência assinou o decreto.",
+        "Vossa Excelência assinaste o decreto."
+      ],
+      "correct_answer": "Sua Excelência assinou o decreto.",
+      "explanation": "'Vossa' é para quem se fala; 'Sua', para de quem se fala. Concordância em 3ª pessoa.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto a mim/eu.",
+      "options": [
+        "Para mim ir, é preciso tempo.",
+        "Entre eu e ela, tudo está claro.",
+        "Para mim, isso não faz sentido.",
+        "Ela trouxe o livro para mim estudar."
+      ],
+      "correct_answer": "Para mim, isso não faz sentido.",
+      "explanation": "'Mim' não pode ser sujeito de infinitivo, mas serve depois de preposição quando não há verbo: 'Para mim, isso...'.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto ao uso de o/lhe.",
+      "options": [
+        "Eu lhe vi ontem, mas não o falei.",
+        "Eu lhe vi ontem, mas não lhe falei.",
+        "Eu o vi ontem, mas não o falei.",
+        "Eu o vi ontem, mas não lhe falei."
+      ],
+      "correct_answer": "Eu o vi ontem, mas não lhe falei.",
+      "explanation": "'Ver' pede objeto direto (o); 'falar' pede objeto indireto (lhe).",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Nunca lhe contei o segredo', o pronome 'lhe' exerce a função de:",
+      "options": [
+        "objeto indireto",
+        "objeto direto",
+        "sujeito",
+        "agente da passiva"
+      ],
+      "correct_answer": "objeto indireto",
+      "explanation": "Contei o segredo A ALGUÉM: 'lhe' é objeto indireto.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Vendem-se casas', a palavra 'se' é:",
+      "options": [
+        "pronome reflexivo",
+        "partícula apassivadora",
+        "índice de indeterminação do sujeito",
+        "parte integrante do verbo"
+      ],
+      "correct_answer": "partícula apassivadora",
+      "explanation": "Verbo transitivo direto + 'se' + sujeito paciente ('casas'): partícula apassivadora.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Precisa-se de motoristas', a palavra 'se' é:",
+      "options": [
+        "partícula apassivadora",
+        "pronome reflexivo",
+        "índice de indeterminação do sujeito",
+        "parte integrante do verbo"
+      ],
+      "correct_answer": "índice de indeterminação do sujeito",
+      "explanation": "Verbo transitivo indireto ('de motoristas'): 'se' indetermina o sujeito e o verbo fica no singular.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Arrependeu-se do erro', a palavra 'se' é:",
+      "options": [
+        "partícula apassivadora",
+        "índice de indeterminação do sujeito",
+        "pronome reflexivo",
+        "parte integrante do verbo"
+      ],
+      "correct_answer": "parte integrante do verbo",
+      "explanation": "'Arrepender-se' é verbo essencialmente pronominal: o 'se' faz parte dele.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Espero que ele venha', a palavra 'que' é:",
+      "options": [
+        "conjunção integrante",
+        "pronome relativo",
+        "pronome interrogativo",
+        "pronome indefinido"
+      ],
+      "correct_answer": "conjunção integrante",
+      "explanation": "Introduz oração subordinada substantiva objetiva direta e não retoma termo: conjunção integrante.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'A casa que comprei é grande', a palavra 'que' é:",
+      "options": [
+        "conjunção integrante",
+        "pronome relativo",
+        "pronome interrogativo",
+        "pronome demonstrativo"
+      ],
+      "correct_answer": "pronome relativo",
+      "explanation": "Retoma 'casa' e exerce função na oração (objeto direto de 'comprei'): pronome relativo.",
+      "hints": [
+        "Analise a função sintática ou a classe da palavra em destaque, não apenas o significado aproximado.",
+        "Elimine as alternativas que trocam classes de palavras parecidas."
+      ]
+    }
+  ]
+}

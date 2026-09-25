@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Nunca ___ daquele dia. (esquecer-se, eu)",
+    "options": [
+      "me esqueci",
+      "esqueci-me",
+      "esquecer-me",
+      "esqueci me"
+    ],
+    "correct_answer": "me esqueci",
+    "explanation": "'Nunca' é palavra negativa e atrai o pronome: 'Nunca me esqueci' (próclise).",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Ninguém ___ do problema. (avisar + me)",
+    "options": [
+      "avisou-me",
+      "me avisou",
+      "avisar-me",
+      "avisou me"
+    ],
+    "correct_answer": "me avisou",
+    "explanation": "'Ninguém' é palavra negativa: próclise, 'Ninguém me avisou'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Não ___ a verdade. (dizer + lhe, pretérito)",
+    "options": [
+      "disse-lhe",
+      "dizer-lhe",
+      "lhe disse",
+      "disse lhe"
+    ],
+    "correct_answer": "lhe disse",
+    "explanation": "O advérbio de negação 'não' atrai o pronome: 'Não lhe disse a verdade'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Jamais ___ com rancor. (tratar + o, futuro)",
+    "options": [
+      "tratá-lo-ei",
+      "tratarei-o",
+      "tratarei o",
+      "o tratarei"
+    ],
+    "correct_answer": "o tratarei",
+    "explanation": "'Jamais' é palavra negativa e atrai o pronome, impedindo mesóclise e ênclise: 'Jamais o tratarei'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: O livro que ___ é ótimo. (emprestar + me, ele)",
+    "options": [
+      "me emprestou",
+      "emprestou-me",
+      "emprestar-me",
+      "emprestou me"
+    ],
+    "correct_answer": "me emprestou",
+    "explanation": "O pronome relativo 'que' atrai o pronome oblíquo: 'que me emprestou'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Espero que ___ . (eles, ajudar + me)",
+    "options": [
+      "me ajudem",
+      "ajudem-me",
+      "ajudarem-me",
+      "ajudem me"
+    ],
+    "correct_answer": "me ajudem",
+    "explanation": "A conjunção subordinativa 'que' atrai o pronome: 'que me ajudem'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Se ___ , eu vou. (eles, chamar + me, futuro do subjuntivo)",
+    "options": [
+      "chamarem-me",
+      "chamar-me",
+      "me chamarem",
+      "chamarem me"
+    ],
+    "correct_answer": "me chamarem",
+    "explanation": "A conjunção subordinativa 'se' atrai o pronome: 'Se me chamarem'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Quem ___ isso? (contar + lhe, pretérito)",
+    "options": [
+      "contou-lhe",
+      "contar-lhe",
+      "contou lhe",
+      "lhe contou"
+    ],
+    "correct_answer": "lhe contou",
+    "explanation": "O pronome interrogativo 'quem' atrai o pronome: 'Quem lhe contou isso?'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Todos ___ . (elogiar + o, pretérito)",
+    "options": [
+      "o elogiaram",
+      "elogiaram-no",
+      "elogiaram-o",
+      "elogiar-no"
+    ],
+    "correct_answer": "o elogiaram",
+    "explanation": "O pronome indefinido 'todos' atrai o pronome oblíquo: 'Todos o elogiaram'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Talvez ___ amanhã. (eles, ligar + te)",
+    "options": [
+      "liguem-te",
+      "te liguem",
+      "ligarem-te",
+      "liguem te"
+    ],
+    "correct_answer": "te liguem",
+    "explanation": "O advérbio 'talvez' atrai o pronome: 'Talvez te liguem amanhã'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: ___ o livro, por favor. (dar + me, imperativo, você, início da frase)",
+    "options": [
+      "Me dê",
+      "Dar-me",
+      "Dê-me",
+      "Dê me"
+    ],
+    "correct_answer": "Dê-me",
+    "explanation": "No início da frase não se começa com pronome oblíquo átono: ênclise, 'Dê-me o livro'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: ___ Ana. (chamar-se, eu, início da frase)",
+    "options": [
+      "Me chamo",
+      "Chamar-me",
+      "Chamo me",
+      "Chamo-me"
+    ],
+    "correct_answer": "Chamo-me",
+    "explanation": "Verbo no início da oração pede ênclise: 'Chamo-me Ana'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: ___ de um erro grave. (tratar-se, início da frase)",
+    "options": [
+      "Trata-se",
+      "Se trata",
+      "Tratar-se",
+      "Trata se"
+    ],
+    "correct_answer": "Trata-se",
+    "explanation": "Verbo no início da oração pede ênclise: 'Trata-se de um erro grave'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: ___ , por favor. (sentar-se, imperativo afirmativo, você)",
+    "options": [
+      "Se sente",
+      "Sente-se",
+      "Sentar-se",
+      "Sente se"
+    ],
+    "correct_answer": "Sente-se",
+    "explanation": "Imperativo afirmativo pede ênclise: 'Sente-se'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: ___ a verdade. (dizer + me, imperativo afirmativo, você)",
+    "options": [
+      "Me diga",
+      "Dizer-me",
+      "Diga-me",
+      "Diga me"
+    ],
+    "correct_answer": "Diga-me",
+    "explanation": "Imperativo afirmativo pede ênclise: 'Diga-me a verdade'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Ele saiu ___ de todos. (despedir-se, gerúndio)",
+    "options": [
+      "se despedindo",
+      "despedir-se",
+      "despedindo se",
+      "despedindo-se"
+    ],
+    "correct_answer": "despedindo-se",
+    "explanation": "Gerúndio sem 'em' antes pede ênclise: 'despedindo-se'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: ___ o livro amanhã. (dar + lhe, futuro do presente, verbo no início)",
+    "options": [
+      "Dar-lhe-ei",
+      "Lhe darei",
+      "Darei-lhe",
+      "Dar-ei-lhe"
+    ],
+    "correct_answer": "Dar-lhe-ei",
+    "explanation": "Verbo no futuro do presente no início da frase pede mesóclise: 'Dar-lhe-ei'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: ___ um presente. (comprar + te, futuro do pretérito, verbo no início)",
+    "options": [
+      "Te compraria",
+      "Comprar-te-ia",
+      "Compraria-te",
+      "Comprar-ia-te"
+    ],
+    "correct_answer": "Comprar-te-ia",
+    "explanation": "Verbo no futuro do pretérito no início da frase pede mesóclise: 'Comprar-te-ia'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Deus ___ . (abençoar + te, presente do subjuntivo, desejo)",
+    "options": [
+      "abençoe-te",
+      "abençoar-te",
+      "te abençoe",
+      "abençoe te"
+    ],
+    "correct_answer": "te abençoe",
+    "explanation": "Em orações optativas (desejo) o pronome fica antes do verbo: 'Deus te abençoe'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Tudo ___ estranho. (parecer + lhe, imperfeito)",
+    "options": [
+      "parecia-lhe",
+      "parecer-lhe",
+      "parecia lhe",
+      "lhe parecia"
+    ],
+    "correct_answer": "lhe parecia",
+    "explanation": "O pronome indefinido 'tudo' atrai o pronome: 'Tudo lhe parecia estranho'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Alguém ___ ontem. (procurar + o, pretérito)",
+    "options": [
+      "o procurou",
+      "procurou-o",
+      "procurou-lo",
+      "procurou o"
+    ],
+    "correct_answer": "o procurou",
+    "explanation": "O pronome indefinido 'alguém' atrai o pronome oblíquo: 'Alguém o procurou'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Não ___ . (preocupar-se, imperativo, você)",
+    "options": [
+      "preocupe-se",
+      "se preocupe",
+      "preocupar-se",
+      "preocupe se"
+    ],
+    "correct_answer": "se preocupe",
+    "explanation": "Imperativo negativo tem palavra atrativa (não): 'Não se preocupe'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: ___ tudo o que aconteceu. (contar + me, imperativo, você, início da frase)",
+    "options": [
+      "Me conte",
+      "Contar-me",
+      "Conte-me",
+      "Conte me"
+    ],
+    "correct_answer": "Conte-me",
+    "explanation": "Imperativo afirmativo no início da frase: ênclise, 'Conte-me'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Como ___ ? (chamar-se, você)",
+    "options": [
+      "chama-se",
+      "chamar-se",
+      "chama se",
+      "se chama"
+    ],
+    "correct_answer": "se chama",
+    "explanation": "O advérbio interrogativo 'como' atrai o pronome: 'Como se chama?'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 1,
+    "prompt": "Complete conforme a norma-padrão: Ainda ___ do sorriso dela. (lembrar-se, eu)",
+    "options": [
+      "me lembro",
+      "lembro-me",
+      "lembrar-me",
+      "lembro me"
+    ],
+    "correct_answer": "me lembro",
+    "explanation": "O advérbio 'ainda' (sem pausa) atrai o pronome: 'Ainda me lembro'.",
+    "age_reviewed": true,
+    "hints": [
+      "Veja se há alguma palavra que 'atrai' o pronome para antes do verbo (não, nunca, que, alguém, tudo...).",
+      "Verbo no início da frase ou no imperativo afirmativo pede o pronome depois do verbo, com hífen."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (verbo no início da oração).",
+    "options": [
+      "Me deram um presente ontem.",
+      "Deram-me um presente ontem.",
+      "Deram me um presente ontem.",
+      "Deram-lhe-me um presente ontem."
+    ],
+    "correct_answer": "Deram-me um presente ontem.",
+    "explanation": "Verbo no início da oração pede ênclise: 'Deram-me'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (palavra negativa).",
+    "options": [
+      "Não disseram-me a verdade.",
+      "Não disseram me a verdade.",
+      "Não me disseram a verdade.",
+      "Não disseram-me-a verdade."
+    ],
+    "correct_answer": "Não me disseram a verdade.",
+    "explanation": "A palavra negativa 'não' atrai o pronome: 'Não me disseram'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (pronome relativo).",
+    "options": [
+      "O homem que atendeu-me foi gentil.",
+      "O homem que atendeu me foi gentil.",
+      "O homem que atender-me-á foi gentil.",
+      "O homem que me atendeu foi gentil."
+    ],
+    "correct_answer": "O homem que me atendeu foi gentil.",
+    "explanation": "O pronome relativo 'que' atrai o pronome oblíquo: 'que me atendeu'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (conjunção subordinativa).",
+    "options": [
+      "Ele avisou que nos ajudaria.",
+      "Ele avisou que ajudar-nos-ia.",
+      "Ele avisou que ajudaria-nos.",
+      "Ele avisou que ajudaria nos."
+    ],
+    "correct_answer": "Ele avisou que nos ajudaria.",
+    "explanation": "A conjunção subordinativa 'que' atrai o pronome e impede a mesóclise: 'que nos ajudaria'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (futuro do presente).",
+    "options": [
+      "Lhe entregarei o documento amanhã.",
+      "Entregar-lhe-ei o documento amanhã.",
+      "Entregarei-lhe o documento amanhã.",
+      "Entregar-ei-lhe o documento amanhã."
+    ],
+    "correct_answer": "Entregar-lhe-ei o documento amanhã.",
+    "explanation": "Futuro do presente sem fator de próclise, no início da frase: mesóclise, 'Entregar-lhe-ei'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (futuro do pretérito).",
+    "options": [
+      "Te ajudaria com prazer.",
+      "Ajudaria-te com prazer.",
+      "Ajudar-te-ia com prazer.",
+      "Ajudar-ia-te com prazer."
+    ],
+    "correct_answer": "Ajudar-te-ia com prazer.",
+    "explanation": "Futuro do pretérito no início da frase: mesóclise, 'Ajudar-te-ia'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (imperativo afirmativo).",
+    "options": [
+      "O faça agora mesmo.",
+      "Faça o agora mesmo.",
+      "Faça-o-o agora mesmo.",
+      "Faça-o agora mesmo."
+    ],
+    "correct_answer": "Faça-o agora mesmo.",
+    "explanation": "Imperativo afirmativo pede ênclise, com hífen: 'Faça-o'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (imperativo negativo).",
+    "options": [
+      "Não me interrompa, por favor.",
+      "Não interrompa-me, por favor.",
+      "Não interrompa me, por favor.",
+      "Interrompa-me não, por favor."
+    ],
+    "correct_answer": "Não me interrompa, por favor.",
+    "explanation": "No imperativo negativo o 'não' atrai o pronome: 'Não me interrompa'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (gerúndio).",
+    "options": [
+      "Saiu da sala se despedindo de todos.",
+      "Saiu da sala despedindo-se de todos.",
+      "Saiu da sala despedindo se de todos.",
+      "Saiu da sala despedindose de todos."
+    ],
+    "correct_answer": "Saiu da sala despedindo-se de todos.",
+    "explanation": "Gerúndio sem 'em' antes pede ênclise com hífen: 'despedindo-se'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (pronome indefinido).",
+    "options": [
+      "Todos parabenizaram-nos.",
+      "Todos parabenizaram nos.",
+      "Todos nos parabenizaram.",
+      "Nos todos parabenizaram."
+    ],
+    "correct_answer": "Todos nos parabenizaram.",
+    "explanation": "O pronome indefinido 'todos' atrai o pronome: 'Todos nos parabenizaram'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (pronome interrogativo).",
+    "options": [
+      "Quem contou-te isso?",
+      "Quem contou te isso?",
+      "Quem contar-te-ia isso?",
+      "Quem te contou isso?"
+    ],
+    "correct_answer": "Quem te contou isso?",
+    "explanation": "O pronome interrogativo 'quem' atrai o pronome: 'Quem te contou'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (particípio).",
+    "options": [
+      "Ele tinha-me avisado antes.",
+      "Ele tinha avisado-me antes.",
+      "Ele tinha avisado me antes.",
+      "Ele tinha-avisado-me antes."
+    ],
+    "correct_answer": "Ele tinha-me avisado antes.",
+    "explanation": "O pronome não se liga ao particípio: fica junto do auxiliar, 'tinha-me avisado'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (infinitivo com negação).",
+    "options": [
+      "Prefiro não envolver-me nisso.",
+      "Prefiro não me envolver nisso.",
+      "Prefiro não envolver me nisso.",
+      "Prefiro não envolvê-se nisso."
+    ],
+    "correct_answer": "Prefiro não me envolver nisso.",
+    "explanation": "O 'não' antes do infinitivo atrai o pronome: 'não me envolver'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (palavra negativa e futuro).",
+    "options": [
+      "Nunca dar-lhe-ei essa resposta.",
+      "Nunca darei-lhe essa resposta.",
+      "Nunca lhe darei essa resposta.",
+      "Nunca dar-ei-lhe essa resposta."
+    ],
+    "correct_answer": "Nunca lhe darei essa resposta.",
+    "explanation": "'Nunca' atrai o pronome e impede a mesóclise: 'Nunca lhe darei'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (pronome com verbo terminado em -r).",
+    "options": [
+      "Prometi trazer-o amanhã.",
+      "Prometi trazê-o amanhã.",
+      "Prometi traze-lo amanhã.",
+      "Prometi trazê-lo amanhã."
+    ],
+    "correct_answer": "Prometi trazê-lo amanhã.",
+    "explanation": "Depois de verbo terminado em -r, o pronome 'o' vira 'lo' e o r cai: 'trazê-lo'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise cada alternativa procurando o que vem antes do verbo: palavra atrativa, início de oração ou tempo verbal.",
+      "Lembre: futuro do presente e do pretérito admitem mesóclise só quando nada atrai o pronome."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Em 'Dir-se-ia que ele mentiu', o pronome 'se' aparece em:",
+    "options": [
+      "mesóclise",
+      "ênclise",
+      "próclise",
+      "hipérbato"
+    ],
+    "correct_answer": "mesóclise",
+    "explanation": "O pronome está no meio do verbo (dir-se-ia): mesóclise, por o futuro do pretérito estar no início da frase.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Em 'Nunca me esqueci dele', a próclise ocorre por causa de:",
+    "options": [
+      "pronome relativo",
+      "palavra negativa",
+      "conjunção subordinativa",
+      "verbo no futuro"
+    ],
+    "correct_answer": "palavra negativa",
+    "explanation": "'Nunca' é palavra negativa e atrai o pronome para antes do verbo.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Em 'Trata-se de um erro grave', a ênclise ocorre porque:",
+    "options": [
+      "há palavra negativa",
+      "há pronome relativo",
+      "o verbo inicia a oração",
+      "há conjunção subordinativa"
+    ],
+    "correct_answer": "o verbo inicia a oração",
+    "explanation": "Não se inicia oração com pronome oblíquo átono: verbo no início pede ênclise.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (imperativo negativo com oração completiva).",
+    "options": [
+      "Não diga-me que desistiu.",
+      "Não diga me que desistiu.",
+      "Não diga-me-que desistiu.",
+      "Não me diga que desistiu."
+    ],
+    "correct_answer": "Não me diga que desistiu.",
+    "explanation": "No imperativo negativo, o 'não' atrai o pronome: 'Não me diga'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (oração optativa).",
+    "options": [
+      "Que Deus o abençoe.",
+      "Que Deus abençoe-o.",
+      "Que Deus abençoar-o.",
+      "Que Deus abençoe o."
+    ],
+    "correct_answer": "Que Deus o abençoe.",
+    "explanation": "Na oração optativa/desejo há atração do pronome: 'Deus o abençoe'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Em 'Fá-lo-ei amanhã', o pronome assume a forma 'lo' porque se liga a verbo terminado em:",
+    "options": [
+      "vogal nasal",
+      "r, s ou z (a consoante cai)",
+      "-ão",
+      "vogal oral tônica"
+    ],
+    "correct_answer": "r, s ou z (a consoante cai)",
+    "explanation": "Depois de verbos terminados em r, s ou z, o pronome o(s)/a(s) vira lo(s)/la(s) e a consoante final cai: fazer → fá-lo.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (locução com particípio).",
+    "options": [
+      "Havia esquecido-me de tudo.",
+      "Havia esquecido me de tudo.",
+      "Havia-me esquecido de tudo.",
+      "Havia-esquecido-me de tudo."
+    ],
+    "correct_answer": "Havia-me esquecido de tudo.",
+    "explanation": "Pronome oblíquo não se liga a particípio: fica junto do auxiliar, 'Havia-me esquecido'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (pronome relativo e ênclise indevida).",
+    "options": [
+      "O amigo que emprestou-lhe o livro chegou.",
+      "O amigo que emprestar-lhe-á o livro chegou.",
+      "O amigo que emprestou lhe o livro chegou.",
+      "O amigo que lhe emprestou o livro chegou."
+    ],
+    "correct_answer": "O amigo que lhe emprestou o livro chegou.",
+    "explanation": "O pronome relativo 'que' atrai o pronome: 'que lhe emprestou'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à colocação pronominal (vários fatores de atração).",
+    "options": [
+      "Tudo se resolveria se o chefe nos ouvisse.",
+      "Tudo resolver-se-ia se o chefe nos ouvisse.",
+      "Tudo se resolveria se o chefe ouvisse-nos.",
+      "Resolveria-se tudo se o chefe nos ouvisse."
+    ],
+    "correct_answer": "Tudo se resolveria se o chefe nos ouvisse.",
+    "explanation": "'Tudo' atrai o 'se' e a conjunção 'se' atrai o 'nos': 'Tudo se resolveria se o chefe nos ouvisse'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  },
+  {
+    "territory_id": "linguagem_colocacao_pronominal",
+    "difficulty_level": 3,
+    "prompt": "Em 'Entregue-o ao diretor', a ênclise ocorre porque o verbo está:",
+    "options": [
+      "no futuro do presente",
+      "no imperativo afirmativo",
+      "no particípio",
+      "no infinitivo pessoal"
+    ],
+    "correct_answer": "no imperativo afirmativo",
+    "explanation": "Imperativo afirmativo pede ênclise: 'Entregue-o'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique primeiro o fator que decide a posição do pronome (início da frase, palavra atrativa, tempo verbal ou forma nominal).",
+      "Elimine as alternativas com hífen indevido, pronome depois de particípio ou combinações impossíveis com a palavra atrativa."
+    ]
+  }
+]

@@ -4018,6 +4018,18 @@ abstract class AppLocalizations {
   /// **'Regência Nominal'**
   String get territoryLinguagemRegenciaNominal;
 
+  /// Territory name — Linguagem grammar SubMundo: Colocação Pronominal
+  ///
+  /// In pt, this message translates to:
+  /// **'Colocação Pronominal'**
+  String get territoryLinguagemColocacaoPronominal;
+
+  /// Territory name — Linguagem grammar SubMundo: Pronomes
+  ///
+  /// In pt, this message translates to:
+  /// **'Pronomes'**
+  String get territoryLinguagemPronomes;
+
   /// My_Mental_AI subtitle
   ///
   /// In pt, this message translates to:

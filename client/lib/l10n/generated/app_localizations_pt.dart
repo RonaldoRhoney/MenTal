@@ -2318,6 +2318,12 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryLinguagemRegenciaNominal => 'Regência Nominal';
 
   @override
+  String get territoryLinguagemColocacaoPronominal => 'Colocação Pronominal';
+
+  @override
+  String get territoryLinguagemPronomes => 'Pronomes';
+
+  @override
   String get coachSubtitle =>
       'Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.';
 

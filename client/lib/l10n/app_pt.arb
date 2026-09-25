@@ -3189,6 +3189,14 @@
   "@territoryLinguagemRegenciaNominal": {
     "description": "Territory name — Linguagem grammar SubMundo: Regência Nominal"
   },
+  "territoryLinguagemColocacaoPronominal": "Colocação Pronominal",
+  "@territoryLinguagemColocacaoPronominal": {
+    "description": "Territory name — Linguagem grammar SubMundo: Colocação Pronominal"
+  },
+  "territoryLinguagemPronomes": "Pronomes",
+  "@territoryLinguagemPronomes": {
+    "description": "Territory name — Linguagem grammar SubMundo: Pronomes"
+  },
   "coachSubtitle": "Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.",
   "@coachSubtitle": {
     "description": "My_Mental_AI subtitle"
