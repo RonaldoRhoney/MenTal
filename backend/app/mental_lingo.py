@@ -29,7 +29,7 @@ import re
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from . import config, models
+from . import config, models, wiktionary
 from .services import extract_portuguese_meaning
 from .timeutil import utcnow
 
@@ -174,6 +174,18 @@ def answer_question(db: Session, question: str) -> dict:
             }
 
     _record_gap(db, word, target)
+    suggestion = _suggestion_for(db, word_norm, target)
+    if suggestion is not None:
+        reviewed = suggestion.status == "approved"
+        text = suggestion.answer_text if reviewed else f"{suggestion.answer_text} (Fonte: Wikcionário — ainda não revisado.)"
+        return {
+            "found": True,
+            "answer_text": text,
+            "matched_word": word,
+            "target_language": target or "ingles",
+            "suggestion_key": {"word": suggestion.word, "target_language": suggestion.target_language},
+            "reviewed": reviewed,
+        }
     return {
         "found": False,
         "answer_text": (
@@ -183,3 +195,39 @@ def answer_question(db: Session, question: str) -> dict:
         "matched_word": word,
         "target_language": target,
     }
+
+
+def _suggestion_for(db: Session, word_norm: str, target: str | None) -> models.MentalLingoSuggestion | None:
+    """Sugestão aberta (Wikcionário), só Português -> Inglês; cacheada. 'rejected' nunca é servida."""
+    if target not in (None, "ingles"):
+        return None
+    key = word_norm[:MAX_GAP_WORD_LEN]
+    row = db.get(models.MentalLingoSuggestion, (key, "ingles"))
+    if row is not None:
+        return None if row.status == "rejected" else row
+    if " " in key:  # só palavra isolada: frase inteira o Wikcionário não traduz
+        return None
+    glosses = wiktionary.glosses_pt_to_en(key)
+    if not glosses:
+        return None
+    text = f"'{key}' em inglês pode ser: {', '.join(glosses)}."
+    row = models.MentalLingoSuggestion(word=key, target_language="ingles", answer_text=text)
+    try:
+        db.add(row)
+        db.commit()
+    except Exception:
+        db.rollback()
+        return None
+    return row
+
+
+def vote(db: Session, word: str, target_language: str, useful: bool) -> bool:
+    row = db.get(models.MentalLingoSuggestion, (word, target_language))
+    if row is None:
+        return False
+    if useful:
+        row.useful_votes += 1
+    else:
+        row.wrong_votes += 1
+    db.commit()
+    return True

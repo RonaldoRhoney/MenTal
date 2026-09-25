@@ -99,3 +99,54 @@ def test_palavra_conhecida_nao_vira_lacuna(client):
     _ask(client, "como se escreve lápis em inglês")
     with SessionLocal() as db:
         assert db.get(models.MentalLingoGap, ("lápis", "ingles")) is None
+
+
+def test_palavra_fora_do_vocabulario_usa_fonte_aberta_com_aviso_e_cache(client, monkeypatch):
+    calls = []
+
+    def fake(word):
+        calls.append(word)
+        return ["eraser", "rubber"]
+
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", fake)
+    data = _ask(client, "como se escreve borracha em inglês").json()
+    assert data["found"] is True
+    assert "eraser, rubber" in data["answer_text"]
+    assert "ainda não revisado" in data["answer_text"]
+    assert data["reviewed"] is False and data["suggestion_key"]["word"] == "borracha"
+    _ask(client, "como se escreve borracha em inglês")
+    assert calls == ["borracha"]  # 2ª vez vem do cache, sem nova consulta externa
+
+
+def test_sugestao_aprovada_perde_o_aviso_e_rejeitada_nunca_e_servida(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: ["pencil"])
+    _ask(client, "como se escreve grafite em inglês")
+    with SessionLocal() as db:
+        db.get(models.MentalLingoSuggestion, ("grafite", "ingles")).status = "approved"
+        db.commit()
+    data = _ask(client, "como se escreve grafite em inglês").json()
+    assert data["reviewed"] is True and "ainda não revisado" not in data["answer_text"]
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: ["x"])
+    _ask(client, "como se escreve giz em inglês")
+    with SessionLocal() as db:
+        db.get(models.MentalLingoSuggestion, ("giz", "ingles")).status = "rejected"
+        db.commit()
+    assert _ask(client, "como se escreve giz em inglês").json()["found"] is False
+
+
+def test_sem_dado_na_fonte_ou_idioma_sem_par_diz_que_nao_sabe(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    assert _ask(client, "como se escreve zzqx em inglês").json()["found"] is False
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: (_ for _ in ()).throw(AssertionError("não devia consultar")))
+    assert _ask(client, "como se escreve zzqx em francês").json()["found"] is False
+
+
+def test_voto_de_utilidade_e_so_contador(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: ["ruler"])
+    _ask(client, "como se escreve régua em inglês")
+    headers = auth_header(str(uuid.uuid4()))
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    r = client.post("/mental-lingo/feedback", json={"word": "régua", "target_language": "ingles", "useful": False}, headers=headers)
+    assert r.json() == {"ok": True}
+    with SessionLocal() as db:
+        assert db.get(models.MentalLingoSuggestion, ("régua", "ingles")).wrong_votes == 1

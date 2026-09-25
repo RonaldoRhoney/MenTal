@@ -28,3 +28,19 @@ def ask_mental_lingo(
         window_seconds=config.RATE_LIMIT_MENTAL_LINGO[1],
     )
     return schemas.MentalLingoAskOut(**mental_lingo.answer_question(db, body.question))
+
+
+@router.post("/mental-lingo/feedback")
+def mental_lingo_feedback(
+    body: schemas.MentalLingoFeedbackRequest,
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """Voto de utilidade numa resposta de fonte aberta — só contador agregado
+    (prioriza a revisão de Rhoney), sem guardar quem votou."""
+    services.enforce_rate_limit(
+        "mental_lingo", user_id,
+        max_calls=config.RATE_LIMIT_MENTAL_LINGO[0],
+        window_seconds=config.RATE_LIMIT_MENTAL_LINGO[1],
+    )
+    return {"ok": mental_lingo.vote(db, body.word, body.target_language, body.useful)}

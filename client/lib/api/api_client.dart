@@ -373,6 +373,15 @@ class ApiClient {
   // MENTAL LINGO (aprovado 23/09/2026, escopo V1 custo zero): `question`
   // já é o texto transcrito NO APARELHO (speech_to_text) — nenhum áudio
   // sai do client.
+  // Voto de utilidade numa resposta de fonte aberta (só contador agregado no servidor).
+  Future<Map<String, dynamic>> mentalLingoFeedback(String word, String targetLanguage, bool useful) async {
+    return _post(
+      _uri('/mental-lingo/feedback'),
+      headers: _headers,
+      body: jsonEncode({'word': word, 'target_language': targetLanguage, 'useful': useful}),
+    );
+  }
+
   Future<Map<String, dynamic>> askMentalLingo(String question) async {
     return _post(
       _uri('/mental-lingo/ask'),

@@ -345,6 +345,9 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   _LingoState _state = _LingoState.ready;
   String? _question;
   String? _answer;
+  // Resposta de fonte aberta ainda não revisada: o usuário pode votar se ajudou.
+  Map<String, dynamic>? _suggestionKey;
+  bool _voted = false;
   String? _errorMessage;
   bool _speakingAnswer = false;
   // O status "notListening" chega ANTES do resultado final da fala (achado
@@ -359,6 +362,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       _answer = null;
       _errorMessage = null;
       _accumulated = '';
+      _listenStartedAt = DateTime.now();
     });
     final ok = await widget._service.init(
       onError: (_) {
@@ -407,7 +411,18 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   /// numa pausa curta de fala; em vez de enviar a 1ª frase, ACUMULAMOS os
   /// trechos, reabrimos a escuta e só enviamos quando o usuário para de
   /// falar de verdade (_kSubmitAfterSilence) ou toca no microfone.
-  static const Duration _kSubmitAfterSilence = Duration(milliseconds: 3500);
+  // Pedido de Rhoney (25/09/2026): "a escuta deve ser proporcional ao tempo da
+  // pergunta". A tolerância a pausas cresce com quanto o usuário já falou:
+  // 2,5s base + 15% do tempo decorrido, no máximo 8s (pergunta curta envia
+  // rápido; pergunta longa ganha mais fôlego pra respirar/pensar).
+  DateTime? _listenStartedAt;
+
+  Duration _submitDelay() {
+    final started = _listenStartedAt;
+    final elapsedMs = started == null ? 0 : DateTime.now().difference(started).inMilliseconds;
+    return Duration(milliseconds: (2500 + elapsedMs * 0.15).clamp(2500, 8000).round());
+  }
+
   String _accumulated = '';
   Timer? _submitTimer;
 
@@ -429,7 +444,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     // Reabre a escuta pro caso de a pergunta continuar; se ninguém falar mais,
     // o prazo abaixo envia o que foi acumulado.
     _submitTimer?.cancel();
-    _submitTimer = Timer(_kSubmitAfterSilence, _submitAccumulated);
+    _submitTimer = Timer(_submitDelay(), _submitAccumulated);
     try {
       await widget._service.listen(onFinalResult: _handleResult);
     } catch (_) {
@@ -453,6 +468,8 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       if (!mounted) return;
       setState(() {
         _answer = result['answer_text'] as String;
+        _suggestionKey = result['reviewed'] == false ? result['suggestion_key'] as Map<String, dynamic>? : null;
+        _voted = false;
         _errorMessage = null;
         _state = _LingoState.answering;
       });
@@ -480,8 +497,20 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     if (mounted) setState(() => _speakingAnswer = false);
   }
 
+  Future<void> _vote(bool useful) async {
+    final key = _suggestionKey;
+    if (key == null || _voted) return;
+    setState(() => _voted = true);
+    try {
+      await widget.client.mentalLingoFeedback(key['word'] as String, key['target_language'] as String, useful);
+    } on ApiException {
+      // voto é só reforço; falha silenciosa
+    }
+  }
+
   void _newQuestion() {
     setState(() {
+      _suggestionKey = null;
       _state = _LingoState.ready;
       _question = null;
       _answer = null;
@@ -694,6 +723,28 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                               label: 'MENTAL LINGO',
                               text: _answer!,
                               key: const Key('mental_lingo_answer_bubble')),
+                        if (_state == _LingoState.answering && _suggestionKey != null)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12),
+                            child: _voted
+                                ? Text('Obrigado! Isso ajuda a revisar as respostas.',
+                                    key: const Key('mental_lingo_voted_text'),
+                                    style: TextStyle(color: AppColors.muted))
+                                : Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Text('Essa resposta ajudou?'),
+                                      IconButton(
+                                          key: const Key('mental_lingo_vote_up'),
+                                          onPressed: () => _vote(true),
+                                          icon: const Icon(Icons.thumb_up_alt_outlined)),
+                                      IconButton(
+                                          key: const Key('mental_lingo_vote_down'),
+                                          onPressed: () => _vote(false),
+                                          icon: const Icon(Icons.thumb_down_alt_outlined)),
+                                    ],
+                                  ),
+                          ),
                         if (_errorMessage != null)
                           Padding(
                             padding: const EdgeInsets.only(top: 12),

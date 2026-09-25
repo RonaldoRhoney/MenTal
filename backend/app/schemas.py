@@ -1274,11 +1274,26 @@ class MentalLingoAskRequest(BaseModel):
     question: str = Field(min_length=1, max_length=300)
 
 
+class MentalLingoSuggestionKey(BaseModel):
+    word: str
+    target_language: str
+
+
 class MentalLingoAskOut(BaseModel):
     found: bool
     answer_text: str
     matched_word: str | None = None
     target_language: str | None = None
+    # Presente quando a resposta veio de fonte aberta (Wikcionário); `reviewed`
+    # False = ainda não aprovada por Rhoney (o texto já traz o aviso).
+    suggestion_key: MentalLingoSuggestionKey | None = None
+    reviewed: bool = True
+
+
+class MentalLingoFeedbackRequest(BaseModel):
+    word: str = Field(min_length=1, max_length=80)
+    target_language: str = Field(max_length=20)
+    useful: bool
 
 
 class WorldCoachOut(BaseModel):

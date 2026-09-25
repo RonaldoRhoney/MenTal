@@ -510,6 +510,26 @@ class MentalLingoGap(Base):
     last_asked_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class MentalLingoSuggestion(Base):
+    """
+    MENTAL LINGO — resposta vinda de fonte aberta (Wikcionário), com revisão
+    humana (aprovado por Rhoney, 25/09/2026). status: pending (servida com
+    aviso "ainda não revisado") | approved (resposta oficial) | rejected
+    (nunca servida). Votos de utilidade são só contadores — sem usuário.
+    """
+
+    __tablename__ = "mental_lingo_suggestions"
+
+    word: Mapped[str] = mapped_column(String, primary_key=True)
+    target_language: Mapped[str] = mapped_column(String, primary_key=True, default="")
+    answer_text: Mapped[str] = mapped_column(Text)
+    source: Mapped[str] = mapped_column(String, default="wiktionary")
+    status: Mapped[str] = mapped_column(String, default="pending")
+    useful_votes: Mapped[int] = mapped_column(Integer, default=0)
+    wrong_votes: Mapped[int] = mapped_column(Integer, default=0)
+    fetched_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class Attempt(Base):
     __tablename__ = "attempts"
 
