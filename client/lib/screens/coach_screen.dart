@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../territories.dart';
+import '../theme/agent_neon.dart';
 import '../theme/app_theme.dart';
 import 'challenge_screen.dart';
 import 'friends_screen.dart';
@@ -261,6 +262,112 @@ class _CoachCard extends StatelessWidget {
               ),
             ],
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Nome do agente no padrão neon ("My_Mental_" branco + "AI" ciano).
+class AgentNameText extends StatelessWidget {
+  const AgentNameText({super.key, this.fontSize = 13});
+
+  final double fontSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+      text: TextSpan(
+        style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w800, letterSpacing: 0.2),
+        children: const [
+          TextSpan(text: 'My_Mental_', style: TextStyle(color: Colors.white)),
+          TextSpan(text: 'AI', style: TextStyle(color: kAgentCyan)),
+        ],
+      ),
+    );
+  }
+}
+
+/// Cartão do My_Mental_AI dentro de cada Mundo, no padrão neon do banner do
+/// MENTAL LINGO (pedido de Rhoney, 25/09/2026). SEMPRE clicável: com ação
+/// (território etc.) leva ao destino; sem ação abre a tela geral de dicas.
+/// Texto completo, sem reticências — o cartão cresce com o conteúdo.
+class MyMentalAiWorldCard extends StatelessWidget {
+  const MyMentalAiWorldCard({super.key, required this.card, required this.client, required this.onReturned});
+
+  final Map<String, dynamic> card;
+  final ApiClient client;
+  final VoidCallback onReturned;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final territoryId = card['territory_id'] as String?;
+    final action = card['action'] as Map<String, dynamic>?;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          key: const Key('world_coach_card'),
+          borderRadius: BorderRadius.circular(20),
+          onTap: () async {
+            if (action != null) {
+              await openCoachAction(context, client, action);
+            } else {
+              await Navigator.of(context).push(MaterialPageRoute(builder: (_) => CoachScreen(client: client)));
+            }
+            onReturned();
+          },
+          child: Container(
+            padding: const EdgeInsets.all(14),
+            decoration: agentNeonDecoration(),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 42,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: kAgentNavy,
+                    border: Border.all(color: kAgentCyan, width: 2),
+                    boxShadow: [BoxShadow(color: kAgentCyan.withValues(alpha: 0.35), blurRadius: 12)],
+                  ),
+                  child: Icon(coachIcon(card['id'] as String), color: Colors.white, size: 20),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const AgentNameText(),
+                      const SizedBox(height: 4),
+                      Text(coachText(l10n, card['title'] as String, territoryId),
+                          style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w700)),
+                      const SizedBox(height: 4),
+                      Text(coachText(l10n, card['body'] as String, territoryId),
+                          style: const TextStyle(color: kAgentSoftText, fontSize: 12.5, height: 1.3)),
+                      const SizedBox(height: 10),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(colors: [kAgentBlue, kAgentIndigo]),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1.2),
+                          ),
+                          child: Text(action != null ? l10n.coachGoButton : 'Ver mais dicas',
+                              style: const TextStyle(color: Colors.white, fontSize: 11.5, fontWeight: FontWeight.w700)),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

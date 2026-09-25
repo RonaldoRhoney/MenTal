@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../api/api_client.dart';
 import '../services/mental_lingo_service.dart';
 import '../services/tts_service.dart';
+import '../theme/agent_neon.dart';
 import '../theme/app_theme.dart';
 
 /// MENTAL LINGO — assistente de voz do Mundo dos Idiomas
@@ -22,11 +23,6 @@ const String kMentalLingoVoice = 'pt-BR-FranciscaNeural';
 /// azul→índigo com contorno claro. Identidade PRÓPRIA do agente (neon
 /// azul), por isso as cores ficam aqui e não nos tokens gerais do app.
 /// Aparece só dentro do Mundo dos Idiomas (_WorldDetailScreen decide).
-const Color _kLingoNavy = Color(0xFF0B1030);
-const Color _kLingoNavy2 = Color(0xFF16123F);
-const Color _kLingoCyan = Color(0xFF3DC8FF);
-const Color _kLingoBlue = Color(0xFF3A6BFF);
-const Color _kLingoIndigo = Color(0xFF6A45FF);
 
 class MentalLingoBanner extends StatelessWidget {
   const MentalLingoBanner({super.key, required this.client});
@@ -43,35 +39,30 @@ class MentalLingoBanner extends StatelessWidget {
           key: const Key('mental_lingo_banner'),
           borderRadius: BorderRadius.circular(20),
           onTap: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (_) => MentalLingoScreen(client: client)),
+            MaterialPageRoute(
+                builder: (_) => MentalLingoScreen(client: client)),
           ),
           child: Container(
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [_kLingoNavy, _kLingoNavy2],
+                colors: [kAgentNavy, kAgentNavy2],
               ),
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: _kLingoBlue.withValues(alpha: 0.85), width: 1.2),
+              border: Border.all(
+                  color: kAgentBlue.withValues(alpha: 0.85), width: 1.2),
               boxShadow: [
-                BoxShadow(color: _kLingoBlue.withValues(alpha: 0.35), blurRadius: 18, spreadRadius: 0.5),
+                BoxShadow(
+                    color: kAgentBlue.withValues(alpha: 0.35),
+                    blurRadius: 18,
+                    spreadRadius: 0.5),
               ],
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Stack(
                 children: [
-                  // Ondas decorativas no canto superior direito (atrás do botão).
-                  const Positioned(
-                    top: 6,
-                    right: 10,
-                    child: SizedBox(
-                      width: 96,
-                      height: 44,
-                      child: CustomPaint(painter: _WavePainter(barCount: 17, opacity: 0.5)),
-                    ),
-                  ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(12, 12, 10, 12),
                     child: Row(
@@ -85,10 +76,17 @@ class MentalLingoBanner extends StatelessWidget {
                             children: [
                               RichText(
                                 text: const TextSpan(
-                                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800, letterSpacing: 0.2),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w800,
+                                      letterSpacing: 0.2),
                                   children: [
-                                    TextSpan(text: 'MENTAL ', style: TextStyle(color: Colors.white)),
-                                    TextSpan(text: 'LINGO', style: TextStyle(color: _kLingoCyan)),
+                                    TextSpan(
+                                        text: 'MENTAL ',
+                                        style: TextStyle(color: Colors.white)),
+                                    TextSpan(
+                                        text: 'LINGO',
+                                        style: TextStyle(color: kAgentCyan)),
                                   ],
                                 ),
                               ),
@@ -97,12 +95,15 @@ class MentalLingoBanner extends StatelessWidget {
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   softWrap: false,
-                                  style: TextStyle(color: Color(0xFFB8BEDF), fontSize: 11.5)),
+                                  style: TextStyle(
+                                      color: Color(0xFFB8BEDF),
+                                      fontSize: 11.5)),
                               const SizedBox(height: 8),
                               Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 8, vertical: 4),
                                 decoration: BoxDecoration(
-                                  color: _kLingoBlue.withValues(alpha: 0.18),
+                                  color: kAgentBlue.withValues(alpha: 0.18),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: const Row(
@@ -111,12 +112,18 @@ class MentalLingoBanner extends StatelessWidget {
                                     SizedBox(
                                         width: 14,
                                         height: 10,
-                                        child: CustomPaint(painter: _WavePainter(barCount: 5, opacity: 1, cyan: true))),
+                                        child: CustomPaint(
+                                            painter: _WavePainter(
+                                                barCount: 5,
+                                                opacity: 1,
+                                                cyan: true))),
                                     SizedBox(width: 5),
                                     Flexible(
                                       child: Text('Toque para perguntar',
                                           overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(color: Color(0xFF9FB4FF), fontSize: 9.5)),
+                                          style: TextStyle(
+                                              color: Color(0xFF9FB4FF),
+                                              fontSize: 9.5)),
                                     ),
                                   ],
                                 ),
@@ -125,25 +132,50 @@ class MentalLingoBanner extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(width: 6),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                          decoration: BoxDecoration(
-                            gradient: const LinearGradient(colors: [_kLingoBlue, _kLingoIndigo]),
-                            borderRadius: BorderRadius.circular(22),
-                            border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1.4),
-                            boxShadow: [
-                              BoxShadow(color: _kLingoBlue.withValues(alpha: 0.5), blurRadius: 12),
-                            ],
-                          ),
-                          child: const Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(Icons.mic_rounded, color: Colors.white, size: 15),
-                              SizedBox(width: 4),
-                              Text('Toque para falar',
-                                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 11.5)),
-                            ],
-                          ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            // Ondas acima do botão (como no print), sem sobreposição.
+                            const SizedBox(
+                              width: 96,
+                              height: 30,
+                              child: CustomPaint(
+                                  painter: _WavePainter(
+                                      barCount: 17, opacity: 0.75)),
+                            ),
+                            const SizedBox(height: 8),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                    colors: [kAgentBlue, kAgentIndigo]),
+                                borderRadius: BorderRadius.circular(22),
+                                border: Border.all(
+                                    color: Colors.white.withValues(alpha: 0.85),
+                                    width: 1.4),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: kAgentBlue.withValues(alpha: 0.5),
+                                      blurRadius: 12),
+                                ],
+                              ),
+                              child: const Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(Icons.mic_rounded,
+                                      color: Colors.white, size: 15),
+                                  SizedBox(width: 4),
+                                  Text('Toque para falar',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 11.5)),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -178,8 +210,14 @@ class _GlowingMic extends StatelessWidget {
             height: size,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              gradient: RadialGradient(colors: [_kLingoBlue.withValues(alpha: 0.35), Colors.transparent]),
-              boxShadow: [BoxShadow(color: _kLingoCyan.withValues(alpha: 0.35), blurRadius: 16)],
+              gradient: RadialGradient(colors: [
+                kAgentBlue.withValues(alpha: 0.35),
+                Colors.transparent
+              ]),
+              boxShadow: [
+                BoxShadow(
+                    color: kAgentCyan.withValues(alpha: 0.35), blurRadius: 16)
+              ],
             ),
           ),
           Container(
@@ -187,8 +225,8 @@ class _GlowingMic extends StatelessWidget {
             height: size * 0.82,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: _kLingoNavy,
-              border: Border.all(color: _kLingoCyan, width: 2),
+              color: kAgentNavy,
+              border: Border.all(color: kAgentCyan, width: 2),
             ),
           ),
           CustomPaint(size: Size(size, size), painter: const _TicksPainter()),
@@ -199,7 +237,11 @@ class _GlowingMic extends StatelessWidget {
           Positioned(
             bottom: size * 0.2,
             child: const SizedBox(
-                width: 22, height: 8, child: CustomPaint(painter: _WavePainter(barCount: 7, opacity: 1, cyan: true))),
+                width: 22,
+                height: 8,
+                child: CustomPaint(
+                    painter:
+                        _WavePainter(barCount: 7, opacity: 1, cyan: true))),
           ),
         ],
       ),
@@ -213,12 +255,17 @@ class _TicksPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = _kLingoCyan.withValues(alpha: 0.8)
+      ..color = kAgentCyan.withValues(alpha: 0.8)
       ..strokeWidth = 1.6
       ..strokeCap = StrokeCap.round;
     final c = size.center(Offset.zero);
     final r = size.width / 2;
-    for (final d in [const Offset(0, -1), const Offset(0, 1), const Offset(-1, 0), const Offset(1, 0)]) {
+    for (final d in [
+      const Offset(0, -1),
+      const Offset(0, 1),
+      const Offset(-1, 0),
+      const Offset(1, 0)
+    ]) {
       canvas.drawLine(c + d * (r - 1), c + d * (r - 6), paint);
     }
   }
@@ -230,7 +277,8 @@ class _TicksPainter extends CustomPainter {
 /// Barras de onda sonora simétricas (alturas fixas, sem animação — o
 /// print é estático; animar aqui custaria rebuild contínuo na lista).
 class _WavePainter extends CustomPainter {
-  const _WavePainter({required this.barCount, required this.opacity, this.cyan = false});
+  const _WavePainter(
+      {required this.barCount, required this.opacity, this.cyan = false});
 
   final int barCount;
   final double opacity;
@@ -238,19 +286,38 @@ class _WavePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    const shape = [0.25, 0.5, 0.8, 0.4, 1.0, 0.6, 0.9, 0.35, 0.7, 0.45, 0.85, 0.3, 0.6, 0.95, 0.4, 0.55, 0.2];
+    const shape = [
+      0.25,
+      0.5,
+      0.8,
+      0.4,
+      1.0,
+      0.6,
+      0.9,
+      0.35,
+      0.7,
+      0.45,
+      0.85,
+      0.3,
+      0.6,
+      0.95,
+      0.4,
+      0.55,
+      0.2
+    ];
     final gap = size.width / barCount;
     for (var i = 0; i < barCount; i++) {
       final h = size.height * shape[i % shape.length];
       final color = cyan
-          ? _kLingoCyan
-          : Color.lerp(_kLingoBlue, _kLingoIndigo, i / barCount)!;
+          ? kAgentCyan
+          : Color.lerp(kAgentBlue, kAgentIndigo, i / barCount)!;
       final paint = Paint()
         ..color = color.withValues(alpha: opacity)
         ..strokeWidth = gap * 0.45
         ..strokeCap = StrokeCap.round;
       final x = gap * i + gap / 2;
-      canvas.drawLine(Offset(x, (size.height - h) / 2), Offset(x, (size.height + h) / 2), paint);
+      canvas.drawLine(Offset(x, (size.height - h) / 2),
+          Offset(x, (size.height + h) / 2), paint);
     }
   }
 
@@ -261,7 +328,8 @@ class _WavePainter extends CustomPainter {
 enum _LingoState { ready, listening, processing, answering, error }
 
 class MentalLingoScreen extends StatefulWidget {
-  MentalLingoScreen({super.key, required this.client, MentalLingoService? service})
+  MentalLingoScreen(
+      {super.key, required this.client, MentalLingoService? service})
       : _service = service ?? MentalLingoService.instance;
 
   final ApiClient client;
@@ -304,7 +372,8 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
             _question == null) {
           setState(() {
             _state = _LingoState.error;
-            _errorMessage = 'Não ouvi nada. Toque no microfone e tente de novo.';
+            _errorMessage =
+                'Não ouvi nada. Toque no microfone e tente de novo.';
           });
         }
       },
@@ -429,20 +498,24 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
         height: 96,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          gradient: LinearGradient(colors: [AppColors.purple, AppColors.mystery]),
+          gradient:
+              LinearGradient(colors: [AppColors.purple, AppColors.mystery]),
           border: Border.all(
-              color: AppColors.purple.withValues(alpha: active ? 1 : 0.4), width: active ? 4 : 2),
+              color: AppColors.purple.withValues(alpha: active ? 1 : 0.4),
+              width: active ? 4 : 2),
         ),
         child: _state == _LingoState.processing
             ? const Padding(
                 padding: EdgeInsets.all(28),
-                child: CircularProgressIndicator(color: Colors.white, strokeWidth: 3))
+                child: CircularProgressIndicator(
+                    color: Colors.white, strokeWidth: 3))
             : Icon(_micIcon(), color: Colors.white, size: 40),
       ),
     );
   }
 
-  Widget _buildBubble({required String label, required String text, required Key key}) {
+  Widget _buildBubble(
+      {required String label, required String text, required Key key}) {
     return Container(
       key: key,
       width: double.infinity,
@@ -455,7 +528,9 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(label, style: AppTheme.technicalStyle(color: AppColors.purple, fontSize: 11)),
+          Text(label,
+              style: AppTheme.technicalStyle(
+                  color: AppColors.purple, fontSize: 11)),
           const SizedBox(height: 4),
           Text(text, style: Theme.of(context).textTheme.bodyMedium),
         ],
@@ -512,8 +587,14 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
           text: TextSpan(
             style: Theme.of(context).textTheme.titleLarge,
             children: [
-              TextSpan(text: 'MENTAL ', style: TextStyle(color: AppColors.bone, fontWeight: FontWeight.w800)),
-              TextSpan(text: 'LINGO', style: TextStyle(color: AppColors.purple, fontWeight: FontWeight.w800)),
+              TextSpan(
+                  text: 'MENTAL ',
+                  style: TextStyle(
+                      color: AppColors.bone, fontWeight: FontWeight.w800)),
+              TextSpan(
+                  text: 'LINGO',
+                  style: TextStyle(
+                      color: AppColors.purple, fontWeight: FontWeight.w800)),
             ],
           ),
         ),
@@ -527,7 +608,8 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
               _buildMicButton(),
               const SizedBox(height: 18),
               Text(_stateLabel(),
-                  textAlign: TextAlign.center, style: Theme.of(context).textTheme.titleMedium),
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.titleMedium),
               const SizedBox(height: 20),
               if (_question != null)
                 Padding(
@@ -539,7 +621,9 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                 ),
               if (_answer != null)
                 _buildBubble(
-                    label: 'MENTAL LINGO', text: _answer!, key: const Key('mental_lingo_answer_bubble')),
+                    label: 'MENTAL LINGO',
+                    text: _answer!,
+                    key: const Key('mental_lingo_answer_bubble')),
               if (_errorMessage != null)
                 Padding(
                   padding: const EdgeInsets.only(top: 12),

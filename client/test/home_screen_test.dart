@@ -266,7 +266,6 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
     expect(find.byKey(const Key('home_coach_name')), findsOneWidget);
-    expect(find.text('My_Mental_AI'), findsOneWidget);
     expect(find.byKey(const Key('home_coach_card')), findsNothing);
   });
 

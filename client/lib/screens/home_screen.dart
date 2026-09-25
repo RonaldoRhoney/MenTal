@@ -10,6 +10,7 @@ import '../services/app_version_service.dart';
 import '../services/feed_activity_service.dart';
 import '../services/movement_service.dart';
 import '../territories.dart';
+import '../theme/agent_neon.dart';
 import '../theme/app_theme.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
@@ -776,36 +777,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Container(
                                   padding: const EdgeInsets.fromLTRB(
                                       6, 6, 14, 6),
-                                  decoration: BoxDecoration(
-                                    color: AppColors.bg2.withValues(alpha: 0.7),
-                                    borderRadius: BorderRadius.circular(24),
-                                    border: Border.all(
-                                        color: AppColors.teal
-                                            .withValues(alpha: 0.4)),
-                                  ),
+                                  decoration: agentNeonDecoration(radius: 24),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Container(
                                         padding: const EdgeInsets.all(4),
                                         decoration: BoxDecoration(
-                                          color: AppColors.teal
-                                              .withValues(alpha: 0.15),
+                                          color: kAgentNavy,
                                           shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: kAgentCyan, width: 1.5),
                                         ),
-                                        child: Icon(
+                                        child: const Icon(
                                             Icons.auto_awesome_rounded,
                                             size: 12,
-                                            color: AppColors.teal),
+                                            color: Colors.white),
                                       ),
                                       const SizedBox(width: 8),
-                                      Text(kCoachName,
-                                          style: AppTheme.technicalStyle(
-                                              color: AppColors.teal,
-                                              fontSize: 12)),
+                                      const AgentNameText(fontSize: 12.5),
                                       const SizedBox(width: 2),
-                                      Icon(Icons.chevron_right_rounded,
-                                          size: 16, color: AppColors.teal),
+                                      const Icon(Icons.chevron_right_rounded,
+                                          size: 16, color: kAgentCyan),
                                     ],
                                   ),
                                 ),
@@ -1683,57 +1676,7 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
   Widget _buildWorldCoachCard(AppLocalizations l10n) {
     final card = _worldCoachCard;
     if (card == null) return const SizedBox.shrink();
-    final territoryId = card['territory_id'] as String?;
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: InkWell(
-        key: const Key('world_coach_card'),
-        borderRadius: BorderRadius.circular(14),
-        onTap: () async {
-          await openCoachAction(
-              context, widget.client, card['action'] as Map<String, dynamic>?);
-          _loadWorldCoach();
-        },
-        child: Container(
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: AppColors.bg2,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppColors.teal.withValues(alpha: 0.45)),
-          ),
-          child: Row(
-            children: [
-              Icon(coachIcon(card['id'] as String), color: AppColors.teal),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(kCoachName,
-                        style: AppTheme.technicalStyle(
-                            color: AppColors.teal, fontSize: 11)),
-                    const SizedBox(height: 2),
-                    Text(coachText(l10n, card['title'] as String, territoryId),
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge
-                            ?.copyWith(fontWeight: FontWeight.w600),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis),
-                    Text(coachText(l10n, card['body'] as String, territoryId),
-                        style: Theme.of(context).textTheme.bodySmall,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis),
-                  ],
-                ),
-              ),
-              if (card['action'] != null)
-                Icon(Icons.chevron_right_rounded, color: AppColors.muted),
-            ],
-          ),
-        ),
-      ),
-    );
+    return MyMentalAiWorldCard(card: card, client: widget.client, onReturned: _loadWorldCoach);
   }
 
   @override
