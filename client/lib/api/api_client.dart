@@ -370,6 +370,13 @@ class ApiClient {
     return _get(_uri('/coach'), headers: _headers);
   }
 
+  // My_Mental_AI dentro de um Mundo (23/09/2026): um cartão só, focado no
+  // desempenho do usuário naquele Mundo — nunca chamado para o Mundo dos
+  // Idiomas (agente próprio "Mental Lingo", ainda não implementado).
+  Future<Map<String, dynamic>> getWorldCoach(String worldId) async {
+    return _get(_uri('/coach/world/$worldId'), headers: _headers);
+  }
+
   // Fase 3 da REGRA_OFICIAL_GAMIFICACAO_MENTAL.md — teto diário de XP,
   // boost de XP e reparo de streak. Preço, janela e efeito são 100%
   // decididos pelo servidor; o client só exibe e pede a compra.

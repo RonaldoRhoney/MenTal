@@ -1264,3 +1264,12 @@ class CoachOut(BaseModel):
     summary: CoachSummaryOut
     daily_tip: CoachCardOut | None = None
     cards: list[CoachCardOut]
+
+
+class WorldCoachOut(BaseModel):
+    """My_Mental_AI dentro de um Mundo (23/09/2026) — um único cartão
+    focado no desempenho do usuário NAQUELE Mundo, não a lista de 9 da
+    CoachScreen geral."""
+
+    name: str
+    card: CoachCardOut | None = None

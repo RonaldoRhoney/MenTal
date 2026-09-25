@@ -37,6 +37,27 @@ def naive(dt: datetime | None) -> datetime | None:
     return dt.replace(tzinfo=None) if dt is not None and dt.tzinfo is not None else dt
 
 
+def format_brasilia_time(dt: datetime) -> str:
+    """Espelha client/lib/brasilia_time.dart::formatBrasiliaTime — mesmo
+    texto ("05:13 da manhã", "17:13 da tarde"), agora também no servidor
+    porque o corpo de notificação precisa vir pronto do backend
+    (CENTRAL_DE_NOTIFICACOES_HOME_V1.md: "título/corpo montados no
+    SERVIDOR, nunca formatado no client"). `dt` é UTC naive (mesmo
+    contrato de utcnow()); UTC-3 fixo, sem horário de verão desde 2019."""
+    br = naive(dt) - timedelta(hours=3)
+    hh = f"{br.hour:02d}"
+    mm = f"{br.minute:02d}"
+    if br.hour < 5:
+        period = "da madrugada"
+    elif br.hour < 12:
+        period = "da manhã"
+    elif br.hour < 18:
+        period = "da tarde"
+    else:
+        period = "da noite"
+    return f"{hh}:{mm} {period}"
+
+
 def week_anchor(d: date) -> date:
     """Segunda-feira da semana de `d` (âncora da folga semanal de streak)."""
     return d - timedelta(days=d.weekday())

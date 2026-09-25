@@ -234,16 +234,14 @@ void main() {
       );
 
   testWidgets(
-      'Fase 3: Home oferece reparo de sequência e mostra o boost ativo; sem nada, some',
+      'Fase 3: Home oferece reparo de sequência; sem nada, some',
       (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
     expect(find.byKey(const Key('home_repair_banner')), findsNothing);
-    expect(find.byKey(const Key('home_boost_chip')), findsNothing);
   });
 
-  testWidgets('Fase 3: Home oferece reparo de sequência e mostra o boost ativo',
-      (tester) async {
+  testWidgets('Fase 3: Home oferece reparo de sequência', (tester) async {
     SharedPreferences.setMockInitialValues({});
     final client = _FakeApiClient()
       ..repairOffer = {
@@ -251,13 +249,25 @@ void main() {
         'expires_on': '2026-09-23',
         'cost': 50
       }
+      // Pedido de Rhoney (23/09/2026): o chip de boost saiu da Home
+      // (poluía a tela) e virou notificação na Central — boostExpiresAt
+      // continua influenciando GET /economy/status, mas nada disso
+      // aparece mais na Home.
       ..boostExpiresAt = '2099-01-01T10:00:00';
     await pumpTall(tester, homeApp(client));
     expect(find.byKey(const Key('home_repair_banner')), findsOneWidget);
     expect(find.textContaining('sequência de 8 dias quebrou'), findsOneWidget);
-    expect(find.byKey(const Key('home_boost_chip')), findsOneWidget);
-    // 10:00 UTC = 07:00 em Brasília; o chip diz o período do dia.
-    expect(find.textContaining('07:00 da manhã'), findsOneWidget);
+    expect(find.byKey(const Key('home_boost_chip')), findsNothing);
+  });
+
+  testWidgets(
+      'My_Mental_AI: só o nome aparece no topo da Home, clicável, sem card de dica',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(tester, homeApp(_FakeApiClient()));
+    expect(find.byKey(const Key('home_coach_name')), findsOneWidget);
+    expect(find.text('My_Mental_AI'), findsOneWidget);
+    expect(find.byKey(const Key('home_coach_card')), findsNothing);
   });
 
   testWidgets(

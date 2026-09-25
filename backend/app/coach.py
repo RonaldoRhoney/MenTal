@@ -66,6 +66,91 @@ def _weekly_rank(db: Session, user_id: str, since) -> tuple[int | None, int, int
     return ahead + 1, int(mine), (int(next_xp) - int(mine) + 1 if next_xp is not None else None)
 
 
+def build_world_coach_tip(db: Session, user_id: str, world_id: str) -> dict | None:
+    """
+    My_Mental_AI DENTRO de cada Mundo (pedido de Rhoney, 23/09/2026): a
+    dica genérica saiu da Home (ficava "muito poluída") e virou UMA dica
+    focada no desempenho do usuário NAQUELE Mundo, mostrada dentro dele
+    (_WorldDetailScreen no client). Mundo dos Idiomas fica de fora —
+    ganhará agente próprio ("Mental Lingo", ainda não implementado); o
+    client não chama este endpoint pra ele, e não há nada especial a
+    fazer aqui além de retornar None se o Mundo não existir/não tiver
+    território (mesma decisão de nunca inferir automaticamente).
+
+    Retorna no máximo UM cartão (não uma lista) — diferente de
+    build_coach (Home antiga tinha um "painel"; aqui é só um card
+    pequeno dentro da tela do Mundo).
+    """
+    world = db.get(models.World, world_id)
+    if world is None:
+        return None
+    territory_ids = set(
+        db.execute(select(models.Territory.id).where(models.Territory.world_id == world_id)).scalars().all()
+    )
+    if not territory_ids:
+        return None
+
+    stats = {tid: s for tid, s in _territory_stats(db, user_id).items() if tid in territory_ids}
+    progress = {
+        p.territory_id: p
+        for p in db.execute(
+            select(models.UserTerritoryProgress)
+            .where(models.UserTerritoryProgress.user_id == user_id)
+            .where(models.UserTerritoryProgress.territory_id.in_(territory_ids))
+        ).scalars().all()
+    }
+    total_attempts = sum(s["total"] for s in stats.values())
+    threshold = config.CONQUEST_XP_THRESHOLD
+    conquered = {tid for tid, p in progress.items() if p.conquered_at is not None}
+
+    # 1) Território perto de ser conquistado
+    near = [(p.xp_in_territory, tid) for tid, p in progress.items() if p.conquered_at is None and p.xp_in_territory >= 0.6 * threshold]
+    if near:
+        xp, tid = max(near)
+        return _card("world_close_to_conquest", 90, "Falta pouco para conquistar",
+                     f"Você tem {xp} de {threshold} XP em {{territory}}. Faltam {threshold - xp} XP para conquistar.",
+                     {"type": "territory", "territory_id": tid}, tid)
+
+    # 2) Território mais fraco deste Mundo
+    rated = [(s["correct"] / s["total"], tid, s["total"]) for tid, s in stats.items() if s["total"] >= MIN_ATTEMPTS_FOR_ACCURACY]
+    if rated:
+        low = min(rated)
+        if low[0] < 0.6:
+            return _card("world_weakest", 85, "Vale reforçar",
+                         f"Sua taxa de acerto em {{territory}} é {int(low[0] * 100)}% ({low[2]} respostas). Releia as explicações após errar e use as dicas com moderação.",
+                         {"type": "territory", "territory_id": low[1]}, low[1])
+
+    # 3) Progresso do Mundo (faltam N territórios)
+    missing = len(territory_ids) - len(conquered)
+    if missing > 0 and conquered:
+        pick = max((tid for tid in territory_ids if tid not in conquered), key=lambda t: progress[t].xp_in_territory if t in progress else 0)
+        pct = int(len(conquered) / len(territory_ids) * 100)
+        return _card("world_progress", 80, f"{world.name}: {pct}% conquistado",
+                     f"Faltam {missing} território(s) para completar o {world.name} (bônus de {config.WORLD_COMPLETION_BONUS_XP} XP e distintivo). Um bom próximo passo: {{territory}}.",
+                     {"type": "territory", "territory_id": pick}, pick)
+
+    # 4) Território mais forte -> Relâmpago
+    if rated:
+        high = max(rated)
+        if high[0] >= 0.75:
+            return _card("world_strongest", 70, "Onde você vai melhor",
+                         f"Você acerta {int(high[0] * 100)}% em {{territory}} ({high[2]} respostas). Tente o Relâmpago aí: acertar rápido rende XP extra.",
+                         {"type": "territory", "territory_id": high[1], "relampago": True}, high[1])
+
+    # 5) Recém-chegado a este Mundo
+    if total_attempts < 10:
+        return _card("world_newcomer", 60, f"Explore o {world.name}",
+                     "Responda alguns desafios aqui: com 10 respostas em cada território eu consigo dizer onde você vai melhor e onde vale reforçar neste Mundo.", None)
+
+    # 6) Mundo já 100% conquistado
+    if missing == 0 and conquered:
+        return _card("world_completed", 50, f"{world.name} completo!",
+                     f"Você já conquistou todos os territórios do {world.name}. Pode refazê-los quando quiser para reforçar.", None)
+
+    return _card("world_generic", 40, f"Continue no {world.name}",
+                 f"Continue respondendo os territórios do {world.name} para eu conseguir dar dicas mais precisas sobre seu desempenho aqui.", None)
+
+
 def build_coach(db: Session, user_id: str) -> dict:
     profile = services.get_or_create_profile(db, user_id)
     streak = services.get_or_create_streak(db, user_id)

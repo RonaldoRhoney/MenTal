@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../api/api_client.dart';
-import '../brasilia_time.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/app_version_service.dart';
 import '../services/feed_activity_service.dart';
@@ -74,19 +73,6 @@ class _HomeScreenState extends State<HomeScreen> {
   // Fase 3: oferta de reparo de sequência + boost ativo. Reforço visual,
   // falha silenciosa como os demais indicadores secundários.
   Map<String, dynamic>? _economy;
-  // My_Mental_AI (21/09/2026): dica do dia. Reforço visual; falha silenciosa.
-  Map<String, dynamic>? _coachTip;
-
-  Future<void> _loadCoach() async {
-    try {
-      final coach = await widget.client.getCoach();
-      if (mounted)
-        setState(() => _coachTip = coach['daily_tip'] as Map<String, dynamic>?);
-    } on ApiException {
-      // o cartão simplesmente não aparece
-    }
-  }
-
   Future<void> _loadEconomy() async {
     try {
       final economy = await widget.client.getEconomyStatus();
@@ -293,7 +279,6 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadProfileHeader();
     _loadMentalCoinsBalance();
     _loadEconomy();
-    _loadCoach();
     _loadFeedBadge();
     _loadBattlesBadge();
     _loadNotificationBadge();
@@ -323,7 +308,6 @@ class _HomeScreenState extends State<HomeScreen> {
       _loadProfileHeader(),
       _loadMentalCoinsBalance(),
       _loadEconomy(),
-      _loadCoach(),
       _loadFeedBadge(),
       _loadBattlesBadge(),
       _loadNotificationBadge(),
@@ -453,127 +437,57 @@ class _HomeScreenState extends State<HomeScreen> {
   /// dedicada com os territórios daquele Mundo (_WorldDetailScreen),
   /// nunca expande in-place (decisão tomada com Rhoney: manter a Home
   /// enxuta, sem nada crescendo embaixo do carrossel).
-  /// My_Mental_AI: a recomendação mais valiosa agora (calculada pelo servidor).
-  Widget _buildCoachCard(AppLocalizations l10n) {
-    final tip = _coachTip;
-    if (tip == null) return const SizedBox.shrink();
-    final territoryId = tip['territory_id'] as String?;
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: InkWell(
-        key: const Key('home_coach_card'),
-        borderRadius: BorderRadius.circular(14),
-        onTap: () async {
-          await Navigator.of(context).push(MaterialPageRoute(
-              builder: (_) => CoachScreen(client: widget.client)));
-          _loadCoach();
-        },
-        child: Container(
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: AppColors.bg2,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppColors.teal.withValues(alpha: 0.45)),
-          ),
-          child: Row(
-            children: [
-              Icon(coachIcon(tip['id'] as String), color: AppColors.teal),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(l10n.homeCoachCardLabel,
-                        style: AppTheme.technicalStyle(
-                            color: AppColors.teal, fontSize: 11)),
-                    const SizedBox(height: 2),
-                    Text(coachText(l10n, tip['title'] as String, territoryId),
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge
-                            ?.copyWith(fontWeight: FontWeight.w600),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis),
-                    Text(coachText(l10n, tip['body'] as String, territoryId),
-                        style: Theme.of(context).textTheme.bodySmall,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis),
-                  ],
-                ),
-              ),
-              Icon(Icons.chevron_right_rounded, color: AppColors.muted),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  /// Fase 3: cartão de reparo de sequência (quando há) e chip de boost ativo.
+  /// Fase 3: cartão de reparo de sequência (quando há). O chip de boost
+  /// ativo saiu da Home (pedido de Rhoney, 23/09/2026: "remova o Boost da
+  /// tela... deve aparecer como notificação, no botão notificação" — a
+  /// Home estava poluída) e virou uma notificação na Central (sino),
+  /// disparada no servidor em POST /economy/xp-boost (ver routers/economy.py).
   Widget _buildEconomyBanner(AppLocalizations l10n) {
     final e = _economy;
     if (e == null) return const SizedBox.shrink();
     final repair = e['repair'] as Map<String, dynamic>?;
-    final boostActive = e['boost_active'] == true;
-    if (repair == null && !boostActive) return const SizedBox.shrink();
+    if (repair == null) return const SizedBox.shrink();
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          if (boostActive)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Chip(
-                  key: const Key('home_boost_chip'),
-                  avatar:
-                      Icon(Icons.bolt_rounded, color: AppColors.gold, size: 18),
-                  label: Text(l10n.homeBoostChip(e['boost_percent'] as int,
-                      formatBrasiliaTime(e['boost_expires_at'] as String))),
-                ),
-              ),
-            ),
-          if (repair != null)
-            InkWell(
-              key: const Key('home_repair_banner'),
-              borderRadius: BorderRadius.circular(14),
-              onTap: _openMentalCoins,
-              child: Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                    color: AppColors.bg2,
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(
-                        color: AppColors.gold.withValues(alpha: 0.5))),
-                child: Row(
-                  children: [
-                    Icon(Icons.local_fire_department_rounded,
-                        color: AppColors.gold),
-                    const SizedBox(width: 10),
-                    Expanded(
-                      child: Text(
-                        l10n.homeStreakRepairBanner(
-                          repair['streak_to_restore'] as int,
-                          repair['cost'] as int,
-                          () {
-                            final p =
-                                (repair['expires_on'] as String).split('-');
-                            return '${p[2]}/${p[1]}';
-                          }(),
-                        ),
-                        style: Theme.of(context).textTheme.bodyMedium,
+          InkWell(
+            key: const Key('home_repair_banner'),
+            borderRadius: BorderRadius.circular(14),
+            onTap: _openMentalCoins,
+            child: Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                  color: AppColors.bg2,
+                  borderRadius: BorderRadius.circular(14),
+                  border:
+                      Border.all(color: AppColors.gold.withValues(alpha: 0.5))),
+              child: Row(
+                children: [
+                  Icon(Icons.local_fire_department_rounded,
+                      color: AppColors.gold),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      l10n.homeStreakRepairBanner(
+                        repair['streak_to_restore'] as int,
+                        repair['cost'] as int,
+                        () {
+                          final p = (repair['expires_on'] as String).split('-');
+                          return '${p[2]}/${p[1]}';
+                        }(),
                       ),
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
-                    Text(l10n.homeStreakRepairBannerAction,
-                        style: TextStyle(
-                            color: AppColors.gold,
-                            fontWeight: FontWeight.w700)),
-                  ],
-                ),
+                  ),
+                  Text(l10n.homeStreakRepairBannerAction,
+                      style: TextStyle(
+                          color: AppColors.gold, fontWeight: FontWeight.w700)),
+                ],
               ),
             ),
+          ),
         ],
       ),
     );
@@ -591,6 +505,7 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: Icons.travel_explore_rounded,
               completed: false,
               territoryIds: kTerritoryIds,
+              worldId: null as String?,
             ),
           ]
         : [
@@ -600,6 +515,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: _worldIcon(world['world_id'] as String),
                 completed: world['completed'] as bool,
                 territoryIds: (world['territory_ids'] as List).cast<String>(),
+                worldId: world['world_id'] as String?,
               ),
           ];
 
@@ -620,7 +536,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 MaterialPageRoute(
                   builder: (_) => _WorldDetailScreen(
                     title: item.title,
+                    worldId: item.worldId,
                     completed: item.completed,
+                    client: widget.client,
                     refreshProgress: _loadProgress,
                     buildChildren: (onReturned) => _territoryGroups(
                       l10n,
@@ -843,6 +761,39 @@ class _HomeScreenState extends State<HomeScreen> {
                                 .bodySmall
                                 ?.copyWith(color: AppColors.muted),
                           ),
+                          const SizedBox(height: 6),
+                          // Pedido de Rhoney (23/09/2026): a dica do
+                          // My_Mental_AI saiu da Home como card (poluía a
+                          // tela) — só o NOME fica no topo, clicável, abrindo
+                          // a CoachScreen (dicas gerais). Dica focada por
+                          // Mundo mora dentro de cada Mundo (_WorldDetailScreen).
+                          Align(
+                            alignment: Alignment.center,
+                            child: InkWell(
+                              key: const Key('home_coach_name'),
+                              borderRadius: BorderRadius.circular(20),
+                              onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (_) =>
+                                          CoachScreen(client: widget.client))),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10, vertical: 4),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(Icons.tips_and_updates_rounded,
+                                        size: 14, color: AppColors.teal),
+                                    const SizedBox(width: 4),
+                                    Text(kCoachName,
+                                        style: AppTheme.technicalStyle(
+                                            color: AppColors.teal,
+                                            fontSize: 12)),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
                           const SizedBox(height: 16),
                           // §3.3 — grid de 5 cards (Progresso/Ranking/Amigos/
                           // Movimento/Feed), todos com o mesmo tamanho.
@@ -989,7 +940,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               : Column(
                                   children: [
                                     _buildEconomyBanner(l10n),
-                                    _buildCoachCard(l10n),
                                     _buildWorldCarousel(l10n),
                                   ],
                                 ),
@@ -1466,13 +1416,22 @@ class _WorldCarouselCard extends StatelessWidget {
 class _WorldDetailScreen extends StatefulWidget {
   const _WorldDetailScreen({
     required this.title,
+    required this.worldId,
     required this.completed,
+    required this.client,
     required this.refreshProgress,
     required this.buildChildren,
   });
 
   final String title;
+  // Pedido de Rhoney (23/09/2026): a dica do My_Mental_AI foca no
+  // desempenho do usuário NESTE Mundo específico. Mundo dos Idiomas
+  // fica de fora (agente próprio "Mental Lingo", ainda não implementado)
+  // — o card simplesmente não é buscado/mostrado para ele. null (Mundo
+  // ainda sem world_id, fallback "todos os territórios") também some.
+  final String? worldId;
   final bool completed;
+  final ApiClient client;
   final Future<void> Function() refreshProgress;
   final List<Widget> Function(VoidCallback onReturned) buildChildren;
 
@@ -1481,13 +1440,91 @@ class _WorldDetailScreen extends StatefulWidget {
 }
 
 class _WorldDetailScreenState extends State<_WorldDetailScreen> {
+  Map<String, dynamic>? _worldCoachCard;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadWorldCoach();
+  }
+
+  Future<void> _loadWorldCoach() async {
+    final worldId = widget.worldId;
+    if (worldId == null || worldId == 'idiomas') return;
+    try {
+      final data = await widget.client.getWorldCoach(worldId);
+      if (mounted)
+        setState(() => _worldCoachCard = data['card'] as Map<String, dynamic>?);
+    } on ApiException {
+      // o cartão simplesmente não aparece
+    }
+  }
+
   Future<void> _handleReturned() async {
     await widget.refreshProgress();
     if (mounted) setState(() {});
+    _loadWorldCoach();
+  }
+
+  Widget _buildWorldCoachCard(AppLocalizations l10n) {
+    final card = _worldCoachCard;
+    if (card == null) return const SizedBox.shrink();
+    final territoryId = card['territory_id'] as String?;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: InkWell(
+        key: const Key('world_coach_card'),
+        borderRadius: BorderRadius.circular(14),
+        onTap: () async {
+          await openCoachAction(
+              context, widget.client, card['action'] as Map<String, dynamic>?);
+          _loadWorldCoach();
+        },
+        child: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: AppColors.bg2,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppColors.teal.withValues(alpha: 0.45)),
+          ),
+          child: Row(
+            children: [
+              Icon(coachIcon(card['id'] as String), color: AppColors.teal),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(kCoachName,
+                        style: AppTheme.technicalStyle(
+                            color: AppColors.teal, fontSize: 11)),
+                    const SizedBox(height: 2),
+                    Text(coachText(l10n, card['title'] as String, territoryId),
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge
+                            ?.copyWith(fontWeight: FontWeight.w600),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis),
+                    Text(coachText(l10n, card['body'] as String, territoryId),
+                        style: Theme.of(context).textTheme.bodySmall,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis),
+                  ],
+                ),
+              ),
+              if (card['action'] != null)
+                Icon(Icons.chevron_right_rounded, color: AppColors.muted),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -1505,7 +1542,10 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(16),
-          children: widget.buildChildren(_handleReturned),
+          children: [
+            _buildWorldCoachCard(l10n),
+            ...widget.buildChildren(_handleReturned),
+          ],
         ),
       ),
     );

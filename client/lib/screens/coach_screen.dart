@@ -27,13 +27,21 @@ IconData coachIcon(String cardId) {
     case 'daily_cap':
       return Icons.speed_rounded;
     case 'close_to_conquest':
+    case 'world_close_to_conquest':
       return Icons.flag_rounded;
     case 'world_closest':
+    case 'world_progress':
+    case 'world_completed':
+    case 'world_generic':
       return Icons.public_rounded;
     case 'weakest':
+    case 'world_weakest':
       return Icons.trending_up_rounded;
     case 'strongest':
+    case 'world_strongest':
       return Icons.star_rounded;
+    case 'world_newcomer':
+      return Icons.waving_hand_rounded;
     case 'ranking':
       return Icons.leaderboard_rounded;
     case 'boost':

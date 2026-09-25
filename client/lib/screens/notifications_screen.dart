@@ -47,6 +47,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     'territory_dethroned': (icon: Icons.flag_rounded, color: _NotifColor.error),
     'friend_request': (icon: Icons.person_add_rounded, color: _NotifColor.teal),
     'friend_accepted': (icon: Icons.people_alt_rounded, color: _NotifColor.teal),
+    'boost_active': (icon: Icons.bolt_rounded, color: _NotifColor.gold),
     'system': (icon: Icons.notifications_rounded, color: _NotifColor.muted),
   };
 
