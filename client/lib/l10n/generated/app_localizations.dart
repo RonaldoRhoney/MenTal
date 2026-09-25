@@ -4054,6 +4054,18 @@ abstract class AppLocalizations {
   /// **'Acentuação Gráfica'**
   String get territoryLinguagemAcentuacaoGrafica;
 
+  /// Territory name — Linguagem grammar SubMundo: Numerais
+  ///
+  /// In pt, this message translates to:
+  /// **'Numerais'**
+  String get territoryLinguagemNumerais;
+
+  /// Territory name — Linguagem grammar SubMundo: Interjeições
+  ///
+  /// In pt, this message translates to:
+  /// **'Interjeições'**
+  String get territoryLinguagemInterjeicoes;
+
   /// My_Mental_AI subtitle
   ///
   /// In pt, this message translates to:

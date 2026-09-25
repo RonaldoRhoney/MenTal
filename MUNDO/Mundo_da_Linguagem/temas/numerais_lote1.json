@@ -1,0 +1,808 @@
+{
+  "tema": "Numerais",
+  "slug": "numerais",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney. Evitei formas com variante aceita (ex.: 'dois mil vinte e cinco' x 'dois mil e vinte e cinco', 'lustro' x 'quinquênio').",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "O numeral que indica quantidade exata (um, dois, três...) chama-se:",
+      "options": [
+        "cardinal",
+        "ordinal",
+        "multiplicativo",
+        "fracionário"
+      ],
+      "correct_answer": "cardinal",
+      "explanation": "Numeral cardinal indica quantidade.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O numeral que indica ordem ou posição (primeiro, segundo...) chama-se:",
+      "options": [
+        "cardinal",
+        "ordinal",
+        "multiplicativo",
+        "fracionário"
+      ],
+      "correct_answer": "ordinal",
+      "explanation": "Numeral ordinal indica ordem numa série.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O numeral que indica multiplicação (dobro, triplo...) chama-se:",
+      "options": [
+        "cardinal",
+        "ordinal",
+        "multiplicativo",
+        "fracionário"
+      ],
+      "correct_answer": "multiplicativo",
+      "explanation": "Numeral multiplicativo indica quantas vezes algo aumenta.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O numeral que indica divisão em partes (metade, terço...) chama-se:",
+      "options": [
+        "cardinal",
+        "ordinal",
+        "multiplicativo",
+        "fracionário"
+      ],
+      "correct_answer": "fracionário",
+      "explanation": "Numeral fracionário indica parte de um todo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 20º é:",
+      "options": [
+        "vigésimo",
+        "vinte",
+        "vigesimal",
+        "viguésimo"
+      ],
+      "correct_answer": "vigésimo",
+      "explanation": "20º = vigésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 30º é:",
+      "options": [
+        "trinta",
+        "trigésimo",
+        "tricésimo",
+        "trigesimal"
+      ],
+      "correct_answer": "trigésimo",
+      "explanation": "30º = trigésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 40º é:",
+      "options": [
+        "quarenta",
+        "quadrigésimo",
+        "quadragésimo",
+        "quarentésimo"
+      ],
+      "correct_answer": "quadragésimo",
+      "explanation": "40º = quadragésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 50º é:",
+      "options": [
+        "cinquentésimo",
+        "quinquagenário",
+        "quinquagesimal",
+        "quinquagésimo"
+      ],
+      "correct_answer": "quinquagésimo",
+      "explanation": "50º = quinquagésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 60º é:",
+      "options": [
+        "sexagésimo",
+        "sessentésimo",
+        "sextagésimo",
+        "sexagenário"
+      ],
+      "correct_answer": "sexagésimo",
+      "explanation": "60º = sexagésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 70º é:",
+      "options": [
+        "setentésimo",
+        "septuagésimo",
+        "setuagésimo",
+        "septagésimo"
+      ],
+      "correct_answer": "septuagésimo",
+      "explanation": "70º = septuagésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 80º é:",
+      "options": [
+        "oitentésimo",
+        "octagésimo",
+        "octogésimo",
+        "octuagésimo"
+      ],
+      "correct_answer": "octogésimo",
+      "explanation": "80º = octogésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 90º é:",
+      "options": [
+        "noventésimo",
+        "nonuagésimo",
+        "nonagenário",
+        "nonagésimo"
+      ],
+      "correct_answer": "nonagésimo",
+      "explanation": "90º = nonagésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O ordinal correspondente a 100º é:",
+      "options": [
+        "centésimo",
+        "cêntuplo",
+        "cententésimo",
+        "centenário"
+      ],
+      "correct_answer": "centésimo",
+      "explanation": "100º = centésimo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O multiplicativo que equivale a 'três vezes' é:",
+      "options": [
+        "terço",
+        "triplo",
+        "tríduo",
+        "trinta"
+      ],
+      "correct_answer": "triplo",
+      "explanation": "Três vezes = triplo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O multiplicativo que equivale a 'quatro vezes' é:",
+      "options": [
+        "quarto",
+        "quaternário",
+        "quádruplo",
+        "quatrilho"
+      ],
+      "correct_answer": "quádruplo",
+      "explanation": "Quatro vezes = quádruplo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O multiplicativo que equivale a 'cinco vezes' é:",
+      "options": [
+        "quinto",
+        "quinquênio",
+        "quintal",
+        "quíntuplo"
+      ],
+      "correct_answer": "quíntuplo",
+      "explanation": "Cinco vezes = quíntuplo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O multiplicativo que equivale a 'dez vezes' é:",
+      "options": [
+        "décuplo",
+        "décimo",
+        "dezena",
+        "decálogo"
+      ],
+      "correct_answer": "décuplo",
+      "explanation": "Dez vezes = décuplo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O multiplicativo que equivale a 'cem vezes' é:",
+      "options": [
+        "centésimo",
+        "cêntuplo",
+        "centena",
+        "centenário"
+      ],
+      "correct_answer": "cêntuplo",
+      "explanation": "Cem vezes = cêntuplo.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O fracionário que corresponde a 1/3 é:",
+      "options": [
+        "um terceiro",
+        "um três",
+        "um terço",
+        "um trio"
+      ],
+      "correct_answer": "um terço",
+      "explanation": "1/3 = um terço (forma própria).",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O fracionário que corresponde a 1/4 é:",
+      "options": [
+        "um quatro",
+        "um quartel",
+        "um quaternário",
+        "um quarto"
+      ],
+      "correct_answer": "um quarto",
+      "explanation": "1/4 = um quarto.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O fracionário que corresponde a 1/5 é:",
+      "options": [
+        "um quinto",
+        "um cinco",
+        "um quintal",
+        "um quinteto"
+      ],
+      "correct_answer": "um quinto",
+      "explanation": "1/5 = um quinto.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O fracionário que corresponde a 1/2 é:",
+      "options": [
+        "dobro",
+        "meio",
+        "terço",
+        "quarto"
+      ],
+      "correct_answer": "meio",
+      "explanation": "1/2 = meio (ou metade).",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O coletivo numérico que designa doze unidades é:",
+      "options": [
+        "dezena",
+        "centena",
+        "dúzia",
+        "quarentena"
+      ],
+      "correct_answer": "dúzia",
+      "explanation": "Dúzia = 12.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O coletivo numérico que designa dez anos é:",
+      "options": [
+        "século",
+        "milênio",
+        "biênio",
+        "década"
+      ],
+      "correct_answer": "década",
+      "explanation": "Década = 10 anos.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O coletivo numérico que designa cem anos é:",
+      "options": [
+        "século",
+        "década",
+        "milênio",
+        "lustro"
+      ],
+      "correct_answer": "século",
+      "explanation": "Século = 100 anos.",
+      "hints": [
+        "Pense no que o numeral indica: quantidade, ordem, multiplicação ou fração.",
+        "Compare a forma da palavra com o que ela expressa: quantidade, ordem, vezes ou parte."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Escreva por extenso: 350.",
+      "options": [
+        "trezentos cinquenta",
+        "trezentos e cinquenta",
+        "tresentos e cinquenta",
+        "trezentos e cincoenta"
+      ],
+      "correct_answer": "trezentos e cinquenta",
+      "explanation": "Usa-se 'e' entre centenas e dezenas: trezentos e cinquenta.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Escreva por extenso: 1.250.",
+      "options": [
+        "mil e duzentos e cinquenta",
+        "um mil duzentos e cinquenta",
+        "mil duzentos e cinquenta",
+        "mil duzentos cinquenta"
+      ],
+      "correct_answer": "mil duzentos e cinquenta",
+      "explanation": "Depois de 'mil' e antes de centena não redonda não entra 'e'; entra entre centena e dezena.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Escreva por extenso: 2.025.",
+      "options": [
+        "dois mil, vinte cinco",
+        "dois mil e vinte cinco",
+        "dois e mil vinte e cinco",
+        "dois mil e vinte e cinco"
+      ],
+      "correct_answer": "dois mil e vinte e cinco",
+      "explanation": "Entra 'e' depois de 'mil' antes de dezena e entre dezena e unidade.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Escreva por extenso: 101.",
+      "options": [
+        "cento e um",
+        "cem e um",
+        "cento um",
+        "cento e uma"
+      ],
+      "correct_answer": "cento e um",
+      "explanation": "100 é 'cem' sozinho; de 101 a 199 usa-se 'cento e'.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Escreva por extenso: 1.001.",
+      "options": [
+        "mil um",
+        "mil e um",
+        "um mil e um",
+        "mil e uma"
+      ],
+      "correct_answer": "mil e um",
+      "explanation": "Antes de unidade isolada depois de mil entra 'e': mil e um.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Escreva por extenso: 200.",
+      "options": [
+        "duzentes",
+        "dozentos",
+        "duzentos",
+        "duzento"
+      ],
+      "correct_answer": "duzentos",
+      "explanation": "200 = duzentos.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Escreva por extenso: 500.",
+      "options": [
+        "quinhentes",
+        "cinquentos",
+        "quinhento",
+        "quinhentos"
+      ],
+      "correct_answer": "quinhentos",
+      "explanation": "500 = quinhentos.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O ordinal correspondente a 13º é:",
+      "options": [
+        "décimo terceiro",
+        "décimo e terceiro",
+        "treze",
+        "terceiro décimo"
+      ],
+      "correct_answer": "décimo terceiro",
+      "explanation": "13º = décimo terceiro.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O ordinal correspondente a 21º é:",
+      "options": [
+        "vinte e primeiro",
+        "vigésimo primeiro",
+        "vigésimo e primeiro",
+        "primeiro vigésimo"
+      ],
+      "correct_answer": "vigésimo primeiro",
+      "explanation": "21º = vigésimo primeiro.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A fração 1/8 lê-se:",
+      "options": [
+        "um oito avos",
+        "um oitavos",
+        "um oitavo",
+        "oitavo um"
+      ],
+      "correct_answer": "um oitavo",
+      "explanation": "Até 10 usam-se as formas próprias: oitavo.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A fração 1/11 lê-se:",
+      "options": [
+        "um décimo primeiro",
+        "um onzeno",
+        "um onze",
+        "um onze avos"
+      ],
+      "correct_answer": "um onze avos",
+      "explanation": "A partir de 11, o denominador ganha 'avos'.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A fração 3/4 lê-se:",
+      "options": [
+        "três quartos",
+        "três quarto",
+        "tresquartos",
+        "três quatros"
+      ],
+      "correct_answer": "três quartos",
+      "explanation": "No plural: três quartos.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O coletivo numérico de dois anos é:",
+      "options": [
+        "triênio",
+        "biênio",
+        "lustro",
+        "quinquênio"
+      ],
+      "correct_answer": "biênio",
+      "explanation": "Biênio = período de dois anos.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O coletivo numérico de três anos é:",
+      "options": [
+        "biênio",
+        "decênio",
+        "triênio",
+        "século"
+      ],
+      "correct_answer": "triênio",
+      "explanation": "Triênio = período de três anos.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O numeral 'ambos' significa:",
+      "options": [
+        "todos",
+        "nenhum",
+        "cada um",
+        "os dois"
+      ],
+      "correct_answer": "os dois",
+      "explanation": "'Ambos' refere-se a dois seres já mencionados.",
+      "hints": [
+        "Escreva o número aos poucos, do maior valor ao menor, e veja onde entra o 'e'.",
+        "Compare a forma escrita com o padrão do tipo de numeral pedido."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Escreva por extenso: 1.100.",
+      "options": [
+        "mil e cem",
+        "mil cem",
+        "um mil e cem",
+        "mil e cento"
+      ],
+      "correct_answer": "mil e cem",
+      "explanation": "Antes de centena redonda depois de mil entra 'e': mil e cem.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Escreva por extenso: 1.101.",
+      "options": [
+        "mil e cento e um",
+        "mil cento e um",
+        "mil e cento um",
+        "mil cento um"
+      ],
+      "correct_answer": "mil cento e um",
+      "explanation": "Antes de centena não redonda depois de mil não entra 'e'; entra entre centena e unidade.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Ambos os irmãos saíram', a palavra 'ambos' é:",
+      "options": [
+        "adjetivo",
+        "advérbio",
+        "numeral",
+        "conjunção"
+      ],
+      "correct_answer": "numeral",
+      "explanation": "'Ambos' indica dois e funciona como numeral.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Nasceu no século XXI', o algarismo romano lê-se:",
+      "options": [
+        "vigésimo primeiro",
+        "vinte um",
+        "vinte e primeiro",
+        "vinte e um"
+      ],
+      "correct_answer": "vinte e um",
+      "explanation": "A partir do século XI, usa-se o cardinal na leitura.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Luís XIV', o nome lê-se:",
+      "options": [
+        "Luís catorze",
+        "Luís décimo quarto",
+        "Luís quatorzeavo",
+        "Luís quarto décimo"
+      ],
+      "correct_answer": "Luís catorze",
+      "explanation": "Depois de X, os algarismos romanos de reis leem-se como cardinais.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Pedro II', o nome lê-se:",
+      "options": [
+        "Pedro dois",
+        "Pedro segundo",
+        "Pedro duplo",
+        "Pedro dobro"
+      ],
+      "correct_answer": "Pedro segundo",
+      "explanation": "Até X, os algarismos romanos de reis leem-se como ordinais.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase correta quanto à concordância de numerais.",
+      "options": [
+        "Trezentos casas foram vendidas.",
+        "Trezentas casa foram vendidas.",
+        "Trezentas casas foram vendidas.",
+        "Trezentas casas foi vendida."
+      ],
+      "correct_answer": "Trezentas casas foram vendidas.",
+      "explanation": "Os cardinais de 200 a 900 concordam em gênero com o substantivo.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'Dois milhões de pessoas', a palavra 'milhões' é:",
+      "options": [
+        "adjetivo",
+        "advérbio",
+        "pronome",
+        "substantivo"
+      ],
+      "correct_answer": "substantivo",
+      "explanation": "'Milhão' é substantivo, por isso vai ao plural.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "A fração 2/3 lê-se:",
+      "options": [
+        "dois terços",
+        "dois terceiros",
+        "dois três avos",
+        "dois terça"
+      ],
+      "correct_answer": "dois terços",
+      "explanation": "3 tem forma própria: terço; no plural, terços.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "O ordinal correspondente a 500º é:",
+      "options": [
+        "quinhentésimo",
+        "quingentésimo",
+        "quinquagésimo",
+        "quingésimo"
+      ],
+      "correct_answer": "quingentésimo",
+      "explanation": "500º = quingentésimo.",
+      "hints": [
+        "Pergunte primeiro qual regra está em jogo: 'e' entre grupos, leitura de algarismos romanos ou concordância.",
+        "Descarte as alternativas que confundem os tipos de palavra."
+      ]
+    }
+  ]
+}

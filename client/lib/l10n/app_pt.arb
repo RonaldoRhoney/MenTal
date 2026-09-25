@@ -3213,6 +3213,14 @@
   "@territoryLinguagemAcentuacaoGrafica": {
     "description": "Territory name — Linguagem grammar SubMundo: Acentuação Gráfica"
   },
+  "territoryLinguagemNumerais": "Numerais",
+  "@territoryLinguagemNumerais": {
+    "description": "Territory name — Linguagem grammar SubMundo: Numerais"
+  },
+  "territoryLinguagemInterjeicoes": "Interjeições",
+  "@territoryLinguagemInterjeicoes": {
+    "description": "Territory name — Linguagem grammar SubMundo: Interjeições"
+  },
   "coachSubtitle": "Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.",
   "@coachSubtitle": {
     "description": "My_Mental_AI subtitle"

@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A classe de palavras que exprime emoção súbita, como 'Ai!' e 'Uau!', é:",
+    "options": [
+      "interjeição",
+      "conjunção",
+      "advérbio",
+      "preposição"
+    ],
+    "correct_answer": "interjeição",
+    "explanation": "Interjeição traduz emoções e atitudes de forma súbita.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'ai!' expressa:",
+    "options": [
+      "alegria",
+      "dor",
+      "aplauso",
+      "desejo"
+    ],
+    "correct_answer": "dor",
+    "explanation": "'Ai!' expressa dor.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'oba!' expressa:",
+    "options": [
+      "dor",
+      "medo",
+      "alegria",
+      "desculpa"
+    ],
+    "correct_answer": "alegria",
+    "explanation": "'Oba!' expressa alegria.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'ufa!' expressa:",
+    "options": [
+      "dor",
+      "aplauso",
+      "desejo",
+      "alívio"
+    ],
+    "correct_answer": "alívio",
+    "explanation": "'Ufa!' expressa alívio.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'uau!' expressa:",
+    "options": [
+      "admiração",
+      "dor",
+      "despedida",
+      "apelo"
+    ],
+    "correct_answer": "admiração",
+    "explanation": "'Uau!' expressa admiração.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'tomara!' expressa:",
+    "options": [
+      "dor",
+      "desejo",
+      "alívio",
+      "aplauso"
+    ],
+    "correct_answer": "desejo",
+    "explanation": "'Tomara!' expressa desejo.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'bravo!' expressa:",
+    "options": [
+      "dor",
+      "desculpa",
+      "aplauso",
+      "medo"
+    ],
+    "correct_answer": "aplauso",
+    "explanation": "'Bravo!' expressa aplauso.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'xô!' expressa:",
+    "options": [
+      "aplauso",
+      "alegria",
+      "desejo",
+      "afugentamento"
+    ],
+    "correct_answer": "afugentamento",
+    "explanation": "'Xô!' serve para afugentar (espantar).",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'cuidado!' expressa:",
+    "options": [
+      "advertência",
+      "alegria",
+      "aplauso",
+      "desculpa"
+    ],
+    "correct_answer": "advertência",
+    "explanation": "'Cuidado!' expressa advertência.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'coragem!' expressa:",
+    "options": [
+      "dor",
+      "animação",
+      "desculpa",
+      "despedida"
+    ],
+    "correct_answer": "animação",
+    "explanation": "'Coragem!' serve para animar, encorajar.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'olá!' expressa:",
+    "options": [
+      "dor",
+      "desejo",
+      "saudação",
+      "aplauso"
+    ],
+    "correct_answer": "saudação",
+    "explanation": "'Olá!' é uma saudação.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'socorro!' expressa:",
+    "options": [
+      "alegria",
+      "aplauso",
+      "desejo",
+      "apelo"
+    ],
+    "correct_answer": "apelo",
+    "explanation": "'Socorro!' é um apelo, um pedido de ajuda.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'credo!' expressa:",
+    "options": [
+      "repulsa",
+      "alegria",
+      "aplauso",
+      "desejo"
+    ],
+    "correct_answer": "repulsa",
+    "explanation": "'Credo!' expressa repulsa, aversão.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'arre!' expressa:",
+    "options": [
+      "alegria",
+      "impaciência",
+      "aplauso",
+      "desejo"
+    ],
+    "correct_answer": "impaciência",
+    "explanation": "'Arre!' expressa impaciência ou irritação.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'alô!' expressa:",
+    "options": [
+      "dor",
+      "desculpa",
+      "chamamento",
+      "despedida"
+    ],
+    "correct_answer": "chamamento",
+    "explanation": "'Alô!' serve para chamar ou atender ao telefone.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'adeus!' expressa:",
+    "options": [
+      "dor",
+      "alegria",
+      "aplauso",
+      "despedida"
+    ],
+    "correct_answer": "despedida",
+    "explanation": "'Adeus!' é uma despedida.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'perdão!' expressa:",
+    "options": [
+      "desculpa",
+      "dor",
+      "alegria",
+      "desejo"
+    ],
+    "correct_answer": "desculpa",
+    "explanation": "'Perdão!' expressa desculpa.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'silêncio!' (mandando calar) expressa:",
+    "options": [
+      "dor",
+      "pedido de silêncio",
+      "alegria",
+      "aplauso"
+    ],
+    "correct_answer": "pedido de silêncio",
+    "explanation": "'Silêncio!' é substantivo usado como interjeição para pedir silêncio.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "As interjeições são palavras:",
+    "options": [
+      "variáveis em gênero",
+      "variáveis em número",
+      "invariáveis",
+      "variáveis em grau"
+    ],
+    "correct_answer": "invariáveis",
+    "explanation": "Interjeição não flexiona.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "Um grupo de palavras que funciona como interjeição chama-se:",
+    "options": [
+      "locução adverbial",
+      "locução conjuntiva",
+      "locução prepositiva",
+      "locução interjetiva"
+    ],
+    "correct_answer": "locução interjetiva",
+    "explanation": "Locução interjetiva é o grupo de palavras com valor de interjeição.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "Assinale a locução interjetiva.",
+    "options": [
+      "Meu Deus!",
+      "Muito bem feito",
+      "Quase sempre",
+      "Por isso mesmo"
+    ],
+    "correct_answer": "Meu Deus!",
+    "explanation": "'Meu Deus!' expressa uma emoção súbita: locução interjetiva.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "Depois da interjeição, geralmente se usa:",
+    "options": [
+      "ponto e vírgula",
+      "ponto de exclamação",
+      "dois-pontos",
+      "ponto de interrogação"
+    ],
+    "correct_answer": "ponto de exclamação",
+    "explanation": "A interjeição costuma vir seguida de exclamação ou vírgula.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'hum!' costuma expressar:",
+    "options": [
+      "aplauso",
+      "despedida",
+      "dúvida",
+      "alegria"
+    ],
+    "correct_answer": "dúvida",
+    "explanation": "'Hum!' costuma expressar dúvida ou desconfiança.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "A interjeição 'nossa!' expressa:",
+    "options": [
+      "dor",
+      "despedida",
+      "desculpa",
+      "surpresa"
+    ],
+    "correct_answer": "surpresa",
+    "explanation": "'Nossa!' expressa surpresa.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ai, que dor!', a palavra 'ai' é:",
+    "options": [
+      "interjeição",
+      "substantivo",
+      "advérbio",
+      "conjunção"
+    ],
+    "correct_answer": "interjeição",
+    "explanation": "'Ai' traduz a dor de forma súbita: interjeição.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na emoção ou na atitude que quem fala quer mostrar com a palavra.",
+      "Costuma vir marcada por uma pontuação própria de emoção."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "A interjeição 'oxalá' expressa:",
+    "options": [
+      "dor",
+      "desejo",
+      "alívio",
+      "aplauso"
+    ],
+    "correct_answer": "desejo",
+    "explanation": "'Oxalá' expressa desejo (pede verbo no subjuntivo).",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Em 'Bravo! Muito bem!', a interjeição indica:",
+    "options": [
+      "dor",
+      "medo",
+      "aplauso",
+      "desculpa"
+    ],
+    "correct_answer": "aplauso",
+    "explanation": "'Bravo!' aplaude.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "'Ora bolas!' é:",
+    "options": [
+      "oração subordinada",
+      "locução adverbial",
+      "locução conjuntiva",
+      "locução interjetiva"
+    ],
+    "correct_answer": "locução interjetiva",
+    "explanation": "Grupo de palavras com valor de interjeição.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Em 'Silêncio!', a palavra é:",
+    "options": [
+      "substantivo usado como interjeição",
+      "interjeição própria",
+      "advérbio",
+      "conjunção"
+    ],
+    "correct_answer": "substantivo usado como interjeição",
+    "explanation": "Palavras de outras classes podem funcionar como interjeição no contexto.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase pontuada corretamente (interjeição).",
+    "options": [
+      "Ah como, sinto saudade!",
+      "Ah, como sinto saudade!",
+      "Ah como sinto, saudade!",
+      "Ah: como sinto saudade,"
+    ],
+    "correct_answer": "Ah, como sinto saudade!",
+    "explanation": "A interjeição vem seguida de vírgula ou exclamação e a frase fecha com exclamação.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Assinale a alternativa em que TODAS as palavras são interjeições.",
+    "options": [
+      "ai, mas, ufa, xô",
+      "oba, porém, ufa, xô",
+      "ai, oba, ufa, xô",
+      "ai, oba, e, xô"
+    ],
+    "correct_answer": "ai, oba, ufa, xô",
+    "explanation": "'Mas', 'porém' e 'e' são conjunções.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "A interjeição 'basta!' costuma expressar:",
+    "options": [
+      "alegria",
+      "despedida",
+      "aplauso",
+      "ordem para parar"
+    ],
+    "correct_answer": "ordem para parar",
+    "explanation": "'Basta!' é usada para mandar parar algo.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase em que há interjeição.",
+    "options": [
+      "Uau, que paisagem linda!",
+      "Ele viajou ontem.",
+      "Comprei pão fresquinho.",
+      "O gato dorme no sofá."
+    ],
+    "correct_answer": "Uau, que paisagem linda!",
+    "explanation": "'Uau' é a interjeição; nas demais frases não há palavra que traduza emoção súbita.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "A interjeição 'eita!' expressa:",
+    "options": [
+      "despedida",
+      "espanto",
+      "desculpa",
+      "aplauso"
+    ],
+    "correct_answer": "espanto",
+    "explanation": "'Eita!' expressa espanto.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Em 'Meu Deus! Esqueci a chave!', 'Meu Deus' exprime:",
+    "options": [
+      "aplauso",
+      "desejo",
+      "susto ou espanto",
+      "despedida"
+    ],
+    "correct_answer": "susto ou espanto",
+    "explanation": "Locução interjetiva de emoção súbita: susto ou espanto.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Em 'Graças a Deus!', a locução exprime:",
+    "options": [
+      "dor",
+      "desculpa",
+      "despedida",
+      "alívio"
+    ],
+    "correct_answer": "alívio",
+    "explanation": "'Graças a Deus!' exprime alívio.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Em 'Puxa vida!', a locução exprime:",
+    "options": [
+      "surpresa",
+      "despedida",
+      "desculpa",
+      "aplauso"
+    ],
+    "correct_answer": "surpresa",
+    "explanation": "'Puxa vida!' exprime surpresa.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "A interjeição tem, predominantemente, a função de linguagem:",
+    "options": [
+      "referencial",
+      "emotiva",
+      "metalinguística",
+      "poética"
+    ],
+    "correct_answer": "emotiva",
+    "explanation": "Expressa o estado emocional de quem fala: função emotiva.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Assinale a locução interjetiva de dor.",
+    "options": [
+      "Muito bem",
+      "De repente",
+      "Ai de mim!",
+      "Por favor"
+    ],
+    "correct_answer": "Ai de mim!",
+    "explanation": "'Ai de mim!' exprime dor ou lamento.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase em que 'oh' e 'ó' estão empregados corretamente.",
+    "options": [
+      "Ó! Que susto! Oh meu amigo, venha cá.",
+      "Oh! Que susto! Oh meu amigo, venha cá.",
+      "Ó! Que susto! Ó meu amigo, venha cá.",
+      "Oh! Que susto! Ó meu amigo, venha cá."
+    ],
+    "correct_answer": "Oh! Que susto! Ó meu amigo, venha cá.",
+    "explanation": "'Oh' exprime emoção; 'ó' é usado antes do vocativo.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja o que a palavra em destaque revela sobre o sentimento de quem fala.",
+      "Lembre que algumas palavras de outras classes podem funcionar como interjeição no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Em 'Ah, como o tempo passa!', 'ah' e 'como' são, respectivamente:",
+    "options": [
+      "interjeição e advérbio",
+      "conjunção e advérbio",
+      "interjeição e conjunção",
+      "preposição e pronome"
+    ],
+    "correct_answer": "interjeição e advérbio",
+    "explanation": "'Ah' traduz emoção; 'como' intensifica o verbo (advérbio de intensidade).",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Em 'Oxalá chova!', o verbo 'chova' está no modo:",
+    "options": [
+      "indicativo",
+      "subjuntivo",
+      "imperativo",
+      "infinitivo"
+    ],
+    "correct_answer": "subjuntivo",
+    "explanation": "'Oxalá' exprime desejo e pede o verbo no subjuntivo.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Em 'Tomara que ele venha', 'tomara' equivale a:",
+    "options": [
+      "talvez",
+      "embora",
+      "desejo que",
+      "para que"
+    ],
+    "correct_answer": "desejo que",
+    "explanation": "'Tomara que' exprime desejo, como 'oxalá'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase pontuada corretamente.",
+    "options": [
+      "Puxa que, legal!",
+      "Puxa que legal,!",
+      "Puxa: que legal!",
+      "Puxa, que legal!"
+    ],
+    "correct_answer": "Puxa, que legal!",
+    "explanation": "A interjeição vem separada por vírgula (ou por exclamação) do restante da frase.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ de conseguir, você vai ver!",
+    "options": [
+      "Hei",
+      "Ei",
+      "Hey",
+      "Ai"
+    ],
+    "correct_answer": "Hei",
+    "explanation": "'Hei' é forma do verbo haver ('haver de'); 'ei' é interjeição de chamamento.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___, então era você!",
+    "options": [
+      "Há",
+      "Ah",
+      "A",
+      "À"
+    ],
+    "correct_answer": "Ah",
+    "explanation": "'Ah' é a interjeição de descoberta; 'há' é verbo e 'a/à' são preposição/artigo.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ Maria, venha cá!",
+    "options": [
+      "Oh",
+      "Hó",
+      "Ó",
+      "Ho"
+    ],
+    "correct_answer": "Ó",
+    "explanation": "'Ó' antecede o vocativo; 'oh' exprime emoção.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Complete: Você vem, ___?",
+    "options": [
+      "ein",
+      "eim",
+      "heim",
+      "hein"
+    ],
+    "correct_answer": "hein",
+    "explanation": "Grafia correta da interjeição de pergunta: 'hein'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Assinale a alternativa em que TODAS são locuções interjetivas.",
+    "options": [
+      "Meu Deus!, Ora bolas!, Graças a Deus!",
+      "Meu Deus!, muito bem, de repente",
+      "Ora bolas!, por isso, a fim de",
+      "Graças a Deus!, ainda que, logo que"
+    ],
+    "correct_answer": "Meu Deus!, Ora bolas!, Graças a Deus!",
+    "explanation": "Só a primeira alternativa traz apenas grupos de palavras com valor de interjeição.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_interjeicoes",
+    "difficulty_level": 3,
+    "prompt": "Em qual frase a palavra 'ai' NÃO é interjeição?",
+    "options": [
+      "Ai, que dor!",
+      "Ouvi um ai abafado.",
+      "Ai! Machuquei o pé.",
+      "Ai, ai, ai!"
+    ],
+    "correct_answer": "Ouvi um ai abafado.",
+    "explanation": "Em 'um ai', a palavra vem precedida de artigo e funciona como substantivo.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a classe da palavra pela função que ela tem na frase, não só pelo som.",
+      "Elimine as alternativas com pontuação ou grafia que a norma-padrão não aceita."
+    ]
+  }
+]

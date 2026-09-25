@@ -196,6 +196,8 @@ const List<String> kTerritoryIds = [
   'linguagem_pontuacao',
   'linguagem_ortografia',
   'linguagem_acentuacao_grafica',
+  'linguagem_numerais',
+  'linguagem_interjeicoes',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -316,6 +318,10 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryLinguagemOrtografia;
     case 'linguagem_acentuacao_grafica':
       return l10n.territoryLinguagemAcentuacaoGrafica;
+    case 'linguagem_numerais':
+      return l10n.territoryLinguagemNumerais;
+    case 'linguagem_interjeicoes':
+      return l10n.territoryLinguagemInterjeicoes;
     case 'futebol_origens':
       return l10n.territoryFutebolOrigens;
     case 'futebol_grandes_nomes':

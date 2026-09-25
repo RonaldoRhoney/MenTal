@@ -2336,6 +2336,12 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryLinguagemAcentuacaoGrafica => 'Acentuação Gráfica';
 
   @override
+  String get territoryLinguagemNumerais => 'Numerais';
+
+  @override
+  String get territoryLinguagemInterjeicoes => 'Interjeições';
+
+  @override
   String get coachSubtitle =>
       'Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.';
 

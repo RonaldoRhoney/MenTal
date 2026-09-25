@@ -83,13 +83,13 @@
       "slug": "numerais",
       "nome": "Numerais",
       "ordem_producao": 8,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "interjeicoes",
       "nome": "Interjeições",
       "ordem_producao": 8,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "sintaxe",
