@@ -499,13 +499,13 @@ class _HomeScreenState extends State<HomeScreen> {
     final blockNameByTerritory = _blockNameByTerritory();
 
     final items = worlds == null || worlds.isEmpty
-        ? [
+        ? <_WorldCarouselItem>[
             (
               title: l10n.homeAllTerritoriesFallbackLabel,
               icon: Icons.travel_explore_rounded,
               completed: false,
               territoryIds: kTerritoryIds,
-              worldId: null as String?,
+              worldId: null,
             ),
           ]
         : [
@@ -519,41 +519,29 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
           ];
 
-    return SizedBox(
-      height: 124,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        itemCount: items.length,
-        separatorBuilder: (_, __) => const SizedBox(width: 12),
-        itemBuilder: (context, index) {
-          final item = items[index];
-          return _WorldCarouselCard(
-            title: _shortWorldTitle(item.title),
-            icon: item.icon,
-            completed: item.completed,
-            onTap: () async {
-              await Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => _WorldDetailScreen(
-                    title: item.title,
-                    worldId: item.worldId,
-                    completed: item.completed,
-                    client: widget.client,
-                    refreshProgress: _loadProgress,
-                    buildChildren: (onReturned) => _territoryGroups(
-                      l10n,
-                      item.territoryIds,
-                      blockNameByTerritory,
-                      onReturned: onReturned,
-                    ),
-                  ),
-                ),
-              );
-              _loadProgress();
-            },
-          );
-        },
-      ),
+    return _WorldCarousel(
+      items: items,
+      shortTitle: _shortWorldTitle,
+      onTapItem: (item) async {
+        await Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => _WorldDetailScreen(
+              title: item.title,
+              worldId: item.worldId,
+              completed: item.completed,
+              client: widget.client,
+              refreshProgress: _loadProgress,
+              buildChildren: (onReturned) => _territoryGroups(
+                l10n,
+                item.territoryIds,
+                blockNameByTerritory,
+                onReturned: onReturned,
+              ),
+            ),
+          ),
+        );
+        _loadProgress();
+      },
     );
   }
 
@@ -1356,6 +1344,181 @@ class _QuickActionCard extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// Um item do carrossel de Mundos — record type nomeado (evita repetir a
+/// mesma assinatura longa em `_buildWorldCarousel`/`_WorldCarousel`).
+typedef _WorldCarouselItem = ({
+  String title,
+  IconData icon,
+  bool completed,
+  List<String> territoryIds,
+  String? worldId,
+});
+
+/// Pedido de Rhoney (23/09/2026): "o carrossel de Mundos da Home deve ter
+/// algo que indique que há mais mundos para ambos os lados e se possível
+/// ele deve ficar passando suavemente quando o usuário não estiver
+/// tocando na tela". Widget próprio (em vez de método de
+/// `_HomeScreenState`) pra manter o ScrollController e o timer de
+/// auto-scroll vivos entre os `setState` frequentes da Home (badges,
+/// progresso etc.) — um método normal recriaria o controller a cada
+/// rebuild e resetaria a posição/o timer sem motivo.
+class _WorldCarousel extends StatefulWidget {
+  const _WorldCarousel({
+    required this.items,
+    required this.shortTitle,
+    required this.onTapItem,
+  });
+
+  final List<_WorldCarouselItem> items;
+  final String Function(String title) shortTitle;
+  final void Function(_WorldCarouselItem item) onTapItem;
+
+  @override
+  State<_WorldCarousel> createState() => _WorldCarouselState();
+}
+
+class _WorldCarouselState extends State<_WorldCarousel> {
+  final ScrollController _controller = ScrollController();
+  Timer? _autoScrollTimer;
+  Timer? _resumeTimer;
+  bool _paused = false;
+  bool _canScrollLeft = false;
+  bool _canScrollRight = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(_updateEdges);
+    // hasClients só fica true depois do primeiro layout — checar/iniciar
+    // o auto-scroll no frame seguinte, não em initState.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _updateEdges();
+      _startAutoScroll();
+    });
+  }
+
+  void _updateEdges() {
+    if (!_controller.hasClients || !mounted) return;
+    final pos = _controller.position;
+    final canLeft = pos.pixels > 4;
+    final canRight = pos.pixels < pos.maxScrollExtent - 4;
+    if (canLeft != _canScrollLeft || canRight != _canScrollRight) {
+      setState(() {
+        _canScrollLeft = canLeft;
+        _canScrollRight = canRight;
+      });
+    }
+  }
+
+  /// Rolagem contínua e suave (poucos pixels por tick) enquanto o
+  /// usuário não está tocando o carrossel — ao chegar no fim, volta pro
+  /// início com uma animação suave em vez de "teleportar".
+  void _startAutoScroll() {
+    _autoScrollTimer?.cancel();
+    _autoScrollTimer = Timer.periodic(const Duration(milliseconds: 40), (_) {
+      if (_paused || !mounted || !_controller.hasClients) return;
+      final pos = _controller.position;
+      if (pos.maxScrollExtent <= 0) return; // cabe tudo na tela, nada a rolar
+      final next = _controller.offset + 0.8;
+      if (next >= pos.maxScrollExtent) {
+        _paused = true; // evita o timer competir com a animação de volta
+        _controller
+            .animateTo(0,
+                duration: const Duration(milliseconds: 900),
+                curve: Curves.easeInOut)
+            .then((_) {
+          if (mounted) _paused = false;
+        });
+      } else {
+        _controller.jumpTo(next);
+      }
+    });
+  }
+
+  void _pauseForInteraction() {
+    _paused = true;
+    _resumeTimer?.cancel();
+  }
+
+  /// Retoma o auto-scroll um tempo depois do usuário soltar o dedo —
+  /// nunca imediatamente, senão a rolagem automática "briga" com um
+  /// toque logo em seguida (ex.: olhando o card antes de decidir tocar).
+  void _scheduleResume() {
+    _resumeTimer?.cancel();
+    _resumeTimer = Timer(const Duration(seconds: 3), () {
+      if (mounted) _paused = false;
+    });
+  }
+
+  @override
+  void dispose() {
+    _autoScrollTimer?.cancel();
+    _resumeTimer?.cancel();
+    _controller.dispose();
+    super.dispose();
+  }
+
+  Widget _edgeFade({required bool onLeft}) {
+    return Positioned(
+      left: onLeft ? 0 : null,
+      right: onLeft ? null : 0,
+      top: 0,
+      bottom: 0,
+      child: IgnorePointer(
+        child: Container(
+          width: 28,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: onLeft ? Alignment.centerLeft : Alignment.centerRight,
+              end: onLeft ? Alignment.centerRight : Alignment.centerLeft,
+              colors: [AppColors.bg, AppColors.bg.withValues(alpha: 0)],
+            ),
+          ),
+          alignment: onLeft ? Alignment.centerLeft : Alignment.centerRight,
+          child: Icon(
+            onLeft ? Icons.chevron_left_rounded : Icons.chevron_right_rounded,
+            size: 18,
+            color: AppColors.muted,
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 124,
+      child: Stack(
+        children: [
+          Listener(
+            onPointerDown: (_) => _pauseForInteraction(),
+            onPointerUp: (_) => _scheduleResume(),
+            onPointerCancel: (_) => _scheduleResume(),
+            child: ListView.separated(
+              controller: _controller,
+              scrollDirection: Axis.horizontal,
+              itemCount: widget.items.length,
+              separatorBuilder: (_, __) => const SizedBox(width: 12),
+              itemBuilder: (context, index) {
+                final item = widget.items[index];
+                return _WorldCarouselCard(
+                  title: widget.shortTitle(item.title),
+                  icon: item.icon,
+                  completed: item.completed,
+                  onTap: () => widget.onTapItem(item),
+                );
+              },
+            ),
+          ),
+          if (_canScrollLeft) _edgeFade(onLeft: true),
+          if (_canScrollRight) _edgeFade(onLeft: false),
+        ],
       ),
     );
   }
