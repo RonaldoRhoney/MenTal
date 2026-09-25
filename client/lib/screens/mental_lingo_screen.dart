@@ -358,6 +358,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       _question = null;
       _answer = null;
       _errorMessage = null;
+      _accumulated = '';
     });
     final ok = await widget._service.init(
       onError: (_) {
@@ -375,10 +376,10 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
         if (!mounted) return;
         if ((status == 'notListening' || status == 'done') &&
             _state == _LingoState.listening &&
-            _question == null) {
+            _accumulated.isEmpty) {
           _noResultTimer?.cancel();
           _noResultTimer = Timer(const Duration(milliseconds: 3000), () {
-            if (!mounted || _state != _LingoState.listening || _question != null) return;
+            if (!mounted || _state != _LingoState.listening || _accumulated.isNotEmpty) return;
             setState(() {
               _state = _LingoState.error;
               _errorMessage = 'Não ouvi nada. Toque no microfone e tente de novo.';
@@ -398,20 +399,47 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     await widget._service.listen(onFinalResult: _handleResult);
   }
 
+  /// Pedido de Rhoney (25/09/2026): "o tempo de espera deve ser o tempo da
+  /// pergunta do usuário". O reconhecedor do Android encerra cada sessão
+  /// numa pausa curta de fala; em vez de enviar a 1ª frase, ACUMULAMOS os
+  /// trechos, reabrimos a escuta e só enviamos quando o usuário para de
+  /// falar de verdade (_kSubmitAfterSilence) ou toca no microfone.
+  static const Duration _kSubmitAfterSilence = Duration(milliseconds: 3500);
+  String _accumulated = '';
+  Timer? _submitTimer;
+
   Future<void> _handleResult(String text) async {
-    // O reconhecedor pode entregar um 2º resultado "final" (vazio) depois do
-    // primeiro — achado no teste real de Rhoney (25/09/2026): a mensagem
-    // "Não ouvi nada" aparecia junto da resposta. Só o 1º resultado, com a
-    // tela ainda em "Ouvindo", conta.
     if (!mounted || _state != _LingoState.listening) return;
     _noResultTimer?.cancel();
-    if (text.trim().isEmpty) {
+    final piece = text.trim();
+    if (piece.isNotEmpty) {
+      setState(() => _accumulated = _accumulated.isEmpty ? piece : '$_accumulated $piece');
+    }
+    if (_accumulated.isEmpty) {
       setState(() {
         _state = _LingoState.error;
         _errorMessage = 'Não ouvi nada. Toque no microfone e tente de novo.';
       });
       return;
     }
+    // Reabre a escuta pro caso de a pergunta continuar; se ninguém falar mais,
+    // o prazo abaixo envia o que foi acumulado.
+    _submitTimer?.cancel();
+    _submitTimer = Timer(_kSubmitAfterSilence, _submitAccumulated);
+    try {
+      await widget._service.listen(onFinalResult: _handleResult);
+    } catch (_) {
+      // sem reabrir: o prazo acima envia o que já temos.
+    }
+  }
+
+  Future<void> _submitAccumulated() async {
+    _submitTimer?.cancel();
+    _noResultTimer?.cancel();
+    if (!mounted || _state != _LingoState.listening) return;
+    final text = _accumulated.trim();
+    if (text.isEmpty) return;
+    widget._service.cancel();
     setState(() {
       _question = text;
       _state = _LingoState.processing;
@@ -434,6 +462,8 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   }
 
   void _cancelListening() {
+    _submitTimer?.cancel();
+    _noResultTimer?.cancel();
     widget._service.cancel();
     setState(() => _state = _LingoState.ready);
   }
@@ -457,6 +487,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 
   @override
   void dispose() {
+    _submitTimer?.cancel();
     _noResultTimer?.cancel();
     widget._service.cancel();
     super.dispose();
@@ -498,7 +529,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       case _LingoState.answering:
         return _startListening;
       case _LingoState.listening:
-        return _cancelListening;
+        return _accumulated.isNotEmpty ? _submitAccumulated : _cancelListening;
       case _LingoState.processing:
         return null;
     }
@@ -630,6 +661,12 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.titleMedium),
               const SizedBox(height: 20),
+              if (_state == _LingoState.listening && _accumulated.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 12),
+                  child: _buildBubble(
+                      label: 'Ouvindo…', text: _accumulated, key: const Key('mental_lingo_live_bubble')),
+                ),
               if (_question != null)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 12),
