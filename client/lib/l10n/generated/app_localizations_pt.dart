@@ -2349,6 +2349,12 @@ class AppLocalizationsPt extends AppLocalizations {
       'Orações Coordenadas e Subordinadas';
 
   @override
+  String get territoryLinguagemSemantica => 'Semântica';
+
+  @override
+  String get territoryLinguagemFigurasDeLinguagem => 'Figuras de Linguagem';
+
+  @override
   String get coachSubtitle =>
       'Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.';
 

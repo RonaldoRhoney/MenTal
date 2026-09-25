@@ -1,0 +1,808 @@
+{
+  "tema": "Figuras de Linguagem",
+  "slug": "figuras_de_linguagem",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney. Evitei casos em que a classificação varia entre autores (ex.: 'parte pelo todo' como metonímia ou sinédoque, paradoxo x oxímoro em separado, silepse e anacoluto).",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Meu pai é um leão.”",
+      "options": [
+        "metáfora",
+        "comparação",
+        "metonímia",
+        "ironia"
+      ],
+      "correct_answer": "metáfora",
+      "explanation": "Identifica dois seres sem conectivo: metáfora.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Meu pai é forte como um leão.”",
+      "options": [
+        "metáfora",
+        "comparação",
+        "hipérbole",
+        "antítese"
+      ],
+      "correct_answer": "comparação",
+      "explanation": "Usa o conectivo 'como': comparação.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Li Machado de Assis.”",
+      "options": [
+        "metáfora",
+        "hipérbole",
+        "metonímia",
+        "ironia"
+      ],
+      "correct_answer": "metonímia",
+      "explanation": "O autor é usado no lugar da obra.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Chorou rios de lágrimas.”",
+      "options": [
+        "metáfora",
+        "ironia",
+        "antítese",
+        "hipérbole"
+      ],
+      "correct_answer": "hipérbole",
+      "explanation": "Exagera a quantidade de lágrimas.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Você diz sim, eu digo não.”",
+      "options": [
+        "antítese",
+        "metáfora",
+        "hipérbole",
+        "prosopopeia"
+      ],
+      "correct_answer": "antítese",
+      "explanation": "Contrapõe ideias opostas (sim x não).",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “O vento sussurrava segredos.”",
+      "options": [
+        "metonímia",
+        "prosopopeia",
+        "hipérbole",
+        "ironia"
+      ],
+      "correct_answer": "prosopopeia",
+      "explanation": "Atribui ação humana (sussurrar) a um ser inanimado.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “O pé da mesa quebrou.”",
+      "options": [
+        "metáfora viva",
+        "hipérbole",
+        "catacrese",
+        "ironia"
+      ],
+      "correct_answer": "catacrese",
+      "explanation": "Usa 'pé' por falta de termo específico para essa parte da mesa.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Que voz doce!”",
+      "options": [
+        "metonímia",
+        "hipérbole",
+        "ironia",
+        "sinestesia"
+      ],
+      "correct_answer": "sinestesia",
+      "explanation": "Mistura sensações de sentidos diferentes (audição e paladar).",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Ele partiu desta para melhor.”",
+      "options": [
+        "eufemismo",
+        "hipérbole",
+        "ironia",
+        "antítese"
+      ],
+      "correct_answer": "eufemismo",
+      "explanation": "Suaviza a ideia de morte.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Parabéns pela pontualidade!”, dito a quem chegou duas horas atrasado.",
+      "options": [
+        "eufemismo",
+        "ironia",
+        "hipérbole",
+        "comparação"
+      ],
+      "correct_answer": "ironia",
+      "explanation": "Diz o contrário do que se pensa, com intenção crítica.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Subir para cima.”",
+      "options": [
+        "elipse",
+        "antítese",
+        "pleonasmo",
+        "metonímia"
+      ],
+      "correct_answer": "pleonasmo",
+      "explanation": "Repete uma ideia já contida no verbo.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Cheguei, vi, venci.”",
+      "options": [
+        "polissíndeto",
+        "hipérbole",
+        "comparação",
+        "assíndeto"
+      ],
+      "correct_answer": "assíndeto",
+      "explanation": "Faltam conjunções entre as orações.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “E chora, e ri, e canta, e dança.”",
+      "options": [
+        "polissíndeto",
+        "assíndeto",
+        "hipérbole",
+        "comparação"
+      ],
+      "correct_answer": "polissíndeto",
+      "explanation": "Repete a conjunção 'e' várias vezes.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “O rato roeu a roupa do rei de Roma.”",
+      "options": [
+        "assonância",
+        "aliteração",
+        "onomatopeia",
+        "elipse"
+      ],
+      "correct_answer": "aliteração",
+      "explanation": "Repete o som consonantal /r/.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “O tic-tac do relógio invadiu a sala.”",
+      "options": [
+        "aliteração",
+        "assonância",
+        "onomatopeia",
+        "hipérbole"
+      ],
+      "correct_answer": "onomatopeia",
+      "explanation": "Imita um som.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Ó Deus, escutai-me!”",
+      "options": [
+        "prosopopeia",
+        "hipérbole",
+        "ironia",
+        "apóstrofe"
+      ],
+      "correct_answer": "apóstrofe",
+      "explanation": "Chama ou invoca um interlocutor.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Na sala, apenas um sofá.”",
+      "options": [
+        "elipse",
+        "pleonasmo",
+        "polissíndeto",
+        "hipérbole"
+      ],
+      "correct_answer": "elipse",
+      "explanation": "O verbo ('havia') foi omitido e se subentende.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “O rei do futebol marcou dois gols.”",
+      "options": [
+        "metáfora",
+        "antonomásia",
+        "hipérbole",
+        "ironia"
+      ],
+      "correct_answer": "antonomásia",
+      "explanation": "Substitui o nome próprio por uma qualidade que o identifica.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Foi um sussurro, depois uma fala, depois um grito.”",
+      "options": [
+        "antítese",
+        "pleonasmo",
+        "gradação",
+        "elipse"
+      ],
+      "correct_answer": "gradação",
+      "explanation": "Apresenta ideias em ordem crescente de intensidade.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Silêncio ensurdecedor.”",
+      "options": [
+        "metonímia",
+        "pleonasmo",
+        "apóstrofe",
+        "oxímoro"
+      ],
+      "correct_answer": "oxímoro",
+      "explanation": "Une palavras de sentidos contraditórios.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Tudo passa, tudo cansa, tudo se esquece.”",
+      "options": [
+        "anáfora",
+        "elipse",
+        "assíndeto",
+        "hipérbato"
+      ],
+      "correct_answer": "anáfora",
+      "explanation": "Repete a palavra 'tudo' no início das frases.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Ouviram do Ipiranga as margens plácidas de um povo heroico o brado retumbante.”",
+      "options": [
+        "elipse",
+        "hipérbato",
+        "pleonasmo",
+        "anáfora"
+      ],
+      "correct_answer": "hipérbato",
+      "explanation": "Inverte a ordem natural das palavras.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Bebi dois copos de suco.”",
+      "options": [
+        "metáfora",
+        "hipérbole",
+        "metonímia",
+        "ironia"
+      ],
+      "correct_answer": "metonímia",
+      "explanation": "O recipiente é usado no lugar do conteúdo.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Já te disse mil vezes!”",
+      "options": [
+        "metáfora",
+        "ironia",
+        "antítese",
+        "hipérbole"
+      ],
+      "correct_answer": "hipérbole",
+      "explanation": "Exagera a quantidade de vezes.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a figura de linguagem presente em: “Que ótimo, choveu no dia do meu piquenique!”",
+      "options": [
+        "ironia",
+        "eufemismo",
+        "comparação",
+        "hipérbato"
+      ],
+      "correct_answer": "ironia",
+      "explanation": "Diz o contrário do que se sente.",
+      "hints": [
+        "Pergunte-se o que a expressão faz com o sentido: compara, exagera, atribui vida, substitui, contrapõe...",
+        "Some o sentido literal ao figurado e veja qual figura combina com o efeito da frase."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A principal diferença entre metáfora e comparação é que a comparação:",
+      "options": [
+        "exagera a ideia",
+        "usa conectivo (como, tal qual)",
+        "atribui vida a objetos",
+        "omite um termo"
+      ],
+      "correct_answer": "usa conectivo (como, tal qual)",
+      "explanation": "Na comparação aparece o conectivo; na metáfora, não.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'Comprei um Ford', a palavra 'Ford' é exemplo de:",
+      "options": [
+        "metáfora",
+        "hipérbole",
+        "metonímia",
+        "ironia"
+      ],
+      "correct_answer": "metonímia",
+      "explanation": "A marca é usada no lugar do produto.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'o braço da poltrona', a figura é:",
+      "options": [
+        "ironia",
+        "hipérbole",
+        "prosopopeia",
+        "catacrese"
+      ],
+      "correct_answer": "catacrese",
+      "explanation": "Falta um termo específico e se usa um nome emprestado, já dicionarizado.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'Voz aveludada', a figura é:",
+      "options": [
+        "sinestesia",
+        "ironia",
+        "hipérbole",
+        "elipse"
+      ],
+      "correct_answer": "sinestesia",
+      "explanation": "Une sensações de sentidos diferentes (audição e tato).",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'Ele nos deixou', dito sobre alguém que morreu, a figura é:",
+      "options": [
+        "hipérbole",
+        "eufemismo",
+        "ironia",
+        "antítese"
+      ],
+      "correct_answer": "eufemismo",
+      "explanation": "Suaviza a ideia de morte.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'Que talento, hein! Errou de novo', a figura é:",
+      "options": [
+        "eufemismo",
+        "hipérbole",
+        "ironia",
+        "comparação"
+      ],
+      "correct_answer": "ironia",
+      "explanation": "Elogia com sentido contrário.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'Vi com meus próprios olhos', a figura é:",
+      "options": [
+        "elipse",
+        "antítese",
+        "hipérbole",
+        "pleonasmo"
+      ],
+      "correct_answer": "pleonasmo",
+      "explanation": "A expressão reforça uma ideia já contida no verbo, com intenção enfática.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'O sol sorria no céu', a figura é:",
+      "options": [
+        "prosopopeia",
+        "metonímia",
+        "catacrese",
+        "antítese"
+      ],
+      "correct_answer": "prosopopeia",
+      "explanation": "Atribui ação humana ao sol.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'Ó mar, tu és imenso', o trecho 'Ó mar' constitui:",
+      "options": [
+        "elipse",
+        "apóstrofe",
+        "pleonasmo",
+        "ironia"
+      ],
+      "correct_answer": "apóstrofe",
+      "explanation": "Invoca o mar como interlocutor.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'O sapo saiu do saco', a repetição do som /s/ é:",
+      "options": [
+        "assonância",
+        "onomatopeia",
+        "aliteração",
+        "anáfora"
+      ],
+      "correct_answer": "aliteração",
+      "explanation": "Repete um som consonante.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'O sino faz blém-blém', a expressão 'blém-blém' é:",
+      "options": [
+        "aliteração",
+        "assonância",
+        "hipérbole",
+        "onomatopeia"
+      ],
+      "correct_answer": "onomatopeia",
+      "explanation": "Imita o som do sino.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'Vi-o, gritei, corri, caí', a ausência de conjunções é:",
+      "options": [
+        "assíndeto",
+        "polissíndeto",
+        "elipse",
+        "hipérbole"
+      ],
+      "correct_answer": "assíndeto",
+      "explanation": "As orações se sucedem sem conectivos.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'E come, e bebe, e dorme', o excesso de 'e' é:",
+      "options": [
+        "assíndeto",
+        "polissíndeto",
+        "elipse",
+        "hipérbole"
+      ],
+      "correct_answer": "polissíndeto",
+      "explanation": "A conjunção é repetida.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'É pouco pra mim, mas é muito pra ele', a figura é:",
+      "options": [
+        "ironia",
+        "pleonasmo",
+        "antítese",
+        "catacrese"
+      ],
+      "correct_answer": "antítese",
+      "explanation": "Contrapõe 'pouco' e 'muito'.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em 'A vida é um palco', a figura é:",
+      "options": [
+        "comparação",
+        "metonímia",
+        "hipérbole",
+        "metáfora"
+      ],
+      "correct_answer": "metáfora",
+      "explanation": "Identifica vida e palco sem conectivo.",
+      "hints": [
+        "Observe se há conectivo comparativo, repetição de sons ou de palavras, ou omissão de termos.",
+        "Compare figuras parecidas pelo efeito que cada uma produz."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Em 'A Cidade Maravilhosa recebeu turistas', a expressão 'Cidade Maravilhosa' é:",
+      "options": [
+        "antonomásia",
+        "metonímia",
+        "pleonasmo",
+        "eufemismo"
+      ],
+      "correct_answer": "antonomásia",
+      "explanation": "Substitui o nome próprio (Rio de Janeiro) por uma qualidade que o identifica.",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a alternativa que traz uma catacrese.",
+      "options": [
+        "Ele é uma raposa.",
+        "O pé da mesa quebrou.",
+        "Suas palavras são facas.",
+        "O tempo voa."
+      ],
+      "correct_answer": "O pé da mesa quebrou.",
+      "explanation": "A expressão 'pé da mesa' já se tornou o nome dessa parte do móvel.",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase com hipérbole.",
+      "options": [
+        "Ele chegou às oito.",
+        "A casa é grande.",
+        "Estou morrendo de sede.",
+        "Choveu ontem."
+      ],
+      "correct_answer": "Estou morrendo de sede.",
+      "explanation": "Exagera a sensação de sede.",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase com prosopopeia.",
+      "options": [
+        "As estrelas brilham no céu.",
+        "Vi estrelas ontem.",
+        "O céu está limpo.",
+        "As estrelas conversavam no céu."
+      ],
+      "correct_answer": "As estrelas conversavam no céu.",
+      "explanation": "Atribui a ação humana de conversar às estrelas.",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase com ironia.",
+      "options": [
+        "Que ótimo, perdi o ônibus de novo!",
+        "Perdi o ônibus.",
+        "O ônibus passou cedo.",
+        "Gosto de pegar ônibus."
+      ],
+      "correct_answer": "Que ótimo, perdi o ônibus de novo!",
+      "explanation": "A intenção é o oposto do que se diz.",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase com antítese.",
+      "options": [
+        "O amor é fogo.",
+        "O amor une, o ódio separa.",
+        "O amor é lindo.",
+        "O amor chegou cedo."
+      ],
+      "correct_answer": "O amor une, o ódio separa.",
+      "explanation": "Contrapõe 'unir' e 'separar', 'amor' e 'ódio'.",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase com sinestesia.",
+      "options": [
+        "A sala é azul.",
+        "A sala estava fria.",
+        "Um azul frio invadiu a sala.",
+        "Entrei na sala."
+      ],
+      "correct_answer": "Um azul frio invadiu a sala.",
+      "explanation": "Associa visão (azul) e tato (frio).",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase com eufemismo.",
+      "options": [
+        "O aluno faltou ontem.",
+        "O aluno chegou cedo.",
+        "O aluno gosta de estudar.",
+        "O aluno tem dificuldades de aprendizagem."
+      ],
+      "correct_answer": "O aluno tem dificuldades de aprendizagem.",
+      "explanation": "Suaviza uma ideia dura (por exemplo, 'não aprende').",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase com metonímia.",
+      "options": [
+        "Li Jorge Amado.",
+        "Li um livro.",
+        "Li ontem.",
+        "Li devagar."
+      ],
+      "correct_answer": "Li Jorge Amado.",
+      "explanation": "O nome do autor é usado no lugar da obra.",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a frase com gradação.",
+      "options": [
+        "Foi um som.",
+        "Foi um sussurro, depois um grito, depois um estrondo.",
+        "Foi um grito.",
+        "Foi um estrondo."
+      ],
+      "correct_answer": "Foi um sussurro, depois um grito, depois um estrondo.",
+      "explanation": "Apresenta a sequência em ordem crescente de intensidade.",
+      "hints": [
+        "Identifique o recurso central da frase (comparação, exagero, contraste, substituição, atribuição de vida).",
+        "Elimine as alternativas que não têm esse recurso."
+      ]
+    }
+  ]
+}

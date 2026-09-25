@@ -4078,6 +4078,18 @@ abstract class AppLocalizations {
   /// **'Orações Coordenadas e Subordinadas'**
   String get territoryLinguagemOracoesCoordenadasESubordinadas;
 
+  /// Territory name — Linguagem grammar SubMundo: Semântica
+  ///
+  /// In pt, this message translates to:
+  /// **'Semântica'**
+  String get territoryLinguagemSemantica;
+
+  /// Territory name — Linguagem grammar SubMundo: Figuras de Linguagem
+  ///
+  /// In pt, this message translates to:
+  /// **'Figuras de Linguagem'**
+  String get territoryLinguagemFigurasDeLinguagem;
+
   /// My_Mental_AI subtitle
   ///
   /// In pt, this message translates to:

@@ -1824,6 +1824,8 @@ const Map<String, IconData> _kSectionIcons = {
   'lg_interjeicoes': Icons.campaign_rounded,
   'lg_sintaxe': Icons.account_tree_rounded,
   'lg_oracoes_coordenadas_e_subordinadas': Icons.call_split_rounded,
+  'lg_semantica': Icons.psychology_alt_rounded,
+  'lg_figuras_de_linguagem': Icons.auto_awesome_rounded,
 };
 
 /// Cabeçalho de seção reutilizável — usado por qualquer Bloco/SubMundo

@@ -524,7 +524,7 @@
   {
     "territory_id": "linguagem_interjeicoes",
     "difficulty_level": 2,
-    "prompt": "Assinale a frase pontuada corretamente (interjeição).",
+    "prompt": "Assinale a frase pontuada corretamente (interjeição seguida de vírgula e exclamação final).",
     "options": [
       "Ah como, sinto saudade!",
       "Ah, como sinto saudade!",

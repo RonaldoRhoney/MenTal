@@ -200,6 +200,8 @@ const List<String> kTerritoryIds = [
   'linguagem_interjeicoes',
   'linguagem_sintaxe',
   'linguagem_oracoes_coordenadas_e_subordinadas',
+  'linguagem_semantica',
+  'linguagem_figuras_de_linguagem',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -328,6 +330,10 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryLinguagemSintaxe;
     case 'linguagem_oracoes_coordenadas_e_subordinadas':
       return l10n.territoryLinguagemOracoesCoordenadasESubordinadas;
+    case 'linguagem_semantica':
+      return l10n.territoryLinguagemSemantica;
+    case 'linguagem_figuras_de_linguagem':
+      return l10n.territoryLinguagemFigurasDeLinguagem;
     case 'futebol_origens':
       return l10n.territoryFutebolOrigens;
     case 'futebol_grandes_nomes':

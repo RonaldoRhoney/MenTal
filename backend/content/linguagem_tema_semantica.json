@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sinônimo de 'feliz' é:",
+    "options": [
+      "contente",
+      "triste",
+      "bravo",
+      "cansado"
+    ],
+    "correct_answer": "contente",
+    "explanation": "'Feliz' e 'contente' têm sentido parecido.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sinônimo de 'rápido' é:",
+    "options": [
+      "lento",
+      "veloz",
+      "calmo",
+      "pesado"
+    ],
+    "correct_answer": "veloz",
+    "explanation": "'Rápido' e 'veloz' têm sentido parecido.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sinônimo de 'grande' é:",
+    "options": [
+      "pequeno",
+      "fino",
+      "enorme",
+      "curto"
+    ],
+    "correct_answer": "enorme",
+    "explanation": "'Grande' e 'enorme' têm sentido parecido.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sinônimo de 'bonito' é:",
+    "options": [
+      "feio",
+      "sujo",
+      "velho",
+      "belo"
+    ],
+    "correct_answer": "belo",
+    "explanation": "'Bonito' e 'belo' têm sentido parecido.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sinônimo de 'medo' é:",
+    "options": [
+      "temor",
+      "coragem",
+      "alegria",
+      "calma"
+    ],
+    "correct_answer": "temor",
+    "explanation": "'Medo' e 'temor' têm sentido parecido.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O antônimo de 'alto' é:",
+    "options": [
+      "grande",
+      "baixo",
+      "forte",
+      "largo"
+    ],
+    "correct_answer": "baixo",
+    "explanation": "'Alto' e 'baixo' têm sentido contrário.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O antônimo de 'claro' é:",
+    "options": [
+      "limpo",
+      "branco",
+      "escuro",
+      "brilhante"
+    ],
+    "correct_answer": "escuro",
+    "explanation": "'Claro' e 'escuro' têm sentido contrário.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O antônimo de 'antes' é:",
+    "options": [
+      "agora",
+      "sempre",
+      "nunca",
+      "depois"
+    ],
+    "correct_answer": "depois",
+    "explanation": "'Antes' e 'depois' têm sentido contrário.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O antônimo de 'vitória' é:",
+    "options": [
+      "derrota",
+      "conquista",
+      "festa",
+      "prêmio"
+    ],
+    "correct_answer": "derrota",
+    "explanation": "'Vitória' e 'derrota' têm sentido contrário.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O antônimo de 'generoso' é:",
+    "options": [
+      "gentil",
+      "mesquinho",
+      "alegre",
+      "calmo"
+    ],
+    "correct_answer": "mesquinho",
+    "explanation": "'Generoso' e 'mesquinho' têm sentido contrário.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sinônimo de 'iniciar' é:",
+    "options": [
+      "terminar",
+      "parar",
+      "começar",
+      "perder"
+    ],
+    "correct_answer": "começar",
+    "explanation": "'Iniciar' e 'começar' têm sentido parecido.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sinônimo de 'escolher' é:",
+    "options": [
+      "rejeitar",
+      "perder",
+      "esquecer",
+      "eleger"
+    ],
+    "correct_answer": "eleger",
+    "explanation": "'Escolher' e 'eleger' têm sentido parecido.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O antônimo de 'abundância' é:",
+    "options": [
+      "escassez",
+      "fartura",
+      "riqueza",
+      "excesso"
+    ],
+    "correct_answer": "escassez",
+    "explanation": "'Abundância' e 'escassez' têm sentido contrário.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "Palavras de sentido parecido, como 'feliz' e 'contente', são:",
+    "options": [
+      "antônimas",
+      "sinônimas",
+      "homônimas",
+      "parônimas"
+    ],
+    "correct_answer": "sinônimas",
+    "explanation": "Sinônimos têm significados semelhantes.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "Palavras de sentido contrário, como 'alto' e 'baixo', são:",
+    "options": [
+      "sinônimas",
+      "homônimas",
+      "antônimas",
+      "parônimas"
+    ],
+    "correct_answer": "antônimas",
+    "explanation": "Antônimos têm significados opostos.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "Palavras com a mesma grafia e a mesma pronúncia, mas sentidos diferentes (como 'manga' da camisa e 'manga' fruta), são:",
+    "options": [
+      "sinônimas",
+      "antônimas",
+      "parônimas",
+      "homônimas"
+    ],
+    "correct_answer": "homônimas",
+    "explanation": "Homônimos: mesma forma, sentidos diferentes.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "Palavras com pronúncia igual e grafia diferente (como 'cela' e 'sela') são:",
+    "options": [
+      "homófonas",
+      "homógrafas",
+      "parônimas",
+      "antônimas"
+    ],
+    "correct_answer": "homófonas",
+    "explanation": "Homófonas soam igual, mas se escrevem de modo diferente.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "Palavras com grafia igual e pronúncia diferente (como 'jogo' /ô/ e 'jogo' /ó/) são:",
+    "options": [
+      "homófonas",
+      "homógrafas",
+      "parônimas",
+      "sinônimas"
+    ],
+    "correct_answer": "homógrafas",
+    "explanation": "Homógrafas se escrevem igual, mas se pronunciam diferente.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "Palavras de grafia e pronúncia parecidas, mas sentidos diferentes (como 'emigrar' e 'imigrar'), são:",
+    "options": [
+      "homônimas",
+      "sinônimas",
+      "parônimas",
+      "antônimas"
+    ],
+    "correct_answer": "parônimas",
+    "explanation": "Parônimos são parecidos, mas não iguais.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "A propriedade que uma palavra tem de possuir vários significados chama-se:",
+    "options": [
+      "homonímia",
+      "paronímia",
+      "sinonímia",
+      "polissemia"
+    ],
+    "correct_answer": "polissemia",
+    "explanation": "Polissemia: uma palavra com vários sentidos relacionados.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sentido literal, de dicionário, de uma palavra chama-se:",
+    "options": [
+      "denotação",
+      "conotação",
+      "polissemia",
+      "ambiguidade"
+    ],
+    "correct_answer": "denotação",
+    "explanation": "Denotação é o sentido próprio da palavra.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O sentido figurado, subjetivo, de uma palavra chama-se:",
+    "options": [
+      "denotação",
+      "conotação",
+      "paronímia",
+      "sinonímia"
+    ],
+    "correct_answer": "conotação",
+    "explanation": "Conotação é o sentido figurado.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "'Animal', em relação a 'cachorro', é um:",
+    "options": [
+      "hipônimo",
+      "sinônimo",
+      "hiperônimo",
+      "antônimo"
+    ],
+    "correct_answer": "hiperônimo",
+    "explanation": "Hiperônimo é a palavra de sentido mais amplo.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "'Cachorro', em relação a 'animal', é um:",
+    "options": [
+      "hiperônimo",
+      "sinônimo",
+      "antônimo",
+      "hipônimo"
+    ],
+    "correct_answer": "hipônimo",
+    "explanation": "Hipônimo é a palavra de sentido mais específico.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 1,
+    "prompt": "O conjunto de palavras ligadas a um mesmo tema (professor, aluno, lousa...) forma um:",
+    "options": [
+      "campo semântico",
+      "hiperônimo",
+      "período composto",
+      "aposto"
+    ],
+    "correct_answer": "campo semântico",
+    "explanation": "Campo semântico reúne palavras relacionadas por um tema.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense no significado da palavra e procure a alternativa que combina com ele.",
+      "Sinônimos têm sentido parecido; antônimos têm sentido contrário."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "As palavras 'cela' e 'sela' são:",
+    "options": [
+      "homógrafas",
+      "homófonas",
+      "parônimas",
+      "antônimas"
+    ],
+    "correct_answer": "homófonas",
+    "explanation": "Pronúncia igual, grafia diferente.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "As palavras 'emigrar' e 'imigrar' são:",
+    "options": [
+      "homônimas",
+      "sinônimas",
+      "parônimas",
+      "antônimas"
+    ],
+    "correct_answer": "parônimas",
+    "explanation": "Parecidas na forma, diferentes no sentido.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "As palavras 'absolver' e 'absorver' são:",
+    "options": [
+      "homônimas",
+      "sinônimas",
+      "antônimas",
+      "parônimas"
+    ],
+    "correct_answer": "parônimas",
+    "explanation": "Parecidas na forma, diferentes no sentido.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "As palavras 'eminente' e 'iminente' são:",
+    "options": [
+      "parônimas",
+      "homônimas",
+      "sinônimas",
+      "antônimas"
+    ],
+    "correct_answer": "parônimas",
+    "explanation": "Parecidas na forma, diferentes no sentido.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "As palavras 'descrição' e 'discrição' são:",
+    "options": [
+      "homônimas",
+      "parônimas",
+      "sinônimas",
+      "antônimas"
+    ],
+    "correct_answer": "parônimas",
+    "explanation": "Parecidas na forma, diferentes no sentido.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "O antônimo de 'mal' (advérbio) é:",
+    "options": [
+      "bom",
+      "mau",
+      "bem",
+      "ruim"
+    ],
+    "correct_answer": "bem",
+    "explanation": "'Mal' (advérbio) opõe-se a 'bem'; 'mau' (adjetivo) opõe-se a 'bom'.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "Em 'Ele tem um coração de pedra', a expressão 'coração de pedra' tem sentido:",
+    "options": [
+      "denotativo",
+      "literal",
+      "técnico",
+      "conotativo"
+    ],
+    "correct_answer": "conotativo",
+    "explanation": "Significa 'insensível': sentido figurado.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "Em 'A pedra caiu no chão', a palavra 'pedra' tem sentido:",
+    "options": [
+      "denotativo",
+      "conotativo",
+      "figurado",
+      "irônico"
+    ],
+    "correct_answer": "denotativo",
+    "explanation": "Refere-se ao objeto real: sentido literal.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "A frase 'Vi o menino com o binóculo' é ambígua porque:",
+    "options": [
+      "tem erro de concordância",
+      "não fica claro quem tinha o binóculo",
+      "tem erro de regência",
+      "usa palavra estrangeira"
+    ],
+    "correct_answer": "não fica claro quem tinha o binóculo",
+    "explanation": "O termo 'com o binóculo' pode se referir a quem viu ou ao menino.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "As palavras 'terra', 'terreno' e 'enterrar' são:",
+    "options": [
+      "antônimas",
+      "homônimas",
+      "cognatas",
+      "parônimas"
+    ],
+    "correct_answer": "cognatas",
+    "explanation": "Compartilham o mesmo radical: formam uma família de palavras.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "Arcaísmo é:",
+    "options": [
+      "palavra nova na língua",
+      "palavra de outra língua",
+      "palavra de sentido contrário",
+      "palavra ou expressão em desuso"
+    ],
+    "correct_answer": "palavra ou expressão em desuso",
+    "explanation": "Arcaísmo é a palavra que saiu de uso.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "Neologismo é:",
+    "options": [
+      "palavra ou expressão nova na língua",
+      "palavra em desuso",
+      "palavra de outra língua",
+      "palavra de sentido contrário"
+    ],
+    "correct_answer": "palavra ou expressão nova na língua",
+    "explanation": "Neologismo é a palavra recém-criada.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "Estrangeirismo é:",
+    "options": [
+      "palavra em desuso",
+      "palavra ou expressão de outra língua usada no português",
+      "palavra recém-criada",
+      "palavra de sentido contrário"
+    ],
+    "correct_answer": "palavra ou expressão de outra língua usada no português",
+    "explanation": "Estrangeirismo vem de outra língua (ex.: 'shopping').",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "O sinônimo de 'efêmero' é:",
+    "options": [
+      "eterno",
+      "frágil",
+      "passageiro",
+      "lento"
+    ],
+    "correct_answer": "passageiro",
+    "explanation": "'Efêmero' é o que dura pouco.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 2,
+    "prompt": "O antônimo de 'efêmero' é:",
+    "options": [
+      "passageiro",
+      "breve",
+      "rápido",
+      "duradouro"
+    ],
+    "correct_answer": "duradouro",
+    "explanation": "'Efêmero' opõe-se a 'duradouro'.",
+    "age_reviewed": true,
+    "hints": [
+      "Compare a grafia e a pronúncia das palavras antes de decidir a relação entre elas.",
+      "Lembre a diferença entre sentido literal e sentido figurado."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "Em 'Ele tem uma cabeça dura', a expressão 'cabeça dura' tem sentido:",
+    "options": [
+      "conotativo (teimoso)",
+      "denotativo (osso rígido)",
+      "técnico (anatômico)",
+      "literal (material duro)"
+    ],
+    "correct_answer": "conotativo (teimoso)",
+    "explanation": "Significa 'teimoso': sentido figurado.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "Assinale o par de parônimos.",
+    "options": [
+      "cela / sela",
+      "infligir / infringir",
+      "manga / manga",
+      "alto / baixo"
+    ],
+    "correct_answer": "infligir / infringir",
+    "explanation": "'Infligir' (aplicar) e 'infringir' (violar) são parecidos e têm sentidos diferentes.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "Assinale o par de homófonos.",
+    "options": [
+      "emigrar / imigrar",
+      "alto / baixo",
+      "cela / sela",
+      "feliz / contente"
+    ],
+    "correct_answer": "cela / sela",
+    "explanation": "'Cela' e 'sela' têm o mesmo som e grafia diferente.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "Assinale o par de antônimos.",
+    "options": [
+      "cela / sela",
+      "emigrar / imigrar",
+      "feliz / contente",
+      "efêmero / duradouro"
+    ],
+    "correct_answer": "efêmero / duradouro",
+    "explanation": "'Efêmero' e 'duradouro' têm sentido contrário.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "Assinale o par de sinônimos.",
+    "options": [
+      "cônjuge / consorte",
+      "cela / sela",
+      "emigrar / imigrar",
+      "alto / baixo"
+    ],
+    "correct_answer": "cônjuge / consorte",
+    "explanation": "'Cônjuge' e 'consorte' têm sentido semelhante.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "'Manga' (parte da roupa) e 'manga' (fruta) são:",
+    "options": [
+      "parônimas",
+      "homônimas",
+      "antônimas",
+      "cognatas"
+    ],
+    "correct_answer": "homônimas",
+    "explanation": "Mesma grafia e pronúncia, sentidos sem relação: homônimas.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "'Jogo' (substantivo, /ô/) e 'jogo' (verbo jogar, /ó/) são:",
+    "options": [
+      "homófonas",
+      "parônimas",
+      "homógrafas",
+      "sinônimas"
+    ],
+    "correct_answer": "homógrafas",
+    "explanation": "Mesma grafia, pronúncia diferente: homógrafas.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "'Fruta', em relação a 'maçã', 'pera' e 'uva', é:",
+    "options": [
+      "hipônimo",
+      "antônimo",
+      "parônimo",
+      "hiperônimo"
+    ],
+    "correct_answer": "hiperônimo",
+    "explanation": "'Fruta' tem sentido mais amplo que cada uma das outras.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "A frase 'Maria disse a Ana que ela estava atrasada' é ambígua porque:",
+    "options": [
+      "'ela' pode se referir a Maria ou a Ana",
+      "falta vírgula",
+      "falta o verbo",
+      "tem palavra em desuso"
+    ],
+    "correct_answer": "'ela' pode se referir a Maria ou a Ana",
+    "explanation": "O pronome 'ela' tem dois referentes possíveis.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  },
+  {
+    "territory_id": "linguagem_semantica",
+    "difficulty_level": 3,
+    "prompt": "O uso de 'hardware' em um texto em português é um:",
+    "options": [
+      "arcaísmo",
+      "estrangeirismo",
+      "neologismo",
+      "eufemismo"
+    ],
+    "correct_answer": "estrangeirismo",
+    "explanation": "Palavra emprestada do inglês.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o par ou a frase pelo significado, pela grafia e pela pronúncia, nessa ordem.",
+      "Elimine as alternativas que descrevem outra relação entre as palavras."
+    ]
+  }
+]

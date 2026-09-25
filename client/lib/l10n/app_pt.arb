@@ -3229,6 +3229,14 @@
   "@territoryLinguagemOracoesCoordenadasESubordinadas": {
     "description": "Territory name — Linguagem grammar SubMundo: Orações Coordenadas e Subordinadas"
   },
+  "territoryLinguagemSemantica": "Semântica",
+  "@territoryLinguagemSemantica": {
+    "description": "Territory name — Linguagem grammar SubMundo: Semântica"
+  },
+  "territoryLinguagemFigurasDeLinguagem": "Figuras de Linguagem",
+  "@territoryLinguagemFigurasDeLinguagem": {
+    "description": "Territory name — Linguagem grammar SubMundo: Figuras de Linguagem"
+  },
   "coachSubtitle": "Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.",
   "@coachSubtitle": {
     "description": "My_Mental_AI subtitle"

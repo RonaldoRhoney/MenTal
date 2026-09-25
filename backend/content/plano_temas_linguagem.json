@@ -107,13 +107,13 @@
       "slug": "semantica",
       "nome": "Semântica",
       "ordem_producao": 10,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "figuras_de_linguagem",
       "nome": "Figuras de Linguagem",
       "ordem_producao": 10,
-      "status": "planejado"
+      "status": "ativo"
     }
   ]
 }
