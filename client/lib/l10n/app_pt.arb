@@ -3197,6 +3197,10 @@
   "@territoryLinguagemPronomes": {
     "description": "Territory name — Linguagem grammar SubMundo: Pronomes"
   },
+  "territoryLinguagemPreposicao": "Preposição",
+  "@territoryLinguagemPreposicao": {
+    "description": "Territory name — Linguagem grammar SubMundo: Preposição"
+  },
   "coachSubtitle": "Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.",
   "@coachSubtitle": {
     "description": "My_Mental_AI subtitle"

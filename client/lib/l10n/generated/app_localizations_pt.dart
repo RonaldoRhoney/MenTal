@@ -2324,6 +2324,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryLinguagemPronomes => 'Pronomes';
 
   @override
+  String get territoryLinguagemPreposicao => 'Preposição';
+
+  @override
   String get coachSubtitle =>
       'Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.';
 

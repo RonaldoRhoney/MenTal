@@ -4030,6 +4030,12 @@ abstract class AppLocalizations {
   /// **'Pronomes'**
   String get territoryLinguagemPronomes;
 
+  /// Territory name — Linguagem grammar SubMundo: Preposição
+  ///
+  /// In pt, this message translates to:
+  /// **'Preposição'**
+  String get territoryLinguagemPreposicao;
+
   /// My_Mental_AI subtitle
   ///
   /// In pt, this message translates to:

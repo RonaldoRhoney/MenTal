@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ele mora ___ São Paulo.",
+    "options": [
+      "em",
+      "a",
+      "de",
+      "para"
+    ],
+    "correct_answer": "em",
+    "explanation": "'Morar' indica lugar onde se está: 'mora em São Paulo'.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela saiu ___ guarda-chuva e se molhou toda.",
+    "options": [
+      "com",
+      "sem",
+      "por",
+      "sob"
+    ],
+    "correct_answer": "sem",
+    "explanation": "A ideia é de ausência: 'sem guarda-chuva'.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: O gato dormiu ___ a mesa, protegido do sol.",
+    "options": [
+      "sobre",
+      "ante",
+      "sob",
+      "após"
+    ],
+    "correct_answer": "sob",
+    "explanation": "'Sob' indica posição inferior, embaixo de algo.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: O avião voou ___ o oceano.",
+    "options": [
+      "sob",
+      "ante",
+      "contra",
+      "sobre"
+    ],
+    "correct_answer": "sobre",
+    "explanation": "'Sobre' indica posição superior, por cima.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Assinale a alternativa que contém apenas preposições essenciais.",
+    "options": [
+      "a, com, de, em",
+      "porém, mas, e, ou",
+      "que, se, quando, como",
+      "logo, pois, porque, assim"
+    ],
+    "correct_answer": "a, com, de, em",
+    "explanation": "'A', 'com', 'de' e 'em' são preposições essenciais; as demais alternativas trazem conjunções.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "A contração da preposição 'em' com o artigo 'a' é:",
+    "options": [
+      "no",
+      "na",
+      "da",
+      "ná"
+    ],
+    "correct_answer": "na",
+    "explanation": "em + a = na.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "A contração da preposição 'de' com o artigo 'o' é:",
+    "options": [
+      "da",
+      "de o",
+      "do",
+      "dô"
+    ],
+    "correct_answer": "do",
+    "explanation": "de + o = do.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "A combinação da preposição 'a' com o artigo 'o' é:",
+    "options": [
+      "à",
+      "aos",
+      "ó",
+      "ao"
+    ],
+    "correct_answer": "ao",
+    "explanation": "a + o = ao.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "A contração da preposição 'por' com o artigo 'as' é:",
+    "options": [
+      "pelas",
+      "pelos",
+      "pela",
+      "por as"
+    ],
+    "correct_answer": "pelas",
+    "explanation": "por + as = pelas.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "A contração da preposição 'de' com o pronome 'aquele' é:",
+    "options": [
+      "d'aquele",
+      "daquele",
+      "de aquele",
+      "deaquele"
+    ],
+    "correct_answer": "daquele",
+    "explanation": "de + aquele = daquele.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "A contração da preposição 'em' com o pronome 'isto' é:",
+    "options": [
+      "disto",
+      "em isto",
+      "nisto",
+      "nesto"
+    ],
+    "correct_answer": "nisto",
+    "explanation": "em + isto = nisto.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Em 'Viajei de ônibus', a preposição 'de' indica:",
+    "options": [
+      "causa",
+      "posse",
+      "tempo",
+      "meio"
+    ],
+    "correct_answer": "meio",
+    "explanation": "'De ônibus' expressa o meio de transporte.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ele tremia de frio', a preposição 'de' indica:",
+    "options": [
+      "causa",
+      "meio",
+      "posse",
+      "companhia"
+    ],
+    "correct_answer": "causa",
+    "explanation": "O frio é o motivo do tremor: relação de causa.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Em 'A casa de Maria', a preposição 'de' indica:",
+    "options": [
+      "meio",
+      "posse",
+      "causa",
+      "instrumento"
+    ],
+    "correct_answer": "posse",
+    "explanation": "Indica a quem a casa pertence: posse.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Em 'Saí com meus amigos', a preposição 'com' indica:",
+    "options": [
+      "instrumento",
+      "causa",
+      "companhia",
+      "meio"
+    ],
+    "correct_answer": "companhia",
+    "explanation": "Expressa quem acompanhou: companhia.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Em 'Cortou o pão com a faca', a preposição 'com' indica:",
+    "options": [
+      "companhia",
+      "causa",
+      "posse",
+      "instrumento"
+    ],
+    "correct_answer": "instrumento",
+    "explanation": "A faca é o objeto usado para cortar: instrumento.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Em 'Estudo para passar no concurso', a preposição 'para' indica:",
+    "options": [
+      "finalidade",
+      "causa",
+      "companhia",
+      "origem"
+    ],
+    "correct_answer": "finalidade",
+    "explanation": "Expressa o objetivo do estudo: finalidade.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Em 'Foi punido por chegar atrasado', a preposição 'por' indica:",
+    "options": [
+      "finalidade",
+      "causa",
+      "companhia",
+      "lugar"
+    ],
+    "correct_answer": "causa",
+    "explanation": "Chegar atrasado é o motivo da punição: causa.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: Moro perto ___ praia. (locução prepositiva)",
+    "options": [
+      "na",
+      "pela",
+      "da",
+      "à"
+    ],
+    "correct_answer": "da",
+    "explanation": "'Perto de' é locução prepositiva: de + a = da praia.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: Saímos apesar ___ chuva. (locução prepositiva)",
+    "options": [
+      "na",
+      "pela",
+      "com",
+      "da"
+    ],
+    "correct_answer": "da",
+    "explanation": "'Apesar de' é locução prepositiva: apesar da chuva.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: A reunião foi adiada devido ___ chuva. (locução prepositiva)",
+    "options": [
+      "à",
+      "a",
+      "na",
+      "pela"
+    ],
+    "correct_answer": "à",
+    "explanation": "'Devido a' é locução prepositiva: a + a chuva = à chuva.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: Estudou a fim ___ passar no concurso.",
+    "options": [
+      "da",
+      "de",
+      "por",
+      "em"
+    ],
+    "correct_answer": "de",
+    "explanation": "'A fim de' é locução prepositiva de finalidade.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ela mora aqui ___ 2010.",
+    "options": [
+      "até",
+      "por",
+      "desde",
+      "sob"
+    ],
+    "correct_answer": "desde",
+    "explanation": "'Desde' marca o ponto de partida no tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: Ficarei aqui ___ amanhã. (limite)",
+    "options": [
+      "desde",
+      "sob",
+      "sem",
+      "até"
+    ],
+    "correct_answer": "até",
+    "explanation": "'Até' marca o limite no tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 1,
+    "prompt": "Complete: Conversei ___ meu pai ontem.",
+    "options": [
+      "com",
+      "em",
+      "de",
+      "por"
+    ],
+    "correct_answer": "com",
+    "explanation": "'Conversar' pede a preposição 'com'.",
+    "age_reviewed": true,
+    "hints": [
+      "Leia a frase inteira e veja que relação a preposição estabelece entre as palavras.",
+      "Teste mentalmente cada alternativa no contexto: em geral só uma mantém o sentido."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele saiu ___ duas horas. (tempo passado)",
+    "options": [
+      "a",
+      "há",
+      "à",
+      "ah"
+    ],
+    "correct_answer": "há",
+    "explanation": "Para tempo já decorrido usa-se 'há' (verbo haver): 'saiu há duas horas'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Complete: Daqui ___ dois dias voltarei. (tempo futuro)",
+    "options": [
+      "há",
+      "à",
+      "a",
+      "ha"
+    ],
+    "correct_answer": "a",
+    "explanation": "Para tempo futuro usa-se a preposição 'a': 'daqui a dois dias'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à locução prepositiva de finalidade.",
+    "options": [
+      "Ela estudou afim de passar no concurso.",
+      "Ela estudou a fim que passasse no concurso.",
+      "Ela estudou afim que passasse no concurso.",
+      "Ela estudou a fim de passar no concurso."
+    ],
+    "correct_answer": "Ela estudou a fim de passar no concurso.",
+    "explanation": "A locução é 'a fim de' (separada) e liga-se a verbo no infinitivo.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Complete: A chave caiu ___ o sofá e não conseguimos alcançá-la. (embaixo)",
+    "options": [
+      "sob",
+      "sobre",
+      "ante",
+      "perante"
+    ],
+    "correct_answer": "sob",
+    "explanation": "'Sob' indica posição inferior: embaixo do sofá.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Complete: O réu foi julgado ___ o tribunal. (diante de)",
+    "options": [
+      "após",
+      "perante",
+      "desde",
+      "contra"
+    ],
+    "correct_answer": "perante",
+    "explanation": "'Perante' equivale a 'diante de'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Complete: ___ a chuva, saímos para passear. (depois de)",
+    "options": [
+      "Ante",
+      "Sob",
+      "Após",
+      "Contra"
+    ],
+    "correct_answer": "Após",
+    "explanation": "'Após' indica posterioridade: depois da chuva.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Complete: Ele lutou ___ o inimigo. (oposição)",
+    "options": [
+      "desde",
+      "sem",
+      "trás",
+      "contra"
+    ],
+    "correct_answer": "contra",
+    "explanation": "'Contra' expressa oposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Complete: Os filhos ficaram ___ os pais. (posição intermediária)",
+    "options": [
+      "entre",
+      "sobre",
+      "perante",
+      "sem"
+    ],
+    "correct_answer": "entre",
+    "explanation": "'Entre' indica posição no meio de duas ou mais pessoas ou coisas.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Em 'Vim de São Paulo', a preposição 'de' indica:",
+    "options": [
+      "companhia",
+      "origem",
+      "instrumento",
+      "finalidade"
+    ],
+    "correct_answer": "origem",
+    "explanation": "Indica o ponto de partida: origem.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Em 'Ela caminhou por horas', a preposição 'por' indica:",
+    "options": [
+      "lugar",
+      "causa",
+      "tempo (duração)",
+      "instrumento"
+    ],
+    "correct_answer": "tempo (duração)",
+    "explanation": "'Por horas' expressa duração no tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Em 'Passei pela rua', a preposição 'por' indica:",
+    "options": [
+      "tempo",
+      "causa",
+      "finalidade",
+      "lugar (trajeto)"
+    ],
+    "correct_answer": "lugar (trajeto)",
+    "explanation": "Indica o caminho percorrido: lugar.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Assinale a alternativa em que TODAS as palavras são preposições essenciais.",
+    "options": [
+      "ante, após, até, perante",
+      "ante, após, até, porém",
+      "com, contra, mas, sem",
+      "de, desde, e, em"
+    ],
+    "correct_answer": "ante, após, até, perante",
+    "explanation": "Nas outras alternativas aparecem 'porém', 'mas' e 'e', que são conjunções.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à contração de preposição com artigo.",
+    "options": [
+      "Chegaram de a escola cansados.",
+      "Chegaram da escola cansados.",
+      "Chegaram d'a escola cansados.",
+      "Chegaram dâ escola cansados."
+    ],
+    "correct_answer": "Chegaram da escola cansados.",
+    "explanation": "de + a = da: a contração é obrigatória nesse contexto.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase correta quanto à locução prepositiva.",
+    "options": [
+      "Fiquei em casa por causa a chuva.",
+      "Fiquei em casa porcausa da chuva.",
+      "Fiquei em casa por causa da chuva.",
+      "Fiquei em casa por causa de a chuva."
+    ],
+    "correct_answer": "Fiquei em casa por causa da chuva.",
+    "explanation": "'Por causa de' é locução prepositiva; de + a = da.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 2,
+    "prompt": "Complete: O aluno chegou ___ tempo de fazer a prova.",
+    "options": [
+      "há",
+      "à",
+      "ah",
+      "a"
+    ],
+    "correct_answer": "a",
+    "explanation": "Locução 'a tempo': a preposição 'a' não leva crase nem é o verbo haver.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o sentido que a preposição dá à frase e o que vem antes e depois dela.",
+      "Compare as alternativas: quase sempre só uma cabe no contexto."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase em que a norma-padrão NÃO admite a contração da preposição com o artigo.",
+    "options": [
+      "Está na hora de o professor começar a aula.",
+      "Está na hora do professor começar a aula.",
+      "Está na hora d'o professor começar a aula.",
+      "Está na hora de o professor começarem a aula."
+    ],
+    "correct_answer": "Está na hora de o professor começar a aula.",
+    "explanation": "O artigo integra o sujeito do infinitivo ('o professor começar'): não se contrai 'de + o'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Em 'Fiquei sem dinheiro', a preposição 'sem' indica:",
+    "options": [
+      "companhia",
+      "ausência (privação)",
+      "instrumento",
+      "posse"
+    ],
+    "correct_answer": "ausência (privação)",
+    "explanation": "'Sem' expressa falta ou ausência de algo.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Em 'Pintou a parede a pincel', a preposição 'a' indica:",
+    "options": [
+      "lugar",
+      "tempo",
+      "instrumento",
+      "destino"
+    ],
+    "correct_answer": "instrumento",
+    "explanation": "'A pincel' expressa o objeto com que se pinta.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Em 'Deu o livro ao professor', a preposição 'a' (em 'ao') introduz o termo que expressa:",
+    "options": [
+      "lugar",
+      "instrumento",
+      "causa",
+      "destinatário"
+    ],
+    "correct_answer": "destinatário",
+    "explanation": "O professor é quem recebe o livro: destinatário.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase correta quanto à locução prepositiva 'a respeito de'.",
+    "options": [
+      "Conversamos a respeito do projeto.",
+      "Conversamos a respeito o projeto.",
+      "Conversamos a respeito ao projeto.",
+      "Conversamos à respeito do projeto."
+    ],
+    "correct_answer": "Conversamos a respeito do projeto.",
+    "explanation": "A locução é 'a respeito de', sem crase no 'a'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Assinale a frase em que 'ao invés de' está corretamente empregada.",
+    "options": [
+      "Ao invés de café, tomou chá.",
+      "Ao invés de subir, o preço caiu.",
+      "Ao invés de sair, decidiu passear.",
+      "Ao invés de estudar, foi ao cinema."
+    ],
+    "correct_answer": "Ao invés de subir, o preço caiu.",
+    "explanation": "'Ao invés de' indica oposição (subir x cair); nos demais casos o correto é 'em vez de'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Assinale a alternativa em que 'por' e 'pôr' estão empregados corretamente.",
+    "options": [
+      "Vou por o livro na mesa pôr segurança.",
+      "Vou pôr o livro na mesa pôr segurança.",
+      "Vou pôr o livro na mesa por segurança.",
+      "Vou por o livro na mesa por segurança."
+    ],
+    "correct_answer": "Vou pôr o livro na mesa por segurança.",
+    "explanation": "'Pôr' (com acento) é o verbo; 'por' (sem acento) é a preposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Em 'A casa de tijolos', a preposição 'de' indica:",
+    "options": [
+      "posse",
+      "tempo",
+      "causa",
+      "matéria"
+    ],
+    "correct_answer": "matéria",
+    "explanation": "'De tijolos' indica de que a casa é feita: matéria.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Em 'Falou durante a reunião', a palavra 'durante' é:",
+    "options": [
+      "preposição acidental",
+      "preposição essencial",
+      "conjunção",
+      "advérbio"
+    ],
+    "correct_answer": "preposição acidental",
+    "explanation": "'Durante' é palavra de outra classe (originalmente verbo) usada como preposição: acidental.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  },
+  {
+    "territory_id": "linguagem_preposicao",
+    "difficulty_level": 3,
+    "prompt": "Assinale a alternativa em que todas as palavras são preposições acidentais.",
+    "options": [
+      "segundo, com, sob, exceto",
+      "segundo, conforme, mediante, exceto",
+      "conforme, contra, entre, salvo",
+      "durante, ante, após, mediante"
+    ],
+    "correct_answer": "segundo, conforme, mediante, exceto",
+    "explanation": "Nas demais aparecem preposições essenciais (com, sob, contra, entre, ante, após).",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique a classe ou o valor da palavra pelo papel que ela desempenha na frase.",
+      "Elimine as alternativas com grafia ou emprego que a norma-padrão não aceita."
+    ]
+  }
+]

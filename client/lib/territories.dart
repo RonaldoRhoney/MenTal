@@ -192,6 +192,7 @@ const List<String> kTerritoryIds = [
   'linguagem_regencia_nominal',
   'linguagem_colocacao_pronominal',
   'linguagem_pronomes',
+  'linguagem_preposicao',
 ];
 
 String territoryLabel(AppLocalizations l10n, String territoryId) {
@@ -304,6 +305,8 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryLinguagemColocacaoPronominal;
     case 'linguagem_pronomes':
       return l10n.territoryLinguagemPronomes;
+    case 'linguagem_preposicao':
+      return l10n.territoryLinguagemPreposicao;
     case 'futebol_origens':
       return l10n.territoryFutebolOrigens;
     case 'futebol_grandes_nomes':
