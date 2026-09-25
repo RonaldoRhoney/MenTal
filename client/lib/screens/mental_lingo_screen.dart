@@ -553,9 +553,12 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
           label: const Text('Cancelar'),
         );
       case _LingoState.answering:
+        // Botões um sobre o outro com respiro (achado de Rhoney, 25/09/2026:
+        // estavam colados quando o Wrap quebrava de linha, sem runSpacing).
         return Wrap(
           alignment: WrapAlignment.center,
           spacing: 12,
+          runSpacing: 14,
           children: [
             OutlinedButton.icon(
               key: const Key('mental_lingo_listen_answer_button'),
