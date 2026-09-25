@@ -3221,6 +3221,14 @@
   "@territoryLinguagemInterjeicoes": {
     "description": "Territory name — Linguagem grammar SubMundo: Interjeições"
   },
+  "territoryLinguagemSintaxe": "Sintaxe",
+  "@territoryLinguagemSintaxe": {
+    "description": "Territory name — Linguagem grammar SubMundo: Sintaxe"
+  },
+  "territoryLinguagemOracoesCoordenadasESubordinadas": "Orações Coordenadas e Subordinadas",
+  "@territoryLinguagemOracoesCoordenadasESubordinadas": {
+    "description": "Territory name — Linguagem grammar SubMundo: Orações Coordenadas e Subordinadas"
+  },
   "coachSubtitle": "Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.",
   "@coachSubtitle": {
     "description": "My_Mental_AI subtitle"

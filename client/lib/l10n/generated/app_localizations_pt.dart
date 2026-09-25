@@ -2342,6 +2342,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryLinguagemInterjeicoes => 'Interjeições';
 
   @override
+  String get territoryLinguagemSintaxe => 'Sintaxe';
+
+  @override
+  String get territoryLinguagemOracoesCoordenadasESubordinadas =>
+      'Orações Coordenadas e Subordinadas';
+
+  @override
   String get coachSubtitle =>
       'Análise automática do seu desempenho: onde você vai melhor, onde focar e como aproveitar melhor o app.';
 

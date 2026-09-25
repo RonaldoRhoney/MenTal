@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Os alunos chegaram', o sujeito é:",
+    "options": [
+      "Os alunos",
+      "chegaram",
+      "Os",
+      "chegaram os"
+    ],
+    "correct_answer": "Os alunos",
+    "explanation": "Quem pratica a ação de chegar? 'Os alunos': sujeito simples.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Choveu ontem', a oração é:",
+    "options": [
+      "com sujeito simples",
+      "sem sujeito",
+      "com sujeito composto",
+      "com sujeito oculto"
+    ],
+    "correct_answer": "sem sujeito",
+    "explanation": "Verbo que indica fenômeno da natureza forma oração sem sujeito.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Cheguei cedo', o sujeito é:",
+    "options": [
+      "simples",
+      "indeterminado",
+      "oculto (eu)",
+      "inexistente"
+    ],
+    "correct_answer": "oculto (eu)",
+    "explanation": "O sujeito 'eu' não aparece, mas a desinência verbal o identifica: sujeito oculto.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Maria e João viajaram', o sujeito é:",
+    "options": [
+      "simples",
+      "oculto",
+      "indeterminado",
+      "composto"
+    ],
+    "correct_answer": "composto",
+    "explanation": "Há dois núcleos: Maria e João.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Precisa-se de motoristas', o sujeito é:",
+    "options": [
+      "indeterminado",
+      "simples",
+      "composto",
+      "oculto"
+    ],
+    "correct_answer": "indeterminado",
+    "explanation": "Verbo transitivo indireto + 'se': sujeito indeterminado.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Comprei um livro', 'um livro' é:",
+    "options": [
+      "objeto indireto",
+      "objeto direto",
+      "adjunto adverbial",
+      "predicativo"
+    ],
+    "correct_answer": "objeto direto",
+    "explanation": "Completa o verbo 'comprei' sem preposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Obedeci ao professor', 'ao professor' é:",
+    "options": [
+      "objeto direto",
+      "adjunto adverbial",
+      "objeto indireto",
+      "agente da passiva"
+    ],
+    "correct_answer": "objeto indireto",
+    "explanation": "Completa o verbo com preposição 'a'.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ela é médica', o predicado é:",
+    "options": [
+      "verbal",
+      "verbo-nominal",
+      "inexistente",
+      "nominal"
+    ],
+    "correct_answer": "nominal",
+    "explanation": "Verbo de ligação + predicativo do sujeito.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'O menino correu', o predicado é:",
+    "options": [
+      "verbal",
+      "nominal",
+      "verbo-nominal",
+      "inexistente"
+    ],
+    "correct_answer": "verbal",
+    "explanation": "O núcleo é um verbo de ação.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ele chegou cansado', o predicado é:",
+    "options": [
+      "nominal",
+      "verbo-nominal",
+      "verbal",
+      "inexistente"
+    ],
+    "correct_answer": "verbo-nominal",
+    "explanation": "Tem verbo de ação e predicativo do sujeito ao mesmo tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ela é médica', o verbo 'é' é:",
+    "options": [
+      "transitivo direto",
+      "intransitivo",
+      "de ligação",
+      "transitivo indireto"
+    ],
+    "correct_answer": "de ligação",
+    "explanation": "Liga o sujeito a uma característica.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ele dorme', o verbo 'dorme' é:",
+    "options": [
+      "transitivo direto",
+      "transitivo indireto",
+      "de ligação",
+      "intransitivo"
+    ],
+    "correct_answer": "intransitivo",
+    "explanation": "Tem sentido completo, sem complemento.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Li o jornal', o verbo 'li' é:",
+    "options": [
+      "transitivo direto",
+      "intransitivo",
+      "transitivo indireto",
+      "de ligação"
+    ],
+    "correct_answer": "transitivo direto",
+    "explanation": "Pede complemento sem preposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Confio em você', o verbo 'confio' é:",
+    "options": [
+      "transitivo direto",
+      "transitivo indireto",
+      "intransitivo",
+      "de ligação"
+    ],
+    "correct_answer": "transitivo indireto",
+    "explanation": "Pede complemento com preposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Entreguei o livro ao aluno', o verbo 'entreguei' é:",
+    "options": [
+      "transitivo direto",
+      "intransitivo",
+      "transitivo direto e indireto",
+      "de ligação"
+    ],
+    "correct_answer": "transitivo direto e indireto",
+    "explanation": "Tem objeto direto (o livro) e indireto (ao aluno).",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'A casa de tijolos', 'de tijolos' é:",
+    "options": [
+      "adjunto adverbial",
+      "objeto indireto",
+      "aposto",
+      "adjunto adnominal"
+    ],
+    "correct_answer": "adjunto adnominal",
+    "explanation": "Caracteriza o substantivo 'casa'.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Chegou ontem', 'ontem' é:",
+    "options": [
+      "adjunto adverbial",
+      "adjunto adnominal",
+      "objeto direto",
+      "predicativo"
+    ],
+    "correct_answer": "adjunto adverbial",
+    "explanation": "Indica circunstância de tempo.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Pedro, o aluno, chegou', 'o aluno' é:",
+    "options": [
+      "vocativo",
+      "aposto",
+      "adjunto adnominal",
+      "predicativo"
+    ],
+    "correct_answer": "aposto",
+    "explanation": "Explica o termo 'Pedro'.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Maria, venha aqui', 'Maria' é:",
+    "options": [
+      "aposto",
+      "sujeito",
+      "vocativo",
+      "objeto direto"
+    ],
+    "correct_answer": "vocativo",
+    "explanation": "Chama o interlocutor.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ela ficou feliz', 'feliz' é:",
+    "options": [
+      "objeto direto",
+      "adjunto adnominal",
+      "aposto",
+      "predicativo do sujeito"
+    ],
+    "correct_answer": "predicativo do sujeito",
+    "explanation": "Indica estado do sujeito, com verbo de ligação.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'O livro foi lido pelo aluno', 'pelo aluno' é:",
+    "options": [
+      "agente da passiva",
+      "objeto direto",
+      "adjunto adnominal",
+      "predicativo"
+    ],
+    "correct_answer": "agente da passiva",
+    "explanation": "Quem pratica a ação na voz passiva.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Tenho medo de barata', 'de barata' é:",
+    "options": [
+      "objeto indireto",
+      "complemento nominal",
+      "adjunto adverbial",
+      "aposto"
+    ],
+    "correct_answer": "complemento nominal",
+    "explanation": "Completa o sentido do substantivo abstrato 'medo'.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Há muitos problemas', a oração é:",
+    "options": [
+      "com sujeito simples",
+      "com sujeito composto",
+      "sem sujeito",
+      "com sujeito indeterminado"
+    ],
+    "correct_answer": "sem sujeito",
+    "explanation": "'Haver' no sentido de existir é impessoal.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'Os livros foram vendidos', a voz é:",
+    "options": [
+      "ativa",
+      "reflexiva",
+      "neutra",
+      "passiva"
+    ],
+    "correct_answer": "passiva",
+    "explanation": "O sujeito sofre a ação.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 1,
+    "prompt": "Em 'O aluno leu o livro', a voz é:",
+    "options": [
+      "ativa",
+      "passiva",
+      "reflexiva",
+      "neutra"
+    ],
+    "correct_answer": "ativa",
+    "explanation": "O sujeito pratica a ação.",
+    "age_reviewed": true,
+    "hints": [
+      "Faça as perguntas clássicas: quem pratica a ação? o que ou a quem a ação atinge? em que circunstância?",
+      "Identifique primeiro o verbo e depois o que se liga a ele."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Vende-se casa', 'casa' é:",
+    "options": [
+      "objeto direto",
+      "sujeito",
+      "predicativo",
+      "adjunto adnominal"
+    ],
+    "correct_answer": "sujeito",
+    "explanation": "Verbo transitivo direto + 'se' apassivador: 'casa' é sujeito paciente.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Assiste-se a bons filmes', o sujeito é:",
+    "options": [
+      "simples",
+      "composto",
+      "indeterminado",
+      "oculto"
+    ],
+    "correct_answer": "indeterminado",
+    "explanation": "Verbo transitivo indireto + 'se': sujeito indeterminado.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Fazia dois anos que ele partira', a oração 'Fazia dois anos' é:",
+    "options": [
+      "com sujeito simples",
+      "com sujeito indeterminado",
+      "com sujeito oculto",
+      "sem sujeito"
+    ],
+    "correct_answer": "sem sujeito",
+    "explanation": "'Fazer' indicando tempo decorrido é impessoal.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Chamaram-no de gênio', 'de gênio' é:",
+    "options": [
+      "predicativo do objeto",
+      "objeto indireto",
+      "adjunto adverbial",
+      "agente da passiva"
+    ],
+    "correct_answer": "predicativo do objeto",
+    "explanation": "Atribui uma qualidade ao objeto 'o' (no).",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'O povo elegeu-o presidente', 'presidente' é:",
+    "options": [
+      "predicativo do sujeito",
+      "predicativo do objeto",
+      "objeto direto",
+      "aposto"
+    ],
+    "correct_answer": "predicativo do objeto",
+    "explanation": "Atribui uma condição ao objeto 'o'.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Preciso de ajuda', 'de ajuda' é:",
+    "options": [
+      "objeto direto",
+      "adjunto adverbial",
+      "objeto indireto",
+      "complemento nominal"
+    ],
+    "correct_answer": "objeto indireto",
+    "explanation": "'Precisar' pede a preposição 'de'.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Gosto de música', 'de música' é:",
+    "options": [
+      "objeto direto",
+      "adjunto adverbial",
+      "complemento nominal",
+      "objeto indireto"
+    ],
+    "correct_answer": "objeto indireto",
+    "explanation": "'Gostar' pede a preposição 'de'.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Ele me viu', 'me' é:",
+    "options": [
+      "objeto direto",
+      "objeto indireto",
+      "sujeito",
+      "adjunto adverbial"
+    ],
+    "correct_answer": "objeto direto",
+    "explanation": "'Ver' é transitivo direto: quem é visto é 'me'.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Ela me deu um presente', 'me' é:",
+    "options": [
+      "objeto direto",
+      "objeto indireto",
+      "sujeito",
+      "adjunto adverbial"
+    ],
+    "correct_answer": "objeto indireto",
+    "explanation": "'Dar' pede objeto direto (um presente) e indireto (a mim).",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Amor à pátria', 'à pátria' é:",
+    "options": [
+      "adjunto adnominal",
+      "objeto indireto",
+      "complemento nominal",
+      "aposto"
+    ],
+    "correct_answer": "complemento nominal",
+    "explanation": "Completa o substantivo abstrato 'amor' (ação sofrida).",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'A casa de Maria', 'de Maria' é:",
+    "options": [
+      "complemento nominal",
+      "objeto indireto",
+      "agente da passiva",
+      "adjunto adnominal"
+    ],
+    "correct_answer": "adjunto adnominal",
+    "explanation": "Indica posse: caracteriza o substantivo concreto 'casa'.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'A construção da ponte demorou', 'da ponte' é:",
+    "options": [
+      "complemento nominal",
+      "adjunto adnominal",
+      "objeto direto",
+      "agente da passiva"
+    ],
+    "correct_answer": "complemento nominal",
+    "explanation": "A ponte é o que sofre a ação de construir.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Em 'Choveu durante a noite', 'durante a noite' é:",
+    "options": [
+      "adjunto adnominal",
+      "adjunto adverbial de tempo",
+      "objeto indireto",
+      "predicativo"
+    ],
+    "correct_answer": "adjunto adverbial de tempo",
+    "explanation": "Indica o tempo em que a ação ocorreu.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "O sujeito de 'Nasceram flores no jardim' é:",
+    "options": [
+      "no jardim",
+      "jardim",
+      "flores",
+      "oculto"
+    ],
+    "correct_answer": "flores",
+    "explanation": "O sujeito vem depois do verbo (posposto): 'flores'.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 2,
+    "prompt": "Passando 'O ladrão foi preso pela polícia' para a voz ativa, tem-se:",
+    "options": [
+      "A polícia foi presa pelo ladrão.",
+      "O ladrão prendeu a polícia.",
+      "Prenderam a polícia o ladrão.",
+      "A polícia prendeu o ladrão."
+    ],
+    "correct_answer": "A polícia prendeu o ladrão.",
+    "explanation": "O agente da passiva vira sujeito e o sujeito paciente vira objeto direto.",
+    "age_reviewed": true,
+    "hints": [
+      "Verifique se o verbo pede complemento com ou sem preposição.",
+      "Compare substantivo abstrato (complemento) com termo que só especifica ou caracteriza (adjunto)."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Vão-se os anéis', o sujeito é:",
+    "options": [
+      "os anéis",
+      "se",
+      "vão",
+      "oculto"
+    ],
+    "correct_answer": "os anéis",
+    "explanation": "O sujeito está posposto: 'os anéis' (o verbo concorda com ele).",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Trata-se de um erro', o sujeito é:",
+    "options": [
+      "um erro",
+      "indeterminado",
+      "de um erro",
+      "simples"
+    ],
+    "correct_answer": "indeterminado",
+    "explanation": "Verbo transitivo indireto + 'se': sujeito indeterminado.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Isso me parece justo', 'justo' é:",
+    "options": [
+      "predicativo do objeto",
+      "objeto direto",
+      "predicativo do sujeito",
+      "adjunto adnominal"
+    ],
+    "correct_answer": "predicativo do sujeito",
+    "explanation": "'Parecer' é de ligação: 'justo' caracteriza o sujeito 'isso'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Ele considera o filho inteligente', 'inteligente' é:",
+    "options": [
+      "predicativo do sujeito",
+      "adjunto adnominal",
+      "objeto indireto",
+      "predicativo do objeto"
+    ],
+    "correct_answer": "predicativo do objeto",
+    "explanation": "Atribui qualidade ao objeto 'o filho'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Ela sonhou com o mar', 'com o mar' é:",
+    "options": [
+      "objeto indireto",
+      "adjunto adverbial",
+      "objeto direto",
+      "complemento nominal"
+    ],
+    "correct_answer": "objeto indireto",
+    "explanation": "'Sonhar com' pede complemento com preposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Ele chegou a São Paulo', 'a São Paulo' é:",
+    "options": [
+      "objeto indireto",
+      "adjunto adverbial de lugar",
+      "objeto direto",
+      "predicativo"
+    ],
+    "correct_answer": "adjunto adverbial de lugar",
+    "explanation": "'Chegar' é intransitivo; o termo indica circunstância de lugar.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Ele foi eleito presidente', 'presidente' é:",
+    "options": [
+      "predicativo do objeto",
+      "objeto direto",
+      "predicativo do sujeito",
+      "aposto"
+    ],
+    "correct_answer": "predicativo do sujeito",
+    "explanation": "Na voz passiva, o predicativo do objeto vira predicativo do sujeito.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'A mãe de Ana chegou', 'de Ana' é:",
+    "options": [
+      "complemento nominal",
+      "objeto indireto",
+      "agente da passiva",
+      "adjunto adnominal"
+    ],
+    "correct_answer": "adjunto adnominal",
+    "explanation": "Especifica o substantivo 'mãe'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Ninguém lhe pagou', 'lhe' é:",
+    "options": [
+      "objeto indireto",
+      "objeto direto",
+      "sujeito",
+      "adjunto adverbial"
+    ],
+    "correct_answer": "objeto indireto",
+    "explanation": "'Pagar a alguém': 'lhe' é objeto indireto.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_sintaxe",
+    "difficulty_level": 3,
+    "prompt": "Em 'Choveu muito', o verbo 'chover' é:",
+    "options": [
+      "transitivo direto",
+      "impessoal",
+      "de ligação",
+      "auxiliar"
+    ],
+    "correct_answer": "impessoal",
+    "explanation": "Verbo de fenômeno da natureza não tem sujeito: é impessoal.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise o verbo e o termo destacado antes de escolher: transitividade e preposição decidem a função.",
+      "Elimine as funções que exigem verbo de ligação quando o verbo da frase não é de ligação."
+    ]
+  }
+]

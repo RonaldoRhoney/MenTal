@@ -4066,6 +4066,18 @@ abstract class AppLocalizations {
   /// **'Interjeições'**
   String get territoryLinguagemInterjeicoes;
 
+  /// Territory name — Linguagem grammar SubMundo: Sintaxe
+  ///
+  /// In pt, this message translates to:
+  /// **'Sintaxe'**
+  String get territoryLinguagemSintaxe;
+
+  /// Territory name — Linguagem grammar SubMundo: Orações Coordenadas e Subordinadas
+  ///
+  /// In pt, this message translates to:
+  /// **'Orações Coordenadas e Subordinadas'**
+  String get territoryLinguagemOracoesCoordenadasESubordinadas;
+
   /// My_Mental_AI subtitle
   ///
   /// In pt, this message translates to:

@@ -95,13 +95,13 @@
       "slug": "sintaxe",
       "nome": "Sintaxe",
       "ordem_producao": 9,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "oracoes_coordenadas_e_subordinadas",
       "nome": "Orações Coordenadas e Subordinadas",
       "ordem_producao": 9,
-      "status": "planejado"
+      "status": "ativo"
     },
     {
       "slug": "semantica",

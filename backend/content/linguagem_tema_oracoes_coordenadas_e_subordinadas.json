@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Estudei e passei', a oração 'e passei' é coordenada sindética:",
+    "options": [
+      "aditiva",
+      "adversativa",
+      "alternativa",
+      "conclusiva"
+    ],
+    "correct_answer": "aditiva",
+    "explanation": "'E' soma ideias.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Não fui nem liguei', a oração 'nem liguei' é coordenada sindética:",
+    "options": [
+      "adversativa",
+      "aditiva",
+      "alternativa",
+      "explicativa"
+    ],
+    "correct_answer": "aditiva",
+    "explanation": "'Nem' soma ideias negativas.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Estudei, mas não passei', a oração 'mas não passei' é coordenada sindética:",
+    "options": [
+      "aditiva",
+      "alternativa",
+      "adversativa",
+      "conclusiva"
+    ],
+    "correct_answer": "adversativa",
+    "explanation": "'Mas' expressa oposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Queria sair, contudo não pude', a oração 'contudo não pude' é coordenada sindética:",
+    "options": [
+      "aditiva",
+      "alternativa",
+      "explicativa",
+      "adversativa"
+    ],
+    "correct_answer": "adversativa",
+    "explanation": "'Contudo' expressa oposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ou você estuda, ou perde o ano', a oração é coordenada sindética:",
+    "options": [
+      "alternativa",
+      "aditiva",
+      "adversativa",
+      "conclusiva"
+    ],
+    "correct_answer": "alternativa",
+    "explanation": "'Ou... ou' exprime escolha entre possibilidades.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ora ri, ora chora', as orações são coordenadas sindéticas:",
+    "options": [
+      "aditivas",
+      "alternativas",
+      "adversativas",
+      "conclusivas"
+    ],
+    "correct_answer": "alternativas",
+    "explanation": "'Ora... ora' indica alternância.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Penso, logo existo', a oração 'logo existo' é coordenada sindética:",
+    "options": [
+      "aditiva",
+      "adversativa",
+      "conclusiva",
+      "explicativa"
+    ],
+    "correct_answer": "conclusiva",
+    "explanation": "'Logo' introduz conclusão.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Estudou muito, portanto passou', a oração 'portanto passou' é coordenada sindética:",
+    "options": [
+      "aditiva",
+      "adversativa",
+      "alternativa",
+      "conclusiva"
+    ],
+    "correct_answer": "conclusiva",
+    "explanation": "'Portanto' introduz conclusão.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Estude, pois a prova é difícil', a oração 'pois a prova é difícil' é coordenada sindética:",
+    "options": [
+      "explicativa",
+      "aditiva",
+      "adversativa",
+      "conclusiva"
+    ],
+    "correct_answer": "explicativa",
+    "explanation": "'Pois' antes da oração explica o motivo do pedido.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Cheguei, vi, venci', as orações são coordenadas:",
+    "options": [
+      "sindéticas aditivas",
+      "assindéticas",
+      "sindéticas adversativas",
+      "subordinadas"
+    ],
+    "correct_answer": "assindéticas",
+    "explanation": "Não há conjunção ligando as orações.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Saí porque estava cansado', a oração 'porque estava cansado' é subordinada adverbial:",
+    "options": [
+      "condicional",
+      "final",
+      "causal",
+      "temporal"
+    ],
+    "correct_answer": "causal",
+    "explanation": "Indica a causa de 'sair'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Se chover, ficarei em casa', a oração 'Se chover' é subordinada adverbial:",
+    "options": [
+      "causal",
+      "final",
+      "temporal",
+      "condicional"
+    ],
+    "correct_answer": "condicional",
+    "explanation": "Indica a condição para 'ficar em casa'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Embora estivesse cansado, saiu', a oração 'Embora estivesse cansado' é subordinada adverbial:",
+    "options": [
+      "concessiva",
+      "causal",
+      "condicional",
+      "final"
+    ],
+    "correct_answer": "concessiva",
+    "explanation": "Indica uma ideia contrária que não impediu o fato.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Quando cheguei, ela saiu', a oração 'Quando cheguei' é subordinada adverbial:",
+    "options": [
+      "causal",
+      "temporal",
+      "condicional",
+      "final"
+    ],
+    "correct_answer": "temporal",
+    "explanation": "Indica o tempo em que ocorreu o fato.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Estude para que passe', a oração 'para que passe' é subordinada adverbial:",
+    "options": [
+      "causal",
+      "condicional",
+      "final",
+      "temporal"
+    ],
+    "correct_answer": "final",
+    "explanation": "Indica a finalidade do estudo.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ele é tão alto que bate a cabeça', a oração 'que bate a cabeça' é subordinada adverbial:",
+    "options": [
+      "causal",
+      "condicional",
+      "final",
+      "consecutiva"
+    ],
+    "correct_answer": "consecutiva",
+    "explanation": "Indica a consequência da intensidade anterior.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Fez conforme combinaram', a oração 'conforme combinaram' é subordinada adverbial:",
+    "options": [
+      "conformativa",
+      "causal",
+      "condicional",
+      "final"
+    ],
+    "correct_answer": "conformativa",
+    "explanation": "Indica conformidade com algo.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Quero que você venha', a oração 'que você venha' é subordinada substantiva:",
+    "options": [
+      "subjetiva",
+      "objetiva direta",
+      "predicativa",
+      "apositiva"
+    ],
+    "correct_answer": "objetiva direta",
+    "explanation": "Completa o verbo 'querer' sem preposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'É preciso que todos colaborem', a oração 'que todos colaborem' é subordinada substantiva:",
+    "options": [
+      "objetiva direta",
+      "predicativa",
+      "subjetiva",
+      "apositiva"
+    ],
+    "correct_answer": "subjetiva",
+    "explanation": "Funciona como sujeito de 'é preciso'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'O livro que li é bom', a oração 'que li' é subordinada:",
+    "options": [
+      "adjetiva explicativa",
+      "adverbial causal",
+      "substantiva subjetiva",
+      "adjetiva restritiva"
+    ],
+    "correct_answer": "adjetiva restritiva",
+    "explanation": "Restringe o substantivo 'livro' e não vem entre vírgulas.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Ana, que é médica, chegou', a oração 'que é médica' é subordinada:",
+    "options": [
+      "adjetiva explicativa",
+      "adjetiva restritiva",
+      "adverbial causal",
+      "substantiva subjetiva"
+    ],
+    "correct_answer": "adjetiva explicativa",
+    "explanation": "Explica 'Ana' e vem entre vírgulas.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Tenho certeza de que ele virá', a oração 'de que ele virá' é subordinada substantiva:",
+    "options": [
+      "objetiva direta",
+      "completiva nominal",
+      "subjetiva",
+      "predicativa"
+    ],
+    "correct_answer": "completiva nominal",
+    "explanation": "Completa o substantivo abstrato 'certeza'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Meu desejo é que você seja feliz', a oração 'que você seja feliz' é subordinada substantiva:",
+    "options": [
+      "subjetiva",
+      "objetiva direta",
+      "predicativa",
+      "apositiva"
+    ],
+    "correct_answer": "predicativa",
+    "explanation": "Funciona como predicativo do sujeito 'desejo'.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Só peço isto: que me escute', a oração 'que me escute' é subordinada substantiva:",
+    "options": [
+      "subjetiva",
+      "objetiva direta",
+      "predicativa",
+      "apositiva"
+    ],
+    "correct_answer": "apositiva",
+    "explanation": "Explica o termo 'isto' (aposto).",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 1,
+    "prompt": "Em 'Preciso de que me ajude', a oração 'de que me ajude' é subordinada substantiva:",
+    "options": [
+      "objetiva indireta",
+      "objetiva direta",
+      "subjetiva",
+      "apositiva"
+    ],
+    "correct_answer": "objetiva indireta",
+    "explanation": "Completa o verbo 'precisar' com preposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Identifique o verbo de cada oração e a palavra que as liga (conjunção ou pronome).",
+      "Veja se uma oração depende da outra para ter sentido completo."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Estude, pois tem prova amanhã', a conjunção 'pois' é:",
+    "options": [
+      "coordenativa conclusiva",
+      "coordenativa explicativa",
+      "subordinativa causal",
+      "subordinativa final"
+    ],
+    "correct_answer": "coordenativa explicativa",
+    "explanation": "Antes do verbo, 'pois' explica o pedido anterior.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Ele está doente; não irá, pois, à festa', a conjunção 'pois' é:",
+    "options": [
+      "coordenativa explicativa",
+      "subordinativa causal",
+      "coordenativa conclusiva",
+      "coordenativa aditiva"
+    ],
+    "correct_answer": "coordenativa conclusiva",
+    "explanation": "Depois do verbo, entre vírgulas, 'pois' conclui.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Assinale a frase que contém oração coordenada sindética adversativa.",
+    "options": [
+      "Embora chovesse, saímos.",
+      "Saímos porque chovia.",
+      "Se chover, saímos.",
+      "Choveu, mas saímos."
+    ],
+    "correct_answer": "Choveu, mas saímos.",
+    "explanation": "'Mas' liga orações independentes com ideia de oposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Saí sem que ele visse', a oração 'sem que ele visse' é subordinada adverbial:",
+    "options": [
+      "modal",
+      "final",
+      "temporal",
+      "causal"
+    ],
+    "correct_answer": "modal",
+    "explanation": "Indica o modo como a ação ocorreu.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'À medida que estuda, aprende mais', a oração 'À medida que estuda' é subordinada adverbial:",
+    "options": [
+      "causal",
+      "proporcional",
+      "condicional",
+      "final"
+    ],
+    "correct_answer": "proporcional",
+    "explanation": "Indica proporção entre duas ações.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Ele fala como se soubesse tudo', a oração 'como se soubesse tudo' é subordinada adverbial:",
+    "options": [
+      "causal",
+      "final",
+      "comparativa",
+      "temporal"
+    ],
+    "correct_answer": "comparativa",
+    "explanation": "Compara a fala a algo hipotético.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Espero que ela venha', a oração 'que ela venha' é subordinada substantiva:",
+    "options": [
+      "subjetiva",
+      "predicativa",
+      "apositiva",
+      "objetiva direta"
+    ],
+    "correct_answer": "objetiva direta",
+    "explanation": "Completa o verbo 'esperar' sem preposição.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'O fato de que ele mentiu me chateou', a oração 'de que ele mentiu' é subordinada substantiva:",
+    "options": [
+      "completiva nominal",
+      "objetiva indireta",
+      "subjetiva",
+      "apositiva"
+    ],
+    "correct_answer": "completiva nominal",
+    "explanation": "Completa o substantivo 'fato'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'A verdade é que ele mentiu', a oração 'que ele mentiu' é subordinada substantiva:",
+    "options": [
+      "subjetiva",
+      "predicativa",
+      "objetiva direta",
+      "apositiva"
+    ],
+    "correct_answer": "predicativa",
+    "explanation": "É predicativo do sujeito 'a verdade' (verbo de ligação 'é').",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Não sei se ele virá', a oração 'se ele virá' é subordinada substantiva:",
+    "options": [
+      "subjetiva",
+      "predicativa",
+      "objetiva direta",
+      "apositiva"
+    ],
+    "correct_answer": "objetiva direta",
+    "explanation": "Completa o verbo 'saber'; 'se' é conjunção integrante.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'A cidade onde nasci é linda', a oração 'onde nasci' é subordinada:",
+    "options": [
+      "adjetiva explicativa",
+      "adverbial de lugar",
+      "substantiva objetiva",
+      "adjetiva restritiva"
+    ],
+    "correct_answer": "adjetiva restritiva",
+    "explanation": "'Onde' é pronome relativo e restringe o substantivo 'cidade'.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Ele, cujo pai é médico, viajou', a oração 'cujo pai é médico' é subordinada:",
+    "options": [
+      "adjetiva explicativa",
+      "adjetiva restritiva",
+      "adverbial causal",
+      "substantiva subjetiva"
+    ],
+    "correct_answer": "adjetiva explicativa",
+    "explanation": "'Cujo' é relativo e a oração vem entre vírgulas.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Como estava cansado, dormiu', a oração 'Como estava cansado' é subordinada adverbial:",
+    "options": [
+      "conformativa",
+      "causal",
+      "comparativa",
+      "final"
+    ],
+    "correct_answer": "causal",
+    "explanation": "'Como', no início do período, indica causa.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Ao chegar, ligou', a oração 'Ao chegar' é subordinada adverbial:",
+    "options": [
+      "final",
+      "substantiva subjetiva",
+      "temporal reduzida de infinitivo",
+      "coordenada"
+    ],
+    "correct_answer": "temporal reduzida de infinitivo",
+    "explanation": "Equivale a 'Quando chegou', com verbo no infinitivo.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 2,
+    "prompt": "Em 'Sabemos que ele mentiu', a palavra 'que' é:",
+    "options": [
+      "pronome relativo",
+      "pronome interrogativo",
+      "advérbio",
+      "conjunção integrante"
+    ],
+    "correct_answer": "conjunção integrante",
+    "explanation": "Introduz oração substantiva sem retomar termo anterior.",
+    "age_reviewed": true,
+    "hints": [
+      "Descubra a ideia que a conjunção exprime: soma, oposição, escolha, conclusão, explicação, causa, condição, tempo...",
+      "Compare o 'que' que apenas liga orações com o 'que' que substitui um termo da frase."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Em 'É necessário que se estude', a oração 'que se estude' é subordinada substantiva:",
+    "options": [
+      "subjetiva",
+      "objetiva direta",
+      "predicativa",
+      "apositiva"
+    ],
+    "correct_answer": "subjetiva",
+    "explanation": "Funciona como sujeito da expressão impessoal 'é necessário'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Em 'Ele quer estudar', a oração 'estudar' é subordinada substantiva:",
+    "options": [
+      "subjetiva reduzida de infinitivo",
+      "objetiva direta reduzida de infinitivo",
+      "predicativa",
+      "adverbial final"
+    ],
+    "correct_answer": "objetiva direta reduzida de infinitivo",
+    "explanation": "Completa 'querer' e tem verbo no infinitivo, sem conectivo.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Em 'Chegando em casa, jantou', a oração 'Chegando em casa' é subordinada adverbial:",
+    "options": [
+      "final reduzida de infinitivo",
+      "causal reduzida de particípio",
+      "temporal reduzida de gerúndio",
+      "coordenada"
+    ],
+    "correct_answer": "temporal reduzida de gerúndio",
+    "explanation": "Equivale a 'Quando chegou em casa', com verbo no gerúndio.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Em 'Terminado o trabalho, saiu', a oração 'Terminado o trabalho' é subordinada adverbial:",
+    "options": [
+      "final reduzida de infinitivo",
+      "causal reduzida de gerúndio",
+      "coordenada",
+      "temporal reduzida de particípio"
+    ],
+    "correct_answer": "temporal reduzida de particípio",
+    "explanation": "Equivale a 'Quando terminou o trabalho', com verbo no particípio.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Em 'Choveu tanto que a rua alagou', a oração 'que a rua alagou' é subordinada adverbial:",
+    "options": [
+      "consecutiva",
+      "causal",
+      "final",
+      "proporcional"
+    ],
+    "correct_answer": "consecutiva",
+    "explanation": "Indica a consequência da intensidade 'tanto'.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Em 'Quanto mais estuda, mais aprende', a oração 'Quanto mais estuda' é subordinada adverbial:",
+    "options": [
+      "causal",
+      "proporcional",
+      "comparativa",
+      "condicional"
+    ],
+    "correct_answer": "proporcional",
+    "explanation": "Indica proporção entre duas ações.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Em 'O livro que você trouxe é ótimo', a palavra 'que' é:",
+    "options": [
+      "conjunção integrante",
+      "pronome interrogativo",
+      "pronome relativo",
+      "advérbio"
+    ],
+    "correct_answer": "pronome relativo",
+    "explanation": "Retoma 'livro' e exerce função na oração (objeto direto de 'trouxe').",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Em 'Sei que você chegou', a palavra 'que' é:",
+    "options": [
+      "pronome relativo",
+      "pronome interrogativo",
+      "advérbio",
+      "conjunção integrante"
+    ],
+    "correct_answer": "conjunção integrante",
+    "explanation": "Introduz oração objetiva direta e não substitui termo.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "O período 'Estudei, mas não passei, porque faltei' é composto por:",
+    "options": [
+      "coordenação e subordinação",
+      "só coordenação",
+      "só subordinação",
+      "período simples"
+    ],
+    "correct_answer": "coordenação e subordinação",
+    "explanation": "'Mas' coordena; 'porque faltei' é subordinada adverbial causal.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  },
+  {
+    "territory_id": "linguagem_oracoes_coordenadas_e_subordinadas",
+    "difficulty_level": 3,
+    "prompt": "Assinale a alternativa em que há oração subordinada adjetiva explicativa.",
+    "options": [
+      "Os alunos que estudaram passaram.",
+      "Os alunos, que estudaram, passaram.",
+      "Sei que os alunos passaram.",
+      "Estudou para que passasse."
+    ],
+    "correct_answer": "Os alunos, que estudaram, passaram.",
+    "explanation": "A oração vem entre vírgulas e explica todos os alunos.",
+    "age_reviewed": true,
+    "hints": [
+      "Analise a forma do verbo (infinitivo, gerúndio, particípio) e a função da oração no período.",
+      "Elimine as classificações que não combinam com a conjunção ou com a pontuação."
+    ]
+  }
+]
