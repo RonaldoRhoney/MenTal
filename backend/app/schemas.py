@@ -1266,6 +1266,21 @@ class CoachOut(BaseModel):
     cards: list[CoachCardOut]
 
 
+class MentalLingoAskRequest(BaseModel):
+    """MENTAL LINGO (aprovado 23/09/2026, escopo V1 custo zero): `question`
+    já é o TEXTO transcrito no aparelho (speech_to_text) — o backend nunca
+    recebe áudio bruto."""
+
+    question: str = Field(min_length=1, max_length=300)
+
+
+class MentalLingoAskOut(BaseModel):
+    found: bool
+    answer_text: str
+    matched_word: str | None = None
+    target_language: str | None = None
+
+
 class WorldCoachOut(BaseModel):
     """My_Mental_AI dentro de um Mundo (23/09/2026) — um único cartão
     focado no desempenho do usuário NAQUELE Mundo, não a lista de 9 da

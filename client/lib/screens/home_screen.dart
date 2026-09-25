@@ -18,6 +18,7 @@ import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
 import 'coach_screen.dart';
+import 'mental_lingo_screen.dart';
 import 'feed_screen.dart';
 import 'feedback_screen.dart';
 import 'friends_screen.dart';
@@ -1756,6 +1757,11 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
+            // MENTAL LINGO (aprovado 23/09/2026): só no Mundo dos Idiomas —
+            // é o Mundo que ganha agente de voz PRÓPRIO em vez do card
+            // genérico do My_Mental_AI (_buildWorldCoachCard já pula
+            // 'idiomas' sozinho, ver _loadWorldCoach).
+            if (widget.worldId == 'idiomas') MentalLingoBanner(client: widget.client),
             _buildWorldCoachCard(l10n),
             ...widget.buildChildren(_handleReturned),
           ],

@@ -42,6 +42,14 @@
          14+ pra contagem de passos/dados de saúde. -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+    <!-- MENTAL LINGO (MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md, aprovado
+         23/09/2026): reconhecimento de fala NATIVO do aparelho (Android
+         SpeechRecognizer via pacote speech_to_text), pedida em runtime só
+         na primeira vez que o jogador toca em "Toque para falar" — nunca
+         no onboarding genérico, mesmo padrão de ACTIVITY_RECOGNITION
+         acima. Sem upload/gravação de áudio bruto: o reconhecimento
+         acontece no aparelho, o backend só recebe o TEXTO já transcrito. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application
         android:label="MENTAL"
         android:name="${applicationName}"
@@ -127,6 +135,14 @@
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
+        </intent>
+        <!-- MENTAL LINGO — visibilidade de pacote (Android 11+) pro
+             speech_to_text conseguir enxergar o serviço de reconhecimento
+             de fala já instalado no aparelho (Google/assistente do
+             fabricante); sem isso, isAvailable() pode voltar false mesmo
+             em aparelhos com reconhecimento de fala funcionando. -->
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
         </intent>
     </queries>
 </manifest>

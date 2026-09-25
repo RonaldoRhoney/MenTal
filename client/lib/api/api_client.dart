@@ -370,6 +370,17 @@ class ApiClient {
     return _get(_uri('/coach'), headers: _headers);
   }
 
+  // MENTAL LINGO (aprovado 23/09/2026, escopo V1 custo zero): `question`
+  // já é o texto transcrito NO APARELHO (speech_to_text) — nenhum áudio
+  // sai do client.
+  Future<Map<String, dynamic>> askMentalLingo(String question) async {
+    return _post(
+      _uri('/mental-lingo/ask'),
+      headers: _headers,
+      body: jsonEncode({'question': question}),
+    );
+  }
+
   // My_Mental_AI dentro de um Mundo (23/09/2026): um cartão só, focado no
   // desempenho do usuário naquele Mundo — nunca chamado para o Mundo dos
   // Idiomas (agente próprio "Mental Lingo", ainda não implementado).

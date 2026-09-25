@@ -47,6 +47,13 @@ dependencies:
   # suporte mais atual e melhor compatibilidade entre plataformas.
   youtube_player_iframe: ^5.2.1
   flutter_edge_tts: ^0.0.2
+  # MENTAL LINGO (MUNDO/Mundo_dos_Idiomas/Mental_Lingo/MENTAL_LINGO_
+  # ASSISTENTE_VOZ_V1.1.md, aprovado 23/09/2026 — escopo V1 100% custo
+  # zero): reconhecimento de fala NATIVO do aparelho (Android
+  # SpeechRecognizer por baixo), sem nenhum serviço de nuvem pago —
+  # mesma prioridade "gratuito primeiro" já usada na escolha do
+  # flutter_edge_tts pro Mundo dos Idiomas.
+  speech_to_text: ^7.5.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

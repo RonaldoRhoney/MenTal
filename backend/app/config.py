@@ -617,3 +617,10 @@ RATE_LIMIT_WORD_CONSTELLATION = (30, 60.0)
 
 # My_Mental_AI (agente do usuário): 1 análise a cada poucos segundos é mais que suficiente.
 RATE_LIMIT_COACH = (20, 60.0)
+
+# MENTAL LINGO (MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md, aprovado 23/09/2026):
+# uma pergunta de voz por vez, nunca fila de perguntas — 15/min é folga
+# suficiente pra uso normal (o client já impede nova pergunta antes da
+# resposta anterior terminar) e barra abuso de scraping do conteúdo
+# curado via chamadas diretas ao endpoint.
+RATE_LIMIT_MENTAL_LINGO = (15, 60.0)
