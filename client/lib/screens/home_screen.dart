@@ -370,6 +370,8 @@ class _HomeScreenState extends State<HomeScreen> {
       unawaited(MovementService.instance.updateNotificationPreview(
         stepsCollected: cycle['steps_collected'] as int,
         xpAwarded: cycle['xp_awarded'] as int,
+        cycleId: cycleId,
+        cycleEndAt: cycle['cycle_end_at'] as String?,
       ));
       await MovementService.instance.ensureBaselineFor(cycleId);
       final cachedLast = await MovementService.instance.lastKnownRawSteps();

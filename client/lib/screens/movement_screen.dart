@@ -158,6 +158,8 @@ class _MovementScreenState extends State<MovementScreen> {
         unawaited(MovementService.instance.updateNotificationPreview(
           stepsCollected: _currentCycle!['steps_collected'] as int,
           xpAwarded: _currentCycle!['xp_awarded'] as int,
+          cycleId: cycleId,
+          cycleEndAt: _currentCycle!['cycle_end_at'] as String?,
         ));
         await MovementService.instance.ensureBaselineFor(cycleId);
         final cachedLast = await MovementService.instance.lastKnownRawSteps();
@@ -259,6 +261,8 @@ class _MovementScreenState extends State<MovementScreen> {
       unawaited(MovementService.instance.updateNotificationPreview(
         stepsCollected: updatedCycle['steps_collected'] as int,
         xpAwarded: updatedCycle['xp_awarded'] as int,
+        cycleId: cycleId,
+        cycleEndAt: updatedCycle['cycle_end_at'] as String?,
       ));
       if (mounted) {
         setState(() {

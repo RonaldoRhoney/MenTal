@@ -30,6 +30,8 @@ class MovementTaskHandler extends TaskHandler {
     _sub = Pedometer.stepCountStream.listen(
       (event) async {
         await MovementService.instance.recordRawSteps(event.steps);
+        // Atualiza a notificação a cada 1500 passos sem o app aberto.
+        await MovementService.instance.maybeUpdateNotificationEstimate(event.steps);
         FlutterForegroundTask.sendDataToMain({'steps': event.steps});
       },
       onError: (_) {},

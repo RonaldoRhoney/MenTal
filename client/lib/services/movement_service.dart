@@ -5,6 +5,8 @@ import 'package:pedometer/pedometer.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../brasilia_time.dart';
+import 'movement_notification_math.dart';
 import 'movement_task_handler.dart';
 
 /// Limiar de "passos pendentes que já valem a pena mostrar um convite
@@ -367,16 +369,6 @@ class MovementService {
     } catch (_) {}
   }
 
-  // Mesma proporção de app/config.py MOVEMENT_STEPS_PER_MENTALCOIN/
-  // MOVEMENT_MENTALCOINS_PER_MILESTONE (backend é a única autoridade
-  // sobre a recompensa REAL — este valor só formata a prévia exibida
-  // aqui, nunca credita nada por conta própria). Conversão flat/linear,
-  // diferente do XP (que tem faixas — MOVEMENT_STEP_TIERS — por isso o
-  // XP da prévia usa sempre o xp_awarded que já veio do backend, nunca
-  // um cálculo local).
-  static const int _kStepsPerMentalCoin = 1000;
-  static const int _kMentalCoinsPerMilestone = 5;
-
   /// NOTIFICACAO_MOVIMENTO_PREVIA_V1.md — atualiza o texto da notificação
   /// persistente do Movimento com a prévia do que já foi ganho HOJE
   /// (stepsCollected/xpAwarded vêm sempre de MovementCycle.current_cycle,
@@ -386,22 +378,97 @@ class MovementService {
   /// GET /movement/status (Home e tela Movimento) — sem chamada de rede
   /// extra só pra isso. Sem-efeito se o serviço não estiver rodando
   /// (Movimento desativado, ou plataforma sem foreground service).
-  Future<void> updateNotificationPreview(
-      {required int stepsCollected, required int xpAwarded}) async {
+  static const _kPreviewSnapshotKey = 'movement_preview_snapshot_v1';
+  static const _kNotifBucketKey = 'movement_notif_bucket_v1';
+
+  Future<void> updateNotificationPreview({
+    required int stepsCollected,
+    required int xpAwarded,
+    String? cycleId,
+    String? cycleEndAt,
+  }) async {
     try {
+      // Guarda o retrato do servidor: é a base da estimativa que o serviço
+      // de segundo plano usa para atualizar a notificação a cada 1500
+      // passos SEM o app aberto (ver maybeUpdateNotificationEstimate).
+      if (cycleId != null) {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString(
+          _kPreviewSnapshotKey,
+          jsonEncode({
+            'cycle_id': cycleId,
+            'steps': stepsCollected,
+            'xp': xpAwarded,
+            'cycle_end_at': cycleEndAt,
+          }),
+        );
+        await prefs.setInt(_kNotifBucketKey, movementNotificationBucket(stepsCollected));
+      }
       if (!await FlutterForegroundTask.isRunningService) return;
-      final mentalCoinsToday =
-          (stepsCollected ~/ _kStepsPerMentalCoin) * _kMentalCoinsPerMilestone;
       await FlutterForegroundTask.updateService(
         notificationTitle: 'MENTAL — Movimento ativo',
         // Pedido de Rhoney (14/09/2026): passos também visíveis, não só
-        // os dois contadores derivados.
-        notificationText:
-            '🚶 ${formatSteps(stepsCollected)} passos · 🪙 $mentalCoinsToday MentalCoins · ⚡ $xpAwarded XP hoje',
+        // os dois contadores derivados. Valores CREDITADOS pelo servidor.
+        notificationText: movementNotificationText(
+          steps: stepsCollected,
+          coins: movementMentalCoinsFor(stepsCollected),
+          xp: xpAwarded,
+          estimated: false,
+        ),
       );
     } catch (_) {
       // Mesmo princípio de startForegroundTracking/stopForegroundTracking
       // acima — a prévia é só reforço visual, nunca pode derrubar o app.
+    }
+  }
+
+  /// Pedido de Rhoney (26/09/2026): a notificação deve atualizar a cada 1500
+  /// passos SEM abrir o app. Chamado pelo serviço de segundo plano (outro
+  /// isolate) a cada leitura do sensor. Só LÊ o estado do app (não grava em
+  /// `_kStateKey`) e mostra números ESTIMADOS — quem credita XP/MentalCoins
+  /// de verdade é o servidor, na coleta com o app aberto. Se o app ainda não
+  /// registrou nenhum retrato do ciclo, ou o ciclo já acabou, não mexe na
+  /// notificação (ela se corrige sozinha quando o app abre).
+  Future<void> maybeUpdateNotificationEstimate(int rawSteps) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.reload(); // outro isolate escreveu; não confiar no cache local
+      final snapRaw = prefs.getString(_kPreviewSnapshotKey);
+      final stateRaw = prefs.getString(_kStateKey);
+      if (snapRaw == null || stateRaw == null) return;
+      final snap = jsonDecode(snapRaw) as Map<String, dynamic>;
+      final endAt = snap['cycle_end_at'] as String?;
+      if (endAt != null && DateTime.now().toUtc().isAfter(parseServerUtc(endAt))) return;
+      final entry = (jsonDecode(stateRaw) as Map<String, dynamic>)[snap['cycle_id']] as Map<String, dynamic>?;
+      if (entry == null) return;
+      final total = estimateCycleTotalSteps(
+        baseline: entry['baseline'] as int,
+        carry: (entry['carry'] as int?) ?? 0,
+        lastRaw: entry['lastRaw'] as int?,
+        lastSubmittedTotal: (entry['lastSubmittedTotal'] as int?) ?? 0,
+        currentRaw: rawSteps,
+      );
+      final bucket = movementNotificationBucket(total);
+      final lastBucket = prefs.getInt(_kNotifBucketKey) ?? 0;
+      if (bucket <= lastBucket) return;
+      final est = estimateFromSnapshot(
+        snapshotSteps: snap['steps'] as int,
+        snapshotXp: snap['xp'] as int,
+        totalStepsNow: total,
+      );
+      if (!await FlutterForegroundTask.isRunningService) return;
+      await FlutterForegroundTask.updateService(
+        notificationTitle: 'MENTAL — Movimento ativo',
+        notificationText: movementNotificationText(
+          steps: est.steps,
+          coins: est.coins,
+          xp: est.xp,
+          estimated: true,
+        ),
+      );
+      await prefs.setInt(_kNotifBucketKey, bucket);
+    } catch (_) {
+      // Reforço visual: nunca derruba o serviço de contagem.
     }
   }
 
