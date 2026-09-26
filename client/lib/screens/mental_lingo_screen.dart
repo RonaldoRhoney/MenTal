@@ -836,7 +836,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                             padding: const EdgeInsets.only(bottom: 12),
                             child: _buildQuestionCard(
                                 text: _question!,
-                                highlight: _matchedWord,
+                                highlight: _matchedWord ?? extractLingoKeyTerm(_question!),
                                 key: const Key('mental_lingo_question_bubble')),
                           ),
                         if (_answer != null)
@@ -891,6 +891,27 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   }
 }
 
+
+/// Termo-chave de uma pergunta ("como se escreve queijo em inglês" -> "queijo"), extraído no
+/// próprio app com os mesmos padrões do servidor — assim o destaque aparece já ao enviar a
+/// pergunta, sem depender da resposta. Devolve null se não reconhecer o padrão.
+String? extractLingoKeyTerm(String question) {
+  final q = question.trim().replaceAll(RegExp(r'[?!.]+$'), '').trim();
+  const patterns = [
+    r'^como (?:se|é que se) (?:escreve|diz|fala)\s+(.+?)\s+em\s+\S+$',
+    r'^traduz[ao]?\s+(?:a palavra\s+)?(.+?)\s+(?:para|em)\s+\S+$',
+    r'^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)\s+(?:para|em)\s+\S+$',
+    r'^o que\s+(?:significa|quer dizer)\s+(.+?)$',
+  ];
+  for (final pattern in patterns) {
+    final m = RegExp(pattern, caseSensitive: false).firstMatch(q);
+    if (m != null) {
+      final term = m.group(1)!.trim().replaceAll(RegExp('^[\'"]+|[\'"]+\$'), '');
+      if (term.isNotEmpty) return term;
+    }
+  }
+  return null;
+}
 
 /// Botão secundário "Ouvir resposta" com a identidade neon dos agentes (navy, contorno
 /// ciano e brilho suave — mesma família do banner do Mental Lingo). Mostra "Falando…"

@@ -61,4 +61,12 @@ void main() {
     expect(find.byKey(const Key('mental_lingo_error_text')), findsOneWidget);
     expect(find.byKey(const Key('mental_lingo_retry_button')), findsOneWidget);
   });
+
+  test('extractLingoKeyTerm acha a palavra/frase-chave nos padrões de pergunta', () {
+    expect(extractLingoKeyTerm('como se escreve queijo em inglês'), 'queijo');
+    expect(extractLingoKeyTerm('Como se diz "bom dia" em espanhol?'), 'bom dia');
+    expect(extractLingoKeyTerm('o que significa Wednesday'), 'Wednesday');
+    expect(extractLingoKeyTerm('qual é a tradução de casa para francês'), 'casa');
+    expect(extractLingoKeyTerm('oi tudo bem'), isNull);
+  });
 }
