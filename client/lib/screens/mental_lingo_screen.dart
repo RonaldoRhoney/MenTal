@@ -364,6 +364,15 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       _accumulated = '';
       _listenStartedAt = DateTime.now();
     });
+    _safetyTimer?.cancel();
+    _safetyTimer = Timer(_kSafetyCap, () {
+      if (!mounted || _state != _LingoState.listening) return;
+      if (_accumulated.isNotEmpty) {
+        _submitAccumulated();
+      } else {
+        _cancelListening();
+      }
+    });
     final ok = await widget._service.init(
       onError: (_) {
         if (!mounted) return;
@@ -425,6 +434,11 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 
   String _accumulated = '';
   Timer? _submitTimer;
+  // Teto de SEGURANÇA contra captura travada (MENTAL_IDIOMAS_ENTONACAO_TTS_URGENTE_V1.md
+  // §2, 26/09/2026): alto o bastante pra nunca cortar uma pergunta falada normal (mesmo
+  // de 30 s ou mais); a escuta em si segue a fala do usuário (silêncio sustentado).
+  static const Duration _kSafetyCap = Duration(minutes: 3);
+  Timer? _safetyTimer;
 
   Future<void> _handleResult(String text) async {
     if (!mounted || _state != _LingoState.listening) return;
@@ -453,6 +467,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   }
 
   Future<void> _submitAccumulated() async {
+    _safetyTimer?.cancel();
     _submitTimer?.cancel();
     _noResultTimer?.cancel();
     if (!mounted || _state != _LingoState.listening) return;
@@ -483,6 +498,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   }
 
   void _cancelListening() {
+    _safetyTimer?.cancel();
     _submitTimer?.cancel();
     _noResultTimer?.cancel();
     widget._service.cancel();
@@ -520,6 +536,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 
   @override
   void dispose() {
+    _safetyTimer?.cancel();
     _submitTimer?.cancel();
     _noResultTimer?.cancel();
     widget._service.cancel();

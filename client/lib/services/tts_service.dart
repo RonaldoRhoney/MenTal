@@ -20,14 +20,40 @@ import 'package:flutter_edge_tts/flutter_edge_tts.dart';
 enum TtsSpeed { normal, fast, veryFast }
 
 extension TtsSpeedSsmlRate on TtsSpeed {
-  /// Valor de `rate` do SSML (EdgeTtsProsody) — "1.0" é velocidade
-  /// normal de fala; os outros dois são acelerações relativas, não
-  /// velocidades absolutas.
+  /// Valor de `rate` do SSML (EdgeTtsProsody), como multiplicador da fala
+  /// padrão do serviço.
+  ///
+  /// CORREÇÃO URGENTE (MENTAL_IDIOMAS_ENTONACAO_TTS_URGENTE_V1.md, 26/09/2026).
+  /// Medição real (FlutterEdgeTts, en-US-AriaNeural): '1.0' equivale a '+0%'
+  /// — é a fala padrão do serviço, ~258 palavras/min numa frase curta, bem
+  /// acima da fala natural e clara (~150-190). O "Normal" antigo (1.0) era,
+  /// na prática, rápido demais pra quem está aprendendo. Recalibrado: Normal =
+  /// 0.75 (~190 palavras/min, natural e clara), Rápido = 0.95 (≈ o antigo
+  /// Normal), Acelerado = 1.2. Continuam 3 opções, com o mesmo significado
+  /// relativo.
   String get ssmlRate => switch (this) {
-        TtsSpeed.normal => '1.0',
-        TtsSpeed.fast => '1.3',
-        TtsSpeed.veryFast => '1.6',
+        TtsSpeed.normal => '0.75',
+        TtsSpeed.fast => '0.95',
+        TtsSpeed.veryFast => '1.2',
       };
+}
+
+/// Texto enviado ao motor. O serviço do Edge só aceita SSML básico
+/// (`<prosody>` com rate/pitch/volume — `<break>`, `<emphasis>`, contorno e
+/// estilos são rejeitados: testado, volta `empty_audio`), então a prosódia é
+/// melhorada no PRÓPRIO TEXTO:
+/// - palavra isolada ou par de palavras ("car", "I will") saía com ~0,4 s de
+///   fala e tom quase plano (variação de 7,6 Hz medida em "car"): passa a ser
+///   dita duas vezes com pausa ("car... car."), o que dá a duração e a
+///   cadência de fala natural e uma segunda chance de ouvir;
+/// - frase sem pontuação final ganha ponto, pra o motor fechar a entonação.
+String prepareTextForTts(String text) {
+  final t = text.trim();
+  if (t.isEmpty) return t;
+  final endsWithPunctuation = RegExp(r'[.!?…]$').hasMatch(t);
+  final words = t.split(RegExp(r'\s+'));
+  if (words.length <= 2 && !endsWithPunctuation) return '$t... $t.';
+  return endsWithPunctuation ? t : '$t.';
 }
 
 class TtsService {
@@ -61,7 +87,7 @@ class TtsService {
   Future<Uint8List?> _synthesize(String text, String voice, TtsSpeed speed) async {
     final tts = FlutterEdgeTts(voice: voice);
     try {
-      final result = await tts.synthesize(text, prosody: EdgeTtsProsody(rate: speed.ssmlRate));
+      final result = await tts.synthesize(prepareTextForTts(text), prosody: EdgeTtsProsody(rate: speed.ssmlRate));
       return result.audioBytes;
     } catch (_) {
       return null;
