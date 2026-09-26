@@ -1,8 +1,7 @@
-# Vocabulário de Inglês — Lote 3 (Básico, +100 palavras) — para revisão de Rhoney
+# Vocabulário de Inglês — Lote 3 (Básico, 100 palavras) — para revisão de Rhoney
 
-Critério e formato idênticos aos Lotes 1 e 2. Sem repetir as palavras existentes nem dos lotes anteriores (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote3.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote3.json` → `ingles_basico`.
 
-Revisão por amostra: palavras realmente básicas? inglês certo? alguma alternativa errada é grafia válida da resposta?
 
 ## Casa e jardim
 - parede → **Wall** (erradas: Walll, Wwall, Warl)
@@ -65,7 +64,7 @@ Revisão por amostra: palavras realmente básicas? inglês certo? alguma alterna
 - formiga → **Ant** (erradas: Annt, Antt, Amt)
 
 ## Lazer e esportes
-- bola → **Ball** (erradas: Bell, Bill, Barl)
+- bola → **Ball** (erradas: Bell, Blal, Barl)
 - time → **Team** (erradas: Teem, Tean, Tuam)
 - festa → **Party** (erradas: Partty, Perty, Palty)
 - presente → **Gift** (erradas: Giftt, Gifft, Ggift)
@@ -123,8 +122,3 @@ Revisão por amostra: palavras realmente básicas? inglês certo? alguma alterna
 - molhado → **Wet** (erradas: Wed, Wte, Wut)
 - gordo → **Fat** (erradas: Ffat, Fatt, Fit)
 - magro → **Thin** (erradas: Thyn, Thinn, Thon)
-
-## Observações
-- Este lote inclui palavras funcionais (Who, What, Where, When, How, Which, Yes, No, Here, There, Always, Never, Now...), essenciais no Básico.
-- Nas alternativas erradas, excluí formas reais ligadas a outras respostas (Will, Heard, Sign, Life, Lost, Set, ...). Algumas erradas são palavras reais sem relação (Bell/Bill para Ball, Pray para Play) — confusões de grafia comuns, mas que NÃO traduzem o termo.
-- Sentinela: 0 itens na fila; validador de carga sem erros.

@@ -1,17 +1,16 @@
-# Vocabulário de Inglês — Lote 2 (Básico, +100 palavras) — para revisão de Rhoney
+# Vocabulário de Inglês — Lote 2 (Básico, 100 palavras) — para revisão de Rhoney
 
-Critério e formato idênticos ao Lote 1. Sem repetir as 150 palavras existentes, o Lote 1 nem entre si (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote2.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote2.json` → `ingles_basico`.
 
-Revisão por amostra: palavras realmente básicas? inglês certo? alguma alternativa errada é grafia válida da resposta?
 
 ## Roupas
 - calça → **Pants** (erradas: Pents, Pannts, Pantts)
 - sapato → **Shoe** (erradas: Shoi, Shoa, Shee)
-- chapéu → **Hat** (erradas: Hot, Hta, Had)
+- chapéu → **Hat** (erradas: Hhat, Hta, Had)
 - casaco → **Coat** (erradas: Cota, Ceat, Coot)
 - vestido → **Dress** (erradas: Driss, Drezs, Drss)
-- meia → **Sock** (erradas: Sokk, Scok, Sick)
-- bolsa → **Bag** (erradas: Bga, Bagg, Bug)
+- meia → **Sock** (erradas: Sokk, Scok, Ssock)
+- bolsa → **Bag** (erradas: Bga, Bagg, Beg)
 - óculos → **Glasses** (erradas: Glases, Glsses, Glassez)
 - saia → **Skirt** (erradas: Skert, Skrit, Skart)
 - boné → **Cap** (erradas: Capp, Cab, Cop)
@@ -97,13 +96,13 @@ Revisão por amostra: palavras realmente básicas? inglês certo? alguma alterna
 - jogo → **Game** (erradas: Gama, Gamu, Gome)
 - carta → **Letter** (erradas: Letetr, Lotter, Letterr)
 - dinheiro → **Money** (erradas: Moneyy, Maney, Meney)
-- cartão → **Card** (erradas: Cerd, Cird, Cart)
+- cartão → **Card** (erradas: Cerd, Cird, Carrd)
 - caixa → **Box** (erradas: Bxo, Bbox, Bex)
 
 ## Verbos do dia a dia 2
 - ver → **See** (erradas: Sei, Soe, Sae)
 - ouvir → **Hear** (erradas: Haar, Haer, Heur)
-- pensar → **Think** (erradas: Tihnk, Thonk, Thin)
+- pensar → **Think** (erradas: Tihnk, Thonk, Thimk)
 - saber → **Know** (erradas: Knoww, Knaw, Kniw)
 - querer → **Want** (erradas: Wannt, Wwant, Wand)
 - dar → **Give** (erradas: Giva, Gvie, Givve)
@@ -122,10 +121,4 @@ Revisão por amostra: palavras realmente básicas? inglês certo? alguma alterna
 - pesado → **Heavy** (erradas: Heav, Heavvy, Heafy)
 - doce → **Sweet** (erradas: Ssweet, Swoet, Swweet)
 - perto → **Near** (erradas: Nnear, Neur, Neor)
-- longe → **Far** (erradas: Fur, Fal, Farr)
-
-## Observações
-- Excluí das alternativas erradas formas reais de outras respostas do app (ex.: 'Drive', 'Read', 'Shirt', 'Gave'), para não confundir nem entregar outra questão.
-- Termos como 'Angry', 'Hunger', 'Thirst', 'Hundred' ficam no limite A2/B1; ajuste se achar que sobem de nível.
-- 'Police' = 'polícia' (instituição); 'Nurse' = 'enfermeira'.
-- Sentinela: 0 itens na fila.
+- longe → **Far** (erradas: Fra, Fal, Farr)

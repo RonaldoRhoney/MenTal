@@ -97,7 +97,7 @@
       "Muat",
       "Meat",
       "Maet",
-      "Meet"
+      "Maat"
     ],
     "correct_answer": "Meat",
     "explanation": "'carne' se traduz como 'Meat' em inglês.",
@@ -1318,7 +1318,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'árvore' em inglês?",
     "options": [
-      "True",
+      "Troe",
       "Tree",
       "Tlee",
       "Trea"
@@ -1606,10 +1606,10 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'comprar' em inglês?",
     "options": [
-      "Boy",
+      "Bui",
       "Buy",
       "Bbuy",
-      "Bay"
+      "Buyy"
     ],
     "correct_answer": "Buy",
     "explanation": "'comprar' se traduz como 'Buy' em inglês.",
@@ -1697,7 +1697,7 @@
     "prompt": "Como se escreve 'quente' em inglês?",
     "options": [
       "Het",
-      "Hat",
+      "Hott",
       "Hot",
       "Hhot"
     ],

@@ -1,8 +1,7 @@
 # Vocabulário de Inglês — Lote 1 (Básico, 100 palavras) — para revisão de Rhoney
 
-Critério: palavras de frequência muito alta (nível A1-A2), sem repetir as 150 palavras já existentes nem entre si. Formato idêntico ao atual (`Como se escreve '<pt>' em inglês?`, 4 alternativas, 2 dicas). Alternativas erradas = grafias plausíveis. Carga: `backend/content/vocab_ingles_basico_lote1.json` → território `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote1.json` → `ingles_basico`.
 
-Revisão por amostra: confira se (1) as palavras são realmente básicas, (2) o inglês está certo, (3) nenhuma alternativa errada é uma grafia válida da resposta.
 
 ## Comida
 - leite → **Milk** (erradas: Mirk, Mulk, Mmilk)
@@ -10,7 +9,7 @@ Revisão por amostra: confira se (1) as palavras são realmente básicas, (2) o 
 - queijo → **Cheese** (erradas: Cheise, Cheeze, Choese)
 - ovo → **Egg** (erradas: Egj, Ejg, Eggg)
 - arroz → **Rice** (erradas: Rico, Rece, Rrice)
-- carne → **Meat** (erradas: Muat, Maet, Meet)
+- carne → **Meat** (erradas: Muat, Maet, Maat)
 - frango → **Chicken** (erradas: Chiccken, Chicen, Chickn)
 - peixe → **Fish** (erradas: Fash, Ffish, Fihs)
 - fruta → **Fruit** (erradas: Fuit, Fruitt, Froit)
@@ -92,7 +91,7 @@ Revisão por amostra: confira se (1) as palavras são realmente básicas, (2) o 
 - sol → **Sun** (erradas: Ssun, Sum, San)
 - lua → **Moon** (erradas: Moan, Moin, Meon)
 - estrela → **Star** (erradas: Starr, Stra, Sttar)
-- árvore → **Tree** (erradas: True, Tlee, Trea)
+- árvore → **Tree** (erradas: Troe, Tlee, Trea)
 - flor → **Flower** (erradas: Flowel, Flover, Flwoer)
 - rio → **River** (erradas: Rver, Ryver, Rivar)
 - mar → **Sea** (erradas: Sua, Soa, Sae)
@@ -110,21 +109,16 @@ Revisão por amostra: confira se (1) as palavras são realmente básicas, (2) o 
 - escrever → **Write** (erradas: Wlite, Wrute, Writ)
 - abrir → **Open** (erradas: Oppen, Opun, Openn)
 - fechar → **Close** (erradas: Cclose, Clese, Closa)
-- comprar → **Buy** (erradas: Boy, Bbuy, Bay)
+- comprar → **Buy** (erradas: Bui, Bbuy, Buyy)
 
 ## Adjetivos comuns
 - bom → **Good** (erradas: Goad, Goud, Goodd)
 - ruim → **Bad** (erradas: Bda, Bat, Bod)
 - novo → **New** (erradas: Nuw, Neww, Niw)
 - velho → **Old** (erradas: Olld, Oldd, Olt)
-- quente → **Hot** (erradas: Het, Hat, Hhot)
+- quente → **Hot** (erradas: Het, Hott, Hhot)
 - frio → **Cold** (erradas: Codl, Colld, Culd)
 - bonito → **Beautiful** (erradas: Bautiful, Beaetiful, Beautaful)
 - forte → **Strong** (erradas: Stronj, Strogn, Stlong)
 - fácil → **Easy** (erradas: Eays, Easyy, Eazy)
 - cheio → **Full** (erradas: Fulll, Foll, Flul)
-
-## Observações
-- 'cinza → Gray' usa a grafia americana (Grey é a britânica).
-- 'meat' tem 'Meet' entre as erradas de propósito (confusão comum); 'Sun' tem 'Sum'; 'Tree' tem 'True' — grafias de outras palavras reais, mas que NÃO traduzem o termo.
-- Sentinela: 0 correções mecânicas e 0 itens na fila após trocar 'banana' (a resposta era igual ao enunciado) por 'fruta → Fruit'.

@@ -31,3 +31,8 @@ Reconheço o volume (3.000 palavras): produzo ~100 palavras/lote com verificaç�
 ## 7. Decisões que preciso de você
 1. Aprova acrescentar aos territórios `ingles_*` existentes (recomendado)?
 2. Aprova começar pelo Lote 1 (100 palavras Básico) para validar o padrão?
+
+---
+
+## Status (26/09/2026)
+Aprovada por Rhoney (destino = territórios `ingles_*` existentes). **Básico: 1.000 palavras produzidas em 10 lotes de 100** (`backend/content/vocab_ingles_basico_lote1..10.json`; revisão em `MUNDO/Mundo_dos_Idiomas/vocabulario_ingles/LOTE<n>_BASICO_REVISAO.md`). Verificações por script: 1.000 respostas únicas, nenhuma colide com as 150 palavras anteriores, nenhuma alternativa errada é resposta correta de outro item, nenhuma palavra em inglês contida no próprio enunciado (cognatos removidos), sem grafias impróprias; Sentinela 0 itens; validador de carga sem erros. **Aguardando revisão de Rhoney antes da carga em produção.** Intermediário e Avançado: ainda não iniciados.

@@ -40,7 +40,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'chapéu' em inglês?",
     "options": [
-      "Hot",
+      "Hhat",
       "Hta",
       "Hat",
       "Had"
@@ -97,7 +97,7 @@
       "Sokk",
       "Sock",
       "Scok",
-      "Sick"
+      "Ssock"
     ],
     "correct_answer": "Sock",
     "explanation": "'meia' se traduz como 'Sock' em inglês.",
@@ -115,7 +115,7 @@
       "Bga",
       "Bagg",
       "Bag",
-      "Bug"
+      "Beg"
     ],
     "correct_answer": "Bag",
     "explanation": "'bolsa' se traduz como 'Bag' em inglês.",
@@ -1411,7 +1411,7 @@
       "Cerd",
       "Cird",
       "Card",
-      "Cart"
+      "Carrd"
     ],
     "correct_answer": "Card",
     "explanation": "'cartão' se traduz como 'Card' em inglês.",
@@ -1483,7 +1483,7 @@
       "Tihnk",
       "Thonk",
       "Think",
-      "Thin"
+      "Thimk"
     ],
     "correct_answer": "Think",
     "explanation": "'pensar' se traduz como 'Think' em inglês.",
@@ -1786,7 +1786,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'longe' em inglês?",
     "options": [
-      "Fur",
+      "Fra",
       "Fal",
       "Farr",
       "Far"

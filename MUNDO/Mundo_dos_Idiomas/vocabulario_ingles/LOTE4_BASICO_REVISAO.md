@@ -1,8 +1,7 @@
-# Vocabulário de Inglês — Lote 4 (Básico, +100 palavras) — para revisão de Rhoney
+# Vocabulário de Inglês — Lote 4 (Básico, 100 palavras) — para revisão de Rhoney
 
-Critério e formato idênticos aos lotes anteriores. Sem repetir palavras existentes nem dos Lotes 1-3 (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote4.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote4.json` → `ingles_basico`.
 
-Revisão por amostra: palavras realmente básicas? inglês certo? alguma alternativa errada é grafia válida da resposta?
 
 ## Comida 3
 - feijão → **Beans** (erradas: Beons, Beanss, Buans)
@@ -58,10 +57,10 @@ Revisão por amostra: palavras realmente básicas? inglês certo? alguma alterna
 - quebrar → **Break** (erradas: Brek, Beak, Breuk)
 - carregar → **Carry** (erradas: Carrry, Ccarry, Corry)
 - empurrar → **Push** (erradas: Pushh, Posh, Ppush)
-- puxar → **Pull** (erradas: Pill, Pulr, Pall)
+- puxar → **Pull** (erradas: Plul, Pulr, Pall)
 - arremessar → **Throw** (erradas: Thrw, Thro, Throv)
 - chamar → **Call** (erradas: Cull, Calr, Coll)
-- perguntar → **Ask** (erradas: Assk, Asc, Askk)
+- perguntar → **Ask** (erradas: Aks, Asc, Askk)
 - pagar → **Pay** (erradas: Pey, Ppay, Poy)
 
 ## Verbos do dia a dia 5
@@ -123,9 +122,3 @@ Revisão por amostra: palavras realmente básicas? inglês certo? alguma alterna
 - outubro → **October** (erradas: Octtober, Octobel, Octber)
 - novembro → **November** (erradas: Novembor, Novamber, Novembber)
 - dezembro → **December** (erradas: Decmeber, Decimber, Decmber)
-
-## Observações
-- Dias da semana e os 12 meses entram neste lote (vocabulário essencial do Básico).
-- 'pessoa' = Person e 'pessoas' = People; 'arremessar' = Throw; 'acima' = Above; 'estranho' = Stranger (pessoa desconhecida).
-- Palavras como Dangerous e Funny estão no limite A2/B1; ajuste se achar que sobem de nível.
-- Sentinela pegou 'importante → Important' (a resposta está dentro do enunciado); troquei por 'engraçado → Funny'. Resultado final: 0 itens na fila; validador de carga sem erros.
