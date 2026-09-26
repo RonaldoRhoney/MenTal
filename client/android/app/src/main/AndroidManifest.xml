@@ -50,13 +50,6 @@
          acima. Sem upload/gravação de áudio bruto: o reconhecimento
          acontece no aparelho, o backend só recebe o TEXTO já transcrito. -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <!-- Health Connect (Movimento/HealthConnect/DESENHO_TECNICO_V1.md, aprovado
-         25/09/2026): SÓ leitura de passos, exibida na tela Movimento (nenhum
-         XP/MentalCoins vem daqui). Pedida em runtime só ao tocar em
-         "Conectar". ATENÇÃO: exige declaração de permissões do Health Connect
-         no Google Play Console + política de privacidade atualizada ANTES de
-         enviar um AAB com esta permissão. -->
-    <uses-permission android:name="android.permission.health.READ_STEPS" />
     <application
         android:label="MENTAL"
         android:name="${applicationName}"
@@ -103,27 +96,6 @@
                 <data android:scheme="com.rhoneyinc.mental" android:host="login-callback"/>
             </intent-filter>
         </activity>
-        <!-- Health Connect: tela de justificativa de uso de dados de saúde
-             (abre a Política de Privacidade). Android 13-: intent-filter da
-             própria Activity; Android 14+: alias ViewPermissionUsageActivity. -->
-        <activity
-            android:name=".PermissionsRationaleActivity"
-            android:exported="true"
-            android:theme="@android:style/Theme.NoDisplay">
-            <intent-filter>
-                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
-            </intent-filter>
-        </activity>
-        <activity-alias
-            android:name="ViewPermissionUsageActivity"
-            android:exported="true"
-            android:targetActivity=".PermissionsRationaleActivity"
-            android:permission="android.permission.START_VIEW_PERMISSION_USAGE">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
-                <category android:name="android.intent.category.HEALTH_PERMISSIONS" />
-            </intent-filter>
-        </activity-alias>
         <!-- Warning: Do not change service name (flutter_foreground_task). -->
         <service
             android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
@@ -160,8 +132,6 @@
 
          In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
     <queries>
-        <!-- Health Connect no Android 13-: o app provedor precisa ser visível. -->
-        <package android:name="com.google.android.apps.healthdata" />
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>

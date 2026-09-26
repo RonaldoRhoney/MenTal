@@ -54,9 +54,6 @@ dependencies:
   # mesma prioridade "gratuito primeiro" já usada na escolha do
   # flutter_edge_tts pro Mundo dos Idiomas.
   speech_to_text: ^7.5.0
-  # Health Connect (Movimento/HealthConnect/DESENHO_TECNICO_V1.md, aprovado 25/09/2026):
-  # só LEITURA agregada de passos, exibida na tela Movimento; sem XP.
-  health: ^13.3.2
   # Leitor de perguntas (MENTAL_LEITOR_PERGUNTAS_FEEDBACK_SONORO_V1.1.md, aprovado
   # 25/09/2026): TTS NATIVO/local do Android, gratuito, para todos os Mundos exceto Idiomas.
   flutter_tts: ^4.2.5

@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 
-import '../services/health_steps_source.dart';
-import '../widgets/health_connect_card.dart';
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
@@ -36,19 +34,15 @@ const _monthNamePt = [
 /// 20k diário"). Layout em Column com Expanded nos gráficos — nenhum
 /// SingleChildScrollView — pra caber inteiro sem rolagem.
 class MovementScreen extends StatefulWidget {
-  const MovementScreen({super.key, required this.client, this.healthSource});
+  const MovementScreen({super.key, required this.client});
 
   final ApiClient client;
-
-  /// Injetável só pra teste; em produção usa o Health Connect real.
-  final HealthStepsSource? healthSource;
 
   @override
   State<MovementScreen> createState() => _MovementScreenState();
 }
 
 class _MovementScreenState extends State<MovementScreen> {
-  late final HealthStepsSource _healthSource = widget.healthSource ?? HealthConnectStepsSource();
   bool _loading = true;
   String? _error;
   bool _movementEnabled = false;
@@ -608,8 +602,6 @@ class _MovementScreenState extends State<MovementScreen> {
             if (_checkpointReachedMessage != null)
               PulseIn(intensity: 0.3, child: Text(_checkpointReachedMessage!, style: TextStyle(color: AppColors.teal, fontWeight: FontWeight.w600, fontSize: 12), textAlign: TextAlign.center, maxLines: 2)),
           ],
-          // Health Connect: só exibição (Movimento/HealthConnect/DESENHO_TECNICO_V1.md).
-          HealthConnectCard(source: _healthSource),
           if (_sensorUnavailable) ...[
             const SizedBox(height: 6),
             Text(l10n.movementSensorUnavailableMessage, style: TextStyle(color: AppColors.muted, fontSize: 11)),

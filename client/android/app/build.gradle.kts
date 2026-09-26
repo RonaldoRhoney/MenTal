@@ -38,10 +38,7 @@ android {
         applicationId = "com.rhoneyinc.mental"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        // Android 8.0 (API 26): exigência do plugin `health` (Health Connect),
-        // aprovada por Rhoney em 25/09/2026 (Movimento/HealthConnect/DESENHO_TECNICO_V1.md).
-        // Aparelhos com Android 7.x deixam de poder instalar/atualizar.
-        minSdk = 26
+        minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         // Uses the version code from pubspec.yaml. When using split APKs, 1000 * ABI_VERSION
         // is added automatically by Flutter. (https://developer.android.com/studio/build/configure-apk-splits#configure-APK-versions)

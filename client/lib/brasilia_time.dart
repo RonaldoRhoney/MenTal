@@ -29,11 +29,3 @@ String formatBrasiliaTime(String isoUtc) {
   }
   return '$hh:$mm $period';
 }
-
-/// Instante UTC em que começou o dia atual em Brasília (00:00 UTC-3) — usado
-/// pra somar os passos "de hoje" do Health Connect no mesmo dia que o resto do
-/// app usa (não o dia do aparelho). Brasil sem horário de verão desde 2019.
-DateTime brasiliaDayStartUtc(DateTime nowUtc) {
-  final br = nowUtc.toUtc().subtract(const Duration(hours: 3));
-  return DateTime.utc(br.year, br.month, br.day).add(const Duration(hours: 3));
-}
