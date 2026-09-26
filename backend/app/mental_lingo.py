@@ -27,7 +27,7 @@ Libras recebe uma resposta textual explicando o motivo, nunca um erro.
 import re
 from typing import NamedTuple
 
-from sqlalchemy import func, select
+from sqlalchemy import String, cast, func, select
 from sqlalchemy.orm import Session
 
 from . import config, models, wiktionary
@@ -187,14 +187,24 @@ def _vocab_entries(db: Session) -> list[_VocabEntry]:
     com o Supabase remoto. Agora uma consulta agregada barata (contagem + menor/maior id)
     decide se o índice ainda vale; só reconstrói quando o conteúdo mudou."""
     ids = sorted(config.IDIOMA_TERRITORY_IDS)
-    signature = tuple(
-        db.execute(
-            select(func.count(), func.min(models.Challenge.id), func.max(models.Challenge.id)).where(
-                models.Challenge.territory_id.in_(ids)
-            )
-        ).one()
-    )
-    if _vocab_cache["signature"] == signature:
+    try:
+        # min/max sobre UUID não existe no Postgres (existe no SQLite dos testes) — por
+        # isso o id vira texto antes de agregar.
+        signature = tuple(
+            db.execute(
+                select(
+                    func.count(),
+                    func.min(cast(models.Challenge.id, String)),
+                    func.max(cast(models.Challenge.id, String)),
+                ).where(models.Challenge.territory_id.in_(ids))
+            ).one()
+        )
+    except Exception:
+        # O índice é só otimização: se a consulta de assinatura falhar por qualquer motivo,
+        # reconstrói sem cache em vez de derrubar a resposta ao jogador.
+        db.rollback()
+        signature = None
+    if signature is not None and _vocab_cache["signature"] == signature:
         return _vocab_cache["entries"]
     rows = db.execute(
         select(
@@ -216,8 +226,9 @@ def _vocab_entries(db: Session) -> list[_VocabEntry]:
                 correct_answer,
             )
         )
-    _vocab_cache["signature"] = signature
-    _vocab_cache["entries"] = entries
+    if signature is not None:
+        _vocab_cache["signature"] = signature
+        _vocab_cache["entries"] = entries
     return entries
 
 
