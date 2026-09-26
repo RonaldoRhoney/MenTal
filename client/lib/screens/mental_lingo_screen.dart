@@ -346,6 +346,8 @@ class MentalLingoScreen extends StatefulWidget {
 class _MentalLingoScreenState extends State<MentalLingoScreen> {
   _LingoState _state = _LingoState.ready;
   String? _question;
+  // Palavra/frase-chave da pergunta (devolvida pelo servidor) — recebe destaque no cartão.
+  String? _matchedWord;
   String? _answer;
   // Trechos da resposta por idioma (voz nativa de cada um; ver MentalLingoAskOut.speech_segments).
   List<Map<String, dynamic>>? _speechSegments;
@@ -495,6 +497,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       if (!mounted) return;
       setState(() {
         _answer = result['answer_text'] as String;
+        _matchedWord = result['matched_word'] as String?;
         _speechSegments = (result['speech_segments'] as List?)?.cast<Map<String, dynamic>>();
         _suggestionKey = result['reviewed'] == false ? result['suggestion_key'] as Map<String, dynamic>? : null;
         _voted = false;
@@ -582,6 +585,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     setState(() {
       _suggestionKey = null;
       _speechSegments = null;
+      _matchedWord = null;
       _state = _LingoState.ready;
       _question = null;
       _answer = null;
@@ -690,6 +694,43 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     );
   }
 
+  /// Pedido de Rhoney (26/09/2026): "dê maior destaque à palavra/frase perguntada pelo
+  /// usuário, fica mais intuitivo". Cartão de destaque (identidade neon dos agentes) com a
+  /// pergunta em tamanho grande e a palavra/frase-chave em dourado, sobre fundo marcado.
+  Widget _buildQuestionCard({required String text, String? highlight, required Key key}) {
+    final base = GoogleFonts.fraunces(fontSize: 22, fontWeight: FontWeight.w600, color: AppColors.bone, height: 1.3);
+    final marked = base.copyWith(
+      fontSize: 26,
+      fontWeight: FontWeight.w800,
+      color: AppColors.gold,
+      backgroundColor: AppColors.gold.withValues(alpha: 0.16),
+    );
+    final spans = <TextSpan>[];
+    final term = highlight?.trim();
+    final idx = (term == null || term.isEmpty) ? -1 : text.toLowerCase().indexOf(term.toLowerCase());
+    if (idx < 0) {
+      spans.add(TextSpan(text: text, style: base));
+    } else {
+      if (idx > 0) spans.add(TextSpan(text: text.substring(0, idx), style: base));
+      spans.add(TextSpan(text: text.substring(idx, idx + term!.length), style: marked));
+      if (idx + term.length < text.length) spans.add(TextSpan(text: text.substring(idx + term.length), style: base));
+    }
+    return Container(
+      key: key,
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(18, 14, 18, 16),
+      decoration: agentNeonDecoration(radius: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('VOCÊ PERGUNTOU', style: AppTheme.technicalStyle(color: kAgentCyan, fontSize: 11)),
+          const SizedBox(height: 8),
+          Text.rich(TextSpan(children: spans)),
+        ],
+      ),
+    );
+  }
+
   Widget _buildActions() {
     switch (_state) {
       case _LingoState.listening:
@@ -793,9 +834,9 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                         if (_question != null)
                           Padding(
                             padding: const EdgeInsets.only(bottom: 12),
-                            child: _buildBubble(
-                                label: 'Você perguntou',
+                            child: _buildQuestionCard(
                                 text: _question!,
+                                highlight: _matchedWord,
                                 key: const Key('mental_lingo_question_bubble')),
                           ),
                         if (_answer != null)
