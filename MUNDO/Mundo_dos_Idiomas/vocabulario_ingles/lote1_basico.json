@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'leite' em inglês?",
+    "options": [
+      "Milk",
+      "Mirk",
+      "Mulk",
+      "Mmilk"
+    ],
+    "correct_answer": "Milk",
+    "explanation": "'leite' se traduz como 'Milk' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'café' em inglês?",
+    "options": [
+      "Caffee",
+      "Coffee",
+      "Cuffee",
+      "Cofefe"
+    ],
+    "correct_answer": "Coffee",
+    "explanation": "'café' se traduz como 'Coffee' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'queijo' em inglês?",
+    "options": [
+      "Cheise",
+      "Cheeze",
+      "Cheese",
+      "Choese"
+    ],
+    "correct_answer": "Cheese",
+    "explanation": "'queijo' se traduz como 'Cheese' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'ovo' em inglês?",
+    "options": [
+      "Egj",
+      "Ejg",
+      "Eggg",
+      "Egg"
+    ],
+    "correct_answer": "Egg",
+    "explanation": "'ovo' se traduz como 'Egg' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'arroz' em inglês?",
+    "options": [
+      "Rice",
+      "Rico",
+      "Rece",
+      "Rrice"
+    ],
+    "correct_answer": "Rice",
+    "explanation": "'arroz' se traduz como 'Rice' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'carne' em inglês?",
+    "options": [
+      "Muat",
+      "Meat",
+      "Maet",
+      "Meet"
+    ],
+    "correct_answer": "Meat",
+    "explanation": "'carne' se traduz como 'Meat' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'frango' em inglês?",
+    "options": [
+      "Chiccken",
+      "Chicen",
+      "Chicken",
+      "Chickn"
+    ],
+    "correct_answer": "Chicken",
+    "explanation": "'frango' se traduz como 'Chicken' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'peixe' em inglês?",
+    "options": [
+      "Fash",
+      "Ffish",
+      "Fihs",
+      "Fish"
+    ],
+    "correct_answer": "Fish",
+    "explanation": "'peixe' se traduz como 'Fish' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'fruta' em inglês?",
+    "options": [
+      "Fruit",
+      "Fuit",
+      "Fruitt",
+      "Froit"
+    ],
+    "correct_answer": "Fruit",
+    "explanation": "'fruta' se traduz como 'Fruit' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'sopa' em inglês?",
+    "options": [
+      "Soep",
+      "Soup",
+      "Soub",
+      "Soupp"
+    ],
+    "correct_answer": "Soup",
+    "explanation": "'sopa' se traduz como 'Soup' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Comida'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'filho' em inglês?",
+    "options": [
+      "Sno",
+      "Som",
+      "Son",
+      "Sson"
+    ],
+    "correct_answer": "Son",
+    "explanation": "'filho' se traduz como 'Son' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'filha' em inglês?",
+    "options": [
+      "Daughtar",
+      "Ddaughter",
+      "Daaghter",
+      "Daughter"
+    ],
+    "correct_answer": "Daughter",
+    "explanation": "'filha' se traduz como 'Daughter' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'avó' em inglês?",
+    "options": [
+      "Grandmother",
+      "Grandmotehr",
+      "Grendmother",
+      "Grandmothur"
+    ],
+    "correct_answer": "Grandmother",
+    "explanation": "'avó' se traduz como 'Grandmother' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'avô' em inglês?",
+    "options": [
+      "Grandfither",
+      "Grandfather",
+      "Grandfatther",
+      "Grandfathe"
+    ],
+    "correct_answer": "Grandfather",
+    "explanation": "'avô' se traduz como 'Grandfather' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'tio' em inglês?",
+    "options": [
+      "Unle",
+      "Uncre",
+      "Uncle",
+      "Uncl"
+    ],
+    "correct_answer": "Uncle",
+    "explanation": "'tio' se traduz como 'Uncle' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'tia' em inglês?",
+    "options": [
+      "Autn",
+      "Aunnt",
+      "Anut",
+      "Aunt"
+    ],
+    "correct_answer": "Aunt",
+    "explanation": "'tia' se traduz como 'Aunt' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'primo' em inglês?",
+    "options": [
+      "Cousin",
+      "Coosin",
+      "Couson",
+      "Cousun"
+    ],
+    "correct_answer": "Cousin",
+    "explanation": "'primo' se traduz como 'Cousin' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'marido' em inglês?",
+    "options": [
+      "Husbband",
+      "Husband",
+      "Husbannd",
+      "Husbant"
+    ],
+    "correct_answer": "Husband",
+    "explanation": "'marido' se traduz como 'Husband' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'esposa' em inglês?",
+    "options": [
+      "Wefe",
+      "Wfie",
+      "Wife",
+      "Wiffe"
+    ],
+    "correct_answer": "Wife",
+    "explanation": "'esposa' se traduz como 'Wife' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'bebê' em inglês?",
+    "options": [
+      "Boby",
+      "Babi",
+      "Babyy",
+      "Baby"
+    ],
+    "correct_answer": "Baby",
+    "explanation": "'bebê' se traduz como 'Baby' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Família'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cabeça' em inglês?",
+    "options": [
+      "Head",
+      "Haed",
+      "Heod",
+      "Heda"
+    ],
+    "correct_answer": "Head",
+    "explanation": "'cabeça' se traduz como 'Head' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'mão' em inglês?",
+    "options": [
+      "Hhand",
+      "Hand",
+      "Hund",
+      "Hadn"
+    ],
+    "correct_answer": "Hand",
+    "explanation": "'mão' se traduz como 'Hand' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pé' em inglês?",
+    "options": [
+      "Foit",
+      "Ffoot",
+      "Foot",
+      "Fout"
+    ],
+    "correct_answer": "Foot",
+    "explanation": "'pé' se traduz como 'Foot' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'olho' em inglês?",
+    "options": [
+      "Eyi",
+      "Eie",
+      "Eey",
+      "Eye"
+    ],
+    "correct_answer": "Eye",
+    "explanation": "'olho' se traduz como 'Eye' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'boca' em inglês?",
+    "options": [
+      "Mouth",
+      "Motuh",
+      "Moutth",
+      "Mouh"
+    ],
+    "correct_answer": "Mouth",
+    "explanation": "'boca' se traduz como 'Mouth' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'nariz' em inglês?",
+    "options": [
+      "Noes",
+      "Nose",
+      "Noze",
+      "Nise"
+    ],
+    "correct_answer": "Nose",
+    "explanation": "'nariz' se traduz como 'Nose' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'orelha' em inglês?",
+    "options": [
+      "Eor",
+      "Eer",
+      "Ear",
+      "Eal"
+    ],
+    "correct_answer": "Ear",
+    "explanation": "'orelha' se traduz como 'Ear' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'braço' em inglês?",
+    "options": [
+      "Arn",
+      "Armm",
+      "Alm",
+      "Arm"
+    ],
+    "correct_answer": "Arm",
+    "explanation": "'braço' se traduz como 'Arm' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'perna' em inglês?",
+    "options": [
+      "Leg",
+      "Legg",
+      "Lig",
+      "Lleg"
+    ],
+    "correct_answer": "Leg",
+    "explanation": "'perna' se traduz como 'Leg' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cabelo' em inglês?",
+    "options": [
+      "Haer",
+      "Hair",
+      "Hhair",
+      "Heir"
+    ],
+    "correct_answer": "Hair",
+    "explanation": "'cabelo' se traduz como 'Hair' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Corpo'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'verde' em inglês?",
+    "options": [
+      "Ggreen",
+      "Grene",
+      "Green",
+      "Grein"
+    ],
+    "correct_answer": "Green",
+    "explanation": "'verde' se traduz como 'Green' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'amarelo' em inglês?",
+    "options": [
+      "Yelloww",
+      "Yerlow",
+      "Yellaw",
+      "Yellow"
+    ],
+    "correct_answer": "Yellow",
+    "explanation": "'amarelo' se traduz como 'Yellow' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'Y'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'preto' em inglês?",
+    "options": [
+      "Black",
+      "Bleck",
+      "Brack",
+      "Blacck"
+    ],
+    "correct_answer": "Black",
+    "explanation": "'preto' se traduz como 'Black' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'branco' em inglês?",
+    "options": [
+      "Wwhite",
+      "White",
+      "Whiti",
+      "Wihte"
+    ],
+    "correct_answer": "White",
+    "explanation": "'branco' se traduz como 'White' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'laranja' em inglês?",
+    "options": [
+      "Oringe",
+      "Orango",
+      "Orange",
+      "Orage"
+    ],
+    "correct_answer": "Orange",
+    "explanation": "'laranja' se traduz como 'Orange' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'rosa' em inglês?",
+    "options": [
+      "Pinnk",
+      "Pank",
+      "Pnik",
+      "Pink"
+    ],
+    "correct_answer": "Pink",
+    "explanation": "'rosa' se traduz como 'Pink' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'marrom' em inglês?",
+    "options": [
+      "Brown",
+      "Bbrown",
+      "Bronw",
+      "Borwn"
+    ],
+    "correct_answer": "Brown",
+    "explanation": "'marrom' se traduz como 'Brown' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cinza' em inglês?",
+    "options": [
+      "Grayy",
+      "Gray",
+      "Glay",
+      "Grray"
+    ],
+    "correct_answer": "Gray",
+    "explanation": "'cinza' se traduz como 'Gray' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'roxo' em inglês?",
+    "options": [
+      "Purpe",
+      "Purplo",
+      "Purple",
+      "Puprle"
+    ],
+    "correct_answer": "Purple",
+    "explanation": "'roxo' se traduz como 'Purple' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cor' em inglês?",
+    "options": [
+      "Cloor",
+      "Colr",
+      "Collor",
+      "Color"
+    ],
+    "correct_answer": "Color",
+    "explanation": "'cor' se traduz como 'Color' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Cores'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cavalo' em inglês?",
+    "options": [
+      "Horse",
+      "Herse",
+      "Harse",
+      "Horsse"
+    ],
+    "correct_answer": "Horse",
+    "explanation": "'cavalo' se traduz como 'Horse' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'vaca' em inglês?",
+    "options": [
+      "Caw",
+      "Cow",
+      "Ciw",
+      "Cwo"
+    ],
+    "correct_answer": "Cow",
+    "explanation": "'vaca' se traduz como 'Cow' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'porco' em inglês?",
+    "options": [
+      "Pigg",
+      "Pag",
+      "Pig",
+      "Pog"
+    ],
+    "correct_answer": "Pig",
+    "explanation": "'porco' se traduz como 'Pig' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pássaro' em inglês?",
+    "options": [
+      "Bild",
+      "Bidr",
+      "Byrd",
+      "Bird"
+    ],
+    "correct_answer": "Bird",
+    "explanation": "'pássaro' se traduz como 'Bird' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'coelho' em inglês?",
+    "options": [
+      "Rabbit",
+      "Rabbbit",
+      "Rabit",
+      "Rubbit"
+    ],
+    "correct_answer": "Rabbit",
+    "explanation": "'coelho' se traduz como 'Rabbit' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'leão' em inglês?",
+    "options": [
+      "Leon",
+      "Lion",
+      "Liun",
+      "Liom"
+    ],
+    "correct_answer": "Lion",
+    "explanation": "'leão' se traduz como 'Lion' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'macaco' em inglês?",
+    "options": [
+      "Mnokey",
+      "Mmonkey",
+      "Monkey",
+      "Monkeyy"
+    ],
+    "correct_answer": "Monkey",
+    "explanation": "'macaco' se traduz como 'Monkey' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'elefante' em inglês?",
+    "options": [
+      "Elepahnt",
+      "Elphant",
+      "Elephatn",
+      "Elephant"
+    ],
+    "correct_answer": "Elephant",
+    "explanation": "'elefante' se traduz como 'Elephant' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cobra' em inglês?",
+    "options": [
+      "Snake",
+      "Smake",
+      "Snaek",
+      "Snaku"
+    ],
+    "correct_answer": "Snake",
+    "explanation": "'cobra' se traduz como 'Snake' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'pato' em inglês?",
+    "options": [
+      "Ducc",
+      "Duck",
+      "Dukc",
+      "Dack"
+    ],
+    "correct_answer": "Duck",
+    "explanation": "'pato' se traduz como 'Duck' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Animais'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cadeira' em inglês?",
+    "options": [
+      "Chaor",
+      "Chaar",
+      "Chair",
+      "Chaur"
+    ],
+    "correct_answer": "Chair",
+    "explanation": "'cadeira' se traduz como 'Chair' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cama' em inglês?",
+    "options": [
+      "Bedd",
+      "Bbed",
+      "Bde",
+      "Bed"
+    ],
+    "correct_answer": "Bed",
+    "explanation": "'cama' se traduz como 'Bed' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cozinha' em inglês?",
+    "options": [
+      "Kitchen",
+      "Kitchenn",
+      "Kytchen",
+      "Kitchin"
+    ],
+    "correct_answer": "Kitchen",
+    "explanation": "'cozinha' se traduz como 'Kitchen' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'K'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'banheiro' em inglês?",
+    "options": [
+      "Bathhroom",
+      "Bathroom",
+      "Bahroom",
+      "Bathromo"
+    ],
+    "correct_answer": "Bathroom",
+    "explanation": "'banheiro' se traduz como 'Bathroom' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'chave' em inglês?",
+    "options": [
+      "Kkey",
+      "Kiy",
+      "Key",
+      "Kye"
+    ],
+    "correct_answer": "Key",
+    "explanation": "'chave' se traduz como 'Key' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'K'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'telefone' em inglês?",
+    "options": [
+      "Phine",
+      "Phona",
+      "Phome",
+      "Phone"
+    ],
+    "correct_answer": "Phone",
+    "explanation": "'telefone' se traduz como 'Phone' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'relógio' em inglês?",
+    "options": [
+      "Clock",
+      "Clck",
+      "Cllock",
+      "Clok"
+    ],
+    "correct_answer": "Clock",
+    "explanation": "'relógio' se traduz como 'Clock' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'copo' em inglês?",
+    "options": [
+      "Gglass",
+      "Glass",
+      "Gless",
+      "Gluss"
+    ],
+    "correct_answer": "Glass",
+    "explanation": "'copo' se traduz como 'Glass' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'faca' em inglês?",
+    "options": [
+      "Knofe",
+      "Knie",
+      "Knife",
+      "Kknife"
+    ],
+    "correct_answer": "Knife",
+    "explanation": "'faca' se traduz como 'Knife' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'K'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'sofá' em inglês?",
+    "options": [
+      "Safa",
+      "Sfoa",
+      "Sofe",
+      "Sofa"
+    ],
+    "correct_answer": "Sofa",
+    "explanation": "'sofá' se traduz como 'Sofa' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Casa e objetos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'ano' em inglês?",
+    "options": [
+      "Year",
+      "Yera",
+      "Yearr",
+      "Yeer"
+    ],
+    "correct_answer": "Year",
+    "explanation": "'ano' se traduz como 'Year' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'Y'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'mês' em inglês?",
+    "options": [
+      "Mondh",
+      "Month",
+      "Mnoth",
+      "Moth"
+    ],
+    "correct_answer": "Month",
+    "explanation": "'mês' se traduz como 'Month' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'semana' em inglês?",
+    "options": [
+      "Weec",
+      "Wuek",
+      "Week",
+      "Weekk"
+    ],
+    "correct_answer": "Week",
+    "explanation": "'semana' se traduz como 'Week' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'dia' em inglês?",
+    "options": [
+      "Dai",
+      "Duy",
+      "Dey",
+      "Day"
+    ],
+    "correct_answer": "Day",
+    "explanation": "'dia' se traduz como 'Day' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'noite' em inglês?",
+    "options": [
+      "Night",
+      "Nighd",
+      "Nigh",
+      "Nigght"
+    ],
+    "correct_answer": "Night",
+    "explanation": "'noite' se traduz como 'Night' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'manhã' em inglês?",
+    "options": [
+      "Mornimg",
+      "Morning",
+      "Mornong",
+      "Moring"
+    ],
+    "correct_answer": "Morning",
+    "explanation": "'manhã' se traduz como 'Morning' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'tarde' em inglês?",
+    "options": [
+      "Afdernoon",
+      "Afternoonn",
+      "Afternoon",
+      "Aftternoon"
+    ],
+    "correct_answer": "Afternoon",
+    "explanation": "'tarde' se traduz como 'Afternoon' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'ontem' em inglês?",
+    "options": [
+      "Yseterday",
+      "Yestertay",
+      "Yesterrday",
+      "Yesterday"
+    ],
+    "correct_answer": "Yesterday",
+    "explanation": "'ontem' se traduz como 'Yesterday' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'Y'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'amanhã' em inglês?",
+    "options": [
+      "Tomorrow",
+      "Tomorruw",
+      "Tomorriw",
+      "Tomorrwo"
+    ],
+    "correct_answer": "Tomorrow",
+    "explanation": "'amanhã' se traduz como 'Tomorrow' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'hora' em inglês?",
+    "options": [
+      "Hourr",
+      "Hour",
+      "Hiur",
+      "Houl"
+    ],
+    "correct_answer": "Hour",
+    "explanation": "'hora' se traduz como 'Hour' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Tempo'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'sol' em inglês?",
+    "options": [
+      "Ssun",
+      "Sum",
+      "Sun",
+      "San"
+    ],
+    "correct_answer": "Sun",
+    "explanation": "'sol' se traduz como 'Sun' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'lua' em inglês?",
+    "options": [
+      "Moan",
+      "Moin",
+      "Meon",
+      "Moon"
+    ],
+    "correct_answer": "Moon",
+    "explanation": "'lua' se traduz como 'Moon' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'estrela' em inglês?",
+    "options": [
+      "Star",
+      "Starr",
+      "Stra",
+      "Sttar"
+    ],
+    "correct_answer": "Star",
+    "explanation": "'estrela' se traduz como 'Star' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'árvore' em inglês?",
+    "options": [
+      "True",
+      "Tree",
+      "Tlee",
+      "Trea"
+    ],
+    "correct_answer": "Tree",
+    "explanation": "'árvore' se traduz como 'Tree' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'flor' em inglês?",
+    "options": [
+      "Flowel",
+      "Flover",
+      "Flower",
+      "Flwoer"
+    ],
+    "correct_answer": "Flower",
+    "explanation": "'flor' se traduz como 'Flower' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'rio' em inglês?",
+    "options": [
+      "Rver",
+      "Ryver",
+      "Rivar",
+      "River"
+    ],
+    "correct_answer": "River",
+    "explanation": "'rio' se traduz como 'River' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'mar' em inglês?",
+    "options": [
+      "Sea",
+      "Sua",
+      "Soa",
+      "Sae"
+    ],
+    "correct_answer": "Sea",
+    "explanation": "'mar' se traduz como 'Sea' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'montanha' em inglês?",
+    "options": [
+      "Muuntain",
+      "Mountain",
+      "Moundain",
+      "Mountein"
+    ],
+    "correct_answer": "Mountain",
+    "explanation": "'montanha' se traduz como 'Mountain' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'céu' em inglês?",
+    "options": [
+      "Ski",
+      "Scy",
+      "Sky",
+      "Skky"
+    ],
+    "correct_answer": "Sky",
+    "explanation": "'céu' se traduz como 'Sky' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'vento' em inglês?",
+    "options": [
+      "Wond",
+      "Wynd",
+      "Wimd",
+      "Wind"
+    ],
+    "correct_answer": "Wind",
+    "explanation": "'vento' se traduz como 'Wind' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Natureza'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'comer' em inglês?",
+    "options": [
+      "Eat",
+      "Eta",
+      "Eit",
+      "Ead"
+    ],
+    "correct_answer": "Eat",
+    "explanation": "'comer' se traduz como 'Eat' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'beber' em inglês?",
+    "options": [
+      "Dlink",
+      "Drink",
+      "Drinnk",
+      "Dink"
+    ],
+    "correct_answer": "Drink",
+    "explanation": "'beber' se traduz como 'Drink' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'dormir' em inglês?",
+    "options": [
+      "Slaep",
+      "Sleeb",
+      "Sleep",
+      "Sreep"
+    ],
+    "correct_answer": "Sleep",
+    "explanation": "'dormir' se traduz como 'Sleep' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'andar' em inglês?",
+    "options": [
+      "Wakl",
+      "Wulk",
+      "Wark",
+      "Walk"
+    ],
+    "correct_answer": "Walk",
+    "explanation": "'andar' se traduz como 'Walk' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'correr' em inglês?",
+    "options": [
+      "Run",
+      "Rin",
+      "Ren",
+      "Ron"
+    ],
+    "correct_answer": "Run",
+    "explanation": "'correr' se traduz como 'Run' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'falar' em inglês?",
+    "options": [
+      "Speka",
+      "Speak",
+      "Speek",
+      "Spak"
+    ],
+    "correct_answer": "Speak",
+    "explanation": "'falar' se traduz como 'Speak' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'escrever' em inglês?",
+    "options": [
+      "Wlite",
+      "Wrute",
+      "Write",
+      "Writ"
+    ],
+    "correct_answer": "Write",
+    "explanation": "'escrever' se traduz como 'Write' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'abrir' em inglês?",
+    "options": [
+      "Oppen",
+      "Opun",
+      "Openn",
+      "Open"
+    ],
+    "correct_answer": "Open",
+    "explanation": "'abrir' se traduz como 'Open' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'fechar' em inglês?",
+    "options": [
+      "Close",
+      "Cclose",
+      "Clese",
+      "Closa"
+    ],
+    "correct_answer": "Close",
+    "explanation": "'fechar' se traduz como 'Close' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'comprar' em inglês?",
+    "options": [
+      "Boy",
+      "Buy",
+      "Bbuy",
+      "Bay"
+    ],
+    "correct_answer": "Buy",
+    "explanation": "'comprar' se traduz como 'Buy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos do dia a dia'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'bom' em inglês?",
+    "options": [
+      "Goad",
+      "Goud",
+      "Good",
+      "Goodd"
+    ],
+    "correct_answer": "Good",
+    "explanation": "'bom' se traduz como 'Good' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'ruim' em inglês?",
+    "options": [
+      "Bda",
+      "Bat",
+      "Bod",
+      "Bad"
+    ],
+    "correct_answer": "Bad",
+    "explanation": "'ruim' se traduz como 'Bad' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'novo' em inglês?",
+    "options": [
+      "New",
+      "Nuw",
+      "Neww",
+      "Niw"
+    ],
+    "correct_answer": "New",
+    "explanation": "'novo' se traduz como 'New' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'velho' em inglês?",
+    "options": [
+      "Olld",
+      "Old",
+      "Oldd",
+      "Olt"
+    ],
+    "correct_answer": "Old",
+    "explanation": "'velho' se traduz como 'Old' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'quente' em inglês?",
+    "options": [
+      "Het",
+      "Hat",
+      "Hot",
+      "Hhot"
+    ],
+    "correct_answer": "Hot",
+    "explanation": "'quente' se traduz como 'Hot' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'frio' em inglês?",
+    "options": [
+      "Codl",
+      "Colld",
+      "Culd",
+      "Cold"
+    ],
+    "correct_answer": "Cold",
+    "explanation": "'frio' se traduz como 'Cold' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'bonito' em inglês?",
+    "options": [
+      "Beautiful",
+      "Bautiful",
+      "Beaetiful",
+      "Beautaful"
+    ],
+    "correct_answer": "Beautiful",
+    "explanation": "'bonito' se traduz como 'Beautiful' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'forte' em inglês?",
+    "options": [
+      "Stronj",
+      "Strong",
+      "Strogn",
+      "Stlong"
+    ],
+    "correct_answer": "Strong",
+    "explanation": "'forte' se traduz como 'Strong' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'fácil' em inglês?",
+    "options": [
+      "Eays",
+      "Easyy",
+      "Easy",
+      "Eazy"
+    ],
+    "correct_answer": "Easy",
+    "explanation": "'fácil' se traduz como 'Easy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_basico",
+    "difficulty_level": 1,
+    "prompt": "Como se escreve 'cheio' em inglês?",
+    "options": [
+      "Fulll",
+      "Foll",
+      "Flul",
+      "Full"
+    ],
+    "correct_answer": "Full",
+    "explanation": "'cheio' se traduz como 'Full' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos comuns'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  }
+]
