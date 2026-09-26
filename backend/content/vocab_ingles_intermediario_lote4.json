@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'manchete' em inglês?",
+    "options": [
+      "Headline",
+      "Heedline",
+      "Heodline",
+      "Hedaline"
+    ],
+    "correct_answer": "Headline",
+    "explanation": "'manchete' se traduz como 'Headline' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'repórter' em inglês?",
+    "options": [
+      "Rporter",
+      "Reporter",
+      "Reporterr",
+      "Reportter"
+    ],
+    "correct_answer": "Reporter",
+    "explanation": "'repórter' se traduz como 'Reporter' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'entrevistado' em inglês?",
+    "options": [
+      "Inerviewee",
+      "Intervievee",
+      "Interviewee",
+      "Interviewae"
+    ],
+    "correct_answer": "Interviewee",
+    "explanation": "'entrevistado' se traduz como 'Interviewee' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'transmissão' em inglês?",
+    "options": [
+      "Broaddcast",
+      "Broadcats",
+      "Broadast",
+      "Broadcast"
+    ],
+    "correct_answer": "Broadcast",
+    "explanation": "'transmissão' se traduz como 'Broadcast' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'assinatura' em inglês?",
+    "options": [
+      "Subscription",
+      "Subscriptaon",
+      "Sbscription",
+      "Subscliption"
+    ],
+    "correct_answer": "Subscription",
+    "explanation": "'assinatura' se traduz como 'Subscription' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'propaganda' em inglês?",
+    "options": [
+      "Advertismeent",
+      "Advertisement",
+      "Advertisemint",
+      "Adveritsement"
+    ],
+    "correct_answer": "Advertisement",
+    "explanation": "'propaganda' se traduz como 'Advertisement' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'audiência' em inglês?",
+    "options": [
+      "Ratinjs",
+      "Raitngs",
+      "Ratings",
+      "Ratigs"
+    ],
+    "correct_answer": "Ratings",
+    "explanation": "'audiência' se traduz como 'Ratings' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'censura' em inglês?",
+    "options": [
+      "Censorhip",
+      "Ccensorship",
+      "Censorshyp",
+      "Censorship"
+    ],
+    "correct_answer": "Censorship",
+    "explanation": "'censura' se traduz como 'Censorship' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'notícia falsa' em inglês?",
+    "options": [
+      "Hoax",
+      "Hoxa",
+      "Hiax",
+      "Haax"
+    ],
+    "correct_answer": "Hoax",
+    "explanation": "'notícia falsa' se traduz como 'Hoax' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'fonte de informação' em inglês?",
+    "options": [
+      "Suorce",
+      "Source",
+      "Sourec",
+      "Ssource"
+    ],
+    "correct_answer": "Source",
+    "explanation": "'fonte de informação' se traduz como 'Source' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Notícias e mídia'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'governo' em inglês?",
+    "options": [
+      "Governmint",
+      "Govirnment",
+      "Government",
+      "Givernment"
+    ],
+    "correct_answer": "Government",
+    "explanation": "'governo' se traduz como 'Government' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'parlamento' em inglês?",
+    "options": [
+      "Parilament",
+      "Parleament",
+      "Pirliament",
+      "Parliament"
+    ],
+    "correct_answer": "Parliament",
+    "explanation": "'parlamento' se traduz como 'Parliament' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'eleito' em inglês?",
+    "options": [
+      "Elected",
+      "Electedd",
+      "Electted",
+      "Eleccted"
+    ],
+    "correct_answer": "Elected",
+    "explanation": "'eleito' se traduz como 'Elected' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cédula de votação' em inglês?",
+    "options": [
+      "Bllot",
+      "Ballot",
+      "Ballo",
+      "Bellot"
+    ],
+    "correct_answer": "Ballot",
+    "explanation": "'cédula de votação' se traduz como 'Ballot' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'campanha eleitoral' em inglês?",
+    "options": [
+      "Cimpaign",
+      "Campiign",
+      "Campaign",
+      "Camppaign"
+    ],
+    "correct_answer": "Campaign",
+    "explanation": "'campanha eleitoral' se traduz como 'Campaign' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'coalizão' em inglês?",
+    "options": [
+      "Coalitin",
+      "Coalitiun",
+      "Coaliteon",
+      "Coalition"
+    ],
+    "correct_answer": "Coalition",
+    "explanation": "'coalizão' se traduz como 'Coalition' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'renda' em inglês?",
+    "options": [
+      "Income",
+      "Incume",
+      "Icnome",
+      "Incomi"
+    ],
+    "correct_answer": "Income",
+    "explanation": "'renda' se traduz como 'Income' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'emenda' em inglês?",
+    "options": [
+      "Amendmentt",
+      "Amendment",
+      "Amenndment",
+      "Amindment"
+    ],
+    "correct_answer": "Amendment",
+    "explanation": "'emenda' se traduz como 'Amendment' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'manifestação' em inglês?",
+    "options": [
+      "Demonstrationn",
+      "Demonstrattion",
+      "Demonstration",
+      "Demonstrtaion"
+    ],
+    "correct_answer": "Demonstration",
+    "explanation": "'manifestação' se traduz como 'Demonstration' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'greve' em inglês?",
+    "options": [
+      "Strrike",
+      "Strice",
+      "Struke",
+      "Strike"
+    ],
+    "correct_answer": "Strike",
+    "explanation": "'greve' se traduz como 'Strike' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'inflação' em inglês?",
+    "options": [
+      "Inflation",
+      "Infltaion",
+      "Inflattion",
+      "Inlation"
+    ],
+    "correct_answer": "Inflation",
+    "explanation": "'inflação' se traduz como 'Inflation' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'desemprego' em inglês?",
+    "options": [
+      "Unemplayment",
+      "Unemployment",
+      "Unemployyment",
+      "Unempleyment"
+    ],
+    "correct_answer": "Unemployment",
+    "explanation": "'desemprego' se traduz como 'Unemployment' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'mercadoria' em inglês?",
+    "options": [
+      "Goodss",
+      "Geods",
+      "Goods",
+      "Goosd"
+    ],
+    "correct_answer": "Goods",
+    "explanation": "'mercadoria' se traduz como 'Goods' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'estoque' em inglês?",
+    "options": [
+      "Inventoyr",
+      "Invendory",
+      "Invontory",
+      "Inventory"
+    ],
+    "correct_answer": "Inventory",
+    "explanation": "'estoque' se traduz como 'Inventory' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'expansão econômica' em inglês?",
+    "options": [
+      "Boom",
+      "Biom",
+      "Boam",
+      "Beom"
+    ],
+    "correct_answer": "Boom",
+    "explanation": "'expansão econômica' se traduz como 'Boom' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'recessão' em inglês?",
+    "options": [
+      "Reession",
+      "Recession",
+      "Recessino",
+      "Rekession"
+    ],
+    "correct_answer": "Recession",
+    "explanation": "'recessão' se traduz como 'Recession' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ação de empresa' em inglês?",
+    "options": [
+      "Stocc",
+      "Stok",
+      "Stock",
+      "Stcok"
+    ],
+    "correct_answer": "Stock",
+    "explanation": "'ação de empresa' se traduz como 'Stock' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'salário-base' em inglês?",
+    "options": [
+      "Wagu",
+      "Wige",
+      "Wgae",
+      "Wage"
+    ],
+    "correct_answer": "Wage",
+    "explanation": "'salário-base' se traduz como 'Wage' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'consumidor' em inglês?",
+    "options": [
+      "Consumer",
+      "Cansumer",
+      "Consuemr",
+      "Consmer"
+    ],
+    "correct_answer": "Consumer",
+    "explanation": "'consumidor' se traduz como 'Consumer' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'escassez' em inglês?",
+    "options": [
+      "Shortege",
+      "Shortage",
+      "Shortige",
+      "Shoratge"
+    ],
+    "correct_answer": "Shortage",
+    "explanation": "'escassez' se traduz como 'Shortage' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'memória' em inglês?",
+    "options": [
+      "Memor",
+      "Memoyr",
+      "Memory",
+      "Momory"
+    ],
+    "correct_answer": "Memory",
+    "explanation": "'memória' se traduz como 'Memory' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'pensamento' em inglês?",
+    "options": [
+      "Tthought",
+      "Thoght",
+      "Thuoght",
+      "Thought"
+    ],
+    "correct_answer": "Thought",
+    "explanation": "'pensamento' se traduz como 'Thought' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'comportamento' em inglês?",
+    "options": [
+      "Behavior",
+      "Bihavior",
+      "Behaviorr",
+      "Behivior"
+    ],
+    "correct_answer": "Behavior",
+    "explanation": "'comportamento' se traduz como 'Behavior' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'personalidade' em inglês?",
+    "options": [
+      "Perosnality",
+      "Personality",
+      "Personulity",
+      "Personalit"
+    ],
+    "correct_answer": "Personality",
+    "explanation": "'personalidade' se traduz como 'Personality' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'consciência' em inglês?",
+    "options": [
+      "Awareess",
+      "Awarenass",
+      "Awareness",
+      "Awarreness"
+    ],
+    "correct_answer": "Awareness",
+    "explanation": "'consciência' se traduz como 'Awareness' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'pressão' em inglês?",
+    "options": [
+      "Preszure",
+      "Pessure",
+      "Pressue",
+      "Pressure"
+    ],
+    "correct_answer": "Pressure",
+    "explanation": "'pressão' se traduz como 'Pressure' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'motivação' em inglês?",
+    "options": [
+      "Motivation",
+      "Motivadion",
+      "Mtivation",
+      "Motivvation"
+    ],
+    "correct_answer": "Motivation",
+    "explanation": "'motivação' se traduz como 'Motivation' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'emoção' em inglês?",
+    "options": [
+      "Emetion",
+      "Emotion",
+      "Emotiun",
+      "Emition"
+    ],
+    "correct_answer": "Emotion",
+    "explanation": "'emoção' se traduz como 'Emotion' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'intuição' em inglês?",
+    "options": [
+      "Intuitian",
+      "Intuitien",
+      "Intuition",
+      "Intuittion"
+    ],
+    "correct_answer": "Intuition",
+    "explanation": "'intuição' se traduz como 'Intuition' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'mentalidade' em inglês?",
+    "options": [
+      "Mindsset",
+      "Midset",
+      "Mundset",
+      "Mindset"
+    ],
+    "correct_answer": "Mindset",
+    "explanation": "'mentalidade' se traduz como 'Mindset' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Psicologia'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'liquidificador' em inglês?",
+    "options": [
+      "Blender",
+      "Blemder",
+      "Blendder",
+      "Blenderr"
+    ],
+    "correct_answer": "Blender",
+    "explanation": "'liquidificador' se traduz como 'Blender' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'peneira' em inglês?",
+    "options": [
+      "Seeve",
+      "Sieve",
+      "Syeve",
+      "Siev"
+    ],
+    "correct_answer": "Sieve",
+    "explanation": "'peneira' se traduz como 'Sieve' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ralador' em inglês?",
+    "options": [
+      "Gratur",
+      "Grator",
+      "Grater",
+      "Greter"
+    ],
+    "correct_answer": "Grater",
+    "explanation": "'ralador' se traduz como 'Grater' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'saca-rolhas' em inglês?",
+    "options": [
+      "Corkscrev",
+      "Corkscew",
+      "Corscrew",
+      "Corkscrew"
+    ],
+    "correct_answer": "Corkscrew",
+    "explanation": "'saca-rolhas' se traduz como 'Corkscrew' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'concha' em inglês?",
+    "options": [
+      "Ladle",
+      "Lidle",
+      "Lale",
+      "Latle"
+    ],
+    "correct_answer": "Ladle",
+    "explanation": "'concha' se traduz como 'Ladle' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'espátula' em inglês?",
+    "options": [
+      "Satula",
+      "Spatula",
+      "Spatura",
+      "Spadula"
+    ],
+    "correct_answer": "Spatula",
+    "explanation": "'espátula' se traduz como 'Spatula' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'avental' em inglês?",
+    "options": [
+      "Apran",
+      "Apronn",
+      "Apron",
+      "Aprun"
+    ],
+    "correct_answer": "Apron",
+    "explanation": "'avental' se traduz como 'Apron' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'luva de cozinha' em inglês?",
+    "options": [
+      "Mtit",
+      "Midt",
+      "Mittt",
+      "Mitt"
+    ],
+    "correct_answer": "Mitt",
+    "explanation": "'luva de cozinha' se traduz como 'Mitt' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'batedor de claras' em inglês?",
+    "options": [
+      "Whisk",
+      "Whsik",
+      "Wisk",
+      "Whizk"
+    ],
+    "correct_answer": "Whisk",
+    "explanation": "'batedor de claras' se traduz como 'Whisk' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'escorredor' em inglês?",
+    "options": [
+      "Colannder",
+      "Colander",
+      "Coladner",
+      "Colader"
+    ],
+    "correct_answer": "Colander",
+    "explanation": "'escorredor' se traduz como 'Colander' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Utensílios de cozinha'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'grampeador' em inglês?",
+    "options": [
+      "Staplerr",
+      "Stpler",
+      "Stapler",
+      "Sapler"
+    ],
+    "correct_answer": "Stapler",
+    "explanation": "'grampeador' se traduz como 'Stapler' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'clipe de papel' em inglês?",
+    "options": [
+      "Paperclp",
+      "Piperclip",
+      "Paprclip",
+      "Paperclip"
+    ],
+    "correct_answer": "Paperclip",
+    "explanation": "'clipe de papel' se traduz como 'Paperclip' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'pasta de arquivos' em inglês?",
+    "options": [
+      "Folder",
+      "Flder",
+      "Foldur",
+      "Folter"
+    ],
+    "correct_answer": "Folder",
+    "explanation": "'pasta de arquivos' se traduz como 'Folder' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'prancheta' em inglês?",
+    "options": [
+      "Cclipboard",
+      "Clipboard",
+      "Clipboardd",
+      "Clipoard"
+    ],
+    "correct_answer": "Clipboard",
+    "explanation": "'prancheta' se traduz como 'Clipboard' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'calculadora' em inglês?",
+    "options": [
+      "Calcultor",
+      "Calculotor",
+      "Calculator",
+      "Calcilator"
+    ],
+    "correct_answer": "Calculator",
+    "explanation": "'calculadora' se traduz como 'Calculator' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'agenda de compromissos' em inglês?",
+    "options": [
+      "Palnner",
+      "Plannur",
+      "Plnner",
+      "Planner"
+    ],
+    "correct_answer": "Planner",
+    "explanation": "'agenda de compromissos' se traduz como 'Planner' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'etiqueta' em inglês?",
+    "options": [
+      "Label",
+      "Lebel",
+      "Labell",
+      "Lobel"
+    ],
+    "correct_answer": "Label",
+    "explanation": "'etiqueta' se traduz como 'Label' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'apontador' em inglês?",
+    "options": [
+      "Sharpenre",
+      "Sharpener",
+      "Sharpenur",
+      "Sharpeenr"
+    ],
+    "correct_answer": "Sharpener",
+    "explanation": "'apontador' se traduz como 'Sharpener' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cadeira giratória' em inglês?",
+    "options": [
+      "Swovel",
+      "Swwivel",
+      "Swivel",
+      "Swivell"
+    ],
+    "correct_answer": "Swivel",
+    "explanation": "'cadeira giratória' se traduz como 'Swivel' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'marcador de texto' em inglês?",
+    "options": [
+      "Haghlighter",
+      "Highlightor",
+      "Highligghter",
+      "Highlighter"
+    ],
+    "correct_answer": "Highlighter",
+    "explanation": "'marcador de texto' se traduz como 'Highlighter' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Material de escritório'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'comemoração' em inglês?",
+    "options": [
+      "Celebration",
+      "Celebratuon",
+      "Colebration",
+      "Celebratiun"
+    ],
+    "correct_answer": "Celebration",
+    "explanation": "'comemoração' se traduz como 'Celebration' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'convite' em inglês?",
+    "options": [
+      "Ivnitation",
+      "Invitation",
+      "Invitadion",
+      "Invitatien"
+    ],
+    "correct_answer": "Invitation",
+    "explanation": "'convite' se traduz como 'Invitation' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'fantasia' em inglês?",
+    "options": [
+      "Cosume",
+      "Coztume",
+      "Costume",
+      "Ccostume"
+    ],
+    "correct_answer": "Costume",
+    "explanation": "'fantasia' se traduz como 'Costume' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'fogos de artifício' em inglês?",
+    "options": [
+      "Fireowrks",
+      "Frieworks",
+      "Foreworks",
+      "Fireworks"
+    ],
+    "correct_answer": "Fireworks",
+    "explanation": "'fogos de artifício' se traduz como 'Fireworks' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'brinde' em inglês?",
+    "options": [
+      "Cheers",
+      "Chers",
+      "Chaers",
+      "Cheesr"
+    ],
+    "correct_answer": "Cheers",
+    "explanation": "'brinde' se traduz como 'Cheers' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'decoração' em inglês?",
+    "options": [
+      "Decorattion",
+      "Decoration",
+      "Decoratyon",
+      "Decolation"
+    ],
+    "correct_answer": "Decoration",
+    "explanation": "'decoração' se traduz como 'Decoration' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'confete' em inglês?",
+    "options": [
+      "Confetit",
+      "Comfetti",
+      "Confetti",
+      "Cenfetti"
+    ],
+    "correct_answer": "Confetti",
+    "explanation": "'confete' se traduz como 'Confetti' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'lembrancinha' em inglês?",
+    "options": [
+      "Souenir",
+      "Souvennir",
+      "Souevnir",
+      "Souvenir"
+    ],
+    "correct_answer": "Souvenir",
+    "explanation": "'lembrancinha' se traduz como 'Souvenir' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'jantar de gala' em inglês?",
+    "options": [
+      "Gala",
+      "Gaal",
+      "Gali",
+      "Galu"
+    ],
+    "correct_answer": "Gala",
+    "explanation": "'jantar de gala' se traduz como 'Gala' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cerimônia' em inglês?",
+    "options": [
+      "Ceremonyy",
+      "Ceremony",
+      "Celemony",
+      "Ceremoyn"
+    ],
+    "correct_answer": "Ceremony",
+    "explanation": "'cerimônia' se traduz como 'Ceremony' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Festas e celebrações'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'fé' em inglês?",
+    "options": [
+      "Faithh",
+      "Fayth",
+      "Faith",
+      "Faih"
+    ],
+    "correct_answer": "Faith",
+    "explanation": "'fé' se traduz como 'Faith' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'compaixão' em inglês?",
+    "options": [
+      "Comapssion",
+      "Compaszion",
+      "Compasion",
+      "Compassion"
+    ],
+    "correct_answer": "Compassion",
+    "explanation": "'compaixão' se traduz como 'Compassion' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'dever moral' em inglês?",
+    "options": [
+      "Duty",
+      "Dety",
+      "Dutty",
+      "Daty"
+    ],
+    "correct_answer": "Duty",
+    "explanation": "'dever moral' se traduz como 'Duty' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'honra' em inglês?",
+    "options": [
+      "Honur",
+      "Honor",
+      "Honol",
+      "Hnor"
+    ],
+    "correct_answer": "Honor",
+    "explanation": "'honra' se traduz como 'Honor' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'justiça' em inglês?",
+    "options": [
+      "Jastice",
+      "Jestice",
+      "Justice",
+      "Justie"
+    ],
+    "correct_answer": "Justice",
+    "explanation": "'justiça' se traduz como 'Justice' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'respeito' em inglês?",
+    "options": [
+      "Raspect",
+      "Ruspect",
+      "Repect",
+      "Respect"
+    ],
+    "correct_answer": "Respect",
+    "explanation": "'respeito' se traduz como 'Respect' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'caridade' em inglês?",
+    "options": [
+      "Charity",
+      "Chority",
+      "Charety",
+      "Charit"
+    ],
+    "correct_answer": "Charity",
+    "explanation": "'caridade' se traduz como 'Charity' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'vaidade' em inglês?",
+    "options": [
+      "Vanitty",
+      "Vanity",
+      "Venity",
+      "Vaniy"
+    ],
+    "correct_answer": "Vanity",
+    "explanation": "'vaidade' se traduz como 'Vanity' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ética' em inglês?",
+    "options": [
+      "Ethicz",
+      "Ethecs",
+      "Ethics",
+      "Ehics"
+    ],
+    "correct_answer": "Ethics",
+    "explanation": "'ética' se traduz como 'Ethics' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'sabedoria' em inglês?",
+    "options": [
+      "Wisom",
+      "Wisdum",
+      "Wosdom",
+      "Wisdom"
+    ],
+    "correct_answer": "Wisdom",
+    "explanation": "'sabedoria' se traduz como 'Wisdom' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Valores'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'moldar' em inglês?",
+    "options": [
+      "Shape",
+      "Sshape",
+      "Shappe",
+      "Shepe"
+    ],
+    "correct_answer": "Shape",
+    "explanation": "'moldar' se traduz como 'Shape' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'substituir' em inglês?",
+    "options": [
+      "Replac",
+      "Replace",
+      "Replaci",
+      "Replice"
+    ],
+    "correct_answer": "Replace",
+    "explanation": "'substituir' se traduz como 'Replace' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'amoldar-se' em inglês?",
+    "options": [
+      "Conforrm",
+      "Confarm",
+      "Conform",
+      "Confrom"
+    ],
+    "correct_answer": "Conform",
+    "explanation": "'amoldar-se' se traduz como 'Conform' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ajustar' em inglês?",
+    "options": [
+      "Adjast",
+      "Adjsut",
+      "Adjist",
+      "Adjust"
+    ],
+    "correct_answer": "Adjust",
+    "explanation": "'ajustar' se traduz como 'Adjust' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'trocar dinheiro' em inglês?",
+    "options": [
+      "Exchange",
+      "Exchannge",
+      "Ecxhange",
+      "Exhcange"
+    ],
+    "correct_answer": "Exchange",
+    "explanation": "'trocar dinheiro' se traduz como 'Exchange' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ampliar' em inglês?",
+    "options": [
+      "Expant",
+      "Expand",
+      "Expnad",
+      "Expund"
+    ],
+    "correct_answer": "Expand",
+    "explanation": "'ampliar' se traduz como 'Expand' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'encolher' em inglês?",
+    "options": [
+      "Shrenk",
+      "Shhrink",
+      "Shrink",
+      "Shrnk"
+    ],
+    "correct_answer": "Shrink",
+    "explanation": "'encolher' se traduz como 'Shrink' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'acelerar' em inglês?",
+    "options": [
+      "Accleerate",
+      "Accelerae",
+      "Accelreate",
+      "Accelerate"
+    ],
+    "correct_answer": "Accelerate",
+    "explanation": "'acelerar' se traduz como 'Accelerate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'desacelerar' em inglês?",
+    "options": [
+      "Decelerate",
+      "Decelerete",
+      "Decelerade",
+      "Decererate"
+    ],
+    "correct_answer": "Decelerate",
+    "explanation": "'desacelerar' se traduz como 'Decelerate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'evoluir' em inglês?",
+    "options": [
+      "Evolvu",
+      "Evolve",
+      "Evlve",
+      "Evlove"
+    ],
+    "correct_answer": "Evolve",
+    "explanation": "'evoluir' se traduz como 'Evolve' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de mudança'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'avistar' em inglês?",
+    "options": [
+      "Sspot",
+      "Sppot",
+      "Spot",
+      "Sopt"
+    ],
+    "correct_answer": "Spot",
+    "explanation": "'avistar' se traduz como 'Spot' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'observar' em inglês?",
+    "options": [
+      "Obsrve",
+      "Obsserve",
+      "Obzerve",
+      "Observe"
+    ],
+    "correct_answer": "Observe",
+    "explanation": "'observar' se traduz como 'Observe' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'perceber' em inglês?",
+    "options": [
+      "Realize",
+      "Reaize",
+      "Realuze",
+      "Raalize"
+    ],
+    "correct_answer": "Realize",
+    "explanation": "'perceber' se traduz como 'Realize' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'vislumbrar' em inglês?",
+    "options": [
+      "Glimse",
+      "Glimpse",
+      "Glympse",
+      "Glimpes"
+    ],
+    "correct_answer": "Glimpse",
+    "explanation": "'vislumbrar' se traduz como 'Glimpse' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'distinguir' em inglês?",
+    "options": [
+      "Distinjuish",
+      "Distinnguish",
+      "Distinguish",
+      "Distinguush"
+    ],
+    "correct_answer": "Distinguish",
+    "explanation": "'distinguir' se traduz como 'Distinguish' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'suspeitar' em inglês?",
+    "options": [
+      "Suspact",
+      "Suspcet",
+      "Suzpect",
+      "Suspect"
+    ],
+    "correct_answer": "Suspect",
+    "explanation": "'suspeitar' se traduz como 'Suspect' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'imaginar' em inglês?",
+    "options": [
+      "Imagine",
+      "Imagene",
+      "Imagnie",
+      "Imagien"
+    ],
+    "correct_answer": "Imagine",
+    "explanation": "'imaginar' se traduz como 'Imagine' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'relembrar' em inglês?",
+    "options": [
+      "Rceall",
+      "Recall",
+      "Recull",
+      "Recll"
+    ],
+    "correct_answer": "Recall",
+    "explanation": "'relembrar' se traduz como 'Recall' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'deixar passar despercebido' em inglês?",
+    "options": [
+      "Ovellook",
+      "Overlooc",
+      "Overlook",
+      "Oerlook"
+    ],
+    "correct_answer": "Overlook",
+    "explanation": "'deixar passar despercebido' se traduz como 'Overlook' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'prever' em inglês?",
+    "options": [
+      "Pretict",
+      "Predyct",
+      "Pledict",
+      "Predict"
+    ],
+    "correct_answer": "Predict",
+    "explanation": "'prever' se traduz como 'Predict' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de percepção'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  }
+]

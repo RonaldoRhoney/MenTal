@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'gramado' em inglês?",
+    "options": [
+      "Lawn",
+      "Llawn",
+      "Lawm",
+      "Lavn"
+    ],
+    "correct_answer": "Lawn",
+    "explanation": "'gramado' se traduz como 'Lawn' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cerca viva' em inglês?",
+    "options": [
+      "Hedga",
+      "Hedge",
+      "Hede",
+      "Hdge"
+    ],
+    "correct_answer": "Hedge",
+    "explanation": "'cerca viva' se traduz como 'Hedge' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'mangueira de jardim' em inglês?",
+    "options": [
+      "Hese",
+      "Hosa",
+      "Hose",
+      "Hase"
+    ],
+    "correct_answer": "Hose",
+    "explanation": "'mangueira de jardim' se traduz como 'Hose' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'carrinho de mão' em inglês?",
+    "options": [
+      "Wheelbbarrow",
+      "Wheolbarrow",
+      "Wheelbarrew",
+      "Wheelbarrow"
+    ],
+    "correct_answer": "Wheelbarrow",
+    "explanation": "'carrinho de mão' se traduz como 'Wheelbarrow' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'adubo' em inglês?",
+    "options": [
+      "Fertilizer",
+      "Fretilizer",
+      "Fortilizer",
+      "Fertiliezr"
+    ],
+    "correct_answer": "Fertilizer",
+    "explanation": "'adubo' se traduz como 'Fertilizer' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'estufa de plantas' em inglês?",
+    "options": [
+      "Greenhuse",
+      "Greenhouse",
+      "Grreenhouse",
+      "Greenhouso"
+    ],
+    "correct_answer": "Greenhouse",
+    "explanation": "'estufa de plantas' se traduz como 'Greenhouse' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'canteiro de flores' em inglês?",
+    "options": [
+      "Fluwerbed",
+      "Flowerbet",
+      "Flowerbed",
+      "Flowerped"
+    ],
+    "correct_answer": "Flowerbed",
+    "explanation": "'canteiro de flores' se traduz como 'Flowerbed' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'churrasqueira' em inglês?",
+    "options": [
+      "Grall",
+      "Grll",
+      "Groll",
+      "Grill"
+    ],
+    "correct_answer": "Grill",
+    "explanation": "'churrasqueira' se traduz como 'Grill' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'varal de roupas' em inglês?",
+    "options": [
+      "Clothesline",
+      "Clotheslone",
+      "Clotheslane",
+      "Clotheslne"
+    ],
+    "correct_answer": "Clothesline",
+    "explanation": "'varal de roupas' se traduz como 'Clothesline' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'calha do telhado' em inglês?",
+    "options": [
+      "Guttar",
+      "Gutter",
+      "Guter",
+      "Guttre"
+    ],
+    "correct_answer": "Gutter",
+    "explanation": "'calha do telhado' se traduz como 'Gutter' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Jardim e quintal'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'micro-ondas' em inglês?",
+    "options": [
+      "Mycrowave",
+      "Mecrowave",
+      "Microwave",
+      "Microwavu"
+    ],
+    "correct_answer": "Microwave",
+    "explanation": "'micro-ondas' se traduz como 'Microwave' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'torradeira' em inglês?",
+    "options": [
+      "Toater",
+      "Toastter",
+      "Toastor",
+      "Toaster"
+    ],
+    "correct_answer": "Toaster",
+    "explanation": "'torradeira' se traduz como 'Toaster' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'aspirador de pó' em inglês?",
+    "options": [
+      "Vacuum",
+      "Vucuum",
+      "Vecuum",
+      "Vacuam"
+    ],
+    "correct_answer": "Vacuum",
+    "explanation": "'aspirador de pó' se traduz como 'Vacuum' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'máquina de lavar roupa' em inglês?",
+    "options": [
+      "Wosher",
+      "Washer",
+      "Washar",
+      "Wassher"
+    ],
+    "correct_answer": "Washer",
+    "explanation": "'máquina de lavar roupa' se traduz como 'Washer' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'chaleira' em inglês?",
+    "options": [
+      "Kottle",
+      "Kettl",
+      "Kettle",
+      "Ketdle"
+    ],
+    "correct_answer": "Kettle",
+    "explanation": "'chaleira' se traduz como 'Kettle' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'K'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'controle remoto' em inglês?",
+    "options": [
+      "Remoet",
+      "Remmote",
+      "Reomte",
+      "Remote"
+    ],
+    "correct_answer": "Remote",
+    "explanation": "'controle remoto' se traduz como 'Remote' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'fones de ouvido' em inglês?",
+    "options": [
+      "Headphones",
+      "Headhpones",
+      "Huadphones",
+      "Haedphones"
+    ],
+    "correct_answer": "Headphones",
+    "explanation": "'fones de ouvido' se traduz como 'Headphones' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'radiador' em inglês?",
+    "options": [
+      "Rodiator",
+      "Radiator",
+      "Radiato",
+      "Radeator"
+    ],
+    "correct_answer": "Radiator",
+    "explanation": "'radiador' se traduz como 'Radiator' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'aquecedor' em inglês?",
+    "options": [
+      "Heiter",
+      "Heaer",
+      "Heater",
+      "Hheater"
+    ],
+    "correct_answer": "Heater",
+    "explanation": "'aquecedor' se traduz como 'Heater' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'congelador' em inglês?",
+    "options": [
+      "Freezre",
+      "Freeser",
+      "Feezer",
+      "Freezer"
+    ],
+    "correct_answer": "Freezer",
+    "explanation": "'congelador' se traduz como 'Freezer' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Eletrodomésticos'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'açougue' em inglês?",
+    "options": [
+      "Butcher",
+      "Batcher",
+      "Butkher",
+      "Butchr"
+    ],
+    "correct_answer": "Butcher",
+    "explanation": "'açougue' se traduz como 'Butcher' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'livraria' em inglês?",
+    "options": [
+      "Buokstore",
+      "Bookstore",
+      "Booktsore",
+      "Bookstori"
+    ],
+    "correct_answer": "Bookstore",
+    "explanation": "'livraria' se traduz como 'Bookstore' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'floricultura' em inglês?",
+    "options": [
+      "Florit",
+      "Flerist",
+      "Florist",
+      "Florust"
+    ],
+    "correct_answer": "Florist",
+    "explanation": "'floricultura' se traduz como 'Florist' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'lavanderia self-service' em inglês?",
+    "options": [
+      "Laumdromat",
+      "Launddromat",
+      "Laundrommat",
+      "Laundromat"
+    ],
+    "correct_answer": "Laundromat",
+    "explanation": "'lavanderia self-service' se traduz como 'Laundromat' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'barbearia' em inglês?",
+    "options": [
+      "Barbershop",
+      "Babrershop",
+      "Barbership",
+      "Babershop"
+    ],
+    "correct_answer": "Barbershop",
+    "explanation": "'barbearia' se traduz como 'Barbershop' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'joalheria' em inglês?",
+    "options": [
+      "Jeewlry",
+      "Jewelry",
+      "Jewery",
+      "Jewelryy"
+    ],
+    "correct_answer": "Jewelry",
+    "explanation": "'joalheria' se traduz como 'Jewelry' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'papelaria' em inglês?",
+    "options": [
+      "Statoinery",
+      "Statioenry",
+      "Stationery",
+      "Sdationery"
+    ],
+    "correct_answer": "Stationery",
+    "explanation": "'papelaria' se traduz como 'Stationery' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'supermercado' em inglês?",
+    "options": [
+      "Supermarke",
+      "Sapermarket",
+      "Supermirket",
+      "Supermarket"
+    ],
+    "correct_answer": "Supermarket",
+    "explanation": "'supermercado' se traduz como 'Supermarket' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cabeleireiro' em inglês?",
+    "options": [
+      "Hairdresser",
+      "Haidrresser",
+      "Hairdrezser",
+      "Hairdressel"
+    ],
+    "correct_answer": "Hairdresser",
+    "explanation": "'cabeleireiro' se traduz como 'Hairdresser' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'agência de viagens' em inglês?",
+    "options": [
+      "Agecy",
+      "Agency",
+      "Agenyc",
+      "Agenci"
+    ],
+    "correct_answer": "Agency",
+    "explanation": "'agência de viagens' se traduz como 'Agency' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Lojas e serviços'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'remetente' em inglês?",
+    "options": [
+      "Snder",
+      "Sendor",
+      "Sender",
+      "Sneder"
+    ],
+    "correct_answer": "Sender",
+    "explanation": "'remetente' se traduz como 'Sender' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'destinatário' em inglês?",
+    "options": [
+      "Recibient",
+      "Reccipient",
+      "Recapient",
+      "Recipient"
+    ],
+    "correct_answer": "Recipient",
+    "explanation": "'destinatário' se traduz como 'Recipient' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'encomenda' em inglês?",
+    "options": [
+      "Parcel",
+      "Parcle",
+      "Pacrel",
+      "Parrcel"
+    ],
+    "correct_answer": "Parcel",
+    "explanation": "'encomenda' se traduz como 'Parcel' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'endereço' em inglês?",
+    "options": [
+      "Addrses",
+      "Address",
+      "Addross",
+      "Addriss"
+    ],
+    "correct_answer": "Address",
+    "explanation": "'endereço' se traduz como 'Address' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'caixa de entrada' em inglês?",
+    "options": [
+      "Inbbox",
+      "Inobx",
+      "Inbox",
+      "Inbux"
+    ],
+    "correct_answer": "Inbox",
+    "explanation": "'caixa de entrada' se traduz como 'Inbox' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'anexo' em inglês?",
+    "options": [
+      "Attacment",
+      "Attachmnt",
+      "Attchment",
+      "Attachment"
+    ],
+    "correct_answer": "Attachment",
+    "explanation": "'anexo' se traduz como 'Attachment' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'rascunho' em inglês?",
+    "options": [
+      "Draft",
+      "Drfat",
+      "Droft",
+      "Drat"
+    ],
+    "correct_answer": "Draft",
+    "explanation": "'rascunho' se traduz como 'Draft' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'assinatura de e-mail' em inglês?",
+    "options": [
+      "Signatuer",
+      "Signature",
+      "Signuture",
+      "Segnature"
+    ],
+    "correct_answer": "Signature",
+    "explanation": "'assinatura de e-mail' se traduz como 'Signature' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'entrega' em inglês?",
+    "options": [
+      "Dellivery",
+      "Deliveri",
+      "Delivery",
+      "Dleivery"
+    ],
+    "correct_answer": "Delivery",
+    "explanation": "'entrega' se traduz como 'Delivery' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'remessa' em inglês?",
+    "options": [
+      "Shopment",
+      "Shipmnt",
+      "Shupment",
+      "Shipment"
+    ],
+    "correct_answer": "Shipment",
+    "explanation": "'remessa' se traduz como 'Shipment' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Correspondência'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'soma' em inglês?",
+    "options": [
+      "Sum",
+      "Ssum",
+      "Summ",
+      "Smu"
+    ],
+    "correct_answer": "Sum",
+    "explanation": "'soma' se traduz como 'Sum' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'subtração' em inglês?",
+    "options": [
+      "Subtracteon",
+      "Subtraction",
+      "Subtractuon",
+      "Subtractoin"
+    ],
+    "correct_answer": "Subtraction",
+    "explanation": "'subtração' se traduz como 'Subtraction' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'divisão' em inglês?",
+    "options": [
+      "Dviision",
+      "Divusion",
+      "Division",
+      "Divisiun"
+    ],
+    "correct_answer": "Division",
+    "explanation": "'divisão' se traduz como 'Division' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'porcentagem' em inglês?",
+    "options": [
+      "Purcentage",
+      "Pecrentage",
+      "Percentige",
+      "Percentage"
+    ],
+    "correct_answer": "Percentage",
+    "explanation": "'porcentagem' se traduz como 'Percentage' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'fração' em inglês?",
+    "options": [
+      "Fraction",
+      "Fraciton",
+      "Fracction",
+      "Fractiin"
+    ],
+    "correct_answer": "Fraction",
+    "explanation": "'fração' se traduz como 'Fraction' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'média aritmética' em inglês?",
+    "options": [
+      "Avrage",
+      "Average",
+      "Averaje",
+      "Averag"
+    ],
+    "correct_answer": "Average",
+    "explanation": "'média aritmética' se traduz como 'Average' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ângulo' em inglês?",
+    "options": [
+      "Angl",
+      "Anngle",
+      "Angle",
+      "Anlge"
+    ],
+    "correct_answer": "Angle",
+    "explanation": "'ângulo' se traduz como 'Angle' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'largura' em inglês?",
+    "options": [
+      "Widtth",
+      "Wdth",
+      "Widht",
+      "Width"
+    ],
+    "correct_answer": "Width",
+    "explanation": "'largura' se traduz como 'Width' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'peso' em inglês?",
+    "options": [
+      "Weight",
+      "Weigt",
+      "Weiht",
+      "Weaght"
+    ],
+    "correct_answer": "Weight",
+    "explanation": "'peso' se traduz como 'Weight' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'comprimento' em inglês?",
+    "options": [
+      "Lengtth",
+      "Length",
+      "Lngth",
+      "Lenth"
+    ],
+    "correct_answer": "Length",
+    "explanation": "'comprimento' se traduz como 'Length' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Matemática'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'líquido' em inglês?",
+    "options": [
+      "Liqoid",
+      "Liuqid",
+      "Liquid",
+      "Liquit"
+    ],
+    "correct_answer": "Liquid",
+    "explanation": "'líquido' se traduz como 'Liquid' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'gás' em inglês?",
+    "options": [
+      "Ges",
+      "Gass",
+      "Gis",
+      "Gas"
+    ],
+    "correct_answer": "Gas",
+    "explanation": "'gás' se traduz como 'Gas' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'sólido' em inglês?",
+    "options": [
+      "Solid",
+      "Sloid",
+      "Salid",
+      "Solit"
+    ],
+    "correct_answer": "Solid",
+    "explanation": "'sólido' se traduz como 'Solid' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'mistura' em inglês?",
+    "options": [
+      "Mixtura",
+      "Mixture",
+      "Mixxture",
+      "Muxture"
+    ],
+    "correct_answer": "Mixture",
+    "explanation": "'mistura' se traduz como 'Mixture' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ferrugem' em inglês?",
+    "options": [
+      "Rusd",
+      "Rsut",
+      "Rust",
+      "Rist"
+    ],
+    "correct_answer": "Rust",
+    "explanation": "'ferrugem' se traduz como 'Rust' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'chama' em inglês?",
+    "options": [
+      "Fleme",
+      "Flamu",
+      "Flama",
+      "Flame"
+    ],
+    "correct_answer": "Flame",
+    "explanation": "'chama' se traduz como 'Flame' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'faísca' em inglês?",
+    "options": [
+      "Spark",
+      "Sark",
+      "Sspark",
+      "Sppark"
+    ],
+    "correct_answer": "Spark",
+    "explanation": "'faísca' se traduz como 'Spark' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'vapor' em inglês?",
+    "options": [
+      "Staem",
+      "Steam",
+      "Stoam",
+      "Stean"
+    ],
+    "correct_answer": "Steam",
+    "explanation": "'vapor' se traduz como 'Steam' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'eletricidade' em inglês?",
+    "options": [
+      "Elctricity",
+      "Erectricity",
+      "Electricity",
+      "Electriciy"
+    ],
+    "correct_answer": "Electricity",
+    "explanation": "'eletricidade' se traduz como 'Electricity' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ímã' em inglês?",
+    "options": [
+      "Mignet",
+      "Manget",
+      "Majnet",
+      "Magnet"
+    ],
+    "correct_answer": "Magnet",
+    "explanation": "'ímã' se traduz como 'Magnet' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Física e química'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'cansativo' em inglês?",
+    "options": [
+      "Exhausting",
+      "Exausting",
+      "Exhasting",
+      "Exhaustung"
+    ],
+    "correct_answer": "Exhausting",
+    "explanation": "'cansativo' se traduz como 'Exhausting' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'arriscado' em inglês?",
+    "options": [
+      "Rusky",
+      "Risky",
+      "Rissky",
+      "Risyk"
+    ],
+    "correct_answer": "Risky",
+    "explanation": "'arriscado' se traduz como 'Risky' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'confortável' em inglês?",
+    "options": [
+      "Comfurtable",
+      "Comfirtable",
+      "Comfortable",
+      "Comortable"
+    ],
+    "correct_answer": "Comfortable",
+    "explanation": "'confortável' se traduz como 'Comfortable' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'desconfortável' em inglês?",
+    "options": [
+      "Uncomfortale",
+      "Uncomfortabl",
+      "Uncomfortble",
+      "Uncomfortable"
+    ],
+    "correct_answer": "Uncomfortable",
+    "explanation": "'desconfortável' se traduz como 'Uncomfortable' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'lotado' em inglês?",
+    "options": [
+      "Crowded",
+      "Crrowded",
+      "Crowted",
+      "Crowdad"
+    ],
+    "correct_answer": "Crowded",
+    "explanation": "'lotado' se traduz como 'Crowded' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'deserto de gente' em inglês?",
+    "options": [
+      "Deserded",
+      "Deserted",
+      "Desertde",
+      "Desetred"
+    ],
+    "correct_answer": "Deserted",
+    "explanation": "'deserto de gente' se traduz como 'Deserted' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'disponível' em inglês?",
+    "options": [
+      "Availablu",
+      "Avialable",
+      "Available",
+      "Avuilable"
+    ],
+    "correct_answer": "Available",
+    "explanation": "'disponível' se traduz como 'Available' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'caríssimo' em inglês?",
+    "options": [
+      "Coslty",
+      "Csotly",
+      "Cestly",
+      "Costly"
+    ],
+    "correct_answer": "Costly",
+    "explanation": "'caríssimo' se traduz como 'Costly' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'suficiente' em inglês?",
+    "options": [
+      "Sufficient",
+      "Sufficiont",
+      "Suffiicent",
+      "Ssufficient"
+    ],
+    "correct_answer": "Sufficient",
+    "explanation": "'suficiente' se traduz como 'Sufficient' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'confiável' em inglês?",
+    "options": [
+      "Reliuble",
+      "Reliable",
+      "Reluable",
+      "Reiable"
+    ],
+    "correct_answer": "Reliable",
+    "explanation": "'confiável' se traduz como 'Reliable' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de estado'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'covarde' em inglês?",
+    "options": [
+      "Ceward",
+      "Cowad",
+      "Coward",
+      "Cowadr"
+    ],
+    "correct_answer": "Coward",
+    "explanation": "'covarde' se traduz como 'Coward' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'tolo' em inglês?",
+    "options": [
+      "Faolish",
+      "Fooilsh",
+      "Foolis",
+      "Foolish"
+    ],
+    "correct_answer": "Foolish",
+    "explanation": "'tolo' se traduz como 'Foolish' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'sábio' em inglês?",
+    "options": [
+      "Wise",
+      "Wisa",
+      "Wyse",
+      "Wuse"
+    ],
+    "correct_answer": "Wise",
+    "explanation": "'sábio' se traduz como 'Wise' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ingênuo' em inglês?",
+    "options": [
+      "Naiva",
+      "Naive",
+      "Nnaive",
+      "Naove"
+    ],
+    "correct_answer": "Naive",
+    "explanation": "'ingênuo' se traduz como 'Naive' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'ganancioso' em inglês?",
+    "options": [
+      "Greeyd",
+      "Gredey",
+      "Greedy",
+      "Greey"
+    ],
+    "correct_answer": "Greedy",
+    "explanation": "'ganancioso' se traduz como 'Greedy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'invejoso' em inglês?",
+    "options": [
+      "Envioes",
+      "Envius",
+      "Enviois",
+      "Envious"
+    ],
+    "correct_answer": "Envious",
+    "explanation": "'invejoso' se traduz como 'Envious' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'sério' em inglês?",
+    "options": [
+      "Serious",
+      "Sserious",
+      "Seryous",
+      "Serieus"
+    ],
+    "correct_answer": "Serious",
+    "explanation": "'sério' se traduz como 'Serious' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'divertido' em inglês?",
+    "options": [
+      "Amusingg",
+      "Amusing",
+      "Amusinng",
+      "Ammusing"
+    ],
+    "correct_answer": "Amusing",
+    "explanation": "'divertido' se traduz como 'Amusing' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'bem-humorado' em inglês?",
+    "options": [
+      "Chaerful",
+      "Cheerul",
+      "Cheerful",
+      "Cheerfel"
+    ],
+    "correct_answer": "Cheerful",
+    "explanation": "'bem-humorado' se traduz como 'Cheerful' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'criativo' em inglês?",
+    "options": [
+      "Crative",
+      "Creatove",
+      "Cruative",
+      "Creative"
+    ],
+    "correct_answer": "Creative",
+    "explanation": "'criativo' se traduz como 'Creative' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de caráter'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'piscar' em inglês?",
+    "options": [
+      "Blink",
+      "Bink",
+      "Blonk",
+      "Bblink"
+    ],
+    "correct_answer": "Blink",
+    "explanation": "'piscar' se traduz como 'Blink' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'franzir a testa' em inglês?",
+    "options": [
+      "Frwon",
+      "Frown",
+      "Frwn",
+      "Frawn"
+    ],
+    "correct_answer": "Frown",
+    "explanation": "'franzir a testa' se traduz como 'Frown' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'sorrir largamente' em inglês?",
+    "options": [
+      "Bbeam",
+      "Bema",
+      "Beam",
+      "Buam"
+    ],
+    "correct_answer": "Beam",
+    "explanation": "'sorrir largamente' se traduz como 'Beam' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'suspirar' em inglês?",
+    "options": [
+      "Sagh",
+      "Siggh",
+      "Sogh",
+      "Sigh"
+    ],
+    "correct_answer": "Sigh",
+    "explanation": "'suspirar' se traduz como 'Sigh' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'soluçar' em inglês?",
+    "options": [
+      "Sob",
+      "Seb",
+      "Sobb",
+      "Sab"
+    ],
+    "correct_answer": "Sob",
+    "explanation": "'soluçar' se traduz como 'Sob' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'gemer' em inglês?",
+    "options": [
+      "Graan",
+      "Groan",
+      "Grean",
+      "Grroan"
+    ],
+    "correct_answer": "Groan",
+    "explanation": "'gemer' se traduz como 'Groan' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'murmurar' em inglês?",
+    "options": [
+      "Munble",
+      "Mumbe",
+      "Mumble",
+      "Mmble"
+    ],
+    "correct_answer": "Mumble",
+    "explanation": "'murmurar' se traduz como 'Mumble' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'gaguejar' em inglês?",
+    "options": [
+      "Stuttel",
+      "Stuter",
+      "Stutetr",
+      "Stutter"
+    ],
+    "correct_answer": "Stutter",
+    "explanation": "'gaguejar' se traduz como 'Stutter' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'rir baixinho' em inglês?",
+    "options": [
+      "Giggle",
+      "Giggel",
+      "Giggli",
+      "Gigjle"
+    ],
+    "correct_answer": "Giggle",
+    "explanation": "'rir baixinho' se traduz como 'Giggle' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'estremecer' em inglês?",
+    "options": [
+      "Shivre",
+      "Shiver",
+      "Shievr",
+      "Shyver"
+    ],
+    "correct_answer": "Shiver",
+    "explanation": "'estremecer' se traduz como 'Shiver' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de expressão do corpo'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'saltar' em inglês?",
+    "options": [
+      "Leep",
+      "Lleap",
+      "Leap",
+      "Leapp"
+    ],
+    "correct_answer": "Leap",
+    "explanation": "'saltar' se traduz como 'Leap' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'mergulhar' em inglês?",
+    "options": [
+      "Divve",
+      "Divi",
+      "Divo",
+      "Dive"
+    ],
+    "correct_answer": "Dive",
+    "explanation": "'mergulhar' se traduz como 'Dive' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'deslizar' em inglês?",
+    "options": [
+      "Slide",
+      "Slidu",
+      "Slode",
+      "Slede"
+    ],
+    "correct_answer": "Slide",
+    "explanation": "'deslizar' se traduz como 'Slide' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'escorregar' em inglês?",
+    "options": [
+      "Slib",
+      "Slip",
+      "Slpi",
+      "Srip"
+    ],
+    "correct_answer": "Slip",
+    "explanation": "'escorregar' se traduz como 'Slip' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'girar' em inglês?",
+    "options": [
+      "Rottate",
+      "Rodate",
+      "Rotate",
+      "Rotati"
+    ],
+    "correct_answer": "Rotate",
+    "explanation": "'girar' se traduz como 'Rotate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'rebolar' em inglês?",
+    "options": [
+      "Wigglu",
+      "Wijgle",
+      "Wiggla",
+      "Wiggle"
+    ],
+    "correct_answer": "Wiggle",
+    "explanation": "'rebolar' se traduz como 'Wiggle' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'passear a pé' em inglês?",
+    "options": [
+      "Stroll",
+      "Strolr",
+      "Strroll",
+      "Storll"
+    ],
+    "correct_answer": "Stroll",
+    "explanation": "'passear a pé' se traduz como 'Stroll' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'arrastar' em inglês?",
+    "options": [
+      "Dlag",
+      "Drag",
+      "Dragg",
+      "Drga"
+    ],
+    "correct_answer": "Drag",
+    "explanation": "'arrastar' se traduz como 'Drag' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'correr em disparada' em inglês?",
+    "options": [
+      "Spprint",
+      "Sprintt",
+      "Sprint",
+      "Spront"
+    ],
+    "correct_answer": "Sprint",
+    "explanation": "'correr em disparada' se traduz como 'Sprint' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Como se escreve 'vagar' em inglês?",
+    "options": [
+      "Wandder",
+      "Wandur",
+      "Wender",
+      "Wander"
+    ],
+    "correct_answer": "Wander",
+    "explanation": "'vagar' se traduz como 'Wander' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de movimento 2'.",
+      "Começa com 'W'."
+    ],
+    "age_reviewed": true
+  }
+]
