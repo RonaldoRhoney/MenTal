@@ -23,6 +23,7 @@ from app import models, services  # noqa: E402
 from app.content_validation import validate_content  # noqa: E402
 from app.db import SessionLocal  # noqa: E402
 from app.seed import TERRITORIES  # noqa: E402
+from app.sentinela import scan  # noqa: E402
 
 
 def main() -> None:
@@ -94,6 +95,15 @@ def main() -> None:
         services.touch_territory_content_updated(db, sorted(touched_territory_ids))
 
         print(f"✅ {inserted} desafio(s) novo(s) inserido(s), {skipped} já existiam (pulado(s)).")
+        # Agente Sentinela (AGENTE_SENTINELA_CONTEUDO_V1.md): reage a cada carga. Corrige só o
+        # mecânico; o resto vai pra fila de aprovação (nada de conteúdo é alterado aqui).
+        if touched_territory_ids:
+            findings = scan(db, sorted(touched_territory_ids), apply=True)
+            fixed = sum(1 for f in findings if f.applied)
+            queue = [f for f in findings if f.kind == "conteudo"]
+            print(f"🛡️ Sentinela: {fixed} correção(ões) mecânica(s) aplicada(s), {len(queue)} item(ns) na fila de aprovação.")
+            for f in queue[:10]:
+                print(f"   - {f.territory_id} · {f.prompt[:60]!r}: {f.code}")
         if inserted:
             print(
                 "\nLembrete: adicione o mesmo conteúdo em app/seed.py CHALLENGES também, "
