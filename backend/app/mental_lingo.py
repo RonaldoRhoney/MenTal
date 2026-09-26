@@ -100,6 +100,55 @@ def _not_understood() -> dict:
 
 MAX_GAP_WORD_LEN = 80
 
+_VOCAB_EXPLANATION_RE = re.compile(r"^'(.+?)' se traduz como '(.+?)' em (\w+)\.$")
+_SUGGESTION_RE = re.compile(r"^'(.+?)' em inglês pode ser: ([^.]+)\.")
+_QUOTED_RE = re.compile(r"'([^']+)'")
+
+
+def build_speech_segments(text: str, target: str | None, foreign_terms: list[str]) -> list[dict]:
+    """Pedido de Rhoney (26/09/2026): "a AI Mental_Lingo deve falar as palavras de
+    cada idioma de forma nativa". Divide a resposta em trechos por IDIOMA pra o app
+    falar cada um com a voz nativa (a explicação em português com a voz pt-BR, a
+    palavra estrangeira com a voz do idioma dela). Padrões conhecidos do vocabulário
+    são tratados exatamente; em explicações livres, só é "estrangeiro" o trecho entre
+    aspas que coincide com um termo do idioma-alvo já conhecido (ex.: a resposta
+    correta) — nunca por suposição."""
+    m = _VOCAB_EXPLANATION_RE.match(text)
+    if m and target:
+        pt_term, foreign, idioma = m.groups()
+        return [
+            {"lang": "pt", "text": f"{pt_term} se traduz como"},
+            {"lang": target, "text": foreign},
+            {"lang": "pt", "text": f"em {idioma}"},
+        ]
+    m = _SUGGESTION_RE.search(text)
+    if m and target:
+        pt_term, glosses = m.groups()
+        segments = [{"lang": "pt", "text": f"{pt_term} em inglês pode ser"}]
+        segments += [{"lang": target, "text": g.strip()} for g in glosses.split(",") if g.strip()]
+        tail = text[m.end():].strip()
+        tail = tail.strip("()").strip()
+        if tail:
+            segments.append({"lang": "pt", "text": tail})
+        return segments
+    if not target or not foreign_terms:
+        return [{"lang": "pt", "text": text}]
+    known = {t.strip().lower() for t in foreign_terms if t.strip()}
+    segments: list[dict] = []
+    pos = 0
+    for quoted in _QUOTED_RE.finditer(text):
+        if quoted.group(1).strip().lower() not in known:
+            continue
+        before = text[pos:quoted.start()].strip()
+        if before:
+            segments.append({"lang": "pt", "text": before})
+        segments.append({"lang": target, "text": quoted.group(1)})
+        pos = quoted.end()
+    rest = text[pos:].strip()
+    if rest:
+        segments.append({"lang": "pt", "text": rest})
+    return segments or [{"lang": "pt", "text": text}]
+
 
 def _record_gap(db: Session, word: str, target: str | None) -> None:
     """Registra a lacuna (só agregado, sem usuário). Falha aqui nunca pode
@@ -156,21 +205,25 @@ def answer_question(db: Session, question: str) -> dict:
     for challenge in challenges:
         meaning = extract_portuguese_meaning(challenge.prompt)
         if meaning and meaning.strip().lower() == word_norm:
+            lang = _language_of_territory(challenge.territory_id)
             return {
                 "found": True,
                 "answer_text": challenge.explanation,
                 "matched_word": word,
-                "target_language": _language_of_territory(challenge.territory_id),
+                "target_language": lang,
+                "speech_segments": build_speech_segments(challenge.explanation, lang, [challenge.correct_answer]),
             }
 
     # 2) a palavra perguntada é o termo NO IDIOMA-ALVO (ex.: "house" -> "casa").
     for challenge in challenges:
         if challenge.correct_answer.strip().lower() == word_norm:
+            lang = _language_of_territory(challenge.territory_id)
             return {
                 "found": True,
                 "answer_text": challenge.explanation,
                 "matched_word": word,
-                "target_language": _language_of_territory(challenge.territory_id),
+                "target_language": lang,
+                "speech_segments": build_speech_segments(challenge.explanation, lang, [challenge.correct_answer]),
             }
 
     _record_gap(db, word, target)
@@ -183,6 +236,7 @@ def answer_question(db: Session, question: str) -> dict:
             "answer_text": text,
             "matched_word": word,
             "target_language": target or "ingles",
+            "speech_segments": build_speech_segments(text, target or "ingles", []),
             "suggestion_key": {"word": suggestion.word, "target_language": suggestion.target_language},
             "reviewed": reviewed,
         }

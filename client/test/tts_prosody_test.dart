@@ -26,4 +26,10 @@ void main() {
     expect(prepareTextForTts('Hello!'), 'Hello!');
     expect(prepareTextForTts(''), '');
   });
+
+  test('palavra estrangeira dentro de uma frase do Mental Lingo não é repetida', () {
+    expect(prepareTextForTts('House', repeatShortWords: false), 'House.');
+    expect(prepareTextForTts('em inglês', repeatShortWords: false), 'em inglês.');
+    expect(prepareTextForTts('House'), 'House... House.');
+  });
 }

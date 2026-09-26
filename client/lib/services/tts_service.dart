@@ -47,12 +47,12 @@ extension TtsSpeedSsmlRate on TtsSpeed {
 ///   dita duas vezes com pausa ("car... car."), o que dá a duração e a
 ///   cadência de fala natural e uma segunda chance de ouvir;
 /// - frase sem pontuação final ganha ponto, pra o motor fechar a entonação.
-String prepareTextForTts(String text) {
+String prepareTextForTts(String text, {bool repeatShortWords = true}) {
   final t = text.trim();
   if (t.isEmpty) return t;
   final endsWithPunctuation = RegExp(r'[.!?…]$').hasMatch(t);
   final words = t.split(RegExp(r'\s+'));
-  if (words.length <= 2 && !endsWithPunctuation) return '$t... $t.';
+  if (repeatShortWords && words.length <= 2 && !endsWithPunctuation) return '$t... $t.';
   return endsWithPunctuation ? t : '$t.';
 }
 
@@ -74,7 +74,8 @@ class TtsService {
   final LinkedHashMap<String, Uint8List> _cache = LinkedHashMap();
   final Set<String> _preloading = {};
 
-  String _cacheKey(String text, String voice, TtsSpeed speed) => '$voice|${speed.name}|$text';
+  String _cacheKey(String text, String voice, TtsSpeed speed, [bool repeatShortWords = true]) =>
+      '$voice|${speed.name}|${repeatShortWords ? 'r' : 's'}|$text';
 
   void _cacheStore(String key, Uint8List bytes) {
     _cache.remove(key);
@@ -84,10 +85,10 @@ class TtsService {
     }
   }
 
-  Future<Uint8List?> _synthesize(String text, String voice, TtsSpeed speed) async {
+  Future<Uint8List?> _synthesize(String text, String voice, TtsSpeed speed, [bool repeatShortWords = true]) async {
     final tts = FlutterEdgeTts(voice: voice);
     try {
-      final result = await tts.synthesize(prepareTextForTts(text), prosody: EdgeTtsProsody(rate: speed.ssmlRate));
+      final result = await tts.synthesize(prepareTextForTts(text, repeatShortWords: repeatShortWords), prosody: EdgeTtsProsody(rate: speed.ssmlRate));
       return result.audioBytes;
     } catch (_) {
       return null;
@@ -127,6 +128,7 @@ class TtsService {
     required String voice,
     TtsSpeed speed = TtsSpeed.normal,
     Duration maxWait = const Duration(seconds: 6),
+    bool repeatShortWords = true,
   }) async {
     if (disabled) return false;
     final completed = Completer<void>();
@@ -135,7 +137,7 @@ class TtsService {
       sub = _player.onPlayerComplete.listen((_) {
         if (!completed.isCompleted) completed.complete();
       });
-      final ok = await speak(text, voice: voice, speed: speed);
+      final ok = await speak(text, voice: voice, speed: speed, repeatShortWords: repeatShortWords);
       if (ok) await completed.future.timeout(maxWait, onTimeout: () {});
       return ok;
     } catch (_) {
@@ -151,13 +153,14 @@ class TtsService {
   /// Retorna `false` em qualquer falha (rede, síntese, playback) — quem
   /// chama decide como comunicar isso ao usuário, este serviço nunca
   /// lança exceção pro chamador.
-  Future<bool> speak(String text, {required String voice, TtsSpeed speed = TtsSpeed.normal}) async {
+  Future<bool> speak(String text,
+      {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = true}) async {
     if (disabled || _speaking || text.trim().isEmpty) return false;
     _speaking = true;
     try {
-      final key = _cacheKey(text, voice, speed);
+      final key = _cacheKey(text, voice, speed, repeatShortWords);
       final cached = _cache[key];
-      final bytes = cached ?? await _synthesize(text, voice, speed);
+      final bytes = cached ?? await _synthesize(text, voice, speed, repeatShortWords);
       if (bytes == null) return false;
       if (cached == null) _cacheStore(key, bytes);
       await _player.stop();

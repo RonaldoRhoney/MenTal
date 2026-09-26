@@ -1279,6 +1279,13 @@ class MentalLingoSuggestionKey(BaseModel):
     target_language: str
 
 
+class SpeechSegment(BaseModel):
+    """Trecho da resposta com o idioma em que deve ser falado (voz nativa)."""
+
+    lang: str  # 'pt' | 'ingles' | 'espanhol' | 'frances'
+    text: str
+
+
 class MentalLingoAskOut(BaseModel):
     found: bool
     answer_text: str
@@ -1288,6 +1295,7 @@ class MentalLingoAskOut(BaseModel):
     # False = ainda não aprovada por Rhoney (o texto já traz o aviso).
     suggestion_key: MentalLingoSuggestionKey | None = None
     reviewed: bool = True
+    speech_segments: list[SpeechSegment] | None = None
 
 
 class MentalLingoFeedbackRequest(BaseModel):

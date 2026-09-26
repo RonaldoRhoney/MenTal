@@ -150,3 +150,31 @@ def test_voto_de_utilidade_e_so_contador(client, monkeypatch):
     assert r.json() == {"ok": True}
     with SessionLocal() as db:
         assert db.get(models.MentalLingoSuggestion, ("régua", "ingles")).wrong_votes == 1
+
+
+def test_resposta_de_vocabulario_vem_com_trechos_por_idioma_pra_voz_nativa(client):
+    _seed("Como se escreve 'carro' em inglês?", "Car", "'carro' se traduz como 'Car' em inglês.")
+    data = _ask(client, "como se escreve carro em inglês").json()
+    assert data["speech_segments"] == [
+        {"lang": "pt", "text": "carro se traduz como"},
+        {"lang": "ingles", "text": "Car"},
+        {"lang": "pt", "text": "em inglês"},
+    ]
+
+
+def test_sugestao_da_fonte_aberta_fala_cada_glosa_em_ingles_e_o_aviso_em_portugues(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: ["rubber", "eraser"])
+    data = _ask(client, "como se escreve borrachinha em inglês").json()
+    langs = [(s["lang"], s["text"]) for s in data["speech_segments"]]
+    assert langs[0] == ("pt", "borrachinha em inglês pode ser")
+    assert ("ingles", "rubber") in langs and ("ingles", "eraser") in langs
+    assert langs[-1][0] == "pt" and "não revisado" in langs[-1][1]
+
+
+def test_build_speech_segments_so_marca_estrangeiro_o_que_e_termo_conhecido():
+    from app.mental_lingo import build_speech_segments
+
+    segs = build_speech_segments("'The house is big' usa 'the' antes de 'house'.", "ingles", ["The house is big"])
+    assert segs[0] == {"lang": "ingles", "text": "The house is big"}
+    assert all(s["lang"] == "pt" for s in segs[1:])  # 'the'/'house' não são termos conhecidos: ficam em pt
+    assert build_speech_segments("Sem aspas.", "ingles", ["x"]) == [{"lang": "pt", "text": "Sem aspas."}]

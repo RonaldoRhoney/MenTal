@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../api/api_client.dart';
+import '../idioma_voices.dart';
 import '../services/mental_lingo_service.dart';
 import '../services/tts_service.dart';
 import '../theme/agent_neon.dart';
@@ -345,6 +346,8 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   _LingoState _state = _LingoState.ready;
   String? _question;
   String? _answer;
+  // Trechos da resposta por idioma (voz nativa de cada um; ver MentalLingoAskOut.speech_segments).
+  List<Map<String, dynamic>>? _speechSegments;
   // Resposta de fonte aberta ainda não revisada: o usuário pode votar se ajudou.
   Map<String, dynamic>? _suggestionKey;
   bool _voted = false;
@@ -483,6 +486,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       if (!mounted) return;
       setState(() {
         _answer = result['answer_text'] as String;
+        _speechSegments = (result['speech_segments'] as List?)?.cast<Map<String, dynamic>>();
         _suggestionKey = result['reviewed'] == false ? result['suggestion_key'] as Map<String, dynamic>? : null;
         _voted = false;
         _errorMessage = null;
@@ -505,12 +509,30 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     setState(() => _state = _LingoState.ready);
   }
 
+  /// Pedido de Rhoney (26/09/2026): "a AI Mental_Lingo deve falar as palavras de cada
+  /// idioma de forma nativa". Cada trecho é falado pela voz do PRÓPRIO idioma
+  /// (a explicação em português pela voz pt-BR; "House" pela voz do inglês etc.),
+  /// em sequência. Palavra estrangeira dentro da frase não é repetida duas vezes.
   Future<void> _playAnswer() async {
     final answer = _answer;
     if (answer == null || _speakingAnswer) return;
     setState(() => _speakingAnswer = true);
-    await TtsService.instance.speak(answer, voice: kMentalLingoVoice);
-    if (mounted) setState(() => _speakingAnswer = false);
+    try {
+      final segments = _speechSegments;
+      if (segments == null || segments.isEmpty) {
+        await TtsService.instance.speak(answer, voice: kMentalLingoVoice);
+      } else {
+        for (final seg in segments) {
+          if (!mounted) break;
+          final lang = seg['lang'] as String;
+          final text = seg['text'] as String;
+          final voice = lang == 'pt' ? kMentalLingoVoice : (voiceForTerritory(lang) ?? kMentalLingoVoice);
+          await TtsService.instance.speakAndWait(text, voice: voice, repeatShortWords: false);
+        }
+      }
+    } finally {
+      if (mounted) setState(() => _speakingAnswer = false);
+    }
   }
 
   Future<void> _vote(bool useful) async {
@@ -527,6 +549,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   void _newQuestion() {
     setState(() {
       _suggestionKey = null;
+      _speechSegments = null;
       _state = _LingoState.ready;
       _question = null;
       _answer = null;
