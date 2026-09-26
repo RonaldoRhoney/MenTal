@@ -2,7 +2,13 @@
 
 **Status:** proposta, nada implementado. Base: `MUNDO_CONCURSOS_ARQUITETURA_V1.md` (esfera Federal, aprovado) + pedido de Rhoney de 25/09/2026 de abranger Federais, Estaduais e Municipais e de remover o conteúdo atual (removal adiado: "não apague ainda").
 
-## 0. Conflito a decidir antes de tudo
+## 0. Decisões de Rhoney (25/09/2026)
+
+- **Ordem:** Municipais → Estaduais → Federais.
+- **Conteúdo atual: não apagar** (o novo entra em territórios novos).
+- **Fase Municipal inicial:** base técnica + 1º lote de questões originais de matérias comuns a prefeituras; **sem fichas de concursos reais por enquanto**.
+
+## 0.1 Conflito original (resolvido acima)
 
 O documento aprovado diz, na seção 7, que **Estadual e Municipal ficam fora desta fase**. O pedido mais recente pede os três. A proposta abaixo já **modela as três esferas desde o começo** (custa quase nada), mas **entrega conteúdo por fases**. Rhoney decide a ordem.
 

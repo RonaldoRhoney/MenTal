@@ -1,4 +1,6 @@
-# MENTAL — Mundo dos Concursos: Arquitetura Inicial (Esfera Federal)
+# MENTAL — Mundo dos Concursos: Arquitetura Inicial
+
+> **Decisão de Rhoney (25/09/2026), substitui a restrição à esfera Federal abaixo:** ordem de produção **Municipais → Estaduais → Federais**. O conteúdo atual do Mundo dos Concursos (3 territórios `concursos_*`) **não é apagado**; o conteúdo novo entra em territórios novos, por fase. Fichas de concursos reais (prefeitura, banca, status) só com fonte oficial verificável e aprovação de Rhoney — na fase Municipal inicial entram só matérias e questões originais, sem fichas. Proposta técnica em `MUNDO/Mundo_dos_Concursos/PROPOSTA_TECNICA_V1.md`.
 
 **Status:** APROVADO. Escopo inicial deliberadamente restrito à esfera **Federal**, para manter o trabalho enxuto — Estadual e Municipal ficam para fases posteriores, após a Federal estar estável e validada. Conteúdo deve ser produzido pelo agente autônomo de curadoria, com aprovação humana obrigatória antes de qualquer publicação, seguindo o mesmo princípio já reafirmado em todo o projeto.
 
@@ -56,7 +58,7 @@ Mesmo quando uma prova/gabarito está publicamente disponível no site da própr
 
 ## 7. Fora de escopo nesta fase
 
-- Esferas Estadual e Municipal — ficam para fases futuras, após a esfera Federal estar estável e validada em produção.
+- ~~Esferas Estadual e Municipal ficam para depois da Federal~~ — **revogado por Rhoney (25/09/2026)**: a ordem agora é Municipal, depois Estadual, por fim Federal.
 
 ## 8. Critério de aceite
 
