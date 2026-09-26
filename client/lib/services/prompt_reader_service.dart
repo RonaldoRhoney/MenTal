@@ -52,6 +52,10 @@ class NativePromptSpeaker implements PromptSpeaker {
   bool _ready = false;
   List<String> _voiceNames = const [];
   int _spoken = 0;
+  // Cada stop() invalida leituras ainda em preparo: sem isso, tocar em "ouvir" e
+  // sair da tela logo depois deixava a fala (e o estado "lendo") começarem
+  // DEPOIS do stop e vazarem para a próxima pergunta (achado no teste no aparelho).
+  int _generation = 0;
 
   @override
   ValueListenable<bool> get speaking => _speaking;
@@ -95,23 +99,30 @@ class NativePromptSpeaker implements PromptSpeaker {
 
   @override
   Future<void> speak(String text, {required TtsSpeed speed}) async {
+    final generation = ++_generation;
+    bool cancelled() => generation != _generation;
     try {
       _failed.value = false;
       await _ensureReady();
+      if (cancelled()) return;
       final prepared = prepareForSpeech(text);
       if (prepared.isEmpty) return;
       await _tts.stop();
+      if (cancelled()) return;
       await _tts.setSpeechRate(rateFor(speed));
+      if (cancelled()) return;
       // Alterna entre as vozes locais disponíveis a cada leitura; com uma só
       // (ou nenhuma detectável), usa a melhor disponível — inteligibilidade
       // vem antes de variedade.
       if (_voiceNames.length >= 2) {
         final name = _voiceNames[_spoken % _voiceNames.length];
         await _tts.setVoice({'name': name, 'locale': 'pt-BR'});
+        if (cancelled()) return;
       }
       _spoken++;
       _speaking.value = true;
       await _tts.speak(prepared);
+      if (cancelled()) await _tts.stop();
     } catch (_) {
       _speaking.value = false;
       _failed.value = true;
@@ -120,6 +131,7 @@ class NativePromptSpeaker implements PromptSpeaker {
 
   @override
   Future<void> stop() async {
+    _generation++;
     try {
       await _tts.stop();
     } catch (_) {}
