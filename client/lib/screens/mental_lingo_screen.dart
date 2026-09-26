@@ -429,10 +429,18 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   // rápido; pergunta longa ganha mais fôlego pra respirar/pensar).
   DateTime? _listenStartedAt;
 
+  // Pergunta que já chegou completa ("como se escreve casa em inglês", "o que
+  // significa house"): não há por que esperar o fôlego extra — envia logo.
+  static final RegExp _completeQuestion = RegExp(
+    r'^(como (se|é que se) (escreve|diz|fala)|traduz[ao]?|qual (é )?a tradu[çc][ãa]o de)\s+.+\s+(em|para)\s+(inglês|ingles|espanhol|francês|frances)\??$|^o que (significa|quer dizer)\s+\S+',
+    caseSensitive: false,
+  );
+
   Duration _submitDelay() {
+    if (_completeQuestion.hasMatch(_accumulated.trim())) return const Duration(milliseconds: 1200);
     final started = _listenStartedAt;
     final elapsedMs = started == null ? 0 : DateTime.now().difference(started).inMilliseconds;
-    return Duration(milliseconds: (2500 + elapsedMs * 0.15).clamp(2500, 8000).round());
+    return Duration(milliseconds: (2000 + elapsedMs * 0.12).clamp(2000, 6000).round());
   }
 
   String _accumulated = '';
