@@ -1,0 +1,808 @@
+{
+  "tema": "Raciocínio Lógico e Matemática (Concursos Municipais)",
+  "slug": "raciocinio",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney. Questões ORIGINAIS com cálculos conferidos; contexto de prefeitura. Sem reproduzir prova real.",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Numa prefeitura, 150 vagas foram abertas e 20% são para pessoas com deficiência. Quantas vagas são essas?",
+      "options": [
+        "30",
+        "20",
+        "15",
+        "35"
+      ],
+      "correct_answer": "30",
+      "explanation": "20% de 150 = 0,20 × 150 = 30.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Quanto é 10% de 250?",
+      "options": [
+        "20",
+        "25",
+        "30",
+        "2,5"
+      ],
+      "correct_answer": "25",
+      "explanation": "10% de 250 = 250 ÷ 10 = 25.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Quanto é 50% de 84?",
+      "options": [
+        "40",
+        "44",
+        "42",
+        "48"
+      ],
+      "correct_answer": "42",
+      "explanation": "50% é a metade: 84 ÷ 2 = 42.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Se 3 canetas custam R$ 12, quanto custam 5 canetas iguais?",
+      "options": [
+        "R$ 15",
+        "R$ 18",
+        "R$ 24",
+        "R$ 20"
+      ],
+      "correct_answer": "R$ 20",
+      "explanation": "Cada caneta custa R$ 4; 5 × 4 = R$ 20 (regra de três direta).",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O mínimo múltiplo comum (MMC) de 4 e 6 é:",
+      "options": [
+        "12",
+        "8",
+        "10",
+        "24"
+      ],
+      "correct_answer": "12",
+      "explanation": "Múltiplos de 4: 4, 8, 12; de 6: 6, 12. O menor comum é 12.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O máximo divisor comum (MDC) de 12 e 18 é:",
+      "options": [
+        "3",
+        "6",
+        "4",
+        "9"
+      ],
+      "correct_answer": "6",
+      "explanation": "Divisores comuns de 12 e 18: 1, 2, 3, 6. O maior é 6.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na sequência 2, 4, 6, 8, ..., o próximo número é:",
+      "options": [
+        "9",
+        "11",
+        "10",
+        "12"
+      ],
+      "correct_answer": "10",
+      "explanation": "A sequência soma 2 a cada termo: 8 + 2 = 10.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Quanto é 1/2 + 1/4?",
+      "options": [
+        "2/6",
+        "1/6",
+        "2/4",
+        "3/4"
+      ],
+      "correct_answer": "3/4",
+      "explanation": "1/2 = 2/4; 2/4 + 1/4 = 3/4.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "A média aritmética de 6, 8 e 10 é:",
+      "options": [
+        "8",
+        "6",
+        "9",
+        "24"
+      ],
+      "correct_answer": "8",
+      "explanation": "(6 + 8 + 10) ÷ 3 = 24 ÷ 3 = 8.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "A área de um retângulo de 5 m por 3 m é:",
+      "options": [
+        "8 m²",
+        "15 m²",
+        "16 m²",
+        "30 m²"
+      ],
+      "correct_answer": "15 m²",
+      "explanation": "Área = base × altura = 5 × 3 = 15 m².",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O perímetro de um quadrado de lado 4 cm é:",
+      "options": [
+        "8 cm",
+        "12 cm",
+        "16 cm",
+        "20 cm"
+      ],
+      "correct_answer": "16 cm",
+      "explanation": "Perímetro = 4 × lado = 4 × 4 = 16 cm.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "A fração que corresponde a 25% é:",
+      "options": [
+        "1/2",
+        "1/5",
+        "2/5",
+        "1/4"
+      ],
+      "correct_answer": "1/4",
+      "explanation": "25% = 25/100 = 1/4.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Um servidor trabalha 8 horas por dia, de segunda a sexta. Quantas horas trabalha por semana?",
+      "options": [
+        "40",
+        "35",
+        "45",
+        "48"
+      ],
+      "correct_answer": "40",
+      "explanation": "8 h × 5 dias = 40 h.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Um produto de R$ 200 tem desconto de 10%. Qual o preço final?",
+      "options": [
+        "R$ 190",
+        "R$ 180",
+        "R$ 170",
+        "R$ 210"
+      ],
+      "correct_answer": "R$ 180",
+      "explanation": "10% de 200 = 20; 200 − 20 = R$ 180.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Um produto de R$ 50 sofre aumento de 20%. Qual o novo preço?",
+      "options": [
+        "R$ 55",
+        "R$ 65",
+        "R$ 60",
+        "R$ 70"
+      ],
+      "correct_answer": "R$ 60",
+      "explanation": "20% de 50 = 10; 50 + 10 = R$ 60.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Se 2/3 = x/9, então x vale:",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "6"
+      ],
+      "correct_answer": "6",
+      "explanation": "Proporção: x = 2 × 9 ÷ 3 = 6.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Na sequência 5, 10, 20, 40, ..., o próximo número é:",
+      "options": [
+        "80",
+        "50",
+        "60",
+        "70"
+      ],
+      "correct_answer": "80",
+      "explanation": "Cada termo é o dobro do anterior: 40 × 2 = 80.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "“Se chove, então a rua molha.” Sabendo que choveu, conclui-se que:",
+      "options": [
+        "a rua não molhou",
+        "a rua molhou",
+        "não choveu",
+        "nada se pode concluir"
+      ],
+      "correct_answer": "a rua molhou",
+      "explanation": "Se a condição (chover) é verdadeira, o consequente (molhar) também é.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "A negação de “Todos os candidatos foram aprovados” é:",
+      "options": [
+        "Nenhum candidato foi aprovado",
+        "Todos os candidatos foram reprovados",
+        "Algum candidato não foi aprovado",
+        "Algum candidato foi aprovado"
+      ],
+      "correct_answer": "Algum candidato não foi aprovado",
+      "explanation": "A negação de 'todos' é 'pelo menos um não'.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Sendo A = {1, 2, 3} e B = {3, 4}, a interseção A ∩ B é:",
+      "options": [
+        "{1, 2, 3, 4}",
+        "{1, 2}",
+        "{4}",
+        "{3}"
+      ],
+      "correct_answer": "{3}",
+      "explanation": "A interseção contém os elementos comuns aos dois conjuntos: apenas 3.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Sendo A = {1, 2, 3} e B = {3, 4}, a união A ∪ B é:",
+      "options": [
+        "{1, 2, 3, 4}",
+        "{3}",
+        "{1, 2, 4}",
+        "{1, 2, 3}"
+      ],
+      "correct_answer": "{1, 2, 3, 4}",
+      "explanation": "A união reúne todos os elementos dos dois conjuntos, sem repetir.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Um capital de R$ 1.000 rende juros simples de 10% ao ano. Após 2 anos, os juros são:",
+      "options": [
+        "R$ 100",
+        "R$ 200",
+        "R$ 210",
+        "R$ 220"
+      ],
+      "correct_answer": "R$ 200",
+      "explanation": "J = C · i · t = 1000 × 0,10 × 2 = R$ 200.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Um carro a 60 km/h durante 2 horas percorre:",
+      "options": [
+        "62 km",
+        "100 km",
+        "120 km",
+        "180 km"
+      ],
+      "correct_answer": "120 km",
+      "explanation": "Distância = velocidade × tempo = 60 × 2 = 120 km.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Entre os números abaixo, o único primo é:",
+      "options": [
+        "15",
+        "21",
+        "27",
+        "13"
+      ],
+      "correct_answer": "13",
+      "explanation": "13 só é divisível por 1 e por ele mesmo.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Quanto é 3² + 4²?",
+      "options": [
+        "25",
+        "14",
+        "49",
+        "12"
+      ],
+      "correct_answer": "25",
+      "explanation": "9 + 16 = 25.",
+      "hints": [
+        "Monte a conta passo a passo antes de olhar as alternativas.",
+        "Confira o resultado substituindo-o na situação do enunciado."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Quatro pedreiros constroem um muro em 6 dias. Com 6 pedreiros, no mesmo ritmo, o muro fica pronto em:",
+      "options": [
+        "9 dias",
+        "4 dias",
+        "3 dias",
+        "5 dias"
+      ],
+      "correct_answer": "4 dias",
+      "explanation": "Grandezas inversas: 4 × 6 = 24 pedreiro-dias; 24 ÷ 6 = 4 dias.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Quanto é 15% de 80?",
+      "options": [
+        "10",
+        "15",
+        "12",
+        "8"
+      ],
+      "correct_answer": "12",
+      "explanation": "0,15 × 80 = 12.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Um valor de R$ 100 sofre aumento de 20% e, em seguida, desconto de 20%. O valor final é:",
+      "options": [
+        "R$ 100",
+        "R$ 104",
+        "R$ 98",
+        "R$ 96"
+      ],
+      "correct_answer": "R$ 96",
+      "explanation": "100 × 1,2 = 120; 120 × 0,8 = 96. Porcentagens sucessivas não se anulam.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O MMC de 6, 8 e 12 é:",
+      "options": [
+        "24",
+        "12",
+        "48",
+        "36"
+      ],
+      "correct_answer": "24",
+      "explanation": "6 = 2·3; 8 = 2³; 12 = 2²·3. MMC = 2³ · 3 = 24.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Uma prova tem nota 6 (peso 1) e nota 9 (peso 2). A média ponderada é:",
+      "options": [
+        "7,5",
+        "8",
+        "7",
+        "9"
+      ],
+      "correct_answer": "8",
+      "explanation": "(6×1 + 9×2) ÷ (1+2) = 24 ÷ 3 = 8.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Ao lançar um dado comum, a probabilidade de sair número par é:",
+      "options": [
+        "1/3",
+        "1/6",
+        "1/2",
+        "2/3"
+      ],
+      "correct_answer": "1/2",
+      "explanation": "Pares: 2, 4 e 6 → 3 em 6 = 1/2.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Na sequência de Fibonacci 1, 1, 2, 3, 5, 8, ..., o próximo número é:",
+      "options": [
+        "11",
+        "12",
+        "14",
+        "13"
+      ],
+      "correct_answer": "13",
+      "explanation": "Cada termo é a soma dos dois anteriores: 5 + 8 = 13.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A proposição equivalente a “Se P, então Q” é:",
+      "options": [
+        "Se não Q, então não P",
+        "Se Q, então P",
+        "Se não P, então não Q",
+        "P ou Q"
+      ],
+      "correct_answer": "Se não Q, então não P",
+      "explanation": "A contrapositiva de P → Q é ¬Q → ¬P.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "A negação de “P e Q” é:",
+      "options": [
+        "não P e não Q",
+        "não P ou não Q",
+        "P ou Q",
+        "não P e Q"
+      ],
+      "correct_answer": "não P ou não Q",
+      "explanation": "Lei de De Morgan: ¬(P ∧ Q) = ¬P ∨ ¬Q.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Um capital de R$ 2.000 a juros simples de 5% ao mês, por 3 meses, rende de juros:",
+      "options": [
+        "R$ 100",
+        "R$ 315",
+        "R$ 300",
+        "R$ 200"
+      ],
+      "correct_answer": "R$ 300",
+      "explanation": "J = 2000 × 0,05 × 3 = R$ 300.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "O pai tem o triplo da idade do filho e a soma das idades é 48. A idade do filho é:",
+      "options": [
+        "16",
+        "10",
+        "24",
+        "12"
+      ],
+      "correct_answer": "12",
+      "explanation": "x + 3x = 48 → 4x = 48 → x = 12.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Se 2x + 5 = 17, então x vale:",
+      "options": [
+        "6",
+        "5",
+        "7",
+        "11"
+      ],
+      "correct_answer": "6",
+      "explanation": "2x = 12 → x = 6.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Num mapa em escala 1:50.000, 4 cm representam na realidade:",
+      "options": [
+        "200 m",
+        "2 km",
+        "20 km",
+        "4 km"
+      ],
+      "correct_answer": "2 km",
+      "explanation": "4 cm × 50.000 = 200.000 cm = 2.000 m = 2 km.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Um item de R$ 240 recebe 25% de desconto. O preço final é:",
+      "options": [
+        "R$ 200",
+        "R$ 190",
+        "R$ 180",
+        "R$ 165"
+      ],
+      "correct_answer": "R$ 180",
+      "explanation": "25% de 240 = 60; 240 − 60 = R$ 180.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Em um grupo de 30 servidores, 18 falam inglês, 15 falam espanhol e 5 falam os dois. Quantos não falam nenhum dos dois?",
+      "options": [
+        "0",
+        "5",
+        "12",
+        "2"
+      ],
+      "correct_answer": "2",
+      "explanation": "Falam algum: 18 + 15 − 5 = 28; não falam: 30 − 28 = 2.",
+      "hints": [
+        "Identifique o tipo de problema (proporção, porcentagem, lógica, conjuntos) e use a técnica própria.",
+        "Cuidado com armadilhas: porcentagens sucessivas não se somam direto."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "A proposição “P ou Q” é falsa somente quando:",
+      "options": [
+        "P e Q são ambas falsas",
+        "P é falsa",
+        "Q é falsa",
+        "P e Q são ambas verdadeiras"
+      ],
+      "correct_answer": "P e Q são ambas falsas",
+      "explanation": "O 'ou' inclusivo só é falso se as duas partes forem falsas.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "A proposição “Se P, então Q” é falsa somente quando:",
+      "options": [
+        "P é falsa e Q é verdadeira",
+        "P é verdadeira e Q é falsa",
+        "P e Q são falsas",
+        "P e Q são verdadeiras"
+      ],
+      "correct_answer": "P é verdadeira e Q é falsa",
+      "explanation": "A condicional só falha quando a premissa é verdadeira e a conclusão é falsa.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Lançando duas moedas, a probabilidade de saírem duas caras é:",
+      "options": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "3/4"
+      ],
+      "correct_answer": "1/4",
+      "explanation": "Casos possíveis: 4 (CC, CK, KC, KK). Favorável: 1. Probabilidade 1/4.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "De quantas formas é possível escolher 2 servidores entre 3 para uma comissão?",
+      "options": [
+        "6",
+        "2",
+        "9",
+        "3"
+      ],
+      "correct_answer": "3",
+      "explanation": "C(3,2) = 3!/(2!·1!) = 3.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "De quantas maneiras 4 pessoas podem formar uma fila?",
+      "options": [
+        "24",
+        "16",
+        "12",
+        "8"
+      ],
+      "correct_answer": "24",
+      "explanation": "Permutação: 4! = 4×3×2×1 = 24.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Dois aumentos sucessivos de 10% equivalem a um aumento total de:",
+      "options": [
+        "20%",
+        "21%",
+        "22%",
+        "19%"
+      ],
+      "correct_answer": "21%",
+      "explanation": "1,1 × 1,1 = 1,21 → aumento de 21%.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Um capital de R$ 1.000 a juros compostos de 10% ao ano, por 2 anos, resulta no montante de:",
+      "options": [
+        "R$ 1.200",
+        "R$ 1.100",
+        "R$ 1.210",
+        "R$ 1.220"
+      ],
+      "correct_answer": "R$ 1.210",
+      "explanation": "M = 1000 × 1,1² = R$ 1.210.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Na progressão aritmética 3, 7, 11, ..., o 10º termo é:",
+      "options": [
+        "37",
+        "41",
+        "43",
+        "39"
+      ],
+      "correct_answer": "39",
+      "explanation": "a10 = a1 + 9r = 3 + 9×4 = 39.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Um carro vai de A a B a 60 km/h e volta a 40 km/h, pelo mesmo caminho. A velocidade média no percurso todo é:",
+      "options": [
+        "48 km/h",
+        "50 km/h",
+        "45 km/h",
+        "52 km/h"
+      ],
+      "correct_answer": "48 km/h",
+      "explanation": "Média harmônica: 2·60·40 ÷ (60+40) = 4800 ÷ 100 = 48 km/h.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Três pintores pintam um prédio em 10 dias. Com 5 pintores, no mesmo ritmo, o serviço leva:",
+      "options": [
+        "7 dias",
+        "6 dias",
+        "4 dias",
+        "8 dias"
+      ],
+      "correct_answer": "6 dias",
+      "explanation": "3 × 10 = 30 pintor-dias; 30 ÷ 5 = 6 dias.",
+      "hints": [
+        "Resolva com método e verifique se a resposta faz sentido no contexto.",
+        "Em lógica, teste os casos possíveis de verdadeiro e falso antes de concluir."
+      ]
+    }
+  ]
+}

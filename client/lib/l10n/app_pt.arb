@@ -144,6 +144,22 @@
   "@territoryConcursosDireito": {
     "description": "Territory display name"
   },
+  "territoryConcursosMunicipalPortugues": "Municipais: Português",
+  "@territoryConcursosMunicipalPortugues": {
+    "description": "Territory display name — Concursos Municipais"
+  },
+  "territoryConcursosMunicipalRaciocinio": "Municipais: Raciocínio Lógico e Matemática",
+  "@territoryConcursosMunicipalRaciocinio": {
+    "description": "Territory display name — Concursos Municipais"
+  },
+  "territoryConcursosMunicipalInformatica": "Municipais: Informática",
+  "@territoryConcursosMunicipalInformatica": {
+    "description": "Territory display name — Concursos Municipais"
+  },
+  "territoryConcursosMunicipalConstituicao": "Municipais: Constituição e Administração Pública",
+  "@territoryConcursosMunicipalConstituicao": {
+    "description": "Territory display name — Concursos Municipais"
+  },
   "territoryTecnologiaFundamentos": "Tecnologia: Fundamentos",
   "@territoryTecnologiaFundamentos": {
     "description": "Territory display name"

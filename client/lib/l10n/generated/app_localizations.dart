@@ -286,6 +286,30 @@ abstract class AppLocalizations {
   /// **'Concursos: Direito'**
   String get territoryConcursosDireito;
 
+  /// Territory display name — Concursos Municipais
+  ///
+  /// In pt, this message translates to:
+  /// **'Municipais: Português'**
+  String get territoryConcursosMunicipalPortugues;
+
+  /// Territory display name — Concursos Municipais
+  ///
+  /// In pt, this message translates to:
+  /// **'Municipais: Raciocínio Lógico e Matemática'**
+  String get territoryConcursosMunicipalRaciocinio;
+
+  /// Territory display name — Concursos Municipais
+  ///
+  /// In pt, this message translates to:
+  /// **'Municipais: Informática'**
+  String get territoryConcursosMunicipalInformatica;
+
+  /// Territory display name — Concursos Municipais
+  ///
+  /// In pt, this message translates to:
+  /// **'Municipais: Constituição e Administração Pública'**
+  String get territoryConcursosMunicipalConstituicao;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:

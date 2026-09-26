@@ -113,6 +113,8 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
     }
     assert set(worlds["concursos"]["territory_ids"]) == {
         "concursos_portugues", "concursos_raciocinio", "concursos_direito",
+        "concursos_municipal_portugues", "concursos_municipal_raciocinio",
+        "concursos_municipal_informatica", "concursos_municipal_constituicao",
     }
     # ARQUITETURA_SUBMUNDOS_V1.md (13/09/2026, aprovado): Internet entra
     # como SubMundo de Tecnologia — mesmo Mundo, 2 territórios novos,

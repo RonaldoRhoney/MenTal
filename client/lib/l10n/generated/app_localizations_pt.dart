@@ -111,6 +111,21 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryConcursosDireito => 'Concursos: Direito';
 
   @override
+  String get territoryConcursosMunicipalPortugues => 'Municipais: Português';
+
+  @override
+  String get territoryConcursosMunicipalRaciocinio =>
+      'Municipais: Raciocínio Lógico e Matemática';
+
+  @override
+  String get territoryConcursosMunicipalInformatica =>
+      'Municipais: Informática';
+
+  @override
+  String get territoryConcursosMunicipalConstituicao =>
+      'Municipais: Constituição e Administração Pública';
+
+  @override
   String get territoryTecnologiaFundamentos => 'Tecnologia: Fundamentos';
 
   @override

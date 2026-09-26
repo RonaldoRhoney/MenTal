@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O dispositivo usado para digitar texto no computador é o:",
+    "options": [
+      "teclado",
+      "monitor",
+      "alto-falante",
+      "scanner"
+    ],
+    "correct_answer": "teclado",
+    "explanation": "O teclado é o periférico de entrada usado para digitar caracteres.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O periférico que exibe as imagens geradas pelo computador é o:",
+    "options": [
+      "mouse",
+      "monitor",
+      "teclado",
+      "microfone"
+    ],
+    "correct_answer": "monitor",
+    "explanation": "O monitor é um periférico de saída que mostra a imagem ao usuário.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "A impressora é classificada como periférico de:",
+    "options": [
+      "entrada",
+      "processamento",
+      "saída",
+      "armazenamento interno"
+    ],
+    "correct_answer": "saída",
+    "explanation": "Ela recebe dados do computador e os apresenta em papel: é de saída.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O mouse é um periférico de:",
+    "options": [
+      "saída",
+      "memória",
+      "rede",
+      "entrada"
+    ],
+    "correct_answer": "entrada",
+    "explanation": "O mouse envia comandos de apontamento ao computador: é de entrada.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "A sigla CPU se refere ao:",
+    "options": [
+      "processador",
+      "monitor",
+      "disco rígido",
+      "teclado"
+    ],
+    "correct_answer": "processador",
+    "explanation": "CPU (Unidade Central de Processamento) executa as instruções do computador.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "A memória que perde seu conteúdo quando o computador é desligado é a:",
+    "options": [
+      "disco rígido",
+      "memória RAM",
+      "pen drive",
+      "CD-ROM"
+    ],
+    "correct_answer": "memória RAM",
+    "explanation": "A RAM é volátil: só mantém dados enquanto há energia.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "Um programa de computador também é chamado de:",
+    "options": [
+      "hardware",
+      "firmware",
+      "software",
+      "periférico"
+    ],
+    "correct_answer": "software",
+    "explanation": "Software é a parte lógica: programas e dados. Hardware é a parte física.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "As partes físicas do computador, como placa e teclado, formam o:",
+    "options": [
+      "software",
+      "sistema operacional",
+      "aplicativo",
+      "hardware"
+    ],
+    "correct_answer": "hardware",
+    "explanation": "Hardware é o conjunto de componentes físicos.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "Windows e Linux são exemplos de:",
+    "options": [
+      "sistemas operacionais",
+      "processadores",
+      "navegadores",
+      "planilhas"
+    ],
+    "correct_answer": "sistemas operacionais",
+    "explanation": "O sistema operacional gerencia os recursos do computador e executa os programas.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O programa usado para acessar páginas na internet é o:",
+    "options": [
+      "editor de texto",
+      "navegador",
+      "antivírus",
+      "compactador"
+    ],
+    "correct_answer": "navegador",
+    "explanation": "O navegador (browser) exibe páginas web.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "A unidade básica de informação do computador é o:",
+    "options": [
+      "byte",
+      "pixel",
+      "bit",
+      "hertz"
+    ],
+    "correct_answer": "bit",
+    "explanation": "O bit (0 ou 1) é a menor unidade. Oito bits formam um byte.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "Um byte é formado por:",
+    "options": [
+      "4 bits",
+      "16 bits",
+      "10 bits",
+      "8 bits"
+    ],
+    "correct_answer": "8 bits",
+    "explanation": "Por definição, 1 byte = 8 bits.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O programa mais adequado para escrever um ofício é o:",
+    "options": [
+      "editor de texto",
+      "planilha eletrônica",
+      "antivírus",
+      "navegador"
+    ],
+    "correct_answer": "editor de texto",
+    "explanation": "Editores de texto servem à criação de documentos escritos.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O programa mais adequado para fazer cálculos em tabelas é a:",
+    "options": [
+      "editor de texto",
+      "planilha eletrônica",
+      "apresentação de slides",
+      "leitor de e-mail"
+    ],
+    "correct_answer": "planilha eletrônica",
+    "explanation": "Planilhas organizam dados em linhas e colunas e fazem cálculos com fórmulas.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O programa próprio para criar apresentações de slides é o:",
+    "options": [
+      "editor de texto",
+      "antivírus",
+      "editor de apresentações",
+      "compactador"
+    ],
+    "correct_answer": "editor de apresentações",
+    "explanation": "Ele monta slides com textos, imagens e animações.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "Na planilha, o cruzamento de uma linha com uma coluna é chamado de:",
+    "options": [
+      "tabela",
+      "página",
+      "parágrafo",
+      "célula"
+    ],
+    "correct_answer": "célula",
+    "explanation": "Cada célula é identificada pela coluna e pela linha, como B3.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O atalho Ctrl + C serve, na maioria dos programas, para:",
+    "options": [
+      "copiar",
+      "colar",
+      "recortar",
+      "desfazer"
+    ],
+    "correct_answer": "copiar",
+    "explanation": "Ctrl + C copia o item selecionado para a área de transferência.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O atalho Ctrl + V serve, na maioria dos programas, para:",
+    "options": [
+      "copiar",
+      "colar",
+      "salvar",
+      "imprimir"
+    ],
+    "correct_answer": "colar",
+    "explanation": "Ctrl + V cola o conteúdo da área de transferência.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O atalho Ctrl + Z serve, na maioria dos programas, para:",
+    "options": [
+      "refazer a ação",
+      "salvar o arquivo",
+      "desfazer a última ação",
+      "fechar o programa"
+    ],
+    "correct_answer": "desfazer a última ação",
+    "explanation": "Ctrl + Z desfaz a última operação realizada.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O atalho Ctrl + S serve, na maioria dos programas, para:",
+    "options": [
+      "selecionar tudo",
+      "sublinhar",
+      "sair",
+      "salvar"
+    ],
+    "correct_answer": "salvar",
+    "explanation": "Ctrl + S salva o arquivo em edição.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "Um endereço de e-mail sempre contém o símbolo:",
+    "options": [
+      "@",
+      "#",
+      "&",
+      "%"
+    ],
+    "correct_answer": "@",
+    "explanation": "O arroba separa o nome do usuário do domínio, como nome@dominio.gov.br.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "Um programa que protege o computador contra vírus é o:",
+    "options": [
+      "compactador",
+      "antivírus",
+      "navegador",
+      "editor de imagens"
+    ],
+    "correct_answer": "antivírus",
+    "explanation": "O antivírus detecta e remove programas maliciosos.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O arquivo com extensão .pdf é um:",
+    "options": [
+      "programa executável",
+      "planilha",
+      "documento portátil de leitura",
+      "arquivo de som"
+    ],
+    "correct_answer": "documento portátil de leitura",
+    "explanation": "PDF preserva a formatação do documento em qualquer dispositivo.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "Um conjunto de arquivos organizado dentro do computador é chamado de:",
+    "options": [
+      "célula",
+      "slide",
+      "janela",
+      "pasta"
+    ],
+    "correct_answer": "pasta",
+    "explanation": "Pastas (diretórios) agrupam arquivos para organização.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 1,
+    "prompt": "O dispositivo de armazenamento removível muito comum, conectado por porta USB, é o:",
+    "options": [
+      "pen drive",
+      "processador",
+      "placa-mãe",
+      "monitor"
+    ],
+    "correct_answer": "pen drive",
+    "explanation": "O pen drive guarda dados e é ligado à porta USB.",
+    "age_reviewed": true,
+    "hints": [
+      "Pense na função principal do item citado no dia a dia de um computador.",
+      "Elimine as alternativas que descrevem outra ferramenta."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "A memória de acesso rápido do processador, usada para guardar dados temporários, é a:",
+    "options": [
+      "ROM",
+      "cache",
+      "disco rígido",
+      "pen drive"
+    ],
+    "correct_answer": "cache",
+    "explanation": "A cache é uma memória muito rápida próxima ao processador.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "Uma rede de computadores restrita a uma empresa ou órgão, que usa a tecnologia da internet, é a:",
+    "options": [
+      "extranet pública",
+      "rede social",
+      "intranet",
+      "nuvem pública"
+    ],
+    "correct_answer": "intranet",
+    "explanation": "Intranet é a rede interna de uma organização, com acesso restrito.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "O endereço de um site, como o de uma prefeitura, é chamado de:",
+    "options": [
+      "CPU",
+      "RAM",
+      "BIOS",
+      "URL"
+    ],
+    "correct_answer": "URL",
+    "explanation": "URL (Localizador Uniforme de Recursos) indica onde o recurso está na web.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "O protocolo que usa criptografia para navegação segura em sites é o:",
+    "options": [
+      "HTTPS",
+      "HTTP",
+      "FTP",
+      "SMTP"
+    ],
+    "correct_answer": "HTTPS",
+    "explanation": "HTTPS protege os dados trafegados entre o navegador e o site.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "Enviar mensagens de e-mail é função do protocolo:",
+    "options": [
+      "HTTPS",
+      "SMTP",
+      "FTP",
+      "DNS"
+    ],
+    "correct_answer": "SMTP",
+    "explanation": "O SMTP é o protocolo padrão para o envio de e-mails.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "O recurso do e-mail para enviar cópia da mensagem sem que os demais destinatários vejam o endereço é o campo:",
+    "options": [
+      "Cc (com cópia)",
+      "Para",
+      "Cco (cópia oculta)",
+      "Assunto"
+    ],
+    "correct_answer": "Cco (cópia oculta)",
+    "explanation": "No Cco, os destinatários ocultos não aparecem para os demais.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "Uma tentativa de fraude que usa mensagens falsas para roubar dados do usuário é chamada de:",
+    "options": [
+      "backup",
+      "firewall",
+      "cookie",
+      "phishing"
+    ],
+    "correct_answer": "phishing",
+    "explanation": "Phishing imita instituições para induzir o usuário a informar senhas e dados.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "O programa que se replica e infecta arquivos, geralmente anexando-se a eles, é o:",
+    "options": [
+      "vírus",
+      "firewall",
+      "backup",
+      "driver"
+    ],
+    "correct_answer": "vírus",
+    "explanation": "Vírus de computador é um código malicioso que infecta outros arquivos.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "A cópia de segurança dos dados, guardada para recuperação em caso de perda, é o:",
+    "options": [
+      "cookie",
+      "backup",
+      "firewall",
+      "phishing"
+    ],
+    "correct_answer": "backup",
+    "explanation": "Backup é a cópia de arquivos feita para restaurar informações se algo falhar.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "O dispositivo ou software que filtra o tráfego de rede, bloqueando acessos não autorizados, é o:",
+    "options": [
+      "backup",
+      "driver",
+      "firewall",
+      "compactador"
+    ],
+    "correct_answer": "firewall",
+    "explanation": "O firewall controla o que entra e sai da rede segundo regras de segurança.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "Na planilha, a fórmula que soma os valores do intervalo A1 até A5 é:",
+    "options": [
+      "=A1+A5",
+      "=MÉDIA(A1:A5)",
+      "=CONT(A1:A5)",
+      "=SOMA(A1:A5)"
+    ],
+    "correct_answer": "=SOMA(A1:A5)",
+    "explanation": "SOMA(A1:A5) adiciona todos os valores do intervalo de A1 a A5.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "Na planilha, a fórmula que calcula a média do intervalo B1 até B4 é:",
+    "options": [
+      "=MÉDIA(B1:B4)",
+      "=SOMA(B1:B4)",
+      "=MÁXIMO(B1:B4)",
+      "=B1/B4"
+    ],
+    "correct_answer": "=MÉDIA(B1:B4)",
+    "explanation": "A função MÉDIA devolve a média aritmética dos valores do intervalo.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "A pequena unidade de dados que o site grava no navegador para lembrar preferências do usuário é o:",
+    "options": [
+      "firewall",
+      "cookie",
+      "driver",
+      "backup"
+    ],
+    "correct_answer": "cookie",
+    "explanation": "Cookies guardam informações como login e preferências de navegação.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "O processo de reduzir o tamanho de arquivos para armazenar ou enviar é a:",
+    "options": [
+      "formatação",
+      "desfragmentação",
+      "compactação",
+      "criptografia"
+    ],
+    "correct_answer": "compactação",
+    "explanation": "Compactar (zip, rar) diminui o espaço ocupado pelos arquivos.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 2,
+    "prompt": "O serviço que traduz nomes de sites em endereços IP é o:",
+    "options": [
+      "SMTP",
+      "HTTPS",
+      "URL",
+      "DNS"
+    ],
+    "correct_answer": "DNS",
+    "explanation": "O DNS converte nomes como www.exemplo.gov.br em endereços numéricos IP.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o que o recurso faz e em que situação ele é usado no escritório.",
+      "Compare com o comportamento padrão do sistema."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "O conjunto de instruções permanente gravado na placa-mãe, que inicia o computador, é o:",
+    "options": [
+      "firmware (BIOS)",
+      "driver de impressora",
+      "navegador",
+      "antivírus"
+    ],
+    "correct_answer": "firmware (BIOS)",
+    "explanation": "A BIOS/firmware é o programa básico que inicializa o hardware antes do sistema operacional.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "A criptografia de chave pública utiliza:",
+    "options": [
+      "uma única chave secreta",
+      "um par de chaves: pública e privada",
+      "nenhuma chave",
+      "apenas senha numérica"
+    ],
+    "correct_answer": "um par de chaves: pública e privada",
+    "explanation": "Na criptografia assimétrica, uma chave cifra e a outra decifra.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "A assinatura digital de um documento garante principalmente:",
+    "options": [
+      "velocidade de envio",
+      "redução de tamanho",
+      "autenticidade e integridade",
+      "cor do texto"
+    ],
+    "correct_answer": "autenticidade e integridade",
+    "explanation": "Ela comprova quem assinou e que o conteúdo não foi alterado.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "O princípio da segurança da informação que garante que só pessoas autorizadas acessem os dados é a:",
+    "options": [
+      "disponibilidade",
+      "integridade",
+      "obsolescência",
+      "confidencialidade"
+    ],
+    "correct_answer": "confidencialidade",
+    "explanation": "Confidencialidade protege a informação de acesso indevido.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "O princípio que garante que a informação esteja acessível quando necessária é a:",
+    "options": [
+      "disponibilidade",
+      "confidencialidade",
+      "integridade",
+      "autenticidade"
+    ],
+    "correct_answer": "disponibilidade",
+    "explanation": "Disponibilidade assegura o acesso aos dados e serviços quando preciso.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "O tipo de software malicioso que sequestra os arquivos e exige pagamento para liberá-los é o:",
+    "options": [
+      "adware",
+      "ransomware",
+      "spyware",
+      "backup"
+    ],
+    "correct_answer": "ransomware",
+    "explanation": "Ransomware cifra os dados da vítima e pede resgate.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "O programa malicioso que monitora as atividades do usuário e envia as informações a terceiros é o:",
+    "options": [
+      "firewall",
+      "driver",
+      "spyware",
+      "antivírus"
+    ],
+    "correct_answer": "spyware",
+    "explanation": "Spyware espia o usuário para coletar dados sem autorização.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "Armazenar arquivos em servidores remotos acessíveis pela internet, em vez de apenas no computador local, é característico da:",
+    "options": [
+      "memória cache",
+      "memória ROM",
+      "desfragmentação",
+      "computação em nuvem"
+    ],
+    "correct_answer": "computação em nuvem",
+    "explanation": "Na nuvem, dados e serviços ficam em servidores acessados pela internet.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "Na planilha, a referência $A$1 é chamada de:",
+    "options": [
+      "referência absoluta",
+      "referência relativa",
+      "referência circular",
+      "referência externa"
+    ],
+    "correct_answer": "referência absoluta",
+    "explanation": "O cifrão fixa coluna e linha, e a referência não muda ao copiar a fórmula.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_informatica",
+    "difficulty_level": 3,
+    "prompt": "No sistema de arquivos, uma pasta dentro de outra é chamada de:",
+    "options": [
+      "atalho",
+      "subpasta",
+      "extensão",
+      "partição"
+    ],
+    "correct_answer": "subpasta",
+    "explanation": "Subpasta é um diretório contido em outro diretório.",
+    "age_reviewed": true,
+    "hints": [
+      "Diferencie conceitos parecidos (ex.: vírus x phishing, backup x cópia simples).",
+      "Considere o contexto de segurança de dados de uma prefeitura."
+    ]
+  }
+]

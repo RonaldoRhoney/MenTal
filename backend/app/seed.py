@@ -420,6 +420,32 @@ for _idx, _tema in enumerate(_LINGUAGEM_TEMAS_PLAN):
     )
 
 
+# Mundo dos Concursos — fase MUNICIPAL (decisão de Rhoney, 25/09/2026: ordem
+# Municipais -> Estaduais -> Federais; conteúdo atual dos 3 territórios
+# `concursos_*` NÃO é apagado). Bloco próprio com 1 território por matéria comum
+# a concursos de prefeituras, 50 questões originais cada (25/15/10). Só entra o
+# que Rhoney revisou: território sem conteúdo dá erro no app.
+CONCURSOS_MUNICIPAIS_MATERIAS = [
+    ("portugues", "Português"),
+    ("raciocinio", "Raciocínio Lógico e Matemática"),
+    ("informatica", "Informática"),
+    ("constituicao", "Constituição e Administração Pública"),
+]
+BLOCKS.append({"id": "concursos_municipais", "name": "Concursos Municipais", "display_order": 50})
+for _idx, (_slug, _nome) in enumerate(CONCURSOS_MUNICIPAIS_MATERIAS):
+    TERRITORIES.append(
+        {
+            "id": f"concursos_municipal_{_slug}",
+            "challenge_type": "concursos_municipal",
+            "requires_subscription": True,
+            "free_sample_count": 2,
+            "display_order": 115 + _idx,
+            "world_id": "concursos",
+            "block_id": "concursos_municipais",
+        }
+    )
+
+
 # V2 item 1 — Badges/Conquistas (V2_KICKOFF.md §6A). Catálogo curado à
 # mão, mesmo conteúdo espelhado em migrations/004_badges.sql.
 BADGES = [
@@ -5920,6 +5946,10 @@ for _path in sorted(_CONTENT_DIR.glob("valores_*.json")):
 # conteúdo desses territórios — sem risco de síntese porque options
 # nunca é None aqui.
 for _path in sorted(_CONTENT_DIR.glob("linguagem_*.json")):
+    CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
+
+# Concursos Municipais (25/09/2026): backend/content/concursos_municipal_<materia>.json.
+for _path in sorted(_CONTENT_DIR.glob("concursos_municipal_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
 # V7 — Mundo do Trânsito (06/09/2026): 120 desafios (24 por território,

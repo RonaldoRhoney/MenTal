@@ -86,6 +86,10 @@ const List<String> kTerritoryIds = [
   'concursos_portugues',
   'concursos_raciocinio',
   'concursos_direito',
+  'concursos_municipal_portugues',
+  'concursos_municipal_raciocinio',
+  'concursos_municipal_informatica',
+  'concursos_municipal_constituicao',
   // V3.2 (V3/V3.2_TECNOLOGIA.md).
   'tecnologia_fundamentos',
   'tecnologia_programacao',
@@ -250,6 +254,14 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryConcursosRaciocinio;
     case 'concursos_direito':
       return l10n.territoryConcursosDireito;
+    case 'concursos_municipal_portugues':
+      return l10n.territoryConcursosMunicipalPortugues;
+    case 'concursos_municipal_raciocinio':
+      return l10n.territoryConcursosMunicipalRaciocinio;
+    case 'concursos_municipal_informatica':
+      return l10n.territoryConcursosMunicipalInformatica;
+    case 'concursos_municipal_constituicao':
+      return l10n.territoryConcursosMunicipalConstituicao;
     case 'tecnologia_fundamentos':
       return l10n.territoryTecnologiaFundamentos;
     case 'tecnologia_programacao':

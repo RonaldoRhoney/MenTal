@@ -125,7 +125,7 @@ def test_blocks_without_any_territory_are_not_returned(client):
     assert block_ids == {
         "matematica", "regioes", "enem", "concursos", "mitologia", "tecnologia",
         "financas_pessoais", "filosofia", "artes", "saude_bemestar", "curiosidade_relampago", "libras",
-        "jogos_de_palavras", "internet", "copa_do_mundo", "futebol", "ingles", "espanhol", "frances", "palavras_raras", *_LINGUAGEM_TEMA_BLOCKS,
+        "jogos_de_palavras", "internet", "copa_do_mundo", "futebol", "ingles", "espanhol", "frances", "palavras_raras", "concursos_municipais", *_LINGUAGEM_TEMA_BLOCKS,
     }
 
 

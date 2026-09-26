@@ -1,0 +1,808 @@
+{
+  "tema": "Português (Concursos Municipais)",
+  "slug": "portugues",
+  "lote": 1,
+  "observacao": "Lote 1 escrito por Claude Code para revisão de Rhoney. Questões ORIGINAIS no estilo de concursos de prefeituras (contexto institucional), sem reproduzir prova real. Evitei pontos em que as gramáticas divergem.",
+  "desafios": [
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (concordância verbal com sujeito simples).",
+      "options": [
+        "Os servidores da prefeitura chegaram cedo.",
+        "Os servidores da prefeitura chegou cedo.",
+        "O servidores da prefeitura chegaram cedo.",
+        "Os servidor da prefeitura chegaram cedo."
+      ],
+      "correct_answer": "Os servidores da prefeitura chegaram cedo.",
+      "explanation": "O verbo concorda com o núcleo do sujeito ('servidores'): 'chegaram'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (verbo haver no sentido de existir).",
+      "options": [
+        "Haviam muitos candidatos na fila.",
+        "Havia muitos candidatos na fila.",
+        "Houveram muitos candidatos na fila.",
+        "Havia-se muitos candidatos na fila."
+      ],
+      "correct_answer": "Havia muitos candidatos na fila.",
+      "explanation": "'Haver' com sentido de existir é impessoal e fica no singular.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (concordância nominal com 'anexo').",
+      "options": [
+        "Segue anexo as cópias do edital.",
+        "Seguem anexo as cópias do edital.",
+        "Seguem anexas as cópias do edital.",
+        "Segue anexas as cópias do edital."
+      ],
+      "correct_answer": "Seguem anexas as cópias do edital.",
+      "explanation": "'Anexo' concorda com o substantivo: 'anexas', e o verbo concorda com 'cópias'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (concordância com 'meio').",
+      "options": [
+        "Ela ficou meia cansada depois da prova.",
+        "Ela ficou meios cansada depois da prova.",
+        "Ela ficaram meio cansada depois da prova.",
+        "Ela ficou meio cansada depois da prova."
+      ],
+      "correct_answer": "Ela ficou meio cansada depois da prova.",
+      "explanation": "'Meio', advérbio (= um pouco), é invariável.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (regência do verbo obedecer).",
+      "options": [
+        "Os servidores devem obedecer ao regulamento.",
+        "Os servidores devem obedecer o regulamento.",
+        "Os servidores devem obedecer do regulamento.",
+        "Os servidores devem obedecer com regulamento."
+      ],
+      "correct_answer": "Os servidores devem obedecer ao regulamento.",
+      "explanation": "'Obedecer' pede a preposição 'a': 'obedecer ao regulamento'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (regência do verbo assistir, no sentido de ver).",
+      "options": [
+        "Os vereadores assistiram a sessão.",
+        "Os vereadores assistiram à sessão.",
+        "Os vereadores assistiram na sessão.",
+        "Os vereadores assistiram da sessão."
+      ],
+      "correct_answer": "Os vereadores assistiram à sessão.",
+      "explanation": "'Assistir', no sentido de presenciar, pede 'a': 'à sessão'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (uso da crase).",
+      "options": [
+        "Entreguei o ofício a secretária.",
+        "Entreguei o ofício à um secretário.",
+        "Entreguei o ofício à secretária.",
+        "Entreguei o ofício às secretária."
+      ],
+      "correct_answer": "Entreguei o ofício à secretária.",
+      "explanation": "'Entregar a' + artigo 'a' de 'secretária': 'à secretária'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (crase proibida diante de verbo).",
+      "options": [
+        "Ele começou à trabalhar na prefeitura.",
+        "Ele começou às trabalhar na prefeitura.",
+        "Ele começou há trabalhar na prefeitura.",
+        "Ele começou a trabalhar na prefeitura."
+      ],
+      "correct_answer": "Ele começou a trabalhar na prefeitura.",
+      "explanation": "Não há crase diante de verbo.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (vocativo).",
+      "options": [
+        "Senhor prefeito, o edital foi publicado.",
+        "Senhor prefeito o edital foi publicado.",
+        "Senhor, prefeito o edital foi publicado.",
+        "Senhor prefeito o edital, foi publicado."
+      ],
+      "correct_answer": "Senhor prefeito, o edital foi publicado.",
+      "explanation": "O vocativo é separado por vírgula.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (enumeração).",
+      "options": [
+        "A prefeitura abriu vagas para professor médico e engenheiro.",
+        "A prefeitura abriu vagas para professor, médico e engenheiro.",
+        "A prefeitura abriu vagas para professor, médico, e engenheiro.",
+        "A prefeitura abriu vagas, para professor, médico e engenheiro."
+      ],
+      "correct_answer": "A prefeitura abriu vagas para professor, médico e engenheiro.",
+      "explanation": "Vírgulas separam os itens; antes do 'e' final não se usa.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa 'aquilo que foge à regra'.",
+      "options": [
+        "excessão",
+        "exeção",
+        "exceção",
+        "esceção"
+      ],
+      "correct_answer": "exceção",
+      "explanation": "Grafia correta: 'exceção' (de 'exceto').",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a grafia correta da palavra que significa 'vantagem concedida a alguém'.",
+      "options": [
+        "previlégio",
+        "privilejio",
+        "previlejio",
+        "privilégio"
+      ],
+      "correct_answer": "privilégio",
+      "explanation": "Grafia correta: 'privilégio'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a alternativa em que todas as palavras estão corretamente acentuadas.",
+      "options": [
+        "público, estágio, cadáver",
+        "publico, estagio, cadaver",
+        "público, estagio, cadáver",
+        "publico, estágio, cadaver"
+      ],
+      "correct_answer": "público, estágio, cadáver",
+      "explanation": "'Público' e 'estágio' são paroxítonas terminadas em ditongo; 'cadáver' é paroxítona terminada em -r. Todas levam acento.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O sinônimo de 'designar', no sentido de nomear alguém para uma função, é:",
+      "options": [
+        "demitir",
+        "indicar",
+        "recusar",
+        "esquecer"
+      ],
+      "correct_answer": "indicar",
+      "explanation": "'Designar' e 'indicar' têm sentido próximo (escolher para uma função).",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O antônimo de 'exonerar' é:",
+      "options": [
+        "demitir",
+        "dispensar",
+        "nomear",
+        "afastar"
+      ],
+      "correct_answer": "nomear",
+      "explanation": "'Exonerar' (tirar do cargo) opõe-se a 'nomear'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O termo 'ínterim' significa:",
+      "options": [
+        "pagamento",
+        "recurso",
+        "edital",
+        "intervalo de tempo"
+      ],
+      "correct_answer": "intervalo de tempo",
+      "explanation": "'Interim' (ou 'ínterim') é o intervalo de tempo entre dois acontecimentos.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Em 'A prefeitura, embora tenha limitações orçamentárias, abriu concurso', a palavra 'embora' expressa ideia de:",
+      "options": [
+        "concessão",
+        "causa",
+        "condição",
+        "finalidade"
+      ],
+      "correct_answer": "concessão",
+      "explanation": "'Embora' introduz uma ideia contrária que não impediu o fato: concessão.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Em 'O orçamento foi aprovado; portanto, as obras começarão', a palavra 'portanto' expressa:",
+      "options": [
+        "oposição",
+        "conclusão",
+        "causa",
+        "comparação"
+      ],
+      "correct_answer": "conclusão",
+      "explanation": "'Portanto' introduz consequência/conclusão.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (pronome relativo 'cujo').",
+      "options": [
+        "O candidato que a inscrição foi indeferida recorreu.",
+        "O candidato cujo a inscrição foi indeferida recorreu.",
+        "O candidato cuja inscrição foi indeferida recorreu.",
+        "O candidato onde inscrição foi indeferida recorreu."
+      ],
+      "correct_answer": "O candidato cuja inscrição foi indeferida recorreu.",
+      "explanation": "'Cuja' concorda com 'inscrição' (feminino) e não leva artigo depois.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (mau/mal).",
+      "options": [
+        "O servidor foi mau avaliado pela chefia.",
+        "O servidor foi mal avaliada pela chefia.",
+        "O servidor foi maus avaliado pela chefia.",
+        "O servidor foi mal avaliado pela chefia."
+      ],
+      "correct_answer": "O servidor foi mal avaliado pela chefia.",
+      "explanation": "'Mal' (advérbio) modifica o verbo/particípio 'avaliado'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (por que).",
+      "options": [
+        "Não sei por que o edital foi retificado.",
+        "Não sei porque o edital foi retificado.",
+        "Não sei porquê o edital foi retificado.",
+        "Não sei por quê o edital foi retificado."
+      ],
+      "correct_answer": "Não sei por que o edital foi retificado.",
+      "explanation": "Em pergunta indireta, escreve-se 'por que'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Assinale a frase correta (afim).",
+      "options": [
+        "Os cargos de enfermeiro e técnico são a fins.",
+        "Os cargos de enfermeiro e técnico são afins.",
+        "Os cargos de enfermeiro e técnico é afins.",
+        "Os cargos de enfermeiro e técnico são afim."
+      ],
+      "correct_answer": "Os cargos de enfermeiro e técnico são afins.",
+      "explanation": "'Afins' (plural de 'afim') significa semelhantes.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "Complete: A comissão ___ os recursos ontem.",
+      "options": [
+        "analisará",
+        "analisa",
+        "analisou",
+        "analisaria"
+      ],
+      "correct_answer": "analisou",
+      "explanation": "O advérbio 'ontem' pede pretérito: 'analisou'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O plural de 'cidadão' é:",
+      "options": [
+        "cidadões",
+        "cidadães",
+        "cidadãoes",
+        "cidadãos"
+      ],
+      "correct_answer": "cidadãos",
+      "explanation": "Plural de 'cidadão': 'cidadãos'.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 1,
+      "prompt": "O termo 'isonomia' significa:",
+      "options": [
+        "igualdade de tratamento perante a lei",
+        "punição pela lei",
+        "desconto em tributos",
+        "fiscalização de contas"
+      ],
+      "correct_answer": "igualdade de tratamento perante a lei",
+      "explanation": "Isonomia é a igualdade de todos perante a lei.",
+      "hints": [
+        "Leia as alternativas com calma e compare a regra gramatical envolvida em cada uma.",
+        "Procure o termo que muda o sentido ou a forma da frase e teste a regra."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto à concordância verbal com sujeito posposto.",
+      "options": [
+        "Chegou ao protocolo dois recursos.",
+        "Chegaram ao protocolo dois recursos.",
+        "Chegaram ao protocolo dois recurso.",
+        "Chegou ao protocolo dois recursos hoje, foram."
+      ],
+      "correct_answer": "Chegaram ao protocolo dois recursos.",
+      "explanation": "O verbo concorda com o sujeito posposto 'dois recursos': 'chegaram'.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto à concordância com 'mais de um'.",
+      "options": [
+        "Mais de um candidato foram aprovados.",
+        "Mais de um candidatos foi aprovado.",
+        "Mais de um candidato foi aprovado.",
+        "Mais de um candidatos foram aprovado."
+      ],
+      "correct_answer": "Mais de um candidato foi aprovado.",
+      "explanation": "Com 'mais de um', o verbo fica no singular.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto à concordância com 'a maioria dos'.",
+      "options": [
+        "A maioria dos servidores compareceram à reunião.",
+        "A maioria dos servidor compareceu à reunião.",
+        "A maiorias dos servidores compareceu à reunião.",
+        "A maioria dos servidores compareceu à reunião."
+      ],
+      "correct_answer": "A maioria dos servidores compareceu à reunião.",
+      "explanation": "Com 'a maioria de', tolera-se singular ou plural; aqui, 'compareceu' é a forma que concorda com 'maioria'.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto à regência de 'preferir'.",
+      "options": [
+        "Prefiro concurso público a emprego temporário.",
+        "Prefiro concurso público do que emprego temporário.",
+        "Prefiro mais concurso público que emprego temporário.",
+        "Prefiro concurso público sobre emprego temporário."
+      ],
+      "correct_answer": "Prefiro concurso público a emprego temporário.",
+      "explanation": "'Preferir' pede 'a': 'preferir X a Y'.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto ao uso da crase com horas.",
+      "options": [
+        "A reunião começará as nove horas.",
+        "A reunião começará às nove horas.",
+        "A reunião começará à nove horas.",
+        "A reunião começará há nove horas."
+      ],
+      "correct_answer": "A reunião começará às nove horas.",
+      "explanation": "Indicação de horas leva crase: 'às nove horas'.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto ao uso da crase com locução adverbial feminina.",
+      "options": [
+        "Os documentos ficaram a disposição da população.",
+        "Os documentos ficaram à disposição a população.",
+        "Os documentos ficaram à disposição da população.",
+        "Os documentos ficaram há disposição da população."
+      ],
+      "correct_answer": "Os documentos ficaram à disposição da população.",
+      "explanation": "'À disposição' é locução adverbial feminina: leva crase.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto à pontuação com aposto.",
+      "options": [
+        "O prefeito eleito em 2024, tomou posse.",
+        "O prefeito, eleito em 2024 tomou posse.",
+        "O prefeito eleito, em 2024 tomou posse.",
+        "O prefeito, eleito em 2024, tomou posse."
+      ],
+      "correct_answer": "O prefeito, eleito em 2024, tomou posse.",
+      "explanation": "O aposto explicativo é isolado por vírgulas nos dois lados.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto à pontuação com oração adjetiva restritiva.",
+      "options": [
+        "Os candidatos que faltaram à prova serão eliminados.",
+        "Os candidatos, que faltaram à prova serão eliminados.",
+        "Os candidatos que faltaram à prova, serão eliminados.",
+        "Os candidatos, que faltaram, à prova serão eliminados."
+      ],
+      "correct_answer": "Os candidatos que faltaram à prova serão eliminados.",
+      "explanation": "A oração restritiva não vem entre vírgulas: só os que faltaram serão eliminados.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto ao emprego de 'a fim de'.",
+      "options": [
+        "A prefeitura publicou o edital afim de divulgar as vagas.",
+        "A prefeitura publicou o edital a fim de divulgar as vagas.",
+        "A prefeitura publicou o edital a fins de divulgar as vagas.",
+        "A prefeitura publicou o edital afim que divulgue as vagas."
+      ],
+      "correct_answer": "A prefeitura publicou o edital a fim de divulgar as vagas.",
+      "explanation": "A locução de finalidade é 'a fim de' (separada).",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto ao emprego de 'senão/se não'.",
+      "options": [
+        "Entregue os documentos hoje, se não perderá a vaga.",
+        "Entregue os documentos hoje, senão perder a vaga.",
+        "Entregue os documentos hoje, senão perderá a vaga.",
+        "Entregue os documentos hoje se não, perderá a vaga."
+      ],
+      "correct_answer": "Entregue os documentos hoje, senão perderá a vaga.",
+      "explanation": "'Senão' = caso contrário.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto ao emprego de 'onde/aonde'.",
+      "options": [
+        "Onde o servidor foi? Aonde ele mora?",
+        "Aonde o servidor foi? Aonde ele mora?",
+        "Onde o servidor foi? Onde ele mora?",
+        "Aonde o servidor foi? Onde ele mora?"
+      ],
+      "correct_answer": "Aonde o servidor foi? Onde ele mora?",
+      "explanation": "'Ir' pede 'aonde' (movimento); 'morar' pede 'onde' (lugar).",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto à colocação pronominal.",
+      "options": [
+        "Nunca me esqueci daquele edital.",
+        "Nunca esqueci-me daquele edital.",
+        "Nunca esqueci me daquele edital.",
+        "Nunca esquecer-me daquele edital."
+      ],
+      "correct_answer": "Nunca me esqueci daquele edital.",
+      "explanation": "O advérbio negativo 'nunca' atrai o pronome: próclise.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto ao emprego de 'mas/mais'.",
+      "options": [
+        "Ele quer mas tempo, mais não estuda.",
+        "Ele quer mais tempo, mas não estuda.",
+        "Ele quer mais tempo, mais não estuda.",
+        "Ele quer mas tempo, mas não estuda."
+      ],
+      "correct_answer": "Ele quer mais tempo, mas não estuda.",
+      "explanation": "'Mais' quantifica; 'mas' é conjunção adversativa.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto ao uso do verbo 'fazer' indicando tempo.",
+      "options": [
+        "Fazem dois anos que ele foi nomeado.",
+        "Fazia dois anos que ele foi nomeado.",
+        "Faz dois anos que ele foi nomeado.",
+        "Faz dois anos que ele foram nomeado."
+      ],
+      "correct_answer": "Faz dois anos que ele foi nomeado.",
+      "explanation": "'Fazer' indicando tempo decorrido é impessoal e fica no singular.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 2,
+      "prompt": "Assinale a alternativa correta quanto ao uso de 'cujo'.",
+      "options": [
+        "Este é o servidor que o pedido dele foi deferido.",
+        "Este é o servidor cujo o pedido foi deferido.",
+        "Este é o servidor onde pedido foi deferido.",
+        "Este é o servidor cujo pedido foi deferido."
+      ],
+      "correct_answer": "Este é o servidor cujo pedido foi deferido.",
+      "explanation": "'Cujo' concorda com o termo seguinte e não leva artigo depois.",
+      "hints": [
+        "Identifique qual regra a banca quer testar antes de olhar as alternativas.",
+        "Elimine as alternativas com erro evidente e compare as restantes."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (concordância e regência).",
+      "options": [
+        "Os documentos a que me referi estão anexos ao processo.",
+        "Os documentos que me referi está anexo ao processo.",
+        "Os documentos a que me referi está anexos ao processo.",
+        "Os documentos que me referi estão anexo ao processo."
+      ],
+      "correct_answer": "Os documentos a que me referi estão anexos ao processo.",
+      "explanation": "'Referir-se a' exige 'a que'; 'anexos' e 'estão' concordam com 'documentos'.",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (crase e pontuação).",
+      "options": [
+        "Fomos a prefeitura, onde entregamos os documentos.",
+        "Fomos à prefeitura, onde entregamos os documentos.",
+        "Fomos à prefeitura onde, entregamos os documentos.",
+        "Fomos à prefeitura, aonde entregamos os documentos."
+      ],
+      "correct_answer": "Fomos à prefeitura, onde entregamos os documentos.",
+      "explanation": "'Ir a' + artigo 'a': 'à prefeitura'; 'onde' indica lugar em que se entrega.",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (voz passiva).",
+      "options": [
+        "Vende-se apostilas do concurso.",
+        "Vendem-se apostila do concurso.",
+        "Vendem-se apostilas do concurso.",
+        "Vende-se apostilas do concurso, vendidas."
+      ],
+      "correct_answer": "Vendem-se apostilas do concurso.",
+      "explanation": "Na passiva sintética o verbo concorda com o sujeito paciente ('apostilas').",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (pronome e regência).",
+      "options": [
+        "O candidato, cuja aprovação todos duvidavam, foi nomeado.",
+        "O candidato, que aprovação todos duvidavam, foi nomeado.",
+        "O candidato, de que a aprovação todos duvidavam, foi nomeado.",
+        "O candidato, de cuja aprovação todos duvidavam, foi nomeado."
+      ],
+      "correct_answer": "O candidato, de cuja aprovação todos duvidavam, foi nomeado.",
+      "explanation": "'Duvidar de' exige a preposição 'de' antes do relativo: 'de cuja aprovação'.",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (ortografia e acentuação).",
+      "options": [
+        "O funcionário apresentou uma justificativa plausível.",
+        "O funcionário apresentou uma justificativa plausivel.",
+        "O funcionario apresentou uma justificativa plausível.",
+        "O funcionário apresentou uma justifiativa plausível."
+      ],
+      "correct_answer": "O funcionário apresentou uma justificativa plausível.",
+      "explanation": "'Funcionário' e 'plausível' levam acento; 'justificativa' se escreve com 'ti'.",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (mau/mal e por que).",
+      "options": [
+        "Ele saiu mau da prova; não sei porque errou tanto.",
+        "Ele saiu mal da prova; não sei por que errou tanto.",
+        "Ele saiu mal da prova; não sei porquê errou tanto.",
+        "Ele saiu mau da prova; não sei por que errou tanto."
+      ],
+      "correct_answer": "Ele saiu mal da prova; não sei por que errou tanto.",
+      "explanation": "'Mal' (advérbio) e 'por que' (pergunta indireta).",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (concordância com 'haver' e 'fazer').",
+      "options": [
+        "Haviam dois anos que não se realizava concurso.",
+        "Havia dois anos que não se realizavam concurso.",
+        "Havia dois anos que não se realizava concurso.",
+        "Haviam dois anos que não se realizavam concurso."
+      ],
+      "correct_answer": "Havia dois anos que não se realizava concurso.",
+      "explanation": "'Haver' indicando tempo é impessoal e 'realizava' concorda com 'concurso'.",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (sentido do texto).",
+      "options": [
+        "Em 'O edital foi retificado; contudo, o prazo não mudou', 'contudo' indica causa.",
+        "Em 'O edital foi retificado; contudo, o prazo não mudou', 'contudo' indica finalidade.",
+        "Em 'O edital foi retificado; contudo, o prazo não mudou', 'contudo' indica comparação.",
+        "Em 'O edital foi retificado; contudo, o prazo não mudou', 'contudo' indica oposição."
+      ],
+      "correct_answer": "Em 'O edital foi retificado; contudo, o prazo não mudou', 'contudo' indica oposição.",
+      "explanation": "'Contudo' é conjunção adversativa: expressa oposição.",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (colocação pronominal).",
+      "options": [
+        "Quem lhe enviou o comunicado?",
+        "Quem enviou-lhe o comunicado?",
+        "Quem enviou lhe o comunicado?",
+        "Quem enviar-lhe-ia o comunicado?"
+      ],
+      "correct_answer": "Quem lhe enviou o comunicado?",
+      "explanation": "O pronome interrogativo 'quem' atrai o pronome: próclise.",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    },
+    {
+      "difficulty_level": 3,
+      "prompt": "Assinale a única alternativa totalmente correta (crase e verbos).",
+      "options": [
+        "Refiro-me a proposta que a diretoria aprovou.",
+        "Refiro-me à proposta que a diretoria aprovou.",
+        "Refiro-me à proposta que à diretoria aprovou.",
+        "Refiro-me à proposta que a diretoria aprovou a."
+      ],
+      "correct_answer": "Refiro-me à proposta que a diretoria aprovou.",
+      "explanation": "'Referir-se a' + 'a proposta' = 'à proposta'; 'a diretoria' é sujeito (sem crase).",
+      "hints": [
+        "Analise cada alternativa isoladamente; em geral só uma está totalmente correta.",
+        "Cuidado com alternativas que acertam uma parte da frase e erram outra."
+      ]
+    }
+  ]
+}

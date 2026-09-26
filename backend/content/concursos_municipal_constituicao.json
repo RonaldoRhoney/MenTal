@@ -1,0 +1,902 @@
+[
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "Segundo a Constituição Federal, todo o poder emana:",
+    "options": [
+      "do povo",
+      "do Presidente",
+      "do Congresso",
+      "do Judiciário"
+    ],
+    "correct_answer": "do povo",
+    "explanation": "CF, art. 1º, parágrafo único: todo o poder emana do povo.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "A forma de governo adotada pelo Brasil é a:",
+    "options": [
+      "Monarquia",
+      "República",
+      "Ditadura",
+      "Teocracia"
+    ],
+    "correct_answer": "República",
+    "explanation": "O art. 1º da CF define o Brasil como República Federativa.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "Os Poderes da União, independentes e harmônicos entre si, são:",
+    "options": [
+      "Federal, Estadual e Municipal",
+      "Civil, Militar e Eclesiástico",
+      "Legislativo, Executivo e Judiciário",
+      "Executivo, Fiscal e Policial"
+    ],
+    "correct_answer": "Legislativo, Executivo e Judiciário",
+    "explanation": "CF, art. 2º.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O chefe do Poder Executivo municipal é o:",
+    "options": [
+      "Governador",
+      "Vereador",
+      "Presidente da Câmara",
+      "Prefeito"
+    ],
+    "correct_answer": "Prefeito",
+    "explanation": "O Prefeito chefia o Executivo do Município.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O Poder Legislativo municipal é exercido pela:",
+    "options": [
+      "Câmara Municipal",
+      "Assembleia Legislativa",
+      "Câmara dos Deputados",
+      "Senado Federal"
+    ],
+    "correct_answer": "Câmara Municipal",
+    "explanation": "CF, art. 29: a Câmara Municipal, composta por Vereadores.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "Os membros da Câmara Municipal são chamados de:",
+    "options": [
+      "deputados",
+      "vereadores",
+      "senadores",
+      "prefeitos"
+    ],
+    "correct_answer": "vereadores",
+    "explanation": "Vereadores são eleitos para a Câmara Municipal.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "A lei orgânica é a norma básica de organização de qual ente?",
+    "options": [
+      "da União",
+      "do Estado",
+      "do Município",
+      "do Distrito Federal apenas"
+    ],
+    "correct_answer": "do Município",
+    "explanation": "CF, art. 29: o Município se rege por lei orgânica.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "A administração pública deve obedecer aos princípios de legalidade, impessoalidade, moralidade, publicidade e:",
+    "options": [
+      "gratuidade",
+      "hierarquia",
+      "sigilo",
+      "eficiência"
+    ],
+    "correct_answer": "eficiência",
+    "explanation": "Art. 37, caput: LIMPE (Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência).",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O princípio da legalidade determina que o administrador público só pode fazer o que a lei:",
+    "options": [
+      "autoriza ou determina",
+      "proíbe",
+      "ignora",
+      "deixa em aberto"
+    ],
+    "correct_answer": "autoriza ou determina",
+    "explanation": "Na Administração, só se age quando há previsão legal.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O princípio que exige transparência dos atos administrativos é o da:",
+    "options": [
+      "eficiência",
+      "publicidade",
+      "hierarquia",
+      "autotutela"
+    ],
+    "correct_answer": "publicidade",
+    "explanation": "Publicidade garante conhecimento e controle dos atos pela sociedade.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "A investidura em cargo público efetivo depende, em regra, de aprovação prévia em:",
+    "options": [
+      "indicação política",
+      "sorteio",
+      "concurso público",
+      "entrevista informal"
+    ],
+    "correct_answer": "concurso público",
+    "explanation": "CF, art. 37, II: concurso público de provas ou de provas e títulos.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "Os cargos em comissão são de:",
+    "options": [
+      "nomeação por concurso",
+      "estabilidade garantida",
+      "vitaliciedade",
+      "livre nomeação e exoneração"
+    ],
+    "correct_answer": "livre nomeação e exoneração",
+    "explanation": "CF, art. 37, II: cargos em comissão são de livre nomeação e exoneração.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "Os direitos e garantias fundamentais estão previstos no:",
+    "options": [
+      "Título II da Constituição",
+      "Título VII da Constituição",
+      "Ato das Disposições Transitórias apenas",
+      "Código Civil"
+    ],
+    "correct_answer": "Título II da Constituição",
+    "explanation": "O Título II trata dos Direitos e Garantias Fundamentais (art. 5º e seguintes).",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "Perante a lei, todos são:",
+    "options": [
+      "diferentes conforme a renda",
+      "iguais, sem distinção de qualquer natureza",
+      "iguais só se forem eleitores",
+      "tratados conforme o cargo"
+    ],
+    "correct_answer": "iguais, sem distinção de qualquer natureza",
+    "explanation": "CF, art. 5º, caput.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "É livre a manifestação do pensamento, sendo vedado o:",
+    "options": [
+      "debate",
+      "voto",
+      "anonimato",
+      "recurso"
+    ],
+    "correct_answer": "anonimato",
+    "explanation": "CF, art. 5º, IV.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "A casa é asilo inviolável do indivíduo, salvo em caso de flagrante delito, desastre, prestação de socorro ou:",
+    "options": [
+      "por ordem de vizinho",
+      "por ordem do síndico",
+      "por vontade da polícia sem motivo",
+      "por determinação judicial, durante o dia"
+    ],
+    "correct_answer": "por determinação judicial, durante o dia",
+    "explanation": "CF, art. 5º, XI: ordem judicial, apenas durante o dia.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O voto no Brasil é, em regra:",
+    "options": [
+      "direto, secreto, universal e periódico",
+      "indireto e público",
+      "facultativo e público",
+      "vitalício"
+    ],
+    "correct_answer": "direto, secreto, universal e periódico",
+    "explanation": "CF, art. 14 e art. 60, §4º: voto direto, secreto, universal e periódico.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O alistamento eleitoral e o voto são obrigatórios para os maiores de:",
+    "options": [
+      "16 anos",
+      "18 anos",
+      "21 anos",
+      "25 anos"
+    ],
+    "correct_answer": "18 anos",
+    "explanation": "CF, art. 14, §1º, I: obrigatórios para maiores de 18 anos.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O voto é facultativo para os analfabetos, os maiores de setenta anos e os maiores de:",
+    "options": [
+      "14 e menores de 16 anos",
+      "18 e menores de 21 anos",
+      "16 e menores de 18 anos",
+      "60 anos"
+    ],
+    "correct_answer": "16 e menores de 18 anos",
+    "explanation": "CF, art. 14, §1º, II.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "A capital federal do Brasil é:",
+    "options": [
+      "Rio de Janeiro",
+      "São Paulo",
+      "Salvador",
+      "Brasília"
+    ],
+    "correct_answer": "Brasília",
+    "explanation": "CF, art. 18, §1º: Brasília é a Capital Federal.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "Os entes da Federação brasileira são União, Estados, Distrito Federal e:",
+    "options": [
+      "Municípios",
+      "Regiões",
+      "Territórios permanentes",
+      "Comarcas"
+    ],
+    "correct_answer": "Municípios",
+    "explanation": "CF, art. 18: a organização político-administrativa compreende União, Estados, DF e Municípios.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "Servidor público é aquele que:",
+    "options": [
+      "só trabalha em empresa privada",
+      "exerce cargo, emprego ou função pública",
+      "é eleito vereador apenas",
+      "recebe pensão"
+    ],
+    "correct_answer": "exerce cargo, emprego ou função pública",
+    "explanation": "Servidores atuam na Administração Pública em cargos, empregos ou funções.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "A prefeitura pertence à Administração Pública:",
+    "options": [
+      "indireta federal",
+      "privada",
+      "direta municipal",
+      "estadual"
+    ],
+    "correct_answer": "direta municipal",
+    "explanation": "A Prefeitura é órgão da Administração Direta do Município.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O documento que estima a receita e fixa a despesa de cada exercício é o(a):",
+    "options": [
+      "Código Penal",
+      "Estatuto da Cidade",
+      "Lei Eleitoral",
+      "orçamento (lei orçamentária anual)"
+    ],
+    "correct_answer": "orçamento (lei orçamentária anual)",
+    "explanation": "A LOA prevê receitas e autoriza as despesas do ano.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 1,
+    "prompt": "O ato pelo qual a autoridade pública dá publicidade oficial às leis municipais é a:",
+    "options": [
+      "publicação no diário oficial",
+      "reunião de bairro",
+      "carta particular",
+      "notícia de rádio"
+    ],
+    "correct_answer": "publicação no diário oficial",
+    "explanation": "Publicar no órgão oficial dá conhecimento e eficácia aos atos.",
+    "age_reviewed": true,
+    "hints": [
+      "Lembre o princípio ou o órgão citado e sua função básica na Constituição.",
+      "Elimine as alternativas que pertencem a outro Poder ou esfera."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "Compete privativamente à União legislar sobre:",
+    "options": [
+      "trânsito local de bairro",
+      "direito civil",
+      "horário de comércio local",
+      "coleta de lixo"
+    ],
+    "correct_answer": "direito civil",
+    "explanation": "CF, art. 22, I: direito civil, comercial, penal, processual etc. são da União.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "Compete aos Municípios legislar sobre assuntos de:",
+    "options": [
+      "direito penal",
+      "direito civil",
+      "interesse local",
+      "direito eleitoral"
+    ],
+    "correct_answer": "interesse local",
+    "explanation": "CF, art. 30, I: legislar sobre assuntos de interesse local.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "O princípio que veda a promoção pessoal do agente público nas publicações oficiais é o da:",
+    "options": [
+      "legalidade",
+      "publicidade",
+      "eficiência",
+      "impessoalidade"
+    ],
+    "correct_answer": "impessoalidade",
+    "explanation": "CF, art. 37, §1º: a publicidade deve ter caráter educativo, informativo ou de orientação, sem nomes ou símbolos que caracterizem promoção pessoal.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "A estabilidade do servidor efetivo é adquirida, em regra, após:",
+    "options": [
+      "três anos de efetivo exercício",
+      "um ano",
+      "cinco anos",
+      "seis meses"
+    ],
+    "correct_answer": "três anos de efetivo exercício",
+    "explanation": "CF, art. 41 (com a EC 19/98): três anos de efetivo exercício e avaliação especial de desempenho.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "O servidor estável só perde o cargo por sentença judicial transitada em julgado, processo administrativo com ampla defesa ou:",
+    "options": [
+      "decisão do chefe",
+      "avaliação periódica de desempenho",
+      "pedido de qualquer cidadão",
+      "mudança de prefeito"
+    ],
+    "correct_answer": "avaliação periódica de desempenho",
+    "explanation": "CF, art. 41, §1º.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "É proibida a acumulação remunerada de cargos públicos, exceto quando houver compatibilidade de horários nos casos de:",
+    "options": [
+      "dois cargos de qualquer área",
+      "um cargo e um mandato de senador",
+      "dois cargos de professor",
+      "dois cargos de chefia"
+    ],
+    "correct_answer": "dois cargos de professor",
+    "explanation": "CF, art. 37, XVI, a: dois cargos de professor.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "A licitação, como regra, é exigida para:",
+    "options": [
+      "nomeação de servidor efetivo",
+      "aprovação de leis",
+      "eleição de prefeito",
+      "contratação de obras e serviços pela Administração"
+    ],
+    "correct_answer": "contratação de obras e serviços pela Administração",
+    "explanation": "CF, art. 37, XXI: contratos são precedidos de licitação, ressalvados os casos previstos em lei.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "O habeas corpus protege o direito de:",
+    "options": [
+      "locomoção",
+      "informação",
+      "propriedade",
+      "associação"
+    ],
+    "correct_answer": "locomoção",
+    "explanation": "CF, art. 5º, LXVIII: protege o direito de ir e vir.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "O mandado de segurança protege direito líquido e certo não amparado por:",
+    "options": [
+      "ação civil",
+      "habeas corpus ou habeas data",
+      "ação popular",
+      "ação penal"
+    ],
+    "correct_answer": "habeas corpus ou habeas data",
+    "explanation": "CF, art. 5º, LXIX.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "A ação popular pode ser proposta por qualquer:",
+    "options": [
+      "empresa",
+      "estrangeiro",
+      "cidadão",
+      "partido político apenas"
+    ],
+    "correct_answer": "cidadão",
+    "explanation": "CF, art. 5º, LXXIII: qualquer cidadão é parte legítima.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "A criação, a incorporação, a fusão e o desmembramento de Municípios dependem de:",
+    "options": [
+      "decreto do Prefeito",
+      "resolução da Câmara Municipal",
+      "portaria do Ministério",
+      "lei estadual, dentro do período fixado por lei complementar federal"
+    ],
+    "correct_answer": "lei estadual, dentro do período fixado por lei complementar federal",
+    "explanation": "CF, art. 18, §4º (com a EC 15/96).",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "A remuneração do prefeito é fixada por:",
+    "options": [
+      "lei de iniciativa da Câmara Municipal",
+      "decreto do próprio prefeito",
+      "portaria do Tribunal",
+      "resolução do Senado"
+    ],
+    "correct_answer": "lei de iniciativa da Câmara Municipal",
+    "explanation": "CF, art. 29, V: subsídios do Prefeito e Vice fixados por lei de iniciativa da Câmara.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "O mandato do prefeito tem duração de:",
+    "options": [
+      "dois anos",
+      "quatro anos",
+      "cinco anos",
+      "seis anos"
+    ],
+    "correct_answer": "quatro anos",
+    "explanation": "CF, art. 29, I: mandato de quatro anos, com eleição em ano anterior ao término do mandato.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "A CF garante a todos, independentemente do pagamento de taxas, o direito de petição aos Poderes Públicos em defesa de direitos ou contra:",
+    "options": [
+      "decisões do síndico",
+      "preços de mercado",
+      "ilegalidade ou abuso de poder",
+      "opiniões pessoais"
+    ],
+    "correct_answer": "ilegalidade ou abuso de poder",
+    "explanation": "CF, art. 5º, XXXIV, a.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 2,
+    "prompt": "O poder da Administração que decorre da hierarquia, permitindo ao superior dar ordens ao subordinado, é o poder:",
+    "options": [
+      "de polícia",
+      "regulamentar",
+      "disciplinar apenas",
+      "hierárquico"
+    ],
+    "correct_answer": "hierárquico",
+    "explanation": "O poder hierárquico organiza a distribuição de funções e a subordinação entre órgãos e agentes.",
+    "age_reviewed": true,
+    "hints": [
+      "Relacione o conceito ao artigo ou princípio correspondente (ex.: art. 37, LIMPE).",
+      "Diferencie competências da União, dos Estados e dos Municípios."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "A improbidade administrativa pode levar o agente a perder a função pública, suspensão de direitos políticos, ressarcimento ao erário e:",
+    "options": [
+      "pagamento de multa civil",
+      "pena de morte",
+      "exílio",
+      "perda da nacionalidade"
+    ],
+    "correct_answer": "pagamento de multa civil",
+    "explanation": "CF, art. 37, §4º, e Lei 8.429/92: sanções cíveis e políticas, sem prejuízo da ação penal.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "A responsabilidade civil do Estado pelos danos que seus agentes causarem a terceiros é, como regra, do tipo:",
+    "options": [
+      "subjetiva",
+      "objetiva",
+      "inexistente",
+      "sempre penal"
+    ],
+    "correct_answer": "objetiva",
+    "explanation": "CF, art. 37, §6º: responsabilidade objetiva das pessoas jurídicas de direito público, com direito de regresso contra o agente culpado.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "O direito de regresso do Estado contra o servidor que causou o dano exige:",
+    "options": [
+      "apenas a ocupação do cargo",
+      "ordem judicial anterior",
+      "dolo ou culpa do agente",
+      "nomeação recente"
+    ],
+    "correct_answer": "dolo ou culpa do agente",
+    "explanation": "CF, art. 37, §6º, parte final.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "A Emenda à Constituição pode ser proposta, entre outros, por, no mínimo:",
+    "options": [
+      "um quinto dos senadores",
+      "10 deputados",
+      "5 vereadores",
+      "um terço dos membros da Câmara dos Deputados"
+    ],
+    "correct_answer": "um terço dos membros da Câmara dos Deputados",
+    "explanation": "CF, art. 60, I: um terço, no mínimo, dos membros da Câmara ou do Senado.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "A Emenda Constitucional é aprovada em cada Casa do Congresso, em dois turnos, por:",
+    "options": [
+      "três quintos dos votos dos membros",
+      "maioria simples",
+      "dois terços",
+      "unanimidade"
+    ],
+    "correct_answer": "três quintos dos votos dos membros",
+    "explanation": "CF, art. 60, §2º.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "Entre os atos de improbidade que causam prejuízo ao erário está:",
+    "options": [
+      "cumprir a lei",
+      "frustrar a licitude de licitação para beneficiar terceiro",
+      "registrar ponto",
+      "publicar edital"
+    ],
+    "correct_answer": "frustrar a licitude de licitação para beneficiar terceiro",
+    "explanation": "Lei 8.429/92: condutas dolosas que prejudicam o erário configuram improbidade.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "As despesas com pessoal do Município seguem os limites da:",
+    "options": [
+      "Lei Maria da Penha",
+      "Lei do Inquilinato",
+      "Lei de Responsabilidade Fiscal",
+      "Lei Seca"
+    ],
+    "correct_answer": "Lei de Responsabilidade Fiscal",
+    "explanation": "A LRF (LC 101/2000) fixa limites para gastos com pessoal.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "Segundo a LRF, o limite de despesa total com pessoal do Poder Executivo municipal é de:",
+    "options": [
+      "30%",
+      "70%",
+      "90%",
+      "54% da receita corrente líquida"
+    ],
+    "correct_answer": "54% da receita corrente líquida",
+    "explanation": "LRF, art. 20, III, b: 54% da RCL para o Executivo municipal; 6% para o Legislativo.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "O processo administrativo disciplinar garante ao acusado a:",
+    "options": [
+      "ampla defesa e o contraditório",
+      "condenação prévia",
+      "sigilo total da acusação",
+      "decisão sem provas"
+    ],
+    "correct_answer": "ampla defesa e o contraditório",
+    "explanation": "CF, art. 5º, LV: ampla defesa e contraditório em processos administrativos.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  },
+  {
+    "territory_id": "concursos_municipal_constituicao",
+    "difficulty_level": 3,
+    "prompt": "Segundo a CF, a lei estabelecerá prazos de prescrição para ilícitos praticados por qualquer agente que causem prejuízo ao erário, ressalvadas as respectivas ações de:",
+    "options": [
+      "nomeação",
+      "ressarcimento",
+      "aposentadoria",
+      "licenciamento"
+    ],
+    "correct_answer": "ressarcimento",
+    "explanation": "CF, art. 37, §5º: as ações de ressarcimento ao erário são imprescritíveis, conforme a ressalva constitucional.",
+    "age_reviewed": true,
+    "hints": [
+      "Atenção aos detalhes: prazos, quóruns e exceções costumam ser o ponto da questão.",
+      "Compare com o texto constitucional e a doutrina básica de direito administrativo."
+    ]
+  }
+]
