@@ -25,8 +25,9 @@ Libras recebe uma resposta textual explicando o motivo, nunca um erro.
 """
 
 import re
+from typing import NamedTuple
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from . import config, models, wiktionary
@@ -168,6 +169,69 @@ def _record_gap(db: Session, word: str, target: str | None) -> None:
         db.rollback()
 
 
+class _VocabEntry(NamedTuple):
+    territory_id: str
+    meaning: str | None
+    correct: str
+    explanation: str
+    correct_answer: str
+
+
+_vocab_cache: dict = {"signature": None, "entries": []}
+
+
+def _vocab_entries(db: Session) -> list[_VocabEntry]:
+    """Índice em memória do vocabulário de Idiomas (só as 4 colunas necessárias). Antes,
+    CADA pergunta carregava do banco as linhas completas de todos os territórios de
+    Idiomas (~1.400 com o banco de 1.000 palavras) e aplicava regex em cada uma — lento
+    com o Supabase remoto. Agora uma consulta agregada barata (contagem + menor/maior id)
+    decide se o índice ainda vale; só reconstrói quando o conteúdo mudou."""
+    ids = sorted(config.IDIOMA_TERRITORY_IDS)
+    signature = tuple(
+        db.execute(
+            select(func.count(), func.min(models.Challenge.id), func.max(models.Challenge.id)).where(
+                models.Challenge.territory_id.in_(ids)
+            )
+        ).one()
+    )
+    if _vocab_cache["signature"] == signature:
+        return _vocab_cache["entries"]
+    rows = db.execute(
+        select(
+            models.Challenge.territory_id,
+            models.Challenge.prompt,
+            models.Challenge.correct_answer,
+            models.Challenge.explanation,
+        ).where(models.Challenge.territory_id.in_(ids))
+    ).all()
+    entries = []
+    for territory_id, prompt, correct_answer, explanation in rows:
+        meaning = extract_portuguese_meaning(prompt)
+        entries.append(
+            _VocabEntry(
+                territory_id,
+                meaning.strip().lower() if meaning else None,
+                correct_answer.strip().lower(),
+                explanation,
+                correct_answer,
+            )
+        )
+    _vocab_cache["signature"] = signature
+    _vocab_cache["entries"] = entries
+    return entries
+
+
+def _found(entry: _VocabEntry, word: str) -> dict:
+    lang = _language_of_territory(entry.territory_id)
+    return {
+        "found": True,
+        "answer_text": entry.explanation,
+        "matched_word": word,
+        "target_language": lang,
+        "speech_segments": build_speech_segments(entry.explanation, lang, [entry.correct_answer]),
+    }
+
+
 def answer_question(db: Session, question: str) -> dict:
     question = (question or "").strip()
     if not question:
@@ -197,34 +261,18 @@ def answer_question(db: Session, question: str) -> dict:
         if target is not None
         else list(config.IDIOMA_TERRITORY_IDS)
     )
-    challenges = db.execute(
-        select(models.Challenge).where(models.Challenge.territory_id.in_(territory_ids))
-    ).scalars().all()
+    entries = _vocab_entries(db)
+    allowed = set(territory_ids)
 
     # 1) a palavra perguntada é o termo em PORTUGUÊS (ex.: "casa" -> "House").
-    for challenge in challenges:
-        meaning = extract_portuguese_meaning(challenge.prompt)
-        if meaning and meaning.strip().lower() == word_norm:
-            lang = _language_of_territory(challenge.territory_id)
-            return {
-                "found": True,
-                "answer_text": challenge.explanation,
-                "matched_word": word,
-                "target_language": lang,
-                "speech_segments": build_speech_segments(challenge.explanation, lang, [challenge.correct_answer]),
-            }
+    for entry in entries:
+        if entry.territory_id in allowed and entry.meaning == word_norm:
+            return _found(entry, word)
 
     # 2) a palavra perguntada é o termo NO IDIOMA-ALVO (ex.: "house" -> "casa").
-    for challenge in challenges:
-        if challenge.correct_answer.strip().lower() == word_norm:
-            lang = _language_of_territory(challenge.territory_id)
-            return {
-                "found": True,
-                "answer_text": challenge.explanation,
-                "matched_word": word,
-                "target_language": lang,
-                "speech_segments": build_speech_segments(challenge.explanation, lang, [challenge.correct_answer]),
-            }
+    for entry in entries:
+        if entry.territory_id in allowed and entry.correct == word_norm:
+            return _found(entry, word)
 
     _record_gap(db, word, target)
     suggestion = _suggestion_for(db, word_norm, target)

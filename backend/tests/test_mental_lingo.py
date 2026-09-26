@@ -178,3 +178,12 @@ def test_build_speech_segments_so_marca_estrangeiro_o_que_e_termo_conhecido():
     assert segs[0] == {"lang": "ingles", "text": "The house is big"}
     assert all(s["lang"] == "pt" for s in segs[1:])  # 'the'/'house' não são termos conhecidos: ficam em pt
     assert build_speech_segments("Sem aspas.", "ingles", ["x"]) == [{"lang": "pt", "text": "Sem aspas."}]
+
+
+def test_indice_em_memoria_enxerga_conteudo_novo_sem_reiniciar(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    # O índice do vocabulário é reconstruído quando o conteúdo muda (carga nova de palavras).
+    assert _ask(client, "como se escreve girafa em inglês").json()["found"] is False
+    _seed("Como se escreve 'girafa' em inglês?", "Giraffe", "'girafa' se traduz como 'Giraffe' em inglês.")
+    data = _ask(client, "como se escreve girafa em inglês").json()
+    assert data["found"] is True and data["answer_text"].endswith("'Giraffe' em inglês.")
