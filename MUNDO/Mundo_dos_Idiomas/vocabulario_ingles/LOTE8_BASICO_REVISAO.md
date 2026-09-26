@@ -1,6 +1,6 @@
 # Vocabulário de Inglês — Lote 8 (Básico, 100 palavras) — para revisão de Rhoney
 
-Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote8.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Alternativas erradas conferidas contra dicionário de inglês e de português (nenhuma é palavra real). Carga: `backend/content/vocab_ingles_basico_lote8.json` → `ingles_basico`.
 
 
 ## Esportes
@@ -16,24 +16,24 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - prêmio → **Prize** (erradas: Prie, Prrize, Przie)
 
 ## Materiais
-- ouro → **Gold** (erradas: Ggold, Geld, Gord)
+- ouro → **Gold** (erradas: Ggold, Godl, Gord)
 - prata → **Silver** (erradas: Silvr, Ssilver, Siler)
 - madeira → **Wood** (erradas: Woodd, Woad, Weod)
 - ferro → **Iron** (erradas: Ilon, Irun, Ironn)
-- aço → **Steel** (erradas: Stael, Steul, Steol)
+- aço → **Steel** (erradas: Sdeel, Steul, Steol)
 - algodão → **Cotton** (erradas: Cutton, Cottn, Cottin)
-- couro → **Leather** (erradas: Lather, Leathr, Lether)
+- couro → **Leather** (erradas: Leathre, Leathr, Lether)
 - lã → **Wool** (erradas: Wolo, Wooll, Wuol)
 - seda → **Silk** (erradas: Silkk, Ssilk, Sillk)
 - plástico → **Plastic** (erradas: Plastec, Plustic, Plasttic)
 
 ## Mundo
 - mundo → **World** (erradas: Wworld, Worrld, Worl)
-- bandeira → **Flag** (erradas: Flig, Frag, Flga)
+- bandeira → **Flag** (erradas: Flig, Fflag, Flga)
 - norte → **North** (erradas: Nordh, Norrth, Norht)
 - sul → **South** (erradas: Seuth, Sauth, Souh)
 - leste → **East** (erradas: Eest, Easst, Eastt)
-- oeste → **West** (erradas: Wezt, Wset, Wets)
+- oeste → **West** (erradas: Wezt, Wset, Westt)
 - costa → **Coast** (erradas: Coist, Coasst, Caost)
 - cidadão → **Citizen** (erradas: Ccitizen, Citien, Cidizen)
 - turista → **Tourist** (erradas: Toorist, Tourits, Tourizt)
@@ -41,7 +41,7 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 
 ## Banheiro e cozinha
 - geladeira → **Fridge** (erradas: Fradge, Fridgge, Fridgo)
-- fogão → **Stove** (erradas: Stoev, Steve, Sotve)
+- fogão → **Stove** (erradas: Stoev, Sstove, Sotve)
 - pia → **Sink** (erradas: Sinnk, Sinkk, Ssink)
 - torneira → **Faucet** (erradas: Faucut, Fuucet, Faucot)
 - vaso sanitário → **Toilet** (erradas: Toilut, Toilit, Toile)
@@ -53,23 +53,23 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 
 ## Verbos de cozinha
 - contar números → **Count** (erradas: Conut, Counnt, Ceunt)
-- empilhar → **Stack** (erradas: Stock, Sdack, Steck)
+- empilhar → **Stack** (erradas: Stackk, Sdack, Steck)
 - construir → **Build** (erradas: Buird, Buidl, Bulid)
-- cobrir → **Cover** (erradas: Ccover, Coevr, Cove)
-- misturar → **Mix** (erradas: Mex, Max, Mmix)
-- empacotar → **Pack** (erradas: Pock, Packk, Pacc)
-- derreter → **Melt** (erradas: Mmelt, Malt, Mellt)
+- cobrir → **Cover** (erradas: Ccover, Coevr, Cofer)
+- misturar → **Mix** (erradas: Mex, Mixx, Mmix)
+- empacotar → **Pack** (erradas: Pacck, Packk, Pacc)
+- derreter → **Melt** (erradas: Mmelt, Mlet, Mellt)
 - congelar → **Freeze** (erradas: Ffreeze, Freez, Freze)
 - ferver → **Boil** (erradas: Boul, Buil, Boli)
-- assar → **Bake** (erradas: Bace, Baku, Bako)
+- assar → **Bake** (erradas: Bace, Beke, Bako)
 
 ## Verbos de dinheiro
 - pegar emprestado → **Borrow** (erradas: Berrow, Borroww, Bolrow)
-- emprestar → **Lend** (erradas: Land, Lind, Lned)
+- emprestar → **Lend** (erradas: Llend, Lemd, Lned)
 - gastar → **Spend** (erradas: Sppend, Sepnd, Spedn)
 - desperdiçar → **Waste** (erradas: Wiste, Waset, Weste)
 - convidar → **Invite** (erradas: Invyte, Inivte, Infite)
-- concordar → **Agree** (erradas: Ajree, Agrue, Agre)
+- concordar → **Agree** (erradas: Ajree, Agrue, Argee)
 - recusar → **Refuse** (erradas: Refusi, Refusa, Refuso)
 - prometer → **Promise** (erradas: Promie, Promuse, Promsie)
 - perdoar → **Forgive** (erradas: Forgivu, Forgife, Fogive)
@@ -77,10 +77,10 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 
 ## Aparência e estado
 - feio → **Ugly** (erradas: Ugry, Uglyy, Uglly)
-- bonitinho → **Pretty** (erradas: Petty, Pretdy, Prutty)
-- careca → **Bald** (erradas: Badl, Bold, Baldd)
+- bonitinho → **Pretty** (erradas: Pletty, Pretdy, Prutty)
+- careca → **Bald** (erradas: Badl, Bbald, Baldd)
 - loiro → **Blond** (erradas: Blondd, Blod, Blund)
-- pálido → **Pale** (erradas: Pule, Plae, Palu)
+- pálido → **Pale** (erradas: Ppale, Plae, Palu)
 - sonolento → **Sleepy** (erradas: Sleupy, Sleopy, Slaepy)
 - saudável → **Healthy** (erradas: Helthy, Hhealthy, Healdhy)
 - com fome → **Hungry** (erradas: Hungyr, Hengry, Hongry)
@@ -91,7 +91,7 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - bombeiro → **Firefighter** (erradas: Firrefighter, Firofighter, Firifighter)
 - mecânico → **Mechanic** (erradas: Mechanuc, Machanic, Mechnaic)
 - padeiro → **Baker** (erradas: Bacer, Bakar, Boker)
-- encanador → **Plumber** (erradas: Pplumber, Plumper, Plomber)
+- encanador → **Plumber** (erradas: Pplumber, Plumbber, Plomber)
 - soldado → **Soldier** (erradas: Sildier, Suldier, Seldier)
 - juiz → **Judge** (erradas: Jdge, Juge, Jugde)
 - ladrão → **Thief** (erradas: Thieff, Theif, Thif)
@@ -100,15 +100,15 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - escritor → **Writer** (erradas: Wrriter, Writel, Witer)
 
 ## Partes dos animais
-- bicho pequeno → **Bug** (erradas: Bog, Buj, Bgu)
+- bicho pequeno → **Bug** (erradas: Bugg, Buj, Bgu)
 - minhoca → **Worm** (erradas: Wolm, Wworm, Wurm)
-- asa → **Wing** (erradas: Wang, Winj, Wyng)
+- asa → **Wing** (erradas: Wung, Winj, Wyng)
 - rabo → **Tail** (erradas: Ttail, Taal, Taul)
 - pena de ave → **Feather** (erradas: Feathir, Feadher, Feathher)
 - ninho → **Nest** (erradas: Nset, Nesd, Nesst)
 - chifre → **Horn** (erradas: Hhorn, Holn, Harn)
 - pata → **Paw** (erradas: Piw, Ppaw, Puw)
-- pelo de animal → **Fur** (erradas: Ffur, Fer, Furr)
+- pelo de animal → **Fur** (erradas: Ffur, Fru, Furr)
 - semente → **Seed** (erradas: Sied, Seud, Seet)
 
 ## Fenômenos da natureza
@@ -121,4 +121,4 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - terremoto → **Earthquake** (erradas: Eorthquake, Earthqquake, Earthquaek)
 - vulcão → **Volcano** (erradas: Volcino, Velcano, Volcan)
 - poeira → **Dust** (erradas: Ddust, Dest, Dusst)
-- lama → **Mud** (erradas: Mut, Mad, Mod)
+- lama → **Mud** (erradas: Mut, Mmud, Mudd)

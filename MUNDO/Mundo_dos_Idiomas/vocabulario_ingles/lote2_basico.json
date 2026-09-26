@@ -43,7 +43,7 @@
       "Hhat",
       "Hta",
       "Hat",
-      "Had"
+      "Het"
     ],
     "correct_answer": "Hat",
     "explanation": "'chapéu' se traduz como 'Hat' em inglês.",
@@ -58,9 +58,9 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'casaco' em inglês?",
     "options": [
-      "Cota",
+      "Coit",
       "Ceat",
-      "Coot",
+      "Ccoat",
       "Coat"
     ],
     "correct_answer": "Coat",
@@ -115,7 +115,7 @@
       "Bga",
       "Bagg",
       "Bag",
-      "Beg"
+      "Pag"
     ],
     "correct_answer": "Bag",
     "explanation": "'bolsa' se traduz como 'Bag' em inglês.",
@@ -168,8 +168,8 @@
     "options": [
       "Capp",
       "Cap",
-      "Cab",
-      "Cop"
+      "Cep",
+      "Ccap"
     ],
     "correct_answer": "Cap",
     "explanation": "'boné' se traduz como 'Cap' em inglês.",
@@ -184,10 +184,10 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'caneta' em inglês?",
     "options": [
-      "Pin",
+      "Pon",
       "Pem",
       "Pen",
-      "Pun"
+      "Pne"
     ],
     "correct_answer": "Pen",
     "explanation": "'caneta' se traduz como 'Pen' em inglês.",
@@ -310,10 +310,10 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'chefe' em inglês?",
     "options": [
-      "Bess",
+      "Biss",
       "Boss",
-      "Buss",
-      "Bass"
+      "Bboss",
+      "Bsos"
     ],
     "correct_answer": "Boss",
     "explanation": "'chefe' se traduz como 'Boss' em inglês.",
@@ -331,7 +331,7 @@
       "Tezt",
       "Tset",
       "Test",
-      "Tost"
+      "Tust"
     ],
     "correct_answer": "Test",
     "explanation": "'prova' se traduz como 'Test' em inglês.",
@@ -528,7 +528,7 @@
     "options": [
       "Countri",
       "Country",
-      "County",
+      "Countrry",
       "Counntry"
     ],
     "correct_answer": "Country",
@@ -545,7 +545,7 @@
     "prompt": "Como se escreve 'ônibus' em inglês?",
     "options": [
       "Bbus",
-      "Bis",
+      "Bsu",
       "Bus",
       "Bas"
     ],
@@ -673,7 +673,7 @@
       "Rroad",
       "Road",
       "Roud",
-      "Rood"
+      "Roat"
     ],
     "correct_answer": "Road",
     "explanation": "'estrada' se traduz como 'Road' em inglês.",
@@ -688,7 +688,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'mapa' em inglês?",
     "options": [
-      "Mop",
+      "Mab",
       "Mmap",
       "Map",
       "Mup"
@@ -726,7 +726,7 @@
     "options": [
       "One",
       "Ome",
-      "Onu",
+      "Oni",
       "Ona"
     ],
     "correct_answer": "One",
@@ -761,7 +761,7 @@
     "prompt": "Como se escreve 'cinco' em inglês?",
     "options": [
       "Fave",
-      "Fife",
+      "Fove",
       "Five",
       "Fivu"
     ],
@@ -832,7 +832,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'nove' em inglês?",
     "options": [
-      "Nane",
+      "Nien",
       "Ninne",
       "Nine",
       "Nime"
@@ -850,7 +850,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'dez' em inglês?",
     "options": [
-      "Tun",
+      "Tne",
       "Tten",
       "Tenn",
       "Ten"
@@ -922,8 +922,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'medo' em inglês?",
     "options": [
-      "Fera",
-      "Fiar",
+      "Feir",
+      "Feal",
       "Feur",
       "Fear"
     ],
@@ -1030,7 +1030,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'sonho' em inglês?",
     "options": [
-      "Deram",
+      "Deam",
       "Dream",
       "Dreum",
       "Driam"
@@ -1123,7 +1123,7 @@
       "Bboy",
       "Bey",
       "Boy",
-      "Boi"
+      "Boyy"
     ],
     "correct_answer": "Boy",
     "explanation": "'menino' se traduz como 'Boy' em inglês.",
@@ -1354,9 +1354,9 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'jogo' em inglês?",
     "options": [
-      "Gama",
+      "Gami",
       "Gamu",
-      "Gome",
+      "Gime",
       "Game"
     ],
     "correct_answer": "Game",
@@ -1445,8 +1445,8 @@
     "prompt": "Como se escreve 'ver' em inglês?",
     "options": [
       "See",
-      "Sei",
-      "Soe",
+      "Sie",
+      "Seo",
       "Sae"
     ],
     "correct_answer": "See",
@@ -1519,7 +1519,7 @@
       "Want",
       "Wannt",
       "Wwant",
-      "Wand"
+      "Wantt"
     ],
     "correct_answer": "Want",
     "explanation": "'querer' se traduz como 'Want' em inglês.",
@@ -1553,7 +1553,7 @@
     "prompt": "Como se escreve 'pegar' em inglês?",
     "options": [
       "Taku",
-      "Tike",
+      "Tako",
       "Take",
       "Tace"
     ],
@@ -1624,8 +1624,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'alto' em inglês?",
     "options": [
-      "Tell",
-      "Till",
+      "Tlal",
+      "Talll",
       "Tall",
       "Tarl"
     ],

@@ -1,36 +1,36 @@
 # Vocabulário de Inglês — Lote 10 (Básico, 100 palavras) — para revisão de Rhoney
 
-Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote10.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Alternativas erradas conferidas contra dicionário de inglês e de português (nenhuma é palavra real). Carga: `backend/content/vocab_ingles_basico_lote10.json` → `ingles_basico`.
 
 
 ## Corpo 4
 - estômago → **Stomach** (erradas: Stmach, Stumach, Stomcah)
 - pulmão → **Lung** (erradas: Lunng, Lumg, Leng)
 - músculo → **Muscle** (erradas: Mmuscle, Musle, Musce)
-- garganta → **Throat** (erradas: Throa, Thruat, Threat)
-- queixo → **Chin** (erradas: Chen, Chhin, Chyn)
+- garganta → **Throat** (erradas: Throa, Thruat, Thriat)
+- queixo → **Chin** (erradas: Chon, Chhin, Chyn)
 - bochecha → **Cheek** (erradas: Cheec, Cehek, Chaek)
 - sobrancelha → **Eyebrow** (erradas: Eyeblow, Eeybrow, Eebrow)
-- pulso → **Wrist** (erradas: Wrest, Writs, Wrast)
+- pulso → **Wrist** (erradas: Wrst, Wirst, Wrast)
 - tornozelo → **Ankle** (erradas: Anklu, Akle, Anle)
-- dedo do pé → **Toe** (erradas: Tee, Too, Tae)
+- dedo do pé → **Toe** (erradas: Tue, Ttoe, Tae)
 
 ## Natureza 4
 - galho → **Branch** (erradas: Barnch, Brnach, Brnch)
-- raiz → **Root** (erradas: Roto, Roet, Roott)
-- arbusto → **Bush** (erradas: Bash, Buzh, Bish)
+- raiz → **Root** (erradas: Raot, Roet, Roott)
+- arbusto → **Bush** (erradas: Bsuh, Buzh, Bish)
 - pétala → **Petal** (erradas: Pital, Ppetal, Pteal)
 - penhasco → **Cliff** (erradas: Ciff, Ccliff, Cluff)
-- lagoa → **Pond** (erradas: Ponnd, Pend, Pand)
+- lagoa → **Pond** (erradas: Ponnd, Pondd, Pand)
 - riacho → **Stream** (erradas: Stleam, Streamm, Strream)
-- tronco → **Log** (erradas: Logg, Llog, Lug)
+- tronco → **Log** (erradas: Logg, Llog, Lig)
 - baía → **Bay** (erradas: Bbay, Bai, Biy)
 - cachoeira → **Waterfall** (erradas: Waterfell, Watefall, Wterfall)
 
 ## Cidade 4
 - calçada → **Sidewalk** (erradas: Sidiwalk, Ssidewalk, Sidewark)
 - fonte de praça → **Fountain** (erradas: Fontain, Foentain, Fountaon)
-- estátua → **Statue** (erradas: State, Satue, Stotue)
+- estátua → **Statue** (erradas: Statua, Satue, Stotue)
 - palácio → **Palace** (erradas: Polace, Palake, Paluce)
 - castelo → **Castle** (erradas: Cstle, Csatle, Castlo)
 - correio → **Mail** (erradas: Meil, Miil, Maill)
@@ -49,30 +49,30 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - tocar com a mão → **Touch** (erradas: Toich, Toach, Touc)
 - provar comida → **Taste** (erradas: Tatse, Tastte, Tase)
 - cheirar → **Smell** (erradas: Smill, Ssmell, Smel)
-- sentir → **Feel** (erradas: Fiel, Feal, Fuel)
+- sentir → **Feel** (erradas: Feil, Feal, Feul)
 
 ## Verbos do corpo
-- morder → **Bite** (erradas: Bete, Biti, Bote)
-- mastigar → **Chew** (erradas: Cehw, Chow, Cheww)
+- morder → **Bite** (erradas: Bete, Biti, Bitte)
+- mastigar → **Chew** (erradas: Cehw, Chhew, Cheww)
 - engolir → **Swallow** (erradas: Swillow, Swwallow, Swlalow)
 - bocejar → **Yawn** (erradas: Yiwn, Yown, Yawwn)
 - espirrar → **Sneeze** (erradas: Snueze, Snoeze, Sneeza)
 - varrer → **Sweep** (erradas: Swaep, Sewep, Swiep)
-- amarrar → **Tie** (erradas: Tii, Tae, Tee)
-- pendurar → **Hang** (erradas: Hanj, Hong, Hanng)
+- amarrar → **Tie** (erradas: Tii, Tae, Tei)
+- pendurar → **Hang** (erradas: Hanj, Hamg, Hanng)
 - cavar → **Dig** (erradas: Dag, Dgi, Digg)
 - enxugar → **Wipe** (erradas: Wupe, Wope, Wwipe)
 
 ## Adjetivos 9
-- selvagem → **Wild** (erradas: Widl, Wilt, Wwild)
-- fofo → **Cute** (erradas: Cite, Cuta, Ctue)
+- selvagem → **Wild** (erradas: Widl, Wildd, Wwild)
+- fofo → **Cute** (erradas: Ccute, Cuta, Ctue)
 - morno → **Warm** (erradas: Wwarm, Werm, Wurm)
 - minúsculo → **Tiny** (erradas: Tinyy, Tuny, Tany)
 - enorme → **Huge** (erradas: Hgue, Hugge, Hoge)
 - gigante → **Giant** (erradas: Giannt, Geant, Gient)
 - estreito → **Narrow** (erradas: Nalrow, Narrew, Narrrow)
-- entediado → **Bored** (erradas: Boerd, Bbored, Borde)
-- curioso → **Curious** (erradas: Curiosu, Curios, Curoius)
+- entediado → **Bored** (erradas: Boerd, Bbored, Borid)
+- curioso → **Curious** (erradas: Curiosu, Cuious, Curoius)
 - cuidadoso → **Careful** (erradas: Carefur, Caleful, Craeful)
 
 ## Datas e quantidades
@@ -80,16 +80,16 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - semanal → **Weekly** (erradas: Weekry, Weeklly, Weelky)
 - mensal → **Monthly** (erradas: Mnthly, Monthl, Montthly)
 - século → **Century** (erradas: Centuri, Ccentury, Cantury)
-- idade → **Age** (erradas: Aga, Agu, Ago)
+- idade → **Age** (erradas: Aga, Agu, Aeg)
 - uma vez → **Once** (erradas: Onca, Onco, Ocne)
 - duas vezes → **Twice** (erradas: Twicce, Ttwice, Twoce)
-- par → **Pair** (erradas: Paur, Piir, Pari)
-- casal → **Couple** (erradas: Copule, Coupla, Coople)
+- par → **Pair** (erradas: Paur, Piir, Peir)
+- casal → **Couple** (erradas: Couble, Coupla, Coople)
 - grupo → **Group** (erradas: Groop, Grroup, Griup)
 
 ## Cumprimentos
 - olá → **Hello** (erradas: Hellu, Hella, Herlo)
-- oi → **Hi** (erradas: Ho, Hy, Hhi)
+- oi → **Hi** (erradas: Hu, Hy, Hhi)
 - tchau → **Goodbye** (erradas: Godbye, Ggoodbye, Guodbye)
 - bem-vindo → **Welcome** (erradas: Welcomo, Welcom, Welcone)
 - desculpe → **Sorry** (erradas: Surry, Ssorry, Sorryy)
@@ -97,23 +97,23 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - bem de saúde → **Fine** (erradas: Fyne, Fene, Fime)
 - bem → **Well** (erradas: Werl, Woll, Wwell)
 - perdão → **Pardon** (erradas: Purdon, Pirdon, Paldon)
-- senhor → **Sir** (erradas: Syr, Sri, Sil)
+- senhor → **Sir** (erradas: Syr, Sar, Sil)
 
 ## Ideias
-- regra → **Rule** (erradas: Rale, Rele, Rile)
-- lei → **Law** (erradas: Low, Lew, Lav)
+- regra → **Rule** (erradas: Rula, Rulo, Rulle)
+- lei → **Law** (erradas: Llaw, Luw, Lav)
 - liberdade → **Freedom** (erradas: Ffreedom, Freudom, Fraedom)
 - guerra → **War** (erradas: Wwar, Wor, Wal)
-- vida → **Life** (erradas: Lufe, Lifo, Lief)
+- vida → **Life** (erradas: Lofe, Lifo, Lafe)
 - fato → **Fact** (erradas: Fakt, Fict, Facct)
-- escolha → **Choice** (erradas: Coice, Chice, Cchoice)
+- escolha → **Choice** (erradas: Chioce, Chice, Cchoice)
 - risco → **Risk** (erradas: Riskk, Rask, Risc)
 - sucesso → **Success** (erradas: Succuss, Sukcess, Ssuccess)
 - erro → **Mistake** (erradas: Mstake, Mistuke, Misttake)
 
 ## Objetos 5
 - brinquedo → **Toy** (erradas: Toyy, Ttoy, Tyo)
-- boneca → **Doll** (erradas: Dill, Dolll, Dall)
+- boneca → **Doll** (erradas: Dolr, Dolll, Dall)
 - pipa → **Kite** (erradas: Kyte, Kkite, Kitu)
 - balão de festa → **Balloon** (erradas: Baloon, Balloan, Blaloon)
 - troféu → **Trophy** (erradas: Trrophy, Troph, Torphy)

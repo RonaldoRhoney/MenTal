@@ -22,10 +22,10 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'pera' em inglês?",
     "options": [
-      "Piar",
+      "Paer",
       "Pear",
-      "Peal",
-      "Pera"
+      "Poar",
+      "Ppear"
     ],
     "correct_answer": "Pear",
     "explanation": "'pera' se traduz como 'Pear' em inglês.",
@@ -77,9 +77,9 @@
     "prompt": "Como se escreve 'manga fruta' em inglês?",
     "options": [
       "Mango",
-      "Mago",
+      "Mangu",
       "Mang",
-      "Magno"
+      "Mungo"
     ],
     "correct_answer": "Mango",
     "explanation": "'manga fruta' se traduz como 'Mango' em inglês.",
@@ -150,7 +150,7 @@
     "options": [
       "Sour",
       "Saur",
-      "Suor",
+      "Ssour",
       "Soor"
     ],
     "correct_answer": "Sour",
@@ -348,7 +348,7 @@
     "options": [
       "Wyre",
       "Wier",
-      "Were",
+      "Wwire",
       "Wire"
     ],
     "correct_answer": "Wire",
@@ -439,7 +439,7 @@
       "Hero",
       "Heru",
       "Huro",
-      "Hera"
+      "Helo"
     ],
     "correct_answer": "Hero",
     "explanation": "'herói' se traduz como 'Hero' em inglês.",
@@ -544,7 +544,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'entrar' em inglês?",
     "options": [
-      "Ente",
+      "Entur",
       "Entel",
       "Enter",
       "Enetr"
@@ -598,9 +598,9 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'queimar' em inglês?",
     "options": [
-      "Born",
+      "Buln",
       "Burn",
-      "Barn",
+      "Burnn",
       "Bunr"
     ],
     "correct_answer": "Burn",
@@ -655,7 +655,7 @@
       "Kick",
       "Kikk",
       "Kyck",
-      "Keck"
+      "Kicck"
     ],
     "correct_answer": "Kick",
     "explanation": "'chutar' se traduz como 'Kick' em inglês.",
@@ -689,7 +689,7 @@
     "prompt": "Como se escreve 'abraçar' em inglês?",
     "options": [
       "Heg",
-      "Hog",
+      "Huj",
       "Hug",
       "Hig"
     ],
@@ -870,7 +870,7 @@
     "options": [
       "Grow",
       "Gruw",
-      "Glow",
+      "Ggrow",
       "Grov"
     ],
     "correct_answer": "Grow",
@@ -886,7 +886,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'andar de bicicleta' em inglês?",
     "options": [
-      "Rude",
+      "Ridu",
       "Ride",
       "Rdie",
       "Rride"
@@ -1013,8 +1013,8 @@
     "prompt": "Como se escreve 'plano' em inglês?",
     "options": [
       "Flat",
-      "Frat",
-      "Flatt",
+      "Flad",
+      "Falt",
       "Flet"
     ],
     "correct_answer": "Flat",
@@ -1121,7 +1121,7 @@
     "prompt": "Como se escreve 'verdadeiro' em inglês?",
     "options": [
       "Ttrue",
-      "Troe",
+      "Trae",
       "True",
       "Trua"
     ],
@@ -1139,8 +1139,8 @@
     "prompt": "Como se escreve 'falso' em inglês?",
     "options": [
       "Falsu",
-      "Falso",
-      "Fales",
+      "Falze",
+      "Farse",
       "False"
     ],
     "correct_answer": "False",
@@ -1174,7 +1174,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'sortudo' em inglês?",
     "options": [
-      "Lucy",
+      "Locky",
       "Lucky",
       "Luckyy",
       "Llucky"
@@ -1211,7 +1211,7 @@
     "prompt": "Como se escreve 'certo de algo' em inglês?",
     "options": [
       "Suer",
-      "Sire",
+      "Suro",
       "Suru",
       "Sure"
     ],
@@ -1230,8 +1230,8 @@
     "options": [
       "Same",
       "Smae",
-      "Saem",
-      "Sane"
+      "Sami",
+      "Samo"
     ],
     "correct_answer": "Same",
     "explanation": "'mesmo igual' se traduz como 'Same' em inglês.",

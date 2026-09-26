@@ -132,7 +132,7 @@
     "options": [
       "Canddy",
       "Canyd",
-      "Cindy",
+      "Cendy",
       "Candy"
     ],
     "correct_answer": "Candy",
@@ -203,7 +203,7 @@
     "prompt": "Como se escreve 'prato' em inglês?",
     "options": [
       "Plete",
-      "Prate",
+      "Plat",
       "Pplate",
       "Plate"
     ],
@@ -256,8 +256,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'xícara' em inglês?",
     "options": [
-      "Cip",
-      "Cpu",
+      "Cupp",
+      "Ucp",
       "Cup",
       "Ccup"
     ],
@@ -313,7 +313,7 @@
       "Bruzh",
       "Brush",
       "Bbrush",
-      "Brash"
+      "Brsuh"
     ],
     "correct_answer": "Brush",
     "explanation": "'escova' se traduz como 'Brush' em inglês.",
@@ -761,7 +761,7 @@
     "prompt": "Como se escreve 'quebrar' em inglês?",
     "options": [
       "Brek",
-      "Beak",
+      "Berak",
       "Break",
       "Breuk"
     ],
@@ -798,7 +798,7 @@
     "options": [
       "Push",
       "Pushh",
-      "Posh",
+      "Pash",
       "Ppush"
     ],
     "correct_answer": "Push",
@@ -817,7 +817,7 @@
       "Plul",
       "Pull",
       "Pulr",
-      "Pall"
+      "Pell"
     ],
     "correct_answer": "Pull",
     "explanation": "'puxar' se traduz como 'Pull' em inglês.",
@@ -850,7 +850,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'chamar' em inglês?",
     "options": [
-      "Cull",
+      "Calll",
       "Calr",
       "Coll",
       "Call"
@@ -996,7 +996,7 @@
     "options": [
       "Loes",
       "Losi",
-      "Lise",
+      "Luse",
       "Lose"
     ],
     "correct_answer": "Lose",
@@ -1013,7 +1013,7 @@
     "prompt": "Como se escreve 'ganhar' em inglês?",
     "options": [
       "Win",
-      "Wen",
+      "Winn",
       "Wun",
       "Wni"
     ],
@@ -1121,7 +1121,7 @@
     "prompt": "Como se escreve 'largo' em inglês?",
     "options": [
       "Wude",
-      "Wade",
+      "Wede",
       "Wide",
       "Wido"
     ],
@@ -1210,8 +1210,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'engraçado' em inglês?",
     "options": [
-      "Finny",
-      "Fanny",
+      "Funyn",
+      "Funnny",
       "Fumny",
       "Funny"
     ],
@@ -1229,8 +1229,8 @@
     "prompt": "Como se escreve 'em' em inglês?",
     "options": [
       "In",
-      "Un",
-      "Inn",
+      "Yn",
+      "Ihn",
       "Im"
     ],
     "correct_answer": "In",
@@ -1318,7 +1318,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'mas' em inglês?",
     "options": [
-      "Bud",
+      "Ubt",
       "But",
       "Bbut",
       "Btu"
@@ -1336,8 +1336,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'ou' em inglês?",
     "options": [
-      "Orr",
-      "Er",
+      "Ro",
+      "Ol",
       "Or",
       "Ar"
     ],
@@ -1663,7 +1663,7 @@
       "May",
       "Mayy",
       "Mmay",
-      "Mai"
+      "Miy"
     ],
     "correct_answer": "May",
     "explanation": "'maio' se traduz como 'May' em inglês.",
@@ -1681,7 +1681,7 @@
       "Jume",
       "June",
       "Jjune",
-      "Jane"
+      "Jine"
     ],
     "correct_answer": "June",
     "explanation": "'junho' se traduz como 'June' em inglês.",

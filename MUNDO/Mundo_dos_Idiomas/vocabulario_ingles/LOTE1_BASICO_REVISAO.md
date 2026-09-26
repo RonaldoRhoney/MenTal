@@ -1,6 +1,6 @@
 # Vocabulário de Inglês — Lote 1 (Básico, 100 palavras) — para revisão de Rhoney
 
-Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote1.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Alternativas erradas conferidas contra dicionário de inglês e de português (nenhuma é palavra real). Carga: `backend/content/vocab_ingles_basico_lote1.json` → `ingles_basico`.
 
 
 ## Comida
@@ -8,7 +8,7 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - café → **Coffee** (erradas: Caffee, Cuffee, Cofefe)
 - queijo → **Cheese** (erradas: Cheise, Cheeze, Choese)
 - ovo → **Egg** (erradas: Egj, Ejg, Eggg)
-- arroz → **Rice** (erradas: Rico, Rece, Rrice)
+- arroz → **Rice** (erradas: Ricu, Rece, Rrice)
 - carne → **Meat** (erradas: Muat, Maet, Maat)
 - frango → **Chicken** (erradas: Chiccken, Chicen, Chickn)
 - peixe → **Fish** (erradas: Fash, Ffish, Fihs)
@@ -16,7 +16,7 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - sopa → **Soup** (erradas: Soep, Soub, Soupp)
 
 ## Família
-- filho → **Son** (erradas: Sno, Som, Sson)
+- filho → **Son** (erradas: Sno, Sonn, Sson)
 - filha → **Daughter** (erradas: Daughtar, Ddaughter, Daaghter)
 - avó → **Grandmother** (erradas: Grandmotehr, Grendmother, Grandmothur)
 - avô → **Grandfather** (erradas: Grandfither, Grandfatther, Grandfathe)
@@ -33,11 +33,11 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - pé → **Foot** (erradas: Foit, Ffoot, Fout)
 - olho → **Eye** (erradas: Eyi, Eie, Eey)
 - boca → **Mouth** (erradas: Motuh, Moutth, Mouh)
-- nariz → **Nose** (erradas: Noes, Noze, Nise)
+- nariz → **Nose** (erradas: Nosa, Noze, Nise)
 - orelha → **Ear** (erradas: Eor, Eer, Eal)
 - braço → **Arm** (erradas: Arn, Armm, Alm)
 - perna → **Leg** (erradas: Legg, Lig, Lleg)
-- cabelo → **Hair** (erradas: Haer, Hhair, Heir)
+- cabelo → **Hair** (erradas: Haer, Hhair, Huir)
 
 ## Cores
 - verde → **Green** (erradas: Ggreen, Grene, Grein)
@@ -49,15 +49,15 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - marrom → **Brown** (erradas: Bbrown, Bronw, Borwn)
 - cinza → **Gray** (erradas: Grayy, Glay, Grray)
 - roxo → **Purple** (erradas: Purpe, Purplo, Puprle)
-- cor → **Color** (erradas: Cloor, Colr, Collor)
+- cor → **Color** (erradas: Cloor, Colr, Colur)
 
 ## Animais
 - cavalo → **Horse** (erradas: Herse, Harse, Horsse)
-- vaca → **Cow** (erradas: Caw, Ciw, Cwo)
+- vaca → **Cow** (erradas: Cew, Ciw, Cwo)
 - porco → **Pig** (erradas: Pigg, Pag, Pog)
-- pássaro → **Bird** (erradas: Bild, Bidr, Byrd)
+- pássaro → **Bird** (erradas: Bild, Bidr, Bbird)
 - coelho → **Rabbit** (erradas: Rabbbit, Rabit, Rubbit)
-- leão → **Lion** (erradas: Leon, Liun, Liom)
+- leão → **Lion** (erradas: Lian, Liun, Liom)
 - macaco → **Monkey** (erradas: Mnokey, Mmonkey, Monkeyy)
 - elefante → **Elephant** (erradas: Elepahnt, Elphant, Elephatn)
 - cobra → **Snake** (erradas: Smake, Snaek, Snaku)
@@ -73,14 +73,14 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - relógio → **Clock** (erradas: Clck, Cllock, Clok)
 - copo → **Glass** (erradas: Gglass, Gless, Gluss)
 - faca → **Knife** (erradas: Knofe, Knie, Kknife)
-- sofá → **Sofa** (erradas: Safa, Sfoa, Sofe)
+- sofá → **Sofa** (erradas: Sefa, Sfoa, Sofe)
 
 ## Tempo
 - ano → **Year** (erradas: Yera, Yearr, Yeer)
-- mês → **Month** (erradas: Mondh, Mnoth, Moth)
+- mês → **Month** (erradas: Mondh, Mnoth, Monnth)
 - semana → **Week** (erradas: Weec, Wuek, Weekk)
-- dia → **Day** (erradas: Dai, Duy, Dey)
-- noite → **Night** (erradas: Nighd, Nigh, Nigght)
+- dia → **Day** (erradas: Diy, Duy, Dey)
+- noite → **Night** (erradas: Nighd, Nght, Nigght)
 - manhã → **Morning** (erradas: Mornimg, Mornong, Moring)
 - tarde → **Afternoon** (erradas: Afdernoon, Afternoonn, Aftternoon)
 - ontem → **Yesterday** (erradas: Yseterday, Yestertay, Yesterrday)
@@ -88,32 +88,32 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - hora → **Hour** (erradas: Hourr, Hiur, Houl)
 
 ## Natureza
-- sol → **Sun** (erradas: Ssun, Sum, San)
-- lua → **Moon** (erradas: Moan, Moin, Meon)
-- estrela → **Star** (erradas: Starr, Stra, Sttar)
-- árvore → **Tree** (erradas: Troe, Tlee, Trea)
+- sol → **Sun** (erradas: Ssun, Zun, Snu)
+- lua → **Moon** (erradas: Moen, Moin, Meon)
+- estrela → **Star** (erradas: Sdar, Stra, Sttar)
+- árvore → **Tree** (erradas: Tere, Tlee, Trea)
 - flor → **Flower** (erradas: Flowel, Flover, Flwoer)
 - rio → **River** (erradas: Rver, Ryver, Rivar)
-- mar → **Sea** (erradas: Sua, Soa, Sae)
+- mar → **Sea** (erradas: Saa, Seo, Sae)
 - montanha → **Mountain** (erradas: Muuntain, Moundain, Mountein)
-- céu → **Sky** (erradas: Ski, Scy, Skky)
+- céu → **Sky** (erradas: Skyy, Scy, Skky)
 - vento → **Wind** (erradas: Wond, Wynd, Wimd)
 
 ## Verbos do dia a dia
-- comer → **Eat** (erradas: Eta, Eit, Ead)
-- beber → **Drink** (erradas: Dlink, Drinnk, Dink)
+- comer → **Eat** (erradas: Eet, Eit, Ead)
+- beber → **Drink** (erradas: Dlink, Drinnk, Drin)
 - dormir → **Sleep** (erradas: Slaep, Sleeb, Sreep)
 - andar → **Walk** (erradas: Wakl, Wulk, Wark)
-- correr → **Run** (erradas: Rin, Ren, Ron)
+- correr → **Run** (erradas: Rin, Ren, Runn)
 - falar → **Speak** (erradas: Speka, Speek, Spak)
-- escrever → **Write** (erradas: Wlite, Wrute, Writ)
+- escrever → **Write** (erradas: Wlite, Wrute, Writu)
 - abrir → **Open** (erradas: Oppen, Opun, Openn)
 - fechar → **Close** (erradas: Cclose, Clese, Closa)
 - comprar → **Buy** (erradas: Bui, Bbuy, Buyy)
 
 ## Adjetivos comuns
-- bom → **Good** (erradas: Goad, Goud, Goodd)
-- ruim → **Bad** (erradas: Bda, Bat, Bod)
+- bom → **Good** (erradas: Ggood, Goud, Goodd)
+- ruim → **Bad** (erradas: Bda, Bbad, Bod)
 - novo → **New** (erradas: Nuw, Neww, Niw)
 - velho → **Old** (erradas: Olld, Oldd, Olt)
 - quente → **Hot** (erradas: Het, Hott, Hhot)

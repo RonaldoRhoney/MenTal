@@ -77,7 +77,7 @@
     "prompt": "Como se escreve 'arroz' em inglês?",
     "options": [
       "Rice",
-      "Rico",
+      "Ricu",
       "Rece",
       "Rrice"
     ],
@@ -185,7 +185,7 @@
     "prompt": "Como se escreve 'filho' em inglês?",
     "options": [
       "Sno",
-      "Som",
+      "Sonn",
       "Son",
       "Sson"
     ],
@@ -454,7 +454,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'nariz' em inglês?",
     "options": [
-      "Noes",
+      "Nosa",
       "Nose",
       "Noze",
       "Nise"
@@ -529,7 +529,7 @@
       "Haer",
       "Hair",
       "Hhair",
-      "Heir"
+      "Huir"
     ],
     "correct_answer": "Hair",
     "explanation": "'cabelo' se traduz como 'Hair' em inglês.",
@@ -708,7 +708,7 @@
     "options": [
       "Cloor",
       "Colr",
-      "Collor",
+      "Colur",
       "Color"
     ],
     "correct_answer": "Color",
@@ -742,7 +742,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'vaca' em inglês?",
     "options": [
-      "Caw",
+      "Cew",
       "Cow",
       "Ciw",
       "Cwo"
@@ -780,7 +780,7 @@
     "options": [
       "Bild",
       "Bidr",
-      "Byrd",
+      "Bbird",
       "Bird"
     ],
     "correct_answer": "Bird",
@@ -814,7 +814,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'leão' em inglês?",
     "options": [
-      "Leon",
+      "Lian",
       "Lion",
       "Liun",
       "Liom"
@@ -1066,7 +1066,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'sofá' em inglês?",
     "options": [
-      "Safa",
+      "Sefa",
       "Sfoa",
       "Sofe",
       "Sofa"
@@ -1105,7 +1105,7 @@
       "Mondh",
       "Month",
       "Mnoth",
-      "Moth"
+      "Monnth"
     ],
     "correct_answer": "Month",
     "explanation": "'mês' se traduz como 'Month' em inglês.",
@@ -1138,7 +1138,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'dia' em inglês?",
     "options": [
-      "Dai",
+      "Diy",
       "Duy",
       "Dey",
       "Day"
@@ -1158,7 +1158,7 @@
     "options": [
       "Night",
       "Nighd",
-      "Nigh",
+      "Nght",
       "Nigght"
     ],
     "correct_answer": "Night",
@@ -1265,9 +1265,9 @@
     "prompt": "Como se escreve 'sol' em inglês?",
     "options": [
       "Ssun",
-      "Sum",
+      "Zun",
       "Sun",
-      "San"
+      "Snu"
     ],
     "correct_answer": "Sun",
     "explanation": "'sol' se traduz como 'Sun' em inglês.",
@@ -1282,7 +1282,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'lua' em inglês?",
     "options": [
-      "Moan",
+      "Moen",
       "Moin",
       "Meon",
       "Moon"
@@ -1301,7 +1301,7 @@
     "prompt": "Como se escreve 'estrela' em inglês?",
     "options": [
       "Star",
-      "Starr",
+      "Sdar",
       "Stra",
       "Sttar"
     ],
@@ -1318,7 +1318,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'árvore' em inglês?",
     "options": [
-      "Troe",
+      "Tere",
       "Tree",
       "Tlee",
       "Trea"
@@ -1373,8 +1373,8 @@
     "prompt": "Como se escreve 'mar' em inglês?",
     "options": [
       "Sea",
-      "Sua",
-      "Soa",
+      "Saa",
+      "Seo",
       "Sae"
     ],
     "correct_answer": "Sea",
@@ -1408,7 +1408,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'céu' em inglês?",
     "options": [
-      "Ski",
+      "Skyy",
       "Scy",
       "Sky",
       "Skky"
@@ -1445,7 +1445,7 @@
     "prompt": "Como se escreve 'comer' em inglês?",
     "options": [
       "Eat",
-      "Eta",
+      "Eet",
       "Eit",
       "Ead"
     ],
@@ -1465,7 +1465,7 @@
       "Dlink",
       "Drink",
       "Drinnk",
-      "Dink"
+      "Drin"
     ],
     "correct_answer": "Drink",
     "explanation": "'beber' se traduz como 'Drink' em inglês.",
@@ -1519,7 +1519,7 @@
       "Run",
       "Rin",
       "Ren",
-      "Ron"
+      "Runn"
     ],
     "correct_answer": "Run",
     "explanation": "'correr' se traduz como 'Run' em inglês.",
@@ -1555,7 +1555,7 @@
       "Wlite",
       "Wrute",
       "Write",
-      "Writ"
+      "Writu"
     ],
     "correct_answer": "Write",
     "explanation": "'escrever' se traduz como 'Write' em inglês.",
@@ -1624,7 +1624,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'bom' em inglês?",
     "options": [
-      "Goad",
+      "Ggood",
       "Goud",
       "Good",
       "Goodd"
@@ -1643,7 +1643,7 @@
     "prompt": "Como se escreve 'ruim' em inglês?",
     "options": [
       "Bda",
-      "Bat",
+      "Bbad",
       "Bod",
       "Bad"
     ],

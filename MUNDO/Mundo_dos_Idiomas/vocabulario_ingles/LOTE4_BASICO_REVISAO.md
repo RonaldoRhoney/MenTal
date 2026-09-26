@@ -1,6 +1,6 @@
 # Vocabulário de Inglês — Lote 4 (Básico, 100 palavras) — para revisão de Rhoney
 
-Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote4.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Alternativas erradas conferidas contra dicionário de inglês e de português (nenhuma é palavra real). Carga: `backend/content/vocab_ingles_basico_lote4.json` → `ingles_basico`.
 
 
 ## Comida 3
@@ -11,19 +11,19 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - cenoura → **Carrot** (erradas: Carot, Carlot, Carrott)
 - alface → **Lettuce** (erradas: Lettue, Lettuke, Littuce)
 - biscoito → **Cookie** (erradas: Cookio, Cooike, Ciokie)
-- bala → **Candy** (erradas: Canddy, Canyd, Cindy)
+- bala → **Candy** (erradas: Canddy, Canyd, Cendy)
 - cebola → **Onion** (erradas: Onoon, Onio, Onionn)
 - alho → **Garlic** (erradas: Gralic, Galric, Ggarlic)
 
 ## Utensílios da casa
 - garrafa → **Bottle** (erradas: Bettle, Bodtle, Bttle)
-- prato → **Plate** (erradas: Plete, Prate, Pplate)
+- prato → **Plate** (erradas: Plete, Plat, Pplate)
 - colher → **Spoon** (erradas: Spion, Sppoon, Spoom)
 - garfo → **Fork** (erradas: Fokr, Forrk, Furk)
-- xícara → **Cup** (erradas: Cip, Cpu, Ccup)
+- xícara → **Cup** (erradas: Cupp, Ucp, Ccup)
 - toalha → **Towel** (erradas: Towwel, Towil, Towul)
 - sabão → **Soap** (erradas: Soep, Soip, Siap)
-- escova → **Brush** (erradas: Bruzh, Bbrush, Brash)
+- escova → **Brush** (erradas: Bruzh, Bbrush, Brsuh)
 - guarda-chuva → **Umbrella** (erradas: Ubmrella, Umbrulla, Umbrela)
 - vela → **Candle** (erradas: Candlle, Candel, Candlo)
 
@@ -54,12 +54,12 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 ## Verbos do dia a dia 4
 - lavar → **Wash** (erradas: Wassh, Wsah, Wwash)
 - cortar → **Cut** (erradas: Ctu, Cutt, Ccut)
-- quebrar → **Break** (erradas: Brek, Beak, Breuk)
+- quebrar → **Break** (erradas: Brek, Berak, Breuk)
 - carregar → **Carry** (erradas: Carrry, Ccarry, Corry)
-- empurrar → **Push** (erradas: Pushh, Posh, Ppush)
-- puxar → **Pull** (erradas: Plul, Pulr, Pall)
+- empurrar → **Push** (erradas: Pushh, Pash, Ppush)
+- puxar → **Pull** (erradas: Plul, Pulr, Pell)
 - arremessar → **Throw** (erradas: Thrw, Thro, Throv)
-- chamar → **Call** (erradas: Cull, Calr, Coll)
+- chamar → **Call** (erradas: Calll, Calr, Coll)
 - perguntar → **Ask** (erradas: Aks, Asc, Askk)
 - pagar → **Pay** (erradas: Pey, Ppay, Poy)
 
@@ -69,8 +69,8 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - escutar → **Listen** (erradas: Lsiten, Lsten, Liten)
 - olhar → **Look** (erradas: Llook, Liok, Loko)
 - encontrar → **Find** (erradas: Fnid, Findd, Ffind)
-- perder → **Lose** (erradas: Loes, Losi, Lise)
-- ganhar → **Win** (erradas: Wen, Wun, Wni)
+- perder → **Lose** (erradas: Loes, Losi, Luse)
+- ganhar → **Win** (erradas: Winn, Wun, Wni)
 - enviar → **Send** (erradas: Sond, Sind, Semd)
 
 ## Adjetivos e opostos 3
@@ -78,21 +78,21 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - gentil → **Kind** (erradas: Kynd, Kond, Kkind)
 - legal → **Nice** (erradas: Nnice, Nici, Noce)
 - vazio → **Empty** (erradas: Emptyy, Emty, Emptty)
-- largo → **Wide** (erradas: Wude, Wade, Wido)
+- largo → **Wide** (erradas: Wude, Wede, Wido)
 - fundo → **Deep** (erradas: Diep, Deip, Deup)
 - seguro → **Safe** (erradas: Sefe, Safu, Sufe)
 - livre → **Free** (erradas: Freo, Ffree, Freu)
 - perigoso → **Dangerous** (erradas: Dangurous, Dangeroos, Dagerous)
-- engraçado → **Funny** (erradas: Finny, Fanny, Fumny)
+- engraçado → **Funny** (erradas: Funyn, Funnny, Fumny)
 
 ## Palavras pequenas
-- em → **In** (erradas: Un, Inn, Im)
+- em → **In** (erradas: Yn, Ihn, Im)
 - sobre → **On** (erradas: En, Om, Onn)
 - embaixo → **Under** (erradas: Unedr, Unnder, Unde)
 - com → **With** (erradas: Woth, Wiht, Wuth)
 - sem → **Without** (erradas: Wthout, Withuut, Wethout)
-- mas → **But** (erradas: Bud, Bbut, Btu)
-- ou → **Or** (erradas: Orr, Er, Ar)
+- mas → **But** (erradas: Ubt, Bbut, Btu)
+- ou → **Or** (erradas: Ro, Ol, Ar)
 - entre → **Between** (erradas: Betwuen, Betwween, Beween)
 - atrás → **Behind** (erradas: Beind, Behhind, Beihnd)
 - acima → **Above** (erradas: Aboe, Abovve, Abive)
@@ -114,8 +114,8 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - fevereiro → **February** (erradas: Febluary, Febrary, Feruary)
 - março → **March** (erradas: Malch, Merch, Macrh)
 - abril → **April** (erradas: Apral, Aprli, Appril)
-- maio → **May** (erradas: Mayy, Mmay, Mai)
-- junho → **June** (erradas: Jume, Jjune, Jane)
+- maio → **May** (erradas: Mayy, Mmay, Miy)
+- junho → **June** (erradas: Jume, Jjune, Jine)
 - julho → **July** (erradas: Jaly, Juli, Jully)
 - agosto → **August** (erradas: Auguts, Auguzt, Aigust)
 - setembro → **September** (erradas: Septmber, Septembr, Septembur)

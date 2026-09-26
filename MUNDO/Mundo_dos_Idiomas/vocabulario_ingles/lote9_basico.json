@@ -6,7 +6,7 @@
     "options": [
       "Bath",
       "Bathh",
-      "Beth",
+      "Btah",
       "Badh"
     ],
     "correct_answer": "Bath",
@@ -24,7 +24,7 @@
     "options": [
       "Napp",
       "Nap",
-      "Nip",
+      "Nup",
       "Nop"
     ],
     "correct_answer": "Nap",
@@ -256,8 +256,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'arquivo' em inglês?",
     "options": [
-      "Filo",
-      "Fiel",
+      "Fule",
+      "Flie",
       "File",
       "Ffile"
     ],
@@ -438,8 +438,8 @@
     "options": [
       "Miss",
       "Msis",
-      "Muss",
-      "Mess"
+      "Misss",
+      "Mmiss"
     ],
     "correct_answer": "Miss",
     "explanation": "'sentir falta' se traduz como 'Miss' em inglês.",
@@ -636,7 +636,7 @@
     "options": [
       "Guidu",
       "Gguide",
-      "Gide",
+      "Guede",
       "Guide"
     ],
     "correct_answer": "Guide",
@@ -888,7 +888,7 @@
     "options": [
       "Solly",
       "Silly",
-      "Slily",
+      "Sillly",
       "Silli"
     ],
     "correct_answer": "Silly",
@@ -905,7 +905,7 @@
     "prompt": "Como se escreve 'algum' em inglês?",
     "options": [
       "Ssome",
-      "Soem",
+      "Somu",
       "Some",
       "Sone"
     ],
@@ -924,7 +924,7 @@
     "options": [
       "Ayn",
       "Anyy",
-      "Ani",
+      "Anny",
       "Any"
     ],
     "correct_answer": "Any",
@@ -960,7 +960,7 @@
     "options": [
       "Mukh",
       "Much",
-      "Mach",
+      "Muchh",
       "Muhc"
     ],
     "correct_answer": "Much",
@@ -1013,9 +1013,9 @@
     "prompt": "Como se escreve 'mais' em inglês?",
     "options": [
       "More",
-      "Mare",
-      "Morre",
-      "Mure"
+      "Moru",
+      "Mmore",
+      "Mori"
     ],
     "correct_answer": "More",
     "explanation": "'mais' se traduz como 'More' em inglês.",
@@ -1032,7 +1032,7 @@
     "options": [
       "Lesz",
       "Less",
-      "Lass",
+      "Lless",
       "Lesss"
     ],
     "correct_answer": "Less",
@@ -1105,7 +1105,7 @@
       "Thot",
       "That",
       "Taht",
-      "Thad"
+      "Thhat"
     ],
     "correct_answer": "That",
     "explanation": "'aquele' se traduz como 'That' em inglês.",
@@ -1120,8 +1120,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'estes' em inglês?",
     "options": [
-      "Thees",
-      "Tese",
+      "Thesi",
+      "Thsee",
       "These",
       "Theso"
     ],
@@ -1193,7 +1193,7 @@
     "prompt": "Como se escreve 'nós' em inglês?",
     "options": [
       "Wwe",
-      "Wi",
+      "Ew",
       "We",
       "Wo"
     ],
@@ -1230,7 +1230,7 @@
     "options": [
       "It",
       "Itt",
-      "Ut",
+      "Yt",
       "Ot"
     ],
     "correct_answer": "It",
@@ -1264,7 +1264,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'para alguém' em inglês?",
     "options": [
-      "Fir",
+      "Forr",
       "Fol",
       "For",
       "Ffor"
@@ -1283,7 +1283,7 @@
     "prompt": "Como se escreve 'vindo de' em inglês?",
     "options": [
       "Frim",
-      "Fromm",
+      "Fram",
       "Fron",
       "From"
     ],
@@ -1302,7 +1302,7 @@
     "options": [
       "Into",
       "Itno",
-      "Indo",
+      "Innto",
       "Imto"
     ],
     "correct_answer": "Into",
@@ -1409,7 +1409,7 @@
     "prompt": "Como se escreve 'se condicional' em inglês?",
     "options": [
       "Uf",
-      "Iv",
+      "Yf",
       "If",
       "Fi"
     ],
@@ -1534,10 +1534,10 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'presunto' em inglês?",
     "options": [
-      "Han",
+      "Hham",
       "Ham",
       "Hom",
-      "Hem"
+      "Hamm"
     ],
     "correct_answer": "Ham",
     "explanation": "'presunto' se traduz como 'Ham' em inglês.",
@@ -1591,7 +1591,7 @@
       "Pie",
       "Pae",
       "Piu",
-      "Poe"
+      "Pye"
     ],
     "correct_answer": "Pie",
     "explanation": "'torta' se traduz como 'Pie' em inglês.",
@@ -1644,7 +1644,7 @@
     "options": [
       "Joi",
       "Jjoy",
-      "Jay",
+      "Jey",
       "Joy"
     ],
     "correct_answer": "Joy",
@@ -1662,7 +1662,7 @@
     "options": [
       "Pride",
       "Prido",
-      "Pried",
+      "Pridu",
       "Prie"
     ],
     "correct_answer": "Pride",
@@ -1680,7 +1680,7 @@
     "options": [
       "Shamu",
       "Shame",
-      "Shane",
+      "Shama",
       "Sshame"
     ],
     "correct_answer": "Shame",
@@ -1714,9 +1714,9 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'diversão' em inglês?",
     "options": [
-      "Fen",
+      "Fnu",
       "Fon",
-      "Fin",
+      "Ffun",
       "Fun"
     ],
     "correct_answer": "Fun",

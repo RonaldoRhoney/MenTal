@@ -185,7 +185,7 @@
     "prompt": "Como se escreve 'ouro' em inglês?",
     "options": [
       "Ggold",
-      "Geld",
+      "Godl",
       "Gold",
       "Gord"
     ],
@@ -256,7 +256,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'aço' em inglês?",
     "options": [
-      "Stael",
+      "Sdeel",
       "Steul",
       "Steel",
       "Steol"
@@ -293,7 +293,7 @@
     "prompt": "Como se escreve 'couro' em inglês?",
     "options": [
       "Leather",
-      "Lather",
+      "Leathre",
       "Leathr",
       "Lether"
     ],
@@ -384,7 +384,7 @@
     "options": [
       "Flig",
       "Flag",
-      "Frag",
+      "Fflag",
       "Flga"
     ],
     "correct_answer": "Flag",
@@ -457,7 +457,7 @@
       "Wezt",
       "West",
       "Wset",
-      "Wets"
+      "Westt"
     ],
     "correct_answer": "West",
     "explanation": "'oeste' se traduz como 'West' em inglês.",
@@ -563,7 +563,7 @@
     "prompt": "Como se escreve 'fogão' em inglês?",
     "options": [
       "Stoev",
-      "Steve",
+      "Sstove",
       "Sotve",
       "Stove"
     ],
@@ -742,7 +742,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'empilhar' em inglês?",
     "options": [
-      "Stock",
+      "Stackk",
       "Stack",
       "Sdack",
       "Steck"
@@ -780,7 +780,7 @@
     "options": [
       "Ccover",
       "Coevr",
-      "Cove",
+      "Cofer",
       "Cover"
     ],
     "correct_answer": "Cover",
@@ -798,7 +798,7 @@
     "options": [
       "Mix",
       "Mex",
-      "Max",
+      "Mixx",
       "Mmix"
     ],
     "correct_answer": "Mix",
@@ -814,7 +814,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'empacotar' em inglês?",
     "options": [
-      "Pock",
+      "Pacck",
       "Pack",
       "Packk",
       "Pacc"
@@ -833,7 +833,7 @@
     "prompt": "Como se escreve 'derreter' em inglês?",
     "options": [
       "Mmelt",
-      "Malt",
+      "Mlet",
       "Melt",
       "Mellt"
     ],
@@ -888,7 +888,7 @@
     "options": [
       "Bace",
       "Bake",
-      "Baku",
+      "Beke",
       "Bako"
     ],
     "correct_answer": "Bake",
@@ -922,8 +922,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'emprestar' em inglês?",
     "options": [
-      "Land",
-      "Lind",
+      "Llend",
+      "Lemd",
       "Lned",
       "Lend"
     ],
@@ -996,7 +996,7 @@
     "options": [
       "Ajree",
       "Agrue",
-      "Agre",
+      "Argee",
       "Agree"
     ],
     "correct_answer": "Agree",
@@ -1102,7 +1102,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'bonitinho' em inglês?",
     "options": [
-      "Petty",
+      "Pletty",
       "Pretty",
       "Pretdy",
       "Prutty"
@@ -1121,7 +1121,7 @@
     "prompt": "Como se escreve 'careca' em inglês?",
     "options": [
       "Badl",
-      "Bold",
+      "Bbald",
       "Bald",
       "Baldd"
     ],
@@ -1157,7 +1157,7 @@
     "prompt": "Como se escreve 'pálido' em inglês?",
     "options": [
       "Pale",
-      "Pule",
+      "Ppale",
       "Plae",
       "Palu"
     ],
@@ -1320,7 +1320,7 @@
     "options": [
       "Pplumber",
       "Plumber",
-      "Plumper",
+      "Plumbber",
       "Plomber"
     ],
     "correct_answer": "Plumber",
@@ -1445,7 +1445,7 @@
     "prompt": "Como se escreve 'bicho pequeno' em inglês?",
     "options": [
       "Bug",
-      "Bog",
+      "Bugg",
       "Buj",
       "Bgu"
     ],
@@ -1480,7 +1480,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'asa' em inglês?",
     "options": [
-      "Wang",
+      "Wung",
       "Winj",
       "Wing",
       "Wyng"
@@ -1590,7 +1590,7 @@
     "options": [
       "Fur",
       "Ffur",
-      "Fer",
+      "Fru",
       "Furr"
     ],
     "correct_answer": "Fur",
@@ -1787,8 +1787,8 @@
     "prompt": "Como se escreve 'lama' em inglês?",
     "options": [
       "Mut",
-      "Mad",
-      "Mod",
+      "Mmud",
+      "Mudd",
       "Mud"
     ],
     "correct_answer": "Mud",

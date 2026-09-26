@@ -60,7 +60,7 @@
     "options": [
       "Throa",
       "Thruat",
-      "Threat",
+      "Thriat",
       "Throat"
     ],
     "correct_answer": "Throat",
@@ -77,7 +77,7 @@
     "prompt": "Como se escreve 'queixo' em inglês?",
     "options": [
       "Chin",
-      "Chen",
+      "Chon",
       "Chhin",
       "Chyn"
     ],
@@ -130,8 +130,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'pulso' em inglês?",
     "options": [
-      "Wrest",
-      "Writs",
+      "Wrst",
+      "Wirst",
       "Wrast",
       "Wrist"
     ],
@@ -166,9 +166,9 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'dedo do pé' em inglês?",
     "options": [
-      "Tee",
+      "Tue",
       "Toe",
-      "Too",
+      "Ttoe",
       "Tae"
     ],
     "correct_answer": "Toe",
@@ -202,7 +202,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'raiz' em inglês?",
     "options": [
-      "Roto",
+      "Raot",
       "Roet",
       "Roott",
       "Root"
@@ -221,7 +221,7 @@
     "prompt": "Como se escreve 'arbusto' em inglês?",
     "options": [
       "Bush",
-      "Bash",
+      "Bsuh",
       "Buzh",
       "Bish"
     ],
@@ -275,7 +275,7 @@
     "prompt": "Como se escreve 'lagoa' em inglês?",
     "options": [
       "Ponnd",
-      "Pend",
+      "Pondd",
       "Pand",
       "Pond"
     ],
@@ -313,7 +313,7 @@
       "Logg",
       "Log",
       "Llog",
-      "Lug"
+      "Lig"
     ],
     "correct_answer": "Log",
     "explanation": "'tronco' se traduz como 'Log' em inglês.",
@@ -400,7 +400,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'estátua' em inglês?",
     "options": [
-      "State",
+      "Statua",
       "Satue",
       "Statue",
       "Stotue"
@@ -706,9 +706,9 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'sentir' em inglês?",
     "options": [
-      "Fiel",
+      "Feil",
       "Feal",
-      "Fuel",
+      "Feul",
       "Feel"
     ],
     "correct_answer": "Feel",
@@ -727,7 +727,7 @@
       "Bite",
       "Bete",
       "Biti",
-      "Bote"
+      "Bitte"
     ],
     "correct_answer": "Bite",
     "explanation": "'morder' se traduz como 'Bite' em inglês.",
@@ -744,7 +744,7 @@
     "options": [
       "Cehw",
       "Chew",
-      "Chow",
+      "Chhew",
       "Cheww"
     ],
     "correct_answer": "Chew",
@@ -835,7 +835,7 @@
       "Tii",
       "Tae",
       "Tie",
-      "Tee"
+      "Tei"
     ],
     "correct_answer": "Tie",
     "explanation": "'amarrar' se traduz como 'Tie' em inglês.",
@@ -851,7 +851,7 @@
     "prompt": "Como se escreve 'pendurar' em inglês?",
     "options": [
       "Hanj",
-      "Hong",
+      "Hamg",
       "Hanng",
       "Hang"
     ],
@@ -905,7 +905,7 @@
     "prompt": "Como se escreve 'selvagem' em inglês?",
     "options": [
       "Widl",
-      "Wilt",
+      "Wildd",
       "Wild",
       "Wwild"
     ],
@@ -922,7 +922,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'fofo' em inglês?",
     "options": [
-      "Cite",
+      "Ccute",
       "Cuta",
       "Ctue",
       "Cute"
@@ -1033,7 +1033,7 @@
       "Boerd",
       "Bored",
       "Bbored",
-      "Borde"
+      "Borid"
     ],
     "correct_answer": "Bored",
     "explanation": "'entediado' se traduz como 'Bored' em inglês.",
@@ -1049,7 +1049,7 @@
     "prompt": "Como se escreve 'curioso' em inglês?",
     "options": [
       "Curiosu",
-      "Curios",
+      "Cuious",
       "Curious",
       "Curoius"
     ],
@@ -1159,7 +1159,7 @@
       "Age",
       "Aga",
       "Agu",
-      "Ago"
+      "Aeg"
     ],
     "correct_answer": "Age",
     "explanation": "'idade' se traduz como 'Age' em inglês.",
@@ -1212,7 +1212,7 @@
     "options": [
       "Paur",
       "Piir",
-      "Pari",
+      "Peir",
       "Pair"
     ],
     "correct_answer": "Pair",
@@ -1229,7 +1229,7 @@
     "prompt": "Como se escreve 'casal' em inglês?",
     "options": [
       "Couple",
-      "Copule",
+      "Couble",
       "Coupla",
       "Coople"
     ],
@@ -1282,7 +1282,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'oi' em inglês?",
     "options": [
-      "Ho",
+      "Hu",
       "Hy",
       "Hhi",
       "Hi"
@@ -1427,7 +1427,7 @@
     "prompt": "Como se escreve 'senhor' em inglês?",
     "options": [
       "Syr",
-      "Sri",
+      "Sar",
       "Sil",
       "Sir"
     ],
@@ -1445,9 +1445,9 @@
     "prompt": "Como se escreve 'regra' em inglês?",
     "options": [
       "Rule",
-      "Rale",
-      "Rele",
-      "Rile"
+      "Rula",
+      "Rulo",
+      "Rulle"
     ],
     "correct_answer": "Rule",
     "explanation": "'regra' se traduz como 'Rule' em inglês.",
@@ -1462,9 +1462,9 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'lei' em inglês?",
     "options": [
-      "Low",
+      "Llaw",
       "Law",
-      "Lew",
+      "Luw",
       "Lav"
     ],
     "correct_answer": "Law",
@@ -1517,9 +1517,9 @@
     "prompt": "Como se escreve 'vida' em inglês?",
     "options": [
       "Life",
-      "Lufe",
+      "Lofe",
       "Lifo",
-      "Lief"
+      "Lafe"
     ],
     "correct_answer": "Life",
     "explanation": "'vida' se traduz como 'Life' em inglês.",
@@ -1552,7 +1552,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'escolha' em inglês?",
     "options": [
-      "Coice",
+      "Chioce",
       "Chice",
       "Choice",
       "Cchoice"
@@ -1642,7 +1642,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'boneca' em inglês?",
     "options": [
-      "Dill",
+      "Dolr",
       "Dolll",
       "Dall",
       "Doll"

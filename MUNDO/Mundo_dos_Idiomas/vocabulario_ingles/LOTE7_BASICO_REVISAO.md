@@ -1,18 +1,18 @@
 # Vocabulário de Inglês — Lote 7 (Básico, 100 palavras) — para revisão de Rhoney
 
-Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote7.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Alternativas erradas conferidas contra dicionário de inglês e de português (nenhuma é palavra real). Carga: `backend/content/vocab_ingles_basico_lote7.json` → `ingles_basico`.
 
 
 ## Comida 5
 - pêssego → **Peach** (erradas: Peoch, Peac, Peacch)
-- pera → **Pear** (erradas: Piar, Peal, Pera)
+- pera → **Pear** (erradas: Paer, Poar, Ppear)
 - cereja → **Cherry** (erradas: Cehrry, Churry, Charry)
 - melancia → **Watermelon** (erradas: Wattermelon, Watemrelon, Watirmelon)
-- manga fruta → **Mango** (erradas: Mago, Mang, Magno)
+- manga fruta → **Mango** (erradas: Mangu, Mang, Mungo)
 - milho → **Corn** (erradas: Cornn, Cirn, Cron)
 - cogumelo → **Mushroom** (erradas: Mushruom, Mushroum, Musshroom)
 - amargo → **Bitter** (erradas: Bitetr, Bittel, Bitte)
-- azedo → **Sour** (erradas: Saur, Suor, Soor)
+- azedo → **Sour** (erradas: Saur, Ssour, Soor)
 - salgado → **Salty** (erradas: Silty, Salti, Solty)
 
 ## Ferramentas
@@ -25,14 +25,14 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - tesoura → **Scissors** (erradas: Scissorss, Sscissors, Scissorrs)
 - cola → **Glue** (erradas: Gglue, Glui, Gleu)
 - ferramenta → **Tool** (erradas: Tooll, Tuol, Tiol)
-- fio → **Wire** (erradas: Wyre, Wier, Were)
+- fio → **Wire** (erradas: Wyre, Wier, Wwire)
 
 ## Pessoas 3
 - namorado → **Boyfriend** (erradas: Boyfiend, Boyfirend, Boyvriend)
 - namorada → **Girlfriend** (erradas: Girlfrined, Girlfriemd, Girlfrriend)
 - casamento → **Wedding** (erradas: Wodding, Wedidng, Wetding)
 - inimigo → **Enemy** (erradas: Eneym, Ememy, Eemy)
-- herói → **Hero** (erradas: Heru, Huro, Hera)
+- herói → **Hero** (erradas: Heru, Huro, Helo)
 - líder → **Leader** (erradas: Leadder, Laader, Liader)
 - membro → **Member** (erradas: Memmber, Membr, Mmber)
 - dono → **Owner** (erradas: Owenr, Ownner, Ower)
@@ -40,15 +40,15 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - adolescente → **Teenager** (erradas: Teenagar, Teemager, Teonager)
 
 ## Verbos do dia a dia 8
-- entrar → **Enter** (erradas: Ente, Entel, Enetr)
+- entrar → **Enter** (erradas: Entur, Entel, Enetr)
 - encher → **Fill** (erradas: Flil, Foll, Firl)
 - despejar → **Pour** (erradas: Puor, Poir, Pourr)
-- queimar → **Burn** (erradas: Born, Barn, Bunr)
+- queimar → **Burn** (erradas: Buln, Burnn, Bunr)
 - deixar cair → **Drop** (erradas: Drrop, Drpo, Dropp)
 - levantar algo → **Lift** (erradas: Livt, Lifd, Litf)
-- chutar → **Kick** (erradas: Kikk, Kyck, Keck)
+- chutar → **Kick** (erradas: Kikk, Kyck, Kicck)
 - beijar → **Kiss** (erradas: Kess, Kizs, Ksis)
-- abraçar → **Hug** (erradas: Heg, Hog, Hig)
+- abraçar → **Hug** (erradas: Heg, Huj, Hig)
 - sorrir → **Grin** (erradas: Grinn, Ggrin, Girn)
 
 ## Verbos do dia a dia 9
@@ -60,8 +60,8 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - pintar → **Paint** (erradas: Painnt, Ppaint, Paent)
 - desenhar → **Draw** (erradas: Drwa, Drav, Darw)
 - voar → **Fly** (erradas: Flyy, Fli, Flly)
-- crescer → **Grow** (erradas: Gruw, Glow, Grov)
-- andar de bicicleta → **Ride** (erradas: Rude, Rdie, Rride)
+- crescer → **Grow** (erradas: Gruw, Ggrow, Grov)
+- andar de bicicleta → **Ride** (erradas: Ridu, Rdie, Rride)
 
 ## Texturas
 - grosso → **Thick** (erradas: Thicc, Thickk, Thicck)
@@ -70,7 +70,7 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - áspero → **Rough** (erradas: Roigh, Rrough, Roegh)
 - macio → **Soft** (erradas: Saft, Sotf, Softt)
 - duro → **Hard** (erradas: Hhard, Harrd, Hald)
-- plano → **Flat** (erradas: Frat, Flatt, Flet)
+- plano → **Flat** (erradas: Flad, Falt, Flet)
 - redondo → **Round** (erradas: Rounnd, Reund, Rround)
 - apertado → **Tight** (erradas: Tihgt, Tght, Tighht)
 - solto → **Loose** (erradas: Lloose, Looes, Loos)
@@ -78,13 +78,13 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 ## Qualidades
 - pronto → **Ready** (erradas: Raady, Reaty, Readi)
 - errado → **Wrong** (erradas: Wrrong, Wrogn, Worng)
-- verdadeiro → **True** (erradas: Ttrue, Troe, Trua)
-- falso → **False** (erradas: Falsu, Falso, Fales)
+- verdadeiro → **True** (erradas: Ttrue, Trae, Trua)
+- falso → **False** (erradas: Falsu, Falze, Farse)
 - sozinho → **Alone** (erradas: Alono, Alome, Aolne)
-- sortudo → **Lucky** (erradas: Lucy, Luckyy, Llucky)
+- sortudo → **Lucky** (erradas: Locky, Luckyy, Llucky)
 - único → **Unique** (erradas: Uniqae, Unoque, Uique)
-- certo de algo → **Sure** (erradas: Suer, Sire, Suru)
-- mesmo igual → **Same** (erradas: Smae, Saem, Sane)
+- certo de algo → **Sure** (erradas: Suer, Suro, Suru)
+- mesmo igual → **Same** (erradas: Smae, Sami, Samo)
 - outro → **Other** (erradas: Odher, Othel, Othe)
 
 ## Números 2

@@ -1,30 +1,30 @@
 # Vocabulário de Inglês — Lote 2 (Básico, 100 palavras) — para revisão de Rhoney
 
-Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote2.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Alternativas erradas conferidas contra dicionário de inglês e de português (nenhuma é palavra real). Carga: `backend/content/vocab_ingles_basico_lote2.json` → `ingles_basico`.
 
 
 ## Roupas
 - calça → **Pants** (erradas: Pents, Pannts, Pantts)
 - sapato → **Shoe** (erradas: Shoi, Shoa, Shee)
-- chapéu → **Hat** (erradas: Hhat, Hta, Had)
-- casaco → **Coat** (erradas: Cota, Ceat, Coot)
+- chapéu → **Hat** (erradas: Hhat, Hta, Het)
+- casaco → **Coat** (erradas: Coit, Ceat, Ccoat)
 - vestido → **Dress** (erradas: Driss, Drezs, Drss)
 - meia → **Sock** (erradas: Sokk, Scok, Ssock)
-- bolsa → **Bag** (erradas: Bga, Bagg, Beg)
+- bolsa → **Bag** (erradas: Bga, Bagg, Pag)
 - óculos → **Glasses** (erradas: Glases, Glsses, Glassez)
 - saia → **Skirt** (erradas: Skert, Skrit, Skart)
-- boné → **Cap** (erradas: Capp, Cab, Cop)
+- boné → **Cap** (erradas: Capp, Cep, Ccap)
 
 ## Escola e trabalho
-- caneta → **Pen** (erradas: Pin, Pem, Pun)
+- caneta → **Pen** (erradas: Pon, Pem, Pne)
 - lápis → **Pencil** (erradas: Pemcil, Pancil, Penci)
 - papel → **Paper** (erradas: Poper, Ppaer, Paepr)
 - aluno → **Student** (erradas: Studant, Studemt, Sstudent)
 - aula → **Class** (erradas: Clazs, Cass, Closs)
 - trabalho → **Work** (erradas: Wrok, Wirk, Wurk)
 - escritório → **Office** (erradas: Offuce, Offfice, Officu)
-- chefe → **Boss** (erradas: Bess, Buss, Bass)
-- prova → **Test** (erradas: Tezt, Tset, Tost)
+- chefe → **Boss** (erradas: Biss, Bboss, Bsos)
+- prova → **Test** (erradas: Tezt, Tset, Tust)
 - mochila → **Backpack** (erradas: Backpac, Backpeck, Backpck)
 
 ## Cidade e lugares
@@ -37,48 +37,48 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - ponte → **Bridge** (erradas: Bbridge, Bridg, Brideg)
 - estação → **Station** (erradas: Statino, Stadion, Staton)
 - banco → **Bank** (erradas: Bnak, Bannk, Banc)
-- país → **Country** (erradas: Countri, County, Counntry)
+- país → **Country** (erradas: Countri, Countrry, Counntry)
 
 ## Transporte
-- ônibus → **Bus** (erradas: Bbus, Bis, Bas)
+- ônibus → **Bus** (erradas: Bbus, Bsu, Bas)
 - trem → **Train** (erradas: Trayn, Traun, Ttrain)
 - avião → **Plane** (erradas: Planu, Pline, Palne)
 - barco → **Boat** (erradas: Boet, Buat, Baat)
 - bicicleta → **Bike** (erradas: Biku, Bice, Beke)
 - táxi → **Taxi** (erradas: Texi, Ttaxi, Taix)
 - viagem → **Trip** (erradas: Trup, Trpi, Trop)
-- estrada → **Road** (erradas: Rroad, Roud, Rood)
-- mapa → **Map** (erradas: Mop, Mmap, Mup)
+- estrada → **Road** (erradas: Rroad, Roud, Roat)
+- mapa → **Map** (erradas: Mab, Mmap, Mup)
 - bilhete → **Ticket** (erradas: Tikket, Ticekt, Tickket)
 
 ## Números e quantidade
-- um → **One** (erradas: Ome, Onu, Ona)
+- um → **One** (erradas: Ome, Oni, Ona)
 - quatro → **Four** (erradas: Foor, Foer, Ffour)
-- cinco → **Five** (erradas: Fave, Fife, Fivu)
+- cinco → **Five** (erradas: Fave, Fove, Fivu)
 - seis → **Six** (erradas: Sxi, Syx, Ssix)
 - sete → **Seven** (erradas: Sevenn, Seevn, Sevem)
 - oito → **Eight** (erradas: Eght, Eigght, Eighd)
-- nove → **Nine** (erradas: Nane, Ninne, Nime)
-- dez → **Ten** (erradas: Tun, Tten, Tenn)
+- nove → **Nine** (erradas: Nien, Ninne, Nime)
+- dez → **Ten** (erradas: Tne, Tten, Tenn)
 - cem → **Hundred** (erradas: Hundredd, Hndred, Hundrad)
 - metade → **Half** (erradas: Halff, Hulf, Holf)
 
 ## Sentimentos
 - amor → **Love** (erradas: Lovi, Lofe, Luve)
-- medo → **Fear** (erradas: Fera, Fiar, Feur)
+- medo → **Fear** (erradas: Feir, Feal, Feur)
 - bravo → **Angry** (erradas: Agnry, Angrry, Angly)
 - sorriso → **Smile** (erradas: Smale, Smila, Smyle)
 - cansado → **Tired** (erradas: Tirad, Tirde, Tiredd)
 - fome → **Hunger** (erradas: Henger, Hungir, Honger)
 - sede → **Thirst** (erradas: Thisrt, Tirst, Thirstt)
-- sonho → **Dream** (erradas: Deram, Dreum, Driam)
+- sonho → **Dream** (erradas: Deam, Dreum, Driam)
 - paz → **Peace** (erradas: Peice, Peaci, Piace)
 - esperança → **Hope** (erradas: Hopo, Hepe, Hape)
 
 ## Pessoas e profissões
 - homem → **Man** (erradas: Mam, Mna, Mman)
 - mulher → **Woman** (erradas: Wmoan, Womon, Wonan)
-- menino → **Boy** (erradas: Bboy, Bey, Boi)
+- menino → **Boy** (erradas: Bboy, Bey, Boyy)
 - menina → **Girl** (erradas: Girr, Girrl, Gurl)
 - enfermeira → **Nurse** (erradas: Nruse, Narse, Nursa)
 - polícia → **Police** (erradas: Polace, Ploice, Pelice)
@@ -93,26 +93,26 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - foto → **Photo** (erradas: Photu, Phoot, Poto)
 - música → **Music** (erradas: Musi, Musuc, Muzic)
 - filme → **Movie** (erradas: Movoe, Mevie, Moviu)
-- jogo → **Game** (erradas: Gama, Gamu, Gome)
+- jogo → **Game** (erradas: Gami, Gamu, Gime)
 - carta → **Letter** (erradas: Letetr, Lotter, Letterr)
 - dinheiro → **Money** (erradas: Moneyy, Maney, Meney)
 - cartão → **Card** (erradas: Cerd, Cird, Carrd)
 - caixa → **Box** (erradas: Bxo, Bbox, Bex)
 
 ## Verbos do dia a dia 2
-- ver → **See** (erradas: Sei, Soe, Sae)
+- ver → **See** (erradas: Sie, Seo, Sae)
 - ouvir → **Hear** (erradas: Haar, Haer, Heur)
 - pensar → **Think** (erradas: Tihnk, Thonk, Thimk)
 - saber → **Know** (erradas: Knoww, Knaw, Kniw)
-- querer → **Want** (erradas: Wannt, Wwant, Wand)
+- querer → **Want** (erradas: Wannt, Wwant, Wantt)
 - dar → **Give** (erradas: Giva, Gvie, Givve)
-- pegar → **Take** (erradas: Taku, Tike, Tace)
+- pegar → **Take** (erradas: Taku, Tako, Tace)
 - ajudar → **Help** (erradas: Helb, Halp, Helpp)
 - ficar → **Stay** (erradas: Stoy, Sttay, Stuy)
 - esperar → **Wait** (erradas: Waid, Wiit, Woit)
 
 ## Adjetivos e opostos
-- alto → **Tall** (erradas: Tell, Till, Tarl)
+- alto → **Tall** (erradas: Tlal, Talll, Tarl)
 - baixo → **Short** (erradas: Shrot, Shart, Shor)
 - longo → **Long** (erradas: Lnog, Ling, Longg)
 - limpo → **Clean** (erradas: Crean, Cean, Cleann)

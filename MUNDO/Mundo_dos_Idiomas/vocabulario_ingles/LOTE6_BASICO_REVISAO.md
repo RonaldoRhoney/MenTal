@@ -1,14 +1,14 @@
 # Vocabulário de Inglês — Lote 6 (Básico, 100 palavras) — para revisão de Rhoney
 
-Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Carga: `backend/content/vocab_ingles_basico_lote6.json` → `ingles_basico`.
+Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem de outros lotes (verificado por script). Alternativas erradas conferidas contra dicionário de inglês e de português (nenhuma é palavra real). Carga: `backend/content/vocab_ingles_basico_lote6.json` → `ingles_basico`.
 
 
 ## Animais 3
 - cervo → **Deer** (erradas: Daer, Ddeer, Deerr)
 - raposa → **Fox** (erradas: Fex, Foxx, Fux)
-- cabra → **Goat** (erradas: Gaot, Gout, Gota)
+- cabra → **Goat** (erradas: Gaot, Guat, Ggoat)
 - esquilo → **Squirrel** (erradas: Squirrrel, Sqquirrel, Squurrel)
-- baleia → **Whale** (erradas: Whal, Whle, Wale)
+- baleia → **Whale** (erradas: Whal, Whle, Whhale)
 - tubarão → **Shark** (erradas: Shar, Shrak, Shalk)
 - borboleta → **Butterfly** (erradas: Butterfry, Buterfly, Buttorfly)
 - aranha → **Spider** (erradas: Spiter, Spiedr, Spidre)
@@ -22,10 +22,10 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - saúde → **Health** (erradas: Healthh, Heulth, Healt)
 - ferida → **Wound** (erradas: Woundd, Wuund, Wiund)
 - dor de cabeça → **Headache** (erradas: Hoadache, Haedache, Huadache)
-- gripe → **Flu** (erradas: Flo, Fru, Fflu)
+- gripe → **Flu** (erradas: Fle, Fru, Fflu)
 - comprimido → **Pill** (erradas: Pirl, Pilr, Pyll)
 - curativo → **Bandage** (erradas: Bandgae, Bandaga, Banage)
-- machucar → **Hurt** (erradas: Hart, Hort, Hurrt)
+- machucar → **Hurt** (erradas: Hhurt, Hort, Hurrt)
 
 ## Personalidade
 - solitário → **Lonely** (erradas: Lnoely, Lonel, Lonily)
@@ -40,19 +40,19 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - preocupado → **Worried** (erradas: Worrid, Worride, Warried)
 
 ## Verbos do dia a dia 6
-- trazer → **Bring** (erradas: Bling, Birng, Brng)
+- trazer → **Bring** (erradas: Bringg, Birng, Brng)
 - sair → **Leave** (erradas: Loave, Leav, Laave)
 - encontrar-se com → **Meet** (erradas: Miet, Maet, Meett)
 - cair → **Fall** (erradas: Falr, Ffall, Farl)
-- vender → **Sell** (erradas: Sill, Slel, Sall)
+- vender → **Sell** (erradas: Ssell, Slel, Sall)
 - segurar → **Hold** (erradas: Hald, Holld, Hhold)
 - manter → **Keep** (erradas: Kepe, Kuep, Keap)
 - acordar → **Wake** (erradas: Wakke, Wace, Wkae)
-- virar → **Turn** (erradas: Tern, Turnn, Tuln)
+- virar → **Turn** (erradas: Tturn, Turnn, Tuln)
 - escalar → **Climb** (erradas: Clomb, Clemb, Clumb)
 
 ## Verbos do dia a dia 7
-- chegar → **Arrive** (erradas: Arrie, Arriva, Arrivo)
+- chegar → **Arrive** (erradas: Arrvie, Arriva, Arrivo)
 - tentar → **Try** (erradas: Tyr, Tri, Trry)
 - acreditar → **Believe** (erradas: Beliave, Believve, Believa)
 - lembrar → **Remember** (erradas: Rimember, Rememer, Rmeember)
@@ -60,26 +60,26 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - escolher → **Choose** (erradas: Choosse, Cchoose, Choese)
 - mudar → **Change** (erradas: Chane, Chanje, Changa)
 - esconder → **Hide** (erradas: Hite, Hode, Hidi)
-- compartilhar → **Share** (erradas: Sharo, Shaer, Shore)
+- compartilhar → **Share** (erradas: Sharo, Shaer, Sharu)
 - seguir → **Follow** (erradas: Fllow, Folliw, Folrow)
 
 ## Lugares 3
 - bairro → **Neighborhood** (erradas: Nuighborhood, Neughborhood, Neighbborhood)
 - trilha → **Path** (erradas: Pathh, Poth, Patth)
-- caverna → **Cave** (erradas: Ceve, Caev, Cove)
+- caverna → **Cave** (erradas: Ceve, Caev, Cafe)
 - fronteira → **Border** (erradas: Bodrer, Berder, Bordder)
-- zoológico → **Zoo** (erradas: Zoa, Zoi, Zao)
+- zoológico → **Zoo** (erradas: Zeo, Zoi, Zao)
 - porto → **Harbor** (erradas: Harbr, Habor, Hirbor)
 - piscina → **Pool** (erradas: Poal, Ppool, Poel)
 - parquinho → **Playground** (erradas: Playgruond, Plaground, Playgorund)
 - estádio → **Stadium** (erradas: Stidium, Sdadium, Stadeum)
-- shopping → **Mall** (erradas: Mmall, Mull, Marl)
+- shopping → **Mall** (erradas: Mmall, Mlal, Marl)
 
 ## Compras
-- preço → **Price** (erradas: Prece, Prici, Prace)
-- promoção → **Sale** (erradas: Salle, Sare, Slae)
+- preço → **Price** (erradas: Pirce, Prici, Prace)
+- promoção → **Sale** (erradas: Salle, Ssale, Slae)
 - dinheiro vivo → **Cash** (erradas: Ccash, Cosh, Cish)
-- moeda → **Coin** (erradas: Coyn, Cain, Ciin)
+- moeda → **Coin** (erradas: Coyn, Coim, Ciin)
 - conta de restaurante → **Bill** (erradas: Bbill, Bilr, Byll)
 - carteira de dinheiro → **Wallet** (erradas: Wallte, Wllet, Warlet)
 - recibo → **Receipt** (erradas: Receiptt, Reciipt, Rreceipt)
@@ -88,7 +88,7 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - desconto → **Discount** (erradas: Discoutn, Discoumt, Disocunt)
 
 ## Comunicação
-- mensagem → **Message** (erradas: Messag, Missage, Massage)
+- mensagem → **Message** (erradas: Messag, Missage, Mossage)
 - jornal → **Newspaper** (erradas: Newpaper, Newspaber, Newsspaper)
 - revista → **Magazine** (erradas: Magazina, Magaizne, Magazinu)
 - história contada → **Story** (erradas: Stry, Stoly, Storry)
@@ -104,21 +104,21 @@ Mesmo critério e formato dos demais lotes; sem repetir palavras existentes nem 
 - segundo de tempo → **Second** (erradas: Secnod, Socond, Seocnd)
 - hoje em dia → **Nowadays** (erradas: Nowadeys, Nowwadays, Nowaadys)
 - hoje à noite → **Tonight** (erradas: Tunight, Tonught, Tinight)
-- meio-dia → **Noon** (erradas: Nuon, Noan, Neon)
+- meio-dia → **Noon** (erradas: Nuon, Noan, Noom)
 - meia-noite → **Midnight** (erradas: Mindight, Midnightt, Mudnight)
 - estação do ano → **Season** (erradas: Saeson, Seaosn, Seasn)
-- passado → **Past** (erradas: Pust, Pazt, Pest)
-- futuro → **Future** (erradas: Futare, Futuro, Futuru)
+- passado → **Past** (erradas: Pust, Pazt, Psat)
+- futuro → **Future** (erradas: Futare, Ffuture, Futuru)
 - logo → **Soon** (erradas: Soen, Sion, Seon)
 
 ## Direções e posições
 - esquerda → **Left** (erradas: Laft, Lefft, Luft)
 - direita → **Right** (erradas: Rijht, Righd, Rght)
-- para cima → **Up** (erradas: Ep, Ub, Ap)
+- para cima → **Up** (erradas: Ep, Ub, Upp)
 - para baixo → **Down** (erradas: Downn, Dewn, Diwn)
 - frente → **Front** (erradas: Fromt, Fron, Frunt)
 - meio → **Middle** (erradas: Midle, Middli, Middel)
-- lado → **Side** (erradas: Sede, Syde, Sidde)
+- lado → **Side** (erradas: Sidu, Syde, Sidde)
 - topo → **Top** (erradas: Tep, Ttop, Topp)
 - parte de baixo → **Bottom** (erradas: Bittom, Bottomm, Btotom)
 - círculo → **Circle** (erradas: Circlu, Cilcle, Circli)

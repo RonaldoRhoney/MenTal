@@ -115,7 +115,7 @@
       "Nnut",
       "Nud",
       "Nut",
-      "Net"
+      "Mut"
     ],
     "correct_answer": "Nut",
     "explanation": "'noz' se traduz como 'Nut' em inglês.",
@@ -131,7 +131,7 @@
     "prompt": "Como se escreve 'cerveja' em inglês?",
     "options": [
       "Bbeer",
-      "Boer",
+      "Beel",
       "Baer",
       "Beer"
     ],
@@ -151,7 +151,7 @@
       "Wine",
       "Winne",
       "Wene",
-      "Wino"
+      "Wune"
     ],
     "correct_answer": "Wine",
     "explanation": "'vinho' se traduz como 'Wine' em inglês.",
@@ -293,9 +293,9 @@
     "prompt": "Como se escreve 'panela' em inglês?",
     "options": [
       "Pot",
-      "Pat",
-      "Pet",
-      "Put"
+      "Pott",
+      "Ppot",
+      "Pto"
     ],
     "correct_answer": "Pot",
     "explanation": "'panela' se traduz como 'Pot' em inglês.",
@@ -346,7 +346,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'bandeja' em inglês?",
     "options": [
-      "Trey",
+      "Trayy",
       "Ttray",
       "Trya",
       "Tray"
@@ -419,7 +419,7 @@
     "prompt": "Como se escreve 'nota' em inglês?",
     "options": [
       "Grde",
-      "Glade",
+      "Ggrade",
       "Gradde",
       "Grade"
     ],
@@ -457,7 +457,7 @@
       "Baard",
       "Board",
       "Boardd",
-      "Boar"
+      "Biard"
     ],
     "correct_answer": "Board",
     "explanation": "'quadro' se traduz como 'Board' em inglês.",
@@ -545,7 +545,7 @@
     "prompt": "Como se escreve 'emprego' em inglês?",
     "options": [
       "Jub",
-      "Jib",
+      "Jobb",
       "Job",
       "Jbo"
     ],
@@ -742,7 +742,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'lábio' em inglês?",
     "options": [
-      "Lop",
+      "Lep",
       "Lip",
       "Lyp",
       "Lup"
@@ -832,10 +832,10 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'osso' em inglês?",
     "options": [
-      "Bono",
+      "Bbone",
       "Bene",
       "Bone",
-      "Bane"
+      "Bine"
     ],
     "correct_answer": "Bone",
     "explanation": "'osso' se traduz como 'Bone' em inglês.",
@@ -870,7 +870,7 @@
     "options": [
       "Brain",
       "Brein",
-      "Bran",
+      "Braon",
       "Braen"
     ],
     "correct_answer": "Brain",
@@ -888,7 +888,7 @@
     "options": [
       "Ttear",
       "Tear",
-      "Teal",
+      "Taer",
       "Tera"
     ],
     "correct_answer": "Tear",
@@ -922,7 +922,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'cachecol' em inglês?",
     "options": [
-      "Scar",
+      "Scraf",
       "Skarf",
       "Scalf",
       "Scarf"
@@ -1033,7 +1033,7 @@
       "Reng",
       "Ring",
       "Rong",
-      "Rung"
+      "Rring"
     ],
     "correct_answer": "Ring",
     "explanation": "'anel' se traduz como 'Ring' em inglês.",
@@ -1265,7 +1265,7 @@
     "prompt": "Como se escreve 'caminhão' em inglês?",
     "options": [
       "Trock",
-      "Track",
+      "Truc",
       "Truck",
       "Trruck"
     ],
@@ -1336,7 +1336,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'motor' em inglês?",
     "options": [
-      "Engane",
+      "Enigne",
       "Engina",
       "Engine",
       "Engie"
@@ -1536,8 +1536,8 @@
     "options": [
       "Hirl",
       "Hill",
-      "Hull",
-      "Hall"
+      "Hyll",
+      "Holl"
     ],
     "correct_answer": "Hill",
     "explanation": "'colina' se traduz como 'Hill' em inglês.",
@@ -1570,8 +1570,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'onda' em inglês?",
     "options": [
-      "Wive",
-      "Wove",
+      "Wvae",
+      "Wavu",
       "Wavve",
       "Wave"
     ],
@@ -1642,8 +1642,8 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'pintinho' em inglês?",
     "options": [
-      "Check",
-      "Chock",
+      "Chikc",
+      "Chck",
       "Chyck",
       "Chick"
     ],
@@ -1662,7 +1662,7 @@
     "options": [
       "Kid",
       "Kdi",
-      "Kidd",
+      "Kad",
       "Kyd"
     ],
     "correct_answer": "Kid",
@@ -1715,7 +1715,7 @@
     "prompt": "Como se escreve 'cachorrinho' em inglês?",
     "options": [
       "Puppi",
-      "Poppy",
+      "Ppupy",
       "Pupp",
       "Puppy"
     ],
@@ -1769,7 +1769,7 @@
     "prompt": "Como se escreve 'touro' em inglês?",
     "options": [
       "Bulll",
-      "Bell",
+      "Bulr",
       "Bull",
       "Blul"
     ],

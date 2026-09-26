@@ -41,9 +41,9 @@
     "prompt": "Como se escreve 'cabra' em inglês?",
     "options": [
       "Gaot",
-      "Gout",
+      "Guat",
       "Goat",
-      "Gota"
+      "Ggoat"
     ],
     "correct_answer": "Goat",
     "explanation": "'cabra' se traduz como 'Goat' em inglês.",
@@ -79,7 +79,7 @@
       "Whale",
       "Whal",
       "Whle",
-      "Wale"
+      "Whhale"
     ],
     "correct_answer": "Whale",
     "explanation": "'baleia' se traduz como 'Whale' em inglês.",
@@ -293,7 +293,7 @@
     "prompt": "Como se escreve 'gripe' em inglês?",
     "options": [
       "Flu",
-      "Flo",
+      "Fle",
       "Fru",
       "Fflu"
     ],
@@ -346,7 +346,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'machucar' em inglês?",
     "options": [
-      "Hart",
+      "Hhurt",
       "Hort",
       "Hurrt",
       "Hurt"
@@ -544,7 +544,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'trazer' em inglês?",
     "options": [
-      "Bling",
+      "Bringg",
       "Birng",
       "Bring",
       "Brng"
@@ -616,7 +616,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'vender' em inglês?",
     "options": [
-      "Sill",
+      "Ssell",
       "Slel",
       "Sell",
       "Sall"
@@ -688,7 +688,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'virar' em inglês?",
     "options": [
-      "Tern",
+      "Tturn",
       "Turnn",
       "Turn",
       "Tuln"
@@ -725,7 +725,7 @@
     "prompt": "Como se escreve 'chegar' em inglês?",
     "options": [
       "Arrive",
-      "Arrie",
+      "Arrvie",
       "Arriva",
       "Arrivo"
     ],
@@ -871,7 +871,7 @@
       "Share",
       "Sharo",
       "Shaer",
-      "Shore"
+      "Sharu"
     ],
     "correct_answer": "Share",
     "explanation": "'compartilhar' se traduz como 'Share' em inglês.",
@@ -943,7 +943,7 @@
       "Cave",
       "Ceve",
       "Caev",
-      "Cove"
+      "Cafe"
     ],
     "correct_answer": "Cave",
     "explanation": "'caverna' se traduz como 'Cave' em inglês.",
@@ -976,7 +976,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'zoológico' em inglês?",
     "options": [
-      "Zoa",
+      "Zeo",
       "Zoi",
       "Zoo",
       "Zao"
@@ -1067,7 +1067,7 @@
     "prompt": "Como se escreve 'shopping' em inglês?",
     "options": [
       "Mmall",
-      "Mull",
+      "Mlal",
       "Marl",
       "Mall"
     ],
@@ -1085,7 +1085,7 @@
     "prompt": "Como se escreve 'preço' em inglês?",
     "options": [
       "Price",
-      "Prece",
+      "Pirce",
       "Prici",
       "Prace"
     ],
@@ -1104,7 +1104,7 @@
     "options": [
       "Salle",
       "Sale",
-      "Sare",
+      "Ssale",
       "Slae"
     ],
     "correct_answer": "Sale",
@@ -1139,7 +1139,7 @@
     "prompt": "Como se escreve 'moeda' em inglês?",
     "options": [
       "Coyn",
-      "Cain",
+      "Coim",
       "Ciin",
       "Coin"
     ],
@@ -1267,7 +1267,7 @@
       "Messag",
       "Missage",
       "Message",
-      "Massage"
+      "Mossage"
     ],
     "correct_answer": "Message",
     "explanation": "'mensagem' se traduz como 'Message' em inglês.",
@@ -1519,7 +1519,7 @@
       "Noon",
       "Nuon",
       "Noan",
-      "Neon"
+      "Noom"
     ],
     "correct_answer": "Noon",
     "explanation": "'meio-dia' se traduz como 'Noon' em inglês.",
@@ -1572,7 +1572,7 @@
     "options": [
       "Pust",
       "Pazt",
-      "Pest",
+      "Psat",
       "Past"
     ],
     "correct_answer": "Past",
@@ -1590,7 +1590,7 @@
     "options": [
       "Future",
       "Futare",
-      "Futuro",
+      "Ffuture",
       "Futuru"
     ],
     "correct_answer": "Future",
@@ -1663,7 +1663,7 @@
       "Up",
       "Ep",
       "Ub",
-      "Ap"
+      "Upp"
     ],
     "correct_answer": "Up",
     "explanation": "'para cima' se traduz como 'Up' em inglês.",
@@ -1733,7 +1733,7 @@
     "prompt": "Como se escreve 'lado' em inglês?",
     "options": [
       "Side",
-      "Sede",
+      "Sidu",
       "Syde",
       "Sidde"
     ],

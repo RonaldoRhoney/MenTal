@@ -25,7 +25,7 @@
       "Ffloor",
       "Floor",
       "Floorr",
-      "Floro"
+      "Folor"
     ],
     "correct_answer": "Floor",
     "explanation": "'chão' se traduz como 'Floor' em inglês.",
@@ -113,9 +113,9 @@
     "prompt": "Como se escreve 'tapete' em inglês?",
     "options": [
       "Reg",
-      "Rig",
+      "Ruj",
       "Rug",
-      "Rag"
+      "Rugg"
     ],
     "correct_answer": "Rug",
     "explanation": "'tapete' se traduz como 'Rug' em inglês.",
@@ -130,7 +130,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'espelho' em inglês?",
     "options": [
-      "Mirrar",
+      "Mirlor",
       "Murror",
       "Mirrur",
       "Mirror"
@@ -187,7 +187,7 @@
       "Grabe",
       "Ggrape",
       "Grape",
-      "Gripe"
+      "Grappe"
     ],
     "correct_answer": "Grape",
     "explanation": "'uva' se traduz como 'Grape' em inglês.",
@@ -276,7 +276,7 @@
     "options": [
       "Ssalt",
       "Sult",
-      "Slat",
+      "Sald",
       "Salt"
     ],
     "correct_answer": "Salt",
@@ -331,7 +331,7 @@
       "Tae",
       "Teo",
       "Tea",
-      "Teu"
+      "Taa"
     ],
     "correct_answer": "Tea",
     "explanation": "'chá' se traduz como 'Tea' em inglês.",
@@ -346,7 +346,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'bolo' em inglês?",
     "options": [
-      "Coke",
+      "Caku",
       "Cakke",
       "Caki",
       "Cake"
@@ -419,7 +419,7 @@
     "prompt": "Como se escreve 'dedo' em inglês?",
     "options": [
       "Fimger",
-      "Fingir",
+      "Fenger",
       "Fingre",
       "Finger"
     ],
@@ -509,7 +509,7 @@
     "prompt": "Como se escreve 'barriga' em inglês?",
     "options": [
       "Belly",
-      "Billy",
+      "Blely",
       "Bally",
       "Bellly"
     ],
@@ -562,7 +562,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'verão' em inglês?",
     "options": [
-      "Simmer",
+      "Summor",
       "Semmer",
       "Summerr",
       "Summer"
@@ -598,7 +598,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'nuvem' em inglês?",
     "options": [
-      "Clout",
+      "Cloudd",
       "Cloud",
       "Cleud",
       "Clou"
@@ -634,7 +634,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'fogo' em inglês?",
     "options": [
-      "Fere",
+      "Firre",
       "Ffire",
       "Fyre",
       "Fire"
@@ -653,9 +653,9 @@
     "prompt": "Como se escreve 'gelo' em inglês?",
     "options": [
       "Ice",
-      "Icu",
+      "Iec",
       "Ico",
-      "Ike"
+      "Ici"
     ],
     "correct_answer": "Ice",
     "explanation": "'gelo' se traduz como 'Ice' em inglês.",
@@ -742,10 +742,10 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'galinha' em inglês?",
     "options": [
-      "Hun",
+      "Hhen",
       "Hen",
       "Hin",
-      "Hem"
+      "Hne"
     ],
     "correct_answer": "Hen",
     "explanation": "'galinha' se traduz como 'Hen' em inglês.",
@@ -763,7 +763,7 @@
       "Tigerr",
       "Tigel",
       "Tiger",
-      "Tier"
+      "Toger"
     ],
     "correct_answer": "Tiger",
     "explanation": "'tigre' se traduz como 'Tiger' em inglês.",
@@ -798,7 +798,7 @@
     "options": [
       "Wolf",
       "Wofl",
-      "Wolff",
+      "Welf",
       "Wilf"
     ],
     "correct_answer": "Wolf",
@@ -869,7 +869,7 @@
     "prompt": "Como se escreve 'sapo' em inglês?",
     "options": [
       "Frog",
-      "Frag",
+      "Froj",
       "Frgo",
       "Frogg"
     ],
@@ -889,7 +889,7 @@
       "Annt",
       "Ant",
       "Antt",
-      "Amt"
+      "Ont"
     ],
     "correct_answer": "Ant",
     "explanation": "'formiga' se traduz como 'Ant' em inglês.",
@@ -904,7 +904,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'bola' em inglês?",
     "options": [
-      "Bell",
+      "Balll",
       "Blal",
       "Ball",
       "Barl"
@@ -922,7 +922,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'time' em inglês?",
     "options": [
-      "Teem",
+      "Teim",
       "Tean",
       "Tuam",
       "Team"
@@ -1048,7 +1048,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'brincar' em inglês?",
     "options": [
-      "Pray",
+      "Playy",
       "Paly",
       "Play",
       "Pplay"
@@ -1102,7 +1102,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'o que' em inglês?",
     "options": [
-      "Whet",
+      "Wwhat",
       "What",
       "Whut",
       "Whatt"
@@ -1157,7 +1157,7 @@
     "prompt": "Como se escreve 'como' em inglês?",
     "options": [
       "How",
-      "Hew",
+      "Howw",
       "Huw",
       "Hiw"
     ],
@@ -1231,7 +1231,7 @@
       "Here",
       "Hele",
       "Hhere",
-      "Hare"
+      "Hree"
     ],
     "correct_answer": "Here",
     "explanation": "'aqui' se traduz como 'Here' em inglês.",
@@ -1445,7 +1445,7 @@
     "prompt": "Como se escreve 'vir' em inglês?",
     "options": [
       "Come",
-      "Como",
+      "Comme",
       "Ccome",
       "Ceme"
     ],
@@ -1464,8 +1464,8 @@
     "options": [
       "Gu",
       "Go",
-      "Ge",
-      "Gi"
+      "Ggo",
+      "Og"
     ],
     "correct_answer": "Go",
     "explanation": "'ir' se traduz como 'Go' em inglês.",
@@ -1480,7 +1480,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'fazer' em inglês?",
     "options": [
-      "Di",
+      "Ddo",
       "Du",
       "Do",
       "De"
@@ -1518,8 +1518,8 @@
     "options": [
       "Sit",
       "Ssit",
-      "Sot",
-      "Sid"
+      "Sitt",
+      "Sti"
     ],
     "correct_answer": "Sit",
     "explanation": "'sentar' se traduz como 'Sit' em inglês.",
@@ -1606,7 +1606,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'usar' em inglês?",
     "options": [
-      "Uso",
+      "Ues",
       "Use",
       "Uze",
       "Usu"
@@ -1696,7 +1696,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'escuro' em inglês?",
     "options": [
-      "Dork",
+      "Dakr",
       "Dalk",
       "Dark",
       "Darrk"
@@ -1750,7 +1750,7 @@
     "difficulty_level": 1,
     "prompt": "Como se escreve 'molhado' em inglês?",
     "options": [
-      "Wed",
+      "Wat",
       "Wet",
       "Wte",
       "Wut"
@@ -1771,7 +1771,7 @@
       "Ffat",
       "Fatt",
       "Fat",
-      "Fit"
+      "Fta"
     ],
     "correct_answer": "Fat",
     "explanation": "'gordo' se traduz como 'Fat' em inglês.",
