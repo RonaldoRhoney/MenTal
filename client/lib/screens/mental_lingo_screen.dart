@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../api/api_client.dart';
 import '../idioma_voices.dart';
@@ -699,24 +700,32 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
           label: const Text('Cancelar'),
         );
       case _LingoState.answering:
-        // Botões um sobre o outro com respiro (achado de Rhoney, 25/09/2026:
-        // estavam colados quando o Wrap quebrava de linha, sem runSpacing).
-        return Wrap(
-          alignment: WrapAlignment.center,
-          spacing: 12,
-          runSpacing: 14,
+        // Pedido de Rhoney (26/09/2026): os dois botões mais profissionais, no padrão do
+        // MENTAL — lado a lado, mesma largura e altura, formato pílula do tema. "Nova
+        // pergunta" é a ação primária (dourado, como os demais botões principais do app);
+        // "Ouvir resposta" é a secundária, com a identidade neon dos agentes (Mental Lingo).
+        return Row(
           children: [
-            OutlinedButton.icon(
-              key: const Key('mental_lingo_listen_answer_button'),
-              onPressed: _speakingAnswer ? null : _playAnswer,
-              icon: const Icon(Icons.volume_up_rounded),
-              label: const Text('Ouvir resposta'),
+            Expanded(
+              child: _LingoAudioButton(
+                key: const Key('mental_lingo_listen_answer_button'),
+                speaking: _speakingAnswer,
+                onPressed: _speakingAnswer ? null : _playAnswer,
+              ),
             ),
-            FilledButton.icon(
-              key: const Key('mental_lingo_new_question_button'),
-              onPressed: _newQuestion,
-              icon: const Icon(Icons.mic_rounded),
-              label: const Text('Nova pergunta'),
+            const SizedBox(width: 12),
+            Expanded(
+              child: FilledButton.icon(
+                key: const Key('mental_lingo_new_question_button'),
+                onPressed: _newQuestion,
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size.fromHeight(52),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  textStyle: GoogleFonts.inter(fontWeight: FontWeight.w700, fontSize: 15),
+                ),
+                icon: const Icon(Icons.mic_rounded, size: 20),
+                label: const Text('Nova pergunta', maxLines: 1, overflow: TextOverflow.ellipsis),
+              ),
             ),
           ],
         );
@@ -836,6 +845,43 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+
+/// Botão secundário "Ouvir resposta" com a identidade neon dos agentes (navy, contorno
+/// ciano e brilho suave — mesma família do banner do Mental Lingo). Mostra "Falando…"
+/// enquanto a resposta toca.
+class _LingoAudioButton extends StatelessWidget {
+  const _LingoAudioButton({super.key, required this.speaking, required this.onPressed});
+
+  final bool speaking;
+  final VoidCallback? onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(28),
+        boxShadow: [
+          BoxShadow(color: kAgentCyan.withValues(alpha: speaking ? 0.45 : 0.22), blurRadius: 14),
+        ],
+      ),
+      child: OutlinedButton.icon(
+        onPressed: onPressed,
+        style: OutlinedButton.styleFrom(
+          minimumSize: const Size.fromHeight(52),
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          backgroundColor: kAgentNavy,
+          foregroundColor: AppColors.bone,
+          disabledForegroundColor: AppColors.bone,
+          side: BorderSide(color: kAgentCyan.withValues(alpha: 0.9), width: 1.4),
+          textStyle: GoogleFonts.inter(fontWeight: FontWeight.w700, fontSize: 15),
+        ),
+        icon: Icon(speaking ? Icons.graphic_eq_rounded : Icons.volume_up_rounded, size: 20, color: kAgentCyan),
+        label: Text(speaking ? 'Falando…' : 'Ouvir resposta', maxLines: 1, overflow: TextOverflow.ellipsis),
       ),
     );
   }
