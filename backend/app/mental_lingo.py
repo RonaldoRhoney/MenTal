@@ -237,14 +237,24 @@ def _vocab_entries(db: Session) -> list[_VocabEntry]:
     return entries
 
 
-def _found(entry: _VocabEntry, word: str) -> dict:
+def _found(entry: _VocabEntry, word: str, language_asked: bool = False) -> dict:
+    """`language_asked`: o jogador já disse o idioma na pergunta ("...em inglês") — então a resposta
+    não repete "em inglês" no final (pedido de Rhoney, 26/09/2026). Sem idioma na pergunta, o
+    idioma continua na resposta porque informa qual é."""
     lang = _language_of_territory(entry.territory_id)
+    text = entry.explanation
+    segments = build_speech_segments(entry.explanation, lang, [entry.correct_answer])
+    m = _VOCAB_EXPLANATION_RE.match(text)
+    if language_asked and m:
+        text = f"'{m.group(1)}' se traduz como '{m.group(2)}'."
+        if segments and segments[-1]["lang"] == "pt" and segments[-1]["text"].startswith("em "):
+            segments = segments[:-1]
     return {
         "found": True,
-        "answer_text": entry.explanation,
+        "answer_text": text,
         "matched_word": word,
         "target_language": lang,
-        "speech_segments": build_speech_segments(entry.explanation, lang, [entry.correct_answer]),
+        "speech_segments": segments,
     }
 
 
@@ -271,11 +281,11 @@ def _join_terms(terms: list[str]) -> str:
     return quoted[0] if len(quoted) == 1 else ", ".join(quoted[:-1]) + " ou " + quoted[-1]
 
 
-def _found_many(matches: list[_VocabEntry], word: str) -> dict:
+def _found_many(matches: list[_VocabEntry], word: str, language_asked: bool = False) -> dict:
     """Resposta a partir de 1+ opções curadas de um termo em português. Com UMA opção devolve
     a própria explicação curada (texto idêntico ao dos Desafios); com várias, monta a frase."""
     if len(matches) == 1:
-        return _found(matches[0], word)
+        return _found(matches[0], word, language_asked)
     by_lang: dict[str, list[str]] = {}
     for e in sorted(matches, key=lambda e: _LANG_ORDER.index(_language_of_territory(e.territory_id))):
         by_lang.setdefault(_language_of_territory(e.territory_id), []).append(e.correct_answer)
@@ -284,13 +294,15 @@ def _found_many(matches: list[_VocabEntry], word: str) -> dict:
     segments: list[dict] = []
     if len(langs) == 1:
         lang, terms = langs[0], by_lang[langs[0]]
-        text = f"'{word}' se traduz como {_join_terms(terms)} em {_LANG_DISPLAY[lang]}."
+        suffix = "" if language_asked else f" em {_LANG_DISPLAY[lang]}"
+        text = f"'{word}' se traduz como {_join_terms(terms)}{suffix}."
         segments = [{"lang": "pt", "text": f"{word} se traduz como"}]
         for i, t in enumerate(terms):
             if i:
                 segments.append({"lang": "pt", "text": "ou"})
             segments.append({"lang": lang, "text": t})
-        segments.append({"lang": "pt", "text": f"em {_LANG_DISPLAY[lang]}"})
+        if not language_asked:
+            segments.append({"lang": "pt", "text": f"em {_LANG_DISPLAY[lang]}"})
         return {"found": True, "answer_text": text, "matched_word": word, "target_language": lang, "speech_segments": segments}
     segments = [{"lang": "pt", "text": f"{word} se traduz como"}]
     for i, lang in enumerate(langs):
@@ -365,7 +377,7 @@ def answer_question(db: Session, question: str) -> dict:
     # idiomas (pedido de Rhoney, 26/09/2026: "apresentar mais de uma palavra quando houver").
     pt_matches = _dedupe([e for e in entries if e.territory_id in allowed and e.meaning == word_norm])
     if pt_matches:
-        return _found_many(pt_matches, word)
+        return _found_many(pt_matches, word, language_asked=target is not None)
 
     # 2) a palavra perguntada é o termo NO IDIOMA-ALVO (ex.: "house" -> "casa").
     en_matches = _dedupe([e for e in entries if e.territory_id in allowed and e.correct == word_norm], by_meaning=True)

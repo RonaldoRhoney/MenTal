@@ -42,7 +42,8 @@ def test_pergunta_como_se_escreve_encontra_no_vocabulario_curado(client):
     data = resp.json()
     assert data["found"] is True
     assert data["target_language"] == "ingles"
-    assert data["answer_text"] == "'casa' se traduz como 'House' em inglês."
+    # o jogador já disse "em inglês": a resposta não repete o idioma no final
+    assert data["answer_text"] == "'casa' se traduz como 'House'."
 
 
 def test_pergunta_o_que_significa_busca_nos_3_idiomas_sem_precisar_dizer_qual(client):
@@ -160,7 +161,6 @@ def test_resposta_de_vocabulario_vem_com_trechos_por_idioma_pra_voz_nativa(clien
     assert data["speech_segments"] == [
         {"lang": "pt", "text": "carro se traduz como"},
         {"lang": "ingles", "text": "Car"},
-        {"lang": "pt", "text": "em inglês"},
     ]
 
 
@@ -188,7 +188,7 @@ def test_indice_em_memoria_enxerga_conteudo_novo_sem_reiniciar(client, monkeypat
     assert _ask(client, "como se escreve girafa em inglês").json()["found"] is False
     _seed("Como se escreve 'girafa' em inglês?", "Giraffe", "'girafa' se traduz como 'Giraffe' em inglês.")
     data = _ask(client, "como se escreve girafa em inglês").json()
-    assert data["found"] is True and data["answer_text"].endswith("'Giraffe' em inglês.")
+    assert data["found"] is True and data["answer_text"] == "'girafa' se traduz como 'Giraffe'."
 
 
 def test_varias_opcoes_no_mesmo_idioma_aparecem_juntas(client, monkeypatch):
@@ -196,7 +196,7 @@ def test_varias_opcoes_no_mesmo_idioma_aparecem_juntas(client, monkeypatch):
     _seed("Como se escreve 'banco' em inglês?", "Bank", "'banco' se traduz como 'Bank' em inglês.")
     _seed("Como se escreve 'banco' em inglês?", "Bench", "'banco' se traduz como 'Bench' em inglês.", territory_id="ingles_intermediario")
     data = _ask(client, "como se escreve banco em inglês").json()
-    assert data["answer_text"] == "'banco' se traduz como 'Bank' ou 'Bench' em inglês."
+    assert data["answer_text"] == "'banco' se traduz como 'Bank' ou 'Bench'."
     langs = [(s["lang"], s["text"]) for s in data["speech_segments"]]
     assert ("ingles", "Bank") in langs and ("ingles", "Bench") in langs and ("pt", "ou") in langs
 
@@ -225,3 +225,10 @@ def test_frase_fora_do_vocabulario_devolve_intencao_de_traduzir_no_aparelho(clie
     assert data["phrase"] == "eu quero um café" and data["target_language"] == "ingles"
     auto = _ask(client, "o que significa I want a coffee").json()
     assert auto["intent"] == "translate_auto" and auto["phrase"] == "I want a coffee"
+
+
+def test_sem_idioma_na_pergunta_o_idioma_continua_na_resposta(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    _seed("Como se escreve 'agulha' em inglês?", "Needle", "'agulha' se traduz como 'Needle' em inglês.", territory_id="ingles_avancado")
+    data = _ask(client, "o que significa agulha").json()
+    assert data["answer_text"].endswith("'Needle' em inglês.")
