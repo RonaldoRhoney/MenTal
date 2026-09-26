@@ -534,8 +534,13 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       if (a != null) TtsService.instance.preload(a, voice: kMentalLingoVoice, speed: TtsSpeed.natural);
       return;
     }
-    for (final seg in segments) {
-      TtsService.instance.preload(seg['text'] as String, voice: _voiceFor(seg['lang'] as String), speed: TtsSpeed.natural, repeatShortWords: false);
+    for (var i = 0; i < segments.length; i++) {
+      final seg = segments[i];
+      TtsService.instance.preload(seg['text'] as String,
+          voice: _voiceFor(seg['lang'] as String),
+          speed: TtsSpeed.natural,
+          repeatShortWords: false,
+          continues: i < segments.length - 1);
     }
   }
 
@@ -548,12 +553,12 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       if (segments == null || segments.isEmpty) {
         await TtsService.instance.speak(answer, voice: kMentalLingoVoice, speed: TtsSpeed.natural);
       } else {
-        for (final seg in segments) {
+        for (var i = 0; i < segments.length; i++) {
           if (!mounted) break;
-          final lang = seg['lang'] as String;
-          final text = seg['text'] as String;
-          final voice = _voiceFor(lang);
-          await TtsService.instance.speakAndWait(text, voice: voice, speed: TtsSpeed.natural, repeatShortWords: false);
+          final seg = segments[i];
+          final voice = _voiceFor(seg['lang'] as String);
+          await TtsService.instance.speakAndWait(seg['text'] as String,
+              voice: voice, speed: TtsSpeed.natural, repeatShortWords: false, continues: i < segments.length - 1);
         }
       }
     } finally {

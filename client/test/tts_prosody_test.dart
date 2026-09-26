@@ -33,4 +33,10 @@ void main() {
     expect(prepareTextForTts('em inglês', repeatShortWords: false), 'em inglês.');
     expect(prepareTextForTts('House'), 'House... House.');
   });
+
+  test('trecho do meio de uma frase falada em partes continua (vírgula), o último fecha', () {
+    expect(prepareTextForTts('carro se traduz como', repeatShortWords: false, continues: true), 'carro se traduz como,');
+    expect(prepareTextForTts('Car.', repeatShortWords: false, continues: true), 'Car,');
+    expect(prepareTextForTts('em inglês', repeatShortWords: false), 'em inglês.');
+  });
 }

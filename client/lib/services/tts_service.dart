@@ -49,9 +49,13 @@ extension TtsSpeedSsmlRate on TtsSpeed {
 ///   dita duas vezes com pausa ("car... car."), o que dá a duração e a
 ///   cadência de fala natural e uma segunda chance de ouvir;
 /// - frase sem pontuação final ganha ponto, pra o motor fechar a entonação.
-String prepareTextForTts(String text, {bool repeatShortWords = true}) {
+String prepareTextForTts(String text, {bool repeatShortWords = true, bool continues = false}) {
   final t = text.trim();
   if (t.isEmpty) return t;
+  // Trecho do MEIO de uma frase falada em partes (ex.: "carro se traduz como" + "Car" +
+  // "em inglês"): sem ponto final, o motor não "fecha" a frase com entonação descendente
+  // e a fala flui como uma frase só, em vez de três frases picotadas (voz robótica).
+  if (continues) return '${t.replaceFirst(RegExp(r'[.!?…,;:]+$'), '')},';
   final endsWithPunctuation = RegExp(r'[.!?…]$').hasMatch(t);
   final words = t.split(RegExp(r'\s+'));
   if (repeatShortWords && words.length <= 2 && !endsWithPunctuation) return '$t... $t.';
@@ -76,8 +80,8 @@ class TtsService {
   final LinkedHashMap<String, Uint8List> _cache = LinkedHashMap();
   final Set<String> _preloading = {};
 
-  String _cacheKey(String text, String voice, TtsSpeed speed, [bool repeatShortWords = true]) =>
-      '$voice|${speed.name}|${repeatShortWords ? 'r' : 's'}|$text';
+  String _cacheKey(String text, String voice, TtsSpeed speed, [bool repeatShortWords = true, bool continues = false]) =>
+      '$voice|${speed.name}|${repeatShortWords ? 'r' : 's'}|${continues ? 'c' : 'f'}|$text';
 
   void _cacheStore(String key, Uint8List bytes) {
     _cache.remove(key);
@@ -87,10 +91,10 @@ class TtsService {
     }
   }
 
-  Future<Uint8List?> _synthesize(String text, String voice, TtsSpeed speed, [bool repeatShortWords = true]) async {
+  Future<Uint8List?> _synthesize(String text, String voice, TtsSpeed speed, [bool repeatShortWords = true, bool continues = false]) async {
     final tts = FlutterEdgeTts(voice: voice);
     try {
-      final result = await tts.synthesize(prepareTextForTts(text, repeatShortWords: repeatShortWords), prosody: EdgeTtsProsody(rate: speed.ssmlRate));
+      final result = await tts.synthesize(prepareTextForTts(text, repeatShortWords: repeatShortWords, continues: continues), prosody: EdgeTtsProsody(rate: speed.ssmlRate));
       return result.audioBytes;
     } catch (_) {
       return null;
@@ -104,13 +108,13 @@ class TtsService {
   /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md). Chamar assim que a pergunta ou
   /// rodada carrega, pra quando o usuário realmente tocar o botão, o
   /// áudio já estar pronto (cache hit) em vez de esperar a rede.
-  void preload(String text, {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = true}) {
+  void preload(String text, {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = true, bool continues = false}) {
     if (disabled || text.trim().isEmpty) return;
-    final key = _cacheKey(text, voice, speed, repeatShortWords);
+    final key = _cacheKey(text, voice, speed, repeatShortWords, continues);
     if (_cache.containsKey(key) || _preloading.contains(key)) return;
     _preloading.add(key);
     unawaited(
-      _synthesize(text, voice, speed, repeatShortWords).then((bytes) {
+      _synthesize(text, voice, speed, repeatShortWords, continues).then((bytes) {
         if (bytes != null) _cacheStore(key, bytes);
         _preloading.remove(key);
       }),
@@ -131,6 +135,7 @@ class TtsService {
     TtsSpeed speed = TtsSpeed.normal,
     Duration maxWait = const Duration(seconds: 6),
     bool repeatShortWords = true,
+    bool continues = false,
   }) async {
     if (disabled) return false;
     final completed = Completer<void>();
@@ -139,7 +144,7 @@ class TtsService {
       sub = _player.onPlayerComplete.listen((_) {
         if (!completed.isCompleted) completed.complete();
       });
-      final ok = await speak(text, voice: voice, speed: speed, repeatShortWords: repeatShortWords);
+      final ok = await speak(text, voice: voice, speed: speed, repeatShortWords: repeatShortWords, continues: continues);
       if (ok) await completed.future.timeout(maxWait, onTimeout: () {});
       return ok;
     } catch (_) {
@@ -156,13 +161,13 @@ class TtsService {
   /// chama decide como comunicar isso ao usuário, este serviço nunca
   /// lança exceção pro chamador.
   Future<bool> speak(String text,
-      {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = true}) async {
+      {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = true, bool continues = false}) async {
     if (disabled || _speaking || text.trim().isEmpty) return false;
     _speaking = true;
     try {
-      final key = _cacheKey(text, voice, speed, repeatShortWords);
+      final key = _cacheKey(text, voice, speed, repeatShortWords, continues);
       final cached = _cache[key];
-      final bytes = cached ?? await _synthesize(text, voice, speed, repeatShortWords);
+      final bytes = cached ?? await _synthesize(text, voice, speed, repeatShortWords, continues);
       if (bytes == null) return false;
       if (cached == null) _cacheStore(key, bytes);
       await _player.stop();
