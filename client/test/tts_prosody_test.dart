@@ -15,10 +15,10 @@ void main() {
     expect(rates, [...rates]..sort());
   });
 
-  test('palavra isolada e par de palavras são ditos duas vezes, com pausa', () {
-    expect(prepareTextForTts('car'), 'car... car.');
-    expect(prepareTextForTts('  house '), 'house... house.');
-    expect(prepareTextForTts('I will'), 'I will... I will.');
+  test('palavra isolada e par de palavras são ditos UMA vez só (regressão: áudio repetindo duas vezes)', () {
+    expect(prepareTextForTts('car'), 'car.');
+    expect(prepareTextForTts('  house '), 'house.');
+    expect(prepareTextForTts('I will'), 'I will.');
   });
 
   test('frases ganham ponto final; o que já tem pontuação não muda', () {
@@ -31,7 +31,7 @@ void main() {
   test('palavra estrangeira dentro de uma frase do Mental Lingo não é repetida', () {
     expect(prepareTextForTts('House', repeatShortWords: false), 'House.');
     expect(prepareTextForTts('em inglês', repeatShortWords: false), 'em inglês.');
-    expect(prepareTextForTts('House'), 'House... House.');
+    expect(prepareTextForTts('House'), 'House.');
   });
 
   test('trecho do meio de uma frase falada em partes continua (vírgula), o último fecha', () {

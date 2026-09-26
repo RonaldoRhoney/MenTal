@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
@@ -12,6 +13,10 @@ import 'package:speech_to_text/speech_to_text.dart' as stt;
 class MentalLingoService {
   MentalLingoService._();
   static final MentalLingoService instance = MentalLingoService._();
+
+  /// Só para testes: permite estender a classe com um reconhecedor falso.
+  @visibleForTesting
+  MentalLingoService.forTesting();
 
   final stt.SpeechToText _speech = stt.SpeechToText();
   bool _initialized = false;

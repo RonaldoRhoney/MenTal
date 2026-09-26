@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../api/api_client.dart';
 import '../idioma_voices.dart';
+import '../services/lingo_translator.dart';
 import '../services/mental_lingo_service.dart';
 import '../services/tts_service.dart';
 import '../theme/agent_neon.dart';
@@ -333,11 +334,13 @@ enum _LingoState { ready, listening, processing, answering, error }
 
 class MentalLingoScreen extends StatefulWidget {
   MentalLingoScreen(
-      {super.key, required this.client, MentalLingoService? service})
-      : _service = service ?? MentalLingoService.instance;
+      {super.key, required this.client, MentalLingoService? service, LingoTranslator? translator})
+      : _service = service ?? MentalLingoService.instance,
+        _translator = translator ?? MlKitLingoTranslator.instance;
 
   final ApiClient client;
   final MentalLingoService _service;
+  final LingoTranslator _translator;
 
   @override
   State<MentalLingoScreen> createState() => _MentalLingoScreenState();
@@ -349,6 +352,10 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   // Palavra/frase-chave da pergunta (devolvida pelo servidor) — recebe destaque no cartão.
   String? _matchedWord;
   String? _answer;
+  // Termos a destacar no cartão da resposta quando não vêm dos trechos de fala (tradução de frase).
+  List<String>? _answerHighlights;
+  // Baixando o modelo de idioma da tradução no aparelho (só na primeira vez).
+  bool _preparingTranslator = false;
   // Trechos da resposta por idioma (voz nativa de cada um; ver MentalLingoAskOut.speech_segments).
   List<Map<String, dynamic>>? _speechSegments;
   // Resposta de fonte aberta ainda não revisada: o usuário pode votar se ajudou.
@@ -480,6 +487,67 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     }
   }
 
+
+
+  /// Frase fora do vocabulário curado: o servidor só reconheceu a intenção; a tradução em si é
+  /// feita no aparelho (Google ML Kit, gratuito/offline). Devolve um resultado no mesmo formato
+  /// da resposta do servidor. Falha vira resposta honesta, nunca tradução inventada.
+  Future<Map<String, dynamic>> _translatePhrase(Map<String, dynamic> ask) async {
+    final phrase = (ask['phrase'] as String).trim();
+    const note = '\nTradução automática feita no seu aparelho — pode ter imprecisões.';
+    try {
+      late final String from;
+      late final String to;
+      if (ask['intent'] == 'translate') {
+        from = 'pt';
+        to = (ask['target_language'] as String?) ?? 'ingles';
+      } else {
+        final detected = await widget._translator.detectLanguage(phrase);
+        if (detected == null || detected == 'pt') {
+          return {
+            'found': false,
+            'answer_text': "Não consegui identificar o idioma de '$phrase'. Diga, por exemplo: \"como se diz $phrase em inglês\".",
+            'matched_word': phrase,
+          };
+        }
+        from = detected;
+        to = 'pt';
+      }
+      final out = await widget._translator.translate(phrase, from: from, to: to, onDownloading: () {
+        if (mounted) setState(() => _preparingTranslator = true);
+      });
+      if (mounted) setState(() => _preparingTranslator = false);
+      if (from == 'pt') {
+        // Igual à resposta do vocabulário: sem repetir "em inglês" no final (o jogador já disse o idioma).
+        return {
+          'found': true,
+          'answer_text': "'$phrase' se traduz como '$out'.$note",
+          'matched_word': phrase,
+          'target_language': to,
+          'speech_segments': [
+            {'lang': 'pt', 'text': '$phrase se traduz como'},
+            {'lang': to, 'text': out},
+          ],
+          'highlights': [out],
+        };
+      }
+      return {
+        'found': true,
+        'answer_text': "'$phrase' significa '$out'.$note",
+        'matched_word': phrase,
+        'target_language': from,
+        'speech_segments': [
+          {'lang': from, 'text': phrase},
+          {'lang': 'pt', 'text': 'significa $out'},
+        ],
+        'highlights': [out],
+      };
+    } on LingoTranslateException catch (e) {
+      if (mounted) setState(() => _preparingTranslator = false);
+      return {'found': false, 'answer_text': e.message, 'matched_word': phrase};
+    }
+  }
+
   Future<void> _submitAccumulated() async {
     _safetyTimer?.cancel();
     _submitTimer?.cancel();
@@ -493,9 +561,15 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       _state = _LingoState.processing;
     });
     try {
-      final result = await widget.client.askMentalLingo(text);
+      var result = await widget.client.askMentalLingo(text);
       if (!mounted) return;
+      final intent = result['intent'] as String?;
+      if (result['found'] != true && (intent == 'translate' || intent == 'translate_auto')) {
+        result = await _translatePhrase(result);
+        if (!mounted) return;
+      }
       setState(() {
+        _answerHighlights = (result['highlights'] as List?)?.cast<String>();
         _answer = result['answer_text'] as String;
         _matchedWord = result['matched_word'] as String?;
         _speechSegments = (result['speech_segments'] as List?)?.cast<Map<String, dynamic>>();
@@ -586,6 +660,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       _suggestionKey = null;
       _speechSegments = null;
       _matchedWord = null;
+      _answerHighlights = null;
       _state = _LingoState.ready;
       _question = null;
       _answer = null;
@@ -609,7 +684,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       case _LingoState.listening:
         return 'Ouvindo…';
       case _LingoState.processing:
-        return 'Processando…';
+        return _preparingTranslator ? 'Preparando o tradutor (só na primeira vez)…' : 'Processando…';
       case _LingoState.answering:
         return 'Resposta pronta';
       case _LingoState.error:
@@ -694,6 +769,16 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     );
   }
 
+  /// Cartões da tela do Mental Lingo com os tokens de cor OFICIAIS do app (AppColors: fundo,
+  /// dourado, verde-azulado, roxo, osso), que também se adaptam ao tema claro. O azul-marinho/
+  /// ciano neon fica só no banner e no microfone (identidade do agente, Mental_Lingo.webp).
+  BoxDecoration _lingoCardDecoration(Color accent) => BoxDecoration(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: accent.withValues(alpha: 0.55), width: 1.2),
+        boxShadow: [BoxShadow(color: accent.withValues(alpha: 0.10), blurRadius: 12)],
+      );
+
   /// Pedido de Rhoney (26/09/2026): "dê maior destaque à palavra/frase perguntada pelo
   /// usuário, fica mais intuitivo". Cartão de destaque (identidade neon dos agentes) com a
   /// pergunta em tamanho grande e a palavra/frase-chave em dourado, sobre fundo marcado.
@@ -719,11 +804,11 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       key: key,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(18, 14, 18, 16),
-      decoration: agentNeonDecoration(radius: 20),
+      decoration: _lingoCardDecoration(AppColors.gold),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('VOCÊ PERGUNTOU', style: AppTheme.technicalStyle(color: kAgentCyan, fontSize: 11)),
+          Text('VOCÊ PERGUNTOU', style: AppTheme.technicalStyle(color: AppColors.gold, fontSize: 11)),
           const SizedBox(height: 8),
           Text.rich(TextSpan(children: spans)),
         ],
@@ -740,8 +825,8 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     final marked = GoogleFonts.fraunces(
       fontSize: 26,
       fontWeight: FontWeight.w800,
-      color: kAgentCyan,
-      backgroundColor: kAgentCyan.withValues(alpha: 0.14),
+      color: AppColors.teal,
+      backgroundColor: AppColors.teal.withValues(alpha: 0.16),
     );
     final spans = <TextSpan>[];
     var pos = 0;
@@ -760,7 +845,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       key: key,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(18, 14, 18, 16),
-      decoration: agentNeonDecoration(radius: 20),
+      decoration: _lingoCardDecoration(AppColors.teal),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -883,10 +968,11 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                         if (_answer != null)
                           _buildAnswerCard(
                               text: _answer!,
-                              foreignTerms: [
-                                for (final seg in _speechSegments ?? const <Map<String, dynamic>>[])
-                                  if (seg['lang'] != 'pt') seg['text'] as String,
-                              ],
+                              foreignTerms: _answerHighlights ??
+                                  [
+                                    for (final seg in _speechSegments ?? const <Map<String, dynamic>>[])
+                                      if (seg['lang'] != 'pt') seg['text'] as String,
+                                  ],
                               key: const Key('mental_lingo_answer_bubble')),
                         if (_state == _LingoState.answering && _suggestionKey != null)
                           Padding(
@@ -961,9 +1047,8 @@ String? extractLingoKeyTerm(String question) {
   return null;
 }
 
-/// Botão secundário "Ouvir resposta" com a identidade neon dos agentes (navy, contorno
-/// ciano e brilho suave — mesma família do banner do Mental Lingo). Mostra "Falando…"
-/// enquanto a resposta toca.
+/// Botão secundário "Ouvir resposta": contorno verde-azulado do app (AppColors.teal) sobre o
+/// fundo da tela, mesmo formato pílula dos demais botões. Mostra "Falando…" enquanto toca.
 class _LingoAudioButton extends StatelessWidget {
   const _LingoAudioButton({super.key, required this.speaking, required this.onPressed});
 
@@ -972,27 +1057,19 @@ class _LingoAudioButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(28),
-        boxShadow: [
-          BoxShadow(color: kAgentCyan.withValues(alpha: speaking ? 0.45 : 0.22), blurRadius: 14),
-        ],
+    return OutlinedButton.icon(
+      onPressed: onPressed,
+      style: OutlinedButton.styleFrom(
+        minimumSize: const Size.fromHeight(52),
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        backgroundColor: speaking ? AppColors.teal.withValues(alpha: 0.14) : Colors.transparent,
+        foregroundColor: AppColors.bone,
+        disabledForegroundColor: AppColors.bone,
+        side: BorderSide(color: AppColors.teal, width: 1.4),
+        textStyle: GoogleFonts.inter(fontWeight: FontWeight.w700, fontSize: 15),
       ),
-      child: OutlinedButton.icon(
-        onPressed: onPressed,
-        style: OutlinedButton.styleFrom(
-          minimumSize: const Size.fromHeight(52),
-          padding: const EdgeInsets.symmetric(horizontal: 12),
-          backgroundColor: kAgentNavy,
-          foregroundColor: AppColors.bone,
-          disabledForegroundColor: AppColors.bone,
-          side: BorderSide(color: kAgentCyan.withValues(alpha: 0.9), width: 1.4),
-          textStyle: GoogleFonts.inter(fontWeight: FontWeight.w700, fontSize: 15),
-        ),
-        icon: Icon(speaking ? Icons.graphic_eq_rounded : Icons.volume_up_rounded, size: 20, color: kAgentCyan),
-        label: Text(speaking ? 'Falando…' : 'Ouvir resposta', maxLines: 1, overflow: TextOverflow.ellipsis),
-      ),
+      icon: Icon(speaking ? Icons.graphic_eq_rounded : Icons.volume_up_rounded, size: 20, color: AppColors.teal),
+      label: Text(speaking ? 'Falando…' : 'Ouvir resposta', maxLines: 1, overflow: TextOverflow.ellipsis),
     );
   }
 }

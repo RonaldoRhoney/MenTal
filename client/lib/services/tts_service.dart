@@ -44,12 +44,13 @@ extension TtsSpeedSsmlRate on TtsSpeed {
 /// (`<prosody>` com rate/pitch/volume — `<break>`, `<emphasis>`, contorno e
 /// estilos são rejeitados: testado, volta `empty_audio`), então a prosódia é
 /// melhorada no PRÓPRIO TEXTO:
-/// - palavra isolada ou par de palavras ("car", "I will") saía com ~0,4 s de
-///   fala e tom quase plano (variação de 7,6 Hz medida em "car"): passa a ser
-///   dita duas vezes com pausa ("car... car."), o que dá a duração e a
-///   cadência de fala natural e uma segunda chance de ouvir;
-/// - frase sem pontuação final ganha ponto, pra o motor fechar a entonação.
-String prepareTextForTts(String text, {bool repeatShortWords = true, bool continues = false}) {
+/// - frase sem pontuação final ganha ponto, pra o motor fechar a entonação;
+/// - palavra isolada ou par de palavras ("car", "I will") NÃO é repetida por padrão:
+///   26/09/2026, Rhoney reportou o áudio dos Desafios/Relâmpagos de Idiomas saindo
+///   "duas vezes" — era a repetição proposital ("car... car.") da correção anterior de
+///   entonação. Agora o som toca uma vez; a naturalidade vem da velocidade calibrada
+///   (TtsSpeedSsmlRate). `repeatShortWords: true` continua disponível, mas ninguém usa.
+String prepareTextForTts(String text, {bool repeatShortWords = false, bool continues = false}) {
   final t = text.trim();
   if (t.isEmpty) return t;
   // Trecho do MEIO de uma frase falada em partes (ex.: "carro se traduz como" + "Car" +
@@ -80,7 +81,7 @@ class TtsService {
   final LinkedHashMap<String, Uint8List> _cache = LinkedHashMap();
   final Set<String> _preloading = {};
 
-  String _cacheKey(String text, String voice, TtsSpeed speed, [bool repeatShortWords = true, bool continues = false]) =>
+  String _cacheKey(String text, String voice, TtsSpeed speed, [bool repeatShortWords = false, bool continues = false]) =>
       '$voice|${speed.name}|${repeatShortWords ? 'r' : 's'}|${continues ? 'c' : 'f'}|$text';
 
   void _cacheStore(String key, Uint8List bytes) {
@@ -91,7 +92,7 @@ class TtsService {
     }
   }
 
-  Future<Uint8List?> _synthesize(String text, String voice, TtsSpeed speed, [bool repeatShortWords = true, bool continues = false]) async {
+  Future<Uint8List?> _synthesize(String text, String voice, TtsSpeed speed, [bool repeatShortWords = false, bool continues = false]) async {
     final tts = FlutterEdgeTts(voice: voice);
     try {
       final result = await tts.synthesize(prepareTextForTts(text, repeatShortWords: repeatShortWords, continues: continues), prosody: EdgeTtsProsody(rate: speed.ssmlRate));
@@ -108,7 +109,7 @@ class TtsService {
   /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md). Chamar assim que a pergunta ou
   /// rodada carrega, pra quando o usuário realmente tocar o botão, o
   /// áudio já estar pronto (cache hit) em vez de esperar a rede.
-  void preload(String text, {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = true, bool continues = false}) {
+  void preload(String text, {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = false, bool continues = false}) {
     if (disabled || text.trim().isEmpty) return;
     final key = _cacheKey(text, voice, speed, repeatShortWords, continues);
     if (_cache.containsKey(key) || _preloading.contains(key)) return;
@@ -134,7 +135,7 @@ class TtsService {
     required String voice,
     TtsSpeed speed = TtsSpeed.normal,
     Duration maxWait = const Duration(seconds: 6),
-    bool repeatShortWords = true,
+    bool repeatShortWords = false,
     bool continues = false,
   }) async {
     if (disabled) return false;
@@ -161,7 +162,7 @@ class TtsService {
   /// chama decide como comunicar isso ao usuário, este serviço nunca
   /// lança exceção pro chamador.
   Future<bool> speak(String text,
-      {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = true, bool continues = false}) async {
+      {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = false, bool continues = false}) async {
     if (disabled || _speaking || text.trim().isEmpty) return false;
     _speaking = true;
     try {
