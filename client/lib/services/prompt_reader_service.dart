@@ -65,7 +65,7 @@ class NativePromptSpeaker implements PromptSpeaker {
   // Taxa nativa do Android: 0.5 é a velocidade normal do plugin; as três
   // velocidades seguem a mesma proporção de Idiomas (1.0x / 1.3x / 1.6x).
   static double rateFor(TtsSpeed speed) => switch (speed) {
-        TtsSpeed.normal => 0.5,
+        TtsSpeed.normal || TtsSpeed.natural => 0.5,
         TtsSpeed.fast => 0.65,
         TtsSpeed.veryFast => 0.8,
       };

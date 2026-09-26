@@ -9,8 +9,9 @@ void main() {
     expect(TtsSpeed.normal.ssmlRate, '0.75');
     expect(TtsSpeed.fast.ssmlRate, '0.95');
     expect(TtsSpeed.veryFast.ssmlRate, '1.2');
+    expect(TtsSpeed.natural.ssmlRate, '1.0'); // Mental Lingo: fala nativa do motor
     // ordem crescente: Normal < Rápido < Acelerado
-    final rates = TtsSpeed.values.map((s) => double.parse(s.ssmlRate)).toList();
+    final rates = [TtsSpeed.normal, TtsSpeed.fast, TtsSpeed.veryFast].map((s) => double.parse(s.ssmlRate)).toList();
     expect(rates, [...rates]..sort());
   });
 

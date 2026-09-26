@@ -492,6 +492,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
         _errorMessage = null;
         _state = _LingoState.answering;
       });
+      _preloadAnswer();
     } on ApiException catch (e) {
       if (!mounted) return;
       setState(() {
@@ -513,6 +514,23 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   /// idioma de forma nativa". Cada trecho é falado pela voz do PRÓPRIO idioma
   /// (a explicação em português pela voz pt-BR; "House" pela voz do inglês etc.),
   /// em sequência. Palavra estrangeira dentro da frase não é repetida duas vezes.
+  String _voiceFor(String lang) => lang == 'pt' ? kMentalLingoVoice : (voiceForTerritory(lang) ?? kMentalLingoVoice);
+
+  /// Sintetiza todos os trechos EM PARALELO assim que a resposta chega, pra
+  /// o toque em "Ouvir resposta" já achar tudo em cache (sem esperar a rede
+  /// trecho a trecho).
+  void _preloadAnswer() {
+    final segments = _speechSegments;
+    if (segments == null || segments.isEmpty) {
+      final a = _answer;
+      if (a != null) TtsService.instance.preload(a, voice: kMentalLingoVoice, speed: TtsSpeed.natural);
+      return;
+    }
+    for (final seg in segments) {
+      TtsService.instance.preload(seg['text'] as String, voice: _voiceFor(seg['lang'] as String), speed: TtsSpeed.natural, repeatShortWords: false);
+    }
+  }
+
   Future<void> _playAnswer() async {
     final answer = _answer;
     if (answer == null || _speakingAnswer) return;
@@ -520,14 +538,14 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     try {
       final segments = _speechSegments;
       if (segments == null || segments.isEmpty) {
-        await TtsService.instance.speak(answer, voice: kMentalLingoVoice);
+        await TtsService.instance.speak(answer, voice: kMentalLingoVoice, speed: TtsSpeed.natural);
       } else {
         for (final seg in segments) {
           if (!mounted) break;
           final lang = seg['lang'] as String;
           final text = seg['text'] as String;
-          final voice = lang == 'pt' ? kMentalLingoVoice : (voiceForTerritory(lang) ?? kMentalLingoVoice);
-          await TtsService.instance.speakAndWait(text, voice: voice, repeatShortWords: false);
+          final voice = _voiceFor(lang);
+          await TtsService.instance.speakAndWait(text, voice: voice, speed: TtsSpeed.natural, repeatShortWords: false);
         }
       }
     } finally {

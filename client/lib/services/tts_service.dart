@@ -17,7 +17,7 @@ import 'package:flutter_edge_tts/flutter_edge_tts.dart';
 /// Reproduz sempre sob demanda (nunca automático — decisão do documento)
 /// e reaproveita o `audioplayers` já usado pelo Ouvido Afiado
 /// (challenge_screen.dart), em vez de introduzir um 2º player de áudio.
-enum TtsSpeed { normal, fast, veryFast }
+enum TtsSpeed { normal, fast, veryFast, natural }
 
 extension TtsSpeedSsmlRate on TtsSpeed {
   /// Valor de `rate` do SSML (EdgeTtsProsody), como multiplicador da fala
@@ -35,6 +35,8 @@ extension TtsSpeedSsmlRate on TtsSpeed {
         TtsSpeed.normal => '0.75',
         TtsSpeed.fast => '0.95',
         TtsSpeed.veryFast => '1.2',
+        // Velocidade de fala nativa do motor (Mental Lingo: só a pronúncia muda por idioma).
+        TtsSpeed.natural => '1.0',
       };
 }
 
@@ -102,13 +104,13 @@ class TtsService {
   /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md). Chamar assim que a pergunta ou
   /// rodada carrega, pra quando o usuário realmente tocar o botão, o
   /// áudio já estar pronto (cache hit) em vez de esperar a rede.
-  void preload(String text, {required String voice, TtsSpeed speed = TtsSpeed.normal}) {
-    if (text.trim().isEmpty) return;
-    final key = _cacheKey(text, voice, speed);
+  void preload(String text, {required String voice, TtsSpeed speed = TtsSpeed.normal, bool repeatShortWords = true}) {
+    if (disabled || text.trim().isEmpty) return;
+    final key = _cacheKey(text, voice, speed, repeatShortWords);
     if (_cache.containsKey(key) || _preloading.contains(key)) return;
     _preloading.add(key);
     unawaited(
-      _synthesize(text, voice, speed).then((bytes) {
+      _synthesize(text, voice, speed, repeatShortWords).then((bytes) {
         if (bytes != null) _cacheStore(key, bytes);
         _preloading.remove(key);
       }),
