@@ -731,6 +731,47 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     );
   }
 
+  /// Pedido de Rhoney (26/09/2026): destacar também a resposta em idioma estrangeiro
+  /// (ex.: "Cheese"), como já é feito com a palavra perguntada. Os termos estrangeiros
+  /// vêm dos trechos de fala do servidor (idioma != pt) e aparecem maiores, em ciano, sobre
+  /// fundo marcado; o resto da explicação fica em tamanho normal.
+  Widget _buildAnswerCard({required String text, required List<String> foreignTerms, required Key key}) {
+    final base = GoogleFonts.inter(fontSize: 17, height: 1.35, color: AppColors.bone);
+    final marked = GoogleFonts.fraunces(
+      fontSize: 26,
+      fontWeight: FontWeight.w800,
+      color: kAgentCyan,
+      backgroundColor: kAgentCyan.withValues(alpha: 0.14),
+    );
+    final spans = <TextSpan>[];
+    var pos = 0;
+    final lower = text.toLowerCase();
+    for (final term in foreignTerms) {
+      final t = term.trim();
+      if (t.isEmpty) continue;
+      final idx = lower.indexOf(t.toLowerCase(), pos);
+      if (idx < 0) continue;
+      if (idx > pos) spans.add(TextSpan(text: text.substring(pos, idx), style: base));
+      spans.add(TextSpan(text: text.substring(idx, idx + t.length), style: marked));
+      pos = idx + t.length;
+    }
+    if (pos < text.length) spans.add(TextSpan(text: text.substring(pos), style: base));
+    return Container(
+      key: key,
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(18, 14, 18, 16),
+      decoration: agentNeonDecoration(radius: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('MENTAL LINGO', style: AppTheme.technicalStyle(color: AppColors.purple, fontSize: 11)),
+          const SizedBox(height: 8),
+          Text.rich(TextSpan(children: spans)),
+        ],
+      ),
+    );
+  }
+
   Widget _buildActions() {
     switch (_state) {
       case _LingoState.listening:
@@ -840,9 +881,12 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                                 key: const Key('mental_lingo_question_bubble')),
                           ),
                         if (_answer != null)
-                          _buildBubble(
-                              label: 'MENTAL LINGO',
+                          _buildAnswerCard(
                               text: _answer!,
+                              foreignTerms: [
+                                for (final seg in _speechSegments ?? const <Map<String, dynamic>>[])
+                                  if (seg['lang'] != 'pt') seg['text'] as String,
+                              ],
                               key: const Key('mental_lingo_answer_bubble')),
                         if (_state == _LingoState.answering && _suggestionKey != null)
                           Padding(
@@ -876,13 +920,17 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                               style: TextStyle(color: AppColors.error),
                             ),
                           ),
+                        // Botões junto do conteúdo (mesmo bloco centralizado): o espaço em
+                        // cima e embaixo fica proporcional em qualquer estado da tela.
+                        if (_state != _LingoState.ready && _state != _LingoState.processing) ...[
+                          const SizedBox(height: 24),
+                          SizedBox(width: double.infinity, child: _buildActions()),
+                        ],
                       ],
                     ),
                   ),
                 ),
               ),
-              _buildActions(),
-              const SizedBox(height: 8),
             ],
           ),
         ),
