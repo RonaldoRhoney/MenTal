@@ -2,7 +2,7 @@ package com.rhoneyinc.mental
 
 import android.os.Bundle
 import androidx.core.view.WindowCompat
-import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.android.FlutterFragmentActivity
 
 // INVESTIGACAO_PLAY_CONSOLE_V8_V1.md (18/09/2026) — aviso do Google Play
 // Console: "A exibição de ponta a ponta pode não estar disponível para
@@ -15,7 +15,12 @@ import io.flutter.embedding.android.FlutterActivity
 // Window, faz exatamente o que enableEdgeToEdge faz por baixo dos panos, e
 // já vem garantido pelo androidx.core que o próprio embedding do Flutter
 // já traz — sem dependência nova.
-class MainActivity : FlutterActivity() {
+// Health Connect (Movimento/HealthConnect/DESENHO_TECNICO_V1.md, 25/09/2026): o
+// plugin `health` faz cast da Activity para ComponentActivity pra pedir a
+// permissão de leitura (registerForActivityResult), então a MainActivity
+// passa a estender FlutterFragmentActivity (FragmentActivity ->
+// ComponentActivity). Comportamento do app inalterado.
+class MainActivity : FlutterFragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)

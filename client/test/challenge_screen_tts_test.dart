@@ -123,11 +123,15 @@ void main() {
     expect(find.text('Acelerado'), findsOneWidget);
   });
 
-  testWidgets('território sem idioma falado não mostra botão de áudio nem seletor de velocidade', (tester) async {
+  testWidgets('território sem idioma falado não mostra áudio POR OPÇÃO; só o leitor manual do enunciado', (tester) async {
     await _pump(tester, _OuvidoAfiadoFakeApiClient(), 'ouvido_afiado');
 
-    expect(find.byIcon(Icons.volume_up_rounded), findsNothing);
-    expect(find.text('Rápido'), findsNothing);
+    // Leitor de enunciados (MENTAL_LEITOR_PERGUNTAS_FEEDBACK_SONORO_V1.1.md,
+    // 25/09/2026): 1 botão do leitor + seus 3 chips de velocidade — nunca o
+    // áudio por alternativa, que é exclusivo de Idiomas.
+    expect(find.byKey(const Key('prompt_reader_button')), findsOneWidget);
+    expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
+    expect(find.text('Rápido'), findsOneWidget);
   });
 
   testWidgets('Relâmpago em território de idioma falado também mostra botão de áudio por opção (pedido de Rhoney, 19/09/2026)', (tester) async {

@@ -4,6 +4,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
+import '../widgets/prompt_reader_bar.dart';
 import '../api/api_client.dart';
 import '../color_challenge.dart';
 import '../idioma_voices.dart';
@@ -1209,6 +1210,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   const SizedBox(height: 12),
                 ],
                 ChallengePromptText(prompt: challenge['prompt'] as String),
+                // Leitor manual do enunciado (MENTAL_LEITOR_PERGUNTAS_FEEDBACK_SONORO_V1.1.md):
+                // todos os Mundos exceto Idiomas/Libras; sem autoplay.
+                if (promptReaderAppliesTo(widget.territoryId))
+                  PromptReaderBar(
+                    key: ValueKey('reader_${challenge['challenge_id']}'),
+                    text: challenge['prompt'] as String,
+                  ),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'visual' && options != null)
                   _buildVisualOptions(options)
@@ -1382,6 +1390,13 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   const SizedBox(height: 12),
                 ],
                 ChallengePromptText(prompt: challenge['prompt'] as String),
+                // Leitor manual do enunciado (MENTAL_LEITOR_PERGUNTAS_FEEDBACK_SONORO_V1.1.md):
+                // todos os Mundos exceto Idiomas/Libras; sem autoplay.
+                if (promptReaderAppliesTo(widget.territoryId))
+                  PromptReaderBar(
+                    key: ValueKey('reader_${challenge['challenge_id']}'),
+                    text: challenge['prompt'] as String,
+                  ),
                 const SizedBox(height: 24),
                 if (widget.territoryId == 'cores') ...[
                   // Efeito Stroop clássico (pedido de Rhoney, 2026-09-03,
