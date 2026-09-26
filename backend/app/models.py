@@ -530,6 +530,58 @@ class MentalLingoSuggestion(Base):
     fetched_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class ConcursoBanca(Base):
+    """Mundo dos Concursos (decisão de Rhoney, 25/09/2026). Só `approved` é servida."""
+
+    __tablename__ = "concurso_bancas"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    nome: Mapped[str] = mapped_column(String)
+    perfil: Mapped[str | None] = mapped_column(Text, nullable=True)
+    review_status: Mapped[str] = mapped_column(String, default="pending")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class Concurso(Base):
+    """Ficha de concurso REAL — só com `fonte_url` oficial verificável e aprovada por Rhoney."""
+
+    __tablename__ = "concursos"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    esfera: Mapped[str] = mapped_column(String)  # municipal | estadual | federal
+    uf: Mapped[str | None] = mapped_column(String, nullable=True)
+    municipio: Mapped[str | None] = mapped_column(String, nullable=True)
+    orgao: Mapped[str] = mapped_column(String)
+    banca_id: Mapped[str | None] = mapped_column(String, ForeignKey("concurso_bancas.id"), nullable=True)
+    status: Mapped[str] = mapped_column(String)  # encerrado | em_andamento | em_analise
+    edital_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    fonte_url: Mapped[str] = mapped_column(String)
+    review_status: Mapped[str] = mapped_column(String, default="pending")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class ConcursoDica(Base):
+    __tablename__ = "concurso_dicas"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    concurso_id: Mapped[str | None] = mapped_column(String, ForeignKey("concursos.id", ondelete="CASCADE"), nullable=True)
+    banca_id: Mapped[str | None] = mapped_column(String, ForeignKey("concurso_bancas.id", ondelete="CASCADE"), nullable=True)
+    texto: Mapped[str] = mapped_column(Text)
+    review_status: Mapped[str] = mapped_column(String, default="pending")
+
+
+class ConcursoRevisao(Base):
+    __tablename__ = "concurso_revisoes"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    concurso_id: Mapped[str | None] = mapped_column(String, ForeignKey("concursos.id", ondelete="CASCADE"), nullable=True)
+    materia: Mapped[str] = mapped_column(String)
+    titulo: Mapped[str] = mapped_column(String)
+    conteudo: Mapped[str] = mapped_column(Text)
+    review_status: Mapped[str] = mapped_column(String, default="pending")
+
+
 class Attempt(Base):
     __tablename__ = "attempts"
 

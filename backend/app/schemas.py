@@ -1303,3 +1303,38 @@ class WorldCoachOut(BaseModel):
 
     name: str
     card: CoachCardOut | None = None
+
+
+class ConcursoBancaOut(BaseModel):
+    id: str
+    nome: str
+    perfil: str | None = None
+
+
+class ConcursoOut(BaseModel):
+    id: str
+    esfera: str
+    uf: str | None = None
+    municipio: str | None = None
+    orgao: str
+    status: str
+    edital_url: str | None = None
+    fonte_url: str
+    banca: ConcursoBancaOut | None = None
+
+
+class ConcursoDicaOut(BaseModel):
+    id: str
+    texto: str
+
+
+class ConcursoRevisaoOut(BaseModel):
+    id: str
+    materia: str
+    titulo: str
+    conteudo: str
+
+
+class ConcursoDetalheOut(ConcursoOut):
+    dicas: list[ConcursoDicaOut]
+    revisoes: list[ConcursoRevisaoOut]
