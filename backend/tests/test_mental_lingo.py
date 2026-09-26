@@ -51,7 +51,9 @@ def test_pergunta_o_que_significa_busca_nos_3_idiomas_sem_precisar_dizer_qual(cl
     assert resp.status_code == 200
     data = resp.json()
     assert data["found"] is True
-    assert data["target_language"] == "espanhol"
+    # sem idioma na pergunta, reúne todos os idiomas em que a palavra existe no vocabulário
+    assert "'Casa' em espanhol" in data["answer_text"]
+    assert "espanhol" in [s["lang"] for s in data["speech_segments"]]
 
 
 def test_palavra_fora_do_vocabulario_responde_honestamente_sem_inventar(client):
@@ -187,3 +189,39 @@ def test_indice_em_memoria_enxerga_conteudo_novo_sem_reiniciar(client, monkeypat
     _seed("Como se escreve 'girafa' em inglês?", "Giraffe", "'girafa' se traduz como 'Giraffe' em inglês.")
     data = _ask(client, "como se escreve girafa em inglês").json()
     assert data["found"] is True and data["answer_text"].endswith("'Giraffe' em inglês.")
+
+
+def test_varias_opcoes_no_mesmo_idioma_aparecem_juntas(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    _seed("Como se escreve 'banco' em inglês?", "Bank", "'banco' se traduz como 'Bank' em inglês.")
+    _seed("Como se escreve 'banco' em inglês?", "Bench", "'banco' se traduz como 'Bench' em inglês.", territory_id="ingles_intermediario")
+    data = _ask(client, "como se escreve banco em inglês").json()
+    assert data["answer_text"] == "'banco' se traduz como 'Bank' ou 'Bench' em inglês."
+    langs = [(s["lang"], s["text"]) for s in data["speech_segments"]]
+    assert ("ingles", "Bank") in langs and ("ingles", "Bench") in langs and ("pt", "ou") in langs
+
+
+def test_sem_idioma_na_pergunta_mostra_os_tres_idiomas(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    _seed("Como se escreve 'leite' em inglês?", "Milk", "'leite' se traduz como 'Milk' em inglês.")
+    _seed("Como se escreve 'leite' em espanhol?", "Leche", "'leite' se traduz como 'Leche' em espanhol.", territory_id="espanhol_basico")
+    _seed("Como se escreve 'leite' em francês?", "Lait", "'leite' se traduz como 'Lait' em francês.", territory_id="frances_basico")
+    data = _ask(client, "o que significa leite").json()
+    assert data["answer_text"] == "'leite' se traduz como 'Milk' em inglês, 'Leche' em espanhol e 'Lait' em francês."
+    assert [s["lang"] for s in data["speech_segments"] if s["lang"] != "pt"] == ["ingles", "espanhol", "frances"]
+
+
+def test_termo_estrangeiro_com_varios_significados(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    _seed("Como se escreve 'leve' em inglês?", "Light", "'leve' se traduz como 'Light' em inglês.")
+    _seed("Como se escreve 'luz' em inglês?", "Light", "'luz' se traduz como 'Light' em inglês.", territory_id="ingles_intermediario")
+    data = _ask(client, "o que significa Light").json()
+    assert data["answer_text"] == "'Light' em inglês significa 'leve' ou 'luz'."
+
+
+def test_frase_fora_do_vocabulario_devolve_intencao_de_traduzir_no_aparelho(client):
+    data = _ask(client, "como eu digo eu quero um café em inglês").json()
+    assert data["found"] is False and data["intent"] == "translate"
+    assert data["phrase"] == "eu quero um café" and data["target_language"] == "ingles"
+    auto = _ask(client, "o que significa I want a coffee").json()
+    assert auto["intent"] == "translate_auto" and auto["phrase"] == "I want a coffee"

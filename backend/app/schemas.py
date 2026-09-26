@@ -1296,6 +1296,10 @@ class MentalLingoAskOut(BaseModel):
     suggestion_key: MentalLingoSuggestionKey | None = None
     reviewed: bool = True
     speech_segments: list[SpeechSegment] | None = None
+    # 'translate' (frase pt -> idioma-alvo) ou 'translate_auto' (frase de idioma desconhecido -> pt):
+    # a tradução em si é feita no aparelho; `phrase` é o texto a traduzir.
+    intent: str | None = None
+    phrase: str | None = None
 
 
 class MentalLingoFeedbackRequest(BaseModel):

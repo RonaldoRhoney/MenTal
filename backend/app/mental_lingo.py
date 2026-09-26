@@ -50,7 +50,12 @@ _LIBRAS_KEYWORDS = ("libras", "língua de sinais", "lingua de sinais", "linguage
 # descobre, buscando nos 3 idiomas ao mesmo tempo).
 _ASK_PATTERNS = [
     re.compile(r"^como (?:se|é que se) (?:escreve|diz|fala)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
-    re.compile(r"^traduz[ao]?\s+(?:a palavra\s+)?(.+?)\s+(?:para|em)\s+(\w+)\??$", re.IGNORECASE),
+    # Formas mais naturais de falar (26/09/2026, "aceitar perguntas com frases"):
+    # "como eu falo/digo X em inglês", "como posso dizer X em inglês", "como é X em inglês"...
+    re.compile(r"^como (?:eu )?(?:posso |consigo |faço para )?(?:falo|digo|dizer|falar|escrever|escrevo)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
+    re.compile(r"^como (?:é|seria|fica)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
+    re.compile(r"^(?:diga|fale|escreva)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
+    re.compile(r"^tradu(?:z|za|zo|zir)\s+(?:a palavra\s+|a frase\s+)?(.+?)\s+(?:para|em)\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)\s+(?:para|em)\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^o que\s+(?:significa|quer dizer)\s+(.+?)\??$", re.IGNORECASE),
 ]
@@ -243,6 +248,86 @@ def _found(entry: _VocabEntry, word: str) -> dict:
     }
 
 
+_LANG_ORDER = ("ingles", "espanhol", "frances")
+_LANG_DISPLAY = {"ingles": "inglês", "espanhol": "espanhol", "frances": "francês"}
+
+
+def _dedupe(entries: list[_VocabEntry], by_meaning: bool = False) -> list[_VocabEntry]:
+    """Mesma palavra do mesmo idioma pode estar em vários níveis: conta uma vez só. Na busca
+    pelo termo estrangeiro (`by_meaning`), significados diferentes da mesma palavra contam
+    separados (ex.: 'Light' = 'leve' e 'luz')."""
+    seen: set[tuple] = set()
+    out = []
+    for e in entries:
+        key = (_language_of_territory(e.territory_id), e.correct, e.meaning if by_meaning else None)
+        if key not in seen:
+            seen.add(key)
+            out.append(e)
+    return out
+
+
+def _join_terms(terms: list[str]) -> str:
+    quoted = [f"'{t}'" for t in terms]
+    return quoted[0] if len(quoted) == 1 else ", ".join(quoted[:-1]) + " ou " + quoted[-1]
+
+
+def _found_many(matches: list[_VocabEntry], word: str) -> dict:
+    """Resposta a partir de 1+ opções curadas de um termo em português. Com UMA opção devolve
+    a própria explicação curada (texto idêntico ao dos Desafios); com várias, monta a frase."""
+    if len(matches) == 1:
+        return _found(matches[0], word)
+    by_lang: dict[str, list[str]] = {}
+    for e in sorted(matches, key=lambda e: _LANG_ORDER.index(_language_of_territory(e.territory_id))):
+        by_lang.setdefault(_language_of_territory(e.territory_id), []).append(e.correct_answer)
+    langs = list(by_lang)
+    text_parts: list[str] = []
+    segments: list[dict] = []
+    if len(langs) == 1:
+        lang, terms = langs[0], by_lang[langs[0]]
+        text = f"'{word}' se traduz como {_join_terms(terms)} em {_LANG_DISPLAY[lang]}."
+        segments = [{"lang": "pt", "text": f"{word} se traduz como"}]
+        for i, t in enumerate(terms):
+            if i:
+                segments.append({"lang": "pt", "text": "ou"})
+            segments.append({"lang": lang, "text": t})
+        segments.append({"lang": "pt", "text": f"em {_LANG_DISPLAY[lang]}"})
+        return {"found": True, "answer_text": text, "matched_word": word, "target_language": lang, "speech_segments": segments}
+    segments = [{"lang": "pt", "text": f"{word} se traduz como"}]
+    for i, lang in enumerate(langs):
+        terms = by_lang[lang]
+        text_parts.append(f"{_join_terms(terms)} em {_LANG_DISPLAY[lang]}")
+        if i:
+            segments.append({"lang": "pt", "text": "e" if i == len(langs) - 1 else ","})
+        for j, t in enumerate(terms):
+            if j:
+                segments.append({"lang": "pt", "text": "ou"})
+            segments.append({"lang": lang, "text": t})
+        segments.append({"lang": "pt", "text": f"em {_LANG_DISPLAY[lang]}"})
+    joined = ", ".join(text_parts[:-1]) + " e " + text_parts[-1]
+    return {"found": True, "answer_text": f"'{word}' se traduz como {joined}.", "matched_word": word,
+            "target_language": langs[0], "speech_segments": segments}
+
+
+def _found_from_foreign(matches: list[_VocabEntry], word: str) -> dict:
+    """Termo no idioma estrangeiro -> uma ou mais traduções em português."""
+    if len(matches) == 1:
+        return _found(matches[0], word)
+    meanings = []
+    for e in matches:
+        m = e.meaning or ""
+        if m and m not in meanings:
+            meanings.append(m)
+    lang = _language_of_territory(matches[0].territory_id)
+    if len(meanings) < 2:
+        return _found(matches[0], word)
+    text = f"'{word}' em {_LANG_DISPLAY[lang]} significa {_join_terms(meanings)}."
+    segments = [
+        {"lang": lang, "text": word},
+        {"lang": "pt", "text": f"em {_LANG_DISPLAY[lang]} significa {' ou '.join(meanings)}"},
+    ]
+    return {"found": True, "answer_text": text, "matched_word": word, "target_language": lang, "speech_segments": segments}
+
+
 def answer_question(db: Session, question: str) -> dict:
     question = (question or "").strip()
     if not question:
@@ -275,15 +360,30 @@ def answer_question(db: Session, question: str) -> dict:
     entries = _vocab_entries(db)
     allowed = set(territory_ids)
 
-    # 1) a palavra perguntada é o termo em PORTUGUÊS (ex.: "casa" -> "House").
-    for entry in entries:
-        if entry.territory_id in allowed and entry.meaning == word_norm:
-            return _found(entry, word)
+    # 1) a palavra perguntada é o termo em PORTUGUÊS (ex.: "casa" -> "House"). Reúne TODAS as
+    # opções curadas: mais de uma tradução no mesmo idioma e, sem idioma na pergunta, os 3
+    # idiomas (pedido de Rhoney, 26/09/2026: "apresentar mais de uma palavra quando houver").
+    pt_matches = _dedupe([e for e in entries if e.territory_id in allowed and e.meaning == word_norm])
+    if pt_matches:
+        return _found_many(pt_matches, word)
 
     # 2) a palavra perguntada é o termo NO IDIOMA-ALVO (ex.: "house" -> "casa").
-    for entry in entries:
-        if entry.territory_id in allowed and entry.correct == word_norm:
-            return _found(entry, word)
+    en_matches = _dedupe([e for e in entries if e.territory_id in allowed and e.correct == word_norm], by_meaning=True)
+    if en_matches:
+        return _found_from_foreign(en_matches, word)
+
+    # Frase (2+ palavras) fora do vocabulário curado: não é lacuna de dicionário — quem
+    # traduz é o próprio aparelho (Google ML Kit, gratuito e offline; ver o app). O servidor
+    # só reconhece a INTENÇÃO e devolve a frase limpa; nunca gera tradução.
+    if " " in word_norm:
+        return {
+            "found": False,
+            "intent": "translate" if target else "translate_auto",
+            "phrase": word,
+            "answer_text": f"Vou traduzir '{word}'.",
+            "matched_word": word,
+            "target_language": target,
+        }
 
     _record_gap(db, word, target)
     suggestion = _suggestion_for(db, word_norm, target)
