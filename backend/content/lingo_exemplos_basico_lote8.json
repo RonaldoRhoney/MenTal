@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Soccer",
+    "word_pt": "futebol",
+    "sentence": "We play soccer every weekend.",
+    "translation": "Nós jogamos futebol todo fim de semana."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Basketball",
+    "word_pt": "basquete",
+    "sentence": "He loves to play basketball.",
+    "translation": "Ele adora jogar basquete."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Tennis",
+    "word_pt": "tênis",
+    "sentence": "She plays tennis on Saturdays.",
+    "translation": "Ela joga tênis aos sábados."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Race",
+    "word_pt": "corrida",
+    "sentence": "The race starts at nine.",
+    "translation": "A corrida começa às nove."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Goal",
+    "word_pt": "gol",
+    "sentence": "He scores a goal.",
+    "translation": "Ele marca um gol."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Score",
+    "word_pt": "placar",
+    "sentence": "What is the score of the game?",
+    "translation": "Qual é o placar do jogo?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Coach",
+    "word_pt": "treinador",
+    "sentence": "Our coach is very strict.",
+    "translation": "Nosso treinador é muito rígido."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Player",
+    "word_pt": "jogador",
+    "sentence": "He is the best player on the team.",
+    "translation": "Ele é o melhor jogador do time."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Champion",
+    "word_pt": "campeão",
+    "sentence": "She is the champion this year.",
+    "translation": "Ela é a campeã este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Prize",
+    "word_pt": "prêmio",
+    "sentence": "He wins a big prize.",
+    "translation": "Ele ganha um prêmio grande."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Gold",
+    "word_pt": "ouro",
+    "sentence": "The ring is made of gold.",
+    "translation": "O anel é feito de ouro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Silver",
+    "word_pt": "prata",
+    "sentence": "She wears a silver necklace.",
+    "translation": "Ela usa um colar de prata."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wood",
+    "word_pt": "madeira",
+    "sentence": "The table is made of wood.",
+    "translation": "A mesa é feita de madeira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Iron",
+    "word_pt": "ferro",
+    "sentence": "The gate is made of iron.",
+    "translation": "O portão é feito de ferro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Steel",
+    "word_pt": "aço",
+    "sentence": "The bridge is made of steel.",
+    "translation": "A ponte é feita de aço."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cotton",
+    "word_pt": "algodão",
+    "sentence": "This shirt is made of cotton.",
+    "translation": "Esta camisa é feita de algodão."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Leather",
+    "word_pt": "couro",
+    "sentence": "He wears a leather jacket.",
+    "translation": "Ele usa uma jaqueta de couro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wool",
+    "word_pt": "lã",
+    "sentence": "The sweater is made of wool.",
+    "translation": "O suéter é feito de lã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Silk",
+    "word_pt": "seda",
+    "sentence": "The dress is made of silk.",
+    "translation": "O vestido é feito de seda."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Plastic",
+    "word_pt": "plástico",
+    "sentence": "The bottle is made of plastic.",
+    "translation": "A garrafa é feita de plástico."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "World",
+    "word_pt": "mundo",
+    "sentence": "She wants to travel the world.",
+    "translation": "Ela quer viajar pelo mundo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Flag",
+    "word_pt": "bandeira",
+    "sentence": "The flag is red and white.",
+    "translation": "A bandeira é vermelha e branca."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "North",
+    "word_pt": "norte",
+    "sentence": "We drive to the north.",
+    "translation": "Nós dirigimos para o norte."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "South",
+    "word_pt": "sul",
+    "sentence": "They live in the south.",
+    "translation": "Eles moram no sul."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "East",
+    "word_pt": "leste",
+    "sentence": "The sun rises in the east.",
+    "translation": "O sol nasce no leste."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "West",
+    "word_pt": "oeste",
+    "sentence": "The sun sets in the west.",
+    "translation": "O sol se põe no oeste."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Coast",
+    "word_pt": "costa",
+    "sentence": "We live near the coast.",
+    "translation": "Nós moramos perto da costa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Citizen",
+    "word_pt": "cidadão",
+    "sentence": "She is a Brazilian citizen.",
+    "translation": "Ela é cidadã brasileira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Tourist",
+    "word_pt": "turista",
+    "sentence": "A tourist takes a photo.",
+    "translation": "Um turista tira uma foto."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Passport",
+    "word_pt": "passaporte",
+    "sentence": "I need my passport to travel.",
+    "translation": "Eu preciso do meu passaporte para viajar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fridge",
+    "word_pt": "geladeira",
+    "sentence": "The milk is in the fridge.",
+    "translation": "O leite está na geladeira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Stove",
+    "word_pt": "fogão",
+    "sentence": "She cooks on the stove.",
+    "translation": "Ela cozinha no fogão."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sink",
+    "word_pt": "pia",
+    "sentence": "He washes his hands at the sink.",
+    "translation": "Ele lava as mãos na pia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Faucet",
+    "word_pt": "torneira",
+    "sentence": "Turn off the faucet, please.",
+    "translation": "Feche a torneira, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Toilet",
+    "word_pt": "vaso sanitário",
+    "sentence": "The toilet is clean.",
+    "translation": "O vaso sanitário está limpo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Shower",
+    "word_pt": "chuveiro",
+    "sentence": "I take a shower every morning.",
+    "translation": "Eu tomo banho de chuveiro toda manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bathtub",
+    "word_pt": "banheira",
+    "sentence": "The baby plays in the bathtub.",
+    "translation": "O bebê brinca na banheira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Comb",
+    "word_pt": "pente",
+    "sentence": "She uses a comb every day.",
+    "translation": "Ela usa um pente todos os dias."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Toothbrush",
+    "word_pt": "escova de dentes",
+    "sentence": "I keep my toothbrush in the bathroom.",
+    "translation": "Eu guardo minha escova de dentes no banheiro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Mattress",
+    "word_pt": "colchão",
+    "sentence": "The mattress is very soft.",
+    "translation": "O colchão é muito macio."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Count",
+    "word_pt": "contar números",
+    "sentence": "I count the apples in the basket.",
+    "translation": "Eu conto as maçãs na cesta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Stack",
+    "word_pt": "empilhar",
+    "sentence": "I stack the books on the table.",
+    "translation": "Eu empilho os livros na mesa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Build",
+    "word_pt": "construir",
+    "sentence": "They build a new house.",
+    "translation": "Eles constroem uma casa nova."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cover",
+    "word_pt": "cobrir",
+    "sentence": "I cover the food with a napkin.",
+    "translation": "Eu cubro a comida com um guardanapo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Mix",
+    "word_pt": "misturar",
+    "sentence": "I mix the flour and the sugar.",
+    "translation": "Eu misturo a farinha e o açúcar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pack",
+    "word_pt": "empacotar",
+    "sentence": "I pack my bag for the trip.",
+    "translation": "Eu empacoto a mala para a viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Melt",
+    "word_pt": "derreter",
+    "sentence": "The ice starts to melt.",
+    "translation": "O gelo começa a derreter."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Freeze",
+    "word_pt": "congelar",
+    "sentence": "I freeze the meat for later.",
+    "translation": "Eu congelo a carne para depois."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Boil",
+    "word_pt": "ferver",
+    "sentence": "I boil the water for tea.",
+    "translation": "Eu fervo a água para o chá."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bake",
+    "word_pt": "assar",
+    "sentence": "I bake a cake for the party.",
+    "translation": "Eu asso um bolo para a festa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Borrow",
+    "word_pt": "pegar emprestado",
+    "sentence": "Can I borrow your pen?",
+    "translation": "Posso pegar sua caneta emprestada?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lend",
+    "word_pt": "emprestar",
+    "sentence": "Can you lend me some money?",
+    "translation": "Você pode me emprestar um dinheiro?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Spend",
+    "word_pt": "gastar",
+    "sentence": "I spend too much money on clothes.",
+    "translation": "Eu gasto muito dinheiro com roupas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Waste",
+    "word_pt": "desperdiçar",
+    "sentence": "Don't waste your time.",
+    "translation": "Não desperdice seu tempo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Invite",
+    "word_pt": "convidar",
+    "sentence": "I invite my friends to the party.",
+    "translation": "Eu convido meus amigos para a festa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Agree",
+    "word_pt": "concordar",
+    "sentence": "I agree with you.",
+    "translation": "Eu concordo com você."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Refuse",
+    "word_pt": "recusar",
+    "sentence": "I refuse to eat vegetables.",
+    "translation": "Eu recuso comer legumes."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Promise",
+    "word_pt": "prometer",
+    "sentence": "I promise to help you.",
+    "translation": "Eu prometo te ajudar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Forgive",
+    "word_pt": "perdoar",
+    "sentence": "Please forgive me.",
+    "translation": "Por favor, me perdoe."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Warn",
+    "word_pt": "avisar",
+    "sentence": "I warn him about the danger.",
+    "translation": "Eu aviso ele sobre o perigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Ugly",
+    "word_pt": "feio",
+    "sentence": "The old shoes are ugly.",
+    "translation": "Os sapatos velhos são feios."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pretty",
+    "word_pt": "bonitinho",
+    "sentence": "She has a pretty smile.",
+    "translation": "Ela tem um sorriso bonitinho."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bald",
+    "word_pt": "careca",
+    "sentence": "My grandfather is bald.",
+    "translation": "Meu avô é careca."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Blond",
+    "word_pt": "loiro",
+    "sentence": "She has blond hair.",
+    "translation": "Ela tem cabelo loiro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pale",
+    "word_pt": "pálido",
+    "sentence": "He looks pale today.",
+    "translation": "Ele parece pálido hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sleepy",
+    "word_pt": "sonolento",
+    "sentence": "I feel sleepy after lunch.",
+    "translation": "Eu me sinto sonolento depois do almoço."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Healthy",
+    "word_pt": "saudável",
+    "sentence": "She eats healthy food.",
+    "translation": "Ela come comida saudável."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hungry",
+    "word_pt": "com fome",
+    "sentence": "I am very hungry.",
+    "translation": "Eu estou com muita fome."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Thirsty",
+    "word_pt": "com sede",
+    "sentence": "He is thirsty after running.",
+    "translation": "Ele está com sede depois de correr."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Dizzy",
+    "word_pt": "tonto",
+    "sentence": "I feel dizzy right now.",
+    "translation": "Eu estou tonto agora."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Firefighter",
+    "word_pt": "bombeiro",
+    "sentence": "The firefighter saves the cat.",
+    "translation": "O bombeiro salva o gato."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Mechanic",
+    "word_pt": "mecânico",
+    "sentence": "The mechanic fixes my car.",
+    "translation": "O mecânico conserta meu carro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Baker",
+    "word_pt": "padeiro",
+    "sentence": "The baker makes fresh bread.",
+    "translation": "O padeiro faz pão fresco."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Plumber",
+    "word_pt": "encanador",
+    "sentence": "The plumber fixes the sink.",
+    "translation": "O encanador conserta a pia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Soldier",
+    "word_pt": "soldado",
+    "sentence": "The soldier protects the country.",
+    "translation": "O soldado protege o país."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Judge",
+    "word_pt": "juiz",
+    "sentence": "The judge listens carefully.",
+    "translation": "O juiz escuta com atenção."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Thief",
+    "word_pt": "ladrão",
+    "sentence": "The thief runs away fast.",
+    "translation": "O ladrão foge rápido."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Postman",
+    "word_pt": "carteiro",
+    "sentence": "The postman brings the mail.",
+    "translation": "O carteiro traz a correspondência."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sailor",
+    "word_pt": "marinheiro",
+    "sentence": "The sailor loves the sea.",
+    "translation": "O marinheiro adora o mar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Writer",
+    "word_pt": "escritor",
+    "sentence": "She is a famous writer.",
+    "translation": "Ela é uma escritora famosa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bug",
+    "word_pt": "bicho pequeno",
+    "sentence": "There is a bug on the leaf.",
+    "translation": "Há um bicho pequeno na folha."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Worm",
+    "word_pt": "minhoca",
+    "sentence": "The bird eats a worm.",
+    "translation": "O pássaro come uma minhoca."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wing",
+    "word_pt": "asa",
+    "sentence": "The bird has a hurt wing.",
+    "translation": "O pássaro tem uma asa machucada."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Tail",
+    "word_pt": "rabo",
+    "sentence": "The dog wags its tail.",
+    "translation": "O cachorro balança o rabo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Feather",
+    "word_pt": "pena de ave",
+    "sentence": "A feather falls from the bird.",
+    "translation": "Uma pena cai do pássaro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Nest",
+    "word_pt": "ninho",
+    "sentence": "The bird builds a nest.",
+    "translation": "O pássaro constrói um ninho."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Horn",
+    "word_pt": "chifre",
+    "sentence": "The bull has a big horn.",
+    "translation": "O touro tem um chifre grande."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Paw",
+    "word_pt": "pata",
+    "sentence": "The dog hurts its paw.",
+    "translation": "O cachorro machuca a pata."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fur",
+    "word_pt": "pelo de animal",
+    "sentence": "The cat has soft fur.",
+    "translation": "O gato tem pelo macio."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Seed",
+    "word_pt": "semente",
+    "sentence": "She plants a seed in the garden.",
+    "translation": "Ela planta uma semente no jardim."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Air",
+    "word_pt": "ar",
+    "sentence": "The air is fresh here.",
+    "translation": "O ar é fresco aqui."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Shadow",
+    "word_pt": "sombra",
+    "sentence": "My shadow is very long.",
+    "translation": "Minha sombra é muito comprida."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fog",
+    "word_pt": "neblina",
+    "sentence": "The fog covers the city.",
+    "translation": "A neblina cobre a cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Thunder",
+    "word_pt": "trovão",
+    "sentence": "I hear thunder outside.",
+    "translation": "Eu ouço trovão lá fora."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lightning",
+    "word_pt": "raio",
+    "sentence": "The lightning is very bright.",
+    "translation": "O raio está muito brilhante."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Flood",
+    "word_pt": "enchente",
+    "sentence": "The flood damages the houses.",
+    "translation": "A enchente danifica as casas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Earthquake",
+    "word_pt": "terremoto",
+    "sentence": "The earthquake shakes the city.",
+    "translation": "O terremoto sacode a cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Volcano",
+    "word_pt": "vulcão",
+    "sentence": "The volcano is dangerous.",
+    "translation": "O vulcão é perigoso."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Dust",
+    "word_pt": "poeira",
+    "sentence": "There is dust on the table.",
+    "translation": "Há poeira na mesa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Mud",
+    "word_pt": "lama",
+    "sentence": "The kids play in the mud.",
+    "translation": "As crianças brincam na lama."
+  }
+]
