@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Meticulous",
+    "word_pt": "meticuloso",
+    "sentence": "She keeps meticulous records of every transaction.",
+    "translation": "Ela mantém registros meticulosos de cada transação."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ubiquitous",
+    "word_pt": "onipresente",
+    "sentence": "Smartphones have become ubiquitous in modern life.",
+    "translation": "Smartphones se tornaram onipresentes na vida moderna."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ephemeral",
+    "word_pt": "efêmero",
+    "sentence": "Fame in this industry is often ephemeral.",
+    "translation": "A fama nesta indústria costuma ser efêmera."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ingenious",
+    "word_pt": "engenhoso",
+    "sentence": "Her ingenious solution saves the company time and money.",
+    "translation": "A solução engenhosa dela poupa tempo e dinheiro para a empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Astute",
+    "word_pt": "perspicaz",
+    "sentence": "The astute investor spots the trend early.",
+    "translation": "O investidor perspicaz percebe a tendência cedo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Persuasive",
+    "word_pt": "persuasivo",
+    "sentence": "His persuasive argument convinces the entire board.",
+    "translation": "O argumento persuasivo dele convence o conselho inteiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Subtle",
+    "word_pt": "sutil",
+    "sentence": "There is a subtle difference between the two proposals.",
+    "translation": "Há uma diferença sutil entre as duas propostas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ambiguous",
+    "word_pt": "ambíguo",
+    "sentence": "The instructions are too ambiguous to follow.",
+    "translation": "As instruções são ambíguas demais para seguir."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pragmatic",
+    "word_pt": "pragmático",
+    "sentence": "We need a pragmatic approach to solve this crisis.",
+    "translation": "Nós precisamos de uma abordagem pragmática para resolver esta crise."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Reluctant",
+    "word_pt": "relutante",
+    "sentence": "He is reluctant to change his original plan.",
+    "translation": "Ele está relutante em mudar o plano original dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Haughty",
+    "word_pt": "arrogante",
+    "sentence": "Her haughty attitude alienates her colleagues.",
+    "translation": "A atitude arrogante dela afasta os colegas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hostile",
+    "word_pt": "hostil",
+    "sentence": "The negotiations become increasingly hostile.",
+    "translation": "As negociações ficam cada vez mais hostis."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Relentless",
+    "word_pt": "implacável",
+    "sentence": "The team faces relentless pressure to deliver results.",
+    "translation": "A equipe enfrenta pressão implacável para entregar resultados."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Vulnerable",
+    "word_pt": "vulnerável",
+    "sentence": "The report exposes a vulnerable point in the system.",
+    "translation": "O relatório expõe um ponto vulnerável no sistema."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sarcastic",
+    "word_pt": "sarcástico",
+    "sentence": "His sarcastic comment offends several people.",
+    "translation": "O comentário sarcástico dele ofende várias pessoas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Obstinate",
+    "word_pt": "obstinado",
+    "sentence": "The obstinate committee refuses to reconsider the decision.",
+    "translation": "O comitê obstinado se recusa a reconsiderar a decisão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pretentious",
+    "word_pt": "pretensioso",
+    "sentence": "Critics call the film pretentious and shallow.",
+    "translation": "Críticos chamam o filme de pretensioso e raso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cynical",
+    "word_pt": "cínico",
+    "sentence": "She grows cynical after years in politics.",
+    "translation": "Ela se torna cínica depois de anos na política."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Scornful",
+    "word_pt": "desdenhoso",
+    "sentence": "His scornful tone undermines the whole discussion.",
+    "translation": "O tom desdenhoso dele prejudica a discussão inteira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Gullible",
+    "word_pt": "crédulo",
+    "sentence": "The scam only works on gullible investors.",
+    "translation": "O golpe só funciona com investidores crédulos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mitigate",
+    "word_pt": "mitigar",
+    "sentence": "New regulations aim to mitigate the environmental damage.",
+    "translation": "Novas regulamentações visam mitigar o dano ambiental."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Exacerbate",
+    "word_pt": "exacerbar",
+    "sentence": "This delay will only exacerbate the tension.",
+    "translation": "Este atraso só vai exacerbar a tensão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Elucidate",
+    "word_pt": "elucidar",
+    "sentence": "I elucidate the theory with a clear example.",
+    "translation": "Eu elucido a teoria com um exemplo claro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Corroborate",
+    "word_pt": "corroborar",
+    "sentence": "Two independent witnesses corroborate her account.",
+    "translation": "Duas testemunhas independentes corroboram o relato dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ratify",
+    "word_pt": "ratificar",
+    "sentence": "Congress votes to ratify the international treaty.",
+    "translation": "O Congresso vota para ratificar o tratado internacional."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Subjugate",
+    "word_pt": "subjugar",
+    "sentence": "The empire attempts to subjugate the neighboring territories.",
+    "translation": "O império tenta subjugar os territórios vizinhos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dispel",
+    "word_pt": "dissipar",
+    "sentence": "Her calm explanation helps dispel the rumors.",
+    "translation": "A explicação calma dela ajuda a dissipar os boatos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Extol",
+    "word_pt": "enaltecer",
+    "sentence": "The critics extol the film's stunning cinematography.",
+    "translation": "Os críticos enaltecem a cinematografia impressionante do filme."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rebuke",
+    "word_pt": "censurar",
+    "sentence": "I rebuke the player for his careless mistake.",
+    "translation": "Eu censuro o jogador pelo erro descuidado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Suppress",
+    "word_pt": "reprimir",
+    "sentence": "The government tries to suppress the growing protests.",
+    "translation": "O governo tenta reprimir os protestos crescentes."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dispense",
+    "word_pt": "prescindir",
+    "sentence": "We dispense with the usual paperwork in emergencies.",
+    "translation": "Nós prescindimos da papelada habitual em emergências."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Obtain",
+    "word_pt": "obter",
+    "sentence": "I obtain permission to publish the confidential report.",
+    "translation": "Eu obtenho permissão para publicar o relatório confidencial."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Aspire",
+    "word_pt": "almejar",
+    "sentence": "Many young engineers aspire to work at that company.",
+    "translation": "Muitos jovens engenheiros almejam trabalhar naquela empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Adhere",
+    "word_pt": "aderir",
+    "sentence": "Employees must adhere to the new safety guidelines.",
+    "translation": "Os funcionários devem aderir às novas diretrizes de segurança."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Abdicate",
+    "word_pt": "abdicar",
+    "sentence": "The king decides to abdicate the throne in favor of his son.",
+    "translation": "O rei decide abdicar do trono em favor do filho."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Relegate",
+    "word_pt": "relegar",
+    "sentence": "I relegate the task to a junior employee.",
+    "translation": "Eu relego a tarefa a um funcionário júnior."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Proliferate",
+    "word_pt": "proliferar",
+    "sentence": "Misinformation continues to proliferate on social media.",
+    "translation": "A desinformação continua a proliferar nas redes sociais."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Perpetuate",
+    "word_pt": "perpetuar",
+    "sentence": "This policy will only perpetuate existing inequality.",
+    "translation": "Esta política só vai perpetuar a desigualdade já existente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Flaunt",
+    "word_pt": "ostentar",
+    "sentence": "I never flaunt my success in front of others.",
+    "translation": "Eu nunca ostento meu sucesso na frente dos outros."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Foster",
+    "word_pt": "fomentar",
+    "sentence": "The program aims to foster creativity among students.",
+    "translation": "O programa visa fomentar a criatividade entre os alunos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Skepticism",
+    "word_pt": "ceticismo",
+    "sentence": "Scientists greet the new claim with cautious skepticism.",
+    "translation": "Os cientistas recebem a nova alegação com ceticismo cauteloso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hypocrisy",
+    "word_pt": "hipocrisia",
+    "sentence": "Voters resent the hypocrisy of the candidate's promises.",
+    "translation": "Os eleitores ressentem a hipocrisia das promessas do candidato."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Integrity",
+    "word_pt": "integridade",
+    "sentence": "She earns respect through her professional integrity.",
+    "translation": "Ela conquista respeito através da integridade profissional dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Privilege",
+    "word_pt": "privilégio",
+    "sentence": "He acknowledges the privilege of his upbringing.",
+    "translation": "Ele reconhece o privilégio da criação dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Prejudice",
+    "word_pt": "preconceito",
+    "sentence": "The workshop addresses unconscious prejudice in hiring.",
+    "translation": "A oficina aborda o preconceito inconsciente nas contratações."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Yearning",
+    "word_pt": "anseio",
+    "sentence": "A deep yearning for change drives the movement.",
+    "translation": "Um anseio profundo por mudança impulsiona o movimento."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dissent",
+    "word_pt": "dissidência",
+    "sentence": "The council allows open dissent during meetings.",
+    "translation": "O conselho permite divergência aberta durante as reuniões."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Expertise",
+    "word_pt": "perícia",
+    "sentence": "Her expertise in tax law proves invaluable to the firm.",
+    "translation": "O conhecimento especializado dela em direito tributário se mostra inestimável para a firma."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pitfall",
+    "word_pt": "armadilha oculta",
+    "sentence": "The contract contains a hidden pitfall for new tenants.",
+    "translation": "O contrato contém uma armadilha oculta para novos inquilinos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Setback",
+    "word_pt": "percalço",
+    "sentence": "The project suffers a major setback after the resignation.",
+    "translation": "O projeto sofre um grande percalço depois da renúncia."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sovereignty",
+    "word_pt": "soberania",
+    "sentence": "The nation fiercely defends its sovereignty.",
+    "translation": "A nação defende ferozmente sua soberania."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Legitimacy",
+    "word_pt": "legitimidade",
+    "sentence": "Critics question the legitimacy of the election results.",
+    "translation": "Críticos questionam a legitimidade dos resultados da eleição."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bureaucracy",
+    "word_pt": "burocracia",
+    "sentence": "Small businesses struggle with excessive bureaucracy.",
+    "translation": "Pequenas empresas enfrentam dificuldades com burocracia excessiva."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Diplomacy",
+    "word_pt": "diplomacia",
+    "sentence": "The crisis is resolved through careful diplomacy.",
+    "translation": "A crise é resolvida por meio de diplomacia cuidadosa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hegemony",
+    "word_pt": "hegemonia",
+    "sentence": "The book examines the hegemony of a single industry.",
+    "translation": "O livro examina a hegemonia de uma única indústria."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Oligarchy",
+    "word_pt": "oligarquia",
+    "sentence": "Analysts describe the country as a modern oligarchy.",
+    "translation": "Analistas descrevem o país como uma oligarquia moderna."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Referendum",
+    "word_pt": "plebiscito",
+    "sentence": "The government schedules a referendum for next year.",
+    "translation": "O governo agenda um plebiscito para o próximo ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bribery",
+    "word_pt": "suborno",
+    "sentence": "The official faces charges of bribery and corruption.",
+    "translation": "O funcionário enfrenta acusações de suborno e corrupção."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Census",
+    "word_pt": "censo",
+    "sentence": "The national census takes place every ten years.",
+    "translation": "O censo nacional acontece a cada dez anos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Amnesty",
+    "word_pt": "anistia",
+    "sentence": "The government grants amnesty to political prisoners.",
+    "translation": "O governo concede anistia a presos políticos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Defendant",
+    "word_pt": "réu",
+    "sentence": "The defendant pleads not guilty to the charges.",
+    "translation": "O réu se declara inocente das acusações."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Prosecutor",
+    "word_pt": "promotor de justiça",
+    "sentence": "The prosecutor presents new evidence in court.",
+    "translation": "O promotor de justiça apresenta novas provas no tribunal."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Juror",
+    "word_pt": "jurado",
+    "sentence": "Each juror must remain impartial throughout the trial.",
+    "translation": "Cada jurado deve permanecer imparcial durante todo o julgamento."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Testimony",
+    "word_pt": "depoimento",
+    "sentence": "Her testimony proves crucial to the case.",
+    "translation": "O depoimento dela se mostra crucial para o caso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Subpoena",
+    "word_pt": "intimação judicial",
+    "sentence": "The court issues a subpoena for the missing documents.",
+    "translation": "O tribunal emite uma intimação judicial para os documentos ausentes."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Compensation",
+    "word_pt": "indenização",
+    "sentence": "The victims receive full compensation for their losses.",
+    "translation": "As vítimas recebem indenização integral pelas perdas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Inheritance",
+    "word_pt": "herança",
+    "sentence": "She uses her inheritance to start a business.",
+    "translation": "Ela usa a herança dela para abrir um negócio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Clause",
+    "word_pt": "cláusula",
+    "sentence": "Read the clause carefully before signing the contract.",
+    "translation": "Leia a cláusula com atenção antes de assinar o contrato."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Offense",
+    "word_pt": "infração",
+    "sentence": "The company commits a serious offense under the new law.",
+    "translation": "A empresa comete uma infração grave sob a nova lei."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Litigation",
+    "word_pt": "litígio",
+    "sentence": "The dispute leads to years of costly litigation.",
+    "translation": "A disputa leva a anos de litígio caro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Catalyst",
+    "word_pt": "catalisador",
+    "sentence": "The scandal acts as a catalyst for reform.",
+    "translation": "O escândalo funciona como um catalisador para a reforma."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Entropy",
+    "word_pt": "entropia",
+    "sentence": "The system tends toward greater entropy over time.",
+    "translation": "O sistema tende a uma entropia maior com o tempo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mutation",
+    "word_pt": "mutação",
+    "sentence": "A single mutation can change an entire species.",
+    "translation": "Uma única mutação pode mudar uma espécie inteira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ecosystem",
+    "word_pt": "ecossistema",
+    "sentence": "Pollution disrupts the delicate ecosystem of the lake.",
+    "translation": "A poluição perturba o ecossistema delicado do lago."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Biodiversity",
+    "word_pt": "biodiversidade",
+    "sentence": "The rainforest holds extraordinary biodiversity.",
+    "translation": "A floresta tropical abriga uma biodiversidade extraordinária."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Genome",
+    "word_pt": "genoma",
+    "sentence": "Scientists map the entire human genome.",
+    "translation": "Cientistas mapeiam o genoma humano inteiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Symbiosis",
+    "word_pt": "simbiose",
+    "sentence": "The two species live in perfect symbiosis.",
+    "translation": "As duas espécies vivem em perfeita simbiose."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Photon",
+    "word_pt": "fóton",
+    "sentence": "A single photon can trigger the sensor.",
+    "translation": "Um único fóton pode acionar o sensor."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Neutron",
+    "word_pt": "nêutron",
+    "sentence": "A neutron has no electric charge.",
+    "translation": "Um nêutron não tem carga elétrica."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Spectrum",
+    "word_pt": "espectro",
+    "sentence": "The light splits into a visible spectrum of colors.",
+    "translation": "A luz se divide num espectro visível de cores."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Monopoly",
+    "word_pt": "monopólio",
+    "sentence": "The company holds a monopoly over the local market.",
+    "translation": "A empresa detém um monopólio sobre o mercado local."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Payout",
+    "word_pt": "lucro distribuído",
+    "sentence": "Shareholders expect a generous payout this quarter.",
+    "translation": "Os acionistas esperam um lucro distribuído generoso neste trimestre."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mortgage",
+    "word_pt": "hipoteca",
+    "sentence": "They finally pay off their mortgage after twenty years.",
+    "translation": "Eles finalmente quitam a hipoteca depois de vinte anos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bankruptcy",
+    "word_pt": "falência",
+    "sentence": "The airline files for bankruptcy after the crisis.",
+    "translation": "A companhia aérea declara falência depois da crise."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Subsidy",
+    "word_pt": "subsídio",
+    "sentence": "The government offers a subsidy for renewable energy.",
+    "translation": "O governo oferece um subsídio para energia renovável."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tariff",
+    "word_pt": "tarifa alfandegária",
+    "sentence": "The new tariff raises the price of imported steel.",
+    "translation": "A nova tarifa alfandegária aumenta o preço do aço importado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Heir",
+    "word_pt": "herdeiro",
+    "sentence": "She names her nephew as the sole heir.",
+    "translation": "Ela nomeia o sobrinho dela como único herdeiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Assets",
+    "word_pt": "patrimônio",
+    "sentence": "The company sells its assets to pay off debt.",
+    "translation": "A empresa vende o patrimônio dela para quitar dívidas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Acquisition",
+    "word_pt": "aquisição",
+    "sentence": "The acquisition doubles the company's market share.",
+    "translation": "A aquisição dobra a fatia de mercado da empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Merger",
+    "word_pt": "fusão de empresas",
+    "sentence": "Shareholders approve the merger between the two firms.",
+    "translation": "Os acionistas aprovam a fusão entre as duas empresas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Refute",
+    "word_pt": "refutar",
+    "sentence": "I refute the claim with new data.",
+    "translation": "Eu refuto a alegação com dados novos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Allude",
+    "word_pt": "aludir",
+    "sentence": "I allude to a scandal without naming anyone.",
+    "translation": "Eu aludo a um escândalo sem nomear ninguém."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Postulate",
+    "word_pt": "postular",
+    "sentence": "I postulate a link between diet and disease.",
+    "translation": "Eu postulo uma ligação entre dieta e doença."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Contend",
+    "word_pt": "arguir",
+    "sentence": "Lawyers contend that the evidence is insufficient.",
+    "translation": "Os advogados sustentam que a prova é insuficiente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Speculate",
+    "word_pt": "especular",
+    "sentence": "Analysts speculate about the company's next move.",
+    "translation": "Analistas especulam sobre a próxima ação da empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Emphasize",
+    "word_pt": "enfatizar",
+    "sentence": "I emphasize the need for urgent action.",
+    "translation": "Eu enfatizo a necessidade de ação urgente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Illustrate",
+    "word_pt": "ilustrar",
+    "sentence": "I illustrate my point with a simple chart.",
+    "translation": "Eu ilustro meu ponto com um gráfico simples."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Justify",
+    "word_pt": "justificar",
+    "sentence": "He struggles to justify the sudden change in policy.",
+    "translation": "Ele tem dificuldade em justificar a mudança repentina na política."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dispute",
+    "word_pt": "contestar",
+    "sentence": "I dispute the company's official numbers.",
+    "translation": "Eu contesto os números oficiais da empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Retract",
+    "word_pt": "retratar-se",
+    "sentence": "I retract my false statement immediately.",
+    "translation": "Eu me retrato da minha declaração falsa imediatamente."
+  }
+]

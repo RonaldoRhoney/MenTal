@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Acquire",
+    "word_pt": "adquirir",
+    "sentence": "The company plans to acquire a smaller rival.",
+    "translation": "A empresa planeja adquirir uma rival menor."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Eliminate",
+    "word_pt": "eliminar",
+    "sentence": "The new process aims to eliminate unnecessary steps.",
+    "translation": "O novo processo visa eliminar etapas desnecessárias."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Proceed",
+    "word_pt": "prosseguir",
+    "sentence": "We proceed with the plan despite the risks.",
+    "translation": "Nós prosseguimos com o plano apesar dos riscos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Prevail",
+    "word_pt": "prevalecer",
+    "sentence": "I hope common sense will prevail in the debate.",
+    "translation": "Eu espero que o bom senso prevaleça no debate."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Compensate",
+    "word_pt": "compensar",
+    "sentence": "The airline agrees to compensate passengers for the delay.",
+    "translation": "A companhia aérea concorda em compensar os passageiros pelo atraso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Consolidate",
+    "word_pt": "consolidar",
+    "sentence": "The bank decides to consolidate its regional branches.",
+    "translation": "O banco decide consolidar as agências regionais dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mobilize",
+    "word_pt": "mobilizar",
+    "sentence": "Volunteers mobilize quickly after the earthquake.",
+    "translation": "Voluntários se mobilizam rapidamente depois do terremoto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Neutralize",
+    "word_pt": "neutralizar",
+    "sentence": "The vaccine helps neutralize the virus effectively.",
+    "translation": "A vacina ajuda a neutralizar o vírus com eficácia."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Obstruct",
+    "word_pt": "obstruir",
+    "sentence": "Fallen trees obstruct the main road after the storm.",
+    "translation": "Árvores caídas obstruem a estrada principal depois da tempestade."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Perpetrate",
+    "word_pt": "perpetrar",
+    "sentence": "Nobody wants to perpetrate a fraud like that.",
+    "translation": "Ninguém quer perpetrar uma fraude assim."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Initiative",
+    "word_pt": "iniciativa",
+    "sentence": "She takes the initiative to organize the event.",
+    "translation": "Ela toma a iniciativa de organizar o evento."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hierarchy",
+    "word_pt": "hierarquia",
+    "sentence": "The company follows a strict hierarchy of command.",
+    "translation": "A empresa segue uma hierarquia rígida de comando."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ideology",
+    "word_pt": "ideologia",
+    "sentence": "The two parties differ sharply in ideology.",
+    "translation": "Os dois partidos diferem fortemente em ideologia."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Subterfuge",
+    "word_pt": "subterfúgio",
+    "sentence": "He avoids the truth through clever subterfuge.",
+    "translation": "Ele evita a verdade através de um subterfúgio esperto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Consensus",
+    "word_pt": "consenso",
+    "sentence": "The team reaches consensus after a long discussion.",
+    "translation": "A equipe chega a um consenso depois de uma longa discussão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Jurisdiction",
+    "word_pt": "jurisdição",
+    "sentence": "This case falls outside the court's jurisdiction.",
+    "translation": "Este caso está fora da jurisdição do tribunal."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Legacy",
+    "word_pt": "legado",
+    "sentence": "His legacy lives on through the scholarship fund.",
+    "translation": "O legado dele continua vivo através do fundo de bolsas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Regression",
+    "word_pt": "retrocesso",
+    "sentence": "The economy shows signs of regression this quarter.",
+    "translation": "A economia mostra sinais de retrocesso neste trimestre."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Obstacle",
+    "word_pt": "obstáculo",
+    "sentence": "Lack of funding remains the biggest obstacle.",
+    "translation": "Falta de financiamento continua sendo o maior obstáculo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Premise",
+    "word_pt": "premissa",
+    "sentence": "The argument rests on a flawed premise.",
+    "translation": "O argumento se apoia numa premissa falha."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Inevitable",
+    "word_pt": "inevitável",
+    "sentence": "A price increase seems inevitable this year.",
+    "translation": "Um aumento de preço parece inevitável este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Substantial",
+    "word_pt": "substancial",
+    "sentence": "They make substantial progress on the project.",
+    "translation": "Eles fazem um progresso substancial no projeto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Plausible",
+    "word_pt": "plausível",
+    "sentence": "Her explanation sounds plausible under the circumstances.",
+    "translation": "A explicação dela soa plausível diante das circunstâncias."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Inherent",
+    "word_pt": "inerente",
+    "sentence": "Every job carries an inherent level of risk.",
+    "translation": "Todo emprego carrega um nível inerente de risco."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Volatile",
+    "word_pt": "volátil",
+    "sentence": "The stock market remains volatile this week.",
+    "translation": "O mercado de ações permanece volátil esta semana."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tangible",
+    "word_pt": "tangível",
+    "sentence": "The training program shows tangible results already.",
+    "translation": "O programa de treinamento já mostra resultados tangíveis."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Comprehensive",
+    "word_pt": "abrangente",
+    "sentence": "The report offers a comprehensive analysis of the market.",
+    "translation": "O relatório oferece uma análise abrangente do mercado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Superfluous",
+    "word_pt": "supérfluo",
+    "sentence": "Most of the details in the report seem superfluous.",
+    "translation": "A maioria dos detalhes no relatório parece supérflua."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Random",
+    "word_pt": "aleatório",
+    "sentence": "The winners are chosen at random from the list.",
+    "translation": "Os vencedores são escolhidos de forma aleatória na lista."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dispensable",
+    "word_pt": "dispensável",
+    "sentence": "In a crisis, luxury items become dispensable.",
+    "translation": "Numa crise, itens de luxo se tornam dispensáveis."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Agenda",
+    "word_pt": "pauta de reunião",
+    "sentence": "The manager sends the agenda before the meeting.",
+    "translation": "O gerente envia a pauta antes da reunião."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Minutes",
+    "word_pt": "ata de reunião",
+    "sentence": "She takes the minutes during every board meeting.",
+    "translation": "Ela redige a ata durante toda reunião do conselho."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Quorum",
+    "word_pt": "quórum",
+    "sentence": "The committee fails to reach a quorum today.",
+    "translation": "O comitê não consegue atingir o quórum hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Motion",
+    "word_pt": "moção",
+    "sentence": "He proposes a motion to postpone the vote.",
+    "translation": "Ele propõe uma moção para adiar a votação."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Proxy",
+    "word_pt": "procuração",
+    "sentence": "She votes by proxy since she cannot attend.",
+    "translation": "Ela vota por procuração já que não pode comparecer."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mandate",
+    "word_pt": "mandato",
+    "sentence": "The new manager receives a clear mandate for reform.",
+    "translation": "O novo gerente recebe um mandato claro para reformas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Deliverable",
+    "word_pt": "entregável de projeto",
+    "sentence": "The final deliverable is due next Friday.",
+    "translation": "O entregável final tem prazo para a próxima sexta-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stakeholder",
+    "word_pt": "parte interessada",
+    "sentence": "Every stakeholder receives a copy of the report.",
+    "translation": "Toda parte interessada recebe uma cópia do relatório."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Baseline",
+    "word_pt": "linha de base",
+    "sentence": "We compare the new data to the original baseline.",
+    "translation": "Nós comparamos os dados novos com a linha de base original."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bottleneck",
+    "word_pt": "gargalo",
+    "sentence": "Slow approval creates a major bottleneck in production.",
+    "translation": "A aprovação lenta cria um gargalo importante na produção."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Differentiate",
+    "word_pt": "diferenciar",
+    "sentence": "It is hard to differentiate the two similar products.",
+    "translation": "É difícil diferenciar os dois produtos parecidos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Contemplate",
+    "word_pt": "cogitar",
+    "sentence": "She sits quietly to contemplate her next move.",
+    "translation": "Ela fica sentada em silêncio para cogitar o próximo passo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Presume",
+    "word_pt": "presumir",
+    "sentence": "I presume the meeting will start on time.",
+    "translation": "Eu presumo que a reunião vai começar no horário."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Acknowledge",
+    "word_pt": "reconhecer o erro",
+    "sentence": "I finally acknowledge my mistake to the team.",
+    "translation": "Eu finalmente reconheço meu erro para a equipe."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Unravel",
+    "word_pt": "desvendar",
+    "sentence": "I slowly unravel the mystery behind the letter.",
+    "translation": "Eu desvendo lentamente o mistério por trás da carta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Decipher",
+    "word_pt": "decifrar",
+    "sentence": "Experts try to decipher the ancient inscription.",
+    "translation": "Especialistas tentam decifrar a inscrição antiga."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Reminisce",
+    "word_pt": "rememorar",
+    "sentence": "They reminisce about their college years.",
+    "translation": "Eles rememoram os anos de faculdade deles."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mistrust",
+    "word_pt": "desconfiar",
+    "sentence": "Voters mistrust the candidate's sudden promises.",
+    "translation": "Os eleitores desconfiam das promessas repentinas do candidato."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Perceive",
+    "word_pt": "captar",
+    "sentence": "I perceive a change in her tone during the call.",
+    "translation": "Eu capto uma mudança no tom dela durante a ligação."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fathom",
+    "word_pt": "compreender a fundo",
+    "sentence": "I cannot fathom why he made that decision.",
+    "translation": "Eu não consigo compreender a fundo por que ele tomou aquela decisão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tendon",
+    "word_pt": "tendão",
+    "sentence": "She strains a tendon during the race.",
+    "translation": "Ela distende um tendão durante a corrida."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Joint",
+    "word_pt": "articulação",
+    "sentence": "His knee joint hurts after the long hike.",
+    "translation": "A articulação do joelho dele dói depois da caminhada longa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bladder",
+    "word_pt": "bexiga",
+    "sentence": "The doctor examines his bladder for infection.",
+    "translation": "O médico examina a bexiga dele para verificar infecção."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Nerve",
+    "word_pt": "nervo",
+    "sentence": "A pinched nerve causes pain in her arm.",
+    "translation": "Um nervo comprimido causa dor no braço dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Thyroid",
+    "word_pt": "tireoide",
+    "sentence": "The doctor checks her thyroid during the exam.",
+    "translation": "O médico examina a tireoide dela durante o exame."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pancreas",
+    "word_pt": "pâncreas",
+    "sentence": "The pancreas produces insulin for the body.",
+    "translation": "O pâncreas produz insulina para o corpo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Marrow",
+    "word_pt": "medula óssea",
+    "sentence": "Bone marrow produces new blood cells.",
+    "translation": "A medula óssea produz novas células sanguíneas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Esophagus",
+    "word_pt": "esôfago",
+    "sentence": "Food travels down the esophagus to the stomach.",
+    "translation": "O alimento desce pelo esôfago até o estômago."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hormone",
+    "word_pt": "hormônio",
+    "sentence": "Stress affects the level of this hormone.",
+    "translation": "Estresse afeta o nível deste hormônio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Gland",
+    "word_pt": "glândula",
+    "sentence": "The gland regulates hormones in the body.",
+    "translation": "A glândula regula hormônios no corpo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Anchor",
+    "word_pt": "âncora",
+    "sentence": "The sailor drops the anchor near the shore.",
+    "translation": "O marinheiro solta a âncora perto da costa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rudder",
+    "word_pt": "leme",
+    "sentence": "The captain steers using the ship's rudder.",
+    "translation": "O capitão guia usando o leme do navio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hull",
+    "word_pt": "casco de navio",
+    "sentence": "Waves crash against the ship's hull.",
+    "translation": "Ondas batem contra o casco do navio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mast",
+    "word_pt": "mastro",
+    "sentence": "The flag flies from the top of the mast.",
+    "translation": "A bandeira tremula no topo do mastro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Deck",
+    "word_pt": "convés",
+    "sentence": "Passengers relax on the upper deck.",
+    "translation": "Os passageiros relaxam no convés superior."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bow",
+    "word_pt": "proa",
+    "sentence": "Water splashes over the bow of the boat.",
+    "translation": "Água respinga sobre a proa do barco."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stern",
+    "word_pt": "popa",
+    "sentence": "He stands at the stern watching the sunset.",
+    "translation": "Ele fica na popa observando o pôr do sol."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sail",
+    "word_pt": "vela de barco",
+    "sentence": "The wind fills the ship's sail.",
+    "translation": "O vento enche a vela do navio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Shipwreck",
+    "word_pt": "naufrágio",
+    "sentence": "Divers discover an old shipwreck near the reef.",
+    "translation": "Mergulhadores descobrem um naufrágio antigo perto do recife."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lighthouse",
+    "word_pt": "farol marítimo",
+    "sentence": "The lighthouse guides ships through the fog.",
+    "translation": "O farol marítimo guia navios através da neblina."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Colonnade",
+    "word_pt": "colunata",
+    "sentence": "Tourists walk along the ancient colonnade.",
+    "translation": "Turistas caminham ao longo da colunata antiga."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dome",
+    "word_pt": "cúpula",
+    "sentence": "Sunlight streams through the glass dome.",
+    "translation": "A luz do sol entra pela cúpula de vidro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Vault",
+    "word_pt": "abóbada",
+    "sentence": "The ceiling forms a stone vault above the hall.",
+    "translation": "O teto forma uma abóbada de pedra acima do salão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Foundation",
+    "word_pt": "alicerce",
+    "sentence": "Workers pour concrete for the building's foundation.",
+    "translation": "Os trabalhadores despejam concreto para o alicerce do prédio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Scaffold",
+    "word_pt": "andaime",
+    "sentence": "Workers climb the scaffold to paint the wall.",
+    "translation": "Trabalhadores sobem no andaime para pintar a parede."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Arch",
+    "word_pt": "arco de pedra",
+    "sentence": "The bridge stands on a single stone arch.",
+    "translation": "A ponte fica apoiada num único arco de pedra."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pillar",
+    "word_pt": "pilar",
+    "sentence": "A marble pillar supports the roof.",
+    "translation": "Um pilar de mármore sustenta o telhado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tile",
+    "word_pt": "telha",
+    "sentence": "A broken tile lies near the front door.",
+    "translation": "Uma telha quebrada está perto da porta da frente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Chimney",
+    "word_pt": "chaminé",
+    "sentence": "Smoke rises from the old brick chimney.",
+    "translation": "Fumaça sobe da chaminé antiga de tijolos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mansion",
+    "word_pt": "mansão",
+    "sentence": "The family lives in a large mansion outside the city.",
+    "translation": "A família mora numa mansão grande fora da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Trainee",
+    "word_pt": "estagiário",
+    "sentence": "The trainee shadows a senior engineer this month.",
+    "translation": "O estagiário acompanha um engenheiro sênior este mês."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Severance",
+    "word_pt": "verbas rescisórias",
+    "sentence": "She receives severance after the layoff.",
+    "translation": "Ela recebe verbas rescisórias depois da demissão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Perk",
+    "word_pt": "regalia de trabalho",
+    "sentence": "Free lunch is one perk of this job.",
+    "translation": "Almoço grátis é uma regalia deste emprego."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Exhaustion",
+    "word_pt": "esgotamento profissional",
+    "sentence": "He reaches a state of professional exhaustion after months of overtime.",
+    "translation": "Ele chega a um estado de esgotamento profissional depois de meses de hora extra."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Union",
+    "word_pt": "sindicato",
+    "sentence": "The union negotiates better wages for the workers.",
+    "translation": "O sindicato negocia salários melhores para os trabalhadores."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pension",
+    "word_pt": "aposentadoria",
+    "sentence": "She plans her pension carefully for the future.",
+    "translation": "Ela planeja a aposentadoria dela com cuidado para o futuro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Layoff",
+    "word_pt": "demissão em massa",
+    "sentence": "The company announces a major layoff this week.",
+    "translation": "A empresa anuncia uma demissão em massa esta semana."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Contractor",
+    "word_pt": "prestador de serviço",
+    "sentence": "The firm hires a contractor for the new building.",
+    "translation": "A firma contrata um prestador de serviço para o prédio novo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Freelancer",
+    "word_pt": "profissional autônomo",
+    "sentence": "She works as a freelancer designing websites.",
+    "translation": "Ela trabalha como profissional autônoma criando sites."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Workforce",
+    "word_pt": "força de trabalho",
+    "sentence": "The factory expands its workforce this year.",
+    "translation": "A fábrica expande a força de trabalho dela este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Predate",
+    "word_pt": "anteceder",
+    "sentence": "This tradition seems to predate the founding of the city.",
+    "translation": "Esta tradição parece anteceder a fundação da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Succeed",
+    "word_pt": "suceder",
+    "sentence": "Spring will succeed winter in a few months.",
+    "translation": "A primavera vai suceder o inverno em poucos meses."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Coincide",
+    "word_pt": "coincidir",
+    "sentence": "Her birthday happens to coincide with the holiday.",
+    "translation": "O aniversário dela por acaso coincide com o feriado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Linger",
+    "word_pt": "perdurar",
+    "sentence": "I linger in the kitchen to enjoy the smell of coffee.",
+    "translation": "Eu perduro na cozinha para aproveitar o cheiro de café."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cease",
+    "word_pt": "cessar",
+    "sentence": "I hope the rain will cease soon.",
+    "translation": "Eu espero que a chuva cesse logo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Commence",
+    "word_pt": "iniciar formalmente",
+    "sentence": "The ceremony will commence at exactly noon.",
+    "translation": "A cerimônia vai começar exatamente ao meio-dia."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Finalize",
+    "word_pt": "finalizar",
+    "sentence": "We finalize the contract before the deadline.",
+    "translation": "Nós finalizamos o contrato antes do prazo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Resume",
+    "word_pt": "retomar",
+    "sentence": "Classes resume next Monday after the break.",
+    "translation": "As aulas retomam na próxima segunda depois do recesso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Protract",
+    "word_pt": "estender no tempo",
+    "sentence": "Delays protract the trial for several more months.",
+    "translation": "Atrasos estendem o julgamento por vários meses a mais."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Anticipate",
+    "word_pt": "antecipar",
+    "sentence": "We anticipate higher demand during the holidays.",
+    "translation": "Nós antecipamos uma demanda maior durante os feriados."
+  }
+]
