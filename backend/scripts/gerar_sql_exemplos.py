@@ -3,7 +3,8 @@ Gera o SQL de carga das frases-exemplo do Mental Lingo (fase 2), para colar no S
 Inclui a criação da tabela (idêntica à migration 105, com `if not exists`) e os inserts
 idempotentes (`on conflict do nothing`), já como `approved` — só rode depois da aprovação de Rhoney.
 
-Uso: python3 scripts/gerar_sql_exemplos.py <saida> <json_de_exemplos> [nivel]
+Uso: python3 scripts/gerar_sql_exemplos.py <saida> <json_de_exemplos> [<json2> <json3> ...]
+Aceita um ou mais arquivos JSON — todos entram no mesmo arquivo .sql de saída.
 """
 
 import json
@@ -19,9 +20,11 @@ def q(text: str) -> str:
 
 
 def main() -> None:
-    name, src = sys.argv[1], pathlib.Path(sys.argv[2])
-    rows = json.loads(src.read_text(encoding="utf-8"))
-    lines = [f"-- Frases-exemplo do Mental Lingo: {src.name} ({len(rows)} frases). Idempotente.", "begin;", DDL.read_text(encoding="utf-8")]
+    name = sys.argv[1]
+    srcs = [pathlib.Path(p) for p in sys.argv[2:]]
+    rows = [r for src in srcs for r in json.loads(src.read_text(encoding="utf-8"))]
+    names = ", ".join(src.name for src in srcs)
+    lines = [f"-- Frases-exemplo do Mental Lingo: {names} ({len(rows)} frases). Idempotente.", "begin;", DDL.read_text(encoding="utf-8")]
     for r in rows:
         assert r["level"] in ("basico", "intermediario", "avancado")
         assert r["word"].lower() in r["sentence"].lower(), r
