@@ -462,18 +462,18 @@
   {
     "territory_id": "ingles_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'cancelar' em inglês?",
+    "prompt": "Como se escreve 'reagendar' em inglês?",
     "options": [
-      "Cancel",
-      "Cancell",
-      "Cansel",
-      "Cancele"
+      "Reschedule",
+      "Reeschedule",
+      "Rescedule",
+      "Reschedul"
     ],
-    "correct_answer": "Cancel",
-    "explanation": "'cancelar' se traduz como 'Cancel' em inglês.",
+    "correct_answer": "Reschedule",
+    "explanation": "'reagendar' se traduz como 'Reschedule' em inglês.",
     "hints": [
       "É uma palavra do tema 'Clima e planos'.",
-      "Começa com 'C'."
+      "Começa com 'R'."
     ],
     "age_reviewed": true
   },
