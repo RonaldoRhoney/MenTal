@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'meticuloso' em inglês?",
+    "options": [
+      "Meticulous",
+      "Metiulous",
+      "Mteiculous",
+      "Maticulous"
+    ],
+    "correct_answer": "Meticulous",
+    "explanation": "'meticuloso' se traduz como 'Meticulous' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'onipresente' em inglês?",
+    "options": [
+      "Ubiquiteus",
+      "Ubiquitous",
+      "Ubiquetous",
+      "Ubiuqitous"
+    ],
+    "correct_answer": "Ubiquitous",
+    "explanation": "'onipresente' se traduz como 'Ubiquitous' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'U'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'efêmero' em inglês?",
+    "options": [
+      "Ephimeral",
+      "Ephumeral",
+      "Ephemeral",
+      "Epemeral"
+    ],
+    "correct_answer": "Ephemeral",
+    "explanation": "'efêmero' se traduz como 'Ephemeral' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'engenhoso' em inglês?",
+    "options": [
+      "Ingenoius",
+      "Ingemious",
+      "Inngenious",
+      "Ingenious"
+    ],
+    "correct_answer": "Ingenious",
+    "explanation": "'engenhoso' se traduz como 'Ingenious' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'perspicaz' em inglês?",
+    "options": [
+      "Astute",
+      "Asttute",
+      "Astuet",
+      "Asttue"
+    ],
+    "correct_answer": "Astute",
+    "explanation": "'perspicaz' se traduz como 'Astute' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'persuasivo' em inglês?",
+    "options": [
+      "Persuasove",
+      "Persuasive",
+      "Persuosive",
+      "Persuasuve"
+    ],
+    "correct_answer": "Persuasive",
+    "explanation": "'persuasivo' se traduz como 'Persuasive' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sutil' em inglês?",
+    "options": [
+      "Sutle",
+      "Subtel",
+      "Subtle",
+      "Sebtle"
+    ],
+    "correct_answer": "Subtle",
+    "explanation": "'sutil' se traduz como 'Subtle' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ambíguo' em inglês?",
+    "options": [
+      "Ambiguuus",
+      "Ambiguouz",
+      "Ambguous",
+      "Ambiguous"
+    ],
+    "correct_answer": "Ambiguous",
+    "explanation": "'ambíguo' se traduz como 'Ambiguous' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'pragmático' em inglês?",
+    "options": [
+      "Pragmatic",
+      "Prajmatic",
+      "Ppragmatic",
+      "Pragmatc"
+    ],
+    "correct_answer": "Pragmatic",
+    "explanation": "'pragmático' se traduz como 'Pragmatic' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'relutante' em inglês?",
+    "options": [
+      "Reluctan",
+      "Reluctant",
+      "Reructant",
+      "Reluctatn"
+    ],
+    "correct_answer": "Reluctant",
+    "explanation": "'relutante' se traduz como 'Reluctant' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos de avaliação'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'arrogante' em inglês?",
+    "options": [
+      "Hhaughty",
+      "Hiughty",
+      "Haughty",
+      "Haujhty"
+    ],
+    "correct_answer": "Haughty",
+    "explanation": "'arrogante' se traduz como 'Haughty' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'hostil' em inglês?",
+    "options": [
+      "Hostule",
+      "Hostle",
+      "Hositle",
+      "Hostile"
+    ],
+    "correct_answer": "Hostile",
+    "explanation": "'hostil' se traduz como 'Hostile' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'implacável' em inglês?",
+    "options": [
+      "Relentless",
+      "Relnetless",
+      "Relentliss",
+      "Relontless"
+    ],
+    "correct_answer": "Relentless",
+    "explanation": "'implacável' se traduz como 'Relentless' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'vulnerável' em inglês?",
+    "options": [
+      "Vulnerabe",
+      "Vulnerable",
+      "Valnerable",
+      "Vulnerble"
+    ],
+    "correct_answer": "Vulnerable",
+    "explanation": "'vulnerável' se traduz como 'Vulnerable' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'V'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'sarcástico' em inglês?",
+    "options": [
+      "Sarcastec",
+      "Srcastic",
+      "Sarcastic",
+      "Sarcastuc"
+    ],
+    "correct_answer": "Sarcastic",
+    "explanation": "'sarcástico' se traduz como 'Sarcastic' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'obstinado' em inglês?",
+    "options": [
+      "Obsitnate",
+      "Obstinati",
+      "Obstnate",
+      "Obstinate"
+    ],
+    "correct_answer": "Obstinate",
+    "explanation": "'obstinado' se traduz como 'Obstinate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'pretensioso' em inglês?",
+    "options": [
+      "Pretentious",
+      "Pretetnious",
+      "Pretentoius",
+      "Pretntious"
+    ],
+    "correct_answer": "Pretentious",
+    "explanation": "'pretensioso' se traduz como 'Pretentious' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'cínico' em inglês?",
+    "options": [
+      "Cnical",
+      "Cynical",
+      "Cynial",
+      "Cyniccal"
+    ],
+    "correct_answer": "Cynical",
+    "explanation": "'cínico' se traduz como 'Cynical' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'desdenhoso' em inglês?",
+    "options": [
+      "Scrnful",
+      "Scirnful",
+      "Scornful",
+      "Sccornful"
+    ],
+    "correct_answer": "Scornful",
+    "explanation": "'desdenhoso' se traduz como 'Scornful' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'crédulo' em inglês?",
+    "options": [
+      "Gulible",
+      "Gulrible",
+      "Gulloble",
+      "Gullible"
+    ],
+    "correct_answer": "Gullible",
+    "explanation": "'crédulo' se traduz como 'Gullible' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Adjetivos negativos'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'mitigar' em inglês?",
+    "options": [
+      "Mitigate",
+      "Motigate",
+      "Midigate",
+      "Mitygate"
+    ],
+    "correct_answer": "Mitigate",
+    "explanation": "'mitigar' se traduz como 'Mitigate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'exacerbar' em inglês?",
+    "options": [
+      "Exacerrbate",
+      "Exacerbate",
+      "Exacerbte",
+      "Exacerbete"
+    ],
+    "correct_answer": "Exacerbate",
+    "explanation": "'exacerbar' se traduz como 'Exacerbate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'elucidar' em inglês?",
+    "options": [
+      "Elucidatu",
+      "Elucidato",
+      "Elucidate",
+      "Elucidte"
+    ],
+    "correct_answer": "Elucidate",
+    "explanation": "'elucidar' se traduz como 'Elucidate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'corroborar' em inglês?",
+    "options": [
+      "Corrborate",
+      "Corrobolate",
+      "Corraborate",
+      "Corroborate"
+    ],
+    "correct_answer": "Corroborate",
+    "explanation": "'corroborar' se traduz como 'Corroborate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ratificar' em inglês?",
+    "options": [
+      "Ratify",
+      "Ratofy",
+      "Rattify",
+      "Ratyfy"
+    ],
+    "correct_answer": "Ratify",
+    "explanation": "'ratificar' se traduz como 'Ratify' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'subjugar' em inglês?",
+    "options": [
+      "Subujgate",
+      "Subjugate",
+      "Subjugaet",
+      "Subjugade"
+    ],
+    "correct_answer": "Subjugate",
+    "explanation": "'subjugar' se traduz como 'Subjugate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'dissipar' em inglês?",
+    "options": [
+      "Dipel",
+      "Dospel",
+      "Dispel",
+      "Disppel"
+    ],
+    "correct_answer": "Dispel",
+    "explanation": "'dissipar' se traduz como 'Dispel' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'enaltecer' em inglês?",
+    "options": [
+      "Exdol",
+      "Extel",
+      "Extil",
+      "Extol"
+    ],
+    "correct_answer": "Extol",
+    "explanation": "'enaltecer' se traduz como 'Extol' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'censurar' em inglês?",
+    "options": [
+      "Rebuke",
+      "Rebuek",
+      "Rebukke",
+      "Rebke"
+    ],
+    "correct_answer": "Rebuke",
+    "explanation": "'censurar' se traduz como 'Rebuke' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'reprimir' em inglês?",
+    "options": [
+      "Suppross",
+      "Suppress",
+      "Suppresss",
+      "Ssuppress"
+    ],
+    "correct_answer": "Suppress",
+    "explanation": "'reprimir' se traduz como 'Suppress' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 1'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'prescindir' em inglês?",
+    "options": [
+      "Dipsense",
+      "Dipense",
+      "Dispense",
+      "Daspense"
+    ],
+    "correct_answer": "Dispense",
+    "explanation": "'prescindir' se traduz como 'Dispense' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'obter' em inglês?",
+    "options": [
+      "Obtin",
+      "Otain",
+      "Obatin",
+      "Obtain"
+    ],
+    "correct_answer": "Obtain",
+    "explanation": "'obter' se traduz como 'Obtain' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'almejar' em inglês?",
+    "options": [
+      "Aspire",
+      "Aspiri",
+      "Asbire",
+      "Azpire"
+    ],
+    "correct_answer": "Aspire",
+    "explanation": "'almejar' se traduz como 'Aspire' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'aderir' em inglês?",
+    "options": [
+      "Adheru",
+      "Adhere",
+      "Adhree",
+      "Adhire"
+    ],
+    "correct_answer": "Adhere",
+    "explanation": "'aderir' se traduz como 'Adhere' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'abdicar' em inglês?",
+    "options": [
+      "Abdicete",
+      "Abdacate",
+      "Abdicate",
+      "Abdicaet"
+    ],
+    "correct_answer": "Abdicate",
+    "explanation": "'abdicar' se traduz como 'Abdicate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'relegar' em inglês?",
+    "options": [
+      "Relegte",
+      "Rrelegate",
+      "Rilegate",
+      "Relegate"
+    ],
+    "correct_answer": "Relegate",
+    "explanation": "'relegar' se traduz como 'Relegate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'proliferar' em inglês?",
+    "options": [
+      "Proliferate",
+      "Proliferatte",
+      "Proliferete",
+      "Proloferate"
+    ],
+    "correct_answer": "Proliferate",
+    "explanation": "'proliferar' se traduz como 'Proliferate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'perpetuar' em inglês?",
+    "options": [
+      "Perputuate",
+      "Perpetuate",
+      "Purpetuate",
+      "Perpetuatte"
+    ],
+    "correct_answer": "Perpetuate",
+    "explanation": "'perpetuar' se traduz como 'Perpetuate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ostentar' em inglês?",
+    "options": [
+      "Fleunt",
+      "Flaont",
+      "Flaunt",
+      "Flaumt"
+    ],
+    "correct_answer": "Flaunt",
+    "explanation": "'ostentar' se traduz como 'Flaunt' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'fomentar' em inglês?",
+    "options": [
+      "Fosder",
+      "Fozter",
+      "Foter",
+      "Foster"
+    ],
+    "correct_answer": "Foster",
+    "explanation": "'fomentar' se traduz como 'Foster' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos formais 2'.",
+      "Começa com 'F'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ceticismo' em inglês?",
+    "options": [
+      "Skepticism",
+      "Skeptciism",
+      "Septicism",
+      "Skeptticism"
+    ],
+    "correct_answer": "Skepticism",
+    "explanation": "'ceticismo' se traduz como 'Skepticism' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'hipocrisia' em inglês?",
+    "options": [
+      "Hypocrsy",
+      "Hypocrisy",
+      "Hypocriy",
+      "Hypocriys"
+    ],
+    "correct_answer": "Hypocrisy",
+    "explanation": "'hipocrisia' se traduz como 'Hypocrisy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'integridade' em inglês?",
+    "options": [
+      "Integrtiy",
+      "Integrityy",
+      "Integrity",
+      "Integrit"
+    ],
+    "correct_answer": "Integrity",
+    "explanation": "'integridade' se traduz como 'Integrity' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'privilégio' em inglês?",
+    "options": [
+      "Privlege",
+      "Privilge",
+      "Prifilege",
+      "Privilege"
+    ],
+    "correct_answer": "Privilege",
+    "explanation": "'privilégio' se traduz como 'Privilege' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'preconceito' em inglês?",
+    "options": [
+      "Prejudice",
+      "Prejidice",
+      "Plejudice",
+      "Prejudcie"
+    ],
+    "correct_answer": "Prejudice",
+    "explanation": "'preconceito' se traduz como 'Prejudice' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'anseio' em inglês?",
+    "options": [
+      "Yearninng",
+      "Yearning",
+      "Yoarning",
+      "Yearnang"
+    ],
+    "correct_answer": "Yearning",
+    "explanation": "'anseio' se traduz como 'Yearning' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'Y'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'dissidência' em inglês?",
+    "options": [
+      "Dissemt",
+      "Dissend",
+      "Dissent",
+      "Dossent"
+    ],
+    "correct_answer": "Dissent",
+    "explanation": "'dissidência' se traduz como 'Dissent' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'perícia' em inglês?",
+    "options": [
+      "Exxpertise",
+      "Exertise",
+      "Expertiso",
+      "Expertise"
+    ],
+    "correct_answer": "Expertise",
+    "explanation": "'perícia' se traduz como 'Expertise' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'armadilha oculta' em inglês?",
+    "options": [
+      "Pitfall",
+      "Pittfall",
+      "Pitfarl",
+      "Pitafll"
+    ],
+    "correct_answer": "Pitfall",
+    "explanation": "'armadilha oculta' se traduz como 'Pitfall' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'percalço' em inglês?",
+    "options": [
+      "Setpack",
+      "Setback",
+      "Sutback",
+      "Setbback"
+    ],
+    "correct_answer": "Setback",
+    "explanation": "'percalço' se traduz como 'Setback' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Substantivos abstratos'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'soberania' em inglês?",
+    "options": [
+      "Soveroignty",
+      "Sovireignty",
+      "Sovereignty",
+      "Sovereigty"
+    ],
+    "correct_answer": "Sovereignty",
+    "explanation": "'soberania' se traduz como 'Sovereignty' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'legitimidade' em inglês?",
+    "options": [
+      "Lugitimacy",
+      "Legitamacy",
+      "Leggitimacy",
+      "Legitimacy"
+    ],
+    "correct_answer": "Legitimacy",
+    "explanation": "'legitimidade' se traduz como 'Legitimacy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'burocracia' em inglês?",
+    "options": [
+      "Bureaucracy",
+      "Bureucracy",
+      "Bueaucracy",
+      "Bureaocracy"
+    ],
+    "correct_answer": "Bureaucracy",
+    "explanation": "'burocracia' se traduz como 'Bureaucracy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'diplomacia' em inglês?",
+    "options": [
+      "Diplmacy",
+      "Diplomacy",
+      "Diplamacy",
+      "Diplemacy"
+    ],
+    "correct_answer": "Diplomacy",
+    "explanation": "'diplomacia' se traduz como 'Diplomacy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'hegemonia' em inglês?",
+    "options": [
+      "Hegmeony",
+      "Hegeminy",
+      "Hegemony",
+      "Hegemuny"
+    ],
+    "correct_answer": "Hegemony",
+    "explanation": "'hegemonia' se traduz como 'Hegemony' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'oligarquia' em inglês?",
+    "options": [
+      "Oligarhcy",
+      "Olgiarchy",
+      "Oligarkhy",
+      "Oligarchy"
+    ],
+    "correct_answer": "Oligarchy",
+    "explanation": "'oligarquia' se traduz como 'Oligarchy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'plebiscito' em inglês?",
+    "options": [
+      "Referendum",
+      "Rreferendum",
+      "Ruferendum",
+      "Refelendum"
+    ],
+    "correct_answer": "Referendum",
+    "explanation": "'plebiscito' se traduz como 'Referendum' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'suborno' em inglês?",
+    "options": [
+      "Blibery",
+      "Bribery",
+      "Bribry",
+      "Brobery"
+    ],
+    "correct_answer": "Bribery",
+    "explanation": "'suborno' se traduz como 'Bribery' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'censo' em inglês?",
+    "options": [
+      "Cesus",
+      "Cunsus",
+      "Census",
+      "Censsus"
+    ],
+    "correct_answer": "Census",
+    "explanation": "'censo' se traduz como 'Census' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'anistia' em inglês?",
+    "options": [
+      "Amnesdy",
+      "Anmesty",
+      "Amnsety",
+      "Amnesty"
+    ],
+    "correct_answer": "Amnesty",
+    "explanation": "'anistia' se traduz como 'Amnesty' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Política e poder'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'réu' em inglês?",
+    "options": [
+      "Defendant",
+      "Defendnat",
+      "Deffendant",
+      "Defendamt"
+    ],
+    "correct_answer": "Defendant",
+    "explanation": "'réu' se traduz como 'Defendant' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'promotor de justiça' em inglês?",
+    "options": [
+      "Prsecutor",
+      "Prosecutor",
+      "Prosecutol",
+      "Proseccutor"
+    ],
+    "correct_answer": "Prosecutor",
+    "explanation": "'promotor de justiça' se traduz como 'Prosecutor' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'jurado' em inglês?",
+    "options": [
+      "Jurorr",
+      "Jurer",
+      "Juror",
+      "Jjuror"
+    ],
+    "correct_answer": "Juror",
+    "explanation": "'jurado' se traduz como 'Juror' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'depoimento' em inglês?",
+    "options": [
+      "Testiony",
+      "Tesimony",
+      "Testimmony",
+      "Testimony"
+    ],
+    "correct_answer": "Testimony",
+    "explanation": "'depoimento' se traduz como 'Testimony' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'intimação judicial' em inglês?",
+    "options": [
+      "Subpoena",
+      "Subpouna",
+      "Subpoenu",
+      "Subboena"
+    ],
+    "correct_answer": "Subpoena",
+    "explanation": "'intimação judicial' se traduz como 'Subpoena' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'indenização' em inglês?",
+    "options": [
+      "Compensetion",
+      "Compensation",
+      "Compensaion",
+      "Compensition"
+    ],
+    "correct_answer": "Compensation",
+    "explanation": "'indenização' se traduz como 'Compensation' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'herança' em inglês?",
+    "options": [
+      "Inheritannce",
+      "Inheratance",
+      "Inheritance",
+      "Inheriance"
+    ],
+    "correct_answer": "Inheritance",
+    "explanation": "'herança' se traduz como 'Inheritance' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'cláusula' em inglês?",
+    "options": [
+      "Clauze",
+      "Clouse",
+      "Clasue",
+      "Clause"
+    ],
+    "correct_answer": "Clause",
+    "explanation": "'cláusula' se traduz como 'Clause' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'infração' em inglês?",
+    "options": [
+      "Offense",
+      "Offenes",
+      "Ofense",
+      "Ovfense"
+    ],
+    "correct_answer": "Offense",
+    "explanation": "'infração' se traduz como 'Offense' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'O'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'litígio' em inglês?",
+    "options": [
+      "Litigattion",
+      "Litigation",
+      "Litigotion",
+      "Litigatyon"
+    ],
+    "correct_answer": "Litigation",
+    "explanation": "'litígio' se traduz como 'Litigation' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Direito avançado'.",
+      "Começa com 'L'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'catalisador' em inglês?",
+    "options": [
+      "Catulyst",
+      "Catelyst",
+      "Catalyst",
+      "Caatlyst"
+    ],
+    "correct_answer": "Catalyst",
+    "explanation": "'catalisador' se traduz como 'Catalyst' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'entropia' em inglês?",
+    "options": [
+      "Entrropy",
+      "Entrpoy",
+      "Entrapy",
+      "Entropy"
+    ],
+    "correct_answer": "Entropy",
+    "explanation": "'entropia' se traduz como 'Entropy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'mutação' em inglês?",
+    "options": [
+      "Mutation",
+      "Mudation",
+      "Mutatin",
+      "Mutadion"
+    ],
+    "correct_answer": "Mutation",
+    "explanation": "'mutação' se traduz como 'Mutation' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ecossistema' em inglês?",
+    "options": [
+      "Ecosysem",
+      "Ecosystem",
+      "Ecosytem",
+      "Ecosysdem"
+    ],
+    "correct_answer": "Ecosystem",
+    "explanation": "'ecossistema' se traduz como 'Ecosystem' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'biodiversidade' em inglês?",
+    "options": [
+      "Biudiversity",
+      "Biodivarsity",
+      "Biodiversity",
+      "Biodivrsity"
+    ],
+    "correct_answer": "Biodiversity",
+    "explanation": "'biodiversidade' se traduz como 'Biodiversity' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'genoma' em inglês?",
+    "options": [
+      "Geneme",
+      "Genume",
+      "Ggenome",
+      "Genome"
+    ],
+    "correct_answer": "Genome",
+    "explanation": "'genoma' se traduz como 'Genome' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'G'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'simbiose' em inglês?",
+    "options": [
+      "Symbiosis",
+      "Symbiosiss",
+      "Symbiois",
+      "Symbaosis"
+    ],
+    "correct_answer": "Symbiosis",
+    "explanation": "'simbiose' se traduz como 'Symbiosis' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'fóton' em inglês?",
+    "options": [
+      "Phaton",
+      "Photon",
+      "Phton",
+      "Photun"
+    ],
+    "correct_answer": "Photon",
+    "explanation": "'fóton' se traduz como 'Photon' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'nêutron' em inglês?",
+    "options": [
+      "Neuttron",
+      "Neutronn",
+      "Neutron",
+      "Nneutron"
+    ],
+    "correct_answer": "Neutron",
+    "explanation": "'nêutron' se traduz como 'Neutron' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'N'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'espectro' em inglês?",
+    "options": [
+      "Spectrmu",
+      "Spetrum",
+      "Spuctrum",
+      "Spectrum"
+    ],
+    "correct_answer": "Spectrum",
+    "explanation": "'espectro' se traduz como 'Spectrum' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Ciência avançada'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'monopólio' em inglês?",
+    "options": [
+      "Monopoly",
+      "Monopol",
+      "Monpooly",
+      "Monopaly"
+    ],
+    "correct_answer": "Monopoly",
+    "explanation": "'monopólio' se traduz como 'Monopoly' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'lucro distribuído' em inglês?",
+    "options": [
+      "Paiout",
+      "Payout",
+      "Payoat",
+      "Payeut"
+    ],
+    "correct_answer": "Payout",
+    "explanation": "'lucro distribuído' se traduz como 'Payout' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'hipoteca' em inglês?",
+    "options": [
+      "Mortgago",
+      "Mortgaje",
+      "Mortgage",
+      "Mortgagge"
+    ],
+    "correct_answer": "Mortgage",
+    "explanation": "'hipoteca' se traduz como 'Mortgage' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'falência' em inglês?",
+    "options": [
+      "Bancruptcy",
+      "Benkruptcy",
+      "Bankkruptcy",
+      "Bankruptcy"
+    ],
+    "correct_answer": "Bankruptcy",
+    "explanation": "'falência' se traduz como 'Bankruptcy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'B'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'subsídio' em inglês?",
+    "options": [
+      "Subsidy",
+      "Subsdy",
+      "Subidy",
+      "Sbusidy"
+    ],
+    "correct_answer": "Subsidy",
+    "explanation": "'subsídio' se traduz como 'Subsidy' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'tarifa alfandegária' em inglês?",
+    "options": [
+      "Taruff",
+      "Tariff",
+      "Tarff",
+      "Tarriff"
+    ],
+    "correct_answer": "Tariff",
+    "explanation": "'tarifa alfandegária' se traduz como 'Tariff' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'T'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'herdeiro' em inglês?",
+    "options": [
+      "Heirr",
+      "Heil",
+      "Heir",
+      "Hheir"
+    ],
+    "correct_answer": "Heir",
+    "explanation": "'herdeiro' se traduz como 'Heir' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'H'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'patrimônio' em inglês?",
+    "options": [
+      "Azsets",
+      "Asests",
+      "Asets",
+      "Assets"
+    ],
+    "correct_answer": "Assets",
+    "explanation": "'patrimônio' se traduz como 'Assets' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'aquisição' em inglês?",
+    "options": [
+      "Acquisition",
+      "Acquisiteon",
+      "Acquisityon",
+      "Acquisidion"
+    ],
+    "correct_answer": "Acquisition",
+    "explanation": "'aquisição' se traduz como 'Acquisition' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'fusão de empresas' em inglês?",
+    "options": [
+      "Mergre",
+      "Merger",
+      "Meregr",
+      "Morger"
+    ],
+    "correct_answer": "Merger",
+    "explanation": "'fusão de empresas' se traduz como 'Merger' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Economia avançada'.",
+      "Começa com 'M'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'refutar' em inglês?",
+    "options": [
+      "Refete",
+      "Rrefute",
+      "Refute",
+      "Refutte"
+    ],
+    "correct_answer": "Refute",
+    "explanation": "'refutar' se traduz como 'Refute' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'aludir' em inglês?",
+    "options": [
+      "Alllude",
+      "Alludo",
+      "Alluda",
+      "Allude"
+    ],
+    "correct_answer": "Allude",
+    "explanation": "'aludir' se traduz como 'Allude' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'A'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'postular' em inglês?",
+    "options": [
+      "Postulate",
+      "Posturate",
+      "Potsulate",
+      "Postilate"
+    ],
+    "correct_answer": "Postulate",
+    "explanation": "'postular' se traduz como 'Postulate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'P'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'arguir' em inglês?",
+    "options": [
+      "Conten",
+      "Contend",
+      "Cintend",
+      "Contand"
+    ],
+    "correct_answer": "Contend",
+    "explanation": "'arguir' se traduz como 'Contend' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'C'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'especular' em inglês?",
+    "options": [
+      "Sspeculate",
+      "Sepculate",
+      "Speculate",
+      "Speculati"
+    ],
+    "correct_answer": "Speculate",
+    "explanation": "'especular' se traduz como 'Speculate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'S'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'enfatizar' em inglês?",
+    "options": [
+      "Emphazize",
+      "Emphasyze",
+      "Emphesize",
+      "Emphasize"
+    ],
+    "correct_answer": "Emphasize",
+    "explanation": "'enfatizar' se traduz como 'Emphasize' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'E'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'ilustrar' em inglês?",
+    "options": [
+      "Illustrate",
+      "Illestrate",
+      "Illustratu",
+      "Illustrata"
+    ],
+    "correct_answer": "Illustrate",
+    "explanation": "'ilustrar' se traduz como 'Illustrate' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'I'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'justificar' em inglês?",
+    "options": [
+      "Jjustify",
+      "Justify",
+      "Justiffy",
+      "Justyfy"
+    ],
+    "correct_answer": "Justify",
+    "explanation": "'justificar' se traduz como 'Justify' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'J'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'contestar' em inglês?",
+    "options": [
+      "Dispete",
+      "Dispote",
+      "Dispute",
+      "Dizpute"
+    ],
+    "correct_answer": "Dispute",
+    "explanation": "'contestar' se traduz como 'Dispute' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'D'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como se escreve 'retratar-se' em inglês?",
+    "options": [
+      "Retrict",
+      "Retrakt",
+      "Retratc",
+      "Retract"
+    ],
+    "correct_answer": "Retract",
+    "explanation": "'retratar-se' se traduz como 'Retract' em inglês.",
+    "hints": [
+      "É uma palavra do tema 'Verbos de argumentação'.",
+      "Começa com 'R'."
+    ],
+    "age_reviewed": true
+  }
+]
