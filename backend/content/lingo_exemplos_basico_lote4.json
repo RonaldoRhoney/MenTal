@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Beans",
+    "word_pt": "feijão",
+    "sentence": "I eat beans and rice.",
+    "translation": "Eu como feijão e arroz."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Butter",
+    "word_pt": "manteiga",
+    "sentence": "She puts butter on the bread.",
+    "translation": "Ela põe manteiga no pão."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Honey",
+    "word_pt": "mel",
+    "sentence": "I like tea with honey.",
+    "translation": "Eu gosto de chá com mel."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pineapple",
+    "word_pt": "abacaxi",
+    "sentence": "The pineapple is sweet.",
+    "translation": "O abacaxi é doce."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Carrot",
+    "word_pt": "cenoura",
+    "sentence": "The rabbit eats a carrot.",
+    "translation": "O coelho come uma cenoura."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lettuce",
+    "word_pt": "alface",
+    "sentence": "I put lettuce in the salad.",
+    "translation": "Eu ponho alface na salada."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cookie",
+    "word_pt": "biscoito",
+    "sentence": "The child eats a cookie.",
+    "translation": "A criança come um biscoito."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Candy",
+    "word_pt": "bala",
+    "sentence": "She gives candy to the kids.",
+    "translation": "Ela dá bala para as crianças."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Onion",
+    "word_pt": "cebola",
+    "sentence": "He cuts the onion.",
+    "translation": "Ele corta a cebola."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Garlic",
+    "word_pt": "alho",
+    "sentence": "I add garlic to the soup.",
+    "translation": "Eu ponho alho na sopa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bottle",
+    "word_pt": "garrafa",
+    "sentence": "I fill the bottle with water.",
+    "translation": "Eu encho a garrafa com água."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Plate",
+    "word_pt": "prato",
+    "sentence": "She puts food on the plate.",
+    "translation": "Ela põe comida no prato."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Spoon",
+    "word_pt": "colher",
+    "sentence": "I eat soup with a spoon.",
+    "translation": "Eu como sopa com colher."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fork",
+    "word_pt": "garfo",
+    "sentence": "Use a fork, please.",
+    "translation": "Use um garfo, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cup",
+    "word_pt": "xícara",
+    "sentence": "I drink coffee from a cup.",
+    "translation": "Eu bebo café numa xícara."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Towel",
+    "word_pt": "toalha",
+    "sentence": "Give me a towel, please.",
+    "translation": "Me dê uma toalha, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Soap",
+    "word_pt": "sabão",
+    "sentence": "Wash your hands with soap.",
+    "translation": "Lave as mãos com sabão."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Brush",
+    "word_pt": "escova",
+    "sentence": "I clean my hair with a brush.",
+    "translation": "Eu limpo meu cabelo com uma escova."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Umbrella",
+    "word_pt": "guarda-chuva",
+    "sentence": "Take an umbrella, it will rain.",
+    "translation": "Leve um guarda-chuva, vai chover."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Candle",
+    "word_pt": "vela",
+    "sentence": "She lights a candle.",
+    "translation": "Ela acende uma vela."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Farm",
+    "word_pt": "fazenda",
+    "sentence": "My grandfather has a farm.",
+    "translation": "Meu avô tem uma fazenda."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Library",
+    "word_pt": "biblioteca",
+    "sentence": "I study at the library.",
+    "translation": "Eu estudo na biblioteca."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pharmacy",
+    "word_pt": "farmácia",
+    "sentence": "I buy medicine at the pharmacy.",
+    "translation": "Eu compro remédio na farmácia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bakery",
+    "word_pt": "padaria",
+    "sentence": "We buy bread at the bakery.",
+    "translation": "Nós compramos pão na padaria."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Corner",
+    "word_pt": "esquina",
+    "sentence": "The store is on the corner.",
+    "translation": "A loja fica na esquina."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Building",
+    "word_pt": "prédio",
+    "sentence": "They work in a tall building.",
+    "translation": "Eles trabalham num prédio alto."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Square",
+    "word_pt": "praça",
+    "sentence": "People meet at the square.",
+    "translation": "As pessoas se encontram na praça."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Gate",
+    "word_pt": "portão",
+    "sentence": "Close the gate, please.",
+    "translation": "Feche o portão, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Tower",
+    "word_pt": "torre",
+    "sentence": "The tower is very tall.",
+    "translation": "A torre é muito alta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Village",
+    "word_pt": "vila",
+    "sentence": "They live in a small village.",
+    "translation": "Eles vivem numa vila pequena."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sister",
+    "word_pt": "irmã",
+    "sentence": "My sister is a doctor.",
+    "translation": "Minha irmã é médica."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Parents",
+    "word_pt": "pais",
+    "sentence": "My parents live in São Paulo.",
+    "translation": "Meus pais moram em São Paulo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "King",
+    "word_pt": "rei",
+    "sentence": "The king lives in a castle.",
+    "translation": "O rei mora num castelo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Queen",
+    "word_pt": "rainha",
+    "sentence": "The queen wears a crown.",
+    "translation": "A rainha usa uma coroa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Person",
+    "word_pt": "pessoa",
+    "sentence": "She is a kind person.",
+    "translation": "Ela é uma pessoa gentil."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "People",
+    "word_pt": "pessoas",
+    "sentence": "Many people are here today.",
+    "translation": "Muitas pessoas estão aqui hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Guest",
+    "word_pt": "convidado",
+    "sentence": "We have a guest for dinner.",
+    "translation": "Nós temos um convidado para o jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Stranger",
+    "word_pt": "estranho",
+    "sentence": "Don't talk to a stranger.",
+    "translation": "Não fale com um estranho."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Twin",
+    "word_pt": "gêmeo",
+    "sentence": "My twin looks just like me.",
+    "translation": "Meu gêmeo se parece comigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Family",
+    "word_pt": "família",
+    "sentence": "I love my family.",
+    "translation": "Eu amo minha família."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wash",
+    "word_pt": "lavar",
+    "sentence": "I wash my hands before lunch.",
+    "translation": "Eu lavo as mãos antes do almoço."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cut",
+    "word_pt": "cortar",
+    "sentence": "Be careful, do not cut your finger.",
+    "translation": "Cuidado, não corte o dedo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Break",
+    "word_pt": "quebrar",
+    "sentence": "Do not break the glass.",
+    "translation": "Não quebre o copo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Carry",
+    "word_pt": "carregar",
+    "sentence": "I carry the bag to school.",
+    "translation": "Eu carrego a bolsa para a escola."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Push",
+    "word_pt": "empurrar",
+    "sentence": "Push the door to open it.",
+    "translation": "Empurre a porta para abrir."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pull",
+    "word_pt": "puxar",
+    "sentence": "Pull the chair closer.",
+    "translation": "Puxe a cadeira mais perto."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Throw",
+    "word_pt": "arremessar",
+    "sentence": "Throw the ball to me.",
+    "translation": "Jogue a bola para mim."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Call",
+    "word_pt": "chamar",
+    "sentence": "Call me tonight, please.",
+    "translation": "Me ligue hoje à noite, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Ask",
+    "word_pt": "perguntar",
+    "sentence": "Ask your teacher for help.",
+    "translation": "Peça ajuda ao seu professor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pay",
+    "word_pt": "pagar",
+    "sentence": "I pay for the coffee.",
+    "translation": "Eu pago pelo café."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Answer",
+    "word_pt": "responder",
+    "sentence": "Please answer my question.",
+    "translation": "Por favor, responda minha pergunta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Watch",
+    "word_pt": "assistir",
+    "sentence": "We watch the sunset together.",
+    "translation": "Nós assistimos ao pôr do sol juntos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Listen",
+    "word_pt": "escutar",
+    "sentence": "Listen to me, please.",
+    "translation": "Me escute, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Look",
+    "word_pt": "olhar",
+    "sentence": "Look at the beautiful sky.",
+    "translation": "Olhe para o céu bonito."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Find",
+    "word_pt": "encontrar",
+    "sentence": "I can't find my keys.",
+    "translation": "Eu não consigo encontrar minhas chaves."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lose",
+    "word_pt": "perder",
+    "sentence": "Don't lose your ticket.",
+    "translation": "Não perca seu bilhete."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Win",
+    "word_pt": "ganhar",
+    "sentence": "Our team will win the game.",
+    "translation": "Nosso time vai ganhar o jogo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Send",
+    "word_pt": "enviar",
+    "sentence": "I send a message to my friend.",
+    "translation": "Eu envio uma mensagem para meu amigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Young",
+    "word_pt": "jovem",
+    "sentence": "She is very young.",
+    "translation": "Ela é muito jovem."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Kind",
+    "word_pt": "gentil",
+    "sentence": "He is always kind to me.",
+    "translation": "Ele é sempre gentil comigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Nice",
+    "word_pt": "legal",
+    "sentence": "This is a nice house.",
+    "translation": "Esta é uma casa legal."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Empty",
+    "word_pt": "vazio",
+    "sentence": "The box is empty.",
+    "translation": "A caixa está vazia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wide",
+    "word_pt": "largo",
+    "sentence": "The street is very wide.",
+    "translation": "A rua é muito larga."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Deep",
+    "word_pt": "fundo",
+    "sentence": "The river is very deep here.",
+    "translation": "O rio é muito fundo aqui."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Safe",
+    "word_pt": "seguro",
+    "sentence": "This place is safe for children.",
+    "translation": "Este lugar é seguro para crianças."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Free",
+    "word_pt": "livre",
+    "sentence": "The tickets are free today.",
+    "translation": "Os bilhetes são grátis hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Dangerous",
+    "word_pt": "perigoso",
+    "sentence": "It is dangerous to swim here.",
+    "translation": "É perigoso nadar aqui."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Funny",
+    "word_pt": "engraçado",
+    "sentence": "The movie is very funny.",
+    "translation": "O filme é muito engraçado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "In",
+    "word_pt": "em",
+    "sentence": "The keys are in the bag.",
+    "translation": "As chaves estão na bolsa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "On",
+    "word_pt": "sobre",
+    "sentence": "The book is on the table.",
+    "translation": "O livro está sobre a mesa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Under",
+    "word_pt": "embaixo",
+    "sentence": "The cat is under the bed.",
+    "translation": "O gato está embaixo da cama."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "With",
+    "word_pt": "com",
+    "sentence": "I go to school with my sister.",
+    "translation": "Eu vou à escola com minha irmã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Without",
+    "word_pt": "sem",
+    "sentence": "She left without saying goodbye.",
+    "translation": "Ela saiu sem se despedir."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "But",
+    "word_pt": "mas",
+    "sentence": "I want to go, but I am tired.",
+    "translation": "Eu quero ir, mas estou cansado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Or",
+    "word_pt": "ou",
+    "sentence": "Do you want tea or coffee?",
+    "translation": "Você quer chá ou café?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Between",
+    "word_pt": "entre",
+    "sentence": "The park is between two streets.",
+    "translation": "O parque fica entre duas ruas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Behind",
+    "word_pt": "atrás",
+    "sentence": "The dog is behind the door.",
+    "translation": "O cachorro está atrás da porta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Above",
+    "word_pt": "acima",
+    "sentence": "The plane flies above the clouds.",
+    "translation": "O avião voa acima das nuvens."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Monday",
+    "word_pt": "segunda-feira",
+    "sentence": "I start work on Monday.",
+    "translation": "Eu começo a trabalhar na segunda-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Tuesday",
+    "word_pt": "terça-feira",
+    "sentence": "We have class on Tuesday.",
+    "translation": "Nós temos aula na terça-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wednesday",
+    "word_pt": "quarta-feira",
+    "sentence": "She visits us on Wednesday.",
+    "translation": "Ela nos visita na quarta-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Thursday",
+    "word_pt": "quinta-feira",
+    "sentence": "The meeting is on Thursday.",
+    "translation": "A reunião é na quinta-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Friday",
+    "word_pt": "sexta-feira",
+    "sentence": "I love Friday nights.",
+    "translation": "Eu adoro as noites de sexta-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Saturday",
+    "word_pt": "sábado",
+    "sentence": "We go to the market on Saturday.",
+    "translation": "Nós vamos ao mercado no sábado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sunday",
+    "word_pt": "domingo",
+    "sentence": "We rest on Sunday.",
+    "translation": "Nós descansamos no domingo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Weekend",
+    "word_pt": "fim de semana",
+    "sentence": "I visit my parents on the weekend.",
+    "translation": "Eu visito meus pais no fim de semana."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Birthday",
+    "word_pt": "aniversário",
+    "sentence": "Today is my birthday.",
+    "translation": "Hoje é meu aniversário."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Holiday",
+    "word_pt": "feriado",
+    "sentence": "Next Monday is a holiday.",
+    "translation": "A próxima segunda-feira é feriado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "January",
+    "word_pt": "janeiro",
+    "sentence": "My birthday is in January.",
+    "translation": "Meu aniversário é em janeiro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "February",
+    "word_pt": "fevereiro",
+    "sentence": "It is very hot in February.",
+    "translation": "Faz muito calor em fevereiro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "March",
+    "word_pt": "março",
+    "sentence": "Classes start in March.",
+    "translation": "As aulas começam em março."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "April",
+    "word_pt": "abril",
+    "sentence": "It often rains in April.",
+    "translation": "Chove com frequência em abril."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "May",
+    "word_pt": "maio",
+    "sentence": "Flowers bloom in May.",
+    "translation": "As flores desabrocham em maio."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "June",
+    "word_pt": "junho",
+    "sentence": "We have a party in June.",
+    "translation": "Nós temos uma festa em junho."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "July",
+    "word_pt": "julho",
+    "sentence": "School vacation is in July.",
+    "translation": "As férias escolares são em julho."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "August",
+    "word_pt": "agosto",
+    "sentence": "It is very cold in August.",
+    "translation": "Faz muito frio em agosto."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "September",
+    "word_pt": "setembro",
+    "sentence": "Spring starts in September.",
+    "translation": "A primavera começa em setembro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "October",
+    "word_pt": "outubro",
+    "sentence": "My father's birthday is in October.",
+    "translation": "O aniversário do meu pai é em outubro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "November",
+    "word_pt": "novembro",
+    "sentence": "We plan a trip for November.",
+    "translation": "Nós planejamos uma viagem para novembro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "December",
+    "word_pt": "dezembro",
+    "sentence": "Christmas is in December.",
+    "translation": "O Natal é em dezembro."
+  }
+]
