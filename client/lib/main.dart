@@ -176,6 +176,11 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   @override
   void initState() {
     super.initState();
+    // Se o servidor recusar o token (401, sessão vencida), o ApiClient pede uma renovação e repete.
+    ApiClient.refreshAccessToken = () async {
+      final refreshed = await Supabase.instance.client.auth.refreshSession();
+      return refreshed.session?.accessToken;
+    };
     _authStateStream = Supabase.instance.client.auth.onAuthStateChange;
     _passwordRecoverySub = _authStateStream.listen((state) {
       if (state.event == AuthChangeEvent.passwordRecovery && mounted) {
@@ -264,6 +269,8 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     // antes do listener de passwordRecovery rodar).
     if (_passwordRecoveryPending) return;
     final accessToken = session?.accessToken;
+    // Sempre atualiza o token "mais recente" que as telas já abertas usam (ver ApiClient).
+    ApiClient.latestAccessToken = accessToken;
     if (accessToken == _lastAccessToken) return;
     _lastAccessToken = accessToken;
     setState(() {

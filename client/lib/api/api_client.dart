@@ -34,10 +34,27 @@ class ApiClient {
   final http.Client _client;
   final Duration _timeout;
 
+  /// Token MAIS RECENTE da sessão, mantido pelo main.dart a cada renovação do Supabase. Telas já
+  /// abertas seguram o ApiClient antigo (com o token de quando foram criadas); sem isto, depois de
+  /// ~1h todas as chamadas dessas telas falhavam com "Signature has expired" (achado real no
+  /// Mental Lingo, 27/09/2026). Todo request usa este token quando existe.
+  static String? latestAccessToken;
+
+  /// Renova a sessão (main.dart liga ao Supabase) e devolve o token novo, ou null se não der.
+  /// Usado UMA vez por chamada quando o servidor responde 401 (autenticação recusada — a requisição
+  /// não chegou a ser processada, então repetir é seguro).
+  static Future<String?> Function()? refreshAccessToken;
+
   Map<String, String> get _headers => {
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${latestAccessToken ?? accessToken}',
         'Content-Type': 'application/json',
       };
+
+  /// Reaplica o token mais recente aos headers no MOMENTO do envio (e da repetição após 401).
+  Map<String, String>? _fresh(Map<String, String>? headers) {
+    if (headers == null || !headers.containsKey('Authorization')) return headers;
+    return {...headers, 'Authorization': 'Bearer ${latestAccessToken ?? accessToken}'};
+  }
 
   Uri _uri(String path, [Map<String, String>? query]) =>
       Uri.parse('$baseUrl$path').replace(queryParameters: query);
@@ -54,24 +71,24 @@ class ApiClient {
   // acontece AQUI DENTRO do mesmo try/catch, não depois — toda falha do
   // pipeline completo (rede, timeout, decode) vira ApiException.
   Future<Map<String, dynamic>> _get(Uri uri, {Map<String, String>? headers}) =>
-      _wrap(() => _client.get(uri, headers: headers));
+      _wrap(() => _client.get(uri, headers: _fresh(headers)));
 
   Future<Map<String, dynamic>> _post(Uri uri,
           {Map<String, String>? headers, Object? body}) =>
-      _wrap(() => _client.post(uri, headers: headers, body: body));
+      _wrap(() => _client.post(uri, headers: _fresh(headers), body: body));
 
   Future<Map<String, dynamic>> _put(Uri uri,
           {Map<String, String>? headers, Object? body}) =>
-      _wrap(() => _client.put(uri, headers: headers, body: body));
+      _wrap(() => _client.put(uri, headers: _fresh(headers), body: body));
 
   Future<Map<String, dynamic>> _delete(Uri uri,
           {Map<String, String>? headers}) =>
-      _wrap(() => _client.delete(uri, headers: headers));
+      _wrap(() => _client.delete(uri, headers: _fresh(headers)));
 
   Future<Map<String, dynamic>> _wrap(
       Future<http.Response> Function() request) async {
     try {
-      return await _attempt(request);
+      return await _attemptRefreshingOn401(request);
     } on _ConnectionRefused {
       // MENTAL_ESPECIFICACAO_TECNICA_APROVADA_MOVIMENTO_v2.docx §8/§9 —
       // só repete automaticamente quando a conexão foi RECUSADA (nunca
@@ -83,7 +100,7 @@ class ApiClient {
       // XP/recompensa numa coleta (idempotência exigida no §8).
       await Future.delayed(const Duration(seconds: 3));
       try {
-        return await _attempt(request);
+        return await _attemptRefreshingOn401(request);
       } on _ConnectionRefused {
         throw ApiException(
           statusCode: 0,
@@ -91,6 +108,26 @@ class ApiClient {
           message: 'Sem conexão com o servidor. Tente novamente.',
         );
       }
+    }
+  }
+
+  /// 401 = autenticação recusada (token vencido): a requisição NÃO foi processada, então é seguro
+  /// renovar a sessão e repetir uma única vez.
+  Future<Map<String, dynamic>> _attemptRefreshingOn401(
+      Future<http.Response> Function() request) async {
+    try {
+      return await _attempt(request);
+    } on ApiException catch (e) {
+      if (e.statusCode != 401 || refreshAccessToken == null) rethrow;
+      String? fresh;
+      try {
+        fresh = await refreshAccessToken!();
+      } catch (_) {
+        fresh = null;
+      }
+      if (fresh == null || fresh.isEmpty) rethrow;
+      latestAccessToken = fresh;
+      return await _attempt(request);
     }
   }
 
