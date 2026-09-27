@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Headline",
+    "word_pt": "manchete",
+    "sentence": "The headline announces the election results.",
+    "translation": "A manchete anuncia os resultados da eleição."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Reporter",
+    "word_pt": "repórter",
+    "sentence": "The reporter interviews the mayor.",
+    "translation": "O repórter entrevista o prefeito."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Interviewee",
+    "word_pt": "entrevistado",
+    "sentence": "The interviewee answers each question calmly.",
+    "translation": "O entrevistado responde cada pergunta com calma."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Broadcast",
+    "word_pt": "transmissão",
+    "sentence": "The channel starts its evening broadcast.",
+    "translation": "O canal começa sua transmissão da noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Subscription",
+    "word_pt": "assinatura",
+    "sentence": "I cancel my magazine subscription.",
+    "translation": "Eu cancelo minha assinatura da revista."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Advertisement",
+    "word_pt": "propaganda",
+    "sentence": "This advertisement appears during the show.",
+    "translation": "Esta propaganda aparece durante o programa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ratings",
+    "word_pt": "audiência",
+    "sentence": "The show gets high ratings this week.",
+    "translation": "O programa tem audiência alta esta semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Censorship",
+    "word_pt": "censura",
+    "sentence": "The film faces censorship in some countries.",
+    "translation": "O filme enfrenta censura em alguns países."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hoax",
+    "word_pt": "notícia falsa",
+    "sentence": "The article turns out to be a hoax.",
+    "translation": "O artigo se revela uma notícia falsa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Source",
+    "word_pt": "fonte de informação",
+    "sentence": "She checks the source before sharing the news.",
+    "translation": "Ela confere a fonte antes de compartilhar a notícia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Government",
+    "word_pt": "governo",
+    "sentence": "The government announces a new policy.",
+    "translation": "O governo anuncia uma nova política."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Parliament",
+    "word_pt": "parlamento",
+    "sentence": "Parliament votes on the new law tomorrow.",
+    "translation": "O parlamento vota a nova lei amanhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Elected",
+    "word_pt": "eleito",
+    "sentence": "She is elected mayor of the city.",
+    "translation": "Ela é eleita prefeita da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ballot",
+    "word_pt": "cédula de votação",
+    "sentence": "He drops his ballot into the box.",
+    "translation": "Ele coloca a cédula de votação na urna."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Campaign",
+    "word_pt": "campanha eleitoral",
+    "sentence": "The campaign focuses on education.",
+    "translation": "A campanha eleitoral foca em educação."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Coalition",
+    "word_pt": "coalizão",
+    "sentence": "Two parties form a coalition after the election.",
+    "translation": "Dois partidos formam uma coalizão depois da eleição."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Income",
+    "word_pt": "renda",
+    "sentence": "Her income increases after the promotion.",
+    "translation": "A renda dela aumenta depois da promoção."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Amendment",
+    "word_pt": "emenda",
+    "sentence": "The amendment changes an old rule.",
+    "translation": "A emenda muda uma regra antiga."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Demonstration",
+    "word_pt": "manifestação",
+    "sentence": "Thousands join the peaceful demonstration.",
+    "translation": "Milhares participam da manifestação pacífica."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Strike",
+    "word_pt": "greve",
+    "sentence": "Workers organize a strike over wages.",
+    "translation": "Os trabalhadores organizam uma greve por causa dos salários."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Inflation",
+    "word_pt": "inflação",
+    "sentence": "Inflation raises the price of food.",
+    "translation": "A inflação aumenta o preço da comida."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Unemployment",
+    "word_pt": "desemprego",
+    "sentence": "Unemployment falls this quarter.",
+    "translation": "O desemprego cai neste trimestre."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Goods",
+    "word_pt": "mercadoria",
+    "sentence": "The store sells imported goods.",
+    "translation": "A loja vende mercadorias importadas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Inventory",
+    "word_pt": "estoque",
+    "sentence": "The shop checks its inventory every month.",
+    "translation": "A loja confere o estoque todo mês."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Boom",
+    "word_pt": "expansão econômica",
+    "sentence": "The city experiences an economic boom.",
+    "translation": "A cidade vive uma expansão econômica."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Recession",
+    "word_pt": "recessão",
+    "sentence": "The country enters a recession this year.",
+    "translation": "O país entra em recessão este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stock",
+    "word_pt": "ação de empresa",
+    "sentence": "He buys stock in a technology company.",
+    "translation": "Ele compra ação de uma empresa de tecnologia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Wage",
+    "word_pt": "salário-base",
+    "sentence": "The minimum wage increases next month.",
+    "translation": "O salário mínimo aumenta no próximo mês."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Consumer",
+    "word_pt": "consumidor",
+    "sentence": "The consumer expects better quality.",
+    "translation": "O consumidor espera uma qualidade melhor."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Shortage",
+    "word_pt": "escassez",
+    "sentence": "The region faces a water shortage.",
+    "translation": "A região enfrenta uma escassez de água."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Memory",
+    "word_pt": "memória",
+    "sentence": "This song brings back a happy memory.",
+    "translation": "Esta música traz de volta uma memória feliz."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Thought",
+    "word_pt": "pensamento",
+    "sentence": "A sudden thought crosses her mind.",
+    "translation": "Um pensamento repentino cruza a mente dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Behavior",
+    "word_pt": "comportamento",
+    "sentence": "His behavior changes after the trip.",
+    "translation": "O comportamento dele muda depois da viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Personality",
+    "word_pt": "personalidade",
+    "sentence": "She has a very warm personality.",
+    "translation": "Ela tem uma personalidade muito calorosa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Awareness",
+    "word_pt": "consciência",
+    "sentence": "The campaign raises awareness about recycling.",
+    "translation": "A campanha aumenta a consciência sobre reciclagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pressure",
+    "word_pt": "pressão",
+    "sentence": "She handles pressure well at work.",
+    "translation": "Ela lida bem com pressão no trabalho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Motivation",
+    "word_pt": "motivação",
+    "sentence": "His motivation grows after the success.",
+    "translation": "A motivação dele cresce depois do sucesso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Emotion",
+    "word_pt": "emoção",
+    "sentence": "She hides her emotion during the interview.",
+    "translation": "Ela esconde a emoção durante a entrevista."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Intuition",
+    "word_pt": "intuição",
+    "sentence": "He trusts his intuition on big decisions.",
+    "translation": "Ele confia na intuição dele em decisões grandes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mindset",
+    "word_pt": "mentalidade",
+    "sentence": "A positive mindset helps her succeed.",
+    "translation": "Uma mentalidade positiva ajuda ela a ter sucesso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Blender",
+    "word_pt": "liquidificador",
+    "sentence": "She mixes the fruit in a blender.",
+    "translation": "Ela mistura a fruta num liquidificador."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sieve",
+    "word_pt": "peneira",
+    "sentence": "He strains the flour through a sieve.",
+    "translation": "Ele passa a farinha por uma peneira."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Grater",
+    "word_pt": "ralador",
+    "sentence": "She uses a grater for the cheese.",
+    "translation": "Ela usa um ralador para o queijo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Corkscrew",
+    "word_pt": "saca-rolhas",
+    "sentence": "He opens the bottle with a corkscrew.",
+    "translation": "Ele abre a garrafa com um saca-rolhas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ladle",
+    "word_pt": "concha",
+    "sentence": "She serves the soup with a ladle.",
+    "translation": "Ela serve a sopa com uma concha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Spatula",
+    "word_pt": "espátula",
+    "sentence": "He flips the pancake with a spatula.",
+    "translation": "Ele vira a panqueca com uma espátula."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Apron",
+    "word_pt": "avental",
+    "sentence": "She wears an apron while cooking.",
+    "translation": "Ela usa um avental enquanto cozinha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mitt",
+    "word_pt": "luva de cozinha",
+    "sentence": "He wears a mitt to take the pan out.",
+    "translation": "Ele usa uma luva de cozinha para tirar a panela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Whisk",
+    "word_pt": "batedor de claras",
+    "sentence": "She uses a whisk to beat the eggs.",
+    "translation": "Ela usa um batedor para bater os ovos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Colander",
+    "word_pt": "escorredor",
+    "sentence": "He drains the pasta in a colander.",
+    "translation": "Ele escorre a massa num escorredor."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stapler",
+    "word_pt": "grampeador",
+    "sentence": "She keeps a stapler on her desk.",
+    "translation": "Ela mantém um grampeador na mesa dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Paperclip",
+    "word_pt": "clipe de papel",
+    "sentence": "He attaches the papers with a paperclip.",
+    "translation": "Ele prende os papéis com um clipe."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Folder",
+    "word_pt": "pasta de arquivos",
+    "sentence": "She keeps all the files in one folder.",
+    "translation": "Ela guarda todos os arquivos numa pasta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Clipboard",
+    "word_pt": "prancheta",
+    "sentence": "The nurse carries a clipboard with notes.",
+    "translation": "A enfermeira carrega uma prancheta com anotações."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Calculator",
+    "word_pt": "calculadora",
+    "sentence": "He uses a calculator during the exam.",
+    "translation": "Ele usa uma calculadora durante a prova."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Planner",
+    "word_pt": "agenda de compromissos",
+    "sentence": "She writes her tasks in a planner.",
+    "translation": "Ela escreve as tarefas dela numa agenda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Label",
+    "word_pt": "etiqueta",
+    "sentence": "He puts a label on each box.",
+    "translation": "Ele coloca uma etiqueta em cada caixa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sharpener",
+    "word_pt": "apontador",
+    "sentence": "She uses a sharpener for her pencil.",
+    "translation": "Ela usa um apontador para o lápis dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Swivel",
+    "word_pt": "cadeira giratória",
+    "sentence": "The base of the chair can swivel.",
+    "translation": "A base da cadeira pode girar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Highlighter",
+    "word_pt": "marcador de texto",
+    "sentence": "She marks the important words with a highlighter.",
+    "translation": "Ela marca as palavras importantes com um marcador."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Celebration",
+    "word_pt": "comemoração",
+    "sentence": "The whole family joins the celebration.",
+    "translation": "A família toda participa da comemoração."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Invitation",
+    "word_pt": "convite",
+    "sentence": "She sends the invitation two weeks early.",
+    "translation": "Ela envia o convite duas semanas antes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Costume",
+    "word_pt": "fantasia",
+    "sentence": "He wears a funny costume to the party.",
+    "translation": "Ele usa uma fantasia engraçada na festa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fireworks",
+    "word_pt": "fogos de artifício",
+    "sentence": "The fireworks light up the whole sky.",
+    "translation": "Os fogos de artifício iluminam o céu inteiro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cheers",
+    "word_pt": "brinde",
+    "sentence": "They raise their glasses for cheers.",
+    "translation": "Eles levantam os copos para o brinde."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Decoration",
+    "word_pt": "decoração",
+    "sentence": "She adds colorful decoration to the room.",
+    "translation": "Ela acrescenta decoração colorida ao quarto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Confetti",
+    "word_pt": "confete",
+    "sentence": "Confetti falls over the crowd.",
+    "translation": "Confete cai sobre a multidão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Souvenir",
+    "word_pt": "lembrancinha",
+    "sentence": "He buys a small souvenir from the trip.",
+    "translation": "Ele compra uma lembrancinha da viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gala",
+    "word_pt": "jantar de gala",
+    "sentence": "They attend a gala at the hotel.",
+    "translation": "Eles participam de um jantar de gala no hotel."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ceremony",
+    "word_pt": "cerimônia",
+    "sentence": "The ceremony starts at six o'clock.",
+    "translation": "A cerimônia começa às seis horas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Faith",
+    "word_pt": "fé",
+    "sentence": "She keeps her faith during hard times.",
+    "translation": "Ela mantém a fé durante tempos difíceis."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Compassion",
+    "word_pt": "compaixão",
+    "sentence": "He treats every patient with compassion.",
+    "translation": "Ele trata cada paciente com compaixão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Duty",
+    "word_pt": "dever moral",
+    "sentence": "It is his duty to protect his team.",
+    "translation": "É dever dele proteger a equipe."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Honor",
+    "word_pt": "honra",
+    "sentence": "She feels great honor to receive the award.",
+    "translation": "Ela sente grande honra em receber o prêmio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Justice",
+    "word_pt": "justiça",
+    "sentence": "They demand justice for the victims.",
+    "translation": "Eles exigem justiça para as vítimas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Respect",
+    "word_pt": "respeito",
+    "sentence": "Students show respect to their teachers.",
+    "translation": "Os alunos demonstram respeito pelos professores."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Charity",
+    "word_pt": "caridade",
+    "sentence": "The company donates money to charity.",
+    "translation": "A empresa doa dinheiro para caridade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vanity",
+    "word_pt": "vaidade",
+    "sentence": "His vanity makes him hard to work with.",
+    "translation": "A vaidade dele dificulta trabalhar com ele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ethics",
+    "word_pt": "ética",
+    "sentence": "The course teaches professional ethics.",
+    "translation": "O curso ensina ética profissional."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Wisdom",
+    "word_pt": "sabedoria",
+    "sentence": "She shares her wisdom with younger workers.",
+    "translation": "Ela compartilha sua sabedoria com trabalhadores mais jovens."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Shape",
+    "word_pt": "moldar",
+    "sentence": "Success can shape a person's confidence.",
+    "translation": "O sucesso pode moldar a confiança de uma pessoa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Replace",
+    "word_pt": "substituir",
+    "sentence": "We replace the old machine with a new one.",
+    "translation": "Nós substituímos a máquina velha por uma nova."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Conform",
+    "word_pt": "amoldar-se",
+    "sentence": "It is hard for him to conform to strict rules.",
+    "translation": "É difícil para ele se amoldar a regras rígidas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Adjust",
+    "word_pt": "ajustar",
+    "sentence": "I adjust my schedule for the trip.",
+    "translation": "Eu ajusto minha agenda para a viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Exchange",
+    "word_pt": "trocar dinheiro",
+    "sentence": "I exchange my dollars for euros.",
+    "translation": "Eu troco meus dólares por euros."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Expand",
+    "word_pt": "ampliar",
+    "sentence": "The company plans to expand next year.",
+    "translation": "A empresa planeja se expandir no próximo ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Shrink",
+    "word_pt": "encolher",
+    "sentence": "The shirt starts to shrink after washing.",
+    "translation": "A camisa começa a encolher depois de lavada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Accelerate",
+    "word_pt": "acelerar",
+    "sentence": "The car starts to accelerate on the highway.",
+    "translation": "O carro começa a acelerar na rodovia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Decelerate",
+    "word_pt": "desacelerar",
+    "sentence": "The train begins to decelerate near the station.",
+    "translation": "O trem começa a desacelerar perto da estação."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Evolve",
+    "word_pt": "evoluir",
+    "sentence": "Technology continues to evolve every year.",
+    "translation": "A tecnologia continua a evoluir todo ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Spot",
+    "word_pt": "avistar",
+    "sentence": "I spot my friend in the crowd.",
+    "translation": "Eu avisto meu amigo na multidão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Observe",
+    "word_pt": "observar",
+    "sentence": "Scientists observe the animals closely.",
+    "translation": "Os cientistas observam os animais de perto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Realize",
+    "word_pt": "perceber",
+    "sentence": "I realize my mistake too late.",
+    "translation": "Eu percebo meu erro tarde demais."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Glimpse",
+    "word_pt": "vislumbrar",
+    "sentence": "I glimpse the sea from the window.",
+    "translation": "Eu vislumbro o mar pela janela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Distinguish",
+    "word_pt": "distinguir",
+    "sentence": "It is hard to distinguish the twins.",
+    "translation": "É difícil distinguir os gêmeos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Suspect",
+    "word_pt": "suspeitar",
+    "sentence": "The police suspect the neighbor.",
+    "translation": "A polícia suspeita do vizinho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Imagine",
+    "word_pt": "imaginar",
+    "sentence": "I imagine a better future for everyone.",
+    "translation": "Eu imagino um futuro melhor para todos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Recall",
+    "word_pt": "relembrar",
+    "sentence": "She tries to recall his name.",
+    "translation": "Ela tenta relembrar o nome dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Overlook",
+    "word_pt": "deixar passar despercebido",
+    "sentence": "Don't overlook the small details.",
+    "translation": "Não deixe os pequenos detalhes passarem despercebidos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Predict",
+    "word_pt": "prever",
+    "sentence": "Experts predict a mild winter this year.",
+    "translation": "Especialistas preveem um inverno ameno este ano."
+  }
+]

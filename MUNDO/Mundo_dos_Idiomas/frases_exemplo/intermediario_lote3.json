@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Trial",
+    "word_pt": "teste científico",
+    "sentence": "The team runs a trial before the product launch.",
+    "translation": "A equipe faz um teste antes do lançamento do produto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hypothesis",
+    "word_pt": "hipótese",
+    "sentence": "The scientist tests her hypothesis carefully.",
+    "translation": "A cientista testa a hipótese dela com cuidado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Discovery",
+    "word_pt": "descoberta",
+    "sentence": "This discovery changes modern medicine.",
+    "translation": "Esta descoberta muda a medicina moderna."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Laboratory",
+    "word_pt": "laboratório",
+    "sentence": "They work in a small laboratory.",
+    "translation": "Eles trabalham num laboratório pequeno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Atom",
+    "word_pt": "átomo",
+    "sentence": "An atom contains protons and electrons.",
+    "translation": "Um átomo contém prótons e elétrons."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gravity",
+    "word_pt": "gravidade",
+    "sentence": "Gravity keeps our feet on the ground.",
+    "translation": "A gravidade mantém nossos pés no chão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Evolution",
+    "word_pt": "evolução",
+    "sentence": "The book explains the theory of evolution.",
+    "translation": "O livro explica a teoria da evolução."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cell",
+    "word_pt": "célula",
+    "sentence": "A cell is the basic unit of life.",
+    "translation": "Uma célula é a unidade básica da vida."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Galaxy",
+    "word_pt": "galáxia",
+    "sentence": "Our galaxy has billions of stars.",
+    "translation": "Nossa galáxia tem bilhões de estrelas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Formula",
+    "word_pt": "fórmula",
+    "sentence": "She writes the formula on the board.",
+    "translation": "Ela escreve a fórmula no quadro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tournament",
+    "word_pt": "torneio",
+    "sentence": "Our school wins the tournament this year.",
+    "translation": "Nossa escola vence o torneio este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Referee",
+    "word_pt": "árbitro",
+    "sentence": "The referee stops the game.",
+    "translation": "O árbitro interrompe o jogo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fans",
+    "word_pt": "torcida",
+    "sentence": "Thousands of fans fill the stadium.",
+    "translation": "Milhares de torcedores lotam o estádio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Penalty",
+    "word_pt": "pênalti",
+    "sentence": "The team scores from a penalty.",
+    "translation": "O time marca a partir de um pênalti."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Whistle",
+    "word_pt": "apito",
+    "sentence": "The coach blows the whistle to start practice.",
+    "translation": "O treinador apita para começar o treino."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Jersey",
+    "word_pt": "uniforme esportivo",
+    "sentence": "He wears his team's jersey with pride.",
+    "translation": "Ele usa o uniforme do time dele com orgulho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sprain",
+    "word_pt": "torção",
+    "sentence": "She has a sprain in her ankle.",
+    "translation": "Ela tem uma torção no tornozelo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Milestone",
+    "word_pt": "marco histórico",
+    "sentence": "Winning the title is a big milestone.",
+    "translation": "Vencer o título é um grande marco histórico."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Championship",
+    "word_pt": "campeonato",
+    "sentence": "They compete in the national championship.",
+    "translation": "Eles competem no campeonato nacional."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Performance",
+    "word_pt": "desempenho",
+    "sentence": "His performance improves every match.",
+    "translation": "O desempenho dele melhora a cada partida."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Painting",
+    "word_pt": "pintura",
+    "sentence": "This painting hangs in the museum.",
+    "translation": "Esta pintura fica exposta no museu."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sculpture",
+    "word_pt": "escultura",
+    "sentence": "The sculpture stands in the town square.",
+    "translation": "A escultura fica na praça da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Exhibition",
+    "word_pt": "exposição de arte",
+    "sentence": "We visit an art exhibition downtown.",
+    "translation": "Nós visitamos uma exposição de arte no centro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gallery",
+    "word_pt": "galeria",
+    "sentence": "The gallery shows local artists.",
+    "translation": "A galeria exibe artistas locais."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Audience",
+    "word_pt": "plateia",
+    "sentence": "The audience applauds at the end.",
+    "translation": "A plateia aplaude no final."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rehearsal",
+    "word_pt": "ensaio de teatro",
+    "sentence": "The actors have a rehearsal every evening.",
+    "translation": "Os atores têm um ensaio de teatro toda noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Screenplay",
+    "word_pt": "roteiro de filme",
+    "sentence": "She writes the screenplay for the film.",
+    "translation": "Ela escreve o roteiro do filme."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Scenery",
+    "word_pt": "cenário de teatro",
+    "sentence": "The scenery on stage looks realistic.",
+    "translation": "O cenário de teatro parece realista."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Heritage",
+    "word_pt": "patrimônio cultural",
+    "sentence": "This building is part of our heritage.",
+    "translation": "Este prédio faz parte do nosso patrimônio cultural."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tradition",
+    "word_pt": "tradição",
+    "sentence": "The festival is a family tradition.",
+    "translation": "O festival é uma tradição de família."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Melody",
+    "word_pt": "melodia",
+    "sentence": "I remember the melody of that song.",
+    "translation": "Eu lembro a melodia daquela canção."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rhythm",
+    "word_pt": "ritmo",
+    "sentence": "The song has a fast rhythm.",
+    "translation": "A música tem um ritmo rápido."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lyrics",
+    "word_pt": "letra de música",
+    "sentence": "She writes the lyrics for a new song.",
+    "translation": "Ela escreve a letra de uma nova música."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Chorus",
+    "word_pt": "refrão",
+    "sentence": "Everyone sings the chorus together.",
+    "translation": "Todo mundo canta o refrão junto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Guitar",
+    "word_pt": "violão",
+    "sentence": "He plays the guitar at the party.",
+    "translation": "Ele toca violão na festa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Drum",
+    "word_pt": "tambor",
+    "sentence": "The drum sets the beat for the band.",
+    "translation": "O tambor marca o ritmo para a banda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Orchestra",
+    "word_pt": "orquestra",
+    "sentence": "The orchestra performs a famous symphony.",
+    "translation": "A orquestra executa uma sinfonia famosa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Concert",
+    "word_pt": "show ao vivo",
+    "sentence": "We buy tickets for the concert tonight.",
+    "translation": "Nós compramos ingressos para o show desta noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Composer",
+    "word_pt": "compositor",
+    "sentence": "The composer writes music for films.",
+    "translation": "O compositor escreve música para filmes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Chord",
+    "word_pt": "acorde",
+    "sentence": "She practices a new chord on the piano.",
+    "translation": "Ela pratica um novo acorde no piano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Predator",
+    "word_pt": "predador",
+    "sentence": "A predator hunts other animals for food.",
+    "translation": "Um predador caça outros animais para se alimentar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Prey",
+    "word_pt": "presa de caça",
+    "sentence": "The lion looks for its prey at night.",
+    "translation": "O leão procura a presa dele à noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Herd",
+    "word_pt": "rebanho",
+    "sentence": "A herd of cows crosses the road.",
+    "translation": "Um rebanho de vacas atravessa a estrada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Beehive",
+    "word_pt": "colmeia",
+    "sentence": "The beehive produces a lot of honey.",
+    "translation": "A colmeia produz muito mel."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cub",
+    "word_pt": "filhote de leão",
+    "sentence": "The lion cub follows its mother closely.",
+    "translation": "O filhote de leão segue a mãe de perto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Flock",
+    "word_pt": "bando de aves",
+    "sentence": "A flock of birds flies south for winter.",
+    "translation": "Um bando de aves voa para o sul no inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Shoal",
+    "word_pt": "cardume",
+    "sentence": "A shoal of fish swims near the boat.",
+    "translation": "Um cardume de peixes nada perto do barco."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Swarm",
+    "word_pt": "enxame",
+    "sentence": "A swarm of bees surrounds the tree.",
+    "translation": "Um enxame de abelhas cerca a árvore."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Claw",
+    "word_pt": "garra",
+    "sentence": "The cat uses its claw to climb.",
+    "translation": "O gato usa a garra para escalar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hibernate",
+    "word_pt": "hibernar",
+    "sentence": "Bears hibernate during the winter.",
+    "translation": "Ursos hibernam durante o inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Forecast",
+    "word_pt": "previsão do tempo",
+    "sentence": "The forecast predicts rain tomorrow.",
+    "translation": "A previsão do tempo prevê chuva amanhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Drizzle",
+    "word_pt": "garoa",
+    "sentence": "A light drizzle falls all morning.",
+    "translation": "Uma garoa leve cai a manhã toda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mist",
+    "word_pt": "nevoeiro",
+    "sentence": "Mist covers the valley at dawn.",
+    "translation": "Uma neblina cobre o vale ao amanhecer."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gale",
+    "word_pt": "ventania",
+    "sentence": "A gale damages the roof of the house.",
+    "translation": "Uma ventania danifica o telhado da casa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Heatwave",
+    "word_pt": "onda de calor",
+    "sentence": "The heatwave lasts for a whole week.",
+    "translation": "A onda de calor dura uma semana inteira."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Frost",
+    "word_pt": "geada",
+    "sentence": "Frost covers the grass this morning.",
+    "translation": "A geada cobre a grama esta manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hail",
+    "word_pt": "granizo",
+    "sentence": "Hail falls during the sudden storm.",
+    "translation": "Granizo cai durante a tempestade repentina."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Humidity",
+    "word_pt": "umidade",
+    "sentence": "The humidity makes the air feel heavy.",
+    "translation": "A umidade faz o ar parecer pesado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Flash",
+    "word_pt": "clarão",
+    "sentence": "A flash of lightning lights up the sky.",
+    "translation": "Um clarão de raio ilumina o céu."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Downpour",
+    "word_pt": "chuvarada",
+    "sentence": "We get caught in a sudden downpour.",
+    "translation": "Nós ficamos pegos numa chuvarada repentina."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Friendship",
+    "word_pt": "amizade",
+    "sentence": "Their friendship lasts for many years.",
+    "translation": "A amizade deles dura muitos anos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dating",
+    "word_pt": "namoro",
+    "sentence": "They have been dating for six months.",
+    "translation": "Eles estão namorando há seis meses."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Divorce",
+    "word_pt": "divórcio",
+    "sentence": "They finalize their divorce this year.",
+    "translation": "Eles finalizam o divórcio este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fiance",
+    "word_pt": "noivo",
+    "sentence": "She introduces her fiance to the family.",
+    "translation": "Ela apresenta o noivo dela para a família."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Relative",
+    "word_pt": "parente",
+    "sentence": "Every relative comes to the party.",
+    "translation": "Todo parente vem à festa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Godfather",
+    "word_pt": "padrinho",
+    "sentence": "He asks his brother to be the godfather.",
+    "translation": "Ele pede para o irmão ser o padrinho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stepmother",
+    "word_pt": "madrasta",
+    "sentence": "Her stepmother treats her kindly.",
+    "translation": "A madrasta dela a trata com gentileza."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Widower",
+    "word_pt": "viúvo",
+    "sentence": "The widower lives alone in the house.",
+    "translation": "O viúvo mora sozinho na casa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Roommate",
+    "word_pt": "colega de quarto",
+    "sentence": "My roommate always cleans the kitchen.",
+    "translation": "Meu colega de quarto sempre limpa a cozinha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Acquaintance",
+    "word_pt": "conhecido",
+    "sentence": "He is just an acquaintance from work.",
+    "translation": "Ele é só um conhecido do trabalho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Routine",
+    "word_pt": "rotina",
+    "sentence": "She follows the same routine every day.",
+    "translation": "Ela segue a mesma rotina todos os dias."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Custom",
+    "word_pt": "costume",
+    "sentence": "This custom comes from an old tradition.",
+    "translation": "Este costume vem de uma tradição antiga."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Punctual",
+    "word_pt": "pontual",
+    "sentence": "He is always punctual for meetings.",
+    "translation": "Ele é sempre pontual para as reuniões."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Insomnia",
+    "word_pt": "insônia",
+    "sentence": "Insomnia keeps her awake all night.",
+    "translation": "A insônia a mantém acordada a noite toda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Doze",
+    "word_pt": "cochilar",
+    "sentence": "He tends to doze off during long lectures.",
+    "translation": "Ele tende a cochilar durante palestras longas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Procrastinate",
+    "word_pt": "procrastinar",
+    "sentence": "I tend to procrastinate before big exams.",
+    "translation": "Eu tendo a procrastinar antes de provas grandes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Organize",
+    "word_pt": "organizar",
+    "sentence": "We organize the files by date.",
+    "translation": "Nós organizamos os arquivos por data."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Customary",
+    "word_pt": "costumeiro",
+    "sentence": "It is customary to bring a gift.",
+    "translation": "É costumeiro trazer um presente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Discipline",
+    "word_pt": "disciplina",
+    "sentence": "Discipline helps him finish his studies.",
+    "translation": "A disciplina o ajuda a terminar os estudos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Unwind",
+    "word_pt": "relaxar",
+    "sentence": "I like to unwind with a book at night.",
+    "translation": "Eu gosto de relaxar com um livro à noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Strive",
+    "word_pt": "esforçar-se",
+    "sentence": "She continues to strive for excellence.",
+    "translation": "Ela continua se esforçando pela excelência."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Persevere",
+    "word_pt": "perseverar",
+    "sentence": "He decides to persevere despite the setback.",
+    "translation": "Ele decide perseverar apesar do contratempo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Overcome",
+    "word_pt": "superar",
+    "sentence": "They overcome many obstacles together.",
+    "translation": "Eles superam muitos obstáculos juntos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Confront",
+    "word_pt": "enfrentar",
+    "sentence": "She decides to confront the problem directly.",
+    "translation": "Ela decide enfrentar o problema diretamente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Devote",
+    "word_pt": "dedicar-se",
+    "sentence": "I devote my time to volunteer work.",
+    "translation": "Eu dedico meu tempo a trabalho voluntário."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Compete",
+    "word_pt": "competir",
+    "sentence": "The two companies compete for the same market.",
+    "translation": "As duas empresas competem pelo mesmo mercado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Practice",
+    "word_pt": "treinar",
+    "sentence": "We practice every afternoon.",
+    "translation": "Nós treinamos toda tarde."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Exercise",
+    "word_pt": "exercitar-se",
+    "sentence": "We exercise together three times a week.",
+    "translation": "Nós nos exercitamos juntos três vezes por semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Surrender",
+    "word_pt": "render-se",
+    "sentence": "The soldiers refuse to surrender.",
+    "translation": "Os soldados se recusam a se render."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Triumph",
+    "word_pt": "triunfar",
+    "sentence": "Her hard work leads to a final triumph.",
+    "translation": "O trabalho duro dela leva a um triunfo final."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vast",
+    "word_pt": "vasto",
+    "sentence": "The desert covers a vast area.",
+    "translation": "O deserto cobre uma área vasta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gigantic",
+    "word_pt": "gigantesco",
+    "sentence": "The company builds a gigantic new factory.",
+    "translation": "A empresa constrói uma fábrica nova gigantesca."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Extreme",
+    "word_pt": "extremo",
+    "sentence": "They experience extreme weather this year.",
+    "translation": "Eles enfrentam um clima extremo este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Slight",
+    "word_pt": "ligeiro",
+    "sentence": "There is a slight change in the plan.",
+    "translation": "Há uma mudança ligeira no plano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Profound",
+    "word_pt": "profundo",
+    "sentence": "The book leaves a profound impact on readers.",
+    "translation": "O livro deixa um impacto profundo nos leitores."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Intense",
+    "word_pt": "intenso",
+    "sentence": "The heat is intense during the afternoon.",
+    "translation": "O calor é intenso durante a tarde."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Feeble",
+    "word_pt": "fraco",
+    "sentence": "His voice sounds feeble after the illness.",
+    "translation": "A voz dele soa fraca depois da doença."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Powerful",
+    "word_pt": "poderoso",
+    "sentence": "The engine produces a powerful sound.",
+    "translation": "O motor produz um som poderoso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Delicate",
+    "word_pt": "delicado",
+    "sentence": "This is a delicate situation.",
+    "translation": "Esta é uma situação delicada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sturdy",
+    "word_pt": "robusto",
+    "sentence": "They build a sturdy fence around the yard.",
+    "translation": "Eles constroem uma cerca robusta ao redor do quintal."
+  }
+]

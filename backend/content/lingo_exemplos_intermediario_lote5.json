@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mainland",
+    "word_pt": "terra firme",
+    "sentence": "They travel from the island to the mainland.",
+    "translation": "Eles viajam da ilha para a terra firme."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Peninsula",
+    "word_pt": "península",
+    "sentence": "Spain sits on the Iberian Peninsula.",
+    "translation": "A Espanha fica na Península Ibérica."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Plain",
+    "word_pt": "planície",
+    "sentence": "Farmers grow wheat on the plain.",
+    "translation": "Os agricultores cultivam trigo na planície."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Canyon",
+    "word_pt": "vale profundo",
+    "sentence": "They hike through the deep canyon.",
+    "translation": "Eles caminham pelo vale profundo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Range",
+    "word_pt": "cordilheira",
+    "sentence": "The mountain range stretches for miles.",
+    "translation": "A cordilheira se estende por quilômetros."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Glacier",
+    "word_pt": "geleira",
+    "sentence": "The glacier melts a little every year.",
+    "translation": "A geleira derrete um pouco todo ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Swamp",
+    "word_pt": "pântano",
+    "sentence": "Alligators live in the swamp.",
+    "translation": "Jacarés vivem no pântano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Archipelago",
+    "word_pt": "arquipélago",
+    "sentence": "The archipelago has hundreds of small islands.",
+    "translation": "O arquipélago tem centenas de ilhas pequenas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hemisphere",
+    "word_pt": "hemisfério",
+    "sentence": "Brazil is located in the southern hemisphere.",
+    "translation": "O Brasil fica localizado no hemisfério sul."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Equator",
+    "word_pt": "equador",
+    "sentence": "The equator crosses several countries.",
+    "translation": "O equador atravessa vários países."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rebellion",
+    "word_pt": "rebelião",
+    "sentence": "The rebellion begins after years of injustice.",
+    "translation": "A rebelião começa depois de anos de injustiça."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Empire",
+    "word_pt": "império",
+    "sentence": "The empire expands across the continent.",
+    "translation": "O império se expande pelo continente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Revolution",
+    "word_pt": "revolução",
+    "sentence": "The revolution changes the country forever.",
+    "translation": "A revolução muda o país para sempre."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Colony",
+    "word_pt": "colônia",
+    "sentence": "This region was once a colony.",
+    "translation": "Esta região já foi uma colônia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Independence",
+    "word_pt": "independência",
+    "sentence": "The country celebrates its independence every year.",
+    "translation": "O país comemora sua independência todo ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ancestor",
+    "word_pt": "antepassado",
+    "sentence": "Her ancestor came from Portugal.",
+    "translation": "O antepassado dela veio de Portugal."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Monarch",
+    "word_pt": "monarca",
+    "sentence": "The monarch rules for over forty years.",
+    "translation": "O monarca governa por mais de quarenta anos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Antiquity",
+    "word_pt": "antiguidade",
+    "sentence": "These objects come from antiquity.",
+    "translation": "Estes objetos vêm da antiguidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ruin",
+    "word_pt": "ruína",
+    "sentence": "Tourists visit the ancient ruin every summer.",
+    "translation": "Turistas visitam a ruína antiga todo verão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Treaty",
+    "word_pt": "tratado",
+    "sentence": "Both countries sign a peace treaty.",
+    "translation": "Os dois países assinam um tratado de paz."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fireplace",
+    "word_pt": "lareira",
+    "sentence": "We sit near the fireplace in winter.",
+    "translation": "Nós sentamos perto da lareira no inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Wardrobe",
+    "word_pt": "guarda-roupa",
+    "sentence": "She keeps her coats in the wardrobe.",
+    "translation": "Ela guarda os casacos dela no guarda-roupa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cupboard",
+    "word_pt": "armário de cozinha",
+    "sentence": "He puts the plates in the cupboard.",
+    "translation": "Ele guarda os pratos no armário de cozinha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Doorway",
+    "word_pt": "batente de porta",
+    "sentence": "The dog waits in the doorway.",
+    "translation": "O cachorro espera no batente da porta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Step",
+    "word_pt": "degrau",
+    "sentence": "Be careful on the last step.",
+    "translation": "Cuidado com o último degrau."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Handrail",
+    "word_pt": "corrimão",
+    "sentence": "She holds the handrail going up the stairs.",
+    "translation": "Ela segura o corrimão subindo a escada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Doorknob",
+    "word_pt": "maçaneta",
+    "sentence": "He turns the doorknob slowly.",
+    "translation": "Ele gira a maçaneta devagar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Switch",
+    "word_pt": "interruptor",
+    "sentence": "She turns off the light switch.",
+    "translation": "Ela desliga o interruptor de luz."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Outlet",
+    "word_pt": "tomada elétrica",
+    "sentence": "The lamp plugs into the outlet.",
+    "translation": "A lâmpada se conecta na tomada elétrica."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dresser",
+    "word_pt": "cômoda",
+    "sentence": "She keeps her socks in the dresser.",
+    "translation": "Ela guarda as meias na cômoda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Drill",
+    "word_pt": "furadeira",
+    "sentence": "He uses a drill to hang the picture.",
+    "translation": "Ele usa uma furadeira para pendurar o quadro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Screwdriver",
+    "word_pt": "chave de fenda",
+    "sentence": "She fixes the chair with a screwdriver.",
+    "translation": "Ela conserta a cadeira com uma chave de fenda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Saw",
+    "word_pt": "serra",
+    "sentence": "He cuts the wood with a saw.",
+    "translation": "Ele corta a madeira com uma serra."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pliers",
+    "word_pt": "alicate",
+    "sentence": "I use pliers to bend the wire.",
+    "translation": "Eu uso um alicate para dobrar o fio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Level",
+    "word_pt": "nível de bolha",
+    "sentence": "He checks the shelf with a level.",
+    "translation": "Ele confere a prateleira com um nível de bolha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Shovel",
+    "word_pt": "pá",
+    "sentence": "She digs the hole with a shovel.",
+    "translation": "Ela cava o buraco com uma pá."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hoe",
+    "word_pt": "enxada",
+    "sentence": "He works the soil with a hoe.",
+    "translation": "Ele trabalha a terra com uma enxada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sandpaper",
+    "word_pt": "lixa",
+    "sentence": "She smooths the wood with sandpaper.",
+    "translation": "Ela alisa a madeira com lixa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Bolt",
+    "word_pt": "parafuso com porca",
+    "sentence": "He tightens the bolt with a wrench.",
+    "translation": "Ele aperta o parafuso com uma chave."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sledgehammer",
+    "word_pt": "marreta",
+    "sentence": "They break the wall with a sledgehammer.",
+    "translation": "Eles quebram a parede com uma marreta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Manners",
+    "word_pt": "boas maneiras",
+    "sentence": "Good manners matter at the dinner table.",
+    "translation": "Boas maneiras importam à mesa de jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Kindness",
+    "word_pt": "gentileza",
+    "sentence": "Her kindness surprises everyone she meets.",
+    "translation": "A gentileza dela surpreende todos que ela conhece."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rudeness",
+    "word_pt": "grosseria",
+    "sentence": "His rudeness upsets the whole team.",
+    "translation": "A grosseria dele incomoda a equipe toda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Apology",
+    "word_pt": "pedido de desculpas",
+    "sentence": "He offers a sincere apology.",
+    "translation": "Ele oferece um pedido de desculpas sincero."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tip",
+    "word_pt": "gorjeta",
+    "sentence": "We leave a generous tip for the waiter.",
+    "translation": "Nós deixamos uma gorjeta generosa para o garçom."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Coexistence",
+    "word_pt": "convivência",
+    "sentence": "The two cultures find a peaceful coexistence.",
+    "translation": "As duas culturas encontram uma convivência pacífica."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cooperation",
+    "word_pt": "cooperação",
+    "sentence": "The project depends on team cooperation.",
+    "translation": "O projeto depende da cooperação da equipe."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Intimacy",
+    "word_pt": "intimidade",
+    "sentence": "They build intimacy through daily conversations.",
+    "translation": "Eles constroem intimidade através de conversas diárias."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hospitality",
+    "word_pt": "hospitalidade",
+    "sentence": "We enjoy their warm hospitality.",
+    "translation": "Nós apreciamos a calorosa hospitalidade deles."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Solidarity",
+    "word_pt": "solidariedade",
+    "sentence": "Neighbors show solidarity during the crisis.",
+    "translation": "Os vizinhos demonstram solidariedade durante a crise."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mayor",
+    "word_pt": "prefeito",
+    "sentence": "The mayor opens the new park.",
+    "translation": "O prefeito inaugura o novo parque."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Precinct",
+    "word_pt": "delegacia",
+    "sentence": "She reports the theft at the precinct.",
+    "translation": "Ela relata o roubo na delegacia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Registry",
+    "word_pt": "cartório",
+    "sentence": "He goes to the registry for his documents.",
+    "translation": "Ele vai ao cartório buscar os documentos dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Plaza",
+    "word_pt": "praça central",
+    "sentence": "People gather in the plaza on weekends.",
+    "translation": "As pessoas se reúnem na praça central nos fins de semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ambulance",
+    "word_pt": "ambulância",
+    "sentence": "The ambulance arrives within minutes.",
+    "translation": "A ambulância chega em minutos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Terminal",
+    "word_pt": "rodoviária",
+    "sentence": "We wait at the bus terminal.",
+    "translation": "Nós esperamos na rodoviária."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Boardwalk",
+    "word_pt": "calçadão",
+    "sentence": "We walk along the boardwalk at sunset.",
+    "translation": "Nós caminhamos pelo calçadão ao entardecer."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Bazaar",
+    "word_pt": "feira popular",
+    "sentence": "They sell handmade items at the bazaar.",
+    "translation": "Eles vendem itens artesanais na feira popular."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Clinic",
+    "word_pt": "clínica",
+    "sentence": "She works at a small local clinic.",
+    "translation": "Ela trabalha numa pequena clínica local."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mailbox",
+    "word_pt": "caixa de correio",
+    "sentence": "He checks the mailbox every afternoon.",
+    "translation": "Ele confere a caixa de correio toda tarde."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Incredible",
+    "word_pt": "incrível",
+    "sentence": "The view from the top is incredible.",
+    "translation": "A vista do topo é incrível."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Terrible",
+    "word_pt": "terrível",
+    "sentence": "The traffic today is terrible.",
+    "translation": "O trânsito hoje está terrível."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Marvelous",
+    "word_pt": "maravilhoso",
+    "sentence": "The concert is a marvelous experience.",
+    "translation": "O show é uma experiência maravilhosa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Disappointing",
+    "word_pt": "decepcionante",
+    "sentence": "The ending of the movie is disappointing.",
+    "translation": "O final do filme é decepcionante."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Boring",
+    "word_pt": "chato",
+    "sentence": "The lecture feels a bit boring today.",
+    "translation": "A palestra parece um pouco chata hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Thrilling",
+    "word_pt": "emocionante",
+    "sentence": "The roller coaster ride is thrilling.",
+    "translation": "O passeio na montanha-russa é emocionante."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Annoying",
+    "word_pt": "irritante",
+    "sentence": "His loud music is very annoying.",
+    "translation": "A música alta dele é muito irritante."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Relaxing",
+    "word_pt": "relaxante",
+    "sentence": "A walk in the park is relaxing.",
+    "translation": "Uma caminhada no parque é relaxante."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Astonishing",
+    "word_pt": "surpreendente",
+    "sentence": "The results are truly astonishing.",
+    "translation": "Os resultados são verdadeiramente surpreendentes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Confusing",
+    "word_pt": "confuso",
+    "sentence": "These instructions are quite confusing.",
+    "translation": "Estas instruções são bem confusas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fortunately",
+    "word_pt": "felizmente",
+    "sentence": "Fortunately, no one gets hurt.",
+    "translation": "Felizmente, ninguém se machuca."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Unfortunately",
+    "word_pt": "infelizmente",
+    "sentence": "Unfortunately, the flight is cancelled.",
+    "translation": "Infelizmente, o voo é cancelado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Obviously",
+    "word_pt": "obviamente",
+    "sentence": "Obviously, we need more time.",
+    "translation": "Obviamente, nós precisamos de mais tempo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Clearly",
+    "word_pt": "claramente",
+    "sentence": "She explains the plan clearly.",
+    "translation": "Ela explica o plano claramente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Presumably",
+    "word_pt": "presumivelmente",
+    "sentence": "Presumably, the train will be late.",
+    "translation": "Presumivelmente, o trem vai atrasar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Seldom",
+    "word_pt": "raramente",
+    "sentence": "They seldom go out during the week.",
+    "translation": "Eles raramente saem durante a semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Constantly",
+    "word_pt": "constantemente",
+    "sentence": "He constantly checks his phone.",
+    "translation": "Ele constantemente confere o telefone dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Immediately",
+    "word_pt": "imediatamente",
+    "sentence": "Please call me immediately.",
+    "translation": "Por favor, me ligue imediatamente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Roughly",
+    "word_pt": "aproximadamente",
+    "sentence": "The trip takes roughly two hours.",
+    "translation": "A viagem leva aproximadamente duas horas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mainly",
+    "word_pt": "principalmente",
+    "sentence": "The team focuses mainly on quality.",
+    "translation": "A equipe foca principalmente em qualidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Therefore",
+    "word_pt": "portanto",
+    "sentence": "It is raining; therefore, we stay inside.",
+    "translation": "Está chovendo; portanto, nós ficamos dentro de casa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Nevertheless",
+    "word_pt": "entretanto",
+    "sentence": "The plan is risky; nevertheless, they try it.",
+    "translation": "O plano é arriscado; entretanto, eles o tentam."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Moreover",
+    "word_pt": "além disso",
+    "sentence": "The house is big; moreover, it has a garden.",
+    "translation": "A casa é grande; além disso, tem um jardim."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Nonetheless",
+    "word_pt": "ainda assim",
+    "sentence": "It is late; nonetheless, we finish the work.",
+    "translation": "Está tarde; ainda assim, nós terminamos o trabalho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Whereas",
+    "word_pt": "enquanto que",
+    "sentence": "He likes coffee, whereas she prefers tea.",
+    "translation": "Ele gosta de café, enquanto ela prefere chá."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Instead",
+    "word_pt": "em vez disso",
+    "sentence": "We stay home instead of going out.",
+    "translation": "Nós ficamos em casa em vez de sair."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Otherwise",
+    "word_pt": "caso contrário",
+    "sentence": "Hurry up, otherwise we will be late.",
+    "translation": "Se apresse, caso contrário nós vamos nos atrasar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Indeed",
+    "word_pt": "de fato",
+    "sentence": "The results are, indeed, very promising.",
+    "translation": "Os resultados são, de fato, muito promissores."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Albeit",
+    "word_pt": "embora",
+    "sentence": "The trip is short, albeit expensive.",
+    "translation": "A viagem é curta, embora cara."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Afterwards",
+    "word_pt": "logo depois",
+    "sentence": "We eat dinner and, afterwards, watch a movie.",
+    "translation": "Nós jantamos e, logo depois, assistimos a um filme."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Grab",
+    "word_pt": "agarrar com força",
+    "sentence": "I grab the rope with both hands.",
+    "translation": "Eu agarro a corda com as duas mãos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hurl",
+    "word_pt": "arremessar com força",
+    "sentence": "I hurl the rock into the river.",
+    "translation": "Eu arremesso a pedra no rio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Heap",
+    "word_pt": "amontoar",
+    "sentence": "I heap the clothes on the bed.",
+    "translation": "Eu amontoo as roupas na cama."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Scrub",
+    "word_pt": "esfregar",
+    "sentence": "I scrub the pan until it shines.",
+    "translation": "Eu esfrego a panela até brilhar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Squeeze",
+    "word_pt": "espremer",
+    "sentence": "I squeeze the lemon into the tea.",
+    "translation": "Eu espremo o limão no chá."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pinch",
+    "word_pt": "beliscar",
+    "sentence": "I pinch the dough to close it.",
+    "translation": "Eu belisco a massa para fechá-la."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Poke",
+    "word_pt": "cutucar",
+    "sentence": "I poke the balloon with a pin.",
+    "translation": "Eu cutuco o balão com um alfinete."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Swing",
+    "word_pt": "balançar",
+    "sentence": "The kids swing on the old rope.",
+    "translation": "As crianças balançam na corda velha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Spill",
+    "word_pt": "derramar",
+    "sentence": "I spill coffee on my shirt.",
+    "translation": "Eu derramo café na minha camisa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rip",
+    "word_pt": "rasgar",
+    "sentence": "I rip the paper by accident.",
+    "translation": "Eu rasgo o papel por acidente."
+  }
+]

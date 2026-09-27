@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Startup",
+    "word_pt": "empresa iniciante",
+    "sentence": "He works for a tech startup.",
+    "translation": "Ele trabalha numa empresa iniciante de tecnologia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Competitor",
+    "word_pt": "concorrente",
+    "sentence": "Our main competitor lowers its prices.",
+    "translation": "Nosso principal concorrente baixa os preços."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Loyal",
+    "word_pt": "leal",
+    "sentence": "She stays loyal to the company for years.",
+    "translation": "Ela permanece leal à empresa por anos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Supplier",
+    "word_pt": "fornecedor",
+    "sentence": "We change our main supplier this year.",
+    "translation": "Nós trocamos nosso principal fornecedor este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Partner",
+    "word_pt": "sócio",
+    "sentence": "He becomes a partner in the firm.",
+    "translation": "Ele se torna sócio na empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Contract",
+    "word_pt": "contrato",
+    "sentence": "They sign the contract this morning.",
+    "translation": "Eles assinam o contrato hoje de manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sales",
+    "word_pt": "vendas",
+    "sentence": "Sales increase during the holidays.",
+    "translation": "As vendas aumentam durante os feriados."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Brand",
+    "word_pt": "marca comercial",
+    "sentence": "This brand is popular among young people.",
+    "translation": "Esta marca comercial é popular entre os jovens."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Retail",
+    "word_pt": "varejo",
+    "sentence": "She works in retail management.",
+    "translation": "Ela trabalha na gestão de varejo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Negotiation",
+    "word_pt": "negociação",
+    "sentence": "The negotiation takes several hours.",
+    "translation": "A negociação leva várias horas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Legislation",
+    "word_pt": "legislação",
+    "sentence": "New legislation protects consumer rights.",
+    "translation": "Nova legislação protege os direitos do consumidor."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Courthouse",
+    "word_pt": "fórum judicial",
+    "sentence": "They meet outside the courthouse.",
+    "translation": "Eles se encontram do lado de fora do fórum judicial."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Witness",
+    "word_pt": "testemunha",
+    "sentence": "The witness describes what she saw.",
+    "translation": "A testemunha descreve o que ela viu."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Verdict",
+    "word_pt": "veredito",
+    "sentence": "The jury reaches a verdict quickly.",
+    "translation": "O júri chega a um veredito rapidamente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Attorney",
+    "word_pt": "advogado de defesa",
+    "sentence": "She hires an attorney for the case.",
+    "translation": "Ela contrata um advogado de defesa para o caso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Bail",
+    "word_pt": "fiança",
+    "sentence": "The judge sets a high bail.",
+    "translation": "O juiz define uma fiança alta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Equality",
+    "word_pt": "igualdade",
+    "sentence": "The law promotes equality for all citizens.",
+    "translation": "A lei promove igualdade para todos os cidadãos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Citizenship",
+    "word_pt": "cidadania",
+    "sentence": "He applies for citizenship after ten years.",
+    "translation": "Ele solicita a cidadania depois de dez anos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Election",
+    "word_pt": "eleição",
+    "sentence": "The election takes place in October.",
+    "translation": "A eleição acontece em outubro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Candidate",
+    "word_pt": "candidato",
+    "sentence": "The candidate speaks at the local school.",
+    "translation": "O candidato fala na escola local."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Batter",
+    "word_pt": "massa líquida de bolo",
+    "sentence": "She pours the batter into the pan.",
+    "translation": "Ela despeja a massa líquida na frigideira."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Recipe",
+    "word_pt": "receita culinária",
+    "sentence": "This recipe uses only five ingredients.",
+    "translation": "Esta receita culinária usa só cinco ingredientes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Seasoning",
+    "word_pt": "tempero",
+    "sentence": "He adds seasoning to the meat.",
+    "translation": "Ele adiciona tempero na carne."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dessert",
+    "word_pt": "sobremesa",
+    "sentence": "We order chocolate cake for dessert.",
+    "translation": "Nós pedimos bolo de chocolate de sobremesa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Appetizer",
+    "word_pt": "aperitivo",
+    "sentence": "The restaurant serves a small appetizer first.",
+    "translation": "O restaurante serve um pequeno aperitivo primeiro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Barbecue",
+    "word_pt": "churrasco",
+    "sentence": "We have a barbecue every Sunday.",
+    "translation": "Nós fazemos um churrasco todo domingo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Marinade",
+    "word_pt": "marinada",
+    "sentence": "The chicken sits in the marinade overnight.",
+    "translation": "O frango fica na marinada durante a noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Bland",
+    "word_pt": "insosso",
+    "sentence": "The soup tastes bland without salt.",
+    "translation": "A sopa fica insossa sem sal."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Starving",
+    "word_pt": "faminto",
+    "sentence": "I am starving after the long hike.",
+    "translation": "Eu estou faminto depois da longa caminhada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Appetite",
+    "word_pt": "apetite",
+    "sentence": "Exercise gives me a big appetite.",
+    "translation": "Exercício me dá um grande apetite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stretch",
+    "word_pt": "alongar",
+    "sentence": "I stretch my legs before running.",
+    "translation": "Eu alongo as pernas antes de correr."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Crouch",
+    "word_pt": "agachar",
+    "sentence": "I crouch to pick up the ball.",
+    "translation": "Eu me agacho para pegar a bola."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Crawl",
+    "word_pt": "engatinhar",
+    "sentence": "The baby starts to crawl this month.",
+    "translation": "O bebê começa a engatinhar este mês."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Limp",
+    "word_pt": "mancar",
+    "sentence": "I limp after twisting my ankle.",
+    "translation": "Eu manco depois de torcer o tornozelo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stumble",
+    "word_pt": "tropeçar",
+    "sentence": "I stumble over a rock on the path.",
+    "translation": "Eu tropeço numa pedra na trilha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stagger",
+    "word_pt": "cambalear",
+    "sentence": "I stagger home after a long day.",
+    "translation": "Eu cambaleio até em casa depois de um dia longo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Creep",
+    "word_pt": "rastejar",
+    "sentence": "I creep toward the sleeping cat.",
+    "translation": "Eu rastejo em direção ao gato adormecido."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Skip",
+    "word_pt": "saltitar",
+    "sentence": "The kids skip down the street happily.",
+    "translation": "As crianças saltitam pela rua felizes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lean",
+    "word_pt": "inclinar-se",
+    "sentence": "I lean against the wall to rest.",
+    "translation": "Eu me inclino contra a parede para descansar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fold",
+    "word_pt": "dobrar",
+    "sentence": "I fold the shirts and put them away.",
+    "translation": "Eu dobro as camisas e as guardo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fashion",
+    "word_pt": "moda",
+    "sentence": "She studies fashion at design school.",
+    "translation": "Ela estuda moda na escola de design."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fabric",
+    "word_pt": "tecido",
+    "sentence": "This fabric feels very soft.",
+    "translation": "Este tecido parece muito macio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stitch",
+    "word_pt": "ponto de costura",
+    "sentence": "She fixes the stitch on her sleeve.",
+    "translation": "Ela conserta o ponto de costura na manga."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sleeve",
+    "word_pt": "manga",
+    "sentence": "The sleeve of his jacket is torn.",
+    "translation": "A manga da jaqueta dele está rasgada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Collar",
+    "word_pt": "gola",
+    "sentence": "His collar is a bit tight.",
+    "translation": "A gola dele está um pouco apertada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Zipper",
+    "word_pt": "zíper",
+    "sentence": "The zipper on my bag is broken.",
+    "translation": "O zíper da minha bolsa está quebrado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Heel",
+    "word_pt": "salto de sapato",
+    "sentence": "Her heel breaks during the party.",
+    "translation": "O salto do sapato dela quebra durante a festa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lining",
+    "word_pt": "forro",
+    "sentence": "The coat has a warm lining.",
+    "translation": "O casaco tem um forro quente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Patterned",
+    "word_pt": "estampado",
+    "sentence": "She wears a patterned dress to the event.",
+    "translation": "Ela usa um vestido estampado para o evento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Snug",
+    "word_pt": "justo no corpo",
+    "sentence": "These jeans feel snug on me.",
+    "translation": "Esta calça jeans fica justa em mim."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Conversation",
+    "word_pt": "conversa",
+    "sentence": "We have a long conversation about the trip.",
+    "translation": "Nós temos uma conversa longa sobre a viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Argument",
+    "word_pt": "discussão acalorada",
+    "sentence": "They have an argument about money.",
+    "translation": "Eles têm uma discussão acalorada sobre dinheiro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Advice",
+    "word_pt": "conselho",
+    "sentence": "She gives me good advice about work.",
+    "translation": "Ela me dá um bom conselho sobre trabalho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Opinion",
+    "word_pt": "opinião",
+    "sentence": "Everyone shares an opinion about the movie.",
+    "translation": "Todo mundo compartilha uma opinião sobre o filme."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rumor",
+    "word_pt": "boato",
+    "sentence": "A rumor spreads quickly around the office.",
+    "translation": "Um boato se espalha rápido pelo escritório."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gossip",
+    "word_pt": "fofoca",
+    "sentence": "She doesn't like to gossip about others.",
+    "translation": "Ela não gosta de fofocar sobre os outros."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lie",
+    "word_pt": "mentira",
+    "sentence": "He tells a lie to avoid trouble.",
+    "translation": "Ele conta uma mentira para evitar problema."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Announcement",
+    "word_pt": "anúncio oficial",
+    "sentence": "The company makes an important announcement.",
+    "translation": "A empresa faz um anúncio oficial importante."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Response",
+    "word_pt": "resposta",
+    "sentence": "I wait for her response all day.",
+    "translation": "Eu espero pela resposta dela o dia todo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Comment",
+    "word_pt": "comentário",
+    "sentence": "She leaves a kind comment on the photo.",
+    "translation": "Ela deixa um comentário gentil na foto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Skyscraper",
+    "word_pt": "arranha-céu",
+    "sentence": "The new skyscraper is the tallest in the city.",
+    "translation": "O novo arranha-céu é o mais alto da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Congestion",
+    "word_pt": "engarrafamento",
+    "sentence": "Traffic congestion is bad this morning.",
+    "translation": "O engarrafamento está ruim esta manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Transit",
+    "word_pt": "transporte público",
+    "sentence": "Public transit is cheap and fast here.",
+    "translation": "O transporte público é barato e rápido aqui."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Intersection",
+    "word_pt": "cruzamento",
+    "sentence": "The accident happens at the intersection.",
+    "translation": "O acidente acontece no cruzamento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stoplight",
+    "word_pt": "semáforo",
+    "sentence": "Stop at the stoplight ahead.",
+    "translation": "Pare no semáforo à frente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Parking",
+    "word_pt": "estacionamento",
+    "sentence": "Parking is difficult downtown.",
+    "translation": "Estacionamento é difícil no centro da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Homeless",
+    "word_pt": "morador de rua",
+    "sentence": "The shelter helps homeless people find food.",
+    "translation": "O abrigo ajuda moradores de rua a encontrar comida."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Outskirts",
+    "word_pt": "periferia",
+    "sentence": "They live on the outskirts of the city.",
+    "translation": "Eles moram na periferia da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Penthouse",
+    "word_pt": "cobertura de prédio",
+    "sentence": "They rent a penthouse with a view.",
+    "translation": "Eles alugam uma cobertura de prédio com vista."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Construction",
+    "word_pt": "obra de construção",
+    "sentence": "Construction on the bridge starts next week.",
+    "translation": "A obra de construção na ponte começa na próxima semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stubborn",
+    "word_pt": "teimoso",
+    "sentence": "My grandfather is very stubborn.",
+    "translation": "Meu avô é muito teimoso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Calm",
+    "word_pt": "calmo",
+    "sentence": "She stays calm during the storm.",
+    "translation": "Ela permanece calma durante a tempestade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ambitious",
+    "word_pt": "ambicioso",
+    "sentence": "He is ambitious about his career.",
+    "translation": "Ele é ambicioso quanto à carreira dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Selfish",
+    "word_pt": "egoísta",
+    "sentence": "It is selfish to ignore your friends.",
+    "translation": "É egoísta ignorar seus amigos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Humble",
+    "word_pt": "humilde",
+    "sentence": "Despite his success, he remains humble.",
+    "translation": "Apesar do sucesso, ele continua humilde."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sincere",
+    "word_pt": "sincero",
+    "sentence": "Her apology sounds very sincere.",
+    "translation": "O pedido de desculpas dela soa muito sincero."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Responsible",
+    "word_pt": "responsável",
+    "sentence": "He feels responsible for the mistake.",
+    "translation": "Ele se sente responsável pelo erro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Moody",
+    "word_pt": "mal-humorado",
+    "sentence": "She is moody after a bad night's sleep.",
+    "translation": "Ela fica mal-humorada depois de dormir mal."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stingy",
+    "word_pt": "mesquinho",
+    "sentence": "He is too stingy to share his lunch.",
+    "translation": "Ele é muito mesquinho para compartilhar o almoço."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Courteous",
+    "word_pt": "cortês",
+    "sentence": "The staff is always courteous to guests.",
+    "translation": "A equipe é sempre cortês com os hóspedes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mention",
+    "word_pt": "mencionar",
+    "sentence": "She forgets to mention the new schedule.",
+    "translation": "Ela esquece de mencionar o novo horário."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Suggest",
+    "word_pt": "sugerir",
+    "sentence": "I suggest we leave early tomorrow.",
+    "translation": "Eu sugiro que nós saiamos cedo amanhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ensure",
+    "word_pt": "garantir",
+    "sentence": "Please ensure the door is locked.",
+    "translation": "Por favor, garanta que a porta esteja trancada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "State",
+    "word_pt": "declarar",
+    "sentence": "I state my opinion clearly.",
+    "translation": "Eu declaro minha opinião claramente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Deny",
+    "word_pt": "negar",
+    "sentence": "I deny knowing about the plan.",
+    "translation": "Eu nego saber sobre o plano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Complain",
+    "word_pt": "reclamar",
+    "sentence": "Customers complain about the slow service.",
+    "translation": "Os clientes reclamam do atendimento lento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Praise",
+    "word_pt": "elogiar",
+    "sentence": "I praise her hard work.",
+    "translation": "Eu elogio o trabalho duro dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Criticize",
+    "word_pt": "criticar",
+    "sentence": "He tends to criticize every small detail.",
+    "translation": "Ele tende a criticar cada pequeno detalhe."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Interrupt",
+    "word_pt": "interromper",
+    "sentence": "Please don't interrupt while I am speaking.",
+    "translation": "Por favor, não interrompa enquanto eu estou falando."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Convince",
+    "word_pt": "convencer",
+    "sentence": "She tries to convince him to stay.",
+    "translation": "Ela tenta convencer ele a ficar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hesitate",
+    "word_pt": "hesitar",
+    "sentence": "I hesitate before answering the question.",
+    "translation": "Eu hesito antes de responder a pergunta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pause",
+    "word_pt": "pausar",
+    "sentence": "Let's pause the meeting for lunch.",
+    "translation": "Vamos pausar a reunião para o almoço."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Withdraw",
+    "word_pt": "recuar",
+    "sentence": "The company decides to withdraw the offer.",
+    "translation": "A empresa decide retirar a oferta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Approve",
+    "word_pt": "aprovar",
+    "sentence": "We approve the new budget.",
+    "translation": "Nós aprovamos o novo orçamento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Reject",
+    "word_pt": "rejeitar",
+    "sentence": "They reject the proposal without explanation.",
+    "translation": "Eles rejeitam a proposta sem explicação."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Support",
+    "word_pt": "apoiar",
+    "sentence": "Her friends support her big decision.",
+    "translation": "Os amigos dela apoiam a grande decisão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Solve",
+    "word_pt": "solucionar",
+    "sentence": "We work together to solve the problem.",
+    "translation": "Nós trabalhamos juntos para solucionar o problema."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gamble",
+    "word_pt": "apostar",
+    "sentence": "He decides not to gamble his savings.",
+    "translation": "Ele decide não apostar a poupança dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Regret",
+    "word_pt": "arrepender-se",
+    "sentence": "She doesn't regret her final choice.",
+    "translation": "Ela não se arrepende da escolha final dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pledge",
+    "word_pt": "comprometer-se",
+    "sentence": "They pledge to finish the project on time.",
+    "translation": "Eles se comprometem a terminar o projeto no prazo."
+  }
+]

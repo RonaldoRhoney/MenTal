@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Career",
+    "word_pt": "carreira",
+    "sentence": "She started her career as a teacher.",
+    "translation": "Ela começou a carreira dela como professora."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Colleague",
+    "word_pt": "colega de trabalho",
+    "sentence": "I discuss the project with a colleague.",
+    "translation": "Eu discuto o projeto com um colega de trabalho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Deadline",
+    "word_pt": "prazo final",
+    "sentence": "The deadline for this report is Friday.",
+    "translation": "O prazo final para este relatório é sexta-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Employee",
+    "word_pt": "funcionário",
+    "sentence": "Every employee gets a badge.",
+    "translation": "Todo funcionário recebe um crachá."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Employer",
+    "word_pt": "empregador",
+    "sentence": "My employer offers good benefits.",
+    "translation": "Meu empregador oferece bons benefícios."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Promotion",
+    "word_pt": "promoção no emprego",
+    "sentence": "She receives a promotion after two years.",
+    "translation": "Ela recebe uma promoção depois de dois anos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Interview",
+    "word_pt": "entrevista de emprego",
+    "sentence": "I have a job interview tomorrow.",
+    "translation": "Eu tenho uma entrevista de emprego amanhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Manager",
+    "word_pt": "gerente",
+    "sentence": "The manager approves the new schedule.",
+    "translation": "O gerente aprova o novo horário."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Retire",
+    "word_pt": "aposentar-se",
+    "sentence": "My uncle plans to retire next year.",
+    "translation": "Meu tio planeja se aposentar no próximo ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hire",
+    "word_pt": "contratar",
+    "sentence": "The company decides to hire more people.",
+    "translation": "A empresa decide contratar mais gente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Budget",
+    "word_pt": "orçamento",
+    "sentence": "We need to plan a monthly budget.",
+    "translation": "Nós precisamos planejar um orçamento mensal."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Debt",
+    "word_pt": "dívida",
+    "sentence": "He works hard to pay off his debt.",
+    "translation": "Ele trabalha duro para pagar sua dívida."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Loan",
+    "word_pt": "empréstimo",
+    "sentence": "They apply for a loan to buy a car.",
+    "translation": "Eles pedem um empréstimo para comprar um carro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tax",
+    "word_pt": "imposto",
+    "sentence": "The government raises the tax on fuel.",
+    "translation": "O governo aumenta o imposto sobre combustível."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Profit",
+    "word_pt": "lucro",
+    "sentence": "The company makes a good profit this year.",
+    "translation": "A empresa tem um bom lucro este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Loss",
+    "word_pt": "prejuízo",
+    "sentence": "The business reports a loss last month.",
+    "translation": "A empresa registrou um prejuízo no mês passado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Savings",
+    "word_pt": "poupança",
+    "sentence": "She keeps her savings in the bank.",
+    "translation": "Ela mantém a poupança dela no banco."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Yield",
+    "word_pt": "rendimento",
+    "sentence": "The investment offers a low yield.",
+    "translation": "O investimento oferece um rendimento baixo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rent",
+    "word_pt": "aluguel",
+    "sentence": "We pay the rent on the first of the month.",
+    "translation": "Nós pagamos o aluguel no primeiro dia do mês."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Invoice",
+    "word_pt": "fatura",
+    "sentence": "Please send me the invoice by email.",
+    "translation": "Por favor, me envie a fatura por e-mail."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Disease",
+    "word_pt": "doença",
+    "sentence": "Doctors study a new disease.",
+    "translation": "Os médicos estudam uma nova doença."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Symptom",
+    "word_pt": "sintoma",
+    "sentence": "A headache can be a symptom of stress.",
+    "translation": "Uma dor de cabeça pode ser um sintoma de estresse."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Surgery",
+    "word_pt": "cirurgia",
+    "sentence": "He needs surgery on his knee.",
+    "translation": "Ele precisa de cirurgia no joelho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vaccine",
+    "word_pt": "vacina",
+    "sentence": "The vaccine protects against the flu.",
+    "translation": "A vacina protege contra a gripe."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Allergy",
+    "word_pt": "alergia",
+    "sentence": "She has an allergy to peanuts.",
+    "translation": "Ela tem alergia a amendoim."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Injury",
+    "word_pt": "ferimento",
+    "sentence": "The player recovers from his injury.",
+    "translation": "O jogador se recupera do ferimento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Treatment",
+    "word_pt": "tratamento",
+    "sentence": "The treatment lasts three weeks.",
+    "translation": "O tratamento dura três semanas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Prescription",
+    "word_pt": "receita médica",
+    "sentence": "The doctor writes a prescription.",
+    "translation": "O médico escreve uma receita médica."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Patient",
+    "word_pt": "paciente",
+    "sentence": "The nurse takes care of the patient.",
+    "translation": "A enfermeira cuida do paciente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Recovery",
+    "word_pt": "recuperação",
+    "sentence": "Her recovery takes a few months.",
+    "translation": "A recuperação dela leva alguns meses."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "College",
+    "word_pt": "faculdade",
+    "sentence": "She studies medicine in college.",
+    "translation": "Ela estuda medicina na faculdade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Degree",
+    "word_pt": "graduação",
+    "sentence": "He earns a degree in engineering.",
+    "translation": "Ele tira uma graduação em engenharia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Scholarship",
+    "word_pt": "bolsa de estudos",
+    "sentence": "She wins a scholarship to study abroad.",
+    "translation": "Ela ganha uma bolsa de estudos para estudar no exterior."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Enrollment",
+    "word_pt": "matrícula",
+    "sentence": "The enrollment for classes starts in March.",
+    "translation": "A matrícula para as aulas começa em março."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lecture",
+    "word_pt": "palestra",
+    "sentence": "The professor gives a lecture on history.",
+    "translation": "O professor dá uma palestra sobre história."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Research",
+    "word_pt": "pesquisa acadêmica",
+    "sentence": "They do research on climate change.",
+    "translation": "Eles fazem pesquisa sobre mudança climática."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Thesis",
+    "word_pt": "tese",
+    "sentence": "She writes her thesis about education.",
+    "translation": "Ela escreve a tese dela sobre educação."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Internship",
+    "word_pt": "estágio",
+    "sentence": "He completes an internship at a bank.",
+    "translation": "Ele completa um estágio num banco."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Attendance",
+    "word_pt": "frequência às aulas",
+    "sentence": "Attendance is required for this class.",
+    "translation": "A frequência às aulas é obrigatória nesta turma."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Freshman",
+    "word_pt": "calouro",
+    "sentence": "She is a freshman at the university.",
+    "translation": "Ela é calouro na universidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Accommodation",
+    "word_pt": "hospedagem",
+    "sentence": "We book our accommodation online.",
+    "translation": "Nós reservamos nossa hospedagem online."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Reservation",
+    "word_pt": "reserva",
+    "sentence": "I make a reservation for two people.",
+    "translation": "Eu faço uma reserva para duas pessoas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Luggage",
+    "word_pt": "bagagem",
+    "sentence": "Please check your luggage before the flight.",
+    "translation": "Por favor, cheque sua bagagem antes do voo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Customs",
+    "word_pt": "alfândega",
+    "sentence": "We wait in line at customs.",
+    "translation": "Nós esperamos na fila na alfândega."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Boarding",
+    "word_pt": "embarque",
+    "sentence": "Boarding starts thirty minutes before the flight.",
+    "translation": "O embarque começa trinta minutos antes do voo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Itinerary",
+    "word_pt": "roteiro de viagem",
+    "sentence": "Our itinerary includes three cities.",
+    "translation": "Nosso roteiro de viagem inclui três cidades."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Destination",
+    "word_pt": "destino de viagem",
+    "sentence": "Our final destination is Rome.",
+    "translation": "Nosso destino final é Roma."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sightseeing",
+    "word_pt": "passeio turístico",
+    "sentence": "We go sightseeing in the old town.",
+    "translation": "Nós fazemos passeio turístico na cidade antiga."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Currency",
+    "word_pt": "moeda estrangeira",
+    "sentence": "I exchange my currency at the airport.",
+    "translation": "Eu troco minha moeda estrangeira no aeroporto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Delay",
+    "word_pt": "atraso",
+    "sentence": "The flight has a two-hour delay.",
+    "translation": "O voo tem um atraso de duas horas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Landlord",
+    "word_pt": "proprietário do imóvel",
+    "sentence": "The landlord fixes the leak quickly.",
+    "translation": "O proprietário do imóvel conserta o vazamento rápido."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tenant",
+    "word_pt": "inquilino",
+    "sentence": "The new tenant moves in next week.",
+    "translation": "O novo inquilino se muda na próxima semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Furniture",
+    "word_pt": "mobília",
+    "sentence": "They buy new furniture for the living room.",
+    "translation": "Eles compram móveis novos para a sala."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Renovation",
+    "word_pt": "reforma da casa",
+    "sentence": "The renovation takes three months.",
+    "translation": "A reforma da casa leva três meses."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Plumbing",
+    "word_pt": "encanamento",
+    "sentence": "The plumbing in the bathroom is old.",
+    "translation": "O encanamento do banheiro é velho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Attic",
+    "word_pt": "sótão",
+    "sentence": "We store old boxes in the attic.",
+    "translation": "Nós guardamos caixas velhas no sótão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Balcony",
+    "word_pt": "varanda",
+    "sentence": "She grows plants on the balcony.",
+    "translation": "Ela cultiva plantas na varanda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hallway",
+    "word_pt": "corredor da casa",
+    "sentence": "The pictures hang in the hallway.",
+    "translation": "Os quadros ficam pendurados no corredor da casa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Leak",
+    "word_pt": "vazamento",
+    "sentence": "There is a leak under the sink.",
+    "translation": "Há um vazamento embaixo da pia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Resident",
+    "word_pt": "morador",
+    "sentence": "Every resident receives a parking pass.",
+    "translation": "Todo morador recebe um cartão de estacionamento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Application",
+    "word_pt": "aplicativo",
+    "sentence": "I download a new application.",
+    "translation": "Eu baixo um novo aplicativo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Update",
+    "word_pt": "atualização",
+    "sentence": "The system needs an important update.",
+    "translation": "O sistema precisa de uma atualização importante."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Network",
+    "word_pt": "rede de computadores",
+    "sentence": "The office has a fast network.",
+    "translation": "O escritório tem uma rede de computadores rápida."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Server",
+    "word_pt": "servidor",
+    "sentence": "The server goes down for an hour.",
+    "translation": "O servidor sai do ar por uma hora."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Browser",
+    "word_pt": "navegador de internet",
+    "sentence": "She opens the browser to search online.",
+    "translation": "Ela abre o navegador para pesquisar online."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Storage",
+    "word_pt": "armazenamento",
+    "sentence": "This phone has a lot of storage.",
+    "translation": "Este telefone tem muito armazenamento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Touchscreen",
+    "word_pt": "tela sensível ao toque",
+    "sentence": "The tablet has a large touchscreen.",
+    "translation": "O tablet tem uma tela sensível ao toque grande."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Device",
+    "word_pt": "aparelho eletrônico",
+    "sentence": "Every student needs a device for class.",
+    "translation": "Todo aluno precisa de um aparelho eletrônico para a aula."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Failure",
+    "word_pt": "falha técnica",
+    "sentence": "A power failure stops the machines.",
+    "translation": "Uma queda de energia para as máquinas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Security",
+    "word_pt": "segurança digital",
+    "sentence": "The bank improves its digital security.",
+    "translation": "O banco melhora sua segurança digital."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Environment",
+    "word_pt": "meio ambiente",
+    "sentence": "We must protect the environment.",
+    "translation": "Nós devemos proteger o meio ambiente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pollution",
+    "word_pt": "poluição",
+    "sentence": "Pollution affects the air quality.",
+    "translation": "A poluição afeta a qualidade do ar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Recycling",
+    "word_pt": "reciclagem",
+    "sentence": "Recycling helps reduce waste.",
+    "translation": "A reciclagem ajuda a reduzir o lixo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Deforestation",
+    "word_pt": "desmatamento",
+    "sentence": "Deforestation destroys many habitats.",
+    "translation": "O desmatamento destrói muitos habitats."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Drought",
+    "word_pt": "seca",
+    "sentence": "The drought affects the local farmers.",
+    "translation": "A seca afeta os agricultores locais."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hurricane",
+    "word_pt": "furacão",
+    "sentence": "The hurricane damages many houses.",
+    "translation": "O furacão danifica muitas casas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Energy",
+    "word_pt": "energia",
+    "sentence": "Solar energy is becoming more common.",
+    "translation": "A energia solar está se tornando mais comum."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Litter",
+    "word_pt": "lixo jogado na rua",
+    "sentence": "Please don't leave litter on the beach.",
+    "translation": "Por favor, não deixe lixo na praia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Species",
+    "word_pt": "espécie animal",
+    "sentence": "This species lives only in the forest.",
+    "translation": "Esta espécie vive só na floresta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Extinction",
+    "word_pt": "extinção",
+    "sentence": "Many animals are close to extinction.",
+    "translation": "Muitos animais estão perto da extinção."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Anxious",
+    "word_pt": "ansioso",
+    "sentence": "She feels anxious before the exam.",
+    "translation": "Ela se sente ansiosa antes da prova."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Grateful",
+    "word_pt": "grato",
+    "sentence": "I am grateful for your help.",
+    "translation": "Eu sou grato pela sua ajuda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Disappointed",
+    "word_pt": "decepcionado",
+    "sentence": "He is disappointed with the result.",
+    "translation": "Ele está decepcionado com o resultado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Relieved",
+    "word_pt": "aliviado",
+    "sentence": "We feel relieved after the good news.",
+    "translation": "Nós nos sentimos aliviados depois da boa notícia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Embarrassed",
+    "word_pt": "envergonhado",
+    "sentence": "She is embarrassed by the mistake.",
+    "translation": "Ela está envergonhada pelo erro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Frustrated",
+    "word_pt": "frustrado",
+    "sentence": "He is frustrated with the slow internet.",
+    "translation": "Ele está frustrado com a internet lenta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Optimistic",
+    "word_pt": "otimista",
+    "sentence": "She stays optimistic about the future.",
+    "translation": "Ela permanece otimista sobre o futuro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Confident",
+    "word_pt": "confiante",
+    "sentence": "He feels confident before the interview.",
+    "translation": "Ele se sente confiante antes da entrevista."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Resentful",
+    "word_pt": "ressentido",
+    "sentence": "She feels resentful about the decision.",
+    "translation": "Ela se sente ressentida com a decisão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hopeful",
+    "word_pt": "esperançoso",
+    "sentence": "We remain hopeful about the results.",
+    "translation": "Nós permanecemos esperançosos sobre os resultados."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Achieve",
+    "word_pt": "alcançar",
+    "sentence": "She works hard to achieve her goals.",
+    "translation": "Ela trabalha duro para alcançar seus objetivos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Improve",
+    "word_pt": "melhorar",
+    "sentence": "He wants to improve his English.",
+    "translation": "Ele quer melhorar o inglês dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Avoid",
+    "word_pt": "evitar",
+    "sentence": "I avoid sugar in my coffee.",
+    "translation": "Eu evito açúcar no meu café."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Demand",
+    "word_pt": "exigir",
+    "sentence": "This job will demand a lot of energy.",
+    "translation": "Este trabalho vai exigir muita energia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Allow",
+    "word_pt": "permitir",
+    "sentence": "The rules allow one guest per room.",
+    "translation": "As regras permitem um convidado por quarto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Endure",
+    "word_pt": "aguentar",
+    "sentence": "She has to endure a long journey.",
+    "translation": "Ela precisa aguentar uma viagem longa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Compare",
+    "word_pt": "comparar",
+    "sentence": "We compare the two products before buying.",
+    "translation": "Nós comparamos os dois produtos antes de comprar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Establish",
+    "word_pt": "estabelecer",
+    "sentence": "They establish a new company together.",
+    "translation": "Eles estabelecem uma nova empresa juntos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Develop",
+    "word_pt": "desenvolver",
+    "sentence": "We develop a new app together.",
+    "translation": "Nós desenvolvemos um novo aplicativo juntos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Prove",
+    "word_pt": "provar",
+    "sentence": "The results prove her theory.",
+    "translation": "Os resultados provam a teoria dela."
+  }
+]
