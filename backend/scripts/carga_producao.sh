@@ -14,13 +14,13 @@ esac
 export MENTAL_DATABASE_URL="$URL"
 echo "✅ URL lida (${#URL} caracteres, banco postgresql+psycopg)."
 cd "$(dirname "$0")/.." || exit 1
-# Uso: carga_producao.sh            -> vocabulário Intermediário (10 lotes)
+# Uso: carga_producao.sh            -> vocabulário Avançado (10 lotes)
 #      carga_producao.sh lote1 lote2 -> só os arquivos content/<nome>.json informados
 if [ "$#" -gt 0 ]; then
   LOTES="$*"
 else
   LOTES=""
-  for n in 1 2 3 4 5 6 7 8 9 10; do LOTES="$LOTES vocab_ingles_intermediario_lote$n"; done
+  for n in 1 2 3 4 5 6 7 8 9 10; do LOTES="$LOTES vocab_ingles_avancado_lote$n"; done
 fi
 falhas=0
 for f in $LOTES; do
