@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Deer",
+    "word_pt": "cervo",
+    "sentence": "The deer runs in the forest.",
+    "translation": "O cervo corre na floresta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fox",
+    "word_pt": "raposa",
+    "sentence": "The fox is very smart.",
+    "translation": "A raposa é muito esperta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Goat",
+    "word_pt": "cabra",
+    "sentence": "The goat eats grass.",
+    "translation": "A cabra come grama."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Squirrel",
+    "word_pt": "esquilo",
+    "sentence": "The squirrel climbs the tree.",
+    "translation": "O esquilo sobe na árvore."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Whale",
+    "word_pt": "baleia",
+    "sentence": "The whale is a huge animal.",
+    "translation": "A baleia é um animal enorme."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Shark",
+    "word_pt": "tubarão",
+    "sentence": "The shark swims in the ocean.",
+    "translation": "O tubarão nada no oceano."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Butterfly",
+    "word_pt": "borboleta",
+    "sentence": "The butterfly flies over the flower.",
+    "translation": "A borboleta voa sobre a flor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Spider",
+    "word_pt": "aranha",
+    "sentence": "A spider makes a web.",
+    "translation": "Uma aranha faz uma teia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Owl",
+    "word_pt": "coruja",
+    "sentence": "The owl sleeps during the day.",
+    "translation": "A coruja dorme durante o dia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Parrot",
+    "word_pt": "papagaio",
+    "sentence": "The parrot can talk.",
+    "translation": "O papagaio pode falar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fever",
+    "word_pt": "febre",
+    "sentence": "The baby has a fever.",
+    "translation": "O bebê está com febre."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cough",
+    "word_pt": "tosse",
+    "sentence": "He has a bad cough.",
+    "translation": "Ele está com uma tosse forte."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Medicine",
+    "word_pt": "remédio",
+    "sentence": "Take this medicine twice a day.",
+    "translation": "Tome este remédio duas vezes ao dia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Health",
+    "word_pt": "saúde",
+    "sentence": "Good health is important.",
+    "translation": "Boa saúde é importante."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wound",
+    "word_pt": "ferida",
+    "sentence": "The nurse cleans the wound.",
+    "translation": "A enfermeira limpa a ferida."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Headache",
+    "word_pt": "dor de cabeça",
+    "sentence": "I have a headache today.",
+    "translation": "Eu estou com dor de cabeça hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Flu",
+    "word_pt": "gripe",
+    "sentence": "She has the flu.",
+    "translation": "Ela está com gripe."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pill",
+    "word_pt": "comprimido",
+    "sentence": "Take one pill after lunch.",
+    "translation": "Tome um comprimido depois do almoço."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bandage",
+    "word_pt": "curativo",
+    "sentence": "He puts a bandage on his knee.",
+    "translation": "Ele põe um curativo no joelho."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hurt",
+    "word_pt": "machucar",
+    "sentence": "Did you hurt your foot?",
+    "translation": "Você machucou o pé?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lonely",
+    "word_pt": "solitário",
+    "sentence": "She feels lonely at night.",
+    "translation": "Ela se sente solitária à noite."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Nervous",
+    "word_pt": "nervoso",
+    "sentence": "I feel nervous before the test.",
+    "translation": "Eu fico nervoso antes da prova."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Shy",
+    "word_pt": "tímido",
+    "sentence": "The new student is very shy.",
+    "translation": "O aluno novo é muito tímido."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Brave",
+    "word_pt": "corajoso",
+    "sentence": "The firefighter is very brave.",
+    "translation": "O bombeiro é muito corajoso."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lazy",
+    "word_pt": "preguiçoso",
+    "sentence": "My cat is very lazy.",
+    "translation": "Meu gato é muito preguiçoso."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Clever",
+    "word_pt": "esperto",
+    "sentence": "She is a clever student.",
+    "translation": "Ela é uma aluna esperta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Polite",
+    "word_pt": "educado",
+    "sentence": "He is always polite to everyone.",
+    "translation": "Ele é sempre educado com todos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Jealous",
+    "word_pt": "ciumento",
+    "sentence": "My dog gets jealous of the cat.",
+    "translation": "Meu cachorro fica ciumento do gato."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Excited",
+    "word_pt": "animado",
+    "sentence": "The kids are excited about the trip.",
+    "translation": "As crianças estão animadas com a viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Worried",
+    "word_pt": "preocupado",
+    "sentence": "My mother is worried about me.",
+    "translation": "Minha mãe está preocupada comigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bring",
+    "word_pt": "trazer",
+    "sentence": "Please bring your book tomorrow.",
+    "translation": "Por favor, traga seu livro amanhã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Leave",
+    "word_pt": "sair",
+    "sentence": "I leave home at seven.",
+    "translation": "Eu saio de casa às sete."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Meet",
+    "word_pt": "encontrar-se com",
+    "sentence": "Let's meet at the park.",
+    "translation": "Vamos nos encontrar no parque."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fall",
+    "word_pt": "cair",
+    "sentence": "Be careful, don't fall.",
+    "translation": "Cuidado, não caia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sell",
+    "word_pt": "vender",
+    "sentence": "They sell fruit at the market.",
+    "translation": "Eles vendem fruta no mercado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hold",
+    "word_pt": "segurar",
+    "sentence": "Can you hold my bag, please?",
+    "translation": "Você pode segurar minha bolsa, por favor?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Keep",
+    "word_pt": "manter",
+    "sentence": "You can keep the book.",
+    "translation": "Você pode manter o livro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wake",
+    "word_pt": "acordar",
+    "sentence": "I wake up at six every day.",
+    "translation": "Eu acordo às seis todos os dias."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Turn",
+    "word_pt": "virar",
+    "sentence": "Turn left at the corner.",
+    "translation": "Vire à esquerda na esquina."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Climb",
+    "word_pt": "escalar",
+    "sentence": "We climb the mountain together.",
+    "translation": "Nós escalamos a montanha juntos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Arrive",
+    "word_pt": "chegar",
+    "sentence": "The train will arrive soon.",
+    "translation": "O trem vai chegar logo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Try",
+    "word_pt": "tentar",
+    "sentence": "Try this cake, it's delicious.",
+    "translation": "Experimente este bolo, está delicioso."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Believe",
+    "word_pt": "acreditar",
+    "sentence": "I believe you.",
+    "translation": "Eu acredito em você."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Remember",
+    "word_pt": "lembrar",
+    "sentence": "I remember your name.",
+    "translation": "Eu lembro do seu nome."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Understand",
+    "word_pt": "entender",
+    "sentence": "I understand the lesson now.",
+    "translation": "Eu entendo a lição agora."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Choose",
+    "word_pt": "escolher",
+    "sentence": "Choose a color you like.",
+    "translation": "Escolha uma cor que você goste."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Change",
+    "word_pt": "mudar",
+    "sentence": "I want to change my plans.",
+    "translation": "Eu quero mudar meus planos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hide",
+    "word_pt": "esconder",
+    "sentence": "The cat likes to hide under the bed.",
+    "translation": "O gato gosta de se esconder embaixo da cama."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Share",
+    "word_pt": "compartilhar",
+    "sentence": "Let's share the cake.",
+    "translation": "Vamos compartilhar o bolo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Follow",
+    "word_pt": "seguir",
+    "sentence": "Please follow me.",
+    "translation": "Por favor, me siga."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Neighborhood",
+    "word_pt": "bairro",
+    "sentence": "I like my neighborhood.",
+    "translation": "Eu gosto do meu bairro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Path",
+    "word_pt": "trilha",
+    "sentence": "We walk along the path.",
+    "translation": "Nós caminhamos pela trilha."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cave",
+    "word_pt": "caverna",
+    "sentence": "They explore a dark cave.",
+    "translation": "Eles exploram uma caverna escura."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Border",
+    "word_pt": "fronteira",
+    "sentence": "The river marks the border.",
+    "translation": "O rio marca a fronteira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Zoo",
+    "word_pt": "zoológico",
+    "sentence": "We visit the zoo on Sundays.",
+    "translation": "Nós visitamos o zoológico aos domingos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Harbor",
+    "word_pt": "porto",
+    "sentence": "The ship arrives at the harbor.",
+    "translation": "O navio chega ao porto."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pool",
+    "word_pt": "piscina",
+    "sentence": "The children swim in the pool.",
+    "translation": "As crianças nadam na piscina."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Playground",
+    "word_pt": "parquinho",
+    "sentence": "The kids play at the playground.",
+    "translation": "As crianças brincam no parquinho."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Stadium",
+    "word_pt": "estádio",
+    "sentence": "The game is at the stadium.",
+    "translation": "O jogo é no estádio."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Mall",
+    "word_pt": "shopping",
+    "sentence": "We shop at the mall.",
+    "translation": "Nós fazemos compras no shopping."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Price",
+    "word_pt": "preço",
+    "sentence": "What is the price of this shirt?",
+    "translation": "Qual é o preço desta camisa?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sale",
+    "word_pt": "promoção",
+    "sentence": "There is a big sale today.",
+    "translation": "Há uma grande promoção hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cash",
+    "word_pt": "dinheiro vivo",
+    "sentence": "I pay in cash.",
+    "translation": "Eu pago em dinheiro vivo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Coin",
+    "word_pt": "moeda",
+    "sentence": "I find a coin on the street.",
+    "translation": "Eu encontro uma moeda na rua."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bill",
+    "word_pt": "conta de restaurante",
+    "sentence": "Can I have the bill, please?",
+    "translation": "Posso ter a conta, por favor?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wallet",
+    "word_pt": "carteira de dinheiro",
+    "sentence": "My wallet is in my bag.",
+    "translation": "Minha carteira está na minha bolsa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Receipt",
+    "word_pt": "recibo",
+    "sentence": "Keep the receipt, please.",
+    "translation": "Guarde o recibo, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Basket",
+    "word_pt": "cesta",
+    "sentence": "She carries a basket of fruit.",
+    "translation": "Ela carrega uma cesta de frutas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cart",
+    "word_pt": "carrinho de compras",
+    "sentence": "He pushes the cart at the store.",
+    "translation": "Ele empurra o carrinho na loja."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Discount",
+    "word_pt": "desconto",
+    "sentence": "I get a discount on the shoes.",
+    "translation": "Eu ganho um desconto nos sapatos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Message",
+    "word_pt": "mensagem",
+    "sentence": "I send you a message.",
+    "translation": "Eu te envio uma mensagem."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Newspaper",
+    "word_pt": "jornal",
+    "sentence": "My father reads the newspaper.",
+    "translation": "Meu pai lê o jornal."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Magazine",
+    "word_pt": "revista",
+    "sentence": "She reads a fashion magazine.",
+    "translation": "Ela lê uma revista de moda."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Story",
+    "word_pt": "história contada",
+    "sentence": "Tell me a story.",
+    "translation": "Me conte uma história."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "News",
+    "word_pt": "notícias",
+    "sentence": "I watch the news every night.",
+    "translation": "Eu assisto às notícias toda noite."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Word",
+    "word_pt": "palavra",
+    "sentence": "What does this word mean?",
+    "translation": "O que esta palavra significa?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Voice",
+    "word_pt": "voz",
+    "sentence": "She has a beautiful voice.",
+    "translation": "Ela tem uma voz bonita."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Language",
+    "word_pt": "idioma",
+    "sentence": "English is my second language.",
+    "translation": "Inglês é meu segundo idioma."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sound",
+    "word_pt": "som",
+    "sentence": "I hear a strange sound.",
+    "translation": "Eu ouço um som estranho."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Song",
+    "word_pt": "canção",
+    "sentence": "I like this song.",
+    "translation": "Eu gosto desta canção."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Minute",
+    "word_pt": "minuto",
+    "sentence": "Wait a minute, please.",
+    "translation": "Espere um minuto, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Second",
+    "word_pt": "segundo de tempo",
+    "sentence": "It takes only a second.",
+    "translation": "Isso leva só um segundo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Nowadays",
+    "word_pt": "hoje em dia",
+    "sentence": "Nowadays, people use phones a lot.",
+    "translation": "Hoje em dia, as pessoas usam muito o telefone."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Tonight",
+    "word_pt": "hoje à noite",
+    "sentence": "We watch a movie tonight.",
+    "translation": "Nós assistimos a um filme hoje à noite."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Noon",
+    "word_pt": "meio-dia",
+    "sentence": "We eat lunch at noon.",
+    "translation": "Nós almoçamos ao meio-dia."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Midnight",
+    "word_pt": "meia-noite",
+    "sentence": "The party ends at midnight.",
+    "translation": "A festa termina à meia-noite."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Season",
+    "word_pt": "estação do ano",
+    "sentence": "Summer is my favorite season.",
+    "translation": "Verão é minha estação favorita."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Past",
+    "word_pt": "passado",
+    "sentence": "I don't think about the past.",
+    "translation": "Eu não penso no passado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Future",
+    "word_pt": "futuro",
+    "sentence": "I am excited about the future.",
+    "translation": "Eu estou animado com o futuro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Soon",
+    "word_pt": "logo",
+    "sentence": "I will see you soon.",
+    "translation": "Eu te vejo logo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Left",
+    "word_pt": "esquerda",
+    "sentence": "Turn left, please.",
+    "translation": "Vire à esquerda, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Right",
+    "word_pt": "direita",
+    "sentence": "Turn right at the light.",
+    "translation": "Vire à direita no semáforo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Up",
+    "word_pt": "para cima",
+    "sentence": "Look up at the sky.",
+    "translation": "Olhe para cima, para o céu."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Down",
+    "word_pt": "para baixo",
+    "sentence": "Sit down, please.",
+    "translation": "Sente-se, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Front",
+    "word_pt": "frente",
+    "sentence": "She stands in front of the class.",
+    "translation": "Ela fica na frente da turma."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Middle",
+    "word_pt": "meio",
+    "sentence": "The park is in the middle of the city.",
+    "translation": "O parque fica no meio da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Side",
+    "word_pt": "lado",
+    "sentence": "He sits on the other side.",
+    "translation": "Ele senta do outro lado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Top",
+    "word_pt": "topo",
+    "sentence": "The book is on top of the desk.",
+    "translation": "O livro está no topo da mesa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bottom",
+    "word_pt": "parte de baixo",
+    "sentence": "The cat is at the bottom of the stairs.",
+    "translation": "O gato está na parte de baixo da escada."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Circle",
+    "word_pt": "círculo",
+    "sentence": "Draw a circle on the paper.",
+    "translation": "Desenhe um círculo no papel."
+  }
+]
