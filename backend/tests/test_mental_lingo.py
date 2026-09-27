@@ -232,3 +232,39 @@ def test_sem_idioma_na_pergunta_o_idioma_continua_na_resposta(client, monkeypatc
     _seed("Como se escreve 'agulha' em inglês?", "Needle", "'agulha' se traduz como 'Needle' em inglês.", territory_id="ingles_avancado")
     data = _ask(client, "o que significa agulha").json()
     assert data["answer_text"].endswith("'Needle' em inglês.")
+
+
+def _seed_example(word, sentence, translation, nivel="basico", word_pt=None, status="approved"):
+    with SessionLocal() as db:
+        db.add(models.MentalLingoExample(idioma="ingles", nivel=nivel, palavra=word, palavra_pt=word_pt,
+                                         frase=sentence, traducao=translation, review_status=status))
+        db.commit()
+
+
+def test_frase_exemplo_basico_fala_a_traducao_em_portugues(client):
+    _seed_example("Cheese", "She puts cheese on the bread.", "Ela põe queijo no pão.", nivel="basico", word_pt="queijo")
+    for question in ("use queijo em uma frase", "me dê um exemplo com Cheese", "como uso cheese", "uma frase com queijo"):
+        data = _ask(client, question).json()
+        assert data["found"] is True, question
+        assert "She puts cheese on the bread." in data["answer_text"] and "Ela põe queijo no pão." in data["answer_text"]
+        assert data["highlights"] == ["Cheese"]
+        assert data["speech_segments"] == [
+            {"lang": "pt", "text": "Um exemplo:"},
+            {"lang": "ingles", "text": "She puts cheese on the bread."},
+            {"lang": "pt", "text": "Ela põe queijo no pão."},
+        ], question
+
+
+def test_frase_exemplo_intermediario_e_avancado_nao_falam_a_traducao(client):
+    _seed_example("Deadline", "The deadline is on Friday.", "O prazo final é na sexta-feira.", nivel="intermediario")
+    data = _ask(client, "dê um exemplo com deadline").json()
+    assert data["found"] is True
+    assert [s["lang"] for s in data["speech_segments"]] == ["pt", "ingles"]  # sem a tradução falada
+    assert "O prazo final é na sexta-feira." in data["answer_text"]  # mas a tradução aparece na tela
+
+
+def test_frase_exemplo_so_aprovada_e_sem_cadastro_diz_que_nao_tem(client):
+    _seed_example("Lantern", "The lantern is old.", "O lampião é velho.", status="pending")
+    for question in ("use lantern em uma frase", "use xilofone em uma frase"):
+        data = _ask(client, question).json()
+        assert data["found"] is False and "Ainda não tenho uma frase de exemplo" in data["answer_text"]

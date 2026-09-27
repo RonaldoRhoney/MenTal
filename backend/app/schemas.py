@@ -1300,6 +1300,8 @@ class MentalLingoAskOut(BaseModel):
     # a tradução em si é feita no aparelho; `phrase` é o texto a traduzir.
     intent: str | None = None
     phrase: str | None = None
+    # Termos a destacar no cartão da resposta (ex.: a palavra dentro da frase-exemplo).
+    highlights: list[str] | None = None
 
 
 class MentalLingoFeedbackRequest(BaseModel):

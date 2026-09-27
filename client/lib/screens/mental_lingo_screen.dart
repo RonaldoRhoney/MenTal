@@ -829,18 +829,26 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       backgroundColor: AppColors.teal.withValues(alpha: 0.16),
     );
     final spans = <TextSpan>[];
-    var pos = 0;
-    final lower = text.toLowerCase();
-    for (final term in foreignTerms) {
-      final t = term.trim();
-      if (t.isEmpty) continue;
-      final idx = lower.indexOf(t.toLowerCase(), pos);
-      if (idx < 0) continue;
-      if (idx > pos) spans.add(TextSpan(text: text.substring(pos, idx), style: base));
-      spans.add(TextSpan(text: text.substring(idx, idx + t.length), style: marked));
-      pos = idx + t.length;
+    // Destaca TODAS as ocorrências (palavra inteira, sem diferenciar maiúsculas): no exemplo, o
+    // termo aparece no título e dentro da própria frase.
+    final terms = foreignTerms.map((t) => t.trim()).where((t) => t.isNotEmpty).toList()
+      ..sort((x, y) => y.length.compareTo(x.length));
+    if (terms.isEmpty) {
+      spans.add(TextSpan(text: text, style: base));
+    } else {
+      const letters = 'A-Za-zÀ-ÿ';
+      final pattern = RegExp(
+        '(?<![$letters])(${terms.map(RegExp.escape).join('|')})(?![$letters])',
+        caseSensitive: false,
+      );
+      var pos = 0;
+      for (final m in pattern.allMatches(text)) {
+        if (m.start > pos) spans.add(TextSpan(text: text.substring(pos, m.start), style: base));
+        spans.add(TextSpan(text: m.group(0), style: marked));
+        pos = m.end;
+      }
+      if (pos < text.length) spans.add(TextSpan(text: text.substring(pos), style: base));
     }
-    if (pos < text.length) spans.add(TextSpan(text: text.substring(pos), style: base));
     return Container(
       key: key,
       width: double.infinity,
@@ -1036,6 +1044,11 @@ String? extractLingoKeyTerm(String question) {
     r'^traduz[ao]?\s+(?:a palavra\s+)?(.+?)\s+(?:para|em)\s+\S+$',
     r'^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)\s+(?:para|em)\s+\S+$',
     r'^o que\s+(?:significa|quer dizer)\s+(.+?)$',
+    // Pedidos de frase-exemplo (fase 2 do Lingo).
+    r'^(?:use|usa|usar|utilize)\s+(.+?)\s+(?:em|numa)\s+(?:uma\s+)?frase$',
+    r'^(?:me\s+)?(?:d[êe]|dá|dar|mostre|mostra)\s+(?:um\s+)?exemplos?\s+(?:com|de|usando)\s+(.+?)$',
+    r'^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar)\s+(.+?)$',
+    r'^(?:uma\s+)?(?:frase|exemplo)\s+(?:com|de|usando)\s+(.+?)$',
   ];
   for (final pattern in patterns) {
     final m = RegExp(pattern, caseSensitive: false).firstMatch(q);

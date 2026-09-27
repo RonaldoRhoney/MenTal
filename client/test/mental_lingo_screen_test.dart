@@ -69,6 +69,9 @@ void main() {
     expect(extractLingoKeyTerm('Como se diz "bom dia" em espanhol?'), 'bom dia');
     expect(extractLingoKeyTerm('o que significa Wednesday'), 'Wednesday');
     expect(extractLingoKeyTerm('qual é a tradução de casa para francês'), 'casa');
+    expect(extractLingoKeyTerm('use queijo em uma frase'), 'queijo');
+    expect(extractLingoKeyTerm('me dê um exemplo com Cheese'), 'Cheese');
+    expect(extractLingoKeyTerm('como uso hot?'), 'hot');
     expect(extractLingoKeyTerm('oi tudo bem'), isNull);
   });
 

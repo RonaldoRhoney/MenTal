@@ -530,6 +530,26 @@ class MentalLingoSuggestion(Base):
     fetched_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class MentalLingoExample(Base):
+    """
+    MENTAL LINGO fase 2 (aprovado por Rhoney, 26/09/2026): frase-exemplo CURADA por palavra,
+    com tradução. Nunca gerada em tempo real. Só `approved` é servida. A fala da tradução em
+    português vale só para nivel='basico'.
+    """
+
+    __tablename__ = "lingo_exemplos"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    idioma: Mapped[str] = mapped_column(String, default="ingles")
+    nivel: Mapped[str] = mapped_column(String)
+    palavra: Mapped[str] = mapped_column(String)
+    palavra_pt: Mapped[str | None] = mapped_column(String, nullable=True)
+    frase: Mapped[str] = mapped_column(Text)
+    traducao: Mapped[str] = mapped_column(Text)
+    review_status: Mapped[str] = mapped_column(String, default="approved")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class ConcursoBanca(Base):
     """Mundo dos Concursos (decisão de Rhoney, 25/09/2026). Só `approved` é servida."""
 

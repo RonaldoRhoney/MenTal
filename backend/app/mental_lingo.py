@@ -27,7 +27,7 @@ Libras recebe uma resposta textual explicando o motivo, nunca um erro.
 import re
 from typing import NamedTuple
 
-from sqlalchemy import String, cast, func, select
+from sqlalchemy import String, cast, func, or_, select
 from sqlalchemy.orm import Session
 
 from . import config, models, wiktionary
@@ -340,6 +340,63 @@ def _found_from_foreign(matches: list[_VocabEntry], word: str) -> dict:
     return {"found": True, "answer_text": text, "matched_word": word, "target_language": lang, "speech_segments": segments}
 
 
+# Pedidos de FRASE-EXEMPLO ("use queijo em uma frase", "dê um exemplo com Cheese", "como uso hot").
+_EXAMPLE_PATTERNS = [
+    re.compile(r"^(?:use|usa|usar|utilize)\s+(.+?)\s+(?:em|numa)\s+(?:uma\s+)?frase\??$", re.IGNORECASE),
+    re.compile(r"^(?:me\s+)?(?:d[êe]|dá|dar|mostre|mostra)\s+(?:um\s+)?exemplos?\s+(?:com|de|usando)\s+(.+?)\??$", re.IGNORECASE),
+    re.compile(r"^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar)\s+(.+?)\??$", re.IGNORECASE),
+    re.compile(r"^(?:uma\s+)?(?:frase|exemplo)\s+(?:com|de|usando)\s+(.+?)\??$", re.IGNORECASE),
+]
+
+
+def _example_term(question: str) -> str | None:
+    q = _normalize(question)
+    for pattern in _EXAMPLE_PATTERNS:
+        m = pattern.match(q)
+        if m:
+            term = m.group(1).strip(" '\"")
+            return term or None
+    return None
+
+
+def _example_answer(db: Session, term: str) -> dict:
+    """Frase-exemplo CURADA (tabela lingo_exemplos, só `approved`) para a palavra. Aceita o termo em
+    português ou em inglês. Nunca inventa: sem frase cadastrada, diz que ainda não tem."""
+    term_norm = term.strip().lower()
+    entries = _vocab_entries(db)
+    candidates = {e.correct for e in entries if e.meaning == term_norm and _language_of_territory(e.territory_id) == "ingles"}
+    candidates.add(term_norm)
+    rows = db.execute(
+        select(models.MentalLingoExample)
+        .where(models.MentalLingoExample.idioma == "ingles")
+        .where(models.MentalLingoExample.review_status == "approved")
+        .where(or_(func.lower(models.MentalLingoExample.palavra).in_(candidates),
+                   func.lower(models.MentalLingoExample.palavra_pt) == term_norm))
+        .order_by(models.MentalLingoExample.frase)
+    ).scalars().all()
+    if not rows:
+        return {
+            "found": False,
+            "answer_text": f"Ainda não tenho uma frase de exemplo para '{term}'. Estou ampliando os exemplos aos poucos.",
+            "matched_word": term,
+        }
+    row = rows[0]
+    header = f"Exemplo com '{row.palavra}'" + (f" ({row.palavra_pt})" if row.palavra_pt else "") + ":"
+    segments = [{"lang": "pt", "text": "Um exemplo:"}, {"lang": "ingles", "text": row.frase}]
+    # Básico: a tradução também é falada em português (ajuda o aluno iniciante). Intermediário/
+    # Avançado: só a frase em inglês (decisão de Rhoney, 26/09/2026).
+    if row.nivel == "basico":
+        segments.append({"lang": "pt", "text": row.traducao})
+    return {
+        "found": True,
+        "answer_text": f"{header}\n{row.frase}\n{row.traducao}",
+        "matched_word": term,
+        "target_language": "ingles",
+        "speech_segments": segments,
+        "highlights": [row.palavra],
+    }
+
+
 def answer_question(db: Session, question: str) -> dict:
     question = (question or "").strip()
     if not question:
@@ -357,6 +414,10 @@ def answer_question(db: Session, question: str) -> dict:
             "matched_word": None,
             "target_language": None,
         }
+
+    example_term = _example_term(question)
+    if example_term is not None:
+        return _example_answer(db, example_term)
 
     word, lang_word = _extract_word(question)
     if word is None:
