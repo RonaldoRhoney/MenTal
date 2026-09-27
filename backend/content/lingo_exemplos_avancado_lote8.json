@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Precipitation",
+    "word_pt": "precipitação",
+    "sentence": "Heavy precipitation floods several streets downtown.",
+    "translation": "Precipitação intensa inunda várias ruas no centro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Monsoon",
+    "word_pt": "monção",
+    "sentence": "The monsoon season brings weeks of heavy rain.",
+    "translation": "A estação de monção traz semanas de chuva intensa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cyclone",
+    "word_pt": "ciclone",
+    "sentence": "A powerful cyclone forces coastal towns to evacuate.",
+    "translation": "Um ciclone forte obriga cidades litorâneas a evacuar."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Blizzard",
+    "word_pt": "nevasca",
+    "sentence": "The blizzard shuts down the entire airport.",
+    "translation": "A nevasca fecha o aeroporto inteiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Deluge",
+    "word_pt": "dilúvio",
+    "sentence": "A sudden deluge overwhelms the small drainage system.",
+    "translation": "Um dilúvio repentino sobrecarrega o pequeno sistema de drenagem."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dew",
+    "word_pt": "orvalho",
+    "sentence": "Morning dew covers the grass in the garden.",
+    "translation": "Orvalho da manhã cobre a grama no jardim."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Smog",
+    "word_pt": "neblina poluída",
+    "sentence": "Thick smog hangs over the city every winter.",
+    "translation": "Neblina poluída densa paira sobre a cidade todo inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Thunderstorm",
+    "word_pt": "trovoada",
+    "sentence": "A violent thunderstorm knocks out the power.",
+    "translation": "Uma trovoada violenta derruba a energia elétrica."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Breeze",
+    "word_pt": "brisa",
+    "sentence": "A gentle breeze cools the beach in the afternoon.",
+    "translation": "Uma brisa suave refresca a praia à tarde."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Gust",
+    "word_pt": "rajada de vento",
+    "sentence": "A sudden gust knocks over the outdoor chairs.",
+    "translation": "Uma rajada de vento repentina derruba as cadeiras de fora."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Database",
+    "word_pt": "banco de dados",
+    "sentence": "The team stores all customer data in a single database.",
+    "translation": "A equipe armazena todos os dados dos clientes num único banco de dados."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Query",
+    "word_pt": "consulta a dados",
+    "sentence": "I run a query to find the missing records.",
+    "translation": "Eu executo uma consulta para encontrar os registros ausentes."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Function",
+    "word_pt": "função de programa",
+    "sentence": "I write a function to calculate the total automatically.",
+    "translation": "Eu escrevo uma função para calcular o total automaticamente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Compiler",
+    "word_pt": "compilador",
+    "sentence": "The compiler flags an error in the code.",
+    "translation": "O compilador aponta um erro no código."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Queue",
+    "word_pt": "fila de espera",
+    "sentence": "Every request waits in a queue before processing.",
+    "translation": "Toda solicitação espera numa fila antes de ser processada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pointer",
+    "word_pt": "ponteiro",
+    "sentence": "A pointer stores the memory address of the variable.",
+    "translation": "Um ponteiro armazena o endereço de memória da variável."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Recursion",
+    "word_pt": "recursão",
+    "sentence": "The professor explains recursion with a simple example.",
+    "translation": "O professor explica recursão com um exemplo simples."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Malware",
+    "word_pt": "software malicioso",
+    "sentence": "The antivirus detects malware on the old laptop.",
+    "translation": "O antivírus detecta software malicioso no laptop velho."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cipher",
+    "word_pt": "código cifrado",
+    "sentence": "The message is written in an old military cipher.",
+    "translation": "A mensagem está escrita num código cifrado militar antigo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hosting",
+    "word_pt": "hospedagem de site",
+    "sentence": "The company switches to a faster hosting provider.",
+    "translation": "A empresa troca para um provedor de hospedagem mais rápido."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Earnings",
+    "word_pt": "rendimentos",
+    "sentence": "His earnings increase significantly after the promotion.",
+    "translation": "Os rendimentos dele aumentam significativamente depois da promoção."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Interest",
+    "word_pt": "juros",
+    "sentence": "The savings account earns very little interest.",
+    "translation": "A conta poupança rende juros muito baixos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Installment",
+    "word_pt": "parcela",
+    "sentence": "I pay for the sofa in one final installment.",
+    "translation": "Eu pago o sofá numa parcela final."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Balance",
+    "word_pt": "saldo bancário",
+    "sentence": "I check my account balance every morning.",
+    "translation": "Eu confiro o saldo bancário toda manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Statement",
+    "word_pt": "extrato bancário",
+    "sentence": "I review my bank statement before paying the bills.",
+    "translation": "Eu reviso o extrato bancário antes de pagar as contas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Withdrawal",
+    "word_pt": "saque",
+    "sentence": "I make a small withdrawal from the ATM.",
+    "translation": "Eu faço um saque pequeno no caixa eletrônico."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Billing",
+    "word_pt": "cobrança",
+    "sentence": "There is an error in this month's billing.",
+    "translation": "Há um erro na cobrança deste mês."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Refund",
+    "word_pt": "reembolso",
+    "sentence": "The store issues a full refund for the broken item.",
+    "translation": "A loja emite um reembolso integral pelo item quebrado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Overdraft",
+    "word_pt": "cheque especial",
+    "sentence": "I use my overdraft to cover an emergency expense.",
+    "translation": "Eu uso meu cheque especial para cobrir um gasto de emergência."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Allowance",
+    "word_pt": "mesada",
+    "sentence": "My daughter saves half of her weekly allowance.",
+    "translation": "Minha filha economiza metade da mesada semanal dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Chandelier",
+    "word_pt": "lustre",
+    "sentence": "A large chandelier hangs above the dining table.",
+    "translation": "Um lustre grande fica pendurado acima da mesa de jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bookshelf",
+    "word_pt": "estante de livros",
+    "sentence": "He builds a wooden bookshelf for his office.",
+    "translation": "Ele constrói uma estante de livros de madeira para o escritório dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tapestry",
+    "word_pt": "tapeçaria",
+    "sentence": "An old tapestry decorates the castle's main hall.",
+    "translation": "Uma tapeçaria antiga decora o salão principal do castelo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Armchair",
+    "word_pt": "poltrona",
+    "sentence": "She reads by the fire in a comfortable armchair.",
+    "translation": "Ela lê perto da lareira numa poltrona confortável."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lantern",
+    "word_pt": "lampião",
+    "sentence": "They light a lantern to guide their way at night.",
+    "translation": "Eles acendem um lampião para guiar o caminho deles à noite."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cushion",
+    "word_pt": "almofada",
+    "sentence": "A soft cushion makes the wooden chair more comfortable.",
+    "translation": "Uma almofada macia torna a cadeira de madeira mais confortável."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Blind",
+    "word_pt": "persiana",
+    "sentence": "She lowers the blind to block the afternoon sun.",
+    "translation": "Ela abaixa a persiana para bloquear o sol da tarde."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Duvet",
+    "word_pt": "edredom",
+    "sentence": "I wash the duvet once every season.",
+    "translation": "Eu lavo o edredom uma vez por estação."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Headboard",
+    "word_pt": "cabeceira de cama",
+    "sentence": "The bed has a tall wooden headboard.",
+    "translation": "A cama tem uma cabeceira de madeira alta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Trunk",
+    "word_pt": "baú de viagem",
+    "sentence": "She stores old photographs in a leather trunk.",
+    "translation": "Ela guarda fotografias antigas num baú de couro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Slender",
+    "word_pt": "esguio",
+    "sentence": "The dancer has a tall, slender frame.",
+    "translation": "O bailarino tem um porte alto e esguio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stocky",
+    "word_pt": "atarracado",
+    "sentence": "The wrestler has a short, stocky build.",
+    "translation": "O lutador tem uma compleição baixa e atarracada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pointed",
+    "word_pt": "pontiagudo",
+    "sentence": "The tower ends in a sharp, pointed roof.",
+    "translation": "A torre termina num telhado afiado e pontiagudo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hollow",
+    "word_pt": "oco",
+    "sentence": "The tree trunk sounds hollow when I knock on it.",
+    "translation": "O tronco da árvore soa oco quando eu bato nele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Blunt",
+    "word_pt": "rombudo",
+    "sentence": "The knife feels blunt after months of use.",
+    "translation": "A faca parece rombuda depois de meses de uso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Wavy",
+    "word_pt": "ondulado",
+    "sentence": "She has long, wavy hair.",
+    "translation": "Ela tem cabelo longo e ondulado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Concave",
+    "word_pt": "côncavo",
+    "sentence": "The mirror has a slightly concave surface.",
+    "translation": "O espelho tem uma superfície levemente côncava."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bulging",
+    "word_pt": "abaulado",
+    "sentence": "His bag looks bulging after the trip to the market.",
+    "translation": "A bolsa dele parece abaulada depois da ida ao mercado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bulky",
+    "word_pt": "volumoso",
+    "sentence": "The old television is heavy and bulky.",
+    "translation": "A televisão velha é pesada e volumosa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Petite",
+    "word_pt": "miúdo",
+    "sentence": "She is petite but very strong.",
+    "translation": "Ela é miúda, mas muito forte."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Legislate",
+    "word_pt": "legislar",
+    "sentence": "Congress works to legislate on climate policy.",
+    "translation": "O Congresso trabalha para legislar sobre política climática."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Repeal",
+    "word_pt": "revogar",
+    "sentence": "Lawmakers vote to repeal the outdated regulation.",
+    "translation": "Os parlamentares votam para revogar o regulamento ultrapassado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Enact",
+    "word_pt": "promulgar",
+    "sentence": "The state moves quickly to enact the new law.",
+    "translation": "O estado age rápido para promulgar a nova lei."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sanction",
+    "word_pt": "sancionar",
+    "sentence": "The government decides to sanction the reform.",
+    "translation": "O governo decide sancionar a reforma."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Regulate",
+    "word_pt": "regulamentar",
+    "sentence": "Agencies work to regulate the growing industry.",
+    "translation": "Agências trabalham para regulamentar a indústria em crescimento."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Deliberate",
+    "word_pt": "deliberar",
+    "sentence": "Judges deliberate for hours before the verdict.",
+    "translation": "Juízes deliberam por horas antes do veredito."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Appoint",
+    "word_pt": "nomear para cargo",
+    "sentence": "The president decides to appoint a new advisor.",
+    "translation": "O presidente decide nomear um novo assessor para o cargo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Depose",
+    "word_pt": "destituir do poder",
+    "sentence": "The rebels manage to depose the corrupt leader.",
+    "translation": "Os rebeldes conseguem destituir o líder corrupto do poder."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Elect",
+    "word_pt": "eleger",
+    "sentence": "Citizens elect a new mayor every four years.",
+    "translation": "Cidadãos elegem um novo prefeito a cada quatro anos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Abolish",
+    "word_pt": "abolir",
+    "sentence": "The council votes to abolish the old tax.",
+    "translation": "O conselho vota para abolir o imposto antigo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Commemorate",
+    "word_pt": "homenagear",
+    "sentence": "The town holds a ceremony to commemorate the veterans.",
+    "translation": "A cidade realiza uma cerimônia para homenagear os veteranos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Glorify",
+    "word_pt": "glorificar",
+    "sentence": "The movie tends to glorify a violent past.",
+    "translation": "O filme tende a glorificar um passado violento."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Venerate",
+    "word_pt": "venerar",
+    "sentence": "The community continues to venerate its founder.",
+    "translation": "A comunidade continua a venerar o fundador dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Consecrate",
+    "word_pt": "consagrar",
+    "sentence": "The bishop travels to consecrate the new church.",
+    "translation": "O bispo viaja para consagrar a nova igreja."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Elevate",
+    "word_pt": "elevar",
+    "sentence": "This award will elevate her status in the industry.",
+    "translation": "Este prêmio vai elevar o status dela na indústria."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Desecrate",
+    "word_pt": "profanar",
+    "sentence": "Vandals desecrate the ancient monument overnight.",
+    "translation": "Vândalos profanam o monumento antigo durante a noite."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Blaspheme",
+    "word_pt": "blasfemar",
+    "sentence": "The old law once used to punish those who blaspheme.",
+    "translation": "A lei antiga costumava punir quem blasfemasse, no passado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bless",
+    "word_pt": "abençoar",
+    "sentence": "I watch the priest bless the newborn baby.",
+    "translation": "Eu vejo o padre abençoar o bebê recém-nascido."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Curse",
+    "word_pt": "amaldiçoar",
+    "sentence": "In the old story, the witch will curse the entire village.",
+    "translation": "Na história antiga, a bruxa vai amaldiçoar a vila inteira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Worship",
+    "word_pt": "cultuar",
+    "sentence": "They travel far to worship at the ancient temple.",
+    "translation": "Eles viajam longe para cultuar no templo antigo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Daydream",
+    "word_pt": "devaneio",
+    "sentence": "I often daydream about traveling the world.",
+    "translation": "Eu frequentemente devaneio sobre viajar pelo mundo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Nightmare",
+    "word_pt": "pesadelo",
+    "sentence": "I wake up shaking after a terrible nightmare.",
+    "translation": "Eu acordo tremendo depois de um pesadelo terrível."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hallucination",
+    "word_pt": "alucinação",
+    "sentence": "The fever causes a brief hallucination.",
+    "translation": "A febre causa uma alucinação breve."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Delirium",
+    "word_pt": "delírio",
+    "sentence": "He speaks in a state of delirium during the fever.",
+    "translation": "Ele fala num estado de delírio durante a febre."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Obsession",
+    "word_pt": "obsessão",
+    "sentence": "His obsession with the project affects his sleep.",
+    "translation": "A obsessão dele pelo projeto afeta o sono dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Subconscious",
+    "word_pt": "subconsciente",
+    "sentence": "The dream reveals something from her subconscious.",
+    "translation": "O sonho revela algo do subconsciente dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Catharsis",
+    "word_pt": "catarse",
+    "sentence": "Writing the letter gives her a sense of catharsis.",
+    "translation": "Escrever a carta dá a ela uma sensação de catarse."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Epiphany",
+    "word_pt": "epifania",
+    "sentence": "She has a sudden epiphany while walking home.",
+    "translation": "Ela tem uma epifania repentina enquanto caminha para casa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Illusion",
+    "word_pt": "ilusão",
+    "sentence": "The mirror creates an illusion of more space.",
+    "translation": "O espelho cria uma ilusão de mais espaço."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Reverie",
+    "word_pt": "fantasia mental",
+    "sentence": "He loses himself in a quiet reverie by the window.",
+    "translation": "Ele se perde numa fantasia mental tranquila perto da janela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Liqueur",
+    "word_pt": "licor",
+    "sentence": "She sips a sweet liqueur after dinner.",
+    "translation": "Ela bebe um licor doce aos poucos depois do jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Truffle",
+    "word_pt": "trufa",
+    "sentence": "The chef adds a slice of truffle to the risotto.",
+    "translation": "O chef acrescenta uma fatia de trufa ao risoto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Spice",
+    "word_pt": "especiaria",
+    "sentence": "She adds a rare spice to the traditional dish.",
+    "translation": "Ela acrescenta uma especiaria rara ao prato tradicional."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Saffron",
+    "word_pt": "açafrão",
+    "sentence": "Saffron gives the rice its golden color.",
+    "translation": "Açafrão dá ao arroz a cor dourada dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cinnamon",
+    "word_pt": "canela",
+    "sentence": "He sprinkles cinnamon over the hot coffee.",
+    "translation": "Ele espalha canela sobre o café quente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ginger",
+    "word_pt": "gengibre",
+    "sentence": "The tea has a strong taste of fresh ginger.",
+    "translation": "O chá tem um sabor forte de gengibre fresco."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Nutmeg",
+    "word_pt": "noz-moscada",
+    "sentence": "A pinch of nutmeg improves the pumpkin soup.",
+    "translation": "Uma pitada de noz-moscada melhora a sopa de abóbora."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Clove",
+    "word_pt": "cravo-da-índia",
+    "sentence": "She adds a clove to the simmering broth.",
+    "translation": "Ela acrescenta um cravo-da-índia ao caldo em fervura lenta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fennel",
+    "word_pt": "erva-doce",
+    "sentence": "The salad has a hint of fresh fennel.",
+    "translation": "A salada tem um toque de erva-doce fresca."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Oregano",
+    "word_pt": "orégano",
+    "sentence": "He sprinkles oregano over the pizza.",
+    "translation": "Ele espalha orégano sobre a pizza."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Skim",
+    "word_pt": "folhear rapidamente",
+    "sentence": "I skim the report before the meeting.",
+    "translation": "Eu leio rapidamente o relatório antes da reunião."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Scribble",
+    "word_pt": "rabiscar",
+    "sentence": "I scribble a note on the back of the receipt.",
+    "translation": "Eu rabisco uma anotação no verso do recibo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Jot",
+    "word_pt": "anotar depressa",
+    "sentence": "I jot down the address before I forget it.",
+    "translation": "Eu anoto depressa o endereço antes de esquecer."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Proofread",
+    "word_pt": "revisar texto",
+    "sentence": "I proofread the essay twice before submitting it.",
+    "translation": "Eu reviso o ensaio duas vezes antes de enviá-lo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Transcribe",
+    "word_pt": "transcrever",
+    "sentence": "I transcribe the interview word for word.",
+    "translation": "Eu transcrevo a entrevista palavra por palavra."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Type",
+    "word_pt": "digitar",
+    "sentence": "I type the report on my laptop.",
+    "translation": "Eu digito o relatório no meu laptop."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Quote",
+    "word_pt": "citar trecho",
+    "sentence": "I quote the professor directly in my essay.",
+    "translation": "Eu cito diretamente o professor no meu ensaio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Paraphrase",
+    "word_pt": "parafrasear",
+    "sentence": "I paraphrase the article to avoid plagiarism.",
+    "translation": "Eu parafraseio o artigo para evitar plágio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Underline",
+    "word_pt": "sublinhar",
+    "sentence": "I underline the key points in the textbook.",
+    "translation": "Eu sublinho os pontos principais no livro didático."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Annotate",
+    "word_pt": "anotar à margem",
+    "sentence": "I annotate the margins with my own comments.",
+    "translation": "Eu anoto as margens com meus próprios comentários."
+  }
+]

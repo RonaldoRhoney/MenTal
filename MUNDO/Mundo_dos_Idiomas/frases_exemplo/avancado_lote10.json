@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Forlorn",
+    "word_pt": "desamparado",
+    "sentence": "The forlorn dog waits alone outside the empty house.",
+    "translation": "O cachorro desamparado espera sozinho do lado de fora da casa vazia."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hospitable",
+    "word_pt": "hospitaleiro",
+    "sentence": "The village is known for being especially hospitable to strangers.",
+    "translation": "A vila é conhecida por ser especialmente hospitaleira com estranhos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Supportive",
+    "word_pt": "solidário",
+    "sentence": "Her family remains supportive throughout the difficult treatment.",
+    "translation": "A família dela permanece solidária durante todo o tratamento difícil."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fraternal",
+    "word_pt": "fraterno",
+    "sentence": "The two brothers share a strong fraternal bond.",
+    "translation": "Os dois irmãos compartilham um forte laço fraterno."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Snobbish",
+    "word_pt": "esnobe",
+    "sentence": "His snobbish attitude annoys most of his classmates.",
+    "translation": "A atitude esnobe dele irrita a maioria dos colegas de classe."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Aloof",
+    "word_pt": "distante e frio",
+    "sentence": "She stays aloof during the entire office party.",
+    "translation": "Ela fica distante e fria durante a festa inteira do escritório."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Needy",
+    "word_pt": "carente",
+    "sentence": "The charity focuses on helping needy families in winter.",
+    "translation": "A instituição de caridade foca em ajudar famílias carentes no inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Subordinate",
+    "word_pt": "subordinado",
+    "sentence": "His subordinate reports directly to him on this project.",
+    "translation": "O subordinado dele se reporta diretamente a ele neste projeto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Autonomous",
+    "word_pt": "autônomo",
+    "sentence": "The region becomes fully autonomous after the treaty.",
+    "translation": "A região se torna totalmente autônoma depois do tratado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sociable",
+    "word_pt": "sociável",
+    "sentence": "She is naturally sociable at every gathering.",
+    "translation": "Ela é naturalmente sociável em todo encontro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Generation",
+    "word_pt": "geração",
+    "sentence": "This generation grows up with constant internet access.",
+    "translation": "Esta geração cresce com acesso constante à internet."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Contemporary",
+    "word_pt": "contemporâneo",
+    "sentence": "The museum focuses on contemporary art from Brazil.",
+    "translation": "O museu foca em arte contemporânea do Brasil."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Prehistoric",
+    "word_pt": "pré-histórico",
+    "sentence": "The cave contains prehistoric paintings on its walls.",
+    "translation": "A caverna contém pinturas pré-históricas nas paredes."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Archaic",
+    "word_pt": "arcaico",
+    "sentence": "The law still uses archaic language from centuries ago.",
+    "translation": "A lei ainda usa uma linguagem arcaica de séculos atrás."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Obsolete",
+    "word_pt": "obsoleto",
+    "sentence": "The old software becomes obsolete within a few years.",
+    "translation": "O software antigo se torna obsoleto em poucos anos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Timeless",
+    "word_pt": "atemporal",
+    "sentence": "The novel explores timeless questions about love and loss.",
+    "translation": "O romance explora questões atemporais sobre amor e perda."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Antique",
+    "word_pt": "antiguidade valiosa",
+    "sentence": "She inherits a beautiful antique from her grandmother.",
+    "translation": "Ela herda uma antiguidade valiosa e linda da avó dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Primitive",
+    "word_pt": "primitivo",
+    "sentence": "The tribe still uses primitive tools for farming.",
+    "translation": "A tribo ainda usa ferramentas primitivas para a agricultura."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Modernity",
+    "word_pt": "modernidade",
+    "sentence": "The city blends tradition with striking modernity.",
+    "translation": "A cidade combina tradição com uma modernidade marcante."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Epoch",
+    "word_pt": "época marcante",
+    "sentence": "The invention marks the beginning of a new epoch.",
+    "translation": "A invenção marca o início de uma nova época marcante."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Statute",
+    "word_pt": "estatuto",
+    "sentence": "The new statute takes effect at the start of the year.",
+    "translation": "O novo estatuto entra em vigor no início do ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Constitution",
+    "word_pt": "constituição de um país",
+    "sentence": "The country adopts a new constitution after the revolution.",
+    "translation": "O país adota uma nova constituição depois da revolução."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ordinance",
+    "word_pt": "regulamento municipal",
+    "sentence": "The city passes an ordinance banning street vendors downtown.",
+    "translation": "A cidade aprova um regulamento municipal proibindo vendedores ambulantes no centro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Curfew",
+    "word_pt": "toque de recolher",
+    "sentence": "The government imposes a curfew during the crisis.",
+    "translation": "O governo impõe um toque de recolher durante a crise."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Injunction",
+    "word_pt": "ordem judicial de proibição",
+    "sentence": "The judge issues an injunction against the company.",
+    "translation": "O juiz emite uma ordem judicial de proibição contra a empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Misdemeanor",
+    "word_pt": "delito leve",
+    "sentence": "He is charged with a minor misdemeanor for the incident.",
+    "translation": "Ele é acusado de um delito leve pelo incidente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Felony",
+    "word_pt": "crime grave",
+    "sentence": "The court treats the crime as a serious felony.",
+    "translation": "O tribunal trata o crime como um crime grave sério."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Violation",
+    "word_pt": "contravenção",
+    "sentence": "The driver receives a fine for the traffic violation.",
+    "translation": "O motorista recebe uma multa pela contravenção de trânsito."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Reprieve",
+    "word_pt": "suspensão de pena",
+    "sentence": "The governor grants a last-minute reprieve to the prisoner.",
+    "translation": "O governador concede uma suspensão de pena de última hora ao prisioneiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Warrant",
+    "word_pt": "mandado judicial",
+    "sentence": "Police obtain a warrant before searching the house.",
+    "translation": "A polícia obtém um mandado judicial antes de revistar a casa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Methodology",
+    "word_pt": "metodologia",
+    "sentence": "The paper explains the methodology behind the study.",
+    "translation": "O artigo explica a metodologia por trás do estudo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Criterion",
+    "word_pt": "critério de avaliação",
+    "sentence": "Experience becomes the main criterion for the job.",
+    "translation": "Experiência se torna o principal critério de avaliação para o emprego."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Parameter",
+    "word_pt": "parâmetro",
+    "sentence": "Researchers adjust one parameter at a time.",
+    "translation": "Pesquisadores ajustam um parâmetro de cada vez."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Indicator",
+    "word_pt": "indicador de desempenho",
+    "sentence": "Sales growth serves as a key indicator of success.",
+    "translation": "O crescimento das vendas serve como um indicador chave de sucesso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sample",
+    "word_pt": "amostra de pesquisa",
+    "sentence": "The study relies on a small sample of participants.",
+    "translation": "O estudo depende de uma amostra pequena de participantes."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Margin",
+    "word_pt": "margem de erro",
+    "sentence": "The survey has a small margin of error.",
+    "translation": "A pesquisa tem uma pequena margem de erro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Correlation",
+    "word_pt": "correlação",
+    "sentence": "The data shows a strong correlation between the two factors.",
+    "translation": "Os dados mostram uma correlação forte entre os dois fatores."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bias",
+    "word_pt": "viés",
+    "sentence": "The report tries to avoid any bias in its conclusions.",
+    "translation": "O relatório tenta evitar qualquer viés nas conclusões."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Variance",
+    "word_pt": "variância",
+    "sentence": "The results show a wide variance across groups.",
+    "translation": "Os resultados mostram uma variância grande entre os grupos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Benchmark",
+    "word_pt": "padrão de referência",
+    "sentence": "The company sets a new benchmark for customer service.",
+    "translation": "A empresa estabelece um novo padrão de referência para o atendimento ao cliente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Extrapolate",
+    "word_pt": "extrapolar",
+    "sentence": "I extrapolate future sales from last year's data.",
+    "translation": "Eu extrapolo as vendas futuras a partir dos dados do ano passado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Interpolate",
+    "word_pt": "interpolar",
+    "sentence": "I interpolate the missing values in the graph.",
+    "translation": "Eu interpolo os valores ausentes no gráfico."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Quantify",
+    "word_pt": "quantificar",
+    "sentence": "I quantify the results before presenting them.",
+    "translation": "Eu quantifico os resultados antes de apresentá-los."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Estimate",
+    "word_pt": "estimar",
+    "sentence": "I estimate the total cost of the renovation.",
+    "translation": "Eu estimo o custo total da reforma."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Verify",
+    "word_pt": "verificar",
+    "sentence": "I verify the data before publishing the report.",
+    "translation": "Eu verifico os dados antes de publicar o relatório."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Validate",
+    "word_pt": "validar",
+    "sentence": "I validate the results with a second test.",
+    "translation": "Eu valido os resultados com um segundo teste."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Calculate",
+    "word_pt": "calcular",
+    "sentence": "I calculate the average score for the class.",
+    "translation": "Eu calculo a nota média da turma."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Measure",
+    "word_pt": "medir",
+    "sentence": "I measure the room before buying the furniture.",
+    "translation": "Eu meço o quarto antes de comprar os móveis."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Substantiate",
+    "word_pt": "comprovar com fatos",
+    "sentence": "I substantiate my claim with solid evidence.",
+    "translation": "Eu comprovo minha alegação com provas sólidas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hypothesize",
+    "word_pt": "formular hipótese",
+    "sentence": "I hypothesize that the change will improve results.",
+    "translation": "Eu formulo a hipótese de que a mudança vai melhorar os resultados."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Flawless",
+    "word_pt": "impecável",
+    "sentence": "Her performance on stage is absolutely flawless.",
+    "translation": "A apresentação dela no palco é absolutamente impecável."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Faulty",
+    "word_pt": "defeituoso",
+    "sentence": "The store replaces the faulty appliance for free.",
+    "translation": "A loja substitui o eletrodoméstico defeituoso de graça."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rustic",
+    "word_pt": "rústico",
+    "sentence": "The cabin has a simple, rustic charm.",
+    "translation": "A cabana tem um charme simples e rústico."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Refined",
+    "word_pt": "refinado",
+    "sentence": "His refined taste is obvious in every detail of the house.",
+    "translation": "O gosto refinado dele é óbvio em cada detalhe da casa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Crude",
+    "word_pt": "tosco",
+    "sentence": "The early prototype looks crude compared to the final version.",
+    "translation": "O protótipo inicial parece tosco comparado à versão final."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Durable",
+    "word_pt": "durável",
+    "sentence": "The backpack is light but extremely durable.",
+    "translation": "A mochila é leve, mas extremamente durável."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fragile",
+    "word_pt": "frágil",
+    "sentence": "Handle the package carefully; it contains fragile items.",
+    "translation": "Manuseie o pacote com cuidado; ele contém itens frágeis."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Notorious",
+    "word_pt": "notório",
+    "sentence": "The city is notorious for its heavy traffic.",
+    "translation": "A cidade é notória pelo trânsito pesado dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Renowned",
+    "word_pt": "célebre",
+    "sentence": "She becomes a renowned scientist in her field.",
+    "translation": "Ela se torna uma cientista célebre na área dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Anonymous",
+    "word_pt": "anônimo",
+    "sentence": "The donor chooses to remain anonymous.",
+    "translation": "O doador decide permanecer anônimo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Birth",
+    "word_pt": "nascimento",
+    "sentence": "They celebrate the birth of their first child.",
+    "translation": "Eles celebram o nascimento do primeiro filho deles."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cradle",
+    "word_pt": "berço",
+    "sentence": "The baby sleeps peacefully in the wooden cradle.",
+    "translation": "O bebê dorme tranquilamente no berço de madeira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Childhood",
+    "word_pt": "infância",
+    "sentence": "She spends her childhood in a small coastal town.",
+    "translation": "Ela passa a infância numa cidade litorânea pequena."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Youth",
+    "word_pt": "juventude",
+    "sentence": "He spends his youth traveling across South America.",
+    "translation": "Ele passa a juventude dele viajando pela América do Sul."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Longevity",
+    "word_pt": "longevidade",
+    "sentence": "A healthy diet contributes to human longevity.",
+    "translation": "Uma dieta saudável contribui para a longevidade humana."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mortality",
+    "word_pt": "mortalidade",
+    "sentence": "The study examines mortality rates in rural areas.",
+    "translation": "O estudo examina as taxas de mortalidade em áreas rurais."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lineage",
+    "word_pt": "linhagem",
+    "sentence": "She traces her family's lineage back three centuries.",
+    "translation": "Ela rastreia a linhagem da família dela três séculos atrás."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Epitaph",
+    "word_pt": "epitáfio",
+    "sentence": "The epitaph on the stone contains a short, kind message.",
+    "translation": "O epitáfio na pedra traz uma mensagem curta e gentil."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Grave",
+    "word_pt": "sepultura",
+    "sentence": "They visit his grave every year on his birthday.",
+    "translation": "Eles visitam a sepultura dele todo ano no aniversário dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Adulthood",
+    "word_pt": "vida adulta",
+    "sentence": "She reflects on the responsibilities of adulthood.",
+    "translation": "Ela reflete sobre as responsabilidades da vida adulta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Compose",
+    "word_pt": "compor música",
+    "sentence": "I compose a new song for the film.",
+    "translation": "Eu componho uma canção nova para o filme."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rehearse",
+    "word_pt": "ensaiar peça",
+    "sentence": "I rehearse the final scene twice before the show.",
+    "translation": "Eu ensaio a cena final duas vezes antes do show."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Improvise",
+    "word_pt": "improvisar",
+    "sentence": "The actor has to improvise when he forgets his line.",
+    "translation": "O ator tem que improvisar quando esquece a fala dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Chisel",
+    "word_pt": "cinzelar",
+    "sentence": "I chisel the marble with great care.",
+    "translation": "Eu cinzelo o mármore com muito cuidado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sketch",
+    "word_pt": "esboçar",
+    "sentence": "I sketch the building before painting it.",
+    "translation": "Eu esboço o prédio antes de pintá-lo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Portray",
+    "word_pt": "retratar",
+    "sentence": "I portray the artist's difficult early years in my film.",
+    "translation": "Eu retrato os primeiros anos difíceis do artista no meu filme."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Direct",
+    "word_pt": "dirigir filme",
+    "sentence": "He decides to direct his first feature film this year.",
+    "translation": "Ele decide dirigir o primeiro longa-metragem dele este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Perform",
+    "word_pt": "atuar em cena",
+    "sentence": "I perform the same role for the tenth time.",
+    "translation": "Eu atuo no mesmo papel pela décima vez."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Applaud",
+    "word_pt": "aplaudir",
+    "sentence": "I applaud for several minutes after the show.",
+    "translation": "Eu aplaudo por vários minutos depois do show."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Boo",
+    "word_pt": "vaiar",
+    "sentence": "Some fans boo when the referee makes the call.",
+    "translation": "Alguns torcedores vaiam quando o árbitro toma a decisão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Beaker",
+    "word_pt": "béquer",
+    "sentence": "She pours the liquid carefully into the beaker.",
+    "translation": "Ela despeja o líquido com cuidado no béquer."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Microscope",
+    "word_pt": "microscópio",
+    "sentence": "Students examine the sample under a microscope.",
+    "translation": "Os alunos examinam a amostra num microscópio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pipette",
+    "word_pt": "pipeta",
+    "sentence": "The technician uses a pipette to measure the solution.",
+    "translation": "O técnico usa uma pipeta para medir a solução."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Centrifuge",
+    "word_pt": "centrífuga",
+    "sentence": "The lab spins the sample in a centrifuge.",
+    "translation": "O laboratório gira a amostra numa centrífuga."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Substrate",
+    "word_pt": "substrato",
+    "sentence": "The enzyme reacts quickly with the substrate.",
+    "translation": "A enzima reage rapidamente com o substrato."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Thermometer",
+    "word_pt": "termômetro",
+    "sentence": "She checks the child's temperature with a thermometer.",
+    "translation": "Ela confere a temperatura da criança com um termômetro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Barometer",
+    "word_pt": "barômetro",
+    "sentence": "The barometer predicts a sudden drop in pressure.",
+    "translation": "O barômetro prevê uma queda repentina na pressão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stopwatch",
+    "word_pt": "cronômetro",
+    "sentence": "The coach uses a stopwatch to time each lap.",
+    "translation": "O treinador usa um cronômetro para marcar cada volta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Burner",
+    "word_pt": "bico de laboratório",
+    "sentence": "The chemist adjusts the flame on the burner.",
+    "translation": "O químico ajusta a chama no bico de laboratório."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Specimen",
+    "word_pt": "espécime",
+    "sentence": "The biologist collects a specimen from the riverbank.",
+    "translation": "O biólogo coleta um espécime na margem do rio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Zenith",
+    "word_pt": "ponto mais alto",
+    "sentence": "The sun reaches its zenith at noon.",
+    "translation": "O sol atinge o ponto mais alto ao meio-dia."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pinnacle",
+    "word_pt": "ápice",
+    "sentence": "Winning the award marks the pinnacle of her career.",
+    "translation": "Ganhar o prêmio marca o ápice da carreira dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Summit",
+    "word_pt": "cume",
+    "sentence": "They finally reach the summit after six hours of climbing.",
+    "translation": "Eles finalmente alcançam o cume depois de seis horas de escalada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Peak",
+    "word_pt": "pico",
+    "sentence": "The mountain's peak stays covered in snow all year.",
+    "translation": "O pico da montanha permanece coberto de neve o ano todo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Slope",
+    "word_pt": "ladeira",
+    "sentence": "Skiers race down the steep slope.",
+    "translation": "Esquiadores descem a ladeira íngreme correndo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Legitimate",
+    "word_pt": "legítimo",
+    "sentence": "The company presents legitimate documents for the deal.",
+    "translation": "A empresa apresenta documentos legítimos para o acordo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Authentic",
+    "word_pt": "autêntico",
+    "sentence": "This painting is confirmed to be authentic.",
+    "translation": "Esta pintura é confirmada como autêntica."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pivot",
+    "word_pt": "ponto de virada",
+    "sentence": "The interview becomes a pivot point in her career.",
+    "translation": "A entrevista se torna um ponto de virada na carreira dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Origin",
+    "word_pt": "origem",
+    "sentence": "Scientists still debate the origin of the universe.",
+    "translation": "Cientistas ainda debatem a origem do universo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Magnificence",
+    "word_pt": "magnificência",
+    "sentence": "Visitors marvel at the magnificence of the old palace.",
+    "translation": "Visitantes se maravilham com a magnificência do palácio antigo."
+  }
+]

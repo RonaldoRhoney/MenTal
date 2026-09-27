@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Coerce",
+    "word_pt": "coagir",
+    "sentence": "The gang tries to coerce him into joining them.",
+    "translation": "A gangue tenta coagi-lo a se juntar a eles."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Intimidate",
+    "word_pt": "intimidar",
+    "sentence": "His loud voice is meant to intimidate the new recruits.",
+    "translation": "A voz alta dele tem a intenção de intimidar os novos recrutas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Bribe",
+    "word_pt": "subornar",
+    "sentence": "The official refuses to bribe the inspector.",
+    "translation": "O funcionário se recusa a subornar o inspetor."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Blackmail",
+    "word_pt": "chantagear",
+    "sentence": "Someone tries to blackmail the executive with old photos.",
+    "translation": "Alguém tenta chantagear o executivo com fotos antigas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Menace",
+    "word_pt": "ameaçar de mal",
+    "sentence": "The stray dog does not menace anyone in the park.",
+    "translation": "O cachorro vira-lata não ameaça ninguém no parque."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Incite",
+    "word_pt": "incitar",
+    "sentence": "The speech seems designed to incite unrest.",
+    "translation": "O discurso parece feito para incitar agitação."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Entice",
+    "word_pt": "aliciar",
+    "sentence": "The store uses discounts to entice new customers.",
+    "translation": "A loja usa descontos para aliciar novos clientes."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lure",
+    "word_pt": "atrair com isca",
+    "sentence": "Fishermen use bright bait to lure the fish.",
+    "translation": "Pescadores usam isca brilhante para atrair os peixes."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dissuade",
+    "word_pt": "dissuadir",
+    "sentence": "Nothing can dissuade her from taking the trip.",
+    "translation": "Nada consegue dissuadi-la de fazer a viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Coax",
+    "word_pt": "persuadir com jeito",
+    "sentence": "She manages, with patience, to coax the shy cat out from under the bed.",
+    "translation": "Ela consegue, com paciência, persuadir o gato tímido a sair de debaixo da cama."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Demolish",
+    "word_pt": "demolir",
+    "sentence": "The city plans to demolish the old stadium.",
+    "translation": "A cidade planeja demolir o estádio antigo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Devastate",
+    "word_pt": "devastar",
+    "sentence": "This kind of flood can devastate an entire village.",
+    "translation": "Esse tipo de enchente pode devastar uma vila inteira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Annihilate",
+    "word_pt": "aniquilar",
+    "sentence": "The army threatens to annihilate the enemy forces.",
+    "translation": "O exército ameaça aniquilar as forças inimigas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Restore",
+    "word_pt": "restaurar",
+    "sentence": "The museum works to restore the damaged painting.",
+    "translation": "O museu trabalha para restaurar a pintura danificada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mend",
+    "word_pt": "remendar tecido",
+    "sentence": "She sits by the window to mend an old sweater.",
+    "translation": "Ela senta perto da janela para remendar um suéter velho."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Patch",
+    "word_pt": "tapar buraco",
+    "sentence": "He grabs some tape to patch the hole in the tent.",
+    "translation": "Ele pega fita para tapar o buraco na barraca."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rebuild",
+    "word_pt": "reconstruir",
+    "sentence": "The town works together to rebuild after the storm.",
+    "translation": "A cidade trabalha em conjunto para reconstruir depois da tempestade."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Shatter",
+    "word_pt": "despedaçar",
+    "sentence": "I watch the glass fall and shatter on the floor.",
+    "translation": "Eu vejo o vidro cair e se despedaçar no chão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Erode",
+    "word_pt": "corroer aos poucos",
+    "sentence": "The constant waves erode the cliff over decades.",
+    "translation": "As ondas constantes corroem o penhasco ao longo de décadas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ignite",
+    "word_pt": "incendiar",
+    "sentence": "A single spark can ignite the dry grass.",
+    "translation": "Uma única faísca pode incendiar a grama seca."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Possess",
+    "word_pt": "possuir",
+    "sentence": "I possess a rare talent for painting.",
+    "translation": "Eu possuo um talento raro para pintura."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Grant",
+    "word_pt": "outorgar",
+    "sentence": "The university decides to grant her a full scholarship.",
+    "translation": "A universidade decide outorgar a ela uma bolsa integral."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Donate",
+    "word_pt": "doar",
+    "sentence": "They donate their old clothes to the shelter.",
+    "translation": "Eles doam as roupas velhas deles para o abrigo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Confiscate",
+    "word_pt": "confiscar",
+    "sentence": "I watch security confiscate the sharp object at the gate.",
+    "translation": "Eu vejo a segurança confiscar o objeto afiado no portão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Plunder",
+    "word_pt": "saquear",
+    "sentence": "Pirates plunder the small coastal town.",
+    "translation": "Piratas saqueiam a pequena cidade litorânea."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Barter",
+    "word_pt": "trocar mercadorias",
+    "sentence": "Villagers barter grain for tools at the market.",
+    "translation": "Aldeões trocam grãos por ferramentas no mercado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Haggle",
+    "word_pt": "pechinchar",
+    "sentence": "Tourists haggle over the price of the souvenir.",
+    "translation": "Turistas pechincham pelo preço da lembrancinha."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lease",
+    "word_pt": "arrendar",
+    "sentence": "The company decides to lease the office space instead of buying it.",
+    "translation": "A empresa decide arrendar o espaço do escritório em vez de comprá-lo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Withhold",
+    "word_pt": "reter",
+    "sentence": "The landlord agrees not to withhold the deposit.",
+    "translation": "O senhorio concorda em não reter o depósito."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Allocate",
+    "word_pt": "destinar recursos",
+    "sentence": "The city plans to allocate more funds to schools.",
+    "translation": "A cidade planeja destinar mais recursos às escolas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Scarce",
+    "word_pt": "escasso",
+    "sentence": "Clean water becomes scarce during the drought.",
+    "translation": "Água limpa se torna escassa durante a seca."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Plentiful",
+    "word_pt": "abundante",
+    "sentence": "Fish are plentiful in this part of the river.",
+    "translation": "Peixes são abundantes nesta parte do rio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Negligible",
+    "word_pt": "ínfimo",
+    "sentence": "The difference in price is negligible this month.",
+    "translation": "A diferença de preço é ínfima este mês."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Considerable",
+    "word_pt": "considerável",
+    "sentence": "The renovation costs a considerable amount of money.",
+    "translation": "A reforma custa uma quantia considerável de dinheiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Infinite",
+    "word_pt": "infinito",
+    "sentence": "The universe seems infinite in every direction.",
+    "translation": "O universo parece infinito em todas as direções."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Minimal",
+    "word_pt": "mínimo",
+    "sentence": "The changes to the design are minimal this time.",
+    "translation": "As mudanças no design são mínimas desta vez."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Excessive",
+    "word_pt": "excessivo",
+    "sentence": "His spending seems excessive for a student budget.",
+    "translation": "Os gastos dele parecem excessivos para um orçamento de estudante."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Moderate",
+    "word_pt": "moderado",
+    "sentence": "She prefers a moderate amount of spice in her food.",
+    "translation": "Ela prefere uma quantidade moderada de tempero na comida dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sparse",
+    "word_pt": "esparso",
+    "sentence": "Vegetation is sparse in this part of the desert.",
+    "translation": "A vegetação é esparsa nesta parte do deserto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dense",
+    "word_pt": "denso",
+    "sentence": "The forest becomes very dense near the river.",
+    "translation": "A floresta fica muito densa perto do rio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Transition",
+    "word_pt": "transição",
+    "sentence": "The company plans a smooth transition to the new system.",
+    "translation": "A empresa planeja uma transição tranquila para o novo sistema."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rupture",
+    "word_pt": "ruptura",
+    "sentence": "The pipe suffers a sudden rupture underground.",
+    "translation": "O cano sofre uma ruptura repentina no subsolo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Catastrophe",
+    "word_pt": "catástrofe",
+    "sentence": "The oil spill turns into an environmental catastrophe.",
+    "translation": "O vazamento de óleo se transforma numa catástrofe ambiental."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Outbreak",
+    "word_pt": "surto",
+    "sentence": "Health officials respond quickly to the outbreak.",
+    "translation": "Autoridades de saúde respondem rapidamente ao surto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Exodus",
+    "word_pt": "êxodo",
+    "sentence": "The war triggers a massive exodus from the region.",
+    "translation": "A guerra provoca um êxodo massivo da região."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Uprising",
+    "word_pt": "levante popular",
+    "sentence": "The uprising spreads across several cities.",
+    "translation": "O levante popular se espalha por várias cidades."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Breakthrough",
+    "word_pt": "grande avanço",
+    "sentence": "Researchers announce a major breakthrough in cancer treatment.",
+    "translation": "Pesquisadores anunciam um grande avanço no tratamento do câncer."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stagnation",
+    "word_pt": "estagnação",
+    "sentence": "The economy suffers years of stagnation.",
+    "translation": "A economia sofre anos de estagnação."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rally",
+    "word_pt": "reação de mercado",
+    "sentence": "The stock market shows a strong rally this week.",
+    "translation": "O mercado de ações mostra uma forte reação esta semana."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Upheaval",
+    "word_pt": "convulsão social",
+    "sentence": "The country experiences a period of political upheaval.",
+    "translation": "O país vive um período de convulsão social e política."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Excursion",
+    "word_pt": "excursão",
+    "sentence": "The school organizes an excursion to the museum.",
+    "translation": "A escola organiza uma excursão ao museu."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cruise",
+    "word_pt": "cruzeiro marítimo",
+    "sentence": "They book a cruise around the Mediterranean.",
+    "translation": "Eles reservam um cruzeiro pelo Mediterrâneo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Resort",
+    "word_pt": "balneário",
+    "sentence": "The family spends a week at a beach resort.",
+    "translation": "A família passa uma semana num balneário à beira-mar."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hostel",
+    "word_pt": "albergue",
+    "sentence": "Backpackers often stay at a cheap hostel.",
+    "translation": "Mochileiros costumam ficar num albergue barato."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lodge",
+    "word_pt": "pousada de campo",
+    "sentence": "They rent a small lodge near the ski slopes.",
+    "translation": "Eles alugam uma pousada pequena perto das pistas de esqui."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tour",
+    "word_pt": "visita guiada",
+    "sentence": "The guide leads a tour through the old city.",
+    "translation": "O guia conduz uma visita guiada pela cidade antiga."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Layover",
+    "word_pt": "escala longa",
+    "sentence": "Their flight includes a long layover in Lisbon.",
+    "translation": "O voo deles inclui uma escala longa em Lisboa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Backpacker",
+    "word_pt": "mochileiro",
+    "sentence": "A young backpacker checks into the hostel.",
+    "translation": "Um mochileiro jovem se registra no albergue."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Landmark",
+    "word_pt": "ponto turístico",
+    "sentence": "The tower is the city's most famous landmark.",
+    "translation": "A torre é o ponto turístico mais famoso da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Commuter",
+    "word_pt": "viajante diário",
+    "sentence": "Every commuter waits for the same morning train.",
+    "translation": "Todo viajante diário espera pelo mesmo trem da manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dissertation",
+    "word_pt": "dissertação",
+    "sentence": "She defends her dissertation next month.",
+    "translation": "Ela defende a dissertação dela no próximo mês."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Advisor",
+    "word_pt": "orientador acadêmico",
+    "sentence": "Her advisor reviews the thesis before submission.",
+    "translation": "O orientador acadêmico dela revisa a tese antes do envio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Syllabus",
+    "word_pt": "ementa",
+    "sentence": "The professor hands out the syllabus on the first day.",
+    "translation": "O professor distribui a ementa no primeiro dia."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Doctorate",
+    "word_pt": "doutorado",
+    "sentence": "He earns his doctorate after six years of research.",
+    "translation": "Ele obtém o doutorado dele depois de seis anos de pesquisa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Scholar",
+    "word_pt": "acadêmico erudito",
+    "sentence": "The scholar publishes a new book on ancient history.",
+    "translation": "O acadêmico erudito publica um livro novo sobre história antiga."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fellow",
+    "word_pt": "bolsista de pesquisa",
+    "sentence": "She becomes a research fellow at the university.",
+    "translation": "Ela se torna bolsista de pesquisa na universidade."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Panel",
+    "word_pt": "banca examinadora",
+    "sentence": "The panel asks tough questions during the defense.",
+    "translation": "A banca examinadora faz perguntas difíceis durante a defesa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Journal",
+    "word_pt": "periódico científico",
+    "sentence": "The study appears in a respected scientific journal.",
+    "translation": "O estudo aparece num periódico científico respeitado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Citation",
+    "word_pt": "citação bibliográfica",
+    "sentence": "Every claim in the paper needs a proper citation.",
+    "translation": "Toda alegação no artigo precisa de uma citação bibliográfica apropriada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Critique",
+    "word_pt": "resenha crítica",
+    "sentence": "The professor writes a detailed critique of the essay.",
+    "translation": "O professor escreve uma resenha crítica detalhada do ensaio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Gleaming",
+    "word_pt": "reluzente",
+    "sentence": "The gleaming floor reflects the morning light.",
+    "translation": "O chão reluzente reflete a luz da manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sparkling",
+    "word_pt": "cintilante",
+    "sentence": "The sparkling water catches everyone's attention.",
+    "translation": "A água cintilante chama a atenção de todos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Opaque",
+    "word_pt": "opaco",
+    "sentence": "The glass becomes opaque after years in the sun.",
+    "translation": "O vidro fica opaco depois de anos no sol."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Translucent",
+    "word_pt": "translúcido",
+    "sentence": "The curtain lets in light while staying translucent.",
+    "translation": "A cortina deixa a luz entrar enquanto permanece translúcida."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Vivid",
+    "word_pt": "vívido",
+    "sentence": "She paints the sunset in vivid colors.",
+    "translation": "Ela pinta o pôr do sol em cores vívidas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Opalescent",
+    "word_pt": "furta-cor",
+    "sentence": "The shell has an opalescent shine under the light.",
+    "translation": "A concha tem um brilho furta-cor sob a luz."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Radiant",
+    "word_pt": "resplandecente",
+    "sentence": "The bride looks radiant on her wedding day.",
+    "translation": "A noiva parece resplandecente no dia do casamento dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Murky",
+    "word_pt": "turvo",
+    "sentence": "The murky water hides the bottom of the lake.",
+    "translation": "A água turva esconde o fundo do lago."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Overcast",
+    "word_pt": "encoberto de nuvens",
+    "sentence": "The sky stays overcast for most of the trip.",
+    "translation": "O céu permanece encoberto de nuvens durante a maior parte da viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dim",
+    "word_pt": "pouco iluminado",
+    "sentence": "The room feels dim without the lamp.",
+    "translation": "O quarto parece pouco iluminado sem a lâmpada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Buzz",
+    "word_pt": "zumbido",
+    "sentence": "The buzz of the bees fills the garden.",
+    "translation": "O zumbido das abelhas preenche o jardim."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Creak",
+    "word_pt": "rangido",
+    "sentence": "Every step causes a creak in the old floor.",
+    "translation": "Cada passo causa um rangido no chão velho."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hiss",
+    "word_pt": "chiado",
+    "sentence": "The snake lets out a warning hiss.",
+    "translation": "A cobra solta um chiado de aviso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Chirp",
+    "word_pt": "gorjeio",
+    "sentence": "The chirp of the birds wakes her up early.",
+    "translation": "O gorjeio dos pássaros a acorda cedo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Howl",
+    "word_pt": "uivo",
+    "sentence": "The wolf's howl echoes through the valley.",
+    "translation": "O uivo do lobo ecoa pelo vale."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Crack",
+    "word_pt": "estalo seco",
+    "sentence": "A loud crack breaks the silence of the forest.",
+    "translation": "Um estalo seco alto quebra o silêncio da floresta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Resonance",
+    "word_pt": "ressonância",
+    "sentence": "The singer's voice has a deep resonance in the hall.",
+    "translation": "A voz do cantor tem uma ressonância profunda no salão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hum",
+    "word_pt": "zunido constante",
+    "sentence": "The hum of the engine fills the quiet garage.",
+    "translation": "O zunido do motor preenche a garagem silenciosa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Jingle",
+    "word_pt": "tilintar",
+    "sentence": "The jingle of her keys announces her arrival.",
+    "translation": "O tilintar das chaves dela anuncia a chegada dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Murmur",
+    "word_pt": "murmúrio",
+    "sentence": "A soft murmur spreads through the crowd.",
+    "translation": "Um murmúrio suave se espalha pela multidão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Caress",
+    "word_pt": "acariciar",
+    "sentence": "I gently caress the sleeping baby's cheek.",
+    "translation": "Eu acaricio suavemente a bochecha do bebê que dorme."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lick",
+    "word_pt": "lamber",
+    "sentence": "My dog likes to lick my hand every morning.",
+    "translation": "Meu cachorro gosta de lamber minha mão toda manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Palpate",
+    "word_pt": "apalpar",
+    "sentence": "I palpate the patient's abdomen carefully.",
+    "translation": "Eu apalpo o abdômen do paciente com cuidado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stroke",
+    "word_pt": "afagar",
+    "sentence": "I stroke the cat until it falls asleep.",
+    "translation": "Eu afago o gato até ele dormir."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Nudge",
+    "word_pt": "empurrar de leve",
+    "sentence": "I nudge my friend to point out the mistake.",
+    "translation": "Eu empurro de leve meu amigo para apontar o erro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fumble",
+    "word_pt": "tatear",
+    "sentence": "I fumble for the light switch in the dark.",
+    "translation": "Eu tateio pelo interruptor de luz no escuro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Compress",
+    "word_pt": "comprimir",
+    "sentence": "I compress the wound with a clean cloth.",
+    "translation": "Eu comprimo o ferimento com um pano limpo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Scrape",
+    "word_pt": "raspar",
+    "sentence": "I scrape the old paint off the wall.",
+    "translation": "Eu raspo a tinta velha da parede."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Scratch",
+    "word_pt": "arranhar",
+    "sentence": "My cat likes to scratch the post instead of the sofa.",
+    "translation": "Meu gato gosta de arranhar o arranhador em vez do sofá."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tickle",
+    "word_pt": "fazer cócegas",
+    "sentence": "I tickle the baby until he laughs.",
+    "translation": "Eu faço cócegas no bebê até ele rir."
+  }
+]

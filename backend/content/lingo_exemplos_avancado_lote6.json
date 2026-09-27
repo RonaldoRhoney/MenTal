@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Deposit",
+    "word_pt": "caução",
+    "sentence": "The landlord asks for a deposit before signing the lease.",
+    "translation": "O senhorio pede uma caução antes de assinar o contrato de aluguel."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Foreclosure",
+    "word_pt": "penhora",
+    "sentence": "The bank begins foreclosure proceedings on the property.",
+    "translation": "O banco inicia o processo de penhora sobre o imóvel."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Usury",
+    "word_pt": "usura",
+    "sentence": "The old law strictly forbids usury on personal loans.",
+    "translation": "A lei antiga proíbe rigorosamente a usura em empréstimos pessoais."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Insolvency",
+    "word_pt": "insolvência",
+    "sentence": "The firm files for insolvency after years of losses.",
+    "translation": "A firma declara insolvência depois de anos de prejuízo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Arbitration",
+    "word_pt": "arbitragem",
+    "sentence": "The two companies settle the dispute through arbitration.",
+    "translation": "As duas empresas resolvem a disputa por meio de arbitragem."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Enforcement",
+    "word_pt": "execução forçada",
+    "sentence": "Strict enforcement of the contract prevents future disputes.",
+    "translation": "A execução forçada rigorosa do contrato evita disputas futuras."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Termination",
+    "word_pt": "rescisão de contrato",
+    "sentence": "The contract allows termination with thirty days' notice.",
+    "translation": "O contrato permite rescisão com aviso de trinta dias."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Liquidation",
+    "word_pt": "liquidação de empresa",
+    "sentence": "Shareholders vote in favor of liquidation.",
+    "translation": "Os acionistas votam a favor da liquidação da empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Collateral",
+    "word_pt": "garantia colateral",
+    "sentence": "The bank requires collateral to approve the loan.",
+    "translation": "O banco exige garantia colateral para aprovar o empréstimo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Guarantor",
+    "word_pt": "avalista",
+    "sentence": "Her father agrees to act as guarantor for the loan.",
+    "translation": "O pai dela concorda em atuar como avalista do empréstimo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lethargy",
+    "word_pt": "letargia",
+    "sentence": "A strange lethargy takes over him after lunch.",
+    "translation": "Uma letargia estranha toma conta dele depois do almoço."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Apathy",
+    "word_pt": "apatia",
+    "sentence": "Voter apathy leads to a record low turnout.",
+    "translation": "A apatia dos eleitores leva a um comparecimento recorde baixo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Craving",
+    "word_pt": "ânsia",
+    "sentence": "She feels a sudden craving for something sweet.",
+    "translation": "Ela sente uma ânsia repentina por algo doce."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Jubilation",
+    "word_pt": "regozijo",
+    "sentence": "Jubilation fills the stadium after the final goal.",
+    "translation": "Regozijo toma conta do estádio depois do gol final."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Resignation",
+    "word_pt": "resignação",
+    "sentence": "He accepts the outcome with quiet resignation.",
+    "translation": "Ele aceita o resultado com resignação silenciosa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Distress",
+    "word_pt": "aflição",
+    "sentence": "The captain signals distress after the engine fails.",
+    "translation": "O capitão sinaliza aflição depois que o motor falha."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Remorse",
+    "word_pt": "remorso",
+    "sentence": "She shows genuine remorse for the mistake.",
+    "translation": "Ela demonstra remorso genuíno pelo erro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hubris",
+    "word_pt": "arrogância excessiva",
+    "sentence": "His hubris eventually leads to his downfall.",
+    "translation": "A arrogância excessiva dele acaba levando à queda dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Zeal",
+    "word_pt": "zelo",
+    "sentence": "He pursues the project with remarkable zeal.",
+    "translation": "Ele persegue o projeto com um zelo notável."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Contempt",
+    "word_pt": "desprezo",
+    "sentence": "She looks at the proposal with open contempt.",
+    "translation": "Ela encara a proposta com desprezo aberto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Perennial",
+    "word_pt": "perene",
+    "sentence": "Water shortage remains a perennial issue in this region.",
+    "translation": "A escassez de água continua sendo um problema perene nesta região."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fleeting",
+    "word_pt": "fugaz",
+    "sentence": "Fame in this business can be fleeting.",
+    "translation": "A fama neste ramo pode ser fugaz."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Inexorable",
+    "word_pt": "inexorável",
+    "sentence": "The company faces the inexorable decline of the industry.",
+    "translation": "A empresa enfrenta o declínio inexorável da indústria."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Insidious",
+    "word_pt": "insidioso",
+    "sentence": "The disease spreads in an insidious way.",
+    "translation": "A doença se espalha de forma insidiosa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Laconic",
+    "word_pt": "lacônico",
+    "sentence": "His laconic reply leaves everyone confused.",
+    "translation": "A resposta lacônica dele deixa todo mundo confuso."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Verbose",
+    "word_pt": "prolixo",
+    "sentence": "The report feels too verbose for a short summary.",
+    "translation": "O relatório parece prolixo demais para um resumo curto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Illusory",
+    "word_pt": "ilusório",
+    "sentence": "The sudden growth turns out to be illusory.",
+    "translation": "O crescimento repentino acaba se revelando ilusório."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Impassive",
+    "word_pt": "impassível",
+    "sentence": "The judge remains impassive throughout the trial.",
+    "translation": "O juiz permanece impassível durante todo o julgamento."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Intrepid",
+    "word_pt": "intrépido",
+    "sentence": "The intrepid climbers reach the summit before dawn.",
+    "translation": "Os alpinistas intrépidos alcançam o cume antes do amanhecer."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Nonchalant",
+    "word_pt": "displicente",
+    "sentence": "He stays nonchalant even after the bad news.",
+    "translation": "Ele permanece displicente mesmo depois da má notícia."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cardiology",
+    "word_pt": "cardiologia",
+    "sentence": "She specializes in cardiology after medical school.",
+    "translation": "Ela se especializa em cardiologia depois da faculdade de medicina."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Neurology",
+    "word_pt": "neurologia",
+    "sentence": "He studies neurology to understand memory loss.",
+    "translation": "Ele estuda neurologia para entender a perda de memória."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Oncology",
+    "word_pt": "oncologia",
+    "sentence": "The hospital opens a new oncology wing this year.",
+    "translation": "O hospital abre uma nova ala de oncologia este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pediatrics",
+    "word_pt": "pediatria",
+    "sentence": "She chooses pediatrics because she loves working with children.",
+    "translation": "Ela escolhe pediatria porque adora trabalhar com crianças."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dermatology",
+    "word_pt": "dermatologia",
+    "sentence": "He visits a dermatology clinic for the rash on his arm.",
+    "translation": "Ele visita uma clínica de dermatologia por causa da irritação no braço."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Orthopedics",
+    "word_pt": "ortopedia",
+    "sentence": "The clinic specializes in orthopedics and sports injuries.",
+    "translation": "A clínica se especializa em ortopedia e lesões esportivas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Psychiatry",
+    "word_pt": "psiquiatria",
+    "sentence": "She studies psychiatry to help patients with anxiety.",
+    "translation": "Ela estuda psiquiatria para ajudar pacientes com ansiedade."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Surgeon",
+    "word_pt": "cirurgião",
+    "sentence": "The surgeon operates on the patient for six hours.",
+    "translation": "O cirurgião opera o paciente por seis horas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Radiograph",
+    "word_pt": "radiografia",
+    "sentence": "The radiograph reveals a small fracture in his wrist.",
+    "translation": "A radiografia revela uma fratura pequena no pulso dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Biopsy",
+    "word_pt": "biópsia",
+    "sentence": "The doctor orders a biopsy to confirm the diagnosis.",
+    "translation": "O médico solicita uma biópsia para confirmar o diagnóstico."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Orbit",
+    "word_pt": "órbita",
+    "sentence": "The satellite enters orbit around the planet.",
+    "translation": "O satélite entra em órbita ao redor do planeta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Singularity",
+    "word_pt": "singularidade",
+    "sentence": "Scientists debate the physics of a gravitational singularity.",
+    "translation": "Cientistas debatem a física de uma singularidade gravitacional."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Solstice",
+    "word_pt": "solstício",
+    "sentence": "The village celebrates the summer solstice every year.",
+    "translation": "A vila comemora o solstício de verão todo ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Constellation",
+    "word_pt": "constelação",
+    "sentence": "He points to a bright constellation in the night sky.",
+    "translation": "Ele aponta para uma constelação brilhante no céu noturno."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Nebula",
+    "word_pt": "nebulosa",
+    "sentence": "The telescope captures a stunning image of the nebula.",
+    "translation": "O telescópio captura uma imagem impressionante da nebulosa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Telescope",
+    "word_pt": "telescópio",
+    "sentence": "She looks at the stars through a small telescope.",
+    "translation": "Ela observa as estrelas através de um telescópio pequeno."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Liftoff",
+    "word_pt": "lançamento de foguete",
+    "sentence": "The crowd cheers moments before liftoff.",
+    "translation": "A multidão comemora instantes antes do lançamento do foguete."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rocket",
+    "word_pt": "foguete",
+    "sentence": "The rocket reaches orbit within minutes.",
+    "translation": "O foguete alcança a órbita em poucos minutos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Satellite",
+    "word_pt": "satélite",
+    "sentence": "The company launches a new communications satellite.",
+    "translation": "A empresa lança um novo satélite de comunicações."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Atmosphere",
+    "word_pt": "atmosfera",
+    "sentence": "The spacecraft burns up entering the atmosphere.",
+    "translation": "A nave espacial se incendeia ao entrar na atmosfera."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Eruption",
+    "word_pt": "erupção",
+    "sentence": "The volcanic eruption forces thousands to evacuate.",
+    "translation": "A erupção vulcânica obriga milhares a evacuar."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Silt",
+    "word_pt": "depósito de rio",
+    "sentence": "Silt builds up along the riverbank every spring.",
+    "translation": "Sedimento se acumula ao longo da margem do rio toda primavera."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Grotto",
+    "word_pt": "gruta calcária",
+    "sentence": "Tourists explore the limestone grotto by candlelight.",
+    "translation": "Turistas exploram a gruta calcária à luz de velas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Erosion",
+    "word_pt": "erosão",
+    "sentence": "Coastal erosion threatens several homes this year.",
+    "translation": "A erosão costeira ameaça várias casas este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Vent",
+    "word_pt": "boca de vulcão",
+    "sentence": "Smoke rises steadily from the volcano's vent.",
+    "translation": "Fumaça sobe constantemente da boca do vulcão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stratum",
+    "word_pt": "camada rochosa",
+    "sentence": "Geologists study each stratum of rock closely.",
+    "translation": "Geólogos estudam cada camada rochosa de perto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Limestone",
+    "word_pt": "calcário",
+    "sentence": "The cathedral is built entirely from limestone.",
+    "translation": "A catedral é construída inteiramente de calcário."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Granite",
+    "word_pt": "granito",
+    "sentence": "The kitchen counter is made of polished granite.",
+    "translation": "A bancada da cozinha é feita de granito polido."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Quake",
+    "word_pt": "abalo sísmico",
+    "sentence": "A sudden quake shakes the entire building.",
+    "translation": "Um abalo sísmico repentino sacode o prédio inteiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fault",
+    "word_pt": "falha geológica",
+    "sentence": "Scientists monitor the fault for signs of activity.",
+    "translation": "Cientistas monitoram a falha geológica em busca de sinais de atividade."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Velvet",
+    "word_pt": "veludo",
+    "sentence": "She wears a dress made of deep red velvet.",
+    "translation": "Ela usa um vestido feito de veludo vermelho escuro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Linen",
+    "word_pt": "linho",
+    "sentence": "He prefers linen shirts during the summer.",
+    "translation": "Ele prefere camisas de linho durante o verão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Satin",
+    "word_pt": "cetim",
+    "sentence": "The pillow is covered with smooth satin.",
+    "translation": "O travesseiro é coberto com cetim macio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Ribbon",
+    "word_pt": "fita decorativa",
+    "sentence": "She ties the gift with a bright red ribbon.",
+    "translation": "Ela amarra o presente com uma fita vermelha vistosa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Embroidery",
+    "word_pt": "bordado",
+    "sentence": "The dress features delicate floral embroidery.",
+    "translation": "O vestido apresenta um bordado floral delicado."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cloak",
+    "word_pt": "manto",
+    "sentence": "The traveler wears a heavy cloak against the cold.",
+    "translation": "O viajante usa um manto pesado contra o frio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tunic",
+    "word_pt": "túnica",
+    "sentence": "The actor wears a simple tunic in the historical play.",
+    "translation": "O ator usa uma túnica simples na peça histórica."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Corset",
+    "word_pt": "espartilho",
+    "sentence": "The museum displays a Victorian corset from 1890.",
+    "translation": "O museu exibe um espartilho vitoriano de 1890."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Headband",
+    "word_pt": "faixa de cabeça",
+    "sentence": "She wears a headband to keep her hair back.",
+    "translation": "Ela usa uma faixa de cabeça para prender o cabelo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Shawl",
+    "word_pt": "xale",
+    "sentence": "Her grandmother knits her a warm shawl.",
+    "translation": "A avó dela tricota um xale quente para ela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Blacksmith",
+    "word_pt": "ferreiro",
+    "sentence": "The blacksmith hammers the metal into shape.",
+    "translation": "O ferreiro martela o metal até dar forma."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Weaver",
+    "word_pt": "tecelão",
+    "sentence": "The weaver spends weeks finishing the rug.",
+    "translation": "O tecelão passa semanas terminando o tapete."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Potter",
+    "word_pt": "oleiro",
+    "sentence": "The potter shapes the clay on the wheel.",
+    "translation": "O oleiro molda o barro na roda."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tailor",
+    "word_pt": "alfaiate",
+    "sentence": "The tailor adjusts the suit before the wedding.",
+    "translation": "O alfaiate ajusta o terno antes do casamento."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cobbler",
+    "word_pt": "sapateiro",
+    "sentence": "The cobbler repairs old shoes in his small shop.",
+    "translation": "O sapateiro conserta sapatos velhos na loja pequena dele."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Goldsmith",
+    "word_pt": "ourives",
+    "sentence": "The goldsmith crafts a delicate ring for the couple.",
+    "translation": "O ourives fabrica um anel delicado para o casal."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Miller",
+    "word_pt": "moleiro",
+    "sentence": "The miller grinds the wheat into fine flour.",
+    "translation": "O moleiro mói o trigo até virar farinha fina."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Brewer",
+    "word_pt": "cervejeiro",
+    "sentence": "The local brewer launches a new craft beer.",
+    "translation": "O cervejeiro local lança uma cerveja artesanal nova."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Archer",
+    "word_pt": "arqueiro",
+    "sentence": "The archer hits the target three times in a row.",
+    "translation": "O arqueiro acerta o alvo três vezes seguidas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mason",
+    "word_pt": "pedreiro de alvenaria",
+    "sentence": "The mason builds a solid wall in two days.",
+    "translation": "O pedreiro constrói uma parede sólida em dois dias."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Freight",
+    "word_pt": "frete",
+    "sentence": "The company ships the freight by train.",
+    "translation": "A empresa transporta o frete de trem."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cargo",
+    "word_pt": "carga de navio",
+    "sentence": "The ship carries a full load of cargo.",
+    "translation": "O navio carrega uma carga completa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Warehouse",
+    "word_pt": "armazém",
+    "sentence": "Workers store the boxes in a large warehouse.",
+    "translation": "Trabalhadores guardam as caixas num armazém grande."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Quay",
+    "word_pt": "cais",
+    "sentence": "The boat docks at the quay before sunset.",
+    "translation": "O barco atraca no cais antes do pôr do sol."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Depot",
+    "word_pt": "entreposto",
+    "sentence": "Trucks load supplies at the central depot.",
+    "translation": "Caminhões carregam suprimentos no entreposto central."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Route",
+    "word_pt": "rota",
+    "sentence": "The driver takes a shorter route to avoid traffic.",
+    "translation": "O motorista pega uma rota mais curta para evitar trânsito."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dispatch",
+    "word_pt": "despacho",
+    "sentence": "The company sends the dispatch early this morning.",
+    "translation": "A empresa envia o despacho logo pela manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Convoy",
+    "word_pt": "comboio",
+    "sentence": "A military convoy passes through the small town.",
+    "translation": "Um comboio militar passa pela cidade pequena."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rail",
+    "word_pt": "trilho",
+    "sentence": "The train stays firmly on the rail during the turn.",
+    "translation": "O trem permanece firme no trilho durante a curva."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Locomotive",
+    "word_pt": "locomotiva",
+    "sentence": "The old locomotive pulls twenty cars behind it.",
+    "translation": "A locomotiva antiga puxa vinte vagões atrás dela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "List",
+    "word_pt": "listar",
+    "sentence": "I meticulously list every task before the project begins.",
+    "translation": "Eu listo meticulosamente cada tarefa antes do projeto começar."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Classify",
+    "word_pt": "classificar",
+    "sentence": "I classify the documents according to their level of confidentiality.",
+    "translation": "Eu classifico os documentos de acordo com o nível de confidencialidade deles."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Compile",
+    "word_pt": "compilar",
+    "sentence": "I compile the scattered findings into a coherent report.",
+    "translation": "Eu compilo os achados dispersos num relatório coerente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Archive",
+    "word_pt": "arquivar",
+    "sentence": "I archive the outdated records to comply with company policy.",
+    "translation": "Eu arquivo os registros desatualizados para cumprir a política da empresa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sort",
+    "word_pt": "ordenar",
+    "sentence": "I sort the applicants by qualification before the interview.",
+    "translation": "Eu ordeno os candidatos por qualificação antes da entrevista."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Categorize",
+    "word_pt": "categorizar",
+    "sentence": "I categorize the complaints by urgency and department.",
+    "translation": "Eu categorizo as reclamações por urgência e departamento."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cluster",
+    "word_pt": "agrupar",
+    "sentence": "I cluster the data points to reveal a hidden pattern.",
+    "translation": "Eu agrupo os pontos de dados para revelar um padrão oculto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Filter",
+    "word_pt": "filtrar",
+    "sentence": "I filter out the irrelevant data before the analysis.",
+    "translation": "Eu filtro os dados irrelevantes antes da análise."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Number",
+    "word_pt": "numerar",
+    "sentence": "I number each clause in the contract for easy reference.",
+    "translation": "Eu numero cada cláusula do contrato para facilitar a referência."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tabulate",
+    "word_pt": "tabular",
+    "sentence": "I tabulate the survey responses to identify emerging trends.",
+    "translation": "Eu tabulo as respostas da pesquisa para identificar tendências emergentes."
+  }
+]

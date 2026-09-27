@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Chameleon",
+    "word_pt": "camaleão",
+    "sentence": "The chameleon changes color to match the leaves.",
+    "translation": "O camaleão muda de cor para combinar com as folhas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Hyena",
+    "word_pt": "hiena",
+    "sentence": "A hyena scavenges near the edge of the savanna.",
+    "translation": "Uma hiena vasculha perto da borda da savana."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Chimpanzee",
+    "word_pt": "chimpanzé",
+    "sentence": "A chimpanzee uses a stick to reach the fruit.",
+    "translation": "Um chimpanzé usa um graveto para alcançar a fruta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rhinoceros",
+    "word_pt": "rinoceronte",
+    "sentence": "A rhinoceros grazes quietly near the waterhole.",
+    "translation": "Um rinoceronte pasta tranquilamente perto do poço d'água."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Kangaroo",
+    "word_pt": "canguru",
+    "sentence": "A kangaroo hops across the open field.",
+    "translation": "Um canguru pula pelo campo aberto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lynx",
+    "word_pt": "lince",
+    "sentence": "A lynx moves silently through the snow.",
+    "translation": "Um lince se move silenciosamente pela neve."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Otter",
+    "word_pt": "lontra",
+    "sentence": "An otter plays in the cold mountain stream.",
+    "translation": "Uma lontra brinca no riacho frio da montanha."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Badger",
+    "word_pt": "texugo",
+    "sentence": "A badger digs a burrow under the old oak.",
+    "translation": "Um texugo cava uma toca embaixo do carvalho antigo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Beaver",
+    "word_pt": "castor",
+    "sentence": "A beaver builds a dam across the stream.",
+    "translation": "Um castor constrói uma barragem no riacho."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Armadillo",
+    "word_pt": "tatu",
+    "sentence": "An armadillo curls into a ball for protection.",
+    "translation": "Um tatu se enrola numa bola para se proteger."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Toucan",
+    "word_pt": "tucano",
+    "sentence": "A toucan perches on a branch near the river.",
+    "translation": "Um tucano pousa num galho perto do rio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Albatross",
+    "word_pt": "albatroz",
+    "sentence": "An albatross glides over the ocean for hours.",
+    "translation": "Um albatroz plana sobre o oceano por horas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Viper",
+    "word_pt": "víbora",
+    "sentence": "A viper hides beneath the fallen leaves.",
+    "translation": "Uma víbora se esconde sob as folhas caídas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Crocodile",
+    "word_pt": "crocodilo",
+    "sentence": "A crocodile waits silently near the riverbank.",
+    "translation": "Um crocodilo espera silenciosamente perto da margem do rio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Salamander",
+    "word_pt": "salamandra",
+    "sentence": "A salamander hides under the wet rock.",
+    "translation": "Uma salamandra se esconde debaixo da pedra molhada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Heron",
+    "word_pt": "garça",
+    "sentence": "A heron stands still in the shallow water.",
+    "translation": "Uma garça fica parada na água rasa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stork",
+    "word_pt": "cegonha",
+    "sentence": "A stork builds its nest on the chimney.",
+    "translation": "Uma cegonha constrói o ninho dela na chaminé."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Partridge",
+    "word_pt": "perdiz",
+    "sentence": "A partridge runs through the tall grass.",
+    "translation": "Uma perdiz corre pela grama alta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pheasant",
+    "word_pt": "faisão",
+    "sentence": "A pheasant flies up suddenly from the bushes.",
+    "translation": "Um faisão voa repentinamente para cima dos arbustos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Quail",
+    "word_pt": "codorna",
+    "sentence": "A quail nests quietly near the hedge.",
+    "translation": "Uma codorna faz ninho tranquilamente perto da cerca viva."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Tuna",
+    "word_pt": "atum",
+    "sentence": "The boat returns with a large catch of tuna.",
+    "translation": "O barco retorna com uma grande pesca de atum."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cod",
+    "word_pt": "bacalhau",
+    "sentence": "The restaurant serves fresh cod with lemon.",
+    "translation": "O restaurante serve bacalhau fresco com limão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Stingray",
+    "word_pt": "arraia",
+    "sentence": "A stingray glides silently along the sea floor.",
+    "translation": "Uma arraia desliza silenciosamente pelo fundo do mar."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Eel",
+    "word_pt": "enguia",
+    "sentence": "An eel slips between the rocks in the reef.",
+    "translation": "Uma enguia desliza entre as pedras no recife."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Squid",
+    "word_pt": "lula",
+    "sentence": "A squid releases ink to escape the predator.",
+    "translation": "Uma lula solta tinta para escapar do predador."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Seahorse",
+    "word_pt": "cavalo-marinho",
+    "sentence": "A tiny seahorse clings to the coral.",
+    "translation": "Um cavalo-marinho pequeno se agarra ao coral."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Lobster",
+    "word_pt": "lagosta",
+    "sentence": "The chef prepares a whole lobster for the table.",
+    "translation": "O chef prepara uma lagosta inteira para a mesa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Oyster",
+    "word_pt": "ostra",
+    "sentence": "She opens the oyster carefully with a small knife.",
+    "translation": "Ela abre a ostra com cuidado com uma faca pequena."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Mussel",
+    "word_pt": "mexilhão",
+    "sentence": "The soup includes fresh mussel from the coast.",
+    "translation": "A sopa inclui mexilhão fresco da costa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Anchovy",
+    "word_pt": "anchova",
+    "sentence": "A single anchovy adds a salty flavor to the sauce.",
+    "translation": "Uma única anchova acrescenta um sabor salgado ao molho."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fern",
+    "word_pt": "samambaia",
+    "sentence": "A fern grows in the shaded corner of the garden.",
+    "translation": "Uma samambaia cresce no canto sombreado do jardim."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Orchid",
+    "word_pt": "orquídea",
+    "sentence": "The orchid blooms only once a year.",
+    "translation": "A orquídea floresce só uma vez por ano."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sunflower",
+    "word_pt": "girassol",
+    "sentence": "A tall sunflower turns toward the sun all day.",
+    "translation": "Um girassol alto se vira para o sol o dia todo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Willow",
+    "word_pt": "salgueiro",
+    "sentence": "A willow bends gracefully over the pond.",
+    "translation": "Um salgueiro se curva graciosamente sobre a lagoa."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Oak",
+    "word_pt": "carvalho",
+    "sentence": "A giant oak shades the entire backyard.",
+    "translation": "Um carvalho gigante dá sombra ao quintal inteiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pine",
+    "word_pt": "pinheiro",
+    "sentence": "The smell of pine fills the forest in winter.",
+    "translation": "O cheiro de pinheiro preenche a floresta no inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Thorn",
+    "word_pt": "espinho de planta",
+    "sentence": "A thorn scratches her hand while picking roses.",
+    "translation": "Um espinho arranha a mão dela enquanto colhe rosas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sprout",
+    "word_pt": "broto novo",
+    "sentence": "A tiny sprout breaks through the soil.",
+    "translation": "Um broto pequeno rompe a terra."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Wheat",
+    "word_pt": "trigo",
+    "sentence": "Farmers harvest wheat before the first frost.",
+    "translation": "Agricultores colhem trigo antes da primeira geada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Barley",
+    "word_pt": "cevada",
+    "sentence": "The field of barley stretches beyond the hill.",
+    "translation": "O campo de cevada se estende além da colina."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Accountant",
+    "word_pt": "contador",
+    "sentence": "The accountant reviews the company's records every month.",
+    "translation": "O contador revisa os registros da empresa todo mês."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Banker",
+    "word_pt": "banqueiro",
+    "sentence": "The banker approves the loan after checking the documents.",
+    "translation": "O banqueiro aprova o empréstimo depois de conferir os documentos."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Psychologist",
+    "word_pt": "psicólogo",
+    "sentence": "She sees a psychologist once a week.",
+    "translation": "Ela consulta um psicólogo uma vez por semana."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pharmacist",
+    "word_pt": "farmacêutico",
+    "sentence": "The pharmacist explains how to take the medicine.",
+    "translation": "O farmacêutico explica como tomar o remédio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Translator",
+    "word_pt": "tradutor",
+    "sentence": "The translator works on a novel from French to English.",
+    "translation": "O tradutor trabalha num romance do francês para o inglês."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Interpreter",
+    "word_pt": "intérprete",
+    "sentence": "An interpreter helps the two leaders communicate.",
+    "translation": "Um intérprete ajuda os dois líderes a se comunicarem."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Gardener",
+    "word_pt": "jardineiro",
+    "sentence": "The gardener trims the hedges every spring.",
+    "translation": "O jardineiro apara as cercas vivas toda primavera."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Janitor",
+    "word_pt": "zelador",
+    "sentence": "The janitor locks the building every night.",
+    "translation": "O zelador tranca o prédio toda noite."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cashier",
+    "word_pt": "caixa de loja",
+    "sentence": "The cashier counts the money at the end of the shift.",
+    "translation": "O caixa conta o dinheiro no fim do turno."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Chef",
+    "word_pt": "chef de cozinha",
+    "sentence": "The chef designs a new menu for the summer.",
+    "translation": "O chef de cozinha cria um cardápio novo para o verão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Welder",
+    "word_pt": "soldador",
+    "sentence": "The welder joins the two steel beams together.",
+    "translation": "O soldador une as duas vigas de aço."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Miner",
+    "word_pt": "mineiro",
+    "sentence": "The miner descends deep into the tunnel.",
+    "translation": "O mineiro desce fundo no túnel."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Laborer",
+    "word_pt": "operário braçal",
+    "sentence": "The laborer carries heavy bags all morning.",
+    "translation": "O operário braçal carrega sacos pesados a manhã toda."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Trucker",
+    "word_pt": "caminhoneiro",
+    "sentence": "The trucker drives across the country every week.",
+    "translation": "O caminhoneiro dirige pelo país toda semana."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Technician",
+    "word_pt": "técnico",
+    "sentence": "A technician repairs the printer in the office.",
+    "translation": "Um técnico conserta a impressora no escritório."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Appraiser",
+    "word_pt": "avaliador de bens",
+    "sentence": "The appraiser values the house before the sale.",
+    "translation": "O avaliador de bens avalia a casa antes da venda."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Joiner",
+    "word_pt": "marceneiro",
+    "sentence": "The joiner builds a custom table for the client.",
+    "translation": "O marceneiro constrói uma mesa sob medida para o cliente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Painter",
+    "word_pt": "pintor de paredes",
+    "sentence": "The painter finishes the living room in two days.",
+    "translation": "O pintor termina a sala em dois dias."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Glazier",
+    "word_pt": "vidraceiro",
+    "sentence": "The glazier replaces the broken window pane.",
+    "translation": "O vidraceiro substitui o vidro quebrado da janela."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Locksmith",
+    "word_pt": "chaveiro",
+    "sentence": "The locksmith opens the door without a key.",
+    "translation": "O chaveiro abre a porta sem chave."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Marathon",
+    "word_pt": "maratona",
+    "sentence": "She trains for months before running the marathon.",
+    "translation": "Ela treina por meses antes de correr a maratona."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Fencing",
+    "word_pt": "esgrima",
+    "sentence": "He takes up fencing as a new hobby.",
+    "translation": "Ele começa a praticar esgrima como um novo hobby."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rowing",
+    "word_pt": "remo esportivo",
+    "sentence": "The team practices rowing early every morning.",
+    "translation": "O time pratica remo esportivo cedo toda manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Weightlifting",
+    "word_pt": "levantamento de peso",
+    "sentence": "He focuses on weightlifting to build strength.",
+    "translation": "Ele foca em levantamento de peso para ganhar força."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Archery",
+    "word_pt": "tiro com arco",
+    "sentence": "She takes archery lessons on Saturdays.",
+    "translation": "Ela faz aulas de tiro com arco aos sábados."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Skating",
+    "word_pt": "patinação",
+    "sentence": "The kids go skating at the new rink.",
+    "translation": "As crianças vão patinar na pista nova."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Surfing",
+    "word_pt": "surfe",
+    "sentence": "They spend the whole vacation surfing.",
+    "translation": "Eles passam as férias inteiras surfando."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Gymnastics",
+    "word_pt": "ginástica",
+    "sentence": "She competes in gymnastics at the national level.",
+    "translation": "Ela compete em ginástica em nível nacional."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Dumbbell",
+    "word_pt": "halteres",
+    "sentence": "He lifts a dumbbell in each hand.",
+    "translation": "Ele levanta um halter em cada mão."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Sprinter",
+    "word_pt": "corredor de velocidade",
+    "sentence": "The sprinter breaks the record by a full second.",
+    "translation": "O corredor de velocidade quebra o recorde por um segundo inteiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Nibble",
+    "word_pt": "mordiscar",
+    "sentence": "I nibble on some crackers before dinner.",
+    "translation": "Eu mordisco alguns biscoitos antes do jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Slurp",
+    "word_pt": "sorver ruidosamente",
+    "sentence": "I slurp my noodles a little too loudly.",
+    "translation": "Eu sorvo meu macarrão um pouco alto demais."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Gulp",
+    "word_pt": "engolir de uma vez",
+    "sentence": "I gulp down my coffee before running out the door.",
+    "translation": "Eu engulo o café de uma vez antes de sair correndo pela porta."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Munch",
+    "word_pt": "mastigar ruidosamente",
+    "sentence": "I munch on popcorn during the movie.",
+    "translation": "Eu mastigo pipoca ruidosamente durante o filme."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Savor",
+    "word_pt": "degustar",
+    "sentence": "I savor every bite of the homemade cake.",
+    "translation": "Eu degusto cada mordida do bolo caseiro."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Quench",
+    "word_pt": "matar a sede",
+    "sentence": "I drink cold water to quench my thirst.",
+    "translation": "Eu bebo água gelada para matar a sede."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Drain",
+    "word_pt": "escorrer líquido",
+    "sentence": "I drain the pasta before adding the sauce.",
+    "translation": "Eu escorro a massa antes de adicionar o molho."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Chill",
+    "word_pt": "esfriar",
+    "sentence": "I chill the wine before the guests arrive.",
+    "translation": "Eu esfrio o vinho antes dos convidados chegarem."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Thaw",
+    "word_pt": "descongelar",
+    "sentence": "I thaw the chicken overnight in the fridge.",
+    "translation": "Eu descongelo o frango durante a noite na geladeira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Whip",
+    "word_pt": "bater claras",
+    "sentence": "I whip the cream until it forms soft peaks.",
+    "translation": "Eu bato o creme de leite até formar picos macios."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Shrill",
+    "word_pt": "estridente",
+    "sentence": "Her shrill voice carries across the entire room.",
+    "translation": "A voz estridente dela ecoa pela sala inteira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Deafening",
+    "word_pt": "ensurdecedor",
+    "sentence": "The concert music is absolutely deafening.",
+    "translation": "A música do show é absolutamente ensurdecedora."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Velvety",
+    "word_pt": "aveludado",
+    "sentence": "The wine has a smooth, velvety texture.",
+    "translation": "O vinho tem uma textura suave e aveludada."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Acrid",
+    "word_pt": "acre",
+    "sentence": "An acrid smell fills the air after the fire.",
+    "translation": "Um cheiro acre preenche o ar depois do incêndio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Rancid",
+    "word_pt": "rançoso",
+    "sentence": "The butter smells rancid after being left out.",
+    "translation": "A manteiga cheira rançosa depois de ficar fora da geladeira."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Moldy",
+    "word_pt": "mofado",
+    "sentence": "I throw away the moldy bread immediately.",
+    "translation": "Eu jogo fora o pão mofado imediatamente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Foul",
+    "word_pt": "fétido",
+    "sentence": "A foul odor comes from the old fridge.",
+    "translation": "Um odor fétido vem da geladeira velha."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Aromatic",
+    "word_pt": "aromático",
+    "sentence": "The bakery fills the street with an aromatic smell.",
+    "translation": "A padaria enche a rua com um cheiro aromático."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Insipid",
+    "word_pt": "insípido",
+    "sentence": "The soup tastes bland and insipid without salt.",
+    "translation": "A sopa fica sem graça e insípida sem sal."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Pungent",
+    "word_pt": "de cheiro forte",
+    "sentence": "The cheese has a very pungent smell.",
+    "translation": "O queijo tem um cheiro muito forte."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Summon",
+    "word_pt": "intimar a comparecer",
+    "sentence": "I summon the witness to testify in court.",
+    "translation": "Eu intimo a testemunha a depor no tribunal."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Notify",
+    "word_pt": "notificar",
+    "sentence": "I notify parents about the schedule change.",
+    "translation": "Eu notifico os pais sobre a mudança de horário."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Convene",
+    "word_pt": "convocar reunião",
+    "sentence": "I convene the committee to discuss the new policy.",
+    "translation": "Eu convoco o comitê para discutir a nova política."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Issue",
+    "word_pt": "emitir documento",
+    "sentence": "I issue a new passport within two weeks.",
+    "translation": "Eu emito um novo passaporte em duas semanas."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Certify",
+    "word_pt": "autenticar",
+    "sentence": "I certify the financial report before submitting it.",
+    "translation": "Eu autentico o relatório financeiro antes de enviá-lo."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Cite",
+    "word_pt": "citar como referência",
+    "sentence": "I cite an old case as precedent.",
+    "translation": "Eu cito um caso antigo como precedente."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Authorize",
+    "word_pt": "autorizar",
+    "sentence": "I authorize the extra spending for this project.",
+    "translation": "Eu autorizo o gasto extra para este projeto."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Forbid",
+    "word_pt": "proibir",
+    "sentence": "The rules forbid pets inside the building.",
+    "translation": "As regras proíbem animais de estimação dentro do prédio."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Decree",
+    "word_pt": "determinar por decreto",
+    "sentence": "The king moves to decree a national holiday to celebrate the victory.",
+    "translation": "O rei decide determinar por decreto um feriado nacional para celebrar a vitória."
+  },
+  {
+    "language": "ingles",
+    "level": "avancado",
+    "word": "Designate",
+    "word_pt": "designar",
+    "sentence": "I designate a new leader for the project.",
+    "translation": "Eu designo um novo líder para o projeto."
+  }
+]
