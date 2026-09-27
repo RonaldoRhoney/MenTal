@@ -268,3 +268,53 @@ def test_frase_exemplo_so_aprovada_e_sem_cadastro_diz_que_nao_tem(client):
     for question in ("use lantern em uma frase", "use xilofone em uma frase"):
         data = _ask(client, question).json()
         assert data["found"] is False and "Ainda não tenho uma frase de exemplo" in data["answer_text"]
+
+
+def test_frase_exemplo_aceita_varias_formas_de_pedir_incluindo_a_palavra_e_o_idioma(client):
+    _seed_example("Milk", "I drink milk every morning.", "Eu bebo leite toda manhã.", word_pt="leite")
+    for question in (
+        "me dê uma frase com a palavra leite em inglês",
+        "dê um exemplo com a palavra milk",
+        "quero uma frase com leite",
+        "faça uma frase com leite em inglês",
+        "preciso de um exemplo de milk",
+        "use a palavra leite em uma frase",
+        "como usar a palavra milk",
+        "frase com milk",
+    ):
+        data = _ask(client, question).json()
+        assert data["found"] is True, question
+        assert "I drink milk every morning." in data["answer_text"], question
+
+
+def test_entende_a_pergunta_com_ponto_interrogacao_sem_pontuacao_e_com_preambulos(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    _seed("Como se escreve 'queijo' em inglês?", "Cheese", "'queijo' se traduz como 'Cheese' em inglês.")
+    perguntas = [
+        "como se diz queijo em inglês?",
+        "como se diz queijo em inglês.",
+        "como se diz queijo em inglês",
+        "Como se diz queijo em inglês!",
+        "Oi, então você pode me dizer como se escreve queijo em inglês, por favor?",
+        "Mental Lingo, como se fala queijo em inglês?",
+        "eu gostaria de saber como se diz queijo em inglês.",
+        "qual é a palavra para queijo em inglês?",
+        "o que é queijo em inglês?",
+        "queijo em inglês",
+        "traduza queijo para inglês.",
+        "o que significa Cheese em inglês?",
+        "me diga o que significa cheese",
+        "como se diz queijo",
+    ]
+    for q in perguntas:
+        data = _ask(client, q).json()
+        assert data["found"] is True, q
+        assert "Cheese" in data["answer_text"] or "queijo" in data["answer_text"], q
+
+
+def test_frase_exemplo_com_preambulo_e_pontuacao(client):
+    _seed_example("Milk", "I drink milk every morning.", "Eu bebo leite toda manhã.", word_pt="leite")
+    for q in ("Então, me dê uma frase com a palavra leite em inglês, por favor.", "oi lingo você pode usar leite em uma frase?", "Quero um exemplo com milk."):
+        data = _ask(client, q).json()
+        assert data["found"] is True, q
+        assert "I drink milk every morning." in data["answer_text"], q

@@ -58,11 +58,40 @@ _ASK_PATTERNS = [
     re.compile(r"^tradu(?:z|za|zo|zir)\s+(?:a palavra\s+|a frase\s+)?(.+?)\s+(?:para|em)\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)\s+(?:para|em)\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^o que\s+(?:significa|quer dizer)\s+(.+?)\??$", re.IGNORECASE),
+    # Novas formas (sem "?" obrigatório, com ou sem idioma citado).
+    re.compile(r"^qual\s+(?:é\s+)?a\s+palavra\s+(?:para|de)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
+    re.compile(r"^o que\s+(?:é|seria)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
+    re.compile(r"^como\s+(?:se\s+)?(?:diz|fala|escreve)\s+(.+?)\??$", re.IGNORECASE),
+    re.compile(r"^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)\??$", re.IGNORECASE),
+    re.compile(r"^(.+?)\s+em\s+(ingl[êe]s|english|espanhol|español|franc[êe]s|français)\??$", re.IGNORECASE),
 ]
 
 
+# Preâmbulos e fechos que a fala transcrita traz e que não mudam o sentido ("então, você pode me
+# dizer...", "... por favor?"). Pedido de Rhoney (26/09/2026): entender a pergunta com "?" no final,
+# com "." ou sem pontuação nenhuma.
+_LEADING_FILLERS = re.compile(
+    r"^(?:ol[áa]|oi|ei|ok|okay|então|entao|agora|bom|bem|e|mas|hey|mental lingo|lingo|por favor|"
+    r"(?:você|voce)\s+(?:pode|poderia|consegue)|pode|poderia|"
+    r"(?:me\s+)?(?:diga|dizer|fale|falar|explique|explica|responda|ajude|ajuda)(?:-me)?|"
+    r"(?:eu\s+)?(?:gostaria de|queria|quero|preciso)\s+saber|tem como|(?:será|sera)\s+que|"
+    r"(?:eu\s+)?(?:gostaria de|queria|quero)\s+(?:perguntar|entender))"
+    r"(?:\s*[,:;-]\s*|\s+)",
+    re.IGNORECASE,
+)
+_TRAILING_FILLERS = re.compile(r"(?:\s*[,;:-]?\s*(?:por favor|pf|obrigad[oa]|valeu|brigad[oa]))$", re.IGNORECASE)
+
+
 def _normalize(text: str) -> str:
-    return text.strip().strip("?!.").strip()
+    q = re.sub(r"\s+", " ", text.strip())
+    for _ in range(5):  # remove preâmbulos empilhados ("oi, então você pode me dizer ...")
+        stripped = _LEADING_FILLERS.sub("", q, count=1)
+        if stripped == q:
+            break
+        q = stripped.strip()
+    q = re.sub(r"[\s\.\?\!…,;:\"'“”]+$", "", q)
+    q = _TRAILING_FILLERS.sub("", q)
+    return re.sub(r"[\s\.\?\!…,;:\"'“”]+$", "", q).strip()
 
 
 def _detect_language(text: str) -> str | None:
@@ -84,6 +113,11 @@ def _extract_word(question: str) -> tuple[str | None, str | None]:
             groups = m.groups()
             word = groups[0].strip(" '\"")
             lang_word = groups[1] if len(groups) > 1 else None
+            if lang_word is None:
+                # "o que significa casa em inglês": o idioma veio dentro do termo capturado.
+                tail = re.match(r"^(.+?)\s+(?:em|no idioma|na língua)\s+(ingl[êe]s|english|espanhol|español|franc[êe]s|français)$", word, re.IGNORECASE)
+                if tail:
+                    word, lang_word = tail.group(1).strip(" '\""), tail.group(2)
             return word or None, lang_word
     return None, None
 
@@ -98,7 +132,7 @@ def _language_of_territory(territory_id: str) -> str:
 def _not_understood() -> dict:
     return {
         "found": False,
-        "answer_text": "Não entendi a pergunta. Tente algo como \"como se escreve casa em inglês?\" ou \"o que significa house?\".",
+        "answer_text": "Não entendi a pergunta. Tente algo como \"como se escreve casa em inglês?\", \"o que significa house?\" ou \"use casa em uma frase\".",
         "matched_word": None,
         "target_language": None,
     }
@@ -342,11 +376,19 @@ def _found_from_foreign(matches: list[_VocabEntry], word: str) -> dict:
 
 # Pedidos de FRASE-EXEMPLO ("use queijo em uma frase", "dê um exemplo com Cheese", "como uso hot").
 _EXAMPLE_PATTERNS = [
-    re.compile(r"^(?:use|usa|usar|utilize)\s+(.+?)\s+(?:em|numa)\s+(?:uma\s+)?frase\??$", re.IGNORECASE),
-    re.compile(r"^(?:me\s+)?(?:d[êe]|dá|dar|mostre|mostra)\s+(?:um\s+)?exemplos?\s+(?:com|de|usando)\s+(.+?)\??$", re.IGNORECASE),
-    re.compile(r"^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar)\s+(.+?)\??$", re.IGNORECASE),
-    re.compile(r"^(?:uma\s+)?(?:frase|exemplo)\s+(?:com|de|usando)\s+(.+?)\??$", re.IGNORECASE),
+    # "use queijo em uma frase", "use a palavra house em uma frase"
+    re.compile(r"^(?:use|usa|usar|utilize|utiliza)\s+(?:a\s+)?(?:palavra\s+)?(.+?)\s+(?:em|numa|dentro de)\s+(?:uma\s+)?frase$", re.IGNORECASE),
+    # "me dê uma frase com a palavra queijo (em inglês)", "dê um exemplo com cheese", "quero uma frase com X",
+    # "faça uma frase com X", "preciso de um exemplo de X", "uma frase com X", "exemplo com X"
+    re.compile(
+        r"^(?:(?:me\s+)?(?:d[êe]|dá|dar|mostre|mostra|fale|diga|crie|cria|fa[çc]a|faz|monte|escreva|quero|queria|preciso de|gostaria de|pode me dar)\s+)?"
+        r"(?:uma?\s+)?(?:frases?|exemplos?)\s+(?:com|de|do|da|usando|para|pra)\s+(?:a\s+)?(?:palavra\s+)?(.+?)$",
+        re.IGNORECASE,
+    ),
+    # "como uso hot", "como usar a palavra house"
+    re.compile(r"^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar)\s+(?:a\s+)?(?:palavra\s+)?(.+?)$", re.IGNORECASE),
 ]
+_TRAILING_LANG = re.compile(r"\s+(?:em|no idioma|na língua)\s+(?:ingl[êe]s|english)$", re.IGNORECASE)
 
 
 def _example_term(question: str) -> str | None:
@@ -354,7 +396,7 @@ def _example_term(question: str) -> str | None:
     for pattern in _EXAMPLE_PATTERNS:
         m = pattern.match(q)
         if m:
-            term = m.group(1).strip(" '\"")
+            term = _TRAILING_LANG.sub("", m.group(1)).strip(" '\"")
             return term or None
     return None
 

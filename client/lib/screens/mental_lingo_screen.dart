@@ -1038,22 +1038,43 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 /// próprio app com os mesmos padrões do servidor — assim o destaque aparece já ao enviar a
 /// pergunta, sem depender da resposta. Devolve null se não reconhecer o padrão.
 String? extractLingoKeyTerm(String question) {
-  final q = question.trim().replaceAll(RegExp(r'[?!.]+$'), '').trim();
+  // Mesma limpeza do servidor: pontuação final ("?", ".", "!"), preâmbulos ("então, você pode
+  // me dizer...") e fechos ("por favor") não mudam o sentido da pergunta.
+  final leading = RegExp(
+    r'^(?:ol[áa]|oi|ei|ok|okay|então|entao|agora|bom|bem|e|mas|hey|mental lingo|lingo|por favor|'
+    r'(?:você|voce)\s+(?:pode|poderia|consegue)|pode|poderia|(?:me\s+)?(?:diga|dizer|fale|falar|explique|explica|responda|ajude|ajuda)(?:-me)?|'
+    r'(?:eu\s+)?(?:gostaria de|queria|quero|preciso)\s+saber|tem como|(?:será|sera)\s+que)(?:\s*[,:;-]\s*|\s+)',
+    caseSensitive: false,
+  );
+  final tailPunct = RegExp('[\\s.?!…,;:"\'“”]+\$');
+  var q = question.trim().replaceAll(RegExp(r'\s+'), ' ');
+  for (var i = 0; i < 5; i++) {
+    final next = q.replaceFirst(leading, '').trim();
+    if (next == q) break;
+    q = next;
+  }
+  q = q.replaceAll(tailPunct, '');
+  q = q.replaceAll(RegExp(r'\s*[,;:-]?\s*(?:por favor|pf|obrigad[oa]|valeu)$', caseSensitive: false), '').replaceAll(tailPunct, '');
   const patterns = [
     r'^como (?:se|é que se) (?:escreve|diz|fala)\s+(.+?)\s+em\s+\S+$',
-    r'^traduz[ao]?\s+(?:a palavra\s+)?(.+?)\s+(?:para|em)\s+\S+$',
-    r'^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)\s+(?:para|em)\s+\S+$',
+    r'^como (?:eu )?(?:posso |consigo |faço para )?(?:falo|digo|dizer|falar|escrever|escrevo)\s+(.+?)\s+em\s+\S+$',
+    r'^tradu(?:z|za|zo|zir)\s+(?:a palavra\s+|a frase\s+)?(.+?)\s+(?:para|em)\s+\S+$',
+    r'^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)(?:\s+(?:para|em)\s+\S+)?$',
+    r'^qual\s+(?:é\s+)?a\s+palavra\s+(?:para|de)\s+(.+?)\s+em\s+\S+$',
+    r'^o que\s+(?:é|seria)\s+(.+?)\s+em\s+\S+$',
     r'^o que\s+(?:significa|quer dizer)\s+(.+?)$',
+    r'^como\s+(?:se\s+)?(?:diz|fala|escreve)\s+(.+?)$',
     // Pedidos de frase-exemplo (fase 2 do Lingo).
-    r'^(?:use|usa|usar|utilize)\s+(.+?)\s+(?:em|numa)\s+(?:uma\s+)?frase$',
-    r'^(?:me\s+)?(?:d[êe]|dá|dar|mostre|mostra)\s+(?:um\s+)?exemplos?\s+(?:com|de|usando)\s+(.+?)$',
-    r'^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar)\s+(.+?)$',
-    r'^(?:uma\s+)?(?:frase|exemplo)\s+(?:com|de|usando)\s+(.+?)$',
+    r'^(?:use|usa|usar|utilize|utiliza)\s+(?:a\s+)?(?:palavra\s+)?(.+?)\s+(?:em|numa|dentro de)\s+(?:uma\s+)?frase$',
+    r'^(?:(?:me\s+)?(?:d[êe]|dá|dar|mostre|mostra|fale|diga|crie|cria|fa[çc]a|faz|monte|escreva|quero|queria|preciso de|gostaria de|pode me dar)\s+)?(?:uma?\s+)?(?:frases?|exemplos?)\s+(?:com|de|do|da|usando|para|pra)\s+(?:a\s+)?(?:palavra\s+)?(.+?)$',
+    r'^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar)\s+(?:a\s+)?(?:palavra\s+)?(.+?)$',
+    r'^(.+?)\s+em\s+(?:ingl[êe]s|english|espanhol|español|franc[êe]s|français)$',
   ];
   for (final pattern in patterns) {
     final m = RegExp(pattern, caseSensitive: false).firstMatch(q);
     if (m != null) {
-      final term = m.group(1)!.trim().replaceAll(RegExp('^[\'"]+|[\'"]+\$'), '');
+      var term = m.group(1)!.trim().replaceAll(RegExp('^[\'"]+|[\'"]+\$'), '');
+      term = term.replaceAll(RegExp(r'\s+(?:em|no idioma|na língua)\s+(?:ingl[êe]s|english)$', caseSensitive: false), '');
       if (term.isNotEmpty) return term;
     }
   }
