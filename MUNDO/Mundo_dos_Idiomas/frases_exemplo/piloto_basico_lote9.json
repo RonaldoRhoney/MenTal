@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bath",
+    "word_pt": "banho",
+    "sentence": "I take a bath every night.",
+    "translation": "Eu tomo banho toda noite."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Nap",
+    "word_pt": "soneca",
+    "sentence": "The baby takes a nap.",
+    "translation": "O bebê tira uma soneca."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Chore",
+    "word_pt": "tarefa doméstica",
+    "sentence": "Washing dishes is my chore.",
+    "translation": "Lavar louça é minha tarefa doméstica."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Trash",
+    "word_pt": "lixo",
+    "sentence": "I take out the trash.",
+    "translation": "Eu tiro o lixo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Laundry",
+    "word_pt": "roupa suja",
+    "sentence": "I do the laundry on Sunday.",
+    "translation": "Eu lavo a roupa suja no domingo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Dishes",
+    "word_pt": "louça",
+    "sentence": "I wash the dishes after dinner.",
+    "translation": "Eu lavo a louça depois do jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Vacation",
+    "word_pt": "férias",
+    "sentence": "We go to the beach on vacation.",
+    "translation": "Nós vamos à praia nas férias."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Habit",
+    "word_pt": "hábito",
+    "sentence": "Reading is a good habit.",
+    "translation": "Ler é um bom hábito."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Schedule",
+    "word_pt": "agenda",
+    "sentence": "My schedule is very busy today.",
+    "translation": "Minha agenda está muito cheia hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Appointment",
+    "word_pt": "consulta marcada",
+    "sentence": "I have an appointment at three.",
+    "translation": "Eu tenho uma consulta marcada às três."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Keyboard",
+    "word_pt": "teclado de computador",
+    "sentence": "I type on the keyboard.",
+    "translation": "Eu digito no teclado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Battery",
+    "word_pt": "bateria",
+    "sentence": "My phone battery is low.",
+    "translation": "A bateria do meu telefone está baixa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Charger",
+    "word_pt": "carregador",
+    "sentence": "I forgot my charger at home.",
+    "translation": "Eu esqueci meu carregador em casa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cable",
+    "word_pt": "cabo",
+    "sentence": "The cable is too short.",
+    "translation": "O cabo é muito curto."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "File",
+    "word_pt": "arquivo",
+    "sentence": "I save the file on my computer.",
+    "translation": "Eu salvo o arquivo no meu computador."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Signal",
+    "word_pt": "sinal",
+    "sentence": "There is no signal here.",
+    "translation": "Não há sinal aqui."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Machine",
+    "word_pt": "máquina",
+    "sentence": "This machine is very old.",
+    "translation": "Esta máquina é muito velha."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Website",
+    "word_pt": "site",
+    "sentence": "I visit this website every day.",
+    "translation": "Eu visito este site todos os dias."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Printer",
+    "word_pt": "impressora",
+    "sentence": "The printer is out of paper.",
+    "translation": "A impressora está sem papel."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Speaker",
+    "word_pt": "caixa de som",
+    "sentence": "I connect my phone to the speaker.",
+    "translation": "Eu conecto meu telefone à caixa de som."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hurry",
+    "word_pt": "apressar-se",
+    "sentence": "I hurry to catch the bus.",
+    "translation": "Eu me apresso para pegar o ônibus."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Enjoy",
+    "word_pt": "aproveitar",
+    "sentence": "I enjoy sunny days.",
+    "translation": "Eu aproveito os dias ensolarados."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Accept",
+    "word_pt": "aceitar",
+    "sentence": "I accept your apology.",
+    "translation": "Eu aceito suas desculpas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hate",
+    "word_pt": "odiar",
+    "sentence": "I hate waking up early.",
+    "translation": "Eu odeio acordar cedo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Miss",
+    "word_pt": "sentir falta",
+    "sentence": "I miss my family.",
+    "translation": "Eu sinto falta da minha família."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Notice",
+    "word_pt": "notar",
+    "sentence": "I notice a change in her.",
+    "translation": "Eu noto uma mudança nela."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Happen",
+    "word_pt": "acontecer",
+    "sentence": "Accidents happen sometimes.",
+    "translation": "Acidentes acontecem às vezes."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Guess",
+    "word_pt": "adivinhar",
+    "sentence": "I guess the answer.",
+    "translation": "Eu adivinho a resposta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wish",
+    "word_pt": "desejar",
+    "sentence": "I wish you good luck.",
+    "translation": "Eu desejo boa sorte a você."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pretend",
+    "word_pt": "fingir",
+    "sentence": "I pretend to be asleep.",
+    "translation": "Eu finjo estar dormindo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Catch",
+    "word_pt": "agarrar",
+    "sentence": "I catch the ball.",
+    "translation": "Eu agarro a bola."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Rescue",
+    "word_pt": "resgatar",
+    "sentence": "Firefighters rescue the cat.",
+    "translation": "Os bombeiros resgatam o gato."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Escape",
+    "word_pt": "escapar",
+    "sentence": "The bird tries to escape.",
+    "translation": "O pássaro tenta escapar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Chase",
+    "word_pt": "perseguir",
+    "sentence": "The dog and cat chase each other.",
+    "translation": "O cachorro e o gato se perseguem."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fight",
+    "word_pt": "lutar",
+    "sentence": "The brothers fight over the toy.",
+    "translation": "Os irmãos lutam pelo brinquedo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Guide",
+    "word_pt": "guiar",
+    "sentence": "I guide the tourists.",
+    "translation": "Eu guio os turistas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lead",
+    "word_pt": "liderar",
+    "sentence": "I lead the team.",
+    "translation": "Eu lidero o time."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Trust",
+    "word_pt": "confiar",
+    "sentence": "I trust my best friend.",
+    "translation": "Eu confio no meu melhor amigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Treat",
+    "word_pt": "tratar",
+    "sentence": "I treat everyone with respect.",
+    "translation": "Eu trato todos com respeito."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Search",
+    "word_pt": "procurar",
+    "sentence": "I search for my keys.",
+    "translation": "Eu procuro minhas chaves."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Rare",
+    "word_pt": "raro",
+    "sentence": "This bird is very rare.",
+    "translation": "Este pássaro é muito raro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Common",
+    "word_pt": "comum",
+    "sentence": "This mistake is very common.",
+    "translation": "Este erro é muito comum."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Ancient",
+    "word_pt": "antigo",
+    "sentence": "The castle is very ancient.",
+    "translation": "O castelo é muito antigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Current",
+    "word_pt": "atual",
+    "sentence": "This is my current job.",
+    "translation": "Este é meu emprego atual."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fresh",
+    "word_pt": "fresco de comida",
+    "sentence": "The bread is fresh.",
+    "translation": "O pão está fresco."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Raw",
+    "word_pt": "cru",
+    "sentence": "I don't like raw fish.",
+    "translation": "Eu não gosto de peixe cru."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Gentle",
+    "word_pt": "suave",
+    "sentence": "She has a gentle voice.",
+    "translation": "Ela tem uma voz suave."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Generous",
+    "word_pt": "generoso",
+    "sentence": "He is a generous man.",
+    "translation": "Ele é um homem generoso."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Smart",
+    "word_pt": "inteligente",
+    "sentence": "She is a very smart girl.",
+    "translation": "Ela é uma menina muito inteligente."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Silly",
+    "word_pt": "bobo",
+    "sentence": "That is a silly question.",
+    "translation": "Essa é uma pergunta boba."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Some",
+    "word_pt": "algum",
+    "sentence": "I want some water.",
+    "translation": "Eu quero um pouco de água."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Any",
+    "word_pt": "qualquer",
+    "sentence": "Do you have any money?",
+    "translation": "Você tem algum dinheiro?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Many",
+    "word_pt": "muitos",
+    "sentence": "She has many friends.",
+    "translation": "Ela tem muitos amigos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Much",
+    "word_pt": "muito em quantidade",
+    "sentence": "I don't have much time.",
+    "translation": "Eu não tenho muito tempo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Few",
+    "word_pt": "poucos",
+    "sentence": "I have few books here.",
+    "translation": "Eu tenho poucos livros aqui."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Little",
+    "word_pt": "pouco",
+    "sentence": "There is little sugar left.",
+    "translation": "Há pouco açúcar restante."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "More",
+    "word_pt": "mais",
+    "sentence": "I want more coffee.",
+    "translation": "Eu quero mais café."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Less",
+    "word_pt": "menos",
+    "sentence": "Eat less sugar.",
+    "translation": "Coma menos açúcar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Most",
+    "word_pt": "a maioria",
+    "sentence": "Most people like music.",
+    "translation": "A maioria das pessoas gosta de música."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Each",
+    "word_pt": "cada um",
+    "sentence": "Each student has a book.",
+    "translation": "Cada aluno tem um livro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "This",
+    "word_pt": "este",
+    "sentence": "This is my house.",
+    "translation": "Esta é minha casa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "That",
+    "word_pt": "aquele",
+    "sentence": "That is my car.",
+    "translation": "Aquele é meu carro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "These",
+    "word_pt": "estes",
+    "sentence": "These shoes are new.",
+    "translation": "Estes sapatos são novos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Those",
+    "word_pt": "aqueles",
+    "sentence": "Those flowers are beautiful.",
+    "translation": "Aquelas flores são bonitas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "He",
+    "word_pt": "ele",
+    "sentence": "He is my brother.",
+    "translation": "Ele é meu irmão."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "She",
+    "word_pt": "ela",
+    "sentence": "She is my sister.",
+    "translation": "Ela é minha irmã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "We",
+    "word_pt": "nós",
+    "sentence": "We are friends.",
+    "translation": "Nós somos amigos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "They",
+    "word_pt": "eles",
+    "sentence": "They live in Brazil.",
+    "translation": "Eles moram no Brasil."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "It",
+    "word_pt": "isso",
+    "sentence": "It is a nice day.",
+    "translation": "Isso é um dia agradável."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Our",
+    "word_pt": "nosso",
+    "sentence": "Our house is small.",
+    "translation": "Nossa casa é pequena."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "For",
+    "word_pt": "para alguém",
+    "sentence": "This gift is for you.",
+    "translation": "Este presente é para você."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "From",
+    "word_pt": "vindo de",
+    "sentence": "She is from Brazil.",
+    "translation": "Ela é do Brasil."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Into",
+    "word_pt": "dentro de",
+    "sentence": "The cat jumps into the box.",
+    "translation": "O gato pula dentro da caixa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Through",
+    "word_pt": "através de",
+    "sentence": "We walk through the park.",
+    "translation": "Nós caminhamos através do parque."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Around",
+    "word_pt": "ao redor de",
+    "sentence": "We walk around the lake.",
+    "translation": "Nós caminhamos ao redor do lago."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Until",
+    "word_pt": "até um momento",
+    "sentence": "I wait until five o'clock.",
+    "translation": "Eu espero até as cinco horas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "During",
+    "word_pt": "durante",
+    "sentence": "She sleeps during the trip.",
+    "translation": "Ela dorme durante a viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "After",
+    "word_pt": "depois de",
+    "sentence": "We eat cake after dinner.",
+    "translation": "Nós comemos bolo depois do jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "If",
+    "word_pt": "se condicional",
+    "sentence": "If it rains, we stay home.",
+    "translation": "Se chover, nós ficamos em casa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "While",
+    "word_pt": "enquanto",
+    "sentence": "I read while I wait.",
+    "translation": "Eu leio enquanto espero."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Soda",
+    "word_pt": "refrigerante",
+    "sentence": "I drink soda at the party.",
+    "translation": "Eu bebo refrigerante na festa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sauce",
+    "word_pt": "molho",
+    "sentence": "She adds sauce to the pasta.",
+    "translation": "Ela adiciona molho na massa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Jam",
+    "word_pt": "geleia",
+    "sentence": "I put jam on my toast.",
+    "translation": "Eu ponho geleia na minha torrada."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Toast",
+    "word_pt": "torrada",
+    "sentence": "I eat toast for breakfast.",
+    "translation": "Eu como torrada no café da manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sausage",
+    "word_pt": "salsicha",
+    "sentence": "We grill sausage on Sunday.",
+    "translation": "Nós grelhamos salsicha no domingo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Ham",
+    "word_pt": "presunto",
+    "sentence": "I make a sandwich with ham.",
+    "translation": "Eu faço um sanduíche com presunto."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Shrimp",
+    "word_pt": "camarão",
+    "sentence": "She cooks shrimp for dinner.",
+    "translation": "Ela cozinha camarão para o jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Steak",
+    "word_pt": "bife",
+    "sentence": "He orders a steak.",
+    "translation": "Ele pede um bife."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pie",
+    "word_pt": "torta",
+    "sentence": "We bake an apple pie.",
+    "translation": "Nós assamos uma torta de maçã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pancake",
+    "word_pt": "panqueca",
+    "sentence": "I make pancake on Sunday.",
+    "translation": "Eu faço panqueca no domingo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Surprise",
+    "word_pt": "surpresa",
+    "sentence": "This is a big surprise for me.",
+    "translation": "Esta é uma grande surpresa para mim."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Joy",
+    "word_pt": "alegria",
+    "sentence": "Her eyes are full of joy.",
+    "translation": "Os olhos dela estão cheios de alegria."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pride",
+    "word_pt": "orgulho",
+    "sentence": "He feels pride in his work.",
+    "translation": "Ele sente orgulho do trabalho dele."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Shame",
+    "word_pt": "vergonha",
+    "sentence": "She feels shame about the mistake.",
+    "translation": "Ela sente vergonha do erro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Luck",
+    "word_pt": "sorte",
+    "sentence": "I wish you luck.",
+    "translation": "Eu te desejo sorte."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fun",
+    "word_pt": "diversão",
+    "sentence": "The party was a lot of fun.",
+    "translation": "A festa foi muito divertida."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Courage",
+    "word_pt": "coragem",
+    "sentence": "It takes courage to try again.",
+    "translation": "É preciso coragem para tentar de novo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Truth",
+    "word_pt": "verdade",
+    "sentence": "Tell me the truth, please.",
+    "translation": "Me conte a verdade, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Secret",
+    "word_pt": "segredo",
+    "sentence": "This is our little secret.",
+    "translation": "Este é o nosso pequeno segredo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Reason",
+    "word_pt": "razão",
+    "sentence": "I have a good reason to stay.",
+    "translation": "Eu tenho uma boa razão para ficar."
+  }
+]
