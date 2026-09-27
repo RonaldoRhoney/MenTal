@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Peach",
+    "word_pt": "pêssego",
+    "sentence": "I eat a peach for breakfast.",
+    "translation": "Eu como um pêssego no café da manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pear",
+    "word_pt": "pera",
+    "sentence": "She buys a pear at the market.",
+    "translation": "Ela compra uma pera no mercado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cherry",
+    "word_pt": "cereja",
+    "sentence": "I like the taste of cherry.",
+    "translation": "Eu gosto do sabor de cereja."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Watermelon",
+    "word_pt": "melancia",
+    "sentence": "We eat watermelon in summer.",
+    "translation": "Nós comemos melancia no verão."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Mango",
+    "word_pt": "manga fruta",
+    "sentence": "The mango is very sweet.",
+    "translation": "A manga é muito doce."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Corn",
+    "word_pt": "milho",
+    "sentence": "We eat corn at the party.",
+    "translation": "Nós comemos milho na festa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Mushroom",
+    "word_pt": "cogumelo",
+    "sentence": "She adds mushroom to the soup.",
+    "translation": "Ela adiciona cogumelo na sopa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bitter",
+    "word_pt": "amargo",
+    "sentence": "This coffee is too bitter.",
+    "translation": "Este café está muito amargo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sour",
+    "word_pt": "azedo",
+    "sentence": "The lemon is very sour.",
+    "translation": "O limão é muito azedo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Salty",
+    "word_pt": "salgado",
+    "sentence": "The soup is too salty.",
+    "translation": "A sopa está muito salgada."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hammer",
+    "word_pt": "martelo",
+    "sentence": "He uses a hammer to fix the chair.",
+    "translation": "Ele usa um martelo para consertar a cadeira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Rope",
+    "word_pt": "corda",
+    "sentence": "They climb with a rope.",
+    "translation": "Eles escalam com uma corda."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Ladder",
+    "word_pt": "escada de mão",
+    "sentence": "He climbs the ladder to paint the wall.",
+    "translation": "Ele sobe na escada de mão para pintar a parede."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Bucket",
+    "word_pt": "balde",
+    "sentence": "She fills the bucket with water.",
+    "translation": "Ela enche o balde com água."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Broom",
+    "word_pt": "vassoura",
+    "sentence": "I clean the floor with a broom.",
+    "translation": "Eu limpo o chão com uma vassoura."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Needle",
+    "word_pt": "agulha",
+    "sentence": "She sews with a needle.",
+    "translation": "Ela costura com uma agulha."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Scissors",
+    "word_pt": "tesoura",
+    "sentence": "I cut the paper with scissors.",
+    "translation": "Eu corto o papel com uma tesoura."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Glue",
+    "word_pt": "cola",
+    "sentence": "He uses glue to fix the toy.",
+    "translation": "Ele usa cola para consertar o brinquedo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Tool",
+    "word_pt": "ferramenta",
+    "sentence": "This tool is very useful.",
+    "translation": "Esta ferramenta é muito útil."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wire",
+    "word_pt": "fio",
+    "sentence": "The wire is very thin.",
+    "translation": "O fio é muito fino."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Boyfriend",
+    "word_pt": "namorado",
+    "sentence": "She talks to her boyfriend every day.",
+    "translation": "Ela fala com o namorado todos os dias."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Girlfriend",
+    "word_pt": "namorada",
+    "sentence": "He calls his girlfriend at night.",
+    "translation": "Ele liga para a namorada à noite."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wedding",
+    "word_pt": "casamento",
+    "sentence": "The wedding is on Saturday.",
+    "translation": "O casamento é no sábado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Enemy",
+    "word_pt": "inimigo",
+    "sentence": "He is not my enemy.",
+    "translation": "Ele não é meu inimigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hero",
+    "word_pt": "herói",
+    "sentence": "My father is my hero.",
+    "translation": "Meu pai é meu herói."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Leader",
+    "word_pt": "líder",
+    "sentence": "She is a good leader.",
+    "translation": "Ela é uma boa líder."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Member",
+    "word_pt": "membro",
+    "sentence": "He is a member of the team.",
+    "translation": "Ele é membro do time."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Owner",
+    "word_pt": "dono",
+    "sentence": "The owner of the store is kind.",
+    "translation": "O dono da loja é gentil."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Elderly",
+    "word_pt": "idoso",
+    "sentence": "We help the elderly cross the street.",
+    "translation": "Nós ajudamos os idosos a atravessar a rua."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Teenager",
+    "word_pt": "adolescente",
+    "sentence": "My daughter is a teenager now.",
+    "translation": "Minha filha é adolescente agora."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Enter",
+    "word_pt": "entrar",
+    "sentence": "Please enter the room.",
+    "translation": "Por favor, entre na sala."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fill",
+    "word_pt": "encher",
+    "sentence": "Fill the glass with water.",
+    "translation": "Encha o copo com água."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Pour",
+    "word_pt": "despejar",
+    "sentence": "I pour the milk into the cup.",
+    "translation": "Eu despejo o leite no copo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Burn",
+    "word_pt": "queimar",
+    "sentence": "Be careful, don't burn your hand.",
+    "translation": "Cuidado, não queime a mão."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Drop",
+    "word_pt": "deixar cair",
+    "sentence": "Don't drop the phone.",
+    "translation": "Não deixe o telefone cair."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lift",
+    "word_pt": "levantar algo",
+    "sentence": "Help me lift this box.",
+    "translation": "Me ajude a levantar esta caixa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Kick",
+    "word_pt": "chutar",
+    "sentence": "I kick the ball to my friend.",
+    "translation": "Eu chuto a bola para meu amigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Kiss",
+    "word_pt": "beijar",
+    "sentence": "I kiss my mother goodnight.",
+    "translation": "Eu beijo minha mãe antes de dormir."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hug",
+    "word_pt": "abraçar",
+    "sentence": "They hug each other happily.",
+    "translation": "Eles se abraçam felizes."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Grin",
+    "word_pt": "sorrir",
+    "sentence": "I grin at my friend.",
+    "translation": "Eu sorrio para meu amigo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Laugh",
+    "word_pt": "rir",
+    "sentence": "The children laugh at the joke.",
+    "translation": "As crianças riem da piada."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Cry",
+    "word_pt": "chorar",
+    "sentence": "The baby starts to cry.",
+    "translation": "O bebê começa a chorar."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Shout",
+    "word_pt": "gritar",
+    "sentence": "Don't shout in the library.",
+    "translation": "Não grite na biblioteca."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Whisper",
+    "word_pt": "sussurrar",
+    "sentence": "I whisper the secret to her.",
+    "translation": "Eu sussurro o segredo para ela."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Breathe",
+    "word_pt": "respirar",
+    "sentence": "Breathe slowly, please.",
+    "translation": "Respire devagar, por favor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Paint",
+    "word_pt": "pintar",
+    "sentence": "I paint the wall blue.",
+    "translation": "Eu pinto a parede de azul."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Draw",
+    "word_pt": "desenhar",
+    "sentence": "She likes to draw animals.",
+    "translation": "Ela gosta de desenhar animais."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fly",
+    "word_pt": "voar",
+    "sentence": "Birds fly in the sky.",
+    "translation": "Os pássaros voam no céu."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Grow",
+    "word_pt": "crescer",
+    "sentence": "Plants grow in the sun.",
+    "translation": "As plantas crescem no sol."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Ride",
+    "word_pt": "andar de bicicleta",
+    "sentence": "I ride my bike to school.",
+    "translation": "Eu ando de bicicleta para a escola."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Thick",
+    "word_pt": "grosso",
+    "sentence": "The book is very thick.",
+    "translation": "O livro é muito grosso."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sharp",
+    "word_pt": "afiado",
+    "sentence": "Be careful, the knife is sharp.",
+    "translation": "Cuidado, a faca está afiada."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Smooth",
+    "word_pt": "liso",
+    "sentence": "The stone is very smooth.",
+    "translation": "A pedra é muito lisa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Rough",
+    "word_pt": "áspero",
+    "sentence": "The road is very rough.",
+    "translation": "A estrada é muito áspera."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Soft",
+    "word_pt": "macio",
+    "sentence": "The blanket is very soft.",
+    "translation": "O cobertor é muito macio."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Hard",
+    "word_pt": "duro",
+    "sentence": "The chair is too hard.",
+    "translation": "A cadeira é muito dura."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Flat",
+    "word_pt": "plano",
+    "sentence": "The land here is very flat.",
+    "translation": "A terra aqui é muito plana."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Round",
+    "word_pt": "redondo",
+    "sentence": "The table is round.",
+    "translation": "A mesa é redonda."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Tight",
+    "word_pt": "apertado",
+    "sentence": "These shoes are too tight.",
+    "translation": "Estes sapatos estão muito apertados."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Loose",
+    "word_pt": "solto",
+    "sentence": "The rope is loose.",
+    "translation": "A corda está solta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Ready",
+    "word_pt": "pronto",
+    "sentence": "Are you ready for the test?",
+    "translation": "Você está pronto para a prova?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Wrong",
+    "word_pt": "errado",
+    "sentence": "This answer is wrong.",
+    "translation": "Esta resposta está errada."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "True",
+    "word_pt": "verdadeiro",
+    "sentence": "Her story is true.",
+    "translation": "A história dela é verdadeira."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "False",
+    "word_pt": "falso",
+    "sentence": "His answer is false.",
+    "translation": "A resposta dele é falsa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Alone",
+    "word_pt": "sozinho",
+    "sentence": "She likes to walk alone.",
+    "translation": "Ela gosta de caminhar sozinha."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Lucky",
+    "word_pt": "sortudo",
+    "sentence": "I feel very lucky today.",
+    "translation": "Eu me sinto muito sortudo hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Unique",
+    "word_pt": "único",
+    "sentence": "Every person is unique.",
+    "translation": "Cada pessoa é única."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sure",
+    "word_pt": "certo de algo",
+    "sentence": "Are you sure about this?",
+    "translation": "Você tem certeza disso?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Same",
+    "word_pt": "mesmo igual",
+    "sentence": "We have the same shoes.",
+    "translation": "Nós temos o mesmo sapato."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Other",
+    "word_pt": "outro",
+    "sentence": "I want the other one.",
+    "translation": "Eu quero o outro."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Eleven",
+    "word_pt": "onze",
+    "sentence": "The movie starts at eleven.",
+    "translation": "O filme começa às onze."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Twelve",
+    "word_pt": "doze",
+    "sentence": "There are twelve months in a year.",
+    "translation": "Há doze meses num ano."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Twenty",
+    "word_pt": "vinte",
+    "sentence": "She is twenty years old.",
+    "translation": "Ela tem vinte anos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Thirty",
+    "word_pt": "trinta",
+    "sentence": "My father is thirty five years old.",
+    "translation": "Meu pai tem trinta e cinco anos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Forty",
+    "word_pt": "quarenta",
+    "sentence": "There are forty students in the school.",
+    "translation": "Há quarenta alunos na escola."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Fifty",
+    "word_pt": "cinquenta",
+    "sentence": "The ticket costs fifty dollars.",
+    "translation": "O bilhete custa cinquenta dólares."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Sixty",
+    "word_pt": "sessenta",
+    "sentence": "My grandmother is sixty years old.",
+    "translation": "Minha avó tem sessenta anos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Ninety",
+    "word_pt": "noventa",
+    "sentence": "The old man is ninety years old.",
+    "translation": "O senhor idoso tem noventa anos."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Thousand",
+    "word_pt": "mil",
+    "sentence": "The book has one thousand pages.",
+    "translation": "O livro tem mil páginas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Million",
+    "word_pt": "milhão",
+    "sentence": "The city has one million people.",
+    "translation": "A cidade tem um milhão de pessoas."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Why",
+    "word_pt": "por que",
+    "sentence": "Why are you sad?",
+    "translation": "Por que você está triste?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Whose",
+    "word_pt": "de quem",
+    "sentence": "Whose bag is this?",
+    "translation": "De quem é esta bolsa?"
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Something",
+    "word_pt": "algo",
+    "sentence": "I want to tell you something.",
+    "translation": "Eu quero te contar algo."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Nothing",
+    "word_pt": "nada",
+    "sentence": "There is nothing in the box.",
+    "translation": "Não há nada na caixa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Everything",
+    "word_pt": "tudo",
+    "sentence": "She knows everything about music.",
+    "translation": "Ela sabe tudo sobre música."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Everyone",
+    "word_pt": "todos",
+    "sentence": "Everyone likes the teacher.",
+    "translation": "Todos gostam do professor."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Someone",
+    "word_pt": "alguém",
+    "sentence": "Someone is at the door.",
+    "translation": "Alguém está na porta."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Nobody",
+    "word_pt": "ninguém",
+    "sentence": "Nobody is home now.",
+    "translation": "Ninguém está em casa agora."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Anything",
+    "word_pt": "qualquer coisa",
+    "sentence": "You can ask me anything.",
+    "translation": "Você pode me perguntar qualquer coisa."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Nowhere",
+    "word_pt": "em lugar nenhum",
+    "sentence": "The keys are nowhere to be found.",
+    "translation": "As chaves não estão em lugar nenhum."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Often",
+    "word_pt": "frequentemente",
+    "sentence": "I often walk to school.",
+    "translation": "Eu frequentemente vou a pé para a escola."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Usually",
+    "word_pt": "geralmente",
+    "sentence": "I usually wake up at seven.",
+    "translation": "Eu geralmente acordo às sete."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Almost",
+    "word_pt": "quase",
+    "sentence": "I am almost ready.",
+    "translation": "Eu estou quase pronto."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Maybe",
+    "word_pt": "talvez",
+    "sentence": "Maybe we can go tomorrow.",
+    "translation": "Talvez nós possamos ir amanhã."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Really",
+    "word_pt": "realmente",
+    "sentence": "I really like this song.",
+    "translation": "Eu realmente gosto desta música."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Together",
+    "word_pt": "juntos",
+    "sentence": "We study together every day.",
+    "translation": "Nós estudamos juntos todos os dias."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Quickly",
+    "word_pt": "rapidamente",
+    "sentence": "She runs quickly to the bus.",
+    "translation": "Ela corre rapidamente para o ônibus."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Slowly",
+    "word_pt": "devagar",
+    "sentence": "He walks slowly in the park.",
+    "translation": "Ele caminha devagar no parque."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Carefully",
+    "word_pt": "com cuidado",
+    "sentence": "Please drive carefully.",
+    "translation": "Por favor, dirija com cuidado."
+  },
+  {
+    "language": "ingles",
+    "level": "basico",
+    "word": "Suddenly",
+    "word_pt": "de repente",
+    "sentence": "Suddenly, the rain starts.",
+    "translation": "De repente, a chuva começa."
+  }
+]
