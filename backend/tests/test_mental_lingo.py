@@ -318,3 +318,71 @@ def test_frase_exemplo_com_preambulo_e_pontuacao(client):
         data = _ask(client, q).json()
         assert data["found"] is True, q
         assert "I drink milk every morning." in data["answer_text"], q
+
+
+def test_frase_exemplo_qualquer_forma_de_pedir(client):
+    _seed_example("Milk", "I drink milk every morning.", "Eu bebo leite toda manhã.", word_pt="leite")
+    _seed_example("Coffee", "My father likes coffee.", "Meu pai gosta de café.", word_pt="café da manhã")
+    for q in (
+        "crie uma frase em inglês com a palavra leite",
+        "Crie uma frase em inglês com a palavra leite.",
+        "crie uma frase com leite?",
+        "faz um exemplo curto com milk",
+        "monte uma frase simples usando a palavra leite em inglês",
+        "gostaria de um exemplo em inglês com a palavra milk, por favor",
+        "escreva uma sentença com leite",
+        "leite em uma frase",
+        "use milk numa frase",
+        "exemplo com leite",
+        "me dá uma frase que tenha a palavra leite",
+    ):
+        data = _ask(client, q).json()
+        assert data["found"] is True, q
+        assert "I drink milk every morning." in data["answer_text"], q
+    data = _ask(client, "me dê uma frase com café da manhã").json()  # termo com 'da' no meio é preservado
+    assert data["found"] is True and "My father likes coffee." in data["answer_text"]
+
+
+def test_pergunta_de_traducao_com_a_palavra_frase_nao_vira_pedido_de_exemplo(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    data = _ask(client, "o que significa frase em inglês").json()
+    assert "Ainda não tenho uma frase de exemplo" not in data["answer_text"]
+
+
+def _add_pattern(intent, regex, status="approved"):
+    with SessionLocal() as db:
+        db.add(models.MentalLingoPattern(intencao=intent, regex=regex, status=status))
+        db.commit()
+
+
+def test_padrao_aprovado_no_banco_passa_a_valer_sem_deploy(client, monkeypatch):
+    monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
+    _seed("Como se escreve 'chuva' em inglês?", "Rain", "'chuva' se traduz como 'Rain' em inglês.")
+    pergunta = "chuva na língua de Shakespeare"
+    assert _ask(client, pergunta).json()["found"] is False  # ainda não sabe
+    _add_pattern("traducao", r"^(.+?)\s+na língua de shakespeare$")
+    data = _ask(client, pergunta).json()
+    assert data["found"] is True and "Rain" in data["answer_text"]
+
+
+def test_padrao_de_exemplo_aprendido_e_padrao_pendente_ou_invalido_e_ignorado(client):
+    _seed_example("Milk", "I drink milk every morning.", "Eu bebo leite toda manhã.", word_pt="leite")
+    _add_pattern("exemplo", r"^situação real com (.+)$")
+    _add_pattern("exemplo", r"^me surpreenda com (.+)$", status="pending")  # não aprovado: ignorado
+    _add_pattern("exemplo", r"([")  # regex inválida: ignorada, nunca derruba
+    ok = _ask(client, "situação real com leite").json()
+    assert ok["found"] is True and "I drink milk every morning." in ok["answer_text"]
+    assert _ask(client, "me surpreenda com leite").json()["found"] is False
+
+
+def test_pergunta_nao_entendida_e_registrada_so_agregada_e_sem_dado_pessoal(client):
+    for _ in range(2):
+        _ask(client, "Bla bla quero um tutorial completo?")
+    _ask(client, "meu email é fulano@exemplo.com me ajuda")  # parece dado pessoal: não guarda
+    _ask(client, "ligue para 11987654321 agora")  # número longo: não guarda
+    with SessionLocal() as db:
+        row = db.get(models.MentalLingoUnknownQuestion, "bla bla quero um tutorial completo")
+        assert row is not None and row.vezes == 2
+        textos = [r.texto for r in db.query(models.MentalLingoUnknownQuestion).all()]
+        assert not any("@" in t or "987654321" in t for t in textos)
+    assert "user_id" not in models.MentalLingoUnknownQuestion.__table__.columns

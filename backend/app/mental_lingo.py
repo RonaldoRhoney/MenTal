@@ -374,31 +374,40 @@ def _found_from_foreign(matches: list[_VocabEntry], word: str) -> dict:
     return {"found": True, "answer_text": text, "matched_word": word, "target_language": lang, "speech_segments": segments}
 
 
-# Pedidos de FRASE-EXEMPLO ("use queijo em uma frase", "dê um exemplo com Cheese", "como uso hot").
-_EXAMPLE_PATTERNS = [
-    # "use queijo em uma frase", "use a palavra house em uma frase"
-    re.compile(r"^(?:use|usa|usar|utilize|utiliza)\s+(?:a\s+)?(?:palavra\s+)?(.+?)\s+(?:em|numa|dentro de)\s+(?:uma\s+)?frase$", re.IGNORECASE),
-    # "me dê uma frase com a palavra queijo (em inglês)", "dê um exemplo com cheese", "quero uma frase com X",
-    # "faça uma frase com X", "preciso de um exemplo de X", "uma frase com X", "exemplo com X"
-    re.compile(
-        r"^(?:(?:me\s+)?(?:d[êe]|dá|dar|mostre|mostra|fale|diga|crie|cria|fa[çc]a|faz|monte|escreva|quero|queria|preciso de|gostaria de|pode me dar)\s+)?"
-        r"(?:uma?\s+)?(?:frases?|exemplos?)\s+(?:com|de|do|da|usando|para|pra)\s+(?:a\s+)?(?:palavra\s+)?(.+?)$",
-        re.IGNORECASE,
-    ),
-    # "como uso hot", "como usar a palavra house"
-    re.compile(r"^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar)\s+(?:a\s+)?(?:palavra\s+)?(.+?)$", re.IGNORECASE),
-]
+# Pedidos de FRASE-EXEMPLO. Em vez de padrões rígidos ("dê um exemplo com X"), detecta a INTENÇÃO
+# (pede frase/exemplo/uso) e tira as palavras de comando das pontas — o que sobra é o termo. Assim
+# "crie uma frase em inglês com a palavra queijo", "faz um exemplo curto com leite", "use house
+# numa frase" etc. funcionam (Rhoney, 26/09/2026: "ele deve entender qualquer pergunta").
 _TRAILING_LANG = re.compile(r"\s+(?:em|no idioma|na língua)\s+(?:ingl[êe]s|english)$", re.IGNORECASE)
+_EXAMPLE_KEYWORD = re.compile(r"\b(?:frases?|exemplos?|senten[çc]as?|ora[çc][ãõ]es|ora[çc][ãa]o)\b", re.IGNORECASE)
+_HOW_TO_USE = re.compile(r"^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar|utilizo|utilizar)\s+(?:a\s+)?(?:palavra\s+)?(.+)$", re.IGNORECASE)
+_TRANSLATION_START = re.compile(r"^(?:o que|como se|como é|qual|traduz)", re.IGNORECASE)
+_COMMAND_WORDS = frozenset(
+    "me dê de dá dar mostre mostra fale diga crie cria criar faça faz fazer monte montar escreva escrever "
+    "quero queria preciso gostaria pode poderia uma um umas uns frase frases exemplo exemplos sentença "
+    "sentenças senten\u00e7a oração orações curta curto curtas curtos simples fácil facil em no na inglês "
+    "ingles english com a o as os palavra termo usando use usa usar utilize utiliza que tenha tenham "
+    "contenha contendo para pra por favor sobre ao dentro numa num da do dos das seja".split()
+)
 
 
 def _example_term(question: str) -> str | None:
     q = _normalize(question)
-    for pattern in _EXAMPLE_PATTERNS:
-        m = pattern.match(q)
-        if m:
-            term = _TRAILING_LANG.sub("", m.group(1)).strip(" '\"")
-            return term or None
-    return None
+    m = _HOW_TO_USE.match(q)
+    if m:
+        term = _TRAILING_LANG.sub("", m.group(1)).strip(" '\"")
+        return term or None
+    if _TRANSLATION_START.match(q) or not _EXAMPLE_KEYWORD.search(q):
+        return None
+    tokens = q.split()
+    low = lambda t: t.lower().strip(" '\",")  # noqa: E731
+    while tokens and low(tokens[0]) in _COMMAND_WORDS:
+        tokens.pop(0)
+    while tokens and low(tokens[-1]) in _COMMAND_WORDS:
+        tokens.pop()
+    if not tokens or len(tokens) > 3:
+        return None
+    return " ".join(t.strip(" '\",") for t in tokens)
 
 
 def _example_answer(db: Session, term: str) -> dict:
@@ -439,6 +448,74 @@ def _example_answer(db: Session, term: str) -> dict:
     }
 
 
+# --- Aprendizado com o uso (Rhoney, 26/09/2026) ------------------------------------------------
+# Padrões APROVADOS ficam no banco (lingo_padroes) e valem sem novo deploy; as perguntas que o
+# Lingo não entendeu são registradas só como agregado (lingo_perguntas_nao_entendidas) e viram a
+# fila de novos padrões. Nada é aprendido automaticamente: um padrão só entra depois de aprovado.
+_MAX_UNKNOWN_LEN = 140
+_learned_cache: dict = {"signature": None, "patterns": []}
+
+
+def _learned_patterns(db: Session) -> list[tuple[str, re.Pattern]]:
+    try:
+        signature = tuple(
+            db.execute(
+                select(func.count(), func.max(models.MentalLingoPattern.created_at)).where(
+                    models.MentalLingoPattern.status == "approved"
+                )
+            ).one()
+        )
+        if _learned_cache["signature"] == signature:
+            return _learned_cache["patterns"]
+        rows = db.execute(
+            select(models.MentalLingoPattern.intencao, models.MentalLingoPattern.regex).where(
+                models.MentalLingoPattern.status == "approved"
+            )
+        ).all()
+    except Exception:
+        db.rollback()
+        return []
+    compiled: list[tuple[str, re.Pattern]] = []
+    for intent, regex in rows:
+        try:
+            compiled.append((intent, re.compile(regex, re.IGNORECASE)))
+        except re.error:
+            continue  # padrão inválido é ignorado, nunca derruba a resposta
+    _learned_cache["signature"] = signature
+    _learned_cache["patterns"] = compiled
+    return compiled
+
+
+def _match_learned(db: Session, question: str) -> tuple[str, str, str | None] | None:
+    q = _normalize(question)
+    for intent, pattern in _learned_patterns(db):
+        m = pattern.match(q)
+        if m and m.groups() and m.group(1):
+            term = m.group(1).strip(" '\"")
+            lang = m.group(2) if len(m.groups()) > 1 else None
+            if term:
+                return intent, term, lang
+    return None
+
+
+def _record_unknown_question(db: Session, question: str) -> None:
+    """Registra (agregado, sem usuário) uma pergunta não entendida. Falha aqui nunca derruba a
+    resposta. Não guarda o que parece dado pessoal (e-mail, número longo) nem texto muito longo."""
+    q = _normalize(question).lower()
+    if not q or len(q) > _MAX_UNKNOWN_LEN or "@" in q or re.search(r"\d{5,}", q):
+        return
+    try:
+        row = db.get(models.MentalLingoUnknownQuestion, q)
+        if row is None:
+            db.add(models.MentalLingoUnknownQuestion(texto=q))
+        else:
+            row.vezes += 1
+            row.ultima_vez = utcnow()
+        db.commit()
+    except Exception:
+        db.rollback()
+
+
 def answer_question(db: Session, question: str) -> dict:
     question = (question or "").strip()
     if not question:
@@ -463,7 +540,14 @@ def answer_question(db: Session, question: str) -> dict:
 
     word, lang_word = _extract_word(question)
     if word is None:
-        return _not_understood()
+        learned = _match_learned(db, question)
+        if learned is None:
+            _record_unknown_question(db, question)
+            return _not_understood()
+        intent, term, lang = learned
+        if intent == "exemplo":
+            return _example_answer(db, term)
+        word, lang_word = term, lang
     word_norm = word.strip().lower()
 
     target = _detect_language(lang_word) if lang_word else None

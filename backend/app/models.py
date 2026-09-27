@@ -550,6 +550,34 @@ class MentalLingoExample(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class MentalLingoPattern(Base):
+    """
+    MENTAL LINGO — modo de perguntar APROVADO, carregado do banco (sem novo deploy). `regex`:
+    grupo 1 = termo perguntado; grupo 2 (opcional) = idioma. intencao: traducao | exemplo.
+    """
+
+    __tablename__ = "lingo_padroes"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    intencao: Mapped[str] = mapped_column(String)
+    regex: Mapped[str] = mapped_column(Text)
+    exemplo: Mapped[str | None] = mapped_column(Text, nullable=True)
+    status: Mapped[str] = mapped_column(String, default="approved")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class MentalLingoUnknownQuestion(Base):
+    """Pergunta que o Lingo não entendeu — só AGREGADO (texto normalizado + contador), sem usuário."""
+
+    __tablename__ = "lingo_perguntas_nao_entendidas"
+
+    texto: Mapped[str] = mapped_column(String, primary_key=True)
+    vezes: Mapped[int] = mapped_column(Integer, default=1)
+    primeira_vez: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    ultima_vez: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    status: Mapped[str] = mapped_column(String, default="aberta")
+
+
 class ConcursoBanca(Base):
     """Mundo dos Concursos (decisão de Rhoney, 25/09/2026). Só `approved` é servida."""
 

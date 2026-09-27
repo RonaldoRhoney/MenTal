@@ -76,6 +76,9 @@ void main() {
     expect(extractLingoKeyTerm('como se diz queijo em inglês.'), 'queijo');
     expect(extractLingoKeyTerm('me dê uma frase com a palavra queijo em inglês'), 'queijo');
     expect(extractLingoKeyTerm('o que é queijo em inglês?'), 'queijo');
+    expect(extractLingoKeyTerm('crie uma frase em inglês com a palavra queijo'), 'queijo');
+    expect(extractLingoKeyTerm('faz um exemplo curto com café da manhã'), 'café da manhã');
+    expect(extractLingoKeyTerm('use house numa frase'), 'house');
     expect(extractLingoKeyTerm('oi tudo bem'), isNull);
   });
 

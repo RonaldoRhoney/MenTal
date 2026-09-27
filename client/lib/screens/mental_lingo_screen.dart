@@ -1037,6 +1037,17 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 /// Termo-chave de uma pergunta ("como se escreve queijo em inglês" -> "queijo"), extraído no
 /// próprio app com os mesmos padrões do servidor — assim o destaque aparece já ao enviar a
 /// pergunta, sem depender da resposta. Devolve null se não reconhecer o padrão.
+// Palavras de comando de um pedido de frase-exemplo (tiradas das pontas; o que sobra é o termo).
+const Set<String> _kLingoCommandWords = {
+  'me', 'dê', 'de', 'dá', 'dar', 'mostre', 'mostra', 'fale', 'diga', 'crie', 'cria', 'criar', 'faça', 'faz', 'fazer',
+  'monte', 'montar', 'escreva', 'escrever', 'quero', 'queria', 'preciso', 'gostaria', 'pode', 'poderia', 'uma', 'um',
+  'umas', 'uns', 'frase', 'frases', 'exemplo', 'exemplos', 'sentença', 'sentenças', 'oração', 'orações', 'curta',
+  'curto', 'curtas', 'curtos', 'simples', 'fácil', 'facil', 'em', 'no', 'na', 'inglês', 'ingles', 'english', 'com',
+  'a', 'o', 'as', 'os', 'palavra', 'termo', 'usando', 'use', 'usa', 'usar', 'utilize', 'utiliza', 'que', 'tenha',
+  'tenham', 'contenha', 'contendo', 'para', 'pra', 'por', 'favor', 'sobre', 'ao', 'dentro', 'numa', 'num', 'da', 'do',
+  'dos', 'das', 'seja',
+};
+
 String? extractLingoKeyTerm(String question) {
   // Mesma limpeza do servidor: pontuação final ("?", ".", "!"), preâmbulos ("então, você pode
   // me dizer...") e fechos ("por favor") não mudam o sentido da pergunta.
@@ -1064,12 +1075,33 @@ String? extractLingoKeyTerm(String question) {
     r'^o que\s+(?:é|seria)\s+(.+?)\s+em\s+\S+$',
     r'^o que\s+(?:significa|quer dizer)\s+(.+?)$',
     r'^como\s+(?:se\s+)?(?:diz|fala|escreve)\s+(.+?)$',
-    // Pedidos de frase-exemplo (fase 2 do Lingo).
-    r'^(?:use|usa|usar|utilize|utiliza)\s+(?:a\s+)?(?:palavra\s+)?(.+?)\s+(?:em|numa|dentro de)\s+(?:uma\s+)?frase$',
-    r'^(?:(?:me\s+)?(?:d[êe]|dá|dar|mostre|mostra|fale|diga|crie|cria|fa[çc]a|faz|monte|escreva|quero|queria|preciso de|gostaria de|pode me dar)\s+)?(?:uma?\s+)?(?:frases?|exemplos?)\s+(?:com|de|do|da|usando|para|pra)\s+(?:a\s+)?(?:palavra\s+)?(.+?)$',
-    r'^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar)\s+(?:a\s+)?(?:palavra\s+)?(.+?)$',
     r'^(.+?)\s+em\s+(?:ingl[êe]s|english|espanhol|español|franc[êe]s|français)$',
   ];
+  // Pedido de FRASE-EXEMPLO por intenção (fase 2): tira as palavras de comando das pontas e o que
+  // sobra é o termo — igual ao servidor ("crie uma frase em inglês com a palavra queijo").
+  final howToUse = RegExp(
+          r'^como\s+(?:eu\s+)?(?:uso|usar|se usa|posso usar|utilizo|utilizar)\s+(?:a\s+)?(?:palavra\s+)?(.+)$',
+          caseSensitive: false)
+      .firstMatch(q);
+  if (howToUse != null) {
+    return howToUse
+        .group(1)!
+        .trim()
+        .replaceAll(RegExp(r'\s+(?:em|no idioma|na língua)\s+(?:ingl[êe]s|english)$', caseSensitive: false), '');
+  }
+  final asksExample =
+      RegExp(r'\b(?:frases?|exemplos?|senten[çc]as?|ora[çc][ãõ]es|ora[çc][ãa]o)\b', caseSensitive: false).hasMatch(q);
+  if (asksExample && !RegExp(r'^(?:o que|como se|como é|qual|traduz)', caseSensitive: false).hasMatch(q)) {
+    final tokens = q.split(' ');
+    bool isCommand(String t) => _kLingoCommandWords.contains(t.toLowerCase().replaceAll(RegExp('[\\s\'",]'), ''));
+    while (tokens.isNotEmpty && isCommand(tokens.first)) {
+      tokens.removeAt(0);
+    }
+    while (tokens.isNotEmpty && isCommand(tokens.last)) {
+      tokens.removeLast();
+    }
+    if (tokens.isNotEmpty && tokens.length <= 3) return tokens.join(' ');
+  }
   for (final pattern in patterns) {
     final m = RegExp(pattern, caseSensitive: false).firstMatch(q);
     if (m != null) {
