@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Concept",
+    "word_pt": "conceito",
+    "sentence": "The teacher explains a new concept.",
+    "translation": "O professor explica um conceito novo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cause",
+    "word_pt": "causa",
+    "sentence": "Doctors look for the cause of the illness.",
+    "translation": "Os médicos procuram a causa da doença."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Effect",
+    "word_pt": "efeito",
+    "sentence": "The medicine has an immediate effect.",
+    "translation": "O remédio tem um efeito imediato."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Consequence",
+    "word_pt": "consequência",
+    "sentence": "Every choice has a consequence.",
+    "translation": "Toda escolha tem uma consequência."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Solution",
+    "word_pt": "solução",
+    "sentence": "We find a simple solution to the problem.",
+    "translation": "Nós encontramos uma solução simples para o problema."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Opportunity",
+    "word_pt": "oportunidade",
+    "sentence": "This job offers a great opportunity.",
+    "translation": "Este emprego oferece uma grande oportunidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Challenge",
+    "word_pt": "desafio difícil",
+    "sentence": "Learning a new language is a real challenge.",
+    "translation": "Aprender um novo idioma é um desafio de verdade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Outcome",
+    "word_pt": "resultado final",
+    "sentence": "The outcome of the match surprises everyone.",
+    "translation": "O resultado final da partida surpreende todo mundo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Purpose",
+    "word_pt": "propósito",
+    "sentence": "The purpose of the meeting is clear.",
+    "translation": "O propósito da reunião é claro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stage",
+    "word_pt": "etapa",
+    "sentence": "We are at the first stage of the project.",
+    "translation": "Nós estamos na primeira etapa do projeto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Decade",
+    "word_pt": "década",
+    "sentence": "The city changes a lot in a decade.",
+    "translation": "A cidade muda muito em uma década."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Millennium",
+    "word_pt": "milênio",
+    "sentence": "The new millennium brings new technology.",
+    "translation": "O novo milênio traz tecnologia nova."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fortnight",
+    "word_pt": "quinzena",
+    "sentence": "We go on vacation for a fortnight.",
+    "translation": "Nós saímos de férias por uma quinzena."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Twilight",
+    "word_pt": "crepúsculo",
+    "sentence": "The sky turns orange at twilight.",
+    "translation": "O céu fica laranja no crepúsculo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dawn",
+    "word_pt": "amanhecer",
+    "sentence": "We leave home before dawn.",
+    "translation": "Nós saímos de casa antes do amanhecer."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dusk",
+    "word_pt": "entardecer",
+    "sentence": "The birds sing loudly at dusk.",
+    "translation": "Os pássaros cantam alto ao entardecer."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Eternity",
+    "word_pt": "eternidade",
+    "sentence": "The wait feels like an eternity.",
+    "translation": "A espera parece uma eternidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lapse",
+    "word_pt": "lapso",
+    "sentence": "A short lapse in attention causes the accident.",
+    "translation": "Um pequeno lapso de atenção causa o acidente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Timeline",
+    "word_pt": "cronograma",
+    "sentence": "We follow a strict timeline for the project.",
+    "translation": "Nós seguimos um cronograma rígido para o projeto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Calendar",
+    "word_pt": "calendário",
+    "sentence": "She marks the date on her calendar.",
+    "translation": "Ela marca a data no calendário dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Spicy",
+    "word_pt": "picante",
+    "sentence": "This curry is too spicy for me.",
+    "translation": "Este curry é muito picante para mim."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fragrant",
+    "word_pt": "perfumado",
+    "sentence": "The garden smells fragrant in spring.",
+    "translation": "O jardim tem um cheiro perfumado na primavera."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Smelly",
+    "word_pt": "fedido",
+    "sentence": "The old shoes are very smelly.",
+    "translation": "Os sapatos velhos são muito fedidos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Crunchy",
+    "word_pt": "crocante",
+    "sentence": "I like a crunchy salad with nuts.",
+    "translation": "Eu gosto de uma salada crocante com nozes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Creamy",
+    "word_pt": "cremoso",
+    "sentence": "This soup is thick and creamy.",
+    "translation": "Esta sopa é grossa e cremosa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Juicy",
+    "word_pt": "suculento",
+    "sentence": "The peach is sweet and juicy.",
+    "translation": "O pêssego é doce e suculento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ripe",
+    "word_pt": "maduro",
+    "sentence": "Choose a ripe banana for the smoothie.",
+    "translation": "Escolha uma banana madura para a vitamina."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rotten",
+    "word_pt": "podre",
+    "sentence": "The apple looks rotten inside.",
+    "translation": "A maçã parece podre por dentro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Greasy",
+    "word_pt": "gorduroso",
+    "sentence": "This food is too greasy for dinner.",
+    "translation": "Esta comida é muito gordurosa para o jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tasty",
+    "word_pt": "saboroso",
+    "sentence": "The homemade bread is very tasty.",
+    "translation": "O pão caseiro é muito saboroso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Bracelet",
+    "word_pt": "pulseira",
+    "sentence": "She wears a silver bracelet on her wrist.",
+    "translation": "Ela usa uma pulseira de prata no pulso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Earring",
+    "word_pt": "brinco",
+    "sentence": "He gives her a gold earring for her birthday.",
+    "translation": "Ele dá um brinco de ouro para ela de aniversário."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Wristwatch",
+    "word_pt": "relógio de pulso",
+    "sentence": "My grandfather gives me his old wristwatch.",
+    "translation": "Meu avô me dá o relógio de pulso antigo dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sunglasses",
+    "word_pt": "óculos de sol",
+    "sentence": "She puts on sunglasses before leaving the house.",
+    "translation": "Ela coloca óculos de sol antes de sair de casa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sandal",
+    "word_pt": "chinelo",
+    "sentence": "I wear a sandal at the beach.",
+    "translation": "Eu uso um chinelo na praia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Footwear",
+    "word_pt": "calçado esportivo",
+    "sentence": "This store sells comfortable footwear.",
+    "translation": "Esta loja vende calçado confortável."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Purse",
+    "word_pt": "bolsa de mão",
+    "sentence": "She keeps her keys in her purse.",
+    "translation": "Ela guarda as chaves na bolsa de mão dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Beret",
+    "word_pt": "boina",
+    "sentence": "He wears a black beret in winter.",
+    "translation": "Ele usa uma boina preta no inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Handkerchief",
+    "word_pt": "lenço de bolso",
+    "sentence": "My grandfather always carries a handkerchief.",
+    "translation": "Meu avô sempre carrega um lenço de bolso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vest",
+    "word_pt": "colete",
+    "sentence": "She wears a vest over her shirt.",
+    "translation": "Ela usa um colete por cima da camisa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Seashell",
+    "word_pt": "concha do mar",
+    "sentence": "The child collects a seashell on the beach.",
+    "translation": "A criança coleta uma concha do mar na praia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tide",
+    "word_pt": "maré",
+    "sentence": "The tide comes in during the afternoon.",
+    "translation": "A maré sobe durante a tarde."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Reef",
+    "word_pt": "recife de coral",
+    "sentence": "Divers explore the colorful reef.",
+    "translation": "Mergulhadores exploram o recife colorido."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dolphin",
+    "word_pt": "golfinho",
+    "sentence": "A dolphin jumps near the boat.",
+    "translation": "Um golfinho pula perto do barco."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Octopus",
+    "word_pt": "polvo",
+    "sentence": "The octopus hides among the rocks.",
+    "translation": "O polvo se esconde entre as pedras."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Crab",
+    "word_pt": "caranguejo",
+    "sentence": "A crab walks sideways on the sand.",
+    "translation": "Um caranguejo anda de lado na areia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Jellyfish",
+    "word_pt": "água-viva",
+    "sentence": "A jellyfish floats near the shore.",
+    "translation": "Uma água-viva flutua perto da costa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Starfish",
+    "word_pt": "estrela-do-mar",
+    "sentence": "We find a starfish in the shallow water.",
+    "translation": "Nós encontramos uma estrela-do-mar na água rasa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Seal",
+    "word_pt": "foca",
+    "sentence": "A seal rests on the rocky shore.",
+    "translation": "Uma foca descansa na costa rochosa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Penguin",
+    "word_pt": "pinguim",
+    "sentence": "A penguin waddles across the ice.",
+    "translation": "Um pinguim se move desajeitado pelo gelo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Jungle",
+    "word_pt": "selva",
+    "sentence": "The explorer walks through the thick jungle.",
+    "translation": "O explorador caminha pela selva densa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vine",
+    "word_pt": "trepadeira",
+    "sentence": "A vine climbs up the old wall.",
+    "translation": "Uma trepadeira sobe pela parede velha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Moss",
+    "word_pt": "musgo",
+    "sentence": "Moss covers the shaded rocks.",
+    "translation": "Musgo cobre as pedras sombreadas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Jaguar",
+    "word_pt": "onça-pintada",
+    "sentence": "A jaguar hunts near the river at night.",
+    "translation": "Uma onça-pintada caça perto do rio à noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Alligator",
+    "word_pt": "jacaré",
+    "sentence": "An alligator swims quietly in the swamp.",
+    "translation": "Um jacaré nada silenciosamente no pântano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Caterpillar",
+    "word_pt": "lagarta",
+    "sentence": "A caterpillar eats the leaf slowly.",
+    "translation": "Uma lagarta come a folha devagar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Moth",
+    "word_pt": "mariposa",
+    "sentence": "A moth flies around the porch light.",
+    "translation": "Uma mariposa voa em volta da luz da varanda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dragonfly",
+    "word_pt": "libélula",
+    "sentence": "A dragonfly rests on the flower.",
+    "translation": "Uma libélula pousa na flor."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Beetle",
+    "word_pt": "besouro",
+    "sentence": "A beetle crawls across the path.",
+    "translation": "Um besouro rasteja pela trilha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Grasshopper",
+    "word_pt": "gafanhoto",
+    "sentence": "A grasshopper jumps through the grass.",
+    "translation": "Um gafanhoto pula pela grama."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Advantage",
+    "word_pt": "vantagem",
+    "sentence": "Speaking two languages gives him an advantage.",
+    "translation": "Falar dois idiomas dá a ele uma vantagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Drawback",
+    "word_pt": "desvantagem",
+    "sentence": "The only drawback is the high price.",
+    "translation": "A única desvantagem é o preço alto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Benefit",
+    "word_pt": "benefício",
+    "sentence": "Exercise gives you a big health benefit.",
+    "translation": "Exercício te dá um grande benefício para a saúde."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Viewpoint",
+    "word_pt": "ponto de vista",
+    "sentence": "I respect her viewpoint even if I disagree.",
+    "translation": "Eu respeito o ponto de vista dela mesmo discordando."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Concern",
+    "word_pt": "preocupação",
+    "sentence": "Safety is our main concern.",
+    "translation": "Segurança é nossa principal preocupação."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Proof",
+    "word_pt": "prova concreta",
+    "sentence": "We need proof before accusing him.",
+    "translation": "Nós precisamos de prova concreta antes de acusá-lo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Assumption",
+    "word_pt": "suposição",
+    "sentence": "Her plan is based on a wrong assumption.",
+    "translation": "O plano dela é baseado numa suposição errada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Belief",
+    "word_pt": "crença",
+    "sentence": "It is his personal belief, not a fact.",
+    "translation": "É uma crença pessoal dele, não um fato."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Priority",
+    "word_pt": "prioridade",
+    "sentence": "Family is my top priority.",
+    "translation": "Família é minha principal prioridade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Trend",
+    "word_pt": "tendência",
+    "sentence": "This color is a popular trend this year.",
+    "translation": "Esta cor é uma tendência popular este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Greet",
+    "word_pt": "cumprimentar",
+    "sentence": "I greet my neighbors every morning.",
+    "translation": "Eu cumprimento meus vizinhos toda manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Introduce",
+    "word_pt": "apresentar alguém",
+    "sentence": "Let me introduce you to my sister.",
+    "translation": "Deixe-me apresentar você à minha irmã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Thank",
+    "word_pt": "agradecer",
+    "sentence": "I thank her for the kind gift.",
+    "translation": "Eu agradeço a ela pelo presente gentil."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Comfort",
+    "word_pt": "consolar",
+    "sentence": "I comfort my friend after the bad news.",
+    "translation": "Eu conforto meu amigo depois da má notícia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Quarrel",
+    "word_pt": "brigar",
+    "sentence": "The brothers quarrel over the remote control.",
+    "translation": "Os irmãos brigam pelo controle remoto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Reconcile",
+    "word_pt": "reconciliar",
+    "sentence": "They finally reconcile after the argument.",
+    "translation": "Eles finalmente se reconciliam depois da discussão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Argue",
+    "word_pt": "discutir",
+    "sentence": "We argue about small things sometimes.",
+    "translation": "Nós discutimos sobre coisas pequenas às vezes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tease",
+    "word_pt": "zombar",
+    "sentence": "My brother likes to tease me about my hair.",
+    "translation": "Meu irmão gosta de zombar do meu cabelo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Provoke",
+    "word_pt": "provocar",
+    "sentence": "He tries not to provoke his sister.",
+    "translation": "Ele tenta não provocar a irmã dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Collaborate",
+    "word_pt": "colaborar",
+    "sentence": "The two teams collaborate on the new project.",
+    "translation": "As duas equipes colaboram no novo projeto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Similar",
+    "word_pt": "semelhante",
+    "sentence": "Her opinion is similar to mine.",
+    "translation": "A opinião dela é semelhante à minha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Equal",
+    "word_pt": "igual em valor",
+    "sentence": "Both offers seem equal in value.",
+    "translation": "As duas ofertas parecem iguais em valor."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Opposite",
+    "word_pt": "oposto",
+    "sentence": "His answer is the opposite of hers.",
+    "translation": "A resposta dele é o oposto da dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Typical",
+    "word_pt": "típico",
+    "sentence": "This is a typical rainy day here.",
+    "translation": "Este é um dia de chuva típico aqui."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Exact",
+    "word_pt": "exato",
+    "sentence": "I don't know the exact time of the meeting.",
+    "translation": "Eu não sei a hora exata da reunião."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Approximate",
+    "word_pt": "aproximado",
+    "sentence": "Give me an approximate price for the trip.",
+    "translation": "Me dê um preço aproximado para a viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Entire",
+    "word_pt": "inteiro",
+    "sentence": "She reads the entire book in one day.",
+    "translation": "Ela lê o livro inteiro em um dia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Partial",
+    "word_pt": "parcial",
+    "sentence": "We receive only a partial payment.",
+    "translation": "Nós recebemos só um pagamento parcial."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ordinary",
+    "word_pt": "comum de todo dia",
+    "sentence": "It is just an ordinary weekday for us.",
+    "translation": "É só um dia de semana comum para nós."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Extra",
+    "word_pt": "adicional",
+    "sentence": "Bring extra water for the hike.",
+    "translation": "Traga água adicional para a caminhada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Supervise",
+    "word_pt": "supervisionar",
+    "sentence": "I supervise a team of ten people.",
+    "translation": "Eu supervisiono uma equipe de dez pessoas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Delegate",
+    "word_pt": "delegar",
+    "sentence": "I delegate some tasks to my assistant.",
+    "translation": "Eu delego algumas tarefas ao meu assistente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Deliver",
+    "word_pt": "entregar",
+    "sentence": "I deliver the report by Friday.",
+    "translation": "Eu entrego o relatório até sexta-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Attach",
+    "word_pt": "anexar",
+    "sentence": "I attach the file to the email.",
+    "translation": "Eu anexo o arquivo ao e-mail."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Review",
+    "word_pt": "revisar",
+    "sentence": "I review the contract before signing it.",
+    "translation": "Eu reviso o contrato antes de assiná-lo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Exhibit",
+    "word_pt": "mostrar em público",
+    "sentence": "I exhibit my paintings downtown.",
+    "translation": "Eu mostro minhas pinturas em público no centro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Register",
+    "word_pt": "inscrever-se",
+    "sentence": "I register for the course online.",
+    "translation": "Eu me inscrevo no curso online."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Apply",
+    "word_pt": "candidatar-se",
+    "sentence": "I apply for the manager position.",
+    "translation": "Eu me candidato à vaga de gerente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Earn",
+    "word_pt": "ganhar dinheiro",
+    "sentence": "I earn extra money on weekends.",
+    "translation": "Eu ganho dinheiro extra nos fins de semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Resign",
+    "word_pt": "renunciar",
+    "sentence": "She decides to resign from her job.",
+    "translation": "Ela decide renunciar ao emprego dela."
+  }
+]

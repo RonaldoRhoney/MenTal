@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Kilometer",
+    "word_pt": "quilômetro",
+    "sentence": "The store is one kilometer from here.",
+    "translation": "A loja fica a um quilômetro daqui."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mile",
+    "word_pt": "milha",
+    "sentence": "The airport is one mile away.",
+    "translation": "O aeroporto fica a uma milha de distância."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Inch",
+    "word_pt": "polegada",
+    "sentence": "The new screen is one inch bigger.",
+    "translation": "A tela nova é uma polegada maior."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Liter",
+    "word_pt": "litro",
+    "sentence": "I buy a liter of milk every day.",
+    "translation": "Eu compro um litro de leite todo dia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gallon",
+    "word_pt": "galão",
+    "sentence": "The tank holds one gallon of fuel.",
+    "translation": "O tanque comporta um galão de combustível."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pound",
+    "word_pt": "libra",
+    "sentence": "This bag weighs about one pound.",
+    "translation": "Esta sacola pesa cerca de uma libra."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ounce",
+    "word_pt": "onça de peso",
+    "sentence": "Add one ounce of chocolate to the recipe.",
+    "translation": "Adicione uma onça de chocolate à receita."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dozen",
+    "word_pt": "dúzia",
+    "sentence": "I buy a dozen eggs at the market.",
+    "translation": "Eu compro uma dúzia de ovos no mercado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Centimeter",
+    "word_pt": "centímetro",
+    "sentence": "Cut the ribbon down by one centimeter.",
+    "translation": "Corte a fita reduzindo um centímetro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Billion",
+    "word_pt": "bilhão",
+    "sentence": "The company earns over a billion dollars.",
+    "translation": "A empresa ganha mais de um bilhão de dólares."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Triangle",
+    "word_pt": "triângulo",
+    "sentence": "She draws a triangle on the paper.",
+    "translation": "Ela desenha um triângulo no papel."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rectangle",
+    "word_pt": "retângulo",
+    "sentence": "The garden has the shape of a rectangle.",
+    "translation": "O jardim tem a forma de um retângulo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cylinder",
+    "word_pt": "cilindro",
+    "sentence": "The can has the shape of a cylinder.",
+    "translation": "A lata tem a forma de um cilindro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sphere",
+    "word_pt": "esfera",
+    "sentence": "The ball is a perfect sphere.",
+    "translation": "A bola é uma esfera perfeita."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cube",
+    "word_pt": "cubo",
+    "sentence": "He builds a tower using a cube.",
+    "translation": "Ele constrói uma torre usando um cubo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Curve",
+    "word_pt": "curva",
+    "sentence": "The road has a sharp curve ahead.",
+    "translation": "A estrada tem uma curva fechada à frente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Beige",
+    "word_pt": "bege",
+    "sentence": "She paints the wall a soft beige.",
+    "translation": "Ela pinta a parede de um bege suave."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Maroon",
+    "word_pt": "cor de vinho",
+    "sentence": "He wears a maroon jacket to the party.",
+    "translation": "Ele usa uma jaqueta cor de vinho para a festa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lilac",
+    "word_pt": "lilás",
+    "sentence": "The dress comes in a light lilac color.",
+    "translation": "O vestido vem numa cor lilás clara."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Turquoise",
+    "word_pt": "turquesa",
+    "sentence": "The water looks turquoise near the reef.",
+    "translation": "A água parece turquesa perto do recife."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cockroach",
+    "word_pt": "barata",
+    "sentence": "A cockroach runs across the kitchen floor.",
+    "translation": "Uma barata corre pelo chão da cozinha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Flea",
+    "word_pt": "pulga",
+    "sentence": "The dog scratches because of a flea.",
+    "translation": "O cachorro se coça por causa de uma pulga."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tick",
+    "word_pt": "carrapato",
+    "sentence": "She finds a tick on the dog's fur.",
+    "translation": "Ela encontra um carrapato no pelo do cachorro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Wasp",
+    "word_pt": "vespa",
+    "sentence": "A wasp flies near the window.",
+    "translation": "Uma vespa voa perto da janela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ladybug",
+    "word_pt": "joaninha",
+    "sentence": "A ladybug lands on the leaf.",
+    "translation": "Uma joaninha pousa na folha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cricket",
+    "word_pt": "grilo",
+    "sentence": "I hear a cricket outside my window.",
+    "translation": "Eu ouço um grilo do lado de fora da janela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Bat",
+    "word_pt": "morcego",
+    "sentence": "A bat flies out of the old barn.",
+    "translation": "Um morcego voa para fora do celeiro velho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Slug",
+    "word_pt": "lesma",
+    "sentence": "A slug moves slowly across the path.",
+    "translation": "Uma lesma se move devagar pela trilha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Snail",
+    "word_pt": "caracol",
+    "sentence": "A snail leaves a trail on the leaf.",
+    "translation": "Um caracol deixa um rastro na folha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lizard",
+    "word_pt": "lagarto",
+    "sentence": "A lizard runs up the garden wall.",
+    "translation": "Um lagarto corre pela parede do jardim."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Eagle",
+    "word_pt": "águia",
+    "sentence": "An eagle flies high above the mountains.",
+    "translation": "Uma águia voa alto acima das montanhas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hawk",
+    "word_pt": "falcão",
+    "sentence": "A hawk circles above the field.",
+    "translation": "Um falcão sobrevoa em círculos o campo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Seagull",
+    "word_pt": "gaivota",
+    "sentence": "A seagull follows the fishing boat.",
+    "translation": "Uma gaivota segue o barco de pesca."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Swan",
+    "word_pt": "cisne",
+    "sentence": "A swan glides across the lake.",
+    "translation": "Um cisne desliza pelo lago."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Peacock",
+    "word_pt": "pavão",
+    "sentence": "The peacock opens its colorful tail.",
+    "translation": "O pavão abre a cauda colorida."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Woodpecker",
+    "word_pt": "pica-pau",
+    "sentence": "A woodpecker taps on the old tree.",
+    "translation": "Um pica-pau bica a árvore velha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hummingbird",
+    "word_pt": "beija-flor",
+    "sentence": "A hummingbird visits the flower every day.",
+    "translation": "Um beija-flor visita a flor todo dia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Crow",
+    "word_pt": "corvo",
+    "sentence": "A crow lands on the fence.",
+    "translation": "Um corvo pousa na cerca."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vulture",
+    "word_pt": "urubu",
+    "sentence": "A vulture circles above the field.",
+    "translation": "Um urubu sobrevoa em círculos o campo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ostrich",
+    "word_pt": "avestruz",
+    "sentence": "An ostrich runs faster than a horse.",
+    "translation": "Um avestruz corre mais rápido que um cavalo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Flute",
+    "word_pt": "flauta",
+    "sentence": "She plays the flute in the school band.",
+    "translation": "Ela toca flauta na banda da escola."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Trumpet",
+    "word_pt": "trompete",
+    "sentence": "He learns to play the trumpet this year.",
+    "translation": "Ele aprende a tocar trompete este ano."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Saxophone",
+    "word_pt": "saxofone",
+    "sentence": "The musician plays a smooth saxophone solo.",
+    "translation": "O músico toca um solo suave de saxofone."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Harp",
+    "word_pt": "harpa",
+    "sentence": "She practices the harp every evening.",
+    "translation": "Ela pratica harpa toda noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Accordion",
+    "word_pt": "acordeão",
+    "sentence": "He plays the accordion at family parties.",
+    "translation": "Ele toca acordeão nas festas de família."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Harmonica",
+    "word_pt": "gaita de boca",
+    "sentence": "The old man plays a harmonica on the porch.",
+    "translation": "O senhor idoso toca gaita de boca na varanda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cymbals",
+    "word_pt": "pratos de bateria",
+    "sentence": "The drummer crashes the cymbals at the end.",
+    "translation": "O baterista bate os pratos de bateria no final."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tambourine",
+    "word_pt": "pandeiro",
+    "sentence": "She shakes the tambourine during the song.",
+    "translation": "Ela sacode o pandeiro durante a música."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Organ",
+    "word_pt": "órgão",
+    "sentence": "He plays the organ at the church.",
+    "translation": "Ele toca órgão na igreja."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cello",
+    "word_pt": "violoncelo",
+    "sentence": "She practices the cello for the concert.",
+    "translation": "Ela pratica violoncelo para o show."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Veterinarian",
+    "word_pt": "veterinário",
+    "sentence": "The veterinarian examines the sick dog.",
+    "translation": "O veterinário examina o cachorro doente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Architect",
+    "word_pt": "arquiteto",
+    "sentence": "The architect designs the new library.",
+    "translation": "O arquiteto projeta a nova biblioteca."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Journalist",
+    "word_pt": "jornalista",
+    "sentence": "The journalist interviews the mayor.",
+    "translation": "O jornalista entrevista o prefeito."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Carpenter",
+    "word_pt": "carpinteiro",
+    "sentence": "The carpenter builds a wooden table.",
+    "translation": "O carpinteiro constrói uma mesa de madeira."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Electrician",
+    "word_pt": "eletricista",
+    "sentence": "The electrician fixes the broken light.",
+    "translation": "O eletricista conserta a luz quebrada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Librarian",
+    "word_pt": "bibliotecário",
+    "sentence": "The librarian helps me find the book.",
+    "translation": "O bibliotecário me ajuda a encontrar o livro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Scientist",
+    "word_pt": "cientista",
+    "sentence": "The scientist studies the effects of the vaccine.",
+    "translation": "O cientista estuda os efeitos da vacina."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dancer",
+    "word_pt": "dançarino",
+    "sentence": "She trains to become a professional dancer.",
+    "translation": "Ela treina para se tornar uma dançarina profissional."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Photographer",
+    "word_pt": "fotógrafo",
+    "sentence": "The photographer captures the perfect sunset.",
+    "translation": "O fotógrafo captura o pôr do sol perfeito."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fisherman",
+    "word_pt": "pescador",
+    "sentence": "The fisherman returns early in the morning.",
+    "translation": "O pescador retorna cedo de manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Padlock",
+    "word_pt": "cadeado",
+    "sentence": "He locks the gate with a padlock.",
+    "translation": "Ele tranca o portão com um cadeado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Chain",
+    "word_pt": "corrente de metal",
+    "sentence": "A chain keeps the gate closed.",
+    "translation": "Uma corrente mantém o portão fechado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Compass",
+    "word_pt": "bússola",
+    "sentence": "We use a compass to find north.",
+    "translation": "Nós usamos uma bússola para achar o norte."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Magnifier",
+    "word_pt": "lupa",
+    "sentence": "She reads the small print with a magnifier.",
+    "translation": "Ela lê a letra pequena com uma lupa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Binoculars",
+    "word_pt": "binóculo",
+    "sentence": "He watches the birds with binoculars.",
+    "translation": "Ele observa os pássaros com um binóculo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Match",
+    "word_pt": "fósforo",
+    "sentence": "I light the candle with a match.",
+    "translation": "Eu acendo a vela com um fósforo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lighter",
+    "word_pt": "isqueiro",
+    "sentence": "He carries a lighter for the campfire.",
+    "translation": "Ele carrega um isqueiro para a fogueira."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Spring",
+    "word_pt": "mola",
+    "sentence": "A broken spring makes the chair squeak.",
+    "translation": "Uma mola quebrada faz a cadeira ranger."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cog",
+    "word_pt": "engrenagem",
+    "sentence": "A small cog turns inside the clock.",
+    "translation": "Uma engrenagem pequena gira dentro do relógio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hinge",
+    "word_pt": "dobradiça",
+    "sentence": "The hinge on the door needs oil.",
+    "translation": "A dobradiça da porta precisa de óleo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Certificate",
+    "word_pt": "certidão",
+    "sentence": "She receives a certificate after the course.",
+    "translation": "Ela recebe um certificado depois do curso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Form",
+    "word_pt": "formulário",
+    "sentence": "I fill out the form at the office.",
+    "translation": "Eu preencho o formulário no escritório."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Registration",
+    "word_pt": "cadastro",
+    "sentence": "Registration for the event ends on Friday.",
+    "translation": "O cadastro para o evento termina na sexta-feira."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Voucher",
+    "word_pt": "comprovante",
+    "sentence": "I use a voucher to get a discount.",
+    "translation": "Eu uso um comprovante para ter um desconto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Warranty",
+    "word_pt": "garantia do produto",
+    "sentence": "The laptop comes with a two-year warranty.",
+    "translation": "O laptop vem com garantia de dois anos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tag",
+    "word_pt": "etiqueta de preço",
+    "sentence": "Check the tag before buying the shirt.",
+    "translation": "Confira a etiqueta antes de comprar a camisa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Permit",
+    "word_pt": "alvará",
+    "sentence": "You need a permit to build here.",
+    "translation": "Você precisa de um alvará para construir aqui."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Visa",
+    "word_pt": "visto de viagem",
+    "sentence": "I apply for a visa before the trip.",
+    "translation": "Eu solicito um visto antes da viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fee",
+    "word_pt": "taxa",
+    "sentence": "The school charges a small fee for the trip.",
+    "translation": "A escola cobra uma pequena taxa pela viagem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Identity",
+    "word_pt": "carteira de identidade",
+    "sentence": "Please show proof of your identity at the door.",
+    "translation": "Por favor, mostre um comprovante da sua identidade na porta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Peel",
+    "word_pt": "descascar",
+    "sentence": "I peel the potatoes for dinner.",
+    "translation": "Eu descasco as batatas para o jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Slice",
+    "word_pt": "fatiar",
+    "sentence": "I slice the bread for breakfast.",
+    "translation": "Eu fatio o pão para o café da manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Chop",
+    "word_pt": "picar",
+    "sentence": "I chop the onion before cooking.",
+    "translation": "Eu pico a cebola antes de cozinhar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mash",
+    "word_pt": "amassar",
+    "sentence": "I mash the potatoes with butter.",
+    "translation": "Eu amasso as batatas com manteiga."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Simmer",
+    "word_pt": "ferver em fogo baixo",
+    "sentence": "I let the sauce simmer for ten minutes.",
+    "translation": "Eu deixo o molho ferver em fogo baixo por dez minutos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Fry",
+    "word_pt": "fritar",
+    "sentence": "I fry the eggs in a small pan.",
+    "translation": "Eu frito os ovos numa frigideira pequena."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Stir",
+    "word_pt": "mexer",
+    "sentence": "I stir the soup so it doesn't stick.",
+    "translation": "Eu mexo a sopa para não grudar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Serve",
+    "word_pt": "servir",
+    "sentence": "I serve dinner at seven o'clock.",
+    "translation": "Eu sirvo o jantar às sete horas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Devour",
+    "word_pt": "devorar",
+    "sentence": "I devour the pizza after the long game.",
+    "translation": "Eu devoro a pizza depois do jogo longo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sip",
+    "word_pt": "beber aos poucos",
+    "sentence": "I sip my tea slowly by the window.",
+    "translation": "Eu bebo meu chá aos poucos perto da janela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Marry",
+    "word_pt": "casar-se",
+    "sentence": "They marry after five years together.",
+    "translation": "Eles se casam depois de cinco anos juntos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Reside",
+    "word_pt": "residir",
+    "sentence": "I reside in the north of the city.",
+    "translation": "Eu resido no norte da cidade."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Relocate",
+    "word_pt": "mudar de cidade",
+    "sentence": "We relocate to a new city for work.",
+    "translation": "Nós nos mudamos para uma nova cidade por trabalho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Migrate",
+    "word_pt": "migrar",
+    "sentence": "Birds migrate south before winter.",
+    "translation": "Os pássaros migram para o sul antes do inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Inherit",
+    "word_pt": "herdar",
+    "sentence": "I inherit the house from my grandmother.",
+    "translation": "Eu herdo a casa da minha avó."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Survive",
+    "word_pt": "sobreviver",
+    "sentence": "Few plants survive the harsh winter.",
+    "translation": "Poucas plantas sobrevivem ao inverno rigoroso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gain",
+    "word_pt": "ganhar peso",
+    "sentence": "I gain weight during the holidays.",
+    "translation": "Eu ganho peso durante as festas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Care",
+    "word_pt": "cuidar de alguém",
+    "sentence": "I care for my elderly grandfather.",
+    "translation": "Eu cuido do meu avô idoso."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Raise",
+    "word_pt": "criar filhos",
+    "sentence": "They raise three children in this house.",
+    "translation": "Eles criam três filhos nesta casa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Engage",
+    "word_pt": "ficar noivo",
+    "sentence": "They engage to marry after two years of dating.",
+    "translation": "Eles ficam noivos depois de dois anos de namoro."
+  }
+]

@@ -1,0 +1,802 @@
+[
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Robbery",
+    "word_pt": "roubo com ameaça",
+    "sentence": "Police investigate the robbery at the bank.",
+    "translation": "A polícia investiga o roubo no banco."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Theft",
+    "word_pt": "furto",
+    "sentence": "The store reports a theft last night.",
+    "translation": "A loja relata um furto ontem à noite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Victim",
+    "word_pt": "vítima",
+    "sentence": "The victim describes the man to the police.",
+    "translation": "A vítima descreve o homem para a polícia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Prison",
+    "word_pt": "prisão",
+    "sentence": "He spends five years in prison.",
+    "translation": "Ele passa cinco anos na prisão."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Investigation",
+    "word_pt": "investigação",
+    "sentence": "The investigation lasts several months.",
+    "translation": "A investigação dura vários meses."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Accusation",
+    "word_pt": "acusação",
+    "sentence": "She denies the accusation completely.",
+    "translation": "Ela nega a acusação completamente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Criminal",
+    "word_pt": "criminoso",
+    "sentence": "The criminal escapes through the back door.",
+    "translation": "O criminoso escapa pela porta dos fundos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Surveillance",
+    "word_pt": "vigilância",
+    "sentence": "The mall uses surveillance cameras everywhere.",
+    "translation": "O shopping usa câmeras de vigilância em todo lugar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Danger",
+    "word_pt": "perigo",
+    "sentence": "The sign warns of danger ahead.",
+    "translation": "A placa avisa sobre perigo à frente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Threat",
+    "word_pt": "ameaça",
+    "sentence": "The company takes the threat seriously.",
+    "translation": "A empresa leva a ameaça a sério."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Overtime",
+    "word_pt": "horas extras",
+    "sentence": "I work overtime to finish the project.",
+    "translation": "Eu trabalho horas extras para terminar o projeto."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dismissal",
+    "word_pt": "demissão",
+    "sentence": "His dismissal surprises everyone in the office.",
+    "translation": "A demissão dele surpreende todo mundo no escritório."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Jobless",
+    "word_pt": "desempregado",
+    "sentence": "He remains jobless for six months.",
+    "translation": "Ele fica desempregado por seis meses."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Target",
+    "word_pt": "meta a atingir",
+    "sentence": "Our team meets the sales target this month.",
+    "translation": "Nossa equipe alcança a meta de vendas este mês."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Foreman",
+    "word_pt": "chefe de seção",
+    "sentence": "The foreman checks the work every morning.",
+    "translation": "O chefe de seção confere o trabalho toda manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Badge",
+    "word_pt": "crachá",
+    "sentence": "Every visitor wears a badge in the building.",
+    "translation": "Todo visitante usa um crachá no prédio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Shift",
+    "word_pt": "turno de trabalho",
+    "sentence": "I work the night shift this week.",
+    "translation": "Eu trabalho no turno da noite esta semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vacancy",
+    "word_pt": "vaga de emprego",
+    "sentence": "The company announces a new vacancy today.",
+    "translation": "A empresa anuncia uma nova vaga de emprego hoje."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Training",
+    "word_pt": "treinamento",
+    "sentence": "New employees receive training in the first week.",
+    "translation": "Novos funcionários recebem treinamento na primeira semana."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Payroll",
+    "word_pt": "folha de pagamento",
+    "sentence": "The payroll goes out on the last Friday of the month.",
+    "translation": "A folha de pagamento sai na última sexta do mês."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pumpkin",
+    "word_pt": "abóbora",
+    "sentence": "She bakes a pumpkin pie for Thanksgiving.",
+    "translation": "Ela assa uma torta de abóbora para o Dia de Ação de Graças."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Eggplant",
+    "word_pt": "berinjela",
+    "sentence": "He grills eggplant with olive oil.",
+    "translation": "Ele grelha berinjela com azeite."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cucumber",
+    "word_pt": "pepino",
+    "sentence": "I add cucumber to the salad.",
+    "translation": "Eu adiciono pepino na salada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Spinach",
+    "word_pt": "espinafre",
+    "sentence": "She cooks spinach with garlic.",
+    "translation": "Ela cozinha espinafre com alho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Cauliflower",
+    "word_pt": "couve-flor",
+    "sentence": "We roast cauliflower for dinner.",
+    "translation": "Nós assamos couve-flor para o jantar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Avocado",
+    "word_pt": "abacate",
+    "sentence": "I spread avocado on my toast.",
+    "translation": "Eu passo abacate na minha torrada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Almond",
+    "word_pt": "amêndoa",
+    "sentence": "She snacks on an almond during the afternoon.",
+    "translation": "Ela belisca uma amêndoa durante a tarde."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Peanut",
+    "word_pt": "amendoim",
+    "sentence": "He is allergic to peanut butter.",
+    "translation": "Ele é alérgico a manteiga de amendoim."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Chickpea",
+    "word_pt": "grão-de-bico",
+    "sentence": "This soup has one chickpea in every spoon.",
+    "translation": "Esta sopa tem um grão-de-bico em cada colher."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Raspberry",
+    "word_pt": "framboesa",
+    "sentence": "She adds a fresh raspberry to her yogurt.",
+    "translation": "Ela acrescenta uma framboesa fresca ao iogurte dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Broth",
+    "word_pt": "caldo",
+    "sentence": "The chef prepares a chicken broth.",
+    "translation": "O chef prepara um caldo de galinha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Muffin",
+    "word_pt": "bolinho doce",
+    "sentence": "I buy a blueberry muffin for breakfast.",
+    "translation": "Eu compro um bolinho de mirtilo no café da manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Pudding",
+    "word_pt": "pudim",
+    "sentence": "She makes chocolate pudding for dessert.",
+    "translation": "Ela faz pudim de chocolate de sobremesa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Porridge",
+    "word_pt": "mingau",
+    "sentence": "He eats porridge every winter morning.",
+    "translation": "Ele come mingau toda manhã de inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Oats",
+    "word_pt": "aveia",
+    "sentence": "I mix oats with milk and fruit.",
+    "translation": "Eu misturo aveia com leite e fruta."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mayonnaise",
+    "word_pt": "maionese",
+    "sentence": "She spreads mayonnaise on the sandwich.",
+    "translation": "Ela passa maionese no sanduíche."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mustard",
+    "word_pt": "mostarda",
+    "sentence": "He puts mustard on his hot dog.",
+    "translation": "Ele põe mostarda no cachorro-quente dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vinegar",
+    "word_pt": "vinagre",
+    "sentence": "A little vinegar improves the salad dressing.",
+    "translation": "Um pouco de vinagre melhora o molho da salada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Yeast",
+    "word_pt": "fermento",
+    "sentence": "The bread needs yeast to rise.",
+    "translation": "O pão precisa de fermento para crescer."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tart",
+    "word_pt": "torta doce",
+    "sentence": "She bakes a lemon tart for the party.",
+    "translation": "Ela assa uma torta de limão para a festa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Liver",
+    "word_pt": "fígado",
+    "sentence": "The doctor checks his liver function.",
+    "translation": "O médico verifica a função do fígado dele."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Kidney",
+    "word_pt": "rim",
+    "sentence": "Drinking water helps the kidney work well.",
+    "translation": "Beber água ajuda o rim a funcionar bem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Intestine",
+    "word_pt": "intestino",
+    "sentence": "The small intestine absorbs most nutrients.",
+    "translation": "O intestino delgado absorve a maioria dos nutrientes."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Vein",
+    "word_pt": "veia",
+    "sentence": "The nurse finds a vein quickly.",
+    "translation": "A enfermeira encontra uma veia rapidamente."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Artery",
+    "word_pt": "artéria",
+    "sentence": "The artery carries blood from the heart.",
+    "translation": "A artéria carrega sangue do coração."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Spine",
+    "word_pt": "coluna vertebral",
+    "sentence": "Sitting badly can hurt your spine.",
+    "translation": "Sentar mal pode machucar a coluna vertebral."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Skull",
+    "word_pt": "crânio",
+    "sentence": "The helmet protects the skull during a fall.",
+    "translation": "O capacete protege o crânio durante uma queda."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Rib",
+    "word_pt": "costela",
+    "sentence": "He breaks a rib playing rugby.",
+    "translation": "Ele quebra uma costela jogando rugby."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hip",
+    "word_pt": "quadril",
+    "sentence": "She has surgery on her hip.",
+    "translation": "Ela faz cirurgia no quadril dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Jaw",
+    "word_pt": "mandíbula",
+    "sentence": "His jaw hurts after the dentist visit.",
+    "translation": "A mandíbula dele dói depois da visita ao dentista."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Hairbrush",
+    "word_pt": "escova de cabelo",
+    "sentence": "She keeps a hairbrush in her bag.",
+    "translation": "Ela mantém uma escova de cabelo na bolsa dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dryer",
+    "word_pt": "secador de cabelo",
+    "sentence": "I use a dryer after washing my hair.",
+    "translation": "Eu uso um secador depois de lavar o cabelo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Razor",
+    "word_pt": "navalha",
+    "sentence": "He shaves with a new razor.",
+    "translation": "Ele se barbeia com uma navalha nova."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Deodorant",
+    "word_pt": "desodorante",
+    "sentence": "She applies deodorant every morning.",
+    "translation": "Ela aplica desodorante toda manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tweezers",
+    "word_pt": "pinça",
+    "sentence": "I use tweezers to remove the splinter.",
+    "translation": "Eu uso uma pinça para tirar a farpa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Makeup",
+    "word_pt": "maquiagem",
+    "sentence": "She wears light makeup to work.",
+    "translation": "Ela usa maquiagem leve para o trabalho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sunscreen",
+    "word_pt": "protetor solar",
+    "sentence": "Apply sunscreen before going to the beach.",
+    "translation": "Passe protetor solar antes de ir à praia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Moisturizer",
+    "word_pt": "hidratante",
+    "sentence": "He uses moisturizer after shaving.",
+    "translation": "Ele usa hidratante depois de se barbear."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Washcloth",
+    "word_pt": "toalhinha de rosto",
+    "sentence": "She washes her face with a washcloth.",
+    "translation": "Ela lava o rosto com uma toalhinha."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lotion",
+    "word_pt": "loção",
+    "sentence": "I put lotion on my dry hands.",
+    "translation": "Eu passo loção nas minhas mãos secas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Seatbelt",
+    "word_pt": "cinto de segurança",
+    "sentence": "Please fasten your seatbelt before we start.",
+    "translation": "Por favor, afivele o cinto de segurança antes de partirmos."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Toll",
+    "word_pt": "pedágio",
+    "sentence": "We pay the toll before entering the highway.",
+    "translation": "Nós pagamos o pedágio antes de entrar na rodovia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Lane",
+    "word_pt": "faixa de rolagem",
+    "sentence": "Stay in your lane on the highway.",
+    "translation": "Fique na sua faixa na rodovia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Brake",
+    "word_pt": "freio",
+    "sentence": "She presses the brake at the red light.",
+    "translation": "Ela pisa no freio no semáforo vermelho."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tire",
+    "word_pt": "pneu",
+    "sentence": "He changes a flat tire on the road.",
+    "translation": "Ele troca um pneu furado na estrada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Gear",
+    "word_pt": "marcha do carro",
+    "sentence": "I shift into a lower gear on the hill.",
+    "translation": "Eu troco para uma marcha mais baixa na subida."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tank",
+    "word_pt": "tanque de combustível",
+    "sentence": "The tank is almost empty.",
+    "translation": "O tanque está quase vazio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "License",
+    "word_pt": "carteira de motorista",
+    "sentence": "She gets her driver's license this month.",
+    "translation": "Ela tira a carteira de motorista dela este mês."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Accident",
+    "word_pt": "acidente de trânsito",
+    "sentence": "The accident happens near the intersection.",
+    "translation": "O acidente acontece perto do cruzamento."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Ferry",
+    "word_pt": "balsa",
+    "sentence": "We take the ferry across the river.",
+    "translation": "Nós pegamos a balsa para atravessar o rio."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Envy",
+    "word_pt": "inveja",
+    "sentence": "He feels envy when his friend gets promoted.",
+    "translation": "Ele sente inveja quando o amigo dele é promovido."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Grudge",
+    "word_pt": "rancor",
+    "sentence": "She holds a grudge against her old boss.",
+    "translation": "Ela guarda rancor do antigo chefe dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Longing",
+    "word_pt": "saudade",
+    "sentence": "A deep longing for home fills her heart.",
+    "translation": "Uma saudade profunda de casa preenche o coração dela."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Guilt",
+    "word_pt": "culpa",
+    "sentence": "He feels guilt about the broken promise.",
+    "translation": "Ele sente culpa pela promessa quebrada."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sorrow",
+    "word_pt": "tristeza profunda",
+    "sentence": "Sorrow fills the room after the news.",
+    "translation": "Tristeza profunda toma conta da sala depois da notícia."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Delight",
+    "word_pt": "deleite",
+    "sentence": "She smiles with delight at the surprise.",
+    "translation": "Ela sorri com deleite diante da surpresa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dread",
+    "word_pt": "pavor",
+    "sentence": "He feels dread before the exam results.",
+    "translation": "Ele sente pavor antes do resultado da prova."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Bliss",
+    "word_pt": "êxtase",
+    "sentence": "They enjoy a moment of pure bliss.",
+    "translation": "Eles aproveitam um momento de puro êxtase."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Boredom",
+    "word_pt": "tédio",
+    "sentence": "Boredom takes over during the long meeting.",
+    "translation": "O tédio toma conta durante a reunião longa."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Enthusiasm",
+    "word_pt": "entusiasmo",
+    "sentence": "She talks about the project with great enthusiasm.",
+    "translation": "Ela fala sobre o projeto com grande entusiasmo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Tidy",
+    "word_pt": "arrumar",
+    "sentence": "I tidy my room before guests arrive.",
+    "translation": "Eu arrumo meu quarto antes dos convidados chegarem."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Mop",
+    "word_pt": "passar esfregão",
+    "sentence": "I mop the kitchen floor every Saturday.",
+    "translation": "Eu passo esfregão no chão da cozinha todo sábado."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sew",
+    "word_pt": "costurar",
+    "sentence": "My grandmother taught me how to sew.",
+    "translation": "Minha avó me ensinou a costurar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Knit",
+    "word_pt": "tricotar",
+    "sentence": "She learns to knit a scarf this winter.",
+    "translation": "Ela aprende a tricotar um cachecol neste inverno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Embroider",
+    "word_pt": "bordar",
+    "sentence": "I embroider flowers on the pillow.",
+    "translation": "Eu bordo flores no travesseiro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Harvest",
+    "word_pt": "colher a plantação",
+    "sentence": "Farmers harvest the corn in September.",
+    "translation": "Os agricultores colhem o milho em setembro."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Sow",
+    "word_pt": "semear",
+    "sentence": "They sow seeds early in the spring.",
+    "translation": "Eles semeiam sementes no início da primavera."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Weave",
+    "word_pt": "tecer",
+    "sentence": "I weave a basket from dry leaves.",
+    "translation": "Eu teço uma cesta com folhas secas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Dye",
+    "word_pt": "tingir",
+    "sentence": "I dye my old shirt a bright blue.",
+    "translation": "Eu tingo minha camisa velha de azul vivo."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Polish",
+    "word_pt": "polir",
+    "sentence": "I polish my shoes before the interview.",
+    "translation": "Eu lustro meus sapatos antes da entrevista."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Doubt",
+    "word_pt": "duvidar",
+    "sentence": "I doubt the plan will work.",
+    "translation": "Eu duvido que o plano vá funcionar."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Assume",
+    "word_pt": "supor",
+    "sentence": "We assume the meeting starts at nine.",
+    "translation": "Nós supomos que a reunião começa às nove."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Conclude",
+    "word_pt": "concluir",
+    "sentence": "I conclude the report with a strong recommendation.",
+    "translation": "Eu concluo o relatório com uma recomendação forte."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Deduce",
+    "word_pt": "deduzir",
+    "sentence": "I deduce the answer from the clues.",
+    "translation": "Eu deduzo a resposta a partir das pistas."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Analyze",
+    "word_pt": "analisar",
+    "sentence": "We analyze the data before deciding.",
+    "translation": "Nós analisamos os dados antes de decidir."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Assess",
+    "word_pt": "avaliar",
+    "sentence": "I assess each student's progress.",
+    "translation": "Eu avalio o progresso de cada aluno."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Meditate",
+    "word_pt": "meditar",
+    "sentence": "I meditate for ten minutes every morning.",
+    "translation": "Eu medito por dez minutos toda manhã."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Memorize",
+    "word_pt": "memorizar",
+    "sentence": "I memorize the poem for class.",
+    "translation": "Eu memorizo o poema para a aula."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Focus",
+    "word_pt": "concentrar-se",
+    "sentence": "I focus on one task at a time.",
+    "translation": "Eu me concentro em uma tarefa de cada vez."
+  },
+  {
+    "language": "ingles",
+    "level": "intermediario",
+    "word": "Wonder",
+    "word_pt": "indagar",
+    "sentence": "I wonder why the flight is delayed.",
+    "translation": "Eu me indago por que o voo está atrasado."
+  }
+]
