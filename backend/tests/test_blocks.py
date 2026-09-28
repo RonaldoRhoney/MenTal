@@ -129,12 +129,20 @@ def test_blocks_without_any_territory_are_not_returned(client):
     }
 
 
-def test_idiomas_ingles_espanhol_frances_blocks_group_their_3_territories_each(client):
+def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
     """ORGANIZACAO_VISUAL_POR_SECAO_TODOS_MUNDOS_V1.md (19/09/2026,
     aprovado) — levantamento mostrou que Inglês/Espanhol/Francês eram os
     únicos territórios do Mundo dos Idiomas sem block_id, misturados
     numa grade sem separação (diferente de Libras, já bloco próprio
-    desde sempre). migrations/080_blocos_idiomas.sql."""
+    desde sempre). migrations/080_blocos_idiomas.sql.
+
+    MUNDO_IDIOMAS_INGLES_PHRASAL_VERBS_V1.md (27/09/2026) — Phrasal
+    Verbs NÃO é um idioma novo, é conteúdo do idioma Inglês (decisão de
+    Rhoney, mesmo dia): os territórios de Phrasal Verbs entram no MESMO
+    bloco "ingles", nunca num bloco "phrasal_verbs" à parte — por isso
+    o bloco "ingles" tem 9 territórios (3 de vocabulário + 6 de Phrasal
+    Verbs) enquanto Espanhol/Francês continuam com 3 cada, sem Phrasal
+    Verbs equivalente ainda."""
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
@@ -142,7 +150,11 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_3_territories_each(c
     body = client.get("/progress", headers=headers).json()
     blocks = {b["block_id"]: b for b in body["blocks"]}
 
-    assert sorted(blocks["ingles"]["territory_ids"]) == ["ingles_avancado", "ingles_basico", "ingles_intermediario"]
+    assert sorted(blocks["ingles"]["territory_ids"]) == [
+        "ingles_avancado", "ingles_basico", "ingles_intermediario",
+        "ingles_phrasal_avancado", "ingles_phrasal_basico", "ingles_phrasal_intermediario",
+        "ingles_phrasal_relampago_avancado", "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario",
+    ]
     assert sorted(blocks["espanhol"]["territory_ids"]) == ["espanhol_avancado", "espanhol_basico", "espanhol_intermediario"]
     assert sorted(blocks["frances"]["territory_ids"]) == ["frances_avancado", "frances_basico", "frances_intermediario"]
     assert blocks["ingles"]["name"] == "Inglês"
@@ -152,6 +164,8 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_3_territories_each(c
     worlds = {w["world_id"]: w for w in body["worlds"]}
     assert {
         "ingles_basico", "ingles_intermediario", "ingles_avancado",
+        "ingles_phrasal_basico", "ingles_phrasal_intermediario", "ingles_phrasal_avancado",
+        "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario", "ingles_phrasal_relampago_avancado",
         "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
         "frances_basico", "frances_intermediario", "frances_avancado",
     }.issubset(set(worlds["idiomas"]["territory_ids"]))

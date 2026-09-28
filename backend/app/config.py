@@ -272,6 +272,10 @@ IDIOMA_TERRITORY_IDS = {
     "ingles_basico", "ingles_intermediario", "ingles_avancado",
     "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
     "frances_basico", "frances_intermediario", "frances_avancado",
+    # Phrasal verbs (MUNDO_IDIOMAS_INGLES_PHRASAL_VERBS_V1.md, 27/09/2026) — o Mental Lingo
+    # também precisa reconhecer/explicar phrasal verbs quando o jogador perguntar.
+    "ingles_phrasal_basico", "ingles_phrasal_intermediario", "ingles_phrasal_avancado",
+    "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario", "ingles_phrasal_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -279,7 +283,13 @@ IDIOMA_TERRITORY_IDS = {
 # GERAL.md) e agora Cores (V3.0.1_DESAFIO_CORES.md, 29/08/2026): um
 # desafio de atenção/velocidade de leitura só faz sentido cronometrado,
 # em qualquer nível, incluindo fácil.
-ALWAYS_TIMED_TERRITORIES = {"conhecimento", "cores", "curiosidade_relampago"}
+ALWAYS_TIMED_TERRITORIES = {
+    "conhecimento", "cores", "curiosidade_relampago",
+    # Phrasal Verbs Relâmpago (MUNDO_IDIOMAS_INGLES_PHRASAL_VERBS_V1.md, 27/09/2026): mesmo
+    # padrão do Curiosidade Relâmpago — território próprio, sempre cronometrado, com conteúdo
+    # distinto do território "normal" (nunca as mesmas 100 perguntas com um cronômetro a mais).
+    "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario", "ingles_phrasal_relampago_avancado",
+}
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_
 # TERRITORIES acima — "cápsula de texto + perguntas" exige NUNCA

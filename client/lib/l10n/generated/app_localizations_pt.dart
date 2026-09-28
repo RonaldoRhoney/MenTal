@@ -256,6 +256,28 @@ class AppLocalizationsPt extends AppLocalizations {
   String get territoryFrancesAvancado => 'Francês Avançado';
 
   @override
+  String get territoryInglesPhrasalBasico => 'Phrasal Verbs: Básico';
+
+  @override
+  String get territoryInglesPhrasalIntermediario =>
+      'Phrasal Verbs: Intermediário';
+
+  @override
+  String get territoryInglesPhrasalAvancado => 'Phrasal Verbs: Avançado';
+
+  @override
+  String get territoryInglesPhrasalRelampagoBasico =>
+      'Phrasal Verbs Relâmpago: Básico';
+
+  @override
+  String get territoryInglesPhrasalRelampagoIntermediario =>
+      'Phrasal Verbs Relâmpago: Intermediário';
+
+  @override
+  String get territoryInglesPhrasalRelampagoAvancado =>
+      'Phrasal Verbs Relâmpago: Avançado';
+
+  @override
   String get territoryBolsa => 'Bolsa e Investimentos';
 
   @override

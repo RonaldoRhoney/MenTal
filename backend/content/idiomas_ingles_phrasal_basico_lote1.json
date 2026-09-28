@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I wake up at seven every morning.\", o que significa 'wake up'?",
+    "options": [
+      "sair de casa",
+      "dormir",
+      "se vestir",
+      "acordar ou despertar"
+    ],
+    "correct_answer": "acordar ou despertar",
+    "explanation": "Nesta frase, 'wake up' significa \"acordar ou despertar\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I get up as soon as the alarm rings.\", o que significa 'get up'?",
+    "options": [
+      "escovar os dentes",
+      "tomar banho",
+      "levantar-se da cama",
+      "deitar-se"
+    ],
+    "correct_answer": "levantar-se da cama",
+    "explanation": "Nesta frase, 'get up' significa \"levantar-se da cama\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I doze off on the couch after lunch.\", o que significa 'doze off'?",
+    "options": [
+      "acordar de repente",
+      "sair correndo",
+      "levantar rápido",
+      "cochilar ou dormitar"
+    ],
+    "correct_answer": "cochilar ou dormitar",
+    "explanation": "Nesta frase, 'doze off' significa \"cochilar ou dormitar\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I brush up on my English before the trip.\", o que significa 'brush up'?",
+    "options": [
+      "esquecer completamente",
+      "aprender do zero",
+      "revisar/praticar de novo",
+      "parar de estudar"
+    ],
+    "correct_answer": "revisar/praticar de novo",
+    "explanation": "Nesta frase, 'brush up' significa \"revisar/praticar de novo\".",
+    "hints": [
+      "Tema: Estudo.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I dress up for the party tonight.\", o que significa 'dress up'?",
+    "options": [
+      "tirar a roupa",
+      "ficar de pijama",
+      "dormir cedo",
+      "se arrumar bem"
+    ],
+    "correct_answer": "se arrumar bem",
+    "explanation": "Nesta frase, 'dress up' significa \"se arrumar bem\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I wash up before dinner.\", o que significa 'wash up'?",
+    "options": [
+      "cozinhar",
+      "sair correndo",
+      "comer rápido",
+      "lavar as mãos/o rosto"
+    ],
+    "correct_answer": "lavar as mãos/o rosto",
+    "explanation": "Nesta frase, 'wash up' significa \"lavar as mãos/o rosto\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My shoes wear out after a year of use.\", o que significa 'wear out'?",
+    "options": [
+      "brilhar",
+      "ficar novo",
+      "se desgastar",
+      "encolher"
+    ],
+    "correct_answer": "se desgastar",
+    "explanation": "Nesta frase, 'wear out' significa \"se desgastar\".",
+    "hints": [
+      "Tema: Roupas e objetos.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I try on the jacket before buying it.\", o que significa 'try on'?",
+    "options": [
+      "devolver",
+      "costurar",
+      "experimentar (roupa)",
+      "lavar"
+    ],
+    "correct_answer": "experimentar (roupa)",
+    "explanation": "Nesta frase, 'try on' significa \"experimentar (roupa)\".",
+    "hints": [
+      "Tema: Compras.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I take off my shoes at the door.\", o que significa 'take off'?",
+    "options": [
+      "tirar (roupa/calçado)",
+      "comprar",
+      "colocar",
+      "lavar"
+    ],
+    "correct_answer": "tirar (roupa/calçado)",
+    "explanation": "Nesta frase, 'take off' significa \"tirar (roupa/calçado)\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I put on my coat before going outside.\", o que significa 'put on'?",
+    "options": [
+      "lavar",
+      "dobrar",
+      "colocar (roupa)",
+      "tirar"
+    ],
+    "correct_answer": "colocar (roupa)",
+    "explanation": "Nesta frase, 'put on' significa \"colocar (roupa)\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I turn on the light in the kitchen.\", o que significa 'turn on'?",
+    "options": [
+      "quebrar",
+      "desligar",
+      "consertar",
+      "ligar (aparelho)"
+    ],
+    "correct_answer": "ligar (aparelho)",
+    "explanation": "Nesta frase, 'turn on' significa \"ligar (aparelho)\".",
+    "hints": [
+      "Tema: Casa.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I turn off the TV before sleeping.\", o que significa 'turn off'?",
+    "options": [
+      "comprar",
+      "assistir",
+      "ligar",
+      "desligar (aparelho)"
+    ],
+    "correct_answer": "desligar (aparelho)",
+    "explanation": "Nesta frase, 'turn off' significa \"desligar (aparelho)\".",
+    "hints": [
+      "Tema: Casa.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I clean up my room every Saturday.\", o que significa 'clean up'?",
+    "options": [
+      "quebrar",
+      "sujar",
+      "limpar ou arrumar",
+      "bagunçar"
+    ],
+    "correct_answer": "limpar ou arrumar",
+    "explanation": "Nesta frase, 'clean up' significa \"limpar ou arrumar\".",
+    "hints": [
+      "Tema: Casa.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I tidy up the living room before guests arrive.\", o que significa 'tidy up'?",
+    "options": [
+      "vender",
+      "alugar",
+      "bagunçar",
+      "arrumar ou organizar"
+    ],
+    "correct_answer": "arrumar ou organizar",
+    "explanation": "Nesta frase, 'tidy up' significa \"arrumar ou organizar\".",
+    "hints": [
+      "Tema: Casa.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I throw away the old newspapers.\", o que significa 'throw away'?",
+    "options": [
+      "jogar fora",
+      "guardar",
+      "emprestar",
+      "vender"
+    ],
+    "correct_answer": "jogar fora",
+    "explanation": "Nesta frase, 'throw away' significa \"jogar fora\".",
+    "hints": [
+      "Tema: Casa.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I pick up the toys from the floor.\", o que significa 'pick up'?",
+    "options": [
+      "quebrar",
+      "pegar ou recolher",
+      "esconder",
+      "derrubar"
+    ],
+    "correct_answer": "pegar ou recolher",
+    "explanation": "Nesta frase, 'pick up' significa \"pegar ou recolher\".",
+    "hints": [
+      "Tema: Casa.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I hang up my jacket on the hook.\", o que significa 'hang up'?",
+    "options": [
+      "dobrar",
+      "jogar fora",
+      "lavar",
+      "pendurar ou prender"
+    ],
+    "correct_answer": "pendurar ou prender",
+    "explanation": "Nesta frase, 'hang up' significa \"pendurar ou prender\".",
+    "hints": [
+      "Tema: Casa.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I fill up the bottle with water.\", o que significa 'fill up'?",
+    "options": [
+      "esvaziar",
+      "lavar",
+      "encher ou lotar",
+      "quebrar"
+    ],
+    "correct_answer": "encher ou lotar",
+    "explanation": "Nesta frase, 'fill up' significa \"encher ou lotar\".",
+    "hints": [
+      "Tema: Casa.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I plug in the lamp before turning it on.\", o que significa 'plug in'?",
+    "options": [
+      "vender",
+      "quebrar",
+      "desconectar",
+      "conectar na tomada"
+    ],
+    "correct_answer": "conectar na tomada",
+    "explanation": "Nesta frase, 'plug in' significa \"conectar na tomada\".",
+    "hints": [
+      "Tema: Casa.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We move in to the new apartment next week.\", o que significa 'move in'?",
+    "options": [
+      "se mudar para",
+      "se mudar de",
+      "vender",
+      "alugar"
+    ],
+    "correct_answer": "se mudar para",
+    "explanation": "Nesta frase, 'move in' significa \"se mudar para\".",
+    "hints": [
+      "Tema: Casa.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Please sit down and relax.\", o que significa 'sit down'?",
+    "options": [
+      "sentar-se ou acomodar-se",
+      "correr",
+      "dançar",
+      "levantar-se"
+    ],
+    "correct_answer": "sentar-se ou acomodar-se",
+    "explanation": "Nesta frase, 'sit down' significa \"sentar-se ou acomodar-se\".",
+    "hints": [
+      "Tema: Movimento.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We all stand up when the teacher enters.\", o que significa 'stand up'?",
+    "options": [
+      "levantar-se ou erguer-se",
+      "dormir",
+      "deitar-se",
+      "sentar-se"
+    ],
+    "correct_answer": "levantar-se ou erguer-se",
+    "explanation": "Nesta frase, 'stand up' significa \"levantar-se ou erguer-se\".",
+    "hints": [
+      "Tema: Movimento.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Please come in and take a seat.\", o que significa 'come in'?",
+    "options": [
+      "sair",
+      "descer",
+      "subir",
+      "entrar ou ingressar"
+    ],
+    "correct_answer": "entrar ou ingressar",
+    "explanation": "Nesta frase, 'come in' significa \"entrar ou ingressar\".",
+    "hints": [
+      "Tema: Movimento.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We go out for dinner on Fridays.\", o que significa 'go out'?",
+    "options": [
+      "dormir",
+      "cozinhar",
+      "sair (de casa)",
+      "entrar"
+    ],
+    "correct_answer": "sair (de casa)",
+    "explanation": "Nesta frase, 'go out' significa \"sair (de casa)\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We go on with the lesson after the break.\", o que significa 'go on'?",
+    "options": [
+      "voltar",
+      "continuar ou seguir",
+      "parar",
+      "desistir"
+    ],
+    "correct_answer": "continuar ou seguir",
+    "explanation": "Nesta frase, 'go on' significa \"continuar ou seguir\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I go back home after work.\", o que significa 'go back'?",
+    "options": [
+      "ir para frente",
+      "esperar",
+      "voltar ou retornar",
+      "parar"
+    ],
+    "correct_answer": "voltar ou retornar",
+    "explanation": "Nesta frase, 'go back' significa \"voltar ou retornar\".",
+    "hints": [
+      "Tema: Movimento.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The cats run away when they see the dog.\", o que significa 'run away'?",
+    "options": [
+      "brincar",
+      "comer",
+      "dormir",
+      "fugir ou escapar"
+    ],
+    "correct_answer": "fugir ou escapar",
+    "explanation": "Nesta frase, 'run away' significa \"fugir ou escapar\".",
+    "hints": [
+      "Tema: Movimento.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I walk in without knocking.\", o que significa 'walk in'?",
+    "options": [
+      "sair andando",
+      "ficar parado",
+      "entrar andando",
+      "correr para fora"
+    ],
+    "correct_answer": "entrar andando",
+    "explanation": "Nesta frase, 'walk in' significa \"entrar andando\".",
+    "hints": [
+      "Tema: Movimento.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I come back home at six every day.\", o que significa 'come back'?",
+    "options": [
+      "esperar",
+      "sair",
+      "voltar ou retornar",
+      "ficar"
+    ],
+    "correct_answer": "voltar ou retornar",
+    "explanation": "Nesta frase, 'come back' significa \"voltar ou retornar\".",
+    "hints": [
+      "Tema: Movimento.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We get in the car and drive away.\", o que significa 'get in'?",
+    "options": [
+      "entrar (num veículo)",
+      "sair de (um veículo)",
+      "lavar",
+      "vender"
+    ],
+    "correct_answer": "entrar (num veículo)",
+    "explanation": "Nesta frase, 'get in' significa \"entrar (num veículo)\".",
+    "hints": [
+      "Tema: Transporte.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I get on the bus at the corner.\", o que significa 'get on'?",
+    "options": [
+      "perder",
+      "entrar/subir (ônibus, trem)",
+      "comprar",
+      "descer de"
+    ],
+    "correct_answer": "entrar/subir (ônibus, trem)",
+    "explanation": "Nesta frase, 'get on' significa \"entrar/subir (ônibus, trem)\".",
+    "hints": [
+      "Tema: Transporte.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I get off the bus at the next stop.\", o que significa 'get off'?",
+    "options": [
+      "descer (de ônibus, trem)",
+      "dirigir",
+      "esperar por",
+      "subir em"
+    ],
+    "correct_answer": "descer (de ônibus, trem)",
+    "explanation": "Nesta frase, 'get off' significa \"descer (de ônibus, trem)\".",
+    "hints": [
+      "Tema: Transporte.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We check in at the hotel at three.\", o que significa 'check in'?",
+    "options": [
+      "fazer o check-in",
+      "fazer o check-out",
+      "reservar depois",
+      "cancelar"
+    ],
+    "correct_answer": "fazer o check-in",
+    "explanation": "Nesta frase, 'check in' significa \"fazer o check-in\".",
+    "hints": [
+      "Tema: Viagem.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We check out of the hotel at noon.\", o que significa 'check out'?",
+    "options": [
+      "fazer o check-in",
+      "pagar antecipado",
+      "fazer o check-out",
+      "reservar"
+    ],
+    "correct_answer": "fazer o check-out",
+    "explanation": "Nesta frase, 'check out' significa \"fazer o check-out\".",
+    "hints": [
+      "Tema: Viagem.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We set off early to avoid traffic.\", o que significa 'set off'?",
+    "options": [
+      "voltar tarde",
+      "cancelar a viagem",
+      "partir/sair em viagem",
+      "dormir mais"
+    ],
+    "correct_answer": "partir/sair em viagem",
+    "explanation": "Nesta frase, 'set off' significa \"partir/sair em viagem\".",
+    "hints": [
+      "Tema: Viagem.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I drop off my son at school.\", o que significa 'drop off'?",
+    "options": [
+      "buscar",
+      "esquecer",
+      "perder",
+      "deixar (alguém em algum lugar)"
+    ],
+    "correct_answer": "deixar (alguém em algum lugar)",
+    "explanation": "Nesta frase, 'drop off' significa \"deixar (alguém em algum lugar)\".",
+    "hints": [
+      "Tema: Transporte.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I help out my neighbor with the groceries.\", o que significa 'help out'?",
+    "options": [
+      "atrapalhar",
+      "ajudar ou auxiliar",
+      "ignorar",
+      "criticar"
+    ],
+    "correct_answer": "ajudar ou auxiliar",
+    "explanation": "Nesta frase, 'help out' significa \"ajudar ou auxiliar\".",
+    "hints": [
+      "Tema: Social.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I look for my keys every morning.\", o que significa 'look for'?",
+    "options": [
+      "procurar ou buscar",
+      "perder",
+      "encontrar",
+      "jogar fora"
+    ],
+    "correct_answer": "procurar ou buscar",
+    "explanation": "Nesta frase, 'look for' significa \"procurar ou buscar\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I look up the word in the dictionary.\", o que significa 'look up'?",
+    "options": [
+      "esquecer",
+      "procurar (informação)",
+      "ignorar",
+      "inventar"
+    ],
+    "correct_answer": "procurar (informação)",
+    "explanation": "Nesta frase, 'look up' significa \"procurar (informação)\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I write down the homework in my notebook.\", o que significa 'write down'?",
+    "options": [
+      "esquecer",
+      "apagar",
+      "ler em voz alta",
+      "anotar ou registrar"
+    ],
+    "correct_answer": "anotar ou registrar",
+    "explanation": "Nesta frase, 'write down' significa \"anotar ou registrar\".",
+    "hints": [
+      "Tema: Estudo.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I fill in the form with my name.\", o que significa 'fill in'?",
+    "options": [
+      "perder",
+      "rasgar",
+      "preencher ou completar",
+      "apagar"
+    ],
+    "correct_answer": "preencher ou completar",
+    "explanation": "Nesta frase, 'fill in' significa \"preencher ou completar\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I hand in my homework before the deadline.\", o que significa 'hand in'?",
+    "options": [
+      "esconder",
+      "perder",
+      "entregar ou restituir",
+      "copiar"
+    ],
+    "correct_answer": "entregar ou restituir",
+    "explanation": "Nesta frase, 'hand in' significa \"entregar ou restituir\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"I figure out the answer after a while.\", o que significa 'figure out'?",
+    "options": [
+      "ignorar",
+      "esquecer",
+      "errar de propósito",
+      "descobrir ou entender"
+    ],
+    "correct_answer": "descobrir ou entender",
+    "explanation": "Nesta frase, 'figure out' significa \"descobrir ou entender\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I find out the answer online.\", o que significa 'find out'?",
+    "options": [
+      "perder",
+      "descobrir ou perceber",
+      "inventar",
+      "esconder"
+    ],
+    "correct_answer": "descobrir ou perceber",
+    "explanation": "Nesta frase, 'find out' significa \"descobrir ou perceber\".",
+    "hints": [
+      "Tema: Estudo.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"I catch up with my classmates after being sick.\", o que significa 'catch up'?",
+    "options": [
+      "ficar para trás",
+      "colocar-se em dia",
+      "repetir o ano",
+      "desistir"
+    ],
+    "correct_answer": "colocar-se em dia",
+    "explanation": "Nesta frase, 'catch up' significa \"colocar-se em dia\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I keep on studying even when it's hard.\", o que significa 'keep on'?",
+    "options": [
+      "desistir",
+      "continuar ou seguir",
+      "esquecer",
+      "parar"
+    ],
+    "correct_answer": "continuar ou seguir",
+    "explanation": "Nesta frase, 'keep on' significa \"continuar ou seguir\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"I give up sugar for my health.\", o que significa 'give up'?",
+    "options": [
+      "aumentar",
+      "começar",
+      "continuar",
+      "desistir de"
+    ],
+    "correct_answer": "desistir de",
+    "explanation": "Nesta frase, 'give up' significa \"desistir de\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I log in to my email every morning.\", o que significa 'log in'?",
+    "options": [
+      "sair (fazer logout)",
+      "apagar a conta",
+      "entrar (com login/senha)",
+      "criar uma conta"
+    ],
+    "correct_answer": "entrar (com login/senha)",
+    "explanation": "Nesta frase, 'log in' significa \"entrar (com login/senha)\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I log out when I finish using the computer.\", o que significa 'log out'?",
+    "options": [
+      "instalar um programa",
+      "sair (fazer logout)",
+      "entrar (fazer login)",
+      "desligar o wifi"
+    ],
+    "correct_answer": "sair (fazer logout)",
+    "explanation": "Nesta frase, 'log out' significa \"sair (fazer logout)\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I turn up the volume of the music.\", o que significa 'turn up'?",
+    "options": [
+      "diminuir (volume)",
+      "desligar",
+      "gravar",
+      "aumentar (volume)"
+    ],
+    "correct_answer": "aumentar (volume)",
+    "explanation": "Nesta frase, 'turn up' significa \"aumentar (volume)\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I turn down the volume at night.\", o que significa 'turn down'?",
+    "options": [
+      "apagar",
+      "aumentar (volume)",
+      "ligar",
+      "diminuir (volume)"
+    ],
+    "correct_answer": "diminuir (volume)",
+    "explanation": "Nesta frase, 'turn down' significa \"diminuir (volume)\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I switch on the computer to start working.\", o que significa 'switch on'?",
+    "options": [
+      "desligar",
+      "vender",
+      "quebrar",
+      "ligar (aparelho)"
+    ],
+    "correct_answer": "ligar (aparelho)",
+    "explanation": "Nesta frase, 'switch on' significa \"ligar (aparelho)\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I switch off the computer before leaving.\", o que significa 'switch off'?",
+    "options": [
+      "desligar (aparelho)",
+      "atualizar",
+      "carregar",
+      "ligar"
+    ],
+    "correct_answer": "desligar (aparelho)",
+    "explanation": "Nesta frase, 'switch off' significa \"desligar (aparelho)\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I charge up my phone every night.\", o que significa 'charge up'?",
+    "options": [
+      "carregar (bateria)",
+      "quebrar",
+      "vender",
+      "descarregar"
+    ],
+    "correct_answer": "carregar (bateria)",
+    "explanation": "Nesta frase, 'charge up' significa \"carregar (bateria)\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I back up my files every week.\", o que significa 'back up'?",
+    "options": [
+      "imprimir",
+      "fazer backup/cópia de segurança",
+      "compartilhar",
+      "apagar"
+    ],
+    "correct_answer": "fazer backup/cópia de segurança",
+    "explanation": "Nesta frase, 'back up' significa \"fazer backup/cópia de segurança\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I sign up for the online course.\", o que significa 'sign up'?",
+    "options": [
+      "se inscrever",
+      "desistir",
+      "cancelar a inscrição",
+      "reprovar"
+    ],
+    "correct_answer": "se inscrever",
+    "explanation": "Nesta frase, 'sign up' significa \"se inscrever\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I print out the document for the meeting.\", o que significa 'print out'?",
+    "options": [
+      "imprimir ou reproduzir",
+      "apagar",
+      "salvar apenas",
+      "enviar por e-mail"
+    ],
+    "correct_answer": "imprimir ou reproduzir",
+    "explanation": "Nesta frase, 'print out' significa \"imprimir ou reproduzir\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I call back later because I'm busy now.\", o que significa 'call back'?",
+    "options": [
+      "atender a ligação",
+      "desligar o telefone",
+      "enviar mensagem",
+      "ligar de volta"
+    ],
+    "correct_answer": "ligar de volta",
+    "explanation": "Nesta frase, 'call back' significa \"ligar de volta\".",
+    "hints": [
+      "Tema: Social.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I hang out with my friends on Sundays.\", o que significa 'hang out'?",
+    "options": [
+      "brigar com",
+      "evitar",
+      "trabalhar sozinho",
+      "sair/passar tempo com"
+    ],
+    "correct_answer": "sair/passar tempo com",
+    "explanation": "Nesta frase, 'hang out' significa \"sair/passar tempo com\".",
+    "hints": [
+      "Tema: Social.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We meet up at the coffee shop at noon.\", o que significa 'meet up'?",
+    "options": [
+      "escrever",
+      "se encontrar",
+      "ligar",
+      "se separar"
+    ],
+    "correct_answer": "se encontrar",
+    "explanation": "Nesta frase, 'meet up' significa \"se encontrar\".",
+    "hints": [
+      "Tema: Social.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"I get along well with my new coworkers.\", o que significa 'get along'?",
+    "options": [
+      "brigar com",
+      "evitar",
+      "ignorar",
+      "se dar bem"
+    ],
+    "correct_answer": "se dar bem",
+    "explanation": "Nesta frase, 'get along' significa \"se dar bem\".",
+    "hints": [
+      "Tema: Social.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"We make up after the small argument.\", o que significa 'make up'?",
+    "options": [
+      "desistir da amizade",
+      "ignorar um ao outro",
+      "fazer as pazes",
+      "brigar mais"
+    ],
+    "correct_answer": "fazer as pazes",
+    "explanation": "Nesta frase, 'make up' significa \"fazer as pazes\".",
+    "hints": [
+      "Tema: Social.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I show up late to the meeting.\", o que significa 'show up'?",
+    "options": [
+      "faltar",
+      "avisar antes",
+      "aparecer ou comparecer",
+      "cancelar"
+    ],
+    "correct_answer": "aparecer ou comparecer",
+    "explanation": "Nesta frase, 'show up' significa \"aparecer ou comparecer\".",
+    "hints": [
+      "Tema: Social.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I step out for a few minutes during the meeting.\", o que significa 'step out'?",
+    "options": [
+      "sair ou retirar-se",
+      "entrar",
+      "dormir",
+      "ficar parado"
+    ],
+    "correct_answer": "sair ou retirar-se",
+    "explanation": "Nesta frase, 'step out' significa \"sair ou retirar-se\".",
+    "hints": [
+      "Tema: Social.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"I drop by my grandmother's house on Sundays.\", o que significa 'drop by'?",
+    "options": [
+      "evitar completamente",
+      "visitar rapidamente",
+      "morar junto com",
+      "ligar antes de visitar"
+    ],
+    "correct_answer": "visitar rapidamente",
+    "explanation": "Nesta frase, 'drop by' significa \"visitar rapidamente\".",
+    "hints": [
+      "Tema: Social.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"I cheer up my friend after the bad news.\", o que significa 'cheer up'?",
+    "options": [
+      "ignorar",
+      "deixar triste",
+      "animar ou alegrar",
+      "criticar"
+    ],
+    "correct_answer": "animar ou alegrar",
+    "explanation": "Nesta frase, 'cheer up' significa \"animar ou alegrar\".",
+    "hints": [
+      "Tema: Social.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I look after my little sister on weekends.\", o que significa 'look after'?",
+    "options": [
+      "ignorar",
+      "evitar",
+      "cuidar de",
+      "machucar"
+    ],
+    "correct_answer": "cuidar de",
+    "explanation": "Nesta frase, 'look after' significa \"cuidar de\".",
+    "hints": [
+      "Tema: Social.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I wait for the bus every morning.\", o que significa 'wait for'?",
+    "options": [
+      "pegar",
+      "procurar",
+      "perder",
+      "esperar por"
+    ],
+    "correct_answer": "esperar por",
+    "explanation": "Nesta frase, 'wait for' significa \"esperar por\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I hurry up because I'm late.\", o que significa 'hurry up'?",
+    "options": [
+      "se apressar",
+      "desistir",
+      "ir devagar",
+      "parar"
+    ],
+    "correct_answer": "se apressar",
+    "explanation": "Nesta frase, 'hurry up' significa \"se apressar\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I slow down because of the rain.\", o que significa 'slow down'?",
+    "options": [
+      "acelerar",
+      "desacelerar ou frear",
+      "parar de vez",
+      "dormir"
+    ],
+    "correct_answer": "desacelerar ou frear",
+    "explanation": "Nesta frase, 'slow down' significa \"desacelerar ou frear\".",
+    "hints": [
+      "Tema: Trânsito e clima.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Hold on a minute, please.\", o que significa 'hold on'?",
+    "options": [
+      "desistir",
+      "ir embora",
+      "gritar",
+      "esperar um pouco"
+    ],
+    "correct_answer": "esperar um pouco",
+    "explanation": "Nesta frase, 'hold on' significa \"esperar um pouco\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We carry on despite the rain.\", o que significa 'carry on'?",
+    "options": [
+      "parar",
+      "voltar",
+      "continuar ou seguir",
+      "desistir"
+    ],
+    "correct_answer": "continuar ou seguir",
+    "explanation": "Nesta frase, 'carry on' significa \"continuar ou seguir\".",
+    "hints": [
+      "Tema: Persistência.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Skies clear up after storms around here.\", o que significa 'clear up'?",
+    "options": [
+      "chover mais",
+      "ficar frio",
+      "clarear ou melhorar",
+      "escurecer"
+    ],
+    "correct_answer": "clarear ou melhorar",
+    "explanation": "Nesta frase, 'clear up' significa \"clarear ou melhorar\".",
+    "hints": [
+      "Tema: Clima.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I cool down after the run.\", o que significa 'cool down'?",
+    "options": [
+      "suar mais",
+      "esfriar ou arrefecer",
+      "correr mais rápido",
+      "esquentar"
+    ],
+    "correct_answer": "esfriar ou arrefecer",
+    "explanation": "Nesta frase, 'cool down' significa \"esfriar ou arrefecer\".",
+    "hints": [
+      "Tema: Exercício físico.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I warm up before exercising.\", o que significa 'warm up'?",
+    "options": [
+      "dormir",
+      "se aquecer",
+      "se esfriar",
+      "descansar"
+    ],
+    "correct_answer": "se aquecer",
+    "explanation": "Nesta frase, 'warm up' significa \"se aquecer\".",
+    "hints": [
+      "Tema: Exercício físico.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The rain stopped and the puddles dry up.\", o que significa 'dry up'?",
+    "options": [
+      "congelar",
+      "transbordar",
+      "encher de água",
+      "secar ou enxugar"
+    ],
+    "correct_answer": "secar ou enxugar",
+    "explanation": "Nesta frase, 'dry up' significa \"secar ou enxugar\".",
+    "hints": [
+      "Tema: Clima.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"Winds usually die down by late afternoon.\", o que significa 'die down'?",
+    "options": [
+      "aumentar",
+      "congelar",
+      "mudar de direção",
+      "diminuir ou acalmar"
+    ],
+    "correct_answer": "diminuir ou acalmar",
+    "explanation": "Nesta frase, 'die down' significa \"diminuir ou acalmar\".",
+    "hints": [
+      "Tema: Clima.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Storms often cut off the electricity here.\", o que significa 'cut off'?",
+    "options": [
+      "restaurar",
+      "aumentar",
+      "economizar",
+      "cortar ou interromper"
+    ],
+    "correct_answer": "cortar ou interromper",
+    "explanation": "Nesta frase, 'cut off' significa \"cortar ou interromper\".",
+    "hints": [
+      "Tema: Casa.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Old cars sometimes break down on the highway.\", o que significa 'break down'?",
+    "options": [
+      "quebrar/parar de funcionar",
+      "acelerar",
+      "funcionar perfeitamente",
+      "ser vendido"
+    ],
+    "correct_answer": "quebrar/parar de funcionar",
+    "explanation": "Nesta frase, 'break down' significa \"quebrar/parar de funcionar\".",
+    "hints": [
+      "Tema: Transporte.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I fix up the old bike over the weekend.\", o que significa 'fix up'?",
+    "options": [
+      "vender",
+      "consertar ou reparar",
+      "perder",
+      "quebrar"
+    ],
+    "correct_answer": "consertar ou reparar",
+    "explanation": "Nesta frase, 'fix up' significa \"consertar ou reparar\".",
+    "hints": [
+      "Tema: Casa.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I set up the tent before it gets dark.\", o que significa 'set up'?",
+    "options": [
+      "vender",
+      "montar ou armar",
+      "perder",
+      "desmontar"
+    ],
+    "correct_answer": "montar ou armar",
+    "explanation": "Nesta frase, 'set up' significa \"montar ou armar\".",
+    "hints": [
+      "Tema: Casa.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I take down the old poster from the wall.\", o que significa 'take down'?",
+    "options": [
+      "tirar ou remover",
+      "pintar",
+      "pendurar",
+      "comprar"
+    ],
+    "correct_answer": "tirar ou remover",
+    "explanation": "Nesta frase, 'take down' significa \"tirar ou remover\".",
+    "hints": [
+      "Tema: Casa.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I put away the dishes after washing them.\", o que significa 'put away'?",
+    "options": [
+      "guardar ou armazenar",
+      "vender",
+      "sujar",
+      "quebrar"
+    ],
+    "correct_answer": "guardar ou armazenar",
+    "explanation": "Nesta frase, 'put away' significa \"guardar ou armazenar\".",
+    "hints": [
+      "Tema: Casa.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I power down the computer before leaving the office.\", o que significa 'power down'?",
+    "options": [
+      "reiniciar",
+      "atualizar",
+      "desligar ou apagar",
+      "ligar"
+    ],
+    "correct_answer": "desligar ou apagar",
+    "explanation": "Nesta frase, 'power down' significa \"desligar ou apagar\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I look around the new house before deciding.\", o que significa 'look around'?",
+    "options": [
+      "fugir",
+      "fechar os olhos",
+      "olhar ao redor/explorar",
+      "ignorar completamente"
+    ],
+    "correct_answer": "olhar ao redor/explorar",
+    "explanation": "Nesta frase, 'look around' significa \"olhar ao redor/explorar\".",
+    "hints": [
+      "Tema: Casa.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I count on my parents for advice.\", o que significa 'count on'?",
+    "options": [
+      "desconfiar de",
+      "ignorar",
+      "contar com",
+      "evitar"
+    ],
+    "correct_answer": "contar com",
+    "explanation": "Nesta frase, 'count on' significa \"contar com\".",
+    "hints": [
+      "Tema: Social.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I rely on public transport every day.\", o que significa 'rely on'?",
+    "options": [
+      "evitar",
+      "depender de",
+      "desconfiar de",
+      "criticar"
+    ],
+    "correct_answer": "depender de",
+    "explanation": "Nesta frase, 'rely on' significa \"depender de\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I agree with your plan for the trip.\", o que significa 'agree with'?",
+    "options": [
+      "discordar de",
+      "criticar",
+      "ignorar",
+      "concordar com"
+    ],
+    "correct_answer": "concordar com",
+    "explanation": "Nesta frase, 'agree with' significa \"concordar com\".",
+    "hints": [
+      "Tema: Social.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I think about the problem all night.\", o que significa 'think about'?",
+    "options": [
+      "resolver imediatamente",
+      "ignorar",
+      "pensar sobre",
+      "esquecer"
+    ],
+    "correct_answer": "pensar sobre",
+    "explanation": "Nesta frase, 'think about' significa \"pensar sobre\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We talk about the weekend plans.\", o que significa 'talk about'?",
+    "options": [
+      "esquecer",
+      "falar sobre",
+      "escrever sobre",
+      "ficar calado sobre"
+    ],
+    "correct_answer": "falar sobre",
+    "explanation": "Nesta frase, 'talk about' significa \"falar sobre\".",
+    "hints": [
+      "Tema: Social.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I listen to music while studying.\", o que significa 'listen to'?",
+    "options": [
+      "tocar",
+      "escutar ou ouvir",
+      "cantar",
+      "ignorar"
+    ],
+    "correct_answer": "escutar ou ouvir",
+    "explanation": "Nesta frase, 'listen to' significa \"escutar ou ouvir\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I wait up for my sister to get home.\", o que significa 'wait up'?",
+    "options": [
+      "esquecer",
+      "sair de casa",
+      "dormir cedo",
+      "ficar acordado esperando"
+    ],
+    "correct_answer": "ficar acordado esperando",
+    "explanation": "Nesta frase, 'wait up' significa \"ficar acordado esperando\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I stay up late to finish the report.\", o que significa 'stay up'?",
+    "options": [
+      "tirar uma soneca",
+      "dormir cedo",
+      "ficar acordado até tarde",
+      "acordar cedo"
+    ],
+    "correct_answer": "ficar acordado até tarde",
+    "explanation": "Nesta frase, 'stay up' significa \"ficar acordado até tarde\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I sleep in on Sundays.\", o que significa 'sleep in'?",
+    "options": [
+      "dormir até tarde",
+      "ficar acordado a noite toda",
+      "tirar uma soneca",
+      "acordar cedo"
+    ],
+    "correct_answer": "dormir até tarde",
+    "explanation": "Nesta frase, 'sleep in' significa \"dormir até tarde\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I tuck in my little sister every night.\", o que significa 'tuck in'?",
+    "options": [
+      "colocar na cama e cobrir",
+      "alimentar",
+      "vestir para sair",
+      "acordar"
+    ],
+    "correct_answer": "colocar na cama e cobrir",
+    "explanation": "Nesta frase, 'tuck in' significa \"colocar na cama e cobrir\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We eat out on Saturdays.\", o que significa 'eat out'?",
+    "options": [
+      "jejuar",
+      "comer fora",
+      "cozinhar em casa",
+      "comer rápido em pé"
+    ],
+    "correct_answer": "comer fora",
+    "explanation": "Nesta frase, 'eat out' significa \"comer fora\".",
+    "hints": [
+      "Tema: Social.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I work out at the gym every morning.\", o que significa 'work out'?",
+    "options": [
+      "dormir",
+      "comer",
+      "descansar",
+      "se exercitar"
+    ],
+    "correct_answer": "se exercitar",
+    "explanation": "Nesta frase, 'work out' significa \"se exercitar\".",
+    "hints": [
+      "Tema: Exercício físico.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"They break up after years together.\", o que significa 'break up'?",
+    "options": [
+      "se casar",
+      "viajar juntos",
+      "se mudar juntos",
+      "terminar um relacionamento"
+    ],
+    "correct_answer": "terminar um relacionamento",
+    "explanation": "Nesta frase, 'break up' significa \"terminar um relacionamento\".",
+    "hints": [
+      "Tema: Social.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I grow up in a small town.\", o que significa 'grow up'?",
+    "options": [
+      "nascer",
+      "encolher",
+      "crescer ou amadurecer",
+      "envelhecer de repente"
+    ],
+    "correct_answer": "crescer ou amadurecer",
+    "explanation": "Nesta frase, 'grow up' significa \"crescer ou amadurecer\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Please speak up, I can't hear you.\", o que significa 'speak up'?",
+    "options": [
+      "ficar calado",
+      "falar mais baixo",
+      "sussurrar",
+      "falar mais alto"
+    ],
+    "correct_answer": "falar mais alto",
+    "explanation": "Nesta frase, 'speak up' significa \"falar mais alto\".",
+    "hints": [
+      "Tema: Social.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  }
+]

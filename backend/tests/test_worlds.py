@@ -152,6 +152,8 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "ingles_basico", "ingles_intermediario", "ingles_avancado",
         "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
         "frances_basico", "frances_intermediario", "frances_avancado",
+        "ingles_phrasal_basico", "ingles_phrasal_intermediario", "ingles_phrasal_avancado",
+        "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario", "ingles_phrasal_relampago_avancado",
         "libras",
     }
     assert set(worlds["valores"]["territory_ids"]) == {

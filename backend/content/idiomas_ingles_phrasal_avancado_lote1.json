@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I get on with my new coworkers really well.\", o que significa 'get on with'?",
+    "options": [
+      "brigar com",
+      "se dar bem com",
+      "evitar",
+      "ignorar"
+    ],
+    "correct_answer": "se dar bem com",
+    "explanation": "Nesta frase, 'get on with' significa \"se dar bem com\".",
+    "hints": [
+      "Tema: Social.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I face up to my mistakes instead of hiding them.\", o que significa 'face up to'?",
+    "options": [
+      "fugir de",
+      "encarar ou enfrentar",
+      "esconder",
+      "ignorar"
+    ],
+    "correct_answer": "encarar ou enfrentar",
+    "explanation": "Nesta frase, 'face up to' significa \"encarar ou enfrentar\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I catch up on my sleep during the weekend.\", o que significa 'catch up on'?",
+    "options": [
+      "ignorar completamente",
+      "atrapalhar",
+      "se atualizar/recuperar (o atraso em)",
+      "perder ainda mais"
+    ],
+    "correct_answer": "se atualizar/recuperar (o atraso em)",
+    "explanation": "Nesta frase, 'catch up on' significa \"se atualizar/recuperar (o atraso em)\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I cut back on spending to save money.\", o que significa 'cut back on'?",
+    "options": [
+      "aumentar",
+      "dobrar",
+      "eliminar totalmente",
+      "reduzir ou diminuir"
+    ],
+    "correct_answer": "reduzir ou diminuir",
+    "explanation": "Nesta frase, 'cut back on' significa \"reduzir ou diminuir\".",
+    "hints": [
+      "Tema: Finanças.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Companies sometimes do away with old policies.\", o que significa 'do away with'?",
+    "options": [
+      "reforçar",
+      "criar",
+      "copiar",
+      "eliminar ou abolir"
+    ],
+    "correct_answer": "eliminar ou abolir",
+    "explanation": "Nesta frase, 'do away with' significa \"eliminar ou abolir\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I get away from the city for the weekend.\", o que significa 'get away from'?",
+    "options": [
+      "escapar/se afastar de",
+      "se aproximar de",
+      "se mudar para",
+      "visitar"
+    ],
+    "correct_answer": "escapar/se afastar de",
+    "explanation": "Nesta frase, 'get away from' significa \"escapar/se afastar de\".",
+    "hints": [
+      "Tema: Viagem.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I get down to writing the report after lunch.\", o que significa 'get down to'?",
+    "options": [
+      "terminar",
+      "começar a se concentrar em",
+      "adiar",
+      "desistir de"
+    ],
+    "correct_answer": "começar a se concentrar em",
+    "explanation": "Nesta frase, 'get down to' significa \"começar a se concentrar em\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I get out of the meeting by pretending to be sick.\", o que significa 'get out of'?",
+    "options": [
+      "marcar",
+      "escapar de (uma obrigação)",
+      "participar ativamente de",
+      "organizar"
+    ],
+    "correct_answer": "escapar de (uma obrigação)",
+    "explanation": "Nesta frase, 'get out of' significa \"escapar de (uma obrigação)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I get rid of old clothes I never wear.\", o que significa 'get rid of'?",
+    "options": [
+      "comprar mais",
+      "emprestar",
+      "guardar para sempre",
+      "se livrar de"
+    ],
+    "correct_answer": "se livrar de",
+    "explanation": "Nesta frase, 'get rid of' significa \"se livrar de\".",
+    "hints": [
+      "Tema: Casa.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I finally get round to fixing the leaky faucet.\", o que significa 'get round to'?",
+    "options": [
+      "recusar a fazer",
+      "esquecer de vez",
+      "adiar indefinidamente",
+      "finalmente encontrar tempo para"
+    ],
+    "correct_answer": "finalmente encontrar tempo para",
+    "explanation": "Nesta frase, 'get round to' significa \"finalmente encontrar tempo para\".",
+    "hints": [
+      "Tema: Casa.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I go along with the group's decision.\", o que significa 'go along with'?",
+    "options": [
+      "criticar",
+      "discordar de",
+      "ignorar",
+      "concordar ou apoiar"
+    ],
+    "correct_answer": "concordar ou apoiar",
+    "explanation": "Nesta frase, 'go along with' significa \"concordar ou apoiar\".",
+    "hints": [
+      "Tema: Social.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"People who go back on their promises lose trust.\", o que significa 'go back on'?",
+    "options": [
+      "lembrar",
+      "reforçar",
+      "cumprir",
+      "quebrar (uma promessa)"
+    ],
+    "correct_answer": "quebrar (uma promessa)",
+    "explanation": "Nesta frase, 'go back on' significa \"quebrar (uma promessa)\".",
+    "hints": [
+      "Tema: Social.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I keep away from junk food during the diet.\", o que significa 'keep away from'?",
+    "options": [
+      "comprar demais de",
+      "cozinhar muito de",
+      "comer bastante de",
+      "manter distância de"
+    ],
+    "correct_answer": "manter distância de",
+    "explanation": "Nesta frase, 'keep away from' significa \"manter distância de\".",
+    "hints": [
+      "Tema: Saúde.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My parents keep on at me to clean my room.\", o que significa 'keep on at'?",
+    "options": [
+      "ignorar",
+      "elogiar",
+      "insistir com (alguém)",
+      "parar de pedir a"
+    ],
+    "correct_answer": "insistir com (alguém)",
+    "explanation": "Nesta frase, 'keep on at' significa \"insistir com (alguém)\".",
+    "hints": [
+      "Tema: Família.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I look out for my little brother at the park.\", o que significa 'look out for'?",
+    "options": [
+      "ignorar",
+      "cuidar de/ficar atento a",
+      "provocar",
+      "evitar"
+    ],
+    "correct_answer": "cuidar de/ficar atento a",
+    "explanation": "Nesta frase, 'look out for' significa \"cuidar de/ficar atento a\".",
+    "hints": [
+      "Tema: Família.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I put my success down to hard work.\", o que significa 'put down to'?",
+    "options": [
+      "negar sobre",
+      "esconder de",
+      "duvidar de",
+      "atribuir a"
+    ],
+    "correct_answer": "atribuir a",
+    "explanation": "Nesta frase, 'put down to' significa \"atribuir a\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I let my imagination run away with me.\", o que significa 'run away with'?",
+    "options": [
+      "reprimir",
+      "controlar completamente",
+      "ignorar",
+      "se deixar levar por"
+    ],
+    "correct_answer": "se deixar levar por",
+    "explanation": "Nesta frase, 'run away with' significa \"se deixar levar por\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"People who run out on their family during hard times are remembered.\", o que significa 'run out on'?",
+    "options": [
+      "abandonar ou largar",
+      "visitar",
+      "ajudar",
+      "apoiar"
+    ],
+    "correct_answer": "abandonar ou largar",
+    "explanation": "Nesta frase, 'run out on' significa \"abandonar ou largar\".",
+    "hints": [
+      "Tema: Família.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I sign up for the marathon next month.\", o que significa 'sign up for'?",
+    "options": [
+      "cancelar a inscrição em",
+      "ignorar",
+      "se inscrever para",
+      "desistir de"
+    ],
+    "correct_answer": "se inscrever para",
+    "explanation": "Nesta frase, 'sign up for' significa \"se inscrever para\".",
+    "hints": [
+      "Tema: Esporte.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I stand up for my beliefs even when it's hard.\", o que significa 'stand up for'?",
+    "options": [
+      "defender ou proteger",
+      "abandonar",
+      "esconder",
+      "negar"
+    ],
+    "correct_answer": "defender ou proteger",
+    "explanation": "Nesta frase, 'stand up for' significa \"defender ou proteger\".",
+    "hints": [
+      "Tema: Emoções.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I stand up to the bully at school.\", o que significa 'stand up to'?",
+    "options": [
+      "obedecer",
+      "elogiar",
+      "evitar",
+      "enfrentar (alguém mais forte)"
+    ],
+    "correct_answer": "enfrentar (alguém mais forte)",
+    "explanation": "Nesta frase, 'stand up to' significa \"enfrentar (alguém mais forte)\".",
+    "hints": [
+      "Tema: Escola.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Bad managers talk down to their employees constantly.\", o que significa 'talk down to'?",
+    "options": [
+      "respeitar",
+      "elogiar",
+      "ouvir com atenção",
+      "falar de cima pra baixo com"
+    ],
+    "correct_answer": "falar de cima pra baixo com",
+    "explanation": "Nesta frase, 'talk down to' significa \"falar de cima pra baixo com\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"These chapters tie in with what we discussed earlier.\", o que significa 'tie in with'?",
+    "options": [
+      "ignorar",
+      "se encaixar/relacionar com",
+      "contradizer",
+      "substituir"
+    ],
+    "correct_answer": "se encaixar/relacionar com",
+    "explanation": "Nesta frase, 'tie in with' significa \"se encaixar/relacionar com\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"People sometimes walk out on relationships after years.\", o que significa 'walk out on'?",
+    "options": [
+      "renovar",
+      "se comprometer com",
+      "abandonar ou largar",
+      "fortalecer"
+    ],
+    "correct_answer": "abandonar ou largar",
+    "explanation": "Nesta frase, 'walk out on' significa \"abandonar ou largar\".",
+    "hints": [
+      "Tema: Relacionamentos.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Colonies sometimes break away from empires.\", o que significa 'break away from'?",
+    "options": [
+      "se unir a",
+      "obedecer a",
+      "se libertar de",
+      "depender ainda mais de"
+    ],
+    "correct_answer": "se libertar de",
+    "explanation": "Nesta frase, 'break away from' significa \"se libertar de\".",
+    "hints": [
+      "Tema: História.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I break in on their private conversation by mistake.\", o que significa 'break in on'?",
+    "options": [
+      "ignorar",
+      "evitar",
+      "ouvir escondido",
+      "interromper ou cortar"
+    ],
+    "correct_answer": "interromper ou cortar",
+    "explanation": "Nesta frase, 'break in on' significa \"interromper ou cortar\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I brush up on my Spanish before the trip.\", o que significa 'brush up on'?",
+    "options": [
+      "esquecer completamente",
+      "aprender do zero",
+      "relembrar ou aperfeiçoar",
+      "abandonar"
+    ],
+    "correct_answer": "relembrar ou aperfeiçoar",
+    "explanation": "Nesta frase, 'brush up on' significa \"relembrar ou aperfeiçoar\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I burn out after months of overtime.\", o que significa 'burn out'?",
+    "options": [
+      "relaxar completamente",
+      "se esgotar (exaustão)",
+      "ganhar energia",
+      "descansar bastante"
+    ],
+    "correct_answer": "se esgotar (exaustão)",
+    "explanation": "Nesta frase, 'burn out' significa \"se esgotar (exaustão)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"These recipes call for two cups of flour.\", o que significa 'call for'?",
+    "options": [
+      "proibir",
+      "exigir ou pedir",
+      "ignorar",
+      "dispensar"
+    ],
+    "correct_answer": "exigir ou pedir",
+    "explanation": "Nesta frase, 'call for' significa \"exigir ou pedir\".",
+    "hints": [
+      "Tema: Culinária.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I carry on with the project despite the setback.\", o que significa 'carry on with'?",
+    "options": [
+      "desistir de",
+      "adiar",
+      "continuar com",
+      "cancelar"
+    ],
+    "correct_answer": "continuar com",
+    "explanation": "Nesta frase, 'carry on with' significa \"continuar com\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"New trends catch on quickly among teenagers.\", o que significa 'catch on'?",
+    "options": [
+      "ser proibido",
+      "se popularizar",
+      "desaparecer",
+      "ser esquecido"
+    ],
+    "correct_answer": "se popularizar",
+    "explanation": "Nesta frase, 'catch on' significa \"se popularizar\".",
+    "hints": [
+      "Tema: Cultura.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We all chip in to buy the teacher a gift.\", o que significa 'chip in'?",
+    "options": [
+      "competir por",
+      "criticar",
+      "contribuir (dinheiro/ideia)",
+      "se recusar a ajudar"
+    ],
+    "correct_answer": "contribuir (dinheiro/ideia)",
+    "explanation": "Nesta frase, 'chip in' significa \"contribuir (dinheiro/ideia)\".",
+    "hints": [
+      "Tema: Social.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I clam up whenever someone mentions the accident.\", o que significa 'clam up'?",
+    "options": [
+      "gritar",
+      "calar-se de repente",
+      "falar sem parar",
+      "explicar tudo"
+    ],
+    "correct_answer": "calar-se de repente",
+    "explanation": "Nesta frase, 'clam up' significa \"calar-se de repente\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Governments sometimes clamp down on illegal fishing.\", o que significa 'clamp down on'?",
+    "options": [
+      "reprimir com rigor",
+      "ignorar",
+      "legalizar",
+      "incentivar"
+    ],
+    "correct_answer": "reprimir com rigor",
+    "explanation": "Nesta frase, 'clamp down on' significa \"reprimir com rigor\".",
+    "hints": [
+      "Tema: Política.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Good candidates come across as very confident in interviews.\", o que significa 'come across as'?",
+    "options": [
+      "esconder ser",
+      "evitar parecer",
+      "ser exatamente o oposto de",
+      "passar a impressão de ser"
+    ],
+    "correct_answer": "passar a impressão de ser",
+    "explanation": "Nesta frase, 'come across as' significa \"passar a impressão de ser\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"In the end, relationships often come down to trust.\", o que significa 'come down to'?",
+    "options": [
+      "se resumir a",
+      "contradizer",
+      "se complicar além de",
+      "ser irrelevante para"
+    ],
+    "correct_answer": "se resumir a",
+    "explanation": "Nesta frase, 'come down to' significa \"se resumir a\".",
+    "hints": [
+      "Tema: Relacionamentos.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"People sometimes come into money when a distant relative passes away, without expecting it.\", o que significa 'come into'?",
+    "options": [
+      "herdar ou receber",
+      "perder",
+      "gastar",
+      "doar"
+    ],
+    "correct_answer": "herdar ou receber",
+    "explanation": "Nesta frase, 'come into' significa \"herdar ou receber\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Well-prepared plans usually come off exactly as hoped.\", o que significa 'come off'?",
+    "options": [
+      "ser adiado",
+      "ser cancelado",
+      "fracassar completamente",
+      "dar certo/acontecer como planejado"
+    ],
+    "correct_answer": "dar certo/acontecer como planejado",
+    "explanation": "Nesta frase, 'come off' significa \"dar certo/acontecer como planejado\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"People sometimes come round to a new point of view.\", o que significa 'come round'?",
+    "options": [
+      "esquecer",
+      "discordar ainda mais",
+      "mudar de ideia (a favor)",
+      "ignorar completamente"
+    ],
+    "correct_answer": "mudar de ideia (a favor)",
+    "explanation": "Nesta frase, 'come round' significa \"mudar de ideia (a favor)\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Police crack down on speeding in the area.\", o que significa 'crack down on'?",
+    "options": [
+      "tolerar",
+      "incentivar",
+      "ignorar",
+      "reprimir com rigor"
+    ],
+    "correct_answer": "reprimir com rigor",
+    "explanation": "Nesta frase, 'crack down on' significa \"reprimir com rigor\".",
+    "hints": [
+      "Tema: Trânsito.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I cross out the wrong answer on the test.\", o que significa 'cross out'?",
+    "options": [
+      "sublinhar",
+      "riscar ou excluir",
+      "destacar",
+      "copiar"
+    ],
+    "correct_answer": "riscar ou excluir",
+    "explanation": "Nesta frase, 'cross out' significa \"riscar ou excluir\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"Important truths sometimes dawn on people suddenly, changing everything they believed.\", o que significa 'dawn on'?",
+    "options": [
+      "esquecer completamente",
+      "dar-se conta subitamente",
+      "duvidar de",
+      "ignorar deliberadamente"
+    ],
+    "correct_answer": "dar-se conta subitamente",
+    "explanation": "Nesta frase, 'dawn on' significa \"dar-se conta subitamente\".",
+    "hints": [
+      "Tema: Percepção.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Reporters dig up old records about the scandal.\", o que significa 'dig up'?",
+    "options": [
+      "descobrir ou desenterrar",
+      "esconder",
+      "ignorar",
+      "destruir"
+    ],
+    "correct_answer": "descobrir ou desenterrar",
+    "explanation": "Nesta frase, 'dig up' significa \"descobrir ou desenterrar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I dispose of the broken furniture responsibly.\", o que significa 'dispose of'?",
+    "options": [
+      "vender caro",
+      "guardar",
+      "descartar ou rejeitar",
+      "consertar"
+    ],
+    "correct_answer": "descartar ou rejeitar",
+    "explanation": "Nesta frase, 'dispose of' significa \"descartar ou rejeitar\".",
+    "hints": [
+      "Tema: Casa.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Lawyers draw up contracts carefully.\", o que significa 'draw up'?",
+    "options": [
+      "assinar sem ler",
+      "rasgar",
+      "elaborar (documento)",
+      "perder"
+    ],
+    "correct_answer": "elaborar (documento)",
+    "explanation": "Nesta frase, 'draw up' significa \"elaborar (documento)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I try not to dwell on past mistakes.\", o que significa 'dwell on'?",
+    "options": [
+      "esquecer rapidamente",
+      "insistir em pensar sobre",
+      "ignorar desde o início",
+      "resolver imediatamente"
+    ],
+    "correct_answer": "insistir em pensar sobre",
+    "explanation": "Nesta frase, 'dwell on' significa \"insistir em pensar sobre\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Heavy rains usually ease off after midnight.\", o que significa 'ease off'?",
+    "options": [
+      "parar de vez",
+      "diminuir de intensidade",
+      "aumentar de intensidade",
+      "começar de repente"
+    ],
+    "correct_answer": "diminuir de intensidade",
+    "explanation": "Nesta frase, 'ease off' significa \"diminuir de intensidade\".",
+    "hints": [
+      "Tema: Clima.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Unexpected bills eat into our savings.\", o que significa 'eat into'?",
+    "options": [
+      "consumir gradualmente (recursos)",
+      "duplicar",
+      "proteger",
+      "aumentar"
+    ],
+    "correct_answer": "consumir gradualmente (recursos)",
+    "explanation": "Nesta frase, 'eat into' significa \"consumir gradualmente (recursos)\".",
+    "hints": [
+      "Tema: Finanças.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Prices even out after the holiday season.\", o que significa 'even out'?",
+    "options": [
+      "dobrar",
+      "despencar de vez",
+      "disparar",
+      "se equilibrar/nivelar"
+    ],
+    "correct_answer": "se equilibrar/nivelar",
+    "explanation": "Nesta frase, 'even out' significa \"se equilibrar/nivelar\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I fend off questions about my personal life.\", o que significa 'fend off'?",
+    "options": [
+      "responder detalhadamente",
+      "provocar",
+      "repelir ou evitar",
+      "incentivar"
+    ],
+    "correct_answer": "repelir ou evitar",
+    "explanation": "Nesta frase, 'fend off' significa \"repelir ou evitar\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I fill out the application form carefully.\", o que significa 'fill out'?",
+    "options": [
+      "ignorar",
+      "perder",
+      "rasgar",
+      "preencher (formulário)"
+    ],
+    "correct_answer": "preencher (formulário)",
+    "explanation": "Nesta frase, 'fill out' significa \"preencher (formulário)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I try to fit in at my new school.\", o que significa 'fit in'?",
+    "options": [
+      "se encaixar/se adaptar",
+      "se destacar negativamente em",
+      "evitar",
+      "criticar"
+    ],
+    "correct_answer": "se encaixar/se adaptar",
+    "explanation": "Nesta frase, 'fit in' significa \"se encaixar/se adaptar\".",
+    "hints": [
+      "Tema: Escola.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Old tensions flare up during the family reunion.\", o que significa 'flare up'?",
+    "options": [
+      "diminuir aos poucos",
+      "se resolver sozinhas",
+      "explodir/se agravar de repente",
+      "desaparecer lentamente"
+    ],
+    "correct_answer": "explodir/se agravar de repente",
+    "explanation": "Nesta frase, 'flare up' significa \"explodir/se agravar de repente\".",
+    "hints": [
+      "Tema: Família.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"The salesman tries to fob me off with excuses.\", o que significa 'fob off'?",
+    "options": [
+      "elogiar",
+      "enganar/despachar com desculpa",
+      "recompensar",
+      "ajudar sinceramente"
+    ],
+    "correct_answer": "enganar/despachar com desculpa",
+    "explanation": "Nesta frase, 'fob off' significa \"enganar/despachar com desculpa\".",
+    "hints": [
+      "Tema: Compras.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I follow through on my New Year's resolution.\", o que significa 'follow through'?",
+    "options": [
+      "adiar indefinidamente",
+      "levar até o fim",
+      "desistir no meio de",
+      "esquecer"
+    ],
+    "correct_answer": "levar até o fim",
+    "explanation": "Nesta frase, 'follow through' significa \"levar até o fim\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Teams gear up for the championship game all week.\", o que significa 'gear up'?",
+    "options": [
+      "ignorar",
+      "se preparar",
+      "relaxar demais antes de",
+      "desistir antes de"
+    ],
+    "correct_answer": "se preparar",
+    "explanation": "Nesta frase, 'gear up' significa \"se preparar\".",
+    "hints": [
+      "Tema: Esporte.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I work extra hours to get ahead in my career.\", o que significa 'get ahead'?",
+    "options": [
+      "estagnar em",
+      "desistir de",
+      "progredir/se destacar",
+      "ficar para trás em"
+    ],
+    "correct_answer": "progredir/se destacar",
+    "explanation": "Nesta frase, 'get ahead' significa \"progredir/se destacar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I finally get on top of my workload.\", o que significa 'get on top of'?",
+    "options": [
+      "perder o controle de",
+      "ignorar",
+      "aumentar sem perceber",
+      "dominar ou controlar"
+    ],
+    "correct_answer": "dominar ou controlar",
+    "explanation": "Nesta frase, 'get on top of' significa \"dominar ou controlar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"The two sides hammer out an agreement after hours of talks.\", o que significa 'hammer out'?",
+    "options": [
+      "ignorar completamente",
+      "resolver depois de muita discussão",
+      "romper de vez",
+      "adiar indefinidamente"
+    ],
+    "correct_answer": "resolver depois de muita discussão",
+    "explanation": "Nesta frase, 'hammer out' significa \"resolver depois de muita discussão\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"These designs hark back to the 1960s.\", o que significa 'hark back to'?",
+    "options": [
+      "substituir",
+      "remeter a/lembrar",
+      "ignorar completamente",
+      "contradizer"
+    ],
+    "correct_answer": "remeter a/lembrar",
+    "explanation": "Nesta frase, 'hark back to' significa \"remeter a/lembrar\".",
+    "hints": [
+      "Tema: Cultura.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Most projects hinge on good planning to succeed.\", o que significa 'hinge on'?",
+    "options": [
+      "ser irrelevante para",
+      "depender crucialmente de",
+      "ignorar",
+      "contradizer"
+    ],
+    "correct_answer": "depender crucialmente de",
+    "explanation": "Nesta frase, 'hinge on' significa \"depender crucialmente de\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I hold off on making a decision until tomorrow.\", o que significa 'hold off'?",
+    "options": [
+      "confirmar agora",
+      "cancelar de vez",
+      "decidir imediatamente",
+      "adiar ou postergar"
+    ],
+    "correct_answer": "adiar ou postergar",
+    "explanation": "Nesta frase, 'hold off' significa \"adiar ou postergar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"The rebels hold out against the siege for months.\", o que significa 'hold out'?",
+    "options": [
+      "se render imediatamente a",
+      "ignorar",
+      "resistir ou aguentar",
+      "fugir de"
+    ],
+    "correct_answer": "resistir ou aguentar",
+    "explanation": "Nesta frase, 'hold out' significa \"resistir ou aguentar\".",
+    "hints": [
+      "Tema: História.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We iron out the last details before the launch.\", o que significa 'iron out'?",
+    "options": [
+      "piorar",
+      "criar",
+      "resolver (pequenos problemas)",
+      "ignorar"
+    ],
+    "correct_answer": "resolver (pequenos problemas)",
+    "explanation": "Nesta frase, 'iron out' significa \"resolver (pequenos problemas)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Stores sometimes jack up prices during the holidays.\", o que significa 'jack up'?",
+    "options": [
+      "reduzir drasticamente",
+      "congelar",
+      "eliminar",
+      "aumentar bruscamente (preço)"
+    ],
+    "correct_answer": "aumentar bruscamente (preço)",
+    "explanation": "Nesta frase, 'jack up' significa \"aumentar bruscamente (preço)\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I key in my password to unlock the account.\", o que significa 'key in'?",
+    "options": [
+      "gritar",
+      "digitar (dados)",
+      "memorizar sem digitar",
+      "apagar"
+    ],
+    "correct_answer": "digitar (dados)",
+    "explanation": "Nesta frase, 'key in' significa \"digitar (dados)\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Ceremonies like this usually kick off at eight sharp.\", o que significa 'kick off'?",
+    "options": [
+      "iniciar/dar início",
+      "ser cancelado",
+      "ser adiado",
+      "terminar"
+    ],
+    "correct_answer": "iniciar/dar início",
+    "explanation": "Nesta frase, 'kick off' significa \"iniciar/dar início\".",
+    "hints": [
+      "Tema: Social.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"People sometimes lash out at friends when stressed.\", o que significa 'lash out'?",
+    "options": [
+      "elogiar",
+      "atacar de repente (verbal/físico)",
+      "ajudar calmamente",
+      "ignorar pacificamente"
+    ],
+    "correct_answer": "atacar de repente (verbal/físico)",
+    "explanation": "Nesta frase, 'lash out' significa \"atacar de repente (verbal/físico)\".",
+    "hints": [
+      "Tema: Emoções.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She doesn't let on that she knows the secret.\", o que significa 'let on'?",
+    "options": [
+      "negar publicamente",
+      "esconder totalmente",
+      "revelar (segredo)",
+      "confirmar abertamente"
+    ],
+    "correct_answer": "revelar (segredo)",
+    "explanation": "Nesta frase, 'let on' significa \"revelar (segredo)\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Sales level off after the initial spike.\", o que significa 'level off'?",
+    "options": [
+      "dobrar novamente",
+      "se estabilizar",
+      "disparar ainda mais",
+      "despencar de vez"
+    ],
+    "correct_answer": "se estabilizar",
+    "explanation": "Nesta frase, 'level off' significa \"se estabilizar\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The two companies link up to develop new technology.\", o que significa 'link up'?",
+    "options": [
+      "competir com",
+      "se conectar/se unir",
+      "ignorar",
+      "se separar de"
+    ],
+    "correct_answer": "se conectar/se unir",
+    "explanation": "Nesta frase, 'link up' significa \"se conectar/se unir\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I loosen up after a few minutes of stretching.\", o que significa 'loosen up'?",
+    "options": [
+      "relaxar ou descontrair",
+      "desistir",
+      "ficar mais tenso",
+      "se machucar"
+    ],
+    "correct_answer": "relaxar ou descontrair",
+    "explanation": "Nesta frase, 'loosen up' significa \"relaxar ou descontrair\".",
+    "hints": [
+      "Tema: Saúde.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I mess up the presentation by forgetting my notes.\", o que significa 'mess up'?",
+    "options": [
+      "estragar ou bagunçar",
+      "organizar",
+      "aperfeiçoar",
+      "salvar"
+    ],
+    "correct_answer": "estragar ou bagunçar",
+    "explanation": "Nesta frase, 'mess up' significa \"estragar ou bagunçar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I mull over the job offer for a few days.\", o que significa 'mull over'?",
+    "options": [
+      "refletir demoradamente sobre",
+      "recusar na hora",
+      "aceitar imediatamente",
+      "ignorar completamente"
+    ],
+    "correct_answer": "refletir demoradamente sobre",
+    "explanation": "Nesta frase, 'mull over' significa \"refletir demoradamente sobre\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I narrow down my choices to two options.\", o que significa 'narrow down'?",
+    "options": [
+      "duplicar",
+      "restringir/reduzir opções",
+      "ampliar",
+      "ignorar"
+    ],
+    "correct_answer": "restringir/reduzir opções",
+    "explanation": "Nesta frase, 'narrow down' significa \"restringir/reduzir opções\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"We nip the problem in the bud before it grows.\", o que significa 'nip in the bud'?",
+    "options": [
+      "deixar crescer",
+      "cortar pela raiz (resolver logo no início)",
+      "piorar de propósito",
+      "ignorar até tarde"
+    ],
+    "correct_answer": "cortar pela raiz (resolver logo no início)",
+    "explanation": "Nesta frase, 'nip in the bud' significa \"cortar pela raiz (resolver logo no início)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I opt out of the group project at the last minute.\", o que significa 'opt out'?",
+    "options": [
+      "organizar",
+      "se inscrever com entusiasmo em",
+      "optar por não participar",
+      "liderar"
+    ],
+    "correct_answer": "optar por não participar",
+    "explanation": "Nesta frase, 'opt out' significa \"optar por não participar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"The negotiations don't pan out as expected.\", o que significa 'pan out'?",
+    "options": [
+      "ser adiado",
+      "se desenrolar/dar certo no final",
+      "ser ignorado",
+      "ser cancelado antes de começar"
+    ],
+    "correct_answer": "se desenrolar/dar certo no final",
+    "explanation": "Nesta frase, 'pan out' significa \"se desenrolar/dar certo no final\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We patch up our friendship after the argument.\", o que significa 'patch up'?",
+    "options": [
+      "ignorar",
+      "encerrar de vez",
+      "reconciliar ou consertar",
+      "piorar"
+    ],
+    "correct_answer": "reconciliar ou consertar",
+    "explanation": "Nesta frase, 'patch up' significa \"reconciliar ou consertar\".",
+    "hints": [
+      "Tema: Social.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Protests like this often peter out after a few hours.\", o que significa 'peter out'?",
+    "options": [
+      "se intensificar",
+      "se esvair aos poucos",
+      "crescer rapidamente",
+      "se espalhar"
+    ],
+    "correct_answer": "se esvair aos poucos",
+    "explanation": "Nesta frase, 'peter out' significa \"se esvair aos poucos\".",
+    "hints": [
+      "Tema: Política.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I plough through hundreds of emails after vacation.\", o que significa 'plough through'?",
+    "options": [
+      "avançar com dificuldade por (tarefa longa)",
+      "ignorar completamente",
+      "adiar indefinidamente",
+      "apagar sem ler"
+    ],
+    "correct_answer": "avançar com dificuldade por (tarefa longa)",
+    "explanation": "Nesta frase, 'plough through' significa \"avançar com dificuldade por (tarefa longa)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Governments sometimes prop up struggling industries.\", o que significa 'prop up'?",
+    "options": [
+      "encerrar",
+      "ignorar",
+      "enfraquecer de propósito",
+      "sustentar/apoiar (algo instável)"
+    ],
+    "correct_answer": "sustentar/apoiar (algo instável)",
+    "explanation": "Nesta frase, 'prop up' significa \"sustentar/apoiar (algo instável)\".",
+    "hints": [
+      "Tema: Política.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I rack up a lot of debt during college.\", o que significa 'rack up'?",
+    "options": [
+      "quitar rapidamente",
+      "reduzir",
+      "acumular (dívidas, pontos)",
+      "evitar completamente"
+    ],
+    "correct_answer": "acumular (dívidas, pontos)",
+    "explanation": "Nesta frase, 'rack up' significa \"acumular (dívidas, pontos)\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Some companies rake in huge profits every year.\", o que significa 'rake in'?",
+    "options": [
+      "ganhar muito dinheiro",
+      "gastar todo o lucro",
+      "doar todo o lucro",
+      "perder muito dinheiro"
+    ],
+    "correct_answer": "ganhar muito dinheiro",
+    "explanation": "Nesta frase, 'rake in' significa \"ganhar muito dinheiro\".",
+    "hints": [
+      "Tema: Finanças.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I rope in my neighbors to help with the fundraiser.\", o que significa 'rope in'?",
+    "options": [
+      "convencer a participar",
+      "ignorar",
+      "afastar",
+      "proibir de participar"
+    ],
+    "correct_answer": "convencer a participar",
+    "explanation": "Nesta frase, 'rope in' significa \"convencer a participar\".",
+    "hints": [
+      "Tema: Social.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We scrape by on a tight budget this month.\", o que significa 'scrape by'?",
+    "options": [
+      "gastar sem limites",
+      "enriquecer rapidamente",
+      "economizar facilmente",
+      "se virar com muito pouco"
+    ],
+    "correct_answer": "se virar com muito pouco",
+    "explanation": "Nesta frase, 'scrape by' significa \"se virar com muito pouco\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I shy away from public speaking whenever possible.\", o que significa 'shy away from'?",
+    "options": [
+      "buscar ativamente",
+      "ignorar completamente",
+      "evitar por timidez/medo",
+      "dominar facilmente"
+    ],
+    "correct_answer": "evitar por timidez/medo",
+    "explanation": "Nesta frase, 'shy away from' significa \"evitar por timidez/medo\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I size up the situation before making a decision.\", o que significa 'size up'?",
+    "options": [
+      "ignorar completamente",
+      "avaliar cuidadosamente",
+      "esquecer",
+      "agir sem pensar sobre"
+    ],
+    "correct_answer": "avaliar cuidadosamente",
+    "explanation": "Nesta frase, 'size up' significa \"avaliar cuidadosamente\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We smooth over our differences before the trip.\", o que significa 'smooth over'?",
+    "options": [
+      "intensificar",
+      "esconder",
+      "resolver amigavelmente",
+      "ignorar"
+    ],
+    "correct_answer": "resolver amigavelmente",
+    "explanation": "Nesta frase, 'smooth over' significa \"resolver amigavelmente\".",
+    "hints": [
+      "Tema: Relacionamentos.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I spell out the instructions step by step.\", o que significa 'spell out'?",
+    "options": [
+      "esconder",
+      "complicar de propósito",
+      "explicar claramente/detalhadamente",
+      "resumir demais"
+    ],
+    "correct_answer": "explicar claramente/detalhadamente",
+    "explanation": "Nesta frase, 'spell out' significa \"explicar claramente/detalhadamente\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Regular exercise helps stave off illness.\", o que significa 'stave off'?",
+    "options": [
+      "ignorar",
+      "evitar/adiar (algo ruim)",
+      "provocar",
+      "acelerar"
+    ],
+    "correct_answer": "evitar/adiar (algo ruim)",
+    "explanation": "Nesta frase, 'stave off' significa \"evitar/adiar (algo ruim)\".",
+    "hints": [
+      "Tema: Saúde.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Many fears stem from childhood incidents.\", o que significa 'stem from'?",
+    "options": [
+      "originar-se de",
+      "ser resolvido por",
+      "desaparecer com",
+      "não ter relação com"
+    ],
+    "correct_answer": "originar-se de",
+    "explanation": "Nesta frase, 'stem from' significa \"originar-se de\".",
+    "hints": [
+      "Tema: Emoções.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My grandparents swear by this home remedy.\", o que significa 'swear by'?",
+    "options": [
+      "desconfiar totalmente de",
+      "ignorar",
+      "criticar",
+      "confiar cegamente em"
+    ],
+    "correct_answer": "confiar cegamente em",
+    "explanation": "Nesta frase, 'swear by' significa \"confiar cegamente em\".",
+    "hints": [
+      "Tema: Saúde.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"This loan will tide us over until payday.\", o que significa 'tide over'?",
+    "options": [
+      "piorar a situação de",
+      "complicar",
+      "ajudar a passar por (dificuldade temporária)",
+      "ser irrelevante para"
+    ],
+    "correct_answer": "ajudar a passar por (dificuldade temporária)",
+    "explanation": "Nesta frase, 'tide over' significa \"ajudar a passar por (dificuldade temporária)\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Witnesses sometimes tip off the police about a robbery.\", o que significa 'tip off'?",
+    "options": [
+      "enganar",
+      "esconder informação de",
+      "atrasar",
+      "avisar secretamente"
+    ],
+    "correct_answer": "avisar secretamente",
+    "explanation": "Nesta frase, 'tip off' significa \"avisar secretamente\".",
+    "hints": [
+      "Tema: Segurança.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Cars sometimes veer off the road during storms.\", o que significa 'veer off'?",
+    "options": [
+      "parar completamente na",
+      "seguir em linha reta pela",
+      "desviar-se bruscamente",
+      "acelerar na"
+    ],
+    "correct_answer": "desviar-se bruscamente",
+    "explanation": "Nesta frase, 'veer off' significa \"desviar-se bruscamente\".",
+    "hints": [
+      "Tema: Trânsito.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I wade through piles of paperwork before lunch.\", o que significa 'wade through'?",
+    "options": [
+      "organizar rapidamente",
+      "ignorar completamente",
+      "avançar com dificuldade por (algo tedioso)",
+      "apagar"
+    ],
+    "correct_answer": "avançar com dificuldade por (algo tedioso)",
+    "explanation": "Nesta frase, 'wade through' significa \"avançar com dificuldade por (algo tedioso)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Committees sometimes water down the original proposal.\", o que significa 'water down'?",
+    "options": [
+      "fortalecer",
+      "expandir",
+      "aprovar sem mudanças",
+      "enfraquecer ou diluir"
+    ],
+    "correct_answer": "enfraquecer ou diluir",
+    "explanation": "Nesta frase, 'water down' significa \"enfraquecer ou diluir\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Good managers weed out unqualified candidates early.\", o que significa 'weed out'?",
+    "options": [
+      "contratar todos",
+      "promover",
+      "eliminar (os inadequados)",
+      "ignorar"
+    ],
+    "correct_answer": "eliminar (os inadequados)",
+    "explanation": "Nesta frase, 'weed out' significa \"eliminar (os inadequados)\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_phrasal_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I while away the afternoon reading on the porch.\", o que significa 'while away'?",
+    "options": [
+      "desperdiçar com estresse",
+      "apressar",
+      "encurtar",
+      "passar (o tempo) de forma agradável"
+    ],
+    "correct_answer": "passar (o tempo) de forma agradável",
+    "explanation": "Nesta frase, 'while away' significa \"passar (o tempo) de forma agradável\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "O significado do phrasal verb muda conforme a frase — leia com atenção."
+    ],
+    "age_reviewed": true
+  }
+]

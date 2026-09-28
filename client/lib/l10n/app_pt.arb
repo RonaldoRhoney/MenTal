@@ -326,6 +326,30 @@
     "description": "Territory display name"
   },
   "territoryFrancesAvancado": "Francês Avançado",
+  "territoryInglesPhrasalBasico": "Phrasal Verbs: Básico",
+  "@territoryInglesPhrasalBasico": {
+    "description": "Territory display name — English phrasal verbs, basic level"
+  },
+  "territoryInglesPhrasalIntermediario": "Phrasal Verbs: Intermediário",
+  "@territoryInglesPhrasalIntermediario": {
+    "description": "Territory display name — English phrasal verbs, intermediate level"
+  },
+  "territoryInglesPhrasalAvancado": "Phrasal Verbs: Avançado",
+  "@territoryInglesPhrasalAvancado": {
+    "description": "Territory display name — English phrasal verbs, advanced level"
+  },
+  "territoryInglesPhrasalRelampagoBasico": "Phrasal Verbs Relâmpago: Básico",
+  "@territoryInglesPhrasalRelampagoBasico": {
+    "description": "Territory display name — English phrasal verbs, timed mode, basic level"
+  },
+  "territoryInglesPhrasalRelampagoIntermediario": "Phrasal Verbs Relâmpago: Intermediário",
+  "@territoryInglesPhrasalRelampagoIntermediario": {
+    "description": "Territory display name — English phrasal verbs, timed mode, intermediate level"
+  },
+  "territoryInglesPhrasalRelampagoAvancado": "Phrasal Verbs Relâmpago: Avançado",
+  "@territoryInglesPhrasalRelampagoAvancado": {
+    "description": "Territory display name — English phrasal verbs, timed mode, advanced level"
+  },
   "@territoryFrancesAvancado": {
     "description": "Territory display name"
   },

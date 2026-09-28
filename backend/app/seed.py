@@ -330,6 +330,20 @@ TERRITORIES = [
     {"id": "frances_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 46, "world_id": "idiomas", "block_id": "frances"},
     {"id": "frances_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 47, "world_id": "idiomas", "block_id": "frances"},
     {"id": "frances_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 48, "world_id": "idiomas", "block_id": "frances"},
+    # Phrasal Verbs de Inglês (MUNDO_IDIOMAS_INGLES_PHRASAL_VERBS_V1.md, aprovado 27/09/2026).
+    # Território normal + Relâmpago (sempre cronometrado, conteúdo distinto) por nível.
+    # block_id "ingles" (NÃO um bloco "phrasal_verbs" próprio) — decisão de Rhoney
+    # (27/09/2026): Phrasal Verbs é conteúdo do idioma Inglês, não um idioma novo. Os únicos
+    # idiomas do SubMundo são Inglês/Espanhol/Francês (+ Libras, bloco à parte); dentro de cada
+    # um entram todos os seus respectivos conteúdos. display_order 119-124 (bem depois de
+    # 40-42) garante que, mesmo dentro do mesmo bloco "ingles", vocabulário aparece antes de
+    # Phrasal Verbs.
+    {"id": "ingles_phrasal_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 119, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 120, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 121, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_relampago_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 122, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_relampago_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 123, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_relampago_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 124, "world_id": "idiomas", "block_id": "ingles"},
     {"id": "bolsa", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 49, "world_id": "valores"},
     {"id": "criptomoedas", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 50, "world_id": "valores"},
     {"id": "cenario_global", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 51, "world_id": "valores"},

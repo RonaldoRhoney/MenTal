@@ -556,6 +556,42 @@ abstract class AppLocalizations {
   /// **'Francês Avançado'**
   String get territoryFrancesAvancado;
 
+  /// Territory display name — English phrasal verbs, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Phrasal Verbs: Básico'**
+  String get territoryInglesPhrasalBasico;
+
+  /// Territory display name — English phrasal verbs, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Phrasal Verbs: Intermediário'**
+  String get territoryInglesPhrasalIntermediario;
+
+  /// Territory display name — English phrasal verbs, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Phrasal Verbs: Avançado'**
+  String get territoryInglesPhrasalAvancado;
+
+  /// Territory display name — English phrasal verbs, timed mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Phrasal Verbs Relâmpago: Básico'**
+  String get territoryInglesPhrasalRelampagoBasico;
+
+  /// Territory display name — English phrasal verbs, timed mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Phrasal Verbs Relâmpago: Intermediário'**
+  String get territoryInglesPhrasalRelampagoIntermediario;
+
+  /// Territory display name — English phrasal verbs, timed mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Phrasal Verbs Relâmpago: Avançado'**
+  String get territoryInglesPhrasalRelampagoAvancado;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:
