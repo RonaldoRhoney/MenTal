@@ -41,7 +41,9 @@ void main() {
     await tester.pump();
 
     expect(find.byKey(const Key('mental_lingo_mic_button')), findsOneWidget);
-    expect(find.textContaining('Toque no microfone'), findsOneWidget);
+    // MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md (ajuste de 28/09/2026): captura
+    // por apertar-e-segurar é o padrão agora, não mais toque único.
+    expect(find.textContaining('Aperte e segure o microfone'), findsOneWidget);
     expect(find.byKey(const Key('mental_lingo_question_bubble')), findsNothing);
     expect(find.byKey(const Key('mental_lingo_answer_bubble')), findsNothing);
   });
@@ -52,12 +54,20 @@ void main() {
     await tester.pumpWidget(_app(MentalLingoScreen(client: client)));
     await tester.pump();
 
-    await tester.tap(find.byKey(const Key('mental_lingo_mic_button')));
+    // Segura o botão manualmente (em vez de `tester.longPress`, que solta
+    // antes do MethodChannel real resolver o erro) — só solta DEPOIS do
+    // gap assíncrono de verdade abaixo, igual ao uso real: segurar,
+    // aparecer o erro, soltar.
+    final gesture = await tester.startGesture(
+        tester.getCenter(find.byKey(const Key('mental_lingo_mic_button'))));
+    await tester.pump(const Duration(milliseconds: 600));
     // O MethodChannel do speech_to_text não tem implementação registrada
     // no ambiente de teste — a chamada real (MissingPluginException)
     // atravessa um gap assíncrono de verdade, que só `runAsync` destrava
     // (pump/pumpAndSettle sozinhos não avançam esse tipo de await).
     await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 300)));
+    await tester.pump();
+    await gesture.up();
     await tester.pump();
 
     expect(find.byKey(const Key('mental_lingo_error_text')), findsOneWidget);
@@ -88,8 +98,11 @@ void main() {
     await tester.pumpWidget(_app(MentalLingoScreen(
         client: client, service: _FakeSpeech('como se diz eu quero um café em inglês'), translator: translator)));
     await tester.pump();
-    await tester.tap(find.byKey(const Key('mental_lingo_mic_button')));
+    await tester.longPress(find.byKey(const Key('mental_lingo_mic_button')));
     await tester.pump();
+    // Prazo de segurança que aguarda o resultado final chegar depois de
+    // soltar o botão (MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md, apertar-e-segurar).
+    await tester.pump(const Duration(milliseconds: 1600));
     await tester.pump(const Duration(seconds: 4));
     await tester.pump();
 
@@ -105,8 +118,9 @@ void main() {
     await tester.pumpWidget(_app(MentalLingoScreen(
         client: client, service: _FakeSpeech('como se diz bom dia a todos em espanhol'), translator: translator)));
     await tester.pump();
-    await tester.tap(find.byKey(const Key('mental_lingo_mic_button')));
+    await tester.longPress(find.byKey(const Key('mental_lingo_mic_button')));
     await tester.pump();
+    await tester.pump(const Duration(milliseconds: 1600));
     await tester.pump(const Duration(seconds: 4));
     await tester.pump();
 
@@ -131,7 +145,10 @@ class _FakeSpeech extends MentalLingoService {
   @override
   Future<bool> init({required void Function(String message) onError, required void Function(String status) onStatus}) async => true;
   @override
-  Future<void> listen({required void Function(String text) onFinalResult}) async {
+  Future<void> listen({
+    required void Function(String text) onFinalResult,
+    void Function(String text)? onPartialResult,
+  }) async {
     if (_delivered) return;
     _delivered = true;
     onFinalResult(_said);
