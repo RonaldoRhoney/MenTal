@@ -19,4 +19,20 @@ void main() {
     expect(voiceForTerritory('ouvido_afiado'), isNull);
     expect(voiceForTerritory('cores'), isNull);
   });
+
+  test(
+      'Phrasal Verbs e Expressões Idiomáticas leem as OPÇÕES em português '
+      '(pedido de Rhoney, 28/09/2026: opção é o significado em PT, não a '
+      'palavra estrangeira — ler com voz em inglês soaria errado)', () {
+    for (final territoryId in [
+      'ingles_phrasal_basico',
+      'ingles_phrasal_relampago_avancado',
+      'ingles_expressoes_intermediario',
+      'ingles_expressoes_relampago_basico',
+    ]) {
+      expect(voiceForTerritory(territoryId), 'pt-BR-FranciscaNeural', reason: territoryId);
+    }
+    // Vocabulário clássico continua com a voz do idioma (opção É a palavra estrangeira).
+    expect(voiceForTerritory('ingles_basico'), 'en-US-AriaNeural');
+  });
 }

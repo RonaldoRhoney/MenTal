@@ -11,10 +11,30 @@ const Map<String, String> _kIdiomaVoiceByTerritoryPrefix = {
   'frances': 'fr-FR-DeniseNeural',
 };
 
+/// Phrasal Verbs e Expressões Idiomáticas (MUNDO_IDIOMAS_INGLES_PHRASAL_
+/// VERBS_V1.md, MUNDO_IDIOMAS_INGLES_EXPRESSOES_IDIOMATICAS_V1.md) invertem
+/// o padrão do vocabulário clássico: lá a pergunta é em português e as
+/// OPÇÕES são a palavra estrangeira (por isso a voz do idioma faz sentido
+/// nas opções); aqui o enunciado traz a frase em inglês, mas as opções são
+/// o SIGNIFICADO em português. Ler essas opções com voz/entonação em
+/// inglês soa errado — pedido de Rhoney (28/09/2026): "o app deve ler as
+/// frases em português, com entonação da língua português". Mesma voz
+/// usada pelo MENTAL LINGO (mental_lingo_screen.dart, kMentalLingoVoice)
+/// pra explicações em português — consistência de identidade sonora.
+const String _kPortugueseVoice = 'pt-BR-FranciscaNeural';
+const List<String> _kPortugueseOptionsTerritoryPrefixes = [
+  'ingles_phrasal',
+  'ingles_expressoes',
+];
+
 /// Territórios hoje são "<idioma>_<nivel>" (ingles_basico,
 /// espanhol_avancado, ...) — casa pelo prefixo antes do "_", sem exigir
-/// lista exaustiva de todos os níveis existentes.
+/// lista exaustiva de todos os níveis existentes. Exceção: os prefixos
+/// mais específicos acima (opções em português) são checados primeiro.
 String? voiceForTerritory(String territoryId) {
+  for (final prefix in _kPortugueseOptionsTerritoryPrefixes) {
+    if (territoryId.startsWith(prefix)) return _kPortugueseVoice;
+  }
   final prefix = territoryId.split('_').first;
   return _kIdiomaVoiceByTerritoryPrefix[prefix];
 }
