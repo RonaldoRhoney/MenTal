@@ -7,7 +7,7 @@ ao vocabulário curado — nunca gera texto novo.
 
 import uuid
 
-from app import models
+from app import mental_lingo, models
 from app.db import SessionLocal
 
 from .conftest import auth_header
@@ -263,11 +263,31 @@ def test_frase_exemplo_intermediario_e_avancado_nao_falam_a_traducao(client):
     assert "O prazo final é na sexta-feira." in data["answer_text"]  # mas a tradução aparece na tela
 
 
-def test_frase_exemplo_so_aprovada_e_sem_cadastro_diz_que_nao_tem(client):
+def test_frase_exemplo_so_aprovada_e_sem_cadastro_e_sem_verbete_no_wikcionario_diz_que_nao_tem(client, monkeypatch):
+    """Sem frase curada aprovada E sem significado encontrado no Wikcionário
+    (fallback de 28/09/2026): mensagem honesta de "ainda não tenho", nenhuma
+    frase inventada."""
+    monkeypatch.setattr(mental_lingo.wiktionary, "glosses_pt_to_en", lambda word: None)
     _seed_example("Lantern", "The lantern is old.", "O lampião é velho.", status="pending")
-    for question in ("use lantern em uma frase", "use xilofone em uma frase"):
+    for question in ("use lantern em uma frase", "use xilofonelapistortuosoinexistente em uma frase"):
         data = _ask(client, question).json()
         assert data["found"] is False and "Ainda não tenho uma frase de exemplo" in data["answer_text"]
+
+
+def test_frase_exemplo_sem_cadastro_mas_com_wikcionario_mostra_significado_nao_inventa_frase(client, monkeypatch):
+    """MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md (ajuste 28/09/2026, aprovado por Rhoney):
+    palavra fora do banco de exemplos, mas com significado no Wikcionário (fonte
+    aberta/gratuita) — responde com o significado em vez de deixar sem resposta,
+    mas deixa claro que não é frase-exemplo curada nem revisada."""
+    monkeypatch.setattr(
+        mental_lingo.wiktionary, "glosses_pt_to_en",
+        lambda word: ["hot"] if word == "quente" else None,
+    )
+    data = _ask(client, "use quente em uma frase").json()
+    assert data["found"] is True
+    assert "ainda não" in data["answer_text"].lower()
+    assert "wikcionário" in data["answer_text"].lower()
+    assert "quente" in data["answer_text"].lower()
 
 
 def test_frase_exemplo_aceita_varias_formas_de_pedir_incluindo_a_palavra_e_o_idioma(client):

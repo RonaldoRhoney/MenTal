@@ -426,11 +426,7 @@ def _example_answer(db: Session, term: str) -> dict:
         .order_by(models.MentalLingoExample.frase)
     ).scalars().all()
     if not rows:
-        return {
-            "found": False,
-            "answer_text": f"Ainda não tenho uma frase de exemplo para '{term}'. Estou ampliando os exemplos aos poucos.",
-            "matched_word": term,
-        }
+        return _example_fallback(db, term)
     row = rows[0]
     header = f"Exemplo com '{row.palavra}'" + (f" ({row.palavra_pt})" if row.palavra_pt else "") + ":"
     segments = [{"lang": "pt", "text": "Um exemplo:"}, {"lang": "ingles", "text": row.frase}]
@@ -445,6 +441,43 @@ def _example_answer(db: Session, term: str) -> dict:
         "target_language": "ingles",
         "speech_segments": segments,
         "highlights": [row.palavra],
+    }
+
+
+def _example_fallback(db: Session, term: str) -> dict:
+    """Termo sem frase-exemplo curada (MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md, ajuste de
+    28/09/2026, aprovado por Rhoney): em vez de só dizer "ainda não tenho", tenta o
+    SIGNIFICADO via Wikcionário (fonte aberta e gratuita, já usada no fallback de
+    tradução de palavra — ver `_suggestion_for`) palavra a palavra, pra não deixar o
+    jogador sem resposta nenhuma quando o vocabulário pedido é simples mas está fora
+    do banco curado (ex.: "água quente"). Nunca inventa uma frase — só mostra o
+    significado, deixando claro que não é uma frase-exemplo curada nem revisada.
+    Cada palavra sem definição encontrada vira lacuna registrada (mesma fila de
+    sugestões de expansão do banco oficial, aprovação em lote já estabelecida)."""
+    words = [w for w in (part.strip(" '\",.;:") for part in term.split()) if w]
+    glosses: list[str] = []
+    for w in words:
+        suggestion = _suggestion_for(db, w.lower(), None)
+        if suggestion is not None:
+            glosses.append(suggestion.answer_text)
+        else:
+            _record_gap(db, w, "ingles")
+    if not glosses:
+        return {
+            "found": False,
+            "answer_text": f"Ainda não tenho uma frase de exemplo para '{term}'. Estou ampliando os exemplos aos poucos.",
+            "matched_word": term,
+        }
+    answer = (
+        f"Ainda não tenho uma frase de exemplo pronta para '{term}', mas encontrei isto "
+        f"no Wikcionário: {' '.join(glosses)} (fonte aberta, ainda não revisado.)"
+    )
+    return {
+        "found": True,
+        "answer_text": answer,
+        "matched_word": term,
+        "target_language": "ingles",
+        "reviewed": False,
     }
 
 

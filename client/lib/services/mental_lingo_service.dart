@@ -48,23 +48,39 @@ class MentalLingoService {
     return _initialized;
   }
 
-  /// Escuta uma única pergunta. `pauseFor` é o TIMEOUT OBRIGATÓRIO de
-  /// silêncio exigido pela especificação (§Arquitetura a avaliar,
-  /// adição v1.1: "evitar que a captura de voz fique presa
-  /// indefinidamente") — o pacote transiciona sozinho pro status
-  /// `notListening` quando ninguém fala por esse tempo.
-  Future<void> listen({required void Function(String text) onFinalResult}) {
+  /// Escuta uma única pergunta. MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md
+  /// (ajuste de 28/09/2026, aprovado por Rhoney): a captura passa a ser
+  /// por APERTAR-E-SEGURAR o botão do microfone, não mais por detecção
+  /// de silêncio — em testes reais, o `pauseFor` curto processava a
+  /// pergunta com base em só parte da fala, interpretando uma pausa
+  /// natural (respirar, pensar) como fim da pergunta. `pauseFor` e
+  /// `listenFor` agora ficam bem altos (a tela é quem decide quando a
+  /// captura acaba, chamando `stop()` no momento em que o usuário solta
+  /// o botão) — servem só como rede de segurança contra o pacote nunca
+  /// concluir a sessão sozinho.
+  /// `onPartialResult` (opcional) recebe a transcrição parcial enquanto o
+  /// usuário ainda fala — usado só pra exibir "Ouvindo… <texto>" ao vivo
+  /// durante o apertar-e-segurar; a pergunta em si sempre é decidida pelo
+  /// resultado FINAL (`onFinalResult`), nunca por um trecho parcial.
+  Future<void> listen({
+    required void Function(String text) onFinalResult,
+    void Function(String text)? onPartialResult,
+  }) {
     return _speech.listen(
       onResult: (SpeechRecognitionResult result) {
-        if (result.finalResult) onFinalResult(result.recognizedWords);
+        if (result.finalResult) {
+          onFinalResult(result.recognizedWords);
+        } else {
+          onPartialResult?.call(result.recognizedWords);
+        }
       },
       listenOptions: stt.SpeechListenOptions(
         cancelOnError: true,
-        partialResults: false,
-        listenMode: stt.ListenMode.confirmation,
+        partialResults: onPartialResult != null,
+        listenMode: stt.ListenMode.dictation,
         localeId: 'pt_BR',
-        listenFor: const Duration(seconds: 60),
-        pauseFor: const Duration(seconds: 8),
+        listenFor: const Duration(minutes: 3),
+        pauseFor: const Duration(minutes: 3),
       ),
     );
   }

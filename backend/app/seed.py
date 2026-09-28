@@ -324,26 +324,33 @@ TERRITORIES = [
     {"id": "ingles_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 40, "world_id": "idiomas", "block_id": "ingles"},
     {"id": "ingles_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 41, "world_id": "idiomas", "block_id": "ingles"},
     {"id": "ingles_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 42, "world_id": "idiomas", "block_id": "ingles"},
-    {"id": "espanhol_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 43, "world_id": "idiomas", "block_id": "espanhol"},
-    {"id": "espanhol_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 44, "world_id": "idiomas", "block_id": "espanhol"},
-    {"id": "espanhol_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 45, "world_id": "idiomas", "block_id": "espanhol"},
-    {"id": "frances_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 46, "world_id": "idiomas", "block_id": "frances"},
-    {"id": "frances_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 47, "world_id": "idiomas", "block_id": "frances"},
-    {"id": "frances_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 48, "world_id": "idiomas", "block_id": "frances"},
     # Phrasal Verbs de Inglês (MUNDO_IDIOMAS_INGLES_PHRASAL_VERBS_V1.md, aprovado 27/09/2026).
     # Território normal + Relâmpago (sempre cronometrado, conteúdo distinto) por nível.
     # block_id "ingles" (NÃO um bloco "phrasal_verbs" próprio) — decisão de Rhoney
     # (27/09/2026): Phrasal Verbs é conteúdo do idioma Inglês, não um idioma novo. Os únicos
     # idiomas do SubMundo são Inglês/Espanhol/Francês (+ Libras, bloco à parte); dentro de cada
-    # um entram todos os seus respectivos conteúdos. display_order 119-124 (bem depois de
-    # 40-42) garante que, mesmo dentro do mesmo bloco "ingles", vocabulário aparece antes de
-    # Phrasal Verbs.
-    {"id": "ingles_phrasal_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 119, "world_id": "idiomas", "block_id": "ingles"},
-    {"id": "ingles_phrasal_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 120, "world_id": "idiomas", "block_id": "ingles"},
-    {"id": "ingles_phrasal_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 121, "world_id": "idiomas", "block_id": "ingles"},
-    {"id": "ingles_phrasal_relampago_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 122, "world_id": "idiomas", "block_id": "ingles"},
-    {"id": "ingles_phrasal_relampago_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 123, "world_id": "idiomas", "block_id": "ingles"},
-    {"id": "ingles_phrasal_relampago_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 124, "world_id": "idiomas", "block_id": "ingles"},
+    # um entram todos os seus respectivos conteúdos.
+    # display_order 43-48 (logo depois de 40-42, ANTES de Espanhol/Francês abaixo) — achado de
+    # 28/09/2026 (Rhoney: "Mundo dos Idiomas confuso, não aparece em sequência como pastas"):
+    # o algoritmo de agrupamento do client (_territoryGroups) junta territórios CONSECUTIVOS
+    # do mesmo block_id num único cartão de seção; com Phrasal Verbs lá em 119-124 (bem longe
+    # de 40-42), o bloco "Inglês" aparecia partido em dois lugares da tela, com Espanhol e
+    # Francês intercalados no meio. Espanhol/Francês foram renumerados de 43-48 pra 49-54 pra
+    # abrir espaço (sem conflito: nenhum outro território do Mundo dos Idiomas usa essa faixa;
+    # a mesma faixa numérica em outro Mundo, ex. "valores", não afeta esta lista porque cada
+    # tela de Mundo já filtra só os territórios do próprio world_id).
+    {"id": "ingles_phrasal_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 43, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 44, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 45, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_relampago_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 46, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_relampago_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 47, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "ingles_phrasal_relampago_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 48, "world_id": "idiomas", "block_id": "ingles"},
+    {"id": "espanhol_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 49, "world_id": "idiomas", "block_id": "espanhol"},
+    {"id": "espanhol_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 50, "world_id": "idiomas", "block_id": "espanhol"},
+    {"id": "espanhol_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 51, "world_id": "idiomas", "block_id": "espanhol"},
+    {"id": "frances_basico", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 52, "world_id": "idiomas", "block_id": "frances"},
+    {"id": "frances_intermediario", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 53, "world_id": "idiomas", "block_id": "frances"},
+    {"id": "frances_avancado", "challenge_type": "idiomas", "requires_subscription": True, "free_sample_count": 3, "display_order": 54, "world_id": "idiomas", "block_id": "frances"},
     {"id": "bolsa", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 49, "world_id": "valores"},
     {"id": "criptomoedas", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 50, "world_id": "valores"},
     {"id": "cenario_global", "challenge_type": "valores", "requires_subscription": True, "free_sample_count": 2, "display_order": 51, "world_id": "valores"},

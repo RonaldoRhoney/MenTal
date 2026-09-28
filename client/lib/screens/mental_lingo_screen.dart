@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../api/api_client.dart';
 import '../idioma_voices.dart';
@@ -363,10 +364,46 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   bool _voted = false;
   String? _errorMessage;
   bool _speakingAnswer = false;
-  // O status "notListening" chega ANTES do resultado final da fala (achado
-  // no teste real de Rhoney, 25/09/2026: pergunta falada virava "Não ouvi
-  // nada"). Só declara silêncio se, passado este prazo, nenhum resultado veio.
-  Timer? _noResultTimer;
+
+  // MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md (ajuste de 28/09/2026, aprovado por
+  // Rhoney): captura por apertar-e-segurar, não mais detecção de silêncio.
+  // `false` (padrão) = segurar o botão enquanto fala, soltar pra enviar.
+  // `true` = modo de acessibilidade (tocar pra começar, tocar de novo pra
+  // parar), sem exigir pressão contínua — carregado do dispositivo.
+  bool _tapMode = false;
+  // Dedo arrastado pra fora da área do botão durante o apertar-e-segurar:
+  // soltar nesse estado CANCELA a captura em vez de enviar (mesmo padrão de
+  // apps de mensagem de voz).
+  bool _willCancel = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadTapModePreference();
+  }
+
+  static const _kTapModePrefKey = 'mental_lingo_tap_mode';
+
+  Future<void> _loadTapModePreference() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      if (!mounted) return;
+      setState(() => _tapMode = prefs.getBool(_kTapModePrefKey) ?? false);
+    } catch (_) {
+      // preferência não crítica — mantém o padrão (apertar-e-segurar)
+    }
+  }
+
+  Future<void> _toggleTapMode() async {
+    final next = !_tapMode;
+    setState(() => _tapMode = next);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setBool(_kTapModePrefKey, next);
+    } catch (_) {
+      // falha ao salvar não impede o uso nesta sessão
+    }
+  }
 
   Future<void> _startListening() async {
     setState(() {
@@ -375,16 +412,16 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       _answer = null;
       _errorMessage = null;
       _accumulated = '';
-      _listenStartedAt = DateTime.now();
+      _willCancel = false;
+      _awaitingFinal = false;
     });
     _safetyTimer?.cancel();
     _safetyTimer = Timer(_kSafetyCap, () {
+      // Teto de segurança (nunca deveria disparar em uso normal, nem
+      // segurando o botão nem no modo de toque): protege só contra o
+      // reconhecedor travado por bug de software.
       if (!mounted || _state != _LingoState.listening) return;
-      if (_accumulated.isNotEmpty) {
-        _submitAccumulated();
-      } else {
-        _cancelListening();
-      }
+      _stopAndSubmit();
     });
     final ok = await widget._service.init(
       onError: (_) {
@@ -395,27 +432,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
               'Não consegui acessar o microfone. Verifique a permissão do MENTAL nas configurações do aparelho.';
         });
       },
-      onStatus: (status) {
-        // Timeout de silêncio (pauseFor) ou stop/cancel: se a escuta
-        // acabou e nenhuma pergunta chegou, avisa em vez de ficar preso
-        // no estado "Ouvindo" pra sempre (v1.1 §Arquitetura a avaliar).
-        if (!mounted) return;
-        if ((status == 'notListening' || status == 'done') &&
-            _state == _LingoState.listening &&
-            _accumulated.isEmpty) {
-          _noResultTimer?.cancel();
-          _noResultTimer = Timer(const Duration(milliseconds: 3000), () {
-            if (!mounted ||
-                _state != _LingoState.listening ||
-                _accumulated.isNotEmpty) return;
-            setState(() {
-              _state = _LingoState.error;
-              _errorMessage =
-                  'Não ouvi nada. Toque no microfone e tente de novo.';
-            });
-          });
-        }
-      },
+      onStatus: (_) {},
     );
     if (!ok) {
       if (!mounted) return;
@@ -425,66 +442,65 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       });
       return;
     }
-    await widget._service.listen(onFinalResult: _handleResult);
+    await widget._service.listen(
+      onFinalResult: _handleResult,
+      onPartialResult: _handlePartialResult,
+    );
   }
 
-  /// Pedido de Rhoney (25/09/2026): "o tempo de espera deve ser o tempo da
-  /// pergunta do usuário". O reconhecedor do Android encerra cada sessão
-  /// numa pausa curta de fala; em vez de enviar a 1ª frase, ACUMULAMOS os
-  /// trechos, reabrimos a escuta e só enviamos quando o usuário para de
-  /// falar de verdade (_kSubmitAfterSilence) ou toca no microfone.
-  // Pedido de Rhoney (25/09/2026): "a escuta deve ser proporcional ao tempo da
-  // pergunta". A tolerância a pausas cresce com quanto o usuário já falou:
-  // 2,5s base + 15% do tempo decorrido, no máximo 8s (pergunta curta envia
-  // rápido; pergunta longa ganha mais fôlego pra respirar/pensar).
-  DateTime? _listenStartedAt;
-
-  // Pergunta que já chegou completa ("como se escreve casa em inglês", "o que
-  // significa house"): não há por que esperar o fôlego extra — envia logo.
-  static final RegExp _completeQuestion = RegExp(
-    r'^(como (se|é que se) (escreve|diz|fala)|traduz[ao]?|qual (é )?a tradu[çc][ãa]o de)\s+.+\s+(em|para)\s+(inglês|ingles|espanhol|francês|frances)\??$|^o que (significa|quer dizer)\s+\S+',
-    caseSensitive: false,
-  );
-
-  Duration _submitDelay() {
-    if (_completeQuestion.hasMatch(_accumulated.trim())) return const Duration(milliseconds: 1200);
-    final started = _listenStartedAt;
-    final elapsedMs = started == null ? 0 : DateTime.now().difference(started).inMilliseconds;
-    return Duration(milliseconds: (2000 + elapsedMs * 0.12).clamp(2000, 6000).round());
+  void _handlePartialResult(String text) {
+    if (!mounted || _state != _LingoState.listening) return;
+    setState(() => _accumulated = text.trim());
   }
 
   String _accumulated = '';
-  Timer? _submitTimer;
-  // Teto de SEGURANÇA contra captura travada (MENTAL_IDIOMAS_ENTONACAO_TTS_URGENTE_V1.md
-  // §2, 26/09/2026): alto o bastante pra nunca cortar uma pergunta falada normal (mesmo
-  // de 30 s ou mais); a escuta em si segue a fala do usuário (silêncio sustentado).
+  // Teto de SEGURANÇA contra captura travada (alto o bastante pra nunca
+  // interferir no uso normal — apertar-e-segurar já é controlado pelo
+  // próprio usuário soltando o botão).
   static const Duration _kSafetyCap = Duration(minutes: 3);
   Timer? _safetyTimer;
+  // `true` entre o usuário soltar o botão (ou tocar de novo, no modo de
+  // toque) e o resultado final da fala chegar — evita enviar a pergunta
+  // antes do reconhecedor terminar de processar o que foi dito.
+  bool _awaitingFinal = false;
+  Timer? _finalizeTimeoutTimer;
 
-  Future<void> _handleResult(String text) async {
+  void _handleResult(String text) {
     if (!mounted || _state != _LingoState.listening) return;
-    _noResultTimer?.cancel();
     final piece = text.trim();
-    if (piece.isNotEmpty) {
-      setState(() =>
-          _accumulated = _accumulated.isEmpty ? piece : '$_accumulated $piece');
-    }
-    if (_accumulated.isEmpty) {
+    if (piece.isNotEmpty) _accumulated = piece;
+    if (_awaitingFinal) _finishAwaitingFinal();
+  }
+
+  void _finishAwaitingFinal() {
+    _awaitingFinal = false;
+    _finalizeTimeoutTimer?.cancel();
+    if (_accumulated.trim().isEmpty) {
+      if (!mounted) return;
       setState(() {
         _state = _LingoState.error;
-        _errorMessage = 'Não ouvi nada. Toque no microfone e tente de novo.';
+        _errorMessage = _tapMode
+            ? 'Não ouvi nada. Toque no microfone e tente de novo.'
+            : 'Não ouvi nada. Aperte e segure o microfone enquanto fala.';
       });
-      return;
+    } else {
+      _submitAccumulated();
     }
-    // Reabre a escuta pro caso de a pergunta continuar; se ninguém falar mais,
-    // o prazo abaixo envia o que foi acumulado.
-    _submitTimer?.cancel();
-    _submitTimer = Timer(_submitDelay(), _submitAccumulated);
-    try {
-      await widget._service.listen(onFinalResult: _handleResult);
-    } catch (_) {
-      // sem reabrir: o prazo acima envia o que já temos.
-    }
+  }
+
+  /// Encerra a captura (soltou o botão, ou tocou de novo no modo de
+  /// acessibilidade) e envia a pergunta assim que o resultado final da
+  /// fala chegar. Um prazo curto de segurança evita ficar preso
+  /// esperando indefinidamente se o reconhecedor não confirmar o fim.
+  Future<void> _stopAndSubmit() async {
+    if (!mounted || _state != _LingoState.listening) return;
+    _awaitingFinal = true;
+    _finalizeTimeoutTimer?.cancel();
+    _finalizeTimeoutTimer = Timer(const Duration(milliseconds: 1500), () {
+      if (!mounted || !_awaitingFinal) return;
+      _finishAwaitingFinal();
+    });
+    await widget._service.stop();
   }
 
 
@@ -550,8 +566,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 
   Future<void> _submitAccumulated() async {
     _safetyTimer?.cancel();
-    _submitTimer?.cancel();
-    _noResultTimer?.cancel();
+    _finalizeTimeoutTimer?.cancel();
     if (!mounted || _state != _LingoState.listening) return;
     final text = _accumulated.trim();
     if (text.isEmpty) return;
@@ -590,10 +605,13 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 
   void _cancelListening() {
     _safetyTimer?.cancel();
-    _submitTimer?.cancel();
-    _noResultTimer?.cancel();
+    _finalizeTimeoutTimer?.cancel();
+    _awaitingFinal = false;
     widget._service.cancel();
-    setState(() => _state = _LingoState.ready);
+    setState(() {
+      _state = _LingoState.ready;
+      _willCancel = false;
+    });
   }
 
   /// Pedido de Rhoney (26/09/2026): "a AI Mental_Lingo deve falar as palavras de cada
@@ -671,8 +689,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   @override
   void dispose() {
     _safetyTimer?.cancel();
-    _submitTimer?.cancel();
-    _noResultTimer?.cancel();
+    _finalizeTimeoutTimer?.cancel();
     widget._service.cancel();
     super.dispose();
   }
@@ -680,9 +697,11 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   String _stateLabel() {
     switch (_state) {
       case _LingoState.ready:
-        return 'Toque no microfone e pergunte sobre o vocabulário dos Idiomas.';
+        return _tapMode
+            ? 'Toque no microfone e pergunte sobre o vocabulário dos Idiomas.'
+            : 'Aperte e segure o microfone, fale sua pergunta e solte.';
       case _LingoState.listening:
-        return 'Ouvindo…';
+        return _willCancel ? 'Solte fora do botão pra cancelar' : 'Ouvindo…';
       case _LingoState.processing:
         return _preparingTranslator ? 'Preparando o tradutor (só na primeira vez)…' : 'Processando…';
       case _LingoState.answering:
@@ -695,7 +714,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   IconData _micIcon() {
     switch (_state) {
       case _LingoState.listening:
-        return Icons.graphic_eq_rounded;
+        return _willCancel ? Icons.close_rounded : Icons.graphic_eq_rounded;
       case _LingoState.processing:
         return Icons.hourglass_top_rounded;
       case _LingoState.error:
@@ -706,33 +725,76 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     }
   }
 
-  VoidCallback? _micTap() {
+  // Modo de acessibilidade (toque único): tocar começa, tocar de novo
+  // encerra e envia — sem exigir pressão contínua no botão.
+  VoidCallback? _tapModeAction() {
     switch (_state) {
       case _LingoState.ready:
       case _LingoState.error:
       case _LingoState.answering:
         return _startListening;
       case _LingoState.listening:
-        return _accumulated.isNotEmpty ? _submitAccumulated : _cancelListening;
+        return _stopAndSubmit;
       case _LingoState.processing:
         return null;
     }
+  }
+
+  static const double _kMicButtonSize = 96;
+  // Margem além da área do botão que ainda conta como "dentro" antes de
+  // marcar cancelamento — evita cancelar sem querer com um leve tremor
+  // do dedo, mas ainda cancela com uma saída clara da área do botão.
+  static const double _kCancelMargin = 56;
+
+  void _onHoldStart(LongPressStartDetails _) {
+    if (_tapMode) return;
+    if (_state != _LingoState.listening) _startListening();
+  }
+
+  void _onHoldMoveUpdate(LongPressMoveUpdateDetails details) {
+    if (_tapMode || _state != _LingoState.listening) return;
+    final pos = details.localPosition;
+    final outside = pos.dx < -_kCancelMargin ||
+        pos.dy < -_kCancelMargin ||
+        pos.dx > _kMicButtonSize + _kCancelMargin ||
+        pos.dy > _kMicButtonSize + _kCancelMargin;
+    if (outside != _willCancel) setState(() => _willCancel = outside);
+  }
+
+  void _onHoldEnd(LongPressEndDetails _) {
+    if (_tapMode || _state != _LingoState.listening) return;
+    if (_willCancel) {
+      _cancelListening();
+    } else {
+      _stopAndSubmit();
+    }
+  }
+
+  void _onHoldCancel() {
+    if (_tapMode || _state != _LingoState.listening) return;
+    _cancelListening();
   }
 
   Widget _buildMicButton() {
     final active = _state == _LingoState.listening;
     return GestureDetector(
       key: const Key('mental_lingo_mic_button'),
-      onTap: _micTap(),
+      onTap: _tapMode ? _tapModeAction() : null,
+      onLongPressStart: _tapMode ? null : _onHoldStart,
+      onLongPressMoveUpdate: _tapMode ? null : _onHoldMoveUpdate,
+      onLongPressEnd: _tapMode ? null : _onHoldEnd,
+      onLongPressCancel: _tapMode ? null : _onHoldCancel,
       child: Container(
-        width: 96,
-        height: 96,
+        width: _kMicButtonSize,
+        height: _kMicButtonSize,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          gradient:
-              LinearGradient(colors: [AppColors.purple, AppColors.mystery]),
+          gradient: LinearGradient(colors: _willCancel
+              ? [AppColors.mystery, AppColors.mystery]
+              : [AppColors.purple, AppColors.mystery]),
           border: Border.all(
-              color: AppColors.purple.withValues(alpha: active ? 1 : 0.4),
+              color: (_willCancel ? AppColors.mystery : AppColors.purple)
+                  .withValues(alpha: active ? 1 : 0.4),
               width: active ? 4 : 2),
         ),
         child: _state == _LingoState.processing
@@ -955,6 +1017,21 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                         Text(_stateLabel(),
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.titleMedium),
+                        // Alternativa de acessibilidade (v1.1, §Arquitetura a avaliar):
+                        // pra quem tem dificuldade de manter pressão contínua no botão —
+                        // só aparece fora da escuta, pra não distrair no meio da captura.
+                        if (_state != _LingoState.listening &&
+                            _state != _LingoState.processing)
+                          TextButton.icon(
+                            key: const Key('mental_lingo_tap_mode_toggle'),
+                            onPressed: _toggleTapMode,
+                            icon: Icon(_tapMode
+                                ? Icons.touch_app_outlined
+                                : Icons.back_hand_outlined),
+                            label: Text(_tapMode
+                                ? 'Modo: toque único (trocar para apertar e segurar)'
+                                : 'Dificuldade para segurar? Toque aqui'),
+                          ),
                         const SizedBox(height: 20),
                         if (_state == _LingoState.listening &&
                             _accumulated.isNotEmpty)

@@ -462,7 +462,9 @@ def get_blocks(db: Session) -> list[dict]:
     out = []
     for block in blocks:
         territory_ids = db.execute(
-            select(models.Territory.id).where(models.Territory.block_id == block.id)
+            select(models.Territory.id)
+            .where(models.Territory.block_id == block.id)
+            .order_by(models.Territory.display_order)
         ).scalars().all()
         if not territory_ids:
             continue
@@ -474,8 +476,16 @@ def get_worlds_progress(db: Session, user_id: str) -> list[dict]:
     worlds = db.execute(select(models.World).order_by(models.World.display_order)).scalars().all()
     out = []
     for world in worlds:
+        # ORDER BY explícito (achado 28/09/2026, Rhoney: "Mundo dos Idiomas
+        # confuso, não aparece em sequência como se estivessem em pastas") —
+        # sem isso a ordem vinha da ordem de inserção no banco, não do
+        # display_order pensado pra agrupar por Bloco (client._territoryGroups
+        # agrupa territórios CONSECUTIVOS do mesmo block_id; sem essa ordenação,
+        # o mesmo bloco podia aparecer partido em dois lugares da tela).
         territory_ids = db.execute(
-            select(models.Territory.id).where(models.Territory.world_id == world.id)
+            select(models.Territory.id)
+            .where(models.Territory.world_id == world.id)
+            .order_by(models.Territory.display_order)
         ).scalars().all()
         out.append(
             {
