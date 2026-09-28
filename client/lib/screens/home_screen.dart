@@ -1720,7 +1720,7 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
 /// opcional do bloco + os cards em grid de 2 colunas (Wrap), reduzindo a
 /// sensação de "pilha infinita" à medida que mais territórios/Blocos
 /// forem adicionados na V3.
-class _TerritoryGroup extends StatelessWidget {
+class _TerritoryGroup extends StatefulWidget {
   const _TerritoryGroup({
     required this.blockId,
     required this.blockName,
@@ -1740,42 +1740,61 @@ class _TerritoryGroup extends StatelessWidget {
   final VoidCallback onReturned;
 
   @override
+  State<_TerritoryGroup> createState() => _TerritoryGroupState();
+}
+
+class _TerritoryGroupState extends State<_TerritoryGroup> {
+  // Pedido de Rhoney (28/09/2026): "quando clicar no idioma, tudo será
+  // recolhido e ao clicar novamente, será mostrado todo conteúdo" —
+  // cada seção com Bloco (cabeçalho) vira um acordeão independente,
+  // começando aberta (mesmo comportamento visual de antes).
+  bool _expanded = true;
+
+  @override
   Widget build(BuildContext context) {
+    final blockId = widget.blockId;
+    final blockName = widget.blockName;
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           if (blockName != null) ...[
-            _SectionHeader(blockId: blockId!, name: blockName!),
+            InkWell(
+              key: Key('section_header_$blockId'),
+              borderRadius: BorderRadius.circular(10),
+              onTap: () => setState(() => _expanded = !_expanded),
+              child: _SectionHeader(blockId: blockId!, name: blockName, expanded: _expanded),
+            ),
             const SizedBox(height: 12),
           ],
-          LayoutBuilder(
-            builder: (context, constraints) {
-              const spacing = 12.0;
-              // Uma linha por território: "Desafio" e "Relâmpago" lado a lado
-              // dentro do próprio card (pedido de Rhoney, 19/09/2026).
-              final cardWidth = constraints.maxWidth;
-              return Wrap(
-                spacing: spacing,
-                runSpacing: spacing,
-                children: [
-                  for (final territoryId in territoryIds)
-                    SizedBox(
-                      width: cardWidth,
-                      child: _TerritoryCard(
-                        territoryId: territoryId,
-                        label: territoryLabel(l10n, territoryId),
-                        progress: territoryProgressOf(territoryId),
-                        l10n: l10n,
-                        client: client,
-                        onReturned: onReturned,
+          if (blockName == null || _expanded)
+            LayoutBuilder(
+              builder: (context, constraints) {
+                const spacing = 12.0;
+                // Uma linha por território: "Desafio" e "Relâmpago" lado a
+                // lado dentro do próprio card (pedido de Rhoney, 19/09/2026).
+                final cardWidth = constraints.maxWidth;
+                return Wrap(
+                  spacing: spacing,
+                  runSpacing: spacing,
+                  children: [
+                    for (final territoryId in widget.territoryIds)
+                      SizedBox(
+                        width: cardWidth,
+                        child: _TerritoryCard(
+                          territoryId: territoryId,
+                          label: territoryLabel(widget.l10n, territoryId),
+                          progress: widget.territoryProgressOf(territoryId),
+                          l10n: widget.l10n,
+                          client: widget.client,
+                          onReturned: widget.onReturned,
+                        ),
                       ),
-                    ),
-                ],
-              );
-            },
-          ),
+                  ],
+                );
+              },
+            ),
         ],
       ),
     );
@@ -1839,10 +1858,14 @@ const Map<String, IconData> _kSectionIcons = {
 /// gradiente — mesmo cuidado de acabamento já pedido pro Caça-palavras
 /// e pro ícone do Mapa de Trajetória.
 class _SectionHeader extends StatelessWidget {
-  const _SectionHeader({required this.blockId, required this.name});
+  const _SectionHeader({required this.blockId, required this.name, this.expanded});
 
   final String blockId;
   final String name;
+  // null = seção sem Bloco, nunca recolhível (não deveria nem renderizar
+  // aqui, mas o parâmetro fica opcional por clareza). true/false = estado
+  // do acordeão, controla a seta.
+  final bool? expanded;
 
   @override
   Widget build(BuildContext context) {
@@ -1880,6 +1903,14 @@ class _SectionHeader extends StatelessWidget {
             ),
           ),
         ),
+        if (expanded != null) ...[
+          const SizedBox(width: 8),
+          AnimatedRotation(
+            turns: expanded! ? 0 : -0.25,
+            duration: const Duration(milliseconds: 200),
+            child: Icon(Icons.expand_more_rounded, color: AppColors.gold, size: 22),
+          ),
+        ],
       ],
     );
   }
