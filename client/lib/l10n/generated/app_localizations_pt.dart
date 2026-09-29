@@ -278,6 +278,30 @@ class AppLocalizationsPt extends AppLocalizations {
       'Phrasal Verbs Relâmpago: Avançado';
 
   @override
+  String get territoryInglesExpressoesBasico =>
+      'Expressões Idiomáticas: Básico';
+
+  @override
+  String get territoryInglesExpressoesIntermediario =>
+      'Expressões Idiomáticas: Intermediário';
+
+  @override
+  String get territoryInglesExpressoesAvancado =>
+      'Expressões Idiomáticas: Avançado';
+
+  @override
+  String get territoryInglesExpressoesRelampagoBasico =>
+      'Expressões Idiomáticas Relâmpago: Básico';
+
+  @override
+  String get territoryInglesExpressoesRelampagoIntermediario =>
+      'Expressões Idiomáticas Relâmpago: Intermediário';
+
+  @override
+  String get territoryInglesExpressoesRelampagoAvancado =>
+      'Expressões Idiomáticas Relâmpago: Avançado';
+
+  @override
   String get territoryBolsa => 'Bolsa e Investimentos';
 
   @override

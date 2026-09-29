@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Fix that leak now; a stitch in time saves nine.\", o que significa 'a stitch in time saves nine'?",
+    "options": [
+      "esperar sempre resolve melhor",
+      "problemas pequenos nunca crescem sozinhos",
+      "consertos rápidos são sempre malfeitos",
+      "resolver um problema cedo evita complicações maiores depois"
+    ],
+    "correct_answer": "resolver um problema cedo evita complicações maiores depois",
+    "explanation": "Nesta frase, 'a stitch in time saves nine' significa \"resolver um problema cedo evita complicações maiores depois\".",
+    "hints": [
+      "Tema: Valores.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"You can feel a storm is brewing between those two departments.\", o que significa 'a storm is brewing'?",
+    "options": [
+      "um acordo está prestes a ser fechado",
+      "um problema já foi resolvido",
+      "um conflito está se formando",
+      "uma calmaria está se instalando"
+    ],
+    "correct_answer": "um conflito está se formando",
+    "explanation": "Nesta frase, 'a storm is brewing' significa \"um conflito está se formando\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"All these small savings add up to a big amount.\", o que significa 'add up to'?",
+    "options": [
+      "diminuir o resultado final",
+      "cancelar-se mutuamente",
+      "somar-se a um resultado maior",
+      "não ter relação nenhuma com o resultado"
+    ],
+    "correct_answer": "somar-se a um resultado maior",
+    "explanation": "Nesta frase, 'add up to' significa \"somar-se a um resultado maior\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Don't worry about him, he's all bark and no bite.\", o que significa 'all bark and no bite'?",
+    "options": [
+      "ameaçador na fala, mas inofensivo na prática",
+      "perigoso tanto na fala quanto na prática",
+      "inofensivo na fala, mas perigoso na prática",
+      "calado e sem nenhuma reação"
+    ],
+    "correct_answer": "ameaçador na fala, mas inofensivo na prática",
+    "explanation": "Nesta frase, 'all bark and no bite' significa \"ameaçador na fala, mas inofensivo na prática\".",
+    "hints": [
+      "Tema: Relacionamentos.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"All in all, the trip was a success.\", o que significa 'all in all'?",
+    "options": [
+      "considerando tudo/no geral",
+      "ignorando os detalhes importantes",
+      "apesar de tudo ter dado errado",
+      "sem considerar nada específico"
+    ],
+    "correct_answer": "considerando tudo/no geral",
+    "explanation": "Nesta frase, 'all in all' significa \"considerando tudo/no geral\".",
+    "hints": [
+      "Tema: Viagem.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She was at the end of her rope after the long shift.\", o que significa 'at the end of your rope'?",
+    "options": [
+      "no limite da paciência/resistência",
+      "cheia de energia e paciência",
+      "no início de um novo fôlego",
+      "completamente relaxada"
+    ],
+    "correct_answer": "no limite da paciência/resistência",
+    "explanation": "Nesta frase, 'at the end of your rope' significa \"no limite da paciência/resistência\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I'm at my wit's end trying to fix this bug.\", o que significa 'at your wit's end'?",
+    "options": [
+      "apenas começando a tentar",
+      "cheio de novas ideias",
+      "confiante na solução",
+      "completamente sem saber o que fazer, exausto de tentar"
+    ],
+    "correct_answer": "completamente sem saber o que fazer, exausto de tentar",
+    "explanation": "Nesta frase, 'at your wit's end' significa \"completamente sem saber o que fazer, exausto de tentar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Break's over, back to the salt mines.\", o que significa 'back to the salt mines'?",
+    "options": [
+      "voltar às férias",
+      "começar um novo lazer",
+      "parar de trabalhar de vez",
+      "voltar ao trabalho árduo/rotina cansativa"
+    ],
+    "correct_answer": "voltar ao trabalho árduo/rotina cansativa",
+    "explanation": "Nesta frase, 'back to the salt mines' significa \"voltar ao trabalho árduo/rotina cansativa\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"This laptop gives you a lot of bang for your buck.\", o que significa 'bang for your buck'?",
+    "options": [
+      "um péssimo retorno pelo dinheiro gasto",
+      "um preço muito alto sem benefício",
+      "um bom retorno pelo dinheiro gasto",
+      "um produto gratuito"
+    ],
+    "correct_answer": "um bom retorno pelo dinheiro gasto",
+    "explanation": "Nesta frase, 'bang for your buck' significa \"um bom retorno pelo dinheiro gasto\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"People sometimes batten down the hatches before a hurricane.\", o que significa 'batten down the hatches'?",
+    "options": [
+      "ignorar um aviso de perigo",
+      "relaxar antes de uma dificuldade",
+      "se preparar para uma dificuldade iminente",
+      "comemorar antes de uma dificuldade"
+    ],
+    "correct_answer": "se preparar para uma dificuldade iminente",
+    "explanation": "Nesta frase, 'batten down the hatches' significa \"se preparar para uma dificuldade iminente\".",
+    "hints": [
+      "Tema: Clima.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I wouldn't want to be in his shoes right now.\", o que significa 'be in someone's shoes'?",
+    "options": [
+      "estar em uma posição invejável",
+      "estar literalmente usando os sapatos de alguém",
+      "estar na situação/posição de outra pessoa",
+      "estar completamente livre de problemas"
+    ],
+    "correct_answer": "estar na situação/posição de outra pessoa",
+    "explanation": "Nesta frase, 'be in someone's shoes' significa \"estar na situação/posição de outra pessoa\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"When the questions got tough, he beat a hasty retreat.\", o que significa 'beat a hasty retreat'?",
+    "options": [
+      "avançar com confiança",
+      "fugir rapidamente de uma situação difícil",
+      "ficar para responder tudo",
+      "enfrentar a situação com calma"
+    ],
+    "correct_answer": "fugir rapidamente de uma situação difícil",
+    "explanation": "Nesta frase, 'beat a hasty retreat' significa \"fugir rapidamente de uma situação difícil\".",
+    "hints": [
+      "Tema: Conversação.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The basic model has no extra bells and whistles.\", o que significa 'bells and whistles'?",
+    "options": [
+      "um preço extremamente baixo",
+      "recursos extras e chamativos, mas não essenciais",
+      "apenas os recursos essenciais",
+      "defeitos graves de fabricação"
+    ],
+    "correct_answer": "recursos extras e chamativos, mas não essenciais",
+    "explanation": "Nesta frase, 'bells and whistles' significa \"recursos extras e chamativos, mas não essenciais\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"People sometimes bend my ear about their divorce for an hour.\", o que significa 'bend someone's ear'?",
+    "options": [
+      "recusar-se a conversar com alguém",
+      "ignorar completamente alguém",
+      "ouvir atentamente alguém",
+      "falar muito com alguém sobre um assunto, geralmente reclamando"
+    ],
+    "correct_answer": "falar muito com alguém sobre um assunto, geralmente reclamando",
+    "explanation": "Nesta frase, 'bend someone's ear' significa \"falar muito com alguém sobre um assunto, geralmente reclamando\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"Choosing between the two bad options felt like being between the devil and the deep blue sea.\", o que significa 'between the devil and the deep blue sea'?",
+    "options": [
+      "sem nenhuma opção disponível",
+      "preso entre duas más opções",
+      "livre para escolher qualquer opção boa",
+      "com uma escolha fácil e óbvia"
+    ],
+    "correct_answer": "preso entre duas más opções",
+    "explanation": "Nesta frase, 'between the devil and the deep blue sea' significa \"preso entre duas más opções\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Criticizing your main client is like you bite the hand that feeds you.\", o que significa 'bite the hand that feeds you'?",
+    "options": [
+      "ignorar completamente quem te ajuda",
+      "prejudicar quem te ajuda/sustenta",
+      "agradecer quem te sustenta",
+      "ajudar quem te sustenta ainda mais"
+    ],
+    "correct_answer": "prejudicar quem te ajuda/sustenta",
+    "explanation": "Nesta frase, 'bite the hand that feeds you' significa \"prejudicar quem te ajuda/sustenta\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"In the end, blood is thicker than water for most families.\", o que significa 'blood is thicker than water'?",
+    "options": [
+      "família não tem nenhuma importância",
+      "laços de sangue não significam nada",
+      "laços familiares são mais fortes que outros",
+      "amizades importam mais que família"
+    ],
+    "correct_answer": "laços familiares são mais fortes que outros",
+    "explanation": "Nesta frase, 'blood is thicker than water' significa \"laços familiares são mais fortes que outros\".",
+    "hints": [
+      "Tema: Família.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He always seems to blow hot and cold about the partnership.\", o que significa 'blow hot and cold'?",
+    "options": [
+      "ser sempre entusiasmado sobre algo",
+      "mudar de opinião/atitude constantemente",
+      "ser sempre indiferente sobre algo",
+      "manter sempre a mesma opinião firme"
+    ],
+    "correct_answer": "mudar de opinião/atitude constantemente",
+    "explanation": "Nesta frase, 'blow hot and cold' significa \"mudar de opinião/atitude constantemente\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The budget has always been a bone of contention between them.\", o que significa 'a bone of contention'?",
+    "options": [
+      "um motivo de celebração constante",
+      "um motivo constante de discórdia",
+      "algo em que sempre concordam",
+      "um assunto que nunca é discutido"
+    ],
+    "correct_answer": "um motivo constante de discórdia",
+    "explanation": "Nesta frase, 'a bone of contention' significa \"um motivo constante de discórdia\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He was born with a silver spoon in his mouth.\", o que significa 'born with a silver spoon in your mouth'?",
+    "options": [
+      "nascer sem nenhuma vantagem especial",
+      "nascer em família rica, com privilégios",
+      "nascer em família pobre e trabalhar muito",
+      "conquistar tudo sozinho, sem ajuda"
+    ],
+    "correct_answer": "nascer em família rica, com privilégios",
+    "explanation": "Nesta frase, 'born with a silver spoon in your mouth' significa \"nascer em família rica, com privilégios\".",
+    "hints": [
+      "Tema: Finanças.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Freelance writing is my bread and butter.\", o que significa 'bread and butter'?",
+    "options": [
+      "um hobby sem importância financeira",
+      "principal fonte de renda/sustento",
+      "uma fonte de renda secundária e pequena",
+      "um gasto desnecessário"
+    ],
+    "correct_answer": "principal fonte de renda/sustento",
+    "explanation": "Nesta frase, 'bread and butter' significa \"principal fonte de renda/sustento\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Performances like hers always bring down the house.\", o que significa 'bring down the house'?",
+    "options": [
+      "esvaziar o teatro rapidamente",
+      "deixar a plateia completamente indiferente",
+      "causar uma reação extremamente entusiasmada da plateia",
+      "causar vaias e reclamações"
+    ],
+    "correct_answer": "causar uma reação extremamente entusiasmada da plateia",
+    "explanation": "Nesta frase, 'bring down the house' significa \"causar uma reação extremamente entusiasmada da plateia\".",
+    "hints": [
+      "Tema: Entretenimento.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"As the slowest runner, I always bring up the rear.\", o que significa 'bring up the rear'?",
+    "options": [
+      "ficar por último num grupo",
+      "ficar no meio do grupo",
+      "ficar sempre em primeiro num grupo",
+      "liderar o grupo com facilidade"
+    ],
+    "correct_answer": "ficar por último num grupo",
+    "explanation": "Nesta frase, 'bring up the rear' significa \"ficar por último num grupo\".",
+    "hints": [
+      "Tema: Esporte.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Some people always build castles in the air instead of making real plans.\", o que significa 'build castles in the air'?",
+    "options": [
+      "desistir de sonhar com qualquer coisa",
+      "construir algo de fato, com as próprias mãos",
+      "sonhar com planos irreais/impraticáveis",
+      "fazer planos realistas e concretos"
+    ],
+    "correct_answer": "sonhar com planos irreais/impraticáveis",
+    "explanation": "Nesta frase, 'build castles in the air' significa \"sonhar com planos irreais/impraticáveis\".",
+    "hints": [
+      "Tema: Emoções.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"This isn't our best result, not by a long shot.\", o que significa 'by a long shot'?",
+    "options": [
+      "de forma alguma/longe disso",
+      "quase certamente",
+      "definitivamente sim",
+      "por pouco"
+    ],
+    "correct_answer": "de forma alguma/longe disso",
+    "explanation": "Nesta frase, 'by a long shot' significa \"de forma alguma/longe disso\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Her English has improved by leaps and bounds.\", o que significa 'by leaps and bounds'?",
+    "options": [
+      "de forma instável, ora melhor ora pior",
+      "sem nenhum progresso real",
+      "de forma lenta e gradual",
+      "de forma rápida e significativa"
+    ],
+    "correct_answer": "de forma rápida e significativa",
+    "explanation": "Nesta frase, 'by leaps and bounds' significa \"de forma rápida e significativa\".",
+    "hints": [
+      "Tema: Estudo.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Well-prepared arguments like theirs often carry the day.\", o que significa 'carry the day'?",
+    "options": [
+      "empatar sem nenhum vencedor",
+      "perder a discussão no final",
+      "vencer/prevalecer no final",
+      "ser ignorado por todos"
+    ],
+    "correct_answer": "vencer/prevalecer no final",
+    "explanation": "Nesta frase, 'carry the day' significa \"vencer/prevalecer no final\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The kids always champ at the bit to open their presents.\", o que significa 'champ at the bit'?",
+    "options": [
+      "estar impaciente para fazer algo",
+      "não ter nenhuma pressa para algo",
+      "estar relutante em fazer algo",
+      "estar completamente indiferente a algo"
+    ],
+    "correct_answer": "estar impaciente para fazer algo",
+    "explanation": "Nesta frase, 'champ at the bit' significa \"estar impaciente para fazer algo\".",
+    "hints": [
+      "Tema: Família.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Some people chase rainbows instead of a realistic plan.\", o que significa 'chase rainbows'?",
+    "options": [
+      "seguir um plano realista e concreto",
+      "perseguir sonhos irreais/impossíveis",
+      "desistir de todos os sonhos",
+      "alcançar facilmente um objetivo simples"
+    ],
+    "correct_answer": "perseguir sonhos irreais/impossíveis",
+    "explanation": "Nesta frase, 'chase rainbows' significa \"perseguir sonhos irreais/impossíveis\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"Past mistakes are chickens that come home to roost eventually.\", o que significa 'chickens come home to roost'?",
+    "options": [
+      "os erros do passado desaparecem para sempre",
+      "nada do passado afeta o presente",
+      "as consequências de ações passadas finalmente aparecem",
+      "as boas ações são esquecidas rapidamente"
+    ],
+    "correct_answer": "as consequências de ações passadas finalmente aparecem",
+    "explanation": "Nesta frase, 'chickens come home to roost' significa \"as consequências de ações passadas finalmente aparecem\".",
+    "hints": [
+      "Tema: Valores.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I'll finish this project, come hell or high water.\", o que significa 'come hell or high water'?",
+    "options": [
+      "não importa o que aconteça, apesar de qualquer obstáculo",
+      "desde que não haja nenhum obstáculo",
+      "somente se tudo correr perfeitamente bem",
+      "apenas em circunstâncias ideais"
+    ],
+    "correct_answer": "não importa o que aconteça, apesar de qualquer obstáculo",
+    "explanation": "Nesta frase, 'come hell or high water' significa \"não importa o que aconteça, apesar de qualquer obstáculo\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Don't worry about the small mistake, it'll come out in the wash.\", o que significa 'come out in the wash'?",
+    "options": [
+      "piorar cada vez mais com o tempo",
+      "se resolver naturalmente com o tempo",
+      "precisar de intervenção urgente",
+      "nunca se resolver"
+    ],
+    "correct_answer": "se resolver naturalmente com o tempo",
+    "explanation": "Nesta frase, 'come out in the wash' significa \"se resolver naturalmente com o tempo\".",
+    "hints": [
+      "Tema: Emoções.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"That designer dress must have cost the earth.\", o que significa 'cost the earth'?",
+    "options": [
+      "ser completamente gratuito",
+      "custar um valor razoável e comum",
+      "custar quase nada",
+      "custar uma quantia extremamente alta"
+    ],
+    "correct_answer": "custar uma quantia extremamente alta",
+    "explanation": "Nesta frase, 'cost the earth' significa \"custar uma quantia extremamente alta\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Rival lawyers sometimes cross swords in court.\", o que significa 'cross swords'?",
+    "options": [
+      "entrar em confronto/disputa direta",
+      "evitar qualquer confronto",
+      "cooperar amigavelmente",
+      "concordar completamente"
+    ],
+    "correct_answer": "entrar em confronto/disputa direta",
+    "explanation": "Nesta frase, 'cross swords' significa \"entrar em confronto/disputa direta\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The two brothers are cut from the same cloth.\", o que significa 'cut from the same cloth'?",
+    "options": [
+      "muito parecidos em caráter/personalidade",
+      "completamente diferentes em personalidade",
+      "rivais declarados",
+      "de famílias diferentes"
+    ],
+    "correct_answer": "muito parecidos em caráter/personalidade",
+    "explanation": "Nesta frase, 'cut from the same cloth' significa \"muito parecidos em caráter/personalidade\".",
+    "hints": [
+      "Tema: Família.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He refuses to dance to his boss's tune all the time.\", o que significa 'dance to someone's tune'?",
+    "options": [
+      "obedecer/seguir as ordens de alguém sem questionar",
+      "desafiar constantemente alguém",
+      "liderar em vez de seguir alguém",
+      "ignorar completamente as ordens de alguém"
+    ],
+    "correct_answer": "obedecer/seguir as ordens de alguém sem questionar",
+    "explanation": "Nesta frase, 'dance to someone's tune' significa \"obedecer/seguir as ordens de alguém sem questionar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Without funding, the project is dead in the water.\", o que significa 'dead in the water'?",
+    "options": [
+      "apenas começando com força total",
+      "completamente parado, sem chance de progredir",
+      "prestes a ter grande sucesso",
+      "avançando rapidamente"
+    ],
+    "correct_answer": "completamente parado, sem chance de progredir",
+    "explanation": "Nesta frase, 'dead in the water' significa \"completamente parado, sem chance de progredir\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She's a dead ringer for her older sister.\", o que significa 'a dead ringer'?",
+    "options": [
+      "irreconhecível em relação a alguém",
+      "muito parecido fisicamente com alguém",
+      "o oposto físico de alguém",
+      "completamente diferente fisicamente de alguém"
+    ],
+    "correct_answer": "muito parecido fisicamente com alguém",
+    "explanation": "Nesta frase, 'a dead ringer' significa \"muito parecido fisicamente com alguém\".",
+    "hints": [
+      "Tema: Família.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"People sometimes do me a good turn by recommending me for a job.\", o que significa 'do someone a good turn'?",
+    "options": [
+      "fazer um favor/boa ação para alguém",
+      "enganar alguém deliberadamente",
+      "prejudicar alguém de propósito",
+      "ignorar um pedido de alguém"
+    ],
+    "correct_answer": "fazer um favor/boa ação para alguém",
+    "explanation": "Nesta frase, 'do someone a good turn' significa \"fazer um favor/boa ação para alguém\".",
+    "hints": [
+      "Tema: Social.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"It's free, so don't look a gift horse in the mouth.\", o que significa 'don't look a gift horse in the mouth'?",
+    "options": [
+      "sempre questione um presente recebido",
+      "exija mais do que foi oferecido de graça",
+      "recuse qualquer presente gratuito",
+      "não questione algo que recebeu de graça"
+    ],
+    "correct_answer": "não questione algo que recebeu de graça",
+    "explanation": "Nesta frase, 'don't look a gift horse in the mouth' significa \"não questione algo que recebeu de graça\".",
+    "hints": [
+      "Tema: Valores.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The neighborhood looked a bit down at heel after the crisis.\", o que significa 'down at heel'?",
+    "options": [
+      "exatamente como antes, sem mudança",
+      "com aparência luxuosa e bem cuidada",
+      "completamente renovado e moderno",
+      "com aparência pobre/malcuidada"
+    ],
+    "correct_answer": "com aparência pobre/malcuidada",
+    "explanation": "Nesta frase, 'down at heel' significa \"com aparência pobre/malcuidada\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I sometimes draw the short straw and work on weekends.\", o que significa 'draw the short straw'?",
+    "options": [
+      "escapar de qualquer tarefa ruim",
+      "ser escolhido pela pior tarefa/sorte, geralmente por acaso",
+      "escolher livremente a melhor opção",
+      "ser escolhido pela melhor tarefa"
+    ],
+    "correct_answer": "ser escolhido pela pior tarefa/sorte, geralmente por acaso",
+    "explanation": "Nesta frase, 'draw the short straw' significa \"ser escolhido pela pior tarefa/sorte, geralmente por acaso\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"People sometimes drop a bombshell by announcing a resignation.\", o que significa 'drop a bombshell'?",
+    "options": [
+      "esconder uma notícia importante",
+      "confirmar uma notícia já esperada por todos",
+      "revelar uma notícia chocante/surpreendente",
+      "adiar o anúncio de uma notícia"
+    ],
+    "correct_answer": "revelar uma notícia chocante/surpreendente",
+    "explanation": "Nesta frase, 'drop a bombshell' significa \"revelar uma notícia chocante/surpreendente\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Drop me a line when you arrive safely.\", o que significa 'drop someone a line'?",
+    "options": [
+      "ignorar completamente alguém",
+      "enviar uma mensagem rápida/breve a alguém",
+      "visitar pessoalmente alguém sem avisar",
+      "ligar por horas para alguém"
+    ],
+    "correct_answer": "enviar uma mensagem rápida/breve a alguém",
+    "explanation": "Nesta frase, 'drop someone a line' significa \"enviar uma mensagem rápida/breve a alguém\".",
+    "hints": [
+      "Tema: Conversação.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He had to eat crow after his prediction was wrong.\", o que significa 'eat crow'?",
+    "options": [
+      "comemorar por estar certo",
+      "culpar outra pessoa pelo erro",
+      "recusar-se a admitir um erro",
+      "admitir humildemente que estava errado"
+    ],
+    "correct_answer": "admitir humildemente que estava errado",
+    "explanation": "Nesta frase, 'eat crow' significa \"admitir humildemente que estava errado\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"After being proven wrong, people sometimes eat humble pie in public.\", o que significa 'eat humble pie'?",
+    "options": [
+      "admitir humildemente um erro publicamente",
+      "se gabar publicamente de um acerto",
+      "negar publicamente um erro",
+      "culpar outra pessoa publicamente"
+    ],
+    "correct_answer": "admitir humildemente um erro publicamente",
+    "explanation": "Nesta frase, 'eat humble pie' significa \"admitir humildemente um erro publicamente\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Many good intentions fall by the wayside after a few weeks.\", o que significa 'fall by the wayside'?",
+    "options": [
+      "se fortalecer ao longo do tempo",
+      "ser abandonado/esquecido ao longo do tempo",
+      "se tornar ainda mais importante com o tempo",
+      "ser mantido com firmeza ao longo do tempo"
+    ],
+    "correct_answer": "ser abandonado/esquecido ao longo do tempo",
+    "explanation": "Nesta frase, 'fall by the wayside' significa \"ser abandonado/esquecido ao longo do tempo\".",
+    "hints": [
+      "Tema: Valores.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Warnings like ours sometimes fall on deaf ears.\", o que significa 'fall on deaf ears'?",
+    "options": [
+      "ser ignorado, não ser ouvido/considerado",
+      "gerar uma resposta imediata",
+      "ser ouvido com muita atenção",
+      "ser levado extremamente a sério"
+    ],
+    "correct_answer": "ser ignorado, não ser ouvido/considerado",
+    "explanation": "Nesta frase, 'fall on deaf ears' significa \"ser ignorado, não ser ouvido/considerado\".",
+    "hints": [
+      "Tema: Conversação.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"Some managers feather their own nest with company funds.\", o que significa 'feather your own nest'?",
+    "options": [
+      "distribuir os recursos igualmente",
+      "recusar qualquer benefício pessoal",
+      "ajudar generosamente os outros",
+      "se beneficiar egoisticamente às custas de outros"
+    ],
+    "correct_answer": "se beneficiar egoisticamente às custas de outros",
+    "explanation": "Nesta frase, 'feather your own nest' significa \"se beneficiar egoisticamente às custas de outros\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Employees sometimes fight tooth and nail to keep their jobs.\", o que significa 'fight tooth and nail'?",
+    "options": [
+      "lutar com toda a força/determinação",
+      "desistir sem nenhuma luta",
+      "lutar com pouco empenho",
+      "aceitar a derrota facilmente"
+    ],
+    "correct_answer": "lutar com toda a força/determinação",
+    "explanation": "Nesta frase, 'fight tooth and nail' significa \"lutar com toda a força/determinação\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Everything seems fine and dandy on the surface.\", o que significa 'fine and dandy'?",
+    "options": [
+      "tudo péssimo e caótico",
+      "tudo parado e sem movimento",
+      "tudo bem/ótimo (às vezes de forma superficial)",
+      "tudo em dúvida e incerto"
+    ],
+    "correct_answer": "tudo bem/ótimo (às vezes de forma superficial)",
+    "explanation": "Nesta frase, 'fine and dandy' significa \"tudo bem/ótimo (às vezes de forma superficial)\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"New roles like this sometimes fit like a glove.\", o que significa 'fit like a glove'?",
+    "options": [
+      "se encaixar só parcialmente",
+      "se encaixar perfeitamente",
+      "ser completamente inadequado",
+      "não se encaixar de jeito nenhum"
+    ],
+    "correct_answer": "se encaixar perfeitamente",
+    "explanation": "Nesta frase, 'fit like a glove' significa \"se encaixar perfeitamente\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He tends to fly off the handle over small things.\", o que significa 'fly off the handle'?",
+    "options": [
+      "manter a calma o tempo todo",
+      "ficar indiferente a pequenas coisas",
+      "ficar triste em vez de bravo",
+      "perder a paciência/ficar furioso de repente"
+    ],
+    "correct_answer": "perder a paciência/ficar furioso de repente",
+    "explanation": "Nesta frase, 'fly off the handle' significa \"perder a paciência/ficar furioso de repente\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"When in doubt, follow your gut.\", o que significa 'follow your gut'?",
+    "options": [
+      "confiar na própria intuição",
+      "ignorar completamente a intuição",
+      "esperar por mais informações antes de agir",
+      "seguir sempre a opinião alheia"
+    ],
+    "correct_answer": "confiar na própria intuição",
+    "explanation": "Nesta frase, 'follow your gut' significa \"confiar na própria intuição\".",
+    "hints": [
+      "Tema: Valores.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"This internship gave her a foot in the door at the company.\", o que significa 'a foot in the door'?",
+    "options": [
+      "um obstáculo definitivo para o futuro",
+      "o fim de todas as oportunidades futuras",
+      "uma garantia total de sucesso imediato",
+      "uma primeira oportunidade que abre caminho para mais"
+    ],
+    "correct_answer": "uma primeira oportunidade que abre caminho para mais",
+    "explanation": "Nesta frase, 'a foot in the door' significa \"uma primeira oportunidade que abre caminho para mais\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"In my opinion, that whole plan is for the birds.\", o que significa 'for the birds'?",
+    "options": [
+      "extremamente valioso",
+      "sem valor/sem sentido",
+      "perfeitamente bem planejado",
+      "garantido para dar certo"
+    ],
+    "correct_answer": "sem valor/sem sentido",
+    "explanation": "Nesta frase, 'for the birds' significa \"sem valor/sem sentido\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He talks so much that I can't get a word in edgewise.\", o que significa 'get a word in edgewise'?",
+    "options": [
+      "interromper educadamente sem dificuldade",
+      "dominar completamente a conversa",
+      "ficar em silêncio o tempo todo por escolha",
+      "conseguir falar em meio a uma conversa dominada por outra pessoa"
+    ],
+    "correct_answer": "conseguir falar em meio a uma conversa dominada por outra pessoa",
+    "explanation": "Nesta frase, 'get a word in edgewise' significa \"conseguir falar em meio a uma conversa dominada por outra pessoa\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Suspects sometimes get off scot-free due to lack of evidence.\", o que significa 'get off scot-free'?",
+    "options": [
+      "confessar voluntariamente a culpa",
+      "ser severamente punido",
+      "ser condenado rapidamente",
+      "escapar sem punição"
+    ],
+    "correct_answer": "escapar sem punição",
+    "explanation": "Nesta frase, 'get off scot-free' significa \"escapar sem punição\".",
+    "hints": [
+      "Tema: Segurança.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Staff members sometimes get the axe during a restructuring.\", o que significa 'get the axe'?",
+    "options": [
+      "ser promovido",
+      "ser demitido",
+      "receber um aumento",
+      "ser transferido de área"
+    ],
+    "correct_answer": "ser demitido",
+    "explanation": "Nesta frase, 'get the axe' significa \"ser demitido\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I think you get the picture by now.\", o que significa 'get the picture'?",
+    "options": [
+      "ficar ainda mais confuso com a situação",
+      "entender a situação",
+      "ignorar a situação por completo",
+      "discordar completamente da situação"
+    ],
+    "correct_answer": "entender a situação",
+    "explanation": "Nesta frase, 'get the picture' significa \"entender a situação\".",
+    "hints": [
+      "Tema: Conversação.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"People sometimes get wind of a surprise party in advance.\", o que significa 'get wind of'?",
+    "options": [
+      "manter algo em segredo com sucesso",
+      "planejar algo do zero",
+      "descobrir algo, geralmente algo secreto",
+      "esquecer completamente de algo"
+    ],
+    "correct_answer": "descobrir algo, geralmente algo secreto",
+    "explanation": "Nesta frase, 'get wind of' significa \"descobrir algo, geralmente algo secreto\".",
+    "hints": [
+      "Tema: Social.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Startups sometimes go belly up after just one year.\", o que significa 'go belly up'?",
+    "options": [
+      "falir/fracassar completamente",
+      "ter um sucesso enorme",
+      "se manter estável por anos",
+      "se expandir rapidamente"
+    ],
+    "correct_answer": "falir/fracassar completamente",
+    "explanation": "Nesta frase, 'go belly up' significa \"falir/fracassar completamente\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"With nothing to lose, they decided to go for broke.\", o que significa 'go for broke'?",
+    "options": [
+      "dividir o risco com cautela",
+      "desistir antes mesmo de tentar",
+      "jogar pelo seguro, sem risco nenhum",
+      "arriscar tudo numa última tentativa"
+    ],
+    "correct_answer": "arriscar tudo numa última tentativa",
+    "explanation": "Nesta frase, 'go for broke' significa \"arriscar tudo numa última tentativa\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Plans sometimes go pear-shaped at the last minute.\", o que significa 'go pear-shaped'?",
+    "options": [
+      "permanecer exatamente como planejado",
+      "melhorar inesperadamente",
+      "dar muito certo",
+      "dar errado/sair do controle"
+    ],
+    "correct_answer": "dar errado/sair do controle",
+    "explanation": "Nesta frase, 'go pear-shaped' significa \"dar errado/sair do controle\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"A small gift can help grease the wheels of a negotiation.\", o que significa 'grease the wheels'?",
+    "options": [
+      "dificultar um processo",
+      "tornar um processo mais lento",
+      "interromper um processo por completo",
+      "facilitar um processo, geralmente com um incentivo"
+    ],
+    "correct_answer": "facilitar um processo, geralmente com um incentivo",
+    "explanation": "Nesta frase, 'grease the wheels' significa \"facilitar um processo, geralmente com um incentivo\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The new recruits were gung ho about the training.\", o que significa 'gung ho'?",
+    "options": [
+      "completamente desinteressado",
+      "cético e desconfiado",
+      "extremamente entusiasmado/animado",
+      "cansado e sem energia"
+    ],
+    "correct_answer": "extremamente entusiasmado/animado",
+    "explanation": "Nesta frase, 'gung ho' significa \"extremamente entusiasmado/animado\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Let's hang fire on this decision until we have more data.\", o que significa 'hang fire'?",
+    "options": [
+      "tomar a decisão sem nenhuma informação",
+      "adiar/esperar antes de agir",
+      "cancelar a decisão de vez",
+      "agir imediatamente sem esperar"
+    ],
+    "correct_answer": "adiar/esperar antes de agir",
+    "explanation": "Nesta frase, 'hang fire' significa \"adiar/esperar antes de agir\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Reporters always have a field day with a celebrity scandal.\", o que significa 'have a field day'?",
+    "options": [
+      "aproveitar ao máximo uma oportunidade, geralmente às custas de outro",
+      "ignorar completamente uma oportunidade",
+      "proteger alguém de uma situação",
+      "evitar comentar sobre um escândalo"
+    ],
+    "correct_answer": "aproveitar ao máximo uma oportunidade, geralmente às custas de outro",
+    "explanation": "Nesta frase, 'have a field day' significa \"aproveitar ao máximo uma oportunidade, geralmente às custas de outro\".",
+    "hints": [
+      "Tema: Notícias.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"You can't have your cake and eat it too in this situation.\", o que significa 'have your cake and eat it too'?",
+    "options": [
+      "escolher com sabedoria entre duas opções",
+      "aceitar uma única opção sem reclamar",
+      "querer as vantagens de duas opções incompatíveis ao mesmo tempo",
+      "abrir mão de todas as opções"
+    ],
+    "correct_answer": "querer as vantagens de duas opções incompatíveis ao mesmo tempo",
+    "explanation": "Nesta frase, 'have your cake and eat it too' significa \"querer as vantagens de duas opções incompatíveis ao mesmo tempo\".",
+    "hints": [
+      "Tema: Valores.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Comments about his family always hit below the belt.\", o que significa 'hit below the belt'?",
+    "options": [
+      "elogiar de forma sincera",
+      "criticar de forma justa e educada",
+      "atacar de forma injusta/desleal",
+      "ignorar completamente um assunto"
+    ],
+    "correct_answer": "atacar de forma injusta/desleal",
+    "explanation": "Nesta frase, 'hit below the belt' significa \"atacar de forma injusta/desleal\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Scammers sometimes hoodwink several elderly investors.\", o que significa 'hoodwink'?",
+    "options": [
+      "informar com transparência total",
+      "enganar as pessoas de forma astuta",
+      "ajudar honestamente",
+      "proteger de um golpe"
+    ],
+    "correct_answer": "enganar as pessoas de forma astuta",
+    "explanation": "Nesta frase, 'hoodwink' significa \"enganar as pessoas de forma astuta\".",
+    "hints": [
+      "Tema: Segurança.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Immigration policy is a political hot potato.\", o que significa 'a hot potato'?",
+    "options": [
+      "um assunto já totalmente resolvido",
+      "um assunto delicado e controverso",
+      "um assunto tranquilo e sem controvérsia",
+      "um assunto sem nenhuma importância"
+    ],
+    "correct_answer": "um assunto delicado e controverso",
+    "explanation": "Nesta frase, 'a hot potato' significa \"um assunto delicado e controverso\".",
+    "hints": [
+      "Tema: Política.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He was arrested for spending his ill-gotten gains.\", o que significa 'ill-gotten gains'?",
+    "options": [
+      "dinheiro herdado legalmente",
+      "economias obtidas com muito trabalho honesto",
+      "dinheiro doado por caridade",
+      "dinheiro/ganhos obtidos de forma desonesta"
+    ],
+    "correct_answer": "dinheiro/ganhos obtidos de forma desonesta",
+    "explanation": "Nesta frase, 'ill-gotten gains' significa \"dinheiro/ganhos obtidos de forma desonesta\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"The manager was in cahoots with the supplier to inflate prices.\", o que significa 'in cahoots with'?",
+    "options": [
+      "em competição aberta com alguém",
+      "completamente sem contato com alguém",
+      "em total desacordo com alguém",
+      "em conluio secreto com alguém"
+    ],
+    "correct_answer": "em conluio secreto com alguém",
+    "explanation": "Nesta frase, 'in cahoots with' significa \"em conluio secreto com alguém\".",
+    "hints": [
+      "Tema: Segurança.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Her jokes had the whole room in stitches.\", o que significa 'in stitches'?",
+    "options": [
+      "confuso e sem entender a piada",
+      "completamente sério, sem nenhuma reação",
+      "rindo muito, sem parar",
+      "entediado e sem interesse"
+    ],
+    "correct_answer": "rindo muito, sem parar",
+    "explanation": "Nesta frase, 'in stitches' significa \"rindo muito, sem parar\".",
+    "hints": [
+      "Tema: Entretenimento.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"After a tough year, the company is finally in the black.\", o que significa 'in the black'?",
+    "options": [
+      "com prejuízo financeiro",
+      "com finanças totalmente zeradas",
+      "sem nenhuma atividade financeira",
+      "com lucro/situação financeira positiva"
+    ],
+    "correct_answer": "com lucro/situação financeira positiva",
+    "explanation": "Nesta frase, 'in the black' significa \"com lucro/situação financeira positiva\".",
+    "hints": [
+      "Tema: Finanças.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"A promotion might be in the cards for her this year.\", o que significa 'in the cards'?",
+    "options": [
+      "uma possibilidade real para o futuro",
+      "impossível de acontecer",
+      "completamente descartado para o futuro",
+      "já garantido e confirmado"
+    ],
+    "correct_answer": "uma possibilidade real para o futuro",
+    "explanation": "Nesta frase, 'in the cards' significa \"uma possibilidade real para o futuro\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He praised the plan and criticized it in the same breath.\", o que significa 'in the same breath'?",
+    "options": [
+      "dizer algo totalmente consistente e claro",
+      "ficar em silêncio total sobre o assunto",
+      "dizer duas coisas contraditórias quase ao mesmo tempo",
+      "esperar muito tempo entre duas opiniões"
+    ],
+    "correct_answer": "dizer duas coisas contraditórias quase ao mesmo tempo",
+    "explanation": "Nesta frase, 'in the same breath' significa \"dizer duas coisas contraditórias quase ao mesmo tempo\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"TV shows sometimes jump the shark after a few seasons.\", o que significa 'jump the shark'?",
+    "options": [
+      "passar do ponto e perder a qualidade/relevância",
+      "atingir o auge da qualidade",
+      "manter sempre o mesmo padrão de qualidade",
+      "melhorar continuamente com o tempo"
+    ],
+    "correct_answer": "passar do ponto e perder a qualidade/relevância",
+    "explanation": "Nesta frase, 'jump the shark' significa \"passar do ponto e perder a qualidade/relevância\".",
+    "hints": [
+      "Tema: Entretenimento.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"People usually keep their nose clean after getting out of trouble.\", o que significa 'keep your nose clean'?",
+    "options": [
+      "se meter em problemas de propósito",
+      "se comportar bem, evitando problemas",
+      "voltar a cometer os mesmos erros",
+      "ignorar as consequências de seus atos"
+    ],
+    "correct_answer": "se comportar bem, evitando problemas",
+    "explanation": "Nesta frase, 'keep your nose clean' significa \"se comportar bem, evitando problemas\".",
+    "hints": [
+      "Tema: Valores.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We should keep our powder dry until we have a clear strategy.\", o que significa 'keep your powder dry'?",
+    "options": [
+      "revelar a estratégia com antecedência",
+      "agir imediatamente sem esperar",
+      "desistir da estratégia por completo",
+      "aguardar o momento certo antes de agir"
+    ],
+    "correct_answer": "aguardar o momento certo antes de agir",
+    "explanation": "Nesta frase, 'keep your powder dry' significa \"aguardar o momento certo antes de agir\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We haven't had any problems so far, knock on wood.\", o que significa 'knock on wood'?",
+    "options": [
+      "dito para evitar azar ao mencionar algo bom",
+      "dito para confirmar um fato com certeza",
+      "dito para desejar azar a alguém",
+      "dito para negar algo completamente"
+    ],
+    "correct_answer": "dito para evitar azar ao mencionar algo bom",
+    "explanation": "Nesta frase, 'knock on wood' significa \"dito para evitar azar ao mencionar algo bom\".",
+    "hints": [
+      "Tema: Valores.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Experienced people usually know the score in situations like this.\", o que significa 'know the score'?",
+    "options": [
+      "entender bem a situação real, mesmo que difícil",
+      "estar completamente alheio à situação",
+      "ignorar de propósito a situação real",
+      "ser enganado facilmente pela situação"
+    ],
+    "correct_answer": "entender bem a situação real, mesmo que difícil",
+    "explanation": "Nesta frase, 'know the score' significa \"entender bem a situação real, mesmo que difícil\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Parents sometimes lay down the law about curfew.\", o que significa 'lay down the law'?",
+    "options": [
+      "ignorar a necessidade de regras",
+      "evitar estabelecer qualquer regra",
+      "ser extremamente flexível com as regras",
+      "estabelecer regras firmes e claras"
+    ],
+    "correct_answer": "estabelecer regras firmes e claras",
+    "explanation": "Nesta frase, 'lay down the law' significa \"estabelecer regras firmes e claras\".",
+    "hints": [
+      "Tema: Família.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"It's the weekend, let your hair down and relax.\", o que significa 'let your hair down'?",
+    "options": [
+      "seguir rigidamente as regras",
+      "trabalhar sem parar",
+      "relaxar e se soltar, sem formalidades",
+      "ficar ainda mais tenso e formal"
+    ],
+    "correct_answer": "relaxar e se soltar, sem formalidades",
+    "explanation": "Nesta frase, 'let your hair down' significa \"relaxar e se soltar, sem formalidades\".",
+    "hints": [
+      "Tema: Social.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"After the defeat, the team went home to lick their wounds.\", o que significa 'lick your wounds'?",
+    "options": [
+      "ignorar completamente uma derrota",
+      "se recuperar emocionalmente após uma derrota",
+      "desistir do esporte para sempre",
+      "comemorar uma grande vitória"
+    ],
+    "correct_answer": "se recuperar emocionalmente após uma derrota",
+    "explanation": "Nesta frase, 'lick your wounds' significa \"se recuperar emocionalmente após uma derrota\".",
+    "hints": [
+      "Tema: Esporte.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My grandmother always says live and let live.\", o que significa 'live and let live'?",
+    "options": [
+      "controlar a vida dos outros",
+      "aceitar as escolhas dos outros sem julgar",
+      "julgar duramente as escolhas dos outros",
+      "impor suas próprias regras aos outros"
+    ],
+    "correct_answer": "aceitar as escolhas dos outros sem julgar",
+    "explanation": "Nesta frase, 'live and let live' significa \"aceitar as escolhas dos outros sem julgar\".",
+    "hints": [
+      "Tema: Valores.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"They bought the whole business, lock, stock, and barrel.\", o que significa 'lock, stock, and barrel'?",
+    "options": [
+      "excluindo os detalhes importantes",
+      "apenas uma pequena parte",
+      "completamente, incluindo tudo",
+      "de forma parcial e incompleta"
+    ],
+    "correct_answer": "completamente, incluindo tudo",
+    "explanation": "Nesta frase, 'lock, stock, and barrel' significa \"completamente, incluindo tudo\".",
+    "hints": [
+      "Tema: Finanças.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Sometimes people lose their marbles over a risky plan like that.\", o que significa 'lose your marbles'?",
+    "options": [
+      "ter um raciocínio perfeitamente lógico",
+      "manter a calma o tempo todo",
+      "tomar decisões extremamente cautelosas",
+      "perder o juízo/agir de forma irracional"
+    ],
+    "correct_answer": "perder o juízo/agir de forma irracional",
+    "explanation": "Nesta frase, 'lose your marbles' significa \"perder o juízo/agir de forma irracional\".",
+    "hints": [
+      "Tema: Emoções.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"As soon as the doors open, we always make a beeline for the exit.\", o que significa 'make a beeline for'?",
+    "options": [
+      "andar devagar e sem pressa até algo",
+      "evitar completamente um lugar",
+      "ficar parado sem se mover",
+      "ir diretamente e rapidamente em direção a algo"
+    ],
+    "correct_answer": "ir diretamente e rapidamente em direção a algo",
+    "explanation": "Nesta frase, 'make a beeline for' significa \"ir diretamente e rapidamente em direção a algo\".",
+    "hints": [
+      "Tema: Rotina diária.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Sales are up, so let's make hay while the sun shines.\", o que significa 'make hay while the sun shines'?",
+    "options": [
+      "desperdiçar uma oportunidade atual",
+      "esperar uma oportunidade melhor no futuro",
+      "ignorar uma boa oportunidade",
+      "aproveitar uma oportunidade favorável enquanto ela dura"
+    ],
+    "correct_answer": "aproveitar uma oportunidade favorável enquanto ela dura",
+    "explanation": "Nesta frase, 'make hay while the sun shines' significa \"aproveitar uma oportunidade favorável enquanto ela dura\".",
+    "hints": [
+      "Tema: Finanças.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"It's time to mend fences with your old friend.\", o que significa 'mend fences'?",
+    "options": [
+      "ignorar um relacionamento antigo",
+      "criar um novo conflito",
+      "romper de vez um relacionamento",
+      "reconciliar-se/restaurar um relacionamento"
+    ],
+    "correct_answer": "reconciliar-se/restaurar um relacionamento",
+    "explanation": "Nesta frase, 'mend fences' significa \"reconciliar-se/restaurar um relacionamento\".",
+    "hints": [
+      "Tema: Relacionamentos.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There's been some monkey business going on in the accounting department.\", o que significa 'monkey business'?",
+    "options": [
+      "uma rotina completamente normal",
+      "um trabalho perfeitamente organizado",
+      "comportamento suspeito ou travesso/desonesto",
+      "comportamento extremamente honesto e transparente"
+    ],
+    "correct_answer": "comportamento suspeito ou travesso/desonesto",
+    "explanation": "Nesta frase, 'monkey business' significa \"comportamento suspeito ou travesso/desonesto\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Comments like his sometimes muddy the waters further.\", o que significa 'muddy the waters'?",
+    "options": [
+      "tornar uma situação mais confusa",
+      "resolver uma situação por completo",
+      "esclarecer uma situação",
+      "simplificar uma situação"
+    ],
+    "correct_answer": "tornar uma situação mais confusa",
+    "explanation": "Nesta frase, 'muddy the waters' significa \"tornar uma situação mais confusa\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Finding that document is like looking for a needle in a haystack.\", o que significa 'a needle in a haystack'?",
+    "options": [
+      "algo muito fácil de encontrar",
+      "algo visível imediatamente",
+      "algo já encontrado rapidamente",
+      "algo extremamente difícil de encontrar"
+    ],
+    "correct_answer": "algo extremamente difícil de encontrar",
+    "explanation": "Nesta frase, 'a needle in a haystack' significa \"algo extremamente difícil de encontrar\".",
+    "hints": [
+      "Tema: Trabalho.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 4,
+    "prompt": "Na frase \"The election results were nip and tuck until the very end.\", o que significa 'nip and tuck'?",
+    "options": [
+      "muito acirrado/disputado",
+      "completamente decidido desde o início",
+      "com grande vantagem para um lado",
+      "sem nenhuma competição real"
+    ],
+    "correct_answer": "muito acirrado/disputado",
+    "explanation": "Nesta frase, 'nip and tuck' significa \"muito acirrado/disputado\".",
+    "hints": [
+      "Tema: Política.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There's no love lost between those two rivals.\", o que significa 'no love lost'?",
+    "options": [
+      "são melhores amigos",
+      "nunca discordam de nada",
+      "não há afeto/simpatia entre duas pessoas",
+      "há muito afeto entre duas pessoas"
+    ],
+    "correct_answer": "não há afeto/simpatia entre duas pessoas",
+    "explanation": "Nesta frase, 'no love lost' significa \"não há afeto/simpatia entre duas pessoas\".",
+    "hints": [
+      "Tema: Relacionamentos.",
+      "Pense no contexto da frase completa, não apenas na palavra isolada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"His off the cuff remark caused some controversy.\", o que significa 'off the cuff'?",
+    "options": [
+      "revisado várias vezes antes de dizer",
+      "dito de improviso, sem preparação prévia",
+      "cuidadosamente planejado com antecedência",
+      "escrito formalmente com antecedência"
+    ],
+    "correct_answer": "dito de improviso, sem preparação prévia",
+    "explanation": "Nesta frase, 'off the cuff' significa \"dito de improviso, sem preparação prévia\".",
+    "hints": [
+      "Tema: Conversação.",
+      "Releia a frase toda antes de escolher — o sentido depende do contexto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My computer has been on the fritz all week.\", o que significa 'on the fritz'?",
+    "options": [
+      "mais rápido que o normal",
+      "com defeito/funcionando mal",
+      "funcionando perfeitamente",
+      "recém-comprado e novo"
+    ],
+    "correct_answer": "com defeito/funcionando mal",
+    "explanation": "Nesta frase, 'on the fritz' significa \"com defeito/funcionando mal\".",
+    "hints": [
+      "Tema: Tecnologia.",
+      "Não traduza palavra por palavra: veja o que a frase inteira está dizendo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_expressoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"You can trust him, he's always on the level.\", o que significa 'on the level'?",
+    "options": [
+      "honesto e sincero",
+      "indeciso e confuso",
+      "distante e reservado",
+      "desonesto e enganador"
+    ],
+    "correct_answer": "honesto e sincero",
+    "explanation": "Nesta frase, 'on the level' significa \"honesto e sincero\".",
+    "hints": [
+      "Tema: Valores.",
+      "O significado da expressão idiomática não é literal — pense no sentido figurado."
+    ],
+    "age_reviewed": true
+  }
+]

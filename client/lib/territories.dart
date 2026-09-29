@@ -128,6 +128,12 @@ const List<String> kTerritoryIds = [
   'ingles_phrasal_relampago_basico',
   'ingles_phrasal_relampago_intermediario',
   'ingles_phrasal_relampago_avancado',
+  'ingles_expressoes_basico',
+  'ingles_expressoes_intermediario',
+  'ingles_expressoes_avancado',
+  'ingles_expressoes_relampago_basico',
+  'ingles_expressoes_relampago_intermediario',
+  'ingles_expressoes_relampago_avancado',
   // V6 (Mundo_dos_Valores/README.md) — Mundo dos Valores.
   'bolsa',
   'criptomoedas',
@@ -414,6 +420,18 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryInglesPhrasalRelampagoIntermediario;
     case 'ingles_phrasal_relampago_avancado':
       return l10n.territoryInglesPhrasalRelampagoAvancado;
+    case 'ingles_expressoes_basico':
+      return l10n.territoryInglesExpressoesBasico;
+    case 'ingles_expressoes_intermediario':
+      return l10n.territoryInglesExpressoesIntermediario;
+    case 'ingles_expressoes_avancado':
+      return l10n.territoryInglesExpressoesAvancado;
+    case 'ingles_expressoes_relampago_basico':
+      return l10n.territoryInglesExpressoesRelampagoBasico;
+    case 'ingles_expressoes_relampago_intermediario':
+      return l10n.territoryInglesExpressoesRelampagoIntermediario;
+    case 'ingles_expressoes_relampago_avancado':
+      return l10n.territoryInglesExpressoesRelampagoAvancado;
     case 'bolsa':
       return l10n.territoryBolsa;
     case 'criptomoedas':

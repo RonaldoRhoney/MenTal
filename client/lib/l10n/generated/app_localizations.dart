@@ -592,6 +592,42 @@ abstract class AppLocalizations {
   /// **'Phrasal Verbs Relâmpago: Avançado'**
   String get territoryInglesPhrasalRelampagoAvancado;
 
+  /// Territory display name — English idiomatic expressions, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Expressões Idiomáticas: Básico'**
+  String get territoryInglesExpressoesBasico;
+
+  /// Territory display name — English idiomatic expressions, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Expressões Idiomáticas: Intermediário'**
+  String get territoryInglesExpressoesIntermediario;
+
+  /// Territory display name — English idiomatic expressions, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Expressões Idiomáticas: Avançado'**
+  String get territoryInglesExpressoesAvancado;
+
+  /// Territory display name — English idiomatic expressions, timed mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Expressões Idiomáticas Relâmpago: Básico'**
+  String get territoryInglesExpressoesRelampagoBasico;
+
+  /// Territory display name — English idiomatic expressions, timed mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Expressões Idiomáticas Relâmpago: Intermediário'**
+  String get territoryInglesExpressoesRelampagoIntermediario;
+
+  /// Territory display name — English idiomatic expressions, timed mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Expressões Idiomáticas Relâmpago: Avançado'**
+  String get territoryInglesExpressoesRelampagoAvancado;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:

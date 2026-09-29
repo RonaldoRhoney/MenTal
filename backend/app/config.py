@@ -276,6 +276,11 @@ IDIOMA_TERRITORY_IDS = {
     # também precisa reconhecer/explicar phrasal verbs quando o jogador perguntar.
     "ingles_phrasal_basico", "ingles_phrasal_intermediario", "ingles_phrasal_avancado",
     "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario", "ingles_phrasal_relampago_avancado",
+    # Expressões Idiomáticas (MUNDO_IDIOMAS_INGLES_EXPRESSOES_IDIOMATICAS_V1.md, 28/09/2026) —
+    # mesmo motivo do Phrasal Verbs: o Mental Lingo precisa reconhecer/explicar expressões
+    # idiomáticas quando o jogador perguntar.
+    "ingles_expressoes_basico", "ingles_expressoes_intermediario", "ingles_expressoes_avancado",
+    "ingles_expressoes_relampago_basico", "ingles_expressoes_relampago_intermediario", "ingles_expressoes_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -289,6 +294,9 @@ ALWAYS_TIMED_TERRITORIES = {
     # padrão do Curiosidade Relâmpago — território próprio, sempre cronometrado, com conteúdo
     # distinto do território "normal" (nunca as mesmas 100 perguntas com um cronômetro a mais).
     "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario", "ingles_phrasal_relampago_avancado",
+    # Expressões Idiomáticas Relâmpago (MUNDO_IDIOMAS_INGLES_EXPRESSOES_IDIOMATICAS_V1.md,
+    # 28/09/2026): mesmo padrão — território próprio, sempre cronometrado, conteúdo distinto.
+    "ingles_expressoes_relampago_basico", "ingles_expressoes_relampago_intermediario", "ingles_expressoes_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_

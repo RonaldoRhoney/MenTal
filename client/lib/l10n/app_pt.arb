@@ -350,6 +350,30 @@
   "@territoryInglesPhrasalRelampagoAvancado": {
     "description": "Territory display name — English phrasal verbs, timed mode, advanced level"
   },
+  "territoryInglesExpressoesBasico": "Expressões Idiomáticas: Básico",
+  "@territoryInglesExpressoesBasico": {
+    "description": "Territory display name — English idiomatic expressions, basic level"
+  },
+  "territoryInglesExpressoesIntermediario": "Expressões Idiomáticas: Intermediário",
+  "@territoryInglesExpressoesIntermediario": {
+    "description": "Territory display name — English idiomatic expressions, intermediate level"
+  },
+  "territoryInglesExpressoesAvancado": "Expressões Idiomáticas: Avançado",
+  "@territoryInglesExpressoesAvancado": {
+    "description": "Territory display name — English idiomatic expressions, advanced level"
+  },
+  "territoryInglesExpressoesRelampagoBasico": "Expressões Idiomáticas Relâmpago: Básico",
+  "@territoryInglesExpressoesRelampagoBasico": {
+    "description": "Territory display name — English idiomatic expressions, timed mode, basic level"
+  },
+  "territoryInglesExpressoesRelampagoIntermediario": "Expressões Idiomáticas Relâmpago: Intermediário",
+  "@territoryInglesExpressoesRelampagoIntermediario": {
+    "description": "Territory display name — English idiomatic expressions, timed mode, intermediate level"
+  },
+  "territoryInglesExpressoesRelampagoAvancado": "Expressões Idiomáticas Relâmpago: Avançado",
+  "@territoryInglesExpressoesRelampagoAvancado": {
+    "description": "Territory display name — English idiomatic expressions, timed mode, advanced level"
+  },
   "@territoryFrancesAvancado": {
     "description": "Territory display name"
   },
