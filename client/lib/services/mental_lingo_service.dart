@@ -62,9 +62,17 @@ class MentalLingoService {
   /// usuário ainda fala — usado só pra exibir "Ouvindo… <texto>" ao vivo
   /// durante o apertar-e-segurar; a pergunta em si sempre é decidida pelo
   /// resultado FINAL (`onFinalResult`), nunca por um trecho parcial.
+  /// `silenceTimeout`: só usado no Modo 3 (detecção automática de fim de
+  /// fala, MENTAL_LINGO_RELATORIO_TESTES_CAMPO_V1.md, decisão de Rhoney
+  /// 29/09/2026) — quando informado, vira o `pauseFor` do reconhecedor: o
+  /// pacote encerra sozinho após esse tanto de SILÊNCIO CONTÍNUO (não
+  /// duração total da fala), disparando `onStatus('done')`. Nos modos 1
+  /// (apertar-e-segurar) e 2 (toque duplo), fica `null` e usa o padrão de
+  /// 3 minutos (a tela é quem decide quando parar, nunca o pacote).
   Future<void> listen({
     required void Function(String text) onFinalResult,
     void Function(String text)? onPartialResult,
+    Duration? silenceTimeout,
   }) {
     return _speech.listen(
       onResult: (SpeechRecognitionResult result) {
@@ -80,7 +88,7 @@ class MentalLingoService {
         listenMode: stt.ListenMode.dictation,
         localeId: 'pt_BR',
         listenFor: const Duration(minutes: 3),
-        pauseFor: const Duration(minutes: 3),
+        pauseFor: silenceTimeout ?? const Duration(minutes: 3),
       ),
     );
   }

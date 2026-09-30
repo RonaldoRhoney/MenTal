@@ -2050,11 +2050,17 @@ class _TerritoryCard extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // Pedido de Rhoney (29/08/2026): "Desafio X" numa linha
-              // só, nunca quebrando a palavra — FittedBox encolhe a
-              // fonte automaticamente quando o nome do território é
-              // mais longo (ex.: "Cultura Pop"), em vez de arriscar
-              // uma quebra de linha no meio da palavra.
+              // Pedido de Rhoney (29/08/2026): nunca quebrar NO MEIO DE
+              // UMA PALAVRA. Revisado em 30/09/2026 (pedido de Rhoney,
+              // achado real no celular: nomes longos como "Contrações
+              // Informais Relâmpago: Intermediário" ficavam ilegíveis,
+              // encolhidos numa única linha) — agora permite até 2
+              // linhas, quebrando só na fronteira entre palavras
+              // (comportamento padrão do Text), nunca no meio de uma.
+              // FittedBox continua encolhendo a fonte quando necessário,
+              // mas agora distribui o texto em 2 linhas antes de
+              // encolher tanto, resultando numa fonte maior/mais legível
+              // pra nomes longos.
               FittedBox(
                 fit: BoxFit.scaleDown,
                 child: Row(
@@ -2068,7 +2074,7 @@ class _TerritoryCard extends StatelessWidget {
                     Text(
                       l10n.newChallengeButton(label),
                       textAlign: TextAlign.center,
-                      maxLines: 1,
+                      maxLines: 2,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             fontWeight: FontWeight.w600,
                             color: isMysteryBlock ? AppColors.mystery : null,

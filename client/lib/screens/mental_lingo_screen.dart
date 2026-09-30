@@ -333,6 +333,26 @@ class _WavePainter extends CustomPainter {
 
 enum _LingoState { ready, listening, processing, answering, error }
 
+/// Os 3 modos de captura de voz que devem coexistir, escolhidos pelo usuário
+/// (MENTAL_LINGO_RELATORIO_TESTES_CAMPO_V1.md, decisão de Rhoney 29/09/2026,
+/// depois de testes reais em campo — Modo 3 tinha sido removido em 27/09 por
+/// um bug de escuta de 1:20 em ambiente ruidoso, corrigido e reintroduzido).
+enum _CaptureMode {
+  /// Modo 1: apertar-e-segurar o botão enquanto fala, soltar pra enviar.
+  /// Padrão — mesmo comportamento de mensagem de voz (WhatsApp).
+  holdToTalk,
+
+  /// Modo 2: toque pra começar, toque de novo pra encerrar e enviar. Sem
+  /// exigir pressão contínua — alternativa de acessibilidade.
+  tapTwice,
+
+  /// Modo 3: toque pra começar; o app detecta sozinho o fim da fala por
+  /// silêncio contínuo (`_kAutoDetectSilenceTimeout`). Vale um indicador
+  /// visual de "ainda ouvindo" pra deixar claro que a escuta continua, com
+  /// a opção de encerrar manualmente a qualquer momento.
+  autoDetect,
+}
+
 class MentalLingoScreen extends StatefulWidget {
   MentalLingoScreen(
       {super.key, required this.client, MentalLingoService? service, LingoTranslator? translator})
@@ -365,44 +385,110 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   String? _errorMessage;
   bool _speakingAnswer = false;
 
-  // MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md (ajuste de 28/09/2026, aprovado por
-  // Rhoney): captura por apertar-e-segurar, não mais detecção de silêncio.
-  // `false` (padrão) = segurar o botão enquanto fala, soltar pra enviar.
-  // `true` = modo de acessibilidade (tocar pra começar, tocar de novo pra
-  // parar), sem exigir pressão contínua — carregado do dispositivo.
-  bool _tapMode = false;
+  // MENTAL_LINGO_RELATORIO_TESTES_CAMPO_V1.md (decisão de Rhoney,
+  // 29/09/2026): 3 modos de captura coexistem, escolhidos pelo usuário.
+  // Padrão continua sendo apertar-e-segurar (MENTAL_LINGO_ASSISTENTE_
+  // VOZ_V1.1.md, 28/09/2026).
+  _CaptureMode _captureMode = _CaptureMode.holdToTalk;
+  // Modos 2 e 3 começam por toque (não por apertar-e-segurar) — usado nos
+  // gestos abaixo pra decidir entre GestureDetector.onTap e onLongPress*.
+  bool get _tapMode => _captureMode != _CaptureMode.holdToTalk;
   // Dedo arrastado pra fora da área do botão durante o apertar-e-segurar:
   // soltar nesse estado CANCELA a captura em vez de enviar (mesmo padrão de
   // apps de mensagem de voz).
   bool _willCancel = false;
+  // Modo 3 (detecção automática): true depois de alguns segundos ouvindo
+  // sem o reconhecedor ter encerrado sozinho — mostra o indicador "ainda
+  // ouvindo" com opção de encerrar manualmente a qualquer momento.
+  bool _showStillListeningHint = false;
+  Timer? _stillListeningTimer;
+  // Teto de silêncio contínuo do Modo 3 antes de encerrar sozinho — faixa
+  // de 15-20s orientada no relatório de testes de campo; 18s no meio dela.
+  // Bem menor que os 3min dos modos 1/2 (lá quem decide é o usuário).
+  static const Duration _kAutoDetectSilenceTimeout = Duration(seconds: 18);
+  // Indicador visual aparece depois desse tanto de escuta contínua — dá
+  // tempo de uma resposta normal terminar sem o aviso piscar à toa, mas
+  // ainda avisa bem antes do teto de 18s de silêncio disparar sozinho.
+  static const Duration _kStillListeningHintDelay = Duration(seconds: 8);
 
   @override
   void initState() {
     super.initState();
-    _loadTapModePreference();
+    _loadCaptureModePreference();
   }
 
-  static const _kTapModePrefKey = 'mental_lingo_tap_mode';
+  static const _kCaptureModePrefKey = 'mental_lingo_capture_mode';
+  // Chave antiga (booleana), mantida só pra migrar quem já tinha escolhido
+  // o modo de toque único antes do Modo 3 existir — nunca mais escrita.
+  static const _kLegacyTapModePrefKey = 'mental_lingo_tap_mode';
 
-  Future<void> _loadTapModePreference() async {
+  Future<void> _loadCaptureModePreference() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       if (!mounted) return;
-      setState(() => _tapMode = prefs.getBool(_kTapModePrefKey) ?? false);
+      final saved = prefs.getString(_kCaptureModePrefKey);
+      _CaptureMode mode;
+      if (saved != null) {
+        mode = _CaptureMode.values.firstWhere(
+          (m) => m.name == saved,
+          orElse: () => _CaptureMode.holdToTalk,
+        );
+      } else if (prefs.getBool(_kLegacyTapModePrefKey) == true) {
+        mode = _CaptureMode.tapTwice; // migra a preferência antiga
+      } else {
+        mode = _CaptureMode.holdToTalk;
+      }
+      setState(() => _captureMode = mode);
     } catch (_) {
       // preferência não crítica — mantém o padrão (apertar-e-segurar)
     }
   }
 
-  Future<void> _toggleTapMode() async {
-    final next = !_tapMode;
-    setState(() => _tapMode = next);
+  Future<void> _setCaptureMode(_CaptureMode mode) async {
+    if (mode == _captureMode) return;
+    setState(() => _captureMode = mode);
     try {
       final prefs = await SharedPreferences.getInstance();
-      await prefs.setBool(_kTapModePrefKey, next);
+      await prefs.setString(_kCaptureModePrefKey, mode.name);
     } catch (_) {
       // falha ao salvar não impede o uso nesta sessão
     }
+  }
+
+  static const Map<_CaptureMode, (IconData, String)> _kCaptureModeChips = {
+    _CaptureMode.holdToTalk: (Icons.back_hand_outlined, 'Apertar e segurar'),
+    _CaptureMode.tapTwice: (Icons.touch_app_outlined, 'Toque duplo'),
+    _CaptureMode.autoDetect: (Icons.graphic_eq_rounded, 'Detecção automática'),
+  };
+
+  /// Seletor de 3 opções (MENTAL_LINGO_RELATORIO_TESTES_CAMPO_V1.md, 29/09/2026)
+  /// — substitui o antigo alternador binário; o modo ativo fica sempre visível.
+  Widget _buildCaptureModeSelector() {
+    return Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 8,
+      runSpacing: 8,
+      children: _CaptureMode.values.map((mode) {
+        final active = mode == _captureMode;
+        final (icon, label) = _kCaptureModeChips[mode]!;
+        return OutlinedButton.icon(
+          key: Key('mental_lingo_capture_mode_${mode.name}'),
+          onPressed: () => _setCaptureMode(mode),
+          style: OutlinedButton.styleFrom(
+            visualDensity: VisualDensity.compact,
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            backgroundColor: active ? kAgentBlue.withValues(alpha: 0.18) : null,
+            side: BorderSide(
+                color: active
+                    ? kAgentBlue.withValues(alpha: 0.85)
+                    : AppColors.bone.withValues(alpha: 0.3)),
+            foregroundColor: active ? kAgentBlue : AppColors.bone,
+          ),
+          icon: Icon(icon, size: 16),
+          label: Text(label, style: const TextStyle(fontSize: 12)),
+        );
+      }).toList(),
+    );
   }
 
   Future<void> _startListening() async {
@@ -414,6 +500,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       _accumulated = '';
       _willCancel = false;
       _awaitingFinal = false;
+      _showStillListeningHint = false;
     });
     _safetyTimer?.cancel();
     _safetyTimer = Timer(_kSafetyCap, () {
@@ -423,6 +510,17 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
       if (!mounted || _state != _LingoState.listening) return;
       _stopAndSubmit();
     });
+    _stillListeningTimer?.cancel();
+    if (_captureMode == _CaptureMode.autoDetect) {
+      // Indicador "ainda ouvindo" (Modo 3) — MENTAL_LINGO_RELATORIO_TESTES_
+      // CAMPO_V1.md §4: dá pro usuário perceber, visualmente, que a escuta
+      // automática continua ativa além do esperado, com opção de encerrar
+      // manualmente a qualquer momento.
+      _stillListeningTimer = Timer(_kStillListeningHintDelay, () {
+        if (!mounted || _state != _LingoState.listening) return;
+        setState(() => _showStillListeningHint = true);
+      });
+    }
     final ok = await widget._service.init(
       onError: (_) {
         if (!mounted) return;
@@ -432,7 +530,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
               'Não consegui acessar o microfone. Verifique a permissão do MENTAL nas configurações do aparelho.';
         });
       },
-      onStatus: (_) {},
+      onStatus: _handleRecognizerStatus,
     );
     if (!ok) {
       if (!mounted) return;
@@ -445,7 +543,22 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     await widget._service.listen(
       onFinalResult: _handleResult,
       onPartialResult: _handlePartialResult,
+      silenceTimeout: _captureMode == _CaptureMode.autoDetect
+          ? _kAutoDetectSilenceTimeout
+          : null,
     );
+  }
+
+  /// Só relevante no Modo 3: o pacote encerra a escuta sozinho ("done")
+  /// quando o silêncio contínuo passa de `_kAutoDetectSilenceTimeout` — é
+  /// o sinal de que a fala terminou e a pergunta deve ser enviada. Nos
+  /// modos 1/2, quem decide quando parar é sempre o usuário (soltar o
+  /// botão / tocar de novo), então este callback não faz nada.
+  void _handleRecognizerStatus(String status) {
+    if (_captureMode != _CaptureMode.autoDetect) return;
+    if (status != 'done' && status != 'notListening') return;
+    if (!mounted || _state != _LingoState.listening) return;
+    _stopAndSubmit();
   }
 
   void _handlePartialResult(String text) {
@@ -494,6 +607,8 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   /// esperando indefinidamente se o reconhecedor não confirmar o fim.
   Future<void> _stopAndSubmit() async {
     if (!mounted || _state != _LingoState.listening) return;
+    _stillListeningTimer?.cancel();
+    if (_showStillListeningHint) setState(() => _showStillListeningHint = false);
     _awaitingFinal = true;
     _finalizeTimeoutTimer?.cancel();
     _finalizeTimeoutTimer = Timer(const Duration(milliseconds: 1500), () {
@@ -606,11 +721,13 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   void _cancelListening() {
     _safetyTimer?.cancel();
     _finalizeTimeoutTimer?.cancel();
+    _stillListeningTimer?.cancel();
     _awaitingFinal = false;
     widget._service.cancel();
     setState(() {
       _state = _LingoState.ready;
       _willCancel = false;
+      _showStillListeningHint = false;
     });
   }
 
@@ -690,6 +807,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   void dispose() {
     _safetyTimer?.cancel();
     _finalizeTimeoutTimer?.cancel();
+    _stillListeningTimer?.cancel();
     widget._service.cancel();
     super.dispose();
   }
@@ -1017,20 +1135,29 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                         Text(_stateLabel(),
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.titleMedium),
-                        // Alternativa de acessibilidade (v1.1, §Arquitetura a avaliar):
-                        // pra quem tem dificuldade de manter pressão contínua no botão —
-                        // só aparece fora da escuta, pra não distrair no meio da captura.
+                        // 3 modos de captura coexistem, escolha do usuário
+                        // (MENTAL_LINGO_RELATORIO_TESTES_CAMPO_V1.md, 29/09/2026)
+                        // — só aparece fora da escuta, pra não distrair no meio
+                        // da captura.
                         if (_state != _LingoState.listening &&
                             _state != _LingoState.processing)
-                          TextButton.icon(
-                            key: const Key('mental_lingo_tap_mode_toggle'),
-                            onPressed: _toggleTapMode,
-                            icon: Icon(_tapMode
-                                ? Icons.touch_app_outlined
-                                : Icons.back_hand_outlined),
-                            label: Text(_tapMode
-                                ? 'Modo: toque único (trocar para apertar e segurar)'
-                                : 'Dificuldade para segurar? Toque aqui'),
+                          _buildCaptureModeSelector(),
+                        // Modo 3: sinal visual de que a escuta automática
+                        // continua ativa além do esperado, com opção de
+                        // encerrar manualmente a qualquer momento (§4 do
+                        // relatório de testes de campo).
+                        if (_state == _LingoState.listening &&
+                            _showStillListeningHint)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8),
+                            child: TextButton.icon(
+                              key: const Key('mental_lingo_still_listening_hint'),
+                              onPressed: _stopAndSubmit,
+                              icon: Icon(Icons.hourglass_bottom_rounded,
+                                  size: 18, color: AppColors.gold),
+                              label: const Text(
+                                  'Ainda ouvindo… toque pra encerrar agora'),
+                            ),
                           ),
                         const SizedBox(height: 20),
                         if (_state == _LingoState.listening &&

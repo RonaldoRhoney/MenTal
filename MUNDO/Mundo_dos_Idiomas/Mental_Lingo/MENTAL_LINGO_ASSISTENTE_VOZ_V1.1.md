@@ -170,22 +170,43 @@ já existente em sugestões do Wikcionário.
 
 Relatório de testes reais de Rhoney (27-28/09/2026, 11 casos) trouxe 3 pontos:
 
-1. **Qualidade da tradução de frase inteira**: o relatório presumia que a arquitetura-alvo
-   já era "modelo de linguagem + RAG" pra migrar. Não é — a decisão registrada e em produção
-   (23/09 e 26/09/2026, ver `app/mental_lingo.py` docstring e `client/lib/services/
-   lingo_translator.dart`) é **custo zero**: tradução de frase inteira usa Google ML Kit
-   **no aparelho** (offline, grátis), não um LLM. Os erros relatados (feira/fair, "dinner
-   soup" etc.) são limitação conhecida de tradução automática on-device, não um motor
-   trocado por engano. Migrar pra um LLM de verdade custaria dinheiro — **não implementado
-   sem decisão explícita de Rhoney sobre abrir mão do custo zero aqui e com qual
-   provedor/cota**, pendente.
-2. **Bug de vazamento de moldura de instrução ("como eu diria X" virando parte da tradução
+1. **Qualidade da tradução de frase inteira — decisão: manter ML Kit, sem mudança de motor
+   por ora.** O relatório presumia que a arquitetura-alvo já era "modelo de linguagem + RAG"
+   pra migrar. Não é — a decisão registrada e em produção (23/09 e 26/09/2026, ver
+   `app/mental_lingo.py` docstring e `client/lib/services/lingo_translator.dart`) é **custo
+   zero**: tradução de frase inteira usa Google ML Kit **no aparelho** (offline, grátis), não
+   um LLM. Os erros relatados (feira/fair, "dinner soup" etc.) são limitação conhecida de
+   tradução automática on-device, não um motor trocado por engano. Claude Code pesquisou e
+   confirmou com Rhoney (30/09/2026):
+   - **Gemini está descartado** — não há chave configurada no projeto (contradiz o que o
+     relatório presumia) e Rhoney já tinha rejeitado Gemini por ser pago em 20/09/2026
+     (caso da geração de imagem de vocabulário).
+   - **Groq (LLM com tier gratuito real, sem cartão)** foi levantado como alternativa
+     híbrida (tentar Groq, cair pro ML Kit se falhar/esgotar cota) — **adiado por decisão de
+     Rhoney**: só revisitar se ele perceber prejuízo real de qualidade nas traduções em uso.
+   - **TranslationManager do sistema Android e Gemini Nano on-device** (alternativas 100%
+     locais e gratuitas) foram pesquisados e **descartados**: cobertura de aparelho muito
+     restrita (majoritariamente Pixel/topo de linha), nem o próprio aparelho de teste de
+     Rhoney (Moto G22) teria suporte — exigiria manter ML Kit como fallback de qualquer
+     forma, sem ganho real pra maioria dos usuários do MENTAL.
+   - **Conclusão**: ML Kit continua sendo a tradução mais fiel disponível de fato, grátis e
+     universal, pro Flutter/Android hoje. Nenhuma mudança de motor foi implementada.
+2. **Bug de vazamento de moldura de instrução ("como eu diria X" virando parte da tradução)
    — corrigido**: `app/mental_lingo.py`, `_ASK_PATTERNS` — "diria"/"falaria" (condicional)
    não eram reconhecidos (só formas no infinitivo/imperativo), então a frase inteira,
    incluindo "como eu diria", vazava pro tradutor. Duas novas entradas em `_ASK_PATTERNS`
    cobrem com e sem idioma explícito. Teste de regressão em `tests/test_mental_lingo.py`
    (`test_como_eu_diria_e_reconhecido_como_moldura_de_instrucao_nao_vaza_pro_tradutor`).
-3. **Reintrodução do Modo 3 (detecção automática de fim de fala) como 3ª opção**, corrigida
-   (teto de tempo menor, indicador visual "ainda ouvindo", detecção mais robusta a ruído
-   constante) — **não implementado ainda**, pendente de desenho de UI (hoje só existem 2
-   modos: apertar-e-segurar e toque-duplo manual).
+3. **Reintrodução do Modo 3 (detecção automática de fim de fala) como 3ª opção — implementada
+   e testada.** `_CaptureMode` (enum) substitui o antigo alternador binário: seletor de 3
+   opções sempre visível (`client/lib/screens/mental_lingo_screen.dart`), persistido via
+   `SharedPreferences` (migra a preferência antiga automaticamente). Teto de silêncio
+   contínuo de 18s (faixa 15-20s orientada pelo relatório) via `pauseFor` do
+   `speech_to_text` (`silenceTimeout` novo em `MentalLingoService.listen()`); indicador
+   visual "ainda ouvindo… toque pra encerrar agora" aparece depois de 8s de escuta contínua,
+   com opção de encerrar manualmente a qualquer momento. Verificado no aparelho real
+   (Moto G22): os 3 modos aparecem e alternam corretamente; em silêncio total o reconhecedor
+   nativo do Android encerra sozinho (detector de "sem fala" do próprio sistema) e o app
+   trata isso com a mensagem honesta "Não ouvi nada", nunca trava. Investigação adicional de
+   algoritmo de detecção de fala vs. ruído de fundo (§4, item 3) não foi feita nesta rodada —
+   o `pauseFor` do pacote já é a defesa disponível sem trocar de motor de STT.

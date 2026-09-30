@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:mental/api/api_client.dart';
 import 'package:mental/screens/mental_lingo_screen.dart';
@@ -46,6 +47,35 @@ void main() {
     expect(find.textContaining('Aperte e segure o microfone'), findsOneWidget);
     expect(find.byKey(const Key('mental_lingo_question_bubble')), findsNothing);
     expect(find.byKey(const Key('mental_lingo_answer_bubble')), findsNothing);
+  });
+
+  testWidgets(
+      '3 modos de captura coexistem (MENTAL_LINGO_RELATORIO_TESTES_CAMPO_V1.md, '
+      '29/09/2026) e a escolha persiste', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final client = _FakeApiClient();
+    await tester.pumpWidget(_app(MentalLingoScreen(client: client)));
+    await tester.pump();
+
+    // Os 3 botões existem, "apertar e segurar" é o padrão inicial.
+    expect(find.byKey(const Key('mental_lingo_capture_mode_holdToTalk')), findsOneWidget);
+    expect(find.byKey(const Key('mental_lingo_capture_mode_tapTwice')), findsOneWidget);
+    expect(find.byKey(const Key('mental_lingo_capture_mode_autoDetect')), findsOneWidget);
+    expect(find.textContaining('Aperte e segure o microfone'), findsOneWidget);
+
+    await tester.tap(find.byKey(const Key('mental_lingo_capture_mode_autoDetect')));
+    await tester.pump();
+    // Modo 3 também começa por toque, igual ao Modo 2 (nunca por apertar-e-segurar).
+    expect(find.textContaining('Toque no microfone'), findsOneWidget);
+
+    final prefs = await SharedPreferences.getInstance();
+    expect(prefs.getString('mental_lingo_capture_mode'), 'autoDetect');
+
+    // O mock de SharedPreferences é global ao isolate de teste — sem
+    // resetar aqui, os testes seguintes deste arquivo carregariam
+    // "autoDetect" salvo em vez do padrão (achado real: quebrou 3 outros
+    // testes que dependem do modo apertar-e-segurar).
+    SharedPreferences.setMockInitialValues({});
   });
 
   testWidgets('Reconhecimento de voz indisponível mostra erro honesto, sem travar a tela',
@@ -148,6 +178,7 @@ class _FakeSpeech extends MentalLingoService {
   Future<void> listen({
     required void Function(String text) onFinalResult,
     void Function(String text)? onPartialResult,
+    Duration? silenceTimeout,
   }) async {
     if (_delivered) return;
     _delivered = true;
