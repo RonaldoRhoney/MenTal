@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"I ___ before the meeting started.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "I had going",
+      "I had gone",
+      "I went",
+      "I has gone"
+    ],
+    "correct_answer": "I had gone",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"I had gone\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to do\" = fazer, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is doing",
+      "it is done",
+      "it was done",
+      "it does"
+    ],
+    "correct_answer": "it is done",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is done\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, he ___ a cake.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "he would making",
+      "he would make",
+      "he would made",
+      "he will make"
+    ],
+    "correct_answer": "he would make",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"he would make\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, she ___ a coffee.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "she would have getting",
+      "she had gotten",
+      "she would have gotten",
+      "she would get"
+    ],
+    "correct_answer": "she would have gotten",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"she would have gotten\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"we ___ a movie during the exam, but didn't.\" (verbo \"to see\" = ver) — qual é a forma correta?",
+    "options": [
+      "we should have seeing",
+      "we should have see",
+      "we should have seen",
+      "we will see"
+    ],
+    "correct_answer": "we should have seen",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"we should have seen\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"they ___ the answer before the meeting started.\" (verbo \"to know\" = saber/conhecer) — qual é a forma correta?",
+    "options": [
+      "they had knowing",
+      "they had known",
+      "they has known",
+      "they knew"
+    ],
+    "correct_answer": "they had known",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"they had known\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to make\" = fazer/criar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it makes",
+      "it is making",
+      "it is made",
+      "it was made"
+    ],
+    "correct_answer": "it is made",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is made\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, you ___.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "you would come",
+      "you would coming",
+      "you will come",
+      "you would came"
+    ],
+    "correct_answer": "you would come",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"you would come\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, he ___ a gift to the teacher.\" (verbo \"to give\" = dar) — qual é a forma correta?",
+    "options": [
+      "he would have given",
+      "he had given",
+      "he would have giving",
+      "he would give"
+    ],
+    "correct_answer": "he would have given",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"he would have given\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"she ___ the keys during the exam, but didn't.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "she could have found",
+      "she will find",
+      "she could have finding",
+      "she could have find"
+    ],
+    "correct_answer": "she could have found",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"she could have found\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"we ___ a story to the kids before the meeting started.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "we had told",
+      "we had telling",
+      "we told",
+      "we has told"
+    ],
+    "correct_answer": "we had told",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"we had told\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to know\" = saber/conhecer, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is knowing",
+      "it was known",
+      "it knows",
+      "it is known"
+    ],
+    "correct_answer": "it is known",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is known\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, I ___.\" (verbo \"to speak\" = falar) — qual é a forma correta?",
+    "options": [
+      "I will speak",
+      "I would speak",
+      "I would spoke",
+      "I would speaking"
+    ],
+    "correct_answer": "I would speak",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"I would speak\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, you ___ a new phone.\" (verbo \"to buy\" = comprar) — qual é a forma correta?",
+    "options": [
+      "you would have bought",
+      "you would buy",
+      "you had bought",
+      "you would have buying"
+    ],
+    "correct_answer": "you would have bought",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"you would have bought\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"he ___ during the exam, but didn't.\" (verbo \"to eat\" = comer) — qual é a forma correta?",
+    "options": [
+      "he will eat",
+      "he should have eaten",
+      "he should have eating",
+      "he should have eat"
+    ],
+    "correct_answer": "he should have eaten",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"he should have eaten\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"she ___ the window before the meeting started.\" (verbo \"to break\" = quebrar) — qual é a forma correta?",
+    "options": [
+      "she had broken",
+      "she had breaking",
+      "she has broken",
+      "she broke"
+    ],
+    "correct_answer": "she had broken",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"she had broken\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to take\" = pegar/levar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is taken",
+      "it is taking",
+      "it takes",
+      "it was taken"
+    ],
+    "correct_answer": "it is taken",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is taken\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, they ___ a house.\" (verbo \"to build\" = construir) — qual é a forma correta?",
+    "options": [
+      "they would build",
+      "they will build",
+      "they would building",
+      "they would built"
+    ],
+    "correct_answer": "they would build",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"they would build\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, I ___ a message.\" (verbo \"to send\" = enviar) — qual é a forma correta?",
+    "options": [
+      "I had sent",
+      "I would send",
+      "I would have sent",
+      "I would have sending"
+    ],
+    "correct_answer": "I would have sent",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"I would have sent\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"you ___ the money during the exam, but didn't.\" (verbo \"to steal\" = roubar) — qual é a forma correta?",
+    "options": [
+      "you could have stealing",
+      "you could have stolen",
+      "you will steal",
+      "you could have steal"
+    ],
+    "correct_answer": "you could have stolen",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"you could have stolen\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"he ___ the keys before the meeting started.\" (verbo \"to forget\" = esquecer) — qual é a forma correta?",
+    "options": [
+      "he had forgotten",
+      "he had forgetting",
+      "he has forgotten",
+      "he forgot"
+    ],
+    "correct_answer": "he had forgotten",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"he had forgotten\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to give\" = dar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was given",
+      "it is giving",
+      "it is given",
+      "it gives"
+    ],
+    "correct_answer": "it is given",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is given\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, we ___ a car.\" (verbo \"to drive\" = dirigir) — qual é a forma correta?",
+    "options": [
+      "we would drove",
+      "we would drive",
+      "we will drive",
+      "we would driving"
+    ],
+    "correct_answer": "we would drive",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"we would drive\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, they ___ English.\" (verbo \"to teach\" = ensinar) — qual é a forma correta?",
+    "options": [
+      "they would teach",
+      "they had taught",
+      "they would have taught",
+      "they would have teaching"
+    ],
+    "correct_answer": "they would have taught",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"they would have taught\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"I ___ the ball during the exam, but didn't.\" (verbo \"to catch\" = pegar/capturar) — qual é a forma correta?",
+    "options": [
+      "I should have caught",
+      "I will catch",
+      "I should have catching",
+      "I should have catch"
+    ],
+    "correct_answer": "I should have caught",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"I should have caught\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"you ___ the ball before the meeting started.\" (verbo \"to throw\" = jogar/arremessar) — qual é a forma correta?",
+    "options": [
+      "you had throwing",
+      "you threw",
+      "you had thrown",
+      "you has thrown"
+    ],
+    "correct_answer": "you had thrown",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"you had thrown\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to find\" = encontrar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is finding",
+      "it is found",
+      "it finds",
+      "it was found"
+    ],
+    "correct_answer": "it is found",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is found\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, she ___ the dishes.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "she will do",
+      "she would do",
+      "she would doing",
+      "she would did"
+    ],
+    "correct_answer": "she would do",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"she would do\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, we ___ a cake.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "we would have made",
+      "we would have making",
+      "we had made",
+      "we would make"
+    ],
+    "correct_answer": "we would have made",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"we would have made\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"they ___ a coffee during the exam, but didn't.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "they could have getting",
+      "they could have gotten",
+      "they will get",
+      "they could have get"
+    ],
+    "correct_answer": "they could have gotten",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"they could have gotten\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"I ___ a movie before the meeting started.\" (verbo \"to see\" = ver) — qual é a forma correta?",
+    "options": [
+      "I had seeing",
+      "I has seen",
+      "I saw",
+      "I had seen"
+    ],
+    "correct_answer": "I had seen",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"I had seen\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to tell\" = contar/dizer, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was told",
+      "it is told",
+      "it is telling",
+      "it tells"
+    ],
+    "correct_answer": "it is told",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is told\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, he ___ a photo.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "he would taking",
+      "he would take",
+      "he would took",
+      "he will take"
+    ],
+    "correct_answer": "he would take",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"he would take\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, she ___.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "she would have coming",
+      "she had come",
+      "she would have come",
+      "she would come"
+    ],
+    "correct_answer": "she would have come",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"she would have come\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"we ___ a gift to the teacher during the exam, but didn't.\" (verbo \"to give\" = dar) — qual é a forma correta?",
+    "options": [
+      "we should have give",
+      "we should have given",
+      "we will give",
+      "we should have giving"
+    ],
+    "correct_answer": "we should have given",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"we should have given\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"they ___ the keys before the meeting started.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "they has found",
+      "they had found",
+      "they found",
+      "they had finding"
+    ],
+    "correct_answer": "they had found",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"they had found\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to write\" = escrever, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was written",
+      "it writes",
+      "it is writing",
+      "it is written"
+    ],
+    "correct_answer": "it is written",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is written\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, you ___ a letter.\" (verbo \"to write\" = escrever) — qual é a forma correta?",
+    "options": [
+      "you would writing",
+      "you would wrote",
+      "you will write",
+      "you would write"
+    ],
+    "correct_answer": "you would write",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"you would write\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, he ___.\" (verbo \"to speak\" = falar) — qual é a forma correta?",
+    "options": [
+      "he would speak",
+      "he would have spoken",
+      "he would have speaking",
+      "he had spoken"
+    ],
+    "correct_answer": "he would have spoken",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"he would have spoken\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"she ___ a new phone during the exam, but didn't.\" (verbo \"to buy\" = comprar) — qual é a forma correta?",
+    "options": [
+      "she could have bought",
+      "she could have buy",
+      "she will buy",
+      "she could have buying"
+    ],
+    "correct_answer": "she could have bought",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"she could have bought\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"we ___ before the meeting started.\" (verbo \"to eat\" = comer) — qual é a forma correta?",
+    "options": [
+      "we has eaten",
+      "we ate",
+      "we had eating",
+      "we had eaten"
+    ],
+    "correct_answer": "we had eaten",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"we had eaten\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to buy\" = comprar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is buying",
+      "it buys",
+      "it is bought",
+      "it was bought"
+    ],
+    "correct_answer": "it is bought",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is bought\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, I ___ a name.\" (verbo \"to choose\" = escolher) — qual é a forma correta?",
+    "options": [
+      "I will choose",
+      "I would chose",
+      "I would choose",
+      "I would choosing"
+    ],
+    "correct_answer": "I would choose",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"I would choose\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, you ___ a house.\" (verbo \"to build\" = construir) — qual é a forma correta?",
+    "options": [
+      "you would have building",
+      "you would build",
+      "you would have built",
+      "you had built"
+    ],
+    "correct_answer": "you would have built",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"you would have built\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"he ___ a message during the exam, but didn't.\" (verbo \"to send\" = enviar) — qual é a forma correta?",
+    "options": [
+      "he should have sending",
+      "he should have sent",
+      "he will send",
+      "he should have send"
+    ],
+    "correct_answer": "he should have sent",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"he should have sent\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"she ___ the money before the meeting started.\" (verbo \"to steal\" = roubar) — qual é a forma correta?",
+    "options": [
+      "she had stealing",
+      "she had stolen",
+      "she stole",
+      "she has stolen"
+    ],
+    "correct_answer": "she had stolen",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"she had stolen\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to eat\" = comer, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is eating",
+      "it is eaten",
+      "it eats",
+      "it was eaten"
+    ],
+    "correct_answer": "it is eaten",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is eaten\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, they ___ the baby.\" (verbo \"to wake\" = acordar) — qual é a forma correta?",
+    "options": [
+      "they would waking",
+      "they will wake",
+      "they would wake",
+      "they would woke"
+    ],
+    "correct_answer": "they would wake",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"they would wake\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, I ___ a car.\" (verbo \"to drive\" = dirigir) — qual é a forma correta?",
+    "options": [
+      "I had driven",
+      "I would drive",
+      "I would have driven",
+      "I would have driving"
+    ],
+    "correct_answer": "I would have driven",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"I would have driven\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"you ___ English during the exam, but didn't.\" (verbo \"to teach\" = ensinar) — qual é a forma correta?",
+    "options": [
+      "you will teach",
+      "you could have teach",
+      "you could have taught",
+      "you could have teaching"
+    ],
+    "correct_answer": "you could have taught",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"you could have taught\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"he ___ the ball before the meeting started.\" (verbo \"to catch\" = pegar/capturar) — qual é a forma correta?",
+    "options": [
+      "he has caught",
+      "he had caught",
+      "he caught",
+      "he had catching"
+    ],
+    "correct_answer": "he had caught",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"he had caught\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to break\" = quebrar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it breaks",
+      "it was broken",
+      "it is breaking",
+      "it is broken"
+    ],
+    "correct_answer": "it is broken",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is broken\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, we ___.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "we would going",
+      "we will go",
+      "we would go",
+      "we would went"
+    ],
+    "correct_answer": "we would go",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"we would go\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, they ___ the dishes.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "they would have done",
+      "they would do",
+      "they had done",
+      "they would have doing"
+    ],
+    "correct_answer": "they would have done",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"they would have done\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"I ___ a cake during the exam, but didn't.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "I should have making",
+      "I should have make",
+      "I should have made",
+      "I will make"
+    ],
+    "correct_answer": "I should have made",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"I should have made\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"you ___ a coffee before the meeting started.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "you got",
+      "you has gotten",
+      "you had gotten",
+      "you had getting"
+    ],
+    "correct_answer": "you had gotten",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"you had gotten\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to choose\" = escolher, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was chosen",
+      "it chooses",
+      "it is choosing",
+      "it is chosen"
+    ],
+    "correct_answer": "it is chosen",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is chosen\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, she ___ the answer.\" (verbo \"to know\" = saber/conhecer) — qual é a forma correta?",
+    "options": [
+      "she would knew",
+      "she would knowing",
+      "she would know",
+      "she will know"
+    ],
+    "correct_answer": "she would know",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"she would know\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, we ___ a photo.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "we would have taken",
+      "we would take",
+      "we would have taking",
+      "we had taken"
+    ],
+    "correct_answer": "we would have taken",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"we would have taken\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"they ___ during the exam, but didn't.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "they came",
+      "they will come",
+      "they could have come",
+      "they could have coming"
+    ],
+    "correct_answer": "they could have come",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"they could have come\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"I ___ a gift to the teacher before the meeting started.\" (verbo \"to give\" = dar) — qual é a forma correta?",
+    "options": [
+      "I has given",
+      "I had giving",
+      "I had given",
+      "I gave"
+    ],
+    "correct_answer": "I had given",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"I had given\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to build\" = construir, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is built",
+      "it was built",
+      "it builds",
+      "it is building"
+    ],
+    "correct_answer": "it is built",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is built\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, he ___ a story to the kids.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "he would telling",
+      "he would told",
+      "he will tell",
+      "he would tell"
+    ],
+    "correct_answer": "he would tell",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"he would tell\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, she ___ a letter.\" (verbo \"to write\" = escrever) — qual é a forma correta?",
+    "options": [
+      "she had written",
+      "she would have writing",
+      "she would have written",
+      "she would write"
+    ],
+    "correct_answer": "she would have written",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"she would have written\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"we ___ during the exam, but didn't.\" (verbo \"to speak\" = falar) — qual é a forma correta?",
+    "options": [
+      "we should have speaking",
+      "we should have spoken",
+      "we will speak",
+      "we should have speak"
+    ],
+    "correct_answer": "we should have spoken",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"we should have spoken\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"they ___ a new phone before the meeting started.\" (verbo \"to buy\" = comprar) — qual é a forma correta?",
+    "options": [
+      "they bought",
+      "they has bought",
+      "they had buying",
+      "they had bought"
+    ],
+    "correct_answer": "they had bought",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"they had bought\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to send\" = enviar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is sending",
+      "it was sent",
+      "it sends",
+      "it is sent"
+    ],
+    "correct_answer": "it is sent",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is sent\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, you ___ the window.\" (verbo \"to break\" = quebrar) — qual é a forma correta?",
+    "options": [
+      "you would breaking",
+      "you would broke",
+      "you will break",
+      "you would break"
+    ],
+    "correct_answer": "you would break",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"you would break\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, he ___ a name.\" (verbo \"to choose\" = escolher) — qual é a forma correta?",
+    "options": [
+      "he would have choosing",
+      "he had chosen",
+      "he would have chosen",
+      "he would choose"
+    ],
+    "correct_answer": "he would have chosen",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"he would have chosen\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"she ___ a house during the exam, but didn't.\" (verbo \"to build\" = construir) — qual é a forma correta?",
+    "options": [
+      "she could have built",
+      "she could have building",
+      "she will build",
+      "she could have build"
+    ],
+    "correct_answer": "she could have built",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"she could have built\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"we ___ a message before the meeting started.\" (verbo \"to send\" = enviar) — qual é a forma correta?",
+    "options": [
+      "we had sent",
+      "we had sending",
+      "we has sent",
+      "we sent"
+    ],
+    "correct_answer": "we had sent",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"we had sent\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to steal\" = roubar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it steals",
+      "it is stealing",
+      "it was stolen",
+      "it is stolen"
+    ],
+    "correct_answer": "it is stolen",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is stolen\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, I ___ the keys.\" (verbo \"to forget\" = esquecer) — qual é a forma correta?",
+    "options": [
+      "I will forget",
+      "I would forgetting",
+      "I would forgot",
+      "I would forget"
+    ],
+    "correct_answer": "I would forget",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"I would forget\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, you ___ the baby.\" (verbo \"to wake\" = acordar) — qual é a forma correta?",
+    "options": [
+      "you would have woken",
+      "you would wake",
+      "you would have waking",
+      "you had woken"
+    ],
+    "correct_answer": "you would have woken",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"you would have woken\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"he ___ a car during the exam, but didn't.\" (verbo \"to drive\" = dirigir) — qual é a forma correta?",
+    "options": [
+      "he should have driving",
+      "he should have drive",
+      "he should have driven",
+      "he will drive"
+    ],
+    "correct_answer": "he should have driven",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"he should have driven\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"she ___ English before the meeting started.\" (verbo \"to teach\" = ensinar) — qual é a forma correta?",
+    "options": [
+      "she had teaching",
+      "she taught",
+      "she had taught",
+      "she has taught"
+    ],
+    "correct_answer": "she had taught",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"she had taught\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to forget\" = esquecer, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it forgets",
+      "it was forgotten",
+      "it is forgetting",
+      "it is forgotten"
+    ],
+    "correct_answer": "it is forgotten",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is forgotten\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, they ___ the ball.\" (verbo \"to throw\" = jogar/arremessar) — qual é a forma correta?",
+    "options": [
+      "they would threw",
+      "they will throw",
+      "they would throwing",
+      "they would throw"
+    ],
+    "correct_answer": "they would throw",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"they would throw\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, I ___.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "I would have going",
+      "I had gone",
+      "I would go",
+      "I would have gone"
+    ],
+    "correct_answer": "I would have gone",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"I would have gone\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"you ___ the dishes during the exam, but didn't.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "you could have done",
+      "you could have doing",
+      "you will do",
+      "you could have do"
+    ],
+    "correct_answer": "you could have done",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"you could have done\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"he ___ a cake before the meeting started.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "he made",
+      "he has made",
+      "he had making",
+      "he had made"
+    ],
+    "correct_answer": "he had made",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"he had made\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to drive\" = dirigir, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is driven",
+      "it is driving",
+      "it drives",
+      "it was driven"
+    ],
+    "correct_answer": "it is driven",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is driven\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, we ___ a movie.\" (verbo \"to see\" = ver) — qual é a forma correta?",
+    "options": [
+      "we would see",
+      "we would saw",
+      "we will see",
+      "we would seeing"
+    ],
+    "correct_answer": "we would see",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"we would see\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, they ___ the answer.\" (verbo \"to know\" = saber/conhecer) — qual é a forma correta?",
+    "options": [
+      "they had known",
+      "they would have knowing",
+      "they would have known",
+      "they would know"
+    ],
+    "correct_answer": "they would have known",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"they would have known\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"I ___ a photo during the exam, but didn't.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "I should have take",
+      "I should have taking",
+      "I should have taken",
+      "I will take"
+    ],
+    "correct_answer": "I should have taken",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"I should have taken\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"you ___ before the meeting started.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "you had come",
+      "you had coming",
+      "you came",
+      "you has come"
+    ],
+    "correct_answer": "you had come",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"you had come\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to teach\" = ensinar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was taught",
+      "it is teaching",
+      "it is taught",
+      "it teaches"
+    ],
+    "correct_answer": "it is taught",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is taught\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, she ___ the keys.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "she would found",
+      "she will find",
+      "she would find",
+      "she would finding"
+    ],
+    "correct_answer": "she would find",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"she would find\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, we ___ a story to the kids.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "we had told",
+      "we would have told",
+      "we would tell",
+      "we would have telling"
+    ],
+    "correct_answer": "we would have told",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"we would have told\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"they ___ a letter during the exam, but didn't.\" (verbo \"to write\" = escrever) — qual é a forma correta?",
+    "options": [
+      "they could have written",
+      "they could have write",
+      "they will write",
+      "they could have writing"
+    ],
+    "correct_answer": "they could have written",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"they could have written\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"I ___ before the meeting started.\" (verbo \"to speak\" = falar) — qual é a forma correta?",
+    "options": [
+      "I had spoken",
+      "I has spoken",
+      "I had speaking",
+      "I spoke"
+    ],
+    "correct_answer": "I had spoken",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"I had spoken\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to catch\" = pegar/capturar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is catching",
+      "it was caught",
+      "it is caught",
+      "it catches"
+    ],
+    "correct_answer": "it is caught",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is caught\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, he ___.\" (verbo \"to eat\" = comer) — qual é a forma correta?",
+    "options": [
+      "he will eat",
+      "he would eat",
+      "he would ate",
+      "he would eating"
+    ],
+    "correct_answer": "he would eat",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"he would eat\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, she ___ the window.\" (verbo \"to break\" = quebrar) — qual é a forma correta?",
+    "options": [
+      "she would have breaking",
+      "she had broken",
+      "she would have broken",
+      "she would break"
+    ],
+    "correct_answer": "she would have broken",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"she would have broken\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"we ___ a name during the exam, but didn't.\" (verbo \"to choose\" = escolher) — qual é a forma correta?",
+    "options": [
+      "we will choose",
+      "we should have chosen",
+      "we should have choosing",
+      "we should have choose"
+    ],
+    "correct_answer": "we should have chosen",
+    "explanation": "O modal perfeito (should have) expressa uma possibilidade ou obrigação não realizada no passado: \"should have\" + particípio passado. Aqui: \"we should have chosen\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado perfeito: \"they ___ a house before the meeting started.\" (verbo \"to build\" = construir) — qual é a forma correta?",
+    "options": [
+      "they built",
+      "they had built",
+      "they has built",
+      "they had building"
+    ],
+    "correct_answer": "they had built",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado, pra marcar uma ação anterior a outro ponto no passado. Aqui: \"they had built\".",
+    "hints": [
+      "Tema: Passado perfeito (ação anterior a outra ação passada).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to throw\" = jogar/arremessar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is thrown",
+      "it is throwing",
+      "it was thrown",
+      "it throws"
+    ],
+    "correct_answer": "it is thrown",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is thrown\".",
+    "hints": [
+      "Tema: Voz passiva (o foco é a ação recebida, não quem a pratica).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no 2º condicional: \"if she were here, you ___ the money.\" (verbo \"to steal\" = roubar) — qual é a forma correta?",
+    "options": [
+      "you will steal",
+      "you would stealing",
+      "you would stole",
+      "you would steal"
+    ],
+    "correct_answer": "you would steal",
+    "explanation": "O 2º condicional (situação hipotética no presente/futuro) usa \"would\" + verbo na forma base. Aqui: \"you would steal\".",
+    "hints": [
+      "Tema: 2º condicional (situação hipotética, pouco provável).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no 3º condicional: \"if they had studied, he ___ the keys.\" (verbo \"to forget\" = esquecer) — qual é a forma correta?",
+    "options": [
+      "he had forgotten",
+      "he would have forgotten",
+      "he would have forgetting",
+      "he would forget"
+    ],
+    "correct_answer": "he would have forgotten",
+    "explanation": "O 3º condicional (situação hipotética no passado, que não aconteceu) usa \"would have\" + particípio passado. Aqui: \"he would have forgotten\".",
+    "hints": [
+      "Tema: 3º condicional (algo que não aconteceu no passado).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase com modal perfeito: \"she ___ the baby during the exam, but didn't.\" (verbo \"to wake\" = acordar) — qual é a forma correta?",
+    "options": [
+      "she could have waking",
+      "she could have wake",
+      "she will wake",
+      "she could have woken"
+    ],
+    "correct_answer": "she could have woken",
+    "explanation": "O modal perfeito (could have) expressa uma possibilidade ou obrigação não realizada no passado: \"could have\" + particípio passado. Aqui: \"she could have woken\".",
+    "hints": [
+      "Tema: Modal perfeito (algo que era possível/esperado, mas não aconteceu).",
+      "Repare no verbo auxiliar/modal usado — ele define o tempo/modo."
+    ],
+    "age_reviewed": true
+  }
+]

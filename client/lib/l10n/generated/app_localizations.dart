@@ -628,6 +628,42 @@ abstract class AppLocalizations {
   /// **'Expressões Idiomáticas Relâmpago: Avançado'**
   String get territoryInglesExpressoesRelampagoAvancado;
 
+  /// Territory display name — English verb conjugation, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Conjugação Verbal: Básico'**
+  String get territoryInglesConjugacaoBasico;
+
+  /// Territory display name — English verb conjugation, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Conjugação Verbal: Intermediário'**
+  String get territoryInglesConjugacaoIntermediario;
+
+  /// Territory display name — English verb conjugation, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Conjugação Verbal: Avançado'**
+  String get territoryInglesConjugacaoAvancado;
+
+  /// Territory display name — English verb conjugation, timed mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Conjugação Verbal Relâmpago: Básico'**
+  String get territoryInglesConjugacaoRelampagoBasico;
+
+  /// Territory display name — English verb conjugation, timed mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Conjugação Verbal Relâmpago: Intermediário'**
+  String get territoryInglesConjugacaoRelampagoIntermediario;
+
+  /// Territory display name — English verb conjugation, timed mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Conjugação Verbal Relâmpago: Avançado'**
+  String get territoryInglesConjugacaoRelampagoAvancado;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:

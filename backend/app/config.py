@@ -281,6 +281,10 @@ IDIOMA_TERRITORY_IDS = {
     # idiomáticas quando o jogador perguntar.
     "ingles_expressoes_basico", "ingles_expressoes_intermediario", "ingles_expressoes_avancado",
     "ingles_expressoes_relampago_basico", "ingles_expressoes_relampago_intermediario", "ingles_expressoes_relampago_avancado",
+    # Conjugação Verbal (MUNDO_IDIOMAS_CONJUGACAO_VERBAL_V1.md, 29/09/2026) — mesmo motivo:
+    # o Mental Lingo precisa reconhecer/corrigir conjugação verbal quando o jogador perguntar.
+    "ingles_conjugacao_basico", "ingles_conjugacao_intermediario", "ingles_conjugacao_avancado",
+    "ingles_conjugacao_relampago_basico", "ingles_conjugacao_relampago_intermediario", "ingles_conjugacao_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -297,6 +301,9 @@ ALWAYS_TIMED_TERRITORIES = {
     # Expressões Idiomáticas Relâmpago (MUNDO_IDIOMAS_INGLES_EXPRESSOES_IDIOMATICAS_V1.md,
     # 28/09/2026): mesmo padrão — território próprio, sempre cronometrado, conteúdo distinto.
     "ingles_expressoes_relampago_basico", "ingles_expressoes_relampago_intermediario", "ingles_expressoes_relampago_avancado",
+    # Conjugação Verbal Relâmpago (MUNDO_IDIOMAS_CONJUGACAO_VERBAL_V1.md, 29/09/2026): mesmo
+    # padrão — território próprio, sempre cronometrado, conteúdo distinto.
+    "ingles_conjugacao_relampago_basico", "ingles_conjugacao_relampago_intermediario", "ingles_conjugacao_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_

@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"I ___ every morning.\" (verbo \"to look\" = olhar) — qual é a forma correta?",
+    "options": [
+      "I looked",
+      "I look",
+      "I looks",
+      "I looking"
+    ],
+    "correct_answer": "I look",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"I look\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ every day.\" (verbo \"to start\" = começar) — qual é a forma correta?",
+    "options": [
+      "you starting",
+      "you started",
+      "you start",
+      "you starts"
+    ],
+    "correct_answer": "you start",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you start\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ every weekend.\" (verbo \"to stop\" = parar) — qual é a forma correta?",
+    "options": [
+      "he stopped",
+      "he stoping",
+      "he stops",
+      "he stop"
+    ],
+    "correct_answer": "he stops",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he stops\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"she ___ the new student on Mondays.\" (verbo \"to help\" = ajudar) — qual é a forma correta?",
+    "options": [
+      "she help",
+      "she helps",
+      "she helped",
+      "she helping"
+    ],
+    "correct_answer": "she helps",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"she helps\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"we ___ a movie every summer.\" (verbo \"to watch\" = assistir) — qual é a forma correta?",
+    "options": [
+      "we watched",
+      "we watches",
+      "we watch",
+      "we watching"
+    ],
+    "correct_answer": "we watch",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"we watch\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"they ___ every morning.\" (verbo \"to move\" = mover) — qual é a forma correta?",
+    "options": [
+      "they move",
+      "they moved",
+      "they moveing",
+      "they moves"
+    ],
+    "correct_answer": "they move",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"they move\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"I ___ a new recipe every day.\" (verbo \"to try\" = tentar) — qual é a forma correta?",
+    "options": [
+      "I tried",
+      "I trying",
+      "I try",
+      "I tries"
+    ],
+    "correct_answer": "I try",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"I try\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ every weekend.\" (verbo \"to turn\" = virar) — qual é a forma correta?",
+    "options": [
+      "you turn",
+      "you turning",
+      "you turned",
+      "you turns"
+    ],
+    "correct_answer": "you turn",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you turn\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ the door on Mondays.\" (verbo \"to close\" = fechar) — qual é a forma correta?",
+    "options": [
+      "he close",
+      "he closeing",
+      "he closed",
+      "he closes"
+    ],
+    "correct_answer": "he closes",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he closes\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"she ___ the bags every summer.\" (verbo \"to carry\" = carregar) — qual é a forma correta?",
+    "options": [
+      "she carries",
+      "she carried",
+      "she carry",
+      "she carrying"
+    ],
+    "correct_answer": "she carries",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"she carries\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"we ___ every morning.\" (verbo \"to hope\" = esperar/torcer) — qual é a forma correta?",
+    "options": [
+      "we hoped",
+      "we hopeing",
+      "we hopes",
+      "we hope"
+    ],
+    "correct_answer": "we hope",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"we hope\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"they ___ every day.\" (verbo \"to wait\" = esperar) — qual é a forma correta?",
+    "options": [
+      "they waited",
+      "they waits",
+      "they wait",
+      "they waiting"
+    ],
+    "correct_answer": "they wait",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"they wait\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"I ___ the museum every weekend.\" (verbo \"to visit\" = visitar) — qual é a forma correta?",
+    "options": [
+      "I visited",
+      "I visiting",
+      "I visits",
+      "I visit"
+    ],
+    "correct_answer": "I visit",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"I visit\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ the kitchen on Mondays.\" (verbo \"to clean\" = limpar) — qual é a forma correta?",
+    "options": [
+      "you cleaned",
+      "you cleans",
+      "you clean",
+      "you cleaning"
+    ],
+    "correct_answer": "you clean",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you clean\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ dinner every summer.\" (verbo \"to cook\" = cozinhar) — qual é a forma correta?",
+    "options": [
+      "he cooking",
+      "he cooked",
+      "he cooks",
+      "he cook"
+    ],
+    "correct_answer": "he cooks",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he cooks\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"she ___ every morning.\" (verbo \"to dance\" = dançar) — qual é a forma correta?",
+    "options": [
+      "she dance",
+      "she dances",
+      "she danced",
+      "she danceing"
+    ],
+    "correct_answer": "she dances",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"she dances\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"we ___ every day.\" (verbo \"to smile\" = sorrir) — qual é a forma correta?",
+    "options": [
+      "we smileing",
+      "we smiled",
+      "we smile",
+      "we smiles"
+    ],
+    "correct_answer": "we smile",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"we smile\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"they ___ every weekend.\" (verbo \"to laugh\" = rir) — qual é a forma correta?",
+    "options": [
+      "they laughed",
+      "they laughs",
+      "they laughing",
+      "they laugh"
+    ],
+    "correct_answer": "they laugh",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"they laugh\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"I ___ on Mondays.\" (verbo \"to cry\" = chorar) — qual é a forma correta?",
+    "options": [
+      "I cried",
+      "I cries",
+      "I cry",
+      "I crying"
+    ],
+    "correct_answer": "I cry",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"I cry\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ the door every summer.\" (verbo \"to push\" = empurrar) — qual é a forma correta?",
+    "options": [
+      "you pushed",
+      "you pushes",
+      "you pushing",
+      "you push"
+    ],
+    "correct_answer": "you push",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you push\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ the rope every morning.\" (verbo \"to pull\" = puxar) — qual é a forma correta?",
+    "options": [
+      "he pulling",
+      "he pulled",
+      "he pull",
+      "he pulls"
+    ],
+    "correct_answer": "he pulls",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he pulls\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"she ___ the baby every day.\" (verbo \"to hold\" = segurar) — qual é a forma correta?",
+    "options": [
+      "she holds",
+      "she holding",
+      "she held",
+      "she hold"
+    ],
+    "correct_answer": "she holds",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"she holds\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"we ___ a gift to the party every weekend.\" (verbo \"to bring\" = trazer) — qual é a forma correta?",
+    "options": [
+      "we bringing",
+      "we brought",
+      "we bring",
+      "we brings"
+    ],
+    "correct_answer": "we bring",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"we bring\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"they ___ a picture on Mondays.\" (verbo \"to draw\" = desenhar) — qual é a forma correta?",
+    "options": [
+      "they draw",
+      "they drew",
+      "they draws",
+      "they drawing"
+    ],
+    "correct_answer": "they draw",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"they draw\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"I ___ every summer.\" (verbo \"to fly\" = voar) — qual é a forma correta?",
+    "options": [
+      "I fly",
+      "I flew",
+      "I flying",
+      "I flies"
+    ],
+    "correct_answer": "I fly",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"I fly\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ a song every morning.\" (verbo \"to sing\" = cantar) — qual é a forma correta?",
+    "options": [
+      "you sings",
+      "you sang",
+      "you singing",
+      "you sing"
+    ],
+    "correct_answer": "you sing",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you sing\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ every day.\" (verbo \"to ring\" = tocar/soar) — qual é a forma correta?",
+    "options": [
+      "he ring",
+      "he rang",
+      "he rings",
+      "he ringing"
+    ],
+    "correct_answer": "he rings",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he rings\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"she ___ every weekend.\" (verbo \"to begin\" = começar) — qual é a forma correta?",
+    "options": [
+      "she began",
+      "she begin",
+      "she begining",
+      "she begins"
+    ],
+    "correct_answer": "she begins",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"she begins\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"we ___ on Mondays.\" (verbo \"to grow\" = crescer) — qual é a forma correta?",
+    "options": [
+      "we grew",
+      "we growing",
+      "we grow",
+      "we grows"
+    ],
+    "correct_answer": "we grow",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"we grow\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"they ___ every summer.\" (verbo \"to blow\" = soprar) — qual é a forma correta?",
+    "options": [
+      "they blew",
+      "they blowing",
+      "they blow",
+      "they blows"
+    ],
+    "correct_answer": "they blow",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"they blow\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ every weekend.\" (verbo \"to look\" = olhar) — qual é a forma correta?",
+    "options": [
+      "you looked",
+      "you looks",
+      "you look",
+      "you looking"
+    ],
+    "correct_answer": "you look",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you look\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ on Mondays.\" (verbo \"to start\" = começar) — qual é a forma correta?",
+    "options": [
+      "he started",
+      "he starting",
+      "he start",
+      "he starts"
+    ],
+    "correct_answer": "he starts",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he starts\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"she ___ every summer.\" (verbo \"to stop\" = parar) — qual é a forma correta?",
+    "options": [
+      "she stoping",
+      "she stop",
+      "she stopped",
+      "she stops"
+    ],
+    "correct_answer": "she stops",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"she stops\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"we ___ the new student every morning.\" (verbo \"to help\" = ajudar) — qual é a forma correta?",
+    "options": [
+      "we helps",
+      "we helping",
+      "we helped",
+      "we help"
+    ],
+    "correct_answer": "we help",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"we help\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"they ___ a movie every day.\" (verbo \"to watch\" = assistir) — qual é a forma correta?",
+    "options": [
+      "they watching",
+      "they watches",
+      "they watch",
+      "they watched"
+    ],
+    "correct_answer": "they watch",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"they watch\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"I ___ every weekend.\" (verbo \"to move\" = mover) — qual é a forma correta?",
+    "options": [
+      "I move",
+      "I moved",
+      "I moves",
+      "I moveing"
+    ],
+    "correct_answer": "I move",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"I move\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ a new recipe on Mondays.\" (verbo \"to try\" = tentar) — qual é a forma correta?",
+    "options": [
+      "you try",
+      "you tried",
+      "you tries",
+      "you trying"
+    ],
+    "correct_answer": "you try",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you try\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ every summer.\" (verbo \"to turn\" = virar) — qual é a forma correta?",
+    "options": [
+      "he turn",
+      "he turned",
+      "he turning",
+      "he turns"
+    ],
+    "correct_answer": "he turns",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he turns\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"she ___ the door every morning.\" (verbo \"to close\" = fechar) — qual é a forma correta?",
+    "options": [
+      "she closes",
+      "she close",
+      "she closeing",
+      "she closed"
+    ],
+    "correct_answer": "she closes",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"she closes\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"we ___ the bags every day.\" (verbo \"to carry\" = carregar) — qual é a forma correta?",
+    "options": [
+      "we carried",
+      "we carries",
+      "we carry",
+      "we carrying"
+    ],
+    "correct_answer": "we carry",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"we carry\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"they ___ every weekend.\" (verbo \"to hope\" = esperar/torcer) — qual é a forma correta?",
+    "options": [
+      "they hope",
+      "they hopeing",
+      "they hoped",
+      "they hopes"
+    ],
+    "correct_answer": "they hope",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"they hope\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"I ___ on Mondays.\" (verbo \"to wait\" = esperar) — qual é a forma correta?",
+    "options": [
+      "I waiting",
+      "I waits",
+      "I waited",
+      "I wait"
+    ],
+    "correct_answer": "I wait",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"I wait\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ the museum every summer.\" (verbo \"to visit\" = visitar) — qual é a forma correta?",
+    "options": [
+      "you visiting",
+      "you visit",
+      "you visited",
+      "you visits"
+    ],
+    "correct_answer": "you visit",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you visit\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ the kitchen every morning.\" (verbo \"to clean\" = limpar) — qual é a forma correta?",
+    "options": [
+      "he cleans",
+      "he cleaned",
+      "he clean",
+      "he cleaning"
+    ],
+    "correct_answer": "he cleans",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he cleans\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"she ___ dinner every day.\" (verbo \"to cook\" = cozinhar) — qual é a forma correta?",
+    "options": [
+      "she cooking",
+      "she cooked",
+      "she cook",
+      "she cooks"
+    ],
+    "correct_answer": "she cooks",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"she cooks\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"we ___ every weekend.\" (verbo \"to dance\" = dançar) — qual é a forma correta?",
+    "options": [
+      "we danceing",
+      "we dances",
+      "we dance",
+      "we danced"
+    ],
+    "correct_answer": "we dance",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"we dance\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"they ___ on Mondays.\" (verbo \"to smile\" = sorrir) — qual é a forma correta?",
+    "options": [
+      "they smileing",
+      "they smile",
+      "they smiles",
+      "they smiled"
+    ],
+    "correct_answer": "they smile",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"they smile\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"I ___ every summer.\" (verbo \"to laugh\" = rir) — qual é a forma correta?",
+    "options": [
+      "I laugh",
+      "I laughing",
+      "I laughs",
+      "I laughed"
+    ],
+    "correct_answer": "I laugh",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"I laugh\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"you ___ every morning.\" (verbo \"to cry\" = chorar) — qual é a forma correta?",
+    "options": [
+      "you cries",
+      "you cry",
+      "you cried",
+      "you crying"
+    ],
+    "correct_answer": "you cry",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"you cry\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no presente simples: \"he ___ the door every day.\" (verbo \"to push\" = empurrar) — qual é a forma correta?",
+    "options": [
+      "he pushes",
+      "he pushing",
+      "he push",
+      "he pushed"
+    ],
+    "correct_answer": "he pushes",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s/-es; as demais usam a forma base. Aqui: \"he pushes\".",
+    "hints": [
+      "Tema: Presente simples (Relâmpago).",
+      "Responda rápido: o sujeito define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"she ___ yesterday.\" (verbo \"to turn\" = virar) — qual é a forma correta?",
+    "options": [
+      "she turned",
+      "she turns",
+      "she turning",
+      "she turn"
+    ],
+    "correct_answer": "she turned",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"she turned\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ the door last night.\" (verbo \"to close\" = fechar) — qual é a forma correta?",
+    "options": [
+      "we closes",
+      "we closed",
+      "we closeing",
+      "we close"
+    ],
+    "correct_answer": "we closed",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we closed\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ the bags last week.\" (verbo \"to carry\" = carregar) — qual é a forma correta?",
+    "options": [
+      "they carried",
+      "they carry",
+      "they carrying",
+      "they carries"
+    ],
+    "correct_answer": "they carried",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they carried\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"I ___ last summer.\" (verbo \"to hope\" = esperar/torcer) — qual é a forma correta?",
+    "options": [
+      "I hopeing",
+      "I hoped",
+      "I hopes",
+      "I hope"
+    ],
+    "correct_answer": "I hoped",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"I hoped\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"you ___ two days ago.\" (verbo \"to wait\" = esperar) — qual é a forma correta?",
+    "options": [
+      "you waited",
+      "you wait",
+      "you waiting",
+      "you waits"
+    ],
+    "correct_answer": "you waited",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"you waited\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"he ___ the museum yesterday.\" (verbo \"to visit\" = visitar) — qual é a forma correta?",
+    "options": [
+      "he visited",
+      "he visits",
+      "he visiting",
+      "he visit"
+    ],
+    "correct_answer": "he visited",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"he visited\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"she ___ the kitchen last night.\" (verbo \"to clean\" = limpar) — qual é a forma correta?",
+    "options": [
+      "she clean",
+      "she cleans",
+      "she cleaned",
+      "she cleaning"
+    ],
+    "correct_answer": "she cleaned",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"she cleaned\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ dinner last week.\" (verbo \"to cook\" = cozinhar) — qual é a forma correta?",
+    "options": [
+      "we cooks",
+      "we cooking",
+      "we cooked",
+      "we cook"
+    ],
+    "correct_answer": "we cooked",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we cooked\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ last summer.\" (verbo \"to dance\" = dançar) — qual é a forma correta?",
+    "options": [
+      "they danced",
+      "they danceing",
+      "they dances",
+      "they dance"
+    ],
+    "correct_answer": "they danced",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they danced\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"I ___ two days ago.\" (verbo \"to smile\" = sorrir) — qual é a forma correta?",
+    "options": [
+      "I smiled",
+      "I smiles",
+      "I smileing",
+      "I smile"
+    ],
+    "correct_answer": "I smiled",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"I smiled\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"you ___ yesterday.\" (verbo \"to laugh\" = rir) — qual é a forma correta?",
+    "options": [
+      "you laughed",
+      "you laugh",
+      "you laughs",
+      "you laughing"
+    ],
+    "correct_answer": "you laughed",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"you laughed\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"he ___ last night.\" (verbo \"to cry\" = chorar) — qual é a forma correta?",
+    "options": [
+      "he crying",
+      "he cried",
+      "he cries",
+      "he cry"
+    ],
+    "correct_answer": "he cried",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"he cried\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"she ___ the door last week.\" (verbo \"to push\" = empurrar) — qual é a forma correta?",
+    "options": [
+      "she pushes",
+      "she pushing",
+      "she push",
+      "she pushed"
+    ],
+    "correct_answer": "she pushed",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"she pushed\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ the rope last summer.\" (verbo \"to pull\" = puxar) — qual é a forma correta?",
+    "options": [
+      "we pulls",
+      "we pull",
+      "we pulling",
+      "we pulled"
+    ],
+    "correct_answer": "we pulled",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we pulled\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ the baby two days ago.\" (verbo \"to hold\" = segurar) — qual é a forma correta?",
+    "options": [
+      "they held",
+      "they holding",
+      "they hold",
+      "they holds"
+    ],
+    "correct_answer": "they held",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they held\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"I ___ a gift to the party yesterday.\" (verbo \"to bring\" = trazer) — qual é a forma correta?",
+    "options": [
+      "I brings",
+      "I bringing",
+      "I brought",
+      "I bring"
+    ],
+    "correct_answer": "I brought",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"I brought\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"you ___ a picture last night.\" (verbo \"to draw\" = desenhar) — qual é a forma correta?",
+    "options": [
+      "you draws",
+      "you draw",
+      "you drew",
+      "you drawing"
+    ],
+    "correct_answer": "you drew",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"you drew\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"he ___ last week.\" (verbo \"to fly\" = voar) — qual é a forma correta?",
+    "options": [
+      "he flies",
+      "he flew",
+      "he fly",
+      "he flying"
+    ],
+    "correct_answer": "he flew",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"he flew\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"she ___ a song last summer.\" (verbo \"to sing\" = cantar) — qual é a forma correta?",
+    "options": [
+      "she sang",
+      "she sings",
+      "she singing",
+      "she sing"
+    ],
+    "correct_answer": "she sang",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"she sang\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ two days ago.\" (verbo \"to ring\" = tocar/soar) — qual é a forma correta?",
+    "options": [
+      "we ring",
+      "we rang",
+      "we rings",
+      "we ringing"
+    ],
+    "correct_answer": "we rang",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we rang\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ yesterday.\" (verbo \"to begin\" = começar) — qual é a forma correta?",
+    "options": [
+      "they begining",
+      "they began",
+      "they begin",
+      "they begins"
+    ],
+    "correct_answer": "they began",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they began\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"I ___ last night.\" (verbo \"to grow\" = crescer) — qual é a forma correta?",
+    "options": [
+      "I grew",
+      "I growing",
+      "I grow",
+      "I grows"
+    ],
+    "correct_answer": "I grew",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"I grew\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"you ___ last week.\" (verbo \"to blow\" = soprar) — qual é a forma correta?",
+    "options": [
+      "you blew",
+      "you blows",
+      "you blowing",
+      "you blow"
+    ],
+    "correct_answer": "you blew",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"you blew\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"he ___ last summer.\" (verbo \"to look\" = olhar) — qual é a forma correta?",
+    "options": [
+      "he looking",
+      "he looks",
+      "he looked",
+      "he look"
+    ],
+    "correct_answer": "he looked",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"he looked\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"she ___ two days ago.\" (verbo \"to start\" = começar) — qual é a forma correta?",
+    "options": [
+      "she start",
+      "she started",
+      "she starts",
+      "she starting"
+    ],
+    "correct_answer": "she started",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"she started\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ yesterday.\" (verbo \"to stop\" = parar) — qual é a forma correta?",
+    "options": [
+      "we stoping",
+      "we stops",
+      "we stop",
+      "we stopped"
+    ],
+    "correct_answer": "we stopped",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we stopped\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ the new student last night.\" (verbo \"to help\" = ajudar) — qual é a forma correta?",
+    "options": [
+      "they helps",
+      "they helping",
+      "they help",
+      "they helped"
+    ],
+    "correct_answer": "they helped",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they helped\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"I ___ a movie last week.\" (verbo \"to watch\" = assistir) — qual é a forma correta?",
+    "options": [
+      "I watch",
+      "I watched",
+      "I watching",
+      "I watches"
+    ],
+    "correct_answer": "I watched",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"I watched\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"you ___ last summer.\" (verbo \"to move\" = mover) — qual é a forma correta?",
+    "options": [
+      "you moved",
+      "you moveing",
+      "you move",
+      "you moves"
+    ],
+    "correct_answer": "you moved",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"you moved\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"he ___ a new recipe two days ago.\" (verbo \"to try\" = tentar) — qual é a forma correta?",
+    "options": [
+      "he trying",
+      "he tries",
+      "he tried",
+      "he try"
+    ],
+    "correct_answer": "he tried",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"he tried\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ last week.\" (verbo \"to turn\" = virar) — qual é a forma correta?",
+    "options": [
+      "we turn",
+      "we turns",
+      "we turned",
+      "we turning"
+    ],
+    "correct_answer": "we turned",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we turned\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ the door last summer.\" (verbo \"to close\" = fechar) — qual é a forma correta?",
+    "options": [
+      "they close",
+      "they closed",
+      "they closeing",
+      "they closes"
+    ],
+    "correct_answer": "they closed",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they closed\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"I ___ the bags two days ago.\" (verbo \"to carry\" = carregar) — qual é a forma correta?",
+    "options": [
+      "I carrying",
+      "I carry",
+      "I carried",
+      "I carries"
+    ],
+    "correct_answer": "I carried",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"I carried\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"you ___ yesterday.\" (verbo \"to hope\" = esperar/torcer) — qual é a forma correta?",
+    "options": [
+      "you hopeing",
+      "you hope",
+      "you hopes",
+      "you hoped"
+    ],
+    "correct_answer": "you hoped",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"you hoped\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"he ___ last night.\" (verbo \"to wait\" = esperar) — qual é a forma correta?",
+    "options": [
+      "he waiting",
+      "he waits",
+      "he waited",
+      "he wait"
+    ],
+    "correct_answer": "he waited",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"he waited\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"she ___ the museum last week.\" (verbo \"to visit\" = visitar) — qual é a forma correta?",
+    "options": [
+      "she visits",
+      "she visit",
+      "she visited",
+      "she visiting"
+    ],
+    "correct_answer": "she visited",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"she visited\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ the kitchen last summer.\" (verbo \"to clean\" = limpar) — qual é a forma correta?",
+    "options": [
+      "we cleaned",
+      "we clean",
+      "we cleaning",
+      "we cleans"
+    ],
+    "correct_answer": "we cleaned",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we cleaned\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ dinner two days ago.\" (verbo \"to cook\" = cozinhar) — qual é a forma correta?",
+    "options": [
+      "they cook",
+      "they cooking",
+      "they cooks",
+      "they cooked"
+    ],
+    "correct_answer": "they cooked",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they cooked\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"I ___ yesterday.\" (verbo \"to dance\" = dançar) — qual é a forma correta?",
+    "options": [
+      "I danced",
+      "I danceing",
+      "I dances",
+      "I dance"
+    ],
+    "correct_answer": "I danced",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"I danced\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"you ___ last night.\" (verbo \"to smile\" = sorrir) — qual é a forma correta?",
+    "options": [
+      "you smile",
+      "you smileing",
+      "you smiles",
+      "you smiled"
+    ],
+    "correct_answer": "you smiled",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"you smiled\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"he ___ last week.\" (verbo \"to laugh\" = rir) — qual é a forma correta?",
+    "options": [
+      "he laughing",
+      "he laughs",
+      "he laughed",
+      "he laugh"
+    ],
+    "correct_answer": "he laughed",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"he laughed\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"she ___ last summer.\" (verbo \"to cry\" = chorar) — qual é a forma correta?",
+    "options": [
+      "she cries",
+      "she cry",
+      "she crying",
+      "she cried"
+    ],
+    "correct_answer": "she cried",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"she cried\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ the door two days ago.\" (verbo \"to push\" = empurrar) — qual é a forma correta?",
+    "options": [
+      "we pushes",
+      "we pushed",
+      "we pushing",
+      "we push"
+    ],
+    "correct_answer": "we pushed",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we pushed\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ the rope yesterday.\" (verbo \"to pull\" = puxar) — qual é a forma correta?",
+    "options": [
+      "they pulls",
+      "they pulled",
+      "they pulling",
+      "they pull"
+    ],
+    "correct_answer": "they pulled",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they pulled\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"I ___ the baby last night.\" (verbo \"to hold\" = segurar) — qual é a forma correta?",
+    "options": [
+      "I held",
+      "I hold",
+      "I holding",
+      "I holds"
+    ],
+    "correct_answer": "I held",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"I held\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"you ___ a gift to the party last week.\" (verbo \"to bring\" = trazer) — qual é a forma correta?",
+    "options": [
+      "you brings",
+      "you brought",
+      "you bringing",
+      "you bring"
+    ],
+    "correct_answer": "you brought",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"you brought\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"he ___ a picture last summer.\" (verbo \"to draw\" = desenhar) — qual é a forma correta?",
+    "options": [
+      "he draws",
+      "he draw",
+      "he drawing",
+      "he drew"
+    ],
+    "correct_answer": "he drew",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"he drew\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"she ___ two days ago.\" (verbo \"to fly\" = voar) — qual é a forma correta?",
+    "options": [
+      "she flies",
+      "she fly",
+      "she flying",
+      "she flew"
+    ],
+    "correct_answer": "she flew",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"she flew\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"we ___ a song yesterday.\" (verbo \"to sing\" = cantar) — qual é a forma correta?",
+    "options": [
+      "we sings",
+      "we sing",
+      "we singing",
+      "we sang"
+    ],
+    "correct_answer": "we sang",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"we sang\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no passado simples: \"they ___ last night.\" (verbo \"to ring\" = tocar/soar) — qual é a forma correta?",
+    "options": [
+      "they ring",
+      "they rings",
+      "they ringing",
+      "they rang"
+    ],
+    "correct_answer": "they rang",
+    "explanation": "No passado simples, o verbo tem uma única forma pra todos os sujeitos. Aqui: \"they rang\".",
+    "hints": [
+      "Tema: Passado simples (Relâmpago).",
+      "No passado simples, a forma não muda com o sujeito."
+    ],
+    "age_reviewed": true
+  }
+]

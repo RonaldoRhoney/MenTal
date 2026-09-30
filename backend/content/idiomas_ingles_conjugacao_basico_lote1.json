@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"I ___ every morning.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "I went",
+      "I goes",
+      "I going",
+      "I go"
+    ],
+    "correct_answer": "I go",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"I go\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"he ___ yesterday.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "he going",
+      "he goes",
+      "he went",
+      "he go"
+    ],
+    "correct_answer": "he went",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"he went\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"you ___ the dishes every day.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "you does",
+      "you doing",
+      "you did",
+      "you do"
+    ],
+    "correct_answer": "you do",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"you do\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"she ___ the dishes last night.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "she do",
+      "she does",
+      "she did",
+      "she doing"
+    ],
+    "correct_answer": "she did",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"she did\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"he ___ a meeting every weekend.\" (verbo \"to have\" = ter) — qual é a forma correta?",
+    "options": [
+      "he have",
+      "he had",
+      "he haveing",
+      "he has"
+    ],
+    "correct_answer": "he has",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"he has\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no passado simples: \"we ___ a meeting last week.\" (verbo \"to have\" = ter) — qual é a forma correta?",
+    "options": [
+      "we have",
+      "we haveing",
+      "we has",
+      "we had"
+    ],
+    "correct_answer": "we had",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"we had\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"she ___ a cake on Mondays.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "she made",
+      "she make",
+      "she makes",
+      "she makeing"
+    ],
+    "correct_answer": "she makes",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"she makes\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"they ___ a cake last summer.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "they make",
+      "they makeing",
+      "they made",
+      "they makes"
+    ],
+    "correct_answer": "they made",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"they made\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no presente simples: \"we ___ a coffee every summer.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "we get",
+      "we got",
+      "we gets",
+      "we geting"
+    ],
+    "correct_answer": "we get",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"we get\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"I ___ a coffee two days ago.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "I gets",
+      "I geting",
+      "I got",
+      "I get"
+    ],
+    "correct_answer": "I got",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"I got\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"they ___ a movie every morning.\" (verbo \"to see\" = ver) — qual é a forma correta?",
+    "options": [
+      "they saw",
+      "they sees",
+      "they seeing",
+      "they see"
+    ],
+    "correct_answer": "they see",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"they see\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"you ___ a movie yesterday.\" (verbo \"to see\" = ver) — qual é a forma correta?",
+    "options": [
+      "you seeing",
+      "you sees",
+      "you see",
+      "you saw"
+    ],
+    "correct_answer": "you saw",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"you saw\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"I ___ the answer every day.\" (verbo \"to know\" = saber/conhecer) — qual é a forma correta?",
+    "options": [
+      "I knowing",
+      "I knows",
+      "I know",
+      "I knew"
+    ],
+    "correct_answer": "I know",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"I know\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"he ___ the answer last night.\" (verbo \"to know\" = saber/conhecer) — qual é a forma correta?",
+    "options": [
+      "he knows",
+      "he knowing",
+      "he know",
+      "he knew"
+    ],
+    "correct_answer": "he knew",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"he knew\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"you ___ every weekend.\" (verbo \"to think\" = pensar) — qual é a forma correta?",
+    "options": [
+      "you think",
+      "you thinks",
+      "you thinking",
+      "you thought"
+    ],
+    "correct_answer": "you think",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"you think\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no passado simples: \"she ___ last week.\" (verbo \"to think\" = pensar) — qual é a forma correta?",
+    "options": [
+      "she thinking",
+      "she thought",
+      "she thinks",
+      "she think"
+    ],
+    "correct_answer": "she thought",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"she thought\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"he ___ a photo on Mondays.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "he take",
+      "he takeing",
+      "he took",
+      "he takes"
+    ],
+    "correct_answer": "he takes",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"he takes\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"we ___ a photo last summer.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "we take",
+      "we takeing",
+      "we took",
+      "we takes"
+    ],
+    "correct_answer": "we took",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"we took\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no presente simples: \"she ___ every summer.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "she comeing",
+      "she came",
+      "she come",
+      "she comes"
+    ],
+    "correct_answer": "she comes",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"she comes\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"they ___ two days ago.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "they came",
+      "they come",
+      "they comes",
+      "they comeing"
+    ],
+    "correct_answer": "they came",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"they came\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"we ___ a coffee every morning.\" (verbo \"to want\" = querer) — qual é a forma correta?",
+    "options": [
+      "we want",
+      "we wanted",
+      "we wanting",
+      "we wants"
+    ],
+    "correct_answer": "we want",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"we want\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"I ___ a coffee yesterday.\" (verbo \"to want\" = querer) — qual é a forma correta?",
+    "options": [
+      "I wanted",
+      "I wanting",
+      "I wants",
+      "I want"
+    ],
+    "correct_answer": "I wanted",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"I wanted\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"they ___ a gift to the teacher every day.\" (verbo \"to give\" = dar) — qual é a forma correta?",
+    "options": [
+      "they gives",
+      "they giveing",
+      "they gave",
+      "they give"
+    ],
+    "correct_answer": "they give",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"they give\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"you ___ a gift to the teacher last night.\" (verbo \"to give\" = dar) — qual é a forma correta?",
+    "options": [
+      "you gives",
+      "you giveing",
+      "you gave",
+      "you give"
+    ],
+    "correct_answer": "you gave",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"you gave\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"I ___ the keys every weekend.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "I found",
+      "I find",
+      "I finds",
+      "I finding"
+    ],
+    "correct_answer": "I find",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"I find\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no passado simples: \"he ___ the keys last week.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "he find",
+      "he finding",
+      "he found",
+      "he finds"
+    ],
+    "correct_answer": "he found",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"he found\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"you ___ a story to the kids on Mondays.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "you telling",
+      "you told",
+      "you tells",
+      "you tell"
+    ],
+    "correct_answer": "you tell",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"you tell\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"she ___ a story to the kids last summer.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "she tell",
+      "she telling",
+      "she told",
+      "she tells"
+    ],
+    "correct_answer": "she told",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"she told\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no presente simples: \"he ___ a question every summer.\" (verbo \"to ask\" = perguntar) — qual é a forma correta?",
+    "options": [
+      "he asking",
+      "he ask",
+      "he asks",
+      "he asked"
+    ],
+    "correct_answer": "he asks",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"he asks\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"we ___ a question two days ago.\" (verbo \"to ask\" = perguntar) — qual é a forma correta?",
+    "options": [
+      "we asked",
+      "we ask",
+      "we asks",
+      "we asking"
+    ],
+    "correct_answer": "we asked",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"we asked\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"she ___ every morning.\" (verbo \"to work\" = trabalhar) — qual é a forma correta?",
+    "options": [
+      "she worked",
+      "she works",
+      "she working",
+      "she work"
+    ],
+    "correct_answer": "she works",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"she works\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"they ___ yesterday.\" (verbo \"to work\" = trabalhar) — qual é a forma correta?",
+    "options": [
+      "they worked",
+      "they working",
+      "they works",
+      "they work"
+    ],
+    "correct_answer": "they worked",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"they worked\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"we ___ every day.\" (verbo \"to feel\" = sentir) — qual é a forma correta?",
+    "options": [
+      "we feel",
+      "we feels",
+      "we felt",
+      "we feeling"
+    ],
+    "correct_answer": "we feel",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"we feel\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"I ___ last night.\" (verbo \"to feel\" = sentir) — qual é a forma correta?",
+    "options": [
+      "I feel",
+      "I feeling",
+      "I felt",
+      "I feels"
+    ],
+    "correct_answer": "I felt",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"I felt\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"they ___ every weekend.\" (verbo \"to leave\" = sair/deixar) — qual é a forma correta?",
+    "options": [
+      "they leaves",
+      "they left",
+      "they leave",
+      "they leaveing"
+    ],
+    "correct_answer": "they leave",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"they leave\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no passado simples: \"you ___ last week.\" (verbo \"to leave\" = sair/deixar) — qual é a forma correta?",
+    "options": [
+      "you leave",
+      "you leaves",
+      "you leaveing",
+      "you left"
+    ],
+    "correct_answer": "you left",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"you left\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"I ___ a taxi on Mondays.\" (verbo \"to call\" = ligar/chamar) — qual é a forma correta?",
+    "options": [
+      "I calls",
+      "I call",
+      "I called",
+      "I calling"
+    ],
+    "correct_answer": "I call",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"I call\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"he ___ a taxi last summer.\" (verbo \"to call\" = ligar/chamar) — qual é a forma correta?",
+    "options": [
+      "he called",
+      "he calls",
+      "he call",
+      "he calling"
+    ],
+    "correct_answer": "he called",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"he called\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no presente simples: \"you ___ more time every summer.\" (verbo \"to need\" = precisar) — qual é a forma correta?",
+    "options": [
+      "you needs",
+      "you need",
+      "you needing",
+      "you needed"
+    ],
+    "correct_answer": "you need",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"you need\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"she ___ more time two days ago.\" (verbo \"to need\" = precisar) — qual é a forma correta?",
+    "options": [
+      "she needing",
+      "she need",
+      "she needs",
+      "she needed"
+    ],
+    "correct_answer": "she needed",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"she needed\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"he ___ the photos to the class every morning.\" (verbo \"to show\" = mostrar) — qual é a forma correta?",
+    "options": [
+      "he showing",
+      "he show",
+      "he shows",
+      "he showed"
+    ],
+    "correct_answer": "he shows",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"he shows\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"we ___ the photos to the class yesterday.\" (verbo \"to show\" = mostrar) — qual é a forma correta?",
+    "options": [
+      "we shows",
+      "we show",
+      "we showed",
+      "we showing"
+    ],
+    "correct_answer": "we showed",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"we showed\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"she ___ every day.\" (verbo \"to play\" = jogar/brincar) — qual é a forma correta?",
+    "options": [
+      "she playing",
+      "she play",
+      "she played",
+      "she plays"
+    ],
+    "correct_answer": "she plays",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"she plays\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"they ___ last night.\" (verbo \"to play\" = jogar/brincar) — qual é a forma correta?",
+    "options": [
+      "they playing",
+      "they played",
+      "they plays",
+      "they play"
+    ],
+    "correct_answer": "they played",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"they played\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"we ___ every weekend.\" (verbo \"to run\" = correr) — qual é a forma correta?",
+    "options": [
+      "we runs",
+      "we run",
+      "we runing",
+      "we ran"
+    ],
+    "correct_answer": "we run",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"we run\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no passado simples: \"I ___ last week.\" (verbo \"to run\" = correr) — qual é a forma correta?",
+    "options": [
+      "I runs",
+      "I ran",
+      "I runing",
+      "I run"
+    ],
+    "correct_answer": "I ran",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"I ran\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"they ___ on Mondays.\" (verbo \"to live\" = morar/viver) — qual é a forma correta?",
+    "options": [
+      "they liveing",
+      "they lives",
+      "they lived",
+      "they live"
+    ],
+    "correct_answer": "they live",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"they live\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"you ___ last summer.\" (verbo \"to live\" = morar/viver) — qual é a forma correta?",
+    "options": [
+      "you live",
+      "you lives",
+      "you lived",
+      "you liveing"
+    ],
+    "correct_answer": "you lived",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"you lived\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no presente simples: \"I ___ a letter every summer.\" (verbo \"to write\" = escrever) — qual é a forma correta?",
+    "options": [
+      "I writeing",
+      "I write",
+      "I writes",
+      "I wrote"
+    ],
+    "correct_answer": "I write",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"I write\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"he ___ a letter two days ago.\" (verbo \"to write\" = escrever) — qual é a forma correta?",
+    "options": [
+      "he write",
+      "he writes",
+      "he writeing",
+      "he wrote"
+    ],
+    "correct_answer": "he wrote",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"he wrote\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"you ___ every morning.\" (verbo \"to sit\" = sentar) — qual é a forma correta?",
+    "options": [
+      "you siting",
+      "you sits",
+      "you sat",
+      "you sit"
+    ],
+    "correct_answer": "you sit",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"you sit\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"she ___ yesterday.\" (verbo \"to sit\" = sentar) — qual é a forma correta?",
+    "options": [
+      "she sit",
+      "she siting",
+      "she sits",
+      "she sat"
+    ],
+    "correct_answer": "she sat",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"she sat\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"he ___ every day.\" (verbo \"to stand\" = ficar em pé) — qual é a forma correta?",
+    "options": [
+      "he stands",
+      "he standing",
+      "he stood",
+      "he stand"
+    ],
+    "correct_answer": "he stands",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"he stands\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"we ___ last night.\" (verbo \"to stand\" = ficar em pé) — qual é a forma correta?",
+    "options": [
+      "we stood",
+      "we stands",
+      "we standing",
+      "we stand"
+    ],
+    "correct_answer": "we stood",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"we stood\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"she ___ the game every weekend.\" (verbo \"to lose\" = perder) — qual é a forma correta?",
+    "options": [
+      "she loseing",
+      "she loses",
+      "she lost",
+      "she lose"
+    ],
+    "correct_answer": "she loses",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"she loses\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no passado simples: \"they ___ the game last week.\" (verbo \"to lose\" = perder) — qual é a forma correta?",
+    "options": [
+      "they lost",
+      "they loseing",
+      "they lose",
+      "they loses"
+    ],
+    "correct_answer": "they lost",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"they lost\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"we ___ the bill on Mondays.\" (verbo \"to pay\" = pagar) — qual é a forma correta?",
+    "options": [
+      "we pay",
+      "we pays",
+      "we paid",
+      "we paying"
+    ],
+    "correct_answer": "we pay",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"we pay\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"I ___ the bill last summer.\" (verbo \"to pay\" = pagar) — qual é a forma correta?",
+    "options": [
+      "I pay",
+      "I pays",
+      "I paying",
+      "I paid"
+    ],
+    "correct_answer": "I paid",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"I paid\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no presente simples: \"they ___ a friend every summer.\" (verbo \"to meet\" = encontrar/conhecer) — qual é a forma correta?",
+    "options": [
+      "they met",
+      "they meeting",
+      "they meets",
+      "they meet"
+    ],
+    "correct_answer": "they meet",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"they meet\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"you ___ a friend two days ago.\" (verbo \"to meet\" = encontrar/conhecer) — qual é a forma correta?",
+    "options": [
+      "you meeting",
+      "you met",
+      "you meets",
+      "you meet"
+    ],
+    "correct_answer": "you met",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"you met\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"I ___ English every morning.\" (verbo \"to learn\" = aprender) — qual é a forma correta?",
+    "options": [
+      "I learns",
+      "I learned",
+      "I learning",
+      "I learn"
+    ],
+    "correct_answer": "I learn",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"I learn\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"he ___ English yesterday.\" (verbo \"to learn\" = aprender) — qual é a forma correta?",
+    "options": [
+      "he learning",
+      "he learns",
+      "he learned",
+      "he learn"
+    ],
+    "correct_answer": "he learned",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"he learned\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"you ___ every day.\" (verbo \"to speak\" = falar) — qual é a forma correta?",
+    "options": [
+      "you speaks",
+      "you speaking",
+      "you speak",
+      "you spoke"
+    ],
+    "correct_answer": "you speak",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"you speak\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"she ___ last night.\" (verbo \"to speak\" = falar) — qual é a forma correta?",
+    "options": [
+      "she spoke",
+      "she speak",
+      "she speaking",
+      "she speaks"
+    ],
+    "correct_answer": "she spoke",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"she spoke\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"he ___ a book every weekend.\" (verbo \"to read\" = ler) — qual é a forma correta?",
+    "options": [
+      "he readses",
+      "he reads",
+      "he reading",
+      "he read"
+    ],
+    "correct_answer": "he reads",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"he reads\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no passado simples: \"we ___ a book last week.\" (verbo \"to read\" = ler) — qual é a forma correta?",
+    "options": [
+      "we reading",
+      "we reads",
+      "we read",
+      "we readed"
+    ],
+    "correct_answer": "we read",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"we read\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"she ___ the door on Mondays.\" (verbo \"to open\" = abrir) — qual é a forma correta?",
+    "options": [
+      "she open",
+      "she opened",
+      "she opens",
+      "she opening"
+    ],
+    "correct_answer": "she opens",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"she opens\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"they ___ the door last summer.\" (verbo \"to open\" = abrir) — qual é a forma correta?",
+    "options": [
+      "they opening",
+      "they open",
+      "they opens",
+      "they opened"
+    ],
+    "correct_answer": "they opened",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"they opened\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no presente simples: \"we ___ every summer.\" (verbo \"to walk\" = andar) — qual é a forma correta?",
+    "options": [
+      "we walk",
+      "we walking",
+      "we walks",
+      "we walked"
+    ],
+    "correct_answer": "we walk",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"we walk\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"I ___ two days ago.\" (verbo \"to walk\" = andar) — qual é a forma correta?",
+    "options": [
+      "I walk",
+      "I walked",
+      "I walks",
+      "I walking"
+    ],
+    "correct_answer": "I walked",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"I walked\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"they ___ the game every morning.\" (verbo \"to win\" = ganhar) — qual é a forma correta?",
+    "options": [
+      "they won",
+      "they wins",
+      "they wining",
+      "they win"
+    ],
+    "correct_answer": "they win",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"they win\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"you ___ the game yesterday.\" (verbo \"to win\" = ganhar) — qual é a forma correta?",
+    "options": [
+      "you win",
+      "you wining",
+      "you won",
+      "you wins"
+    ],
+    "correct_answer": "you won",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"you won\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente simples: \"I ___ a new phone every day.\" (verbo \"to buy\" = comprar) — qual é a forma correta?",
+    "options": [
+      "I bought",
+      "I buying",
+      "I buy",
+      "I buys"
+    ],
+    "correct_answer": "I buy",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"I buy\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado simples: \"he ___ a new phone last night.\" (verbo \"to buy\" = comprar) — qual é a forma correta?",
+    "options": [
+      "he buys",
+      "he bought",
+      "he buying",
+      "he buy"
+    ],
+    "correct_answer": "he bought",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"he bought\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"you ___ every weekend.\" (verbo \"to eat\" = comer) — qual é a forma correta?",
+    "options": [
+      "you eating",
+      "you eat",
+      "you eats",
+      "you ate"
+    ],
+    "correct_answer": "you eat",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"you eat\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no passado simples: \"she ___ last week.\" (verbo \"to eat\" = comer) — qual é a forma correta?",
+    "options": [
+      "she eats",
+      "she eating",
+      "she eat",
+      "she ate"
+    ],
+    "correct_answer": "she ate",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"she ate\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente simples: \"he ___ on Mondays.\" (verbo \"to drink\" = beber) — qual é a forma correta?",
+    "options": [
+      "he drink",
+      "he drinking",
+      "he drank",
+      "he drinks"
+    ],
+    "correct_answer": "he drinks",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"he drinks\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"we ___ last summer.\" (verbo \"to drink\" = beber) — qual é a forma correta?",
+    "options": [
+      "we drink",
+      "we drinks",
+      "we drinking",
+      "we drank"
+    ],
+    "correct_answer": "we drank",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"we drank\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no presente simples: \"she ___ every summer.\" (verbo \"to sleep\" = dormir) — qual é a forma correta?",
+    "options": [
+      "she sleeps",
+      "she slept",
+      "she sleep",
+      "she sleeping"
+    ],
+    "correct_answer": "she sleeps",
+    "explanation": "No presente simples, a 3ª pessoa do singular (he/she/it) recebe -s ou -es; as demais pessoas usam a forma base do verbo. Aqui: \"she sleeps\".",
+    "hints": [
+      "Tema: Presente simples.",
+      "Preste atenção no sujeito da frase — ele define a forma do verbo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no passado simples: \"they ___ two days ago.\" (verbo \"to sleep\" = dormir) — qual é a forma correta?",
+    "options": [
+      "they sleeps",
+      "they slept",
+      "they sleeping",
+      "they sleep"
+    ],
+    "correct_answer": "they slept",
+    "explanation": "No passado simples, o verbo tem uma única forma para todos os sujeitos. Aqui: \"they slept\".",
+    "hints": [
+      "Tema: Passado simples.",
+      "No passado simples, a forma do verbo não muda conforme o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no futuro: \"I ___ tomorrow.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "I will went",
+      "I will go",
+      "I go",
+      "I will goes"
+    ],
+    "correct_answer": "I will go",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"I will go\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no futuro: \"you ___ the dishes next week.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "you are going to do",
+      "you going to do",
+      "you are going to does",
+      "you are go to do"
+    ],
+    "correct_answer": "you are going to do",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"you are going to do\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no futuro: \"he ___ a meeting next summer.\" (verbo \"to have\" = ter) — qual é a forma correta?",
+    "options": [
+      "he will have",
+      "he have",
+      "he will has",
+      "he will had"
+    ],
+    "correct_answer": "he will have",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"he will have\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no futuro: \"she ___ a cake next Monday.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "she going to make",
+      "she is go to make",
+      "she is going to make",
+      "she is going to makes"
+    ],
+    "correct_answer": "she is going to make",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"she is going to make\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no futuro: \"we ___ a coffee later today.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "we get",
+      "we will got",
+      "we will get",
+      "we will gets"
+    ],
+    "correct_answer": "we will get",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"we will get\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no futuro: \"they ___ a movie tomorrow.\" (verbo \"to see\" = ver) — qual é a forma correta?",
+    "options": [
+      "they are going to sees",
+      "they are go to see",
+      "they are going to see",
+      "they going to see"
+    ],
+    "correct_answer": "they are going to see",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"they are going to see\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no futuro: \"I ___ the answer next week.\" (verbo \"to know\" = saber/conhecer) — qual é a forma correta?",
+    "options": [
+      "I will knows",
+      "I will know",
+      "I will knew",
+      "I know"
+    ],
+    "correct_answer": "I will know",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"I will know\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro: \"you ___ next summer.\" (verbo \"to think\" = pensar) — qual é a forma correta?",
+    "options": [
+      "you are going to thinks",
+      "you are go to think",
+      "you going to think",
+      "you are going to think"
+    ],
+    "correct_answer": "you are going to think",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"you are going to think\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro: \"he ___ a photo next Monday.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "he take",
+      "he will took",
+      "he will take",
+      "he will takes"
+    ],
+    "correct_answer": "he will take",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"he will take\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro: \"she ___ later today.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "she going to come",
+      "she is going to come",
+      "she is go to come",
+      "she is going to comes"
+    ],
+    "correct_answer": "she is going to come",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"she is going to come\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no futuro: \"we ___ a coffee tomorrow.\" (verbo \"to want\" = querer) — qual é a forma correta?",
+    "options": [
+      "we want",
+      "we will want",
+      "we will wanted",
+      "we will wants"
+    ],
+    "correct_answer": "we will want",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"we will want\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no futuro: \"they ___ a gift to the teacher next week.\" (verbo \"to give\" = dar) — qual é a forma correta?",
+    "options": [
+      "they are go to give",
+      "they going to give",
+      "they are going to gives",
+      "they are going to give"
+    ],
+    "correct_answer": "they are going to give",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"they are going to give\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no futuro: \"I ___ the keys next summer.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "I find",
+      "I will finds",
+      "I will find",
+      "I will found"
+    ],
+    "correct_answer": "I will find",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"I will find\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no futuro: \"you ___ a story to the kids next Monday.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "you are going to tell",
+      "you going to tell",
+      "you are go to tell",
+      "you are going to tells"
+    ],
+    "correct_answer": "you are going to tell",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"you are going to tell\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no futuro: \"he ___ a question later today.\" (verbo \"to ask\" = perguntar) — qual é a forma correta?",
+    "options": [
+      "he will ask",
+      "he ask",
+      "he will asked",
+      "he will asks"
+    ],
+    "correct_answer": "he will ask",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"he will ask\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no futuro: \"she ___ tomorrow.\" (verbo \"to work\" = trabalhar) — qual é a forma correta?",
+    "options": [
+      "she going to work",
+      "she is going to work",
+      "she is going to works",
+      "she is go to work"
+    ],
+    "correct_answer": "she is going to work",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"she is going to work\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no futuro: \"we ___ next week.\" (verbo \"to feel\" = sentir) — qual é a forma correta?",
+    "options": [
+      "we will felt",
+      "we feel",
+      "we will feels",
+      "we will feel"
+    ],
+    "correct_answer": "we will feel",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"we will feel\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro: \"they ___ next summer.\" (verbo \"to leave\" = sair/deixar) — qual é a forma correta?",
+    "options": [
+      "they are going to leaves",
+      "they are go to leave",
+      "they going to leave",
+      "they are going to leave"
+    ],
+    "correct_answer": "they are going to leave",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"they are going to leave\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro: \"I ___ a taxi next Monday.\" (verbo \"to call\" = ligar/chamar) — qual é a forma correta?",
+    "options": [
+      "I call",
+      "I will calls",
+      "I will call",
+      "I will called"
+    ],
+    "correct_answer": "I will call",
+    "explanation": "O futuro com \"will\" usa \"will\" + verbo na forma base, sem -s e sem -ed. Aqui: \"I will call\".",
+    "hints": [
+      "Tema: Futuro com will.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro: \"you ___ more time later today.\" (verbo \"to need\" = precisar) — qual é a forma correta?",
+    "options": [
+      "you going to need",
+      "you are going to needs",
+      "you are go to need",
+      "you are going to need"
+    ],
+    "correct_answer": "you are going to need",
+    "explanation": "O futuro com \"going to\" usa o verbo \"to be\" conjugado + \"going to\" + verbo na forma base. Aqui: \"you are going to need\".",
+    "hints": [
+      "Tema: Futuro com going to.",
+      "O futuro em inglês não muda a forma do verbo principal — o sujeito não altera a conjugação."
+    ],
+    "age_reviewed": true
+  }
+]

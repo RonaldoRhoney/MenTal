@@ -374,6 +374,30 @@
   "@territoryInglesExpressoesRelampagoAvancado": {
     "description": "Territory display name — English idiomatic expressions, timed mode, advanced level"
   },
+  "territoryInglesConjugacaoBasico": "Conjugação Verbal: Básico",
+  "@territoryInglesConjugacaoBasico": {
+    "description": "Territory display name — English verb conjugation, basic level"
+  },
+  "territoryInglesConjugacaoIntermediario": "Conjugação Verbal: Intermediário",
+  "@territoryInglesConjugacaoIntermediario": {
+    "description": "Territory display name — English verb conjugation, intermediate level"
+  },
+  "territoryInglesConjugacaoAvancado": "Conjugação Verbal: Avançado",
+  "@territoryInglesConjugacaoAvancado": {
+    "description": "Territory display name — English verb conjugation, advanced level"
+  },
+  "territoryInglesConjugacaoRelampagoBasico": "Conjugação Verbal Relâmpago: Básico",
+  "@territoryInglesConjugacaoRelampagoBasico": {
+    "description": "Territory display name — English verb conjugation, timed mode, basic level"
+  },
+  "territoryInglesConjugacaoRelampagoIntermediario": "Conjugação Verbal Relâmpago: Intermediário",
+  "@territoryInglesConjugacaoRelampagoIntermediario": {
+    "description": "Territory display name — English verb conjugation, timed mode, intermediate level"
+  },
+  "territoryInglesConjugacaoRelampagoAvancado": "Conjugação Verbal Relâmpago: Avançado",
+  "@territoryInglesConjugacaoRelampagoAvancado": {
+    "description": "Territory display name — English verb conjugation, timed mode, advanced level"
+  },
   "@territoryFrancesAvancado": {
     "description": "Territory display name"
   },

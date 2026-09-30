@@ -302,6 +302,28 @@ class AppLocalizationsPt extends AppLocalizations {
       'Expressões Idiomáticas Relâmpago: Avançado';
 
   @override
+  String get territoryInglesConjugacaoBasico => 'Conjugação Verbal: Básico';
+
+  @override
+  String get territoryInglesConjugacaoIntermediario =>
+      'Conjugação Verbal: Intermediário';
+
+  @override
+  String get territoryInglesConjugacaoAvancado => 'Conjugação Verbal: Avançado';
+
+  @override
+  String get territoryInglesConjugacaoRelampagoBasico =>
+      'Conjugação Verbal Relâmpago: Básico';
+
+  @override
+  String get territoryInglesConjugacaoRelampagoIntermediario =>
+      'Conjugação Verbal Relâmpago: Intermediário';
+
+  @override
+  String get territoryInglesConjugacaoRelampagoAvancado =>
+      'Conjugação Verbal Relâmpago: Avançado';
+
+  @override
   String get territoryBolsa => 'Bolsa e Investimentos';
 
   @override

@@ -134,6 +134,12 @@ const List<String> kTerritoryIds = [
   'ingles_expressoes_relampago_basico',
   'ingles_expressoes_relampago_intermediario',
   'ingles_expressoes_relampago_avancado',
+  'ingles_conjugacao_basico',
+  'ingles_conjugacao_intermediario',
+  'ingles_conjugacao_avancado',
+  'ingles_conjugacao_relampago_basico',
+  'ingles_conjugacao_relampago_intermediario',
+  'ingles_conjugacao_relampago_avancado',
   // V6 (Mundo_dos_Valores/README.md) — Mundo dos Valores.
   'bolsa',
   'criptomoedas',
@@ -432,6 +438,18 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryInglesExpressoesRelampagoIntermediario;
     case 'ingles_expressoes_relampago_avancado':
       return l10n.territoryInglesExpressoesRelampagoAvancado;
+    case 'ingles_conjugacao_basico':
+      return l10n.territoryInglesConjugacaoBasico;
+    case 'ingles_conjugacao_intermediario':
+      return l10n.territoryInglesConjugacaoIntermediario;
+    case 'ingles_conjugacao_avancado':
+      return l10n.territoryInglesConjugacaoAvancado;
+    case 'ingles_conjugacao_relampago_basico':
+      return l10n.territoryInglesConjugacaoRelampagoBasico;
+    case 'ingles_conjugacao_relampago_intermediario':
+      return l10n.territoryInglesConjugacaoRelampagoIntermediario;
+    case 'ingles_conjugacao_relampago_avancado':
+      return l10n.territoryInglesConjugacaoRelampagoAvancado;
     case 'bolsa':
       return l10n.territoryBolsa;
     case 'criptomoedas':

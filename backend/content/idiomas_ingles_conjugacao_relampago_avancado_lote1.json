@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"I ___ before the meeting started.\" (verbo \"to look\" = olhar) — qual é a forma correta?",
+    "options": [
+      "I looked",
+      "I had looking",
+      "I had looked",
+      "I has looked"
+    ],
+    "correct_answer": "I had looked",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"I had looked\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to watch\" = assistir, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is watched",
+      "it is watching",
+      "it was watched",
+      "it watches"
+    ],
+    "correct_answer": "it is watched",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is watched\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, he ___.\" (verbo \"to stop\" = parar) — qual é a forma correta?",
+    "options": [
+      "he will stop",
+      "he would stopping",
+      "he would stop",
+      "he would stopped"
+    ],
+    "correct_answer": "he would stop",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"he would stop\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, she ___ the new student.\" (verbo \"to help\" = ajudar) — qual é a forma correta?",
+    "options": [
+      "she would help",
+      "she would have helping",
+      "she had helped",
+      "she would have helped"
+    ],
+    "correct_answer": "she would have helped",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"she would have helped\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"we ___ a movie during the exam, but didn't.\" (verbo \"to watch\" = assistir) — qual é a forma correta?",
+    "options": [
+      "we should have watch",
+      "we should have watching",
+      "we should have watched",
+      "we will watch"
+    ],
+    "correct_answer": "we should have watched",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"we should have watched\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"they ___ before the meeting started.\" (verbo \"to move\" = mover) — qual é a forma correta?",
+    "options": [
+      "they had moved",
+      "they had moving",
+      "they moved",
+      "they has moved"
+    ],
+    "correct_answer": "they had moved",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"they had moved\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to close\" = fechar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is closing",
+      "it was closed",
+      "it closes",
+      "it is closed"
+    ],
+    "correct_answer": "it is closed",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is closed\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, you ___.\" (verbo \"to turn\" = virar) — qual é a forma correta?",
+    "options": [
+      "you would turn",
+      "you will turn",
+      "you would turned",
+      "you would turning"
+    ],
+    "correct_answer": "you would turn",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"you would turn\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, he ___ the door.\" (verbo \"to close\" = fechar) — qual é a forma correta?",
+    "options": [
+      "he had closed",
+      "he would have closed",
+      "he would have closing",
+      "he would close"
+    ],
+    "correct_answer": "he would have closed",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"he would have closed\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"she ___ the bags during the exam, but didn't.\" (verbo \"to carry\" = carregar) — qual é a forma correta?",
+    "options": [
+      "she could have carrying",
+      "she could have carry",
+      "she will carry",
+      "she could have carried"
+    ],
+    "correct_answer": "she could have carried",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"she could have carried\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"we ___ before the meeting started.\" (verbo \"to hope\" = esperar/torcer) — qual é a forma correta?",
+    "options": [
+      "we has hoped",
+      "we had hoping",
+      "we had hoped",
+      "we hoped"
+    ],
+    "correct_answer": "we had hoped",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"we had hoped\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to carry\" = carregar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was carried",
+      "it carries",
+      "it is carried",
+      "it is carrying"
+    ],
+    "correct_answer": "it is carried",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is carried\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, I ___ the museum.\" (verbo \"to visit\" = visitar) — qual é a forma correta?",
+    "options": [
+      "I would visit",
+      "I would visiting",
+      "I would visited",
+      "I will visit"
+    ],
+    "correct_answer": "I would visit",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"I would visit\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, you ___ the kitchen.\" (verbo \"to clean\" = limpar) — qual é a forma correta?",
+    "options": [
+      "you had cleaned",
+      "you would clean",
+      "you would have cleaning",
+      "you would have cleaned"
+    ],
+    "correct_answer": "you would have cleaned",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"you would have cleaned\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"he ___ dinner during the exam, but didn't.\" (verbo \"to cook\" = cozinhar) — qual é a forma correta?",
+    "options": [
+      "he will cook",
+      "he should have cooking",
+      "he should have cooked",
+      "he should have cook"
+    ],
+    "correct_answer": "he should have cooked",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"he should have cooked\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"she ___ before the meeting started.\" (verbo \"to dance\" = dançar) — qual é a forma correta?",
+    "options": [
+      "she has danced",
+      "she danced",
+      "she had dancing",
+      "she had danced"
+    ],
+    "correct_answer": "she had danced",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"she had danced\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to visit\" = visitar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is visiting",
+      "it is visited",
+      "it visits",
+      "it was visited"
+    ],
+    "correct_answer": "it is visited",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is visited\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, they ___.\" (verbo \"to laugh\" = rir) — qual é a forma correta?",
+    "options": [
+      "they will laugh",
+      "they would laugh",
+      "they would laughing",
+      "they would laughed"
+    ],
+    "correct_answer": "they would laugh",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"they would laugh\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, I ___.\" (verbo \"to cry\" = chorar) — qual é a forma correta?",
+    "options": [
+      "I would have crying",
+      "I would cry",
+      "I would have cried",
+      "I had cried"
+    ],
+    "correct_answer": "I would have cried",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"I would have cried\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"you ___ the door during the exam, but didn't.\" (verbo \"to push\" = empurrar) — qual é a forma correta?",
+    "options": [
+      "you could have push",
+      "you will push",
+      "you could have pushed",
+      "you could have pushing"
+    ],
+    "correct_answer": "you could have pushed",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"you could have pushed\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"he ___ the rope before the meeting started.\" (verbo \"to pull\" = puxar) — qual é a forma correta?",
+    "options": [
+      "he pulled",
+      "he has pulled",
+      "he had pulling",
+      "he had pulled"
+    ],
+    "correct_answer": "he had pulled",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"he had pulled\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to clean\" = limpar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is cleaned",
+      "it was cleaned",
+      "it cleans",
+      "it is cleaning"
+    ],
+    "correct_answer": "it is cleaned",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is cleaned\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, we ___ a gift to the party.\" (verbo \"to bring\" = trazer) — qual é a forma correta?",
+    "options": [
+      "we would bring",
+      "we would brought",
+      "we will bring",
+      "we would bringing"
+    ],
+    "correct_answer": "we would bring",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"we would bring\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, they ___ a picture.\" (verbo \"to draw\" = desenhar) — qual é a forma correta?",
+    "options": [
+      "they would draw",
+      "they would have drawing",
+      "they would have drawn",
+      "they had drawn"
+    ],
+    "correct_answer": "they would have drawn",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"they would have drawn\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"I ___ during the exam, but didn't.\" (verbo \"to fly\" = voar) — qual é a forma correta?",
+    "options": [
+      "I should have fly",
+      "I should have flying",
+      "I should have flown",
+      "I will fly"
+    ],
+    "correct_answer": "I should have flown",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"I should have flown\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"you ___ a song before the meeting started.\" (verbo \"to sing\" = cantar) — qual é a forma correta?",
+    "options": [
+      "you sang",
+      "you had sung",
+      "you had singing",
+      "you has sung"
+    ],
+    "correct_answer": "you had sung",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"you had sung\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to cook\" = cozinhar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is cooking",
+      "it was cooked",
+      "it cooks",
+      "it is cooked"
+    ],
+    "correct_answer": "it is cooked",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is cooked\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, she ___.\" (verbo \"to begin\" = começar) — qual é a forma correta?",
+    "options": [
+      "she will begin",
+      "she would begin",
+      "she would beginning",
+      "she would began"
+    ],
+    "correct_answer": "she would begin",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"she would begin\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, we ___.\" (verbo \"to grow\" = crescer) — qual é a forma correta?",
+    "options": [
+      "we would have growing",
+      "we would grow",
+      "we had grown",
+      "we would have grown"
+    ],
+    "correct_answer": "we would have grown",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"we would have grown\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"they ___ during the exam, but didn't.\" (verbo \"to blow\" = soprar) — qual é a forma correta?",
+    "options": [
+      "they could have blowing",
+      "they could have blown",
+      "they could have blow",
+      "they will blow"
+    ],
+    "correct_answer": "they could have blown",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"they could have blown\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"I ___ before the meeting started.\" (verbo \"to swim\" = nadar) — qual é a forma correta?",
+    "options": [
+      "I had swimming",
+      "I had swum",
+      "I has swum",
+      "I swam"
+    ],
+    "correct_answer": "I had swum",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"I had swum\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to push\" = empurrar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it pushes",
+      "it is pushed",
+      "it is pushing",
+      "it was pushed"
+    ],
+    "correct_answer": "it is pushed",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is pushed\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, he ___.\" (verbo \"to ride\" = andar de/cavalgar) — qual é a forma correta?",
+    "options": [
+      "he will ride",
+      "he would riding",
+      "he would ride",
+      "he would rode"
+    ],
+    "correct_answer": "he would ride",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"he would ride\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, she ___.\" (verbo \"to rise\" = subir/levantar) — qual é a forma correta?",
+    "options": [
+      "she would rise",
+      "she would have risen",
+      "she had risen",
+      "she would have rising"
+    ],
+    "correct_answer": "she would have risen",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"she would have risen\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"we ___ hands with the guest during the exam, but didn't.\" (verbo \"to shake\" = sacudir) — qual é a forma correta?",
+    "options": [
+      "we should have shaken",
+      "we should have shaking",
+      "we should have shake",
+      "we will shake"
+    ],
+    "correct_answer": "we should have shaken",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"we should have shaken\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"they ___ before the meeting started.\" (verbo \"to shine\" = brilhar) — qual é a forma correta?",
+    "options": [
+      "they has shone",
+      "they shone",
+      "they had shone",
+      "they had shining"
+    ],
+    "correct_answer": "they had shone",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"they had shone\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to pull\" = puxar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was pulled",
+      "it is pulling",
+      "it pulls",
+      "it is pulled"
+    ],
+    "correct_answer": "it is pulled",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is pulled\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, you ___.\" (verbo \"to sink\" = afundar) — qual é a forma correta?",
+    "options": [
+      "you will sink",
+      "you would sink",
+      "you would sank",
+      "you would sinking"
+    ],
+    "correct_answer": "you would sink",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"you would sink\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, he ___.\" (verbo \"to spring\" = saltar) — qual é a forma correta?",
+    "options": [
+      "he had sprung",
+      "he would have sprung",
+      "he would spring",
+      "he would have springing"
+    ],
+    "correct_answer": "he would have sprung",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"he would have sprung\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"she ___ during the exam, but didn't.\" (verbo \"to swear\" = jurar) — qual é a forma correta?",
+    "options": [
+      "she will swear",
+      "she could have swear",
+      "she could have swearing",
+      "she could have sworn"
+    ],
+    "correct_answer": "she could have sworn",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"she could have sworn\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"we ___ before the meeting started.\" (verbo \"to look\" = olhar) — qual é a forma correta?",
+    "options": [
+      "we has looked",
+      "we had looking",
+      "we looked",
+      "we had looked"
+    ],
+    "correct_answer": "we had looked",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"we had looked\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to hold\" = segurar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it holds",
+      "it is held",
+      "it is holding",
+      "it was held"
+    ],
+    "correct_answer": "it is held",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is held\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, I ___.\" (verbo \"to stop\" = parar) — qual é a forma correta?",
+    "options": [
+      "I will stop",
+      "I would stopped",
+      "I would stopping",
+      "I would stop"
+    ],
+    "correct_answer": "I would stop",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"I would stop\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, you ___ the new student.\" (verbo \"to help\" = ajudar) — qual é a forma correta?",
+    "options": [
+      "you had helped",
+      "you would have helping",
+      "you would help",
+      "you would have helped"
+    ],
+    "correct_answer": "you would have helped",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"you would have helped\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"he ___ a movie during the exam, but didn't.\" (verbo \"to watch\" = assistir) — qual é a forma correta?",
+    "options": [
+      "he will watch",
+      "he should have watched",
+      "he should have watch",
+      "he should have watching"
+    ],
+    "correct_answer": "he should have watched",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"he should have watched\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"she ___ before the meeting started.\" (verbo \"to move\" = mover) — qual é a forma correta?",
+    "options": [
+      "she had moving",
+      "she had moved",
+      "she has moved",
+      "she moved"
+    ],
+    "correct_answer": "she had moved",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"she had moved\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to bring\" = trazer, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was brought",
+      "it is bringing",
+      "it is brought",
+      "it brings"
+    ],
+    "correct_answer": "it is brought",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is brought\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, they ___.\" (verbo \"to turn\" = virar) — qual é a forma correta?",
+    "options": [
+      "they would turned",
+      "they would turning",
+      "they would turn",
+      "they will turn"
+    ],
+    "correct_answer": "they would turn",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"they would turn\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, I ___ the door.\" (verbo \"to close\" = fechar) — qual é a forma correta?",
+    "options": [
+      "I would close",
+      "I would have closed",
+      "I would have closing",
+      "I had closed"
+    ],
+    "correct_answer": "I would have closed",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"I would have closed\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"you ___ the bags during the exam, but didn't.\" (verbo \"to carry\" = carregar) — qual é a forma correta?",
+    "options": [
+      "you will carry",
+      "you could have carrying",
+      "you could have carry",
+      "you could have carried"
+    ],
+    "correct_answer": "you could have carried",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"you could have carried\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"he ___ before the meeting started.\" (verbo \"to hope\" = esperar/torcer) — qual é a forma correta?",
+    "options": [
+      "he hoped",
+      "he had hoping",
+      "he has hoped",
+      "he had hoped"
+    ],
+    "correct_answer": "he had hoped",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"he had hoped\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every day.\" (verbo \"to draw\" = desenhar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is drawn",
+      "it was drawn",
+      "it draws",
+      "it is drawing"
+    ],
+    "correct_answer": "it is drawn",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is drawn\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, we ___ the museum.\" (verbo \"to visit\" = visitar) — qual é a forma correta?",
+    "options": [
+      "we would visit",
+      "we would visited",
+      "we would visiting",
+      "we will visit"
+    ],
+    "correct_answer": "we would visit",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"we would visit\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, they ___ the kitchen.\" (verbo \"to clean\" = limpar) — qual é a forma correta?",
+    "options": [
+      "they would have cleaning",
+      "they would have cleaned",
+      "they had cleaned",
+      "they would clean"
+    ],
+    "correct_answer": "they would have cleaned",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"they would have cleaned\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"I ___ dinner during the exam, but didn't.\" (verbo \"to cook\" = cozinhar) — qual é a forma correta?",
+    "options": [
+      "I should have cooked",
+      "I should have cook",
+      "I should have cooking",
+      "I will cook"
+    ],
+    "correct_answer": "I should have cooked",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"I should have cooked\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"you ___ before the meeting started.\" (verbo \"to dance\" = dançar) — qual é a forma correta?",
+    "options": [
+      "you had danced",
+      "you had dancing",
+      "you has danced",
+      "you danced"
+    ],
+    "correct_answer": "you had danced",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"you had danced\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to hide\" = esconder, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is hiding",
+      "it hides",
+      "it is hidden",
+      "it was hidden"
+    ],
+    "correct_answer": "it is hidden",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is hidden\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, she ___.\" (verbo \"to laugh\" = rir) — qual é a forma correta?",
+    "options": [
+      "she would laughed",
+      "she will laugh",
+      "she would laugh",
+      "she would laughing"
+    ],
+    "correct_answer": "she would laugh",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"she would laugh\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, we ___.\" (verbo \"to cry\" = chorar) — qual é a forma correta?",
+    "options": [
+      "we would have cried",
+      "we would cry",
+      "we had cried",
+      "we would have crying"
+    ],
+    "correct_answer": "we would have cried",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"we would have cried\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"they ___ the door during the exam, but didn't.\" (verbo \"to push\" = empurrar) — qual é a forma correta?",
+    "options": [
+      "they could have pushing",
+      "they could have pushed",
+      "they could have push",
+      "they will push"
+    ],
+    "correct_answer": "they could have pushed",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"they could have pushed\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"I ___ the rope before the meeting started.\" (verbo \"to pull\" = puxar) — qual é a forma correta?",
+    "options": [
+      "I has pulled",
+      "I had pulling",
+      "I had pulled",
+      "I pulled"
+    ],
+    "correct_answer": "I had pulled",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"I had pulled\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to watch\" = assistir, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is watching",
+      "it was watched",
+      "it is watched",
+      "it watches"
+    ],
+    "correct_answer": "it is watched",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is watched\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, he ___ a gift to the party.\" (verbo \"to bring\" = trazer) — qual é a forma correta?",
+    "options": [
+      "he would bringing",
+      "he would bring",
+      "he would brought",
+      "he will bring"
+    ],
+    "correct_answer": "he would bring",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"he would bring\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, she ___ a picture.\" (verbo \"to draw\" = desenhar) — qual é a forma correta?",
+    "options": [
+      "she would have drawn",
+      "she would have drawing",
+      "she would draw",
+      "she had drawn"
+    ],
+    "correct_answer": "she would have drawn",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"she would have drawn\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"we ___ during the exam, but didn't.\" (verbo \"to fly\" = voar) — qual é a forma correta?",
+    "options": [
+      "we should have flown",
+      "we will fly",
+      "we should have fly",
+      "we should have flying"
+    ],
+    "correct_answer": "we should have flown",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"we should have flown\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"they ___ a song before the meeting started.\" (verbo \"to sing\" = cantar) — qual é a forma correta?",
+    "options": [
+      "they had sung",
+      "they has sung",
+      "they had singing",
+      "they sang"
+    ],
+    "correct_answer": "they had sung",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"they had sung\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to close\" = fechar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is closing",
+      "it was closed",
+      "it is closed",
+      "it closes"
+    ],
+    "correct_answer": "it is closed",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is closed\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, you ___.\" (verbo \"to begin\" = começar) — qual é a forma correta?",
+    "options": [
+      "you would begin",
+      "you would began",
+      "you will begin",
+      "you would beginning"
+    ],
+    "correct_answer": "you would begin",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"you would begin\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, he ___.\" (verbo \"to grow\" = crescer) — qual é a forma correta?",
+    "options": [
+      "he would have grown",
+      "he would grow",
+      "he had grown",
+      "he would have growing"
+    ],
+    "correct_answer": "he would have grown",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"he would have grown\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"she ___ during the exam, but didn't.\" (verbo \"to blow\" = soprar) — qual é a forma correta?",
+    "options": [
+      "she will blow",
+      "she could have blown",
+      "she could have blowing",
+      "she could have blow"
+    ],
+    "correct_answer": "she could have blown",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"she could have blown\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"we ___ before the meeting started.\" (verbo \"to swim\" = nadar) — qual é a forma correta?",
+    "options": [
+      "we had swimming",
+      "we swam",
+      "we has swum",
+      "we had swum"
+    ],
+    "correct_answer": "we had swum",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"we had swum\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to carry\" = carregar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was carried",
+      "it is carried",
+      "it is carrying",
+      "it carries"
+    ],
+    "correct_answer": "it is carried",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is carried\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, I ___.\" (verbo \"to ride\" = andar de/cavalgar) — qual é a forma correta?",
+    "options": [
+      "I would riding",
+      "I will ride",
+      "I would rode",
+      "I would ride"
+    ],
+    "correct_answer": "I would ride",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"I would ride\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, you ___.\" (verbo \"to rise\" = subir/levantar) — qual é a forma correta?",
+    "options": [
+      "you would have risen",
+      "you would have rising",
+      "you would rise",
+      "you had risen"
+    ],
+    "correct_answer": "you would have risen",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"you would have risen\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"he ___ hands with the guest during the exam, but didn't.\" (verbo \"to shake\" = sacudir) — qual é a forma correta?",
+    "options": [
+      "he should have shake",
+      "he should have shaking",
+      "he should have shaken",
+      "he will shake"
+    ],
+    "correct_answer": "he should have shaken",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"he should have shaken\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"she ___ before the meeting started.\" (verbo \"to shine\" = brilhar) — qual é a forma correta?",
+    "options": [
+      "she shone",
+      "she has shone",
+      "she had shining",
+      "she had shone"
+    ],
+    "correct_answer": "she had shone",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"she had shone\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to visit\" = visitar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it visits",
+      "it was visited",
+      "it is visited",
+      "it is visiting"
+    ],
+    "correct_answer": "it is visited",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is visited\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, they ___.\" (verbo \"to sink\" = afundar) — qual é a forma correta?",
+    "options": [
+      "they would sank",
+      "they will sink",
+      "they would sink",
+      "they would sinking"
+    ],
+    "correct_answer": "they would sink",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"they would sink\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, I ___.\" (verbo \"to spring\" = saltar) — qual é a forma correta?",
+    "options": [
+      "I would spring",
+      "I had sprung",
+      "I would have springing",
+      "I would have sprung"
+    ],
+    "correct_answer": "I would have sprung",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"I would have sprung\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"you ___ during the exam, but didn't.\" (verbo \"to swear\" = jurar) — qual é a forma correta?",
+    "options": [
+      "you will swear",
+      "you could have swear",
+      "you could have swearing",
+      "you could have sworn"
+    ],
+    "correct_answer": "you could have sworn",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"you could have sworn\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"he ___ before the meeting started.\" (verbo \"to look\" = olhar) — qual é a forma correta?",
+    "options": [
+      "he has looked",
+      "he looked",
+      "he had looked",
+      "he had looking"
+    ],
+    "correct_answer": "he had looked",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"he had looked\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to clean\" = limpar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it was cleaned",
+      "it is cleaned",
+      "it cleans",
+      "it is cleaning"
+    ],
+    "correct_answer": "it is cleaned",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is cleaned\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, we ___.\" (verbo \"to stop\" = parar) — qual é a forma correta?",
+    "options": [
+      "we would stop",
+      "we would stopping",
+      "we would stopped",
+      "we will stop"
+    ],
+    "correct_answer": "we would stop",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"we would stop\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, they ___ the new student.\" (verbo \"to help\" = ajudar) — qual é a forma correta?",
+    "options": [
+      "they would have helped",
+      "they had helped",
+      "they would help",
+      "they would have helping"
+    ],
+    "correct_answer": "they would have helped",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"they would have helped\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"I ___ a movie during the exam, but didn't.\" (verbo \"to watch\" = assistir) — qual é a forma correta?",
+    "options": [
+      "I should have watching",
+      "I should have watched",
+      "I will watch",
+      "I should have watch"
+    ],
+    "correct_answer": "I should have watched",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"I should have watched\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"you ___ before the meeting started.\" (verbo \"to move\" = mover) — qual é a forma correta?",
+    "options": [
+      "you had moved",
+      "you moved",
+      "you has moved",
+      "you had moving"
+    ],
+    "correct_answer": "you had moved",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"you had moved\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to cook\" = cozinhar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it is cooked",
+      "it was cooked",
+      "it is cooking",
+      "it cooks"
+    ],
+    "correct_answer": "it is cooked",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is cooked\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, she ___.\" (verbo \"to turn\" = virar) — qual é a forma correta?",
+    "options": [
+      "she would turned",
+      "she will turn",
+      "she would turn",
+      "she would turning"
+    ],
+    "correct_answer": "she would turn",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"she would turn\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, we ___ the door.\" (verbo \"to close\" = fechar) — qual é a forma correta?",
+    "options": [
+      "we would have closed",
+      "we would close",
+      "we had closed",
+      "we would have closing"
+    ],
+    "correct_answer": "we would have closed",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"we would have closed\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"they ___ the bags during the exam, but didn't.\" (verbo \"to carry\" = carregar) — qual é a forma correta?",
+    "options": [
+      "they could have carried",
+      "they could have carry",
+      "they will carry",
+      "they could have carrying"
+    ],
+    "correct_answer": "they could have carried",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"they could have carried\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"I ___ before the meeting started.\" (verbo \"to hope\" = esperar/torcer) — qual é a forma correta?",
+    "options": [
+      "I has hoped",
+      "I had hoping",
+      "I hoped",
+      "I had hoped"
+    ],
+    "correct_answer": "I had hoped",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"I had hoped\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to push\" = empurrar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it pushes",
+      "it was pushed",
+      "it is pushed",
+      "it is pushing"
+    ],
+    "correct_answer": "it is pushed",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is pushed\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, he ___ the museum.\" (verbo \"to visit\" = visitar) — qual é a forma correta?",
+    "options": [
+      "he would visiting",
+      "he would visit",
+      "he will visit",
+      "he would visited"
+    ],
+    "correct_answer": "he would visit",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"he would visit\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, she ___ the kitchen.\" (verbo \"to clean\" = limpar) — qual é a forma correta?",
+    "options": [
+      "she would have cleaned",
+      "she had cleaned",
+      "she would clean",
+      "she would have cleaning"
+    ],
+    "correct_answer": "she would have cleaned",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"she would have cleaned\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"we ___ dinner during the exam, but didn't.\" (verbo \"to cook\" = cozinhar) — qual é a forma correta?",
+    "options": [
+      "we should have cook",
+      "we should have cooking",
+      "we will cook",
+      "we should have cooked"
+    ],
+    "correct_answer": "we should have cooked",
+    "explanation": "O modal perfeito (should have) expressa algo possível/esperado que não aconteceu: \"should have\" + particípio passado. Aqui: \"we should have cooked\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase no passado perfeito: \"they ___ before the meeting started.\" (verbo \"to dance\" = dançar) — qual é a forma correta?",
+    "options": [
+      "they has danced",
+      "they had dancing",
+      "they had danced",
+      "they danced"
+    ],
+    "correct_answer": "they had danced",
+    "explanation": "O passado perfeito usa \"had\" + particípio passado. Aqui: \"they had danced\".",
+    "hints": [
+      "Tema: Passado perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase na voz passiva (presente simples): \"It ___ every week.\" (verbo \"to pull\" = puxar, sujeito \"it\" = isso/aquilo) — qual é a forma correta?",
+    "options": [
+      "it pulls",
+      "it was pulled",
+      "it is pulling",
+      "it is pulled"
+    ],
+    "correct_answer": "it is pulled",
+    "explanation": "A voz passiva no presente simples usa \"is/are\" + particípio passado. Aqui: \"it is pulled\".",
+    "hints": [
+      "Tema: Voz passiva (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase no 2º condicional: \"if she were here, you ___.\" (verbo \"to laugh\" = rir) — qual é a forma correta?",
+    "options": [
+      "you would laughing",
+      "you would laughed",
+      "you would laugh",
+      "you will laugh"
+    ],
+    "correct_answer": "you would laugh",
+    "explanation": "O 2º condicional usa \"would\" + verbo na forma base. Aqui: \"you would laugh\".",
+    "hints": [
+      "Tema: 2º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase no 3º condicional: \"if they had studied, he ___.\" (verbo \"to cry\" = chorar) — qual é a forma correta?",
+    "options": [
+      "he would have crying",
+      "he would cry",
+      "he would have cried",
+      "he had cried"
+    ],
+    "correct_answer": "he would have cried",
+    "explanation": "O 3º condicional usa \"would have\" + particípio passado. Aqui: \"he would have cried\".",
+    "hints": [
+      "Tema: 3º condicional (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase com modal perfeito: \"she ___ the door during the exam, but didn't.\" (verbo \"to push\" = empurrar) — qual é a forma correta?",
+    "options": [
+      "she could have push",
+      "she will push",
+      "she could have pushing",
+      "she could have pushed"
+    ],
+    "correct_answer": "she could have pushed",
+    "explanation": "O modal perfeito (could have) expressa algo possível/esperado que não aconteceu: \"could have\" + particípio passado. Aqui: \"she could have pushed\".",
+    "hints": [
+      "Tema: Modal perfeito (Relâmpago).",
+      "Responda rápido: repare no auxiliar/modal."
+    ],
+    "age_reviewed": true
+  }
+]

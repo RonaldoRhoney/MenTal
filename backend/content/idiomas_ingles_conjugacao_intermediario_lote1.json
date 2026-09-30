@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ right now.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "I going",
+      "I go",
+      "I am going",
+      "I am go"
+    ],
+    "correct_answer": "I am going",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am going\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ the dishes when I called.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "you did",
+      "you were do",
+      "you doing",
+      "you were doing"
+    ],
+    "correct_answer": "you were doing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were doing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ a meeting so far.\" (verbo \"to have\" = ter) — qual é a forma correta?",
+    "options": [
+      "he had",
+      "he has had",
+      "he has having",
+      "he has have"
+    ],
+    "correct_answer": "he has had",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has had\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ a cake this time next week.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "she will making",
+      "she is making",
+      "she will be making",
+      "she will make"
+    ],
+    "correct_answer": "she will be making",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be making\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"we ___ a coffee as we speak.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "we are get",
+      "we are getting",
+      "we get",
+      "we getting"
+    ],
+    "correct_answer": "we are getting",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"we are getting\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"they ___ at 8pm yesterday.\" (verbo \"to think\" = pensar) — qual é a forma correta?",
+    "options": [
+      "they were think",
+      "they thinking",
+      "they were thinking",
+      "they thought"
+    ],
+    "correct_answer": "they were thinking",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"they were thinking\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"I ___ the answer just.\" (verbo \"to know\" = saber/conhecer) — qual é a forma correta?",
+    "options": [
+      "I knew",
+      "I have knowing",
+      "I have know",
+      "I have known"
+    ],
+    "correct_answer": "I have known",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"I have known\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"you ___ a photo all day tomorrow.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "you will taking",
+      "you will be taking",
+      "you is taking",
+      "you will take"
+    ],
+    "correct_answer": "you will be taking",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"you will be taking\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"he ___ currently.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "he come",
+      "he is come",
+      "he is coming",
+      "he coming"
+    ],
+    "correct_answer": "he is coming",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"he is coming\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"she ___ a gift to the teacher when it started raining.\" (verbo \"to give\" = dar) — qual é a forma correta?",
+    "options": [
+      "she gave",
+      "she giving",
+      "she was give",
+      "she was giving"
+    ],
+    "correct_answer": "she was giving",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"she was giving\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"we ___ a coffee already.\" (verbo \"to want\" = querer) — qual é a forma correta?",
+    "options": [
+      "we have wanting",
+      "we have wanted",
+      "we wanted",
+      "we have want"
+    ],
+    "correct_answer": "we have wanted",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"we have wanted\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"they ___ the keys at noon next Monday.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "they will finding",
+      "they will find",
+      "they is finding",
+      "they will be finding"
+    ],
+    "correct_answer": "they will be finding",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"they will be finding\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ a story to the kids at this very moment.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "I telling",
+      "I am tell",
+      "I am telling",
+      "I tell"
+    ],
+    "correct_answer": "I am telling",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am telling\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ a question at that moment.\" (verbo \"to ask\" = perguntar) — qual é a forma correta?",
+    "options": [
+      "you asked",
+      "you asking",
+      "you were asking",
+      "you were ask"
+    ],
+    "correct_answer": "you were asking",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were asking\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ a question many times.\" (verbo \"to ask\" = perguntar) — qual é a forma correta?",
+    "options": [
+      "he asked",
+      "he has asking",
+      "he has ask",
+      "he has asked"
+    ],
+    "correct_answer": "he has asked",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has asked\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ this time tomorrow.\" (verbo \"to work\" = trabalhar) — qual é a forma correta?",
+    "options": [
+      "she will be working",
+      "she will work",
+      "she is working",
+      "she will working"
+    ],
+    "correct_answer": "she will be working",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be working\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"we ___ at the moment.\" (verbo \"to feel\" = sentir) — qual é a forma correta?",
+    "options": [
+      "we are feeling",
+      "we feeling",
+      "we feel",
+      "we are feel"
+    ],
+    "correct_answer": "we are feeling",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"we are feeling\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"they ___ all night long.\" (verbo \"to leave\" = sair/deixar) — qual é a forma correta?",
+    "options": [
+      "they leaving",
+      "they were leaving",
+      "they left",
+      "they were leave"
+    ],
+    "correct_answer": "they were leaving",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"they were leaving\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"I ___ a taxi since last year.\" (verbo \"to call\" = ligar/chamar) — qual é a forma correta?",
+    "options": [
+      "I have calling",
+      "I have called",
+      "I have call",
+      "I called"
+    ],
+    "correct_answer": "I have called",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"I have called\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"you ___ a taxi at 9am tomorrow.\" (verbo \"to call\" = ligar/chamar) — qual é a forma correta?",
+    "options": [
+      "you will calling",
+      "you will call",
+      "you is calling",
+      "you will be calling"
+    ],
+    "correct_answer": "you will be calling",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"you will be calling\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"he ___ the photos to the class right now.\" (verbo \"to show\" = mostrar) — qual é a forma correta?",
+    "options": [
+      "he is showing",
+      "he is show",
+      "he show",
+      "he showing"
+    ],
+    "correct_answer": "he is showing",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"he is showing\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"she ___ when I called.\" (verbo \"to play\" = jogar/brincar) — qual é a forma correta?",
+    "options": [
+      "she played",
+      "she was playing",
+      "she playing",
+      "she was play"
+    ],
+    "correct_answer": "she was playing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"she was playing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"we ___ so far.\" (verbo \"to run\" = correr) — qual é a forma correta?",
+    "options": [
+      "we will run",
+      "we ran",
+      "we have running",
+      "we have run"
+    ],
+    "correct_answer": "we have run",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"we have run\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"they ___ this time next week.\" (verbo \"to run\" = correr) — qual é a forma correta?",
+    "options": [
+      "they is running",
+      "they will be running",
+      "they will running",
+      "they will run"
+    ],
+    "correct_answer": "they will be running",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"they will be running\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ as we speak.\" (verbo \"to live\" = morar/viver) — qual é a forma correta?",
+    "options": [
+      "I am live",
+      "I am living",
+      "I live",
+      "I living"
+    ],
+    "correct_answer": "I am living",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am living\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ a letter at 8pm yesterday.\" (verbo \"to write\" = escrever) — qual é a forma correta?",
+    "options": [
+      "you writing",
+      "you wrote",
+      "you were write",
+      "you were writing"
+    ],
+    "correct_answer": "you were writing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were writing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ just.\" (verbo \"to stand\" = ficar em pé) — qual é a forma correta?",
+    "options": [
+      "he has stood",
+      "he stood",
+      "he has standing",
+      "he has stand"
+    ],
+    "correct_answer": "he has stood",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has stood\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ all day tomorrow.\" (verbo \"to sit\" = sentar) — qual é a forma correta?",
+    "options": [
+      "she will be sitting",
+      "she will sit",
+      "she is sitting",
+      "she will sitting"
+    ],
+    "correct_answer": "she will be sitting",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be sitting\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"we ___ currently.\" (verbo \"to stand\" = ficar em pé) — qual é a forma correta?",
+    "options": [
+      "we are stand",
+      "we stand",
+      "we standing",
+      "we are standing"
+    ],
+    "correct_answer": "we are standing",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"we are standing\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"they ___ the game when it started raining.\" (verbo \"to lose\" = perder) — qual é a forma correta?",
+    "options": [
+      "they lost",
+      "they were losing",
+      "they were lose",
+      "they losing"
+    ],
+    "correct_answer": "they were losing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"they were losing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"I ___ English already.\" (verbo \"to learn\" = aprender) — qual é a forma correta?",
+    "options": [
+      "I have learning",
+      "I learned",
+      "I have learn",
+      "I have learned"
+    ],
+    "correct_answer": "I have learned",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"I have learned\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"you ___ the bill at noon next Monday.\" (verbo \"to pay\" = pagar) — qual é a forma correta?",
+    "options": [
+      "you will be paying",
+      "you is paying",
+      "you will pay",
+      "you will paying"
+    ],
+    "correct_answer": "you will be paying",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"you will be paying\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"he ___ a friend at this very moment.\" (verbo \"to meet\" = encontrar/conhecer) — qual é a forma correta?",
+    "options": [
+      "he meeting",
+      "he meet",
+      "he is meeting",
+      "he is meet"
+    ],
+    "correct_answer": "he is meeting",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"he is meeting\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"she ___ English at that moment.\" (verbo \"to learn\" = aprender) — qual é a forma correta?",
+    "options": [
+      "she learned",
+      "she learning",
+      "she was learning",
+      "she was learn"
+    ],
+    "correct_answer": "she was learning",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"she was learning\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"we ___ many times.\" (verbo \"to walk\" = andar) — qual é a forma correta?",
+    "options": [
+      "we walked",
+      "we have walk",
+      "we have walked",
+      "we have walking"
+    ],
+    "correct_answer": "we have walked",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"we have walked\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"they ___ this time tomorrow.\" (verbo \"to speak\" = falar) — qual é a forma correta?",
+    "options": [
+      "they will speak",
+      "they will speaking",
+      "they will be speaking",
+      "they is speaking"
+    ],
+    "correct_answer": "they will be speaking",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"they will be speaking\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ a book at the moment.\" (verbo \"to read\" = ler) — qual é a forma correta?",
+    "options": [
+      "I am reading",
+      "I am read",
+      "I read",
+      "I reading"
+    ],
+    "correct_answer": "I am reading",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am reading\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ the door all night long.\" (verbo \"to open\" = abrir) — qual é a forma correta?",
+    "options": [
+      "you were open",
+      "you opened",
+      "you opening",
+      "you were opening"
+    ],
+    "correct_answer": "you were opening",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were opening\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ since last year.\" (verbo \"to drink\" = beber) — qual é a forma correta?",
+    "options": [
+      "he has drunk",
+      "he drank",
+      "he has drink",
+      "he has drinking"
+    ],
+    "correct_answer": "he has drunk",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has drunk\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ at 9am tomorrow.\" (verbo \"to walk\" = andar) — qual é a forma correta?",
+    "options": [
+      "she will be walking",
+      "she is walking",
+      "she will walking",
+      "she will walk"
+    ],
+    "correct_answer": "she will be walking",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be walking\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"we ___ the game right now.\" (verbo \"to win\" = ganhar) — qual é a forma correta?",
+    "options": [
+      "we are winning",
+      "we are win",
+      "we win",
+      "we winning"
+    ],
+    "correct_answer": "we are winning",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"we are winning\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"they ___ a new phone when I called.\" (verbo \"to buy\" = comprar) — qual é a forma correta?",
+    "options": [
+      "they buying",
+      "they were buy",
+      "they were buying",
+      "they bought"
+    ],
+    "correct_answer": "they were buying",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"they were buying\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"I ___ the dishes so far.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "I have doing",
+      "I have do",
+      "I have done",
+      "I did"
+    ],
+    "correct_answer": "I have done",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"I have done\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"you ___ this time next week.\" (verbo \"to eat\" = comer) — qual é a forma correta?",
+    "options": [
+      "you is eating",
+      "you will eating",
+      "you will be eating",
+      "you will eat"
+    ],
+    "correct_answer": "you will be eating",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"you will be eating\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"he ___ as we speak.\" (verbo \"to drink\" = beber) — qual é a forma correta?",
+    "options": [
+      "he is drinking",
+      "he is drink",
+      "he drinking",
+      "he drink"
+    ],
+    "correct_answer": "he is drinking",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"he is drinking\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"she ___ at 8pm yesterday.\" (verbo \"to sleep\" = dormir) — qual é a forma correta?",
+    "options": [
+      "she was sleep",
+      "she slept",
+      "she sleeping",
+      "she was sleeping"
+    ],
+    "correct_answer": "she was sleeping",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"she was sleeping\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"we ___ a movie just.\" (verbo \"to see\" = ver) — qual é a forma correta?",
+    "options": [
+      "we have seen",
+      "we saw",
+      "we have seeing",
+      "we have see"
+    ],
+    "correct_answer": "we have seen",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"we have seen\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"they ___ all day tomorrow.\" (verbo \"to study\" = estudar) — qual é a forma correta?",
+    "options": [
+      "they will studying",
+      "they will be studying",
+      "they is studying",
+      "they will study"
+    ],
+    "correct_answer": "they will be studying",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"they will be studying\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ currently.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "I am going",
+      "I go",
+      "I am go",
+      "I going"
+    ],
+    "correct_answer": "I am going",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am going\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ the dishes when it started raining.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "you were doing",
+      "you were do",
+      "you did",
+      "you doing"
+    ],
+    "correct_answer": "you were doing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were doing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ already.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "he will come",
+      "he has coming",
+      "he came",
+      "he has come"
+    ],
+    "correct_answer": "he has come",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has come\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ a cake at noon next Monday.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "she will make",
+      "she is making",
+      "she will making",
+      "she will be making"
+    ],
+    "correct_answer": "she will be making",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be making\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"we ___ a coffee at this very moment.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "we are get",
+      "we are getting",
+      "we getting",
+      "we get"
+    ],
+    "correct_answer": "we are getting",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"we are getting\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"they ___ at that moment.\" (verbo \"to think\" = pensar) — qual é a forma correta?",
+    "options": [
+      "they were think",
+      "they thinking",
+      "they thought",
+      "they were thinking"
+    ],
+    "correct_answer": "they were thinking",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"they were thinking\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"I ___ a story to the kids many times.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "I told",
+      "I have tell",
+      "I have telling",
+      "I have told"
+    ],
+    "correct_answer": "I have told",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"I have told\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"you ___ a photo this time tomorrow.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "you is taking",
+      "you will taking",
+      "you will take",
+      "you will be taking"
+    ],
+    "correct_answer": "you will be taking",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"you will be taking\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"he ___ at the moment.\" (verbo \"to come\" = vir) — qual é a forma correta?",
+    "options": [
+      "he is come",
+      "he come",
+      "he coming",
+      "he is coming"
+    ],
+    "correct_answer": "he is coming",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"he is coming\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"she ___ a gift to the teacher all night long.\" (verbo \"to give\" = dar) — qual é a forma correta?",
+    "options": [
+      "she was giving",
+      "she giving",
+      "she was give",
+      "she gave"
+    ],
+    "correct_answer": "she was giving",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"she was giving\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"we ___ since last year.\" (verbo \"to leave\" = sair/deixar) — qual é a forma correta?",
+    "options": [
+      "we have left",
+      "we left",
+      "we have leaving",
+      "we have leave"
+    ],
+    "correct_answer": "we have left",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"we have left\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"they ___ the keys at 9am tomorrow.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "they will find",
+      "they is finding",
+      "they will be finding",
+      "they will finding"
+    ],
+    "correct_answer": "they will be finding",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"they will be finding\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ a story to the kids right now.\" (verbo \"to tell\" = contar/dizer) — qual é a forma correta?",
+    "options": [
+      "I am telling",
+      "I am tell",
+      "I tell",
+      "I telling"
+    ],
+    "correct_answer": "I am telling",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am telling\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ a question when I called.\" (verbo \"to ask\" = perguntar) — qual é a forma correta?",
+    "options": [
+      "you were ask",
+      "you were asking",
+      "you asked",
+      "you asking"
+    ],
+    "correct_answer": "you were asking",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were asking\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ so far.\" (verbo \"to play\" = jogar/brincar) — qual é a forma correta?",
+    "options": [
+      "he has play",
+      "he has playing",
+      "he has played",
+      "he played"
+    ],
+    "correct_answer": "he has played",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has played\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ this time next week.\" (verbo \"to work\" = trabalhar) — qual é a forma correta?",
+    "options": [
+      "she will working",
+      "she will be working",
+      "she will work",
+      "she is working"
+    ],
+    "correct_answer": "she will be working",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be working\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"we ___ as we speak.\" (verbo \"to feel\" = sentir) — qual é a forma correta?",
+    "options": [
+      "we are feel",
+      "we feel",
+      "we feeling",
+      "we are feeling"
+    ],
+    "correct_answer": "we are feeling",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"we are feeling\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"they ___ at 8pm yesterday.\" (verbo \"to leave\" = sair/deixar) — qual é a forma correta?",
+    "options": [
+      "they leaving",
+      "they were leaving",
+      "they were leave",
+      "they left"
+    ],
+    "correct_answer": "they were leaving",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"they were leaving\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"I ___ just.\" (verbo \"to sit\" = sentar) — qual é a forma correta?",
+    "options": [
+      "I sat",
+      "I have sat",
+      "I have sitting",
+      "I have sit"
+    ],
+    "correct_answer": "I have sat",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"I have sat\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"you ___ a taxi all day tomorrow.\" (verbo \"to call\" = ligar/chamar) — qual é a forma correta?",
+    "options": [
+      "you will be calling",
+      "you will call",
+      "you will calling",
+      "you is calling"
+    ],
+    "correct_answer": "you will be calling",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"you will be calling\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"he ___ the photos to the class currently.\" (verbo \"to show\" = mostrar) — qual é a forma correta?",
+    "options": [
+      "he is show",
+      "he is showing",
+      "he showing",
+      "he show"
+    ],
+    "correct_answer": "he is showing",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"he is showing\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"she ___ when it started raining.\" (verbo \"to play\" = jogar/brincar) — qual é a forma correta?",
+    "options": [
+      "she played",
+      "she was playing",
+      "she playing",
+      "she was play"
+    ],
+    "correct_answer": "she was playing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"she was playing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"we ___ a friend already.\" (verbo \"to meet\" = encontrar/conhecer) — qual é a forma correta?",
+    "options": [
+      "we have meet",
+      "we have meeting",
+      "we have met",
+      "we met"
+    ],
+    "correct_answer": "we have met",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"we have met\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"they ___ at noon next Monday.\" (verbo \"to run\" = correr) — qual é a forma correta?",
+    "options": [
+      "they is running",
+      "they will running",
+      "they will be running",
+      "they will run"
+    ],
+    "correct_answer": "they will be running",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"they will be running\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ at this very moment.\" (verbo \"to live\" = morar/viver) — qual é a forma correta?",
+    "options": [
+      "I live",
+      "I am living",
+      "I living",
+      "I am live"
+    ],
+    "correct_answer": "I am living",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am living\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ a letter at that moment.\" (verbo \"to write\" = escrever) — qual é a forma correta?",
+    "options": [
+      "you writing",
+      "you were write",
+      "you wrote",
+      "you were writing"
+    ],
+    "correct_answer": "you were writing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were writing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ the door many times.\" (verbo \"to open\" = abrir) — qual é a forma correta?",
+    "options": [
+      "he has opening",
+      "he opened",
+      "he has opened",
+      "he has open"
+    ],
+    "correct_answer": "he has opened",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has opened\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ this time tomorrow.\" (verbo \"to sit\" = sentar) — qual é a forma correta?",
+    "options": [
+      "she will be sitting",
+      "she will sit",
+      "she is sitting",
+      "she will sitting"
+    ],
+    "correct_answer": "she will be sitting",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be sitting\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"we ___ at the moment.\" (verbo \"to stand\" = ficar em pé) — qual é a forma correta?",
+    "options": [
+      "we stand",
+      "we standing",
+      "we are standing",
+      "we are stand"
+    ],
+    "correct_answer": "we are standing",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"we are standing\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"they ___ the game all night long.\" (verbo \"to lose\" = perder) — qual é a forma correta?",
+    "options": [
+      "they were lose",
+      "they lost",
+      "they losing",
+      "they were losing"
+    ],
+    "correct_answer": "they were losing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"they were losing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"I ___ since last year.\" (verbo \"to eat\" = comer) — qual é a forma correta?",
+    "options": [
+      "I have eat",
+      "I have eaten",
+      "I have eating",
+      "I ate"
+    ],
+    "correct_answer": "I have eaten",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"I have eaten\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"you ___ the bill at 9am tomorrow.\" (verbo \"to pay\" = pagar) — qual é a forma correta?",
+    "options": [
+      "you will pay",
+      "you will be paying",
+      "you is paying",
+      "you will paying"
+    ],
+    "correct_answer": "you will be paying",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"you will be paying\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"he ___ a friend right now.\" (verbo \"to meet\" = encontrar/conhecer) — qual é a forma correta?",
+    "options": [
+      "he is meeting",
+      "he meet",
+      "he is meet",
+      "he meeting"
+    ],
+    "correct_answer": "he is meeting",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"he is meeting\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"she ___ English when I called.\" (verbo \"to learn\" = aprender) — qual é a forma correta?",
+    "options": [
+      "she learned",
+      "she learning",
+      "she was learn",
+      "she was learning"
+    ],
+    "correct_answer": "she was learning",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"she was learning\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"we ___ so far.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "we went",
+      "we have gone",
+      "we have go",
+      "we have going"
+    ],
+    "correct_answer": "we have gone",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"we have gone\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"they ___ this time next week.\" (verbo \"to speak\" = falar) — qual é a forma correta?",
+    "options": [
+      "they is speaking",
+      "they will speak",
+      "they will be speaking",
+      "they will speaking"
+    ],
+    "correct_answer": "they will be speaking",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"they will be speaking\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ a book as we speak.\" (verbo \"to read\" = ler) — qual é a forma correta?",
+    "options": [
+      "I reading",
+      "I read",
+      "I am reading",
+      "I am read"
+    ],
+    "correct_answer": "I am reading",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am reading\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ the door at 8pm yesterday.\" (verbo \"to open\" = abrir) — qual é a forma correta?",
+    "options": [
+      "you were open",
+      "you were opening",
+      "you opened",
+      "you opening"
+    ],
+    "correct_answer": "you were opening",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were opening\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ a coffee just.\" (verbo \"to get\" = conseguir/pegar) — qual é a forma correta?",
+    "options": [
+      "he has getting",
+      "he has get",
+      "he has gotten",
+      "he got"
+    ],
+    "correct_answer": "he has gotten",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has gotten\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ all day tomorrow.\" (verbo \"to walk\" = andar) — qual é a forma correta?",
+    "options": [
+      "she is walking",
+      "she will walk",
+      "she will walking",
+      "she will be walking"
+    ],
+    "correct_answer": "she will be walking",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be walking\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"we ___ the game currently.\" (verbo \"to win\" = ganhar) — qual é a forma correta?",
+    "options": [
+      "we are winning",
+      "we winning",
+      "we are win",
+      "we win"
+    ],
+    "correct_answer": "we are winning",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"we are winning\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"they ___ a new phone when it started raining.\" (verbo \"to buy\" = comprar) — qual é a forma correta?",
+    "options": [
+      "they bought",
+      "they buying",
+      "they were buying",
+      "they were buy"
+    ],
+    "correct_answer": "they were buying",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"they were buying\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"I ___ a photo already.\" (verbo \"to take\" = pegar/levar) — qual é a forma correta?",
+    "options": [
+      "I took",
+      "I have take",
+      "I have taking",
+      "I have taken"
+    ],
+    "correct_answer": "I have taken",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"I have taken\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"you ___ at noon next Monday.\" (verbo \"to eat\" = comer) — qual é a forma correta?",
+    "options": [
+      "you is eating",
+      "you will be eating",
+      "you will eating",
+      "you will eat"
+    ],
+    "correct_answer": "you will be eating",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"you will be eating\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"he ___ at this very moment.\" (verbo \"to drink\" = beber) — qual é a forma correta?",
+    "options": [
+      "he is drink",
+      "he drinking",
+      "he is drinking",
+      "he drink"
+    ],
+    "correct_answer": "he is drinking",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"he is drinking\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"she ___ at that moment.\" (verbo \"to sleep\" = dormir) — qual é a forma correta?",
+    "options": [
+      "she was sleep",
+      "she was sleeping",
+      "she sleeping",
+      "she slept"
+    ],
+    "correct_answer": "she was sleeping",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"she was sleeping\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"we ___ the keys many times.\" (verbo \"to find\" = encontrar) — qual é a forma correta?",
+    "options": [
+      "we have found",
+      "we have finding",
+      "we found",
+      "we have find"
+    ],
+    "correct_answer": "we have found",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"we have found\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"they ___ this time tomorrow.\" (verbo \"to study\" = estudar) — qual é a forma correta?",
+    "options": [
+      "they is studying",
+      "they will studying",
+      "they will be studying",
+      "they will study"
+    ],
+    "correct_answer": "they will be studying",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"they will be studying\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no presente contínuo: \"I ___ at the moment.\" (verbo \"to go\" = ir) — qual é a forma correta?",
+    "options": [
+      "I am going",
+      "I go",
+      "I am go",
+      "I going"
+    ],
+    "correct_answer": "I am going",
+    "explanation": "O presente contínuo usa \"to be\" no presente + verbo com -ing. Aqui: \"I am going\".",
+    "hints": [
+      "Tema: Presente contínuo (ação acontecendo agora).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase no passado contínuo: \"you ___ the dishes all night long.\" (verbo \"to do\" = fazer) — qual é a forma correta?",
+    "options": [
+      "you doing",
+      "you were doing",
+      "you were do",
+      "you did"
+    ],
+    "correct_answer": "you were doing",
+    "explanation": "O passado contínuo usa \"to be\" no passado (was/were) + verbo com -ing. Aqui: \"you were doing\".",
+    "hints": [
+      "Tema: Passado contínuo (ação em andamento no passado).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase no presente perfeito: \"he ___ since last year.\" (verbo \"to feel\" = sentir) — qual é a forma correta?",
+    "options": [
+      "he has feel",
+      "he has feeling",
+      "he felt",
+      "he has felt"
+    ],
+    "correct_answer": "he has felt",
+    "explanation": "O presente perfeito usa \"have/has\" + particípio passado. Aqui: \"he has felt\".",
+    "hints": [
+      "Tema: Presente perfeito (conexão entre passado e presente).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_conjugacao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase no futuro contínuo: \"she ___ a cake at 9am tomorrow.\" (verbo \"to make\" = fazer/criar) — qual é a forma correta?",
+    "options": [
+      "she will make",
+      "she is making",
+      "she will making",
+      "she will be making"
+    ],
+    "correct_answer": "she will be making",
+    "explanation": "O futuro contínuo usa \"will be\" + verbo com -ing. Aqui: \"she will be making\".",
+    "hints": [
+      "Tema: Futuro contínuo (ação em andamento num momento futuro).",
+      "Preste atenção no auxiliar usado com o sujeito."
+    ],
+    "age_reviewed": true
+  }
+]
