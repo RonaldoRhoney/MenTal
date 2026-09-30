@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a butterfly yesterday.\", o que significa a palavra composta 'butterfly'?",
+    "options": [
+      "o nascer do sol",
+      "a borboleta",
+      "a hora extra",
+      "a joaninha"
+    ],
+    "correct_answer": "a borboleta",
+    "explanation": "'butterfly' é formada por \"butter\" (manteiga) + \"fly\" (mosca) e significa a borboleta — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"butter\" + \"fly\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She talked about the earthquake at school.\", o que significa a palavra composta 'earthquake'?",
+    "options": [
+      "a borboleta",
+      "o terremoto",
+      "o nascer do sol",
+      "o devaneio ou sonhar acordado"
+    ],
+    "correct_answer": "o terremoto",
+    "explanation": "'earthquake' é formada por \"earth\" (terra) + \"quake\" (tremor) e significa o terremoto — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"earth\" + \"quake\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: headache.\", o que significa a palavra composta 'headache'?",
+    "options": [
+      "o nascer do sol",
+      "a dor de cabeça",
+      "o parquinho ou a área de recreação",
+      "o globo ocular"
+    ],
+    "correct_answer": "a dor de cabeça",
+    "explanation": "'headache' é formada por \"head\" (cabeça) + \"ache\" (dor) e significa a dor de cabeça — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"head\" + \"ache\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a heartbeat in the story.\", o que significa a palavra composta 'heartbeat'?",
+    "options": [
+      "o batimento cardíaco",
+      "a queimadura de sol",
+      "baixar um arquivo",
+      "o terremoto"
+    ],
+    "correct_answer": "o batimento cardíaco",
+    "explanation": "'heartbeat' é formada por \"heart\" (coração) + \"beat\" (batida) e significa o batimento cardíaco — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"heart\" + \"beat\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the makeup today.\", o que significa a palavra composta 'makeup'?",
+    "options": [
+      "a dor de cabeça",
+      "a joaninha",
+      "a água-viva",
+      "a maquiagem"
+    ],
+    "correct_answer": "a maquiagem",
+    "explanation": "'makeup' é formada por \"make\" (fazer) + \"up\" (para cima) e significa a maquiagem — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"make\" + \"up\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a sunburn is.\", o que significa a palavra composta 'sunburn'?",
+    "options": [
+      "a água-viva",
+      "baixar um arquivo",
+      "a queimadura de sol",
+      "a borboleta"
+    ],
+    "correct_answer": "a queimadura de sol",
+    "explanation": "'sunburn' é formada por \"sun\" (sol) + \"burn\" (queimadura) e significa a queimadura de sol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"burn\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the daydream in his notebook.\", o que significa a palavra composta 'daydream'?",
+    "options": [
+      "o devaneio ou sonhar acordado",
+      "o plano de fundo ou o histórico",
+      "o terremoto",
+      "o globo ocular"
+    ],
+    "correct_answer": "o devaneio ou sonhar acordado",
+    "explanation": "'daydream' é formada por \"day\" (dia) + \"dream\" (sonho) e significa o devaneio ou sonhar acordado — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"day\" + \"dream\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They found a jellyfish near the house.\", o que significa a palavra composta 'jellyfish'?",
+    "options": [
+      "a maquiagem",
+      "a água-viva",
+      "o pôr do sol",
+      "o globo ocular"
+    ],
+    "correct_answer": "a água-viva",
+    "explanation": "'jellyfish' é formada por \"jelly\" (geleia) + \"fish\" (peixe) e significa a água-viva — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"jelly\" + \"fish\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a ladybug yesterday.\", o que significa a palavra composta 'ladybug'?",
+    "options": [
+      "a água-viva",
+      "a dor de cabeça",
+      "a joaninha",
+      "o devaneio ou sonhar acordado"
+    ],
+    "correct_answer": "a joaninha",
+    "explanation": "'ladybug' é formada por \"lady\" (senhora) + \"bug\" (inseto) e significa a joaninha — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"lady\" + \"bug\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the watermelon at school.\", o que significa a palavra composta 'watermelon'?",
+    "options": [
+      "a maquiagem",
+      "a melancia",
+      "a dor de cabeça",
+      "o parquinho ou a área de recreação"
+    ],
+    "correct_answer": "a melancia",
+    "explanation": "'watermelon' é formada por \"water\" (água) + \"melon\" (melão) e significa a melancia — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"water\" + \"melon\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We learned a new word: playground.\", o que significa a palavra composta 'playground'?",
+    "options": [
+      "o parquinho ou a área de recreação",
+      "a joaninha",
+      "o pôr do sol",
+      "a dor de cabeça"
+    ],
+    "correct_answer": "o parquinho ou a área de recreação",
+    "explanation": "'playground' é formada por \"play\" (brincar) + \"ground\" (chão) e significa o parquinho ou a área de recreação — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"play\" + \"ground\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"There was a sunrise in the story.\", o que significa a palavra composta 'sunrise'?",
+    "options": [
+      "o terremoto",
+      "o nascer do sol",
+      "o pôr do sol",
+      "o batimento cardíaco"
+    ],
+    "correct_answer": "o nascer do sol",
+    "explanation": "'sunrise' é formada por \"sun\" (sol) + \"rise\" (subir) e significa o nascer do sol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"rise\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My friend mentioned the sunset today.\", o que significa a palavra composta 'sunset'?",
+    "options": [
+      "o pôr do sol",
+      "baixar um arquivo",
+      "o plano de fundo ou o histórico",
+      "o globo ocular"
+    ],
+    "correct_answer": "o pôr do sol",
+    "explanation": "'sunset' é formada por \"sun\" (sol) + \"set\" (pôr) e significa o pôr do sol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"set\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The teacher explained what an eyeball is.\", o que significa a palavra composta 'eyeball'?",
+    "options": [
+      "a joaninha",
+      "baixar um arquivo",
+      "o globo ocular",
+      "o nascer do sol"
+    ],
+    "correct_answer": "o globo ocular",
+    "explanation": "'eyeball' é formada por \"eye\" (olho) + \"ball\" (bola) e significa o globo ocular — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"eye\" + \"ball\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He wrote about the background in his notebook.\", o que significa a palavra composta 'background'?",
+    "options": [
+      "o pôr do sol",
+      "o corte de cabelo",
+      "o plano de fundo ou o histórico",
+      "a melancia"
+    ],
+    "correct_answer": "o plano de fundo ou o histórico",
+    "explanation": "'background' é formada por \"back\" (fundo) + \"ground\" (chão) e significa o plano de fundo ou o histórico — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"back\" + \"ground\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They found a download near the house.\", o que significa a palavra composta 'download'?",
+    "options": [
+      "a joaninha",
+      "o plano de fundo ou o histórico",
+      "a melancia",
+      "baixar um arquivo"
+    ],
+    "correct_answer": "baixar um arquivo",
+    "explanation": "'download' é formada por \"down\" (para baixo) + \"load\" (carregar) e significa baixar um arquivo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"down\" + \"load\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw overtime yesterday.\", o que significa a palavra composta 'overtime'?",
+    "options": [
+      "a hora extra",
+      "a dor de cabeça",
+      "o corte de cabelo",
+      "a maquiagem"
+    ],
+    "correct_answer": "a hora extra",
+    "explanation": "'overtime' é formada por \"over\" (excedente) + \"time\" (tempo) e significa a hora extra — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"over\" + \"time\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She talked about the haircut at school.\", o que significa a palavra composta 'haircut'?",
+    "options": [
+      "o nascer do sol",
+      "a maquiagem",
+      "o corte de cabelo",
+      "baixar um arquivo"
+    ],
+    "correct_answer": "o corte de cabelo",
+    "explanation": "'haircut' é formada por \"hair\" (cabelo) + \"cut\" (corte) e significa o corte de cabelo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"hair\" + \"cut\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a butterfly in the story.\", o que significa a palavra composta 'butterfly'?",
+    "options": [
+      "a borboleta",
+      "o globo ocular",
+      "o plano de fundo ou o histórico",
+      "o devaneio ou sonhar acordado"
+    ],
+    "correct_answer": "a borboleta",
+    "explanation": "'butterfly' é formada por \"butter\" (manteiga) + \"fly\" (mosca) e significa a borboleta — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"butter\" + \"fly\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the earthquake today.\", o que significa a palavra composta 'earthquake'?",
+    "options": [
+      "o corte de cabelo",
+      "o terremoto",
+      "a hora extra",
+      "o parquinho ou a área de recreação"
+    ],
+    "correct_answer": "o terremoto",
+    "explanation": "'earthquake' é formada por \"earth\" (terra) + \"quake\" (tremor) e significa o terremoto — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"earth\" + \"quake\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a headache is.\", o que significa a palavra composta 'headache'?",
+    "options": [
+      "o plano de fundo ou o histórico",
+      "a joaninha",
+      "a queimadura de sol",
+      "a dor de cabeça"
+    ],
+    "correct_answer": "a dor de cabeça",
+    "explanation": "'headache' é formada por \"head\" (cabeça) + \"ache\" (dor) e significa a dor de cabeça — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"head\" + \"ache\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the heartbeat in his notebook.\", o que significa a palavra composta 'heartbeat'?",
+    "options": [
+      "o parquinho ou a área de recreação",
+      "a joaninha",
+      "a hora extra",
+      "o batimento cardíaco"
+    ],
+    "correct_answer": "o batimento cardíaco",
+    "explanation": "'heartbeat' é formada por \"heart\" (coração) + \"beat\" (batida) e significa o batimento cardíaco — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"heart\" + \"beat\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: makeup.\", o que significa a palavra composta 'makeup'?",
+    "options": [
+      "o globo ocular",
+      "o corte de cabelo",
+      "o nascer do sol",
+      "a maquiagem"
+    ],
+    "correct_answer": "a maquiagem",
+    "explanation": "'makeup' é formada por \"make\" (fazer) + \"up\" (para cima) e significa a maquiagem — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"make\" + \"up\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a sunburn yesterday.\", o que significa a palavra composta 'sunburn'?",
+    "options": [
+      "a queimadura de sol",
+      "a melancia",
+      "o corte de cabelo",
+      "o globo ocular"
+    ],
+    "correct_answer": "a queimadura de sol",
+    "explanation": "'sunburn' é formada por \"sun\" (sol) + \"burn\" (queimadura) e significa a queimadura de sol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"burn\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the daydream at school.\", o que significa a palavra composta 'daydream'?",
+    "options": [
+      "a hora extra",
+      "baixar um arquivo",
+      "o corte de cabelo",
+      "o devaneio ou sonhar acordado"
+    ],
+    "correct_answer": "o devaneio ou sonhar acordado",
+    "explanation": "'daydream' é formada por \"day\" (dia) + \"dream\" (sonho) e significa o devaneio ou sonhar acordado — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"day\" + \"dream\"."
+    ],
+    "age_reviewed": true
+  }
+]

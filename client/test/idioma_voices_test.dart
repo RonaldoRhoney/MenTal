@@ -29,10 +29,17 @@ void main() {
       'ingles_phrasal_relampago_avancado',
       'ingles_expressoes_intermediario',
       'ingles_expressoes_relampago_basico',
+      'ingles_compostas_basico',
+      'ingles_compostas_relampago_avancado',
+      'ingles_contracoes_intermediario',
+      'ingles_contracoes_relampago_basico',
     ]) {
       expect(voiceForTerritory(territoryId), 'pt-BR-FranciscaNeural', reason: territoryId);
     }
     // Vocabulário clássico continua com a voz do idioma (opção É a palavra estrangeira).
     expect(voiceForTerritory('ingles_basico'), 'en-US-AriaNeural');
+    // Conjugação Verbal É o padrão contrário: opção é a forma verbal em inglês, não o
+    // significado em português — continua com a voz do idioma.
+    expect(voiceForTerritory('ingles_conjugacao_basico'), 'en-US-AriaNeural');
   });
 }

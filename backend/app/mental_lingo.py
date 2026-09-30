@@ -54,6 +54,11 @@ _ASK_PATTERNS = [
     # "como eu falo/digo X em inglês", "como posso dizer X em inglês", "como é X em inglês"...
     re.compile(r"^como (?:eu )?(?:posso |consigo |faço para )?(?:falo|digo|dizer|falar|escrever|escrevo)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^como (?:é|seria|fica)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
+    # MENTAL_LINGO_RELATORIO_TESTES_CAMPO_V1.md §2.2 item 4 (achado em teste real, 27-28/09/2026):
+    # "como eu diria X" é MOLDURA DE INSTRUÇÃO ("diria" no condicional, não capturado pelas formas
+    # no infinitivo/imperativo acima), não conteúdo a traduzir — sem esta linha, a frase inteira
+    # (incluindo "como eu diria") vazava pro tradutor do aparelho. Cobre com e sem idioma explícito.
+    re.compile(r"^como (?:eu )?(?:diria|falaria)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^(?:diga|fale|escreva)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^tradu(?:z|za|zo|zir)\s+(?:a palavra\s+|a frase\s+)?(.+?)\s+(?:para|em)\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)\s+(?:para|em)\s+(\w+)\??$", re.IGNORECASE),
@@ -62,6 +67,7 @@ _ASK_PATTERNS = [
     re.compile(r"^qual\s+(?:é\s+)?a\s+palavra\s+(?:para|de)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^o que\s+(?:é|seria)\s+(.+?)\s+em\s+(\w+)\??$", re.IGNORECASE),
     re.compile(r"^como\s+(?:se\s+)?(?:diz|fala|escreve)\s+(.+?)\??$", re.IGNORECASE),
+    re.compile(r"^como\s+(?:eu\s+)?(?:diria|falaria)\s+(.+?)\??$", re.IGNORECASE),
     re.compile(r"^qual\s+(?:é\s+)?a\s+tradu[çc][ãa]o\s+de\s+(.+?)\??$", re.IGNORECASE),
     re.compile(r"^(.+?)\s+em\s+(ingl[êe]s|english|espanhol|español|franc[êe]s|français)\??$", re.IGNORECASE),
 ]

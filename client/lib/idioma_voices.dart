@@ -25,6 +25,11 @@ const String _kPortugueseVoice = 'pt-BR-FranciscaNeural';
 const List<String> _kPortugueseOptionsTerritoryPrefixes = [
   'ingles_phrasal',
   'ingles_expressoes',
+  // Palavras Compostas e Contrações Informais (MUNDO_IDIOMAS_INGLES_PALAVRAS_COMPOSTAS_E_
+  // CONTRACOES_V1.md, 29/09/2026): mesmo padrão invertido — enunciado em inglês, opções são
+  // o SIGNIFICADO em português.
+  'ingles_compostas',
+  'ingles_contracoes',
 ];
 
 /// Territórios hoje são "<idioma>_<nivel>" (ingles_basico,

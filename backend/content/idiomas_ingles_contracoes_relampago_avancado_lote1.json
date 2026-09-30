@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"That ain't fair.\", o que significa a contração ain't? (forma informal de \"am not / is not / are not / has not / have not\")",
+    "options": [
+      "não sei ou nem sei",
+      "tenho que ou preciso",
+      "vocês ou galera",
+      "não é ou não sou"
+    ],
+    "correct_answer": "não é ou não sou",
+    "explanation": "'ain't' é a forma informal/contraída de \"am not / is not / are not / has not / have not\" e significa não é ou não sou. Registro: bem informal/regional, evitar em contexto formal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"am not / is not / are not / has not / have not\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Y'all want some coffee?\", o que significa a contração y'all? (forma informal de \"you all\")",
+    "options": [
+      "vocês ou galera",
+      "deveria ou devia",
+      "não é ou não sou",
+      "costumava ou costumava a"
+    ],
+    "correct_answer": "vocês ou galera",
+    "explanation": "'y'all' é a forma informal/contraída de \"you all\" e significa vocês ou galera. Registro: regional (sul dos EUA), bem informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"you all\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I dunno her name.\", o que significa 'dunno'? (forma informal de \"don't know\")",
+    "options": [
+      "tenho que ou preciso",
+      "deveria ou devia",
+      "não sei ou nem sei",
+      "não é ou não sou"
+    ],
+    "correct_answer": "não sei ou nem sei",
+    "explanation": "'dunno' é a forma informal/contraída de \"don't know\" e significa não sei ou nem sei. Registro: bem informal, fala muito rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"don't know\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I hafta call her back.\", o que significa 'hafta'? (forma informal de \"have to\")",
+    "options": [
+      "tenho que ou preciso",
+      "não é ou não sou",
+      "não sei ou nem sei",
+      "costumava ou costumava a"
+    ],
+    "correct_answer": "tenho que ou preciso",
+    "explanation": "'hafta' é a forma informal/contraída de \"have to\" e significa tenho que ou preciso. Registro: informal, registro mais coloquial que 'gotta'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"have to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I oughta apologize.\", o que significa 'oughta'? (forma informal de \"ought to\")",
+    "options": [
+      "não é ou não sou",
+      "deveria ou devia",
+      "vocês ou galera",
+      "costumava ou costumava a"
+    ],
+    "correct_answer": "deveria ou devia",
+    "explanation": "'oughta' é a forma informal/contraída de \"ought to\" e significa deveria ou devia. Registro: informal, menos comum que os outros.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"ought to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I useta hate vegetables.\", o que significa 'useta'? (forma informal de \"used to\")",
+    "options": [
+      "costumava ou costumava a",
+      "não é ou não sou",
+      "não sei ou nem sei",
+      "vocês ou galera"
+    ],
+    "correct_answer": "costumava ou costumava a",
+    "explanation": "'useta' é a forma informal/contraída de \"used to\" e significa costumava ou costumava a. Registro: bem informal, quase só na fala.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"used to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He ain't home right now.\", o que significa a contração ain't? (forma informal de \"am not / is not / are not / has not / have not\")",
+    "options": [
+      "costumava ou costumava a",
+      "não sei ou nem sei",
+      "tenho que ou preciso",
+      "não é ou não sou"
+    ],
+    "correct_answer": "não é ou não sou",
+    "explanation": "'ain't' é a forma informal/contraída de \"am not / is not / are not / has not / have not\" e significa não é ou não sou. Registro: bem informal/regional, evitar em contexto formal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"am not / is not / are not / has not / have not\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Y'all coming to the party?\", o que significa a contração y'all? (forma informal de \"you all\")",
+    "options": [
+      "tenho que ou preciso",
+      "não sei ou nem sei",
+      "deveria ou devia",
+      "vocês ou galera"
+    ],
+    "correct_answer": "vocês ou galera",
+    "explanation": "'y'all' é a forma informal/contraída de \"you all\" e significa vocês ou galera. Registro: regional (sul dos EUA), bem informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"you all\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I dunno how to explain it.\", o que significa 'dunno'? (forma informal de \"don't know\")",
+    "options": [
+      "não é ou não sou",
+      "tenho que ou preciso",
+      "não sei ou nem sei",
+      "costumava ou costumava a"
+    ],
+    "correct_answer": "não sei ou nem sei",
+    "explanation": "'dunno' é a forma informal/contraída de \"don't know\" e significa não sei ou nem sei. Registro: bem informal, fala muito rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"don't know\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"We hafta clean the house.\", o que significa 'hafta'? (forma informal de \"have to\")",
+    "options": [
+      "tenho que ou preciso",
+      "costumava ou costumava a",
+      "não é ou não sou",
+      "deveria ou devia"
+    ],
+    "correct_answer": "tenho que ou preciso",
+    "explanation": "'hafta' é a forma informal/contraída de \"have to\" e significa tenho que ou preciso. Registro: informal, registro mais coloquial que 'gotta'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"have to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We oughta think about it.\", o que significa 'oughta'? (forma informal de \"ought to\")",
+    "options": [
+      "costumava ou costumava a",
+      "vocês ou galera",
+      "deveria ou devia",
+      "tenho que ou preciso"
+    ],
+    "correct_answer": "deveria ou devia",
+    "explanation": "'oughta' é a forma informal/contraída de \"ought to\" e significa deveria ou devia. Registro: informal, menos comum que os outros.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"ought to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She useta run every morning.\", o que significa 'useta'? (forma informal de \"used to\")",
+    "options": [
+      "não é ou não sou",
+      "deveria ou devia",
+      "costumava ou costumava a",
+      "tenho que ou preciso"
+    ],
+    "correct_answer": "costumava ou costumava a",
+    "explanation": "'useta' é a forma informal/contraída de \"used to\" e significa costumava ou costumava a. Registro: bem informal, quase só na fala.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"used to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"This ain't the right way.\", o que significa a contração ain't? (forma informal de \"am not / is not / are not / has not / have not\")",
+    "options": [
+      "deveria ou devia",
+      "não sei ou nem sei",
+      "costumava ou costumava a",
+      "não é ou não sou"
+    ],
+    "correct_answer": "não é ou não sou",
+    "explanation": "'ain't' é a forma informal/contraída de \"am not / is not / are not / has not / have not\" e significa não é ou não sou. Registro: bem informal/regional, evitar em contexto formal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"am not / is not / are not / has not / have not\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Thanks, y'all, for the help.\", o que significa a contração y'all? (forma informal de \"you all\")",
+    "options": [
+      "não sei ou nem sei",
+      "vocês ou galera",
+      "deveria ou devia",
+      "costumava ou costumava a"
+    ],
+    "correct_answer": "vocês ou galera",
+    "explanation": "'y'all' é a forma informal/contraída de \"you all\" e significa vocês ou galera. Registro: regional (sul dos EUA), bem informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"you all\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I dunno the answer.\", o que significa 'dunno'? (forma informal de \"don't know\")",
+    "options": [
+      "não sei ou nem sei",
+      "costumava ou costumava a",
+      "vocês ou galera",
+      "não é ou não sou"
+    ],
+    "correct_answer": "não sei ou nem sei",
+    "explanation": "'dunno' é a forma informal/contraída de \"don't know\" e significa não sei ou nem sei. Registro: bem informal, fala muito rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"don't know\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"You hafta see the doctor.\", o que significa 'hafta'? (forma informal de \"have to\")",
+    "options": [
+      "tenho que ou preciso",
+      "costumava ou costumava a",
+      "deveria ou devia",
+      "não é ou não sou"
+    ],
+    "correct_answer": "tenho que ou preciso",
+    "explanation": "'hafta' é a forma informal/contraída de \"have to\" e significa tenho que ou preciso. Registro: informal, registro mais coloquial que 'gotta'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"have to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She oughta rest more.\", o que significa 'oughta'? (forma informal de \"ought to\")",
+    "options": [
+      "tenho que ou preciso",
+      "não é ou não sou",
+      "não sei ou nem sei",
+      "deveria ou devia"
+    ],
+    "correct_answer": "deveria ou devia",
+    "explanation": "'oughta' é a forma informal/contraída de \"ought to\" e significa deveria ou devia. Registro: informal, menos comum que os outros.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"ought to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We useta live downtown.\", o que significa 'useta'? (forma informal de \"used to\")",
+    "options": [
+      "deveria ou devia",
+      "não é ou não sou",
+      "vocês ou galera",
+      "costumava ou costumava a"
+    ],
+    "correct_answer": "costumava ou costumava a",
+    "explanation": "'useta' é a forma informal/contraída de \"used to\" e significa costumava ou costumava a. Registro: bem informal, quase só na fala.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"used to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She ain't finished yet.\", o que significa a contração ain't? (forma informal de \"am not / is not / are not / has not / have not\")",
+    "options": [
+      "não é ou não sou",
+      "tenho que ou preciso",
+      "costumava ou costumava a",
+      "deveria ou devia"
+    ],
+    "correct_answer": "não é ou não sou",
+    "explanation": "'ain't' é a forma informal/contraída de \"am not / is not / are not / has not / have not\" e significa não é ou não sou. Registro: bem informal/regional, evitar em contexto formal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"am not / is not / are not / has not / have not\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Y'all did a great job.\", o que significa a contração y'all? (forma informal de \"you all\")",
+    "options": [
+      "não sei ou nem sei",
+      "vocês ou galera",
+      "não é ou não sou",
+      "deveria ou devia"
+    ],
+    "correct_answer": "vocês ou galera",
+    "explanation": "'y'all' é a forma informal/contraída de \"you all\" e significa vocês ou galera. Registro: regional (sul dos EUA), bem informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"you all\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I dunno which one to choose.\", o que significa 'dunno'? (forma informal de \"don't know\")",
+    "options": [
+      "deveria ou devia",
+      "tenho que ou preciso",
+      "não sei ou nem sei",
+      "costumava ou costumava a"
+    ],
+    "correct_answer": "não sei ou nem sei",
+    "explanation": "'dunno' é a forma informal/contraída de \"don't know\" e significa não sei ou nem sei. Registro: bem informal, fala muito rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"don't know\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They hafta finish the report.\", o que significa 'hafta'? (forma informal de \"have to\")",
+    "options": [
+      "deveria ou devia",
+      "tenho que ou preciso",
+      "vocês ou galera",
+      "não é ou não sou"
+    ],
+    "correct_answer": "tenho que ou preciso",
+    "explanation": "'hafta' é a forma informal/contraída de \"have to\" e significa tenho que ou preciso. Registro: informal, registro mais coloquial que 'gotta'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"have to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He oughta study harder.\", o que significa 'oughta'? (forma informal de \"ought to\")",
+    "options": [
+      "tenho que ou preciso",
+      "não é ou não sou",
+      "vocês ou galera",
+      "deveria ou devia"
+    ],
+    "correct_answer": "deveria ou devia",
+    "explanation": "'oughta' é a forma informal/contraída de \"ought to\" e significa deveria ou devia. Registro: informal, menos comum que os outros.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"ought to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He useta play soccer.\", o que significa 'useta'? (forma informal de \"used to\")",
+    "options": [
+      "costumava ou costumava a",
+      "tenho que ou preciso",
+      "vocês ou galera",
+      "deveria ou devia"
+    ],
+    "correct_answer": "costumava ou costumava a",
+    "explanation": "'useta' é a forma informal/contraída de \"used to\" e significa costumava ou costumava a. Registro: bem informal, quase só na fala.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"used to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"It ain't a big deal.\", o que significa a contração ain't? (forma informal de \"am not / is not / are not / has not / have not\")",
+    "options": [
+      "vocês ou galera",
+      "não é ou não sou",
+      "não sei ou nem sei",
+      "deveria ou devia"
+    ],
+    "correct_answer": "não é ou não sou",
+    "explanation": "'ain't' é a forma informal/contraída de \"am not / is not / are not / has not / have not\" e significa não é ou não sou. Registro: bem informal/regional, evitar em contexto formal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"am not / is not / are not / has not / have not\"."
+    ],
+    "age_reviewed": true
+  }
+]

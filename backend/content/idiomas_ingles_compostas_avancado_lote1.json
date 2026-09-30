@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a goldfish yesterday.\", o que significa a palavra composta 'goldfish'?",
+    "options": [
+      "a demissão em massa",
+      "o bode expiatório",
+      "o peixinho dourado, não peixe de ouro",
+      "o parceiro ou ajudante fiel"
+    ],
+    "correct_answer": "o peixinho dourado, não peixe de ouro",
+    "explanation": "'goldfish' é formada por \"gold\" (ouro) + \"fish\" (peixe) e significa o peixinho dourado, não peixe de ouro — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"gold\" + \"fish\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She talked about the scapegoat at school.\", o que significa a palavra composta 'scapegoat'?",
+    "options": [
+      "o peixinho dourado, não peixe de ouro",
+      "o parceiro ou ajudante fiel",
+      "a paralisação total",
+      "o bode expiatório"
+    ],
+    "correct_answer": "o bode expiatório",
+    "explanation": "'scapegoat' é formada por \"scape\" (escape) + \"goat\" (cabra) e significa o bode expiatório — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"scape\" + \"goat\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: breakthrough.\", o que significa a palavra composta 'breakthrough'?",
+    "options": [
+      "o retorno ou a opinião sobre algo",
+      "a demissão em massa",
+      "o avanço importante ou a descoberta",
+      "o bode expiatório"
+    ],
+    "correct_answer": "o avanço importante ou a descoberta",
+    "explanation": "'breakthrough' é formada por \"break\" (quebrar) + \"through\" (através) e significa o avanço importante ou a descoberta — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"break\" + \"through\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a showdown in the story.\", o que significa a palavra composta 'showdown'?",
+    "options": [
+      "o confronto decisivo",
+      "o avanço importante ou a descoberta",
+      "o paradeiro de alguém",
+      "o eufemismo ou afirmação atenuada"
+    ],
+    "correct_answer": "o confronto decisivo",
+    "explanation": "'showdown' é formada por \"show\" (mostrar) + \"down\" (abaixo) e significa o confronto decisivo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"show\" + \"down\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the standstill today.\", o que significa a palavra composta 'standstill'?",
+    "options": [
+      "a rotatividade ou o faturamento",
+      "a paralisação total",
+      "a consequência negativa",
+      "o parceiro ou ajudante fiel"
+    ],
+    "correct_answer": "a paralisação total",
+    "explanation": "'standstill' é formada por \"stand\" (ficar em pé) + \"still\" (parado) e significa a paralisação total — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"stand\" + \"still\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a comeback is.\", o que significa a palavra composta 'comeback'?",
+    "options": [
+      "o retorno triunfante",
+      "a paralisação total",
+      "a repressão ou fiscalização rígida",
+      "o parceiro ou ajudante fiel"
+    ],
+    "correct_answer": "o retorno triunfante",
+    "explanation": "'comeback' é formada por \"come\" (vir) + \"back\" (de volta) e significa o retorno triunfante — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"come\" + \"back\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the crackdown in his notebook.\", o que significa a palavra composta 'crackdown'?",
+    "options": [
+      "a repressão ou fiscalização rígida",
+      "a paralisação total",
+      "a rotatividade ou o faturamento",
+      "a demissão em massa"
+    ],
+    "correct_answer": "a repressão ou fiscalização rígida",
+    "explanation": "'crackdown' é formada por \"crack\" (rachadura) + \"down\" (abaixo) e significa a repressão ou fiscalização rígida — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"crack\" + \"down\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: fallout.\", o que significa a palavra composta 'fallout'?",
+    "options": [
+      "a consequência negativa",
+      "o retorno triunfante",
+      "o paradeiro de alguém",
+      "o fugitivo ou algo fora de controle"
+    ],
+    "correct_answer": "a consequência negativa",
+    "explanation": "'fallout' é formada por \"fall\" (cair) + \"out\" (fora) e significa a consequência negativa — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"fall\" + \"out\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a meltdown yesterday.\", o que significa a palavra composta 'meltdown'?",
+    "options": [
+      "o colapso ou a crise total",
+      "o retorno triunfante",
+      "a demissão em massa",
+      "o surto ou a eclosão"
+    ],
+    "correct_answer": "o colapso ou a crise total",
+    "explanation": "'meltdown' é formada por \"melt\" (derreter) + \"down\" (abaixo) e significa o colapso ou a crise total — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"melt\" + \"down\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the outbreak at school.\", o que significa a palavra composta 'outbreak'?",
+    "options": [
+      "o surto ou a eclosão",
+      "o bode expiatório",
+      "o paradeiro de alguém",
+      "o colapso ou a crise total"
+    ],
+    "correct_answer": "o surto ou a eclosão",
+    "explanation": "'outbreak' é formada por \"out\" (fora) + \"break\" (irromper) e significa o surto ou a eclosão — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"out\" + \"break\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We learned a new word: turnover.\", o que significa a palavra composta 'turnover'?",
+    "options": [
+      "a consequência negativa",
+      "a rotatividade ou o faturamento",
+      "o parceiro ou ajudante fiel",
+      "o retorno ou a opinião sobre algo"
+    ],
+    "correct_answer": "a rotatividade ou o faturamento",
+    "explanation": "'turnover' é formada por \"turn\" (virar) + \"over\" (sobre) e significa a rotatividade ou o faturamento — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"turn\" + \"over\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"There was a layoff in the story.\", o que significa a palavra composta 'layoff'?",
+    "options": [
+      "a rotatividade ou o faturamento",
+      "o retorno triunfante",
+      "o parceiro ou ajudante fiel",
+      "a demissão em massa"
+    ],
+    "correct_answer": "a demissão em massa",
+    "explanation": "'layoff' é formada por \"lay\" (dispensar) + \"off\" (fora) e significa a demissão em massa — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"lay\" + \"off\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My friend mentioned the drawback today.\", o que significa a palavra composta 'drawback'?",
+    "options": [
+      "a desvantagem",
+      "a rotatividade ou o faturamento",
+      "a demissão em massa",
+      "o colapso ou a crise total"
+    ],
+    "correct_answer": "a desvantagem",
+    "explanation": "'drawback' é formada por \"draw\" (puxar) + \"back\" (de volta) e significa a desvantagem — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"draw\" + \"back\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The teacher explained what feedback is.\", o que significa a palavra composta 'feedback'?",
+    "options": [
+      "o retorno ou a opinião sobre algo",
+      "o bode expiatório",
+      "a rotatividade ou o faturamento",
+      "a paralisação total"
+    ],
+    "correct_answer": "o retorno ou a opinião sobre algo",
+    "explanation": "'feedback' é formada por \"feed\" (alimentar) + \"back\" (de volta) e significa o retorno ou a opinião sobre algo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"feed\" + \"back\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He wrote about the whereabouts in his notebook.\", o que significa a palavra composta 'whereabouts'?",
+    "options": [
+      "o colapso ou a crise total",
+      "o paradeiro de alguém",
+      "a repressão ou fiscalização rígida",
+      "a rotatividade ou o faturamento"
+    ],
+    "correct_answer": "o paradeiro de alguém",
+    "explanation": "'whereabouts' é formada por \"where\" (onde) + \"abouts\" (por perto) e significa o paradeiro de alguém — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"where\" + \"abouts\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They found a runaway near the house.\", o que significa a palavra composta 'runaway'?",
+    "options": [
+      "o fugitivo ou algo fora de controle",
+      "o surto ou a eclosão",
+      "o paradeiro de alguém",
+      "o peixinho dourado, não peixe de ouro"
+    ],
+    "correct_answer": "o fugitivo ou algo fora de controle",
+    "explanation": "'runaway' é formada por \"run\" (correr) + \"away\" (para longe) e significa o fugitivo ou algo fora de controle — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"run\" + \"away\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a sidekick yesterday.\", o que significa a palavra composta 'sidekick'?",
+    "options": [
+      "o parceiro ou ajudante fiel",
+      "o eufemismo ou afirmação atenuada",
+      "o confronto decisivo",
+      "o paradeiro de alguém"
+    ],
+    "correct_answer": "o parceiro ou ajudante fiel",
+    "explanation": "'sidekick' é formada por \"side\" (lado) + \"kick\" (chute) e significa o parceiro ou ajudante fiel — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"side\" + \"kick\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She talked about the understatement at school.\", o que significa a palavra composta 'understatement'?",
+    "options": [
+      "o fugitivo ou algo fora de controle",
+      "o eufemismo ou afirmação atenuada",
+      "o peixinho dourado, não peixe de ouro",
+      "a consequência negativa"
+    ],
+    "correct_answer": "o eufemismo ou afirmação atenuada",
+    "explanation": "'understatement' é formada por \"under\" (abaixo) + \"statement\" (afirmação) e significa o eufemismo ou afirmação atenuada — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"under\" + \"statement\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a goldfish in the story.\", o que significa a palavra composta 'goldfish'?",
+    "options": [
+      "a desvantagem",
+      "o retorno ou a opinião sobre algo",
+      "o parceiro ou ajudante fiel",
+      "o peixinho dourado, não peixe de ouro"
+    ],
+    "correct_answer": "o peixinho dourado, não peixe de ouro",
+    "explanation": "'goldfish' é formada por \"gold\" (ouro) + \"fish\" (peixe) e significa o peixinho dourado, não peixe de ouro — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"gold\" + \"fish\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the scapegoat today.\", o que significa a palavra composta 'scapegoat'?",
+    "options": [
+      "a demissão em massa",
+      "o fugitivo ou algo fora de controle",
+      "a desvantagem",
+      "o bode expiatório"
+    ],
+    "correct_answer": "o bode expiatório",
+    "explanation": "'scapegoat' é formada por \"scape\" (escape) + \"goat\" (cabra) e significa o bode expiatório — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"scape\" + \"goat\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a breakthrough is.\", o que significa a palavra composta 'breakthrough'?",
+    "options": [
+      "o avanço importante ou a descoberta",
+      "a rotatividade ou o faturamento",
+      "o confronto decisivo",
+      "o parceiro ou ajudante fiel"
+    ],
+    "correct_answer": "o avanço importante ou a descoberta",
+    "explanation": "'breakthrough' é formada por \"break\" (quebrar) + \"through\" (através) e significa o avanço importante ou a descoberta — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"break\" + \"through\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the showdown in his notebook.\", o que significa a palavra composta 'showdown'?",
+    "options": [
+      "o eufemismo ou afirmação atenuada",
+      "o peixinho dourado, não peixe de ouro",
+      "o confronto decisivo",
+      "a demissão em massa"
+    ],
+    "correct_answer": "o confronto decisivo",
+    "explanation": "'showdown' é formada por \"show\" (mostrar) + \"down\" (abaixo) e significa o confronto decisivo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"show\" + \"down\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: standstill.\", o que significa a palavra composta 'standstill'?",
+    "options": [
+      "a demissão em massa",
+      "a repressão ou fiscalização rígida",
+      "o eufemismo ou afirmação atenuada",
+      "a paralisação total"
+    ],
+    "correct_answer": "a paralisação total",
+    "explanation": "'standstill' é formada por \"stand\" (ficar em pé) + \"still\" (parado) e significa a paralisação total — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"stand\" + \"still\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a comeback yesterday.\", o que significa a palavra composta 'comeback'?",
+    "options": [
+      "o retorno triunfante",
+      "o surto ou a eclosão",
+      "a desvantagem",
+      "o colapso ou a crise total"
+    ],
+    "correct_answer": "o retorno triunfante",
+    "explanation": "'comeback' é formada por \"come\" (vir) + \"back\" (de volta) e significa o retorno triunfante — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"come\" + \"back\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the crackdown at school.\", o que significa a palavra composta 'crackdown'?",
+    "options": [
+      "a consequência negativa",
+      "o fugitivo ou algo fora de controle",
+      "a repressão ou fiscalização rígida",
+      "o retorno triunfante"
+    ],
+    "correct_answer": "a repressão ou fiscalização rígida",
+    "explanation": "'crackdown' é formada por \"crack\" (rachadura) + \"down\" (abaixo) e significa a repressão ou fiscalização rígida — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"crack\" + \"down\"."
+    ],
+    "age_reviewed": true
+  }
+]

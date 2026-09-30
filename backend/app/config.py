@@ -285,6 +285,13 @@ IDIOMA_TERRITORY_IDS = {
     # o Mental Lingo precisa reconhecer/corrigir conjugação verbal quando o jogador perguntar.
     "ingles_conjugacao_basico", "ingles_conjugacao_intermediario", "ingles_conjugacao_avancado",
     "ingles_conjugacao_relampago_basico", "ingles_conjugacao_relampago_intermediario", "ingles_conjugacao_relampago_avancado",
+    # Palavras Compostas e Contrações Informais (MUNDO_IDIOMAS_INGLES_PALAVRAS_COMPOSTAS_E_
+    # CONTRACOES_V1.md, 29/09/2026) — mesmo motivo: o Mental Lingo precisa reconhecer/explicar
+    # essas duas mecânicas quando o jogador perguntar.
+    "ingles_compostas_basico", "ingles_compostas_intermediario", "ingles_compostas_avancado",
+    "ingles_compostas_relampago_basico", "ingles_compostas_relampago_intermediario", "ingles_compostas_relampago_avancado",
+    "ingles_contracoes_basico", "ingles_contracoes_intermediario", "ingles_contracoes_avancado",
+    "ingles_contracoes_relampago_basico", "ingles_contracoes_relampago_intermediario", "ingles_contracoes_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -304,6 +311,11 @@ ALWAYS_TIMED_TERRITORIES = {
     # Conjugação Verbal Relâmpago (MUNDO_IDIOMAS_CONJUGACAO_VERBAL_V1.md, 29/09/2026): mesmo
     # padrão — território próprio, sempre cronometrado, conteúdo distinto.
     "ingles_conjugacao_relampago_basico", "ingles_conjugacao_relampago_intermediario", "ingles_conjugacao_relampago_avancado",
+    # Palavras Compostas e Contrações Informais Relâmpago (MUNDO_IDIOMAS_INGLES_PALAVRAS_
+    # COMPOSTAS_E_CONTRACOES_V1.md, 29/09/2026): mesmo padrão — território próprio, sempre
+    # cronometrado, conteúdo distinto.
+    "ingles_compostas_relampago_basico", "ingles_compostas_relampago_intermediario", "ingles_compostas_relampago_avancado",
+    "ingles_contracoes_relampago_basico", "ingles_contracoes_relampago_intermediario", "ingles_contracoes_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_

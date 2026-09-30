@@ -664,6 +664,78 @@ abstract class AppLocalizations {
   /// **'Conjugação Verbal Relâmpago: Avançado'**
   String get territoryInglesConjugacaoRelampagoAvancado;
 
+  /// Territory display name — English compound words, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Compostas: Básico'**
+  String get territoryInglesCompostasBasico;
+
+  /// Territory display name — English compound words, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Compostas: Intermediário'**
+  String get territoryInglesCompostasIntermediario;
+
+  /// Territory display name — English compound words, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Compostas: Avançado'**
+  String get territoryInglesCompostasAvancado;
+
+  /// Territory display name — English compound words, timed mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Compostas Relâmpago: Básico'**
+  String get territoryInglesCompostasRelampagoBasico;
+
+  /// Territory display name — English compound words, timed mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Compostas Relâmpago: Intermediário'**
+  String get territoryInglesCompostasRelampagoIntermediario;
+
+  /// Territory display name — English compound words, timed mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Palavras Compostas Relâmpago: Avançado'**
+  String get territoryInglesCompostasRelampagoAvancado;
+
+  /// Territory display name — English informal contractions, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Contrações Informais: Básico'**
+  String get territoryInglesContracoesBasico;
+
+  /// Territory display name — English informal contractions, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Contrações Informais: Intermediário'**
+  String get territoryInglesContracoesIntermediario;
+
+  /// Territory display name — English informal contractions, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Contrações Informais: Avançado'**
+  String get territoryInglesContracoesAvancado;
+
+  /// Territory display name — English informal contractions, timed mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Contrações Informais Relâmpago: Básico'**
+  String get territoryInglesContracoesRelampagoBasico;
+
+  /// Territory display name — English informal contractions, timed mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Contrações Informais Relâmpago: Intermediário'**
+  String get territoryInglesContracoesRelampagoIntermediario;
+
+  /// Territory display name — English informal contractions, timed mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Contrações Informais Relâmpago: Avançado'**
+  String get territoryInglesContracoesRelampagoAvancado;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:

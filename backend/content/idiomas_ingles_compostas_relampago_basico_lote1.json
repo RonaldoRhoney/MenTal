@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a sunshine yesterday.\", o que significa a palavra composta 'sunshine'?",
+    "options": [
+      "a luz do sol ou um dia ensolarado",
+      "a concha do mar",
+      "a bola de neve",
+      "a sala de aula"
+    ],
+    "correct_answer": "a luz do sol ou um dia ensolarado",
+    "explanation": "'sunshine' é formada por \"sun\" (sol) + \"shine\" (brilho) e significa a luz do sol ou um dia ensolarado — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"shine\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She talked about the classroom at school.\", o que significa a palavra composta 'classroom'?",
+    "options": [
+      "a nave espacial",
+      "o jornal",
+      "a cachoeira",
+      "a sala de aula"
+    ],
+    "correct_answer": "a sala de aula",
+    "explanation": "'classroom' é formada por \"class\" (aula) + \"room\" (cômodo) e significa a sala de aula — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"class\" + \"room\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: grandmother.\", o que significa a palavra composta 'grandmother'?",
+    "options": [
+      "a bola de neve",
+      "a avó",
+      "a pasta de dente",
+      "a campainha"
+    ],
+    "correct_answer": "a avó",
+    "explanation": "'grandmother' é formada por \"grand\" (grande/avoengo) + \"mother\" (mãe) e significa a avó — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"grand\" + \"mother\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a grandfather in the story.\", o que significa a palavra composta 'grandfather'?",
+    "options": [
+      "a lareira",
+      "a concha do mar",
+      "o avô",
+      "a sala de aula"
+    ],
+    "correct_answer": "o avô",
+    "explanation": "'grandfather' é formada por \"grand\" (grande/avoengo) + \"father\" (pai) e significa o avô — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"grand\" + \"father\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the toothpaste today.\", o que significa a palavra composta 'toothpaste'?",
+    "options": [
+      "a luz do sol ou um dia ensolarado",
+      "a pasta de dente",
+      "a concha do mar",
+      "o cupcake ou bolinho individual"
+    ],
+    "correct_answer": "a pasta de dente",
+    "explanation": "'toothpaste' é formada por \"tooth\" (dente) + \"paste\" (pasta) e significa a pasta de dente — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"tooth\" + \"paste\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a doorbell is.\", o que significa a palavra composta 'doorbell'?",
+    "options": [
+      "o jornal",
+      "a campainha",
+      "a nave espacial",
+      "o avô"
+    ],
+    "correct_answer": "a campainha",
+    "explanation": "'doorbell' é formada por \"door\" (porta) + \"bell\" (sino) e significa a campainha — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"door\" + \"bell\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the fireplace in his notebook.\", o que significa a palavra composta 'fireplace'?",
+    "options": [
+      "o avô",
+      "o jornal",
+      "a concha do mar",
+      "a lareira"
+    ],
+    "correct_answer": "a lareira",
+    "explanation": "'fireplace' é formada por \"fire\" (fogo) + \"place\" (lugar) e significa a lareira — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"fire\" + \"place\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They found a seashell near the house.\", o que significa a palavra composta 'seashell'?",
+    "options": [
+      "o cupcake ou bolinho individual",
+      "a pasta de dente",
+      "a concha do mar",
+      "a luz do sol ou um dia ensolarado"
+    ],
+    "correct_answer": "a concha do mar",
+    "explanation": "'seashell' é formada por \"sea\" (mar) + \"shell\" (concha) e significa a concha do mar — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sea\" + \"shell\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a snowball yesterday.\", o que significa a palavra composta 'snowball'?",
+    "options": [
+      "a bola de neve",
+      "o beisebol",
+      "o basquete",
+      "o castelo de areia"
+    ],
+    "correct_answer": "a bola de neve",
+    "explanation": "'snowball' é formada por \"snow\" (neve) + \"ball\" (bola) e significa a bola de neve — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"snow\" + \"ball\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the newspaper at school.\", o que significa a palavra composta 'newspaper'?",
+    "options": [
+      "o jornal",
+      "o cupcake ou bolinho individual",
+      "a pasta de dente",
+      "a campainha"
+    ],
+    "correct_answer": "o jornal",
+    "explanation": "'newspaper' é formada por \"news\" (notícia) + \"paper\" (papel) e significa o jornal — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"news\" + \"paper\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We learned a new word: basketball.\", o que significa a palavra composta 'basketball'?",
+    "options": [
+      "a nave espacial",
+      "o basquete",
+      "o beisebol",
+      "a pasta de dente"
+    ],
+    "correct_answer": "o basquete",
+    "explanation": "'basketball' é formada por \"basket\" (cesto) + \"ball\" (bola) e significa o basquete — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"basket\" + \"ball\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"There was a baseball in the story.\", o que significa a palavra composta 'baseball'?",
+    "options": [
+      "a sala de aula",
+      "a avó",
+      "o beisebol",
+      "o castelo de areia"
+    ],
+    "correct_answer": "o beisebol",
+    "explanation": "'baseball' é formada por \"base\" (base) + \"ball\" (bola) e significa o beisebol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"base\" + \"ball\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My friend mentioned the cupcake today.\", o que significa a palavra composta 'cupcake'?",
+    "options": [
+      "o farol",
+      "a avó",
+      "a campainha",
+      "o cupcake ou bolinho individual"
+    ],
+    "correct_answer": "o cupcake ou bolinho individual",
+    "explanation": "'cupcake' é formada por \"cup\" (xícara) + \"cake\" (bolo) e significa o cupcake ou bolinho individual — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"cup\" + \"cake\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The teacher explained what a handshake is.\", o que significa a palavra composta 'handshake'?",
+    "options": [
+      "o avô",
+      "o aperto de mão",
+      "a campainha",
+      "a bola de neve"
+    ],
+    "correct_answer": "o aperto de mão",
+    "explanation": "'handshake' é formada por \"hand\" (mão) + \"shake\" (aperto) e significa o aperto de mão — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"hand\" + \"shake\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He wrote about the lighthouse in his notebook.\", o que significa a palavra composta 'lighthouse'?",
+    "options": [
+      "o castelo de areia",
+      "a pasta de dente",
+      "a campainha",
+      "o farol"
+    ],
+    "correct_answer": "o farol",
+    "explanation": "'lighthouse' é formada por \"light\" (luz) + \"house\" (casa) e significa o farol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"light\" + \"house\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They found a waterfall near the house.\", o que significa a palavra composta 'waterfall'?",
+    "options": [
+      "a lareira",
+      "o jornal",
+      "a cachoeira",
+      "o aperto de mão"
+    ],
+    "correct_answer": "a cachoeira",
+    "explanation": "'waterfall' é formada por \"water\" (água) + \"fall\" (queda) e significa a cachoeira — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"water\" + \"fall\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a spaceship yesterday.\", o que significa a palavra composta 'spaceship'?",
+    "options": [
+      "a avó",
+      "a nave espacial",
+      "o farol",
+      "a lareira"
+    ],
+    "correct_answer": "a nave espacial",
+    "explanation": "'spaceship' é formada por \"space\" (espaço) + \"ship\" (navio) e significa a nave espacial — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"space\" + \"ship\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She talked about the sandcastle at school.\", o que significa a palavra composta 'sandcastle'?",
+    "options": [
+      "a avó",
+      "o avô",
+      "a nave espacial",
+      "o castelo de areia"
+    ],
+    "correct_answer": "o castelo de areia",
+    "explanation": "'sandcastle' é formada por \"sand\" (areia) + \"castle\" (castelo) e significa o castelo de areia — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sand\" + \"castle\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a sunshine in the story.\", o que significa a palavra composta 'sunshine'?",
+    "options": [
+      "a sala de aula",
+      "a cachoeira",
+      "o castelo de areia",
+      "a luz do sol ou um dia ensolarado"
+    ],
+    "correct_answer": "a luz do sol ou um dia ensolarado",
+    "explanation": "'sunshine' é formada por \"sun\" (sol) + \"shine\" (brilho) e significa a luz do sol ou um dia ensolarado — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"shine\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the classroom today.\", o que significa a palavra composta 'classroom'?",
+    "options": [
+      "o jornal",
+      "a cachoeira",
+      "o farol",
+      "a sala de aula"
+    ],
+    "correct_answer": "a sala de aula",
+    "explanation": "'classroom' é formada por \"class\" (aula) + \"room\" (cômodo) e significa a sala de aula — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"class\" + \"room\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a grandmother is.\", o que significa a palavra composta 'grandmother'?",
+    "options": [
+      "a campainha",
+      "o cupcake ou bolinho individual",
+      "a bola de neve",
+      "a avó"
+    ],
+    "correct_answer": "a avó",
+    "explanation": "'grandmother' é formada por \"grand\" (grande/avoengo) + \"mother\" (mãe) e significa a avó — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"grand\" + \"mother\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the grandfather in his notebook.\", o que significa a palavra composta 'grandfather'?",
+    "options": [
+      "a lareira",
+      "o avô",
+      "a concha do mar",
+      "o aperto de mão"
+    ],
+    "correct_answer": "o avô",
+    "explanation": "'grandfather' é formada por \"grand\" (grande/avoengo) + \"father\" (pai) e significa o avô — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"grand\" + \"father\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They found a toothpaste near the house.\", o que significa a palavra composta 'toothpaste'?",
+    "options": [
+      "a pasta de dente",
+      "o cupcake ou bolinho individual",
+      "a concha do mar",
+      "o castelo de areia"
+    ],
+    "correct_answer": "a pasta de dente",
+    "explanation": "'toothpaste' é formada por \"tooth\" (dente) + \"paste\" (pasta) e significa a pasta de dente — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"tooth\" + \"paste\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a doorbell yesterday.\", o que significa a palavra composta 'doorbell'?",
+    "options": [
+      "o basquete",
+      "a avó",
+      "a lareira",
+      "a campainha"
+    ],
+    "correct_answer": "a campainha",
+    "explanation": "'doorbell' é formada por \"door\" (porta) + \"bell\" (sino) e significa a campainha — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"door\" + \"bell\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the fireplace at school.\", o que significa a palavra composta 'fireplace'?",
+    "options": [
+      "a luz do sol ou um dia ensolarado",
+      "a concha do mar",
+      "o farol",
+      "a lareira"
+    ],
+    "correct_answer": "a lareira",
+    "explanation": "'fireplace' é formada por \"fire\" (fogo) + \"place\" (lugar) e significa a lareira — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"fire\" + \"place\"."
+    ],
+    "age_reviewed": true
+  }
+]

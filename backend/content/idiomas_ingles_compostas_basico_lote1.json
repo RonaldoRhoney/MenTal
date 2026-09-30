@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a sunflower yesterday.\", o que significa a palavra composta 'sunflower'?",
+    "options": [
+      "o café da manhã ou a primeira refeição",
+      "o arco-íris",
+      "o girassol ou a flor do sol",
+      "o fim de semana"
+    ],
+    "correct_answer": "o girassol ou a flor do sol",
+    "explanation": "'sunflower' é formada por \"sun\" (sol) + \"flower\" (flor) e significa o girassol ou a flor do sol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"flower\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She talked about the football at school.\", o que significa a palavra composta 'football'?",
+    "options": [
+      "o caderno ou o livro de anotações",
+      "o aniversário ou o dia de nascimento",
+      "a luz do sol ou a claridade solar",
+      "o futebol ou o esporte com os pés"
+    ],
+    "correct_answer": "o futebol ou o esporte com os pés",
+    "explanation": "'football' é formada por \"foot\" (pé) + \"ball\" (bola) e significa o futebol ou o esporte com os pés — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"foot\" + \"ball\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: birthday.\", o que significa a palavra composta 'birthday'?",
+    "options": [
+      "o quarto ou o cômodo da cama",
+      "a lição de casa ou o dever escolar",
+      "o aniversário ou o dia de nascimento",
+      "o fim de semana"
+    ],
+    "correct_answer": "o aniversário ou o dia de nascimento",
+    "explanation": "'birthday' é formada por \"birth\" (nascimento) + \"day\" (dia) e significa o aniversário ou o dia de nascimento — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"birth\" + \"day\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a raincoat in the story.\", o que significa a palavra composta 'raincoat'?",
+    "options": [
+      "a luz do sol ou a claridade solar",
+      "a capa de chuva ou o casaco impermeável",
+      "o girassol ou a flor do sol",
+      "o futebol ou o esporte com os pés"
+    ],
+    "correct_answer": "a capa de chuva ou o casaco impermeável",
+    "explanation": "'raincoat' é formada por \"rain\" (chuva) + \"coat\" (casaco) e significa a capa de chuva ou o casaco impermeável — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"rain\" + \"coat\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the toothbrush today.\", o que significa a palavra composta 'toothbrush'?",
+    "options": [
+      "a escova de dente",
+      "a luz do sol ou a claridade solar",
+      "o fim de semana",
+      "o aeroporto"
+    ],
+    "correct_answer": "a escova de dente",
+    "explanation": "'toothbrush' é formada por \"tooth\" (dente) + \"brush\" (escova) e significa a escova de dente — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"tooth\" + \"brush\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a bedroom is.\", o que significa a palavra composta 'bedroom'?",
+    "options": [
+      "o quarto ou o cômodo da cama",
+      "o aeroporto",
+      "a luz do sol ou a claridade solar",
+      "o café da manhã ou a primeira refeição"
+    ],
+    "correct_answer": "o quarto ou o cômodo da cama",
+    "explanation": "'bedroom' é formada por \"bed\" (cama) + \"room\" (cômodo) e significa o quarto ou o cômodo da cama — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"bed\" + \"room\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We learned a new word: notebook.\", o que significa a palavra composta 'notebook'?",
+    "options": [
+      "a capa de chuva ou o casaco impermeável",
+      "o caderno ou o livro de anotações",
+      "a lição de casa ou o dever escolar",
+      "o fim de semana"
+    ],
+    "correct_answer": "o caderno ou o livro de anotações",
+    "explanation": "'notebook' é formada por \"note\" (anotação) + \"book\" (livro) e significa o caderno ou o livro de anotações — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"note\" + \"book\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They found a blackboard near the house.\", o que significa a palavra composta 'blackboard'?",
+    "options": [
+      "o quadro-negro ou o quadro escolar",
+      "o caderno ou o livro de anotações",
+      "o fim de semana",
+      "a capa de chuva ou o casaco impermeável"
+    ],
+    "correct_answer": "o quadro-negro ou o quadro escolar",
+    "explanation": "'blackboard' é formada por \"black\" (preto) + \"board\" (quadro) e significa o quadro-negro ou o quadro escolar — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"black\" + \"board\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a snowman yesterday.\", o que significa a palavra composta 'snowman'?",
+    "options": [
+      "o boneco de neve",
+      "o quadro-negro ou o quadro escolar",
+      "o quarto ou o cômodo da cama",
+      "a capa de chuva ou o casaco impermeável"
+    ],
+    "correct_answer": "o boneco de neve",
+    "explanation": "'snowman' é formada por \"snow\" (neve) + \"man\" (homem) e significa o boneco de neve — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"snow\" + \"man\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the breakfast at school.\", o que significa a palavra composta 'breakfast'?",
+    "options": [
+      "o aeroporto",
+      "o café da manhã ou a primeira refeição",
+      "o quarto ou o cômodo da cama",
+      "a capa de chuva ou o casaco impermeável"
+    ],
+    "correct_answer": "o café da manhã ou a primeira refeição",
+    "explanation": "'breakfast' é formada por \"break\" (quebrar) + \"fast\" (jejum) e significa o café da manhã ou a primeira refeição — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"break\" + \"fast\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We learned a new word: weekend.\", o que significa a palavra composta 'weekend'?",
+    "options": [
+      "o aeroporto",
+      "o fim de semana",
+      "o futebol ou o esporte com os pés",
+      "o teclado"
+    ],
+    "correct_answer": "o fim de semana",
+    "explanation": "'weekend' é formada por \"week\" (semana) + \"end\" (fim) e significa o fim de semana — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"week\" + \"end\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"There was a sunlight in the story.\", o que significa a palavra composta 'sunlight'?",
+    "options": [
+      "o aeroporto",
+      "a luz do sol ou a claridade solar",
+      "a lição de casa ou o dever escolar",
+      "o futebol ou o esporte com os pés"
+    ],
+    "correct_answer": "a luz do sol ou a claridade solar",
+    "explanation": "'sunlight' é formada por \"sun\" (sol) + \"light\" (luz) e significa a luz do sol ou a claridade solar — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"light\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My friend mentioned the moonlight today.\", o que significa a palavra composta 'moonlight'?",
+    "options": [
+      "o luar ou a luz da lua",
+      "a escova de dente",
+      "o quadro-negro ou o quadro escolar",
+      "o arco-íris"
+    ],
+    "correct_answer": "o luar ou a luz da lua",
+    "explanation": "'moonlight' é formada por \"moon\" (lua) + \"light\" (luz) e significa o luar ou a luz da lua — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"moon\" + \"light\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The teacher explained what homework is.\", o que significa a palavra composta 'homework'?",
+    "options": [
+      "a lição de casa ou o dever escolar",
+      "o café da manhã ou a primeira refeição",
+      "o aeroporto",
+      "o futebol ou o esporte com os pés"
+    ],
+    "correct_answer": "a lição de casa ou o dever escolar",
+    "explanation": "'homework' é formada por \"home\" (casa) + \"work\" (trabalho) e significa a lição de casa ou o dever escolar — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"home\" + \"work\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He wrote about the backpack in his notebook.\", o que significa a palavra composta 'backpack'?",
+    "options": [
+      "a mochila",
+      "o caderno ou o livro de anotações",
+      "o café da manhã ou a primeira refeição",
+      "a luz do sol ou a claridade solar"
+    ],
+    "correct_answer": "a mochila",
+    "explanation": "'backpack' é formada por \"back\" (costas) + \"pack\" (pacote) e significa a mochila — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"back\" + \"pack\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They found a keyboard near the house.\", o que significa a palavra composta 'keyboard'?",
+    "options": [
+      "a lição de casa ou o dever escolar",
+      "a escova de dente",
+      "o arco-íris",
+      "o teclado"
+    ],
+    "correct_answer": "o teclado",
+    "explanation": "'keyboard' é formada por \"key\" (tecla) + \"board\" (tábua) e significa o teclado — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"key\" + \"board\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw an airport yesterday.\", o que significa a palavra composta 'airport'?",
+    "options": [
+      "o quadro-negro ou o quadro escolar",
+      "o aeroporto",
+      "o teclado",
+      "a escova de dente"
+    ],
+    "correct_answer": "o aeroporto",
+    "explanation": "'airport' é formada por \"air\" (ar) + \"port\" (porto) e significa o aeroporto — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"air\" + \"port\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She talked about the rainbow at school.\", o que significa a palavra composta 'rainbow'?",
+    "options": [
+      "o girassol ou a flor do sol",
+      "o teclado",
+      "o arco-íris",
+      "a capa de chuva ou o casaco impermeável"
+    ],
+    "correct_answer": "o arco-íris",
+    "explanation": "'rainbow' é formada por \"rain\" (chuva) + \"bow\" (arco) e significa o arco-íris — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"rain\" + \"bow\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a sunflower in the story.\", o que significa a palavra composta 'sunflower'?",
+    "options": [
+      "a capa de chuva ou o casaco impermeável",
+      "o boneco de neve",
+      "o girassol ou a flor do sol",
+      "o café da manhã ou a primeira refeição"
+    ],
+    "correct_answer": "o girassol ou a flor do sol",
+    "explanation": "'sunflower' é formada por \"sun\" (sol) + \"flower\" (flor) e significa o girassol ou a flor do sol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"flower\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the football today.\", o que significa a palavra composta 'football'?",
+    "options": [
+      "o futebol ou o esporte com os pés",
+      "o café da manhã ou a primeira refeição",
+      "o boneco de neve",
+      "a lição de casa ou o dever escolar"
+    ],
+    "correct_answer": "o futebol ou o esporte com os pés",
+    "explanation": "'football' é formada por \"foot\" (pé) + \"ball\" (bola) e significa o futebol ou o esporte com os pés — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"foot\" + \"ball\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a birthday is.\", o que significa a palavra composta 'birthday'?",
+    "options": [
+      "o fim de semana",
+      "o aniversário ou o dia de nascimento",
+      "o teclado",
+      "o café da manhã ou a primeira refeição"
+    ],
+    "correct_answer": "o aniversário ou o dia de nascimento",
+    "explanation": "'birthday' é formada por \"birth\" (nascimento) + \"day\" (dia) e significa o aniversário ou o dia de nascimento — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"birth\" + \"day\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the raincoat in his notebook.\", o que significa a palavra composta 'raincoat'?",
+    "options": [
+      "o arco-íris",
+      "o quadro-negro ou o quadro escolar",
+      "a capa de chuva ou o casaco impermeável",
+      "a escova de dente"
+    ],
+    "correct_answer": "a capa de chuva ou o casaco impermeável",
+    "explanation": "'raincoat' é formada por \"rain\" (chuva) + \"coat\" (casaco) e significa a capa de chuva ou o casaco impermeável — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"rain\" + \"coat\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They found a toothbrush near the house.\", o que significa a palavra composta 'toothbrush'?",
+    "options": [
+      "a mochila",
+      "o fim de semana",
+      "a escova de dente",
+      "o teclado"
+    ],
+    "correct_answer": "a escova de dente",
+    "explanation": "'toothbrush' é formada por \"tooth\" (dente) + \"brush\" (escova) e significa a escova de dente — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"tooth\" + \"brush\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a bedroom yesterday.\", o que significa a palavra composta 'bedroom'?",
+    "options": [
+      "o quadro-negro ou o quadro escolar",
+      "o quarto ou o cômodo da cama",
+      "a capa de chuva ou o casaco impermeável",
+      "a escova de dente"
+    ],
+    "correct_answer": "o quarto ou o cômodo da cama",
+    "explanation": "'bedroom' é formada por \"bed\" (cama) + \"room\" (cômodo) e significa o quarto ou o cômodo da cama — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"bed\" + \"room\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the notebook at school.\", o que significa a palavra composta 'notebook'?",
+    "options": [
+      "a capa de chuva ou o casaco impermeável",
+      "a lição de casa ou o dever escolar",
+      "o caderno ou o livro de anotações",
+      "o café da manhã ou a primeira refeição"
+    ],
+    "correct_answer": "o caderno ou o livro de anotações",
+    "explanation": "'notebook' é formada por \"note\" (anotação) + \"book\" (livro) e significa o caderno ou o livro de anotações — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"note\" + \"book\"."
+    ],
+    "age_reviewed": true
+  }
+]

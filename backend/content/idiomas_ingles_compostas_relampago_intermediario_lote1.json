@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a heatwave yesterday.\", o que significa a palavra composta 'heatwave'?",
+    "options": [
+      "o touchdown ou o pouso",
+      "o skate",
+      "a onda de calor",
+      "o papel de parede"
+    ],
+    "correct_answer": "a onda de calor",
+    "explanation": "'heatwave' é formada por \"heat\" (calor) + \"wave\" (onda) e significa a onda de calor — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"heat\" + \"wave\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She talked about the shortcut at school.\", o que significa a palavra composta 'shortcut'?",
+    "options": [
+      "o passo de dança pra trás (moonwalk)",
+      "o skate",
+      "o andar de baixo",
+      "o atalho"
+    ],
+    "correct_answer": "o atalho",
+    "explanation": "'shortcut' é formada por \"short\" (curto) + \"cut\" (corte) e significa o atalho — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"short\" + \"cut\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: flashlight.\", o que significa a palavra composta 'flashlight'?",
+    "options": [
+      "o protetor solar",
+      "a lanterna",
+      "a hora de dormir",
+      "o papel de parede"
+    ],
+    "correct_answer": "a lanterna",
+    "explanation": "'flashlight' é formada por \"flash\" (clarão) + \"light\" (luz) e significa a lanterna — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"flash\" + \"light\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a doorknob in the story.\", o que significa a palavra composta 'doorknob'?",
+    "options": [
+      "o andar de cima",
+      "a maçaneta da porta",
+      "a floresta tropical",
+      "o atalho"
+    ],
+    "correct_answer": "a maçaneta da porta",
+    "explanation": "'doorknob' é formada por \"door\" (porta) + \"knob\" (maçaneta) e significa a maçaneta da porta — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"door\" + \"knob\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the upstairs today.\", o que significa a palavra composta 'upstairs'?",
+    "options": [
+      "o passo de dança pra trás (moonwalk)",
+      "a lanterna",
+      "o andar de cima",
+      "o skate"
+    ],
+    "correct_answer": "o andar de cima",
+    "explanation": "'upstairs' é formada por \"up\" (para cima) + \"stairs\" (escadas) e significa o andar de cima — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"up\" + \"stairs\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a downstairs is.\", o que significa a palavra composta 'downstairs'?",
+    "options": [
+      "o andar de cima",
+      "o andar de baixo",
+      "a floresta tropical",
+      "o holofote ou o centro das atenções"
+    ],
+    "correct_answer": "o andar de baixo",
+    "explanation": "'downstairs' é formada por \"down\" (para baixo) + \"stairs\" (escadas) e significa o andar de baixo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"down\" + \"stairs\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the sunscreen in his notebook.\", o que significa a palavra composta 'sunscreen'?",
+    "options": [
+      "o protetor solar",
+      "o papel de parede",
+      "a livraria",
+      "o skate"
+    ],
+    "correct_answer": "o protetor solar",
+    "explanation": "'sunscreen' é formada por \"sun\" (sol) + \"screen\" (tela/proteção) e significa o protetor solar — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"screen\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They found a lifeguard near the house.\", o que significa a palavra composta 'lifeguard'?",
+    "options": [
+      "o protetor solar",
+      "a lanterna",
+      "o salva-vidas",
+      "o papel de parede"
+    ],
+    "correct_answer": "o salva-vidas",
+    "explanation": "'lifeguard' é formada por \"life\" (vida) + \"guard\" (guarda) e significa o salva-vidas — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"life\" + \"guard\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a rainforest yesterday.\", o que significa a palavra composta 'rainforest'?",
+    "options": [
+      "o andar de cima",
+      "a floresta tropical",
+      "o andar de baixo",
+      "o papel de parede"
+    ],
+    "correct_answer": "a floresta tropical",
+    "explanation": "'rainforest' é formada por \"rain\" (chuva) + \"forest\" (floresta) e significa a floresta tropical — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"rain\" + \"forest\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the snowflake at school.\", o que significa a palavra composta 'snowflake'?",
+    "options": [
+      "tomar banho de sol",
+      "a lanterna",
+      "o floco de neve",
+      "a maçaneta da porta"
+    ],
+    "correct_answer": "o floco de neve",
+    "explanation": "'snowflake' é formada por \"snow\" (neve) + \"flake\" (floco) e significa o floco de neve — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"snow\" + \"flake\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We learned a new word: spotlight.\", o que significa a palavra composta 'spotlight'?",
+    "options": [
+      "o touchdown ou o pouso",
+      "o holofote ou o centro das atenções",
+      "a floresta tropical",
+      "o atalho"
+    ],
+    "correct_answer": "o holofote ou o centro das atenções",
+    "explanation": "'spotlight' é formada por \"spot\" (ponto) + \"light\" (luz) e significa o holofote ou o centro das atenções — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"spot\" + \"light\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"There was a wallpaper in the story.\", o que significa a palavra composta 'wallpaper'?",
+    "options": [
+      "o papel de parede",
+      "a lanterna",
+      "o atalho",
+      "tomar banho de sol"
+    ],
+    "correct_answer": "o papel de parede",
+    "explanation": "'wallpaper' é formada por \"wall\" (parede) + \"paper\" (papel) e significa o papel de parede — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"wall\" + \"paper\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My friend mentioned the bookstore today.\", o que significa a palavra composta 'bookstore'?",
+    "options": [
+      "o andar de baixo",
+      "o papel de parede",
+      "o atalho",
+      "a livraria"
+    ],
+    "correct_answer": "a livraria",
+    "explanation": "'bookstore' é formada por \"book\" (livro) + \"store\" (loja) e significa a livraria — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"book\" + \"store\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The teacher explained what a bedtime is.\", o que significa a palavra composta 'bedtime'?",
+    "options": [
+      "o protetor solar",
+      "a onda de calor",
+      "a hora de dormir",
+      "o andar de cima"
+    ],
+    "correct_answer": "a hora de dormir",
+    "explanation": "'bedtime' é formada por \"bed\" (cama) + \"time\" (hora) e significa a hora de dormir — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"bed\" + \"time\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He wrote about the skateboard in his notebook.\", o que significa a palavra composta 'skateboard'?",
+    "options": [
+      "o skate",
+      "o holofote ou o centro das atenções",
+      "a hora de dormir",
+      "o atalho"
+    ],
+    "correct_answer": "o skate",
+    "explanation": "'skateboard' é formada por \"skate\" (patim) + \"board\" (tábua) e significa o skate — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"skate\" + \"board\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They found a touchdown near the house.\", o que significa a palavra composta 'touchdown'?",
+    "options": [
+      "o touchdown ou o pouso",
+      "o salva-vidas",
+      "o atalho",
+      "o floco de neve"
+    ],
+    "correct_answer": "o touchdown ou o pouso",
+    "explanation": "'touchdown' é formada por \"touch\" (tocar) + \"down\" (abaixo) e significa o touchdown ou o pouso — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"touch\" + \"down\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a moonwalk yesterday.\", o que significa a palavra composta 'moonwalk'?",
+    "options": [
+      "a floresta tropical",
+      "o passo de dança pra trás (moonwalk)",
+      "o andar de cima",
+      "a livraria"
+    ],
+    "correct_answer": "o passo de dança pra trás (moonwalk)",
+    "explanation": "'moonwalk' é formada por \"moon\" (lua) + \"walk\" (andar) e significa o passo de dança pra trás (moonwalk) — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"moon\" + \"walk\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She talked about the sunbathe at school.\", o que significa a palavra composta 'sunbathe'?",
+    "options": [
+      "o passo de dança pra trás (moonwalk)",
+      "a maçaneta da porta",
+      "a livraria",
+      "tomar banho de sol"
+    ],
+    "correct_answer": "tomar banho de sol",
+    "explanation": "'sunbathe' é formada por \"sun\" (sol) + \"bathe\" (banhar-se) e significa tomar banho de sol — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"bathe\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a heatwave in the story.\", o que significa a palavra composta 'heatwave'?",
+    "options": [
+      "o protetor solar",
+      "a onda de calor",
+      "o passo de dança pra trás (moonwalk)",
+      "o papel de parede"
+    ],
+    "correct_answer": "a onda de calor",
+    "explanation": "'heatwave' é formada por \"heat\" (calor) + \"wave\" (onda) e significa a onda de calor — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"heat\" + \"wave\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the shortcut today.\", o que significa a palavra composta 'shortcut'?",
+    "options": [
+      "a floresta tropical",
+      "a onda de calor",
+      "o skate",
+      "o atalho"
+    ],
+    "correct_answer": "o atalho",
+    "explanation": "'shortcut' é formada por \"short\" (curto) + \"cut\" (corte) e significa o atalho — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"short\" + \"cut\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a flashlight is.\", o que significa a palavra composta 'flashlight'?",
+    "options": [
+      "a lanterna",
+      "o papel de parede",
+      "a hora de dormir",
+      "tomar banho de sol"
+    ],
+    "correct_answer": "a lanterna",
+    "explanation": "'flashlight' é formada por \"flash\" (clarão) + \"light\" (luz) e significa a lanterna — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"flash\" + \"light\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the doorknob in his notebook.\", o que significa a palavra composta 'doorknob'?",
+    "options": [
+      "a floresta tropical",
+      "o protetor solar",
+      "a maçaneta da porta",
+      "o touchdown ou o pouso"
+    ],
+    "correct_answer": "a maçaneta da porta",
+    "explanation": "'doorknob' é formada por \"door\" (porta) + \"knob\" (maçaneta) e significa a maçaneta da porta — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"door\" + \"knob\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They found an upstairs near the house.\", o que significa a palavra composta 'upstairs'?",
+    "options": [
+      "a lanterna",
+      "o skate",
+      "tomar banho de sol",
+      "o andar de cima"
+    ],
+    "correct_answer": "o andar de cima",
+    "explanation": "'upstairs' é formada por \"up\" (para cima) + \"stairs\" (escadas) e significa o andar de cima — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"up\" + \"stairs\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a downstairs yesterday.\", o que significa a palavra composta 'downstairs'?",
+    "options": [
+      "o touchdown ou o pouso",
+      "a floresta tropical",
+      "o andar de baixo",
+      "a lanterna"
+    ],
+    "correct_answer": "o andar de baixo",
+    "explanation": "'downstairs' é formada por \"down\" (para baixo) + \"stairs\" (escadas) e significa o andar de baixo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"down\" + \"stairs\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the sunscreen at school.\", o que significa a palavra composta 'sunscreen'?",
+    "options": [
+      "a hora de dormir",
+      "o andar de baixo",
+      "o protetor solar",
+      "o passo de dança pra trás (moonwalk)"
+    ],
+    "correct_answer": "o protetor solar",
+    "explanation": "'sunscreen' é formada por \"sun\" (sol) + \"screen\" (tela/proteção) e significa o protetor solar — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"sun\" + \"screen\"."
+    ],
+    "age_reviewed": true
+  }
+]

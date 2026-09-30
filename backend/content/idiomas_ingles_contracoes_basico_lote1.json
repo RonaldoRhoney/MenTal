@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I'm gonna call you later.\", o que significa 'gonna'?",
+    "options": [
+      "me dá ou dá pra mim",
+      "vou ou vai",
+      "me deixa ou deixa eu",
+      "quero ou quer"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I wanna go home now.\", o que significa 'wanna'?",
+    "options": [
+      "tenho que ou tem que",
+      "quero ou quer",
+      "vou ou vai",
+      "me deixa ou deixa eu"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I gotta go now.\", o que significa 'gotta'?",
+    "options": [
+      "me deixa ou deixa eu",
+      "vou ou vai",
+      "tenho que ou tem que",
+      "quero ou quer"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: muito comum, fala rápida do dia a dia.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Gimme a minute, please.\", o que significa 'gimme'?",
+    "options": [
+      "vou ou vai",
+      "me deixa ou deixa eu",
+      "quero ou quer",
+      "me dá ou dá pra mim"
+    ],
+    "correct_answer": "me dá ou dá pra mim",
+    "explanation": "'gimme' é a forma informal/contraída de \"give me\" e significa me dá ou dá pra mim. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"give me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Lemme know if you need help.\", o que significa 'lemme'?",
+    "options": [
+      "vou ou vai",
+      "quero ou quer",
+      "me deixa ou deixa eu",
+      "me dá ou dá pra mim"
+    ],
+    "correct_answer": "me deixa ou deixa eu",
+    "explanation": "'lemme' é a forma informal/contraída de \"let me\" e significa me deixa ou deixa eu. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"let me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She said she's gonna help.\", o que significa 'gonna'?",
+    "options": [
+      "me dá ou dá pra mim",
+      "quero ou quer",
+      "vou ou vai",
+      "me deixa ou deixa eu"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We wanna watch a movie tonight.\", o que significa 'wanna'?",
+    "options": [
+      "vou ou vai",
+      "tenho que ou tem que",
+      "quero ou quer",
+      "me deixa ou deixa eu"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We gotta finish this today.\", o que significa 'gotta'?",
+    "options": [
+      "me dá ou dá pra mim",
+      "me deixa ou deixa eu",
+      "quero ou quer",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: muito comum, fala rápida do dia a dia.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Can you gimme that book?\", o que significa 'gimme'?",
+    "options": [
+      "quero ou quer",
+      "me deixa ou deixa eu",
+      "tenho que ou tem que",
+      "me dá ou dá pra mim"
+    ],
+    "correct_answer": "me dá ou dá pra mim",
+    "explanation": "'gimme' é a forma informal/contraída de \"give me\" e significa me dá ou dá pra mim. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"give me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Lemme think about it.\", o que significa 'lemme'?",
+    "options": [
+      "me deixa ou deixa eu",
+      "me dá ou dá pra mim",
+      "quero ou quer",
+      "vou ou vai"
+    ],
+    "correct_answer": "me deixa ou deixa eu",
+    "explanation": "'lemme' é a forma informal/contraída de \"let me\" e significa me deixa ou deixa eu. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"let me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We're gonna need more time.\", o que significa 'gonna'?",
+    "options": [
+      "me deixa ou deixa eu",
+      "vou ou vai",
+      "quero ou quer",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They wanna play outside.\", o que significa 'wanna'?",
+    "options": [
+      "me dá ou dá pra mim",
+      "quero ou quer",
+      "me deixa ou deixa eu",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"You gotta see this!\", o que significa 'gotta'?",
+    "options": [
+      "me dá ou dá pra mim",
+      "tenho que ou tem que",
+      "vou ou vai",
+      "me deixa ou deixa eu"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: muito comum, fala rápida do dia a dia.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Gimme a break!\", o que significa 'gimme'?",
+    "options": [
+      "vou ou vai",
+      "tenho que ou tem que",
+      "quero ou quer",
+      "me dá ou dá pra mim"
+    ],
+    "correct_answer": "me dá ou dá pra mim",
+    "explanation": "'gimme' é a forma informal/contraída de \"give me\" e significa me dá ou dá pra mim. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"give me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Lemme try that again.\", o que significa 'lemme'?",
+    "options": [
+      "me deixa ou deixa eu",
+      "vou ou vai",
+      "me dá ou dá pra mim",
+      "quero ou quer"
+    ],
+    "correct_answer": "me deixa ou deixa eu",
+    "explanation": "'lemme' é a forma informal/contraída de \"let me\" e significa me deixa ou deixa eu. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"let me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He always says he's gonna try again.\", o que significa 'gonna'?",
+    "options": [
+      "me deixa ou deixa eu",
+      "quero ou quer",
+      "vou ou vai",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"You wanna try this cake?\", o que significa 'wanna'?",
+    "options": [
+      "vou ou vai",
+      "me deixa ou deixa eu",
+      "tenho que ou tem que",
+      "quero ou quer"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They gotta leave early.\", o que significa 'gotta'?",
+    "options": [
+      "tenho que ou tem que",
+      "me deixa ou deixa eu",
+      "quero ou quer",
+      "vou ou vai"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: muito comum, fala rápida do dia a dia.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Gimme a hand with this.\", o que significa 'gimme'?",
+    "options": [
+      "vou ou vai",
+      "me deixa ou deixa eu",
+      "quero ou quer",
+      "me dá ou dá pra mim"
+    ],
+    "correct_answer": "me dá ou dá pra mim",
+    "explanation": "'gimme' é a forma informal/contraída de \"give me\" e significa me dá ou dá pra mim. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"give me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Lemme see that picture.\", o que significa 'lemme'?",
+    "options": [
+      "tenho que ou tem que",
+      "me deixa ou deixa eu",
+      "me dá ou dá pra mim",
+      "vou ou vai"
+    ],
+    "correct_answer": "me deixa ou deixa eu",
+    "explanation": "'lemme' é a forma informal/contraída de \"let me\" e significa me deixa ou deixa eu. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"let me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They're gonna be there soon.\", o que significa 'gonna'?",
+    "options": [
+      "me deixa ou deixa eu",
+      "vou ou vai",
+      "me dá ou dá pra mim",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I really wanna learn English.\", o que significa 'wanna'?",
+    "options": [
+      "quero ou quer",
+      "tenho que ou tem que",
+      "me deixa ou deixa eu",
+      "me dá ou dá pra mim"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: muito comum, qualquer situação informal.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I gotta study for the test.\", o que significa 'gotta'?",
+    "options": [
+      "me dá ou dá pra mim",
+      "quero ou quer",
+      "me deixa ou deixa eu",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: muito comum, fala rápida do dia a dia.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Just gimme a second.\", o que significa 'gimme'?",
+    "options": [
+      "vou ou vai",
+      "me dá ou dá pra mim",
+      "tenho que ou tem que",
+      "quero ou quer"
+    ],
+    "correct_answer": "me dá ou dá pra mim",
+    "explanation": "'gimme' é a forma informal/contraída de \"give me\" e significa me dá ou dá pra mim. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"give me\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Lemme grab my jacket first.\", o que significa 'lemme'?",
+    "options": [
+      "quero ou quer",
+      "me dá ou dá pra mim",
+      "tenho que ou tem que",
+      "me deixa ou deixa eu"
+    ],
+    "correct_answer": "me deixa ou deixa eu",
+    "explanation": "'lemme' é a forma informal/contraída de \"let me\" e significa me deixa ou deixa eu. Registro: muito comum, pedidos informais.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"let me\"."
+    ],
+    "age_reviewed": true
+  }
+]

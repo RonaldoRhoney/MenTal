@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I'm kinda nervous.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "porque ou pq",
+      "meio ou tipo"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I sorta get it now.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "fora de ou pra fora de",
+      "porque ou pq",
+      "meio ou tipo",
+      "muito ou bastante"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We're outta milk.\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "muito ou bastante",
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "porque ou pq"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We have lotsa time.\", o que significa 'lotsa'? (forma informal de \"lots of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "porque ou pq",
+      "muito ou bastante"
+    ],
+    "correct_answer": "muito ou bastante",
+    "explanation": "'lotsa' é a forma informal/contraída de \"lots of\" e significa muito ou bastante. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"lots of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I laughed cuz it was funny.\", o que significa 'cuz'? (forma informal de \"because\")",
+    "options": [
+      "meio ou tipo",
+      "porque ou pq",
+      "meio ou mais ou menos",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "porque ou pq",
+    "explanation": "'cuz' é a forma informal/contraída de \"because\" e significa porque ou pq. Registro: informal, muito comum em mensagens de texto.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"because\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"It's kinda late.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "muito ou bastante",
+      "meio ou tipo",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"It's sorta true.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "porque ou pq",
+      "meio ou mais ou menos",
+      "meio ou tipo",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He jumped outta bed.\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "porque ou pq",
+      "meio ou mais ou menos",
+      "muito ou bastante",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There's lotsa work to do.\", o que significa 'lotsa'? (forma informal de \"lots of\")",
+    "options": [
+      "meio ou tipo",
+      "porque ou pq",
+      "muito ou bastante",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "muito ou bastante",
+    "explanation": "'lotsa' é a forma informal/contraída de \"lots of\" e significa muito ou bastante. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"lots of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"We left early cuz of the storm.\", o que significa 'cuz'? (forma informal de \"because\")",
+    "options": [
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "muito ou bastante",
+      "porque ou pq"
+    ],
+    "correct_answer": "porque ou pq",
+    "explanation": "'cuz' é a forma informal/contraída de \"because\" e significa porque ou pq. Registro: informal, muito comum em mensagens de texto.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"because\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"That's kinda strange.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "fora de ou pra fora de",
+      "porque ou pq",
+      "meio ou mais ou menos",
+      "muito ou bastante"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He's sorta right.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "fora de ou pra fora de",
+      "meio ou mais ou menos",
+      "muito ou bastante",
+      "meio ou tipo"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They're outta ideas.\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "porque ou pq",
+      "muito ou bastante"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She has lotsa energy today.\", o que significa 'lotsa'? (forma informal de \"lots of\")",
+    "options": [
+      "fora de ou pra fora de",
+      "porque ou pq",
+      "meio ou tipo",
+      "muito ou bastante"
+    ],
+    "correct_answer": "muito ou bastante",
+    "explanation": "'lotsa' é a forma informal/contraída de \"lots of\" e significa muito ou bastante. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"lots of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Cuz I said so.\", o que significa 'cuz'? (forma informal de \"because\")",
+    "options": [
+      "porque ou pq",
+      "meio ou mais ou menos",
+      "muito ou bastante",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "porque ou pq",
+    "explanation": "'cuz' é a forma informal/contraída de \"because\" e significa porque ou pq. Registro: informal, muito comum em mensagens de texto.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"because\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We're kinda lost.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "muito ou bastante",
+      "meio ou tipo",
+      "fora de ou pra fora de",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We sorta planned this.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "porque ou pq",
+      "meio ou tipo"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She's outta patience.\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "muito ou bastante",
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "porque ou pq"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He gave lotsa advice.\", o que significa 'lotsa'? (forma informal de \"lots of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "muito ou bastante",
+      "fora de ou pra fora de",
+      "meio ou tipo"
+    ],
+    "correct_answer": "muito ou bastante",
+    "explanation": "'lotsa' é a forma informal/contraída de \"lots of\" e significa muito ou bastante. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"lots of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She cried cuz she was sad.\", o que significa 'cuz'? (forma informal de \"because\")",
+    "options": [
+      "muito ou bastante",
+      "porque ou pq",
+      "meio ou mais ou menos",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "porque ou pq",
+    "explanation": "'cuz' é a forma informal/contraída de \"because\" e significa porque ou pq. Registro: informal, muito comum em mensagens de texto.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"because\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She's kinda annoyed.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "fora de ou pra fora de",
+      "muito ou bastante",
+      "meio ou tipo",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She sorta knew already.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "muito ou bastante",
+      "meio ou tipo",
+      "porque ou pq",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Get outta the way!\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "porque ou pq",
+      "meio ou tipo",
+      "meio ou mais ou menos",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There were lotsa questions.\", o que significa 'lotsa'? (forma informal de \"lots of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "meio ou tipo",
+      "porque ou pq",
+      "muito ou bastante"
+    ],
+    "correct_answer": "muito ou bastante",
+    "explanation": "'lotsa' é a forma informal/contraída de \"lots of\" e significa muito ou bastante. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"lots of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I waited cuz I promised.\", o que significa 'cuz'? (forma informal de \"because\")",
+    "options": [
+      "meio ou mais ou menos",
+      "meio ou tipo",
+      "muito ou bastante",
+      "porque ou pq"
+    ],
+    "correct_answer": "porque ou pq",
+    "explanation": "'cuz' é a forma informal/contraída de \"because\" e significa porque ou pq. Registro: informal, muito comum em mensagens de texto.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"because\"."
+    ],
+    "age_reviewed": true
+  }
+]

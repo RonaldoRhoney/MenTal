@@ -227,6 +227,22 @@ def test_frase_fora_do_vocabulario_devolve_intencao_de_traduzir_no_aparelho(clie
     assert auto["intent"] == "translate_auto" and auto["phrase"] == "I want a coffee"
 
 
+def test_como_eu_diria_e_reconhecido_como_moldura_de_instrucao_nao_vaza_pro_tradutor(client):
+    # MENTAL_LINGO_RELATORIO_TESTES_CAMPO_V1.md §2.2 item 4 (achado em teste real, 27-28/09/2026):
+    # "como eu diria X" não batia em nenhum padrão (só formas no infinitivo/imperativo eram
+    # reconhecidas), então a frase INTEIRA — incluindo "como eu diria" — vazava pro tradutor do
+    # aparelho ("As I would say it's raining..."). "diria"/"falaria" (condicional) agora são
+    # reconhecidos como moldura de instrução, com e sem idioma explícito.
+    data = _ask(client, "como eu diria está chovendo muito e eu estou no ônibus lotado").json()
+    assert data["intent"] == "translate_auto"
+    assert data["phrase"] == "está chovendo muito e eu estou no ônibus lotado"
+    assert "como eu diria" not in data["phrase"].lower()
+
+    com_idioma = _ask(client, "como eu falaria bom dia em inglês").json()
+    assert com_idioma["intent"] == "translate" and com_idioma["target_language"] == "ingles"
+    assert com_idioma["phrase"] == "bom dia"
+
+
 def test_sem_idioma_na_pergunta_o_idioma_continua_na_resposta(client, monkeypatch):
     monkeypatch.setattr("app.wiktionary.glosses_pt_to_en", lambda w: [])
     _seed("Como se escreve 'agulha' em inglês?", "Needle", "'agulha' se traduz como 'Needle' em inglês.", territory_id="ingles_avancado")

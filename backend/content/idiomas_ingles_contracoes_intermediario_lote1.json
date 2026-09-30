@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I'm gonna call you later.\", o que significa 'gonna'? (forma informal de \"going to\")",
+    "options": [
+      "tenho que ou tem que",
+      "fora de ou pra fora de",
+      "meio ou mais ou menos",
+      "vou ou vai"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: informal, mas aceitável até em conversas casuais no trabalho.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I wanna go home now.\", o que significa 'wanna'? (forma informal de \"want to\")",
+    "options": [
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "quero ou quer",
+      "vou ou vai"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: informal, evitar em contexto formal escrito.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"It's kinda cold today.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "quero ou quer",
+      "meio ou tipo",
+      "meio ou mais ou menos",
+      "vou ou vai"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"It's sorta like that.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "tenho que ou tem que",
+      "meio ou tipo",
+      "fora de ou pra fora de",
+      "vou ou vai"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Get outta here!\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "tenho que ou tem que",
+      "fora de ou pra fora de",
+      "vou ou vai",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I gotta go now.\", o que significa 'gotta'? (forma informal de \"got to / have got to\")",
+    "options": [
+      "meio ou mais ou menos",
+      "tenho que ou tem que",
+      "meio ou tipo",
+      "quero ou quer"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: informal, mas muito usado.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She said she's gonna help.\", o que significa 'gonna'? (forma informal de \"going to\")",
+    "options": [
+      "quero ou quer",
+      "meio ou mais ou menos",
+      "fora de ou pra fora de",
+      "vou ou vai"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: informal, mas aceitável até em conversas casuais no trabalho.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We wanna watch a movie tonight.\", o que significa 'wanna'? (forma informal de \"want to\")",
+    "options": [
+      "vou ou vai",
+      "meio ou tipo",
+      "quero ou quer",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: informal, evitar em contexto formal escrito.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I'm kinda tired.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "tenho que ou tem que",
+      "fora de ou pra fora de",
+      "meio ou mais ou menos",
+      "vou ou vai"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"I sorta agree.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "vou ou vai",
+      "meio ou tipo",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We're outta time.\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "vou ou vai",
+      "fora de ou pra fora de",
+      "meio ou tipo"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We gotta finish this today.\", o que significa 'gotta'? (forma informal de \"got to / have got to\")",
+    "options": [
+      "tenho que ou tem que",
+      "vou ou vai",
+      "quero ou quer",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: informal, mas muito usado.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We're gonna need more time.\", o que significa 'gonna'? (forma informal de \"going to\")",
+    "options": [
+      "meio ou tipo",
+      "quero ou quer",
+      "vou ou vai",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: informal, mas aceitável até em conversas casuais no trabalho.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They wanna play outside.\", o que significa 'wanna'? (forma informal de \"want to\")",
+    "options": [
+      "meio ou tipo",
+      "vou ou vai",
+      "tenho que ou tem que",
+      "quero ou quer"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: informal, evitar em contexto formal escrito.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"That's kinda funny.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "meio ou tipo",
+      "meio ou mais ou menos",
+      "tenho que ou tem que",
+      "vou ou vai"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She's sorta busy right now.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "fora de ou pra fora de",
+      "meio ou tipo",
+      "tenho que ou tem que",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She walked outta the room.\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "tenho que ou tem que",
+      "quero ou quer",
+      "fora de ou pra fora de",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"You gotta see this!\", o que significa 'gotta'? (forma informal de \"got to / have got to\")",
+    "options": [
+      "tenho que ou tem que",
+      "vou ou vai",
+      "quero ou quer",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: informal, mas muito usado.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He always says he's gonna try again.\", o que significa 'gonna'? (forma informal de \"going to\")",
+    "options": [
+      "quero ou quer",
+      "vou ou vai",
+      "meio ou mais ou menos",
+      "tenho que ou tem que"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: informal, mas aceitável até em conversas casuais no trabalho.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"You wanna try this cake?\", o que significa 'wanna'? (forma informal de \"want to\")",
+    "options": [
+      "fora de ou pra fora de",
+      "tenho que ou tem que",
+      "vou ou vai",
+      "quero ou quer"
+    ],
+    "correct_answer": "quero ou quer",
+    "explanation": "'wanna' é a forma informal/contraída de \"want to\" e significa quero ou quer. Registro: informal, evitar em contexto formal escrito.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"want to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She's kinda shy.\", o que significa 'kinda'? (forma informal de \"kind of\")",
+    "options": [
+      "meio ou mais ou menos",
+      "vou ou vai",
+      "tenho que ou tem que",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "meio ou mais ou menos",
+    "explanation": "'kinda' é a forma informal/contraída de \"kind of\" e significa meio ou mais ou menos. Registro: informal, suaviza uma afirmação.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"kind of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He sorta understood it.\", o que significa 'sorta'? (forma informal de \"sort of\")",
+    "options": [
+      "vou ou vai",
+      "quero ou quer",
+      "meio ou tipo",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "meio ou tipo",
+    "explanation": "'sorta' é a forma informal/contraída de \"sort of\" e significa meio ou tipo. Registro: informal, parecido com 'kinda'.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"sort of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He ran outta breath.\", o que significa 'outta'? (forma informal de \"out of\")",
+    "options": [
+      "fora de ou pra fora de",
+      "vou ou vai",
+      "tenho que ou tem que",
+      "meio ou tipo"
+    ],
+    "correct_answer": "fora de ou pra fora de",
+    "explanation": "'outta' é a forma informal/contraída de \"out of\" e significa fora de ou pra fora de. Registro: informal, fala rápida.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"out of\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They gotta leave early.\", o que significa 'gotta'? (forma informal de \"got to / have got to\")",
+    "options": [
+      "quero ou quer",
+      "tenho que ou tem que",
+      "meio ou tipo",
+      "fora de ou pra fora de"
+    ],
+    "correct_answer": "tenho que ou tem que",
+    "explanation": "'gotta' é a forma informal/contraída de \"got to / have got to\" e significa tenho que ou tem que. Registro: informal, mas muito usado.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"got to / have got to\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_contracoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"They're gonna be there soon.\", o que significa 'gonna'? (forma informal de \"going to\")",
+    "options": [
+      "tenho que ou tem que",
+      "vou ou vai",
+      "fora de ou pra fora de",
+      "meio ou mais ou menos"
+    ],
+    "correct_answer": "vou ou vai",
+    "explanation": "'gonna' é a forma informal/contraída de \"going to\" e significa vou ou vai. Registro: informal, mas aceitável até em conversas casuais no trabalho.",
+    "hints": [
+      "Tema: Contrações Informais.",
+      "É a forma contraída/informal de \"going to\"."
+    ],
+    "age_reviewed": true
+  }
+]

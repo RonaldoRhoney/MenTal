@@ -398,6 +398,54 @@
   "@territoryInglesConjugacaoRelampagoAvancado": {
     "description": "Territory display name — English verb conjugation, timed mode, advanced level"
   },
+  "territoryInglesCompostasBasico": "Palavras Compostas: Básico",
+  "@territoryInglesCompostasBasico": {
+    "description": "Territory display name — English compound words, basic level"
+  },
+  "territoryInglesCompostasIntermediario": "Palavras Compostas: Intermediário",
+  "@territoryInglesCompostasIntermediario": {
+    "description": "Territory display name — English compound words, intermediate level"
+  },
+  "territoryInglesCompostasAvancado": "Palavras Compostas: Avançado",
+  "@territoryInglesCompostasAvancado": {
+    "description": "Territory display name — English compound words, advanced level"
+  },
+  "territoryInglesCompostasRelampagoBasico": "Palavras Compostas Relâmpago: Básico",
+  "@territoryInglesCompostasRelampagoBasico": {
+    "description": "Territory display name — English compound words, timed mode, basic level"
+  },
+  "territoryInglesCompostasRelampagoIntermediario": "Palavras Compostas Relâmpago: Intermediário",
+  "@territoryInglesCompostasRelampagoIntermediario": {
+    "description": "Territory display name — English compound words, timed mode, intermediate level"
+  },
+  "territoryInglesCompostasRelampagoAvancado": "Palavras Compostas Relâmpago: Avançado",
+  "@territoryInglesCompostasRelampagoAvancado": {
+    "description": "Territory display name — English compound words, timed mode, advanced level"
+  },
+  "territoryInglesContracoesBasico": "Contrações Informais: Básico",
+  "@territoryInglesContracoesBasico": {
+    "description": "Territory display name — English informal contractions, basic level"
+  },
+  "territoryInglesContracoesIntermediario": "Contrações Informais: Intermediário",
+  "@territoryInglesContracoesIntermediario": {
+    "description": "Territory display name — English informal contractions, intermediate level"
+  },
+  "territoryInglesContracoesAvancado": "Contrações Informais: Avançado",
+  "@territoryInglesContracoesAvancado": {
+    "description": "Territory display name — English informal contractions, advanced level"
+  },
+  "territoryInglesContracoesRelampagoBasico": "Contrações Informais Relâmpago: Básico",
+  "@territoryInglesContracoesRelampagoBasico": {
+    "description": "Territory display name — English informal contractions, timed mode, basic level"
+  },
+  "territoryInglesContracoesRelampagoIntermediario": "Contrações Informais Relâmpago: Intermediário",
+  "@territoryInglesContracoesRelampagoIntermediario": {
+    "description": "Territory display name — English informal contractions, timed mode, intermediate level"
+  },
+  "territoryInglesContracoesRelampagoAvancado": "Contrações Informais Relâmpago: Avançado",
+  "@territoryInglesContracoesRelampagoAvancado": {
+    "description": "Territory display name — English informal contractions, timed mode, advanced level"
+  },
   "@territoryFrancesAvancado": {
     "description": "Territory display name"
   },

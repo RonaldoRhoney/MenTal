@@ -324,6 +324,51 @@ class AppLocalizationsPt extends AppLocalizations {
       'Conjugação Verbal Relâmpago: Avançado';
 
   @override
+  String get territoryInglesCompostasBasico => 'Palavras Compostas: Básico';
+
+  @override
+  String get territoryInglesCompostasIntermediario =>
+      'Palavras Compostas: Intermediário';
+
+  @override
+  String get territoryInglesCompostasAvancado => 'Palavras Compostas: Avançado';
+
+  @override
+  String get territoryInglesCompostasRelampagoBasico =>
+      'Palavras Compostas Relâmpago: Básico';
+
+  @override
+  String get territoryInglesCompostasRelampagoIntermediario =>
+      'Palavras Compostas Relâmpago: Intermediário';
+
+  @override
+  String get territoryInglesCompostasRelampagoAvancado =>
+      'Palavras Compostas Relâmpago: Avançado';
+
+  @override
+  String get territoryInglesContracoesBasico => 'Contrações Informais: Básico';
+
+  @override
+  String get territoryInglesContracoesIntermediario =>
+      'Contrações Informais: Intermediário';
+
+  @override
+  String get territoryInglesContracoesAvancado =>
+      'Contrações Informais: Avançado';
+
+  @override
+  String get territoryInglesContracoesRelampagoBasico =>
+      'Contrações Informais Relâmpago: Básico';
+
+  @override
+  String get territoryInglesContracoesRelampagoIntermediario =>
+      'Contrações Informais Relâmpago: Intermediário';
+
+  @override
+  String get territoryInglesContracoesRelampagoAvancado =>
+      'Contrações Informais Relâmpago: Avançado';
+
+  @override
   String get territoryBolsa => 'Bolsa e Investimentos';
 
   @override

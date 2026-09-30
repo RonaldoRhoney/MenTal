@@ -152,9 +152,15 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
 
     assert sorted(blocks["ingles"]["territory_ids"]) == [
         "ingles_avancado", "ingles_basico",
+        "ingles_compostas_avancado", "ingles_compostas_basico", "ingles_compostas_intermediario",
+        "ingles_compostas_relampago_avancado", "ingles_compostas_relampago_basico",
+        "ingles_compostas_relampago_intermediario",
         "ingles_conjugacao_avancado", "ingles_conjugacao_basico", "ingles_conjugacao_intermediario",
         "ingles_conjugacao_relampago_avancado", "ingles_conjugacao_relampago_basico",
         "ingles_conjugacao_relampago_intermediario",
+        "ingles_contracoes_avancado", "ingles_contracoes_basico", "ingles_contracoes_intermediario",
+        "ingles_contracoes_relampago_avancado", "ingles_contracoes_relampago_basico",
+        "ingles_contracoes_relampago_intermediario",
         "ingles_expressoes_avancado", "ingles_expressoes_basico",
         "ingles_expressoes_intermediario", "ingles_expressoes_relampago_avancado",
         "ingles_expressoes_relampago_basico", "ingles_expressoes_relampago_intermediario",
@@ -177,6 +183,10 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
         "ingles_expressoes_relampago_basico", "ingles_expressoes_relampago_intermediario", "ingles_expressoes_relampago_avancado",
         "ingles_conjugacao_basico", "ingles_conjugacao_intermediario", "ingles_conjugacao_avancado",
         "ingles_conjugacao_relampago_basico", "ingles_conjugacao_relampago_intermediario", "ingles_conjugacao_relampago_avancado",
+        "ingles_compostas_basico", "ingles_compostas_intermediario", "ingles_compostas_avancado",
+        "ingles_compostas_relampago_basico", "ingles_compostas_relampago_intermediario", "ingles_compostas_relampago_avancado",
+        "ingles_contracoes_basico", "ingles_contracoes_intermediario", "ingles_contracoes_avancado",
+        "ingles_contracoes_relampago_basico", "ingles_contracoes_relampago_intermediario", "ingles_contracoes_relampago_avancado",
         "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
         "frances_basico", "frances_intermediario", "frances_avancado",
     }.issubset(set(worlds["idiomas"]["territory_ids"]))

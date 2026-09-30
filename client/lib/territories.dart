@@ -140,6 +140,18 @@ const List<String> kTerritoryIds = [
   'ingles_conjugacao_relampago_basico',
   'ingles_conjugacao_relampago_intermediario',
   'ingles_conjugacao_relampago_avancado',
+  'ingles_compostas_basico',
+  'ingles_compostas_intermediario',
+  'ingles_compostas_avancado',
+  'ingles_compostas_relampago_basico',
+  'ingles_compostas_relampago_intermediario',
+  'ingles_compostas_relampago_avancado',
+  'ingles_contracoes_basico',
+  'ingles_contracoes_intermediario',
+  'ingles_contracoes_avancado',
+  'ingles_contracoes_relampago_basico',
+  'ingles_contracoes_relampago_intermediario',
+  'ingles_contracoes_relampago_avancado',
   // V6 (Mundo_dos_Valores/README.md) — Mundo dos Valores.
   'bolsa',
   'criptomoedas',
@@ -450,6 +462,30 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryInglesConjugacaoRelampagoIntermediario;
     case 'ingles_conjugacao_relampago_avancado':
       return l10n.territoryInglesConjugacaoRelampagoAvancado;
+    case 'ingles_compostas_basico':
+      return l10n.territoryInglesCompostasBasico;
+    case 'ingles_compostas_intermediario':
+      return l10n.territoryInglesCompostasIntermediario;
+    case 'ingles_compostas_avancado':
+      return l10n.territoryInglesCompostasAvancado;
+    case 'ingles_compostas_relampago_basico':
+      return l10n.territoryInglesCompostasRelampagoBasico;
+    case 'ingles_compostas_relampago_intermediario':
+      return l10n.territoryInglesCompostasRelampagoIntermediario;
+    case 'ingles_compostas_relampago_avancado':
+      return l10n.territoryInglesCompostasRelampagoAvancado;
+    case 'ingles_contracoes_basico':
+      return l10n.territoryInglesContracoesBasico;
+    case 'ingles_contracoes_intermediario':
+      return l10n.territoryInglesContracoesIntermediario;
+    case 'ingles_contracoes_avancado':
+      return l10n.territoryInglesContracoesAvancado;
+    case 'ingles_contracoes_relampago_basico':
+      return l10n.territoryInglesContracoesRelampagoBasico;
+    case 'ingles_contracoes_relampago_intermediario':
+      return l10n.territoryInglesContracoesRelampagoIntermediario;
+    case 'ingles_contracoes_relampago_avancado':
+      return l10n.territoryInglesContracoesRelampagoAvancado;
     case 'bolsa':
       return l10n.territoryBolsa;
     case 'criptomoedas':

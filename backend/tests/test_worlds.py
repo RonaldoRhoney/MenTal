@@ -158,6 +158,10 @@ def test_progress_groups_territories_into_the_approved_worlds(client):
         "ingles_expressoes_relampago_basico", "ingles_expressoes_relampago_intermediario", "ingles_expressoes_relampago_avancado",
         "ingles_conjugacao_basico", "ingles_conjugacao_intermediario", "ingles_conjugacao_avancado",
         "ingles_conjugacao_relampago_basico", "ingles_conjugacao_relampago_intermediario", "ingles_conjugacao_relampago_avancado",
+        "ingles_compostas_basico", "ingles_compostas_intermediario", "ingles_compostas_avancado",
+        "ingles_compostas_relampago_basico", "ingles_compostas_relampago_intermediario", "ingles_compostas_relampago_avancado",
+        "ingles_contracoes_basico", "ingles_contracoes_intermediario", "ingles_contracoes_avancado",
+        "ingles_contracoes_relampago_basico", "ingles_contracoes_relampago_intermediario", "ingles_contracoes_relampago_avancado",
         "libras",
     }
     assert set(worlds["valores"]["territory_ids"]) == {

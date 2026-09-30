@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw an underdog yesterday.\", o que significa a palavra composta 'underdog'?",
+    "options": [
+      "o azarão",
+      "o clamor público",
+      "o desdobramento ou ramificação",
+      "a transformação completa visual"
+    ],
+    "correct_answer": "o azarão",
+    "explanation": "'underdog' é formada por \"under\" (abaixo) + \"dog\" (cachorro) e significa o azarão — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"under\" + \"dog\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She talked about the bystander at school.\", o que significa a palavra composta 'bystander'?",
+    "options": [
+      "a reforma completa",
+      "a vitrine ou demonstração",
+      "o espectador presente sem participar",
+      "a reação negativa forte"
+    ],
+    "correct_answer": "o espectador presente sem participar",
+    "explanation": "'bystander' é formada por \"by\" (ao lado) + \"stander\" (quem fica em pé) e significa o espectador presente sem participar — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"by\" + \"stander\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: mastermind.\", o que significa a palavra composta 'mastermind'?",
+    "options": [
+      "o engarrafamento total ou impasse",
+      "o mentor ou cabeça pensante",
+      "o ataque massivo",
+      "a reação negativa forte"
+    ],
+    "correct_answer": "o mentor ou cabeça pensante",
+    "explanation": "'mastermind' é formada por \"master\" (mestre) + \"mind\" (mente) e significa o mentor ou cabeça pensante — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"master\" + \"mind\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was a loophole in the story.\", o que significa a palavra composta 'loophole'?",
+    "options": [
+      "o precursor",
+      "a criação ou educação de uma pessoa",
+      "a brecha ou lacuna numa lei/regra",
+      "o espectador presente sem participar"
+    ],
+    "correct_answer": "a brecha ou lacuna numa lei/regra",
+    "explanation": "'loophole' é formada por \"loop\" (laço) + \"hole\" (buraco) e significa a brecha ou lacuna numa lei/regra — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"loop\" + \"hole\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the backlash today.\", o que significa a palavra composta 'backlash'?",
+    "options": [
+      "o engarrafamento total ou impasse",
+      "a transformação completa visual",
+      "a reação negativa forte",
+      "o azarão"
+    ],
+    "correct_answer": "a reação negativa forte",
+    "explanation": "'backlash' é formada por \"back\" (de volta) + \"lash\" (chicotada) e significa a reação negativa forte — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"back\" + \"lash\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a gridlock is.\", o que significa a palavra composta 'gridlock'?",
+    "options": [
+      "a reforma completa",
+      "o engarrafamento total ou impasse",
+      "a reação negativa forte",
+      "as consequências ou o rescaldo"
+    ],
+    "correct_answer": "o engarrafamento total ou impasse",
+    "explanation": "'gridlock' é formada por \"grid\" (grade) + \"lock\" (travamento) e significa o engarrafamento total ou impasse — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"grid\" + \"lock\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the overhaul in his notebook.\", o que significa a palavra composta 'overhaul'?",
+    "options": [
+      "a vitrine ou demonstração",
+      "a reação negativa forte",
+      "o déficit ou a insuficiência",
+      "a reforma completa"
+    ],
+    "correct_answer": "a reforma completa",
+    "explanation": "'overhaul' é formada por \"over\" (completo) + \"haul\" (puxar) e significa a reforma completa — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"over\" + \"haul\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: offshoot.\", o que significa a palavra composta 'offshoot'?",
+    "options": [
+      "o espectador presente sem participar",
+      "a reação negativa forte",
+      "o clamor público",
+      "o desdobramento ou ramificação"
+    ],
+    "correct_answer": "o desdobramento ou ramificação",
+    "explanation": "'offshoot' é formada por \"off\" (fora) + \"shoot\" (broto) e significa o desdobramento ou ramificação — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"off\" + \"shoot\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw an upshot yesterday.\", o que significa a palavra composta 'upshot'?",
+    "options": [
+      "o resultado final ou a conclusão",
+      "o engarrafamento total ou impasse",
+      "o clamor público",
+      "a brecha ou lacuna numa lei/regra"
+    ],
+    "correct_answer": "o resultado final ou a conclusão",
+    "explanation": "'upshot' é formada por \"up\" (para cima) + \"shot\" (tiro) e significa o resultado final ou a conclusão — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"up\" + \"shot\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the aftermath at school.\", o que significa a palavra composta 'aftermath'?",
+    "options": [
+      "a reação negativa forte",
+      "a vitrine ou demonstração",
+      "o azarão",
+      "as consequências ou o rescaldo"
+    ],
+    "correct_answer": "as consequências ou o rescaldo",
+    "explanation": "'aftermath' é formada por \"after\" (depois) + \"math\" (ceifa) e significa as consequências ou o rescaldo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"after\" + \"math\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We learned a new word: forerunner.\", o que significa a palavra composta 'forerunner'?",
+    "options": [
+      "o espectador presente sem participar",
+      "a vitrine ou demonstração",
+      "a retração econômica",
+      "o precursor"
+    ],
+    "correct_answer": "o precursor",
+    "explanation": "'forerunner' é formada por \"fore\" (à frente) + \"runner\" (corredor) e significa o precursor — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"fore\" + \"runner\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"There was an onslaught in the story.\", o que significa a palavra composta 'onslaught'?",
+    "options": [
+      "a retração econômica",
+      "o mentor ou cabeça pensante",
+      "o precursor",
+      "o ataque massivo"
+    ],
+    "correct_answer": "o ataque massivo",
+    "explanation": "'onslaught' é formada por \"on\" (sobre) + \"slaught\" (ataque) e significa o ataque massivo — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"on\" + \"slaught\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My friend mentioned the makeover today.\", o que significa a palavra composta 'makeover'?",
+    "options": [
+      "o ataque massivo",
+      "o clamor público",
+      "a transformação completa visual",
+      "a reforma completa"
+    ],
+    "correct_answer": "a transformação completa visual",
+    "explanation": "'makeover' é formada por \"make\" (fazer) + \"over\" (de novo) e significa a transformação completa visual — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"make\" + \"over\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The teacher explained what a showcase is.\", o que significa a palavra composta 'showcase'?",
+    "options": [
+      "o mentor ou cabeça pensante",
+      "a reforma completa",
+      "a vitrine ou demonstração",
+      "o resultado final ou a conclusão"
+    ],
+    "correct_answer": "a vitrine ou demonstração",
+    "explanation": "'showcase' é formada por \"show\" (mostrar) + \"case\" (caixa) e significa a vitrine ou demonstração — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"show\" + \"case\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He wrote about the outcry in his notebook.\", o que significa a palavra composta 'outcry'?",
+    "options": [
+      "a transformação completa visual",
+      "o clamor público",
+      "as consequências ou o rescaldo",
+      "o azarão"
+    ],
+    "correct_answer": "o clamor público",
+    "explanation": "'outcry' é formada por \"out\" (fora) + \"cry\" (grito) e significa o clamor público — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"out\" + \"cry\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"We learned a new word: shortfall.\", o que significa a palavra composta 'shortfall'?",
+    "options": [
+      "o déficit ou a insuficiência",
+      "as consequências ou o rescaldo",
+      "o clamor público",
+      "a vitrine ou demonstração"
+    ],
+    "correct_answer": "o déficit ou a insuficiência",
+    "explanation": "'shortfall' é formada por \"short\" (curto) + \"fall\" (queda) e significa o déficit ou a insuficiência — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"short\" + \"fall\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I saw a downturn yesterday.\", o que significa a palavra composta 'downturn'?",
+    "options": [
+      "a criação ou educação de uma pessoa",
+      "a retração econômica",
+      "a reação negativa forte",
+      "a reforma completa"
+    ],
+    "correct_answer": "a retração econômica",
+    "explanation": "'downturn' é formada por \"down\" (para baixo) + \"turn\" (virada) e significa a retração econômica — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"down\" + \"turn\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She talked about the upbringing at school.\", o que significa a palavra composta 'upbringing'?",
+    "options": [
+      "a brecha ou lacuna numa lei/regra",
+      "o espectador presente sem participar",
+      "a criação ou educação de uma pessoa",
+      "as consequências ou o rescaldo"
+    ],
+    "correct_answer": "a criação ou educação de uma pessoa",
+    "explanation": "'upbringing' é formada por \"up\" (para cima) + \"bringing\" (trazer) e significa a criação ou educação de uma pessoa — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"up\" + \"bringing\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was an underdog in the story.\", o que significa a palavra composta 'underdog'?",
+    "options": [
+      "as consequências ou o rescaldo",
+      "o azarão",
+      "o espectador presente sem participar",
+      "o precursor"
+    ],
+    "correct_answer": "o azarão",
+    "explanation": "'underdog' é formada por \"under\" (abaixo) + \"dog\" (cachorro) e significa o azarão — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"under\" + \"dog\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"My friend mentioned the bystander today.\", o que significa a palavra composta 'bystander'?",
+    "options": [
+      "a reforma completa",
+      "o espectador presente sem participar",
+      "a transformação completa visual",
+      "a reação negativa forte"
+    ],
+    "correct_answer": "o espectador presente sem participar",
+    "explanation": "'bystander' é formada por \"by\" (ao lado) + \"stander\" (quem fica em pé) e significa o espectador presente sem participar — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"by\" + \"stander\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The teacher explained what a mastermind is.\", o que significa a palavra composta 'mastermind'?",
+    "options": [
+      "o espectador presente sem participar",
+      "a brecha ou lacuna numa lei/regra",
+      "o mentor ou cabeça pensante",
+      "a vitrine ou demonstração"
+    ],
+    "correct_answer": "o mentor ou cabeça pensante",
+    "explanation": "'mastermind' é formada por \"master\" (mestre) + \"mind\" (mente) e significa o mentor ou cabeça pensante — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"master\" + \"mind\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He wrote about the loophole in his notebook.\", o que significa a palavra composta 'loophole'?",
+    "options": [
+      "a brecha ou lacuna numa lei/regra",
+      "o clamor público",
+      "o desdobramento ou ramificação",
+      "o resultado final ou a conclusão"
+    ],
+    "correct_answer": "a brecha ou lacuna numa lei/regra",
+    "explanation": "'loophole' é formada por \"loop\" (laço) + \"hole\" (buraco) e significa a brecha ou lacuna numa lei/regra — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"loop\" + \"hole\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"We learned a new word: backlash.\", o que significa a palavra composta 'backlash'?",
+    "options": [
+      "a transformação completa visual",
+      "a reação negativa forte",
+      "a brecha ou lacuna numa lei/regra",
+      "a vitrine ou demonstração"
+    ],
+    "correct_answer": "a reação negativa forte",
+    "explanation": "'backlash' é formada por \"back\" (de volta) + \"lash\" (chicotada) e significa a reação negativa forte — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"back\" + \"lash\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I saw a gridlock yesterday.\", o que significa a palavra composta 'gridlock'?",
+    "options": [
+      "o clamor público",
+      "as consequências ou o rescaldo",
+      "o precursor",
+      "o engarrafamento total ou impasse"
+    ],
+    "correct_answer": "o engarrafamento total ou impasse",
+    "explanation": "'gridlock' é formada por \"grid\" (grade) + \"lock\" (travamento) e significa o engarrafamento total ou impasse — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"grid\" + \"lock\"."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compostas_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She talked about the overhaul at school.\", o que significa a palavra composta 'overhaul'?",
+    "options": [
+      "a reforma completa",
+      "o espectador presente sem participar",
+      "o mentor ou cabeça pensante",
+      "o engarrafamento total ou impasse"
+    ],
+    "correct_answer": "a reforma completa",
+    "explanation": "'overhaul' é formada por \"over\" (completo) + \"haul\" (puxar) e significa a reforma completa — nem sempre a soma literal das partes.",
+    "hints": [
+      "Tema: Palavras Compostas.",
+      "Pense em \"over\" + \"haul\"."
+    ],
+    "age_reviewed": true
+  }
+]
