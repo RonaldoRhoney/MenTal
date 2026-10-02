@@ -167,6 +167,9 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
         "ingles_expressoes_avancado", "ingles_expressoes_basico",
         "ingles_expressoes_intermediario", "ingles_expressoes_relampago_avancado",
         "ingles_expressoes_relampago_basico", "ingles_expressoes_relampago_intermediario",
+        "ingles_falsoscognatos_avancado", "ingles_falsoscognatos_basico", "ingles_falsoscognatos_intermediario",
+        "ingles_falsoscognatos_relampago_avancado", "ingles_falsoscognatos_relampago_basico",
+        "ingles_falsoscognatos_relampago_intermediario",
         "ingles_intermediario",
         "ingles_phrasal_avancado", "ingles_phrasal_basico", "ingles_phrasal_intermediario",
         "ingles_phrasal_relampago_avancado", "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario",
@@ -192,6 +195,8 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
         "ingles_contracoes_relampago_basico", "ingles_contracoes_relampago_intermediario", "ingles_contracoes_relampago_avancado",
         "ingles_compreensao_basico", "ingles_compreensao_intermediario", "ingles_compreensao_avancado",
         "ingles_compreensao_relampago_basico", "ingles_compreensao_relampago_intermediario", "ingles_compreensao_relampago_avancado",
+        "ingles_falsoscognatos_basico", "ingles_falsoscognatos_intermediario", "ingles_falsoscognatos_avancado",
+        "ingles_falsoscognatos_relampago_basico", "ingles_falsoscognatos_relampago_intermediario", "ingles_falsoscognatos_relampago_avancado",
         "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
         "frances_basico", "frances_intermediario", "frances_avancado",
     }.issubset(set(worlds["idiomas"]["territory_ids"]))

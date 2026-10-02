@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"They reached a compromise after hours of talks.\", o que significa 'compromise'?",
+    "options": [
+      "o currículo profissional",
+      "meio-termo ou acordo mútuo",
+      "compromisso ou obrigação marcada",
+      "perceber ou notar"
+    ],
+    "correct_answer": "meio-termo ou acordo mútuo",
+    "explanation": "'compromise' significa meio-termo ou acordo mútuo — não confundir com \"compromisso\", que é o 'falso amigo' (parece com compromisso ou obrigação marcada, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Eventually, she found a solution.\", o que significa 'eventually'?",
+    "options": [
+      "perceber ou notar",
+      "eventualmente ou ocasionalmente",
+      "médico ou médica",
+      "finalmente ou por fim"
+    ],
+    "correct_answer": "finalmente ou por fim",
+    "explanation": "'eventually' significa finalmente ou por fim — não confundir com \"eventualmente\", que é o 'falso amigo' (parece com eventualmente ou ocasionalmente, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"I noticed a change in his behavior.\", o que significa 'notice'?",
+    "options": [
+      "noticiar ou divulgar",
+      "meio-termo ou acordo mútuo",
+      "perceber ou notar",
+      "pacote ou encomenda"
+    ],
+    "correct_answer": "perceber ou notar",
+    "explanation": "'notice' significa perceber ou notar — não confundir com \"noticiar\", que é o 'falso amigo' (parece com noticiar ou divulgar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Please send your resume.\", o que significa 'resume'?",
+    "options": [
+      "comum ou normal",
+      "finalmente ou por fim",
+      "o currículo profissional",
+      "resumo ou síntese"
+    ],
+    "correct_answer": "o currículo profissional",
+    "explanation": "'resume' significa o currículo profissional — não confundir com \"resumo\", que é o 'falso amigo' (parece com resumo ou síntese, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"It was just an ordinary day at work.\", o que significa 'ordinary'?",
+    "options": [
+      "perceber ou notar",
+      "pacote ou encomenda",
+      "ordinário ou vulgar",
+      "comum ou normal"
+    ],
+    "correct_answer": "comum ou normal",
+    "explanation": "'ordinary' significa comum ou normal — não confundir com \"ordinário\", que é o 'falso amigo' (parece com ordinário ou vulgar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She consulted a physician about her symptoms.\", o que significa 'physician'?",
+    "options": [
+      "embriagado ou bêbado",
+      "físico ou cientista",
+      "médico ou médica",
+      "comum ou normal"
+    ],
+    "correct_answer": "médico ou médica",
+    "explanation": "'physician' significa médico ou médica — não confundir com \"físico\", que é o 'falso amigo' (parece com físico ou cientista, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The parcel arrived yesterday.\", o que significa 'parcel'?",
+    "options": [
+      "parcela ou prestação",
+      "comum ou normal",
+      "perceber ou notar",
+      "pacote ou encomenda"
+    ],
+    "correct_answer": "pacote ou encomenda",
+    "explanation": "'parcel' significa pacote ou encomenda — não confundir com \"parcela\", que é o 'falso amigo' (parece com parcela ou prestação, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He was intoxicated after drinking too much.\", o que significa 'intoxicated'?",
+    "options": [
+      "intoxicado ou envenenado por comida",
+      "embriagado ou bêbado",
+      "médico ou médica",
+      "comum ou normal"
+    ],
+    "correct_answer": "embriagado ou bêbado",
+    "explanation": "'intoxicated' significa embriagado ou bêbado — não confundir com \"intoxicado\", que é o 'falso amigo' (parece com intoxicado ou envenenado por comida, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She was very sympathetic about his loss.\", o que significa 'sympathetic'?",
+    "options": [
+      "compassivo ou solidário",
+      "o currículo profissional",
+      "finalmente ou por fim",
+      "simpático ou agradável"
+    ],
+    "correct_answer": "compassivo ou solidário",
+    "explanation": "'sympathetic' significa compassivo ou solidário — não confundir com \"simpático\", que é o 'falso amigo' (parece com simpático ou agradável, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Both sides had to find a compromise.\", o que significa 'compromise'?",
+    "options": [
+      "compromisso ou obrigação marcada",
+      "meio-termo ou acordo mútuo",
+      "perceber ou notar",
+      "médico ou médica"
+    ],
+    "correct_answer": "meio-termo ou acordo mútuo",
+    "explanation": "'compromise' significa meio-termo ou acordo mútuo — não confundir com \"compromisso\", que é o 'falso amigo' (parece com compromisso ou obrigação marcada, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He eventually agreed to the plan.\", o que significa 'eventually'?",
+    "options": [
+      "meio-termo ou acordo mútuo",
+      "eventualmente ou ocasionalmente",
+      "finalmente ou por fim",
+      "comum ou normal"
+    ],
+    "correct_answer": "finalmente ou por fim",
+    "explanation": "'eventually' significa finalmente ou por fim — não confundir com \"eventualmente\", que é o 'falso amigo' (parece com eventualmente ou ocasionalmente, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Did you notice the new sign outside?\", o que significa 'notice'?",
+    "options": [
+      "noticiar ou divulgar",
+      "comum ou normal",
+      "perceber ou notar",
+      "meio-termo ou acordo mútuo"
+    ],
+    "correct_answer": "perceber ou notar",
+    "explanation": "'notice' significa perceber ou notar — não confundir com \"noticiar\", que é o 'falso amigo' (parece com noticiar ou divulgar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She updated her resume before the interview.\", o que significa 'resume'?",
+    "options": [
+      "embriagado ou bêbado",
+      "compassivo ou solidário",
+      "o currículo profissional",
+      "resumo ou síntese"
+    ],
+    "correct_answer": "o currículo profissional",
+    "explanation": "'resume' significa o currículo profissional — não confundir com \"resumo\", que é o 'falso amigo' (parece com resumo ou síntese, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"There was nothing ordinary about that meeting.\", o que significa 'ordinary'?",
+    "options": [
+      "ordinário ou vulgar",
+      "médico ou médica",
+      "comum ou normal",
+      "compassivo ou solidário"
+    ],
+    "correct_answer": "comum ou normal",
+    "explanation": "'ordinary' significa comum ou normal — não confundir com \"ordinário\", que é o 'falso amigo' (parece com ordinário ou vulgar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"The physician prescribed new medication.\", o que significa 'physician'?",
+    "options": [
+      "físico ou cientista",
+      "médico ou médica",
+      "o currículo profissional",
+      "comum ou normal"
+    ],
+    "correct_answer": "médico ou médica",
+    "explanation": "'physician' significa médico ou médica — não confundir com \"físico\", que é o 'falso amigo' (parece com físico ou cientista, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She sent a parcel to her family abroad.\", o que significa 'parcel'?",
+    "options": [
+      "embriagado ou bêbado",
+      "pacote ou encomenda",
+      "parcela ou prestação",
+      "médico ou médica"
+    ],
+    "correct_answer": "pacote ou encomenda",
+    "explanation": "'parcel' significa pacote ou encomenda — não confundir com \"parcela\", que é o 'falso amigo' (parece com parcela ou prestação, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The driver was clearly intoxicated.\", o que significa 'intoxicated'?",
+    "options": [
+      "compassivo ou solidário",
+      "intoxicado ou envenenado por comida",
+      "meio-termo ou acordo mútuo",
+      "embriagado ou bêbado"
+    ],
+    "correct_answer": "embriagado ou bêbado",
+    "explanation": "'intoxicated' significa embriagado ou bêbado — não confundir com \"intoxicado\", que é o 'falso amigo' (parece com intoxicado ou envenenado por comida, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The nurse remained sympathetic throughout the visit.\", o que significa 'sympathetic'?",
+    "options": [
+      "embriagado ou bêbado",
+      "simpático ou agradável",
+      "compassivo ou solidário",
+      "pacote ou encomenda"
+    ],
+    "correct_answer": "compassivo ou solidário",
+    "explanation": "'sympathetic' significa compassivo ou solidário — não confundir com \"simpático\", que é o 'falso amigo' (parece com simpático ou agradável, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The negotiators finally accepted a compromise.\", o que significa 'compromise'?",
+    "options": [
+      "comum ou normal",
+      "meio-termo ou acordo mútuo",
+      "compromisso ou obrigação marcada",
+      "o currículo profissional"
+    ],
+    "correct_answer": "meio-termo ou acordo mútuo",
+    "explanation": "'compromise' significa meio-termo ou acordo mútuo — não confundir com \"compromisso\", que é o 'falso amigo' (parece com compromisso ou obrigação marcada, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"Eventually, the truth came out.\", o que significa 'eventually'?",
+    "options": [
+      "o currículo profissional",
+      "finalmente ou por fim",
+      "embriagado ou bêbado",
+      "eventualmente ou ocasionalmente"
+    ],
+    "correct_answer": "finalmente ou por fim",
+    "explanation": "'eventually' significa finalmente ou por fim — não confundir com \"eventualmente\", que é o 'falso amigo' (parece com eventualmente ou ocasionalmente, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She failed to notice the mistake.\", o que significa 'notice'?",
+    "options": [
+      "o currículo profissional",
+      "noticiar ou divulgar",
+      "meio-termo ou acordo mútuo",
+      "perceber ou notar"
+    ],
+    "correct_answer": "perceber ou notar",
+    "explanation": "'notice' significa perceber ou notar — não confundir com \"noticiar\", que é o 'falso amigo' (parece com noticiar ou divulgar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"His resume listed five years of experience.\", o que significa 'resume'?",
+    "options": [
+      "perceber ou notar",
+      "resumo ou síntese",
+      "o currículo profissional",
+      "compassivo ou solidário"
+    ],
+    "correct_answer": "o currículo profissional",
+    "explanation": "'resume' significa o currículo profissional — não confundir com \"resumo\", que é o 'falso amigo' (parece com resumo ou síntese, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He led a fairly ordinary life.\", o que significa 'ordinary'?",
+    "options": [
+      "perceber ou notar",
+      "comum ou normal",
+      "ordinário ou vulgar",
+      "pacote ou encomenda"
+    ],
+    "correct_answer": "comum ou normal",
+    "explanation": "'ordinary' significa comum ou normal — não confundir com \"ordinário\", que é o 'falso amigo' (parece com ordinário ou vulgar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He trained as a physician for ten years.\", o que significa 'physician'?",
+    "options": [
+      "meio-termo ou acordo mútuo",
+      "físico ou cientista",
+      "perceber ou notar",
+      "médico ou médica"
+    ],
+    "correct_answer": "médico ou médica",
+    "explanation": "'physician' significa médico ou médica — não confundir com \"físico\", que é o 'falso amigo' (parece com físico ou cientista, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_avancado",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He picked up the parcel at the post office.\", o que significa 'parcel'?",
+    "options": [
+      "médico ou médica",
+      "comum ou normal",
+      "parcela ou prestação",
+      "pacote ou encomenda"
+    ],
+    "correct_answer": "pacote ou encomenda",
+    "explanation": "'parcel' significa pacote ou encomenda — não confundir com \"parcela\", que é o 'falso amigo' (parece com parcela ou prestação, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  }
+]

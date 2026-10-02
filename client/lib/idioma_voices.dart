@@ -30,6 +30,10 @@ const List<String> _kPortugueseOptionsTerritoryPrefixes = [
   // o SIGNIFICADO em português.
   'ingles_compostas',
   'ingles_contracoes',
+  // Falsos Cognatos (MUNDO_IDIOMAS_INGLES_FALSOS_COGNATOS_V1.md, 30/09/2026): mesmo padrão
+  // invertido — enunciado traz a frase em inglês, opções são o SIGNIFICADO em português
+  // (incluindo o "falso amigo" como distrator proposital).
+  'ingles_falsoscognatos',
 ];
 
 /// Territórios hoje são "<idioma>_<nivel>" (ingles_basico,

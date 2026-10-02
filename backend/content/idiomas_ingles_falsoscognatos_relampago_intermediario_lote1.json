@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The sofa is covered in red fabric.\", o que significa 'fabric'?",
+    "options": [
+      "a saída",
+      "dados ou informações",
+      "tecido ou pano",
+      "fábrica ou indústria"
+    ],
+    "correct_answer": "tecido ou pano",
+    "explanation": "'fabric' significa tecido ou pano — não confundir com \"fábrica\", que é o 'falso amigo' (parece com fábrica ou indústria, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He spent the afternoon at the library.\", o que significa 'library'?",
+    "options": [
+      "livraria ou loja de livros",
+      "a biblioteca",
+      "tecido ou pano",
+      "dados ou informações"
+    ],
+    "correct_answer": "a biblioteca",
+    "explanation": "'library' significa a biblioteca — não confundir com \"livraria\", que é o 'falso amigo' (parece com livraria ou loja de livros, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They rushed toward the exit.\", o que significa 'exit'?",
+    "options": [
+      "ajudar ou auxiliar",
+      "êxito ou sucesso",
+      "a saída",
+      "lesão ou ferimento"
+    ],
+    "correct_answer": "a saída",
+    "explanation": "'exit' significa a saída — não confundir com \"êxito\", que é o 'falso amigo' (parece com êxito ou sucesso, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The injury kept him out of the game.\", o que significa 'injury'?",
+    "options": [
+      "a biblioteca",
+      "tecido ou pano",
+      "lesão ou ferimento",
+      "injúria ou ofensa"
+    ],
+    "correct_answer": "lesão ou ferimento",
+    "explanation": "'injury' significa lesão ou ferimento — não confundir com \"injúria\", que é o 'falso amigo' (parece com injúria ou ofensa, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"That's a sensible plan.\", o que significa 'sensible'?",
+    "options": [
+      "sensato ou razoável",
+      "dados ou informações",
+      "lesão ou ferimento",
+      "sensível ou emotivo"
+    ],
+    "correct_answer": "sensato ou razoável",
+    "explanation": "'sensible' significa sensato ou razoável — não confundir com \"sensível\", que é o 'falso amigo' (parece com sensível ou emotivo, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The data was lost in the crash.\", o que significa 'data'?",
+    "options": [
+      "data ou dia do calendário",
+      "dados ou informações",
+      "a biblioteca",
+      "tecido ou pano"
+    ],
+    "correct_answer": "dados ou informações",
+    "explanation": "'data' significa dados ou informações — não confundir com \"data\", que é o 'falso amigo' (parece com data ou dia do calendário, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He offered to assist with the move.\", o que significa 'assist'?",
+    "options": [
+      "ajudar ou auxiliar",
+      "a saída",
+      "assistir ou ver",
+      "lesão ou ferimento"
+    ],
+    "correct_answer": "ajudar ou auxiliar",
+    "explanation": "'assist' significa ajudar ou auxiliar — não confundir com \"assistir\", que é o 'falso amigo' (parece com assistir ou ver, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They sell fabric by the meter.\", o que significa 'fabric'?",
+    "options": [
+      "a saída",
+      "tecido ou pano",
+      "fábrica ou indústria",
+      "dados ou informações"
+    ],
+    "correct_answer": "tecido ou pano",
+    "explanation": "'fabric' significa tecido ou pano — não confundir com \"fábrica\", que é o 'falso amigo' (parece com fábrica ou indústria, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The library closes at eight.\", o que significa 'library'?",
+    "options": [
+      "lesão ou ferimento",
+      "a biblioteca",
+      "sensato ou razoável",
+      "livraria ou loja de livros"
+    ],
+    "correct_answer": "a biblioteca",
+    "explanation": "'library' significa a biblioteca — não confundir com \"livraria\", que é o 'falso amigo' (parece com livraria ou loja de livros, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"The exit sign was lit red.\", o que significa 'exit'?",
+    "options": [
+      "a biblioteca",
+      "êxito ou sucesso",
+      "a saída",
+      "dados ou informações"
+    ],
+    "correct_answer": "a saída",
+    "explanation": "'exit' significa a saída — não confundir com \"êxito\", que é o 'falso amigo' (parece com êxito ou sucesso, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She treated the injury quickly.\", o que significa 'injury'?",
+    "options": [
+      "lesão ou ferimento",
+      "injúria ou ofensa",
+      "sensato ou razoável",
+      "dados ou informações"
+    ],
+    "correct_answer": "lesão ou ferimento",
+    "explanation": "'injury' significa lesão ou ferimento — não confundir com \"injúria\", que é o 'falso amigo' (parece com injúria ou ofensa, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He is known for being sensible.\", o que significa 'sensible'?",
+    "options": [
+      "ajudar ou auxiliar",
+      "sensível ou emotivo",
+      "sensato ou razoável",
+      "a biblioteca"
+    ],
+    "correct_answer": "sensato ou razoável",
+    "explanation": "'sensible' significa sensato ou razoável — não confundir com \"sensível\", que é o 'falso amigo' (parece com sensível ou emotivo, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"They analyzed the data carefully.\", o que significa 'data'?",
+    "options": [
+      "a biblioteca",
+      "sensato ou razoável",
+      "data ou dia do calendário",
+      "dados ou informações"
+    ],
+    "correct_answer": "dados ou informações",
+    "explanation": "'data' significa dados ou informações — não confundir com \"data\", que é o 'falso amigo' (parece com data ou dia do calendário, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"The app can assist with scheduling.\", o que significa 'assist'?",
+    "options": [
+      "a biblioteca",
+      "lesão ou ferimento",
+      "assistir ou ver",
+      "ajudar ou auxiliar"
+    ],
+    "correct_answer": "ajudar ou auxiliar",
+    "explanation": "'assist' significa ajudar ou auxiliar — não confundir com \"assistir\", que é o 'falso amigo' (parece com assistir ou ver, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"This fabric feels rough.\", o que significa 'fabric'?",
+    "options": [
+      "tecido ou pano",
+      "lesão ou ferimento",
+      "fábrica ou indústria",
+      "a saída"
+    ],
+    "correct_answer": "tecido ou pano",
+    "explanation": "'fabric' significa tecido ou pano — não confundir com \"fábrica\", que é o 'falso amigo' (parece com fábrica ou indústria, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She returned the books to the library.\", o que significa 'library'?",
+    "options": [
+      "a biblioteca",
+      "lesão ou ferimento",
+      "sensato ou razoável",
+      "livraria ou loja de livros"
+    ],
+    "correct_answer": "a biblioteca",
+    "explanation": "'library' significa a biblioteca — não confundir com \"livraria\", que é o 'falso amigo' (parece com livraria ou loja de livros, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He couldn't find the exit.\", o que significa 'exit'?",
+    "options": [
+      "dados ou informações",
+      "a saída",
+      "tecido ou pano",
+      "êxito ou sucesso"
+    ],
+    "correct_answer": "a saída",
+    "explanation": "'exit' significa a saída — não confundir com \"êxito\", que é o 'falso amigo' (parece com êxito ou sucesso, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"It was a minor injury.\", o que significa 'injury'?",
+    "options": [
+      "dados ou informações",
+      "lesão ou ferimento",
+      "injúria ou ofensa",
+      "a biblioteca"
+    ],
+    "correct_answer": "lesão ou ferimento",
+    "explanation": "'injury' significa lesão ou ferimento — não confundir com \"injúria\", que é o 'falso amigo' (parece com injúria ou ofensa, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"It seemed like the sensible option.\", o que significa 'sensible'?",
+    "options": [
+      "a biblioteca",
+      "a saída",
+      "sensato ou razoável",
+      "sensível ou emotivo"
+    ],
+    "correct_answer": "sensato ou razoável",
+    "explanation": "'sensible' significa sensato ou razoável — não confundir com \"sensível\", que é o 'falso amigo' (parece com sensível ou emotivo, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"New data confirmed the theory.\", o que significa 'data'?",
+    "options": [
+      "lesão ou ferimento",
+      "data ou dia do calendário",
+      "dados ou informações",
+      "ajudar ou auxiliar"
+    ],
+    "correct_answer": "dados ou informações",
+    "explanation": "'data' significa dados ou informações — não confundir com \"data\", que é o 'falso amigo' (parece com data ou dia do calendário, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She was trained to assist customers.\", o que significa 'assist'?",
+    "options": [
+      "assistir ou ver",
+      "lesão ou ferimento",
+      "a biblioteca",
+      "ajudar ou auxiliar"
+    ],
+    "correct_answer": "ajudar ou auxiliar",
+    "explanation": "'assist' significa ajudar ou auxiliar — não confundir com \"assistir\", que é o 'falso amigo' (parece com assistir ou ver, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"The tailor chose a durable fabric.\", o que significa 'fabric'?",
+    "options": [
+      "tecido ou pano",
+      "ajudar ou auxiliar",
+      "fábrica ou indústria",
+      "a saída"
+    ],
+    "correct_answer": "tecido ou pano",
+    "explanation": "'fabric' significa tecido ou pano — não confundir com \"fábrica\", que é o 'falso amigo' (parece com fábrica ou indústria, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He volunteers at the local library.\", o que significa 'library'?",
+    "options": [
+      "dados ou informações",
+      "livraria ou loja de livros",
+      "a biblioteca",
+      "a saída"
+    ],
+    "correct_answer": "a biblioteca",
+    "explanation": "'library' significa a biblioteca — não confundir com \"livraria\", que é o 'falso amigo' (parece com livraria ou loja de livros, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"An alarm sounds near every exit.\", o que significa 'exit'?",
+    "options": [
+      "êxito ou sucesso",
+      "tecido ou pano",
+      "ajudar ou auxiliar",
+      "a saída"
+    ],
+    "correct_answer": "a saída",
+    "explanation": "'exit' significa a saída — não confundir com \"êxito\", que é o 'falso amigo' (parece com êxito ou sucesso, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"The injury healed within a month.\", o que significa 'injury'?",
+    "options": [
+      "lesão ou ferimento",
+      "tecido ou pano",
+      "a biblioteca",
+      "injúria ou ofensa"
+    ],
+    "correct_answer": "lesão ou ferimento",
+    "explanation": "'injury' significa lesão ou ferimento — não confundir com \"injúria\", que é o 'falso amigo' (parece com injúria ou ofensa, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  }
+]

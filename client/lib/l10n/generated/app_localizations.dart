@@ -772,6 +772,42 @@ abstract class AppLocalizations {
   /// **'Compreensão de Texto Relâmpago: Avançado'**
   String get territoryInglesCompreensaoRelampagoAvancado;
 
+  /// Territory display name — English false friends/cognates, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Falsos Cognatos: Básico'**
+  String get territoryInglesFalsosCognatosBasico;
+
+  /// Territory display name — English false friends/cognates, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Falsos Cognatos: Intermediário'**
+  String get territoryInglesFalsosCognatosIntermediario;
+
+  /// Territory display name — English false friends/cognates, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Falsos Cognatos: Avançado'**
+  String get territoryInglesFalsosCognatosAvancado;
+
+  /// Territory display name — English false friends/cognates, timed mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Falsos Cognatos Relâmpago: Básico'**
+  String get territoryInglesFalsosCognatosRelampagoBasico;
+
+  /// Territory display name — English false friends/cognates, timed mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Falsos Cognatos Relâmpago: Intermediário'**
+  String get territoryInglesFalsosCognatosRelampagoIntermediario;
+
+  /// Territory display name — English false friends/cognates, timed mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Falsos Cognatos Relâmpago: Avançado'**
+  String get territoryInglesFalsosCognatosRelampagoAvancado;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:

@@ -470,6 +470,30 @@
   "@territoryInglesCompreensaoRelampagoAvancado": {
     "description": "Territory display name — English reading comprehension, short-text mode, advanced level"
   },
+  "territoryInglesFalsosCognatosBasico": "Falsos Cognatos: Básico",
+  "@territoryInglesFalsosCognatosBasico": {
+    "description": "Territory display name — English false friends/cognates, basic level"
+  },
+  "territoryInglesFalsosCognatosIntermediario": "Falsos Cognatos: Intermediário",
+  "@territoryInglesFalsosCognatosIntermediario": {
+    "description": "Territory display name — English false friends/cognates, intermediate level"
+  },
+  "territoryInglesFalsosCognatosAvancado": "Falsos Cognatos: Avançado",
+  "@territoryInglesFalsosCognatosAvancado": {
+    "description": "Territory display name — English false friends/cognates, advanced level"
+  },
+  "territoryInglesFalsosCognatosRelampagoBasico": "Falsos Cognatos Relâmpago: Básico",
+  "@territoryInglesFalsosCognatosRelampagoBasico": {
+    "description": "Territory display name — English false friends/cognates, timed mode, basic level"
+  },
+  "territoryInglesFalsosCognatosRelampagoIntermediario": "Falsos Cognatos Relâmpago: Intermediário",
+  "@territoryInglesFalsosCognatosRelampagoIntermediario": {
+    "description": "Territory display name — English false friends/cognates, timed mode, intermediate level"
+  },
+  "territoryInglesFalsosCognatosRelampagoAvancado": "Falsos Cognatos Relâmpago: Avançado",
+  "@territoryInglesFalsosCognatosRelampagoAvancado": {
+    "description": "Territory display name — English false friends/cognates, timed mode, advanced level"
+  },
   "@territoryFrancesAvancado": {
     "description": "Territory display name"
   },

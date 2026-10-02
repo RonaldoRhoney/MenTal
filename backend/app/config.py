@@ -297,6 +297,10 @@ IDIOMA_TERRITORY_IDS = {
     # mais longas/contextualizadas (§6 do doc).
     "ingles_compreensao_basico", "ingles_compreensao_intermediario", "ingles_compreensao_avancado",
     "ingles_compreensao_relampago_basico", "ingles_compreensao_relampago_intermediario", "ingles_compreensao_relampago_avancado",
+    # Falsos Cognatos (MUNDO_IDIOMAS_INGLES_FALSOS_COGNATOS_V1.md, 30/09/2026) — o Mental
+    # Lingo deve alertar sobre falsos cognatos quando o jogador usar um de forma equivocada.
+    "ingles_falsoscognatos_basico", "ingles_falsoscognatos_intermediario", "ingles_falsoscognatos_avancado",
+    "ingles_falsoscognatos_relampago_basico", "ingles_falsoscognatos_relampago_intermediario", "ingles_falsoscognatos_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -321,6 +325,11 @@ ALWAYS_TIMED_TERRITORIES = {
     # cronometrado, conteúdo distinto.
     "ingles_compostas_relampago_basico", "ingles_compostas_relampago_intermediario", "ingles_compostas_relampago_avancado",
     "ingles_contracoes_relampago_basico", "ingles_contracoes_relampago_intermediario", "ingles_contracoes_relampago_avancado",
+    # Falsos Cognatos Relâmpago (MUNDO_IDIOMAS_INGLES_FALSOS_COGNATOS_V1.md, 30/09/2026):
+    # mesmo padrão — território próprio, sempre cronometrado, conteúdo distinto. Volta ao
+    # padrão normal de "frase + pergunta" (não é cápsula de texto), diferente de Compreensão
+    # de Texto logo acima.
+    "ingles_falsoscognatos_relampago_basico", "ingles_falsoscognatos_relampago_intermediario", "ingles_falsoscognatos_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_

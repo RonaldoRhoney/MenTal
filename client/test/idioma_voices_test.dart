@@ -33,13 +33,17 @@ void main() {
       'ingles_compostas_relampago_avancado',
       'ingles_contracoes_intermediario',
       'ingles_contracoes_relampago_basico',
+      'ingles_falsoscognatos_basico',
+      'ingles_falsoscognatos_relampago_avancado',
     ]) {
       expect(voiceForTerritory(territoryId), 'pt-BR-FranciscaNeural', reason: territoryId);
     }
     // Vocabulário clássico continua com a voz do idioma (opção É a palavra estrangeira).
     expect(voiceForTerritory('ingles_basico'), 'en-US-AriaNeural');
-    // Conjugação Verbal É o padrão contrário: opção é a forma verbal em inglês, não o
-    // significado em português — continua com a voz do idioma.
+    // Conjugação Verbal e Compreensão de Texto são o padrão contrário: a opção É inglês
+    // (forma verbal, ou frase completa sobre o texto), não o significado em português —
+    // continuam com a voz do idioma.
     expect(voiceForTerritory('ingles_conjugacao_basico'), 'en-US-AriaNeural');
+    expect(voiceForTerritory('ingles_compreensao_basico'), 'en-US-AriaNeural');
   });
 }

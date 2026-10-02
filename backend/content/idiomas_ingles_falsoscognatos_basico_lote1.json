@@ -1,0 +1,452 @@
+[
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She likes to pretend she is a superhero.\", o que significa 'pretend'?",
+    "options": [
+      "comparecer a ou frequentar",
+      "pretender ou ter intenção de",
+      "fingir ou simular",
+      "perceber ou dar-se conta de"
+    ],
+    "correct_answer": "fingir ou simular",
+    "explanation": "'pretend' significa fingir ou simular — não confundir com \"pretender\", que é o 'falso amigo' (parece com pretender ou ter intenção de, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Actually, I don't like coffee.\", o que significa 'actually'?",
+    "options": [
+      "empurrar ou dar um empurrão",
+      "atualmente ou hoje em dia",
+      "fingir ou simular",
+      "na verdade ou de fato"
+    ],
+    "correct_answer": "na verdade ou de fato",
+    "explanation": "'actually' significa na verdade ou de fato — não confundir com \"atualmente\", que é o 'falso amigo' (parece com atualmente ou hoje em dia, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Push the door to open it.\", o que significa 'push'?",
+    "options": [
+      "puxar ou arrastar",
+      "na verdade ou de fato",
+      "empurrar ou dar um empurrão",
+      "pais ou mãe e pai"
+    ],
+    "correct_answer": "empurrar ou dar um empurrão",
+    "explanation": "'push' significa empurrar ou dar um empurrão — não confundir com \"puxar\", que é o 'falso amigo' (parece com puxar ou arrastar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"My parents live in São Paulo.\", o que significa 'parents'?",
+    "options": [
+      "parentes ou familiares",
+      "faculdade ou universidade",
+      "pais ou mãe e pai",
+      "empurrar ou dar um empurrão"
+    ],
+    "correct_answer": "pais ou mãe e pai",
+    "explanation": "'parents' significa pais ou mãe e pai — não confundir com \"parentes\", que é o 'falso amigo' (parece com parentes ou familiares, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"The food at that restaurant was exquisite.\", o que significa 'exquisite'?",
+    "options": [
+      "pais ou mãe e pai",
+      "romance ou livro de ficção",
+      "belíssimo ou refinado",
+      "esquisito ou estranho"
+    ],
+    "correct_answer": "belíssimo ou refinado",
+    "explanation": "'exquisite' significa belíssimo ou refinado — não confundir com \"esquisito\", que é o 'falso amigo' (parece com esquisito ou estranho, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She studies at a college in Boston.\", o que significa 'college'?",
+    "options": [
+      "colégio ou escola",
+      "faculdade ou universidade",
+      "fingir ou simular",
+      "perceber ou dar-se conta de"
+    ],
+    "correct_answer": "faculdade ou universidade",
+    "explanation": "'college' significa faculdade ou universidade — não confundir com \"colégio\", que é o 'falso amigo' (parece com colégio ou escola, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"I'm reading a new novel.\", o que significa 'novel'?",
+    "options": [
+      "faculdade ou universidade",
+      "pais ou mãe e pai",
+      "romance ou livro de ficção",
+      "novela ou seriado de tevê"
+    ],
+    "correct_answer": "romance ou livro de ficção",
+    "explanation": "'novel' significa romance ou livro de ficção — não confundir com \"novela\", que é o 'falso amigo' (parece com novela ou seriado de tevê, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He didn't realize his mistake.\", o que significa 'realize'?",
+    "options": [
+      "faculdade ou universidade",
+      "na verdade ou de fato",
+      "realizar ou executar",
+      "perceber ou dar-se conta de"
+    ],
+    "correct_answer": "perceber ou dar-se conta de",
+    "explanation": "'realize' significa perceber ou dar-se conta de — não confundir com \"realizar\", que é o 'falso amigo' (parece com realizar ou executar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Students must attend the class.\", o que significa 'attend'?",
+    "options": [
+      "comparecer a ou frequentar",
+      "perceber ou dar-se conta de",
+      "atender ou responder",
+      "faculdade ou universidade"
+    ],
+    "correct_answer": "comparecer a ou frequentar",
+    "explanation": "'attend' significa comparecer a ou frequentar — não confundir com \"atender\", que é o 'falso amigo' (parece com atender ou responder, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She wore a costume to the party.\", o que significa 'costume'?",
+    "options": [
+      "fantasia ou traje",
+      "costume ou hábito",
+      "comparecer a ou frequentar",
+      "romance ou livro de ficção"
+    ],
+    "correct_answer": "fantasia ou traje",
+    "explanation": "'costume' significa fantasia ou traje — não confundir com \"costume\", que é o 'falso amigo' (parece com costume ou hábito, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Don't pretend you didn't hear me.\", o que significa 'pretend'?",
+    "options": [
+      "fingir ou simular",
+      "na verdade ou de fato",
+      "pretender ou ter intenção de",
+      "belíssimo ou refinado"
+    ],
+    "correct_answer": "fingir ou simular",
+    "explanation": "'pretend' significa fingir ou simular — não confundir com \"pretender\", que é o 'falso amigo' (parece com pretender ou ter intenção de, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"Actually, she is my cousin, not my sister.\", o que significa 'actually'?",
+    "options": [
+      "na verdade ou de fato",
+      "empurrar ou dar um empurrão",
+      "belíssimo ou refinado",
+      "atualmente ou hoje em dia"
+    ],
+    "correct_answer": "na verdade ou de fato",
+    "explanation": "'actually' significa na verdade ou de fato — não confundir com \"atualmente\", que é o 'falso amigo' (parece com atualmente ou hoje em dia, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Please push the cart slowly.\", o que significa 'push'?",
+    "options": [
+      "empurrar ou dar um empurrão",
+      "puxar ou arrastar",
+      "faculdade ou universidade",
+      "belíssimo ou refinado"
+    ],
+    "correct_answer": "empurrar ou dar um empurrão",
+    "explanation": "'push' significa empurrar ou dar um empurrão — não confundir com \"puxar\", que é o 'falso amigo' (parece com puxar ou arrastar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"Her parents are both doctors.\", o que significa 'parents'?",
+    "options": [
+      "pais ou mãe e pai",
+      "na verdade ou de fato",
+      "parentes ou familiares",
+      "faculdade ou universidade"
+    ],
+    "correct_answer": "pais ou mãe e pai",
+    "explanation": "'parents' significa pais ou mãe e pai — não confundir com \"parentes\", que é o 'falso amigo' (parece com parentes ou familiares, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"She wore an exquisite dress.\", o que significa 'exquisite'?",
+    "options": [
+      "empurrar ou dar um empurrão",
+      "esquisito ou estranho",
+      "faculdade ou universidade",
+      "belíssimo ou refinado"
+    ],
+    "correct_answer": "belíssimo ou refinado",
+    "explanation": "'exquisite' significa belíssimo ou refinado — não confundir com \"esquisito\", que é o 'falso amigo' (parece com esquisito ou estranho, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He is applying to college next year.\", o que significa 'college'?",
+    "options": [
+      "pais ou mãe e pai",
+      "colégio ou escola",
+      "empurrar ou dar um empurrão",
+      "faculdade ou universidade"
+    ],
+    "correct_answer": "faculdade ou universidade",
+    "explanation": "'college' significa faculdade ou universidade — não confundir com \"colégio\", que é o 'falso amigo' (parece com colégio ou escola, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"She wrote her first novel last year.\", o que significa 'novel'?",
+    "options": [
+      "novela ou seriado de tevê",
+      "belíssimo ou refinado",
+      "romance ou livro de ficção",
+      "fantasia ou traje"
+    ],
+    "correct_answer": "romance ou livro de ficção",
+    "explanation": "'novel' significa romance ou livro de ficção — não confundir com \"novela\", que é o 'falso amigo' (parece com novela ou seriado de tevê, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"She began to realize the danger.\", o que significa 'realize'?",
+    "options": [
+      "realizar ou executar",
+      "romance ou livro de ficção",
+      "perceber ou dar-se conta de",
+      "empurrar ou dar um empurrão"
+    ],
+    "correct_answer": "perceber ou dar-se conta de",
+    "explanation": "'realize' significa perceber ou dar-se conta de — não confundir com \"realizar\", que é o 'falso amigo' (parece com realizar ou executar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He couldn't attend the meeting yesterday.\", o que significa 'attend'?",
+    "options": [
+      "atender ou responder",
+      "empurrar ou dar um empurrão",
+      "comparecer a ou frequentar",
+      "pais ou mãe e pai"
+    ],
+    "correct_answer": "comparecer a ou frequentar",
+    "explanation": "'attend' significa comparecer a ou frequentar — não confundir com \"atender\", que é o 'falso amigo' (parece com atender ou responder, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"He bought a pirate costume for Halloween.\", o que significa 'costume'?",
+    "options": [
+      "fingir ou simular",
+      "fantasia ou traje",
+      "costume ou hábito",
+      "empurrar ou dar um empurrão"
+    ],
+    "correct_answer": "fantasia ou traje",
+    "explanation": "'costume' significa fantasia ou traje — não confundir com \"costume\", que é o 'falso amigo' (parece com costume ou hábito, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He tried to pretend he was happy.\", o que significa 'pretend'?",
+    "options": [
+      "pais ou mãe e pai",
+      "pretender ou ter intenção de",
+      "fingir ou simular",
+      "belíssimo ou refinado"
+    ],
+    "correct_answer": "fingir ou simular",
+    "explanation": "'pretend' significa fingir ou simular — não confundir com \"pretender\", que é o 'falso amigo' (parece com pretender ou ter intenção de, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 1,
+    "prompt": "Na frase \"He is actually quite shy.\", o que significa 'actually'?",
+    "options": [
+      "na verdade ou de fato",
+      "faculdade ou universidade",
+      "fantasia ou traje",
+      "atualmente ou hoje em dia"
+    ],
+    "correct_answer": "na verdade ou de fato",
+    "explanation": "'actually' significa na verdade ou de fato — não confundir com \"atualmente\", que é o 'falso amigo' (parece com atualmente ou hoje em dia, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"He had to push the car off the road.\", o que significa 'push'?",
+    "options": [
+      "empurrar ou dar um empurrão",
+      "na verdade ou de fato",
+      "puxar ou arrastar",
+      "faculdade ou universidade"
+    ],
+    "correct_answer": "empurrar ou dar um empurrão",
+    "explanation": "'push' significa empurrar ou dar um empurrão — não confundir com \"puxar\", que é o 'falso amigo' (parece com puxar ou arrastar, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 2,
+    "prompt": "Na frase \"His parents came to the school meeting.\", o que significa 'parents'?",
+    "options": [
+      "faculdade ou universidade",
+      "pais ou mãe e pai",
+      "belíssimo ou refinado",
+      "parentes ou familiares"
+    ],
+    "correct_answer": "pais ou mãe e pai",
+    "explanation": "'parents' significa pais ou mãe e pai — não confundir com \"parentes\", que é o 'falso amigo' (parece com parentes ou familiares, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_falsoscognatos_basico",
+    "difficulty_level": 3,
+    "prompt": "Na frase \"It was an exquisite piece of art.\", o que significa 'exquisite'?",
+    "options": [
+      "esquisito ou estranho",
+      "romance ou livro de ficção",
+      "empurrar ou dar um empurrão",
+      "belíssimo ou refinado"
+    ],
+    "correct_answer": "belíssimo ou refinado",
+    "explanation": "'exquisite' significa belíssimo ou refinado — não confundir com \"esquisito\", que é o 'falso amigo' (parece com esquisito ou estranho, mas não é o significado real).",
+    "hints": [
+      "Tema: Falsos Cognatos (False Friends).",
+      "Cuidado com a armadilha: a palavra parece com uma em português, mas o significado é diferente."
+    ],
+    "age_reviewed": true
+  }
+]
